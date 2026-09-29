@@ -4,9 +4,9 @@
  "segment": "act1",
  "file": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act1.json",
- "length_s": 456.125,
- "frames": 10947,
- "samples": 21894000,
+ "length_s": 458.125,
+ "frames": 10995,
+ "samples": 21990000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -649,7 +649,7 @@
    "laid_at_s": 389.0,
    "post": null,
    "level": {
-    "lufs_i": -19.82,
+    "lufs_i": -19.81,
     "st_p95": -16.99,
     "st_max": -16.29,
     "true_peak_dbtp": -3.15
@@ -770,12 +770,12 @@
   },
   {
    "cue": "pause",
-   "start": 434.15,
-   "end": 443.208,
+   "start": 436.15,
+   "end": 445.208,
    "what": "a chill, played straight: a cold pedal nobody pauses",
    "family": "P04 / P08 colours, low (Nole)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/pause-underscore.wav",
-   "laid_at_s": 434.2,
+   "laid_at_s": 436.2,
    "post": null,
    "level": {
     "lufs_i": -21.02,
@@ -828,7 +828,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 443.208,
+     "t": 445.208,
      "what": "EMIT's THUD stops it dead (5 ms)",
      "hit": false
     }
@@ -836,12 +836,12 @@
   },
   {
    "cue": "threat",
-   "start": 454.115,
-   "end": 456.125,
+   "start": 456.115,
+   "end": 458.125,
    "what": "one chill",
    "family": "P08 OUTS KIT: THREAT",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/threat-underscore.wav",
-   "laid_at_s": 451.625,
+   "laid_at_s": 453.625,
    "post": null,
    "level": {
     "lufs_i": -18.33,
@@ -898,7 +898,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 454.125,
+     "t": 456.125,
      "what": "THREAT, once, on the pen's lift: F-C-Gb (low brass + sub), no third",
      "hit": true
     }
@@ -1499,8 +1499,8 @@
      "hit": false
     },
     {
-     "t": 385.042,
-     "what": "the V.O. (v35-vo-02) sits in the held D-flat5: nothing attacks",
+     "t": 384.242,
+     "what": "the V.O. (v35-vo-06) sits in the held D-flat5: nothing attacks",
      "hit": false
     },
     {
@@ -1513,16 +1513,16 @@
   {
    "cue": "waitlist",
    "start": 429.88,
-   "end": 434.5,
+   "end": 436.5,
    "what": "a smug little laugh: they're ahead",
    "family": "the Build's tag, a pizz, the felt",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/waitlist-underscore.wav",
    "laid_at_s": 427.4,
    "post": null,
    "level": {
-    "lufs_i": -21.05,
-    "st_p95": -20.37,
-    "st_max": -20.09,
+    "lufs_i": -21.06,
+    "st_p95": -19.98,
+    "st_max": -19.48,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -21.0,
@@ -1543,12 +1543,12 @@
      },
      "measured": {
       "lufs": -21.02,
-      "lra": 6.67,
+      "lra": 5.1,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -25.89,
-      "crest_db": 22.74,
-      "seconds": 7.2
+      "rms_db": -25.47,
+      "crest_db": 22.31,
+      "seconds": 9.2
      }
     },
     "f_major_ok": true,
@@ -1557,14 +1557,14 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 1,
-     "of": 1,
-     "worst_ms": 4.0
+     "within_10ms": 2,
+     "of": 2,
+     "worst_ms": 6.7
     },
     "warnings": []
    },
    "note_qa": {
-    "notes": 9,
+    "notes": 18,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -1579,8 +1579,18 @@
      "hit": true
     },
     {
-     "t": 432.0,
-     "what": "the sting rings out under the pause letter's toast",
+     "t": 432.506,
+     "what": "v3.5b THE USAGE FLASH: the chip climbs with the lines (16ths up A-flat major), the sting's chord ringing on",
+     "hit": false
+    },
+    {
+     "t": 433.6,
+     "what": "the climb lands on A-flat5 (the tag) under the letter's toast",
+     "hit": true
+    },
+    {
+     "t": 434.0,
+     "what": "the sting rings out under the pause letter's header",
      "hit": false
     }
    ]
@@ -1598,8 +1608,8 @@
    "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
   },
   {
-   "t0": 443.208,
-   "t1": 454.125,
+   "t0": 445.208,
+   "t1": 456.125,
    "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
   }
  ],
@@ -1672,13 +1682,13 @@
   }
  ],
  "measured": {
-  "length_s": 456.125,
-  "samples": 21894000,
-  "frames": 10947,
+  "length_s": 458.125,
+  "samples": 21990000,
+  "frames": 10995,
   "exact": true,
   "whole": {
    "lufs_i": -20.66,
-   "st_p95": -17.99,
+   "st_p95": -17.96,
    "st_max": -15.7,
    "true_peak_dbtp": -3.15
   },
@@ -1714,7 +1724,7 @@
     "true_peak_dbtp": -8.2
    },
    "duel": {
-    "lufs_i": -19.82,
+    "lufs_i": -19.81,
     "st_p95": -16.99,
     "st_max": -16.29,
     "true_peak_dbtp": -3.15
@@ -1768,9 +1778,9 @@
     "true_peak_dbtp": -3.15
    },
    "waitlist": {
-    "lufs_i": -21.05,
-    "st_p95": -20.37,
-    "st_max": -20.09,
+    "lufs_i": -21.06,
+    "st_p95": -19.98,
+    "st_max": -19.48,
     "true_peak_dbtp": -3.15
    }
   },
@@ -1977,15 +1987,15 @@
     "section": "duel: the turn: the Addendum crosses; the chip copies its tail; the held chord",
     "start": 424.0,
     "end": 430.4,
-    "lufs_i": -17.91,
+    "lufs_i": -17.89,
     "st_p95": -17.25,
     "st_max": -17.14,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "pause: MM-17 low: the C/G-flat pedal, the low tritone, the Launch stack in the gaps",
-    "start": 434.2,
-    "end": 443.21,
+    "start": 436.2,
+    "end": 445.21,
     "lufs_i": -21.0,
     "st_p95": -19.98,
     "st_max": -19.59,
@@ -1993,8 +2003,8 @@
    },
    {
     "section": "threat: THREAT on the pen's lift, its tail into the black",
-    "start": 454.12,
-    "end": 456.12,
+    "start": 456.12,
+    "end": 458.12,
     "lufs_i": -18.39,
     "st_p95": null,
     "st_max": null,
@@ -2172,13 +2182,22 @@
     "true_peak_dbtp": -5.04
    },
    {
-    "section": "waitlist: the waitlist: the smug sting, ringing under the toast",
+    "section": "waitlist: the waitlist: the smug sting",
     "start": 429.9,
-    "end": 434.2,
-    "lufs_i": -20.88,
-    "st_p95": -20.29,
-    "st_max": -20.08,
+    "end": 432.0,
+    "lufs_i": -18.1,
+    "st_p95": null,
+    "st_max": null,
     "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "waitlist: v3.5b the usage flash: the sting rings on; the chip climbs with the lines, landing under the toast",
+    "start": 432.0,
+    "end": 436.2,
+    "lufs_i": -23.82,
+    "st_p95": -23.32,
+    "st_max": -23.29,
+    "true_peak_dbtp": -9.96
    }
   ],
   "digital_silence": [
@@ -2197,8 +2216,8 @@
     "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
    },
    {
-    "t0": 443.208,
-    "t1": 454.115,
+    "t0": 445.208,
+    "t1": 456.115,
     "dur": 10.907,
     "marked": true,
     "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
@@ -2217,8 +2236,8 @@
     "inside_marked": true
    },
    {
-    "t0": 443.25,
-    "t1": 454.1,
+    "t0": 445.25,
+    "t1": 456.1,
     "inside_marked": true
    }
   ],
@@ -2235,19 +2254,19 @@
    },
    {
     "t0": 286.85,
-    "t1": 443.25,
-    "dur": 156.4
+    "t1": 445.25,
+    "dur": 158.4
    },
    {
-    "t0": 454.1,
-    "t1": 456.0,
+    "t0": 456.1,
+    "t1": 458.0,
     "dur": 1.9
    }
   ],
   "fragments_under_2s": [
    {
-    "t0": 454.1,
-    "t1": 456.0,
+    "t0": 456.1,
+    "t1": 458.0,
     "dur": 1.9,
     "designed_sting": "THREAT (the act-out sting)"
    }
@@ -2337,10 +2356,10 @@
   {
    "name": "pause",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/pause-underscore.wav",
-   "laid_at_s": 434.2,
+   "laid_at_s": 436.2,
    "window": [
-    434.15,
-    443.208
+    436.15,
+    445.208
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.003,
@@ -2350,10 +2369,10 @@
   {
    "name": "threat",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/threat-underscore.wav",
-   "laid_at_s": 451.625,
+   "laid_at_s": 453.625,
    "window": [
-    454.115,
-    456.125
+    456.115,
+    458.125
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.3,
@@ -2444,7 +2463,7 @@
    "laid_at_s": 427.4,
    "window": [
     429.88,
-    434.5
+    436.5
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.45,

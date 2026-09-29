@@ -4,13 +4,27 @@
   {
    "room": "dark",
    "from": 0.0,
-   "to": 139.12,
+   "to": 35.77,
    "lead": 0.0,
+   "trail": 0.4
+  },
+  {
+   "room": "party",
+   "from": 34.77,
+   "to": 45.98,
+   "lead": 0.6,
+   "trail": 0.6
+  },
+  {
+   "room": "dark",
+   "from": 44.98,
+   "to": 149.12,
+   "lead": 0.4,
    "trail": 0.0
   },
   {
    "room (next chapter, leading)": "suite",
-   "from": 138.53,
+   "from": 148.53,
    "lead": 0.6
   },
   {
@@ -22,7 +36,7 @@
    "lufs": -34,
    "duck_db": 10,
    "from": 0.0,
-   "to": 129.12
+   "to": 139.12
   },
   {
    "pad": "THE CLOCK",
@@ -31,8 +45,8 @@
    ],
    "lufs": -32,
    "duck_db": 10,
-   "from": 129.12,
-   "to": 136.62
+   "from": 139.12,
+   "to": 146.62
   }
  ],
  "sfx": [
@@ -112,138 +126,169 @@
    29.567
   ],
   [
+   "v35-32A.01",
+   "synth:cheer",
+   34.975
+  ],
+  [
+   "v35-32A.02",
+   "synth:cheer",
+   39.425
+  ],
+  [
+   "v35-32A.02",
+   "glass_nudge",
+   40.025
+  ],
+  [
+   "v35-32A.02",
+   "glass_nudge",
+   40.175
+  ],
+  [
+   "v35-32A.03",
+   "glass_nudge",
+   42.225
+  ],
+  [
+   "20.01",
+   "glass_set_stone",
+   45.425
+  ],
+  [
    "20.01",
    "synth:keys",
-   36.858
+   46.858
   ],
   [
    "20.03",
    "post_click",
-   39.75
+   49.75
   ],
   [
    "20.03",
    "odometer_ratchet",
-   40.05
+   50.05
   ],
   [
    "20.03",
    "synth:ring",
-   40.45
+   50.45
   ],
   [
    "20.04",
    "key_tap_space",
-   42.883
+   52.883
   ],
   [
    "20.04",
    "synth:call_keys",
-   43.133
+   53.133
   ],
   [
    "20.05",
    "dialog_ok_click",
-   52.783
+   62.783
   ],
   [
    "20.05",
    "keyboard_roll",
-   53.033
+   63.033
   ],
   [
    "21.02",
    "tower_pop",
-   82.8
+   92.8
   ],
   [
    "21.03",
    "post_click--chip",
-   88.517
+   98.517
   ],
   [
    "21.04",
    "orb_servo",
-   92.32
+   102.32
   ],
   [
    "21.04",
    "orb_servo",
-   92.72
+   102.72
   ],
   [
    "21.05",
    "paper_whip",
-   94.575
+   104.575
   ],
   [
    "21.05",
    "synth:claps",
-   95.175
+   105.175
   ],
   [
    "v32-21.06",
    "synth:claps",
-   96.667
+   106.667
   ],
   [
    "v32-21.06",
    "key_tap_space",
-   97.567
+   107.567
   ],
   [
    "22.01",
    "synth:applause",
-   99.684
+   109.684
   ],
   [
    "22.01",
    "odometer_ratchet",
-   100.484
+   110.484
   ],
   [
    "22.01",
    "landing_thunk",
-   103.037
+   113.037
   ],
   [
    "22.02",
    "post_click--chip",
-   116.2
+   126.2
   ],
   [
    "22.02",
    "key_tap_soft_01",
-   120.91
+   130.91
   ],
   [
    "v32-22.04",
    "synth:ratchet_fast",
-   124.895
+   134.895
   ],
   [
    "v32-22.04",
    "post_click",
-   127.325
+   137.325
   ],
   [
    "v32-22.04",
    "glyph_blink",
-   128.135
+   138.135
   ],
   [
    "23.02",
    "post_click--chip",
-   131.775
+   141.775
   ]
  ],
  "sfx_missing": [],
  "decisions": [
   "18.01: \"the rack's fans and LED ticks under the act break's black\" = its room, leading the cut by 1.0 s",
+  "v35-32A.01: \"the party's cheer leads the cut\" = its own synth:cheer, moved 0.4 s earlier",
   "20.01: \"his keyboard, under the rent meter's first tick\" = its room, leading the cut by 0.4 s"
  ],
- "seconds": 139.225,
- "chapter_seconds": 139.125,
- "lufs": -29.03,
- "peak_dbfs": -3.65
+ "seconds": 149.225,
+ "chapter_seconds": 149.125,
+ "lufs": -29.08,
+ "peak_dbfs": -4.08
 }

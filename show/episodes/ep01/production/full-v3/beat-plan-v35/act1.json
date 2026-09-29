@@ -4,7 +4,7 @@
  "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
  "story_s": {
   "source": 337.55,
-  "estimate": 449.74
+  "estimate": 451.74
  },
  "beats": [
   {
@@ -2349,7 +2349,44 @@
      "DRAB · JOIN THE WAITLIST"
     ]
    },
-   "music": "a smug little sting on the rope's snap; out under the toast",
+   "music": "a smug little sting on the rope's snap; it rings on under the usage flash (v35-22.02) and out under the toast",
+   "fix": [
+    "NEW",
+    "FACT",
+    "TR"
+   ],
+   "why": "Sc 22: they're ahead. [V · Mar 21, 2023: Bard's waitlist opens in the US and UK] (v3.5b: the toast's J-cut moves to the usage flash, v35-22.02, which now comes before the letter)"
+  },
+  {
+   "id": "v35-22.02",
+   "action": "new",
+   "after": "v35-22.01",
+   "scene": 22,
+   "mode": "INSERT",
+   "pace": "normal",
+   "est_s": 2.0,
+   "frame": "INSERT · MATCH · every chatbot's usage, climbing at once",
+   "camera": "INSERT · MATCH · every chatbot's usage, climbing at once",
+   "set": "screen",
+   "room": "bullpen",
+   "chars": [],
+   "lines": [],
+   "caption": "MATCH: the users line on the bullpen window, past the TV's edge, becomes the top line of a chart that fills the frame: every chatbot we've just seen, each its own usage line climbing at once, CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED. All five climb; CHATGTP's runs off the top, far ahead. The letter's toast pops over it.",
+   "picture": "One held insert. The lines draw left to right in whole-pixel steps from 0.1 s, each tagged with its bot as shown earlier (CHATGTP's two-dot face, GNIB's search box with a small POWERED BY NOPEAI, DRAB's skewed primaries, CLOD's clay, Atem's stencilled crate); no axes, no figures (never a number). CHATGTP's line is the window's line, the same colour and stroke. The letter's toast pops at 1.6 s (12.01's, a beat early) and the cut lands on his monitor.",
+   "onscreen": {
+    "add": [
+     "CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED"
+    ]
+   },
+   "music": "a smug little sting rings on: the chip climbs with the lines (the Build's tag, 16ths up A-flat major), landing under the toast",
+   "sounds": [
+    {
+     "name": "counter_roll",
+     "at": 0.2,
+     "gain": -28,
+     "note": "five usage counters rolling at once (under the sting's ring)"
+    }
+   ],
    "jcut": [
     {
      "sound": "the pause letter's toast pop, a beat early (12.01)",
@@ -2358,10 +2395,9 @@
    ],
    "fix": [
     "NEW",
-    "FACT",
     "TR"
    ],
-   "why": "Sc 22: they're ahead. [V · Mar 21, 2023: Bard's waitlist opens in the US and UK]"
+   "why": "SN 00000A step 2: a quick flash of every chatbot just shown (sc 20-22), usage climbing at once with NopeAI far ahead: why the letter asks for a pause. In: the window's users line (matched object). Out: the letter's toast (sound-led). Not picture-only: v35-22.01's 3.0 s carries DRAB's page to read (0.2 s on, the snap at 0.9 s) and the letter's header lands 0.4 s into 12.01, so at most 1.3 s were free; +2.0 s. [INVENTED chart: no figures; ChatGPT's lead in early 2023 is on the record (Reuters, Feb 2, 2023, [H])]"
   },
   {
    "id": "12.01",

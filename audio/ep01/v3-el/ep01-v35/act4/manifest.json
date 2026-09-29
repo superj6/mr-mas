@@ -10794,6 +10794,306 @@
     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.920",
     "device": null
    }
+  },
+  "v35-a4-0009__neleh-A": {
+   "take": "v35-a4-0009__neleh-A",
+   "key": "e4c1c8e2f8fb8e19",
+   "base_key": "e4c1c8e2f8fb8e19",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0009__neleh-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 7.387,
+   "offset_s": 0.35,
+   "sent": "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.",
+   "seed": 403499070,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "3dzJXoCYueSQiptQ6euE",
+   "voice_name": "Alexandra - Confident, Clear and Steady",
+   "cand": "A",
+   "role": "neleh",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 7.0,
+    "span_s": 6.65,
+    "words": 22,
+    "wpm": 198.5,
+    "syllables": 26,
+    "articulation_sps": 3.91,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.387,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 193.5,
+    "f0_range_st": 9.4
+   },
+   "words": [
+    {
+     "w": "They",
+     "t0": 0.35,
+     "t1": 0.594
+    },
+    {
+     "w": "all",
+     "t0": 0.675,
+     "t1": 0.919
+    },
+    {
+     "w": "want",
+     "t0": 0.989,
+     "t1": 1.151
+    },
+    {
+     "w": "him",
+     "t0": 1.186,
+     "t1": 1.267
+    },
+    {
+     "w": "back",
+     "t0": 1.314,
+     "t1": 1.569
+    },
+    {
+     "w": "As",
+     "t0": 1.766,
+     "t1": 1.941
+    },
+    {
+     "w": "if",
+     "t0": 1.987,
+     "t1": 2.068
+    },
+    {
+     "w": "it",
+     "t0": 2.126,
+     "t1": 2.184
+    },
+    {
+     "w": "wasn't",
+     "t0": 2.231,
+     "t1": 2.498
+    },
+    {
+     "w": "allowed",
+     "t0": 2.533,
+     "t1": 2.916
+    },
+    {
+     "w": "It",
+     "t0": 3.171,
+     "t1": 3.299
+    },
+    {
+     "w": "was",
+     "t0": 3.357,
+     "t1": 3.717
+    },
+    {
+     "w": "The",
+     "t0": 4.216,
+     "t1": 4.332
+    },
+    {
+     "w": "charter",
+     "t0": 4.39,
+     "t1": 4.681
+    },
+    {
+     "w": "footnote",
+     "t0": 4.739,
+     "t1": 5.075
+    },
+    {
+     "w": "three",
+     "t0": 5.11,
+     "t1": 5.354
+    },
+    {
+     "w": "I've",
+     "t0": 5.412,
+     "t1": 5.574
+    },
+    {
+     "w": "read",
+     "t0": 5.609,
+     "t1": 5.737
+    },
+    {
+     "w": "it",
+     "t0": 5.783,
+     "t1": 5.842
+    },
+    {
+     "w": "four",
+     "t0": 5.888,
+     "t1": 6.05
+    },
+    {
+     "w": "times",
+     "t0": 6.109,
+     "t1": 6.352
+    },
+    {
+     "w": "tonight",
+     "t0": 6.399,
+     "t1": 6.747
+    }
+   ],
+   "qa": {
+    "asr": "They all want him back as if it wasn't allowed. It was the charter footnote 3. I've read it four times tonight",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.45,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 193.5,
+    "f0_range_st": 9.4,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.387,
+    "raw_tail_cut": false,
+    "align_median_s": 0.073
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 6.687,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v35/act4/wav/v35-a4-0009.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 8.455,
+    "audible_in_s": 0.51,
+    "audible_out_s": 7.98,
+    "wpm": 176.7,
+    "median_f0_hz": 167.0,
+    "f0_range_st": 8.9,
+    "delivery": "After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly.",
+    "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+    "device": null
+   }
+  },
+  "a5-27-29__neleh-A": {
+   "take": "a5-27-29__neleh-A",
+   "key": "1fa60fb5f442a636",
+   "base_key": "7c06a672cc15b2ae",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": "audio/ep01/v3-el/ep01/act4:a5-27-29__neleh-A",
+   "file": "audio/ep01/v3-el/ep01-v35/act4/wav/a5-27-29__neleh-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.65,
+   "offset_s": 0.35,
+   "sent": "Then we'll write step four ourselves.",
+   "seed": 2619787290,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "3dzJXoCYueSQiptQ6euE",
+   "voice_name": "Alexandra - Confident, Clear and Steady",
+   "cand": "A",
+   "role": "neleh",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.28,
+    "span_s": 1.93,
+    "words": 6,
+    "wpm": 186.5,
+    "syllables": 7,
+    "articulation_sps": 3.63,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.37,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 198.7,
+    "f0_range_st": 8.7
+   },
+   "words": [
+    {
+     "w": "Then",
+     "t0": 0.35,
+     "t1": 0.547
+    },
+    {
+     "w": "we'll",
+     "t0": 0.582,
+     "t1": 0.733
+    },
+    {
+     "w": "write",
+     "t0": 0.756,
+     "t1": 0.93
+    },
+    {
+     "w": "step",
+     "t0": 0.954,
+     "t1": 1.139
+    },
+    {
+     "w": "four",
+     "t0": 1.186,
+     "t1": 1.325
+    },
+    {
+     "w": "ourselves",
+     "t0": 1.383,
+     "t1": 1.883
+    }
+   ],
+   "qa": {
+    "asr": "Then we'll write step four ourselves",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.57,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 198.7,
+    "f0_range_st": 8.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.37,
+    "raw_tail_cut": false,
+    "align_median_s": 0.083
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 1.95,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.965,
+    "audible_in_s": 0.88,
+    "audible_out_s": 2.48,
+    "wpm": 225.0,
+    "median_f0_hz": 176.7,
+    "f0_range_st": 9.8,
+    "delivery": "Her real face, a decision. Quiet, level, a little slower than her band's middle. A breath first.",
+    "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.940",
+    "device": null
+   }
   }
  },
  "calls": [
@@ -10884,6 +11184,14 @@
    "cost_header": "9",
    "request_id": "mhGK90M90x5ji0MCWmgj",
    "at": "15:11:06"
+  },
+  {
+   "take": "v35-a4-0009__neleh-A",
+   "key": "e4c1c8e2f8fb8e19",
+   "chars": 118,
+   "cost_header": "52",
+   "request_id": "BQbCfqPuXFDRrQzyufK0",
+   "at": "21:33:42"
   }
  ]
 }

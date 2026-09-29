@@ -1,5 +1,7 @@
 # Ep1 v3.5: the base lock, Kokoro timing (`v3-lock`, 2026-09-28)
 
+> **v3.5b (2026-09-28): SHOWRUNNER-NOTES 00000A's added scenes (the usage flash, the racks, the launch party) and step four's payoff are in both locks: §10.**
+>
 > **Status: v3.5 BASE LOCK (Kokoro timing), for the lead and the ElevenLabs pass** (PLAN §8, step 2). Script draft 8.4's six v3.5 beat plans ([beat-plan-v35/](beat-plan-v35/), notes [script-v35-notes.md](script-v35-notes.md)) applied as deltas on the v3.4 lock (`show/reel/ep01-v34/`; nothing there was rebuilt or edited).
 >
 > **All the v3.1–v3.4 rules stand:**
@@ -257,4 +259,72 @@ python3 audio/reel/ep01-v35/build_timeline.py                         # the lock
 bash ops/heavy.sh audio/.venv-casting/bin/python audio/reel/ep01-v35/bed.py   # the beds (about 30 s)
 cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/ep01-v35/ep01-v35.manifest.json --plan
 cd .. && python3 audio/reel/ep01-v35/measure.py                       # measure.json + lock-v35-transcript.txt
+```
+
+## 10. v3.5b: the added scenes and Act Four's two lines (SHOWRUNNER-NOTES 00000A, 2026-09-28)
+
+The showrunner: "i did not want to cut a scene, only add one". Step 2's three added scenes, and step four's payoff, go through the same builders as §9:
+- `_spec_v35.py` → `beat-plan-v35/*.json` → `build_timeline.py` (the Kokoro base lock);
+- then `el_lock.py` (the EL lock), `el_takes.py` and `el_lock.sh` (the picture locks in `assembly/el-v35/`);
+- and the four act scores.
+
+Nothing else in any act moved, apart from the shift (checked beat by beat against the committed locks).
+
+| Addition | Beats (EL) | Length | Shots, transition in and out | Sounds (the lock's form: name · at · gain dBFS peak) |
+|---|---|---|---|---|
+| **Act One: the usage flash**, before the pause letter | v35-22.02 · Act One frames **10368–10416** | **2.0 s** (48 f) | One insert: every chatbot just shown (CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED), usage lines climbing at once, CHATGTP's off the top; no figures.<br>**In:** a matched object (the window's users line, seen past the TV, becomes CHATGTP's line).<br>**Out:** sound-led (12.01's toast J-cut moves here and pops 0.4 s before the cut, frame 10406). | `counter_roll` · 0.2 · −28 |
+| **Act Two: the racks**, after "AI CHIPS · QTY: MORE" | v35-30A.01 · **4724–4772**; v35-30A.02 · **4772–4844** | 2.0 + 3.0 = **5.0 s** (120 f, two bars) | (1) INSERT: the purchase order matches to a packing slip on an INVIDIA crate, and a board comes out of its sleeve.<br>(2) MEDIUM → WIDE: staff slide two boards home and latch them, and the LEDs come up in a climbing column.<br>**In:** a matched object, with the fans leading 0.5 s (sound-led).<br>**Out:** the LED column climbing off the top matches the price's line climbing off the top in 17.11. The fans stop on the cut; the bell rings across. | `paper_tear` · 0.35 · −30<br>`folder_slide` · 0.3 · −24 and 1.2 · −25 (the boards sliding home)<br>`nameplate_off` · 1.05 / 1.9 · −22 (the latches)<br>`ui_mute_blip` · 2.2 / 2.4 / 2.6 · −30 (the LEDs)<br>17.07's `synth:bell` gets `dur` 16.2 s, so it still decays to the black. |
+| **Act Three: the launch party** (Sep 25, 2023), before the Tidder post | v35-32A.01 · **837–927**; v35-32A.02 · **927–987**; v35-32A.03 · **987–1077** | 3.75 + 2.5 + 3.75 = **10.0 s** (240 f, four bars) | (1) WIDE: the bullpen, evening, the banner CHATGTP CAN NOW SEE, HEAR AND SPEAK, the users line on the glass.<br>(2) MEDIUM: the staff cheer as Mas raises his glass.<br>(3) 2S: Mas and Alyi, the toast and a shared laugh.<br>**In:** sound-led (the cheer takes the cut 0.4 s early, on the rail's roll to SEP 25).<br>**Out:** a matched object (his glass comes down and is the glass set on his desk at 20.01), with the walla trailing 0.6 s. | `synth:cheer` · 0.0 · −26 (dur 1.4; J 0.4 s)<br>`synth:cheer` · 0.3 · −24 (dur 1.6)<br>`glass_nudge` · 0.9 · −24 and 1.05 · −26<br>`glass_nudge` · 0.6 · −22 (the toast)<br>20.01: `glass_set_stone` · 0.05 · −28 |
+| **Act Four: step four's payoff** (S4.02) | S4.02 · **4197–4481** | 8.56 → **11.86 s** (+79 f) | The held wide, as before.<br>Neleh's re-recorded line (v35-a4-0009, "They all want him back. As if it wasn't allowed. …"), then the first phone's clack.<br>"Then we'll write step four ourselves." (a5-27-29, the v3.4 take), 0.25 s after the clack (quick).<br>She writes 4. MARIO on the blank as she dials; the tones pre-lap S4.08.<br>After Adelina's "no" (S4.08) it is struck through.<br>Sunday's look (S4.07, 3.0 s, unchanged) lands on the crossed-out line. | BUZZ · 0.288 · −24, and after the line +0.172 · −26<br>`landing_thunk` · after the line +0.48 · −22<br>`marker_uncap` · after a5-27-29 +0.12 · −30<br>`marker_write_q` · after a5-27-29 +0.35 · −28 (4. MARIO)<br>S4.08: `marker_write_q` · after "no." +0.35 · −30, dur 0.4 (the strike) |
+
+**The Act One flash isn't picture-only:**
+- v35-22.01 is 72 frames (EL 10296–10368).
+- DRAB's page needs its read floor from 0.2 s, and the rope snaps at 0.9 s.
+- The letter's header lands at 12.01 + 0.4 s, with its toast already popping 0.4 s early.
+- That leaves at most about 1.3 s, short of the 2–3 s asked for, so the flash adds 2.0 s.
+
+**New rooms:** `racks` (the cold aisle: the fans) and `party` (the staff's walla). They are in `bed.py`; the stems pass needs `RECIPE_LOCK` entries for them. The racks' set is `datacenter`.
+
+**Frames (story, no slate):**
+
+| Segment | Kokoro v3.5 → **v3.5b** | EL v3.5 → **v3.5b** |
+|---|---|---|
+| Act One | 10,794 → **10,842** (7:31.7) | 10,947 → **10,995** (7:38.1) |
+| Act Two | 5,074 → **5,194** (3:36.4) | 4,848 → **4,968** (3:27.0) |
+| Act Three | 3,339 → **3,579** (2:29.1) | 3,274 → **3,514** (2:26.4) |
+| Act Four | 11,600 → **11,680** (8:06.7) | 11,873 → **11,953** (8:18.0) |
+| Cold open, tag | unchanged (640, 798) | unchanged (583, 798) |
+| **Story** | 32,245 → **32,733** (22:43.9) | 32,323 → **32,811** (22:47.1) |
+
+The EL episode runs about 23:29.4 (the manifest's 23.49 min, with the intro, card and outro).
+
+**For the picture pass** (EL frames; the old → new shifts):
+- **Act One:** +48 f from 10416 (12.01) on. v35-vo-05 is now 10747; v35-vo-06 is unchanged at 9221.
+- **Act Two:** +120 f from 4724 on. 17.11 is now 4844–4950, 17.13 4950–4968.
+- **Act Three:** +240 f from 837 on.
+  - The GLYPH frames (18.04g, 426–438) are before the party and unchanged.
+  - 20.01 is now 1077–1183, and v32-22.04 3166–3274.
+- **Act Four:** +79 f from 4481 (S4.08) on.
+  - S4.07 is 6162–6234.
+  - **S7.13's hourglass is 10754–11018** (was 10675–10939; `hourglass_el.py --s713 10754`).
+- **The new shots' marks:**
+  - **Flash:** the counter from 10372; the toast at 10406.
+  - **Racks:** the tear 4732; boards sliding 4779 and 4800; latches 4797 and 4817; LEDs 4824, 4829 and 4834.
+  - **Party:** the cheer from 827; the raise and cheer 934; clinks 948 and 952; the toast clink 1001; the laugh from about 1016; the glass down about 1064; the glass set at home 1078.
+  - **Neleh:**
+    - v35-a4-0009 4227–4387, the clack 4398, a5-27-29 4404–4451;
+    - 4. MARIO written 4458 → the cut at 4481;
+    - "no." ends 4888, the click 4892, the strike 4896–4906;
+    - Sunday's look 6162–6234.
+
+**The two hand-placed V.O. lines survive** (voices-el.md §AD, §AE). EL Act One keeps its committed beats; only v35-22.02 and v35-22.01's cue come from the rebuild.
+
+**The picture locks' one failed check** in Acts One to Four is the length against the old EL mix (`mix-v35-el/<seg>-mix.wav`). It clears when the mix pass renders the new lengths.
+
+**Rebuild** (§9, plus):
+```sh
+python3 audio/ep01/v35/takes.py plan && bash ops/heavy.sh bash audio/ep01/v35/record.sh act4 && python3 audio/ep01/v35/takes.py assemble
+SEGS=act4 bash ops/heavy.sh bash audio/ep01/v3-el/tools/render_v35.sh            # the new line (EL; cached now)
+audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_lock.py act2 act3 act4 --lock v35 --fixed S7.13   # segments FIRST
+# Act One: never el_lock.py act1 (it drops §AD's lines): splice a new line-less beat into the committed EL Act One
 ```

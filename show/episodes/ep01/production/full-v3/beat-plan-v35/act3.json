@@ -4,7 +4,7 @@
  "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
  "story_s": {
   "source": 125.3,
-  "estimate": 139.12
+  "estimate": 149.12
  },
  "beats": [
   {
@@ -208,6 +208,139 @@
    ]
   },
   {
+   "id": "v35-32A.01",
+   "action": "new",
+   "after": "v31-19.03",
+   "scene": "32A",
+   "mode": "INSERT (wordless)",
+   "pace": "normal",
+   "est_s": 3.75,
+   "frame": "WIDE · NopeAI's bullpen, evening: the launch party",
+   "camera": "WIDE · NopeAI's bullpen, evening: the launch party",
+   "set": "bullpen",
+   "room": "party",
+   "chars": [
+    "staff",
+    "mas",
+    "alyi"
+   ],
+   "lines": [],
+   "caption": "The rail rolls on to SEP 25 and the cheer takes the cut: NopeAI's bullpen in the evening, full of staff with cups, a banner over the window: CHATGTP CAN NOW SEE, HEAR AND SPEAK. On the glass behind it, Act One's users line, off the top. Mas and Alyi at the centre of it.",
+   "picture": "Warm light, the bullpen crowded (staff as figures, nobody named); the banner in the launch post's own words; the users line on the window (sc 18's). Mas with his glass; Alyi beside him, in person, lit.",
+   "onscreen": {
+    "add": [
+     "RAIL: SEP 25, 2023",
+     "CHATGTP CAN NOW SEE, HEAR AND SPEAK"
+    ]
+   },
+   "music": "ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did",
+   "sounds": [
+    {
+     "name": "synth:cheer",
+     "at": 0.0,
+     "gain": -26,
+     "dur": 1.4,
+     "note": "the staff's cheer takes the cut (the J-cut moves it 0.4 s under the runner)"
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the party's cheer leads the cut",
+     "lead_s": 0.4
+    }
+   ],
+   "fix": [
+    "NEW",
+    "FACT",
+    "TR"
+   ],
+   "why": "SN 00000A step 2 (sc 32A): the staff love him, and so does Alyi. In: sound-led, the cheer under the runner's last 0.4 s, on the rail's roll to SEP 25. [P·arch · \"ChatGPT can now see, hear, and speak\" (Sep 25, 2023) · the party itself is INVENTED]"
+  },
+  {
+   "id": "v35-32A.02",
+   "action": "new",
+   "after": "v35-32A.01",
+   "scene": "32A",
+   "mode": "INSERT (wordless)",
+   "pace": "normal",
+   "est_s": 2.5,
+   "frame": "MEDIUM · the staff cheer as Mas raises his glass",
+   "camera": "MEDIUM · the staff cheer as Mas raises his glass",
+   "set": "bullpen",
+   "room": "party",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "lines": [],
+   "caption": "MAS raises his glass; the staff around him raise their cups and cheer. Two cups clink near the lens.",
+   "picture": "His glass (the one he carries everywhere) up at 0.3 s; the cheer on it; his one-pixel smile. The clinks at 0.9 and 1.05 s.",
+   "music": "ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did",
+   "sounds": [
+    {
+     "name": "synth:cheer",
+     "at": 0.3,
+     "gain": -24,
+     "dur": 1.6
+    },
+    {
+     "name": "glass_nudge",
+     "at": 0.9,
+     "gain": -24,
+     "note": "two cups clink"
+    },
+    {
+     "name": "glass_nudge",
+     "at": 1.05,
+     "gain": -26
+    }
+   ],
+   "fix": [
+    "NEW"
+   ],
+   "why": "The staff's affection, in picture: they cheer him."
+  },
+  {
+   "id": "v35-32A.03",
+   "action": "new",
+   "after": "v35-32A.02",
+   "scene": "32A",
+   "mode": "INSERT (wordless)",
+   "pace": "normal",
+   "est_s": 3.75,
+   "frame": "2S · Mas and Alyi: the toast, and a shared laugh",
+   "camera": "2S · Mas and Alyi: the toast, and a shared laugh",
+   "set": "bullpen",
+   "room": "party",
+   "chars": [
+    "mas",
+    "alyi"
+   ],
+   "lines": [],
+   "caption": "ALYI lifts his cup to Mas's glass: they clink. Alyi says something we don't hear; they both laugh, Alyi's hand on Mas's shoulder. The laugh settles; Mas lowers his glass.",
+   "picture": "Held two-shot, warm. The clink at 0.6 s; the laugh from 1.2 s (shoulders, three held drawings; the sound pass lays a soft laugh in the room, no voice takes); Mas's glass comes down at 3.2 s, and the cut matches it to the same glass on his desk at home (20.01).",
+   "music": "ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did",
+   "sounds": [
+    {
+     "name": "glass_nudge",
+     "at": 0.6,
+     "gain": -22,
+     "note": "the toast: Alyi's cup on Mas's glass"
+    }
+   ],
+   "lcut": [
+    {
+     "sound": "the party's walla drains into the dark room's fans",
+     "over_s": 0.6
+    }
+   ],
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "Alyi warm with Mas, so his vote lands harder (sc 45). Out: his glass (a matched object) to the desk at home the next night; the walla trails 0.6 s into the dark room."
+  },
+  {
    "id": "20.01",
    "action": "keep",
    "scene": 33,
@@ -217,9 +350,19 @@
    "frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
    "camera": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
    "music": "ACT THREE · intimate, a little lonely · the Water Line (MM-01), one performance; the monitor's items play their own audio inside it; one felt note under the V.O. and every real line; the act opens on the rack's fans under the black",
-   "picture": "unchanged (v3.4)",
-   "fix": [],
-   "why": "unchanged",
+   "picture": "v3.5b: his glass on the desk in the near foreground, where the party's glass was in frame (v35-32A.03's out: a matched object); set down on the cut.",
+   "sounds": [
+    {
+     "name": "glass_set_stone",
+     "at": 0.05,
+     "gain": -28,
+     "note": "his glass set down on the desk: the party's glass lands at home (the match)"
+    }
+   ],
+   "fix": [
+    "TR"
+   ],
+   "why": "SN 00000A: the party (sc 32A) now comes before the post; its glass lands here.",
    "src_s": 4.4,
    "src_frame": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
    "lines": []

@@ -2,7 +2,32 @@
 
 **What this is (pass `v3-score-b`, track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md); v3.4 refit, then the v3.5 FINAL refit below, 2026-09-28).** Seven cues, rendered by the OST engine and laid on Act Four's own clock (0 = the segment's first frame) on the **final v3.4 lock** (`show/reel/ep01-v34/` 4309e86, EL `ep01-v34-el/` 93f0431; record in `lock-v34.md`, notes `script-v34-notes.md`) into one stem: `render/music.wav`, 48 kHz / 24-bit stereo, exactly the segment's length. It sits at underscore level (the avalanche at featured level) and is dry of dialogue; the mixer ducks it. **Nothing here has been listened to.** Every number below is measured.
 
-## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+## v3.5b (current, 2026-09-28): step four's payoff (SHOWRUNNER-NOTES 00000A)
+
+**The lock:** S4.02 carries Neleh's re-recorded line ("They all want him back. As if it wasn't allowed. …"), then the clack, then the restored "Then we'll write step four ourselves." (0.25 s after the clack). As she dials, she writes 4. MARIO on the blank line. S4.02 is 11.86 s (+3.30 s), so everything from S4.08 on is 79 frames later (lock-v35.md §10). `render/music-el.wav` is **498.042 s (11,953 frames), exact**, and `render/music-el-ringout.wav` is rewritten.
+
+**Re-rendered:** `board`, `two_am` and `return`. `noon`, `warroom`, `night`, `plan` and `avalanche` are note for note the v3.5 builds, relative to their start (checked against the committed lock), and their renders are laid 0 or 3.29 s later.
+
+**THE BOARD'S SIDE, section d, in its own material:**
+- **The pedal and the phones' pizz bursts:** as before. The clock tick runs from the first buzz to the clack, now one tick longer with the longer line.
+- **Under "Then we'll write step four ourselves.":** the pedal alone. This is the cue's rule under talk.
+- **As she writes 4. MARIO (185.52 → 186.77 s):** STEP FOUR on her pen, in eighths, as v3.2 did on the list: B♭m(add9), A♭(add9), G♭maj7 on low strings with the clarinet on top. Then **the blank: the F bass alone** under the name. The motif keeps its blank (the model fills it in Ep12), and Adelina's "no." strikes the name.
+- **The split's dial tones then take the designed rest,** as before.
+- **Sunday's look (S4.07):** as v3.5 (the solo viola's three steps over Step Four). It now lands on the crossed-out line.
+
+**Measured (`v35check`):**
+- **Levels:** −20.27 LUFS-I, −3.15 dBTP.
+- **Silence:** no unmarked silence, holes or fragments.
+- **Engine checks:** F-major OK, rule 12 OK, knee 0/0.
+- **Cut steps:** all five of 12 dB or more are marked.
+
+**Re-run:**
+```bash
+OST_WORKERS=2 timeout 3000 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act4/track.py --variant el --render board two_am return
+```
+Keep the `timeout` wrapper. When `ops/pressure-governor.sh` pauses a job that was started straight from a shell with job control, the shell reports it Stopped and the render is lost. Under `timeout` it just resumes.
+
+## v3.5 FINAL (2026-09-28): the ElevenLabs-timed lock
 
 **The final film is `show/reel/ep01-v35-el/` (lock-v35.md, script-v35-notes.md).** There are now eight cues; `cue_warroom.py` is new. `render/music-el.wav` is **494.708 s (11,873 frames), exact.** `v3clock.py` defaults to v3.5, and `--variant el` is the film. The Kokoro v3.5 stem was not rendered. The act is about 25 s shorter, and its middle is re-ordered.
 

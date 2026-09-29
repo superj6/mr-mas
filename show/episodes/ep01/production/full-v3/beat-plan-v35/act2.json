@@ -4,7 +4,7 @@
  "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
  "story_s": {
   "source": 181.19,
-  "estimate": 211.43
+  "estimate": 216.43
  },
  "beats": [
   {
@@ -1527,8 +1527,19 @@
    "camera": "INSERT · one key (phrase 3)",
    "music": "THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out)",
    "picture": "unchanged (v3.4)",
-   "fix": [],
-   "why": "unchanged",
+   "sounds": [
+    {
+     "name": "synth:bell",
+     "at": 0.62,
+     "gain": -18,
+     "dur": 16.2,
+     "note": "the register's bell decays across the racks (v35-30A) to 17.13's black, as before"
+    }
+   ],
+   "fix": [
+    "TR"
+   ],
+   "why": "SN 00000A: the racks add 5.0 s before the act-out; the bell's decay is lengthened so it still reaches the black.",
    "src_s": 0.917,
    "src_frame": "INSERT · one key (phrase 3)",
    "lines": []
@@ -1586,6 +1597,122 @@
    "src_s": 3.0,
    "src_frame": "INSERT · the pen in Mario's hand",
    "lines": []
+  },
+  {
+   "id": "v35-30A.01",
+   "action": "new",
+   "after": "17.10",
+   "scene": "30A",
+   "mode": "QUICK-CUT",
+   "pace": "quick",
+   "est_s": 2.0,
+   "frame": "INSERT → MATCH · the packing slip on an INVIDIA crate",
+   "camera": "INSERT → MATCH · the packing slip on an INVIDIA crate",
+   "set": "datacenter",
+   "room": "racks",
+   "chars": [],
+   "lines": [],
+   "caption": "MATCH: the purchase order in Mario's hand becomes, in the same place in frame, a packing slip on a crate stencilled INVIDIA: AI CHIPS · QTY: MORE. A box cutter slits the tape; a gloved hand lifts a new board out of its silver sleeve, the INVIDIA logo on its shroud.",
+   "picture": "The slip is the order's own form (same size, same place, same type), now taped to the crate; the board's shroud carries the logo planted in Act One (7.02, 13.01). A data hall's cold aisle behind, soft; no company named on its walls. Hands only.",
+   "onscreen": {
+    "add": [
+     "INVIDIA",
+     "AI CHIPS · QTY: MORE"
+    ]
+   },
+   "music": "THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it",
+   "sounds": [
+    {
+     "name": "paper_tear",
+     "at": 0.35,
+     "gain": -30,
+     "note": "the cutter through the slip's tape"
+    }
+   ],
+   "jcut": [
+    {
+     "sound": "the racks' server fans lead the cut",
+     "lead_s": 0.5
+    }
+   ],
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "SN 00000A step 2 (sc 30A): the orders arrive. In: the purchase order (a matched object), the fans leading it by 0.5 s (sound-led)."
+  },
+  {
+   "id": "v35-30A.02",
+   "action": "new",
+   "after": "v35-30A.01",
+   "scene": "30A",
+   "mode": "QUICK-CUT",
+   "pace": "quick",
+   "est_s": 3.0,
+   "frame": "MEDIUM → WIDE · the racks: staff slide the boards home",
+   "camera": "MEDIUM → WIDE · the racks: staff slide the boards home",
+   "set": "datacenter",
+   "room": "racks",
+   "chars": [
+    "staff"
+   ],
+   "lines": [],
+   "caption": "A row of racks in the cold aisle. Two staff in lanyards slide the new boards home, one after the other; each latch snaps shut. The rack's LEDs come up in a column, climbing to the top of the frame. One of them pats the rack's door, pleased.",
+   "picture": "Backs and hands, lanyards, sleeves rolled; nobody named. Board 1 slides at 0.3 s and latches at 1.05 s; board 2 slides at 1.2 s and latches at 1.9 s; the LEDs step up from 2.2 s (0.2 s a step), the column climbing off the top of the frame on the cut: it becomes the price's line lifting off in 17.11 (the same upward motion).",
+   "music": "THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it",
+   "sounds": [
+    {
+     "name": "folder_slide",
+     "at": 0.3,
+     "gain": -24,
+     "note": "board 1 sliding home in its slot"
+    },
+    {
+     "name": "nameplate_off",
+     "at": 1.05,
+     "gain": -22,
+     "note": "board 1's latch snapping shut"
+    },
+    {
+     "name": "folder_slide",
+     "at": 1.2,
+     "gain": -25,
+     "note": "board 2 sliding home"
+    },
+    {
+     "name": "nameplate_off",
+     "at": 1.9,
+     "gain": -22,
+     "note": "board 2's latch"
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.2,
+     "gain": -30,
+     "note": "the LEDs coming up, a step at a time (the sound pass may use the dark room's LED ticks)"
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.4,
+     "gain": -30
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.6,
+     "gain": -30
+    }
+   ],
+   "lcut": [
+    {
+     "sound": "the fans stop on the cut; the register's bell rings across into the sky",
+     "over_s": 0.1
+    }
+   ],
+   "fix": [
+    "NEW",
+    "TR"
+   ],
+   "why": "The staff at work on what he bought through the landlord. Out: the LED column climbing off the top of the frame, matched to the price's line climbing off the top in 17.11."
   },
   {
    "id": "17.11",

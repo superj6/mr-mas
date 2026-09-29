@@ -128,6 +128,10 @@ def events(c):
         surge=c.B('v32-22.04'), counter=c.snd('v32-22.04', 'synth:ratchet_fast'),    # v3.2: the sign-ups paused
         pause=c.snd('v32-22.04', 'post_click'),
         clock=c.B('23.01'), stop=c.B('23.04'), end=c.LEN)
+    # v3.5b (SN 00000A step 2): THE LAUNCH PARTY (Sep 25, 2023), before the post: 10.0 s, four bars of the grid
+    E.update(party=c.B('v35-32A.01') if c.has('v35-32A.01') else None,
+             raise_=c.B('v35-32A.02') if c.has('v35-32A.02') else None,
+             ptoast=c.B('v35-32A.03') if c.has('v35-32A.03') else None)   # (not 'toast': the Orb's verdict)
     L = c.LINES
     E.update(thanks=L['e1-a3-18-01'], vo14=L.get('e1-a3-18-04'), stay=L['e1-a3-18-03'],
              vo05=L.get('v34-vo-05'),                                          # v3.4: the Orb's V.O. on the label
@@ -375,9 +379,23 @@ def build(c):
     rl, nl = E['remuhcs'], E['nole']
     th = nl['end'] + 0.15                                  # v3.2: he lowers his hand himself (no V.O.)
     fch('Bbm9h', rl['on'] - 0.25, th - rl['on'] + 0.1, 0.11, span_end=th - 0.05)
-    fch(['Eb3', 'Ab3', 'Db4'], th, E['type'] - th + 0.4, 0.15, span_end=E['type'] + 0.1)
-    cue.mark(th, 'B: he lowers his hand himself: the felt alone (E-flat A-flat D-flat)')
-    cue.section('B the monitor: the iris, Sirrah, the hands runner (THE COPY), his hand', E['mon'], E['type'])
+    PT = E['party']
+    if PT is None:
+        fch(['Eb3', 'Ab3', 'Db4'], th, E['type'] - th + 0.4, 0.15, span_end=E['type'] + 0.1)
+        cue.mark(th, 'B: he lowers his hand himself: the felt alone (E-flat A-flat D-flat)')
+        cue.section('B the monitor: the iris, Sirrah, the hands runner (THE COPY), his hand', E['mon'], E['type'])
+    else:
+        # v3.5b: the felt alone rings to the party's cut (the cheer takes it, 0.4 s early); the party is its own cue
+        # (build_party: the lift); on the laugh's settle the felt alone comes back, the same chord, and holds under
+        # the glass's match into the typed post: it gives way to the record as the runner's end did
+        fch(['Eb3', 'Ab3', 'Db4'], th, PT - th + 0.25, 0.15, span_end=PT - 0.05)
+        cue.mark(th, 'B: he lowers his hand himself: the felt alone (E-flat A-flat D-flat), to the party\'s cut')
+        cue.section('B the monitor: the iris, Sirrah, the hands runner (THE COPY), his hand', E['mon'], PT)
+        tf = party_settle(cue, E)
+        fch(['Eb3', 'Ab3', 'Db4'], tf, E['type'] - tf + 0.4, 0.15, span_end=E['type'] + 0.1)
+        cue.mark(tf, "B': the party's laugh settles: the felt alone again (E-flat A-flat D-flat), under the Door's held "
+                     'G and the glass into the post')
+        cue.section("B' the party's end: the felt alone, into the post", tf, E['type'])
 
     # ---------------------------------------------------------------- C · the post (the record) and the call
     tr = E['type'] + 0.3                                  # (v3.1: struck on the typing, not the next bar)
@@ -674,6 +692,122 @@ def build(c):
     return sc, T0, window, extra
 
 
+# ================================================================== THE LAUNCH PARTY (v3.5b, SN 00000A step 2)
+PARTY_ID = 'e01-v35b-act3-party'
+
+
+def party_settle(cue, E):
+    """the bar line after the laugh has peaked (v35-32A.03 + 2.0 s): the party's band has thinned, the felt alone
+    comes back (the main cue) with the Door's C5"""
+    return cue.bar(cue.next_bar(E['ptoast'] + 2.0))
+
+
+def build_party(c):
+    """THE LAUNCH PARTY (sc 32A, 10.0 s = bars 15.4-19.4 of the act's grid on the EL lock): a short warm lift in the
+    show's voice, jazz and nothing corny: the felt swings (rootless voicings; HIM), brushes and the upright walk, the
+    Water Line brightened on the felt and vibes (the staff's cheer as he raises his glass is its second bar; the chip on
+    the nudge); then ALYI'S DOOR (OST-BIBLE s2.9: A-flat4 D-flat5 | C5 G4 held), warm on the flute, for the toast:
+    it never cadences, it ends on the sharp 4 (G), held over the laugh and the glass's match into the post; the band
+    thins on the laugh (the laugh is the room's) and the felt alone (the main cue) takes the settle"""
+    E = events(c)
+    CLK = E['clock']
+    K = int(math.ceil((CLK + 0.6) / BAR))
+    T0 = CLK - BAR * K                                    # the act's grid (THE CLOCK's bar 1 = 23.01)
+    cue = Cue(PARTY_ID, T0, K + 8, swing=1.0)
+    T = palette()
+    T['felt'].gain_db, T['felt'].sends = -1.0, {'room': -12, 'hall': -18}
+    T['felt_lh'] = replace(T['felt'], name='felt_lh')
+    T['vibes'].gain_db, T['vibes'].sends = -8.0, {'room': -12, 'hall': -14}
+    T['vibes'].eq = list(T['vibes'].eq) + [('hs', 2500, -4.0)]
+    T['upright'].gain_db = -3.0
+    T['brush'].gain_db = 5.0             # (render 1: the 2-6 kHz band read -12.9 dB; warm, not bright)
+    T['brush'].eq = list(T['brush'].eq) + [('hs', 3000, -4.0)]
+    T['lead'].gain_db, T['lead'].sends, T['lead'].eq = -10.0, {'room': -14, 'snes': -16}, [('hp', 220), ('lp', 5200)]
+    T['fl'].gain_db, T['fl'].sends = -4.0, {'room': -10, 'hall': -12}
+    T['fl'].eq = list(T['fl'].eq) + [('lp', 3600)]          # the Door's family colour, softened (not through a door:
+    P, R, TT = E['party'], E['raise_'], E['ptoast']          # he's in the room, warm)
+    b_in = cue.bar_of(P)                                  # the bar the cut falls in
+    t_in = min(cue.bt(b_in, k) for k in (1, 2, 3, 4, 5) if cue.bt(b_in, k) >= P + 0.05)   # the first beat after it
+    b1 = b_in + 1                                         # the Water Line's first full bar
+    b_toast = cue.bar_of(TT + 0.5)                        # the toast's bar (Alyi lifts his cup on its downbeat)
+    tf = party_settle(cue, E)                             # the felt alone (main cue) comes back
+    laugh = TT + 1.2
+    felt_ped = []
+
+    def comp(ps, t, d, v):
+        felt_ped.append((cue.s(t), cue.s(t + d)))
+        cue.ch('felt_lh', ps, t, d, v, roll=0.012)
+
+    VO = {'Dbmaj9': ['F3', 'Ab3', 'C4', 'Eb4'], 'Abmaj9': ['C3', 'G3', 'Bb3', 'Eb4'], 'Dbmaj9#11': ['F3', 'G3', 'C4', 'Eb4']}
+    ROOT = {'Dbmaj9': 'Db2', 'Abmaj9': 'Ab2', 'Dbmaj9#11': 'Db2'}
+    WALK = {'Dbmaj9': ['Db2', 'F2', 'Ab2', 'C3', 'Db3', 'C3', 'Ab2', 'G2'],
+            'Abmaj9': ['Ab2', 'C3', 'Eb3', 'G2', 'Ab2', 'Bb2', 'C3', 'Db3'],
+            'Dbmaj9#11': ['Db2', 'F2', 'G2', 'Ab2', 'C3', 'Ab2', 'F2', 'Eb2']}
+    plan = [(b_in, 'Dbmaj9'), (b1, 'Dbmaj9'), (b1 + 1, 'Abmaj9'), (b_toast, 'Dbmaj9#11')]
+    band_end = cue.bt(b_toast, 3)                         # the band thins on the laugh (bar 18 beat 3)
+    # the comp: a swung rootless chord on 1 and the and-of-2 (Charleston), softer on the laugh's bar
+    for b, name in plan:
+        for beat, d, v in ((1.0, 0.9, 0.2), (2.5, 0.55, 0.17)):
+            t = cue.sw(b, beat)
+            if t < t_in - 0.01 or t >= band_end - 0.01:
+                continue
+            comp(VO[name], t, d * Q, v)
+    # the walk: eighths-as-quarters, the upright, from the first beat after the cut to the laugh
+    for b, name in plan:
+        for k, p in enumerate(WALK[name][::2] if b != b_in else WALK[name][::2]):
+            t = cue.bt(b, 1 + k)
+            if t < t_in - 0.01 or t >= band_end - 0.01:
+                continue
+            cue.n('upright', p, t, Q * 0.9, 0.5 if k == 0 else 0.42)
+    # brushes: a sweep and the swung taps, from the cut's bar to the laugh
+    Drums(cue.a, 'brushes').play('sweep: ~~~~~~~~~~~~~~~~\ntap[vel=0.7]: x.Xgx.Xgx.Xgx.Xg\nhatf: ....x.......x...',
+                                 bars=(b_in, b_toast + 1), vel=0.7)
+    cue.a.notes[:] = [n for n in cue.a.notes if not (n.inst in ('brush', 'jazz') and not (cue.s(t_in) - 0.01 <= n.start < cue.s(band_end)))]
+    # the Water Line, brightened: F5 F5 F5 G5(sw) F5 | C5 F5, felt RH + vibes (the staff raise their cups on bar 2)
+    wl = [('F5', b1, 1.0, 0.9), ('F5', b1, 2.0, 0.9), ('F5', b1, 3.0, 0.9), ('G5', b1, 4.0, 0.45), ('F5', b1, 4.5, 0.45),
+          ('C5', b1 + 1, 1.0, 0.9), ('F5', b1 + 1, 2.0, 2.6)]
+    for p, b, beat, d in wl:
+        t = cue.sw(b, beat)
+        cue.n('felt', p, t, d * Q, 0.19)
+        cue.n('vibes', p, t, d * Q, 0.22, rel=0.5)
+    nudge = cue.sw(b1, 4.0)
+    cue.n('lead', 'G5', nudge, 0.18, 0.12, duty=0.5, att=0.004, dec=0.25, sus=0.35, rel=0.08)
+    cue.n('lead', 'F5', cue.sw(b1 + 1, 2.0), 0.3, 0.1, duty=0.5, att=0.004, dec=0.25, sus=0.35, rel=0.08)
+    # ALYI'S DOOR for the toast: A-flat4 (h) D-flat5 (h) | C5 (q) G4 (h., held: the sharp 4, no cadence)
+    door = [('Ab4', cue.bt(b_toast, 1), 2 * Q), ('Db5', cue.bt(b_toast, 3), 2 * Q), ('C5', cue.bt(b_toast + 1, 1), Q),
+            ('G4', cue.bt(b_toast + 1, 2), E['type'] + 0.6 - cue.bt(b_toast + 1, 2))]
+    for p, t, d in door:
+        cue.n('fl', p, t, d, 0.3 if p != 'G4' else 0.26, art='sus', rel=0.5)
+    comp(['Db3', 'F3', 'G3', 'C4'], cue.bt(b_toast, 3), tf - cue.bt(b_toast, 3) + 0.2, 0.14)   # held through the laugh
+    T['felt_lh'].pedal = pedal_track(felt_ped)
+    T['felt'].pedal = T['felt_lh'].pedal
+    cue.mark(t_in, 'DESIGNED HIT: THE LAUNCH PARTY (v3.5b): the band in on the first beat after the cut (the cheer '
+                   'takes the cut, 0.4 s early): the felt swings, brushes, the upright')
+    cue.mark(cue.bar(b1), 'the party: the Water Line brightened (felt + vibes), F F F G F')
+    cue.mark(cue.sw(b1 + 1, 1.0), 'the party: he raises his glass, the staff cheer: the Water Line\'s second bar (C F)')
+    cue.mark(cue.bt(b_toast, 1), "the party: ALYI'S DOOR on the flute for the toast (A-flat4 D-flat5)")
+    cue.mark(band_end, 'the party: the band thins on the laugh (the laugh is the room\'s)', hit=False)
+    cue.mark(cue.bt(b_toast + 1, 2), "the Door's G4, the sharp 4: held, no cadence, over the glass into the post", hit=False)
+    cue.section('v3.5b THE LAUNCH PARTY: the felt swings, brushes, the upright; the Water Line brightened', P, cue.bt(b_toast, 1))
+    cue.section("v3.5b the toast: Alyi's Door on the flute (never cadencing); the laugh", cue.bt(b_toast, 1), tf)
+    meta = dict(
+        id=PARTY_ID, title='The Launch Party (Ep1 v3.5, Act Three sc 32A)', mm='MM-01 (the Water Line) + the Door (s2.9)',
+        usage='BI', family='HIM (the felt, swing, rootless voicings) with a trio: brushes and the upright',
+        tone='a short warm lift: the staff with him, and Alyi warm; nothing corny, no button',
+        scenes=['Ep1 v3.5 Act Three sc 32A (v35-32A.01-.03)'],
+        motifs=['the Water Line, brightened (felt + vibes; the chip on the nudge)', "Alyi's Door (A-flat D-flat | C G)"],
+        motif_ids=['WATER_LINE'], key='D-flat lydian / A-flat major (no A anywhere)',
+        composer='v3.5b lock-and-score pass, 2026-09-28', underscore_lufs=-20.0, album_lufs=-16.0,
+        audition=['the lift: warm, a party the staff mean, never a sitcom band', 'the Door on the toast: warm, and it '
+                  'never lands (the cadence is behind the door until Ep11)'])
+    sc = Score(PARTY_ID, cue.g, T, cue.notes, length_s=cue.s(E['type'] + 1.2), tail_s=0.0, meta=meta, **cue.score_args())
+    window = [P - 0.45, E['type'] + 0.9, 0.05, 0.5]
+    extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.marks],
+                 designed_hit=[(round(t_in, 4), 'the launch party: the band in on the first beat after the cut (v3.5b)')],
+                 sections=[(lab, round(a, 4), round(b_, 4)) for lab, a, b_ in cue.sections], silences=[])
+    return sc, T0, window, extra
+
+
 # ================================================================== CLI
 def paths(variant):
     tag = '' if variant == 'kokoro' else f'-{variant}'
@@ -696,16 +830,18 @@ def dry(c):
 
 def assemble(c, variant):
     P = paths(variant)
-    lj = json.load(open(os.path.join(P['work'], f'{CUE_ID}.lay.json')))
+    names = [CUE_ID] + ([PARTY_ID] if c.has('v35-32A.01') else [])      # v3.5b: + the launch party
+    lays = {n: json.load(open(os.path.join(P['work'], f'{n}.lay.json'))) for n in names}
+    lj = lays[CUE_ID]
     sil = [tuple(s) for s in lj['silences']]
-    mix, info = v3lay.lay([CUE_ID], P['work'], c.N, P['wav'], zero=sil)
-    secs = [(lab, a, b, CUE_ID) for lab, a, b in lj['sections']]
-    res = v3lay.measure(P['wav'], sil, secs, {CUE_ID: (0.0, c.LEN)}, P['work'], [CUE_ID])
+    mix, info = v3lay.lay(names, P['work'], c.N, P['wav'], zero=sil)
+    secs = [(lab, a, b, n) for n in names for lab, a, b in lays[n]['sections']]
+    res = v3lay.measure(P['wav'], sil, secs, {n: tuple(lays[n]['window'][:2]) for n in names}, P['work'], names)
     doc = dict(schema='mrmas-segment-music/1', segment=SEG, id=f'{CUE_ID}{"" if variant == "kokoro" else "-" + variant}',
                file=os.path.relpath(P['wav'], REPO), clock=c.describe(), sample_rate=48000, channels=2,
                bit_depth=24, level='underscore, dry of dialogue (the mixer ducks it)',
-               cues=[dict(id=CUE_ID, laid=info[CUE_ID], marks=lj['marks'], sections=lj['sections'])],
-               designed_hit=[dict(t=t, cue=CUE_ID, what=w) for t, w in lj.get('designed_hit', [])],
+               cues=[dict(id=n, laid=info[n], marks=lays[n]['marks'], sections=lays[n]['sections']) for n in names],
+               designed_hit=[dict(t=t, cue=n, what=w) for n in names for t, w in lays[n].get('designed_hit', [])],
                silences=[dict(t0=round(a, 3), t1=round(b, 3), what=w) for a, b, w in sil],
                measured=res, source=os.path.relpath(os.path.join(HERE, 'track.py'), REPO),
                heard='nothing here has been listened to; every number is measured')
@@ -732,7 +868,8 @@ def main():
         return
     P = paths(variant)
     if args.render:
-        v3lay.render([(CUE_ID, lambda: build(c))], P['work'])
+        v3lay.render([(CUE_ID, lambda: build(c))] + ([(PARTY_ID, lambda: build_party(c))] if c.has('v35-32A.01') else []),
+                     P['work'])
         args.assemble = True
     if args.assemble:
         assemble(c, variant)

@@ -217,6 +217,14 @@ NEW_LINES = {
                         device="call", speed=1.1,
                         delivery="overlapping, quick, an investor mid-sentence; a fragment",
                         note="[INVENTED · facts #53: Thrive's ~$86B tender in jeopardy [V] · AUHSOJ has no voice in the registry: a stock preset (the photographer's) doubles on the call chain for the Kokoro timing; the ElevenLabs pass casts him (never the real person's voice)]"),
+    # ---- ACT FOUR · sc 47, Saturday night (SN 00000A, 2026-09-28: the phones' pressure is about his return): Neleh's
+    # footnote-three line, re-recorded with its new first sentences at its natural length (it replaces a5-27-22)
+    "v35-a4-0009": dict(seg="act4", beat="S4.02", who="neleh",
+                        text="They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.",
+                        say="They all want him back.{0.35} As if it wasn't allowed.{0.30} It was.{0.45} The charter, footnote three.{0.35} I've read it four times tonight.",
+                        ref="a5-27-22", device=None,
+                        delivery="After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly.",
+                        note="[INVENTED · SN 00000A (2026-09-28): the phones' pressure is about bringing him back; the charter and its footnote stay the board's grounds]"),
 }
 
 # Reused takes under a new id (the same file; no new read): new id -> source id
@@ -238,6 +246,7 @@ RESTORE = {
     "e1-a3-21-02": "audio/ep01/act3/dialogue/lines-fast-v2.json",   # THE COPY "And then the computers regulate themselves."
     "e1-a3-21-04": "audio/ep01/act3/dialogue/lines-fast-v2.json",   # NEDIB "When the hell did I say that?"
     "e1-a3-21-06": "audio/ep01/act3/dialogue/lines-fast-v2.json",   # MAS "which one's real?"
+    "a5-27-29": "audio/ep01/act4/dialogue/lines-v5.json",           # NELEH "Then we'll write step four ourselves." (SN 00000A)
 }
 
 # fallback audible lengths until the takes exist (words at each voice's pace)
@@ -248,7 +257,7 @@ FALLBACK = {"v35-vo-01": 3.3, "v35-vo-02": 2.2, "v35-vo-03": 2.5, "v35-vo-04": 3
             "v35-a2-0004": 1.0, "v35-a2-0005": 1.1, "v35-a2-0006": 1.1, "v35-a2-0007": 0.8, "v35-a2-0008": 0.7,
             "v35-a2-0009": 0.7, "v35-a2-0010": 0.9, "v35-a2-0011": 3.9, "v35-a4-0001": 2.9, "v35-a4-0002": 1.2,
             "v35-a4-0003": 1.1, "v35-a4-0004": 4.1, "v35-a4-0005": 1.1, "v35-a4-0006": 1.2, "v35-a4-0007": 1.1,
-            "v35-a4-0008": 8.3}
+            "v35-a4-0008": 8.3, "v35-a4-0009": 7.6}
 
 
 def l(lid):
@@ -320,6 +329,7 @@ MODES = {  # proposal-v35's mode per scene
     21: "QUICK-CUT (split)", 22: "INSERT", 23: "CONVERSATION", 24: "INSERT + DOCUMENT", 25: "CONVERSATION",
     26: "INSERT", 27: "CONVERSATION", 28: "FLASHBACK · CONVERSATION", 29: "MONTAGE + DOCUMENT",
     30: "MONTAGE → CONVERSATION", "30A": "QUICK-CUT", 31: "CONVERSATION + DOCUMENT", 32: "INSERT",
+    "32A": "INSERT (wordless)",
     33: "CONVERSATION (a call)", 34: "DOCUMENT", 35: "QUICK-CUT (on the monitor)", 36: "CONVERSATION → DOCUMENT",
     37: "INSERT", 38: "INSERT", 39: "CONVERSATION (a call)", 40: "DOCUMENT", 41: "QUICK-CUT (calls)", 42: "INSERT",
     43: "INSERT → FLASHBACK", 44: "CONVERSATION + DOCUMENT", 45: "CONVERSATION", 46: "CONVERSATION",
@@ -565,9 +575,16 @@ A2["17.01"] = dict(est_s=6.5,
 A2["17.10"] = dict(caption="Every signer's pen at the table is now, somehow, a purchase order: PURCHASE ORDER · AI CHIPS · QTY: MORE on each, Mario's in the foreground (his fleece cuff, the footnote still wet under it). Mas's hand stays half out beside them, empty.",
                    picture="Several hands, each with an order; Mario's nearest. Mas's hand empty (v3.3 P7's ruling holds: on the record his compute came through the landlord).",
                    fix=["NEW"], why="Sc 30A: the ones who warned are the ones buying.")
+A2["17.07"] = dict(sounds=[{"name": "synth:bell", "at": 0.62, "gain": -18, "dur": 16.2,
+                            "note": "the register's bell decays across the racks (v35-30A) to 17.13's black, as before"}],
+                   picture="unchanged (v3.4)", fix=["TR"], why="SN 00000A: the racks add 5.0 s before the act-out; the bell's decay is lengthened so it still reaches the black.")
 
 # ------------------------------------------------------------------------------------------------ ACT THREE
 A3 = CHANGES["act3"]
+A3["20.01"] = dict(sounds=[{"name": "glass_set_stone", "at": 0.05, "gain": -28,
+                            "note": "his glass set down on the desk: the party's glass lands at home (the match)"}],
+                   picture="v3.5b: his glass on the desk in the near foreground, where the party's glass was in frame (v35-32A.03's out: a matched object); set down on the cut.",
+                   fix=["TR"], why="SN 00000A: the party (sc 32A) now comes before the post; its glass lands here.")
 A3["20.06"] = dict(est_s=round(12.48 - 0.55, 2),
                    retime={"e1-a3-20-06": R("v31-a3-0002", 0.45), "e1-a3-20-08": R("e1-a3-20-07", 0.45)},
                    tempo=tempo("quick", {"e1-a3-20-06": 0.45, "e1-a3-20-08": 0.45}), fix=["PACE"])
@@ -646,20 +663,34 @@ A4["S3.05"] = dict(est_s=5.5,
                    fix=["C6", "KEEP"], why="Choice 6A: Alyi's line stays (the ledger's keep list), alone.")
 A4["S4.01"] = dict(action="cut", est_s=0.0, fix=["C12"],
                    why="12A: the eulogy post card and the wall screen go.")
-A4["S4.02"] = dict(est_s=9.0,
-                   drop={"a5-27-23": "12A: \"What they actually want to know…\" goes"},
+A4["S4.02"] = dict(est_s=seq(1.25, [("v35-a4-0009", 0.0), ("a5-27-29", 0.73)], 1.3),
+                   drop={"a5-27-23": "12A: \"What they actually want to know…\" goes",
+                         "a5-27-22": "SN 00000A: re-recorded as v35-a4-0009 (\"They all want him back…\"), at its natural length"},
+                   add=[line("v35-a4-0009", "start+1.25")],
+                   restore=[restored("a5-27-29", "v35-a4-0009", 0.73,
+                                     note="[INVENTED · the v3.4 line, restored (SN 00000A: \"yes i want to restore it\"): step four's payoff; its v3.4 takes, Kokoro and EL, reused]")],
                    onscreen={"add": ["RAIL: NOV 18"]},
-                   caption="The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up.",
-                   picture="Step 4's blank line visible on the table (it's the one Neleh looks at after Tasya's statement). The push to her MCU is dropped with the second speech.",
-                   fix=["C12"], why="12A: footnote three stays (the keep list); the rail moves here from the cut S4.01.")
+                   sounds=[{"name": "BUZZ", "at": 0.288, "gain": -24},
+                           {"name": "BUZZ", "at": "after:v35-a4-0009+0.172", "gain": -26},
+                           {"name": "landing_thunk", "at": "after:v35-a4-0009+0.48", "gain": -22,
+                            "note": "the clack: the first phone goes over after her line; nobody picks it up"},
+                           {"name": "marker_uncap", "at": "after:a5-27-29+0.12", "gain": -30, "note": "her marker, uncapped"},
+                           {"name": "marker_write_q", "at": "after:a5-27-29+0.35", "gain": -28,
+                            "note": "she writes 4. MARIO on step four's blank line as she dials (the tones pre-lap S4.08)"}],
+                   caption="The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
+                   picture="Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped.",
+                   tempo=tempo("quick", {"a5-27-29": 0.73}, "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"),
+                   fix=["C12", "TR"], why="SN 00000A: the pressure is about his return (the re-recorded line), and step four's payoff is restored: they try to replace him, and 4. MARIO goes on the blueprint; the rail moves here from the cut S4.01.")
 A4["S4.07"] = dict(est_s=3.0,
-                   drop={"a5-27-29": "12A: \"Then we'll write step four ourselves.\" goes; her look stays"},
-                   caption="NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at the blank line of step 4. It isn't a joke: her real face. (Face light, one step.)",
-                   picture="Moved here: after Tasya's statement, where step four being blank hurts most. No speakerphone, no dial.",
-                   fix=["C12", "KEEP"], why="Neleh's look at the blank line (the keep list), moved to after the statement; it replaces \"Step four, Mada?\" and bridges to Alyi alone.")
+                   drop={"a5-27-29": "12A: \"Then we'll write step four ourselves.\" goes from here; SN 00000A restores it in S4.02; her look stays"},
+                   caption="NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at step 4 on the blueprint: 4. MARIO, struck through. It isn't a joke: her real face. (Face light, one step.)",
+                   picture="Moved here: after Tasya's statement. v3.5b: her look lands on the crossed-out line (4. MARIO, struck through after Adelina's \"no\"). No speakerphone, no dial.",
+                   fix=["C12", "KEEP"], why="Neleh's look at step four (the keep list), moved to after the statement; it replaces \"Step four, Mada?\" (still cut) and bridges to Alyi alone.")
 A4["S4.08"] = dict(est_s=round(18.79 - 0.35 - 0.5 - 0.5, 2),
                    retime={"a5-27-31": R("v31-a4-0017", 0.25)},
-                   caption="The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+                   sounds=[{"name": "marker_write_q", "at": "after:a5-27-32+0.35", "gain": -30, "dur": 0.4,
+                            "note": "LEFT pane: after Adelina's \"no\", Neleh strikes 4. MARIO through (one stroke, under the dial tone)"}],
+                   caption="The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly. On the left, Neleh strikes 4. MARIO through.",
                    tempo=tempo("quick", {"a5-27-31": 0.25}, "Adelina's overlap stays"), fix=["PACE", "C12"])
 A4["S4.09"] = dict(est_s=round(11.34 - 0.7 - 0.4, 2),
                    retime={"v31-a4-0005": "start+0.8", "a5-27-36": R("v31-a4-0005", 0.25), "a5-27-37": R("a5-27-36", 0.25)},
@@ -929,9 +960,18 @@ nb("act1", "v35-22.01", 3.0, "SCR · the bullpen's wall TV", "screen", "bullpen"
    "The bullpen's wall TV: Elgoog finally opens its chatbot, DRAB, behind a velvet rope: DRAB · JOIN THE WAITLIST. The rope snaps taut. Behind the TV, the window's users line is far above it.",
    "The rope's snap is the sound lead in; the users line visible past the TV's edge.",
    onscreen={"add": ["RAIL: MAR 21, 2023", "DRAB · JOIN THE WAITLIST"]},
+   music="a smug little sting on the rope's snap; it rings on under the usage flash (v35-22.02) and out under the toast",
+   fix=("NEW", "FACT", "TR"),
+   why="Sc 22: they're ahead. [V · Mar 21, 2023: Bard's waitlist opens in the US and UK] (v3.5b: the toast's J-cut moves to the usage flash, v35-22.02, which now comes before the letter)")
+nb("act1", "v35-22.02", 2.0, "INSERT · MATCH · every chatbot's usage, climbing at once", "screen", "bullpen", [],
+   "MATCH: the users line on the bullpen window, past the TV's edge, becomes the top line of a chart that fills the frame: every chatbot we've just seen, each its own usage line climbing at once, CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED. All five climb; CHATGTP's runs off the top, far ahead. The letter's toast pops over it.",
+   "One held insert. The lines draw left to right in whole-pixel steps from 0.1 s, each tagged with its bot as shown earlier (CHATGTP's two-dot face, GNIB's search box with a small POWERED BY NOPEAI, DRAB's skewed primaries, CLOD's clay, Atem's stencilled crate); no axes, no figures (never a number). CHATGTP's line is the window's line, the same colour and stroke. The letter's toast pops at 1.6 s (12.01's, a beat early) and the cut lands on his monitor.",
+   onscreen={"add": ["CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED"]},
+   sounds=[{"name": "counter_roll", "at": 0.2, "gain": -28, "note": "five usage counters rolling at once (under the sting's ring)"}],
    jcut=[{"sound": "the pause letter's toast pop, a beat early (12.01)", "lead_s": 0.4}],
-   music="a smug little sting on the rope's snap; out under the toast", fix=("NEW", "FACT", "TR"),
-   why="Sc 22: they're ahead. [V · Mar 21, 2023: Bard's waitlist opens in the US and UK]")
+   music="a smug little sting rings on: the chip climbs with the lines (the Build's tag, 16ths up A-flat major), landing under the toast",
+   fix=("NEW", "TR"),
+   why="SN 00000A step 2: a quick flash of every chatbot just shown (sc 20-22), usage climbing at once with NopeAI far ahead: why the letter asks for a pause. In: the window's users line (matched object). Out: the letter's toast (sound-led). Not picture-only: v35-22.01's 3.0 s carries DRAB's page to read (0.2 s on, the snap at 0.9 s) and the letter's header lands 0.4 s into 12.01, so at most 1.3 s were free; +2.0 s. [INVENTED chart: no figures; ChatGPT's lead in early 2023 is on the record (Reuters, Feb 2, 2023, [H])]")
 
 # ---- sc 27 · the Senate's new opener
 nb("act2", "v35-27.00", 3.8, "HIGH → WIDE · the witness table, then the hearing room", "senate", "senate", ["mas", "sucram", "lahtnemulb", "gallery"],
@@ -1012,6 +1052,58 @@ nb("act2", "v35-29.05", 1.4, "INSERT → MATCH · his pen, a guest book", "void"
    "A generic guest book, no city named (the proposal's \"Paris\" is dropped: Paris came before London). The stamps' rhythm slows into many pens scratching.",
    lcut=[{"sound": "the stamps' rhythm slows into many pens scratching", "over_s": 0.5}], music=MT + "; rings out into the statement's held pad",
    fix=("NEW", "FACT", "TR"), why="The out: the same pen signs one sentence.")
+
+# ---- sc 30A · THE RACKS · the same day · INSERT (wordless; SN 00000A step 2): the orders arrive, and staff rack them.
+# 5.0 s, two bars of the Upsell's 96 BPM: its drive plays on through them; the register's bell rings across (17.07)
+MRK = "THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it"
+nb("act2", "v35-30A.01", 2.0, "INSERT → MATCH · the packing slip on an INVIDIA crate", "datacenter", "racks", [],
+   "MATCH: the purchase order in Mario's hand becomes, in the same place in frame, a packing slip on a crate stencilled INVIDIA: AI CHIPS · QTY: MORE. A box cutter slits the tape; a gloved hand lifts a new board out of its silver sleeve, the INVIDIA logo on its shroud.",
+   "The slip is the order's own form (same size, same place, same type), now taped to the crate; the board's shroud carries the logo planted in Act One (7.02, 13.01). A data hall's cold aisle behind, soft; no company named on its walls. Hands only.",
+   onscreen={"add": ["INVIDIA", "AI CHIPS · QTY: MORE"]},
+   sounds=[{"name": "paper_tear", "at": 0.35, "gain": -30, "note": "the cutter through the slip's tape"}],
+   jcut=[{"sound": "the racks' server fans lead the cut", "lead_s": 0.5}],
+   music=MRK, fix=("NEW", "TR"),
+   why="SN 00000A step 2 (sc 30A): the orders arrive. In: the purchase order (a matched object), the fans leading it by 0.5 s (sound-led).")
+nb("act2", "v35-30A.02", 3.0, "MEDIUM → WIDE · the racks: staff slide the boards home", "datacenter", "racks", ["staff"],
+   "A row of racks in the cold aisle. Two staff in lanyards slide the new boards home, one after the other; each latch snaps shut. The rack's LEDs come up in a column, climbing to the top of the frame. One of them pats the rack's door, pleased.",
+   "Backs and hands, lanyards, sleeves rolled; nobody named. Board 1 slides at 0.3 s and latches at 1.05 s; board 2 slides at 1.2 s and latches at 1.9 s; the LEDs step up from 2.2 s (0.2 s a step), the column climbing off the top of the frame on the cut: it becomes the price's line lifting off in 17.11 (the same upward motion).",
+   sounds=[{"name": "folder_slide", "at": 0.3, "gain": -24, "note": "board 1 sliding home in its slot"},
+           {"name": "nameplate_off", "at": 1.05, "gain": -22, "note": "board 1's latch snapping shut"},
+           {"name": "folder_slide", "at": 1.2, "gain": -25, "note": "board 2 sliding home"},
+           {"name": "nameplate_off", "at": 1.9, "gain": -22, "note": "board 2's latch"},
+           {"name": "ui_mute_blip", "at": 2.2, "gain": -30, "note": "the LEDs coming up, a step at a time (the sound pass may use the dark room's LED ticks)"},
+           {"name": "ui_mute_blip", "at": 2.4, "gain": -30},
+           {"name": "ui_mute_blip", "at": 2.6, "gain": -30}],
+   lcut=[{"sound": "the fans stop on the cut; the register's bell rings across into the sky", "over_s": 0.1}],
+   music=MRK, fix=("NEW", "TR"),
+   why="The staff at work on what he bought through the landlord. Out: the LED column climbing off the top of the frame, matched to the price's line climbing off the top in 17.11.")
+
+# ---- sc 32A · THE LAUNCH PARTY · MON SEP 25, 2023 · wordless (SN 00000A step 2): the staff cheer him, and Alyi is
+# there, warm with him (a toast, a shared laugh), so his vote lands harder.  10.0 s: exactly four bars of Act Three's
+# 96 BPM grid (the score's bar lines before and after it stay where they were)
+MPT = "ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did"
+nb("act3", "v35-32A.01", 3.75, "WIDE · NopeAI's bullpen, evening: the launch party", "bullpen", "party", ["staff", "mas", "alyi"],
+   "The rail rolls on to SEP 25 and the cheer takes the cut: NopeAI's bullpen in the evening, full of staff with cups, a banner over the window: CHATGTP CAN NOW SEE, HEAR AND SPEAK. On the glass behind it, Act One's users line, off the top. Mas and Alyi at the centre of it.",
+   "Warm light, the bullpen crowded (staff as figures, nobody named); the banner in the launch post's own words; the users line on the window (sc 18's). Mas with his glass; Alyi beside him, in person, lit.",
+   onscreen={"add": ["RAIL: SEP 25, 2023", "CHATGTP CAN NOW SEE, HEAR AND SPEAK"]},
+   sounds=[{"name": "synth:cheer", "at": 0.0, "gain": -26, "dur": 1.4, "note": "the staff's cheer takes the cut (the J-cut moves it 0.4 s under the runner)"}],
+   jcut=[{"sound": "the party's cheer leads the cut", "lead_s": 0.4}],
+   music=MPT, fix=("NEW", "FACT", "TR"),
+   why="SN 00000A step 2 (sc 32A): the staff love him, and so does Alyi. In: sound-led, the cheer under the runner's last 0.4 s, on the rail's roll to SEP 25. [P·arch · \"ChatGPT can now see, hear, and speak\" (Sep 25, 2023) · the party itself is INVENTED]")
+nb("act3", "v35-32A.02", 2.5, "MEDIUM · the staff cheer as Mas raises his glass", "bullpen", "party", ["mas", "staff"],
+   "MAS raises his glass; the staff around him raise their cups and cheer. Two cups clink near the lens.",
+   "His glass (the one he carries everywhere) up at 0.3 s; the cheer on it; his one-pixel smile. The clinks at 0.9 and 1.05 s.",
+   sounds=[{"name": "synth:cheer", "at": 0.3, "gain": -24, "dur": 1.6},
+           {"name": "glass_nudge", "at": 0.9, "gain": -24, "note": "two cups clink"},
+           {"name": "glass_nudge", "at": 1.05, "gain": -26}],
+   music=MPT, fix=("NEW",), why="The staff's affection, in picture: they cheer him.")
+nb("act3", "v35-32A.03", 3.75, "2S · Mas and Alyi: the toast, and a shared laugh", "bullpen", "party", ["mas", "alyi"],
+   "ALYI lifts his cup to Mas's glass: they clink. Alyi says something we don't hear; they both laugh, Alyi's hand on Mas's shoulder. The laugh settles; Mas lowers his glass.",
+   "Held two-shot, warm. The clink at 0.6 s; the laugh from 1.2 s (shoulders, three held drawings; the sound pass lays a soft laugh in the room, no voice takes); Mas's glass comes down at 3.2 s, and the cut matches it to the same glass on his desk at home (20.01).",
+   sounds=[{"name": "glass_nudge", "at": 0.6, "gain": -22, "note": "the toast: Alyi's cup on Mas's glass"}],
+   lcut=[{"sound": "the party's walla drains into the dark room's fans", "over_s": 0.6}],
+   music=MPT, fix=("NEW", "TR"),
+   why="Alyi warm with Mas, so his vote lands harder (sc 45). Out: his glass (a matched object) to the desk at home the next night; the walla trails 0.6 s into the dark room.")
 
 # ---- sc 35 · the president's deepfake, restored from v3.3 (as new beats in v3.5)
 nb("act3", "21.03", 4.38, "POV · the signing desk: the real one turns", "whitehouse", "dark", ["nedib", "deepfake"],
@@ -1131,14 +1223,14 @@ ORDER = {
              "9.01", "9.04", "9.06", "9.07", "9.08", "9.09", "v32-9.10k", "9.10", "9.11", "9.12", "9.13",
              "v31-10.01", "v31-10.02", "v31-10.03", "v31-10.04",
              "v35-18.01", "v35-18.02", "v35-18.03", "v35-19.01", "v35-19.02", "v35-19.03", "v35-19.04",
-             "11.01", "11.03", "11.04", "v35-22.01", "12.01", "12.02", "v31-12.03", "12.04", "12.05", "12.06", "12.07"],
+             "11.01", "11.03", "11.04", "v35-22.01", "v35-22.02", "12.01", "12.02", "v31-12.03", "12.04", "12.05", "12.06", "12.07"],
     "act2": ["13.01", "13.02", "13.03", "13.04", "13.05", "13.06", "13.07", "13.08", "13.09", "13.10", "13.11", "13.12",
              "13.13", "13.14", "14.01", "14.06", "15.01", "15.02", "15.03", "v35-27.00", "15.04", "15.05", "15.06", "15.07",
              "15.10", "15.15", "15.16", "15.11", "15.12", "15.13", "15.14",
              "v35-28.01", "v35-28.02", "v35-28.03", "v35-28.04", "v35-28.05",
              "16.01", "v35-29.01", "v35-29.02", "v35-29.03", "v35-29.04", "v35-29.05",
-             "17.01", "17.02", "17.03", "17.04", "17.05", "17.06", "17.07", "17.08", "17.09", "17.10", "17.11", "17.13"],
-    "act3": ["v31-18.00", "18.01", "18.02", "18.03", "18.04", "18.04g", "18.05", "18.06", "19.01", "v31-19.03", "20.01",
+             "17.01", "17.02", "17.03", "17.04", "17.05", "17.06", "17.07", "17.08", "17.09", "17.10", "v35-30A.01", "v35-30A.02", "17.11", "17.13"],
+    "act3": ["v31-18.00", "18.01", "18.02", "18.03", "18.04", "18.04g", "18.05", "18.06", "19.01", "v31-19.03", "v35-32A.01", "v35-32A.02", "v35-32A.03", "20.01",
              "20.03", "20.04", "20.05", "20.06", "v31-20.07", "v31-20.08", "21.02", "21.03", "21.04", "21.05", "v32-21.06",
              "22.01", "22.02", "22.03", "v32-22.04", "23.01", "23.02", "23.03", "23.04"],
     "act4": ["S1.01", "v31-S1.01b", "S1.02", "S1.07", "v31-S1.08d", "S1.09", "S1.10", "S1.11", "S1.12", "v32-S1.13",

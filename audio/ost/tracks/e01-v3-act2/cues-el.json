@@ -4,9 +4,9 @@
  "segment": "act2",
  "file": "audio/ost/tracks/e01-v3-act2/render/music-el.wav",
  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act2.json",
- "length_s": 202.0,
- "frames": 4848,
- "samples": 9696000,
+ "length_s": 207.0,
+ "frames": 4968,
+ "samples": 9936000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -465,16 +465,16 @@
   {
    "cue": "upsell",
    "start": 181.383,
-   "end": 202.0,
+   "end": 207.0,
    "what": "a caper with a salesman's grin, played straight; the sale closes on the bell",
    "family": "P06 THE JOB",
    "render": "audio/ost/tracks/e01-v3-act2/render/_work/el/upsell-underscore.wav",
    "laid_at_s": 180.8083,
    "level": {
-    "lufs_i": -19.52,
-    "st_p95": -16.55,
-    "st_max": -16.35,
-    "true_peak_dbtp": -4.16
+    "lufs_i": -19.57,
+    "st_p95": -17.35,
+    "st_max": -17.19,
+    "true_peak_dbtp": -4.99
    },
    "target_lufs": -19.0,
    "engine_qa": {
@@ -494,12 +494,12 @@
      },
      "measured": {
       "lufs": -19.0,
-      "lra": 8.09,
-      "true_peak_db": -3.56,
-      "peak_db": -3.57,
-      "rms_db": -21.18,
-      "crest_db": 17.61,
-      "seconds": 21.1917
+      "lra": 6.26,
+      "true_peak_db": -4.39,
+      "peak_db": -4.4,
+      "rms_db": -21.21,
+      "crest_db": 16.81,
+      "seconds": 26.1917
      }
     },
     "f_major_ok": true,
@@ -508,17 +508,16 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 8,
-     "of": 9,
-     "worst_ms": 28.3
+     "within_10ms": 11,
+     "of": 11,
+     "worst_ms": 9.7
     },
     "warnings": [
-     "marker at 16.025 s: no clear onset within 10 ms ({'t': 16.025, 'offset_ms': np.float64(28.3), 'strength': 1.57})",
-     "underscore short-term p95 -15.92 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "underscore short-term p95 -16.7 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 414,
+    "notes": 574,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -552,6 +551,16 @@
      "hit": true
     },
     {
+     "t": 198.308,
+     "what": "the Upsell: cell 6 (Bb4 ... Eb5), a step higher",
+     "hit": true
+    },
+    {
+     "t": 200.808,
+     "what": "the Upsell: cell 7 (C5 ... F5), a step higher",
+     "hit": true
+    },
+    {
      "t": 189.665,
      "what": "THE CLOSE: C5 G4 F4 (after his real line)",
      "hit": true
@@ -572,23 +581,28 @@
      "hit": false
     },
     {
-     "t": 196.833,
+     "t": 201.833,
      "what": "THE ACT-OUT (v3.3): the band's last word on the cut to the sky: the close's F-C fifth, no third",
      "hit": true
     },
     {
-     "t": 197.383,
+     "t": 202.383,
      "what": "the climb goes on alone with the line (vibes + chip, 16ths up the F-minor scale)",
      "hit": false
     },
     {
-     "t": 198.583,
+     "t": 203.583,
      "what": "the line's head leaves the top of the frame: the climb lands on the bell's F6",
      "hit": true
     },
     {
-     "t": 199.125,
+     "t": 204.125,
      "what": "the tail gone: a high open fifth (bowed vibes F5 + C6) over the tilt to the empty sky; it dies in the black with the bell",
+     "hit": false
+    },
+    {
+     "t": 196.833,
+     "what": "v3.5b THE RACKS: the drive plays on through the orders being racked (the walk, the GPU clock, the ride; the Upsell's cells a step higher on bars 8-9; nothing new, no hit on the cut)",
      "hit": false
     }
    ]
@@ -735,13 +749,13 @@
   }
  ],
  "measured": {
-  "length_s": 202.0,
-  "samples": 9696000,
-  "frames": 4848,
+  "length_s": 207.0,
+  "samples": 9936000,
+  "frames": 4968,
   "exact": true,
   "whole": {
-   "lufs_i": -20.16,
-   "st_p95": -17.38,
+   "lufs_i": -20.14,
+   "st_p95": -17.4,
    "st_max": -16.29,
    "true_peak_dbtp": -3.15
   },
@@ -771,10 +785,10 @@
     "true_peak_dbtp": -3.15
    },
    "upsell": {
-    "lufs_i": -19.52,
-    "st_p95": -16.55,
-    "st_max": -16.35,
-    "true_peak_dbtp": -4.16
+    "lufs_i": -19.57,
+    "st_p95": -17.35,
+    "st_max": -17.19,
+    "true_peak_dbtp": -4.99
    },
    "mar2019": {
     "lufs_i": -20.89,
@@ -869,7 +883,7 @@
     "section": "run_roof: the sheet: uneasy (Dbmaj9#11, Bbm9, C7sus-flat9 on the knife)",
     "start": 174.36,
     "end": 182.03,
-    "lufs_i": -21.41,
+    "lufs_i": -21.46,
     "st_p95": -19.86,
     "st_max": -19.85,
     "true_peak_dbtp": -8.79
@@ -878,46 +892,55 @@
     "section": "upsell: the register rolls in: the walk, the GPU clock, the Upsell's cells (dry under his line)",
     "start": 181.43,
     "end": 189.66,
-    "lufs_i": -21.13,
-    "st_p95": -20.5,
-    "st_max": -20.49,
-    "true_peak_dbtp": -8.93
+    "lufs_i": -21.96,
+    "st_p95": -21.33,
+    "st_max": -21.32,
+    "true_peak_dbtp": -9.76
    },
    {
     "section": "upsell: the close; the slot (the KA-CHING)",
     "start": 189.66,
     "end": 191.43,
-    "lufs_i": -20.36,
+    "lufs_i": -21.2,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -7.27
+    "true_peak_dbtp": -8.11
    },
    {
-    "section": "upsell: phrase 3: the climb, featured, into the cut to the sky",
+    "section": "upsell: phrase 3: the climb, featured, to the racks",
     "start": 191.43,
     "end": 196.83,
-    "lufs_i": -16.52,
-    "st_p95": -16.3,
-    "st_max": -16.25,
-    "true_peak_dbtp": -4.16
+    "lufs_i": -17.34,
+    "st_p95": -17.14,
+    "st_max": -17.08,
+    "true_peak_dbtp": -4.99
+   },
+   {
+    "section": "upsell: v3.5b the racks: the Upsell's drive carries on (bars 8-9, the same chords)",
+    "start": 196.83,
+    "end": 201.83,
+    "lufs_i": -17.68,
+    "st_p95": -17.3,
+    "st_max": -17.28,
+    "true_peak_dbtp": -6.05
    },
    {
     "section": "upsell: THE ACT-OUT: the last fifth; the climb off the top of the frame onto the bell's F6",
-    "start": 196.83,
-    "end": 199.12,
-    "lufs_i": -22.78,
+    "start": 201.83,
+    "end": 204.12,
+    "lufs_i": -24.13,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.98
+    "true_peak_dbtp": -7.36
    },
    {
     "section": "upsell: the empty sky and the black: the high fifth and the bell's tail, out by the last frame",
-    "start": 199.12,
-    "end": 202.0,
-    "lufs_i": -27.0,
+    "start": 204.12,
+    "end": 207.0,
+    "lufs_i": -27.65,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -17.6
+    "true_peak_dbtp": -18.57
    },
    {
     "section": "mar2019: MAR 2019: the entry and the glowing line",
@@ -998,8 +1021,8 @@
    },
    {
     "t0": 121.5,
-    "t1": 201.95,
-    "dur": 80.45
+    "t1": 206.9,
+    "dur": 85.4
    }
   ],
   "fragments_under_2s": [],
@@ -1064,7 +1087,7 @@
    "laid_at_s": 180.8083,
    "window": [
     181.383,
-    202.0
+    207.0
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.02,

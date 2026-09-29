@@ -1,5 +1,5 @@
 {
- "plan_total_s": 1388.667,
+ "plan_total_s": 1409.0,
  "chapters": [
   {
    "id": "title",
@@ -24,31 +24,31 @@
   {
    "id": "act1",
    "from": "1:01.67",
-   "seconds": 449.75
+   "seconds": 451.75
   },
   {
    "id": "act2",
-   "from": "8:31.42",
-   "seconds": 211.417
+   "from": "8:33.42",
+   "seconds": 216.417
   },
   {
    "id": "act3",
-   "from": "12:02.83",
-   "seconds": 139.125
+   "from": "12:09.83",
+   "seconds": 149.125
   },
   {
    "id": "act4",
-   "from": "14:21.96",
-   "seconds": 483.333
+   "from": "14:38.96",
+   "seconds": 486.667
   },
   {
    "id": "tag",
-   "from": "22:25.29",
+   "from": "22:45.62",
    "seconds": 33.25
   },
   {
    "id": "outro",
-   "from": "22:58.54",
+   "from": "23:18.88",
    "seconds": 10.125
   }
  ],
@@ -63,40 +63,40 @@
    "vs_v34_s": 0.0
   },
   "act1": {
-   "v35_s": 449.75,
-   "v35_frames": 10794,
+   "v35_s": 451.75,
+   "v35_frames": 10842,
    "v34_s": 337.542,
    "v34_frames": 8101,
-   "estimate_s": 449.74,
+   "estimate_s": 451.74,
    "vs_estimate_s": 0.01,
-   "vs_v34_s": 112.21
+   "vs_v34_s": 114.21
   },
   "act2": {
-   "v35_s": 211.417,
-   "v35_frames": 5074,
+   "v35_s": 216.417,
+   "v35_frames": 5194,
    "v34_s": 181.208,
    "v34_frames": 4349,
-   "estimate_s": 211.43,
+   "estimate_s": 216.43,
    "vs_estimate_s": -0.01,
-   "vs_v34_s": 30.21
+   "vs_v34_s": 35.21
   },
   "act3": {
-   "v35_s": 139.125,
-   "v35_frames": 3339,
+   "v35_s": 149.125,
+   "v35_frames": 3579,
    "v34_s": 125.292,
    "v34_frames": 3007,
-   "estimate_s": 139.12,
+   "estimate_s": 149.12,
    "vs_estimate_s": 0.0,
-   "vs_v34_s": 13.83
+   "vs_v34_s": 23.83
   },
   "act4": {
-   "v35_s": 483.333,
-   "v35_frames": 11600,
+   "v35_s": 486.667,
+   "v35_frames": 11680,
    "v34_s": 507.792,
    "v34_frames": 12187,
-   "estimate_s": 482.32,
-   "vs_estimate_s": 1.01,
-   "vs_v34_s": -24.46
+   "estimate_s": 485.67,
+   "vs_estimate_s": 1.0,
+   "vs_v34_s": -21.12
   },
   "tag": {
    "v35_s": 33.25,
@@ -108,10 +108,10 @@
    "vs_v34_s": 0.0
   }
  },
- "story_v35_s": 1343.542,
- "story_v35_frames": 32245,
+ "story_v35_s": 1363.876,
+ "story_v35_frames": 32733,
  "story_v34_s": 1211.751,
- "story_estimate_s": 1342.52,
+ "story_estimate_s": 1362.87,
  "gaps": {
   "coldopen": {
    "v34": {
@@ -204,12 +204,12 @@
     "overlaps": 1
    },
    "v35": {
-    "inside_beats_median_s": 0.4,
-    "inside_beats_n": 53,
-    "inside_beats_quick_share": 0.42,
-    "act_clock_median_s": 0.75,
-    "act_clock_n": 98,
-    "spoken_only_act_clock_median_s": 0.7,
+    "inside_beats_median_s": 0.425,
+    "inside_beats_n": 54,
+    "inside_beats_quick_share": 0.41,
+    "act_clock_median_s": 0.73,
+    "act_clock_n": 99,
+    "spoken_only_act_clock_median_s": 0.715,
     "overlaps": 2
    }
   },
@@ -278,22 +278,22 @@
    "lcut_lines": 5
   },
   "v35": {
-   "shots": 260,
-   "minutes": 22.39,
-   "asl_s": 5.17,
-   "median_shot_s": 3.71,
-   "stays": 52,
-   "median_stay_s": 16.6,
-   "stays_under_10": 20,
-   "stays_10_30": 17,
-   "stays_30_60": 9,
-   "stays_60_plus": 6,
-   "talk_stays": 33,
-   "entry_air_median_s": 3.8,
-   "entry_air_2s_or_less": 14,
+   "shots": 266,
+   "minutes": 22.73,
+   "asl_s": 5.13,
+   "median_shot_s": 3.65,
+   "stays": 56,
+   "median_stay_s": 16.5,
+   "stays_under_10": 21,
+   "stays_10_30": 19,
+   "stays_30_60": 11,
+   "stays_60_plus": 5,
+   "talk_stays": 34,
+   "entry_air_median_s": 3.5,
+   "entry_air_2s_or_less": 15,
    "exit_air_median_s": 2.9,
-   "exit_air_1p5s_or_less": 8,
-   "lines": 256,
+   "exit_air_1p5s_or_less": 9,
+   "lines": 257,
    "jcut_lines": 7,
    "lcut_lines": 4
   },
@@ -318,22 +318,22 @@
    "lcut_lines": 5
   },
   "v35_spoken_only": {
-   "shots": 260,
-   "minutes": 22.39,
-   "asl_s": 5.17,
-   "median_shot_s": 3.71,
-   "stays": 52,
-   "median_stay_s": 16.6,
-   "stays_under_10": 20,
-   "stays_10_30": 17,
-   "stays_30_60": 9,
-   "stays_60_plus": 6,
-   "talk_stays": 32,
+   "shots": 266,
+   "minutes": 22.73,
+   "asl_s": 5.13,
+   "median_shot_s": 3.65,
+   "stays": 56,
+   "median_stay_s": 16.5,
+   "stays_under_10": 21,
+   "stays_10_30": 19,
+   "stays_30_60": 11,
+   "stays_60_plus": 5,
+   "talk_stays": 33,
    "entry_air_median_s": 3.8,
-   "entry_air_2s_or_less": 13,
+   "entry_air_2s_or_less": 14,
    "exit_air_median_s": 3.4,
-   "exit_air_1p5s_or_less": 8,
-   "lines": 239,
+   "exit_air_1p5s_or_less": 9,
+   "lines": 240,
    "jcut_lines": 7,
    "lcut_lines": 4
   }
@@ -347,9 +347,9 @@
    "vo_words": 124
   },
   "v35": {
-   "words": 1837,
+   "words": 1846,
    "mas_words": 463,
-   "mas_share": 0.252,
+   "mas_share": 0.251,
    "vo_lines": 17,
    "vo_words": 135
   }

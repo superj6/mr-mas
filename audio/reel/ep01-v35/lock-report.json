@@ -40,11 +40,11 @@
   "timeline": "show/reel/ep01-v35/ep01-v35-act1.json",
   "source": "show/reel/ep01-v34/ep01-v34-act1.json",
   "source_story_s": 337.549,
-  "estimate_s": 449.74,
-  "seconds": 449.746,
-  "frames": 10794,
+  "estimate_s": 451.74,
+  "seconds": 451.746,
+  "frames": 10842,
   "source_frames": 8101,
-  "beats": 77,
+  "beats": 78,
   "lines": 81,
   "vo": 7,
   "vo_lines": [
@@ -471,6 +471,15 @@
     "src_s": null,
     "est_s": 3.0,
     "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-22.02",
+    "action": "new",
+    "scene": 22,
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
     "diff_s": 0.0
    },
    {
@@ -1187,6 +1196,18 @@
     "what": "sequence marker 11A: the bullpen's wall TV: Elgoog's waitlist"
    },
    {
+    "beat": "v35-22.02",
+    "what": "new beat (scene): INSERT · MATCH · every chatbot's usage, climbing at once (screen, bullpen, no figures)"
+   },
+   {
+    "beat": "v35-22.02",
+    "what": "on-screen add: \"CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED\""
+   },
+   {
+    "beat": "v35-22.02",
+    "what": "sound counter_roll at 0.20 s (the plan's)"
+   },
+   {
     "beat": "12.01",
     "what": "caption from the plan"
    },
@@ -1242,11 +1263,11 @@
   "timeline": "show/reel/ep01-v35/ep01-v35-act2.json",
   "source": "show/reel/ep01-v34/ep01-v34-act2.json",
   "source_story_s": 181.189,
-  "estimate_s": 211.43,
-  "seconds": 211.435,
-  "frames": 5074,
+  "estimate_s": 216.43,
+  "seconds": 216.435,
+  "frames": 5194,
   "source_frames": 4349,
-  "beats": 49,
+  "beats": 51,
   "lines": 46,
   "vo": 1,
   "vo_lines": [
@@ -1468,10 +1489,37 @@
     "diff_s": 0.0
    },
    {
+    "beat": "17.07",
+    "action": "keep",
+    "scene": "30A",
+    "src_s": 0.917,
+    "est_s": 0.917,
+    "lock_s": 0.917,
+    "diff_s": -0.0
+   },
+   {
     "beat": "17.10",
     "action": "keep",
     "scene": "30A",
     "src_s": 3.0,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-30A.01",
+    "action": "new",
+    "scene": "30A",
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-30A.02",
+    "action": "new",
+    "scene": "30A",
+    "src_s": null,
     "est_s": 3.0,
     "lock_s": 3.0,
     "diff_s": 0.0
@@ -1932,8 +1980,60 @@
     "what": "caption from the plan"
    },
    {
+    "beat": "17.07",
+    "what": "sound synth:bell 0.62 -> 0.62 s (the plan's)"
+   },
+   {
     "beat": "17.10",
     "what": "caption from the plan"
+   },
+   {
+    "beat": "v35-30A.01",
+    "what": "new beat (scene): INSERT → MATCH · the packing slip on an INVIDIA crate (datacenter, racks, no figures)"
+   },
+   {
+    "beat": "v35-30A.01",
+    "what": "on-screen add: \"INVIDIA\""
+   },
+   {
+    "beat": "v35-30A.01",
+    "what": "on-screen add: \"AI CHIPS · QTY: MORE\""
+   },
+   {
+    "beat": "v35-30A.01",
+    "what": "sound paper_tear at 0.35 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "new beat (scene): MEDIUM → WIDE · the racks: staff slide the boards home (datacenter, racks, staff)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound folder_slide at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound nameplate_off at 1.05 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound folder_slide at 1.20 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound nameplate_off at 1.90 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound ui_mute_blip at 2.20 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound ui_mute_blip at 2.40 s (the plan's)"
+   },
+   {
+    "beat": "v35-30A.02",
+    "what": "sound ui_mute_blip at 2.60 s (the plan's)"
    }
   ],
   "deviations": [],
@@ -1943,11 +2043,11 @@
   "timeline": "show/reel/ep01-v35/ep01-v35-act3.json",
   "source": "show/reel/ep01-v34/ep01-v34-act3.json",
   "source_story_s": 125.304,
-  "estimate_s": 139.12,
-  "seconds": 139.119,
-  "frames": 3339,
+  "estimate_s": 149.12,
+  "seconds": 149.119,
+  "frames": 3579,
   "source_frames": 3007,
-  "beats": 30,
+  "beats": 33,
   "lines": 24,
   "vo": 3,
   "vo_lines": [
@@ -1972,6 +2072,42 @@
    "spoken_only_segment_s": 1.15
   },
   "beat_lengths": [
+   {
+    "beat": "v35-32A.01",
+    "action": "new",
+    "scene": "32A",
+    "src_s": null,
+    "est_s": 3.75,
+    "lock_s": 3.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-32A.02",
+    "action": "new",
+    "scene": "32A",
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "v35-32A.03",
+    "action": "new",
+    "scene": "32A",
+    "src_s": null,
+    "est_s": 3.75,
+    "lock_s": 3.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.01",
+    "action": "keep",
+    "scene": 33,
+    "src_s": 4.4,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
    {
     "beat": "20.06",
     "action": "keep",
@@ -2054,6 +2190,54 @@
   ],
   "check_failures": [],
   "edits": [
+   {
+    "beat": "v35-32A.01",
+    "what": "new beat (scene): WIDE · NopeAI's bullpen, evening: the launch party (bullpen, party, staff, mas, alyi)"
+   },
+   {
+    "beat": "v35-32A.01",
+    "what": "on-screen add: \"RAIL: SEP 25, 2023\""
+   },
+   {
+    "beat": "v35-32A.01",
+    "what": "on-screen add: \"CHATGTP CAN NOW SEE, HEAR AND SPEAK\""
+   },
+   {
+    "beat": "v35-32A.01",
+    "what": "sequence marker 19A: NopeAI's bullpen, evening: the launch party"
+   },
+   {
+    "beat": "v35-32A.01",
+    "what": "sound synth:cheer at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "v35-32A.02",
+    "what": "new beat (scene): MEDIUM · the staff cheer as Mas raises his glass (bullpen, party, mas, staff)"
+   },
+   {
+    "beat": "v35-32A.02",
+    "what": "sound synth:cheer at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "v35-32A.02",
+    "what": "sound glass_nudge at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "v35-32A.02",
+    "what": "sound glass_nudge at 1.05 s (the plan's)"
+   },
+   {
+    "beat": "v35-32A.03",
+    "what": "new beat (scene): 2S · Mas and Alyi: the toast, and a shared laugh (bullpen, party, mas, alyi)"
+   },
+   {
+    "beat": "v35-32A.03",
+    "what": "sound glass_nudge at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "20.01",
+    "what": "sound glass_set_stone at 0.05 s (the plan's)"
+   },
    {
     "beat": "20.06",
     "what": "line e1-a3-20-06 retimed: gap after v31-a3-0002 0.55 -> 0.45 s"
@@ -2182,12 +2366,12 @@
   "timeline": "show/reel/ep01-v35/ep01-v35-act4.json",
   "source": "show/reel/ep01-v34/ep01-v34-act4.json",
   "source_story_s": 507.792,
-  "estimate_s": 482.32,
-  "seconds": 483.316,
-  "frames": 11600,
+  "estimate_s": 485.67,
+  "seconds": 486.666,
+  "frames": 11680,
   "source_frames": 12187,
   "beats": 84,
-  "lines": 99,
+  "lines": 100,
   "vo": 5,
   "vo_lines": [
    "v34-vo-07 (S1.02): gerg's not on it. probably the budget. good. i'll ask for more compute.",
@@ -2215,11 +2399,11 @@
    "spoken_only_segment_s": 0.806
   },
   "median_gap_v35": {
-   "inside_beats_s": 0.4,
-   "inside_beats_n": 53,
-   "segment_s": 0.75,
-   "segment_n": 98,
-   "spoken_only_segment_s": 0.7
+   "inside_beats_s": 0.425,
+   "inside_beats_n": 54,
+   "segment_s": 0.73,
+   "segment_n": 99,
+   "spoken_only_segment_s": 0.715
   },
   "beat_lengths": [
    {
@@ -2434,8 +2618,8 @@
     "action": "keep",
     "scene": 47,
     "src_s": 17.4,
-    "est_s": 9.0,
-    "lock_s": 9.0,
+    "est_s": 12.35,
+    "lock_s": 12.35,
     "diff_s": 0.0
    },
    {
@@ -2737,6 +2921,13 @@
     "line": "v31-a4-0003",
     "plan_s": 0.25,
     "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.02",
+    "line": "a5-27-29",
+    "plan_s": 0.73,
+    "lock_s": 0.73,
     "ok": true
    },
    {
@@ -3237,11 +3428,23 @@
    },
    {
     "beat": "S4.02",
+    "what": "line a5-27-22 dropped (\"They're all asking whether it was allowed. It was.\")"
+   },
+   {
+    "beat": "S4.02",
     "what": "line a5-27-23 dropped (\"What they actually want to know is what happens on\")"
    },
    {
     "beat": "S4.02",
-    "what": "10.74 -> 9.00 s, to the plan's 9.0 s: tail −1.74"
+    "what": "restored line a5-27-29 (neleh, 1.60 s, restored take) after v35-a4-0009 +0.73"
+   },
+   {
+    "beat": "S4.02",
+    "what": "new line v35-a4-0009 (neleh, 7.47 s, new take) at start+1.25 replacing a5-27-22"
+   },
+   {
+    "beat": "S4.02",
+    "what": "13.87 -> 12.35 s, to the plan's 12.35 s: tail −1.52"
    },
    {
     "beat": "S4.02",
@@ -3253,7 +3456,23 @@
    },
    {
     "beat": "S4.02",
-    "what": "sound landing_thunk 8.95 -> 8.40 s: the clack: the first phone goes over after Neleh's turn (it ends 7.92 s), and nobody picks it up; 0.6 s held to the cut"
+    "what": "sound BUZZ 0.288, 8.37 -> 0.29 s (the plan's)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound BUZZ at 8.89 s (the plan's)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound landing_thunk 12.3 -> 9.20 s (the plan's)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound marker_uncap at 11.17 s (the plan's)"
+   },
+   {
+    "beat": "S4.02",
+    "what": "sound marker_write_q at 11.40 s (the plan's)"
    },
    {
     "beat": "S4.08",
@@ -3270,6 +3489,10 @@
    {
     "beat": "S4.08",
     "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.08",
+    "what": "sound marker_write_q at 16.98 s (the plan's)"
    },
    {
     "beat": "S4.08",

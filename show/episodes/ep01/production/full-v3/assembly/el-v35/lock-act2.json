@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep01/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "08:32:10",
-  "ep_in_frames": 12298,
+  "ep_in": "08:34:10",
+  "ep_in_frames": 12346,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -26,18 +26,18 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 42,
-  "beats": 49,
-  "frames": 4848,
-  "seconds": 202.0,
-  "length": "3:22.00",
-  "episode_in": "08:32:10",
-  "episode_out": "11:54:10",
+  "shots": 44,
+  "beats": 51,
+  "frames": 4968,
+  "seconds": 207.0,
+  "length": "3:27.00",
+  "episode_in": "08:34:10",
+  "episode_out": "12:01:10",
   "verdicts": {
-   "-": 42
+   "-": 44
   },
-  "mean_s": 4.81,
-  "median_s": 4.083,
+  "mean_s": 4.705,
+  "median_s": 4.0,
   "min_s": 0.75,
   "max_s": 13.583,
   "lines": 46,
@@ -60,12 +60,12 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "42 shots from 49 beats"
+   "detail": "44 shots from 51 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 4848"
+   "detail": "0 -> 4968"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -94,8 +94,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": true,
-   "detail": "mix 4848.00 f vs 0 + 4848"
+   "ok": false,
+   "detail": "mix 4848.00 f vs 0 + 4968"
   }
  ],
  "sequences": [
@@ -123,8 +123,8 @@
    "title": "The White House: a meeting room",
    "cue": "music (v3.5): THE WHITE HOUSE · pomp and comedy · MM-19 · the act opens on the mantel clock under the black (mood §4 #9) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: the episode's one lens look (pupils centred, 1 beat); everywhere else his pupils sit 1 px toward the speaker · style: the flash is a white step (<= 80 %), and its freeze is the card's",
    "frames": 1491,
-   "tc_in": "08:32:10",
-   "tc_out": "09:34:13"
+   "tc_in": "08:34:10",
+   "tc_out": "09:36:13"
   },
   {
    "id": "14",
@@ -140,8 +140,8 @@
    "title": "NopeAI bullpen, the window → the bay",
    "cue": "music (v3.5): THE BRIDGE · a hush · no score: the phone's small speaker, then water on pilings · sound: NO SCORE · the bullpen through glass, the phone's small speaker (the reminder's slide), then the gavel's knock under the last half second (the Senate, J 0.5 s)",
    "frames": 144,
-   "tc_in": "09:34:13",
-   "tc_out": "09:40:13"
+   "tc_in": "09:36:13",
+   "tc_out": "09:42:13"
   },
   {
    "id": "15",
@@ -167,8 +167,8 @@
    "title": "Senate Judiciary: the hearing room",
    "cue": "music (v3.5): procedural comedy, MM-20, in on the gavel · music (v3.5): THE SENATE · procedural comedy · a lighter Under Oath (MM-20) · unchanged · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar",
    "frames": 1303,
-   "tc_in": "09:40:13",
-   "tc_out": "10:34:20"
+   "tc_in": "09:42:13",
+   "tc_out": "10:36:20"
   },
   {
    "id": "15A",
@@ -188,8 +188,8 @@
    "title": "NopeAI's first office, by day (a memory)",
    "cue": "music (v3.5): MAR 2019 · admiration with a flicker of unease: the Build and low strings (new cue); an old office fan · music (v3.5): MM-20's last phrase; out on the gavel",
    "frames": 604,
-   "tc_in": "10:34:20",
-   "tc_out": "11:00:00"
+   "tc_in": "10:36:20",
+   "tc_out": "11:02:00"
   },
   {
    "id": "16",
@@ -209,8 +209,8 @@
    "title": "the regulate-me tour: the stamps, the lectern, the posts",
    "cue": "music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts · music (v3.5): THE RUN (MM-03), in on the first stamp; a knee stab on every stamp; thins under the lectern and the posts; rings out into the statement's held pad",
    "frames": 407,
-   "tc_in": "11:00:00",
-   "tc_out": "11:16:23"
+   "tc_in": "11:02:00",
+   "tc_out": "11:18:23"
   },
   {
    "id": "17",
@@ -218,7 +218,7 @@
    "place": "A rooftop signing table",
    "time": "Tue May 30, 2023 · day",
    "s": 3949,
-   "e": 4848,
+   "e": 4968,
    "shots": [
     "17.01",
     "17.02",
@@ -227,15 +227,17 @@
     "17.06",
     "17.07",
     "17.10",
+    "v35-30A.01",
+    "v35-30A.02",
     "17.11",
     "17.13"
    ],
    "chapter": "Tue May 30, 2023 · day",
    "title": "A rooftop signing table",
-   "cue": "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE)",
-   "frames": 899,
-   "tc_in": "11:16:23",
-   "tc_out": "11:54:10"
+   "cue": "music (v3.5): THE ROOFTOP · grand, then uneasy · MM-03's pad → MM-05 → the bell alone (the act-out) · style: 2-TONE freeze, 1 beat · then the card rides the live room for the rest of its bar · style: [LEDGER] flash-print, 6 frames · then the figure holds in the register window (BASE) · music (v3.5): THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it",
+   "frames": 1019,
+   "tc_in": "11:18:23",
+   "tc_out": "12:01:10"
   }
  ],
  "shots": [
@@ -355,8 +357,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:32:10",
-   "tc_out": "08:37:00",
+   "tc_in": "08:34:10",
+   "tc_out": "08:39:00",
    "frames": 110
   },
   {
@@ -487,8 +489,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:37:00",
-   "tc_out": "08:41:04",
+   "tc_in": "08:39:00",
+   "tc_out": "08:43:04",
    "frames": 100
   },
   {
@@ -1029,8 +1031,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:41:04",
-   "tc_out": "08:52:14",
+   "tc_in": "08:43:04",
+   "tc_out": "08:54:14",
    "frames": 274
   },
   {
@@ -1310,8 +1312,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:52:14",
-   "tc_out": "08:55:11",
+   "tc_in": "08:54:14",
+   "tc_out": "08:57:11",
    "frames": 69
   },
   {
@@ -1398,8 +1400,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:55:11",
-   "tc_out": "08:59:05",
+   "tc_in": "08:57:11",
+   "tc_out": "09:01:05",
    "frames": 90
   },
   {
@@ -1656,8 +1658,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:59:05",
-   "tc_out": "09:03:15",
+   "tc_in": "09:01:05",
+   "tc_out": "09:05:15",
    "frames": 106
   },
   {
@@ -2220,8 +2222,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:03:15",
-   "tc_out": "09:15:11",
+   "tc_in": "09:05:15",
+   "tc_out": "09:17:11",
    "frames": 284
   },
   {
@@ -2355,8 +2357,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:15:11",
-   "tc_out": "09:17:18",
+   "tc_in": "09:17:11",
+   "tc_out": "09:19:18",
    "frames": 55
   },
   {
@@ -2624,8 +2626,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:17:18",
-   "tc_out": "09:22:08",
+   "tc_in": "09:19:18",
+   "tc_out": "09:24:08",
    "frames": 110
   },
   {
@@ -2948,8 +2950,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:22:08",
-   "tc_out": "09:28:23",
+   "tc_in": "09:24:08",
+   "tc_out": "09:30:23",
    "frames": 159
   },
   {
@@ -3075,8 +3077,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:28:23",
-   "tc_out": "09:34:13",
+   "tc_in": "09:30:23",
+   "tc_out": "09:36:13",
    "frames": 134
   },
   {
@@ -3166,8 +3168,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:34:13",
-   "tc_out": "09:40:13",
+   "tc_in": "09:36:13",
+   "tc_out": "09:42:13",
    "frames": 144
   },
   {
@@ -3267,8 +3269,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:40:13",
-   "tc_out": "09:44:08",
+   "tc_in": "09:42:13",
+   "tc_out": "09:46:08",
    "frames": 91
   },
   {
@@ -3697,8 +3699,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:44:08",
-   "tc_out": "09:50:16",
+   "tc_in": "09:46:08",
+   "tc_out": "09:52:16",
    "frames": 152
   },
   {
@@ -4040,8 +4042,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:50:16",
-   "tc_out": "09:56:08",
+   "tc_in": "09:52:16",
+   "tc_out": "09:58:08",
    "frames": 136
   },
   {
@@ -4308,8 +4310,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:56:08",
-   "tc_out": "10:03:02",
+   "tc_in": "09:58:08",
+   "tc_out": "10:05:02",
    "frames": 162
   },
   {
@@ -4511,8 +4513,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:03:02",
-   "tc_out": "10:05:22",
+   "tc_in": "10:05:02",
+   "tc_out": "10:07:22",
    "frames": 68
   },
   {
@@ -4836,8 +4838,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:05:22",
-   "tc_out": "10:12:16",
+   "tc_in": "10:07:22",
+   "tc_out": "10:14:16",
    "frames": 162
   },
   {
@@ -4913,8 +4915,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:12:16",
-   "tc_out": "10:15:11",
+   "tc_in": "10:14:16",
+   "tc_out": "10:17:11",
    "frames": 67
   },
   {
@@ -5327,8 +5329,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:15:11",
-   "tc_out": "10:21:23",
+   "tc_in": "10:17:11",
+   "tc_out": "10:23:23",
    "frames": 156
   },
   {
@@ -5404,8 +5406,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:21:23",
-   "tc_out": "10:24:23",
+   "tc_in": "10:23:23",
+   "tc_out": "10:26:23",
    "frames": 72
   },
   {
@@ -5614,8 +5616,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:24:23",
-   "tc_out": "10:29:04",
+   "tc_in": "10:26:23",
+   "tc_out": "10:31:04",
    "frames": 101
   },
   {
@@ -5892,8 +5894,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:29:04",
-   "tc_out": "10:34:20",
+   "tc_in": "10:31:04",
+   "tc_out": "10:36:20",
    "frames": 136
   },
   {
@@ -5958,8 +5960,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:34:20",
-   "tc_out": "10:37:03",
+   "tc_in": "10:36:20",
+   "tc_out": "10:39:03",
    "frames": 55
   },
   {
@@ -6615,8 +6617,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:37:03",
-   "tc_out": "10:50:17",
+   "tc_in": "10:39:03",
+   "tc_out": "10:52:17",
    "frames": 326
   },
   {
@@ -6858,8 +6860,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:50:17",
-   "tc_out": "10:54:17",
+   "tc_in": "10:52:17",
+   "tc_out": "10:56:17",
    "frames": 96
   },
   {
@@ -6933,8 +6935,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:54:17",
-   "tc_out": "10:57:12",
+   "tc_in": "10:56:17",
+   "tc_out": "10:59:12",
    "frames": 67
   },
   {
@@ -7010,8 +7012,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:57:12",
-   "tc_out": "11:00:00",
+   "tc_in": "10:59:12",
+   "tc_out": "11:02:00",
    "frames": 60
   },
   {
@@ -7200,8 +7202,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:00:00",
-   "tc_out": "11:04:00",
+   "tc_in": "11:02:00",
+   "tc_out": "11:06:00",
    "frames": 96
   },
   {
@@ -7475,8 +7477,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:04:00",
-   "tc_out": "11:09:18",
+   "tc_in": "11:06:00",
+   "tc_out": "11:11:18",
    "frames": 138
   },
   {
@@ -7555,8 +7557,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:09:18",
-   "tc_out": "11:12:14",
+   "tc_in": "11:11:18",
+   "tc_out": "11:14:14",
    "frames": 68
   },
   {
@@ -7634,8 +7636,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:12:14",
-   "tc_out": "11:15:14",
+   "tc_in": "11:14:14",
+   "tc_out": "11:17:14",
    "frames": 72
   },
   {
@@ -7694,8 +7696,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:15:14",
-   "tc_out": "11:16:23",
+   "tc_in": "11:17:14",
+   "tc_out": "11:18:23",
    "frames": 33
   },
   {
@@ -7856,8 +7858,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:16:23",
-   "tc_out": "11:23:11",
+   "tc_in": "11:18:23",
+   "tc_out": "11:25:11",
    "frames": 156
   },
   {
@@ -8350,8 +8352,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:23:11",
-   "tc_out": "11:33:18",
+   "tc_in": "11:25:11",
+   "tc_out": "11:35:18",
    "frames": 247
   },
   {
@@ -8479,8 +8481,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:33:18",
-   "tc_out": "11:35:19",
+   "tc_in": "11:35:18",
+   "tc_out": "11:37:19",
    "frames": 49
   },
   {
@@ -8699,8 +8701,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:35:19",
-   "tc_out": "11:39:11",
+   "tc_in": "11:37:19",
+   "tc_out": "11:41:11",
    "frames": 88
   },
   {
@@ -8894,8 +8896,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:39:11",
-   "tc_out": "11:42:15",
+   "tc_in": "11:41:11",
+   "tc_out": "11:44:15",
    "frames": 76
   },
   {
@@ -8954,7 +8956,7 @@
     {
      "name": "synth:bell",
      "k": 14,
-     "dur": null
+     "dur": 16.2
     }
    ],
    "v4_frames": null,
@@ -9001,8 +9003,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:42:15",
-   "tc_out": "11:46:06",
+   "tc_in": "11:44:15",
+   "tc_out": "11:48:06",
    "frames": 87
   },
   {
@@ -9084,8 +9086,195 @@
      "must": true
     }
    ],
-   "tc_in": "11:46:06",
-   "tc_out": "11:49:06",
+   "tc_in": "11:48:06",
+   "tc_out": "11:51:06",
+   "frames": 72
+  },
+  {
+   "id": "v35-30A.01",
+   "setup": "v35-30A.01",
+   "beats": [
+    "v35-30A.01"
+   ],
+   "s": 4724,
+   "e": 4772,
+   "onscreen": [
+    {
+     "text": "INVIDIA",
+     "s": 4,
+     "e": 48
+    },
+    {
+     "text": "AI CHIPS · QTY: MORE",
+     "s": 4,
+     "e": 48
+    }
+   ],
+   "lines": [],
+   "seq": "17",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT → MATCH · the packing slip on an INVIDIA crate",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "MATCH: the purchase order in Mario's hand becomes, in the same place in frame, a packing slip on a crate stencilled INVIDIA: AI CHIPS · QTY: MORE. A box cutter slits the tape; a gloved hand lifts a new board out of its silver sleeve, the INVIDIA logo on its shroud.",
+   "chars": [],
+   "cues": [
+    "music (v3.5): THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it"
+   ],
+   "sounds": [
+    "paper_tear @8"
+   ],
+   "spots": [
+    {
+     "name": "paper_tear",
+     "k": 8,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "datacenter",
+   "room": "racks",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "MATCH: the purchase order in Mario's hand becomes, in the same place in frame, a packing slip on a crate stencilled INVIDIA: AI CHIPS · QTY: MORE. A box cutter slits the tape; a gloved hand lifts a new board out of its silver sleeve, the INVIDIA logo on its shroud.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "v35-30A.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "label",
+     "text": "INVIDIA",
+     "s": 4,
+     "e": 48,
+     "must": true
+    },
+    {
+     "kind": "label",
+     "text": "AI CHIPS · QTY: MORE",
+     "s": 4,
+     "e": 48,
+     "must": true
+    }
+   ],
+   "tc_in": "11:51:06",
+   "tc_out": "11:53:06",
+   "frames": 48
+  },
+  {
+   "id": "v35-30A.02",
+   "setup": "v35-30A.02",
+   "beats": [
+    "v35-30A.02"
+   ],
+   "s": 4772,
+   "e": 4844,
+   "onscreen": [],
+   "lines": [],
+   "seq": "17",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM → WIDE · the racks: staff slide the boards home",
+   "cls": "M",
+   "move": "hold",
+   "does": "A row of racks in the cold aisle. Two staff in lanyards slide the new boards home, one after the other; each latch snaps shut. The rack's LEDs come up in a column, climbing to the top of the frame. One of them pats the rack's door, pleased.",
+   "chars": [
+    "staff"
+   ],
+   "cues": [
+    "music (v3.5): THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it"
+   ],
+   "sounds": [
+    "folder_slide @7",
+    "nameplate_off @25",
+    "folder_slide @28",
+    "nameplate_off @45",
+    "ui_mute_blip @52",
+    "ui_mute_blip @57",
+    "ui_mute_blip @62"
+   ],
+   "spots": [
+    {
+     "name": "folder_slide",
+     "k": 7,
+     "dur": null
+    },
+    {
+     "name": "nameplate_off",
+     "k": 25,
+     "dur": null
+    },
+    {
+     "name": "folder_slide",
+     "k": 28,
+     "dur": null
+    },
+    {
+     "name": "nameplate_off",
+     "k": 45,
+     "dur": null
+    },
+    {
+     "name": "ui_mute_blip",
+     "k": 52,
+     "dur": null
+    },
+    {
+     "name": "ui_mute_blip",
+     "k": 57,
+     "dur": null
+    },
+    {
+     "name": "ui_mute_blip",
+     "k": 62,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "datacenter",
+   "room": "racks",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "A row of racks in the cold aisle. Two staff in lanyards slide the new boards home, one after the other; each latch snaps shut. The rack's LEDs come up in a column, climbing to the top of the frame. One of them pats the rack's door, pleased.",
+   "cast": [
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "v35-30A.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "11:53:06",
+   "tc_out": "11:56:06",
    "frames": 72
   },
   {
@@ -9094,8 +9283,8 @@
    "beats": [
     "17.11"
    ],
-   "s": 4724,
-   "e": 4830,
+   "s": 4844,
+   "e": 4950,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -9162,8 +9351,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:49:06",
-   "tc_out": "11:53:16",
+   "tc_in": "11:56:06",
+   "tc_out": "12:00:16",
    "frames": 106
   },
   {
@@ -9172,8 +9361,8 @@
    "beats": [
     "17.13"
    ],
-   "s": 4830,
-   "e": 4848,
+   "s": 4950,
+   "e": 4968,
    "onscreen": [],
    "lines": [],
    "seq": "17",
@@ -9211,8 +9400,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:53:16",
-   "tc_out": "11:54:10",
+   "tc_in": "12:00:16",
+   "tc_out": "12:01:10",
    "frames": 18
   }
  ],
@@ -15222,5 +15411,7 @@
   "17.03: plate 'NESNEJ / SELLS SHOVELS. FUNDS DI' is up 15 f, under its read floor 52 f (the stick's timing; kept)",
   "17.03: plate 'POCKETS: 1' is up 15 f, under its read floor 18 f (the stick's timing; kept)"
  ],
- "problems": []
+ "problems": [
+  "CHECK FAILED: the mix = its offset + the segment: mix 4848.00 f vs 0 + 4968"
+ ]
 }

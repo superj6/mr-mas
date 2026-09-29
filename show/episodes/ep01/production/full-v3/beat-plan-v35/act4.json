@@ -4,7 +4,7 @@
  "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
  "story_s": {
   "source": 507.79,
-  "estimate": 482.32
+  "estimate": 485.67
  },
  "beats": [
   {
@@ -1191,27 +1191,69 @@
    "scene": 47,
    "mode": "CONVERSATION",
    "pace": "quick",
-   "est_s": 9.0,
+   "est_s": 12.35,
    "frame": "WIDE · the boardroom at night (held)",
    "camera": "WIDE · the boardroom at night (held)",
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up.",
-   "picture": "Step 4's blank line visible on the table (it's the one Neleh looks at after Tasya's statement). The push to her MCU is dropped with the second speech.",
+   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
+   "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped.",
    "onscreen": {
     "add": [
      "RAIL: NOV 18"
     ]
    },
-   "fix": [
-    "C12"
+   "sounds": [
+    {
+     "name": "BUZZ",
+     "at": 0.288,
+     "gain": -24
+    },
+    {
+     "name": "BUZZ",
+     "at": "after:v35-a4-0009+0.172",
+     "gain": -26
+    },
+    {
+     "name": "landing_thunk",
+     "at": "after:v35-a4-0009+0.48",
+     "gain": -22,
+     "note": "the clack: the first phone goes over after her line; nobody picks it up"
+    },
+    {
+     "name": "marker_uncap",
+     "at": "after:a5-27-29+0.12",
+     "gain": -30,
+     "note": "her marker, uncapped"
+    },
+    {
+     "name": "marker_write_q",
+     "at": "after:a5-27-29+0.35",
+     "gain": -28,
+     "note": "she writes 4. MARIO on step four's blank line as she dials (the tones pre-lap S4.08)"
+    }
    ],
-   "why": "12A: footnote three stays (the keep list); the rail moves here from the cut S4.01.",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {
+     "a5-27-29": 0.73
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "note": "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"
+   },
+   "fix": [
+    "C12",
+    "TR"
+   ],
+   "why": "SN 00000A: the pressure is about his return (the re-recorded line), and step four's payoff is restored: they try to replace him, and 4. MARIO goes on the blueprint; the rail moves here from the cut S4.01.",
    "src_s": 17.4,
    "src_frame": "WIDE · the boardroom at night (held)",
    "lines": [
     {
      "id": "a5-27-22",
-     "keep": true
+     "keep": false,
+     "who": "neleh",
+     "text": "They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.",
+     "why": "SN 00000A: re-recorded as v35-a4-0009 (\"They all want him back…\"), at its natural length"
     },
     {
      "id": "a5-27-23",
@@ -1219,6 +1261,33 @@
      "who": "neleh",
      "text": "What they actually want to know is what happens on Monday. I'd like to be able to tell them something.",
      "why": "12A: \"What they actually want to know…\" goes"
+    },
+    {
+     "id": "a5-27-29",
+     "restored": true,
+     "who": "neleh",
+     "text": "Then we'll write step four ourselves.",
+     "after": "v35-a4-0009",
+     "gap_s": 0.73,
+     "take": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
+     "take_file": "audio/ep01/act4/dialogue/lines-v5.json",
+     "len_s": 1.6,
+     "tag": "",
+     "note": "[INVENTED · the v3.4 line, restored (SN 00000A: \"yes i want to restore it\"): step four's payoff; its v3.4 takes, Kokoro and EL, reused]",
+     "take_dur_s": 2.965
+    },
+    {
+     "id": "v35-a4-0009",
+     "new": true,
+     "who": "neleh",
+     "text": "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.",
+     "delivery": "After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly.",
+     "tag": "",
+     "note": "[INVENTED · SN 00000A (2026-09-28): the phones' pressure is about bringing him back; the charter and its footnote stay the board's grounds]",
+     "take": "new (the NELEH voice, ref a5-27-22; audio/ep01/v35)",
+     "after": "start+1.25",
+     "gap_s": 0.0,
+     "len_s": 7.47
     }
    ]
   },
@@ -1232,7 +1301,16 @@
    "frame": "SPLIT · both calls, one held shot",
    "camera": "SPLIT · both calls, one held shot",
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+   "caption": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly. On the left, Neleh strikes 4. MARIO through.",
+   "sounds": [
+    {
+     "name": "marker_write_q",
+     "at": "after:a5-27-32+0.35",
+     "gain": -30,
+     "dur": 0.4,
+     "note": "LEFT pane: after Adelina's \"no\", Neleh strikes 4. MARIO through (one stroke, under the dial tone)"
+    }
+   ],
    "tempo": {
     "pace": "quick",
     "gaps": {
@@ -1241,7 +1319,7 @@
     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
     "note": "Adelina's overlap stays"
    },
-   "picture": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+   "picture": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly. On the left, Neleh strikes 4. MARIO through.",
    "fix": [
     "PACE",
     "C12"
@@ -1583,13 +1661,13 @@
    "frame": "SINGLE · MCU Neleh (her real face)",
    "camera": "SINGLE · MCU Neleh (her real face)",
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at the blank line of step 4. It isn't a joke: her real face. (Face light, one step.)",
-   "picture": "Moved here: after Tasya's statement, where step four being blank hurts most. No speakerphone, no dial.",
+   "caption": "NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at step 4 on the blueprint: 4. MARIO, struck through. It isn't a joke: her real face. (Face light, one step.)",
+   "picture": "Moved here: after Tasya's statement. v3.5b: her look lands on the crossed-out line (4. MARIO, struck through after Adelina's \"no\"). No speakerphone, no dial.",
    "fix": [
     "C12",
     "KEEP"
    ],
-   "why": "Neleh's look at the blank line (the keep list), moved to after the statement; it replaces \"Step four, Mada?\" and bridges to Alyi alone.",
+   "why": "Neleh's look at step four (the keep list), moved to after the statement; it replaces \"Step four, Mada?\" (still cut) and bridges to Alyi alone.",
    "src_s": 5.0,
    "src_frame": "SINGLE · MCU Neleh (her real face)",
    "lines": [
@@ -1598,7 +1676,7 @@
      "keep": false,
      "who": "neleh",
      "text": "Then we'll write step four ourselves.",
-     "why": "12A: \"Then we'll write step four ourselves.\" goes; her look stays"
+     "why": "12A: \"Then we'll write step four ourselves.\" goes from here; SN 00000A restores it in S4.02; her look stays"
     }
    ]
   },

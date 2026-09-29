@@ -774,6 +774,11 @@ UP_CH = {   # comping voicings (grand), walk roots and scales; no A-natural (F m
     'Bbm9':     dict(root='Bb1', comp=['Db4', 'F4', 'Ab4', 'C5'], sc=['Bb1', 'C2', 'Db2', 'Eb2', 'F2', 'Gb2', 'Ab2']),
 }
 UP_BARS = ['Fm11', 'Bb13', 'Fm11', 'C7#9b13', 'Fm11', 'Dbmaj9#11', 'Bbm9', 'Bbm9']
+# v3.5b (SN 00000A step 2): THE RACKS (v35-30A.01-.02, 5.0 s = two bars) come between the purchase order and the act-out.
+# The drive plays on through them in its own material: bars 1-7 are the Upsell as it was; bars 8-9 repeat the last two
+# chords (D-flat maj9(#11), B-flat minor 9), so the act-out's cut lands in the same chord and at the same place in its bar
+UP_EXT = ['Dbmaj9#11', 'Bbm9', 'Dbmaj9#11', 'Bbm9', 'Bbm9']
+UP_CELL_EXT = ('C5', 'Db5', 'Eb5', 'F5')      # the seventh cell, a step higher again (the racks' bar 9)
 SW16 = 0.66 * V.S16 / 3.0          # MM-05's swung 16th: the off-16th lands late (grid swing 0.66 on 16ths)
 
 
@@ -819,7 +824,11 @@ def cue_upsell(tl):
     reg = tl.B('17.03')
     stop = tl.B('17.11')
     ao = act_out(tl)
-    c = V.Cue('upsell', tl, anchor=slot, anchor_bar=5, bars=10, swing=0.0)
+    racks = tl.B('v35-30A.01') if tl.has('v35-30A.01') else None           # v3.5b: the racks, before the act-out
+    c = V.Cue('upsell', tl, anchor=slot, anchor_bar=5, bars=10 if racks is None else 14, swing=0.0)
+    bars_ = UP_BARS if racks is None else UP_BARS[:7] + UP_EXT
+    NB = 8 if racks is None else max(8, int(c.bar_of(stop)) + 1)            # the bars the band plays (1 .. NB-1)
+    assert NB <= len(bars_), (NB, len(bars_))
     T = tracks_up()
     freeze = tl.B('17.04') if tl.has('17.04') else None
     nes = [l for l in tl.lines_in(reg, slot) if l['kind'] == 'real']
@@ -834,9 +843,9 @@ def cue_upsell(tl):
     import numpy as _np
     rng = _np.random.default_rng(1705)
     prev = nm('F2')
-    for b in range(1, 8):
-        name = UP_BARS[b - 1]
-        nxt = UP_BARS[b] if b < len(UP_BARS) else 'Fm11'
+    for b in range(1, NB):
+        name = bars_[b - 1]
+        nxt = bars_[b] if b < len(bars_) else 'Fm11'
         scl = [nm(p) for p in UP_CH[name]['sc']]
         root = nm(UP_CH[name]['root'])
         seq = [root]
@@ -859,18 +868,18 @@ def cue_upsell(tl):
     Drums(c.a, 'brushes').play('sweep: ~~~~~~~~~~~~~~~~\ntap[vel=0.8]: x.Xgx.Xgx.Xgx.Xg\nhatf: ....x.......x...',
                                bars=(1, 5), vel=0.8)
     Drums(c.a, 'jazz').play('ride[vel=0.6]: x.Xox.Xox.Xox.Xo\nhatf[vel=0.7]: ..x...x...x...x.\n'
-                            'kick[vel=0.3]: o...o...o...o...\nsnare[vel=0.45]: .......g.....x..', bars=(5, 8), vel=0.9)
+                            'kick[vel=0.3]: o...o...o...o...\nsnare[vel=0.45]: .......g.....x..', bars=(5, max(8, NB)), vel=0.9)
     V.drop_window(c, c.bar1 - 1.0, t_in - 0.001)                  # nothing before the register rolls in
     # the comp (grand): a rootless chord on swung-16th anticipations
-    for b in range(1, 8):
-        v = UP_CH[UP_BARS[b - 1]]['comp']
+    for b in range(1, NB):
+        v = UP_CH[bars_[b - 1]]['comp']
         for beat, d in ((1.0, 0.35), (2.75, 0.25), (4.25, 0.4)):
             t = when(b, beat)
             if t_in <= t < stop - 0.05:
                 c.ch('grand', v, t, d * Q, 0.4, roll=0.005)
     # the GPU clock (chip, 12.5 %): 16th arpeggios; it stops one beat before the slot
-    for b in range(1, 8):
-        v = UP_CH[UP_BARS[b - 1]]['comp']
+    for b in range(1, NB):
+        v = UP_CH[bars_[b - 1]]['comp']
         ps = [nm(p) + 12 for p in v] + [nm(p) + 24 for p in v[:1]]
         for k in range(16):
             t = when(b, 1.0 + 0.25 * k)
@@ -882,13 +891,13 @@ def cue_upsell(tl):
             c.n('arp', p, t, V.S16 * 0.6, 0.24, True, duty=0.125, att=0.002, dec=0.08, sus=0.3, rel=0.03)
     # THE UPSELL: each cell a step higher (vibes + straight mute in unison); none on the real line
     cells = [('C4', 'Eb4', 'F4', 'G4'), ('Eb4', 'F4', 'G4', 'Ab4'), ('F4', 'G4', 'Ab4', 'Bb4'), ('G4', 'Ab4', 'Bb4', 'C5'),
-             ('Ab4', 'Bb4', 'C5', 'Db5'), ('Bb4', 'C5', 'Db5', 'Eb5')]
+             ('Ab4', 'Bb4', 'C5', 'Db5'), ('Bb4', 'C5', 'Db5', 'Eb5')] + ([UP_CELL_EXT] if racks is not None else [])
     starts = []
     t0 = c.next8((freeze + Q) if freeze else t_in + Q)
     starts.append(t0)
     b3 = c.bar(3)
     starts.append(b3 if b3 > t0 + 2.0 else t0 + 2.5)
-    post = [c.bt(5, 2.0), c.bar(6), c.bar(7)]
+    post = [c.bt(5, 2.0), c.bar(6), c.bar(7)] + ([c.bar(b_) for b_ in range(8, NB)] if racks is not None else [])
     ci = 0
     for s in starts + post:
         if ci >= len(cells):
@@ -980,7 +989,13 @@ def cue_upsell(tl):
             c.n('vibes', p, ao['out'] + 0.1, tl.length - ao['out'] - 0.1, v, art='bowed')
         c.mark(ao['gone'], 'the tail gone: a high open fifth (bowed vibes F5 + C6) over the tilt to the empty sky; it '
                'dies in the black with the bell', hit=False)
-        c.section('phrase 3: the climb, featured, into the cut to the sky', slot + Q, t11)
+        if racks is not None:
+            c.mark(racks, 'v3.5b THE RACKS: the drive plays on through the orders being racked (the walk, the GPU clock, '
+                          'the ride; the Upsell\'s cells a step higher on bars 8-9; nothing new, no hit on the cut)', hit=False)
+            c.section('phrase 3: the climb, featured, to the racks', slot + Q, racks)
+            c.section('v3.5b the racks: the Upsell\'s drive carries on (bars 8-9, the same chords)', racks, t11)
+        else:
+            c.section('phrase 3: the climb, featured, into the cut to the sky', slot + Q, t11)
         c.section('THE ACT-OUT: the last fifth; the climb off the top of the frame onto the bell\'s F6', t11,
                   ao['gone'])
         c.section('the empty sky and the black: the high fifth and the bell\'s tail, out by the last frame',

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Ep1 v3.5 BASE LOCK (Kokoro timing): the temp sound bed per segment (the v3.4 lock's bed.py, on the v3.5 timelines).
+  v3.5b (SN 00000A step 2): two new rooms, 'racks' (Act Two's cold aisle: the fans) and 'party' (Act Three's launch
+  party: the staff's walla); the toast's J-cut moves to the usage flash (v35-22.02).
   v3.5: the J-/L-cuts are the v3.5 plans' (the v3 plan's where a v3.5 beat names none). A J-cut whose sound is the next
   scene's (JCUT_NEXT, the seams of script-v35-notes §5) moves that scene's matching sound earlier by lead_s (the gavel,
   the stamp, the marker, the toast; JCUT_SOUND names the ones the words don't), or, if it has none, leads with its
@@ -74,7 +76,9 @@ NEXT_CHAPTER_JCUT = {'17.13'}   # v3.3 P8: Act Three's room leads 0.6 s under Ac
 JCUT_NEXT = {'9.13', 'v31-10.04', '11.04', 'S2.05', 'v31-S7.03b',    # the sound named is the next scene's
              # v3.5 (script-v35-notes §5): the first weeks' pulse, the siren (already 0.3 s before 10.08's end), 2018's fans,
              # the toast, the gavel, 2019's fan, the gavel-to-stamp, the war room's pulse, the all-hands' hush
-             'v32-7.03', 'v35-10.08', 'v35-12.03', 'v35-22.01', '14.01', '15.14', 'v35-28.05', 'v32-S1.13', 'S3.04b'}
+             'v32-7.03', 'v35-10.08', 'v35-12.03', 'v35-22.02', '14.01', '15.14', 'v35-28.05', 'v32-S1.13', 'S3.04b'}
+# (v3.5b, SN 00000A: the toast's J-cut moves from the waitlist, v35-22.01, to the usage flash, v35-22.02, now the beat
+#  before the letter)
 JCUT_SOUND = {'14.01': 'landing_thunk', 'v35-28.05': 'rubber_stamp_C'}   # the next scene's sound the words don't name
 ROOM_OVERRIDE = {('act4', 'v35-43.01'): 'tpool', ('act4', 'v35-43.02'): 'tpool'}   # TPOOL (the plan says office)
 
@@ -146,6 +150,10 @@ def room(seg, kind, n):
         return loop('bed_boardroom_night', n, -41) * np.array([[1.0, 0.35]]) + loop('bed_lighthouse', n, -43) * np.array([[0.35, 1.0]])
     if kind in beds:
         return loop(beds[kind][0], n, beds[kind][1])
+    if kind == 'racks':       # v3.5b (SN 00000A): the data hall's cold aisle, Act Two's racks: the fans up close, air
+        return loop('server_hum', n, -34) + loop('room_tone', n, -46)
+    if kind == 'party':       # v3.5b (SN 00000A): the bullpen's launch party, Sep 25, 2023: the staff's walla, a room of cups
+        return loop('bed_allhands', n, -35) + murmur_band(n, 300, 2400, -41)
     print(f'  ! no room recipe for {k}: room tone')
     return loop('room_tone', n, -44)
 

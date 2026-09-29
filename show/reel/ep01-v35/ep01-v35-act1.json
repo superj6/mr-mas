@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3.5 BASE LOCK (Kokoro timing) · the v2/v5/v3/v3.1/v3.2/v3.4 takes + the v3.5 takes · temp bed",
  "logline": "The v3.5 base lock of act1: the v3.5 beat plan applied to ep01-v34-act1.json (script draft 8.4, the final version).",
  "dateSpan": "Nov 30, 2022 - Mar 29, 2023 (with Jun 2018)",
- "runtimeMin": 7.5,
+ "runtimeMin": 7.53,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -80,7 +80,7 @@
   "builder": "audio/reel/ep01-v35/build_timeline.py",
   "bed": "audio/reel/ep01-v35/bed.py -> audio/reel/ep01-v35/act1-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock-v35.md",
-  "seconds": 449.746
+  "seconds": 451.746
  },
  "beats": [
   {
@@ -7652,7 +7652,7 @@
    "reelDur": 3.0,
    "fx": [],
    "cues": [
-    "music (v3.5): a smug little sting on the rope's snap; out under the toast"
+    "music (v3.5): a smug little sting on the rope's snap; it rings on under the usage flash (v35-22.02) and out under the toast"
    ],
    "seq": {
     "id": "11A",
@@ -7666,6 +7666,47 @@
     "pace": "normal",
     "camera": "SCR · the bullpen's wall TV",
     "picture": "The rope's snap is the sound lead in; the users line visible past the TV's edge."
+   }
+  },
+  {
+   "id": "v35-22.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · MATCH · every chatbot's usage, climbing at once",
+   "side": "",
+   "room": "bullpen",
+   "chars": [],
+   "caption": "MATCH: the users line on the bullpen window, past the TV's edge, becomes the top line of a chart that fills the frame: every chatbot we've just seen, each its own usage line climbing at once, CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED. All five climb; CHATGTP's runs off the top, far ahead. The letter's toast pops over it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v3.5): a smug little sting rings on: the chip climbs with the lines (the Build's tag, 16ths up A-flat major), landing under the toast"
+   ],
+   "sounds": [
+    {
+     "name": "counter_roll",
+     "at": 0.2,
+     "gain": -28,
+     "note": "five usage counters rolling at once (under the sting's ring)"
+    }
+   ],
+   "passes": {
+    "scene": 22,
+    "mode": "INSERT",
+    "pace": "normal",
+    "camera": "INSERT · MATCH · every chatbot's usage, climbing at once",
+    "picture": "One held insert. The lines draw left to right in whole-pixel steps from 0.1 s, each tagged with its bot as shown earlier (CHATGTP's two-dot face, GNIB's search box with a small POWERED BY NOPEAI, DRAB's skewed primaries, CLOD's clay, Atem's stencilled crate); no axes, no figures (never a number). CHATGTP's line is the window's line, the same colour and stroke. The letter's toast pops at 1.6 s (12.01's, a beat early) and the cut lands on his monitor."
    }
   },
   {

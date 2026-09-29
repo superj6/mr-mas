@@ -26,18 +26,18 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 76,
-  "beats": 77,
-  "frames": 10947,
-  "seconds": 456.125,
-  "length": "7:36.12",
+  "shots": 77,
+  "beats": 78,
+  "frames": 10995,
+  "seconds": 458.125,
+  "length": "7:38.12",
   "episode_in": "00:56:07",
-  "episode_out": "08:32:10",
+  "episode_out": "08:34:10",
   "verdicts": {
-   "-": 76
+   "-": 77
   },
-  "mean_s": 6.002,
-  "median_s": 3.604,
+  "mean_s": 5.95,
+  "median_s": 3.583,
   "min_s": 1.0,
   "max_s": 33.167,
   "lines": 82,
@@ -64,12 +64,12 @@
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "76 shots from 77 beats"
+   "detail": "77 shots from 78 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 10947"
+   "detail": "0 -> 10995"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -98,8 +98,8 @@
   },
   {
    "check": "the mix = its offset + the segment",
-   "ok": true,
-   "detail": "mix 10947.00 f vs 0 + 10947"
+   "ok": false,
+   "detail": "mix 10947.00 f vs 0 + 10995"
   }
  ],
  "sequences": [
@@ -369,24 +369,25 @@
    "place": "the bullpen's wall TV: Elgoog's waitlist",
    "time": "Tue Mar 21, 2023",
    "s": 10296,
-   "e": 10368,
+   "e": 10416,
    "shots": [
-    "v35-22.01"
+    "v35-22.01",
+    "v35-22.02"
    ],
    "chapter": "Tue Mar 21, 2023",
    "title": "the bullpen's wall TV: Elgoog's waitlist",
-   "cue": "music (v3.5): a smug little sting on the rope's snap; out under the toast",
-   "frames": 72,
+   "cue": "music (v3.5): a smug little sting on the rope's snap; it rings on under the usage flash (v35-22.02) and out under the toast · music (v3.5): a smug little sting rings on: the chip climbs with the lines (the Build's tag, 16ths up A-flat major), landing under the toast",
+   "frames": 120,
    "tc_in": "08:05:07",
-   "tc_out": "08:08:07"
+   "tc_out": "08:10:07"
   },
   {
    "id": "12",
    "side": "",
    "place": "Mas's desk / a standing desk in the dark",
    "time": "Mar 22 → 29, 2023 · night",
-   "s": 10368,
-   "e": 10947,
+   "s": 10416,
+   "e": 10995,
    "shots": [
     "12.01",
     "12.02",
@@ -400,8 +401,8 @@
    "title": "Mas's desk / a standing desk in the dark",
    "cue": "music (v3.5): THE PAUSE LETTER · a chill, played straight · a cold pedal and Nole's stack, nothing walking (mood §4 #2); the THUD stops it; THREAT (MM-14) once, on the pen's lift · sound: no score on the reflection: the bullpen bed and the pen's scratch only",
    "frames": 579,
-   "tc_in": "08:08:07",
-   "tc_out": "08:32:10"
+   "tc_in": "08:10:07",
+   "tc_out": "08:34:10"
   }
  ],
  "shots": [
@@ -15959,7 +15960,7 @@
    "does": "The bullpen's wall TV: Elgoog finally opens its chatbot, DRAB, behind a velvet rope: DRAB · JOIN THE WAITLIST. The rope snaps taut. Behind the TV, the window's users line is far above it.",
    "chars": [],
    "cues": [
-    "music (v3.5): a smug little sting on the rope's snap; out under the toast"
+    "music (v3.5): a smug little sting on the rope's snap; it rings on under the usage flash (v35-22.02) and out under the toast"
    ],
    "sounds": [],
    "spots": [],
@@ -15994,13 +15995,84 @@
    "frames": 72
   },
   {
+   "id": "v35-22.02",
+   "setup": "v35-22.02",
+   "beats": [
+    "v35-22.02"
+   ],
+   "s": 10368,
+   "e": 10416,
+   "onscreen": [
+    {
+     "text": "CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED",
+     "s": 4,
+     "e": 48
+    }
+   ],
+   "lines": [],
+   "seq": "11A",
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "INSERT · MATCH · every chatbot's usage, climbing at once",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "MATCH: the users line on the bullpen window, past the TV's edge, becomes the top line of a chart that fills the frame: every chatbot we've just seen, each its own usage line climbing at once, CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED. All five climb; CHATGTP's runs off the top, far ahead. The letter's toast pops over it.",
+   "chars": [],
+   "cues": [
+    "music (v3.5): a smug little sting rings on: the chip climbs with the lines (the Build's tag, 16ths up A-flat major), landing under the toast"
+   ],
+   "sounds": [
+    "counter_roll @4"
+   ],
+   "spots": [
+    {
+     "name": "counter_roll",
+     "k": 4,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "screen",
+   "room": "bullpen",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "MATCH: the users line on the bullpen window, past the TV's edge, becomes the top line of a chart that fills the frame: every chatbot we've just seen, each its own usage line climbing at once, CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED. All five climb; CHATGTP's runs off the top, far ahead. The letter's toast pops over it.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "v35-22.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "plate",
+     "text": "CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED",
+     "s": 4,
+     "e": 48,
+     "must": true
+    }
+   ],
+   "tc_in": "08:08:07",
+   "tc_out": "08:10:07",
+   "frames": 48
+  },
+  {
    "id": "12.01",
    "setup": "12.01",
    "beats": [
     "12.01"
    ],
-   "s": 10368,
-   "e": 10471,
+   "s": 10416,
+   "e": 10519,
    "onscreen": [
     {
      "text": "RAIL: MAR 22, 2023",
@@ -16175,8 +16247,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:08:07",
-   "tc_out": "08:12:14",
+   "tc_in": "08:10:07",
+   "tc_out": "08:14:14",
    "frames": 103
   },
   {
@@ -16185,8 +16257,8 @@
    "beats": [
     "12.02"
    ],
-   "s": 10471,
-   "e": 10637,
+   "s": 10519,
+   "e": 10685,
    "onscreen": [
     {
      "text": "NOLE · BUILDING HIS OWN",
@@ -16608,8 +16680,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:12:14",
-   "tc_out": "08:19:12",
+   "tc_in": "08:14:14",
+   "tc_out": "08:21:12",
    "frames": 166
   },
   {
@@ -16618,8 +16690,8 @@
    "beats": [
     "v31-12.03"
    ],
-   "s": 10637,
-   "e": 10743,
+   "s": 10685,
+   "e": 10791,
    "onscreen": [
     {
      "text": "RAIL: MAR 29, 2023",
@@ -16757,8 +16829,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:19:12",
-   "tc_out": "08:23:22",
+   "tc_in": "08:21:12",
+   "tc_out": "08:25:22",
    "frames": 106
   },
   {
@@ -16767,8 +16839,8 @@
    "beats": [
     "12.04"
    ],
-   "s": 10743,
-   "e": 10803,
+   "s": 10791,
+   "e": 10851,
    "onscreen": [
     {
      "text": "his sheet: PLEASE",
@@ -16847,8 +16919,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:23:22",
-   "tc_out": "08:26:10",
+   "tc_in": "08:25:22",
+   "tc_out": "08:28:10",
    "frames": 60
   },
   {
@@ -16857,8 +16929,8 @@
    "beats": [
     "12.05"
    ],
-   "s": 10803,
-   "e": 10863,
+   "s": 10851,
+   "e": 10911,
    "onscreen": [],
    "lines": [],
    "seq": "12",
@@ -16925,8 +16997,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:26:10",
-   "tc_out": "08:28:22",
+   "tc_in": "08:28:10",
+   "tc_out": "08:30:22",
    "frames": 60
   },
   {
@@ -16935,8 +17007,8 @@
    "beats": [
     "12.06"
    ],
-   "s": 10863,
-   "e": 10923,
+   "s": 10911,
+   "e": 10971,
    "onscreen": [
     {
      "text": "PLEASE / REG",
@@ -17002,8 +17074,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:28:22",
-   "tc_out": "08:31:10",
+   "tc_in": "08:30:22",
+   "tc_out": "08:33:10",
    "frames": 60
   },
   {
@@ -17012,8 +17084,8 @@
    "beats": [
     "12.07"
    ],
-   "s": 10923,
-   "e": 10947,
+   "s": 10971,
+   "e": 10995,
    "onscreen": [],
    "lines": [],
    "seq": "12",
@@ -17051,8 +17123,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:31:10",
-   "tc_out": "08:32:10",
+   "tc_in": "08:33:10",
+   "tc_out": "08:34:10",
    "frames": 24
   }
  ],
@@ -27008,13 +27080,13 @@
    "who": "NOLE",
    "text": "Great sign. Love the font.",
    "tag": "",
-   "on_s": 435.7917,
-   "end_s": 437.2217,
-   "file_s": 435.3617,
-   "abs_in": 10459,
-   "abs_out": 10494,
-   "file_in": 10448,
-   "file_out": 10504,
+   "on_s": 437.7917,
+   "end_s": 439.2217,
+   "file_s": 437.3617,
+   "abs_in": 10507,
+   "abs_out": 10542,
+   "file_in": 10496,
+   "file_out": 10552,
    "file": "audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-12-01__nole-A.wav",
    "stick_t": -0.5,
    "stick_in": 0.43,
@@ -27104,13 +27176,13 @@
    "who": "OIGNEB",
    "text": "You signed it. Now put the stamp down.",
    "tag": "",
-   "on_s": 439.2717,
-   "end_s": 441.3917,
-   "file_s": 438.8417,
-   "abs_in": 10542,
-   "abs_out": 10594,
-   "file_in": 10532,
-   "file_out": 10605,
+   "on_s": 441.2717,
+   "end_s": 443.3917,
+   "file_s": 440.8417,
+   "abs_in": 10590,
+   "abs_out": 10642,
+   "file_in": 10580,
+   "file_out": 10653,
    "file": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-a1-0012__oigneb-A.wav",
    "stick_t": 2.98,
    "stick_in": 0.43,
@@ -27231,13 +27303,13 @@
    "who": "NOLE",
    "text": "Next quarter.",
    "tag": "",
-   "on_s": 441.6417,
-   "end_s": 442.4917,
-   "file_s": 441.2417,
-   "abs_in": 10599,
-   "abs_out": 10620,
-   "file_in": 10589,
-   "file_out": 10629,
+   "on_s": 443.6417,
+   "end_s": 444.4917,
+   "file_s": 443.2417,
+   "abs_in": 10647,
+   "abs_out": 10668,
+   "file_in": 10637,
+   "file_out": 10677,
    "file": "audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-12-03__nole-A.wav",
    "stick_t": 5.35,
    "stick_in": 0.4,
@@ -27292,13 +27364,13 @@
    "who": "MAS",
    "text": "now for the backlash.",
    "tag": "V.O.",
-   "on_s": 445.8083,
-   "end_s": 447.3583,
-   "file_s": 445.4083,
-   "abs_in": 10699,
-   "abs_out": 10737,
-   "file_in": 10689,
-   "file_out": 10747,
+   "on_s": 447.8083,
+   "end_s": 449.3583,
+   "file_s": 447.4083,
+   "abs_in": 10747,
+   "abs_out": 10785,
+   "file_in": 10737,
+   "file_out": 10795,
    "file": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-05__mas-manalt-C.wav",
    "stick_t": 2.6,
    "stick_in": 0.4,
@@ -27429,15 +27501,15 @@
   },
   {
    "text": "MAR 22, 2023",
-   "s": 10372,
-   "e": 10411,
+   "s": 10420,
+   "e": 10459,
    "shot": "12.01",
    "floor_f": 21
   },
   {
    "text": "MAR 29, 2023",
-   "s": 10641,
-   "e": 10743,
+   "s": 10689,
+   "e": 10791,
    "shot": "v31-12.03",
    "floor_f": 21
   }
@@ -28381,9 +28453,9 @@
    "os": false
   },
   {
-   "s": 10459,
-   "e": 10494,
-   "hold_to": 10506,
+   "s": 10507,
+   "e": 10542,
+   "hold_to": 10554,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Great sign. Love the font.",
@@ -28393,9 +28465,9 @@
    "os": false
   },
   {
-   "s": 10542,
-   "e": 10594,
-   "hold_to": 10599,
+   "s": 10590,
+   "e": 10642,
+   "hold_to": 10647,
    "who": "OIGNEB",
    "shown": "OIGNEB",
    "text": "You signed it. Now put the stamp down.",
@@ -28405,9 +28477,9 @@
    "os": false
   },
   {
-   "s": 10599,
-   "e": 10620,
-   "hold_to": 10632,
+   "s": 10647,
+   "e": 10668,
+   "hold_to": 10680,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Next quarter.",
@@ -28417,9 +28489,9 @@
    "os": false
   },
   {
-   "s": 10699,
-   "e": 10737,
-   "hold_to": 10749,
+   "s": 10747,
+   "e": 10785,
+   "hold_to": 10797,
    "who": "MAS",
    "shown": "MAN AT THE END DESK",
    "text": "now for the backlash.",
@@ -28445,8 +28517,11 @@
   "v35-19.02: label 'Our mission is to ensure that ar' is up 155 f, under its read floor 171 f (the stick's timing; kept)",
   "v35-19.02: label '…a gradual transition to a world' is up 83 f, under its read floor 90 f (the stick's timing; kept)",
   "v35-19.02: label '…perhaps the most important—and ' is up 91 f, under its read floor 98 f (the stick's timing; kept)",
+  "v35-22.02: plate 'CHATGTP · GNIB · DRAB · CLOD · A' is up 44 f, under its read floor 59 f (the stick's timing; kept)",
   "1 takes are not in the timeline: ['v35-vo-02']",
   "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"v3-vo-10~'MAR 14, 2023'\", \"v35-vo-05~'MAR 29, 2023'\"]"
  ],
- "problems": []
+ "problems": [
+  "CHECK FAILED: the mix = its offset + the segment: mix 10947.00 f vs 0 + 10995"
+ ]
 }

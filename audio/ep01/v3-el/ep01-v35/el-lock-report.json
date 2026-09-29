@@ -51,8 +51,8 @@
   },
   {
    "segment": "act1",
-   "seconds_kokoro": 449.746,
-   "seconds_el": 456.106,
+   "seconds_kokoro": 451.746,
+   "seconds_el": 458.106,
    "delta_s": 6.36,
    "lines": 81,
    "beats_changed": 30,
@@ -631,8 +631,8 @@
   },
   {
    "segment": "act2",
-   "seconds_kokoro": 211.435,
-   "seconds_el": 202.015,
+   "seconds_kokoro": 216.435,
+   "seconds_el": 207.015,
    "delta_s": -9.42,
    "lines": 46,
    "beats_changed": 21,
@@ -1010,8 +1010,8 @@
   },
   {
    "segment": "act3",
-   "seconds_kokoro": 139.119,
-   "seconds_el": 136.399,
+   "seconds_kokoro": 149.119,
+   "seconds_el": 146.399,
    "delta_s": -2.72,
    "lines": 24,
    "beats_changed": 13,
@@ -1222,10 +1222,10 @@
   },
   {
    "segment": "act4",
-   "seconds_kokoro": 483.316,
-   "seconds_el": 494.725,
-   "delta_s": 11.409,
-   "lines": 99,
+   "seconds_kokoro": 486.666,
+   "seconds_el": 498.025,
+   "delta_s": 11.359,
+   "lines": 100,
    "beats_changed": 45,
    "missing_takes": [],
    "kokoro_cast": [
@@ -1510,13 +1510,17 @@
     },
     {
      "beat": "S4.02",
-     "old_s": 9.0,
-     "new_s": 8.56,
-     "delta_s": -0.44,
+     "old_s": 12.35,
+     "new_s": 11.86,
+     "delta_s": -0.49,
      "lines": [
       [
-       "a5-27-22",
-       -0.44
+       "v35-a4-0009",
+       -0.82
+      ],
+      [
+       "a5-27-29",
+       0.33
       ]
      ]
     },
@@ -2048,16 +2052,17 @@
   }
  ],
  "story": {
-  "seconds_kokoro": 1343.526,
-  "seconds_el": 1346.795,
-  "delta_s": 3.269
+  "seconds_kokoro": 1363.876,
+  "seconds_el": 1367.095,
+  "delta_s": 3.219
  },
  "manifest": {
   "key": "ep01-v35-el-stick",
-  "runtimeMin": 23.15
+  "runtimeMin": 23.49
  },
  "fixed_beats": [
   "S7.13"
  ],
- "flags": []
+ "flags": [],
+ "act1_note": "v3.5b: Act One's EL timeline keeps the two hand-placed V.O. lines (voices-el.md §AD); this report's act1 row is el_lock's own retime (the hand-placed lines change no beat length)"
 }

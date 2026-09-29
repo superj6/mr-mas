@@ -2,7 +2,21 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
-## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+## v3.5b (current, 2026-09-28): the racks (SHOWRUNNER-NOTES 00000A, step 2)
+
+**The lock:** `show/reel/ep01-v35-el/` with v35-30A.01–.02, the racks: 5.0 s (two bars) between the purchase order (17.10) and the act-out (17.11) (lock-v35.md §10). `render/music-el.wav`: **207.000 s (4,968 frames), exact.** Only `upsell` was re-rendered. The other cues are the v3.5 renders, in place, since everything before 17.10 is where it was.
+
+| s | Cue | What plays |
+|---|---|---|
+| 181.4 → 196.8 | `upsell` | As v3.5: the register, the close, the KA-CHING, and phrase 3 climbing (bars 1–7 are the same notes). |
+| **196.8 → 201.8** | `upsell` | **The racks: the drive plays on through them, in its own material.** It continues the walk, the GPU clock, the ride and the comp for two more bars on the last two chords (D♭maj9(♯11), B♭m9), with the Upsell's cells a step higher (the sixth, then a seventh: C5 D♭5 E♭5 F5). No hit on either cut. |
+| 201.8 → 207.0 | `upsell` | The act-out as before, 5.0 s later: the band's last fifth on the cut to the sky, the climb onto the bell's F6, and the high fifth into the black. It lands in the same chord and at the same place in its bar. |
+
+- **The register's bell** (a timeline SFX, 17.07) now has `dur` 16.2 s, so it still decays into 17.13's black across the racks.
+- **Measured (`v35check`):** −20.14 LUFS-I, −3.15 dBTP. No unmarked silence, holes or fragments. F-major OK, rule 12 OK, knee 0/0. All four cut steps of 12 dB or more are marked. The upsell lays at −19.57 LUFS-I, p95 −17.35.
+- **Re-run:** `OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act2/track.py --render upsell --el`
+
+## v3.5 FINAL (2026-09-28): the ElevenLabs-timed lock
 
 **The final film is `show/reel/ep01-v35-el/` (the ElevenLabs cast, Mario on Kokoro).** `render/music-el.wav`: **202.000 s (4,848 frames), exact.** `v3lib` now defaults to the v3.5 locks, and `--el` is the film. The Kokoro v3.5 stem was not rendered.
 

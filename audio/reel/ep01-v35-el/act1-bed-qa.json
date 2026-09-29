@@ -116,27 +116,27 @@
   {
    "room": "bullpen",
    "from": 428.6,
-   "to": 436.69,
+   "to": 438.69,
    "lead": 0.4,
    "trail": 0.4
   },
   {
    "room": "dark-desk",
-   "from": 435.69,
-   "to": 443.61,
+   "from": 437.69,
+   "to": 445.61,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "bullpen",
-   "from": 442.61,
-   "to": 455.18,
+   "from": 444.61,
+   "to": 457.18,
    "lead": 0.6,
    "trail": 0.05
   },
   {
    "room (next chapter, leading)": "whitehouse",
-   "from": 455.12,
+   "from": 457.12,
    "lead": 1.0
   },
   {
@@ -278,7 +278,7 @@
   {
    "music": "none (a smug little sting: no score)",
    "from": 429.0,
-   "to": 432.0
+   "to": 434.0
   },
   {
    "pad": "THE PAUSE LETTER",
@@ -288,8 +288,8 @@
    ],
    "lufs": -33,
    "duck_db": 10,
-   "from": 432.0,
-   "to": 443.21
+   "from": 434.0,
+   "to": 445.21
   }
  ],
  "sfx": [
@@ -664,69 +664,74 @@
    423.269
   ],
   [
+   "v35-22.02",
+   "counter_roll",
+   432.2
+  ],
+  [
    "12.01",
    "ui_toast_pop",
-   432.0
+   434.0
   ],
   [
    "12.01",
    "paper_whip",
-   434.2
+   436.2
   ],
   [
    "12.02",
    "pen_scribble_short",
-   436.666
+   438.666
   ],
   [
    "12.02",
    "rubber_stamp_C",
-   437.282
+   439.282
   ],
   [
    "12.02",
    "rubber_stamp_C",
-   438.482
+   440.482
   ],
   [
    "v31-12.03",
    "synth:thud",
-   443.208
+   445.208
   ],
   [
    "v31-12.03",
    "synth:pen",
-   446.408
+   448.408
   ],
   [
    "12.04",
    "glass_nudge",
-   447.655
+   449.655
   ],
   [
    "12.04",
    "synth:pen",
-   447.275
+   449.275
   ],
   [
    "12.05",
    "synth:pen",
-   450.125
+   452.125
   ],
   [
    "12.05",
    "paper_curl",
-   451.325
+   453.325
   ],
   [
    "12.06",
    "synth:pen",
-   452.625
+   454.625
   ],
   [
    "12.06",
    "pen_tick_3",
-   454.125
+   456.125
   ]
  ],
  "sfx_missing": [],
@@ -739,12 +744,12 @@
   "v31-10.04: \"the egg timer's tick becomes the marker's squeak on the bullpen window (sc 18)\" = the next beat's (v35-18.01) marker_write_q, moved 0.6 s earlier, under this cut",
   "v35-19.04: \"the Build's chip line, under the Publish click\" = its room, leading the cut by 0.0 s",
   "11.04: \"a velvet rope's snap on the bullpen's wall TV (sc 22)\" leads the next cut (v35-22.01) by 0.4 s",
-  "v35-22.01: \"the pause letter's toast pop, a beat early (12.01)\" = the next beat's (12.01) ui_toast_pop, moved 0.4 s earlier, under this cut",
+  "v35-22.02: \"the pause letter's toast pop, a beat early (12.01)\" = the next beat's (12.01) ui_toast_pop, moved 0.4 s earlier, under this cut",
   "12.01: \"the monitor's toast pop\" = its own ui_toast_pop, moved 0.4 s earlier",
   "12.04: \"the pen's scratch, under Nole's last word\" = its own synth:pen, moved 0.5 s earlier"
  ],
- "seconds": 456.225,
- "chapter_seconds": 456.125,
+ "seconds": 458.225,
+ "chapter_seconds": 458.125,
  "lufs": -27.41,
  "peak_dbfs": -7.4,
  "built_by": "audio/ep01/v3-el/tools/el_bed.py"

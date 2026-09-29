@@ -13,6 +13,11 @@ final version: proposal-v35 with PLAN §8's choices) on top of the v3.4 timeline
                                                                             deviations, the plan checks)
       prints a per-segment report, the checks and the pacing tool's output, v3.4 / v3.5.
 
+v3.5b (SN 00000A step 2, lock-v35.md §10): the plans add Act One's usage flash (v35-22.02, 2.0 s), Act Two's racks
+(v35-30A.01-.02, 5.0 s), Act Three's launch party (v35-32A.01-.03, 10.0 s) and, in Act Four's S4.02, Neleh's re-recorded
+footnote-three line (v35-a4-0009) with the restored "Then we'll write step four ourselves." (a5-27-29); S4.02's clack is
+placed by the plan (after the new line), so its SOUND_AT entry is gone.
+
 What v3.5 adds (lock-v35.md §4):
   order      the plan's beat list is the v3.5 order (every v3.4 beat once; S4.07 after S4.13d, S5.03 before S5.02 are
              `moved`). A moved beat keeps its own room (the v3.4 rule gave it its new neighbour's): S5.03 is still his
@@ -92,7 +97,8 @@ CAPTION_SUB = {('act1', '9.10'): [("On the TV: GNIB's launch, a search box with 
                                    "from a search box.\"",
                                    "On the TV: THE NEW GNIB · POWERED BY NOPEAI, CHATGTP's two-dot face in GNIB's search box. Gerg, "
                                    "plainly: \"That's our model in your search engine. Are you really going after Elgoog with it?\"")]}
-PLATE_SKIP = {'CHATGTP · USERS:'}   # a counter, not a plate
+PLATE_SKIP = {'CHATGTP · USERS:',   # a counter, not a plate
+              'CHATGTP · GNIB · DRAB · CLOD · ATEM · LEAKED'}   # v3.5b: the usage flash's line labels, not a plate
 # an item's times the plan's picture sets: (seg, beat, text) -> ({key: value}, why)
 ONSCREEN_SET = {('act4', 'S1.03', 'DIRE · NOVIHS · DRUH'): ({'until': 2.9}, 'the three walk off before the ring draws round the four '
                                                                           '(2.92 s); the line they read under is cut'),
@@ -138,9 +144,9 @@ NEW_SOUNDS = {
     'S4.08': [{'name': 'DTMF', 'at': 0.0, 'gain': -26, 'dur': 0.6}],     # "four dial tones pre-lapped under the cut"
 }
 # post-build times for a sound the plan's caption places (seconds into the beat)
-SOUND_AT = {('act4', 'S4.02', 'landing_thunk'): (8.4, "the clack: the first phone goes over after Neleh's turn (it ends "
-                                                      "7.92 s), and nobody picks it up; 0.6 s held to the cut"),
-            ('act4', 'S6.06', 'freeze_hit_F'): (1.35, "the dead stop stays on Mada's label (moved for its read floor)")}
+# (v3.5b, SN 00000A: S4.02's clack is the plan's own now, after:v35-a4-0009+0.48, with the re-recorded line and the
+#  restored step-four line; its old fixed 8.4 s is gone)
+SOUND_AT = {('act4', 'S6.06', 'freeze_hit_F'): (1.35, "the dead stop stays on Mada's label (moved for its read floor)")}
 # new scenes' sequence markers (the reel's margin slate)
 NEW_SEQ = {
     'v35-10.01': {'id': '7A', 'side': '', 'place': 'the first weeks: phones everywhere', 'time': 'Dec 2022'},
@@ -156,6 +162,8 @@ NEW_SEQ = {
     'v35-43.01': {'sub': 'TPOOL', 'side': '', 'place': 'TPOOL (a memory, 240p)', 'time': '2005-08'},
     'S2.05': {'sub': 'the desk', 'side': '', 'place': 'his dark room', 'time': 'Sat Nov 18 · night'},
     'v35-49A.01': {'id': 'S4A', 'side': '', 'place': 'the bullpen at night: Alyi alone', 'time': 'Mon Nov 20 · ~2:06 AM'},
+    # v3.5b (SN 00000A step 2): the launch party (the flash and the racks continue their scenes' markers)
+    'v35-32A.01': {'id': '19A', 'side': '', 'place': "NopeAI's bullpen, evening: the launch party", 'time': 'Mon Sep 25, 2023'},
 }
 SEQ_MOVE = {'S5.02': 'S5.03'}   # the 2 AM scene opens on the hearts now
 SEQ_FIX = {'16': {'place': 'the regulate-me tour: the stamps, the lectern, the posts', 'time': 'May 18 - 26, 2023'},
@@ -165,6 +173,9 @@ CAST_ADD = {'act2': {'gerg': {'role': 'MAN WITH THE CLOUD BILL'}, 'alyi': {'role
                      'mada': {'role': 'MAN WITH THE SPINNER'},
                      'quiet-vote': {'name': 'THE QUIET VOTE', 'role': 'A CHAIR TURNED AWAY', 'blank': True}},
             'act4': {'auhsoj': {'name': 'AUHSOJ', 'role': 'INVESTOR ON THE CALL'}}}
+# v3.5b (SN 00000A step 2): the racks' staff (Act Two) and the launch party's staff and Alyi (Act Three)
+CAST_ADD['act2']['staff'] = {'name': 'STAFF', 'role': 'STAFF', 'known': True}
+CAST_ADD['act3'] = {'staff': {'name': 'STAFF', 'role': 'STAFF', 'known': True}, 'alyi': {'role': 'MAN WITH THE TOAST'}}
 # characters no longer drawn: (seg) -> {id: why}
 UNDRAWN = {'act3': {'deepfake-2': 'the second copy stays un-drawn (notes §3, 21.02: one copy)'},
            'act2': {'clone': "the Senate's cloned voice is cut (SN 00000, notes §3): the clone isn't drawn at the dais"}}

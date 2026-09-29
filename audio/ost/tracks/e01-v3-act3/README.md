@@ -4,7 +4,28 @@
 
 **The mood (v3-plan §6):** intimate, quiet, a little lonely, but warm, not dread. The Water Line (MM-01) plays warm, in D-flat lydian and A-flat major; the Orb's verdict is the open fifth; THE CLOCK comes in only at the act-out. Warm colours away from F are authorised for Ep1 v3. Nothing sits below C3 anywhere, because of the dark room's drone (F1 + C2).
 
-**v3.5 FINAL (2026-09-28; the current stem).** The final film is the ElevenLabs-timed v3.5 lock, `show/reel/ep01-v35-el/` (lock-v35.md, script-v35-notes.md). `v3clock.py` now defaults to v3.5 (`MRMAS_V3_LOCK=v34` …). `render/music-el.wav` is 136.417 s (3,274 frames), exact.
+**v3.5b (2026-09-28; the current stem): the launch party (SHOWRUNNER-NOTES 00000A, step 2).**
+- **The lock:** v35-32A.01–.03, the Sep 25, 2023 launch party, is 10.0 s between the hands runner and the Tidder post (lock-v35.md §10). That is exactly four bars of the grid, so every bar line before and after it is where it was. `render/music-el.wav` is **146.417 s (3,514 frames), exact.**
+- **Two cues now:** the Water Line (`e01-v3-act3`, the one performance) and the party (`e01-v35b-act3-party`, its own cue and window, 34.43 → 45.78 s).
+- **The Water Line cue is note for note the v3.5 one,** before the party and, 10.0 s later, from the post on (checked against the committed lock's build). Only its hand-off changed:
+  - the felt alone (E♭ A♭ D♭) now rings to the party's cut;
+  - it comes back on the laugh's settle (43.92 s, the bar line), the same chord;
+  - it holds under the glass match into the typed post, where the record's F4 is struck as before. So the party gives way to the post the way the runner's end did.
+- **The party:** a short warm lift in the show's voice.
+  - **In:** the band comes in on the first beat after the cut (35.17 s, a marked designed hit); the staff's cheer takes the cut 0.4 s early.
+  - **The trio:** the felt swings rootless voicings (D♭maj9 → A♭maj9), with brushes and the upright walking.
+  - **The Water Line, brightened** on the felt and vibes (F F F G F | C F): its second bar lands as he raises his glass and the staff cheer, with the chip on the nudge.
+  - **Alyi's Door on the flute** for the toast (A♭4 D♭5 | C5 G4), rhyming with 2018's. It never cadences: the G (the ♯4) is held over the laugh and the glass into the post.
+  - **The band thins on the laugh:** the laugh is the room's. There are no crowd sweeteners in the score.
+- **Measured:**
+  - **Levels:** −19.89 LUFS-I, −3.15 dBTP. The party lays at −18.83 LUFS-I (its sections −19.2, p95 −18.3).
+  - **Engine checks:** rule 12 and the spectral F-major OK in both cues; the knee 0.
+  - **Silence:** no unmarked silence, holes or fragments.
+  - **Cut steps:** every cut step of 12 dB or more sits on a mark or a designed hit (`v35check`).
+  - **Left as is:** the party's "2–6 kHz band −13.0 dB > −15" warning, which is the engine's under-dialogue guide. The party has no dialogue, and render 2 already took its brushes and vibes down with high shelves.
+- **Re-run:** `OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act3/track.py --render --variant el` renders both cues. This time the pressure governor paused it on and off, and it took about 16 minutes.
+
+**v3.5 FINAL (2026-09-28).** The final film is the ElevenLabs-timed v3.5 lock, `show/reel/ep01-v35-el/` (lock-v35.md, script-v35-notes.md). `v3clock.py` now defaults to v3.5 (`MRMAS_V3_LOCK=v34` …). `render/music-el.wav` was 136.417 s (3,274 frames), exact.
 - **The president's deepfake is restored (21.03-21.04): "a laugh with a chill."** v3.3's "which one's real?" (the D♭maj9 pre-lapped 0.25 s) and the Orb's second verdict come back. The verdict now lands on the last of **two** iris flicks (v3.5 cut the third).
   - **The laugh:** on the copy's pop (21.02's `tower_pop`), the felt strikes F4 and the chip copies it a sixteenth late and a hair flat. That's THE COPY's device, the echo too close, once, before the copy speaks.
   - **The chill:** under the copy's words ("And then the computers regulate themselves.") the glass holds the Ache (G4 + D♭5) over the G♭ pedal. It lets go under the real one's "When the hell did I say that?", which is the record: dry, the pedal only.

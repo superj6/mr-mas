@@ -46,13 +46,27 @@
   {
    "room": "rooftop",
    "from": 173.4,
-   "to": 211.07,
+   "to": 206.65,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "racks",
+   "from": 205.75,
+   "to": 211.35,
+   "lead": 0.5,
+   "trail": 0.1
+  },
+  {
+   "room": "rooftop",
+   "from": 210.65,
+   "to": 216.07,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room (next chapter, leading)": "dark",
-   "from": 210.82,
+   "from": 215.82,
    "lead": 0.6
   },
   {
@@ -124,7 +138,7 @@
    "lufs": -32,
    "duck_db": 10,
    "from": 174.0,
-   "to": 210.67
+   "to": 215.67
   }
  ],
  "sfx": [
@@ -342,6 +356,46 @@
    "17.10",
    "paper_curl",
    203.45
+  ],
+  [
+   "v35-30A.01",
+   "paper_tear",
+   206.6
+  ],
+  [
+   "v35-30A.02",
+   "folder_slide",
+   208.55
+  ],
+  [
+   "v35-30A.02",
+   "nameplate_off",
+   209.3
+  ],
+  [
+   "v35-30A.02",
+   "folder_slide",
+   209.45
+  ],
+  [
+   "v35-30A.02",
+   "nameplate_off",
+   210.15
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   210.45
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   210.65
+  ],
+  [
+   "v35-30A.02",
+   "ui_mute_blip",
+   210.85
   ]
  ],
  "sfx_missing": [],
@@ -350,10 +404,11 @@
   "14.01: \"a gavel's knock, under the last half second (the next scene's)\" = the next beat's (v35-27.00) landing_thunk, moved 0.5 s earlier, under this cut",
   "15.14: \"a marker's squeak and an old office fan, under \"equity\" (2019)\" leads the next cut (v35-28.01) by 0.8 s",
   "v35-28.05: \"the gavel's knock becomes a passport stamp (29.01)\" = the next beat's (v35-29.01) rubber_stamp_C, moved 0.2 s earlier, under this cut",
-  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s"
+  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s",
+  "v35-30A.01: \"the racks' server fans lead the cut\" = its room, leading the cut by 0.5 s"
  ],
- "seconds": 211.517,
- "chapter_seconds": 211.417,
- "lufs": -29.35,
+ "seconds": 216.517,
+ "chapter_seconds": 216.417,
+ "lufs": -29.39,
  "peak_dbfs": -3.79
 }

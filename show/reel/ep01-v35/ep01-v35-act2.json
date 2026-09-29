@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3.5 BASE LOCK (Kokoro timing) · the v2/v5/v3/v3.1/v3.2/v3.4 takes + the v3.5 takes · temp bed",
  "logline": "The v3.5 base lock of act2: the v3.5 beat plan applied to ep01-v34-act2.json (script draft 8.4, the final version).",
  "dateSpan": "May 4 - 30, 2023 (with Mar 2019)",
- "runtimeMin": 3.52,
+ "runtimeMin": 3.61,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -80,6 +80,11 @@
    "name": "THE QUIET VOTE",
    "role": "A CHAIR TURNED AWAY",
    "blank": true
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
   }
  },
  "_source": {
@@ -97,7 +102,7 @@
   "builder": "audio/reel/ep01-v35/build_timeline.py",
   "bed": "audio/reel/ep01-v35/bed.py -> audio/reel/ep01-v35/act2-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock-v35.md",
-  "seconds": 211.435
+  "seconds": 216.435
  },
  "beats": [
   {
@@ -4586,7 +4591,9 @@
     {
      "name": "synth:bell",
      "at": 0.62,
-     "gain": -18
+     "gain": -18,
+     "dur": 16.2,
+     "note": "the register's bell decays across the racks (v35-30A) to 17.13's black, as before"
     }
    ],
    "cues": [
@@ -4716,6 +4723,123 @@
     "pace": "quick",
     "camera": "INSERT · the pen in Mario's hand",
     "picture": "Several hands, each with an order; Mario's nearest. Mas's hand empty (v3.3 P7's ruling holds: on the record his compute came through the landlord)."
+   }
+  },
+  {
+   "id": "v35-30A.01",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT → MATCH · the packing slip on an INVIDIA crate",
+   "side": "",
+   "room": "racks",
+   "chars": [],
+   "caption": "MATCH: the purchase order in Mario's hand becomes, in the same place in frame, a packing slip on a crate stencilled INVIDIA: AI CHIPS · QTY: MORE. A box cutter slits the tape; a gloved hand lifts a new board out of its silver sleeve, the INVIDIA logo on its shroud.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "INVIDIA",
+     "at": 0.2,
+     "until": null
+    },
+    {
+     "text": "AI CHIPS · QTY: MORE",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v3.5): THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it"
+   ],
+   "sounds": [
+    {
+     "name": "paper_tear",
+     "at": 0.35,
+     "gain": -30,
+     "note": "the cutter through the slip's tape"
+    }
+   ],
+   "passes": {
+    "scene": "30A",
+    "mode": "QUICK-CUT",
+    "pace": "quick",
+    "camera": "INSERT → MATCH · the packing slip on an INVIDIA crate",
+    "picture": "The slip is the order's own form (same size, same place, same type), now taped to the crate; the board's shroud carries the logo planted in Act One (7.02, 13.01). A data hall's cold aisle behind, soft; no company named on its walls. Hands only."
+   }
+  },
+  {
+   "id": "v35-30A.02",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM → WIDE · the racks: staff slide the boards home",
+   "side": "",
+   "room": "racks",
+   "chars": [
+    "staff"
+   ],
+   "caption": "A row of racks in the cold aisle. Two staff in lanyards slide the new boards home, one after the other; each latch snaps shut. The rack's LEDs come up in a column, climbing to the top of the frame. One of them pats the rack's door, pleased.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.0,
+   "fx": [],
+   "cues": [
+    "music (v3.5): THE ROOFTOP · the Upsell's drive carries the racks (the walk, the GPU clock, phrase 3 climbing on); the fans under it"
+   ],
+   "sounds": [
+    {
+     "name": "folder_slide",
+     "at": 0.3,
+     "gain": -24,
+     "note": "board 1 sliding home in its slot"
+    },
+    {
+     "name": "nameplate_off",
+     "at": 1.05,
+     "gain": -22,
+     "note": "board 1's latch snapping shut"
+    },
+    {
+     "name": "folder_slide",
+     "at": 1.2,
+     "gain": -25,
+     "note": "board 2 sliding home"
+    },
+    {
+     "name": "nameplate_off",
+     "at": 1.9,
+     "gain": -22,
+     "note": "board 2's latch"
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.2,
+     "gain": -30,
+     "note": "the LEDs coming up, a step at a time (the sound pass may use the dark room's LED ticks)"
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.4,
+     "gain": -30
+    },
+    {
+     "name": "ui_mute_blip",
+     "at": 2.6,
+     "gain": -30
+    }
+   ],
+   "passes": {
+    "scene": "30A",
+    "mode": "QUICK-CUT",
+    "pace": "quick",
+    "camera": "MEDIUM → WIDE · the racks: staff slide the boards home",
+    "picture": "Backs and hands, lanyards, sleeves rolled; nobody named. Board 1 slides at 0.3 s and latches at 1.05 s; board 2 slides at 1.2 s and latches at 1.9 s; the LEDs step up from 2.2 s (0.2 s a step), the column climbing off the top of the frame on the cut: it becomes the price's line lifting off in 17.11 (the same upward motion)."
    }
   },
   {

@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3.5 BASE LOCK (Kokoro timing) · the v2/v5/v3/v3.1/v3.2/v3.4 takes + the v3.5 takes · temp bed",
  "logline": "The v3.5 base lock of act3: the v3.5 beat plan applied to ep01-v34-act3.json (script draft 8.4, the final version).",
  "dateSpan": "Jul 24 - Nov 17, 2023",
- "runtimeMin": 2.32,
+ "runtimeMin": 2.49,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -61,6 +61,14 @@
   "panel-host": {
    "name": "PANEL HOST",
    "known": true
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "alyi": {
+   "role": "MAN WITH THE TOAST"
   }
  },
  "_source": {
@@ -77,7 +85,7 @@
   "builder": "audio/reel/ep01-v35/build_timeline.py",
   "bed": "audio/reel/ep01-v35/bed.py -> audio/reel/ep01-v35/act3-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock-v35.md",
-  "seconds": 139.119
+  "seconds": 149.119
  },
  "beats": [
   {
@@ -859,6 +867,150 @@
    }
   },
   {
+   "id": "v35-32A.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · NopeAI's bullpen, evening: the launch party",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "staff",
+    "mas",
+    "alyi"
+   ],
+   "caption": "The rail rolls on to SEP 25 and the cheer takes the cut: NopeAI's bullpen in the evening, full of staff with cups, a banner over the window: CHATGTP CAN NOW SEE, HEAR AND SPEAK. On the glass behind it, Act One's users line, off the top. Mas and Alyi at the centre of it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: SEP 25, 2023",
+     "at": 0.2,
+     "until": null
+    },
+    {
+     "text": "CHATGTP CAN NOW SEE, HEAR AND SPEAK",
+     "at": 0.2,
+     "until": null
+    }
+   ],
+   "reelDur": 3.75,
+   "fx": [],
+   "cues": [
+    "music (v3.5): ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did"
+   ],
+   "seq": {
+    "id": "19A",
+    "side": "",
+    "place": "NopeAI's bullpen, evening: the launch party",
+    "time": "Mon Sep 25, 2023"
+   },
+   "sounds": [
+    {
+     "name": "synth:cheer",
+     "at": 0.0,
+     "gain": -26,
+     "dur": 1.4,
+     "note": "the staff's cheer takes the cut (the J-cut moves it 0.4 s under the runner)"
+    }
+   ],
+   "passes": {
+    "scene": "32A",
+    "mode": "INSERT (wordless)",
+    "pace": "normal",
+    "camera": "WIDE · NopeAI's bullpen, evening: the launch party",
+    "picture": "Warm light, the bullpen crowded (staff as figures, nobody named); the banner in the launch post's own words; the users line on the window (sc 18's). Mas with his glass; Alyi beside him, in person, lit."
+   }
+  },
+  {
+   "id": "v35-32A.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · the staff cheer as Mas raises his glass",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "MAS raises his glass; the staff around him raise their cups and cheer. Two cups clink near the lens.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "music (v3.5): ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did"
+   ],
+   "sounds": [
+    {
+     "name": "synth:cheer",
+     "at": 0.3,
+     "gain": -24,
+     "dur": 1.6
+    },
+    {
+     "name": "glass_nudge",
+     "at": 0.9,
+     "gain": -24,
+     "note": "two cups clink"
+    },
+    {
+     "name": "glass_nudge",
+     "at": 1.05,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "32A",
+    "mode": "INSERT (wordless)",
+    "pace": "normal",
+    "camera": "MEDIUM · the staff cheer as Mas raises his glass",
+    "picture": "His glass (the one he carries everywhere) up at 0.3 s; the cheer on it; his one-pixel smile. The clinks at 0.9 and 1.05 s."
+   }
+  },
+  {
+   "id": "v35-32A.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · Mas and Alyi: the toast, and a shared laugh",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "mas",
+    "alyi"
+   ],
+   "caption": "ALYI lifts his cup to Mas's glass: they clink. Alyi says something we don't hear; they both laugh, Alyi's hand on Mas's shoulder. The laugh settles; Mas lowers his glass.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.75,
+   "fx": [],
+   "cues": [
+    "music (v3.5): ACT THREE · the party: a short warm lift in the show's voice (the felt swings over brushes and the upright; Alyi's Door on the flute, warm, never cadencing); it gives way to the felt alone on his glass, into the post, as the runner's end did"
+   ],
+   "sounds": [
+    {
+     "name": "glass_nudge",
+     "at": 0.6,
+     "gain": -22,
+     "note": "the toast: Alyi's cup on Mas's glass"
+    }
+   ],
+   "passes": {
+    "scene": "32A",
+    "mode": "INSERT (wordless)",
+    "pace": "normal",
+    "camera": "2S · Mas and Alyi: the toast, and a shared laugh",
+    "picture": "Held two-shot, warm. The clink at 0.6 s; the laugh from 1.2 s (shoulders, three held drawings; the sound pass lays a soft laugh in the room, no voice takes); Mas's glass comes down at 3.2 s, and the cut matches it to the same glass on his desk at home (20.01)."
+   }
+  },
+  {
    "id": "20.01",
    "act": "ACT THREE",
    "kind": "scene",
@@ -911,6 +1063,12 @@
    ],
    "sounds": [
     {
+     "name": "glass_set_stone",
+     "at": 0.05,
+     "gain": -28,
+     "note": "his glass set down on the desk: the party's glass lands at home (the match)"
+    },
+    {
      "name": "synth:keys",
      "at": 1.483,
      "gain": -22,
@@ -922,7 +1080,7 @@
     "mode": "CONVERSATION (a call)",
     "pace": "quick",
     "camera": "OTS · over Mas's shoulder onto the monitor (TIDDER)",
-    "picture": "unchanged (v3.4)"
+    "picture": "v3.5b: his glass on the desk in the near foreground, where the party's glass was in frame (v35-32A.03's out: a matched object); set down on the cut."
    }
   },
   {

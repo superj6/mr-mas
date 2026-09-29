@@ -28,6 +28,38 @@
 
 ---
 
+## AE. Phase 12: Neleh's re-recorded line, step four restored, and the v3.5b re-lock (2026-09-28)
+
+**The brief (SHOWRUNNER-NOTES 00000A):**
+- Neleh's footnote-three line becomes "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight." at its natural length.
+- "Then we'll write step four ourselves." comes back from v3.4, right after it (S4.02).
+- The same re-lock carries the three added scenes (lock-v35.md §10).
+
+| Id | Line | Take | Voiced | Measured |
+|---|---|---|---|---|
+| **v35-a4-0009** (replaces a5-27-22) | They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight. | **New:** Neleh's A voice (Alexandra, speed 0.95, her other takes' settings), one generation, `ep01-v35/act4/wav/v35-a4-0009__neleh-A.wav` | 6.65 s (Kokoro 7.47 s) | −16 LUFS, −2.45 dBTP, 193.5 Hz, ASR verbatim (recall 1.0), no clipped tail |
+| **a5-27-29** (restored) | Then we'll write step four ourselves. | **Reused:** v3.4's EL take, byte-identical to `ep01-v34/act4/wav/a5-27-29__neleh-A.wav` (nothing sent) | 1.93 s | ASR verbatim |
+
+- **Characters:** 118 sent in one call (the cost header read 52). The Kokoro take for the base lock is fastrec's (af_aoede, speed 0.96, ASR recall 1.0; `audio/ep01/v35/act4/`).
+- **The Act Four takes file** (`ep01-v35/act4/lines-A.json`) gains the two rows and loses a5-27-22. Every other row is unchanged.
+- **The EL-timed lock:**
+  - `el_lock.py --lock v35 act2 act3 act4` rebuilt those acts, putting the segments before the flags.
+  - **Trap:** in `el_lock.py --lock v35 --fixed S7.13 act2 …`, `--fixed` swallows the segment names. The run then rebuilds all six segments, Act One included, and drops the two hand-placed lines.
+  - **Act One is spliced instead** (§AD's lines kept):
+    - The committed EL Act One is kept beat for beat.
+    - Only the new usage flash (v35-22.02) and v35-22.01's cue string come from `el_lock.py`'s rebuild.
+    - Every other beat was checked identical to the rebuild, apart from v35-19.03 and v31-12.03, which carry the two lines.
+  - The manifest and `el-lock-report.json` were rebuilt the same way, with Act One built to scratch.
+- **Verified afterwards:**
+  - v35-vo-06 sits in v35-19.03 at 0.20 s, with Act One frame 9221 unchanged.
+  - v35-vo-05 sits in v31-12.03 at 2.60 s, now Act One frame 10747 (+48 f, behind the flash).
+  - v35-vo-02 stays out.
+- **The picture locks** (`assembly/el-v35/`) were rebuilt:
+  - `el_takes.py --lock v35 act4`, then `el_lock.sh` per segment (act1–act4 and the tag, whose episode-in moved).
+  - Each changed act's only failed check is the length against the old EL mix. That is expected until the mix pass renders the new lengths.
+
+---
+
 ## AD. Phase 11: two new V.O. lines for the final film (2026-09-28)
 
 **The brief (the showrunner, through the coordinator):** two new Mas V.O. lines in Act One, inside their beats, with no beat length changed. Jeremy at the V.O. settings (speed 0.85, stability 0.65): close, dry, unhurried; the second line a quiet admission, not a boast.

@@ -2,7 +2,19 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
-## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+## v3.5b (current, 2026-09-28): the usage flash (SHOWRUNNER-NOTES 00000A, step 2)
+
+**The lock:** `show/reel/ep01-v35-el/` with v35-22.02, the usage flash: 2.0 s between the waitlist and the pause letter (lock-v35.md §10). `render/music-el.wav`: **458.125 s (10,995 frames), exact.** The cues re-rendered were `waitlist`, `pause` and `threat`. Every other cue is the v3.5 render, laid where it was.
+
+| s | Cue | What plays |
+|---|---|---|
+| 429.9 → 436.5 | `waitlist` | The smug sting on the rope's snap, as before. **Over the flash (430.9 → 432.9):** the sting's A♭maj9 rings on, and the chip climbs with the five usage lines in the Build's own colour: 16ths up A♭ major (A♭4 → G5). It lands the tag's A♭5, with a pizz E♭, on the letter's toast (12.01's pop, 0.4 s before the cut). The sting then rings out under the header and gives way on the push, as before. |
+| 436.2 → 458.1 | `pause`, `threat` | Unchanged, 2.0 s later: the THUD stops the chill, then no score until the THREAT on the pen's lift. |
+
+- **Measured (`v35check`):** −20.66 LUFS-I, −3.15 dBTP. No unmarked silence, holes or fragments. F-major OK, rule 12 OK, knee 0/0. All six cut steps of 12 dB or more are marked.
+- **Re-run:** `OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act1/track.py --render waitlist pause threat --el`
+
+## v3.5 FINAL (2026-09-28): the ElevenLabs-timed lock
 
 **The final film is `show/reel/ep01-v35-el/` (the ElevenLabs cast, Mario on Kokoro).** `render/music-el.wav`: **456.125 s (10,947 frames), exact.** `v3lib.kokoro_path()` and `el_path()` now point at the v3.5 locks; `--el` is the film. The Kokoro v3.5 stem was not rendered. Act One grew by about 1:53 (the first weeks, 3 AM, JUN 2018, the window, the vision post, the waitlist). Five new cues are built only when the lock has their beats (`CUES_V35`), so the older locks still refit.
 

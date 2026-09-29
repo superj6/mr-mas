@@ -2033,8 +2033,28 @@ def cue_waitlist(tl):
     c.pch('felt', ['Ab2', 'Eb3', 'C4', 'G4'], snap + Q / 2 + 0.01, push - snap - Q / 2, 0.16, roll=0.012)
     c.rebow('vla', 'Eb3', snap + 0.4, push + 0.2, 0.1, first_att=1.0, last_rel=0.4, art='sus', lp=1300)
     c.mark(snap, 'THE WAITLIST: the rope snaps: the Build\'s tag "shipped" on the chip, a pizz A-flat (a smug sting)')
-    c.mark(tl.B('12.01'), 'the sting rings out under the pause letter\'s toast', hit=False)
-    c.section('the waitlist: the smug sting, ringing under the toast', snap, push)
+    if tl.has('v35-22.02'):
+        # v3.5b (SN 00000A step 2): THE USAGE FLASH before the letter (2.0 s). The sting's felt chord rings on under it
+        # (the same A-flat maj9), and the chip climbs with the five lines in the Build's own colour: 16ths up A-flat
+        # major, landing the tag's A-flat5 on the letter's toast (12.01's pop, a beat early: 0.4 s before the cut)
+        fl0 = tl.B('v35-22.02')
+        land = tl.B('12.01') - 0.4
+        run = ['Ab4', 'Bb4', 'C5', 'Db5', 'Eb5', 'F5', 'G5']
+        for i, p in enumerate(run):
+            t = land - (len(run) - i) * S16
+            c.n('lead', p, t, S16 * 0.62, 0.2 + 0.015 * i, True, duty=0.25, att=0.002, dec=0.09, sus=0.4, rel=0.035)
+        c.n('lead', 'Ab5', land, 0.5, 0.3, True, duty=0.25, att=0.002, dec=0.2, sus=0.35, rel=0.12)
+        c.n('vc_pz', 'Eb3', land, 0.4, 0.36, art='pizz')
+        c.mark(land - len(run) * S16, 'v3.5b THE USAGE FLASH: the chip climbs with the lines (16ths up A-flat major), the '
+                                      'sting\'s chord ringing on', hit=False)
+        c.mark(land, 'the climb lands on A-flat5 (the tag) under the letter\'s toast')
+        c.mark(tl.B('12.01'), 'the sting rings out under the pause letter\'s header', hit=False)
+        c.section('the waitlist: the smug sting', snap, fl0)
+        c.section('v3.5b the usage flash: the sting rings on; the chip climbs with the lines, landing under the toast',
+                  fl0, push)
+    else:
+        c.mark(tl.B('12.01'), 'the sting rings out under the pause letter\'s toast', hit=False)
+        c.section('the waitlist: the smug sting, ringing under the toast', snap, push)
     meta = dict(id='waitlist', title='Elgoog\'s Waitlist (Ep1 v3.5, Act One sc 22)', mm='(sting)', usage='BI',
                 family='the Build\'s tag, a pizz, the felt', tone='a smug little laugh: they\'re ahead',
                 scenes=['Ep1 v3.5 Act One sc 22'], motifs=['the Build\'s tag "shipped" (E-flat5 -> A-flat5)'],

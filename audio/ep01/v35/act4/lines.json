@@ -2357,5 +2357,609 @@
   "breaths": [],
   "opened_pauses": [],
   "alt_takes": []
+ },
+ {
+  "id": "v35-a4-0009",
+  "scene": "47",
+  "speaker": "NELEH",
+  "speaker_slug": "neleh",
+  "text": "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.",
+  "spoken_as": "They all want him back.{0.35} As if it wasn't allowed.{0.30} It was.{0.45} The charter, footnote three.{0.35} I've read it four times tonight.",
+  "delivery": "After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly.",
+  "tag": "[INVENTED · SN 00000A (2026-09-28): the phones' pressure is about bringing him back; the charter and its footnote stay the board's grounds]",
+  "mode": "on-mic",
+  "voiced_in_cut": true,
+  "on_camera": "on",
+  "kind": "dialogue",
+  "side": "none",
+  "pov": null,
+  "shot": "S4.02",
+  "shot_id": "S4.02",
+  "cue": null,
+  "lip_sync": true,
+  "status": "fast",
+  "device": null,
+  "room": null,
+  "est_s": null,
+  "file": "audio/ep01/v35/act4/wav/v35-a4-0009.wav",
+  "mp3": null,
+  "duration_s": 8.455,
+  "frames_24": 203,
+  "voiced_span_s": 7.47,
+  "pace": {
+   "words": 22,
+   "wpm": 176.7,
+   "speed": 0.96,
+   "tsm": 1.0,
+   "intended": {
+    "speed": 0.96,
+    "speed_band": [
+     0.92,
+     1.0
+    ],
+    "articulation_guide_sps": [
+     4.2,
+     4.8
+    ],
+    "turn_wpm_guide": [
+     150,
+     170
+    ],
+    "intent": "After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly."
+   },
+   "measured": {
+    "wpm": 176.7,
+    "articulation_sps": 4.5,
+    "syllables": 27,
+    "span_s": 7.47,
+    "pauses_s": [
+     0.35,
+     0.31,
+     0.47,
+     0.06,
+     0.34
+    ]
+   },
+   "longest_internal_gap_s": 0.47,
+   "audible_in_s": 0.51,
+   "audible_out_s": 7.98
+  },
+  "placement": {
+   "gap_before_s": null,
+   "follows": "picture"
+  },
+  "take": "s1",
+  "takes_tried": 1,
+  "pick_reason": "fast: one take (seed 1, plan speed)",
+  "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+  "voiceId": "af_aoede",
+  "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+  "processing": [
+   "HPF 90 Hz",
+   "pitch -2 st",
+   "peak -1.5 dB @300 Hz Q1.0",
+   "peak +1.5 dB @4500 Hz Q0.9",
+   "comp 2.5:1 @-22 dB (6/100 ms)",
+   "Kokoro speed 0.960 (the plan speed; neleh band 0.92-1.00); one whole read; no time-stretch, no carrier, no splice",
+   "pause after 'back': Kokoro 0.05 s -> 0.35 s (intended 0.35; +0.30 s of room tone at the quietest 5 ms)",
+   "pause after 'allowed': Kokoro 0.11 s -> 0.32 s (intended 0.30; +0.19 s of room tone at the quietest 5 ms)",
+   "pause after 'was': Kokoro 0.17 s -> 0.48 s (intended 0.45; +0.28 s of room tone at the quietest 5 ms)",
+   "pause after 'three': Kokoro 0.02 s -> 0.35 s (intended 0.35; +0.33 s of room tone at the quietest 5 ms)",
+   "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "no inhale (fastrec default; --breaths adds them)",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "O"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "E"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "A"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "A"
+   },
+   {
+    "t": 1.458,
+    "f": 35,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "rest"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "A"
+   },
+   {
+    "t": 2.042,
+    "f": 49,
+    "shape": "E"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "O"
+   },
+   {
+    "t": 2.333,
+    "f": 56,
+    "shape": "A"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "E"
+   },
+   {
+    "t": 2.833,
+    "f": 68,
+    "shape": "A"
+   },
+   {
+    "t": 3.042,
+    "f": 73,
+    "shape": "E"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "rest"
+   },
+   {
+    "t": 3.458,
+    "f": 83,
+    "shape": "E"
+   },
+   {
+    "t": 3.583,
+    "f": 86,
+    "shape": "O"
+   },
+   {
+    "t": 3.708,
+    "f": 89,
+    "shape": "A"
+   },
+   {
+    "t": 3.958,
+    "f": 95,
+    "shape": "E"
+   },
+   {
+    "t": 4.083,
+    "f": 98,
+    "shape": "rest"
+   },
+   {
+    "t": 4.5,
+    "f": 108,
+    "shape": "E"
+   },
+   {
+    "t": 4.625,
+    "f": 111,
+    "shape": "A"
+   },
+   {
+    "t": 4.75,
+    "f": 114,
+    "shape": "E"
+   },
+   {
+    "t": 5.125,
+    "f": 123,
+    "shape": "O"
+   },
+   {
+    "t": 5.208,
+    "f": 125,
+    "shape": "E"
+   },
+   {
+    "t": 5.333,
+    "f": 128,
+    "shape": "O"
+   },
+   {
+    "t": 5.458,
+    "f": 131,
+    "shape": "E"
+   },
+   {
+    "t": 5.708,
+    "f": 137,
+    "shape": "A"
+   },
+   {
+    "t": 5.875,
+    "f": 141,
+    "shape": "rest"
+   },
+   {
+    "t": 6.333,
+    "f": 152,
+    "shape": "A"
+   },
+   {
+    "t": 6.417,
+    "f": 154,
+    "shape": "E"
+   },
+   {
+    "t": 6.542,
+    "f": 157,
+    "shape": "A"
+   },
+   {
+    "t": 6.625,
+    "f": 159,
+    "shape": "E"
+   },
+   {
+    "t": 6.875,
+    "f": 165,
+    "shape": "O"
+   },
+   {
+    "t": 7.042,
+    "f": 169,
+    "shape": "E"
+   },
+   {
+    "t": 7.167,
+    "f": 172,
+    "shape": "A"
+   },
+   {
+    "t": 7.333,
+    "f": 176,
+    "shape": "M"
+   },
+   {
+    "t": 7.417,
+    "f": 178,
+    "shape": "E"
+   },
+   {
+    "t": 7.75,
+    "f": 186,
+    "shape": "A"
+   },
+   {
+    "t": 8.0,
+    "f": 192,
+    "shape": "rest"
+   }
+  ],
+  "words": [
+   {
+    "w": "They",
+    "t0": 0.48,
+    "t1": 0.63,
+    "f0": 12,
+    "f1": 15,
+    "ph": "ðˌA"
+   },
+   {
+    "w": "all",
+    "t0": 0.63,
+    "t1": 0.83,
+    "f0": 15,
+    "f1": 20,
+    "ph": "ˈɔl"
+   },
+   {
+    "w": "want",
+    "t0": 0.83,
+    "t1": 1.018,
+    "f0": 20,
+    "f1": 24,
+    "ph": "wˈɑnt"
+   },
+   {
+    "w": "him",
+    "t0": 1.018,
+    "t1": 1.155,
+    "f0": 24,
+    "f1": 28,
+    "ph": "hˌɪm"
+   },
+   {
+    "w": "back",
+    "t0": 1.155,
+    "t1": 1.53,
+    "f0": 28,
+    "f1": 37,
+    "ph": "bˈæk"
+   },
+   {
+    "w": "As",
+    "t0": 1.905,
+    "t1": 2.08,
+    "f0": 46,
+    "f1": 50,
+    "ph": "ˌæz"
+   },
+   {
+    "w": "if",
+    "t0": 2.08,
+    "t1": 2.192,
+    "f0": 50,
+    "f1": 53,
+    "ph": "ɪf"
+   },
+   {
+    "w": "it",
+    "t0": 2.192,
+    "t1": 2.28,
+    "f0": 53,
+    "f1": 55,
+    "ph": "ɪt"
+   },
+   {
+    "w": "wasn't",
+    "t0": 2.28,
+    "t1": 2.58,
+    "f0": 55,
+    "f1": 62,
+    "ph": "wˈʌzᵊnt"
+   },
+   {
+    "w": "allowed",
+    "t0": 2.58,
+    "t1": 3.13,
+    "f0": 62,
+    "f1": 75,
+    "ph": "əlˈWd"
+   },
+   {
+    "w": "It",
+    "t0": 3.395,
+    "t1": 3.57,
+    "f0": 81,
+    "f1": 86,
+    "ph": "ˌɪt"
+   },
+   {
+    "w": "was",
+    "t0": 3.57,
+    "t1": 4.08,
+    "f0": 86,
+    "f1": 98,
+    "ph": "wʌz"
+   },
+   {
+    "w": "The",
+    "t0": 4.455,
+    "t1": 4.592,
+    "f0": 107,
+    "f1": 110,
+    "ph": "ðə"
+   },
+   {
+    "w": "charter",
+    "t0": 4.592,
+    "t1": 4.98,
+    "f0": 110,
+    "f1": 120,
+    "ph": "ʧˈɑɹTəɹ"
+   },
+   {
+    "w": "footnote",
+    "t0": 5.068,
+    "t1": 5.51,
+    "f0": 122,
+    "f1": 132,
+    "ph": "fˈʊtnˌOt"
+   },
+   {
+    "w": "three",
+    "t0": 5.518,
+    "t1": 5.88,
+    "f0": 132,
+    "f1": 141,
+    "ph": "θɹˈi"
+   },
+   {
+    "w": "I've",
+    "t0": 6.285,
+    "t1": 6.485,
+    "f0": 151,
+    "f1": 156,
+    "ph": "ˌIv"
+   },
+   {
+    "w": "read",
+    "t0": 6.485,
+    "t1": 6.648,
+    "f0": 156,
+    "f1": 160,
+    "ph": "ɹˈɛd"
+   },
+   {
+    "w": "it",
+    "t0": 6.648,
+    "t1": 6.798,
+    "f0": 160,
+    "f1": 163,
+    "ph": "ɪt"
+   },
+   {
+    "w": "four",
+    "t0": 6.798,
+    "t1": 7.11,
+    "f0": 163,
+    "f1": 171,
+    "ph": "fˈɔɹ"
+   },
+   {
+    "w": "times",
+    "t0": 7.11,
+    "t1": 7.485,
+    "f0": 171,
+    "f1": 180,
+    "ph": "tˈImz"
+   },
+   {
+    "w": "tonight",
+    "t0": 7.485,
+    "t1": 8.0,
+    "f0": 180,
+    "f1": 192,
+    "ph": "tənˈIt"
+   }
+  ],
+  "qa": {
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.8,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "first_sound_s": 0.51,
+   "median_f0_hz": 167.0,
+   "f0_range_st": 8.9,
+   "f0_method": "YIN (fast)",
+   "final_move_st": null,
+   "asr": "They all want him back, as if it wasn't allowed. It was. The Charter Footnote 3, I've read it four times tonight.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "logprob": -0.23,
+   "align_median_s": null,
+   "utmos_dry": null,
+   "utmos_plain_read": null,
+   "utmos_vs_plain": null,
+   "utmos_v4_same_words": null,
+   "utmos_delivered_as_is": null,
+   "speech_head_s": 0.51,
+   "speech_tail_s": 0.45,
+   "rise_ms": 35.0,
+   "decay_ms": 135.0,
+   "decay_to_60_s": 0.025
+  },
+  "fast": {
+   "key": "7180b18a730f646e",
+   "tool": "fastrec 1.2 (2026-09-26)",
+   "shard": 0,
+   "wall_s": 5.8,
+   "takes": 1,
+   "settings": {
+    "asr": true,
+    "asr_beam": 1,
+    "asr_batch_s": 24.0,
+    "asr_align": false,
+    "utmos": false,
+    "prosody": false,
+    "breaths": false,
+    "threads": 3
+   },
+   "asr": {
+    "packed_with": 0,
+    "share_s": 1.95,
+    "rechecked_alone": false
+   }
+  },
+  "breaths": [],
+  "opened_pauses": [
+   {
+    "after_word": 5,
+    "word": "back",
+    "tts_s": 0.05,
+    "target_s": 0.35,
+    "point_s": 1.155,
+    "joined_speech": false,
+    "dip_db": -69.4,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.355,
+    "opened_s": 0.3
+   },
+   {
+    "after_word": 10,
+    "word": "allowed",
+    "tts_s": 0.11,
+    "target_s": 0.3,
+    "point_s": 2.78,
+    "joined_speech": false,
+    "dip_db": -72.5,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.32,
+    "opened_s": 0.19
+   },
+   {
+    "after_word": 12,
+    "word": "was",
+    "tts_s": 0.165,
+    "target_s": 0.45,
+    "point_s": 3.67,
+    "joined_speech": false,
+    "dip_db": -64.1,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.48,
+    "opened_s": 0.285
+   },
+   {
+    "after_word": 16,
+    "word": "three",
+    "tts_s": 0.02,
+    "target_s": 0.35,
+    "point_s": 5.51,
+    "joined_speech": false,
+    "dip_db": -50.3,
+    "breath": false,
+    "crossfade_ms": [
+     8,
+     8
+    ],
+    "final_s": 0.35,
+    "opened_s": 0.33
+   }
+  ],
+  "alt_takes": []
  }
 ]

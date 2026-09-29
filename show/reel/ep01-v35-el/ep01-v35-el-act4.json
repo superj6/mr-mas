@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3.5 BASE LOCK (Kokoro timing) · the v2/v5/v3/v3.1/v3.2/v3.4 takes + the v3.5 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
  "logline": "The v3.5 base lock of act4: the v3.5 beat plan applied to ep01-v34-act4.json (script draft 8.4, the final version).",
  "dateSpan": "Nov 17 - 29, 2023",
- "runtimeMin": 8.25,
+ "runtimeMin": 8.3,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -78,7 +78,7 @@
   "builder": "audio/reel/ep01-v35/build_timeline.py",
   "bed": "audio/reel/ep01-v35/bed.py -> audio/reel/ep01-v35/act4-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock-v35.md",
-  "seconds": 494.725,
+  "seconds": 498.025,
   "kokoro_lock": "show/reel/ep01-v35/ep01-v35-act4.json",
   "el_builder": "audio/ep01/v3-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep01/production/full-v3/voices-el.md"
@@ -4066,159 +4066,243 @@
      "pose": "sit"
     }
    ],
-   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up.",
+   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
    "lines": [
     {
-     "id": "a5-27-22",
+     "id": "v35-a4-0009",
      "who": "neleh",
-     "text": "They're all asking whether it was allowed. It was. The charter, footnote three. I've read it four times tonight.",
+     "text": "They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.",
      "t": 1.25,
-     "dur": 6.23,
-     "audio": "audio/ep01/v3-el/ep01-v35/act4/wav/a5-27-22__neleh-A.wav",
+     "dur": 6.65,
+     "audio": "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0009__neleh-A.wav",
      "in": 0.35,
      "words": [
       [
-       "They're",
+       "They",
        0.0,
-       0.279
+       0.244
       ],
       [
        "all",
-       0.302,
-       0.43
+       0.325,
+       0.569
       ],
       [
-       "asking",
-       0.511,
-       0.894
+       "want",
+       0.639,
+       0.801
       ],
       [
-       "whether",
-       0.94,
-       1.173
+       "him",
+       0.836,
+       0.917
+      ],
+      [
+       "back",
+       0.964,
+       1.219
+      ],
+      [
+       "As",
+       1.416,
+       1.591
+      ],
+      [
+       "if",
+       1.637,
+       1.718
       ],
       [
        "it",
-       1.231,
-       1.3
+       1.776,
+       1.834
       ],
       [
-       "was",
-       1.335,
-       1.44
+       "wasn't",
+       1.881,
+       2.148
       ],
       [
        "allowed",
-       1.498,
-       1.846
+       2.183,
+       2.566
       ],
       [
        "It",
-       2.067,
-       2.183
+       2.821,
+       2.949
       ],
       [
        "was",
-       2.229,
-       2.531
+       3.007,
+       3.367
       ],
       [
        "The",
-       3.03,
-       3.158
+       3.866,
+       3.982
       ],
       [
        "charter",
-       3.204,
-       3.564
+       4.04,
+       4.331
       ],
       [
        "footnote",
-       3.692,
-       4.087
+       4.389,
+       4.725
       ],
       [
        "three",
-       4.122,
-       4.458
+       4.76,
+       5.004
       ],
       [
        "I've",
-       4.516,
-       4.702
+       5.062,
+       5.224
       ],
       [
        "read",
-       4.737,
-       4.865
+       5.259,
+       5.387
       ],
       [
        "it",
-       4.899,
-       4.969
+       5.433,
+       5.492
       ],
       [
        "four",
-       5.016,
-       5.166
+       5.538,
+       5.7
       ],
       [
        "times",
-       5.224,
-       5.48
+       5.759,
+       6.002
       ],
       [
        "tonight",
-       5.526,
-       5.875
+       6.049,
+       6.397
       ]
      ],
      "tag": "",
      "cut": false,
      "voice": "ElevenLabs library voice 'Alexandra - Confident, Clear and Steady' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
      "el": {
-      "take": "a5-27-22__neleh-A.wav",
+      "take": "v35-a4-0009__neleh-A.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01-v35/act4/wav/a5-27-22__neleh-A.wav",
-      "reused_from": "audio/ep01/v3-el/ep01/act4:a5-27-22__neleh-A"
+      "dry": "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0009__neleh-A.wav",
+      "reused_from": null
      },
      "kokoro": {
-      "audio": "audio/ep01/act4/dialogue/v5/wav/a5-27-22.wav",
-      "in": 0.89,
+      "audio": "audio/ep01/v35/act4/wav/v35-a4-0009.wav",
+      "in": 0.51,
       "t": 1.25,
-      "dur": 6.67
+      "dur": 7.47
+     }
+    },
+    {
+     "id": "a5-27-29",
+     "who": "neleh",
+     "text": "Then we'll write step four ourselves.",
+     "t": 8.63,
+     "dur": 1.93,
+     "audio": "audio/ep01/v3-el/ep01-v35/act4/wav/a5-27-29__neleh-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Then",
+       0.0,
+       0.197
+      ],
+      [
+       "we'll",
+       0.232,
+       0.383
+      ],
+      [
+       "write",
+       0.406,
+       0.58
+      ],
+      [
+       "step",
+       0.604,
+       0.789
+      ],
+      [
+       "four",
+       0.836,
+       0.975
+      ],
+      [
+       "ourselves",
+       1.033,
+       1.533
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alexandra - Confident, Clear and Steady' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "a5-27-29__neleh-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep01/v3-el/ep01-v35/act4/wav/a5-27-29__neleh-A.wav",
+      "reused_from": "audio/ep01/v3-el/ep01/act4:a5-27-29__neleh-A"
+     },
+     "kokoro": {
+      "audio": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
+      "in": 0.88,
+      "t": 9.45,
+      "dur": 1.6
      }
     }
    ],
    "onscreen": [
     {
      "text": "STAFF · STAFF · INVESTORS · STAFF",
-     "at": 0.323,
+     "at": 0.318,
      "until": null
     },
     {
      "text": "RAIL: NOV 18",
-     "at": 0.235,
+     "at": 0.23,
      "until": null
     }
    ],
-   "reelDur": 8.56,
+   "reelDur": 11.86,
    "fx": [],
    "sounds": [
     {
      "name": "BUZZ",
-     "at": 0.323,
+     "at": 0.318,
      "gain": -24
     },
     {
      "name": "BUZZ",
-     "at": 7.652,
+     "at": 8.078,
      "gain": -26
     },
     {
      "name": "landing_thunk",
-     "at": 7.96,
-     "gain": -22
+     "at": 8.397,
+     "gain": -22,
+     "note": "the clack: the first phone goes over after her line; nobody picks it up"
+    },
+    {
+     "name": "marker_uncap",
+     "at": 10.68,
+     "gain": -30,
+     "note": "her marker, uncapped"
+    },
+    {
+     "name": "marker_write_q",
+     "at": 10.91,
+     "gain": -28,
+     "note": "she writes 4. MARIO on step four's blank line as she dials (the tones pre-lap S4.08)"
     }
    ],
    "cues": [
@@ -4234,8 +4318,16 @@
     "scene": 47,
     "mode": "CONVERSATION",
     "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "a5-27-29": 0.73
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "note": "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"
+    },
     "camera": "WIDE · the boardroom at night (held)",
-    "picture": "Step 4's blank line visible on the table (it's the one Neleh looks at after Tasya's statement). The push to her MCU is dropped with the second speech."
+    "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped."
    }
   },
   {
@@ -4264,7 +4356,7 @@
      "from": 14.706
     }
    ],
-   "caption": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly.",
+   "caption": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly. On the left, Neleh strikes 4. MARIO through.",
    "lines": [
     {
      "id": "v31-a4-0017",
@@ -4630,6 +4722,13 @@
      "name": "DIALTONE",
      "at": 17.255,
      "gain": -30
+    },
+    {
+     "name": "marker_write_q",
+     "at": 17.296,
+     "gain": -30,
+     "dur": 0.4,
+     "note": "LEFT pane: after Adelina's \"no\", Neleh strikes 4. MARIO through (one stroke, under the dial tone)"
     }
    ],
    "cues": [
@@ -4648,7 +4747,7 @@
      "note": "Adelina's overlap stays"
     },
     "camera": "SPLIT · both calls, one held shot",
-    "picture": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly."
+    "picture": "The meanwhile split: LEFT, the speakerphone, NELEH and MADA leaning in, four dial tones pre-lapped under the cut; RIGHT, the lighthouse, MARIO picks up the phone with a small throne on it. \"Mario, it's Neleh…\" / \"Eleven pages…\" / ADELINA: \"In plain English: no.\" Click. The dial tone, briefly. On the left, Neleh strikes 4. MARIO through."
    }
   },
   {
@@ -5739,7 +5838,7 @@
      "face": "worried"
     }
    ],
-   "caption": "NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at the blank line of step 4. It isn't a joke: her real face. (Face light, one step.)",
+   "caption": "NELEH, the boardroom stepping down behind her, the slate door still open behind the table. She looks at step 4 on the blueprint: 4. MARIO, struck through. It isn't a joke: her real face. (Face light, one step.)",
    "lines": [],
    "onscreen": [],
    "reelDur": 3.0,
@@ -5753,7 +5852,7 @@
     "mode": "CONVERSATION",
     "pace": "quick",
     "camera": "SINGLE · MCU Neleh (her real face)",
-    "picture": "Moved here: after Tasya's statement, where step four being blank hurts most. No speakerphone, no dial."
+    "picture": "Moved here: after Tasya's statement. v3.5b: her look lands on the crossed-out line (4. MARIO, struck through after Adelina's \"no\"). No speakerphone, no dial."
    }
   },
   {
@@ -10888,9 +10987,9 @@
  ],
  "_el_retimed": {
   "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
-  "seconds_kokoro": 483.316,
-  "seconds_el": 494.725,
-  "delta_s": 11.409,
+  "seconds_kokoro": 486.666,
+  "seconds_el": 498.025,
+  "delta_s": 11.359,
   "beats_changed": 45,
   "missing_takes": [],
   "kokoro_cast": [

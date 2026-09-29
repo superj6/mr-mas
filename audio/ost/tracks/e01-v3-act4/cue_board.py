@@ -114,6 +114,9 @@ def syncmap():
     M['ALYI_ON'], M['ALYI_END'] = (Lon('a5-27-28'), Lend('a5-27-28')) if ALYI else (None, None)
     M['LIGHTS'] = None if (ALYI or not has_snd('S4.02', 'phone_buzz_step_1')) else SND('S4.02', 'phone_buzz_step_1')
     M['NELEH2_END'] = Lend('a5-27-23') if 'a5-27-23' in CLK.LINES else None      # (v3.5: cut)
+    # v3.5b (SN 00000A): "Then we'll write step four ourselves." restored in S4.02, after the clack (4. MARIO follows)
+    M['STEP4_END'] = (Lend('a5-27-29') if 'a5-27-29' in CLK.LINES and M['ROOM'] < Lon('a5-27-29') < M['SPLIT']
+                      else None)
     M['FLICKER'] = M['ALYI_END'] + 10 if ALYI else None
     assert M['WHIP'] < M['CONNECT'] < M['LIST'] < M['POSTCLICK'] < M['HANDS'] < M['S4'] < M['SPLIT'] < M['LOBBY']
     assert M['SLATE'] < M['OPEN'] < M['TASYA'] < M['STMT'] < M['SIGN'] < M['BOARD'] < (M['MADA'] or M['ALONE']) \
@@ -295,6 +298,17 @@ def build():
     cue.mark(BUZZ, 'd: the phones buzz: the pizz locks to it')
     cue.mark(BUZZ2 - 1, 'd: the second buzz')
     cue.mark(CLACK - 1, "d: the clack: the tick's last, clean beat", hit=False)
+    if M['STEP4_END'] is not None:
+        # v3.5b (SN 00000A): "Then we'll write step four ourselves." sits on the pedal alone (the rule under talk); then,
+        # as she writes 4. MARIO on the blank line, STEP FOUR on her pen in eighths (v3.2's device on the list: her pen
+        # runs), and its blank stays blank: the F bass alone under the name (the model fills it in Ep12; "no." strikes
+        # it here); it ends on the cut to the split, where the dial tones take the designed rest
+        f4 = M['STEP4_END'] + 2
+        S4s = cue.sec(f4, bars=2)
+        mm09.step_four(S4s.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.16, top_vel=0.19, blank=True, unit=0.5)
+        S4s.commit()
+        for k, lab in enumerate(['Bbm(add9)', 'Ab(add9)', 'Gbmaj7', 'the blank: the F bass alone (4. MARIO)']):
+            cue.mark(f4 + 7.5 * k, f'd: v3.5b STEP FOUR on her pen, in eighths, as she writes 4. MARIO: {lab}', hit=(k < 3))
     if M['ALYI_ON'] is not None:
         dh = M['NELEH2_END'] + 3
         a.n('door', 'Ab4', s(dh), 0.6, 0.4, lock=True, art='nv')

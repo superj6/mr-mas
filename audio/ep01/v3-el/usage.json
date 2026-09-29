@@ -623,6 +623,46 @@
     "credits_billed": 31
    },
    "used_by_subscription": 31
+  },
+  "phase 12: Neleh's re-recorded line (SN 00000A)": {
+   "_about": "2026-09-28 (night): SN 00000A: Neleh's footnote-three line re-recorded (v35-a4-0009, one call); the restored 'Then we'll write step four ourselves.' reuses its v3.4 take (nothing sent). subscription_before is phase 11's settled count (no calls between).",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 15262,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T20:47:45"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 15314,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T22:13:58"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v35/act4": {
+     "calls": 1,
+     "chars_sent": 118,
+     "credits_billed": 52
+    }
+   },
+   "total": {
+    "calls": 1,
+    "chars_sent": 118,
+    "credits_billed": 52
+   },
+   "used_by_subscription": 52
   }
  },
  "all_phases_total": {
