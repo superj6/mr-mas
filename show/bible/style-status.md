@@ -2,7 +2,7 @@
 
 > ## DECISION (2026-09-25): pixel art primary
 > - **Primary look: pixel art, adventure-game structure.** Native 480×270, 4× nearest-neighbour upscale, indexed palettes with hand-built light ramps.
->   - Reference: `out/structures/pixeladv/`. Engine: `studio/src/shared/pixel/`. Guide: `studio/PIXEL_GUIDE.md`.
+>   - Reference: `out/lookdev/structures/pixeladv/`. Engine: `studio/src/shared/pixel/`. Guide: `studio/PIXEL_GUIDE.md`.
 > - **GLYPH (token) rendering is for darker foreshadowing,** placed for tone and comic timing.
 > - **Other switches are sparing and story-motivated:**
 >   - 1-BIT for 1993

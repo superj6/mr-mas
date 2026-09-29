@@ -13,7 +13,7 @@
   "known": [],
   "chapters": [
     {"id": "coldopen", "label": "COLD OPEN", "sub": "sc 1-4 · fastrec takes", "from": "ep01-coldopen-v2", "acts": ["COLD OPEN"]},
-    {"id": "intro", "kind": "video", "label": "INTRO", "act": "INTRO", "sub": "main title · V1 Chip Chamber Jazz", "src": "out/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full", "audio": {"own": true, "src": "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3}, "note": "V1 is the primary mix (audio/intro-mix/README.md). The -3 dB trim is a proposal for an ear to confirm."},
+    {"id": "intro", "kind": "video", "label": "INTRO", "act": "INTRO", "sub": "main title · V1 Chip Chamber Jazz", "src": "out/season/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full", "audio": {"own": true, "src": "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3}, "note": "V1 is the primary mix (audio/intro-mix/README.md). The -3 dB trim is a proposal for an ear to confirm."},
     {"id": "card", "label": "CARD", "act": "INTRO", "sub": "the filename card (2 s; no disclaimer on screen, showrunner 2026-09-27)", "from": "ep01-full-part1", "beats": ["card.01"]},
     {"id": "act1", "label": "ACT ONE", "sub": "research preview · sc 5-12 · fastrec takes + temp stem", "from": "ep01-act1-v2"},
     {"id": "act2", "label": "ACT TWO", "sub": "the regulate-me tour · sc 13-17 · v2 takes", "from": "ep01-act2-v2"},

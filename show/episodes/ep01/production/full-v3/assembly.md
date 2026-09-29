@@ -500,7 +500,7 @@ bash ops/heavy.sh $PY $A/tools/seam_frames.py kokoro-v32 el-v32
 | # | Chapter | Picture | Kokoro start · length | EL start · length |
 |---|---|---|---|---|
 | 1 | Cold open | `picture[-el]/coldopen.mp4` | 0:00.00 · 26.67 | 0:00.00 · 24.29 |
-| 2 | Intro | **`out/intro/intro-ep1-V1-1080p-flashfix.mp4`** (the manifest's) | 0:26.67 · 30.00 | 0:24.29 · 30.00 |
+| 2 | Intro | **`out/season/intro/intro-ep1-V1-1080p-flashfix.mp4`** (the manifest's) | 0:26.67 · 30.00 | 0:24.29 · 30.00 |
 | 3 | ep1.0_research_preview.md | `picture/card.mp4` (both) | 0:56.67 · 2.00 | 0:54.29 · 2.00 |
 | 4 | Act One · research preview | `…/act1.mp4` | 0:58.67 · 5:37.46 | 0:56.29 · 5:45.42 |
 | 5 | Act Two · the regulate-me tour | `…/act2.mp4` | 6:36.12 · 3:21.25 | 6:41.71 · 3:13.54 |
@@ -705,7 +705,7 @@ In the manifest's order. Start times are episode time.
 | # | Chapter title | Picture | Sound | Kokoro start · length | EL start · length |
 |---|---|---|---|---|---|
 | 1 | Cold open | `picture[-el]/coldopen.mp4` | `mix[-el]/coldopen-mix.wav` | 0:00.00 · 30.67 | 0:00.00 · 30.04 |
-| 2 | Intro | `out/intro/intro-ep1-V1-1080p.mp4` | its own mix, `audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav`, **−3 dB** (the manifest) | 0:30.67 · 30.00 | 0:30.04 · 30.00 |
+| 2 | Intro | `out/season/intro/intro-ep1-V1-1080p.mp4` | its own mix, `audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav`, **−3 dB** (the manifest) | 0:30.67 · 30.00 | 0:30.04 · 30.00 |
 | 3 | ep1.0_research_preview.md | `picture/card.mp4` (both) | `mix[-el]/card-mix.wav` | 1:00.67 · 2.00 | 1:00.04 · 2.00 |
 | 4 | Act One · research preview | `picture[-el]/act1.mp4` | `mix[-el]/act1-mix.wav` | 1:02.67 · 5:22.50 | 1:02.04 · 5:37.46 |
 | 5 | Act Two · the regulate-me tour | `…/act2.mp4` | `…/act2-mix.wav` | 6:25.17 · 3:24.75 | 6:39.50 · 3:17.21 |
@@ -855,7 +855,7 @@ Kokoro timecode, then EL.
 1. **The intro reads 4 flashes in one second, against a limit of 3.**
    - **Where:** intro frames 221–224, the whip smear from the 2014 WHY COMBINATOR throne into the Woodrose (film 0:39.88 / 0:39.25). I looked at frames 216–227: the frame's mean pixel value stays at 0.19–0.20 through the smear and then cuts to 0.11 on the Woodrose.
    - **What the tool is counting:** bright streaks moving across a dark ground, over at least 25 % of the 16 × 9 block grid, in alternating directions on consecutive frames.
-   - **The same tool on the intro file alone** (not the re-encode) also gives 4 at frame 221. The intro's own audit reported "at most 2" (out/intro/reports/pic.md) with a different method.
+   - **The same tool on the intro file alone** (not the re-encode) also gives 4 at frame 221. The intro's own audit reported "at most 2" (out/season/intro/reports/pic.md) with a different method.
    - **Whose call:** it's the final intro, so the intro owner's, and a certified analyser (PEAT or Harding) is the real test. If it has to go under 3: hold the smear's middle frames on 2s, or make it a straight cut. **The rest of both films is at most 2.**
 2. **A digital-zero run inside Act Three**, at 23.04's act-out black: THE CLOCK's dead stop, 11:55.71 / 11:59.79. It's 160 ms in the mix (156 ms in EL), and 107 / 93 ms after AAC.
    - The sound pass marks the black as designed, but it's true digital zero, not room tone.

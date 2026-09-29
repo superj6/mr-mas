@@ -17,7 +17,7 @@ Sound editor's spot for the 30.000 s main title (f0–719, 24 fps, 96 BPM, 15 fr
 | `preview/*.mp3` | Listening previews: V1 at −1.5 dB, the am_michael VO scratch (faded to end by f91) and the SFX. **Not deliverables** (the real balance is `audio/intro-mix/`). |
 | `qa.json`, `picture-sync.json` | Automated checks, and the picture-frame sources and deltas. |
 
-**Picture sync.** `out/intro/picture/intro-events.json` is {events_json}
+**Picture sync.** `out/season/intro/picture/intro-events.json` is {events_json}
 
 ## Rules applied
 1. **One owner per sound** (§9.3). The music owns the drone, the plucks, the stabs and the swell into f690. The SFX owns the swells into f120 and f540, the bonk, the ding and every diegetic sound. Nothing here doubles a music hit: the latch, stamp and pops sit 6–17 dB under the score at the hits (`qa.json` → `levels_vs_V1`).
@@ -44,7 +44,7 @@ SCRIPT v2.1 is the source of truth, so these items are kept out of the main stem
 {blip}
 
 ## Picture vs SCRIPT v2.1 (SFX-relevant)
-The frames come from `out/intro/picture/intro-events.json` (the integrator's export; its convention says "for audio: cue the PICTURE frame"), and the typed line's per-key frames from `{keysrc}`. Where the picture differs from the script, the SFX follows the picture. Generated from this build:
+The frames come from `out/season/intro/picture/intro-events.json` (the integrator's export; its convention says "for audio: cue the PICTURE frame"), and the typed line's per-key frames from `{keysrc}`. Where the picture differs from the script, the SFX follows the picture. Generated from this build:
 
 {picture_vs_script}
 

@@ -1,6 +1,6 @@
 The paper-puppet structure is finished: the 120-frame scene MP4, a key frame and four extra stills are rendered. I checked the MP4 by pulling its frames out into tiled sheets and looking at them, not only the test stills.
 
-**Deliverables** (in `/home/jgon/project/art/mrmas/out/structures/puppet/`)
+**Deliverables** (in `/home/jgon/project/art/mrmas/out/lookdev/structures/puppet/`)
 - `scene.mp4`: composition `puppet-scene`, 120 frames at 24 fps, rendered at scale 0.5 (960x540).
 - `key.png`: composition `puppet-key`, frame 106 with a slightly wider camera, full 1920x1080. It shows both dialogue slips, the phone in Mas's face and the torn wall.
 - `extra-closeup.png`: `puppet-extra-closeup`, Mas saying "super.", close enough to see paper grain, pins and the taped slip.
@@ -43,4 +43,4 @@ I also wrote a folder `public/puppet/` into the shared `public/` directory? No â
 - **Cost per minute: low to medium.** After the one-time puppet build, new material is mostly posing pins, changing a few settings and adding set cards. Each new camera angle does mean building new head pieces.
 - **Occasional style switches: very good.** Wrapping any puppet in one setting re-cuts it from banknote engraving paper (money flashbacks) or punch-card 1-bit paper (AI / 1993 moments). Rig and animation stay identical; each piece's light or dark value just maps to a hatch or dither level. It reads as a deliberate change of paper, not an effect. `extra-stocks.png` shows all three.
 
-The dev sheets I used to check motion are in `/home/jgon/project/art/mrmas/out/dev/puppet/` (for example `mp4-burst.png`, `mp4-jolt.png`).
+The dev sheets I used to check motion are in `/home/jgon/project/art/mrmas/out/lookdev/looks/puppet/` (for example `mp4-burst.png`, `mp4-jolt.png`).

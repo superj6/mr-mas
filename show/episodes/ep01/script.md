@@ -3300,7 +3300,7 @@ flags .  .  .  o  .  .  .  .  .  O  .  .  .  .  .  .  .  .  .  .  .
 | Speaking portraits new to Ep1 | ≈ 19 | ≈ 16, of which 8 start from existing art: TASYA, RADNUS, KRAM, NESNEJ and RIMA from their roll-call flashes, and ALYI, NELEH and MADA from the salvaged grid. NIRB, EGAP and OIGNEB are now silhouettes or dialogue boxes; THE INTERVIEWER and THE MATCHER are cut | — |
 
 **Salvage map (the cut intro slot, already Ep1 art):**
-- The launch-button press and USERS counter (`out/pixel/moments/_cut/mfinale-chatgtp.png`) → sc 5–6. Relabel the button `research preview`, and let only the drill's last wheel read `1,000,000`.
+- The launch-button press and USERS counter (`out/season/intro/moments/_cut/mfinale-chatgtp.png`) → sc 5–6. Relabel the button `research preview`, and let only the drill's last wheel read `1,000,000`.
 - The board grid, the camera-off tile and Mas's GLYPH dissolve (`studio/src/dev/mfinale/callart.ts`, still `_cut/mfinale-fired.png`) → sc 26. Drop `FIRED.` and blank the `11:47` clock.
 - The pacing note named `slot.ts`; that file isn't in `studio/src/dev/mfinale/`. `callart.ts`, `scene.ts` and `MFinale.tsx` are.
 

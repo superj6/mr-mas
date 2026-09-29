@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Season contact sheet (3 stills per episode: cold open, midpoint, button) + out/reel/index.md.
-Stills are pulled from the rendered out/reel/epNN.mp4 at the generator's per-beat mark frame
+"""Season contact sheet (3 stills per episode: cold open, midpoint, button) + out/season/reels/index.md.
+Stills are pulled from the rendered out/season/reels/epNN.mp4 at the generator's per-beat mark frame
 (beat start + 62% of its length), so the sheet shows exactly what the files contain."""
 import json, glob, os, re, subprocess, tempfile, textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 ROOT = '/home/jgon/project/art/mrmas'
-OUT = f'{ROOT}/out/reel'
+OUT = f'{ROOT}/out/season/reels'
 FFD = f'{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu'
 FPS, TITLE = 24, 72
 env = dict(os.environ, LD_LIBRARY_PATH=FFD)
@@ -66,7 +66,7 @@ try:
     S = Image.new('RGB', (W, H), (6, 9, 19)); D = ImageDraw.Draw(S)
     tot = sum(r[3] or 0 for r in rows)
     D.text((PAD + 8, 18), 'MR. MAS — season outline reel · contact sheet', font=fT, fill=(63, 230, 255))
-    D.text((PAD + 8, 70), f'12 episodes · {int(tot // 60)}:{tot % 60:04.1f} of reel · per episode: cold open, midpoint, button (frames pulled from out/reel/epNN.mp4)', font=fS, fill=(147, 174, 224))
+    D.text((PAD + 8, 70), f'12 episodes · {int(tot // 60)}:{tot % 60:04.1f} of reel · per episode: cold open, midpoint, button (frames pulled from out/season/reels/epNN.mp4)', font=fS, fill=(147, 174, 224))
     y = HEAD
     for o, key, total, d, shots in rows:
         spec = o.get('speculative')

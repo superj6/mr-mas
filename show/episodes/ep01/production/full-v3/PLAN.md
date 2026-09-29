@@ -150,7 +150,7 @@ out/ep01/full-v3/                         the films and mixes (git-ignored)
 - **It runs again on the final v3.1 film** as part of the final checks, together with the newcomer read.
 
 **Done 2026-09-27 (lead): the intro's flash.** Frames 222 and 224 now hold 221 and 223 (the whip smear on 2s). Flashcheck on the patched intro: at most 1 flash in any second, pass (it was 4 at frame 221).
-- The patched picture is `out/intro/intro-ep1-V1-1080p-flashfix.mp4` (git-ignored). Rebuild it with `python3 show/episodes/ep01/production/full-v3/assembly/tools/intro_flashfix.py out/intro/intro-ep1-V1-1080p-flashfix.mp4`.
+- The patched picture is `out/season/intro/intro-ep1-V1-1080p-flashfix.mp4` (git-ignored). Rebuild it with `python3 show/episodes/ep01/production/full-v3/assembly/tools/intro_flashfix.py out/season/intro/intro-ep1-V1-1080p-flashfix.mp4`.
 - **The v3.1 assembly uses it in place of the original intro picture.** The intro's audio is unchanged.
 
 **Added 2026-09-28 (showrunner):**

@@ -841,7 +841,7 @@ def write_manifest(rep):
     first = {seg: json.load(open(os.path.join(OUT_DIR, f'ep01-v3-{seg}.json')))['beats'][0]['id'] for seg in SEGS}
     ch = [{'id': 'coldopen', 'label': 'COLD OPEN', 'sub': SUB['coldopen'], 'from': 'ep01-v3-coldopen', 'acts': ['COLD OPEN']},
           {'id': 'intro', 'kind': 'video', 'label': 'INTRO', 'act': 'INTRO', 'sub': 'main title · V1 Chip Chamber Jazz',
-           'src': 'out/intro/intro-ep1-V1-1080p.mp4', 'in': 0, 'dur': 30, 'fit': 'full',
+           'src': 'out/season/intro/intro-ep1-V1-1080p.mp4', 'in': 0, 'dur': 30, 'fit': 'full',
            'audio': {'own': True, 'src': 'audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav', 'gain': -3, 'tail': 0.3},
            'note': 'The v2 manifest\'s intro, unchanged. The -3 dB trim is a proposal for an ear to confirm.'},
           {'id': 'card', 'label': 'CARD', 'act': 'INTRO', 'sub': 'the filename card (2 s; no disclaimer)', 'from': 'ep01-full-part1', 'beats': ['card.01']}]

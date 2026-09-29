@@ -5,7 +5,7 @@ All art is authored on a native 480x270 grid and scaled 4x nearest-neighbour to 
 from vector art, and no filter is applied. Limited animation is the medium's own convention, not a shortcut: sprite
 drawings held on 2s, replacement mouths, whole-pixel nudges, palette swaps.
 
-## Deliverables (out/structures/pixeladv/)
+## Deliverables (out/lookdev/structures/pixeladv/)
 | file | composition | notes |
 |---|---|---|
 | scene.mp4 | `pixeladv-scene` (120f @24) | rendered `--scale=0.5 --concurrency=1` (each art pixel = 2x2 px) |
@@ -14,7 +14,7 @@ drawings held on 2s, replacement mouths, whole-pixel nudges, palette swaps.
 | extra-lineup.png | `pixeladv-extra-lineup` | height lineup, Nole walk/jab/slam frames, Mas desk drawings, master palette |
 | extra-switch.png | `pixeladv-extra-switch` | the same frame as BASE / 1-BIT / LEDGER / TERMINAL: a style switch is a palette swap |
 
-Render: `npx remotion still src/dev/pixeladv/entry.tsx pixeladv-key ../out/structures/pixeladv/key.png --bundle-cache=false --log=error`
+Render: `npx remotion still src/dev/pixeladv/entry.tsx pixeladv-key ../out/lookdev/structures/pixeladv/key.png --bundle-cache=false --log=error`
 
 ## Files (all mine)
 - `src/styleframes/pixeladv.frame.tsx`: frame defs. `src/dev/pixeladv/entry.tsx`: dev entry.

@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
-# MR. MAS — season outline reel. Renders every show/reel/epNN.json to out/reel/epNN.mp4 (1280x720, 24 fps),
-# muxes a temp bed from audio/reel/ when one exists, then builds out/reel/season.mp4, per-episode contact sheets,
-# out/reel/season-contact.png and out/reel/index.md.
+# MR. MAS — season outline reel. Renders every show/reel/epNN.json to out/season/reels/epNN.mp4 (1280x720, 24 fps),
+# muxes a temp bed from audio/reel/ when one exists, then builds out/season/reels/season.mp4, per-episode contact sheets,
+# out/season/reels/season-contact.png and out/season/reels/index.md.
 #
 #   bash studio/src/dev/reel/render_all.sh                 # every epNN.json
 #   bash studio/src/dev/reel/render_all.sh ep03 ep07       # just these (also: 3, ep03.json, reel-ep03, _sample)
 #   bash studio/src/dev/reel/render_all.sh ep01-full ep01-full-part1   # the full-length pilot (stitched) / one part
 #
-# env:  CONC=4 (render concurrency)   NO_SEASON=1   NO_SHEETS=1   REEL_AUDIO_DIR=… (default audio/reel)   REEL_OUT=… (default out/reel)
+# env:  CONC=4 (render concurrency)   NO_SEASON=1   NO_SHEETS=1   REEL_AUDIO_DIR=… (default audio/reel)   REEL_OUT=… (default out/season/reels)
 # audio bed lookup per episode, first match wins (wav/mp3/m4a/aac/flac/ogg/opus):
 #   audio/reel/epNN.<ext>  ·  audio/reel/epNN[-_]*.<ext>  ·  audio/reel/{bed,temp-bed,temp_bed,reel-bed}.<ext> (looped)
 # With no bed the mp4 gets a silent stereo track, so every episode concatenates cleanly into season.mp4.
 set -euo pipefail
 ROOT=/home/jgon/project/art/mrmas
 STUDIO=$ROOT/studio
-OUT=${REEL_OUT:-$ROOT/out/reel}
+OUT=${REEL_OUT:-$ROOT/out/season/reels}
 AUD=${REEL_AUDIO_DIR:-$ROOT/audio/reel}
 CONC=${CONC:-4}
 FFD=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
@@ -94,7 +94,7 @@ if [ -z "${NO_SEASON:-}" ]; then
     echo "season: $OUT/season.mp4 ($(wc -l <"$list") episodes, $(FP -show_entries format=duration -of csv=p=0 "$OUT/season.mp4") s)"
   fi
 fi
-# 6. season contact sheet (cold open / midpoint / button per episode) + out/reel/index.md
+# 6. season contact sheet (cold open / midpoint / button per episode) + out/season/reels/index.md
 if [ -z "${NO_SHEETS:-}" ] && [ -z "${REEL_OUT:-}" ]; then
   python3 "$STUDIO/src/dev/reel/season_sheet.py" || echo "  (season contact sheet skipped)"
 fi

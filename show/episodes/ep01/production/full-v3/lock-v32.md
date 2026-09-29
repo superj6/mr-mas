@@ -171,7 +171,7 @@ The v3 and v3.1 rules still hold ([lock.md §4](lock.md), [lock-v31.md §4](lock
    - the suite post's taps;
    - the lobby's rustle, shutter and post;
    - the badge.
-11. **Names, subtitles, chapters and intro:** as in v3.1. Act Four's part and the manifest read "five days, told twice". The intro is `out/intro/intro-ep1-V1-1080p-flashfix.mp4` with its own audio at −3 dB. The outro is `out/ep01/outro/outro-b-v3.mp4` with its own audio at −1 dB.
+11. **Names, subtitles, chapters and intro:** as in v3.1. Act Four's part and the manifest read "five days, told twice". The intro is `out/season/intro/intro-ep1-V1-1080p-flashfix.mp4` with its own audio at −3 dB. The outro is `out/ep01/outro/outro-b-v3.mp4` with its own audio at −1 dB.
 
 ## 5. The stick sound (temporary)
 

@@ -13,7 +13,7 @@ This is the pixel edition of shot-table rows 4.4 to 6.4 in `final.md` §3.
 - **225 is a hard switch**: the dinner is BASE from its first frame; the amber render front is gone (meras ends its whip in early-web on 224). The 2015 slate is the shared `eraStamp`.
  It uses the shared engine (`src/shared/pixel`) and the cast modules without modifying either. Everything the cast didn't have is in `src/dev/mdinner1/`.
 
-## Outputs (`out/pixel/moments/`)
+## Outputs (`out/season/intro/moments/`)
 | file | composition | global frame | what |
 |---|---|---|---|
 | `mdinner1-opening.png` | `mdinner1-opening` | 237 | 2015: Gerg typing, keycaps popping; his napkin is now a website; Mas steepled in the arched window |
@@ -27,9 +27,9 @@ This is the pixel edition of shot-table rows 4.4 to 6.4 in `final.md` §3.
 There is also `mdinner1-vault` (f359), which is not in the delivered five. It is the hand-off frame, for a continuity check against mdinner2.
 
 ```
-npx remotion still  src/dev/mdinner1/entry.tsx mdinner1-opening ../out/pixel/moments/mdinner1-opening.png --bundle-cache=false --log=error
-npx remotion render src/dev/mdinner1/entry.tsx mdinner1 ../out/pixel/moments/mdinner1.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-python3 src/dev/mdinner1/tools/scratch_audio.py ../out/pixel/moments/mdinner1-scratch-audio.wav
+npx remotion still  src/dev/mdinner1/entry.tsx mdinner1-opening ../out/season/intro/moments/mdinner1-opening.png --bundle-cache=false --log=error
+npx remotion render src/dev/mdinner1/entry.tsx mdinner1 ../out/season/intro/moments/mdinner1.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+python3 src/dev/mdinner1/tools/scratch_audio.py ../out/season/intro/moments/mdinner1-scratch-audio.wav
 ```
 Fast Node preview (about 1 s for several frames): `npx esbuild src/dev/mdinner1/tools/preview.ts --bundle --platform=node --outfile=<scratch>/md1.cjs`, then run `node <scratch>/md1.cjs <outDir> <scale> f:<g> | grid:<g,..> | crop:<g,x,y,w,h> | cgrid:<x,y,w,h>@<g,..> | tune:<g>@lo,hi,gamma[,slo,shi,sg]@... | lab:mas`. All frame arguments are **global** frames. In the Node preview, glyphs are shown only as tinted cells.
 

@@ -50,7 +50,7 @@ uses for GERG and ALYI.
   - The world clock reads mdinner1's `worldClock`, so a retime there carries over.
   - The neon lettering stays generic: a monoline pixel sans, never the real wordmark's letterforms.
 
-## Outputs (`out/pixel/moments/`)
+## Outputs (`out/season/intro/moments/`)
 | file | composition | global frame | what |
 |---|---|---|---|
 | `mdinner2-mario.png` | `mdinner2-mario` | 378 | the room running again under MARIO's card (WORD COUNT: 15,000+), the essay starting down the cloth |
@@ -63,10 +63,10 @@ uses for GERG and ALYI.
 | `mdinner2-scratch-audio.wav`, `mdinner2-with-scratch-audio.mp4` | (tool) | 345-479 | the re-cut timing scratch (see Audio) |
 
 ```
-npx remotion still  src/dev/mdinner2/entry.tsx mdinner2-nope ../out/pixel/moments/mdinner2-nope.png --bundle-cache=false --log=error
-npx remotion render src/dev/mdinner2/entry.tsx mdinner2 ../out/pixel/moments/mdinner2.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-python3 src/dev/mdinner2/tools/scratch_audio.py ../out/pixel/moments/mdinner2-scratch-audio.wav
-FF=node_modules/@remotion/compositor-linux-x64-gnu; LD_LIBRARY_PATH=$FF $FF/ffmpeg -y -i ../out/pixel/moments/mdinner2.mp4 -i ../out/pixel/moments/mdinner2-scratch-audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest ../out/pixel/moments/mdinner2-with-scratch-audio.mp4
+npx remotion still  src/dev/mdinner2/entry.tsx mdinner2-nope ../out/season/intro/moments/mdinner2-nope.png --bundle-cache=false --log=error
+npx remotion render src/dev/mdinner2/entry.tsx mdinner2 ../out/season/intro/moments/mdinner2.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+python3 src/dev/mdinner2/tools/scratch_audio.py ../out/season/intro/moments/mdinner2-scratch-audio.wav
+FF=node_modules/@remotion/compositor-linux-x64-gnu; LD_LIBRARY_PATH=$FF $FF/ffmpeg -y -i ../out/season/intro/moments/mdinner2.mp4 -i ../out/season/intro/moments/mdinner2-scratch-audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest ../out/season/intro/moments/mdinner2-with-scratch-audio.mp4
 ```
 **Fast Node preview.** Bundle `src/dev/mdinner2/tools/preview.ts` with esbuild (`--loader:.woff=empty --loader:.woff2=empty --loader:.css=empty`), then run `node md2.cjs <outDir> <scale> <view>`. The views:
 

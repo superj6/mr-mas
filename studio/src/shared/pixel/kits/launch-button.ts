@@ -1,6 +1,6 @@
 // MR. MAS — kit: THE BEIGE BUTTON (Ep1 Act One sc 5: the launch). New file (v3-art-a, 2026-09-27).
 // The salvaged art from the cut intro slot (dev/mfinale/callart.ts: `handFig` / `drawButton`, the picture in
-// out/pixel/moments/_cut/mfinale-chatgtp.png), PORTED here so shipped code doesn't import a dev folder (the original is
+// out/season/intro/moments/_cut/mfinale-chatgtp.png), PORTED here so shipped code doesn't import a dev folder (the original is
 // not edited): Mas's index finger and the tiny beige button on its plate, with the label-maker strip. Changes for the
 // launch: the strip is relabelled `research preview` (the salvage read `low-key research preview`), the light is the
 // bullpen's night (the working lamp's cool from the top-right, the desk's grey laminate, not the Woodrose's candle and

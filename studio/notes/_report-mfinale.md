@@ -5,7 +5,7 @@ The mfinale span (intro f480-719) is done and rendered. It covers the Ep1 slot, 
 - `mfinale-key-chatgtp`, `-fired`, `-skyline`, `-title`, `-bookend`: the key stills.
 - `mfinale-sheet`: a dev 4x4 contact sheet of any frames, with glyph layers included.
 
-**Outputs** (in `/home/jgon/project/art/mrmas/out/pixel/moments/`)
+**Outputs** (in `/home/jgon/project/art/mrmas/out/season/intro/moments/`)
 
 | File | Frame | What it shows |
 |---|---|---|

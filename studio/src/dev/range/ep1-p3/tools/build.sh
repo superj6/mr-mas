@@ -1,7 +1,7 @@
 #!/bin/bash
-# MR. MAS - style-range prototype E1-P3 (1.D, BELOW, ABOVE, AROUND): build everything into out/range/ep1/ (run from studio/).
+# MR. MAS - style-range prototype E1-P3 (1.D, BELOW, ABOVE, AROUND): build everything into out/lookdev/range/ep1/ (run from studio/).
 #   [NOPROMOTE=1] src/dev/range/ep1-p3/tools/build.sh <scratch dir> [--no-sound]   (run it through ops/heavy.sh)
-#   NOPROMOTE=1 leaves the mp4 and the stills in <scratch> (keys/) for a look before they replace out/range/ep1/
+#   NOPROMOTE=1 leaves the mp4 and the stills in <scratch> (keys/) for a look before they replace out/lookdev/range/ep1/
 # 0 the timing lock (data.ts)  1 bundle  2 render silent (CPU, --concurrency=4)  3 sound (the v5 bed re-run read-only +
 # the additions; the OST engine for the Rhodes)  4 the subtitle track (tools/subs.py)  5 mux (bundled ffmpeg: picture,
 # sound; then tools/mux_subs.py adds the subtitles as a soft mov_text stream, default on)  6 three key stills (p250, p318, p360) + the contact
@@ -9,7 +9,7 @@
 set -euo pipefail
 S=${1:?scratch dir}
 ROOT=$(cd ../ && pwd)
-OUT=$ROOT/out/range/ep1
+OUT=$ROOT/out/lookdev/range/ep1
 FF=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 PYM=$ROOT/audio/.venv-mix/bin/python
 PYT=$ROOT/audio/.venv-theme/bin/python

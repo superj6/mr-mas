@@ -10,7 +10,7 @@
 set -euo pipefail
 WHAT=${1:-1080}   # render policy: 1080p max; "4k"/"all" kept only for legacy use
 STUDIO=/home/jgon/project/art/mrmas/studio
-OUT=/home/jgon/project/art/mrmas/out/intro/picture
+OUT=/home/jgon/project/art/mrmas/out/season/intro/picture
 TMP=${2:-/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/master}
 FFD=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
 FF() { LD_LIBRARY_PATH=$FFD "$FFD/ffmpeg" "$@"; }

@@ -42,7 +42,7 @@ Films are in `out/ep01/act4/animatic/` and documents in `show/episodes/ep01/prod
 | 3 | `act4-animatic-v5.mp4` | The review frame: the picture at 3×, the editor's margin (TC, story marks, who is speaking and whether their mouth is drawn, the sound under the frame) and a transcript band, on the stick temp mix | Notes by timecode. The temp mix is missing six beats' sounds; the margin shows `NOT IN THE TEMP MIX` as each one passes. All six are in the final mix |
 | 4 | `act4-animatic-v5-picture.mp4` | The picture only, on the stick temp mix | Checked to be the same picture as #1. It has the sound you approved the timing on, so it can tell a picture problem from a mix problem |
 | 5 | `act4-v5-contact.png`, `act4-v5-contact-native.png` | One still per shot | A map of the act. The native sheet shows the pixel art at 1× |
-| — | Comparison | v4: `act4-animatic-v4.mp4` (4:11) · the approved stick reel: `out/reel/ep01-act4-v5.mp4` (8:41 with its 3 s head) · the stick reel with the final mix: `act4-stick-v5-finalmix.mp4` | Before and after |
+| — | Comparison | v4: `act4-animatic-v4.mp4` (4:11) · the approved stick reel: `out/ep01/act4/reel/ep01-act4-v5.mp4` (8:41 with its 3 s head) · the stick reel with the final mix: `act4-stick-v5-finalmix.mp4` | Before and after |
 | — | Reading | `transcript-v5.txt` (every line and every on-screen text of more than 3 words, on both clocks) · `shotlist-v5.md` · `report-v5.md` | Following along |
 | — | Captions (optional) | `captions/ep01-act4-v5.en-sdh.act.srt` (or `.vtt`); the `.reel` versions fit the stick reel | Load in the player with #1 or #4 |
 

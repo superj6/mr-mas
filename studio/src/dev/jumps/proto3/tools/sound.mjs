@@ -6,7 +6,7 @@
 // (the samples continue from the clip's clock, as if the room had kept running while we weren't listening).
 //
 //   node src/dev/jumps/proto3/tools/sound.mjs [picture.mp4] [out.mp4]
-//   defaults: ../out/jumps/proto3-picture.mp4 -> ../out/jumps/proto3.mp4 (+ ../out/jumps/proto3-sound.wav)
+//   defaults: ../out/lookdev/jumps/proto3-picture.mp4 -> ../out/lookdev/jumps/proto3.mp4 (+ ../out/lookdev/jumps/proto3-sound.wav)
 import fs from 'fs';
 import path from 'path';
 import {execFileSync} from 'child_process';
@@ -16,7 +16,7 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const STUDIO = path.resolve(HERE, '../../../../..');
 const ROOT = path.resolve(STUDIO, '..');
 const SFX = path.join(ROOT, 'audio/sfx/wav');
-const OUT = path.join(ROOT, 'out/jumps');
+const OUT = path.join(ROOT, 'out/lookdev/jumps');
 const picture = process.argv[2] ?? path.join(OUT, 'proto3-picture.mp4');
 const final = process.argv[3] ?? path.join(OUT, 'proto3.mp4');
 const wavOut = path.join(OUT, 'proto3-sound.wav');

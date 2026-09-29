@@ -19,7 +19,7 @@ ENV = dict(os.environ, LD_LIBRARY_PATH=FFD)
 FF, FP = os.path.join(FFD, 'ffmpeg'), os.path.join(FFD, 'ffprobe')
 VARS = {'V1': 'chipchamber', 'V2': 'orchestralnoir', 'V3': 'pixelswing', 'V4': 'pianopixels'}
 MP4 = [('V1', '1080p'), ('V2', '1080p'), ('V3', '1080p'), ('V4', '1080p')]  # render policy: 1080p max (a legacy 4K file is checked only if present)
-if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..', '..', 'out', 'intro', 'intro-ep1-V1-4k.mp4')):
+if os.path.exists(os.path.join(os.path.dirname(os.path.abspath(__file__)), '../../../out/season/intro/intro-ep1-V1-4k.mp4')):
     MP4.insert(1, ('V1', '4k'))
 SYNC = [24, 120, 225, 240, 300, 345, 360, 420, 480, 540, 630, 690, 705, 719]   # cuts / freeze pops / title / bookend / ding
 
@@ -130,7 +130,7 @@ def picture_sync(spot):
     placed frame vs the picture frame it answers to."""
     import hashlib
     ps = json.load(open(os.path.join(AUDIO, 'intro-sfx/picture-sync.json')))
-    evp = os.path.join(ROOT, 'out/intro/picture/intro-events.json')
+    evp = os.path.join(ROOT, 'out/season/intro/picture/intro-events.json')
     now = hashlib.md5(open(evp, 'rb').read()).hexdigest()
     pf = ps.get('pictureFrames', {})
     rows, bad = [], []
@@ -209,7 +209,7 @@ def main():
               ra['ffmpeg_loudnorm_info'])
 
     for v, res in MP4:
-        p = os.path.join(ROOT, 'out/intro', f'intro-ep1-{v}-{res}.mp4')
+        p = os.path.join(ROOT, 'out/season/intro', f'intro-ep1-{v}-{res}.mp4')
         pr = probe(p)
         y = decode_audio(p)
         x = mixes[v]
@@ -233,7 +233,7 @@ def main():
                                video_diff_f_minus_1_to_f=round(float(dv[f]), 2),
                                video_diff_f_minus_2_to_f_minus_1=round(float(dv[f - 1]), 2)))
         t, fl, pk = ding_onset(y)
-        src = os.path.join(ROOT, 'out/intro/picture', f'intro-ep1-{res}-silent.mp4')
+        src = os.path.join(ROOT, 'out/season/intro/picture', f'intro-ep1-{res}-silent.mp4')
         vh, sh_ = video_packet_hash(p), video_packet_hash(src)
         r = dict(video_stream_copied=vh == sh_, video_packet_md5=vh, probe=pr, decoded_audio_samples=int(y.shape[1]), video_frames=nframes,
                  xcorr_lag_samples=lag, aac_vs_wav_err_rms_db=round(float(todb(np.sqrt((err ** 2).mean()))), 1),

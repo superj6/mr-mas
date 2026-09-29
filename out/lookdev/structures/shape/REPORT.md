@@ -1,8 +1,8 @@
 The GRAPHIC-SHAPE CINEMA structure (key `shape`) is done: the 120-frame scene renders cleanly, and I checked the key frame, the three extras and a 16-frame contact sheet from the MP4 by eye. The main problem left is Nole's profile head, which still reads as a helmet with a crest.
 
 **Files and composition ids**
-- `shape-scene` (120 f, 24 fps) → `/home/jgon/project/art/mrmas/out/structures/shape/scene.mp4` (960x540, `--scale=0.5 --concurrency=1`)
-- `shape-key` (the f74 two-shot, full 1920x1080) → `/home/jgon/project/art/mrmas/out/structures/shape/key.png`
+- `shape-scene` (120 f, 24 fps) → `/home/jgon/project/art/mrmas/out/lookdev/structures/shape/scene.mp4` (960x540, `--scale=0.5 --concurrency=1`)
+- `shape-key` (the f74 two-shot, full 1920x1080) → `/home/jgon/project/art/mrmas/out/lookdev/structures/shape/key.png`
 - `shape-extra-lineup` → `.../extra-lineup.png`: shape-language model sheet with the construction shapes marked
 - `shape-extra-mascu` → `.../extra-mascu.png`: Mas's head turn, blink and "super." in five heads
 - `shape-extra-switch` → `.../extra-switch.png`: the same close-up as show look, money flashback and 1993

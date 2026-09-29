@@ -6,7 +6,7 @@
 
 > **Status: WORKING RULE, 2026-09-25.** Supervising director (visual language), first version. It governs every script, board and build where the picture leaves the pixel engine at a peak. Items marked **PROPOSED** change another file or need another owner's sign-off; until they sign, write to the default given. Three prototypes are briefed in [§5](#5-the-three-prototypes).
 >
-> **Prototype pass, same day.** All three were built, reviewed by the critic and polished. Ranking: **J1 near lock, J6 booked as amended, J3 re-prototyped but not proven.** What the builds taught is in [§5.4](#54-lessons-from-the-prototypes); §5.1–5.3 now describe the polished builds. The review reel is `out/jumps/jumps-reel.mp4` (internal only: it contains J3 and J6).
+> **Prototype pass, same day.** All three were built, reviewed by the critic and polished. Ranking: **J1 near lock, J6 booked as amended, J3 re-prototyped but not proven.** What the builds taught is in [§5.4](#54-lessons-from-the-prototypes); §5.1–5.3 now describe the polished builds. The review reel is `out/lookdev/jumps/jumps-reel.mp4` (internal only: it contains J3 and J6).
 
 **The showrunner's notes (binding):**
 - "in particular, i am imagining some interesting style jumps for intense moments. but it needs to be sparing and tasteful"
@@ -180,14 +180,14 @@ That's the season's thesis in one image, and nobody says it.
 |---|---|---|---|
 | Pixel switches: BASE, ONEBIT, EARLYWEB16, LEDGER, TERMINAL, 2TONE_FREEZE, family steps, masked GLYPH | `studio/src/shared/pixel/**`, PIXEL_GUIDE §2 | Switches, not jumps. The home every jump returns to | — |
 | Full-frame GLYPH | `pixel/glyph.ts`; tonal `glyph` | M4, once (J4) | Masked uses stay switches |
-| Tonal `engrave` (banknote) | `studio/src/shared/tonal/**`; `out/dev/render/hero-engrave.png` | M3 (J1) | Money flashbacks (LEDGER keeps them); gags |
+| Tonal `engrave` (banknote) | `studio/src/shared/tonal/**`; `out/lookdev/looks/render/hero-engrave.png` | M3 (J1) | Money flashbacks (LEDGER keeps them); gags |
 | Tonal `noir` halftone, `stipple` hedcut | same; `hero-noir.png`, `hero-stipple.png` | M3 (J2; stipple for any portrait) | A real paper's look |
 | Tonal `riso` | same | Held; no booked use | Political posters |
-| Tonal `soft`, `paint`, `softenv` | same; `out/dev/env/env-set-softenv.png` | M1 (J3, J5's fallback) and M2 (J6's grade): continuous tone | Any gag anywhere (so Ep4's image-craze repaint stays pixel, §4); any person, Mas included |
+| Tonal `soft`, `paint`, `softenv` | same; `out/lookdev/looks/env/env-set-softenv.png` | M1 (J3, J5's fallback) and M2 (J6's grade): continuous tone | Any gag anywhere (so Ep4's image-craze repaint stays pixel, §4); any person, Mas included |
 | Tonal `dither`, `pixel` | same | None (1-bit is the 1993 switch) | — |
-| Anime rig: **the look** | `studio/src/shared/anime/**`, `out/dev/anime/` | **Held.** Not a jump target. Its faces emote, and "a face that breaks" is on Mas's never list. As a look it reads as a genre quote | — |
+| Anime rig: **the look** | `studio/src/shared/anime/**`, `out/lookdev/looks/anime/` | **Held.** Not a jump target. Its faces emote, and "a face that breaks" is on Mas's never list. As a look it reads as a genre quote | — |
 | Anime rig: **the motion toolkit** | `anime/scene/fx.tsx` (`SpeedStreaks`), `Scene.tsx` (the smear filter), `props.tsx` (`WaterGlass` `ripple`) | The motion rung (A3, held); the smear transition; J6's ripple reference | `FocusLines`, `Kira` or impact frames as emphasis: anime shorthand is corn here |
-| Paper puppet | `studio/src/styleframes/puppet*`, `out/structures/puppet/` | M3 alternate A4 (the humans as cut-outs in the last class photo) | — |
+| Paper puppet | `studio/src/styleframes/puppet*`, `out/lookdev/structures/puppet/` | M3 alternate A4 (the humans as cut-outs in the last class photo) | — |
 | Satire latex puppet | `styleframes/satire*` | None | Ever: caricature pushed toward likeness |
 | Graphic shape | `styleframes/shape*` | None: a title-design look that reads as decoration here | — |
 | Screenlife | `styleframes/screen*` | None: `[POV]` screens already do this in pixel | — |
@@ -302,7 +302,7 @@ When a jump and a guardrail disagree, the guardrail wins and the jump goes.
 - **Grade.** Every non-pixel layer is graded to the scene's key light (monitor cyan, tungsten, Strip neon, candle-LED), so the jump reads as the same world in another medium.
 - **Determinism.** Hash seeds only: no `Math.random`, no `Date` (PIXEL_GUIDE §1). Footage plates are frozen files with provenance (§6).
 - **Code.**
-  - Prototypes live in `studio/src/dev/jumps/proto{1,2,3}/` (one dev entry each; compositions registered in `studio/src/styleframes/jumps/`), and render to `out/jumps/`. Each has `tools/build.sh` (picture, temp sound, mux, stills, sheet); `studio/src/dev/jumps/tools/reel.sh` builds the review reel. *(The brief's `dev/stylejumps/` path was never used.)*
+  - Prototypes live in `studio/src/dev/jumps/proto{1,2,3}/` (one dev entry each; compositions registered in `studio/src/styleframes/jumps/`), and render to `out/lookdev/jumps/`. Each has `tools/build.sh` (picture, temp sound, mux, stills, sheet); `studio/src/dev/jumps/tools/reel.sh` builds the review reel. *(The brief's `dev/stylejumps/` path was never used.)*
   - Anything the prototypes add to `src/shared/pixel` stays additive ([PIXEL_GUIDE §7](../../studio/PIXEL_GUIDE.md#7-compatibility-and-ownership)).
   - **PROPOSED for the engine owner:** a `SwitchSpec` of `{type: 'jump', layer, mask, t0, frames}` that composites a non-pixel layer under the `after` UI.
 
@@ -399,7 +399,7 @@ This is THE CURVE.
 - Build (picture, temp sound, mux, stills, sheet), then the reel, from `studio/`:
   ```
   bash src/dev/jumps/proto1/tools/build.sh      # likewise proto2, proto3
-  bash src/dev/jumps/tools/reel.sh               # out/jumps/jumps-reel.mp4
+  bash src/dev/jumps/tools/reel.sh               # out/lookdev/jumps/jumps-reel.mp4
   ```
   Deliverables never take `--scale`; previews may use `--scale=0.5`.
 - **Deliver per prototype:**
@@ -491,10 +491,10 @@ This is THE CURVE.
 - the scar row on the grey tile, the press flash (`popRoom`), the masked exit (`FALL`, `CLOSE`) and the ALYI chip fix (`hideAlyiFragment`), all in `proto1/pixel.ts`
 - the frozen lock-v2 composer (`proto1/lockv2.ts`)
 
-**Built:** `studio/src/dev/jumps/proto1/` · `out/jumps/proto1.mp4` (144 f: 2.5 s locked pixel, the click, the jump, the snap and fall, 1 s of the locked `[CU]`), `proto1-key-{1..4}-p*.png`, `proto1-sheet.png`, `proto1-steppop.mp4` (the rejected family-step in: it reads as a glitch flash). The sheet's transition row is p59, 60, 61, 63, 74, 75, 104, 105, 110, 114, 116, 120. Sound: the click decays to digital zero by p66 and stays there through the `[CU]`.
+**Built:** `studio/src/dev/jumps/proto1/` · `out/lookdev/jumps/proto1.mp4` (144 f: 2.5 s locked pixel, the click, the jump, the snap and fall, 1 s of the locked `[CU]`), `proto1-key-{1..4}-p*.png`, `proto1-sheet.png`, `proto1-steppop.mp4` (the rejected family-step in: it reads as a glitch flash). The sheet's transition row is p59, 60, 61, 63, 74, 75, 104, 105, 110, 114, 116, 120. Sound: the click decays to digital zero by p66 and stays there through the `[CU]`.
 
 **Fix pass (2026-09-25, the lead's review):**
-- **What changed.** The portrait, the perforation's place and hole shading, and the certificate's formula (the title band, `HOLDS ____ SHARES`, one serial). That build is kept for comparison in `out/jumps/history/r1/` (same file names).
+- **What changed.** The portrait, the perforation's place and hole shading, and the certificate's formula (the title band, `HOLDS ____ SHARES`, one serial). That build is kept for comparison in `out/lookdev/jumps/history/r1/` (same file names).
 - **Checks, from the encoded mp4:**
   - All 102 pixel frames (p0–62, p105–143) render identical to the previous build, to the pixel.
   - p74→p75 changes only the holes' box, and p89→p90 only the pupils (a step of about 3 px, down and to the right, toward the word).
@@ -505,7 +505,7 @@ This is THE CURVE.
   - The bust is on-model to the anime rig (its eyes and pointed locks), not a classical engraved likeness.
   - The scar row no longer sits on the perforation's line, which now misses the portrait.
 
-**Final polish (2026-09-26, the blind cold read).** A stranger with no context read the fix-pass build correctly: "a board voting a founder out on a call, told from his side"; `CANCELLED` and the `NOPEAI` certificate "land clearly on a first watch"; the portrait "a young man, late 20s to early 30s, dark spiky hair, a cowlick, a dark hoodie". Nothing felt corny. What looked cheap, and what changed (the fix-pass build is in `out/jumps/history/`, same file names; the lead's key comparison is still key-3):
+**Final polish (2026-09-26, the blind cold read).** A stranger with no context read the fix-pass build correctly: "a board voting a founder out on a call, told from his side"; `CANCELLED` and the `NOPEAI` certificate "land clearly on a first watch"; the portrait "a young man, late 20s to early 30s, dark spiky hair, a cowlick, a dark hoodie". Nothing felt corny. What looked cheap, and what changed (the fix-pass build is in `out/lookdev/jumps/history/`, same file names; the lead's key comparison is still key-3):
 
 | Cold read | Change |
 |---|---|
@@ -567,7 +567,7 @@ This is THE CURVE.
 | Shape | A star fracture from one point: radial arms and spider-web rings | One straight 1-px seam, parted to 11 px; its lower end hidden behind a tower's roof | A torn V from behind the window head, 20 px wide there, tapering to a torn hairline in open sky; passes behind the transom |
 | Cold read at 480×270 | "His window got smashed": a bullet hole, a rock (and a spider) | "A lit spire", "a pasted strip", "dead pixels" (blind read) | Builder's read only, not yet blind: "a black rip in the sky with stars in it" |
 | Guardrails | An impact on his home's window at night reads as an attack on that home ([mas-manalt](../characters/mas-manalt.md) NEVER DO) | Clean | Clean |
-| Kept as | `out/jumps/proto2-alt-glass-p075.png`, the sheet's third row | `out/jumps/history/proto2-*.png` (the build that was read), the sheet's third row | `out/jumps/proto2.mp4` |
+| Kept as | `out/lookdev/jumps/proto2-alt-glass-p075.png`, the sheet's third row | `out/lookdev/jumps/history/proto2-*.png` (the build that was read), the sheet's third row | `out/lookdev/jumps/proto2.mp4` |
 
 **What makes it a tear and not anything else:**
 - **It lives in open sky.** Its only occluders are the window head (its top runs on out of frame) and the transom (across it). Its tip stops 15 native px above the nearest roof. Nothing of the city touches it, so nothing of the city can claim it.
@@ -613,7 +613,7 @@ This is THE CURVE.
 
 Kept for the record: `seam.ts`, `glass.ts`, and the retired fracture (`crack.ts`, `sky.ts`). The Remotion `jump-proto-2-sheet` composition (in `styleframes/`) still carries the fracture build's labels, so the build doesn't use it.
 
-**Built:** `studio/src/dev/jumps/proto2/` · `out/jumps/proto2.mp4` (120 f), `proto2-p{040,056,084,112}.png`, `proto2-sheet.png` (its third row: the tear at 1:1, the seam and the glass at phone size), `proto2-sound.wav`, and `proto2-alt-glass-p075.png` (the frame that was judged; not re-rendered). The seam build is in `out/jumps/history/proto2*`; the fracture build in `out/jumps/history/r1/`.
+**Built:** `studio/src/dev/jumps/proto2/` · `out/lookdev/jumps/proto2.mp4` (120 f), `proto2-p{040,056,084,112}.png`, `proto2-sheet.png` (its third row: the tear at 1:1, the seam and the glass at phone size), `proto2-sound.wav`, and `proto2-alt-glass-p075.png` (the frame that was judged; not re-rendered). The seam build is in `out/lookdev/jumps/history/proto2*`; the fracture build in `out/lookdev/jumps/history/r1/`.
 
 **Cold test at 480×270, stated plainly.** This is the builder's own read, not a blind one. A stranger would describe a man reading at his desk at night, a floating robot eye, and a black rip at the top of the window with stars in it, which the eye turns to look at. Nothing touches the skyline, so the spire read is gone. Its edges are torn and it has no rectangle, so the pasted-strip and dead-column reads should be gone. That needs confirming blind.
 - **Risks I can see.** A dark jagged wedge hanging from the top of a sky could be taken for smoke or a funnel cloud. The stars inside it and the tear's motion (it runs, then it is pulled apart, then it closes from the tip) argue against that. The lone hairline (p30–44) reads as a crack, and should.
@@ -679,7 +679,7 @@ Kept for the record: `seam.ts`, `glass.ts`, and the retired fracture (`crack.ts`
   h(r, t) = A · e^(−k·t) · sin(ω·(r − v·t))
   ```
 - It's rendered at 1080 native as surface normals that offset the reflection (refraction), plus one specular from the monitor. Deterministic.
-- **References:** the anime rig's `WaterGlass` `ripple` parameter (`studio/src/shared/anime/scene/props.tsx`) for the look; the tonal soft dark room's glass (`out/dev/env/env-set-softenv.png`) for the grade.
+- **References:** the anime rig's `WaterGlass` `ripple` parameter (`studio/src/shared/anime/scene/props.tsx`) for the look; the tonal soft dark room's glass (`out/lookdev/looks/env/env-set-softenv.png`) for the grade.
 
 - **Knobs as built** (`proto3/ring.ts`): peak slope 0.36; the crest and trough packet narrow (it spans ~7 px behind the front: a packet wider than a young ring's radius makes a dome, which inverts the reflection like a lens); reflection displacement 14 native px per unit slope, refraction 3.5; slope shading 0.1 and height shading 0.15 (was 0.35 / 0.6: the ring must not glow); the monitor's glint only where a crest faces it.
 
@@ -705,7 +705,7 @@ Kept for the record: `seam.ts`, `glass.ts`, and the retired fracture (`crack.ts`
 
 **Must not:** show a drip, a tear, a hand, a second ring or a face, or make any sound. It is never generated.
 
-**Built:** `studio/src/dev/jumps/proto3/` · `out/jumps/proto3.mp4` (120 f), `proto3-key-{1..4}-*.png`, `proto3-sheet.png`, `proto3-sound.wav`, and `proto3-quantized.mp4` rebuilt on the new art for the record. Sound: digital zero p31–88; the room returns at −30 dB on p90.
+**Built:** `studio/src/dev/jumps/proto3/` · `out/lookdev/jumps/proto3.mp4` (120 f), `proto3-key-{1..4}-*.png`, `proto3-sheet.png`, `proto3-sound.wav`, and `proto3-quantized.mp4` rebuilt on the new art for the record. Sound: digital zero p31–88; the room returns at −30 dB on p90.
 
 **Fallback.** If the showrunner prefers genai-candidates' fully quantized ring, J6 comes out and M2 has no jump at all. The ring then stays the pixel tell it was written as. The quantized A/B reads as clean water, but it isn't a jump and it spends the tell, so the default is unquantized (decision 8). **Internal only:** no frame of this prototype leaves the room before Ep12 airs.
 
@@ -809,7 +809,7 @@ The three builds were reviewed frame by frame (strips, zooms, per-frame audio le
 
 ### 7.2 Handoffs
 
-Nothing outside this file was edited by the bible; the prototype pass edited only its own files (`studio/src/dev/jumps/**`, `studio/src/styleframes/jumps/**`, `out/jumps/**`).
+Nothing outside this file was edited by the bible; the prototype pass edited only its own files (`studio/src/dev/jumps/**`, `studio/src/styleframes/jumps/**`, `out/lookdev/jumps/**`).
 
 | To | What |
 |---|---|

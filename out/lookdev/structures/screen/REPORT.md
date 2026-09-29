@@ -1,6 +1,6 @@
 SCREENLIFE / UI-NATIVE (key: `screen`): delivered. The scene MP4, key frame and four extra stills are rendered. My files typecheck clean. I checked motion through about 10 rounds of stills and contact sheets pulled from the MP4, and did 4 full MP4 passes.
 
-**Deliverables** (in `/home/jgon/project/art/mrmas/out/structures/screen/`)
+**Deliverables** (in `/home/jgon/project/art/mrmas/out/lookdev/structures/screen/`)
 | File | Composition id | What it is |
 |---|---|---|
 | `scene.mp4` | `screen-scene` | 120 frames, 24 fps, rendered at scale 0.5 with concurrency 1 (about 40 s) |

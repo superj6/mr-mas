@@ -12,7 +12,7 @@
 | File | What |
 |---|---|
 | `ep01-act4-v5.en-sdh.act.srt` / `.vtt` | Plain SDH captions, **act clock**: 00:00:00.000 is the act's first frame (episode 12:31:00). Use for the pixel preview if it starts on act frame 0. |
-| `ep01-act4-v5.en-sdh.reel.srt` / `.vtt` | The same cues **+3.000 s**, for `out/reel/ep01-act4-v5.mp4` and `audio/reel/ep01-act4-v5/mix.wav`, which both open on a 72-frame title card. Drop the `.srt` next to the MP4 with the same base name to play it in VLC or mpv. |
+| `ep01-act4-v5.en-sdh.reel.srt` / `.vtt` | The same cues **+3.000 s**, for `out/ep01/act4/reel/ep01-act4-v5.mp4` and `audio/reel/ep01-act4-v5/mix.wav`, which both open on a 72-frame title card. Drop the `.srt` next to the MP4 with the same base name to play it in VLC or mpv. |
 | `ep01-act4-v5.ad.act.vtt` / `.ad.reel.vtt` | The audio-description cues as a WebVTT `descriptions` track, on the two clocks. |
 | `ep01-act4-v5.ad-script.md` | The AD script a describer reads from: each cue's time, shot, the gap it has and its estimated read time, plus the choices a reviewer should know and what didn't fit. |
 | `qa-v5.json` | The measurements quoted below. |

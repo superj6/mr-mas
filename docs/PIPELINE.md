@@ -15,11 +15,11 @@ This doc explains how the project is built: the code layout, the picture and sou
  ───────────────────────          ─────────────────────────────                      ───────────────
  intro/SCRIPT.md  ───────────────▶ six intro moments ─▶ src/intro (EDL + QC)
  (frames, cues, text)              (shared pixel engine)        │
-                                                                ├─▶ silent master  (out/intro/picture/*.mp4)
+                                                                ├─▶ silent master  (out/season/intro/picture/*.mp4)
                                                                 └─▶ intro-events.json ─▶ intro-sfx (spotting) ─┐
- intro/SCRIPT.md §9 ───────────────────────────────────────────────▶ theme (score, stems) ──────────────────────┼─▶ intro-mix ─▶ mux ─▶ out/intro/intro-ep1-V*.mp4
+ intro/SCRIPT.md §9 ───────────────────────────────────────────────▶ theme (score, stems) ──────────────────────┼─▶ intro-mix ─▶ mux ─▶ out/season/intro/intro-ep1-V*.mp4
                                                                      intro-vox (VO, chant, pad) ───────────────┘
- reel/epNN.json ─▶ src/reel (story-reel generator) ─▶ out/reel/epNN.mp4 ◀─ mux ◀─ audio/reel (temp bed from the same JSON)
+ reel/epNN.json ─▶ src/reel (story-reel generator) ─▶ out/season/reels/epNN.mp4 ◀─ mux ◀─ audio/reel (temp bed from the same JSON)
  episodes/ep01/production/act4 ─▶ src/episodes/ep01/act4 (rooms, cast, kits, animatic)  ◀── audio/ep01/act4/dialogue
 ```
 
@@ -169,7 +169,7 @@ These modules come from before pixel art was chosen. They stay in the repo as pa
   - Reference rigs: `masTone.ts`, `noleTone.ts`, and `env/` (the dark room and THE ORB).
   - Vector renderers in `ToneSvg.tsx`: `paint | soft | noir | riso | engrave`. Raster renderers in `ToneCanvas.tsx`: `glyph | pixel | dither | stipple`.
   - Compositions `test-tone-styles`, `tone-hero-<style>` and `tone-motion-<style>` are in `src/dev/tonetest/`. See [studio/notes/render.md](../studio/notes/render.md).
-- **`src/shared/{draw,fx,anime,comic,collage,realism,title,type,characters}` and `src/dev/<structure>/`**: the v1 outline kit and the structural test builds. Their outputs are in `out/dev/` and `out/structures/`.
+- **`src/shared/{draw,fx,anime,comic,collage,realism,title,type,characters}` and `src/dev/<structure>/`**: the v1 outline kit and the structural test builds. Their outputs are in `out/lookdev/looks/` and `out/lookdev/structures/`.
 
 ### 1.7 The intro (`src/intro`)
 
@@ -197,7 +197,7 @@ The composition is **`intro-ep1`**: 1920×1080, 24 fps, 720 frames. It is assemb
 - **Mounting:** each moment renders the same inside the intro as in its own composition.
 - **Photosensitivity:** an automated luminance audit found at most 2 flashes in any 24-frame window, against a limit of 3.
 
-Details are in [studio/notes/intro.md](../studio/notes/intro.md) and [out/intro/reports/](../out/intro/reports/).
+Details are in [studio/notes/intro.md](../studio/notes/intro.md) and [out/season/intro/reports/](../out/season/intro/reports/).
 
 **Silent master:** `bash studio/src/dev/intro/tools/master.sh 1080` runs three steps:
 1. Remotion renders a lossless PNG sequence.
@@ -206,9 +206,9 @@ Details are in [studio/notes/intro.md](../studio/notes/intro.md) and [out/intro/
    - Remotion's own encoder smeared colour across pixel edges. At the same crf, its worst frame measured 29.7 dB PSNR against the lossless render; this encode measures 34.8 dB.
 3. It verifies 720 frames, 24/1, the frame size and the pixel format, then deletes the PNGs.
 
-The output is `out/intro/picture/intro-ep1-1080p-silent.mp4`. The script and the dev-entry comments still offer a 4K option from before the render policy; see [Known issues](#6-known-issues).
+The output is `out/season/intro/picture/intro-ep1-1080p-silent.mp4`. The script and the dev-entry comments still offer a 4K option from before the render policy; see [Known issues](#6-known-issues).
 
-**Picture events:** `studio/src/dev/intro/tools/events.ts` imports each moment's own timeline constants and writes `out/intro/picture/intro-events.json`, so a retime inside a moment re-flows into the export. The file holds:
+**Picture events:** `studio/src/dev/intro/tools/events.ts` imports each moment's own timeline constants and writes `out/season/intro/picture/intro-events.json`, so a retime inside a moment re-flows into the export. The file holds:
 - the EDL and the four handoffs;
 - the 48 beats;
 - 153 events, each `{f, end?, type, moment, what, src, script?}`.
@@ -219,7 +219,7 @@ Audio cues come from this file, not from the script (§2.4).
 cd studio
 npx esbuild src/dev/intro/tools/events.ts --bundle --platform=node --outfile=<scratch>/events.cjs \
   --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty
-node <scratch>/events.cjs ../out/intro/picture/intro-events.json
+node <scratch>/events.cjs ../out/season/intro/picture/intro-events.json
 python3 src/dev/intro/tools/contact_sheet.py <png-seq-dir>                   # 48 beat stills + contact sheet
 python3 src/dev/intro/tools/handoffs.py <png-seq-dir> <intro-raw-mdinner1 frames 340-359>
 ```
@@ -228,15 +228,15 @@ The review compositions `intro-raw-<moment>` (in `src/dev/intro/review.tsx`) ren
 
 ### 1.8 Story reels (`src/reel`): in progress
 
-These are rough stick-figure previews of every episode, about 3 minutes each, generated from data. They were rendering when this was written: `out/reel/ep01.mp4`–`ep11.mp4` were done by 14:44 on 2026-09-25, and ep12 and `season.mp4` were still to come. The Ep1 full animatic (`reel-ep01-full-part1/2`) is registered but has not been rendered yet ([RENDERING §3.9](RENDERING.md#39-ep1-full-animatic-in-progress)).
+These are rough stick-figure previews of every episode, about 3 minutes each, generated from data. They were rendering when this was written: `out/season/reels/ep01.mp4`–`ep11.mp4` were done by 14:44 on 2026-09-25, and ep12 and `season.mp4` were still to come. The Ep1 full animatic (`reel-ep01-full-part1/2`) is registered but has not been rendered yet ([RENDERING §3.9](RENDERING.md#39-ep1-full-animatic-in-progress)).
 
 - **Data.** `show/reel/epNN.json` is the writers' file. It holds beats with kind, act, set, style, shot, cast, pose, face, fx and `reelDur`. The schema and normaliser are in `src/reel/schema.ts`. `ep01-full-part1/2.json` are a 1:1 full-episode animatic.
 - **Sync.** `node src/reel/sync.mjs [--watch]` copies and lints the JSON into `src/reel/data/`. A file that doesn't parse becomes an error card, so one bad save can't break the bundle.
 - **Compositions.** `registry.ts` registers a `reel-epNN` for each file (1280×720, 24 fps, a 3 s title card, then the beats), plus `reel-season`. The staging lives in `Stage.tsx`, `Sets.tsx`, `Figure.tsx` and `look.ts`.
 - **Render.** `bash studio/src/dev/reel/render_all.sh [ep03 ep07 …]` produces:
-  - `out/reel/epNN.mp4`, muxed with the temp bed from `audio/reel/` if one exists, or with a silent track;
-  - `out/reel/season.mp4`;
-  - a contact sheet for each reel in `out/reel/sheets/`.
+  - `out/season/reels/epNN.mp4`, muxed with the temp bed from `audio/reel/` if one exists, or with a silent track;
+  - `out/season/reels/season.mp4`;
+  - a contact sheet for each reel in `out/season/reels/sheets/`.
 
   It honours the `CONC`, `NO_SEASON` and `NO_SHEETS` environment variables.
 - **Beds.** The temp music beds are described in §2.7.
@@ -387,7 +387,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 
 **Intro spotting** (`audio/intro-sfx/build_intro_sfx.py`):
 1. It starts from the frames in SCRIPT v2.1 §9.3, which are the contract.
-2. If `out/intro/picture/intro-events.json` exists, `parse_picture_events()` maps events to cue keys by type, moment and text: `orb.scan`, `collar.pop1`, `post.click`, `dialog.ok` and so on. Those picture frames override the script frames. Typing is cued keystroke by keystroke from the cold open's own timeline.
+2. If `out/season/intro/picture/intro-events.json` exists, `parse_picture_events()` maps events to cue keys by type, moment and text: `orb.scan`, `collar.pop1`, `post.click`, `dialog.ok` and so on. Those picture frames override the script frames. Typing is cued keystroke by keystroke from the cold open's own timeline.
 3. Every delta from the script goes to `picture-sync.json`. The full list goes to `spotting.json` and `spotting.md`.
 4. It renders:
    - `intro-sfx_stem.wav`, the main SFX bus;
@@ -439,7 +439,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 - **Stems.** The V1 music, SFX and dialogue stems sum to the mix (residual −132 dBFS).
 - **Encode and mux.** `encode_mux.sh` encodes AAC-LC at 256 kb/s with Remotion's ffmpeg, then muxes it with the silent picture. The video is stream-copied, so it is bit-identical to the silent master.
 - **QA.** `qa/deliverables_qa.json` covers loudness, peaks, lengths, the decoded-AAC checks, A/V sync at 13 frames, and every cue's onset.
-- **Outputs.** `audio/intro-mix/intro-ep1-mix-V{1..4}-*.wav` and `.m4a`; `out/intro/intro-ep1-V{1..4}-1080p.mp4`.
+- **Outputs.** `audio/intro-mix/intro-ep1-mix-V{1..4}-*.wav` and `.m4a`; `out/season/intro/intro-ep1-V{1..4}-1080p.mp4`.
 
 ### 2.7 Temp beds
 
@@ -461,7 +461,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 - **The showrunner** is the human user. They give direction, answer at approval gates, and make the binding calls: the style pick, the main title, the names, the POV, the render policy.
 - **Everything else is done by AI coding agents** (Claude Code sessions), launched in parallel by workflow scripts.
   - Each agent gets a role, a brief, the files it owns and the docs it must read.
-  - Each returns a written report. The reports are kept: `out/structures/*/REPORT.md`, `out/intro/reports/*.md`, `studio/notes/_report-*.md`, `show/episodes/ep01/production/act4/_prep-reports/`.
+  - Each returns a written report. The reports are kept: `out/lookdev/structures/*/REPORT.md`, `out/season/intro/reports/*.md`, `studio/notes/_report-*.md`, `show/episodes/ep01/production/act4/_prep-reports/`.
 - **Agents can't hear, and they see only the images they render.** Picture work is checked by rendering stills and reading them back. Audio work is checked by measurement. That is why every audio deliverable is marked "not auditioned".
 
 ### 3.2 Patterns
@@ -483,11 +483,11 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 | 1 | **Research sweeps** | Research sweep + critic. Eras: pre-2019, 2019–23, 2024–Sep 2026. Plus a craft sweep (title design, pipeline, music, voice, parody law), a gaps critic, three "worldcast" sweeps (industry, US politics, international and culture), a worldcast critic, cast integration and a flashback architect. The 200-call web-search budget ran out, so later checks used direct page fetches. | Tagged dossiers; the master timeline; the cast | [show/_sources/research/](../show/_sources/research/) |
 | 2 | **Creative package v1** | Design panel + critics. Three show drafts (Prestige, Absurd, Caper) were scored and merged by a head writer. Three opening drafts were scored by a title-sequence director. Three critics followed: comedy, grounding and fairness, pacing and build. | [plan-v1.md](../show/_sources/plan-v1.md), [final.md](../show/_sources/design/final.md). Approved by the showrunner. | [show/_sources/design/](../show/_sources/design/) |
 | 3 | **Writers' room build-out** | Parallel writers + a coordinator consistency pass | The bible, ~80 character files, 12 episodes × 7 files, the timeline and flashback map, the gag tracker, the world files | [show/INDEX.md](../show/INDEX.md) (coordinator log at the end) |
-| 4 | **Lookdev: style spectrum** | Builders. One shared tonal rig, 9 renderers, hero stills and 3 s motion tests; title, environment and cast rigs. | Tonal renderers (§1.6) | [studio/notes/render.md](../studio/notes/render.md), `out/dev/` |
-| 5 | **Structural style tests** | Builders, one per option: the 8 options in [style-status §5](../show/bible/style-status.md), plus a collage fallback. Five delivered a full package (pixeladv, puppet, satire, screen, shape), each staging the same 5 s Mas-and-Nole test beat ("I came up with the name!") with a key frame, extras and a report. Anime, comic, collage and realism have dev renders only. | Key frames, extras, reports | [out/structures/](../out/structures/) |
-| 6 | **Pixel intro build** | Builders → art director → polish → integrator. The engine and two cast rigs came first. Then six moments ran in parallel, plus a roll-call build and review. Then an [art-director critique](../studio/notes/_pixel-critique.md), polish passes [A](../studio/notes/_pixel-polish-a.md) and [B](../studio/notes/_pixel-polish-b.md), [integration](../studio/notes/intro.md), and a [picture fix pass](../out/intro/reports/picFix.md). | `intro-ep1`, silent master, events export | `studio/notes/`, `out/pixel/`, `out/intro/` |
+| 4 | **Lookdev: style spectrum** | Builders. One shared tonal rig, 9 renderers, hero stills and 3 s motion tests; title, environment and cast rigs. | Tonal renderers (§1.6) | [studio/notes/render.md](../studio/notes/render.md), `out/lookdev/looks/` |
+| 5 | **Structural style tests** | Builders, one per option: the 8 options in [style-status §5](../show/bible/style-status.md), plus a collage fallback. Five delivered a full package (pixeladv, puppet, satire, screen, shape), each staging the same 5 s Mas-and-Nole test beat ("I came up with the name!") with a key frame, extras and a report. Anime, comic, collage and realism have dev renders only. | Key frames, extras, reports | [out/lookdev/structures/](../out/lookdev/structures/) |
+| 6 | **Pixel intro build** | Builders → art director → polish → integrator. The engine and two cast rigs came first. Then six moments ran in parallel, plus a roll-call build and review. Then an [art-director critique](../studio/notes/_pixel-critique.md), polish passes [A](../studio/notes/_pixel-polish-a.md) and [B](../studio/notes/_pixel-polish-b.md), [integration](../studio/notes/intro.md), and a [picture fix pass](../out/season/intro/reports/picFix.md). | `intro-ep1`, silent master, events export | `studio/notes/`, `out/lookdev/pixel/`, `out/season/intro/` |
 | 7 | **Intro script** | Draft + critics → revise. v2.0 got audio, timing and tone reviews ([history/](../show/intro/history/)). The v2.1 edit removed spoilers and added the roll call. A checker pass followed. | [SCRIPT.md](../show/intro/SCRIPT.md) v2.1 | `show/intro/` |
-| 8 | **Audio** | Builders, then integration and review. Theme, SFX board, vocals and voice casting ran in parallel, then a sketch mix. Then intro-vox, intro-sfx and intro-mix were rebuilt to v2.1 and to the built picture. A review pass (sound-supervisor and editor notes) led to the [audio fix pass](../out/intro/reports/audFix.md). | Masters, stems, mixes, muxes | `audio/`, [out/intro/reports/](../out/intro/reports/) |
+| 8 | **Audio** | Builders, then integration and review. Theme, SFX board, vocals and voice casting ran in parallel, then a sketch mix. Then intro-vox, intro-sfx and intro-mix were rebuilt to v2.1 and to the built picture. A review pass (sound-supervisor and editor notes) led to the [audio fix pass](../out/season/intro/reports/audFix.md). | Masters, stems, mixes, muxes | `audio/`, [out/season/intro/reports/](../out/season/intro/reports/) |
 | 9 | **Format planning** | Three analyses → a ruling. [production-estimates](../show/format/production-estimates.md) was measured from the agent transcripts. It was read alongside [content-density](../show/format/content-density.md) and [pacing-model](../show/format/pacing-model.md). | [FORMAT-DECISION.md](../show/format/FORMAT-DECISION.md) (proposed) | `show/format/` |
 | 10 | **Episode development** | Draft + table read. Ep1 script draft 2 went through table read 1. Story reels were built for all 12 episodes. | [ep01/script.md](../show/episodes/ep01/script.md), `show/reel/*.json` | `show/episodes/`, `show/reel/` |
 | 11 | **POV design** | Design panel + critics. Three proposals (the Confiding Narrator, the Player-Character, the Intimate Chamber Piece) were scored and synthesized. Act Four was redrafted as draft 3. Three critics (comedy; POV and unreliability; intimacy, framing and pacing) held a table read, which led to draft 3.1 and rule revisions. | [pov-and-framing.md](../show/bible/pov-and-framing.md), [pov-changes.md](../show/episodes/ep01/production/act4/pov-changes.md) | `show/bible/` |
@@ -592,12 +592,12 @@ These are technical caveats for anyone rebuilding from a clone.
   - `master.sh` and `verify.py` also default their scratch folder to a session path under `/tmp/claude-1000/`. Both scripts create that folder if it's missing; `master.sh` takes a scratch folder as its second argument and `verify.py` reads `MIX_TMP`.
   - To rebuild elsewhere, clone to that path, symlink it, or rewrite the constant. [RENDERING §1.1](RENDERING.md#11-paths-where-the-repo-must-live) has the commands for all three.
 - **4K leftovers (fixed).** `master.sh` defaults to 1080p (`4k`/`all` remain only for legacy use). `encode_mux.sh` and `verify.py` handle a 4K file only if one exists. Under the render policy, don't render 4K.
-- **Reel temp bundle.** `render_all.sh` keeps a bundle of about 30 MB in `out/reel/.tmp/` while it runs and deletes it at the end. `.tmp/` is gitignored.
+- **Reel temp bundle.** `render_all.sh` keeps a bundle of about 30 MB in `out/season/reels/.tmp/` while it runs and deletes it at the end. `.tmp/` is gitignored.
 - **Not auditioned.** No mix, stem, voice or bed has been listened to by a person yet.
 - **Voice rebuilds may differ slightly.** The TTS cache is gitignored, so a fresh VO rebuild re-renders through Kokoro. The result may not match the committed stems bit for bit. None of this matters for a video re-render, because every voice stem and mix is committed.
 - **Stale docs.**
   - [show/INDEX.md](../show/INDEX.md) still says the visual style is PENDING. The decision box in [style-status.md](../show/bible/style-status.md) is current; the rest of that page is kept as history.
-  - The Deviations table in [studio/notes/intro.md](../studio/notes/intro.md) predates the [picture fix pass](../out/intro/reports/picFix.md).
+  - The Deviations table in [studio/notes/intro.md](../studio/notes/intro.md) predates the [picture fix pass](../out/season/intro/reports/picFix.md).
   - The intro switch-plan table in [PIXEL_GUIDE §2](../studio/PIXEL_GUIDE.md) predates the v2.1 retimes. For current frames, use `intro-events.json`.
   - [LISTENING_GUIDE.md](../audio/LISTENING_GUIDE.md) describes the superseded sketch mixes.
 - **Typecheck.** The existing errors are in the lookdev code under `src/dev/realism`, per the builder notes.
@@ -616,12 +616,12 @@ A fresh clone already has every audio master, stem and QA file. What it lacks is
 | 0 | Repo location | clone to `/home/jgon/project/art/mrmas`, or symlink it ([RENDERING §1.1](RENDERING.md#11-paths-where-the-repo-must-live)) | the hard-coded script paths resolve |
 | 1 | Studio dependencies | `cd studio && npm ci && npx remotion browser ensure` | `node_modules/` (includes Remotion's Chrome and ffmpeg) |
 | 2 | Audio environments and samples (not needed for the intro video itself) | the venv loop in §2.1, then `bash audio/samples/fetch_samples.sh` | `audio/.venv*`, `audio/samples/` |
-| 3 | Intro silent master | `bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"` | `out/intro/picture/intro-ep1-1080p-silent.mp4` |
-| 4 | *optional:* picture events (after any picture change) | the esbuild + node commands in §1.7 | `out/intro/picture/intro-events.json` |
+| 3 | Intro silent master | `bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"` | `out/season/intro/picture/intro-ep1-1080p-silent.mp4` |
+| 4 | *optional:* picture events (after any picture change) | the esbuild + node commands in §1.7 | `out/season/intro/picture/intro-events.json` |
 | 5 | *optional:* score (after a score change) | `cd audio/theme && ../.venv-theme/bin/python build.py V1 V2 V3 V4 motif` (+ analyze, stemtable, make_cues) | `audio/theme/theme-V*.wav`, `stems/`, `cues.json` |
 | 6 | *optional:* intro voices | `audio/intro-vox/scripts`: `build_vo.py` → `build_chant.py` → `build_pad.py` → `assemble.py` (with `.venv-vocals`) | `audio/intro-vox/*.wav`, `stems/` |
 | 7 | *optional:* intro SFX (after step 4) | `audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py` | `audio/intro-sfx/*.wav`, `spotting.*` |
-| 8 | Intro muxed videos (and, after a sound change, the mixes) | the 1080p mux loop in [RENDERING's quick start](RENDERING.md#quick-start-re-render-the-intro-in-one-go) step 3; after a sound change, [RENDERING §3.1 step 7](RENDERING.md#31-the-final-intro) first. `run_all.sh` also works (the 4K steps are skipped without a 4K master). | `out/intro/intro-ep1-V{1..4}-1080p.mp4` |
+| 8 | Intro muxed videos (and, after a sound change, the mixes) | the 1080p mux loop in [RENDERING's quick start](RENDERING.md#quick-start-re-render-the-intro-in-one-go) step 3; after a sound change, [RENDERING §3.1 step 7](RENDERING.md#31-the-final-intro) first. `run_all.sh` also works (the 4K steps are skipped without a 4K master). | `out/season/intro/intro-ep1-V{1..4}-1080p.mp4` |
 | 9 | Story-reel beds | `audio/.venv/bin/python audio/reel/build_all.py` | `audio/reel/epNN.wav` |
-| 10 | Story reels | `bash studio/src/dev/reel/render_all.sh` | `out/reel/epNN.mp4`, `season.mp4`, `sheets/` |
-| 11 | Other previews (animatic, lookdev, structure tests, moments, Act Four assets) | [RENDERING §3.2–§3.6 and §3.10](RENDERING.md#3-recipes); also the `npx remotion still/render` lines in each dev entry's header comment and in `studio/notes/<key>.md` | `out/animatic/`, `out/dev/`, `out/structures/`, `out/pixel/`, `out/ep01/` |
+| 10 | Story reels | `bash studio/src/dev/reel/render_all.sh` | `out/season/reels/epNN.mp4`, `season.mp4`, `sheets/` |
+| 11 | Other previews (animatic, lookdev, structure tests, moments, Act Four assets) | [RENDERING §3.2–§3.6 and §3.10](RENDERING.md#3-recipes); also the `npx remotion still/render` lines in each dev entry's header comment and in `studio/notes/<key>.md` | `out/season/intro/animatic/`, `out/lookdev/looks/`, `out/lookdev/structures/`, `out/lookdev/pixel/`, `out/ep01/` |

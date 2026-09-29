@@ -8,7 +8,7 @@ theme files it samples have changed since its WAV was made (a content hash kept 
   audio/.venv/bin/python audio/reel/build_all.py ep04 ep07       # just these
   audio/.venv/bin/python audio/reel/build_all.py --force         # rebuild everything
   audio/.venv/bin/python audio/reel/build_all.py --all           # also other reel JSONs (ep01-full-part1 ...)
-  audio/.venv/bin/python audio/reel/build_all.py --mux           # also mux out/reel/epNN.mp4 + WAV -> audio/reel/preview/
+  audio/.venv/bin/python audio/reel/build_all.py --mux           # also mux out/season/reels/epNN.mp4 + WAV -> audio/reel/preview/
   audio/.venv/bin/python audio/reel/build_all.py --jobs 1        # one at a time (low memory)
 """
 from __future__ import annotations
@@ -27,7 +27,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 REELS = os.path.join(ROOT, 'show', 'reel')
-PICTURE = os.path.join(ROOT, 'out', 'reel')
+PICTURE = os.path.join(ROOT, 'out/season/reels')
 PREVIEW = os.path.join(HERE, 'preview')
 QA = os.path.join(HERE, 'qa')
 FFMPEG_CANDIDATES = [os.path.join(ROOT, 'studio', 'node_modules', '@remotion', 'compositor-linux-x64-gnu', 'ffmpeg'),
@@ -83,7 +83,7 @@ def ffmpeg():
 
 
 def mux(key):
-    """Preview: the generator's picture (out/reel/<key>.mp4) with this bed as its audio."""
+    """Preview: the generator's picture (out/season/reels/<key>.mp4) with this bed as its audio."""
     mp4 = os.path.join(PICTURE, f'{key}.mp4')
     wav = os.path.join(HERE, f'{key}.wav')
     if not (os.path.exists(mp4) and os.path.exists(wav)):
@@ -104,7 +104,7 @@ def main():
     ap.add_argument('only', nargs='*', help='reel keys to build (ep03, ep04 ...); default: all')
     ap.add_argument('--force', action='store_true', help='rebuild even if up to date')
     ap.add_argument('--all', action='store_true', help='also reel JSONs that are not epNN.json')
-    ap.add_argument('--mux', action='store_true', help='mux out/reel/<key>.mp4 with the bed into audio/reel/preview/')
+    ap.add_argument('--mux', action='store_true', help='mux out/season/reels/<key>.mp4 with the bed into audio/reel/preview/')
     ap.add_argument('--jobs', type=int, default=3, help='parallel renders (default 3; each needs ~1.5 GB)')
     a = ap.parse_args()
 

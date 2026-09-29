@@ -22,9 +22,9 @@ bottom para, diffusion bloom, grain.
 
 ## Renders
 ```
-npx remotion still  src/dev/anime/entry.tsx anime-lookdev   ../out/dev/anime/lookdev.png   --bundle-cache=false --log=error
-npx remotion still  src/dev/anime/entry.tsx anime-rig-sheet ../out/dev/anime/rig-sheet.png --bundle-cache=false --log=error
-npx remotion render src/dev/anime/entry.tsx anime-motion    ../out/dev/anime/motion.mp4    --bundle-cache=false --log=error --concurrency=2
+npx remotion still  src/dev/anime/entry.tsx anime-lookdev   ../out/lookdev/looks/anime/lookdev.png   --bundle-cache=false --log=error
+npx remotion still  src/dev/anime/entry.tsx anime-rig-sheet ../out/lookdev/looks/anime/rig-sheet.png --bundle-cache=false --log=error
+npx remotion render src/dev/anime/entry.tsx anime-motion    ../out/lookdev/looks/anime/motion.mp4    --bundle-cache=false --log=error --concurrency=2
 ```
 Cost on this CPU box: still ~30-45 s (incl. bundle); motion ~15 s/frame/worker → 72 frames ≈ 9.5 min at concurrency 2.
 The diffusion pass (`<use href=#scene>` + blur) roughly doubles frame cost. Drop it for animatics.

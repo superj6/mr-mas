@@ -15,7 +15,7 @@ into tokens. Everything uses the shared engine (`src/shared/pixel`) and the cast
 
 The canvas is native 480x270 at 4x nearest-neighbour, indexed master palette only.
 
-## Deliverables (`out/pixel/moments/`)
+## Deliverables (`out/season/intro/moments/`)
 | file | frame | what |
 |---|---|---|
 | `mcoldopen.mp4` | f0-119 | the span, 960x540, 24 fps, 120 frames (`--scale=0.5`) |
@@ -29,9 +29,9 @@ The canvas is native 480x270 at 4x nearest-neighbour, indexed master palette onl
 Composition id: **`mcoldopen`** (120 frames). Its frame numbers are the intro frame numbers.
 
 ```
-npx remotion still  src/dev/mcoldopen/entry.tsx mcoldopen ../out/pixel/moments/mcoldopen-04-scan.png --frame=102 --bundle-cache=false --log=error
-npx remotion render src/dev/mcoldopen/entry.tsx mcoldopen ../out/pixel/moments/mcoldopen.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-python3 src/dev/mcoldopen/tools/scratch_audio.py ../out/pixel/moments/mcoldopen-scratch-audio.wav
+npx remotion still  src/dev/mcoldopen/entry.tsx mcoldopen ../out/season/intro/moments/mcoldopen-04-scan.png --frame=102 --bundle-cache=false --log=error
+npx remotion render src/dev/mcoldopen/entry.tsx mcoldopen ../out/season/intro/moments/mcoldopen.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+python3 src/dev/mcoldopen/tools/scratch_audio.py ../out/season/intro/moments/mcoldopen-scratch-audio.wav
 ```
 For the fast Node preview (about 1 s), run `npx esbuild src/dev/mcoldopen/tools/preview.ts --bundle --platform=node --outfile=<scratch>/mco.js`,
 then `node <scratch>/mco.js <outDir> <scale> frame:<f> | strip:<f,f,..> | screen:<f> | macro:<P>:<f> | world:<f>`.

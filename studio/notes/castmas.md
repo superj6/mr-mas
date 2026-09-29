@@ -4,7 +4,7 @@ The character art for the intro, in the pixeladv structure: native 480x270 grid,
 `PAL` colours only, light done by swapping hand-ordered ramps. Every sprite and portrait is a pure function that
 returns an `Img` (Int32 colour map, -1 = transparent). Nothing is scaled, rotated or tweened.
 
-## Deliverables (`out/pixel/cast/`)
+## Deliverables (`out/lookdev/pixel/cast/`)
 | file | composition | what |
 |---|---|---|
 | `castmas-sheet.png` | `castmas-sheet` | lineup: 3 portraits, the Mas mouth/lid/eye-dart set, every room sprite, BASE palette |
@@ -13,9 +13,9 @@ returns an `Img` (Int32 colour map, -1 = transparent). Nothing is scaled, rotate
 
 Render (from `studio/`):
 ```
-npx remotion still  src/dev/castmas/entry.tsx castmas-sheet  ../out/pixel/cast/castmas-sheet.png --bundle-cache=false --log=error
-npx remotion still  src/dev/castmas/entry.tsx castmas-extra  ../out/pixel/cast/castmas-extra.png --bundle-cache=false --log=error
-npx remotion render src/dev/castmas/entry.tsx castmas-motion ../out/pixel/cast/castmas-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion still  src/dev/castmas/entry.tsx castmas-sheet  ../out/lookdev/pixel/cast/castmas-sheet.png --bundle-cache=false --log=error
+npx remotion still  src/dev/castmas/entry.tsx castmas-extra  ../out/lookdev/pixel/cast/castmas-extra.png --bundle-cache=false --log=error
+npx remotion render src/dev/castmas/entry.tsx castmas-motion ../out/lookdev/pixel/cast/castmas-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 ```
 Fast preview without Remotion (seconds): bundle `src/dev/castmas/tools/preview.ts` with esbuild for node and run it
 with `<outDir> <scale> sheet | extra | motion:<f> | wip:<desk|deskz|mport|kid|eras|gerg<f>|alyi>`.

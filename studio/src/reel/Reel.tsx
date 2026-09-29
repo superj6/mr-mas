@@ -181,7 +181,7 @@ const notesFor = (beat: Beat): string[] => {
       n.push('set-piece · letterboxed');
       break;
     case 'intro':
-      n.push('intro stand-in · the 0:30 main title has its own animatic: out/animatic/intro-animatic.mp4');
+      n.push('intro stand-in · the 0:30 main title has its own animatic: out/season/intro/animatic/intro-animatic.mp4');
       break;
     case 'card':
       if (!beat.placeholder) n.push('full-frame card');

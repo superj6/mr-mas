@@ -8,7 +8,7 @@
   - **wall:** clock time.
   - **finished second:** a second that ends up in the cut, not frames that were built and then superseded.
 
-Related: [INTRO_PIXEL_BRIEF](../../studio/INTRO_PIXEL_BRIEF.md) · [PIXEL_GUIDE](../../studio/PIXEL_GUIDE.md) · [pixeladv REPORT](../../out/structures/pixeladv/REPORT.md) · [bible/overview](../bible/overview.md) · [flashback map](../timeline/flashback-map.md)
+Related: [INTRO_PIXEL_BRIEF](../../studio/INTRO_PIXEL_BRIEF.md) · [PIXEL_GUIDE](../../studio/PIXEL_GUIDE.md) · [pixeladv REPORT](../../out/lookdev/structures/pixeladv/REPORT.md) · [bible/overview](../bible/overview.md) · [flashback map](../timeline/flashback-map.md)
 
 ---
 

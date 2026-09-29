@@ -2,7 +2,7 @@
 
 How many minutes of genuinely entertaining screen time the current drafts support, where they're overstuffed or thin, and what to cut, merge or invent for a 22, 11 or 6–8 minute format. Eps 1–4 are costed beat by beat. Eps 5–12 are read at outline level only.
 
-- **As of:** 2026-09-25. Built from each episode's `outline.md`, `beats.md`, `facts.md`, `gags.md` and `flashbacks.md`; the [master timeline](../timeline/master-timeline.md) from Nov 2022 to Apr 2025; the [gag tracker](../gags/recurring-gags.md); the [flashback map](../timeline/flashback-map.md); and the pixel production references (`studio/PIXEL_GUIDE.md`, `studio/INTRO_PIXEL_BRIEF.md` v2.1, `out/structures/pixeladv/REPORT.md`).
+- **As of:** 2026-09-25. Built from each episode's `outline.md`, `beats.md`, `facts.md`, `gags.md` and `flashbacks.md`; the [master timeline](../timeline/master-timeline.md) from Nov 2022 to Apr 2025; the [gag tracker](../gags/recurring-gags.md); the [flashback map](../timeline/flashback-map.md); and the pixel production references (`studio/PIXEL_GUIDE.md`, `studio/INTRO_PIXEL_BRIEF.md` v2.1, `out/lookdev/structures/pixeladv/REPORT.md`).
 - **Status:** analysis for the room. It changes no episode file. Beat numbers (#) refer to each episode's `beats.md`.
 - **Precision:** these are planning estimates, good to about ±15%. They are not timings. Every per-beat number is in the [appendix](#appendix-per-beat-costing).
 

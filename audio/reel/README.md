@@ -18,7 +18,7 @@ It is a temp bed. It is not score. Its job is to make a 2–3 minute story previ
 | `epNN.wav` | The bed for `show/reel/epNN.json`. 48 kHz, 24-bit, stereo. It is exactly as long as the reel picture: `frames × 2000` samples. |
 | `qa/epNN.json` | Everything about one build:<br>• the length (frames, samples, and `sum_reelDur_plus_title_s` for comparison);<br>• the loudness (bed short-term median / p5 / p95, each accent's momentary max, true peak);<br>• the chord at every change;<br>• every accent, with its source;<br>• the flashback, GLYPH and intro regions;<br>• the layer gains;<br>• `inputs_hash` (what the rebuild check compares). |
 | `qa/summary.json` | The last `build_all.py` run: what was built, what failed, and one row per reel. |
-| `preview/epNN.mp4` | Written only with `--mux`, and only where the generator has rendered `out/reel/epNN.mp4`. The picture stream is copied untouched, and this bed is added as AAC 192 kb/s. |
+| `preview/epNN.mp4` | Written only with `--mux`, and only where the generator has rendered `out/season/reels/epNN.mp4`. The picture stream is copied untouched, and this bed is added as AAC 192 kb/s. |
 | `reelbed.py` | The renderer: one reel JSON in, one WAV and one QA JSON out. |
 | `build_all.py` | The batch builder. Re-runnable, and incremental. |
 
@@ -30,7 +30,7 @@ Use the audio venv, from the project root:
 audio/.venv/bin/python audio/reel/build_all.py            # every show/reel/epNN.json; rebuilds only what changed
 audio/.venv/bin/python audio/reel/build_all.py ep04 ep07  # just these reels
 audio/.venv/bin/python audio/reel/build_all.py --force    # rebuild everything
-audio/.venv/bin/python audio/reel/build_all.py --mux      # also make preview/epNN.mp4 wherever out/reel/epNN.mp4 exists
+audio/.venv/bin/python audio/reel/build_all.py --mux      # also make preview/epNN.mp4 wherever out/season/reels/epNN.mp4 exists
 audio/.venv/bin/python audio/reel/build_all.py --all      # also reel JSONs that aren't epNN (e.g. ep01-full-part1)
 audio/.venv/bin/python audio/reel/reelbed.py show/reel/ep03.json -o /tmp/ep03.wav   # one reel, anywhere
 ```
@@ -54,7 +54,7 @@ The bed follows the picture's clock, not a sum of seconds. `reelbed.load_reel` m
   - the 72-frame (3.000 s) title card comes first;
   - each beat ends at `72 + Math.round(Σ reelDur × 24)`;
   - every beat gets at least one frame.
-- **Checked:** the ep01 bed is 4224 frames (176.000 s). That is the frame count of the generator's `out/reel/ep01.mp4`.
+- **Checked:** the ep01 bed is 4224 frames (176.000 s). That is the frame count of the generator's `out/season/reels/ep01.mp4`.
 
 When every `reelDur` is a whole number of frames, the length equals Σ `reelDur` + 3 s. Otherwise the frame rounding wins, and the QA file shows both numbers.
 

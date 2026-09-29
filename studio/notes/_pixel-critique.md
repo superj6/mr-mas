@@ -1,6 +1,6 @@
 # PIXELCRITIC: art-director review of the MR. MAS intro, pixel edition
 
-I looked at every PNG in `out/pixel/` (the cast sheets, the engine demos and the moment stills) against the approved pixeladv key. For each MP4 I pulled every frame out with Remotion's bundled ffmpeg and read contact sheets and zoomed crops. I rendered nothing new, changed no builder files, and did not listen to any of the audio.
+I looked at every PNG in `out/lookdev/pixel/` (the cast sheets, the engine demos and the moment stills) against the approved pixeladv key. For each MP4 I pulled every frame out with Remotion's bundled ffmpeg and read contact sheets and zoomed crops. I rendered nothing new, changed no builder files, and did not listen to any of the audio.
 
 ## Overall verdict
 
@@ -170,7 +170,7 @@ So the "full BASE Woodrose" mostly reads as a navy dot-matrix.
 
 ## Files
 
-Review evidence (contact sheets and zoomed crops) is in `/home/jgon/project/art/mrmas/out/dev/pixelcritic/`:
+Review evidence (contact sheets and zoomed crops) is in `/home/jgon/project/art/mrmas/out/lookdev/looks/pixelcritic/`:
 - `mcoldopen-sheet-a.png`
 - `mcoldopen-sheet-b.png`
 - `mcoldopen-face-acting.png`

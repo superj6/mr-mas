@@ -8,7 +8,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STUDIO="$(cd "$HERE/../../../.." && pwd)"
 ROOT="$(cd "$STUDIO/.." && pwd)"
-OUT="$ROOT/out/jumps"
+OUT="$ROOT/out/lookdev/jumps"
 TMP="${1:-$(mktemp -d)}"
 PY="$ROOT/audio/.venv-mix/bin/python"
 FFD="$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu"

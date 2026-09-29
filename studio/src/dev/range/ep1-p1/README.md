@@ -7,7 +7,7 @@ in place and readable for the whole clip (round 6). The brief is `show/bible/sty
 external API was called. R24 (the whole pane in clay, `ep1-p1-b.mp4`) is not ruled on, so that cut is not built.
 Current state: **round 6** (2026-09-27). Round 5's notes follow round 6's; where they disagree, round 6 wins.
 
-## Outputs (`out/range/ep1/`)
+## Outputs (`out/lookdev/range/ep1/`)
 
 | File | What |
 |---|---|

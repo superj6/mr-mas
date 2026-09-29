@@ -34,7 +34,7 @@ Mas is the shared `masTone` (read-only import) with an extra head shift for the 
 Render (use a private bundle dir; the shared scratch `bundle` name collides with other builders):
 ```
 npx remotion bundle src/dev/screen/entry.tsx --out-dir=<private>/bundle --bundle-cache=false
-npx remotion render <private>/bundle screen-scene ../out/structures/screen/scene.mp4 --scale=0.5 --concurrency=1
+npx remotion render <private>/bundle screen-scene ../out/lookdev/structures/screen/scene.mp4 --scale=0.5 --concurrency=1
 ```
 The 120 frames take about 40 s at half scale on this CPU box.
 

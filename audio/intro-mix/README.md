@@ -11,7 +11,7 @@ This is the re-recording mix of the 30.000 s Ep1 opening (SCRIPT v2.1 §9.6). V1
 | `intro-ep1-mix-V3-pixelswing.wav` / `.m4a` | Alternate |
 | `intro-ep1-mix-V4-pianopixels.wav` / `.m4a` | Alternate |
 | `stems/V1/intro-ep1-V1-stem-{music,sfx,dialogue}.wav` | V1 mix stems. They are taken after the master gain and after the limiter, so music + sfx + dialogue equals the mix (residual −132 dBFS). |
-| `../../out/intro/intro-ep1-V1-1080p.mp4`, `-V1-4k.mp4`, `-V2-1080p.mp4`, `-V3-1080p.mp4`, `-V4-1080p.mp4` | Picture masters with each mix muxed in. The video stream is copied (its packets are bit-identical to the silent masters), and the audio is the same AAC stream as the matching `.m4a`. |
+| `../../out/season/intro/intro-ep1-V1-1080p.mp4`, `-V1-4k.mp4`, `-V2-1080p.mp4`, `-V3-1080p.mp4`, `-V4-1080p.mp4` | Picture masters with each mix muxed in. The video stream is copied (its packets are bit-identical to the silent masters), and the audio is the same AAC stream as the matching `.m4a`. |
 | `qa/deliverables_qa.json` | Loudness, peaks, lengths, the decoded-AAC checks, the A/V sync checks for every file, the picture-sync check (`picture_sync`) and every cue's audible start against its frame (`sfx_onsets`) |
 | `qa/mix_build.json` | Per-mix settings: music trim, stem and bus rides, vocal faders, VO gain and centring, the bookend perspective, master gain, limiter activity, and the review's balance checks re-measured (`checks`) |
 | `qa/inputs.json` | Measurements of the input buses before mixing, including the probe that confirms the baked-in duck |
@@ -77,7 +77,7 @@ The sound supervisor's P1–P3 notes and the editor's loudness notes. The tables
 
 ## A/V sync
 
-- **Picture.** Muxed onto the silent masters of 10:09 (1080p) and 10:11 (4K). The SFX build read `out/intro/picture/intro-events.json` of 10:08 (md5 `f37ea409…`), and `verify.py` confirms that is the file on disk now.
+- **Picture.** Muxed onto the silent masters of 10:09 (1080p) and 10:11 (4K). The SFX build read `out/season/intro/picture/intro-events.json` of 10:08 (md5 `f37ea409…`), and `verify.py` confirms that is the file on disk now.
 - **Cues on picture.** All 42 picture-keyed cues sit on their picture frames. The typed line matches the picture keystroke for keystroke: f18–49 and f64–83, with shift+enter at f63.
 - **Audible starts.** Each of the 103 main and blip cues starts within −1 to +20 ms of its frame, measured on its own file. The one exception is the rumble, which grows in by design (+40 ms).
 - **Lengths.** Every MP4 has 720 video frames at 24 fps, both streams start at pts 0, and both last 30.000 s. The video packets are bit-identical to the silent masters (stream copy).

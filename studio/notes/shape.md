@@ -21,8 +21,8 @@ Moody and adult: no outlines, no big shiny eyes, no bounce.
 
 Render (from `studio/`):
 ```
-npx remotion still  src/dev/shape/entry.tsx shape-key ../out/structures/shape/key.png --bundle-cache=false --log=error
-npx remotion render src/dev/shape/entry.tsx shape-scene ../out/structures/shape/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion still  src/dev/shape/entry.tsx shape-key ../out/lookdev/structures/shape/key.png --bundle-cache=false --log=error
+npx remotion render src/dev/shape/entry.tsx shape-scene ../out/lookdev/structures/shape/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 ```
 Tip on a shared machine: `npx remotion bundle ... --out-dir=<private dir>` once, then render stills from that dir
 (use a dir name nobody else uses — the scratchpad is shared between builders).

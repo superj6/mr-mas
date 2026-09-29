@@ -3,7 +3,7 @@
 Character art for the intro's founder entrances (THE WOODROSE, 10–20 s) and the dusk skyline (22.5–26.25 s),
 in the approved pixeladv look: native 480x270, 4x nearest-neighbour, indexed palette plus hand-built light ramps.
 
-## Deliverables (`out/pixel/cast/`)
+## Deliverables (`out/lookdev/pixel/cast/`)
 | file | composition | what |
 |---|---|---|
 | `castrivals-sheet.png` | `castrivals-sheet` | Main board: MARIO portrait · vault vignette · booster vignette · NOLE portrait · the seven rooftop bosses at dusk. Each element is shown at its own hero frame. |
@@ -14,8 +14,8 @@ in the approved pixeladv look: native 480x270, 4x nearest-neighbour, indexed pal
 | `castrivals-extra-freeze.png` | `castrivals-extra-freeze` | Both vignettes in BASE and in the name-card two-tone FREEZE: Mario in parchment + ink blue, never red; Nole in navy + cream with a rocket-red stamp. |
 
 Render (one at a time, CPU box):
-`npx remotion still src/dev/castrivals/entry.tsx castrivals-sheet ../out/pixel/cast/castrivals-sheet.png --bundle-cache=false --log=error`
-`npx remotion render src/dev/castrivals/entry.tsx castrivals-motion ../out/pixel/cast/castrivals-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error`
+`npx remotion still src/dev/castrivals/entry.tsx castrivals-sheet ../out/lookdev/pixel/cast/castrivals-sheet.png --bundle-cache=false --log=error`
+`npx remotion render src/dev/castrivals/entry.tsx castrivals-motion ../out/lookdev/pixel/cast/castrivals-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error`
 Fast iteration without Remotion: bundle `src/dev/castrivals/tools/preview.ts` with esbuild (`--platform=node`) and run
 `node preview.cjs <outDir> <scale> still sheet@<f> grid@0,6,12 extra-mario bosslab nolelab mariolab`.
 Append `@x,y,w,h` to a view to crop it.

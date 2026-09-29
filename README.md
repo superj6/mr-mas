@@ -10,7 +10,7 @@ Mas Manalt is a soft-spoken "nonprofit guy" with no equity and no detectable pan
 
 **[MR. MAS — Episode 1 opening (YouTube)](https://www.youtube.com/watch?v=IHCn0QC1Zow)**
 
-[![MR. MAS title card](out/intro/review/still-title.jpg)](https://www.youtube.com/watch?v=IHCn0QC1Zow)
+[![MR. MAS title card](out/season/intro/review/still-title.jpg)](https://www.youtube.com/watch?v=IHCn0QC1Zow)
 
 The opening is 30 seconds of pixel art on a 96 BPM grid. It covers:
 1. The cold open, "near the singularity; unclear which side."
@@ -118,7 +118,7 @@ Videos (`*.mp4` and similar), dependencies, the third-party sample libraries and
    ```bash
    bash audio/samples/fetch_samples.sh
    ```
-4. **The opening titles.** The fast path renders the silent 1080p master and muxes the committed final mixes onto it, producing `out/intro/intro-ep1-V1-1080p.mp4` and V2–V4. The full path also rebuilds the score, SFX and voice stems and the mixes from source. Both are in [`docs/RENDERING.md` → Quick start](docs/RENDERING.md).
+4. **The opening titles.** The fast path renders the silent 1080p master and muxes the committed final mixes onto it, producing `out/season/intro/intro-ep1-V1-1080p.mp4` and V2–V4. The full path also rebuilds the score, SFX and voice stems and the mixes from source. Both are in [`docs/RENDERING.md` → Quick start](docs/RENDERING.md).
 5. **Everything else** (the animatics, the pixel moments, the style tests, the season reels) is covered there as well. Remotion compositions can also be browsed interactively with `cd studio && npx remotion studio`.
 
 **Render policy:** 1080p is the maximum. Renders are CPU-only; the 30 s intro renders in a few minutes on a laptop CPU.

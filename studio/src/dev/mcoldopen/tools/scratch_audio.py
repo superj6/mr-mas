@@ -5,7 +5,7 @@
 # (src/dev/mcoldopen/timeline.ts: L1_KEYS / L2_KEYS / EV) — keep them in sync if the timeline changes.
 # The VO is NOT faked: each syllable of "near the singularity; unclear which side." is marked by a soft breath
 # swell at its frame, so the delivery timing is audible and a real read can be dropped straight onto it.
-#   python3 src/dev/mcoldopen/tools/scratch_audio.py ../out/pixel/moments/mcoldopen-scratch-audio.wav
+#   python3 src/dev/mcoldopen/tools/scratch_audio.py ../out/season/intro/moments/mcoldopen-scratch-audio.wav
 import math, random, struct, sys, wave
 
 SR = 48000

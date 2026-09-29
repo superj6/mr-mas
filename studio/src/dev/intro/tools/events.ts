@@ -2,7 +2,7 @@
 // MR. MAS — intro-ep1: export every PICTURE event with its exact GLOBAL frame, as built.
 //   npx esbuild src/dev/intro/tools/events.ts --bundle --platform=node --outfile=<scratch>/events.cjs \
 //     --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty
-//   node <scratch>/events.cjs ../out/intro/picture/intro-events.json
+//   node <scratch>/events.cjs ../out/season/intro/picture/intro-events.json
 // Frames come from the moments' own timeline constants wherever they are exported (imported below, so a retime in a
 // moment re-flows here). Where a moment keeps a frame inline in its scene code, the value is copied and `src` names
 // the file and symbol. `script` is SCRIPT.md v2.1's frame where the build differs (see studio/notes/intro.md).

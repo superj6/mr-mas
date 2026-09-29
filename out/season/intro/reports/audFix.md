@@ -55,11 +55,11 @@ I rebuilt the SFX stem and all four mixes against the fixed picture, then re-mux
 The READMEs in `audio/intro-mix/`, `audio/intro-vox/` and `audio/theme/VARIATIONS.md`, plus the generated `audio/intro-sfx/spotting.md`, are updated to match.
 
 Files are in `/home/jgon/project/art/mrmas/`:
-- `out/intro/intro-ep1-V1-1080p.mp4`
-- `out/intro/intro-ep1-V1-4k.mp4`
-- `out/intro/intro-ep1-V2-1080p.mp4`
-- `out/intro/intro-ep1-V3-1080p.mp4`
-- `out/intro/intro-ep1-V4-1080p.mp4`
+- `out/season/intro/intro-ep1-V1-1080p.mp4`
+- `out/season/intro/intro-ep1-V1-4k.mp4`
+- `out/season/intro/intro-ep1-V2-1080p.mp4`
+- `out/season/intro/intro-ep1-V3-1080p.mp4`
+- `out/season/intro/intro-ep1-V4-1080p.mp4`
 - `audio/intro-mix/intro-ep1-mix-V{1..4}-*.wav` / `.m4a`
 - `audio/intro-mix/stems/V1/`
 - `audio/intro-mix/qa/deliverables_qa.json`

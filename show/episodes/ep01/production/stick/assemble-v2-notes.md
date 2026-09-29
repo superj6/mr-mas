@@ -96,7 +96,7 @@ The chapters and beds are pasted from each segment pass's handoff (their notes' 
 |---|---|---|---|
 | title | the reel's 3 s slate | silence | reviewer scaffolding, as in v1 |
 | coldopen | `ep01-coldopen-v2`, acts COLD OPEN | 3 takes + the cold open stem (`lufs: null`, no loop) | the stem replaces v1's three cold-open beds |
-| intro | `out/intro/intro-ep1-V1-1080p.mp4`, full frame, 30 s | its own master (V1 Chip Chamber), −3 dB, 0.3 s tail | unchanged from v1; the −3 dB trim is still a proposal for an ear |
+| intro | `out/season/intro/intro-ep1-V1-1080p.mp4`, full frame, 30 s | its own master (V1 Chip Chamber), −3 dB, 0.3 s tail | unchanged from v1; the −3 dB trim is still a proposal for an ear |
 | card | `ep01-full-part1` beat `card.01` (2 s) | room-tone stand-in, −42 LUFS | the old caption beat, because its text is the script's card word for word. **See §6.1: it's hard to read in 2 s** |
 | act1 | `ep01-act1-v2` | 56 takes + 11 beds from `manifest-part.json` | its last bed carries `until: act2` |
 | act2 | `ep01-act2-v2` | 39 takes + the 9 beds of act2-notes §4.3 (MM-05 is its `-loop.wav`) | |

@@ -27,7 +27,7 @@
   - `Demos.tsx`
   - `tools/preview.ts` and `tools/tune.ts`: Node-only (`@ts-nocheck`)
 
-## Outputs: `out/pixel/engine/`
+## Outputs: `out/lookdev/pixel/engine/`
 - `switches-00-base.png` … `switches-09-bloom.png` come from `pixelengine-switches --frame=N`.
 - `switches-sheet.png` comes from `pixelengine-switches-sheet`.
 - `dissolve.mp4` comes from `pixelengine-dissolve` (48 frames, 960×540, rendered with `--scale=0.5`).
@@ -87,7 +87,7 @@ The era stamp is the cast's `cast/era.ts`. My duplicate in `ui.ts` was removed b
 
 **Font.** `$`, `·` and `✓` are added to the 7px face.
 
-**Engine demos re-rendered** in `out/pixel/engine/`:
+**Engine demos re-rendered** in `out/lookdev/pixel/engine/`:
 - `switches-01-freeze`
 - `switches-03-earlyweb16`
 - `switches-04-ledger`

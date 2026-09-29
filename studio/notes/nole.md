@@ -103,7 +103,7 @@ Throughout there is breathing, monitor flicker on the key light (the spot color 
 - The phone UI is generic (status bar, avatars, image block). There is no parody app branding yet.
 - The `print` option is designed but defaulted off (see above).
 
-## Outputs (`out/dev/nole/`)
+## Outputs (`out/lookdev/looks/nole/`)
 - `tone-test-v8.png`: all 9 styles plus legend
 - `nole-hero-{soft,paint,noir,riso,engrave,pixel}.png`: hero stills. Glyph, dither and stipple heroes are registered but not rendered.
 - `nole-expressions.png`, `nole-lineup.png`

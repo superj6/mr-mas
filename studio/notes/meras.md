@@ -14,7 +14,7 @@ whole-pixel motion, drawings held, style switches as palette/era changes with on
 - **My 2015 fallback (225-239) is a hard switch to BASE** on the cut (the radial candle front is gone), matching mdinner1.
 
 
-## Outputs (`out/pixel/moments/`)
+## Outputs (`out/season/intro/moments/`)
 | file | composition | global frame | what |
 |---|---|---|---|
 | `meras-1993.png` | `meras-key-1993` | 132 | 1-BIT, 3:2 pillarbox: kid Mas at the back of the beige no-logo computer, turned to the lens; the staircase curve climbs out of the glow |
@@ -27,11 +27,11 @@ whole-pixel motion, drawings held, style switches as palette/era changes with on
 | `meras-scratch-audio.wav`, `meras-with-scratch-audio.mp4` | (tool) | 120-239 | a code-composed **sound sketch** (timing + tier reference, not the score) |
 
 ```
-npx remotion still  src/dev/meras/entry.tsx meras-key-alert ../out/pixel/moments/meras-alert.png --bundle-cache=false --log=error
-npx remotion render src/dev/meras/entry.tsx meras ../out/pixel/moments/meras.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion still  src/dev/meras/entry.tsx meras-key-alert ../out/season/intro/moments/meras-alert.png --bundle-cache=false --log=error
+npx remotion render src/dev/meras/entry.tsx meras ../out/season/intro/moments/meras.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 # sound sketch (Node, no deps):
-npx esbuild src/dev/meras/audio/sketch.ts --bundle --platform=node --outfile=<scratch>/snd.js && node <scratch>/snd.js ../out/pixel/moments/meras-scratch-audio.wav
-npx remotion ffmpeg -y -i ../out/pixel/moments/meras.mp4 -i ../out/pixel/moments/meras-scratch-audio.wav -c:v copy -c:a aac -b:a 192k -shortest ../out/pixel/moments/meras-with-scratch-audio.mp4
+npx esbuild src/dev/meras/audio/sketch.ts --bundle --platform=node --outfile=<scratch>/snd.js && node <scratch>/snd.js ../out/season/intro/moments/meras-scratch-audio.wav
+npx remotion ffmpeg -y -i ../out/season/intro/moments/meras.mp4 -i ../out/season/intro/moments/meras-scratch-audio.wav -c:v copy -c:a aac -b:a 192k -shortest ../out/season/intro/moments/meras-with-scratch-audio.mp4
 ```
 Fast Node preview (about 1 s): `npx esbuild src/dev/meras/tools/preview.ts --bundle --platform=node --outfile=<scratch>/mp.js --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty --external:remotion --external:react --external:react-dom`,
 then `NODE_PATH=node_modules node <scratch>/mp.js <outDir> <scale> <g> | sheet:<g,g,..> | crop:<g>:<x>,<y>,<w>,<h>`. All frames are **global**.

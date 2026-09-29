@@ -10,7 +10,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STUDIO="$(cd "$HERE/../../../../.." && pwd)"
 ROOT="$(cd "$STUDIO/.." && pwd)"
-OUT="$ROOT/out/range"
+OUT="$ROOT/out/lookdev/range"
 TMP="${1:-$(mktemp -d)}"
 mkdir -p "$OUT" "$TMP"
 cd "$STUDIO"

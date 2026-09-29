@@ -5,7 +5,7 @@ MACROSOFT's house style (flat corporate vector illustration) on Tasya's three wo
 The brief is `show/bible/style-range.md` §6.1a, "E1-P3". Style-range 1.D rules FILLER = FINAL for this beat, so
 code is the final route too. No external API was called.
 
-## Outputs (`out/range/ep1/`)
+## Outputs (`out/lookdev/range/ep1/`)
 
 | File | What |
 |---|---|
@@ -17,7 +17,7 @@ code is the final route too. No external API was called.
 
 All stills and sheet tiles are pulled from the encoded mp4, not from the renderer.
 
-## The clip, frame by frame (p0 = reel 412.0 s of `out/reel/ep01-act4-v5.mp4`)
+## The clip, frame by frame (p0 = reel 412.0 s of `out/ep01/act4/reel/ep01-act4-v5.mp4`)
 
 - p0–119 S7.02 wide, pixel (`rooms/bullpen` walkout, drawn without its crowd; `pixel.ts drawCrowdAt` re-stamps the crowd
   per frame in the room's own draw order). A drizzle runs past the windows (`rainOn`, on 2s, with beads on the glass).
@@ -149,7 +149,7 @@ misreads. Pass 6 (a run that was killed before its build; its source edits were 
   night sky and the ring over Mada are the show's Rolodex-wheel egg and Mada's spinner (shared plate, sc 27 on). The calm
   man among small fires is the teleplay's own image for sc 30 ("the only chair that isn't burning").
 
-**Measured on pass 7's encode** (`out/range/ep1/ep1-p3.mp4`, 2026-09-27 01:49): 437 frames, 1920×1080, 24 fps,
+**Measured on pass 7's encode** (`out/lookdev/range/ep1/ep1-p3.mp4`, 2026-09-27 01:49): 437 frames, 1920×1080, 24 fps,
 18.21 s, H.264 + AAC + mov_text (eng). Mix −16.9 LUFS against the v5 slice's −16.9, peak −4.45 dBFS, no limiting; the
 rebuilt v5 buses still match the v5 mix slice at −143.6 dBFS residual; Rhodes −20.4 / −19.8 / −17.8 dBFS at p250 / 273
 / 296; drizzle −44.0 dBFS RMS over p0–290; key ring −30.4 dBFS at p312. Motion (share of 480×270 pixels changing by more

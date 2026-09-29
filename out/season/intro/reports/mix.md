@@ -27,11 +27,11 @@ The limiter only works hard for about 2 frames at f300, where the Alyi hit and t
 Everything rebuilds with `/home/jgon/project/art/mrmas/audio/intro-mix/scripts/run_all.sh` (about 80 s). Temporary files are deleted; the mix folder is 62 MB.
 
 Files are in `/home/jgon/project/art/mrmas/`:
-- out/intro/intro-ep1-V1-1080p.mp4
-- out/intro/intro-ep1-V1-4k.mp4
-- out/intro/intro-ep1-V2-1080p.mp4
-- out/intro/intro-ep1-V3-1080p.mp4
-- out/intro/intro-ep1-V4-1080p.mp4
+- out/season/intro/intro-ep1-V1-1080p.mp4
+- out/season/intro/intro-ep1-V1-4k.mp4
+- out/season/intro/intro-ep1-V2-1080p.mp4
+- out/season/intro/intro-ep1-V3-1080p.mp4
+- out/season/intro/intro-ep1-V4-1080p.mp4
 - audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav and .m4a
 - audio/intro-mix/intro-ep1-mix-V2-orchestralnoir.wav and .m4a
 - audio/intro-mix/intro-ep1-mix-V3-pixelswing.wav and .m4a

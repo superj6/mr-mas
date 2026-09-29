@@ -64,7 +64,7 @@ Everything is in `/home/jgon/project/art/mrmas/`:
 - `studio/src/styleframes/mdinner2.frame.tsx`
 - `studio/src/dev/mdinner2/`: `Mdinner2.tsx`, `entry.tsx`, `scene.ts`, `timeline.ts`, `masmd2.ts`, `sign.ts`, `scroll.ts`, `booster.ts`, `props.ts`, `cards.ts`, `tools/preview.ts`, `tools/scratch_audio.py`
 - `studio/notes/mdinner2.md`
-- `out/pixel/moments/`:
+- `out/season/intro/moments/`:
   - `mdinner2-mario.png`, `mdinner2-telescope.png`, `mdinner2-booster.png`, `mdinner2-nole.png`, `mdinner2-nope.png` (all 1920×1080)
   - `mdinner2.mp4`
   - `mdinner2-with-scratch-audio.mp4`

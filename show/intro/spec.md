@@ -11,7 +11,7 @@
 | **Companion files** | [shot-table.md](shot-table.md) (frame by frame) · [cue-sheet.md](cue-sheet.md) (music and sound) · [episode-slots.md](episode-slots.md) (what changes each episode) |
 | **Rules it obeys** | [../bible/naming.md](../bible/naming.md) · [../bible/guardrails.md](../bible/guardrails.md) · [../timeline/flashback-map.md](../timeline/flashback-map.md) |
 
-> **VISUAL STYLE IS PENDING.** The showrunner hasn't chosen the show's visual structure yet. Structure tests are running in `studio/` and render to `out/structures/`. The status and the options live in **[../bible/style-status.md](../bible/style-status.md)**.
+> **VISUAL STYLE IS PENDING.** The showrunner hasn't chosen the show's visual structure yet. Structure tests are running in `studio/` and render to `out/lookdev/structures/`. The status and the options live in **[../bible/style-status.md](../bible/style-status.md)**.
 >
 > Everything below is written so that it survives that decision. §7 marks each part of this spec as **LOCKED** (style-agnostic), **ADAPTS** (the idea is locked but how it renders depends on the style) or **PENDING STYLE** (a placeholder from the v1 look). Hex codes, fonts, line weights and "cut-paper" wording come from the v1 look and are placeholders until the style is locked.
 

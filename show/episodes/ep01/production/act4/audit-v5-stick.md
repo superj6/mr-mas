@@ -1,6 +1,6 @@
 # Act Four v5 stick-figure reel: dialogue and flow audit
 
-*Auditor pass, 2026-09-26. Reel: `out/reel/ep01-act4-v5.mp4` (8:41.5 = 3 s title + 8:38.5 act). Inputs: `show/reel/ep01-act4-v5.json`, `audio/ep01/act4/dialogue/lines-v5.json` and its `v5/wav` takes, `audio/reel/ep01-act4-v5/mix.wav` and `bed.py`, the reel transcript, and Act Four draft 5.1 in `script.md`.*
+*Auditor pass, 2026-09-26. Reel: `out/ep01/act4/reel/ep01-act4-v5.mp4` (8:41.5 = 3 s title + 8:38.5 act). Inputs: `show/reel/ep01-act4-v5.json`, `audio/ep01/act4/dialogue/lines-v5.json` and its `v5/wav` takes, `audio/reel/ep01-act4-v5/mix.wav` and `bed.py`, the reel transcript, and Act Four draft 5.1 in `script.md`.*
 
 **Times are act clock (reel = act + 3.0 s), matching the transcript's middle column.**
 

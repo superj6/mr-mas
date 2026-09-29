@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""MR. MAS genvideo: the converter test bench. Re-runnable; writes to out/genvideo/tests/.
+"""MR. MAS genvideo: the converter test bench. Re-runnable; writes to out/lookdev/genvideo/tests/.
 
 Sources (no video model is wired in yet, so the bench uses our own smooth renders plus two SYNTHETIC stand-ins
 for model output; they are labelled as such everywhere):
-  satire    out/structures/satire/scene.mp4  (smooth 2D shading, faces, glows; 960x540 @ 24)
-  puppet    out/structures/puppet/scene.mp4  (cut-out puppets, vignette gradients, a walk; 960x540 @ 24)
+  satire    out/lookdev/structures/satire/scene.mp4  (smooth 2D shading, faces, glows; 960x540 @ 24)
+  puppet    out/lookdev/structures/puppet/scene.mp4  (cut-out puppets, vignette gradients, a walk; 960x540 @ 24)
   stress    SYNTHETIC: satire degraded the way generated video misbehaves: 16 fps, 832x480, film grain,
             exposure flicker, sub-pixel jitter and a slow colour drift (tests the temporal filter + hysteresis)
   sky       SYNTHETIC: a procedural night-sky plate (1280x720 @ 30): gradient, drifting fBm clouds, stars, a slow
@@ -31,7 +31,7 @@ import cv2
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import gvlib as gv  # noqa: E402
 
-OUT = gv.ROOT / 'out/genvideo/tests'
+OUT = gv.ROOT / 'out/lookdev/genvideo/tests'
 SRC = OUT / 'src'
 PUBLIC = gv.STUDIO / 'public/genvideo/_test'  # converted demo clips for src/dev/genvideo (gitignored)
 PY = sys.executable
@@ -41,7 +41,7 @@ PIXELIZE = str(Path(__file__).resolve().parent / 'pixelize.py')
 # ------------------------------------------------------------------------------------------------ synthetic sources
 def make_stress(path: Path, seed=3):
     """satire -> 16 fps, 832x480, grain, flicker, jitter, colour drift (a stand-in for a 480p open-weights model)."""
-    frames = [f for _, f in gv.read_frames(str(gv.ROOT / 'out/structures/satire/scene.mp4'))]
+    frames = [f for _, f in gv.read_frames(str(gv.ROOT / 'out/lookdev/structures/satire/scene.mp4'))]
     rng = np.random.default_rng(seed)
     n = int(len(frames) / 24 * 16)
     wr = gv.Mp4Writer(str(path), 832, 480, fps=16, crf=18)
@@ -107,15 +107,15 @@ def make_sky(path: Path, seed=5, W=1280, H=720, fps=30, secs=5.0):
 
 # ------------------------------------------------------------------------------------------------ bench
 TESTS = {
-    'satire': dict(src='out/structures/satire/scene.mp4', tuned=['--preset', 'default'], naive=['--preset', 'naive', '--on', '2'], frame=60, crop=(1000, 150, 1920, 700)),
-    'puppet': dict(src='out/structures/puppet/scene.mp4', tuned=['--preset', 'default'], naive=['--preset', 'naive', '--on', '2'], frame=90, crop=(700, 100, 1700, 800)),
-    'stress': dict(src='out/genvideo/tests/src/stress-satire-16fps.mp4', tuned=['--preset', 'default', '--match', 'out/genvideo/tests/src/stress-ref.png'],
+    'satire': dict(src='out/lookdev/structures/satire/scene.mp4', tuned=['--preset', 'default'], naive=['--preset', 'naive', '--on', '2'], frame=60, crop=(1000, 150, 1920, 700)),
+    'puppet': dict(src='out/lookdev/structures/puppet/scene.mp4', tuned=['--preset', 'default'], naive=['--preset', 'naive', '--on', '2'], frame=90, crop=(700, 100, 1700, 800)),
+    'stress': dict(src='out/lookdev/genvideo/tests/src/stress-satire-16fps.mp4', tuned=['--preset', 'default', '--match', 'out/lookdev/genvideo/tests/src/stress-ref.png'],
                    naive=['--preset', 'naive', '--on', '2'], frame=60, crop=(1000, 150, 1920, 700), synthetic=True),
-    'sky': dict(src='out/genvideo/tests/src/sky-plate-30fps.mp4', tuned=['--preset', 'plate', '--families', 'sky'],
+    'sky': dict(src='out/lookdev/genvideo/tests/src/sky-plate-30fps.mp4', tuned=['--preset', 'plate', '--families', 'sky'],
                 naive=['--preset', 'naive', '--on', 'auto', '--families', 'sky'], frame=60, crop=(0, 0, 960, 540), synthetic=True),
     # the round trip: our own pixel render (engine -> 960x540 H.264) back onto the grid; scored against the
     # engine's exact native frames (dump_room.ts). Stand-in for a clip conditioned on our frame (the match cut).
-    'pixeladv': dict(src='out/structures/pixeladv/scene.mp4', tuned=['--preset', 'pixel'], naive=['--preset', 'naive'],
+    'pixeladv': dict(src='out/lookdev/structures/pixeladv/scene.mp4', tuned=['--preset', 'pixel'], naive=['--preset', 'naive'],
                      frame=74, crop=(0, 0, 960, 540), roundtrip=True),
 }
 
@@ -230,7 +230,7 @@ def main():
         make_stress(SRC / 'stress-satire-16fps.mp4')
     if 'stress' in names and not (SRC / 'stress-ref.png').exists():
         # the "conditioning keyframe" for --match: the clean first frame of the original render
-        _, f0 = next(gv.read_frames(str(gv.ROOT / 'out/structures/satire/scene.mp4')))
+        _, f0 = next(gv.read_frames(str(gv.ROOT / 'out/lookdev/structures/satire/scene.mp4')))
         gv.save_png(SRC / 'stress-ref.png', f0)
     if 'sky' in names and not (SRC / 'sky-plate-30fps.mp4').exists():
         gv.log('making the synthetic sky plate')

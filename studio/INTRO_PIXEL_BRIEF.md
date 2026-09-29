@@ -75,7 +75,7 @@
 - Mas's 1993 dialog: `MAS MANALT / no equity.`
 
 ## Quality bar
-- `out/structures/pixeladv/key.png` and its portraits are the reference for colour and light.
+- `out/lookdev/structures/pixeladv/key.png` and its portraits are the reference for colour and light.
 - Hand-placed pixel clusters on faces; no noisy dither on skin.
 - Whole-pixel motion only: no sub-pixel drift, no rotating or scaling sprites.
 - Every simplification must read as the genre.

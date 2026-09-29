@@ -80,7 +80,7 @@
   - **EL:** the lock, re-locked the assembly pass's way (`lock.py` on the EL timeline with `assembly/el/coldopen-takes.json`, `--out-json/--out-ts assembly/el/`), and `picture-el/coldopen.mp4` (`assembly/tools/build_el.mjs`).
   - **One flag differs from the assembly pass's EL lock: no `--mix`.** The final EL mix is still 721 f.
 
-**Measured at the join** (the last frame against `out/intro/intro-ep1-V1-1080p.mp4` frame 0, at 1080p):
+**Measured at the join** (the last frame against `out/season/intro/intro-ep1-V1-1080p.mp4` frame 0, at 1080p):
 - **Mean absolute difference:** 6.6 of 255 inside the cursor's box and 4.0 outside it. What's left is the intro's dim glyph grid, which the cold open's black doesn't have.
 - **Mean pixel value:** 6.5 (cold open) against 9.5 (intro).
 - **The cursor lands where the intro's is, pixel for pixel.**

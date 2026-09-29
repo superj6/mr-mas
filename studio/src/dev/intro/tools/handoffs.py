@@ -13,7 +13,7 @@ import os, sys
 from PIL import Image, ImageChops, ImageDraw, ImageFont
 
 SEQ, RAW1 = sys.argv[1], sys.argv[2]
-OUT = sys.argv[3] if len(sys.argv) > 3 else '/home/jgon/project/art/mrmas/out/intro/picture/handoffs'
+OUT = sys.argv[3] if len(sys.argv) > 3 else '/home/jgon/project/art/mrmas/out/season/intro/picture/handoffs'
 os.makedirs(OUT, exist_ok=True)
 font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSansMono-Bold.ttf', 12)
 P = lambda d, f: os.path.join(d, f'element-{f:03d}.png')

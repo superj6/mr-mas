@@ -7,8 +7,8 @@ FFD=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FFD
 FF="$FFD/ffmpeg -hide_banner -loglevel error -y"
 MIX=$ROOT/audio/intro-mix
-PIC=$ROOT/out/intro/picture
-OUT=$ROOT/out/intro
+PIC=$ROOT/out/season/intro/picture
+OUT=$ROOT/out/season/intro
 
 declare -A NAME=([V1]=chipchamber [V2]=orchestralnoir [V3]=pixelswing [V4]=pianopixels)
 

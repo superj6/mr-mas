@@ -99,7 +99,7 @@ BUS_RIDES = {
 # ding keeps its reviewed 11 LU over the bed (it would be 16 LU over a monitor-sized bed).
 BOOKEND = dict(db=-4.0, lp_hz=3500.0, width=0.30, xfade_frames=1.0, keep=('sub', 'fx'), fallback_frame=690,
                fallback_end=705)
-EVENTS = os.path.join(ROOT, 'out', 'intro', 'picture', 'intro-events.json')
+EVENTS = os.path.join(ROOT, 'out/season/intro/picture/intro-events.json')
 THEME_DIR = os.environ.get('MIX_THEME_DIR', os.path.join(AUDIO, 'theme'))   # override only to audition a scratch render
 
 

@@ -15,7 +15,7 @@ silence under the slates and the black.
 
     audio/.venv-mix/bin/python studio/src/dev/range/tools/reel.py [--slates-only] [scratchDir]
 
-Writes out/range/range-reel.mp4 and out/range/range-sheet.png (one key still per prototype, taken from the encoded
+Writes out/lookdev/range/range-reel.mp4 and out/lookdev/range/range-sheet.png (one key still per prototype, taken from the encoded
 mp4s). Scratch peaks at about 60 MB (432 mostly black PNGs, the wavs, a few check stills) in <scratchDir>/rangereel-work, deleted at the end.
 """
 import json
@@ -32,7 +32,7 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 STUDIO = os.path.abspath(os.path.join(HERE, '..', '..', '..', '..'))
 ROOT = os.path.dirname(STUDIO)
-OUT = os.path.join(ROOT, 'out', 'range')
+OUT = os.path.join(ROOT, 'out/lookdev/range')
 FFD = os.path.join(STUDIO, 'node_modules', '@remotion', 'compositor-linux-x64-gnu')
 FF = os.path.join(FFD, 'ffmpeg')
 ENV = dict(os.environ, LD_LIBRARY_PATH=FFD)

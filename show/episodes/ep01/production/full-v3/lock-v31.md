@@ -143,7 +143,7 @@ The v3 rules stand ([lock.md §4](lock.md)), including the J-cut gap closing. Th
 12. **Sequence markers** go on the new scenes: sc 10 (Sydney), 20A (Neleh's paper) and S3 (Neleh's desk at 11:52). 18.01's marker moves to v31-18.00.
 13. **Subtitles:** spoken lines lose their quotation marks, and print ellipses at their ends (the plans' `_about`). The letter's page reads "judgement" (`line_text_fix`); the take stands.
 14. **The chapter names:** Act Four's timeline part and the manifest read "five days, told twice".
-15. **The intro** is the flash-fixed picture, `out/intro/intro-ep1-V1-1080p-flashfix.mp4`, with its own audio as before (−3 dB).
+15. **The intro** is the flash-fixed picture, `out/season/intro/intro-ep1-V1-1080p-flashfix.mp4`, with its own audio as before (−3 dB).
 
 ## 5. The stick sound (temporary)
 

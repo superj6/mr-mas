@@ -31,11 +31,11 @@ I've built the full 720-frame `intro-ep1` composition and rendered both silent m
 Temporary frame dumps are deleted.
 
 Files are in `/home/jgon/project/art/mrmas/`:
-- out/intro/picture/intro-ep1-1080p-silent.mp4
-- out/intro/picture/intro-ep1-4k-silent.mp4
-- out/intro/picture/intro-events.json (151 events, the cut list and the beat grid)
-- out/intro/picture/beats/ (48 stills + `_contact-sheet_intro-ep1-beats.png`)
-- out/intro/picture/handoffs/ (45 files: stills and strips per cut, the match-cut zoom, the overlap diff)
+- out/season/intro/picture/intro-ep1-1080p-silent.mp4
+- out/season/intro/picture/intro-ep1-4k-silent.mp4
+- out/season/intro/picture/intro-events.json (151 events, the cut list and the beat grid)
+- out/season/intro/picture/beats/ (48 stills + `_contact-sheet_intro-ep1-beats.png`)
+- out/season/intro/picture/handoffs/ (45 files: stills and strips per cut, the match-cut zoom, the overlap diff)
 - studio/src/intro/ (`edl.ts`, `scenes.ts`, `qc.ts`, `IntroEp1.tsx`, `intro.frame.tsx`)
 - studio/src/dev/intro/ (`entry.tsx`, `review.tsx`, `tools/master.sh`, `tools/events.ts`, `tools/contact_sheet.py`, `tools/handoffs.py`)
 - studio/notes/intro.md

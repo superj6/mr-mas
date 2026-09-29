@@ -4,7 +4,7 @@
 # heard landing on the 96 BPM / 24 fps grid (15 frames per beat). Real stems replace every line of this.
 # Vocals (whispered "FEEL" / "THE", shouted "A-G-I!") are NOT synthesised: they are marked by soft breath swells
 # at their exact frames so the timing is audible; the cue sheet is in notes/mdinner1.md.
-#   python3 src/dev/mdinner1/tools/scratch_audio.py ../out/pixel/moments/mdinner1-scratch-audio.wav
+#   python3 src/dev/mdinner1/tools/scratch_audio.py ../out/season/intro/moments/mdinner1-scratch-audio.wav
 import math, random, struct, sys, wave
 
 SR = 48000

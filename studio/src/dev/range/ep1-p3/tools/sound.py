@@ -45,7 +45,7 @@ STUDIO = os.path.abspath(os.path.join(HERE, '..', '..', '..', '..', '..'))
 ROOT = os.path.dirname(STUDIO)
 OST = os.path.join(ROOT, 'audio', 'ost')
 BED_LIVE = os.path.join(ROOT, 'audio', 'reel', 'ep01-act4-v5', 'bed.py')
-# The clip is cut from the v5 reel as rendered (out/reel/ep01-act4-v5.mp4; mix.wav 15:08). The reel's own pass later
+# The clip is cut from the v5 reel as rendered (out/ep01/act4/reel/ep01-act4-v5.mp4; mix.wav 15:08). The reel's own pass later
 # snapshotted that build at history/v5a-1508/ (bed.py 15:07 + its ep01-act4-v5.json) and began a new revision IN PLACE
 # (bed.py and the json edited 22:10-22:27). So the snapshot is the bed that made mix.wav: read it, with its own json,
 # and keep the live path as __file__ so the bed's ROOT/OST/SFX paths resolve. The rebuild check below proves the match.

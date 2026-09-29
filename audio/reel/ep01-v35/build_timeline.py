@@ -1543,7 +1543,7 @@ def map_words(old, new, x_old):
 
 
 MANIFEST = os.path.join(OUT_DIR, 'ep01-v35.manifest.json')
-INTRO_MP4 = 'out/intro/intro-ep1-V1-1080p-flashfix.mp4'
+INTRO_MP4 = 'out/season/intro/intro-ep1-V1-1080p-flashfix.mp4'
 OUTRO_MP4, OUTRO_WAV = 'out/ep01/outro/outro-b-v3.mp4', 'out/ep01/outro/outro-b-v3.wav'
 SUB = {'coldopen': 'P35 sc 1-3 · the rewind into the intro', 'act1': 'research preview · P35 sc 4-24 · he launches, the world uses it, he secures the money',
        'act2': 'the regulate-me tour · P35 sc 25-30A · he makes himself its face', 'act3': 'verified: human · P35 sc 31-37 · he consolidates',

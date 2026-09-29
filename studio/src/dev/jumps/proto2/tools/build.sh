@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 # Style jump prototype 2 · J3 "THE SKY OPENS": the full build (final polish: the TEAR ships; the seam and the glass are
-# kept for the record: out/jumps/history/proto2-p*.png (the seam build) and out/jumps/proto2-alt-glass-p075.png).
+# kept for the record: out/lookdev/jumps/history/proto2-p*.png (the seam build) and out/lookdev/jumps/proto2-alt-glass-p075.png).
 #   picture (Remotion, 1080p) -> temp sound pass (tools/mix.ts) -> mux with the bundled ffmpeg -> key stills + sheet
 # Run from anywhere:  bash studio/src/dev/jumps/proto2/tools/build.sh [scratchDir]
-# Deliverables land in out/jumps/ (1920x1080 max; never --scale above 1). The machine is shared: concurrency 6 at most.
+# Deliverables land in out/lookdev/jumps/ (1920x1080 max; never --scale above 1). The machine is shared: concurrency 6 at most.
 # The sheet is built by tools/sheet.ts (labelled in the show's pixel font), not by the Remotion `jump-proto-2-sheet`
 # composition, whose labels in styleframes/jumps/proto2.frame.tsx still describe the retired fracture build.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STUDIO="$(cd "$HERE/../../../../.." && pwd)"
 ROOT="$(cd "$STUDIO/.." && pwd)"
-OUT="$ROOT/out/jumps"
+OUT="$ROOT/out/lookdev/jumps"
 TMP="${1:-$(mktemp -d)}"
 mkdir -p "$OUT" "$TMP"
 cd "$STUDIO"
@@ -38,7 +38,7 @@ for p in 40 56 84 112; do
   npx remotion still "$TMP/bundle" jump-proto-2 "$OUT/proto2-p$(printf %03d $p).png" --frame=$p --log=error
 done
 # the sheet (Node: the same compose() as the composition). The rejected GLASS still is NOT re-rendered: the file in
-# out/jumps/ is the frame that was judged (the far side's floor has since been darkened for the tear)
+# out/lookdev/jumps/ is the frame that was judged (the far side's floor has since been darkened for the tear)
 node_tool sheet
 node "$TMP/sheet.js" "$OUT/proto2-sheet.png"
 ls -la "$OUT"/proto2*

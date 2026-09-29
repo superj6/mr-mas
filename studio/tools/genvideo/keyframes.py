@@ -171,7 +171,7 @@ def main(argv=None):
     ap.add_argument('--start', type=int, default=0, help='first frame of the shot')
     ap.add_argument('--end', type=int, default=-1, help='last frame of the shot (-1 = the composition\'s last)')
     ap.add_argument('--shot', default=None, help='name (default: <comp>-<start>-<end>)')
-    ap.add_argument('--out', default=None, help='default out/genvideo/keyframes/<shot>')
+    ap.add_argument('--out', default=None, help='default out/lookdev/genvideo/keyframes/<shot>')
     ap.add_argument('--mask', action='append', default=[], help='motion mask spec (repeatable); see the header')
     ap.add_argument('--layout', default='full', choices=['full', 'adventure'], help='adventure: room 480x203 + the verb band (guide marks it)')
     ap.add_argument('--ui-band', default='keep', choices=['keep', 'fill'], help='adventure layout: fill paints the verb band N0 in the plates')
@@ -186,7 +186,7 @@ def main(argv=None):
     end = info['frames'] - 1 if a.end < 0 else min(a.end, info['frames'] - 1)
     start = max(0, min(a.start, end))
     shot = a.shot or f'{a.comp}-{start}-{end}'
-    out = (Path(a.out) if a.out else gv.ROOT / 'out/genvideo/keyframes' / shot).resolve()
+    out = (Path(a.out) if a.out else gv.ROOT / 'out/lookdev/genvideo/keyframes' / shot).resolve()
     out.mkdir(parents=True, exist_ok=True)
     gv.log(f'{a.comp}: {info}; shot {start}..{end} -> {out}')
     pal = gv.load_palette()
@@ -256,8 +256,8 @@ def main(argv=None):
         'colours_on_screen': on_screen, 'families_on_screen': ''.join(fams),
         'generate': {'length_s': round(secs + 0.5, 2), 'note': 'ask for ~0.5 s more than the shot: the head and tail get trimmed at conversion (--t-in)',
                      'fps': 'any (24 preferred); pixelize conforms to 24 and holds on 2s'},
-        'pixelize': f'audio/.venv-genvideo/bin/python studio/tools/genvideo/pixelize.py <model-output.mp4> --match out/genvideo/keyframes/{shot}/start-native.png '
-                    f'--families {"".join(fams) or "all"} --duration {secs:.3f} --out-frames studio/public/genvideo/{shot} --out-mp4 out/genvideo/{shot}-1080p.mp4',
+        'pixelize': f'audio/.venv-genvideo/bin/python studio/tools/genvideo/pixelize.py <model-output.mp4> --match out/lookdev/genvideo/keyframes/{shot}/start-native.png '
+                    f'--families {"".join(fams) or "all"} --duration {secs:.3f} --out-frames studio/public/genvideo/{shot} --out-mp4 out/lookdev/genvideo/{shot}-1080p.mp4',
         'prompt_scaffold': {
             'positive': f'2D pixel-art animation, limited night palette, the same drawing style and colours as the first frame, locked 4x4 pixel grid, '
                         f'hand-animated feel, subtle motion. {a.prompt}'.strip(),

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **What to watch** | `out/reel/ep01-act4-v5.mp4`: 720p, 8:41, stick figures with the real recorded v5 takes and a temp bed. Its timeline is `show/reel/ep01-act4-v5.json`. |
+| **What to watch** | `out/ep01/act4/reel/ep01-act4-v5.mp4`: 720p, 8:41, stick figures with the real recorded v5 takes and a temp bed. Its timeline is `show/reel/ep01-act4-v5.json`. |
 | **Script** | The `## ACT FOUR` section of `show/episodes/ep01/script.md`, draft 5.x (the conversation pass). Plan: [edit-plan-v5.md](edit-plan-v5.md). |
 | **Takes** | `audio/ep01/act4/dialogue/lines-v5.json` (101 lines, stock Kokoro voices, natural pace, no time-stretching). The WAVs are gitignored; see the recording tool's README to regenerate them. |
 | **Showrunner verdict (2026-09-26)** | "the script dialogue and pacing is looking much better. i'll let you use your judgement to now refine back to the full rendering preview of act4, and we should simultaneously begin the stickman outline of the entire episode 1" |

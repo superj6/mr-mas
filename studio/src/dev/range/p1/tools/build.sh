@@ -1,12 +1,12 @@
 #!/bin/bash
-# MR. MAS - style-range Prototype 1: build everything into out/range/ (run from studio/).
+# MR. MAS - style-range Prototype 1: build everything into out/lookdev/range/ (run from studio/).
 #   src/dev/range/p1/tools/build.sh <scratch dir>
 # 1 bundle  2 render silent (CPU, --concurrency=4)  3 temp sound (OST engine, read-only)  4 mux (bundled ffmpeg)
 # 5 key stills + contact sheet pulled from the ENCODED mp4.  Scratch frames are deleted at the end.
 set -euo pipefail
 S=${1:?scratch dir}
 ROOT=$(cd ../ && pwd)
-OUT=$ROOT/out/range
+OUT=$ROOT/out/lookdev/range
 FF=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 PY=$ROOT/audio/.venv-mix/bin/python
 mkdir -p $OUT $S

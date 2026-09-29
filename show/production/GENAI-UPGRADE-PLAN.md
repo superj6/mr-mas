@@ -14,7 +14,7 @@ Where generated video (and, where it's reasonable, generated voice, music, SFX a
 |---|---|
 | **Status** | **PROPOSED.** Producer synthesis, 2026-09-25. It changes no script, rule or locked file; anything that would is listed under [§10 Rulings](#10-rulings-needed-no-cost). Nothing is spent until the showrunner answers [§9 RESOURCE ASKS](#9-resource-asks-ordered-by-impact). |
 | **The note** | *"in general i want to consider where we can tastefully add higher quality animation in select segments with a video model output. similarly if reasonable for any other programmatically generated part. we will still make a first pass full programmatically."* |
-| **Built from** | The scout's register: [genai-candidates.md](genai-candidates.md) (39 picture moments plus the audio candidates). The converter's working pipeline: [studio/tools/genvideo/README.md](../../studio/tools/genvideo/README.md), with test output in `out/genvideo/tests/`. The model-landscape research pass: prices and terms fetched 2026-09-25, key sources in [§12](#12-key-sources). |
+| **Built from** | The scout's register: [genai-candidates.md](genai-candidates.md) (39 picture moments plus the audio candidates). The converter's working pipeline: [studio/tools/genvideo/README.md](../../studio/tools/genvideo/README.md), with test output in `out/lookdev/genvideo/tests/`. The model-landscape research pass: prices and terms fetched 2026-09-25, key sources in [§12](#12-key-sources). |
 | **Standing rules** | Pixel art is the primary look: adventure-game staging, GLYPH for dark foreshadowing, sparing and motivated switches ([style-status DECISION](../bible/style-status.md)). The show plays as a fluid thriller drama. 1080p maximum. Never clone or imitate a real person's voice. Never a photoreal or deepfake likeness of a real person. Parody names and logos only ([guardrails §5](../bible/guardrails.md#5-legal-hygiene)). Always ask about resources that would raise quality. |
 
 **Contents:** [0. At a glance](#0-at-a-glance) · [1. Principles](#1-principles) · [2. Where the reports disagreed](#2-where-the-reports-disagreed-and-the-call) · [3. Top 10: intro + Ep1](#3-top-10-the-intro-and-ep1-the-pilot-batch) · [4. Season patterns](#4-season-patterns) · [5. Models](#5-recommended-models-per-category) · [6. Pipeline](#6-pipeline) · [7. Costs](#7-costs) · [8. Test plan](#8-test-plan-once-access-exists) · [9. RESOURCE ASKS](#9-resource-asks-ordered-by-impact) · [10. Rulings](#10-rulings-needed-no-cost) · [11. Handoffs](#11-handoffs) · [12. Sources](#12-key-sources)
@@ -245,7 +245,7 @@ Identity sounds stay procedural: the chip, the blips, the Orb's chime, the freez
 
 | Stage | Tool | Status |
 |---|---|---|
-| Conditioning export | `studio/tools/genvideo/keyframes.py` + the `genvideoPlate` prop on `PixelScene` | **Built and tested** (`out/genvideo/tests/keyframes/room-sky/`) |
+| Conditioning export | `studio/tools/genvideo/keyframes.py` + the `genvideoPlate` prop on `PixelScene` | **Built and tested** (`out/lookdev/genvideo/tests/keyframes/room-sky/`) |
 | Generate | `gen.py`: a Runway client first (the OpenAPI spec is public), with Gemini and fal adapters later. It writes `provenance.json` and archives the source | **To build**, once a key exists (about 0.5 day) |
 | Convert | `pixelize.py`, `glyphize.py`, `gvlib.py` | **Built.** Static boil down 8–11×, flips about 0, a 96.4% round trip. About 1–4 CPU-min per 5 s clip |
 | Composite | `GenVideo.tsx`, `genclip.ts`, `plate.ts` | **Built.** 0 off-palette colours in rendered frames; the handoff join doesn't show |
@@ -445,7 +445,7 @@ The scout also left an optional writer's call: on E1-4, the Strip plate could fr
 
 **Project**
 - [genai-candidates.md](genai-candidates.md)
-- [studio/tools/genvideo/README.md](../../studio/tools/genvideo/README.md), with results in `out/genvideo/tests/results.json` and the `*-sheet.png` files
+- [studio/tools/genvideo/README.md](../../studio/tools/genvideo/README.md), with results in `out/lookdev/genvideo/tests/results.json` and the `*-sheet.png` files
 - [PIXEL_GUIDE](../../studio/PIXEL_GUIDE.md)
 - [style-status](../bible/style-status.md)
 - [guardrails](../bible/guardrails.md)

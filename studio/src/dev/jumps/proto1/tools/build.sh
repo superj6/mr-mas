@@ -3,16 +3,16 @@
 # bundled ffmpeg, and write the key stills. Run from studio/:
 #   bash src/dev/jumps/proto1/tools/build.sh
 # Output (1920 x 1080, 24 fps, never --scale):
-#   ../out/jumps/proto1.mp4                  the clip with sound
-#   ../out/jumps/proto1-key-{1..4}-p*.png    the four key stills
-#   ../out/jumps/proto1-sheet.png            contact sheet (key stills + the transition frames)
-#   ../out/jumps/proto1-steppop.mp4          A/B (silent, full clip): the in as a family step k 2 instead of the print pop
+#   ../out/lookdev/jumps/proto1.mp4                  the clip with sound
+#   ../out/lookdev/jumps/proto1-key-{1..4}-p*.png    the four key stills
+#   ../out/lookdev/jumps/proto1-sheet.png            contact sheet (key stills + the transition frames)
+#   ../out/lookdev/jumps/proto1-steppop.mp4          A/B (silent, full clip): the in as a family step k 2 instead of the print pop
 # The vignette's engraved bust is generated offline (not by this script) into ../bustArt.ts; after changing it run
 #   ../audio/.venv-mix/bin/python src/dev/jumps/proto1/tools/engrave_bust.py [preview.png] [scale]
 # The pixel frames come from the frozen lock-v2 composer (../lockv2.ts), not the live Act Four animatic.
 set -euo pipefail
 cd "$(dirname "$0")/../../../../.."   # studio/
-OUT=../out/jumps
+OUT=../out/lookdev/jumps
 TMP=${TMPDIR:-/tmp}/mrmas-jump-proto1
 FF=node_modules/@remotion/compositor-linux-x64-gnu/ffmpeg
 ENTRY=src/dev/jumps/proto1/entry.tsx

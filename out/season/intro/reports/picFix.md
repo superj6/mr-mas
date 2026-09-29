@@ -1,4 +1,4 @@
-I applied the picture fixes, re-rendered both silent masters to the same paths, and regenerated the beat stills, contact sheet and handoff stills. Many event frames moved, so `/home/jgon/project/art/mrmas/out/intro/picture/intro-events.json` is updated (151 → 153 events).
+I applied the picture fixes, re-rendered both silent masters to the same paths, and regenerated the beat stills, contact sheet and handoff stills. Many event frames moved, so `/home/jgon/project/art/mrmas/out/season/intro/picture/intro-events.json` is updated (151 → 153 events).
 
 **Verification:** both masters are h264, yuv420p, 24/1, 720 frames (1080p crf 12, 4K crf 16), and a 4K spot frame matches 1080p. The 345–359 overlap is still pixel-identical (0 px on all 15 frames). The type-check is clean for the intro files. I looked at every changed moment in native previews and in the real render. Nothing was listened to.
 
@@ -81,7 +81,7 @@ I applied the picture fixes, re-rendered both silent masters to the same paths, 
 
 A backup of the original `src/` and the old events file is in `/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/picfix/`. My frame dumps are deleted.
 
-Updated outputs, all in `/home/jgon/project/art/mrmas/out/intro/picture/`:
+Updated outputs, all in `/home/jgon/project/art/mrmas/out/season/intro/picture/`:
 - `intro-ep1-1080p-silent.mp4`
 - `intro-ep1-4k-silent.mp4`
 - `intro-events.json`

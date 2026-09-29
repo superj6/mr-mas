@@ -10,7 +10,7 @@
 //   mcuLive(state)             the MCU's live mask: Mas's portrait as drawApecMCU places it (X 70, Y 30), its hoodie run
 //                              down to the frame's foot, and his collars (a 2-px margin)
 //   phoneLive()                the invite insert's live mask: the phone
-//   drawIntroCursor(b)        the intro's first frame's cursor (measured from out/intro/intro-ep1-V1-1080p.mp4 frame 0)
+//   drawIntroCursor(b)        the intro's first frame's cursor (measured from out/season/intro/intro-ep1-V1-1080p.mp4 frame 0)
 //   smearRoom(b, j)            3.02's end: the room slides left and streaks, faster each frame (Act Four's whip smear)
 //   collapseFrame(b, step)     then the picture's window closes on the cursor's rectangle in three held steps (a crop)
 // (Until the lead's ruling on the showrunner's note, 2026-09-27, this file also drew the cold open's own 1993 frame from
@@ -71,7 +71,7 @@ export const buzzPhone = (b: Buf, dx: number) => {
 };
 
 // ------------------------------------------------------------------ the end of the rewind: into the intro's cursor
-/** the intro's first frame (out/intro/intro-ep1-V1-1080p.mp4 frame 0): a cyan block cursor on black, drawn in glyph
+/** the intro's first frame (out/season/intro/intro-ep1-V1-1080p.mp4 frame 0): a cyan block cursor on black, drawn in glyph
  *  cells: 4 columns x 9 rows of 8-row cells at native x 83 + 9c, y 39 + 9r; each cell two L3 columns, a gap, two C5
  *  columns (their top row L3). Measured from the intro's own frame (both colours are the master palette's, exactly) */
 export const CURSOR = {x: 83, y: 39, w: 32, h: 80};

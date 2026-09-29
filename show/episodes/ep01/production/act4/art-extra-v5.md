@@ -124,7 +124,7 @@ drawPodcastBoom(fb, 288, 78, boomStepAt(k, 41, 188));
 
 - **Measured:** E1-P3's `data.ts` says its p0 is reel frame 9888. The lock's rule is "mix.wav frame 72 is act frame 0", so p0 is act frame 9816, the lock's S7.02 start.
 - **The shot lengths match:** S7.02 is 120 f in both, S7.02b 206 f in both, and S7.03 63 f in both. S7.05 is p389–436 in the clip, 48 of the lock's 53 f.
-- So **act frame = 9816 + p for p 0–436**. If R25 takes 1.D, the preview can take `out/range/ep1/ep1-p3.mp4`'s frames for S7.02–S7.03 as they are, with no re-timing.
+- So **act frame = 9816 + p for p 0–436**. If R25 takes 1.D, the preview can take `out/lookdev/range/ep1/ep1-p3.mp4`'s frames for S7.02–S7.03 as they are, with no re-timing.
 - Cut the podcast boom then (style-range). STYLE-LANDLORD-PX is the pixel stand-in that plays the same beats if the room compares the two.
 
 ---

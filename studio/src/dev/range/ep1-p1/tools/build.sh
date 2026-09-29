@@ -7,7 +7,7 @@
 #   px      the pixel CLOD + the clay's shadows in rungs, from the cels             -> gen/clod-px.json
 #   clip    the clip (pixel frame + clay composite), 1080p 24 fps, --concurrency 4  -> <S>/video.mp4
 #   sound   the temp sound pass (tools/sound.py)                                   -> <S>/sound.wav
-#   mux     video + sound                                                          -> out/range/ep1/ep1-p1.mp4
+#   mux     video + sound                                                          -> out/lookdev/range/ep1/ep1-p1.mp4
 #   stills  3 key stills, the contact sheet and the blind sheet, from the ENCODED mp4 (full size + 480x270 checks)
 set -euo pipefail
 S=${1:?scratch dir}; shift
@@ -15,7 +15,7 @@ STAGES=${*:-voice cels px clip sound mux stills}
 STUDIO=$(pwd)
 ROOT=$(cd .. && pwd)
 HERE=src/dev/range/ep1-p1
-OUT=$ROOT/out/range/ep1
+OUT=$ROOT/out/lookdev/range/ep1
 FF=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FF
 mkdir -p $S $OUT

@@ -41,7 +41,7 @@ Brief v2.1 cut the old per-episode slot (CHATGTP / FIRED / BACK) from the intro,
 - **Audio re-cut** (see below). The slot's cues are gone. Bar 9 is now the roll call's eight stabs on mrollcall's
   `CUTS`, brass doubled by a chip lead.
 
-## Deliverables (`out/pixel/moments/`)
+## Deliverables (`out/season/intro/moments/`)
 | file | global frame | what |
 |---|---|---|
 | `mfinale-skyline.png` | f628 | the dusk skyline, all nine towers and their players, the cyan curve running up NopeAI's spire |
@@ -64,10 +64,10 @@ The compositions live in the dev entry `src/dev/mfinale/entry.tsx`:
 | `mfinale-sheet` | a 4x4 sheet of any global frames: `--props='{"gs":[...]}'` |
 
 ```
-npx remotion still  src/dev/mfinale/entry.tsx mfinale-key-title ../out/pixel/moments/mfinale-title.png --bundle-cache=false --log=error
-npx remotion render src/dev/mfinale/entry.tsx mfinale ../out/pixel/moments/mfinale.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-npx esbuild src/dev/mfinale/tools/audio.ts --bundle --platform=node --outfile=<scratch>/audio.cjs && node <scratch>/audio.cjs ../out/pixel/moments/audio
-cp ../out/pixel/moments/audio/mfinale-mix.wav ../out/pixel/moments/mfinale-scratch-audio.wav   # then mux with the compositor's ffmpeg
+npx remotion still  src/dev/mfinale/entry.tsx mfinale-key-title ../out/season/intro/moments/mfinale-title.png --bundle-cache=false --log=error
+npx remotion render src/dev/mfinale/entry.tsx mfinale ../out/season/intro/moments/mfinale.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx esbuild src/dev/mfinale/tools/audio.ts --bundle --platform=node --outfile=<scratch>/audio.cjs && node <scratch>/audio.cjs ../out/season/intro/moments/audio
+cp ../out/season/intro/moments/audio/mfinale-mix.wav ../out/season/intro/moments/mfinale-scratch-audio.wav   # then mux with the compositor's ffmpeg
 ```
 
 ## Integrating

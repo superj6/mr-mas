@@ -3,12 +3,12 @@
 #   picture (Remotion, 1080p) -> sound pass + mux (tools/sound.mjs) -> key stills (Remotion) -> glass sheet (Node preview,
 #   the same pure renderer) ; the quantized A/B is rebuilt too so the record matches the current art.
 # Run from anywhere:  bash studio/src/dev/jumps/proto3/tools/build.sh [scratchDir]
-# Deliverables land in out/jumps/ (1920x1080 max; never --scale above 1). INTERNAL until Ep12 airs.
+# Deliverables land in out/lookdev/jumps/ (1920x1080 max; never --scale above 1). INTERNAL until Ep12 airs.
 set -euo pipefail
 HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 STUDIO="$(cd "$HERE/../../../../.." && pwd)"
 ROOT="$(cd "$STUDIO/.." && pwd)"
-OUT="$ROOT/out/jumps"
+OUT="$ROOT/out/lookdev/jumps"
 TMP="${1:-$(mktemp -d)}"
 mkdir -p "$OUT" "$TMP"
 cd "$STUDIO"

@@ -7,8 +7,8 @@ This guide covers the canvas, when each palette is allowed, scale standards, ani
 It is binding for builders, together with `INTRO_PIXEL_BRIEF.md` (the switch plan) and `ART_GUIDE.md`
 (builder rules).
 
-The reference look is `out/structures/pixeladv/key.png` and its portraits. The engine demos are in
-`out/pixel/engine/`; start with `switches-sheet.png`.
+The reference look is `out/lookdev/structures/pixeladv/key.png` and its portraits. The engine demos are in
+`out/lookdev/pixel/engine/`; start with `switches-sheet.png`.
 
 ```ts
 import {PixelScene, Buf, PAL, rect, blitImg, applyPalette, coneMask, glyphDissolve, nameCard} from '../../shared/pixel';
@@ -247,15 +247,15 @@ switch  = (f) => f >= 8 && f < 20 ? {type: 'front', from: 'ONEBIT', to: 'EARLYWE
 
 ## 7. Compatibility and ownership
 
-**v1.1 behaviour changes (the art director's cross-moment fixes, applied by the engine owner):** `2TONE_FREEZE` is now a threshold plus one pattern (levels 3, was 5) with skin solid; `EARLYWEB16`, `LEDGER` and `TERMINAL` resolve skin to one flat colour (derived sets such as meras' `ERA08`/`ERA14` inherit this unless they pin skin themselves); family steps now walk the promoted `F`/`I`/`U`/`Q` ramps (they used to leave those colours alone). The engine demos in `out/pixel/engine/` were re-rendered.
+**v1.1 behaviour changes (the art director's cross-moment fixes, applied by the engine owner):** `2TONE_FREEZE` is now a threshold plus one pattern (levels 3, was 5) with skin solid; `EARLYWEB16`, `LEDGER` and `TERMINAL` resolve skin to one flat colour (derived sets such as meras' `ERA08`/`ERA14` inherit this unless they pin skin themselves); family steps now walk the promoted `F`/`I`/`U`/`Q` ramps (they used to leave those colours alone). The engine demos in `out/lookdev/pixel/engine/` were re-rendered.
 
-- `src/dev/pixeladv/core/{px,palette,light,font,figure}.ts` are now **re-export shims** of `src/shared/pixel/*`, so every old import path and export still works. `src/dev/pixeladv/PixelCanvas.tsx` now wraps `<PixelScene>`. The approved pixeladv stills re-render **pixel-identically** through both paths, verified by a diff against `out/structures/pixeladv/key.png` and `extra-switch.png`.
+- `src/dev/pixeladv/core/{px,palette,light,font,figure}.ts` are now **re-export shims** of `src/shared/pixel/*`, so every old import path and export still works. `src/dev/pixeladv/PixelCanvas.tsx` now wraps `<PixelScene>`. The approved pixeladv stills re-render **pixel-identically** through both paths, verified by a diff against `out/lookdev/structures/pixeladv/key.png` and `extra-switch.png`.
 - New code should import from `src/shared/pixel`.
 - `src/shared/pixel/cast/` belongs to the cast builders (character sheets). It is not part of the engine and is not exported from `index.ts`.
 - Engine changes must stay additive. Do not change the behaviour of an existing export: other builders render with it.
 
 ## 8. Demos
-The code is in `src/styleframes/pixelengine.frame.tsx` and `src/dev/pixelengine/`, and the output is in `out/pixel/engine/`.
+The code is in `src/styleframes/pixelengine.frame.tsx` and `src/dev/pixelengine/`, and the output is in `out/lookdev/pixel/engine/`.
 
 - **`pixelengine-switches`**: one panel per frame. `--frame=N` gives:
 

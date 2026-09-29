@@ -52,7 +52,7 @@ I built frames 120–239 as the composition `meras`, and its frame numbers match
 
 **Code:** the frame definitions are in `src/styleframes/meras.frame.tsx`; everything else is in `src/dev/meras/`. `<MerasMount/>` places the span at global frame 120. The 1-bit kid is `kid93.ts`, the 2008 stride and collar states are `mas08.ts`, and the sketch generator is `audio/sketch.ts`. Notes are in `notes/meras.md`.
 
-Files are in `/home/jgon/project/art/mrmas/out/pixel/moments/`:
+Files are in `/home/jgon/project/art/mrmas/out/season/intro/moments/`:
 - meras-1993.png
 - meras-alert.png
 - meras-front.png

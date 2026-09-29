@@ -1,8 +1,8 @@
 **SATIRE (latex-puppet caricature): all deliverables are rendered and I checked them frame by frame.** The scene plays the full test beat at 960x540, 24 fps, 120 frames. I only touched files I own.
 
 **Files**
-- Scene: `/home/jgon/project/art/mrmas/out/structures/satire/scene.mp4`
-- Key still (frame 74, the "NAME!" jab): `/home/jgon/project/art/mrmas/out/structures/satire/key.png`
+- Scene: `/home/jgon/project/art/mrmas/out/lookdev/structures/satire/scene.mp4`
+- Key still (frame 74, the "NAME!" jab): `/home/jgon/project/art/mrmas/out/lookdev/structures/satire/key.png`
 - Extras in the same folder:
   - `extra-closeup.png`: close-up on Mas saying "super." (frame 106).
   - `extra-button.png`: the desk slam and the glint on the untouched water (frame 116).

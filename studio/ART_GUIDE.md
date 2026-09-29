@@ -35,8 +35,8 @@ animate** without looking amateur.
 2. Each builder gets its own dev entry: `src/dev/<key>/entry.tsx` that registers only its frames via
    `makeRoot(frames)` (see `src/dev/_example/entry.tsx`). Deliverable frames live in
    `src/styleframes/<key>.frame.tsx` exporting `frames: FrameDef[]` (ids: lowercase, dashes).
-3. Render: `npx remotion still src/dev/<key>/entry.tsx <id> ../out/dev/<key>/<name>.png --bundle-cache=false --log=error`
-   Motion test: `npx remotion render src/dev/<key>/entry.tsx <id> ../out/dev/<key>/<name>.mp4 --bundle-cache=false --log=error --concurrency=2`
+3. Render: `npx remotion still src/dev/<key>/entry.tsx <id> ../out/lookdev/looks/<key>/<name>.png --bundle-cache=false --log=error`
+   Motion test: `npx remotion render src/dev/<key>/entry.tsx <id> ../out/lookdev/looks/<key>/<name>.mp4 --bundle-cache=false --log=error --concurrency=2`
    Then **look at your PNGs with the Read tool** and iterate at least 3 times until it's genuinely good.
 4. Deterministic only (no Math.random/Date in render; seed PRNGs). Canvas renderers must use
    delayRender/continueRender (ToneCanvas does).

@@ -1,6 +1,6 @@
 // MR. MAS — range/p3: CLOD's clay turnaround (front, three-quarter, side, back) on a seamless paper sweep. One big
 // soft key, a warm fill, contact shadows, a shallow miniature lens; 96 accumulated samples on the iGPU.
-//   npx remotion still src/dev/range/p3/entry.tsx p3-clod ../out/range/p3-clod-turnaround.png --gl=angle --public-dir=src/dev/range/p3/public
+//   npx remotion still src/dev/range/p3/entry.tsx p3-clod ../out/lookdev/range/p3-clod-turnaround.png --gl=angle --public-dir=src/dev/range/p3/public
 import React, {useLayoutEffect, useRef} from 'react';
 import {AbsoluteFill, cancelRender, continueRender, delayRender} from 'remotion';
 // @ts-ignore

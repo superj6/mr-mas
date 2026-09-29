@@ -4,10 +4,10 @@
 # Steps (default: all but cycles):
 #   frames  rebuild <scratch>/public/take/ from the kept take-eevee.mp4 (a composite-only re-run without Blender)
 #   take    the Blender take, EEVEE Next on the iGPU: <scratch>/public/take/f000..f119.png (1056x592), plus an
-#           intermediate encode kept for the outside-layer comparison: out/range/ep1/ep1-p2-inputs/take-eevee.mp4
-#   cycles  the two conditioning stills (Cycles, CPU, 1280x720, 256 spp): out/range/ep1/ep1-p2-inputs/cycles-f000.png, -f119.png
+#           intermediate encode kept for the outside-layer comparison: out/lookdev/range/ep1/ep1-p2-inputs/take-eevee.mp4
+#   cycles  the two conditioning stills (Cycles, CPU, 1280x720, 256 spp): out/lookdev/range/ep1/ep1-p2-inputs/cycles-f000.png, -f119.png
 #   sound   the temp sound pass for A and B: <scratch>/a.wav, b.wav
-#   render  both cuts (CPU composite, --concurrency=4), muxed: out/range/ep1/ep1-p2.mp4 (A), ep1-p2-b.mp4 (B); the matte
+#   render  both cuts (CPU composite, --concurrency=4), muxed: out/lookdev/range/ep1/ep1-p2.mp4 (A), ep1-p2-b.mp4 (B); the matte
 #   review  sheets, blind sheets, key stills, measures (all from the encoded mp4s)
 # Disk: stops if free space is under 5 GB. The take's PNGs (~110 MB) stay in scratch until you delete the scratch.
 set -e
@@ -15,7 +15,7 @@ S=${1:?scratch dir}; shift
 STEPS=${*:-take sound render review}
 STUDIO=/home/jgon/project/art/mrmas/studio
 HERE=$STUDIO/src/dev/range/ep1-p2
-OUT=/home/jgon/project/art/mrmas/out/range/ep1
+OUT=/home/jgon/project/art/mrmas/out/lookdev/range/ep1
 IN=$OUT/ep1-p2-inputs
 BL=/home/jgon/Downloads/blender-4.5.3-linux-x64/blender
 FFD=$STUDIO/node_modules/@remotion/compositor-linux-x64-gnu

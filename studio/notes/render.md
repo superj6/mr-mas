@@ -21,15 +21,15 @@ Owner: `render` builder. Files:
 | `tone-debug`, `tone-debug-cmp` | plane classification dump, soft-pass A/B toggles (debug only) |
 
 ```
-npx remotion still  src/dev/tonetest/entry.tsx test-tone-styles ../out/dev/tonetest.png --bundle-cache=false --log=error
-npx remotion render src/dev/tonetest/entry.tsx tone-motion-pixel ../out/dev/render/motion-pixel.mp4 --bundle-cache=false --log=error --concurrency=2
+npx remotion still  src/dev/tonetest/entry.tsx test-tone-styles ../out/lookdev/looks/tonetest.png --bundle-cache=false --log=error
+npx remotion render src/dev/tonetest/entry.tsx tone-motion-pixel ../out/lookdev/looks/render/motion-pixel.mp4 --bundle-cache=false --log=error --concurrency=2
 ```
 
 ## Outputs
 
-- `out/dev/tonetest.png` (also `out/dev/render/tonetest.png`): the 9-style grid
-- `out/dev/render/hero-<style>.png`: 1080p lookdev stills for all 9 styles
-- `out/dev/render/motion-<style>.mp4`: 3 s motion tests for all 9 styles
+- `out/lookdev/looks/tonetest.png` (also `out/lookdev/looks/render/tonetest.png`): the 9-style grid
+- `out/lookdev/looks/render/hero-<style>.png`: 1080p lookdev stills for all 9 styles
+- `out/lookdev/looks/render/motion-<style>.mp4`: 3 s motion tests for all 9 styles
 
 Measured render cost (1080p, 72 frames, `--concurrency=2`, this CPU): soft ≈ 2m40s, glyph ≈ 1m35s,
 engrave ≈ 1m25s, pixel ≈ 1m, and paint/noir/riso/dither/stipple each under about 1 minute.

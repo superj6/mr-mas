@@ -12,7 +12,7 @@ Inputs (read-only):
 
 Outputs (generated; never hand-edit), in captions/:
   ep01-act4-v5.en-sdh.act.srt / .vtt     act clock: 00:00:00.000 = the act's first frame (the pixel preview's clock)
-  ep01-act4-v5.en-sdh.reel.srt / .vtt    +3.000 s: out/reel/ep01-act4-v5.mp4 and audio/reel/ep01-act4-v5/mix.wav
+  ep01-act4-v5.en-sdh.reel.srt / .vtt    +3.000 s: out/ep01/act4/reel/ep01-act4-v5.mp4 and audio/reel/ep01-act4-v5/mix.wav
                                          (both open on a 72-frame title card)
   ep01-act4-v5.ad.act.vtt / .reel.vtt    the audio-description cues as a WebVTT "descriptions" track
   ep01-act4-v5.ad-script.md              the AD script a describer reads from (timed, with fit measurements)

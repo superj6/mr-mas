@@ -1,6 +1,6 @@
 The pixeladv structure is done. The 5-second beat is staged as a 1990s point-and-click adventure game in true pixel art. Everything is drawn on a 480x270 grid and scaled 4x with no smoothing; nothing is a filter over a vector drawing. I checked every beat by looking at rendered stills, over well past three rounds of fixes, and confirmed the MP4 is 960x540, 24 fps, exactly 120 frames (5.0 s), with frames matching the previews.
 
-**Deliverables** (in `/home/jgon/project/art/mrmas/out/structures/pixeladv/`):
+**Deliverables** (in `/home/jgon/project/art/mrmas/out/lookdev/structures/pixeladv/`):
 
 | File | Composition id | What it shows |
 |---|---|---|

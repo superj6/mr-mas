@@ -22,7 +22,7 @@ The first pass of the show stays fully programmatic. These tools are for **selec
 | `keyframes.py` | one of our compositions → conditioning inputs: start/end clean plates, soft and model-size variants, motion masks, a layout guide, a reference video, a prompt scaffold |
 | `gvlib.py` | shared code: bundled-ffmpeg IO, OKLab, palette tables, the engine's `hash()` port, k-centroid downscale, temporal filter, 24 fps conform |
 | `export_palettes.ts` → `palettes.json` | the engine's palettes, sets, threshold tiles and glyph constants, exported by the engine's own code |
-| `test_genvideo.py`, `dump_room.ts` | the test bench (writes `out/genvideo/tests/`) |
+| `test_genvideo.py`, `dump_room.ts` | the test bench (writes `out/lookdev/genvideo/tests/`) |
 | `src/shared/pixel/genclip.ts`, `GenVideo.tsx`, `plate.ts` | the Remotion side (exported from `src/shared/pixel`) |
 | `src/dev/genvideo/` | demo compositions (`genvideo-window`, `-handoff`, `-glyph`, `-clip`) |
 
@@ -57,14 +57,14 @@ PY=audio/.venv-genvideo/bin/python; T=studio/tools/genvideo
 $PY $T/keyframes.py --entry src/dev/pixeladv/entry.tsx --comp pixeladv-scene --start 0 --end 47 --shot room-sky \
     --mask 'colors:N2,N3,N4@22,32,81,75' --layout adventure --ui-band fill --model-size 1280x720 --ref-video \
     --prompt "Clouds drift slowly across the night sky behind the skyline; nothing else moves."
-#    -> out/genvideo/keyframes/room-sky/: start-plate.png, end-plate.png, mask-0.png, guide.png, keyframes.json ...
+#    -> out/lookdev/genvideo/keyframes/room-sky/: start-plate.png, end-plate.png, mask-0.png, guide.png, keyframes.json ...
 
 # 2. Generate with an image-to-video model (first frame = start-plate.png, optional last frame = end-plate.png,
 #    motion mask = mask-union.png if the model takes one). Use keyframes.json's prompt scaffold. Save as raw.mp4.
 
 # 3. Convert (keyframes.json prints this exact command for the shot)
-$PY $T/pixelize.py raw.mp4 --preset plate --families NUCWFG --match out/genvideo/keyframes/room-sky/start-native.png \
-    --duration 2.0 --out-frames studio/public/genvideo/room-sky --out-mp4 out/genvideo/room-sky-1080p.mp4 --compare out/genvideo/room-sky-cmp.mp4
+$PY $T/pixelize.py raw.mp4 --preset plate --families NUCWFG --match out/lookdev/genvideo/keyframes/room-sky/start-native.png \
+    --duration 2.0 --out-frames studio/public/genvideo/room-sky --out-mp4 out/lookdev/genvideo/room-sky-1080p.mp4 --compare out/lookdev/genvideo/room-sky-cmp.mp4
 
 # 4. Use it in the shot (see "Remotion" below): <GenVideoScene clip="genvideo/room-sky" .../> + blitGen() in the sky mask
 ```
@@ -142,11 +142,11 @@ GLYPH is for **dark foreshadowing only** (PIXEL_GUIDE §2 rule 2). `glyphize.py`
 - **Additions for video:** the same conform, temporal filter and palette pre-mapping as `pixelize.py`, plus per-cell hysteresis (`--glyph-hyst`) so that the only motion is the intended shimmer.
 
 ```bash
-$PY $T/glyphize.py studio/public/genvideo/<clip> --out-mp4 out/genvideo/<clip>-glyph.mp4   # from a converted clip
+$PY $T/glyphize.py studio/public/genvideo/<clip> --out-mp4 out/lookdev/genvideo/<clip>-glyph.mp4   # from a converted clip
 $PY $T/glyphize.py raw.mp4 --tone 0.1,0.5,0.8 --noise 0.35 --bloom 0.8 --mask cone.png --out-mp4 ...
 ```
 
-Inside a composition, the canonical path is the engine itself: `<GenVideoScene clip=... switch={{type: 'glyph', mask}}/>`. Use `glyphize.py` for offline previews and whole-frame glyph inserts. The two are compared in `out/genvideo/tests/stills/glyph-compare.png`. The glyph rasteriser differs (Pillow/FreeType vs Chrome), so strokes differ at sub-pixel level. Cells, glyph choice, colours and shimmer are the same.
+Inside a composition, the canonical path is the engine itself: `<GenVideoScene clip=... switch={{type: 'glyph', mask}}/>`. Use `glyphize.py` for offline previews and whole-frame glyph inserts. The two are compared in `out/lookdev/genvideo/tests/stills/glyph-compare.png`. The glyph rasteriser differs (Pillow/FreeType vs Chrome), so strokes differ at sub-pixel level. Cells, glyph choice, colours and shimmer are the same.
 
 ---
 
@@ -192,7 +192,7 @@ Demos: `npx remotion render src/dev/genvideo/entry.tsx genvideo-window|genvideo-
 
 ## keyframes.py
 
-For a composition and frame range it writes the following to `out/genvideo/keyframes/<shot>/`:
+For a composition and frame range it writes the following to `out/lookdev/genvideo/keyframes/<shot>/`:
 
 | File | What it is |
 |---|---|
@@ -251,7 +251,7 @@ The pixel engine stays the show. Generated motion is **raw material** that goes 
 
 ## Tests
 
-`$PY studio/tools/genvideo/test_genvideo.py [--only satire,sky] [--jobs 2]` writes the following to `out/genvideo/tests/`:
+`$PY studio/tools/genvideo/test_genvideo.py [--only satire,sky] [--jobs 2]` writes the following to `out/lookdev/genvideo/tests/`:
 - `*-sheet.png`: source | naive | tuned, with 4× crops and **boil heat maps**
 - `*-cmp.mp4`: before | after
 - `*-tuned-1080p.mp4`

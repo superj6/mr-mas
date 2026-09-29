@@ -12,7 +12,7 @@ import os, shutil, sys
 from PIL import Image, ImageDraw, ImageFont
 
 SEQ = sys.argv[1]
-OUT = sys.argv[2] if len(sys.argv) > 2 else '/home/jgon/project/art/mrmas/out/intro/picture/beats'
+OUT = sys.argv[2] if len(sys.argv) > 2 else '/home/jgon/project/art/mrmas/out/season/intro/picture/beats'
 EDL = [('mcoldopen', 0, 119), ('meras', 120, 224), ('mdinner1', 225, 344), ('mdinner2', 345, 479), ('mrollcall', 480, 539), ('mfinale', 540, 719)]
 moment = lambda f: next(m for m, a, b in EDL if a <= f <= b)
 HANDOFFS = {120, 225, 345, 480, 540}

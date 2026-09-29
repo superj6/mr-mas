@@ -7,7 +7,7 @@ I built the dinner opening and the Gerg and Alyi cards (global frames 225–359)
 - `mdinner1-opening` (f237), `mdinner1-gerg-card` (f266), `mdinner1-ctrl` (f274), `mdinner1-cathedral` (f299), `mdinner1-alyi-card` (f334).
 - `mdinner1-vault` (f359): a hand-off check only, not one of the five stills.
 
-**Outputs** (in `/home/jgon/project/art/mrmas/out/pixel/moments/`):
+**Outputs** (in `/home/jgon/project/art/mrmas/out/season/intro/moments/`):
 - `mdinner1-opening.png`, `mdinner1-gerg-card.png`, `mdinner1-ctrl.png`, `mdinner1-cathedral.png`, `mdinner1-alyi-card.png` (1920×1080)
 - `mdinner1.mp4` (picture only)
 - `mdinner1-scratch-audio.wav` and `mdinner1-with-scratch-audio.mp4`: a timing sketch in synthesized sound, not sound design

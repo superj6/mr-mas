@@ -17,7 +17,7 @@ subtitle track (mov_text, English) is stream-copied into the reel, shifted to wh
     ../ops/heavy.sh audio/.venv-mix/bin/python studio/src/dev/range/tools/reel_ep1.py [--slates-only] [scratchDir]
     (run from the repo root; the heavy guard is ops/heavy.sh)
 
-Writes out/range/ep1/ep1-range-reel.mp4 and out/range/ep1/ep1-range-sheet.png (one key still per output, taken
+Writes out/lookdev/range/ep1/ep1-range-reel.mp4 and out/lookdev/range/ep1/ep1-range-sheet.png (one key still per output, taken
 from the encoded reel). Scratch (a few hundred mostly black PNGs, the wavs, check stills) goes in
 <scratchDir>/ep1reel-work and is deleted at the end.
 """
@@ -35,7 +35,7 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 STUDIO = os.path.abspath(os.path.join(HERE, '..', '..', '..', '..'))
 ROOT = os.path.dirname(STUDIO)
-SRC = os.path.join(ROOT, 'out', 'range', 'ep1')
+SRC = os.path.join(ROOT, 'out/lookdev/range/ep1')
 OUT_MP4 = os.path.join(SRC, 'ep1-range-reel.mp4')
 OUT_SHEET = os.path.join(SRC, 'ep1-range-sheet.png')
 FFD = os.path.join(STUDIO, 'node_modules', '@remotion', 'compositor-linux-x64-gnu')

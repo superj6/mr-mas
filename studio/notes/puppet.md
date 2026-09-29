@@ -24,13 +24,13 @@ Every constraint of a 2D rig is presented as a convention of the medium:
 - `src/dev/puppet/entry.tsx`: dev entry
 
 ## Compositions
-- `puppet-scene`: 120 f @24 fps, the test beat → `out/structures/puppet/scene.mp4`
+- `puppet-scene`: 120 f @24 fps, the test beat → `out/lookdev/structures/puppet/scene.mp4`
 - `puppet-key`: still (f106, wider cam) → `key.png`
 - `puppet-extra-closeup` → `extra-closeup.png`; `puppet-lineup` → `extra-lineup.png`;
   `puppet-kit` → `extra-kit.png`; `puppet-stocks` → `extra-stocks.png`
 - dev: `puppet-rigtest`, `puppet-sheet-a|b|c|d` (contact sheets of scene frames), `puppet-tear`, `puppet-close`
 
-Render: `npx remotion render src/dev/puppet/entry.tsx puppet-scene ../out/structures/puppet/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error`
+Render: `npx remotion render src/dev/puppet/entry.tsx puppet-scene ../out/lookdev/structures/puppet/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error`
 (about 2–2.5 min on this machine when idle).
 
 ## How to use the rigs

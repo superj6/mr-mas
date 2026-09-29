@@ -6,7 +6,7 @@
 // Sound (the OST engine's venv; cue first, then the rooms/devices/SFX pass, which also muxes):
 //   cd src/dev/range/p4/audio && ../../../../../../audio/.venv-theme/bin/python cue.py --out <scratch>/cue
 //   ../../../../../../audio/.venv-theme/bin/python sound.py --cue <scratch>/cue --wav <scratch>/mix.wav \
-//       --picture <scratch>/p4-picture.mp4 --out ../../../../../../out/range/p4.mp4
+//       --picture <scratch>/p4-picture.mp4 --out ../../../../../../out/lookdev/range/p4.mp4
 // Stills + contact sheet: tools/sheet.ts (Node, same renderer; bit-identical to the Remotion frames, checked).
 import {registerRoot} from 'remotion';
 import {makeRoot} from '../../makeRoot';

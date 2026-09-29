@@ -25,7 +25,7 @@ All commands below run from `studio/`, unless a line says otherwise.
 
 The older single-reel scripts still work as before:
 
-- `bash src/dev/reel/render_all.sh [keys]` renders to `out/reel/`.
+- `bash src/dev/reel/render_all.sh [keys]` renders to `out/season/reels/`.
 - `node src/dev/reel/stills.mjs <compId> <dir> --sheet` makes a contact sheet.
 - `npx remotion studio src/dev/reel/entry.tsx` opens the studio. Run `node src/reel/sync.mjs --watch` alongside it.
 
@@ -79,7 +79,7 @@ node src/reel/tools/episode.mjs <manifest> --only act3,act4
   "actCardSec": 4, "known": [],                    // ids named before the first chapter
   "chapters": [
     {"id": "coldopen", "label": "COLD OPEN", "sub": "sc 1-4", "from": "ep01-full-part1", "acts": ["COLD OPEN"]},
-    {"id": "intro", "kind": "video", "src": "out/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full",
+    {"id": "intro", "kind": "video", "src": "out/season/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full",
      "audio": {"own": true, "src": "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3}},
     {"id": "card", "from": "ep01-full-part1", "beats": ["card.01"]},
     {"id": "act4", "from": "ep01-act4-v5", "audio": {"src": "audio/reel/ep01-act4-v5/mix.wav", "in": 3.0}},
@@ -155,8 +155,8 @@ Nothing here was watched or listened to. These are measurements. The machine has
 **Existing reels are unchanged.**
 - **Stills.** I bundled the code before and after the change, then rendered 112 stills from each: `reel-ep02`, `reel-ep01-act4-v5`, `reel-ep01-full`, `reel-ep01`, `reel-ep01-full-part1` and `reel-season` (title frames, beat frames, the last frame). **All 112 were byte-identical (md5).** The composition list (ids and durations) was identical too.
 - **Full re-renders**, with the command `render_all.sh` uses (`npx remotion render <bundle> <id> <out> --concurrency=4`), written to scratch. I compared the H.264 streams (`-map 0:v -c copy -f h264`, then md5):
-  - `reel-ep02` with the old code, with the new code, and the existing `out/reel/ep02.mp4` (06:58): **the three video streams are bit-identical** (12,332,068 bytes, md5 `2ed88fb5…`).
-  - `reel-ep01-act4-v5` with the new code and the existing `out/reel/ep01-act4-v5.mp4` (15:16): **bit-identical video streams** (12,515 frames, 25,644,616 bytes, md5 `9209e4d4…`). The render logged one Chrome "Target closed" error, which Remotion recovered from (exit 0, every frame present).
+  - `reel-ep02` with the old code, with the new code, and the existing `out/season/reels/ep02.mp4` (06:58): **the three video streams are bit-identical** (12,332,068 bytes, md5 `2ed88fb5…`).
+  - `reel-ep01-act4-v5` with the new code and the existing `out/ep01/act4/reel/ep01-act4-v5.mp4` (15:16): **bit-identical video streams** (12,515 frames, 25,644,616 bytes, md5 `9209e4d4…`). The render logged one Chrome "Target closed" error, which Remotion recovered from (exit 0, every frame present).
 - **The composition list** with the new code has every old id and duration, plus `reel-<key>` for a synced manifest. That registration was tested in a scratch copy of the studio sources, not in the real `data/` (no manifest is synced yet).
 
 **The Ep1 test manifest** (`examples/ep01-full-v1.manifest.json`), rendered end to end into scratch with `--jobs 3 --conc 4 --seg 90`:
@@ -228,7 +228,7 @@ The generator is ready. The remaining gaps are content. The survey behind this w
 npx remotion bundle src/dev/reel/entry.tsx --out-dir $B/bundle --bundle-cache=false --log=error
 npx remotion render $B/bundle reel-ep02 $B/ep02.mp4 --concurrency=4 --muted --log=error
 FFD=node_modules/@remotion/compositor-linux-x64-gnu
-for f in $B/ep02.mp4 ../out/reel/ep02.mp4; do LD_LIBRARY_PATH=$FFD $FFD/ffmpeg -v error -i $f -map 0:v -c copy -f h264 - | md5sum; done
+for f in $B/ep02.mp4 ../out/season/reels/ep02.mp4; do LD_LIBRARY_PATH=$FFD $FFD/ffmpeg -v error -i $f -map 0:v -c copy -f h264 - | md5sum; done
 ```
 
-The two sums match as long as nothing has changed `ep02`'s timeline or the shared drawing code since `out/reel/ep02.mp4` was rendered.
+The two sums match as long as nothing has changed `ep02`'s timeline or the shared drawing code since `out/season/reels/ep02.mp4` was rendered.

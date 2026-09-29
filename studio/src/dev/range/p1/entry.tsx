@@ -1,5 +1,5 @@
 // MR. MAS - style-range Prototype 1 (THE READ, 10.C + J4 placeholder): dev entry. Renders ONLY this prototype.
-//   npx remotion still  src/dev/range/p1/entry.tsx range-p1-keytest ../out/range/p1-keytest.png --bundle-cache=false --log=error
+//   npx remotion still  src/dev/range/p1/entry.tsx range-p1-keytest ../out/lookdev/range/p1-keytest.png --bundle-cache=false --log=error
 //   npx remotion render src/dev/range/p1/entry.tsx range-p1 <scratch>/p1-silent.mp4 --concurrency=4 --bundle-cache=false --log=error
 // range-p1-probe renders any list of clip frames in one launch (a dev review tool):
 //   npx remotion render <bundle> range-p1-probe <dir> --sequence --props='{"at":[150,200,330]}' --frames=0-2

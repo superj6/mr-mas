@@ -19,8 +19,8 @@ plus a 3 s motion test per style.
 
 Render:
 ```
-npx remotion still  src/dev/title/entry.tsx title-riso ../out/dev/title/title-riso.png --bundle-cache=false --log=error
-npx remotion render src/dev/title/entry.tsx title-riso-motion ../out/dev/title/title-riso-motion.mp4 --bundle-cache=false --log=error --concurrency=2
+npx remotion still  src/dev/title/entry.tsx title-riso ../out/lookdev/looks/title/title-riso.png --bundle-cache=false --log=error
+npx remotion render src/dev/title/entry.tsx title-riso-motion ../out/lookdev/looks/title/title-riso-motion.mp4 --bundle-cache=false --log=error --concurrency=2
 ```
 Every component takes an optional `frame` prop. Stills pass `frame: 60` (the settled hero frame, with
 the intro skipped). Motion comps use the real frame.
@@ -55,7 +55,7 @@ so it doesn't need one. Camera: push-ins and parallax work in all the vector and
 | cartoon | pops, squash and stretch, blinks: anything | none technically. It is the look that was rejected as too cartoony. |
 
 ## Outputs
-Stills: `out/dev/title/title-<style>.png`. Motion: `out/dev/title/title-<style>-motion.mp4`. Contact sheet: `out/dev/title/title-sheet.png`.
+Stills: `out/lookdev/looks/title/title-<style>.png`. Motion: `out/lookdev/looks/title/title-<style>-motion.mp4`. Contact sheet: `out/lookdev/looks/title/title-sheet.png`.
 Measured motion render times (72 f, concurrency 2, including the ~15 s bundle, with other builders rendering at the same time): glyph 70 s, dither 83 s, pixel 92 s,
 riso 92 s, soft 99 s, cartoon 107 s, engrave 121 s, anime 171 s, noir 362 s. Noir is the slowest because the feTurbulence/displacement ink filters
 are re-rasterised every frame. If noir is picked, pre-bake those textures.

@@ -18,7 +18,7 @@
 | `src/dev/intro/tools/contact_sheet.py` | Writes the 48 beat stills and the contact sheet. |
 | `src/dev/intro/tools/handoffs.py` | Writes the handoff stills and strips, the match-cut zoom and the overlap diff. |
 
-**Outputs** are in `out/intro/picture/`:
+**Outputs** are in `out/season/intro/picture/`:
 - `intro-ep1-1080p-silent.mp4`
 - `intro-ep1-4k-silent.mp4`
 - `intro-events.json`
@@ -27,11 +27,11 @@
 
 ```
 cd studio
-npx remotion still  src/dev/intro/entry.tsx intro-ep1 ../out/intro/picture/handoffs/x.png --frame=225 --bundle-cache=false --log=error
+npx remotion still  src/dev/intro/entry.tsx intro-ep1 ../out/season/intro/picture/handoffs/x.png --frame=225 --bundle-cache=false --log=error
 npx remotion render src/dev/intro/entry.tsx intro-ep1 <dir> --sequence --image-format=png --concurrency=4 --bundle-cache=false --log=error
 bash src/dev/intro/tools/master.sh all            # both masters (about 3.5 min on this machine)
 npx esbuild src/dev/intro/tools/events.ts --bundle --platform=node --outfile=<scratch>/events.cjs --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty
-node <scratch>/events.cjs ../out/intro/picture/intro-events.json
+node <scratch>/events.cjs ../out/season/intro/picture/intro-events.json
 python3 src/dev/intro/tools/contact_sheet.py <png seq dir>
 python3 src/dev/intro/tools/handoffs.py <png seq dir> <intro-raw-mdinner1 frames 340-359 dir>
 ```

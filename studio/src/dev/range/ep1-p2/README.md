@@ -4,7 +4,7 @@ The pilot's tag, sc 32 (Dec 6, 2023). This is a fully programmatic filler. ELGOO
 
 Last pass: **ep1r-p2r5** (2026-09-27), the fifth pass on this folder. It answers the cold review of v4 (below): a new take (a turntable spin), a rebuilt exposed screen, the Orb's beam, the `[OTS]` re-staged to match the `[2S]`, and the people animated.
 
-## Outputs (`out/range/ep1/`)
+## Outputs (`out/lookdev/range/ep1/`)
 
 | File | What |
 |---|---|

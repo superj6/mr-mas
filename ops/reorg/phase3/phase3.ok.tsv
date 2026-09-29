@@ -1,0 +1,4 @@
+audio/ep01/act4/dialogue/tools/fastrec/fastrec.py	f"{rel(os.path.join(out, 'qa', 'qa-v5.json'))}, string-outs in {rel(os.path.join(out, 'reel'))}/")	joins 'reel' onto fastrec's own --out folder, not out/reel
+audio/ep01/act4/dialogue/tools/fastrec/fastrec.py	os.makedirs(os.path.join(out, "reel"), exist_ok=True)	joins 'reel' onto fastrec's own --out folder, not out/reel
+audio/ep01/act4/dialogue/tools/fastrec/fastrec.py	mp = os.path.join(out, "reel", f"sc{sc}-fast-stringout.mp3")	joins 'reel' onto fastrec's own --out folder, not out/reel
+studio/src/reel/tools/episode.mjs	const OUT = path.resolve(opt.out ?? path.join(ROOT, 'out', Number.isFinite(epNo) ? `ep${String(epNo).padStart(2, '0')}` : 'season', 'reel', `${KEY}${opt.only ? '-' + String(opt.only).replace(/,/g, '+') : ''}.mp4`));	builds out/<epNN|season>/reel/<key>.mp4, not out/reel

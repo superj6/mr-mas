@@ -11,11 +11,11 @@ How to re-create every file that git does not store. Videos, `node_modules/`, th
 
 ---
 
-> **2026-09-26:** the legacy 4K intro files (`out/intro/intro-ep1-V1-4k.mp4` and `out/intro/picture/intro-ep1-4k-silent.mp4`) were deleted under the 1080p-max policy. The 4K steps below only run if those files exist, and `master.sh 4k` can re-render them if ever needed.
+> **2026-09-26:** the legacy 4K intro files (`out/season/intro/intro-ep1-V1-4k.mp4` and `out/season/intro/picture/intro-ep1-4k-silent.mp4`) were deleted under the 1080p-max policy. The 4K steps below only run if those files exist, and `master.sh 4k` can re-render them if ever needed.
 
 ## Quick start: re-render the intro in one go
 
-This goes from a fresh clone to `out/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro-mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.
+This goes from a fresh clone to `out/season/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro-mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.
 
 ```bash
 # 0. Scripts hard-code this path, so clone (or symlink) the repo here. Other options: §1.1.
@@ -26,22 +26,22 @@ cd /home/jgon/project/art/mrmas
 
 # 2. The silent 1080p picture master: 720 lossless PNGs -> x264 crf 12 -> self-check (720 frames, 24/1, yuv420p)
 bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"
-#    -> out/intro/picture/intro-ep1-1080p-silent.mp4   (about 1.5 min on 14 idle cores)
+#    -> out/season/intro/picture/intro-ep1-1080p-silent.mp4   (about 1.5 min on 14 idle cores)
 
 # 3. Mux the committed mixes onto it (stream copy, no re-encode; the same call as encode_mux.sh, 1080p only)
 FFD=studio/node_modules/@remotion/compositor-linux-x64-gnu
 for VN in V1:chipchamber V2:orchestralnoir V3:pixelswing V4:pianopixels; do
   V=${VN%%:*} N=${VN#*:}
   LD_LIBRARY_PATH=$FFD $FFD/ffmpeg -hide_banner -loglevel error -y \
-    -i out/intro/picture/intro-ep1-1080p-silent.mp4 -i audio/intro-mix/intro-ep1-mix-$V-$N.m4a \
+    -i out/season/intro/picture/intro-ep1-1080p-silent.mp4 -i audio/intro-mix/intro-ep1-mix-$V-$N.m4a \
     -map 0:v:0 -map 1:a:0 -c copy \
     -metadata title="MR. MAS Ep1 intro ($V $N)" -metadata:s:a:0 language=eng \
-    -movflags +faststart out/intro/intro-ep1-$V-1080p.mp4
+    -movflags +faststart out/season/intro/intro-ep1-$V-1080p.mp4
 done
 
 # 4. Check: h264 1920x1080 720 frames + aac 48 kHz stereo, 30.000 s
 LD_LIBRARY_PATH=$FFD $FFD/ffprobe -v error -show_entries stream=codec_name,width,height,nb_frames,sample_rate:format=duration \
-  -of compact out/intro/intro-ep1-V1-1080p.mp4
+  -of compact out/season/intro/intro-ep1-V1-1080p.mp4
 ```
 
 - **V1 "Chip Chamber Jazz" is the primary mix.** V2–V4 are the alternates ([audio/intro-mix/README.md](../audio/intro-mix/README.md)).
@@ -204,18 +204,18 @@ The script is safe to re-run: files already on disk with the right hash are skip
 
 | Ignored output | Recipe | Inputs it needs | CPU time | Status |
 |---|---|---|---|---|
-| `out/intro/intro-ep1-V{1,2,3,4}-1080p.mp4` | [Quick start](#quick-start-re-render-the-intro-in-one-go) / §3.1 | the silent master + committed `.m4a` mixes | seconds | ready |
-| `out/intro/picture/intro-ep1-1080p-silent.mp4` | §3.1 step 2 | studio | ~1.5 min | ready |
-| `out/intro/intro-ep1-V1-4k.mp4`, `out/intro/picture/intro-ep1-4k-silent.mp4` | not re-made (1080p policy) | — | — | retired |
-| `out/animatic/intro-animatic-silent.mp4`, `intro-animatic.mp4` | §3.2 | studio; committed `audio/animatic/temp-track.wav` | *est.* 1–3 min | ready |
-| `out/pixel/moments/{mcoldopen,meras,mdinner1,mdinner2,mfinale,mfinale-bars9-12,mrollcall}.mp4` + 6 `*-with-scratch-audio.mp4` | §3.3 | studio; committed scratch WAVs | *est.* 1–3 min each | ready |
-| `out/pixel/cast/*.mp4`, `out/pixel/engine/*.mp4` | §3.4 | studio | *est.* < 1 min each | ready |
-| `out/structures/{pixeladv,puppet,satire,screen,shape}/scene.mp4` | §3.5 | studio | 40 s – 2.5 min each | ready |
-| `out/dev/title/title-*-motion.mp4` (9), `out/dev/render/motion-*.mp4` (9), `out/dev/env/env-motion-*.mp4` (5), `out/dev/nole/*.mp4` (2), `out/dev/anime/motion.mp4` | §3.6 | studio | 15 s – 7 min each; `nole-motion-soft` ~14 min | ready |
-| `out/dev/puppet/scene-v1.mp4`, `out/dev/screen/scene-v{1,2,3}.mp4` | §3.6 | — | — | superseded iterations; not reproducible |
+| `out/season/intro/intro-ep1-V{1,2,3,4}-1080p.mp4` | [Quick start](#quick-start-re-render-the-intro-in-one-go) / §3.1 | the silent master + committed `.m4a` mixes | seconds | ready |
+| `out/season/intro/picture/intro-ep1-1080p-silent.mp4` | §3.1 step 2 | studio | ~1.5 min | ready |
+| `out/season/intro/intro-ep1-V1-4k.mp4`, `out/season/intro/picture/intro-ep1-4k-silent.mp4` | not re-made (1080p policy) | — | — | retired |
+| `out/season/intro/animatic/intro-animatic-silent.mp4`, `intro-animatic.mp4` | §3.2 | studio; committed `audio/animatic/temp-track.wav` | *est.* 1–3 min | ready |
+| `out/season/intro/moments/{mcoldopen,meras,mdinner1,mdinner2,mfinale,mfinale-bars9-12,mrollcall}.mp4` + 6 `*-with-scratch-audio.mp4` | §3.3 | studio; committed scratch WAVs | *est.* 1–3 min each | ready |
+| `out/lookdev/pixel/cast/*.mp4`, `out/lookdev/pixel/engine/*.mp4` | §3.4 | studio | *est.* < 1 min each | ready |
+| `out/lookdev/structures/{pixeladv,puppet,satire,screen,shape}/scene.mp4` | §3.5 | studio | 40 s – 2.5 min each | ready |
+| `out/lookdev/looks/title/title-*-motion.mp4` (9), `out/lookdev/looks/render/motion-*.mp4` (9), `out/lookdev/looks/env/env-motion-*.mp4` (5), `out/lookdev/looks/nole/*.mp4` (2), `out/lookdev/looks/anime/motion.mp4` | §3.6 | studio | 15 s – 7 min each; `nole-motion-soft` ~14 min | ready |
+| `out/lookdev/looks/puppet/scene-v1.mp4`, `out/lookdev/looks/screen/scene-v{1,2,3}.mp4` | §3.6 | — | — | superseded iterations; not reproducible |
 | `audio/reel/epNN.wav` (12 beds, ~50 MB each), `audio/reel/preview/epNN.mp4` | §3.8 | `audio/.venv` + `theme-pack/UprightPianoKW…` | 1–2 min each | ready |
-| `out/reel/epNN.mp4` (12), `out/reel/season.mp4` | §3.8 | studio + the beds | ~4.5 min per episode (measured under load) | in progress (at 14:44 on the audit day, ep01–ep11 were rendered; ep12 and `season.mp4` were still rendering) |
-| `out/reel/ep01-full-part{1,2}.mp4` (Ep1 full animatic) | §3.9 | studio (+ beds) | *est.* ~16 + 6 min | in progress; never rendered yet |
+| `out/season/reels/epNN.mp4` (12), `out/season/reels/season.mp4` | §3.8 | studio + the beds | ~4.5 min per episode (measured under load) | in progress (at 14:44 on the audit day, ep01–ep11 were rendered; ep12 and `season.mp4` were still rendering) |
+| `out/season/reels/ep01-full-part{1,2}.mp4` (Ep1 full animatic) | §3.9 | studio (+ beds) | *est.* ~16 + 6 min | in progress; never rendered yet |
 | `out/ep01/act4/assets/**/*.mp4` (Act Four asset tests) | §3.10 | studio | < 1 min each | in progress |
 | Act Four animatic | §3.10 | — | — | in progress: no composition yet |
 | `audio/samples/**` | §2 | network | download | ready |
@@ -227,7 +227,7 @@ Every audio master, stem and MIDI file is **committed**, so you never have to re
 
 ### 3.1 The final intro
 
-The intro has 30.000 s of picture (720 frames at 24 fps, 96 BPM) and four sound variations. Picture: `studio/src/intro/` (the edit, EDL `edl.ts`) mounts the six pixel moments of `studio/src/dev/m*/`. Sound: the score (`audio/theme`), SFX (`audio/intro-sfx`) and voices (`audio/intro-vox`) meet in the mix (`audio/intro-mix`). The audio is cued from `out/intro/picture/intro-events.json`, which is exported from the picture code. Reports: [out/intro/reports/](../out/intro/reports/); the audio READMEs are linked per step.
+The intro has 30.000 s of picture (720 frames at 24 fps, 96 BPM) and four sound variations. Picture: `studio/src/intro/` (the edit, EDL `edl.ts`) mounts the six pixel moments of `studio/src/dev/m*/`. Sound: the score (`audio/theme`), SFX (`audio/intro-sfx`) and voices (`audio/intro-vox`) meet in the mix (`audio/intro-mix`). The audio is cued from `out/season/intro/picture/intro-events.json`, which is exported from the picture code. Reports: [out/season/intro/reports/](../out/season/intro/reports/); the audio READMEs are linked per step.
 
 Run the steps in this order. Steps marked *(only after a change)* can be skipped on a clean rebuild, because their outputs are committed.
 
@@ -237,7 +237,7 @@ cd studio
 S=$(mktemp -d)
 npx esbuild src/dev/intro/tools/events.ts --bundle --platform=node --outfile=$S/events.cjs \
   --loader:.woff=empty --loader:.woff2=empty --loader:.css=empty
-node $S/events.cjs ../out/intro/picture/intro-events.json          # "153 events"
+node $S/events.cjs ../out/season/intro/picture/intro-events.json          # "153 events"
 ```
 
 **2. Silent picture master**, about 1.5 min ([master.sh](../studio/src/dev/intro/tools/master.sh)):
@@ -246,7 +246,7 @@ bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"
 # = npx remotion render src/dev/intro/entry.tsx intro-ep1 <tmp> --sequence --image-format=png --scale=1 --concurrency=4
 #   then ffmpeg libx264 -preset slow -crf 12 -pix_fmt yuv420p, bt709, flags=neighbor (exact 4:2:0 chroma on the 4x4 pixel grid),
 #   then checks "h264,1920,1080,yuv420p,24/1,720" and deletes the PNGs.
-# -> out/intro/picture/intro-ep1-1080p-silent.mp4
+# -> out/season/intro/picture/intro-ep1-1080p-silent.mp4
 ```
 - Entry `studio/src/dev/intro/entry.tsx`. Compositions: `intro-ep1` (720 f), plus `intro-raw-{mcoldopen,meras,mdinner1,mdinner2,mrollcall,mfinale}`, which show one moment alone on the global clock for handoff review.
 - **Don't** use `master.sh 4k` or `all`: those are legacy modes and break the render policy.
@@ -257,8 +257,8 @@ cd studio
 SEQ=$(mktemp -d); RAW=$(mktemp -d)
 npx remotion render src/dev/intro/entry.tsx intro-ep1 $SEQ --sequence --image-format=png --concurrency=4 --bundle-cache=false --log=error
 npx remotion render src/dev/intro/entry.tsx intro-raw-mdinner1 $RAW --sequence --image-format=png --frames=340-359 --bundle-cache=false --log=error
-python3 src/dev/intro/tools/contact_sheet.py $SEQ        # -> out/intro/picture/beats/ (48 beat stills + contact sheet)
-python3 src/dev/intro/tools/handoffs.py $SEQ $RAW        # -> out/intro/picture/handoffs/ (cut frames, strips, overlap diff)
+python3 src/dev/intro/tools/contact_sheet.py $SEQ        # -> out/season/intro/picture/beats/ (48 beat stills + contact sheet)
+python3 src/dev/intro/tools/handoffs.py $SEQ $RAW        # -> out/season/intro/picture/handoffs/ (cut frames, strips, overlap diff)
 ```
 
 **4. Score** *(only after a score change)*: 4 × about 1 min, plus the analysis. It needs `.venv-theme` and the `theme-pack` + `generaluser-gs` samples. See [VARIATIONS.md](../audio/theme/VARIATIONS.md).
@@ -285,7 +285,7 @@ The TTS cache (`_work/tts_cache/`, seeded from `audio/vocals/_work/`) is gitigno
 audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py   # intro-sfx_stem.wav, intro-blip_stem.wav, extras, spotting.*, picture-sync.json, qa.json
 audio/.venv/bin/python audio/intro-sfx/make_previews.py     # optional listening previews in preview/
 ```
-It reads `out/intro/picture/intro-events.json` and the committed SFX board (`audio/sfx/wav/`), so no sample libraries are needed.
+It reads `out/season/intro/picture/intro-events.json` and the committed SFX board (`audio/sfx/wav/`), so no sample libraries are needed.
 
 **7. Mix, encode and mux**, about 2 min. See [audio/intro-mix/README.md](../audio/intro-mix/README.md).
 
@@ -305,27 +305,27 @@ done
 cd -   # then run step 3 of the Quick start (the 1080p mux loop)
 audio/.venv-mix/bin/python audio/intro-mix/scripts/sfx_balance.py   # qa/sfx_vs_music.json, qa/V1_loudness_timeline.png
 ```
-- `verify.py` (A/V sync, loudness and the ding check → `qa/deliverables_qa.json`) also expects `out/intro/intro-ep1-V1-4k.mp4`, so it cannot run on a 1080p-only rebuild until it is patched (§4). The committed `deliverables_qa.json` documents the shipped files.
+- `verify.py` (A/V sync, loudness and the ding check → `qa/deliverables_qa.json`) also expects `out/season/intro/intro-ep1-V1-4k.mp4`, so it cannot run on a 1080p-only rebuild until it is patched (§4). The committed `deliverables_qa.json` documents the shipped files.
 - `audio/intro-mix/scripts/run_all.sh` runs everything, including `verify.py`, in about 80 s.
 
-**8. Outputs:** `out/intro/intro-ep1-V{1..4}-1080p.mp4`, each with 720 video frames, AAC 48 kHz stereo at −14 LUFS, and 30.000 s.
+**8. Outputs:** `out/season/intro/intro-ep1-V{1..4}-1080p.mp4`, each with 720 video frames, AAC 48 kHz stereo at −14 LUFS, and 30.000 s.
 
-### 3.2 The intro stick-figure animatic (`out/animatic/`)
+### 3.2 The intro stick-figure animatic (`out/season/intro/animatic/`)
 
 This is the rough timing animatic with stick figures and boxes: 1280×720, 720 frames, from entry `studio/src/dev/animatic/entry.tsx` (`intro-animatic`). It predates the pixel intro.
 ```bash
 cd studio
-npx remotion render src/dev/animatic/entry.tsx intro-animatic ../out/animatic/intro-animatic-silent.mp4 --concurrency=2 --bundle-cache=false --log=error
+npx remotion render src/dev/animatic/entry.tsx intro-animatic ../out/season/intro/animatic/intro-animatic-silent.mp4 --concurrency=2 --bundle-cache=false --log=error
 cd ..
 # temp track (optional; temp-track.wav/.mp3 + temp-track_events.json are committed). Inputs: audio/sfx/wav/*, audio/vocals/vo/mas_coldopen_michael.wav
 (cd audio/animatic && ../.venv/bin/python build_temp_track.py)
 # mux (the original mux command was not recorded; this is the standard one used elsewhere)
-ff -y -i out/animatic/intro-animatic-silent.mp4 -i audio/animatic/temp-track.wav -map 0:v -map 1:a -c:v copy \
-   -c:a aac -b:a 192k -shortest -movflags +faststart out/animatic/intro-animatic.mp4
+ff -y -i out/season/intro/animatic/intro-animatic-silent.mp4 -i audio/animatic/temp-track.wav -map 0:v -map 1:a -c:v copy \
+   -c:a aac -b:a 192k -shortest -movflags +faststart out/season/intro/animatic/intro-animatic.mp4
 # stills (committed): node src/dev/animatic/stills.mjs <outdir> <prefix> f1 f2 …   (run from studio/)
 ```
 
-### 3.3 The pixel intro moments and the roll call (`out/pixel/moments/`)
+### 3.3 The pixel intro moments and the roll call (`out/season/intro/moments/`)
 
 Each moment is authored at 480×270 and scaled 4× nearest-neighbour. The review MP4s are rendered at `--scale=0.5` (960×540), except `mrollcall.mp4`, which was rendered at full 1080p. Composition frame 0 is the intro frame given below.
 
@@ -336,18 +336,18 @@ Each moment is authored at 480×270 and scaled 4× nearest-neighbour. The review
 | dinner 1 (225–359) | `src/dev/mdinner1/entry.tsx` | `mdinner1` (135) | `mdinner1-scratch-audio.wav` ← `python3 src/dev/mdinner1/tools/scratch_audio.py <wav>` |
 | dinner 2 (345–479) | `src/dev/mdinner2/entry.tsx` | `mdinner2` (135) | `mdinner2-scratch-audio.wav` ← `python3 src/dev/mdinner2/tools/scratch_audio.py <wav>` |
 | roll call "THE PLAYERS" (480–539) | `src/dev/mrollcall/entry.tsx` | `mrollcall` (60) | none |
-| skyline, title, bookend (540–719) | `src/dev/mfinale/entry.tsx` | `mfinale` (180), `mfinale-bars9-12` (240, from f480) | `mfinale-scratch-audio.wav` = `audio/mfinale-mix.wav`, `audio/mfinale-bars9-12-mix.wav` ← esbuild `src/dev/mfinale/tools/audio.ts`, then `node <bundle> ../out/pixel/moments/audio` |
+| skyline, title, bookend (540–719) | `src/dev/mfinale/entry.tsx` | `mfinale` (180), `mfinale-bars9-12` (240, from f480) | `mfinale-scratch-audio.wav` = `audio/mfinale-mix.wav`, `audio/mfinale-bars9-12-mix.wav` ← esbuild `src/dev/mfinale/tools/audio.ts`, then `node <bundle> ../out/season/intro/moments/audio` |
 
 ```bash
 cd studio
 for m in mcoldopen meras mdinner1 mdinner2 mfinale; do
-  npx remotion render src/dev/$m/entry.tsx $m ../out/pixel/moments/$m.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+  npx remotion render src/dev/$m/entry.tsx $m ../out/season/intro/moments/$m.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 done
-npx remotion render src/dev/mfinale/entry.tsx mfinale-bars9-12 ../out/pixel/moments/mfinale-bars9-12.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-npx remotion render src/dev/mrollcall/entry.tsx mrollcall ../out/pixel/moments/mrollcall.mp4 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/mfinale/entry.tsx mfinale-bars9-12 ../out/season/intro/moments/mfinale-bars9-12.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/mrollcall/entry.tsx mrollcall ../out/season/intro/moments/mrollcall.mp4 --concurrency=1 --bundle-cache=false --log=error
 
 # "-with-scratch-audio" versions: stream-copy the picture, add the committed scratch WAV
-M=../out/pixel/moments
+M=../out/season/intro/moments
 for m in mcoldopen meras mdinner1 mdinner2 mfinale; do
   ff -y -i $M/$m.mp4 -i $M/$m-scratch-audio.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 192k -shortest $M/$m-with-scratch-audio.mp4
 done
@@ -358,48 +358,48 @@ ff -y -i $M/mfinale-bars9-12.mp4 -i $M/audio/mfinale-bars9-12-mix.wav -map 0:v -
 - Key stills are committed. The still ids are listed in §5, for example `meras-key-2014` and `mfinale-key-title`, and the builders' notes are in `studio/notes/<moment>.md`.
 - Every moment also has a Node preview that renders exact pixels in about a second, with no browser: `src/dev/<moment>/tools/preview.ts` (usage in its header).
 
-### 3.4 Pixel cast and engine tests (`out/pixel/cast/`, `out/pixel/engine/`)
+### 3.4 Pixel cast and engine tests (`out/lookdev/pixel/cast/`, `out/lookdev/pixel/engine/`)
 
 ```bash
 cd studio
-npx remotion render src/dev/castmas/entry.tsx     castmas-motion          ../out/pixel/cast/castmas-motion.mp4    --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-npx remotion render src/dev/castrivals/entry.tsx  castrivals-motion       ../out/pixel/cast/castrivals-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-npx remotion render src/dev/pixelengine/entry.tsx pixelengine-dissolve    ../out/pixel/engine/dissolve.mp4        --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
-npx remotion render src/dev/pixelengine/entry.tsx pixelengine-renderfront ../out/pixel/engine/renderfront.mp4     --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/castmas/entry.tsx     castmas-motion          ../out/lookdev/pixel/cast/castmas-motion.mp4    --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/castrivals/entry.tsx  castrivals-motion       ../out/lookdev/pixel/cast/castrivals-motion.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/pixelengine/entry.tsx pixelengine-dissolve    ../out/lookdev/pixel/engine/dissolve.mp4        --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+npx remotion render src/dev/pixelengine/entry.tsx pixelengine-renderfront ../out/lookdev/pixel/engine/renderfront.mp4     --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 ```
 Each is 48 frames at 960×540. Notes: `studio/notes/{castmas,castrivals,pixelengine}.md`, [PIXEL_GUIDE.md](../studio/PIXEL_GUIDE.md).
 
-### 3.5 Structure tests (`out/structures/<key>/scene.mp4`)
+### 3.5 Structure tests (`out/lookdev/structures/<key>/scene.mp4`)
 
 These are the style bake-off. The same 5-second beat (120 frames) is staged in each candidate structure, rendered at `--scale=0.5` (960×540). Each folder's `REPORT.md` and key stills are committed.
 
 ```bash
 cd studio
 for k in pixeladv puppet satire screen shape; do
-  npx remotion render src/dev/$k/entry.tsx $k-scene ../out/structures/$k/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
+  npx remotion render src/dev/$k/entry.tsx $k-scene ../out/lookdev/structures/$k/scene.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error
 done
 ```
 - Measured: `screen` about 40 s, `puppet` about 2–2.5 min on an idle machine.
-- `comic-scene` (`src/dev/comic/entry.tsx`) and `anime-scene` (`src/dev/animescene/entry.tsx`) exist as compositions. Their `out/structures/{comic,anime}/` folders are empty: those two tests only left stills, in `out/dev/comic/` and `out/dev/animescene/`. The loop above works for them too if you want a render. `collage` and `realism` have stills only, and no scene composition.
+- `comic-scene` (`src/dev/comic/entry.tsx`) and `anime-scene` (`src/dev/animescene/entry.tsx`) exist as compositions. Their `out/lookdev/structures/{comic,anime}/` folders are empty: those two tests only left stills, in `out/lookdev/looks/comic/` and `out/lookdev/looks/animescene/`. The loop above works for them too if you want a render. `collage` and `realism` have stills only, and no scene composition.
 
-### 3.6 Title cards and other lookdev MP4s (`out/dev/`)
+### 3.6 Title cards and other lookdev MP4s (`out/lookdev/looks/`)
 
 These come from the style-spectrum phase, before the pixel look was chosen: 72-frame (3 s) motion tests at full 1080p with concurrency 2 ([ART_GUIDE.md](../studio/ART_GUIDE.md)).
 
 ```bash
 cd studio
 for s in anime cartoon dither engrave glyph noir pixel riso soft; do          # title cards
-  npx remotion render src/dev/title/entry.tsx title-$s-motion ../out/dev/title/title-$s-motion.mp4 --bundle-cache=false --log=error --concurrency=2
+  npx remotion render src/dev/title/entry.tsx title-$s-motion ../out/lookdev/looks/title/title-$s-motion.mp4 --bundle-cache=false --log=error --concurrency=2
 done
 for s in dither engrave glyph noir paint pixel riso soft stipple; do          # tonal renderers
-  npx remotion render src/dev/tonetest/entry.tsx tone-motion-$s ../out/dev/render/motion-$s.mp4 --bundle-cache=false --log=error --concurrency=2
+  npx remotion render src/dev/tonetest/entry.tsx tone-motion-$s ../out/lookdev/looks/render/motion-$s.mp4 --bundle-cache=false --log=error --concurrency=2
 done
 for s in glyph noir paint pixel soft; do                                      # environment + Orb
-  npx remotion render src/dev/env/entry.tsx env-motion-$s ../out/dev/env/env-motion-$s.mp4 --bundle-cache=false --log=error --concurrency=2
+  npx remotion render src/dev/env/entry.tsx env-motion-$s ../out/lookdev/looks/env/env-motion-$s.mp4 --bundle-cache=false --log=error --concurrency=2
 done
-npx remotion render src/dev/nole/entry.tsx  nole-motion      ../out/dev/nole/nole-motion.mp4      --bundle-cache=false --log=error --concurrency=2
-npx remotion render src/dev/nole/entry.tsx  nole-motion-soft ../out/dev/nole/nole-motion-soft.mp4 --bundle-cache=false --log=error --concurrency=2
-npx remotion render src/dev/anime/entry.tsx anime-motion     ../out/dev/anime/motion.mp4          --bundle-cache=false --log=error --concurrency=2
+npx remotion render src/dev/nole/entry.tsx  nole-motion      ../out/lookdev/looks/nole/nole-motion.mp4      --bundle-cache=false --log=error --concurrency=2
+npx remotion render src/dev/nole/entry.tsx  nole-motion-soft ../out/lookdev/looks/nole/nole-motion-soft.mp4 --bundle-cache=false --log=error --concurrency=2
+npx remotion render src/dev/anime/entry.tsx anime-motion     ../out/lookdev/looks/anime/motion.mp4          --bundle-cache=false --log=error --concurrency=2
 ```
 
 | Test | Measured time |
@@ -410,7 +410,7 @@ npx remotion render src/dev/anime/entry.tsx anime-motion     ../out/dev/anime/mo
 | `nole-motion-soft` | about 14 min while other renders ran |
 
 - More per-style Nole tests exist as compositions (`nole-motion-{dither,engrave,glyph,noir,paint,pixel,riso,stipple}`), but no MP4 of them is in `out/`.
-- **Superseded iterations:** `out/dev/puppet/scene-v1.mp4` and `out/dev/screen/scene-v{1,2,3}.mp4` are earlier versions of `puppet-scene` and `screen-scene`. The code has moved on and there is no history to go back to, so re-rendering those ids gives the current §3.5 version.
+- **Superseded iterations:** `out/lookdev/looks/puppet/scene-v1.mp4` and `out/lookdev/looks/screen/scene-v{1,2,3}.mp4` are earlier versions of `puppet-scene` and `screen-scene`. The code has moved on and there is no history to go back to, so re-rendering those ids gives the current §3.5 version.
 
 ### 3.7 Audio masters: theme, SFX, vocals, voice casting (all committed)
 
@@ -432,7 +432,7 @@ The WAV and MP3 masters, stems, MIDI and QA files are in git. Rebuild them only 
   - `audio/vocals/_work/tts_cache/` (about 71 MB) and `audio/intro-vox/_work/tts_cache/` (11 MB) hold the Kokoro renders. Without them the voices re-render, and may differ slightly from the committed files.
 - **No human has auditioned any of the audio.** Every level was set by measurement (see the READMEs).
 
-### 3.8 The season story reels (`out/reel/`, `audio/reel/`) (in progress)
+### 3.8 The season story reels (`out/season/reels/`, `audio/reel/`) (in progress)
 
 These are data-driven stick-figure outline reels, one per episode: about 3 minutes each, at 1280×720. The writers edit `show/reel/epNN.json`. `studio/src/reel/sync.mjs` copies and lints the JSON into `studio/src/reel/data/`, and the generator in `studio/src/reel/` draws it. Compositions (entry `studio/src/dev/reel/entry.tsx`):
 
@@ -449,10 +449,10 @@ bash studio/src/dev/reel/render_all.sh                      # sync JSON -> bundl
 bash studio/src/dev/reel/render_all.sh ep03 ep07            # just these;  env: CONC=4  NO_SEASON=1  NO_SHEETS=1  REEL_OUT=…  REEL_AUDIO_DIR=…
 audio/.venv/bin/python audio/reel/build_all.py --mux        # optional: audio/reel/preview/epNN.mp4 (picture copied + bed as AAC 192k)
 ```
-- **Outputs:** `out/reel/epNN.mp4` (with a silent track when no bed exists, so the concat is clean), `out/reel/season.mp4` (stream-copy concat), `out/reel/sheets/reel-epNN-sheet.png` (committed; needs system `python3` + PIL).
+- **Outputs:** `out/season/reels/epNN.mp4` (with a silent track when no bed exists, so the concat is clean), `out/season/reels/season.mp4` (stream-copy concat), `out/season/reels/sheets/reel-epNN-sheet.png` (committed; needs system `python3` + PIL).
 - **Time.** Measured during the audit, on a loaded machine at `CONC=5`: about 4.5 min per episode for render, mux and sheet, so about 55 min for all twelve. A bed takes 1–2 min.
 - The bed rebuild check hashes the reel JSON, `reelbed.py` and the size and mtime of two V1 theme files. A fresh clone has new mtimes, so every bed rebuilds once. That is harmless.
-- **Status at the audit:** another agent was rendering the reels. At 14:44, `out/reel/ep01.mp4`–`ep11.mp4` and their sheets existed; ep12 and `season.mp4` were still to come. `ls out/reel/` shows the current state. While `render_all.sh` runs it keeps a bundle in `out/reel/.tmp/` (gitignored), which it deletes at the end.
+- **Status at the audit:** another agent was rendering the reels. At 14:44, `out/season/reels/ep01.mp4`–`ep11.mp4` and their sheets existed; ep12 and `season.mp4` were still to come. `ls out/season/reels/` shows the current state. While `render_all.sh` runs it keeps a bundle in `out/season/reels/.tmp/` (gitignored), which it deletes at the end.
 - **Bed lookup gotcha:** `render_all.sh` picks the first of `audio/reel/<key>.*` and then `audio/reel/<key>[-_]*.*`. So if `ep01.wav` is missing but `ep01-full-part1.wav` exists, `ep01` is muxed with the full-animatic bed. Build the `epNN` beds first (the default `build_all.py` run does).
 
 ### 3.9 Ep1 full animatic (in progress)
@@ -467,7 +467,7 @@ This is the 1:1 full-episode animatic of Ep1, in two parts. It uses the reel gen
 Both compositions are verified to exist. Neither part has been rendered yet.
 ```bash
 audio/.venv/bin/python audio/reel/build_all.py ep01-full-part1 ep01-full-part2 --jobs 1   # beds (~6 GB RAM for part 1)
-NO_SEASON=1 bash studio/src/dev/reel/render_all.sh ep01-full-part1 ep01-full-part2       # -> out/reel/ep01-full-part{1,2}.mp4 (est. ~16 + 6 min)
+NO_SEASON=1 bash studio/src/dev/reel/render_all.sh ep01-full-part1 ep01-full-part2       # -> out/season/reels/ep01-full-part{1,2}.mp4 (est. ~16 + 6 min)
 ```
 `render_all.sh` accepts these keys because `studio/src/reel/data/ep01-full-part{1,2}.json` exist after the sync. `NO_SEASON=1` stops it from also rebuilding `season.mp4`, which only ever includes `epNN` files anyway.
 
@@ -511,12 +511,12 @@ Re-run `npx remotion compositions <entry>` for the current ids.
 
 ## 4. Known issues and gotchas
 
-1. **The 4K steps in the intro mix (fixed).** `encode_mux.sh` muxes a V1 4K file only if `out/intro/picture/intro-ep1-4k-silent.mp4` exists, and `verify.py` checks it only if present. Under the 1080p render policy neither is produced.
+1. **The 4K steps in the intro mix (fixed).** `encode_mux.sh` muxes a V1 4K file only if `out/season/intro/picture/intro-ep1-4k-silent.mp4` exists, and `verify.py` checks it only if present. Under the 1080p render policy neither is produced.
 2. **Hard-coded repo path and `/tmp/claude-1000/…` scratch defaults** (§1.1).
 3. **Linux x64 glibc only as written:** the scripts point at `compositor-linux-x64-gnu`.
 4. **Transitive dependencies.** `studio/src/dev/{reel,animatic}/stills.mjs` import `@remotion/bundler` and `@remotion/renderer`, which only arrive through `@remotion/cli`. They resolve with npm's flat install, but they aren't in `package.json`.
 5. **Voice rebuilds aren't bit-exact from a clean clone** (§3.7 caches), and Kokoro's `main` revision could move upstream (§1.4).
-6. **Reel render temp bundle.** `render_all.sh` keeps a ~30 MB bundle in `out/reel/.tmp/` while it runs. `.tmp/` is gitignored.
+6. **Reel render temp bundle.** `render_all.sh` keeps a ~30 MB bundle in `out/season/reels/.tmp/` while it runs. `.tmp/` is gitignored.
 7. **Stale bits in older docs:**
    - `studio/src/dev/intro/entry.tsx` and `studio/src/intro/intro.frame.tsx` still show direct `--scale=2` and `--crf` render commands. `master.sh` is the real path.
    - `audio/intro-mix/README.md` lists the 4K MP4 as a deliverable.

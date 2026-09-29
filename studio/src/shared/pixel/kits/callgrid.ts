@@ -1,5 +1,5 @@
 // MR. MAS — shared kit: THE VIDEO-CALL GRID (show-wide). Salvaged from the cut intro slot
-// (src/dev/mfinale/callart.ts + slot.ts, still out/pixel/moments/_cut/mfinale-fired.png) into one reusable module.
+// (src/dev/mfinale/callart.ts + slot.ts, still out/season/intro/moments/_cut/mfinale-fired.png) into one reusable module.
 //
 // A generic call app (guardrails §5: no real app's UI, no real OS sounds): a plain title bar, N tiles on a centred
 // grid, name chips, mute icons, a speaking ring, small vote chips that FLIP, a camera-off tile, system toasts, a

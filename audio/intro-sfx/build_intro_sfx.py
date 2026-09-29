@@ -14,7 +14,7 @@ Outputs (all in audio/intro-sfx/):
   src/*.wav                 processed / synthesized one-shots referenced by the spotting list
 
 Picture sync: frames come from the script's contract (SCRIPT 9.4: "Its frame numbers are the contract"). If
-out/intro/picture/intro-events.json exists, matching keys override the script frames and every delta is logged in
+out/season/intro/picture/intro-events.json exists, matching keys override the script frames and every delta is logged in
 picture-sync.json. Re-run:  audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py
 """
 from __future__ import annotations
@@ -40,7 +40,7 @@ from dsp import (SR, FPS, n_of, db, fade, lowpass, highpass, bandpass, biquad_pe
 SFXLIB = os.path.join(AUDIO, "sfx")
 SRC = os.path.join(HERE, "src")
 PREV = os.path.join(HERE, "preview")
-EVENTS_JSON = os.path.join(PROJ, "out", "intro", "picture", "intro-events.json")
+EVENTS_JSON = os.path.join(PROJ, "out/season/intro/picture/intro-events.json")
 TOTAL_F = 720
 SPF = SR // FPS                     # 2000 samples per frame
 N = TOTAL_F * SPF                   # 1,440,000 samples = 30.000 s

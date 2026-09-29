@@ -458,7 +458,7 @@ audio/*.py                ← compose.py (MIDI from beats.json), sfx.py (procedu
 **How we check it:**
 - `npx remotion studio` for live, frame-by-frame review.
 - `npx remotion still` to render the style frames.
-- `npx remotion render Intro out/intro.mp4`.
+- `npx remotion render Intro out/season/intro.mp4`.
 - Assert the composition is exactly 720 frames.
 - Render a contact sheet with one frame per beat to confirm every cut and card lands on the grid.
 - Run a read-time lint over the text registry: at least 0.25s plus 0.05s per character on screen, and name cards at least 1.2s.

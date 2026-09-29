@@ -63,5 +63,5 @@ brow, key, rim, hair (cowlick spring), phone (under-glow), light, exposure.
   set to a PNG per shot would halve it.
 
 ## Outputs
-`out/structures/satire/`: scene.mp4 (960x540, 120 f), key.png (f74), extra-closeup.png (f106),
+`out/lookdev/structures/satire/`: scene.mp4 (960x540, 120 f), key.png (f74), extra-closeup.png (f106),
 extra-button.png (f116, the water glint), extra-lineup.png.

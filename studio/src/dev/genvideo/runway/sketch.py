@@ -2,7 +2,7 @@
 """A pencil line drawing of our own duck, for the image-to-video variation's first frame (and the film's
 "drawn by nothing" line reveal).
 
-Built from E1-P2's Cycles still (out/range/ep1/ep1-p2-inputs/cycles-f000.png, our Blender duck in profile): the
+Built from E1-P2's Cycles still (out/lookdev/range/ep1/ep1-p2-inputs/cycles-f000.png, our Blender duck in profile): the
 duck is segmented by colour, its silhouette, bill and eye are traced as contours (contourpy, via matplotlib), and
 each contour is drawn as two slightly different graphite passes on off-white paper. A hand-placed wing curve is
 added. No model, no hand, no text.
@@ -25,7 +25,7 @@ from scipy import ndimage
 import contourpy
 
 ROOT = Path(__file__).resolve().parents[5]
-SRC = ROOT / "out/range/ep1/ep1-p2-inputs/cycles-f000.png"
+SRC = ROOT / "out/lookdev/range/ep1/ep1-p2-inputs/cycles-f000.png"
 
 
 def hsv(a: np.ndarray):

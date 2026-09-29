@@ -3,7 +3,7 @@ The bundled ffmpeg has no rawvideo muxer, so frames go through PNG pipes. Pictur
 import os, subprocess, sys
 FFD = os.path.abspath('studio/node_modules/@remotion/compositor-linux-x64-gnu'); FF = FFD + '/ffmpeg'
 env = dict(os.environ, LD_LIBRARY_PATH=FFD)
-src, dst = 'out/intro/intro-ep1-V1-1080p.mp4', sys.argv[1]
+src, dst = 'out/season/intro/intro-ep1-V1-1080p.mp4', sys.argv[1]
 REPLACE = {222: 221, 224: 223}
 SIG = b'\x89PNG\r\n\x1a\n'
 dec = subprocess.run([FF, '-v', 'error', '-i', src, '-f', 'image2pipe', '-c:v', 'png', '-'], stdout=subprocess.PIPE, env=env, check=True).stdout

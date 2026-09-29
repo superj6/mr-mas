@@ -48,9 +48,9 @@ Every cut and hit lands on a 15-frame beat, except f94, f97, f99–104 and f112,
 
 **For whoever assembles the intro:** `<ColdOpenMount/>` in `ColdOpen.tsx` mounts the span at its global frames, and `SPAN` / `toGlobal` are in `timeline.ts`. For the bookend: the caret's home in frame is `CARET_FRAME` = [96, 76], the medium monitor's screen origin is `MED.screen` = [80, 60], and `screenAt(f)` renders the screen at any frame. After Post the composer is empty with the caret blinking, which is the f0 state, so the piece can loop.
 
-Render: `npx remotion render src/dev/mcoldopen/entry.tsx mcoldopen ../out/pixel/moments/mcoldopen.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error` (for stills, use `still` with `--frame=N`).
+Render: `npx remotion render src/dev/mcoldopen/entry.tsx mcoldopen ../out/season/intro/moments/mcoldopen.mp4 --scale=0.5 --concurrency=1 --bundle-cache=false --log=error` (for stills, use `still` with `--frame=N`).
 
-Files are in `/home/jgon/project/art/mrmas/out/pixel/moments/`:
+Files are in `/home/jgon/project/art/mrmas/out/season/intro/moments/`:
 - mcoldopen.mp4
 - mcoldopen-01-macro.png (f2)
 - mcoldopen-02-room.png (f52)

@@ -1,4 +1,4 @@
-Both moments are re-rendered to the same filenames in `out/pixel/moments/`, and the engine fixes are in. The `mdinner2` overlap with `mdinner1` (345-359) is pixel-identical: I checked frames 345, 352 and 359 after polish-a's last edits and got 0 differing pixels. I did not edit any cast module.
+Both moments are re-rendered to the same filenames in `out/season/intro/moments/`, and the engine fixes are in. The `mdinner2` overlap with `mdinner1` (345-359) is pixel-identical: I checked frames 345, 352 and 359 after polish-a's last edits and got 0 differing pixels. I did not edit any cast module.
 
 **One freeze module for the whole dinner.** polish-a and I both built a shared freeze/card module in parallel. They then deleted theirs (`cast/cards.ts`) and moved `mdinner1` onto mine (`src/shared/pixel/freeze.ts`). I removed my duplicate era stamp from `ui.ts`; the era stamp now lives only in their `cast/era.ts`. The four founder cards and prints now use one set of code.
 
@@ -8,7 +8,7 @@ Both moments are re-rendered to the same filenames in `out/pixel/moments/`, and 
 - **The freeze is now a threshold plus one 50% pattern.**
 - **`freeze.ts`:** holds each founder's ink (Gerg green, Alyi orange, Mario denim blue, Nole maroon), the print sets, the single card layout, and a smaller rubber stamp with worn ink.
 - **Font:** added `$`, `·` and `✓`.
-- **Docs and demos:** `PIXEL_GUIDE.md` is at v1.1, and the affected demos in `out/pixel/engine/` are re-rendered.
+- **Docs and demos:** `PIXEL_GUIDE.md` is at v1.1, and the affected demos in `out/lookdev/pixel/engine/` are re-rendered.
 
 **`mdinner2` (345-479)**
 - **Freezes:** Mario's world is printed for one beat (360-374) and Nole's for two (420-449). The room runs again under each card.
@@ -23,7 +23,7 @@ Both moments are re-rendered to the same filenames in `out/pixel/moments/`, and 
 - **Audio:** the scratch track is re-cut to the new timing.
 
 **`mfinale` (now 540-719)**
-- **Rebase:** starts at 540 and no longer uses `slot.ts` or `callart.ts`. The old slot stills are moved to `out/pixel/moments/_cut/`.
+- **Rebase:** starts at 540 and no longer uses `slot.ts` or `callart.ts`. The old slot stills are moved to `out/season/intro/moments/_cut/`.
 - **Title Orb:** now the cold open's Orb model at 19 px, with no equator band, so it doesn't read as a Poké Ball. It sits tight to the R with a word space after, exactly on the rose window's centre.
 - **NopeAI:** an 8-petal jewel rose window matching the dinner's cathedral, plus a hand pass on the stone facade.
 - **Rooftops:**
@@ -35,7 +35,7 @@ Both moments are re-rendered to the same filenames in `out/pixel/moments/`, and 
 
 **Compositions:** `mdinner2`, `mdinner2-{mario,telescope,booster,nole,nole-ledger,nope}` (`nole-ledger` is new); `mfinale` (180 frames), `mfinale-bars9-12` (new, 480-719: the roll call then `mfinale`), `mfinale-key-{skyline,title,bookend}`, `mfinale-sheet`; `pixelengine-*`.
 
-**Outputs** (all in `out/pixel/moments/`):
+**Outputs** (all in `out/season/intro/moments/`):
 - `mdinner2`: `mdinner2-*.png`, `mdinner2.mp4`, `mdinner2-scratch-audio.wav`, `mdinner2-with-scratch-audio.mp4`
 - `mfinale`: `mfinale-{skyline,title,bookend}.png`, `mfinale.mp4`, `mfinale-with-scratch-audio.mp4`, `mfinale-bars9-12.mp4`, `mfinale-bars9-12-with-scratch-audio.mp4`
 - Audio stems: `audio/mfinale-{music,sfx,vox,mix}.wav` and `audio/mfinale-bars9-12-*.wav`

@@ -1,6 +1,6 @@
 // MR. MAS - style-range Prototype 1, STEP 0: the key test. One still of the Mas rig under a single hard tungsten top
 // key with no fill: two shadow tones plus one highlight, the far neon's cool rim, deep blacks. Compared by eye against
-// the pixel portrait windows (out/dev/pixeladv/key-test.png) before any animation is built on it.
+// the pixel portrait windows (out/lookdev/looks/pixeladv/key-test.png) before any animation is built on it.
 import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {MasTungsten} from './MasTungsten';

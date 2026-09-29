@@ -577,7 +577,7 @@ cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/e
 
 - **The pointer:** `audio/ep01/v3-el/intro/intro-el.json` has the paths, md5s, gain and fit.
   - **The EL film's intro chapter plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB**, exactly where the Kokoro film plays `intro-ep1-mix-V1-chipchamber.wav`.
-  - The picture stays `out/intro/intro-ep1-V1-1080p-flashfix.mp4`.
+  - The picture stays `out/season/intro/intro-ep1-V1-1080p-flashfix.mp4`.
 - **`show/reel/ep01-v33-el/ep01-v33-el.manifest.json`** now plays the -el master at −3 dB. `el_lock.py` sets this on every EL manifest it builds.
 - **The assembly's own `assembly/el-v33-assembly.json`** (the assembly pass's file, not edited here) still names the Kokoro master. Its intro entry's `audio` should become the -el path for the next EL film.
 

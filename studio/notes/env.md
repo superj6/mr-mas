@@ -43,8 +43,8 @@
 | `env-screen-paint`, `env-screen-noir`, `env-screen-tone-test` | monitor-screen insert |
 | `env-motion-{paint,soft,noir,glyph,pixel}` | 3 s tests (72 f): camera drift + push-in with parallax, monitor flicker (pools snap smaller at f30-33), orb notices camera and dilates then looks back, Mas blinks and darts his eyes, LEDs blink, the glass stays perfectly still |
 
-Rendered to `out/dev/env/`. Render with:
-`npx remotion still src/dev/env/entry.tsx env-tone-test ../out/dev/env/env-tone-test.png --bundle-cache=false --log=error`
+Rendered to `out/lookdev/looks/env/`. Render with:
+`npx remotion still src/dev/env/entry.tsx env-tone-test ../out/lookdev/looks/env/env-tone-test.png --bundle-cache=false --log=error`
 
 ## Model extensions (all optional; other renderers ignore them)
 - `soft` is the shared TP field. Light falloff planes use large values, so the soft renderer turns posterized rings into real gradients.

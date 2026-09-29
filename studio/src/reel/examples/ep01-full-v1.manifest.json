@@ -13,7 +13,7 @@
   "known": [],
   "chapters": [
     {"id": "coldopen", "label": "COLD OPEN", "sub": "sc 1-4 · caption timeline (pre-scene-craft)", "from": "ep01-full-part1", "acts": ["COLD OPEN"]},
-    {"id": "intro", "kind": "video", "label": "INTRO", "act": "INTRO", "sub": "main title · V1 Chip Chamber Jazz", "src": "out/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full",
+    {"id": "intro", "kind": "video", "label": "INTRO", "act": "INTRO", "sub": "main title · V1 Chip Chamber Jazz", "src": "out/season/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full",
      "audio": {"own": true, "src": "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3},
      "note": "V1 is the primary mix (audio/intro-mix/README.md). The -3 dB trim is a proposal for an ear to confirm (needs.md §2.4)."},
     {"id": "card", "label": "CARD", "act": "INTRO", "sub": "filename + disclaimer", "from": "ep01-full-part1", "beats": ["card.01"]},

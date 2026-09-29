@@ -10,7 +10,7 @@
 //        a whoosh under the end-of-2014 pan (f219-224) into the cut;
 //        f225-239: tape spins up + a mechanical-keyboard roll into the f240 hit (the hit itself is the next span).
 //   npx esbuild src/dev/meras/audio/sketch.ts --bundle --platform=node --outfile=<scratch>/snd.js
-//   node <scratch>/snd.js ../out/pixel/moments/meras-sketch.wav
+//   node <scratch>/snd.js ../out/season/intro/moments/meras-sketch.wav
 import * as fs from 'fs';
 
 const SR = 48000;

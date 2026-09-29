@@ -6,7 +6,7 @@
 # two spans butt together as one score. It is NOT sound design: it exists so the hits, the freezes, the gags and
 # the clunk can be heard landing on the 96 BPM / 24 fps grid (15 frames per beat). Real stems replace every line.
 # Vocals are not synthesised: each vocal line is a breath-shaped swell at its exact frame (see notes/mdinner2.md).
-#   python3 src/dev/mdinner2/tools/scratch_audio.py ../out/pixel/moments/mdinner2-scratch-audio.wav
+#   python3 src/dev/mdinner2/tools/scratch_audio.py ../out/season/intro/moments/mdinner2-scratch-audio.wav
 import math, random, struct, sys, wave
 
 SR = 48000
