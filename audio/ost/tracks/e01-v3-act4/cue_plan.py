@@ -41,10 +41,19 @@ def syncmap():
     M['ONCE_ON'], M['ONCE_END'] = Lon('v31-a4-0002'), Lend('v31-a4-0002')
     M['BP_CUT'] = A('S1.03')
     M['STAMP'] = SND('S1.03', 'rubber_stamp_C')
-    M['WALK'] = float(round(W('a5-25-01', 'stepped')))
+    if 'a5-25-01' in C.CLK.LINES:                         # (v3.1-v3.4: "Three of us stepped down this year.")
+        M['WALK'] = float(round(W('a5-25-01', 'stepped')))
+        M['RESUME'] = M['WALK'] + 90                      # the 4/4 returns (waltz bar 3's downbeat)
+        M['WALTZ_BARS'] = 2
+    else:
+        # v3.5: the line is cut; the three outlines walk off on the waltz with no line while DIRE · NOVIHS · DRUH
+        # hold, and the ring draws round the four: the walk-offs F F F end on it, and the 4/4 returns on the four
+        four = TXT('S1.03', 'ALYI · NELEH')
+        M['WALK'] = float(round(four - 47))
+        M['RESUME'] = M['WALK'] + 45                      # one waltz bar, then the 4/4 on the four
+        M['WALTZ_BARS'] = 1
     M['FOUR'] = W('a5-25-02', 'four')
     M['G0'] = M['WALK'] - 60                              # THE PLAN's grid: beat k at G0 + 15 k
-    M['RESUME'] = M['WALK'] + 90                          # the 4/4 returns (waltz bar 3's downbeat)
     G0 = M['G0']
     snap = lambda f: G0 + 7.5 * round((f - G0) / 7.5)     # noqa: E731  the plan's eighth grid
     gq = Lon('a5-25-06')                                  # "Good question." (from Mada's tile)
@@ -118,14 +127,15 @@ def plan(cue, T, M, mm07):
         if not talk(fr):
             w.cel('F5', qw + k, 0.40, dq=0.9, inst='wz_cel')
         cue.mark(fr, f'the waltz: walk-off {k + 1} (F)')
-    for k, (bass, ch) in enumerate([('F3', ['Ab4', 'C5']), ('Db3', ['F4', 'C5'])]):
+    for k, (bass, ch) in enumerate([('F3', ['Ab4', 'C5']), ('Db3', ['F4', 'C5'])][:M['WALTZ_BARS']]):
         wb = qw + 3 * k
         w.tri(bass, wb, 2.9, 0.55, inst='wz_tri', dec=0.6)
         for bt in (1, 2):
             for p in ch:
                 w.n('wz_ch', p, wb + bt, 0.3, 0.42 if bt == 1 else 0.36, duty=0.5, att=0.002, dec=0.12, sus=0.0,
                     rel=0.08, steps=15)
-    cue.mark(WALK + 45, 'waltz bar 2: the accompaniment alone (the empty chairs)')
+    if M['WALTZ_BARS'] > 1:
+        cue.mark(WALK + 45, 'waltz bar 2: the accompaniment alone (the empty chairs)')
     CH = [('F2', mm07.Q_F), ('Bb2', mm07.Q_BB), ('C2', mm07.Q_C), ('F2', mm07.Q_F), ('G2', mm07.Q_G),
           ('C2', mm07.Q_C), ('F2', mm07.Q_F), ('Bb2', mm07.Q_BB), ('C2', mm07.Q_C), ('F2', mm07.Q_F),
           ('D2', mm07.Q_D)]
@@ -185,6 +195,16 @@ def plan(cue, T, M, mm07):
     for n in a.notes:
         if n.inst.startswith('wz_'):
             n.vel *= 0.72
+    # v3.5: nothing new starts inside the tape-stop, and the stuck loop's F root lets go as the tape starts to stop.
+    # The loop's B-flat (the viola pizz) pitch-warped down through A over the held F read A/F 0.40 in the spectral
+    # F-major check (v3.1-v3.4 carried the same window at ~0.10 as a known exception); now the tape drags only the
+    # loop's own tails (G, A-flat, E-flat, D) into the 11:59 tick
+    tq = sec.f(M['TAPE0'])
+    a.notes = [n for n in a.notes if n.start < tq - 1e-6]
+    for n in a.notes:
+        if int(round(n.pitch)) % 12 in (5, 10) and n.start + n.dur > tq:   # the F root and the B-flat
+            n.dur = max(0.03, tq - n.start - 0.01)
+            n.x['rel'] = min(n.x.get('rel', 0.1), 0.06)
     sec.commit()
     for n in cue.notes:
         if n.inst in PLAN_TRACKS:

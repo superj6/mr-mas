@@ -2,7 +2,52 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md) ("pomp and comedy"). **Nothing here has been listened to.** Every number is measured.
 
-## v3.4 (current, 2026-09-28): refit to the v3.4 lock
+## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+
+**The final film is `show/reel/ep01-v35-el/` (the ElevenLabs cast, Mario on Kokoro).** `render/music-el.wav`: **202.000 s (4,848 frames), exact.** `v3lib` now defaults to the v3.5 locks, and `--el` is the film. The Kokoro v3.5 stem was not rendered.
+
+**The cue sheet (EL seconds):**
+
+| s | Cue | What plays |
+|---|---|---|
+| 0 → 63.2 | `wh_pomp` | Unchanged: the White House pomp, NEDIB's pen, the print. |
+| 63.2 → 68.1 | — | The bridge: no score (marked). |
+| 68.1 → 109.5 | `senate_a` | **In on the gavel** (v35-27.00, the clone is cut): the pizz two-feel's first downbeat is the gavel's knock (a mark), with no bowed pedal first. The rest is as v3.4: the pedal under each real line, PLEASE REGULATE ME on the mute, the stop on the wallet. |
+| 109.5 → 121.4 | — | The wallet's stop (marked): the card, "i get paid enough for health insurance.", the gasp, Sucram, "…i have no equity in nopeai." |
+| 121.4 → 145.7 | **`mar2019` (new)** | **MAR 2019, the company with a ceiling: admiration with a flicker of unease.** |
+| 145.1 → 147.9 | `senate_b` | **MM-20's last phrase, out on the gavel:** the two-feel on the hearing's return (the glowing line sweeps back), landing on the chairman's gavel (28.05 + 1.9 s) with the F7sus(♭9) held until the first passport stamp cuts it. |
+| 147.9 → 164.5 | `run_roof` | **The tour (new form): brisk fun, the stamps on the beat.** |
+| 164.5 → 182.0 | `run_roof` | The statement's pad, as v3.4: A♭maj9 from the guest book, then D♭maj9(♯11), B♭m9 and C7sus(♭9) on "we'll read it." |
+| 181.4 → 202.0 | `upsell` | Unchanged: the chips, the KA-CHING, and the climb off the frame (the act-out). |
+
+**`mar2019` in detail:** his own flashback, so his felt, with Gerg's Build on the chip and a sul-tasto low-string pedal.
+- It swells in out of the wallet's silence 0.3 s after "…no equity", leading the flashback's cut (a designed hit).
+- On the glowing line the felt blooms A♭maj9 and the celesta draws the line, the same device as JUN 2018.
+- The felt plays a chord after each of Mas's lines, never inside one. The Build compiles under Gerg's cloud-bill line.
+- **The flicker:** on "the board." the pedal slips from A♭ to G under a held D♭ (the tritone). "nothing." gets an open A♭ fifth.
+- **The check under the door:** Tasya's Rhodes, her chord (C E♭ G B♭) over the A♭, the landlord arriving.
+
+**The tour in detail:**
+- **The stamps:** the seven passport stamps land 0.5 s apart, so the RUN plays at 120 BPM and **every stamp is a beat**, with one knee stab per stamp (the quartal C F B♭ E♭ on brass and chip) and a layer added per stamp. The Build moves diatonically in A♭ (no A). MUNICH is the biggest, with the timpani.
+- **The lectern** (his real line) plays on the held chord and the bass.
+- **The posts:** the engine comes back soft under NOTERB's post and his.
+- **His one-pixel smile:** the felt's nudge, G4.
+- **The guest book:** the engine stops, and the last chord rings into the statement's pad.
+- **A fader ride:** the stamps read −15.0 LUFS on the render, so the lay rides them −1.5 dB, to −16.5 (`stamps_ride()`).
+
+**Measured:**
+- **Levels:** −20.16 LUFS-I, −3.15 dBTP. Per cue: senate −21.1 / −20.9, `mar2019` −20.9 (the entry −17.8, the check −25.4), `run_roof` −19.0 (the stamps −16.5, featured), upsell −19.5.
+- **Silence and gaps:** digital silence only in the two marked windows (the bridge, the wallet). No holes or fragments.
+- **Engine checks:** F-major OK; rule 12 and the knee both 0.
+- **Cut steps:** all four steps of 12 dB or more are marked (`../e01-v3-act1/v35check.py`).
+
+**Re-run:**
+```bash
+OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act2/track.py --render --el
+```
+The cue names are `wh senate_a senate_b run_roof upsell mar2019`.
+
+## v3.4 (superseded by v3.5, 2026-09-28): refit to the v3.4 lock
 
 **The locks:** `show/reel/ep01-v34/` and `-el`. **`render/music.wav`: 181.208 s (4,349 frames); `render/music-el.wav`: 170.167 s (4,084 frames); both exact.**
 - **Sirrah's line (13.02) and 13.09's V.O. are cut:** the pomp follows the timeline.

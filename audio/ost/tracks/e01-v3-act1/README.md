@@ -2,7 +2,80 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md), on the mood map of [v3-plan §6](../../../../show/episodes/ep01/production/stick/v3-plan.md). **Nothing here has been listened to.** Every number below is measured, and the "for an ear" list says what only a person can judge.
 
-## v3.4 (current, 2026-09-28): refit to the v3.4 lock
+## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+
+**The final film is `show/reel/ep01-v35-el/` (the ElevenLabs cast, Mario on Kokoro).** `render/music-el.wav`: **456.125 s (10,947 frames), exact.** `v3lib.kokoro_path()` and `el_path()` now point at the v3.5 locks; `--el` is the film. The Kokoro v3.5 stem was not rendered. Act One grew by about 1:53 (the first weeks, 3 AM, JUN 2018, the window, the vision post, the waitlist). Five new cues are built only when the lock has their beats (`CUES_V35`), so the older locks still refit.
+
+**The cue sheet (EL seconds):**
+
+| s | Cue | What plays |
+|---|---|---|
+| 0 → 166.2 | `a_launch` | As v3.4 (launch night, M1, the odometer, the heat, the landlord's call), with three changes (listed under the table). |
+| 165.5 → 184.1 | **`first_weeks` (new)** | **The first weeks: "our Facemash night", a rising, fun pulse.** |
+| 183.7 → 212.9 | `code_red` | Unchanged, on his phone. **The whine now J-cuts in under his phone's siren whoop** (v35-10.08, the SFX's), not the hang-up. The lock stops it dead. |
+| 212.9 → 219.1 | — | **3 AM, no score** (marked): the at-capacity page and the first read; the bullpen's fans. |
+| 219.1 → 259.1 | **`dream` (new)** | **3 AM's one moved moment, then JUN 2018: warm awe, the dream.** |
+| 225.7 → 255.6 | **`arena` (new, diegetic)** | ATOD's arena on the wall of monitors. |
+| 258.7 → 328.6 | `lobby`, `floor`, `lobby2` | Unchanged. The lobby's bass walks in on the revolving door, which v3.5 plays at the end of 2018 (v35-13.06). |
+| 327.9 → 353.3 | `sydney` | Unchanged. |
+| 353.3 → 392.0 | **`window` (new)** | **The window (the team's peak), the lamp, and the vision post (quiet ambition).** |
+| 391.6 → 430.4 | `atem`, `duel` | Unchanged; the rivals' surge. The duel now ends on the waitlist's cut: its held B♭m(add9) rings to the rope's snap. |
+| 429.9 → 434.5 | **`waitlist` (new)** | Elgoog's waitlist: a smug little sting. |
+| 434.2 → 456.1 | `pause`, `threat` | Unchanged: the THUD stops the chill, then no score until the THREAT on the pen's lift. |
+
+**What changed in `a_launch`:**
+- **The call hands off on the first weeks' match cut** (`call_out()`). The call used to hand off on the siren; the siren now comes after the montage.
+- **The odometer's wait:** 5.12 is 2 s longer in v3.5 (USERS: 0, Gerg's three refreshes). The pulse plays alone through the wait, then the Build's 4 + 8 come in on the counter's first rolls. The render had a 2 s hole there before this fix.
+- **One new rule:** a chord change that lands on a cut now pre-laps it by 0.25 s. The v3.5 grid had put one on 5.04's cut: +26 dB out of the last chord's decay.
+- **A fader ride:** −1.2 dB on the odometer at the lay. Its p95 read −14.6 on this render, and the featured guide is −16.
+
+**`first_weeks` in detail:**
+- **The grid:** at 120 BPM, every one of the montage's cuts falls on a beat.
+- **The rise:** each shot is one step up A♭ major (A♭, B♭m, Cm, then D♭, E♭, A♭). The chip's triangle pulse plays eighths on the root, with Gerg's Build in straight sixteenths on the chip (moved diatonically, its contour kept) and a felt stab on every cut.
+- **The 808 joins a layer a shot:** the kick, then the hats, then the clap. The spiccato and the violins join at the top.
+- **Nole's "scary good" is THE FLICKER:** the drums and the Build drop out, and the glass holds the Ache over F for the shot.
+- **"how do i say sorry to my sister"** gets the felt's F4 on top: 3 AM's note, planted.
+- **"7 × 8 = 54"** gets the Build's high note sagging a semitone (the wince).
+- **The pull back** stops the drive on the cut. One hit rings into the whoop.
+
+**`dream` in detail (3 AM, then JUN 2018):**
+- **3 AM:** on his second read, one felt note, F4, held; the V.O. sits inside it, and nothing attacks. A sul-tasto viola takes the note's air after the V.O.
+- **The glowing line (180 YEARS):** the same F blooms into D♭maj9(♯11), and the celesta draws the line.
+- **2018, in the intro's post-2015 fidelity** (T3: acoustic with the chip; no tape or bitcrush): the Water Line's head on the felt at the wall of monitors, then a felt chord a bar through D♭ lydian (D♭maj9♯11, A♭/C, B♭m9, G♭maj9♯11), a sul-tasto pedal, and the Build soft in the gaps (Gerg coding).
+- **After "What else would you build?":** the Door's head (A♭ D♭ | C G) in the gap, ending on its ♯4, held: no answer.
+- **The side project:** the chip's flat line, F F F, rhyming with the launch click.
+- **The sweep:** the celesta draws the line back down.
+
+**`arena` in detail:** a small heroic F-minor loop (a spiccato ostinato, a horn call, snare rolls), laid through `era.futz('tv')` at −31 LUFS-I. It sits inside the dream's key and is softer under the talk.
+
+**`window` in detail (the window, the lamp, the vision post):**
+- **The window:** Gerg's marker plays the Build's A♭-major pass, climbing an octave at its end ("off the top of the glass"), over the felt's A♭maj9, which leads the cut from Sydney. A soft pulse follows. The exchange plays over a held D♭maj9, and the laugh gets the Build's "shipped" tag (E♭5 → A♭5). This is launch night's M1 colour: a small warm accent, not the trio.
+- **The lamp:** one felt F4.
+- **The vision post:** one held felt line over a sul-tasto D♭ pedal, a note for each thing he writes (A♭4 for the title; then C5, B♭4 and D♭5 for the three passages). The Ache sounds for a bar on "hopeful, and scary". Nothing attacks under "someone gets to be in the room.".
+- **Publish:** the line steps to E♭, and the chip's Build line takes it up to A♭ and rings into the match cut. The Publish click is placed 0.5 s into 19.04, because the lock has no click sound.
+
+**`waitlist` in detail:** on the rope's snap (0.9 s into v35-22.01, from the caption; the lock has no sound for it), the Build's tag on the chip and a pizz A♭, with the felt's A♭maj9 ringing under the pause letter's toast to the push.
+
+**Measured:**
+- **Levels:** −20.66 LUFS-I, −3.15 dBTP.
+  - The first weeks: −19.0 (its shots rise from −22.3 to −17.0; the flicker −24.5).
+  - The dream: −21.6 (3 AM −23.6).
+  - The window: −21.0 (the window −19.7, the vision post −22.6).
+  - The waitlist −20.9; the odometer (featured) −18.1, p95 −15.8.
+- **Silence and gaps:** digital silence only in the three marked stops (3 AM, the pop, the THUD). No holes or fragments.
+- **Engine checks:** F-major OK in every cue. The arena needed notches: its strings at 440/880/1760 Hz and its timpani at 111 Hz, where a spiccato and timpani resonance read as an A over the F. Rule 12 and the knee are 0.
+- **Cut steps:** all six steps of 12 dB or more sit on a mark or designed hit. The designed hits are the downbeat, the first weeks' cuts, 3 AM's note and the window's pass (`cues-el.json` → `designed_hit`).
+
+**Re-run:**
+```bash
+OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act1/track.py --render --el
+audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act1/v35check.py      # the whole episode's checks (light)
+```
+The cue names are `a code_red lobby floor lobby2 duel pause threat sydney atem first_weeks dream arena window waitlist`.
+
+**`v35check.py` (new, shared):** checks every segment's stem against the v3.5 lock and prints one table: the length, LUFS-I and true peak, unmarked silence, holes, fragments, the cut check (the audit's method, a K-weighted level 0.5 s either side of every cut), and the engines' F-major, rule-12 and knee results.
+
+## v3.4 (superseded by v3.5, 2026-09-28): refit to the v3.4 lock
 
 **The locks:** `show/reel/ep01-v34/` (the default) and `-el`. **`render/music.wav`: 337.542 s (8,101 frames); `render/music-el.wav`: 343.333 s (8,240 frames); both exact.**
 - **The new and restored V.O.s play in the felt, with nothing attacking under them:**

@@ -42,6 +42,14 @@ PLAN_TRACKS = ('lead', 'lead2', 'tri', 'tri2', 'celesta', 'harp', 'woodclick', '
                'vc', 'cb', 'cl')
 
 
+def warroom_entry():
+    """v3.5: the war room's pulse enters as the phone lights, his post's card + 0.9 s (cue_warroom.entry())"""
+    if C.CLK.has('v35-41.01'):
+        import cue_warroom
+        return cue_warroom.entry()
+    return None
+
+
 def syncmap():
     M = {}
     M['NUDGE'] = A('S1.02', 10)
@@ -264,9 +272,12 @@ def build():
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.log],
                  sections=[(lab, round(a0 / FPS, 4), round(a1 / FPS, 4)) for lab, a0, a1 in
                            [(l, cue.fr(a), cue.fr(b)) for l, a, b in cue.sections]],
-                 silences=[(M['CLICK'] / FPS, M['CARVE'] / FPS - NIGHT_PRELAP_S - 0.015,     # (to the night's re-entry)
+                 silences=[(M['CLICK'] / FPS, (warroom_entry() - 0.015) if warroom_entry() else
+                            M['CARVE'] / FPS - NIGHT_PRELAP_S - 0.015,     # (to the war room's pulse / the night)
                             'D6: the Remove click -> the phone\'s buzz (every bus at zero in the mix), then no score '
                             'under "super." (the suite\'s air holds it)' +
-                            (', nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite\'s air, then '
-                             'the drone)' if C.CLK.has('v32-S1.13') else '') + ' -> the carve')])
+                            ((', nor under his 1:46 PM post typed twice (v32-S1.13) -> the phone lights: the war '
+                              'room\'s pulse (v3.5)') if warroom_entry() else
+                             (', nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite\'s air, then '
+                              'the drone)' if C.CLK.has('v32-S1.13') else '') + ' -> the carve'))])
     return sc, cue.T0, window, extra

@@ -75,29 +75,49 @@ def cc_ramp(t0, fade_in, t1, fade_out, steps=10):
     return pts
 
 
+def has_snd(bid, name):
+    return any(x['beat'] == bid and x['name'] == name for x in CLK.SOUNDS)
+
+
 def syncmap():
+    V35 = CLK.has('v35-49A.01')                           # v3.5: the list, the hearts, the hang are cut; Alyi alone
     M = dict(
+        V35=V35,
         WHIP=A('S3.00a'), CONNECT=SND('S3.00a', 'bell_ding_F6'), SUPER=CLK.LINES['a5-27-05'],
-        LIST=SND('S3.02', 'key_tap_space'), POSTCLICK=SND('S3.03', 'post_click'), JOIN_R=SND('S3.04', 'bell_ding_F6'),
+        LIST=SND('S3.02', 'key_tap_space') if CLK.has('S3.02') else A('S3.03'),   # (v3.5: no list: the post)
+        POSTCLICK=SND('S3.03', 'post_click'), JOIN_R=SND('S3.04', 'bell_ding_F6'),
         HANDS=A('S3.06'), EVENING=A('S3.05'), KEYS=SND('S3.05', 'keycap_popcorn'),
-        S4=A('S4.01'), ROOM=A('S4.02'), BUZZ=SND('S4.02', 'BUZZ', 0), BUZZ2=SND('S4.02', 'BUZZ', 1),
-        CLACK=SND('S4.02', 'landing_thunk'), SINCERE=A('S4.07'), TONE1=SND('S4.07', 'DTMF', 0),
+        S4=A('S4.01') if CLK.has('S4.01') else A('S4.02'), ROOM=A('S4.02'), BUZZ=SND('S4.02', 'BUZZ', 0),
+        BUZZ2=SND('S4.02', 'BUZZ', 1),
+        CLACK=SND('S4.02', 'landing_thunk'), SINCERE=A('S4.07'),
+        TONE1=SND('S4.07', 'DTMF', 0) if has_snd('S4.07', 'DTMF') else None,   # (v3.5: S4.07 moved, its dial gone)
         SPLIT=A('S4.08'), RING=SND('S4.08', 'RING', 0), SOME=W('a5-27-31', 'some'), NO=W('a5-27-32', 'no'),
         CLICK8=SND('S4.08', 'dialog_ok_click'), DIALTONE=SND('S4.08', 'DIALTONE'), LOBBY=A('S4.09'),
         HIS=A('v32-S5.00') if CLK.has('v32-S5.00') else None,                # v3.2: the lobby, his side of it
         LOOK=(SND('v32-S5.00', 'post_click') + 26) if CLK.has('v32-S5.00') else None,   # his look up (pixel: post + 26 f)
-        SPOT=A('S4.10'), FOLDER0=Lend('a5-27-41'), OKAY=Lon('a5-27-42') if 'a5-27-42' in CLK.LINES else None, FLIP=A('S4.11', 2),
-        SLATE=A('S4.12', 2), OPEN=A('S4.12', 36), TASYA=A('S4.13'), GOOD=Lon('a5-27-44'),
-        STMT=Lon('v3-a4-0001'), SIGN=A('S4.13e'), BOARD=A('S4.14'), MADA=A('S4.15'), HOME=A('S5.02'))
+        SPOT=A('S4.10') if CLK.has('S4.10') else A('S4.10b'),              # (v3.5: the spotlight swings in S4.10b)
+        FOLDER0=Lend('a5-27-41'), OKAY=Lon('a5-27-42') if 'a5-27-42' in CLK.LINES else None, FLIP=A('S4.11', 2),
+        GOOD=Lon('a5-27-44'), STMT=Lon('v3-a4-0001'))
+    if CLK.has('S4.12'):
+        M.update(SLATE=A('S4.12', 2), OPEN=A('S4.12', 36), TASYA=A('S4.13'), SIGN=A('S4.13e'), BOARD=A('S4.14'),
+                 MADA=A('S4.15'), HOME=A('S5.02'))
+    else:
+        # v3.5: S4.12 merged into S4.13's head (three slate steps, the door); the statement runs into S4.13d with no
+        # hold after it (no sign); "Step four, Mada?" is cut; Neleh's real face (S4.07) and ALYI ALONE (v35-49A.01)
+        # close their side, and the hearts carry across to his (S5.03)
+        opn = SND('S4.13', 'key_tap_space')
+        M.update(SLATE=SND('S4.13', 'landing_thunk', 0), OPEN=opn, TASYA=opn + 10, SIGN=Lend('v3-a4-0001'),
+                 BOARD=A('S4.07'), MADA=None, ALONE=A('v35-49A.01'), HOME=A('S5.03'))
     M['BURY'] = M['S4'] + 28
     M['BLUE'] = M['S4'] + 103
     ALYI = 'a5-27-28' in CLK.LINES                        # v3.4 cuts his line: the phones light at once instead
     M['ALYI_ON'], M['ALYI_END'] = (Lon('a5-27-28'), Lend('a5-27-28')) if ALYI else (None, None)
-    M['LIGHTS'] = None if ALYI else SND('S4.02', 'phone_buzz_step_1')
-    M['NELEH2_END'] = Lend('a5-27-23')
+    M['LIGHTS'] = None if (ALYI or not has_snd('S4.02', 'phone_buzz_step_1')) else SND('S4.02', 'phone_buzz_step_1')
+    M['NELEH2_END'] = Lend('a5-27-23') if 'a5-27-23' in CLK.LINES else None      # (v3.5: cut)
     M['FLICKER'] = M['ALYI_END'] + 10 if ALYI else None
     assert M['WHIP'] < M['CONNECT'] < M['LIST'] < M['POSTCLICK'] < M['HANDS'] < M['S4'] < M['SPLIT'] < M['LOBBY']
-    assert M['SLATE'] < M['OPEN'] < M['TASYA'] < M['STMT'] < M['SIGN'] < M['BOARD'] < M['MADA'] < M['HOME']
+    assert M['SLATE'] < M['OPEN'] < M['TASYA'] < M['STMT'] < M['SIGN'] < M['BOARD'] < (M['MADA'] or M['ALONE']) \
+        < M['HOME']
     return M
 
 
@@ -182,6 +202,7 @@ def build():
         a.n(inst, p, s(WHIP), s(CONNECT + 6) - s(WHIP), v, lock=True, rel=0.45, **kw)
     a.ch('harm', ['Bb3', 'F4'], s(WHIP), 1.2, 0.3, lock=True)
     # v3.1: THE PLAN has the 11:52 wait now; S3.00a's own wait is 0.3 s, so the clockwork plays only where no one talks
+    V35 = M['V35']
     for off, n_, first, v_ in ((7.5, 8, 'F5', 0.26), (37.5, 4, 'G5', 0.23), (52.5, 4, 'F5', 0.21)):
         if not any(talk(WHIP + off + k * 3.75) for k in range(n_)) and WHIP + off < CONNECT + 2:
             clock16(s(WHIP + off), n_, first, v_)
@@ -198,24 +219,35 @@ def build():
     cue.mark(CONNECT, 'a: the connect: the pedal (it holds under "Mas. The board has decided..."); the whisper '
                       'steps down in the gaps', hit=False)
     clock16(s(LIST - 75), 8, 'F5', 0.11)
-    clock16(s(LIST - 45), 8, 'G5', 0.13)
-    clock16(s(LIST - 15), 4, 'F5', 0.15)
+    clock16(s(LIST - 45), 4 if V35 else 8, 'G5', 0.13)
+    if not V35:
+        clock16(s(LIST - 15), 4, 'F5', 0.15)
     cue.mark(LIST - 75, 'a: the clockwork creeps back (under the tinny "super.": the procedure going on)')
+    if V35:
+        cue.mark(A('v35-45.01'), 'a: v3.5: his reflection\'s face holds a beat: the procedure\'s pedal only',
+                 hit=False)
     # the pen's run down the list: Step Four one step a beat; (v3.2) her pen runs faster (the four items appear
     # within 0.85 s), so the steps go in eighths, each on its item
-    unit = 0.5 if CLK.BE('S3.02') - LIST / FPS < 2.0 else 1.0
-    su = 15 * unit                                           # frames per step
-    L = cue.sec(LIST, bars=3)
-    mm09.step_four(L.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.2, top_vel=0.22, blank=False, unit=unit)
-    L.commit()
+    if not V35:
+        unit = 0.5 if CLK.BE('S3.02') - LIST / FPS < 2.0 else 1.0
+        su = 15 * unit                                       # frames per step
+        L = cue.sec(LIST, bars=3)
+        mm09.step_four(L.a, 1, top='cl', inner=('vla', 'vln2', 'vln1'), vel=0.2, top_vel=0.22, blank=False, unit=unit)
+        L.commit()
+    else:
+        su = 0.0                                             # v3.5: no list; the blank's F from the post's cut
     rebow(a, 'vc', 'F2', s(LIST + 3 * su), s(POSTCLICK + 4), 0.18, seg=5.0, xf=1.0, first_att=0.05, art='sus',
           lp=TASTO)
     rebow(a, 'vla', 'C3', s(LIST + 3 * su), s(POSTCLICK + 4), 0.13, seg=5.0, xf=1.0, first_att=0.3, art='sus',
           lp=TASTO)
-    for k, lab in enumerate(['Bbm(add9) (1 ✓)', 'Ab(add9) (2. BLOG POST)', 'Gbmaj7 (3. INTERIM CEO)',
-                             'the blank: the F bass alone (4. ____)']):
-        cue.mark(LIST + su * k, f'a: STEP FOUR on the list: {lab}' + (' (eighths: her pen runs)' if unit < 1 and k == 0
-                                                                        else ''), hit=(k < 3))
+    if not V35:
+        for k, lab in enumerate(['Bbm(add9) (1 ✓)', 'Ab(add9) (2. BLOG POST)', 'Gbmaj7 (3. INTERIM CEO)',
+                                 'the blank: the F bass alone (4. ____)']):
+            cue.mark(LIST + su * k, f'a: STEP FOUR on the list: {lab}' + (' (eighths: her pen runs)'
+                                                                            if unit < 1 and k == 0 else ''),
+                     hit=(k < 3))
+    else:
+        cue.mark(LIST, 'a: the blog post, read silently: the blank\'s F under it (the list is cut in v3.5)', hit=False)
     tick([POSTCLICK - 15 * k for k in range(5, -1, -1)], 0.24)
     cue.mark(POSTCLICK - 75, 'a: the clock tick (under "Any objections?" and its silence)')
     cue.mark(POSTCLICK, 'a: the Post click is a tick; the pedal back')
@@ -239,21 +271,24 @@ def build():
     # ======================================================================= d · NOV 18, the hearts; the boardroom
     D = M['S4']
     L_ = s(M['ROOM'] + 8) - s(D)
-    for inst, p, v in (('vc', 'Db3', 0.12), ('vla', 'Ab3', 0.1), ('vln2', 'F4', 0.09)):
+    for inst, p, v in ((('vc', 'Db3', 0.12), ('vla', 'Ab3', 0.1), ('vln2', 'F4', 0.09)) if not V35 else ()):
         a.n(inst, p, s(D), L_, v, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(L_, 0.6, 0.8))
-    H = cue.sec(D, bars=3)
-    mm09.cascade(H.a, H.f(D), H.f(M['BURY'] + 4), dens0=5.0, dens1=10.0, vel0=0.13, vel1=0.19)   # (render 1: -15.5)
-    for n in H.a.notes:                              # render 2: the cascade peaked at -3.2 dBFS (momentary -13.4)
-        if n.inst == 'harp':
-            n.x['gain'] = -9.0
-        elif n.inst == 'vla':
-            n.vel *= 0.6
-    H.commit()
-    a.n('harm', 'Db6', s(M['BLUE']), 1.0, 0.3, lock=True, env=[(0, 1.0), (0.9, 0.35), (1.6, 0.0)])
-    cue.mark(D, 'd: NOV 18: the Db bed; the hearts pour (the cascade, to the burial)')
-    cue.mark(M['BLUE'], 'd: the blue heart (one harp harmonic)')
+    if not V35:
+        H = cue.sec(D, bars=3)
+        mm09.cascade(H.a, H.f(D), H.f(M['BURY'] + 4), dens0=5.0, dens1=10.0, vel0=0.13, vel1=0.19)   # (render 1)
+        for n in H.a.notes:                          # render 2: the cascade peaked at -3.2 dBFS (momentary -13.4)
+            if n.inst == 'harp':
+                n.x['gain'] = -9.0
+            elif n.inst == 'vla':
+                n.vel *= 0.6
+        H.commit()
+        a.n('harm', 'Db6', s(M['BLUE']), 1.0, 0.3, lock=True, env=[(0, 1.0), (0.9, 0.35), (1.6, 0.0)])
+        cue.mark(D, 'd: NOV 18: the Db bed; the hearts pour (the cascade, to the burial)')
+        cue.mark(M['BLUE'], 'd: the blue heart (one harp harmonic)')
     ROOM, BUZZ, BUZZ2, CLACK = M['ROOM'], M['BUZZ'], M['BUZZ2'], M['CLACK']
-    pedal(ROOM, M['SINCERE'] + 4, 0.17, first_att=0.5)
+    pedal(ROOM, (M['SPLIT'] + 12) if V35 else (M['SINCERE'] + 4), 0.17, first_att=0.5)
+    if V35:
+        cue.mark(ROOM, 'd: NOV 18, the boardroom at night (v3.5: the hearts are cut): the pedal; the phones', hit=False)
     pulse(BUZZ, BUZZ + 22.5, ['A'], vel=0.26, anchor=BUZZ, thin=False)
     pulse(BUZZ2 - 1, BUZZ2 + 21, ['D'], vel=0.24, anchor=BUZZ2 - 1, thin=False)
     tick([f for f in range(int(BUZZ + 30), int(CLACK) + 1, 15) if not (BUZZ2 - 8 <= f < BUZZ2 + 22)], 0.22)
@@ -272,7 +307,7 @@ def build():
             T[inst].cc = cc_ramp(s(r0), 0.7, s(r1) - 0.9, 0.9)
         cue.mark(dh, 'd: THE DOOR (Ab4 -> Db5) through the door: Alyi in the glass')
         cue.mark(r0, 'd: the GPU choir, ppp, under "That is the company telling us." (to the flicker)', hit=False)
-    else:
+    elif M['LIGHTS'] is not None:
         # v3.4: Alyi's line is cut; after the clack the whole row of phones lights at once (1.6 s).  One small
         # designed accent: a soft pizz chord on the light (the phones' own pizz, their B-flat minor), and the GPU
         # choir, ppp, lifting through the 1.6 s and out (the company telling them, now without a word)
@@ -289,16 +324,21 @@ def build():
                      '(1.6 s: the company telling them)')
     SB = cue.sec(M['SINCERE'], bars=3)
     SB.a.seq('svla', [('F4', (1, 1), '1b', 0.5), ('Eb4', (1, 2), '1b', 0.48)], lock=True, art='sus')
-    SB.a.n('svla', 'Db4', (1, 3), SB.f(M['TONE1'] - 6) - SB.g.at((1, 3)), 0.46, lock=True, art='sus', rel=0.55)
+    SB_END = (M['TONE1'] - 6) if M['TONE1'] is not None else M['ALONE'] + 8    # (v3.5: into Alyi alone)
+    SB.a.n('svla', 'Db4', (1, 3), SB.f(SB_END) - SB.g.at((1, 3)), 0.46, lock=True, art='sus', rel=0.55)
     mm09.step_four(SB.a, 1, top=None, inner=('vla', 'vln2', 'vln1'), vel=0.13, unit=1.0, blank=False)
     for n in SB.a.notes:
         if n.inst != 'svla':
             if n.start >= SB.g.at((1, 3)) - 1e-6:
-                n.dur = SB.f(M['TONE1'] - 6) - n.start
+                n.dur = SB.f(SB_END) - n.start
             n.x['rel'] = 0.5
     SB.commit()
     cue.mark(M['SINCERE'], 'd: the sincere beat: the solo viola plays the three steps (F Eb Db) over Step Four')
-    cue.mark(M['TONE1'], 'd: DESIGNED REST: the four dial tones (room tone)', hit=False)
+    if M['TONE1'] is not None:
+        cue.mark(M['TONE1'], 'd: DESIGNED REST: the four dial tones (room tone)', hit=False)
+    else:
+        cue.mark(M['SINCERE'], 'h: v3.5: NELEH\'S REAL FACE at the blank line of step 4 (after the statement): the '
+                               'sincere beat here', hit=False)
 
     # ======================================================================= e · the rival lab (the split)
     RING, SOME, NO, LOBBY = M['RING'], M['SOME'], M['NO'], M['LOBBY']
@@ -385,7 +425,8 @@ def build():
     Lf = s(FLIP - 2) - s(FOLDER0 + 5)
     # v3.3: "Okay." is cut; he turns the page over toward us and its back is blank: the chord leaves its F alone, the
     # list's blank fourth step again (the pixel pass: the sheet faces us, BLANK, at S4.10b + 326 f, drawBlankPage)
-    PAGE = A('S4.10b', 326) if M['OKAY'] is None else None
+    PAGE = (A('S4.10b', 326) if not V35 else FLIP - 61) if M['OKAY'] is None else None   # (v3.5: the flip - 61 f,
+    # the v3.4 lock's spacing; the pixel pass's frame is not in the lock)
     if PAGE is not None and not (FOLDER0 + 5 < PAGE < FLIP - 12):
         PAGE = None
     for inst, p, v in (('vla', 'F3', 0.16), ('vln2', 'C4', 0.14), ('vln1', 'Db4', 0.12)):
@@ -418,29 +459,52 @@ def build():
     d4 = s(BOARD + 16) - s(SIGN)
     for inst, p in (('vc', 'Ab2'), ('vla', 'Eb3'), ('vln2', 'G3'), ('vln1', 'C4')):
         a.n(inst, p, s(SIGN), d4, 0.19, lock=True, art='sus', lp=TASTO, env=mm09.sw_env(d4, 0.4, 0.7))
-    a.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], s(SIGN + 1), 0.9, 0.47, lock=True)
+    if not V35:
+        a.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], s(SIGN + 1), 0.9, 0.47, lock=True)
     for fr, lab, hit in [(SLATE, "g: Tasya's floor: Abmaj9 on the slate (silent attack)", False),
                          (OPEN, 'g: Cmaj9 as the door opens', False),
                          (TASYA + 2, 'g: the Rhodes on the beats (Tasya appears; the jangle owns the offbeats)', True),
                          (STMT, 'g: the statement [V]: the floor steps to Emaj9 (a colour, not a swell)', False),
-                         (SIGN + 1, 'g: home: Abmaj9 on the sign, one Rhodes chord', True)]:
+                         (SIGN + 1, 'g: home: Abmaj9 on the sign, one Rhodes chord' if not V35 else
+                          'g: home: Abmaj9 as the statement ends (no hold after it; v3.5: no sign, no Rhodes)',
+                          not V35)]:
         cue.mark(fr, lab, hit=hit)
 
-    # ======================================================================= h · "Step four?": the hang -> the door back
     HOME, MADA = M['HOME'], M['MADA']
-    for p, off, v in zip(['F5', 'C5', 'Ab4', 'C5', 'G5'], [0, 3, 6.5, 10.5, 15], [0.28, 0.25, 0.24, 0.23, 0.22]):
-        a.n('vln1', p, s(BOARD + off), 0.3, v, lock=True, art='pizz')
-    hang = BOARD + 20
-    f_out = HOME - 26                                  # the F leaves before the dark room's drone J-cuts in
-    a.n('svln', 'C5', s(hang), s(HOME + 40) - s(hang), 0.2, lock=True, art='sus', att=0.25, lp=2600, rel=1.4)
-    a.n('vc', 'F2', s(hang + 2), s(f_out) - s(hang + 2), 0.2, lock=True, art='sus', lp=TASTO, att=0.3, rel=0.6)
-    Sp = cue.sec(MADA + 3, bars=2)
-    mm09.spinner(Sp.a, (1, 1), 5, 0.15)
-    Sp.commit()
-    cue.mark(BOARD, 'h: the clockwork winds down')
-    cue.mark(hang, 'h: the hang: one held C over the blank F (a pedal, not silence)', hit=False)
-    cue.mark(MADA + 3, "h: Mada's spinner turns under the held C (his silence)", hit=False)
-    cue.mark(HOME, 'h: the door back: the held C rings on into the dark room (the drone under it)', hit=False)
+    if not V35:
+        # ======================================================================= h · "Step four?": the hang -> the door back
+        for p, off, v in zip(['F5', 'C5', 'Ab4', 'C5', 'G5'], [0, 3, 6.5, 10.5, 15], [0.28, 0.25, 0.24, 0.23, 0.22]):
+            a.n('vln1', p, s(BOARD + off), 0.3, v, lock=True, art='pizz')
+        hang = BOARD + 20
+        f_out = HOME - 26                                  # the F leaves before the dark room's drone J-cuts in
+        a.n('svln', 'C5', s(hang), s(HOME + 40) - s(hang), 0.2, lock=True, art='sus', att=0.25, lp=2600, rel=1.4)
+        a.n('vc', 'F2', s(hang + 2), s(f_out) - s(hang + 2), 0.2, lock=True, art='sus', lp=TASTO, att=0.3, rel=0.6)
+        Sp = cue.sec(MADA + 3, bars=2)
+        mm09.spinner(Sp.a, (1, 1), 5, 0.15)
+        Sp.commit()
+        cue.mark(BOARD, 'h: the clockwork winds down')
+        cue.mark(hang, 'h: the hang: one held C over the blank F (a pedal, not silence)', hit=False)
+        cue.mark(MADA + 3, "h: Mada's spinner turns under the held C (his silence)", hit=False)
+        cue.mark(HOME, 'h: the door back: the held C rings on into the dark room (the drone under it)', hit=False)
+    else:
+        # ======================================================================= i · v3.5 ALYI, ALONE (sc 49A)
+        # sorrow, wordless: the bullpen at night, the packed boxes, the hearts landing on "nothing without its people",
+        # his hand near Act One's users line on the glass.  The other side's motif, on its own instrument (the exit
+        # rule): THE DOOR on the senza-vibrato solo violin, slow, over a sul-tasto D-flat pedal; its head ends on the
+        # #4 (G over D-flat) as it did on "What else would you build?" in 2018, and it stays there: the question still
+        # open.  The hearts' soft ticks carry the cut to his phone (S5.03), where his felt takes over (2 AM)
+        AL = M['ALONE']
+        rebow(a, 'vc', 'Db3', s(AL - 4), s(HOME + 12), 0.14, seg=5.0, xf=1.0, first_att=0.9, last_rel=0.9, art='sus',
+              lp=TASTO)
+        rebow(a, 'vla', 'Ab3', s(AL + 6), s(HOME + 12), 0.12, seg=5.0, xf=1.0, first_att=1.2, last_rel=0.9,
+              art='sus', lp=TASTO)
+        for p, off, d_, v in (('Ab4', 12, 0.9, 0.34), ('Db5', 34, 1.6, 0.36), ('C5', 74, 0.8, 0.32),
+                              ('G4', 94, (HOME + 14 - (AL + 94)) / FPS, 0.3)):
+            a.n('door', p, s(AL + off), d_, v, lock=True, art='nv', rel=0.9)
+        cue.mark(AL, 'i: v3.5 ALYI, ALONE: the Db pedal (sorrow, wordless)', hit=False)
+        cue.mark(AL + 12, 'i: THE DOOR on the senza-vibrato violin (Ab Db | C G), slow; it ends on the #4 and stays '
+                          'there (the question from 2018, still open)')
+        cue.mark(HOME, 'i: the hearts carry across to his phone: his felt takes over (2 AM)', hit=False)
 
     # ----------------------------------------------------------------------- thin under the words (compose-level)
     melodic = {'vln1', 'vln2', 'harm', 'harp', 'celesta', 'tpt', 'rhodes', 'door', 'svln', 'cl', 'hn', 'marimba'}
@@ -458,8 +522,11 @@ def build():
     for lab, a0, a1 in [('a NOON: the call, the list, the post', WHIP, POSTCLICK), ('b Rima', POSTCLICK, HANDS),
                         ('c the all-hands and the evening', HANDS, M['S4']), ('d NOV 18 hearts', M['S4'], ROOM),
                         ('d the boardroom: the phones, the glass' if M['ALYI_ON'] is not None else
-                         'd the boardroom: the phones; they all light at once', ROOM, M['SINCERE']),
-                        ('d the sincere beat', M['SINCERE'], M['TONE1']), ('rest: the dial tones', M['TONE1'], RING),
+                         'd the boardroom: the phones; they all light at once' if not V35 else
+                         'd the boardroom at night: the phones, the clack', ROOM,
+                         M['SPLIT'] if V35 else M['SINCERE']),
+                       ] + ([('d the sincere beat', M['SINCERE'], M['TONE1']),
+                              ('rest: the dial tones', M['TONE1'], RING)] if not V35 else []) + [
                         ('e the rival lab (the split)', RING, SPLIT_END)] + (
                        [('the lobby, his side: no score; one felt note on his look up', HIS, LOBBY)]
                        if HIS is not None else []) + [
@@ -467,10 +534,14 @@ def build():
                          if ('v31-a4-0004' in CLK.LINES or 'v31-a4-0005' in CLK.LINES) else
                          'f Sunday: the lobby camera', LOBBY, SPOT),
                         ('f Ttemme, the folder, the hourglass', SPOT, SLATE),
-                        ("g the door: Tasya's floor", SLATE, BOARD), ('h Step four? (the hang)', BOARD, HOME),
-                        ('the held C into the dark room', HOME, HOME + 40)]:
+                        ("g the door: Tasya's floor", SLATE, BOARD)] + (
+                       [('h Step four? (the hang)', BOARD, HOME), ('the held C into the dark room', HOME, HOME + 40)]
+                       if not V35 else
+                       [("h Neleh's real face: the sincere beat (the solo viola over Step Four)", BOARD, M['ALONE']),
+                        ('i Alyi, alone: the Door on the solo violin, over the Db pedal', M['ALONE'], HOME)]):
         cue.section(lab, a0, a1)
-    end = s(HOME + 40) + 1.4
+    END_F = (HOME + 40) if not V35 else (HOME + 14)
+    end = s(END_F) + 1.4
     meta = dict(
         id=ID, title="The Board's Side, lighter (Ep1 v3 Act Four, S3 + S4, to picture)",
         mm='MM-09 (Act Four v5 pass one, re-spotted and lightened)', usage='BI', family='P02 PROCEDURE (lighter)',
@@ -490,7 +561,9 @@ def build():
                    dict(t=round(s(M['JOIN_R']), 3), sfx="bell_ding_F6: Rima's join"),
                    dict(t=round(s(M['KEYS']), 3), sfx='keycap_popcorn (F5-C7; the pulse stays low)'),
                    dict(t=round(s(BUZZ), 3), sfx='BUZZ: the phones'), dict(t=round(s(CLACK), 3), sfx='the clack'),
-                   dict(t=round(s(M['TONE1']), 3), sfx='DTMF x4 (the designed rest)'),
+                   dict(t=round(s(M['TONE1'] if M['TONE1'] is not None else SND('S4.08', 'DTMF')), 3),
+                        sfx='DTMF x4 (the designed rest)' if M['TONE1'] is not None else
+                        'DTMF (v3.5: one run at the split\'s head)'),
                    dict(t=round(s(RING), 3), sfx='RING: the lighthouse phone'),
                    dict(t=round(s(M['DIALTONE']), 3), sfx='DIALTONE (over the Bb pedal)'),
                    *([dict(t=round(s(HIS), 3), sfx="the lobby's room by day (J-cut under the dial tone): no score"),
@@ -499,16 +572,20 @@ def build():
         audition=['the whole file: one procedure, lighter than v5 (the pedals an octave up, the clockwork between '
                   'the lines): dry comedy, never a nag',
                   f'{s(CONNECT):.1f}-{s(LIST):.1f} s: the pedal and the whisper under the firing: dignified, not villainous',
-                  f'{s(M["ROOM"]):.1f}-{s(M["TONE1"]):.1f} s: the phones, the Door in the glass, the sincere beat: '
+                  f'{s(M["ROOM"]):.1f}-{s(M["TONE1"] or M["SPLIT"]):.1f} s: the phones, the sincere beat: '
                   'do we care about Neleh?',
                   f'{s(SOME):.1f}-{s(LOBBY):.1f} s: the Addendum cut by "no.", then only the dial tone on the pedal',
                   f'{s(SLATE):.1f}-{s(BOARD):.1f} s: Tasya\'s floor: warm, faintly ironic; the E on the statement a colour',
                   f'{s(BOARD):.1f}-{end:.1f} s: the hang, the spinner, and the held C carried into the dark room'])
     # render 3: Tasya's floor read p95 -16.5 against the underscore's -17: a -1.5 dB ride from the slate to "Step four?"
     macro = [(0.0, 0.0), (s(SLATE) - 0.4, 0.0), (s(SLATE), -1.5), (s(BOARD) - 0.2, -1.5), (s(BOARD) + 0.3, 0.0)]
+    if V35:                                         # the sincere beat after the statement: back to 0 over its first bar;
+        # Alyi alone 5 dB down (render 1: -16.8 LUFS, p95 -16.5: too present for "sorrow, wordless")
+        macro = [(0.0, 0.0), (s(SLATE) - 0.4, 0.0), (s(SLATE), -1.5), (s(SIGN), -1.5), (s(BOARD) + 0.3, 0.0),
+                 (s(M['ALONE']) - 0.3, 0.0), (s(M['ALONE']) + 0.2, -5.0), (end + 1.0, -5.0)]
     sc = Score(ID, cue.g, T, cue.notes, markers=cue.markers, sections=cue.sections, mutes=cue.mutes, macro=macro,
                length_s=end, tail_s=1.0, meta=meta)
-    window = [WHIP / FPS - 0.005, (HOME + 40) / FPS + 1.4, 0.0, 1.2]
+    window = [WHIP / FPS - 0.005, END_F / FPS + (1.4 if not V35 else 0.4), 0.0, 1.2 if not V35 else 0.9]
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.log],
                  sections=[(l, round(cue.fr(a0) / FPS, 4), round(cue.fr(a1) / FPS, 4)) for l, a0, a1 in cue.sections],
                  silences=([(HIS / FPS + 1.5, LOOK / FPS - 0.02,

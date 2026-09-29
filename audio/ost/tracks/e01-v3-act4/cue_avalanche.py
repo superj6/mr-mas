@@ -45,35 +45,65 @@ def build():
     beat = lambda b: b * Q                                     # noqa: E731
     on_swing = abs(lab_s - beat(22) - 10 / 24) < 0.02
     add = cue.notes.extend
-    add(remap(N, ta(1), ta(2), beat(0)))
-    add(remap(N, ta(2) + 2 * Q, ta(3), beat(2), keep={'ubass', 'cb_pizz'}))
-    add(remap(N, ta(4), ta(5), beat(4)))
-    add(remap(N, ta(6), ta(8), beat(8)))
-    q8 = [n for n in remap(N, ta(8) + 1.0, ta(8) + 1.6, beat(14.5), truncate=False, keep={'cb', 'vc', 'hn'})
-          if n.dur > 1.0]
     qv = s(E['qv'])
-    for n in q8:
-        n.dur = max(0.1, qv - n.start)
-        n.x['rel'] = 0.35
-    add(q8)
-    add(remap(N, ta(9), ta(10), beat(16)))
-    add(remap(N, ta(13), ta(13) + max(0.1, lab_s - beat(20)), beat(20)))
+    compressed = lab_s < beat(16)          # v3.5: the quicker board exit: the label 11.4 beats in (v3.4: 22 2/3)
+    if not compressed:
+        add(remap(N, ta(1), ta(2), beat(0)))
+        add(remap(N, ta(2) + 2 * Q, ta(3), beat(2), keep={'ubass', 'cb_pizz'}))
+        add(remap(N, ta(4), ta(5), beat(4)))
+        add(remap(N, ta(6), ta(8), beat(8)))
+        q8 = [n for n in remap(N, ta(8) + 1.0, ta(8) + 1.6, beat(14.5), truncate=False, keep={'cb', 'vc', 'hn'})
+              if n.dur > 1.0]
+        for n in q8:
+            n.dur = max(0.1, qv - n.start)
+            n.x['rel'] = 0.35
+        add(q8)
+        add(remap(N, ta(9), ta(10), beat(16)))
+        add(remap(N, ta(13), ta(13) + max(0.1, lab_s - beat(20)), beat(20)))
+        marks_ = [(0, 'A1: the compile (timpani F, the Build 4)'), (4, 'A4: the Build at 16'),
+                  (7, 'A4 beat 4: the brass kick (end of phrase 1)'), (8, "A6: Step Four's G-flat"),
+                  (10, 'ALYI RESISTS (A6.3): timpani G-flat, the plucked no'), (16, 'A9: the Water Line augmented'),
+                  (20, 'A13: THE FULL BAND, C7(#9b13)')]
+        b_pedal, b_full = 14.5, 20
+    else:
+        # v3.5: the board exits in 7 s, so the avalanche is MM-10's own bars, compressed to the picture: the compile
+        # under the tiles (A1); Step Four's G-flat on Mas's tile and ALYI RESISTS one beat as his tile goes (A6, cut
+        # before Neleh); Neleh's window, no lead, on the board's bowed F pedal (A8's), ending silently on THE QUIET
+        # VOTE; THE FULL BAND on C7(#9b13) (A13) a beat before Mada's shot, cutting her "char-" off, to the dead stop
+        # on his label.  (The Build at 16 and the Water Line augmented have no room: the whole avalanche is 11 beats)
+        b_pedal, b_full = 7.5, 9
+        add(remap(N, ta(1), ta(2), beat(0)))
+        add(remap(N, ta(2) + 2 * Q, ta(3), beat(2), keep={'ubass', 'cb_pizz'}))
+        add(remap(N, ta(6), ta(6) + beat(b_pedal - 4), beat(4)))
+        q8 = [n for n in remap(N, ta(8) + 1.0, ta(8) + 1.6, beat(b_pedal), truncate=False, keep={'cb', 'vc', 'hn'})
+              if n.dur > 1.0]
+        for n in q8:
+            n.dur = max(0.1, qv - n.start)
+            n.x['rel'] = 0.35
+        add(q8)
+        add(remap(N, ta(13), ta(13) + max(0.1, lab_s - beat(b_full)), beat(b_full)))
+        marks_ = [(0, 'A1: the compile (timpani F, the Build 4), under the tiles'),
+                  (4, "A6: Step Four's G-flat (Mas's tile)"),
+                  (6, 'ALYI RESISTS (A6.3): timpani G-flat, the plucked no (his tile goes)'),
+                  (b_pedal, "the board's bowed F pedal: Neleh's window, no lead (v3.5)"),
+                  (b_full, 'A13: THE FULL BAND, C7(#9b13), a beat before Mada\'s shot (it cuts her "char-" off)')]
     cue.notes[:] = [n for n in cue.notes if n.start < lab_s - 0.005]
     cue.mutes.append((lab_s, s(E['s7']) + 0.5))
-    for b_, lab in [(0, 'A1: the compile (timpani F, the Build 4)'), (4, 'A4: the Build at 16'),
-                    (7, 'A4 beat 4: the brass kick (end of phrase 1)'), (8, "A6: Step Four's G-flat"),
-                    (10, 'ALYI RESISTS (A6.3): timpani G-flat, the plucked no'), (16, 'A9: the Water Line augmented'),
-                    (20, 'A13: THE FULL BAND, C7(#9b13)')]:
+    for b_, lab in marks_:
         if beat(b_) < lab_s:
             cue.mark(cue.act(beat(b_)), lab)
     cue.log += [(E['neleh_on'], "NELEH's window (A7): no lead", False),
-                (cue.act(beat(14.5)), "the board's bowed F pedal enters (A8's)", False),
+                (cue.act(beat(b_pedal)), "the board's bowed F pedal enters (A8's)", False),
                 (E['qv'], 'THE QUIET VOTE: the F pedal ends silently', False),
                 (E['label'], "STOP: dead on MADA's label (freeze_hit_F owns the onset); digital zero to the bullpen",
                  False)]
-    for lab, b0, b1 in [('S6 phrase 1: the compile (A1, A4)', 0, 8), ('S6 phrase 2: Step Four, Alyi, Neleh (A6-A7)', 8, 16),
-                        ('S6 phrase 3: the Water Line, the quiet vote (A9)', 16, 20),
-                        ('S6 phrase 4: the full band (A13) -> the stop', 20, lab_s / Q)]:
+    secs_ = ([('S6 phrase 1: the compile (A1, A4)', 0, 8), ('S6 phrase 2: Step Four, Alyi, Neleh (A6-A7)', 8, 16),
+              ('S6 phrase 3: the Water Line, the quiet vote (A9)', 16, 20),
+              ('S6 phrase 4: the full band (A13) -> the stop', 20, lab_s / Q)] if not compressed else
+             [('S6 phrase 1: the compile (A1)', 0, 4), ('S6 phrase 2: Step Four, Alyi resists (A6)', 4, b_pedal),
+              ("S6 Neleh's window: the board's F pedal, the quiet vote", b_pedal, b_full),
+              ('S6 the full band (A13) -> the stop', b_full, lab_s / Q)])
+    for lab, b0, b1 in secs_:
         cue.section(lab, cue.act(beat(b0)), cue.act(min(beat(b1), lab_s)))
     meta = dict(
         id=ID, title='The Avalanche (Ep1 v3 Act Four, S6, to picture)', mm='MM-10 b (Act Four v5 S6, re-spotted)',
@@ -85,7 +115,9 @@ def build():
                 "the board's bowed F pedal", 'the Water Line augmented', "the full band on C7(#9b13); Mada's spinner"],
         motif_ids=['BUILD', 'STEP_FOUR'], key='F minor -> B-flat minor (Step Four) -> F -> C7(#9b13), unresolved',
         composer='Ep1 v3 score, Act Four (v3-score-b, 2026-09-27), from Act Four v5 S6',
-        underscore_lufs=-17.0, album_lufs=-16.0,          # v3.1: -1 dB with the -2 dB peak ride = the peak ~2 dB down
+        underscore_lufs=-17.0 if not compressed else -18.5, album_lufs=-16.0,   # v3.1: -1 dB with the -2 dB peak
+        # ride = the peak ~2 dB down; v3.5 (11 beats: the quiet compile and window pull the mean down, so the engine's
+        # normalisation lifted the full band to -14.9): -18.5, the full band back near v3.4's -16.8
         sfx_slots=[dict(t=round(s(c.snd('S6.01', 'landing_thunk', k)), 3), sfx=f'tile landing {k + 1}') for k in range(5)]
         + [dict(t=round(s(E['neleh_drop']), 3), sfx="landing_thunk: Neleh's tile goes"),
            dict(t=round(lab_s, 3), sfx='freeze_hit_F: MADA · LAST FIRER STANDING (owns the stop)')],
@@ -96,7 +128,13 @@ def build():
     # v3.1 (the lead, 2026-09-27): the peak about 2 dB down (phrases 3-4: the Water Line augmented, the full band),
     # ramped in over the last half-beat of phrase 2, off Neleh's line.  The engine normalises the cue to its target,
     # so the ride alone lifted phrases 1-2 (render 8: the peak only -0.9 dB); the target goes to -17 with it
-    macro = [(0.0, 0.0), (beat(15.5), 0.0), (beat(16), -2.0), (s(E['s7']) + 1.0, -2.0)]
+    if not compressed:
+        macro = [(0.0, 0.0), (beat(15.5), 0.0), (beat(16), -2.0), (s(E['s7']) + 1.0, -2.0)]
+    else:
+        # v3.5 (render 1: Step Four / Alyi read -14.6 LUFS over 2.2 s, the full band -16.3): phrase 2 -2.5 dB, the
+        # full band -1 dB, so the full band stays the peak and nothing passes the featured guide
+        macro = [(0.0, 0.0), (beat(3.8), 0.0), (beat(4), -2.5), (beat(b_pedal - 0.2), -2.5), (beat(b_pedal), -1.0),
+                 (s(E['s7']) + 1.0, -1.0)]
     sc = Score(ID, g, T, cue.notes, markers=cue.markers, sections=cue.sections, mutes=cue.mutes, macro=macro,
                length_s=s(E['s7']), tail_s=0.0, meta=meta)
     window = [E['av'], round(E['label'] * FPS) / FPS, 0.0, 0.003]

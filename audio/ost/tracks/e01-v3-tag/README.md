@@ -2,7 +2,18 @@
 
 **Composer X (`v3-score-a`), 2026-09-27.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). Mood map: *quiet, wry* (the Water Line). **Nothing here has been listened to.** Every number is measured.
 
-## v3.4 (current, 2026-09-28)
+## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+
+**The final film is the ElevenLabs-timed v3.5 lock, `show/reel/ep01-v35-el/`.** Its tag is the v3.4 EL tag frame for frame (798 frames, the same beats, lines and sounds), so MM-12 is unchanged. Act Four still ends on the vault's F pedal, which the tag's felt picks up.
+- **`render/music-el.wav`:** re-laid on the v3.5 lock from its render (the same timeline); 33.250 s, exact.
+- **Levels:** −21.0 LUFS-I, −3.16 dBTP.
+- **Checks** (`../e01-v3-act1/v35check.py`):
+  - no unmarked silence, hole or fragment;
+  - the one 12 dB step is marked;
+  - F-major OK; rule 12 and the knee both 0.
+- `track.py` reads the v3.5 locks by default.
+
+## v3.4 (superseded by v3.5, 2026-09-28)
 
 **The locks:** `show/reel/ep01-v34/` and `-el`, 33.250 s (798 frames) each, exact. **The duck is cut:** 32.01 is a plain 77-frame arrival, so the demo layer is gone (it's built only when the demo beat exists). MM-12 plays through as on the v3 lock:
 - the felt's fifth takes the F;

@@ -42,9 +42,16 @@ ep01-v3-sample/music/, read-only) are the material, copied here and re-spotted t
                                                back", the shatter's held beat, the Build compiling into the sign's
                                                VICTORY LAP, the flat line and the bonk, "okay." onto the vault's F
 
+  v3.5 FINAL (show/reel/ep01-v35-el/; lock-v35.md): D6 kept exactly (the Remove click -> the buzz -> "super." -> his
+  post typed twice, all unscored) to THE WAR ROOM (cue_warroom.py, new: LEVERAGE turned his, a driving pulse, his calm
+  on top) and THE FLIGHT (one felt note); the night with TPOOL in the 2008 palette (T2, the 16-bit sample-chip); THE
+  PLAN's walk-offs with no line; the board's side without the list, the hearts or the hang, and closed by Neleh's
+  real face and ALYI ALONE (the Door on the senza-vibrato violin); 2 AM from the hearts on his phone; the avalanche
+  compressed to the quicker board exit (11 beats).  README.md has the v3.5 cue sheet.
+
 TIMING IS PARAMETRIC: every sync point is read from the timeline (beat starts, line spans, words, sounds, texts).
-    --variant kokoro   show/reel/ep01-v34/ep01-v34-act4.json        -> render/music.wav, cues.json      (default)
-    --variant el       show/reel/ep01-v34-el/ep01-v34-el-act4.json  -> render/music-el.wav, cues-el.json
+    --variant kokoro   show/reel/ep01-v35/ep01-v35-act4.json        -> render/music.wav, cues.json      (default)
+    --variant el       show/reel/ep01-v35-el/ep01-v35-el-act4.json  -> render/music-el.wav, cues-el.json (THE FILM)
     (MRMAS_V3_LOCK=v31 points at the v3.1 lock, show/reel/ep01-v31/; the cues check for v3.2's new beats)
     --timeline PATH    any timeline with the same ids              -> render/music-custom.wav
 The act ends on the vault's pedal; its natural release (the ~4 s past the act's last frame) is written beside the
@@ -75,7 +82,7 @@ import a4common  # noqa: E402
 
 SEG = 'act4'
 REPO = v3clock.REPO
-ORDER = ['noon', 'night', 'plan', 'board', 'two_am', 'avalanche', 'return']
+ORDER = ['noon', 'warroom', 'night', 'plan', 'board', 'two_am', 'avalanche', 'return']   # v3.5: + the war room
 MODULES = {k: f'cue_{k}' for k in ORDER}
 
 
@@ -141,8 +148,9 @@ def assemble(c, variant):
     rests = [(0.0, 0.6, "the act's first frames: the suite's pedal bows in from nothing (the SFX pre-lap carries)"),
              (c.B('v31-S3.00p') - 0.1, c.B('v31-S3.00p') + 0.6,
               "Neleh's desk at 11:52: her office clock first (SFX), then her clockwork"),
-             (c.snd('S4.07', 'DTMF', 0) - 0.3, c.snd('S4.08', 'RING', 0) + 0.2,
-              "the board's designed rest for the four dial tones (the sincere beat's release)"),
+             ((c.snd('S4.07', 'DTMF', 0) if any(x['beat'] == 'S4.07' and x['name'] == 'DTMF' for x in c.SOUNDS)
+               else c.snd('S4.08', 'DTMF', 0)) - 0.3, c.snd('S4.08', 'RING', 0) + 0.2,
+              "the board's designed rest for the dial tones (v3.5: one run at the split's head)"),
              *([(c.snd('S8.03', 'alert_bonk'), c.W('v34-vo-11', 'votes', end=True) + 0.06,
                  'the lobby: the CU "silent like the first" on the neon\'s F (to the count, v3.4)'),
                 (c.Lon('a5-30-19') - 0.2, c.Lend('a5-30-19') + 0.1, 'the last F\'s release and "okay."')]
@@ -193,6 +201,10 @@ def main():
     variant = 'custom' if args.timeline else args.variant
     c = v3clock.Clock(SEG, variant=args.variant, path=args.timeline)
     a4common.bind(c)
+    global ORDER
+    import cue_warroom
+    if not cue_warroom.present():                             # (locks before v3.5 have no war room)
+        ORDER = [k for k in ORDER if k != 'warroom']
     if args.dry:
         dry(c)
         return

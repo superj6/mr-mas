@@ -117,7 +117,10 @@ def events(c):
         type=c.B('20.01'), post=c.B('20.03'), ring=c.snd('20.03', 'synth:ring'),
         call=c.B('20.04'), edit=c.B('20.05'), back=c.B('20.06'), order=c.B('21.02'),
         ask=c.B('21.04') if c.has('21.04') else None,                         # (v3.4 cuts 21.03-21.04)
-        servo=[c.snd('21.04', 'orb_servo', k) for k in range(3)] if c.has('21.04') else None,
+        servo=([x['at'] for x in c.SOUNDS if x['beat'] == '21.04' and x['name'] == 'orb_servo'] or None)
+        if c.has('21.04') else None,                                          # (v3.5: two iris flicks, not three)
+        pop=([x['at'] for x in c.SOUNDS if x['beat'] == '21.02' and x['name'] == 'tower_pop'] or [None])[-1]
+        if c.has('21.03') else None,                                          # v3.5: the copy pops up (the deepfake)
         sign=c.B('21.05'), whip=c.snd('21.05', 'paper_whip'), claps=c.snd('21.05', 'synth:claps'),
         off=c.B('v32-21.06'), switch=c.snd('v32-21.06', 'key_tap_space'),          # v3.2: he switches it off
         devday=c.B('22.01'), phone=c.B('22.02'),
@@ -466,15 +469,35 @@ def build(c):
     for t, name in zip(gaps[:2], ['Ebm9', 'Ab13sus']):
         fch(name, t, 3.0, 0.12)
         cue.mark(t, f'D: {name} in the gap (held under the monitor)', hit=False)
+    if E['pop'] is not None:
+        # v3.5 THE PRESIDENT'S DEEPFAKE, restored: "a laugh with a chill".  THE LAUGH: on the copy's pop the felt
+        # strikes the pen's F and the chip copies it a sixteenth late and a hair flat (THE COPY's device: the echo
+        # too close, a pixel off), once, before the copy speaks.  THE CHILL: under the copy's words ("And then the
+        # computers regulate themselves.") the glass holds the Ache (G4 + D-flat5) over the G-flat pedal, and lets
+        # go under the real one's outrage ("When the hell did I say that?", the record: dry, the pedal only)
+        tpp = E['pop'] + 0.01
+        fake = [l for l in c.lines(tpp, E['ask'] if E['ask'] else E['sign']) if l['who'] == 'deepfake']
+        cue.n('felt', 'F4', tpp, 0.5, 0.13)
+        cue.n('lead', 'F4', tpp + S16, 0.14, 0.12, duty=0.25, att=0.003, dec=0.12, sus=0.2, rel=0.05,
+              bend=[(0.0, -0.35)])
+        cue.mark(tpp, 'D: THE COPY POPS UP (the deepfake, v3.5): the felt F and the chip\'s copy a sixteenth late '
+                      'and a hair flat (the laugh)')
+        if fake:
+            fk = fake[0]
+            real_on = [l['on'] for l in c.lines(fk['end'], E['sign']) if l['who'] == 'nedib']
+            g_end = (real_on[0] + 0.15) if real_on else fk['end'] + 0.6
+            cue.ch('glasspad', ['G4', 'Db5'], fk['on'] - 0.25, g_end - fk['on'] + 0.25, 0.2, roll=0.0, rel=0.9)
+            cue.mark(fk['on'] - 0.25, 'D: the chill: the Ache on glass (G4 + D-flat5) under the copy\'s words; it '
+                                      'lets go under the real one\'s "When the hell did I say that?"', hit=False)
     if E['ask'] is not None:                              # (v3.4 cuts the deepfakes: no question, no second verdict)
         # "which one's real?": D-flat major9 for his question (designed; the v3.1 audit read it as an unmarked +15 dB
         # step on the cut at film 11:48.1): now marked, softer (0.13 -> 0.10, a slower roll) and pre-lapped 0.25 s so
         # the level step no longer sits on the cut
         tq = E['ask'] - 0.25
-        fch('Dbmaj9h', tq, E['servo'][2] - tq, 0.10, roll=0.05, span_end=E['servo'][2] - 0.05)
+        fch('Dbmaj9h', tq, E['servo'][-1] - tq, 0.10, roll=0.05, span_end=E['servo'][-1] - 0.05)
         cue.mark(tq, 'D: Dbmaj9 for "which one\'s real?" (pre-lapped 0.25 s, soft: his question to his witness)',
                  hit=False)
-        tv2 = E['servo'][2] + 0.02
+        tv2 = E['servo'][-1] + 0.02
         assert tv2 + 0.3 < E['sign']
         fch('F5', tv2, 2.2, 0.13, roll=0.008)
         for inst, v in (('vibes', 0.38), ('celesta', 0.18)):

@@ -1,6 +1,91 @@
 # E01 v3 · Act Four · the Blip, told twice (score)
 
-**What this is (pass `v3-score-b`, track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md); v3.4 refit 2026-09-28).** Seven cues, rendered by the OST engine and laid on Act Four's own clock (0 = the segment's first frame) on the **final v3.4 lock** (`show/reel/ep01-v34/` 4309e86, EL `ep01-v34-el/` 93f0431; record in `lock-v34.md`, notes `script-v34-notes.md`) into one stem: `render/music.wav`, 48 kHz / 24-bit stereo, exactly the segment's length. It sits at underscore level (the avalanche at featured level) and is dry of dialogue; the mixer ducks it. **Nothing here has been listened to.** Every number below is measured.
+**What this is (pass `v3-score-b`, track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md); v3.4 refit, then the v3.5 FINAL refit below, 2026-09-28).** Seven cues, rendered by the OST engine and laid on Act Four's own clock (0 = the segment's first frame) on the **final v3.4 lock** (`show/reel/ep01-v34/` 4309e86, EL `ep01-v34-el/` 93f0431; record in `lock-v34.md`, notes `script-v34-notes.md`) into one stem: `render/music.wav`, 48 kHz / 24-bit stereo, exactly the segment's length. It sits at underscore level (the avalanche at featured level) and is dry of dialogue; the mixer ducks it. **Nothing here has been listened to.** Every number below is measured.
+
+## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+
+**The final film is `show/reel/ep01-v35-el/` (lock-v35.md, script-v35-notes.md).** There are now eight cues; `cue_warroom.py` is new. `render/music-el.wav` is **494.708 s (11,873 frames), exact.** `v3clock.py` defaults to v3.5, and `--variant el` is the film. The Kokoro v3.5 stem was not rendered. The act is about 25 s shorter, and its middle is re-ordered.
+
+**The cue sheet (EL seconds):**
+
+| s | Cue | What plays |
+|---|---|---|
+| 0 → 27.7 | `noon` | Unchanged: the suite, his plan, LEVERAGE low, the Remove dialog, **D6 on the Remove click**. |
+| 27.7 → 45.7 | — | **The one silence, kept exactly:** the Remove click, the buzz, "super.", and his post typed twice (v32-S1.13, deleted and retyped). All unscored and marked, digital zero. |
+| 45.7 → 76.5 | **`warroom` (new)** | **The war room, then the flight:** his LEVERAGE, a driving pulse, his calm on top; then relief on the plane. |
+| 75.8 → 90.8 | `night` | The carve (X3's swell kept), the nudge before "i don't keep score.", the count's pedal, **TPOOL (new, in the 2008 palette)**, mark 3, the settle and THE REWIND. |
+| 90.8 → 116.6 | `plan` | THE PLAN at Neleh's desk. The walk-offs now have no line (see below). |
+| 116.6 → 262.4 | `board` | PROCEDURE, lighter, to Tasya's floor, then Neleh's real face and **ALYI ALONE (new)**. |
+| 261.4 → 352.6 | `two_am` | 2 AM, now from the hearts (see below). Otherwise as v3.4, from the letter through the badge to "leave it open.". |
+| 352.6 → 359.7 | `avalanche` | **Compressed to the quicker board exit** (11 beats). |
+| 361.3 → 494.7 | `return` | Unchanged in form: Alyi's regret, Tasya's floor, the invite, LEVERAGE to "of what?", the hourglass, VICTORY LAP, the count (F F F F), the vault's F. Terb's reading is his v3.5 take (`v35-a4-0008`). |
+
+**`warroom` in detail:**
+- **The entry:** "before the card fades, the phone lights and doesn't stop." The pulse swells in 0.9 s after his post's card, over a 0.8 s fader ride out of the silence. It is a designed hit.
+- **It's the show's own LEVERAGE (MM-08, noon's trap), turned into his:** the chip's triangle pulse in sixteenths on F (the motor; The Social Network's grammar in our sound), LEVERAGE's pizz cells, the muted-808 thud and the chip ticks from Gerg's call on, and the low grand cluster.
+- **Thinned:** only the pulse, soft, plays under "the budget. i said the budget." and "gerg. tasya. the money…" (the V.O.) and under his own lines ("no score under his lines").
+- **Gerg's "Yeah. I did.":** his Build, four notes, left hanging.
+- **Tasya's "Then we should talk.":** her Rhodes, one soft chord, as on "pen".
+- **The 9:32 PM post:** his calm on top, the felt's Water Line head. That stretch is ridden −1.5 dB.
+- **The notepad:** the cluster moves up a semitone.
+- **The flight:** the pulse drops out on the cut. A sul-tasto F/C holds as the plane's hum, and one felt F4 plays on "1. GERG" (relief). It rings into the night's re-entry, the same fifth.
+
+**TPOOL** (v35-43.01–43.02; melancholy, in the 2008 palette):
+- **The palette:** ERA TIERS T2, the main title's 2008–14 bar: the 16-bit sample-chip piano, strings and bass, with no drums and no tape.
+- **The sheet passed:** the dark room's felt line becomes the chip piano's, the Water Line's head, over D♭maj7.
+- **Passed again:** over B♭m9 the line settles C4 → F4.
+- **The CEO walks out still in charge:** A♭/C, ringing into mark 3.
+- **The rest of the night** follows v3.5's S2.05: mark 3 sits at its head, and the settle is 60 f before the whip.
+
+**THE PLAN:**
+- **The walk-offs:** "Three of us stepped down" is cut, so the three chairs walk off on the waltz's F F F with no line. There is one waltz bar, and the 4/4 returns as the ring draws round the four.
+- **The tape-stop:** nothing new starts inside it, and the stuck loop's F root and B♭ let go as it begins. The B♭, pitch-warped down through A over the F, read A/F 0.40. v3.1–v3.4 carried this window as the one known F-major exception, at about 0.10. **The spectral check now passes in every cue.**
+
+**The board's side** (the list, the hearts, the phones lighting at once and "Step four, Mada?" are cut):
+- **The post:** after "super.", his reflection's held face gets the procedure's pedal only. The blog post is read over the blank's F.
+- **NOV 18:** the boardroom's phones and the clack. The pedal holds until the split's dial tones.
+- **The spotlight** swings in S4.10b. The folder's page turns blank at the flip minus 61 f; the lock has no pixel frame for it.
+- **Tasya's floor:** from the merged slate steps and the door. It goes home silently as the statement ends; there is no sign and no Rhodes.
+- **Neleh's real face (S4.07):** the sincere beat (the solo viola's F E♭ D♭ over Step Four), which now comes after the statement.
+- **ALYI ALONE** (sorrow, wordless):
+  - The Door, on the senza-vibrato solo violin over a sul-tasto D♭ pedal, slow. It ends on its ♯4 and stays there, the question from 2018 still open.
+  - It is ridden −5 dB: −21.3 LUFS.
+  - The hearts carry the cut to his phone.
+
+**2 AM:** it opens on the hearts on his phone (S5.03): the felt's first chord on the cut, then the count ticking with the hearts. The Water Line plays on the home shot. The two V.O.s here are cut (the count, and "gerg walked out for me."), so Gerg's ring gets its chord and the Build's passes follow.
+
+**The avalanche:** MM-10's own bars, fitted to the 11 beats before Mada's label:
+- the compile (A1);
+- Step Four's G♭ and Alyi resisting one beat (A6);
+- Neleh's window, no lead, on the board's F pedal to THE QUIET VOTE;
+- THE FULL BAND (A13) a beat before Mada's shot, cutting her "char—" off, to the dead stop on the label.
+
+The Build at 16 and the Water Line augmented have no room. The cue's target is −18.5, so the full band reads −16.3, near v3.4's −16.8.
+
+**Measured:**
+- **Levels:** −20.3 LUFS-I, −3.15 dBTP.
+
+  | Cue | LUFS-I |
+  |---|---|
+  | noon | −20.0 |
+  | the war room | −19.9 (the V.O. entry −24.3, the calls −20.2, the post −16.4, the flight −23.0) |
+  | the night | −21.9 (TPOOL −21.7) |
+  | THE PLAN | −20.0 |
+  | the board | −21.0 (Alyi alone −21.3) |
+  | 2 AM | −20.0 |
+  | the avalanche | −18.4 (the full band −16.3) |
+  | the return | −20.0 |
+
+- **Silence:** digital silence only in the 7 marked windows, starting with D6 (27.73 → 45.69: the Remove click to the phone lighting).
+- **Gaps:** no hole or fragment.
+- **Engine checks:** rule 12, the spectral F-major check (every cue) and the knee all pass.
+- **Cut steps:** all six steps of 12 dB or more sit on a mark, a designed hit or a marked silence (`../e01-v3-act1/v35check.py`).
+- **Designed hits:** the war room's entry and the night's re-entry.
+- **Re-run:**
+  ```bash
+  OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act4/track.py --render --variant el
+  ```
+  The cue names are `noon warroom night plan board two_am avalanche return`.
 
 **The first round, restored.** The lead relayed the showrunner: "i liked the initial ost that was presented… we want to make sure we're keeping a unique sound, not toning down to overly generic". So this is the first-round score (commit 7d7a99f), restored after a restrained revision was withdrawn, with one change: **the avalanche's peak is about 2 dB down**. The last two phrases are ridden −2 dB and the cue's target goes −16 → −17, because the engine normalises each cue to its target. Phrases 3–4 read −16.9 / −16.8 LUFS, against −14.9 / −15.1 before. The rest is kept:
 - the Build stops dead on Gerg's look at 2 AM;

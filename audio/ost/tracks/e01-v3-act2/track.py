@@ -65,7 +65,7 @@ import v3lib as V   # noqa: E402
 from v3lib import palette, nm, Drums   # noqa: E402
 
 SEG = 'act2'
-Q, BAR = V.Q, V.BAR
+Q, BAR, S16 = V.Q, V.BAR, V.S16
 
 
 def dup(T, src, name, **kw):
@@ -368,9 +368,16 @@ SEN_THIN = {'real': dict(drop={'vc_p', 'cb_p', 'bsn', 'tpt', 'vla', 'jazz', 'bru
             'mas': dict(drop={'tpt', 'bsn'}, soften={'vc_p': 0.75, 'cb_p': 0.8, 'jazz': 0.7, 'brush': 0.7})}
 
 
+def senate_start(tl):
+    """v3.5: the hearing opens on the gavel's knock (v35-27.00; the clone and its real line are cut); before, 15.01"""
+    if tl.has('v35-27.00'):
+        return tl.snd('v35-27.00', 'landing_thunk', default=tl.B('v35-27.00'))
+    return tl.B('15.01')
+
+
 def cue_senate_a(tl):
-    start = tl.B('15.01')
-    groove0 = tl.B('15.02')
+    start = senate_start(tl)
+    groove0 = start if tl.has('v35-27.00') else tl.B('15.02')     # v3.5: "procedural comedy, MM-20, in on the gavel"
     stop = tl.B('15.12')
     c = V.Cue('senate_a', tl, anchor=groove0, anchor_bar=3, bars=30, swing=0.0)
     T = tracks_sen()
@@ -386,10 +393,13 @@ def cue_senate_a(tl):
         a1 = (min(nxt) - 0.25) if nxt else stop - 0.3
         if a1 - a0 > 1.3:
             ask = (a0, a1)
-    # the court's F under the clone's real line (the voice finds a mouth): a bowed pedal
-    c.rebow('vc_ped', 'C3', start, groove0 + 0.3, 0.18, first_att=0.6, last_rel=0.5, art='sus', lp=1200)
-    c.rebow('cb_ped', 'F1', start, groove0 + 0.3, 0.16, first_att=0.6, last_rel=0.5, art='sus', lp=900)
-    c.mark(start, 'the court\'s F: a bowed pedal under the clone\'s real line', hit=False)
+    if groove0 > start + 0.5:
+        # the court's F under the clone's real line (the voice finds a mouth): a bowed pedal
+        c.rebow('vc_ped', 'C3', start, groove0 + 0.3, 0.18, first_att=0.6, last_rel=0.5, art='sus', lp=1200)
+        c.rebow('cb_ped', 'F1', start, groove0 + 0.3, 0.16, first_att=0.6, last_rel=0.5, art='sus', lp=900)
+        c.mark(start, 'the court\'s F: a bowed pedal under the clone\'s real line', hit=False)
+    else:
+        c.mark(start, 'v3.5: the hearing opens IN ON THE GAVEL: the pizz two-feel\'s first downbeat on its knock')
     senate_groove(c, groove0, stop, 0, freeze=freeze, reserve=[ask] if ask else [])
     real_pedals(c, groove0, stop, 0, groove0)
     V.thin(c, SEN_THIN, t0=groove0 - 0.01)
@@ -402,7 +412,8 @@ def cue_senate_a(tl):
         c.mark(freeze, 'Sucram\'s card: the groove holds its beat', hit=False)
     V.clip_before(c, stop, rel=0.05)
     c.mark(stop, 'THE WALLET: the music stops (5 ms; the room\'s air under it)', hit=False)
-    c.section('the court\'s F under the real line', start, groove0)
+    if groove0 > start + 0.5:
+        c.section('the court\'s F under the real line', start, groove0)
     c.section('a lighter Under Oath: the pizz two-feel, brushes, the mute\'s asides' + (' (v3.2: the ask, his real '
               'line on the pedal; the senators\' delight on the mute)' if ask else ''), groove0, stop)
     meta = dict(
@@ -427,15 +438,26 @@ def ask_before_wallet(tl):
     return tl.has('15.15') and tl.has('15.12') and tl.B('15.15') < tl.B('15.12')
 
 
+def tour_stamps(tl):
+    """the tour's passport stamps: v3.5 v35-29.01 (one a beat, 0.5 s apart); before, the poster (16.01)"""
+    bid = 'v35-29.01' if tl.has('v35-29.01') else '16.01'
+    return sorted(tl.snd_any('rubber_stamp_C', tl.B(bid) - 0.01, tl.E(bid))), bid
+
+
 def senate_b_in(tl):
-    """MM-20's re-entry: 0.3 s after his last word in 15.14 ("...i have no equity in nopeai.")"""
+    """MM-20's re-entry: 0.3 s after his last word in 15.14 ("...i have no equity in nopeai."); v3.5: on the
+    hearing's return after the 2019 flashback (v35-28.05)"""
+    if tl.has('v35-28.05'):
+        return tl.B('v35-28.05')
     mas_eq = [l for l in tl.lines if l['beat'] == '15.14' and l['who'] == 'mas']
     return (mas_eq[-1]['end'] + 0.3) if mas_eq else tl.B('15.14') + 5.0
 
 
 def cue_senate_b(tl):
     t_re = senate_b_in(tl)
-    end = tl.B('16.01')                                     # the tour's first stamp cuts it (v3, v3.1, v3.2)
+    sts, _bid = tour_stamps(tl)
+    end = sts[0] if (tl.has('v35-29.01') and sts) else tl.B('16.01')   # the tour's first stamp cuts it
+    gavel = tl.snd('v35-28.05', 'landing_thunk', default=None) if tl.has('v35-28.05') else None
     v32 = ask_before_wallet(tl)
     # (v3.2: about a second of score, so the file starts two bars early, silent: the engine's meters need 3 s)
     c = V.Cue('senate_b', tl, anchor=t_re, anchor_bar=3 if v32 else 1, bars=10, swing=0.0)
@@ -446,6 +468,8 @@ def cue_senate_b(tl):
         # under it": after "...no equity" the groove comes back on a downbeat (a bar of it when there is room), then
         # the F7sus(b9) hangs until the tour's stamp
         back = t_re + BAR if end - t_re >= BAR + 0.8 else t_re
+        if gavel is not None:                              # v3.5: MM-20's last phrase, out on the gavel
+            back = gavel
         if back > t_re:
             senate_groove(c, t_re, back, 0, asides=False)
             real_pedals(c, t_re, back, 0, t_re)
@@ -472,7 +496,11 @@ def cue_senate_b(tl):
                        ('vla', 'Bb3', 0.15)):
         c.n(inst, p, back, end - back + 0.3, v, art='sus', att=0.3 if not v32 else 0.12, rel=0.2, lp=2400)
     c.n('tpt', 'Gb4', back + 0.05, min(1.2, end - back), 0.26, art='straight', rel=0.3)
-    if v32:
+    if gavel is not None:
+        c.mark(t_re, 'v3.5: back at the hearing (the glowing line sweeps back): MM-20\'s last phrase')
+        c.mark(back, 'the chairman\'s gavel ends the hearing: the phrase lands on it, F7sus(b9) held; the gavel\'s knock '
+               'becomes a passport stamp, which cuts it')
+    elif v32:
         c.mark(back, 'MM-20 back on a new phrase after "...no equity": F7sus(b9) held on the two of them; the tour\'s '
                'stamp cuts it')
     else:
@@ -540,12 +568,103 @@ def tracks_run():
     return T
 
 
+RUN35 = ['Ab69', 'Dbmaj9', 'Bbm11', 'Eb69sus', 'Ab69', 'Dbmaj9', 'Eb69sus']   # v3.5: one chord a stamp (seven)
+RB = 0.5                                                                      # v3.5: the tour's beat (120 BPM)
+RUN_DEG = {'Ab69': 0, 'Dbmaj9': 3, 'Bbm11': 1, 'Eb69sus': 4}                  # each chord's degree in A-flat major
+RUN_STEPS = [0, 0, 1, 2, 4, 2, 1, 0, 0, 0, 1, 2, 4, 6, 4, 2]                  # the Build's contour, as scale steps
+
+
+def run_v35(c, tl, T):
+    """v3.5 THE TOUR (sc 29, v35-29.01-29.05): brisk fun, THE STAMPS ON THE BEAT.  The passport's seven stamps land
+    one a beat (0.5 s apart), so the RUN plays at 120 BPM from the first: a straight 16th engine (the Build's chip
+    arpeggio on each stamp's chord, brush taps, the upright), one layer and ONE KNEE STAB PER STAMP (the title's
+    quartal C F B-flat E-flat on brass + a chip double, over a bass that moves with the stamps; MUNICH the biggest,
+    with the timpani).  The lectern (his real line: "if we can comply...") plays on the held chord and the bass only
+    (the record, dry); the engine comes back soft under NOTERB's post and his; on his one-pixel smile the felt plays
+    the Water Line's nudge (G4).  It stops as the pen signs the guest book, and the last chord rings into the
+    statement's pad.  Returns (stamps, run_end, pad_from)."""
+    stamps, _ = tour_stamps(tl)
+    s1 = stamps[0]
+    lect = tl.B('v35-29.02')
+    guest = tl.B('v35-29.05')
+    run_end = tl.E('v35-29.05')
+    real = [l for l in tl.lines_in(lect, tl.E('v35-29.02')) if l['who'] == 'mas']
+    r0, r1 = (real[0]['on'] - 0.15, real[0]['end'] + 0.2) if real else (lect, lect)
+
+    def chord_at(t):
+        k = max([i for i in range(len(stamps)) if stamps[i] <= t + 1e-6] or [0])
+        if t >= stamps[-1] + 4 * RB:                             # after the stamps: a chord a bar (4 beats)
+            k = len(stamps) - 1 + int((t - stamps[-1]) // (4 * RB))
+        return RUN[RUN35[k % len(RUN35)]]
+    t, i = s1, 0
+    while t < guest - 1e-3:
+        ch = chord_at(t)
+        k = sum(1 for x in stamps if x <= t + 1e-6)
+        dry = r0 <= t < r1
+        d = RUN_DEG[[kk for kk, v in RUN.items() if v is ch][0]]         # the Build moved diatonically (no A)
+        st = RUN_STEPS[i % 16] + d
+        p = nm('Ab4') + [0, 2, 4, 5, 7, 9, 11][st % 7] + 12 * (st // 7) - (12 if d >= 3 else 0)
+        acc = (1.0, 0.72, 0.84, 0.72)[i % 4]
+        if not dry:
+            c.n('lead', p, t, RB / 4 * 0.62, 0.3 * acc * (0.75 if t >= r1 else 1.0), True, duty=0.25, att=0.002,
+                dec=0.08, sus=0.45, rel=0.035)
+            if k >= 4 and i % 4 == 0 and t < r0:
+                c.n('xylo', p, t, 0.2, 0.32)
+            if k >= 5 and i % 2 == 0 and t < r0:
+                c.n('vln2_pz', p - 12, t, 0.2, 0.28, art='pizz')
+            if k >= 2 and i % 2 == 0:
+                c.n('brush', 38, t, 0.08, (0.5 if i % 4 == 0 else 0.34) * (0.8 if t >= r1 else 1.0))
+            if k >= 2 and i % 8 == 0:
+                c.n('jazz', 36, t, 0.1, 0.4)
+        if i % 4 == 0 and k >= 3:
+            beat = (i // 4) % 2
+            c.n('ubass', ch['b2'] if beat == 0 else nm(ch['b2']) + 7, t, RB * 0.85,
+                (0.5 if beat == 0 else 0.42) * (0.7 if dry else 1.0))
+        t += RB / 4
+        i += 1
+    for k, st in enumerate(stamps):
+        ch = RUN[RUN35[k % len(RUN35)]]
+        vv = 0.5 + 0.035 * k
+        V.stab(c, 'tpt', ['Eb5', 'Bb4'], st, vel=vv, length=0.2 + 0.02 * k)
+        V.stab(c, 'tbn', ['F4', 'C4'], st, vel=vv * 0.95, length=0.22 + 0.02 * k)
+        c.n('lead2', 'Eb5', st, 0.16, 0.28 + 0.02 * k, True, duty=0.125, att=0.002, dec=0.12, sus=0.2, rel=0.06)
+        c.n('cb', ch['bass'], st, 0.45, 0.5, art='pizz')
+        c.mark(st, f'the knee stab on stamp {k + 1} (C F Bb Eb over {ch["bass"][:-1]}), on the beat')
+    c.n('timp', 'Eb2', stamps[-1], 1.2, 0.5)
+    if len(stamps) >= 6:                                          # the strings from the 6th stamp, held to the lectern
+        for inst, p in zip(('vln1', 'vla', 'vc'), ('Db5', 'F4', 'Bb2')):
+            c.n(inst, p, stamps[5], max(0.6, r0 - stamps[5]), 0.28, art='sus', att=0.05, rel=0.3)
+    # the lectern: the record plays on a held chord (the pad) and the bass
+    if real:
+        for inst, p in zip(('vla', 'vln2'), ('Eb4', 'Bb4')):
+            c.n(inst, p, r0, r1 - r0 + 0.3, 0.16, art='sus', att=0.4, rel=0.5, lp=3000)
+        c.mark(r0, 'the lectern (the record): the held chord and the bass only', hit=False)
+        c.mark(r1, 'the engine back, soft, under the posts (NOTERB\'s, then his)')
+    # his one-pixel smile at the retreat: the Water Line's nudge (G4) on the felt
+    smile = tl.B('v35-29.04') + 2.0
+    c.n('felt', 'G4', smile, 1.0, 0.2)
+    c.mark(smile, 'his one-pixel smile ("no plans to leave"): the felt\'s nudge, G4')
+    V.clip_before(c, guest, insts={'lead', 'xylo', 'vln2_pz', 'ubass', 'jazz', 'brush', 'swish'}, rel=0.05)
+    V.drop_window(c, guest, guest + 60, insts={'lead', 'xylo', 'vln2_pz', 'ubass', 'jazz', 'brush', 'swish'})
+    c.mark(guest, 'the guest book: the engine stops; the last chord rings into the statement\'s pad', hit=False)
+    c.section('THE TOUR: the stamps on the beat, a knee stab each (120 BPM)', s1, r0)
+    c.section('the lectern (the record: the held chord); the posts (the engine, soft); the smile', r0, guest)
+    return stamps, run_end, guest
+
+
 def cue_run_roof(tl):
+    reg = tl.B('17.03')
+    if tl.has('v35-29.01'):
+        stamps0, _ = tour_stamps(tl)
+        s1 = stamps0[0]
+        c = V.Cue('run_roof', tl, anchor=s1, anchor_bar=1, bars=14, swing=0.0)
+        T = tracks_run()
+        stamps, run_end, pad_from = run_v35(c, tl, T)
+        return roof(c, tl, T, stamps, s1, run_end, reg, pad_from=pad_from)
     stamps = sorted(tl.snd_any('rubber_stamp_C', tl.B('16.01') - 0.01, tl.E('16.01')))
     s1 = stamps[0] if stamps else tl.B('16.01')
     stamps = (stamps + [s1 + 1.2, s1 + 5.2, s1 + 6.1])[:4] if len(stamps) < 4 else stamps[:4]
     run_end = tl.E('16.01')
-    reg = tl.B('17.03')
     c = V.Cue('run_roof', tl, anchor=s1, anchor_bar=1, bars=12, swing=0.0)
     T = tracks_run()
     edges = stamps + [run_end]
@@ -600,10 +719,14 @@ def cue_run_roof(tl):
                                      'vc'}, rel=0.05)
     V.drop_window(c, run_end, run_end + 60, insts={'lead', 'xylo', 'vln2_pz', 'ubass', 'jazz', 'brush', 'swish'})
     c.section('THE RUN: the poster, a knee stab per stamp', s1, run_end)
-    # ---- the rooftop: the last stab rings into a held pad, grand, then uneasy
+    return roof(c, tl, T, stamps, s1, run_end, reg)
+
+
+def roof(c, tl, T, stamps, s1, run_end, reg, pad_from=None):
+    """the rooftop: the last stab rings into a held pad, grand, then uneasy (v3.5: the pad from the guest book)"""
     mario = [l for l in tl.lines_in(tl.B('17.02'), reg) if l['who'] == 'mario']
     masl = [l for l in tl.lines_in(tl.B('17.02'), reg) if l['who'] == 'mas']
-    ch_t = [(stamps[3], 'Eb69sus')]
+    ch_t = [(pad_from if pad_from is not None else stamps[3], 'Eb69sus')]
     ch_t.append((run_end, 'Abmaj9'))
     ch_t.append(((mario[0]['end'] + 0.2) if mario else run_end + 7.0, 'Dbmaj9#11'))
     ch_t.append(((mario[1]['end'] + 0.2) if len(mario) > 1 else run_end + 10.0, 'Bbm9'))
@@ -624,7 +747,8 @@ def cue_run_roof(tl):
     c.section('the rooftop: the pad, grand (the statement plays dry)', run_end, ch_t[2][0])
     c.section('the sheet: uneasy (Dbmaj9#11, Bbm9, C7sus-flat9 on the knife)', ch_t[2][0], xf_end)
     run_gain = 4.0
-    macro = [(s1 - 0.5, run_gain), (run_end - 0.02, run_gain), (run_end + 0.8, 0.0), (xf_end + 1.0, 0.0)]
+    r_e = pad_from if pad_from is not None else run_end          # (v3.5: the RUN's lift ends at the guest book)
+    macro = [(s1 - 0.5, run_gain), (r_e - 0.02, run_gain), (r_e + 0.8, 0.0), (xf_end + 1.0, 0.0)]
     meta = dict(
         id='run_roof', title='The Regulate-Me Tour / the rooftop pad (Ep1 v3, Act Two sc 16-17)', mm='MM-03 (family)',
         usage='BI', family='P07 THE RUN -> a held pad', tone='the run, then grand, then uneasy',
@@ -885,8 +1009,149 @@ def cue_upsell(tl):
     return c, sc
 
 
+# ================================================================== MAR 2019 · the company with a ceiling (v3.5, sc 28)
+M19 = {   # felt voicings (A-flat major warm; the unease: a tritone under "the board."); no A anywhere
+    'Abmaj9':   ['Ab2', 'Eb3', 'C4', 'G4'],
+    'Dbmaj9':   ['Db3', 'Ab3', 'C4', 'F4'],
+    'Fm9':      ['Ab3', 'C4', 'G4'],
+    'Eb13sus':  ['Eb3', 'Ab3', 'Db4', 'F4'],
+    'Ab5':      ['Ab2', 'Eb3', 'Ab3'],
+}
+
+
+def cue_mar2019(tl):
+    """MAR 2019, THE COMPANY WITH A CEILING (sc 28, v35-28.01-28.04): admiration with a flicker of unease.  His own
+    flashback, so his felt; GERG'S BUILD on the chip (Gerg with the cloud bill: the machine's cost is his problem)
+    and a sul-tasto low-string pedal.  It comes in out of the hearing's silence 0.3 s after "...no equity" (the low
+    strings swell under the held beat, sound leading the flashback's cut); on the glowing line the felt blooms
+    A-flat maj9 and the celesta draws the line (the same device as JUN 2018).  A chord a line, never inside Mas's
+    lines; the Build compiles under Gerg's line and in the gaps.  THE FLICKER: on "the board." the pedal slips from
+    A-flat to G under a held D-flat (the tritone), and it stays under "And you?" / "nothing." / "Good answer."; the
+    felt answers "nothing." with an open A-flat fifth (no third: he owns nothing).  The check under the door
+    (MACROSOFT $1B): TASYA'S RHODES, her chord (C E-flat G B-flat) over the A-flat: the landlord's colour arriving.
+    It hands to MM-20's last phrase on the glowing line back to the hearing."""
+    if not (tl.has('v35-28.01') and tl.has('v35-28.05')):
+        return None
+    eq = [l for l in tl.lines if l['beat'] == '15.14' and l['who'] == 'mas']
+    t_in = (eq[-1]['end'] + 0.3) if eq else tl.B('v35-28.01') - 0.8
+    fb = tl.B('v35-28.01')
+    talk = tl.B('v35-28.02')
+    ceo = tl.B('v35-28.03')
+    chk = tl.B('v35-28.04')
+    back = tl.B('v35-28.05')
+    c = V.Cue('mar2019', tl, anchor=fb, anchor_bar=2, bars=int((back - fb) / BAR) + 5, swing=0.0)
+    T = palette()
+    T['felt'].gain_db, T['felt'].sends = -1.0, {'room': -12, 'hall': -16}
+    T['lead'].gain_db, T['lead'].sends = -8.0, {'room': -14, 'snes': -16}
+    T['lead'].eq = [('hp', 220), ('lp', 5200)]
+    T['celesta'].gain_db, T['celesta'].sends = -9.0, {'hall': -8}
+    for k in ('vla', 'vc', 'cb'):
+        T[k].gain_db, T[k].sends = -3.0, {'hall': -10, 'room': -16}
+        T[k].eq = list(T[k].eq) + [V.PIZZ_NOTCH]
+    T['rhodes'].gain_db, T['rhodes'].sends = -4.0, {'room': -12, 'plate': -12}
+
+    def fch(ps, t, d, v, roll=0.016, span_end=None):
+        return c.pch('felt', ps, t, d, v, roll=roll, span_end=span_end)
+    # the entry out of the hearing's silence: the low strings swell under the held beat
+    board = [l for l in tl.lines_in(talk, ceo) if l['who'] == 'mas' and 'board' in l['text'].lower()]
+    t_flick = (board[0]['end'] + 0.08) if board else ceo - 0.3
+    c.rebow('vc', 'Ab2', t_in, t_flick + 0.3, 0.14, first_att=1.0, last_rel=0.4, art='sus', lp=1100)
+    c.rebow('vla', 'Eb3', t_in + 0.3, t_flick + 0.3, 0.12, first_att=1.0, last_rel=0.4, art='sus', lp=1300)
+    c.mark(t_in, 'DESIGNED HIT: MAR 2019 comes in out of the hearing\'s silence: the low strings swell (A-flat) under '
+                 'the held beat, leading the flashback\'s cut')
+    # the glowing line: the felt blooms, the celesta draws the line
+    fch(M19['Abmaj9'], fb + 0.05, talk - fb + 0.4, 0.15, roll=0.03)
+    for k, p in enumerate(['Eb5', 'G5', 'C6', 'Eb6']):
+        c.n('celesta', p, fb + 0.1 + k * S16, 0.9, 0.2 + 0.02 * k)
+    c.mark(fb + 0.05, 'the glowing line (MAR 2019): the felt blooms A-flat maj9; the celesta draws the line')
+    # a chord a line: struck after each of Mas's lines (never inside one), held to the next
+    seq = ['Dbmaj9', 'Fm9', 'Eb13sus', 'Abmaj9']
+    mas = [l for l in tl.lines_in(talk, t_flick) if l['who'] == 'mas' and l['kind'] != 'vo']
+    pts = [talk + 0.05] + [l['end'] + 0.08 for l in mas[:-1]]
+    for k, t_ in enumerate(pts):
+        t_nx = pts[k + 1] if k + 1 < len(pts) else t_flick
+        if tl.talking(t_, t_ + 0.05, kinds={'mas', 'vo'}):
+            continue
+        fch(M19[seq[k % 4]], t_, t_nx - t_ + 0.3, 0.14, span_end=t_nx - 0.02)
+        c.mark(t_, f'MAR 2019: {seq[k % 4]} (after his line)', hit=False)
+    # GERG'S BUILD: under Gerg's own line (the cloud bill) and in the gaps
+    for t0_, cnt, v in (V_place(c, talk, t_flick - 0.2)):
+        for i in range(cnt):
+            c.n('lead', nm(BUILD_AB[i % 16]), t0_ + i * S16, S16 * 0.62, v * (1.0, 0.72, 0.84, 0.72)[i % 4], True,
+                duty=0.25, att=0.002, dec=0.09, sus=0.45, rel=0.035)
+        c.mark(t0_, f'MAR 2019: the Build ({cnt}), Gerg\'s', hit=False)
+    # THE FLICKER on "the board.": the pedal slips A-flat -> G under a held D-flat (the tritone)
+    c.rebow('vc', 'G2', t_flick, chk + 0.2, 0.13, first_att=0.6, last_rel=0.5, art='sus', lp=1100)
+    c.rebow('vla', 'Db4', t_flick, chk + 0.2, 0.11, first_att=0.6, last_rel=0.5, art='sus', lp=1300)
+    c.mark(t_flick, 'THE FLICKER: "the board.": the pedal slips A-flat -> G under a held D-flat (the tritone): he '
+                    'just put the board on top')
+    nothing = [l for l in tl.lines_in(ceo, chk) if l['who'] == 'mas']
+    t_no = (nothing[0]['end'] + 0.06) if nothing else ceo + 2.3
+    fch(M19['Ab5'], t_no, chk - t_no + 0.3, 0.13)
+    c.mark(t_no, '"nothing.": the felt\'s open A-flat fifth (no third: he owns nothing)', hit=False)
+    # the check under the door: Tasya's Rhodes, her chord, over the A-flat
+    tc = tl.os_at('v35-28.04', 'MACROSOFT', default=chk + 0.2)
+    c.rebow('cb', 'Ab1', tc, back + 0.6, 0.12, first_att=0.3, last_rel=0.8, art='sus', lp=800)
+    c.ch('rhodes', ['C4', 'Eb4', 'G4', 'Bb4'], tc, back - tc + 0.5, 0.22, roll=0.012)
+    c.mark(tc, 'THE CHECK under the door (MACROSOFT $1B): Tasya\'s Rhodes, her chord over the A-flat (the landlord)')
+    V.thin(c, {'mas': dict(drop={'lead', 'celesta'}), 'vo': dict(drop={'lead', 'celesta'}),
+               'talk': dict(soften={'lead': 0.8})}, t0=talk)
+    c.section('MAR 2019: the entry and the glowing line', t_in, talk)
+    c.section('MAR 2019: the structure (the felt a chord a line, the Build)', talk, t_flick)
+    c.section('the flicker: "the board." / "nothing." / "Good answer."', t_flick, chk)
+    c.section('the check under the door: Tasya\'s Rhodes', chk, back)
+    meta = dict(id='mar2019', title='The Company with a Ceiling, MAR 2019 (Ep1 v3.5, Act Two sc 28)',
+                mm='(to picture)', usage='BI', family='P01 his felt, the Build, a sul-tasto pedal; Tasya\'s Rhodes',
+                tone='admiration with a flicker of unease', scenes=['Ep1 v3.5 Act Two sc 28'],
+                motifs=["Gerg's Build", 'the tritone slip under "the board."', 'Tasya\'s Rhodes chord (the check)'],
+                motif_ids=[], key='A-flat major; the pedal slips A-flat -> G under D-flat (the flicker); no A',
+                composer='v3.5 composer (the final pass), 2026-09-28', underscore_lufs=-21.0, album_lufs=-16.0,
+                audition=['admiration: he builds the machine; the flicker on "the board." felt, not a sting',
+                          'the Rhodes on the check: the landlord\'s colour arriving'])
+    sc = c.finish(T, meta, length_end=back + 0.8, end_fade=(back - 0.2, back + 0.75))
+    return c, sc
+
+
+def V_place(c, t0, t1, vel=0.24, spacing=4.5):
+    """the Build's compile passes (4/8/12/16 16ths) in [t0, t1): in the gaps and under Gerg's own lines, never inside
+    Mas's, Alyi's or Mada's, never on the heels of a line (Act One's place_passes)"""
+    tl = c.tl
+    out, last = [], -1e9
+    for g0, g1 in tl.gaps(t0, t1, min_len=0.75, pad_before=0.1, pad_after=0.5, allow_who=('gerg',)):
+        t = c.next16(g0)
+        while t < g1 - 0.7:
+            if t - last < spacing:
+                t = c.next16(last + spacing)
+                continue
+            cnt = max([k for k in (16, 12, 8, 4) if k * S16 <= g1 - t - 0.05] or [0])
+            if cnt == 0:
+                break
+            out.append((t, cnt, vel))
+            last = t
+            t = c.next16(t + max(spacing, cnt * S16 + 0.5))
+    return out
+
+
 CUES = {'wh': cue_wh, 'senate_a': cue_senate_a, 'senate_b': cue_senate_b, 'run_roof': cue_run_roof,
         'upsell': cue_upsell}
+
+
+def stamps_ride(tl, T0, db_=-1.5, ramp=0.3):
+    """v3.5: a fader ride on the laid run_roof render: the stamps (to the lectern) db_ down, back over `ramp` s"""
+    import numpy as np
+    lect = tl.B('v35-29.02')
+    real = [l for l in tl.lines_in(lect, tl.E('v35-29.02')) if l['who'] == 'mas']
+    t1 = (real[0]['on'] - 0.15 if real else lect) - T0
+
+    def f(x):
+        n = x.shape[1]
+        g = np.ones(n)
+        i1, i2 = int(max(0.0, t1) * V.SR), int(max(0.0, t1 + ramp) * V.SR)
+        g[:i1] = 10 ** (db_ / 20.0)
+        if i2 > i1:
+            g[i1:i2] = np.linspace(10 ** (db_ / 20.0), 1.0, i2 - i1)
+        return x * g[None]
+    return f
 
 
 def lay(tl, built, work):
@@ -895,27 +1160,39 @@ def lay(tl, built, work):
     T0 = lambda k: built[k][0].T0                                              # noqa: E731
     stop_wallet = tl.B('15.12')
     t_re = senate_b_in(tl)
-    run_end = tl.E('16.01')
+    sts, _bid = tour_stamps(tl)
+    run_in = sts[0] if tl.has('v35-29.01') else tl.B('16.01')
+    m19 = built.get('mar2019')
+    after_wallet = t_re
+    if m19 is not None:                                        # v3.5: the wallet's silence ends at MAR 2019's swell
+        after_wallet = [t for t, lab, h in m19[0].marks if lab.startswith('DESIGNED HIT: MAR 2019')][0]
     reg = tl.B('17.03')
     crack = tl.B('17.11')
     ao = act_out(tl)
     up = built['upsell'][0]
     layers = [
         dict(name='wh_pomp', wav=wav('wh'), T0=T0('wh'), a0=0.0, a1=wh_ring_end(tl), fin=0.0, fout=0.3),
-        dict(name='senate_a', wav=wav('senate_a'), T0=T0('senate_a'), a0=tl.B('15.01'), a1=stop_wallet, fin=0.4,
-             fout=0.003),
-        dict(name='senate_b', wav=wav('senate_b'), T0=T0('senate_b'), a0=t_re - 0.02, a1=tl.B('16.01'), fin=0.05,
-             fout=0.06),
-        dict(name='run_roof', wav=wav('run_roof'), T0=T0('run_roof'), a0=tl.B('16.01') - 0.004, a1=reg + 0.7,
-             fin=0.004, fout=0.7),
+        dict(name='senate_a', wav=wav('senate_a'), T0=T0('senate_a'), a0=senate_start(tl) - (0.02 if m19 else 0.0),
+             a1=stop_wallet, fin=0.02 if m19 else 0.4, fout=0.003),
+        dict(name='senate_b', wav=wav('senate_b'), T0=T0('senate_b'), a0=t_re - (0.3 if m19 else 0.02), a1=run_in,
+             fin=0.3 if m19 else 0.05, fout=0.06),
+        dict(name='run_roof', wav=wav('run_roof'), T0=T0('run_roof'), a0=run_in - 0.004, a1=reg + 0.7,
+             fin=0.004, fout=0.7, **(dict(post=stamps_ride(tl, built['run_roof'][0].T0),
+                                          post_name='a fader ride: the stamps -1.5 dB (their seven stabs read '
+                                                    '-15.0 LUFS on the render, the featured guide is -16)')
+                                     if tl.has('v35-29.01') else {})),
         dict(name='upsell', wav=wav('upsell'), T0=T0('upsell'), a0=up.next8(reg - 0.02) - 0.05,
              a1=crack if ao is None else tl.length, fin=0.05, fout=0.005 if ao is None else 0.02,
              gain_db=0.0 if ao is None else -0.6),     # (v3.3+: the act-out's quiet tail lifts the cue's master by
                                                         #  ~0.5 dB; laid 0.6 dB down, phrase 3 stays under -16 p95)
     ]
-    stops = [(stop_wallet, t_re - 0.03)] + ([(crack, tl.length)] if ao is None else [])
-    designed = [(wh_ring_end(tl), tl.B('15.01'), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),
-                (stop_wallet, t_re, 'the wallet: the Senate\'s one stop (the room\'s air under it)')]
+    if m19 is not None:
+        layers.append(dict(name='mar2019', wav=wav('mar2019'), T0=T0('mar2019'), a0=after_wallet - 0.02,
+                           a1=t_re + 0.6, fin=0.02, fout=0.7))
+    stops = [(stop_wallet, after_wallet - 0.03)] + ([(crack, tl.length)] if ao is None else [])
+    designed = [(wh_ring_end(tl), senate_start(tl), 'THE BRIDGE: no score (sc 14: the phone, the water, the plink)'),
+                (stop_wallet, after_wallet, 'the wallet: the Senate\'s one stop (the room\'s air under it' +
+                 (': the card, the gasp, "...no equity"; MAR 2019 swells in under the held beat)' if m19 else ')'))]
     if ao is None:
         designed.append((crack, tl.length, 'the act-out: the register\'s bell alone (a timeline sound), decaying'))
     return layers, stops, designed
@@ -926,12 +1203,15 @@ def main():
     tl = V.TL(path)
     work = os.path.join(HERE, 'render', '_work', tag.lstrip('-'))   # render/_work/ (Kokoro), render/_work/el/ (git-ignored)
     built = {k: fn(tl) for k, fn in CUES.items()}
+    m19 = cue_mar2019(tl)                                     # v3.5: built only when the lock has the 2019 flashback
+    if m19 is not None:
+        built['mar2019'] = m19
     if args.dry:
         for k, (c, sc) in built.items():
             print(k, V.note_qa(sc), f'file T0 {c.T0:.3f}')
         return
     if args.render is not None:
-        for k in (args.render or list(CUES)):
+        for k in (args.render or list(built)):
             print(f'[{k}] rendered in {V.render_cue(built[k][1], work):.0f} s', flush=True)
     out = os.path.join(HERE, 'render', f'music{tag}.wav')
     layers, stops, designed = lay(tl, built, work)
@@ -958,6 +1238,8 @@ def main():
               'the mixer ducks it', cues=cues,
         silences_designed=[dict(t0=round(a, 3), t1=round(b, 3), why=w) for a, b, w in designed],
         hard_stops=[dict(t=round(a, 3), what=w) for a, _, w in designed[1:]],
+        designed_hit=[dict(t=round(t, 3), cue=sc_.name, what=lab) for k_, (c_, sc_) in built.items()
+                      for t, lab, h in c_.marks if lab.startswith('DESIGNED HIT') or 'IN ON THE GAVEL' in lab],
         measured=res, laid=laid, source=os.path.relpath(__file__, V.REPO),
         heard='nothing here has been listened to; every number is measured')
     V.write_json(os.path.join(HERE, f'cues{tag}.json'), doc)

@@ -47,6 +47,7 @@ def events(c):
     HELLO = 'v31-a4-0014' if 'v31-a4-0014' in c.LINES else ('a5-30-07' if 'a5-30-07' in c.LINES else None)
     Q_ = 'v33-a4-0001' if 'v33-a4-0001' in c.LINES else 'v3-a4-0002'      # v3.3: the employee's line
     REC = 'v33-a4-0002' if 'v33-a4-0002' in c.LINES else 'v3-a4-0003'      # v3.3: Tasya's TV clip
+    READ = 'v35-a4-0008' if 'v35-a4-0008' in c.LINES else 'v3-a4-0004'     # v3.5: Terb's cut take
     E = dict(
         s7=B('S7.01'), post=txt('S7.01', 'POST: ALYI'), post_end=txt('S7.01', 'POST: ALYI', end=True),
         heart1=snd('S7.01', 'key_tap_soft_02'), iou=txt('S7.01', 'IOU'),
@@ -56,8 +57,8 @@ def events(c):
         # v3.3: "Down here." is cut; his look down at the slate floor holds (S7.03): the floor goes home under it
         hello=Lon(HELLO) if HELLO else B('S7.03'), hello_end=Lend(HELLO) if HELLO else B('S7.03') + 0.05,
         s705=B('S7.05'), rail21=txt('S7.05', 'RAIL'), bang=B('S7.06'), freeze=snd('S7.06', 'freeze_hit_F'),
-        which=Lon('a5-30-08'), ah=Lon('a5-30-09'), calm=B('S7.07'), read_on=Lon('v3-a4-0004'),
-        read_end=Lend('v3-a4-0004'), staying_end=Lend('a5-30-11'), stays_on=Lon('a5-30-12'),
+        which=Lon('a5-30-08'), ah=Lon('a5-30-09'), calm=B('S7.07'), read_on=Lon(READ),
+        read_end=Lend(READ), staying_end=Lend('a5-30-11'), stays_on=Lon('a5-30-12'),
         of_what=Lon('a5-30-15'), of_what_end=Lend('a5-30-15'), gq=Lon('a5-30-16'),
         s709=B('S7.09'), stamp=snd('S7.09', 'rubber_stamp_C'), gerg_post=txt('S7.09', 'POST: GERG'),
         s713=B('S7.13'), ttemme_post=txt('S7.13', 'POST: TTEMME'), ttemme_end=txt('S7.13', 'POST: TTEMME', end=True),

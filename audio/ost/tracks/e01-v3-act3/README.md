@@ -4,6 +4,22 @@
 
 **The mood (v3-plan §6):** intimate, quiet, a little lonely, but warm, not dread. The Water Line (MM-01) plays warm, in D-flat lydian and A-flat major; the Orb's verdict is the open fifth; THE CLOCK comes in only at the act-out. Warm colours away from F are authorised for Ep1 v3. Nothing sits below C3 anywhere, because of the dark room's drone (F1 + C2).
 
+**v3.5 FINAL (2026-09-28; the current stem).** The final film is the ElevenLabs-timed v3.5 lock, `show/reel/ep01-v35-el/` (lock-v35.md, script-v35-notes.md). `v3clock.py` now defaults to v3.5 (`MRMAS_V3_LOCK=v34` …). `render/music-el.wav` is 136.417 s (3,274 frames), exact.
+- **The president's deepfake is restored (21.03-21.04): "a laugh with a chill."** v3.3's "which one's real?" (the D♭maj9 pre-lapped 0.25 s) and the Orb's second verdict come back. The verdict now lands on the last of **two** iris flicks (v3.5 cut the third).
+  - **The laugh:** on the copy's pop (21.02's `tower_pop`), the felt strikes F4 and the chip copies it a sixteenth late and a hair flat. That's THE COPY's device, the echo too close, once, before the copy speaks.
+  - **The chill:** under the copy's words ("And then the computers regulate themselves.") the glass holds the Ache (G4 + D♭5) over the G♭ pedal. It lets go under the real one's "When the hell did I say that?", which is the record: dry, the pedal only.
+- **Kept:**
+  - the designed hits (19.01, 21.02);
+  - the 5 ms rest fades;
+  - the switch's turn, DevDay unscored, the surge;
+  - THE CLOCK to its dead stop.
+- **Measured:**
+  - **Levels:** −20.03 LUFS-I, −3.15 dBTP; the order and the deepfake section −21.3.
+  - **Engine checks:** rule 12 and the spectral F-major OK; the knee 0.
+  - **Silence and gaps:** no unmarked silence, hole or fragment.
+  - **Cut steps:** all six steps of 12 dB or more sit on a mark or a designed hit.
+- **Re-run:** `OST_WORKERS=2 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act3/track.py --render --variant el`. The Kokoro v3.5 stem was not rendered: the film is ElevenLabs.
+
 **The score's history:**
 - It's the first-round score (commit 7d7a99f; the showrunner liked it).
 - v3.1 added the thirteenth key (Tasya's Rhodes on the cut), the hands runner with **THE COPY**, and Neleh's paper with **Neleh's question** (C6 → D♭6).

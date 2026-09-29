@@ -189,13 +189,24 @@ def place_passes(c, t0, t1, vel=0.29, allow=('gerg',), spacing=4.2, first=None):
 
 
 def whine_t(tl):
-    """code red's J-cut: v3.2 (the landlord's call, v32-7.03) the siren whines through his phone's small speaker as he
-    lowers it, just after the hang-up tick; v3.1 under the last puff of steam (7.02), which holds 1 s longer"""
+    """code red's J-cut: v3.5 (the first weeks, v35-10.*) under his phone's siren whoop as it lights red among the
+    others (v35-10.08's siren_whoop_F, the SFX's; the score's whine joins it through the phone); v3.2 (the landlord's
+    call, v32-7.03) the siren whines through his phone's small speaker as he lowers it, just after the hang-up tick;
+    v3.1 under the last puff of steam (7.02), which holds 1 s longer"""
+    wh = tl.snd_any('siren_whoop_F', tl.B('8.01') - 3.0, tl.B('8.01')) if tl.has('8.01') else []
+    if wh:
+        return min(wh[-1] + 0.02, tl.B('8.01') - 0.1)
     if tl.has('v32-7.03'):
         hang = tl.snd('v32-7.03', 'handset_hangup', default=tl.E('v32-7.03') - 0.7)
         return min(hang + 0.05, tl.B('8.01') - 0.3)
     steam = tl.snd('7.02', 'steam_hiss', default=tl.B('7.02') + 0.45)
     return min(steam + 2.05, tl.B('8.01') - 0.6)
+
+
+def call_out(tl):
+    """where launch night's cue (the call) hands off: v3.5 the first weeks' match cut (v35-10.01: his phone's screen
+    becomes the first stranger's phone); before, code red's whine J-cut"""
+    return tl.B('v35-10.01') if tl.has('v35-10.01') else whine_t(tl)
 
 
 def cue_a(tl):
@@ -223,7 +234,7 @@ def cue_a(tl):
     heat = tl.B('6.09')
     tear = tl.B('7.02')
     steam = tl.snd('7.02', 'steam_hiss', default=tear + 0.45)
-    whine = whine_t(tl)                                      # code red's J-cut (cue_code_red's t_in)
+    whine = call_out(tl)                                     # v3.5: the first weeks' match cut (before: code red's J-cut)
     call = tl.B('v32-7.03') if tl.has('v32-7.03') else None  # v3.2: the landlord's call, between the tear and the alert
     notes_off = []
     for lab, t, b in [('the odometer grows (6.01)', GROWS, b_grow)] + ([('post', tl.B('6.04'), b_post),
@@ -298,9 +309,10 @@ def cue_a(tl):
             name = harm(b)
             fe, root, sub = LN[name]
             t = bar(b) if bar(b) >= 0.6 else 0.0             # (a bar at the head: its chord is the act's downbeat)
-            cut_ = [bb['t0'] for bb in tl.beats if 0.0 < t - bb['t0'] < 0.35]
+            cut_ = [bb['t0'] for bb in tl.beats if -0.02 < t - bb['t0'] < 0.35]
             if cut_ and t >= 0.6:                            # v3.4: a change just after a cut pre-laps it instead
-                t = cut_[0] - 0.1                            # (sound leads; no chord lands 0.1-0.3 s after a cut)
+                t = cut_[0] - (0.25 if abs(t - cut_[0]) < 0.02 else 0.1)   # (sound leads; v3.5: a change ON a cut
+                #   pre-laps it 0.25 s: the v3.5 grid put one on the 5.04 cut, +26 dB out of the last chord's decay)
             vo = vo_bar(b)
             change = name != prev
             prev = name
@@ -489,10 +501,24 @@ def cue_a(tl):
             V.pulse(c, 'vc_s', lambda t: nm(root) + (12 if nm(root) < nm('G2') else 0), t0, t1, S16, 0.28,
                     art='spic')
 
-    drive(b_lift, 0.3, ost=False)
-    build16(bar(b_lift), 4, 0.36, felt_double=False, duty=0.25)
-    build16(bt(b_lift, 3), 8, 0.4, idx0=4, felt_double=False, duty=0.25)
-    c.mark(bar(b_lift), 'A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)')
+    if b_grow - b_lift >= 2:
+        # v3.5 (5.12 is 4.6 s: the wait, USERS: 0, Gerg's three refreshes, then the counter rolls): the pulse alone
+        # through the wait, a held Eb13sus; the Build's 4 + 8 on the counter's first rolls
+        drive(b_lift, 0.24, ost=False)
+        fch(LN['Eb13sus4'][0], bar(b_lift), 2 * BAR - 0.1, 0.12, roll=0.012)
+        c.mark(bar(b_lift), 'A4 THE WAIT (v3.5): USERS: 0: the pulse alone, a held Eb13sus', hit=False)
+        rolls = tl.snd_any('counter_roll', tl.B('5.12'), tl.E('5.12'))
+        tr = c.next16(rolls[0]) if rolls else bar(b_lift + 1)
+        for bb in range(b_lift + 1, b_grow):
+            drive(bb, 0.3, ost=False)
+        build16(tr, 4, 0.36, felt_double=False, duty=0.25)
+        build16(c.next16(tr + 4 * S16 + 0.3), 8, 0.4, idx0=4, felt_double=False, duty=0.25)
+        c.mark(tr, 'A4 THE LIFT: the counter rolls (the pulse, the Build 4 + 8)')
+    else:
+        drive(b_lift, 0.3, ost=False)
+        build16(bar(b_lift), 4, 0.36, felt_double=False, duty=0.25)
+        build16(bt(b_lift, 3), 8, 0.4, idx0=4, felt_double=False, duty=0.25)
+        c.mark(bar(b_lift), 'A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)')
     VL = []
     # phrase 1: the odometer grows (the knee's KINK on the chip, G A-flat C, left hanging: the curve lifts)
     drive(b_grow, 0.34)
@@ -719,7 +745,9 @@ def cue_code_red(tl):
     lany = tl.B('8.05')
     # the whine alone (J-cut): high strings, one swoop, into the alert
     siren(c, 'siren1', t_in, tl.B('8.01') - t_in + 0.4, 'C5', 0.3, swoops=1, up=6.0, att=0.4)
-    c.mark(t_in, 'the siren\'s whine J-cuts in ' + ('as he lowers the phone, after the hang-up (v3.2)'
+    c.mark(t_in, 'the siren\'s whine J-cuts in ' + ('under his phone\'s whoop as it lights red among the others '
+                                                    '(v3.5)' if tl.has('v35-10.08') else
+                                                    'as he lowers the phone, after the hang-up (v3.2)'
                                                     if tl.has('v32-7.03') else 'under the last puff') +
            ' (on his phone)', hit=False)
     # the panic ostinato: straight pizz 16ths from the alert (C minor, varied pitches), pizz bass on 8ths
@@ -786,7 +814,8 @@ def cue_code_red(tl):
                                                                                     'tuba': 0.7, 'timp': 0.6}),
                'real': dict(drop={'xylo', 'woodclick', 'hn_s', 'siren1', 'siren2', 'pz2', 'pzv'}),
                'mas': dict(drop={'xylo', 'woodclick'})}, t0=tl.B('8.01'))
-    c.section('the whine (J-cut: ' + ('after the call\'s hang-up)' if tl.has('v32-7.03') else 'under the last puff)'),
+    c.section('the whine (J-cut: ' + ('under the whoop, v3.5)' if tl.has('v35-10.08') else
+                                     'after the call\'s hang-up)' if tl.has('v32-7.03') else 'under the last puff)'),
               t_in, tl.B('8.01'))
     c.section('the alert: the panic ostinato (pizz 16ths)', tl.B('8.01'), tower)
     c.section('the tower rises: the siren as a joke, the whole orchestra', tower, radnus)
@@ -867,7 +896,8 @@ def cue_lobby(tl):
     c = V.Cue('lobby', tl, anchor=pop, anchor_bar=10, bars=12, swing=1.0)
     T = tracks_lob()
     rng = _np.random.default_rng(909)
-    door = tl.snd('8.06', 'revolving_door', default=tl.B('9.01') - 1.0)
+    doors = tl.snd_any('revolving_door', tl.B('9.01') - 2.5, tl.B('9.01') - 0.01)   # v3.5: 2018's end (v35-13.06)
+    door = doors[0] if doors else tl.snd('8.06', 'revolving_door', default=tl.B('9.01') - 1.0)
     jam = tl.snd('9.01', 'glass_strain_2', default=c.sw(2, 4.5))
     freeze = tl.B('9.04')
     # the pickup under the revolving door (bar 1, beats 3-4), then the walk
@@ -1136,8 +1166,14 @@ def tracks_duel():
 CLICK_1104_FRAME = 108          # v3.2: the picture's click in 11.04 (frame 108 of the beat, both locks; the pixel pass)
 
 
+def waitlist_snap(tl):
+    """v3.5 (sc 22, v35-22.01): the velvet rope snaps taut on the wall TV.  The lock carries no sound for it; the
+    picture's caption puts it after the TV's two texts (0.2 s), so 0.9 s in (for the sound pass to confirm)"""
+    return tl.B('v35-22.01') + 0.9 if tl.has('v35-22.01') else None
+
+
 def cue_duel(tl):
-    end = tl.B('12.01')
+    end = tl.B('v35-22.01') if tl.has('v35-22.01') else tl.B('12.01')   # v3.5: the waitlist comes before the letter
     four = tl.has('11.06')                                   # the v3 lock's four phrases; v3.1 has two (11.03-11.04)
     if four:
         c = V.Cue('duel', tl, anchor=tl.B('11.04'), anchor_bar=8, bars=20, swing=0.0)
@@ -1271,12 +1307,15 @@ def cue_duel(tl):
     c.mark(turn, 'THE TURN: the Addendum crosses the split')
     c.mark(tt, 'the website: the chip plays Mario\'s tail (his side ships it)' if click is not None else
            'the photograph: the chip plays Mario\'s tail (Gerg ships it)')
-    # the end: a held Bbm(add9) on 12.01's downbeat, ringing into the letter
-    push_ = tl.snd('12.01', 'paper_whip', default=end + 2.0)
+    # the end: a held Bbm(add9) on 12.01's downbeat, ringing into the letter (v3.5: on the waitlist's cut, ringing
+    # to the rope's snap, where the waitlist's sting takes over)
+    snap = waitlist_snap(tl)
+    push_ = snap + 0.4 if snap is not None else tl.snd('12.01', 'paper_whip', default=end + 2.0)
     for inst, p in (('vc', 'Bb2'), ('vla', 'F3'), ('svln', 'C5'), ('harp', 'Bb3'), ('marimba', 'Db5')):
         c.n(inst, p, end, max(2.2, push_ - end), 0.2, art='sus', att=0.05, rel=1.2) if inst in ('vc', 'vla', 'svln') \
             else c.n(inst, p, end, 1.6, 0.4)
-    c.mark(end, 'the letter lights: a held Bbm(add9), ringing out', hit=False)
+    c.mark(end, ('the waitlist\'s wall TV (v3.5): a held Bbm(add9), ringing to the rope\'s snap' if snap is not None
+                 else 'the letter lights: a held Bbm(add9), ringing out'), hit=False)
     V.thin(c, {'vo': dict(drop={'lead', 'woodclick', 'svln', 'marimba'}, soften={'vc_pz': 0.7, 'harp': 0.6}),
                'talk': dict(soften={'lead': 0.75, 'svln': 0.8, 'marimba': 0.8, 'woodclick': 0.7}),
                'mas': dict(drop={'lead', 'svln'}),
@@ -1299,6 +1338,8 @@ def cue_duel(tl):
                   'the Addendum gaining its tail each time: funny by structure, not by sound',
                   'the turn: the chip copying Mario\'s tail on the photograph'])
     push = tl.snd('12.01', 'paper_whip', default=end + 2.0)     # it rings until the push brings MM-17 in
+    if snap is not None:                                        # v3.5: until the waitlist's sting
+        push = snap + 0.1
     sc = c.finish(T, meta, length_end=push + 0.5, end_fade=(push - 0.7, push + 0.45))
     return c, sc
 
@@ -1503,6 +1544,510 @@ def cue_atem(tl):
     return c, sc
 
 
+# ================================================================== v3.5: THE FIRST WEEKS, 3 AM + JUN 2018, THE WINDOW
+# + THE VISION POST, THE WAITLIST.  Built only when the lock has their beats (v35-10.*, v35-12.*/13.*, v35-18.*/19.*,
+# v35-22.01), so the older locks still refit with no edits.  All in the show's own voice: the chip Build, the felt,
+# the 808 and the hybrid strings, the Ache, the Door; no trio, no lounge, no new colour.
+AB_STEPS = [0, 2, 4, 5, 7, 9, 11]                  # A-flat major (the Build's own key), from A-flat
+BUILD_DEG = [0, 0, 1, 2, 4, 2, 1, 0, 0, 0, 1, 2, 4, 6, 4, 2]     # the Build's contour as scale steps (1 1 2 3 5 3 2 1 ...)
+
+
+def build_on(deg, base=nm('Ab4')):
+    """Gerg's Build moved diatonically inside A-flat major to start on scale degree `deg` (0 = A-flat): its contour
+    kept, the key kept (B-flat dorian, C phrygian, D-flat lydian, E-flat mixolydian); from D-flat up, an octave down"""
+    out = []
+    for st in BUILD_DEG:
+        k = deg + st
+        p = base + AB_STEPS[k % 7] + 12 * (k // 7)
+        out.append(p - (12 if deg >= 3 else 0))
+    return out
+
+
+# the first weeks' chords, one per montage shot: (felt voicing, the pulse's root, the 808's pitch, the Build's degree)
+FW = {
+    'v35-10.01': ('Abmaj9', ['Eb3', 'G3', 'C4'], 'Ab2', 'Ab1', 0),        # the essay (the match cut)
+    'v35-10.02': ('Bbm9', ['Db4', 'F4', 'C5'], 'Bb2', 'Bb1', 1),          # why does this crash (red -> green)
+    'v35-10.03': ('Cm7', ['Bb3', 'Eb4', 'G4'], 'C3', 'C2', 2),            # the VCR verse
+    'v35-10.04': ('F + the Ache', None, 'F2', 'F1', None),                # NOLE: "scary good" (the flicker)
+    'v35-10.05': ('Dbmaj9', ['Ab3', 'C4', 'F4'], 'Db3', 'Db2', 3),        # dinner; how do i say sorry to my sister
+    'v35-10.06': ('Eb13sus', ['Db4', 'F4', 'Ab4', 'C5'], 'Eb3', 'Eb2', 4),  # 7 x 8 = 54 (the wince)
+    'v35-10.07': ('Abmaj9', ['Eb4', 'G4', 'C5'], 'Ab2', 'Ab1', 0),        # STACK UNDERFLOW bans it (the top)
+}
+FWB = 0.5                                          # the montage's beat: 120 BPM, so every cut falls on the pulse
+
+
+def tracks_fw():
+    T = palette()
+    T['lead'].gain_db, T['lead'].sends = -5.0, {'room': -14, 'snes': -16}
+    T['lead'].eq = [('hp', 220), ('lp', 5200), ('hs', 2400, -3.0)]
+    T['lead2'].gain_db, T['lead2'].eq = -12.0, [('lp', 5000)]
+    T['tri'].gain_db, T['tri'].eq = -4.0, [('lp', 900), ('hp', 45)]
+    T['sub'].gain_db = -10.0
+    T['k808'].gain_db = -7.0
+    T['h808'].gain_db = -15.0
+    T['clap808'].gain_db = -13.0
+    T['felt'].gain_db, T['felt'].sends = -2.0, {'room': -12, 'hall': -18}
+    T['glasspad'].gain_db = -10.0
+    for k in ('vln1', 'vln2'):
+        T[k].gain_db, T[k].sends = -6.0, {'hall': -10, 'room': -16}
+    dup(T, 'vc', 'vc_s', gain_db=-7.0)
+    T['vc_s'].eq = list(T['vc_s'].eq) + [V.PIZZ_NOTCH]
+    return T
+
+
+def cue_first_weeks(tl):
+    """THE FIRST WEEKS (sc 10, v35-10.01-10.08), "our Facemash night": a rising, fun pulse in the show's own chip-and-808
+    colour.  At 120 BPM every one of the montage's cuts falls on a beat, and each cut takes one step up A-flat major
+    (A-flat, B-flat, C, then D-flat, E-flat, A-flat): the chip's triangle pulse in eighths on the root, GERG'S BUILD on
+    the chip in straight sixteenths (moved diatonically, its contour kept), the 808 joining a layer a shot (the kick,
+    then the hats, then the clap), a felt stab on every cut.  NOLE'S "scary good" is THE FLICKER: the drums and the
+    Build drop out, the pulse sits on F and the glass holds the Ache (G4 + D-flat5) for the shot, then it all comes back
+    (the bible's first dread leak).  "how do i say sorry to my sister" gets the felt's F4 on top (3 AM's one note,
+    planted); "7 x 8 = 54" gets the Build's high note sagging a semitone (the wince).  On the pull back to the desk of
+    lit phones (10.08) it stops on the cut with one hit that rings into his phone's siren whoop."""
+    bs = [b for b in tl.beats if b['id'].startswith('v35-10.')]
+    if not bs:
+        return None
+    t0 = bs[0]['t0']
+    stop = bs[-1]['t0']                                          # 10.08: the pull back; his phone lights red
+    whoop = whine_t(tl)
+    c = V.Cue('first_weeks', tl, anchor=t0, anchor_bar=2, bars=12, swing=0.0)
+    T = tracks_fw()
+    shots = [b for b in bs if b['id'] in FW]
+    for j, b in enumerate(shots):
+        name, felt, root, k808p, deg = FW[b['id']]
+        a, e = b['t0'], b['t1']
+        n_beats = int(round((e - a) / FWB))
+        layer = j                                                # 0 the essay ... 6 the top
+        flicker = deg is None
+        # the cut: a felt stab (Mas watching the world use it), the 808 sub on the root
+        if felt:
+            top = ['F4'] if b['id'] == 'v35-10.05' else []
+            c.ch('felt', felt + top, a + 0.004, min(1.6, e - a - 0.05) if b['id'] != 'v35-10.05' else e - a - 0.05,
+                 0.2 if b['id'] != 'v35-10.05' else 0.22, roll=0.008)
+        c.n('k808', k808p, a, 0.5, 0.62 if not flicker else 0.4, True, decay=0.5 if not flicker else 0.9)
+        c.mark(a, f'DESIGNED HIT: the first weeks: the cut to {b["id"]} on the pulse ({name})')
+        for i in range(n_beats * 2):                             # the triangle pulse, eighths on the root
+            t = a + i * FWB / 2
+            if t >= e - 0.01:
+                break
+            v = (0.3 if i % 2 == 0 else 0.24) * (0.75 if flicker else 1.0)
+            c.n('tri', root, t, FWB / 2 * 0.7, v, True, att=0.003, dec=0.08, sus=0.6, rel=0.03)
+        if flicker:
+            # NOLE: the flicker.  The Ache inside the warm cue for one shot, then it leaves
+            c.ch('glasspad', ['G4', 'Db5'], a + 0.05, e - a - 0.1, 0.24, roll=0.0, rel=0.4)
+            c.n('sub', 'F1', a, e - a - 0.2, 0.3, True, punch=0.0, click=0.0, decay=1.2)
+            c.mark(a + 0.05, 'THE FLICKER: Nole\'s "scary good": the drums and the Build drop out; the Ache on glass '
+                             'over F for the shot', hit=False)
+            c.section(f'the first weeks: {b["id"]} (the flicker: the Ache over F)', a, e)
+            continue
+        # the 808, a layer a shot: the kick on the beats (from the 2nd shot), hats in sixteenths (from the 3rd),
+        # the clap on the backbeat (from the 5th)
+        for i in range(n_beats):
+            t = a + i * FWB
+            if layer >= 1 and i > 0:
+                c.n('k808', k808p, t, 0.4, 0.5 + 0.02 * layer, True, decay=0.4)
+            if layer >= 3 and i % 2 == 1:
+                c.n('clap808', 60, t, 0.1, 0.42 + 0.03 * layer, True)
+            if layer >= 2:
+                for q in range(4):
+                    c.n('h808', 60, t + q * FWB / 4, 0.04, (0.46 if q == 0 else 0.3 if q == 2 else 0.2), True,
+                        **({'open': True} if (layer >= 5 and q == 2) else {}))
+        # GERG'S BUILD on the chip: straight sixteenths from the cut (moved inside A-flat major)
+        ps = build_on(deg)
+        n16 = int(round((e - a) / (FWB / 4)))
+        for i in range(n16):
+            t = a + i * FWB / 4
+            if t >= e - 0.02:
+                break
+            p = ps[i % 16]
+            x = dict(duty=0.25 if layer < 4 else 0.5, att=0.002, dec=0.08, sus=0.4, rel=0.03)
+            if b['id'] == 'v35-10.06' and i == 4:
+                x['bend'] = [(0.0, 0.0), (0.05, -1.0)]            # 7 x 8 = 54: the high note sags (the wince)
+                c.mark(t, 'the wince: "7 x 8 = 54": the Build\'s high note sags a semitone', hit=False)
+            c.n('lead', p, t, FWB / 4 * 0.62, (0.28 + 0.015 * layer) * ACC4[i % 4], True, **x)
+            if layer >= 6 and i % 2 == 0:
+                c.n('lead2', p + 12, t, FWB / 4 * 0.5, 0.2 * ACC4[i % 4], True, duty=0.125, att=0.002, dec=0.06,
+                    sus=0.3, rel=0.03)
+        # the hybrid strings: spiccato sixteenths on the root from the 5th shot, the violins' held top from the 6th
+        if layer >= 4:
+            V.pulse(c, 'vc_s', lambda t, r=root: nm(r) + (12 if nm(r) < nm('G2') else 0), a, e - 0.01, FWB / 4, 0.26,
+                    art='spic')
+        if layer >= 5:
+            top = {'Eb13sus': 'Db5', 'Abmaj9': 'Eb5'}.get(name, 'C5')
+            c.n('vln1', top, a + 0.01, e - a - 0.05, 0.3, art='sus', att=0.05, rel=0.2)
+            c.n('vln2', nm(top) - 12, a + 0.01, e - a - 0.05, 0.27, art='sus', att=0.05, rel=0.2)
+        c.section(f'the first weeks: {b["id"]} ({name})', a, e)
+    # 10.08: the pull back to the desk of lit phones; his own lights red: the drive stops on the cut, one hit rings
+    c.ch('felt', ['Ab2', 'Eb3', 'C4', 'G4'], stop + 0.004, whoop - stop + 0.6, 0.22, roll=0.01)
+    c.n('k808', 'Ab1', stop, 0.6, 0.6, True, decay=0.7)
+    c.n('sub', 'Ab1', stop, whoop - stop, 0.34, True, punch=0.0, click=0.0, decay=1.4)
+    c.n('lead', 'Ab5', stop, 0.3, 0.3, True, duty=0.25, att=0.002, dec=0.15, sus=0.2, rel=0.1)
+    c.mark(stop, 'DESIGNED HIT: 10.08, the pull back: the drive stops on the cut; one hit rings into his phone\'s '
+                 'siren whoop (code red takes over there)')
+    c.section('10.08: the stop, the ring into the whoop', stop, whoop + 0.3)
+    meta = dict(
+        id='first_weeks', title='The First Weeks (Ep1 v3.5, Act One sc 10)', mm='(to picture)', usage='BI',
+        family='P11 energy in the show\'s chip-and-808 colour (the Build, the triangle pulse, the 808, spiccato)',
+        tone='a rising, fun pulse: our Facemash night; one flicker on Nole', scenes=['Ep1 v3.5 Act One sc 10'],
+        motifs=["Gerg's Build (moved inside A-flat major)", 'the Ache (G4 + D-flat5 over F, the flicker)',
+                'the felt F4 on "sorry to my sister" (3 AM\'s one note, planted)'], motif_ids=[],
+        key='A-flat major rising a shot at a time (Ab, Bbm, Cm, [F + the Ache], Db, Eb, Ab); no A anywhere',
+        composer='v3.5 composer (the final pass), from composer X\'s cue A, 2026-09-28', underscore_lufs=-19.0,
+        album_lufs=-16.0,
+        audition=['fun and rising, never EDM or "upbeat corporate": the chip Build and the felt keep it ours',
+                  'the flicker on Nole: the Ache for one shot, a chill inside the fun', 'every cut on the pulse',
+                  'the stop on the pull back: the hit rings into the siren'])
+    sc = c.finish(T, meta, length_end=whoop + 0.5, end_fade=(whoop - 0.4, whoop + 0.45))
+    return c, sc
+
+
+# ---------------------------------------------------------------- 3 AM + JUN 2018 (one cue: the felt note becomes the dream)
+DREAM = {   # the dream's felt voicings (D-flat lydian home, the Water Line's warm colours; no A anywhere)
+    'Dbmaj9#11': ['Db3', 'Ab3', 'C4', 'F4'],
+    'Ab/C':      ['C3', 'G3', 'Eb4'],
+    'Bbm9':      ['Db3', 'F3', 'C4'],
+    'Gbmaj9#11': ['Gb2', 'Db3', 'F3', 'C4'],
+}
+DREAM_LOOP = ['Dbmaj9#11', 'Ab/C', 'Bbm9', 'Gbmaj9#11']
+DREAM_ROOT = {'Dbmaj9#11': 'Db3', 'Ab/C': 'C3', 'Bbm9': 'Bb2', 'Gbmaj9#11': 'Gb2'}
+
+
+def cue_dream(tl):
+    """3 AM (sc 12) and THE NIGHT THE MACHINE TAUGHT ITSELF, JUN 2018 (sc 13), one cue.
+    3 AM: no score under the at-capacity page and the first read (the fans; the phone's lock stopped code red dead);
+    on his SECOND READ (12.02) ONE FELT NOTE, the F4 the first weeks planted on "sorry to my sister", held under "they've
+    stopped testing it. they're using it." with nothing attacking: the act's one moved moment.  A sul-tasto viola F3
+    takes the note's air after the V.O.  On the glowing line (12.03's counter: 180 YEARS) the render front upgrades
+    the same note into the dream: D-flat maj9(#11) blooms around the F, the celesta draws the line.
+    JUN 2018, warm awe, in the intro's post-2015 fidelity (T3: acoustic, with the chip; no tape, no bitcrush): his felt
+    (his own flashback) a chord a bar through D-flat lydian (Dbmaj9#11, Ab/C, Bbm9, Gbmaj9#11), THE WATER LINE's head
+    on the wall of monitors, GERG'S BUILD soft on the chip in the gaps (Gerg coding in the background), a sul-tasto
+    string pedal; the felt alone under Mas's lines.  After Alyi's "What else would you build?", THE DOOR'S head (his
+    motif, A-flat D-flat | C G) in the gap, ending on its #4, held: no answer.  The side project ("the cat sat on the
+    the mat of the"): the chip's flat line F F F, the launch click's rhyme (the knee: nothing happens yet).  Out on the
+    sweep: the celesta draws the line back down, and the chord rings under the revolving door into the lobby's bass.
+    ATOD's arena plays in it as its own diegetic cue (`arena`, through the monitors)."""
+    if not (tl.has('v35-12.02') and tl.has('v35-13.01')):
+        return None
+    two = tl.B('v35-12.02')
+    glow_t = tl.B('v35-12.03') + tl.os_at('v35-12.03', 'PLAYED', default=tl.B('v35-12.03') + 0.3) - tl.B('v35-12.03')
+    wall = tl.B('v35-13.01')
+    q_b = tl.B('v35-13.04')
+    side = tl.B('v35-13.05')
+    sweep = tl.B('v35-13.06')
+    door = (tl.snd_any('revolving_door', sweep, tl.B('9.01') + 0.01) or [sweep + 1.0])[0]
+    out = tl.B('9.01') + 0.45                                     # (the lobby's bass walks in just after)
+    c = V.Cue('dream', tl, anchor=wall, anchor_bar=5, bars=int((out - wall) / BAR) + 7, swing=0.0)
+    T = palette()
+    T['felt'].gain_db, T['felt'].sends = -1.0, {'room': -12, 'hall': -16}
+    T['lead'].gain_db, T['lead'].sends = -9.0, {'room': -14, 'snes': -16}
+    T['lead'].eq = [('hp', 220), ('lp', 5200)]
+    T['celesta'].gain_db, T['celesta'].sends = -9.0, {'hall': -8}
+    for k in ('vla', 'vc'):
+        T[k].gain_db, T[k].sends = -4.0, {'hall': -10, 'room': -16}
+    T['vc'].eq = list(T['vc'].eq) + [V.PIZZ_NOTCH]
+    T['vln2'].gain_db, T['vln2'].sends = -8.0, {'hall': -9}
+
+    def fch(ps, t, d, v, roll=0.018, span_end=None):
+        return c.pch('felt', ps, t, d, v, roll=roll, span_end=span_end)
+
+    # ---- 3 AM: the one felt note on the second read
+    vo = tl.lines_in(two, tl.E('v35-12.02'), kinds={'vo'})
+    tq = two + 0.12
+    if vo and vo[0]['on'] - 0.3 < tq:
+        tq = max(two + 0.02, vo[0]['on'] - 0.3)
+    fch(['F4'], tq, glow_t - tq + 0.2, 0.2, roll=0.0)
+    c.mark(tq, 'DESIGNED HIT: 3 AM, his second read: ONE FELT NOTE (F4, the note the first weeks planted), held; the '
+               'V.O. sits inside it (the act\'s one moved moment)')
+    va = (vo[0]['end'] + 0.15) if vo else tq + 3.0
+    c.rebow('vla', 'F3', va, wall + 1.5, 0.12, first_att=1.2, last_rel=1.0, art='sus', lp=1300)
+    c.section('3 AM: one felt note on the second read (the V.O. inside it)', tq, glow_t)
+    # ---- the glowing line: the render front upgrades the same note into the dream
+    fch(DREAM['Dbmaj9#11'], glow_t, wall - glow_t + BAR - 0.1, 0.15, roll=0.03)
+    for k, p in enumerate(['Db5', 'F5', 'Ab5', 'C6', 'G6']):
+        c.n('celesta', p, glow_t + 0.05 + k * S16, 0.9, 0.2 + 0.02 * k)
+    c.mark(glow_t, 'the glowing line: 180 YEARS: the same F becomes D-flat maj9(#11), the celesta draws the line')
+    # ---- JUN 2018: a chord a bar (the felt, softly), the string pedal on the root
+    ask = [l for l in tl.lines_in(q_b, side) if l['who'] == 'alyi']
+    d0 = (ask[-1]['end'] + 0.08) if ask else q_b + 4.0
+    b_wall = int(round(c.bar_of(wall)))
+    b_end = int(math.ceil(c.bar_of(door)))
+    for b in range(b_wall, b_end):
+        name = DREAM_LOOP[(b - b_wall) % 4]
+        t = c.bar(b)
+        if t >= d0 - 1.0:                                         # from the question on, the Door's chord holds
+            break
+        tt = t
+        if tl.talking(t, t + 0.05, pad=0.08, kinds={'mas', 'vo'}):
+            ends = [l['end'] for l in tl.lines_in(t, t + 0.05, 0.08, kinds={'mas', 'vo'})]
+            tt = max(ends) + 0.08
+            if tt > t + 1.2:
+                continue                                          # (the chord before holds through his line)
+        if b > b_wall:
+            fch(DREAM[name], tt, c.bar(b + 1) - tt + 0.3, 0.14)
+        c.rebow('vc', DREAM_ROOT[name], t - 0.05, c.bar(b + 1) + 0.1, 0.13, first_att=0.5, last_rel=0.5, art='sus',
+                lp=1100)
+        c.mark(t, f'2018: {name} (the felt, the string pedal)', hit=False)
+    # THE WATER LINE's head on the wall of monitors (before the first line)
+    first_line = min([l['on'] for l in tl.lines_in(wall, sweep)] + [wall + 3.0])
+    if first_line - wall >= 2.2:
+        V.phrase(c, 'felt', wall + 0.02, 'F4/4 F4/4 F4/4 G4/8 F4/8 C4/4 F4/4', 0.2, stop_at=first_line - 0.1)
+        c.mark(wall + 0.02, 'JUN 2018: THE WATER LINE\'s head on the felt, on the wall of monitors (wonder)')
+    # GERG'S BUILD, soft, on the chip in the gaps (he codes in the background)
+    passes = place_passes(c, wall + BAR, q_b - 0.2, vel=0.22, spacing=5.5)
+    for t0_, cnt, v in passes:
+        for i in range(cnt):
+            t = t0_ + i * S16
+            c.n('lead', cell()[i % 16], t, S16 * 0.62, v * ACC4[i % 4], True, duty=0.25, att=0.002, dec=0.09,
+                sus=0.45, rel=0.035)
+        c.mark(t0_, f'2018: the Build ({cnt}), soft (Gerg coding)')
+    # THE DOOR after "What else would you build?": its head, ending on the #4, held (no answer)
+    fch(DREAM['Dbmaj9#11'][:3], d0, door - d0 + 0.6, 0.13, span_end=door + 0.5)
+    c.rebow('vc', 'Db3', d0 - 0.1, door + 0.6, 0.12, first_att=0.8, last_rel=0.8, art='sus', lp=1100)
+    for p, dt, dd, vv in (('Ab4', 0.0, 0.45, 0.21), ('Db5', 0.42, 0.5, 0.2), ('C5', 0.9, 0.4, 0.18),
+                          ('G4', 1.3, door - d0 - 1.3 + 0.4, 0.18)):
+        c.n('felt', p, d0 + dt, dd, vv)
+    c.mark(d0, 'THE DOOR after "What else would you build?": A-flat D-flat | C G, ending on its #4, held: no answer')
+    c.rebow('vln2', 'Ab4', d0 + 0.3, door + 0.4, 0.1, first_att=1.5, last_rel=0.8, art='sus', lp=3000)
+    # the side project: the chip's flat line (F F F), the launch click's rhyme
+    fl0 = c.next_beat(side + 0.25)
+    for k, (p, duty, v) in enumerate((('F4', 0.5, 0.2), ('F5', 0.25, 0.16), ('F4', 0.125, 0.18))):
+        tt = fl0 + k * Q
+        if tt < sweep and not tl.talking(tt, tt + 0.3, kinds={'mas', 'vo', 'real'}):
+            c.n('lead', p, tt, Q * 0.5, v, True, duty=duty, att=0.003, dec=0.15, sus=0.3, rel=0.06)
+    c.mark(fl0, 'the side project ("the cat sat on the the mat of the"): the chip\'s flat line F F F (the launch '
+                'click\'s rhyme; the knee: nothing happens yet)')
+    # out on the sweep: the celesta draws the line back down; the chord rings under the door
+    for k, p in enumerate(['C6', 'Ab5', 'F5', 'Db5']):
+        c.n('celesta', p, sweep + 0.05 + k * S16, 0.7, 0.2 - 0.02 * k)
+    c.mark(sweep + 0.05, 'the sweep back: the celesta draws the line down; the chord rings under the revolving door',
+           hit=False)
+    V.thin(c, {'vo': dict(drop={'lead', 'celesta'}), 'mas': dict(drop={'lead', 'celesta'}),
+               'talk': dict(soften={'lead': 0.7, 'celesta': 0.7}), 'real': dict(drop={'lead', 'celesta'})},
+           t0=wall - 0.01)
+    c.section('the glowing line: 180 YEARS', glow_t, wall)
+    c.section('JUN 2018: the dream (the felt, the Water Line, the Build soft)', wall, d0)
+    c.section('the Door, unanswered; the side project; the sweep back', d0, out)
+    meta = dict(
+        id='dream', title='3 AM / The Night the Machine Taught Itself (Ep1 v3.5, Act One sc 12-13)', mm='(to picture)',
+        usage='BI', family='P01 his felt; the Water Line warm (D-flat lydian); the Build soft; post-2015 BASE fidelity',
+        tone='3 AM: quiet, one moved note; JUN 2018: warm awe, the dream', scenes=['Ep1 v3.5 Act One sc 12-13'],
+        motifs=['the felt F4 (3 AM)', 'the Water Line\'s head', "Gerg's Build (soft)", 'the Door (unanswered, on its #4)',
+                'the knee\'s flat line (the side project)'], motif_ids=[],
+        key='D-flat lydian (Dbmaj9#11, Ab/C, Bbm9, Gbmaj9#11); no third over F, no A', underscore_lufs=-22.0,
+        album_lufs=-16.0, composer='v3.5 composer (the final pass), 2026-09-28',
+        audition=['3 AM: one felt note, not a cue: moved, never sad-piano', 'the bloom on the glowing line: the same '
+                  'note becoming the dream', '2018: wonder and warmth under the talk, the arena tinny inside it',
+                  'the Door on its #4 after "What else would you build?": the question left open'])
+    sc = c.finish(T, meta, length_end=out + 0.4, end_fade=(tl.B('9.01') - 0.5, out + 0.35))
+    return c, sc
+
+
+ARENA_BASS = ['F2', 'F2', 'Db2', 'Eb2']
+ARENA_OST = ['F4', 'C5', 'Ab4', 'C5', 'F4', 'C5', 'Ab4', 'C5', 'Db4', 'Ab4', 'F4', 'Ab4', 'Eb4', 'Bb4', 'G4', 'Bb4']
+
+
+def cue_arena(tl):
+    """ATOD's ARENA: the game's own music on the wall of monitors (diegetic, laid through era.futz('tv'), low): a small
+    heroic loop in F minor (a string ostinato, a horn call, a snare roll), bots playing bots all night.  Inside the
+    dream's D-flat lydian (F minor sits in it); softer under the talk; it leaves on the cut to the lone desk."""
+    if not (tl.has('v35-13.01') and tl.has('v35-13.05')):
+        return None
+    a, e = tl.B('v35-13.01'), tl.B('v35-13.05')
+    c = V.Cue('arena', tl, anchor=a, anchor_bar=1, bars=int((e - a) / BAR) + 3, swing=0.0)
+    T = palette()
+    for k in ('vln1', 'vln2', 'vc'):
+        T[k].sends = {'hall': -14}
+        T[k].eq = list(T[k].eq) + [('peq', 440.0, -14.0, 5.0), ('peq', 880.0, -8.0, 5.0), ('peq', 1760.0, -6.0, 4.0)]
+    T['vc'].eq = list(T['vc'].eq) + [V.PIZZ_NOTCH]      # (render 1: the spiccato's resonance read as an A over F)
+    T['hn'].gain_db = -4.0
+    T['snare'].gain_db = -10.0
+    T['timp'].gain_db = -8.0
+    T['timp'].eq = list(T['timp'].eq) + [V.PIZZ_NOTCH]  # (render 2: the timpani F2's ~111 Hz ring, an A2, 0.082 sieved)
+    b = 1
+    while c.bar(b) < e + 0.3:
+        t0 = c.bar(b)
+        busy = tl.talking(t0, t0 + BAR, pad=0.1)
+        f = 0.6 if busy else 1.0
+        for i in range(16):
+            c.n('vln1', ARENA_OST[i], t0 + i * S16, S16 * 0.8, 0.3 * f, art='spic')
+        for k in range(4):
+            c.n('vc', ARENA_BASS[(b - 1) % 4] if k == 0 else 'F2', t0 + k * Q, Q * 0.8, 0.34 * f, art='spic')
+        c.n('timp', 'F2', t0, 0.5, 0.3 * f)
+        if b % 2 == 1 and not busy:
+            V.phrase(c, 'hn', t0 + 2 * Q, 'C4/8 F4/8 Ab4/4', 0.34, art='sus', rel=0.2)
+        for k in range(6):
+            c.n('snare', 38, t0 + 3 * Q + k * Q / 6, 0.05, (0.16 + 0.03 * k) * f)
+        b += 1
+    c.mark(a, 'ATOD\'s arena on the wall of monitors (diegetic, through the TVs)', hit=False)
+    c.section('ATOD\'s arena (diegetic)', a, e)
+    meta = dict(id='arena', title='ATOD\'s Arena (Ep1 v3.5, sc 13; diegetic, the monitors)', mm='(source)', usage='VI',
+                family='source: a game\'s loop, through the monitors', diegetic=True, tone='tinny, heroic, endless',
+                scenes=['Ep1 v3.5 Act One sc 13'], motifs=[], motif_ids=[], key='F minor (no A)',
+                composer='v3.5 composer (the final pass), 2026-09-28', underscore_lufs=-20.0, album_lufs=-16.0,
+                audition=['a game\'s loop on small speakers, far back: the room, not the score'])
+    sc = c.finish(T, meta, length_end=e + 0.6, end_fade=(e - 0.3, e + 0.55))
+    return c, sc
+
+
+# ---------------------------------------------------------------- THE WINDOW + THE VISION POST (one cue)
+def cue_window(tl):
+    """THE WINDOW (sc 18) and THE VISION POST (sc 19), one cue.
+    THE WINDOW, joy at the team's peak, a small warm accent (not the trio): Gerg's marker takes the users line off the
+    top of the glass on GERG'S BUILD in its A-flat major (launch night's M1 colour), one pass climbing an octave into
+    its last notes, over the felt's A-flat maj9 and a soft triangle pulse; thin under "Still a preview?" / "still a
+    preview."; on the four of them laughing, the Build's tag "shipped" (E-flat5 -> A-flat5) and the felt's A-flat
+    again.  THE LAMP: the others go home: one felt note (F4) under the lamp.
+    THE VISION POST, quiet ambition: one held felt line over a sul-tasto D-flat pedal, a note for each thing he writes
+    (the lamp's F4, A-flat4 on the title, C5, B-flat4, D-flat5 on the passages; the Ache on glass for "hopeful, and
+    scary"), held under "someone gets to be in the room." (nothing attacks); on PUBLISH the line steps to E-flat5 and
+    the chip's Build line takes it up to A-flat (his click ships it), ringing through the rival's refresh and the lid
+    into the match cut (the Atem sting and the duel's boot)."""
+    if not (tl.has('v35-18.01') and tl.has('v35-19.04')):
+        return None
+    w0 = tl.B('v35-18.01')
+    marker = (tl.snd_any('marker_write_q', w0, w0 + 2.0) or [w0 + 0.3])[0]
+    ex = tl.B('v35-18.02')
+    lamp = tl.B('v35-18.03')
+    p0 = tl.B('v35-19.01')
+    title = p0 + tl.os_at('v35-19.01', 'Planning', default=p0 + 0.8) - p0
+    pas = sorted(o['t'] for o in tl.onscreen if o['beat'] == 'v35-19.02' and not o['text'].startswith('RAIL'))
+    face = tl.B('v35-19.03')
+    pub_b = tl.B('v35-19.04')
+    publish = pub_b + 0.5                           # the Publish click (no sound in the lock; 0.5 s in, before the feed)
+    cut = tl.E('v35-19.04')
+    c = V.Cue('window', tl, anchor=marker, anchor_bar=2, bars=int((cut - marker) / BAR) + 5, swing=0.0)
+    T = palette()
+    T['felt'].gain_db, T['felt'].sends = -1.0, {'room': -12, 'hall': -16}
+    T['lead'].gain_db, T['lead'].sends = -6.0, {'room': -14, 'snes': -16}
+    T['lead'].eq = [('hp', 220), ('lp', 5200)]
+    T['tri'].gain_db, T['tri'].eq = -7.0, [('lp', 900), ('hp', 45)]
+    T['sub'].gain_db = -12.0
+    for k in ('vla', 'vc'):
+        T[k].gain_db, T[k].sends = -4.0, {'hall': -10, 'room': -16}
+    T['vc'].eq = list(T['vc'].eq) + [V.PIZZ_NOTCH]
+    T['glasspad'].gain_db = -12.0
+
+    def fch(ps, t, d, v, roll=0.016, span_end=None):
+        return c.pch('felt', ps, t, d, v, roll=roll, span_end=span_end)
+
+    # ---- THE WINDOW: the marker's pass (the Build in A-flat major, climbing off the top of the glass)
+    fch(['Ab2', 'Eb3', 'C4', 'G4'], w0 - 0.06, ex - w0 + 0.4, 0.17, roll=0.012)    # (leads the cut from Sydney)
+    c.n('sub', 'Ab1', marker, 1.2, 0.3, True, punch=0.0, click=0.0, decay=1.0)
+    ps = cell()
+    for i in range(16):
+        t = marker + i * S16
+        p = ps[i % 16] + (12 if i >= 12 else 0)
+        c.n('lead', p, t, S16 * 0.66, 0.32 * ACC4[i % 4], True, duty=0.5, att=0.002, dec=0.1, sus=0.5, rel=0.05)
+    c.mark(marker, 'DESIGNED HIT: THE WINDOW: Gerg\'s marker takes the line off the top of the glass: the Build\'s pass '
+                   'in its A-flat major, climbing (the team\'s peak)')
+    t = marker + 16 * S16
+    while t < ex - 0.1:
+        if not tl.talking(t, t + 0.05, pad=0.08):
+            c.n('tri', 'Ab2', t, Q / 2 * 0.7, 0.22, True, att=0.004, dec=0.1, sus=0.5, rel=0.04)
+        t += Q / 2
+    ls = tl.lines_in(ex, lamp)
+    laugh = (max(l['end'] for l in ls) + 0.12) if ls else ex + 3.0
+    tb_ = c.next_bar(marker + 16 * S16)
+    fch(['Db3', 'Ab3', 'C4', 'F4'], tb_, laugh - tb_ + 0.1, 0.15, span_end=laugh - 0.02)   # held under the exchange
+    c.rebow('vla', 'Ab3', ex - 0.4, laugh + 0.6, 0.1, first_att=1.0, last_rel=0.6, art='sus', lp=1300)
+    if laugh < lamp - 0.6:
+        fch(['Ab2', 'Eb3', 'C4', 'G4'], laugh, lamp - laugh + 0.3, 0.19)
+        c.n('lead', 'Eb5', laugh + 0.02, S16 * 1.6, 0.3, True, duty=0.5, att=0.002, dec=0.12, sus=0.3, rel=0.05)
+        c.n('lead', 'Ab5', laugh + 0.02 + Q / 2, 0.55, 0.32, True, duty=0.5, att=0.002, dec=0.2, sus=0.35, rel=0.12)
+        c.mark(laugh, 'the four of them laugh: the Build\'s tag "shipped" (E-flat5 -> A-flat5), the felt\'s A-flat '
+                      'again (the height)')
+    c.section('THE WINDOW: the Build in A-flat major, the team\'s peak', marker, lamp)
+    # ---- THE LAMP: one felt note
+    fch(['F4'], lamp + 0.1, title - lamp + 0.3, 0.18, roll=0.0)
+    c.mark(lamp + 0.1, 'the lamp: the others go home; one felt note (F4)')
+    # ---- THE VISION POST: the held felt line over a sul-tasto D-flat pedal
+    c.rebow('vc', 'Db3', p0 - 0.3, cut + 0.3, 0.12, first_att=1.5, last_rel=0.8, art='sus', lp=1100)
+    c.rebow('vla', 'Ab3', p0 + 0.5, cut + 0.3, 0.1, first_att=1.8, last_rel=0.8, art='sus', lp=1300)
+    steps = [(title, 'Ab4', ['Db3', 'F3', 'C4'])]
+    for t_, p_, ch_ in zip(pas, ('C5', 'Bb4', 'Db5'), (['Ab2', 'Eb3', 'G3'], ['Gb2', 'Db3', 'F3'], ['Bb2', 'F3', 'Ab3'])):
+        steps.append((t_, p_, ch_))
+    for k, (t_, p_, ch_) in enumerate(steps):
+        t_end = steps[k + 1][0] if k + 1 < len(steps) else publish
+        tt = t_ + 0.05
+        if tl.talking(tt, tt + 0.05, kinds={'vo', 'mas'}):
+            continue
+        fch(ch_ + [p_], tt, t_end - tt + 0.25, 0.14, span_end=t_end + 0.05)
+        c.mark(tt, f'the vision post: the held line steps to {p_}', hit=False)
+    if len(pas) >= 3:                                            # "hopeful, and scary": the Ache for a bar
+        c.ch('glasspad', ['G4', 'Db5'], pas[2] + 1.2, BAR, 0.2, roll=0.0, rel=0.8)
+        c.mark(pas[2] + 1.2, 'the vision post: "hopeful, and scary": the Ache on glass for a bar', hit=False)
+    vo = tl.lines_in(face, pub_b, kinds={'vo'})
+    for l in vo:
+        c.mark(l['on'], f'the V.O. ({l["id"]}) sits in the held D-flat5: nothing attacks', hit=False)
+    # PUBLISH: the line steps to E-flat5; the chip's Build line takes it to A-flat (his click ships it)
+    fch(['Ab2', 'Eb3', 'C4', 'Eb4'], publish, cut - publish + 0.2, 0.15, span_end=cut + 0.1)
+    for i, p in enumerate(['Eb5', 'C5', 'Bb4', 'Ab4', 'Ab4', 'Bb4', 'C5', 'Eb5']):
+        c.n('lead', p, publish + i * S16, S16 * 0.62, 0.24 * ACC4[i % 4], True, duty=0.25, att=0.002, dec=0.09,
+            sus=0.45, rel=0.035)
+    c.n('lead', 'Ab5', publish + 8 * S16, 0.6, 0.24, True, duty=0.25, att=0.002, dec=0.2, sus=0.3, rel=0.12)
+    c.mark(publish, 'PUBLISH (0.5 s into 19.04; the lock has no click): the line steps to E-flat5, the chip\'s Build '
+                    'line takes it up to A-flat (his click ships it); it rings through the refresh and the lid')
+    V.thin(c, {'vo': dict(drop={'lead', 'tri', 'celesta'}), 'mas': dict(drop={'lead', 'tri'}),
+               'talk': dict(soften={'lead': 0.75, 'tri': 0.8})}, t0=marker + 16 * S16)
+    c.section('the lamp: one felt note', lamp, p0)
+    c.section('THE VISION POST: the held felt line (quiet ambition)', p0, publish)
+    c.section('Publish: the Build\'s line, ringing into the match cut', publish, cut)
+    macro = [(marker - 0.5, 1.5), (lamp, 1.5), (lamp + 1.0, 0.0), (cut + 1.0, 0.0)]
+    meta = dict(
+        id='window', title='The Window / The Vision Post (Ep1 v3.5, Act One sc 18-19)', mm='(to picture)', usage='BI',
+        family='the Build in A-flat major (M1\'s colour) -> his felt, a held line over a sul-tasto pedal',
+        tone='the window: joy at the team\'s peak, a small warm accent; the post: quiet ambition',
+        scenes=['Ep1 v3.5 Act One sc 18-19'],
+        motifs=["Gerg's Build (A-flat major) and its tag \"shipped\"", 'the felt F4 (the lamp)', 'a held felt line',
+                'the Ache (once, "scary")'], motif_ids=[], key='A-flat major; D-flat lydian over a D-flat pedal',
+        composer='v3.5 composer (the final pass), 2026-09-28', underscore_lufs=-21.0, album_lufs=-16.0,
+        audition=['the window: warm, the team\'s height, never a trio or a sitcom button',
+                  'the post: quiet ambition, one line held, not a hymn', 'Publish: the chip takes it up'])
+    sc = c.finish(T, meta, length_end=cut + 0.5, macro=macro, end_fade=(cut - 1.0, cut + 0.45))
+    return c, sc
+
+
+# ---------------------------------------------------------------- THE WAITLIST (a smug little sting)
+def cue_waitlist(tl):
+    """ELGOOG'S WAITLIST (sc 22): a smug little sting on the rope's snap: the Build's tag "shipped" (E-flat5 ->
+    A-flat5) on the chip, a pizz A-flat under it, the felt's A-flat maj9 (they're ahead); it rings out under the pause
+    letter's toast and gives way on the push (MM-17's C comes in there)"""
+    snap = waitlist_snap(tl)
+    if snap is None:
+        return None
+    push = tl.snd('12.01', 'paper_whip', default=tl.B('12.01') + 2.0)
+    c = V.Cue('waitlist', tl, anchor=snap, anchor_bar=2, bars=5, swing=0.0)
+    T = palette()
+    T['lead'].gain_db, T['lead'].sends = -5.0, {'room': -14, 'snes': -16}
+    T['lead'].eq = [('hp', 220), ('lp', 5200)]
+    T['felt'].gain_db, T['felt'].sends = -2.0, {'room': -12, 'hall': -18}
+    dup(T, 'vc', 'vc_pz', gain_db=-2.0)
+    T['vc_pz'].eq = list(T['vc_pz'].eq) + [V.PIZZ_NOTCH]
+    T['vla'].gain_db = -6.0
+    c.n('lead', 'Eb5', snap, S16 * 1.6, 0.34, True, duty=0.25, att=0.002, dec=0.12, sus=0.3, rel=0.05)
+    c.n('lead', 'Ab5', snap + Q / 2, 0.5, 0.34, True, duty=0.25, att=0.002, dec=0.2, sus=0.35, rel=0.12)
+    c.n('vc_pz', 'Ab2', snap, 0.4, 0.5, art='pizz')
+    c.n('vc_pz', 'Eb3', snap + Q / 2, 0.4, 0.42, art='pizz')
+    c.pch('felt', ['Ab2', 'Eb3', 'C4', 'G4'], snap + Q / 2 + 0.01, push - snap - Q / 2, 0.16, roll=0.012)
+    c.rebow('vla', 'Eb3', snap + 0.4, push + 0.2, 0.1, first_att=1.0, last_rel=0.4, art='sus', lp=1300)
+    c.mark(snap, 'THE WAITLIST: the rope snaps: the Build\'s tag "shipped" on the chip, a pizz A-flat (a smug sting)')
+    c.mark(tl.B('12.01'), 'the sting rings out under the pause letter\'s toast', hit=False)
+    c.section('the waitlist: the smug sting, ringing under the toast', snap, push)
+    meta = dict(id='waitlist', title='Elgoog\'s Waitlist (Ep1 v3.5, Act One sc 22)', mm='(sting)', usage='BI',
+                family='the Build\'s tag, a pizz, the felt', tone='a smug little laugh: they\'re ahead',
+                scenes=['Ep1 v3.5 Act One sc 22'], motifs=['the Build\'s tag "shipped" (E-flat5 -> A-flat5)'],
+                motif_ids=[], key='A-flat major', composer='v3.5 composer (the final pass), 2026-09-28',
+                underscore_lufs=-21.0, album_lufs=-16.0, audition=['smug and small: never a rimshot'])
+    sc = c.finish(T, meta, length_end=push + 0.4, end_fade=(push - 0.8, push + 0.35))
+    return c, sc
+
+
+CUES_V35 = {'first_weeks': cue_first_weeks, 'dream': cue_dream, 'arena': cue_arena, 'window': cue_window,
+            'waitlist': cue_waitlist}                 # built only when the lock has their beats
+
+
 CUES_V31 = {'sydney': cue_sydney, 'atem': cue_atem}      # built only when the lock has their beats
 
 
@@ -1535,8 +2080,29 @@ def lay(tl, built, work):
     phone = lambda x: futz(x, 'phone')                                          # noqa: E731
     sy_in = sydney_beats(tl)[0]['t0'] if 'sydney' in built else None
     lob_in = [t for t, lab, h in lob.marks if lab.startswith('the bass walks in')][0] - 0.05   # its first note
+    v35 = 'first_weeks' in built
+    a_end = (call_out(tl) + 0.7) if v35 else max(tear + 2.6, t_cr + 0.7)
+    a_post = {}
+    if v35:
+        # v3.5: the odometer (featured) read p95 -14.6 on the v3.5 render (the lift is a bar longer): a -1.2 dB fader
+        # ride on it at the lay, from the wait to the hit on the cut to Rima (0.3 s ramps), to the -16 featured guide
+        import numpy as np
+        w0_ = [t for t, lab, h in cA.marks if lab.startswith('A4 THE')][0]
+        w1_ = [t for t, lab, h in cA.marks if lab.startswith('the band hit on the cut to Rima')][0] + 0.4
+
+        def ride(x, a_=w0_ - cA.T0, b_=w1_ - cA.T0, g_=10 ** (-1.2 / 20.0), r_=0.3):
+            n = x.shape[1]
+            t = np.arange(n) / V.SR
+            env = np.ones(n)
+            env = np.where((t >= a_) & (t < b_), g_, env)
+            up = (t >= a_ - r_) & (t < a_)
+            env[up] = 1.0 + (g_ - 1.0) * (t[up] - (a_ - r_)) / r_
+            dn = (t >= b_) & (t < b_ + r_)
+            env[dn] = g_ + (1.0 - g_) * (t[dn] - b_) / r_
+            return x * env[None]
+        a_post = dict(post=ride, post_name='a -1.2 dB fader ride on the odometer (the wait to the hit on Rima)')
     layers = [
-        dict(name='a_launch', wav=wav('a'), T0=T0('a'), a0=0.0, a1=max(tear + 2.6, t_cr + 0.7), fin=0.0, fout=0.9),
+        dict(name='a_launch', wav=wav('a'), T0=T0('a'), a0=0.0, a1=a_end, fin=0.0, fout=0.9, **a_post),
         dict(name='code_red', wav=wav('code_red'), T0=T0('code_red'), a0=t_cr, a1=lock, fin=0.4, fout=0.003,
              post=phone, post_name="era.futz('phone'): his phone's small speaker", level=-22.0),
         dict(name='lobby', wav=wav('lobby'), T0=T0('lobby'), a0=lob_in, a1=pop, fin=0.05, fout=0.003),
@@ -1544,7 +2110,9 @@ def lay(tl, built, work):
         dict(name='lobby2', wav=wav('lobby2'), T0=T0('lobby2'), a0=l2_in,
              a1=(sy_in + 0.55) if sy_in is not None else close + 0.05, fin=0.05,
              fout=0.04 if sy_in is not None else 0.5),      # v3.2: it crossfades into Sydney (audit-v31 #14)
-        dict(name='duel', wav=wav('duel'), T0=T0('duel'), a0=duel_in, a1=push + 0.5, fin=0.0, fout=1.0),
+        dict(name='duel', wav=wav('duel'), T0=T0('duel'), a0=duel_in,
+             a1=(waitlist_snap(tl) + 0.5) if 'waitlist' in built else push + 0.5, fin=0.0,
+             fout=0.6 if 'waitlist' in built else 1.0),
         dict(name='pause', wav=wav('pause'), T0=T0('pause'), a0=push - 0.05, a1=pause_end, fin=0.05,
              fout=0.003 if thud is not None else 0.3),
         dict(name='threat', wav=wav('threat'), T0=T0('threat'), a0=lift - 0.01, a1=tl.length, fin=0.005, fout=0.3),
@@ -1557,9 +2125,33 @@ def lay(tl, built, work):
         ca = built['atem'][0]
         h = [t for t, lab, hh in ca.marks if lab.startswith('THE ATEM')][0]
         layers.append(dict(name='atem', wav=wav('atem'), T0=T0('atem'), a0=h - 0.02, a1=h + 2.2, fin=0.005, fout=0.4))
-    stops = [(lock, lob_in), (pop, fl_in), (pause_end, lift - 0.01)]
+    dream_in = None
+    if 'first_weeks' in built:                                # v3.5: the first weeks, into code red's whine
+        cf = built['first_weeks'][0]
+        layers.append(dict(name='first_weeks', wav=wav('first_weeks'), T0=T0('first_weeks'), a0=tl.B('v35-10.01') - 0.004,
+                           a1=t_cr + 0.35, fin=0.004, fout=0.45))
+    if 'dream' in built:                                      # v3.5: 3 AM's one note -> JUN 2018 -> the lobby's bass
+        cd = built['dream'][0]
+        dream_in = [t for t, lab, h in cd.marks if lab.startswith('DESIGNED HIT: 3 AM')][0] - 0.02
+        layers.append(dict(name='dream', wav=wav('dream'), T0=T0('dream'), a0=dream_in, a1=lob_in + 0.4, fin=0.02,
+                           fout=0.75))
+    if 'arena' in built:                                      # the arena: diegetic, through the monitors, low
+        layers.append(dict(name='arena', wav=wav('arena'), T0=T0('arena'), a0=tl.B('v35-13.01') - 0.01,
+                           a1=tl.B('v35-13.05') + 0.35, fin=0.2, fout=0.5, post=lambda x: futz(x, 'tv'),
+                           post_name="era.futz('tv'): the arena on the wall of monitors", level=-31.0))
+    if 'window' in built:                                     # v3.5: the window, the lamp, the vision post
+        layers.append(dict(name='window', wav=wav('window'), T0=T0('window'), a0=tl.B('v35-18.01') - 0.08,
+                           a1=tl.E('v35-19.04') + 0.3, fin=0.04, fout=0.5))
+    if 'waitlist' in built:                                   # v3.5: the smug sting, under the toast into the push
+        layers.append(dict(name='waitlist', wav=wav('waitlist'), T0=T0('waitlist'), a0=waitlist_snap(tl) - 0.02,
+                           a1=push + 0.3, fin=0.005, fout=0.45))
+    after_lock = dream_in if dream_in is not None else lob_in
+    stops = [(lock, after_lock), (pop, fl_in), (pause_end, lift - 0.01)]
     room = ' / '.join(f'"{l["text"]}"' for l in tl.lines_in(pop, fl_in + 0.2))
-    designed = [(lock, lob_in, 'the phone locks (a diegetic stop) -> the lobby\'s pickup under the revolving door'),
+    designed = [(lock, after_lock, ('the phone locks (a diegetic stop); 3 AM: no score under the at-capacity page and '
+                                    'the first read (the bullpen\'s fans), until his second read\'s one felt note')
+                 if dream_in is not None else
+                 'the phone locks (a diegetic stop) -> the lobby\'s pickup under the revolving door'),
                 (pop, fl_in, 'the collar\'s pop: the swing stops dead; the lobby\'s room under ' + room),
                 (pause_end, lift, ('EMIT\'s THUD stops the pause letter: no score through the page, his desk and the '
                                    'reflection, until the THREAT on the pen\'s lift') if thud is not None else
@@ -1576,6 +2168,7 @@ def main():
     work = os.path.join(HERE, 'render', '_work', tag.lstrip('-'))   # render/_work/ (Kokoro), render/_work/el/ (git-ignored)
     built = {k: fn(tl) for k, fn in CUES.items()}
     built.update({k: r for k, r in ((k, fn(tl)) for k, fn in CUES_V31.items()) if r is not None})
+    built.update({k: r for k, r in ((k, fn(tl)) for k, fn in CUES_V35.items()) if r is not None})
     if args.dry:
         for k, (c, sc) in built.items():
             print(k, V.note_qa(sc), f'file T0 {c.T0:.3f}', sc.meta.get('clock_notes', ''))
@@ -1613,7 +2206,9 @@ def main():
         designed_hit=[dict(t=round(t, 3), cue='a_launch', what=lab, exempt='the mix\'s act-head score fade: this '
                            'downbeat is the design (5.01: HARD CUT on the downbeat, out of the card); fade it in 30-50 '
                            'ms at most (audit-v31 #13)')
-                      for t, lab, h in built['a'][0].marks if lab.startswith('A1 THE DOWNBEAT')],
+                      for t, lab, h in built['a'][0].marks if lab.startswith('A1 THE DOWNBEAT')]
+        + [dict(t=round(t, 3), cue=sc_.name, what=lab, exempt='a designed entry or step on a cut (v3.5)')
+           for k_, (c_, sc_) in built.items() for t, lab, h in c_.marks if lab.startswith('DESIGNED HIT')],
         measured=res, laid=laid, source=os.path.relpath(__file__, V.REPO),
         heard='nothing here has been listened to; every number is measured')
     V.write_json(os.path.join(HERE, f'cues{tag}.json'), doc)

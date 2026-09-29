@@ -5,13 +5,13 @@
  "file": "audio/ost/tracks/e01-v3-act4/render/music-el.wav",
  "ringout": "audio/ost/tracks/e01-v3-act4/render/music-el-ringout.wav",
  "clock": {
-  "timeline": "show/reel/ep01-v34-el/ep01-v34-el-act4.json",
+  "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act4.json",
   "variant": "el",
-  "frames": 12477,
-  "seconds": 519.875,
-  "samples": 24954000,
-  "beats": 80,
-  "lines": 98
+  "frames": 11873,
+  "seconds": 494.7083,
+  "samples": 23746000,
+  "beats": 84,
+  "lines": 99
  },
  "sample_rate": 48000,
  "channels": 2,
@@ -119,13 +119,93 @@
    ]
   },
   {
+   "key": "warroom",
+   "id": "e01-v35-a4-s1a-warroom",
+   "laid": {
+    "T0": 43.2083,
+    "window": [
+     45.6983,
+     76.4583
+    ],
+    "fade": [
+     0.0,
+     0.6
+    ],
+    "rests": []
+   },
+   "marks": [
+    [
+     45.7083,
+     "DESIGNED HIT: the phone lights and doesn't stop (his post's card + 0.9 s): the war room's pulse swells in out of the one silence (a 0.8 s fader ride)",
+     true
+    ],
+    [
+     49.75,
+     "GERG's call: LEVERAGE comes in on the cut (the pizz eighths, the thud, the ticks): his leverage now",
+     true
+    ],
+    [
+     71.625,
+     "the notepad (NEW COMPANY · MACROSOFT · BACK), the phone lighting again: the cluster up a semitone",
+     true
+    ],
+    [
+     54.5,
+     "Gerg's \"Yeah. I did.\": his Build, four notes, left hanging (the hurt)",
+     true
+    ],
+    [
+     63.42,
+     "Tasya's \"Then we should talk.\": her Rhodes, one soft chord (warm on top, cold under it)",
+     true
+    ],
+    [
+     69.1417,
+     "the 9:32 PM post: his calm on top: the felt's Water Line head (F F F G F) over the pulse",
+     true
+    ],
+    [
+     73.2083,
+     "THE FLIGHT: the pulse drops out on the cut; the F/C holds as the plane's hum",
+     false
+    ],
+    [
+     74.2083,
+     "the flight: \"1. GERG\": ONE FELT NOTE (F4): relief, a spark; it rings into the night's re-entry",
+     true
+    ]
+   ],
+   "sections": [
+    [
+     "S1A the war room: the pulse in (the tiles; the V.O.)",
+     45.7083,
+     49.75
+    ],
+    [
+     "S1A the calls: LEVERAGE, his (Gerg, Tasya, AUHSOJ, the count)",
+     49.75,
+     69.0417
+    ],
+    [
+     "S1A the 9:32 PM post, the notepad: his calm on top",
+     69.0417,
+     73.2083
+    ],
+    [
+     "S1B the flight: the hum, one felt note (relief)",
+     73.2083,
+     76.2083
+    ]
+   ]
+  },
+  {
    "key": "night",
    "id": "e01-v3-a4-s2-night",
    "laid": {
-    "T0": 42.3083,
+    "T0": 75.3083,
     "window": [
-     42.7983,
-     51.8333
+     75.7983,
+     90.7917
     ],
     "fade": [
      0.0,
@@ -135,52 +215,67 @@
    },
    "marks": [
     [
-     42.8083,
+     75.8083,
      "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)",
      true
     ],
     [
-     43.2083,
+     76.2083,
      "the carve (the cut to the dark room): the fifth already sounding",
      false
     ],
     [
-     44.4583,
+     77.4583,
      "the nudge G4, sounding before the V.O.",
      true
     ],
     [
-     46.4917,
-     "the F/C pedal (the count, TPOOL: no motif)",
+     79.4917,
+     "the F/C pedal (the count: no motif)",
      false
     ],
     [
-     48.25,
+     81.9167,
+     "TPOOL (2008 palette, T2): the Water Line on the 16-bit sample-chip piano over D-flat maj7 (the sheet passed)",
+     true
+    ],
+    [
+     85.4167,
+     "TPOOL: passed again (B-flat minor9): the line settles C4 -> F4",
+     true
+    ],
+    [
+     86.2917,
+     "TPOOL: the CEO walks out still in charge: A-flat/C",
+     true
+    ],
+    [
+     87.875,
      "mark 3: the felt back (Eb4)",
      true
     ],
     [
-     49.3333,
+     88.2917,
      "the settle C4",
      true
     ],
     [
-     49.9583,
+     88.9167,
      "F4",
      true
     ],
     [
-     50.5833,
+     89.5417,
      "THE REWIND: E4",
      true
     ],
     [
-     51.2083,
+     90.1667,
      "Bb3",
      true
     ],
     [
-     51.8333,
+     90.7917,
      "EXIT: the whip (pass one's downbeat)",
      false
     ]
@@ -188,18 +283,23 @@
    "sections": [
     [
      "S2 26A: the carve and the V.O.",
-     42.8083,
-     46.4917
+     75.8083,
+     79.4917
     ],
     [
-     "S2 the count and TPOOL: the pedal",
-     46.4917,
-     48.25
+     "S2 the count: the pedal",
+     79.4917,
+     81.7917
+    ],
+    [
+     "S2 TPOOL (v3.5): the 2008 palette, melancholy",
+     81.7917,
+     87.875
     ],
     [
      "S2 mark 3, the settle, the Rewind",
-     48.25,
-     51.8333
+     87.875,
+     90.7917
     ]
    ]
   },
@@ -207,10 +307,10 @@
    "key": "plan",
    "id": "e01-v31-a4-plan",
    "laid": {
-    "T0": 51.3333,
+    "T0": 90.2917,
     "window": [
-     51.8283,
-     79.25
+     90.7867,
+     116.625
     ],
     "fade": [
      0.0,
@@ -220,102 +320,97 @@
    },
    "marks": [
     [
-     52.3758,
+     91.3342,
      "11:52: Neleh's clockwork on her card (the office, her desk)",
      true
     ],
     [
-     58.2917,
+     97.2083,
      "the waltz: walk-off 1 (F)",
      true
     ],
     [
-     58.9167,
+     97.8333,
      "the waltz: walk-off 2 (F)",
      true
     ],
     [
-     59.5417,
+     98.4583,
      "the waltz: walk-off 3 (F)",
      true
     ],
     [
-     60.1667,
-     "waltz bar 2: the accompaniment alone (the empty chairs)",
-     true
-    ],
-    [
-     62.0417,
+     99.0833,
      "label: the four: ALYI · NELEH · MADA · THE QUIET VOTE (F4)",
      true
     ],
     [
-     63.6042,
+     100.9583,
      "label: NOPEAI · THE NONPROFIT (G4)",
      true
     ],
     [
-     64.5417,
+     101.8958,
      "label: \"controls\": the arrow (Ab4)",
      true
     ],
     [
-     65.1667,
+     102.5208,
      "label: \"company\" (Bb4)",
      true
     ],
     [
-     67.3542,
+     104.3958,
      "label: NOPEAI · THE COMPANY (C5)",
      true
     ],
     [
-     71.7292,
+     109.0833,
      "label: VOTES: 0 (after the stamp, on the line's end) (Bb4)",
      true
     ],
     [
-     72.3542,
+     109.7083,
      "label: CEO (Ab4)",
      true
     ],
     [
-     62.0417,
+     99.0833,
      "the 4/4 returns (the waltz tails gated)",
      false
     ],
     [
-     74.5417,
+     111.5833,
      "the held chord: \"Good question.\" (pp, no movement)",
      false
     ],
     [
-     75.885,
+     113.2183,
      "the moth (celesta flutter, pp)",
      false
     ],
     [
-     76.7292,
+     113.7708,
      "the path: the harp draws it",
      false
     ],
     [
-     77.0417,
+     114.3958,
      "tick 1: 1. NOON (F4)",
      true
     ],
     [
-     78.6042,
+     115.6458,
      "BREAK: the stuck G-Ab loop (the fold runs on)",
      true
     ],
     [
-     78.8143,
+     116.1477,
      "the tape-stop starts (the pull back to her desk)",
      false
     ],
     [
-     79.25,
+     116.625,
      "the 11:59 tick: the tape reaches zero; PROCEDURE's first chord (cue_board)",
      false
     ]
@@ -323,33 +418,33 @@
    "sections": [
     [
      "PLAN Neleh's desk, 11:52: the clockwork, the pad",
-     51.8333,
-     56.4167
+     90.7917,
+     96.3333
     ],
     [
      "PLAN WORD + the waltz (3/4)",
-     56.4167,
-     62.0417
+     96.3333,
+     99.0833
     ],
     [
      "PLAN the labels (4/4 Blueprint, thinned under the reading)",
-     62.0417,
-     74.5417
+     99.0833,
+     111.5833
     ],
     [
      "PLAN \"Good question.\": the held chord",
-     74.5417,
-     76.7292
+     111.5833,
+     113.7708
     ],
     [
      "PLAN the path",
-     76.7292,
-     78.6042
+     113.7708,
+     115.6458
     ],
     [
      "PLAN the fold: stuck, the tape-stop into 11:59",
-     78.6042,
-     79.25
+     115.6458,
+     116.625
     ]
    ]
   },
@@ -357,306 +452,271 @@
    "key": "board",
    "id": "e01-v3-a4-s3s4-board",
    "laid": {
-    "T0": 78.75,
+    "T0": 116.125,
     "window": [
-     79.245,
-     265.8583
+     116.62,
+     262.4417
     ],
     "fade": [
      0.0,
-     1.2
+     0.9
     ],
     "rests": []
    },
    "marks": [
     [
-     79.25,
+     116.625,
      "a: 11:59: Bbm(add9) + the harp-harmonic dyad (PROCEDURE takes over from THE PLAN)",
      true
     ],
     [
-     79.5625,
+     116.9375,
      "a: Neleh's clockwork under the wait (11:59)",
      true
     ],
     [
-     79.462,
+     116.837,
      "a: the connect: the pedal (it holds under \"Mas. The board has decided...\"); the whisper steps down in the gaps",
      false
     ],
     [
-     94.7,
+     131.6667,
      "a: the clockwork creeps back (under the tinny \"super.\": the procedure going on)",
      true
     ],
     [
-     97.825,
-     "a: STEP FOUR on the list: Bbm(add9) (1 ✓) (eighths: her pen runs)",
-     true
-    ],
-    [
-     98.1375,
-     "a: STEP FOUR on the list: Ab(add9) (2. BLOG POST)",
-     true
-    ],
-    [
-     98.45,
-     "a: STEP FOUR on the list: Gbmaj7 (3. INTERIM CEO)",
-     true
-    ],
-    [
-     98.7625,
-     "a: STEP FOUR on the list: the blank: the F bass alone (4. ____)",
+     133.5833,
+     "a: v3.5: his reflection's face holds a beat: the procedure's pedal only",
      false
     ],
     [
-     105.06,
+     134.7917,
+     "a: the blog post, read silently: the blank's F under it (the list is cut in v3.5)",
+     false
+    ],
+    [
+     137.0417,
      "a: the clock tick (under \"Any objections?\" and its silence)",
      true
     ],
     [
-     108.185,
+     140.1667,
      "a: the Post click is a tick; the pedal back",
      true
     ],
     [
-     108.6583,
+     140.6583,
      "b: one soft pizz figure after her join chime",
      true
     ],
     [
-     123.75,
+     154.5417,
      "c: the all-hands: the pedal alone (the hush is the bed; the record plays dry)",
      false
     ],
     [
-     138.0807,
+     170.4557,
      "c: the pulse returns softly with the keycaps",
      true
     ],
     [
-     146.625,
-     "d: NOV 18: the Db bed; the hearts pour (the cascade, to the burial)",
-     true
+     174.875,
+     "d: NOV 18, the boardroom at night (v3.5: the hearts are cut): the pedal; the phones",
+     false
     ],
     [
-     150.9167,
-     "d: the blue heart (one harp harmonic)",
-     true
-    ],
-    [
-     151.7397,
+     175.198,
      "d: the phones buzz: the pizz locks to it",
      true
     ],
     [
-     159.314,
+     182.4853,
      "d: the second buzz",
      true
     ],
     [
-     165.489,
+     182.7933,
      "d: the clack: the tick's last, clean beat",
      false
     ],
     [
-     166.0867,
-     "d: DESIGNED HIT: the phones all light at once: one pizz chord and the GPU choir's lift, ppp (1.6 s: the company telling them)",
-     true
-    ],
-    [
-     167.7083,
+     253.4583,
      "d: the sincere beat: the solo viola plays the three steps (F Eb Db) over Step Four",
      true
     ],
     [
-     171.4383,
-     "d: DESIGNED REST: the four dial tones (room tone)",
+     253.4583,
+     "h: v3.5: NELEH'S REAL FACE at the blank line of step 4 (after the statement): the sincere beat here",
      false
     ],
     [
-     173.2467,
+     184.2217,
      "e: the Lighthouse on the first ring",
      true
     ],
     [
-     185.9427,
+     194.1477,
      "e: the Addendum (Mario's quartet, thin), on \"some thoughts\"",
      true
     ],
     [
-     192.5807,
+     199.7847,
      "e: \"no.\" CUTS the tail (and nothing lands after it: the dial tone)",
      false
     ],
     [
-     194.4583,
+     201.1667,
      "the lobby, his side (v3.2): no score; the lobby's room by day",
      false
     ],
     [
-     199.7417,
+     206.45,
      "the lobby: ONE FELT NOTE on his look up at their camera (the nudge G4, his move)",
      true
     ],
     [
-     202.5833,
+     209.2917,
      "f: SUNDAY, THE REVERSAL: the four phones in a row, one dry pizz each (STAFF STAFF INVESTORS INVESTORS)",
      true
     ],
     [
-     212.0833,
+     217.6917,
      "f: her clockwork in the gaps only (the procedure, no closer)",
      true
     ],
     [
-     213.1667,
+     218.7917,
      "f: the spotlight: the straight-mute accent (F4 -> Bb4); the pulse",
      true
     ],
     [
-     229.7967,
+     230.18,
      "f: it holds under the folder's long beat",
      false
     ],
     [
-     231.0417,
+     231.125,
      "f: the page's back is blank: the chord leaves the F alone (Step Four's blank)",
      false
     ],
     [
-     233.5833,
+     233.75,
      "f: the hourglass: one grain a beat, falling",
      true
     ],
     [
-     235.5,
+     236.4833,
      "g: Tasya's floor: Abmaj9 on the slate (silent attack)",
      false
     ],
     [
-     236.9167,
+     237.5333,
      "g: Cmaj9 as the door opens",
      false
     ],
     [
-     238.4167,
+     238.0333,
      "g: the Rhodes on the beats (Tasya appears; the jangle owns the offbeats)",
      true
     ],
     [
-     243.6833,
+     241.4833,
      "g: the statement [V]: the floor steps to Emaj9 (a colour, not a swell)",
      false
     ],
     [
-     254.5,
-     "g: home: Abmaj9 on the sign, one Rhodes chord",
-     true
-    ],
-    [
-     257.4583,
-     "h: the clockwork winds down",
-     true
-    ],
-    [
-     258.2917,
-     "h: the hang: one held C over the blank F (a pedal, not silence)",
+     253.115,
+     "g: home: Abmaj9 as the statement ends (no hold after it; v3.5: no sign, no Rhodes)",
      false
     ],
     [
-     260.4167,
-     "h: Mada's spinner turns under the held C (his silence)",
+     256.4583,
+     "i: v3.5 ALYI, ALONE: the Db pedal (sorrow, wordless)",
      false
     ],
     [
-     262.7917,
-     "h: the door back: the held C rings on into the dark room (the drone under it)",
+     256.9583,
+     "i: THE DOOR on the senza-vibrato violin (Ab Db | C G), slow; it ends on the #4 and stays there (the question from 2018, still open)",
+     true
+    ],
+    [
+     261.4583,
+     "i: the hearts carry across to his phone: his felt takes over (2 AM)",
      false
     ]
    ],
    "sections": [
     [
      "a NOON: the call, the list, the post",
-     79.25,
-     108.185
+     116.625,
+     140.1667
     ],
     [
      "b Rima",
-     108.185,
-     123.75
+     140.1667,
+     154.5417
     ],
     [
      "c the all-hands and the evening",
-     123.75,
-     146.625
+     154.5417,
+     174.875
     ],
     [
      "d NOV 18 hearts",
-     146.625,
-     151.4167
+     174.875,
+     174.875
     ],
     [
-     "d the boardroom: the phones; they all light at once",
-     151.4167,
-     167.7083
-    ],
-    [
-     "d the sincere beat",
-     167.7083,
-     171.4383
-    ],
-    [
-     "rest: the dial tones",
-     171.4383,
-     173.2467
+     "d the boardroom at night: the phones, the clack",
+     174.875,
+     183.4167
     ],
     [
      "e the rival lab (the split)",
-     173.2467,
-     194.4583
+     184.2217,
+     201.1667
     ],
     [
      "the lobby, his side: no score; one felt note on his look up",
-     194.4583,
-     202.4583
+     201.1667,
+     209.1667
     ],
     [
      "f Sunday: the reversal (the phones), the lobby camera",
-     202.4583,
-     213.1667
+     209.1667,
+     218.7917
     ],
     [
      "f Ttemme, the folder, the hourglass",
-     213.1667,
-     235.5
+     218.7917,
+     236.4833
     ],
     [
      "g the door: Tasya's floor",
-     235.5,
-     257.4583
+     236.4833,
+     253.4583
     ],
     [
-     "h Step four? (the hang)",
-     257.4583,
-     262.7917
+     "h Neleh's real face: the sincere beat (the solo viola over Step Four)",
+     253.4583,
+     256.4583
     ],
     [
-     "the held C into the dark room",
-     262.7917,
-     264.4583
+     "i Alyi, alone: the Door on the solo violin, over the Db pedal",
+     256.4583,
+     261.4583
     ]
    ],
-   "dropped_under_words": 4
+   "dropped_under_words": 16
   },
   {
    "key": "two_am",
    "id": "e01-v3-a4-s5-two-am",
    "laid": {
-    "T0": 261.0687,
+    "T0": 261.4583,
     "window": [
-     262.7917,
-     363.3333
+     261.4383,
+     352.5833
     ],
     "fade": [
      0.0,
@@ -664,198 +724,193 @@
     ],
     "rests": [
      [
-      315.0366666666667,
-      319.485
+      305.1533333333333,
+      309.61
      ]
     ]
    },
    "marks": [
     [
-     262.8617,
+     261.4983,
+     "C: v3.5: the hearts on his phone: the felt alone on the cut (his room first), the count ticking with the hearts",
+     true
+    ],
+    [
+     264.0283,
      "C: the felt alone in the dark (Db lydian): his room first",
      true
     ],
     [
-     263.5687,
+     263.9583,
      "C: the Water Line, warm (F F F G-sw F | C F over Dbmaj9(#11), Bbm9)",
      true
     ],
     [
-     267.9437,
-     "S5 the count: the felt ticks with the hearts (quarters, varied pitches)",
-     true
-    ],
-    [
-     274.5917,
+     267.0083,
      "S5 the Orb's look: Ab(add9)/C held (thin under \"the badge was a joke.\" / \"mostly.\")",
      true
     ],
     [
-     282.4749,
+     273.1771,
      "S5 the Build (chip + felt): compile pass (4)",
      true
     ],
     [
-     286.2249,
+     276.9271,
      "S5 the Build (chip + felt): compile pass (8)",
      true
     ],
     [
-     288.7249,
-     "S5 the Build (chip + felt): compile pass (4)",
+     281.3021,
+     "S5 the Build (chip + felt): compile pass (12)",
      true
     ],
     [
-     291.2249,
-     "S5 the Build (chip + felt): compile pass (8)",
-     true
-    ],
-    [
-     279.8083,
+     272.225,
      "S5 Gerg rings: Abmaj9 (felt)",
      true
     ],
     [
-     296.0687,
+     286.4583,
      "S5 the letter: the pedal and a soft walking pulse (only these under the quoted lines)",
      true
     ],
     [
-     315.0367,
+     305.1533,
      "S5 the scroll stops on ALYI: the music drops out (the chime, \"alyi voted.\" in the room)",
      false
     ],
     [
-     319.485,
+     309.61,
      "S5 \"He did both.\": the pedal comes back (no melody; the room breathes)",
      false
     ],
     [
-     324.07,
+     314.195,
      "S5 the check: the felt returns softly (Ab(add9))",
      true
     ],
     [
-     329.6624,
-     "S5 the Build returns with his keys (1)",
+     319.7396,
+     "S5 the Build returns with his keys (2)",
      true
     ],
     [
-     331.2249,
+     321.3021,
      "S5 the Build: 8 under \"The company. Again. Just in case.\"",
      true
     ],
     [
-     333.7249,
-     "S5 the Build: a pass cut DEAD on his look up after 8",
+     323.8021,
+     "S5 the Build: a pass cut DEAD on his look up after 7",
      true
     ],
     [
-     334.8333,
+     324.7917,
      "S5 HIS LOOK UP: the Build stops dead; the pad (Ab3/Eb4) holds (a ring-out)",
      false
     ],
     [
-     340.7283,
+     330.6867,
      "S5 Tasya's floor: Abmaj9 (silent attack)",
      false
     ],
     [
-     344.3083,
+     334.2667,
      "S5 Tasya's floor: Cmaj9 (silent attack)",
      false
     ],
     [
-     345.7383,
+     335.4467,
      "S5 Tasya's floor: Emaj9 (silent attack)",
      false
     ],
     [
-     348.7703,
+     338.2287,
      "S5 Tasya's floor: Abmaj9 (silent attack)",
      false
     ],
     [
-     354.8483,
+     344.0567,
      "S5 the MACROSOFT badge slides under the door: the floor holds (the offer, open)",
      false
     ],
     [
-     357.3483,
+     346.5567,
      "S5 he sets the badge down beside the lanyard, unworn: the floor's third (C5) leaves; the chord goes open",
      false
     ],
     [
-     340.7383,
+     330.6967,
      "S5 the door: one soft Rhodes chord (Tasya's)",
      true
     ],
     [
-     348.7703,
+     338.2287,
      "S5 home: Abmaj9 on \"desk\" (the second Rhodes chord)",
      true
     ],
     [
-     359.6667,
+     348.9167,
      "S5 after \"leave it open.\": Ab6/9 with no third (Eb3 Ab3 Bb3), the settle C4 -> F4; it rings",
      true
     ]
    ],
    "sections": [
     [
-     "S5 the dark room at 2 AM: the felt, the Water Line warm",
-     262.7917,
-     267.9437
+     "S5 the hearts on his phone: the felt's first chord, the count",
+     261.4583,
+     263.9583
     ],
     [
-     "S5 the count (the felt's pulse under the V.O.)",
-     267.9437,
-     274.5417
+     "S5 the dark room at 2 AM: the felt, the Water Line warm",
+     263.9583,
+     266.9583
     ],
     [
      "S5 the Orb exchange: one held chord",
-     274.5417,
-     279.7083
+     266.9583,
+     272.125
     ],
     [
      "S5 Gerg's call: the Build in A-flat major (chip + felt)",
-     279.7083,
-     293.1667
+     272.125,
+     283.5833
     ],
     [
      "S5 the letter: the pedal and the pulse",
-     293.1667,
-     315.0367
+     283.5833,
+     305.1533
     ],
     [
      "S5 the rest: ALYI -> \"He did both.\"",
-     315.0367,
-     319.485
+     305.1533,
+     309.61
     ],
     [
      "S5 \"He did both.\": the pedal alone",
-     319.485,
-     323.75
+     309.61,
+     313.875
     ],
     [
      "S5 the check: the felt returns",
-     323.75,
-     329.5417
+     313.875,
+     319.6667
     ],
     [
      "S5 the Build returns; the look (the held note)",
-     329.5417,
-     340.7083
+     319.6667,
+     330.6667
     ],
     [
      "S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords; the badge (the third leaves)",
-     340.7083,
-     358.0417
+     330.6667,
+     347.2917
     ],
     [
      "S5 \"leave it open.\": warm, open (no third), the ring-out to the first tile",
-     358.0417,
-     363.3333
+     347.2917,
+     352.5833
     ]
    ]
   },
@@ -863,10 +918,10 @@
    "key": "avalanche",
    "id": "e01-v3-a4-s6-avalanche",
    "laid": {
-    "T0": 363.3333,
+    "T0": 352.5833,
     "window": [
-     363.3333,
-     377.2083
+     352.5833,
+     359.7083
     ],
     "fade": [
      0.0,
@@ -876,81 +931,71 @@
    },
    "marks": [
     [
-     363.3333,
-     "A1: the compile (timpani F, the Build 4)",
+     352.5833,
+     "A1: the compile (timpani F, the Build 4), under the tiles",
      true
     ],
     [
-     365.8333,
-     "A4: the Build at 16",
+     355.0833,
+     "A6: Step Four's G-flat (Mas's tile)",
      true
     ],
     [
-     367.7083,
-     "A4 beat 4: the brass kick (end of phrase 1)",
+     356.3333,
+     "ALYI RESISTS (A6.3): timpani G-flat, the plucked no (his tile goes)",
      true
     ],
     [
-     368.3333,
-     "A6: Step Four's G-flat",
+     357.2708,
+     "the board's bowed F pedal: Neleh's window, no lead (v3.5)",
      true
     ],
     [
-     369.5833,
-     "ALYI RESISTS (A6.3): timpani G-flat, the plucked no",
+     358.2083,
+     "A13: THE FULL BAND, C7(#9b13), a beat before Mada's shot (it cuts her \"char-\" off)",
      true
     ],
     [
-     373.3333,
-     "A9: the Water Line augmented",
-     true
-    ],
-    [
-     375.8333,
-     "A13: THE FULL BAND, C7(#9b13)",
-     true
-    ],
-    [
-     371.55,
+     357.2833,
      "NELEH's window (A7): no lead",
      false
     ],
     [
-     372.3958,
+     357.2708,
      "the board's bowed F pedal enters (A8's)",
      false
     ],
     [
-     373.9167,
+     358.839,
      "THE QUIET VOTE: the F pedal ends silently",
      false
     ],
     [
-     377.2167,
+     359.725,
      "STOP: dead on MADA's label (freeze_hit_F owns the onset); digital zero to the bullpen",
      false
     ]
    ],
    "sections": [
     [
-     "S6 phrase 1: the compile (A1, A4)",
-     363.3333,
-     368.3333
+     "S6 phrase 1: the compile (A1)",
+     352.5833,
+     355.0833
     ],
     [
-     "S6 phrase 2: Step Four, Alyi, Neleh (A6-A7)",
-     368.3333,
-     373.3333
+     "S6 phrase 2: Step Four, Alyi resists (A6)",
+     355.0833,
+     357.2708
     ],
     [
-     "S6 phrase 3: the Water Line, the quiet vote (A9)",
-     373.3333,
-     375.8333
+     "S6 Neleh's window: the board's F pedal, the quiet vote",
+     357.2708,
+     358.2083
     ],
     [
-     "S6 phrase 4: the full band (A13) -> the stop",
-     375.8333,
-     377.2083
+     "S6 the full band (A13) -> the stop",
+     358.2083,
+     359.7083
     ]
    ],
    "label_on_swing": false
@@ -959,10 +1004,10 @@
    "key": "return",
    "id": "e01-v3-a4-s7s8-return",
    "laid": {
-    "T0": 379.1667,
+    "T0": 361.2917,
     "window": [
-     379.1667,
-     519.875
+     361.2917,
+     494.7083
     ],
     "fade": [
      0.0,
@@ -972,162 +1017,162 @@
    },
    "marks": [
     [
-     381.3467,
+     363.4717,
      "a: the violin (the Door, STRAIGHT), under the post",
      true
     ],
     [
-     386.4987,
+     370.1237,
      "a: the first heart: the G3 holds and decays (no stop)",
      false
     ],
     [
-     397.3417,
+     380.925,
      "b: the floor pre-laps (the bare A-flat fifth under the violin's G)",
      false
     ],
     [
-     404.508,
+     388.0913,
      "b: \"below\": A-flat maj9 (silent attack)",
      false
     ],
     [
-     405.46,
+     389.0433,
      "b: \"above\": C maj9",
      false
     ],
     [
-     406.644,
+     390.2273,
      "b: \"around\": E maj9",
      false
     ],
     [
-     407.875,
+     391.4583,
      "b: the bloom (the Rhodes on the beats)",
      true
     ],
     [
-     409.3083,
+     392.8917,
      "b: home (A-flat maj9) under his look down at the slate floor",
      true
     ],
     [
-     412.9867,
+     396.57,
      "b': Tuesday's invite: one felt F4 on his Accept (his move, over the floor)",
      true
     ],
     [
-     414.7083,
+     398.3333,
      "c1: LEVERAGE fades in under Mada",
      true
     ],
     [
-     415.9583,
+     399.5833,
      "c1: the door bang (inside the cue)",
      true
     ],
     [
-     425.4167,
+     407.625,
      "c1: thins to its F pedal (the reading, the terms)",
      false
     ],
     [
-     453.802,
+     433.1353,
      "STOP (dead, tails cut): \"of what?\"; Mada's pause, \"Good question.\", \"good question.\" and the long hold in the room",
      false
     ],
     [
-     461.6583,
+     440.9917,
      "c2: the stamp's C: the low C pedal bows in (it carries into his stream, ducked)",
      false
     ],
     [
-     462.3083,
+     441.6417,
      "c2: GERG'S BUILD restarts on his post (soft, A-flat; F4-C5 under the keycaps)",
      true
     ],
     [
-     465.75,
+     445.0833,
      "c2: one pizz grain on the last grain (before Ttemme's post)",
      true
     ],
     [
-     472.4167,
+     451.75,
      "c2: THE TURN: the chat floods \"we're so back\": the pedal up to E-flat; the Build comes in",
      true
     ],
     [
-     472.6683,
+     452.0017,
      "the shatter: a dead stop; the sand stands, the music holds its breath (k173-207)",
      false
     ],
     [
-     474.125,
+     453.4583,
      "c2: the slump: the E-flat pedal back, the Build compiling through the pour (it restarts)",
      true
     ],
     [
-     475.9583,
+     455.2917,
      "c2: back in the boardroom (k252): the timpani rolls into the sign",
      true
     ],
     [
-     477.3663,
+     456.6997,
      "e: the sign: the brass stab + VICTORY LAP (A-flat maj9, strings, horns, timpani, the Build)",
      true
     ],
     [
-     478.3038,
+     457.6372,
      "e: the top line climbs (E-flat5 -> A-flat5 -> C6, violins + chip)",
      true
     ],
     [
-     479.8663,
+     459.1997,
      "e: one chip note (the undercut)",
      true
     ],
     [
-     480.6583,
+     459.9917,
      "e: the 1993 flat line F5 . F4 . F5 (tenuto, uneven)",
      true
     ],
     [
-     482.8583,
+     462.1917,
      "e: the bonk (SFX, E3: the wrong note); a designed rest on the lobby's neon F (the CU)",
      false
     ],
     [
-     485.2493,
+     464.5827,
      "S8.04 THE COUNT: the knee's first four notes, F F F F, one felt F4 after each item (four votes, the landlord, the money, gerg), pp in his pauses: the knee never goes on",
      true
     ],
     [
-     491.2367,
+     470.57,
      "after \"okay.\": the felt C4 (his felt, last)",
      true
     ],
     [
-     491.6533,
+     470.9867,
      "the felt F4 + the open fifth (the settle)",
      true
     ],
     [
-     493.0,
+     472.3333,
      "f: the vault's F: the glass pedal F3/C4 swells in under the felt's decay",
      false
     ],
     [
-     493.3,
+     472.6333,
      "f: the Q* hook: the Ache (G4 + D-flat5) over the pedal for the vault's own shot",
      false
     ],
     [
-     495.7917,
+     474.5417,
      "f: the Ache cuts with the picture; the pedal goes on (the memo: the pedal alone)",
      false
     ],
     [
-     519.875,
+     494.7083,
      "the act ends on the pedal; its release carries into the tag (music-ringout.wav)",
      false
     ]
@@ -1135,68 +1180,68 @@
    "sections": [
     [
      "S7 a the STRAIGHT violin, then its decay",
-     379.1667,
-     397.3417
+     361.2917,
+     380.925
     ],
     [
      "S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home)",
-     397.3417,
-     414.0833
+     380.925,
+     397.7083
     ],
     [
      "S7 c1 LEVERAGE (fade-in -> the bang)",
-     414.0833,
-     425.4167
+     397.7083,
+     407.625
     ],
     [
      "S7 c1 thinned to the F pedal",
-     425.4167,
-     453.802
+     407.625,
+     433.1353
     ],
     [
      "S7 STOP: \"of what?\" -> the stamp (the room)",
-     453.802,
-     461.6583
+     433.1353,
+     440.9917
     ],
     [
      "S7 c2 the C pedal (the posts, his stream); the turn",
-     461.6583,
-     472.6683
+     440.9917,
+     452.0017
     ],
     [
      "S7 d the held beat (the sand stands), then the Build into the sign",
-     472.6683,
-     477.3663
+     452.0017,
+     456.6997
     ],
     [
      "S8 e VICTORY LAP, one size too big + one chip note",
-     477.3663,
-     480.6583
+     456.6997,
+     459.9917
     ],
     [
      "S8 e the flat line",
-     480.6583,
-     482.8583
+     459.9917,
+     462.1917
     ],
     [
      "S8 designed rest: the lobby CU",
-     482.8583,
-     485.1993
+     462.1917,
+     464.5327
     ],
     [
      "S8.04 the count: F F F F (the knee's first four) under his V.O.; \"okay.\"",
-     485.1993,
-     491.2367
+     464.5327,
+     470.57
     ],
     [
      "S8 the felt settle",
-     491.2367,
-     493.0
+     470.57,
+     472.3333
     ],
     [
      "S8 f the vault's F (the coda)",
-     493.0,
-     519.875
+     472.3333,
+     494.7083
     ]
    ]
   }
@@ -1204,50 +1249,50 @@
  "silences": [
   {
    "t0": 27.733,
-   "t1": 42.793,
-   "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite's air, then the drone) -> the carve"
+   "t1": 45.693,
+   "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post typed twice (v32-S1.13) -> the phone lights: the war room's pulse (v3.5)"
   },
   {
-   "t0": 195.958,
-   "t1": 199.722,
+   "t0": 202.667,
+   "t1": 206.43,
    "what": "the lobby by day, his side (v3.2): no score under the lanyard, the selfie and his post (the lobby's room; the split's pedal released under it) -> one felt note on his look up"
   },
   {
-   "t0": 315.037,
-   "t1": 319.485,
+   "t0": 305.153,
+   "t1": 309.61,
    "what": "the scroll stops on ALYI -> \"He did both.\" (no score: the chime, \"Alyi signed it.\" and \"alyi voted.\" play in the room)"
   },
   {
-   "t0": 453.802,
-   "t1": 461.658,
+   "t0": 433.135,
+   "t1": 440.992,
    "what": "the dead stop on \"of what?\" -> the stamp (Mada's pause, \"Good question.\", \"good question.\" and the long hold play in the room)"
   },
   {
-   "t0": 472.668,
-   "t1": 474.125,
+   "t0": 452.002,
+   "t1": 453.458,
    "what": "the hourglass shatters: the sand holds its shape (k173-207) and the music holds its breath with it (runway.md §11.6)"
   },
   {
-   "t0": 483.108,
-   "t1": 485.229,
+   "t0": 462.442,
+   "t1": 464.563,
    "what": "the lobby CU \"silent like the first\" (v3.4: to the count): no score after the bonk (the neon's F); the flat line's tail is cut under the bonk (v3.2 EL: it hovered at -60 dBFS and read as a 50 ms fragment)"
   },
   {
-   "t0": 377.208,
-   "t1": 381.347,
+   "t0": 359.708,
+   "t1": 363.472,
    "what": "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)"
   }
  ],
  "designed_hit": [
   {
-   "t": 42.808,
-   "cue": "e01-v3-a4-s2-night",
-   "what": "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)"
+   "t": 45.708,
+   "cue": "e01-v35-a4-s1a-warroom",
+   "what": "DESIGNED HIT: the phone lights and doesn't stop (his post's card + 0.9 s): the war room's pulse swells in out of the one silence (a 0.8 s fader ride)"
   },
   {
-   "t": 166.087,
-   "cue": "e01-v3-a4-s3s4-board",
-   "what": "d: DESIGNED HIT: the phones all light at once: one pizz chord and the GPU choir's lift, ppp (1.6 s: the company telling them)"
+   "t": 75.808,
+   "cue": "e01-v3-a4-s2-night",
+   "what": "the re-entry after D6: the felt open fifth, 0.4 s before the carve's cut, under the post's last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)"
   }
  ],
  "rests": [
@@ -1257,42 +1302,42 @@
    "what": "the act's first frames: the suite's pedal bows in from nothing (the SFX pre-lap carries)"
   },
   {
-   "t0": 51.733,
-   "t1": 52.433,
+   "t0": 90.692,
+   "t1": 91.392,
    "what": "Neleh's desk at 11:52: her office clock first (SFX), then her clockwork"
   },
   {
-   "t0": 171.138,
-   "t1": 173.447,
-   "what": "the board's designed rest for the four dial tones (the sincere beat's release)"
+   "t0": 183.122,
+   "t1": 184.422,
+   "what": "the board's designed rest for the dial tones (v3.5: one run at the split's head)"
   },
   {
-   "t0": 482.858,
-   "t1": 485.249,
+   "t0": 462.192,
+   "t1": 464.583,
    "what": "the lobby: the CU \"silent like the first\" on the neon's F (to the count, v3.4)"
   },
   {
-   "t0": 490.375,
-   "t1": 491.295,
+   "t0": 469.708,
+   "t1": 470.628,
    "what": "the last F's release and \"okay.\""
   },
   {
-   "t0": 194.758,
-   "t1": 199.692,
+   "t0": 201.467,
+   "t1": 206.4,
    "what": "the lobby by day, his side (v3.2): no score, the lobby's room; one felt note on his look up"
   }
  ],
  "measured": {
   "file": "/home/jgon/project/art/mrmas/audio/ost/tracks/e01-v3-act4/render/music-el.wav",
-  "samples": 24954000,
-  "seconds": 519.875,
+  "samples": 23746000,
+  "seconds": 494.7083,
   "whole": {
-   "lufs_i": -20.22,
+   "lufs_i": -20.3,
    "true_peak_dbtp": -3.15,
    "st": {
-    "p95": -17.31,
-    "median": -21.1,
-    "max": -13.92
+    "p95": -17.64,
+    "median": -21.04,
+    "max": -14.12
    }
   },
   "cues": {
@@ -1306,64 +1351,74 @@
     "st_max": -16.81,
     "true_peak_dbtp": -3.15
    },
+   "e01-v35-a4-s1a-warroom": {
+    "window": [
+     45.698,
+     76.458
+    ],
+    "lufs_i": -19.89,
+    "st_p95": -16.5,
+    "st_max": -15.93,
+    "true_peak_dbtp": -3.64
+   },
    "e01-v3-a4-s2-night": {
     "window": [
-     42.798,
-     51.833
+     75.798,
+     90.792
     ],
-    "lufs_i": -21.8,
-    "st_p95": -20.84,
-    "st_max": -20.74,
-    "true_peak_dbtp": -5.87
+    "lufs_i": -21.92,
+    "st_p95": -20.85,
+    "st_max": -20.4,
+    "true_peak_dbtp": -6.51
    },
    "e01-v31-a4-plan": {
     "window": [
-     51.828,
-     79.25
+     90.787,
+     116.625
     ],
-    "lufs_i": -19.98,
-    "st_p95": -18.35,
-    "st_max": -17.64,
-    "true_peak_dbtp": -3.46
+    "lufs_i": -19.99,
+    "st_p95": -18.51,
+    "st_max": -17.23,
+    "true_peak_dbtp": -4.39
    },
    "e01-v3-a4-s3s4-board": {
     "window": [
-     79.245,
-     265.858
+     116.62,
+     262.442
     ],
-    "lufs_i": -20.94,
-    "st_p95": -17.69,
-    "st_max": -16.21,
-    "true_peak_dbtp": -4.31
+    "lufs_i": -20.98,
+    "st_p95": -17.49,
+    "st_max": -16.9,
+    "true_peak_dbtp": -4.3
    },
    "e01-v3-a4-s5-two-am": {
     "window": [
-     262.792,
-     363.333
+     261.438,
+     352.583
     ],
-    "lufs_i": -19.91,
-    "st_p95": -18.04,
-    "st_max": -15.86,
+    "lufs_i": -20.0,
+    "st_p95": -18.03,
+    "st_max": -16.13,
     "true_peak_dbtp": -3.15
    },
    "e01-v3-a4-s6-avalanche": {
     "window": [
-     363.333,
-     377.208
+     352.583,
+     359.708
     ],
-    "lufs_i": -16.94,
-    "st_p95": -15.13,
-    "st_max": -15.1,
+    "lufs_i": -18.44,
+    "st_p95": -17.71,
+    "st_max": -17.65,
     "true_peak_dbtp": -3.15
    },
    "e01-v3-a4-s7s8-return": {
     "window": [
-     379.167,
-     519.875
+     361.292,
+     494.708
     ],
-    "lufs_i": -19.98,
-    "st_p95": -17.21,
-    "st_max": -13.85,
+    "lufs_i": -19.97,
+    "st_p95": -17.57,
+    "st_max": -14.17,
     "true_peak_dbtp": -3.15
    }
   },
@@ -1389,381 +1444,401 @@
     "true_peak_dbtp": -3.15
    },
    {
-    "section": "S2 26A: the carve and the V.O.",
-    "cue": "e01-v3-a4-s2-night",
-    "start": 42.808,
-    "end": 46.492,
-    "lufs_i": -21.15,
-    "st_p95": -22.33,
-    "st_max": -22.31,
-    "true_peak_dbtp": -5.87
+    "section": "S1A the war room: the pulse in (the tiles; the V.O.)",
+    "cue": "e01-v35-a4-s1a-warroom",
+    "start": 45.708,
+    "end": 49.75,
+    "lufs_i": -24.31,
+    "st_p95": -24.01,
+    "st_max": -23.97,
+    "true_peak_dbtp": -15.08
    },
    {
-    "section": "S2 the count and TPOOL: the pedal",
-    "cue": "e01-v3-a4-s2-night",
-    "start": 46.492,
-    "end": 48.25,
-    "lufs_i": -30.66,
+    "section": "S1A the calls: LEVERAGE, his (Gerg, Tasya, AUHSOJ, the count)",
+    "cue": "e01-v35-a4-s1a-warroom",
+    "start": 49.75,
+    "end": 69.042,
+    "lufs_i": -20.23,
+    "st_p95": -18.96,
+    "st_max": -18.92,
+    "true_peak_dbtp": -5.14
+   },
+   {
+    "section": "S1A the 9:32 PM post, the notepad: his calm on top",
+    "cue": "e01-v35-a4-s1a-warroom",
+    "start": 69.042,
+    "end": 73.208,
+    "lufs_i": -16.42,
+    "st_p95": -15.95,
+    "st_max": -15.93,
+    "true_peak_dbtp": -3.64
+   },
+   {
+    "section": "S1B the flight: the hum, one felt note (relief)",
+    "cue": "e01-v35-a4-s1a-warroom",
+    "start": 73.208,
+    "end": 76.208,
+    "lufs_i": -22.99,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -16.56
+    "true_peak_dbtp": -8.11
+   },
+   {
+    "section": "S2 26A: the carve and the V.O.",
+    "cue": "e01-v3-a4-s2-night",
+    "start": 75.808,
+    "end": 79.492,
+    "lufs_i": -21.95,
+    "st_p95": -22.93,
+    "st_max": -22.9,
+    "true_peak_dbtp": -6.51
+   },
+   {
+    "section": "S2 the count: the pedal",
+    "cue": "e01-v3-a4-s2-night",
+    "start": 79.492,
+    "end": 81.792,
+    "lufs_i": -30.26,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -17.21
+   },
+   {
+    "section": "S2 TPOOL (v3.5): the 2008 palette, melancholy",
+    "cue": "e01-v3-a4-s2-night",
+    "start": 81.792,
+    "end": 87.875,
+    "lufs_i": -21.69,
+    "st_p95": -21.26,
+    "st_max": -21.21,
+    "true_peak_dbtp": -10.11
    },
    {
     "section": "S2 mark 3, the settle, the Rewind",
     "cue": "e01-v3-a4-s2-night",
-    "start": 48.25,
-    "end": 51.833,
-    "lufs_i": -21.53,
-    "st_p95": -20.94,
-    "st_max": -20.85,
-    "true_peak_dbtp": -6.13
+    "start": 87.875,
+    "end": 90.792,
+    "lufs_i": -21.44,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -8.64
    },
    {
     "section": "PLAN Neleh's desk, 11:52: the clockwork, the pad",
     "cue": "e01-v31-a4-plan",
-    "start": 51.833,
-    "end": 56.417,
-    "lufs_i": -23.39,
-    "st_p95": -22.82,
-    "st_max": -22.67,
-    "true_peak_dbtp": -10.55
+    "start": 90.792,
+    "end": 96.333,
+    "lufs_i": -22.96,
+    "st_p95": -22.05,
+    "st_max": -21.99,
+    "true_peak_dbtp": -10.38
    },
    {
     "section": "PLAN WORD + the waltz (3/4)",
     "cue": "e01-v31-a4-plan",
-    "start": 56.417,
-    "end": 62.042,
-    "lufs_i": -18.96,
-    "st_p95": -18.33,
-    "st_max": -18.31,
-    "true_peak_dbtp": -7.11
+    "start": 96.333,
+    "end": 99.083,
+    "lufs_i": -18.86,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.89
    },
    {
     "section": "PLAN the labels (4/4 Blueprint, thinned under the reading)",
     "cue": "e01-v31-a4-plan",
-    "start": 62.042,
-    "end": 74.542,
-    "lufs_i": -20.26,
-    "st_p95": -19.21,
-    "st_max": -19.05,
-    "true_peak_dbtp": -4.5
+    "start": 99.083,
+    "end": 111.583,
+    "lufs_i": -19.97,
+    "st_p95": -18.94,
+    "st_max": -18.83,
+    "true_peak_dbtp": -4.39
    },
    {
     "section": "PLAN \"Good question.\": the held chord",
     "cue": "e01-v31-a4-plan",
-    "start": 74.542,
-    "end": 76.729,
-    "lufs_i": -22.92,
+    "start": 111.583,
+    "end": 113.771,
+    "lufs_i": -22.99,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -10.31
+    "true_peak_dbtp": -9.81
    },
    {
     "section": "PLAN the path",
     "cue": "e01-v31-a4-plan",
-    "start": 76.729,
-    "end": 78.604,
-    "lufs_i": -17.28,
+    "start": 113.771,
+    "end": 115.646,
+    "lufs_i": -17.09,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -5.01
+    "true_peak_dbtp": -5.17
    },
    {
     "section": "PLAN the fold: stuck, the tape-stop into 11:59",
     "cue": "e01-v31-a4-plan",
-    "start": 78.604,
-    "end": 79.25,
-    "lufs_i": -16.86,
+    "start": 115.646,
+    "end": 116.625,
+    "lufs_i": -18.91,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -3.46
+    "true_peak_dbtp": -4.54
    },
    {
     "section": "a NOON: the call, the list, the post",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 79.25,
-    "end": 108.185,
-    "lufs_i": -19.82,
-    "st_p95": -16.96,
-    "st_max": -16.48,
-    "true_peak_dbtp": -4.33
+    "start": 116.625,
+    "end": 140.167,
+    "lufs_i": -19.62,
+    "st_p95": -17.46,
+    "st_max": -17.16,
+    "true_peak_dbtp": -4.95
    },
    {
     "section": "b Rima",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 108.185,
-    "end": 123.75,
-    "lufs_i": -22.88,
-    "st_p95": -21.39,
-    "st_max": -20.75,
-    "true_peak_dbtp": -4.66
+    "start": 140.167,
+    "end": 154.542,
+    "lufs_i": -22.47,
+    "st_p95": -20.47,
+    "st_max": -19.87,
+    "true_peak_dbtp": -5.05
    },
    {
     "section": "c the all-hands and the evening",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 123.75,
-    "end": 146.625,
-    "lufs_i": -22.95,
-    "st_p95": -21.21,
-    "st_max": -21.13,
-    "true_peak_dbtp": -6.14
+    "start": 154.542,
+    "end": 174.875,
+    "lufs_i": -22.75,
+    "st_p95": -20.58,
+    "st_max": -20.53,
+    "true_peak_dbtp": -7.87
    },
    {
-    "section": "d NOV 18 hearts",
+    "section": "d the boardroom at night: the phones, the clack",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 146.625,
-    "end": 151.417,
-    "lufs_i": -18.65,
-    "st_p95": -18.17,
-    "st_max": -18.09,
-    "true_peak_dbtp": -6.77
-   },
-   {
-    "section": "d the boardroom: the phones; they all light at once",
-    "cue": "e01-v3-a4-s3s4-board",
-    "start": 151.417,
-    "end": 167.708,
-    "lufs_i": -22.65,
-    "st_p95": -21.84,
-    "st_max": -21.56,
-    "true_peak_dbtp": -7.41
-   },
-   {
-    "section": "d the sincere beat",
-    "cue": "e01-v3-a4-s3s4-board",
-    "start": 167.708,
-    "end": 171.438,
-    "lufs_i": -17.27,
-    "st_p95": -17.62,
-    "st_max": -17.62,
-    "true_peak_dbtp": -4.31
-   },
-   {
-    "section": "rest: the dial tones",
-    "cue": "e01-v3-a4-s3s4-board",
-    "start": 171.438,
-    "end": 173.247,
-    "lufs_i": -28.91,
-    "st_p95": null,
-    "st_max": null,
-    "true_peak_dbtp": -14.63
+    "start": 174.875,
+    "end": 183.417,
+    "lufs_i": -21.94,
+    "st_p95": -21.05,
+    "st_max": -20.82,
+    "true_peak_dbtp": -6.83
    },
    {
     "section": "e the rival lab (the split)",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 173.247,
-    "end": 194.458,
-    "lufs_i": -22.46,
-    "st_p95": -20.86,
-    "st_max": -20.42,
-    "true_peak_dbtp": -4.77
+    "start": 184.222,
+    "end": 201.167,
+    "lufs_i": -22.17,
+    "st_p95": -19.83,
+    "st_max": -19.58,
+    "true_peak_dbtp": -8.06
    },
    {
     "section": "the lobby, his side: no score; one felt note on his look up",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 194.458,
-    "end": 202.458,
-    "lufs_i": -20.94,
-    "st_p95": -23.96,
-    "st_max": -23.96,
-    "true_peak_dbtp": -8.66
+    "start": 201.167,
+    "end": 209.167,
+    "lufs_i": -20.26,
+    "st_p95": -23.28,
+    "st_max": -23.28,
+    "true_peak_dbtp": -7.98
    },
    {
     "section": "f Sunday: the reversal (the phones), the lobby camera",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 202.458,
-    "end": 213.167,
-    "lufs_i": -22.87,
-    "st_p95": -22.05,
-    "st_max": -21.92,
-    "true_peak_dbtp": -5.76
+    "start": 209.167,
+    "end": 218.792,
+    "lufs_i": -22.17,
+    "st_p95": -20.63,
+    "st_max": -20.52,
+    "true_peak_dbtp": -6.73
    },
    {
     "section": "f Ttemme, the folder, the hourglass",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 213.167,
-    "end": 235.5,
-    "lufs_i": -21.22,
-    "st_p95": -19.56,
-    "st_max": -17.32,
-    "true_peak_dbtp": -4.77
+    "start": 218.792,
+    "end": 236.483,
+    "lufs_i": -21.0,
+    "st_p95": -19.2,
+    "st_max": -17.24,
+    "true_peak_dbtp": -4.3
    },
    {
     "section": "g the door: Tasya's floor",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 235.5,
-    "end": 257.458,
-    "lufs_i": -20.15,
-    "st_p95": -18.1,
-    "st_max": -17.78,
-    "true_peak_dbtp": -7.71
+    "start": 236.483,
+    "end": 253.458,
+    "lufs_i": -19.74,
+    "st_p95": -17.21,
+    "st_max": -17.12,
+    "true_peak_dbtp": -6.4
    },
    {
-    "section": "h Step four? (the hang)",
+    "section": "h Neleh's real face: the sincere beat (the solo viola over Step Four)",
     "cue": "e01-v3-a4-s3s4-board",
-    "start": 257.458,
-    "end": 262.792,
-    "lufs_i": -17.28,
-    "st_p95": -16.33,
-    "st_max": -16.32,
-    "true_peak_dbtp": -5.51
-   },
-   {
-    "section": "the held C into the dark room",
-    "cue": "e01-v3-a4-s3s4-board",
-    "start": 262.792,
-    "end": 264.458,
-    "lufs_i": -17.06,
+    "start": 253.458,
+    "end": 256.458,
+    "lufs_i": -17.27,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.05
+    "true_peak_dbtp": -5.3
+   },
+   {
+    "section": "i Alyi, alone: the Door on the solo violin, over the Db pedal",
+    "cue": "e01-v3-a4-s3s4-board",
+    "start": 256.458,
+    "end": 261.458,
+    "lufs_i": -21.34,
+    "st_p95": -21.0,
+    "st_max": -20.91,
+    "true_peak_dbtp": -8.11
+   },
+   {
+    "section": "S5 the hearts on his phone: the felt's first chord, the count",
+    "cue": "e01-v3-a4-s5-two-am",
+    "start": 261.458,
+    "end": 263.958,
+    "lufs_i": -23.66,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -8.02
    },
    {
     "section": "S5 the dark room at 2 AM: the felt, the Water Line warm",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 262.792,
-    "end": 267.944,
-    "lufs_i": -18.76,
-    "st_p95": -18.24,
-    "st_max": -18.21,
-    "true_peak_dbtp": -6.05
-   },
-   {
-    "section": "S5 the count (the felt's pulse under the V.O.)",
-    "cue": "e01-v3-a4-s5-two-am",
-    "start": 267.944,
-    "end": 274.542,
-    "lufs_i": -21.36,
-    "st_p95": -20.6,
-    "st_max": -20.32,
-    "true_peak_dbtp": -5.52
+    "start": 263.958,
+    "end": 266.958,
+    "lufs_i": -19.99,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -6.31
    },
    {
     "section": "S5 the Orb exchange: one held chord",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 274.542,
-    "end": 279.708,
-    "lufs_i": -21.68,
-    "st_p95": -20.47,
-    "st_max": -19.81,
+    "start": 266.958,
+    "end": 272.125,
+    "lufs_i": -21.23,
+    "st_p95": -19.73,
+    "st_max": -18.92,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "S5 Gerg's call: the Build in A-flat major (chip + felt)",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 279.708,
-    "end": 293.167,
-    "lufs_i": -18.45,
-    "st_p95": -17.59,
-    "st_max": -17.5,
+    "start": 272.125,
+    "end": 283.583,
+    "lufs_i": -18.01,
+    "st_p95": -17.57,
+    "st_max": -17.51,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "S5 the letter: the pedal and the pulse",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 293.167,
-    "end": 315.037,
-    "lufs_i": -20.62,
-    "st_p95": -19.19,
-    "st_max": -19.07,
-    "true_peak_dbtp": -7.56
+    "start": 283.583,
+    "end": 305.153,
+    "lufs_i": -20.68,
+    "st_p95": -19.29,
+    "st_max": -19.17,
+    "true_peak_dbtp": -7.7
    },
    {
     "section": "S5 the rest: ALYI -> \"He did both.\"",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 315.037,
-    "end": 319.485,
-    "lufs_i": -53.45,
-    "st_p95": null,
-    "st_max": null,
-    "true_peak_dbtp": -20.94
+    "start": 305.153,
+    "end": 309.61,
+    "lufs_i": -50.56,
+    "st_p95": -59.31,
+    "st_max": -59.31,
+    "true_peak_dbtp": -21.49
    },
    {
     "section": "S5 \"He did both.\": the pedal alone",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 319.485,
-    "end": 323.75,
-    "lufs_i": -21.8,
+    "start": 309.61,
+    "end": 313.875,
+    "lufs_i": -21.86,
     "st_p95": -21.66,
-    "st_max": -21.52,
-    "true_peak_dbtp": -9.87
+    "st_max": -21.53,
+    "true_peak_dbtp": -9.19
    },
    {
     "section": "S5 the check: the felt returns",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 323.75,
-    "end": 329.542,
-    "lufs_i": -17.32,
-    "st_p95": -20.68,
-    "st_max": -20.53,
+    "start": 313.875,
+    "end": 319.667,
+    "lufs_i": -17.18,
+    "st_p95": -20.5,
+    "st_max": -20.31,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "S5 the Build returns; the look (the held note)",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 329.542,
-    "end": 340.708,
-    "lufs_i": -20.35,
-    "st_p95": -17.6,
-    "st_max": -16.4,
+    "start": 319.667,
+    "end": 330.667,
+    "lufs_i": -20.53,
+    "st_p95": -17.96,
+    "st_max": -16.75,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "S5 the door: Tasya's floor (Ab -> C -> E -> Ab), two Rhodes chords; the badge (the third leaves)",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 340.708,
-    "end": 358.042,
-    "lufs_i": -20.28,
-    "st_p95": -19.16,
-    "st_max": -19.14,
-    "true_peak_dbtp": -9.13
+    "start": 330.667,
+    "end": 347.292,
+    "lufs_i": -20.39,
+    "st_p95": -19.25,
+    "st_max": -19.13,
+    "true_peak_dbtp": -8.55
    },
    {
     "section": "S5 \"leave it open.\": warm, open (no third), the ring-out to the first tile",
     "cue": "e01-v3-a4-s5-two-am",
-    "start": 358.042,
-    "end": 363.333,
-    "lufs_i": -18.16,
-    "st_p95": -18.04,
-    "st_max": -18.02,
+    "start": 347.292,
+    "end": 352.583,
+    "lufs_i": -18.69,
+    "st_p95": -18.44,
+    "st_max": -18.43,
     "true_peak_dbtp": -3.15
    },
    {
-    "section": "S6 phrase 1: the compile (A1, A4)",
+    "section": "S6 phrase 1: the compile (A1)",
     "cue": "e01-v3-a4-s6-avalanche",
-    "start": 363.333,
-    "end": 368.333,
-    "lufs_i": -17.36,
-    "st_p95": -16.54,
-    "st_max": -16.46,
-    "true_peak_dbtp": -4.68
-   },
-   {
-    "section": "S6 phrase 2: Step Four, Alyi, Neleh (A6-A7)",
-    "cue": "e01-v3-a4-s6-avalanche",
-    "start": 368.333,
-    "end": 373.333,
-    "lufs_i": -16.88,
-    "st_p95": -15.85,
-    "st_max": -15.7,
-    "true_peak_dbtp": -3.23
-   },
-   {
-    "section": "S6 phrase 3: the Water Line, the quiet vote (A9)",
-    "cue": "e01-v3-a4-s6-avalanche",
-    "start": 373.333,
-    "end": 375.833,
-    "lufs_i": -17.1,
+    "start": 352.583,
+    "end": 355.083,
+    "lufs_i": -22.38,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.1
+    "true_peak_dbtp": -7.62
    },
    {
-    "section": "S6 phrase 4: the full band (A13) -> the stop",
+    "section": "S6 phrase 2: Step Four, Alyi resists (A6)",
     "cue": "e01-v3-a4-s6-avalanche",
-    "start": 375.833,
-    "end": 377.208,
-    "lufs_i": -16.54,
+    "start": 355.083,
+    "end": 357.271,
+    "lufs_i": -17.24,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.47
+   },
+   {
+    "section": "S6 Neleh's window: the board's F pedal, the quiet vote",
+    "cue": "e01-v3-a4-s6-avalanche",
+    "start": 357.271,
+    "end": 358.208,
+    "lufs_i": -23.48,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -15.05
+   },
+   {
+    "section": "S6 the full band (A13) -> the stop",
+    "cue": "e01-v3-a4-s6-avalanche",
+    "start": 358.208,
+    "end": 359.708,
+    "lufs_i": -16.27,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -3.15
@@ -1771,79 +1846,79 @@
    {
     "section": "S7 a the STRAIGHT violin, then its decay",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 379.167,
-    "end": 397.342,
-    "lufs_i": -21.33,
-    "st_p95": -18.74,
-    "st_max": -18.56,
-    "true_peak_dbtp": -12.26
+    "start": 361.292,
+    "end": 380.925,
+    "lufs_i": -20.91,
+    "st_p95": -18.07,
+    "st_max": -17.8,
+    "true_peak_dbtp": -12.08
    },
    {
     "section": "S7 b Tasya's floor (pre-lap -> below/above/around -> bloom -> home)",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 397.342,
-    "end": 414.083,
-    "lufs_i": -18.04,
-    "st_p95": -17.22,
-    "st_max": -16.99,
-    "true_peak_dbtp": -5.82
+    "start": 380.925,
+    "end": 397.708,
+    "lufs_i": -18.34,
+    "st_p95": -17.7,
+    "st_max": -17.44,
+    "true_peak_dbtp": -5.92
    },
    {
     "section": "S7 c1 LEVERAGE (fade-in -> the bang)",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 414.083,
-    "end": 425.417,
-    "lufs_i": -19.33,
-    "st_p95": -18.62,
-    "st_max": -18.61,
-    "true_peak_dbtp": -7.04
+    "start": 397.708,
+    "end": 407.625,
+    "lufs_i": -19.34,
+    "st_p95": -18.99,
+    "st_max": -18.68,
+    "true_peak_dbtp": -6.32
    },
    {
     "section": "S7 c1 thinned to the F pedal",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 425.417,
-    "end": 453.802,
+    "start": 407.625,
+    "end": 433.135,
     "lufs_i": -19.36,
-    "st_p95": -17.65,
-    "st_max": -16.93,
-    "true_peak_dbtp": -6.4
+    "st_p95": -17.89,
+    "st_max": -17.47,
+    "true_peak_dbtp": -6.72
    },
    {
     "section": "S7 STOP: \"of what?\" -> the stamp (the room)",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 453.802,
-    "end": 461.658,
-    "lufs_i": -49.69,
-    "st_p95": -58.44,
-    "st_max": -58.44,
-    "true_peak_dbtp": -16.74
+    "start": 433.135,
+    "end": 440.992,
+    "lufs_i": -43.65,
+    "st_p95": -52.4,
+    "st_max": -52.4,
+    "true_peak_dbtp": -12.31
    },
    {
     "section": "S7 c2 the C pedal (the posts, his stream); the turn",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 461.658,
-    "end": 472.668,
-    "lufs_i": -19.96,
-    "st_p95": -19.52,
-    "st_max": -19.35,
-    "true_peak_dbtp": -7.16
+    "start": 440.992,
+    "end": 452.002,
+    "lufs_i": -20.32,
+    "st_p95": -19.15,
+    "st_max": -19.08,
+    "true_peak_dbtp": -5.5
    },
    {
     "section": "S7 d the held beat (the sand stands), then the Build into the sign",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 472.668,
-    "end": 477.366,
-    "lufs_i": -17.72,
-    "st_p95": -17.51,
-    "st_max": -17.41,
-    "true_peak_dbtp": -6.15
+    "start": 452.002,
+    "end": 456.7,
+    "lufs_i": -18.06,
+    "st_p95": -17.89,
+    "st_max": -17.78,
+    "true_peak_dbtp": -6.43
    },
    {
     "section": "S8 e VICTORY LAP, one size too big + one chip note",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 477.366,
-    "end": 480.658,
-    "lufs_i": -14.08,
+    "start": 456.7,
+    "end": 459.992,
+    "lufs_i": -14.38,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -3.15
@@ -1851,88 +1926,88 @@
    {
     "section": "S8 e the flat line",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 480.658,
-    "end": 482.858,
-    "lufs_i": -23.92,
+    "start": 459.992,
+    "end": 462.192,
+    "lufs_i": -24.19,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -14.39
+    "true_peak_dbtp": -16.1
    },
    {
     "section": "S8 designed rest: the lobby CU",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 482.858,
-    "end": 485.199,
-    "lufs_i": -46.17,
+    "start": 462.192,
+    "end": 464.533,
+    "lufs_i": -46.42,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -29.0
+    "true_peak_dbtp": -29.31
    },
    {
     "section": "S8.04 the count: F F F F (the knee's first four) under his V.O.; \"okay.\"",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 485.199,
-    "end": 491.237,
-    "lufs_i": -26.85,
-    "st_p95": -26.94,
-    "st_max": -26.74,
-    "true_peak_dbtp": -14.64
+    "start": 464.533,
+    "end": 470.57,
+    "lufs_i": -27.29,
+    "st_p95": -27.52,
+    "st_max": -27.48,
+    "true_peak_dbtp": -15.83
    },
    {
     "section": "S8 the felt settle",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 491.237,
-    "end": 493.0,
-    "lufs_i": -19.97,
+    "start": 470.57,
+    "end": 472.333,
+    "lufs_i": -19.02,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -7.12
+    "true_peak_dbtp": -7.63
    },
    {
     "section": "S8 f the vault's F (the coda)",
     "cue": "e01-v3-a4-s7s8-return",
-    "start": 493.0,
-    "end": 519.875,
-    "lufs_i": -26.8,
-    "st_p95": -26.45,
-    "st_max": -26.17,
-    "true_peak_dbtp": -15.67
+    "start": 472.333,
+    "end": 494.708,
+    "lufs_i": -27.16,
+    "st_p95": -26.69,
+    "st_max": -26.66,
+    "true_peak_dbtp": -15.04
    }
   ],
   "digital_silence": [
    {
     "t0": 27.74,
-    "t1": 42.8,
+    "t1": 45.71,
     "marked": true
    },
    {
-    "t0": 195.97,
-    "t1": 199.7,
+    "t0": 202.68,
+    "t1": 206.41,
     "marked": true
    },
    {
-    "t0": 315.04,
-    "t1": 319.48,
+    "t0": 305.16,
+    "t1": 309.6,
     "marked": true
    },
    {
-    "t0": 377.21,
-    "t1": 381.32,
+    "t0": 359.71,
+    "t1": 363.45,
     "marked": true
    },
    {
-    "t0": 453.81,
-    "t1": 461.65,
+    "t0": 433.14,
+    "t1": 440.98,
     "marked": true
    },
    {
-    "t0": 472.68,
-    "t1": 474.12,
+    "t0": 452.01,
+    "t1": 453.45,
     "marked": true
    },
    {
-    "t0": 483.12,
-    "t1": 485.2,
+    "t0": 462.45,
+    "t1": 464.54,
     "marked": true
    }
   ],
@@ -1940,49 +2015,49 @@
   "marked_silences": [
    {
     "t0": 27.733,
-    "t1": 42.793,
-    "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post and the fall to night (v32-S1.13: the suite's air, then the drone) -> the carve",
+    "t1": 45.693,
+    "what": "D6: the Remove click -> the phone's buzz (every bus at zero in the mix), then no score under \"super.\" (the suite's air holds it), nor under his 1:46 PM post typed twice (v32-S1.13) -> the phone lights: the war room's pulse (v3.5)",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 195.958,
-    "t1": 199.722,
+    "t0": 202.667,
+    "t1": 206.43,
     "what": "the lobby by day, his side (v3.2): no score under the lanyard, the selfie and his post (the lobby's room; the split's pedal released under it) -> one felt note on his look up",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 315.037,
-    "t1": 319.485,
+    "t0": 305.153,
+    "t1": 309.61,
     "what": "the scroll stops on ALYI -> \"He did both.\" (no score: the chime, \"Alyi signed it.\" and \"alyi voted.\" play in the room)",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 453.802,
-    "t1": 461.658,
+    "t0": 433.135,
+    "t1": 440.992,
     "what": "the dead stop on \"of what?\" -> the stamp (Mada's pause, \"Good question.\", \"good question.\" and the long hold play in the room)",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 472.668,
-    "t1": 474.125,
+    "t0": 452.002,
+    "t1": 453.458,
     "what": "the hourglass shatters: the sand holds its shape (k173-207) and the music holds its breath with it (runway.md §11.6)",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 483.108,
-    "t1": 485.229,
+    "t0": 462.442,
+    "t1": 464.563,
     "what": "the lobby CU \"silent like the first\" (v3.4: to the count): no score after the bonk (the neon's F); the flat line's tail is cut under the bonk (v3.2 EL: it hovered at -60 dBFS and read as a 50 ms fragment)",
     "digital_zero": true,
     "peak_dbfs": null
    },
    {
-    "t0": 377.208,
-    "t1": 381.347,
+    "t0": 359.708,
+    "t1": 363.472,
     "what": "the dead stop on MADA's label -> the Monday bullpen (the dark room's air, then the bullpen's, hold it)",
     "digital_zero": true,
     "peak_dbfs": null
@@ -1991,55 +2066,55 @@
   "holes": [
    {
     "t0": 27.75,
-    "t1": 42.8,
+    "t1": 45.7,
     "designed": true,
     "what": null
    },
    {
-    "t0": 51.85,
-    "t1": 52.35,
+    "t0": 90.8,
+    "t1": 91.3,
     "designed": true,
     "what": "Neleh's desk at 11:52: her office clock first (SFX), then her clockwork"
    },
    {
-    "t0": 196.0,
-    "t1": 199.7,
+    "t0": 202.7,
+    "t1": 206.4,
     "designed": true,
     "what": "the lobby by day, his side (v3.2): no score, the lobby's room; one felt note on his look up"
    },
    {
-    "t0": 315.05,
-    "t1": 319.55,
+    "t0": 305.2,
+    "t1": 309.7,
     "designed": true,
     "what": null
    },
    {
-    "t0": 377.25,
-    "t1": 381.3,
+    "t0": 359.75,
+    "t1": 363.45,
     "designed": true,
     "what": null
    },
    {
-    "t0": 453.85,
-    "t1": 461.65,
+    "t0": 433.15,
+    "t1": 441.0,
     "designed": true,
     "what": null
    },
    {
-    "t0": 472.7,
-    "t1": 474.1,
+    "t0": 452.05,
+    "t1": 453.45,
     "designed": true,
     "what": null
    },
    {
-    "t0": 483.15,
-    "t1": 485.25,
+    "t0": 462.45,
+    "t1": 464.55,
     "designed": true,
     "what": "the lobby: the CU \"silent like the first\" on the neon's F (to the count, v3.4)"
    },
    {
-    "t0": 490.8,
-    "t1": 491.2,
+    "t0": 470.15,
+    "t1": 470.55,
     "designed": true,
     "what": "the last F's release and \"okay.\""
    }
@@ -2050,48 +2125,48 @@
     27.75
    ],
    [
-    42.8,
-    51.85
+    45.7,
+    90.8
    ],
    [
-    52.35,
-    196.0
+    91.3,
+    202.7
    ],
    [
-    199.7,
-    315.05
+    206.4,
+    305.2
    ],
    [
-    319.55,
-    359.45
+    309.7,
+    348.85
    ],
    [
-    359.65,
-    363.25
+    348.9,
+    352.5
    ],
    [
-    363.3,
-    377.25
+    352.55,
+    359.75
    ],
    [
-    381.3,
-    453.85
+    363.45,
+    433.15
    ],
    [
-    461.65,
-    472.7
+    441.0,
+    452.05
    ],
    [
-    474.1,
-    483.15
+    453.45,
+    462.45
    ],
    [
-    485.25,
-    490.8
+    464.55,
+    470.15
    ],
    [
-    491.2,
-    519.85
+    470.55,
+    494.7
    ]
   ],
   "fragments_under_2s": [],
@@ -2140,6 +2215,53 @@
      "marker at 26.0 s: no clear onset within 10 ms ({'t': 26.0, 'offset_ms': np.float64(13.3), 'strength': 1.73})"
     ]
    },
+   "e01-v35-a4-s1a-warroom": {
+    "underscore": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.0,
+      "lra": 7.69,
+      "true_peak_db": -3.64,
+      "peak_db": -3.65,
+      "rms_db": -21.54,
+      "crest_db": 17.89,
+      "seconds": 34.0
+     }
+    },
+    "f_major_written_ok": true,
+    "f_major_spectral_ok": true,
+    "f_major_fails": [],
+    "knee_completion": 0,
+    "knee_whole": 0,
+    "st_p95": -16.6,
+    "band_2_6k_db": -29.2,
+    "balance": {
+     "piano": 27,
+     "orch": 30,
+     "bigband": 0,
+     "chip": 43
+    },
+    "chip_share": 43,
+    "warnings": [
+     "marker at 2.5 s: no clear onset within 10 ms ({'t': 2.5, 'offset_ms': np.float64(28.0), 'strength': 6.89})",
+     "marker at 6.5417 s: no clear onset within 10 ms ({'t': 6.5417, 'offset_ms': np.float64(50.3), 'strength': 4.12})",
+     "marker at 20.2117 s: no clear onset within 10 ms ({'t': 20.2117, 'offset_ms': np.float64(-17.0), 'strength': 3.25})",
+     "marker at 28.4167 s: no clear onset within 10 ms ({'t': 28.4167, 'offset_ms': np.float64(52.6), 'strength': 1.93})",
+     "underscore short-term p95 -16.6 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+    ]
+   },
    "e01-v3-a4-s2-night": {
     "underscore": {
      "target_lufs": -22.0,
@@ -2157,12 +2279,12 @@
      },
      "measured": {
       "lufs": -22.0,
-      "lra": 5.73,
-      "true_peak_db": -5.87,
-      "peak_db": -5.88,
-      "rms_db": -25.73,
-      "crest_db": 19.85,
-      "seconds": 9.825
+      "lra": 7.46,
+      "true_peak_db": -6.51,
+      "peak_db": -6.52,
+      "rms_db": -25.09,
+      "crest_db": 18.57,
+      "seconds": 15.7833
      }
     },
     "f_major_written_ok": true,
@@ -2170,17 +2292,20 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -20.84,
-    "band_2_6k_db": -36.9,
+    "st_p95": -20.87,
+    "band_2_6k_db": -25.8,
     "balance": {
-     "piano": 88,
-     "orch": 7,
+     "piano": 55,
+     "orch": 6,
      "bigband": 0,
-     "chip": 5
+     "chip": 39
     },
-    "chip_share": 5,
+    "chip_share": 39,
     "warnings": [
-     "marker at 0.5 s: no clear onset within 10 ms ({'t': 0.5, 'offset_ms': np.float64(28.0), 'strength': 1.92})"
+     "marker at 0.5 s: no clear onset within 10 ms ({'t': 0.5, 'offset_ms': np.float64(28.0), 'strength': 1.91})",
+     "marker at 10.1083 s: no clear onset within 10 ms ({'t': 10.1083, 'offset_ms': np.float64(30.4), 'strength': 1.99})",
+     "marker at 10.9833 s: no clear onset within 10 ms ({'t': 10.9833, 'offset_ms': np.float64(16.7), 'strength': 2.23})",
+     "sub under room_drone (the dark room) 0.9-15.483 s: < 60 Hz reads -12.4 dB of the total (limit -18.0; from {'chip': 100})"
     ]
    },
    "e01-v31-a4-plan": {
@@ -2200,38 +2325,30 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 4.86,
-      "true_peak_db": -3.46,
-      "peak_db": -3.47,
-      "rms_db": -22.41,
-      "crest_db": 18.94,
-      "seconds": 28.2167
+      "lra": 4.79,
+      "true_peak_db": -4.39,
+      "peak_db": -4.39,
+      "rms_db": -22.45,
+      "crest_db": 18.06,
+      "seconds": 26.6333
      }
     },
     "f_major_written_ok": true,
-    "f_major_spectral_ok": false,
-    "f_major_fails": [
-     {
-      "t0": 27.25,
-      "t1": 27.854,
-      "a_over_f": 0.104,
-      "cls": null
-     }
-    ],
+    "f_major_spectral_ok": true,
+    "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -18.28,
-    "band_2_6k_db": -20.2,
+    "st_p95": -17.98,
+    "band_2_6k_db": -20.1,
     "balance": {
      "piano": 0,
-     "orch": 59,
+     "orch": 56,
      "bigband": 0,
-     "chip": 41
+     "chip": 44
     },
-    "chip_share": 41,
+    "chip_share": 44,
     "warnings": [
-     "marker at 1.0425 s: no clear onset within 10 ms ({'t': 1.0425, 'offset_ms': np.float64(10.8), 'strength': 4.42})",
-     "F-major check (spectral): 1 F-bass window(s) carry A energy that NO written note explains (a resonance, not a written third), first at 27.25 s, worst sieved A/F 0.09: chip ~107.7 Hz, chip ~216.1 Hz, perc ~442.4 Hz, perc ~446.8 Hz, perc ~450.4 Hz -- audition: does it sound major?"
+     "marker at 1.0425 s: no clear onset within 10 ms ({'t': 1.0425, 'offset_ms': np.float64(10.8), 'strength': 4.42})"
     ]
    },
    "e01-v3-a4-s3s4-board": {
@@ -2251,12 +2368,12 @@
      },
      "measured": {
       "lufs": -21.0,
-      "lra": 6.49,
-      "true_peak_db": -4.31,
-      "peak_db": -4.32,
-      "rms_db": -23.61,
-      "crest_db": 19.29,
-      "seconds": 188.1083
+      "lra": 6.62,
+      "true_peak_db": -4.3,
+      "peak_db": -4.31,
+      "rms_db": -23.71,
+      "crest_db": 19.4,
+      "seconds": 148.3167
      }
     },
     "f_major_written_ok": true,
@@ -2264,28 +2381,25 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -17.78,
-    "band_2_6k_db": -20.1,
+    "st_p95": -17.5,
+    "band_2_6k_db": -20.0,
     "balance": {
-     "piano": 5,
-     "orch": 72,
-     "bigband": 23,
+     "piano": 7,
+     "orch": 68,
+     "bigband": 25,
      "chip": 0
     },
     "chip_share": 0,
     "warnings": [
      "marker at 0.8125 s: no clear onset within 10 ms ({'t': 0.8125, 'offset_ms': np.float64(27.5), 'strength': 1.66})",
-     "marker at 19.075 s: no clear onset within 10 ms ({'t': 19.075, 'offset_ms': np.float64(10.3), 'strength': 1.65})",
-     "marker at 19.7 s: no clear onset within 10 ms ({'t': 19.7, 'offset_ms': np.float64(-44.0), 'strength': 1.78})",
-     "marker at 59.3307 s: no clear onset within 10 ms ({'t': 59.3307, 'offset_ms': np.float64(29.3), 'strength': 1.7})",
-     "marker at 67.875 s: no clear onset within 10 ms ({'t': 67.875, 'offset_ms': np.float64(15.7), 'strength': 2.19})",
-     "marker at 72.1667 s: no clear onset within 10 ms ({'t': 72.1667, 'offset_ms': np.float64(12.0), 'strength': 4.65})",
-     "marker at 72.9897 s: no clear onset within 10 ms ({'t': 72.9897, 'offset_ms': np.float64(42.3), 'strength': 1.63})",
-     "marker at 80.564 s: no clear onset within 10 ms ({'t': 80.564, 'offset_ms': np.float64(-49.3), 'strength': 1.86})",
-     "marker at 107.1927 s: no clear onset within 10 ms ({'t': 107.1927, 'offset_ms': np.float64(18.0), 'strength': 1.69})",
-     "marker at 123.8333 s: no clear onset within 10 ms ({'t': 123.8333, 'offset_ms': np.float64(25.4), 'strength': 2.97})",
-     "marker at 134.4167 s: no clear onset within 10 ms ({'t': 134.4167, 'offset_ms': np.float64(15.3), 'strength': 2.02})",
-     "marker at 159.6667 s: no clear onset within 10 ms ({'t': 159.6667, 'offset_ms': np.float64(-16.0), 'strength': 1.75})"
+     "marker at 54.3307 s: no clear onset within 10 ms ({'t': 54.3307, 'offset_ms': np.float64(21.3), 'strength': 1.51})",
+     "marker at 59.073 s: no clear onset within 10 ms ({'t': 59.073, 'offset_ms': np.float64(-38.3), 'strength': 1.44})",
+     "marker at 66.3603 s: no clear onset within 10 ms ({'t': 66.3603, 'offset_ms': np.float64(53.0), 'strength': 2.08})",
+     "marker at 78.0227 s: no clear onset within 10 ms ({'t': 78.0227, 'offset_ms': np.float64(20.0), 'strength': 2.12})",
+     "marker at 93.1667 s: no clear onset within 10 ms ({'t': 93.1667, 'offset_ms': np.float64(25.3), 'strength': 3.25})",
+     "marker at 102.6667 s: no clear onset within 10 ms ({'t': 102.6667, 'offset_ms': np.float64(10.6), 'strength': 1.86})",
+     "marker at 121.9083 s: no clear onset within 10 ms ({'t': 121.9083, 'offset_ms': np.float64(-28.3), 'strength': 1.78})",
+     "marker at 140.8333 s: no clear onset within 10 ms ({'t': 140.8333, 'offset_ms': np.float64(-33.3), 'strength': 2.04})"
     ]
    },
    "e01-v3-a4-s5-two-am": {
@@ -2305,12 +2419,12 @@
      },
      "measured": {
       "lufs": -20.01,
-      "lra": 7.45,
+      "lra": 7.53,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -23.11,
-      "crest_db": 19.95,
-      "seconds": 102.2647
+      "rms_db": -22.92,
+      "crest_db": 19.76,
+      "seconds": 91.125
      }
     },
     "f_major_written_ok": true,
@@ -2318,24 +2432,26 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -18.06,
-    "band_2_6k_db": -23.6,
+    "st_p95": -18.0,
+    "band_2_6k_db": -23.5,
     "balance": {
-     "piano": 69,
-     "orch": 27,
+     "piano": 67,
+     "orch": 30,
      "bigband": 0,
-     "chip": 3
+     "chip": 4
     },
-    "chip_share": 3,
+    "chip_share": 4,
     "warnings": [
-     "marker at 68.5938 s: no clear onset within 10 ms ({'t': 68.5938, 'offset_ms': np.float64(-57.8), 'strength': 1.45})",
-     "marker at 79.6697 s: no clear onset within 10 ms ({'t': 79.6697, 'offset_ms': np.float64(42.3), 'strength': 2.66})",
-     "marker at 87.7017 s: no clear onset within 10 ms ({'t': 87.7017, 'offset_ms': np.float64(26.3), 'strength': 1.86})"
+     "marker at 2.57 s: no clear onset within 10 ms ({'t': 2.57, 'offset_ms': np.float64(11.3), 'strength': 2.12})",
+     "marker at 15.4688 s: no clear onset within 10 ms ({'t': 15.4688, 'offset_ms': np.float64(-28.8), 'strength': 1.88})",
+     "marker at 58.2812 s: no clear onset within 10 ms ({'t': 58.2812, 'offset_ms': np.float64(-43.9), 'strength': 2.45})",
+     "marker at 69.2383 s: no clear onset within 10 ms ({'t': 69.2383, 'offset_ms': np.float64(20.4), 'strength': 3.26})",
+     "marker at 76.7703 s: no clear onset within 10 ms ({'t': 76.7703, 'offset_ms': np.float64(-53.0), 'strength': 1.7})"
     ]
    },
    "e01-v3-a4-s6-avalanche": {
     "underscore": {
-     "target_lufs": -17.0,
+     "target_lufs": -18.5,
      "ceiling_dbtp": -3.0,
      "comp": {
       "thresh_db": -28,
@@ -2349,13 +2465,13 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -17.0,
-      "lra": 4.07,
+      "lufs": -18.51,
+      "lra": 2.81,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -19.94,
-      "crest_db": 16.78,
-      "seconds": 15.8333
+      "rms_db": -21.77,
+      "crest_db": 18.62,
+      "seconds": 8.7083
      }
     },
     "f_major_written_ok": true,
@@ -2363,16 +2479,19 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -15.18,
-    "band_2_6k_db": -16.6,
+    "st_p95": -17.74,
+    "band_2_6k_db": -17.4,
     "balance": {
-     "piano": 18,
-     "orch": 41,
-     "bigband": 18,
-     "chip": 22
+     "piano": 7,
+     "orch": 49,
+     "bigband": 25,
+     "chip": 19
     },
-    "chip_share": 22,
-    "warnings": []
+    "chip_share": 19,
+    "warnings": [
+     "motif BUILD is listed in META motif_ids but was not found in any line",
+     "motif STEP_FOUR is listed in META motif_ids but was not found in any line"
+    ]
    },
    "e01-v3-a4-s7s8-return": {
     "underscore": {
@@ -2390,13 +2509,13 @@
       "q": 0.7
      },
      "measured": {
-      "lufs": -20.01,
-      "lra": 10.6,
+      "lufs": -20.02,
+      "lra": 10.92,
       "true_peak_db": -3.15,
-      "peak_db": -3.17,
-      "rms_db": -22.9,
-      "crest_db": 19.73,
-      "seconds": 144.9083
+      "peak_db": -3.16,
+      "rms_db": -22.98,
+      "crest_db": 19.82,
+      "seconds": 137.6167
      }
     },
     "f_major_written_ok": true,
@@ -2404,8 +2523,8 @@
     "f_major_fails": [],
     "knee_completion": 0,
     "knee_whole": 0,
-    "st_p95": -17.22,
-    "band_2_6k_db": -21.7,
+    "st_p95": -17.62,
+    "band_2_6k_db": -22.0,
     "balance": {
      "piano": 6,
      "orch": 83,
@@ -2415,10 +2534,13 @@
     "chip_share": 9,
     "warnings": [
      "marker at 2.18 s: no clear onset within 10 ms ({'t': 2.18, 'offset_ms': np.float64(-12.0), 'strength': 3.52})",
-     "marker at 30.1417 s: no clear onset within 10 ms ({'t': 30.1417, 'offset_ms': np.float64(-59.0), 'strength': 1.53})",
-     "marker at 35.5417 s: no clear onset within 10 ms ({'t': 35.5417, 'offset_ms': np.float64(-16.4), 'strength': 1.77})",
-     "marker at 86.5833 s: no clear onset within 10 ms ({'t': 86.5833, 'offset_ms': np.float64(30.0), 'strength': 2.15})",
-     "marker at 96.7917 s: no clear onset within 10 ms ({'t': 96.7917, 'offset_ms': np.float64(37.6), 'strength': 3.58})"
+     "marker at 30.1667 s: no clear onset within 10 ms ({'t': 30.1667, 'offset_ms': np.float64(-57.4), 'strength': 1.57})",
+     "marker at 31.6 s: no clear onset within 10 ms ({'t': 31.6, 'offset_ms': np.float64(16.0), 'strength': 2.15})",
+     "marker at 35.2783 s: no clear onset within 10 ms ({'t': 35.2783, 'offset_ms': np.float64(-17.0), 'strength': 1.74})",
+     "marker at 38.2917 s: no clear onset within 10 ms ({'t': 38.2917, 'offset_ms': np.float64(-30.4), 'strength': 1.88})",
+     "marker at 83.7917 s: no clear onset within 10 ms ({'t': 83.7917, 'offset_ms': np.float64(29.6), 'strength': 1.74})",
+     "marker at 94.0 s: no clear onset within 10 ms ({'t': 94.0, 'offset_ms': np.float64(37.3), 'strength': 2.96})",
+     "marker at 97.908 s: no clear onset within 10 ms ({'t': 97.908, 'offset_ms': np.float64(-60.0), 'strength': 1.46})"
     ]
    }
   }

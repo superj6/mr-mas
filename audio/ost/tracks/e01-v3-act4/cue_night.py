@@ -29,10 +29,16 @@ def build():
     PED0 = Lend(VO) + 8
     MARK1 = A('S2.02', 14)
     # v3.1: S2.03 (TPOOL) and S2.04 are cut; the Orb's light counts all three marks in S2.02 (mark 3 at + 36 f)
-    MARK3 = A('S2.04', 13) if CLK.has('S2.04') else A('S2.02', 36)
-    SETTLE = A('S2.05')
+    TPOOL = CLK.has('v35-43.01')                          # v3.5: TPOOL, rebuilt, between the count and the rewind
     WHIP = A(CLK.ORDER[CLK.ORDER.index('S2.05') + 1])      # the whip: Neleh's desk at 11:52 (v31-S3.00p)
-    assert abs(SETTLE + 60 - WHIP) < 0.6 and NUDGE < Lon(VO), (SETTLE, WHIP, NUDGE)
+    if TPOOL:
+        # v3.5: S2.05 is 0.5 s longer at its head: the eye-light steps onto mark 3 first, then the rewind
+        MARK3 = A('S2.05', 2)
+        SETTLE = WHIP - 60
+    else:
+        MARK3 = A('S2.04', 13) if CLK.has('S2.04') else A('S2.02', 36)
+        SETTLE = A('S2.05')
+    assert abs(SETTLE + 60 - WHIP) < 0.6 and NUDGE < Lon(VO) and MARK3 < SETTLE, (SETTLE, WHIP, NUDGE, MARK3)
     IN = CARVE - NIGHT_PRELAP_S * FPS                    # the re-entry: under the post's last palette step (v3.3 X3)
     cue = FCue(ID, IN, WHIP, pre=12)
     s = cue.s
@@ -47,8 +53,33 @@ def build():
     a.ch('felt', ['F3', 'C4'], s(IN), 1.25 + NIGHT_PRELAP_S, 0.28, lock=True, roll=0.008)
     a.n('felt_mech', 60, s(IN), 0.1, 0.3, lock=True)
     a.n('felt', 'G4', s(NUDGE), 3.75, 0.44, lock=True)
-    rebow(a, 'vc', 'F3', s(PED0), s(MARK3) + 0.6, 0.15, seg=4.0, xf=1.0, first_att=1.6, last_rel=1.2, art='sus', lp=1100)
-    rebow(a, 'vla', 'C4', s(PED0), s(MARK3) + 0.6, 0.13, seg=4.0, xf=1.0, first_att=1.8, last_rel=1.2, art='sus', lp=1300)
+    PED1 = A('v35-43.01') + 6 if TPOOL else MARK3            # v3.5: the pedal gives way to TPOOL's 2008 palette
+    rebow(a, 'vc', 'F3', s(PED0), s(PED1) + 0.6, 0.15, seg=4.0, xf=1.0, first_att=1.6, last_rel=1.2, art='sus', lp=1100)
+    rebow(a, 'vla', 'C4', s(PED0), s(PED1) + 0.6, 0.13, seg=4.0, xf=1.0, first_att=1.8, last_rel=1.2, art='sus', lp=1300)
+    if TPOOL:
+        # v3.5 TPOOL (sc 43, v35-43.01-43.02): melancholy, in the 2008 palette (ERA TIERS T2, the main title's 2008-14
+        # bar: the band through the 16-bit sample-chip, swung, A-flat colours, never F major; no tape, no drums).  The
+        # dark room's felt line becomes the sample-chip piano's: the Water Line's head over D-flat maj7 as the staff
+        # pass the sheet; passed again, over B-flat minor9, the line settles C4 -> F4 (it held: he walked out still in
+        # charge), and A-flat/C rings as the CEO walks out, into the eye-light on mark 3 (the felt's E-flat4)
+        T1, T2_ = A('v35-43.01'), A('v35-43.02')
+        CEO = A('v35-43.02', 24)
+        for inst, ps, f0, f1, v in (('snes_str', ['Db3', 'Ab3', 'C4', 'F4'], T1, T2_, 0.3),
+                                    ('snes_str', ['Bb2', 'F3', 'Db4', 'C4'], T2_, CEO, 0.3),
+                                    ('snes_str', ['C3', 'G3', 'Eb4', 'Ab3'], CEO, MARK3 + 10, 0.28)):
+            for p in ps:
+                a.n(inst, p, s(f0), (f1 - f0) / FPS + 0.15, v, lock=True, att=0.25, rel=0.5)
+        sw = Q_ = 0.625
+        for k, (p, beats) in enumerate((('F4', 1.0), ('F4', 1.0), ('F4', 1.0), ('G4', 0.5), ('F4', 1.5))):
+            t_ = s(T1 + 3) + sum((1.0, 1.0, 1.0, 0.5)[:k]) * Q_ + (Q_ / 6 if k == 4 else 0.0)
+            a.n('snes_piano', p, t_, beats * Q_ * 0.95, 0.4, lock=True)
+        for k, (p, beats) in enumerate((('F4', 1.0), ('F4', 1.0), ('C4', 1.0), ('F4', 1.0))):
+            a.n('snes_piano', p, s(T2_ + 3) + k * Q_, beats * Q_ * 0.95, 0.38, lock=True)
+        a.n('snes_piano', 'Ab3', s(CEO), 1.2, 0.3, lock=True)
+        a.n('snes_bass', 'Db2', s(T1), (T2_ - T1) / FPS, 0.34, lock=True)
+        a.n('snes_bass', 'Bb1', s(T2_), (CEO - T2_) / FPS, 0.34, lock=True)
+        a.n('snes_bass', 'Ab1', s(CEO), (MARK3 - CEO) / FPS + 0.3, 0.3, lock=True)
+        del sw
     a.n('felt', 'Eb4', s(MARK3), 0.9, 0.34, lock=True)
     a.n('felt_mech', 60, s(MARK3), 0.1, 0.3, lock=True)
     a.n('felt', 'C4', s(SETTLE), 0.62, 0.26, lock=True)
@@ -64,14 +95,23 @@ def build():
                               'post\'s last palette step to night (6.5 dB down, a 200 ms swell: a return, not a hit)', True),
                          (CARVE, 'the carve (the cut to the dark room): the fifth already sounding', False),
                          (NUDGE, 'the nudge G4, sounding before the V.O.', True),
-                         (PED0, 'the F/C pedal (the count, TPOOL: no motif)', False),
+                         (PED0, 'the F/C pedal (the count' + ('' if TPOOL else ', TPOOL') + ': no motif)', False),
+                         *([(A('v35-43.01') + 3, 'TPOOL (2008 palette, T2): the Water Line on the 16-bit sample-chip '
+                             'piano over D-flat maj7 (the sheet passed)', True),
+                            (A('v35-43.02') + 3, 'TPOOL: passed again (B-flat minor9): the line settles C4 -> F4', True),
+                            (A('v35-43.02', 24), 'TPOOL: the CEO walks out still in charge: A-flat/C', True)]
+                           if TPOOL else []),
                          (MARK3, 'mark 3: the felt back (Eb4)', True), (SETTLE, 'the settle C4', True),
                          (SETTLE + 15, 'F4', True), (SETTLE + 30, 'THE REWIND: E4', True), (SETTLE + 45, 'Bb3', True),
                          (WHIP, "EXIT: the whip (pass one's downbeat)", False)]:
         cue.mark(fr, lab, hit=hit)
-    for lab, a0, a1 in [('S2 26A: the carve and the V.O.', IN, PED0),
-                        ('S2 the count and TPOOL: the pedal', PED0, MARK3),
-                        ('S2 mark 3, the settle, the Rewind', MARK3, WHIP)]:
+    for lab, a0, a1 in ([('S2 26A: the carve and the V.O.', IN, PED0),
+                         ('S2 the count: the pedal', PED0, A('v35-43.01')),
+                         ('S2 TPOOL (v3.5): the 2008 palette, melancholy', A('v35-43.01'), MARK3),
+                         ('S2 mark 3, the settle, the Rewind', MARK3, WHIP)] if TPOOL else
+                        [('S2 26A: the carve and the V.O.', IN, PED0),
+                         ('S2 the count and TPOOL: the pedal', PED0, MARK3),
+                         ('S2 mark 3, the settle, the Rewind', MARK3, WHIP)]):
         cue.section(lab, a0, a1)
     meta = dict(
         id=ID, title='That Night: The Third Mark (Ep1 v3 Act Four, S2, to picture)', mm='MM-08 (26A; Act Four v5 S2)',

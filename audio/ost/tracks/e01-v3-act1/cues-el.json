@@ -3,10 +3,10 @@
  "id": "e01-v3-act1-el",
  "segment": "act1",
  "file": "audio/ost/tracks/e01-v3-act1/render/music-el.wav",
- "timeline": "show/reel/ep01-v34-el/ep01-v34-el-act1.json",
- "length_s": 343.3333333333333,
- "frames": 8240,
- "samples": 16480000,
+ "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act1.json",
+ "length_s": 456.125,
+ "frames": 10947,
+ "samples": 21894000,
  "sample_rate": 48000,
  "channels": 2,
  "clock": "the segment's own clock: 0 = its first frame (timeEpisode, head 0)",
@@ -15,16 +15,16 @@
   {
    "cue": "a_launch",
    "start": 0.0,
-   "end": 166.043,
+   "end": 166.2,
    "what": "warm and curious in the show's voice; then a drive that builds; then the first dark bar",
    "family": "P01 colours (felt, a soft chip pulse, the Build) -> P11 energy, straight (a driving figure) -> the Ache",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/a_launch-underscore.wav",
-   "laid_at_s": -3.375,
-   "post": null,
+   "laid_at_s": -3.25,
+   "post": "a -1.2 dB fader ride on the odometer (the wait to the hit on Rima)",
    "level": {
-    "lufs_i": -20.02,
-    "st_p95": -16.62,
-    "st_max": -14.41,
+    "lufs_i": -20.36,
+    "st_p95": -17.85,
+    "st_max": -15.7,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -45,34 +45,36 @@
      },
      "measured": {
       "lufs": -20.01,
-      "lra": 12.69,
+      "lra": 11.36,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -23.35,
-      "crest_db": 20.2,
-      "seconds": 169.4183
+      "rms_db": -23.15,
+      "crest_db": 19.99,
+      "seconds": 169.45
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 3.5,
+    "f_major_worst": 3.514,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 25,
-     "of": 28,
-     "worst_ms": 43.0
+     "within_10ms": 24,
+     "of": 29,
+     "worst_ms": 43.3
     },
     "warnings": [
-     "marker at 86.565 s: no clear onset within 10 ms ({'t': 86.565, 'offset_ms': np.float64(-10.3), 'strength': 5.15})",
-     "marker at 136.3333 s: no clear onset within 10 ms ({'t': 136.3333, 'offset_ms': np.float64(-24.0), 'strength': 1.4})",
-     "marker at 167.2583 s: no clear onset within 10 ms ({'t': 167.2583, 'offset_ms': np.float64(43.0), 'strength': 1.99})",
-     "sub under server_hum (the bullpen, up through the floor) 3.375-169.418 s: < 60 Hz reads -11.7 dB of the total (limit -18.0; from {'bass': 99})",
-     "underscore short-term p95 -16.72 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "marker at 3.25 s: no clear onset within 10 ms ({'t': 3.25, 'offset_ms': np.float64(43.3), 'strength': 2.17})",
+     "marker at 7.8125 s: no clear onset within 10 ms ({'t': 7.8125, 'offset_ms': np.float64(32.8), 'strength': 1.7})",
+     "marker at 84.5583 s: no clear onset within 10 ms ({'t': 84.5583, 'offset_ms': np.float64(-11.6), 'strength': 5.78})",
+     "marker at 136.3333 s: no clear onset within 10 ms ({'t': 136.3333, 'offset_ms': np.float64(-24.0), 'strength': 1.41})",
+     "marker at 166.65 s: no clear onset within 10 ms ({'t': 166.65, 'offset_ms': np.float64(16.7), 'strength': 1.8})",
+     "sub under server_hum (the bullpen, up through the floor) 3.25-169.45 s: < 60 Hz reads -11.6 dB of the total (limit -18.0; from {'bass': 99})",
+     "underscore short-term p95 -16.83 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 622,
+    "notes": 651,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -82,7 +84,7 @@
    "clock_notes": [],
    "sync": [
     {
-     "t": 54.125,
+     "t": 54.25,
      "what": "the Ache's colour, once, under \"And what if it wakes up?\" (the Build gives way on the cut to her)",
      "hit": false
     },
@@ -92,172 +94,177 @@
      "hit": true
     },
     {
-     "t": 0.688,
+     "t": 0.656,
      "what": "the Build: compile pass (4)",
      "hit": true
     },
     {
-     "t": 1.938,
+     "t": 1.906,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 4.594,
+     "t": 4.562,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 8.812,
+     "t": 8.781,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 15.062,
+     "t": 15.031,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 28.5,
-     "what": "the Build: compile pass (16)",
-     "hit": true
-    },
-    {
-     "t": 52.719,
-     "what": "the Build: compile pass (8)",
-     "hit": true
-    },
-    {
-     "t": 59.125,
-     "what": "the Build: compile pass (16)",
-     "hit": true
-    },
-    {
-     "t": 63.344,
+     "t": 28.312,
      "what": "the Build: compile pass (12)",
      "hit": true
     },
     {
-     "t": 68.812,
+     "t": 51.75,
+     "what": "the Build: compile pass (4)",
+     "hit": true
+    },
+    {
+     "t": 57.688,
      "what": "the Build: compile pass (16)",
      "hit": true
     },
     {
-     "t": 74.125,
+     "t": 61.906,
+     "what": "the Build: compile pass (12)",
+     "hit": true
+    },
+    {
+     "t": 67.375,
+     "what": "the Build: compile pass (16)",
+     "hit": true
+    },
+    {
+     "t": 72.375,
      "what": "the click: the knee's flat line on the chip (F F F F): nothing happens yet",
      "hit": true
     },
     {
-     "t": 81.24,
+     "t": 79.698,
      "what": "the Door: Ab4 (after his first line)",
      "hit": true
     },
     {
-     "t": 81.66,
+     "t": 80.118,
      "what": "the Door: Db5",
      "hit": true
     },
     {
-     "t": 82.85,
+     "t": 81.308,
      "what": "the Door: C5 (after \"you counted.\")",
      "hit": true
     },
     {
-     "t": 83.19,
+     "t": 81.648,
      "what": "the Door: G4, the #4 held (it never cadences)",
      "hit": true
     },
     {
-     "t": 74.125,
+     "t": 74.25,
      "what": "A2: felt only, Dbmaj9(#11) (the deceptive IV after the click)",
      "hit": true
     },
     {
-     "t": 89.125,
-     "what": "the Build: compile pass (4)",
-     "hit": true
-    },
-    {
-     "t": 93.656,
-     "what": "the Build: compile pass (12)",
-     "hit": true
-    },
-    {
-     "t": 99.906,
+     "t": 86.75,
      "what": "the Build: compile pass (8)",
      "hit": true
     },
     {
-     "t": 104.125,
+     "t": 91.75,
+     "what": "the Build: compile pass (16)",
+     "hit": true
+    },
+    {
+     "t": 98.156,
+     "what": "the Build: compile pass (8)",
+     "hit": true
+    },
+    {
+     "t": 101.75,
      "what": "M1: the felt arrives on A-flat major (Abmaj7) with \"it likes me.\" (the one warm arrival)",
      "hit": false
     },
     {
-     "t": 106.938,
+     "t": 105.188,
      "what": "M1 THE WARM ACCENT: the Build's pass in its A-flat major (16), after \"it likes me.\" (the payoff to the click)",
      "hit": true
     },
     {
-     "t": 114.125,
-     "what": "A4 THE LIFT: the counter ticks (the pulse, the Build 4 + 8)",
+     "t": 111.75,
+     "what": "A4 THE WAIT (v3.5): USERS: 0: the pulse alone, a held Eb13sus",
+     "hit": false
+    },
+    {
+     "t": 114.719,
+     "what": "A4 THE LIFT: the counter rolls (the pulse, the Build 4 + 8)",
      "hit": true
     },
     {
-     "t": 116.625,
+     "t": 116.75,
      "what": "phrase 1: the odometer grows: the knee's kink (G Ab C), left hanging",
      "hit": true
     },
     {
-     "t": 121.625,
+     "t": 121.75,
      "what": "THE CLUNK: through the desk, the harmony drops a major third (E); the spiccato joins",
      "hit": true
     },
     {
-     "t": 124.125,
+     "t": 124.25,
      "what": "the last second before the million: B13sus, the tremolo swell, the Build climbing",
      "hit": true
     },
     {
-     "t": 124.5,
+     "t": 124.625,
      "what": "a one-beat break before the million",
      "hit": false
     },
     {
-     "t": 124.812,
+     "t": 124.938,
      "what": "the push into the MILLION (the and-of-4): brass + the tag \"shipped\" (Eb5 -> Ab5)",
      "hit": true
     },
     {
-     "t": 125.125,
+     "t": 125.25,
      "what": "THE MILLION: no attack on the downbeat (the odometer ratchet owns it)",
      "hit": false
     },
     {
-     "t": 125.908,
+     "t": 126.033,
      "what": "his post pops over the million (the SFX's pop on F); the drive runs on, the violins climb to the cut",
      "hit": false
     },
     {
-     "t": 128.75,
+     "t": 128.875,
      "what": "the band hit on the cut to Rima; then the held chord (thin under \"Low-key.\" / \"Basement.\")",
      "hit": true
     },
     {
-     "t": 132.958,
+     "t": 133.083,
      "what": "THE TURN: Abmaj9 -> the Ache over F (vc Ab2 -> F2, vln Eb5 -> Db5; C and G held)",
      "hit": true
     },
     {
-     "t": 151.833,
+     "t": 151.75,
      "what": "the tear: the Ache rings once more; the F pedal holds on into the call",
      "hit": false
     },
     {
-     "t": 156.833,
+     "t": 156.75,
      "what": "THE CALL (v3.2): the F pedal and the shimmer hold under it",
      "hit": false
     },
     {
-     "t": 163.883,
+     "t": 163.4,
      "what": "the call: Tasya's Rhodes, one soft chord on \"pen\" (his colour before he arrives); the glass D-flat falls to C",
      "hit": true
     }
@@ -265,17 +272,17 @@
   },
   {
    "cue": "code_red",
-   "start": 165.343,
-   "end": 194.817,
+   "start": 183.72,
+   "end": 212.858,
    "what": "comic panic, the siren as a joke",
    "family": "comic panic (a v3 colour): P11 energy, pizzicato; diegetic through the phone",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/code_red-underscore.wav",
-   "laid_at_s": 160.9583,
+   "laid_at_s": 179.0,
    "post": "era.futz('phone'): his phone's small speaker",
    "level": {
     "lufs_i": -22.0,
-    "st_p95": -20.61,
-    "st_max": -19.86,
+    "st_p95": -20.62,
+    "st_max": -19.75,
     "true_peak_dbtp": -12.53
    },
    "target_lufs": -22.0,
@@ -297,7 +304,7 @@
      "measured": {
       "lufs": -20.0,
       "lra": 2.9,
-      "true_peak_db": -6.35,
+      "true_peak_db": -6.34,
       "peak_db": -6.35,
       "rms_db": -22.78,
       "crest_db": 16.43,
@@ -329,22 +336,22 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 165.343,
-     "what": "the siren's whine J-cuts in as he lowers the phone, after the hang-up (v3.2) (on his phone)",
+     "t": 183.72,
+     "what": "the siren's whine J-cuts in under his phone's whoop as it lights red among the others (v3.5) (on his phone)",
      "hit": false
     },
     {
-     "t": 168.458,
+     "t": 186.5,
      "what": "THE SIREN AS A JOKE: the tower rises; the orchestra wails the swoop",
      "hit": true
     },
     {
-     "t": 175.175,
+     "t": 193.217,
      "what": "the crypt: a staccato ascent (tuba + bassoon)",
      "hit": true
     },
     {
-     "t": 194.817,
+     "t": 212.858,
      "what": "THE LOCK: the phone locks; its audio stops dead (5 ms)",
      "hit": false
     }
@@ -352,18 +359,18 @@
   },
   {
    "cue": "lobby",
-   "start": 195.408,
-   "end": 216.708,
+   "start": 258.7,
+   "end": 279.375,
    "what": "caper, charming: a swinging deal that stops on a pop",
    "family": "P06 THE JOB (Tasya's Rhodes colour)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/lobby-underscore.wav",
-   "laid_at_s": 194.2083,
+   "laid_at_s": 256.875,
    "post": null,
    "level": {
     "lufs_i": -19.98,
-    "st_p95": -18.71,
-    "st_max": -18.57,
-    "true_peak_dbtp": -6.36
+    "st_p95": -18.7,
+    "st_max": -18.59,
+    "true_peak_dbtp": -6.42
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -383,17 +390,17 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 2.93,
-      "true_peak_db": -6.36,
-      "peak_db": -6.37,
-      "rms_db": -21.68,
-      "crest_db": 15.32,
+      "lra": 2.92,
+      "true_peak_db": -6.42,
+      "peak_db": -6.42,
+      "rms_db": -21.82,
+      "crest_db": 15.4,
       "seconds": 22.52
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.077,
+    "f_major_worst": 0.1,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
@@ -402,13 +409,13 @@
      "worst_ms": 38.5
     },
     "warnings": [
-     "marker at 4.4973 s: no clear onset within 10 ms ({'t': 4.4973, 'offset_ms': np.float64(-33.3), 'strength': 1.27})",
+     "marker at 4.664 s: no clear onset within 10 ms ({'t': 4.664, 'offset_ms': np.float64(13.3), 'strength': 2.09})",
      "marker at 15.9375 s: no clear onset within 10 ms ({'t': 15.9375, 'offset_ms': np.float64(38.5), 'strength': 1.52})",
      "marker at 22.2917 s: no clear onset within 10 ms ({'t': 22.2917, 'offset_ms': np.float64(36.3), 'strength': 2.36})"
     ]
    },
    "note_qa": {
-    "notes": 271,
+    "notes": 270,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -418,47 +425,47 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 195.458,
+     "t": 258.75,
      "what": "the bass walks in under the revolving door",
      "hit": false
     },
     {
-     "t": 198.706,
+     "t": 261.539,
      "what": "the check jams: a push on the swung and-of-4",
      "hit": true
     },
     {
-     "t": 196.708,
+     "t": 259.375,
      "what": "THE JOB's head (bar 2)",
      "hit": true
     },
     {
-     "t": 199.208,
+     "t": 261.875,
      "what": "THE JOB's head (bar 3)",
      "hit": true
     },
     {
-     "t": 201.708,
+     "t": 264.375,
      "what": "THE JOB's head (bar 4)",
      "hit": true
     },
     {
-     "t": 210.146,
+     "t": 272.812,
      "what": "a vibes fill (a gap)",
      "hit": true
     },
     {
-     "t": 214.208,
+     "t": 276.875,
      "what": "the check slides under the door: the head's tag",
      "hit": true
     },
     {
-     "t": 216.5,
+     "t": 279.167,
      "what": "the last push (C7#9) on the swung and-of-4",
      "hit": true
     },
     {
-     "t": 216.708,
+     "t": 279.375,
      "what": "THE POP: the band stops dead on the downbeat (5 ms); the collar #3",
      "hit": false
     }
@@ -466,18 +473,18 @@
   },
   {
    "cue": "floor",
-   "start": 224.532,
-   "end": 241.708,
+   "start": 286.848,
+   "end": 306.625,
    "what": "a welcome that is a lease",
    "family": "the landlord's colour (OST-BIBLE s2.16): held mediants, silent attacks",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/floor-underscore.wav",
-   "laid_at_s": 224.5317,
+   "laid_at_s": 286.8483,
    "post": null,
    "level": {
-    "lufs_i": -21.69,
-    "st_p95": -20.97,
+    "lufs_i": -21.73,
+    "st_p95": -20.9,
     "st_max": -20.74,
-    "true_peak_dbtp": -8.67
+    "true_peak_dbtp": -8.2
    },
    "target_lufs": -22.0,
    "engine_qa": {
@@ -497,12 +504,12 @@
      },
      "measured": {
       "lufs": -22.0,
-      "lra": 1.61,
-      "true_peak_db": -10.12,
-      "peak_db": -10.13,
-      "rms_db": -24.81,
-      "crest_db": 14.69,
-      "seconds": 17.2267
+      "lra": 1.63,
+      "true_peak_db": -10.14,
+      "peak_db": -10.15,
+      "rms_db": -24.8,
+      "crest_db": 14.65,
+      "seconds": 19.8267
      }
     },
     "f_major_ok": true,
@@ -524,27 +531,27 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 224.532,
+     "t": 286.848,
      "what": "Tasya's floor: Abmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 226.976,
+     "t": 289.292,
      "what": "Tasya's floor: Cmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 227.696,
+     "t": 290.012,
      "what": "Tasya's floor: Emaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 229.96,
+     "t": 292.276,
      "what": "Tasya's floor: Abmaj9 (silent attack; one Rhodes chord on her sentence break)",
      "hit": false
     },
     {
-     "t": 240.608,
+     "t": 305.525,
      "what": "the key ring's jangle: the floor lets go (v3.2: the ring, large, weeks on; the swing comes in on it)",
      "hit": false
     }
@@ -552,18 +559,18 @@
   },
   {
    "cue": "lobby2",
-   "start": 240.558,
-   "end": 262.342,
+   "start": 305.475,
+   "end": 328.55,
    "what": "the deal is done; the landlord where he stood",
    "family": "P06 THE JOB, light",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/lobby2-underscore.wav",
-   "laid_at_s": 239.3583,
+   "laid_at_s": 304.275,
    "post": null,
    "level": {
-    "lufs_i": -20.95,
-    "st_p95": -18.9,
-    "st_max": -18.55,
-    "true_peak_dbtp": -8.67
+    "lufs_i": -20.96,
+    "st_p95": -18.84,
+    "st_max": -18.43,
+    "true_peak_dbtp": -8.2
    },
    "target_lufs": -21.0,
    "engine_qa": {
@@ -583,17 +590,17 @@
      },
      "measured": {
       "lufs": -21.0,
-      "lra": 3.81,
-      "true_peak_db": -9.03,
-      "peak_db": -9.04,
-      "rms_db": -22.35,
-      "crest_db": 13.31,
-      "seconds": 22.9833
+      "lra": 3.97,
+      "true_peak_db": -8.92,
+      "peak_db": -8.92,
+      "rms_db": -22.27,
+      "crest_db": 13.35,
+      "seconds": 24.275
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.009,
+    "f_major_worst": 0.011,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
@@ -606,7 +613,7 @@
     ]
    },
    "note_qa": {
-    "notes": 187,
+    "notes": 198,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -616,17 +623,17 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 251.792,
+     "t": 318.0,
      "what": "the TV: the band holds a chord (the tap-dance is the TV's)",
      "hit": false
     },
     {
-     "t": 241.858,
+     "t": 306.775,
      "what": "a vibes fragment (a gap)",
      "hit": true
     },
     {
-     "t": 259.358,
+     "t": 325.525,
      "what": "the last chord (Fm9, no motion), held under his line; it crossfades into Sydney on the cut (0.4 s)",
      "hit": false
     }
@@ -634,18 +641,18 @@
   },
   {
    "cue": "duel",
-   "start": 287.875,
-   "end": 321.575,
+   "start": 391.667,
+   "end": 430.4,
    "what": "rivalry: the same cell, two panes, one tempo",
    "family": "P02 room colour (Misanthropic) x the Build",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/duel-underscore.wav",
-   "laid_at_s": 286.375,
+   "laid_at_s": 389.0,
    "post": null,
    "level": {
-    "lufs_i": -19.86,
+    "lufs_i": -19.82,
     "st_p95": -16.99,
-    "st_max": -16.66,
-    "true_peak_dbtp": -4.02
+    "st_max": -16.29,
+    "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -665,30 +672,32 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 9.59,
-      "true_peak_db": -4.02,
-      "peak_db": -4.03,
-      "rms_db": -22.66,
-      "crest_db": 18.63,
-      "seconds": 35.2
+      "lra": 9.67,
+      "true_peak_db": -5.11,
+      "peak_db": -5.11,
+      "rms_db": -22.71,
+      "crest_db": 17.6,
+      "seconds": 41.5
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.012,
+    "f_major_worst": 0.061,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 7,
-     "of": 8,
-     "worst_ms": 17.3
+     "within_10ms": 9,
+     "of": 11,
+     "worst_ms": 56.0
     },
     "warnings": [
-     "marker at 22.5 s: no clear onset within 10 ms ({'t': 22.5, 'offset_ms': np.float64(17.3), 'strength': 1.64})"
+     "marker at 25.0 s: no clear onset within 10 ms ({'t': 25.0, 'offset_ms': np.float64(42.7), 'strength': 2.07})",
+     "marker at 30.0 s: no clear onset within 10 ms ({'t': 30.0, 'offset_ms': np.float64(56.0), 'strength': 1.64})",
+     "underscore short-term p95 -16.96 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 234,
+    "notes": 301,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -698,66 +707,81 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 295.75,
+     "t": 399.312,
      "what": "the laptop opens: the chip boots (4)",
      "hit": true
     },
     {
-     "t": 303.875,
+     "t": 406.5,
+     "what": "the Build's bar (Gerg, left pane): 8",
+     "hit": true
+    },
+    {
+     "t": 409.0,
      "what": "the Addendum's bar (Mario, right pane), its tail 1",
      "hit": true
     },
     {
-     "t": 306.375,
+     "t": 411.5,
      "what": "the Build's bar (Gerg, left pane): 8",
      "hit": true
     },
     {
-     "t": 308.875,
+     "t": 414.0,
      "what": "the Addendum's bar (Mario, right pane), its tail 2",
      "hit": true
     },
     {
-     "t": 311.375,
+     "t": 416.5,
      "what": "the Build's bar (Gerg, left pane): 8",
      "hit": true
     },
     {
-     "t": 314.917,
+     "t": 419.0,
+     "what": "the Addendum's bar (Mario, right pane), its tail 3",
+     "hit": true
+    },
+    {
+     "t": 421.5,
+     "what": "the Build's bar (Gerg, left pane): 8",
+     "hit": true
+    },
+    {
+     "t": 423.083,
      "what": "HIS CLICK ships GTP-4 (the picture's click, 11.04 frame 108; the sound pass lays it): the Build's whole pass on the chip, from the click",
      "hit": true
     },
     {
-     "t": 313.875,
+     "t": 424.0,
      "what": "THE TURN: the Addendum crosses the split",
      "hit": true
     },
     {
-     "t": 317.156,
+     "t": 425.406,
      "what": "the website: the chip plays Mario's tail (his side ships it)",
      "hit": true
     },
     {
-     "t": 318.875,
-     "what": "the letter lights: a held Bbm(add9), ringing out",
+     "t": 429.0,
+     "what": "the waitlist's wall TV (v3.5): a held Bbm(add9), ringing to the rope's snap",
      "hit": false
     }
    ]
   },
   {
    "cue": "pause",
-   "start": 321.025,
-   "end": 330.417,
+   "start": 434.15,
+   "end": 443.208,
    "what": "a chill, played straight: a cold pedal nobody pauses",
    "family": "P04 / P08 colours, low (Nole)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/pause-underscore.wav",
-   "laid_at_s": 321.075,
+   "laid_at_s": 434.2,
    "post": null,
    "level": {
-    "lufs_i": -21.01,
-    "st_p95": -19.64,
-    "st_max": -19.5,
-    "true_peak_dbtp": -8.19
+    "lufs_i": -21.02,
+    "st_p95": -19.99,
+    "st_max": -19.62,
+    "true_peak_dbtp": -8.89
    },
    "target_lufs": -21.0,
    "engine_qa": {
@@ -777,12 +801,12 @@
      },
      "measured": {
       "lufs": -21.0,
-      "lra": 3.12,
-      "true_peak_db": -8.19,
-      "peak_db": -8.2,
-      "rms_db": -22.97,
-      "crest_db": 14.78,
-      "seconds": 9.3617
+      "lra": 2.26,
+      "true_peak_db": -8.89,
+      "peak_db": -8.89,
+      "rms_db": -22.96,
+      "crest_db": 14.07,
+      "seconds": 9.0283
      }
     },
     "f_major_ok": true,
@@ -804,7 +828,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 330.417,
+     "t": 443.208,
      "what": "EMIT's THUD stops it dead (5 ms)",
      "hit": false
     }
@@ -812,12 +836,12 @@
   },
   {
    "cue": "threat",
-   "start": 341.323,
-   "end": 343.333,
+   "start": 454.115,
+   "end": 456.125,
    "what": "one chill",
    "family": "P08 OUTS KIT: THREAT",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/threat-underscore.wav",
-   "laid_at_s": 338.8333,
+   "laid_at_s": 451.625,
    "post": null,
    "level": {
     "lufs_i": -18.33,
@@ -874,7 +898,7 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 341.333,
+     "t": 454.125,
      "what": "THREAT, once, on the pen's lift: F-C-Gb (low brass + sub), no third",
      "hit": true
     }
@@ -882,18 +906,18 @@
   },
   {
    "cue": "sydney",
-   "start": 261.705,
-   "end": 287.875,
+   "start": 327.913,
+   "end": 353.333,
    "what": "uncanny and clingy",
    "family": "P05 GLYPH colours, sweetened",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/sydney-underscore.wav",
-   "laid_at_s": 259.2917,
+   "laid_at_s": 325.5,
    "post": null,
    "level": {
-    "lufs_i": -21.97,
-    "st_p95": -19.83,
-    "st_max": -19.8,
-    "true_peak_dbtp": -9.2
+    "lufs_i": -21.99,
+    "st_p95": -19.85,
+    "st_max": -19.73,
+    "true_peak_dbtp": -3.61
    },
    "target_lufs": -22.0,
    "engine_qa": {
@@ -913,12 +937,12 @@
      },
      "measured": {
       "lufs": -22.0,
-      "lra": 5.49,
-      "true_peak_db": -9.2,
-      "peak_db": -9.21,
-      "rms_db": -25.09,
-      "crest_db": 15.87,
-      "seconds": 28.8833
+      "lra": 5.67,
+      "true_peak_db": -8.55,
+      "peak_db": -8.57,
+      "rms_db": -25.11,
+      "crest_db": 16.53,
+      "seconds": 28.1333
      }
     },
     "f_major_ok": true,
@@ -927,16 +951,14 @@
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
-     "within_10ms": 0,
+     "within_10ms": 1,
      "of": 1,
-     "worst_ms": 28.0
+     "worst_ms": 6.7
     },
-    "warnings": [
-     "marker at 2.9 s: no clear onset within 10 ms ({'t': 2.9, 'offset_ms': np.float64(28.0), 'strength': 2.1})"
-    ]
+    "warnings": []
    },
    "note_qa": {
-    "notes": 84,
+    "notes": 78,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -946,12 +968,12 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 270.025,
+     "t": 335.792,
      "what": "her real line: the glass pad turns to the Ache (e1-a1-10-02)",
      "hit": false
     },
     {
-     "t": 262.192,
+     "t": 328.4,
      "what": "SYDNEY: the music box and its late chip echo (clingy)",
      "hit": true
     }
@@ -959,15 +981,15 @@
   },
   {
    "cue": "atem",
-   "start": 287.855,
-   "end": 290.075,
+   "start": 391.647,
+   "end": 393.867,
    "what": "cool, brief",
    "family": "P08 OUTS KIT: DREAD (brief)",
    "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/atem-underscore.wav",
-   "laid_at_s": 285.375,
+   "laid_at_s": 389.1667,
    "post": null,
    "level": {
-    "lufs_i": -19.07,
+    "lufs_i": -19.17,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
@@ -1021,27 +1043,563 @@
    "clock_notes": null,
    "sync": [
     {
-     "t": 287.875,
+     "t": 391.667,
      "what": "THE ATEM LEAK: a cool sting on the crate (F-C, the chip's fifth, the Ache)",
      "hit": true
+    }
+   ]
+  },
+  {
+   "cue": "first_weeks",
+   "start": 165.496,
+   "end": 184.07,
+   "what": "a rising, fun pulse: our Facemash night; one flicker on Nole",
+   "family": "P11 energy in the show's chip-and-808 colour (the Build, the triangle pulse, the 808, spiccato)",
+   "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/first_weeks-underscore.wav",
+   "laid_at_s": 163.0,
+   "post": null,
+   "level": {
+    "lufs_i": -19.02,
+    "st_p95": -17.17,
+    "st_max": -16.98,
+    "true_peak_dbtp": -4.19
+   },
+   "target_lufs": -19.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -19.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -19.0,
+      "lra": 5.89,
+      "true_peak_db": -4.19,
+      "peak_db": -4.2,
+      "rms_db": -19.95,
+      "crest_db": 15.75,
+      "seconds": 21.22
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.01,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 8,
+     "of": 8,
+     "worst_ms": 5.3
+    },
+    "warnings": [
+     "clap808 is diegetic-only: in-world source music through era.futz (declare it in META diegetic_tracks, or set diegetic=True for a source cue)",
+     "h808 is diegetic-only: in-world source music through era.futz (declare it in META diegetic_tracks, or set diegetic=True for a source cue)"
+    ]
+   },
+   "note_qa": {
+    "notes": 387,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "clock_notes": null,
+   "sync": [
+    {
+     "t": 165.5,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.01 on the pulse (Abmaj9)",
+     "hit": true
+    },
+    {
+     "t": 168.0,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.02 on the pulse (Bbm9)",
+     "hit": true
+    },
+    {
+     "t": 170.0,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.03 on the pulse (Cm7)",
+     "hit": true
+    },
+    {
+     "t": 172.5,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.04 on the pulse (F + the Ache)",
+     "hit": true
+    },
+    {
+     "t": 172.55,
+     "what": "THE FLICKER: Nole's \"scary good\": the drums and the Build drop out; the Ache on glass over F for the shot",
+     "hit": false
+    },
+    {
+     "t": 175.5,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.05 on the pulse (Dbmaj9)",
+     "hit": true
+    },
+    {
+     "t": 177.5,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.06 on the pulse (Eb13sus)",
+     "hit": true
+    },
+    {
+     "t": 178.0,
+     "what": "the wince: \"7 x 8 = 54\": the Build's high note sags a semitone",
+     "hit": false
+    },
+    {
+     "t": 180.0,
+     "what": "DESIGNED HIT: the first weeks: the cut to v35-10.07 on the pulse (Abmaj9)",
+     "hit": true
+    },
+    {
+     "t": 182.5,
+     "what": "DESIGNED HIT: 10.08, the pull back: the drive stops on the cut; one hit rings into his phone's siren whoop (code red takes over there)",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "cue": "dream",
+   "start": 219.058,
+   "end": 259.1,
+   "what": "3 AM: quiet, one moved note; JUN 2018: warm awe, the dream",
+   "family": "P01 his felt; the Water Line warm (D-flat lydian); the Build soft; post-2015 BASE fidelity",
+   "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/dream-underscore.wav",
+   "laid_at_s": 215.75,
+   "post": null,
+   "level": {
+    "lufs_i": -21.62,
+    "st_p95": -18.63,
+    "st_max": -17.38,
+    "true_peak_dbtp": -4.16
+   },
+   "target_lufs": -22.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -22.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -22.0,
+      "lra": 6.06,
+      "true_peak_db": -4.29,
+      "peak_db": -4.29,
+      "rms_db": -25.22,
+      "crest_db": 20.93,
+      "seconds": 44.35
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 4.993,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 4,
+     "of": 6,
+     "worst_ms": 58.7
+    },
+    "warnings": [
+     "marker at 12.5 s: no clear onset within 10 ms ({'t': 12.5, 'offset_ms': np.float64(17.3), 'strength': 3.08})",
+     "marker at 40.0 s: no clear onset within 10 ms ({'t': 40.0, 'offset_ms': np.float64(-58.7), 'strength': 1.81})"
+    ]
+   },
+   "note_qa": {
+    "notes": 82,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "clock_notes": null,
+   "sync": [
+    {
+     "t": 219.078,
+     "what": "DESIGNED HIT: 3 AM, his second read: ONE FELT NOTE (F4, the note the first weeks planted), held; the V.O. sits inside it (the act's one moved moment)",
+     "hit": true
+    },
+    {
+     "t": 224.258,
+     "what": "the glowing line: 180 YEARS: the same F becomes D-flat maj9(#11), the celesta draws the line",
+     "hit": true
+    },
+    {
+     "t": 225.75,
+     "what": "2018: Dbmaj9#11 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 228.25,
+     "what": "2018: Ab/C (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 230.75,
+     "what": "2018: Bbm9 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 233.25,
+     "what": "2018: Gbmaj9#11 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 235.75,
+     "what": "2018: Dbmaj9#11 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 238.25,
+     "what": "2018: Ab/C (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 240.75,
+     "what": "2018: Bbm9 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 243.25,
+     "what": "2018: Gbmaj9#11 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 245.75,
+     "what": "2018: Dbmaj9#11 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 248.25,
+     "what": "2018: Ab/C (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 250.75,
+     "what": "2018: Bbm9 (the felt, the string pedal)",
+     "hit": false
+    },
+    {
+     "t": 225.77,
+     "what": "JUN 2018: THE WATER LINE's head on the felt, on the wall of monitors (wonder)",
+     "hit": true
+    },
+    {
+     "t": 228.25,
+     "what": "2018: the Build (4), soft (Gerg coding)",
+     "hit": true
+    },
+    {
+     "t": 254.015,
+     "what": "THE DOOR after \"What else would you build?\": A-flat D-flat | C G, ending on its #4, held: no answer",
+     "hit": true
+    },
+    {
+     "t": 255.75,
+     "what": "the side project (\"the cat sat on the the mat of the\"): the chip's flat line F F F (the launch click's rhyme; the knee: nothing happens yet)",
+     "hit": true
+    },
+    {
+     "t": 257.8,
+     "what": "the sweep back: the celesta draws the line down; the chord rings under the revolving door",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "arena",
+   "start": 225.74,
+   "end": 255.6,
+   "what": "tinny, heroic, endless",
+   "family": "source: a game's loop, through the monitors",
+   "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/arena-underscore.wav",
+   "laid_at_s": 225.75,
+   "post": "era.futz('tv'): the arena on the wall of monitors",
+   "level": {
+    "lufs_i": -21.5,
+    "st_p95": -18.99,
+    "st_max": -17.25,
+    "true_peak_dbtp": -4.16
+   },
+   "target_lufs": -31.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.0,
+      "lra": 2.55,
+      "true_peak_db": -3.26,
+      "peak_db": -3.27,
+      "rms_db": -22.58,
+      "crest_db": 19.31,
+      "seconds": 30.1
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.016,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": [
+     "2-6 kHz band -11.5 dB > -15 dB (s6.5: under dialogue)"
+    ]
+   },
+   "note_qa": {
+    "notes": 327,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "clock_notes": null,
+   "sync": [
+    {
+     "t": 225.75,
+     "what": "ATOD's arena on the wall of monitors (diegetic, through the TVs)",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "window",
+   "start": 353.253,
+   "end": 391.967,
+   "what": "the window: joy at the team's peak, a small warm accent; the post: quiet ambition",
+   "family": "the Build in A-flat major (M1's colour) -> his felt, a held line over a sul-tasto pedal",
+   "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/window-underscore.wav",
+   "laid_at_s": 351.1333,
+   "post": null,
+   "level": {
+    "lufs_i": -21.08,
+    "st_p95": -18.18,
+    "st_max": -17.53,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -21.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.03,
+      "lra": 7.22,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -23.78,
+      "crest_db": 20.63,
+      "seconds": 41.0333
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.0,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 3,
+     "of": 4,
+     "worst_ms": 15.3
+    },
+    "warnings": [
+     "marker at 11.55 s: no clear onset within 10 ms ({'t': 11.55, 'offset_ms': np.float64(15.3), 'strength': 2.44})"
+    ]
+   },
+   "note_qa": {
+    "notes": 84,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "clock_notes": null,
+   "sync": [
+    {
+     "t": 353.633,
+     "what": "DESIGNED HIT: THE WINDOW: Gerg's marker takes the line off the top of the glass: the Build's pass in its A-flat major, climbing (the team's peak)",
+     "hit": true
+    },
+    {
+     "t": 362.683,
+     "what": "the four of them laugh: the Build's tag \"shipped\" (E-flat5 -> A-flat5), the felt's A-flat again (the height)",
+     "hit": true
+    },
+    {
+     "t": 364.642,
+     "what": "the lamp: the others go home; one felt note (F4)",
+     "hit": true
+    },
+    {
+     "t": 367.892,
+     "what": "the vision post: the held line steps to Ab4",
+     "hit": false
+    },
+    {
+     "t": 370.392,
+     "what": "the vision post: the held line steps to C5",
+     "hit": false
+    },
+    {
+     "t": 376.852,
+     "what": "the vision post: the held line steps to Bb4",
+     "hit": false
+    },
+    {
+     "t": 380.312,
+     "what": "the vision post: the held line steps to Db5",
+     "hit": false
+    },
+    {
+     "t": 381.462,
+     "what": "the vision post: \"hopeful, and scary\": the Ache on glass for a bar",
+     "hit": false
+    },
+    {
+     "t": 385.042,
+     "what": "the V.O. (v35-vo-02) sits in the held D-flat5: nothing attacks",
+     "hit": false
+    },
+    {
+     "t": 388.667,
+     "what": "PUBLISH (0.5 s into 19.04; the lock has no click): the line steps to E-flat5, the chip's Build line takes it up to A-flat (his click ships it); it rings through the refresh and the lid",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "cue": "waitlist",
+   "start": 429.88,
+   "end": 434.5,
+   "what": "a smug little laugh: they're ahead",
+   "family": "the Build's tag, a pizz, the felt",
+   "render": "audio/ost/tracks/e01-v3-act1/render/_work/el/waitlist-underscore.wav",
+   "laid_at_s": 427.4,
+   "post": null,
+   "level": {
+    "lufs_i": -21.05,
+    "st_p95": -20.37,
+    "st_max": -20.09,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -21.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.02,
+      "lra": 6.67,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -25.89,
+      "crest_db": 22.74,
+      "seconds": 7.2
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.0,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 1,
+     "of": 1,
+     "worst_ms": 4.0
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 9,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "clock_notes": null,
+   "sync": [
+    {
+     "t": 429.9,
+     "what": "THE WAITLIST: the rope snaps: the Build's tag \"shipped\" on the chip, a pizz A-flat (a smug sting)",
+     "hit": true
+    },
+    {
+     "t": 432.0,
+     "what": "the sting rings out under the pause letter's toast",
+     "hit": false
     }
    ]
   }
  ],
  "silences_designed": [
   {
-   "t0": 194.817,
-   "t1": 195.408,
-   "why": "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
+   "t0": 212.858,
+   "t1": 219.058,
+   "why": "the phone locks (a diegetic stop); 3 AM: no score under the at-capacity page and the first read (the bullpen's fans), until his second read's one felt note"
   },
   {
-   "t0": 216.708,
-   "t1": 224.532,
+   "t0": 279.375,
+   "t1": 286.848,
    "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
   },
   {
-   "t0": 330.417,
-   "t1": 341.333,
+   "t0": 443.208,
+   "t1": 454.125,
    "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
   }
  ],
@@ -1051,61 +1609,121 @@
    "cue": "a_launch",
    "what": "A1 THE DOWNBEAT (a designed hit, on the first frame): the felt on the button (Fm9 over its low F); the Build compiles",
    "exempt": "the mix's act-head score fade: this downbeat is the design (5.01: HARD CUT on the downbeat, out of the card); fade it in 30-50 ms at most (audit-v31 #13)"
+  },
+  {
+   "t": 165.5,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.01 on the pulse (Abmaj9)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 168.0,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.02 on the pulse (Bbm9)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 170.0,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.03 on the pulse (Cm7)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 172.5,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.04 on the pulse (F + the Ache)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 175.5,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.05 on the pulse (Dbmaj9)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 177.5,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.06 on the pulse (Eb13sus)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 180.0,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: the first weeks: the cut to v35-10.07 on the pulse (Abmaj9)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 182.5,
+   "cue": "first_weeks",
+   "what": "DESIGNED HIT: 10.08, the pull back: the drive stops on the cut; one hit rings into his phone's siren whoop (code red takes over there)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 219.078,
+   "cue": "dream",
+   "what": "DESIGNED HIT: 3 AM, his second read: ONE FELT NOTE (F4, the note the first weeks planted), held; the V.O. sits inside it (the act's one moved moment)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
+  },
+  {
+   "t": 353.633,
+   "cue": "window",
+   "what": "DESIGNED HIT: THE WINDOW: Gerg's marker takes the line off the top of the glass: the Build's pass in its A-flat major, climbing (the team's peak)",
+   "exempt": "a designed entry or step on a cut (v3.5)"
   }
  ],
  "measured": {
-  "length_s": 343.3333,
-  "samples": 16480000,
-  "frames": 8240,
+  "length_s": 456.125,
+  "samples": 21894000,
+  "frames": 10947,
   "exact": true,
   "whole": {
-   "lufs_i": -20.49,
-   "st_p95": -17.81,
-   "st_max": -14.41,
+   "lufs_i": -20.66,
+   "st_p95": -17.99,
+   "st_max": -15.7,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "a_launch": {
-    "lufs_i": -20.02,
-    "st_p95": -16.62,
-    "st_max": -14.41,
+    "lufs_i": -20.36,
+    "st_p95": -17.85,
+    "st_max": -15.7,
     "true_peak_dbtp": -3.15
    },
    "code_red": {
     "lufs_i": -22.0,
-    "st_p95": -20.61,
-    "st_max": -19.86,
+    "st_p95": -20.62,
+    "st_max": -19.75,
     "true_peak_dbtp": -12.53
    },
    "lobby": {
     "lufs_i": -19.98,
-    "st_p95": -18.71,
-    "st_max": -18.57,
-    "true_peak_dbtp": -6.36
+    "st_p95": -18.7,
+    "st_max": -18.59,
+    "true_peak_dbtp": -6.42
    },
    "floor": {
-    "lufs_i": -21.69,
-    "st_p95": -20.97,
+    "lufs_i": -21.73,
+    "st_p95": -20.9,
     "st_max": -20.74,
-    "true_peak_dbtp": -8.67
+    "true_peak_dbtp": -8.2
    },
    "lobby2": {
-    "lufs_i": -20.95,
-    "st_p95": -18.9,
-    "st_max": -18.55,
-    "true_peak_dbtp": -8.67
+    "lufs_i": -20.96,
+    "st_p95": -18.84,
+    "st_max": -18.43,
+    "true_peak_dbtp": -8.2
    },
    "duel": {
-    "lufs_i": -19.86,
+    "lufs_i": -19.82,
     "st_p95": -16.99,
-    "st_max": -16.66,
-    "true_peak_dbtp": -4.02
+    "st_max": -16.29,
+    "true_peak_dbtp": -3.15
    },
    "pause": {
-    "lufs_i": -21.01,
-    "st_p95": -19.64,
-    "st_max": -19.5,
-    "true_peak_dbtp": -8.19
+    "lufs_i": -21.02,
+    "st_p95": -19.99,
+    "st_max": -19.62,
+    "true_peak_dbtp": -8.89
    },
    "threat": {
     "lufs_i": -18.33,
@@ -1114,113 +1732,134 @@
     "true_peak_dbtp": -3.15
    },
    "sydney": {
-    "lufs_i": -21.97,
-    "st_p95": -19.83,
-    "st_max": -19.8,
-    "true_peak_dbtp": -9.2
+    "lufs_i": -21.99,
+    "st_p95": -19.85,
+    "st_max": -19.73,
+    "true_peak_dbtp": -3.61
    },
    "atem": {
-    "lufs_i": -19.07,
+    "lufs_i": -19.17,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
+   },
+   "first_weeks": {
+    "lufs_i": -19.02,
+    "st_p95": -17.17,
+    "st_max": -16.98,
+    "true_peak_dbtp": -4.19
+   },
+   "dream": {
+    "lufs_i": -21.62,
+    "st_p95": -18.63,
+    "st_max": -17.38,
+    "true_peak_dbtp": -4.16
+   },
+   "arena": {
+    "lufs_i": -21.5,
+    "st_p95": -18.99,
+    "st_max": -17.25,
+    "true_peak_dbtp": -4.16
+   },
+   "window": {
+    "lufs_i": -21.08,
+    "st_p95": -18.18,
+    "st_max": -17.53,
+    "true_peak_dbtp": -3.15
+   },
+   "waitlist": {
+    "lufs_i": -21.05,
+    "st_p95": -20.37,
+    "st_max": -20.09,
+    "true_peak_dbtp": -3.15
    }
   },
   "rows": [
    {
     "section": "a_launch: A1 launch night: the felt, a soft pulse, the Build (F minor, the chip)",
     "start": 0.0,
-    "end": 71.62,
-    "lufs_i": -22.15,
-    "st_p95": -21.79,
-    "st_max": -20.36,
-    "true_peak_dbtp": -4.0
+    "end": 71.75,
+    "lufs_i": -22.28,
+    "st_p95": -21.33,
+    "st_max": -19.62,
+    "true_peak_dbtp": -4.69
    },
    {
     "section": "a_launch: the click: one held chord, the flat line",
-    "start": 71.62,
-    "end": 74.12,
-    "lufs_i": -22.87,
+    "start": 71.75,
+    "end": 74.25,
+    "lufs_i": -21.84,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -4.36
+    "true_peak_dbtp": -4.47
    },
    {
     "section": "a_launch: A2 the two-hander: felt only (the Door in the gaps)",
-    "start": 74.12,
-    "end": 89.12,
-    "lufs_i": -21.13,
-    "st_p95": -20.91,
-    "st_max": -20.66,
-    "true_peak_dbtp": -3.37
+    "start": 74.25,
+    "end": 86.75,
+    "lufs_i": -20.92,
+    "st_p95": -21.06,
+    "st_max": -20.91,
+    "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: M1 the warm accent: A-flat major, the Build's pass (the payoff to the click)",
-    "start": 104.12,
-    "end": 109.12,
-    "lufs_i": -19.19,
-    "st_p95": -19.21,
-    "st_max": -19.03,
-    "true_peak_dbtp": -4.04
+    "start": 101.75,
+    "end": 106.75,
+    "lufs_i": -19.07,
+    "st_p95": -19.7,
+    "st_max": -19.42,
+    "true_peak_dbtp": -5.87
    },
    {
     "section": "a_launch: A3 the chatbot flatters: the felt, the pulse, the Build",
-    "start": 89.12,
-    "end": 114.12,
-    "lufs_i": -19.72,
-    "st_p95": -18.8,
-    "st_max": -18.44,
+    "start": 86.75,
+    "end": 111.75,
+    "lufs_i": -19.71,
+    "st_p95": -18.47,
+    "st_max": -18.15,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "a_launch: A4 the counter: a driving figure (the pulse, the chip Build, the violins, brass accents)",
-    "start": 114.12,
-    "end": 128.75,
-    "lufs_i": -16.4,
-    "st_p95": -14.47,
-    "st_max": -14.46,
-    "true_peak_dbtp": -3.15
+    "start": 111.75,
+    "end": 128.88,
+    "lufs_i": -18.09,
+    "st_p95": -15.78,
+    "st_max": -15.75,
+    "true_peak_dbtp": -4.35
    },
    {
     "section": "a_launch: A5 the held chord, then THE TURN: the Ache, the F pedal (the heat, the bill)",
-    "start": 128.75,
-    "end": 156.83,
-    "lufs_i": -21.34,
-    "st_p95": -19.71,
-    "st_max": -18.05,
-    "true_peak_dbtp": -3.15
+    "start": 128.88,
+    "end": 156.75,
+    "lufs_i": -21.11,
+    "st_p95": -19.38,
+    "st_max": -18.65,
+    "true_peak_dbtp": -4.35
    },
    {
     "section": "a_launch: THE CALL (v3.2): the F pedal and the shimmer hold; Tasya's Rhodes on \"pen\"",
-    "start": 156.83,
-    "end": 165.34,
-    "lufs_i": -22.64,
-    "st_p95": -21.22,
-    "st_max": -21.21,
-    "true_peak_dbtp": -10.95
-   },
-   {
-    "section": "code_red: the whine (J-cut: after the call's hang-up)",
-    "start": 165.34,
-    "end": 165.96,
-    "lufs_i": -35.11,
-    "st_p95": null,
-    "st_max": null,
-    "true_peak_dbtp": -21.77
+    "start": 156.75,
+    "end": 165.5,
+    "lufs_i": -22.91,
+    "st_p95": -22.31,
+    "st_max": -22.17,
+    "true_peak_dbtp": -11.45
    },
    {
     "section": "code_red: the alert: the panic ostinato (pizz 16ths)",
-    "start": 165.96,
-    "end": 168.46,
-    "lufs_i": -25.78,
+    "start": 184.0,
+    "end": 186.5,
+    "lufs_i": -26.03,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -15.65
+    "true_peak_dbtp": -15.58
    },
    {
     "section": "code_red: the tower rises: the siren as a joke, the whole orchestra",
-    "start": 168.46,
-    "end": 171.25,
+    "start": 186.5,
+    "end": 189.29,
     "lufs_i": -19.78,
     "st_p95": null,
     "st_max": null,
@@ -1228,8 +1867,8 @@
    },
    {
     "section": "code_red: Radnus, serene; the crypt; the founders (thin under every line)",
-    "start": 171.25,
-    "end": 191.5,
+    "start": 189.29,
+    "end": 209.54,
     "lufs_i": -21.89,
     "st_p95": -21.08,
     "st_max": -20.97,
@@ -1237,8 +1876,8 @@
    },
    {
     "section": "code_red: the lanyards; the lock: dead stop",
-    "start": 191.5,
-    "end": 194.82,
+    "start": 209.54,
+    "end": 212.86,
     "lufs_i": -23.56,
     "st_p95": null,
     "st_max": null,
@@ -1246,116 +1885,116 @@
    },
    {
     "section": "lobby: the pickup under the revolving door; the check jams",
-    "start": 195.46,
-    "end": 199.21,
-    "lufs_i": -19.05,
-    "st_p95": -18.69,
-    "st_max": -18.65,
-    "true_peak_dbtp": -6.79
+    "start": 258.12,
+    "end": 261.88,
+    "lufs_i": -19.06,
+    "st_p95": -18.85,
+    "st_max": -18.81,
+    "true_peak_dbtp": -6.87
    },
    {
     "section": "lobby: THE JOB's head; the freeze",
-    "start": 199.21,
-    "end": 205.75,
-    "lufs_i": -19.81,
-    "st_p95": -19.11,
-    "st_max": -19.1,
-    "true_peak_dbtp": -6.36
+    "start": 261.88,
+    "end": 268.54,
+    "lufs_i": -19.85,
+    "st_p95": -19.16,
+    "st_max": -19.15,
+    "true_peak_dbtp": -6.42
    },
    {
     "section": "lobby: the partnership (thin under the talk; fills in the gaps)",
-    "start": 205.75,
-    "end": 214.21,
-    "lufs_i": -21.38,
-    "st_p95": -20.74,
-    "st_max": -20.63,
-    "true_peak_dbtp": -8.85
+    "start": 268.54,
+    "end": 276.88,
+    "lufs_i": -21.39,
+    "st_p95": -20.79,
+    "st_max": -20.61,
+    "true_peak_dbtp": -8.91
    },
    {
     "section": "lobby: the check slides under the door; the push; the pop",
-    "start": 214.21,
-    "end": 216.71,
-    "lufs_i": -18.14,
+    "start": 276.88,
+    "end": 279.38,
+    "lufs_i": -18.2,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.61
+    "true_peak_dbtp": -6.66
    },
    {
     "section": "floor: THE TERMS: Tasya's floor (Ab -> C -> E -> Ab), on her sentence breaks",
-    "start": 224.53,
-    "end": 240.61,
+    "start": 286.85,
+    "end": 305.52,
     "lufs_i": -21.9,
-    "st_p95": -21.02,
-    "st_max": -20.95,
-    "true_peak_dbtp": -10.12
+    "st_p95": -21.04,
+    "st_max": -20.97,
+    "true_peak_dbtp": -10.14
    },
    {
     "section": "lobby2: weeks on: the swing back on a new phrase from the jangle",
-    "start": 240.61,
-    "end": 251.79,
-    "lufs_i": -20.25,
-    "st_p95": -18.59,
-    "st_max": -18.56,
-    "true_peak_dbtp": -8.67
+    "start": 305.52,
+    "end": 318.0,
+    "lufs_i": -20.3,
+    "st_p95": -18.48,
+    "st_max": -18.44,
+    "true_peak_dbtp": -8.2
    },
    {
     "section": "lobby2: the TV and the telescope: one held chord, then the walk",
-    "start": 251.79,
-    "end": 259.12,
-    "lufs_i": -21.21,
-    "st_p95": -20.78,
-    "st_max": -20.65,
-    "true_peak_dbtp": -9.59
+    "start": 318.0,
+    "end": 325.33,
+    "lufs_i": -21.38,
+    "st_p95": -20.92,
+    "st_max": -20.86,
+    "true_peak_dbtp": -9.48
    },
    {
     "section": "lobby2: \"ours does that too.\": the last chord, into Sydney (a crossfade)",
-    "start": 259.12,
-    "end": 261.79,
-    "lufs_i": -24.02,
+    "start": 325.33,
+    "end": 328.0,
+    "lufs_i": -23.35,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -12.12
+    "true_peak_dbtp": -11.0
    },
    {
     "section": "duel: the laptop opens (the match cut): the boot, the pulse",
-    "start": 287.88,
-    "end": 296.29,
-    "lufs_i": -22.72,
-    "st_p95": -21.22,
-    "st_max": -19.98,
+    "start": 391.67,
+    "end": 399.96,
+    "lufs_i": -22.84,
+    "st_p95": -21.38,
+    "st_max": -20.08,
     "true_peak_dbtp": -5.19
    },
    {
     "section": "duel: the split: the Build against the Addendum, trading bars over the Lighthouse",
-    "start": 296.29,
-    "end": 313.88,
-    "lufs_i": -19.66,
-    "st_p95": -17.87,
-    "st_max": -17.65,
-    "true_peak_dbtp": -4.02
+    "start": 399.96,
+    "end": 424.0,
+    "lufs_i": -19.7,
+    "st_p95": -18.47,
+    "st_max": -17.57,
+    "true_peak_dbtp": -5.11
    },
    {
     "section": "duel: the turn: the Addendum crosses; the chip copies its tail; the held chord",
-    "start": 313.88,
-    "end": 320.27,
-    "lufs_i": -17.9,
-    "st_p95": -16.69,
-    "st_max": -16.66,
-    "true_peak_dbtp": -4.33
+    "start": 424.0,
+    "end": 430.4,
+    "lufs_i": -17.91,
+    "st_p95": -17.25,
+    "st_max": -17.14,
+    "true_peak_dbtp": -3.15
    },
    {
     "section": "pause: MM-17 low: the C/G-flat pedal, the low tritone, the Launch stack in the gaps",
-    "start": 321.07,
-    "end": 330.42,
+    "start": 434.2,
+    "end": 443.21,
     "lufs_i": -21.0,
-    "st_p95": -19.62,
-    "st_max": -19.53,
-    "true_peak_dbtp": -8.19
+    "st_p95": -19.98,
+    "st_max": -19.59,
+    "true_peak_dbtp": -8.89
    },
    {
     "section": "threat: THREAT on the pen's lift, its tail into the black",
-    "start": 341.33,
-    "end": 343.33,
+    "start": 454.12,
+    "end": 456.12,
     "lufs_i": -18.39,
     "st_p95": null,
     "st_max": null,
@@ -1363,41 +2002,203 @@
    },
    {
     "section": "sydney: Sydney: uncanny and clingy",
-    "start": 261.79,
-    "end": 287.88,
-    "lufs_i": -21.98,
-    "st_p95": -19.9,
-    "st_max": -19.72,
-    "true_peak_dbtp": -9.2
+    "start": 328.0,
+    "end": 353.33,
+    "lufs_i": -21.99,
+    "st_p95": -19.79,
+    "st_max": -19.76,
+    "true_peak_dbtp": -3.61
    },
    {
     "section": "atem: the Atem leak: the sting",
-    "start": 287.88,
-    "end": 289.88,
-    "lufs_i": -18.75,
+    "start": 391.67,
+    "end": 393.67,
+    "lufs_i": -18.86,
     "st_p95": null,
     "st_max": null,
     "true_peak_dbtp": -5.19
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.01 (Abmaj9)",
+    "start": 165.5,
+    "end": 168.0,
+    "lufs_i": -22.28,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.37
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.02 (Bbm9)",
+    "start": 168.0,
+    "end": 170.0,
+    "lufs_i": -18.84,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.29
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.03 (Cm7)",
+    "start": 170.0,
+    "end": 172.5,
+    "lufs_i": -19.16,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.66
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.04 (the flicker: the Ache over F)",
+    "start": 172.5,
+    "end": 175.5,
+    "lufs_i": -24.47,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -12.89
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.05 (Dbmaj9)",
+    "start": 175.5,
+    "end": 177.5,
+    "lufs_i": -18.8,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -6.6
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.06 (Eb13sus)",
+    "start": 177.5,
+    "end": 180.0,
+    "lufs_i": -16.98,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.1
+   },
+   {
+    "section": "first_weeks: the first weeks: v35-10.07 (Abmaj9)",
+    "start": 180.0,
+    "end": 182.5,
+    "lufs_i": -17.6,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.75
+   },
+   {
+    "section": "first_weeks: 10.08: the stop, the ring into the whoop",
+    "start": 182.5,
+    "end": 184.02,
+    "lufs_i": -19.23,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -4.19
+   },
+   {
+    "section": "dream: 3 AM: one felt note on the second read (the V.O. inside it)",
+    "start": 219.08,
+    "end": 224.26,
+    "lufs_i": -23.63,
+    "st_p95": -27.63,
+    "st_max": -25.05,
+    "true_peak_dbtp": -9.22
+   },
+   {
+    "section": "dream: the glowing line: 180 YEARS",
+    "start": 224.26,
+    "end": 225.75,
+    "lufs_i": -20.92,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.33
+   },
+   {
+    "section": "dream: JUN 2018: the dream (the felt, the Water Line, the Build soft)",
+    "start": 225.75,
+    "end": 254.02,
+    "lufs_i": -21.76,
+    "st_p95": -18.9,
+    "st_max": -17.24,
+    "true_peak_dbtp": -4.16
+   },
+   {
+    "section": "dream: the Door, unanswered; the side project; the sweep back",
+    "start": 254.02,
+    "end": 259.7,
+    "lufs_i": -21.68,
+    "st_p95": -20.69,
+    "st_max": -20.14,
+    "true_peak_dbtp": -5.96
+   },
+   {
+    "section": "arena: ATOD's arena (diegetic)",
+    "start": 225.75,
+    "end": 255.25,
+    "lufs_i": -21.54,
+    "st_p95": -19.0,
+    "st_max": -17.24,
+    "true_peak_dbtp": -4.16
+   },
+   {
+    "section": "window: THE WINDOW: the Build in A-flat major, the team's peak",
+    "start": 353.63,
+    "end": 364.54,
+    "lufs_i": -19.7,
+    "st_p95": -18.34,
+    "st_max": -18.22,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "window: the lamp: one felt note",
+    "start": 364.54,
+    "end": 367.04,
+    "lufs_i": -22.25,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.8
+   },
+   {
+    "section": "window: THE VISION POST: the held felt line (quiet ambition)",
+    "start": 367.04,
+    "end": 388.67,
+    "lufs_i": -22.61,
+    "st_p95": -20.85,
+    "st_max": -20.83,
+    "true_peak_dbtp": -3.5
+   },
+   {
+    "section": "window: Publish: the Build's line, ringing into the match cut",
+    "start": 388.67,
+    "end": 391.67,
+    "lufs_i": -19.94,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.04
+   },
+   {
+    "section": "waitlist: the waitlist: the smug sting, ringing under the toast",
+    "start": 429.9,
+    "end": 434.2,
+    "lufs_i": -20.88,
+    "st_p95": -20.29,
+    "st_max": -20.08,
+    "true_peak_dbtp": -3.15
    }
   ],
   "digital_silence": [
    {
-    "t0": 194.817,
-    "t1": 195.408,
-    "dur": 0.592,
+    "t0": 212.858,
+    "t1": 219.058,
+    "dur": 6.2,
     "marked": true,
-    "why": "the phone locks (a diegetic stop) -> the lobby's pickup under the revolving door"
+    "why": "the phone locks (a diegetic stop); 3 AM: no score under the at-capacity page and the first read (the bullpen's fans), until his second read's one felt note"
    },
    {
-    "t0": 216.708,
-    "t1": 224.532,
-    "dur": 7.823,
+    "t0": 279.375,
+    "t1": 286.848,
+    "dur": 7.473,
     "marked": true,
     "why": "the collar's pop: the swing stops dead; the lobby's room under \"That collar suits you.\" / \"it does.\" / \"and the rent?\""
    },
    {
-    "t0": 330.417,
-    "t1": 341.323,
+    "t0": 443.208,
+    "t1": 454.115,
     "dur": 10.907,
     "marked": true,
     "why": "EMIT's THUD stops the pause letter: no score through the page, his desk and the reflection, until the THREAT on the pen's lift"
@@ -1406,42 +2207,47 @@
   "unmarked_digital_silence": [],
   "holes_below_-60": [
    {
-    "t0": 194.85,
-    "t1": 195.45,
+    "t0": 212.9,
+    "t1": 219.05,
     "inside_marked": true
    },
    {
-    "t0": 216.75,
-    "t1": 224.55,
+    "t0": 279.4,
+    "t1": 286.85,
     "inside_marked": true
    },
    {
-    "t0": 330.45,
-    "t1": 341.3,
+    "t0": 443.25,
+    "t1": 454.1,
     "inside_marked": true
    }
   ],
   "music_runs": [
    {
     "t0": 0.0,
-    "t1": 216.75,
-    "dur": 216.75
+    "t1": 212.9,
+    "dur": 212.9
    },
    {
-    "t0": 224.55,
-    "t1": 330.45,
-    "dur": 105.9
+    "t0": 219.05,
+    "t1": 279.4,
+    "dur": 60.35
    },
    {
-    "t0": 341.3,
-    "t1": 343.2,
+    "t0": 286.85,
+    "t1": 443.25,
+    "dur": 156.4
+   },
+   {
+    "t0": 454.1,
+    "t1": 456.0,
     "dur": 1.9
    }
   ],
   "fragments_under_2s": [
    {
-    "t0": 341.3,
-    "t1": 343.2,
+    "t0": 454.1,
+    "t1": 456.0,
     "dur": 1.9,
     "designed_sting": "THREAT (the act-out sting)"
    }
@@ -1453,36 +2259,36 @@
   {
    "name": "a_launch",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/a_launch-underscore.wav",
-   "laid_at_s": -3.375,
+   "laid_at_s": -3.25,
    "window": [
     0.0,
-    166.043
+    166.2
    ],
    "fade_in_s": 0.0,
    "fade_out_s": 0.9,
    "gain_db": 0.0,
-   "post": null
+   "post": "a -1.2 dB fader ride on the odometer (the wait to the hit on Rima)"
   },
   {
    "name": "code_red",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/code_red-underscore.wav",
-   "laid_at_s": 160.9583,
+   "laid_at_s": 179.0,
    "window": [
-    165.343,
-    194.817
+    183.72,
+    212.858
    ],
    "fade_in_s": 0.4,
    "fade_out_s": 0.003,
-   "gain_db": -4.83,
+   "gain_db": -4.84,
    "post": "era.futz('phone'): his phone's small speaker"
   },
   {
    "name": "lobby",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/lobby-underscore.wav",
-   "laid_at_s": 194.2083,
+   "laid_at_s": 256.875,
    "window": [
-    195.408,
-    216.708
+    258.7,
+    279.375
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.003,
@@ -1492,10 +2298,10 @@
   {
    "name": "floor",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/floor-underscore.wav",
-   "laid_at_s": 224.5317,
+   "laid_at_s": 286.8483,
    "window": [
-    224.532,
-    241.708
+    286.848,
+    306.625
    ],
    "fade_in_s": 0.8,
    "fade_out_s": 0.6,
@@ -1505,10 +2311,10 @@
   {
    "name": "lobby2",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/lobby2-underscore.wav",
-   "laid_at_s": 239.3583,
+   "laid_at_s": 304.275,
    "window": [
-    240.558,
-    262.342
+    305.475,
+    328.55
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.04,
@@ -1518,23 +2324,23 @@
   {
    "name": "duel",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/duel-underscore.wav",
-   "laid_at_s": 286.375,
+   "laid_at_s": 389.0,
    "window": [
-    287.875,
-    321.575
+    391.667,
+    430.4
    ],
    "fade_in_s": 0.0,
-   "fade_out_s": 1.0,
+   "fade_out_s": 0.6,
    "gain_db": 0.0,
    "post": null
   },
   {
    "name": "pause",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/pause-underscore.wav",
-   "laid_at_s": 321.075,
+   "laid_at_s": 434.2,
    "window": [
-    321.025,
-    330.417
+    434.15,
+    443.208
    ],
    "fade_in_s": 0.05,
    "fade_out_s": 0.003,
@@ -1544,10 +2350,10 @@
   {
    "name": "threat",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/threat-underscore.wav",
-   "laid_at_s": 338.8333,
+   "laid_at_s": 451.625,
    "window": [
-    341.323,
-    343.333
+    454.115,
+    456.125
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.3,
@@ -1557,10 +2363,10 @@
   {
    "name": "sydney",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/sydney-underscore.wav",
-   "laid_at_s": 259.2917,
+   "laid_at_s": 325.5,
    "window": [
-    261.705,
-    287.875
+    327.913,
+    353.333
    ],
    "fade_in_s": 0.02,
    "fade_out_s": 0.35,
@@ -1570,13 +2376,78 @@
   {
    "name": "atem",
    "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/atem-underscore.wav",
-   "laid_at_s": 285.375,
+   "laid_at_s": 389.1667,
    "window": [
-    287.855,
-    290.075
+    391.647,
+    393.867
    ],
    "fade_in_s": 0.005,
    "fade_out_s": 0.4,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "first_weeks",
+   "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/first_weeks-underscore.wav",
+   "laid_at_s": 163.0,
+   "window": [
+    165.496,
+    184.07
+   ],
+   "fade_in_s": 0.004,
+   "fade_out_s": 0.45,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "dream",
+   "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/dream-underscore.wav",
+   "laid_at_s": 215.75,
+   "window": [
+    219.058,
+    259.1
+   ],
+   "fade_in_s": 0.02,
+   "fade_out_s": 0.75,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "arena",
+   "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/arena-underscore.wav",
+   "laid_at_s": 225.75,
+   "window": [
+    225.74,
+    255.6
+   ],
+   "fade_in_s": 0.2,
+   "fade_out_s": 0.5,
+   "gain_db": -12.56,
+   "post": "era.futz('tv'): the arena on the wall of monitors"
+  },
+  {
+   "name": "window",
+   "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/window-underscore.wav",
+   "laid_at_s": 351.1333,
+   "window": [
+    353.253,
+    391.967
+   ],
+   "fade_in_s": 0.04,
+   "fade_out_s": 0.5,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "waitlist",
+   "file": "audio/ost/tracks/e01-v3-act1/render/_work/el/waitlist-underscore.wav",
+   "laid_at_s": 427.4,
+   "window": [
+    429.88,
+    434.5
+   ],
+   "fade_in_s": 0.005,
+   "fade_out_s": 0.45,
    "gain_db": 0.0,
    "post": null
   }

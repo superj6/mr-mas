@@ -56,7 +56,8 @@ def build():
     c = C.CLK
     home = c.B('S5.02')
     heart1 = c.snd('S5.03', 'key_tap_soft_01')
-    T0 = heart1 - 3 * BAR                                  # grid bar 4 = the first heart
+    V35 = c.B('S5.03') < home                             # v3.5: the hearts come first (the match from Alyi's phone)
+    T0 = (home - BAR) if V35 else (heart1 - 3 * BAR)       # grid bar 4 = the first heart (v3.5: bar 2 = the home shot)
     end = c.B('S6.01')
     cue = Cue(ID, T0, int(math.ceil((end - T0) / BAR)) + 4, swing=1.0)
     T = tracks()
@@ -87,26 +88,45 @@ def build():
                 t += Q
         return out
 
+    if V35:
+        # v3.5: the hearts first, on his phone (the match from Alyi's): his room comes back with the felt's first
+        # chord on the cut, and the felt's count ticks with the hearts (quarters, varied pitches) into the home shot
+        h0 = c.B('S5.03')
+        fch(['Db3', 'Ab3', 'Eb4'], h0 + 0.04, home - h0 + 0.2, 0.1, roll=0.03, span_end=home - 0.02)
+        for k, p in enumerate(['Ab3', 'Eb3', 'Bb3', 'Db4']):
+            tk = heart1 + k * Q
+            if tk < home - 0.1:
+                cue.n('felt_lh', p, tk, Q * 0.9, 0.55 * (0.19, 0.17, 0.18, 0.16)[k])
+        cue.mark(h0 + 0.04, 'C: v3.5: the hearts on his phone: the felt alone on the cut (his room first), the count '
+                            'ticking with the hearts')
     # ---------------------------------------------------------------- the home shot: the felt, the Water Line warm
     fch(['Db3', 'Ab3', 'Eb4'], home + 0.07, 3.0, 0.1, roll=0.03)            # (render 1: the opening read -16.2 LUFS)
     cue.line('felt', 'F4/4 F4/4 F4/4 G4/8 F4/8 | C4/4 F4/2.', 2, vel=0.13, swing=True)
     place_motif(cue.a, 'lead', 'WATER_LINE', (2, 1), part='nudge_double', vel=0.1, swing=1.0, duty=0.5, att=0.004,
                 dec=0.25, sus=0.35, rel=0.12)
     fch(['Db3', 'Ab3', 'C4'], cue.bar(2), 2.4, 0.1)
-    fch(['Db3', 'F3', 'Ab3'], cue.bar(3), 2.4, 0.09)
+    if V35:
+        fch(['Db3', 'F3', 'Ab3'], cue.bar(3), c.B('S5.04') - cue.bar(3) + 0.1, 0.09, span_end=c.B('S5.04') + 0.02)
+    else:
+        fch(['Db3', 'F3', 'Ab3'], cue.bar(3), 2.4, 0.09)
     cue.mark(home + 0.07, 'C: the felt alone in the dark (Db lydian): his room first')
     cue.mark(cue.bar(2), 'C: the Water Line, warm (F F F G-sw F | C F over Dbmaj9(#11), Bbm9)')
-    cue.section('S5 the dark room at 2 AM: the felt, the Water Line warm', home, cue.bar(4) - Q)
+    if V35:
+        cue.section('S5 the hearts on his phone: the felt\'s first chord, the count', c.B('S5.03'), home)
+        cue.section('S5 the dark room at 2 AM: the felt, the Water Line warm', home, c.B('S5.04'))
+    else:
+        cue.section('S5 the dark room at 2 AM: the felt, the Water Line warm', home, cue.bar(4) - Q)
 
     # ---------------------------------------------------------------- the count (a pulse, not a note per heart)
-    tick0 = cue.bar(4) - Q
-    for k, p in enumerate(['Ab3', 'Eb3', 'Bb3', 'Db4', 'Eb3', 'Db3', 'Ab3', 'C4']):
-        cue.n('felt_lh', p, tick0 + k * Q, Q * 0.9, 0.55 * (0.19, 0.17, 0.18, 0.16, 0.18, 0.17, 0.16, 0.15)[k])
-    fch(['Db4', 'F4', 'Bb4'], cue.bar(4), 2.4, 0.1)                 # (render 4: the V.O. window read -18.2 LUFS)
-    fch(['C4', 'Eb4', 'F4'], cue.bar(5), max(2.3, c.B('S5.04') - cue.bar(5) + 0.3), 0.1,
-        span_end=c.B('S5.04') + 0.02)                                 # held to the Orb's look (no gap before it)
-    cue.mark(tick0, "S5 the count: the felt ticks with the hearts (quarters, varied pitches)")
-    cue.section('S5 the count (the felt\'s pulse under the V.O.)', tick0, c.B('S5.04'))
+    if not V35:
+        tick0 = cue.bar(4) - Q
+        for k, p in enumerate(['Ab3', 'Eb3', 'Bb3', 'Db4', 'Eb3', 'Db3', 'Ab3', 'C4']):
+            cue.n('felt_lh', p, tick0 + k * Q, Q * 0.9, 0.55 * (0.19, 0.17, 0.18, 0.16, 0.18, 0.17, 0.16, 0.15)[k])
+        fch(['Db4', 'F4', 'Bb4'], cue.bar(4), 2.4, 0.1)             # (render 4: the V.O. window read -18.2 LUFS)
+        fch(['C4', 'Eb4', 'F4'], cue.bar(5), max(2.3, c.B('S5.04') - cue.bar(5) + 0.3), 0.1,
+            span_end=c.B('S5.04') + 0.02)                             # held to the Orb's look (no gap before it)
+        cue.mark(tick0, "S5 the count: the felt ticks with the hearts (quarters, varied pitches)")
+        cue.section('S5 the count (the felt\'s pulse under the V.O.)', tick0, c.B('S5.04'))
 
     # ---------------------------------------------------------------- the Orb's look: one held chord
     look_orb = c.B('S5.04') + 0.05
@@ -118,7 +138,9 @@ def build():
 
     # ---------------------------------------------------------------- Gerg's call: A-flat, the Build (chip + felt)
     ring = c.B('S5.09') + 0.1
-    v21 = L['v34-vo-09'] if 'v34-vo-09' in L else L['v3-vo-21']     # v3.4: "gerg walked out for me."
+    v21 = L.get('v34-vo-09') or L.get('v3-vo-21')    # v3.4: "gerg walked out for me." (v3.5: cut)
+    if v21 is None:                                  # v3.5: no V.O. at the ring: the chord, then the Build
+        v21 = dict(on=ring, end=ring + 0.9, words=[])
     fch(['Eb3', 'G3', 'C4', 'Bb4'], ring, max(2.4, v21['end'] - ring + 0.4), 0.15, span_end=v21['end'] + 0.3)
     if v21['end'] - ring > 2.6:                      # a long V.O. (the EL lock: 3.3 s): one soft inner move inside it
         ws = v21['words']
@@ -285,7 +307,8 @@ def build():
         underscore_lufs=-20.0, album_lufs=-16.0,
         room_sfx=[dict(t0=cue.s(home), t1=cue.s(end), sfx='room_drone (the dark room)')],
         silence_windows=[(cue.s(rest[0]) + 0.05, cue.s(rest[1]) - 0.05, 'no score: ALYI -> "He did both."', -70.0)],
-        vo_windows=[(cue.s(l['on']), cue.s(l['end']), l['text']) for l in (L['v3-vo-20'], v21, v22, v23) if l],
+        vo_windows=[(cue.s(l['on']), cue.s(l['end']), l['text']) for l in (L.get('v3-vo-20'), v21, v22, v23)
+                    if l and 'text' in l],
         sfx_slots=[dict(t=round(cue.s(c.snd('S5.03', f'key_tap_soft_0{k}')), 3), sfx=f'heart {k}') for k in range(1, 6)]
         + [dict(t=round(cue.s(c.snd('S5.09', 'RING')), 3), sfx='RING'),
            dict(t=round(cue.s(c.snd('S5.06', 'bell_ding_F6')), 3), sfx="the Orb's chime (F6), in the rest"),
@@ -300,11 +323,13 @@ def build():
                   '"leave it open." ringing into the first tile'])
     # render 3: the opening read -18.1 LUFS in its first 1.7 s (the felt alone at the home shot, over the board's
     # held C) and Gerg's call p95 -16.7: fader rides, off the words
+    if V35:                                          # (v3.5: the hearts come first: the opening at -2.5 dB to S5.04)
+        tick0 = c.B('S5.04')
     macro = [(0.0, -2.5), (cue.s(tick0) - 0.4, -2.5), (cue.s(tick0), 0.0), (cue.s(ring) - 0.3, 0.0),
              (cue.s(ring), -1.0), (cue.s(letter) - 0.3, -1.0), (cue.s(letter), 0.0)]
     sc = Score(ID, cue.g, T, cue.notes, macro=macro, length_s=cue.s(end), tail_s=0.0,
                end_fade=(cue.s(end) - 0.35, cue.s(end) - 0.01), meta=meta, **cue.score_args())
-    window = [home, end, 0.0, 0.3]
+    window = [(c.B('S5.03') - 0.02) if V35 else home, end, 0.0, 0.3]
     extra = dict(marks=[(round(t, 4), lab, h) for t, lab, h in cue.marks],
                  sections=[(lab, round(a_, 4), round(b_, 4)) for lab, a_, b_ in cue.sections],
                  silences=[(rest[0], rest[1], 'the scroll stops on ALYI -> "He did both." (no score: the chime, '

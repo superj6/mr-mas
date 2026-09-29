@@ -2,7 +2,17 @@
 
 **Composer X (`v3-score-a`), 2026-09-27; round 2.** Track A1 of [PLAN.md](../../../../show/episodes/ep01/production/full-v3/PLAN.md). **Nothing here has been listened to.** Every number is measured.
 
-## v3.4 (current, 2026-09-28)
+## v3.5 FINAL (current, 2026-09-28): the ElevenLabs-timed lock
+
+**The final film is the ElevenLabs-timed v3.5 lock, `show/reel/ep01-v35-el/`.** Its cold open is the v3.4 EL cut frame for frame (583 frames, the same beats, lines and sounds), so the rewind is unchanged.
+- **`render/music-el.wav`: 24.292 s (583 frames), exact.** −26.0 LUFS-I, −13.4 dBTP.
+- **Checks** (`../e01-v3-act1/v35check.py`):
+  - no unmarked silence, hole or fragment;
+  - the one 12 dB step sits on a mark;
+  - rule 12 and the knee both 0.
+- `track.py` now reads the v3.5 locks by default (`--el` is the final film). The Kokoro v3.5 stem (`render/music.wav`) was not re-rendered: the film is ElevenLabs.
+
+## v3.4 (superseded by v3.5, 2026-09-28)
 
 The same cut (640 frames; EL 583), now from `show/reel/ep01-v34/`, exact; −26.0 LUFS-I.
 
