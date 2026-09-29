@@ -43,7 +43,7 @@
 import {Buf, rect, line, ellipse, poly, bayer, hash, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf, lightness} from '../../../../../shared/pixel/palette';
 import {text, textWidth, bigText, bigTextWidth} from '../../../../../shared/pixel/font';
-import {pt, pw, pwrap} from '../../../../../shared/pixel/kits/uitype';
+import {pt, pw, pwrap, bpt, bpw} from '../../../../../shared/pixel/kits/uitype';
 import {tiny, tinyWidth} from '../../../../../shared/pixel/rooms/kit-b';
 import {drawPost, postLines} from '../../../../../shared/pixel/kits/post-card';
 import type {PostSpec} from '../../../../../shared/pixel/kits/post-card';
@@ -73,7 +73,7 @@ const NIGHT_RAMP = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N5, PAL.N6];
 // ================================================================== his phone in the suite (v32-S1.13, v35-41.05)
 /** drawSuitePhone's geometry (kits/act4-v32: the phone at 150, 6, 180 x 197; the screen inset 7, 10) */
 export const SUITE_PHONE = {px: 150, py: 6, pw: 180, ph: 197, sx: 157, sy: 16, sw: 166};
-export interface SuitePhone35 { night?: 0 | 1 | 2 | 3; screen: (b: Buf, sx: number, sy: number, sw: number) => void; lights?: boolean }
+export interface SuitePhone35 { night?: 0 | 1 | 2 | 3; screen: (b: Buf, sx: number, sy: number, sw: number) => void; lights?: boolean; lobby?: boolean }
 /** the kit's afternoon backdrop, phone and fingers, any screen, and the kit's fall to night (the screen stays lit);
  *  `lights`: at night the Strip comes on in the window (a scatter of held warm and red points, never flickering) */
 export const suitePhone35 = (b: Buf, f: number, st: SuitePhone35) => {
@@ -82,6 +82,10 @@ export const suitePhone35 = (b: Buf, f: number, st: SuitePhone35) => {
     b.set(x, y, y > 150 ? (t < 0.5 ? PAL.D3 : PAL.D2) : t < 0.35 ? PAL.W7 : t < 0.6 ? PAL.W6 : t < 0.8 ? PAL.W5 : PAL.D4);
   }
   for (let k = 0; k < 9; k++) { const x = 20 + k * 52 + Math.round(hash(k, 1, 7) * 20), h = 30 + Math.round(hash(k, 2, 7) * 50); for (let y = 150 - h; y < 150; y++) for (let i = 0; i < 16; i++) if (bayer(x + i, y) < 0.5) b.set(x + i, y, stepColor(b.get(x + i, y), -1)); }
+  if (st.lobby) for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) { // v3.5b: the lobby by day behind it, soft (its pale stone, the glass, the desk's dark band)
+    const t = x / 480 + (bayer(x, y) - 0.5) * 0.2;
+    b.set(x, y, y > 156 ? (t < 0.5 ? PAL.G2 : PAL.G1) : x % 96 < 6 ? PAL.G4 : t < 0.4 ? PAL.P1 : t < 0.7 ? PAL.G6 : PAL.G5);
+  }
   const {px, py, pw: pw2, ph, sx, sy, sw} = SUITE_PHONE;
   rect(px + 4, py + 4, pw2, ph, b.ink(PAL.D1));
   rect(px, py, pw2, ph + 10, b.ink(PAL.N0)); rect(px + 1, py + 1, pw2 - 2, ph + 10, b.ink(PAL.G1)); rect(px + 1, py, pw2 - 2, 1, b.ink(PAL.G4));
@@ -192,7 +196,9 @@ export const drawDeskPhone = (b: Buf, f: number, st: DeskPhoneState) => {
     if (since < 1 && age > 0) y -= Math.round((INCOMING_H + 3) / 2);
     incomingTile(clip, 3, y, sw - 6, WAR_CALLERS[i], age === 0 ? since : 9);
   }
-  for (let y = 0; y < sh; y++) for (let x = 0; x < sw; x++) { if (y < 13) continue; b.set(sx + x, sy + y, clip.get(x, y)); }
+  const foot = sh - 46; // v3.5b: the foot of the screen is his goodbye post, the staff's hearts piling on it
+  for (let y = 0; y < sh; y++) for (let x = 0; x < sw; x++) { if (y < 13 || y >= foot) continue; b.set(sx + x, sy + y, clip.get(x, y)); }
+  goodbyeHearts(b, sx + 2, sy + foot + 2, sw - 4, Math.min(40, Math.floor(k / 2)), Math.floor(412 + k * k * 0.9 + k * 14));
 };
 /** a generic hotel's crest: a small star over two rules (no name, no brand) */
 export const hotelCrest = (b: Buf, cx: number, cy: number, col: number) => {
@@ -212,6 +218,32 @@ export const pen = (b: Buf, x0: number, y0: number, x1: number, y1: number) => {
   }
 };
 
+
+// ---- the goodbye post's hearts (the pressure, shown before the board's Sunday): his 1:46 PM post, its heart count
+// climbing, anonymous staff avatars (a disc with an initial-less head, no faces) piling onto it in a row, each with a
+// small heart; `n` avatars shown, `count` the hearts
+const AV_COL = [PAL.C4, PAL.L2, PAL.W5, PAL.U4, PAL.F4, PAL.R2, PAL.G4, PAL.C5, PAL.W4, PAL.L1];
+export const fmtCount = (n: number) => (n >= 10000 ? `${(Math.floor(n / 100) / 10).toFixed(1)}K` : n >= 1000 ? `${Math.floor(n / 1000)},${String(n % 1000).padStart(3, '0')}` : String(n));
+export const goodbyeHearts = (b: Buf, x: number, y: number, w: number, n: number, count: number, o: {label?: string; bg?: number} = {}) => {
+  const h = 42;
+  rect(x - 1, y - 1, w + 2, h + 2, b.ink(PAL.N0)); rect(x, y, w, h, b.ink(o.bg ?? PAL.N3)); rect(x, y, w, 1, b.ink(PAL.C6));
+  pt(b, o.label ?? (w < 140 ? 'your post' : 'your post · 1:46 PM'), x + 4, y + 3, PAL.G5);
+  pt(b, 'i loved my time at nopeai. …', x + 4, y + 12, PAL.P1);
+  // the heart and its count, right
+  const HEART = ['.#.#.', '#####', '#####', '.###.', '..#..'];
+  const cs = fmtCount(count), cx = x + w - 4 - pw(cs);
+  HEART.forEach((r, j) => { for (let i = 0; i < 5; i++) if (r[i] === '#') b.set(cx - 8 + i, y + 4 + j, PAL.R3); });
+  pt(b, cs, cx, y + 3, PAL.P2);
+  // the avatars piling on: overlapping discs along the foot, the newest on the right, each with a heart badge
+  const step = 6, max = Math.floor((w - 12) / step);
+  for (let i = Math.max(0, n - max); i < n; i++) {
+    const ax = x + 7 + (i - Math.max(0, n - max)) * step, ay = y + 32;
+    ellipse(ax, ay, 4, 4, b.ink(PAL.N0)); ellipse(ax, ay, 3, 3, b.ink(AV_COL[(i * 7) % AV_COL.length]));
+    b.set(ax, ay - 1, PAL.P1); rect(ax - 1, ay + 1, 3, 1, b.ink(PAL.P1)); // a generic head-and-shoulders mark
+    b.set(ax + 3, ay - 3, PAL.R3); b.set(ax + 4, ay - 3, PAL.R3);
+  }
+  return h;
+};
 // ---- v35-41.02 / 41.03: the 2S at his laptop, and the call's own field
 export type TileDraw = (b: Buf, x: number, y: number, w: number, h: number) => void;
 export const LAPTOP_2S = {x: 262, y: 22, w: 200, h: 122};
@@ -554,6 +586,39 @@ export const drawTpool = (fb: Buf, f: number, st: TpoolState) => {
   vhsTrack(fb, f, Math.max(0.12, st.track));
 };
 
+
+// ================================================================== v3.5b: the board's invitation, and step four
+/** v32-S5.00's opening: his phone in the lobby, the board's message from Saturday night (signed by the board) */
+export const drawBoardInvite = (b: Buf, f: number) => {
+  suitePhone35(b, f, {lobby: true, screen: (bb, sx, sy, sw) => {
+    rect(sx, sy, sw, 12, bb.ink(PAL.N2)); pt(bb, '1:03 PM', sx + 4, sy + 2, PAL.G5);
+    rect(sx, sy + 12, sw, 22, bb.ink(PAL.N3)); rect(sx, sy + 34, sw, 1, bb.ink(PAL.N4));
+    ellipse(sx + 14, sy + 23, 7, 7, bb.ink(PAL.G3)); pt(bb, 'NB', sx + 14 - Math.floor(pw('NB') / 2), sy + 20, PAL.P2);
+    pt(bb, 'NOPEAI BOARD', sx + 26, sy + 16, PAL.P2); pt(bb, '4 members', sx + 26, sy + 25, PAL.G5);
+    const stamp = 'SAT, NOV 18 · 11:48 PM';
+    pt(bb, stamp, sx + Math.round((sw - pw(stamp)) / 2), sy + 44, PAL.G5);
+    const lines = ['can you come in', "tomorrow? let's", 'talk.'];
+    const bw = Math.max(...lines.map((l) => bpw(l))) + 14, bx = sx + 6, by = sy + 56, bh = lines.length * 17 + 9;
+    rect(bx, by, bw, bh, bb.ink(PAL.G2)); rect(bx + 1, by + bh, bw - 2, 1, bb.ink(PAL.G1)); rect(bx - 1, by + bh - 4, 2, 5, bb.ink(PAL.G2)); // the bubble, its tail
+    lines.forEach((l, i) => bpt(bb, l, bx + 7, by + 6 + i * 17, PAL.P2));
+    pt(bb, 'NOPEAI BOARD', bx, by + bh + 4, PAL.N6);
+  }});
+};
+/** the step-four sheet at insert scale (rooms/boardroom drawTableInsert 'blueprint': 1-3 ticked, 4 a blank line) with
+ *  NELEH's marker: `n` letters of MARIO written on the blank, `strike` 0..1 a stroke through it, her marker hand at the
+ *  point it's working (art-v5 drawNelehPenHand, passed in) */
+export const STEP4_AT: [number, number] = [104, 133];
+export const drawStepFour = (b: Buf, f: number, st: {n: number; strike: number}, hand: (x: number, y: number) => void) => {
+  const [x, y] = STEP4_AT, word = 'MARIO';
+  const end = handText(b, word, x, y, Math.min(word.length, st.n), PAL.P2, 21);
+  let tip: [number, number] = [end + 1, y + 12];
+  if (st.strike > 0) {
+    const w = bigTextWidth(word) + 8, n = Math.round(w * Math.min(1, st.strike));
+    for (let i = 0; i < n; i++) { const yy = y + 8 - Math.floor(i / 18); b.set(x - 4 + i, yy, PAL.P2); b.set(x - 4 + i, yy + 1, PAL.P2); b.set(x - 4 + i, yy + 2, PAL.P1); }
+    tip = [x - 4 + n, y + 8 - Math.floor(n / 18)];
+  }
+  hand(tip[0], tip[1]);
+};
 // ================================================================== v31-S3.00p: her two printed pages, squared twice
 export interface PropsState { k: number; square1: number; square2: number }
 const POST_DEC4 = 'CHATGTP launched on wednesday. today it crossed 1 million users!';

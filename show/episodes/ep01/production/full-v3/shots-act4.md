@@ -1,8 +1,25 @@
 # Ep1 v3.5: Act Four's shots (`v3-shots-act4`, 2026-09-27 / 28; `p-act4`, the v3.5 round, 2026-09-28)
 
-> **Status: v3.5 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) (§8, step 4) for the `act4` segment ("five days, told twice", **8:03.33**), on the **v3.5 base lock, Kokoro timing** (`show/reel/ep01-v35/ep01-v35-act4.json`, commit 816ca71; [lock-v35.md](lock-v35.md)). **§V35 below is the current state.** It adds 11 shots and changes 17 (and S7.07's marks); §V34, §V33, §V32 and §V31 still describe everything V35 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.5 lock.
+> **Status: v3.5 built, checked and rendered. Nothing committed.** Track P2 of [PLAN.md](PLAN.md) (§8, step 4) for the `act4` segment ("five days, told twice", **8:03.33**), on the **v3.5 base lock, Kokoro timing** (`show/reel/ep01-v35/ep01-v35-act4.json`, commit 816ca71; [lock-v35.md](lock-v35.md)). **§V35b and §V35 below are the current state** (§V35b: the v3.5b pressure and step four, on the re-laid lock, EL picture only). It adds 11 shots and changes 17 (and S7.07's marks); §V34, §V33, §V32 and §V31 still describe everything V35 doesn't mention. §1–§8 are the v3 round's record. `pixel/act4/data.ts` is now the v3.5 lock.
 >
 > **Nothing here has been watched or heard.** Stills, crops and frames decoded from the render were looked at. The render's and the checks' numbers are measured.
+
+## V35b. The v3.5b round (SHOWRUNNER-NOTES 00000A: "why the board talks about his return" and "step four's payoff is restored"; the `p-act4` pass, 2026-09-28)
+
+**Picture only on the re-laid lock** (commits 8893509 / d56815b, [lock-v35.md](lock-v35.md) §10): EL Act Four is **11,953 f** (everything from 4481 on +79); the Kokoro lock is 11,680 f (`plan.json` `ep_in` 21023; re-locked, its one failed check the old temp mix's length). No beat length, line or sound changed here. **Only the EL picture was rendered** (`out/ep01/full-v3/picture-el/act4.mp4`, silent: the finishing pass muxes it with the new EL mix).
+
+| Where (EL frames) | What it draws now |
+|---|---|
+| v35-41.01 (1109–1193), v35-41.05 (1657–1718) | **The staff are with him, first:** the foot of his phone is his goodbye post (art/v35 `goodbyeHearts`): anonymous staff avatars piling on, each with a heart, the count climbing; at 9:32 PM it's still climbing (12.4K). |
+| S4.02 (4197–4480) | **The Saturday phones ask for him back,** legible in the wide (two-line lock-screen chips): STAFF · bring him back (its hearts piling up), MACROSOFT · Reinstate him., INVESTORS · the share sale's off without him, STAFF · bring him back. Neleh's "They all want him back…" plays over them. **After "Then we'll write step four ourselves."** (k255) a cut in to the sheet (rooms/boardroom `drawTableInsert`, art-v5 `drawNelehPenHand`): her marker writes **4. MARIO** on the blank from the lock's `marker_write_q` (4458) to the cut. |
+| S4.08 (4481–4907) | After "no." and the click, the sheet again: **a marker stroke strikes MARIO through** on `marker_write_q` (4896–4906). |
+| v32-S5.00 (4908–5099) | **The Nov 19 lobby opens on his phone** (art/v35 `drawBoardInvite`), until 16 frames before the selfie: NOPEAI BOARD (4 members, no name), stamped SAT, NOV 18 · 11:48 PM: "can you come in tomorrow? let's talk." Then the reception MCU and his badge post as before. |
+| S4.09 (5100–5329) | The ticker reads **STAFF AND INVESTORS PUSH TO BRING MANALT BACK**; on the broadcast, a lower third of his goodbye post, its hearts still climbing (218.4K up). |
+| S4.07 (6162–6233) | Sunday's look lands on **4. MARIO, struck through**, in the soft foreground. |
+
+**Checks and render:** `build_el.mjs act4` + `check` on `assembly/el-v35`: 83 layouts, 0 stand-ins; its one problem is the temp track's length (11,873 against 11,953: the old EL mix, expected until the mix pass). The render, the GLYPH frames and the S7.13 hourglass (`hourglass_el.py --s713 10754 --back-at 170`) ran as one heavy job (`heavy-el35c.sh`): `picture --jobs 2` 100 s, 164 browser frames spliced (0 missing), 0 stand-ins, **11,953 frames (498.04 s), silent**. **flash_seg.py: at most 1 flash in any 1 s** (the selfie, 4949), **0 red. Pass.** Decoded from the MP4 at full size: 4300 (the phones), 4470 (4. MARIO), 4925 (the invitation). Looked at, full size: the Saturday phones (4300), the sheet written and struck (4466, 4478, 4902), the lobby's phone (4925), Sunday's look (6200).
+
+**Weakest:** the left STAFF chip touches Neleh's legs in the wide; the lobby's phone is up 1.7 s for a 38-character message (the read floor wants about 2.1 s); the strike is 0.4 s on screen before the cut to the lobby.
 
 ## V35. The v3.5 round (the final version: script draft 8.4, [proposal-v35.md](proposal-v35.md) sc 38–56 with the lead's choices, [lock-v35.md](lock-v35.md); the `p-act4` pass, 2026-09-28)
 
