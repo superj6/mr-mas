@@ -2,6 +2,8 @@
 
 **The final film:** `out/ep01/full-v3/ep01-v35.mp4`, 23:31.58, commit f21d274. **Ep1 is locked** (showrunner, 2026-09-29: "we shouldn't make any changes to episode 1").
 
+**Published:** https://youtu.be/fXcFKn-pL1I (see also [EPISODES.md](../../../EPISODES.md)).
+
 **Nothing here may spoil the episode:** not the title, the thumbnail or the description. The firing and the return stay out of all three.
 
 ## Title
