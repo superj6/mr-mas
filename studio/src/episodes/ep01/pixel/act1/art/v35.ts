@@ -88,7 +88,7 @@ const pt2 = (b: Buf, s: string, x: number, y: number, col: number) => {
 // ================================================================== skin, hands and phones (the first weeks)
 export type Tone = 0 | 1 | 2;
 /** three strangers' skin ramps [edge, shadow, mid, light, highlight] (hands only, never a face) */
-const SKIN: Record<Tone, number[]> = {0: [PAL.S2, PAL.S3, PAL.S4, PAL.S5, PAL.S6], 1: [PAL.S1, PAL.S2, PAL.S3, PAL.S4, PAL.S5], 2: [PAL.D1, PAL.D2, PAL.B3, PAL.B4, PAL.S3]};
+export const SKIN: Record<Tone, number[]> = {0: [PAL.S2, PAL.S3, PAL.S4, PAL.S5, PAL.S6], 1: [PAL.S1, PAL.S2, PAL.S3, PAL.S4, PAL.S5], 2: [PAL.D1, PAL.D2, PAL.B3, PAL.B4, PAL.S3]};
 /** a phone's body: a rounded dark slab, 1 px keyline, its rim in `edge`; returns the screen's rect */
 export const phoneBody = (b: Buf, x: number, y: number, w: number, h: number, edge = PAL.G3): Rect => {
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
@@ -847,13 +847,17 @@ export const lineTip = (x0: number, yBase: number, x1: number, yEnd: number, y: 
   const u = Math.pow(clamp((yBase - y) / (yBase - yEnd), 0, 1), 1 / LINE_K);
   return lineAt(x0, yBase, x1, yEnd, u);
 };
-const usersLine = (b: Buf, x0: number, yBase: number, x1: number, yEnd: number, reveal: number, col = PAL.L3, under = PAL.L1, clipY = 0) => {
+export const usersLine = (b: Buf, x0: number, yBase: number, x1: number, yEnd: number, reveal: number, col = PAL.L3, under = PAL.L1, clipY = 0, ticks = true) => {
+  let px = -1, py = -1;
+  const dot = (x: number, y: number) => { for (const [dx, dy, c] of [[0, 0, col], [1, 0, col], [0, 1, under]] as Array<[number, number, number]>) { const X = x + dx, Y = y + dy; if (Y >= 0 && Y < RH && X >= 0 && X < 480) b.set(X, Y, c); } };
   for (let i = 0; i <= 600; i++) {
     const u = i / 600, [x, y0] = lineAt(x0, yBase, x1, yEnd, u), y = Math.round(y0 + Math.sin(i * 0.9) * 0.4);
     if (y < reveal || y < clipY) break;
-    for (const [dx, dy, c] of [[0, 0, col], [1, 0, col], [0, 1, under]] as Array<[number, number, number]>) { const X = x + dx, Y = y + dy; if (Y >= 0 && Y < RH && X >= 0 && X < 480) b.set(X, Y, c); }
+    // join a gap to the last point (the curve's flat end moves several pixels a step): whole pixels along the chord
+    if (px >= 0 && Math.max(Math.abs(x - px), Math.abs(y - py)) > 1) { const n = Math.max(Math.abs(x - px), Math.abs(y - py)); for (let j = 1; j < n; j++) dot(Math.round(px + (x - px) * j / n), Math.round(py + (y - py) * j / n)); }
+    dot(x, y); px = x; py = y;
   }
-  for (let k = 0; k < 5; k++) { const x = x0 + k * Math.round((x1 - x0) / 5); rect(x, yBase + 3, 1, 4, b.ink(col)); }
+  if (ticks) for (let k = 0; k < 5; k++) { const x = x0 + k * Math.round((x1 - x0) / 5); rect(x, yBase + 3, 1, 4, b.ink(col)); }
 };
 export interface WindowGlassSt { marker: number; hand: boolean; f: number }
 /** [INSERT] 18.01's open: the bullpen window's glass, close: the city at dusk beyond, the users line in Gerg's green,
@@ -900,7 +904,7 @@ export const windowGlass = (b: Buf, st: WindowGlassSt) => {
   }
 };
 /** the medium panorama's window at dusk (or night), the line on it: the setting for 18.01's wide, 18.02, 18.03 */
-const bullpenWindow = (b: Buf, night: boolean, markerTop: number) => {
+export const bullpenWindow = (b: Buf, night: boolean, markerTop: number) => {
   launchBackM(b, 0, {alyi: 'gone', warm: 1, underlines: 3});
   const w = LAUNCH_M.win;
   duskView(b, w.x0, w.y0, w.x1, w.y1, night ? 1 : 0);
@@ -1054,6 +1058,39 @@ export const waitlistTV = (b: Buf, f: number, snap: number) => {
   rect(bx, by, bw, 16, b.ink(PAL.F5)); rect(bx, by, bw, 1, b.ink(PAL.F6)); pt(b, lbl, bx + 10, by + 4, PAL.P2);
   // the screen's sheen
   for (let j = ty; j < ty + th; j++) { const i = 60 + Math.round((j - ty) * 0.7); if (bayer(tx + i, j) < 0.5) b.set(tx + i, j, stepColor(b.get(tx + i, j), -1)); }
+};
+
+// ================================================================== v3.5b (sc 22A): the usage flash
+/** [INSERT] v35-22.02: every chatbot just shown, its usage climbing at once (a chart of its own, no product's UI, no
+ *  figures): CHATGTP's line is Gerg's green marker line from the window past the TV (22.01's, the same curve in the same
+ *  place: the match), already off the top; GNIB, DRAB, CLOD and ATEM · LEAKED rise under it from the counters' mark
+ *  (`c0`), each in its own colour, a spinning count at its head */
+export const usageFlash = (b: Buf, f: number, k: number, c0: number) => {
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, (x % 40 === 0 || y % 34 === 0) ? PAL.N2 : bayer(x, y) < 0.12 ? PAL.N2 : PAL.N1);
+  rect(0, 196, 480, 1, b.ink(PAL.N4));
+  const t = (i: number) => clamp((k - c0 - i * 2) / 34, 0, 1);
+  const lines: Array<[string, number, number, number, number, number]> = [
+    // name, colour, underside, x0, the head's x, the height its head reaches (stacked apart so every label reads)
+    ['GNIB', PAL.F6, PAL.F3, 20, 318, 96],
+    ['CLOD', PAL.W5, PAL.W3, 20, 282, 122],
+    ['DRAB', PAL.U4, PAL.U2, 20, 246, 148],
+    ['ATEM · LEAKED', PAL.P1, PAL.P0, 20, 210, 172],
+  ];
+  lines.forEach(([name, col, under, x0, x1, top], i) => {
+    const reveal = Math.round(196 - (196 - top) * t(i));
+    if (reveal >= 195) return;
+    usersLine(b, x0, 196, x1, top, reveal, col, under, 0, false);
+    const [hx, hy] = lineTip(x0, 196, x1, top, reveal);
+    pt(b, name, hx + 6, hy - 9, col);
+    drawOdometer(b, hx + 6 + pw(name) + 4, hy - 10, {size: 'plate', value: 1000 + Math.floor(t(i) * 90000), digits: 6, spin: 1, f});
+  });
+  // CHATGTP: the window's line (22.01's), already off the top; its name and count riding it near the top
+  usersLine(b, 376, 196, 476, -60, -60, PAL.L3, PAL.L1, 0);
+  if (k >= c0) {
+    const [lx, ly] = lineTip(376, 196, 476, -60, 30);
+    pt(b, 'CHATGTP', lx - 52, ly + 2, PAL.L3);
+    drawOdometer(b, lx - 52, ly + 11, {size: 'plate', value: 999999, digits: 6, spin: 1, f});
+  }
 };
 
 // ================================================================== sc 23: two hands, one frame

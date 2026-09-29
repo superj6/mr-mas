@@ -58,6 +58,7 @@ import {drawOrb} from '../../../../shared/pixel/cast/orb-medium';
 import {spoken, stepOf, heldLerp, drawGagCard, namePlate} from '../act2/kit2';
 import * as M32 from '../../../../shared/pixel/kits/monitor-v32';
 import type {GagCard} from '../act2/kit2';
+import {partyWide, partyCheer, partyToast, PARTY_GLASS_OUT} from './art/party';
 import {LOCK} from './data';
 
 const L = layouts();
@@ -187,12 +188,44 @@ L.add('v31-19.03', {
 });
 
 // =================================================================== sc 20 · the post, and the call
+/** v3.5b: his glass on his desk in 20.01's near foreground (a clear tumbler, the monitor's cool light in its water) */
+const homeGlass = (fb: Buf, x: number, lift: number) => {
+  const y = 170 - lift;
+  for (let j = 0; j < 30; j++) for (let i = 0; i < 16; i++) {
+    const Y = y + j; if (Y >= RH) continue;
+    const edge = i === 0 || i === 15;
+    fb.set(x + i, Y, edge ? (i === 0 ? PAL.G5 : PAL.G3) : j < 9 ? stepColor(fb.get(x + i, Y), 1) : i < 4 ? PAL.C6 : PAL.C4);
+  }
+  rect(x + 1, y + 9, 14, 1, fb.ink(PAL.C7)); fb.set(x + 3, y + 3, PAL.C8);
+};
+// ---- v3.5b (SHOWRUNNER-NOTES 00000A): the Sep 25, 2023 launch party, before the Tidder post. The staff love him, and
+// Alyi is there, warm with him (the vote lands harder). art/party.ts; the `p-act1` pass
+L.add('v35-32A.01', {
+  st: 'art/party partyWide: the bullpen in the evening (Act One\'s window at dusk, Gerg\'s users line off the top of the glass), full of staff with cups (the room sprites recoloured into other people: nobody named, nobody real), a paper banner over the window, CHATGTP CAN NOW SEE, HEAR AND SPEAK; Mas with his glass at the centre, Alyi beside him, in person, lit, turned to him; the walla in their shoulders on held steps; in on the cheer (sound-led), the rail SEP 25, 2023',
+  draw: (fb, k, sh, f) => { partyWide(fb, f, {k}); },
+});
+L.add('v35-32A.02', {
+  st: 'art/party partyCheer [M]: Mas facing us, his glass going up in two held steps on the cheer (his one-pixel smile), two guests soft at the frame\'s edges raising their cups; two paper cups clink near the lens on the two clinks',
+  marks: {cheer: ['snd', 'synth:cheer', 1, 0], c1: ['snd', 'glass_nudge', 1, 0], c2: ['snd', 'glass_nudge', 2, 0]},
+  draw: (fb, k, sh, f) => { partyCheer(fb, f, {k, raise: mk(sh, 'cheer', 7), clink1: mk(sh, 'c1', 21), clink2: mk(sh, 'c2', 25)}); },
+});
+L.add('v35-32A.03', {
+  st: 'art/party partyToast [2S]: Mas (left) and Alyi (right, lit, warm): his cup to Mas\'s glass on the clink, a shared laugh in their shoulders (three held drawings), Alyi\'s hand on Mas\'s shoulder; then Mas\'s glass comes down out of the frame at x 196 (the match: 20.01 sets it on his desk there)',
+  marks: {toast: ['snd', 'glass_nudge', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const t = mk(sh, 'toast', 14);
+    partyToast(fb, f, {k, toast: t, laugh: t + 15, down: sh.e - sh.s - 13});
+  },
+});
 L.add('20.01', {
-  st: 'kits/mas-monitor drawMonitorOTS + kits/tidder tidderPainter {title, replyBox} [OTS] (v3.3, S1 / P9): over his shoulder onto the monitor, straight from the forum\'s raised hands: a TIDDER thread, t/singularity, its title the crowd\'s invented question ("is it already here? anyone actually know?"), held to read; then he opens the reply box and types his reply into it, in source casing, on the keys',
+  st: 'kits/mas-monitor drawMonitorOTS + kits/tidder tidderPainter {title, replyBox} [OTS] (v3.5b: his glass from the party set on the desk in the near foreground, the match) (v3.3, S1 / P9): over his shoulder onto the monitor, straight from the forum\'s raised hands: a TIDDER thread, t/singularity, its title the crowd\'s invented question ("is it already here? anyone actually know?"), held to read; then he opens the reply box and types his reply into it, in source casing, on the keys',
   marks: {reply: ['txt', 'TIDDER · reply', 'at', 0], keys: ['snd', 'synth:keys', 1, 0]},
   draw: (fb, k, sh, f) => {
     const rb = mk(sh, 'reply', 28), kk = mk(sh, 'keys', 35) + 2;
     MON.drawMonitorOTS(fb, f, tidderPainter({phase: 'typing', title: true, replyBox: k >= rb, typed: Math.floor(clamp((k - kk) * 0.62, 0, TIDDER_POST.length))}));
+    // v3.5b: his glass, home from the party, set on the desk in the near foreground where it left 32A.03's frame (set on
+    // the cut: glass_set_stone at k1)
+    homeGlass(fb, PARTY_GLASS_OUT, k < 1 ? 6 : 0);
   },
 });
 L.add('20.03', {

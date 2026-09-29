@@ -60,6 +60,7 @@ import {drawHalfWrittenECU} from './art/half-written';
 import * as V35 from './art/v35';
 import {spoken, blink, stepOf, heldLerp, marioM, nesnejM, roomM, freeze2, maskOf, lighten, drawGagCard, namePlate, FREEZE_BRIGHT, FREEZE_SKY, sweep} from './kit2';
 import type {GagCard} from './kit2';
+import {crateSlip, boardOut, chassis, aisle} from './art/racks';
 import {LOCK} from './data';
 
 const L = layouts();
@@ -627,6 +628,29 @@ L.add('17.10', {
     if (k < r) rect(150 + 48, 18 + 40, 190 - 58, 54, fb.ink(PAL.P2));
     else if (k < r + 4) rect(150 + 48, 18 + 66, 190 - 58, 28, fb.ink(PAL.P2));
     sweep(fb, k, 24, 60, 110, 380, 18, (x, y) => y >= 18 && y < 42 && x >= 150 && x < 340);
+  },
+});
+// ---- v3.5b (SHOWRUNNER-NOTES 00000A): the racks. Wordless: the staff rack the new INVIDIA boards. art/racks.ts; the
+// `p-act1` pass
+L.add('v35-30A.01', {
+  st: 'art/racks crateSlip → boardOut [INSERT]: MATCH from 17.10\'s purchase order: a packing slip in the same place and rows (PACKING SLIP · ITEM: AI CHIPS · QTY: MORE) taped on an INVIDIA crate; on the tear, the anti-static sleeve torn open and two anonymous hands drawing a board out of it in held steps (INVIDIA raised on its shroud)',
+  marks: {tear: ['snd', 'paper_tear', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const t = mk(sh, 'tear', 8);
+    if (k < t) { crateSlip(fb, f); return; }
+    boardOut(fb, f, Math.floor((k - t) / 4) * 4 / Math.max(1, sh.e - sh.s - t - 8));
+  },
+});
+L.add('v35-30A.02', {
+  st: 'art/racks chassis [M] → aisle [W]: two boards slid home into a chassis on the two slides and latched on the two latches, an anonymous hand on each; then the cold aisle, two staff at the rack (silhouettes), and the LED column on the rack\'s face comes up in three steps on the three blips and climbs off the top where 17.11\'s price line climbs (x 466: the match out)',
+  marks: {s1: ['snd', 'folder_slide', 1, 0], s2: ['snd', 'folder_slide', 2, 0], l1: ['snd', 'nameplate_off', 1, 0], l2: ['snd', 'nameplate_off', 2, 0], b1: ['snd', 'ui_mute_blip', 1, 0], b2: ['snd', 'ui_mute_blip', 2, 0], b3: ['snd', 'ui_mute_blip', 3, 0]},
+  draw: (fb, k, sh, f) => {
+    const s1 = mk(sh, 's1', 7), s2 = mk(sh, 's2', 28), l1 = mk(sh, 'l1', 25), l2 = mk(sh, 'l2', 45), b1 = mk(sh, 'b1', 52), b2 = mk(sh, 'b2', 57), b3 = mk(sh, 'b3', 62);
+    const wide = b1 - 3, len = sh.e - sh.s;
+    const t = (a: number, z: number) => (k < a ? 0 : k >= z ? 1 : (Math.floor((k - a) / 3) * 3) / (z - a));
+    if (k < wide) { chassis(fb, f, {in1: t(s1, l1 - 2), in2: t(s2, l2 - 2), latch1: k >= l1, latch2: k >= l2}); return; }
+    const lit = k < b1 ? 200 : k < b2 ? 150 : k < b3 ? 100 : Math.round(60 - (k - b3) / Math.max(1, len - b3) * 90);
+    aisle(fb, f, lit);
   },
 });
 L.add('17.11', {

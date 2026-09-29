@@ -61,7 +61,7 @@ import {
 import {
   montage10, phoneLights, ots3am, mcu3am, counterECU, renderFront, office2018, office2S, alyiMcu2018, loneDesk, glassInHand,
   windowGlass, windowWide, window2S, windowLamp, editorPage, editorPOV, feedAfter, VISION, waitlistTV, filedECU, filedPapers,
-  gnibChyron, paneBar, paneUsersLine, paneAlyi, HIS_PHONE,
+  gnibChyron, paneBar, paneUsersLine, paneAlyi, HIS_PHONE, usageFlash,
 } from './art/v35';
 import {drawTvScreen as tvScreenBare} from '../../../../shared/pixel/kits/tv-news';
 import {LOCK} from './data';
@@ -1044,6 +1044,13 @@ L.add('11.04', {
 L.add('v35-22.01', {
   st: 'v35 waitlistTV: the bullpen\'s wall TV by day: DRAB\'s page (the name in Elgoog\'s skewed primaries), a velvet rope between brass stanchions snapping taut on the snap (the sound lead), JOIN THE WAITLIST; past the TV\'s edge, the bullpen window and Gerg\'s users line far above it, off the top of the glass',
   draw: (fb, k, sh, f) => { waitlistTV(fb, k, 4); void f; },
+});
+
+// ================================================================== SC 22A (v3.5b, SHOWRUNNER-NOTES 00000A) · THE USAGE FLASH
+L.add('v35-22.02', {
+  st: 'v35 usageFlash: every chatbot just shown, usage climbing at once (a chart of its own, no figures): CHATGTP\'s line is the window\'s users line from 22.01, the same curve in the same place (the match in), already off the top; GNIB, DRAB, CLOD and ATEM · LEAKED climb under it from the counters\' mark, a spinning count at each head; out on the letter\'s toast (sound-led)',
+  marks: {c0: ['snd', 'counter_roll', 1, 0]},
+  draw: (fb, k, sh, f) => { usageFlash(fb, f, k, mk(sh, 'c0', 4)); },
 });
 
 // ================================================================== SC 12 · THE PAUSE LETTER (the act-out)
