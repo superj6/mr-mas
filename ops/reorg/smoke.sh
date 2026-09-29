@@ -4,6 +4,8 @@
 #   1. tsc      the studio typecheck (through ops/heavy.sh); the error list must equal the baseline's
 #   2. lock     pixel/tools/lock.py on the six EL v3.5 segments, with el_lock.sh's own arguments but into <outdir>/lock/;
 #               every check must pass and each output must be byte-identical to the committed assembly/el-v35/ files
+#               (with a baseline: to the baseline's outputs. At 2026-09-29 the committed tag lock still carried the
+#               episode-in from before the Act Four fix, f21d274: 32781, where the re-derived one is 32819)
 #   3. score    audio/ost/tracks/e01-v3-act1/v35check.py (through heavy.sh): every segment PASS, the table = the baseline's
 #   4. rebuild  ops/rebuild-act.sh <act> --dry-run for the six acts: 0 missing paths (the film step checks every input
 #               assemble.py reads, from its own chapter list)
@@ -34,11 +36,12 @@ LOCK=v35 bash "$OUT/lock/el_lock_smoke.sh" > "$OUT/lock.txt" 2>&1 || fail+=(lock
 nfail=$(grep -c '\[FAIL\]' "$OUT/lock.txt"); nsame=0
 for s in coldopen act1 act2 act3 act4 tag; do
   for f in lock-$s.json data-$s.ts; do
-    if cmp -s "$OUT/lock/$f" "$A/el-v35/$f"; then nsame=$((nsame + 1)); else echo "   lock: $f differs from $A/el-v35/$f"; fi
+    ref=$A/el-v35/$f; [ -n "$BASE" ] && ref=$BASE/lock/$f          # with a baseline: the baseline's own outputs
+    if cmp -s "$OUT/lock/$f" "$ref"; then nsame=$((nsame + 1)); else echo "   lock: $f differs from $ref"; fi
   done
 done
 [ "$nfail" -eq 0 ] && [ "$nsame" -eq 12 ] || fail+=(lock)
-echo "lock: $(grep -c '^== ' "$OUT/lock.txt") segments, $nfail failed checks, $nsame/12 outputs byte-identical to el-v35/"
+echo "lock: $(grep -c '^== ' "$OUT/lock.txt") segments, $nfail failed checks, $nsame/12 outputs byte-identical to ${BASE:+the baseline outputs, not }el-v35/"
 
 # 3. the v3.5 score check
 $H audio/.venv-theme/bin/python audio/ost/tracks/e01-v3-act1/v35check.py --json "$OUT/v35check.json" > "$OUT/v35check.txt" 2>&1
@@ -53,7 +56,7 @@ echo "score: $npass/6 segments PASS"
 for a in coldopen act1 act2 act3 act4 tag; do
   bash ops/rebuild-act.sh "$a" --dry-run >> "$OUT/rebuild.txt" 2>&1 || nmiss=$((nmiss + 1))
 done
-grep '^== dry run\|MISSING\|assemble.py el' "$OUT/rebuild.txt" | sed 's/^/   /'
+grep '^== dry run\|MISSING\|assemble.py el-v35:' "$OUT/rebuild.txt" | sed 's/^/   /'
 [ "$nmiss" -eq 0 ] || fail+=(rebuild)
 
 # 5. the final film and its inputs

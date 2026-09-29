@@ -168,6 +168,16 @@ Steps 2 and 3 can swap with step 4. Phases 2 and 3 don't need phase 1 (the tool 
 | Project tools (the move tool, the fragment check) | `ops/` | `ops/orgmove.py` |
 | Workflow scripts, as run (records) | `ops/workflows/` | `ops/workflows/mrmas-style-range-wf_a9e99d3f-04e.js` |
 | Scratch work | the session scratchpad, in your own named subfolder | |
+| An episode-wide production cut (the Ep1 v3 film is the model) | docs `show/episodes/epNN/production/<cut>/`, code `studio/src/episodes/epNN/pixel/`, renders `out/epNN/<cut>/`, the finished film `out/epNN/<cut>/epNN-vN.mp4` | `show/episodes/ep01/production/full-v3/`, `out/ep01/full-v3/ep01-v35.mp4` |
+| An episode's dialogue, voices and takes | `audio/epNN/<round>/` (one folder per voice round, with its tools) | `audio/ep01/v3-el/` (the ElevenLabs cast, `tools/`, `ep01-v35/<seg>/`) |
+| An episode's score, per segment | `audio/ost/tracks/eNN-<cut>-<seg>/` | `audio/ost/tracks/e01-v3-act1/` |
+| An episode's stick timelines and manifests, per round | `show/reel/epNN-vN[-el]/` (synced into `studio/src/reel/data/`) | `show/reel/ep01-v35-el/` |
+| An episode's temp beds, stems and mix code | `audio/reel/epNN-<cut>/` | `audio/reel/ep01-v3/` (`stems.py`, `mix_episode.py`) |
+| A one-command rebuild of a changed act | `ops/` | `ops/rebuild-act.sh <act> [--dry-run]` |
+
+**Rounds inside a production cut** (added 2026-09-29). The Ep1 v3 tools build their paths from the lock's version (`el-$LOCK`, `ep01-$LOCK-el`, `mix-$LOCK-el`, `e01-v3-<seg>`), so each round is a versioned sibling (`el-v31/` … `el-v35/`, `beat-plan-v31/` … `-v35/`, `lock-v31.md` …), not a `history/` folder. That follows principle 8: a name built at run time stays. Only the final round is current; `show/episodes/ep01/production/full-v3/version-ledger.md` says which is which. A later episode keeps one round folder per showrunner round in the same way, and names the current one in its README.
+
+**Starting a new episode (Ep2 on):** make `show/episodes/epNN/production/<cut>/` with its PLAN.md and README.md, `studio/src/episodes/epNN/pixel/`, `out/epNN/<cut>/`, `audio/epNN/`, and `audio/ost/tracks/eNN-<cut>-<seg>/`, copying the Ep1 v3 tools rather than editing them (Ep1 is locked). `ops/rebuild-act.sh` is Ep1's; copy it per episode.
 
 Until phases 2 and 3 run, put new lookdev in the existing sibling folder (`out/range/`, `out/jumps/`) rather than inventing a new one. After phase 3, use the table above.
 
@@ -210,10 +220,14 @@ mrmas/
 │   ├── PIPELINE.md              architecture and decisions (refresh after each phase)
 │   ├── RENDERING.md             how to re-make everything (refresh after each phase)
 │   └── ORGANIZATION-PLAN.md     this file: layout and conventions
-├── ops/                         NEW (phase 0)
+├── ops/                         (phase 0)
 │   ├── README.md                what is here; how to run a reorg phase (points to §7)
+│   ├── heavy.sh pressure-governor.sh   run heavy jobs gently; pause them under memory pressure
+│   ├── rebuild-act.sh           rebuild one Ep1 act end to end (--dry-run checks every path)
 │   ├── orgmove.py               the move and rewrite tool (Appendix B)
 │   ├── fraggrep.sh              the fragment check (Appendix B.2)
+│   ├── keyscan.py               no API key value in a commit or a push
+│   ├── reorg/                   per-phase manifests, ok-lists and frag output; smoke.sh; ep01-final.sha1
 │   └── workflows/               ← .backups/*.js (25 workflow scripts, as run; records, never rewritten) + README.md
 ├── show/                        writers' room; layout unchanged
 │   ├── INDEX.md  README.md
@@ -223,8 +237,12 @@ mrmas/
 │   ├── reel/                    story-reel timelines (JSON), synced into studio/src/reel/data/
 │   ├── production/              season level: SHOWRUNNER-NOTES.md (fixed path), plans, queues, candidates
 │   └── episodes/epNN/           outline, beats, facts, flashbacks, gags, intro-slot, open-questions (+ script.md)
+│       ├── release.md           (ep01) the release copy: title, description, chapters, thumbnail
 │       └── production/actN/     the act's production docs + machine data (shots-*.json)
 │           └── history/         superseded rounds (Act Four v1–v3, minus the KEEP files)   [phase 6]
+│       └── production/full-v3/  (ep01) the v3 film, v3 → v3.5: PLAN, pipeline, version-ledger, lock-vNN.md, shots-<seg>.md,
+│                                sound, voices-el, beat-plan-vNN/, lock/ (Kokoro locks), assembly/ (tools/ assemble.py …,
+│                                el-vNN/ the EL locks, *-assembly.json and *-qa.json records)                  [fixed]
 ├── studio/                      Remotion 4 project; the working directory for every `npx remotion` command
 │   ├── README.md                NEW
 │   ├── src/
@@ -237,6 +255,8 @@ mrmas/
 │   │   │   └── animatic/        ← src/dev/animatic/ (intro stick animatic entry)                  [5b]
 │   │   ├── episodes/ep01/act4/  Act Four modules (animatic, board, cast, inserts, kits, medium, rooms-a/b);
 │   │   │                        animatic/ keeps the v2/v3 modules the v4 composer imports       [KEEP to v5 pixel lock]
+│   │   ├── episodes/ep01/pixel/ the Ep1 v3 pixel pipeline: <seg>/{shots,data,extras}.ts + art/, the host, and tools/
+│   │   │                        (lock.py, build.mjs, render.ts); README.md                          [fixed; Ep1 locked]
 │   │   ├── reel/                story-reel generator; data/ = generated copy of show/reel      [fixed]
 │   │   │   ├── tools/           episode.mjs, mixer.mjs (the episode-reel tool, already here)
 │   │   │   └── entry.tsx tools/ ← src/dev/reel/                                                  [5b]
@@ -263,7 +283,11 @@ mrmas/
 │   │   ├── animatic/            ← audio/animatic/   (the stick animatic's temp track)
 │   │   └── history/sketch-mix/  ← audio/mix/ + audio/LISTENING_GUIDE.md (superseded sketch mixes)
 │   ├── ep01/act4/dialogue/      Act Four dialogue: lines*.json, takes/, v5/ …; retired/ stays (2d optional)
+│   ├── ep01/v3…v35/, v3-el/     the Ep1 v3 voices: Kokoro takes per round; v3-el/ = the ElevenLabs cast, tools/,
+│   │                            ep01-vNN/<seg>/ takes per round, intro/ (Mas's EL intro line)              [fixed]
+│   ├── ost/tracks/e01-v3-<seg>/ the Ep1 v3 score, one track per segment (v35check.py in e01-v3-act1/)       [fixed]
 │   └── reel/                    temp beds for the story reels and the stick-figure reels             [fixed]
+│       └── ep01-v3/, ep01-vNN[-el]/  the Ep1 v3 stems and mix code (stems.py, mix_episode.py), per-round beds, QA [fixed]
 ├── out/
 │   ├── README.md                NEW: layout, committed vs ignored, where each recipe is
 │   ├── season/
@@ -274,6 +298,10 @@ mrmas/
 │   ├── ep01/reel/               [fixed, already here] full-episode reels from studio/src/reel/tools/episode.mjs
 │   ├── ep01/act4/               [fixed] animatic/ (history/v2, history/v3 in phase 6, minus the KEEP files),
 │   │                            assets/, dialogue/, reel/ (← out/reel/ep01-act4-v5*), history/framing-v3 (phase 6)
+│   ├── ep01/full-v3/            [fixed; Ep1 locked] ep01-v35.mp4 (THE FINAL FILM; SHA-1 in ops/reorg/ep01-final.sha1),
+│   │                            picture-el/ + mix-v35-el/ (its chapters), assembly-v35/, picture/ (Kokoro), inserts/,
+│   │                            runway/, assets/, thumbnails/, voices/, sheets; earlier rounds' films ep01-v3…v34*
+│   ├── ep01/outro/              [fixed] outro B, the film's last chapter
 │   ├── lookdev/
 │   │   ├── looks/               ← out/dev/        (first look-development round)
 │   │   ├── structures/          ← out/structures/
@@ -281,7 +309,8 @@ mrmas/
 │   │   ├── range/               ← out/range/      (incl. ep1/, the Ep1 range prototypes)
 │   │   ├── jumps/               ← out/jumps/      (history/ ← prev/, phase 2)
 │   │   ├── genvideo/            ← out/genvideo/
-│   │   └── outro/               [already here] the outro proposals (studio/src/dev/outro/)
+│   │   ├── outro/               [already here] the outro proposals (studio/src/dev/outro/)
+│   │   └── clod-3d/             [already here] the 3D clay CLOD test (the final insert is in out/ep01/full-v3/inserts/)
 │   └── review/                  ← out/review-desk/ (index.html + web copies)
 └── .backups/                    [fixed, ignored] the originals of ops/workflows/ + the show tarball; never rewritten
 ```
