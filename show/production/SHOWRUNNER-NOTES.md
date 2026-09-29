@@ -15,7 +15,7 @@
      - **After the blow, his side is a Social Network-style scramble:** still face, frantic actions, calls, options and terms. Human beats for Gerg, Tasya, Alyi, Neleh and the staff.
      - **Exchanges get tempo marks:** quick banter at 0.15–0.35 s gaps; Mas's own lines stay unhurried.
    - **Also (same day):** "i still wanted something related to techical development where we can show more insight why they want agi… show some rl or similar innovation where mas and alyi or similar talk about making machine that can do everything is most meaningful work… a glimpse into the process that led up to chatgpt before llms when they were less sure in their exact way to agi"
-     - Ep1 adds **JUN 2018, the night the machine taught itself**, **moved to DevDay** in Act Three. Showrunner: "the flashback should not go right after the launch". It's the peak before the fall, and the Mas and Alyi partnership just before Alyi's vote. The alternative placement is at the bill.
+     - Ep1 adds **JUN 2018, the night the machine taught itself**, in **Act One, after the first weeks and 3 AM**. The showrunner's final pick overrides an earlier DevDay idea. Earlier note: "the flashback should not go right after the launch"; it now comes weeks after the launch. It sets up the Mas and Alyi partnership that Alyi's vote breaks.
      - ATOD bots play themselves ("180 years" a day). Alyi's awe, and Mas's practicality.
      - A lone `text? (side project)` monitor that only Mas glances at.
      - It enters on a counter match: DevDay's 100M a week matched to the bots' 180 years.
