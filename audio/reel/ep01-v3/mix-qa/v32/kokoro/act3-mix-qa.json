@@ -77,13 +77,13 @@
   "true_peak_dbtp": -1.44,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 6.6,
-  "gain_db": 2.19,
+  "gain_db": 2.07,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.813,
-  "dialogue_lufs": -14.66,
-  "score_lufs_after_duck": -18.57,
-  "score_rms_under_speech_dbfs": -31.7,
-  "score_rms_between_speech_dbfs": -20.8,
+  "limiter_active_s": 0.791,
+  "dialogue_lufs": -14.57,
+  "score_lufs_after_duck": -18.7,
+  "score_rms_under_speech_dbfs": -31.8,
+  "score_rms_between_speech_dbfs": -21.0,
   "score_runs": {
    "count": 2,
    "shortest_s": 20.8,
@@ -98,12 +98,12 @@
     ]
    ]
   },
-  "rooms_lufs": -36.26,
-  "sfx_lufs": -25.95,
+  "rooms_lufs": -36.38,
+  "sfx_lufs": -26.08,
   "holes_under_-42dBFS_0.3s": [
    {
-    "at": 140.1,
-    "s": 0.6,
+    "at": 140.05,
+    "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
@@ -116,20 +116,21 @@
   ],
   "holes_without_score": [
    {
-    "at": 140.1,
-    "s": 0.6,
+    "at": 140.05,
+    "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 16,
-   "rising": 13,
+   "count": 17,
+   "rising": 14,
    "rising_at_a_word": 9,
    "rising_at_an_sfx": 1,
    "rising_other": [
     2.4,
+    25.75,
     29.3,
     45.2
    ],
@@ -140,10 +141,10 @@
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 0.81,
-  "to_gain_db": 2.19,
+  "to_gain_db": 2.07,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-09-28 05:12:56",
+ "built": "2026-09-28 05:31:01",
  "heard": "nothing here has been listened to; every number is measured"
 }

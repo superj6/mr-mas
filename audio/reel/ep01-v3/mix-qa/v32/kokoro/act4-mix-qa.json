@@ -97,29 +97,29 @@
   "seconds": 5.067,
   "score_peak_before_gate_dbfs": -240.0,
   "mix_in_window_dbfs_max_50ms": -47.1,
-  "mix_in_window_lufs": -48.8
+  "mix_in_window_lufs": -48.9
  },
  "setpieces": [
   {
    "what": "the avalanche",
    "from": 356.0,
    "to": 370.18,
-   "talk_lufs": -16.68,
+   "talk_lufs": -16.61,
    "measure": "st",
    "peak_before_lufs": -14.99,
-   "lift_db": 0.81,
-   "peak_after_lufs": -14.18,
+   "lift_db": 0.88,
+   "peak_after_lufs": -14.11,
    "over_talk_lu": 2.5
   },
   {
    "what": "the hourglass shatter",
    "from": 466.37,
    "to": 466.92,
-   "talk_lufs": -16.68,
+   "talk_lufs": -16.61,
    "measure": "mom",
    "peak_before_lufs": -20.76,
-   "lift_db": 6.59,
-   "peak_after_lufs": -14.37,
+   "lift_db": 6.66,
+   "peak_after_lufs": -14.3,
    "over_talk_lu": 2.31
   }
  ],
@@ -208,10 +208,10 @@
     9000
    ],
    "unspoken_s": 0.29,
-   "sfx_rms": -20.6,
+   "sfx_rms": -20.5,
    "room_rms": -51.4,
-   "score_rms": -43.7,
-   "bed_rms": -42.9,
+   "score_rms": -43.6,
+   "bed_rms": -42.8,
    "sfx_minus_bed_db": 22.3
   }
  ],
@@ -220,13 +220,13 @@
   "true_peak_dbtp": -1.49,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 7.7,
-  "gain_db": 1.18,
+  "gain_db": 1.11,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.352,
+  "limiter_active_s": 0.351,
   "dialogue_lufs": -15.01,
-  "score_lufs_after_duck": -22.04,
-  "score_rms_under_speech_dbfs": -31.1,
-  "score_rms_between_speech_dbfs": -21.9,
+  "score_lufs_after_duck": -22.1,
+  "score_rms_under_speech_dbfs": -31.2,
+  "score_rms_between_speech_dbfs": -22.0,
   "score_runs": {
    "count": 14,
    "shortest_s": 2.6,
@@ -289,8 +289,8 @@
     ]
    ]
   },
-  "rooms_lufs": -37.13,
-  "sfx_lufs": -29.09,
+  "rooms_lufs": -37.21,
+  "sfx_lufs": -29.15,
   "holes_under_-42dBFS_0.3s": [
    {
     "at": 25.95,
@@ -308,6 +308,16 @@
     "at": 25.95,
     "s": 5.0,
     "what": "designed: THE ONE SILENCE: the Remove click -> the buzz (room tone only)"
+   },
+   {
+    "at": 40.55,
+    "s": 0.4,
+    "what": "UNMARKED (in beat v32-S1.13)"
+   },
+   {
+    "at": 448.25,
+    "s": 0.45,
+    "what": "UNMARKED (in beat S7.07-cont)"
    },
    {
     "at": 467.0,
@@ -335,9 +345,9 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 64,
-   "rising": 50,
-   "rising_at_a_word": 43,
+   "count": 67,
+   "rising": 52,
+   "rising_at_a_word": 45,
    "rising_at_an_sfx": 2,
    "rising_other": [
     41.4,
@@ -346,17 +356,17 @@
     358.5,
     467.85
    ],
-   "falling": 14
+   "falling": 15
   }
  },
  "file": "out/ep01/full-v3/mix-v32/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 2.19,
-  "to_gain_db": 1.18,
+  "from_gain_db": 2.07,
+  "to_gain_db": 1.11,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-09-28 05:13:41",
+ "built": "2026-09-28 05:31:41",
  "heard": "nothing here has been listened to; every number is measured"
 }

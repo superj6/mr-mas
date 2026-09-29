@@ -64,12 +64,12 @@
    "what": "the odometer",
    "from": 106.42,
    "to": 122.08,
-   "talk_lufs": -16.75,
+   "talk_lufs": -16.67,
    "measure": "st",
    "peak_before_lufs": -14.48,
-   "lift_db": 0.0,
-   "peak_after_lufs": -14.48,
-   "over_talk_lu": 2.27
+   "lift_db": 0.31,
+   "peak_after_lufs": -14.18,
+   "over_talk_lu": 2.49
   }
  ],
  "checks": [
@@ -123,13 +123,13 @@
   "lufs_i": -16.0,
   "true_peak_dbtp": -1.47,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 5.9,
-  "gain_db": 1.34,
+  "lra_lu": 6.0,
+  "gain_db": 1.22,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.13,
-  "dialogue_lufs": -14.86,
-  "score_lufs_after_duck": -21.74,
-  "score_rms_under_speech_dbfs": -31.6,
+  "limiter_active_s": 0.129,
+  "dialogue_lufs": -14.9,
+  "score_lufs_after_duck": -21.67,
+  "score_rms_under_speech_dbfs": -31.8,
   "score_rms_between_speech_dbfs": -21.0,
   "score_runs": {
    "count": 6,
@@ -161,10 +161,16 @@
     ]
    ]
   },
-  "rooms_lufs": -36.42,
-  "sfx_lufs": -34.55,
+  "rooms_lufs": -36.54,
+  "sfx_lufs": -34.63,
   "holes_under_-42dBFS_0.3s": [],
-  "holes_mono_downmix": [],
+  "holes_mono_downmix": [
+   {
+    "at": 212.8,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 9.09)"
+   }
+  ],
   "holes_without_score": [
    {
     "at": 328.8,
@@ -195,11 +201,11 @@
  "file": "out/ep01/full-v3/mix-v32/act1-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.34,
-  "to_gain_db": 1.34,
+  "from_gain_db": 1.22,
+  "to_gain_db": 1.22,
   "ramp_s": 2.0,
   "after": "card"
  },
- "built": "2026-09-28 05:12:47",
+ "built": "2026-09-28 05:30:53",
  "heard": "nothing here has been listened to; every number is measured"
 }

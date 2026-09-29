@@ -64,12 +64,12 @@
    "what": "the odometer",
    "from": 114.62,
    "to": 130.33,
-   "talk_lufs": -16.95,
+   "talk_lufs": -16.85,
    "measure": "st",
    "peak_before_lufs": -14.77,
-   "lift_db": 0.32,
-   "peak_after_lufs": -14.45,
-   "over_talk_lu": 2.5
+   "lift_db": 0.41,
+   "peak_after_lufs": -14.36,
+   "over_talk_lu": 2.49
   }
  ],
  "checks": [
@@ -124,24 +124,24 @@
   "true_peak_dbtp": -1.46,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 5.9,
-  "gain_db": 1.37,
+  "gain_db": 1.26,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.388,
-  "dialogue_lufs": -14.83,
+  "limiter_active_s": 0.381,
+  "dialogue_lufs": -14.86,
   "score_lufs_after_duck": -21.65,
-  "score_rms_under_speech_dbfs": -31.7,
+  "score_rms_under_speech_dbfs": -31.9,
   "score_rms_between_speech_dbfs": -21.0,
   "score_runs": {
    "count": 6,
-   "shortest_s": 1.85,
+   "shortest_s": 1.8,
    "runs": [
     [
      0.0,
-     13.65
+     13.6
     ],
     [
-     14.35,
-     39.25
+     14.7,
+     38.9
     ],
     [
      54.2,
@@ -157,12 +157,12 @@
     ],
     [
      332.95,
-     1.85
+     1.8
     ]
    ]
   },
-  "rooms_lufs": -36.44,
-  "sfx_lufs": -34.63,
+  "rooms_lufs": -36.55,
+  "sfx_lufs": -34.75,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [
@@ -175,8 +175,8 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 98,
-   "rising": 73,
+   "count": 101,
+   "rising": 74,
    "rising_at_a_word": 63,
    "rising_at_an_sfx": 1,
    "rising_other": [
@@ -187,20 +187,21 @@
     98.75,
     110.6,
     114.7,
+    184.2,
     220.7,
     269.55
    ],
-   "falling": 25
+   "falling": 27
   }
  },
  "file": "out/ep01/full-v3/mix-v32-el/act1-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.37,
-  "to_gain_db": 1.37,
+  "from_gain_db": 1.26,
+  "to_gain_db": 1.26,
   "ramp_s": 2.0,
   "after": "card"
  },
- "built": "2026-09-28 05:19:33",
+ "built": "2026-09-28 05:36:04",
  "heard": "nothing here has been listened to; every number is measured"
 }

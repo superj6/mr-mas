@@ -1,11 +1,66 @@
 # Ep1 v3: rooms, SFX and the final mix (`v3-sound`, 2026-09-27)
 
-> **Status (v3.4): the v3.4 lock is MIXED, both variants, on the final v3.4 scores (§X).** The v3.3 lock was mixed, both variants (§W); its mixes and stems were deleted after v3.4 passed, for disk (`--lock v33` rebuilds them).
+> **Status (v3.5 FINAL): the v3.5 EL lock is MIXED for the one film, ep01-v35.mp4 (§Y).** The v3.4 EL mixes and stems were deleted after the v3.5 film passed (`--lock v34 --variant el` rebuilds them); the v3.4 Kokoro mixes are kept.
 >
 > **Nothing here was heard.** Every number below is measured from the files. I also looked at envelope plots of the stems and mixes around the moments listed in §5. Whether a room sounds like its room, whether the keys read as Gerg, and whether any cut plays all need an ear.
 > Nothing was committed.
 >
 > §W is the v3.3 polish round's tool changes, §V the v3.2 round, §0 the v3.1 round. §1–§8 are the v3 round: the method, which still holds, and the v3 lock's numbers.
+
+## Y. v3.5 FINAL: the EL lock, MIXED (the `finish` pass, 2026-09-28)
+
+**Re-run:** `mix_episode.py --all --variant el` (the default lock is now `v35`; `--rebuild-stems` to force the stems). The film is EL only (PLAN §8, 11A); the Kokoro v3.5 variant was not mixed (its lock entry exists).
+
+**The files:** stems `audio/reel/ep01-v3/v35/el/` (FLAC, with `tag-tail`); mixes `out/ep01/full-v3/mix-v35-el/` (with `outro-mix.wav`); QA and the report `audio/reel/ep01-v3/mix-qa/v35/el/` (plus `click-scan-score-mix.json`). The score is the v3.5 FINAL (b0a1c38): every `render/music-el.wav` names its v3.5 EL timeline and is used; Act Four's `music-el-ringout.wav` is laid at the tag's head.
+
+**Frames (EL):** cold open 583 · Act One 10,947 · Act Two 4,848 · Act Three 3,274 · Act Four 11,873 · tag 798.
+
+**Kept, unchanged:** VO_GAIN_DB 2.0; −16 LUFS; the set pieces and the X6 gain row (anchored by beat id, so re-anchored on the new clock by itself); room tone under every black (12.07, 17.13, 23.04); the one silence; the outro's hum hold; the dial-tone and LED fixes; the 20 ms SFX tails.
+
+**New in the tools (`stems.py`, `mix_episode.py`):**
+- **The `v35` lock** (default). Lock-only tables so older locks rebuild unchanged: `RECIPE_LOCK`, `ROOM_OVERRIDE_LOCK`, `TRAIL_AT_LOCK`, and `LEAD_AT_LOCK['v35']`.
+- **MARIO (voices-el.md §AB3):** a line marked `engine: kokoro` in the EL variant gets +1.5 dB at 350 Hz (Q 1.0), −1.5 dB at 2.2 kHz (Q 0.9) and −0.5 dB before any device chain (`KOKORO_IN_EL_EQ`). Applied to all 10 (act1 3, act2 6, act4 1).
+- **New rooms (`room_signal`):** `office-2018` (JUN 2018: the racks' fans, the desk towers' fans and mains hum, air; leads the cut 0.8 s under the thought's tail), `office-2019` (MAR 2019: an office by day and an old box fan), `plane` (the flight: the cabin's low roar, air, a faint whine; the phone's buzz L-cuts into it 0.5 s, it hands to the dark room 0.6 s), `tpool-2008` (TPOOL's room with a 2008 camcorder's tape hiss). 3 AM, the lamp, the vision post and Alyi alone play `bullpen-night`; the tour's phone inserts ride the run's street.
+- **New sounds (`v35_layers`), each on the picture's own frames:**
+  - **The tear macro** (7.02 k28–87): a flickering sizzle of tiny ticks and a thin hiss, gone with the steam at k88; two puffs (`steam_hiss`) at k30 and k75.
+  - **The vision post:** his keys as the title (1.1 characters a frame) and each passage (5 a frame) type; **the Publish click at k12 (0.5 s into v35-19.04)**; the lid shutting at len−4.
+  - **The waitlist's rope snap:** a cloth thwup and a brass hook's clink at **k4 of v35-22.01, where the picture snaps** (see "For an ear").
+  - **The war room:** a buzz on each call's landing (7, on the lock's onscreen times plus the lawyer 6 f after NOR); Tasya's key ring through the call after "one minute."; the phone lighting again on the notepad (len−16).
+  - **The flight:** the pen writing 1. GERG (k8, k17) and the scrawl (k30); the bump at k38 (a low thud, the cup, the coffee).
+  - **The folder's blank page** (S4.10b k315–321): the page turned over (`paper_curl`).
+  - **Alyi alone:** a soft tick on each heart (the picture's 18 frames), two carried 0.4 s into S5.03.
+  - **ATOD's tinny arena** is built but left out: the act1 score claims it (its `arena` cue, "a game's loop, through the monitors").
+  - **Already in the timeline and laid:** the tour's seven stamps (the score's knee stab sits on stamp 1 where the timeline has it, so the plan's 0.2 s gavel-to-stamp lead is not laid, as at 16.01 in v3.2), the gavels, the KA-CHING at 17.07 (the score rests for it), the siren whoop, the marker.
+
+**Measured (the episode report):**
+
+| | EL v3.5 |
+|---|---|
+| Cold open · Act One · Act Two · Act Three · Act Four (LUFS-I) | −16.0 · −16.0 · −16.0 · −16.02 · −16.01 |
+| Tag | −17.03 (the dialogue guard, −0.88 dB) |
+| Card | −35.91 |
+| **Episode** (the story plus the card, 22:28.8) | **−16.03 LUFS**, LRA 7.2 |
+| Highest true peak | −1.18 dBTP (Act Four) |
+| Dialogue spread · reference | 1.98 LU · −14.59 |
+| Unmarked holes (with the score / without) · missing lines · missing SFX | 0 / 0 · 0 · 0 |
+| **X6**, the avalanche (S6.01 to S6.06's freeze hit) | −15.31 → −13.57 (+1.74 LU, 1.99 dB) |
+| Set pieces over the talk: the odometer · the avalanche · the shatter | +2.48 · +2.22 · +2.39 LU |
+| Seams (200 ms): card→act1 · act1→2 · act2→3 · act3→4 · act4→tag | +20.2 (designed) · 0.2 · 0.6 · 0.8 · 0.7 dB |
+| The outro: hum held · first hit · seam (400 ms) | 2.0 s · −6 dB · 12.9 dB |
+
+**The click scan** at every beat boundary, on the room, SFX, score and mix:
+- **Room:** no flags, no cut-offs, in any segment.
+- **SFX:** no truncations. The boundary flags are laid attacks on their cuts (the freeze hits, the collar pop, the thud, the shutter, the post click, the lid) and the cut-offs are samples' own decays (`dialog_ok_click`, `post_click`, Gerg's keys, `neon_ignite`, the vault's hum).
+- **Score:** Act Three 23.01 (THE CLOCK's step on F, as v3.4) and Act Four 69.03 s (the war room's cluster moving on the cut to v35-41.05; masked in the mix).
+- **Mix:** only designed moments: Act One's thud (v31-12.03), Act Two 13.03's freeze hit and 13.12's shutter, Act Three's post click and THE CLOCK.
+- **Level jumps over 15 dB not at a word or a laid SFX:** Act One 18 (mostly the first weeks' cuts on the pulse, 3 AM and JUN 2018's entries), Act Two 1, Act Three 4, Act Four 8, the tag 1. For the ear.
+
+**For an ear, first:**
+1. **The rope snap vs the score's tag:** the picture snaps at k4 (0.17 s into v35-22.01, film 8:05.5) and the SFX is there; the score's tag lands at 0.9 s (read from the caption). 0.73 s apart: a reaction sting, or a late one.
+2. **The blank page vs the score:** the picture turns the page at S4.10b k315–321 (Act Four 232.0 s, film 18:02.9); the score's "the page's back is blank" chord is at 231.125 s, about 1 s early.
+3. **MARIO's EQ** (sc 11, 13, 17, S4.08): whether he sits with the EL voices.
+4. **The new synthesized sounds:** the sizzle (film 3:29), the plane's cabin (15:23), the 2019 fan (10:34), TPOOL's hiss (15:32), the war room's buzzes (14:57).
+5. **The avalanche** reads +2.22 LU over the talk (v3.4 +2.49), with X6 at +1.74 LU.
 
 ## X. v3.4: the lock (script draft 8.3), MIXED
 

@@ -94,17 +94,17 @@
   }
  ],
  "measured": {
-  "lufs_i": -17.21,
-  "true_peak_dbtp": -1.19,
+  "lufs_i": -17.48,
+  "true_peak_dbtp": -1.44,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 13.9,
-  "gain_db": 3.33,
+  "lra_lu": 14.0,
+  "gain_db": 2.81,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.275,
-  "dialogue_lufs": -13.17,
-  "score_lufs_after_duck": -19.21,
-  "score_rms_under_speech_dbfs": -34.3,
-  "score_rms_between_speech_dbfs": -23.2,
+  "limiter_active_s": 0.298,
+  "dialogue_lufs": -13.19,
+  "score_lufs_after_duck": -19.73,
+  "score_rms_under_speech_dbfs": -34.8,
+  "score_rms_between_speech_dbfs": -23.8,
   "score_runs": {
    "count": 4,
    "shortest_s": 3.0,
@@ -127,8 +127,8 @@
     ]
    ]
   },
-  "rooms_lufs": -35.51,
-  "sfx_lufs": -30.76,
+  "rooms_lufs": -36.03,
+  "sfx_lufs": -31.28,
   "holes_under_-42dBFS_0.3s": [
    {
     "at": 8.9,
@@ -151,7 +151,7 @@
    },
    {
     "at": 8.05,
-    "s": 2.85,
+    "s": 2.95,
     "what": "designed: the demo's stills: the room coming back faintly (runway.md \u00a77)"
    }
   ],
@@ -170,13 +170,13 @@
   }
  },
  "file": "out/ep01/full-v3/mix-v32-el/tag-mix.wav",
- "guard_db": -1.2,
+ "guard_db": -1.38,
  "seam_head": {
-  "from_gain_db": 1.22,
-  "to_gain_db": 3.33,
+  "from_gain_db": 1.13,
+  "to_gain_db": 2.81,
   "ramp_s": 2.0,
   "after": "act4"
  },
- "built": "2026-09-28 05:20:09",
+ "built": "2026-09-28 05:36:46",
  "heard": "nothing here has been listened to; every number is measured"
 }

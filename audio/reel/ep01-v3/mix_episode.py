@@ -78,9 +78,10 @@ OUTS = {'v3': {'kokoro': 'out/ep01/full-v3/mix', 'el': 'out/ep01/full-v3/mix-el'
         'v31': {'kokoro': 'out/ep01/full-v3/mix-v31', 'el': 'out/ep01/full-v3/mix-v31-el'},
         'v32': {'kokoro': 'out/ep01/full-v3/mix-v32', 'el': 'out/ep01/full-v3/mix-v32-el'},
         'v33': {'kokoro': 'out/ep01/full-v3/mix-v33', 'el': 'out/ep01/full-v3/mix-v33-el'},
-        'v34': {'kokoro': 'out/ep01/full-v3/mix-v34', 'el': 'out/ep01/full-v3/mix-v34-el'}}
+        'v34': {'kokoro': 'out/ep01/full-v3/mix-v34', 'el': 'out/ep01/full-v3/mix-v34-el'},
+        'v35': {'kokoro': 'out/ep01/full-v3/mix-v35', 'el': 'out/ep01/full-v3/mix-v35-el'}}
 QA_DIRS = {'v3': 'audio/reel/ep01-v3/mix-qa', 'v31': 'audio/reel/ep01-v3/mix-qa/v31', 'v32': 'audio/reel/ep01-v3/mix-qa/v32',
-           'v33': 'audio/reel/ep01-v3/mix-qa/v33', 'v34': 'audio/reel/ep01-v3/mix-qa/v34'}
+           'v33': 'audio/reel/ep01-v3/mix-qa/v33', 'v34': 'audio/reel/ep01-v3/mix-qa/v34', 'v35': 'audio/reel/ep01-v3/mix-qa/v35'}
 OUT, QA_DIR = OUTS[S.DEFAULT_LOCK], QA_DIRS[S.DEFAULT_LOCK]
 
 
@@ -272,6 +273,11 @@ DEVICE = {
 }
 
 
+# v3.5 (voices-el.md §AB3): a Kokoro-cast line in the EL film (MARIO): the two peaks that undo fastrec's chain, -0.5 dB
+KOKORO_IN_EL_EQ = np.vstack([_peq(350, 1.5, 1.0), _peq(2200, -1.5, 0.9)])
+KOKORO_IN_EL_DB = -0.5
+
+
 # ------------------------------------------------------------------ envelopes
 def duck_env(speech, N, pre=0.25, post=0.1, hold=2.5, att=0.2, rel=0.6):
     """the lock mixer's duck, 0..1 per sample"""
@@ -365,6 +371,11 @@ def dialogue(g, variant, qa):
                 if ref > -90 and own > -90:
                     gain = ref - own
                     info['el_matched'] += 1
+            if variant == 'el' and l.get('engine') == 'kokoro':
+                # v3.5: MARIO on his Kokoro takes in the EL film (voices-el.md §AB3): undo fastrec's own shaping, lightly
+                # (+1.5 dB at 350 Hz, Q 1.0; -1.5 dB at 2.2 kHz, Q 0.9) and -0.5 dB, before any device chain
+                x = signal.sosfilt(KOKORO_IN_EL_EQ, x) * db(KOKORO_IN_EL_DB)
+                info['kokoro_cast'] = info.get('kokoro_cast', 0) + 1
             dev = l.get('tag') if l.get('tag') in SMALL else ('phone' if b.get('room') == 'phone' else None)
             on_ = s0 + l['t']
             if b['id'] == 'v31-32.01d' and dev and 26 / FPS <= l['t'] <= 151 / FPS:
@@ -1072,7 +1083,7 @@ def main(argv):
     ap.add_argument('--rebuild-stems', action='store_true')
     ap.add_argument('--no-heavy', action='store_true', help="don't re-run through ops/heavy.sh")
     ap.add_argument('--lock', default=S.DEFAULT_LOCK, choices=sorted(S.LOCKS),
-                    help='v34 (default: show/reel/ep01-v34/), v33, v32, v31 or v3')
+                    help='v35 (default: show/reel/ep01-v35/), v34, v33, v32, v31 or v3')
     a = ap.parse_args(argv)
     set_lock(a.lock)
     if not a.no_heavy and os.environ.get('MRMAS_V3SOUND_INNER') != '1':

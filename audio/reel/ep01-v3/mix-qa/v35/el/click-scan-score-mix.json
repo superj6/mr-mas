@@ -1,0 +1,123 @@
+{
+ "coldopen": {
+  "mix": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [],
+   "cutoffs": []
+  }
+ },
+ "act1": {
+  "mix": {
+   "boundaries": [
+    {
+     "at": 443.217,
+     "boundary": 443.208,
+     "ratio": 16.6,
+     "kind": "step",
+     "before_dbfs": -13.3,
+     "after_dbfs": -13.7
+    }
+   ],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [],
+   "cutoffs": []
+  }
+ },
+ "act2": {
+  "mix": {
+   "boundaries": [
+    {
+     "at": 6.214,
+     "boundary": 6.208,
+     "ratio": 15.8,
+     "kind": "step",
+     "before_dbfs": -20.3,
+     "after_dbfs": -21.5
+    },
+    {
+     "at": 49.292,
+     "boundary": 49.292,
+     "ratio": 13.7,
+     "kind": "step",
+     "before_dbfs": -30.7,
+     "after_dbfs": -23.0
+    }
+   ],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [],
+   "cutoffs": []
+  }
+ },
+ "act3": {
+  "mix": {
+   "boundaries": [
+    {
+     "at": 39.292,
+     "boundary": 39.292,
+     "ratio": 16.8,
+     "kind": "step",
+     "before_dbfs": -20.0,
+     "after_dbfs": -19.8
+    },
+    {
+     "at": 126.424,
+     "boundary": 126.417,
+     "ratio": 15.2,
+     "kind": "step",
+     "before_dbfs": -25.1,
+     "after_dbfs": -20.0
+    }
+   ],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [
+    {
+     "at": 126.424,
+     "boundary": 126.417,
+     "ratio": 16.3,
+     "kind": "step",
+     "before_dbfs": -28.0,
+     "after_dbfs": -22.6
+    }
+   ],
+   "cutoffs": []
+  }
+ },
+ "act4": {
+  "mix": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [
+    {
+     "at": 69.027,
+     "boundary": 69.042,
+     "ratio": 49.1,
+     "kind": "step",
+     "before_dbfs": -19.8,
+     "after_dbfs": -17.8
+    }
+   ],
+   "cutoffs": []
+  }
+ },
+ "tag": {
+  "mix": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "score": {
+   "boundaries": [],
+   "cutoffs": []
+  }
+ }
+}

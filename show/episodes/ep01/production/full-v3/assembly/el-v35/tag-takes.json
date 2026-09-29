@@ -1,0 +1,444 @@
+[
+ {
+  "id": "v3-vo-24",
+  "kind": "vo",
+  "scene": "32.03",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "it looks calmer than me.",
+  "spoken_as": "It looks calmer than me.",
+  "tag": "[INVENTED · VO · v3 inner voice]",
+  "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v35/tag/wav/v3-vo-24__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.505,
+  "frames_24": 60,
+  "voiced_span_s": 1.58,
+  "pace": {
+   "audible_in_s": 0.43,
+   "audible_out_s": 2.01,
+   "measured": {
+    "span_s": 1.58,
+    "wpm": 189.9,
+    "syllables": 6,
+    "articulation_sps": 3.8,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 5,
+   "wpm": 189.9,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "It",
+    "t0": 0.41,
+    "t1": 0.536
+   },
+   {
+    "w": "looks",
+    "t0": 0.582,
+    "t1": 0.849
+   },
+   {
+    "w": "calmer",
+    "t0": 0.919,
+    "t1": 1.337
+   },
+   {
+    "w": "than",
+    "t0": 1.395,
+    "t1": 1.569
+   },
+   {
+    "w": "me",
+    "t0": 1.65,
+    "t1": 1.999
+   }
+  ],
+  "qa": {
+   "asr": "It looks calmer than me.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -2.05,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 113.9,
+   "f0_range_st": 11.6,
+   "speech_head_s": 0.43,
+   "speech_tail_s": 0.495,
+   "raw_tail_cut": false,
+   "align_median_s": 0.13
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 3904145673,
+   "chars_sent": 24,
+   "request_key": "fd0fa67be90c8501",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/ep01/tag:v3-vo-24__mas-manalt-C"
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/v3/tag/wav/v3-vo-24.wav",
+   "mode": "on-mic",
+   "lufs_i": -18.0,
+   "duration_s": 2.73,
+   "audible_in_s": 0.58,
+   "audible_out_s": 2.0,
+   "wpm": 211.3,
+   "median_f0_hz": 104.3,
+   "f0_range_st": 13.6,
+   "delivery": "mild and honest; the picture has just shown the cover and the face wearing the same expression",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.850",
+   "device": null,
+   "timeline_in": 0.58,
+   "timeline_dur": 1.42
+  },
+  "lip_sync": false,
+  "side": "none",
+  "pov": null,
+  "shot": "32.03",
+  "shot_id": "32.03",
+  "mouth": [],
+  "_assembly": "v3-assemble el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields + a mouth track (coldopen/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "v31-tg-0002",
+  "kind": "dialogue",
+  "scene": "32.05",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "that was close.",
+  "spoken_as": "That was close.",
+  "tag": "[INVENTED]",
+  "delivery": "to the cover, not the Orb; grading it",
+  "on_camera": true,
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v35/tag/wav/v31-tg-0002__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.825,
+  "frames_24": 44,
+  "voiced_span_s": 0.9,
+  "pace": {
+   "audible_in_s": 0.45,
+   "audible_out_s": 1.35,
+   "measured": {
+    "span_s": 0.9,
+    "wpm": 200.0,
+    "syllables": 3,
+    "articulation_sps": 3.33,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 3,
+   "wpm": 200.0,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "That",
+    "t0": 0.43,
+    "t1": 0.571,
+    "ph": "ðæt"
+   },
+   {
+    "w": "was",
+    "t0": 0.605,
+    "t1": 0.71,
+    "ph": "wʌz"
+   },
+   {
+    "w": "close",
+    "t0": 0.78,
+    "t1": 1.36,
+    "ph": "klˈOs"
+   }
+  ],
+  "qa": {
+   "asr": "That was close.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.8,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 106.5,
+   "f0_range_st": 16.5,
+   "speech_head_s": 0.45,
+   "speech_tail_s": 0.475,
+   "raw_tail_cut": false,
+   "align_median_s": 0.08
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 3080175871,
+   "chars_sent": 15,
+   "request_key": "04aa47c59eb6be79",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/ep01-v31/tag:v31-tg-0002__mas-manalt-C"
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/v31/tag/wav/v31-tg-0002.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 2.23,
+   "audible_in_s": 0.52,
+   "audible_out_s": 1.58,
+   "wpm": 169.8,
+   "median_f0_hz": 113.4,
+   "f0_range_st": 13.4,
+   "delivery": "to the cover, not the Orb; grading it",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+   "device": null,
+   "timeline_in": 0.52,
+   "timeline_dur": 1.06
+  },
+  "lip_sync": false,
+  "side": "none",
+  "pov": null,
+  "shot": "32.05",
+  "shot_id": "32.05",
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "A"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 1.0,
+    "f": 24,
+    "shape": "O"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "v3-assemble el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields + a mouth track (coldopen/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e1-tg-33-01",
+  "kind": "dialogue",
+  "scene": "33.04",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "noted.",
+  "spoken_as": "Noted.",
+  "tag": "[INVENTED · the cold open's word, bookended]",
+  "delivery": "The cold open's word, bookended: he accepts a lawsuit the way he accepted Friday's invite, like a lunch order. Flat, unbothered, complete, falling. Lands on the chord with no third.",
+  "on_camera": true,
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep01/v3-el/ep01-v35/tag/wav/e1-tg-33-01__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.489,
+  "frames_24": 36,
+  "voiced_span_s": 0.71,
+  "pace": {
+   "audible_in_s": 0.36,
+   "audible_out_s": 1.07,
+   "measured": {
+    "span_s": 0.71,
+    "wpm": 84.5,
+    "syllables": 2,
+    "articulation_sps": 2.82,
+    "pauses_s": [
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.07,
+   "words": 1,
+   "wpm": 84.5,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Noted",
+    "t0": 0.35,
+    "t1": 0.814,
+    "ph": "nˈOTᵻd"
+   }
+  ],
+  "qa": {
+   "asr": "Noted.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.54,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 109.3,
+   "f0_range_st": 7.5,
+   "speech_head_s": 0.36,
+   "speech_tail_s": 0.419,
+   "raw_tail_cut": false,
+   "align_median_s": 0.35
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 3355531186,
+   "chars_sent": 6,
+   "request_key": "a6207aa630301b8b",
+   "derived_from": null,
+   "reused_from": "audio/ep01/v3-el/ep01/tag:e1-tg-33-01__mas-manalt-C"
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "file": "audio/ep01/tag/dialogue/fast-v1/wav/e1-tg-33-01.wav",
+   "mode": "on-mic",
+   "lufs_i": -16.0,
+   "duration_s": 1.805,
+   "audible_in_s": 0.5,
+   "audible_out_s": 1.21,
+   "wpm": 84.5,
+   "median_f0_hz": 115.2,
+   "f0_range_st": 8.1,
+   "delivery": "The cold open's word, bookended: he accepts a lawsuit the way he accepted Friday's invite, like a lunch order. Flat, unbothered, complete, falling. Lands on the chord with no third.",
+   "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.900",
+   "device": null,
+   "timeline_in": 0.5,
+   "timeline_dur": 0.71
+  },
+  "lip_sync": false,
+  "side": "none",
+  "pov": null,
+  "shot": "MCU·PF",
+  "shot_id": "MCU·PF",
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "O"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "v3-assemble el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields + a mouth track (coldopen/tools/mouths.py mouth_cues)"
+ }
+]

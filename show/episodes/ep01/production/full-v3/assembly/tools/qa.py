@@ -37,7 +37,8 @@ FFD = f"{ROOT}/studio/node_modules/@remotion/compositor-linux-x64-gnu"
 ENV = {**os.environ, "LD_LIBRARY_PATH": FFD}
 FF, FP = f"{FFD}/ffmpeg", f"{FFD}/ffprobe"
 ASM = f"{ROOT}/show/episodes/ep01/production/full-v3/assembly"
-SCR = "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-assemble"
+# the scratch folder for the episode WAV / the decode (ASM_SCRATCH overrides: each pass works in its own scratch)
+SCR = os.environ.get("ASM_SCRATCH", "/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/v3-assemble")
 SR, FPS = 48000, 24
 _spec = importlib.util.spec_from_file_location("flashcheck", f"{ROOT}/studio/src/episodes/ep01/pixel/coldopen/tools/flashcheck.py")
 FC = importlib.util.module_from_spec(_spec)

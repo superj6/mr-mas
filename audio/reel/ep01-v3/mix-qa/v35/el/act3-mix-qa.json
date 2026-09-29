@@ -1,35 +1,35 @@
 {
  "segment": "act3",
  "variant": "el",
- "seconds": 138.75,
- "frames": 3330,
- "samples": 6660000,
- "timeline": "show/reel/ep01-v32-el/ep01-v32-el-act3.json",
+ "seconds": 136.417,
+ "frames": 3274,
+ "samples": 6548000,
+ "timeline": "show/reel/ep01-v35-el/ep01-v35-el-act3.json",
  "dialogue": {
-  "lines": 23,
+  "lines": 24,
   "device": {
    "monitor": 6,
    "call": 5,
    "stage": 1
   },
-  "el_matched": 23,
+  "el_matched": 24,
   "missing": []
  },
  "rooms": {
-  "stem": "audio/reel/ep01-v3/v32/el/act3-room.flac",
+  "stem": "audio/reel/ep01-v3/v35/el/act3-room.flac",
   "dip_under_speech_db": 2.0
  },
  "sfx": {
-  "stem": "audio/reel/ep01-v3/v32/el/act3-sfx.flac",
+  "stem": "audio/reel/ep01-v3/v35/el/act3-sfx.flac",
   "ducked": false
  },
  "score": {
   "file": "audio/ost/tracks/e01-v3-act3/render/music-el.wav",
   "cues": "audio/ost/tracks/e01-v3-act3/cues-el.json",
-  "length_s": 138.75,
+  "length_s": 136.417,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -20.02,
-  "lufs_after_gain": -20.02,
+  "lufs_as_delivered": -20.03,
+  "lufs_after_gain": -20.03,
   "duck": {
    "by_mood_db": [
     [
@@ -43,13 +43,13 @@
   },
   "designed_silences": [
    [
-    104.4,
-    115.192,
-    "DevDay, live (v3.2): no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home"
+    95.775,
+    113.358,
+    "DevDay, live: no score under the stage; the hall's applause, the stage's own sound and his line play it dry; the felt comes back at home"
    ],
    [
-    136.25,
-    138.75,
+    133.917,
+    136.417,
     "THE CLOCK's dead stop on bar 4's downbeat -> the act's last frame (black; the SFX pre-lap of the crane and the tings carries it)"
    ]
   ],
@@ -58,65 +58,65 @@
  "checks": [
   {
    "what": "Gerg's keys down the line, 20.06 (loud)",
-   "from": 63.92,
-   "to": 76.33,
+   "from": 54.62,
+   "to": 66.5,
    "band_hz": [
     1000,
     5000
    ],
-   "unspoken_s": 4.31,
-   "sfx_rms": -39.7,
-   "room_rms": -57.0,
-   "score_rms": -42.8,
-   "bed_rms": -42.6,
-   "sfx_minus_bed_db": 2.9
+   "unspoken_s": 3.76,
+   "sfx_rms": -41.5,
+   "room_rms": -56.7,
+   "score_rms": -43.2,
+   "bed_rms": -43.0,
+   "sfx_minus_bed_db": 1.5
   }
  ],
  "measured": {
   "lufs_i": -16.02,
-  "true_peak_dbtp": -1.45,
+  "true_peak_dbtp": -1.34,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 6.7,
-  "gain_db": 2.26,
+  "lra_lu": 7.4,
+  "gain_db": 2.07,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.57,
-  "dialogue_lufs": -14.36,
-  "score_lufs_after_duck": -18.56,
-  "score_rms_under_speech_dbfs": -31.4,
-  "score_rms_between_speech_dbfs": -20.7,
+  "limiter_active_s": 1.096,
+  "dialogue_lufs": -14.49,
+  "score_lufs_after_duck": -19.36,
+  "score_rms_under_speech_dbfs": -31.5,
+  "score_rms_between_speech_dbfs": -21.5,
   "score_runs": {
    "count": 2,
-   "shortest_s": 21.15,
+   "shortest_s": 20.6,
    "runs": [
     [
      0.05,
-     104.35
+     95.7
     ],
     [
-     115.15,
-     21.15
+     113.35,
+     20.6
     ]
    ]
   },
-  "rooms_lufs": -36.25,
-  "sfx_lufs": -25.96,
+  "rooms_lufs": -36.44,
+  "sfx_lufs": -25.94,
   "holes_under_-42dBFS_0.3s": [
    {
-    "at": 136.4,
+    "at": 134.1,
     "s": 0.6,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "holes_mono_downmix": [
    {
-    "at": 136.4,
-    "s": 0.6,
+    "at": 134.05,
+    "s": 0.65,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
   ],
   "holes_without_score": [
    {
-    "at": 136.4,
+    "at": 134.1,
     "s": 0.6,
     "what": "designed: the act-out black: THE CLOCK's dead stop, the crane pre-lap coming up"
    }
@@ -124,30 +124,27 @@
   "unmarked_holes": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 29,
-   "rising": 24,
-   "rising_at_a_word": 13,
-   "rising_at_an_sfx": 4,
+   "count": 31,
+   "rising": 25,
+   "rising_at_a_word": 19,
+   "rising_at_an_sfx": 2,
    "rising_other": [
-    22.15,
-    42.3,
-    44.1,
-    56.25,
-    117.35,
-    119.65,
-    121.2
+    32.05,
+    46.3,
+    113.35,
+    120.15
    ],
-   "falling": 5
+   "falling": 6
   }
  },
- "file": "out/ep01/full-v3/mix-v32-el/act3-mix.wav",
+ "file": "out/ep01/full-v3/mix-v35-el/act3-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 0.81,
-  "to_gain_db": 2.26,
+  "from_gain_db": 1.17,
+  "to_gain_db": 2.07,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-09-28 05:36:15",
+ "built": "2026-09-28 17:56:15",
  "heard": "nothing here has been listened to; every number is measured"
 }

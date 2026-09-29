@@ -120,8 +120,12 @@ LOCKS = {
     'v34': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v34', variants={
         'kokoro': dict(tl='show/reel/ep01-v34/ep01-v34-{seg}.json', out='audio/reel/ep01-v3/v34', ext='wav'),
         'el': dict(tl='show/reel/ep01-v34-el/ep01-v34-el-{seg}.json', out='audio/reel/ep01-v3/v34/el', ext='flac')}),
+    # v3.5, the final version (PLAN §8): one film, the ElevenLabs cast (MARIO on Kokoro); the Kokoro variant still builds
+    'v35': dict(bp='show/episodes/ep01/production/full-v3/beat-plan-v35', variants={
+        'kokoro': dict(tl='show/reel/ep01-v35/ep01-v35-{seg}.json', out='audio/reel/ep01-v3/v35', ext='wav'),
+        'el': dict(tl='show/reel/ep01-v35-el/ep01-v35-el-{seg}.json', out='audio/reel/ep01-v3/v35/el', ext='flac')}),
 }
-DEFAULT_LOCK = 'v34'                  # the v3.4 lock (show/reel/ep01-v34/); --lock v33 / v32 / v31 / v3 still work
+DEFAULT_LOCK = 'v35'                  # the v3.5 lock (show/reel/ep01-v35[-el]/); --lock v34 / v33 / v32 / v31 / v3 still work
 LOCK = DEFAULT_LOCK
 VARIANTS = LOCKS[LOCK]['variants']
 BP_DIR = os.path.join(ROOT, LOCKS[LOCK]['bp'])
@@ -613,6 +617,10 @@ CLAIMABLE = [
     # and the chip blip as the still snaps back; the room's duck and return stay the stem's
     dict(id='demo-film', seg='tag', kw=[r'demo film', r'stutter', r'film.{0,20}own'], layer='demo-film',
          window=lambda g: (g.s('v31-32.01d', -0.2), g.s('v31-32.01d', 151 / FPS))),
+    # v3.5 JUN 2018: ATOD's tinny arena from the six screens (the plan's music string names it "inside" the cue: if the
+    # act1 score's sheet claims it, the stem leaves it to the score)
+    dict(id='atod-arena', seg='act1', kw=[r'arena', r'tinny', r'game audio'], layer='atod-arena',
+         window=lambda g: (g.s('v35-13.01', -0.8), g.e('v35-13.06'))),
     dict(id='demo-blip', seg='tag', kw=[r'blip'], layer='demo-blip',
          window=lambda g: (g.s('v31-32.01d', 205 / FPS), g.s('v31-32.01d', 221 / FPS))),
 ]
@@ -646,7 +654,19 @@ LEAD_AT = {('act1', '5.01'): 0.6, ('act1', '9.01'): 0.8, ('act1', '11.01'): 0.8,
            ('act4', 'v32-S5.00'): 0.8, ('act3', '22.01'): 1.0}
 # per lock (v3.3 17.13's plan J-cut: "the rack's fans and LED ticks under the black (Act Three's arrival)", lead_s 0.6;
 # the glass (17.12) is cut, so the black is Act Two's last beat and Act Three's room comes in 0.6 s before the act)
-LEAD_AT_LOCK = {'v33': {('act3', 'v31-18.00'): 0.6}, 'v34': {('act3', 'v31-18.00'): 0.6}}
+LEAD_AT_LOCK = {'v33': {('act3', 'v31-18.00'): 0.6}, 'v34': {('act3', 'v31-18.00'): 0.6},
+                # v3.5 (the v3.5 plans' J-cuts): 2018's fans under the thought's tail (v35-12.03, 0.8 s); the phone's
+                # ring becomes the plane's hum (v35-41.06 L-cut, 0.5 s); the hum becomes the dark room (v35-42.01, 0.6 s)
+                'v35': {('act3', 'v31-18.00'): 0.6, ('act1', 'v35-13.01'): 0.8, ('act4', 'v35-42.01'): 0.5,
+                        ('act4', 'S2.01'): 0.6}}
+# v3.5's new rooms, only on that lock (older locks never had these (segment, room) pairs mapped): 3 AM, the lamp and the
+# vision post in Act One's bullpen at night; JUN 2018's first office (its racks' fans and ATOD's tinny arena); MAR 2019's
+# office (an old fan); the tour's phone inserts ride the run's street; the flight (the cabin); Alyi alone (the bullpen)
+RECIPE_LOCK = {'v35': {('act1', 'bullpen-night'): 'bullpen-night', ('act1', 'office_night'): 'office-2018',
+                       ('act2', 'office'): 'office-2019', ('act2', 'phone'): 'street', ('act4', 'none'): 'plane',
+                       ('act4', 'bullpen-night'): 'bullpen-night'}}
+ROOM_OVERRIDE_LOCK = {'v35': {('act4', 'v35-43.01'): 'tpool-2008', ('act4', 'v35-43.02'): 'tpool-2008'}}   # TPOOL (plan: office)
+TRAIL_AT_LOCK = {'v35': {('act4', 'v35-41.06'): 0.5, ('act4', 'v35-42.01'): 0.6}}
 # a lead that depends on the beat before (v3.2: S4.09 after v32-S5.00, whose picture steps into the CCTV's grade from
 # his look up at k126, so the CCTV hum comes in there: the L-cut "carried into S4.09")
 LEAD_AFTER = {('act4', 'S4.09', 'v32-S5.00'): 2.6}
@@ -665,6 +685,8 @@ OWN_LEAD_AFTER = {('act1', '12.04'): '12.02'}
 NEXT_OWN_LEAD = {('act2', '15.18'): ('16.01', ('rubber_stamp_C', 'synth:stab'), 0.3),
                  ('act2', '15.16'): ('16.01', ('rubber_stamp_C', 'synth:stab'), 0.5),     # (v3.1: 15.17-15.18 cut)
                  ('act2', '15.14'): ('16.01', ('rubber_stamp_C', 'synth:stab'), 0.5)}     # (v3.2: moved from 15.16)
+# (v3.5's plan v35-28.05 J-cut, "the gavel's knock becomes a passport stamp (29.01)" 0.2 s, is not laid: the act2 score
+#  plays its knee stab on stamp 1 where the timeline has it (29.01 + 0.3 s, its sync 147.883 s), as at 16.01 in v3.2)
 # per-beat overrides of a timeline sound: its peak, or what it is
 # a beat's pop per copy on screen: keep only as many of the sound as there are lines by that kind of speaker
 # (the lead, v3.1: 21.02 shows one deepfake copy; the timeline still carries the second copy's pop)
@@ -762,6 +784,25 @@ def room_signal(key, n, t0, ctx):
         dsl = lp(fire * r.standard_normal(n) * 0.8 + np.sin(2 * np.pi * 46 * tt) * 0.4, 300) * smooth_noise(r, n, 0.2, 0.5, 1.0)
         dsl = st(dsl) * db(-51 - lufs(st(dsl[: 20 * SR])))
         return loop('bed_suite', n, -38, rng=r) + strip.astype('float32') + dsl.astype('float32')
+    if key == 'office-2018':               # v3.5 JUN 2018: the first office at night: the racks' fans (INVIDIA's boxes),
+        # the desk towers' fans and mains hum, the air (ATOD's tinny arena is v35_layers', unless the score claims it)
+        return (loop('server_hum', n, -38, lambda y: lp(y, 2600), 'lp2600', rng=r) + pc_fan(r, n)
+                + loop('room_tone', n, -46, rng=r))
+    if key == 'office-2019':               # v3.5 MAR 2019: an office by day and an old box fan (its blades, its motor)
+        tt = np.arange(n) / SR
+        air = lp(r.standard_normal((n, 2)), 1100) * (1 + 0.12 * np.sin(2 * np.pi * 11.3 * tt))[:, None]
+        fan = air + st(np.sin(2 * np.pi * 118 * tt) * 0.3 + np.sin(2 * np.pi * 236 * tt) * 0.12) * 0.25
+        return loop('bed_office_day', n, -40, rng=r) + level_to(fan, -44)
+    if key == 'plane':                     # v3.5 the flight: a small jet's cabin (the engines' low roar, the air, a whine)
+        tt = np.arange(n) / SR
+        roar = lp(r.standard_normal((n, 2)), 320, 2) * (0.9 + 0.1 * smooth_noise(r, n, 0.5))[:, None]
+        air = bp(r.standard_normal((n, 2)), 600, 3500) * 0.18
+        whine = st(np.sin(2 * np.pi * 1870 * tt + 0.8 * np.sin(2 * np.pi * 0.21 * tt))) * 0.006
+        drone = st(np.sin(2 * np.pi * 96 * tt) + 0.5 * np.sin(2 * np.pi * 97.3 * tt)) * 0.05
+        return level_to(roar + air + whine + drone, -37)
+    if key == 'tpool-2008':                # v3.5 TPOOL at 240p: the TPOOL room, and the 2008 camcorder's tape hiss
+        x = loop('bed_tpool', n, -40, rng=r) + loop('room_tone', n, -44, lambda y: lp(y, 1800), 'lp1800', rng=r)
+        return x + level_to(bp(r.standard_normal((n, 2)), 3000, 9000), -52)
     beds = {'tpool': ('bed_tpool', -40), 'office_night': ('bed_office_evening', -40), 'boardroom': ('bed_boardroom_night', -39),
             'cctv': ('bed_cctv', -40), 'bullpen-day': ('bed_bullpen_packing', -38), 'fires': ('bed_fires', -37),
             'coda': ('bed_bullpen_unpack', -40), 'allhands': ('bed_allhands', -36), 'office': ('bed_office_day', -39),
@@ -792,6 +833,16 @@ def room_signal(key, n, t0, ctx):
                 add(x, pfade(nb, 0.08, 0.0), on / SR)
         return x
     return z()
+
+
+def level_to(x, target):
+    """x at `target` LUFS, measured on its first 10 s (at least 0.5 s: shorter is measured tiled)"""
+    x = np.asarray(x, dtype='float64')
+    m = x[: 10 * SR]
+    if len(m) < int(0.5 * SR):
+        m = np.concatenate([m] * (int(0.5 * SR) // max(1, len(m)) + 1))
+    v = lufs(m)
+    return (x * db(target - v)).astype('float32') if v > -90 else np.zeros(x.shape, 'float32')
 
 
 def leds(x, t0, ctx):
@@ -843,10 +894,11 @@ def room_runs(segs):
             continue
         for i, b in enumerate(g.beats):
             raw = b.get('room') or ''
-            if (name, b['id']) in ROOM_OVERRIDE:
-                key = ROOM_OVERRIDE[(name, b['id'])]
+            ovr = {**ROOM_OVERRIDE, **ROOM_OVERRIDE_LOCK.get(LOCK, {})}
+            if (name, b['id']) in ovr:
+                key = ovr[(name, b['id'])]
             else:
-                key = RECIPE.get((name, raw))
+                key = {**RECIPE, **RECIPE_LOCK.get(LOCK, {})}.get((name, raw))
             a, e = g.off + g.starts[i][0], g.off + g.starts[i][1]
             if runs and runs[-1][0] == key:
                 runs[-1][2] = e
@@ -1346,6 +1398,184 @@ def v32_layers(segs, hints, qa, room, fx, note):
 
 
 # ------------------------------------------------------------------ the block (card, act1 .. tag)
+def v35_layers(segs, hints, qa, room, fx, note):
+    """the v3.5 lock's new sounds (only on that lock; each only if its beats exist): the tear's sizzle over the macro, the
+    vision post's keys, click and lid, JUN 2018's tinny arena, the war room's phone, the flight's pen and bump, Alyi
+    alone's hearts. The new rooms are room_signal's (office-2018, office-2019, plane, tpool-2008)."""
+    if LOCK != 'v35':
+        return
+    G1, G4 = segs['act1'], segs['act4']
+    drops = {d for s_ in SEGS for d in hints.get(s_, {}).get('drop', [])}
+
+    def blen(g, bid):
+        i = g.BI[bid]
+        return g.starts[i][1] - g.starts[i][0]
+
+    def onscreen(g, bid):
+        return [o for o in g.beats[g.BI[bid]].get('onscreen') or [] if o.get('at') is not None]
+
+    def cut_fade(x, keep, fade):
+        x = np.array(x[: int(keep * SR)], dtype='float64', copy=True)
+        k = min(len(x), int(fade * SR))
+        x[len(x) - k:] *= np.cos(np.linspace(0, np.pi / 2, k))[:, None]
+        return x
+
+    def lay(seg, x, t, pk, what, why, align='onset'):
+        x = to_peak(np.asarray(x, dtype='float64'), pk)
+        off = float(np.argmax(np.abs(x).max(axis=1))) / SR if align == 'peak' else 0.0
+        add_fx(fx, x, t - off)
+        LAID.setdefault(seg, []).append((t - off - segs[seg].off, t - off - segs[seg].off + len(x) / SR, what))
+        note(seg, what, at=round(t - segs[seg].off, 3), peak_dbfs=pk, why=why)
+
+    # ACT ONE 7.02: the tear on the red-hot heatsink (the macro, k28-87; shots-act1 §15.5): the bead dancing on its own
+    # vapour (a dense, flickering crackle of tiny ticks and a thin hiss), its two puffs of steam (k30, about k75), gone
+    # into the pixel HIGH at k88 (the pixel tear's own hiss at k10 is the timeline's steam_hiss)
+    if G1.has('7.02') and blen(G1, '7.02') * FPS >= 90:
+        r = reseed('tear-sizzle')
+        t0, t1 = G1.s('7.02', 28 / FPS), G1.s('7.02', 88 / FPS)
+        n = int((t1 - t0 + 0.3) * SR)
+        tt = np.arange(n) / SR
+        chans = []
+        for c in range(2):
+            ticks = np.zeros(n)
+            k = int(r.poisson(170 * n / SR))
+            ticks[r.integers(0, n, k)] = r.uniform(0.15, 1.0, k) * r.choice([-1.0, 1.0], k)
+            crack = bp(ticks, 2400, 9000, 2) * smooth_noise(r, n, 7.0, 0.35, 1.0)
+            hiss = bp(r.standard_normal(n), 3500, 11000) * 0.05 * smooth_noise(r, n, 3.0, 0.5, 1.0)
+            chans.append(crack + hiss)
+        x = np.stack([chans[0] * 0.8 + chans[1] * 0.2, chans[1] * 0.8 + chans[0] * 0.2], 1)
+        env = np.minimum(1, tt / 0.05) * db(np.interp(tt, [0, t1 - t0], [0, -5]))      # the bead shrinking
+        env *= np.clip((t1 - t0 + 0.3 - tt) / 0.45, 0, 1)                                  # gone with the steam at k88
+        lay('act1', x * env[:, None], t0, -27.0, 'the tear: the bead sizzling on the red-hot fins (the macro, k28-87)',
+            'the macro is silent (shots-act1 §15.5: "the macro\'s sizzle and two puffs run k28-87"); the sound pass lays them')
+        sh = load('steam_hiss').astype('float64')
+        for k_, pk in ((30, -24.0), (75, -27.0)):
+            lay('act1', pfade(lp(sh, 7000), 0.004, 0.4), G1.s('7.02', k_ / FPS), pk,
+                f'the tear: a puff of steam off the fins (k{k_})', 'shots-act1 §15.5: two puffs (the second about k75)')
+    # ACT ONE v35-19.01 / 19.02: his keys as the title and the passages type (the picture's typing rates: the title 1.1
+    # characters a frame from its mark, each passage 5 a frame, landing whole); v35-19.04: Publish (k12) and the lid
+    # (half at len-8, shut at len-4: 11.01 opens it)
+    if G1.has('v35-19.01') and G1.has('v35-19.02'):
+        for bid, rate, src in (('v35-19.01', 1.1, 'typing_soft'), ('v35-19.02', 5.0, 'typing_fast_loop')):
+            for o in onscreen(G1, bid):
+                if o['text'].startswith('RAIL'):
+                    continue
+                d = min(2.0, max(0.35, len(o['text']) / rate / FPS)) + 0.1
+                r = reseed('v35-keys', bid, o['at'])
+                x = typing(r, d, src=src, burst=(d, d), gap=(0.0, 0.0))
+                lay('act1', pfade(x, 0.01, 0.08), G1.s(bid, o['at']), -33.0, f'his keys: "{o["text"][:28]}" types ({bid})',
+                    'the vision post: "one held felt line and his keys" (the plan); typed at the picture\'s own rate')
+    if G1.has('v35-19.04'):
+        n4 = round(blen(G1, 'v35-19.04') * FPS)
+        lay('act1', load('post_click').astype('float64'), G1.s('v35-19.04', 12 / FPS), -24.0, 'Publish: the click (k12)',
+            'shots-act1 v35-19.04: the cursor to Publish and the click', align='peak')
+        lay('act1', load('folder_close').astype('float64'), G1.s('v35-19.04', (n4 - 4) / FPS), -27.0,
+            'the lid shuts (len-4; 11.01 opens it)', 'shots-act1 v35-19.04: he closes the lid (half, then shut)', align='peak')
+    # ACT ONE v35-22.01: the waitlist: the velvet rope snaps taut between its brass stanchions on the picture's k4
+    # (art/v35 waitlistTV(fb, k, 4): "the rope's snap is the sound lead in"): a rope's cloth thwup and the hook's clink
+    if G1.has('v35-22.01'):
+        r = reseed('rope-snap')
+        n = int(0.25 * SR)
+        tt = np.arange(n) / SR
+        thwup = bp(r.standard_normal(n), 140, 1800) * np.exp(-tt / 0.035) * np.minimum(1, tt / 0.002)
+        clink = sum(a_ * np.sin(2 * np.pi * f_ * tt + r.uniform(0, 6.28)) * np.exp(-np.maximum(0, tt - 0.006) / d_) * (tt >= 0.006)
+                    for f_, a_, d_ in ((1930, 0.5, 0.09), (3120, 0.35, 0.06), (4640, 0.2, 0.035)))
+        lay('act1', st(thwup + clink * 0.6), G1.s('v35-22.01', 4 / FPS), -23.0,
+            'the waitlist: the velvet rope snaps taut (k4, the picture)', "shots-act1 v35-22.01; the composer's spot list "
+            '(the lock has no sound for it; the score places its tag 0.9 s in, from the caption)', align='peak')
+    # ACT FOUR S4.10b: the folder's page turned over toward us (close = k315: edge-on 3 f, turning 3 f, BLANK from k321)
+    if G4.has('S4.10b') and G4.has('v35-41.01'):
+        lay('act4', load('paper_curl').astype('float64'), G4.s('S4.10b', 318 / FPS), -30.0,
+            "the folder: Ttemme turns the page over (k315-321): its back is blank",
+            "act4 score README (v3.5): \"the folder's page turns blank\"; the lock has no sound for it", align='peak')
+    # ACT ONE JUN 2018 (v35-13.01-13.06): ATOD's tinny arena from the six screens: a small-speaker crowd that swells
+    # and settles, and the game's little ability chirps; under the fans, leading the cut with them (0.8 s), thinning as
+    # he walks out through the seam (13.06). Into the room stem (it dips under the lines with the room).
+    if G1.has('v35-13.01') and G1.has('v35-13.06'):
+        if 'atod-arena' in drops:
+            qa['act1']['sfx_dropped'].append({'layer': 'atod-arena', 'claimed_by_score': 'atod-arena',
+                                              'evidence': hints['act1']['why'].get('atod-arena')})
+        else:
+            r = reseed('atod-arena')
+            a, e = G1.s('v35-13.01', -0.8), G1.e('v35-13.06')
+            n = int((e - a) * SR)
+            tt = np.arange(n) / SR
+            crowd = bp(r.standard_normal((n, 2)), 700, 3000) * (0.45 + 0.55 * smooth_noise(r, n, 0.35) ** 2)[:, None]
+            game = np.zeros((n, 2))
+            t = r.uniform(0.2, 0.6)
+            while t < n / SR - 0.3:
+                d = r.uniform(0.04, 0.12)
+                f0, f1 = r.uniform(700, 1500), r.uniform(1200, 2600)
+                m = int(d * SR)
+                u = np.arange(m) / SR
+                ph = 2 * np.pi * np.cumsum(np.linspace(f0, f1, m)) / SR
+                c = np.sign(np.sin(ph)) * np.exp(-u / (d / 2.5)) * np.minimum(1, u / 0.002)
+                pan = r.uniform(0.3, 0.7)
+                add(game, np.stack([c * (1 - pan), c * pan], 1) * r.uniform(0.4, 1.0), t)
+                t += r.uniform(0.35, 1.4)
+            x = bp(np.tanh(1.6 * (level_to(crowd, -20).astype('float64') + level_to(game, -24).astype('float64')) * 3) / 3, 650, 4800)
+            x = level_to(x, -47).astype('float64')
+            s6 = G1.s('v35-13.06')
+            x *= db(np.interp(a + tt, [s6, e], [0.0, -12.0]))[:, None]
+            add(room, pfade(x, 0.8, 0.3).astype('float32'), a)
+            qa['act1']['added'].append(dict(what="ATOD's tinny arena from the six screens (room stem)", at=round(a - G1.off, 2),
+                                            to=round(e - G1.off, 2), lufs=-47, why='plan v35-12.03 jcut "2018\'s server fans and a '
+                                            'game\'s tinny arena, under the thought\'s tail" 0.8 s; 13.0x "the arena\'s tinny game audio"'))
+    # ACT FOUR THE WAR ROOM v35-41.01: his phone face up, the calls landing tile over tile on the lock's onscreen times
+    # (GERG, TASYA, AUHSOJ, THE FIRST CHECK, FOUNDER MODE, NOR; the lawyer 6 frames after NOR): a buzz on each landing
+    if G4.has('v35-41.01'):
+        ats = [o['at'] for o in onscreen(G4, 'v35-41.01')][:6]
+        if len(ats) == 6:
+            ats.append(ats[5] + 6 / FPS)
+        for j, at in enumerate(ats):
+            x = cut_fade(load(f'phone_buzz_step_{j % 4 + 1}').astype('float64'), 0.62, 0.14)
+            lay('act4', x, G4.s('v35-41.01', at - 0.02), -27.0 if j == 0 else -28.5,
+                f'the war room: his phone buzzes as a call lands ({j + 1} of {len(ats)})',
+                "shots-act4 v35-41.01: the calls and messages stacking tile over tile on the lock's onscreen times")
+    if G4.has('v35-41.03'):                # Tasya's key ring, heard only, through his call, after "one minute."
+        try:
+            on, end, _ = G4.line('v35-a4-0004')
+            x = bp(load('key_ring_jangle_2').astype('float64'), 300, 3400, 2)
+            lay('act4', x, end + 0.08, -32.0, "Tasya's key ring, heard only, through the call",
+                'shots-act4 v35-41.03: "his phone and key ring out of frame, the jangle heard only"')
+        except KeyError:
+            pass
+    if G4.has('v35-41.06'):                # the phone lights again at the frame's right edge (k = len - 16): its buzz
+        n6 = round(blen(G4, 'v35-41.06') * FPS)
+        lay('act4', load('phone_buzz_desk').astype('float64'), G4.s('v35-41.06', (n6 - 16) / FPS), -29.0,
+            'the phone lights again on the notepad (len-16); its buzz becomes the plane\'s hum',
+            'plan v35-41.06 lcut "the phone\'s ring becomes a plane\'s hum" 0.5 s')
+    # ACT FOUR the flight v35-42.01: 1. GERG written from k8 (by 1.0 s), the pen going on in a scrawl from k30; the bump
+    # at k38 (the frame jolts, the cup's coffee slops, his water stays flat)
+    if G4.has('v35-42.01'):
+        pen = load('pen_scribble_short').astype('float64')
+        for k_ in (8, 17):
+            lay('act4', pen, G4.s('v35-42.01', k_ / FPS), -33.0, f'the pen on the notepad: 1. GERG (k{k_})',
+                'shots-act4 v35-42.01: TERMS, 1. GERG written by 1.0 s')
+        x = cut_fade(load('pen_run').astype('float64'), 1.3, 0.3)
+        lay('act4', x, G4.s('v35-42.01', 30 / FPS), -35.0, 'the pen goes on: the second line, a scrawl (k30)',
+            'shots-act4 v35-42.01: "his pen keeps going, a second line we can\'t read"')
+        lay('act4', lp(load('landing_thunk').astype('float64'), 260, 2), G4.s('v35-42.01', 38 / FPS), -27.0,
+            'the bump: the cabin jolts (k38)', 'shots-act4 v35-42.01: the bump at 1.6 s', align='peak')
+        lay('act4', load('glass_nudge').astype('float64'), G4.s('v35-42.01', 39 / FPS), -33.0, "the bump: the cup rocks on the tray",
+            "shots-act4 v35-42.01: the cup's coffee tilts and slops", align='peak')
+        lay('act4', lp(load('plop_water').astype('float64'), 2500), G4.s('v35-42.01', 42 / FPS), -38.0, 'the coffee slops',
+            "shots-act4 v35-42.01: the cup's coffee tilts and slops", align='peak')
+    # ACT FOUR Alyi alone v35-49A.01: a heart, now and then, lifting off his phone (the picture's HEARTS_49A frames):
+    # soft ticks, a little closer in the MCU (from f50); two more carry across the cut to Mas's phone (S5.03, 0.4 s)
+    if G4.has('v35-49A.01'):
+        hearts = [6, 14, 21, 29, 35, 42, 50, 56, 63, 69, 76, 82, 88, 93, 99, 104, 109, 114]
+        n9 = round(blen(G4, 'v35-49A.01') * FPS)
+        ks = [k_ for k_ in hearts if k_ < n9] + [n9 + 5, n9 + 10]
+        for j, k_ in enumerate(ks):
+            x = lp(load(f'heart_tap_{j % 3 + 1}').astype('float64'), 5000)
+            pk = (-40.0 if k_ < 50 else -37.5) if k_ < n9 else -39.0
+            add_fx(fx, to_peak(x, pk), G4.s('v35-49A.01', k_ / FPS))
+        note('act4', "the hearts' soft ticks on Alyi's phone (18 on the picture's frames; two carried into S5.03)",
+             at=round(G4.s('v35-49A.01', 6 / FPS) - G4.off, 2), peak_dbfs=-37.5,
+             why='plan v35-49A.01: "the bullpen\'s night air; the hearts\' soft ticks"; lcut "the hearts\' soft ticks carry across to Mas\'s phone" 0.4 s')
+
+
 def build_block(segs, hints, qa):
     NB = sum(segs[s].N for s in BLOCK) + int(TAIL_S * SR)     # + a tail past the tag: the hum held under the outro
     room = np.zeros((NB, 2), 'float32')
@@ -1398,9 +1628,9 @@ def build_block(segs, hints, qa):
             trail = 0.0
             e = min(e, (NB - int(TAIL_S * SR)) / SR)
         elif nxt[0] is None:
-            trail = TRAIL_AT.get(last, TRAIL_BLACK)
+            trail = {**TRAIL_AT, **TRAIL_AT_LOCK.get(LOCK, {})}.get(last, TRAIL_BLACK)
         else:
-            trail = TRAIL_AT.get(last, TRAIL)
+            trail = {**TRAIL_AT, **TRAIL_AT_LOCK.get(LOCK, {})}.get(last, TRAIL)
         early = -trail if trail < 0 else 0.0          # a negative trail: fade out over the run's last |trail| s
         if early:
             trail = 0.05
@@ -1489,7 +1719,7 @@ def build_block(segs, hints, qa):
         nxt_own = {}
         for (sn, bid), (tgt, names, ld) in NEXT_OWN_LEAD.items():
             if sn == sname and g.has(tgt) and prev_of.get(tgt) == bid:
-                if sname == 'act2' and 'knee-stabs' in drops:
+                if sname == 'act2' and tgt == '16.01' and 'knee-stabs' in drops:
                     # the score plays the knee stabs, its first on 16.01's cut: the first stamp stays on the picture
                     # with it (a 0.3 s lead would flam against the stab); the street's air leads the cut instead
                     qa[sname]['decisions'] = qa[sname].get('decisions', []) + [
@@ -1801,6 +2031,7 @@ def build_block(segs, hints, qa):
 
     v31_layers(segs, hints, qa, room, fx, note)
     v32_layers(segs, hints, qa, room, fx, note)
+    v35_layers(segs, hints, qa, room, fx, note)
 
     # ---------------------------------------------------------------- THE ONE SILENCE (Act Four)
     ck = silence_click(G4)

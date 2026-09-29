@@ -1,6 +1,6 @@
 {
  "segment": "card",
- "variant": "kokoro",
+ "variant": "el",
  "seconds": 2.0,
  "frames": 48,
  "samples": 96000,
@@ -12,14 +12,14 @@
   "score": "none"
  },
  "measured": {
-  "lufs_i": -35.97,
-  "true_peak_dbtp": -23.5,
-  "sample_peak_dbfs": -23.5,
+  "lufs_i": -35.91,
+  "true_peak_dbtp": -23.46,
+  "sample_peak_dbfs": -23.46,
   "lra_lu": null,
-  "gain_db": 1.22,
+  "gain_db": 1.43,
   "limiter_ceiling_dbfs": 0.0,
   "limiter_active_s": 0.0,
-  "rooms_lufs": -35.97,
+  "rooms_lufs": -35.91,
   "sfx_lufs": null,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
@@ -35,9 +35,9 @@
    "falling": 0
   }
  },
- "file": "out/ep01/full-v3/mix-v32/card-mix.wav",
+ "file": "out/ep01/full-v3/mix-v35-el/card-mix.wav",
  "guard_db": null,
  "seam_head": null,
- "built": "2026-09-28 05:31:41",
+ "built": "2026-09-28 17:56:27",
  "heard": "nothing here has been listened to; every number is measured"
 }
