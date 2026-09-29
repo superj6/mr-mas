@@ -24,6 +24,9 @@
      - **The Nov 19 lobby opens on Mas's phone:** "NOPEAI BOARD: can you come in tomorrow? let's talk.", then his badge post. It's signed by the board, not a named person.
      - **The ticker** reads "STAFF AND INVESTORS PUSH TO BRING MANALT BACK".
      - The chain: pressure → they try to replace him → they fail → they invite him in → the talks stall → Ttemme → Macrosoft → the letter.
+   - **Step four's payoff is restored (agreed 2026-09-28).** Showrunner: "also waht happened to the playoff of step 4?" → "yes i want to restore it".
+     - "Then we'll write step four ourselves." comes back, using the v3.4 EL take, between the footnote-three line and the call to Mario. It adds about 5 s, so Act Four is re-locked. Neleh's new line is then recorded at its natural length.
+     - **Picture:** she writes "4. MARIO" on the sheet as she dials, and after Adelina's "no" it's struck through. Sunday's look after Tasya's statement lands on the crossed-out line. "Step four, Mada?" stays cut.
    - **Step 2 (ADDED scenes):**
      - **Act Two, after "AI CHIPS · QTY: MORE":** about 4–5 s, wordless, of staff racking the new INVIDIA boards.
      - **Act Three, before the Tidder post:** about 10 s, wordless, of the Sep 25, 2023 office party for ChatGTP's voice and image launch. Staff cheer Mas, and **Alyi is there, warm with Mas** (a toast, a shared laugh), so his vote later lands harder.
