@@ -2366,12 +2366,12 @@
   "timeline": "show/reel/ep01-v35/ep01-v35-act4.json",
   "source": "show/reel/ep01-v34/ep01-v34-act4.json",
   "source_story_s": 507.792,
-  "estimate_s": 485.67,
-  "seconds": 486.666,
-  "frames": 11680,
+  "estimate_s": 487.16,
+  "seconds": 488.156,
+  "frames": 11716,
   "source_frames": 12187,
   "beats": 84,
-  "lines": 100,
+  "lines": 102,
   "vo": 5,
   "vo_lines": [
    "v34-vo-07 (S1.02): gerg's not on it. probably the budget. good. i'll ask for more compute.",
@@ -2399,10 +2399,10 @@
    "spoken_only_segment_s": 0.806
   },
   "median_gap_v35": {
-   "inside_beats_s": 0.425,
-   "inside_beats_n": 54,
+   "inside_beats_s": 0.4,
+   "inside_beats_n": 55,
    "segment_s": 0.73,
-   "segment_n": 99,
+   "segment_n": 101,
    "spoken_only_segment_s": 0.715
   },
   "beat_lengths": [
@@ -2618,8 +2618,8 @@
     "action": "keep",
     "scene": 47,
     "src_s": 17.4,
-    "est_s": 12.35,
-    "lock_s": 12.35,
+    "est_s": 13.84,
+    "lock_s": 13.84,
     "diff_s": 0.0
    },
    {
@@ -2919,6 +2919,13 @@
    {
     "beat": "S3.04b",
     "line": "v31-a4-0003",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "S4.02",
+    "line": "v35-a4-0010",
     "plan_s": 0.25,
     "lock_s": 0.25,
     "ok": true
@@ -3368,7 +3375,11 @@
    },
    {
     "beat": "S3.03",
-    "what": "no line left: the plan's 5.5 s (head 6.80 + the old tail would be 7.98 s)"
+    "what": "new line v35-a4-0011 (neleh, 0.73 s, new take) at start+4.42"
+   },
+   {
+    "beat": "S3.03",
+    "what": "6.33 -> 5.50 s, to the plan's 5.5 s: tail −0.83"
    },
    {
     "beat": "S3.03",
@@ -3436,7 +3447,7 @@
    },
    {
     "beat": "S4.02",
-    "what": "restored line a5-27-29 (neleh, 1.60 s, restored take) after v35-a4-0009 +0.73"
+    "what": "restored line a5-27-29 (neleh, 1.60 s, restored take) after v35-a4-0010 +0.73"
    },
    {
     "beat": "S4.02",
@@ -3444,7 +3455,11 @@
    },
    {
     "beat": "S4.02",
-    "what": "13.87 -> 12.35 s, to the plan's 12.35 s: tail −1.52"
+    "what": "new line v35-a4-0010 (mada, 1.24 s, new take) after v35-a4-0009 +0.25"
+   },
+   {
+    "beat": "S4.02",
+    "what": "15.36 -> 13.84 s, to the plan's 13.84 s: tail −1.52"
    },
    {
     "beat": "S4.02",
@@ -3460,19 +3475,19 @@
    },
    {
     "beat": "S4.02",
-    "what": "sound BUZZ at 8.89 s (the plan's)"
+    "what": "sound BUZZ at 10.38 s (the plan's)"
    },
    {
     "beat": "S4.02",
-    "what": "sound landing_thunk 12.3 -> 9.20 s (the plan's)"
+    "what": "sound landing_thunk 13.787 -> 10.69 s (the plan's)"
    },
    {
     "beat": "S4.02",
-    "what": "sound marker_uncap at 11.17 s (the plan's)"
+    "what": "sound marker_uncap at 12.66 s (the plan's)"
    },
    {
     "beat": "S4.02",
-    "what": "sound marker_write_q at 11.40 s (the plan's)"
+    "what": "sound marker_write_q at 12.89 s (the plan's)"
    },
    {
     "beat": "S4.08",
@@ -3835,6 +3850,10 @@
    {
     "beat": "S3.00a",
     "what": "the plan's -1.0 s is \"the join's pre-roll (the 11:59 wait)\", but Alyi's first word is at 0.3 s (v3.1 trimmed the head to 0.3); every gap is weighted and the held beat after \"Do you have any questions?\" stays (notes §6: weighted, untouched), so there is nothing the plan allows to cut: the beat keeps 15.2 s (+1.0 s on est_s)"
+   },
+   {
+    "beat": "S3.03",
+    "what": "new line v35-a4-0011: the take is 0.73 s, the plan counted 0.8 s"
    }
   ],
   "safety_net": []

@@ -1,13 +1,14 @@
 # Ep1 v3 → v3.5: the full episode films (`v3-assemble`, track F, 2026-09-27 and 28)
 
-> **Status: v3.5 FINAL (v3.5b) BUILT AND MEASURED (2026-09-29): ONE film, `out/ep01/full-v3/ep01-v35.mp4`, 23:30.00. §Z below is the current state.** §Y (v3.4), §X (v3.3), §W (v3.2), §V (v3.1) and the v3 round are the record. The v3.4 films are kept. Track F of [PLAN.md](PLAN.md) (§8, step 7).
+> **Status: v3.5 FINAL (v3.5b) BUILT AND MEASURED (2026-09-29): ONE film, `out/ep01/full-v3/ep01-v35.mp4`, 23:31.58. §Z below is the current state.** §Y (v3.4), §X (v3.3), §W (v3.2), §V (v3.1) and the v3 round are the record. The v3.4 films are kept. Track F of [PLAN.md](PLAN.md) (§8, step 7).
 >
 > **Nothing here was watched or heard.** Every number below is measured from the files. I looked at stills only.
 
 ## Z. v3.5 FINAL, v3.5b (2026-09-29, the `finish` pass)
 
-**The film:** `out/ep01/full-v3/ep01-v35.mp4`: **23:30.00** (33,840 frames), 138.8 MB, H.264 High CRF 18 + AAC-LC 256 kb/s (**libfdk_aac**), nine titled chapters.
+**The film:** `out/ep01/full-v3/ep01-v35.mp4`: **23:31.58** (33,878 frames), 138.9 MB, H.264 High CRF 18 + AAC-LC 256 kb/s (**libfdk_aac**), nine titled chapters.
 - **v3.5b** (SHOWRUNNER-NOTES 00000A; lock-v35.md §10): the usage flash (Act One +2.0 s), the racks (Act Two +5.0 s), the Sep 25 launch party with Alyi (Act Three +10.0 s), step four's payoff and Neleh's new line (Act Four +3.3 s), the two new V.O. lines, and the Saturday phones. The EL story is **32,811 frames** (Act One 10,995 · Two 4,968 · Three 3,514 · Four 11,953; cold open 583 and tag 798 unchanged).
+- **v3.5b fix** (2026-09-29; lock-v35.md §11): MADA (O.S.) "There is no step four." before the clack in S4.02, over the sheet's blank 4. line, and NELEH's "Step two." in the board's post (S3.03, lip-synced in her call window, before the click). Act Four 11,953 → **11,991** (+38 f, +1.58 s); the EL story **32,849 frames**. Nothing else in the film moved.
 - **Voices:** the ElevenLabs cast (set A; SIRRAH recast as Ida), **MARIO on his Kokoro takes** (10 lines, with voices-el.md §AB3's EQ and −0.5 dB in the mix).
 - **The lock:** the EL-timed v3.5 lock, `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`, 8893509).
 - **Intro:** the flash-fixed picture with the EL master (`audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`) at −3 dB. **Card:** 2 s. **Outro:** B, `mix-v35-el/outro-mix.wav` at −1 dB with the 0.75 s hum hold (2.0 s of hum alone).
@@ -24,9 +25,9 @@
 | 4 | Act One · research preview | 0:56.29 · 7:38.13 |
 | 5 | Act Two · the regulate-me tour | 8:34.42 · 3:27.00 |
 | 6 | Act Three · verified: human | 12:01.42 · 2:26.42 |
-| 7 | Act Four · five days, told twice | 14:27.83 · 8:18.04 |
-| 8 | Tag · december (with the 0.75 s hum hold) | 22:45.88 · 34.00 |
-| 9 | Outro · credits | 23:19.88 · 10.13 |
+| 7 | Act Four · five days, told twice | 14:27.83 · 8:19.63 |
+| 8 | Tag · december (with the 0.75 s hum hold) | 22:47.46 · 34.00 |
+| 9 | Outro · credits | 23:21.46 · 10.13 |
 
 **As YouTube timestamps** (paste into the description). YouTube needs every chapter to be at least 10 s, so the 2 s card rides with the intro:
 
@@ -37,8 +38,8 @@
 08:34 Act Two · the regulate-me tour
 12:01 Act Three · verified: human
 14:27 Act Four · five days, told twice
-22:45 Tag · december
-23:19 Outro · credits
+22:47 Tag · december
+23:21 Outro · credits
 ```
 
 ### Z.2 The EL pictures (`picture-el/`, on `assembly/el-v35/`)
@@ -57,7 +58,7 @@
 
 | Check | ep01-v35 |
 |---|---|
-| **Full decode** | **0 error lines**, 33,840 frames |
+| **Full decode** | **0 error lines**, 33,878 frames |
 | **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0). The untitled hum hold reads 1,100 samples: one period of the vault's F1 hum (22.9 ms), a correlation ambiguity on a steady tone; it is sample-continuous with the tag and the chapters either side read 0 |
 | **Codec fidelity** (decoded vs source) | **0 bursts in every chapter**; worst difference 0.144 (Act Four) |
 | **Integrated loudness** | **−16.08 LUFS** |

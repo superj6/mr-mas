@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel v3.5 BASE LOCK (Kokoro timing) · the v2/v5/v3/v3.1/v3.2/v3.4 takes + the v3.5 takes · temp bed",
  "logline": "The v3.5 base lock of act4: the v3.5 beat plan applied to ep01-v34-act4.json (script draft 8.4, the final version).",
  "dateSpan": "Nov 17 - 29, 2023",
- "runtimeMin": 8.11,
+ "runtimeMin": 8.14,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -84,7 +84,7 @@
   "builder": "audio/reel/ep01-v35/build_timeline.py",
   "bed": "audio/reel/ep01-v35/bed.py -> audio/reel/ep01-v35/act4-bed.wav",
   "notes": "show/episodes/ep01/production/full-v3/lock-v35.md",
-  "seconds": 486.666
+  "seconds": 488.156
  },
  "beats": [
   {
@@ -2789,8 +2789,32 @@
    "side": "",
    "room": "office",
    "chars": [],
-   "caption": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
-   "lines": [],
+   "caption": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" As her pointer goes to Post, NELEH (in her call window, lip-synced): \"Step two.\" She clicks Post, on a tick.",
+   "lines": [
+    {
+     "id": "v35-a4-0011",
+     "who": "neleh",
+     "text": "Step two.",
+     "t": 4.42,
+     "dur": 0.73,
+     "audio": "audio/ep01/v35/act4/wav/v35-a4-0011.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Step",
+       -0.01,
+       0.265
+      ],
+      [
+       "two",
+       0.265,
+       0.75
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
    "onscreen": [
     {
      "text": "NOPEAI BLOG · DRAFT",
@@ -2823,7 +2847,7 @@
    "sounds": [
     {
      "name": "post_click",
-     "at": 5.375,
+     "at": 5.45,
      "gain": -16
     }
    ],
@@ -2835,7 +2859,7 @@
     "mode": "CONVERSATION",
     "pace": "weighted",
     "camera": "SCREEN · the blog, in its own UI",
-    "picture": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick."
+    "picture": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" As her pointer goes to Post, NELEH (in her call window, lip-synced): \"Step two.\" She clicks Post, on a tick."
    }
   },
   {
@@ -3645,7 +3669,7 @@
      "pose": "sit"
     }
    ],
-   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
+   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" MADA (O.S., over the sheet's blank 4. line): \"There is no step four.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
    "lines": [
     {
      "id": "v35-a4-0009",
@@ -3771,10 +3795,48 @@
      "cut": false
     },
     {
+     "id": "v35-a4-0010",
+     "who": "mada",
+     "text": "There is no step four.",
+     "t": 8.97,
+     "dur": 1.24,
+     "audio": "audio/ep01/v35/act4/wav/v35-a4-0010.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "There",
+       -0.035,
+       0.09
+      ],
+      [
+       "is",
+       0.09,
+       0.24
+      ],
+      [
+       "no",
+       0.24,
+       0.465
+      ],
+      [
+       "step",
+       0.465,
+       0.777
+      ],
+      [
+       "four",
+       0.777,
+       1.26
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
      "id": "a5-27-29",
      "who": "neleh",
      "text": "Then we'll write step four ourselves.",
-     "t": 9.45,
+     "t": 10.94,
      "dur": 1.6,
      "audio": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
      "in": 0.88,
@@ -3826,7 +3888,7 @@
      "until": null
     }
    ],
-   "reelDur": 12.35,
+   "reelDur": 13.84,
    "fx": [],
    "sounds": [
     {
@@ -3836,24 +3898,24 @@
     },
     {
      "name": "BUZZ",
-     "at": 8.892,
+     "at": 10.382,
      "gain": -26
     },
     {
      "name": "landing_thunk",
-     "at": 9.2,
+     "at": 10.69,
      "gain": -22,
      "note": "the clack: the first phone goes over after her line; nobody picks it up"
     },
     {
      "name": "marker_uncap",
-     "at": 11.17,
+     "at": 12.66,
      "gain": -30,
      "note": "her marker, uncapped"
     },
     {
      "name": "marker_write_q",
-     "at": 11.4,
+     "at": 12.89,
      "gain": -28,
      "note": "she writes 4. MARIO on step four's blank line as she dials (the tones pre-lap S4.08)"
     }
@@ -3874,13 +3936,14 @@
     "tempo": {
      "pace": "quick",
      "gaps": {
+      "v35-a4-0010": 0.25,
       "a5-27-29": 0.73
      },
      "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
-     "note": "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"
+     "note": "Mada's setup 0.25 s after Neleh's line; the phone's fall is the beat before the payoff: the restored line 0.25 s after the clack"
     },
     "camera": "WIDE · the boardroom at night (held)",
-    "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped."
+    "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped. v3.5b fix: Mada's \"There is no step four.\" is O.S. over a cut in to the sheet's blank 4. line (the same insert art, no hand), then back to the wide on the second buzz."
    }
   },
   {

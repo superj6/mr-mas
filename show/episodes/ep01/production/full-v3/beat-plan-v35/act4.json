@@ -4,7 +4,7 @@
  "_about": "v35 beat plan (script draft 8.4: the final version, proposal-v35.md with PLAN §8's choices 1A-12A), in the PLAN §2 format with the v3.1-v3.4 plans' fields, written as deltas on the v3.4 LOCK (show/reel/ep01-v34/ep01-v34-<seg>.json). Every v3.4 beat appears once (keep, cut, merge), in the v3.5 order; new beats are action \"new\" with their frame, set, room and chars (a restored v3.3 beat also names its source in restore_from). est_s is a planning length (new lines' lengths are the recorded v3.5 takes' audible lengths; restored and reused lines use their own takes), never a measurement. Line flags: keep / new (v35-* ids; takes in audio/ep01/v35/) / restored (an earlier take, with take and take_file) / reuse_of (a new id on an existing take file) / cut_from (a new id cut from an existing take). Placement: \"after\" + gap_s (a line id, or start+S) for new lines; a kept line's \"at\" is start+S, after:<id>+S, or overlap:<id>-S (it starts S before that line ends). New per-beat fields for the art, shot and score passes: scene (proposal-v35's number), mode (proposal-v35's modes), pace and tempo (the pace table: quick = others 0.15-0.35 s, Mas 0.4-0.5 s; normal 0.4-0.6 s; weighted = longer, only on turns; tempo.gaps are the gap before each named line), camera (the frame), picture (notes for the art pass), style (the tier), flashback (when, tier, in, out), style_leap (choice 9A's macro) and style_leap_optional (CLOD's claymation insert, if the Blender test reads; timing identical either way). onscreen also takes retime {text: at}. sounds_drop lists sounds a transition moves away. Fix codes are in _spec_v35.py. The script is show/episodes/ep01/script.md (draft 8.4); the notes are ../script-v35-notes.md.",
  "story_s": {
   "source": 507.79,
-  "estimate": 485.67
+  "estimate": 487.16
  },
  "beats": [
   {
@@ -974,12 +974,12 @@
    "frame": "SCREEN · the blog, in its own UI",
    "camera": "SCREEN · the blog, in its own UI",
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
-   "picture": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
+   "caption": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" As her pointer goes to Post, NELEH (in her call window, lip-synced): \"Step two.\" She clicks Post, on a tick.",
+   "picture": "Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" As her pointer goes to Post, NELEH (in her call window, lip-synced): \"Step two.\" She clicks Post, on a tick.",
    "fix": [
     "C12"
    ],
-   "why": "12A: a shorter hold (5.5 s reads both sentences).",
+   "why": "12A: a shorter hold (5.5 s reads both sentences). 2026-09-29: \"Step two.\" inside the hold, before the click (the length unchanged).",
    "src_s": 9.0,
    "src_frame": "SCREEN · the blog, in its own UI",
    "lines": [
@@ -989,6 +989,19 @@
      "who": "neleh",
      "text": "Any objections?",
      "why": "12A: \"Any objections?\" goes"
+    },
+    {
+     "id": "v35-a4-0011",
+     "new": true,
+     "who": "neleh",
+     "text": "Step two.",
+     "delivery": "Brisk, procedural, as her pointer goes to Post: the same read as \"Step three. Rima, the staff will come to you now.\"",
+     "tag": "",
+     "note": "[INVENTED · the showrunner (2026-09-29): it mirrors \"Step three.\" (S3.04); in the post's silent hold, before the click]",
+     "take": "new (the NELEH voice, ref a5-27-22; audio/ep01/v35)",
+     "after": "start+4.42",
+     "gap_s": 0.0,
+     "len_s": 0.8
     }
    ]
   },
@@ -1191,12 +1204,12 @@
    "scene": 47,
    "mode": "CONVERSATION",
    "pace": "quick",
-   "est_s": 12.35,
+   "est_s": 13.84,
    "frame": "WIDE · the boardroom at night (held)",
    "camera": "WIDE · the boardroom at night (held)",
    "music": "THE BOARD'S SIDE · dry, procedural comedy · PROCEDURE (MM-09), lighter · unchanged",
-   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
-   "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped.",
+   "caption": "The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" MADA (O.S., over the sheet's blank 4. line): \"There is no step four.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
+   "picture": "Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped. v3.5b fix: Mada's \"There is no step four.\" is O.S. over a cut in to the sheet's blank 4. line (the same insert art, no hand), then back to the wide on the second buzz.",
    "onscreen": {
     "add": [
      "RAIL: NOV 18"
@@ -1210,12 +1223,12 @@
     },
     {
      "name": "BUZZ",
-     "at": "after:v35-a4-0009+0.172",
+     "at": "after:v35-a4-0010+0.172",
      "gain": -26
     },
     {
      "name": "landing_thunk",
-     "at": "after:v35-a4-0009+0.48",
+     "at": "after:v35-a4-0010+0.48",
      "gain": -22,
      "note": "the clack: the first phone goes over after her line; nobody picks it up"
     },
@@ -1235,10 +1248,11 @@
    "tempo": {
     "pace": "quick",
     "gaps": {
+     "v35-a4-0010": 0.25,
      "a5-27-29": 0.73
     },
     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
-    "note": "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"
+    "note": "Mada's setup 0.25 s after Neleh's line; the phone's fall is the beat before the payoff: the restored line 0.25 s after the clack"
    },
    "fix": [
     "C12",
@@ -1267,7 +1281,7 @@
      "restored": true,
      "who": "neleh",
      "text": "Then we'll write step four ourselves.",
-     "after": "v35-a4-0009",
+     "after": "v35-a4-0010",
      "gap_s": 0.73,
      "take": "audio/ep01/act4/dialogue/v5/wav/a5-27-29.wav",
      "take_file": "audio/ep01/act4/dialogue/lines-v5.json",
@@ -1288,6 +1302,19 @@
      "after": "start+1.25",
      "gap_s": 0.0,
      "len_s": 7.47
+    },
+    {
+     "id": "v35-a4-0010",
+     "new": true,
+     "who": "mada",
+     "text": "There is no step four.",
+     "delivery": "Right after Neleh's line, quick and flat: a fact, not a jab. O.S. over the sheet's blank line.",
+     "tag": "",
+     "note": "[INVENTED · the showrunner's fix (2026-09-29): sets up \"Then we'll write step four ourselves.\"]",
+     "take": "new (the MADA voice, ref a5-25-06; audio/ep01/v35)",
+     "after": "v35-a4-0009",
+     "gap_s": 0.25,
+     "len_s": 1.24
     }
    ]
   },

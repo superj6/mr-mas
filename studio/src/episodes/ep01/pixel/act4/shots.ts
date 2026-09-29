@@ -636,7 +636,7 @@ const rowLight = (fb: Buf, k: number, fallenX: number) => {
   for (let i = 0; i < 480 * RH; i++) { if (m[i]) fb.c[i] = stepColor(fb.c[i], k); else if (lift[i] || near[i]) fb.c[i] = stepColor(fb.c[i], Math.max(lift[i], near[i])); }
 };
 L.add('S4.02', {kind: 'V', st: V35('v3.2\'s wide (C13: backs boardRoom, the blueprint on the table, phone A composited from its own room render, the buzzes and caller IDs STAFF · STAFF · INVESTORS · STAFF, v5\'s small wall screen), held with a slow whole-pixel drift toward Neleh, 1 px / 22 f, while she speaks (footnote three); v3.5: no push (the second speech is cut) and no lit row; phone A walks on to the edge on the second buzz, teeters, tips and falls, clack on the landing_thunk; nobody picks it up; the rail NOV 18 moves here from the cut S4.01'),
-  marks: {step4: ['end', 'a5-27-29', 1], write: ['snd', 'marker_write_q', 1, 0]},
+  marks: {nostep: ['on', 'v35-a4-0010', -3], step4: ['end', 'a5-27-29', 1], write: ['snd', 'marker_write_q', 1, 0]},
   draw: (fb, k, sh, f) => {
     const bz = mk(sh, 'buzz', 7), bz2 = mk(sh, 'buzz2', 194), tip = mk(sh, 'tip', 196);
     const step = Math.min(3, (k >= bz ? 1 : 0) + (k >= bz + 15 ? 1 : 0) + (k >= bz2 ? 1 : 0));
@@ -664,6 +664,10 @@ L.add('S4.02', {kind: 'V', st: V35('v3.2\'s wide (C13: backs boardRoom, the blue
       pt(fb, who, x + 3, y + 2, acc); pt(fb, msg, x + 3, y + 11, PAL.P2);
       if (hs) { const hx0 = x + w - 3 - pw(hs); pt(fb, hs, hx0, y + 2, PAL.R3); ['.#.#.', '#####', '.###.', '..#..'].forEach((r, j) => { for (let q = 0; q < 5; q++) if (r[q] === '#') fb.set(hx0 - 7 + q, y + 3 + j, PAL.R3); }); for (let j = 0; j < 3; j++) { const a = (k - bz + j * 9) % 27; if (a < 12) { const hx = x + w - 8 - j * 5, hy = y - 2 - (a >> 1); fb.set(hx, hy, PAL.R3); fb.set(hx + 2, hy, PAL.R3); rect(hx, hy + 1, 3, 1, fb.ink(PAL.R3)); fb.set(hx + 1, hy + 2, PAL.R3); } } }
     });
+    // v3.5b fix (2026-09-29): MADA (O.S.) "There is no step four." over a cut in to the sheet's blank 4. line (the step-four
+    // insert, no hand), back to the wide on the second buzz, before the clack
+    const no = mk(sh, 'nostep', 9999);
+    if (k >= no && k < bz2) { drawTableInsert(fb, {f: k, focus: 'blueprint', word: 0}); drawStepFour(fb, f, {n: 0, strike: 0}, () => {}); return; }
     // v3.5b (step four's payoff): after "Then we'll write step four ourselves." a cut in to the sheet: she writes 4. MARIO as she dials
     const ins = mk(sh, 'step4', 255);
     if (k >= ins) {

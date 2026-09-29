@@ -328,3 +328,16 @@ SEGS=act4 bash ops/heavy.sh bash audio/ep01/v3-el/tools/render_v35.sh           
 audio/.venv-casting/bin/python audio/ep01/v3-el/tools/el_lock.py act2 act3 act4 --lock v35 --fixed S7.13   # segments FIRST
 # Act One: never el_lock.py act1 (it drops §AD's lines): splice a new line-less beat into the committed EL Act One
 ```
+
+## 11. v3.5b fix: Mada's setup and "Step two." (the showrunner, 2026-09-29)
+
+Two Act Four lines, through the §10 route (`_spec_v35.py` → `takes.py`/`record.sh` → `build_timeline.py` → `render_v35.sh` → `ops/rebuild-act.sh act4`). EL Act Four 11,953 → **11,991** (+38 f); the film 23:31.58 (33,878 f).
+
+| Line | Beat | EL frames | Picture |
+|---|---|---|---|
+| v35-a4-0010, MADA (O.S.): "There is no step four." | S4.02, 0.25 s after Neleh's line | 4394–4425 | A cut in to the sheet's blank 4. line (the step-four insert art, no hand) from 4391 to the second buzz (4428); back to the wide for the clack (4436) |
+| v35-a4-0011, NELEH: "Step two." | S3.03 (the board's post), start + 4.42 s, before the Post click | 3341–3361 | Her call window, lip-synced with the speaking ring; the click at 3368 |
+
+- S4.02's second BUZZ and the clack now hang off Mada's line (after:v35-a4-0010 +0.172 / +0.48); "Then we'll write step four ourselves." is 0.73 s after it (4441–4488), 4. MARIO written from 4496, the cut at 4519.
+- S3.03 grew 2 f (the EL take's length over the Kokoro one, el_lock.py's rule); S4.02 grew 36 f. Everything after shifts +38 f: S4.07 6200–6272, **S7.13 10792–11056** (the hourglass spliced there by rebuild-act.sh, from the lock).
+- EL Act One's lock files are byte-identical to HEAD (§AD's lines intact).

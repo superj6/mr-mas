@@ -11094,6 +11094,201 @@
     "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.940",
     "device": null
    }
+  },
+  "v35-a4-0010__mada-A": {
+   "take": "v35-a4-0010__mada-A",
+   "key": "ba891945c9baa57c",
+   "base_key": "ba891945c9baa57c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0010__mada-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.13,
+   "offset_s": 0.35,
+   "sent": "There is no step four.",
+   "seed": 1064854579,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.7,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "voice_id": "S9UjcNYIwfBOtZiDnIQT",
+   "voice_name": "Alex - Smooth, Balanced and Clear",
+   "cand": "A",
+   "role": "mada",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.63,
+    "span_s": 1.23,
+    "words": 5,
+    "wpm": 243.9,
+    "syllables": 5,
+    "articulation_sps": 4.07,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.5,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 138.9,
+    "f0_range_st": 6.8
+   },
+   "words": [
+    {
+     "w": "There",
+     "t0": 0.38,
+     "t1": 0.582
+    },
+    {
+     "w": "is",
+     "t0": 0.617,
+     "t1": 0.687
+    },
+    {
+     "w": "no",
+     "t0": 0.756,
+     "t1": 0.872
+    },
+    {
+     "w": "step",
+     "t0": 0.942,
+     "t1": 1.186
+    },
+    {
+     "w": "four",
+     "t0": 1.256,
+     "t1": 1.569
+    }
+   ],
+   "qa": {
+    "asr": "There is no step four",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.84,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 138.9,
+    "f0_range_st": 6.8,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.5,
+    "raw_tail_cut": false,
+    "align_median_s": 0.096
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 1.486,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v35/act4/wav/v35-a4-0010.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 2.22,
+    "audible_in_s": 0.51,
+    "audible_out_s": 1.75,
+    "wpm": 241.9,
+    "median_f0_hz": 149.2,
+    "f0_range_st": 8.1,
+    "delivery": "Right after Neleh's line, quick and flat: a fact, not a jab. O.S. over the sheet's blank line.",
+    "voice": "am_adam (Kokoro-82M stock) · b-adam-grey · speed 0.960",
+    "device": null
+   }
+  },
+  "v35-a4-0011__neleh-A": {
+   "take": "v35-a4-0011__neleh-A",
+   "key": "6203d218ded98678",
+   "base_key": "6203d218ded98678",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep01/v3-el/ep01-v35/act4/wav/v35-a4-0011__neleh-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.582,
+   "offset_s": 0.35,
+   "sent": "Step two.",
+   "seed": 3977450197,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "3dzJXoCYueSQiptQ6euE",
+   "voice_name": "Alexandra - Confident, Clear and Steady",
+   "cand": "A",
+   "role": "neleh",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.2,
+    "span_s": 0.83,
+    "words": 2,
+    "wpm": 144.6,
+    "syllables": 2,
+    "articulation_sps": 2.41,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.382,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 192.2,
+    "f0_range_st": 5.9
+   },
+   "words": [
+    {
+     "w": "Step",
+     "t0": 0.35,
+     "t1": 0.652
+    },
+    {
+     "w": "two",
+     "t0": 0.71,
+     "t1": 0.942
+    }
+   ],
+   "qa": {
+    "asr": "Step 2",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.18,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 192.2,
+    "f0_range_st": 5.9,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.382,
+    "raw_tail_cut": false,
+    "align_median_s": 0.35
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 0.882,
+    "raw_tail_cut": false
+   },
+   "kokoro": {
+    "file": "audio/ep01/v35/act4/wav/v35-a4-0011.wav",
+    "mode": "on-mic",
+    "lufs_i": -16.0,
+    "duration_s": 1.705,
+    "audible_in_s": 0.5,
+    "audible_out_s": 1.23,
+    "wpm": 164.4,
+    "median_f0_hz": 195.1,
+    "f0_range_st": 8.2,
+    "delivery": "Brisk, procedural, as her pointer goes to Post: the same read as \"Step three. Rima, the staff will come to you now.\"",
+    "voice": "af_aoede (Kokoro-82M stock) · c-aoede-precise · speed 0.960",
+    "device": null
+   }
   }
  },
  "calls": [
@@ -11192,6 +11387,22 @@
    "cost_header": "52",
    "request_id": "BQbCfqPuXFDRrQzyufK0",
    "at": "21:33:42"
+  },
+  {
+   "take": "v35-a4-0010__mada-A",
+   "key": "ba891945c9baa57c",
+   "chars": 22,
+   "cost_header": "10",
+   "request_id": "vjO5D8fj7TFmvCVj8nZF",
+   "at": "00:39:57"
+  },
+  {
+   "take": "v35-a4-0011__neleh-A",
+   "key": "6203d218ded98678",
+   "chars": 9,
+   "cost_header": "4",
+   "request_id": "asaWkqvWZmoRQdiuPid8",
+   "at": "01:10:57"
   }
  ]
 }

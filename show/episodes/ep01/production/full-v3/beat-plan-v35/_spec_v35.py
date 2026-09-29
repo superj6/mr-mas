@@ -225,6 +225,16 @@ NEW_LINES = {
                         ref="a5-27-22", device=None,
                         delivery="After the phones' first buzz-and-step. Polite, a little tired: the first sentence plain (it's what the phones say), the second dry; then the footnote, as before. 'The charter' said clearly.",
                         note="[INVENTED · SN 00000A (2026-09-28): the phones' pressure is about bringing him back; the charter and its footnote stay the board's grounds]"),
+    # ---- ACT FOUR · sc 47 (the showrunner's fix, 2026-09-29): Mada's setup for "Then we'll write step four ourselves."
+    "v35-a4-0010": dict(seg="act4", beat="S4.02", who="mada", text="There is no step four.",
+                        say="There is no step four.", ref="a5-25-06", device=None,
+                        delivery="Right after Neleh's line, quick and flat: a fact, not a jab. O.S. over the sheet's blank line.",
+                        note="[INVENTED · the showrunner's fix (2026-09-29): sets up \"Then we'll write step four ourselves.\"]"),
+    # ---- ACT FOUR · sc 45 (the showrunner, 2026-09-29): the board's post is step two, as "Step three." is Rima's
+    "v35-a4-0011": dict(seg="act4", beat="S3.03", who="neleh", text="Step two.",
+                        say="Step two.", ref="a5-27-22", device=None,
+                        delivery="Brisk, procedural, as her pointer goes to Post: the same read as \"Step three. Rima, the staff will come to you now.\"",
+                        note="[INVENTED · the showrunner (2026-09-29): it mirrors \"Step three.\" (S3.04); in the post's silent hold, before the click]"),
 }
 
 # Reused takes under a new id (the same file; no new read): new id -> source id
@@ -257,7 +267,7 @@ FALLBACK = {"v35-vo-01": 3.3, "v35-vo-02": 2.2, "v35-vo-03": 2.5, "v35-vo-04": 3
             "v35-a2-0004": 1.0, "v35-a2-0005": 1.1, "v35-a2-0006": 1.1, "v35-a2-0007": 0.8, "v35-a2-0008": 0.7,
             "v35-a2-0009": 0.7, "v35-a2-0010": 0.9, "v35-a2-0011": 3.9, "v35-a4-0001": 2.9, "v35-a4-0002": 1.2,
             "v35-a4-0003": 1.1, "v35-a4-0004": 4.1, "v35-a4-0005": 1.1, "v35-a4-0006": 1.2, "v35-a4-0007": 1.1,
-            "v35-a4-0008": 8.3, "v35-a4-0009": 7.6}
+            "v35-a4-0008": 8.3, "v35-a4-0009": 7.6, "v35-a4-0010": 1.3, "v35-a4-0011": 0.8}
 
 
 def l(lid):
@@ -643,8 +653,9 @@ A4["S3.02"] = dict(action="cut", est_s=0.0, fix=["C12"],
                    why="12A: the overhead of her desk and its tick go; step 4's blank is on the table on Saturday (S4.02) and in her look (S4.07, moved).")
 A4["S3.03"] = dict(est_s=5.5,
                    drop={"a5-27-08": "12A: \"Any objections?\" goes"},
-                   caption="Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" She clicks Post, on a tick.",
-                   fix=["C12"], why="12A: a shorter hold (5.5 s reads both sentences).")
+                   add=[line("v35-a4-0011", "start+4.42")],
+                   caption="Her laptop: the NopeAI blog in its own UI, the post whole on the page, held to read its two sentences: \"…he was not consistently candid in his communications with the board… The board no longer has confidence in his ability to continue leading NopeAI.\" As her pointer goes to Post, NELEH (in her call window, lip-synced): \"Step two.\" She clicks Post, on a tick.",
+                   fix=["C12"], why="12A: a shorter hold (5.5 s reads both sentences). 2026-09-29: \"Step two.\" inside the hold, before the click (the length unchanged).")
 A4["S3.04"] = dict(est_s=round(10.83 - 0.95, 2),
                    retime={"a5-27-13": R("v32-a4-0001", 0.25), "a5-27-14": R("a5-27-13", 0.25), "a5-27-15": R("a5-27-14", 0.25)},
                    tempo=tempo("quick", {"a5-27-13": 0.25, "a5-27-14": 0.25, "a5-27-15": 0.25}), fix=["PACE"])
@@ -663,23 +674,23 @@ A4["S3.05"] = dict(est_s=5.5,
                    fix=["C6", "KEEP"], why="Choice 6A: Alyi's line stays (the ledger's keep list), alone.")
 A4["S4.01"] = dict(action="cut", est_s=0.0, fix=["C12"],
                    why="12A: the eulogy post card and the wall screen go.")
-A4["S4.02"] = dict(est_s=seq(1.25, [("v35-a4-0009", 0.0), ("a5-27-29", 0.73)], 1.3),
+A4["S4.02"] = dict(est_s=seq(1.25, [("v35-a4-0009", 0.0), ("v35-a4-0010", 0.25), ("a5-27-29", 0.73)], 1.3),
                    drop={"a5-27-23": "12A: \"What they actually want to know…\" goes",
                          "a5-27-22": "SN 00000A: re-recorded as v35-a4-0009 (\"They all want him back…\"), at its natural length"},
-                   add=[line("v35-a4-0009", "start+1.25")],
-                   restore=[restored("a5-27-29", "v35-a4-0009", 0.73,
+                   add=[line("v35-a4-0009", "start+1.25"), line("v35-a4-0010", "v35-a4-0009", 0.25)],
+                   restore=[restored("a5-27-29", "v35-a4-0010", 0.73,
                                      note="[INVENTED · the v3.4 line, restored (SN 00000A: \"yes i want to restore it\"): step four's payoff; its v3.4 takes, Kokoro and EL, reused]")],
                    onscreen={"add": ["RAIL: NOV 18"]},
                    sounds=[{"name": "BUZZ", "at": 0.288, "gain": -24},
-                           {"name": "BUZZ", "at": "after:v35-a4-0009+0.172", "gain": -26},
-                           {"name": "landing_thunk", "at": "after:v35-a4-0009+0.48", "gain": -22,
+                           {"name": "BUZZ", "at": "after:v35-a4-0010+0.172", "gain": -26},
+                           {"name": "landing_thunk", "at": "after:v35-a4-0010+0.48", "gain": -22,
                             "note": "the clack: the first phone goes over after her line; nobody picks it up"},
                            {"name": "marker_uncap", "at": "after:a5-27-29+0.12", "gain": -30, "note": "her marker, uncapped"},
                            {"name": "marker_write_q", "at": "after:a5-27-29+0.35", "gain": -28,
                             "note": "she writes 4. MARIO on step four's blank line as she dials (the tones pre-lap S4.08)"}],
-                   caption="The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
-                   picture="Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped.",
-                   tempo=tempo("quick", {"a5-27-29": 0.73}, "the phone's fall is the beat between her two lines: the restored line 0.25 s after the clack"),
+                   caption="The boardroom at night, the blueprint on the table: steps 1–3 ticked, step 4 a blank line. Four phones buzz and step toward the edge: STAFF · STAFF · INVESTORS · STAFF. NELEH, with a marker: \"They all want him back. As if it wasn't allowed. It was. The charter, footnote three. I've read it four times tonight.\" MADA (O.S., over the sheet's blank 4. line): \"There is no step four.\" The first phone goes over the edge: clack. Nobody picks it up. NELEH: \"Then we'll write step four ourselves.\" She uncaps the marker and writes 4. MARIO on the blank line as she reaches for the speakerphone.",
+                   picture="Step 4's blank line visible on the table. v3.5b: after the restored line she writes 4. MARIO on it in the marker's hand (from the line's end + 0.35 s to the cut), reaching for the speakerphone with the other hand; it's the line Adelina's \"no\" strikes through (S4.08) and Neleh looks at on Sunday (S4.07). The push to her MCU stays dropped. v3.5b fix: Mada's \"There is no step four.\" is O.S. over a cut in to the sheet's blank 4. line (the same insert art, no hand), then back to the wide on the second buzz.",
+                   tempo=tempo("quick", {"v35-a4-0010": 0.25, "a5-27-29": 0.73}, "Mada's setup 0.25 s after Neleh's line; the phone's fall is the beat before the payoff: the restored line 0.25 s after the clack"),
                    fix=["C12", "TR"], why="SN 00000A: the pressure is about his return (the re-recorded line), and step four's payoff is restored: they try to replace him, and 4. MARIO goes on the blueprint; the rail moves here from the cut S4.01.")
 A4["S4.07"] = dict(est_s=3.0,
                    drop={"a5-27-29": "12A: \"Then we'll write step four ourselves.\" goes from here; SN 00000A restores it in S4.02; her look stays"},

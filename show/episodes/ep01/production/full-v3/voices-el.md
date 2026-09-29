@@ -28,6 +28,18 @@
 
 ---
 
+## AF. Phase 13: Mada's "There is no step four." and Neleh's "Step two." (2026-09-29)
+
+| Id | Line | Take | Voiced | ASR |
+|---|---|---|---|---|
+| **v35-a4-0010** (S4.02) | There is no step four. | Mada's A voice (her other takes' settings), one generation, `ep01-v35/act4/wav/v35-a4-0010__mada-A.wav` | 1.23 s (file 2.13 s) | verbatim, recall 1.0, no clipped tail |
+| **v35-a4-0011** (S3.03) | Step two. | Neleh's A voice (Alexandra, her other takes' settings), one generation, `ep01-v35/act4/wav/v35-a4-0011__neleh-A.wav` | 0.83 s | "Step 2", recall 1.0 |
+
+- **Characters:** 22 + 9 sent, one call each (cost headers 10 and 4). Kokoro takes by fastrec for the base lock (`audio/ep01/v35/act4/`).
+- Re-locked with `el_lock.py act4 --lock v35 --fixed S7.13` (segment first) through `ops/rebuild-act.sh act4`; EL Act One untouched (lock-v35.md §11).
+
+---
+
 ## AE. Phase 12: Neleh's re-recorded line, step four restored, and the v3.5b re-lock (2026-09-28)
 
 **The brief (SHOWRUNNER-NOTES 00000A):**

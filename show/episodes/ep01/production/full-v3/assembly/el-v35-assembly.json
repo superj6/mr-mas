@@ -1,6 +1,6 @@
 {
  "variant": "el-v35",
- "built": "2026-09-28 23:59:38",
+ "built": "2026-09-29 01:30:08",
  "chapters": [
   {
    "id": "coldopen",
@@ -99,13 +99,13 @@
    "video": "out/ep01/full-v3/picture-el/act4.mp4",
    "audio": "out/ep01/full-v3/mix-v35-el/act4-mix.wav",
    "gain_db": 0.0,
-   "frames": 11953,
+   "frames": 11991,
    "start_frame": 20828,
    "start_s": 867.8333,
-   "seconds": 498.0417,
-   "video_head_md5": "5e9584c61ba0",
-   "audio_head_md5": "dcf9753829f2",
-   "audio_mtime": "23:55:52"
+   "seconds": 499.625,
+   "video_head_md5": "e8a5537f1404",
+   "audio_head_md5": "3c4612cf5ae2",
+   "audio_mtime": "01:25:39"
   },
   {
    "id": "tag",
@@ -115,12 +115,12 @@
    "audio": "out/ep01/full-v3/mix-v35-el/tag-mix.wav",
    "gain_db": 0.0,
    "frames": 798,
-   "start_frame": 32781,
-   "start_s": 1365.875,
+   "start_frame": 32819,
+   "start_s": 1367.4583,
    "seconds": 33.25,
    "video_head_md5": "f6ad6de5406c",
-   "audio_head_md5": "44c277a967c1",
-   "audio_mtime": "23:57:27"
+   "audio_head_md5": "661bee073a03",
+   "audio_mtime": "01:25:45"
   },
   {
    "id": "tag-hum",
@@ -130,12 +130,12 @@
    "audio": "out/ep01/full-v3/assembly-v35/tag-hum.wav",
    "gain_db": 0.0,
    "frames": 18,
-   "start_frame": 33579,
-   "start_s": 1399.125,
+   "start_frame": 33617,
+   "start_s": 1400.7083,
    "seconds": 0.75,
    "video_head_md5": "ae2839e6f319",
    "audio_head_md5": "b23e6033d469",
-   "audio_mtime": "23:59:38"
+   "audio_mtime": "01:30:08"
   },
   {
    "id": "outro",
@@ -145,12 +145,12 @@
    "audio": "out/ep01/full-v3/assembly-v35/outro.wav",
    "gain_db": -1.0,
    "frames": 243,
-   "start_frame": 33597,
-   "start_s": 1399.875,
+   "start_frame": 33635,
+   "start_s": 1401.4583,
    "seconds": 10.125,
    "video_head_md5": "5ccb874c13cc",
    "audio_head_md5": "6001e1a68eb9",
-   "audio_mtime": "23:59:38"
+   "audio_mtime": "01:30:08"
   }
  ],
  "seams": [
@@ -211,25 +211,25 @@
   },
   {
    "join": "act4 -> tag",
-   "at_frame": 32781,
-   "sample_jump": 0.00315,
-   "tail200_dbfs": -26.6,
-   "head200_dbfs": -28.1,
-   "step_db": -1.5,
+   "at_frame": 32819,
+   "sample_jump": 0.00253,
+   "tail200_dbfs": -26.4,
+   "head200_dbfs": -27.5,
+   "step_db": -1.1,
    "treatment": "none (sample-continuous)"
   },
   {
    "join": "tag -> tag-hum",
-   "at_frame": 33579,
+   "at_frame": 33617,
    "sample_jump": 0.00075,
-   "tail200_dbfs": -36.0,
+   "tail200_dbfs": -35.0,
    "head200_dbfs": -35.8,
-   "step_db": 0.2,
+   "step_db": -0.8,
    "treatment": "none (sample-continuous)"
   },
   {
    "join": "tag-hum -> outro",
-   "at_frame": 33597,
+   "at_frame": 33635,
    "sample_jump": 0.00014,
    "tail200_dbfs": -35.6,
    "head200_dbfs": -23.0,
@@ -244,7 +244,7 @@
   "hum_gain_db_fitted": 2.9,
   "outro_mix_residual": 1.1896641085099025e-07,
   "first_hit_s": 0.0,
-  "tag_last200_dbfs": -36.0,
+  "tag_last200_dbfs": -35.0,
   "gap_first200_dbfs": -35.8,
   "gap_last200_dbfs": -35.6,
   "tag_to_gap_sample_jump": 0.00075,
@@ -255,14 +255,14 @@
    "out/ep01/full-v3/assembly-v35/tag-last.png"
   ]
  },
- "total_frames": 33840,
- "total_s": 1410.0,
+ "total_frames": 33878,
+ "total_s": 1411.5833,
  "sample_peak_dbfs": -1.5,
  "longest_digital_zero_run_ms": 0.69,
  "film": "out/ep01/full-v3/ep01-v35.mp4",
  "locks": "show/episodes/ep01/production/full-v3/assembly/el-v35/lock-{seg}.json",
  "transcript": "transcript-v35.txt",
  "label": "v3.5",
- "encode_s": 167.4,
- "bytes": 138808891
+ "encode_s": 178.2,
+ "bytes": 138927090
 }

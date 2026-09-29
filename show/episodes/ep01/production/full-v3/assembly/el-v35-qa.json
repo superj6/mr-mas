@@ -1,18 +1,18 @@
 {
  "variant": "el-v35",
  "film": "out/ep01/full-v3/ep01-v35.mp4",
- "measured": "2026-09-29 00:02:36",
+ "measured": "2026-09-29 01:33:07",
  "heard": "nothing here was heard or watched; every number is measured",
  "transcript": {
   "file": "show/episodes/ep01/production/full-v3/assembly/transcript-v35.txt",
-  "lines": 258
+  "lines": 260
  },
  "decode": {
   "exit": 0,
   "error_lines": 0,
   "errors": [],
-  "frames_decoded": 33840,
-  "seconds": 19.0
+  "frames_decoded": 33878,
+  "seconds": 19.3
  },
  "streams": [
   {
@@ -22,9 +22,9 @@
    "width": 1920,
    "height": 1080,
    "r_frame_rate": "24/1",
-   "duration": "1410.000000",
-   "bit_rate": "526397",
-   "nb_read_packets": "33840"
+   "duration": "1411.583333",
+   "bit_rate": "526185",
+   "nb_read_packets": "33878"
   },
   {
    "codec_name": "aac",
@@ -33,22 +33,22 @@
    "sample_rate": "48000",
    "channels": 2,
    "r_frame_rate": "0/0",
-   "duration": "1410.000000",
+   "duration": "1411.583000",
    "bit_rate": "256000",
-   "nb_read_packets": "66096"
+   "nb_read_packets": "66170"
   },
   {
    "codec_name": "bin_data",
    "codec_type": "data",
    "r_frame_rate": "0/0",
-   "duration": "1410.000000",
+   "duration": "1411.583000",
    "bit_rate": "1"
   }
  ],
  "format": {
-  "duration": "1410.000000",
-  "size": "138808891",
-  "bit_rate": "787568",
+  "duration": "1411.583333",
+  "size": "138927090",
+  "bit_rate": "787354",
   "tags": {
    "title": "MR. MAS · ep1.0_research_preview.md (v3.5)"
   }
@@ -93,31 +93,31 @@
   {
    "id": 6,
    "start": 867.833,
-   "end": 1365.875,
+   "end": 1367.458,
    "title": "Act Four · five days, told twice"
   },
   {
    "id": 7,
-   "start": 1365.875,
-   "end": 1399.875,
+   "start": 1367.458,
+   "end": 1401.458,
    "title": "Tag · december"
   },
   {
    "id": 8,
-   "start": 1399.875,
-   "end": 1410.0,
+   "start": 1401.458,
+   "end": 1411.583,
    "title": "Outro · credits"
   }
  ],
  "chapters_match_assembly": true,
  "audio": {
-  "samples": 67680256,
-  "seconds": 1410.0053,
-  "picture_seconds": 1410.0,
-  "length_diff_ms": 5.33,
+  "samples": 67756032,
+  "seconds": 1411.584,
+  "picture_seconds": 1411.5833,
+  "length_diff_ms": 0.7,
   "integrated_lufs": -16.08,
-  "true_peak_dbtp": -1.29,
-  "sample_peak_dbfs": -1.34,
+  "true_peak_dbtp": -1.17,
+  "sample_peak_dbfs": -1.44,
   "chapters": [
    {
     "id": "coldopen",
@@ -194,33 +194,33 @@
    {
     "id": "act4",
     "start": "14:27.83",
-    "seconds": 498.0417,
-    "lufs_i": -16.03,
-    "true_peak_dbtp": -1.29,
-    "max_short_term_lufs": -11.6,
+    "seconds": 499.625,
+    "lufs_i": -16.02,
+    "true_peak_dbtp": -1.17,
+    "max_short_term_lufs": -11.8,
     "sync_lag_samples": 0,
     "sync_corr": 1.0,
-    "codec_max_diff": 0.1435,
+    "codec_max_diff": 0.1373,
     "codec_bursts": []
    },
    {
     "id": "tag",
-    "start": "22:45.88",
+    "start": "22:47.46",
     "seconds": 33.25,
-    "lufs_i": -17.06,
-    "true_peak_dbtp": -1.31,
+    "lufs_i": -17.12,
+    "true_peak_dbtp": -1.46,
     "max_short_term_lufs": -13.1,
     "sync_lag_samples": 0,
     "sync_corr": 1.0,
-    "codec_max_diff": 0.077,
+    "codec_max_diff": 0.0785,
     "codec_bursts": []
    },
    {
     "id": "tag-hum",
-    "start": "23:19.12",
+    "start": "23:20.71",
     "seconds": 0.75,
-    "lufs_i": -34.51,
-    "true_peak_dbtp": -28.84,
+    "lufs_i": -34.5,
+    "true_peak_dbtp": -28.96,
     "max_short_term_lufs": -34.5,
     "sync_lag_samples": 1100,
     "sync_corr": 0.999,
@@ -229,14 +229,14 @@
    },
    {
     "id": "outro",
-    "start": "23:19.88",
+    "start": "23:21.46",
     "seconds": 10.125,
     "lufs_i": -17.22,
-    "true_peak_dbtp": -4.1,
+    "true_peak_dbtp": -4.07,
     "max_short_term_lufs": -14.8,
     "sync_lag_samples": 0,
     "sync_corr": 0.9999,
-    "codec_max_diff": 0.0161,
+    "codec_max_diff": 0.0158,
     "codec_bursts": []
    }
   ],
@@ -299,31 +299,31 @@
     "step_db": 0.9,
     "momentary_before_lufs": -31.1,
     "momentary_after_lufs": -30.3,
-    "sample_jump": 0.0037
+    "sample_jump": 0.0038
    },
    {
     "join": "act4 -> tag",
-    "at": "22:45.88",
-    "rms_before_db": -26.6,
-    "rms_after_db": -28.1,
-    "step_db": -1.5,
-    "momentary_before_lufs": -24.5,
-    "momentary_after_lufs": -26.0,
-    "sample_jump": 0.0031
+    "at": "22:47.46",
+    "rms_before_db": -26.4,
+    "rms_after_db": -27.5,
+    "step_db": -1.1,
+    "momentary_before_lufs": -24.4,
+    "momentary_after_lufs": -25.8,
+    "sample_jump": 0.0025
    },
    {
     "join": "tag -> tag-hum",
-    "at": "23:19.12",
-    "rms_before_db": -36.0,
+    "at": "23:20.71",
+    "rms_before_db": -35.0,
     "rms_after_db": -35.8,
-    "step_db": 0.2,
-    "momentary_before_lufs": -34.3,
+    "step_db": -0.8,
+    "momentary_before_lufs": -32.9,
     "momentary_after_lufs": -34.6,
     "sample_jump": 0.0008
    },
    {
     "join": "tag-hum -> outro",
-    "at": "23:19.88",
+    "at": "23:21.46",
     "rms_before_db": -35.6,
     "rms_after_db": -23.0,
     "step_db": 12.6,
@@ -336,12 +336,12 @@
   "holes_under_-60dBFS_0.3s": []
  },
  "flash": {
-  "frames": 33840,
+  "frames": 33878,
   "general": {
    "max_flashes_in_1s": 3,
    "at": "00:12.42",
    "chapter": "coldopen",
-   "transitions": 147,
+   "transitions": 146,
    "per_chapter": {
     "coldopen": {
      "max_flashes_in_1s": 3,
@@ -369,7 +369,7 @@
     },
     "act4": {
      "max_flashes_in_1s": 1,
-     "at": "17:54.67"
+     "at": "17:56.25"
     },
     "tag": {
      "max_flashes_in_1s": 0,
@@ -428,7 +428,7 @@
  },
  "sheet": {
   "file": "out/ep01/full-v3/ep01-v35-sheet.png",
-  "frames": 141
+  "frames": 142
  },
- "seconds": 115.5
+ "seconds": 130.8
 }
