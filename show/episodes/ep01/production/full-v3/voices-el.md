@@ -186,7 +186,7 @@
 
 - **The build:** from the Kokoro v3.5 lock (`show/reel/ep01-v35/`, lock-v35.md), with `tools/render_v35.sh` (every line: **nothing was sent**; the lock's thirteen cut lines are cut again from the EL takes by `el_cut.py --lock v35`), then `el_lock.py --lock v35 --fixed S7.13`, `el_bed.py --lock v35` and the manifest.
 - **The files:** the timelines and manifest in `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`); the beds in `audio/reel/ep01-v35-el/` (all sounds resolved, 0 missing; the card is the lock's own; the cold open is the lock's bed spliced per beat).
-- **The manifest's intro plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `episode.mjs --plan`: 33,406 frames (23:11.9 with the slate; 23:08.9 without), all 256 takes and 7 beds, no warnings.
+- **The manifest's intro plays `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `episode.mjs --plan`: 33,406 frames (23:11.9 with the slate; 23:08.9 without), all 256 takes and 7 beds, no warnings.
 - **MARIO's ten lines play his Kokoro takes** (e1-a1-11-01/-03, v35-a1-0011, e1-a2-13-03/-05, e1-a2-17-01/-02/-04/-05, a5-27-31): lengths unchanged, starts moved with the EL lines before them.
 - **The placements hold:** all seven J-cuts (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, 41.03 −0.3, 41.04 −0.3, S5.11 −0.8, S8.08 −1.0 s); launch night's overlap (Gerg 0.25 s over Rima); the war room's (AUHSOJ 0.3 s under Tasya, the count 0.56 s under AUHSOJ). S7.13 is 264 frames. No overlaps or overruns were flagged.
 
@@ -476,7 +476,7 @@ cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/e
 - **The files:**
   - the timelines and manifest: `show/reel/ep01-v34-el/ep01-v34-el-<seg>.json`, `ep01-v34-el.manifest.json` (key `ep01-v34-el-stick`);
   - the beds: `audio/reel/ep01-v34-el/`, all sounds resolved; the card is the lock's own.
-- **The manifest's intro plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `--plan` validates: 30,239 frames (21:00.0 with the slate, intro, card and outro), all 231 takes, 7 beds, no warnings.
+- **The manifest's intro plays `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB** (§Y). `--plan` validates: 30,239 frames (21:00.0 with the slate, intro, card and outro), all 231 takes, 7 beds, no warnings.
 - **J-cuts:** all six leads are kept (5.03 −0.5, 7.01 −0.6, 12.02 −0.5, S3.06 −0.6, S5.11 −0.8, S8.08 −1.0 s).
 - **The Runway frames:** S7.13 stays 264 frames.
 - **What didn't apply:** the tag's Runway reserve. Draft 8.3 cut the duck, so v31-32.01d is gone; 32.01 is the plan's 77 frames and has no line, so it is the lock's unchanged.
@@ -503,7 +503,7 @@ cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/e
 - **The line is recorded with Jeremy** (`EwzF7Z2UMSib9JaKx0Kg`, eleven_multilingual_v2): 9 reads, **104 credits** (241 characters). The subscription went from 14,128 to 14,232 of 131,000.
 - **It is fitted to the intro's frames.** Every word onset is within 0.6 frame of Kokoro's, clip 1 ends in f57, the pause f58–71 is room tone only, and the voice ends at f92.0 (Kokoro f92.8, measured the same way).
 - **It has the intro VO's own treatment and level:** −16.0 LUFS short-term max, as Kokoro's.
-- **It is mixed into the V1 master with only the VO swapped:** `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the untouched Kokoro master.
+- **It is mixed into the V1 master with only the VO swapped:** `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the untouched Kokoro master.
 
 ### Y1. The reads, and the pick
 
@@ -563,8 +563,8 @@ cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/e
 
 ### Y4. The intro master for the EL films
 
-- **The file:** `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the Kokoro master, which is untouched (and so is `mix_build.json`).
-- **The same mix, with only the VO swapped** (`tools/el_intro.py mix`, running `audio/intro-mix/scripts/mix_intro.py`'s own `build('V1')`, imported):
+- **The file:** `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`, beside the Kokoro master, which is untouched (and so is `mix_build.json`).
+- **The same mix, with only the VO swapped** (`tools/el_intro.py mix`, running `audio/intro/mix/scripts/mix_intro.py`'s own `build('V1')`, imported):
   - **First, a reproduction check:** rebuilding V1 from its own inputs gives the delivered master to −138.5 dBFS, so the procedure is exact.
   - **Then the master:** the delivered master plus (the EL VO − the Kokoro VO), each through the mix's VO fader (−4 dB) and its L/R centring, times the delivered build's own gain curve (master gain +1.41 dB and the limiter).
   - The limiter is idle over the line (0.00 dB of reduction over f20–100), so this is the full rebuild at the delivered master gain.
@@ -576,7 +576,7 @@ cd studio && bash ../ops/heavy.sh node src/reel/tools/episode.mjs ../show/reel/e
 ### Y5. Where it lives, for the assembly
 
 - **The pointer:** `audio/ep01/v3-el/intro/intro-el.json` has the paths, md5s, gain and fit.
-  - **The EL film's intro chapter plays `audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB**, exactly where the Kokoro film plays `intro-ep1-mix-V1-chipchamber.wav`.
+  - **The EL film's intro chapter plays `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav` at −3 dB**, exactly where the Kokoro film plays `intro-ep1-mix-V1-chipchamber.wav`.
   - The picture stays `out/season/intro/intro-ep1-V1-1080p-flashfix.mp4`.
 - **`show/reel/ep01-v33-el/ep01-v33-el.manifest.json`** now plays the -el master at −3 dB. `el_lock.py` sets this on every EL manifest it builds.
 - **The assembly's own `assembly/el-v33-assembly.json`** (the assembly pass's file, not edited here) still names the Kokoro master. Its intro entry's `audio` should become the -el path for the next EL film.

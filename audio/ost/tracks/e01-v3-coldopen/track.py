@@ -155,7 +155,7 @@ def main():
     res = V.measure(tl, x, {'rewind': (t_a, last_frame)}, rows, designed,
                     stings=[(t_a, last_frame, 'the rewind (reversed swells: each grain is a designed swell)')])
     res['last_half_second_momentary_max'] = V.momentary_max(x, last_frame - 0.5, last_frame)
-    xi, _ = sf.read(os.path.join(V.REPO, 'audio', 'intro-mix', 'intro-ep1-mix-V1-chipchamber.wav'), always_2d=True)
+    xi, _ = sf.read(os.path.join(V.REPO, 'audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav'), always_2d=True)
     res['intro_first_half_second_momentary_max_at_-3dB'] = round(V.momentary_max(xi.T * V.db(-3.0), 0.0, 0.5), 2)
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e01-v3-coldopen{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),

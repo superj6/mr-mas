@@ -2,7 +2,7 @@ I rebuilt the SFX stem and all four mixes against the fixed picture, then re-mux
 
 **Picture check.** `intro-events.json` did change (exported 10:08). The new silent masters are from 10:09 (1080p) and 10:11 (4K), each 720 frames, 30.000 s, rendered after the last source edit. I rebuilt the SFX against that events file, and it and both masters were still unchanged when I finished.
 
-**SFX changes** (`audio/intro-sfx/build_intro_sfx.py`)
+**SFX changes** (`audio/intro/sfx/build_intro_sfx.py`)
 - **Following the new picture:**
   - collar pops at f190/205;
   - flame ignition at f290 (read from the scene code, since `events.ts` still said f296);
@@ -18,7 +18,7 @@ I rebuilt the SFX stem and all four mixes against the fixed picture, then re-mux
 - **The swell into f540** starts at f532, so the RUMPT flash is silent.
 - **Moved to the muted extras layer:** the four skyline gag sounds (siren, drip, ka-ching, plop) and the three inaudible picture-only layers (live fire twice, live keycaps).
 
-**Mix changes** (`audio/intro-mix/scripts/mix_intro.py`, music now built from the theme stems)
+**Mix changes** (`audio/intro/mix/scripts/mix_intro.py`, music now built from the theme stems)
 - Mas's voice −4 dB and centred.
 - Muted trumpet (bar 10) +6 dB, with piano or strings −3 dB under it.
 - Strings (or chip) −3 dB under the klaxon; the rip +6 dB with strings −3 dB.
@@ -52,7 +52,7 @@ I rebuilt the SFX stem and all four mixes against the fixed picture, then re-mux
 - V3's last roll-call stab rings 3.6 LU louder than the f540 downbeat; the reviews didn't flag it, so I left it.
 - The shout and Mas's line are still synthetic voices; the sound review recommends recording people.
 
-The READMEs in `audio/intro-mix/`, `audio/intro-vox/` and `audio/theme/VARIATIONS.md`, plus the generated `audio/intro-sfx/spotting.md`, are updated to match.
+The READMEs in `audio/intro/mix/`, `audio/intro/vox/` and `audio/theme/VARIATIONS.md`, plus the generated `audio/intro/sfx/spotting.md`, are updated to match.
 
 Files are in `/home/jgon/project/art/mrmas/`:
 - `out/season/intro/intro-ep1-V1-1080p.mp4`
@@ -60,13 +60,13 @@ Files are in `/home/jgon/project/art/mrmas/`:
 - `out/season/intro/intro-ep1-V2-1080p.mp4`
 - `out/season/intro/intro-ep1-V3-1080p.mp4`
 - `out/season/intro/intro-ep1-V4-1080p.mp4`
-- `audio/intro-mix/intro-ep1-mix-V{1..4}-*.wav` / `.m4a`
-- `audio/intro-mix/stems/V1/`
-- `audio/intro-mix/qa/deliverables_qa.json`
-- `audio/intro-mix/qa/mix_build.json`
-- `audio/intro-sfx/intro-sfx_stem.wav`
-- `audio/intro-sfx/intro-blip_stem.wav`
-- `audio/intro-sfx/intro-sfx_extras.wav`
-- `audio/intro-sfx/spotting.json`
-- `audio/intro-sfx/spotting.md`
-- `audio/intro-sfx/picture-sync.json`
+- `audio/intro/mix/intro-ep1-mix-V{1..4}-*.wav` / `.m4a`
+- `audio/intro/mix/stems/V1/`
+- `audio/intro/mix/qa/deliverables_qa.json`
+- `audio/intro/mix/qa/mix_build.json`
+- `audio/intro/sfx/intro-sfx_stem.wav`
+- `audio/intro/sfx/intro-blip_stem.wav`
+- `audio/intro/sfx/intro-sfx_extras.wav`
+- `audio/intro/sfx/spotting.json`
+- `audio/intro/sfx/spotting.md`
+- `audio/intro/sfx/picture-sync.json`

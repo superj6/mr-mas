@@ -4,7 +4,7 @@ Sound editor's build. Source of truth: show/intro/SCRIPT.md v2.1 (AUDIO column, 
 Library: audio/sfx/manifest.json (hybrid/chip/band). Anything the library lacks, or that the script asks to be
 retuned, gated or high/low-passed, is rendered here into src/ and the spotting list points at that file.
 
-Outputs (all in audio/intro-sfx/):
+Outputs (all in audio/intro/sfx/):
   intro-sfx_stem.wav        THE SFX STEM (sfx-main bus): script-exact spot, 48 kHz / 24-bit / stereo / 1,440,000 samples
   intro-sfx_extras.wav      opt-in layer: production-list items the script v2.1 CUTS, plus editor suggestions (muted by default)
   intro-blip_stem.wav       BLIP bus (card blips + Orb toast chime), separate from sfx-main per SCRIPT 9.6
@@ -15,7 +15,7 @@ Outputs (all in audio/intro-sfx/):
 
 Picture sync: frames come from the script's contract (SCRIPT 9.4: "Its frame numbers are the contract"). If
 out/season/intro/picture/intro-events.json exists, matching keys override the script frames and every delta is logged in
-picture-sync.json. Re-run:  audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py
+picture-sync.json. Re-run:  audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py
 """
 from __future__ import annotations
 import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
@@ -1436,9 +1436,9 @@ def main():
                 "SCRIPT v2.1 contract frame; alt/ has the script-frame stem",
         fps=FPS, frames=TOTAL_F, bpm=96, framesPerBeat=15, sampleRate=SR, samplesPerFrame=SPF,
         durationSec=30.0, pathsRelativeTo="audio/", busTrimDb=TRIM,
-        stems={"main": "intro-sfx/intro-sfx_stem.wav", "extras": "intro-sfx/intro-sfx_extras.wav",
-               "blip": "intro-sfx/intro-blip_stem.wav",
-               "main_scriptFrames": "intro-sfx/alt/intro-sfx_stem_script-v2.1-frames.wav"},
+        stems={"main": "intro/sfx/intro-sfx_stem.wav", "extras": "intro/sfx/intro-sfx_extras.wav",
+               "blip": "intro/sfx/intro-blip_stem.wav",
+               "main_scriptFrames": "intro/sfx/alt/intro-sfx_stem_script-v2.1-frames.wav"},
         conventions=dict(frame="sync frame (global intro frame)", time="frame / 24 (s)",
                          gain="dB applied to the file (after its baked processing)", pan="-1 L .. +1 R, constant power",
                          anchor="start: file start on the frame; end: file end on the frame; hit: file's hitOffsetSec on the frame",

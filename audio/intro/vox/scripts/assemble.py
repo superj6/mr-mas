@@ -96,7 +96,7 @@ def music_ref():
     except Exception:
         st = {}
     if len(st) < 8:
-        y, _ = sf.read(f'{AUDIO}/mix/music/theme-V1-chipchamber-rollcall.wav')
+        y, _ = sf.read(f'{AUDIO}/intro/history/sketch-mix/music/theme-V1-chipchamber-rollcall.wav')
         st = {'all': np.pad(y.T, ((0, 0), (0, max(0, N30 - y.shape[0]))))[:, :N30]}
         src = 'mix/music/theme-V1-chipchamber-rollcall.wav'
     return st, src

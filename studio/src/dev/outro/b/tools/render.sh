@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # MR. MAS · outro B, Ep1's final outro (v3): the whole pipeline, from code to the files in out/ep01/outro/.
 #   bash studio/src/dev/outro/b/tools/render.sh <scratch folder>
-# Writes only to <scratch> and out/ep01/outro/. Reads audio/ost/engine and audio/intro-sfx/src read-only. The heavy
+# Writes only to <scratch> and out/ep01/outro/. Reads audio/ost/engine and audio/intro/sfx/src read-only. The heavy
 # steps (the Remotion render, the OST engine build) each go through ops/heavy.sh (Remotion --concurrency=4,
 # OST_WORKERS=2), so start this in the background and poll it: a heavy step can wait for a slot. Don't run this script
 # itself under ops/heavy.sh (the steps inside would wait on a second slot). About 3-6 min once it has its slots.

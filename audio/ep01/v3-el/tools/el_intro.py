@@ -2,15 +2,15 @@
 """el_intro.py - Mas's intro line in his EL voice (Jeremy) for the EL films (track A4, v3-voices-el; PLAN.md §7 D).
 
 The 30 s intro's only line, "near the singularity; unclear which side.", is the Kokoro am_michael take
-(audio/intro-vox/intro-vox_vo.wav). The EL films replace it with the EL Mas, fitted to the same frames so the picture's
-typing and dot still land (audio/intro-vox/vo_word_timings.json), treated with the same close-mic chain and room
-(audio/intro-vox/scripts/build_vo.py, whose helpers are imported read-only), and mixed into the V1 "chip chamber"
-master by the intro mix's own build() (audio/intro-mix/scripts/mix_intro.py, imported) with only the VO swapped.
+(audio/intro/vox/intro-vox_vo.wav). The EL films replace it with the EL Mas, fitted to the same frames so the picture's
+typing and dot still land (audio/intro/vox/vo_word_timings.json), treated with the same close-mic chain and room
+(audio/intro/vox/scripts/build_vo.py, whose helpers are imported read-only), and mixed into the V1 "chip chamber"
+master by the intro mix's own build() (audio/intro/mix/scripts/mix_intro.py, imported) with only the VO swapped.
 
   render    (.venv-casting)  the reads: whole-line reads and phrase-2 reads with Jeremy, eleven_multilingual_v2
   build     (.venv-vocals)   fit a read to the Kokoro word onsets (Rubber Band, one variable-rate pass per clip),
                              the intro-vox chain, the 30.000 s stem at -16.0 LUFS short-term max
-  mix       (.venv-mix)      the V1 master with the EL VO: audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav
+  mix       (.venv-mix)      the V1 master with the EL VO: audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav
 
 Outputs: audio/ep01/v3-el/intro/ (takes, the stem intro-vox_vo-el.wav, word timings, QA) and the -el master beside the
 original. The Kokoro stem and master are never written. The key stays inside ellib; no voice is cloned.
@@ -285,7 +285,7 @@ def level_side(clip, t_unc, t_side, t_end):
 def cmd_build(a):
     import numpy as np
     import soundfile as sf
-    sys.path.insert(0, os.path.join(REPO, "audio/intro-vox/scripts"))
+    sys.path.insert(0, os.path.join(REPO, "audio/intro/vox/scripts"))
     import ivlib as V                                          # the intro-vox helpers (read-only)
     import pedalboard as pb
     y1, A1, _ = load_read(a.p1)
@@ -341,13 +341,13 @@ def cmd_build(a):
     wav = os.path.join(OUT, "intro-vox_vo-el.wav")
     sf.write(wav, stem.T.astype(np.float32), SR, subtype="PCM_24")
     # measurements, the Kokoro stem beside it
-    kok, _ = sf.read(os.path.join(REPO, "audio/intro-vox/intro-vox_vo.wav"), always_2d=True)
+    kok, _ = sf.read(os.path.join(REPO, "audio/intro/vox/intro-vox_vo.wav"), always_2d=True)
     st_el, st_k = V.stats(stem, "el"), V.stats(kok.T, "kokoro")
     line_el = V.lufs_window(stem, V.fs(24), V.fs(92))
     line_k = V.lufs_window(kok.T, V.fs(24), V.fs(92))
     pause = stem[:, int(V.fs(58) * SR): int(V.fs(72) * SR)]
     pause_v = float(20 * np.log10(np.sqrt(np.mean((pause - tone[:, int(V.fs(58) * SR): int(V.fs(72) * SR)]) ** 2)) + 1e-12))
-    kt = json.load(open(os.path.join(REPO, "audio/intro-vox/vo_word_timings.json")))
+    kt = json.load(open(os.path.join(REPO, "audio/intro/vox/vo_word_timings.json")))
     kon = {w["word"]: w["in_f"] for w in kt["words"]}
     names = dict(near="near", the="the", singularity="singularity", unclear="unclear", which="which", side="side")
     onsets = {w: dict(el=round(words[k], 2), kokoro=kon[w], diff_frames=round(words[k] - kon[w], 2)) for k, w in names.items()}
@@ -385,10 +385,10 @@ def cmd_mix(a):
     delivered V1 master from its own inputs, then the build with the EL stem. Writes the -el master beside the
     original, its D/M/E stems and QA in audio/ep01/v3-el/intro/ (the Kokoro master and mix_build.json untouched)."""
     import numpy as np
-    sys.path.insert(0, os.path.join(REPO, "audio/intro-mix/scripts"))
+    sys.path.insert(0, os.path.join(REPO, "audio/intro/mix/scripts"))
     import mix_intro as M
     b = M.bus_inputs()
-    orig = M.read(os.path.join(REPO, "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav"))
+    orig = M.read(os.path.join(REPO, "audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav"))
     out0, _, info0, _ = M.build("V1", b)
     resid = M.sample_peak_db(out0 - orig)
     print(f"reproduction of the delivered V1 master from its inputs: residual {resid:.1f} dBFS, master gain {info0['master_gain_db']}")
@@ -403,7 +403,7 @@ def cmd_mix(a):
     dvo = (vo_el * tr1 - b["vo"] * tr0) * M.db(M.VO_DB) * gc0
     out = orig + dvo
     lim_line = float(np.min(gc0[:, int(M.SR * 20 / 24): int(M.SR * 100 / 24)]) / M.db(info0["master_gain_db"]))
-    dst = os.path.join(REPO, "audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav")
+    dst = os.path.join(REPO, "audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav")
     M.write(dst, out)
     stems = dict(stems0, dialogue=stems0["dialogue"] + dvo)
     for k, x in stems.items():
@@ -414,7 +414,7 @@ def cmd_mix(a):
     diff = out - orig
     n24, n96 = int(M.SR * 23 / 24), int(M.SR * 96 / 24)
     outside = M.sample_peak_db(np.concatenate([diff[:, :n24], diff[:, n96:]], axis=1))
-    qa = dict(built_by="audio/ep01/v3-el/tools/el_intro.py mix (audio/intro-mix/scripts/mix_intro.py build('V1'), imported; "
+    qa = dict(built_by="audio/ep01/v3-el/tools/el_intro.py mix (audio/intro/mix/scripts/mix_intro.py build('V1'), imported; "
                        "only the vo input swapped)",
               reproduction_residual_dbfs=round(resid, 1), master=os.path.relpath(dst, REPO),
               vo=os.path.relpath(os.path.join(OUT, "intro-vox_vo-el.wav"), REPO),

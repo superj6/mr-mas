@@ -1,6 +1,6 @@
 """intro-vox shared helpers (dialogue / vocal editor pass for the 30.000 s Ep1 intro).
 
-Builds on the vocal pass's DSP library (audio/vocals/scripts/vlib.py, read-only here): Kokoro-82M
+Builds on the vocal pass's DSP library (audio/intro/vocals/scripts/vlib.py, read-only here): Kokoro-82M
 stock voices, WORLD vocoder, pedalboard. Everything is synthetic; no recording of any real person.
 Intro clock: 24 fps, f0 = 0.000 s, 720 frames = 30.000 s, 48 kHz.
 """
@@ -22,23 +22,23 @@ def _repo():
 
 REPO = os.environ.get('MRMAS_ROOT') or _repo()
 import os, sys, json, subprocess
-VOC_SCRIPTS = os.path.join(REPO, 'audio/vocals/scripts')
+VOC_SCRIPTS = os.path.join(REPO, 'audio/intro/vocals/scripts')
 sys.path.insert(0, VOC_SCRIPTS)
 import numpy as np
 import soundfile as sf
 import vlib
 from vlib import *            # SR, FPS, fade, place, pan, convolve, ir, board, board_mono, stretch, ...
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))          # audio/intro-vox
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))          # audio/intro/vox
 BUILD = os.path.join(ROOT, '_build')
 
 # ------------------------------------------------------------------ Kokoro render cache
-# Our own cache in intro-vox/_work/tts_cache (never write into audio/vocals). Each render we need is copied
+# Our own cache in intro-vox/_work/tts_cache (never write into audio/intro/vocals). Each render we need is copied
 # on first use from the vocal pass's cache (same keys, so the takes are bit-identical); a miss renders
 # with Kokoro and lands in our cache.
 WORK_DIR = os.path.join(ROOT, '_work')
 SEED_CACHES = [os.path.join(p, 'tts_cache') for p in
-               (os.path.join(REPO, 'audio/vocals/_work'), os.environ.get('IV_SEED_WORK', '/nonexistent'))]
+               (os.path.join(REPO, 'audio/intro/vocals/_work'), os.environ.get('IV_SEED_WORK', '/nonexistent'))]
 vlib.WORK = WORK_DIR
 import hashlib, shutil
 _orig_tts, _orig_tts_words = vlib.tts, vlib.tts_words

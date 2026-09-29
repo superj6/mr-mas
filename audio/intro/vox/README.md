@@ -1,13 +1,13 @@
 # MR. MAS: intro VO and vocal stems (key: `intro-vox`)
 
 The dialogue and vocal stems for the final 30.000 s Ep1 opening, cut to **SCRIPT v2.1** (`show/intro/SCRIPT.md`,
-§3.2, §3.5b, §3.9–3.10, §4 D1–D3, D5, D11, §9.6). Where this folder and `audio/vocals/` disagree, this folder
-follows v2.1 and supersedes `audio/vocals/` **for the intro**. The vocal pass remains the source library.
+§3.2, §3.5b, §3.9–3.10, §4 D1–D3, D5, D11, §9.6). Where this folder and `audio/intro/vocals/` disagree, this folder
+follows v2.1 and supersedes `audio/intro/vocals/` **for the intro**. The vocal pass remains the source library.
 
 - **Every file is 30.000 s: 1,440,000 samples at 48 kHz, stereo, 24-bit PCM WAV.** Drop each one at **f0**. A 256 kbps MP3 sits next to each WAV for listening.
 - **Clock:** 24 fps, f0 = 0.000 s, 96 BPM, 15 frames per beat. Frame numbers below are intro frames. `f303.75` means three quarters of the way through frame 303.
 - **Default decisions (the showrunner may change them):** Mas's voice is the `am_michael` take, trimmed to end by f91. One vocal set serves V1–V4, because §3.1 says the VO, chant and PAD are the same in every variation. V1 "Chip Chamber Jazz" was the music used for level checks.
-- **All voices are synthetic Kokoro-82M stock voices (Apache-2.0).** Nothing is cloned, and no real person's audio went in as reference, input or target. Nobody does an accent for a joke ([guardrails X10, §5](../../show/bible/guardrails.md)). Mas is the only voiced character. RUMPT is never voiced, and the intro has no political voice.
+- **All voices are synthetic Kokoro-82M stock voices (Apache-2.0).** Nothing is cloned, and no real person's audio went in as reference, input or target. Nobody does an accent for a joke ([guardrails X10, §5](../../../show/bible/guardrails.md)). Mas is the only voiced character. RUMPT is never voiced, and the intro has no political voice.
 
 ## Deliverables
 
@@ -77,7 +77,7 @@ set to its mix level (below), so start the faders at 0 dB.
   - The shout is tuned loosely into the D♭maj9(♯11) hit: men on A♭3, women on D♭4, with ±35 cents of scatter. The per-voice median pitches land mostly on A♭, D♭, G and C.
   - I did not tune it to F. F's 5th harmonic is A natural, and it read out strongest over the chord.
   - WORLD keeps 45 % of each spoken contour, so it is still a shout and not a sung note.
-- **Changes from `audio/vocals/chant/` (the v2.0 cue, "THE" at f292):**
+- **Changes from `audio/intro/vocals/chant/` (the v2.0 cue, "THE" at f292):**
   - "THE" moves to f295 (v2.1).
   - G and I move onto the exact straight-16th grid.
   - Two effects are dropped: the reversed-whisper pre-swell from f280 and the sub-octave "ghost" whisper. They are horror-trailer tropes, and the harmonium swell owns f285–299.
@@ -103,7 +103,7 @@ set to its mix level (below), so start the faders at 0 dB.
   - Each part is double-tracked at −6 dB, ±4 cents, for blend.
   - A narrow −3 dB dip at 880 Hz trims F3's 5th harmonic (A5), which sits right on the "oo" second formant.
   - Plate reverb at 20 %. No chip layer: the score's F6 pulse carries the chip there.
-- **Why it is rebuilt.** None of the six candidates in `audio/vocals/harmony/` has this voicing ("aah" F9sus stacks, an open fifth, an F sus/add9 "ooh" and chip hybrids). All six are also 4.0 s files that release at +1.6–1.9 s, not at f686.
+- **Why it is rebuilt.** None of the six candidates in `audio/intro/vocals/harmony/` has this voicing ("aah" F9sus stacks, an open fifth, an F sus/add9 "ooh" and chip hybrids). All six are also 4.0 s files that release at +1.6–1.9 s, not at f686.
 - **Level.** −19.5 LUFS-I over f632–686, about 7 LU under the V1 tutti and about 4.5 dB under the whole string section. That should put it about 1–2 dB over the violas it doubles. If the violas are *not* thinned over f630–704 (the script's other option), bring the PAD up about 1 dB.
 
 ## Loudness plan and mix notes
@@ -128,16 +128,16 @@ set to its mix level (below), so start the faders at 0 dB.
 
   The preview measures −15.2 LUFS-I with no SFX.
 - **Headroom.** True peaks are −2.8 dBTP (VO), −6.3 (chant) and −10.5 (PAD). Nothing in these stems is limited.
-- **What the final mix does with them (2026-09-25 review pass, `audio/intro-mix/scripts/mix_intro.py`).** The stems here are unchanged. The mix takes the VO **−4 dB** and balance-centres it: it read as the loudest thing in the programme after the title, and 0.7 dB heavy on the right. It still sits 10–16 LU over the ducked music, depending on the variation. The mix places the shout **2 LU under** the music over f300–316 (this page's target is 1 LU), so the f420 hit reads as the biggest, and it dips the music −2 dB under the "A-!" so "A" is no longer the weakest letter. Don't re-level these stems to compensate.
+- **What the final mix does with them (2026-09-25 review pass, `audio/intro/mix/scripts/mix_intro.py`).** The stems here are unchanged. The mix takes the VO **−4 dB** and balance-centres it: it read as the loudest thing in the programme after the title, and 0.7 dB heavy on the right. It still sits 10–16 LU over the ducked music, depending on the variation. The mix places the shout **2 LU under** the music over f300–316 (this page's target is 1 LU), so the f420 hit reads as the biggest, and it dips the music −2 dB under the "A-!" so "A" is no longer the weakest letter. Don't re-level these stems to compensate.
 - **Timing.** Every listed onset is placed sample-exact on the intro clock. "A-G-I!" is locked straight: it is not humanised and not swung.
 
 ## Files that still disagree with v2.1 (not edited here; flagged for their owners)
 
 - `studio/notes/mdinner1.md` puts the whispered "THE" at f292. v2.1 has it at **f295**.
-- `audio/vocals/README.md` and `audio/vocals/chant/*_from-f280` also have THE at f292 and G/I a frame off. They add a reverse pre-swell and a ghost whisper.
-- `audio/vocals/vo/*` and `vo/placed/*`: every take runs to f94–95. The `am_michael` take here supersedes them for the intro.
-- `audio/vocals/intro-layer/*` is the v2.0 layout. Layer B's card stabs are not scripted.
-- `audio/mix/timeline.json` and `intro-sketch-V*.wav` (the earlier sketches) use the v2.0 VO, the v2.0 chant and a 4 s HYBRID/orchestral pad.
+- `audio/intro/vocals/README.md` and `audio/intro/vocals/chant/*_from-f280` also have THE at f292 and G/I a frame off. They add a reverse pre-swell and a ghost whisper.
+- `audio/intro/vocals/vo/*` and `vo/placed/*`: every take runs to f94–95. The `am_michael` take here supersedes them for the intro.
+- `audio/intro/vocals/intro-layer/*` is the v2.0 layout. Layer B's card stabs are not scripted.
+- `audio/intro/history/sketch-mix/timeline.json` and `intro-sketch-V*.wav` (the earlier sketches) use the v2.0 VO, the v2.0 chant and a 4 s HYBRID/orchestral pad.
 - `studio/notes/mfinale.md` has an "ooh F/C closing" over f690–719. In v2.1 the PAD releases over f686–704 and nothing is sung after it.
 
 ## Known weaknesses
@@ -150,7 +150,7 @@ set to its mix level (below), so start the faders at 0 dB.
 ## Re-render
 
 ```bash
-cd /home/jgon/project/art/mrmas/audio/intro-vox/scripts
+cd /home/jgon/project/art/mrmas/audio/intro/vox/scripts
 PY=../../.venv-vocals/bin/python
 $PY build_vo.py      # VO: fit, chain, level        -> _build/vo_stem.wav, _build/vo_meta.json
 $PY build_chant.py   # whisper + shout layers        -> _build/chant_*_raw.wav
@@ -159,7 +159,7 @@ $PY assemble.py      # levels, 30 s stems, QA, word timings, check preview
 $PY qa_harmony.py ../stems/intro-vox_pad.wav 634 686   # pitch-class check
 ```
 
-- **Scripts.** `ivlib.py` holds the shared helpers: the 30 s timeline, sliding BS.1770 momentary and short-term loudness, the de-esser, room tone and the render cache. The four build scripts import the vocal pass's code from `audio/vocals/scripts/` (`vlib`, `coldopen`, `chant`, `sing`, `harmony`) **read-only** and never write into `audio/vocals/`.
+- **Scripts.** `ivlib.py` holds the shared helpers: the 30 s timeline, sliding BS.1770 momentary and short-term loudness, the de-esser, room tone and the render cache. The four build scripts import the vocal pass's code from `audio/intro/vocals/scripts/` (`vlib`, `coldopen`, `chant`, `sing`, `harmony`) **read-only** and never write into `audio/intro/vocals/`.
 - **Cache.** `_work/tts_cache/` (11 MB) holds the 44 Kokoro renders these stems use. They are copied on first use from the vocal pass's cache, so the takes match the vocal pass bit for bit. A cache miss renders with Kokoro (model in `~/.cache/huggingface`). With the cache in place, a re-run reproduces the VO bit for bit and the vocals to within 1e-4 (−80 dBFS).
 - **Intermediates.** `_build/` holds only the metadata JSON between runs. Its WAV intermediates are deleted after assembly.
 - **Tools and licences:** Kokoro-82M and its stock voicepacks (Apache-2.0), `pyworld` (WORLD, modified BSD), `pedalboard` / Rubber Band (GPL-3.0 tools; the output is unencumbered), numpy/scipy/pyloudnorm/soxr/librosa (BSD/MIT/ISC), and ffmpeg + libmp3lame from the Remotion bundle (LGPL).

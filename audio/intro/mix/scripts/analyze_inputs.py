@@ -9,13 +9,13 @@ V = {'V1': 'theme-V1-chipchamber', 'V2': 'theme-V2-orchestralnoir', 'V3': 'theme
 STEMS = {v: sorted(f[3:-4] for f in os.listdir(os.path.join(AUDIO, 'theme/stems')) if f.startswith(v + '-'))
          for v in V}
 
-sfx = read(os.path.join(AUDIO, 'intro-sfx/intro-sfx_stem.wav'))
-blip = read(os.path.join(AUDIO, 'intro-sfx/intro-blip_stem.wav'))
-vo = read(os.path.join(AUDIO, 'intro-vox/intro-vox_vo.wav'))
-voc = read(os.path.join(AUDIO, 'intro-vox/intro-vox_vocals.wav'))
-wh = read(os.path.join(AUDIO, 'intro-vox/stems/intro-vox_chant-whisper.wav'))
-sh = read(os.path.join(AUDIO, 'intro-vox/stems/intro-vox_chant-shout.wav'))
-pad = read(os.path.join(AUDIO, 'intro-vox/stems/intro-vox_pad.wav'))
+sfx = read(os.path.join(AUDIO, 'intro/sfx/intro-sfx_stem.wav'))
+blip = read(os.path.join(AUDIO, 'intro/sfx/intro-blip_stem.wav'))
+vo = read(os.path.join(AUDIO, 'intro/vox/intro-vox_vo.wav'))
+voc = read(os.path.join(AUDIO, 'intro/vox/intro-vox_vocals.wav'))
+wh = read(os.path.join(AUDIO, 'intro/vox/stems/intro-vox_chant-whisper.wav'))
+sh = read(os.path.join(AUDIO, 'intro/vox/stems/intro-vox_chant-shout.wav'))
+pad = read(os.path.join(AUDIO, 'intro/vox/stems/intro-vox_pad.wav'))
 print('vocals == chant+pad residual dB', sample_peak_db(voc - wh - sh - pad))
 
 W = dict(pre_vo=(0, 23), vo=(24, 91), vo1=(24, 57), pause=(58, 71), vo2=(72, 91), whisper=(285, 299),

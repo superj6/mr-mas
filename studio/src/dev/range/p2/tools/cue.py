@@ -98,8 +98,8 @@ def pan(x):
 
 def room():
     out = np.zeros((2, LEN), dtype=np.float32)
-    hum = read(os.path.join(AUDIO, 'intro-sfx/src/server_hum_tuned.wav'))
-    tick = read(os.path.join(AUDIO, 'intro-sfx/src/x_cut_tick.wav'))
+    hum = read(os.path.join(AUDIO, 'intro/sfx/src/server_hum_tuned.wav'))
+    tick = read(os.path.join(AUDIO, 'intro/sfx/src/x_cut_tick.wav'))
     idx = np.arange(LEN)
     on = (idx < at(60)) | (idx >= at(315))
     ramp = np.ones(LEN, dtype=np.float32)

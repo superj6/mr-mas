@@ -1,4 +1,4 @@
-"""Shared helpers for the MR. MAS Ep1 intro re-recording mix (audio/intro-mix).
+"""Shared helpers for the MR. MAS Ep1 intro re-recording mix (audio/intro/mix).
 
 Clock: 24 fps, 48 kHz, 2000 samples per frame, 720 frames = 1,440,000 samples = 30.000 s.
 Loudness: ITU-R BS.1770-4 via pyloudnorm (integrated, gated); momentary/short-term are
@@ -37,7 +37,7 @@ N = FRAMES * SPF           # 1,440,000
 
 ROOT = REPO
 AUDIO = os.path.join(ROOT, 'audio')
-OUT_DIR = os.path.join(AUDIO, 'intro-mix')
+OUT_DIR = os.path.join(AUDIO, 'intro/mix')
 
 _METER = pyln.Meter(SR)    # BS.1770-4, 400 ms blocks, 75 % overlap
 

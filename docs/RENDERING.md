@@ -15,7 +15,7 @@ How to re-create every file that git does not store. Videos, `node_modules/`, th
 
 ## Quick start: re-render the intro in one go
 
-This goes from a fresh clone to `out/season/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro-mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.
+This goes from a fresh clone to `out/season/intro/intro-ep1-V1-1080p.mp4` … `-V4-1080p.mp4`, the four 30.000 s intros (picture plus final mix). The mixes are committed as `audio/intro/mix/intro-ep1-mix-V*.m4a`, so only the picture has to be rendered. It takes about 3 minutes plus the downloads, which end up as about 370 MB of `node_modules` and 220 MB of Chrome Headless Shell.
 
 ```bash
 # 0. Clone anywhere and work from the repo root (the scripts find it through the .mrmas-root marker, §1.1).
@@ -33,7 +33,7 @@ FFD=studio/node_modules/@remotion/compositor-linux-x64-gnu
 for VN in V1:chipchamber V2:orchestralnoir V3:pixelswing V4:pianopixels; do
   V=${VN%%:*} N=${VN#*:}
   LD_LIBRARY_PATH=$FFD $FFD/ffmpeg -hide_banner -loglevel error -y \
-    -i out/season/intro/picture/intro-ep1-1080p-silent.mp4 -i audio/intro-mix/intro-ep1-mix-$V-$N.m4a \
+    -i out/season/intro/picture/intro-ep1-1080p-silent.mp4 -i audio/intro/mix/intro-ep1-mix-$V-$N.m4a \
     -map 0:v:0 -map 1:a:0 -c copy \
     -metadata title="MR. MAS Ep1 intro ($V $N)" -metadata:s:a:0 language=eng \
     -movflags +faststart out/season/intro/intro-ep1-$V-1080p.mp4
@@ -44,8 +44,8 @@ LD_LIBRARY_PATH=$FFD $FFD/ffprobe -v error -show_entries stream=codec_name,width
   -of compact out/season/intro/intro-ep1-V1-1080p.mp4
 ```
 
-- **V1 "Chip Chamber Jazz" is the primary mix.** V2–V4 are the alternates ([audio/intro-mix/README.md](../audio/intro-mix/README.md)).
-- **`audio/intro-mix/scripts/run_all.sh`** now works on a 1080p-only machine. The 4K mux and its QA run only if a legacy 4K master exists. Step 3 above is the fast path when only the picture changed.
+- **V1 "Chip Chamber Jazz" is the primary mix.** V2–V4 are the alternates ([audio/intro/mix/README.md](../audio/intro/mix/README.md)).
+- **`audio/intro/mix/scripts/run_all.sh`** now works on a 1080p-only machine. The 4K mux and its QA run only if a legacy 4K master exists. Step 3 above is the fast path when only the picture changed.
 - **Rebuilding the sound too:** to re-create the score, SFX, voices and mix from source rather than use the committed masters, follow [§3.1](#31-the-final-intro) steps 4–8 in order, then step 3 above.
 - **Is it the same intro?** For this commit, yes. `intro-events.json` re-exported from the current code is byte-identical to the committed one (md5 `f37ea409…`, the file the SFX and mix were built against), and no source the intro imports has changed since the masters were rendered.
 
@@ -57,7 +57,7 @@ LD_LIBRARY_PATH=$FFD $FFD/ffprobe -v error -show_entries stream=codec_name,width
 
 Since the 2026-09-29 reorg (phase 1, `docs/ORGANIZATION-PLAN.md` §4), no script hard-codes the repo's location. Each one finds the project root at run time: it walks up from its own folder, then from the working directory, to the empty marker file `.mrmas-root` at the repo root. Set `MRMAS_ROOT=<dir>` to override it, for example for a script copied or bundled outside the repo. The Blender path defaults to `~/Downloads/blender-4.5.3-linux-x64/blender`; set `BLENDER` to override it.
 
-Two scripts also default their scratch folder to a session path under `/tmp/claude-1000/…`, and both create it if it's missing. `master.sh` takes a scratch folder as its second argument. `audio/intro-mix/scripts/verify.py` reads `MIX_TMP`.
+Two scripts also default their scratch folder to a session path under `/tmp/claude-1000/…`, and both create it if it's missing. `master.sh` takes a scratch folder as its second argument. `audio/intro/mix/scripts/verify.py` reads `MIX_TMP`.
 
 Unless a `cd` is shown, commands below run from the repo root. Remotion commands run from `studio/`, so their output paths start with `../out/`.
 
@@ -174,7 +174,7 @@ The script is safe to re-run: files already on disk with the right hash are skip
 
   | Recipe | Libraries |
   |---|---|
-  | Score (`audio/theme`) and the old sketch mix (`audio/mix`) | `theme-pack` + `generaluser-gs` |
+  | Score (`audio/theme`) and the old sketch mix (`audio/intro/history/sketch-mix`) | `theme-pack` + `generaluser-gs` |
   | Reel beds (`audio/reel`) | `theme-pack/UprightPianoKW…` |
   | SFX board (`audio/sfx`) | `vsco2ce-sfx` + `generaluser-gs` |
   | intro-sfx, intro-vox, intro-mix, vocals, voices, the animatic temp track | none (they read the committed WAVs) |
@@ -195,7 +195,7 @@ The script is safe to re-run: files already on disk with the right hash are skip
 | `out/season/intro/intro-ep1-V{1,2,3,4}-1080p.mp4` | [Quick start](#quick-start-re-render-the-intro-in-one-go) / §3.1 | the silent master + committed `.m4a` mixes | seconds | ready |
 | `out/season/intro/picture/intro-ep1-1080p-silent.mp4` | §3.1 step 2 | studio | ~1.5 min | ready |
 | `out/season/intro/intro-ep1-V1-4k.mp4`, `out/season/intro/picture/intro-ep1-4k-silent.mp4` | not re-made (1080p policy) | — | — | retired |
-| `out/season/intro/animatic/intro-animatic-silent.mp4`, `intro-animatic.mp4` | §3.2 | studio; committed `audio/animatic/temp-track.wav` | *est.* 1–3 min | ready |
+| `out/season/intro/animatic/intro-animatic-silent.mp4`, `intro-animatic.mp4` | §3.2 | studio; committed `audio/intro/animatic/temp-track.wav` | *est.* 1–3 min | ready |
 | `out/season/intro/moments/{mcoldopen,meras,mdinner1,mdinner2,mfinale,mfinale-bars9-12,mrollcall}.mp4` + 6 `*-with-scratch-audio.mp4` | §3.3 | studio; committed scratch WAVs | *est.* 1–3 min each | ready |
 | `out/lookdev/pixel/cast/*.mp4`, `out/lookdev/pixel/engine/*.mp4` | §3.4 | studio | *est.* < 1 min each | ready |
 | `out/lookdev/structures/{pixeladv,puppet,satire,screen,shape}/scene.mp4` | §3.5 | studio | 40 s – 2.5 min each | ready |
@@ -215,7 +215,7 @@ Every audio master, stem and MIDI file is **committed**, so you never have to re
 
 ### 3.1 The final intro
 
-The intro has 30.000 s of picture (720 frames at 24 fps, 96 BPM) and four sound variations. Picture: `studio/src/intro/` (the edit, EDL `edl.ts`) mounts the six pixel moments of `studio/src/dev/m*/`. Sound: the score (`audio/theme`), SFX (`audio/intro-sfx`) and voices (`audio/intro-vox`) meet in the mix (`audio/intro-mix`). The audio is cued from `out/season/intro/picture/intro-events.json`, which is exported from the picture code. Reports: [out/season/intro/reports/](../out/season/intro/reports/); the audio READMEs are linked per step.
+The intro has 30.000 s of picture (720 frames at 24 fps, 96 BPM) and four sound variations. Picture: `studio/src/intro/` (the edit, EDL `edl.ts`) mounts the six pixel moments of `studio/src/dev/m*/`. Sound: the score (`audio/theme`), SFX (`audio/intro/sfx`) and voices (`audio/intro/vox`) meet in the mix (`audio/intro/mix`). The audio is cued from `out/season/intro/picture/intro-events.json`, which is exported from the picture code. Reports: [out/season/intro/reports/](../out/season/intro/reports/); the audio READMEs are linked per step.
 
 Run the steps in this order. Steps marked *(only after a change)* can be skipped on a clean rebuild, because their outputs are committed.
 
@@ -259,27 +259,27 @@ cd audio/theme
 ```
 The VO duck is baked into the stems, and the mix does not duck again.
 
-**5. Intro voices** *(only after a VO/chant change)*: needs `.venv-vocals` and the Kokoro model. See [audio/intro-vox/README.md](../audio/intro-vox/README.md).
+**5. Intro voices** *(only after a VO/chant change)*: needs `.venv-vocals` and the Kokoro model. See [audio/intro/vox/README.md](../audio/intro/vox/README.md).
 ```bash
-cd audio/intro-vox/scripts
+cd audio/intro/vox/scripts
 PY=../../.venv-vocals/bin/python
 $PY build_vo.py && $PY build_chant.py && $PY build_pad.py && $PY assemble.py
 $PY qa_harmony.py ../stems/intro-vox_pad.wav 634 686            # pitch-class check
 ```
-The TTS cache (`_work/tts_cache/`, seeded from `audio/vocals/_work/`) is gitignored. From a fresh clone Kokoro therefore re-renders the 44 takes, and the result may differ slightly from the committed stems. With the cache present, the VO reproduces bit for bit.
+The TTS cache (`_work/tts_cache/`, seeded from `audio/intro/vocals/_work/`) is gitignored. From a fresh clone Kokoro therefore re-renders the 44 takes, and the result may differ slightly from the committed stems. With the cache present, the VO reproduces bit for bit.
 
 **6. Intro SFX** (after step 1 or any SFX change), about 10 s:
 ```bash
-audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py   # intro-sfx_stem.wav, intro-blip_stem.wav, extras, spotting.*, picture-sync.json, qa.json
-audio/.venv/bin/python audio/intro-sfx/make_previews.py     # optional listening previews in preview/
+audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py   # intro-sfx_stem.wav, intro-blip_stem.wav, extras, spotting.*, picture-sync.json, qa.json
+audio/.venv/bin/python audio/intro/sfx/make_previews.py     # optional listening previews in preview/
 ```
 It reads `out/season/intro/picture/intro-events.json` and the committed SFX board (`audio/sfx/wav/`), so no sample libraries are needed.
 
-**7. Mix, encode and mux**, about 2 min. See [audio/intro-mix/README.md](../audio/intro-mix/README.md).
+**7. Mix, encode and mux**, about 2 min. See [audio/intro/mix/README.md](../audio/intro/mix/README.md).
 
 `scripts/run_all.sh` does all of this; the 4K lines are skipped when there's no 4K master. To run the steps by hand:
 ```bash
-cd audio/intro-mix/scripts
+cd audio/intro/mix/scripts
 PY=../../.venv-mix/bin/python
 $PY analyze_inputs.py > /dev/null    # qa/inputs.json
 $PY mix_intro.py                     # ../intro-ep1-mix-V*.wav, ../stems/V1/*, qa/mix_build.json   (--dry V1 = print checks only)
@@ -291,10 +291,10 @@ for VN in V1:chipchamber V2:orchestralnoir V3:pixelswing V4:pianopixels; do   # 
     -metadata title="MR. MAS Ep1 intro mix $V ($N)" -movflags +faststart -f mp4 ../intro-ep1-mix-$V-$N.m4a
 done
 cd -   # then run step 3 of the Quick start (the 1080p mux loop)
-audio/.venv-mix/bin/python audio/intro-mix/scripts/sfx_balance.py   # qa/sfx_vs_music.json, qa/V1_loudness_timeline.png
+audio/.venv-mix/bin/python audio/intro/mix/scripts/sfx_balance.py   # qa/sfx_vs_music.json, qa/V1_loudness_timeline.png
 ```
 - `verify.py` (A/V sync, loudness and the ding check → `qa/deliverables_qa.json`) also expects `out/season/intro/intro-ep1-V1-4k.mp4`, so it cannot run on a 1080p-only rebuild until it is patched (§4). The committed `deliverables_qa.json` documents the shipped files.
-- `audio/intro-mix/scripts/run_all.sh` runs everything, including `verify.py`, in about 80 s.
+- `audio/intro/mix/scripts/run_all.sh` runs everything, including `verify.py`, in about 80 s.
 
 **8. Outputs:** `out/season/intro/intro-ep1-V{1..4}-1080p.mp4`, each with 720 video frames, AAC 48 kHz stereo at −14 LUFS, and 30.000 s.
 
@@ -305,10 +305,10 @@ This is the rough timing animatic with stick figures and boxes: 1280×720, 720 f
 cd studio
 npx remotion render src/dev/animatic/entry.tsx intro-animatic ../out/season/intro/animatic/intro-animatic-silent.mp4 --concurrency=2 --bundle-cache=false --log=error
 cd ..
-# temp track (optional; temp-track.wav/.mp3 + temp-track_events.json are committed). Inputs: audio/sfx/wav/*, audio/vocals/vo/mas_coldopen_michael.wav
-(cd audio/animatic && ../.venv/bin/python build_temp_track.py)
+# temp track (optional; temp-track.wav/.mp3 + temp-track_events.json are committed). Inputs: audio/sfx/wav/*, audio/intro/vocals/vo/mas_coldopen_michael.wav
+(cd audio/intro/animatic && ../.venv/bin/python build_temp_track.py)
 # mux (the original mux command was not recorded; this is the standard one used elsewhere)
-ff -y -i out/season/intro/animatic/intro-animatic-silent.mp4 -i audio/animatic/temp-track.wav -map 0:v -map 1:a -c:v copy \
+ff -y -i out/season/intro/animatic/intro-animatic-silent.mp4 -i audio/intro/animatic/temp-track.wav -map 0:v -map 1:a -c:v copy \
    -c:a aac -b:a 192k -shortest -movflags +faststart out/season/intro/animatic/intro-animatic.mp4
 # stills (committed): node src/dev/animatic/stills.mjs <outdir> <prefix> f1 f2 …   (run from studio/)
 ```
@@ -408,16 +408,16 @@ The WAV and MP3 masters, stems, MIDI and QA files are in git. Rebuild them only 
 |---|---|---|---|---|---|
 | Theme score (4 variations + motif) | `audio/theme` | `.venv-theme` | theme-pack, generaluser-gs | §3.1 step 4 | ~1 min per variation |
 | SFX board + voice blips (131 sounds, blip kits, intro layout, reels) | `audio/sfx` | `.venv` | vsco2ce-sfx, generaluser-gs | `audio/.venv/bin/python audio/sfx/scripts/build.py` (`--only PREFIX,…`, `--no-mp3`, `--no-qa`), then `audio/.venv/bin/python audio/sfx/scripts/layout.py` | ~2 min |
-| Vocal pass (cold-open takes, lines, chant variants, harmony pads, intro layers) | `audio/vocals` | `.venv-vocals` | none (Kokoro) | the `scripts/*.py` sequence in [audio/vocals/README.md](../audio/vocals/README.md) § Re-render | *est.* minutes; faster with `_work/tts_cache/` |
+| Vocal pass (cold-open takes, lines, chant variants, harmony pads, intro layers) | `audio/intro/vocals` | `.venv-vocals` | none (Kokoro) | the `scripts/*.py` sequence in [audio/intro/vocals/README.md](../audio/intro/vocals/README.md) § Re-render | *est.* minutes; faster with `_work/tts_cache/` |
 | Voice casting (10 characters, candidates, reels) | `audio/voices` | `.venv-casting` | none (Kokoro + whisper for QA) | `audio/.venv-casting/bin/python audio/voices/tools/cast.py [slug …]`, then `… cast.py --finalize` ([CASTING.md](../audio/voices/CASTING.md)) | *est.* tens of minutes |
 | Intro SFX / voices / mix | `audio/intro-*` | see §3.1 | none | §3.1 steps 5–7 | |
-| Animatic temp track | `audio/animatic` | `.venv` | none | §3.2 | seconds |
-| Intro sketch mix (superseded by `intro-mix`) | `audio/mix` | `.venv-mix` | theme-pack | `cd audio/mix && ../.venv-mix/bin/python scripts/render_music.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/mix.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/qa_plots.py V1 V2 V3 V4` ([LISTENING_GUIDE.md](../audio/LISTENING_GUIDE.md)) | ~80 s + 20 s per variation |
+| Animatic temp track | `audio/intro/animatic` | `.venv` | none | §3.2 | seconds |
+| Intro sketch mix (superseded by `intro-mix`) | `audio/intro/history/sketch-mix` | `.venv-mix` | theme-pack | `cd audio/intro/history/sketch-mix && ../.venv-mix/bin/python scripts/render_music.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/mix.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/qa_plots.py V1 V2 V3 V4` ([LISTENING_GUIDE.md](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | ~80 s + 20 s per variation |
 
 - **Caches, all gitignored and all rebuilt on demand:**
   - `audio/theme/cache/calib.json` holds the sample pitch calibration. It is re-measured on the first build, which makes that build slower.
-  - `audio/mix/cache/` is regenerated by `mix.py`.
-  - `audio/vocals/_work/tts_cache/` (about 71 MB) and `audio/intro-vox/_work/tts_cache/` (11 MB) hold the Kokoro renders. Without them the voices re-render, and may differ slightly from the committed files.
+  - `audio/intro/history/sketch-mix/cache/` is regenerated by `mix.py`.
+  - `audio/intro/vocals/_work/tts_cache/` (about 71 MB) and `audio/intro/vox/_work/tts_cache/` (11 MB) hold the Kokoro renders. Without them the voices re-render, and may differ slightly from the committed files.
 - **No human has auditioned any of the audio.** Every level was set by measurement (see the READMEs).
 
 ### 3.8 The season story reels (`out/season/reels/`, `audio/reel/`) (in progress)
@@ -507,8 +507,8 @@ Re-run `npx remotion compositions <entry>` for the current ids.
 6. **Reel render temp bundle.** `render_all.sh` keeps a ~30 MB bundle in `out/season/reels/.tmp/` while it runs. `.tmp/` is gitignored.
 7. **Stale bits in older docs:**
    - `studio/src/dev/intro/entry.tsx` and `studio/src/intro/intro.frame.tsx` still show direct `--scale=2` and `--crf` render commands. `master.sh` is the real path.
-   - `audio/intro-mix/README.md` lists the 4K MP4 as a deliverable.
-   - `audio/LISTENING_GUIDE.md` describes the superseded sketch mixes in `audio/mix/`.
+   - `audio/intro/mix/README.md` lists the 4K MP4 as a deliverable.
+   - `audio/intro/history/sketch-mix/LISTENING_GUIDE.md` describes the superseded sketch mixes in `audio/intro/history/sketch-mix/`.
 
 ---
 

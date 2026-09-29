@@ -146,7 +146,7 @@ def picture_sync(spot):
     """The SFX build's view of the picture vs the picture file on disk now, and every picture-keyed cue's
     placed frame vs the picture frame it answers to."""
     import hashlib
-    ps = json.load(open(os.path.join(AUDIO, 'intro-sfx/picture-sync.json')))
+    ps = json.load(open(os.path.join(AUDIO, 'intro/sfx/picture-sync.json')))
     evp = os.path.join(ROOT, 'out/season/intro/picture/intro-events.json')
     now = hashlib.md5(open(evp, 'rb').read()).hexdigest()
     pf = ps.get('pictureFrames', {})
@@ -170,12 +170,12 @@ def picture_sync(spot):
 def main():
     global DING_F
     rep = dict(wav={}, stems={}, m4a={}, mp4={})
-    spot = json.load(open(os.path.join(AUDIO, 'intro-sfx/spotting.json')))
+    spot = json.load(open(os.path.join(AUDIO, 'intro/sfx/spotting.json')))
     ding = [e for e in spot['events'] if e['id'] == 'book.ding'][0]
     DING_F = ding['frame']
     rep['picture_sync'] = picture_sync(spot)
     print('picture sync', {k: v for k, v in rep['picture_sync'].items() if k not in ('deltas_vs_script',)})
-    sfx_only = read(os.path.join(AUDIO, 'intro-sfx/intro-sfx_stem.wav'))
+    sfx_only = read(os.path.join(AUDIO, 'intro/sfx/intro-sfx_stem.wav'))
     # each cue's audible start vs its spotted frame (the MP4 carries the stems at lag 0, checked below)
     ons = cue_onsets(spot)
     rep['sfx_onsets'] = ons

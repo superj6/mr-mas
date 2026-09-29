@@ -66,7 +66,7 @@ const L = new Float32Array(LEN), R = new Float32Array(LEN);
 const add = (i: number, l: number, r: number) => { if (i >= 0 && i < LEN) { L[i] += l; R[i] += r; } };
 
 // ------------------------------------------------------------------ 1. the room: the hum (on while the grid is)
-const hum = readWav(`${root}/intro-sfx/src/server_hum_tuned.wav`);
+const hum = readWav(`${root}/intro/sfx/src/server_hum_tuned.wav`);
 const HUM = db(-17);
 const roomOn = (i: number) => i < at(T.open) || i >= at(T.back);
 const edge = 96; // 2 ms declick at each cut: the cuts are hard, not fades
@@ -82,7 +82,7 @@ for (let i = 0; i < LEN; i++) {
 }
 
 // ------------------------------------------------------------------ 2. the rack's tick (the chip layer), straight eighths
-const tick = readWav(`${root}/intro-sfx/src/x_cut_tick.wav`);
+const tick = readWav(`${root}/intro/sfx/src/x_cut_tick.wav`);
 const [tl, tr] = pan(0.75); // the rack is screen right
 for (let k = 0; ; k++) {
   const p = k * 7.5;

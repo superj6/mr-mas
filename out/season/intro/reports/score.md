@@ -76,7 +76,7 @@ All notes are placed on the grid exactly. The "section itself" row shows the bra
 
 **Also worth knowing**
 - The pack has no bass clarinet, so V2's D♭ at f60 is on bassoon.
-- The mix team's `audio/mix/music/*-rollcall.wav` and the animatic temp track are still built on the old bar 9, and they belong to other teams.
+- The mix team's `audio/intro/history/sketch-mix/music/*-rollcall.wav` and the animatic temp track are still built on the old bar 9, and they belong to other teams.
 - A backup of the v2.0 sources is at `/tmp/claude-1000/-home-jgon-project-art-mrmas/a5e7723c-6ab4-4824-a1ed-8e367fdb82e5/scratchpad/backup_v20/`.
 
 **Files** (all in `/home/jgon/project/art/mrmas/audio/theme/`)

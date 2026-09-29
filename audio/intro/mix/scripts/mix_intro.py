@@ -161,12 +161,12 @@ def bookend(x, f0, f1):
 def bus_inputs():
     j = lambda *p: os.path.join(AUDIO, *p)
     return dict(
-        sfx=read(j('intro-sfx/intro-sfx_stem.wav')),
-        blip=read(j('intro-sfx/intro-blip_stem.wav')),
-        vo=read(j('intro-vox/intro-vox_vo.wav')),
-        whisper=read(j('intro-vox/stems/intro-vox_chant-whisper.wav')),
-        shout=read(j('intro-vox/stems/intro-vox_chant-shout.wav')),
-        pad=read(j('intro-vox/stems/intro-vox_pad.wav')),
+        sfx=read(j('intro/sfx/intro-sfx_stem.wav')),
+        blip=read(j('intro/sfx/intro-blip_stem.wav')),
+        vo=read(j('intro/vox/intro-vox_vo.wav')),
+        whisper=read(j('intro/vox/stems/intro-vox_chant-whisper.wav')),
+        shout=read(j('intro/vox/stems/intro-vox_chant-shout.wav')),
+        pad=read(j('intro/vox/stems/intro-vox_pad.wav')),
     )
 
 

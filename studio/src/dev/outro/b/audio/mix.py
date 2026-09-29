@@ -1,7 +1,7 @@
 """OUTRO B · the designed sound and the mix for Ep1's final outro (v3; OUTRO-PROPOSALS §3).
 
 Reads (read-only): the score rendered by track.py into $SC/music, and the intro's own Orb sounds in
-audio/intro-sfx/src (the servo on C6, the scan "shhk" retuned to F/C, the toast chime C7), so the outro's Orb sounds
+audio/intro/sfx/src (the servo on C6, the scan "shhk" retuned to F/C, the toast chime C7), so the outro's Orb sounds
 exactly like the intro's. Synthesizes here: the scan's sustained sweep under the cone (the intro's cone lasts 5
 frames; this one lasts 25), the GLYPH grains inside it, a faint tick per toast chip, and Ep1's moth: its wingbeats
 (panned with its flight, louder as it nears the lamp), its bump on the Orb's lens glass (a clear tuned tink on 3.4,
@@ -62,7 +62,7 @@ N = N_FRAMES * SR // FPS                      # 10.125 s exactly
 TARGET_LUFS = -16.0
 TP_CEIL = -3.0                                # picture masters (OST-BIBLE rule 14)
 ORB_C = (420, 132)                            # the Orb's centre (art.ts ORB), for the moth's pan and nearness
-SRC = os.path.join(ROOT, 'audio/intro-sfx/src')
+SRC = os.path.join(ROOT, 'audio/intro/sfx/src')
 rng = np.random.default_rng(1215)
 
 

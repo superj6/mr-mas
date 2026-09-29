@@ -6,13 +6,13 @@ out/lookdev/outro/d/ and the scratch folder.
   SFX (every sound has one owner: the music owns every pitch, the SFX own the interface and the moth)
     o30                    the title pops: audio/sfx/wav/tower_pop.wav (unpitched), -9 dB, centre
     o60 o90                the flat plates pop: tower_pop, -10 dB, left of centre (where they are)
-    o105 o120 o135         the leap plates: audio/intro-sfx/src/tower_pop_rr.wav, -10 dB, panned up the curve
+    o105 o120 o135         the leap plates: audio/intro/sfx/src/tower_pop_rr.wav, -10 dB, panned up the curve
     o150                   the post box (and the title's one upgrade beside it): tower_pop_rr, -8 dB
     (d5: no folds: the human credits stay on the flat line to the out, so the two reversed pops are gone)
     o153-179               the moth's wings (synthesised: band-passed noise, 20 Hz wingbeat), about -40 dBFS RMS,
                            panned right (it comes in from the right, after the post box's light is up); two tiny
                            twitches at rest, o206 and o227
-    o252-269               the server hum (audio/intro-sfx/src/server_hum_tuned.wav) under the lone caret, -30 dB,
+    o252-269               the server hum (audio/intro/sfx/src/server_hum_tuned.wav) under the lone caret, -30 dB,
                            as at the intro's f0
   loudness: the music is mastered at -16 LUFS by the engine; the mix is checked for <= -1 dBTP.
 
@@ -105,7 +105,7 @@ def main():
     music[:min(N, len(mus))] = mus[:N]
     sfx = np.zeros((N, 2), np.float32)
     pop = load(f'{ROOT}/audio/sfx/wav/tower_pop.wav')
-    pop_rr = load(f'{ROOT}/audio/intro-sfx/src/tower_pop_rr.wav')
+    pop_rr = load(f'{ROOT}/audio/intro/sfx/src/tower_pop_rr.wav')
     cues = []
     place(sfx, pop, at(30), -9, pan=0.0)
     cues.append(dict(o=30, sfx='tower_pop (the title)', db=-9))
@@ -122,7 +122,7 @@ def main():
     place(sfx, wings(3, 3), at(227), -26, pan=0.3)
     cues += [dict(o=153, sfx='moth wings (synth), in from the right', db=-22), dict(o=206, sfx='moth twitch', db=-26),
              dict(o=227, sfx='moth twitch', db=-26)]
-    hum = load(f'{ROOT}/audio/intro-sfx/src/server_hum_tuned.wav')
+    hum = load(f'{ROOT}/audio/intro/sfx/src/server_hum_tuned.wav')
     seg = hum[:N - at(252)].copy()
     ramp = np.minimum(1, np.arange(len(seg)) / (0.25 * SR))[:, None]
     tail = np.minimum(1, (len(seg) - np.arange(len(seg))) / (0.2 * SR))[:, None]

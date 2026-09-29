@@ -5,7 +5,7 @@
   releases f686-704                        voices reach silence at f700, the plate tail is gone by f704
 None of the vocal pass's six title-pad candidates is this voicing (they are "aah" F9sus stacks, an open
 fifth, an F sus/add9 "ooh" and chip hybrids, all 4.0 s with the release at +1.6-1.9 s), so it is rebuilt
-with the same singer (audio/vocals/scripts/sing.py): Kokoro-82M stock voices re-sung through WORLD.
+with the same singer (audio/intro/vocals/scripts/sing.py): Kokoro-82M stock voices re-sung through WORLD.
 Each of the four parts is double-tracked (the double at -6 dB, +/-4 cents) for blend; no chip layer
 (the score's F6 pulse already carries the chip there).
 """

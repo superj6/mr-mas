@@ -1,10 +1,10 @@
-"""Listening previews for the intro SFX spot (not deliverables). Writes audio/intro-sfx/preview/*.mp3.
+"""Listening previews for the intro SFX spot (not deliverables). Writes audio/intro/sfx/preview/*.mp3.
 
   preview_V1+VO+SFX.mp3          V1 score (-1.5 dB, SCRIPT 9.6) + Mas VO scratch (am_michael, faded to end by f91) + SFX stem
   preview_V1+VO+SFX+BLIP.mp3     the same with the BLIP bus
   preview_V1+VO+SFX+EXTRAS.mp3   the same with the opt-in extras layer (script-cut items), for the A/B
   preview_SFX-solo.mp3           the SFX stem alone, +12 dB so it can be judged on its own
-Judge SFX sync here; the balance of record is audio/intro-mix/ (VO -4 dB and the music rides live there).
+Judge SFX sync here; the balance of record is audio/intro/mix/ (VO -4 dB and the music rides live there).
 """
 import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
 import sys  # noqa: E402
@@ -51,7 +51,7 @@ def rd(p):
 def main():
     os.makedirs(OUT, exist_ok=True)
     music = rd(os.path.join(AUDIO, "theme", "theme-V1-chipchamber.wav")) * db(-1.5)
-    vo = rd(os.path.join(AUDIO, "vocals", "vo", "placed", "mas_coldopen_michael_at-f0.wav")) * db(-4.0)
+    vo = rd(os.path.join(AUDIO, "intro/vocals/vo/placed/mas_coldopen_michael_at-f0.wav")) * db(-4.0)
     a, b = 89 * SPF, 92 * SPF                       # scratch fit: the take is faded to end by f91
     vo[a:b] *= np.linspace(1, 0, b - a)[:, None]
     vo[b:] = 0

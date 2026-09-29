@@ -287,7 +287,7 @@ def build_manifest(beds):
         if bd.get("chapter") in beds:
             bd.update(beds[bd["chapter"]])
     # the intro: Mas's line in his EL voice (el_intro.py; PLAN.md §7 D), the same V1 master with only the VO swapped
-    el_intro = "audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav"
+    el_intro = "audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav"
     for c in m["chapters"]:
         au = c.get("audio") or {}
         if c.get("id") == "intro" and os.path.exists(os.path.join(REPO, el_intro)) and \

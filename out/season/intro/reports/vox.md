@@ -35,9 +35,9 @@ Pad (rebuilt, because none of the six existing candidates had the scripted voici
 **Files that still follow the old v2.0 timing** (their owners should know; I didn't edit them):
 - `studio/notes/mdinner1.md` puts "the" at f292.
 - `studio/notes/mfinale.md` has an "ooh" closing over f690–719; v2.1 has nothing sung after f704.
-- The vocal pass's chant files, takes and intro layers, and the earlier mix sketch in `audio/mix/timeline.json`.
+- The vocal pass's chant files, takes and intro layers, and the earlier mix sketch in `audio/intro/history/sketch-mix/timeline.json`.
 
-**Files** (all in /home/jgon/project/art/mrmas/audio/intro-vox)
+**Files** (all in /home/jgon/project/art/mrmas/audio/intro/vox)
 - `intro-vox_vo.wav` – the VO stem
 - `intro-vox_vocals.wav` – the vocal stem (chant plus pad)
 - `vo_word_timings.json` – word and sound frames for keying the typing and the dot

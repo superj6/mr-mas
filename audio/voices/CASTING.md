@@ -403,7 +403,7 @@ The pairing is read from `../sfx/board.json` (`blipKits`) and `../sfx/manifest.j
 
 - **Nothing here is final.** These are scratch synthetic voices and must be replaced (see §6) or at least approved by ear.
 - **Lines where the recognizer misheard** (all are non-picks except the Mario A artifact): NOLE C "a name"; MARIO A inserted a "So" at the onset (re-take or trim); MARIO C "some concerns"; NESNEJ C "next ones"; INTERN C "ask impossible."
-- **Rooms are printed into the clips** (ALYI's hall, RUMPT's slap, NESNEJ's arena, the ORB's metal). That's right for auditions, but for production the dialogue should be delivered dry with the room on a mix send (the `audio/mix` pass's call).
+- **Rooms are printed into the clips** (ALYI's hall, RUMPT's slap, NESNEJ's arena, the ORB's metal). That's right for auditions, but for production the dialogue should be delivered dry with the room on a mix send (the `audio/intro/history/sketch-mix` pass's call).
 - **Short lines:** Kokoro's model card warns about utterances under about 10–20 tokens. Of the 90 lines, 9 used the carrier-cut take because it read clearer. The catchphrases are still the least natural lines. In context, rendering whole scenes and slicing them will beat one-liners.
 - **Tag hygiene:** Mas's comic line (`i did not know this was happening.`) is **[K]** and needs a re-verify before lock. RUMPT's quote is [P✓]. Every other voiced "quote" is [V]. Everything else is [INVENTED] and must never appear as a dated quote card.
 - **Canon conflict flagged:** the brief asked for an ORB machine voice, but the bible says the Orb has no speech. The read-out is optional and the recommendation is to keep the Orb non-verbal.

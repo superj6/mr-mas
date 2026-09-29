@@ -11,7 +11,7 @@
 - **v3.5b fix** (2026-09-29; lock-v35.md §11): MADA (O.S.) "There is no step four." before the clack in S4.02, over the sheet's blank 4. line, and NELEH's "Step two." in the board's post (S3.03, lip-synced in her call window, before the click). Act Four 11,953 → **11,991** (+38 f, +1.58 s); the EL story **32,849 frames**. Nothing else in the film moved.
 - **Voices:** the ElevenLabs cast (set A; SIRRAH recast as Ida), **MARIO on his Kokoro takes** (10 lines, with voices-el.md §AB3's EQ and −0.5 dB in the mix).
 - **The lock:** the EL-timed v3.5 lock, `show/reel/ep01-v35-el/` (key `ep01-v35-el-stick`, 8893509).
-- **Intro:** the flash-fixed picture with the EL master (`audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav`) at −3 dB. **Card:** 2 s. **Outro:** B, `mix-v35-el/outro-mix.wav` at −1 dB with the 0.75 s hum hold (2.0 s of hum alone).
+- **Intro:** the flash-fixed picture with the EL master (`audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`) at −3 dB. **Card:** 2 s. **Outro:** B, `mix-v35-el/outro-mix.wav` at −1 dB with the 0.75 s hum hold (2.0 s of hum alone).
 - **Records:** `assembly/el-v35-assembly.json`, `el-v35-qa.json`, `seam-frames-el-v35.json`; the transcript [assembly/transcript-v35.txt](assembly/transcript-v35.txt) (258 lines); the contact sheet `out/ep01/full-v3/ep01-v35-sheet.png` (141 frames, one every 10 s). The sound: sound.md §Y.
 - **The 2026-09-28 build (23:09.67, 33,352 frames) is superseded;** this file replaced it at the same path.
 
@@ -705,7 +705,7 @@ In the manifest's order. Start times are episode time.
 | # | Chapter title | Picture | Sound | Kokoro start · length | EL start · length |
 |---|---|---|---|---|---|
 | 1 | Cold open | `picture[-el]/coldopen.mp4` | `mix[-el]/coldopen-mix.wav` | 0:00.00 · 30.67 | 0:00.00 · 30.04 |
-| 2 | Intro | `out/season/intro/intro-ep1-V1-1080p.mp4` | its own mix, `audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav`, **−3 dB** (the manifest) | 0:30.67 · 30.00 | 0:30.04 · 30.00 |
+| 2 | Intro | `out/season/intro/intro-ep1-V1-1080p.mp4` | its own mix, `audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav`, **−3 dB** (the manifest) | 0:30.67 · 30.00 | 0:30.04 · 30.00 |
 | 3 | ep1.0_research_preview.md | `picture/card.mp4` (both) | `mix[-el]/card-mix.wav` | 1:00.67 · 2.00 | 1:00.04 · 2.00 |
 | 4 | Act One · research preview | `picture[-el]/act1.mp4` | `mix[-el]/act1-mix.wav` | 1:02.67 · 5:22.50 | 1:02.04 · 5:37.46 |
 | 5 | Act Two · the regulate-me tour | `…/act2.mp4` | `…/act2-mix.wav` | 6:25.17 · 3:24.75 | 6:39.50 · 3:17.21 |

@@ -7,7 +7,7 @@ ROOT=$REPO
 FFD=$ROOT/studio/node_modules/@remotion/compositor-linux-x64-gnu
 export LD_LIBRARY_PATH=$FFD
 FF="$FFD/ffmpeg -hide_banner -loglevel error -y"
-MIX=$ROOT/audio/intro-mix
+MIX=$ROOT/audio/intro/mix
 PIC=$ROOT/out/season/intro/picture
 OUT=$ROOT/out/season/intro
 

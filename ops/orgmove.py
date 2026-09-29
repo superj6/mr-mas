@@ -93,7 +93,8 @@ def rows_old(al):                                            # the manifest's ow
 
 def literal(rows):
     keys = sorted(aliases(rows), key=len, reverse=True)      # longest first, single pass: no chained rewrites
-    return re.compile(B + '(?:' + '|'.join(map(re.escape, keys)) + r')(?=[/\s"\'`),\]:;.]|$)', re.M)
+    # a '.' ends a path only at a sentence end, not before an extension: audio/mix.py is not audio/mix (2026-09-29)
+    return re.compile(B + '(?:' + '|'.join(map(re.escape, keys)) + r')(?=[/\s"\'`),\]:;]|\.(?![\w-])|$)', re.M)
 
 
 # ---------------------------------------------------------------- repo-relative path arithmetic ('' is the root)

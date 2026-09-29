@@ -2,7 +2,7 @@ I applied the picture fixes, re-rendered both silent masters to the same paths, 
 
 **Verification:** both masters are h264, yuv420p, 24/1, 720 frames (1080p crf 12, 4K crf 16), and a 4K spot frame matches 1080p. The 345–359 overlap is still pixel-identical (0 px on all 15 frames). The type-check is clean for the intro files. I looked at every changed moment in native previews and in the real render. Nothing was listened to.
 
-**Audio is now out of sync with picture.** The sound team needs to rebuild `audio/intro-sfx/build_intro_sfx.py`, then `audio/intro-mix/scripts/run_all.sh` (the events file is already regenerated).
+**Audio is now out of sync with picture.** The sound team needs to rebuild `audio/intro/sfx/build_intro_sfx.py`, then `audio/intro/mix/scripts/run_all.sh` (the events file is already regenerated).
 
 **Moved event frames (old → new)**
 - **Typing:** line 1 f24–55 → 18–49. Shift+enter 70 → 63. Line 2 f71–93 → 64–83.

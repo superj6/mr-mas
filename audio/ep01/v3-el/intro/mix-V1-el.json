@@ -1,7 +1,7 @@
 {
- "built_by": "audio/ep01/v3-el/tools/el_intro.py mix (audio/intro-mix/scripts/mix_intro.py build('V1'), imported; only the vo input swapped)",
+ "built_by": "audio/ep01/v3-el/tools/el_intro.py mix (audio/intro/mix/scripts/mix_intro.py build('V1'), imported; only the vo input swapped)",
  "reproduction_residual_dbfs": -138.5,
- "master": "audio/intro-mix/intro-ep1-mix-V1-chipchamber-el.wav",
+ "master": "audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav",
  "vo": "audio/ep01/v3-el/intro/intro-vox_vo-el.wav",
  "difference_outside_f23_96_dbfs": -59.0,
  "method": "the delivered V1 master + (EL VO - Kokoro VO), each through mix_intro's VO fader (-4 dB) and centring, times the delivered build's gain curve (master gain + limiter). The limiter is idle over the line (f20-100: 0.00 dB), so this equals the full rebuild at the delivered master gain; everything outside f23-96 is the delivered master sample for sample.",

@@ -80,7 +80,7 @@ node src/reel/tools/episode.mjs <manifest> --only act3,act4
   "chapters": [
     {"id": "coldopen", "label": "COLD OPEN", "sub": "sc 1-4", "from": "ep01-full-part1", "acts": ["COLD OPEN"]},
     {"id": "intro", "kind": "video", "src": "out/season/intro/intro-ep1-V1-1080p.mp4", "in": 0, "dur": 30, "fit": "full",
-     "audio": {"own": true, "src": "audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3}},
+     "audio": {"own": true, "src": "audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav", "gain": -3, "tail": 0.3}},
     {"id": "card", "from": "ep01-full-part1", "beats": ["card.01"]},
     {"id": "act4", "from": "ep01-act4-v5", "audio": {"src": "audio/reel/ep01-act4-v5/mix.wav", "in": 3.0}},
     {"id": "credits", "kind": "card", "dur": 12, "onscreen": ["…"], "caption": "…"}

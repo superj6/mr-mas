@@ -44,7 +44,7 @@ SPF = SR // FPS               # 2000 samples per frame
 HERE = os.path.dirname(os.path.abspath(__file__))
 AUDIO = os.path.join(REPO, 'audio')
 SFX = os.path.join(AUDIO, 'sfx', 'wav')
-VO = os.path.join(AUDIO, 'vocals', 'vo', 'mas_coldopen_michael.wav')
+VO = os.path.join(AUDIO, 'intro/vocals/vo/mas_coldopen_michael.wav')
 FFDIR = os.path.join(REPO, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 
 # v2.1: no "music fired" mute; bar 9 is the roll call (8 stabs)

@@ -54,9 +54,9 @@ The script also drops the camera-shutter freeze sound; the shutter layer in the 
 - Tuning: the hum and the neon lose their A (major-third) overtones, the neon ignite loses its F6 ring, the servo sits on C6, and the scan is retuned from about 1621 Hz onto F and C.
 - The V1 render still has the v2.0 bar 9, so the previews check SFX sync, not the score.
 
-To re-sync after picture changes, run `audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py` (about 10 s). It re-reads `intro-events.json` and logs every change in `picture-sync.json`. I deleted my temporary frame dumps; the folder is 48 MB.
+To re-sync after picture changes, run `audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py` (about 10 s). It re-reads `intro-events.json` and logs every change in `picture-sync.json`. I deleted my temporary frame dumps; the folder is 48 MB.
 
-Files are in `/home/jgon/project/art/mrmas/audio/intro-sfx/`:
+Files are in `/home/jgon/project/art/mrmas/audio/intro/sfx/`:
 - `intro-sfx_stem.wav`
 - `alt/intro-sfx_stem_script-v2.1-frames.wav`
 - `alt/spotting_script-v2.1-frames.json`

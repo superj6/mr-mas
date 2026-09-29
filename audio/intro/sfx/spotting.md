@@ -14,7 +14,7 @@ Sound editor's spot for the 30.000 s main title (f0–719, 24 fps, 96 BPM, 15 fr
 | `intro-blip_stem.wav` | **BLIP bus** (14 events): the card blips and the Orb's toast chime. SCRIPT §9.6 gives BLIPs their own bus, separate from `sfx-main`. |
 | `spotting.json` | The machine-readable list, usable as an EDL for Remotion `<Audio>`. Each event has frame, time, file, gain, pan, anchor, cut, fades, note, script reference, `scriptFrame` and `pictureDelta`. |
 | `src/*.wav` | The processed and synthesized one-shots the list points at. Retuning, gating and filtering are baked in; gain and pan are not. |
-| `preview/*.mp3` | Listening previews: V1 at −1.5 dB, the am_michael VO scratch (faded to end by f91) and the SFX. **Not deliverables** (the real balance is `audio/intro-mix/`). |
+| `preview/*.mp3` | Listening previews: V1 at −1.5 dB, the am_michael VO scratch (faded to end by f91) and the SFX. **Not deliverables** (the real balance is `audio/intro/mix/`). |
 | `qa.json`, `picture-sync.json` | Automated checks, and the picture-frame sources and deltas. |
 
 **Picture sync.** `out/season/intro/picture/intro-events.json` is **present** (57 sync keys matched, 13 moved; see `picture-sync.json`). The main stem is cued to it.

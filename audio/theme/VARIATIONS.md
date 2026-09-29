@@ -8,7 +8,7 @@ All four variations are the same 30.000 s cue: 720 frames at 24 fps and 96 BPM, 
 
 ## Mix-stage rides (2026-09-25 review pass)
 
-The scores and stems in this folder are **unchanged** by the review pass. The re-recording mix (`audio/intro-mix/scripts/mix_intro.py`) now builds its music bus from `stems/` and rides individual stems. These are the balance moves the sound supervisor asked for:
+The scores and stems in this folder are **unchanged** by the review pass. The re-recording mix (`audio/intro/mix/scripts/mix_intro.py`) now builds its music bus from `stems/` and rides individual stems. These are the balance moves the sound supervisor asked for:
 
 - **The Harmon line (bar 10) +6 dB.**
   - V1: with the piano −3 dB over f540–599.
@@ -25,7 +25,7 @@ The scores and stems in this folder are **unchanged** by the review pass. The re
   - A score-side fix (the horns starting 1 frame early, with shorter releases) was tried and rejected. It left the hall tails in, and it put the on-beat stabs 27–42 ms ahead of their picture cuts.
 - **The bookend (f690–704):** everything except `sub` and `fx` plays "inside his monitor": −4 LU, low-passed at 3.5 kHz, 30 % width.
 
-If a variation is re-rendered, re-run `audio/intro-mix/scripts/run_all.sh`. The rides are frame-based and don't need re-measuring unless the arrangement moves.
+If a variation is re-rendered, re-run `audio/intro/mix/scripts/run_all.sh`. The rides are frame-based and don't need re-measuring unless the arrangement moves.
 
 ## v2.1 changes (2026-09-25)
 

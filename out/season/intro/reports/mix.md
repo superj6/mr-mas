@@ -24,7 +24,7 @@ The limiter only works hard for about 2 frames at f300, where the Alyi hit and t
 - **SFX:** the typical effect sits about 12 dB under the music. Only the bonk at f150, the cold-open Orb servo and scan, and the ding with its Post click at f705 reach the music's level or go over it; those are the moments the script gives to the SFX.
 - **Stem grouping:** dialogue is the VO plus the chant, because it has words; the wordless pad goes in the music stem. Together the three stems add back up to the mix exactly.
 
-Everything rebuilds with `/home/jgon/project/art/mrmas/audio/intro-mix/scripts/run_all.sh` (about 80 s). Temporary files are deleted; the mix folder is 62 MB.
+Everything rebuilds with `/home/jgon/project/art/mrmas/audio/intro/mix/scripts/run_all.sh` (about 80 s). Temporary files are deleted; the mix folder is 62 MB.
 
 Files are in `/home/jgon/project/art/mrmas/`:
 - out/season/intro/intro-ep1-V1-1080p.mp4
@@ -32,11 +32,11 @@ Files are in `/home/jgon/project/art/mrmas/`:
 - out/season/intro/intro-ep1-V2-1080p.mp4
 - out/season/intro/intro-ep1-V3-1080p.mp4
 - out/season/intro/intro-ep1-V4-1080p.mp4
-- audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav and .m4a
-- audio/intro-mix/intro-ep1-mix-V2-orchestralnoir.wav and .m4a
-- audio/intro-mix/intro-ep1-mix-V3-pixelswing.wav and .m4a
-- audio/intro-mix/intro-ep1-mix-V4-pianopixels.wav and .m4a
-- audio/intro-mix/stems/V1/ (intro-ep1-V1-stem-music.wav, -stem-sfx.wav, -stem-dialogue.wav)
-- audio/intro-mix/qa/ (deliverables_qa.json, mix_build.json, inputs.json, sfx_vs_music.json, V1_loudness_timeline.png)
-- audio/intro-mix/scripts/ (build scripts)
-- audio/intro-mix/README.md
+- audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav and .m4a
+- audio/intro/mix/intro-ep1-mix-V2-orchestralnoir.wav and .m4a
+- audio/intro/mix/intro-ep1-mix-V3-pixelswing.wav and .m4a
+- audio/intro/mix/intro-ep1-mix-V4-pianopixels.wav and .m4a
+- audio/intro/mix/stems/V1/ (intro-ep1-V1-stem-music.wav, -stem-sfx.wav, -stem-dialogue.wav)
+- audio/intro/mix/qa/ (deliverables_qa.json, mix_build.json, inputs.json, sfx_vs_music.json, V1_loudness_timeline.png)
+- audio/intro/mix/scripts/ (build scripts)
+- audio/intro/mix/README.md

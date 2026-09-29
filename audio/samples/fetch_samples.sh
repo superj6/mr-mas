@@ -14,10 +14,10 @@
 # theme-pack/UprightPianoKW-SF2-20220221.
 #
 # Who reads what (see docs/RENDERING.md):
-#   theme-pack/ + generaluser-gs/   audio/theme (score), audio/reel (reel temp beds), audio/mix (old intro sketch)
+#   theme-pack/ + generaluser-gs/   audio/theme (score), audio/reel (reel temp beds), audio/intro/history/sketch-mix (old intro sketch)
 #   vsco2ce-sfx/ + generaluser-gs/  audio/sfx (the SFX board and voice blips)
 #   vsco2ce/                        licence/readme copies only; no script reads it
-#   (intro-sfx, intro-vox, intro-mix, vocals and voices need no sample libraries)
+#   (audio/intro/{sfx,vox,mix,vocals} and audio/voices need no sample libraries)
 #
 # Every file is checked against MANIFEST.sha256 (1,740 files, sha256 of the exact files the committed audio was built
 # from). Files already on disk with the right hash are skipped, so the script is safe to re-run or resume.

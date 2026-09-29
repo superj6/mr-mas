@@ -290,14 +290,14 @@ The full list of Act Four render commands and composition ids is in [RENDERING �
 |---|---|---|---|
 | [audio/theme/](../audio/theme/VARIATIONS.md) | The main-title score: 4 variations, stems, MIDI, `cues.json`, analysis | `.venv-theme` | `cd audio/theme && ../.venv-theme/bin/python build.py V1 V2 V3 V4 motif`, then `analyze.py`, `stemtable.py`, `make_cues.py` (about 1 CPU-min per variation) |
 | audio/sfx/ | The SFX board: 218 manifest entries (131 sounds with their flavours, plus 87 character voice blips) | `.venv` | `audio/.venv/bin/python audio/sfx/scripts/build.py [--only PREFIX,…]`, then `audio/sfx/scripts/layout.py` |
-| [audio/intro-sfx/](../audio/intro-sfx/spotting.md) | The intro SFX stem, spotted to the built picture | `.venv` | `audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py` (about 10 s) |
+| [audio/intro/sfx/](../audio/intro/sfx/spotting.md) | The intro SFX stem, spotted to the built picture | `.venv` | `audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py` (about 10 s) |
 | [audio/voices/](../audio/voices/CASTING.md) | Voice casting, pass 1 | `.venv-casting` | `audio/.venv-casting/bin/python audio/voices/tools/cast.py [slug …]`, then `cast.py --finalize` |
-| [audio/vocals/](../audio/vocals/README.md) | The vocal pass: cold-open takes, chant, harmony pads and stabs | `.venv-vocals` | `scripts/coldopen.py`, `lines.py`, `chant.py`, `harmony.py` (see its README) |
-| [audio/intro-vox/](../audio/intro-vox/README.md) | Intro VO, chant and pad stems, cut to SCRIPT v2.1 | `.venv-vocals` | `build_vo.py` → `build_chant.py` → `build_pad.py` → `assemble.py` |
-| [audio/intro-mix/](../audio/intro-mix/README.md) | The final intro mixes, AAC encodes and muxes | `.venv-mix` | `audio/intro-mix/scripts/run_all.sh` (about 2 min; the legacy 4K lines are skipped when there's no 4K master) |
+| [audio/intro/vocals/](../audio/intro/vocals/README.md) | The vocal pass: cold-open takes, chant, harmony pads and stabs | `.venv-vocals` | `scripts/coldopen.py`, `lines.py`, `chant.py`, `harmony.py` (see its README) |
+| [audio/intro/vox/](../audio/intro/vox/README.md) | Intro VO, chant and pad stems, cut to SCRIPT v2.1 | `.venv-vocals` | `build_vo.py` → `build_chant.py` → `build_pad.py` → `assemble.py` |
+| [audio/intro/mix/](../audio/intro/mix/README.md) | The final intro mixes, AAC encodes and muxes | `.venv-mix` | `audio/intro/mix/scripts/run_all.sh` (about 2 min; the legacy 4K lines are skipped when there's no 4K master) |
 | [audio/reel/](../audio/reel/README.md) | Temp beds for the story reels | `.venv` | `audio/.venv/bin/python audio/reel/build_all.py [epNN …] [--force] [--mux]` |
 | audio/ep01/act4/dialogue/ | Act Four dialogue | `.venv-casting` | `HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python audio/ep01/act4/dialogue/tools/record.py [ids …]`, then `final_cast.py`, `reel.py`, `make_doc.py` |
-| audio/animatic/, audio/mix/ | The intro animatic temp track and the first sketch mixes (superseded by intro-mix; see [LISTENING_GUIDE](../audio/LISTENING_GUIDE.md)) | `.venv`, `.venv-mix` | `build_temp_track.py`; `scripts/render_music.py`, then `mix.py` and `qa_plots.py` with `V1 V2 V3 V4` ([RENDERING §3.7](RENDERING.md#37-audio-masters-theme-sfx-vocals-voice-casting-all-committed)) |
+| audio/intro/animatic/, audio/intro/history/sketch-mix/ | The intro animatic temp track and the first sketch mixes (superseded by intro-mix; see [LISTENING_GUIDE](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | `.venv`, `.venv-mix` | `build_temp_track.py`; `scripts/render_music.py`, then `mix.py` and `qa_plots.py` with `V1 V2 V3 V4` ([RENDERING §3.7](RENDERING.md#37-audio-masters-theme-sfx-vocals-voice-casting-all-committed)) |
 
 **Virtualenvs.** Each environment is frozen in `audio/requirements/<name>.txt`:
 
@@ -385,7 +385,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 - The character "voices" on the board are instrument babble blips, not speech.
 - Banned: meme sounds, real operating-system sounds, and lifts from other franchises ([audio/sfx/LICENSES.md](../audio/sfx/LICENSES.md)).
 
-**Intro spotting** (`audio/intro-sfx/build_intro_sfx.py`):
+**Intro spotting** (`audio/intro/sfx/build_intro_sfx.py`):
 1. It starts from the frames in SCRIPT v2.1 §9.3, which are the contract.
 2. If `out/season/intro/picture/intro-events.json` exists, `parse_picture_events()` maps events to cue keys by type, moment and text: `orb.scan`, `collar.pop1`, `post.click`, `dialog.ok` and so on. Those picture frames override the script frames. Typing is cued keystroke by keystroke from the cold open's own timeline.
 3. Every delta from the script goes to `picture-sync.json`. The full list goes to `spotting.json` and `spotting.md`.
@@ -396,7 +396,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
    - a script-frame version in `alt/`.
 5. `qa.json` checks the length, the required silences (the roll call and the title), the cut-dead at f480, and each sound's level against the V1 score.
 
-`audio/intro-mix/scripts/verify.py` then confirms that the SFX was built against the current events file, and measures each cue's audible start against its frame (102 of 103 within 20 ms).
+`audio/intro/mix/scripts/verify.py` then confirms that the SFX was built against the current events file, and measures each cue's audible start against its frame (102 of 103 within 20 ms).
 
 **After a picture retime:** re-export the events (§1.7), rebuild the SFX (about 10 s), then re-run the mix (about 2 min).
 
@@ -429,7 +429,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 
 ### 2.6 Mix and deliverables (intro)
 
-[audio/intro-mix/README.md](../audio/intro-mix/README.md) has the full bus plan and ride tables.
+[audio/intro/mix/README.md](../audio/intro/mix/README.md) has the full bus plan and ride tables.
 
 - **Buses.**
   - **Music:** the theme stems with frame-based rides, plus the vocal pad. The score is trimmed to −15.5 LUFS before anything else is added.
@@ -439,7 +439,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
 - **Stems.** The V1 music, SFX and dialogue stems sum to the mix (residual −132 dBFS).
 - **Encode and mux.** `encode_mux.sh` encodes AAC-LC at 256 kb/s with Remotion's ffmpeg, then muxes it with the silent picture. The video is stream-copied, so it is bit-identical to the silent master.
 - **QA.** `qa/deliverables_qa.json` covers loudness, peaks, lengths, the decoded-AAC checks, A/V sync at 13 frames, and every cue's onset.
-- **Outputs.** `audio/intro-mix/intro-ep1-mix-V{1..4}-*.wav` and `.m4a`; `out/season/intro/intro-ep1-V{1..4}-1080p.mp4`.
+- **Outputs.** `audio/intro/mix/intro-ep1-mix-V{1..4}-*.wav` and `.m4a`; `out/season/intro/intro-ep1-V{1..4}-1080p.mp4`.
 
 ### 2.7 Temp beds
 
@@ -450,7 +450,7 @@ The main title is called "The Knee". Its source is [audio/theme/score/](../audio
   - a 1-bit beeper under flashbacks and a shimmer under GLYPH beats.
 
   Levels: the bed sits at −20 LUFS short-term and each accent at −14 LUFS momentary. The build is deterministic, and it rebuilds only when a content hash changes. Status: all 12 beds are built; muxing them into the reels is **in progress** (§1.8).
-- **The intro animatic's temp track** (`audio/animatic/`) and **the sketch mixes** (`audio/mix/`) are earlier passes, kept for history. Parts of them predate SCRIPT v2.1.
+- **The intro animatic's temp track** (`audio/intro/animatic/`) and **the sketch mixes** (`audio/intro/history/sketch-mix/`) are earlier passes, kept for history. Parts of them predate SCRIPT v2.1.
 
 ---
 
@@ -599,7 +599,7 @@ These are technical caveats for anyone rebuilding from a clone.
   - [show/INDEX.md](../show/INDEX.md) still says the visual style is PENDING. The decision box in [style-status.md](../show/bible/style-status.md) is current; the rest of that page is kept as history.
   - The Deviations table in [studio/notes/intro.md](../studio/notes/intro.md) predates the [picture fix pass](../out/season/intro/reports/picFix.md).
   - The intro switch-plan table in [PIXEL_GUIDE §2](../studio/PIXEL_GUIDE.md) predates the v2.1 retimes. For current frames, use `intro-events.json`.
-  - [LISTENING_GUIDE.md](../audio/LISTENING_GUIDE.md) describes the superseded sketch mixes.
+  - [LISTENING_GUIDE.md](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md) describes the superseded sketch mixes.
 - **Typecheck.** The existing errors are in the lookdev code under `src/dev/realism`, per the builder notes.
 - **An empty environment.** `audio/requirements/venv-sfx.txt` is empty, and `.venv-sfx` is unused.
 
@@ -619,8 +619,8 @@ A fresh clone already has every audio master, stem and QA file. What it lacks is
 | 3 | Intro silent master | `bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"` | `out/season/intro/picture/intro-ep1-1080p-silent.mp4` |
 | 4 | *optional:* picture events (after any picture change) | the esbuild + node commands in §1.7 | `out/season/intro/picture/intro-events.json` |
 | 5 | *optional:* score (after a score change) | `cd audio/theme && ../.venv-theme/bin/python build.py V1 V2 V3 V4 motif` (+ analyze, stemtable, make_cues) | `audio/theme/theme-V*.wav`, `stems/`, `cues.json` |
-| 6 | *optional:* intro voices | `audio/intro-vox/scripts`: `build_vo.py` → `build_chant.py` → `build_pad.py` → `assemble.py` (with `.venv-vocals`) | `audio/intro-vox/*.wav`, `stems/` |
-| 7 | *optional:* intro SFX (after step 4) | `audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py` | `audio/intro-sfx/*.wav`, `spotting.*` |
+| 6 | *optional:* intro voices | `audio/intro/vox/scripts`: `build_vo.py` → `build_chant.py` → `build_pad.py` → `assemble.py` (with `.venv-vocals`) | `audio/intro/vox/*.wav`, `stems/` |
+| 7 | *optional:* intro SFX (after step 4) | `audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py` | `audio/intro/sfx/*.wav`, `spotting.*` |
 | 8 | Intro muxed videos (and, after a sound change, the mixes) | the 1080p mux loop in [RENDERING's quick start](RENDERING.md#quick-start-re-render-the-intro-in-one-go) step 3; after a sound change, [RENDERING §3.1 step 7](RENDERING.md#31-the-final-intro) first. `run_all.sh` also works (the 4K steps are skipped without a 4K master). | `out/season/intro/intro-ep1-V{1..4}-1080p.mp4` |
 | 9 | Story-reel beds | `audio/.venv/bin/python audio/reel/build_all.py` | `audio/reel/epNN.wav` |
 | 10 | Story reels | `bash studio/src/dev/reel/render_all.sh` | `out/season/reels/epNN.mp4`, `season.mp4`, `sheets/` |

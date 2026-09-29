@@ -88,8 +88,8 @@ The sound supervisor's P1–P3 notes and the editor's loudness notes. The tables
 ## Rebuild
 
 ```bash
-audio/.venv/bin/python audio/intro-sfx/build_intro_sfx.py   # after any picture change (reads intro-events.json)
-audio/intro-mix/scripts/run_all.sh                           # about 80 s: mixes, stems, AAC, muxes, QA
+audio/.venv/bin/python audio/intro/sfx/build_intro_sfx.py   # after any picture change (reads intro-events.json)
+audio/intro/mix/scripts/run_all.sh                           # about 80 s: mixes, stems, AAC, muxes, QA
 ```
 
 It uses `audio/.venv-mix` (read-only) and the bundled Remotion ffmpeg with libfdk_aac. The scripts are `mixlib.py`, `analyze_inputs.py`, `mix_intro.py`, `encode_mux.sh`, `sfx_balance.py` and `verify.py`. Re-run it after any change to the score, SFX, vox or picture. `python scripts/mix_intro.py --dry V1` prints the balance checks without writing anything.

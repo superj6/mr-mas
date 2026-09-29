@@ -1230,7 +1230,7 @@ def write_manifest(rep):
     ch = [{'id': 'coldopen', 'label': 'COLD OPEN', 'sub': SUB['coldopen'], 'from': 'ep01-v32-coldopen', 'acts': ['COLD OPEN']},
           {'id': 'intro', 'kind': 'video', 'label': 'INTRO', 'act': 'INTRO', 'sub': 'main title · V1 Chip Chamber Jazz (flash-fixed picture)',
            'src': INTRO_MP4, 'in': 0, 'dur': 30, 'fit': 'full',
-           'audio': {'own': True, 'src': 'audio/intro-mix/intro-ep1-mix-V1-chipchamber.wav', 'gain': -3, 'tail': 0.3},
+           'audio': {'own': True, 'src': 'audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav', 'gain': -3, 'tail': 0.3},
            'note': 'The flash-fixed picture (commit 2fb7161: the whip smear held on 2s); the intro\'s own audio as before (-3 dB).'},
           {'id': 'card', 'label': 'CARD', 'act': 'INTRO', 'sub': 'the filename card (2 s)', 'from': 'ep01-full-part1', 'beats': ['card.01']}]
     for seg in ('act1', 'act2', 'act3', 'act4'):

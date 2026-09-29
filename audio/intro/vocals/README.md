@@ -249,7 +249,7 @@ model (about 330 MB, in `~/.cache/huggingface`), plus pip packages in `audio/.ve
 ## Re-render
 
 ```bash
-cd /home/jgon/project/art/mrmas/audio/vocals
+cd /home/jgon/project/art/mrmas/audio/intro/vocals
 PY=../.venv-vocals/bin/python
 $PY scripts/coldopen.py          # 5 cold-open takes + placed files + word_timings.json
 $PY scripts/lines.py             # Nole x3, super. x11

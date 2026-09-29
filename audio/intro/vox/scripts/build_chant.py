@@ -12,7 +12,7 @@ no accent play: each speaks in its stock voice). Whisper = WORLD re-synthesis wi
 Shout = per-letter "Ay!" "Gee!" "Eye!", Rubber Band lift into shouting range, loosely tuned into the Db hit
 (men Ab3, women Db4, +/-35 cents crowd scatter; WORLD keeps 45 % of each spoken contour), formant lift,
 presence, hard compression + drive, -4/+14 ms group spread (no one ahead of the frame), each singer doubled at -3 dB.
-Differences from audio/vocals/chant (v2.0): THE moved f292 -> f295 and shortened so it clears the hit;
+Differences from audio/intro/vocals/chant (v2.0): THE moved f292 -> f295 and shortened so it clears the hit;
 G and I moved onto the exact straight-16th grid; the reversed-whisper pre-swell and the sub-octave
 "ghost" whisper are dropped (horror-trailer tropes; the harmonium swell owns f285-299); the shout is dry.
 """

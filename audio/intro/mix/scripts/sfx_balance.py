@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from mixlib import *   # noqa
 
 VARS = {'V1': 'chipchamber', 'V2': 'orchestralnoir', 'V3': 'pixelswing', 'V4': 'pianopixels'}
-spot = json.load(open(os.path.join(AUDIO, 'intro-sfx/spotting.json')))
+spot = json.load(open(os.path.join(AUDIO, 'intro/sfx/spotting.json')))
 ev = [e for e in spot['events'] if e['layer'] in ('main', 'blip') and not e['id'].startswith('co.key')
       and 'key_tap' not in (e.get('file') or '')]
 import mix_intro
