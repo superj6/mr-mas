@@ -1,0 +1,341 @@
+{
+ "segment": "act2",
+ "layers": [
+  {
+   "room": "whitehouse",
+   "from": 0.0,
+   "to": 75.21,
+   "lead": 0.0,
+   "trail": 1.0
+  },
+  {
+   "room": "bullpen-night",
+   "from": 73.61,
+   "to": 81.19,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "bay",
+   "from": 80.19,
+   "to": 87.03,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "senate",
+   "from": 87.36,
+   "to": 155.73,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room": "rooftop",
+   "from": 159.73,
+   "to": 200.9,
+   "lead": 0.6,
+   "trail": 0.4
+  },
+  {
+   "room (next chapter, leading)": "dark",
+   "from": 200.25,
+   "lead": 1.0
+  },
+  {
+   "pad": "THE WHITE HOUSE",
+   "chords": [
+    "Abmaj9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 0.0,
+   "to": 74.21
+  },
+  {
+   "music": "none (THE BRIDGE: no score)",
+   "from": 74.21,
+   "to": 87.96
+  },
+  {
+   "pad": "THE SENATE",
+   "chords": [
+    "Bbm9",
+    "Eb9sus4"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 87.96,
+   "to": 155.33
+  },
+  {
+   "pad": "THE TOUR",
+   "chords": [
+    "Fm11",
+    "Dbmaj9#11"
+   ],
+   "lufs": -30,
+   "duck_db": 10,
+   "from": 155.33,
+   "to": 160.33
+  },
+  {
+   "pad": "THE ROOFTOP",
+   "chords": [
+    "Dbmaj9#11",
+    "Gm7b5"
+   ],
+   "lufs": -32,
+   "duck_db": 10,
+   "from": 160.33,
+   "to": 196.0
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "freeze_hit_F",
+   11.958
+  ],
+  [
+   "13.05",
+   "paper_flutter",
+   24.42
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   25.569
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   25.757
+  ],
+  [
+   "13.06",
+   "landing_thunk",
+   25.946
+  ],
+  [
+   "13.10",
+   "flame_whoomph",
+   53.95
+  ],
+  [
+   "13.12",
+   "camera_shutter",
+   61.667
+  ],
+  [
+   "13.12",
+   "freeze_hit_F",
+   61.687
+  ],
+  [
+   "13.14",
+   "camera_shutter",
+   68.292
+  ],
+  [
+   "14.04",
+   "post_click",
+   83.408
+  ],
+  [
+   "14.05",
+   "synth:plink",
+   85.208
+  ],
+  [
+   "14.05",
+   "key_tap_soft_01",
+   86.108
+  ],
+  [
+   "15.04",
+   "freeze_hit_C",
+   99.667
+  ],
+  [
+   "15.05",
+   "typing_soft",
+   100.492
+  ],
+  [
+   "15.11",
+   "typing_soft",
+   129.49
+  ],
+  [
+   "15.12",
+   "cloth_rustle",
+   133.8
+  ],
+  [
+   "15.12",
+   "synth:moth",
+   134.85
+  ],
+  [
+   "15.13",
+   "synth:gasp",
+   137.2
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   140.35
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   140.7
+  ],
+  [
+   "15.14",
+   "rubber_stamp_C",
+   141.05
+  ],
+  [
+   "15.15",
+   "folder_slide",
+   149.6
+  ],
+  [
+   "15.15",
+   "rubber_stamp_C",
+   150.95
+  ],
+  [
+   "15.16",
+   "paper_curl",
+   153.542
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   155.333
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   155.333
+  ],
+  [
+   "16.01",
+   "paper_whip",
+   155.683
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   156.083
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   156.083
+  ],
+  [
+   "16.01",
+   "post_click",
+   157.983
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   158.558
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   158.558
+  ],
+  [
+   "16.01",
+   "rubber_stamp_C",
+   159.17
+  ],
+  [
+   "16.01",
+   "synth:stab",
+   159.17
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   162.133
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   163.273
+  ],
+  [
+   "17.01",
+   "pen_run",
+   164.653
+  ],
+  [
+   "17.01",
+   "pen_scribble_short",
+   165.433
+  ],
+  [
+   "17.01",
+   "pen_tick_1",
+   165.973
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   166.533
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   170.933
+  ],
+  [
+   "17.02",
+   "pen_scribble_short",
+   175.233
+  ],
+  [
+   "17.03",
+   "synth:roll",
+   176.708
+  ],
+  [
+   "17.04",
+   "freeze_hit_F",
+   178.125
+  ],
+  [
+   "17.07",
+   "ka_ching",
+   186.058
+  ],
+  [
+   "17.07",
+   "synth:bell",
+   186.078
+  ],
+  [
+   "17.10",
+   "paper_curl",
+   189.283
+  ]
+ ],
+ "sfx_missing": [],
+ "decisions": [
+  "13.01: \"the meeting room's mantel clock and the tripods' clicks, under the act break's black\" = its room, leading the cut by 1.0 s",
+  "15.16: \"the tour's first stamp's thunk, under the senators' delight\" leads the next cut (16.01) by 0.5 s",
+  "17.01: \"rooftop wind under the poster's last stamp\" = its room, leading the cut by 0.6 s"
+ ],
+ "seconds": 201.35,
+ "chapter_seconds": 201.25,
+ "lufs": -29.82,
+ "peak_dbfs": -3.71
+}

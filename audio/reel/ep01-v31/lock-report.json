@@ -1,0 +1,1220 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-coldopen.json",
+  "source": "show/reel/ep01-v3/ep01-v3-coldopen.json",
+  "trims": [],
+  "source_story_s": 26.667,
+  "estimate_s": 26.66,
+  "seconds": 26.667,
+  "beats": 10,
+  "lines": 3,
+  "vo": 0,
+  "jcuts": [],
+  "lcuts": [
+   "e1-co-1-02 (1.02)"
+  ],
+  "edits": [],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-act1.json",
+  "source": "show/reel/ep01-v3/ep01-v3-act1.json",
+  "trims": [
+   "O1"
+  ],
+  "source_story_s": 322.51,
+  "estimate_s": 338.04,
+  "seconds": 337.46,
+  "beats": 50,
+  "lines": 70,
+  "vo": 10,
+  "jcuts": [
+   "e1-a1-5-01 (5.03, -0.50)",
+   "v31-a1-0003 (7.01, -0.60)"
+  ],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "5.02",
+    "what": "name reveal(s) rima dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "5.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "5.02",
+    "what": "names[]: rima at 3.02 s (his voice names them)"
+   },
+   {
+    "beat": "5.03",
+    "what": "name reveal(s) gerg dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "5.07",
+    "what": "new line v31-a1-0001 (rima, 1.95 s) after e1-a1-5-12 +1.0"
+   },
+   {
+    "beat": "5.07",
+    "what": "new line v31-a1-0002 (gerg, 1.12 s) after v31-a1-0001 +0.3"
+   },
+   {
+    "beat": "5.07",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "5.08",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "6.02",
+    "what": "5.00 -> 3.50 s, timed items scaled ×0.70"
+   },
+   {
+    "beat": "6.04",
+    "what": "cut (): 5.00 s"
+   },
+   {
+    "beat": "7.01",
+    "what": "line e1-a1-7-01 dropped (\"A million people, Mas. You're actually crying for \")"
+   },
+   {
+    "beat": "7.01",
+    "what": "new line v31-a1-0003 (rima, 2.76 s) after start-0.6 +0.4"
+   },
+   {
+    "beat": "7.02",
+    "what": "+0.99 s at the tail"
+   },
+   {
+    "beat": "8.04",
+    "what": "line e1-a1-8-03 dropped (\"Search is fine. Totally fine. It's just a chat thi\")"
+   },
+   {
+    "beat": "8.04",
+    "what": "new line v31-a1-0004 (radnus, 3.40 s) after e1-a1-8-02 +0.35"
+   },
+   {
+    "beat": "9.09",
+    "what": "line e1-a1-9-06 dropped (\"Oh, we don't think of it as rent. Everything you b\")"
+   },
+   {
+    "beat": "9.09",
+    "what": "new line v31-a1-0005 (tasya, 7.45 s) after e1-a1-9-05 +0.6"
+   },
+   {
+    "beat": "9.13",
+    "what": "trim 5.50 -> 2.90 s: tail −2.60"
+   },
+   {
+    "beat": "9.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "new beat: SCR → WIDE · the bubble slips out of the TV (lobby, lobby, mas, gerg, tasya, sydney)"
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "on-screen add: \"RAIL: FEB 13, 2023\""
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "on-screen add: \"SYDNEY\""
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "on-screen add: \"2022\""
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "sequence marker 10: the NopeAI lobby: Sydney"
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "sound revolving_door at 0.10 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "sound ui_toast_pop at 0.60 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-10.01",
+    "what": "names[]: sydney at 0.2 s (its plate)"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "new beat: TWO-SHOT · Mas and Sydney, a pixel too close (held) (lobby, lobby, mas, sydney)"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "new line e1-a1-10-06 (sydney, 2.60 s) after start+1.1"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "new line e1-a1-10-01 (mas, 2.10 s) after e1-a1-10-06 +0.6"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "new line e1-a1-10-02 (sydney, 8.00 s) after e1-a1-10-01 +0.5"
+   },
+   {
+    "beat": "v31-10.02",
+    "what": "new line e1-a1-10-03 (mas, 2.00 s) after e1-a1-10-02 +0.8"
+   },
+   {
+    "beat": "v31-10.03",
+    "what": "new beat: TWO-SHOT · Tasya and Sydney: the egg timer (lobby, lobby, tasya, sydney)"
+   },
+   {
+    "beat": "v31-10.03",
+    "what": "on-screen add: \"RAIL: FEB 17, 2023\""
+   },
+   {
+    "beat": "v31-10.03",
+    "what": "on-screen add: \"5\""
+   },
+   {
+    "beat": "v31-10.03",
+    "what": "new line v31-a1-0006 (tasya, 3.46 s) after start+1.2"
+   },
+   {
+    "beat": "v31-10.03",
+    "what": "sound pen_tick_1 at 0.90 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-10.04",
+    "what": "new beat: WIDE → TWO-SHOT · the reset; Gerg closes his laptop (lobby, lobby, mas, gerg, sydney)"
+   },
+   {
+    "beat": "v31-10.04",
+    "what": "new line v31-a1-0007 (sydney, 0.33 s) after start+1.0"
+   },
+   {
+    "beat": "v31-10.04",
+    "what": "sound bell_ding_F6 at 0.30 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen add: \"03/03/23\""
+   },
+   {
+    "beat": "11.01",
+    "what": "on-screen add: \"ATEM · MODEL WEIGHTS · RESEARCHERS ONLY\""
+   },
+   {
+    "beat": "11.01",
+    "what": "new line e1-a1-11-04 (gerg, 3.45 s) after start+1.2"
+   },
+   {
+    "beat": "11.01",
+    "what": "new line e1-a1-11-05 (mas, 2.74 s) after e1-a1-11-04 +0.6"
+   },
+   {
+    "beat": "11.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "11.04",
+    "what": "sound(s) ui_toast_pop dropped with the on-screen item they start on"
+   },
+   {
+    "beat": "11.04",
+    "what": "trim 10.00 -> 8.50 s: tail −1.50"
+   },
+   {
+    "beat": "11.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "11.05",
+    "what": "cut (): 5.00 s"
+   },
+   {
+    "beat": "11.06",
+    "what": "cut (): 5.00 s"
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "new beat: HIGH · THUD: EMIT lands on his desk (bullpen, bullpen, no figures)"
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "on-screen add: \"RAIL: MAR 29, 2023\""
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "on-screen add: \"EMIT\""
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "on-screen add: \"REZEILE\""
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "on-screen add: \"\"Pausing AI Developments Isn't Enough. We Need to Shut It All Down.\"\""
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "sound synth:thud at 0.00 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-12.03",
+    "what": "sound synth:pen at 3.20 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "12.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "12.06",
+    "what": "caption from the plan"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "6.04",
+    "what": "O1 applied (script-v31-notes §1.4; the story ran 21:13.4 without it, over about 21:10): 6.04: Nole's Dec 3 post, whole"
+   }
+  ],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-act2.json",
+  "source": "show/reel/ep01-v3/ep01-v3-act2.json",
+  "trims": [],
+  "source_story_s": 204.739,
+  "estimate_s": 199.63,
+  "seconds": 201.252,
+  "beats": 47,
+  "lines": 41,
+  "vo": 4,
+  "jcuts": [],
+  "lcuts": [
+   "e1-a2-15-01 (14.06)"
+  ],
+  "edits": [
+   {
+    "beat": "13.01",
+    "what": "line v3-vo-11 dropped (\"four companies, one table. radnus has been rehears\")"
+   },
+   {
+    "beat": "13.01",
+    "what": "V.O. v31-vo-01 (6.54 s) at start+1.0"
+   },
+   {
+    "beat": "13.06",
+    "what": "trim 4.54 -> 3.30 s: head −1.15, tail −0.09"
+   },
+   {
+    "beat": "13.13",
+    "what": "line e1-a2-13-15 dropped (\"Whatever you promise in here today, put it in writ\")"
+   },
+   {
+    "beat": "13.13",
+    "what": "new line v31-a2-0001 (nedib, 3.07 s) after start+0.5"
+   },
+   {
+    "beat": "13.13",
+    "what": "new line v31-a2-0002 (nedib, 0.81 s) after v31-a2-0001 +1.0"
+   },
+   {
+    "beat": "13.13",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "13.14",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "14.01",
+    "what": "on-screen add: \"CLASS PHOTO #1 · ♥\" (0.2-1.8 s)"
+   },
+   {
+    "beat": "14.01",
+    "what": "V.O. v31-vo-02 (3.41 s) at start+2.6"
+   },
+   {
+    "beat": "14.01",
+    "what": "length 6.61 s from the V.O. (est_s 6.0)"
+   },
+   {
+    "beat": "14.01",
+    "what": "+4.03 s at the tail"
+   },
+   {
+    "beat": "14.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "14.02",
+    "what": "cut (): 1.25 s"
+   },
+   {
+    "beat": "15.02",
+    "what": "line e1-a2-15-02 dropped (\"Couldn't have said it better myself.\")"
+   },
+   {
+    "beat": "15.02",
+    "what": "new line v31-a2-0003 (lahtnemulb, 3.37 s) after start+1.3"
+   },
+   {
+    "beat": "15.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "15.10",
+    "what": "trim 8.00 -> 7.40 s: head −0.36, tail −0.24"
+   },
+   {
+    "beat": "15.17",
+    "what": "cut (): 1.92 s"
+   },
+   {
+    "beat": "15.18",
+    "what": "cut (): 2.05 s"
+   },
+   {
+    "beat": "16.01",
+    "what": "8.00 -> 5.00 s, timed items scaled ×0.62"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-act3.json",
+  "source": "show/reel/ep01-v3/ep01-v3-act3.json",
+  "trims": [],
+  "source_story_s": 128.037,
+  "estimate_s": 140.82,
+  "seconds": 145.126,
+  "beats": 31,
+  "lines": 27,
+  "vo": 7,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "v31-18.00",
+    "what": "new beat: TWO-SHOT · the home room, opened close; the monitor lit (darkroom, dark, mas)"
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "new beat: POV · the monitor: the landlord's thirteenth key (screen, dark, tasya, kram)"
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "on-screen add: \"MACROSOFT WELCOMES ATEM\""
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "on-screen add: \"JUL 18\""
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "on-screen add: \"KRAM\""
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "on-screen add: \"OPEN SOURCE\""
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "new line v31-a3-0001 (tasya, 1.51 s) after start+2.4"
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "V.O. v31-vo-03 (0.93 s) at after:v31-a3-0001+0.6"
+   },
+   {
+    "beat": "v31-18.00b",
+    "what": "names[]: kram at 0.2 s (its plate)"
+   },
+   {
+    "beat": "18.01",
+    "what": "6.00 -> 3.40 s, cut at the head (the arrival moved away)"
+   },
+   {
+    "beat": "18.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "18.02",
+    "what": "V.O. v31-vo-04 (3.46 s) at start+0.4"
+   },
+   {
+    "beat": "18.02",
+    "what": "length 4.46 s from the V.O. (est_s 4.2)"
+   },
+   {
+    "beat": "18.02",
+    "what": "+1.25 s at the tail"
+   },
+   {
+    "beat": "19.01",
+    "what": "2.00 -> 1.80 s, timed items scaled ×0.90"
+   },
+   {
+    "beat": "19.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "19.11",
+    "what": "cut (): 2.50 s"
+   },
+   {
+    "beat": "19.12",
+    "what": "cut (): 2.50 s"
+   },
+   {
+    "beat": "19.13",
+    "what": "cut (): 2.50 s"
+   },
+   {
+    "beat": "v31-19.02",
+    "what": "new beat: POV · the monitor: SIRRAH's two letters (screen, dark, sirrah)"
+   },
+   {
+    "beat": "v31-19.02",
+    "what": "on-screen add: \"JUL 12\""
+   },
+   {
+    "beat": "v31-19.02",
+    "what": "on-screen add: \"[A] [I]\""
+   },
+   {
+    "beat": "v31-19.02",
+    "what": "on-screen add: \"VP SIRRAH: \"AI is kind of a fancy thing. First of all, it's two letters.\"\""
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "new beat: 2S·SCR · the hands runner: one held room frame (darkroom, dark, mas, orb, nedib, remuhcs, nole)"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "on-screen add: \"JUL 21 · PINKY PROMISE · SIGNED: 7 AI COMPANIES\""
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "on-screen add: \"SEP 13 · REMUHCS · ASKED THE ROOM: SHOULD GOVERNMENT REGULATE AI?\""
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "on-screen add: \"BILLS: 0\""
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "new line e1-a3-19-01 (remuhcs, 2.17 s) after start+4.3"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "new line e1-a3-19-02 (nole, 2.25 s) after e1-a3-19-01 +0.5"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "V.O. v31-vo-05 (1.62 s) at after:e1-a3-19-02+0.8"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "sound orb_servo at 0.80 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "sound orb_servo at 1.90 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-19.03",
+    "what": "sound orb_servo at 3.00 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "20.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "20.06",
+    "what": "line e1-a3-20-05 dropped (\"Okay. That's patched. Rima's going to wake up to f\")"
+   },
+   {
+    "beat": "20.06",
+    "what": "new line v31-a3-0002 (gerg, 1.35 s) after start+0.7"
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "new beat: POV · the monitor: Neleh's paper (screen, dark, no figures)"
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "on-screen add: \"RAIL: OCT 2023\""
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "on-screen add: \"DECODING INTENTIONS\""
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "on-screen add: \"NELEH\""
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "on-screen add: \"\"research preview\"\""
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "on-screen add: \"\"…exactly the kind of frantic corner-cutting that the release of CHATGTP appeared to spur.\"\""
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "V.O. v31-vo-06 (2.73 s) at start+0.8"
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "sequence marker 20A: his monitor: Neleh's paper"
+   },
+   {
+    "beat": "v31-20.07",
+    "what": "names[]: neleh at 0.2 s (its plate)"
+   },
+   {
+    "beat": "v31-20.08",
+    "what": "new beat: TWO-SHOT · Mas and the Orb, the paper soft on the monitor (darkroom, dark, mas, orb)"
+   },
+   {
+    "beat": "21.02",
+    "what": "line e1-a3-21-03 dropped (\"And no paperwork, folks. None at all.\")"
+   },
+   {
+    "beat": "21.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "21.04",
+    "what": "on-screen add: \"verified: human\""
+   },
+   {
+    "beat": "21.04",
+    "what": "line e1-a3-21-07 dropped (\"the one with the pen.\")"
+   },
+   {
+    "beat": "21.04",
+    "what": "lines dropped, the plan keeps 4.4 s for the picture (computed 2.51 s)"
+   },
+   {
+    "beat": "21.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "22.01",
+    "what": "+1.02 s at the head (the plan: the beat opens earlier)"
+   },
+   {
+    "beat": "22.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "23.02",
+    "what": "on-screen add: \"ALYI · NELEH · MADA · THE QUIET VOTE\""
+   },
+   {
+    "beat": "23.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-18.00",
+    "what": "sequence marker SC18 moved here from 18.01 (the scene now opens here)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act4": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-act4.json",
+  "source": "show/reel/ep01-v3/ep01-v3-act4.json",
+  "trims": [],
+  "source_story_s": 523.791,
+  "estimate_s": 512.29,
+  "seconds": 517.736,
+  "beats": 78,
+  "lines": 105,
+  "vo": 5,
+  "jcuts": [],
+  "lcuts": [
+   "a5-27-06 (S3.02)",
+   "v3-a4-0001 (S4.13)",
+   "v3-a4-0004 (S7.07)",
+   "a5-31-04 (S8.08)"
+  ],
+  "edits": [
+   {
+    "beat": "S1.01",
+    "what": "line v3-vo-17 dropped (\"the race is tomorrow. the board wants noon today.\")"
+   },
+   {
+    "beat": "S1.01",
+    "what": "no line left: the plan's 6.2 s (head 1.80 + the old tail would be 2.40 s)"
+   },
+   {
+    "beat": "S1.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-S1.01b",
+    "what": "new beat: TWO-SHOT · Mas and the Orb at the window: a practice lap (office, suite, mas, orb)"
+   },
+   {
+    "beat": "S1.02",
+    "what": "S1.06 merged in (): 1 sound(s), 1 line(s) of which 1 moved"
+   },
+   {
+    "beat": "S1.02",
+    "what": "line v3-vo-18 moved in from S1.06 at start+1.2, with 0 sound(s)"
+   },
+   {
+    "beat": "S1.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.02",
+    "what": "names[]: gerg at 1.26 s (his voice names them)"
+   },
+   {
+    "beat": "S1.02",
+    "what": "names[]: alyi at 2.92 s (his voice names them)"
+   },
+   {
+    "beat": "S1.07",
+    "what": "on-screen add: \"MAS MANALT · ALYI · NELEH · MADA · THE QUIET VOTE\""
+   },
+   {
+    "beat": "S1.07",
+    "what": "new line v31-a4-0001 (alyi, 4.38 s) after start+2.4"
+   },
+   {
+    "beat": "S1.07",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.08",
+    "what": "cut (): 1.25 s"
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "new beat: GFX · HARD CUT: the host's dialog, full frame, bright (call, suite, no figures)"
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "on-screen add: \"Remove MAS MANALT from the meeting?\""
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "on-screen add: \"[ Remove ]\""
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "on-screen add: \"ALYI\""
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "sound dialog_ok_click at 1.90 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "v31-S1.08d",
+    "what": "names[]: alyi at 1.2 s (its plate)"
+   },
+   {
+    "beat": "S1.09",
+    "what": "sound dialog_ok_click at 2.4 dropped: the Cancel click: the Remove dialog (v31-S1.08d) now has the click"
+   },
+   {
+    "beat": "S1.09",
+    "what": "4.79 -> 3.30 s, timed items scaled ×0.69"
+   },
+   {
+    "beat": "S1.09",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S2.02",
+    "what": "S2.04 merged in (): 1 sound(s), 0 line(s) of which 0 moved"
+   },
+   {
+    "beat": "S2.02",
+    "what": "3.29 -> 2.60 s, timed items scaled ×0.79"
+   },
+   {
+    "beat": "S2.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S2.03",
+    "what": "cut (): 3.50 s"
+   },
+   {
+    "beat": "S2.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "new beat: HIGH → OTS · Neleh's desk, 11:52: Mada has joined early (office, office, neleh, mada)"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "on-screen add: \"11:52\""
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "on-screen add: \"NELEH / READ THE CHARTER. LITERALLY.\""
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "on-screen add: \"FOOTNOTES: ∞\""
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "new line v31-a4-0002 (neleh, 1.72 s) after start+2.0"
+   },
+   {
+    "beat": "v31-S3.00p",
+    "what": "sequence marker S3: Neleh's desk: the board's side"
+   },
+   {
+    "beat": "S1.03",
+    "what": "moved (after v31-S3.00p (the board's side opens on it)): room suite -> office (the room it now plays in)"
+   },
+   {
+    "beat": "S1.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.04",
+    "what": "moved (after v31-S3.00p (the board's side opens on it)): room suite -> office (the room it now plays in)"
+   },
+   {
+    "beat": "S1.04",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S1.05",
+    "what": "3.21 -> 2.80 s, timed items scaled ×0.87"
+   },
+   {
+    "beat": "S1.05",
+    "what": "moved (after v31-S3.00p (the board's side opens on it)): room suite -> office (the room it now plays in)"
+   },
+   {
+    "beat": "S1.05",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.00a",
+    "what": "trim 19.96 -> 15.20 s: head −3.10, before:a5-27-02 −0.82, before:a5-27-03 −0.50, before:a5-27-04 −0.01, tail −0.33"
+   },
+   {
+    "beat": "S3.00a",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.01",
+    "what": "+0.29 s at the tail"
+   },
+   {
+    "beat": "S3.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S3.03",
+    "what": "trim 15.50 -> 14.00 s: tail −1.50"
+   },
+   {
+    "beat": "S3.04",
+    "what": "line a5-27-10 dropped (\"For how long?\")"
+   },
+   {
+    "beat": "S3.04",
+    "what": "line a5-27-11 dropped (\"Until the search is done.\")"
+   },
+   {
+    "beat": "S3.04b",
+    "what": "line a5-27-17 dropped (\"More. Soon.\")"
+   },
+   {
+    "beat": "S3.04b",
+    "what": "new line v31-a4-0003 (rima, 0.93 s) after a5-27-16 +0.5"
+   },
+   {
+    "beat": "S3.04b",
+    "what": "caption: \"More. Soon.\" -> \"We'll say we will.\" (the line the plan changed)"
+   },
+   {
+    "beat": "S3.05",
+    "what": "trim 10.58 -> 10.10 s: head −0.48"
+   },
+   {
+    "beat": "S4.02",
+    "what": "trim 19.44 -> 18.90 s: head −0.05, before:a5-27-23 −0.14, before:a5-27-28 −0.35"
+   },
+   {
+    "beat": "S4.02",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.08",
+    "what": "line a5-27-30 dropped (\"Mario, it's Neleh, from the NopeAI board. I'll be \")"
+   },
+   {
+    "beat": "S4.08",
+    "what": "new line v31-a4-0017 (neleh, 6.56 s) after start+1.5"
+   },
+   {
+    "beat": "S4.09",
+    "what": "on-screen add: \"STAFF · STAFF · INVESTORS · INVESTORS\""
+   },
+   {
+    "beat": "S4.09",
+    "what": "on-screen add: \"INVESTORS PUSH TO BRING MANALT BACK\""
+   },
+   {
+    "beat": "S4.09",
+    "what": "line a5-27-35 dropped (\"He's been in the building for hours. We've talked \")"
+   },
+   {
+    "beat": "S4.09",
+    "what": "new line v31-a4-0004 (neleh, 3.09 s) after start+1.4"
+   },
+   {
+    "beat": "S4.09",
+    "what": "new line v31-a4-0005 (neleh, 3.35 s) after v31-a4-0004 +1.0 replacing a5-27-35"
+   },
+   {
+    "beat": "S4.09",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.10",
+    "what": "+0.30 s at the tail"
+   },
+   {
+    "beat": "S4.10b",
+    "what": "trim 15.25 -> 14.45 s: before:a5-27-42 −0.80"
+   },
+   {
+    "beat": "S4.11",
+    "what": "line a5-27-43 dropped (\"Chat… for how long?\")"
+   },
+   {
+    "beat": "S4.11",
+    "what": "no line left: 2.00 s (head 1.00 + the old tail)"
+   },
+   {
+    "beat": "S4.11",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S4.13",
+    "what": "trim 6.70 -> 5.70 s: head −1.00"
+   },
+   {
+    "beat": "S4.14",
+    "what": "line a5-27-46 dropped (\"Step four?\")"
+   },
+   {
+    "beat": "S4.14",
+    "what": "new line v31-a4-0006 (neleh, 1.07 s) after start+1.0"
+   },
+   {
+    "beat": "S4.14",
+    "what": "caption: \"Step four?\" -> \"Step four, Mada?\" (the line the plan changed)"
+   },
+   {
+    "beat": "S5.09",
+    "what": "line a5-29-05 dropped (\"Best time there is. Nobody else is pushing anythin\")"
+   },
+   {
+    "beat": "S5.09",
+    "what": "new line v31-a4-0007 (gerg, 2.98 s) after a5-29-04 +0.4"
+   },
+   {
+    "beat": "S5.09",
+    "what": "new line v31-a4-0008 (mas, 1.16 s) after v31-a4-0007 +0.6"
+   },
+   {
+    "beat": "S5.09",
+    "what": "new line v31-a4-0009 (gerg, 1.20 s) after v31-a4-0008 +0.8"
+   },
+   {
+    "beat": "S5.09",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.06",
+    "what": "line a5-29-06 text: judgment → judgement (the take stands)"
+   },
+   {
+    "beat": "S5.08",
+    "what": "line a5-29-15 dropped (\"That'll be the share sale. Everybody's been waitin\")"
+   },
+   {
+    "beat": "S5.08",
+    "what": "new line v31-a4-0010 (gerg, 2.65 s) after start+1.3"
+   },
+   {
+    "beat": "S5.08",
+    "what": "every line replaced: the beat keeps the plan's 5.83 s (computed 5.33 s)"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "line v3-vo-22 dropped (\"he's typing like it's launch night.\")"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "line v3-vo-23 dropped (\"gerg never waits to be asked.\")"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "lines dropped, the plan keeps 5.4 s for the picture (computed 4.66 s)"
+   },
+   {
+    "beat": "S5.09-back",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "line a5-29-19 dropped (\"ask me when it compiles.\")"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "line v3-vo-23 moved in from S5.09-back at after:a5-29-18+0.6, with 0 sound(s)"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "new line v31-a4-0011 (mas, 0.97 s) after v3-vo-23 +0.5"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S5.09b",
+    "what": "names[]: gerg at 3.62 s (his voice names them)"
+   },
+   {
+    "beat": "S5.11",
+    "what": "new line v31-a4-0012 (mas, 0.94 s) after a5-29-22 +1.2"
+   },
+   {
+    "beat": "S5.11",
+    "what": "new line v31-a4-0013 (tasya, 1.10 s) after v31-a4-0012 +0.5"
+   },
+   {
+    "beat": "S5.11",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S6.01",
+    "what": "on-screen add: \"STAFF LETTER · TO THE BOARD\""
+   },
+   {
+    "beat": "S7.01",
+    "what": "trim 19.83 -> 18.60 s: head −1.23"
+   },
+   {
+    "beat": "S7.03",
+    "what": "line a5-30-07 dropped (\"Hello.\")"
+   },
+   {
+    "beat": "S7.03",
+    "what": "new line v31-a4-0014 (tasya, 0.79 s) after start+1.1"
+   },
+   {
+    "beat": "S7.03",
+    "what": "every line replaced: the beat keeps the plan's 2.8 s (computed 2.79 s)"
+   },
+   {
+    "beat": "S7.03",
+    "what": "caption: \"Hello.\" -> \"Down here.\" (the line the plan changed)"
+   },
+   {
+    "beat": "v31-S7.03b",
+    "what": "new beat: ECU · his phone by the two badges: Tuesday's invite (bullpen, bullpen, no figures)"
+   },
+   {
+    "beat": "v31-S7.03b",
+    "what": "on-screen add: \"Board · Tue 10:00 PM\""
+   },
+   {
+    "beat": "v31-S7.03b",
+    "what": "on-screen add: \"Accept  Decline\""
+   },
+   {
+    "beat": "v31-S7.03b",
+    "what": "on-screen add \"(three circles: a spinner, a fire helmet, a blank)\" is a note for the art pass only (nothing to show in the stick)"
+   },
+   {
+    "beat": "v31-S7.03b",
+    "what": "sound key_tap_soft_02 at 1.80 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "S7.06",
+    "what": "+1.49 s at the tail"
+   },
+   {
+    "beat": "S7.06",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.06",
+    "what": "sound extinguisher_pin at 2.80 s (the plan's sound note, as a stick SFX)"
+   },
+   {
+    "beat": "S7.07b",
+    "what": "cut (): 1.58 s"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "new line v31-a4-0015 (mas, 1.36 s) after a5-30-13 +0.6"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "new line v31-a4-0016 (terb, 1.54 s) after v31-a4-0015 +0.4"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S7.13",
+    "what": "+2.88 s at the tail"
+   },
+   {
+    "beat": "S8.03",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "S8.07",
+    "what": "trim 9.88 -> 9.00 s: tail −0.87"
+   },
+   {
+    "beat": "S8.09b",
+    "what": "cut (): 2.00 s"
+   },
+   {
+    "beat": "S7.07-cont",
+    "what": "cont cleared (its shot before it went)"
+   },
+   {
+    "beat": "S7.13",
+    "what": "exactly 264 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "S7.13",
+    "what": "the Runway hourglass insert: 264 frames, +69 at the tail (runway.md §11.5); its line kept (R7 made free): est_s 6.0 -> 11.000 and line a5-30-18 kept"
+   }
+  ],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep01-v31/ep01-v31-tag.json",
+  "source": "show/reel/ep01-v3/ep01-v3-tag.json",
+  "trims": [],
+  "source_story_s": 33.883,
+  "estimate_s": 40.7,
+  "seconds": 41.335,
+  "beats": 11,
+  "lines": 5,
+  "vo": 2,
+  "jcuts": [],
+  "lcuts": [],
+  "edits": [
+   {
+    "beat": "32.01",
+    "what": "on-screen add: \"RAIL: DEC 6, 2023\""
+   },
+   {
+    "beat": "32.01",
+    "what": "4.50 -> 2.58 s, cut at the tail (items after the cut clamp to it)"
+   },
+   {
+    "beat": "32.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "new beat: POV → NATIVE · ELGOOG's demo film (the Runway insert) (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "on-screen add: \"ELGOOG\""
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "on-screen add: \"LIVE\""
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "new line v31-tg-0001 (elgoog-demo, 1.02 s) after start+4.6"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "v31-vo-07 at start+7.0: after v31-tg-0001 (an earlier line), at 7.00 s"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "V.O. v31-vo-07 (1.16 s) at start+7.0"
+   },
+   {
+    "beat": "32.05",
+    "what": "line e1-tg-32-01 dropped (\"close.\")"
+   },
+   {
+    "beat": "32.05",
+    "what": "new line v31-tg-0002 (mas, 1.06 s) after start+0.7"
+   },
+   {
+    "beat": "32.07",
+    "what": "4.25 -> 3.50 s, timed items scaled ×0.82"
+   },
+   {
+    "beat": "33.01",
+    "what": "caption from the plan"
+   },
+   {
+    "beat": "32.01",
+    "what": "exactly 62 frames (the Runway insert)"
+   },
+   {
+    "beat": "v31-32.01d",
+    "what": "exactly 233 frames (the Runway insert)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "v31-32.01d",
+    "what": "the Runway demo insert is 233 frames (runway.md §4a): est_s 8.6 -> 9.708"
+   },
+   {
+    "beat": "32.01",
+    "what": "the Runway demo splices at tag frame 62 (runway.md §6): est_s 3.2 -> 2.583"
+   }
+  ],
+  "safety_net": []
+ }
+}

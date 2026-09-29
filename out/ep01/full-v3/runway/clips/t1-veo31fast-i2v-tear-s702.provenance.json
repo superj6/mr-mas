@@ -1,0 +1,55 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/image_to_video",
+ "kind": "i2v",
+ "model": "veo3.1_fast",
+ "prompt": "Extreme macro shot, locked-off camera. A single clear bead of water rests on the edges of glowing red-hot metal cooling fins in a dark room. It hisses: the bead skitters and dances across the hot fin edges on a cushion of its own vapour, shrinking as it boils away, and a small puff of white steam bursts up from it and curls upward, then a second, larger puff. The deep red-orange glow of the metal shimmers through the rising steam. The raised metal letters on the dark casing in the foreground stay perfectly still and unchanged. Shallow depth of field, real macro footage. Nothing else moves and nothing enters the frame.",
+ "negative_prompt": "hand, hands, fingers, arm, person, people, face, human, fire, flames, explosion, sparks, camera movement, zoom, new text, changing letters, watermark, caption, subtitles",
+ "seed": 702,
+ "ratio": "1280:720",
+ "duration_s": 4,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {
+  "first": {
+   "path": "out/ep01/full-v3/runway/inputs/tear-702-first-keyframe.png",
+   "sha256": "5da45dd466e614bd030298d9c3a4aa7348fd34ef187411773e2a4231c6c95e66"
+  }
+ },
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "Extreme macro shot, locked-off camera. A single clear bead of water rests on the edges of glowing red-hot metal cooling fins in a dark room. It hisses: the bead skitters and dances across the hot fin edges on a cushion of its own vapour, shrinking as it boils away, and a small puff of white steam bursts up from it and curls upward, then a second, larger puff. The deep red-orange glow of the metal shimmers through the rising steam. The raised metal letters on the dark casing in the foreground stay perfectly still and unchanged. Shallow depth of field, real macro footage. Nothing else moves and nothing enters the frame.",
+  "ratio": "1280:720",
+  "duration": 4,
+  "seed": 702,
+  "audio": false,
+  "negativePrompt": "hand, hands, fingers, arm, person, people, face, human, fire, flames, explosion, sparks, camera movement, zoom, new text, changing letters, watermark, caption, subtitles",
+  "promptImage": [
+   {
+    "uri": "data:image/png;base64,iVBORw0K\u2026",
+    "position": "first"
+   }
+  ]
+ },
+ "credits_before": 205,
+ "estimate_credits": 40.0,
+ "submitted_at": "2026-09-28T22:57:51+00:00",
+ "purpose": "Ep1 Act One 7.02 style leap 9A: the tear on the red-hot GPU (objects only)",
+ "terms_note": "Not re-verified by this tool: per GENAI-UPGRADE-PLAN \u00a75.1, Runway claims no ownership of outputs; Veo outputs carry Google SynthID (invisible). Check each clip for a visible watermark; disclose in the end credits (GENAI \u00a76).",
+ "task_id": "86f41ae6-f8d5-4db5-8da1-587cca8fae3f",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-09-28T22:57:52.613Z",
+ "outputs": [
+  {
+   "file": "t1-veo31fast-i2v-tear-s702.mp4",
+   "sha256": "25c7caaf4ae6b07e8029e3c1fe8d2070c291ba42e00d15e5927e2d69c858cbb4",
+   "bytes": 936321
+  }
+ ],
+ "finished_at": "2026-09-28T22:58:35+00:00",
+ "wall_s": 43.6,
+ "credits_after": 165,
+ "credits_spent": 40
+}

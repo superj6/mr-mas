@@ -1,0 +1,89 @@
+{
+ "seg": "act3",
+ "frames": 3339,
+ "from": 0,
+ "to": 3339,
+ "jobs": 2,
+ "slate_frames": 0,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "track": "/home/jgon/project/art/mrmas/out/ep01/full-v3/picture/act3-v35-stick-mix.wav",
+ "track_offset_frames": 0,
+ "glyph_dir": "/tmp/claude-1000/-home-jgon-project-art-mrmas/94315be4-2a32-4292-9b72-b25066268365/scratchpad/p-act23/glyph",
+ "glyph_mode": "splice",
+ "bundle_built": "2026-09-28T23:32:07.687Z",
+ "sources": {
+  "frame.ts": "7f88a9e67ae6a7b3147251621e914d95",
+  "spec.ts": "b6ac05531856f17d14d282944f781c48",
+  "text.ts": "72329bc058a7264c7abcf0b586c91404",
+  "standin.ts": "711a499e1ad96296e616c118cfe0d854",
+  "anchors.ts": "85458dd9c40611ccd779a1f1f6dad10a",
+  "lipsync.ts": "4c38e3c61f374b20be721c77177cf679",
+  "act3/shots.ts": "97d2de152f1591a9856eefd7d60eec84",
+  "act3/data.ts": "49deba7c6c47041e7913fbd2993bde15"
+ },
+ "standins": [],
+ "layout_problems": [],
+ "segments": [
+  {
+   "from": 0,
+   "to": 1743,
+   "ms": 26285,
+   "spliced": {
+    "pic": 5,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {},
+   "overlaid": {
+    "pic": 0,
+    "anim": 0
+   },
+   "overlayMissing": [],
+   "overlayRefused": {}
+  },
+  {
+   "from": 1743,
+   "to": 3339,
+   "ms": 21201,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {},
+   "overlaid": {
+    "pic": 0,
+    "anim": 0
+   },
+   "overlayMissing": [],
+   "overlayRefused": {}
+  }
+ ],
+ "seconds": 32,
+ "ms_per_frame_per_worker": 14.18,
+ "summary": {
+  "pic": 5,
+  "anim": 0,
+  "marked": [],
+  "off": [],
+  "missing": [],
+  "failed": {},
+  "overlaid": {
+   "pic": 0,
+   "anim": 0
+  },
+  "overlayMissing": [],
+  "overlayRefused": {}
+ }
+}

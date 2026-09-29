@@ -1,0 +1,358 @@
+{
+ "segment": "act3",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v34/ep01-v34-act3.json",
+ "timeline_variant": "kokoro",
+ "seconds": 125.292,
+ "frames": 3007,
+ "rooms": [
+  {
+   "room": "dark",
+   "from": -0.6,
+   "to": 88.275,
+   "first": "v31-18.00",
+   "last": "v32-21.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.5
+  },
+  {
+   "room": "devday",
+   "from": 86.875,
+   "to": 102.608,
+   "first": "22.01",
+   "last": "22.01",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dark",
+   "from": 101.608,
+   "to": 123.042,
+   "first": "22.02",
+   "last": "23.03",
+   "lead": 0.6,
+   "trail": 0.25,
+   "lift_db": 1.8
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 122.792,
+   "to": 125.292,
+   "first": "23.04"
+  }
+ ],
+ "sfx": [
+  [
+   "18.01",
+   "synth:slot_whir",
+   3.675,
+   -16
+  ],
+  [
+   "18.01",
+   "landing_thunk",
+   4.925,
+   -20
+  ],
+  [
+   "18.03",
+   "paper_flutter",
+   11.842,
+   -24
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   12.092,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   12.492,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   12.892,
+   -16
+  ],
+  [
+   "18.03",
+   "orb_servo",
+   13.492,
+   -22
+  ],
+  [
+   "18.04",
+   "orb_scan_sweep",
+   16.708,
+   -16
+  ],
+  [
+   "18.04g",
+   "glyph_blink",
+   17.458,
+   -18
+  ],
+  [
+   "18.05",
+   "dialog_ok_click--chip",
+   18.208,
+   -16
+  ],
+  [
+   "18.06",
+   "orb_servo",
+   20.508,
+   -24
+  ],
+  [
+   "18.06",
+   "synth:chime",
+   23.728,
+   -16
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   27.967,
+   -28
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   28.467,
+   -28
+  ],
+  [
+   "v31-19.03",
+   "orb_servo",
+   29.567,
+   -28
+  ],
+  [
+   "20.01",
+   "synth:keys",
+   34.875,
+   -22,
+   "sound J-cut: leads the cut by 0.5 s"
+  ],
+  [
+   "20.03",
+   "post_click",
+   39.75,
+   -16
+  ],
+  [
+   "20.03",
+   "odometer_ratchet",
+   40.05,
+   -24
+  ],
+  [
+   "20.03",
+   "synth:ring",
+   40.45,
+   -18
+  ],
+  [
+   "20.04",
+   "key_tap_space",
+   42.883,
+   -18
+  ],
+  [
+   "20.04",
+   "synth:call_keys",
+   43.133,
+   -30
+  ],
+  [
+   "20.05",
+   "dialog_ok_click",
+   52.783,
+   -14
+  ],
+  [
+   "20.05",
+   "keyboard_roll",
+   53.033,
+   -22
+  ],
+  [
+   "21.05",
+   "paper_whip",
+   83.783,
+   -18
+  ],
+  [
+   "21.05",
+   "synth:claps",
+   84.383,
+   -24
+  ],
+  [
+   "v32-21.06",
+   "synth:claps",
+   85.875,
+   -30
+  ],
+  [
+   "v32-21.06",
+   "key_tap_space",
+   86.775,
+   -22
+  ],
+  [
+   "22.01",
+   "synth:applause",
+   88.892,
+   -22
+  ],
+  [
+   "22.01",
+   "odometer_ratchet",
+   89.692,
+   -18
+  ],
+  [
+   "22.01",
+   "landing_thunk",
+   92.245,
+   -18
+  ],
+  [
+   "22.02",
+   "post_click--chip",
+   102.408,
+   -20
+  ],
+  [
+   "22.02",
+   "key_tap_soft_01",
+   107.118,
+   -14
+  ],
+  [
+   "v32-22.04",
+   "synth:ratchet_fast",
+   111.062,
+   -30
+  ],
+  [
+   "v32-22.04",
+   "post_click",
+   113.492,
+   -22
+  ],
+  [
+   "v32-22.04",
+   "glyph_blink",
+   114.302,
+   -26
+  ],
+  [
+   "23.02",
+   "post_click--chip",
+   117.942,
+   -22
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "added": [
+  {
+   "what": "Gerg's keys down the line (the call's band), loud in 20.06, on past the last line to the cut",
+   "at": 47.83,
+   "to": 68.52,
+   "peak_dbfs": "-20 (20.04) / -22 (20.05) / -12 (20.06; -16 under the V.O.)",
+   "why": "script-v3-notes \u00a77 For sound: \"Gerg's keys loud in 20.06\"; 20.06 sound cue \"Gerg's keys keep going after the last line\""
+  },
+  {
+   "what": "pre-lap under the black: the crane truck's diesel grind, then glass tings",
+   "at": 123.19,
+   "why": "script 23.04: \"Under the black, the next scene's sound pre-laps: a crane truck's diesel grind, then a dozen small glass tings.\""
+  },
+  {
+   "what": "the monitor's click-off, then the clapping growing through the black glass into the hall",
+   "at": 86.75,
+   "to": 89.27,
+   "peak_dbfs": -26,
+   "why": "v3.2 plan v32-21.06: \"the monitor's click-off; the clapping growing through the black glass into a hall\""
+  },
+  {
+   "what": "the rack's fans up a step with each LED step (+2.5, +5 dB), and SIGN UP's grey-out tick",
+   "at": 110.79,
+   "why": "v3.2 plan v32-22.04: \"the rack's fans up a step; ... the button's grey-out tick\""
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-act3/cues.json",
+  "drop": [],
+  "why": {},
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -37.52,
+  "peak_dbfs": -23.24,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -27.81,
+  "peak_dbfs": -11.94,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 39.751,
+     "boundary": 39.75,
+     "ratio": 17.2,
+     "kind": "step",
+     "before_dbfs": -34.4,
+     "after_dbfs": -28.3,
+     "laid_onset": "post_click"
+    }
+   ],
+   "cutoffs": [
+    {
+     "at": 18.225,
+     "ratio": 86.1,
+     "from_dbfs": -21.5,
+     "to_dbfs": -33.7,
+     "kind": "in-sample",
+     "inside": "dialog_ok_click--chip"
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "dark@act3:v31-18.00",
+   "p5_50ms_dbfs": -41.5,
+   "lift_db": 1.5
+  },
+  {
+   "room": "devday@act3:22.01",
+   "p5_50ms_dbfs": -39.5,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dark@act3:22.02",
+   "p5_50ms_dbfs": -41.8,
+   "lift_db": 1.8
+  }
+ ]
+}

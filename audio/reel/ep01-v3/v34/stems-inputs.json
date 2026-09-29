@@ -1,0 +1,79 @@
+{
+ "fingerprint": "c3fe16b670af44aab8c601e2c891fe713f7d0d9f",
+ "variant": "kokoro",
+ "timelines": {
+  "coldopen": "show/reel/ep01-v34/ep01-v34-coldopen.json",
+  "act1": "show/reel/ep01-v34/ep01-v34-act1.json",
+  "act2": "show/reel/ep01-v34/ep01-v34-act2.json",
+  "act3": "show/reel/ep01-v34/ep01-v34-act3.json",
+  "act4": "show/reel/ep01-v34/ep01-v34-act4.json",
+  "tag": "show/reel/ep01-v34/ep01-v34-tag.json"
+ },
+ "hints": {
+  "coldopen": {
+   "score": "audio/ost/tracks/e01-v3-coldopen/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-coldopen/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act1": {
+   "score": "audio/ost/tracks/e01-v3-act1/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act1/cues.json",
+   "drop": [
+    "siren"
+   ],
+   "why": {
+    "siren": "156.39 s:  code_red  comic panic, the siren as a joke"
+   },
+   "grid": null,
+   "grid_lobby": [
+    96.0,
+    257.671,
+    11.23
+   ],
+   "grid_duel": [
+    95.25,
+    282.307,
+    3.6
+   ]
+  },
+  "act2": {
+   "score": "audio/ost/tracks/e01-v3-act2/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act2/cues.json",
+   "drop": [
+    "knee-stabs"
+   ],
+   "why": {
+    "knee-stabs": "139.29 s: the knee stab on stamp 1 (C F Bb Eb over Ab)"
+   },
+   "grid": null
+  },
+  "act3": {
+   "score": "audio/ost/tracks/e01-v3-act3/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act3/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null
+  },
+  "act4": {
+   "score": "audio/ost/tracks/e01-v3-act4/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-act4/cues.json",
+   "drop": [],
+   "why": {},
+   "grid": null,
+   "build_stop": 326.544
+  },
+  "tag": {
+   "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+   "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+   "drop": [
+    "button-chord"
+   ],
+   "why": {
+    "button-chord": "30.01 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+   },
+   "grid": null
+  }
+ }
+}

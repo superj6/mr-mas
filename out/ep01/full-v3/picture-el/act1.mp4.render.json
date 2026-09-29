@@ -1,0 +1,89 @@
+{
+ "seg": "act1",
+ "frames": 10995,
+ "from": 0,
+ "to": 10995,
+ "jobs": 2,
+ "slate_frames": 0,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "track": null,
+ "track_offset_frames": 0,
+ "glyph_dir": "/tmp/claude-1000/-home-jgon-project-art-mrmas/94315be4-2a32-4292-9b72-b25066268365/scratchpad/p-act1/glyph-act1",
+ "glyph_mode": "splice",
+ "bundle_built": "2026-09-29T05:48:31.269Z",
+ "sources": {
+  "frame.ts": "7f88a9e67ae6a7b3147251621e914d95",
+  "spec.ts": "b6ac05531856f17d14d282944f781c48",
+  "text.ts": "72329bc058a7264c7abcf0b586c91404",
+  "standin.ts": "711a499e1ad96296e616c118cfe0d854",
+  "anchors.ts": "85458dd9c40611ccd779a1f1f6dad10a",
+  "lipsync.ts": "4c38e3c61f374b20be721c77177cf679",
+  "act1/shots.ts": "f1a707406d0c56f70c26c58e4ee764e9",
+  "act1/data.ts": "920c6926b793b7e0f8a50f32ad8018d0"
+ },
+ "standins": [],
+ "layout_problems": [],
+ "segments": [
+  {
+   "from": 0,
+   "to": 5789,
+   "ms": 89646,
+   "spliced": {
+    "pic": 60,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {},
+   "overlaid": {
+    "pic": 0,
+    "anim": 0
+   },
+   "overlayMissing": [],
+   "overlayRefused": {}
+  },
+  {
+   "from": 5789,
+   "to": 10995,
+   "ms": 112812,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {},
+   "overlaid": {
+    "pic": 244,
+    "anim": 0
+   },
+   "overlayMissing": [],
+   "overlayRefused": {}
+  }
+ ],
+ "seconds": 113,
+ "ms_per_frame_per_worker": 18.58,
+ "summary": {
+  "pic": 60,
+  "anim": 0,
+  "marked": [],
+  "off": [],
+  "missing": [],
+  "failed": {},
+  "overlaid": {
+   "pic": 244,
+   "anim": 0
+  },
+  "overlayMissing": [],
+  "overlayRefused": {}
+ }
+}

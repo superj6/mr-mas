@@ -4,13 +4,13 @@
   {
    "room": "dark",
    "from": 0.0,
-   "to": 125.33,
+   "to": 124.04,
    "lead": 0.0,
    "trail": 0.0
   },
   {
    "room (next chapter, leading)": "suite",
-   "from": 124.73,
+   "from": 123.44,
    "lead": 0.6
   },
   {
@@ -22,7 +22,7 @@
    "lufs": -34,
    "duck_db": 10,
    "from": 0.0,
-   "to": 115.33
+   "to": 114.04
   },
   {
    "pad": "ACT-OUT",
@@ -31,8 +31,8 @@
    ],
    "lufs": -32,
    "duck_db": 10,
-   "from": 115.33,
-   "to": 122.83
+   "from": 114.04,
+   "to": 121.54
   }
  ],
  "sfx": [
@@ -89,137 +89,137 @@
   [
    "18.06",
    "orb_servo",
-   17.842
+   17.758
   ],
   [
    "18.06",
    "synth:chime",
-   22.872
+   22.898
   ],
   [
    "19.11",
    "synth:murmur",
-   27.1
+   27.142
   ],
   [
    "19.13",
    "synth:ring",
-   32.2
+   32.242
   ],
   [
    "19.13",
    "drip_clack",
-   34.38
+   34.422
   ],
   [
    "20.01",
    "synth:keys",
-   35.0
+   35.042
   ],
   [
    "20.03",
    "post_click",
-   39.5
+   39.542
   ],
   [
    "20.03",
    "odometer_ratchet",
-   39.8
+   39.842
   ],
   [
    "20.03",
    "synth:ring",
-   40.2
+   40.242
   ],
   [
    "20.04",
    "key_tap_space",
-   42.648
+   42.69
   ],
   [
    "20.04",
    "synth:call_keys",
-   42.898
+   42.94
   ],
   [
    "20.05",
    "dialog_ok_click",
-   52.158
+   52.033
   ],
   [
    "20.05",
    "keyboard_roll",
-   52.408
+   52.283
   ],
   [
    "21.02",
    "tower_pop",
-   81.984
+   81.4
   ],
   [
    "21.02",
    "tower_pop",
-   84.265
+   83.681
   ],
   [
    "21.03",
    "post_click--chip",
-   88.977
+   88.352
   ],
   [
    "21.04",
    "orb_servo",
-   92.588
+   91.999
   ],
   [
    "21.04",
    "orb_servo",
-   92.988
+   92.394
   ],
   [
    "21.04",
    "orb_servo",
-   93.388
+   92.79
   ],
   [
    "21.05",
    "paper_whip",
-   96.2
+   95.283
   ],
   [
    "21.05",
    "synth:claps",
-   96.8
+   95.883
   ],
   [
    "22.01",
    "synth:applause",
-   98.292
+   97.375
   ],
   [
    "22.01",
    "odometer_ratchet",
-   99.092
+   98.175
   ],
   [
    "22.01",
    "landing_thunk",
-   99.842
+   98.925
   ],
   [
    "22.02",
    "post_click--chip",
-   106.742
+   105.283
   ],
   [
    "22.02",
    "key_tap_soft_01",
-   111.782
+   110.273
   ],
   [
    "23.02",
    "post_click--chip",
-   117.983
+   116.692
   ]
  ],
  "sfx_missing": [],
@@ -227,9 +227,9 @@
   "18.01: \"the rack's fans and LED ticks under the act break's black\" = its room, leading the cut by 1.0 s",
   "20.01: \"his keyboard, under the rent meter's first tick\" = its room, leading the cut by 0.4 s"
  ],
- "seconds": 125.433,
- "chapter_seconds": 125.333,
- "lufs": -28.18,
- "peak_dbfs": -3.53,
+ "seconds": 124.142,
+ "chapter_seconds": 124.042,
+ "lufs": -28.17,
+ "peak_dbfs": -3.58,
  "built_by": "audio/ep01/v3-el/tools/el_bed.py"
 }

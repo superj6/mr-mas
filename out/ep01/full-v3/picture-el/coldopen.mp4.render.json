@@ -1,0 +1,71 @@
+{
+ "seg": "coldopen",
+ "frames": 583,
+ "from": 0,
+ "to": 583,
+ "jobs": 2,
+ "slate_frames": 0,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "track": null,
+ "track_offset_frames": 0,
+ "glyph_dir": null,
+ "glyph_mode": "splice",
+ "bundle_built": "2026-09-28T18:40:57.979Z",
+ "sources": {
+  "frame.ts": "7f88a9e67ae6a7b3147251621e914d95",
+  "spec.ts": "2803469e399b4e617817709e56e37b97",
+  "text.ts": "72329bc058a7264c7abcf0b586c91404",
+  "standin.ts": "711a499e1ad96296e616c118cfe0d854",
+  "anchors.ts": "85458dd9c40611ccd779a1f1f6dad10a",
+  "lipsync.ts": "4c38e3c61f374b20be721c77177cf679",
+  "coldopen/shots.ts": "a7126e2223b99722fa99f348bbf334a4",
+  "coldopen/data.ts": "362545fc6a67c51772c7f1b8d357b7c6"
+ },
+ "standins": [],
+ "layout_problems": [],
+ "segments": [
+  {
+   "from": 0,
+   "to": 298,
+   "ms": 4900,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {}
+  },
+  {
+   "from": 298,
+   "to": 583,
+   "ms": 7024,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {}
+  }
+ ],
+ "seconds": 7,
+ "ms_per_frame_per_worker": 20.54,
+ "summary": {
+  "pic": 0,
+  "anim": 0,
+  "marked": [],
+  "off": [],
+  "missing": [],
+  "failed": {}
+ }
+}

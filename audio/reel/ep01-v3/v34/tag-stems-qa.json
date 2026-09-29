@@ -1,0 +1,167 @@
+{
+ "segment": "tag",
+ "variant": "kokoro",
+ "timeline": "show/reel/ep01-v34/ep01-v34-tag.json",
+ "timeline_variant": "kokoro",
+ "seconds": 33.25,
+ "frames": 798,
+ "rooms": [
+  {
+   "room": "dark",
+   "from": -0.6,
+   "to": 33.25,
+   "first": "32.01",
+   "last": "33.05",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 1.2
+  }
+ ],
+ "sfx": [
+  [
+   "32.02",
+   "tape_start",
+   3.208,
+   -24
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   12.05,
+   -21
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   12.75,
+   -27
+  ],
+  [
+   "32.04",
+   "orb_scan_sweep",
+   12.95,
+   -24
+  ],
+  [
+   "32.04",
+   "glyph_blink",
+   14.6,
+   -27
+  ],
+  [
+   "32.07",
+   "key_tap_soft_03",
+   18.912,
+   -24
+  ],
+  [
+   "32.07",
+   "key_tap_soft_05",
+   20.024,
+   -26
+  ],
+  [
+   "33.01",
+   "synth:thud",
+   22.5,
+   -8
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   24.518,
+   -30
+  ],
+  [
+   "33.02",
+   "paper_curl",
+   26.845,
+   -35
+  ],
+  [
+   "33.04",
+   "vault_hum_F",
+   30.01,
+   -31
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "33.04",
+   "name": "synth:button_chord",
+   "claimed_by_score": "button-chord",
+   "evidence": "30.01 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+  }
+ ],
+ "added": [
+  {
+   "what": "the vault's F hum, L-cut from Act Four",
+   "to": 1.5,
+   "why": "plan S8.10 lcut 1.5 s"
+  }
+ ],
+ "score_hints": {
+  "score": "audio/ost/tracks/e01-v3-tag/render/music.wav",
+  "cues": "audio/ost/tracks/e01-v3-tag/cues.json",
+  "drop": [
+   "button-chord"
+  ],
+  "why": {
+   "button-chord": "30.01 s: THE BUTTON: F3 C4 G4 C5, no third (the vault's F hum is its root)"
+  },
+  "grid": null
+ },
+ "room_stem": {
+  "lufs": -38.2,
+  "peak_dbfs": -25.68,
+  "p10_50ms_dbfs": -39.8
+ },
+ "sfx_stem": {
+  "lufs": -33.98,
+  "peak_dbfs": -8.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 14.94,
+     "ratio": 11.7,
+     "from_dbfs": -40.0,
+     "to_dbfs": -55.9,
+     "kind": "in-sample",
+     "inside": "glyph_blink"
+    },
+    {
+     "at": 32.36,
+     "ratio": 13.2,
+     "from_dbfs": -35.4,
+     "to_dbfs": -47.5,
+     "kind": "in-sample",
+     "inside": "vault_hum_F"
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile (see click_scan)"
+ },
+ "room_levels": [
+  {
+   "room": "dark@tag:32.01",
+   "p5_50ms_dbfs": -41.2,
+   "lift_db": 1.2
+  }
+ ],
+ "tail": {
+  "file": "tag-tail.wav",
+  "seconds": 2.0,
+  "lufs": -37.11,
+  "what": "the sound past the tag's last frame (the vault's hum), for the outro's first 2 s"
+ }
+}

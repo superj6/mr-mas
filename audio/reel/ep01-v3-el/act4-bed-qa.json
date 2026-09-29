@@ -4,124 +4,124 @@
   {
    "room": "suite",
    "from": 0.0,
-   "to": 58.94,
+   "to": 57.73,
    "lead": 0.0,
    "trail": 0.4
   },
   {
    "room": "dark",
-   "from": 57.94,
-   "to": 64.36,
+   "from": 56.73,
+   "to": 63.07,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "tpool",
-   "from": 63.36,
-   "to": 67.86,
+   "from": 62.07,
+   "to": 66.57,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "dark",
-   "from": 66.86,
-   "to": 71.86,
+   "from": 65.57,
+   "to": 70.57,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "office",
-   "from": 70.86,
-   "to": 135.65,
+   "from": 69.57,
+   "to": 134.44,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "allhands",
-   "from": 134.65,
-   "to": 151.03,
+   "from": 133.44,
+   "to": 149.82,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "office_night",
-   "from": 150.03,
-   "to": 160.61,
+   "from": 148.82,
+   "to": 159.4,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "boardroom",
-   "from": 159.61,
-   "to": 188.4,
+   "from": 158.4,
+   "to": 187.19,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "split",
-   "from": 187.4,
-   "to": 212.44,
+   "from": 186.19,
+   "to": 211.23,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "cctv",
-   "from": 211.54,
-   "to": 226.86,
+   "from": 210.33,
+   "to": 225.65,
    "lead": 0.5,
    "trail": 0.4
   },
   {
    "room": "boardroom",
-   "from": 225.86,
-   "to": 278.65,
+   "from": 224.65,
+   "to": 277.44,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "dark",
-   "from": 277.25,
-   "to": 399.23,
+   "from": 276.04,
+   "to": 395.73,
    "lead": 1.0,
    "trail": 0.4
   },
   {
    "room": "bullpen",
-   "from": 398.03,
-   "to": 438.07,
+   "from": 394.53,
+   "to": 434.4,
    "lead": 0.8,
    "trail": 0.4
   },
   {
    "room": "fires",
-   "from": 437.07,
-   "to": 494.86,
+   "from": 433.4,
+   "to": 490.82,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "lobby",
-   "from": 493.86,
-   "to": 506.94,
+   "from": 489.82,
+   "to": 502.69,
    "lead": 0.6,
    "trail": 0.4
   },
   {
    "room": "coda",
-   "from": 505.94,
-   "to": 542.71,
+   "from": 501.69,
+   "to": 534.62,
    "lead": 0.6,
    "trail": 0.0
   },
   {
    "room (next chapter, leading)": "darkroom",
-   "from": 542.11,
+   "from": 534.02,
    "lead": 0.6
   },
   {
    "silence": [
-    48.82,
-    52.51
+    47.48,
+    51.17
    ],
    "what": "rooms out, room tone -50 LUFS (the Cancel click to the buzz)"
   },
@@ -134,7 +134,7 @@
    "lufs": -32,
    "duck_db": 10,
    "from": 0.0,
-   "to": 48.82
+   "to": 47.48
   },
   {
    "pad": "THAT NIGHT",
@@ -143,8 +143,8 @@
    ],
    "lufs": -35,
    "duck_db": 10,
-   "from": 58.54,
-   "to": 71.46
+   "from": 57.33,
+   "to": 70.17
   },
   {
    "pad": "THE BOARD'S SIDE",
@@ -154,8 +154,8 @@
    ],
    "lufs": -33,
    "duck_db": 10,
-   "from": 71.46,
-   "to": 278.25
+   "from": 70.17,
+   "to": 277.04
   },
   {
    "pad": "2 AM WITH GERG",
@@ -165,8 +165,8 @@
    ],
    "lufs": -32,
    "duck_db": 8,
-   "from": 278.25,
-   "to": 383.0
+   "from": 277.04,
+   "to": 379.5
   },
   {
    "pad": "THE AVALANCHE",
@@ -176,8 +176,8 @@
    ],
    "lufs": -29,
    "duck_db": 10,
-   "from": 383.0,
-   "to": 392.58
+   "from": 379.5,
+   "to": 389.08
   },
   {
    "pad": "THE RETURN",
@@ -188,383 +188,383 @@
    ],
    "lufs": -31,
    "duck_db": 10,
-   "from": 398.83,
-   "to": 506.54
+   "from": 395.33,
+   "to": 502.29
   },
   {
    "pad": "CODA",
    "chords": "vault_hum_F",
    "lufs": -36,
    "duck_db": 10,
-   "from": 506.54,
-   "to": 542.71
+   "from": 502.29,
+   "to": 534.62
   }
  ],
  "sfx": [
   [
    "S1.03",
    "rubber_stamp_C",
-   9.782
+   9.074
   ],
   [
    "S1.04",
    "rubber_stamp_C",
-   23.991
+   23.283
   ],
   [
    "S1.04",
    "rubber_stamp_C",
-   28.093
+   27.385
   ],
   [
    "S1.05",
    "paper_whip",
-   32.2
+   31.492
   ],
   [
    "S1.06",
    "dialog_ok_click",
-   39.388
+   38.06
   ],
   [
    "S1.09",
    "dialog_ok_click",
-   48.817
+   47.483
   ],
   [
    "S1.11",
    "BUZZ",
-   52.508
+   51.175
   ],
   [
    "S2.03",
    "render_front_sweep",
-   63.958
+   62.667
   ],
   [
    "S2.04",
    "render_front_sweep",
-   67.458
+   66.167
   ],
   [
    "S2.05",
    "reverse_swell_1beat",
-   70.358
+   69.067
   ],
   [
    "S3.00a",
    "bell_ding_F6",
-   73.86
+   72.569
   ],
   [
    "S3.02",
    "key_tap_space",
-   94.415
+   93.207
   ],
   [
    "S3.03",
    "post_click",
-   110.917
+   109.708
   ],
   [
    "S3.04",
    "bell_ding_F6",
-   111.719
+   110.511
   ],
   [
    "S3.04b",
    "key_tap_space",
-   134.863
+   133.655
   ],
   [
    "S3.05",
    "keycap_popcorn",
-   151.325
+   150.117
   ],
   [
    "S4.01",
    "heart_gliss",
-   160.008
+   158.8
   ],
   [
    "S4.02",
    "BUZZ",
-   165.335
+   164.127
   ],
   [
    "S4.02",
    "BUZZ",
-   173.039
+   171.831
   ],
   [
    "S4.02",
    "landing_thunk",
-   179.49
+   178.282
   ],
   [
    "S4.07",
    "DTMF",
-   186.397
+   185.188
   ],
   [
    "S4.07",
    "DTMF",
-   186.747
+   185.538
   ],
   [
    "S4.07",
    "DTMF",
-   187.097
+   185.888
   ],
   [
    "S4.07",
    "DTMF",
-   187.447
+   186.238
   ],
   [
    "S4.08",
    "RING",
-   188.2
+   186.992
   ],
   [
    "S4.08",
    "RING",
-   189.2
+   187.992
   ],
   [
    "S4.08",
    "dialog_ok_click",
-   211.047
+   209.839
   ],
   [
    "S4.08",
    "DIALTONE",
-   211.247
+   210.039
   ],
   [
    "S4.10b",
    "paper_whip",
-   243.092
+   241.884
   ],
   [
    "S4.12",
    "landing_thunk",
-   251.108
+   249.9
   ],
   [
    "S4.12",
    "landing_thunk",
-   251.408
+   250.2
   ],
   [
    "S4.12",
    "landing_thunk",
-   251.708
+   250.5
   ],
   [
    "S4.12",
    "key_tap_space",
-   252.158
+   250.95
   ],
   [
    "S4.13",
    "JANGLE",
-   253.525
+   252.317
   ],
   [
    "S4.13e",
    "JANGLE",
-   270.642
+   269.433
   ],
   [
    "S5.03",
    "key_tap_soft_01",
-   284.251
+   282.819
   ],
   [
    "S5.03",
    "key_tap_soft_02",
-   285.336
+   283.82
   ],
   [
    "S5.03",
    "key_tap_soft_03",
-   286.431
+   284.824
   ],
   [
    "S5.03",
    "key_tap_soft_04",
-   287.076
+   285.446
   ],
   [
    "S5.03",
    "key_tap_soft_05",
-   288.18
+   286.423
   ],
   [
    "S5.04",
    "orb_servo",
-   290.633
+   289.092
   ],
   [
    "S5.09",
    "RING",
-   295.992
+   294.158
   ],
   [
    "S5.09",
    "dialog_ok_click",
-   299.441
+   297.087
   ],
   [
    "S5.06",
    "odometer_ratchet",
-   332.062
+   329.096
   ],
   [
    "S5.06",
    "bell_ding_F6",
-   334.0
+   331.034
   ],
   [
    "S5.08",
    "SLOT",
-   342.598
+   339.64
   ],
   [
    "S5.08",
    "rubber_stamp_C",
-   346.653
+   343.695
   ],
   [
    "S5.11",
    "landing_thunk",
-   364.314
+   361.397
   ],
   [
    "S5.11",
    "landing_thunk",
-   364.614
+   361.697
   ],
   [
    "S5.11",
    "landing_thunk",
-   364.914
+   361.997
   ],
   [
    "S5.11",
    "key_tap_space",
-   365.364
+   362.447
   ],
   [
    "S6.01",
    "landing_thunk",
-   383.8
+   380.3
   ],
   [
    "S6.01",
    "landing_thunk",
-   384.3
+   380.8
   ],
   [
    "S6.01",
    "landing_thunk",
-   384.8
+   381.3
   ],
   [
    "S6.01",
    "landing_thunk",
-   385.3
+   381.8
   ],
   [
    "S6.01",
    "landing_thunk",
-   385.8
+   382.3
   ],
   [
    "S6.04",
    "landing_thunk",
-   392.097
+   388.597
   ],
   [
    "S6.06",
    "freeze_hit_F",
-   396.883
+   393.383
   ],
   [
    "S7.01",
    "key_tap_soft_02",
-   407.23
+   403.73
   ],
   [
    "S7.01",
    "key_tap_soft_04",
-   407.73
+   404.23
   ],
   [
    "S7.01",
    "key_tap_soft_06",
-   408.23
+   404.73
   ],
   [
    "S7.06",
    "landing_thunk",
-   439.875
+   436.208
   ],
   [
    "S7.06",
    "freeze_hit_F",
-   440.125
+   436.458
   ],
   [
    "S7.09",
    "rubber_stamp_C",
-   482.408
+   478.367
   ],
   [
    "S7.09",
    "keycap_popcorn",
-   483.008
+   478.967
   ],
   [
    "S7.13",
    "hourglass_shatter",
-   493.528
+   489.487
   ],
   [
    "S8.01",
    "neon_ignite",
-   495.266
+   491.225
   ],
   [
    "S8.03",
    "alert_bonk",
-   500.858
+   496.817
   ],
   [
    "S8.09",
    "key_tap_soft_01",
-   532.5
+   524.417
   ],
   [
    "S8.09",
    "key_tap_soft_03",
-   533.2
+   525.117
   ],
   [
    "S8.09",
    "key_tap_soft_05",
-   533.9
+   525.817
   ],
   [
    "S8.09",
    "key_tap_soft_06",
-   534.6
+   526.517
   ],
   [
    "S8.10",
    "bell_ding_F6",
-   540.7
+   532.617
   ]
  ],
  "sfx_missing": [],
@@ -578,9 +578,9 @@
   "S7.01: \"the bullpen by day (murmur, packing tape)\" = its room, leading the cut by 0.8 s",
   "S7.05: \"the fires' crackle\" = its room, leading the cut by 0.6 s"
  ],
- "seconds": 542.808,
- "chapter_seconds": 542.708,
- "lufs": -28.79,
- "peak_dbfs": -7.44,
+ "seconds": 534.725,
+ "chapter_seconds": 534.625,
+ "lufs": -28.78,
+ "peak_dbfs": -8.21,
  "built_by": "audio/ep01/v3-el/tools/el_bed.py"
 }

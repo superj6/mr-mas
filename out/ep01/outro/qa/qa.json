@@ -1,0 +1,317 @@
+{
+ "source": "out/ep01/outro/outro-b-v3.mp4 (decoded)",
+ "method": "Each text region of the ENCODED frame, box-reduced to 480x270, is compared with the exact native frame from the Node preview: mean and max absolute RGB error over the region, and the luminance contrast of ink vs ground measured in the encode. Full-size and 480x270 crops are saved for eyes.",
+ "regions": [
+  {
+   "text": "mr. mas \u00b7 ep1.0_research_preview.md",
+   "frame": 128,
+   "box_native": [
+    31,
+    95,
+    204,
+    109
+   ],
+   "mean_abs_err": 1.16,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5",
+   "frame": 128,
+   "box_native": [
+    31,
+    110,
+    237,
+    124
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "prompt: jgon",
+   "frame": 128,
+   "box_native": [
+    31,
+    125,
+    97,
+    139
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "viewer: human \u2713",
+   "frame": 128,
+   "box_native": [
+    31,
+    147,
+    115,
+    161
+   ],
+   "mean_abs_err": 1.34,
+   "max_abs_err": 5,
+   "encoded_contrast": 8.9
+  },
+  {
+   "text": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5  (o50: resolved scan type, before its chip)",
+   "frame": 50,
+   "box_native": [
+    31,
+    110,
+    237,
+    124
+   ],
+   "mean_abs_err": 1.25,
+   "max_abs_err": 8,
+   "encoded_contrast": 8.9
+  },
+  {
+   "text": "mr. mas \u00b7 ep1.0_research_preview.md  (o10: the header as it posts)",
+   "frame": 10,
+   "box_native": [
+    31,
+    95,
+    204,
+    109
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "prompt: jgon  (o80: its chip landed)",
+   "frame": 80,
+   "box_native": [
+    31,
+    125,
+    97,
+    139
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5  (o212: the last beat)",
+   "frame": 212,
+   "box_native": [
+    31,
+    110,
+    237,
+    124
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3
+  },
+  {
+   "text": "the moth at rest on the Orb, lit by the rolled-up eye (o212)",
+   "frame": 212,
+   "box_native": [
+    406,
+    86,
+    438,
+    116
+   ],
+   "mean_abs_err": 1.04,
+   "max_abs_err": 6,
+   "encoded_contrast": 9.0
+  }
+ ],
+ "timing": [
+  {
+   "row": 0,
+   "line": "mr. mas \u00b7 ep1.0_research_preview.md",
+   "chars": 35,
+   "px": 160,
+   "box": [
+    31,
+    95,
+    204,
+    109
+   ],
+   "legibleFrom": 10,
+   "legibleFrames": 215,
+   "seconds": 8.96,
+   "cps": 3.9,
+   "needAt16cpsPlusHalf": 2.69,
+   "perLineOk": true,
+   "earlierFlickers": 0
+  },
+  {
+   "row": 1,
+   "line": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5",
+   "chars": 46,
+   "px": 193,
+   "box": [
+    31,
+    110,
+    237,
+    124
+   ],
+   "legibleFrom": 47,
+   "legibleFrames": 178,
+   "seconds": 7.42,
+   "cps": 6.2,
+   "needAt16cpsPlusHalf": 3.38,
+   "perLineOk": true,
+   "earlierFlickers": 1
+  },
+  {
+   "row": 2,
+   "line": "prompt: jgon",
+   "chars": 12,
+   "px": 53,
+   "box": [
+    31,
+    125,
+    97,
+    139
+   ],
+   "legibleFrom": 49,
+   "legibleFrames": 176,
+   "seconds": 7.33,
+   "cps": 1.6,
+   "needAt16cpsPlusHalf": 1.25,
+   "perLineOk": true,
+   "earlierFlickers": 2
+  },
+  {
+   "row": 3,
+   "line": "viewer: human \u2713",
+   "chars": 15,
+   "px": 71,
+   "box": [
+    31,
+    147,
+    115,
+    161
+   ],
+   "legibleFrom": 121,
+   "legibleFrames": 104,
+   "seconds": 4.33,
+   "cps": 3.5,
+   "needAt16cpsPlusHalf": 1.44,
+   "perLineOk": true,
+   "earlierFlickers": 0
+  }
+ ],
+ "chips": [
+  {
+   "line": "mr. mas \u00b7 ep1.0_research_preview.md",
+   "chipPx": 172,
+   "right": 204,
+   "clearOfOrb": true
+  },
+  {
+   "line": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5",
+   "chipPx": 205,
+   "right": 237,
+   "clearOfOrb": true
+  },
+  {
+   "line": "prompt: jgon",
+   "chipPx": 65,
+   "right": 97,
+   "clearOfOrb": true
+  },
+  {
+   "line": "viewer: human \u2713",
+   "chipPx": 83,
+   "right": 115,
+   "clearOfOrb": true
+  }
+ ],
+ "moth": {
+  "path": {
+   "hits": [],
+   "minGapPx": 146,
+   "overOrbFrames": [
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169
+   ]
+  },
+  "rest": {
+   "box": [
+    410,
+    89,
+    434,
+    102
+   ],
+   "sphereTop": 101,
+   "overlapRows": 2,
+   "sitsOnOrb": true,
+   "restFrom": 189,
+   "restSeconds": 1.75
+  }
+ },
+ "toast_read_in_order": [
+  {
+   "cps": 16,
+   "finishes": [
+    62.5,
+    131.5,
+    149.5,
+    172
+   ],
+   "lastFinish": 172,
+   "cut": 225,
+   "ok": true,
+   "marginFrames": 53
+  },
+  {
+   "cps": 18,
+   "finishes": [
+    56.7,
+    118,
+    134,
+    154
+   ],
+   "lastFinish": 154,
+   "cut": 225,
+   "ok": true,
+   "marginFrames": 71
+  },
+  {
+   "cps": 20,
+   "finishes": [
+    52,
+    107.2,
+    121.6,
+    139.6
+   ],
+   "lastFinish": 139.6,
+   "cut": 225,
+   "ok": true,
+   "marginFrames": 85.4
+  }
+ ],
+ "per_line_ok": true,
+ "ok": true
+}

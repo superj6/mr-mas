@@ -1,0 +1,58 @@
+{
+ "seg": "card",
+ "frames": 48,
+ "from": 0,
+ "to": 48,
+ "jobs": 1,
+ "slate_frames": 0,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "track": "/home/jgon/project/art/mrmas/out/ep01/full-v3/mix/card-mix.wav",
+ "track_offset_frames": 0,
+ "glyph_dir": null,
+ "glyph_mode": "splice",
+ "bundle_built": "2026-09-27T21:28:41.136Z",
+ "sources": {
+  "frame.ts": "f6ec43178098395523a93ecbd7b95b89",
+  "spec.ts": "2803469e399b4e617817709e56e37b97",
+  "text.ts": "72329bc058a7264c7abcf0b586c91404",
+  "standin.ts": "711a499e1ad96296e616c118cfe0d854",
+  "anchors.ts": "85458dd9c40611ccd779a1f1f6dad10a",
+  "lipsync.ts": "4c38e3c61f374b20be721c77177cf679",
+  "card/shots.ts": null,
+  "card/data.ts": null
+ },
+ "standins": [],
+ "layout_problems": [],
+ "segments": [
+  {
+   "from": 0,
+   "to": 48,
+   "ms": 485,
+   "spliced": {
+    "pic": 0,
+    "anim": 0
+   },
+   "marked": [],
+   "spliceOff": [],
+   "missing": [],
+   "failed": {}
+  }
+ ],
+ "seconds": 1,
+ "ms_per_frame_per_worker": 10.1,
+ "summary": {
+  "pic": 0,
+  "anim": 0,
+  "marked": [],
+  "off": [],
+  "missing": [],
+  "failed": {}
+ }
+}
