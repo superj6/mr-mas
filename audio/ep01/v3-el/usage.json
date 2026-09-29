@@ -583,6 +583,46 @@
     "credits_billed": 638
    },
    "used_by_subscription": 638
+  },
+  "phase 11: two new V.O. lines (showrunner)": {
+   "_about": "2026-09-28 (evening): the showrunner's two new Mas V.O. lines in the EL film (v35-vo-05, v35-vo-06), Jeremy at the V.O. settings. subscription_before is phase 10's settled count (no calls between).",
+   "subscription_before": {
+    "tier": "creator",
+    "character_count": 15231,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T15:53:15"
+   },
+   "subscription_after": {
+    "tier": "creator",
+    "character_count": 15262,
+    "character_limit": 131000,
+    "next_character_count_reset_unix": 1793049484,
+    "voice_limit": 30,
+    "voice_slots_used": 2,
+    "professional_voice_limit": 1,
+    "can_extend_character_limit": false,
+    "status": "active",
+    "checked_at": "2026-09-28T20:47:45"
+   },
+   "runs": {
+    "audio/ep01/v3-el/ep01-v35/act1": {
+     "calls": 2,
+     "chars_sent": 70,
+     "credits_billed": 31
+    }
+   },
+   "total": {
+    "calls": 2,
+    "chars_sent": 70,
+    "credits_billed": 31
+   },
+   "used_by_subscription": 31
   }
  },
  "all_phases_total": {

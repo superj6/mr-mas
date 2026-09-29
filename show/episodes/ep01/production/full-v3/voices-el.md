@@ -28,6 +28,23 @@
 
 ---
 
+## AD. Phase 11: two new V.O. lines for the final film (2026-09-28)
+
+**The brief (the showrunner, through the coordinator):** two new Mas V.O. lines in Act One, inside their beats, with no beat length changed. Jeremy at the V.O. settings (speed 0.85, stability 0.65): close, dry, unhurried; the second line a quiet admission, not a boast.
+
+| Id | Line | Beat | Placed at (in the beat) | Voiced | Act One clock (frame) | Film clock (no slate) |
+|---|---|---|---|---|---|---|
+| **v35-vo-05** | now for the backlash. | v31-12.03 (sc 24, EMIT lands), 4.40 s | **2.60–4.15 s** (0.25 s before the cut to PLEASE) | 1.55 s, 155 wpm, 104 Hz | 445.81 s (10,699) | 8:22.1 |
+| **v35-vo-06** | someone gets to be in the room. i'm glad it's me. | v35-19.03 (sc 19, the post finished), 4.13 s; **replaces v35-vo-02** | **0.20–3.97 s** | 3.77 s, one read, 0.58 s between the sentences, 101 Hz | 384.25 s (9,222) | 7:20.6 |
+
+- **Takes:** `audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-05__mas-manalt-C.wav` (in 0.40 s) and `…/v35-vo-06__mas-manalt-C.wav` (in 0.38 s); rows in `lines-A-sr.json` and appended to `lines-A.json`. −18 LUFS, dry, ASR verbatim, no clipped tail. **70 characters sent, 31 credits**; the subscription went from 15,231 to 15,262 of 131,000.
+- **v35-vo-06 is the full line as one read:** it fits (3.77 s in a 4.13 s beat) and keeps the admission in the same breath as the thought. The line now starts 0.2 s into the held close-up (v35-vo-02 started at 1.0 s) and ends 0.16 s before the cut to Publish. v35-vo-02's take is unchanged on disk.
+- **v35-vo-05** starts once the headline has been up 2.4 s and ends 0.25 s before the cut to his sheet (12.04). The beat's quiet pen pre-lap (3.2 s, −30 dB) and the cue's THREAT sting "on the pen's lift" fall under "the backlash": for the mix and score passes.
+- **Placed by hand** in `show/reel/ep01-v35-el/ep01-v35-el-act1.json` (the line objects mark `added`; `_el_retimed.showrunner_lines` lists both). Every beat length and every other line is unchanged; Act One stays 7:36.1 (10,947 frames). The Act One bed is rebuilt (its speech ducking follows the new lines). `episode.mjs --plan`: 33,406 frames, 257 takes, 7 beds, no warnings.
+- **Not in the Kokoro lock:** these lines exist only in the EL film. A re-run of `el_lock.py --lock v35` would drop them and bring back v35-vo-02; re-apply this section after one.
+
+---
+
 ## AC. Phase 10: the v3.5 takes and the EL-timed v3.5 lock (2026-09-28)
 
 **The brief:** the EL takes for every new or changed line of script draft 8.4 (`script-v35-notes.md` §8), except MARIO's, with each role's EL voice and Mas's V.O. at the V.O. settings; a library voice for AUHSOJ, cast by measurement (male, brisk, American; never the real person); Terb's line cut from his EL take; then the EL-timed v3.5 lock with its beds and manifest (the showrunner: "go for it").

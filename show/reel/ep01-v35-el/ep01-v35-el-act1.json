@@ -7724,65 +7724,81 @@
    "caption": "MAS, his face in the page's light, the post finished.",
    "lines": [
     {
-     "id": "v35-vo-02",
+     "id": "v35-vo-06",
      "who": "mas",
-     "text": "someone gets to be in the room.",
-     "t": 1.0,
-     "dur": 1.93,
-     "audio": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-02__mas-manalt-C.wav",
-     "in": 0.36,
+     "text": "someone gets to be in the room. i'm glad it's me.",
+     "t": 0.2,
+     "dur": 3.77,
+     "audio": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-06__mas-manalt-C.wav",
+     "in": 0.38,
      "words": [
       [
        "Someone",
-       -0.01,
-       0.489
+       -0.02,
+       0.446
       ],
       [
        "gets",
-       0.536,
-       0.768
+       0.492,
+       0.713
       ],
       [
        "to",
-       0.826,
-       0.919
+       0.771,
+       0.864
       ],
       [
        "be",
-       0.988,
-       1.093
+       0.934,
+       1.05
       ],
       [
        "in",
-       1.151,
-       1.244
+       1.108,
+       1.177
       ],
       [
        "the",
-       1.302,
-       1.372
+       1.247,
+       1.317
       ],
       [
        "room",
-       1.441,
-       1.813
+       1.398,
+       1.77
+      ],
+      [
+       "i'm",
+       2.466,
+       2.675
+      ],
+      [
+       "glad",
+       2.745,
+       3.035
+      ],
+      [
+       "it's",
+       3.093,
+       3.29
+      ],
+      [
+       "me",
+       3.372,
+       3.732
       ]
      ],
      "tag": "V.O.",
      "cut": false,
      "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
      "el": {
-      "take": "v35-vo-02__mas-manalt-C.wav",
+      "take": "v35-vo-06__mas-manalt-C.wav",
       "device_copy": false,
-      "dry": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-02__mas-manalt-C.wav",
+      "dry": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-06__mas-manalt-C.wav",
       "reused_from": null
      },
-     "kokoro": {
-      "audio": "audio/ep01/v35/act1/wav/v35-vo-02.wav",
-      "in": 0.5,
-      "t": 1.0,
-      "dur": 1.82
-     }
+     "kokoro": null,
+     "added": "showrunner request (2026-09-28): replaces v35-vo-02 ('someone gets to be in the room.') with the full line as one read; EL film only (no Kokoro take)"
     }
    ],
    "onscreen": [],
@@ -8991,7 +9007,50 @@
    "room": "bullpen",
    "chars": [],
    "caption": "THUD. HARD CUT to Mas's desk from above: a magazine drops flat onto the printed pause letter. EMIT, open at an op-ed. Its headline, held to read. The desk takes the shake; his glass's water line does not move.",
-   "lines": [],
+   "lines": [
+    {
+     "id": "v35-vo-05",
+     "who": "mas",
+     "text": "now for the backlash.",
+     "t": 2.6,
+     "dur": 1.55,
+     "audio": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-05__mas-manalt-C.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Now",
+       -0.02,
+       0.263
+      ],
+      [
+       "for",
+       0.356,
+       0.507
+      ],
+      [
+       "the",
+       0.565,
+       0.635
+      ],
+      [
+       "backlash",
+       0.693,
+       1.471
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "v35-vo-05__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep01/v3-el/ep01-v35/act1/wav/v35-vo-05__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": null,
+     "added": "showrunner request (2026-09-28): a new V.O. after the headline has read, before he writes PLEASE; EL film only (no Kokoro take)"
+    }
+   ],
    "onscreen": [
     {
      "text": "RAIL: MAR 29, 2023",
@@ -9230,6 +9289,24 @@
    "e1-a1-11-01",
    "v35-a1-0011",
    "e1-a1-11-03"
-  ]
+  ],
+  "showrunner_lines": [
+   {
+    "id": "v35-vo-05",
+    "beat": "v31-12.03",
+    "t": 2.6,
+    "dur": 1.55,
+    "text": "now for the backlash."
+   },
+   {
+    "id": "v35-vo-06",
+    "beat": "v35-19.03",
+    "t": 0.2,
+    "dur": 3.77,
+    "text": "someone gets to be in the room. i'm glad it's me.",
+    "replaces": "v35-vo-02"
+   }
+  ],
+  "showrunner_lines_note": "2026-09-28: two new Mas V.O. lines placed by hand inside their beats (voices-el.md §AD); every beat length and every other line unchanged. They are not in the Kokoro lock, so a re-run of el_lock.py --lock v35 drops them: re-apply §AD after one."
  }
 }
