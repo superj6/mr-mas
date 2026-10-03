@@ -116,10 +116,10 @@ done
 
 | venv | Requirements | Key packages | Used by |
 |---|---|---|---|
-| `audio/.venv` | `venv.txt` | numpy, scipy, soundfile, pedalboard, tinysoundfont, pretty_midi | `intro-sfx/build_intro_sfx.py`, `intro-sfx/make_previews.py`, `sfx/scripts/build.py` + `layout.py`, `reel/build_all.py` + `reelbed.py`, `animatic/build_temp_track.py` |
+| `audio/.venv` | `venv.txt` | numpy, scipy, soundfile, pedalboard, tinysoundfont, pretty_midi | `intro/sfx/build_intro_sfx.py`, `intro/sfx/make_previews.py`, `sfx/scripts/build.py` + `layout.py`, `reel/build_all.py` + `reelbed.py`, `intro/animatic/build_temp_track.py` |
 | `audio/.venv-theme` | `venv-theme.txt` | the above + matplotlib, pyloudnorm, py7zr | `theme/build.py`, `analyze.py`, `stemtable.py`, `make_cues.py`, `proll.py`, `artifacts.py`; its py7zr also unpacks one sample archive (§2) |
-| `audio/.venv-mix` | `venv-mix.txt` | numpy, scipy, soundfile, pyloudnorm, matplotlib, pedalboard, tinysoundfont | `intro-mix/scripts/*` (`run_all.sh` calls it), `mix/scripts/*` (the superseded sketch mix) |
-| `audio/.venv-vocals` | `venv-vocals.txt` | kokoro 0.9.4, torch 2.14.0+cpu, misaki, spacy + `en_core_web_sm`, pyworld, librosa, pyloudnorm, pedalboard | `vocals/scripts/*`, `intro-vox/scripts/*` |
+| `audio/.venv-mix` | `venv-mix.txt` | numpy, scipy, soundfile, pyloudnorm, matplotlib, pedalboard, tinysoundfont | `intro/mix/scripts/*` (`run_all.sh` calls it), `intro/history/sketch-mix/scripts/*` (the superseded sketch mix) |
+| `audio/.venv-vocals` | `venv-vocals.txt` | kokoro 0.9.4, torch 2.14.0+cpu, misaki, spacy + `en_core_web_sm`, pyworld, librosa, pyloudnorm, pedalboard | `intro/vocals/scripts/*`, `intro/vox/scripts/*` |
 | `audio/.venv-casting` | `venv-casting.txt` | kokoro, torch 2.14.0+cpu, faster-whisper 1.2.1, jiwer, librosa, pyloudnorm, pedalboard | `voices/tools/cast.py` + `vcast.py`, `ep01/act4/dialogue/tools/*`, `studio/src/episodes/ep01/act4/animatic/tools/scratch_vo.py` |
 | `audio/.venv-sfx` | `venv-sfx.txt` (empty) | — | nothing; the SFX scripts run on `audio/.venv`. Don't bother creating it. |
 
@@ -177,7 +177,7 @@ The script is safe to re-run: files already on disk with the right hash are skip
   | Score (`audio/theme`) and the old sketch mix (`audio/intro/history/sketch-mix`) | `theme-pack` + `generaluser-gs` |
   | Reel beds (`audio/reel`) | `theme-pack/UprightPianoKW…` |
   | SFX board (`audio/sfx`) | `vsco2ce-sfx` + `generaluser-gs` |
-  | intro-sfx, intro-vox, intro-mix, vocals, voices, the animatic temp track | none (they read the committed WAVs) |
+  | audio/intro/{sfx,vox,mix,vocals,animatic}, voices | none (they read the committed WAVs) |
 
 - **Pinning.** GitHub files are fetched from `raw.githubusercontent.com/<repo>/<commit>/…`, so an upstream push can't change them. The FreePats archives have versioned file names. If a FreePats file is ever re-issued under the same name, the checksum step reports it.
 - **Leftovers you don't need:** `vsco2ce/.git` and `vsco2ce-sfx/.git` (about 570 MB) are abandoned sparse clones from the first download attempt. The fetch script doesn't recreate them, and nothing reads them.
@@ -212,6 +212,10 @@ The script is safe to re-run: files already on disk with the right hash are skip
 | `__pycache__/`, `*.pyc`, `*.log`, `*.tsbuildinfo`, `studio/.remotion/`, `studio/out/`, `**/tmp/` | not needed: bytecode, build logs and scratch are written again by whatever runs next | — | — | nothing to do |
 
 Every audio master, stem and MIDI file is **committed**, so you never have to rebuild audio to rebuild a video. §3.1 and §3.7 cover rebuilding them anyway, for example after a score or script change.
+
+### 3.0b Episode 1, the finished film (locked)
+
+`out/ep01/full-v3/ep01-v35.mp4` (23:31.58) is assembled from the six EL chapter pictures (`out/ep01/full-v3/picture-el/`), their mixes (`out/ep01/full-v3/mix-v35-el/`), the intro master and outro B by `show/episodes/ep01/production/full-v3/assembly/tools/assemble.py el-v35`. To rebuild one act end to end, use `ops/rebuild-act.sh <act>` (run `--dry-run` first; Act One's lock is spliced by hand, see the script's header and `voices-el.md` §AD–§AE). Everything heavy goes through `ops/heavy.sh`. The recipe and its records: [`assembly.md`](../show/episodes/ep01/production/full-v3/assembly.md) §Z. `sha1sum -c ops/reorg/ep01-final.sha1` checks a rebuild against the published master.
 
 ### 3.1 The final intro
 
@@ -412,7 +416,7 @@ The WAV and MP3 masters, stems, MIDI and QA files are in git. Rebuild them only 
 | Voice casting (10 characters, candidates, reels) | `audio/voices` | `.venv-casting` | none (Kokoro + whisper for QA) | `audio/.venv-casting/bin/python audio/voices/tools/cast.py [slug …]`, then `… cast.py --finalize` ([CASTING.md](../audio/voices/CASTING.md)) | *est.* tens of minutes |
 | Intro SFX / voices / mix | `audio/intro-*` | see §3.1 | none | §3.1 steps 5–7 | |
 | Animatic temp track | `audio/intro/animatic` | `.venv` | none | §3.2 | seconds |
-| Intro sketch mix (superseded by `intro-mix`) | `audio/intro/history/sketch-mix` | `.venv-mix` | theme-pack | `cd audio/intro/history/sketch-mix && ../.venv-mix/bin/python scripts/render_music.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/mix.py V1 V2 V3 V4 && ../.venv-mix/bin/python scripts/qa_plots.py V1 V2 V3 V4` ([LISTENING_GUIDE.md](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | ~80 s + 20 s per variation |
+| Intro sketch mix (superseded by `audio/intro/mix`) | `audio/intro/history/sketch-mix` | `.venv-mix` | theme-pack | `cd audio/intro/history/sketch-mix && ../../../.venv-mix/bin/python scripts/render_music.py V1 V2 V3 V4 && ../../../.venv-mix/bin/python scripts/mix.py V1 V2 V3 V4 && ../../../.venv-mix/bin/python scripts/qa_plots.py V1 V2 V3 V4` ([LISTENING_GUIDE.md](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | ~80 s + 20 s per variation |
 
 - **Caches, all gitignored and all rebuilt on demand:**
   - `audio/theme/cache/calib.json` holds the sample pitch calibration. It is re-measured on the first build, which makes that build slower.
@@ -536,5 +540,5 @@ What this audit actually ran on 2026-09-25, all cheap and CPU-light:
   - A 4-file fetch into a scratch folder, including a path with spaces and `#`, downloaded and verified. The full download was **not** run.
 - **Toolchain:** the bundled ffmpeg's encoder, filter and device lists (§1.3); `npx remotion ffmpeg -version`; `npm ls --depth=0` against the lockfile (clean); `build.py --help` (SFX) and `build_all.py --help` (reels) import cleanly in `audio/.venv`; `audio/.venv-vocals` reports torch `2.14.0+cpu`; `python -m py7zr --help` works in `.venv-theme`.
 - **Inputs:** every file the animatic temp track reads exists. Every video in the tree at audit time (76, before the season reels landed) was probed for size and frame count, and the tables above match them. For example, the moments are 960×540 except `mrollcall` (1920×1080), the lookdev tests are 1920×1080 with 72 frames, and the animatic and reels are 1280×720.
-- **Paths:** the intro-mix Python scripts resolve every path from `mixlib.ROOT`, so the step 7 commands work from any directory.
+- **Paths:** the intro mix's Python scripts (`audio/intro/mix/scripts/`) resolve every path from `mixlib.ROOT` (the repo root, found through `.mrmas-root`), so the step 7 commands work from any directory.
 - **Not run:** any long render, mix or TTS job.

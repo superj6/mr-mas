@@ -2,7 +2,7 @@
 
 This doc explains how the project is built: the code layout, the picture and sound pipelines, the AI-agent workflow that produced them, and the decisions made so far. It is written for a technical reader. The top-level [README](../README.md) has the overview. The step-by-step re-render guide is [RENDERING.md](RENDERING.md). The creative rules live in the writers' room, starting at [show/INDEX.md](../show/INDEX.md).
 
-- **As of:** 2026-09-25. Ep1 Act Four and the season story reels were still in production when this was written, so those parts are marked **in progress**.
+- **As of:** 2026-09-25, with a 2026-10-02 update. The sections marked **in progress** describe the state of 2026-09-25. **Since then, Episode 1 was finished, published and locked** (23:31.58, `out/ep01/full-v3/ep01-v35.mp4`; watch it from [EPISODES.md](../EPISODES.md)). Its v3 film pipeline, which superseded the Act Four animatic of §1.9, is documented beside it: [`show/episodes/ep01/production/full-v3/pipeline.md`](../show/episodes/ep01/production/full-v3/pipeline.md) (locks, the pixel renderer `studio/src/episodes/ep01/pixel/`, the score `audio/ost/tracks/e01-v3-<seg>/`, ElevenLabs voices `audio/ep01/v3-el/`, stems and mixes `audio/reel/ep01-v3/`) and [`assembly.md`](../show/episodes/ep01/production/full-v3/assembly.md) (the film, and `ops/rebuild-act.sh`). Heavy jobs go through `ops/heavy.sh` ([`ops/README.md`](../ops/README.md)). The folder layout was reorganized on 2026-09-29 ([ORGANIZATION-PLAN.md](ORGANIZATION-PLAN.md)).
 - **Everything is made in code.** Pictures are drawn pixel by pixel in TypeScript and rendered with Remotion. Music, sound effects and voices are generated in Python. The pipeline uses no image-generation model and no recording of a real person's voice.
 - **Machine:** one Linux laptop (Intel Core Ultra 7 255U, 14 threads, 30 GB RAM, no GPU) with Node 18.19.1 and Python 3.12. Every render runs on the CPU.
 - **Render policy (showrunner, 2026-09-25):** 1080p (1920×1080) is the maximum. Previews use `--scale=0.5`.
@@ -16,9 +16,9 @@ This doc explains how the project is built: the code layout, the picture and sou
  intro/SCRIPT.md  ───────────────▶ six intro moments ─▶ src/intro (EDL + QC)
  (frames, cues, text)              (shared pixel engine)        │
                                                                 ├─▶ silent master  (out/season/intro/picture/*.mp4)
-                                                                └─▶ intro-events.json ─▶ intro-sfx (spotting) ─┐
+                                                                └─▶ intro-events.json ─▶ intro/sfx (spotting) ─┐
  intro/SCRIPT.md §9 ───────────────────────────────────────────────▶ theme (score, stems) ──────────────────────┼─▶ intro-mix ─▶ mux ─▶ out/season/intro/intro-ep1-V*.mp4
-                                                                     intro-vox (VO, chant, pad) ───────────────┘
+                                                                     intro/vox (VO, chant, pad) ───────────────┘
  reel/epNN.json ─▶ src/reel (story-reel generator) ─▶ out/season/reels/epNN.mp4 ◀─ mux ◀─ audio/reel (temp bed from the same JSON)
  episodes/ep01/production/act4 ─▶ src/episodes/ep01/act4 (rooms, cast, kits, animatic)  ◀── audio/ep01/act4/dialogue
 ```
@@ -297,7 +297,7 @@ The full list of Act Four render commands and composition ids is in [RENDERING �
 | [audio/intro/mix/](../audio/intro/mix/README.md) | The final intro mixes, AAC encodes and muxes | `.venv-mix` | `audio/intro/mix/scripts/run_all.sh` (about 2 min; the legacy 4K lines are skipped when there's no 4K master) |
 | [audio/reel/](../audio/reel/README.md) | Temp beds for the story reels | `.venv` | `audio/.venv/bin/python audio/reel/build_all.py [epNN …] [--force] [--mux]` |
 | audio/ep01/act4/dialogue/ | Act Four dialogue | `.venv-casting` | `HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python audio/ep01/act4/dialogue/tools/record.py [ids …]`, then `final_cast.py`, `reel.py`, `make_doc.py` |
-| audio/intro/animatic/, audio/intro/history/sketch-mix/ | The intro animatic temp track and the first sketch mixes (superseded by intro-mix; see [LISTENING_GUIDE](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | `.venv`, `.venv-mix` | `build_temp_track.py`; `scripts/render_music.py`, then `mix.py` and `qa_plots.py` with `V1 V2 V3 V4` ([RENDERING §3.7](RENDERING.md#37-audio-masters-theme-sfx-vocals-voice-casting-all-committed)) |
+| audio/intro/animatic/, audio/intro/history/sketch-mix/ | The intro animatic temp track and the first sketch mixes (superseded by `audio/intro/mix`; see [LISTENING_GUIDE](../audio/intro/history/sketch-mix/LISTENING_GUIDE.md)) | `.venv`, `.venv-mix` | `build_temp_track.py`; `scripts/render_music.py`, then `mix.py` and `qa_plots.py` with `V1 V2 V3 V4` ([RENDERING §3.7](RENDERING.md#37-audio-masters-theme-sfx-vocals-voice-casting-all-committed)) |
 
 **Virtualenvs.** Each environment is frozen in `audio/requirements/<name>.txt`:
 
@@ -587,10 +587,7 @@ These numbers come from [production-estimates.md](../show/format/production-esti
 
 These are technical caveats for anyone rebuilding from a clone.
 
-- **Hard-coded absolute paths.**
-  - 29 scripts (`.py`, `.sh`, `.ts`) assume the repo lives at `/home/jgon/project/art/mrmas`: the theme sampler, the SFX `dsp.py`, the vocal and casting tools, the Act Four tools, `encode_mux.sh`, `master.sh` and `render_all.sh`.
-  - `master.sh` and `verify.py` also default their scratch folder to a session path under `/tmp/claude-1000/`. Both scripts create that folder if it's missing; `master.sh` takes a scratch folder as its second argument and `verify.py` reads `MIX_TMP`.
-  - To rebuild elsewhere, clone to that path, symlink it, or rewrite the constant. [RENDERING §1.1](RENDERING.md#11-paths-where-the-repo-must-live) has the commands for all three.
+- **Paths (fixed 2026-09-29).** No script hard-codes the repo's location any more: each finds the root through the `.mrmas-root` marker (`MRMAS_ROOT` overrides it), so a clone works anywhere ([RENDERING §1.1](RENDERING.md#11-paths-clone-anywhere)). `master.sh` and `verify.py` still default their scratch folder to a session path under `/tmp/claude-1000/`; both create it if it's missing, `master.sh` takes a scratch folder as its second argument and `verify.py` reads `MIX_TMP`.
 - **4K leftovers (fixed).** `master.sh` defaults to 1080p (`4k`/`all` remain only for legacy use). `encode_mux.sh` and `verify.py` handle a 4K file only if one exists. Under the render policy, don't render 4K.
 - **Reel temp bundle.** `render_all.sh` keeps a bundle of about 30 MB in `out/season/reels/.tmp/` while it runs and deletes it at the end. `.tmp/` is gitignored.
 - **Not auditioned.** No mix, stem, voice or bed has been listened to by a person yet.
@@ -613,7 +610,7 @@ A fresh clone already has every audio master, stem and QA file. What it lacks is
 
 | # | Step | Command | Output |
 |---|---|---|---|
-| 0 | Repo location | clone to `/home/jgon/project/art/mrmas`, or symlink it ([RENDERING §1.1](RENDERING.md#11-paths-where-the-repo-must-live)) | the hard-coded script paths resolve |
+| 0 | Repo location | clone anywhere ([RENDERING §1.1](RENDERING.md#11-paths-clone-anywhere)) | every script finds the root through `.mrmas-root` |
 | 1 | Studio dependencies | `cd studio && npm ci && npx remotion browser ensure` | `node_modules/` (includes Remotion's Chrome and ffmpeg) |
 | 2 | Audio environments and samples (not needed for the intro video itself) | the venv loop in §2.1, then `bash audio/samples/fetch_samples.sh` | `audio/.venv*`, `audio/samples/` |
 | 3 | Intro silent master | `bash studio/src/dev/intro/tools/master.sh 1080 "$(mktemp -d)"` | `out/season/intro/picture/intro-ep1-1080p-silent.mp4` |

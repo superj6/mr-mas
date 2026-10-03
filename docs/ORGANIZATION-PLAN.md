@@ -1,6 +1,6 @@
 # MR. MAS: organization plan
 
-**Status: being executed (2026-09-29); see the execution status in §0.**
+**Status: executed 2026-09-29 to 10-02 (phases 0, 2, 3, 1, 5a, 4 and 6, in the §0.2 order); 2d and 5b are open. See the execution status in §0.** Each phase's manifest, ok-list and `frag` output are in `ops/reorg/phaseN/`.
 - Written 2026-09-26 by the `org-plan` pass (measured at 15:10) and reviewed by the `org-critic` pass (15:45, §10).
 - Revised at about 16:50 by the `orgv2-planfix` pass, which was read-only for the project apart from this file. Its dry runs and tests ran on throwaway copies of the tree in its scratch folder.
 - **Re-measured and re-tested at about 23:15 by `orgv2-planfix-r3`** (read-only too), on a copy of the tree as of 22:03. Every count below is from that run unless it says otherwise. What changed since 16:50 is in §0.1 and §10.6. The two findings that matter most:
@@ -54,13 +54,13 @@ The counts come from the v2 tool's dry run at about 22:10, on a copy of the tree
 | Phase | Status | Commit | Measured before it ran |
 |---|---|---|---|
 | 0 | **done** | `def7809` (+ `fce1fdf`, the leftover pass outputs; `68d3c3a`, the re-fingerprint after the Act Four fix) | — |
-| 2 | **done** | see `git log -- ops/reorg/phase2` | 3 moves, 5 files, 0 manual; fraggrep 1 → 0 |
-| 3 | **done** | see `git log -- ops/reorg/phase3` | 14 moves, 192 files, 7 FRAGMENT (the 3 `sed` hand fixes + the 4 reviewed false positives in §4); fraggrep 135 → 0. `studio/src/reel/data/` re-synced for the rewritten manifests, except three copies (`ep01-v35-act4`, `ep01-v35-el-act4`, `ep01-v35.manifest`) that the Act Four fix `f21d274` left stale against `show/reel/`: only their paths were mapped, since Ep1 is locked. **Open:** `cd studio && node src/reel/sync.mjs` refreshes them when the showrunner allows. |
-| 1 | **done** | see `git log -- ops/reorg/phase1` | 113 code files held `/home/jgon` (`ops/orgmove.py` keeps it on purpose). Converted by `ops/reorg/phase1/p1convert.py` to the §4 resolvers (Python `_repo()`, Bash with the Verification-v2 issue 3 fix, JS/TS `repo()`, cwd-first in the bundled TS tools), plus the §4 depth- and cwd-relative roots (the three `AUDIO = dirname(HERE)`, `mixlib.py`, `verify.py`, `run_all.sh`, the three range `build.sh`). `.mrmas-root` added. Phase 4's dry run: `DEPTH (0)`. The worktree test resolved the Python, Bash and Node roots to the worktree. Blender defaults to `~/Downloads/…` (`BLENDER` overrides). |
-| 5a | **done** | see `git log -- ops/reorg/phase5a` | 5 moves, 120 files, 2 COMPOSED + 14 FRAGMENT, all reviewed records, comments or false positives (`ops/reorg/phase5a/phase5a.ok.tsv`); shims repointed. The invariant lists `src/intro/scenes.ts`, the 14 wrappers and one Ep1 file: `studio/src/episodes/ep01/pixel/act4/art/v35.ts:64` imports `dev/meras/palettes` (an intro moment; phase 5b would rewrite it). **Open:** left in place, since Ep1 is locked. |
-| 4 | **done** | see `git log -- ops/reorg/phase4` | 7 moves, 76 files; DEPTH 0 after phase 1. The §4 hand fixes (`cue.py`, `mix.ts`, the SFX stem labels), `fetch_samples.sh`'s two comments (Verification v2 issue 4), and the outro's own `audio/mix.py` restored in 4 lines (issue 2). **Issue 2 is fixed in `ops/orgmove.py`:** a `.` now ends a path only at a sentence end, so `ops/orgmove.py` differs from Appendix B in that one line. No SFX rebuild or remix (Ep1 is locked, and nothing is re-mixed): `mix_intro.py --dry V1` measured identically before (on the snapshot) and after, and the two SFX spotting records are ok-listed until the next SFX build. fraggrep 78 → 8 (6 prose lines in §4, plus 2 prose comments in `el_intro.py`). |
-| 6 | **done** | see `git log -- ops/reorg/phase6` | 24 moves (the v2 and v3 animatic MP4s were gone; their rows dropped), 25 files rewritten. KEEP list re-audited: still the 8 TS modules, `lock_v2/lock_v3/mix_v3.py`, and `shots-locked-v3.json` + `act4-mix-v3.{wav,cues.json}`, because `report_v4.py` loads v3/v4 and `report_v5.py` loads v3/v4/v5 by version (2 harmless COMPOSED). Nothing in the v3.5 pipeline reads the moved files. 33 FRAGMENT lines are provenance or comments (ok-listed). |
-| 2d, 5b | **open, not run** (optional, medium-high risk) | | |
+| 2 | **done** | `8cb205b` | 3 moves, 5 files, 0 manual; fraggrep 1 → 0 |
+| 3 | **done** | `579fd56` | 14 moves, 192 files, 7 FRAGMENT (the 3 `sed` hand fixes + the 4 reviewed false positives in §4); fraggrep 135 → 0. `studio/src/reel/data/` re-synced for the rewritten manifests, except three copies (`ep01-v35-act4`, `ep01-v35-el-act4`, `ep01-v35.manifest`) that the Act Four fix `f21d274` left stale against `show/reel/`: only their paths were mapped, since Ep1 is locked. **Open:** `cd studio && node src/reel/sync.mjs` refreshes them when the showrunner allows. |
+| 1 | **done** | `8d9030e` | 113 code files held `/home/jgon` (`ops/orgmove.py` keeps it on purpose). Converted by `ops/reorg/phase1/p1convert.py` to the §4 resolvers (Python `_repo()`, Bash with the Verification-v2 issue 3 fix, JS/TS `repo()`, cwd-first in the bundled TS tools), plus the §4 depth- and cwd-relative roots (the three `AUDIO = dirname(HERE)`, `mixlib.py`, `verify.py`, `run_all.sh`, the three range `build.sh`). `.mrmas-root` added. Phase 4's dry run: `DEPTH (0)`. The worktree test resolved the Python, Bash and Node roots to the worktree. Blender defaults to `~/Downloads/…` (`BLENDER` overrides). |
+| 5a | **done** | `be879e2` | 5 moves, 120 files, 2 COMPOSED + 14 FRAGMENT, all reviewed records, comments or false positives (`ops/reorg/phase5a/phase5a.ok.tsv`); shims repointed. The invariant lists `src/intro/scenes.ts`, the 14 wrappers and one Ep1 file: `studio/src/episodes/ep01/pixel/act4/art/v35.ts:64` imports `dev/meras/palettes` (an intro moment; phase 5b would rewrite it). **Open:** left in place, since Ep1 is locked. |
+| 4 | **done** | `f1c0b71` | 7 moves, 76 files; DEPTH 0 after phase 1. The §4 hand fixes (`cue.py`, `mix.ts`, the SFX stem labels), `fetch_samples.sh`'s two comments (Verification v2 issue 4), and the outro's own `audio/mix.py` restored in 4 lines (issue 2). **Issue 2 is fixed in `ops/orgmove.py`:** a `.` now ends a path only at a sentence end, so `ops/orgmove.py` differs from Appendix B in that one line. No SFX rebuild or remix (Ep1 is locked, and nothing is re-mixed): `mix_intro.py --dry V1` measured identically before (on the snapshot) and after, and the two SFX spotting records are ok-listed until the next SFX build. fraggrep 78 → 8 (6 prose lines in §4, plus 2 prose comments in `el_intro.py`). |
+| 6 | **done** | `c8bc2fa` | 24 moves (the v2 and v3 animatic MP4s were gone; their rows dropped), 25 files rewritten. KEEP list re-audited: still the 8 TS modules, `lock_v2/lock_v3/mix_v3.py`, and `shots-locked-v3.json` + `act4-mix-v3.{wav,cues.json}`, because `report_v4.py` loads v3/v4 and `report_v5.py` loads v3/v4/v5 by version (2 harmless COMPOSED). Nothing in the v3.5 pipeline reads the moved files. 33 FRAGMENT lines are provenance or comments (ok-listed). |
+| 2d, 5b | **open, not run** (optional, medium-high risk) | | **2d:** `dialogue/retired/` → `history/` with its three draft-3.2 tools; nothing needs it, and it touches Ep1's Act Four dialogue tools. **5b:** the intro moment code into `src/intro/moments/` and the intro and reel entries beside their code; it rewrites every intro render command and Ep1's `pixel/act4/art/v35.ts` import (Ep1 is locked). Re-measure both with `orgmove.py plan` before running either. |
 
 **KEEP until the Act Four v5 pixel lock** (not moved to `history/`, not deleted):
 - **The eight v2/v3 TS modules that the v4 animatic composer imports:** `animatic/{data-v2,data-v3,sound-v3,frame,shots,shots3,plan25,plan25v3}.ts`.
@@ -229,8 +229,7 @@ mrmas/
 ├── EPISODES.md                  the published episodes and where to watch them (Ep1 on YouTube)
 ├── .mrmas-root                  NEW (phase 1): empty marker that every tool uses to find the project root
 ├── docs/
-│   ├── README.md                NEW: index of the four docs below
-│   ├── STATUS.md                NEW (docs pass): the single "start here", refreshed at every milestone
+│   ├── README.md STATUS.md      not written (open, §8); the top README.md is the start page
 │   ├── PIPELINE.md              architecture and decisions (refresh after each phase)
 │   ├── RENDERING.md             how to re-make everything (refresh after each phase)
 │   └── ORGANIZATION-PLAN.md     this file: layout and conventions
@@ -990,7 +989,7 @@ bash studio/src/intro/tools/master.sh 1080 "$(mktemp -d)"
 
 ## 8. README outlines and handoff gaps
 
-**Top-level READMEs to write.** Each is one screen, with links out.
+**Top-level READMEs to write** (still open at 2026-10-02: none of the six exists yet. The top `README.md` now covers where things live, the rebuild, heavy jobs and starting Ep2, and §3 is the map). Each is one screen, with links out.
 
 | File | Contents |
 |---|---|

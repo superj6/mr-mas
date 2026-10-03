@@ -6,11 +6,12 @@ Operational helpers for running this project on one laptop.
   `ops/heavy.sh npx remotion render ... --concurrency=4`
   - At most `MRMAS_HEAVY_SLOTS` (default 2) heavy jobs run at once machine-wide, using flock slots `/tmp/mrmas-heavy.N.lock`.
   - It waits until memory, swap and load have headroom, and runs at low priority.
-  - Tunables: `MRMAS_MIN_AVAIL_GB` (default 8), `MRMAS_MAX_SWAP_GB` (7: swap pages linger after a spike, so memory available is the main guard), `MRMAS_MAX_LOAD` (16), `MRMAS_HEAVY_WAIT` (3600 s).
+  - Tunables: `MRMAS_MIN_AVAIL_GB` (default 10; lower it for a light check when other apps hold memory but pressure is 0), `MRMAS_MAX_SWAP_GB` (7: swap pages linger after a spike, so memory available is the main guard), `MRMAS_MAX_LOAD` (16), `MRMAS_HEAVY_WAIT` (3600 s).
   - Why: on 2026-09-27 six passes at once pushed load to 42 on 14 threads and swap to 7.4 of 8 GB, which froze the laptop and killed the session.
 
 - `rebuild-act.sh <act> [--from STEP] [--only STEP] [--dry-run]`: rebuild one changed act of the Ep1 film end to end (lock, score, mix, picture, mux, film), each heavy step through `heavy.sh`. Documented in its header and in `show/episodes/ep01/production/full-v3/assembly.md` §Z.5.
   - `--dry-run` runs nothing and writes nothing in the repo. It prints every command in order and checks that every path it names exists, and for the film step every input `assemble.py` reads. It exits 1 if anything is missing. Use it first, and after any move.
+  - **Act One stops at its lock step on purpose.** Its EL timeline carries two hand-placed V.O. lines that `el_lock.py` would drop, and `el_lock.py --fixed S7.13 <seg> …` swallows the segment names after `--fixed` and rebuilds all six segments (`voices-el.md` §AD, §AE). Splice a changed Act One beat by hand, then run `--from mix`.
 
 - `pressure-governor.sh [minutes] &`: pauses this project's heavy jobs (their `heavy.sh` scopes) while the session's memory pressure is above 20%, and resumes them under 5%. It never touches another project's processes.
 
@@ -29,7 +30,7 @@ Operational helpers for running this project on one laptop.
 ## 2026-09-28: every heavy job gets its own memory scope
 
 On 2026-09-27 at 19:51, systemd-oomd killed the terminal's whole cgroup, taking down the Claude Code session and every agent it had launched. That cgroup peaked at 23.9 GB, with 1.3 GB of swap: both composers were rendering the ElevenLabs score, the sound pass was building stems, and renders were running, all inside the terminal's cgroup.
-- **The fix:** `heavy.sh` now runs each job through `systemd-run --user --scope -p MemoryMax=$MRMAS_HEAVY_MEM_MAX` (default 8G, with MemorySwapMax 1G). A runaway job hits its own cap, or oomd picks its scope, and the session survives. `MRMAS_HEAVY_NO_SCOPE=1` turns the scope off.
+- **The fix:** `heavy.sh` now runs each job through `systemd-run --user --scope -p MemoryMax=$MRMAS_HEAVY_MEM_MAX` (default 8G, with no swap: `MRMAS_HEAVY_SWAP_MAX`, default 0). A runaway job hits its own cap, or oomd picks its scope, and the session survives. `MRMAS_HEAVY_NO_SCOPE=1` turns the scope off.
 - **`MIN_AVAIL_GB` default** raised from 8 to 10.
 - **Practice:**
   - Run at most 3 agents at once.

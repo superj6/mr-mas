@@ -56,29 +56,23 @@ The score is **"The Knee (Main Title)," V1 "Chip Chamber Jazz"**: felt piano, ch
 
 The writers' room lives in [`show/`](show/INDEX.md): the bible, about 80 character files, a verified timeline from 1985 to Sep 2026, and 12 episode folders (outline, beats, flashbacks, facts with sources, gags). Episodes 1–3 have full teleplays.
 
-## What's done so far (as of 2026-09-25)
+## Where things stand (2026-10-02)
 
-- **Research.** A web-verified timeline, plus sweeps of real-world figures and fact checks. Everything is in `show/_sources/research/` and the facts files have source tags.
-- **Writers' room.** Bible, naming registry (the Trump equivalent is **RUMPT**), guardrails, characters, the flashback map, and a recurring-gag tracker.
-- **Visual development.** Nine structurally different style tests went into the choice of pixel art: paper puppet, satire puppet, pixel adventure, screenlife, graphic shape, anime, tonal renderers, title cards in nine styles, and more.
-- **The opening titles.** The master script is [`show/intro/SCRIPT.md`](show/intro/SCRIPT.md) (v2.1). Also done: a stick-figure animatic, the finished 30 s pixel intro with four score variations (V1 locked), and a four-lens review and fix pass.
-- **Audio.** The theme (4 variations, stems, MIDI), 131 sound effects with per-character dialogue blips, vocals, and voice casting for 10 characters.
-- **Episode development.** Format and production-time analysis measured from our own build logs; pacing model; full teleplays for Eps 1–3.
-- **In progress.**
-  - Ep1 Act Four ("THE BLIP, told twice") is rewritten in Mas's point of view and in production prep: rooms, cast, kits, dialogue, and the act animatic.
-  - A full-length Ep1 stick-figure animatic.
-  - A condensed story reel of the whole season.
+- **Episode 1 is finished, published and locked.** `ep1.0_research_preview.md`, 23:31.58 (33,878 frames): cold open, the intro, four acts, the tag and the outro. Watch it from [EPISODES.md](EPISODES.md). The master is `out/ep01/full-v3/ep01-v35.mp4` (ignored by git like every video; its SHA-1 and its chapter inputs' are in `ops/reorg/ep01-final.sha1`). How it was made, round by round: [`show/episodes/ep01/production/full-v3/`](show/episodes/ep01/production/full-v3/) (`PLAN.md`, `pipeline.md`, `version-ledger.md`, `assembly.md`). Release copy: [`show/episodes/ep01/release.md`](show/episodes/ep01/release.md). Nothing in Ep1 changes from here on.
+- **The season is written and planned.** The bible, about 80 characters, a verified timeline from 1985 to Sep 2026, 12 episode folders (outlines, beats, facts with sources, gags), full teleplays for Eps 1–3, and the season's ML-concept plan ([`show/bible/ml-concepts.md`](show/bible/ml-concepts.md): one concept in depth per episode, Ep2–11).
+- **Shared assets are done:** the 30 s opening titles (four score variations, V1 used), the theme, 131 sound effects with dialogue blips, voice casting, the pixel engine, cast, rooms and kits.
+- **Next: Episode 2.** See [Starting the next episode](#starting-the-next-episode).
 
 ## How it's made
 
-Everything here was produced by AI agents (Claude) working in parallel as orchestrated workflows, directed by the showrunner at approval gates. There's no hand animation, no DAW and no image-generation model.
+Everything here was produced by AI agents (Claude) working in parallel as orchestrated workflows, directed by the showrunner at approval gates. There's no hand animation and no DAW. Generated video appears only as two short inserts in Ep1, made with Runway and composited into the pixel picture ([`runway.md`](show/episodes/ep01/production/full-v3/runway.md)); the clay CLOD insert is a Blender render.
 
 | Layer | Tools |
 |---|---|
 | Picture | [Remotion 4](https://www.remotion.dev/) (React + TypeScript) renders every frame. A custom **pixel engine** (`studio/src/shared/pixel/`) draws a 480×270 indexed framebuffer, and every style switch is a palette remap. Characters, rooms and kits are code-defined sprites and portraits with swappable parts. |
 | Music | Python with `pretty_midi` writes the score on the beat grid, with swing and humanisation. Chip voices and the 808 are synthesized in `numpy`. Other instruments come from free sample libraries (VSCO 2 CE, VCSL, Salamander, Upright Piano KW, GeneralUser GS): the project's own sampler plays the WAV libraries and `tinysoundfont` plays the SoundFonts. Mixing and mastering to −14 LUFS is the project's own numpy/scipy code, measured with `pyloudnorm`. |
 | SFX | Procedural synthesis with `numpy` and Spotify's `pedalboard`, layered with instrument samples from VS Chamber Orchestra 2 CE (CC0) and the GeneralUser GS SoundFont (licenses in [`audio/samples/LICENSES.md`](audio/samples/LICENSES.md)). |
-| Voices | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (Apache-2.0) stock voices, shaped per character from written casting briefs ([`audio/voices/CASTING.md`](audio/voices/CASTING.md)). No voice cloning. |
+| Voices | [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (Apache-2.0) stock voices, shaped per character from written casting briefs ([`audio/voices/CASTING.md`](audio/voices/CASTING.md)). The Ep1 film uses ElevenLabs library voices for most of the cast ([`voices-el.md`](show/episodes/ep01/production/full-v3/voices-el.md)). No voice cloning. |
 | Glue | The ffmpeg bundled with Remotion for encoding and muxing. Timing comes from one grid (96 BPM / 24 fps, 15 frames per beat). Picture events are exported to JSON and drive sound-effect spotting. |
 | Process | Research → design panels → synthesis → adversarial critics → revision. Builders own their files, render and *look* at their frames, then go through art-director and editor review, a fix pass, and showrunner approval. |
 
@@ -86,15 +80,41 @@ For the full architecture, the agent workflow and the decisions log, see [`docs/
 
 ## Repository layout
 
+The full map, with the rules for where new work goes, is [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 (conventions) and §3 (the tree).
+
 ```
-show/      writers' room: bible, characters, episodes/epNN (outline, beats, facts, gags, script), timeline, intro script, format docs
-studio/    Remotion project: src/shared/pixel (engine, cast, rooms, kits), src/intro (the opening), src/reel (story-reel generator),
-           src/episodes/ep01/act4, lookdev frames; ART_GUIDE.md, PIXEL_GUIDE.md, INTRO_PIXEL_BRIEF.md, notes/
-audio/     theme/, sfx/, vocals/, voices/, intro-*/ (final intro stems and mixes), ep01/, reel/; requirements/*.txt;
-           samples/ (LICENSES.md, fetch_samples.sh, MANIFEST.sha256; the libraries themselves are downloaded)
-out/       renders: stills and contact sheets are committed; videos are not
-docs/      PIPELINE.md (how it's built), RENDERING.md (how to re-create every output)
+EPISODES.md  the published episodes and where to watch them
+show/      writers' room: bible/ (incl. ml-concepts.md), characters/, episodes/epNN/ (outline, beats, facts, gags, script;
+           production/ for an episode's production docs: ep01/production/full-v3/ is the Ep1 film), timeline/, intro/,
+           reel/ (stick timelines and manifests per round), production/SHOWRUNNER-NOTES.md (the showrunner's notes)
+studio/    Remotion project (run npx remotion from here): src/shared/ (pixel engine, cast, rooms, kits, makeRoot),
+           src/intro/ (the opening), src/episodes/ep01/pixel/ (the Ep1 film's shots and renderer), src/episodes/ep01/act4/
+           (the older Act Four animatic), src/reel/ (story reels), src/dev/ (lookdev and R&D); ART_GUIDE.md, PIXEL_GUIDE.md
+audio/     theme/, sfx/, voices/, intro/ (the opening's mix, sfx, vox, vocals, animatic), ost/ (the score; tracks/e01-v3-<seg>/
+           is Ep1's), ep01/ (Ep1 dialogue: v3-el/ is the ElevenLabs cast and takes), reel/ (beds; ep01-v3/ has the episode's
+           stems and mix code); requirements/*.txt; samples/ (licences, fetch script, manifest; the libraries are downloaded)
+out/       renders: season/ (the intro, the story reels), epNN/ (ep01/full-v3/ holds the Ep1 film and its chapters),
+           lookdev/ (style R&D), review/ (the review page). Stills and contact sheets are committed; videos are not
+ops/       heavy.sh and pressure-governor.sh (memory safety), rebuild-act.sh (rebuild an Ep1 act), the reorg tools, keyscan.py
+docs/      PIPELINE.md (how it's built), RENDERING.md (how to re-create every output), ORGANIZATION-PLAN.md (the layout)
 ```
+
+## Running heavy jobs safely
+
+This is a 30 GB laptop that has frozen and killed its terminal under memory pressure. **Every heavy job** (Remotion renders, voice recording, OST builds, stems and mixes, Blender, big encodes) **goes through `ops/heavy.sh`**: `ops/heavy.sh npx remotion render ... --concurrency=4`. It allows two heavy jobs machine-wide, waits for free memory and low pressure, and runs each job in its own memory-capped scope. Keep `ops/pressure-governor.sh &` running during heavy work: it pauses this project's heavy jobs when memory pressure rises. Run at most three agents at once. Details: [`ops/README.md`](ops/README.md).
+
+## Rebuilding an act of Episode 1
+
+Ep1 is locked, but its pipeline is the model for the next episodes. `ops/rebuild-act.sh <act>` rebuilds one act end to end (lock, score, mix, picture, mux, and the film), each heavy step through `heavy.sh`. Run `ops/rebuild-act.sh <act> --dry-run` first: it prints every command and checks every path, including every input the film assembly reads. Two cautions:
+- **Act One's lock is spliced by hand.** Its committed EL timeline carries two hand-placed V.O. lines (`voices-el.md` §AD). `el_lock.py` drops them on a re-run, and its `--fixed` flag swallows the segment names that follow it, so `el_lock.py --lock v35 --fixed S7.13 act2 …` rebuilds all six segments, Act One included (§AE). The script stops at Act One's lock step for that reason.
+- The steps and their records are in [`assembly.md`](show/episodes/ep01/production/full-v3/assembly.md) §Z.5.
+
+## Starting the next episode
+
+1. Read [`show/production/SHOWRUNNER-NOTES.md`](show/production/SHOWRUNNER-NOTES.md) (the showrunner's standing notes), the bible ([`show/bible/`](show/bible/), especially `guardrails.md`, `pov-and-framing.md` and `ml-concepts.md`), and the episode's folder, starting with [`show/episodes/ep02/outline.md`](show/episodes/ep02/outline.md).
+2. Follow Ep1's production as the template: [`full-v3/PLAN.md`](show/episodes/ep01/production/full-v3/PLAN.md) and [`pipeline.md`](show/episodes/ep01/production/full-v3/pipeline.md), and the lessons in its `version-ledger.md`.
+3. Put the new work where [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 says ("Starting a new episode"): `show/episodes/ep02/production/<cut>/`, `studio/src/episodes/ep02/`, `out/ep02/<cut>/`, `audio/ep02/` and `audio/ost/tracks/e02-<cut>-<seg>/`. Copy Ep1's tools rather than editing them.
+4. Add the episode to [EPISODES.md](EPISODES.md) when it's published.
 
 ## Re-rendering
 
