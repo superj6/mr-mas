@@ -10,7 +10,7 @@
 - **Everything here is a target on the beat grid:** 96 BPM, 1 beat = 0.625 s = 15 f, 1 bar = 60 f.
   - The line targets (§2) are the spans the picture was timed to.
   - A re-take can land within ±10% of its target. Past that, the lock moves the cut by a beat and says so.
-- **Re-lock as `timing-v3`.** [timing-v2.md](timing-v2.md), [shots-locked-v2.json](shots-locked-v2.json) and [chunks-v2.md](chunks-v2.md) describe 3.1; don't conform them.
+- **Re-lock as `timing-v3`.** [timing-v2.md](history/timing-v2.md), [shots-locked-v2.json](history/shots-locked-v2.json) and [chunks-v2.md](history/chunks-v2.md) describe 3.1; don't conform them.
 - **v3 of the animatic needs sound.** Cut it against a temp score and SFX (§6); a dialogue-only cut will read as silent again. None of the MM tracks in `audio/ost/tracks/` is finished yet (only `_demo` and `_template` exist). Until one is, use a temp bed per family and mark it TEMP in the cue list.
 - **Real lines are untouched,** word for word, with their tags. Only the placement of two of them changed (§1.3).
 
@@ -428,7 +428,7 @@ v2 had the dialogue track only, so every set-piece played as dead air. v3 is cut
 
 ## 7. Shots and assets
 
-**Grammar.** 3.2 is tagged in [pov-and-framing §4.7](../../../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s ladder and matched to [framing-v3](framing-v3.md) wherever a 3.1 shot survives. Framing-v3 was drawn on 3.1's 139 shots: re-map it onto these 114. Where they disagree on size or angle, framing-v3 decides; the two open differences are in §8, ruling 6.
+**Grammar.** 3.2 is tagged in [pov-and-framing §4.7](../../../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s ladder and matched to [framing-v3](history/framing-v3.md) wherever a 3.1 shot survives. Framing-v3 was drawn on 3.1's 139 shots: re-map it onto these 114. Where they disagree on size or angle, framing-v3 decides; the two open differences are in §8, ruling 6.
 
 **Measured against §4.7.4, from the beat model:**
 

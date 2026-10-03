@@ -247,7 +247,7 @@ Act Four is "THE BLIP, TOLD TWICE": scenes 24–31, 118 shots, 10,416 frames (7:
 
 | Stage | Files | Status |
 |---|---|---|
-| Shot list | [shotlist.md](../show/episodes/ep01/production/act4/shotlist.md) + `shots.json` | done (board 1, script draft 2) |
+| Shot list | [shotlist.md](../show/episodes/ep01/production/act4/history/shotlist.md) + `shots.json` | done (board 1, script draft 2) |
 | Cast | `shared/pixel/cast/*`; `act4/cast/entry.tsx` | done ([prep-cast](../show/episodes/ep01/production/act4/_prep-reports/prep-cast.md)) |
 | Rooms A / Rooms B | `shared/pixel/rooms/*`; `act4/rooms-a/`, `act4/rooms-b/` | done ([rooms-a.md](../show/episodes/ep01/production/act4/rooms-a.md), [rooms-b.md](../show/episodes/ep01/production/act4/rooms-b.md)) |
 | FX kits | `shared/pixel/kits/*`; `act4/kits/` | done ([kits-fx.md](../show/episodes/ep01/production/act4/kits-fx.md)) |

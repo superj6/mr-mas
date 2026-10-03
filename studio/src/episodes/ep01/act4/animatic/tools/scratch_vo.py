@@ -9,7 +9,7 @@ slower per the V.O. style guide (pov-and-framing 5.1: 110-125 wpm against his 12
 Nothing here writes into audio/ep01/act4/dialogue/: the dialogue tools are imported read-only.
 
 Run:  HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python studio/src/episodes/ep01/act4/animatic/tools/scratch_vo.py
-Writes: out/ep01/act4/animatic/scratch-vo/<id>.wav (48 kHz/24-bit, -16 LUFS, dry) + scratch_vo.json
+Writes: out/ep01/act4/animatic/history/v2/scratch-vo/<id>.wav (48 kHz/24-bit, -16 LUFS, dry) + scratch_vo.json
 """
 from __future__ import annotations
 import os  # noqa: E402  (phase 1: the project root is found at run time, docs/ORGANIZATION-PLAN.md §4)
@@ -42,7 +42,7 @@ import a4lib as L  # noqa: E402
 import cast_a4 as CA  # noqa: E402
 import record as R  # noqa: E402  (score_take / record_takes only; main() is not run)
 
-OUT = os.path.join(REPO, "out/ep01/act4/animatic/scratch-vo")
+OUT = os.path.join(REPO, "out/ep01/act4/animatic/history/v2/scratch-vo")
 
 VO = [
     ("a4-26-vo1", "26", "the meeting ended early.", "the meeting{0.10} ended early."),

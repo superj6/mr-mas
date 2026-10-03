@@ -512,7 +512,7 @@ RETIRED = [
     {"id": "draft-3 V.O. texts", "text": "i'm not a sentimental person. · the weekend was mostly logistics. · i kept quiet. "
                                           "· the hearts were sincere.",
      "was": "draft 3 wording under the ids a4-26a-vo1, a4-26a-vo2, a4-29-vo1, a4-29-vo2 (editor scratch in "
-            "out/ep01/act4/animatic/scratch-vo/)",
+            "out/ep01/act4/animatic/history/v2/scratch-vo/)",
      "why": "all four are in the §5.7 'never write' list or were rewritten at the table read; the same ids now carry "
             "draft 3.1's words, recorded here. The editor's scratch overlay must be dropped (it overrides lines.json by id).",
      "files": []},

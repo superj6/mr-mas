@@ -1,16 +1,16 @@
 """lock_v2.py - THE EDITOR's timing lock v2 for Ep1 Act Four (sc 24-31, incl. 26A, 28), script DRAFT 3.1.
 
 Inputs (read-only):
-  show/episodes/ep01/production/act4/shots-v2.json   board 2 (draft 3.1, rulings at their defaults): shots, framing,
+  show/episodes/ep01/production/act4/history/shots-v2.json   board 2 (draft 3.1, rulings at their defaults): shots, framing,
                                                      line placements, rails, text, assets, chunks
   audio/ep01/act4/dialogue/lines.json                the RECORDED lines (draft 3.1: 43 dialogue, 5 V.O., 7 posts):
                                                      frames_24, mouth cues, word timings, loudness targets
-  (No scratch overlay: out/ep01/act4/animatic/scratch-vo/ is draft 3's and is NOT read. Every 3.1 V.O. is recorded.)
+  (No scratch overlay: out/ep01/act4/animatic/history/v2/scratch-vo/ is draft 3's and is NOT read. Every 3.1 V.O. is recorded.)
 
 Outputs (all generated; re-run after any re-record, ruling or re-board, never hand-edit):
-  show/episodes/ep01/production/act4/shots-locked-v2.json   the lock: exact frames, every cue, checks, shares, trims
-  show/episodes/ep01/production/act4/timing-v2.md           the readable lock (rules, decisions, tables, trims)
-  show/episodes/ep01/production/act4/chunks-v2.md           the final production chunks (frame ranges + dependencies)
+  show/episodes/ep01/production/act4/history/shots-locked-v2.json   the lock: exact frames, every cue, checks, shares, trims
+  show/episodes/ep01/production/act4/history/timing-v2.md           the readable lock (rules, decisions, tables, trims)
+  show/episodes/ep01/production/act4/history/chunks-v2.md           the final production chunks (frame ranges + dependencies)
   studio/src/episodes/ep01/act4/animatic/data-v2.ts         the same timing for the Remotion / Node animatic
 
 Rules (timing-v2.md section 2):
@@ -57,7 +57,7 @@ PRINTED_31 = 10387           # draft 3.1's printed act: 7:12.8 (script prints 7:
 TRIM_LINE = (7 * 60 + 33) * FPS  # 7:33: flag / propose trims above this
 BAND = ((6 * 60 + 54) * FPS, (7 * 60 + 34) * FPS)  # 7:14 +- 0:20
 
-BOARD = json.load(open(os.path.join(PROD, "shots-v2.json")))
+BOARD = json.load(open(os.path.join(PROD, "history/shots-v2.json")))
 REC = OrderedDict((x["id"], x) for x in json.load(open(P("audio/ep01/act4/dialogue/lines.json"))))
 
 # ================================================================================================ the editor's decisions
@@ -561,7 +561,7 @@ locked = OrderedDict(
     asset_status_now=OrderedDict((k, OrderedDict(status=v[0], where=v[1])) for k, v in ASSET_NOW.items()),
     problems=problems,
 )
-json.dump(locked, open(os.path.join(PROD, "shots-locked-v2.json"), "w"), indent=1, ensure_ascii=False)
+json.dump(locked, open(os.path.join(PROD, "history/shots-locked-v2.json"), "w"), indent=1, ensure_ascii=False)
 
 # ================================================================================================ the TS data module
 ts_shots = []
@@ -718,7 +718,7 @@ md.append("- **Board / 1st AD:** one change against board 2 (29.01 +1 beat, the 
           f"({REC['a4-26a-vo1'].get('fallback', {}).get('frames_24', '?')} f) fits 26A.01 as placed.\n"
           "- **Door cue:** the slate door's first held step is on 'asked' at 29.12 f%d (act %d).\n" % (EVENTS[[e['shot'] for e in EVENTS].index('29.12')]['at'], EVENTS[[e['shot'] for e in EVENTS].index('29.12')]['abs'])
           + "- **Scene builders:** build to the shot-relative frames in `shots-locked-v2.json`; line `at`/`end` are shot frames, `abs_in` act frames.\n")
-LEDGER_P = P("out/ep01/act4/animatic/layout-v2.json")
+LEDGER_P = P("out/ep01/act4/animatic/history/v2/layout-v2.json")
 LEDGER = json.load(open(LEDGER_P)) if os.path.exists(LEDGER_P) else []
 md.append("\n## 12. The act animatic v2\n")
 md.append("- **Files:** `out/ep01/act4/animatic/act4-animatic-v2.mp4` (1280 × 720, 24 fps, %d frames, %s, H.264 + the dialogue premix as AAC), "
@@ -755,7 +755,7 @@ md.append("\n**What the layout pass found (for the owners):**\n\n"
           "- **The Orb in a portrait window (26A.06, 29.07a, 29.10):** not built; the animatic stands it in with orb-medium's `drawOrb` at r 34.\n"
           "- **Posts, cards, the rail:** `kit.post-ui` and `kit.cards` (quote cards, the act-out card, name-card stat lines, the rail band) are "
           "stand-ins drawn by the animatic; they are the long pole (10 of 12 chunks).\n")
-open(os.path.join(PROD, "timing-v2.md"), "w").write(tidy("".join(md)))
+open(os.path.join(PROD, "history/timing-v2.md"), "w").write(tidy("".join(md)))
 
 # ================================================================================================ chunks-v2.md
 cm = []
@@ -792,7 +792,7 @@ for c in chunks:
     if c["lines"]:
         cm.append(f"- **Lines ({len(c['lines'])}):** " + ", ".join(f"`{l}`" for l in c["lines"]) + (f" (V.O.: {', '.join(vo)})" if vo else "") + "\n")
     rows = out[IDX[c["first"]]: IDX[c["last"]] + 1]
-    LED = {x["id"]: x for x in (json.load(open(P("out/ep01/act4/animatic/layout-v2.json"))) if os.path.exists(P("out/ep01/act4/animatic/layout-v2.json")) else [])}
+    LED = {x["id"]: x for x in (json.load(open(P("out/ep01/act4/animatic/history/v2/layout-v2.json"))) if os.path.exists(P("out/ep01/act4/animatic/history/v2/layout-v2.json")) else [])}
     sti = [r["id"] for r in rows if LED.get(r["id"], {}).get("standin")]
     if sti:
         cm.append(f"- **Animatic stand-ins / boxes here ({len(sti)}):** " + ", ".join(sti) + " (see timing-v2.md §12)\n")
@@ -806,7 +806,7 @@ cm.append("\n## Cross-chunk dependencies\n\n"
           "- **kit.post-ui and kit.cards are still unbuilt** and touch 10 of 12 chunks: they are the long pole. The animatic uses stand-ins.\n"
           "- **Audio:** the premix (`out/ep01/act4/animatic/act4-dialogue-premix-v2.wav`) is the timing reference; the score (keynote piano, "
           "violin) and the SFX list are in shots-v2.json `sound`.\n")
-open(os.path.join(PROD, "chunks-v2.md"), "w").write(tidy("".join(cm)))
+open(os.path.join(PROD, "history/chunks-v2.md"), "w").write(tidy("".join(cm)))
 
 # ================================================================================================ console
 print("total", TOTAL, length(TOTAL), "episode out", tc(TOTAL), "vs printed", TOTAL - PRINTED_31, "vs board", TOTAL - BOARD["totals"]["frames"])

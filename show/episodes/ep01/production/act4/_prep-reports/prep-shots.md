@@ -1,8 +1,8 @@
 I wrote the Act Four shot breakdown: 118 shots across scenes 24–31, 10,416 frames (7:14). Each scene adds up to the script's clock, and every cut falls on a beat of the 96 BPM grid. All 50 dialogue lines are placed in shots, and every piece of must-read text is on screen long enough to read. Dialogue lengths are estimates from the casting briefs' speaking speeds; the timing-lock stage will replace them with recorded lengths.
 
 **Files**
-- `/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/shotlist.md`: the readable version. It has the legend, the act at a glance, one block per shot, a dialogue index, the 12 chunks, the asset list by owner stage, the cards, the sound effects to build or reuse, the flags and a read-time table.
-- `/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/shots.json`: the same data. Each shot has its id, chunk, frames, episode timecode, framing, room, characters, action, line ids, on-screen text with fact tags, rail, style tag, sound, gags, assets and a visual-event count. If the two files ever disagree, the JSON is the one to trust.
+- `/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/history/shotlist.md`: the readable version. It has the legend, the act at a glance, one block per shot, a dialogue index, the 12 chunks, the asset list by owner stage, the cards, the sound effects to build or reuse, the flags and a read-time table.
+- `/home/jgon/project/art/mrmas/show/episodes/ep01/production/act4/history/shots.json`: the same data. Each shot has its id, chunk, frames, episode timecode, framing, room, characters, action, line ids, on-screen text with fact tags, rail, style tag, sound, gags, assets and a visual-event count. If the two files ever disagree, the JSON is the one to trust.
 - The generator is in the scratchpad (`sb/build.py`, `emit.py`, `data_shots.py`, `data_assets.py`). Change the data and re-run `emit.py`; don't hand-edit the outputs.
 
 **Ids**

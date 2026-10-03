@@ -63,7 +63,7 @@ His felt piano is withheld until the very end. **The first felt notes in the cue
 - **Lay it at act frame 8295** (18:16:15, shot 30.01 f0). Act frame F sits at (F − 8295)/24 s in this file.
 - A 3-beat pickup puts the bar lines on the act's bar lines (bar 1 = act 8340).
 - **The musical end is act 10200** (19:36:00, 31.01 f0).
-- The source is `show/episodes/ep01/production/act4/shots-locked-v2.json`. The lock runs +2.5 s past the printed 17:59.9–19:16.8, and this cue follows the lock.
+- The source is `show/episodes/ep01/production/act4/history/shots-locked-v2.json`. The lock runs +2.5 s past the printed 17:59.9–19:16.8, and this cue follows the lock.
 - **To re-conform,** edit `SPOT` in `track.py` (it is in act frames) and re-render. The music is written against those names.
 
 ## Form

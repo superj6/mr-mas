@@ -2993,7 +2993,7 @@ Two items the diagnosis quoted from memory are **not used**: the call's account 
 - **Lens looks, rail glances and lit UI:** 0. **GLYPH:** 1 (the dissolve, 2 of 2).
 - **Last word:** Mas's in 1 scene of 9 (the return's "okay.").
 
-**Framing (the showrunner's "boxes" note).** The act is tagged in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s ladder, and matched to [framing-v3](production/act4/framing-v3.md) wherever a 3.1 shot survives. Shares are per cut, from the beat model, against §4.7.4:
+**Framing (the showrunner's "boxes" note).** The act is tagged in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s ladder, and matched to [framing-v3](production/act4/history/framing-v3.md) wherever a 3.1 shot survives. Shares are per cut, from the beat model, against §4.7.4:
 
 | Measure | Lock v2 (453.75 s, 139 cuts) | **3.2** (249.4 s, 114 cuts) | §4.7.4 |
 |---|---|---|---|
@@ -3926,7 +3926,7 @@ The countdown turned the first twelve minutes into a wait for a known event. The
   - the drop-out
   - the calm-off's 2-beat hold
 
-**3. "Not all boxes."** The act is tagged in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s shot ladder, which the room wrote to the same note while this pass was under way, and matched to [framing-v3](production/act4/framing-v3.md) wherever a 3.1 shot survives.
+**3. "Not all boxes."** The act is tagged in [pov-and-framing §4.7](../../bible/pov-and-framing.md#47-shot-variety-2026-09-25)'s shot ladder, which the room wrote to the same note while this pass was under way, and matched to [framing-v3](production/act4/history/framing-v3.md) wherever a 3.1 shot survives.
 - **Frameless coverage.** People talk in frameless close-ups (`[MCU]`, from the approved portraits: no new drawings), over-the-shoulders and two-shots, and the setup changes on the turns. Mas's two silent `[CU]`s stay the loudest the camera gets.
 - **The windows' jokes are in the world now.** ALYI and TASYA stand in real doorways (`[MCU·door]`), and the committee plays Alyi's reflection over NELEH's shoulder.
 - **Angles** come from what the rooms already have:
@@ -3981,7 +3981,7 @@ Every real line and tag, and every rail that remains, is 3.1's, word for word. O
   - **Delivery:** the pace ranges, the Kokoro speed settings, 20 ms heads and 40 ms tails, cut-offs ending on the consonant, and the overlap cue sheet.
   - Update `lines.json` with the new statuses.
 - **THE EDITOR / board:**
-  - Re-board sc 24–31 from this draft and tighten-changes §5 (114 cuts, with beats per shot), with [framing-v3](production/act4/framing-v3.md) re-mapped onto it. Then re-lock as `timing-v3`, cutting conversations on the turn (§4.7.3 rule 8).
+  - Re-board sc 24–31 from this draft and tighten-changes §5 (114 cuts, with beats per shot), with [framing-v3](production/act4/history/framing-v3.md) re-mapped onto it. Then re-lock as `timing-v3`, cutting conversations on the turn (§4.7.3 rule 8).
   - Cut animatic v3 against a temp score and SFX (§6). A dialogue-only cut will read as silent again.
   - Run §4.7.3's same-size check. The beat model has 0 runs.
   - The trims T1–T3 and E1–E3 in timing-v2 §7 are spent or superseded.
@@ -4018,7 +4018,7 @@ Every real line and tag, and every rail that remains, is 3.1's, word for word. O
 
 # Revision log (season revision)
 
-*The cold open, Acts One–Three and the tag, 2026-09-26. Inputs: the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (read at the start and the end of the pass; nothing newer than the brief), [flow-and-continuity](../../bible/flow-and-continuity.md) §1–§5a, the season plan's Ep1 section ([season-revision-plan §3](../../production/season-revision-plan.md#3-ep1--ep10_research_previewmd)), [tone-and-dialogue](../../bible/tone-and-dialogue.md) (R1, R4, R5, R7, R10–R16, §3, §4), [pov-and-framing](../../bible/pov-and-framing.md) (§2.3, §4.7, §6.5, §7.1), and Act Four's [diagnosis-v3](production/act4/diagnosis-v3.md) and [edit-plan-v4](production/act4/edit-plan-v4.md) for the newcomer setups. **Act Four (now draft 4.0), its writer's notes and the draft-2 appendix were not touched.** Outside Acts One–Three and the tag, this pass changed only the notation bullet, the header's runtime and draft rows (which the Act Four 4.0 notes hand to "their owner"), §1's rows, §3's rows 9 and 13 and the POV-pass status line. Every edit was a targeted replacement.*
+*The cold open, Acts One–Three and the tag, 2026-09-26. Inputs: the live [SHOWRUNNER-NOTES](../../production/SHOWRUNNER-NOTES.md) (read at the start and the end of the pass; nothing newer than the brief), [flow-and-continuity](../../bible/flow-and-continuity.md) §1–§5a, the season plan's Ep1 section ([season-revision-plan §3](../../production/season-revision-plan.md#3-ep1--ep10_research_previewmd)), [tone-and-dialogue](../../bible/tone-and-dialogue.md) (R1, R4, R5, R7, R10–R16, §3, §4), [pov-and-framing](../../bible/pov-and-framing.md) (§2.3, §4.7, §6.5, §7.1), and Act Four's [diagnosis-v3](production/act4/history/diagnosis-v3.md) and [edit-plan-v4](production/act4/edit-plan-v4.md) for the newcomer setups. **Act Four (now draft 4.0), its writer's notes and the draft-2 appendix were not touched.** Outside Acts One–Three and the tag, this pass changed only the notation bullet, the header's runtime and draft rows (which the Act Four 4.0 notes hand to "their owner"), §1's rows, §3's rows 9 and 13 and the POV-pass status line. Every edit was a targeted replacement.*
 
 ## Net effect (season revision)
 

@@ -419,7 +419,7 @@ This is THE CURVE.
 | **Jump** | 45 f, p60–104 (act 1680–1724), 3 beats |
 | **In / out** | Flash-print on the click / snap on 26.05's 4th beat |
 | **Sound** | The click, then D6's digital silence through the whole jump |
-| **Lock impact** | None. 26.05 stays 60 f, and D6 (1680–1830) is unchanged ([timing-v2](../episodes/ep01/production/act4/timing-v2.md)) |
+| **Lock impact** | None. 26.05 stays 60 f, and D6 (1680–1830) is unchanged ([timing-v2](../episodes/ep01/production/act4/history/timing-v2.md)) |
 | **Source frames** | Frozen at lock v2 (`proto1/lockv2.ts`, the v2 composer's `native()` verbatim). THE EDITOR has since moved Act Four to lock v3, which renumbers sc 26 (the click is now 26.06b) and still carries the GLYPH dissolve; re-targeting J1 onto v3 is a handoff, not part of this prototype. **One deliberate difference from lock v2** (final polish): in p0–60 ALYI's name chip is not drawn where the dialog cuts it (the cut left a stray `'I` that a blind cold read called "leftover text"); the same fragment shows in the act, so it goes to THE EDITOR with the re-target |
 
 **The idea.** Nothing in the pilot is bigger than this click. The board cancels a man who owns nothing, and the record prints it. For three beats his tile is an engraved certificate with a blank shares line, and `CANCELLED` is punched through it the way real cancelled certificates are. It rhymes with the 1993 dialog, whose Cancel was greyed out, and with THE PLAN's blank step 4. Then it's a call tile again, falling out of the grid. The firing is the humans' act, so the record takes it, not the machine's tokens.

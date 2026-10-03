@@ -36,7 +36,7 @@ P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 SR, FPS = 48000, 24
 SPF = SR // FPS  # 2000 samples a frame
 
-L = json.load(open(P("show/episodes/ep01/production/act4/shots-locked-v2.json")))
+L = json.load(open(P("show/episodes/ep01/production/act4/history/shots-locked-v2.json")))
 total = L["summary"]["act_frames"]
 mix = np.zeros(total * SPF + SR, dtype=np.float64)
 sheet = []
@@ -65,5 +65,5 @@ out = P("out/ep01/act4/animatic/act4-dialogue-premix-v2.wav")
 sf.write(out, mix.astype(np.float32), SR, subtype="PCM_24")
 json.dump(dict(file="out/ep01/act4/animatic/act4-dialogue-premix-v2.wav", sample_rate=SR, frames=total, seconds=total / FPS,
                peak_dbfs=round(20 * np.log10(max(float(np.max(np.abs(mix))), 1e-9)), 2), normalised_by_db=round(20 * np.log10(norm), 2),
-               cues=sheet), open(P("out/ep01/act4/animatic/act4-dialogue-premix-v2.cues.json"), "w"), indent=1)
+               cues=sheet), open(P("out/ep01/act4/animatic/history/v2/act4-dialogue-premix-v2.cues.json"), "w"), indent=1)
 print("wrote", out, f"{total / FPS:.3f} s", len(sheet), "cues", f"peak {peak_db:.2f} dBFS", f"norm {20 * np.log10(norm):.2f} dB")

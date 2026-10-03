@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""framing-v3 plan for Ep1 Act Four (cinematography / framing designer, 2026-09-25). Writes show/episodes/ep01/production/act4/framing-v3.json:
-    python3 studio/src/dev/framing-v3/plan_v3.py show/episodes/ep01/production/act4/framing-v3.json
+"""framing-v3 plan for Ep1 Act Four (cinematography / framing designer, 2026-09-25). Writes show/episodes/ep01/production/act4/history/framing-v3.json:
+    python3 studio/src/dev/framing-v3/plan_v3.py show/episodes/ep01/production/act4/history/framing-v3.json
 One row per v3 shot, validated against the v3 framing grammar.
 Frames are CARRIED from lock v2 (split where a v2 shot is split) so the shares are comparable; THE EDITOR's v3 lock
 re-times everything (the dead-air pass), so treat seconds as v2-clock projections, never as the v3 clock."""
@@ -193,7 +193,7 @@ s('31.09', ['31.09'], '[W]', 'W', 'W', 120, 'The folding chair unfolds: OBSERVER
 P = [p for p in P if p['frames'] > 0]
 SPLIT_LINES = {'a4-27-21': '27.36', 'a4-27-22': '27.36b', 'a4-30-03': '30.08', 'a4-30-04': '30.08b', 'a4-30-05': '30.13', 'a4-30-06': '30.13a',
                'a4-31-01': '31.03', 'a4-31-02': '31.03', 'a4-27-00': '27.01', 'a4-27-01': '27.01b'}
-V2L = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/shots-locked-v2.json')))
+V2L = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/history/shots-locked-v2.json')))
 by = {p['id']: p for p in P}
 for x in V2L['shots']:
     for l in x['lines']:
@@ -215,7 +215,7 @@ for k, g in itertools.groupby(P, key=lambda p: p['cls']):
 boxes = [p['id'] for p in P if p['cls'] == 'BOX']
 if len(boxes) > 2: prob.append(f'deliberate boxes > 2: {boxes}')
 tot = sum(p['frames'] for p in P)
-v2 = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/shots-locked-v2.json')))
+v2 = json.load(open(os.path.join(REPO, 'show/episodes/ep01/production/act4/history/shots-locked-v2.json')))
 v2tot = sum(x['frames'] for x in v2['shots'])
 used = set(i for p in P for i in p['v2'])
 missing = [x['id'] for x in v2['shots'] if x['id'] not in used]
@@ -269,7 +269,7 @@ SIZE_CLASSES = {'W': 'wide incl. room angle plates and OTS-W backgrounds', 'M': 
  'CU': 'full-frame close-up', 'ECU': 'hands, eyes, the iris, prop inserts, table overheads', 'SW': 'screen wide (grid, list)', 'SC': 'screen close (pinned/single/half tile, phone, counter, floor POV)',
  'GS': 'blueprint sheet', 'GM': 'blueprint section', 'GD': 'blueprint detail', 'GFX': 'full-screen card', 'BOX': 'deliberate portrait window'}
 json.dump({'meta': {'what': 'Ep1 Act Four framing v3 plan (cinematography); frames carried from lock v2 for comparison only: THE EDITOR re-times in the v3 lock',
-                    'grammar': 'show/bible/pov-and-framing.md §4.7', 'doc': 'show/episodes/ep01/production/act4/framing-v3.md', 'prototype': 'studio/src/dev/framing-v3/templates.ts',
+                    'grammar': 'show/bible/pov-and-framing.md §4.7', 'doc': 'show/episodes/ep01/production/act4/history/framing-v3.md', 'prototype': 'studio/src/dev/framing-v3/templates.ts',
                     'rules': {'max_same_size_run': 2, 'deliberate_boxes_per_act': 2, 'whips_per_act': 4, 'racks_per_act': 4, 'screen_macros_per_act': 2},
                     'box_field': 'none = no typed dialogue box (close coverage); typed / speaker / os = keep the typed box',
                     'templates': TEMPLATES, 'size_classes': SIZE_CLASSES,

@@ -1,4 +1,4 @@
-"""report_v3.py - writes show/episodes/ep01/production/act4/timing-v3.md (THE EDITOR's timing lock v3, readable) from
+"""report_v3.py - writes show/episodes/ep01/production/act4/history/timing-v3.md (THE EDITOR's timing lock v3, readable) from
 shots-locked-v3.json (lock_v3.py), out/ep01/act4/animatic/act4-mix-v3.cues.json (mix_v3.py) and layout-v3.json (the
 renderer's ledger). Run after lock_v3.py -> mix_v3.py -> render (ledger).
 Run:  python3 studio/src/episodes/ep01/act4/animatic/tools/report_v3.py
@@ -29,7 +29,7 @@ P = lambda *a: os.path.join(REPO, *a)  # noqa: E731
 FPS, BEAT, BAR = 24, 15, 60
 L = json.load(open(P("show/episodes/ep01/production/act4/shots-locked-v3.json")))
 MX = json.load(open(P("out/ep01/act4/animatic/act4-mix-v3.cues.json")))
-LED = {r["id"]: r for r in json.load(open(P("out/ep01/act4/animatic/layout-v3.json")))}
+LED = {r["id"]: r for r in json.load(open(P("out/ep01/act4/animatic/history/v3/layout-v3.json")))}
 S = L["summary"]
 M = MX["measurements"]
 TOTAL = S["act_frames"]
@@ -81,7 +81,7 @@ w("")
 w("**Deliverables**")
 w("")
 w("- `out/ep01/act4/animatic/act4-animatic-v3.mp4`: composition `ep01-act4-animatic`, 1280 × 720, 24 fps, H.264 + AAC 48 kHz stereo (the v3 mix muxed).")
-w("- `out/ep01/act4/animatic/act4-v3-contact.png`: one still per shot (its middle frame), size class and template under each.")
+w("- `out/ep01/act4/animatic/history/v3/act4-v3-contact.png`: one still per shot (its middle frame), size class and template under each.")
 w("- `out/ep01/act4/animatic/act4-mix-v3.wav` (+ `act4-mix-v3.cues.json`, the sound EDL) and `act4-dialogue-premix-v3.wav`.")
 w("- `show/episodes/ep01/production/act4/shots-locked-v3.json`: every shot and line on the act clock.")
 w("")
@@ -232,5 +232,5 @@ w("- **V.O. pace (the POV owner's ruling 7):** the lock uses the wpm-paced V.O. 
 w("- **Temp synths** (§6) are placeholders for the SFX board's *(build)* list; the vault's hum is `server_hum` standing in for MM-12.")
 w("- **Scripted silences to confirm by ear:** D6 (3.1 s of digital silence) and F1.2 (silent by C39; the dark room's drone now pre-laps its last 2 beats).")
 w("")
-open(P("show/episodes/ep01/production/act4/timing-v3.md"), "w").write("\n".join(lines))
+open(P("show/episodes/ep01/production/act4/history/timing-v3.md"), "w").write("\n".join(lines))
 print("wrote timing-v3.md", len(lines), "lines")

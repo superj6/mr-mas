@@ -5,12 +5,12 @@ lock.py - THE EDITOR's timing lock for Ep1 Act Four (sc 24-31, incl. 26A, 28), s
 
 Inputs (read-only):
   show/episodes/ep01/script.md                      draft 3 of Act Four (2026-09-25 12:53): the authority
-  show/episodes/ep01/production/act4/shots.json     board 1 (draft 2): framing / room / asset data carried by d2 id
+  show/episodes/ep01/production/act4/history/shots.json     board 1 (draft 2): framing / room / asset data carried by d2 id
   audio/ep01/act4/dialogue/lines.json               the recorded lines (43 voiced + 7 pop-up posts)
-  out/ep01/act4/animatic/scratch-vo/scratch_vo.json the editor's scratch reads of draft 3's six V.O. lines
+  out/ep01/act4/animatic/history/v2/scratch-vo/scratch_vo.json the editor's scratch reads of draft 3's six V.O. lines
 
 Outputs:
-  show/episodes/ep01/production/act4/shots-locked.json
+  show/episodes/ep01/production/act4/history/shots-locked.json
   studio/src/episodes/ep01/act4/animatic/data.ts   (generated: the same timing for the Remotion animatic)
   out/ep01/act4/animatic/lock-report.md            (generated tables pasted into timing.md)
 
@@ -53,10 +53,10 @@ FPS, BEAT, BAR = 24, 15, 60
 EP_IN = (12 * 60 + 31) * FPS  # 12:31:00 in episode frames
 P_LEAD, GAP, TAIL, PUNCH = 4, 8, 8, 15
 
-D2 = json.load(open(P("show/episodes/ep01/production/act4/shots.json")))
+D2 = json.load(open(P("show/episodes/ep01/production/act4/history/shots.json")))
 D2S = {s["id"]: s for s in D2["shots"]}
 LINES = {x["id"]: x for x in json.load(open(P("audio/ep01/act4/dialogue/lines.json")))}
-for x in json.load(open(P("out/ep01/act4/animatic/scratch-vo/scratch_vo.json"))):
+for x in json.load(open(P("out/ep01/act4/animatic/history/v2/scratch-vo/scratch_vo.json"))):
     x["voiced_in_cut"] = True
     x["scratch"] = True
     x["mp3"] = None
@@ -633,7 +633,7 @@ def main():
             ("show", "MR. MAS"), ("episode", "ep01 · research_preview"), ("act", "ACT FOUR · THE BLIP, TOLD TWICE"),
             ("scenes", "24–31 (incl. 26A, 28)"), ("source", "show/episodes/ep01/script.md, Act Four draft 3 (the POV pass), 2026-09-25"),
             ("board", "production/act4/shots.json board 1 (draft 2) carried by d2_id; re-boarded to draft 3 by THE EDITOR at layout level"),
-            ("dialogue", "audio/ep01/act4/dialogue/lines.json (recorded, draft 2 lines) + out/ep01/act4/animatic/scratch-vo (the six draft-3 V.O. lines, EDITOR SCRATCH)"),
+            ("dialogue", "audio/ep01/act4/dialogue/lines.json (recorded, draft 2 lines) + out/ep01/act4/animatic/history/v2/scratch-vo (the six draft-3 V.O. lines, EDITOR SCRATCH)"),
             ("owner", "THE EDITOR (timing lock + act animatic)"), ("status", "LOCK v1: timed to the recordings; content as scripted (no trims applied); see trims"),
             ("fps", FPS), ("bpm", 96), ("frames_per_beat", BEAT), ("frames_per_bar", BAR),
             ("frame0", "act frame 0 = episode 12:31:00; tc = episode mm:ss:ff at 24 fps; end_frame is exclusive"),
@@ -644,7 +644,7 @@ def main():
         ("summary", summary), ("scenes", scenes), ("shots", out), ("chunks", chunks), ("ledger", ledger), ("trims", trims),
         ("audio_cues", audio), ("subtitles", subs), ("warnings", warn),
     ])
-    json.dump(locked, open(P("show/episodes/ep01/production/act4/shots-locked.json"), "w"), indent=1, ensure_ascii=False)
+    json.dump(locked, open(P("show/episodes/ep01/production/act4/history/shots-locked.json"), "w"), indent=1, ensure_ascii=False)
     # the TS data module for the animatic
     ts_shots = [{"id": r["id"], "sc": r["scene"], "chunk": r["chunk"], "tag": r["tag"], "s": r["start_frame"], "e": r["end_frame"],
                  "what": r["what"], "room": r["room"] or "", "rail": r["rail_shown"],

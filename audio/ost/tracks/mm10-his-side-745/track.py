@@ -1,7 +1,7 @@
 """MM-10 "His Side / 745"  --  E01-S29a (his side, mostly silent) + E01-S29b (THE TILE AVALANCHE, the S3).
 Composer D.  OST-BIBLE s5.D1.  Palettes: P01 DARK ROOM (form a) -> P11 SET-PIECE SWING (form b).
 
-TO PICTURE.  Cut against the Ep1 Act Four timing lock v2 (show/episodes/ep01/production/act4/timing-v2.md,
+TO PICTURE.  Cut against the Ep1 Act Four timing lock v2 (show/episodes/ep01/production/act4/history/timing-v2.md,
 shots-locked-v2.json).  File t = 0 is act frame 5925 (episode 16:37:21, shot 29.00, the home shot); the file
 runs 2370 frames (98.75 s) to act frame 8295 (18:16:15, the first frame of sc 30).  The lock is 6.42 s longer
 than the printed 16:28-18:00 (92 s) the bible quotes: this cue follows the lock.
@@ -497,7 +497,7 @@ def _score(album=False):
     META['vo_windows'] = [(round(x0, 4), round(x1, 4)) for x0, x1, _ in vo]
     META['sfx_slots'] = slots
     META['description'] = (
-        'TO PICTURE against Ep1 Act Four lock v2 (show/episodes/ep01/production/act4/shots-locked-v2.json): file '
+        'TO PICTURE against Ep1 Act Four lock v2 (show/episodes/ep01/production/act4/history/shots-locked-v2.json): file '
         f't=0 = act frame {AF0} (episode 16:37:21, shot 29.00 f0); act frame = {AF0} + 24 * t.  Cue points with no '
         'onset of their own (not markers): NELEH window = A7 (bar 30, 73.75-76.25 s); THE QUIET VOTE = A9.3 (80.00 s, '
         'the board\'s bowed F pedal ends, no hit).  Switches: '

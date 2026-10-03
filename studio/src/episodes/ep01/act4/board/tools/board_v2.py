@@ -3,14 +3,14 @@
 Inputs (read-only):
   show/episodes/ep01/script.md                              Act Four draft 3.1 (the authority; the draft 2 appendix is ignored)
   show/episodes/ep01/production/act4/pov-changes.md         the 3 -> 3.1 changelog (cuts / adds / reframes; rulings at their DEFAULTS)
-  show/episodes/ep01/production/act4/shots.json             board 1 (draft 2): content carried by v1 id
-  show/episodes/ep01/production/act4/shots-locked.json      THE EDITOR's draft-3 lock (crosswalk ids only; its frames are not reused blindly)
+  show/episodes/ep01/production/act4/history/shots.json             board 1 (draft 2): content carried by v1 id
+  show/episodes/ep01/production/act4/history/shots-locked.json      THE EDITOR's draft-3 lock (crosswalk ids only; its frames are not reused blindly)
   audio/ep01/act4/dialogue/lines.json                       the recorded lines (frames_24, words)
-  out/ep01/act4/animatic/scratch-vo/scratch_vo.json         the editor's scratch V.O. reads (words for "asked", lengths)
+  out/ep01/act4/animatic/history/v2/scratch-vo/scratch_vo.json         the editor's scratch V.O. reads (words for "asked", lengths)
 
 Outputs:
-  show/episodes/ep01/production/act4/shots-v2.json          the machine-readable board (the JSON wins if the two disagree)
-  show/episodes/ep01/production/act4/shotlist-v2.md         the readable board
+  show/episodes/ep01/production/act4/history/shots-v2.json          the machine-readable board (the JSON wins if the two disagree)
+  show/episodes/ep01/production/act4/history/shotlist-v2.md         the readable board
 
 Sizing (the same house rules THE EDITOR's lock.py uses, so a re-lock moves little):
   * 24 fps, 96 BPM: 15 f a beat, 60 f a bar. Act frame 0 = episode 12:31:00. Every cut lands on a beat.
@@ -53,13 +53,13 @@ FPS, BEAT, BAR = 24, 15, 60
 EP_IN = (12 * 60 + 31) * FPS
 P_LEAD, GAP, TAIL, PUNCH = 4, 8, 8, 15
 
-V1 = json.load(open(os.path.join(PROD, "shots.json")))
+V1 = json.load(open(os.path.join(PROD, "history/shots.json")))
 V1S = {s["id"]: s for s in V1["shots"]}
 V1A = {a["id"]: a for a in V1["assets"]}
-LOCK = json.load(open(os.path.join(PROD, "shots-locked.json")))
+LOCK = json.load(open(os.path.join(PROD, "history/shots-locked.json")))
 LOCKS = {s["id"]: s for s in LOCK["shots"]}
 REC = {x["id"]: x for x in json.load(open(P("audio/ep01/act4/dialogue/lines.json")))}
-SCR = {x["id"]: x for x in json.load(open(P("out/ep01/act4/animatic/scratch-vo/scratch_vo.json")))}
+SCR = {x["id"]: x for x in json.load(open(P("out/ep01/act4/animatic/history/v2/scratch-vo/scratch_vo.json")))}
 
 # ============================================================================================ the line catalogue (3.1)
 SPK = {"MAS MANALT": "MAS", "RIMA TAMURI": "RIMA", "GERG MOCKBRAN": "GERG"}
@@ -1625,7 +1625,7 @@ doc = OrderedDict(
     board_calls=[OrderedDict(shot=a, call=b) for a, b in BOARD_CALLS], flags=[OrderedDict(area=a, level=b, text=c) for a, b, c in FLAGS],
     sound=SOUND, problems=problems,
 )
-json.dump(doc, open(os.path.join(PROD, "shots-v2.json"), "w"), indent=1, ensure_ascii=False)
+json.dump(doc, open(os.path.join(PROD, "history/shots-v2.json"), "w"), indent=1, ensure_ascii=False)
 
 # ============================================================================================================ emit Markdown
 def esc(x):
@@ -1898,5 +1898,5 @@ w("- **Reuse:** " + ", ".join(f"`{x}`" for x in SOUND["reuse"]) + ".")
 for x in SOUND["score_and_mix"]:
     w(f"- {x}")
 w("")
-open(os.path.join(PROD, "shotlist-v2.md"), "w").write("\n".join(M) + "\n")
+open(os.path.join(PROD, "history/shotlist-v2.md"), "w").write("\n".join(M) + "\n")
 print(f"board 2: {len(out)} shots · {TOTAL} f = {mmss(TOTAL)} · faces+hands {shares['FACES_HANDS']['pct']}% · W {shares['W']['pct']}% · reads failing {len(read_fails)} · problems {problems}")

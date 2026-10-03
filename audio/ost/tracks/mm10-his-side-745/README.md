@@ -46,7 +46,7 @@ Built from the cue's own code: the avalanche's phrases are the same functions on
 
 ## Picture sync
 
-- The cue follows **Ep1 Act Four timing lock v2** (`show/episodes/ep01/production/act4/shots-locked-v2.json`).
+- The cue follows **Ep1 Act Four timing lock v2** (`show/episodes/ep01/production/act4/history/shots-locked-v2.json`).
   - **File start** (t = 0) is act frame **5925**: episode 16:37:21, shot 29.00 f0.
   - **File end** is act 8295 (18:16:15), where sc 30 and composer E's MM-11 begin.
   - To convert: **act frame = 5925 + 24·t**.

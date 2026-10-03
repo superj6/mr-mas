@@ -531,7 +531,7 @@ def main():
     w("## 10. For the next stage")
     w("")
     w("**The editor's lock must drop its scratch V.O. overlay.** `studio/src/episodes/ep01/act4/animatic/tools/lock.py` loads "
-      "`out/ep01/act4/animatic/scratch-vo/scratch_vo.json` after `lines.json` and overrides by id, and those scratch rows carry "
+      "`out/ep01/act4/animatic/history/v2/scratch-vo/scratch_vo.json` after `lines.json` and overrides by id, and those scratch rows carry "
       "draft 3's words under the same ids (`a4-26a-vo1` = \"i'm not a sentimental person.\", `a4-26a-vo2`, `a4-29-vo1`, `a4-29-vo2`), "
       "plus `a4-26-vo1`, which draft 3.1 removes. Until that overlay goes, the lock keeps the wrong words. Draft 3.1's V.O. is all "
       "in `lines.json` now (`kind: vo`, `mode: vo`).")

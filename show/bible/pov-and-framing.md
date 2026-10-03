@@ -472,7 +472,7 @@ TASYA (O.S.)                                        anyone else off picture: (O.
 
 **What changes, in one line:** the portrait window stops being the show's conversation shot. People talk in **frameless close-ups, over-the-shoulders and two-shots**, cut on the turns. The box comes back only where the world has one (a call tile, a phone, a monitor) or as a deliberate beat, twice an act at most.
 
-**Why:** in the v2 animatic 42 of Act Four's 139 shots (27% of its time) were boxed portraits over a held room, and 29 of its 45 spoken lines played in one. That is the "boxes for people talking". The box also cost time: a window opens in 3 held steps, a box types its line, and a held room behind it gives the eye nothing to cut to, so shots were padded rather than cut. This section amends §4.1–§4.4 where they disagree; the worked example is Act Four's [framing-v3.md](../episodes/ep01/production/act4/framing-v3.md), and the templates are prototyped from existing assets in `studio/src/dev/framing-v3/templates.ts` (sheet: `out/ep01/act4/framing-v3/framing-v3-templates.png`).
+**Why:** in the v2 animatic 42 of Act Four's 139 shots (27% of its time) were boxed portraits over a held room, and 29 of its 45 spoken lines played in one. That is the "boxes for people talking". The box also cost time: a window opens in 3 held steps, a box types its line, and a held room behind it gives the eye nothing to cut to, so shots were padded rather than cut. This section amends §4.1–§4.4 where they disagree; the worked example is Act Four's [framing-v3.md](../episodes/ep01/production/act4/history/framing-v3.md), and the templates are prototyped from existing assets in `studio/src/dev/framing-v3/templates.ts` (sheet: `out/ep01/act4/history/framing-v3/framing-v3-templates.png`).
 
 #### 4.7.1 The shot ladder
 
@@ -541,7 +541,7 @@ Faces and hands about 55% or more, `[W]` about 15% or less, and the rest of §4.
 
 #### 4.7.6 The templates
 
-The builders implement these as layout functions (one call per shot, like `rooms/twoshots.ts`); the specs, parameters and the Act Four shot plan are in [framing-v3.md §2](../episodes/ep01/production/act4/framing-v3.md#2-the-templates): `MCU-F` · `MCU-2` (the frameless 50/50) · `MCU-FRAME` · `DESK-LOW` · `OTS` / `OTS-W` · `2S` / `M` · `CU` · `ECU-HANDS` / `ECU-EYES` / `ECU-PROP` · `ECU-ORB` · `HIGH-TABLE` / `HIGH-FLOOR` · `LOW-ROOM` · `SCREEN` (grid, speaker view, two-up, half tile) / `SCREEN-MACRO` · `BP-SIZES` · `CARD-RIDE` · `W` · `BOX`; and the moves `CUT-IN`, `PAN`, `DRIFT`, `RACK`, `WHIP`.
+The builders implement these as layout functions (one call per shot, like `rooms/twoshots.ts`); the specs, parameters and the Act Four shot plan are in [framing-v3.md §2](../episodes/ep01/production/act4/history/framing-v3.md#2-the-templates): `MCU-F` · `MCU-2` (the frameless 50/50) · `MCU-FRAME` · `DESK-LOW` · `OTS` / `OTS-W` · `2S` / `M` · `CU` · `ECU-HANDS` / `ECU-EYES` / `ECU-PROP` · `ECU-ORB` · `HIGH-TABLE` / `HIGH-FLOOR` · `LOW-ROOM` · `SCREEN` (grid, speaker view, two-up, half tile) / `SCREEN-MACRO` · `BP-SIZES` · `CARD-RIDE` · `W` · `BOX`; and the moves `CUT-IN`, `PAN`, `DRIFT`, `RACK`, `WHIP`.
 
 ---
 

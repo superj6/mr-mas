@@ -1,6 +1,6 @@
 // @ts-nocheck -- Node-only dev tool (bundled with esbuild), excluded from the browser typecheck.
 // MR. MAS · framing v3 (cinematography / framing designer, 2026-09-25): the v3 SHOT TEMPLATES, prototyped from assets
-// that already exist, so show/episodes/ep01/production/act4/framing-v3.md's cost claims are checked against pixels.
+// that already exist, so show/episodes/ep01/production/act4/history/framing-v3.md's cost claims are checked against pixels.
 // A reference for the engine owner (who promotes the helpers to src/shared/pixel/framing.ts, additive) and for the
 // animatic / scene builders (who own the real layouts). Not show art; nothing here is imported by an episode.
 //   npx esbuild src/dev/framing-v3/templates.ts --bundle --platform=node --outfile=<scratch>/fv3.cjs

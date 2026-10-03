@@ -1,7 +1,7 @@
 """lock_v3.py - THE EDITOR's timing lock v3 for Ep1 Act Four (sc 24-31, incl. 26A, 28), script DRAFT 3.2.
 
 Inputs (read-only):
-  show/episodes/ep01/production/act4/shots-v3.json   board 3 (sized to the 3.2 TARGET spans; conversations cut on the turn)
+  show/episodes/ep01/production/act4/history/shots-v3.json   board 3 (sized to the 3.2 TARGET spans; conversations cut on the turn)
   audio/ep01/act4/dialogue/lines.json                the 3.2 RE-RECORD: 46 voiced lines at pace (frames_24, mouth cues,
                                                      word timings, and the dialogue editor's placement relations:
                                                      overlap_with / overlap_prev_frames, gap_with / gap_prev_s)
@@ -59,7 +59,7 @@ PROD = P("show/episodes/ep01/production/act4")
 FPS, BEAT, BAR = 24, 15, 60
 EP_IN = (12 * 60 + 31) * FPS  # act frame 0 = episode 12:31:00
 
-BOARD = json.load(open(os.path.join(PROD, "shots-v3.json")))
+BOARD = json.load(open(os.path.join(PROD, "history/shots-v3.json")))
 REC = OrderedDict((x["id"], x) for x in json.load(open(P("audio/ep01/act4/dialogue/lines.json"))))
 
 # the board's conversation blocks (shots-v3 board_calls: "cut on the turn ... each block closed by its last shot")

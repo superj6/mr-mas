@@ -912,9 +912,9 @@ BOARD_CALLS = [
 ]
 
 # ======================================================================================= derive
-V2 = json.load(open(PROD + '/shots-v2.json'))
+V2 = json.load(open(PROD + '/history/shots-v2.json'))
 V2S = {s['id']: s for s in V2['shots']}
-LOCK2 = json.load(open(PROD + '/shots-locked-v2.json'))
+LOCK2 = json.load(open(PROD + '/history/shots-locked-v2.json'))
 LOCK2S = {s['id']: s for s in LOCK2['shots']}
 LINES_JSON = {x['id']: x for x in json.load(open(ROOT + '/audio/ep01/act4/dialogue/lines.json'))}
 
@@ -1249,7 +1249,7 @@ def report():
 if '--check' in sys.argv:
     report(); sys.exit(1 if problems else 0)
 
-json.dump(doc, open(PROD + '/shots-v3.json', 'w'), indent=1, ensure_ascii=False)
+json.dump(doc, open(PROD + '/history/shots-v3.json', 'w'), indent=1, ensure_ascii=False)
 import board_v3_md  # noqa: E402  (the markdown writers live next to this file)
 board_v3_md.write(doc, SHOTS, A, NEEDS, PROD, glen, tc)
 report()

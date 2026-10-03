@@ -28,7 +28,7 @@ is the return (s1.4: "the felt piano's first note marks the return").
                   "okay.", the felt: C4 -> F4 (the Water Line's settle, swung), an open fifth, no third.  The F4
                   sounds 5 frames before the cut to sc 31 and its decay L-cuts into the Q* vault's F hum.
 
-TO PICTURE against the Ep1 Act Four TIMING LOCK v2 (show/episodes/ep01/production/act4/timing-v2.md and
+TO PICTURE against the Ep1 Act Four TIMING LOCK v2 (show/episodes/ep01/production/act4/history/timing-v2.md and
 shots-locked-v2.json; the JSON wins).  File t = 0 is act frame 8295 (18:16:15, shot 30.01 f0, beat 2 of an act
 bar); a 3-beat pickup puts this cue's bar lines on the act's bar lines (bar 1 = act 8340).  The file's musical end
 is act 10200 (19:36:00, 31.01 f0).  The lock is +2.50 s on the printed 17:59.9-19:16.8: this cue follows the lock.
