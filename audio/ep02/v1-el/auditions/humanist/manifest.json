@@ -1,0 +1,1531 @@
+{
+ "takes": {
+  "e2-a1-0048__humanist-A": {
+   "take": "e2-a1-0048__humanist-A",
+   "key": "5e0c30619469b2dd",
+   "base_key": "5e0c30619469b2dd",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.672,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 354180554,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "sR8sxaLJeFSh308Gi6HS",
+   "voice_name": "Bill - Persuasive Calm & Friendly",
+   "cand": "A",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 3.02,
+    "span_s": 2.6,
+    "words": 10,
+    "wpm": 230.8,
+    "syllables": 12,
+    "articulation_sps": 4.98,
+    "pauses_s": [
+     0.19
+    ],
+    "longest_internal_gap_s": 0.19,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.652,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 106.1,
+    "f0_range_st": 12.8
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.4,
+     "t1": 0.524
+    },
+    {
+     "w": "just",
+     "t0": 0.571,
+     "t1": 0.733
+    },
+    {
+     "w": "moving",
+     "t0": 0.791,
+     "t1": 1.035
+    },
+    {
+     "w": "in",
+     "t0": 1.093,
+     "t1": 1.174
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.244,
+     "t1": 1.859
+    },
+    {
+     "w": "I",
+     "t0": 2.091,
+     "t1": 2.138
+    },
+    {
+     "w": "hope",
+     "t0": 2.208,
+     "t1": 2.359
+    },
+    {
+     "w": "that's",
+     "t0": 2.393,
+     "t1": 2.602
+    },
+    {
+     "w": "all",
+     "t0": 2.637,
+     "t1": 2.753
+    },
+    {
+     "w": "right",
+     "t0": 2.811,
+     "t1": 3.04
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.57,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 106.1,
+    "f0_range_st": 12.8,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.652,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-A": {
+   "take": "e2-a1-0050__humanist-A",
+   "key": "57d25ba8d2e5d7cf",
+   "base_key": "57d25ba8d2e5d7cf",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.068,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 654995230,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "sR8sxaLJeFSh308Gi6HS",
+   "voice_name": "Bill - Persuasive Calm & Friendly",
+   "cand": "A",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 2.46,
+    "span_s": 2.06,
+    "words": 10,
+    "wpm": 291.3,
+    "syllables": 10,
+    "articulation_sps": 5.56,
+    "pauses_s": [
+     0.26
+    ],
+    "longest_internal_gap_s": 0.26,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.608,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 117.7,
+    "f0_range_st": 13.5
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.38,
+     "t1": 0.431
+    },
+    {
+     "w": "brought",
+     "t0": 0.501,
+     "t1": 0.698
+    },
+    {
+     "w": "my",
+     "t0": 0.733,
+     "t1": 0.803
+    },
+    {
+     "w": "own",
+     "t0": 0.861,
+     "t1": 0.965
+    },
+    {
+     "w": "team",
+     "t0": 1.0,
+     "t1": 1.256
+    },
+    {
+     "w": "Is",
+     "t0": 1.546,
+     "t1": 1.708
+    },
+    {
+     "w": "there",
+     "t0": 1.755,
+     "t1": 1.883
+    },
+    {
+     "w": "room",
+     "t0": 1.917,
+     "t1": 2.068
+    },
+    {
+     "w": "for",
+     "t0": 2.115,
+     "t1": 2.208
+    },
+    {
+     "w": "them",
+     "t0": 2.242,
+     "t1": 2.405
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.19,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.91,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 117.7,
+    "f0_range_st": 13.5,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.608,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 2.368,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0048__humanist-B": {
+   "take": "e2-a1-0048__humanist-B",
+   "key": "02ec673afc42e3bc",
+   "base_key": "02ec673afc42e3bc",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.25,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 947326994,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "3TStB8f3X3To0Uj5R7RK",
+   "voice_name": "Joseff Novak - Calm and Professional",
+   "cand": "B",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.78,
+    "span_s": 2.34,
+    "words": 10,
+    "wpm": 256.4,
+    "syllables": 12,
+    "articulation_sps": 5.48,
+    "pauses_s": [
+     0.15
+    ],
+    "longest_internal_gap_s": 0.15,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.47,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 110.6,
+    "f0_range_st": 13.6
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.42,
+     "t1": 0.536
+    },
+    {
+     "w": "just",
+     "t0": 0.571,
+     "t1": 0.698
+    },
+    {
+     "w": "moving",
+     "t0": 0.745,
+     "t1": 0.965
+    },
+    {
+     "w": "in",
+     "t0": 1.012,
+     "t1": 1.07
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.128,
+     "t1": 1.732
+    },
+    {
+     "w": "I",
+     "t0": 1.929,
+     "t1": 1.987
+    },
+    {
+     "w": "hope",
+     "t0": 2.057,
+     "t1": 2.196
+    },
+    {
+     "w": "that's",
+     "t0": 2.219,
+     "t1": 2.417
+    },
+    {
+     "w": "all",
+     "t0": 2.44,
+     "t1": 2.544
+    },
+    {
+     "w": "right",
+     "t0": 2.591,
+     "t1": 2.8
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.89,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 110.6,
+    "f0_range_st": 13.6,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.47,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 2.833,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-B": {
+   "take": "e2-a1-0050__humanist-B",
+   "key": "8f29b5b0f926b6f7",
+   "base_key": "8f29b5b0f926b6f7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.99,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 842963147,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "3TStB8f3X3To0Uj5R7RK",
+   "voice_name": "Joseff Novak - Calm and Professional",
+   "cand": "B",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.53,
+    "span_s": 2.12,
+    "words": 10,
+    "wpm": 283.0,
+    "syllables": 10,
+    "articulation_sps": 5.75,
+    "pauses_s": [
+     0.38
+    ],
+    "longest_internal_gap_s": 0.38,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 114.5,
+    "f0_range_st": 6.8
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.39,
+     "t1": 0.454
+    },
+    {
+     "w": "brought",
+     "t0": 0.513,
+     "t1": 0.687
+    },
+    {
+     "w": "my",
+     "t0": 0.722,
+     "t1": 0.791
+    },
+    {
+     "w": "own",
+     "t0": 0.849,
+     "t1": 0.942
+    },
+    {
+     "w": "team",
+     "t0": 0.989,
+     "t1": 1.256
+    },
+    {
+     "w": "Is",
+     "t0": 1.615,
+     "t1": 1.778
+    },
+    {
+     "w": "there",
+     "t0": 1.824,
+     "t1": 1.975
+    },
+    {
+     "w": "room",
+     "t0": 2.01,
+     "t1": 2.15
+    },
+    {
+     "w": "for",
+     "t0": 2.208,
+     "t1": 2.289
+    },
+    {
+     "w": "them",
+     "t0": 2.324,
+     "t1": 2.509
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.06,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 114.5,
+    "f0_range_st": 6.8,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 2.508,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0048__humanist-C": {
+   "take": "e2-a1-0048__humanist-C",
+   "key": "1d39e938bbccc1b3",
+   "base_key": "1d39e938bbccc1b3",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.208,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 1930948995,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "rt7umfgRH4xBjSnI23My",
+   "voice_name": "Grey - Soft, Calm and Conversational",
+   "cand": "C",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.83,
+    "span_s": 2.45,
+    "words": 10,
+    "wpm": 244.9,
+    "syllables": 12,
+    "articulation_sps": 4.9,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.378,
+    "tail_to_60_s": 0.008,
+    "median_f0_hz": 108.2,
+    "f0_range_st": 8.1
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.36,
+     "t1": 0.536
+    },
+    {
+     "w": "just",
+     "t0": 0.594,
+     "t1": 0.756
+    },
+    {
+     "w": "moving",
+     "t0": 0.803,
+     "t1": 1.035
+    },
+    {
+     "w": "in",
+     "t0": 1.081,
+     "t1": 1.139
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.198,
+     "t1": 1.685
+    },
+    {
+     "w": "I",
+     "t0": 1.743,
+     "t1": 1.778
+    },
+    {
+     "w": "hope",
+     "t0": 1.836,
+     "t1": 1.987
+    },
+    {
+     "w": "that's",
+     "t0": 2.01,
+     "t1": 2.173
+    },
+    {
+     "w": "all",
+     "t0": 2.208,
+     "t1": 2.289
+    },
+    {
+     "w": "right",
+     "t0": 2.335,
+     "t1": 2.556
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.82,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 108.2,
+    "f0_range_st": 8.1,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.378,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.07,
+    "raw_len_s": 2.508,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-C": {
+   "take": "e2-a1-0050__humanist-C",
+   "key": "8ff45cf9a4b0fe9a",
+   "base_key": "8ff45cf9a4b0fe9a",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.929,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 3206686760,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "rt7umfgRH4xBjSnI23My",
+   "voice_name": "Grey - Soft, Calm and Conversational",
+   "cand": "C",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.55,
+    "span_s": 2.2,
+    "words": 10,
+    "wpm": 272.7,
+    "syllables": 10,
+    "articulation_sps": 4.55,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.379,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 118.6,
+    "f0_range_st": 9.5
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.35,
+     "t1": 0.454
+    },
+    {
+     "w": "brought",
+     "t0": 0.513,
+     "t1": 0.687
+    },
+    {
+     "w": "my",
+     "t0": 0.71,
+     "t1": 0.791
+    },
+    {
+     "w": "own",
+     "t0": 0.838,
+     "t1": 0.954
+    },
+    {
+     "w": "team",
+     "t0": 0.989,
+     "t1": 1.232
+    },
+    {
+     "w": "Is",
+     "t0": 1.43,
+     "t1": 1.581
+    },
+    {
+     "w": "there",
+     "t0": 1.615,
+     "t1": 1.755
+    },
+    {
+     "w": "room",
+     "t0": 1.778,
+     "t1": 1.917
+    },
+    {
+     "w": "for",
+     "t0": 1.964,
+     "t1": 2.057
+    },
+    {
+     "w": "them",
+     "t0": 2.091,
+     "t1": 2.254
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.8,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 118.6,
+    "f0_range_st": 9.5,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.379,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 2.229,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0048__humanist-D": {
+   "take": "e2-a1-0048__humanist-D",
+   "key": "2044966843545865",
+   "base_key": "2044966843545865",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.951,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 3344178881,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "WGINef1wh4Hi6O62bfO8",
+   "voice_name": "Luis - Relaxed, Calm and Polished",
+   "cand": "D",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 3.23,
+    "span_s": 2.79,
+    "words": 10,
+    "wpm": 215.1,
+    "syllables": 12,
+    "articulation_sps": 4.72,
+    "pauses_s": [
+     0.25
+    ],
+    "longest_internal_gap_s": 0.25,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.721,
+    "tail_to_60_s": 0.001,
+    "median_f0_hz": 116.7,
+    "f0_range_st": 9.2
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.42,
+     "t1": 0.536
+    },
+    {
+     "w": "just",
+     "t0": 0.582,
+     "t1": 0.733
+    },
+    {
+     "w": "moving",
+     "t0": 0.803,
+     "t1": 1.093
+    },
+    {
+     "w": "in",
+     "t0": 1.151,
+     "t1": 1.232
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.314,
+     "t1": 2.022
+    },
+    {
+     "w": "I",
+     "t0": 2.37,
+     "t1": 2.417
+    },
+    {
+     "w": "hope",
+     "t0": 2.486,
+     "t1": 2.66
+    },
+    {
+     "w": "that's",
+     "t0": 2.684,
+     "t1": 2.858
+    },
+    {
+     "w": "all",
+     "t0": 2.893,
+     "t1": 2.997
+    },
+    {
+     "w": "right",
+     "t0": 3.055,
+     "t1": 3.25
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.15,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.66,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 116.7,
+    "f0_range_st": 9.2,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.721,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 3.251,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-D": {
+   "take": "e2-a1-0050__humanist-D",
+   "key": "f207352cb92258e4",
+   "base_key": "f207352cb92258e4",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.254,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 3507964478,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "WGINef1wh4Hi6O62bfO8",
+   "voice_name": "Luis - Relaxed, Calm and Polished",
+   "cand": "D",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 2.78,
+    "span_s": 2.38,
+    "words": 10,
+    "wpm": 252.1,
+    "syllables": 10,
+    "articulation_sps": 4.2,
+    "pauses_s": [
+     0.06,
+     0.07,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.08,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.474,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 119.0,
+    "f0_range_st": 8.8
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.38,
+     "t1": 0.443
+    },
+    {
+     "w": "brought",
+     "t0": 0.524,
+     "t1": 0.733
+    },
+    {
+     "w": "my",
+     "t0": 0.78,
+     "t1": 0.861
+    },
+    {
+     "w": "own",
+     "t0": 0.93,
+     "t1": 1.058
+    },
+    {
+     "w": "team",
+     "t0": 1.105,
+     "t1": 1.407
+    },
+    {
+     "w": "Is",
+     "t0": 1.674,
+     "t1": 1.836
+    },
+    {
+     "w": "there",
+     "t0": 1.871,
+     "t1": 2.01
+    },
+    {
+     "w": "room",
+     "t0": 2.045,
+     "t1": 2.208
+    },
+    {
+     "w": "for",
+     "t0": 2.266,
+     "t1": 2.359
+    },
+    {
+     "w": "them",
+     "t0": 2.393,
+     "t1": 2.568
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.57,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 119.0,
+    "f0_range_st": 8.8,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.474,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 2.554,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0048__humanist-D2": {
+   "take": "e2-a1-0048__humanist-D2",
+   "key": "8dd2d27f8a016ebd",
+   "base_key": "8dd2d27f8a016ebd",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-D2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.787,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 3344178881,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "WGINef1wh4Hi6O62bfO8",
+   "voice_name": "Luis - Relaxed, Calm and Polished",
+   "cand": "D2",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 4.13,
+    "span_s": 3.71,
+    "words": 10,
+    "wpm": 161.7,
+    "syllables": 12,
+    "articulation_sps": 3.53,
+    "pauses_s": [
+     0.31,
+     0.06
+    ],
+    "longest_internal_gap_s": 0.31,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.657,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 101.6,
+    "f0_range_st": 7.5
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.4,
+     "t1": 0.594
+    },
+    {
+     "w": "just",
+     "t0": 0.652,
+     "t1": 0.849
+    },
+    {
+     "w": "moving",
+     "t0": 0.942,
+     "t1": 1.29
+    },
+    {
+     "w": "in",
+     "t0": 1.36,
+     "t1": 1.465
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.569,
+     "t1": 2.486
+    },
+    {
+     "w": "I",
+     "t0": 2.927,
+     "t1": 2.985
+    },
+    {
+     "w": "hope",
+     "t0": 3.078,
+     "t1": 3.299
+    },
+    {
+     "w": "that's",
+     "t0": 3.322,
+     "t1": 3.531
+    },
+    {
+     "w": "all",
+     "t0": 3.578,
+     "t1": 3.717
+    },
+    {
+     "w": "right",
+     "t0": 3.787,
+     "t1": 4.054
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.46,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 101.6,
+    "f0_range_st": 7.5,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.657,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 4.087,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-D2": {
+   "take": "e2-a1-0050__humanist-D2",
+   "key": "5ab4b5a5a8b0265e",
+   "base_key": "5ab4b5a5a8b0265e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-D2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.904,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 3507964478,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "WGINef1wh4Hi6O62bfO8",
+   "voice_name": "Luis - Relaxed, Calm and Polished",
+   "cand": "D2",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 3.29,
+    "span_s": 2.87,
+    "words": 10,
+    "wpm": 209.1,
+    "syllables": 10,
+    "articulation_sps": 3.89,
+    "pauses_s": [
+     0.13,
+     0.17,
+     0.06
+    ],
+    "longest_internal_gap_s": 0.17,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.614,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 113.8,
+    "f0_range_st": 9.9
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.4,
+     "t1": 0.466
+    },
+    {
+     "w": "brought",
+     "t0": 0.571,
+     "t1": 0.826
+    },
+    {
+     "w": "my",
+     "t0": 0.884,
+     "t1": 0.989
+    },
+    {
+     "w": "own",
+     "t0": 1.081,
+     "t1": 1.244
+    },
+    {
+     "w": "team",
+     "t0": 1.302,
+     "t1": 1.685
+    },
+    {
+     "w": "Is",
+     "t0": 2.01,
+     "t1": 2.208
+    },
+    {
+     "w": "there",
+     "t0": 2.254,
+     "t1": 2.417
+    },
+    {
+     "w": "room",
+     "t0": 2.463,
+     "t1": 2.672
+    },
+    {
+     "w": "for",
+     "t0": 2.742,
+     "t1": 2.858
+    },
+    {
+     "w": "them",
+     "t0": 2.904,
+     "t1": 3.113
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.03,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 113.8,
+    "f0_range_st": 9.9,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.614,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 3.204,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0048__humanist-A2": {
+   "take": "e2-a1-0048__humanist-A2",
+   "key": "53f8052b8677ddf0",
+   "base_key": "53f8052b8677ddf0",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.462,
+   "offset_s": 0.35,
+   "sent": "I'm just moving in downstairs. I hope that's all right.",
+   "seed": 354180554,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "sR8sxaLJeFSh308Gi6HS",
+   "voice_name": "Bill - Persuasive Calm & Friendly",
+   "cand": "A2",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 3.69,
+    "span_s": 3.26,
+    "words": 10,
+    "wpm": 184.0,
+    "syllables": 12,
+    "articulation_sps": 3.97,
+    "pauses_s": [
+     0.24
+    ],
+    "longest_internal_gap_s": 0.24,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.772,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 98.4,
+    "f0_range_st": 10.2
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.41,
+     "t1": 0.571
+    },
+    {
+     "w": "just",
+     "t0": 0.629,
+     "t1": 0.838
+    },
+    {
+     "w": "moving",
+     "t0": 0.907,
+     "t1": 1.198
+    },
+    {
+     "w": "in",
+     "t0": 1.267,
+     "t1": 1.372
+    },
+    {
+     "w": "downstairs",
+     "t0": 1.465,
+     "t1": 2.242
+    },
+    {
+     "w": "I",
+     "t0": 2.521,
+     "t1": 2.579
+    },
+    {
+     "w": "hope",
+     "t0": 2.672,
+     "t1": 2.869
+    },
+    {
+     "w": "that's",
+     "t0": 2.916,
+     "t1": 3.171
+    },
+    {
+     "w": "all",
+     "t0": 3.218,
+     "t1": 3.369
+    },
+    {
+     "w": "right",
+     "t0": 3.438,
+     "t1": 3.71
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.84,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 98.4,
+    "f0_range_st": 10.2,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.772,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.09,
+    "raw_len_s": 3.762,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0050__humanist-A2": {
+   "take": "e2-a1-0050__humanist-A2",
+   "key": "5729447f0c10a71c",
+   "base_key": "5729447f0c10a71c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.626,
+   "offset_s": 0.35,
+   "sent": "I brought my own team. Is there room for them?",
+   "seed": 654995230,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "sR8sxaLJeFSh308Gi6HS",
+   "voice_name": "Bill - Persuasive Calm & Friendly",
+   "cand": "A2",
+   "role": "humanist",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.95,
+    "span_s": 2.54,
+    "words": 10,
+    "wpm": 236.2,
+    "syllables": 10,
+    "articulation_sps": 4.59,
+    "pauses_s": [
+     0.36
+    ],
+    "longest_internal_gap_s": 0.36,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.676,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 125.6,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.39,
+     "t1": 0.454
+    },
+    {
+     "w": "brought",
+     "t0": 0.547,
+     "t1": 0.78
+    },
+    {
+     "w": "my",
+     "t0": 0.826,
+     "t1": 0.919
+    },
+    {
+     "w": "own",
+     "t0": 0.989,
+     "t1": 1.116
+    },
+    {
+     "w": "team",
+     "t0": 1.163,
+     "t1": 1.476
+    },
+    {
+     "w": "Is",
+     "t0": 1.836,
+     "t1": 2.033
+    },
+    {
+     "w": "there",
+     "t0": 2.091,
+     "t1": 2.231
+    },
+    {
+     "w": "room",
+     "t0": 2.277,
+     "t1": 2.475
+    },
+    {
+     "w": "for",
+     "t0": 2.533,
+     "t1": 2.649
+    },
+    {
+     "w": "them",
+     "t0": 2.695,
+     "t1": 2.893
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.16,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 125.6,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.676,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.065,
+    "raw_len_s": 2.926,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a1-0048__humanist-A",
+   "key": "5e0c30619469b2dd",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "atNiisAcGqLwT4uY6fi3",
+   "at": "00:13:25"
+  },
+  {
+   "take": "e2-a1-0050__humanist-A",
+   "key": "57d25ba8d2e5d7cf",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "Okoep8IE9ZrzuNaiDCH0",
+   "at": "00:13:28"
+  },
+  {
+   "take": "e2-a1-0048__humanist-B",
+   "key": "02ec673afc42e3bc",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "AGyqNeF36XJOEVn6572h",
+   "at": "00:13:33"
+  },
+  {
+   "take": "e2-a1-0050__humanist-B",
+   "key": "8f29b5b0f926b6f7",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "12bqoWJziLdammEmff6W",
+   "at": "00:13:36"
+  },
+  {
+   "take": "e2-a1-0048__humanist-C",
+   "key": "1d39e938bbccc1b3",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "DPBgC9ZEzExiDBadEE7s",
+   "at": "00:13:45"
+  },
+  {
+   "take": "e2-a1-0050__humanist-C",
+   "key": "8ff45cf9a4b0fe9a",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "2wAQ3TDbva0W3PBOZ7Ix",
+   "at": "00:13:48"
+  },
+  {
+   "take": "e2-a1-0048__humanist-D",
+   "key": "2044966843545865",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "EJMcVch4l44O8zzEuaRy",
+   "at": "00:13:58"
+  },
+  {
+   "take": "e2-a1-0050__humanist-D",
+   "key": "f207352cb92258e4",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "vtNadGGyV1y79ocRTAjY",
+   "at": "00:14:00"
+  },
+  {
+   "take": "e2-a1-0048__humanist-D2",
+   "key": "8dd2d27f8a016ebd",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "qCkWHzkbH84bpTZIa8lp",
+   "at": "03:29:30"
+  },
+  {
+   "take": "e2-a1-0050__humanist-D2",
+   "key": "5ab4b5a5a8b0265e",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "3IiFkwwbYzoiQrEv2dgn",
+   "at": "03:29:34"
+  },
+  {
+   "take": "e2-a1-0048__humanist-A2",
+   "key": "53f8052b8677ddf0",
+   "chars": 55,
+   "cost_header": "24",
+   "request_id": "HnCqVzqsJS4qO2scEctd",
+   "at": "03:29:36"
+  },
+  {
+   "take": "e2-a1-0050__humanist-A2",
+   "key": "5729447f0c10a71c",
+   "chars": 46,
+   "cost_header": "20",
+   "request_id": "Bu87kGDIHmrqPxQaCrTB",
+   "at": "03:29:37"
+  }
+ ]
+}

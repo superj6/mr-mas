@@ -1,0 +1,1432 @@
+{
+ "takes": {
+  "e2-a3-0018__forecaster-A": {
+   "take": "e2-a3-0018__forecaster-A",
+   "key": "cf6ef30e136a2bb7",
+   "base_key": "cf6ef30e136a2bb7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.46,
+   "offset_s": 0.35,
+   "sent": "Already did. It's the one thing I didn't need a number for.",
+   "seed": 3915983642,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "7EzWGsX10sAS4c9m9cPf",
+   "voice_name": "Jack John - Conversational and Upbeat",
+   "cand": "A",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.96,
+    "span_s": 2.55,
+    "words": 12,
+    "wpm": 282.4,
+    "syllables": 15,
+    "articulation_sps": 6.94,
+    "pauses_s": [
+     0.39
+    ],
+    "longest_internal_gap_s": 0.39,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.5,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 139.7,
+    "f0_range_st": 15.0
+   },
+   "words": [
+    {
+     "w": "Already",
+     "t0": 0.39,
+     "t1": 0.698
+    },
+    {
+     "w": "did",
+     "t0": 0.745,
+     "t1": 0.977
+    },
+    {
+     "w": "It's",
+     "t0": 1.372,
+     "t1": 1.523
+    },
+    {
+     "w": "the",
+     "t0": 1.546,
+     "t1": 1.615
+    },
+    {
+     "w": "one",
+     "t0": 1.65,
+     "t1": 1.755
+    },
+    {
+     "w": "thing",
+     "t0": 1.778,
+     "t1": 1.906
+    },
+    {
+     "w": "I",
+     "t0": 1.941,
+     "t1": 1.964
+    },
+    {
+     "w": "didn't",
+     "t0": 2.01,
+     "t1": 2.184
+    },
+    {
+     "w": "need",
+     "t0": 2.208,
+     "t1": 2.324
+    },
+    {
+     "w": "a",
+     "t0": 2.359,
+     "t1": 2.382
+    },
+    {
+     "w": "number",
+     "t0": 2.417,
+     "t1": 2.614
+    },
+    {
+     "w": "for",
+     "t0": 2.672,
+     "t1": 2.893
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.36,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 139.7,
+    "f0_range_st": 15.0,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.5,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.065,
+    "raw_len_s": 2.879,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0020__forecaster-A": {
+   "take": "e2-a3-0020__forecaster-A",
+   "key": "0e4cff977e3a8985",
+   "base_key": "0e4cff977e3a8985",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 6.1,
+   "offset_s": 0.35,
+   "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+   "seed": 1156279410,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "7EzWGsX10sAS4c9m9cPf",
+   "voice_name": "Jack John - Conversational and Upbeat",
+   "cand": "A",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 5.57,
+    "span_s": 5.22,
+    "words": 14,
+    "wpm": 160.9,
+    "syllables": 23,
+    "articulation_sps": 5.32,
+    "pauses_s": [
+     0.39,
+     0.07,
+     0.51
+    ],
+    "longest_internal_gap_s": 0.51,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.53,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 128.0,
+    "f0_range_st": 14.9
+   },
+   "words": [
+    {
+     "w": "I've",
+     "t0": 0.35,
+     "t1": 0.571
+    },
+    {
+     "w": "got",
+     "t0": 0.594,
+     "t1": 0.71
+    },
+    {
+     "w": "a",
+     "t0": 0.733,
+     "t1": 0.756
+    },
+    {
+     "w": "forecast",
+     "t0": 0.803,
+     "t1": 1.267
+    },
+    {
+     "w": "on",
+     "t0": 1.325,
+     "t1": 1.407
+    },
+    {
+     "w": "you",
+     "t0": 1.465,
+     "t1": 1.615
+    },
+    {
+     "w": "Median",
+     "t0": 2.068,
+     "t1": 2.498
+    },
+    {
+     "w": "an",
+     "t0": 2.649,
+     "t1": 2.765
+    },
+    {
+     "w": "apology",
+     "t0": 2.8,
+     "t1": 3.206
+    },
+    {
+     "w": "within",
+     "t0": 3.252,
+     "t1": 3.473
+    },
+    {
+     "w": "the",
+     "t0": 3.508,
+     "t1": 3.578
+    },
+    {
+     "w": "hour",
+     "t0": 3.612,
+     "t1": 3.891
+    },
+    {
+     "w": "in",
+     "t0": 4.506,
+     "t1": 4.808
+    },
+    {
+     "w": "lowercase",
+     "t0": 4.924,
+     "t1": 5.574
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.31,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 128.0,
+    "f0_range_st": 14.9,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.53,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 5.48,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0018__forecaster-B": {
+   "take": "e2-a3-0018__forecaster-B",
+   "key": "a8987f07770dff33",
+   "base_key": "a8987f07770dff33",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.672,
+   "offset_s": 0.35,
+   "sent": "Already did. It's the one thing I didn't need a number for.",
+   "seed": 3313335497,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "BvZBJROETmG9wGXEdSqX",
+   "voice_name": "Brandon - Casual, Youthful and Kind",
+   "cand": "B",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 3.28,
+    "span_s": 2.92,
+    "words": 12,
+    "wpm": 246.6,
+    "syllables": 15,
+    "articulation_sps": 5.62,
+    "pauses_s": [
+     0.12,
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.392,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 101.3,
+    "f0_range_st": 9.7
+   },
+   "words": [
+    {
+     "w": "Already",
+     "t0": 0.35,
+     "t1": 0.745
+    },
+    {
+     "w": "did",
+     "t0": 0.791,
+     "t1": 1.047
+    },
+    {
+     "w": "It's",
+     "t0": 1.174,
+     "t1": 1.348
+    },
+    {
+     "w": "the",
+     "t0": 1.383,
+     "t1": 1.453
+    },
+    {
+     "w": "one",
+     "t0": 1.523,
+     "t1": 1.674
+    },
+    {
+     "w": "thing",
+     "t0": 1.708,
+     "t1": 1.848
+    },
+    {
+     "w": "I",
+     "t0": 1.894,
+     "t1": 1.917
+    },
+    {
+     "w": "didn't",
+     "t0": 1.975,
+     "t1": 2.196
+    },
+    {
+     "w": "need",
+     "t0": 2.231,
+     "t1": 2.393
+    },
+    {
+     "w": "a",
+     "t0": 2.428,
+     "t1": 2.451
+    },
+    {
+     "w": "number",
+     "t0": 2.498,
+     "t1": 2.718
+    },
+    {
+     "w": "for",
+     "t0": 2.788,
+     "t1": 3.009
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.56,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 101.3,
+    "f0_range_st": 9.7,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.392,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0020__forecaster-B": {
+   "take": "e2-a3-0020__forecaster-B",
+   "key": "952b09de2f70d7bd",
+   "base_key": "952b09de2f70d7bd",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.165,
+   "offset_s": 0.35,
+   "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+   "seed": 2064327571,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "BvZBJROETmG9wGXEdSqX",
+   "voice_name": "Brandon - Casual, Youthful and Kind",
+   "cand": "B",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 4.71,
+    "span_s": 4.31,
+    "words": 14,
+    "wpm": 194.9,
+    "syllables": 23,
+    "articulation_sps": 5.88,
+    "pauses_s": [
+     0.29,
+     0.11
+    ],
+    "longest_internal_gap_s": 0.29,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 103.4,
+    "f0_range_st": 12.6
+   },
+   "words": [
+    {
+     "w": "I've",
+     "t0": 0.38,
+     "t1": 0.513
+    },
+    {
+     "w": "got",
+     "t0": 0.536,
+     "t1": 0.64
+    },
+    {
+     "w": "a",
+     "t0": 0.663,
+     "t1": 0.687
+    },
+    {
+     "w": "forecast",
+     "t0": 0.733,
+     "t1": 1.163
+    },
+    {
+     "w": "on",
+     "t0": 1.221,
+     "t1": 1.302
+    },
+    {
+     "w": "you",
+     "t0": 1.36,
+     "t1": 1.488
+    },
+    {
+     "w": "Median",
+     "t0": 1.848,
+     "t1": 2.277
+    },
+    {
+     "w": "an",
+     "t0": 2.44,
+     "t1": 2.556
+    },
+    {
+     "w": "apology",
+     "t0": 2.602,
+     "t1": 3.078
+    },
+    {
+     "w": "within",
+     "t0": 3.125,
+     "t1": 3.345
+    },
+    {
+     "w": "the",
+     "t0": 3.38,
+     "t1": 3.45
+    },
+    {
+     "w": "hour",
+     "t0": 3.496,
+     "t1": 3.752
+    },
+    {
+     "w": "in",
+     "t0": 3.891,
+     "t1": 4.007
+    },
+    {
+     "w": "lowercase",
+     "t0": 4.065,
+     "t1": 4.692
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.14,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 103.4,
+    "f0_range_st": 12.6,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 4.505,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0018__forecaster-C": {
+   "take": "e2-a3-0018__forecaster-C",
+   "key": "dc789ef5e4306742",
+   "base_key": "dc789ef5e4306742",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.395,
+   "offset_s": 0.35,
+   "sent": "Already did. It's the one thing I didn't need a number for.",
+   "seed": 3639036120,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "ZoiZ8fuDWInAcwPXaVeq",
+   "voice_name": "Josh - Warm, Smooth and Steady",
+   "cand": "C",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.89,
+    "span_s": 2.54,
+    "words": 12,
+    "wpm": 283.5,
+    "syllables": 15,
+    "articulation_sps": 5.91,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.505,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 100.8,
+    "f0_range_st": 7.6
+   },
+   "words": [
+    {
+     "w": "Already",
+     "t0": 0.35,
+     "t1": 0.722
+    },
+    {
+     "w": "did",
+     "t0": 0.768,
+     "t1": 1.0
+    },
+    {
+     "w": "It's",
+     "t0": 1.081,
+     "t1": 1.221
+    },
+    {
+     "w": "the",
+     "t0": 1.244,
+     "t1": 1.314
+    },
+    {
+     "w": "one",
+     "t0": 1.372,
+     "t1": 1.476
+    },
+    {
+     "w": "thing",
+     "t0": 1.499,
+     "t1": 1.627
+    },
+    {
+     "w": "I",
+     "t0": 1.674,
+     "t1": 1.697
+    },
+    {
+     "w": "didn't",
+     "t0": 1.743,
+     "t1": 1.952
+    },
+    {
+     "w": "need",
+     "t0": 1.987,
+     "t1": 2.115
+    },
+    {
+     "w": "a",
+     "t0": 2.15,
+     "t1": 2.173
+    },
+    {
+     "w": "number",
+     "t0": 2.219,
+     "t1": 2.44
+    },
+    {
+     "w": "for",
+     "t0": 2.509,
+     "t1": 2.8
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.19,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 100.8,
+    "f0_range_st": 7.6,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.505,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 2.786,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0020__forecaster-C": {
+   "take": "e2-a3-0020__forecaster-C",
+   "key": "98a3da0d157de1c8",
+   "base_key": "98a3da0d157de1c8",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.18,
+   "offset_s": 0.0,
+   "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+   "seed": 1663003026,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "ZoiZ8fuDWInAcwPXaVeq",
+   "voice_name": "Josh - Warm, Smooth and Steady",
+   "cand": "C",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.5,
+    "audible_out_s": 4.53,
+    "span_s": 4.03,
+    "words": 14,
+    "wpm": 208.4,
+    "syllables": 23,
+    "articulation_sps": 5.9,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.5,
+    "speech_tail_s": 0.65,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 107.7,
+    "f0_range_st": 10.1
+   },
+   "words": [
+    {
+     "w": "I've",
+     "t0": 0.48,
+     "t1": 0.604
+    },
+    {
+     "w": "got",
+     "t0": 0.627,
+     "t1": 0.72
+    },
+    {
+     "w": "a",
+     "t0": 0.755,
+     "t1": 0.778
+    },
+    {
+     "w": "forecast",
+     "t0": 0.813,
+     "t1": 1.242
+    },
+    {
+     "w": "on",
+     "t0": 1.3,
+     "t1": 1.382
+    },
+    {
+     "w": "you",
+     "t0": 1.428,
+     "t1": 1.533
+    },
+    {
+     "w": "Median",
+     "t0": 1.741,
+     "t1": 2.148
+    },
+    {
+     "w": "an",
+     "t0": 2.229,
+     "t1": 2.334
+    },
+    {
+     "w": "apology",
+     "t0": 2.368,
+     "t1": 2.937
+    },
+    {
+     "w": "within",
+     "t0": 3.053,
+     "t1": 3.32
+    },
+    {
+     "w": "the",
+     "t0": 3.355,
+     "t1": 3.425
+    },
+    {
+     "w": "hour",
+     "t0": 3.483,
+     "t1": 3.727
+    },
+    {
+     "w": "in",
+     "t0": 3.796,
+     "t1": 3.866
+    },
+    {
+     "w": "lowercase",
+     "t0": 3.913,
+     "t1": 4.528
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.09,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 107.7,
+    "f0_range_st": 10.1,
+    "speech_head_s": 0.5,
+    "speech_tail_s": 0.65,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.5,
+    "raw_len_s": 4.83,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0018__forecaster-D": {
+   "take": "e2-a3-0018__forecaster-D",
+   "key": "d4c1cfd980a2a166",
+   "base_key": "d4c1cfd980a2a166",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.997,
+   "offset_s": 0.35,
+   "sent": "Already did. It's the one thing I didn't need a number for.",
+   "seed": 2432924618,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "sfJopaWaOtauCD3HKX6Q",
+   "voice_name": "Arthur – Casual Conversational American Male Narrator",
+   "cand": "D",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 3.54,
+    "span_s": 3.18,
+    "words": 12,
+    "wpm": 226.4,
+    "syllables": 15,
+    "articulation_sps": 5.28,
+    "pauses_s": [
+     0.34
+    ],
+    "longest_internal_gap_s": 0.34,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.457,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 111.2,
+    "f0_range_st": 12.5
+   },
+   "words": [
+    {
+     "w": "Already",
+     "t0": 0.35,
+     "t1": 0.756
+    },
+    {
+     "w": "did",
+     "t0": 0.803,
+     "t1": 1.093
+    },
+    {
+     "w": "It's",
+     "t0": 1.488,
+     "t1": 1.743
+    },
+    {
+     "w": "the",
+     "t0": 1.778,
+     "t1": 1.859
+    },
+    {
+     "w": "one",
+     "t0": 1.929,
+     "t1": 2.068
+    },
+    {
+     "w": "thing",
+     "t0": 2.091,
+     "t1": 2.219
+    },
+    {
+     "w": "I",
+     "t0": 2.254,
+     "t1": 2.277
+    },
+    {
+     "w": "didn't",
+     "t0": 2.312,
+     "t1": 2.509
+    },
+    {
+     "w": "need",
+     "t0": 2.533,
+     "t1": 2.672
+    },
+    {
+     "w": "a",
+     "t0": 2.707,
+     "t1": 2.73
+    },
+    {
+     "w": "number",
+     "t0": 2.765,
+     "t1": 2.985
+    },
+    {
+     "w": "for",
+     "t0": 3.055,
+     "t1": 3.299
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.26,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 111.2,
+    "f0_range_st": 12.5,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.457,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 3.297,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0020__forecaster-D": {
+   "take": "e2-a3-0020__forecaster-D",
+   "key": "09a76aafbf9a1ea8",
+   "base_key": "09a76aafbf9a1ea8",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 6.855,
+   "offset_s": 0.35,
+   "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+   "seed": 3574640596,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "sfJopaWaOtauCD3HKX6Q",
+   "voice_name": "Arthur – Casual Conversational American Male Narrator",
+   "cand": "D",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 6.32,
+    "span_s": 5.9,
+    "words": 14,
+    "wpm": 142.4,
+    "syllables": 23,
+    "articulation_sps": 5.28,
+    "pauses_s": [
+     0.48,
+     0.48,
+     0.58
+    ],
+    "longest_internal_gap_s": 0.58,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.535,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 84.0,
+    "f0_range_st": 12.6
+   },
+   "words": [
+    {
+     "w": "I've",
+     "t0": 0.4,
+     "t1": 0.547
+    },
+    {
+     "w": "got",
+     "t0": 0.571,
+     "t1": 0.675
+    },
+    {
+     "w": "a",
+     "t0": 0.71,
+     "t1": 0.733
+    },
+    {
+     "w": "forecast",
+     "t0": 0.78,
+     "t1": 1.279
+    },
+    {
+     "w": "on",
+     "t0": 1.337,
+     "t1": 1.418
+    },
+    {
+     "w": "you",
+     "t0": 1.476,
+     "t1": 1.615
+    },
+    {
+     "w": "Median",
+     "t0": 2.266,
+     "t1": 2.718
+    },
+    {
+     "w": "an",
+     "t0": 3.311,
+     "t1": 3.427
+    },
+    {
+     "w": "apology",
+     "t0": 3.461,
+     "t1": 3.984
+    },
+    {
+     "w": "within",
+     "t0": 4.065,
+     "t1": 4.344
+    },
+    {
+     "w": "the",
+     "t0": 4.39,
+     "t1": 4.472
+    },
+    {
+     "w": "hour",
+     "t0": 4.518,
+     "t1": 4.797
+    },
+    {
+     "w": "in",
+     "t0": 5.447,
+     "t1": 5.574
+    },
+    {
+     "w": "lowercase",
+     "t0": 5.644,
+     "t1": 6.34
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.38,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 84.0,
+    "f0_range_st": 12.6,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.535,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 6.223,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0018__forecaster-A2": {
+   "take": "e2-a3-0018__forecaster-A2",
+   "key": "dc466deaaf559c0f",
+   "base_key": "dc466deaaf559c0f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.08,
+   "offset_s": 0.35,
+   "sent": "Already did. It's the one thing I didn't need a number for.",
+   "seed": 3915983642,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "7EzWGsX10sAS4c9m9cPf",
+   "voice_name": "Jack John - Conversational and Upbeat",
+   "cand": "A2",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 3.59,
+    "span_s": 3.22,
+    "words": 12,
+    "wpm": 223.6,
+    "syllables": 15,
+    "articulation_sps": 5.58,
+    "pauses_s": [
+     0.53
+    ],
+    "longest_internal_gap_s": 0.53,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.49,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 139.1,
+    "f0_range_st": 15.3
+   },
+   "words": [
+    {
+     "w": "Already",
+     "t0": 0.35,
+     "t1": 0.78
+    },
+    {
+     "w": "did",
+     "t0": 0.838,
+     "t1": 1.128
+    },
+    {
+     "w": "It's",
+     "t0": 1.627,
+     "t1": 1.813
+    },
+    {
+     "w": "the",
+     "t0": 1.836,
+     "t1": 1.906
+    },
+    {
+     "w": "one",
+     "t0": 1.952,
+     "t1": 2.091
+    },
+    {
+     "w": "thing",
+     "t0": 2.115,
+     "t1": 2.254
+    },
+    {
+     "w": "I",
+     "t0": 2.3,
+     "t1": 2.324
+    },
+    {
+     "w": "didn't",
+     "t0": 2.382,
+     "t1": 2.591
+    },
+    {
+     "w": "need",
+     "t0": 2.614,
+     "t1": 2.753
+    },
+    {
+     "w": "a",
+     "t0": 2.8,
+     "t1": 2.823
+    },
+    {
+     "w": "number",
+     "t0": 2.869,
+     "t1": 3.125
+    },
+    {
+     "w": "for",
+     "t0": 3.194,
+     "t1": 3.461
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.17,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 139.1,
+    "f0_range_st": 15.3,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.49,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 3.529,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0020__forecaster-A2": {
+   "take": "e2-a3-0020__forecaster-A2",
+   "key": "a93996e30756a19b",
+   "base_key": "a93996e30756a19b",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 7.69,
+   "offset_s": 0.35,
+   "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+   "seed": 1156279410,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "7EzWGsX10sAS4c9m9cPf",
+   "voice_name": "Jack John - Conversational and Upbeat",
+   "cand": "A2",
+   "role": "forecaster",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 7.19,
+    "span_s": 6.82,
+    "words": 14,
+    "wpm": 123.2,
+    "syllables": 23,
+    "articulation_sps": 4.31,
+    "pauses_s": [
+     0.35,
+     0.59,
+     0.54
+    ],
+    "longest_internal_gap_s": 0.59,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.5,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 141.0,
+    "f0_range_st": 14.8
+   },
+   "words": [
+    {
+     "w": "I've",
+     "t0": 0.35,
+     "t1": 0.64
+    },
+    {
+     "w": "got",
+     "t0": 0.663,
+     "t1": 0.814
+    },
+    {
+     "w": "a",
+     "t0": 0.838,
+     "t1": 0.861
+    },
+    {
+     "w": "forecast",
+     "t0": 0.919,
+     "t1": 1.499
+    },
+    {
+     "w": "on",
+     "t0": 1.569,
+     "t1": 1.674
+    },
+    {
+     "w": "you",
+     "t0": 1.743,
+     "t1": 1.929
+    },
+    {
+     "w": "Median",
+     "t0": 2.498,
+     "t1": 3.067
+    },
+    {
+     "w": "an",
+     "t0": 3.659,
+     "t1": 3.775
+    },
+    {
+     "w": "apology",
+     "t0": 3.821,
+     "t1": 4.332
+    },
+    {
+     "w": "within",
+     "t0": 4.379,
+     "t1": 4.669
+    },
+    {
+     "w": "the",
+     "t0": 4.715,
+     "t1": 4.785
+    },
+    {
+     "w": "hour",
+     "t0": 4.831,
+     "t1": 5.18
+    },
+    {
+     "w": "in",
+     "t0": 5.876,
+     "t1": 6.248
+    },
+    {
+     "w": "lowercase",
+     "t0": 6.387,
+     "t1": 7.2
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.66,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 141.0,
+    "f0_range_st": 14.8,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.5,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 7.198,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0018__forecaster-A",
+   "key": "cf6ef30e136a2bb7",
+   "chars": 59,
+   "cost_header": "26",
+   "request_id": "uzarY7nDZYwFdV6z7q05",
+   "at": "00:17:43"
+  },
+  {
+   "take": "e2-a3-0020__forecaster-A",
+   "key": "0e4cff977e3a8985",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "uVGVS7qumlFqA0gzDUip",
+   "at": "00:17:46"
+  },
+  {
+   "take": "e2-a3-0018__forecaster-B",
+   "key": "a8987f07770dff33",
+   "chars": 59,
+   "cost_header": "26",
+   "request_id": "I1EEJjske4wCRYHGFAUD",
+   "at": "00:17:52"
+  },
+  {
+   "take": "e2-a3-0020__forecaster-B",
+   "key": "952b09de2f70d7bd",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "ibIiQaCzdKxMtWmfo4kn",
+   "at": "00:17:55"
+  },
+  {
+   "take": "e2-a3-0018__forecaster-C",
+   "key": "dc789ef5e4306742",
+   "chars": 59,
+   "cost_header": "26",
+   "request_id": "hB6LMTEjAU1nRXYg1RDh",
+   "at": "00:17:58"
+  },
+  {
+   "take": "e2-a3-0020__forecaster-C",
+   "key": "98a3da0d157de1c8",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "wgthrOjmqCgzEkFwNpeI",
+   "at": "00:18:02"
+  },
+  {
+   "take": "e2-a3-0018__forecaster-D",
+   "key": "d4c1cfd980a2a166",
+   "chars": 59,
+   "cost_header": "26",
+   "request_id": "qxzbZVqqip64otmY1zhf",
+   "at": "00:18:10"
+  },
+  {
+   "take": "e2-a3-0020__forecaster-D",
+   "key": "09a76aafbf9a1ea8",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "mjnsPl7FzK3J3xmLuZz9",
+   "at": "00:18:13"
+  },
+  {
+   "take": "e2-a3-0018__forecaster-A2",
+   "key": "dc466deaaf559c0f",
+   "chars": 59,
+   "cost_header": "26",
+   "request_id": "VaUxOq8Iu9rzWZ8hGCW7",
+   "at": "03:29:52"
+  },
+  {
+   "take": "e2-a3-0020__forecaster-A2",
+   "key": "a93996e30756a19b",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "fLEVlLfnqT0FOqpBk5sj",
+   "at": "03:29:54"
+  }
+ ]
+}

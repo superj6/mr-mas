@@ -1,0 +1,338 @@
+{
+ "takes": {
+  "e2-a3-0005__reporter-A": {
+   "take": "e2-a3-0005__reporter-A",
+   "key": "f01716d74f22c5a5",
+   "base_key": "f01716d74f22c5a5",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-A.wav",
+   "file_device": "audio/ep02/v1-el/auditions/reporter/wav-device/e2-a3-0005__reporter-A.tv.wav",
+   "device": "tv",
+   "duration_s": 2.186,
+   "offset_s": 0.35,
+   "sent": "Senator, when does it get a vote?",
+   "seed": 470071845,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "kdnRe2koJdOK4Ovxn2DI",
+   "voice_name": "Eryn - Genuine, Friendly and Natural",
+   "cand": "A",
+   "role": "reporter",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 1.55,
+    "span_s": 1.19,
+    "words": 7,
+    "wpm": 352.9,
+    "syllables": 9,
+    "articulation_sps": 7.56,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.636,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 232.1,
+    "f0_range_st": 9.3
+   },
+   "words": [
+    {
+     "w": "Senator",
+     "t0": 0.35,
+     "t1": 0.71
+    },
+    {
+     "w": "when",
+     "t0": 0.756,
+     "t1": 0.861
+    },
+    {
+     "w": "does",
+     "t0": 0.884,
+     "t1": 0.977
+    },
+    {
+     "w": "it",
+     "t0": 1.012,
+     "t1": 1.058
+    },
+    {
+     "w": "get",
+     "t0": 1.081,
+     "t1": 1.174
+    },
+    {
+     "w": "a",
+     "t0": 1.209,
+     "t1": 1.232
+    },
+    {
+     "w": "vote",
+     "t0": 1.267,
+     "t1": 1.511
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.64,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 232.1,
+    "f0_range_st": 9.3,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.636,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.02,
+    "raw_len_s": 1.486,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0005__reporter-B": {
+   "take": "e2-a3-0005__reporter-B",
+   "key": "876520ccf839a8a7",
+   "base_key": "876520ccf839a8a7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-B.wav",
+   "file_device": "audio/ep02/v1-el/auditions/reporter/wav-device/e2-a3-0005__reporter-B.tv.wav",
+   "device": "tv",
+   "duration_s": 2.604,
+   "offset_s": 0.35,
+   "sent": "Senator, when does it get a vote?",
+   "seed": 296003150,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "5Bd4WV6UTiSunxizNai6",
+   "voice_name": "Leslie - Open, Strong and Approachable",
+   "cand": "B",
+   "role": "reporter",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.06,
+    "span_s": 1.71,
+    "words": 7,
+    "wpm": 245.6,
+    "syllables": 9,
+    "articulation_sps": 5.26,
+    "pauses_s": [
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.544,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 260.1,
+    "f0_range_st": 6.7
+   },
+   "words": [
+    {
+     "w": "Senator",
+     "t0": 0.35,
+     "t1": 0.884
+    },
+    {
+     "w": "when",
+     "t0": 1.174,
+     "t1": 1.348
+    },
+    {
+     "w": "does",
+     "t0": 1.395,
+     "t1": 1.499
+    },
+    {
+     "w": "it",
+     "t0": 1.546,
+     "t1": 1.592
+    },
+    {
+     "w": "get",
+     "t0": 1.627,
+     "t1": 1.743
+    },
+    {
+     "w": "a",
+     "t0": 1.778,
+     "t1": 1.801
+    },
+    {
+     "w": "vote",
+     "t0": 1.848,
+     "t1": 2.08
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.65,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 260.1,
+    "f0_range_st": 6.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.544,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 1.904,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0005__reporter-C": {
+   "take": "e2-a3-0005__reporter-C",
+   "key": "7376eb7bb1091dd6",
+   "base_key": "7376eb7bb1091dd6",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-C.wav",
+   "file_device": "audio/ep02/v1-el/auditions/reporter/wav-device/e2-a3-0005__reporter-C.tv.wav",
+   "device": "tv",
+   "duration_s": 3.022,
+   "offset_s": 0.35,
+   "sent": "Senator, when does it get a vote?",
+   "seed": 3051244729,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "CaJGGnGTRWSly2yoC75U",
+   "voice_name": "Katherine - Professional, Clear, Warm",
+   "cand": "C",
+   "role": "reporter",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.36,
+    "span_s": 2.01,
+    "words": 7,
+    "wpm": 209.0,
+    "syllables": 9,
+    "articulation_sps": 4.48,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.662,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 207.6,
+    "f0_range_st": 12.1
+   },
+   "words": [
+    {
+     "w": "Senator",
+     "t0": 0.35,
+     "t1": 0.884
+    },
+    {
+     "w": "when",
+     "t0": 0.989,
+     "t1": 1.244
+    },
+    {
+     "w": "does",
+     "t0": 1.302,
+     "t1": 1.465
+    },
+    {
+     "w": "it",
+     "t0": 1.511,
+     "t1": 1.581
+    },
+    {
+     "w": "get",
+     "t0": 1.639,
+     "t1": 1.813
+    },
+    {
+     "w": "a",
+     "t0": 1.848,
+     "t1": 1.883
+    },
+    {
+     "w": "vote",
+     "t0": 1.952,
+     "t1": 2.359
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.2,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 207.6,
+    "f0_range_st": 12.1,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.662,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 2.322,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0005__reporter-A",
+   "key": "f01716d74f22c5a5",
+   "chars": 33,
+   "cost_header": "15",
+   "request_id": "vtbYYRbculirxKUv1xgs",
+   "at": "00:16:19"
+  },
+  {
+   "take": "e2-a3-0005__reporter-B",
+   "key": "876520ccf839a8a7",
+   "chars": 33,
+   "cost_header": "15",
+   "request_id": "6LCXhi0MgfcHRARq5hzB",
+   "at": "00:16:25"
+  },
+  {
+   "take": "e2-a3-0005__reporter-C",
+   "key": "7376eb7bb1091dd6",
+   "chars": 33,
+   "cost_header": "15",
+   "request_id": "6ZjX3O8HvS1cWCZdNNmN",
+   "at": "00:16:32"
+  }
+ ]
+}

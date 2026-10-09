@@ -1,0 +1,246 @@
+{
+ "takes": {
+  "e2-a2-0012__voice1-A": {
+   "take": "e2-a2-0012__voice1-A",
+   "key": "761848e710e466b9",
+   "base_key": "761848e710e466b9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.397,
+   "offset_s": 0.35,
+   "sent": "Hi.",
+   "seed": 3152811016,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "2Dn9vl2stwtaHkhE8iIb",
+   "voice_name": "Tucker - Deep, Mature and Calm",
+   "cand": "A",
+   "role": "voice1",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 0.84,
+    "span_s": 0.4,
+    "words": 1,
+    "wpm": 150.0,
+    "syllables": 1,
+    "articulation_sps": 2.5,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.557,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 58.8,
+    "f0_range_st": 8.8
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.42,
+     "t1": 0.803
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.55,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 58.8,
+    "f0_range_st": 8.8,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.557,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 0.697,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0012__voice1-B": {
+   "take": "e2-a2-0012__voice1-B",
+   "key": "aaf966607ce57fee",
+   "base_key": "aaf966607ce57fee",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.257,
+   "offset_s": 0.35,
+   "sent": "Hi.",
+   "seed": 3136633247,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "B6vvITCUlHjDGhWvQQmI",
+   "voice_name": "Peter - Audiobook Narrator",
+   "cand": "B",
+   "role": "voice1",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 0.9,
+    "span_s": 0.55,
+    "words": 1,
+    "wpm": 109.1,
+    "syllables": 1,
+    "articulation_sps": 1.82,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.357,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 108.3,
+    "f0_range_st": 16.7
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.35,
+     "t1": 0.675
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.26,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 108.3,
+    "f0_range_st": 16.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.357,
+    "raw_tail_cut": true,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 0.557,
+    "raw_tail_cut": true
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0012__voice1-C": {
+   "take": "e2-a2-0012__voice1-C",
+   "key": "0e5b706830653fa7",
+   "base_key": "0e5b706830653fa7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.345,
+   "offset_s": 0.35,
+   "sent": "Hi.",
+   "seed": 3399484824,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "hIru3zkEJ3dBYHTbMy2V",
+   "voice_name": "Alexander - Clear, Steady and Refined",
+   "cand": "C",
+   "role": "voice1",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 0.88,
+    "span_s": 0.49,
+    "words": 1,
+    "wpm": 122.4,
+    "syllables": 1,
+    "articulation_sps": 2.04,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.465,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 188.9,
+    "f0_range_st": 11.7
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.37,
+     "t1": 0.768
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.22,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 188.9,
+    "f0_range_st": 11.7,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.465,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.045,
+    "raw_len_s": 0.789,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0012__voice1-A",
+   "key": "761848e710e466b9",
+   "chars": 3,
+   "cost_header": "1",
+   "request_id": "b4WMN5hvuuzZX2dkPt1M",
+   "at": "00:14:38"
+  },
+  {
+   "take": "e2-a2-0012__voice1-B",
+   "key": "aaf966607ce57fee",
+   "chars": 3,
+   "cost_header": "1",
+   "request_id": "QKU8YLfamBj4FbxGyexs",
+   "at": "00:14:44"
+  },
+  {
+   "take": "e2-a2-0012__voice1-C",
+   "key": "0e5b706830653fa7",
+   "chars": 3,
+   "cost_header": "1",
+   "request_id": "0pnLfG6j9uCuSHPfJb8u",
+   "at": "00:14:51"
+  }
+ ]
+}

@@ -1,0 +1,1145 @@
+{
+ "takes": {
+  "e2-a2-0003__engineer-A": {
+   "take": "e2-a2-0003__engineer-A",
+   "key": "f4d0a8170a271ad4",
+   "base_key": "f4d0a8170a271ad4",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.483,
+   "offset_s": 0.35,
+   "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+   "seed": 3452621253,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "qHR09fcvu6SoDtFzqFvm",
+   "voice_name": "Ryan - Articulate, Friendly and Youthful",
+   "cand": "A",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 4.98,
+    "span_s": 4.6,
+    "words": 17,
+    "wpm": 221.7,
+    "syllables": 20,
+    "articulation_sps": 4.73,
+    "pauses_s": [
+     0.1,
+     0.13,
+     0.14
+    ],
+    "longest_internal_gap_s": 0.14,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.503,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 117.8,
+    "f0_range_st": 13.5
+   },
+   "words": [
+    {
+     "w": "So",
+     "t0": 0.36,
+     "t1": 0.547
+    },
+    {
+     "w": "on",
+     "t0": 0.617,
+     "t1": 0.733
+    },
+    {
+     "w": "stage",
+     "t0": 0.803,
+     "t1": 1.267
+    },
+    {
+     "w": "I",
+     "t0": 1.383,
+     "t1": 1.43
+    },
+    {
+     "w": "ask",
+     "t0": 1.523,
+     "t1": 1.697
+    },
+    {
+     "w": "it",
+     "t0": 1.743,
+     "t1": 1.813
+    },
+    {
+     "w": "a",
+     "t0": 1.836,
+     "t1": 1.859
+    },
+    {
+     "w": "question",
+     "t0": 1.906,
+     "t1": 2.347
+    },
+    {
+     "w": "it",
+     "t0": 2.602,
+     "t1": 2.73
+    },
+    {
+     "w": "thinks",
+     "t0": 2.765,
+     "t1": 2.974
+    },
+    {
+     "w": "for",
+     "t0": 3.02,
+     "t1": 3.136
+    },
+    {
+     "w": "a",
+     "t0": 3.194,
+     "t1": 3.218
+    },
+    {
+     "w": "second",
+     "t0": 3.287,
+     "t1": 3.705
+    },
+    {
+     "w": "and",
+     "t0": 3.833,
+     "t1": 3.984
+    },
+    {
+     "w": "then",
+     "t0": 4.03,
+     "t1": 4.146
+    },
+    {
+     "w": "it",
+     "t0": 4.193,
+     "t1": 4.274
+    },
+    {
+     "w": "answers",
+     "t0": 4.332,
+     "t1": 4.773
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.62,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 117.8,
+    "f0_range_st": 13.5,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.503,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 4.783,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0038__engineer-A": {
+   "take": "e2-a2-0038__engineer-A",
+   "key": "cc5a1b7e8e1b501b",
+   "base_key": "cc5a1b7e8e1b501b",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.137,
+   "offset_s": 0.35,
+   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "seed": 1126244905,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "qHR09fcvu6SoDtFzqFvm",
+   "voice_name": "Ryan - Articulate, Friendly and Youthful",
+   "cand": "A",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.48,
+    "audible_out_s": 3.43,
+    "span_s": 2.95,
+    "words": 9,
+    "wpm": 183.1,
+    "syllables": 11,
+    "articulation_sps": 4.18,
+    "pauses_s": [
+     0.32,
+     0.07,
+     0.06
+    ],
+    "longest_internal_gap_s": 0.32,
+    "speech_head_s": 0.48,
+    "speech_tail_s": 0.707,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 151.4,
+    "f0_range_st": 13.6
+   },
+   "words": [
+    {
+     "w": "'Her.'",
+     "t0": 0.524,
+     "t1": 0.814
+    },
+    {
+     "w": "Like",
+     "t0": 1.232,
+     "t1": 1.43
+    },
+    {
+     "w": "the",
+     "t0": 1.453,
+     "t1": 1.523
+    },
+    {
+     "w": "movie",
+     "t0": 1.569,
+     "t1": 1.941
+    },
+    {
+     "w": "The",
+     "t0": 2.196,
+     "t1": 2.3
+    },
+    {
+     "w": "guy",
+     "t0": 2.359,
+     "t1": 2.544
+    },
+    {
+     "w": "and",
+     "t0": 2.591,
+     "t1": 2.684
+    },
+    {
+     "w": "his",
+     "t0": 2.718,
+     "t1": 2.8
+    },
+    {
+     "w": "computer",
+     "t0": 2.846,
+     "t1": 3.334
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.17,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 151.4,
+    "f0_range_st": 13.6,
+    "speech_head_s": 0.48,
+    "speech_tail_s": 0.707,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.145,
+    "raw_len_s": 3.437,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0003__engineer-B": {
+   "take": "e2-a2-0003__engineer-B",
+   "key": "046e6c04d794863f",
+   "base_key": "046e6c04d794863f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.647,
+   "offset_s": 0.35,
+   "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+   "seed": 2500862251,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "s3TPKV1kjDlVtZbl4Ksh",
+   "voice_name": "Adam - Engaging, Friendly and Bright",
+   "cand": "B",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 4.1,
+    "span_s": 3.71,
+    "words": 17,
+    "wpm": 274.9,
+    "syllables": 20,
+    "articulation_sps": 5.63,
+    "pauses_s": [
+     0.09,
+     0.16
+    ],
+    "longest_internal_gap_s": 0.16,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.547,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 128.3,
+    "f0_range_st": 9.0
+   },
+   "words": [
+    {
+     "w": "So",
+     "t0": 0.37,
+     "t1": 0.547
+    },
+    {
+     "w": "on",
+     "t0": 0.629,
+     "t1": 0.745
+    },
+    {
+     "w": "stage",
+     "t0": 0.803,
+     "t1": 1.151
+    },
+    {
+     "w": "I",
+     "t0": 1.221,
+     "t1": 1.267
+    },
+    {
+     "w": "ask",
+     "t0": 1.36,
+     "t1": 1.546
+    },
+    {
+     "w": "it",
+     "t0": 1.581,
+     "t1": 1.639
+    },
+    {
+     "w": "a",
+     "t0": 1.674,
+     "t1": 1.697
+    },
+    {
+     "w": "question",
+     "t0": 1.755,
+     "t1": 2.08
+    },
+    {
+     "w": "it",
+     "t0": 2.138,
+     "t1": 2.208
+    },
+    {
+     "w": "thinks",
+     "t0": 2.254,
+     "t1": 2.451
+    },
+    {
+     "w": "for",
+     "t0": 2.475,
+     "t1": 2.568
+    },
+    {
+     "w": "a",
+     "t0": 2.614,
+     "t1": 2.649
+    },
+    {
+     "w": "second",
+     "t0": 2.707,
+     "t1": 3.009
+    },
+    {
+     "w": "and",
+     "t0": 3.067,
+     "t1": 3.16
+    },
+    {
+     "w": "then",
+     "t0": 3.194,
+     "t1": 3.299
+    },
+    {
+     "w": "it",
+     "t0": 3.357,
+     "t1": 3.427
+    },
+    {
+     "w": "answers",
+     "t0": 3.485,
+     "t1": 3.903
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.81,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 128.3,
+    "f0_range_st": 9.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.547,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 3.947,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0038__engineer-B": {
+   "take": "e2-a2-0038__engineer-B",
+   "key": "76f4f3346aaeb55e",
+   "base_key": "76f4f3346aaeb55e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.86,
+   "offset_s": 0.35,
+   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "seed": 3222793825,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "s3TPKV1kjDlVtZbl4Ksh",
+   "voice_name": "Adam - Engaging, Friendly and Bright",
+   "cand": "B",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 3.3,
+    "span_s": 2.92,
+    "words": 9,
+    "wpm": 184.9,
+    "syllables": 11,
+    "articulation_sps": 4.49,
+    "pauses_s": [
+     0.47,
+     0.09
+    ],
+    "longest_internal_gap_s": 0.47,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.56,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 126.5,
+    "f0_range_st": 8.2
+   },
+   "words": [
+    {
+     "w": "'Her.'",
+     "t0": 0.42,
+     "t1": 0.768
+    },
+    {
+     "w": "Like",
+     "t0": 1.279,
+     "t1": 1.453
+    },
+    {
+     "w": "the",
+     "t0": 1.476,
+     "t1": 1.546
+    },
+    {
+     "w": "movie",
+     "t0": 1.604,
+     "t1": 2.022
+    },
+    {
+     "w": "The",
+     "t0": 2.115,
+     "t1": 2.242
+    },
+    {
+     "w": "guy",
+     "t0": 2.312,
+     "t1": 2.556
+    },
+    {
+     "w": "and",
+     "t0": 2.614,
+     "t1": 2.707
+    },
+    {
+     "w": "his",
+     "t0": 2.753,
+     "t1": 2.835
+    },
+    {
+     "w": "computer",
+     "t0": 2.869,
+     "t1": 3.299
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.77,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 126.5,
+    "f0_range_st": 8.2,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.56,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 3.251,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0003__engineer-C": {
+   "take": "e2-a2-0003__engineer-C",
+   "key": "20762306f04b423a",
+   "base_key": "20762306f04b423a",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.276,
+   "offset_s": 0.35,
+   "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+   "seed": 3459707375,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "TMxtmWOrUT1sk26Pe4aA",
+   "voice_name": "Eon - Clear and Optimistic",
+   "cand": "C",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 3.68,
+    "span_s": 3.29,
+    "words": 17,
+    "wpm": 310.0,
+    "syllables": 20,
+    "articulation_sps": 6.08,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.596,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 129.5,
+    "f0_range_st": 8.3
+   },
+   "words": [
+    {
+     "w": "So",
+     "t0": 0.37,
+     "t1": 0.513
+    },
+    {
+     "w": "on",
+     "t0": 0.571,
+     "t1": 0.652
+    },
+    {
+     "w": "stage",
+     "t0": 0.698,
+     "t1": 1.0
+    },
+    {
+     "w": "I",
+     "t0": 1.07,
+     "t1": 1.105
+    },
+    {
+     "w": "ask",
+     "t0": 1.174,
+     "t1": 1.348
+    },
+    {
+     "w": "it",
+     "t0": 1.395,
+     "t1": 1.453
+    },
+    {
+     "w": "a",
+     "t0": 1.488,
+     "t1": 1.511
+    },
+    {
+     "w": "question",
+     "t0": 1.557,
+     "t1": 1.859
+    },
+    {
+     "w": "it",
+     "t0": 1.917,
+     "t1": 1.975
+    },
+    {
+     "w": "thinks",
+     "t0": 1.999,
+     "t1": 2.184
+    },
+    {
+     "w": "for",
+     "t0": 2.208,
+     "t1": 2.3
+    },
+    {
+     "w": "a",
+     "t0": 2.347,
+     "t1": 2.37
+    },
+    {
+     "w": "second",
+     "t0": 2.417,
+     "t1": 2.695
+    },
+    {
+     "w": "and",
+     "t0": 2.742,
+     "t1": 2.823
+    },
+    {
+     "w": "then",
+     "t0": 2.869,
+     "t1": 3.009
+    },
+    {
+     "w": "it",
+     "t0": 3.055,
+     "t1": 3.125
+    },
+    {
+     "w": "answers",
+     "t0": 3.171,
+     "t1": 3.589
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.05,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 129.5,
+    "f0_range_st": 8.3,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.596,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 3.576,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0038__engineer-C": {
+   "take": "e2-a2-0038__engineer-C",
+   "key": "3ab03727d3162f66",
+   "base_key": "3ab03727d3162f66",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.579,
+   "offset_s": 0.35,
+   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "seed": 1013448440,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "TMxtmWOrUT1sk26Pe4aA",
+   "voice_name": "Eon - Clear and Optimistic",
+   "cand": "C",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 3.21,
+    "span_s": 2.86,
+    "words": 9,
+    "wpm": 188.8,
+    "syllables": 11,
+    "articulation_sps": 3.85,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.369,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 113.7,
+    "f0_range_st": 7.7
+   },
+   "words": [
+    {
+     "w": "'Her.'",
+     "t0": 0.547,
+     "t1": 0.838
+    },
+    {
+     "w": "Like",
+     "t0": 1.128,
+     "t1": 1.348
+    },
+    {
+     "w": "the",
+     "t0": 1.372,
+     "t1": 1.441
+    },
+    {
+     "w": "movie",
+     "t0": 1.488,
+     "t1": 1.824
+    },
+    {
+     "w": "The",
+     "t0": 1.883,
+     "t1": 1.975
+    },
+    {
+     "w": "guy",
+     "t0": 2.033,
+     "t1": 2.184
+    },
+    {
+     "w": "and",
+     "t0": 2.231,
+     "t1": 2.3
+    },
+    {
+     "w": "his",
+     "t0": 2.347,
+     "t1": 2.44
+    },
+    {
+     "w": "computer",
+     "t0": 2.486,
+     "t1": 2.927
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.52,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 113.7,
+    "f0_range_st": 7.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.369,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.105,
+    "raw_len_s": 2.879,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0003__engineer-D": {
+   "take": "e2-a2-0003__engineer-D",
+   "key": "c9dfb58e37313155",
+   "base_key": "c9dfb58e37313155",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.833,
+   "offset_s": 0.35,
+   "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+   "seed": 1964783864,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "3sfGn775ryaDXhFWHwBg",
+   "voice_name": "Jason - Warm, Confident and Natural",
+   "cand": "D",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 4.44,
+    "span_s": 4.06,
+    "words": 17,
+    "wpm": 251.2,
+    "syllables": 20,
+    "articulation_sps": 5.09,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.393,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 139.1,
+    "f0_range_st": 14.1
+   },
+   "words": [
+    {
+     "w": "So",
+     "t0": 0.36,
+     "t1": 0.629
+    },
+    {
+     "w": "on",
+     "t0": 0.745,
+     "t1": 0.849
+    },
+    {
+     "w": "stage",
+     "t0": 0.896,
+     "t1": 1.186
+    },
+    {
+     "w": "I",
+     "t0": 1.232,
+     "t1": 1.256
+    },
+    {
+     "w": "ask",
+     "t0": 1.325,
+     "t1": 1.499
+    },
+    {
+     "w": "it",
+     "t0": 1.534,
+     "t1": 1.592
+    },
+    {
+     "w": "a",
+     "t0": 1.615,
+     "t1": 1.639
+    },
+    {
+     "w": "question",
+     "t0": 1.697,
+     "t1": 2.068
+    },
+    {
+     "w": "it",
+     "t0": 2.138,
+     "t1": 2.196
+    },
+    {
+     "w": "thinks",
+     "t0": 2.231,
+     "t1": 2.463
+    },
+    {
+     "w": "for",
+     "t0": 2.509,
+     "t1": 2.66
+    },
+    {
+     "w": "a",
+     "t0": 2.707,
+     "t1": 2.73
+    },
+    {
+     "w": "second",
+     "t0": 2.788,
+     "t1": 3.183
+    },
+    {
+     "w": "and",
+     "t0": 3.299,
+     "t1": 3.496
+    },
+    {
+     "w": "then",
+     "t0": 3.531,
+     "t1": 3.659
+    },
+    {
+     "w": "it",
+     "t0": 3.717,
+     "t1": 3.775
+    },
+    {
+     "w": "answers",
+     "t0": 3.821,
+     "t1": 4.158
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.77,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 139.1,
+    "f0_range_st": 14.1,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.393,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.045,
+    "raw_len_s": 4.133,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0038__engineer-D": {
+   "take": "e2-a2-0038__engineer-D",
+   "key": "31dfb61da85a19e9",
+   "base_key": "31dfb61da85a19e9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.811,
+   "offset_s": 0.35,
+   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "seed": 3431505411,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "3sfGn775ryaDXhFWHwBg",
+   "voice_name": "Jason - Warm, Confident and Natural",
+   "cand": "D",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 3.45,
+    "span_s": 3.02,
+    "words": 9,
+    "wpm": 178.8,
+    "syllables": 11,
+    "articulation_sps": 3.85,
+    "pauses_s": [
+     0.16,
+     0.07
+    ],
+    "longest_internal_gap_s": 0.16,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.361,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 142.3,
+    "f0_range_st": 12.5
+   },
+   "words": [
+    {
+     "w": "'Her.'",
+     "t0": 0.536,
+     "t1": 0.872
+    },
+    {
+     "w": "Like",
+     "t0": 1.256,
+     "t1": 1.441
+    },
+    {
+     "w": "the",
+     "t0": 1.465,
+     "t1": 1.534
+    },
+    {
+     "w": "movie",
+     "t0": 1.592,
+     "t1": 1.999
+    },
+    {
+     "w": "The",
+     "t0": 2.115,
+     "t1": 2.231
+    },
+    {
+     "w": "guy",
+     "t0": 2.3,
+     "t1": 2.509
+    },
+    {
+     "w": "and",
+     "t0": 2.544,
+     "t1": 2.614
+    },
+    {
+     "w": "his",
+     "t0": 2.637,
+     "t1": 2.718
+    },
+    {
+     "w": "computer",
+     "t0": 2.765,
+     "t1": 3.183
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.88,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 142.3,
+    "f0_range_st": 12.5,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.361,
+    "raw_tail_cut": true,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.085,
+    "raw_len_s": 3.111,
+    "raw_tail_cut": true
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0003__engineer-A",
+   "key": "f4d0a8170a271ad4",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "brs1wq8uf6G8cusbHk4n",
+   "at": "00:14:09"
+  },
+  {
+   "take": "e2-a2-0038__engineer-A",
+   "key": "cc5a1b7e8e1b501b",
+   "chars": 48,
+   "cost_header": "21",
+   "request_id": "SEw6YJVj9zc0aGFcMC09",
+   "at": "00:14:11"
+  },
+  {
+   "take": "e2-a2-0003__engineer-B",
+   "key": "046e6c04d794863f",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "8sVz1V6T5RrQqVYvdMfd",
+   "at": "00:14:13"
+  },
+  {
+   "take": "e2-a2-0038__engineer-B",
+   "key": "76f4f3346aaeb55e",
+   "chars": 48,
+   "cost_header": "21",
+   "request_id": "xrLuCm1WgydGpu65zLuX",
+   "at": "00:14:16"
+  },
+  {
+   "take": "e2-a2-0003__engineer-C",
+   "key": "20762306f04b423a",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "ybvJN1k8xuhCY99h51QR",
+   "at": "00:14:21"
+  },
+  {
+   "take": "e2-a2-0038__engineer-C",
+   "key": "3ab03727d3162f66",
+   "chars": 48,
+   "cost_header": "21",
+   "request_id": "5xBs8Wkwsko2RLem72OV",
+   "at": "00:14:23"
+  },
+  {
+   "take": "e2-a2-0003__engineer-D",
+   "key": "c9dfb58e37313155",
+   "chars": 78,
+   "cost_header": "34",
+   "request_id": "vC683t18n9jhep4QzVr6",
+   "at": "00:14:30"
+  },
+  {
+   "take": "e2-a2-0038__engineer-D",
+   "key": "31dfb61da85a19e9",
+   "chars": 48,
+   "cost_header": "21",
+   "request_id": "b8fG3i6PocijShglC6iy",
+   "at": "00:14:32"
+  }
+ ]
+}

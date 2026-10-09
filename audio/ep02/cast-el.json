@@ -124,7 +124,45 @@
   "tiled": "tiled-employee",
   "ELGOOG'S DEMO": "elgoog-demo",
   "elgoog-demo": "elgoog-demo",
-  "AUHSOJ": "auhsoj"
+  "AUHSOJ": "auhsoj",
+  "SELBEEP": "selbeep",
+  "selbeep": "selbeep",
+  "xel": "xel",
+  "XEL": "xel",
+  "humanist": "humanist",
+  "THE HUMANIST": "humanist",
+  "HUMANIST": "humanist",
+  "engineer": "engineer",
+  "THE DEMO ENGINEER": "engineer",
+  "DEMO ENGINEER": "engineer",
+  "VOICE 1": "voice1",
+  "voice1": "voice1",
+  "voice2": "voice2",
+  "VOICE 2": "voice2",
+  "voice3": "voice3",
+  "VOICE 3": "voice3",
+  "voice4": "voice4",
+  "VOICE 4": "voice4",
+  "STAFFER 2": "staffer2",
+  "staffer2": "staffer2",
+  "THE TV REPORTER": "reporter",
+  "TV REPORTER": "reporter",
+  "reporter": "reporter",
+  "BUKAJ": "bukaj",
+  "bukaj": "bukaj",
+  "EKIEL": "ekiel",
+  "ekiel": "ekiel",
+  "THE FORECASTER": "forecaster",
+  "FORECASTER": "forecaster",
+  "forecaster": "forecaster",
+  "DRIVER": "driver",
+  "THE DRIVER": "driver",
+  "driver": "driver",
+  "haras": "haras",
+  "HARAS": "haras",
+  "crowd": "crowd",
+  "THE CROWD": "crowd",
+  "CROWD": "crowd"
  },
  "roles": {
   "mas-manalt": {
@@ -2589,14 +2627,5693 @@
    ],
    "cast_v35": "phase 10 (2026-09-28): cast by measurement (tools/el_audition.py --role auhsoj; voices-el.md §AC). The screen: 2335 male American young and middle-aged shared-library voices (the free listing), 1416 past the red flags (cast_el.py) and a ban on the real person's names and anything political or impression-like; the top 90 by the brief's words had their previews measured for pitch and p(en); five were read (one fragment each, the episode's seed, speed 1.05), on both sides of the window the two overlapped voices leave. Candidate letters here are the ranking's (A = the pick); the audition takes in auditions/auhsoj/round2/ keep their audition letters (measured_audition.take). Guardrails §6: no voice was chosen for resembling anyone, nothing was imitated, the line was sent as written (say_lines only drops the print dashes).",
    "lane_note": "his take's 193 Hz with about 2 st either side, kept at least 2 st over Tasya's overlapped line (135 Hz) and far over Mas's count (106 Hz); the pitch pass reads it"
+  },
+  "selbeep": {
+   "name": "SELBEEP",
+   "brief": "a proud showman presenting to a room; bright, pleased with himself; never a carnival barker",
+   "lane_hz": [
+    120,
+    150
+   ],
+   "pace_wpm": "185 (the beat plan's planning rate)",
+   "scenes": "sc 1",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+     "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Fresh and energetic storytelling, stories that connect with people. youthful, dynamic, cheerful, spontaneous, current and modern male voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 129.4,
+      "f0_range_st": 11.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.54,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.54,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 134.9,
+      "f0_range_st": 15.7,
+      "wpm": 183.7,
+      "span_vs_plan": 0.95,
+      "p_en": 0.9973,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.59,
+      "raw_floor_dbfs": -63.7,
+      "speech_to_floor_db": 42.3,
+      "presence_db": -8.45,
+      "vs": {
+       "gerg": {
+        "st": -1.74,
+        "mfcc_dist": 51.1
+       }
+      },
+      "takes": {
+       "e2-co-0003": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-C.wav",
+        "key": "bdc4233bd8981e0c",
+        "seed": 1818046919,
+        "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+        "span_s": 5.84,
+        "planned_s": 5.53,
+        "asr": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics."
+       },
+       "e2-co-0005": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-C.wav",
+        "key": "4852afca866bcb97",
+        "seed": 2378996430,
+        "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+        "span_s": 4.73,
+        "planned_s": 5.53,
+        "asr": "That's the mammoth. It's been two weeks. And it has mass now. We're working on it."
+       }
+      },
+      "audition_letter": "C"
+     },
+     "why": "Picked by measurement (cast.md §3.1; nobody has listened). The lowest score (0.54, only a light floor: speech 42 dB over its raw floor). 134.9 Hz, inside the 120-150 Hz lane, 1.7 st under Gerg (Marcus, 149 Hz; the 0.25 s volley needs 1.5) with a timbre distance of 51 from him, 3.3x Marcus's own take-to-take spread (15.6): apart in pitch and in timbre. The widest pitch range of the four (15.7 st: the showman's lift) and the plan's pace at speed 1.0 (184 wpm, 0.95 of the planned length). Verbatim ASR on both lines; p(en) 0.997. Charles (0.65) reads a narrow 6 st (flatter than a proud presenter); Ray's timbre is the nearest to Gerg's (25.5)."
+    },
+    {
+     "cand": "B",
+     "voice_id": "S9GPGBaMND8XWwwzxQXp",
+     "voice_name": "Charles - Social Media, TV & Commercial ",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A bold, charismatic male voice that brings energy, clarity, and authenticity to every project. Perfect for creators, brands, and storytellers who want to connect with modern audiences through powerful, relatable narration. Charles delivers a natural conversational tone that fits seamlessly across ev",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 130.1,
+      "f0_range_st": 6.5,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 0.65,
+      "penalties": {
+       "lane": 0.01,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.63
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "narrow range"
+      ],
+      "median_f0_hz": 119.9,
+      "f0_range_st": 6.1,
+      "wpm": 213.8,
+      "span_vs_plan": 0.819,
+      "p_en": 0.9978,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.5,
+      "raw_floor_dbfs": -87.0,
+      "speech_to_floor_db": 67.3,
+      "presence_db": -17.45,
+      "vs": {
+       "gerg": {
+        "st": -3.77,
+        "mfcc_dist": 30.6
+       }
+      },
+      "takes": {
+       "e2-co-0003": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-B.wav",
+        "key": "e64e500350e422c9",
+        "seed": 1129201303,
+        "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+        "span_s": 5.13,
+        "planned_s": 5.53,
+        "asr": "a mammoth walking through the snow. We never said anything about a lobby, it understands physics."
+       },
+       "e2-co-0005": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-B.wav",
+        "key": "ee67a34df151b613",
+        "seed": 305444893,
+        "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+        "span_s": 3.99,
+        "planned_s": 5.53,
+        "asr": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it."
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "z3FNMrCvtM1IHj84qvbr",
+     "voice_name": "Ray - Energetic, Enthusiatic and Clear",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "advertisement"
+     },
+     "library_description": "Energetic and engaging with a clear, friendly tone. This voice carries a natural enthusiasm that makes it perfect for sales, product demos, and explainer videos. Upbeat pacing and approachable delivery keep listeners interested while still sounding professional and trustworthy.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 123.5,
+      "f0_range_st": 12.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 1.72,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 1.02,
+       "pace": 0.7
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 129.0,
+      "f0_range_st": 14.4,
+      "wpm": 216.2,
+      "span_vs_plan": 0.814,
+      "p_en": 0.9996,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.93,
+      "raw_floor_dbfs": -59.5,
+      "speech_to_floor_db": 39.9,
+      "presence_db": -16.84,
+      "vs": {
+       "gerg": {
+        "st": -2.5,
+        "mfcc_dist": 25.5
+       }
+      },
+      "takes": {
+       "e2-co-0003": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-A.wav",
+        "key": "8fa8123aeac56e91",
+        "seed": 3310968507,
+        "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+        "span_s": 5.28,
+        "planned_s": 5.53,
+        "asr": "A mammoth walking through the snow? We never said anything about a lobby. It understands physics."
+       },
+       "e2-co-0005": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-A.wav",
+        "key": "fef717004a317f12",
+        "seed": 2327984633,
+        "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+        "span_s": 3.83,
+        "planned_s": 5.53,
+        "asr": "That's the mammoth. It's been two weeks and it has mass now. We're working on it."
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "PSqRw3ln34TxQZrTS6Wt",
+     "voice_name": "Andy - Upbeat, Positive and Comfy",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "entertainment_tv"
+     },
+     "library_description": "A conversational and energetic voice that radiates positivity and charisma. Naturally persuasive, with a confident yet approachable tone that captures attention and keeps listeners engaged.\n\n",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 100.9,
+      "f0_range_st": 7.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 4.53,
+      "penalties": {
+       "lane": 0.95,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 2.8,
+       "pace": 0.78
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 113.6,
+      "f0_range_st": 13.4,
+      "wpm": 216.3,
+      "span_vs_plan": 0.807,
+      "p_en": 0.998,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.02,
+      "raw_floor_dbfs": -54.4,
+      "speech_to_floor_db": 31.0,
+      "presence_db": -16.89,
+      "vs": {
+       "gerg": {
+        "st": -4.71,
+        "mfcc_dist": 35.2
+       }
+      },
+      "takes": {
+       "e2-co-0003": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-D.wav",
+        "key": "b6454e36a178c51f",
+        "seed": 1717179976,
+        "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+        "span_s": 4.97,
+        "planned_s": 5.53,
+        "asr": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics."
+       },
+       "e2-co-0005": {
+        "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-D.wav",
+        "key": "2c5bcc906532f877",
+        "seed": 1496722028,
+        "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+        "span_s": 4.01,
+        "planned_s": 5.53,
+        "asr": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it."
+       }
+      },
+      "audition_letter": "D"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-co-0003",
+     "e2-co-0005"
+    ],
+    "neighbours": {
+     "gerg": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "xel": {
+   "name": "XEL",
+   "brief": "a calm, earnest interviewer who asks long questions; warm, careful, curious; clearly unlike the real host (no deep monotone, no slowness)",
+   "lane_hz": [
+    95,
+    130
+   ],
+   "pace_wpm": "165 (the beat plan's planning rate)",
+   "scenes": "sc 6",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "GzE4TcXfh9rYCU9gVgPp",
+     "voice_name": "Alex Wright - Clear and Cheerful",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "American, eLearning, Friendly, approachable, warm and professional, great for narration",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 147.3,
+      "f0_range_st": 12.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.67,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.67
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 128.5,
+      "f0_range_st": 12.4,
+      "wpm": 194.1,
+      "span_vs_plan": 0.816,
+      "p_en": 0.9936,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.83,
+      "raw_floor_dbfs": -86.8,
+      "speech_to_floor_db": 68.1,
+      "presence_db": -11.53,
+      "vs": {
+       "mas": {
+        "st": 2.12,
+        "mfcc_dist": 32.1
+       }
+      },
+      "takes": {
+       "e2-a1-0036": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-D.wav",
+        "key": "8e02e1685cbbf14f",
+        "seed": 2367569868,
+        "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+        "span_s": 5.01,
+        "planned_s": 6.04,
+        "asr": "Let me ask you about Alié. Is he being held hostage in a secret nuclear facility?"
+       },
+       "e2-a1-0038": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-D.wav",
+        "key": "9434b48b3ee826b1",
+        "seed": 2443684536,
+        "sent": "What about a regular secret facility?",
+        "span_s": 1.83,
+        "planned_s": 2.28,
+        "asr": "What about a regular secret facility?"
+       }
+      },
+      "audition_letter": "D"
+     },
+     "why": "Picked by measurement (cast.md §3.2). The only candidate with no separation shortfall: 128.5 Hz, 2.1 st over Mas (Jeremy, 114 Hz), where Kirt, Asher and Alex sit 0.1-0.7 st from him in the same locked frame. He is the one cast.md set above the real host's register on purpose ('Clear and Cheerful'), with a 12.4 st range (no monotone). 194 wpm at speed 1.0 (0.82 of the plan): kept at 1.0, because the brief rules out any direction toward slowness (the pauses are the edit's). Verbatim ASR, p(en) 0.994, the cleanest floor of the four (68 dB)."
+    },
+    {
+     "cand": "B",
+     "voice_id": "qCwgiN0GsIAYwAJ1nYvZ",
+     "voice_name": "Kirt - Podcast Host",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "advertisement"
+     },
+     "library_description": "Smooth, upbeat, American male with a clear voice and pleasant, friendly tone. Perfect for narration, audiobooks, newscast, sports or radio DJ.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 121.4,
+      "f0_range_st": 10.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 2.36,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.82,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.53
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 118.2,
+      "f0_range_st": 12.2,
+      "wpm": 210.9,
+      "span_vs_plan": 0.751,
+      "p_en": 0.998,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.13,
+      "raw_floor_dbfs": -67.9,
+      "speech_to_floor_db": 52.4,
+      "presence_db": -9.63,
+      "vs": {
+       "mas": {
+        "st": 0.68,
+        "mfcc_dist": 47.5
+       }
+      },
+      "takes": {
+       "e2-a1-0036": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-B.wav",
+        "key": "0fc6ef24c84ed9a6",
+        "seed": 3445355499,
+        "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+        "span_s": 4.44,
+        "planned_s": 6.04,
+        "asr": "Let me ask you about Ali. Is he being held hostage in a secret nuclear facility?"
+       },
+       "e2-a1-0038": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-B.wav",
+        "key": "3d3c83657b3bd62e",
+        "seed": 1877636883,
+        "sent": "What about a regular secret facility?",
+        "span_s": 1.75,
+        "planned_s": 2.28,
+        "asr": "What about a regular secret facility?"
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "tMvyQtpCVQ0DkixuYm6J",
+     "voice_name": "Asher",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Warm, clear, and conversational voice with confident, grounded delivery. Natural pacing, friendly authority, and engaging presence — ideal for podcasts, narration, explainers, and authentic commercial reads.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 126.4,
+      "f0_range_st": 13.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 2.58,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.97,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.62
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 117.3,
+      "f0_range_st": 13.9,
+      "wpm": 212.5,
+      "span_vs_plan": 0.745,
+      "p_en": 0.9982,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 17.91,
+      "raw_floor_dbfs": -76.0,
+      "speech_to_floor_db": 55.7,
+      "presence_db": -8.95,
+      "vs": {
+       "mas": {
+        "st": 0.53,
+        "mfcc_dist": 46.0
+       }
+      },
+      "takes": {
+       "e2-a1-0036": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-A.wav",
+        "key": "4d3cacc06231814c",
+        "seed": 2868879328,
+        "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+        "span_s": 4.45,
+        "planned_s": 6.04,
+        "asr": "Let me ask you about Ali. Is he being held hostage in a secret nuclear facility?"
+       },
+       "e2-a1-0038": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-A.wav",
+        "key": "680c6b2ae435b7c7",
+        "seed": 2362688085,
+        "sent": "What about a regular secret facility?",
+        "span_s": 1.72,
+        "planned_s": 2.28,
+        "asr": "What about a regular secret facility?"
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "6sWNMlBf4TdebygSxQGj",
+     "voice_name": "Alex",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "social_media"
+     },
+     "library_description": "Trustworthy voice, ideal for podcasts, Videos, tech content, news, and viral topics. Sounds intelligent. Authentic male voice in his 30s with a clear, confident, and natural tone. Warm but energetic, conversational and engaging.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 98.3,
+      "f0_range_st": 7.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.45,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 1.35,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 2.1
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 112.7,
+      "f0_range_st": 11.8,
+      "wpm": 222.6,
+      "span_vs_plan": 0.712,
+      "p_en": 0.9992,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.25,
+      "raw_floor_dbfs": -68.0,
+      "speech_to_floor_db": 45.3,
+      "presence_db": -12.57,
+      "vs": {
+       "mas": {
+        "st": -0.15,
+        "mfcc_dist": 26.8
+       }
+      },
+      "takes": {
+       "e2-a1-0036": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-C.wav",
+        "key": "2e12cbb82058069a",
+        "seed": 594389509,
+        "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+        "span_s": 4.39,
+        "planned_s": 6.04,
+        "asr": "Let me ask you about Al Yee. Is he being held hostage in a secret nuclear facility?"
+       },
+       "e2-a1-0038": {
+        "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-C.wav",
+        "key": "08957a06e3c5fde6",
+        "seed": 2292697237,
+        "sent": "What about a regular secret facility?",
+        "span_s": 1.59,
+        "planned_s": 2.28,
+        "asr": "What about a regular secret facility?"
+       }
+      },
+      "audition_letter": "C"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a1-0036",
+     "e2-a1-0038"
+    ],
+    "neighbours": {
+     "mas": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "humanist": {
+   "name": "THE HUMANIST",
+   "brief": "soft, polite, a little caught out; neutral American accent",
+   "lane_hz": [
+    110,
+    135
+   ],
+   "pace_wpm": "175 (the beat plan's planning rate)",
+   "scenes": "sc 7",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "WGINef1wh4Hi6O62bfO8",
+     "voice_name": "Luis - Relaxed, Calm and Polished",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "relaxed",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A young, inquisitive American male voice with some breathiness.  Excellent for projects that need a modern, unique, and conversational tone.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 112.6,
+      "f0_range_st": 7.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 112.6,
+      "f0_range_st": 9.0,
+      "wpm": 185.4,
+      "span_vs_plan": 0.894,
+      "p_en": 0.9896,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.21,
+      "raw_floor_dbfs": -75.7,
+      "speech_to_floor_db": 48.4,
+      "presence_db": -18.17,
+      "vs": {
+       "tasya": {
+        "st": -3.0,
+        "mfcc_dist": 40.1
+       }
+      },
+      "takes": {
+       "e2-a1-0048": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-D.wav",
+        "key": "2044966843545865",
+        "seed": 3344178881,
+        "sent": "I'm just moving in downstairs. I hope that's all right.",
+        "span_s": 2.79,
+        "planned_s": 3.65,
+        "asr": "I'm just moving in downstairs. I hope that's all right."
+       },
+       "e2-a1-0050": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-D.wav",
+        "key": "f207352cb92258e4",
+        "seed": 3507964478,
+        "sent": "I brought my own team. Is there room for them?",
+        "span_s": 2.38,
+        "planned_s": 3.65,
+        "asr": "I brought my own team. Is there room for them?"
+       }
+      },
+      "audition_letter": "D",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.706,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a1-0048": {
+         "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-D2.wav",
+         "key": "8dd2d27f8a016ebd",
+         "seed": 3344178881,
+         "sent": "I'm just moving in downstairs. I hope that's all right.",
+         "span_s": 3.71,
+         "planned_s": 3.65,
+         "wpm": 161.7,
+         "f0": 101.6,
+         "asr": "I'm just moving in downstairs. I hope that's alright."
+        },
+        "e2-a1-0050": {
+         "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-D2.wav",
+         "key": "5ab4b5a5a8b0265e",
+         "seed": 3507964478,
+         "sent": "I brought my own team. Is there room for them?",
+         "span_s": 2.87,
+         "planned_s": 3.65,
+         "wpm": 209.1,
+         "f0": 113.8,
+         "asr": "I brought my own team. Is there room for them?"
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     },
+     "why": "Picked by measurement (cast.md §3.3), round 2 at speed 0.80 (Ep1 §AA2). Score 0 with his round-2 takes: 112.6 Hz in the 110-135 Hz lane, 3.0 st under Tasya (Tyler Kurk, 134 Hz) with a timbre distance of 40; at 0.80 he reads 185 wpm, 0.89 of the plan (at 1.0 all four ran 0.61-0.71). The library's 'some breathiness' was checked: CPP 18.2 dB, inside the field's 16.9-20.8 (no breathier than the others). p(en) 0.990 (neutral American); verbatim once 'alright' is read as 'all right'. Bill is next (1.77: still fast at 0.80, a noisier floor). Kyle was screened out (described by ethnicity) and replaced by Grey, who measured fast and noisy (5.70)."
+    },
+    {
+     "cand": "B",
+     "voice_id": "sR8sxaLJeFSh308Gi6HS",
+     "voice_name": "Bill - Persuasive Calm & Friendly",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "General casual reading for persuasive purposes.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 113.6,
+      "f0_range_st": 12.5,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 1.77,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.74,
+       "pace": 1.03
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 111.5,
+      "f0_range_st": 12.9,
+      "wpm": 210.1,
+      "span_vs_plan": 0.788,
+      "p_en": 0.9905,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 20.57,
+      "raw_floor_dbfs": -65.2,
+      "speech_to_floor_db": 41.3,
+      "presence_db": -17.13,
+      "vs": {
+       "tasya": {
+        "st": -3.18,
+        "mfcc_dist": 53.8
+       }
+      },
+      "takes": {
+       "e2-a1-0048": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-A.wav",
+        "key": "5e0c30619469b2dd",
+        "seed": 354180554,
+        "sent": "I'm just moving in downstairs. I hope that's all right.",
+        "span_s": 2.6,
+        "planned_s": 3.65,
+        "asr": "I'm just moving in downstairs. I hope that's all right."
+       },
+       "e2-a1-0050": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-A.wav",
+        "key": "57d25ba8d2e5d7cf",
+        "seed": 654995230,
+        "sent": "I brought my own team. Is there room for them?",
+        "span_s": 2.06,
+        "planned_s": 3.65,
+        "asr": "I brought my own team. Is there room for them?"
+       }
+      },
+      "audition_letter": "A",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.634,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a1-0048": {
+         "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-A2.wav",
+         "key": "53f8052b8677ddf0",
+         "seed": 354180554,
+         "sent": "I'm just moving in downstairs. I hope that's all right.",
+         "span_s": 3.26,
+         "planned_s": 3.65,
+         "wpm": 184.0,
+         "f0": 98.4,
+         "asr": "I'm just moving in downstairs. I hope that's all right."
+        },
+        "e2-a1-0050": {
+         "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-A2.wav",
+         "key": "5729447f0c10a71c",
+         "seed": 654995230,
+         "sent": "I brought my own team. Is there room for them?",
+         "span_s": 2.54,
+         "planned_s": 3.65,
+         "wpm": 236.2,
+         "f0": 125.6,
+         "asr": "I brought my own team. Is there room for them?"
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "3TStB8f3X3To0Uj5R7RK",
+     "voice_name": "Joseff Novak - Calm and Professional",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A clear, friendly, professional male voice designed for corporate training, e-learning modules, business explainers, onboarding videos, product demos, instructional content, and more. Confident, approachable, and easy to understand, this voice delivers clean articulation without sounding stiff or ov",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 106.9,
+      "f0_range_st": 14.4,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 3.72,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 3.72
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 112.5,
+      "f0_range_st": 10.2,
+      "wpm": 269.7,
+      "span_vs_plan": 0.61,
+      "p_en": 0.9952,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 20.77,
+      "raw_floor_dbfs": -80.3,
+      "speech_to_floor_db": 60.6,
+      "presence_db": -23.06,
+      "vs": {
+       "tasya": {
+        "st": -3.01,
+        "mfcc_dist": 60.1
+       }
+      },
+      "takes": {
+       "e2-a1-0048": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-B.wav",
+        "key": "02ec673afc42e3bc",
+        "seed": 947326994,
+        "sent": "I'm just moving in downstairs. I hope that's all right.",
+        "span_s": 2.34,
+        "planned_s": 3.65,
+        "asr": "I'm just moving in downstairs. I hope that's all right."
+       },
+       "e2-a1-0050": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-B.wav",
+        "key": "8f29b5b0f926b6f7",
+        "seed": 842963147,
+        "sent": "I brought my own team. Is there room for them?",
+        "span_s": 2.12,
+        "planned_s": 3.65,
+        "asr": "I brought my own team. Is there room for them?"
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "rt7umfgRH4xBjSnI23My",
+     "voice_name": "Grey - Soft, Calm and Conversational",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "Nice Simple Guy",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 112.0,
+      "f0_range_st": 8.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 5.7,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 2.42,
+       "pace": 3.28
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 113.3,
+      "f0_range_st": 8.8,
+      "wpm": 258.8,
+      "span_vs_plan": 0.636,
+      "p_en": 0.9894,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 16.87,
+      "raw_floor_dbfs": -58.5,
+      "speech_to_floor_db": 32.9,
+      "presence_db": -16.46,
+      "vs": {
+       "tasya": {
+        "st": -2.9,
+        "mfcc_dist": 53.9
+       }
+      },
+      "takes": {
+       "e2-a1-0048": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0048__humanist-C.wav",
+        "key": "1d39e938bbccc1b3",
+        "seed": 1930948995,
+        "sent": "I'm just moving in downstairs. I hope that's all right.",
+        "span_s": 2.45,
+        "planned_s": 3.65,
+        "asr": "I'm just moving in downstairs. I hope that's all right."
+       },
+       "e2-a1-0050": {
+        "file": "audio/ep02/v1-el/auditions/humanist/wav/e2-a1-0050__humanist-C.wav",
+        "key": "8ff45cf9a4b0fe9a",
+        "seed": 3206686760,
+        "sent": "I brought my own team. Is there room for them?",
+        "span_s": 2.2,
+        "planned_s": 3.65,
+        "asr": "I brought my own team. Is there room for them?"
+       }
+      },
+      "audition_letter": "C"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a1-0048",
+     "e2-a1-0050"
+    ],
+    "neighbours": {
+     "tasya": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "engineer": {
+   "name": "THE DEMO ENGINEER",
+   "brief": "presenter-bright, nervous under it; the two lines after the stream off mic, lower and closer",
+   "lane_hz": [
+    125,
+    160
+   ],
+   "pace_wpm": "190 (the beat plan's planning rate)",
+   "scenes": "sc 9, 11",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "qHR09fcvu6SoDtFzqFvm",
+     "voice_name": "Ryan - Articulate, Friendly and Youthful",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Ryan has an articulate, upbeat, conversational sound. He is perfect for eLearning modules, Explainer videos, corporate videos, medical narration, audiobooks, and much more.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 125.7,
+      "f0_range_st": 10.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.94,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.94,
+       "pace": 0.0
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "off-mic line not lower"
+      ],
+      "median_f0_hz": 133.5,
+      "f0_range_st": 13.6,
+      "wpm": 202.4,
+      "span_vs_plan": 0.9,
+      "p_en": 0.9988,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 17.45,
+      "raw_floor_dbfs": -56.7,
+      "speech_to_floor_db": 40.3,
+      "presence_db": -8.55,
+      "vs": {
+       "chatgtp": {
+        "st": -11.39,
+        "mfcc_dist": 58.4
+       },
+       "rima": {
+        "st": -3.21,
+        "mfcc_dist": 50.1
+       },
+       "gerg": {
+        "st": -1.91,
+        "mfcc_dist": 38.5
+       }
+      },
+      "takes": {
+       "e2-a2-0003": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-A.wav",
+        "key": "f4d0a8170a271ad4",
+        "seed": 3452621253,
+        "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+        "span_s": 4.6,
+        "planned_s": 5.47,
+        "asr": "So on stage I ask it a question it thinks for a second and then it answers"
+       },
+       "e2-a2-0038": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-A.wav",
+        "key": "cc5a1b7e8e1b501b",
+        "seed": 1126244905,
+        "sent": "'Her.' Like the movie. The guy and his computer.",
+        "span_s": 2.95,
+        "planned_s": 3.06,
+        "asr": "Her like the movie the guy and his computer"
+       }
+      },
+      "audition_letter": "A"
+     },
+     "why": "Picked by measurement (cast.md §3.4). The only clean read of the off-mic line: the recogniser heard the other three as 'the guy in his computer'. 133.5 Hz, inside the 125-160 Hz lane, 1.9 st under Gerg in the wings (timbre 38.5), 3.2 st under Rima, 11.4 st under CHATGTP; 202 wpm at 1.0 (0.90 of the plan); p(en) 0.999; a light floor penalty (40 dB). For the takes pass: his off-mic line read higher (151 Hz) than his stage line (118 Hz), against the brief's 'lower and closer'; a calmer per-line read for e2-a2-0037/0038 (line_settings) is the fix if the ear agrees. His laugh is a separate take, not auditioned here."
+    },
+    {
+     "cand": "B",
+     "voice_id": "s3TPKV1kjDlVtZbl4Ksh",
+     "voice_name": "Adam - Engaging, Friendly and Bright",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Adam is a male voice, 20s–30s, blends clarity, and confident expression. Ideal for creators and brands who want their content to feel real, relatable, and human.\n\nTrained across multiple formats including storytelling, ads, social media, tutorials, and casual dialogue, Adam adapts seamlessly to your",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 135.5,
+      "f0_range_st": 11.0,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 2.82,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 0.0,
+       "pace": 0.82
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 127.4,
+      "f0_range_st": 8.6,
+      "wpm": 229.9,
+      "span_vs_plan": 0.804,
+      "p_en": 0.9958,
+      "recall_min": 0.89,
+      "tail_cuts": 0,
+      "cpp_db": 18.02,
+      "raw_floor_dbfs": -69.3,
+      "speech_to_floor_db": 47.4,
+      "presence_db": -13.94,
+      "vs": {
+       "chatgtp": {
+        "st": -12.21,
+        "mfcc_dist": 61.7
+       },
+       "rima": {
+        "st": -4.03,
+        "mfcc_dist": 47.9
+       },
+       "gerg": {
+        "st": -2.72,
+        "mfcc_dist": 30.7
+       }
+      },
+      "takes": {
+       "e2-a2-0003": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-B.wav",
+        "key": "046e6c04d794863f",
+        "seed": 2500862251,
+        "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+        "span_s": 3.71,
+        "planned_s": 5.47,
+        "asr": "So on stage, I ask it a question, it thinks for a second, and then it answers."
+       },
+       "e2-a2-0038": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-B.wav",
+        "key": "76f4f3346aaeb55e",
+        "seed": 3222793825,
+        "sent": "'Her.' Like the movie. The guy and his computer.",
+        "span_s": 2.92,
+        "planned_s": 3.06,
+        "asr": "Her. Like the movie, the guy in his computer."
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "TMxtmWOrUT1sk26Pe4aA",
+     "voice_name": "Eon - Clear and Optimistic",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle-aged",
+      "accent": "american",
+      "descriptive": "chill",
+      "use_case": "conversational"
+     },
+     "library_description": "A relatable and friendly voice with a warm, natural charm, perfect for conversational narrations, lifestyle content, and engaging, easygoing commercials.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 121.7,
+      "f0_range_st": 8.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 5.77,
+      "penalties": {
+       "lane": 0.51,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 1.7,
+       "pace": 1.56
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 121.3,
+      "f0_range_st": 8.0,
+      "wpm": 249.4,
+      "span_vs_plan": 0.75,
+      "p_en": 0.9928,
+      "recall_min": 0.89,
+      "tail_cuts": 0,
+      "cpp_db": 19.88,
+      "raw_floor_dbfs": -64.4,
+      "speech_to_floor_db": 36.5,
+      "presence_db": -17.34,
+      "vs": {
+       "chatgtp": {
+        "st": -13.05,
+        "mfcc_dist": 62.5
+       },
+       "rima": {
+        "st": -4.87,
+        "mfcc_dist": 42.3
+       },
+       "gerg": {
+        "st": -3.57,
+        "mfcc_dist": 23.0
+       }
+      },
+      "takes": {
+       "e2-a2-0003": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-C.wav",
+        "key": "20762306f04b423a",
+        "seed": 3459707375,
+        "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+        "span_s": 3.29,
+        "planned_s": 5.47,
+        "asr": "So on stage, I ask it a question. It thinks for a second and then it answers."
+       },
+       "e2-a2-0038": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-C.wav",
+        "key": "3ab03727d3162f66",
+        "seed": 1013448440,
+        "sent": "'Her.' Like the movie. The guy and his computer.",
+        "span_s": 2.86,
+        "planned_s": 3.06,
+        "asr": "Her, like the movie. The guy in his computer."
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "3sfGn775ryaDXhFWHwBg",
+     "voice_name": "Jason - Warm, Confident and Natural",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "Warm, confident voice that converts. Perfect for cold calls, demos, and customer interactions. Natural pacing with professional polish.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 137.0,
+      "f0_range_st": 8.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 6.03,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 4.0,
+       "noise": 1.86,
+       "pace": 0.17
+      },
+      "brief_points": 2,
+      "brief_notes": [
+       "off-mic line not lower",
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 140.7,
+      "f0_range_st": 13.3,
+      "wpm": 215.0,
+      "span_vs_plan": 0.856,
+      "p_en": 0.9941,
+      "recall_min": 0.89,
+      "tail_cuts": 1,
+      "cpp_db": 16.57,
+      "raw_floor_dbfs": -60.7,
+      "speech_to_floor_db": 35.7,
+      "presence_db": -14.74,
+      "vs": {
+       "chatgtp": {
+        "st": -10.49,
+        "mfcc_dist": 56.4
+       },
+       "rima": {
+        "st": -2.31,
+        "mfcc_dist": 52.6
+       },
+       "gerg": {
+        "st": -1.01,
+        "mfcc_dist": 30.1
+       }
+      },
+      "takes": {
+       "e2-a2-0003": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0003__engineer-D.wav",
+        "key": "c9dfb58e37313155",
+        "seed": 1964783864,
+        "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+        "span_s": 4.06,
+        "planned_s": 5.47,
+        "asr": "So on stage I ask it a question it thinks for a second and then it answers."
+       },
+       "e2-a2-0038": {
+        "file": "audio/ep02/v1-el/auditions/engineer/wav/e2-a2-0038__engineer-D.wav",
+        "key": "31dfb61da85a19e9",
+        "seed": 3431505411,
+        "sent": "'Her.' Like the movie. The guy and his computer.",
+        "span_s": 3.02,
+        "planned_s": 3.06,
+        "asr": "Her? Like the movie. The guy in his computer."
+       }
+      },
+      "audition_letter": "D"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a2-0003",
+     "e2-a2-0038"
+    ],
+    "neighbours": {
+     "chatgtp": 2.0,
+     "rima": 1.5,
+     "gerg": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "voice1": {
+   "name": "VOICE 1",
+   "brief": "'Hi.' level, low",
+   "lane_hz": [
+    85,
+    110
+   ],
+   "pace_wpm": null,
+   "scenes": "sc 9",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "hIru3zkEJ3dBYHTbMy2V",
+     "voice_name": "Alexander - Clear, Steady and Refined",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A warm baritone perfect for documentaries, podcasts, audiobooks, and explainers.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 84.9,
+      "f0_range_st": 8.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 88.0,
+      "f0_range_st": 11.7,
+      "wpm": 122.4,
+      "span_vs_plan": 1.089,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 14.79,
+      "raw_floor_dbfs": -83.0,
+      "speech_to_floor_db": 70.0,
+      "presence_db": -15.81,
+      "vs": {},
+      "takes": {
+       "e2-a2-0012": {
+        "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-C.wav",
+        "key": "0e5b706830653fa7",
+        "seed": 3399484824,
+        "sent": "Hi.",
+        "span_s": 0.49,
+        "planned_s": 0.45,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "C"
+     },
+     "why": "Picked jointly with VOICE 2-4 (cast.md §3.5: the four plus Maya, sorted by pitch, at least 2 st apart neighbour to neighbour). 'Hi.' at 88 Hz (his preview 85 Hz): the low, level slot. Tucker creaked to 67 Hz; Peter clipped his tail and sits 4.5 st under Quinn."
+    },
+    {
+     "cand": "B",
+     "voice_id": "2Dn9vl2stwtaHkhE8iIb",
+     "voice_name": "Tucker - Deep, Mature and Calm",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A mature and confident storyteller with a warm, inviting tone. This voice is friendly, knowledgeable, and easy to listen to, perfect for delivering information in an engaging and approachable way. With bold, gritty undertones and a distinctly masculine presence, it commands attention while remaining",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 108.8,
+      "f0_range_st": 14.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 4.12,
+      "penalties": {
+       "lane": 4.12,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 67.0,
+      "f0_range_st": 8.8,
+      "wpm": 150.0,
+      "span_vs_plan": 0.889,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 13.76,
+      "raw_floor_dbfs": -92.7,
+      "speech_to_floor_db": 74.1,
+      "presence_db": -13.52,
+      "vs": {},
+      "takes": {
+       "e2-a2-0012": {
+        "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-A.wav",
+        "key": "761848e710e466b9",
+        "seed": 3152811016,
+        "sent": "Hi.",
+        "span_s": 0.4,
+        "planned_s": 0.45,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "B6vvITCUlHjDGhWvQQmI",
+     "voice_name": "Peter - Audiobook Narrator",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "deep",
+      "use_case": "narrative_story"
+     },
+     "library_description": "This male, somewhat deep, tenor voice is well-suited for audiobook narration with action-packed scenes, with lively inflection and crisp, clear pronunciation. It will add a sense of urgency, intensity, and even a sense of calm under the right circumstances.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 94.2,
+      "f0_range_st": 13.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 4.3,
+      "penalties": {
+       "lane": 0.66,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 1.64
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 114.3,
+      "f0_range_st": 16.7,
+      "wpm": 109.1,
+      "span_vs_plan": 1.222,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 1,
+      "cpp_db": 15.61,
+      "raw_floor_dbfs": -62.1,
+      "speech_to_floor_db": 36.8,
+      "presence_db": -13.58,
+      "vs": {},
+      "takes": {
+       "e2-a2-0012": {
+        "file": "audio/ep02/v1-el/auditions/voice1/wav/e2-a2-0012__voice1-B.wav",
+        "key": "aaf966607ce57fee",
+        "seed": 3136633247,
+        "sent": "Hi.",
+        "span_s": 0.55,
+        "planned_s": 0.45,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "B"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a2-0012"
+    ],
+    "neighbours": null,
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "voice2": {
+   "name": "VOICE 2",
+   "brief": "'Hi!' bright",
+   "lane_hz": [
+    140,
+    155
+   ],
+   "pace_wpm": null,
+   "scenes": "sc 9",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "f5HLTX707KIM4SzJYzSz",
+     "voice_name": "Brad - Welcoming & Casual",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "Happy to help. Welcoming, natural conversations for customer service telephone support. Kind, supportive, upbeat instructions and interactions. Professional, and still chill. Pleasant digital Al assistant. A confident and down to earth agent. Easygoing American male voice by Hey Its Brad.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 142.7,
+      "f0_range_st": 12.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 146.8,
+      "f0_range_st": 11.8,
+      "wpm": 181.8,
+      "span_vs_plan": 0.733,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.83,
+      "raw_floor_dbfs": -75.8,
+      "speech_to_floor_db": 59.9,
+      "presence_db": -8.24,
+      "vs": {},
+      "takes": {
+       "e2-a2-0013": {
+        "file": "audio/ep02/v1-el/auditions/voice2/wav/e2-a2-0013__voice2-C.wav",
+        "key": "7bb5ab9475b7de8e",
+        "seed": 4053328504,
+        "sent": "Hi!",
+        "span_s": 0.33,
+        "planned_s": 0.45,
+        "asr": "Hi!"
+       }
+      },
+      "audition_letter": "C"
+     },
+     "why": "Picked jointly with VOICE 1, 3, 4. 'Hi!' at 147 Hz (preview 143) with the brightest presence of the set (-8.2 dB in 2-5 kHz): 2.0 st over Quinn and 15.6 dB brighter, so the two read apart. Drew (140 Hz) was as good alone but sits 1.2 st from Quinn."
+    },
+    {
+     "cand": "B",
+     "voice_id": "q0IMILNRPxOgtBTS4taI",
+     "voice_name": "Drew - Casual, Curious & Fun",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "social_media"
+     },
+     "library_description": "Food & travel. Tips & ideas. Social media's narrator for teaching and learning content. Tutorials and education videos. Perfect for vacations, relationship advice, parenting, pets and cooking lifestyles. A friendly, happy American male voice by Hey Its Brad.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 152.1,
+      "f0_range_st": 11.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 0.01,
+      "penalties": {
+       "lane": 0.01,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 139.9,
+      "f0_range_st": 10.9,
+      "wpm": 139.5,
+      "span_vs_plan": 0.956,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 24.6,
+      "raw_floor_dbfs": -85.0,
+      "speech_to_floor_db": 68.3,
+      "presence_db": -8.89,
+      "vs": {},
+      "takes": {
+       "e2-a2-0013": {
+        "file": "audio/ep02/v1-el/auditions/voice2/wav/e2-a2-0013__voice2-A.wav",
+        "key": "6acef19e23951105",
+        "seed": 1610293746,
+        "sent": "Hi!",
+        "span_s": 0.43,
+        "planned_s": 0.45,
+        "asr": "Hi!"
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "EOVAuWqgSZN2Oel78Psj",
+     "voice_name": "Aidan - Social Media Influencer",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A smooth, clear, and versatile voice perfect for YouTube narration, TikTok voiceovers, podcast intros, and gaming commentary. This voice blends warmth with professionalism, making it ideal for creators who want reliable audio for tutorials, reviews, explainers, or storytelling.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 145.2,
+      "f0_range_st": 14.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 0.18,
+      "penalties": {
+       "lane": 0.18,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 156.6,
+      "f0_range_st": 14.3,
+      "wpm": 166.7,
+      "span_vs_plan": 0.8,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 23.33,
+      "raw_floor_dbfs": -87.4,
+      "speech_to_floor_db": 72.2,
+      "presence_db": -12.27,
+      "vs": {},
+      "takes": {
+       "e2-a2-0013": {
+        "file": "audio/ep02/v1-el/auditions/voice2/wav/e2-a2-0013__voice2-B.wav",
+        "key": "406fd186287436aa",
+        "seed": 3342132645,
+        "sent": "Hi!",
+        "span_s": 0.36,
+        "planned_s": 0.45,
+        "asr": "Hi!"
+       }
+      },
+      "audition_letter": "B"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a2-0013"
+    ],
+    "neighbours": null,
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "voice3": {
+   "name": "VOICE 3",
+   "brief": "'hi?' a question, neutral",
+   "lane_hz": [
+    110,
+    160
+   ],
+   "pace_wpm": null,
+   "scenes": "sc 9",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "wDfT0ggsNp2Lh21D10SV",
+     "voice_name": "Quinn - Comforting & Approachable",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A soft and androgynous voice that is ideal for narration and podcasts.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 111.3,
+      "f0_range_st": 5.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 130.8,
+      "f0_range_st": 7.3,
+      "wpm": 136.4,
+      "span_vs_plan": 0.978,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.62,
+      "raw_floor_dbfs": -82.0,
+      "speech_to_floor_db": 56.3,
+      "presence_db": -23.8,
+      "vs": {},
+      "takes": {
+       "e2-a2-0014": {
+        "file": "audio/ep02/v1-el/auditions/voice3/wav/e2-a2-0014__voice3-B.wav",
+        "key": "293dda9ef9413c54",
+        "seed": 2272263916,
+        "sent": "Hi?",
+        "span_s": 0.44,
+        "planned_s": 0.45,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "B"
+     },
+     "why": "Picked jointly. 'hi?' rises 4.4 st across the word (a question) at 131 Hz, with the darkest presence of the set (-23.8 dB): a neutral, soft-edged voice ('androgynous' in the library). Luna was heard as 'Aye'; the Neutral Narrator's floor was 11 dB under its speech (noisy)."
+    },
+    {
+     "cand": "B",
+     "voice_id": "JjFExtCYfBGn1nn478bh",
+     "voice_name": "Luna",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "neutral",
+      "use_case": "conversational"
+     },
+     "library_description": "Energetic English, early 30's neutral voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 140.3,
+      "f0_range_st": 10.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 3.66,
+      "penalties": {
+       "lane": 1.66,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 0.0
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 176.1,
+      "f0_range_st": 6.6,
+      "wpm": 142.9,
+      "span_vs_plan": 0.933,
+      "p_en": null,
+      "recall_min": 0.0,
+      "tail_cuts": 0,
+      "cpp_db": 25.65,
+      "raw_floor_dbfs": -89.7,
+      "speech_to_floor_db": 72.9,
+      "presence_db": -13.87,
+      "vs": {},
+      "takes": {
+       "e2-a2-0014": {
+        "file": "audio/ep02/v1-el/auditions/voice3/wav/e2-a2-0014__voice3-C.wav",
+        "key": "0da78e4278f461e2",
+        "seed": 1213853422,
+        "sent": "Hi?",
+        "span_s": 0.42,
+        "planned_s": 0.45,
+        "asr": "Aye."
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "ugwPvux61IszIA7kBQza",
+     "voice_name": "Neutral Conversational Narrator (quick pace)",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A neutral, natural sounding narration voice with a conversational tone and balanced delivery. Designed to feel gender neutral and modern, making it well suited for documentaries, explainer videos, educational content, audiobooks, and long form narration. The voice is calm, clear, and easy to listen ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 158.3,
+      "f0_range_st": 6.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 9.35,
+      "penalties": {
+       "lane": 2.51,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 6.84
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "no rise"
+      ],
+      "median_f0_hz": 185.0,
+      "f0_range_st": 9.8,
+      "wpm": 89.6,
+      "span_vs_plan": 1.489,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 15.05,
+      "raw_floor_dbfs": -48.0,
+      "speech_to_floor_db": 10.8,
+      "presence_db": -24.91,
+      "vs": {},
+      "takes": {
+       "e2-a2-0014": {
+        "file": "audio/ep02/v1-el/auditions/voice3/wav/e2-a2-0014__voice3-A.wav",
+        "key": "8fdf1cfec764b9eb",
+        "seed": 3157498303,
+        "sent": "Hi?",
+        "span_s": 0.67,
+        "planned_s": 0.45,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "A"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a2-0014"
+    ],
+    "neighbours": null,
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "voice4": {
+   "name": "VOICE 4",
+   "brief": "'Hi...' soft and trailing, never breathy or sultry",
+   "lane_hz": [
+    200,
+    215
+   ],
+   "pace_wpm": null,
+   "scenes": "sc 9",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "nf4MCGNSdM0hxM95ZBQR",
+     "voice_name": "Sarah Eve - Inviting and Friendly",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "Warm & reflective, Sarah Eve invites you to cozy up for a chitchat.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 210.1,
+      "f0_range_st": 10.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.18,
+      "penalties": {
+       "lane": 0.18,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 217.3,
+      "f0_range_st": 4.2,
+      "wpm": 85.7,
+      "span_vs_plan": 1.4,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.4,
+      "raw_floor_dbfs": -76.7,
+      "speech_to_floor_db": 49.3,
+      "presence_db": -13.81,
+      "vs": {},
+      "takes": {
+       "e2-a2-0015": {
+        "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-B.wav",
+        "key": "8583d1bb37da0343",
+        "seed": 2088896475,
+        "sent": "Hi...",
+        "span_s": 0.7,
+        "planned_s": 0.5,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "B"
+     },
+     "why": "Picked jointly. 'Hi...' at 217 Hz (0.2 st over the 200-215 lane), 0.70 s long and trailing, 3.0 st under Maya (258 Hz) so CHATGTP stays the bright one; CPP 18.4 dB (not breathy) and a narrow 4 st range (soft, never sultry). Sha read 326 Hz, Kaylin 267 Hz, both crowding Maya."
+    },
+    {
+     "cand": "B",
+     "voice_id": "9q9xpGHwmkXdA4JI72IU",
+     "voice_name": "Kaylin - Warm, Expressive and Calm",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A clear and expressive female voice with a smooth, inviting tone. Perfect for audiobook narration, educational content, and commercials or ads. American accent, with a calm, relaxing, and luxurious feel.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 215.1,
+      "f0_range_st": 10.0,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 3.78,
+      "penalties": {
+       "lane": 3.78,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 267.4,
+      "f0_range_st": 13.0,
+      "wpm": 166.7,
+      "span_vs_plan": 0.72,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 16.62,
+      "raw_floor_dbfs": -69.5,
+      "speech_to_floor_db": 49.7,
+      "presence_db": -19.27,
+      "vs": {},
+      "takes": {
+       "e2-a2-0015": {
+        "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-C.wav",
+        "key": "86348bf989e7c42f",
+        "seed": 2018219313,
+        "sent": "Hi...",
+        "span_s": 0.36,
+        "planned_s": 0.5,
+        "asr": "Hi!"
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "9GiYR5zXBWwc0khQNQA8",
+     "voice_name": "Sha - Warm, Inviting Narrator",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A professional, warm, and natural voice with a soft, friendly tone, ideal for podcasts, tutorials, audiobooks, videos, and social media content.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 207.7,
+      "f0_range_st": 12.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 8.22,
+      "penalties": {
+       "lane": 7.22,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 1.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 326.2,
+      "f0_range_st": 4.6,
+      "wpm": 95.2,
+      "span_vs_plan": 1.26,
+      "p_en": null,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 21.61,
+      "raw_floor_dbfs": -51.2,
+      "speech_to_floor_db": 40.0,
+      "presence_db": -16.79,
+      "vs": {},
+      "takes": {
+       "e2-a2-0015": {
+        "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-A.wav",
+        "key": "f661b7fc03e89f7d",
+        "seed": 2771283086,
+        "sent": "Hi...",
+        "span_s": 0.63,
+        "planned_s": 0.5,
+        "asr": "Hi."
+       }
+      },
+      "audition_letter": "A"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a2-0015"
+    ],
+    "neighbours": null,
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "staffer2": {
+   "name": "STAFFER 2",
+   "brief": "a second plain staff read, smoothing tape on a pillar; never mocked",
+   "lane_hz": null,
+   "pace_wpm": "185 (the beat plan's planning rate)",
+   "scenes": "sc 13",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "09AoN6tYyW3VSTQqCo7C",
+     "voice_name": "Jessi - Friendly, Smooth, and Soft",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A pleasant mid-20s American female voice. Confident and casual. Perfect for news, corporate videos, faceless videos, audio narration, and more.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 194.9,
+      "f0_range_st": 10.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 1.44,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 1.16,
+       "pace": 0.28
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 187.9,
+      "f0_range_st": 5.5,
+      "wpm": 201.7,
+      "span_vs_plan": 0.847,
+      "p_en": 0.9968,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 15.81,
+      "raw_floor_dbfs": -74.0,
+      "speech_to_floor_db": 39.2,
+      "presence_db": -20.11,
+      "vs": {
+       "staffer": {
+        "st": 2.17,
+        "mfcc_dist": 26.6
+       },
+       "reporter": {
+        "st": -1.73,
+        "mfcc_dist": 52.4
+       }
+      },
+      "takes": {
+       "e2-a3-0002": {
+        "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-D.wav",
+        "key": "5e5f17008561a135",
+        "seed": 2936914703,
+        "sent": "In the corridor, last week. For a second.",
+        "span_s": 2.38,
+        "planned_s": 2.81,
+        "asr": "In the corridor, last week, for a second."
+       }
+      },
+      "audition_letter": "D"
+     },
+     "why": "Picked jointly with the TV reporter (cast.md §3.6-§3.7: the pair with the lowest score). 187.9 Hz, 2.2 st over the Staffer (Avery, 166 Hz; the two-shot needs 2) and 1.7 st under the reporter; 202 wpm (0.85 of the plan); verbatim; p(en) 0.997; a light floor penalty (39 dB). For the ear: her timbre is the nearest to Avery's of the four (distance 26.6); Kristen (5.0 st over Avery, distance 47) is the cached alternative if the two staffers blur."
+    },
+    {
+     "cand": "B",
+     "voice_id": "Awx8TeMHHpDzbm42nIB6",
+     "voice_name": "Kristen - Friendly and Casual BFF",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "Warm, natural, and approachable female voice with a relaxed, down-to-earth, and easy-going style. Genuine, clear, and engaging with smooth, soft-tone delivery and relatable, mid-tempo pacing for a real-person, one-on-one feel. Inviting, personal, and trustworthy—perfect for storytelling, lifestyle c",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 218.8,
+      "f0_range_st": 11.0,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 1.56,
+      "penalties": {
+       "separation": 0.41,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.15
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 221.1,
+      "f0_range_st": 7.6,
+      "wpm": 219.2,
+      "span_vs_plan": 0.779,
+      "p_en": 0.9957,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 20.2,
+      "raw_floor_dbfs": -63.2,
+      "speech_to_floor_db": 48.4,
+      "presence_db": -15.36,
+      "vs": {
+       "staffer": {
+        "st": 4.98,
+        "mfcc_dist": 47.0
+       },
+       "reporter": {
+        "st": 1.09,
+        "mfcc_dist": 29.2
+       }
+      },
+      "takes": {
+       "e2-a3-0002": {
+        "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-B.wav",
+        "key": "548e133f3f8a7c23",
+        "seed": 1533212722,
+        "sent": "In the corridor, last week. For a second.",
+        "span_s": 2.19,
+        "planned_s": 2.81,
+        "asr": "In the corridor last week. For a second."
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "yj30vwTGJxSHezdAGsv9",
+     "voice_name": "Jessa - Easygoing and Effortless",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A natural, effortless, and relatable female voice with a casual, off-the-cuff style that feels genuinely real.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 221.4,
+      "f0_range_st": 14.5,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 2.8,
+      "penalties": {
+       "separation": 0.7,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 2.1
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 178.7,
+      "f0_range_st": 6.8,
+      "wpm": 240.0,
+      "span_vs_plan": 0.712,
+      "p_en": 0.9967,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 22.19,
+      "raw_floor_dbfs": -85.6,
+      "speech_to_floor_db": 62.8,
+      "presence_db": -15.6,
+      "vs": {
+       "staffer": {
+        "st": 1.3,
+        "mfcc_dist": 30.5
+       },
+       "reporter": {
+        "st": -2.6,
+        "mfcc_dist": 41.9
+       }
+      },
+      "takes": {
+       "e2-a3-0002": {
+        "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-C.wav",
+        "key": "d42ccb44f041844e",
+        "seed": 2460328025,
+        "sent": "In the corridor, last week. For a second.",
+        "span_s": 2.0,
+        "planned_s": 2.81,
+        "asr": "In the corridor last week. For a second."
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "uG1JFy6xppqckhHCs2KG",
+     "voice_name": "Sarah - Casual & Modern",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A warm, natural voice with clear articulation, ideal for videos, podcasts, audiobooks, and everyday narration.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 213.8,
+      "f0_range_st": 10.5,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.29,
+      "penalties": {
+       "separation": 0.47,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 2.81
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 181.1,
+      "f0_range_st": 6.0,
+      "wpm": 256.7,
+      "span_vs_plan": 0.665,
+      "p_en": 0.9989,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.14,
+      "raw_floor_dbfs": -86.0,
+      "speech_to_floor_db": 52.5,
+      "presence_db": -18.23,
+      "vs": {
+       "staffer": {
+        "st": 1.53,
+        "mfcc_dist": 30.4
+       },
+       "reporter": {
+        "st": -2.36,
+        "mfcc_dist": 54.8
+       }
+      },
+      "takes": {
+       "e2-a3-0002": {
+        "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-A.wav",
+        "key": "17b16dda007d2e87",
+        "seed": 1056005199,
+        "sent": "In the corridor, last week. For a second.",
+        "span_s": 1.87,
+        "planned_s": 2.81,
+        "asr": "In the corridor last week for a second."
+       }
+      },
+      "audition_letter": "A"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0002"
+    ],
+    "neighbours": {
+     "staffer": 2.0,
+     "reporter": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "reporter": {
+   "name": "THE TV REPORTER",
+   "brief": "a press-conference question off a TV; generic, unnamed",
+   "lane_hz": null,
+   "pace_wpm": "185 (the beat plan's planning rate)",
+   "scenes": "sc 13",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "CaJGGnGTRWSly2yoC75U",
+     "voice_name": "Katherine - Professional, Clear, Warm",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Professional, clear, and warm middle-aged female voice (neutral accent) for IVR, corporate training, and eLearning. This authoritative, trustworthy, and articulate narrator excels in compliance, onboarding, technical explainers, and business presentations. Its steady, mature delivery is optimized fo",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 218.8,
+      "f0_range_st": 11.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.44,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.18,
+       "pace": 0.26
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 207.6,
+      "f0_range_st": 12.1,
+      "wpm": 209.0,
+      "span_vs_plan": 0.848,
+      "p_en": 0.9984,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.91,
+      "raw_floor_dbfs": -63.2,
+      "speech_to_floor_db": 44.1,
+      "presence_db": -9.66,
+      "vs": {
+       "staffer": {
+        "st": 3.89,
+        "mfcc_dist": 49.9
+       },
+       "staffer2": {
+        "st": 1.73,
+        "mfcc_dist": 52.4
+       }
+      },
+      "takes": {
+       "e2-a3-0005": {
+        "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-C.wav",
+        "key": "7376eb7bb1091dd6",
+        "seed": 3051244729,
+        "sent": "Senator, when does it get a vote?",
+        "span_s": 2.01,
+        "planned_s": 2.37,
+        "asr": "Senator, when does it get a vote?"
+       }
+      },
+      "audition_letter": "C"
+     },
+     "why": "Picked jointly with STAFFER 2. 207.6 Hz, 3.9 st over Avery and 1.7 st over Jessi, timbre distance about 50 from both; the question rises (+1.7 st on its last syllable) and the TV-chain copy is recognised verbatim; 209 wpm (0.85 of the plan); p(en) 0.998. Leslie's question lands flat; Eryn read 353 wpm."
+    },
+    {
+     "cand": "B",
+     "voice_id": "5Bd4WV6UTiSunxizNai6",
+     "voice_name": "Leslie - Open, Strong and Approachable",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Confident, approachable, and energetic female voice with a casual-professional tone. Perfect for real estate, landlord coaching, and educational content. Balanced warmth and authority make it engaging for both instructional and conversational use. Versatile enough for storytelling, clear enough for ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 221.4,
+      "f0_range_st": 8.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 1.95,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.95
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "question lands flat"
+      ],
+      "median_f0_hz": 260.1,
+      "f0_range_st": 6.7,
+      "wpm": 245.6,
+      "span_vs_plan": 0.722,
+      "p_en": 0.9975,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 21.43,
+      "raw_floor_dbfs": -76.0,
+      "speech_to_floor_db": 55.7,
+      "presence_db": -12.8,
+      "vs": {
+       "staffer": {
+        "st": 7.8,
+        "mfcc_dist": 50.6
+       },
+       "staffer2": {
+        "st": 5.63,
+        "mfcc_dist": 64.4
+       }
+      },
+      "takes": {
+       "e2-a3-0005": {
+        "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-B.wav",
+        "key": "876520ccf839a8a7",
+        "seed": 296003150,
+        "sent": "Senator, when does it get a vote?",
+        "span_s": 1.71,
+        "planned_s": 2.37,
+        "asr": "Senator, when does it get a vote?"
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "kdnRe2koJdOK4Ovxn2DI",
+     "voice_name": "Eryn - Genuine, Friendly and Natural",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "This model was trained from a real conversation between two good friends. It's authentic as you can get!",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 174.7,
+      "f0_range_st": 8.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 5.76,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 5.76
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "question lands flat"
+      ],
+      "median_f0_hz": 232.1,
+      "f0_range_st": 9.3,
+      "wpm": 352.9,
+      "span_vs_plan": 0.502,
+      "p_en": 0.9983,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 22.8,
+      "raw_floor_dbfs": -75.7,
+      "speech_to_floor_db": 54.1,
+      "presence_db": -10.96,
+      "vs": {
+       "staffer": {
+        "st": 5.82,
+        "mfcc_dist": 68.6
+       },
+       "staffer2": {
+        "st": 3.66,
+        "mfcc_dist": 72.2
+       }
+      },
+      "takes": {
+       "e2-a3-0005": {
+        "file": "audio/ep02/v1-el/auditions/reporter/wav/e2-a3-0005__reporter-A.wav",
+        "key": "f01716d74f22c5a5",
+        "seed": 470071845,
+        "sent": "Senator, when does it get a vote?",
+        "span_s": 1.19,
+        "planned_s": 2.37,
+        "asr": "Senator, when does it get a vote?"
+       }
+      },
+      "audition_letter": "A"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0005"
+    ],
+    "neighbours": {
+     "staffer": 1.5,
+     "staffer2": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "bukaj": {
+   "name": "BUKAJ",
+   "brief": "soft, exact, warm; a scientist who'd like a week before anyone asks for a schedule",
+   "lane_hz": [
+    110,
+    135
+   ],
+   "pace_wpm": "160 (the beat plan's planning rate)",
+   "scenes": "sc 14",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "a6sKd2pET9A8uwzfI5Yr",
+     "voice_name": "Scypher",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Soft, gentle, reflective, and relaxed.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "measured_preview": {
+      "median_f0_hz": 104.5,
+      "f0_range_st": 3.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.93,
+      "penalties": {
+       "lane": 0.09,
+       "separation": 0.84,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "bright, not soft"
+      ],
+      "median_f0_hz": 109.5,
+      "f0_range_st": 7.8,
+      "wpm": 164.9,
+      "span_vs_plan": 0.912,
+      "p_en": 0.9953,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 17.23,
+      "raw_floor_dbfs": -80.5,
+      "speech_to_floor_db": 59.7,
+      "presence_db": -13.02,
+      "vs": {
+       "mas": {
+        "st": -0.66,
+        "mfcc_dist": 45.9
+       }
+      },
+      "takes": {
+       "e2-a3-0006": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-B.wav",
+        "key": "95fb490458507c97",
+        "seed": 494273396,
+        "sent": "Thank you. It's still warm.",
+        "span_s": 1.95,
+        "planned_s": 2.1,
+        "asr": "Thank you. It's still warm."
+       },
+       "e2-a3-0007": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-B.wav",
+        "key": "60f83fcfd1bcbc8b",
+        "seed": 245831530,
+        "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+        "span_s": 3.87,
+        "planned_s": 5.84,
+        "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+       }
+      },
+      "audition_letter": "B",
+      "round2": {
+       "speed": 0.85,
+       "fitted_from": {
+        "span_vs_plan": 0.785,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a3-0006": {
+         "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-B2.wav",
+         "key": "f28c021b9604e741",
+         "seed": 494273396,
+         "sent": "Thank you. It's still warm.",
+         "span_s": 2.18,
+         "planned_s": 2.1,
+         "wpm": 137.6,
+         "f0": 112.8,
+         "asr": "Thank you. It's still warm."
+        },
+        "e2-a3-0007": {
+         "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-B2.wav",
+         "key": "5f43b6b8e734da61",
+         "seed": 245831530,
+         "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+         "span_s": 4.68,
+         "planned_s": 5.84,
+         "wpm": 192.3,
+         "f0": 109.5,
+         "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     },
+     "why": "Picked by measurement (cast.md §3.8), round 2 at speed 0.85. The lowest score (0.93): 109.5 Hz (0.1 st under the 110-135 Hz lane), 165 wpm at 0.85 (0.91 of the plan), verbatim, p(en) 0.995, the cleanest floor of the four (60 dB), a narrow 7.8 st range (soft, exact). He sits only 0.7 st under Mas in pitch, but his timbre is 45.9 from Mas's, 4.8x Mas's own spread (9.6). For the ear: if the two-shot blurs, Kenneth (3.2 st under Mas, cached at 0.80) is next. Antoine was out on noise (his floor 13 dB under his speech, a clipped tail)."
+    },
+    {
+     "cand": "B",
+     "voice_id": "8z82LG47qQ2qjeeQB8lk",
+     "voice_name": "Kenneth - Storyteller",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A calm, low-pitched baritone voice, with a slow, measured pace and very clear diction. This deliberate delivery creates a soothing yet mysterious atmosphere, making it ideal for narrative storytelling.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 108.2,
+      "f0_range_st": 10.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 2.94,
+      "penalties": {
+       "lane": 2.65,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.29
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "bright, not soft"
+      ],
+      "median_f0_hz": 94.4,
+      "f0_range_st": 13.6,
+      "wpm": 179.2,
+      "span_vs_plan": 0.846,
+      "p_en": 0.9924,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 16.91,
+      "raw_floor_dbfs": -88.0,
+      "speech_to_floor_db": 64.7,
+      "presence_db": -11.31,
+      "vs": {
+       "mas": {
+        "st": -3.22,
+        "mfcc_dist": 40.9
+       }
+      },
+      "takes": {
+       "e2-a3-0006": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-D.wav",
+        "key": "0de47e2df1b66f9c",
+        "seed": 186415715,
+        "sent": "Thank you. It's still warm.",
+        "span_s": 1.67,
+        "planned_s": 2.1,
+        "asr": "Thank you. It's still warm."
+       },
+       "e2-a3-0007": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-D.wav",
+        "key": "32b3e44b7896343e",
+        "seed": 1701970094,
+        "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+        "span_s": 3.35,
+        "planned_s": 5.84,
+        "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+       }
+      },
+      "audition_letter": "D",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.676,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a3-0006": {
+         "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-D2.wav",
+         "key": "a6087747b11e027f",
+         "seed": 186415715,
+         "sent": "Thank you. It's still warm.",
+         "span_s": 2.11,
+         "planned_s": 2.1,
+         "wpm": 142.2,
+         "f0": 84.8,
+         "asr": "Thank you. It's still warm."
+        },
+        "e2-a3-0007": {
+         "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-D2.wav",
+         "key": "1cd6a7ffae5e0a17",
+         "seed": 1701970094,
+         "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+         "span_s": 4.16,
+         "planned_s": 5.84,
+         "wpm": 216.3,
+         "f0": 93.9,
+         "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "Dgd9MUMSyPeTgbbDIZ0t",
+     "voice_name": "Jacob - Soft Comfort",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "gentle",
+      "use_case": "entertainment_tv"
+     },
+     "library_description": "A warm, gentle male narrator perfect for comfort videos, emotional storytelling, affirmations, and supportive talk. Calm, steady, reassuring tone that feels safe and easy to listen to.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 96.1,
+      "f0_range_st": 11.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 4.54,
+      "penalties": {
+       "lane": 0.55,
+       "separation": 0.37,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.02,
+       "pace": 3.6
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "bright, not soft"
+      ],
+      "median_f0_hz": 106.5,
+      "f0_range_st": 10.2,
+      "wpm": 241.0,
+      "span_vs_plan": 0.617,
+      "p_en": 0.9988,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 20.66,
+      "raw_floor_dbfs": -73.4,
+      "speech_to_floor_db": 44.9,
+      "presence_db": -10.98,
+      "vs": {
+       "mas": {
+        "st": -1.13,
+        "mfcc_dist": 53.0
+       }
+      },
+      "takes": {
+       "e2-a3-0006": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-A.wav",
+        "key": "5d00ed857fa0b6a5",
+        "seed": 3914202218,
+        "sent": "Thank you. It's still warm.",
+        "span_s": 1.16,
+        "planned_s": 2.1,
+        "asr": "Thank you. It's still warm."
+       },
+       "e2-a3-0007": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-A.wav",
+        "key": "68f02868dc3d4695",
+        "seed": 646868802,
+        "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+        "span_s": 4.03,
+        "planned_s": 5.84,
+        "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "edRtkKm7qEwZ8pH9ggtf",
+     "voice_name": "Antoine ",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "social_media"
+     },
+     "library_description": "A rich, calm, and confident young American male voice with a warm, conversational tone. It carries a slight, natural rasp, making it perfect for delivering news, narrating documentaries, or creating compelling voiceovers for commercials. The voice exudes relatability and authority, drawing the liste",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 126.8,
+      "f0_range_st": 11.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 10.54,
+      "penalties": {
+       "lane": 0.4,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 6.34,
+       "pace": 1.8
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 138.1,
+      "f0_range_st": 10.7,
+      "wpm": 202.9,
+      "span_vs_plan": 0.732,
+      "p_en": 0.9959,
+      "recall_min": 1.0,
+      "tail_cuts": 1,
+      "cpp_db": 16.34,
+      "raw_floor_dbfs": -45.0,
+      "speech_to_floor_db": 13.3,
+      "presence_db": -14.76,
+      "vs": {
+       "mas": {
+        "st": 3.37,
+        "mfcc_dist": 35.3
+       }
+      },
+      "takes": {
+       "e2-a3-0006": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-C.wav",
+        "key": "74d42700f7580a29",
+        "seed": 2679029277,
+        "sent": "Thank you. It's still warm.",
+        "span_s": 1.57,
+        "planned_s": 2.1,
+        "asr": "Thank you. It's still warm."
+       },
+       "e2-a3-0007": {
+        "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-C.wav",
+        "key": "a7bf5768af36314f",
+        "seed": 969763038,
+        "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+        "span_s": 4.19,
+        "planned_s": 5.84,
+        "asr": "Not yet. I'd like a week in it before anyone asks me for a schedule."
+       }
+      },
+      "audition_letter": "C"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0006",
+     "e2-a3-0007"
+    ],
+    "neighbours": {
+     "mas": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "ekiel": {
+   "name": "EKIEL",
+   "brief": "quiet, dry, squinting; says the hard thing plainly; neutral accent; never sarcastic",
+   "lane_hz": [
+    110,
+    140
+   ],
+   "pace_wpm": "160 (the beat plan's planning rate)",
+   "scenes": "F2.2 (sc 15), sc 18",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "Smxkoz0xiOoHo5WcSskf",
+     "voice_name": "Dexter – Customer Support Pro",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "conversational"
+     },
+     "library_description": "Dexter is the calm, confident voice trusted by thousands of customers across help desks, knowledge bases, and smart assistant and support videos. Whether it’s explainer content, onboarding walkthroughs, or simulated customer support scenarios, Dexter delivers a professional, polished tone that build",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 108.2,
+      "f0_range_st": 8.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 2.43,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.07,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 1.8,
+       "pace": 0.56
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 110.4,
+      "f0_range_st": 8.9,
+      "wpm": 199.7,
+      "span_vs_plan": 0.824,
+      "p_en": 0.9957,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.95,
+      "raw_floor_dbfs": -66.6,
+      "speech_to_floor_db": 36.0,
+      "presence_db": -12.37,
+      "vs": {
+       "mario": {
+        "st": -1.43,
+        "mfcc_dist": 62.2
+       },
+       "alyi": {
+        "st": 3.67,
+        "mfcc_dist": 32.8
+       }
+      },
+      "takes": {
+       "e2-a3-0014": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-C.wav",
+        "key": "948998dad23f5f28",
+        "seed": 906627719,
+        "sent": "Nobody knows how to do this yet.",
+        "span_s": 1.55,
+        "planned_s": 2.73,
+        "asr": "Nobody knows how to do this yet."
+       },
+       "e2-a4-0010": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-C.wav",
+        "key": "9bb10bc187436f21",
+        "seed": 4266159304,
+        "sent": "You annotated my resignation?",
+        "span_s": 1.53,
+        "planned_s": 1.6,
+        "asr": "You annotated my resignation."
+       }
+      },
+      "audition_letter": "C",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.737,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a3-0014": {
+         "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-C2.wav",
+         "key": "b90f5500a6c508bf",
+         "seed": 906627719,
+         "sent": "Nobody knows how to do this yet.",
+         "span_s": 1.52,
+         "planned_s": 2.73,
+         "wpm": 276.3,
+         "f0": 115.2,
+         "asr": "Nobody knows how to do this yet."
+        },
+        "e2-a4-0010": {
+         "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-C2.wav",
+         "key": "40b08c6d6c7fce86",
+         "seed": 4266159304,
+         "sent": "You annotated my resignation?",
+         "span_s": 1.95,
+         "planned_s": 1.6,
+         "wpm": 123.1,
+         "f0": 103.8,
+         "asr": "You annotated my resignation?"
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     },
+     "why": "Picked by measurement (cast.md §3.9), round 2 at speed 0.80. The lowest score (2.43): 110.4 Hz in the 110-140 Hz lane, 1.4 st under MARIO's Kokoro takes (120 Hz) with a timbre distance of 62 (12x Mario's own spread), 3.7 st over Alyi (89 Hz); verbatim; p(en) 0.996; an 8.9 st range (dry, not swinging). His floor is the one weakness (36 dB). At 0.80 'Nobody knows how to do this yet.' still ran quick (1.52 s against the plan's 2.73) and 'You annotated my resignation?' slow (1.95 s against 1.6): the lock fits them, or one retake of e2-a3-0014 if the ear wants it quieter. Brandon (the 'subtle sarcasm' check) had the noisiest floor (23 dB) and wide swings; Mike sits under the lane with a noisier floor."
+    },
+    {
+     "cand": "B",
+     "voice_id": "USXpAZuBZ22GqtSpuKoQ",
+     "voice_name": "Mike Belkowski",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A calm, steady voice with clear articulation and measured pacing.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 120.0,
+      "f0_range_st": 15.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 4.16,
+      "penalties": {
+       "lane": 1.3,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 2.86,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 102.0,
+      "f0_range_st": 8.1,
+      "wpm": 172.4,
+      "span_vs_plan": 0.909,
+      "p_en": 0.9899,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 21.0,
+      "raw_floor_dbfs": -59.1,
+      "speech_to_floor_db": 30.7,
+      "presence_db": -11.36,
+      "vs": {
+       "mario": {
+        "st": -2.79,
+        "mfcc_dist": 58.6
+       },
+       "alyi": {
+        "st": 2.31,
+        "mfcc_dist": 38.4
+       }
+      },
+      "takes": {
+       "e2-a3-0014": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-A.wav",
+        "key": "42543d1ccf0e0d7c",
+        "seed": 300030589,
+        "sent": "Nobody knows how to do this yet.",
+        "span_s": 1.38,
+        "planned_s": 2.73,
+        "asr": "Nobody knows how to do this yet."
+       },
+       "e2-a4-0010": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-A.wav",
+        "key": "c14aa9f6dbc177e7",
+        "seed": 2746140324,
+        "sent": "You annotated my resignation?",
+        "span_s": 1.49,
+        "planned_s": 1.6,
+        "asr": "You annotated my resignation?"
+       }
+      },
+      "audition_letter": "A",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.686,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a3-0014": {
+         "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-A2.wav",
+         "key": "298b75ca8cff4191",
+         "seed": 300030589,
+         "sent": "Nobody knows how to do this yet.",
+         "span_s": 1.96,
+         "planned_s": 2.73,
+         "wpm": 214.3,
+         "f0": 102.0,
+         "asr": "Nobody knows how to do this yet."
+        },
+        "e2-a4-0010": {
+         "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-A2.wav",
+         "key": "43e11a321803efbe",
+         "seed": 2746140324,
+         "sent": "You annotated my resignation?",
+         "span_s": 1.84,
+         "planned_s": 1.6,
+         "wpm": 130.4,
+         "f0": 108.1,
+         "asr": "You annotated my resignation?"
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "QzclONYwRWvec152I3wf",
+     "voice_name": "Brandon",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "chill",
+      "use_case": "social_media"
+     },
+     "library_description": "A youthful, relaxed American male voice with a distinct laid-back delivery. Smooth and slightly nasal with dry, subtle sarcasm—this voice captures the effortless charm of someone who's always cool, calm, and just a bit unimpressed. ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 107.5,
+      "f0_range_st": 15.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 6.31,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.9,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 4.46,
+       "pace": 0.95
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "wide swings"
+      ],
+      "median_f0_hz": 115.8,
+      "f0_range_st": 11.5,
+      "wpm": 200.6,
+      "span_vs_plan": 0.794,
+      "p_en": 0.9969,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.06,
+      "raw_floor_dbfs": -46.6,
+      "speech_to_floor_db": 22.7,
+      "presence_db": -17.63,
+      "vs": {
+       "mario": {
+        "st": -0.6,
+        "mfcc_dist": 49.6
+       },
+       "alyi": {
+        "st": 4.5,
+        "mfcc_dist": 51.2
+       }
+      },
+      "takes": {
+       "e2-a3-0014": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-D.wav",
+        "key": "0986db3caf007548",
+        "seed": 3063210330,
+        "sent": "Nobody knows how to do this yet.",
+        "span_s": 1.61,
+        "planned_s": 2.73,
+        "asr": "Nobody knows how to do this yet."
+       },
+       "e2-a4-0010": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-D.wav",
+        "key": "b9954b7e666f8571",
+        "seed": 3712751669,
+        "sent": "You annotated my resignation?",
+        "span_s": 1.71,
+        "planned_s": 1.6,
+        "asr": "You annotated my resignation."
+       }
+      },
+      "audition_letter": "D"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "UQoLnPXvf18gaKpLzfb8",
+     "voice_name": "Sawyer - Calm, Measured and Serious",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Upbeat, professional middle-aged male voice with a slight twinge of enthusiasm. Perfect for narrating business or motivational audiobooks.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 105.1,
+      "f0_range_st": 20.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 6.89,
+      "penalties": {
+       "lane": 3.3,
+       "separation": 1.7,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.89
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "wide swings"
+      ],
+      "median_f0_hz": 90.9,
+      "f0_range_st": 10.8,
+      "wpm": 221.4,
+      "span_vs_plan": 0.726,
+      "p_en": 0.9936,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 15.48,
+      "raw_floor_dbfs": -90.5,
+      "speech_to_floor_db": 66.4,
+      "presence_db": -12.64,
+      "vs": {
+       "mario": {
+        "st": -4.8,
+        "mfcc_dist": 48.4
+       },
+       "alyi": {
+        "st": 0.3,
+        "mfcc_dist": 49.7
+       }
+      },
+      "takes": {
+       "e2-a3-0014": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-B.wav",
+        "key": "97595520cf82eb3e",
+        "seed": 3810832027,
+        "sent": "Nobody knows how to do this yet.",
+        "span_s": 1.43,
+        "planned_s": 2.73,
+        "asr": "Nobody knows how to do this yet."
+       },
+       "e2-a4-0010": {
+        "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-B.wav",
+        "key": "00cd39a2beefb1f9",
+        "seed": 75474087,
+        "sent": "You annotated my resignation?",
+        "span_s": 1.61,
+        "planned_s": 1.6,
+        "asr": "You annotated my resignation."
+       }
+      },
+      "audition_letter": "B"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0014",
+     "e2-a4-0010"
+    ],
+    "neighbours": {
+     "mario": 1.5,
+     "alyi": 2.0
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "forecaster": {
+   "name": "THE FORECASTER",
+   "brief": "conversational, precise, kind; talks in medians; refuses without needing a number (no smugness, no martyrdom)",
+   "lane_hz": [
+    110,
+    140
+   ],
+   "pace_wpm": "175 (the beat plan's planning rate)",
+   "scenes": "sc 17",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "7EzWGsX10sAS4c9m9cPf",
+     "voice_name": "Jack John - Conversational and Upbeat",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "conversational"
+     },
+     "library_description": "A natural, conversational customer support agent voice. Early to Mid 30s American Male. Great at providing a confident and professional, yet conversational, natural, and friendly voice for AI agents. Trained on data reading out strings of numbers, letters, email addresses, and confirmation codes. In",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 137.0,
+      "f0_range_st": 12.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 136.8,
+      "f0_range_st": 14.9,
+      "wpm": 173.4,
+      "span_vs_plan": 0.994,
+      "p_en": 0.9963,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.06,
+      "raw_floor_dbfs": -81.3,
+      "speech_to_floor_db": 57.8,
+      "presence_db": -10.07,
+      "vs": {
+       "mas": {
+        "st": 3.21,
+        "mfcc_dist": 59.2
+       },
+       "driver": {
+        "st": -6.09,
+        "mfcc_dist": 59.1
+       }
+      },
+      "takes": {
+       "e2-a3-0018": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-A.wav",
+        "key": "cf6ef30e136a2bb7",
+        "seed": 3915983642,
+        "sent": "Already did. It's the one thing I didn't need a number for.",
+        "span_s": 2.55,
+        "planned_s": 4.33,
+        "asr": "Already did. It's the one thing I didn't need a number for."
+       },
+       "e2-a3-0020": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-A.wav",
+        "key": "0e4cff977e3a8985",
+        "seed": 1156279410,
+        "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+        "span_s": 5.22,
+        "planned_s": 5.14,
+        "asr": "I've got a forecast on you. Median. An apology within the hour. In lowercase."
+       }
+      },
+      "audition_letter": "A",
+      "round2": {
+       "speed": 0.8,
+       "fitted_from": {
+        "span_vs_plan": 0.774,
+        "rule": "speed = ratio / 0.95, to 0.05, within 0.80-1.00"
+       },
+       "takes": {
+        "e2-a3-0018": {
+         "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-A2.wav",
+         "key": "dc466deaaf559c0f",
+         "seed": 3915983642,
+         "sent": "Already did. It's the one thing I didn't need a number for.",
+         "span_s": 3.22,
+         "planned_s": 4.33,
+         "wpm": 223.6,
+         "f0": 139.1,
+         "asr": "Already did. It's the one thing I didn't need a number for."
+        },
+        "e2-a3-0020": {
+         "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-A2.wav",
+         "key": "a93996e30756a19b",
+         "seed": 1156279410,
+         "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+         "span_s": 6.82,
+         "planned_s": 5.14,
+         "wpm": 123.2,
+         "f0": 141.0,
+         "asr": "I've got a forecast on you. Median. An apology within the hour in lowercase."
+        }
+       },
+       "note": "the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)"
+      }
+     },
+     "why": "Picked jointly with the Driver (cast.md §3.11-§3.12), round 2 at speed 0.80. Score 0: 136.8 Hz in the 110-140 Hz lane, 3.2 st over Mas and 6.1 st under the Driver; 173 wpm at 0.80, 0.99 of the plan (at 1.0 he ran 222); verbatim on both lines including the keep-list 'Already did. It's the one thing I didn't need a number for.'; p(en) 0.996; a clean floor (58 dB). His library description's 'human like recording' was read and is not a resemblance claim."
+    },
+    {
+     "cand": "B",
+     "voice_id": "sfJopaWaOtauCD3HKX6Q",
+     "voice_name": "Arthur – Casual Conversational American Male Narrator",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "social_media"
+     },
+     "library_description": "Laid-back, friendly, and effortlessly relatable, Arthur’s young-adult American voice feels like catching up with a good friend over coffee. Perfect for explainer videos, podcasts, lifestyle vlogs, and any project that calls for an easy-going, “real-person” vibe. Arthur’s mellow tone draws listeners ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 112.0,
+      "f0_range_st": 13.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 2.24,
+      "penalties": {
+       "lane": 2.24,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 96.6,
+      "f0_range_st": 12.6,
+      "wpm": 184.4,
+      "span_vs_plan": 0.918,
+      "p_en": 0.9964,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.33,
+      "raw_floor_dbfs": -80.8,
+      "speech_to_floor_db": 56.6,
+      "presence_db": -13.29,
+      "vs": {
+       "mas": {
+        "st": -2.81,
+        "mfcc_dist": 54.4
+       },
+       "driver": {
+        "st": -12.11,
+        "mfcc_dist": 78.6
+       }
+      },
+      "takes": {
+       "e2-a3-0018": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-D.wav",
+        "key": "d4c1cfd980a2a166",
+        "seed": 2432924618,
+        "sent": "Already did. It's the one thing I didn't need a number for.",
+        "span_s": 3.18,
+        "planned_s": 4.33,
+        "asr": "Already did. It's the one thing. I didn't need a number for"
+       },
+       "e2-a3-0020": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-D.wav",
+        "key": "09a76aafbf9a1ea8",
+        "seed": 3574640596,
+        "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+        "span_s": 5.9,
+        "planned_s": 5.14,
+        "asr": "I've got a forecast on you median an apology within the hour in lowercase"
+       }
+      },
+      "audition_letter": "D"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "BvZBJROETmG9wGXEdSqX",
+     "voice_name": "Brandon - Casual, Youthful and Kind",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A young American male with an engaging, friendly, conversational tone. Used for educational video narration.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 105.7,
+      "f0_range_st": 18.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 2.77,
+      "penalties": {
+       "lane": 1.25,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 1.52
+      },
+      "brief_points": 2,
+      "brief_notes": [
+       "not conversational pace",
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 102.3,
+      "f0_range_st": 11.1,
+      "wpm": 220.8,
+      "span_vs_plan": 0.752,
+      "p_en": 0.9944,
+      "recall_min": 0.93,
+      "tail_cuts": 0,
+      "cpp_db": 16.36,
+      "raw_floor_dbfs": -89.9,
+      "speech_to_floor_db": 71.3,
+      "presence_db": -11.16,
+      "vs": {
+       "mas": {
+        "st": -1.82,
+        "mfcc_dist": 42.2
+       },
+       "driver": {
+        "st": -11.12,
+        "mfcc_dist": 39.0
+       }
+      },
+      "takes": {
+       "e2-a3-0018": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-B.wav",
+        "key": "a8987f07770dff33",
+        "seed": 3313335497,
+        "sent": "Already did. It's the one thing I didn't need a number for.",
+        "span_s": 2.92,
+        "planned_s": 4.33,
+        "asr": "already did. It's the one thing I didn't need a number for."
+       },
+       "e2-a3-0020": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-B.wav",
+        "key": "952b09de2f70d7bd",
+        "seed": 2064327571,
+        "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+        "span_s": 4.31,
+        "planned_s": 5.14,
+        "asr": "I've got a forecast on you. Median. An apology within the hour and lowercase."
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "ZoiZ8fuDWInAcwPXaVeq",
+     "voice_name": "Josh - Warm, Smooth and Steady",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A friendly, conversational voice designed for natural back-and-forth dialogue. It balances warmth and professionalism, making it ideal for conversational use cases like customer service, helpdesk automation, and AI-powered support experiences. The tone feels human, approachable, and effortlessly cle",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 105.7,
+      "f0_range_st": 9.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.54,
+      "penalties": {
+       "lane": 0.94,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 2.6
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "not conversational pace"
+      ],
+      "median_f0_hz": 104.2,
+      "f0_range_st": 8.8,
+      "wpm": 245.9,
+      "span_vs_plan": 0.678,
+      "p_en": 0.9957,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.79,
+      "raw_floor_dbfs": -70.9,
+      "speech_to_floor_db": 46.4,
+      "presence_db": -15.41,
+      "vs": {
+       "mas": {
+        "st": -1.51,
+        "mfcc_dist": 51.6
+       },
+       "driver": {
+        "st": -10.81,
+        "mfcc_dist": 66.6
+       }
+      },
+      "takes": {
+       "e2-a3-0018": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0018__forecaster-C.wav",
+        "key": "dc789ef5e4306742",
+        "seed": 3639036120,
+        "sent": "Already did. It's the one thing I didn't need a number for.",
+        "span_s": 2.54,
+        "planned_s": 4.33,
+        "asr": "Already did. It's the one thing I didn't need a number for."
+       },
+       "e2-a3-0020": {
+        "file": "audio/ep02/v1-el/auditions/forecaster/wav/e2-a3-0020__forecaster-C.wav",
+        "key": "98a3da0d157de1c8",
+        "seed": 1663003026,
+        "sent": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+        "span_s": 4.03,
+        "planned_s": 5.14,
+        "asr": "I've got a forecast on you. Median. An apology within the hour in lowercase."
+       }
+      },
+      "audition_letter": "C"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0018",
+     "e2-a3-0020"
+    ],
+    "neighbours": {
+     "mas": 1.5,
+     "driver": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "driver": {
+   "name": "THE DRIVER",
+   "brief": "an everyday voice through a car window, impatient but not angry",
+   "lane_hz": null,
+   "pace_wpm": "190 (the beat plan's planning rate)",
+   "scenes": "sc 17",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "J9NvviOEdVm6E7Hwdpdj",
+     "voice_name": "Jerry B. - Authentic, Clear & Engaging",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "social_media"
+     },
+     "library_description": "Natural, authentic American male with a clear, relatable, and engaging conversational delivery for social media and UGC. Warm, confident, and approachable with an organic direct-to-camera feel. Ideal for social media, branded content, product reviews, product demos, app promos, lifestyle content, di",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 139.4,
+      "f0_range_st": 13.6,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.29,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.29
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 194.5,
+      "f0_range_st": 11.6,
+      "wpm": 216.2,
+      "span_vs_plan": 0.846,
+      "p_en": 0.9934,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.98,
+      "raw_floor_dbfs": -86.5,
+      "speech_to_floor_db": 65.7,
+      "presence_db": -13.3,
+      "vs": {
+       "forecaster": {
+        "st": 6.49,
+        "mfcc_dist": 59.1
+       },
+       "mas": {
+        "st": 9.3,
+        "mfcc_dist": 35.4
+       }
+      },
+      "takes": {
+       "e2-a3-0017": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-B.wav",
+        "key": "d74de4369b6b9510",
+        "seed": 782372725,
+        "sent": "You gonna think it over, or can we move? We're parked on it.",
+        "span_s": 2.86,
+        "planned_s": 4.33,
+        "asr": "You gonna think it over, or can we move? We're parked on it."
+       },
+       "e2-a3-0022": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-B.wav",
+        "key": "423de4101b965835",
+        "seed": 2597579729,
+        "sent": "Excuse me. Does honking count as disparagement?",
+        "span_s": 2.63,
+        "planned_s": 2.43,
+        "asr": "Excuse me. Does honking count as disparagement?"
+       }
+      },
+      "audition_letter": "B"
+     },
+     "why": "Picked jointly with the Forecaster. 194.5 Hz, 9.3 st over Mas and 6.5 st over the Forecaster: the three in sc 17 sit far apart. 216 wpm at 1.0 (impatient; 0.85 of the plan), verbatim, p(en) 0.993, a clean floor (66 dB). For the ear: his reads sit 5.7 st over his library preview (139 Hz), a raised voice through a car window; it must read impatient, not angry. Tony (impatience too slow, 163 wpm) and Matt (0.9 st from Mas) are the cached alternatives."
+    },
+    {
+     "cand": "B",
+     "voice_id": "hP72SDESIJq2YuAblBqz",
+     "voice_name": "Tony - Middle-aged with American accent ",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A smooth, confident, and warm Middle-aged American Voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 98.0,
+      "f0_range_st": 16.0,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 0.53,
+      "penalties": {
+       "separation": 0.53,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "not impatient"
+      ],
+      "median_f0_hz": 107.5,
+      "f0_range_st": 14.9,
+      "wpm": 162.9,
+      "span_vs_plan": 1.105,
+      "p_en": 0.9928,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 14.62,
+      "raw_floor_dbfs": -85.5,
+      "speech_to_floor_db": 69.5,
+      "presence_db": -10.31,
+      "vs": {
+       "forecaster": {
+        "st": -3.77,
+        "mfcc_dist": 68.5
+       },
+       "mas": {
+        "st": -0.97,
+        "mfcc_dist": 58.7
+       }
+      },
+      "takes": {
+       "e2-a3-0017": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-D.wav",
+        "key": "c2e58b8a62cc42f5",
+        "seed": 2060271694,
+        "sent": "You gonna think it over, or can we move? We're parked on it.",
+        "span_s": 3.99,
+        "planned_s": 4.33,
+        "asr": "You gonna think it over or can we move? We're parked on it."
+       },
+       "e2-a3-0022": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-D.wav",
+        "key": "08ba2d9a89e83d9e",
+        "seed": 3084055305,
+        "sent": "Excuse me. Does honking count as disparagement?",
+        "span_s": 3.22,
+        "planned_s": 2.43,
+        "asr": "Excuse me, does honking count as disparagement?"
+       }
+      },
+      "audition_letter": "D"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "pwMBn0SsmN1220Aorv15",
+     "voice_name": "Matt - Natural, Chatty, Friendly",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A relaxed, hyper-conversational American male with a warm, friendly tone. This could be a best friend, guy next door. Perfect for podcasts, phone calls, natural storytelling, video narration, English language teaching and training, animation, radio shows, character, and commercial. Millennial, real,",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 98.6,
+      "f0_range_st": 7.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 1.06,
+      "penalties": {
+       "separation": 0.64,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.42,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 119.5,
+      "f0_range_st": 13.4,
+      "wpm": 175.1,
+      "span_vs_plan": 1.056,
+      "p_en": 0.9969,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.34,
+      "raw_floor_dbfs": -69.9,
+      "speech_to_floor_db": 42.9,
+      "presence_db": -17.44,
+      "vs": {
+       "forecaster": {
+        "st": -1.95,
+        "mfcc_dist": 41.0
+       },
+       "mas": {
+        "st": 0.86,
+        "mfcc_dist": 41.5
+       }
+      },
+      "takes": {
+       "e2-a3-0017": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-A.wav",
+        "key": "f8d37595ac52b241",
+        "seed": 1692858190,
+        "sent": "You gonna think it over, or can we move? We're parked on it.",
+        "span_s": 3.43,
+        "planned_s": 4.33,
+        "asr": "You gonna think it over, or can we move? We're parked on it."
+       },
+       "e2-a3-0022": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-A.wav",
+        "key": "3fd7fb75c015e044",
+        "seed": 2750867249,
+        "sent": "Excuse me. Does honking count as disparagement?",
+        "span_s": 3.42,
+        "planned_s": 2.43,
+        "asr": "Excuse me. Does honking count as disparagement?"
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "TWUKKXAylkYxxlPe4gx0",
+     "voice_name": "Armando - Forthright and Stentorian",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A young American 24-year-old with a slight hoarseness in his throat. Voice works well for conversational content.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 137.4,
+      "f0_range_st": 7.8,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.38,
+      "penalties": {
+       "separation": 0.88,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 1.08,
+       "pace": 1.42
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 138.6,
+      "f0_range_st": 8.3,
+      "wpm": 236.7,
+      "span_vs_plan": 0.759,
+      "p_en": 0.9957,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 17.23,
+      "raw_floor_dbfs": -68.4,
+      "speech_to_floor_db": 39.6,
+      "presence_db": -17.42,
+      "vs": {
+       "forecaster": {
+        "st": 0.62,
+        "mfcc_dist": 45.0
+       },
+       "mas": {
+        "st": 3.43,
+        "mfcc_dist": 32.7
+       }
+      },
+      "takes": {
+       "e2-a3-0017": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-C.wav",
+        "key": "8627361ec6f4d5b9",
+        "seed": 2790728720,
+        "sent": "You gonna think it over, or can we move? We're parked on it.",
+        "span_s": 2.77,
+        "planned_s": 4.33,
+        "asr": "You gonna think it over or can we move? We're parked on it."
+       },
+       "e2-a3-0022": {
+        "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-C.wav",
+        "key": "25c5a8fe45205d12",
+        "seed": 3296717655,
+        "sent": "Excuse me. Does honking count as disparagement?",
+        "span_s": 2.19,
+        "planned_s": 2.43,
+        "asr": "Excuse me, does honking count as disparagement?"
+       }
+      },
+      "audition_letter": "C"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0017",
+     "e2-a3-0022"
+    ],
+    "neighbours": {
+     "forecaster": 1.5,
+     "mas": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "haras": {
+   "name": "HARAS",
+   "brief": "pleasant, precise, brisk; neutral accent, never the real CFO's",
+   "lane_hz": [
+    165,
+    200
+   ],
+   "pace_wpm": "185 (the beat plan's planning rate)",
+   "scenes": "sc 19",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "Hh0rE70WfnSFN80K8uJC",
+     "voice_name": "Hannah - Neutral, Polished and Helpful",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Perfect Professional Female American Voice for Informative Narration, E-Learning, and Industrial or Corporate Voiceover. ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 194.9,
+      "f0_range_st": 11.5,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 1.02,
+      "penalties": {
+       "lane": 1.02,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 212.1,
+      "f0_range_st": 12.8,
+      "wpm": 191.0,
+      "span_vs_plan": 0.886,
+      "p_en": 0.9989,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.12,
+      "raw_floor_dbfs": -90.4,
+      "speech_to_floor_db": 71.6,
+      "presence_db": -16.13,
+      "vs": {
+       "gerg": {
+        "st": 6.1,
+        "mfcc_dist": 49.6
+       }
+      },
+      "takes": {
+       "e2-a4-0017": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-B.wav",
+        "key": "2f8e7bebf459ea72",
+        "seed": 1313264222,
+        "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+        "span_s": 4.01,
+        "planned_s": 4.44,
+        "asr": "I'm new, so I'm starting with the easy ones. What's our biggest cost?"
+       },
+       "e2-a4-0022": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-B.wav",
+        "key": "f419ce15fe651c54",
+        "seed": 3211090557,
+        "sent": "Let me reframe that. Upside.",
+        "span_s": 1.6,
+        "planned_s": 1.84,
+        "asr": "Let me reframe that. Upside."
+       }
+      },
+      "audition_letter": "B"
+     },
+     "why": "Picked by measurement (cast.md §3.13). The lowest score (1.02, only the lane: 212 Hz, 1.0 st over 165-200): 6.1 st over Gerg in the two-shot, 191 wpm (0.89 of the plan: brisk, no hurry), verbatim, p(en) 0.999 (neutral American), the cleanest floor of the four (72 dB). Klara was close (1.21) but faster than the plan, breathier (CPP 14.8) and noisier."
+    },
+    {
+     "cand": "B",
+     "voice_id": "KLdWtAstZMPBbfqaBs59",
+     "voice_name": "Klara - Tech Executive & Scientist",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A crisp, articulate, and authoritative West Coast voice radiating executive confidence and deep intellectual clarity. Perfect for complex B2B tech explainers, biotech corporate training, medical narrations, and premium educational content. Tone: Articulate, grounded, and engagingly analytical.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 168.7,
+      "f0_range_st": 20.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 1.21,
+      "penalties": {
+       "lane": 0.39,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.82
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 204.6,
+      "f0_range_st": 9.0,
+      "wpm": 210.6,
+      "span_vs_plan": 0.804,
+      "p_en": 0.9995,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 14.82,
+      "raw_floor_dbfs": -80.9,
+      "speech_to_floor_db": 47.4,
+      "presence_db": -16.26,
+      "vs": {
+       "gerg": {
+        "st": 5.47,
+        "mfcc_dist": 38.3
+       }
+      },
+      "takes": {
+       "e2-a4-0017": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-A.wav",
+        "key": "d12aa66e22712f0b",
+        "seed": 2218675683,
+        "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+        "span_s": 3.64,
+        "planned_s": 4.44,
+        "asr": "I'm new, so I'm starting with the easy ones. What's our biggest cost?"
+       },
+       "e2-a4-0022": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-A.wav",
+        "key": "27ca5f07c2c644ab",
+        "seed": 1182295356,
+        "sent": "Let me reframe that. Upside.",
+        "span_s": 1.45,
+        "planned_s": 1.84,
+        "asr": "Let me reframe that upside."
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "jemqINv7N9LKUclcLQnU",
+     "voice_name": "Jo - Warm, Smooth and Reassuring",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A warm, approachable female voice with clear articulation and a naturally friendly tone. Equally suited for professional narration, educational content, business presentations, and conversational AI. Captures both cheerful energy and calm authority, making it versatile across corporate, coaching, an",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 179.8,
+      "f0_range_st": 5.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 3.88,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 2.88,
+       "pace": 1.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 191.7,
+      "f0_range_st": 10.6,
+      "wpm": 215.7,
+      "span_vs_plan": 0.79,
+      "p_en": 0.9996,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.59,
+      "raw_floor_dbfs": -64.6,
+      "speech_to_floor_db": 30.6,
+      "presence_db": -18.82,
+      "vs": {
+       "gerg": {
+        "st": 4.35,
+        "mfcc_dist": 39.0
+       }
+      },
+      "takes": {
+       "e2-a4-0017": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-C.wav",
+        "key": "cd099e0e60f0b3ad",
+        "seed": 372816114,
+        "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+        "span_s": 3.23,
+        "planned_s": 4.44,
+        "asr": "I'm new, so I'm starting with the easy ones. What's our biggest cost?"
+       },
+       "e2-a4-0022": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-C.wav",
+        "key": "3b5648f050585b92",
+        "seed": 3115732878,
+        "sent": "Let me reframe that. Upside.",
+        "span_s": 1.58,
+        "planned_s": 1.84,
+        "asr": "Let me reframe that upside."
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "Qin2NRfiKVQMJLxnoZaY",
+     "voice_name": "Athena - Clear, Professional, Human",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Athena brings balance — professional yet convincingly human, youthful yet mature, warm yet polished. A medium-pitched female voice designed for versatility, she adapts seamlessly across AI assistants, customer service, corporate training, commercial campaigns, social media, narration, audiobooks, an",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 194.9,
+      "f0_range_st": 10.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 4.93,
+      "penalties": {
+       "lane": 4.19,
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0,
+       "pace": 0.73
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 254.8,
+      "f0_range_st": 11.1,
+      "wpm": 208.8,
+      "span_vs_plan": 0.811,
+      "p_en": 0.9997,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 20.84,
+      "raw_floor_dbfs": -78.8,
+      "speech_to_floor_db": 60.0,
+      "presence_db": -14.87,
+      "vs": {
+       "gerg": {
+        "st": 9.28,
+        "mfcc_dist": 36.9
+       }
+      },
+      "takes": {
+       "e2-a4-0017": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-D.wav",
+        "key": "55deb7f0d3783aec",
+        "seed": 1142966784,
+        "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+        "span_s": 3.68,
+        "planned_s": 4.44,
+        "asr": "I'm new, so I'm starting with the easy ones. What's our biggest cost?"
+       },
+       "e2-a4-0022": {
+        "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-D.wav",
+        "key": "1803d03fd4fcc8a2",
+        "seed": 1541490146,
+        "sent": "Let me reframe that. Upside.",
+        "span_s": 1.46,
+        "planned_s": 1.84,
+        "asr": "Let me reframe that upside."
+       }
+      },
+      "audition_letter": "D"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a4-0017",
+     "e2-a4-0022"
+    ],
+    "neighbours": {
+     "gerg": 1.5
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   }
+  },
+  "crowd": {
+   "name": "THE CROWD",
+   "brief": "a holiday-party room joining Alyi's chant, warm and giddy, never a hymn or a rally: 8-12 layered reads",
+   "lane_hz": null,
+   "pace_wpm": null,
+   "scenes": "F2.2 (sc 15)",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "TbMNBJ27fH2U0VgpSNko",
+     "voice_name": "Lori - Happy, Sweet and Compassionate",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "conversational"
+     },
+     "library_description": "Optimistic, smiling, and carefree young woman! Even a slight vocal fry! Perfect for anything!",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 234.5,
+      "f0_range_st": 9.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 292.4,
+      "f0_range_st": 12.2,
+      "wpm": 158.6,
+      "span_vs_plan": 0.873,
+      "p_en": 0.9881,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 23.44,
+      "raw_floor_dbfs": -76.1,
+      "speech_to_floor_db": 58.4,
+      "presence_db": -6.16,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-H.wav",
+        "key": "81a1d0bee91681f1",
+        "seed": 3673439476,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.27,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI feel the AGI"
+       }
+      },
+      "audition_letter": "H"
+     },
+     "why": "Ten of the twelve read the chant cleanly as letters (A.G.I.), with no clipped tail and p(en) of at least 0.95. Eleila read 'A-G-E' and Gutentag's tail was cut. The ten span 104-383 Hz, men and women, each on its own seed (seed_of(line, voice)); layered at 40-180 ms offsets under Alyi's lead."
+    },
+    {
+     "cand": "B",
+     "voice_id": "fIGaHjfrR8KmMy0vGEVJ",
+     "voice_name": "Larry - High-Energy Social Media Voice for Reels & Shorts",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "social_media"
+     },
+     "library_description": "Voice built for the fast-paced world of social media.\n\nLarry delivers with energy, clarity, and a conversational style that grabs attention in the first seconds. His tone is perfect for short-form storytelling, quick commentary, and viral-friendly content that pops in a crowded feed.\n\nIdeal for Inst",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 221.4,
+      "f0_range_st": 15.4,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 2,
+      "score": 0.0,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 218.4,
+      "f0_range_st": 16.5,
+      "wpm": 149.4,
+      "span_vs_plan": 0.927,
+      "p_en": 0.9878,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 24.5,
+      "raw_floor_dbfs": -85.8,
+      "speech_to_floor_db": 61.4,
+      "presence_db": -8.38,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-L.wav",
+        "key": "482bfb72223e2faf",
+        "seed": 2034028727,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.41,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "L"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "dfeOmy6Uay63tNhyO99j",
+     "voice_name": "Kristen - Natural, Upbeat and Focused",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "advertisement"
+     },
+     "library_description": "Energetic and engaging delivery perfect fora TV commercial voice over, radio ad voice, e-learning narration, brand promos, social ads, and wellness app content. Friendly casual tone with professional clarity ideal for product promos, lifestyle, tech, and digital marketing campaigns. A polished young",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 244.2,
+      "f0_range_st": 12.2,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 3,
+      "score": 0.06,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.06,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 220.8,
+      "f0_range_st": 10.4,
+      "wpm": 91.4,
+      "span_vs_plan": 1.515,
+      "p_en": 0.9844,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 23.37,
+      "raw_floor_dbfs": -66.1,
+      "speech_to_floor_db": 48.6,
+      "presence_db": -9.37,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-I.wav",
+        "key": "760934d9bffb59b5",
+        "seed": 2729820939,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 3.94,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "I"
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "3liN8q8YoeB9Hk6AboKe",
+     "voice_name": "Lauren - Friendly Customer Care Agent",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "conversational"
+     },
+     "library_description": "A warm, polished voice built to make every customer interaction feel personal and helpful.\n\nLauren B’s tone is confident yet approachable, ideal for handling support queries with clarity. Whether assisting on IVR systems, AI agents, mobile apps, or AI chatbots, she keeps the experience smooth and en",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 190.5,
+      "f0_range_st": 8.7,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 4,
+      "score": 0.35,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.35,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 273.6,
+      "f0_range_st": 16.4,
+      "wpm": 124.1,
+      "span_vs_plan": 1.115,
+      "p_en": 0.9815,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 19.77,
+      "raw_floor_dbfs": -90.6,
+      "speech_to_floor_db": 70.4,
+      "presence_db": -2.67,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-J.wav",
+        "key": "6d24dde67a86a390",
+        "seed": 2144472635,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.9,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "J"
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "tgfcQY9SGvn3GfmnNWIi",
+     "voice_name": "Larry - Easygoing Customer Care Agent",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A reliable voice designed for customer care, onboarding flows, and support bots.\n\nLarry’s tone is warm, articulate, and easygoing — ideal for helping users feel heard and at ease. With expressive clarity and a friendly pace, Larry adapts well to diverse support scenarios. Perfect for platforms like ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 114.6,
+      "f0_range_st": 16.4,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 5,
+      "score": 0.65,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.65,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 184.2,
+      "f0_range_st": 8.6,
+      "wpm": 166.7,
+      "span_vs_plan": 0.831,
+      "p_en": 0.9785,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 22.34,
+      "raw_floor_dbfs": -71.1,
+      "speech_to_floor_db": 47.9,
+      "presence_db": -6.85,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-D.wav",
+        "key": "1bf9db8585c6eeaa",
+        "seed": 1392049849,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.16,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "D"
+     }
+    },
+    {
+     "cand": "F",
+     "voice_id": "gScUm0AQVZBQ1uUp8KvE",
+     "voice_name": "Chris - Friendly conversational guide",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "Friendly, natural American male voice with a clear neutral accent and a warm conversational tone. Ideal for AI assistants, customer support agents, onboarding guides, and conversational applications where a helpful and approachable voice is important. Delivers information clearly while maintaining a",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 88.9,
+      "f0_range_st": 14.3,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 6,
+      "score": 0.75,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.33,
+       "clean": 0.0,
+       "noise": 0.42
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 118.6,
+      "f0_range_st": 12.7,
+      "wpm": 210.5,
+      "span_vs_plan": 0.658,
+      "p_en": 0.9817,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 18.08,
+      "raw_floor_dbfs": -69.9,
+      "speech_to_floor_db": 42.9,
+      "presence_db": -12.83,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-A.wav",
+        "key": "4a9c2f9864980861",
+        "seed": 4157422257,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 1.71,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "A"
+     }
+    },
+    {
+     "cand": "G",
+     "voice_id": "OHbs18UsFunlwffsTLNn",
+     "voice_name": "Lyan - Friendly Female Authentic UGC",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "social_media"
+     },
+     "library_description": "Upbeat American accent with a natural girl-next-door charm. Approachable, sweet, and never overly polished. Her tone sits comfortably between casual and confident—an authentic fit for UGC ads, product reviews, and storytime reels where authenticity matters. \n\nBest use cases: UGC ad scripts, Reels vo",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 225.2,
+      "f0_range_st": 10.0,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 7,
+      "score": 1.1,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 1.1,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 383.3,
+      "f0_range_st": 2.3,
+      "wpm": 205.7,
+      "span_vs_plan": 0.673,
+      "p_en": 0.974,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 21.21,
+      "raw_floor_dbfs": -78.8,
+      "speech_to_floor_db": 63.9,
+      "presence_db": -9.26,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-K.wav",
+        "key": "888e9892788707d2",
+        "seed": 3827169479,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 1.75,
+        "planned_s": 2.6,
+        "asr": "Feel the A .G .I. Feel the A .G .I."
+       }
+      },
+      "audition_letter": "K"
+     }
+    },
+    {
+     "cand": "H",
+     "voice_id": "UpphzPau5vxibPYV2NeV",
+     "voice_name": "Joe Inglewood - Magnetic and Captivating",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A velvety smooth middle age American Voice which is conversational in style and warm in tone.  An excellent voice for audiobooks of all kinds along with E-Learning content. ",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 100.6,
+      "f0_range_st": 13.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 8,
+      "score": 1.63,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 1.63,
+       "clean": 0.0,
+       "noise": 0.0
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 133.6,
+      "f0_range_st": 13.4,
+      "wpm": 160.7,
+      "span_vs_plan": 0.862,
+      "p_en": 0.9687,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 21.3,
+      "raw_floor_dbfs": -79.5,
+      "speech_to_floor_db": 58.5,
+      "presence_db": -8.92,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-C.wav",
+        "key": "710797307410402c",
+        "seed": 2413467272,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.24,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "C"
+     }
+    },
+    {
+     "cand": "I",
+     "voice_id": "hxPRa8HUuKYsm1kiWDEi",
+     "voice_name": "Jake – Informative and Energetic",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A youthful, dynamic American male voice that captivates with energy and relatability—perfect for creators looking to elevate their podcasts, interactive storytelling, trending topics, or short-form content like TikToks. Versatile and engaging, it’s an ideal fit for YouTube channels, how-to guides, a",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 99.7,
+      "f0_range_st": 8.9,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 9,
+      "score": 1.82,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.52,
+       "clean": 0.0,
+       "noise": 1.3
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 103.9,
+      "f0_range_st": 6.6,
+      "wpm": 144.0,
+      "span_vs_plan": 0.962,
+      "p_en": 0.9798,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 26.62,
+      "raw_floor_dbfs": -61.9,
+      "speech_to_floor_db": 38.5,
+      "presence_db": -3.16,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-B.wav",
+        "key": "54aa095d57e0cacc",
+        "seed": 4025269875,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.5,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI. Feel the AGI."
+       }
+      },
+      "audition_letter": "B"
+     }
+    },
+    {
+     "cand": "J",
+     "voice_id": "scOwDtmlUjD3prqpp97I",
+     "voice_name": "Sam - Support Agent",
+     "source": "shared Voice Library (high_quality voice of its owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "conversational"
+     },
+     "library_description": "A warm and clear middle-aged American voice ready to handle all your support needs.  Optimized for v3.  Perfect for Agents, IVR, Educational Training, and Audiobooks.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 114.3,
+      "f0_range_st": 15.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 11,
+      "score": 2.53,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 1.93,
+       "clean": 0.0,
+       "noise": 0.6
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 175.3,
+      "f0_range_st": 13.7,
+      "wpm": 122.4,
+      "span_vs_plan": 1.131,
+      "p_en": 0.9657,
+      "recall_min": 1.0,
+      "tail_cuts": 0,
+      "cpp_db": 24.01,
+      "raw_floor_dbfs": -60.2,
+      "speech_to_floor_db": 42.0,
+      "presence_db": -6.55,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-E.wav",
+        "key": "a0ebdccbc9143c50",
+        "seed": 2733951392,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 2.94,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI! Feel the AGI!"
+       }
+      },
+      "audition_letter": "E"
+     }
+    },
+    {
+     "cand": "K",
+     "voice_id": "e5LtAIHV5cnnDfMmCZYr",
+     "voice_name": "Eleila - Narrator",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Articulate, Comfortable, Straightforward",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 103.3,
+      "f0_range_st": 10.4,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 10,
+      "score": 2.0,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.0,
+       "clean": 2.0,
+       "noise": 0.0
+      },
+      "brief_points": 1,
+      "brief_notes": [
+       "ASR not verbatim"
+      ],
+      "median_f0_hz": 102.3,
+      "f0_range_st": 11.4,
+      "wpm": 191.5,
+      "span_vs_plan": 0.723,
+      "p_en": 0.9896,
+      "recall_min": 0.67,
+      "tail_cuts": 0,
+      "cpp_db": 24.92,
+      "raw_floor_dbfs": -86.8,
+      "speech_to_floor_db": 67.8,
+      "presence_db": -5.4,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-F.wav",
+        "key": "536eb87cb60cffd5",
+        "seed": 1799659448,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 1.88,
+        "planned_s": 2.6,
+        "asr": "Feel the A -G -E, feel the A -G -E."
+       }
+      },
+      "audition_letter": "F"
+     }
+    },
+    {
+     "cand": "L",
+     "voice_id": "TuRE87hoehQxHAhbCMR2",
+     "voice_name": "Gutentag",
+     "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Soft, calm, and pleasant.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 90.4,
+      "f0_range_st": 5.1,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "rank": 12,
+      "score": 4.28,
+      "penalties": {
+       "separation": 0.0,
+       "accent": 0.1,
+       "clean": 2.0,
+       "noise": 2.18
+      },
+      "brief_points": 0,
+      "brief_notes": [],
+      "median_f0_hz": 109.4,
+      "f0_range_st": 8.6,
+      "wpm": 183.7,
+      "span_vs_plan": 0.754,
+      "p_en": 0.984,
+      "recall_min": 1.0,
+      "tail_cuts": 1,
+      "cpp_db": 17.59,
+      "raw_floor_dbfs": -55.3,
+      "speech_to_floor_db": 34.1,
+      "presence_db": -15.93,
+      "vs": {},
+      "takes": {
+       "e2-a3-0010": {
+        "file": "audio/ep02/v1-el/auditions/crowd/wav/e2-a3-0010__crowd-G.wav",
+        "key": "f29785cd8e19ba65",
+        "seed": 1629684430,
+        "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+        "span_s": 1.96,
+        "planned_s": 2.6,
+        "asr": "Feel the AGI, feel the AGI."
+       }
+      },
+      "audition_letter": "G"
+     }
+    }
+   ],
+   "cast_ep2": {
+    "at": "2026-10-09",
+    "audition": "audio/ep02/v1-el/auditions/index.json",
+    "lines": [
+     "e2-a3-0010"
+    ],
+    "neighbours": {
+     "alyi": 0.0
+    },
+    "method": "cast.md §6 and voices-el §AA: the role's real lines from the beat plans, the episode's seeds, dressed at -16 LUFS; picked by measurement; nobody listened"
+   },
+   "layered": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J"
+   ],
+   "layered_note": "the chant (e2-a3-0010) is 8-12 layered reads: every candidate in 'layered', each its own seed (seed_of(line, voice)) and an offset of 40-180 ms, ducked under Alyi's lead. el_render.py renders only candidate A per set: the crowd needs the voice pass's layering step, which finds each listed voice's audition read in the cache (nothing sent)"
   }
  },
  "respell_lines": {},
  "respell_roles": {},
  "say_lines": {
-  "v35-a4-0007": "the tender's in trouble,"
+  "v35-a4-0007": "the tender's in trouble,",
+  "e2-a2-0015": "Hi...",
+  "e2-a3-0010": "Feel the A.G.I.! Feel the A.G.I.!"
  },
- "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence).",
+ "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence). Ep2 (the casting pass, 2026-10-08): e2-a2-0015 VOICE 4 'Hi...' (the trail is the read; the house would drop a trailing print ellipsis); e2-a3-0010 the CROWD 'Feel the A.G.I.! Feel the A.G.I.!' (cast.md §5: sentence case, the letters).",
  "say_full": {
   "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
   "a5-29-24": "Has anyone read the charter?"

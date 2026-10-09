@@ -1,0 +1,248 @@
+{
+ "takes": {
+  "e2-a2-0015__voice4-A": {
+   "take": "e2-a2-0015__voice4-A",
+   "key": "f661b7fc03e89f7d",
+   "base_key": "f661b7fc03e89f7d",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.397,
+   "offset_s": 0.35,
+   "sent": "Hi...",
+   "seed": 2771283086,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "9GiYR5zXBWwc0khQNQA8",
+   "voice_name": "Sha - Warm, Inviting Narrator",
+   "cand": "A",
+   "role": "voice4",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 1.01,
+    "span_s": 0.63,
+    "words": 1,
+    "wpm": 95.2,
+    "syllables": 1,
+    "articulation_sps": 2.0,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.387,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 327.0,
+    "f0_range_st": 4.6
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.36,
+     "t1": 0.745
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.94,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 327.0,
+    "f0_range_st": 4.6,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.387,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 0.697,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0015__voice4-B": {
+   "take": "e2-a2-0015__voice4-B",
+   "key": "8583d1bb37da0343",
+   "base_key": "8583d1bb37da0343",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.536,
+   "offset_s": 0.35,
+   "sent": "Hi...",
+   "seed": 2088896475,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "nf4MCGNSdM0hxM95ZBQR",
+   "voice_name": "Sarah Eve - Inviting and Friendly",
+   "cand": "B",
+   "role": "voice4",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 1.09,
+    "span_s": 0.7,
+    "words": 1,
+    "wpm": 85.7,
+    "syllables": 1,
+    "articulation_sps": 1.43,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.446,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 216.1,
+    "f0_range_st": 4.2
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.37,
+     "t1": 0.814
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.5,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 216.1,
+    "f0_range_st": 4.2,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.446,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 0.836,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0015__voice4-C": {
+   "take": "e2-a2-0015__voice4-C",
+   "key": "86348bf989e7c42f",
+   "base_key": "86348bf989e7c42f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/voice4/wav/e2-a2-0015__voice4-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.443,
+   "offset_s": 0.35,
+   "sent": "Hi...",
+   "seed": 2018219313,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "9q9xpGHwmkXdA4JI72IU",
+   "voice_name": "Kaylin - Warm, Expressive and Calm",
+   "cand": "C",
+   "role": "voice4",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 0.76,
+    "span_s": 0.36,
+    "words": 1,
+    "wpm": 166.7,
+    "syllables": 1,
+    "articulation_sps": 2.78,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.683,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 267.3,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.38,
+     "t1": 0.733
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.79,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 267.3,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.683,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 0.743,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0015__voice4-A",
+   "key": "f661b7fc03e89f7d",
+   "chars": 5,
+   "cost_header": "2",
+   "request_id": "C6wyT7zSvjV85zVyCstl",
+   "at": "00:15:34"
+  },
+  {
+   "take": "e2-a2-0015__voice4-B",
+   "key": "8583d1bb37da0343",
+   "chars": 5,
+   "cost_header": "2",
+   "request_id": "jSFssGzGo2qTmaClqqTF",
+   "at": "00:15:39"
+  },
+  {
+   "take": "e2-a2-0015__voice4-C",
+   "key": "86348bf989e7c42f",
+   "chars": 5,
+   "cost_header": "2",
+   "request_id": "1fX6XZ6wG7rOIxtUZbb1",
+   "at": "00:15:46"
+  }
+ ]
+}

@@ -1,0 +1,1258 @@
+{
+ "takes": {
+  "e2-co-0003__selbeep-A": {
+   "take": "e2-co-0003__selbeep-A",
+   "key": "8fa8123aeac56e91",
+   "base_key": "8fa8123aeac56e91",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 6.041,
+   "offset_s": 0.35,
+   "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "seed": 3310968507,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "z3FNMrCvtM1IHj84qvbr",
+   "voice_name": "Ray - Energetic, Enthusiatic and Clear",
+   "cand": "A",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 5.65,
+    "span_s": 5.28,
+    "words": 16,
+    "wpm": 181.8,
+    "syllables": 26,
+    "articulation_sps": 4.92,
+    "pauses_s": [
+     0.06,
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.391,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 128.8,
+    "f0_range_st": 12.5
+   },
+   "words": [
+    {
+     "w": "A",
+     "t0": 0.35,
+     "t1": 0.431
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.582,
+     "t1": 0.954
+    },
+    {
+     "w": "walking",
+     "t0": 1.012,
+     "t1": 1.372
+    },
+    {
+     "w": "through",
+     "t0": 1.407,
+     "t1": 1.604
+    },
+    {
+     "w": "the",
+     "t0": 1.639,
+     "t1": 1.708
+    },
+    {
+     "w": "snow",
+     "t0": 1.743,
+     "t1": 2.08
+    },
+    {
+     "w": "We",
+     "t0": 2.37,
+     "t1": 2.486
+    },
+    {
+     "w": "never",
+     "t0": 2.544,
+     "t1": 2.718
+    },
+    {
+     "w": "said",
+     "t0": 2.753,
+     "t1": 2.916
+    },
+    {
+     "w": "anything",
+     "t0": 2.951,
+     "t1": 3.264
+    },
+    {
+     "w": "about",
+     "t0": 3.311,
+     "t1": 3.508
+    },
+    {
+     "w": "a",
+     "t0": 3.543,
+     "t1": 3.566
+    },
+    {
+     "w": "lobby",
+     "t0": 3.624,
+     "t1": 4.019
+    },
+    {
+     "w": "It",
+     "t0": 4.181,
+     "t1": 4.309
+    },
+    {
+     "w": "understands",
+     "t0": 4.367,
+     "t1": 4.831
+    },
+    {
+     "w": "physics",
+     "t0": 4.878,
+     "t1": 5.331
+    }
+   ],
+   "qa": {
+    "asr": "A mammoth walking through the snow? We never said anything about a lobby. It understands physics.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.73,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 128.8,
+    "f0_range_st": 12.5,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.391,
+    "raw_tail_cut": false,
+    "align_median_s": 0.093
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 5.341,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0005__selbeep-A": {
+   "take": "e2-co-0005__selbeep-A",
+   "key": "fef717004a317f12",
+   "base_key": "fef717004a317f12",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.665,
+   "offset_s": 0.35,
+   "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "seed": 2327984633,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "z3FNMrCvtM1IHj84qvbr",
+   "voice_name": "Ray - Energetic, Enthusiatic and Clear",
+   "cand": "A",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 4.21,
+    "span_s": 3.83,
+    "words": 16,
+    "wpm": 250.7,
+    "syllables": 18,
+    "articulation_sps": 4.85,
+    "pauses_s": [
+     0.12
+    ],
+    "longest_internal_gap_s": 0.12,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 129.3,
+    "f0_range_st": 16.3
+   },
+   "words": [
+    {
+     "w": "That's",
+     "t0": 0.36,
+     "t1": 0.629
+    },
+    {
+     "w": "the",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.756,
+     "t1": 1.116
+    },
+    {
+     "w": "It's",
+     "t0": 1.244,
+     "t1": 1.43
+    },
+    {
+     "w": "been",
+     "t0": 1.465,
+     "t1": 1.592
+    },
+    {
+     "w": "two",
+     "t0": 1.627,
+     "t1": 1.743
+    },
+    {
+     "w": "weeks",
+     "t0": 1.813,
+     "t1": 2.022
+    },
+    {
+     "w": "and",
+     "t0": 2.068,
+     "t1": 2.161
+    },
+    {
+     "w": "it",
+     "t0": 2.196,
+     "t1": 2.254
+    },
+    {
+     "w": "has",
+     "t0": 2.289,
+     "t1": 2.463
+    },
+    {
+     "w": "mass",
+     "t0": 2.533,
+     "t1": 2.823
+    },
+    {
+     "w": "now",
+     "t0": 2.881,
+     "t1": 3.067
+    },
+    {
+     "w": "We're",
+     "t0": 3.311,
+     "t1": 3.52
+    },
+    {
+     "w": "working",
+     "t0": 3.554,
+     "t1": 3.821
+    },
+    {
+     "w": "on",
+     "t0": 3.891,
+     "t1": 3.972
+    },
+    {
+     "w": "it",
+     "t0": 4.019,
+     "t1": 4.135
+    }
+   ],
+   "qa": {
+    "asr": "That's the mammoth. It's been two weeks and it has mass now. We're working on it",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.23,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 129.3,
+    "f0_range_st": 16.3,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": 0.067
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 4.087,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0003__selbeep-B": {
+   "take": "e2-co-0003__selbeep-B",
+   "key": "e64e500350e422c9",
+   "base_key": "e64e500350e422c9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 6.133,
+   "offset_s": 0.35,
+   "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "seed": 1129201303,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "S9GPGBaMND8XWwwzxQXp",
+   "voice_name": "Charles - Social Media, TV & Commercial ",
+   "cand": "B",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 5.54,
+    "span_s": 5.13,
+    "words": 16,
+    "wpm": 187.1,
+    "syllables": 26,
+    "articulation_sps": 5.95,
+    "pauses_s": [
+     0.57,
+     0.19,
+     0.06
+    ],
+    "longest_internal_gap_s": 0.57,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.593,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 115.6,
+    "f0_range_st": 5.7
+   },
+   "words": [
+    {
+     "w": "A",
+     "t0": 0.39,
+     "t1": 0.454
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.571,
+     "t1": 0.919
+    },
+    {
+     "w": "walking",
+     "t0": 0.965,
+     "t1": 1.232
+    },
+    {
+     "w": "through",
+     "t0": 1.267,
+     "t1": 1.465
+    },
+    {
+     "w": "the",
+     "t0": 1.488,
+     "t1": 1.557
+    },
+    {
+     "w": "snow",
+     "t0": 1.592,
+     "t1": 1.871
+    },
+    {
+     "w": "We",
+     "t0": 2.428,
+     "t1": 2.544
+    },
+    {
+     "w": "never",
+     "t0": 2.602,
+     "t1": 2.765
+    },
+    {
+     "w": "said",
+     "t0": 2.811,
+     "t1": 2.974
+    },
+    {
+     "w": "anything",
+     "t0": 3.009,
+     "t1": 3.287
+    },
+    {
+     "w": "about",
+     "t0": 3.322,
+     "t1": 3.508
+    },
+    {
+     "w": "a",
+     "t0": 3.543,
+     "t1": 3.566
+    },
+    {
+     "w": "lobby",
+     "t0": 3.636,
+     "t1": 4.019
+    },
+    {
+     "w": "It",
+     "t0": 4.251,
+     "t1": 4.379
+    },
+    {
+     "w": "understands",
+     "t0": 4.425,
+     "t1": 4.878
+    },
+    {
+     "w": "physics",
+     "t0": 4.936,
+     "t1": 5.4
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.79,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 115.6,
+    "f0_range_st": 5.7,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.593,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 5.433,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0005__selbeep-B": {
+   "take": "e2-co-0005__selbeep-B",
+   "key": "ee67a34df151b613",
+   "base_key": "ee67a34df151b613",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.865,
+   "offset_s": 0.35,
+   "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "seed": 305444893,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "S9GPGBaMND8XWwwzxQXp",
+   "voice_name": "Charles - Social Media, TV & Commercial ",
+   "cand": "B",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 4.4,
+    "span_s": 3.99,
+    "words": 16,
+    "wpm": 240.6,
+    "syllables": 18,
+    "articulation_sps": 5.71,
+    "pauses_s": [
+     0.37,
+     0.21,
+     0.26
+    ],
+    "longest_internal_gap_s": 0.37,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.465,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 124.4,
+    "f0_range_st": 6.5
+   },
+   "words": [
+    {
+     "w": "That's",
+     "t0": 0.39,
+     "t1": 0.605
+    },
+    {
+     "w": "the",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.78,
+     "t1": 1.139
+    },
+    {
+     "w": "It's",
+     "t0": 1.43,
+     "t1": 1.581
+    },
+    {
+     "w": "been",
+     "t0": 1.615,
+     "t1": 1.755
+    },
+    {
+     "w": "two",
+     "t0": 1.778,
+     "t1": 1.894
+    },
+    {
+     "w": "weeks",
+     "t0": 1.941,
+     "t1": 2.219
+    },
+    {
+     "w": "and",
+     "t0": 2.44,
+     "t1": 2.579
+    },
+    {
+     "w": "it",
+     "t0": 2.626,
+     "t1": 2.684
+    },
+    {
+     "w": "has",
+     "t0": 2.707,
+     "t1": 2.823
+    },
+    {
+     "w": "mass",
+     "t0": 2.916,
+     "t1": 3.171
+    },
+    {
+     "w": "now",
+     "t0": 3.241,
+     "t1": 3.427
+    },
+    {
+     "w": "We're",
+     "t0": 3.694,
+     "t1": 3.879
+    },
+    {
+     "w": "working",
+     "t0": 3.914,
+     "t1": 4.17
+    },
+    {
+     "w": "on",
+     "t0": 4.239,
+     "t1": 4.321
+    },
+    {
+     "w": "it",
+     "t0": 4.355,
+     "t1": 4.42
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.55,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 124.4,
+    "f0_range_st": 6.5,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.465,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.07,
+    "raw_len_s": 4.412,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0003__selbeep-C": {
+   "take": "e2-co-0003__selbeep-C",
+   "key": "bdc4233bd8981e0c",
+   "base_key": "bdc4233bd8981e0c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 6.877,
+   "offset_s": 0.35,
+   "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "seed": 1818046919,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "cand": "C",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 6.24,
+    "span_s": 5.84,
+    "words": 16,
+    "wpm": 164.4,
+    "syllables": 26,
+    "articulation_sps": 5.26,
+    "pauses_s": [
+     0.46,
+     0.44
+    ],
+    "longest_internal_gap_s": 0.46,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.637,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 144.1,
+    "f0_range_st": 16.1
+   },
+   "words": [
+    {
+     "w": "A",
+     "t0": 0.38,
+     "t1": 0.443
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.559,
+     "t1": 0.965
+    },
+    {
+     "w": "walking",
+     "t0": 1.047,
+     "t1": 1.395
+    },
+    {
+     "w": "through",
+     "t0": 1.441,
+     "t1": 1.674
+    },
+    {
+     "w": "the",
+     "t0": 1.708,
+     "t1": 1.778
+    },
+    {
+     "w": "snow",
+     "t0": 1.824,
+     "t1": 2.184
+    },
+    {
+     "w": "We",
+     "t0": 2.753,
+     "t1": 2.869
+    },
+    {
+     "w": "never",
+     "t0": 2.927,
+     "t1": 3.09
+    },
+    {
+     "w": "said",
+     "t0": 3.136,
+     "t1": 3.299
+    },
+    {
+     "w": "anything",
+     "t0": 3.345,
+     "t1": 3.659
+    },
+    {
+     "w": "about",
+     "t0": 3.705,
+     "t1": 3.891
+    },
+    {
+     "w": "a",
+     "t0": 3.926,
+     "t1": 3.949
+    },
+    {
+     "w": "lobby",
+     "t0": 4.03,
+     "t1": 4.495
+    },
+    {
+     "w": "It",
+     "t0": 4.994,
+     "t1": 5.122
+    },
+    {
+     "w": "understands",
+     "t0": 5.168,
+     "t1": 5.725
+    },
+    {
+     "w": "physics",
+     "t0": 5.772,
+     "t1": 6.225
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.7,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 144.1,
+    "f0_range_st": 16.1,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.637,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 6.177,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0005__selbeep-C": {
+   "take": "e2-co-0005__selbeep-C",
+   "key": "4852afca866bcb97",
+   "base_key": "4852afca866bcb97",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.808,
+   "offset_s": 0.35,
+   "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "seed": 2378996430,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "cand": "C",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 5.16,
+    "span_s": 4.73,
+    "words": 16,
+    "wpm": 203.0,
+    "syllables": 18,
+    "articulation_sps": 4.8,
+    "pauses_s": [
+     0.46,
+     0.52,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.52,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.648,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 126.2,
+    "f0_range_st": 15.2
+   },
+   "words": [
+    {
+     "w": "That's",
+     "t0": 0.41,
+     "t1": 0.617
+    },
+    {
+     "w": "the",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.78,
+     "t1": 1.163
+    },
+    {
+     "w": "It's",
+     "t0": 1.662,
+     "t1": 1.836
+    },
+    {
+     "w": "been",
+     "t0": 1.859,
+     "t1": 1.999
+    },
+    {
+     "w": "two",
+     "t0": 2.045,
+     "t1": 2.173
+    },
+    {
+     "w": "weeks",
+     "t0": 2.231,
+     "t1": 2.544
+    },
+    {
+     "w": "and",
+     "t0": 3.102,
+     "t1": 3.241
+    },
+    {
+     "w": "it",
+     "t0": 3.299,
+     "t1": 3.369
+    },
+    {
+     "w": "has",
+     "t0": 3.403,
+     "t1": 3.554
+    },
+    {
+     "w": "mass",
+     "t0": 3.624,
+     "t1": 3.891
+    },
+    {
+     "w": "now",
+     "t0": 3.949,
+     "t1": 4.181
+    },
+    {
+     "w": "We're",
+     "t0": 4.355,
+     "t1": 4.553
+    },
+    {
+     "w": "working",
+     "t0": 4.576,
+     "t1": 4.855
+    },
+    {
+     "w": "on",
+     "t0": 4.901,
+     "t1": 4.971
+    },
+    {
+     "w": "it",
+     "t0": 5.017,
+     "t1": 5.133
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.56,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 126.2,
+    "f0_range_st": 15.2,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.648,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.085,
+    "raw_len_s": 5.108,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0003__selbeep-D": {
+   "take": "e2-co-0003__selbeep-D",
+   "key": "b6454e36a178c51f",
+   "base_key": "b6454e36a178c51f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0003__selbeep-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.762,
+   "offset_s": 0.35,
+   "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "seed": 1717179976,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "PSqRw3ln34TxQZrTS6Wt",
+   "voice_name": "Andy - Upbeat, Positive and Comfy",
+   "cand": "D",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 5.37,
+    "span_s": 4.97,
+    "words": 16,
+    "wpm": 193.2,
+    "syllables": 26,
+    "articulation_sps": 5.23,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.392,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 111.9,
+    "f0_range_st": 14.1
+   },
+   "words": [
+    {
+     "w": "A",
+     "t0": 0.38,
+     "t1": 0.443
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.536,
+     "t1": 0.965
+    },
+    {
+     "w": "walking",
+     "t0": 1.093,
+     "t1": 1.441
+    },
+    {
+     "w": "through",
+     "t0": 1.465,
+     "t1": 1.65
+    },
+    {
+     "w": "the",
+     "t0": 1.685,
+     "t1": 1.755
+    },
+    {
+     "w": "snow",
+     "t0": 1.79,
+     "t1": 2.068
+    },
+    {
+     "w": "We",
+     "t0": 2.173,
+     "t1": 2.266
+    },
+    {
+     "w": "never",
+     "t0": 2.312,
+     "t1": 2.475
+    },
+    {
+     "w": "said",
+     "t0": 2.521,
+     "t1": 2.684
+    },
+    {
+     "w": "anything",
+     "t0": 2.718,
+     "t1": 3.067
+    },
+    {
+     "w": "about",
+     "t0": 3.113,
+     "t1": 3.334
+    },
+    {
+     "w": "a",
+     "t0": 3.369,
+     "t1": 3.403
+    },
+    {
+     "w": "lobby",
+     "t0": 3.496,
+     "t1": 3.868
+    },
+    {
+     "w": "It",
+     "t0": 3.926,
+     "t1": 4.03
+    },
+    {
+     "w": "understands",
+     "t0": 4.088,
+     "t1": 4.53
+    },
+    {
+     "w": "physics",
+     "t0": 4.588,
+     "t1": 5.029
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.88,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 111.9,
+    "f0_range_st": 14.1,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.392,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 5.062,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-co-0005__selbeep-D": {
+   "take": "e2-co-0005__selbeep-D",
+   "key": "2c5bcc906532f877",
+   "base_key": "2c5bcc906532f877",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/selbeep/wav/e2-co-0005__selbeep-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.833,
+   "offset_s": 0.35,
+   "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "seed": 1496722028,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "PSqRw3ln34TxQZrTS6Wt",
+   "voice_name": "Andy - Upbeat, Positive and Comfy",
+   "cand": "D",
+   "role": "selbeep",
+   "measured": {
+    "audible_in_s": 0.45,
+    "audible_out_s": 4.46,
+    "span_s": 4.01,
+    "words": 16,
+    "wpm": 239.4,
+    "syllables": 18,
+    "articulation_sps": 4.49,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.45,
+    "speech_tail_s": 0.373,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 115.3,
+    "f0_range_st": 12.7
+   },
+   "words": [
+    {
+     "w": "That's",
+     "t0": 0.43,
+     "t1": 0.687
+    },
+    {
+     "w": "the",
+     "t0": 0.745,
+     "t1": 0.838
+    },
+    {
+     "w": "mammoth",
+     "t0": 0.907,
+     "t1": 1.29
+    },
+    {
+     "w": "It's",
+     "t0": 1.395,
+     "t1": 1.546
+    },
+    {
+     "w": "been",
+     "t0": 1.569,
+     "t1": 1.697
+    },
+    {
+     "w": "two",
+     "t0": 1.72,
+     "t1": 1.859
+    },
+    {
+     "w": "weeks",
+     "t0": 1.906,
+     "t1": 2.196
+    },
+    {
+     "w": "and",
+     "t0": 2.277,
+     "t1": 2.393
+    },
+    {
+     "w": "it",
+     "t0": 2.451,
+     "t1": 2.509
+    },
+    {
+     "w": "has",
+     "t0": 2.556,
+     "t1": 2.881
+    },
+    {
+     "w": "mass",
+     "t0": 3.009,
+     "t1": 3.322
+    },
+    {
+     "w": "now",
+     "t0": 3.38,
+     "t1": 3.566
+    },
+    {
+     "w": "We're",
+     "t0": 3.636,
+     "t1": 3.821
+    },
+    {
+     "w": "working",
+     "t0": 3.845,
+     "t1": 4.123
+    },
+    {
+     "w": "on",
+     "t0": 4.17,
+     "t1": 4.263
+    },
+    {
+     "w": "it",
+     "t0": 4.297,
+     "t1": 4.355
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.55,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 115.3,
+    "f0_range_st": 12.7,
+    "speech_head_s": 0.45,
+    "speech_tail_s": 0.373,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 4.133,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-co-0003__selbeep-A",
+   "key": "8fa8123aeac56e91",
+   "chars": 97,
+   "cost_header": "43",
+   "request_id": "Cf92a1QMsUdYekjIRtty",
+   "at": "23:12:29"
+  },
+  {
+   "take": "e2-co-0005__selbeep-A",
+   "key": "fef717004a317f12",
+   "chars": 82,
+   "cost_header": "36",
+   "request_id": "H1O7mEsbUYXYXYl8U2CI",
+   "at": "23:30:46"
+  },
+  {
+   "take": "e2-co-0005__selbeep-B",
+   "key": "ee67a34df151b613",
+   "chars": 82,
+   "cost_header": "36",
+   "request_id": "ImoBKlE87PccUqllHlkS",
+   "at": "00:12:22"
+  },
+  {
+   "take": "e2-co-0003__selbeep-C",
+   "key": "bdc4233bd8981e0c",
+   "chars": 97,
+   "cost_header": "43",
+   "request_id": "IRuUqLVNcr0KhnqbBrHs",
+   "at": "00:12:30"
+  },
+  {
+   "take": "e2-co-0005__selbeep-C",
+   "key": "4852afca866bcb97",
+   "chars": 82,
+   "cost_header": "36",
+   "request_id": "6JWVHk8Zii0svmZpGAGc",
+   "at": "00:12:33"
+  },
+  {
+   "take": "e2-co-0003__selbeep-D",
+   "key": "b6454e36a178c51f",
+   "chars": 97,
+   "cost_header": "43",
+   "request_id": "oZ9cnNQTg46e9uQt2LRU",
+   "at": "00:12:41"
+  },
+  {
+   "take": "e2-co-0005__selbeep-D",
+   "key": "2c5bcc906532f877",
+   "chars": 82,
+   "cost_header": "36",
+   "request_id": "9m0UHmRLcD4hibcT61wF",
+   "at": "00:12:44"
+  }
+ ]
+}

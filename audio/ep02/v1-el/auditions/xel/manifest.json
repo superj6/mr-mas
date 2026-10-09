@@ -1,0 +1,1057 @@
+{
+ "takes": {
+  "e2-a1-0036__xel-A": {
+   "take": "e2-a1-0036__xel-A",
+   "key": "4d3cacc06231814c",
+   "base_key": "4d3cacc06231814c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.3,
+   "offset_s": 0.35,
+   "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+   "seed": 2868879328,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "tMvyQtpCVQ0DkixuYm6J",
+   "voice_name": "Asher",
+   "cand": "A",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 4.8,
+    "span_s": 4.45,
+    "words": 16,
+    "wpm": 215.7,
+    "syllables": 24,
+    "articulation_sps": 5.62,
+    "pauses_s": [
+     0.18
+    ],
+    "longest_internal_gap_s": 0.18,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.5,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 125.8,
+    "f0_range_st": 13.3
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.35,
+     "t1": 0.524
+    },
+    {
+     "w": "me",
+     "t0": 0.547,
+     "t1": 0.617
+    },
+    {
+     "w": "ask",
+     "t0": 0.663,
+     "t1": 0.826
+    },
+    {
+     "w": "you",
+     "t0": 0.861,
+     "t1": 0.93
+    },
+    {
+     "w": "about",
+     "t0": 0.977,
+     "t1": 1.174
+    },
+    {
+     "w": "ALYI",
+     "t0": 1.244,
+     "t1": 1.755
+    },
+    {
+     "w": "Is",
+     "t0": 2.068,
+     "t1": 2.208
+    },
+    {
+     "w": "he",
+     "t0": 2.242,
+     "t1": 2.3
+    },
+    {
+     "w": "being",
+     "t0": 2.37,
+     "t1": 2.602
+    },
+    {
+     "w": "held",
+     "t0": 2.672,
+     "t1": 2.869
+    },
+    {
+     "w": "hostage",
+     "t0": 2.939,
+     "t1": 3.403
+    },
+    {
+     "w": "in",
+     "t0": 3.438,
+     "t1": 3.496
+    },
+    {
+     "w": "a",
+     "t0": 3.543,
+     "t1": 3.566
+    },
+    {
+     "w": "secret",
+     "t0": 3.624,
+     "t1": 3.891
+    },
+    {
+     "w": "nuclear",
+     "t0": 3.937,
+     "t1": 4.251
+    },
+    {
+     "w": "facility",
+     "t0": 4.286,
+     "t1": 4.773
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.74,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 125.8,
+    "f0_range_st": 13.3,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.5,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 4.737,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0038__xel-A": {
+   "take": "e2-a1-0038__xel-A",
+   "key": "680c6b2ae435b7c7",
+   "base_key": "680c6b2ae435b7c7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.697,
+   "offset_s": 0.35,
+   "sent": "What about a regular secret facility?",
+   "seed": 2362688085,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "tMvyQtpCVQ0DkixuYm6J",
+   "voice_name": "Asher",
+   "cand": "A",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.46,
+    "audible_out_s": 2.18,
+    "span_s": 1.72,
+    "words": 6,
+    "wpm": 209.3,
+    "syllables": 13,
+    "articulation_sps": 7.56,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.46,
+    "speech_tail_s": 0.517,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 109.3,
+    "f0_range_st": 14.4
+   },
+   "words": [
+    {
+     "w": "What",
+     "t0": 0.44,
+     "t1": 0.536
+    },
+    {
+     "w": "about",
+     "t0": 0.559,
+     "t1": 0.698
+    },
+    {
+     "w": "a",
+     "t0": 0.733,
+     "t1": 0.756
+    },
+    {
+     "w": "regular",
+     "t0": 0.872,
+     "t1": 1.302
+    },
+    {
+     "w": "secret",
+     "t0": 1.372,
+     "t1": 1.662
+    },
+    {
+     "w": "facility",
+     "t0": 1.697,
+     "t1": 2.173
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.21,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 109.3,
+    "f0_range_st": 14.4,
+    "speech_head_s": 0.46,
+    "speech_tail_s": 0.517,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.13,
+    "raw_len_s": 1.997,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0036__xel-B": {
+   "take": "e2-a1-0036__xel-B",
+   "key": "0fc6ef24c84ed9a6",
+   "base_key": "0fc6ef24c84ed9a6",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.505,
+   "offset_s": 0.35,
+   "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+   "seed": 3445355499,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "qCwgiN0GsIAYwAJ1nYvZ",
+   "voice_name": "Kirt - Podcast Host",
+   "cand": "B",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.43,
+    "audible_out_s": 4.87,
+    "span_s": 4.44,
+    "words": 16,
+    "wpm": 216.2,
+    "syllables": 24,
+    "articulation_sps": 5.94,
+    "pauses_s": [
+     0.4
+    ],
+    "longest_internal_gap_s": 0.4,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.635,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 125.7,
+    "f0_range_st": 12.6
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.41,
+     "t1": 0.536
+    },
+    {
+     "w": "me",
+     "t0": 0.571,
+     "t1": 0.64
+    },
+    {
+     "w": "ask",
+     "t0": 0.698,
+     "t1": 0.872
+    },
+    {
+     "w": "you",
+     "t0": 0.919,
+     "t1": 1.0
+    },
+    {
+     "w": "about",
+     "t0": 1.058,
+     "t1": 1.267
+    },
+    {
+     "w": "ALYI",
+     "t0": 1.325,
+     "t1": 1.813
+    },
+    {
+     "w": "Is",
+     "t0": 2.208,
+     "t1": 2.347
+    },
+    {
+     "w": "he",
+     "t0": 2.393,
+     "t1": 2.44
+    },
+    {
+     "w": "being",
+     "t0": 2.486,
+     "t1": 2.66
+    },
+    {
+     "w": "held",
+     "t0": 2.718,
+     "t1": 2.893
+    },
+    {
+     "w": "hostage",
+     "t0": 2.951,
+     "t1": 3.403
+    },
+    {
+     "w": "in",
+     "t0": 3.45,
+     "t1": 3.508
+    },
+    {
+     "w": "a",
+     "t0": 3.554,
+     "t1": 3.578
+    },
+    {
+     "w": "secret",
+     "t0": 3.636,
+     "t1": 3.914
+    },
+    {
+     "w": "nuclear",
+     "t0": 3.961,
+     "t1": 4.274
+    },
+    {
+     "w": "facility",
+     "t0": 4.321,
+     "t1": 4.843
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.88,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 125.7,
+    "f0_range_st": 12.6,
+    "speech_head_s": 0.43,
+    "speech_tail_s": 0.635,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.08,
+    "raw_len_s": 4.83,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0038__xel-B": {
+   "take": "e2-a1-0038__xel-B",
+   "key": "3d3c83657b3bd62e",
+   "base_key": "3d3c83657b3bd62e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.7,
+   "offset_s": 0.35,
+   "sent": "What about a regular secret facility?",
+   "seed": 1877636883,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "qCwgiN0GsIAYwAJ1nYvZ",
+   "voice_name": "Kirt - Podcast Host",
+   "cand": "B",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.19,
+    "span_s": 1.75,
+    "words": 6,
+    "wpm": 205.7,
+    "syllables": 13,
+    "articulation_sps": 7.43,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.51,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 111.2,
+    "f0_range_st": 11.8
+   },
+   "words": [
+    {
+     "w": "What",
+     "t0": 0.42,
+     "t1": 0.536
+    },
+    {
+     "w": "about",
+     "t0": 0.571,
+     "t1": 0.745
+    },
+    {
+     "w": "a",
+     "t0": 0.768,
+     "t1": 0.791
+    },
+    {
+     "w": "regular",
+     "t0": 0.861,
+     "t1": 1.209
+    },
+    {
+     "w": "secret",
+     "t0": 1.267,
+     "t1": 1.546
+    },
+    {
+     "w": "facility",
+     "t0": 1.592,
+     "t1": 2.126
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.18,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 111.2,
+    "f0_range_st": 11.8,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.51,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 2.09,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0036__xel-C": {
+   "take": "e2-a1-0036__xel-C",
+   "key": "2e12cbb82058069a",
+   "base_key": "2e12cbb82058069a",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.344,
+   "offset_s": 0.35,
+   "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+   "seed": 594389509,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "6sWNMlBf4TdebygSxQGj",
+   "voice_name": "Alex",
+   "cand": "C",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 4.75,
+    "span_s": 4.39,
+    "words": 16,
+    "wpm": 218.7,
+    "syllables": 24,
+    "articulation_sps": 5.47,
+    "pauses_s": [
+     0.09,
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.594,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 106.4,
+    "f0_range_st": 10.6
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.35,
+     "t1": 0.524
+    },
+    {
+     "w": "me",
+     "t0": 0.559,
+     "t1": 0.629
+    },
+    {
+     "w": "ask",
+     "t0": 0.687,
+     "t1": 0.861
+    },
+    {
+     "w": "you",
+     "t0": 0.896,
+     "t1": 0.965
+    },
+    {
+     "w": "about",
+     "t0": 1.0,
+     "t1": 1.209
+    },
+    {
+     "w": "ALYI",
+     "t0": 1.279,
+     "t1": 1.894
+    },
+    {
+     "w": "Is",
+     "t0": 2.242,
+     "t1": 2.382
+    },
+    {
+     "w": "he",
+     "t0": 2.428,
+     "t1": 2.486
+    },
+    {
+     "w": "being",
+     "t0": 2.544,
+     "t1": 2.707
+    },
+    {
+     "w": "held",
+     "t0": 2.753,
+     "t1": 2.939
+    },
+    {
+     "w": "hostage",
+     "t0": 2.997,
+     "t1": 3.45
+    },
+    {
+     "w": "in",
+     "t0": 3.485,
+     "t1": 3.531
+    },
+    {
+     "w": "a",
+     "t0": 3.566,
+     "t1": 3.601
+    },
+    {
+     "w": "secret",
+     "t0": 3.636,
+     "t1": 3.891
+    },
+    {
+     "w": "nuclear",
+     "t0": 3.914,
+     "t1": 4.181
+    },
+    {
+     "w": "facility",
+     "t0": 4.216,
+     "t1": 4.692
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.22,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 106.4,
+    "f0_range_st": 10.6,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.594,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 4.644,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0038__xel-C": {
+   "take": "e2-a1-0038__xel-C",
+   "key": "08957a06e3c5fde6",
+   "base_key": "08957a06e3c5fde6",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.604,
+   "offset_s": 0.35,
+   "sent": "What about a regular secret facility?",
+   "seed": 2292697237,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "6sWNMlBf4TdebygSxQGj",
+   "voice_name": "Alex",
+   "cand": "C",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 1.95,
+    "span_s": 1.59,
+    "words": 6,
+    "wpm": 226.4,
+    "syllables": 13,
+    "articulation_sps": 8.18,
+    "pauses_s": [
+     0.08
+    ],
+    "longest_internal_gap_s": 0.08,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.654,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 119.4,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "What",
+     "t0": 0.35,
+     "t1": 0.536
+    },
+    {
+     "w": "about",
+     "t0": 0.559,
+     "t1": 0.71
+    },
+    {
+     "w": "a",
+     "t0": 0.733,
+     "t1": 0.756
+    },
+    {
+     "w": "regular",
+     "t0": 0.814,
+     "t1": 1.105
+    },
+    {
+     "w": "secret",
+     "t0": 1.163,
+     "t1": 1.407
+    },
+    {
+     "w": "facility",
+     "t0": 1.43,
+     "t1": 1.906
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.41,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 119.4,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.654,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 1.904,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0036__xel-D": {
+   "take": "e2-a1-0036__xel-D",
+   "key": "8e02e1685cbbf14f",
+   "base_key": "8e02e1685cbbf14f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0036__xel-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.885,
+   "offset_s": 0.35,
+   "sent": "Let me ask you about Al-yee. Is he being held hostage in a secret nuclear facility?",
+   "seed": 2367569868,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "GzE4TcXfh9rYCU9gVgPp",
+   "voice_name": "Alex Wright - Clear and Cheerful",
+   "cand": "D",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 5.41,
+    "span_s": 5.01,
+    "words": 16,
+    "wpm": 191.6,
+    "syllables": 24,
+    "articulation_sps": 5.22,
+    "pauses_s": [
+     0.41
+    ],
+    "longest_internal_gap_s": 0.41,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.475,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 130.3,
+    "f0_range_st": 11.8
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.38,
+     "t1": 0.571
+    },
+    {
+     "w": "me",
+     "t0": 0.629,
+     "t1": 0.71
+    },
+    {
+     "w": "ask",
+     "t0": 0.768,
+     "t1": 0.977
+    },
+    {
+     "w": "you",
+     "t0": 1.023,
+     "t1": 1.105
+    },
+    {
+     "w": "about",
+     "t0": 1.163,
+     "t1": 1.383
+    },
+    {
+     "w": "ALYI",
+     "t0": 1.43,
+     "t1": 1.964
+    },
+    {
+     "w": "Is",
+     "t0": 2.359,
+     "t1": 2.533
+    },
+    {
+     "w": "he",
+     "t0": 2.591,
+     "t1": 2.66
+    },
+    {
+     "w": "being",
+     "t0": 2.73,
+     "t1": 2.927
+    },
+    {
+     "w": "held",
+     "t0": 2.997,
+     "t1": 3.206
+    },
+    {
+     "w": "hostage",
+     "t0": 3.276,
+     "t1": 3.798
+    },
+    {
+     "w": "in",
+     "t0": 3.845,
+     "t1": 3.937
+    },
+    {
+     "w": "a",
+     "t0": 3.996,
+     "t1": 4.019
+    },
+    {
+     "w": "secret",
+     "t0": 4.077,
+     "t1": 4.413
+    },
+    {
+     "w": "nuclear",
+     "t0": 4.483,
+     "t1": 4.831
+    },
+    {
+     "w": "facility",
+     "t0": 4.878,
+     "t1": 5.412
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.01,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 130.3,
+    "f0_range_st": 11.8,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.475,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 5.341,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a1-0038__xel-D": {
+   "take": "e2-a1-0038__xel-D",
+   "key": "9434b48b3ee826b1",
+   "base_key": "9434b48b3ee826b1",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/xel/wav/e2-a1-0038__xel-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.725,
+   "offset_s": 0.35,
+   "sent": "What about a regular secret facility?",
+   "seed": 2443684536,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "GzE4TcXfh9rYCU9gVgPp",
+   "voice_name": "Alex Wright - Clear and Cheerful",
+   "cand": "D",
+   "role": "xel",
+   "measured": {
+    "audible_in_s": 0.42,
+    "audible_out_s": 2.25,
+    "span_s": 1.83,
+    "words": 6,
+    "wpm": 196.7,
+    "syllables": 13,
+    "articulation_sps": 7.1,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.475,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 126.7,
+    "f0_range_st": 12.9
+   },
+   "words": [
+    {
+     "w": "What",
+     "t0": 0.4,
+     "t1": 0.571
+    },
+    {
+     "w": "about",
+     "t0": 0.617,
+     "t1": 0.791
+    },
+    {
+     "w": "a",
+     "t0": 0.826,
+     "t1": 0.849
+    },
+    {
+     "w": "regular",
+     "t0": 0.919,
+     "t1": 1.267
+    },
+    {
+     "w": "secret",
+     "t0": 1.325,
+     "t1": 1.639
+    },
+    {
+     "w": "facility",
+     "t0": 1.674,
+     "t1": 2.219
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.01,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 126.7,
+    "f0_range_st": 12.9,
+    "speech_head_s": 0.42,
+    "speech_tail_s": 0.475,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.075,
+    "raw_len_s": 2.043,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a1-0036__xel-A",
+   "key": "4d3cacc06231814c",
+   "chars": 83,
+   "cost_header": "37",
+   "request_id": "MI9CvuTZXbfDe7IgV4TN",
+   "at": "00:12:52"
+  },
+  {
+   "take": "e2-a1-0038__xel-A",
+   "key": "680c6b2ae435b7c7",
+   "chars": 37,
+   "cost_header": "16",
+   "request_id": "2bRpA5POoxy4XF73yqvK",
+   "at": "00:12:56"
+  },
+  {
+   "take": "e2-a1-0036__xel-B",
+   "key": "0fc6ef24c84ed9a6",
+   "chars": 83,
+   "cost_header": "37",
+   "request_id": "zcLyFJZBx6oOX0qpLdJP",
+   "at": "00:12:59"
+  },
+  {
+   "take": "e2-a1-0038__xel-B",
+   "key": "3d3c83657b3bd62e",
+   "chars": 37,
+   "cost_header": "16",
+   "request_id": "QUh2ohZHZhOMsAel3aV9",
+   "at": "00:13:02"
+  },
+  {
+   "take": "e2-a1-0036__xel-C",
+   "key": "2e12cbb82058069a",
+   "chars": 83,
+   "cost_header": "37",
+   "request_id": "Vnry2t0e4PE4axoYKvSi",
+   "at": "00:13:09"
+  },
+  {
+   "take": "e2-a1-0038__xel-C",
+   "key": "08957a06e3c5fde6",
+   "chars": 37,
+   "cost_header": "16",
+   "request_id": "gmlyDfpNGCS8pRjwmNjI",
+   "at": "00:13:10"
+  },
+  {
+   "take": "e2-a1-0036__xel-D",
+   "key": "8e02e1685cbbf14f",
+   "chars": 83,
+   "cost_header": "37",
+   "request_id": "wlnza4VszmRdlnBTIKfA",
+   "at": "00:13:18"
+  },
+  {
+   "take": "e2-a1-0038__xel-D",
+   "key": "9434b48b3ee826b1",
+   "chars": 37,
+   "cost_header": "16",
+   "request_id": "kOyQCSKsMXT5IEiZNiYz",
+   "at": "00:13:19"
+  }
+ ]
+}

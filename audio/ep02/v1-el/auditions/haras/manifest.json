@@ -1,0 +1,981 @@
+{
+ "takes": {
+  "e2-a4-0017__haras-A": {
+   "take": "e2-a4-0017__haras-A",
+   "key": "d12aa66e22712f0b",
+   "base_key": "d12aa66e22712f0b",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.694,
+   "offset_s": 0.35,
+   "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+   "seed": 2218675683,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "KLdWtAstZMPBbfqaBs59",
+   "voice_name": "Klara - Tech Executive & Scientist",
+   "cand": "A",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 4.03,
+    "span_s": 3.64,
+    "words": 13,
+    "wpm": 214.3,
+    "syllables": 16,
+    "articulation_sps": 4.98,
+    "pauses_s": [
+     0.43
+    ],
+    "longest_internal_gap_s": 0.43,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.664,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 213.7,
+    "f0_range_st": 8.9
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.37,
+     "t1": 0.559
+    },
+    {
+     "w": "new",
+     "t0": 0.64,
+     "t1": 0.872
+    },
+    {
+     "w": "so",
+     "t0": 1.0,
+     "t1": 1.128
+    },
+    {
+     "w": "I'm",
+     "t0": 1.186,
+     "t1": 1.29
+    },
+    {
+     "w": "starting",
+     "t0": 1.337,
+     "t1": 1.627
+    },
+    {
+     "w": "with",
+     "t0": 1.662,
+     "t1": 1.778
+    },
+    {
+     "w": "the",
+     "t0": 1.813,
+     "t1": 1.883
+    },
+    {
+     "w": "easy",
+     "t0": 1.941,
+     "t1": 2.173
+    },
+    {
+     "w": "ones",
+     "t0": 2.242,
+     "t1": 2.475
+    },
+    {
+     "w": "What's",
+     "t0": 2.927,
+     "t1": 3.171
+    },
+    {
+     "w": "our",
+     "t0": 3.194,
+     "t1": 3.276
+    },
+    {
+     "w": "biggest",
+     "t0": 3.322,
+     "t1": 3.601
+    },
+    {
+     "w": "cost",
+     "t0": 3.636,
+     "t1": 4.019
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.76,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 213.7,
+    "f0_range_st": 8.9,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.664,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 3.994,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0022__haras-A": {
+   "take": "e2-a4-0022__haras-A",
+   "key": "27ca5f07c2c644ab",
+   "base_key": "27ca5f07c2c644ab",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.511,
+   "offset_s": 0.35,
+   "sent": "Let me reframe that. Upside.",
+   "seed": 1182295356,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "KLdWtAstZMPBbfqaBs59",
+   "voice_name": "Klara - Tech Executive & Scientist",
+   "cand": "A",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.45,
+    "audible_out_s": 1.9,
+    "span_s": 1.45,
+    "words": 5,
+    "wpm": 206.9,
+    "syllables": 7,
+    "articulation_sps": 4.83,
+    "pauses_s": [
+     0.06
+    ],
+    "longest_internal_gap_s": 0.06,
+    "speech_head_s": 0.45,
+    "speech_tail_s": 0.611,
+    "tail_to_60_s": 0.001,
+    "median_f0_hz": 195.8,
+    "f0_range_st": 9.1
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.43,
+     "t1": 0.524
+    },
+    {
+     "w": "me",
+     "t0": 0.559,
+     "t1": 0.629
+    },
+    {
+     "w": "reframe",
+     "t0": 0.698,
+     "t1": 1.058
+    },
+    {
+     "w": "that",
+     "t0": 1.093,
+     "t1": 1.314
+    },
+    {
+     "w": "Upside",
+     "t0": 1.441,
+     "t1": 1.859
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.75,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 195.8,
+    "f0_range_st": 9.1,
+    "speech_head_s": 0.45,
+    "speech_tail_s": 0.611,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 1.811,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0017__haras-B": {
+   "take": "e2-a4-0017__haras-B",
+   "key": "2f8e7bebf459ea72",
+   "base_key": "2f8e7bebf459ea72",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.84,
+   "offset_s": 0.35,
+   "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+   "seed": 1313264222,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Hh0rE70WfnSFN80K8uJC",
+   "voice_name": "Hannah - Neutral, Polished and Helpful",
+   "cand": "B",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 4.38,
+    "span_s": 4.01,
+    "words": 13,
+    "wpm": 194.5,
+    "syllables": 16,
+    "articulation_sps": 4.43,
+    "pauses_s": [
+     0.2,
+     0.2
+    ],
+    "longest_internal_gap_s": 0.2,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 232.4,
+    "f0_range_st": 12.4
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.35,
+     "t1": 0.547
+    },
+    {
+     "w": "new",
+     "t0": 0.617,
+     "t1": 0.872
+    },
+    {
+     "w": "so",
+     "t0": 1.221,
+     "t1": 1.348
+    },
+    {
+     "w": "I'm",
+     "t0": 1.43,
+     "t1": 1.557
+    },
+    {
+     "w": "starting",
+     "t0": 1.627,
+     "t1": 1.941
+    },
+    {
+     "w": "with",
+     "t0": 1.964,
+     "t1": 2.08
+    },
+    {
+     "w": "the",
+     "t0": 2.103,
+     "t1": 2.173
+    },
+    {
+     "w": "easy",
+     "t0": 2.231,
+     "t1": 2.486
+    },
+    {
+     "w": "ones",
+     "t0": 2.556,
+     "t1": 2.858
+    },
+    {
+     "w": "What's",
+     "t0": 3.148,
+     "t1": 3.415
+    },
+    {
+     "w": "our",
+     "t0": 3.45,
+     "t1": 3.531
+    },
+    {
+     "w": "biggest",
+     "t0": 3.578,
+     "t1": 3.856
+    },
+    {
+     "w": "cost",
+     "t0": 3.914,
+     "t1": 4.344
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.78,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 232.4,
+    "f0_range_st": 12.4,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 4.365,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0022__haras-B": {
+   "take": "e2-a4-0022__haras-B",
+   "key": "f419ce15fe651c54",
+   "base_key": "f419ce15fe651c54",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.515,
+   "offset_s": 0.35,
+   "sent": "Let me reframe that. Upside.",
+   "seed": 3211090557,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Hh0rE70WfnSFN80K8uJC",
+   "voice_name": "Hannah - Neutral, Polished and Helpful",
+   "cand": "B",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.04,
+    "span_s": 1.6,
+    "words": 5,
+    "wpm": 187.5,
+    "syllables": 7,
+    "articulation_sps": 4.9,
+    "pauses_s": [
+     0.17
+    ],
+    "longest_internal_gap_s": 0.17,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.475,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 193.6,
+    "f0_range_st": 13.2
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.42,
+     "t1": 0.547
+    },
+    {
+     "w": "me",
+     "t0": 0.582,
+     "t1": 0.652
+    },
+    {
+     "w": "reframe",
+     "t0": 0.722,
+     "t1": 1.081
+    },
+    {
+     "w": "that",
+     "t0": 1.116,
+     "t1": 1.348
+    },
+    {
+     "w": "Upside",
+     "t0": 1.534,
+     "t1": 2.045
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.83,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 193.6,
+    "f0_range_st": 13.2,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.475,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 1.858,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0017__haras-C": {
+   "take": "e2-a4-0017__haras-C",
+   "key": "cd099e0e60f0b3ad",
+   "base_key": "cd099e0e60f0b3ad",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.997,
+   "offset_s": 0.35,
+   "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+   "seed": 372816114,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "jemqINv7N9LKUclcLQnU",
+   "voice_name": "Jo - Warm, Smooth and Reassuring",
+   "cand": "C",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 3.58,
+    "span_s": 3.23,
+    "words": 13,
+    "wpm": 241.5,
+    "syllables": 16,
+    "articulation_sps": 4.95,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.417,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 210.3,
+    "f0_range_st": 14.2
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.35,
+     "t1": 0.559
+    },
+    {
+     "w": "new",
+     "t0": 0.617,
+     "t1": 0.78
+    },
+    {
+     "w": "so",
+     "t0": 0.849,
+     "t1": 0.93
+    },
+    {
+     "w": "I'm",
+     "t0": 0.989,
+     "t1": 1.081
+    },
+    {
+     "w": "starting",
+     "t0": 1.116,
+     "t1": 1.348
+    },
+    {
+     "w": "with",
+     "t0": 1.372,
+     "t1": 1.476
+    },
+    {
+     "w": "the",
+     "t0": 1.499,
+     "t1": 1.569
+    },
+    {
+     "w": "easy",
+     "t0": 1.604,
+     "t1": 1.824
+    },
+    {
+     "w": "ones",
+     "t0": 1.894,
+     "t1": 2.091
+    },
+    {
+     "w": "What's",
+     "t0": 2.15,
+     "t1": 2.347
+    },
+    {
+     "w": "our",
+     "t0": 2.382,
+     "t1": 2.475
+    },
+    {
+     "w": "biggest",
+     "t0": 2.521,
+     "t1": 2.823
+    },
+    {
+     "w": "cost",
+     "t0": 2.881,
+     "t1": 3.299
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.7,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 210.3,
+    "f0_range_st": 14.2,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.417,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 3.297,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0022__haras-C": {
+   "take": "e2-a4-0022__haras-C",
+   "key": "3b5648f050585b92",
+   "base_key": "3b5648f050585b92",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.325,
+   "offset_s": 0.35,
+   "sent": "Let me reframe that. Upside.",
+   "seed": 3115732878,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "jemqINv7N9LKUclcLQnU",
+   "voice_name": "Jo - Warm, Smooth and Reassuring",
+   "cand": "C",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.95,
+    "span_s": 1.58,
+    "words": 5,
+    "wpm": 189.9,
+    "syllables": 7,
+    "articulation_sps": 4.43,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.375,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 174.8,
+    "f0_range_st": 6.9
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.35,
+     "t1": 0.524
+    },
+    {
+     "w": "me",
+     "t0": 0.559,
+     "t1": 0.629
+    },
+    {
+     "w": "reframe",
+     "t0": 0.687,
+     "t1": 1.035
+    },
+    {
+     "w": "that",
+     "t0": 1.058,
+     "t1": 1.174
+    },
+    {
+     "w": "Upside",
+     "t0": 1.221,
+     "t1": 1.65
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.68,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 174.8,
+    "f0_range_st": 6.9,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.375,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 1.625,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0017__haras-D": {
+   "take": "e2-a4-0017__haras-D",
+   "key": "55deb7f0d3783aec",
+   "base_key": "55deb7f0d3783aec",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0017__haras-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.545,
+   "offset_s": 0.35,
+   "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+   "seed": 1142966784,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Qin2NRfiKVQMJLxnoZaY",
+   "voice_name": "Athena - Clear, Professional, Human",
+   "cand": "D",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 4.09,
+    "span_s": 3.68,
+    "words": 13,
+    "wpm": 212.0,
+    "syllables": 16,
+    "articulation_sps": 5.11,
+    "pauses_s": [
+     0.15,
+     0.4,
+     0.07
+    ],
+    "longest_internal_gap_s": 0.4,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 258.8,
+    "f0_range_st": 10.1
+   },
+   "words": [
+    {
+     "w": "I'm",
+     "t0": 0.39,
+     "t1": 0.559
+    },
+    {
+     "w": "new",
+     "t0": 0.629,
+     "t1": 0.861
+    },
+    {
+     "w": "so",
+     "t0": 1.105,
+     "t1": 1.221
+    },
+    {
+     "w": "I'm",
+     "t0": 1.279,
+     "t1": 1.383
+    },
+    {
+     "w": "starting",
+     "t0": 1.441,
+     "t1": 1.755
+    },
+    {
+     "w": "with",
+     "t0": 1.79,
+     "t1": 1.894
+    },
+    {
+     "w": "the",
+     "t0": 1.929,
+     "t1": 1.999
+    },
+    {
+     "w": "easy",
+     "t0": 2.045,
+     "t1": 2.266
+    },
+    {
+     "w": "ones",
+     "t0": 2.347,
+     "t1": 2.602
+    },
+    {
+     "w": "What's",
+     "t0": 2.974,
+     "t1": 3.206
+    },
+    {
+     "w": "our",
+     "t0": 3.229,
+     "t1": 3.311
+    },
+    {
+     "w": "biggest",
+     "t0": 3.345,
+     "t1": 3.612
+    },
+    {
+     "w": "cost",
+     "t0": 3.659,
+     "t1": 4.077
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.61,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 258.8,
+    "f0_range_st": 10.1,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 4.04,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0022__haras-D": {
+   "take": "e2-a4-0022__haras-D",
+   "key": "1803d03fd4fcc8a2",
+   "base_key": "1803d03fd4fcc8a2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/haras/wav/e2-a4-0022__haras-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.38,
+   "offset_s": 0.35,
+   "sent": "Let me reframe that. Upside.",
+   "seed": 1541490146,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Qin2NRfiKVQMJLxnoZaY",
+   "voice_name": "Athena - Clear, Professional, Human",
+   "cand": "D",
+   "role": "haras",
+   "measured": {
+    "audible_in_s": 0.46,
+    "audible_out_s": 1.92,
+    "span_s": 1.46,
+    "words": 5,
+    "wpm": 205.5,
+    "syllables": 7,
+    "articulation_sps": 5.26,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.46,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 250.9,
+    "f0_range_st": 12.0
+   },
+   "words": [
+    {
+     "w": "Let",
+     "t0": 0.44,
+     "t1": 0.547
+    },
+    {
+     "w": "me",
+     "t0": 0.582,
+     "t1": 0.663
+    },
+    {
+     "w": "reframe",
+     "t0": 0.733,
+     "t1": 1.139
+    },
+    {
+     "w": "that",
+     "t0": 1.163,
+     "t1": 1.395
+    },
+    {
+     "w": "Upside",
+     "t0": 1.488,
+     "t1": 1.94
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.6,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 250.9,
+    "f0_range_st": 12.0,
+    "speech_head_s": 0.46,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.115,
+    "raw_len_s": 1.765,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a4-0017__haras-A",
+   "key": "d12aa66e22712f0b",
+   "chars": 69,
+   "cost_header": "30",
+   "request_id": "tePvvzlqKVnGNmJcItPM",
+   "at": "00:19:10"
+  },
+  {
+   "take": "e2-a4-0022__haras-A",
+   "key": "27ca5f07c2c644ab",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "ZferF3EVzVoAv7duU3v7",
+   "at": "00:19:12"
+  },
+  {
+   "take": "e2-a4-0017__haras-B",
+   "key": "2f8e7bebf459ea72",
+   "chars": 69,
+   "cost_header": "30",
+   "request_id": "ZCxhc1SqfzhssvtbZSj0",
+   "at": "00:19:14"
+  },
+  {
+   "take": "e2-a4-0022__haras-B",
+   "key": "f419ce15fe651c54",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "IVgy1SHeFus3DXQQL4el",
+   "at": "00:19:16"
+  },
+  {
+   "take": "e2-a4-0017__haras-C",
+   "key": "cd099e0e60f0b3ad",
+   "chars": 69,
+   "cost_header": "30",
+   "request_id": "TJvXzjfRxaYMfF8XoJbU",
+   "at": "00:19:26"
+  },
+  {
+   "take": "e2-a4-0022__haras-C",
+   "key": "3b5648f050585b92",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "Qzlvr8OvXMz7mOYKBCT1",
+   "at": "00:19:27"
+  },
+  {
+   "take": "e2-a4-0017__haras-D",
+   "key": "55deb7f0d3783aec",
+   "chars": 69,
+   "cost_header": "30",
+   "request_id": "PvCiY51YqoE6PsgIKwWU",
+   "at": "00:19:31"
+  },
+  {
+   "take": "e2-a4-0022__haras-D",
+   "key": "1803d03fd4fcc8a2",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "8LMJCXBeTNwVNW5lQFk3",
+   "at": "00:19:35"
+  }
+ ]
+}

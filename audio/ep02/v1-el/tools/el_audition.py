@@ -20,12 +20,16 @@ in the cache and sends nothing for them. Then every take is measured:
   screen  the shortlist against the library (free listing): still listed, American, no price, Ep1's red flags, the role's
           "Never" words, resemblance words, ethnicity labels; not on file in cast-el.json, not on two shortlists. A failing
           candidate is replaced from Ep1's screened pool (audio/ep01/v3-el/casting/), nearest the lane, and logged
-  render  the role's audition lines for each candidate (API: costs characters; --max-credits stops before overspending)
-  measure every take (local): ASR, F0, pace, raw loudness and floor, p(en), CPP, final contour
+  render  the role's audition lines for each candidate at speed 1.0 (API: costs characters; --max-credits stops first)
+  round2  Ep1 §AA2: a role's top two again at a speed fitted to the plan (ratio / 0.95, 0.80-1.00), on the same seeds
+  measure every take (local): ASR and language ID once per packed clip / per voice (the encoder pass is the cost), F0,
+          pace, raw loudness and floor, CPP, final contour
   scene   the neighbours (free: Ep1's takes) and every candidate's timbre features; semitones and distances
-  pick    the ranking per role (penalties, then the brief's measurable qualities), joint where two new roles share a scene
-  cast    write the picks into audio/ep02/cast-el.json (roles, labels, the chant's say_lines), keeping every other key
+  pick    the ranking per role (penalties, then the brief's measurable qualities), joint where new roles share a scene
+          (the four slots with Maya; Staffer 2 with the reporter; the Forecaster with the Driver); the crowd's passes
+  cast    write the picks into audio/ep02/cast-el.json (roles, labels, say_lines), keeping every other key
   report  the tables for cast.md, from the index
+  credits the characters and credits billed (the manifests' cost headers) and the subscription's counter
 
 Outputs: audio/ep02/v1-el/auditions/index.json (every measure, the ranking, the credits) and the takes
 audio/ep02/v1-el/auditions/<role>/wav/<line>__<role>-<cand>.wav (git-ignored). No lines*.json is written under auditions/,
@@ -36,7 +40,12 @@ so neither the base lock nor the beat-plan builder ever reads an audition as a t
   HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T render --max-credits 3800 [--roles selbeep,xel]
   HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T measure
   HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T scene
-  $PY $T pick && $PY $T report && $PY $T cast
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T pick
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T round2 --roles humanist,bukaj,ekiel,forecaster
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T measure --roles humanist,bukaj,ekiel,forecaster
+  HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY $T pick
+  $PY $T cast && $PY $T report && $PY $T credits
+The record of the pass (2026-10-09): show/episodes/ep02/production/v1/cast.md §3 and §8.
 
 Library voices only, called by voice_id: no cloning, no voice design, no reference audio of anyone, no "sounds like", no
 laugh or accent asked for, no voice chosen to resemble a real person (guardrails §5-§6, LEARNINGS S6). The key is read
@@ -549,6 +558,56 @@ def cmd_render(a):
     print(f"credits so far: {spent_cr:.0f} billed (from the manifests' cost headers)")
 
 
+def cmd_round2(a):
+    """Ep1 §AA2's round 2: the role's top two (the current ranking) read again at a speed fitted to the plan's pace, on the
+    episode's seeds: speed = the round-1 length/plan ratio / 0.95, to 0.05, within 0.80-1.00 (Ep1 cast down to 0.78); a
+    voice already inside the band at 1.0 keeps its round 1. These are the takes the film would play."""
+    E.asr = lambda y: ("", [])                    # the recogniser runs in `measure`
+    ix = index()
+    rows = plan_rows()
+    spent_cr = sum(float(c.get("cost_header") or c["chars"] * CREDITS_PER_CHAR)
+                   for p in glob.glob(os.path.join(AUD, "*/manifest.json")) for c in jload(p).get("calls", []))
+    for role in a.roles:
+        spec = ROLES[role]
+        rk = ix["rankings"][role][: a.top]
+        rr = ix["roles"][role]
+        cast = cast_for_audition(role)
+        out = os.path.join(AUD, role)
+        man = R.load_manifest(out)
+        for r in rk:
+            ratio = r["span_vs_plan"]
+            speed = min(1.0, max(0.80, round(ratio / 0.95 / 0.05) * 0.05))
+            if ratio >= 1 / 1.15 or speed >= 0.975:          # already inside the band at speed 1.0
+                print(f"{role}: {r['name']} at {ratio:.2f} of the plan: round 1 stands (speed 1.0)")
+                continue
+            c0 = next(c for c in rr["candidates"] if c["voice_id"] == r["voice_id"])
+            c = dict(cand=c0["cand"] + "2", voice_id=c0["voice_id"], voice_name=c0["name"],
+                     settings=dict(spec["settings"], speed=round(speed, 2)), model="eleven_multilingual_v2",
+                     source=c0.get("source"))
+            ent = dict(cand=c["cand"], voice_id=c["voice_id"], name=c0["name"], settings=c["settings"], round=2,
+                       fitted_from=dict(span_vs_plan=ratio, rule="speed = ratio / 0.95, to 0.05, within 0.80-1.00"), takes=[])
+            for lid in spec["lines"]:
+                row = rows[lid]["row"]
+                sent = R.text_to_send(row, cast, role, voice_id=c["voice_id"])
+                if spent_cr + len(sent) * CREDITS_PER_CHAR > a.max_credits:
+                    raise SystemExit(f"budget: {role} round 2 would pass {a.max_credits} (spent {spent_cr:.0f})")
+                n0 = len(man["calls"])
+                rec, n = R.render_take(row, role, c, {}, cast, out, man, A, lambda s_: print(s_, flush=True))
+                for call in man["calls"][n0:]:
+                    spent_cr += float(call.get("cost_header") or call["chars"] * CREDITS_PER_CHAR)
+                R.save_manifest(out, man)
+                ent["takes"].append(dict(line=lid, text=row["text"], sent=rec["sent"], tag=row["tag"], file=rec["file"],
+                                         file_device=rec.get("file_device"), seed=rec["seed"], key=rec["key"],
+                                         chars=len(rec["sent"]), planned_s=rows[lid]["len_s"], seg=rows[lid]["seg"],
+                                         scene=rows[lid]["scene"], delivery=rows[lid]["delivery"], measured=rec["measured"],
+                                         qa=rec["qa"], raw=rec["raw"], offset_s=rec["offset_s"]))
+                print(f"{role:10s} {c['cand']} {c0['name'][:30]:30s} {lid} speed {speed:.2f} span {rec['measured']['span_s']:.2f}s "
+                      f"(plan {rows[lid]['len_s']})", flush=True)
+            rr["round2"] = [e for e in rr.get("round2", []) if e["voice_id"] != c["voice_id"]] + [ent]
+            jdump(ix, INDEX)
+    print(f"credits so far: {spent_cr:.0f}")
+
+
 # ============================================================================================ measure
 _ML = None
 
@@ -656,7 +715,24 @@ def final_contour(y):
     return round(float(12 * np.log2(np.median(f0[tail]) / med)), 2)
 
 
+LETTERS = re.compile(r"\b([A-Za-z])(?:[\s.\-]+([A-Za-z])\b)(?:[\s.\-]+([A-Za-z])\b)?(?:[\s.\-]+([A-Za-z])\b)?\.?")
+
+
+def join_letters(t):
+    """a spelled acronym as one word on both sides ('A .G .I.', 'A-G-I', 'A. G. I.' -> 'AGI'), so the recogniser's
+    spelling of letters isn't counted as lost words"""
+    return LETTERS.sub(lambda m: "".join(g for g in m.groups() if g).upper(), t or "")
+
+
+SPELLINGS = [(re.compile(r"\balright\b", re.I), "all right"), (re.compile(r"\bokay\b", re.I), "OK")]
+
+
 def recall_noapos(text, asr, names):
+    """word recall, names excepted, blind to apostrophes, spelled letters joined, and a spelling the recogniser chooses
+    ('alright' / 'all right') counted as the same words"""
+    text, asr = join_letters(text), join_letters(asr)
+    for rx, rep in SPELLINGS:
+        text, asr = rx.sub(rep, text), rx.sub(rep, asr or "")
     return E.word_recall(text.replace("'", "").replace("’", ""), (asr or "").replace("'", ""), {n.replace("'", "") for n in names})
 
 
@@ -725,7 +801,7 @@ def cmd_measure(a):
         if a.roles and role not in a.roles:
             continue
         spec = ROLES[role]
-        cands = [c for c in rr["candidates"] if a.force or any(not t.get("m") for t in c["takes"])]
+        cands = [c for c in rr["candidates"] + rr.get("round2", []) if a.force or any(not t.get("m") for t in c["takes"])]
         if not cands:
             continue
         key = "slot" if spec.get("slot") else role
@@ -748,7 +824,9 @@ def cmd_measure(a):
         for u in [u for u in w["units"] if not u["dev"]]:
             spec = ROLES[u["role"]]
             for c in u["cands"]:
-                pe = None if spec.get("slot") else p_en(packed(c["takes"])[0])
+                r1 = next((x for x in ix["roles"][u["role"]]["candidates"] if x["voice_id"] == c["voice_id"]
+                           and x is not c and x["takes"] and x["takes"][0].get("m")), None)
+                pe = None if spec.get("slot") else (r1["takes"][0]["m"]["p_en"] if r1 else p_en(packed(c["takes"])[0]))
                 for t in c["takes"]:
                     y = load(t["file"])
                     raw = E.decode(open(os.path.join(cdir, t["key"] + ".mp3"), "rb").read())
@@ -864,12 +942,13 @@ def dist(m1, m2):
 
 def voice_stats(c):
     t = [x["m"] for x in c["takes"]]
+    tp = [x["m"] for x in c.get("pace_takes") or c["takes"]]
     f0s = [x["f0"] for x in t if x["f0"]]
     f0 = float(np.exp(np.mean(np.log(f0s)))) if f0s else None
     return dict(f0=f0, recall=min(x["recall"] for x in t), tail_cuts=sum(1 for x in t if x["tail_cut"]),
-                p_en=float(np.mean([x["p_en"] for x in t])), f0_range=float(np.median([x["f0_range_st"] for x in t if x["f0_range_st"] is not None] or [0])),
-                span_vs_plan=float(np.exp(np.mean(np.log([x["span_vs_plan"] for x in t if x["span_vs_plan"]])))) if any(x["span_vs_plan"] for x in t) else None,
-                wpm=float(np.median([x["wpm"] for x in t if x["wpm"]])), cpp=float(np.median([x["cpp_db"] for x in t if x["cpp_db"] is not None])),
+                p_en=float(np.mean([x["p_en"] for x in t if x["p_en"] is not None])) if any(x["p_en"] is not None for x in t) else None, f0_range=float(np.median([x["f0_range_st"] for x in t if x["f0_range_st"] is not None] or [0])),
+                span_vs_plan=float(np.exp(np.mean(np.log([x["span_vs_plan"] for x in tp if x["span_vs_plan"]])))) if any(x["span_vs_plan"] for x in tp) else None,
+                wpm=float(np.median([x["wpm"] for x in tp if x["wpm"]])), cpp=float(np.median([x["cpp_db"] for x in t if x["cpp_db"] is not None])),
                 floor=max(x["raw"]["floor_p5_dbfs"] for x in t), s2f=min(x["raw"]["speech_to_floor_db"] for x in t),
                 raw_lufs=float(np.mean([x["raw"]["lufs"] for x in t])), final=[x["final_st"] for x in t])
 
@@ -911,8 +990,9 @@ def penalties(role, c, ix, partner=None):
         sep += short
         detail[n] = dict(st=round(gap, 2), need=need, mfcc_dist=d, short=round(short, 2))
     pen["separation"] = sep
-    pen["accent"] = max(0.0, (0.985 - s["p_en"]) * 100)
-    pen["clean"] = 2.0 * s["tail_cuts"] + 2.0 * sum(1 for x in c["takes"] if x["m"]["recall"] < 0.9)
+    pen["accent"] = max(0.0, (0.985 - s["p_en"]) * 100) if s["p_en"] is not None else 0.0
+    per = len(spec["lines"]) / len(c["takes"])          # a voice heard in two rounds isn't counted twice (Ep1)
+    pen["clean"] = per * (2.0 * s["tail_cuts"] + 2.0 * sum(1 for x in c["takes"] if x["m"]["recall"] < 0.9))
     pen["noise"] = max(0.0, (45.0 - s["s2f"]) / 5.0)
     if s["span_vs_plan"] and not spec.get("slot") and not spec.get("crowd"):
         r = s["span_vs_plan"]
@@ -961,7 +1041,7 @@ def brief_points(role, c, s):
             p, why = p + 1, why + ["TV copy misheard"]
     if role == "voice3":
         m = t.get("e2-a2-0014")
-        if m and (m["final_st"] is None or m["final_st"] < 2.0):
+        if m and (m.get("rise_st") is None or m["rise_st"] < 2.0):
             p, why = p + 1, why + ["no rise"]
     if s["cpp"] is not None and s["cpp"] < 9.0:
         p, why = p + 1, why + ["breathy (CPP)"]
@@ -970,19 +1050,32 @@ def brief_points(role, c, s):
     return p, why
 
 
+def merged(role, ix):
+    """each voice over all its takes (round 1 and round 2); its pace from the round the film would use (round 2 when
+    there is one), with that round's speed"""
+    r2 = {e["voice_id"]: e for e in ix["roles"][role].get("round2", [])}
+    out = []
+    for c in ix["roles"][role]["candidates"]:
+        e = r2.get(c["voice_id"])
+        out.append(dict(c, takes=c["takes"] + (e["takes"] if e else []), pace_takes=e["takes"] if e else c["takes"],
+                        speed=(e or c)["settings"]["speed"], round2=bool(e)))
+    return out
+
+
 def rank_role(role, ix, partner=None):
     rows = []
-    for c in ix["roles"][role]["candidates"]:
+    for c in merged(role, ix):
         sc, pen, det, s = penalties(role, c, ix, partner)
         bp, bwhy = brief_points(role, c, s)
         rows.append(dict(cand=c["cand"], voice_id=c["voice_id"], name=c["name"], score=sc, penalties=pen, vs=det,
                          brief_points=bp, brief_notes=bwhy, f0=round(s["f0"], 1) if s["f0"] else None,
                          f0_range_st=round(s["f0_range"], 1), wpm=round(s["wpm"], 1),
                          span_vs_plan=round(s["span_vs_plan"], 3) if s["span_vs_plan"] else None,
-                         p_en=round(s["p_en"], 4), recall_min=round(s["recall"], 2), tail_cuts=s["tail_cuts"],
+                         p_en=round(s["p_en"], 4) if s["p_en"] is not None else None, recall_min=round(s["recall"], 2), tail_cuts=s["tail_cuts"],
                          cpp_db=round(s["cpp"], 2) if s["cpp"] is not None else None, raw_floor_dbfs=s["floor"],
                          speech_to_floor_db=s["s2f"], raw_lufs=round(s["raw_lufs"], 1),
-                         presence_db=c["feats"]["presence_db"], centroid_hz=c["feats"]["centroid_hz"], final_st=s["final"]))
+                         presence_db=c["feats"]["presence_db"], centroid_hz=c["feats"]["centroid_hz"], final_st=s["final"],
+                         speed=c["speed"], round2=c["round2"], n_takes=len(c["takes"])))
     # timbre tie-break: the larger of the smaller mean-MFCC distances to the scene's voices
     for r in rows:
         r["min_mfcc_dist"] = min([v["mfcc_dist"] for v in r["vs"].values()] or [0.0])
@@ -1005,20 +1098,44 @@ def f0_pyin(path):
     return (round(float(np.median(v)), 1) if len(v) else None), round(float(np.mean(vf)), 2)
 
 
+def f0_in_range(path, prior):
+    """one word's pitch inside its voice's own range: YIN (16 kHz, 10 ms hop) searched only within prior/1.8 .. prior*1.8
+    (the voice's library preview median), over the frames within 20 dB of the loudest -> (median Hz, the rise across the
+    word in st: the last third of those frames against the first third, n frames)"""
+    import librosa
+    from scipy.signal import resample_poly
+    y = load(path)
+    y16 = resample_poly(y.astype(np.float64), 1, 3)
+    f0 = librosa.yin(y16, fmin=max(50.0, prior / 1.8), fmax=min(600.0, prior * 1.8), sr=16000, frame_length=800,
+                     hop_length=160)
+    rms = librosa.feature.rms(y=y16, frame_length=800, hop_length=160)[0][: len(f0)]
+    f0 = f0[: len(rms)]
+    idx = np.where(20 * np.log10(rms / (rms.max() + 1e-12) + 1e-12) > -20)[0]
+    if len(idx) < 6:
+        return None, None, int(len(idx))
+    v = f0[idx]
+    k = max(2, len(v) // 3)
+    return round(float(np.median(v)), 1), round(float(12 * np.log2(np.median(v[-k:]) / np.median(v[:k]))), 2), int(len(v))
+
+
 def slot_f0(ix):
-    """each slot take's pitch: the house YIN, pYIN, and the library preview's (a screen); where YIN and pYIN disagree by
-    more than 3 st the take's pitch is pYIN's (the octave check), and 'f0' in the take's measures is replaced"""
+    """each one-word slot read's pitch. The house YIN jumps octaves on 0.3-0.5 s (Brad read 290 Hz against a 143 Hz
+    preview) and pYIN finds no voiced frames on several, so the take's 'f0' is YIN searched inside the voice's own range
+    (its library preview +/-1.8x: the same voice, a prior, not a target), and 'rise_st' is the pitch across the word"""
     for r in SLOTS:
         for c in ix["roles"].get(r, {}).get("candidates", []):
+            prior = library_of(c["voice_id"], ix).get("preview_f0")
             for t in c["takes"]:
                 m = t["m"]
                 if "f0_yin" not in m:
                     m["f0_yin"] = m["f0"]
                     m["f0_pyin"], m["voiced_share"] = f0_pyin(t["file"])
-                    m["f0_preview"] = library_of(c["voice_id"], ix).get("preview_f0")
-                    if m["f0_pyin"] and (not m["f0_yin"] or abs(st(m["f0_yin"], m["f0_pyin"])) > 3):
-                        m["f0"] = m["f0_pyin"]
-                        m["f0_note"] = "YIN and pYIN disagree by more than 3 st: pYIN's"
+                m["f0_preview"] = prior
+                if prior and "f0_in_range" not in m:
+                    m["f0_in_range"], m["rise_st"], m["f0_frames"] = f0_in_range(t["file"], prior)
+                if m.get("f0_in_range"):
+                    m["f0"] = m["f0_in_range"]
+                    m["f0_note"] = "YIN inside the voice's own range (preview x/÷1.8)"
             c["feats"]["f0_geo"] = c["takes"][0]["m"]["f0"]
 
 
@@ -1031,8 +1148,21 @@ def floors(ix):
                     t["m"]["raw"].update(raw_floor(E.decode(open(os.path.join(cdir, t["key"] + ".mp3"), "rb").read())))
 
 
+def rescore(ix):
+    """recall again from the stored transcripts, with the current rule (spelled letters joined; apostrophe-blind)"""
+    names = set(n.lower() for n in jload(R.CAST).get("names", []))
+    for rr in ix["roles"].values():
+        for c in rr["candidates"] + rr.get("round2", []):
+            for t in c["takes"]:
+                if t.get("m"):
+                    t["m"]["recall"] = recall_noapos(t["text"], t["m"]["asr"], names)
+                    if t["m"].get("device") and t["m"]["device"].get("asr") is not None:
+                        t["m"]["device"]["recall"] = recall_noapos(t["text"], t["m"]["device"]["asr"], names)
+
+
 def cmd_pick(a):
     ix = index()
+    rescore(ix)
     slot_f0(ix)
     floors(ix)
     picks = {}
@@ -1085,10 +1215,12 @@ def cmd_pick(a):
         rk = rank_role(role, ix, partner)
         rankings[role] = rk
         if ROLES[role].get("crowd"):
-            ok = [r for r in rk if r["penalties"]["accent"] == 0 and r["penalties"]["clean"] == 0]
+            ok = [r for r in rk if r["penalties"]["clean"] == 0 and (r["p_en"] or 0) >= 0.95]
             picks[role] = dict(layered=[dict(voice_id=r["voice_id"], name=r["name"], f0=r["f0"]) for r in ok],
-                               rule="every voice that reads the chant clean (ASR recall >= 0.9, no clipped tail) and passes "
-                                    "p(en): 8-12 layered")
+                               rule="every voice that reads the chant clean (ASR recall >= 0.9 with spelled letters joined, "
+                                    "no clipped tail) and p(en) >= 0.95: Ep1's 0.985 bar was set on sentences, and on two "
+                                    "seconds of a spelled acronym all twelve read 0.966-0.990, so for the chant it is a "
+                                    "gate at 0.95 and otherwise reported; 8-12 layered")
         elif role not in picks:
             picks[role] = dict(rk[0], rule="the lowest score, then the brief's points, then timbre")
     ix["rankings"] = rankings
@@ -1156,6 +1288,15 @@ def cand_entry(role, c, rk, ix, letter, picked):
                                                            span_s=t["m"]["span_s"], planned_s=t["m"]["planned_s"],
                                                            asr=t["m"]["asr"]) for t in c["takes"]},
                                     audition_letter=c["cand"]))
+    r2 = next((x for x in ix["roles"][role].get("round2", []) if x["voice_id"] == c["voice_id"]), None)
+    if r2:
+        e["settings"] = dict(r2["settings"])
+        e["measured_audition"]["round2"] = dict(
+            speed=r2["settings"]["speed"], fitted_from=r2.get("fitted_from"),
+            takes={t["line"]: dict(file=t["file"], key=t["key"], seed=t["seed"], sent=t["sent"], span_s=t["m"]["span_s"],
+                                   planned_s=t["m"]["planned_s"], wpm=t["m"]["wpm"], f0=t["m"]["f0"], asr=t["m"]["asr"])
+                   for t in r2["takes"]},
+            note="the takes the film would play: the episode's seeds at this speed (cached; the takes pass sends nothing)")
     if picked and ix["picks"][role].get("why"):
         e["why"] = ix["picks"][role]["why"]
     return e
@@ -1179,9 +1320,6 @@ def cmd_cast(a):
             order = [pk["voice_id"]] + [v for v in rk if v != pk["voice_id"]]
         letters = "ABCDEFGHIJKL"
         cands = [cand_entry(role, byv[v], rk.index(v) + 1, ix, letters[i], i == 0) for i, v in enumerate(order)]
-        speed = pk.get("speed")
-        if speed:
-            cands[0]["settings"]["speed"] = speed
         ent = dict(name=spec["name"], brief=spec["brief"], lane_hz=list(spec["lane"]) if spec.get("lane") else None,
                    pace_wpm=f"{spec['rate']} (the beat plan's planning rate)" if spec.get("rate") else None,
                    scenes=spec["scenes"], candidates=cands,
@@ -1219,7 +1357,7 @@ def cmd_report(a):
         cols = list(spec.get("nb") or {})
         print(f"\n#### {role}\n")
         head = ["Rank", "Voice", "Score", "F0 (Hz)"] + [f"vs {n}" for n in cols if n in nb or n in ROLES] + [
-            "wpm", "length / plan", "ASR", "p(en)", "floor / S:F", "CPP", "penalties, brief"]
+            "speed", "wpm", "length / plan", "ASR", "p(en)", "floor / S:F", "CPP", "penalties, brief"]
         print("| " + " | ".join(head) + " |")
         print("|" + "---|" * len(head))
         for i, r in enumerate(rk):
@@ -1230,8 +1368,8 @@ def cmd_report(a):
                     v.append(f"{r['vs'][n]['st']:+.1f} st / {r['vs'][n]['mfcc_dist']:.0f}")
                 elif n in nb or n in ROLES:
                     v.append("—")
-            v += [f"{r['wpm']:.0f}", f"{r['span_vs_plan']:.2f}" if r["span_vs_plan"] else "—",
-                  "verbatim" if r["recall_min"] >= 1.0 else f"{r['recall_min']:.2f}", f"{r['p_en']:.3f}",
+            v += [f"{r['speed']:g}", f"{r['wpm']:.0f}", f"{r['span_vs_plan']:.2f}" if r["span_vs_plan"] else "—",
+                  "verbatim" if r["recall_min"] >= 1.0 else f"{r['recall_min']:.2f}", f"{r['p_en']:.3f}" if r["p_en"] is not None else "—",
                   f"{r['raw_floor_dbfs']:.0f} / {r['speech_to_floor_db']:.0f} dB", f"{r['cpp_db']}",
                   ", ".join(f"{k} {x:g}" for k, x in r["penalties"].items() if x) + ("; " if r["brief_notes"] else "")
                   + ", ".join(r["brief_notes"])]
@@ -1241,16 +1379,19 @@ def cmd_report(a):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sp = ap.add_subparsers(dest="cmd", required=True)
-    for n in ("screen", "render", "measure", "scene", "pick", "credits", "cast", "report"):
+    for n in ("screen", "render", "round2", "measure", "scene", "pick", "credits", "cast", "report"):
         x = sp.add_parser(n)
         x.add_argument("--roles", type=lambda s: [r for r in s.split(",") if r], default=None)
         if n == "render":
             x.add_argument("--max-credits", type=float, default=3800.0)
             x.add_argument("--only", type=lambda s: [r for r in s.split(",") if r], default=None)
+        if n == "round2":
+            x.add_argument("--top", type=int, default=2)
+            x.add_argument("--max-credits", type=float, default=3800.0)
         if n == "measure":
             x.add_argument("--force", action="store_true")
     a = ap.parse_args()
-    dict(screen=cmd_screen, render=cmd_render, measure=cmd_measure, scene=cmd_scene, pick=cmd_pick, credits=cmd_credits,
+    dict(screen=cmd_screen, render=cmd_render, round2=cmd_round2, measure=cmd_measure, scene=cmd_scene, pick=cmd_pick, credits=cmd_credits,
          cast=cmd_cast, report=cmd_report)[a.cmd](a)
 
 

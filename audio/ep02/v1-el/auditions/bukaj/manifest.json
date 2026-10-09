@@ -1,0 +1,1534 @@
+{
+ "takes": {
+  "e2-a3-0006__bukaj-A": {
+   "take": "e2-a3-0006__bukaj-A",
+   "key": "5d00ed857fa0b6a5",
+   "base_key": "5d00ed857fa0b6a5",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.233,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 3914202218,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Dgd9MUMSyPeTgbbDIZ0t",
+   "voice_name": "Jacob - Soft Comfort",
+   "cand": "A",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 1.6,
+    "span_s": 1.16,
+    "words": 5,
+    "wpm": 258.6,
+    "syllables": 5,
+    "articulation_sps": 4.31,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.633,
+    "tail_to_60_s": 0.008,
+    "median_f0_hz": 107.5,
+    "f0_range_st": 9.0
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.42,
+     "t1": 0.64
+    },
+    {
+     "w": "you",
+     "t0": 0.698,
+     "t1": 0.814
+    },
+    {
+     "w": "It's",
+     "t0": 0.896,
+     "t1": 1.023
+    },
+    {
+     "w": "still",
+     "t0": 1.047,
+     "t1": 1.232
+    },
+    {
+     "w": "warm",
+     "t0": 1.267,
+     "t1": 1.534
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.78,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 107.5,
+    "f0_range_st": 9.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.633,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.09,
+    "raw_len_s": 1.533,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-A": {
+   "take": "e2-a3-0007__bukaj-A",
+   "key": "68f02868dc3d4695",
+   "base_key": "68f02868dc3d4695",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.787,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 646868802,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Dgd9MUMSyPeTgbbDIZ0t",
+   "voice_name": "Jacob - Soft Comfort",
+   "cand": "A",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 4.41,
+    "span_s": 4.03,
+    "words": 15,
+    "wpm": 223.3,
+    "syllables": 19,
+    "articulation_sps": 5.01,
+    "pauses_s": [
+     0.24,
+     0.06,
+     0.06,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.24,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.377,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 105.6,
+    "f0_range_st": 11.4
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.36,
+     "t1": 0.571
+    },
+    {
+     "w": "yet",
+     "t0": 0.617,
+     "t1": 0.861
+    },
+    {
+     "w": "I'd",
+     "t0": 1.36,
+     "t1": 1.499
+    },
+    {
+     "w": "like",
+     "t0": 1.534,
+     "t1": 1.662
+    },
+    {
+     "w": "a",
+     "t0": 1.697,
+     "t1": 1.72
+    },
+    {
+     "w": "week",
+     "t0": 1.766,
+     "t1": 1.952
+    },
+    {
+     "w": "in",
+     "t0": 1.999,
+     "t1": 2.068
+    },
+    {
+     "w": "it",
+     "t0": 2.115,
+     "t1": 2.208
+    },
+    {
+     "w": "before",
+     "t0": 2.266,
+     "t1": 2.568
+    },
+    {
+     "w": "anyone",
+     "t0": 2.626,
+     "t1": 2.962
+    },
+    {
+     "w": "asks",
+     "t0": 3.009,
+     "t1": 3.218
+    },
+    {
+     "w": "me",
+     "t0": 3.264,
+     "t1": 3.345
+    },
+    {
+     "w": "for",
+     "t0": 3.403,
+     "t1": 3.52
+    },
+    {
+     "w": "a",
+     "t0": 3.554,
+     "t1": 3.578
+    },
+    {
+     "w": "schedule",
+     "t0": 3.624,
+     "t1": 4.146
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.65,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 105.6,
+    "f0_range_st": 11.4,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.377,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 4.087,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0006__bukaj-B": {
+   "take": "e2-a3-0006__bukaj-B",
+   "key": "95fb490458507c97",
+   "base_key": "95fb490458507c97",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.836,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 494273396,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "a6sKd2pET9A8uwzfI5Yr",
+   "voice_name": "Scypher",
+   "cand": "B",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.36,
+    "span_s": 1.95,
+    "words": 5,
+    "wpm": 153.8,
+    "syllables": 5,
+    "articulation_sps": 3.82,
+    "pauses_s": [
+     0.17,
+     0.08,
+     0.13,
+     0.13,
+     0.1,
+     0.11
+    ],
+    "longest_internal_gap_s": 0.17,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.476,
+    "tail_to_60_s": 0.001,
+    "median_f0_hz": 106.3,
+    "f0_range_st": 5.6
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.39,
+     "t1": 0.594
+    },
+    {
+     "w": "you",
+     "t0": 0.629,
+     "t1": 0.768
+    },
+    {
+     "w": "It's",
+     "t0": 1.499,
+     "t1": 1.685
+    },
+    {
+     "w": "still",
+     "t0": 1.708,
+     "t1": 1.894
+    },
+    {
+     "w": "warm",
+     "t0": 1.941,
+     "t1": 2.161
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.55,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 106.3,
+    "f0_range_st": 5.6,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.476,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.065,
+    "raw_len_s": 2.136,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-B": {
+   "take": "e2-a3-0007__bukaj-B",
+   "key": "60f83fcfd1bcbc8b",
+   "base_key": "60f83fcfd1bcbc8b",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.926,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 245831530,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "a6sKd2pET9A8uwzfI5Yr",
+   "voice_name": "Scypher",
+   "cand": "B",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 4.27,
+    "span_s": 3.87,
+    "words": 15,
+    "wpm": 232.6,
+    "syllables": 19,
+    "articulation_sps": 6.51,
+    "pauses_s": [
+     0.52,
+     0.11,
+     0.32
+    ],
+    "longest_internal_gap_s": 0.52,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.656,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 109.3,
+    "f0_range_st": 8.7
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.38,
+     "t1": 0.536
+    },
+    {
+     "w": "yet",
+     "t0": 0.582,
+     "t1": 0.756
+    },
+    {
+     "w": "I'd",
+     "t0": 1.824,
+     "t1": 1.999
+    },
+    {
+     "w": "like",
+     "t0": 2.045,
+     "t1": 2.196
+    },
+    {
+     "w": "a",
+     "t0": 2.231,
+     "t1": 2.254
+    },
+    {
+     "w": "week",
+     "t0": 2.312,
+     "t1": 2.475
+    },
+    {
+     "w": "in",
+     "t0": 2.521,
+     "t1": 2.568
+    },
+    {
+     "w": "it",
+     "t0": 2.614,
+     "t1": 2.684
+    },
+    {
+     "w": "before",
+     "t0": 2.73,
+     "t1": 2.939
+    },
+    {
+     "w": "anyone",
+     "t0": 2.974,
+     "t1": 3.206
+    },
+    {
+     "w": "asks",
+     "t0": 3.241,
+     "t1": 3.496
+    },
+    {
+     "w": "me",
+     "t0": 3.543,
+     "t1": 3.612
+    },
+    {
+     "w": "for",
+     "t0": 3.659,
+     "t1": 3.763
+    },
+    {
+     "w": "a",
+     "t0": 3.798,
+     "t1": 3.821
+    },
+    {
+     "w": "schedule",
+     "t0": 3.845,
+     "t1": 4.251
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.22,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 109.3,
+    "f0_range_st": 8.7,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.656,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 4.226,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0006__bukaj-C": {
+   "take": "e2-a3-0006__bukaj-C",
+   "key": "74d42700f7580a29",
+   "base_key": "74d42700f7580a29",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.279,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 2679029277,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "edRtkKm7qEwZ8pH9ggtf",
+   "voice_name": "Antoine ",
+   "cand": "C",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.92,
+    "span_s": 1.57,
+    "words": 5,
+    "wpm": 191.1,
+    "syllables": 5,
+    "articulation_sps": 3.18,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.359,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 144.2,
+    "f0_range_st": 12.7
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.35,
+     "t1": 0.675
+    },
+    {
+     "w": "you",
+     "t0": 0.722,
+     "t1": 0.826
+    },
+    {
+     "w": "It's",
+     "t0": 0.884,
+     "t1": 1.023
+    },
+    {
+     "w": "still",
+     "t0": 1.047,
+     "t1": 1.279
+    },
+    {
+     "w": "warm",
+     "t0": 1.337,
+     "t1": 1.662
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.04,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 144.2,
+    "f0_range_st": 12.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.359,
+    "raw_tail_cut": true,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 1.579,
+    "raw_tail_cut": true
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-C": {
+   "take": "e2-a3-0007__bukaj-C",
+   "key": "a7bf5768af36314f",
+   "base_key": "a7bf5768af36314f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.926,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 969763038,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "edRtkKm7qEwZ8pH9ggtf",
+   "voice_name": "Antoine ",
+   "cand": "C",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 4.54,
+    "span_s": 4.19,
+    "words": 15,
+    "wpm": 214.8,
+    "syllables": 19,
+    "articulation_sps": 4.53,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.386,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 132.3,
+    "f0_range_st": 8.7
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.35,
+     "t1": 0.571
+    },
+    {
+     "w": "yet",
+     "t0": 0.605,
+     "t1": 0.884
+    },
+    {
+     "w": "I'd",
+     "t0": 1.244,
+     "t1": 1.395
+    },
+    {
+     "w": "like",
+     "t0": 1.43,
+     "t1": 1.581
+    },
+    {
+     "w": "a",
+     "t0": 1.615,
+     "t1": 1.65
+    },
+    {
+     "w": "week",
+     "t0": 1.732,
+     "t1": 1.952
+    },
+    {
+     "w": "in",
+     "t0": 1.999,
+     "t1": 2.057
+    },
+    {
+     "w": "it",
+     "t0": 2.115,
+     "t1": 2.196
+    },
+    {
+     "w": "before",
+     "t0": 2.254,
+     "t1": 2.521
+    },
+    {
+     "w": "anyone",
+     "t0": 2.568,
+     "t1": 2.916
+    },
+    {
+     "w": "asks",
+     "t0": 2.962,
+     "t1": 3.334
+    },
+    {
+     "w": "me",
+     "t0": 3.392,
+     "t1": 3.496
+    },
+    {
+     "w": "for",
+     "t0": 3.554,
+     "t1": 3.694
+    },
+    {
+     "w": "a",
+     "t0": 3.74,
+     "t1": 3.763
+    },
+    {
+     "w": "schedule",
+     "t0": 3.821,
+     "t1": 4.355
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.83,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 132.3,
+    "f0_range_st": 8.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.386,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.005,
+    "raw_len_s": 4.226,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0006__bukaj-D": {
+   "take": "e2-a3-0006__bukaj-D",
+   "key": "0de47e2df1b66f9c",
+   "base_key": "0de47e2df1b66f9c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.51,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 186415715,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "8z82LG47qQ2qjeeQB8lk",
+   "voice_name": "Kenneth - Storyteller",
+   "cand": "D",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.05,
+    "span_s": 1.67,
+    "words": 5,
+    "wpm": 179.6,
+    "syllables": 5,
+    "articulation_sps": 3.47,
+    "pauses_s": [
+     0.23
+    ],
+    "longest_internal_gap_s": 0.23,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 102.4,
+    "f0_range_st": 14.6
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.36,
+     "t1": 0.663
+    },
+    {
+     "w": "you",
+     "t0": 0.722,
+     "t1": 0.872
+    },
+    {
+     "w": "It's",
+     "t0": 1.174,
+     "t1": 1.36
+    },
+    {
+     "w": "still",
+     "t0": 1.383,
+     "t1": 1.604
+    },
+    {
+     "w": "warm",
+     "t0": 1.662,
+     "t1": 2.01
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.17,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 102.4,
+    "f0_range_st": 14.6,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 1.997,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-D": {
+   "take": "e2-a3-0007__bukaj-D",
+   "key": "32b3e44b7896343e",
+   "base_key": "32b3e44b7896343e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.2,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 1701970094,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "8z82LG47qQ2qjeeQB8lk",
+   "voice_name": "Kenneth - Storyteller",
+   "cand": "D",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 3.74,
+    "span_s": 3.35,
+    "words": 15,
+    "wpm": 268.7,
+    "syllables": 19,
+    "articulation_sps": 6.01,
+    "pauses_s": [
+     0.19
+    ],
+    "longest_internal_gap_s": 0.19,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 97.3,
+    "f0_range_st": 10.1
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.37,
+     "t1": 0.559
+    },
+    {
+     "w": "yet",
+     "t0": 0.605,
+     "t1": 0.849
+    },
+    {
+     "w": "I'd",
+     "t0": 1.151,
+     "t1": 1.29
+    },
+    {
+     "w": "like",
+     "t0": 1.325,
+     "t1": 1.453
+    },
+    {
+     "w": "a",
+     "t0": 1.476,
+     "t1": 1.499
+    },
+    {
+     "w": "week",
+     "t0": 1.546,
+     "t1": 1.708
+    },
+    {
+     "w": "in",
+     "t0": 1.743,
+     "t1": 1.79
+    },
+    {
+     "w": "it",
+     "t0": 1.836,
+     "t1": 1.894
+    },
+    {
+     "w": "before",
+     "t0": 1.941,
+     "t1": 2.196
+    },
+    {
+     "w": "anyone",
+     "t0": 2.231,
+     "t1": 2.509
+    },
+    {
+     "w": "asks",
+     "t0": 2.544,
+     "t1": 2.835
+    },
+    {
+     "w": "me",
+     "t0": 2.893,
+     "t1": 2.974
+    },
+    {
+     "w": "for",
+     "t0": 3.032,
+     "t1": 3.148
+    },
+    {
+     "w": "a",
+     "t0": 3.194,
+     "t1": 3.218
+    },
+    {
+     "w": "schedule",
+     "t0": 3.264,
+     "t1": 3.76
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.08,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 97.3,
+    "f0_range_st": 10.1,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 3.715,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0006__bukaj-B2": {
+   "take": "e2-a3-0006__bukaj-B2",
+   "key": "f28c021b9604e741",
+   "base_key": "f28c021b9604e741",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-B2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.254,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 494273396,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "a6sKd2pET9A8uwzfI5Yr",
+   "voice_name": "Scypher",
+   "cand": "B2",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.59,
+    "span_s": 2.18,
+    "words": 5,
+    "wpm": 137.6,
+    "syllables": 5,
+    "articulation_sps": 3.7,
+    "pauses_s": [
+     0.83
+    ],
+    "longest_internal_gap_s": 0.83,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.664,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 112.8,
+    "f0_range_st": 6.8
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.39,
+     "t1": 0.663
+    },
+    {
+     "w": "you",
+     "t0": 0.71,
+     "t1": 0.872
+    },
+    {
+     "w": "It's",
+     "t0": 1.732,
+     "t1": 1.952
+    },
+    {
+     "w": "still",
+     "t0": 1.975,
+     "t1": 2.208
+    },
+    {
+     "w": "warm",
+     "t0": 2.266,
+     "t1": 2.521
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.83,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 112.8,
+    "f0_range_st": 6.8,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.664,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.07,
+    "raw_len_s": 2.554,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-B2": {
+   "take": "e2-a3-0007__bukaj-B2",
+   "key": "5f43b6b8e734da61",
+   "base_key": "5f43b6b8e734da61",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-B2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.808,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 245831530,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "a6sKd2pET9A8uwzfI5Yr",
+   "voice_name": "Scypher",
+   "cand": "B2",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 5.09,
+    "span_s": 4.68,
+    "words": 15,
+    "wpm": 192.3,
+    "syllables": 19,
+    "articulation_sps": 5.54,
+    "pauses_s": [
+     1.25
+    ],
+    "longest_internal_gap_s": 1.25,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.718,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 109.5,
+    "f0_range_st": 9.6
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.39,
+     "t1": 0.582
+    },
+    {
+     "w": "yet",
+     "t0": 0.64,
+     "t1": 0.849
+    },
+    {
+     "w": "I'd",
+     "t0": 2.103,
+     "t1": 2.312
+    },
+    {
+     "w": "like",
+     "t0": 2.37,
+     "t1": 2.556
+    },
+    {
+     "w": "a",
+     "t0": 2.602,
+     "t1": 2.626
+    },
+    {
+     "w": "week",
+     "t0": 2.695,
+     "t1": 2.904
+    },
+    {
+     "w": "in",
+     "t0": 2.962,
+     "t1": 3.009
+    },
+    {
+     "w": "it",
+     "t0": 3.067,
+     "t1": 3.16
+    },
+    {
+     "w": "before",
+     "t0": 3.218,
+     "t1": 3.473
+    },
+    {
+     "w": "anyone",
+     "t0": 3.52,
+     "t1": 3.81
+    },
+    {
+     "w": "asks",
+     "t0": 3.856,
+     "t1": 4.158
+    },
+    {
+     "w": "me",
+     "t0": 4.216,
+     "t1": 4.309
+    },
+    {
+     "w": "for",
+     "t0": 4.367,
+     "t1": 4.506
+    },
+    {
+     "w": "a",
+     "t0": 4.553,
+     "t1": 4.576
+    },
+    {
+     "w": "schedule",
+     "t0": 4.599,
+     "t1": 5.098
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.32,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 109.5,
+    "f0_range_st": 9.6,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.718,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 5.108,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0006__bukaj-D2": {
+   "take": "e2-a3-0006__bukaj-D2",
+   "key": "a6087747b11e027f",
+   "base_key": "a6087747b11e027f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0006__bukaj-D2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.925,
+   "offset_s": 0.35,
+   "sent": "Thank you. It's still warm.",
+   "seed": 186415715,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "8z82LG47qQ2qjeeQB8lk",
+   "voice_name": "Kenneth - Storyteller",
+   "cand": "D2",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.47,
+    "span_s": 2.11,
+    "words": 5,
+    "wpm": 142.2,
+    "syllables": 5,
+    "articulation_sps": 2.65,
+    "pauses_s": [
+     0.22
+    ],
+    "longest_internal_gap_s": 0.22,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 84.8,
+    "f0_range_st": 14.8
+   },
+   "words": [
+    {
+     "w": "Thank",
+     "t0": 0.35,
+     "t1": 0.745
+    },
+    {
+     "w": "you",
+     "t0": 0.814,
+     "t1": 1.0
+    },
+    {
+     "w": "It's",
+     "t0": 1.372,
+     "t1": 1.604
+    },
+    {
+     "w": "still",
+     "t0": 1.627,
+     "t1": 1.906
+    },
+    {
+     "w": "warm",
+     "t0": 1.975,
+     "t1": 2.405
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.23,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 84.8,
+    "f0_range_st": 14.8,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 2.461,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0007__bukaj-D2": {
+   "take": "e2-a3-0007__bukaj-D2",
+   "key": "1cd6a7ffae5e0a17",
+   "base_key": "1cd6a7ffae5e0a17",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/bukaj/wav/e2-a3-0007__bukaj-D2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 5.015,
+   "offset_s": 0.35,
+   "sent": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+   "seed": 1701970094,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "8z82LG47qQ2qjeeQB8lk",
+   "voice_name": "Kenneth - Storyteller",
+   "cand": "D2",
+   "role": "bukaj",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 4.56,
+    "span_s": 4.16,
+    "words": 15,
+    "wpm": 216.3,
+    "syllables": 19,
+    "articulation_sps": 4.82,
+    "pauses_s": [
+     0.22
+    ],
+    "longest_internal_gap_s": 0.22,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 93.9,
+    "f0_range_st": 12.6
+   },
+   "words": [
+    {
+     "w": "Not",
+     "t0": 0.38,
+     "t1": 0.605
+    },
+    {
+     "w": "yet",
+     "t0": 0.663,
+     "t1": 0.965
+    },
+    {
+     "w": "I'd",
+     "t0": 1.337,
+     "t1": 1.511
+    },
+    {
+     "w": "like",
+     "t0": 1.557,
+     "t1": 1.72
+    },
+    {
+     "w": "a",
+     "t0": 1.743,
+     "t1": 1.766
+    },
+    {
+     "w": "week",
+     "t0": 1.824,
+     "t1": 2.022
+    },
+    {
+     "w": "in",
+     "t0": 2.068,
+     "t1": 2.115
+    },
+    {
+     "w": "it",
+     "t0": 2.173,
+     "t1": 2.242
+    },
+    {
+     "w": "before",
+     "t0": 2.3,
+     "t1": 2.614
+    },
+    {
+     "w": "anyone",
+     "t0": 2.66,
+     "t1": 3.009
+    },
+    {
+     "w": "asks",
+     "t0": 3.055,
+     "t1": 3.415
+    },
+    {
+     "w": "me",
+     "t0": 3.485,
+     "t1": 3.589
+    },
+    {
+     "w": "for",
+     "t0": 3.659,
+     "t1": 3.81
+    },
+    {
+     "w": "a",
+     "t0": 3.868,
+     "t1": 3.891
+    },
+    {
+     "w": "schedule",
+     "t0": 3.949,
+     "t1": 4.58
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.35,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 93.9,
+    "f0_range_st": 12.6,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 4.598,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0006__bukaj-A",
+   "key": "5d00ed857fa0b6a5",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "69gZPiD2ZeODhpMr2Sxf",
+   "at": "00:16:38"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-A",
+   "key": "68f02868dc3d4695",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "lezT99ercMMTRVMYn2m4",
+   "at": "00:16:41"
+  },
+  {
+   "take": "e2-a3-0006__bukaj-B",
+   "key": "95fb490458507c97",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "8Ublk0Q6xedzOk4Sc3lT",
+   "at": "00:16:46"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-B",
+   "key": "60f83fcfd1bcbc8b",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "uqrLpLVMFdhlQnw9HrQj",
+   "at": "00:16:48"
+  },
+  {
+   "take": "e2-a3-0006__bukaj-C",
+   "key": "74d42700f7580a29",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "pAGc6YBWJZbiT9GL3wME",
+   "at": "00:16:53"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-C",
+   "key": "a7bf5768af36314f",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "jnzQmvuGCDnhf2LdZuWU",
+   "at": "00:16:55"
+  },
+  {
+   "take": "e2-a3-0006__bukaj-D",
+   "key": "0de47e2df1b66f9c",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "vPdFevDPawWFTlSd31jq",
+   "at": "00:16:58"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-D",
+   "key": "32b3e44b7896343e",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "Eh2deDsGVVXleHHunFT1",
+   "at": "00:17:01"
+  },
+  {
+   "take": "e2-a3-0006__bukaj-B2",
+   "key": "f28c021b9604e741",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "BvRpCV9vEf1cSdMCDEmM",
+   "at": "03:29:39"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-B2",
+   "key": "5f43b6b8e734da61",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "HPdN3LDwcOeeBakZ7ocw",
+   "at": "03:29:41"
+  },
+  {
+   "take": "e2-a3-0006__bukaj-D2",
+   "key": "a6087747b11e027f",
+   "chars": 27,
+   "cost_header": "12",
+   "request_id": "XtyHwSid2skoSKCH9S4l",
+   "at": "03:29:43"
+  },
+  {
+   "take": "e2-a3-0007__bukaj-D2",
+   "key": "1cd6a7ffae5e0a17",
+   "chars": 68,
+   "cost_header": "30",
+   "request_id": "4GhF6ZYVvZiYiNhomQdT",
+   "at": "03:29:45"
+  }
+ ]
+}

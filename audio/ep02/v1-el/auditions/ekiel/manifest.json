@@ -1,0 +1,1240 @@
+{
+ "takes": {
+  "e2-a3-0014__ekiel-A": {
+   "take": "e2-a3-0014__ekiel-A",
+   "key": "42543d1ccf0e0d7c",
+   "base_key": "42543d1ccf0e0d7c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.325,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 300030589,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "USXpAZuBZ22GqtSpuKoQ",
+   "voice_name": "Mike Belkowski",
+   "cand": "A",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 1.74,
+    "span_s": 1.38,
+    "words": 7,
+    "wpm": 304.3,
+    "syllables": 9,
+    "articulation_sps": 6.52,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.585,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 98.9,
+    "f0_range_st": 7.6
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.35,
+     "t1": 0.675
+    },
+    {
+     "w": "knows",
+     "t0": 0.71,
+     "t1": 0.849
+    },
+    {
+     "w": "how",
+     "t0": 0.884,
+     "t1": 0.965
+    },
+    {
+     "w": "to",
+     "t0": 1.0,
+     "t1": 1.047
+    },
+    {
+     "w": "do",
+     "t0": 1.105,
+     "t1": 1.198
+    },
+    {
+     "w": "this",
+     "t0": 1.244,
+     "t1": 1.372
+    },
+    {
+     "w": "yet",
+     "t0": 1.418,
+     "t1": 1.65
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.54,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 98.9,
+    "f0_range_st": 7.6,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.585,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 1.625,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-A": {
+   "take": "e2-a4-0010__ekiel-A",
+   "key": "c14aa9f6dbc177e7",
+   "base_key": "c14aa9f6dbc177e7",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.372,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 2746140324,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "USXpAZuBZ22GqtSpuKoQ",
+   "voice_name": "Mike Belkowski",
+   "cand": "A",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.86,
+    "span_s": 1.49,
+    "words": 4,
+    "wpm": 161.1,
+    "syllables": 10,
+    "articulation_sps": 6.71,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.512,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 99.4,
+    "f0_range_st": 8.6
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.35,
+     "t1": 0.513
+    },
+    {
+     "w": "annotated",
+     "t0": 0.582,
+     "t1": 0.965
+    },
+    {
+     "w": "my",
+     "t0": 1.0,
+     "t1": 1.07
+    },
+    {
+     "w": "resignation",
+     "t0": 1.139,
+     "t1": 1.743
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.86,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 99.4,
+    "f0_range_st": 8.6,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.512,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 1.672,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0014__ekiel-B": {
+   "take": "e2-a3-0014__ekiel-B",
+   "key": "97595520cf82eb3e",
+   "base_key": "97595520cf82eb3e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.31,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 3810832027,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "UQoLnPXvf18gaKpLzfb8",
+   "voice_name": "Sawyer - Calm, Measured and Serious",
+   "cand": "B",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.83,
+    "span_s": 1.43,
+    "words": 7,
+    "wpm": 293.7,
+    "syllables": 9,
+    "articulation_sps": 6.29,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.48,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 67.1,
+    "f0_range_st": 10.0
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.38,
+     "t1": 0.745
+    },
+    {
+     "w": "knows",
+     "t0": 0.791,
+     "t1": 0.989
+    },
+    {
+     "w": "how",
+     "t0": 1.035,
+     "t1": 1.139
+    },
+    {
+     "w": "to",
+     "t0": 1.186,
+     "t1": 1.232
+    },
+    {
+     "w": "do",
+     "t0": 1.29,
+     "t1": 1.372
+    },
+    {
+     "w": "this",
+     "t0": 1.43,
+     "t1": 1.569
+    },
+    {
+     "w": "yet",
+     "t0": 1.639,
+     "t1": 1.85
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.12,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 67.1,
+    "f0_range_st": 10.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.48,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 1.904,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-B": {
+   "take": "e2-a4-0010__ekiel-B",
+   "key": "00cd39a2beefb1f9",
+   "base_key": "00cd39a2beefb1f9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.465,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 75474087,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "UQoLnPXvf18gaKpLzfb8",
+   "voice_name": "Sawyer - Calm, Measured and Serious",
+   "cand": "B",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 2.01,
+    "span_s": 1.61,
+    "words": 4,
+    "wpm": 149.1,
+    "syllables": 10,
+    "articulation_sps": 6.21,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 123.1,
+    "f0_range_st": 11.6
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.38,
+     "t1": 0.524
+    },
+    {
+     "w": "annotated",
+     "t0": 0.617,
+     "t1": 1.163
+    },
+    {
+     "w": "my",
+     "t0": 1.209,
+     "t1": 1.302
+    },
+    {
+     "w": "resignation",
+     "t0": 1.383,
+     "t1": 1.975
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.55,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 123.1,
+    "f0_range_st": 11.6,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.455,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 1.997,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0014__ekiel-C": {
+   "take": "e2-a3-0014__ekiel-C",
+   "key": "948998dad23f5f28",
+   "base_key": "948998dad23f5f28",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.325,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 906627719,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Smxkoz0xiOoHo5WcSskf",
+   "voice_name": "Dexter – Customer Support Pro",
+   "cand": "C",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 1.92,
+    "span_s": 1.55,
+    "words": 7,
+    "wpm": 271.0,
+    "syllables": 9,
+    "articulation_sps": 5.81,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.405,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 9.8
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.35,
+     "t1": 0.675
+    },
+    {
+     "w": "knows",
+     "t0": 0.698,
+     "t1": 0.849
+    },
+    {
+     "w": "how",
+     "t0": 0.884,
+     "t1": 0.965
+    },
+    {
+     "w": "to",
+     "t0": 1.012,
+     "t1": 1.058
+    },
+    {
+     "w": "do",
+     "t0": 1.105,
+     "t1": 1.186
+    },
+    {
+     "w": "this",
+     "t0": 1.232,
+     "t1": 1.36
+    },
+    {
+     "w": "yet",
+     "t0": 1.418,
+     "t1": 1.604
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.61,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 112.7,
+    "f0_range_st": 9.8,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.405,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 1.625,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-C": {
+   "take": "e2-a4-0010__ekiel-C",
+   "key": "9bb10bc187436f21",
+   "base_key": "9bb10bc187436f21",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.372,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 4266159304,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Smxkoz0xiOoHo5WcSskf",
+   "voice_name": "Dexter – Customer Support Pro",
+   "cand": "C",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.93,
+    "span_s": 1.53,
+    "words": 4,
+    "wpm": 156.9,
+    "syllables": 10,
+    "articulation_sps": 6.54,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.442,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 110.2,
+    "f0_range_st": 9.3
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.38,
+     "t1": 0.513
+    },
+    {
+     "w": "annotated",
+     "t0": 0.582,
+     "t1": 0.954
+    },
+    {
+     "w": "my",
+     "t0": 1.0,
+     "t1": 1.07
+    },
+    {
+     "w": "resignation",
+     "t0": 1.139,
+     "t1": 1.697
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.85,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 110.2,
+    "f0_range_st": 9.3,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.442,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.085,
+    "raw_len_s": 1.672,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0014__ekiel-D": {
+   "take": "e2-a3-0014__ekiel-D",
+   "key": "0986db3caf007548",
+   "base_key": "0986db3caf007548",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.325,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 3063210330,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "QzclONYwRWvec152I3wf",
+   "voice_name": "Brandon",
+   "cand": "D",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.96,
+    "span_s": 1.61,
+    "words": 7,
+    "wpm": 260.9,
+    "syllables": 9,
+    "articulation_sps": 5.59,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.365,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 116.7,
+    "f0_range_st": 15.7
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.35,
+     "t1": 0.663
+    },
+    {
+     "w": "knows",
+     "t0": 0.687,
+     "t1": 0.826
+    },
+    {
+     "w": "how",
+     "t0": 0.861,
+     "t1": 0.93
+    },
+    {
+     "w": "to",
+     "t0": 0.965,
+     "t1": 1.012
+    },
+    {
+     "w": "do",
+     "t0": 1.07,
+     "t1": 1.163
+    },
+    {
+     "w": "this",
+     "t0": 1.209,
+     "t1": 1.337
+    },
+    {
+     "w": "yet",
+     "t0": 1.395,
+     "t1": 1.604
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.83,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 116.7,
+    "f0_range_st": 15.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.365,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 1.625,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-D": {
+   "take": "e2-a4-0010__ekiel-D",
+   "key": "b9954b7e666f8571",
+   "base_key": "b9954b7e666f8571",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.465,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 3712751669,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "QzclONYwRWvec152I3wf",
+   "voice_name": "Brandon",
+   "cand": "D",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.07,
+    "span_s": 1.71,
+    "words": 4,
+    "wpm": 140.4,
+    "syllables": 10,
+    "articulation_sps": 5.85,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.395,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 114.9,
+    "f0_range_st": 7.3
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.35,
+     "t1": 0.524
+    },
+    {
+     "w": "annotated",
+     "t0": 0.594,
+     "t1": 1.023
+    },
+    {
+     "w": "my",
+     "t0": 1.058,
+     "t1": 1.128
+    },
+    {
+     "w": "resignation",
+     "t0": 1.198,
+     "t1": 1.79
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.47,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 114.9,
+    "f0_range_st": 7.3,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.395,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 1.765,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0014__ekiel-C2": {
+   "take": "e2-a3-0014__ekiel-C2",
+   "key": "b90f5500a6c508bf",
+   "base_key": "b90f5500a6c508bf",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-C2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.65,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 906627719,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "Smxkoz0xiOoHo5WcSskf",
+   "voice_name": "Dexter – Customer Support Pro",
+   "cand": "C2",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 1.9,
+    "span_s": 1.52,
+    "words": 7,
+    "wpm": 276.3,
+    "syllables": 9,
+    "articulation_sps": 5.92,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.75,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 115.2,
+    "f0_range_st": 8.5
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.36,
+     "t1": 0.745
+    },
+    {
+     "w": "knows",
+     "t0": 0.768,
+     "t1": 0.954
+    },
+    {
+     "w": "how",
+     "t0": 1.0,
+     "t1": 1.093
+    },
+    {
+     "w": "to",
+     "t0": 1.151,
+     "t1": 1.198
+    },
+    {
+     "w": "do",
+     "t0": 1.256,
+     "t1": 1.36
+    },
+    {
+     "w": "this",
+     "t0": 1.418,
+     "t1": 1.569
+    },
+    {
+     "w": "yet",
+     "t0": 1.639,
+     "t1": 1.883
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.61,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 115.2,
+    "f0_range_st": 8.5,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.75,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 1.95,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-C2": {
+   "take": "e2-a4-0010__ekiel-C2",
+   "key": "40b08c6d6c7fce86",
+   "base_key": "40b08c6d6c7fce86",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-C2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.79,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 4266159304,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "Smxkoz0xiOoHo5WcSskf",
+   "voice_name": "Dexter – Customer Support Pro",
+   "cand": "C2",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.39,
+    "span_s": 1.95,
+    "words": 4,
+    "wpm": 123.1,
+    "syllables": 10,
+    "articulation_sps": 5.43,
+    "pauses_s": [
+     0.11
+    ],
+    "longest_internal_gap_s": 0.11,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.4,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 103.8,
+    "f0_range_st": 8.5
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.42,
+     "t1": 0.559
+    },
+    {
+     "w": "annotated",
+     "t0": 0.652,
+     "t1": 1.105
+    },
+    {
+     "w": "my",
+     "t0": 1.163,
+     "t1": 1.256
+    },
+    {
+     "w": "resignation",
+     "t0": 1.348,
+     "t1": 2.057
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.54,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 103.8,
+    "f0_range_st": 8.5,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.4,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.12,
+    "raw_len_s": 2.09,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0014__ekiel-A2": {
+   "take": "e2-a3-0014__ekiel-A2",
+   "key": "298b75ca8cff4191",
+   "base_key": "298b75ca8cff4191",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a3-0014__ekiel-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.697,
+   "offset_s": 0.35,
+   "sent": "Nobody knows how to do this yet.",
+   "seed": 300030589,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "USXpAZuBZ22GqtSpuKoQ",
+   "voice_name": "Mike Belkowski",
+   "cand": "A2",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.32,
+    "span_s": 1.96,
+    "words": 7,
+    "wpm": 214.3,
+    "syllables": 9,
+    "articulation_sps": 4.84,
+    "pauses_s": [
+     0.1
+    ],
+    "longest_internal_gap_s": 0.1,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.377,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 102.0,
+    "f0_range_st": 15.4
+   },
+   "words": [
+    {
+     "w": "Nobody",
+     "t0": 0.35,
+     "t1": 0.756
+    },
+    {
+     "w": "knows",
+     "t0": 0.803,
+     "t1": 0.965
+    },
+    {
+     "w": "how",
+     "t0": 1.012,
+     "t1": 1.105
+    },
+    {
+     "w": "to",
+     "t0": 1.151,
+     "t1": 1.198
+    },
+    {
+     "w": "do",
+     "t0": 1.267,
+     "t1": 1.383
+    },
+    {
+     "w": "this",
+     "t0": 1.441,
+     "t1": 1.592
+    },
+    {
+     "w": "yet",
+     "t0": 1.65,
+     "t1": 1.941
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.87,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 102.0,
+    "f0_range_st": 15.4,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.377,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 1.997,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a4-0010__ekiel-A2": {
+   "take": "e2-a4-0010__ekiel-A2",
+   "key": "43e11a321803efbe",
+   "base_key": "43e11a321803efbe",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/ekiel/wav/e2-a4-0010__ekiel-A2.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.836,
+   "offset_s": 0.35,
+   "sent": "You annotated my resignation?",
+   "seed": 2746140324,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "voice_id": "USXpAZuBZ22GqtSpuKoQ",
+   "voice_name": "Mike Belkowski",
+   "cand": "A2",
+   "role": "ekiel",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.22,
+    "span_s": 1.84,
+    "words": 4,
+    "wpm": 130.4,
+    "syllables": 10,
+    "articulation_sps": 5.43,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.616,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 108.1,
+    "f0_range_st": 6.8
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.36,
+     "t1": 0.559
+    },
+    {
+     "w": "annotated",
+     "t0": 0.652,
+     "t1": 1.128
+    },
+    {
+     "w": "my",
+     "t0": 1.174,
+     "t1": 1.267
+    },
+    {
+     "w": "resignation",
+     "t0": 1.36,
+     "t1": 2.115
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.17,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 108.1,
+    "f0_range_st": 6.8,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.616,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 2.136,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0014__ekiel-A",
+   "key": "42543d1ccf0e0d7c",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "WTtV999EyCuJpuvdI6pS",
+   "at": "00:17:04"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-A",
+   "key": "c14aa9f6dbc177e7",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "MQ2B0MukLijRHgTbLUfE",
+   "at": "00:17:06"
+  },
+  {
+   "take": "e2-a3-0014__ekiel-B",
+   "key": "97595520cf82eb3e",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "hndevUFt3CfrjQAVSKl8",
+   "at": "00:17:12"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-B",
+   "key": "00cd39a2beefb1f9",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "hYHwSqy2abVEXR3QDGDn",
+   "at": "00:17:14"
+  },
+  {
+   "take": "e2-a3-0014__ekiel-C",
+   "key": "948998dad23f5f28",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "U5KgpuNYj4JSNyIS4Pzx",
+   "at": "00:17:24"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-C",
+   "key": "9bb10bc187436f21",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "eK61NXDX1Rrm8QBCJcuo",
+   "at": "00:17:27"
+  },
+  {
+   "take": "e2-a3-0014__ekiel-D",
+   "key": "0986db3caf007548",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "nzZo6Aam0fZ7Z1eggu8D",
+   "at": "00:17:33"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-D",
+   "key": "b9954b7e666f8571",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "h5cAx8z1g6mgyX5Ruium",
+   "at": "00:17:34"
+  },
+  {
+   "take": "e2-a3-0014__ekiel-C2",
+   "key": "b90f5500a6c508bf",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "XZGrMKKcuH0R4isjEKPc",
+   "at": "03:29:46"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-C2",
+   "key": "40b08c6d6c7fce86",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "dH53kLKENCbelTfrP7zd",
+   "at": "03:29:48"
+  },
+  {
+   "take": "e2-a3-0014__ekiel-A2",
+   "key": "298b75ca8cff4191",
+   "chars": 32,
+   "cost_header": "14",
+   "request_id": "Pf1pDXtqrw0Lyj4s3YlG",
+   "at": "03:29:49"
+  },
+  {
+   "take": "e2-a4-0010__ekiel-A2",
+   "key": "43e11a321803efbe",
+   "chars": 29,
+   "cost_header": "13",
+   "request_id": "fv6MXfVvQL2lZf25bE65",
+   "at": "03:29:51"
+  }
+ ]
+}

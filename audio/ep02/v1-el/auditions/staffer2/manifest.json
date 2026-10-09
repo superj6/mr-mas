@@ -1,0 +1,476 @@
+{
+ "takes": {
+  "e2-a3-0002__staffer2-A": {
+   "take": "e2-a3-0002__staffer2-A",
+   "key": "17b16dda007d2e87",
+   "base_key": "17b16dda007d2e87",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.835,
+   "offset_s": 0.35,
+   "sent": "In the corridor, last week. For a second.",
+   "seed": 1056005199,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "uG1JFy6xppqckhHCs2KG",
+   "voice_name": "Sarah - Casual & Modern",
+   "cand": "A",
+   "role": "staffer2",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 2.27,
+    "span_s": 1.87,
+    "words": 8,
+    "wpm": 256.7,
+    "syllables": 11,
+    "articulation_sps": 6.71,
+    "pauses_s": [
+     0.23
+    ],
+    "longest_internal_gap_s": 0.23,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.565,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 181.1,
+    "f0_range_st": 6.0
+   },
+   "words": [
+    {
+     "w": "In",
+     "t0": 0.38,
+     "t1": 0.478
+    },
+    {
+     "w": "the",
+     "t0": 0.513,
+     "t1": 0.582
+    },
+    {
+     "w": "corridor",
+     "t0": 0.617,
+     "t1": 0.977
+    },
+    {
+     "w": "last",
+     "t0": 1.116,
+     "t1": 1.325
+    },
+    {
+     "w": "week",
+     "t0": 1.36,
+     "t1": 1.546
+    },
+    {
+     "w": "For",
+     "t0": 1.732,
+     "t1": 1.871
+    },
+    {
+     "w": "a",
+     "t0": 1.917,
+     "t1": 1.941
+    },
+    {
+     "w": "second",
+     "t0": 1.987,
+     "t1": 2.29
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.27,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 181.1,
+    "f0_range_st": 6.0,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.565,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.055,
+    "raw_len_s": 2.322,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0002__staffer2-B": {
+   "take": "e2-a3-0002__staffer2-B",
+   "key": "548e133f3f8a7c23",
+   "base_key": "548e133f3f8a7c23",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.068,
+   "offset_s": 0.35,
+   "sent": "In the corridor, last week. For a second.",
+   "seed": 1533212722,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "Awx8TeMHHpDzbm42nIB6",
+   "voice_name": "Kristen - Friendly and Casual BFF",
+   "cand": "B",
+   "role": "staffer2",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 2.56,
+    "span_s": 2.19,
+    "words": 8,
+    "wpm": 219.2,
+    "syllables": 11,
+    "articulation_sps": 5.56,
+    "pauses_s": [
+     0.21
+    ],
+    "longest_internal_gap_s": 0.21,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.508,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 221.1,
+    "f0_range_st": 7.6
+   },
+   "words": [
+    {
+     "w": "In",
+     "t0": 0.35,
+     "t1": 0.513
+    },
+    {
+     "w": "the",
+     "t0": 0.559,
+     "t1": 0.629
+    },
+    {
+     "w": "corridor",
+     "t0": 0.675,
+     "t1": 1.093
+    },
+    {
+     "w": "last",
+     "t0": 1.163,
+     "t1": 1.383
+    },
+    {
+     "w": "week",
+     "t0": 1.43,
+     "t1": 1.662
+    },
+    {
+     "w": "For",
+     "t0": 1.929,
+     "t1": 2.068
+    },
+    {
+     "w": "a",
+     "t0": 2.103,
+     "t1": 2.126
+    },
+    {
+     "w": "second",
+     "t0": 2.173,
+     "t1": 2.475
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.65,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 221.1,
+    "f0_range_st": 7.6,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.508,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 2.368,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0002__staffer2-C": {
+   "take": "e2-a3-0002__staffer2-C",
+   "key": "d42ccb44f041844e",
+   "base_key": "d42ccb44f041844e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.022,
+   "offset_s": 0.35,
+   "sent": "In the corridor, last week. For a second.",
+   "seed": 2460328025,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "yj30vwTGJxSHezdAGsv9",
+   "voice_name": "Jessa - Easygoing and Effortless",
+   "cand": "C",
+   "role": "staffer2",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 2.39,
+    "span_s": 2.0,
+    "words": 8,
+    "wpm": 240.0,
+    "syllables": 11,
+    "articulation_sps": 6.59,
+    "pauses_s": [
+     0.06,
+     0.33
+    ],
+    "longest_internal_gap_s": 0.33,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.632,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 178.7,
+    "f0_range_st": 6.8
+   },
+   "words": [
+    {
+     "w": "In",
+     "t0": 0.37,
+     "t1": 0.501
+    },
+    {
+     "w": "the",
+     "t0": 0.547,
+     "t1": 0.617
+    },
+    {
+     "w": "corridor",
+     "t0": 0.663,
+     "t1": 1.023
+    },
+    {
+     "w": "last",
+     "t0": 1.07,
+     "t1": 1.256
+    },
+    {
+     "w": "week",
+     "t0": 1.29,
+     "t1": 1.511
+    },
+    {
+     "w": "For",
+     "t0": 1.871,
+     "t1": 1.999
+    },
+    {
+     "w": "a",
+     "t0": 2.033,
+     "t1": 2.057
+    },
+    {
+     "w": "second",
+     "t0": 2.091,
+     "t1": 2.41
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.36,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 178.7,
+    "f0_range_st": 6.8,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.632,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.04,
+    "raw_len_s": 2.322,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0002__staffer2-D": {
+   "take": "e2-a3-0002__staffer2-D",
+   "key": "5e5f17008561a135",
+   "base_key": "5e5f17008561a135",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/staffer2/wav/e2-a3-0002__staffer2-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.161,
+   "offset_s": 0.35,
+   "sent": "In the corridor, last week. For a second.",
+   "seed": 2936914703,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "09AoN6tYyW3VSTQqCo7C",
+   "voice_name": "Jessi - Friendly, Smooth, and Soft",
+   "cand": "D",
+   "role": "staffer2",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.79,
+    "span_s": 2.38,
+    "words": 8,
+    "wpm": 201.7,
+    "syllables": 11,
+    "articulation_sps": 5.14,
+    "pauses_s": [
+     0.06,
+     0.24
+    ],
+    "longest_internal_gap_s": 0.24,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.371,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 187.9,
+    "f0_range_st": 5.5
+   },
+   "words": [
+    {
+     "w": "In",
+     "t0": 0.39,
+     "t1": 0.489
+    },
+    {
+     "w": "the",
+     "t0": 0.536,
+     "t1": 0.605
+    },
+    {
+     "w": "corridor",
+     "t0": 0.652,
+     "t1": 1.081
+    },
+    {
+     "w": "last",
+     "t0": 1.209,
+     "t1": 1.453
+    },
+    {
+     "w": "week",
+     "t0": 1.499,
+     "t1": 1.732
+    },
+    {
+     "w": "For",
+     "t0": 1.848,
+     "t1": 1.987
+    },
+    {
+     "w": "a",
+     "t0": 2.033,
+     "t1": 2.057
+    },
+    {
+     "w": "second",
+     "t0": 2.103,
+     "t1": 2.486
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.61,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 187.9,
+    "f0_range_st": 5.5,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.371,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 2.461,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0002__staffer2-A",
+   "key": "17b16dda007d2e87",
+   "chars": 41,
+   "cost_header": "18",
+   "request_id": "bFKknM2rcuao1s5a4qR5",
+   "at": "00:15:52"
+  },
+  {
+   "take": "e2-a3-0002__staffer2-B",
+   "key": "548e133f3f8a7c23",
+   "chars": 41,
+   "cost_header": "18",
+   "request_id": "0S9uE9uDJNJX8u7fZylh",
+   "at": "00:15:58"
+  },
+  {
+   "take": "e2-a3-0002__staffer2-C",
+   "key": "d42ccb44f041844e",
+   "chars": 41,
+   "cost_header": "18",
+   "request_id": "UtHBRgwsLbC3T3Qdi1VX",
+   "at": "00:16:03"
+  },
+  {
+   "take": "e2-a3-0002__staffer2-D",
+   "key": "5e5f17008561a135",
+   "chars": 41,
+   "cost_header": "18",
+   "request_id": "XCSNjeTnfKmFQnBoogrJ",
+   "at": "00:16:11"
+  }
+ ]
+}

@@ -1,0 +1,1025 @@
+{
+ "takes": {
+  "e2-a3-0017__driver-A": {
+   "take": "e2-a3-0017__driver-A",
+   "key": "f8d37595ac52b241",
+   "base_key": "f8d37595ac52b241",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.322,
+   "offset_s": 0.35,
+   "sent": "You gonna think it over, or can we move? We're parked on it.",
+   "seed": 1692858190,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "pwMBn0SsmN1220Aorv15",
+   "voice_name": "Matt - Natural, Chatty, Friendly",
+   "cand": "A",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 3.81,
+    "span_s": 3.43,
+    "words": 13,
+    "wpm": 227.4,
+    "syllables": 15,
+    "articulation_sps": 4.73,
+    "pauses_s": [
+     0.26,
+     0.07,
+     0.06,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.26,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.512,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 115.3,
+    "f0_range_st": 13.4
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.36,
+     "t1": 0.513
+    },
+    {
+     "w": "gonna",
+     "t0": 0.559,
+     "t1": 0.733
+    },
+    {
+     "w": "think",
+     "t0": 0.768,
+     "t1": 0.907
+    },
+    {
+     "w": "it",
+     "t0": 0.954,
+     "t1": 1.012
+    },
+    {
+     "w": "over",
+     "t0": 1.058,
+     "t1": 1.314
+    },
+    {
+     "w": "or",
+     "t0": 1.604,
+     "t1": 1.732
+    },
+    {
+     "w": "can",
+     "t0": 1.79,
+     "t1": 1.906
+    },
+    {
+     "w": "we",
+     "t0": 1.952,
+     "t1": 2.033
+    },
+    {
+     "w": "move",
+     "t0": 2.103,
+     "t1": 2.475
+    },
+    {
+     "w": "We're",
+     "t0": 2.835,
+     "t1": 3.067
+    },
+    {
+     "w": "parked",
+     "t0": 3.102,
+     "t1": 3.392
+    },
+    {
+     "w": "on",
+     "t0": 3.438,
+     "t1": 3.531
+    },
+    {
+     "w": "it",
+     "t0": 3.566,
+     "t1": 3.67
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.5,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 115.3,
+    "f0_range_st": 13.4,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.512,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 3.622,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0022__driver-A": {
+   "take": "e2-a3-0022__driver-A",
+   "key": "3fd7fb75c015e044",
+   "base_key": "3fd7fb75c015e044",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.183,
+   "offset_s": 0.35,
+   "sent": "Excuse me. Does honking count as disparagement?",
+   "seed": 2750867249,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "pwMBn0SsmN1220Aorv15",
+   "voice_name": "Matt - Natural, Chatty, Friendly",
+   "cand": "A",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 3.78,
+    "span_s": 3.42,
+    "words": 7,
+    "wpm": 122.8,
+    "syllables": 13,
+    "articulation_sps": 3.95,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.403,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 123.8,
+    "f0_range_st": 13.5
+   },
+   "words": [
+    {
+     "w": "Excuse",
+     "t0": 0.35,
+     "t1": 0.768
+    },
+    {
+     "w": "me",
+     "t0": 0.803,
+     "t1": 0.954
+    },
+    {
+     "w": "Does",
+     "t0": 1.604,
+     "t1": 1.848
+    },
+    {
+     "w": "honking",
+     "t0": 1.906,
+     "t1": 2.266
+    },
+    {
+     "w": "count",
+     "t0": 2.335,
+     "t1": 2.591
+    },
+    {
+     "w": "as",
+     "t0": 2.637,
+     "t1": 2.742
+    },
+    {
+     "w": "disparagement",
+     "t0": 2.835,
+     "t1": 3.52
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.81,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 123.8,
+    "f0_range_st": 13.5,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.403,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 3.483,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0017__driver-B": {
+   "take": "e2-a3-0017__driver-B",
+   "key": "d74de4369b6b9510",
+   "base_key": "d74de4369b6b9510",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.997,
+   "offset_s": 0.35,
+   "sent": "You gonna think it over, or can we move? We're parked on it.",
+   "seed": 782372725,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "J9NvviOEdVm6E7Hwdpdj",
+   "voice_name": "Jerry B. - Authentic, Clear & Engaging",
+   "cand": "B",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 3.3,
+    "span_s": 2.86,
+    "words": 13,
+    "wpm": 272.7,
+    "syllables": 15,
+    "articulation_sps": 6.28,
+    "pauses_s": [
+     0.13,
+     0.34
+    ],
+    "longest_internal_gap_s": 0.34,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.697,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 220.1,
+    "f0_range_st": 13.0
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.42,
+     "t1": 0.501
+    },
+    {
+     "w": "gonna",
+     "t0": 0.547,
+     "t1": 0.71
+    },
+    {
+     "w": "think",
+     "t0": 0.745,
+     "t1": 0.884
+    },
+    {
+     "w": "it",
+     "t0": 0.93,
+     "t1": 1.0
+    },
+    {
+     "w": "over",
+     "t0": 1.047,
+     "t1": 1.29
+    },
+    {
+     "w": "or",
+     "t0": 1.418,
+     "t1": 1.534
+    },
+    {
+     "w": "can",
+     "t0": 1.569,
+     "t1": 1.697
+    },
+    {
+     "w": "we",
+     "t0": 1.755,
+     "t1": 1.824
+    },
+    {
+     "w": "move",
+     "t0": 1.894,
+     "t1": 2.242
+    },
+    {
+     "w": "We're",
+     "t0": 2.498,
+     "t1": 2.707
+    },
+    {
+     "w": "parked",
+     "t0": 2.753,
+     "t1": 3.044
+    },
+    {
+     "w": "on",
+     "t0": 3.102,
+     "t1": 3.194
+    },
+    {
+     "w": "it",
+     "t0": 3.241,
+     "t1": 3.32
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.38,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 220.1,
+    "f0_range_st": 13.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.697,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 3.297,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0022__driver-B": {
+   "take": "e2-a3-0022__driver-B",
+   "key": "423de4101b965835",
+   "base_key": "423de4101b965835",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.495,
+   "offset_s": 0.35,
+   "sent": "Excuse me. Does honking count as disparagement?",
+   "seed": 2597579729,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "J9NvviOEdVm6E7Hwdpdj",
+   "voice_name": "Jerry B. - Authentic, Clear & Engaging",
+   "cand": "B",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 3.02,
+    "span_s": 2.63,
+    "words": 7,
+    "wpm": 159.7,
+    "syllables": 13,
+    "articulation_sps": 5.56,
+    "pauses_s": [
+     0.29
+    ],
+    "longest_internal_gap_s": 0.29,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.475,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 171.9,
+    "f0_range_st": 10.2
+   },
+   "words": [
+    {
+     "w": "Excuse",
+     "t0": 0.37,
+     "t1": 0.814
+    },
+    {
+     "w": "me",
+     "t0": 0.849,
+     "t1": 1.0
+    },
+    {
+     "w": "Does",
+     "t0": 1.267,
+     "t1": 1.453
+    },
+    {
+     "w": "honking",
+     "t0": 1.499,
+     "t1": 1.836
+    },
+    {
+     "w": "count",
+     "t0": 1.894,
+     "t1": 2.161
+    },
+    {
+     "w": "as",
+     "t0": 2.208,
+     "t1": 2.289
+    },
+    {
+     "w": "disparagement",
+     "t0": 2.347,
+     "t1": 3.032
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.37,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 171.9,
+    "f0_range_st": 10.2,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.475,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.045,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0017__driver-C": {
+   "take": "e2-a3-0017__driver-C",
+   "key": "8627361ec6f4d5b9",
+   "base_key": "8627361ec6f4d5b9",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.657,
+   "offset_s": 0.335,
+   "sent": "You gonna think it over, or can we move? We're parked on it.",
+   "seed": 2790728720,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "TWUKKXAylkYxxlPe4gx0",
+   "voice_name": "Armando - Forthright and Stentorian",
+   "cand": "C",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.5,
+    "audible_out_s": 3.27,
+    "span_s": 2.77,
+    "words": 13,
+    "wpm": 281.6,
+    "syllables": 15,
+    "articulation_sps": 5.42,
+    "pauses_s": [
+     0.09
+    ],
+    "longest_internal_gap_s": 0.09,
+    "speech_head_s": 0.5,
+    "speech_tail_s": 0.387,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 131.9,
+    "f0_range_st": 9.5
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.48,
+     "t1": 0.556
+    },
+    {
+     "w": "gonna",
+     "t0": 0.614,
+     "t1": 0.788
+    },
+    {
+     "w": "think",
+     "t0": 0.834,
+     "t1": 1.008
+    },
+    {
+     "w": "it",
+     "t0": 1.066,
+     "t1": 1.136
+    },
+    {
+     "w": "over",
+     "t0": 1.183,
+     "t1": 1.38
+    },
+    {
+     "w": "or",
+     "t0": 1.438,
+     "t1": 1.519
+    },
+    {
+     "w": "can",
+     "t0": 1.554,
+     "t1": 1.67
+    },
+    {
+     "w": "we",
+     "t0": 1.717,
+     "t1": 1.798
+    },
+    {
+     "w": "move",
+     "t0": 1.856,
+     "t1": 2.065
+    },
+    {
+     "w": "We're",
+     "t0": 2.216,
+     "t1": 2.46
+    },
+    {
+     "w": "parked",
+     "t0": 2.494,
+     "t1": 2.738
+    },
+    {
+     "w": "on",
+     "t0": 2.785,
+     "t1": 2.866
+    },
+    {
+     "w": "it",
+     "t0": 2.912,
+     "t1": 2.994
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.63,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 131.9,
+    "f0_range_st": 9.5,
+    "speech_head_s": 0.5,
+    "speech_tail_s": 0.387,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.165,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0022__driver-C": {
+   "take": "e2-a3-0022__driver-C",
+   "key": "25c5a8fe45205d12",
+   "base_key": "25c5a8fe45205d12",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.115,
+   "offset_s": 0.35,
+   "sent": "Excuse me. Does honking count as disparagement?",
+   "seed": 3296717655,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "TWUKKXAylkYxxlPe4gx0",
+   "voice_name": "Armando - Forthright and Stentorian",
+   "cand": "C",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.54,
+    "span_s": 2.19,
+    "words": 7,
+    "wpm": 191.8,
+    "syllables": 13,
+    "articulation_sps": 5.94,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.575,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 145.6,
+    "f0_range_st": 7.2
+   },
+   "words": [
+    {
+     "w": "Excuse",
+     "t0": 0.35,
+     "t1": 0.687
+    },
+    {
+     "w": "me",
+     "t0": 0.722,
+     "t1": 0.803
+    },
+    {
+     "w": "Does",
+     "t0": 0.849,
+     "t1": 1.012
+    },
+    {
+     "w": "honking",
+     "t0": 1.081,
+     "t1": 1.407
+    },
+    {
+     "w": "count",
+     "t0": 1.465,
+     "t1": 1.697
+    },
+    {
+     "w": "as",
+     "t0": 1.755,
+     "t1": 1.848
+    },
+    {
+     "w": "disparagement",
+     "t0": 1.906,
+     "t1": 2.544
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.56,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 145.6,
+    "f0_range_st": 7.2,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.575,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.005,
+    "raw_len_s": 2.415,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0017__driver-D": {
+   "take": "e2-a3-0017__driver-D",
+   "key": "c2e58b8a62cc42f5",
+   "base_key": "c2e58b8a62cc42f5",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0017__driver-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.89,
+   "offset_s": 0.35,
+   "sent": "You gonna think it over, or can we move? We're parked on it.",
+   "seed": 2060271694,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "hP72SDESIJq2YuAblBqz",
+   "voice_name": "Tony - Middle-aged with American accent ",
+   "cand": "D",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.41,
+    "audible_out_s": 4.4,
+    "span_s": 3.99,
+    "words": 13,
+    "wpm": 195.5,
+    "syllables": 15,
+    "articulation_sps": 4.53,
+    "pauses_s": [
+     0.16,
+     0.52
+    ],
+    "longest_internal_gap_s": 0.52,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.49,
+    "tail_to_60_s": 0.01,
+    "median_f0_hz": 119.4,
+    "f0_range_st": 14.4
+   },
+   "words": [
+    {
+     "w": "You",
+     "t0": 0.39,
+     "t1": 0.524
+    },
+    {
+     "w": "gonna",
+     "t0": 0.605,
+     "t1": 0.849
+    },
+    {
+     "w": "think",
+     "t0": 0.907,
+     "t1": 1.128
+    },
+    {
+     "w": "it",
+     "t0": 1.174,
+     "t1": 1.256
+    },
+    {
+     "w": "over",
+     "t0": 1.302,
+     "t1": 1.627
+    },
+    {
+     "w": "or",
+     "t0": 1.836,
+     "t1": 1.999
+    },
+    {
+     "w": "can",
+     "t0": 2.068,
+     "t1": 2.231
+    },
+    {
+     "w": "we",
+     "t0": 2.289,
+     "t1": 2.382
+    },
+    {
+     "w": "move",
+     "t0": 2.475,
+     "t1": 2.951
+    },
+    {
+     "w": "We're",
+     "t0": 3.427,
+     "t1": 3.717
+    },
+    {
+     "w": "parked",
+     "t0": 3.787,
+     "t1": 4.135
+    },
+    {
+     "w": "on",
+     "t0": 4.193,
+     "t1": 4.297
+    },
+    {
+     "w": "it",
+     "t0": 4.355,
+     "t1": 4.42
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.1,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.51,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 119.4,
+    "f0_range_st": 14.4,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.49,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.065,
+    "raw_len_s": 4.458,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0022__driver-D": {
+   "take": "e2-a3-0022__driver-D",
+   "key": "08ba2d9a89e83d9e",
+   "base_key": "08ba2d9a89e83d9e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/auditions/driver/wav/e2-a3-0022__driver-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.06,
+   "offset_s": 0.35,
+   "sent": "Excuse me. Does honking count as disparagement?",
+   "seed": 3084055305,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "hP72SDESIJq2YuAblBqz",
+   "voice_name": "Tony - Middle-aged with American accent ",
+   "cand": "D",
+   "role": "driver",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 3.58,
+    "span_s": 3.22,
+    "words": 7,
+    "wpm": 130.4,
+    "syllables": 13,
+    "articulation_sps": 4.35,
+    "pauses_s": [
+     0.23
+    ],
+    "longest_internal_gap_s": 0.23,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.48,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 96.8,
+    "f0_range_st": 15.4
+   },
+   "words": [
+    {
+     "w": "Excuse",
+     "t0": 0.35,
+     "t1": 0.942
+    },
+    {
+     "w": "me",
+     "t0": 0.989,
+     "t1": 1.244
+    },
+    {
+     "w": "Does",
+     "t0": 1.383,
+     "t1": 1.627
+    },
+    {
+     "w": "honking",
+     "t0": 1.697,
+     "t1": 2.068
+    },
+    {
+     "w": "count",
+     "t0": 2.161,
+     "t1": 2.44
+    },
+    {
+     "w": "as",
+     "t0": 2.486,
+     "t1": 2.568
+    },
+    {
+     "w": "disparagement",
+     "t0": 2.637,
+     "t1": 3.508
+    }
+   ],
+   "qa": {
+    "asr": "",
+    "cer": 1.0,
+    "word_recall_nonames": 0.0,
+    "lufs_i": -16.11,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.11,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 96.8,
+    "f0_range_st": 15.4,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.48,
+    "raw_tail_cut": false,
+    "align_median_s": null
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 3.483,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0017__driver-A",
+   "key": "f8d37595ac52b241",
+   "chars": 60,
+   "cost_header": "26",
+   "request_id": "5qkSxO71KCXJsrzZp7FQ",
+   "at": "00:18:24"
+  },
+  {
+   "take": "e2-a3-0022__driver-A",
+   "key": "3fd7fb75c015e044",
+   "chars": 47,
+   "cost_header": "21",
+   "request_id": "1FVlCS3qT9jKiAsQN6VN",
+   "at": "00:18:28"
+  },
+  {
+   "take": "e2-a3-0017__driver-B",
+   "key": "d74de4369b6b9510",
+   "chars": 60,
+   "cost_header": "26",
+   "request_id": "JYDydPFxpup7xSxNyW0b",
+   "at": "00:18:34"
+  },
+  {
+   "take": "e2-a3-0022__driver-B",
+   "key": "423de4101b965835",
+   "chars": 47,
+   "cost_header": "21",
+   "request_id": "OpZhIfrAiCABjxsECc0h",
+   "at": "00:18:36"
+  },
+  {
+   "take": "e2-a3-0017__driver-C",
+   "key": "8627361ec6f4d5b9",
+   "chars": 60,
+   "cost_header": "26",
+   "request_id": "JYYJA2snnvW0ht84sqw4",
+   "at": "00:18:44"
+  },
+  {
+   "take": "e2-a3-0022__driver-C",
+   "key": "25c5a8fe45205d12",
+   "chars": 47,
+   "cost_header": "21",
+   "request_id": "NB8MWme39I1J6zYgigbC",
+   "at": "00:18:46"
+  },
+  {
+   "take": "e2-a3-0017__driver-D",
+   "key": "c2e58b8a62cc42f5",
+   "chars": 60,
+   "cost_header": "26",
+   "request_id": "N1L2USM6WUqzTsECeFpb",
+   "at": "00:19:01"
+  },
+  {
+   "take": "e2-a3-0022__driver-D",
+   "key": "08ba2d9a89e83d9e",
+   "chars": 47,
+   "cost_header": "21",
+   "request_id": "bAoKJwNWRbsDykEnMKVi",
+   "at": "00:19:04"
+  }
+ ]
+}
