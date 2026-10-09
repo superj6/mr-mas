@@ -1,0 +1,1306 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e02-v1-act1-el",
+ "segment": "act1",
+ "file": "audio/ost/tracks/e02-v1-act1/render/music-el.wav",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act1.json",
+ "length_s": 364.0,
+ "frames": 8736,
+ "samples": 17472000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame",
+ "level": "underscore (each cue at its engine master: E02-02 -20, E02-03 -21, E02-04 -20, E02-05 -20 LUFS-I), dry of dialogue; the mixer ducks it (E02-02 8 dB, E02-03 9, E02-04 9, E02-05 8; `sections` duck_db overrides)",
+ "cues": [
+  {
+   "cue": "e02-02-the-seance",
+   "key": "seance",
+   "start": 0.0,
+   "end": 194.6,
+   "what": "a ghost-story giggle played straight (glass, F minor) -> wonder and a chill (Move 37) -> melancholy and a warm second (F2.3) -> the room's F minor when he has gone",
+   "family": "ROOM COLOURS (the séance) -> the Go figure -> ERA T3 (cut-paper chamber) -> the room colour",
+   "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-02-the-seance-underscore.wav",
+   "laid_at_s": -3.07,
+   "level": {
+    "lufs_i": -19.97,
+    "st_p95": -17.58,
+    "st_max": -16.22,
+    "true_peak_dbtp": -6.58
+   },
+   "target_lufs": -20.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.0,
+      "lra": 6.02,
+      "true_peak_db": -6.58,
+      "peak_db": -6.58,
+      "rms_db": -22.53,
+      "crest_db": 15.95,
+      "seconds": 198.97
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.122,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 5,
+     "of": 5,
+     "worst_ms": 6.2
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 343,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "the room colour (the glass harmonica; the knee's step and its neighbours)",
+    "Nole's Launch (C F B-flat E-flat): three stacks each shorter; slow horns in F2.3; one note short",
+    "the Go figure (F C G, stones on a board)",
+    "THE ACHE (D-flat + G over F)",
+    "the Door (A-flat D-flat | C G: its first note missing)"
+   ],
+   "events": {
+    "end": 193.0,
+    "click": 2.9,
+    "knock1": 30.445,
+    "burst": 32.458,
+    "lamp": 82.934,
+    "post_rise": 84.404,
+    "slap": 94.101,
+    "stone": 109.43,
+    "snuff": 152.398,
+    "sweep_in": 153.64,
+    "hatch": 167.149,
+    "sweep_out": 174.393,
+    "rocket": 188.345,
+    "blow": 190.708,
+    "stream": 121.907,
+    "selfplay": 129.221,
+    "freeze": 132.267,
+    "H": [
+     [
+      -1.0,
+      "Fm9"
+     ],
+     [
+      3.805,
+      "Dbmaj9#11"
+     ],
+     [
+      12.555,
+      "Bbm9"
+     ],
+     [
+      17.347,
+      "C7sus"
+     ],
+     [
+      22.555,
+      "Fm9"
+     ],
+     [
+      25.68,
+      "Dbmaj9#11"
+     ],
+     [
+      31.93,
+      "C7sus"
+     ],
+     [
+      44.222,
+      "C11b9"
+     ],
+     [
+      59.222,
+      "C7sus"
+     ],
+     [
+      72.972,
+      "Fm9"
+     ],
+     [
+      82.555,
+      "C7sus"
+     ],
+     [
+      86.305,
+      "Bbm9"
+     ],
+     [
+      96.305,
+      "C7sus"
+     ],
+     [
+      106.305,
+      "Open5"
+     ],
+     [
+      132.347,
+      "Ache"
+     ],
+     [
+      137.972,
+      "Fm9"
+     ],
+     [
+      141.097,
+      "Bbm9"
+     ],
+     [
+      173.805,
+      "Dbmaj9#11"
+     ],
+     [
+      176.93,
+      "Bbm9"
+     ],
+     [
+      185.68,
+      "C7sus"
+     ],
+     [
+      190.055,
+      "Fm9"
+     ]
+    ]
+   },
+   "sync": [
+    {
+     "t": -1.0,
+     "what": "Fm9: the arrival: the room colour already playing (J 1.0 s under the card), the hands joined",
+     "hit": false
+    },
+    {
+     "t": 0.68,
+     "what": "the glass's phrase (Fm9: C5 Db5 C5), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 3.805,
+     "what": "Dbmaj9#11: after his click: the post is out, the room tilts to D-flat (his V.O. sits inside it)",
+     "hit": false
+    },
+    {
+     "t": 5.055,
+     "what": "the felt under V.O. 1 (F3 + C4): his room, inside the bed",
+     "hit": false
+    },
+    {
+     "t": 12.555,
+     "what": "Bbm9: his question, the procedure",
+     "hit": false
+    },
+    {
+     "t": 17.347,
+     "what": "C7sus: ghost 1 rises (the dominant; it thins under the caption and the Yup)",
+     "hit": false
+    },
+    {
+     "t": 22.555,
+     "what": "Fm9: Gerg, quietly: \"He signed it.\"",
+     "hit": false
+    },
+    {
+     "t": 25.68,
+     "what": "Dbmaj9#11: \"one knock if we promised a nonprofit.\"",
+     "hit": false
+    },
+    {
+     "t": 31.93,
+     "what": "C7sus: NOLE drops in: his dominant, C, under his case",
+     "hit": false
+    },
+    {
+     "t": 36.305,
+     "what": "the glass's phrase (C7sus: Db5 C5 Bb4), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 40.836,
+     "what": "GERG'S BUILD under his own line (e2-a1-0007): typing, not looking up (4, then 8)",
+     "hit": false
+    },
+    {
+     "t": 44.222,
+     "what": "C11b9: his case (the scene's one speech): B-flat minor over his C, pushing",
+     "hit": false
+    },
+    {
+     "t": 45.055,
+     "what": "the glass's phrase (C11b9: Ab4 G4 F4), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 52.555,
+     "what": "the glass's phrase (C11b9: Db5 C5 Ab4), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 59.222,
+     "what": "C7sus: \"spirit, what did we call it?\": OPEN, Nole's hope; NOPE gets no hit",
+     "hit": false
+    },
+    {
+     "t": 72.972,
+     "what": "Fm9: the cow (the room's F minor under the crop; thin)",
+     "hit": false
+    },
+    {
+     "t": 82.555,
+     "what": "C7sus: the lamp: Nole's Launch, three times, each shorter",
+     "hit": false
+    },
+    {
+     "t": 83.336,
+     "what": "NOLE'S LAUNCH, stack 1 of 3 (4 notes; it falls off one note short)",
+     "hit": true
+    },
+    {
+     "t": 84.274,
+     "what": "NOLE'S LAUNCH, stack 2 of 3 (3 notes; it falls off one note short)",
+     "hit": true
+    },
+    {
+     "t": 85.055,
+     "what": "NOLE'S LAUNCH, stack 3 of 3 (2 notes; it falls off one note short)",
+     "hit": true
+    },
+    {
+     "t": 86.305,
+     "what": "Bbm9: ghost 3, DEC 2018 (thin under the header and \"billions\")",
+     "hit": false
+    },
+    {
+     "t": 96.305,
+     "what": "C7sus: \"That was a different me.\" (after the slap: no hit on it)",
+     "hit": false
+    },
+    {
+     "t": 96.93,
+     "what": "the glass's phrase (C7sus: Db5 C5 Bb4), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 101.305,
+     "what": "GERG'S BUILD under his own line (e2-a1-0016): typing, not looking up (4, then 8)",
+     "hit": false
+    },
+    {
+     "t": 106.305,
+     "what": "Open5: Move 37: the room thins to the open fifth",
+     "hit": false
+    },
+    {
+     "t": 110.055,
+     "what": "THE GO FIGURE: the beat after the stone (the SFX owns the click): celesta + chip, F C G",
+     "hit": true
+    },
+    {
+     "t": 121.93,
+     "what": "the knobs: soft pizzicato grains, a human stream (from \"Nobody\")",
+     "hit": false
+    },
+    {
+     "t": 129.221,
+     "what": "its own games: the grains straighten into 16ths, the chip on them (\"Then it played itself\")",
+     "hit": false
+    },
+    {
+     "t": 132.267,
+     "what": "THE WALL FREEZES: the grains and the Go figure stop dead (the numbers fixed during play)",
+     "hit": false
+    },
+    {
+     "t": 132.347,
+     "what": "Ache: the fear: THE ACHE on glass, the wall frozen",
+     "hit": false
+    },
+    {
+     "t": 137.972,
+     "what": "Fm9: back to the room colour (\"We had a blog.\")",
+     "hit": false
+    },
+    {
+     "t": 141.097,
+     "what": "Bbm9: ghost 3 again, V.O. 2 (the felt), \"You kept them.\" held into the smoke",
+     "hit": false
+    },
+    {
+     "t": 142.555,
+     "what": "the felt under V.O. 2 (Db4 + F4): his room, inside the bed",
+     "hit": false
+    },
+    {
+     "t": 154.222,
+     "what": "F2.3's arrival: the T3 tier's timpani, soft under the swell (on a swung and, 0.32 s before the cut to 2018)",
+     "hit": false
+    },
+    {
+     "t": 155.055,
+     "what": "NOLE'S LAUNCH on slow horns: its one sincere version (C F B-flat E-flat; the A-flat never comes)",
+     "hit": false
+    },
+    {
+     "t": 159.617,
+     "what": "nobody applauds: the upper strings leave one by one as the staff turn back to work",
+     "hit": false
+    },
+    {
+     "t": 170.68,
+     "what": "THE DOOR, its first note missing (D-flat, C, then G held: the sharp-4, no cadence), through the door",
+     "hit": false
+    },
+    {
+     "t": 173.805,
+     "what": "Dbmaj9#11: back from 2018: the glass on the Door's own G (the same chord)",
+     "hit": false
+    },
+    {
+     "t": 176.93,
+     "what": "Bbm9: \"You sat at the back.\"",
+     "hit": false
+    },
+    {
+     "t": 177.555,
+     "what": "the glass's phrase (Bbm9: F5 Eb5 Db5), the chip shadowing it an octave up",
+     "hit": false
+    },
+    {
+     "t": 185.68,
+     "what": "C7sus: \"Keep that too. See you in court.\" and his fanfare",
+     "hit": false
+    },
+    {
+     "t": 188.336,
+     "what": "his exit: the fanfare stops ONE NOTE SHORT (C F B-flat E-flat, then nothing)",
+     "hit": true
+    },
+    {
+     "t": 190.055,
+     "what": "Fm9: THE LAST CHORD: F minor returns when he is gone; rings free from the blow",
+     "hit": false
+    },
+    {
+     "t": 190.708,
+     "what": "the last candle: the glass's finger lifts; THE LAST CHORD rings free into E02-03",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-03-procedure-march",
+   "key": "procedure",
+   "start": 192.73,
+   "end": 226.6,
+   "what": "dry, institutional: the record read whole; a warm half-second",
+   "family": "P02 PROCEDURE (the table)",
+   "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-03-procedure-march-underscore.wav",
+   "laid_at_s": 190.25,
+   "level": {
+    "lufs_i": -20.98,
+    "st_p95": -18.64,
+    "st_max": -18.54,
+    "true_peak_dbtp": -6.99
+   },
+   "target_lufs": -21.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.0,
+      "lra": 4.75,
+      "true_peak_db": -6.99,
+      "peak_db": -7.0,
+      "rms_db": -23.64,
+      "crest_db": 16.65,
+      "seconds": 36.95
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.015,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 1,
+     "of": 1,
+     "worst_ms": 3.7
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 101,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "the table's pedal (B-flat minor), the dominant left suspended",
+    "Gerg's Build: its \"shipped\" tag (C5 F5, the knee's last interval alone)"
+   ],
+   "events": {
+    "entry": 192.75,
+    "out": 226.6,
+    "plan": [
+     [
+      192.75,
+      "Bbm9"
+     ],
+     [
+      215.25,
+      "Gbmaj7#11"
+     ],
+     [
+      218.792,
+      "Dbmaj9"
+     ],
+     [
+      223.375,
+      "F7sus_b9"
+     ]
+    ],
+    "lift": 220.875,
+    "toast": 224.171
+   },
+   "sync": [
+    {
+     "t": 192.75,
+     "what": "Bbm9: the room by day: the room colour's last chord rings into the low strings (on the beat, 0.25 s before the cut)",
+     "hit": false
+    },
+    {
+     "t": 195.25,
+     "what": "the procedure: a spiccato pulse and dry snare taps (straight) under Terb's opening",
+     "hit": false
+    },
+    {
+     "t": 200.875,
+     "what": "thin to the pedal: the reading plays dry (no motion under the record)",
+     "hit": false
+    },
+    {
+     "t": 215.25,
+     "what": "Gbmaj7#11: he sits; the nameplates (SFX): a step warmer",
+     "hit": false
+    },
+    {
+     "t": 215.25,
+     "what": "he sits: the pulse back, a step warmer (G-flat), under the nameplates (the clicks are SFX)",
+     "hit": false
+    },
+    {
+     "t": 218.792,
+     "what": "Dbmaj9: the glance at Gerg: the warm half-second",
+     "hit": false
+    },
+    {
+     "t": 218.792,
+     "what": "the warm half-second: D-flat, muted horns, the chip's triangle (he is in the room)",
+     "hit": false
+    },
+    {
+     "t": 220.875,
+     "what": "Gerg lifts the laptop like a toast: the Build's \"shipped\" tag on the chip (C5 F5)",
+     "hit": true
+    },
+    {
+     "t": 223.375,
+     "what": "F7sus_b9: the invite lights his phone: left hanging",
+     "hit": false
+    },
+    {
+     "t": 226.6,
+     "what": "PROCEDURE rings out under the invite; none under the read (V.O. 3)",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-04-long-form",
+   "key": "longform",
+   "start": 234.19,
+   "end": 238.9,
+   "what": "an earnest long question, left hanging",
+   "family": "MM-21 media bed: an original podcast-intro sting",
+   "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-04-long-form-underscore.wav",
+   "laid_at_s": 229.75,
+   "level": {
+    "lufs_i": -20.0,
+    "st_p95": -19.64,
+    "st_max": -19.62,
+    "true_peak_dbtp": -6.98
+   },
+   "target_lufs": -20.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.0,
+      "lra": 6.29,
+      "true_peak_db": -6.98,
+      "peak_db": -7.0,
+      "rms_db": -27.05,
+      "crest_db": 20.05,
+      "seconds": 9.55
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.007,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 2,
+     "of": 2,
+     "worst_ms": 3.7
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 17,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "the long question (C E-flat G over F, to D-flat(#11))"
+   ],
+   "events": {
+    "swell": 234.2,
+    "down": 234.75,
+    "out": 238.9,
+    "stop": 236.28
+   },
+   "sync": [
+    {
+     "t": 234.2,
+     "what": "the sting pre-laps under the card settling (J 0.8 s): a brush swell",
+     "hit": false
+    },
+    {
+     "t": 234.75,
+     "what": "DESIGNED HIT: the podcast's intro, Fm9 on a push 0.25 s before the cut to XEL's studio",
+     "hit": true
+    },
+    {
+     "t": 235.375,
+     "what": "the question (vibes + the chip): C, E-flat, G; left hanging on D-flat(#11) under XEL's first words",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "cue": "e02-05-a-tenant",
+   "key": "tenant",
+   "start": 315.797,
+   "end": 364.0,
+   "what": "comedy with a chill: the landlord's spare, downstairs; the copy finishes his line",
+   "family": "P11 SET-PIECE SWING, low -> Tasya's Rhodes (one chord) -> Tasya's floor -> THE COPY",
+   "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-05-a-tenant-underscore.wav",
+   "laid_at_s": 311.015,
+   "level": {
+    "lufs_i": -20.06,
+    "st_p95": -17.77,
+    "st_max": -17.08,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -20.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.04,
+      "lra": 5.77,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -22.54,
+      "crest_db": 19.38,
+      "seconds": 56.185
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.131,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 3,
+     "of": 3,
+     "worst_ms": 4.0
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 248,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "Tasya: the Rhodes on the beats, one chord on the welcome, the floor (A-flat C E A-flat)",
+    "THE ACHE (D-flat + G over F)",
+    "Mas: the Water Line's first bar (the flat line and its nudge)",
+    "THE COPY (his line on the chip, a beat late: it finishes the line)"
+   ],
+   "events": {
+    "entry": 315.807,
+    "jangle": 361.015,
+    "bH": 358.515,
+    "sections": {
+     "B": 322.0566666666667,
+     "C": 328.3066666666667,
+     "D": 336.64,
+     "E": 345.39,
+     "F": 350.39,
+     "G": 352.89
+    }
+   },
+   "sync": [
+    {
+     "t": 315.807,
+     "what": "DESIGNED HIT: the swing enters on the split (a push on a swung and, 0.19 s before the cut): walking bass, brushes",
+     "hit": true
+    },
+    {
+     "t": 315.807,
+     "what": "the swing: Fm11",
+     "hit": false
+    },
+    {
+     "t": 316.015,
+     "what": "the chip leads us down the building (out under his recorded voice)",
+     "hit": false
+    },
+    {
+     "t": 321.015,
+     "what": "the swing: Dbmaj9#11",
+     "hit": false
+    },
+    {
+     "t": 322.057,
+     "what": "the basement: Tasya's Rhodes on 2 and 4 (no chip, no felt: his POV left) (on a swung and, 0.19 s before the cut)",
+     "hit": false
+    },
+    {
+     "t": 322.057,
+     "what": "the swing: Abmaj9",
+     "hit": false
+    },
+    {
+     "t": 326.015,
+     "what": "the swing: Fm11",
+     "hit": false
+    },
+    {
+     "t": 328.307,
+     "what": "ONE Rhodes chord under the welcome (his G B-flat C E-flat over F) (on a swung and, 0.07 s before the cut); the band holds",
+     "hit": false
+    },
+    {
+     "t": 336.64,
+     "what": "the swing: Bb13",
+     "hit": false
+    },
+    {
+     "t": 338.515,
+     "what": "the swing: Fm11",
+     "hit": false
+    },
+    {
+     "t": 341.015,
+     "what": "the swing: Dbmaj9#11",
+     "hit": false
+    },
+    {
+     "t": 343.515,
+     "what": "the swing: C7#9b13",
+     "hit": false
+    },
+    {
+     "t": 345.39,
+     "what": "the key: the band holds on THE ACHE (D-flat + G over F) under \"We keep a spare.\" (on the beat, 0.15 s before the cut)",
+     "hit": false
+    },
+    {
+     "t": 350.39,
+     "what": "the swing: Fm11",
+     "hit": false
+    },
+    {
+     "t": 352.89,
+     "what": "the pan up: Tasya's floor, Abmaj9",
+     "hit": false
+    },
+    {
+     "t": 354.14,
+     "what": "the pan up: Tasya's floor, Cmaj9",
+     "hit": false
+    },
+    {
+     "t": 355.39,
+     "what": "the pan up: Tasya's floor, Emaj9",
+     "hit": false
+    },
+    {
+     "t": 356.64,
+     "what": "the pan up: Tasya's floor, Abmaj9",
+     "hit": false
+    },
+    {
+     "t": 358.515,
+     "what": "home on Mas: the felt's flat line and its nudge (F F F G-F), within a bar of the home shot",
+     "hit": true
+    },
+    {
+     "t": 359.14,
+     "what": "THE COPY: his line on the chip, a beat late",
+     "hit": true
+    },
+    {
+     "t": 361.015,
+     "what": "the key ring's jangle on the downbeat (diegetic, SFX); the strings let go; the copy finishes his line (C4, then F4), the felt's last F ringing under it",
+     "hit": false
+    },
+    {
+     "t": 362.265,
+     "what": "the copy's last F rings into the black (render/music-el-ringout.wav)",
+     "hit": false
+    }
+   ]
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 226.1,
+   "t1": 234.19,
+   "why": "4B: none under the read (V.O. 3, 227.00-232.72): the boardroom's room tone; PROCEDURE has rung out under the invite, and the podcast sting is the re-entry (J 0.8 s)"
+  },
+  {
+   "t0": 238.4,
+   "t1": 315.797,
+   "why": "6: no score in XEL's studio (the padded room tone is the joke; the mic's hops and the counter's ticks are SFX), and none under the curtain's part (6.11); the swing's push into the split is the re-entry"
+  }
+ ],
+ "designed_hit": [
+  {
+   "t": 234.75,
+   "cue": "e02-04-long-form",
+   "what": "DESIGNED HIT: the podcast's intro, Fm9 on a push 0.25 s before the cut to XEL's studio",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 315.807,
+   "cue": "e02-05-a-tenant",
+   "what": "DESIGNED HIT: the swing enters on the split (a push on a swung and, 0.19 s before the cut): walking bass, brushes",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  }
+ ],
+ "claims_sfx": [
+  "4.22:knob_tick_grain"
+ ],
+ "sections": [
+  {
+   "section": "e02-02-the-seance: F2.3 (ERA T3): the cut-paper chamber tier; Nole's Launch on slow horns; the Door under the look",
+   "start": 152.398,
+   "end": 173.805
+  },
+  {
+   "section": "e02-02-the-seance: 1 the room colour: the glass harmonica (F minor) under the séance; Nole's dominant; the Launch x3",
+   "start": 0.0,
+   "end": 106.305
+  },
+  {
+   "section": "e02-02-the-seance: 2 Move 37: the open fifth, the Go figure, the knobs (human, then its own), the freeze",
+   "start": 106.305,
+   "end": 132.347
+  },
+  {
+   "section": "e02-02-the-seance: 3 the fear: THE ACHE on glass",
+   "start": 132.347,
+   "end": 137.972
+  },
+  {
+   "section": "e02-02-the-seance: 4 back: the room colour, V.O. 2, \"You kept them.\"",
+   "start": 137.972,
+   "end": 152.398
+  },
+  {
+   "section": "e02-02-the-seance: 5 F2.3: the chamber tier, the Launch on horns, the Door",
+   "start": 152.398,
+   "end": 173.805
+  },
+  {
+   "section": "e02-02-the-seance: 6 back: \"You sat at the back.\", the fanfare one note short, the last chord",
+   "start": 173.805,
+   "end": 193.0
+  },
+  {
+   "section": "e02-03-procedure-march: PROCEDURE: the low strings, the pulse and taps; thin to the pedal under the reading",
+   "start": 192.75,
+   "end": 215.25
+  },
+  {
+   "section": "e02-03-procedure-march: he sits: a step warmer; the warm half-second; F7sus(b9) under the invite, rung out",
+   "start": 215.25,
+   "end": 226.6
+  },
+  {
+   "section": "e02-04-long-form: E02-04: the podcast-intro sting",
+   "start": 234.2,
+   "end": 238.9
+  },
+  {
+   "section": "e02-05-a-tenant: A the split: the swing low (bass, brushes), the chip leading us down",
+   "start": 315.807,
+   "end": 322.057
+  },
+  {
+   "section": "e02-05-a-tenant: B the basement: Tasya's Rhodes on the beats (no chip, no felt)",
+   "start": 322.057,
+   "end": 328.307
+  },
+  {
+   "section": "e02-05-a-tenant: C the welcome: one Rhodes chord, the floor held",
+   "start": 328.307,
+   "end": 336.64
+  },
+  {
+   "section": "e02-05-a-tenant: D \"Is there room for them?\": the swing again",
+   "start": 336.64,
+   "end": 345.39
+  },
+  {
+   "section": "e02-05-a-tenant: E \"We keep a spare.\": the hold on the Ache",
+   "start": 345.39,
+   "end": 350.39
+  },
+  {
+   "section": "e02-05-a-tenant: F \"Who else lives here?\"",
+   "start": 350.39,
+   "end": 352.89
+  },
+  {
+   "section": "e02-05-a-tenant: G the pan up: Tasya's floor (A-flat, C, E, A-flat); \"A tenant.\"",
+   "start": 352.89,
+   "end": 358.515
+  },
+  {
+   "section": "e02-05-a-tenant: H home on Mas: the flat line, THE COPY, the jangle, into the black",
+   "start": 358.515,
+   "end": 364.0
+  },
+  {
+   "section": "e02-02: the knobs (pizzicato grains, from \"Nobody\" to the freeze)",
+   "start": 121.707,
+   "end": 132.567,
+   "duck_db": 5.0,
+   "duck_why": "the grains are the knob wall's own sound (the score claims knob_tick_grain): they must read under Gerg's explanation (S11)"
+  }
+ ],
+ "real_lines": [
+  "e2-a1-0002",
+  "e2-a1-0014",
+  "e2-a1-0032",
+  "e2-a1-0034",
+  "e2-a1-0035",
+  "e2-a1-0036",
+  "e2-a1-0037",
+  "e2-a1-0038",
+  "e2-a1-0039",
+  "e2-a1-0040",
+  "e2-a1-0041",
+  "e2-a1-0042",
+  "e2-a1-0043",
+  "e2-a1-0047"
+ ],
+ "prelap": {
+  "file": "audio/ost/tracks/e02-v1-act1/render/music-el-prelap.wav",
+  "seconds": 1.0,
+  "lay": "under the filename card's last 1.0 s (the J 1.0 s: \"the séance's room colour already playing\"); continuous with music-el.wav's first sample. mix_episode.py lays no score under the card yet: if a later mix pass lays this, Act One's 1.0 s score head fade should go (the colour is already playing)",
+  "fade_in_s": 0.3
+ },
+ "ringout": {
+  "file": "audio/ost/tracks/e02-v1-act1/render/music-el-ringout.wav",
+  "seconds": 3.0,
+  "lay": "mix_episode.py lays it at Act Two's head and crossfades it out over 2.5 s from Act Two's own score entry: THE COPY's last F and the room's tail, continuous with the stem's last sample"
+ },
+ "measured": {
+  "length_s": 364.0,
+  "samples": 17472000,
+  "frames": 8736,
+  "exact": true,
+  "whole": {
+   "lufs_i": -20.08,
+   "st_p95": -17.74,
+   "st_max": -16.22,
+   "true_peak_dbtp": -3.15
+  },
+  "cues": {
+   "e02-02-the-seance": {
+    "lufs_i": -19.97,
+    "st_p95": -17.58,
+    "st_max": -16.22,
+    "true_peak_dbtp": -6.58
+   },
+   "e02-03-procedure-march": {
+    "lufs_i": -20.98,
+    "st_p95": -18.64,
+    "st_max": -18.54,
+    "true_peak_dbtp": -6.99
+   },
+   "e02-04-long-form": {
+    "lufs_i": -20.0,
+    "st_p95": -19.64,
+    "st_max": -19.62,
+    "true_peak_dbtp": -6.98
+   },
+   "e02-05-a-tenant": {
+    "lufs_i": -20.06,
+    "st_p95": -17.77,
+    "st_max": -17.08,
+    "true_peak_dbtp": -3.15
+   }
+  },
+  "rows": [
+   {
+    "section": "e02-02-the-seance: F2.3 (ERA T3): the cut-paper chamber tier; Nole's Launch on slow horns; the Door under the look",
+    "start": 152.4,
+    "end": 173.81,
+    "lufs_i": -22.42,
+    "st_p95": -18.45,
+    "st_max": -18.37,
+    "true_peak_dbtp": -7.23
+   },
+   {
+    "section": "e02-02-the-seance: 1 the room colour: the glass harmonica (F minor) under the séance; Nole's dominant; the Launch x3",
+    "start": 0.0,
+    "end": 106.31,
+    "lufs_i": -19.29,
+    "st_p95": -17.29,
+    "st_max": -16.22,
+    "true_peak_dbtp": -6.58
+   },
+   {
+    "section": "e02-02-the-seance: 2 Move 37: the open fifth, the Go figure, the knobs (human, then its own), the freeze",
+    "start": 106.31,
+    "end": 132.35,
+    "lufs_i": -22.8,
+    "st_p95": -22.03,
+    "st_max": -20.85,
+    "true_peak_dbtp": -9.3
+   },
+   {
+    "section": "e02-02-the-seance: 3 the fear: THE ACHE on glass",
+    "start": 132.35,
+    "end": 137.97,
+    "lufs_i": -21.19,
+    "st_p95": -20.98,
+    "st_max": -20.95,
+    "true_peak_dbtp": -12.49
+   },
+   {
+    "section": "e02-02-the-seance: 4 back: the room colour, V.O. 2, \"You kept them.\"",
+    "start": 137.97,
+    "end": 152.4,
+    "lufs_i": -20.42,
+    "st_p95": -18.01,
+    "st_max": -17.92,
+    "true_peak_dbtp": -9.2
+   },
+   {
+    "section": "e02-02-the-seance: 5 F2.3: the chamber tier, the Launch on horns, the Door",
+    "start": 152.4,
+    "end": 173.81,
+    "lufs_i": -22.42,
+    "st_p95": -18.45,
+    "st_max": -18.37,
+    "true_peak_dbtp": -7.23
+   },
+   {
+    "section": "e02-02-the-seance: 6 back: \"You sat at the back.\", the fanfare one note short, the last chord",
+    "start": 173.81,
+    "end": 193.0,
+    "lufs_i": -19.4,
+    "st_p95": -17.5,
+    "st_max": -17.22,
+    "true_peak_dbtp": -8.73
+   },
+   {
+    "section": "e02-03-procedure-march: PROCEDURE: the low strings, the pulse and taps; thin to the pedal under the reading",
+    "start": 192.75,
+    "end": 215.25,
+    "lufs_i": -21.29,
+    "st_p95": -20.32,
+    "st_max": -20.26,
+    "true_peak_dbtp": -7.89
+   },
+   {
+    "section": "e02-03-procedure-march: he sits: a step warmer; the warm half-second; F7sus(b9) under the invite, rung out",
+    "start": 215.25,
+    "end": 226.6,
+    "lufs_i": -20.38,
+    "st_p95": -18.54,
+    "st_max": -18.52,
+    "true_peak_dbtp": -6.99
+   },
+   {
+    "section": "e02-04-long-form: E02-04: the podcast-intro sting",
+    "start": 234.2,
+    "end": 238.9,
+    "lufs_i": -20.0,
+    "st_p95": -19.64,
+    "st_max": -19.62,
+    "true_peak_dbtp": -6.98
+   },
+   {
+    "section": "e02-05-a-tenant: A the split: the swing low (bass, brushes), the chip leading us down",
+    "start": 315.81,
+    "end": 322.06,
+    "lufs_i": -18.74,
+    "st_p95": -18.56,
+    "st_max": -18.45,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-05-a-tenant: B the basement: Tasya's Rhodes on the beats (no chip, no felt)",
+    "start": 322.06,
+    "end": 328.31,
+    "lufs_i": -19.48,
+    "st_p95": -18.76,
+    "st_max": -18.65,
+    "true_peak_dbtp": -6.67
+   },
+   {
+    "section": "e02-05-a-tenant: C the welcome: one Rhodes chord, the floor held",
+    "start": 328.31,
+    "end": 336.64,
+    "lufs_i": -20.52,
+    "st_p95": -20.17,
+    "st_max": -19.75,
+    "true_peak_dbtp": -8.1
+   },
+   {
+    "section": "e02-05-a-tenant: D \"Is there room for them?\": the swing again",
+    "start": 336.64,
+    "end": 345.39,
+    "lufs_i": -19.82,
+    "st_p95": -19.43,
+    "st_max": -19.36,
+    "true_peak_dbtp": -7.31
+   },
+   {
+    "section": "e02-05-a-tenant: E \"We keep a spare.\": the hold on the Ache",
+    "start": 345.39,
+    "end": 350.39,
+    "lufs_i": -23.34,
+    "st_p95": -22.4,
+    "st_max": -22.39,
+    "true_peak_dbtp": -12.46
+   },
+   {
+    "section": "e02-05-a-tenant: F \"Who else lives here?\"",
+    "start": 350.39,
+    "end": 352.89,
+    "lufs_i": -19.94,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -7.62
+   },
+   {
+    "section": "e02-05-a-tenant: G the pan up: Tasya's floor (A-flat, C, E, A-flat); \"A tenant.\"",
+    "start": 352.89,
+    "end": 358.51,
+    "lufs_i": -23.0,
+    "st_p95": -22.08,
+    "st_max": -22.07,
+    "true_peak_dbtp": -10.31
+   },
+   {
+    "section": "e02-05-a-tenant: H home on Mas: the flat line, THE COPY, the jangle, into the black",
+    "start": 358.51,
+    "end": 364.0,
+    "lufs_i": -18.87,
+    "st_p95": -17.2,
+    "st_max": -17.03,
+    "true_peak_dbtp": -6.49
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 226.6,
+    "t1": 234.19,
+    "dur": 7.59,
+    "marked": true,
+    "why": "4B: none under the read (V.O. 3, 227.00-232.72): the boardroom's room tone; PROCEDURE has rung out under the invite, and the podcast sting is the re-entry (J 0.8 s)"
+   },
+   {
+    "t0": 238.9,
+    "t1": 315.797,
+    "dur": 76.897,
+    "marked": true,
+    "why": "6: no score in XEL's studio (the padded room tone is the joke; the mic's hops and the counter's ticks are SFX), and none under the curtain's part (6.11); the swing's push into the split is the re-entry"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 226.55,
+    "t1": 234.2,
+    "inside_marked": true
+   },
+   {
+    "t0": 238.25,
+    "t1": 315.8,
+    "inside_marked": true
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 226.55,
+    "dur": 226.55
+   },
+   {
+    "t0": 234.2,
+    "t1": 238.25,
+    "dur": 4.05
+   },
+   {
+    "t0": 315.8,
+    "t1": 364.0,
+    "dur": 48.2
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": [],
+  "last_second_momentary_max": -28.82,
+  "copy_momentary_max": -14.76
+ },
+ "laid": [
+  {
+   "name": "e02-02-the-seance",
+   "file": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-02-the-seance-underscore.wav",
+   "laid_at_s": -3.07,
+   "window": [
+    0.0,
+    194.6
+   ],
+   "fade_in_s": 0.0,
+   "fade_out_s": 1.4,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-03-procedure-march",
+   "file": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-03-procedure-march-underscore.wav",
+   "laid_at_s": 190.25,
+   "window": [
+    192.73,
+    226.6
+   ],
+   "fade_in_s": 0.25,
+   "fade_out_s": 1.2,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-04-long-form",
+   "file": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-04-long-form-underscore.wav",
+   "laid_at_s": 229.75,
+   "window": [
+    234.19,
+    238.9
+   ],
+   "fade_in_s": 0.05,
+   "fade_out_s": 1.4,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-05-a-tenant",
+   "file": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-05-a-tenant-underscore.wav",
+   "laid_at_s": 311.015,
+   "window": [
+    315.797,
+    364.0
+   ],
+   "fade_in_s": 0.004,
+   "fade_out_s": 0.005,
+   "gain_db": 0.0,
+   "post": null,
+   "tail_restored": "its last 5 ms fade put back: Act One runs on into render/music-el-ringout.wav"
+  }
+ ],
+ "source": "audio/ost/tracks/e02-v1-act1/track.py",
+ "sfx_requests": [
+  "ceiling_knock x3, ceiling_burst, landing_thunk: the room colour has dropped to its pad; tune the knocks anywhere but on A (the pad is D-flat major 7 #11: F C G over D-flat)",
+  "go_stone_click: the Go figure starts the beat after it; keep it dry and short",
+  "knob_tick_grain: CLAIMED by the score (its pizzicato grains, 4.22, stopping on the freeze)",
+  "lamp_click (4.15): Nole's motif starts after it; candle_blow (4.36): the last chord rings free from it",
+  "key_ring_jangle_1 (7.08): the downbeat of THE COPY's second bar; keep its pitch off A"
+ ],
+ "heard": "nothing here has been listened to; every number is measured"
+}
