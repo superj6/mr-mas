@@ -676,6 +676,11 @@ class Seg:
                 ln = take_line(r, l['id'], l['who'], text, 0.0, tag)
                 if l.get('len_s') and abs(ln['dur'] - l['len_s']) > 0.02:
                     self.deviate(pb['id'], f'new line {l["id"]}: the take is {ln["dur"]:.2f} s, the plan counted {l["len_s"]} s')
+            if l.get('sub'):
+                # Ep2 (the lock QA, 2026-10-09): the subtitle as drawn when it isn't the recorded words (a cut-off:
+                # "And profit—"; "…one of my favorite—" / "—things."), [text, word index | "after:<line id>"] pieces;
+                # the take stays whole, the pixel lock draws the pieces (studio/src/episodes/ep02/pixel/tools/lock.py)
+                ln['sub'] = copy.deepcopy(l['sub'])
             slot = {'id': l['id'], 'line': ln, 'len': ln['dur'], 'new': True}
             if l.get('vo'):
                 slot['vo'] = True
@@ -1643,6 +1648,10 @@ def checks(seg, S, tl):
                 bad.append(f'{pb["id"]}: dropped line {l["id"]} is still in')
             if (l.get('keep') is True or l.get('new') or l.get('restored')) and l['id'] not in ids:
                 bad.append(f'{pb["id"]}: line {l["id"]} is missing')
+            if l.get('sub') and l['id'] in ids:      # a cut-off's subtitle pieces (the lock QA, 2026-10-09)
+                got_ = next(x for x in b['lines'] if x['id'] == l['id'])
+                if got_.get('sub') != l['sub']:
+                    bad.append(f'{pb["id"]}: line {l["id"]}: subtitle pieces {got_.get("sub")}, the plan {l["sub"]}')
     order_plan = [pb['id'] for pb in S.plan['beats'] if pb['action'] in ('keep', 'new')]
     order_lock = [b['id'] for b in tl['beats']]
     if order_plan != order_lock:

@@ -5,8 +5,8 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 321,
-  "estimate": 321.0
+  "target": 320,
+  "estimate": 320.0
  },
  "scenes": [
   {
@@ -49,15 +49,17 @@
   },
   {
    "id": "17",
-   "target_s": 131,
+   "target_s": 130,
    "title": "The NDA across the bridge (the S3)",
    "date": "MAY 17 → MAY 20, 2024",
    "place": "the Bay Bridge",
    "status": "CHANGED",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "estimate_s": 131.0,
-   "fit_scale": 1.912
+   "proposal_s": 131,
+   "adjust": "the lock QA: the driver cuts in 0.3 s after the Forecaster (was 1.92 s); x1.912 -> x1.943",
+   "estimate_s": 130.0,
+   "fit_scale": 1.943
   }
  ],
  "cast": {
@@ -2799,7 +2801,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "weighted",
-   "est_s": 15.28,
+   "est_s": 14.62,
    "frame": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
    "camera": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
    "set": "skyline",
@@ -2859,7 +2861,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 4.16,
+   "est_s": 3.21,
    "frame": "MEDIUM · a DRIVER parked on the receipt leans out of his window",
    "camera": "MEDIUM · a DRIVER parked on the receipt leans out of his window",
    "set": "skyline",
@@ -2879,10 +2881,10 @@
      "take": "new · the DRIVER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0017__driver-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.15",
+     "after": "start+0.2",
      "gap_s": 0.0,
      "len_s": 2.86,
-     "t_s": 1.15
+     "t_s": 0.2
     }
    ],
    "caption": "A DRIVER, parked on the receipt, leans out.",
@@ -2891,16 +2893,23 @@
    "sounds": [
     {
      "name": "car_window_down",
-     "at": 0.192,
-     "at_s": 0.19,
+     "at": 0.1,
+     "at_s": 0.1,
      "gain": -26,
      "new": true
     }
    ],
    "tempo": {
     "pace": "quick",
-    "gaps": {},
-    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    "gaps": {
+     "e2-a3-0017": 0.3
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "across_cut": {
+     "from": "e2-a3-0016",
+     "gap_s": 0.3,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
     "P",
@@ -2917,7 +2926,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 5.86,
+   "est_s": 5.9,
    "frame": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
    "camera": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
    "set": "skyline",
@@ -2982,7 +2991,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 4.59,
+   "est_s": 4.66,
    "frame": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
    "camera": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
    "set": "skyline",
@@ -2998,8 +3007,8 @@
    "sounds": [
     {
      "name": "phone_buzz_step_1",
-     "at": 1.913,
-     "at_s": 1.91,
+     "at": 1.942,
+     "at_s": 1.94,
      "gain": -24
     }
    ],
@@ -3089,7 +3098,7 @@
    "scene": "17",
    "mode": "QUICK-CUT RUN (the scramble)",
    "pace": "quick",
-   "est_s": 6.49,
+   "est_s": 6.55,
    "frame": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
    "camera": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
    "set": "call",
@@ -3109,10 +3118,10 @@
      "take": "new · MAS (Jeremy · EL) · call chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0019__mas-manalt-C.wav",
      "note": "[INVENTED · about the fix he made public (facts A31: \"…they can contact me and we'll fix that too.\"); nothing about what he knew]",
-     "after": "start+2.29",
+     "after": "start+2.33",
      "gap_s": 0.0,
      "len_s": 3.44,
-     "t_s": 2.29
+     "t_s": 2.33
     }
    ],
    "caption": "He calls LEGAL. We hear only his side, level, and quicker than he ever talks. His face doesn't move.",
@@ -3121,14 +3130,14 @@
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.191,
+     "at": 0.194,
      "at_s": 0.19,
      "gain": -26
     },
     {
      "name": "call_connect",
-     "at": 1.527,
-     "at_s": 1.53,
+     "at": 1.553,
+     "at_s": 1.55,
      "gain": -26
     }
    ],
@@ -3199,7 +3208,7 @@
    "scene": "17",
    "mode": "QUICK-CUT RUN (the scramble)",
    "pace": "quick",
-   "est_s": 4.3,
+   "est_s": 4.56,
    "frame": "MCU · his still face; the receipt still unrolling under his shoes",
    "camera": "MCU · his still face; the receipt still unrolling under his shoes",
    "set": "skyline",
@@ -3223,7 +3232,7 @@
      "note": "[INVENTED · V.O. · script-v1]",
      "after": "start+0.3",
      "gap_s": 0.0,
-     "len_s": 3.24,
+     "len_s": 3.48,
      "t_s": 0.3
     }
    ],
@@ -3262,7 +3271,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 10.07,
+   "est_s": 10.12,
    "frame": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "camera": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "set": "skyline",
@@ -3283,10 +3292,10 @@
      "take": "new · THE FORECASTER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0020__forecaster-A.wav",
      "note": "[INVENTED]",
-     "after": "start+2.68",
+     "after": "start+2.72",
      "gap_s": 0.0,
      "len_s": 6.82,
-     "t_s": 2.68
+     "t_s": 2.72
     }
    ],
    "caption": "THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.",
@@ -3311,7 +3320,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "weighted",
-   "est_s": 5.0,
+   "est_s": 5.03,
    "frame": "ECU · Mas's thumb hovers over Post; he doesn't press",
    "camera": "ECU · Mas's thumb hovers over Post; he doesn't press",
    "set": "screen",
@@ -3333,10 +3342,10 @@
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+1.53",
+     "after": "start+1.55",
      "gap_s": 0.0,
      "len_s": 2.51,
-     "t_s": 1.53
+     "t_s": 1.55
     }
    ],
    "caption": "Mas's thumb hovers over Post. He doesn't press.",
@@ -3643,7 +3652,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 6.9,
+   "est_s": 7.0,
    "frame": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
    "camera": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
    "set": "skyline",
@@ -3659,8 +3668,8 @@
    "sounds": [
     {
      "name": "ink_run_drip",
-     "at": 0.767,
-     "at_s": 0.77,
+     "at": 0.778,
+     "at_s": 0.78,
      "gain": -26,
      "new": true
     },
@@ -3674,8 +3683,8 @@
     },
     {
      "name": "umbrella_pop",
-     "at": 4.983,
-     "at_s": 4.98,
+     "at": 5.056,
+     "at_s": 5.06,
      "gain": -32,
      "new": true
     }

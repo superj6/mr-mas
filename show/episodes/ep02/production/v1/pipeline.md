@@ -277,7 +277,7 @@ Run after every Ep2 file was in place (2026-10-08, about 22:00), `MRMAS_MAX_LOAD
 ## 10. Open issues and asks
 
 1. **Nothing has been watched or heard [R8].** The picture proof is measured (which scenes rendered, identical bytes and streams); the sound proof is measured on synthetic data (loudness, peaks, seams).
-2. ~~**The real chain waits on the takes.** The base lock needs a take for every line; the voices pass renders them (§2), then §1.2, then the picture and the score.~~ Done: the takes ([takes-qa.md](takes-qa.md)) and the locks, §1.1–§1.2 ([lock-v1.md](lock-v1.md), 2026-10-09: 23:02.00 of story, 0 check failures, 20 scene stubs).
+2. ~~**The real chain waits on the takes.** The base lock needs a take for every line; the voices pass renders them (§2), then §1.2, then the picture and the score.~~ Done: the takes ([takes-qa.md](takes-qa.md)) and the locks, §1.1–§1.2 ([lock-v1.md](lock-v1.md), 2026-10-09: 23:02.00 of story, 0 check failures, 20 scene stubs; after the lock QA, §3.5 there, 22:54.00).
 3. **The intro variant and the outro** are planned, not built (§8.3, §8.4); each needs Ep1's own output proven unchanged if it touches the shared moments.
 4. **New SFX beds** (manifest §7) play through stand-ins until the SFX pass adds them to the board (`rooms.py` picks them up by name).
 5. ~~**`el_cut.py` and `pron_check.py`** were not copied (Ep1 tables); the voices pass copies them with Ep2's.~~ Done by the takes pass (§2, [takes-qa.md](takes-qa.md)). `el_audition.py` was copied by the casting pass ([cast.md](cast.md) §8).

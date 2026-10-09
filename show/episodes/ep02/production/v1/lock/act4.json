@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "17:37:00",
-  "ep_in_frames": 25368,
+  "ep_in": "17:30:00",
+  "ep_in_frames": 25200,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -28,15 +28,15 @@
  "summary": {
   "shots": 57,
   "beats": 57,
-  "frames": 7680,
-  "seconds": 320.0,
-  "length": "5:20.00",
-  "episode_in": "17:37:00",
-  "episode_out": "22:57:00",
+  "frames": 7656,
+  "seconds": 319.0,
+  "length": "5:19.00",
+  "episode_in": "17:30:00",
+  "episode_out": "22:49:00",
   "verdicts": {
    "-": 57
   },
-  "mean_s": 5.614,
+  "mean_s": 5.596,
   "median_s": 4.708,
   "min_s": 1.208,
   "max_s": 14.917,
@@ -56,7 +56,7 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "4 scenes: 18(2304f) 19(3216f) 20(1248f) 22(912f)"
+   "detail": "4 scenes: 18(2280f) 19(3216f) 20(1248f) 22(912f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -66,12 +66,12 @@
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 7680"
+   "detail": "0 -> 7656"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 37; other: 0"
+   "detail": "same frame: 4; 1 f earlier (the onset falls inside the frame): 34; other: 0"
   },
   {
    "check": "every line has a take",
@@ -101,7 +101,7 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 7680,
+   "e": 7656,
    "shots": [
     "18.01",
     "18.02",
@@ -164,16 +164,16 @@
    "chapter": "ACT4",
    "title": "",
    "cue": "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20 · music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal · music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone · music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp) · music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low) · music (v1): E02-11 · the quartet thins to its pedal under his post · music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure · music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate · music (v1): E02-11 · the cello's pedal carries · music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs · music (v1): E02-11 · the lobby's morning under the quartet's pedal · music (v1): E02-11 · the quartet's pedal · music (v1): E02-11 · the quartet ends as the complaint leaves frame: the cello's last pizzicato on the note's landing · music (v1): room tone only (the quartet has ended) · music (v1): room tone only · music (v1): room tone only; the pin's soft knock · music (v1): E02-12 · room tone only, then the first piano note as the lot appears · music (v1): E02-12 ONE DOOR · DARK ROOM, sparse (one piano note per phrase); the Door with its first note missing, on non-vibrato flute, low-passed (\"through the door\") · music (v1): E02-12 · the GPU choir under the glimpse · music (v1): the designed stop: room tone only · music (v1): E02-12 · the cue returns as his raised hand lowers · music (v1): E02-12 · the Door resolves with no cadence across the walk (it cadences only in Ep11)",
-   "frames": 7680,
-   "tc_in": "17:37:00",
-   "tc_out": "22:57:00"
+   "frames": 7656,
+   "tc_in": "17:30:00",
+   "tc_out": "22:49:00"
   }
  ],
  "scenes": [
   {
    "id": "18",
    "s": 0,
-   "e": 2304,
+   "e": 2280,
    "shots": [
     "18.01",
     "18.02",
@@ -191,13 +191,13 @@
     "18.14",
     "18.15"
    ],
-   "tc_in": "17:37:00",
-   "tc_out": "19:13:00"
+   "tc_in": "17:30:00",
+   "tc_out": "19:05:00"
   },
   {
    "id": "19",
-   "s": 2304,
-   "e": 5520,
+   "s": 2280,
+   "e": 5496,
    "shots": [
     "19.01",
     "19.02",
@@ -220,13 +220,13 @@
     "19.19",
     "19.20"
    ],
-   "tc_in": "19:13:00",
-   "tc_out": "21:27:00"
+   "tc_in": "19:05:00",
+   "tc_out": "21:19:00"
   },
   {
    "id": "20",
-   "s": 5520,
-   "e": 6768,
+   "s": 5496,
+   "e": 6744,
    "shots": [
     "20.01",
     "20.02",
@@ -242,13 +242,13 @@
     "20.12",
     "20.13"
    ],
-   "tc_in": "21:27:00",
-   "tc_out": "22:19:00"
+   "tc_in": "21:19:00",
+   "tc_out": "22:11:00"
   },
   {
    "id": "22",
-   "s": 6768,
-   "e": 7680,
+   "s": 6744,
+   "e": 7656,
    "shots": [
     "22.01",
     "22.02",
@@ -260,8 +260,8 @@
     "22.08",
     "22.09"
    ],
-   "tc_in": "22:19:00",
-   "tc_out": "22:57:00"
+   "tc_in": "22:11:00",
+   "tc_out": "22:49:00"
   }
  ],
  "shots": [
@@ -272,11 +272,11 @@
     "18.01"
    ],
    "s": 0,
-   "e": 136,
+   "e": 138,
    "onscreen": [
     {
      "text": "RAIL: MAY 28, 2024",
-     "s": 6,
+     "s": 7,
      "e": 49
     }
    ],
@@ -303,8 +303,8 @@
    ],
    "sounds": [
     "beacon_motor @0",
-    "footstep_soft_1 @56",
-    "footstep_soft_2 @74"
+    "footstep_soft_1 @57",
+    "footstep_soft_2 @76"
    ],
    "spots": [
     {
@@ -314,12 +314,12 @@
     },
     {
      "name": "footstep_soft_1",
-     "k": 56,
+     "k": 57,
      "dur": null
     },
     {
      "name": "footstep_soft_2",
-     "k": 74,
+     "k": 76,
      "dur": null
     }
    ],
@@ -353,14 +353,15 @@
    "beat_starts": {
     "18.01": 0
    },
+   "picture": "Sc 14's box in his arms (the seam).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "17:37:00",
-   "tc_out": "17:42:16",
-   "frames": 136
+   "tc_in": "17:30:00",
+   "tc_out": "17:35:18",
+   "frames": 138
   },
   {
    "id": "18.02",
@@ -368,8 +369,8 @@
    "beats": [
     "18.02"
    ],
-   "s": 136,
-   "e": 184,
+   "s": 138,
+   "e": 186,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
@@ -404,13 +405,14 @@
    "beat_starts": {
     "18.02": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "17:42:16",
-   "tc_out": "17:44:16",
+   "tc_in": "17:35:18",
+   "tc_out": "17:37:18",
    "frames": 48
   },
   {
@@ -419,8 +421,8 @@
    "beats": [
     "18.03"
    ],
-   "s": 184,
-   "e": 437,
+   "s": 186,
+   "e": 439,
    "onscreen": [
     {
      "text": "When CHATGTP came out November, 2022, the board was not informed in advance about that.",
@@ -866,6 +868,7 @@
    "beat_starts": {
     "18.03": 0
    },
+   "picture": "Captions legible at 1080p. Her words only (W8).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -886,8 +889,8 @@
      "must": true
     }
    ],
-   "tc_in": "17:44:16",
-   "tc_out": "17:55:05",
+   "tc_in": "17:37:18",
+   "tc_out": "17:48:07",
    "frames": 253
   },
   {
@@ -896,13 +899,13 @@
    "beats": [
     "18.04"
    ],
-   "s": 437,
-   "e": 579,
+   "s": 439,
+   "e": 582,
    "onscreen": [
     {
      "text": "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
-     "s": 13,
-     "e": 141
+     "s": 14,
+     "e": 142
     }
    ],
    "lines": [
@@ -912,8 +915,8 @@
      "mode": "on-mic",
      "who": "NELEH",
      "text": "MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
-     "s": 13,
-     "e": 128,
+     "s": 14,
+     "e": 129,
      "fs": 5,
      "fe": 137,
      "os": false,
@@ -928,178 +931,178 @@
        "rest"
       ],
       [
-       5,
+       4,
        "M"
       ],
       [
-       7,
+       6,
        "A"
       ],
       [
-       12,
+       11,
        "E"
       ],
       [
-       16,
+       15,
        "A"
       ],
       [
-       18,
+       17,
        "E"
       ],
       [
-       29,
+       28,
        "O"
       ],
       [
-       33,
+       32,
        "M"
       ],
       [
-       37,
+       36,
        "E"
       ],
       [
-       40,
+       39,
        "M"
       ],
       [
-       42,
+       41,
        "O"
       ],
       [
-       44,
+       43,
        "E"
       ],
       [
-       48,
+       47,
        "A"
       ],
       [
-       52,
+       51,
        "E"
       ],
       [
-       55,
+       54,
        "O"
       ],
       [
-       58,
+       57,
        "E"
       ],
       [
-       64,
+       63,
        "A"
       ],
       [
-       68,
+       67,
        "O"
       ],
       [
-       72,
+       71,
        "M"
       ],
       [
-       74,
+       73,
        "E"
       ],
       [
-       79,
+       78,
        "A"
       ],
       [
-       88,
+       87,
        "E"
       ],
       [
-       90,
+       89,
        "A"
       ],
       [
-       92,
+       91,
        "E"
       ],
       [
-       94,
+       93,
        "A"
       ],
       [
-       96,
+       95,
        "M"
       ],
       [
-       100,
+       99,
        "A"
       ],
       [
-       104,
+       103,
        "E"
       ],
       [
-       107,
+       106,
        "rest"
       ]
      ],
      "words": [
       [
        "MAS",
-       5,
-       14
+       4,
+       13
       ],
       [
        "didn't",
-       15,
+       14,
        21
       ],
       [
        "inform",
-       23,
-       35
+       22,
+       34
       ],
       [
        "the",
-       37,
-       39
+       36,
+       38
       ],
       [
        "board",
-       40,
-       46
+       39,
+       45
       ],
       [
        "that",
-       47,
+       46,
        50
       ],
       [
        "he",
-       52,
+       51,
        53
       ],
       [
        "owned",
-       55,
+       54,
        60
       ],
       [
        "the",
-       61,
-       63
+       60,
+       62
       ],
       [
        "NOPEAI",
-       64,
-       86
+       63,
+       85
       ],
       [
        "Startup",
        88,
-       97
+       96
       ],
       [
        "Fund",
-       99,
-       107
+       98,
+       106
       ]
      ],
      "tag": "podcast",
@@ -1149,6 +1152,7 @@
    "beat_starts": {
     "18.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1157,14 +1161,14 @@
     {
      "kind": "caption",
      "text": "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
-     "s": 13,
-     "e": 141,
+     "s": 14,
+     "e": 142,
      "must": true
     }
    ],
-   "tc_in": "17:55:05",
-   "tc_out": "18:01:03",
-   "frames": 142
+   "tc_in": "17:48:07",
+   "tc_out": "17:54:06",
+   "frames": 143
   },
   {
    "id": "18.05",
@@ -1172,8 +1176,8 @@
    "beats": [
     "18.05"
    ],
-   "s": 579,
-   "e": 680,
+   "s": 582,
+   "e": 682,
    "onscreen": [
     {
      "text": "\"We are disappointed that Ms. NELEH continues to revisit these issues.\"",
@@ -1219,6 +1223,7 @@
    "beat_starts": {
     "18.05": 0
    },
+   "picture": "Her account and the reply side by side (W16). The quote keeps its honorific (naming rule 12: only the name changes).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1239,9 +1244,9 @@
      "must": true
     }
    ],
-   "tc_in": "18:01:03",
-   "tc_out": "18:05:08",
-   "frames": 101
+   "tc_in": "17:54:06",
+   "tc_out": "17:58:10",
+   "frames": 100
   },
   {
    "id": "18.06",
@@ -1249,8 +1254,8 @@
    "beats": [
     "18.06"
    ],
-   "s": 680,
-   "e": 769,
+   "s": 682,
+   "e": 772,
    "onscreen": [],
    "lines": [
     {
@@ -1384,14 +1389,15 @@
    "beat_starts": {
     "18.06": 0
    },
+   "picture": "No V.O. (W8). A face light one step.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:05:08",
-   "tc_out": "18:09:01",
-   "frames": 89
+   "tc_in": "17:58:10",
+   "tc_out": "18:02:04",
+   "frames": 90
   },
   {
    "id": "18.07",
@@ -1399,18 +1405,18 @@
    "beats": [
     "18.07"
    ],
-   "s": 769,
-   "e": 853,
+   "s": 772,
+   "e": 857,
    "onscreen": [
     {
      "text": "SAFETY COMMITTEE",
-     "s": 6,
-     "e": 84
+     "s": 7,
+     "e": 85
     },
     {
      "text": "212",
      "s": 42,
-     "e": 84
+     "e": 85
     }
    ],
    "lines": [],
@@ -1498,6 +1504,7 @@
    "beat_starts": {
     "18.07": 0
    },
+   "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1506,21 +1513,21 @@
     {
      "kind": "sign",
      "text": "SAFETY COMMITTEE",
-     "s": 6,
-     "e": 84,
+     "s": 7,
+     "e": 85,
      "must": true
     },
     {
      "kind": "doc",
      "text": "212",
      "s": 42,
-     "e": 84,
+     "e": 85,
      "must": true
     }
    ],
-   "tc_in": "18:09:01",
-   "tc_out": "18:12:13",
-   "frames": 84
+   "tc_in": "18:02:04",
+   "tc_out": "18:05:17",
+   "frames": 85
   },
   {
    "id": "18.08",
@@ -1528,8 +1535,8 @@
    "beats": [
     "18.08"
    ],
-   "s": 853,
-   "e": 1159,
+   "s": 857,
+   "e": 1157,
    "onscreen": [],
    "lines": [
     {
@@ -1538,7 +1545,7 @@
      "mode": "on-mic",
      "who": "TERB",
      "text": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
-     "s": 6,
+     "s": 7,
      "e": 189,
      "fs": -2,
      "fe": 198,
@@ -1554,260 +1561,260 @@
        "rest"
       ],
       [
-       2,
+       1,
        "O"
       ],
       [
-       6,
+       5,
        "E"
       ],
       [
-       11,
+       10,
        "rest"
       ],
       [
-       14,
+       13,
        "E"
       ],
       [
-       16,
+       15,
        "A"
       ],
       [
-       23,
+       22,
        "E"
       ],
       [
-       28,
+       27,
        "rest"
       ],
       [
-       31,
+       30,
        "E"
       ],
       [
-       33,
+       32,
        "A"
       ],
       [
-       35,
+       34,
        "E"
       ],
       [
-       40,
+       39,
        "M"
       ],
       [
-       42,
+       41,
        "A"
       ],
       [
-       44,
+       43,
        "E"
       ],
       [
-       49,
+       48,
        "O"
       ],
       [
-       52,
+       51,
        "E"
       ],
       [
-       57,
+       56,
        "O"
       ],
       [
-       60,
+       59,
        "A"
       ],
       [
-       62,
+       61,
        "E"
       ],
       [
-       66,
+       65,
        "A"
       ],
       [
-       69,
+       68,
        "E"
       ],
       [
-       75,
+       74,
        "M"
       ],
       [
-       78,
+       77,
        "A"
       ],
       [
-       85,
+       84,
        "E"
       ],
       [
-       92,
+       91,
        "A"
       ],
       [
-       94,
+       93,
        "E"
       ],
       [
-       97,
+       96,
        "A"
       ],
       [
-       102,
+       101,
        "E"
       ],
       [
-       105,
+       104,
        "A"
       ],
       [
-       108,
+       107,
        "E"
       ],
       [
-       113,
+       112,
        "rest"
       ],
       [
-       124,
+       123,
        "A"
       ],
       [
-       126,
+       125,
        "E"
       ],
       [
-       132,
+       131,
        "A"
       ],
       [
-       136,
+       135,
        "rest"
       ],
       [
-       141,
+       140,
        "A"
       ],
       [
-       145,
+       144,
        "E"
       ],
       [
-       154,
+       153,
        "A"
       ],
       [
-       159,
+       158,
        "E"
       ],
       [
-       163,
+       162,
        "O"
       ],
       [
-       172,
+       171,
        "E"
       ],
       [
-       175,
+       174,
        "rest"
       ]
      ],
      "words": [
       [
        "First",
-       0,
+       -1,
        10
       ],
       [
        "task",
-       13,
-       28
+       12,
+       27
       ],
       [
        "this",
-       31,
-       36
+       30,
+       35
       ],
       [
        "committee",
-       38,
-       47
+       37,
+       46
       ],
       [
        "goes",
        47,
-       53
+       52
       ],
       [
        "through",
-       54,
-       59
+       53,
+       58
       ],
       [
        "our",
-       60,
+       59,
        62
       ],
       [
        "safety",
-       64,
-       74
+       63,
+       73
       ],
       [
        "processes",
-       75,
-       91
+       74,
+       90
       ],
       [
        "and",
-       92,
-       94
+       91,
+       93
       ],
       [
        "safeguards",
        95,
-       113
+       112
       ],
       [
        "and",
        123,
-       127
+       126
       ],
       [
        "it",
        128,
-       130
+       129
       ],
       [
        "has",
-       131,
-       136
+       130,
+       135
       ],
       [
        "ninety",
        139,
-       150
+       149
       ],
       [
        "days",
-       152,
-       160
+       151,
+       159
       ],
       [
        "to",
-       162,
-       164
+       161,
+       163
       ],
       [
        "do",
-       166,
-       169
+       165,
+       168
       ],
       [
        "it",
@@ -1824,10 +1831,10 @@
      "mode": "on-mic",
      "who": "TERB",
      "text": "Members: myself, two directors, and our chief executive.",
-     "s": 200,
-     "e": 300,
-     "fs": 192,
-     "fe": 308,
+     "s": 194,
+     "e": 294,
+     "fs": 186,
+     "fe": 302,
      "os": false,
      "via": null,
      "face": null,
@@ -1856,7 +1863,7 @@
        "rest"
       ],
       [
-       20,
+       21,
        "M"
       ],
       [
@@ -1884,7 +1891,7 @@
        "E"
       ],
       [
-       38,
+       39,
        "O"
       ],
       [
@@ -1896,7 +1903,7 @@
        "A"
       ],
       [
-       50,
+       51,
        "E"
       ],
       [
@@ -1908,7 +1915,7 @@
        "E"
       ],
       [
-       62,
+       63,
        "A"
       ],
       [
@@ -1916,7 +1923,7 @@
        "E"
       ],
       [
-       68,
+       69,
        "A"
       ],
       [
@@ -1932,7 +1939,7 @@
        "E"
       ],
       [
-       92,
+       93,
        "rest"
       ]
      ],
@@ -1950,11 +1957,11 @@
       [
        "two",
        37,
-       42
+       43
       ],
       [
        "directors",
-       43,
+       44,
        58
       ],
       [
@@ -2043,14 +2050,15 @@
    "beat_starts": {
     "18.08": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:12:13",
-   "tc_out": "18:25:07",
-   "frames": 306
+   "tc_in": "18:05:17",
+   "tc_out": "18:18:05",
+   "frames": 300
   },
   {
    "id": "18.09",
@@ -2058,8 +2066,8 @@
    "beats": [
     "18.09"
    ],
-   "s": 1159,
-   "e": 1227,
+   "s": 1157,
+   "e": 1205,
    "onscreen": [],
    "lines": [
     {
@@ -2128,12 +2136,12 @@
     "music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone"
    ],
    "sounds": [
-    "pen_scribble_short @51"
+    "pen_scribble_short @45"
    ],
    "spots": [
     {
      "name": "pen_scribble_short",
-     "k": 51,
+     "k": 45,
      "dur": null
     }
    ],
@@ -2167,14 +2175,15 @@
    "beat_starts": {
     "18.09": 0
    },
+   "picture": "HOLD 2 BEATS (the table's).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:25:07",
-   "tc_out": "18:28:03",
-   "frames": 68
+   "tc_in": "18:18:05",
+   "tc_out": "18:20:05",
+   "frames": 48
   },
   {
    "id": "18.10",
@@ -2182,8 +2191,8 @@
    "beats": [
     "18.10"
    ],
-   "s": 1227,
-   "e": 1536,
+   "s": 1205,
+   "e": 1510,
    "onscreen": [],
    "lines": [
     {
@@ -2192,10 +2201,10 @@
      "mode": "on-mic",
      "who": "TERB",
      "text": "And at the end of the ninety days, we take our recommendations to the full board, which is…",
-     "s": 6,
-     "e": 146,
-     "fs": -2,
-     "fe": 154,
+     "s": 3,
+     "e": 142,
+     "fs": -6,
+     "fe": 150,
      "os": false,
      "via": null,
      "face": null,
@@ -2208,139 +2217,139 @@
        "E"
       ],
       [
-       5,
+       4,
        "A"
       ],
       [
-       7,
+       6,
        "E"
       ],
       [
-       11,
+       10,
        "A"
       ],
       [
-       13,
+       12,
        "E"
       ],
       [
-       16,
+       15,
        "A"
       ],
       [
-       18,
+       17,
        "E"
       ],
       [
-       24,
+       23,
        "A"
       ],
       [
-       27,
+       26,
        "E"
       ],
       [
-       35,
+       34,
        "A"
       ],
       [
-       41,
+       40,
        "E"
       ],
       [
-       43,
+       42,
        "rest"
       ],
       [
-       50,
+       49,
        "O"
       ],
       [
-       52,
+       51,
        "E"
       ],
       [
-       56,
+       55,
        "A"
       ],
       [
-       58,
+       57,
        "E"
       ],
       [
-       60,
+       59,
        "A"
       ],
       [
-       62,
+       61,
        "E"
       ],
       [
-       65,
+       64,
        "A"
       ],
       [
-       67,
+       66,
        "E"
       ],
       [
-       70,
+       69,
        "M"
       ],
       [
-       72,
+       71,
        "E"
       ],
       [
-       76,
+       75,
        "A"
       ],
       [
-       79,
+       78,
        "E"
       ],
       [
-       86,
+       85,
        "O"
       ],
       [
-       89,
+       88,
        "E"
       ],
       [
-       94,
+       93,
        "O"
       ],
       [
-       98,
+       97,
        "E"
       ],
       [
-       101,
+       100,
        "M"
       ],
       [
-       103,
+       102,
        "O"
       ],
       [
-       107,
+       106,
        "E"
       ],
       [
-       110,
+       109,
        "rest"
       ],
       [
-       118,
+       117,
        "O"
       ],
       [
-       120,
+       119,
        "E"
       ],
       [
-       130,
+       129,
        "rest"
       ]
      ],
@@ -2353,27 +2362,27 @@
       [
        "at",
        5,
-       7
+       6
       ],
       [
        "the",
-       8,
-       10
+       7,
+       9
       ],
       [
        "end",
-       11,
-       15
+       10,
+       14
       ],
       [
        "of",
-       16,
-       17
+       15,
+       16
       ],
       [
        "the",
-       18,
-       20
+       17,
+       19
       ],
       [
        "ninety",
@@ -2382,58 +2391,58 @@
       ],
       [
        "days",
-       33,
-       43
+       32,
+       42
       ],
       [
        "we",
-       50,
+       49,
        53
       ],
       [
        "take",
-       55,
-       59
+       54,
+       58
       ],
       [
        "our",
-       60,
-       62
+       59,
+       61
       ],
       [
        "recommendations",
        63,
-       85
+       84
       ],
       [
        "to",
-       86,
+       85,
        87
       ],
       [
        "the",
-       89,
-       91
+       88,
+       90
       ],
       [
        "full",
-       93,
-       100
+       92,
+       99
       ],
       [
        "board",
-       101,
-       111
+       100,
+       110
       ],
       [
        "which",
-       118,
-       123
+       117,
+       122
       ],
       [
        "is",
        124,
-       130
+       129
       ]
      ],
      "tag": "",
@@ -2445,10 +2454,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "also present.",
-     "s": 159,
-     "e": 186,
-     "fs": 150,
-     "fe": 196,
+     "s": 156,
+     "e": 182,
+     "fs": 146,
+     "fe": 192,
      "os": false,
      "via": null,
      "face": null,
@@ -2461,44 +2470,44 @@
        "O"
       ],
       [
-       2,
+       1,
        "E"
       ],
       [
-       5,
+       4,
        "O"
       ],
       [
-       9,
+       8,
        "M"
       ],
       [
-       11,
+       10,
        "E"
       ],
       [
-       13,
+       12,
        "A"
       ],
       [
-       16,
+       15,
        "E"
       ],
       [
-       23,
+       22,
        "rest"
       ]
      ],
      "words": [
       [
        "Also",
-       0,
-       8
+       -1,
+       7
       ],
       [
        "present",
        10,
-       23
+       22
       ]
      ],
      "tag": "",
@@ -2510,10 +2519,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "the next one's already training.",
-     "s": 240,
-     "e": 290,
-     "fs": 229,
-     "fe": 305,
+     "s": 236,
+     "e": 286,
+     "fs": 225,
+     "fe": 301,
      "os": false,
      "via": null,
      "face": null,
@@ -2530,11 +2539,11 @@
       [
        "next",
        4,
-       10
+       11
       ],
       [
        "one's",
-       12,
+       13,
        19
       ],
       [
@@ -2574,12 +2583,12 @@
     "music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone"
    ],
    "sounds": [
-    "pen_scribble_short @192"
+    "pen_scribble_short @188"
    ],
    "spots": [
     {
      "name": "pen_scribble_short",
-     "k": 192,
+     "k": 188,
      "dur": null
     }
    ],
@@ -2621,14 +2630,15 @@
    "beat_starts": {
     "18.10": 0
    },
+   "picture": "\"also present.\" and Mada's second word land first; the V.O. types in his cyan, in his pane, with new information (the same post's news), never a reading of the committee.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:28:03",
-   "tc_out": "18:41:00",
-   "frames": 309
+   "tc_in": "18:20:05",
+   "tc_out": "18:32:22",
+   "frames": 305
   },
   {
    "id": "18.11",
@@ -2636,8 +2646,8 @@
    "beats": [
     "18.11"
    ],
-   "s": 1536,
-   "e": 1736,
+   "s": 1510,
+   "e": 1710,
    "onscreen": [],
    "lines": [
     {
@@ -3079,13 +3089,14 @@
    "beat_starts": {
     "18.11": 0
    },
+   "picture": "The lighthouse always plays beside Mas's pane.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:41:00",
-   "tc_out": "18:49:08",
+   "tc_in": "18:32:22",
+   "tc_out": "18:41:06",
    "frames": 200
   },
   {
@@ -3094,8 +3105,8 @@
    "beats": [
     "18.12"
    ],
-   "s": 1736,
-   "e": 1919,
+   "s": 1710,
+   "e": 1893,
    "onscreen": [
     {
      "text": "Building smarter-than-human machines is an inherently dangerous endeavor.",
@@ -3244,6 +3255,7 @@
    "beat_starts": {
     "18.12": 0
    },
+   "picture": "An insert, not only in the pane (P7).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3257,8 +3269,8 @@
      "must": true
     }
    ],
-   "tc_in": "18:49:08",
-   "tc_out": "18:56:23",
+   "tc_in": "18:41:06",
+   "tc_out": "18:48:21",
    "frames": 183
   },
   {
@@ -3267,8 +3279,8 @@
    "beats": [
     "18.13"
    ],
-   "s": 1919,
-   "e": 2158,
+   "s": 1893,
+   "e": 2132,
    "onscreen": [],
    "lines": [
     {
@@ -3278,7 +3290,7 @@
      "who": "MARIO",
      "text": "There's a brief document.",
      "s": 37,
-     "e": 77,
+     "e": 78,
      "fs": 25,
      "fe": 89,
      "os": false,
@@ -3372,10 +3384,10 @@
      "mode": "on-mic",
      "who": "EKIEL",
      "text": "That's the brief one?",
-     "s": 138,
-     "e": 165,
-     "fs": 127,
-     "fe": 178,
+     "s": 139,
+     "e": 166,
+     "fs": 128,
+     "fe": 179,
      "os": false,
      "via": null,
      "face": null,
@@ -3427,7 +3439,7 @@
      "words": [
       [
        "That's",
-       0,
+       -1,
        4
       ],
       [
@@ -3442,8 +3454,8 @@
       ],
       [
        "one",
-       17,
-       23
+       16,
+       22
       ]
      ],
      "tag": "",
@@ -3456,7 +3468,7 @@
      "who": "MARIO",
      "text": "That's the brief one. It only has the one concern.",
      "s": 169,
-     "e": 235,
+     "e": 236,
      "fs": 157,
      "fe": 248,
      "os": false,
@@ -3546,12 +3558,12 @@
      "words": [
       [
        "That's",
-       0,
-       7
+       1,
+       8
       ],
       [
        "the",
-       7,
+       8,
        10
       ],
       [
@@ -3677,13 +3689,14 @@
    "beat_starts": {
     "18.13": 0
    },
+   "picture": "The name GOLDEN GATE CLOD is never printed or spoken (O2.2: an egg).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "18:56:23",
-   "tc_out": "19:06:22",
+   "tc_in": "18:48:21",
+   "tc_out": "18:58:20",
    "frames": 239
   },
   {
@@ -3692,9 +3705,15 @@
    "beats": [
     "18.14"
    ],
-   "s": 2158,
-   "e": 2225,
-   "onscreen": [],
+   "s": 2132,
+   "e": 2199,
+   "onscreen": [
+    {
+     "text": "NELEH & THE QUIET VOTE",
+     "s": 4,
+     "e": 67
+    }
+   ],
    "lines": [
     {
      "id": "e2-a4-0016",
@@ -3828,13 +3847,22 @@
    "beat_starts": {
     "18.14": 0
    },
+   "picture": "Egg on his desk, by the lamp: an op-ed clipping, byline NELEH & THE QUIET VOTE (facts A37; a byline egg only, no hold, never read out).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
-   "texts": [],
-   "tc_in": "19:06:22",
-   "tc_out": "19:09:17",
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "NELEH & THE QUIET VOTE",
+     "s": 4,
+     "e": 67,
+     "must": true
+    }
+   ],
+   "tc_in": "18:58:20",
+   "tc_out": "19:01:15",
    "frames": 67
   },
   {
@@ -3843,8 +3871,8 @@
    "beats": [
     "18.15"
    ],
-   "s": 2225,
-   "e": 2304,
+   "s": 2199,
+   "e": 2280,
    "onscreen": [
     {
      "text": "ELPPA · KEYNOTE · JUN 10",
@@ -3910,6 +3938,7 @@
    "beat_starts": {
     "18.15": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3923,9 +3952,9 @@
      "must": true
     }
    ],
-   "tc_in": "19:09:17",
-   "tc_out": "19:13:00",
-   "frames": 79
+   "tc_in": "19:01:15",
+   "tc_out": "19:05:00",
+   "frames": 81
   },
   {
    "id": "19.01",
@@ -3933,8 +3962,8 @@
    "beats": [
     "19.01"
    ],
-   "s": 2304,
-   "e": 2414,
+   "s": 2280,
+   "e": 2390,
    "onscreen": [
     {
      "text": "RAIL: JUN 10, 2024",
@@ -3955,7 +3984,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4005,6 +4034,7 @@
    "beat_starts": {
     "19.01": 0
    },
+   "picture": "Eggs at 0 s: the tusk. ELPPA's stage is generic (no real building, logo or trade dress).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4025,8 +4055,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:13:00",
-   "tc_out": "19:17:14",
+   "tc_in": "19:05:00",
+   "tc_out": "19:09:14",
    "frames": 110
   },
   {
@@ -4035,8 +4065,8 @@
    "beats": [
     "19.02"
    ],
-   "s": 2414,
-   "e": 2453,
+   "s": 2390,
+   "e": 2429,
    "onscreen": [
     {
      "text": "FLOOR",
@@ -4052,7 +4082,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4082,6 +4112,7 @@
    "beat_starts": {
     "19.02": 0
    },
+   "picture": "Legible, 1.5 s (FC).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4102,8 +4133,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:17:14",
-   "tc_out": "19:19:05",
+   "tc_in": "19:09:14",
+   "tc_out": "19:11:05",
    "frames": 39
   },
   {
@@ -4112,8 +4143,8 @@
    "beats": [
     "19.03"
    ],
-   "s": 2453,
-   "e": 2561,
+   "s": 2429,
+   "e": 2537,
    "onscreen": [
     {
      "text": "HARAS · FIRST CFO",
@@ -4124,7 +4155,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4182,6 +4213,7 @@
    "beat_starts": {
     "19.03": 0
    },
+   "picture": "",
    "names": [
     {
      "id": "haras",
@@ -4200,8 +4232,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:19:05",
-   "tc_out": "19:23:17",
+   "tc_in": "19:11:05",
+   "tc_out": "19:15:17",
    "frames": 108
   },
   {
@@ -4210,13 +4242,13 @@
    "beats": [
     "19.04"
    ],
-   "s": 2561,
-   "e": 2919,
+   "s": 2537,
+   "e": 2895,
    "onscreen": [
     {
-     "text": "And profit—",
-     "s": 332,
-     "e": 355
+     "text": "…AND LATER THIS YEAR: CHATGTP.",
+     "s": 327,
+     "e": 358
     }
    ],
    "lines": [
@@ -4869,7 +4901,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4879,7 +4911,7 @@
    "frame": "2S · Haras and Gerg on the beanbags, the wall screen low behind them (no cut-ins)",
    "cls": "M",
    "move": "hold",
-   "does": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it.",
+   "does": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it: as she asks, the wall screen behind them puts up the announcement and the stream's own crowd roars, and the lobby's cheer takes her last word.",
    "chars": [
     "gerg",
     "haras"
@@ -4887,8 +4919,22 @@
    "cues": [
     "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
    ],
-   "sounds": [],
-   "spots": [],
+   "sounds": [
+    "stream_announce_roar @327",
+    "crowd_cheer @336"
+   ],
+   "spots": [
+    {
+     "name": "stream_announce_roar",
+     "k": 327,
+     "dur": null
+    },
+    {
+     "name": "crowd_cheer",
+     "k": 336,
+     "dur": null
+    }
+   ],
    "v4_frames": null,
    "kind": "scene",
    "set": "lobby",
@@ -4896,7 +4942,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it.",
+   "caption": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it: as she asks, the wall screen behind them puts up the announcement and the stream's own crowd roars, and the lobby's cheer takes her last word.",
    "cast": [
     {
      "id": "haras",
@@ -4919,21 +4965,22 @@
    "beat_starts": {
     "19.04": 0
    },
+   "picture": "The cheer cuts \"And profit—\" (the episode's second and last cut-off): its cause, the stream's …AND LATER THIS YEAR: CHATGTP. on the wall screen behind them, comes up and roars 0.2 s before her line; the lobby's cheer lands on \"profit\" (lock QA). Record it complete; the take plays whole under the cheer, and the subtitle reads \"And profit—\".",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [
     {
-     "kind": "caption",
-     "text": "And profit—",
-     "s": 332,
-     "e": 355,
+     "kind": "ui",
+     "text": "…AND LATER THIS YEAR: CHATGTP.",
+     "s": 327,
+     "e": 358,
      "must": true
     }
    ],
-   "tc_in": "19:23:17",
-   "tc_out": "19:38:15",
+   "tc_in": "19:15:17",
+   "tc_out": "19:30:15",
    "frames": 358
   },
   {
@@ -4942,12 +4989,12 @@
    "beats": [
     "19.05"
    ],
-   "s": 2919,
-   "e": 3032,
+   "s": 2895,
+   "e": 3008,
    "onscreen": [
     {
      "text": "…AND LATER THIS YEAR: CHATGTP.",
-     "s": 2,
+     "s": 0,
      "e": 52
     }
    ],
@@ -5051,7 +5098,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5061,7 +5108,7 @@
    "frame": "SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer",
    "cls": "SW",
    "move": "cut",
-   "does": "The stream says it. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
+   "does": "On the stream, full frame, the announcement that the lobby is already cheering. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
    "chars": [
     "gerg",
     "haras",
@@ -5071,15 +5118,9 @@
     "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
    ],
    "sounds": [
-    "crowd_cheer @14",
     "confetti_pop @21"
    ],
    "spots": [
-    {
-     "name": "crowd_cheer",
-     "k": 14,
-     "dur": null
-    },
     {
      "name": "confetti_pop",
      "k": 21,
@@ -5093,7 +5134,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The stream says it. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
+   "caption": "On the stream, full frame, the announcement that the lobby is already cheering. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
    "cast": [
     {
      "id": "haras",
@@ -5124,6 +5165,7 @@
    "beat_starts": {
     "19.05": 0
    },
+   "picture": "The cheer started under her question in 19.04 and carries across the cut.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -5132,13 +5174,13 @@
     {
      "kind": "ui",
      "text": "…AND LATER THIS YEAR: CHATGTP.",
-     "s": 2,
+     "s": 0,
      "e": 52,
      "must": true
     }
    ],
-   "tc_in": "19:38:15",
-   "tc_out": "19:43:08",
+   "tc_in": "19:30:15",
+   "tc_out": "19:35:08",
    "frames": 113
   },
   {
@@ -5147,8 +5189,8 @@
    "beats": [
     "19.06"
    ],
-   "s": 3032,
-   "e": 3193,
+   "s": 3008,
+   "e": 3169,
    "onscreen": [],
    "lines": [
     {
@@ -5220,7 +5262,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5287,13 +5329,14 @@
    "beat_starts": {
     "19.06": 0
    },
+   "picture": "Our staging: the stream's crowd shot, in our stream's UI.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "19:43:08",
-   "tc_out": "19:50:01",
+   "tc_in": "19:35:08",
+   "tc_out": "19:42:01",
    "frames": 161
   },
   {
@@ -5302,8 +5345,8 @@
    "beats": [
     "19.07"
    ],
-   "s": 3193,
-   "e": 3419,
+   "s": 3169,
+   "e": 3395,
    "onscreen": [
     {
      "text": "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it.",
@@ -5314,7 +5357,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5384,6 +5427,7 @@
    "beat_starts": {
     "19.07": 0
    },
+   "picture": "His real post, verbatim, his lowercase (name swaps). No GUEST badge on him (D-15); three collars, no pop.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -5397,8 +5441,8 @@
      "must": true
     }
    ],
-   "tc_in": "19:50:01",
-   "tc_out": "19:59:11",
+   "tc_in": "19:42:01",
+   "tc_out": "19:51:11",
    "frames": 226
   },
   {
@@ -5407,8 +5451,8 @@
    "beats": [
     "19.08"
    ],
-   "s": 3419,
-   "e": 3585,
+   "s": 3395,
+   "e": 3561,
    "onscreen": [],
    "lines": [
     {
@@ -5481,7 +5525,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5545,13 +5589,14 @@
    "beat_starts": {
     "19.08": 0
    },
+   "picture": "The V.O. after the post's read has cleared.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "19:59:11",
-   "tc_out": "20:06:09",
+   "tc_in": "19:51:11",
+   "tc_out": "19:58:09",
    "frames": 166
   },
   {
@@ -5560,8 +5605,8 @@
    "beats": [
     "19.09"
    ],
-   "s": 3585,
-   "e": 3754,
+   "s": 3561,
+   "e": 3730,
    "onscreen": [],
    "lines": [
     {
@@ -5837,7 +5882,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5901,13 +5946,14 @@
    "beat_starts": {
     "19.09": 0
    },
+   "picture": "Crosscut: the speaker is in frame, or his voice is already established (P9). Gerg in the lobby is invented staging (facts A70: the press placed Mas at the campus; one live blog also listed Gerg's counterpart there, which the call doesn't contradict on screen and nothing in the scene turns on).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:06:09",
-   "tc_out": "20:13:10",
+   "tc_in": "19:58:09",
+   "tc_out": "20:05:10",
    "frames": 169
   },
   {
@@ -5916,8 +5962,8 @@
    "beats": [
     "19.10"
    ],
-   "s": 3754,
-   "e": 4107,
+   "s": 3730,
+   "e": 4083,
    "onscreen": [],
    "lines": [
     {
@@ -6596,7 +6642,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6646,13 +6692,14 @@
    "beat_starts": {
     "19.10": 0
    },
+   "picture": "Mas asks aloud again (P9): his Ep1 precision question.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:13:10",
-   "tc_out": "20:28:03",
+   "tc_in": "20:05:10",
+   "tc_out": "20:20:03",
    "frames": 353
   },
   {
@@ -6661,13 +6708,13 @@
    "beats": [
     "19.11"
    ],
-   "s": 4107,
-   "e": 4155,
+   "s": 4083,
+   "e": 4131,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6705,13 +6752,14 @@
    "beat_starts": {
     "19.11": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:28:03",
-   "tc_out": "20:30:03",
+   "tc_in": "20:20:03",
+   "tc_out": "20:22:03",
    "frames": 48
   },
   {
@@ -6720,8 +6768,8 @@
    "beats": [
     "19.12"
    ],
-   "s": 4155,
-   "e": 4270,
+   "s": 4131,
+   "e": 4246,
    "onscreen": [
     {
      "text": "\"WHERE YOU AT?\"",
@@ -6732,7 +6780,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6773,6 +6821,7 @@
    "beat_starts": {
     "19.12": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -6786,8 +6835,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:30:03",
-   "tc_out": "20:34:22",
+   "tc_in": "20:22:03",
+   "tc_out": "20:26:22",
    "frames": 115
   },
   {
@@ -6796,13 +6845,13 @@
    "beats": [
     "19.13"
    ],
-   "s": 4270,
-   "e": 4391,
+   "s": 4246,
+   "e": 4367,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6866,13 +6915,14 @@
    "beat_starts": {
     "19.13": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:34:22",
-   "tc_out": "20:39:23",
+   "tc_in": "20:26:22",
+   "tc_out": "20:31:23",
    "frames": 121
   },
   {
@@ -6881,8 +6931,8 @@
    "beats": [
     "19.14"
    ],
-   "s": 4391,
-   "e": 4561,
+   "s": 4367,
+   "e": 4537,
    "onscreen": [
     {
      "text": "LAST UPDATED 2012",
@@ -6893,7 +6943,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6960,6 +7010,7 @@
    "beat_starts": {
     "19.14": 0
    },
+   "picture": "No cause claimed (FC).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -6973,8 +7024,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:39:23",
-   "tc_out": "20:47:01",
+   "tc_in": "20:31:23",
+   "tc_out": "20:39:01",
    "frames": 170
   },
   {
@@ -6983,13 +7034,13 @@
    "beats": [
     "19.15"
    ],
-   "s": 4561,
-   "e": 4649,
+   "s": 4537,
+   "e": 4625,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7030,13 +7081,14 @@
    "beat_starts": {
     "19.15": 0
    },
+   "picture": "Turn: he doesn't need their stage now.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "20:47:01",
-   "tc_out": "20:50:17",
+   "tc_in": "20:39:01",
+   "tc_out": "20:42:17",
    "frames": 88
   },
   {
@@ -7045,8 +7097,8 @@
    "beats": [
     "19.16"
    ],
-   "s": 4649,
-   "e": 4889,
+   "s": 4625,
+   "e": 4865,
    "onscreen": [
     {
      "text": "GUEST",
@@ -7057,7 +7109,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7127,6 +7179,7 @@
    "beat_starts": {
     "19.16": 0
    },
+   "picture": "Company to company only: no rings, no altar, no vows. One 4-bar phrase.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7140,8 +7193,8 @@
      "must": true
     }
    ],
-   "tc_in": "20:50:17",
-   "tc_out": "21:00:17",
+   "tc_in": "20:42:17",
+   "tc_out": "20:52:17",
    "frames": 240
   },
   {
@@ -7150,8 +7203,8 @@
    "beats": [
     "19.17"
    ],
-   "s": 4889,
-   "e": 5129,
+   "s": 4865,
+   "e": 5105,
    "onscreen": [
     {
      "text": "99%",
@@ -7162,7 +7215,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7238,6 +7291,7 @@
    "beat_starts": {
     "19.17": 0
    },
+   "picture": "Text only: voice 5 is paused (D-56). One 4-bar phrase.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7251,8 +7305,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:00:17",
-   "tc_out": "21:10:17",
+   "tc_in": "20:52:17",
+   "tc_out": "21:02:17",
    "frames": 240
   },
   {
@@ -7261,8 +7315,8 @@
    "beats": [
     "19.18"
    ],
-   "s": 5129,
-   "e": 5337,
+   "s": 5105,
+   "e": 5313,
    "onscreen": [],
    "lines": [
     {
@@ -7466,7 +7520,7 @@
    ],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7516,13 +7570,14 @@
    "beat_starts": {
     "19.18": 0
    },
+   "picture": "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:10:17",
-   "tc_out": "21:19:09",
+   "tc_in": "21:02:17",
+   "tc_out": "21:11:09",
    "frames": 208
   },
   {
@@ -7531,13 +7586,13 @@
    "beats": [
     "19.19"
    ],
-   "s": 5337,
-   "e": 5439,
+   "s": 5313,
+   "e": 5415,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7592,13 +7647,14 @@
    "beat_starts": {
     "19.19": 0
    },
+   "picture": "The one shot where he loses the left third, on purpose.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:19:09",
-   "tc_out": "21:23:15",
+   "tc_in": "21:11:09",
+   "tc_out": "21:15:15",
    "frames": 102
   },
   {
@@ -7607,13 +7663,13 @@
    "beats": [
     "19.20"
    ],
-   "s": 5439,
-   "e": 5520,
+   "s": 5415,
+   "e": 5496,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "19",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7662,13 +7718,14 @@
    "beat_starts": {
     "19.20": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:23:15",
-   "tc_out": "21:27:00",
+   "tc_in": "21:15:15",
+   "tc_out": "21:19:00",
    "frames": 81
   },
   {
@@ -7677,8 +7734,8 @@
    "beats": [
     "20.01"
    ],
-   "s": 5520,
-   "e": 5614,
+   "s": 5496,
+   "e": 5590,
    "onscreen": [
     {
      "text": "KORG 2: NEXT QUARTER",
@@ -7689,7 +7746,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7747,6 +7804,7 @@
    "beat_starts": {
     "20.01": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7760,8 +7818,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:27:00",
-   "tc_out": "21:30:22",
+   "tc_in": "21:19:00",
+   "tc_out": "21:22:22",
    "frames": 94
   },
   {
@@ -7770,8 +7828,8 @@
    "beats": [
     "20.02"
    ],
-   "s": 5614,
-   "e": 5796,
+   "s": 5590,
+   "e": 5772,
    "onscreen": [
     {
      "text": "If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be banned at my companies. That is an unacceptable security violation.",
@@ -7782,7 +7840,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7837,6 +7895,7 @@
    "beat_starts": {
     "20.02": 0
    },
+   "picture": "One crop, with its condition (R2).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7850,8 +7909,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:30:22",
-   "tc_out": "21:38:12",
+   "tc_in": "21:22:22",
+   "tc_out": "21:30:12",
    "frames": 182
   },
   {
@@ -7860,8 +7919,8 @@
    "beats": [
     "20.03"
    ],
-   "s": 5796,
-   "e": 5943,
+   "s": 5772,
+   "e": 5919,
    "onscreen": [],
    "lines": [
     {
@@ -8027,7 +8086,7 @@
    ],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8091,13 +8150,14 @@
    "beat_starts": {
     "20.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:38:12",
-   "tc_out": "21:44:15",
+   "tc_in": "21:30:12",
+   "tc_out": "21:36:15",
    "frames": 147
   },
   {
@@ -8106,13 +8166,13 @@
    "beats": [
     "20.04"
    ],
-   "s": 5943,
-   "e": 6022,
+   "s": 5919,
+   "e": 5998,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8167,13 +8227,14 @@
    "beat_starts": {
     "20.04": 0
    },
+   "picture": "Nothing legible in the replies.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:44:15",
-   "tc_out": "21:47:22",
+   "tc_in": "21:36:15",
+   "tc_out": "21:39:22",
    "frames": 79
   },
   {
@@ -8182,8 +8243,8 @@
    "beats": [
     "20.05"
    ],
-   "s": 6022,
-   "e": 6137,
+   "s": 5998,
+   "e": 6113,
    "onscreen": [
     {
      "text": "RAIL: JUN 11",
@@ -8194,7 +8255,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8258,13 +8319,14 @@
    "beat_starts": {
     "20.05": 0
    },
+   "picture": "The cage's bars (right pane) → the lobby's rack pillars as the divider slides away.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:47:22",
-   "tc_out": "21:52:17",
+   "tc_in": "21:39:22",
+   "tc_out": "21:44:17",
    "frames": 115
   },
   {
@@ -8273,13 +8335,13 @@
    "beats": [
     "20.06"
    ],
-   "s": 6137,
-   "e": 6166,
+   "s": 6113,
+   "e": 6142,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8317,13 +8379,14 @@
    "beat_starts": {
     "20.06": 0
    },
+   "picture": "1 s; away from Alyi and from every compute line (D-62).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:52:17",
-   "tc_out": "21:53:22",
+   "tc_in": "21:44:17",
+   "tc_out": "21:45:22",
    "frames": 29
   },
   {
@@ -8332,8 +8395,8 @@
    "beats": [
     "20.07"
    ],
-   "s": 6166,
-   "e": 6283,
+   "s": 6142,
+   "e": 6259,
    "onscreen": [
     {
      "text": "UPSIDE",
@@ -8412,7 +8475,7 @@
    ],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8462,6 +8525,7 @@
    "beat_starts": {
     "20.07": 0
    },
+   "picture": "The V.O. after the note's insert has cleared, before the docket.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8475,8 +8539,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:53:22",
-   "tc_out": "21:58:19",
+   "tc_in": "21:45:22",
+   "tc_out": "21:50:19",
    "frames": 117
   },
   {
@@ -8485,8 +8549,8 @@
    "beats": [
     "20.08"
    ],
-   "s": 6283,
-   "e": 6336,
+   "s": 6259,
+   "e": 6312,
    "onscreen": [
     {
      "text": "HEARING · JUN 12 · MOTION TO DISMISS",
@@ -8497,7 +8561,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8535,6 +8599,7 @@
    "beat_starts": {
     "20.08": 0
    },
+   "picture": "Legible for its read floor, 2.1 s (P7, P15).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8548,8 +8613,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:58:19",
-   "tc_out": "22:01:00",
+   "tc_in": "21:50:19",
+   "tc_out": "21:53:00",
    "frames": 53
   },
   {
@@ -8558,8 +8623,8 @@
    "beats": [
     "20.09"
    ],
-   "s": 6336,
-   "e": 6432,
+   "s": 6312,
+   "e": 6408,
    "onscreen": [
     {
      "text": "(FOR NOW)",
@@ -8570,7 +8635,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8631,6 +8696,7 @@
    "beat_starts": {
     "20.09": 0
    },
+   "picture": "No THUD at its exit (THUD means \"filed\").",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8644,8 +8710,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:01:00",
-   "tc_out": "22:05:00",
+   "tc_in": "21:53:00",
+   "tc_out": "21:57:00",
    "frames": 96
   },
   {
@@ -8654,8 +8720,8 @@
    "beats": [
     "20.10"
    ],
-   "s": 6432,
-   "e": 6600,
+   "s": 6408,
+   "e": 6576,
    "onscreen": [
     {
      "text": "RAIL: JUN 19, 2024",
@@ -8681,7 +8747,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8736,6 +8802,7 @@
    "beat_starts": {
     "20.10": 0
    },
+   "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8763,8 +8830,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:05:00",
-   "tc_out": "22:12:00",
+   "tc_in": "21:57:00",
+   "tc_out": "22:04:00",
    "frames": 168
   },
   {
@@ -8773,13 +8840,13 @@
    "beats": [
     "20.11"
    ],
-   "s": 6600,
-   "e": 6638,
+   "s": 6576,
+   "e": 6614,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8817,13 +8884,14 @@
    "beat_starts": {
     "20.11": 0
    },
+   "picture": "No app tracks anyone (D-29).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:12:00",
-   "tc_out": "22:13:14",
+   "tc_in": "22:04:00",
+   "tc_out": "22:05:14",
    "frames": 38
   },
   {
@@ -8832,13 +8900,13 @@
    "beats": [
     "20.12"
    ],
-   "s": 6638,
-   "e": 6734,
+   "s": 6614,
+   "e": 6710,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8893,13 +8961,14 @@
    "beat_starts": {
     "20.12": 0
    },
+   "picture": "A face light one step. His decision shown (FC).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:13:14",
-   "tc_out": "22:17:14",
+   "tc_in": "22:05:14",
+   "tc_out": "22:09:14",
    "frames": 96
   },
   {
@@ -8908,13 +8977,13 @@
    "beats": [
     "20.13"
    ],
-   "s": 6734,
-   "e": 6768,
+   "s": 6710,
+   "e": 6744,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5520,
+   "scene_s": 5496,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8952,13 +9021,14 @@
    "beat_starts": {
     "20.13": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:17:14",
-   "tc_out": "22:19:00",
+   "tc_in": "22:09:14",
+   "tc_out": "22:11:00",
    "frames": 34
   },
   {
@@ -8967,8 +9037,8 @@
    "beats": [
     "22.01"
    ],
-   "s": 6768,
-   "e": 6947,
+   "s": 6744,
+   "e": 6923,
    "onscreen": [
     {
      "text": "ISS",
@@ -8979,7 +9049,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9028,6 +9098,7 @@
    "beat_starts": {
     "22.01": 0
    },
+   "picture": "No mat, no lock, no sign (R1, R2). No rail: it runs on from sc 20's JUN 19, 2024.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -9041,8 +9112,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:19:00",
-   "tc_out": "22:26:11",
+   "tc_in": "22:11:00",
+   "tc_out": "22:18:11",
    "frames": 179
   },
   {
@@ -9051,13 +9122,13 @@
    "beats": [
     "22.02"
    ],
-   "s": 6947,
-   "e": 7104,
+   "s": 6923,
+   "e": 7080,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9133,13 +9204,14 @@
    "beat_starts": {
     "22.02": 0
    },
+   "picture": "The contrast kept (P12).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:26:11",
-   "tc_out": "22:33:00",
+   "tc_in": "22:18:11",
+   "tc_out": "22:25:00",
    "frames": 157
   },
   {
@@ -9148,8 +9220,8 @@
    "beats": [
     "22.03"
    ],
-   "s": 7104,
-   "e": 7200,
+   "s": 7080,
+   "e": 7176,
    "onscreen": [
     {
      "text": "Use flyer on door",
@@ -9160,7 +9232,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9215,6 +9287,7 @@
    "beat_starts": {
     "22.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -9228,8 +9301,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:33:00",
-   "tc_out": "22:37:00",
+   "tc_in": "22:25:00",
+   "tc_out": "22:29:00",
    "frames": 96
   },
   {
@@ -9238,13 +9311,13 @@
    "beats": [
     "22.04"
    ],
-   "s": 7200,
-   "e": 7310,
+   "s": 7176,
+   "e": 7286,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9299,13 +9372,14 @@
    "beat_starts": {
     "22.04": 0
    },
+   "picture": "A question, not a reason (D-37).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:37:00",
-   "tc_out": "22:41:14",
+   "tc_in": "22:29:00",
+   "tc_out": "22:33:14",
    "frames": 110
   },
   {
@@ -9314,13 +9388,13 @@
    "beats": [
     "22.05"
    ],
-   "s": 7310,
-   "e": 7397,
+   "s": 7286,
+   "e": 7373,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9375,13 +9449,14 @@
    "beat_starts": {
     "22.05": 0
    },
+   "picture": "Alyi in person (pixel), never a reflection; he never looks up (FC).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:41:14",
-   "tc_out": "22:45:05",
+   "tc_in": "22:33:14",
+   "tc_out": "22:37:05",
    "frames": 87
   },
   {
@@ -9390,13 +9465,13 @@
    "beats": [
     "22.06"
    ],
-   "s": 7397,
-   "e": 7426,
+   "s": 7373,
+   "e": 7402,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9434,13 +9509,14 @@
    "beat_starts": {
     "22.06": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:45:05",
-   "tc_out": "22:46:10",
+   "tc_in": "22:37:05",
+   "tc_out": "22:38:10",
    "frames": 29
   },
   {
@@ -9449,13 +9525,13 @@
    "beats": [
     "22.07"
    ],
-   "s": 7426,
-   "e": 7488,
+   "s": 7402,
+   "e": 7464,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9496,13 +9572,14 @@
    "beat_starts": {
     "22.07": 0
    },
+   "picture": "A face light one step. 2–3 s.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:46:10",
-   "tc_out": "22:49:00",
+   "tc_in": "22:38:10",
+   "tc_out": "22:41:00",
    "frames": 62
   },
   {
@@ -9511,13 +9588,13 @@
    "beats": [
     "22.08"
    ],
-   "s": 7488,
-   "e": 7565,
+   "s": 7464,
+   "e": 7541,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9558,13 +9635,14 @@
    "beat_starts": {
     "22.08": 0
    },
+   "picture": "The raised hand held 2 beats. The cue returns as it lowers.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:49:00",
-   "tc_out": "22:52:05",
+   "tc_in": "22:41:00",
+   "tc_out": "22:44:05",
    "frames": 77
   },
   {
@@ -9573,13 +9651,13 @@
    "beats": [
     "22.09"
    ],
-   "s": 7565,
-   "e": 7680,
+   "s": 7541,
+   "e": 7656,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6768,
+   "scene_s": 6744,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9640,13 +9718,14 @@
    "beat_starts": {
     "22.09": 0
    },
+   "picture": "4–5 s of his back.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:52:05",
-   "tc_out": "22:57:00",
+   "tc_in": "22:44:05",
+   "tc_out": "22:49:00",
    "frames": 115
   }
  ],
@@ -9660,13 +9739,13 @@
    "who": "NELEH",
    "text": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on RETTIWT.",
    "tag": "podcast",
-   "on_s": 8.6667,
-   "end_s": 17.6367,
-   "file_s": 8.3167,
-   "abs_in": 208,
-   "abs_out": 424,
-   "file_in": 199,
-   "file_out": 432,
+   "on_s": 8.75,
+   "end_s": 17.72,
+   "file_s": 8.4,
+   "abs_in": 210,
+   "abs_out": 426,
+   "file_in": 201,
+   "file_out": 434,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
    "stick_t": 1.0,
    "stick_in": 0.35,
@@ -10056,15 +10135,15 @@
    "who": "NELEH",
    "text": "MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
    "tag": "podcast",
-   "on_s": 18.7883,
-   "end_s": 23.5383,
-   "file_s": 18.4383,
-   "abs_in": 450,
-   "abs_out": 565,
-   "file_in": 442,
-   "file_out": 574,
+   "on_s": 18.8817,
+   "end_s": 23.6317,
+   "file_s": 18.5317,
+   "abs_in": 453,
+   "abs_out": 568,
+   "file_in": 444,
+   "file_out": 576,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
-   "stick_t": 0.58,
+   "stick_t": 0.59,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -10074,63 +10153,63 @@
    "words": [
     [
      "MAS",
-     5,
-     14
+     4,
+     13
     ],
     [
      "didn't",
-     15,
+     14,
      21
     ],
     [
      "inform",
-     23,
-     35
+     22,
+     34
     ],
     [
      "the",
-     37,
-     39
+     36,
+     38
     ],
     [
      "board",
-     40,
-     46
+     39,
+     45
     ],
     [
      "that",
-     47,
+     46,
      50
     ],
     [
      "he",
-     52,
+     51,
      53
     ],
     [
      "owned",
-     55,
+     54,
      60
     ],
     [
      "the",
-     61,
-     63
+     60,
+     62
     ],
     [
      "NOPEAI",
-     64,
-     86
+     63,
+     85
     ],
     [
      "Startup",
      88,
-     97
+     96
     ],
     [
      "Fund",
-     99,
-     107
+     98,
+     106
     ]
    ],
    "mouth": [
@@ -10139,115 +10218,115 @@
      "rest"
     ],
     [
-     5,
+     4,
      "M"
     ],
     [
-     7,
+     6,
      "A"
     ],
     [
-     12,
+     11,
      "E"
     ],
     [
-     16,
+     15,
      "A"
     ],
     [
-     18,
+     17,
      "E"
     ],
     [
-     29,
+     28,
      "O"
     ],
     [
-     33,
+     32,
      "M"
     ],
     [
-     37,
+     36,
      "E"
     ],
     [
-     40,
+     39,
      "M"
     ],
     [
-     42,
+     41,
      "O"
     ],
     [
-     44,
+     43,
      "E"
     ],
     [
-     48,
+     47,
      "A"
     ],
     [
-     52,
+     51,
      "E"
     ],
     [
-     55,
+     54,
      "O"
     ],
     [
-     58,
+     57,
      "E"
     ],
     [
-     64,
+     63,
      "A"
     ],
     [
-     68,
+     67,
      "O"
     ],
     [
-     72,
+     71,
      "M"
     ],
     [
-     74,
+     73,
      "E"
     ],
     [
-     79,
+     78,
      "A"
     ],
     [
-     88,
+     87,
      "E"
     ],
     [
-     90,
+     89,
      "A"
     ],
     [
-     92,
+     91,
      "E"
     ],
     [
-     94,
+     93,
      "A"
     ],
     [
-     96,
+     95,
      "M"
     ],
     [
-     100,
+     99,
      "A"
     ],
     [
-     104,
+     103,
      "E"
     ],
     [
-     107,
+     106,
      "rest"
     ]
    ],
@@ -10263,13 +10342,13 @@
    "who": "TERB",
    "text": "First item.",
    "tag": "",
-   "on_s": 30.7333,
-   "end_s": 31.6633,
-   "file_s": 30.3833,
-   "abs_in": 737,
-   "abs_out": 760,
-   "file_in": 729,
-   "file_out": 769,
+   "on_s": 30.8167,
+   "end_s": 31.7467,
+   "file_s": 30.4667,
+   "abs_in": 739,
+   "abs_out": 762,
+   "file_in": 731,
+   "file_out": 771,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0003__terb-A.wav",
    "stick_t": 2.4,
    "stick_in": 0.35,
@@ -10332,15 +10411,15 @@
    "who": "TERB",
    "text": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
    "tag": "",
-   "on_s": 35.8317,
-   "end_s": 43.3917,
-   "file_s": 35.4617,
-   "abs_in": 859,
-   "abs_out": 1042,
-   "file_in": 851,
-   "file_out": 1051,
+   "on_s": 36.0083,
+   "end_s": 43.5683,
+   "file_s": 35.6383,
+   "abs_in": 864,
+   "abs_out": 1046,
+   "file_in": 855,
+   "file_out": 1055,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0004__terb-A.wav",
-   "stick_t": 0.29,
+   "stick_t": 0.3,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -10350,93 +10429,93 @@
    "words": [
     [
      "First",
-     0,
+     -1,
      10
     ],
     [
      "task",
-     13,
-     28
+     12,
+     27
     ],
     [
      "this",
-     31,
-     36
+     30,
+     35
     ],
     [
      "committee",
-     38,
-     47
+     37,
+     46
     ],
     [
      "goes",
      47,
-     53
+     52
     ],
     [
      "through",
-     54,
-     59
+     53,
+     58
     ],
     [
      "our",
-     60,
+     59,
      62
     ],
     [
      "safety",
-     64,
-     74
+     63,
+     73
     ],
     [
      "processes",
-     75,
-     91
+     74,
+     90
     ],
     [
      "and",
-     92,
-     94
+     91,
+     93
     ],
     [
      "safeguards",
      95,
-     113
+     112
     ],
     [
      "and",
      123,
-     127
+     126
     ],
     [
      "it",
      128,
-     130
+     129
     ],
     [
      "has",
-     131,
-     136
+     130,
+     135
     ],
     [
      "ninety",
      139,
-     150
+     149
     ],
     [
      "days",
-     152,
-     160
+     151,
+     159
     ],
     [
      "to",
-     162,
-     164
+     161,
+     163
     ],
     [
      "do",
-     166,
-     169
+     165,
+     168
     ],
     [
      "it",
@@ -10450,167 +10529,167 @@
      "rest"
     ],
     [
-     2,
+     1,
      "O"
     ],
     [
-     6,
+     5,
      "E"
     ],
     [
-     11,
+     10,
      "rest"
     ],
     [
-     14,
+     13,
      "E"
     ],
     [
-     16,
+     15,
      "A"
     ],
     [
-     23,
+     22,
      "E"
     ],
     [
-     28,
+     27,
      "rest"
     ],
     [
-     31,
+     30,
      "E"
     ],
     [
-     33,
+     32,
      "A"
     ],
     [
-     35,
+     34,
      "E"
     ],
     [
-     40,
+     39,
      "M"
     ],
     [
-     42,
+     41,
      "A"
     ],
     [
-     44,
+     43,
      "E"
     ],
     [
-     49,
+     48,
      "O"
     ],
     [
-     52,
+     51,
      "E"
     ],
     [
-     57,
+     56,
      "O"
     ],
     [
-     60,
+     59,
      "A"
     ],
     [
-     62,
+     61,
      "E"
     ],
     [
-     66,
+     65,
      "A"
     ],
     [
-     69,
+     68,
      "E"
     ],
     [
-     75,
+     74,
      "M"
     ],
     [
-     78,
+     77,
      "A"
     ],
     [
-     85,
+     84,
      "E"
     ],
     [
-     92,
+     91,
      "A"
     ],
     [
-     94,
+     93,
      "E"
     ],
     [
-     97,
+     96,
      "A"
     ],
     [
-     102,
+     101,
      "E"
     ],
     [
-     105,
+     104,
      "A"
     ],
     [
-     108,
+     107,
      "E"
     ],
     [
-     113,
+     112,
      "rest"
     ],
     [
-     124,
+     123,
      "A"
     ],
     [
-     126,
+     125,
      "E"
     ],
     [
-     132,
+     131,
      "A"
     ],
     [
-     136,
+     135,
      "rest"
     ],
     [
-     141,
+     140,
      "A"
     ],
     [
-     145,
+     144,
      "E"
     ],
     [
-     154,
+     153,
      "A"
     ],
     [
-     159,
+     158,
      "E"
     ],
     [
-     163,
+     162,
      "O"
     ],
     [
-     172,
+     171,
      "E"
     ],
     [
-     175,
+     174,
      "rest"
     ]
    ],
@@ -10626,15 +10705,15 @@
    "who": "TERB",
    "text": "Members: myself, two directors, and our chief executive.",
    "tag": "",
-   "on_s": 43.8917,
-   "end_s": 48.0017,
-   "file_s": 43.5417,
-   "abs_in": 1053,
-   "abs_out": 1153,
-   "file_in": 1045,
-   "file_out": 1161,
+   "on_s": 43.8183,
+   "end_s": 47.9283,
+   "file_s": 43.4683,
+   "abs_in": 1051,
+   "abs_out": 1151,
+   "file_in": 1043,
+   "file_out": 1159,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
-   "stick_t": 8.35,
+   "stick_t": 8.11,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -10655,11 +10734,11 @@
     [
      "two",
      37,
-     42
+     43
     ],
     [
      "directors",
-     43,
+     44,
      58
     ],
     [
@@ -10705,7 +10784,7 @@
      "rest"
     ],
     [
-     20,
+     21,
      "M"
     ],
     [
@@ -10733,7 +10812,7 @@
      "E"
     ],
     [
-     38,
+     39,
      "O"
     ],
     [
@@ -10745,7 +10824,7 @@
      "A"
     ],
     [
-     50,
+     51,
      "E"
     ],
     [
@@ -10757,7 +10836,7 @@
      "E"
     ],
     [
-     62,
+     63,
      "A"
     ],
     [
@@ -10765,7 +10844,7 @@
      "E"
     ],
     [
-     68,
+     69,
      "A"
     ],
     [
@@ -10781,7 +10860,7 @@
      "E"
     ],
     [
-     92,
+     93,
      "rest"
     ]
    ],
@@ -10797,13 +10876,13 @@
    "who": "MAS",
    "text": "present.",
    "tag": "",
-   "on_s": 49.5417,
-   "end_s": 50.1517,
-   "file_s": 49.1317,
-   "abs_in": 1189,
-   "abs_out": 1204,
-   "file_in": 1179,
-   "file_out": 1215,
+   "on_s": 49.4583,
+   "end_s": 50.0683,
+   "file_s": 49.0483,
+   "abs_in": 1187,
+   "abs_out": 1202,
+   "file_in": 1177,
+   "file_out": 1213,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0006__mas-manalt-C.wav",
    "stick_t": 1.25,
    "stick_in": 0.41,
@@ -10849,15 +10928,15 @@
    "who": "TERB",
    "text": "And at the end of the ninety days, we take our recommendations to the full board, which is…",
    "tag": "",
-   "on_s": 51.415,
-   "end_s": 57.185,
-   "file_s": 51.065,
-   "abs_in": 1233,
-   "abs_out": 1373,
-   "file_in": 1225,
-   "file_out": 1381,
+   "on_s": 50.3383,
+   "end_s": 56.1083,
+   "file_s": 49.9883,
+   "abs_in": 1208,
+   "abs_out": 1347,
+   "file_in": 1199,
+   "file_out": 1355,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0007__terb-A.wav",
-   "stick_t": 0.29,
+   "stick_t": 0.13,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -10873,27 +10952,27 @@
     [
      "at",
      5,
-     7
+     6
     ],
     [
      "the",
-     8,
-     10
+     7,
+     9
     ],
     [
      "end",
-     11,
-     15
+     10,
+     14
     ],
     [
      "of",
-     16,
-     17
+     15,
+     16
     ],
     [
      "the",
-     18,
-     20
+     17,
+     19
     ],
     [
      "ninety",
@@ -10902,58 +10981,58 @@
     ],
     [
      "days",
-     33,
-     43
+     32,
+     42
     ],
     [
      "we",
-     50,
+     49,
      53
     ],
     [
      "take",
-     55,
-     59
+     54,
+     58
     ],
     [
      "our",
-     60,
-     62
+     59,
+     61
     ],
     [
      "recommendations",
      63,
-     85
+     84
     ],
     [
      "to",
-     86,
+     85,
      87
     ],
     [
      "the",
-     89,
-     91
+     88,
+     90
     ],
     [
      "full",
-     93,
-     100
+     92,
+     99
     ],
     [
      "board",
-     101,
-     111
+     100,
+     110
     ],
     [
      "which",
-     118,
-     123
+     117,
+     122
     ],
     [
      "is",
      124,
-     130
+     129
     ]
    ],
    "mouth": [
@@ -10962,139 +11041,139 @@
      "E"
     ],
     [
-     5,
+     4,
      "A"
     ],
     [
-     7,
+     6,
      "E"
     ],
     [
-     11,
+     10,
      "A"
     ],
     [
-     13,
+     12,
      "E"
     ],
     [
-     16,
+     15,
      "A"
     ],
     [
-     18,
+     17,
      "E"
     ],
     [
-     24,
+     23,
      "A"
     ],
     [
-     27,
+     26,
      "E"
     ],
     [
-     35,
+     34,
      "A"
     ],
     [
-     41,
+     40,
      "E"
     ],
     [
-     43,
+     42,
      "rest"
     ],
     [
-     50,
+     49,
      "O"
     ],
     [
-     52,
+     51,
      "E"
     ],
     [
-     56,
+     55,
      "A"
     ],
     [
-     58,
+     57,
      "E"
     ],
     [
-     60,
+     59,
      "A"
     ],
     [
-     62,
+     61,
      "E"
     ],
     [
-     65,
+     64,
      "A"
     ],
     [
-     67,
+     66,
      "E"
     ],
     [
-     70,
+     69,
      "M"
     ],
     [
-     72,
+     71,
      "E"
     ],
     [
-     76,
+     75,
      "A"
     ],
     [
-     79,
+     78,
      "E"
     ],
     [
-     86,
+     85,
      "O"
     ],
     [
-     89,
+     88,
      "E"
     ],
     [
-     94,
+     93,
      "O"
     ],
     [
-     98,
+     97,
      "E"
     ],
     [
-     101,
+     100,
      "M"
     ],
     [
-     103,
+     102,
      "O"
     ],
     [
-     107,
+     106,
      "E"
     ],
     [
-     110,
+     109,
      "rest"
     ],
     [
-     118,
+     117,
      "O"
     ],
     [
-     120,
+     119,
      "E"
     ],
     [
-     130,
+     129,
      "rest"
     ]
    ],
@@ -11110,15 +11189,15 @@
    "who": "MAS",
    "text": "also present.",
    "tag": "",
-   "on_s": 57.785,
-   "end_s": 58.845,
-   "file_s": 57.405,
-   "abs_in": 1386,
-   "abs_out": 1413,
-   "file_in": 1377,
-   "file_out": 1423,
+   "on_s": 56.7083,
+   "end_s": 57.7683,
+   "file_s": 56.3283,
+   "abs_in": 1361,
+   "abs_out": 1387,
+   "file_in": 1351,
+   "file_out": 1397,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0008__mas-manalt-C.wav",
-   "stick_t": 6.66,
+   "stick_t": 6.5,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -11128,13 +11207,13 @@
    "words": [
     [
      "Also",
-     0,
-     8
+     -1,
+     7
     ],
     [
      "present",
      10,
-     23
+     22
     ]
    ],
    "mouth": [
@@ -11143,31 +11222,31 @@
      "O"
     ],
     [
-     2,
+     1,
      "E"
     ],
     [
-     5,
+     4,
      "O"
     ],
     [
-     9,
+     8,
      "M"
     ],
     [
-     11,
+     10,
      "E"
     ],
     [
-     13,
+     12,
      "A"
     ],
     [
-     16,
+     15,
      "E"
     ],
     [
-     23,
+     22,
      "rest"
     ]
    ],
@@ -11183,15 +11262,15 @@
    "who": "MAS",
    "text": "the next one's already training.",
    "tag": "V.O.",
-   "on_s": 61.145,
-   "end_s": 63.195,
-   "file_s": 60.695,
-   "abs_in": 1467,
-   "abs_out": 1517,
-   "file_in": 1456,
-   "file_out": 1532,
+   "on_s": 60.0683,
+   "end_s": 62.1183,
+   "file_s": 59.6183,
+   "abs_in": 1441,
+   "abs_out": 1491,
+   "file_in": 1430,
+   "file_out": 1506,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-11__mas-manalt-C.wav",
-   "stick_t": 10.02,
+   "stick_t": 9.86,
    "stick_in": 0.45,
    "cut": false,
    "on_camera": "vo",
@@ -11207,11 +11286,11 @@
     [
      "next",
      4,
-     10
+     11
     ],
     [
      "one's",
-     12,
+     13,
      19
     ],
     [
@@ -11238,13 +11317,13 @@
    "who": "MARIO",
    "text": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
    "tag": "",
-   "on_s": 64.49,
-   "end_s": 68.09,
-   "file_s": 63.98,
-   "abs_in": 1547,
-   "abs_out": 1635,
-   "file_in": 1535,
-   "file_out": 1646,
+   "on_s": 63.4067,
+   "end_s": 67.0067,
+   "file_s": 62.8967,
+   "abs_in": 1521,
+   "abs_out": 1609,
+   "file_in": 1509,
+   "file_out": 1620,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0009.wav",
    "stick_t": 0.49,
    "stick_in": 0.51,
@@ -11459,13 +11538,13 @@
    "who": "EKIEL",
    "text": "You annotated my resignation?",
    "tag": "",
-   "on_s": 68.34,
-   "end_s": 70.29,
-   "file_s": 67.9,
-   "abs_in": 1640,
-   "abs_out": 1687,
-   "file_in": 1629,
-   "file_out": 1696,
+   "on_s": 67.2567,
+   "end_s": 69.2067,
+   "file_s": 66.8167,
+   "abs_in": 1614,
+   "abs_out": 1661,
+   "file_in": 1603,
+   "file_out": 1670,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0010__ekiel-A.wav",
    "stick_t": 4.34,
    "stick_in": 0.44,
@@ -11566,13 +11645,13 @@
    "who": "MARIO",
    "text": "Lightly. Four pages.",
    "tag": "",
-   "on_s": 70.49,
-   "end_s": 72.05,
-   "file_s": 69.99,
-   "abs_in": 1691,
-   "abs_out": 1730,
-   "file_in": 1679,
-   "file_out": 1741,
+   "on_s": 69.4067,
+   "end_s": 70.9667,
+   "file_s": 68.9067,
+   "abs_in": 1665,
+   "abs_out": 1704,
+   "file_in": 1653,
+   "file_out": 1715,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0011.wav",
    "stick_t": 6.49,
    "stick_in": 0.5,
@@ -11648,13 +11727,13 @@
    "who": "MARIO",
    "text": "We agree. I underlined 'inherently.'",
    "tag": "",
-   "on_s": 76.7333,
-   "end_s": 79.5733,
-   "file_s": 76.2333,
-   "abs_in": 1841,
-   "abs_out": 1910,
-   "file_in": 1829,
-   "file_out": 1922,
+   "on_s": 75.65,
+   "end_s": 78.49,
+   "file_s": 75.15,
+   "abs_in": 1815,
+   "abs_out": 1884,
+   "file_in": 1803,
+   "file_out": 1896,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0012.wav",
    "stick_t": 4.4,
    "stick_in": 0.5,
@@ -11752,15 +11831,15 @@
    "who": "MARIO",
    "text": "There's a brief document.",
    "tag": "",
-   "on_s": 81.5183,
-   "end_s": 83.1483,
-   "file_s": 81.0183,
-   "abs_in": 1956,
-   "abs_out": 1996,
-   "file_in": 1944,
-   "file_out": 2008,
+   "on_s": 80.455,
+   "end_s": 82.085,
+   "file_s": 79.955,
+   "abs_in": 1930,
+   "abs_out": 1971,
+   "file_in": 1918,
+   "file_out": 1982,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0013.wav",
-   "stick_t": 1.56,
+   "stick_t": 1.58,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "on",
@@ -11855,15 +11934,15 @@
    "who": "EKIEL",
    "text": "That's the brief one?",
    "tag": "",
-   "on_s": 85.7483,
-   "end_s": 86.8183,
-   "file_s": 85.2783,
-   "abs_in": 2057,
-   "abs_out": 2084,
-   "file_in": 2046,
-   "file_out": 2097,
+   "on_s": 84.685,
+   "end_s": 85.755,
+   "file_s": 84.215,
+   "abs_in": 2032,
+   "abs_out": 2059,
+   "file_in": 2021,
+   "file_out": 2072,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0014__ekiel-A.wav",
-   "stick_t": 5.79,
+   "stick_t": 5.81,
    "stick_in": 0.47,
    "cut": false,
    "on_camera": "on",
@@ -11873,7 +11952,7 @@
    "words": [
     [
      "That's",
-     0,
+     -1,
      4
     ],
     [
@@ -11888,8 +11967,8 @@
     ],
     [
      "one",
-     17,
-     23
+     16,
+     22
     ]
    ],
    "mouth": [
@@ -11946,15 +12025,15 @@
    "who": "MARIO",
    "text": "That's the brief one. It only has the one concern.",
    "tag": "",
-   "on_s": 87.0183,
-   "end_s": 89.7483,
-   "file_s": 86.5183,
-   "abs_in": 2088,
-   "abs_out": 2154,
-   "file_in": 2076,
-   "file_out": 2167,
+   "on_s": 85.955,
+   "end_s": 88.685,
+   "file_s": 85.455,
+   "abs_in": 2062,
+   "abs_out": 2129,
+   "file_in": 2050,
+   "file_out": 2141,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0015.wav",
-   "stick_t": 7.06,
+   "stick_t": 7.08,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "on",
@@ -11964,12 +12043,12 @@
    "words": [
     [
      "That's",
-     0,
-     7
+     1,
+     8
     ],
     [
      "the",
-     7,
+     8,
      10
     ],
     [
@@ -12103,13 +12182,13 @@
    "who": "MARIO",
    "text": "It's that we might win.",
    "tag": "",
-   "on_s": 90.2667,
-   "end_s": 91.7267,
-   "file_s": 89.7667,
-   "abs_in": 2166,
-   "abs_out": 2202,
-   "file_in": 2154,
-   "file_out": 2214,
+   "on_s": 89.1833,
+   "end_s": 90.6433,
+   "file_s": 88.6833,
+   "abs_in": 2140,
+   "abs_out": 2176,
+   "file_in": 2128,
+   "file_out": 2188,
    "file": "audio/ep02/v1/act4/wav/e2-a4-0016.wav",
    "stick_t": 0.35,
    "stick_in": 0.5,
@@ -12199,13 +12278,13 @@
    "who": "HARAS",
    "text": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
    "tag": "",
-   "on_s": 107.2683,
-   "end_s": 111.2783,
-   "file_s": 106.8983,
-   "abs_in": 2574,
-   "abs_out": 2671,
-   "file_in": 2565,
-   "file_out": 2681,
+   "on_s": 106.2683,
+   "end_s": 110.2783,
+   "file_s": 105.8983,
+   "abs_in": 2550,
+   "abs_out": 2647,
+   "file_in": 2541,
+   "file_out": 2657,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0017__haras-A.wav",
    "stick_t": 0.56,
    "stick_in": 0.37,
@@ -12407,13 +12486,13 @@
    "who": "GERG",
    "text": "Compute.",
    "tag": "",
-   "on_s": 111.4783,
-   "end_s": 111.9983,
-   "file_s": 111.0683,
-   "abs_in": 2675,
-   "abs_out": 2688,
-   "file_in": 2665,
-   "file_out": 2701,
+   "on_s": 110.4783,
+   "end_s": 110.9983,
+   "file_s": 110.0683,
+   "abs_in": 2651,
+   "abs_out": 2664,
+   "file_in": 2641,
+   "file_out": 2677,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0018__gerg-mockbran-A.wav",
    "stick_t": 4.77,
    "stick_in": 0.41,
@@ -12459,13 +12538,13 @@
    "who": "HARAS",
    "text": "Got it. And the second biggest?",
    "tag": "",
-   "on_s": 112.2483,
-   "end_s": 114.1383,
-   "file_s": 111.8983,
-   "abs_in": 2693,
-   "abs_out": 2740,
-   "file_in": 2685,
-   "file_out": 2751,
+   "on_s": 111.2483,
+   "end_s": 113.1383,
+   "file_s": 110.8983,
+   "abs_in": 2669,
+   "abs_out": 2716,
+   "file_in": 2661,
+   "file_out": 2727,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0019__haras-A.wav",
    "stick_t": 5.54,
    "stick_in": 0.35,
@@ -12568,13 +12647,13 @@
    "who": "GERG",
    "text": "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking.",
    "tag": "",
-   "on_s": 114.3383,
-   "end_s": 120.3183,
-   "file_s": 113.9283,
-   "abs_in": 2744,
-   "abs_out": 2888,
-   "file_in": 2734,
-   "file_out": 2903,
+   "on_s": 113.3383,
+   "end_s": 119.3183,
+   "file_s": 112.9283,
+   "abs_in": 2720,
+   "abs_out": 2864,
+   "file_in": 2710,
+   "file_out": 2879,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0020__gerg-mockbran-A.wav",
    "stick_t": 7.63,
    "stick_in": 0.41,
@@ -12820,13 +12899,13 @@
    "who": "HARAS",
    "text": "And profit?",
    "tag": "",
-   "on_s": 120.5683,
-   "end_s": 121.3383,
-   "file_s": 120.1683,
-   "abs_in": 2893,
-   "abs_out": 2913,
-   "file_in": 2884,
-   "file_out": 2923,
+   "on_s": 119.5683,
+   "end_s": 120.3383,
+   "file_s": 119.1683,
+   "abs_in": 2869,
+   "abs_out": 2889,
+   "file_in": 2860,
+   "file_out": 2899,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0021__haras-A.wav",
    "stick_t": 13.86,
    "stick_in": 0.4,
@@ -12874,7 +12953,13 @@
     ]
    ],
    "mouth_src": "take",
-   "pre": false
+   "pre": false,
+   "sub": [
+    [
+     "And profit—",
+     0
+    ]
+   ]
   },
   {
    "id": "e2-a4-0022",
@@ -12885,13 +12970,13 @@
    "who": "HARAS",
    "text": "Let me reframe that. Upside.",
    "tag": "",
-   "on_s": 124.025,
-   "end_s": 125.625,
-   "file_s": 123.585,
-   "abs_in": 2976,
-   "abs_out": 3015,
-   "file_in": 2966,
-   "file_out": 3026,
+   "on_s": 123.025,
+   "end_s": 124.625,
+   "file_s": 122.585,
+   "abs_in": 2952,
+   "abs_out": 2991,
+   "file_in": 2942,
+   "file_out": 3002,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0022__haras-A.wav",
    "stick_t": 2.4,
    "stick_in": 0.44,
@@ -12989,13 +13074,13 @@
    "who": "STAFFER",
    "text": "Is that Mas?",
    "tag": "",
-   "on_s": 128.8733,
-   "end_s": 129.6633,
-   "file_s": 128.4833,
-   "abs_in": 3092,
-   "abs_out": 3112,
-   "file_in": 3083,
-   "file_out": 3123,
+   "on_s": 127.8733,
+   "end_s": 128.6633,
+   "file_s": 127.4833,
+   "abs_in": 3068,
+   "abs_out": 3088,
+   "file_in": 3059,
+   "file_out": 3099,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0023__tiled-employee-A.wav",
    "stick_t": 2.54,
    "stick_in": 0.39,
@@ -13063,13 +13148,13 @@
    "who": "MAS",
    "text": "whatever we ship next goes in their phones too.",
    "tag": "V.O.",
-   "on_s": 144.9983,
-   "end_s": 148.6883,
-   "file_s": 144.6283,
-   "abs_in": 3479,
-   "abs_out": 3569,
-   "file_in": 3471,
-   "file_out": 3584,
+   "on_s": 143.9983,
+   "end_s": 147.6883,
+   "file_s": 143.6283,
+   "abs_in": 3455,
+   "abs_out": 3545,
+   "file_in": 3447,
+   "file_out": 3560,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-12__mas-manalt-C.wav",
    "stick_t": 2.54,
    "stick_in": 0.37,
@@ -13138,13 +13223,13 @@
    "who": "GERG",
    "text": "There's a screen the size of a building in front of you, and you're on your phone.",
    "tag": "call",
-   "on_s": 151.345,
-   "end_s": 154.595,
-   "file_s": 150.995,
-   "abs_in": 3632,
-   "abs_out": 3711,
-   "file_in": 3623,
-   "file_out": 3726,
+   "on_s": 150.345,
+   "end_s": 153.595,
+   "file_s": 149.995,
+   "abs_in": 3608,
+   "abs_out": 3687,
+   "file_in": 3599,
+   "file_out": 3702,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0024__gerg-mockbran-A.wav",
    "stick_t": 1.97,
    "stick_in": 0.35,
@@ -13354,13 +13439,13 @@
    "who": "MAS",
    "text": "the phone's closer.",
    "tag": "",
-   "on_s": 155.045,
-   "end_s": 156.275,
-   "file_s": 154.615,
-   "abs_in": 3721,
-   "abs_out": 3751,
-   "file_in": 3710,
-   "file_out": 3765,
+   "on_s": 154.045,
+   "end_s": 155.275,
+   "file_s": 153.615,
+   "abs_in": 3697,
+   "abs_out": 3727,
+   "file_in": 3686,
+   "file_out": 3741,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0025__mas-manalt-C.wav",
    "stick_t": 5.67,
    "stick_in": 0.43,
@@ -13424,13 +13509,13 @@
    "who": "GERG",
    "text": "They just said our name up there.",
    "tag": "call",
-   "on_s": 156.7167,
-   "end_s": 158.3867,
-   "file_s": 156.3367,
-   "abs_in": 3761,
-   "abs_out": 3802,
-   "file_in": 3752,
-   "file_out": 3810,
+   "on_s": 155.7167,
+   "end_s": 157.3867,
+   "file_s": 155.3367,
+   "abs_in": 3737,
+   "abs_out": 3778,
+   "file_in": 3728,
+   "file_out": 3786,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0026__gerg-mockbran-A.wav",
    "stick_t": 0.3,
    "stick_in": 0.38,
@@ -13538,13 +13623,13 @@
    "who": "MAS",
    "text": "i heard.",
    "tag": "",
-   "on_s": 158.8367,
-   "end_s": 159.4667,
-   "file_s": 158.4667,
-   "abs_in": 3812,
-   "abs_out": 3828,
-   "file_in": 3803,
-   "file_out": 3838,
+   "on_s": 157.8367,
+   "end_s": 158.4667,
+   "file_s": 157.4667,
+   "abs_in": 3788,
+   "abs_out": 3804,
+   "file_in": 3779,
+   "file_out": 3814,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0027__mas-manalt-C.wav",
    "stick_t": 2.42,
    "stick_in": 0.37,
@@ -13599,13 +13684,13 @@
    "who": "GERG",
    "text": "Half the lobby's standing on a beanbag.",
    "tag": "call",
-   "on_s": 159.9667,
-   "end_s": 161.7267,
-   "file_s": 159.5767,
-   "abs_in": 3839,
-   "abs_out": 3882,
-   "file_in": 3829,
-   "file_out": 3896,
+   "on_s": 158.9667,
+   "end_s": 160.7267,
+   "file_s": 158.5767,
+   "abs_in": 3815,
+   "abs_out": 3858,
+   "file_in": 3805,
+   "file_out": 3872,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0033__gerg-mockbran-A.wav",
    "stick_t": 3.55,
    "stick_in": 0.39,
@@ -13717,13 +13802,13 @@
    "who": "MAS",
    "text": "which half?",
    "tag": "",
-   "on_s": 162.1767,
-   "end_s": 162.8767,
-   "file_s": 161.7667,
-   "abs_in": 3892,
-   "abs_out": 3910,
-   "file_in": 3882,
-   "file_out": 3924,
+   "on_s": 161.1767,
+   "end_s": 161.8767,
+   "file_s": 160.7667,
+   "abs_in": 3868,
+   "abs_out": 3886,
+   "file_in": 3858,
+   "file_out": 3900,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0034__mas-manalt-C.wav",
    "stick_t": 5.76,
    "stick_in": 0.41,
@@ -13778,13 +13863,13 @@
    "who": "GERG",
    "text": "The half on the beanbags.",
    "tag": "call",
-   "on_s": 163.1267,
-   "end_s": 164.2967,
-   "file_s": 162.6967,
-   "abs_in": 3915,
-   "abs_out": 3944,
-   "file_in": 3904,
-   "file_out": 3959,
+   "on_s": 162.1267,
+   "end_s": 163.2967,
+   "file_s": 161.6967,
+   "abs_in": 3891,
+   "abs_out": 3920,
+   "file_in": 3880,
+   "file_out": 3935,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0035__gerg-mockbran-A.wav",
    "stick_t": 6.71,
    "stick_in": 0.43,
@@ -13878,13 +13963,13 @@
    "who": "GERG",
    "text": "You ever miss being up there?",
    "tag": "call",
-   "on_s": 165.1967,
-   "end_s": 166.3567,
-   "file_s": 164.8167,
-   "abs_in": 3964,
-   "abs_out": 3993,
-   "file_in": 3955,
-   "file_out": 4007,
+   "on_s": 164.1967,
+   "end_s": 165.3567,
+   "file_s": 163.8167,
+   "abs_in": 3940,
+   "abs_out": 3969,
+   "file_in": 3931,
+   "file_out": 3983,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0028__gerg-mockbran-A.wav",
    "stick_t": 8.78,
    "stick_in": 0.38,
@@ -13991,13 +14076,13 @@
    "who": "MAS",
    "text": "i was up there once. they let me hold the clicker.",
    "tag": "",
-   "on_s": 166.9567,
-   "end_s": 170.3967,
-   "file_s": 166.5667,
-   "abs_in": 4006,
-   "abs_out": 4090,
-   "file_in": 3997,
-   "file_out": 4100,
+   "on_s": 165.9567,
+   "end_s": 169.3967,
+   "file_s": 165.5667,
+   "abs_in": 3982,
+   "abs_out": 4066,
+   "file_in": 3973,
+   "file_out": 4076,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0029__mas-manalt-C.wav",
    "stick_t": 10.54,
    "stick_in": 0.39,
@@ -14153,13 +14238,13 @@
    "who": "RADNUS",
    "text": "Lovely garden. I see they let your chatbot in.",
    "tag": "",
-   "on_s": 215.9583,
-   "end_s": 218.8083,
-   "file_s": 215.5383,
-   "abs_in": 5183,
-   "abs_out": 5252,
-   "file_in": 5172,
-   "file_out": 5265,
+   "on_s": 214.9583,
+   "end_s": 217.8083,
+   "file_s": 214.5383,
+   "abs_in": 5159,
+   "abs_out": 5228,
+   "file_in": 5148,
+   "file_out": 5241,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0030__radnus-A.wav",
    "stick_t": 2.25,
    "stick_in": 0.42,
@@ -14297,13 +14382,13 @@
    "who": "MAS",
    "text": "as a guest.",
    "tag": "",
-   "on_s": 219.2583,
-   "end_s": 220.2083,
-   "file_s": 218.8883,
-   "abs_in": 5262,
-   "abs_out": 5285,
-   "file_in": 5253,
-   "file_out": 5296,
+   "on_s": 218.2583,
+   "end_s": 219.2083,
+   "file_s": 217.8883,
+   "abs_in": 5238,
+   "abs_out": 5261,
+   "file_in": 5229,
+   "file_out": 5272,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0031__mas-manalt-C.wav",
    "stick_t": 5.55,
    "stick_in": 0.37,
@@ -14367,13 +14452,13 @@
    "who": "NOLE",
    "text": "If they go through with it, visitors' phones go in here. Like this.",
    "tag": "",
-   "on_s": 241.81,
-   "end_s": 246.01,
-   "file_s": 241.43,
-   "abs_in": 5803,
-   "abs_out": 5905,
-   "file_in": 5794,
-   "file_out": 5914,
+   "on_s": 240.81,
+   "end_s": 245.01,
+   "file_s": 240.43,
+   "abs_in": 5779,
+   "abs_out": 5881,
+   "file_in": 5770,
+   "file_out": 5890,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0032__nole-A.wav",
    "stick_t": 0.31,
    "stick_in": 0.38,
@@ -14535,13 +14620,13 @@
    "who": "MAS",
    "text": "we raise in the fall. she has till then.",
    "tag": "V.O.",
-   "on_s": 257.9467,
-   "end_s": 261.3867,
-   "file_s": 257.4867,
-   "abs_in": 6190,
-   "abs_out": 6274,
-   "file_in": 6179,
-   "file_out": 6289,
+   "on_s": 256.9467,
+   "end_s": 260.3867,
+   "file_s": 256.4867,
+   "abs_in": 6166,
+   "abs_out": 6250,
+   "file_in": 6155,
+   "file_out": 6265,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
    "stick_t": 1.03,
    "stick_in": 0.46,
@@ -14606,29 +14691,29 @@
  "rails": [
   {
    "text": "MAY 28, 2024",
-   "s": 6,
+   "s": 7,
    "e": 49,
    "shot": "18.01",
    "floor_f": 21
   },
   {
    "text": "JUN 10, 2024",
-   "s": 2308,
-   "e": 2347,
+   "s": 2284,
+   "e": 2323,
    "shot": "19.01",
    "floor_f": 21
   },
   {
    "text": "JUN 11",
-   "s": 6029,
-   "e": 6065,
+   "s": 6005,
+   "e": 6041,
    "shot": "20.05",
    "floor_f": 14
   },
   {
    "text": "JUN 19, 2024",
-   "s": 6436,
-   "e": 6475,
+   "s": 6412,
+   "e": 6451,
    "shot": "20.10",
    "floor_f": 21
   }
@@ -14636,9 +14721,9 @@
  "sound_marks": [],
  "subs": [
   {
-   "s": 208,
-   "e": 424,
-   "hold_to": 436,
+   "s": 210,
+   "e": 426,
+   "hold_to": 438,
    "who": "NELEH",
    "shown": "FORMER DIRECTOR (a voice)",
    "text": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on RETTIWT.",
@@ -14648,9 +14733,9 @@
    "os": false
   },
   {
-   "s": 450,
-   "e": 565,
-   "hold_to": 577,
+   "s": 453,
+   "e": 568,
+   "hold_to": 580,
    "who": "NELEH",
    "shown": "FORMER DIRECTOR (a voice)",
    "text": "MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
@@ -14660,9 +14745,9 @@
    "os": false
   },
   {
-   "s": 737,
-   "e": 760,
-   "hold_to": 772,
+   "s": 739,
+   "e": 762,
+   "hold_to": 774,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "First item.",
@@ -14672,9 +14757,9 @@
    "os": false
   },
   {
-   "s": 859,
-   "e": 1042,
-   "hold_to": 1053,
+   "s": 864,
+   "e": 1046,
+   "hold_to": 1051,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
@@ -14684,9 +14769,9 @@
    "os": false
   },
   {
-   "s": 1053,
-   "e": 1153,
-   "hold_to": 1165,
+   "s": 1051,
+   "e": 1151,
+   "hold_to": 1163,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "Members: myself, two directors, and our chief executive.",
@@ -14696,9 +14781,9 @@
    "os": false
   },
   {
-   "s": 1189,
-   "e": 1204,
-   "hold_to": 1216,
+   "s": 1187,
+   "e": 1202,
+   "hold_to": 1208,
    "who": "MAS",
    "shown": "CEO",
    "text": "present.",
@@ -14708,9 +14793,9 @@
    "os": false
   },
   {
-   "s": 1233,
-   "e": 1373,
-   "hold_to": 1385,
+   "s": 1208,
+   "e": 1347,
+   "hold_to": 1359,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "And at the end of the ninety days, we take our recommendations to the full board, which is…",
@@ -14720,9 +14805,9 @@
    "os": false
   },
   {
-   "s": 1386,
-   "e": 1413,
-   "hold_to": 1425,
+   "s": 1361,
+   "e": 1387,
+   "hold_to": 1399,
    "who": "MAS",
    "shown": "CEO",
    "text": "also present.",
@@ -14732,9 +14817,9 @@
    "os": false
   },
   {
-   "s": 1467,
-   "e": 1517,
-   "hold_to": 1529,
+   "s": 1441,
+   "e": 1491,
+   "hold_to": 1503,
    "who": "MAS",
    "shown": "CEO",
    "text": "the next one's already training.",
@@ -14744,9 +14829,9 @@
    "os": false
   },
   {
-   "s": 1547,
-   "e": 1635,
-   "hold_to": 1640,
+   "s": 1521,
+   "e": 1609,
+   "hold_to": 1614,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
@@ -14756,9 +14841,9 @@
    "os": false
   },
   {
-   "s": 1640,
-   "e": 1687,
-   "hold_to": 1691,
+   "s": 1614,
+   "e": 1661,
+   "hold_to": 1665,
    "who": "EKIEL",
    "shown": "NOW AT MISANTHROPIC",
    "text": "You annotated my resignation?",
@@ -14768,9 +14853,9 @@
    "os": false
   },
   {
-   "s": 1691,
-   "e": 1730,
-   "hold_to": 1742,
+   "s": 1665,
+   "e": 1704,
+   "hold_to": 1716,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "Lightly. Four pages.",
@@ -14780,9 +14865,9 @@
    "os": false
   },
   {
-   "s": 1841,
-   "e": 1910,
-   "hold_to": 1922,
+   "s": 1815,
+   "e": 1884,
+   "hold_to": 1896,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "We agree. I underlined 'inherently.'",
@@ -14792,9 +14877,9 @@
    "os": false
   },
   {
-   "s": 1956,
-   "e": 1996,
-   "hold_to": 2008,
+   "s": 1930,
+   "e": 1971,
+   "hold_to": 1983,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "There's a brief document.",
@@ -14804,9 +14889,9 @@
    "os": false
   },
   {
-   "s": 2057,
-   "e": 2084,
-   "hold_to": 2088,
+   "s": 2032,
+   "e": 2059,
+   "hold_to": 2062,
    "who": "EKIEL",
    "shown": "NOW AT MISANTHROPIC",
    "text": "That's the brief one?",
@@ -14816,9 +14901,9 @@
    "os": false
   },
   {
-   "s": 2088,
-   "e": 2154,
-   "hold_to": 2166,
+   "s": 2062,
+   "e": 2129,
+   "hold_to": 2140,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "That's the brief one. It only has the one concern.",
@@ -14828,9 +14913,9 @@
    "os": false
   },
   {
-   "s": 2166,
-   "e": 2202,
-   "hold_to": 2214,
+   "s": 2140,
+   "e": 2176,
+   "hold_to": 2188,
    "who": "MARIO",
    "shown": "MISANTHROPIC",
    "text": "It's that we might win.",
@@ -14840,9 +14925,9 @@
    "os": false
   },
   {
-   "s": 2574,
-   "e": 2671,
-   "hold_to": 2675,
+   "s": 2550,
+   "e": 2647,
+   "hold_to": 2651,
    "who": "HARAS",
    "shown": "HARAS",
    "text": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
@@ -14852,9 +14937,9 @@
    "os": false
   },
   {
-   "s": 2675,
-   "e": 2688,
-   "hold_to": 2693,
+   "s": 2651,
+   "e": 2664,
+   "hold_to": 2669,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Compute.",
@@ -14864,9 +14949,9 @@
    "os": false
   },
   {
-   "s": 2693,
-   "e": 2740,
-   "hold_to": 2744,
+   "s": 2669,
+   "e": 2716,
+   "hold_to": 2720,
    "who": "HARAS",
    "shown": "HARAS",
    "text": "Got it. And the second biggest?",
@@ -14876,9 +14961,9 @@
    "os": false
   },
   {
-   "s": 2744,
-   "e": 2888,
-   "hold_to": 2893,
+   "s": 2720,
+   "e": 2864,
+   "hold_to": 2869,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking.",
@@ -14888,21 +14973,21 @@
    "os": false
   },
   {
-   "s": 2893,
-   "e": 2913,
-   "hold_to": 2925,
+   "s": 2869,
+   "e": 2889,
+   "hold_to": 2901,
    "who": "HARAS",
    "shown": "HARAS",
-   "text": "And profit?",
+   "text": "And profit—",
    "kind": "dialogue",
    "mode": "on-mic",
    "id": "e2-a4-0021",
    "os": false
   },
   {
-   "s": 2976,
-   "e": 3015,
-   "hold_to": 3027,
+   "s": 2952,
+   "e": 2991,
+   "hold_to": 3003,
    "who": "HARAS",
    "shown": "HARAS",
    "text": "Let me reframe that. Upside.",
@@ -14912,9 +14997,9 @@
    "os": false
   },
   {
-   "s": 3092,
-   "e": 3112,
-   "hold_to": 3124,
+   "s": 3068,
+   "e": 3088,
+   "hold_to": 3100,
    "who": "STAFFER",
    "shown": "STAFF",
    "text": "Is that Mas?",
@@ -14924,9 +15009,9 @@
    "os": false
   },
   {
-   "s": 3479,
-   "e": 3569,
-   "hold_to": 3581,
+   "s": 3455,
+   "e": 3545,
+   "hold_to": 3557,
    "who": "MAS",
    "shown": "CEO",
    "text": "whatever we ship next goes in their phones too.",
@@ -14936,9 +15021,9 @@
    "os": false
   },
   {
-   "s": 3632,
-   "e": 3711,
-   "hold_to": 3721,
+   "s": 3608,
+   "e": 3687,
+   "hold_to": 3697,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "There's a screen the size of a building in front of you, and you're on your phone.",
@@ -14948,9 +15033,9 @@
    "os": false
   },
   {
-   "s": 3721,
-   "e": 3751,
-   "hold_to": 3761,
+   "s": 3697,
+   "e": 3727,
+   "hold_to": 3737,
    "who": "MAS",
    "shown": "CEO",
    "text": "the phone's closer.",
@@ -14960,9 +15045,9 @@
    "os": false
   },
   {
-   "s": 3761,
-   "e": 3802,
-   "hold_to": 3812,
+   "s": 3737,
+   "e": 3778,
+   "hold_to": 3788,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "They just said our name up there.",
@@ -14972,9 +15057,9 @@
    "os": false
   },
   {
-   "s": 3812,
-   "e": 3828,
-   "hold_to": 3839,
+   "s": 3788,
+   "e": 3804,
+   "hold_to": 3815,
    "who": "MAS",
    "shown": "CEO",
    "text": "i heard.",
@@ -14984,9 +15069,9 @@
    "os": false
   },
   {
-   "s": 3839,
-   "e": 3882,
-   "hold_to": 3892,
+   "s": 3815,
+   "e": 3858,
+   "hold_to": 3868,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Half the lobby's standing on a beanbag.",
@@ -14996,9 +15081,9 @@
    "os": false
   },
   {
-   "s": 3892,
-   "e": 3910,
-   "hold_to": 3915,
+   "s": 3868,
+   "e": 3886,
+   "hold_to": 3891,
    "who": "MAS",
    "shown": "CEO",
    "text": "which half?",
@@ -15008,9 +15093,9 @@
    "os": false
   },
   {
-   "s": 3915,
-   "e": 3944,
-   "hold_to": 3956,
+   "s": 3891,
+   "e": 3920,
+   "hold_to": 3932,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "The half on the beanbags.",
@@ -15020,9 +15105,9 @@
    "os": false
   },
   {
-   "s": 3964,
-   "e": 3993,
-   "hold_to": 4005,
+   "s": 3940,
+   "e": 3969,
+   "hold_to": 3981,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "You ever miss being up there?",
@@ -15032,9 +15117,9 @@
    "os": false
   },
   {
-   "s": 4006,
-   "e": 4090,
-   "hold_to": 4102,
+   "s": 3982,
+   "e": 4066,
+   "hold_to": 4078,
    "who": "MAS",
    "shown": "CEO",
    "text": "i was up there once. they let me hold the clicker.",
@@ -15044,9 +15129,9 @@
    "os": false
   },
   {
-   "s": 5183,
-   "e": 5252,
-   "hold_to": 5262,
+   "s": 5159,
+   "e": 5228,
+   "hold_to": 5238,
    "who": "RADNUS",
    "shown": "ELGOOG",
    "text": "Lovely garden. I see they let your chatbot in.",
@@ -15056,9 +15141,9 @@
    "os": false
   },
   {
-   "s": 5262,
-   "e": 5285,
-   "hold_to": 5297,
+   "s": 5238,
+   "e": 5261,
+   "hold_to": 5273,
    "who": "MAS",
    "shown": "CEO",
    "text": "as a guest.",
@@ -15068,9 +15153,9 @@
    "os": false
   },
   {
-   "s": 5803,
-   "e": 5905,
-   "hold_to": 5917,
+   "s": 5779,
+   "e": 5881,
+   "hold_to": 5893,
    "who": "NOLE",
    "shown": "ZAI",
    "text": "If they go through with it, visitors' phones go in here. Like this.",
@@ -15080,9 +15165,9 @@
    "os": false
   },
   {
-   "s": 6190,
-   "e": 6274,
-   "hold_to": 6286,
+   "s": 6166,
+   "e": 6250,
+   "hold_to": 6262,
    "who": "MAS",
    "shown": "CEO",
    "text": "we raise in the fall. she has till then.",
@@ -15096,7 +15181,8 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "49 beat lengths are not whole frames (18.01, 18.03, 18.04, 18.05, 18.06, 18.07...): beats start on the rounded running total, as the stick reel draws them"
+  "49 beat lengths are not whole frames (18.01, 18.03, 18.04, 18.05, 18.06, 18.07...): beats start on the rounded running total, as the stick reel draws them",
+  "19.04: ui '…AND LATER THIS YEAR: CHATGTP.' is up 31 f, under its read floor 42 f (the stick's timing; kept)"
  ],
  "problems": [
   "e2-a4-0023: the stick's speaker staffer vs the take's TILED EMPLOYEE"

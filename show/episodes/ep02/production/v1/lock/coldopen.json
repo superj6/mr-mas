@@ -28,16 +28,16 @@
  "summary": {
   "shots": 13,
   "beats": 13,
-  "frames": 1344,
-  "seconds": 56.0,
-  "length": "0:56.00",
+  "frames": 1320,
+  "seconds": 55.0,
+  "length": "0:55.00",
   "episode_in": "00:00:00",
-  "episode_out": "00:56:00",
+  "episode_out": "00:55:00",
   "verdicts": {
    "-": 13
   },
-  "mean_s": 4.308,
-  "median_s": 3.833,
+  "mean_s": 4.231,
+  "median_s": 3.792,
   "min_s": 2.292,
   "max_s": 7.292,
   "lines": 6,
@@ -56,7 +56,7 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "1 scenes: 1(1344f)"
+   "detail": "1 scenes: 1(1320f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -66,7 +66,7 @@
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 1344"
+   "detail": "0 -> 1320"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -101,7 +101,7 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 1344,
+   "e": 1320,
    "shots": [
     "1.01",
     "1.02",
@@ -120,16 +120,16 @@
    "chapter": "COLDOPEN",
    "title": "",
    "cue": "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here · music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors · music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO",
-   "frames": 1344,
+   "frames": 1320,
    "tc_in": "00:00:00",
-   "tc_out": "00:56:00"
+   "tc_out": "00:55:00"
   }
  ],
  "scenes": [
   {
    "id": "1",
    "s": 0,
-   "e": 1344,
+   "e": 1320,
    "shots": [
     "1.01",
     "1.02",
@@ -146,7 +146,7 @@
     "1.13"
    ],
    "tc_in": "00:00:00",
-   "tc_out": "00:56:00"
+   "tc_out": "00:55:00"
   }
  ],
  "shots": [
@@ -258,6 +258,7 @@
    "beat_starts": {
     "1.01": 0
    },
+   "picture": "The 2.A leap: near-photoreal inside the bezel only (objects only: the animal, the meadow; nothing human). The votives tick on eighths. Mas small at the back, left third; the doors far right (the axis).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -293,8 +294,8 @@
      "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
      "s": 13,
      "e": 159,
-     "fs": 5,
-     "fe": 168,
+     "fs": 4,
+     "fe": 167,
      "os": false,
      "via": null,
      "face": null,
@@ -304,174 +305,170 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "A"
       ],
       [
-       4,
+       3,
        "E"
       ],
       [
-       6,
+       5,
        "A"
       ],
       [
-       8,
+       7,
        "M"
       ],
       [
-       11,
+       10,
        "A"
       ],
       [
-       13,
+       12,
        "E"
       ],
       [
-       15,
+       14,
        "A"
       ],
       [
-       17,
+       16,
        "E"
       ],
       [
-       20,
+       19,
        "O"
       ],
       [
-       22,
+       21,
        "E"
       ],
       [
-       24,
+       23,
        "rest"
       ],
       [
-       30,
+       29,
        "A"
       ],
       [
-       32,
+       31,
        "E"
       ],
       [
-       36,
+       35,
        "rest"
       ],
       [
-       39,
+       38,
        "A"
       ],
       [
-       46,
+       45,
        "O"
       ],
       [
-       50,
+       49,
        "A"
       ],
       [
-       54,
+       53,
        "rest"
       ],
       [
-       68,
+       67,
        "O"
       ],
       [
-       70,
+       69,
        "A"
       ],
       [
-       72,
+       71,
        "E"
       ],
       [
-       76,
+       75,
        "A"
       ],
       [
-       78,
+       77,
        "E"
       ],
       [
-       80,
+       79,
        "M"
       ],
       [
-       82,
+       81,
        "A"
       ],
       [
-       84,
+       83,
        "E"
       ],
       [
-       86,
+       85,
        "A"
       ],
       [
-       88,
+       87,
        "E"
       ],
       [
-       90,
+       89,
        "A"
       ],
       [
-       93,
+       92,
        "E"
       ],
       [
-       95,
+       94,
        "rest"
       ],
       [
-       105,
+       104,
        "E"
       ],
       [
-       110,
+       109,
        "O"
       ],
       [
-       112,
+       111,
        "E"
       ],
       [
-       114,
+       113,
        "A"
       ],
       [
-       120,
+       119,
        "M"
       ],
       [
-       122,
+       121,
        "O"
       ],
       [
-       124,
+       123,
        "A"
       ],
       [
-       126,
+       125,
        "E"
       ],
       [
-       129,
+       128,
        "A"
       ],
       [
-       132,
+       131,
        "E"
       ],
       [
-       140,
+       139,
        "rest"
       ]
      ],
@@ -484,27 +481,27 @@
       [
        "up",
        6,
-       9
+       8
       ],
       [
        "here",
-       10,
+       9,
        13
       ],
       [
        "everyone",
        14,
-       24
+       23
       ],
       [
        "This",
        28,
-       33
+       32
       ],
       [
        "is",
-       34,
-       36
+       33,
+       35
       ],
       [
        "AROS",
@@ -513,8 +510,8 @@
       ],
       [
        "Nobody",
-       67,
-       74
+       66,
+       73
       ],
       [
        "filmed",
@@ -524,7 +521,7 @@
       [
        "any",
        82,
-       85
+       84
       ],
       [
        "of",
@@ -539,7 +536,7 @@
       [
        "It's",
        104,
-       109
+       108
       ],
       [
        "all",
@@ -553,17 +550,17 @@
       ],
       [
        "from",
-       118,
-       121
+       117,
+       120
       ],
       [
        "one",
-       123,
+       122,
        126
       ],
       [
        "sentence",
-       128,
+       127,
        140
       ]
      ],
@@ -592,12 +589,12 @@
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
    ],
    "sounds": [
-    "mammoth_step_pixel @149"
+    "mammoth_step_pixel @148"
    ],
    "spots": [
     {
      "name": "mammoth_step_pixel",
-     "k": 149,
+     "k": 148,
      "dur": null
     }
    ],
@@ -631,6 +628,7 @@
    "beat_starts": {
     "1.02": 0
    },
+   "picture": "An internal preview: the beanbags are his audience. The foot crosses the bezel on the word.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -647,7 +645,7 @@
     "1.03"
    ],
    "s": 247,
-   "e": 313,
+   "e": 312,
    "onscreen": [],
    "lines": [
     {
@@ -656,10 +654,10 @@
      "mode": "on-mic",
      "who": "GERG",
      "text": "Which sentence?",
-     "s": 44,
-     "e": 64,
-     "fs": 35,
-     "fe": 79,
+     "s": 43,
+     "e": 63,
+     "fs": 34,
+     "fe": 78,
      "os": false,
      "via": null,
      "face": null,
@@ -727,7 +725,7 @@
    ],
    "sounds": [
     "mammoth_step_pixel @8",
-    "mammoth_step_pixel @30"
+    "mammoth_step_pixel @29"
    ],
    "spots": [
     {
@@ -737,7 +735,7 @@
     },
     {
      "name": "mammoth_step_pixel",
-     "k": 30,
+     "k": 29,
      "dur": null
     }
    ],
@@ -779,14 +777,15 @@
    "beat_starts": {
     "1.03": 0
    },
+   "picture": "The AI tell is on the animal (a fifth leg, 2 frames), never on a person (style-range H2). The OTS over Gerg keeps Selbeep and the mammoth beyond him.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
    "tc_in": "00:10:07",
-   "tc_out": "00:13:01",
-   "frames": 66
+   "tc_out": "00:13:00",
+   "frames": 65
   },
   {
    "id": "1.04",
@@ -794,8 +793,8 @@
    "beats": [
     "1.04"
    ],
-   "s": 313,
-   "e": 481,
+   "s": 312,
+   "e": 480,
    "onscreen": [],
    "lines": [
     {
@@ -1103,13 +1102,14 @@
    "beat_starts": {
     "1.04": 0
    },
+   "picture": "The chair melts in three held palette-drip steps under \"It understands physics.\" Mas's glance is one pixel of eye.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:13:01",
-   "tc_out": "00:20:01",
+   "tc_in": "00:13:00",
+   "tc_out": "00:20:00",
    "frames": 168
   },
   {
@@ -1118,18 +1118,18 @@
    "beats": [
     "1.05"
    ],
-   "s": 481,
-   "e": 573,
+   "s": 480,
+   "e": 570,
    "onscreen": [
     {
      "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
-     "s": 31,
-     "e": 91
+     "s": 30,
+     "e": 90
     },
     {
      "text": "MAMMOTHS CONTAINED: 0",
-     "s": 43,
-     "e": 91
+     "s": 42,
+     "e": 90
     }
    ],
    "lines": [
@@ -1198,12 +1198,12 @@
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
    ],
    "sounds": [
-    "freeze_hit_F @31"
+    "freeze_hit_F @30"
    ],
    "spots": [
     {
      "name": "freeze_hit_F",
-     "k": 31,
+     "k": 30,
      "dur": null
     }
    ],
@@ -1229,10 +1229,11 @@
    "beat_starts": {
     "1.05": 0
    },
+   "picture": "Comedy cuts on the joke. The card is the topper.",
    "names": [
     {
      "id": "selbeep",
-     "k": 31
+     "k": 30
     }
    ],
    "fg": null,
@@ -1242,21 +1243,21 @@
     {
      "kind": "card",
      "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
-     "s": 31,
-     "e": 91,
+     "s": 30,
+     "e": 90,
      "must": true
     },
     {
      "kind": "stat",
      "text": "MAMMOTHS CONTAINED: 0",
-     "s": 43,
-     "e": 91,
+     "s": 42,
+     "e": 90,
      "must": true
     }
    ],
-   "tc_in": "00:20:01",
-   "tc_out": "00:23:21",
-   "frames": 92
+   "tc_in": "00:20:00",
+   "tc_out": "00:23:18",
+   "frames": 90
   },
   {
    "id": "1.06",
@@ -1264,18 +1265,18 @@
    "beats": [
     "1.06"
    ],
-   "s": 573,
-   "e": 673,
+   "s": 570,
+   "e": 668,
    "onscreen": [
     {
      "text": "RAIL: FEB 29, 2024",
      "s": 8,
-     "e": 58
+     "e": 57
     },
     {
      "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
-     "s": 33,
-     "e": 100
+     "s": 32,
+     "e": 97
     }
    ],
    "lines": [],
@@ -1303,8 +1304,8 @@
    ],
    "sounds": [
     "plate_hang @27",
-    "hand_truck_step @75",
-    "door_glass_rattle @80"
+    "hand_truck_step @73",
+    "door_glass_rattle @78"
    ],
    "spots": [
     {
@@ -1314,12 +1315,12 @@
     },
     {
      "name": "hand_truck_step",
-     "k": 75,
+     "k": 73,
      "dur": null
     },
     {
      "name": "door_glass_rattle",
-     "k": 80,
+     "k": 78,
      "dur": null
     }
    ],
@@ -1369,6 +1370,7 @@
    "beat_starts": {
     "1.06": 0
    },
+   "picture": "DOT's face is never shown (Ep5); nobody names her. The first THUD is outside the building (R1): the hand truck on the front steps.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1377,14 +1379,14 @@
     {
      "kind": "sign",
      "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
-     "s": 33,
-     "e": 100,
+     "s": 32,
+     "e": 97,
      "must": true
     }
    ],
-   "tc_in": "00:23:21",
-   "tc_out": "00:28:01",
-   "frames": 100
+   "tc_in": "00:23:18",
+   "tc_out": "00:27:20",
+   "frames": 98
   },
   {
    "id": "1.07",
@@ -1392,8 +1394,8 @@
    "beats": [
     "1.07"
    ],
-   "s": 673,
-   "e": 817,
+   "s": 668,
+   "e": 799,
    "onscreen": [],
    "lines": [
     {
@@ -1402,7 +1404,7 @@
      "mode": "on-mic",
      "who": "SELBEEP",
      "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
-     "s": 11,
+     "s": 10,
      "e": 125,
      "fs": 0,
      "fe": 139,
@@ -1415,193 +1417,197 @@
      "mouth": [
       [
        0,
-       "A"
-      ],
-      [
-       2,
-       "E"
-      ],
-      [
-       8,
-       "M"
-      ],
-      [
-       10,
-       "A"
-      ],
-      [
-       12,
-       "M"
-      ],
-      [
-       14,
-       "E"
-      ],
-      [
-       17,
        "rest"
       ],
       [
-       30,
-       "E"
-      ],
-      [
-       39,
-       "O"
-      ],
-      [
-       44,
+       1,
        "A"
       ],
       [
-       46,
+       3,
        "E"
       ],
       [
-       50,
-       "rest"
-      ],
-      [
-       64,
-       "E"
-      ],
-      [
-       71,
-       "A"
-      ],
-      [
-       73,
-       "E"
-      ],
-      [
-       76,
+       9,
        "M"
       ],
       [
-       78,
+       11,
        "A"
       ],
       [
-       81,
+       13,
+       "M"
+      ],
+      [
+       15,
        "E"
       ],
       [
-       85,
-       "A"
-      ],
-      [
-       89,
+       18,
        "rest"
       ],
       [
-       94,
-       "O"
-      ],
-      [
-       96,
+       31,
        "E"
       ],
       [
-       99,
+       40,
        "O"
       ],
       [
-       101,
+       45,
+       "A"
+      ],
+      [
+       47,
        "E"
       ],
       [
-       107,
+       51,
+       "rest"
+      ],
+      [
+       65,
+       "E"
+      ],
+      [
+       72,
+       "A"
+      ],
+      [
+       74,
+       "E"
+      ],
+      [
+       77,
+       "M"
+      ],
+      [
+       79,
+       "A"
+      ],
+      [
+       82,
+       "E"
+      ],
+      [
+       86,
+       "A"
+      ],
+      [
+       90,
+       "rest"
+      ],
+      [
+       95,
        "O"
       ],
       [
-       109,
+       97,
        "E"
       ],
       [
-       112,
+       100,
+       "O"
+      ],
+      [
+       102,
+       "E"
+      ],
+      [
+       108,
+       "O"
+      ],
+      [
+       110,
+       "E"
+      ],
+      [
+       113,
        "rest"
       ]
      ],
      "words": [
       [
        "That's",
-       -1,
-       4
+       0,
+       5
       ],
       [
        "the",
-       5,
+       6,
        7
       ],
       [
        "mammoth",
-       8,
-       17
+       9,
+       18
       ],
       [
        "It's",
-       29,
-       33
+       30,
+       34
       ],
       [
        "been",
-       34,
-       37
+       35,
+       38
       ],
       [
        "two",
-       38,
-       41
+       39,
+       42
       ],
       [
        "weeks",
-       43,
-       50
+       44,
+       51
       ],
       [
        "and",
        64,
-       67
+       68
       ],
       [
        "it",
-       68,
-       70
+       69,
+       71
       ],
       [
        "has",
-       71,
+       72,
        75
       ],
       [
        "mass",
-       76,
+       77,
        83
       ],
       [
        "now",
-       84,
+       85,
        90
       ],
       [
        "We're",
-       94,
-       98
+       95,
+       99
       ],
       [
        "working",
-       99,
-       106
+       100,
+       107
       ],
       [
        "on",
-       107,
+       108,
        109
       ],
       [
        "it",
        110,
-       112
+       113
       ]
      ],
      "tag": "os",
@@ -1631,8 +1637,8 @@
    ],
    "sounds": [
     "hand_truck_step @126",
-    "cup_jump @128",
-    "ladder_sway_creak @131"
+    "cup_jump @127",
+    "ladder_sway_creak @129"
    ],
    "spots": [
     {
@@ -1642,12 +1648,12 @@
     },
     {
      "name": "cup_jump",
-     "k": 128,
+     "k": 127,
      "dur": null
     },
     {
      "name": "ladder_sway_creak",
-     "k": 131,
+     "k": 129,
      "dur": null
     }
    ],
@@ -1689,14 +1695,15 @@
    "beat_starts": {
     "1.07": 0
    },
+   "picture": "The coffee jumps, Mas's water doesn't (the glass is a prop only, R1: no beat hangs on it).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:28:01",
-   "tc_out": "00:34:01",
-   "frames": 144
+   "tc_in": "00:27:20",
+   "tc_out": "00:33:07",
+   "frames": 131
   },
   {
    "id": "1.08",
@@ -1704,8 +1711,8 @@
    "beats": [
     "1.08"
    ],
-   "s": 817,
-   "e": 909,
+   "s": 799,
+   "e": 890,
    "onscreen": [],
    "lines": [
     {
@@ -1715,9 +1722,9 @@
      "who": "GERG",
      "text": "That's not the mammoth. The mammoth's on the fourth floor.",
      "s": 6,
-     "e": 79,
-     "fs": -3,
-     "fe": 94,
+     "e": 78,
+     "fs": -4,
+     "fe": 93,
      "os": false,
      "via": null,
      "face": null,
@@ -1727,131 +1734,127 @@
      "mouth": [
       [
        0,
+       "A"
+      ],
+      [
+       2,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       9,
+       "E"
+      ],
+      [
+       13,
+       "M"
+      ],
+      [
+       15,
+       "A"
+      ],
+      [
+       18,
+       "M"
+      ],
+      [
+       20,
+       "E"
+      ],
+      [
+       23,
        "rest"
       ],
       [
-       1,
-       "A"
-      ],
-      [
-       3,
+       38,
        "E"
       ],
       [
-       8,
-       "A"
-      ],
-      [
-       10,
-       "E"
-      ],
-      [
-       14,
+       41,
        "M"
       ],
       [
-       16,
+       43,
        "A"
       ],
       [
-       19,
+       45,
        "M"
       ],
       [
-       21,
+       47,
        "E"
       ],
       [
-       24,
-       "rest"
-      ],
-      [
-       39,
-       "E"
-      ],
-      [
-       42,
-       "M"
-      ],
-      [
-       44,
-       "A"
-      ],
-      [
-       46,
-       "M"
-      ],
-      [
-       48,
-       "E"
-      ],
-      [
-       57,
+       56,
        "O"
       ],
       [
-       60,
+       59,
        "E"
       ],
       [
-       66,
+       65,
        "O"
       ],
       [
-       70,
+       69,
        "rest"
       ]
      ],
      "words": [
       [
        "That's",
-       0,
-       6
+       -1,
+       5
       ],
       [
        "not",
-       7,
-       10
+       6,
+       9
       ],
       [
        "the",
-       11,
-       13
+       10,
+       12
       ],
       [
        "mammoth",
-       15,
-       25
+       14,
+       24
       ],
       [
        "The",
-       39,
-       42
+       38,
+       41
       ],
       [
        "mammoth's",
        43,
-       51
+       50
       ],
       [
        "on",
-       52,
-       53
+       51,
+       52
       ],
       [
        "the",
-       54,
-       56
+       53,
+       55
       ],
       [
        "fourth",
-       57,
-       62
+       56,
+       61
       ],
       [
        "floor",
-       64,
-       71
+       63,
+       70
       ]
      ],
      "tag": "",
@@ -1910,14 +1913,15 @@
    "beat_starts": {
     "1.08": 0
    },
+   "picture": "His keys under the line; the doors glint far right.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:34:01",
-   "tc_out": "00:37:21",
-   "frames": 92
+   "tc_in": "00:33:07",
+   "tc_out": "00:37:02",
+   "frames": 91
   },
   {
    "id": "1.09",
@@ -1925,23 +1929,23 @@
    "beats": [
     "1.09"
    ],
-   "s": 909,
-   "e": 1031,
+   "s": 890,
+   "e": 1010,
    "onscreen": [
     {
      "text": "NOLE v. MANALT ET AL.",
-     "s": 33,
-     "e": 122
+     "s": 32,
+     "e": 119
     },
     {
      "text": "YOU PROMISED!!!",
-     "s": 33,
-     "e": 122
+     "s": 32,
+     "e": 119
     },
     {
      "text": "PAUSE",
      "s": 16,
-     "e": 49
+     "e": 48
     }
    ],
    "lines": [],
@@ -1966,7 +1970,7 @@
    ],
    "sounds": [
     "hand_truck_step @5",
-    "door_bang_open @15",
+    "door_bang_open @14",
     "hand_truck_roll @24"
    ],
    "spots": [
@@ -1977,7 +1981,7 @@
     },
     {
      "name": "door_bang_open",
-     "k": 15,
+     "k": 14,
      "dur": null
     },
     {
@@ -2008,6 +2012,7 @@
    "beat_starts": {
     "1.09": 0
    },
+   "picture": "One shot for the whole arrival. The room layer shakes 2 px; the UI never shakes. Mas's silhouette never moves. The PAUSE sign is a group sign only: no date, group or grievance (PP2.1).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2016,28 +2021,28 @@
     {
      "kind": "doc",
      "text": "NOLE v. MANALT ET AL.",
-     "s": 33,
-     "e": 122,
+     "s": 32,
+     "e": 119,
      "must": true
     },
     {
      "kind": "doc",
      "text": "YOU PROMISED!!!",
-     "s": 33,
-     "e": 122,
+     "s": 32,
+     "e": 119,
      "must": true
     },
     {
      "kind": "sign",
      "text": "PAUSE",
      "s": 16,
-     "e": 49,
+     "e": 48,
      "must": true
     }
    ],
-   "tc_in": "00:37:21",
-   "tc_out": "00:42:23",
-   "frames": 122
+   "tc_in": "00:37:02",
+   "tc_out": "00:42:02",
+   "frames": 120
   },
   {
    "id": "1.10",
@@ -2045,8 +2050,8 @@
    "beats": [
     "1.10"
    ],
-   "s": 1031,
-   "e": 1098,
+   "s": 1010,
+   "e": 1077,
    "onscreen": [
     {
      "text": "! .... 1",
@@ -2116,6 +2121,7 @@
    "beat_starts": {
     "1.10": 0
    },
+   "picture": "Read time for the contents: three short lines.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2143,8 +2149,8 @@
      "must": true
     }
    ],
-   "tc_in": "00:42:23",
-   "tc_out": "00:45:18",
+   "tc_in": "00:42:02",
+   "tc_out": "00:44:21",
    "frames": 67
   },
   {
@@ -2153,8 +2159,8 @@
    "beats": [
     "1.11"
    ],
-   "s": 1098,
-   "e": 1161,
+   "s": 1077,
+   "e": 1139,
    "onscreen": [
     {
      "text": "WHERE IS ALYI?",
@@ -2229,6 +2235,7 @@
    "beat_starts": {
     "1.11": 0
    },
+   "picture": "The first of the knee's four notes lands on the THUD.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2242,9 +2249,9 @@
      "must": true
     }
    ],
-   "tc_in": "00:45:18",
-   "tc_out": "00:48:09",
-   "frames": 63
+   "tc_in": "00:44:21",
+   "tc_out": "00:47:11",
+   "frames": 62
   },
   {
    "id": "1.12",
@@ -2252,13 +2259,13 @@
    "beats": [
     "1.12"
    ],
-   "s": 1161,
-   "e": 1289,
+   "s": 1139,
+   "e": 1265,
    "onscreen": [
     {
      "text": "DAYS SINCE SOMEONE SUED MAS: 0",
-     "s": 72,
-     "e": 127
+     "s": 71,
+     "e": 125
     }
    ],
    "lines": [],
@@ -2283,12 +2290,12 @@
     "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
    ],
    "sounds": [
-    "plate_hang @66"
+    "plate_hang @65"
    ],
    "spots": [
     {
      "name": "plate_hang",
-     "k": 66,
+     "k": 65,
      "dur": null
     }
    ],
@@ -2322,6 +2329,7 @@
    "beat_starts": {
     "1.12": 0
    },
+   "picture": "Aftermath: the complaint at his feet, the flyer on it, the head shake, the second sign (P3).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2330,14 +2338,14 @@
     {
      "kind": "sign",
      "text": "DAYS SINCE SOMEONE SUED MAS: 0",
-     "s": 72,
-     "e": 127,
+     "s": 71,
+     "e": 125,
      "must": true
     }
    ],
-   "tc_in": "00:48:09",
-   "tc_out": "00:53:17",
-   "frames": 128
+   "tc_in": "00:47:11",
+   "tc_out": "00:52:17",
+   "frames": 126
   },
   {
    "id": "1.13",
@@ -2345,8 +2353,8 @@
    "beats": [
     "1.13"
    ],
-   "s": 1289,
-   "e": 1344,
+   "s": 1265,
+   "e": 1320,
    "onscreen": [],
    "lines": [],
    "seq": "COLDOPEN",
@@ -2400,13 +2408,14 @@
    "beat_starts": {
     "1.13": 0
    },
+   "picture": "The doorway → the intro's first frame (the intro's own imagery isn't repeated here).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:53:17",
-   "tc_out": "00:56:00",
+   "tc_in": "00:52:17",
+   "tc_out": "00:55:00",
    "frames": 55
   }
  ],
@@ -2420,15 +2429,15 @@
    "who": "SELBEEP",
    "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
    "tag": "",
-   "on_s": 3.58,
-   "end_s": 9.61,
-   "file_s": 3.21,
+   "on_s": 3.57,
+   "end_s": 9.6,
+   "file_s": 3.2,
    "abs_in": 85,
    "abs_out": 231,
-   "file_in": 77,
-   "file_out": 240,
+   "file_in": 76,
+   "file_out": 239,
    "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
-   "stick_t": 0.58,
+   "stick_t": 0.57,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -2444,27 +2453,27 @@
     [
      "up",
      6,
-     9
+     8
     ],
     [
      "here",
-     10,
+     9,
      13
     ],
     [
      "everyone",
      14,
-     24
+     23
     ],
     [
      "This",
      28,
-     33
+     32
     ],
     [
      "is",
-     34,
-     36
+     33,
+     35
     ],
     [
      "AROS",
@@ -2473,8 +2482,8 @@
     ],
     [
      "Nobody",
-     67,
-     74
+     66,
+     73
     ],
     [
      "filmed",
@@ -2484,7 +2493,7 @@
     [
      "any",
      82,
-     85
+     84
     ],
     [
      "of",
@@ -2499,7 +2508,7 @@
     [
      "It's",
      104,
-     109
+     108
     ],
     [
      "all",
@@ -2513,191 +2522,187 @@
     ],
     [
      "from",
-     118,
-     121
+     117,
+     120
     ],
     [
      "one",
-     123,
+     122,
      126
     ],
     [
      "sentence",
-     128,
+     127,
      140
     ]
    ],
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "A"
     ],
     [
-     4,
+     3,
      "E"
     ],
     [
-     6,
+     5,
      "A"
     ],
     [
-     8,
+     7,
      "M"
     ],
     [
-     11,
+     10,
      "A"
     ],
     [
-     13,
+     12,
      "E"
     ],
     [
-     15,
+     14,
      "A"
     ],
     [
-     17,
+     16,
      "E"
     ],
     [
-     20,
+     19,
      "O"
     ],
     [
-     22,
+     21,
      "E"
     ],
     [
-     24,
+     23,
      "rest"
     ],
     [
-     30,
+     29,
      "A"
     ],
     [
-     32,
+     31,
      "E"
     ],
     [
-     36,
+     35,
      "rest"
     ],
     [
-     39,
+     38,
      "A"
     ],
     [
-     46,
+     45,
      "O"
     ],
     [
-     50,
+     49,
      "A"
     ],
     [
-     54,
+     53,
      "rest"
     ],
     [
-     68,
+     67,
      "O"
     ],
     [
-     70,
+     69,
      "A"
     ],
     [
-     72,
+     71,
      "E"
     ],
     [
-     76,
+     75,
      "A"
     ],
     [
-     78,
+     77,
      "E"
     ],
     [
-     80,
+     79,
      "M"
     ],
     [
-     82,
+     81,
      "A"
     ],
     [
-     84,
+     83,
      "E"
     ],
     [
-     86,
+     85,
      "A"
     ],
     [
-     88,
+     87,
      "E"
     ],
     [
-     90,
+     89,
      "A"
     ],
     [
-     93,
+     92,
      "E"
     ],
     [
-     95,
+     94,
      "rest"
     ],
     [
-     105,
+     104,
      "E"
     ],
     [
-     110,
+     109,
      "O"
     ],
     [
-     112,
+     111,
      "E"
     ],
     [
-     114,
+     113,
      "A"
     ],
     [
-     120,
+     119,
      "M"
     ],
     [
-     122,
+     121,
      "O"
     ],
     [
-     124,
+     123,
      "A"
     ],
     [
-     126,
+     125,
      "E"
     ],
     [
-     129,
+     128,
      "A"
     ],
     [
-     132,
+     131,
      "E"
     ],
     [
-     140,
+     139,
      "rest"
     ]
    ],
@@ -2713,15 +2718,15 @@
    "who": "GERG",
    "text": "Which sentence?",
    "tag": "",
-   "on_s": 12.1417,
-   "end_s": 12.9217,
-   "file_s": 11.7617,
-   "abs_in": 291,
-   "abs_out": 311,
-   "file_in": 282,
-   "file_out": 326,
+   "on_s": 12.1017,
+   "end_s": 12.8817,
+   "file_s": 11.7217,
+   "abs_in": 290,
+   "abs_out": 310,
+   "file_in": 281,
+   "file_out": 325,
    "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
-   "stick_t": 1.85,
+   "stick_t": 1.81,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -2774,13 +2779,13 @@
    "who": "SELBEEP",
    "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
    "tag": "",
-   "on_s": 13.1717,
-   "end_s": 19.0117,
-   "file_s": 12.7717,
-   "abs_in": 316,
-   "abs_out": 457,
-   "file_in": 306,
-   "file_out": 471,
+   "on_s": 13.13,
+   "end_s": 18.97,
+   "file_s": 12.73,
+   "abs_in": 315,
+   "abs_out": 456,
+   "file_in": 305,
+   "file_out": 470,
    "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
    "stick_t": 0.13,
    "stick_in": 0.4,
@@ -3017,15 +3022,15 @@
    "who": "SELBEEP",
    "text": "Directionally.",
    "tag": "",
-   "on_s": 20.3317,
-   "end_s": 21.2417,
-   "file_s": 19.9817,
-   "abs_in": 487,
-   "abs_out": 510,
-   "file_in": 479,
-   "file_out": 518,
+   "on_s": 20.28,
+   "end_s": 21.19,
+   "file_s": 19.93,
+   "abs_in": 486,
+   "abs_out": 509,
+   "file_in": 478,
+   "file_out": 517,
    "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
-   "stick_t": 0.29,
+   "stick_t": 0.28,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -3069,15 +3074,15 @@
    "who": "SELBEEP",
    "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
    "tag": "os",
-   "on_s": 28.5017,
-   "end_s": 33.2317,
-   "file_s": 28.0717,
-   "abs_in": 684,
-   "abs_out": 798,
-   "file_in": 673,
-   "file_out": 812,
+   "on_s": 28.2833,
+   "end_s": 33.0133,
+   "file_s": 27.8533,
+   "abs_in": 678,
+   "abs_out": 793,
+   "file_in": 668,
+   "file_out": 807,
    "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
-   "stick_t": 0.46,
+   "stick_t": 0.45,
    "stick_in": 0.43,
    "cut": false,
    "on_camera": "on",
@@ -3087,272 +3092,83 @@
    "words": [
     [
      "That's",
-     -1,
-     4
+     0,
+     5
     ],
     [
      "the",
-     5,
+     6,
      7
     ],
     [
      "mammoth",
-     8,
-     17
+     9,
+     18
     ],
     [
      "It's",
-     29,
-     33
+     30,
+     34
     ],
     [
      "been",
-     34,
-     37
+     35,
+     38
     ],
     [
      "two",
-     38,
-     41
+     39,
+     42
     ],
     [
      "weeks",
-     43,
-     50
+     44,
+     51
     ],
     [
      "and",
      64,
-     67
+     68
     ],
     [
      "it",
-     68,
-     70
+     69,
+     71
     ],
     [
      "has",
-     71,
+     72,
      75
     ],
     [
      "mass",
-     76,
+     77,
      83
     ],
     [
      "now",
-     84,
+     85,
      90
     ],
     [
      "We're",
-     94,
-     98
+     95,
+     99
     ],
     [
      "working",
-     99,
-     106
+     100,
+     107
     ],
     [
      "on",
-     107,
+     108,
      109
     ],
     [
      "it",
      110,
-     112
-    ]
-   ],
-   "mouth": [
-    [
-     0,
-     "A"
-    ],
-    [
-     2,
-     "E"
-    ],
-    [
-     8,
-     "M"
-    ],
-    [
-     10,
-     "A"
-    ],
-    [
-     12,
-     "M"
-    ],
-    [
-     14,
-     "E"
-    ],
-    [
-     17,
-     "rest"
-    ],
-    [
-     30,
-     "E"
-    ],
-    [
-     39,
-     "O"
-    ],
-    [
-     44,
-     "A"
-    ],
-    [
-     46,
-     "E"
-    ],
-    [
-     50,
-     "rest"
-    ],
-    [
-     64,
-     "E"
-    ],
-    [
-     71,
-     "A"
-    ],
-    [
-     73,
-     "E"
-    ],
-    [
-     76,
-     "M"
-    ],
-    [
-     78,
-     "A"
-    ],
-    [
-     81,
-     "E"
-    ],
-    [
-     85,
-     "A"
-    ],
-    [
-     89,
-     "rest"
-    ],
-    [
-     94,
-     "O"
-    ],
-    [
-     96,
-     "E"
-    ],
-    [
-     99,
-     "O"
-    ],
-    [
-     101,
-     "E"
-    ],
-    [
-     107,
-     "O"
-    ],
-    [
-     109,
-     "E"
-    ],
-    [
-     112,
-     "rest"
-    ]
-   ],
-   "mouth_src": "take",
-   "pre": false
-  },
-  {
-   "id": "e2-co-0006",
-   "shot": "1.08",
-   "beat": "1.08",
-   "kind": "dialogue",
-   "mode": "on-mic",
-   "who": "GERG",
-   "text": "That's not the mammoth. The mammoth's on the fourth floor.",
-   "tag": "",
-   "on_s": 34.3317,
-   "end_s": 37.3117,
-   "file_s": 33.9517,
-   "abs_in": 823,
-   "abs_out": 896,
-   "file_in": 814,
-   "file_out": 911,
-   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
-   "stick_t": 0.29,
-   "stick_in": 0.38,
-   "cut": false,
-   "on_camera": "on",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "That's",
-     0,
-     6
-    ],
-    [
-     "not",
-     7,
-     10
-    ],
-    [
-     "the",
-     11,
-     13
-    ],
-    [
-     "mammoth",
-     15,
-     25
-    ],
-    [
-     "The",
-     39,
-     42
-    ],
-    [
-     "mammoth's",
-     43,
-     51
-    ],
-    [
-     "on",
-     52,
-     53
-    ],
-    [
-     "the",
-     54,
-     56
-    ],
-    [
-     "fourth",
-     57,
-     62
-    ],
-    [
-     "floor",
-     64,
-     71
+     113
     ]
    ],
    "mouth": [
@@ -3369,67 +3185,256 @@
      "E"
     ],
     [
-     8,
-     "A"
-    ],
-    [
-     10,
-     "E"
-    ],
-    [
-     14,
+     9,
      "M"
     ],
     [
-     16,
+     11,
      "A"
     ],
     [
-     19,
+     13,
      "M"
     ],
     [
-     21,
+     15,
      "E"
     ],
     [
-     24,
+     18,
      "rest"
     ],
     [
-     39,
+     31,
      "E"
     ],
     [
-     42,
-     "M"
+     40,
+     "O"
     ],
     [
-     44,
+     45,
      "A"
     ],
     [
-     46,
+     47,
+     "E"
+    ],
+    [
+     51,
+     "rest"
+    ],
+    [
+     65,
+     "E"
+    ],
+    [
+     72,
+     "A"
+    ],
+    [
+     74,
+     "E"
+    ],
+    [
+     77,
      "M"
     ],
     [
-     48,
+     79,
+     "A"
+    ],
+    [
+     82,
      "E"
     ],
     [
-     57,
+     86,
+     "A"
+    ],
+    [
+     90,
+     "rest"
+    ],
+    [
+     95,
      "O"
     ],
     [
-     60,
+     97,
      "E"
     ],
     [
-     66,
+     100,
      "O"
     ],
     [
-     70,
+     102,
+     "E"
+    ],
+    [
+     108,
+     "O"
+    ],
+    [
+     110,
+     "E"
+    ],
+    [
+     113,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0006",
+   "shot": "1.08",
+   "beat": "1.08",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "GERG",
+   "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+   "tag": "",
+   "on_s": 33.5417,
+   "end_s": 36.5217,
+   "file_s": 33.1617,
+   "abs_in": 805,
+   "abs_out": 877,
+   "file_in": 795,
+   "file_out": 892,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+   "stick_t": 0.25,
+   "stick_in": 0.38,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "That's",
+     -1,
+     5
+    ],
+    [
+     "not",
+     6,
+     9
+    ],
+    [
+     "the",
+     10,
+     12
+    ],
+    [
+     "mammoth",
+     14,
+     24
+    ],
+    [
+     "The",
+     38,
+     41
+    ],
+    [
+     "mammoth's",
+     43,
+     50
+    ],
+    [
+     "on",
+     51,
+     52
+    ],
+    [
+     "the",
+     53,
+     55
+    ],
+    [
+     "fourth",
+     56,
+     61
+    ],
+    [
+     "floor",
+     63,
+     70
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     2,
+     "E"
+    ],
+    [
+     7,
+     "A"
+    ],
+    [
+     9,
+     "E"
+    ],
+    [
+     13,
+     "M"
+    ],
+    [
+     15,
+     "A"
+    ],
+    [
+     18,
+     "M"
+    ],
+    [
+     20,
+     "E"
+    ],
+    [
+     23,
+     "rest"
+    ],
+    [
+     38,
+     "E"
+    ],
+    [
+     41,
+     "M"
+    ],
+    [
+     43,
+     "A"
+    ],
+    [
+     45,
+     "M"
+    ],
+    [
+     47,
+     "E"
+    ],
+    [
+     56,
+     "O"
+    ],
+    [
+     59,
+     "E"
+    ],
+    [
+     65,
+     "O"
+    ],
+    [
+     69,
      "rest"
     ]
    ],
@@ -3448,8 +3453,8 @@
   },
   {
    "text": "FEB 29, 2024",
-   "s": 581,
-   "e": 631,
+   "s": 578,
+   "e": 627,
    "shot": "1.06",
    "floor_f": 21
   }
@@ -3469,9 +3474,9 @@
    "os": false
   },
   {
-   "s": 291,
-   "e": 311,
-   "hold_to": 316,
+   "s": 290,
+   "e": 310,
+   "hold_to": 315,
    "who": "GERG",
    "shown": "MAN ON THE BEANBAG",
    "text": "Which sentence?",
@@ -3481,9 +3486,9 @@
    "os": false
   },
   {
-   "s": 316,
-   "e": 457,
-   "hold_to": 469,
+   "s": 315,
+   "e": 456,
+   "hold_to": 468,
    "who": "SELBEEP",
    "shown": "DIRECTOR OF MAMMOTHS",
    "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
@@ -3493,9 +3498,9 @@
    "os": false
   },
   {
-   "s": 487,
-   "e": 510,
-   "hold_to": 522,
+   "s": 486,
+   "e": 509,
+   "hold_to": 521,
    "who": "SELBEEP",
    "shown": "DIRECTOR OF MAMMOTHS",
    "text": "Directionally.",
@@ -3505,9 +3510,9 @@
    "os": false
   },
   {
-   "s": 684,
-   "e": 798,
-   "hold_to": 810,
+   "s": 678,
+   "e": 793,
+   "hold_to": 805,
    "who": "SELBEEP",
    "shown": "SELBEEP",
    "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
@@ -3517,9 +3522,9 @@
    "os": true
   },
   {
-   "s": 823,
-   "e": 896,
-   "hold_to": 908,
+   "s": 805,
+   "e": 877,
+   "hold_to": 889,
    "who": "GERG",
    "shown": "MAN ON THE BEANBAG",
    "text": "That's not the mammoth. The mammoth's on the fourth floor.",
@@ -3533,7 +3538,7 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "10 beat lengths are not whole frames (1.02, 1.04, 1.05, 1.06, 1.08, 1.09...): beats start on the rounded running total, as the stick reel draws them"
+  "12 beat lengths are not whole frames (1.02, 1.03, 1.04, 1.05, 1.06, 1.07...): beats start on the rounded running total, as the stick reel draws them"
  ],
  "problems": []
 }

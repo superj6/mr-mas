@@ -6,7 +6,7 @@
 |---|---|
 | **Episode** | 2 of 12 |
 | **Date span** | Feb 15 → Aug 21, 2024. Flashbacks: `FEB 20, 2018` (F2.3, Nole → Mas) · `MAR 2016 · GAME 2 · MOVE 37` (the concept) · `DEC 2022 → 2023` (F2.2, Alyi: the full motive flashback) · Sep 2006 → Jun 9, 2008 (F2.1, Mas) |
-| **Runtime** | **Story 23:18 planned**: the proposal's runtime table after its final check, scene by scene, plus the 2 s the script review gave Move 37 (sc 4; Act One is the setup act, R4); with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 24:00**. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock, Mas pulled to W18's 140 wpm), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
+| **Runtime** | **Story 23:20 planned**: the proposal's runtime table after its final check, scene by scene, plus the 4 s the script review gave Move 37 (sc 4; Act One is the setup act, R4); with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 24:02** (§6). **The lock** ([lock-v1.md](lock-v1.md)) runs 22:54.00 of story: the lock pass gave back 18 s of fitted air (sc 11, 13) and the lock QA 8 s of stretched tempo. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock, Mas pulled to W18's 140 wpm), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
 | **Format** | Cold open · intro (30 s) · filename card (2 s) · four acts (`the séance` · `her` · `leave them up` · `as a guest`) · tag (`august`) · the Orb outro |
 | **Written by** | MR. MAS writers' room (the Ep2 v1 script writer) |
 | **Draft** | **Script v1 (Ep2 v1, the one-go build), 2026-10-08, revised after its script review.** The shooting script of [proposal.md](proposal.md) as agreed, with its Decisions (D-01 to D-70) and its three review logs, and [manifest.md](manifest.md); the binding checklist is [LEARNINGS.md](LEARNINGS.md). Every scene, in order; no scene added or cut. The script review's changes (one blocker, thirteen majors and twenty-two minors, every one applied or answered) are in the [Review log (script review)](#review-log-script-review) at the end, and went back into the proposal as D-71 to D-87. The best lines of staff draft 5.4 ([script.md](../../script.md)) are kept wherever the proposal keeps them; two keep-list lines changed or were cut, each with its reason in the review log's ledger. Not locked |
@@ -153,7 +153,7 @@ THUD, closer: the hand truck on the front steps. At Mas's counter, a staffer's c
 **GERG** *(typing; still not looking up)*\
 That's not the mammoth. The mammoth's on the fourth floor. `[INVENTED · the misdirect, spoken · e2-co-0006]`
 
-TEMPO · quick (Gerg at 0.25 s).
+TEMPO · quick: Gerg answers the second THUD 0.4 s after it, 0.5 s after Selbeep's line (a GUIDE break of quick's 0.25 s, logged in the plan's `XGAP`: the THUD and the coffee sit between the two lines).
 
 `[OTS-W]` [1.09] (≈ 5.0 s; one shot for the whole arrival) Over Mas's shoulder, straight down the axis to the doors. THUD: a hand truck takes the top step. The doors blow open in depth. On the hand truck, a complaint as tall as a person, its caption over its title:
 
@@ -266,7 +266,7 @@ Great. Put this on the blog too. I paid for the table. I paid for the candles. I
 
 *Behind him, in the same frame, the 2016 ghost's "less open" and its Yup hang in the air while he says "open". Nobody points at it.*
 
-TEMPO · quick (Gerg 0.2 s after Nole; Nole 0.2 s after Gerg).
+TEMPO · quick: Mas's "you're early." 0.45 s after the landing's thump, Nole 0.3 s after him (loud, fast, first); then Gerg 0.2 s after Nole and Nole 0.2 s after Gerg.
 
 `[LOW·DESK]` → `[HIGH]` [4.10] (≈ 5.2 s)
 
@@ -485,7 +485,7 @@ OUT — **Cause:** an invite. **Sound:** the invite's soft chime over the click.
 
 ### 4B. SAME — HIS PHONE ON THE TABLE [BASE] · SINGLE IMAGE / INSERT · P sc 4B
 
-`[ECU]` [4B.01] (≈ 8.0 s · ARRIVE: the phone's glow on the nameplate, continuous from 4A) The calendar card, with the look of Ep1's `Board sync` invite:
+`[ECU]` [4B.01] (≈ 9.0 s · ARRIVE: 1.0 s, the phone's glow on the nameplate, continuous from 4A) The calendar card, with the look of Ep1's `Board sync` invite:
 
 UI: `XEL · LONG-FORM · MAR 18 · 2 HRS`, with a mic icon `[INVENTED]`
 
@@ -494,10 +494,10 @@ He reads it.
 **MAS (V.O.)**\
 two hours on his show, once. after that, november is a link. `[INVENTED · V.O. 3, plan · e2-vo-03]`
 
-His thumb on Accept. The card settles into his calendar. *(In Ep1 he accepted an invite without looking. This time he looks.)*
+A beat after his thought, his thumb on Accept. The card settles into his calendar, about 2 s. *(In Ep1 he accepted an invite without looking. This time he looks.)*
 
-AFTERMATH — his thumb lifts off Accept; the card settles into his calendar.
-OUT — **Cause:** he accepts. **Sound:** an original podcast-intro sting pre-laps under the tap (J 0.8 s). **Object:** the invite's mic icon → XEL's mic, the same place in frame.
+AFTERMATH — his thumb lifts off Accept; the card settles into his calendar (1.9 s after the click: P3).
+OUT — **Cause:** he accepts. **Sound:** an original podcast-intro sting pre-laps under the card settling (J 0.8 s). **Object:** the invite's mic icon → XEL's mic, the same place in frame.
 
 ### 6. INT. XEL'S STUDIO — DAY · MAR 18, 2024 [BASE · 2.D the podcast player's chrome] · EXTENDED CONVERSATION · P sc 6
 
@@ -664,7 +664,7 @@ AXIS — over Mas's right shoulder onto the monitor; he's screen-left, the monit
 
 UI: `EUROPE PASSES ITS AI RULEBOOK · 523–46` [V · facts A14; undated]
 
-Its thumbnail is a 400-page book with a big `SNOOZE` button bolted to its spine. `[ECU]` He swipes it away, unopened. *(The button stays unpressed until Ep8.)*
+Its thumbnail is a 400-page book with a big `SNOOZE` button bolted to its spine. `[ECU]` He swipes it away, unopened. *(The button stays unpressed until Ep8. On the wall behind him, Ep1's framed `GUEST` lanyard, as in the tag.)*
 
 `[POV]` [8.02] (≈ 5.2 s) One whole-pixel scroll to a news site: a headline over the segment's video still. In the still, a news desk: three cardboard cutouts in lanyards stand in a lineup against a height chart. Mas, his landlord, and Elgoog's. The still plays; the host (unplated) turns from the lineup and looks straight down the lens.
 
@@ -726,6 +726,8 @@ On the monitor, instantly, with a bright UI chirp: `yes!!`
 
 **ENGINEER** *(O.S., looking at it)*\
 …Before I've asked. It does that. `[INVENTED · e2-a2-0004]`
+
+TEMPO · quick: he starts rehearsing to her 0.3 s after "We're on in five."
 
 `[SCR]` → `[W]` [9.03] (≈ 4.6 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
 
@@ -978,7 +980,7 @@ ON SCREEN (ALYI's post): "After almost a decade, I have made the decision to lea
 
 ON SCREEN (his post, typed, hard-stopped at the crop): "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend." [P · facts A61 · x.com/sama/status/1790518031640347056; the source's own sentence case, no capital "I" on screen; name swaps]
 
-After both posts have had their read time:
+After both posts have had their read time (his: 172 characters, 8.85 s from its first letter):
 
 **MAS (V.O.)**\
 i came back. `[INVENTED · V.O. 6, his want: a fact about himself, the hope unsaid · e2-vo-06]`
@@ -1420,7 +1422,7 @@ Mada writes a second word. The table holds its breath, about 1.5 s.
 **MAS (V.O.)**\
 the next one's already training. `[INVENTED · V.O. 11, plan: the next model; new information from the same May 28 post (facts A36); his priority, nothing about the committee · e2-vo-11]`
 
-TEMPO · quick (Terb); Mas at 0.45–0.6 s; the V.O. weighted, after the hold (2.3 s).
+TEMPO · quick (Terb, 0.25 s, his roll call and his next line); "present." after the table's two-beat hold (1.25 s: the HOLD 2 BEATS above, a GUIDE break of Mas's 0.45–0.6 s that the scene designs), "also present." at 0.6 s; the V.O. weighted, after the hold (2.3 s).
 
 RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.9 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
 
@@ -1500,16 +1502,20 @@ Got it. And the second biggest? `[INVENTED · e2-a4-0019]`
 **GERG** *(cheerful, literal; still typing)*\
 Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking. `[INVENTED · keep list · e2-a4-0020]`
 
+As she asks, the wall screen behind them puts up the keynote's announcement, `…AND LATER THIS YEAR: CHATGTP.` [V · facts A40], and the stream's own crowd roars.
+
 **HARAS** *(pleasantly, the real one)*\
 And profit? `[INVENTED · recorded complete; the cheer takes its tail, and the subtitle reads "And profit—" · e2-a4-0021]`
 
-TEMPO · quick (0.2–0.25 s). The cheer overlaps her last word: the episode's second and last cut-off.
+The lobby's cheer lands on "profit" and talks over it.
+
+TEMPO · quick (0.2–0.25 s). The cheer overlaps her last word: the episode's second and last cut-off. Its cause comes first: the announcement and the stream's roar 0.2 s before her line, the lobby's cheer 0.15 s into it, on "profit" (the lock QA: the cheer had come 0.8 s after her line, and the announcement after both).
 
 `[SCR]` → `[W]` [19.05] (≈ 4.8 s)
 
-ON STREAM: `…AND LATER THIS YEAR: CHATGTP.` [V · facts A40]
+ON STREAM, full frame: `…AND LATER THIS YEAR: CHATGTP.` [V · facts A40], the announcement the lobby is already cheering.
 
-The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her.
+The cheer carries across the cut; somebody's desk confetti cannon goes off. Nobody answers her.
 
 **HARAS** *(writing on her tape, under the cheer)*\
 Let me reframe that. Upside. `[INVENTED · e2-a4-0022]`
@@ -1781,13 +1787,13 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 
 ## 3. Tempo
 
-The marks in the scenes, gathered. Each gap in seconds is in the beat plan's `tempo.gaps`; where an exchange crosses a cut, the gap (the outgoing beat's tail plus the incoming beat's head) is pinned so the fit can't stretch it, and recorded as `tempo.across_cut`. The build checks every one against its mark: 76 gaps (15 across a cut), all inside.
+The marks in the scenes, gathered. Each gap in seconds is in the beat plan's `tempo.gaps`; where an exchange crosses a cut, the gap (the outgoing beat's tail plus the incoming beat's head) is pinned so the fit can't stretch it, and recorded as `tempo.across_cut`. The build checks every one against its mark: 83 gaps (22 across a cut): the 74 that carry a mark are all inside it, and the 9 `free` ones (action between the lines: the monitor's `yes!!`, the scroll down the stairwell, the overlap) are checked only against the plan. **Corrected at the lock QA** (lock-v1.md §3.5): this said "76 gaps, all inside", but seven exchanges these TEMPO lines mark crossed a cut unpinned, and the fit had stretched them to 0.9–1.9 s (the driver, Nole's fear, "you're early." and Nole's answer, Terb, the line to Mas in 4A, the engineer's first line in 9, Gerg after the THUD). They are pinned now, and `lock_report.py` checks this table's exchanges in the lock itself (`PACE_LIST`). Two are GUIDE breaks, each logged: Gerg answers the second THUD 0.4 s after it (0.5 s after Selbeep), and "present." comes after the table's two-beat hold.
 
 | Pace | Gaps | Exchanges |
 |---|---|---|
-| **Quick** | others 0.15–0.35 s; Mas 0.4–0.5 s | Selbeep and Gerg (1); Nole and Gerg's volleys, the cow, "Say something ELSE.", Gerg's correction on "nowhere" and the staffer's whisper inside it, the credit (4); the "no." ladder and the off-record mic (6); the engineer and Gerg, Rima's walk-and-talk, the hellos (9); the engineer and CHATGTP (11); the staffers (13); the party under the chant (F2.2); the driver (17); Terb, Mario and Ekiel (18); Haras and Gerg, Gerg's "The half on the beanbags.", Radnus and Mas (19); the split (20) |
+| **Quick** | others 0.15–0.35 s; Mas 0.4–0.5 s | Selbeep and Gerg (1); "you're early." after the landing, Nole and Gerg's volleys, the cow, "Say something ELSE.", Gerg's correction on "nowhere" and the staffer's whisper inside it, the credit (4); the "no." ladder and the off-record mic (6); the engineer and Gerg, Rima's walk-and-talk, the hellos (9); the engineer and CHATGTP (11); the staffers (13); the party under the chant (F2.2); the driver (17); Terb, Mario and Ekiel (18); Haras and Gerg, Gerg's "The half on the beanbags.", Radnus and Mas (19); the split (20) |
 | **Normal** | 0.4–0.6 s | Nole's fear (4); Tasya and the Humanist (7); the call (8); Mas and Rima (9); Mas and Bukaj, aloud (14); the Forecaster's answer and his forecast (17); the call with Gerg, "which half?" included (19); the lobby (20); the tag |
-| **Weighted** | longer, only on turns | the ghost's "…Yup." and "You kept them." / "we keep everything." (4); Terb's reading (4A); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card, the held breath before V.O. 11 (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
+| **Weighted** | longer, only on turns | the ghost's "…Yup." and "You kept them." / "we keep everything." (4); Terb's reading (4A; then his line to Mas quick and dry); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card, the held breath before V.O. 11 (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
 
 **Two cut-offs, each motivated, both recorded complete:** "Thanks." over CHATGTP's "favorite" (11.04; he asked for short), and the cheer over "And profit—" (19.04; the world talks over the one key word). **Speaking rates:** the planning rates are Ep1's shipped EL lock's (median audible wpm on lines of five or more words), pulled toward W18's targets. Mas's ordinary lines plan at about 140 wpm (W18) and his call to legal (17.09) at about 180, so the one time he hurries stands out; Gerg's Move 37 correction at about 183 (inside W18's 165–185 band); his V.O. at 128, except the scramble's rattled V.O. 9 at about 145.
 
@@ -1834,7 +1840,7 @@ Every scene change and every inserted scene: cause · sound lead · matched obje
 
 **Cards** (2-TONE FREEZE, name plus one relation word, at least 45 s apart): `SELBEEP / DIRECTOR OF MAMMOTHS.` (1.05) · `XEL / ASKS THE LONG QUESTIONS.` (6.02) · `EKIEL / CO-LED THE SAFETY TEAM.` (14.09) · `THE FORECASTER / EX-NOPEAI.` (17.03). **Plates:** `NOLE · FUNDED IT. LEFT IT. SUING IT.` · `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` · `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` · `HARAS · FIRST CFO` · `REMUHCS · MAJORITY LEADER` · `SIRRAH` (on the rally photo) · the four nameplates (4A). **Toasts:** three verdicts (`verified: …`, `verified: 2008`, `verified: human (all of them)`) and nothing at the door. **No labels:** no `(REPORTED)`, no disclaimer, no hedge anywhere on screen.
 
-**Must-read real text**, held at least 0.25 s + 0.05 s a character (P15): every window is in the beat plan's `onscreen_items`, and the build checks each against its floor. The longest: his May 14 post (165 characters, 12.07), Nole's Jun 10 post (139, 20.02), the Superalignment sentence (133, 15.10), his Jun 10 post (126, 19.07), Ekiel's first post on the domino (92, 14.10). **The script check also holds the rails** (§8): every `RAIL` line here, in order, against the plan's.
+**Must-read real text**, held at least 0.25 s + 0.05 s a character (P15): every window is in the beat plan's `onscreen_items`, and the build checks each against its floor. The longest: his May 14 post (172 characters, 12.07), Nole's Jun 10 post (139, 20.02), the Superalignment sentence (133, 15.10), his Jun 10 post (126, 19.07), Ekiel's first post on the domino (92, 14.10). **The script check also holds the rails** (§8): every `RAIL` line here, in order, against the plan's.
 
 ## 6. Runtime
 
@@ -1855,6 +1861,7 @@ Planned, not measured. Per scene, the proposal's runtime table (after its final 
 - **How a scene's length is built:** its lines at their natural length (until the takes exist, words at each voice's rate, calibrated on Ep1's shipped EL lock), its gaps at their tempo marks, its designed holds fixed (arrivals, read floors, the bar-long holds, the 4-bar phrases), and the rest of its air fitted to the scene's length. No fitted head or tail runs over 3 s, and no wordless beat over 8 s (the build warns otherwise). When the takes are recorded, the build re-fits around them.
 - **The clock** (with the 30 s intro and the 2 s card): cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:29 · Act Four 17:55 · tag 23:15 · outro 23:52 · end ≈ 24:02. The midpoint act-out lands at about 52%; the S3 (the bridge) runs 15:44–17:55.
 - **If the reel runs long** (the proposal's D-20, in its order): F2.3 to about 15 s, keeping the room's refusal and the look (−6 s; the sheet is gone); the APR 1 lineup, V.O. 4 moving onto the calendar square (−10 s); the off-record mic gag, if its laugh test fails (−4 s). Never a conversation's middle, an arrival, a keep-list line, or a review fix.
+- **After the lock** (measured on the takes; [lock-v1.md](lock-v1.md) §1 and §3): story **22:54.00**. The lock pass gave back 18 s of air the fit had tripled in two quick scenes (sc 11 1:51 → 1:38, sc 13 0:36 → 0:31; proposal D-88); the lock QA pinned the tempo marks the plan had left unpinned and gave back 8 s (sc 1 0:55, sc 4 3:13, sc 4A 0:33, sc 4B 0:09 with a second from 4A, sc 9 0:51, sc 17 2:10, sc 18 1:35; D-91, D-93). Cold open 0:55 · Act One 6:04 · Act Two 4:39 · Act Three 5:20 · Act Four 5:19 · tag 0:37. D-20's trims are not needed.
 
 ## 7. For the next passes
 

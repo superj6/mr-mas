@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed",
  "logline": "The Ep2 v1 base lock of act3: the beat plan applied to no source (every beat new).",
  "dateSpan": "May 15 - 20, 2024",
- "runtimeMin": 5.35,
+ "runtimeMin": 5.33,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -80,7 +80,7 @@
   "builder": "audio/reel/ep02-v1/build_timeline.py",
   "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act3-bed.wav",
   "notes": "show/episodes/ep02/production/v1/pipeline.md",
-  "seconds": 321.0
+  "seconds": 320.0
  },
  "beats": [
   {
@@ -3135,7 +3135,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 15.28,
+   "reelDur": 14.62,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3179,7 +3179,7 @@
      "id": "e2-a3-0017",
      "who": "driver",
      "text": "You gonna think it over, or can we move? We're parked on it.",
-     "t": 1.15,
+     "t": 0.2,
      "dur": 2.86,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0017__driver-A.wav",
      "in": 0.44,
@@ -3255,7 +3255,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 4.16,
+   "reelDur": 3.21,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3263,7 +3263,7 @@
    "sounds": [
     {
      "name": "car_window_down",
-     "at": 0.192,
+     "at": 0.1,
      "gain": -26
     }
    ],
@@ -3273,8 +3273,15 @@
     "pace": "quick",
     "tempo": {
      "pace": "quick",
-     "gaps": {},
-     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+     "gaps": {
+      "e2-a3-0017": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a3-0016",
+      "gap_s": 0.3,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
     },
     "camera": "MEDIUM · a DRIVER parked on the receipt leans out of his window"
    }
@@ -3370,7 +3377,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.86,
+   "reelDur": 5.9,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3418,7 +3425,7 @@
    "caption": "Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 4.59,
+   "reelDur": 4.66,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3426,7 +3433,7 @@
    "sounds": [
     {
      "name": "phone_buzz_step_1",
-     "at": 1.913,
+     "at": 1.942,
      "gain": -24
     }
    ],
@@ -3519,7 +3526,7 @@
      "id": "e2-a3-0019",
      "who": "mas",
      "text": "everyone who signed one. find them. all of them. today.",
-     "t": 2.29,
+     "t": 2.33,
      "dur": 3.44,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0019__mas-manalt-C.wav",
      "in": 0.37,
@@ -3580,7 +3587,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 6.49,
+   "reelDur": 6.55,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
@@ -3588,12 +3595,12 @@
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.191,
+     "at": 0.194,
      "gain": -26
     },
     {
      "name": "call_connect",
-     "at": 1.527,
+     "at": 1.553,
      "gain": -26
     }
    ],
@@ -3674,49 +3681,49 @@
      "who": "mas",
      "text": "everyone who signed. the post. everyone who signed.",
      "t": 0.3,
-     "dur": 3.24,
+     "dur": 3.48,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
-     "in": 0.37,
+     "in": 0.38,
      "words": [
       [
        "Everyone",
        -0.02,
-       0.421
+       0.388
       ],
       [
        "who",
-       0.456,
-       0.56
+       0.411,
+       0.504
       ],
       [
        "signed",
-       0.619,
-       0.99
+       0.562,
+       0.968
       ],
       [
        "the",
-       1.187,
-       1.292
+       1.433,
+       1.537
       ],
       [
        "post",
-       1.35,
-       1.803
+       1.595,
+       2.037
       ],
       [
        "everyone",
-       2.186,
-       2.639
+       2.455,
+       2.872
       ],
       [
        "who",
-       2.674,
-       2.766
+       2.896,
+       2.989
       ],
       [
        "signed",
-       2.824,
-       3.208
+       3.047,
+       3.465
       ]
      ],
      "tag": "V.O.",
@@ -3724,7 +3731,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 4.3,
+   "reelDur": 4.56,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
@@ -3770,7 +3777,7 @@
      "id": "e2-a3-0020",
      "who": "forecaster",
      "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
-     "t": 2.68,
+     "t": 2.72,
      "dur": 6.82,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0020__forecaster-A.wav",
      "in": 0.37,
@@ -3851,7 +3858,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 10.07,
+   "reelDur": 10.12,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3887,7 +3894,7 @@
      "id": "e2-vo-10",
      "who": "mas",
      "text": "not until legal has every name.",
-     "t": 1.53,
+     "t": 1.55,
      "dur": 2.51,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
      "in": 0.42,
@@ -3928,7 +3935,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.0,
+   "reelDur": 5.03,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -4251,7 +4258,7 @@
    "caption": "It rains letterhead. The receipt's ink runs down the lanes in the rain. Far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 6.9,
+   "reelDur": 7.0,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · a pad in the rain"
@@ -4265,12 +4272,12 @@
     },
     {
      "name": "ink_run_drip",
-     "at": 0.767,
+     "at": 0.778,
      "gain": -26
     },
     {
      "name": "umbrella_pop",
-     "at": 4.983,
+     "at": 5.056,
      "gain": -32
     }
    ],

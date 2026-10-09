@@ -9,6 +9,21 @@
 //   presses Publish) · 15.15 (115 f, WIDE · the effigy catches) · 15.16 (110 f, WIDE → ECU · the fire's glow shrinks
 //   to ) · 15.17 (116 f, ECU · the point is the pin, pulsing on h) · 15.18 (109 f, WIDE · he pockets the phone, gets
 //   up off) · 15.19 (120 f, WIDE · the stairwell, Mas small on the s)
+// The plan's picture notes (eggs, Ep1 payoffs, constraints; each shot's `picture` in data.ts):
+//   15.02: Dates and hearts, not must-read text (R2).
+//   15.03: A face light one step.
+//   15.04: TPOOL in EARLY-WEB16 colours inside a 2024 phone. Toast 2 of 3.
+//   15.05: The check-in has a cause, seen in F2.2.
+//   15.06: T4 glossy. Warm, never a hymn. The string lights palette-cycle, never strobe (P15).
+//   15.07: Lip-sync both. Alyi warm (P5: warm reads warm).
+//   15.09: GLYPH 12 frames on the room, never in his eyes (GR §6).
+//   15.10: The post's words are the record's; its numbers don't print (R2).
+//   15.11: Lip-sync both; Ekiel's card already paid in sc 14.
+//   15.12: No hover, no cursor.
+//   15.13: No zealot framing; no religious iconography. The month isn't asserted.
+//   15.15: Palette-cycled fire, never strobing (P15).
+//   15.17: No IOU in the shot, no hand near it (R2).
+//   15.19: No outlet named, no headline words.
 // A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
 // fails on stand-ins). Fill it with L.add(<shot id>, {st, draw: (fb, k, sh, f) => ...}) per shot (README.md); `f` is
 // the frame inside this scene. Name every file a layout reads at run time in defineScene({assets}).

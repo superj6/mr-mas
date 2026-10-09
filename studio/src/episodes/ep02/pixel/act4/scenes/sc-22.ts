@@ -4,6 +4,14 @@
 //   slot: he ) · 22.05 (87 f, INSERT · the glimpse: the slot's gap fil) · 22.06 (29 f, ECU · the flap swings shut on
 //   its spring) · 22.07 (62 f, MCU · Mas at the shut flap) · 22.08 (77 f, MEDIUM · the door and his raised hand in)
 //   · 22.09 (115 f, WIDE · he turns and walks away the way h)
+// The plan's picture notes (eggs, Ep1 payoffs, constraints; each shot's `picture` in data.ts):
+//   22.01: No mat, no lock, no sign (R1, R2). No rail: it runs on from sc 20's JUN 19, 2024.
+//   22.02: The contrast kept (P12).
+//   22.04: A question, not a reason (D-37).
+//   22.05: Alyi in person (pixel), never a reflection; he never looks up (FC).
+//   22.07: A face light one step. 2–3 s.
+//   22.08: The raised hand held 2 beats. The cue returns as it lowers.
+//   22.09: 4–5 s of his back.
 // A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
 // fails on stand-ins). Fill it with L.add(<shot id>, {st, draw: (fb, k, sh, f) => ...}) per shot (README.md); `f` is
 // the frame inside this scene. Name every file a layout reads at run time in defineScene({assets}).

@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "07:36:00",
-  "ep_in_frames": 10944,
+  "ep_in": "07:31:00",
+  "ep_in_frames": 10824,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -28,16 +28,16 @@
  "summary": {
   "shots": 44,
   "beats": 44,
-  "frames": 6720,
-  "seconds": 280.0,
-  "length": "4:40.00",
-  "episode_in": "07:36:00",
-  "episode_out": "12:16:00",
+  "frames": 6696,
+  "seconds": 279.0,
+  "length": "4:39.00",
+  "episode_in": "07:31:00",
+  "episode_out": "12:10:00",
   "verdicts": {
    "-": 44
   },
-  "mean_s": 6.364,
-  "median_s": 6.229,
+  "mean_s": 6.341,
+  "median_s": 6.042,
   "min_s": 1.0,
   "max_s": 13.333,
   "lines": 41,
@@ -56,7 +56,7 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "5 scenes: 8(1056f) 9(1248f) 10(1104f) 11(2352f) 12(960f)"
+   "detail": "5 scenes: 8(1056f) 9(1224f) 10(1104f) 11(2352f) 12(960f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -66,7 +66,7 @@
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 6720"
+   "detail": "0 -> 6696"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -101,7 +101,7 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 6720,
+   "e": 6696,
    "shots": [
     "8.01",
     "8.02",
@@ -151,9 +151,9 @@
    "chapter": "ACT2",
    "title": "",
    "cue": "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed · music (v1): E02-06 · under the call the Water Line thins to its pedal; one chip note on CONFIRMED · music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms) · music (v1): E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat · music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice · music (v1): E02-07 · a tape-stop into the demo cue at the tear · music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo) · music (v1): E02-07 · thins to a pad at ENDED and holds it under the post · music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast · music (v1): E02-07 · the news's tiny ducked bed under the pad until he minimises it; the pad thins to its pedal under Alyi's post; the designed stop after the hold on his face (the midpoint act-out) · music (v1): E02-07 · the designed stop, mid-phrase on the downbeat",
-   "frames": 6720,
-   "tc_in": "07:36:00",
-   "tc_out": "12:16:00"
+   "frames": 6696,
+   "tc_in": "07:31:00",
+   "tc_out": "12:10:00"
   }
  ],
  "scenes": [
@@ -170,13 +170,13 @@
     "8.06",
     "8.07"
    ],
-   "tc_in": "07:36:00",
-   "tc_out": "08:20:00"
+   "tc_in": "07:31:00",
+   "tc_out": "08:15:00"
   },
   {
    "id": "9",
    "s": 1056,
-   "e": 2304,
+   "e": 2280,
    "shots": [
     "9.01",
     "9.02",
@@ -185,13 +185,13 @@
     "9.05",
     "9.06"
    ],
-   "tc_in": "08:20:00",
-   "tc_out": "09:12:00"
+   "tc_in": "08:15:00",
+   "tc_out": "09:06:00"
   },
   {
    "id": "10",
-   "s": 2304,
-   "e": 3408,
+   "s": 2280,
+   "e": 3384,
    "shots": [
     "10.01",
     "10.02",
@@ -201,13 +201,13 @@
     "10.06",
     "10.07"
    ],
-   "tc_in": "09:12:00",
-   "tc_out": "09:58:00"
+   "tc_in": "09:06:00",
+   "tc_out": "09:52:00"
   },
   {
    "id": "11",
-   "s": 3408,
-   "e": 5760,
+   "s": 3384,
+   "e": 5736,
    "shots": [
     "11.01",
     "11.02",
@@ -226,13 +226,13 @@
     "11.15",
     "11.16"
    ],
-   "tc_in": "09:58:00",
-   "tc_out": "11:36:00"
+   "tc_in": "09:52:00",
+   "tc_out": "11:30:00"
   },
   {
    "id": "12",
-   "s": 5760,
-   "e": 6720,
+   "s": 5736,
+   "e": 6696,
    "shots": [
     "12.01",
     "12.02",
@@ -243,8 +243,8 @@
     "12.07",
     "12.08"
    ],
-   "tc_in": "11:36:00",
-   "tc_out": "12:16:00"
+   "tc_in": "11:30:00",
+   "tc_out": "12:10:00"
   }
  ],
  "shots": [
@@ -335,6 +335,7 @@
    "beat_starts": {
     "8.01": 0
    },
+   "picture": "Undated (R1). The SNOOZE stays unpressed until Ep8. On the wall behind him, the framed GUEST lanyard from Ep1 (the dark room's, as in sc 23).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -355,8 +356,8 @@
      "must": true
     }
    ],
-   "tc_in": "07:36:00",
-   "tc_out": "07:44:02",
+   "tc_in": "07:31:00",
+   "tc_out": "07:39:02",
    "frames": 194
   },
   {
@@ -437,6 +438,7 @@
    "beat_starts": {
     "8.02": 0
    },
+   "picture": "The words are the news site's headline, framed as a headline in its own UI (GR §3: an [H] quote only as the headline's exact words), never as the show's own card. The host is unplated (A14). A news-desk sting, tiny and ducked.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -450,8 +452,8 @@
      "must": true
     }
    ],
-   "tc_in": "07:44:02",
-   "tc_out": "07:49:06",
+   "tc_in": "07:39:02",
+   "tc_out": "07:44:06",
    "frames": 124
   },
   {
@@ -600,13 +602,14 @@
    "beat_starts": {
     "8.03": 0
    },
+   "picture": "The V.O. types in his cyan.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:49:06",
-   "tc_out": "07:57:00",
+   "tc_in": "07:44:06",
+   "tc_out": "07:52:00",
    "frames": 186
   },
   {
@@ -691,6 +694,7 @@
    "beat_starts": {
     "8.04": 0
    },
+   "picture": "Who picked the date isn't on record: invented staging of a public result.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -718,8 +722,8 @@
      "must": true
     }
    ],
-   "tc_in": "07:57:00",
-   "tc_out": "08:01:15",
+   "tc_in": "07:52:00",
+   "tc_out": "07:56:15",
    "frames": 111
   },
   {
@@ -823,13 +827,14 @@
    "beat_starts": {
     "8.05": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:01:15",
-   "tc_out": "08:04:19",
+   "tc_in": "07:56:15",
+   "tc_out": "07:59:19",
    "frames": 76
   },
   {
@@ -1135,6 +1140,7 @@
    "beat_starts": {
     "8.06": 0
    },
+   "picture": "We hear only Mas. No face on the tile, ever.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1162,8 +1168,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:04:19",
-   "tc_out": "08:14:15",
+   "tc_in": "07:59:19",
+   "tc_out": "08:09:15",
    "frames": 236
   },
   {
@@ -1239,6 +1245,7 @@
    "beat_starts": {
     "8.07": 0
    },
+   "picture": "Through the wall: a stage manager's distant count, the walk-on music warming up.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1252,8 +1259,8 @@
      "must": true
     }
    ],
-   "tc_in": "08:14:15",
-   "tc_out": "08:20:00",
+   "tc_in": "08:09:15",
+   "tc_out": "08:15:00",
    "frames": 129
   },
   {
@@ -1263,7 +1270,7 @@
     "9.01"
    ],
    "s": 1056,
-   "e": 1255,
+   "e": 1247,
    "onscreen": [
     {
      "text": "RAIL: MAY 13, 2024",
@@ -1564,14 +1571,15 @@
    "beat_starts": {
     "9.01": 0
    },
+   "picture": "Wings are stage right (screen-left from the house): Mas keeps the left third.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:20:00",
-   "tc_out": "08:28:07",
-   "frames": 199
+   "tc_in": "08:15:00",
+   "tc_out": "08:22:23",
+   "frames": 191
   },
   {
    "id": "9.02",
@@ -1579,13 +1587,13 @@
    "beats": [
     "9.02"
    ],
-   "s": 1255,
-   "e": 1452,
+   "s": 1247,
+   "e": 1436,
    "onscreen": [
     {
      "text": "yes!!",
-     "s": 122,
-     "e": 196
+     "s": 116,
+     "e": 189
     }
    ],
    "lines": [
@@ -1595,10 +1603,10 @@
      "mode": "on-mic",
      "who": "ENGINEER",
      "text": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
-     "s": 10,
-     "e": 121,
-     "fs": 0,
-     "fe": 132,
+     "s": 3,
+     "e": 114,
+     "fs": -6,
+     "fe": 126,
      "os": false,
      "via": null,
      "face": null,
@@ -1608,123 +1616,127 @@
      "mouth": [
       [
        0,
+       "rest"
+      ],
+      [
+       1,
        "O"
       ],
       [
-       7,
+       8,
        "E"
       ],
       [
-       13,
+       14,
        "A"
       ],
       [
-       20,
+       21,
        "rest"
       ],
       [
-       23,
+       24,
        "A"
       ],
       [
-       25,
+       26,
        "rest"
       ],
       [
-       27,
+       28,
        "A"
       ],
       [
-       29,
+       30,
        "E"
       ],
       [
-       37,
+       38,
        "O"
       ],
       [
-       39,
+       40,
        "A"
       ],
       [
-       41,
+       42,
        "E"
       ],
       [
-       46,
+       47,
        "rest"
       ],
       [
-       52,
+       53,
        "E"
       ],
       [
-       57,
+       58,
        "A"
       ],
       [
-       59,
+       60,
        "E"
       ],
       [
-       63,
+       64,
        "O"
       ],
       [
-       65,
+       66,
        "rest"
       ],
       [
-       70,
+       71,
        "A"
       ],
       [
-       73,
+       74,
        "E"
       ],
       [
-       79,
+       80,
        "rest"
       ],
       [
-       83,
+       84,
        "A"
       ],
       [
-       85,
+       86,
        "E"
       ],
       [
-       87,
+       88,
        "A"
       ],
       [
-       89,
+       90,
        "E"
       ],
       [
-       94,
+       95,
        "A"
       ],
       [
-       97,
+       98,
        "E"
       ],
       [
-       105,
+       106,
        "rest"
       ]
      ],
      "words": [
       [
        "So",
-       -1,
+       0,
        4
       ],
       [
        "on",
-       5,
-       8
+       6,
+       9
       ],
       [
        "stage",
@@ -1738,28 +1750,28 @@
       ],
       [
        "ask",
-       27,
-       31
+       28,
+       32
       ],
       [
        "it",
-       32,
+       33,
        34
       ],
       [
        "a",
        35,
-       35
+       36
       ],
       [
        "question",
-       36,
+       37,
        47
       ],
       [
        "it",
        53,
-       56
+       57
       ],
       [
        "thinks",
@@ -1773,33 +1785,33 @@
       ],
       [
        "a",
-       67,
+       68,
        68
       ],
       [
        "second",
-       69,
-       79
+       70,
+       80
       ],
       [
        "and",
-       82,
-       86
+       83,
+       87
       ],
       [
        "then",
-       87,
+       88,
        90
       ],
       [
        "it",
-       91,
-       93
+       92,
+       94
       ],
       [
        "answers",
-       94,
-       105
+       95,
+       106
       ]
      ],
      "tag": "",
@@ -1811,10 +1823,10 @@
      "mode": "on-mic",
      "who": "ENGINEER",
      "text": "Before I've asked. It does that.",
-     "s": 142,
-     "e": 185,
-     "fs": 130,
-     "fe": 193,
+     "s": 135,
+     "e": 179,
+     "fs": 123,
+     "fe": 186,
      "os": true,
      "via": null,
      "face": null,
@@ -1875,7 +1887,7 @@
       [
        "Before",
        0,
-       7
+       8
       ],
       [
        "I've",
@@ -1884,7 +1896,7 @@
       ],
       [
        "asked",
-       12,
+       13,
        19
       ],
       [
@@ -1894,13 +1906,13 @@
       ],
       [
        "does",
-       25,
-       29
+       26,
+       30
       ],
       [
        "that",
-       30,
-       35
+       31,
+       36
       ]
      ],
      "tag": "os",
@@ -1929,12 +1941,12 @@
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
    ],
    "sounds": [
-    "ui_chirp_bright @122"
+    "ui_chirp_bright @116"
    ],
    "spots": [
     {
      "name": "ui_chirp_bright",
-     "k": 122,
+     "k": 116,
      "dur": null
     }
    ],
@@ -1976,6 +1988,7 @@
    "beat_starts": {
     "9.02": 0
    },
+   "picture": "The product answers before it's asked (the season's hint).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1984,14 +1997,14 @@
     {
      "kind": "ui",
      "text": "yes!!",
-     "s": 122,
-     "e": 196,
+     "s": 116,
+     "e": 189,
      "must": true
     }
    ],
-   "tc_in": "08:28:07",
-   "tc_out": "08:36:12",
-   "frames": 197
+   "tc_in": "08:22:23",
+   "tc_out": "08:30:20",
+   "frames": 189
   },
   {
    "id": "9.03",
@@ -1999,13 +2012,13 @@
    "beats": [
     "9.03"
    ],
-   "s": 1452,
-   "e": 1567,
+   "s": 1436,
+   "e": 1549,
    "onscreen": [
     {
      "text": "[laughter]",
-     "s": 20,
-     "e": 115
+     "s": 19,
+     "e": 112
     }
    ],
    "lines": [
@@ -2015,10 +2028,10 @@
      "mode": "on-mic",
      "who": "GERG",
      "text": "Careful. The new one can hear you laugh.",
-     "s": 52,
-     "e": 100,
-     "fs": 43,
-     "fe": 114,
+     "s": 50,
+     "e": 98,
+     "fs": 41,
+     "fe": 112,
      "os": false,
      "via": null,
      "face": null,
@@ -2086,7 +2099,7 @@
      "words": [
       [
        "Careful",
-       0,
+       -1,
        9
       ],
       [
@@ -2150,18 +2163,18 @@
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
    ],
    "sounds": [
-    "engineer_laugh_take @4",
-    "tag_drop @24"
+    "engineer_laugh_take @5",
+    "tag_drop @23"
    ],
    "spots": [
     {
      "name": "engineer_laugh_take",
-     "k": 4,
-     "dur": null
+     "k": 5,
+     "dur": 3.74
     },
     {
      "name": "tag_drop",
-     "k": 24,
+     "k": 23,
      "dur": null
     }
    ],
@@ -2195,6 +2208,7 @@
    "beat_starts": {
     "9.03": 0
    },
+   "picture": "The tag is THE PLAN's plant (it lies at the bottom of the grate).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2203,14 +2217,14 @@
     {
      "kind": "ui",
      "text": "[laughter]",
-     "s": 20,
-     "e": 115,
+     "s": 19,
+     "e": 112,
      "must": true
     }
    ],
-   "tc_in": "08:36:12",
-   "tc_out": "08:41:07",
-   "frames": 115
+   "tc_in": "08:30:20",
+   "tc_out": "08:35:13",
+   "frames": 113
   },
   {
    "id": "9.04",
@@ -2218,8 +2232,8 @@
    "beats": [
     "9.04"
    ],
-   "s": 1567,
-   "e": 1887,
+   "s": 1549,
+   "e": 1867,
    "onscreen": [],
    "lines": [
     {
@@ -2228,10 +2242,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "is it ready?",
-     "s": 20,
-     "e": 37,
-     "fs": 10,
-     "fe": 52,
+     "s": 19,
+     "e": 36,
+     "fs": 9,
+     "fe": 51,
      "os": false,
      "via": null,
      "face": null,
@@ -2282,10 +2296,10 @@
      "mode": "on-mic",
      "who": "RIMA",
      "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
-     "s": 48,
+     "s": 47,
      "e": 198,
-     "fs": 40,
-     "fe": 207,
+     "fs": 39,
+     "fe": 206,
      "os": false,
      "via": null,
      "face": null,
@@ -2501,7 +2515,7 @@
       [
        "there",
        87,
-       97
+       98
       ],
       [
        "and",
@@ -2530,7 +2544,7 @@
       ],
       [
        "you",
-       138,
+       139,
        143
       ]
      ],
@@ -2543,10 +2557,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "it's all yours.",
-     "s": 210,
-     "e": 237,
-     "fs": 200,
-     "fe": 247,
+     "s": 209,
+     "e": 236,
+     "fs": 199,
+     "fe": 246,
      "os": false,
      "via": null,
      "face": null,
@@ -2587,7 +2601,7 @@
       ],
       [
        "all",
-       5,
+       6,
        9
       ],
       [
@@ -2605,10 +2619,10 @@
      "mode": "on-mic",
      "who": "RIMA",
      "text": "It is. Enjoy the view.",
-     "s": 246,
-     "e": 296,
-     "fs": 237,
-     "fe": 304,
+     "s": 245,
+     "e": 295,
+     "fs": 236,
+     "fe": 303,
      "os": false,
      "via": null,
      "face": null,
@@ -2728,14 +2742,15 @@
    "beat_starts": {
     "9.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:41:07",
-   "tc_out": "08:54:15",
-   "frames": 320
+   "tc_in": "08:35:13",
+   "tc_out": "08:48:19",
+   "frames": 318
   },
   {
    "id": "9.05",
@@ -2743,8 +2758,8 @@
    "beats": [
     "9.05"
    ],
-   "s": 1887,
-   "e": 2137,
+   "s": 1867,
+   "e": 2115,
    "onscreen": [],
    "lines": [
     {
@@ -2753,10 +2768,10 @@
      "mode": "on-mic",
      "who": "ENGINEER",
      "text": "What if it freezes? Live, on the stream?",
-     "s": 40,
-     "e": 96,
-     "fs": 30,
-     "fe": 105,
+     "s": 38,
+     "e": 95,
+     "fs": 28,
+     "fe": 103,
      "os": false,
      "via": null,
      "face": null,
@@ -2820,7 +2835,7 @@
      "words": [
       [
        "What",
-       -1,
+       0,
        3
       ],
       [
@@ -2831,7 +2846,7 @@
       [
        "it",
        7,
-       8
+       9
       ],
       [
        "freezes",
@@ -2851,11 +2866,11 @@
       [
        "the",
        39,
-       40
+       41
       ],
       [
        "stream",
-       41,
+       42,
        49
       ]
      ],
@@ -2868,10 +2883,10 @@
      "mode": "on-mic",
      "who": "RIMA",
      "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
-     "s": 103,
-     "e": 239,
-     "fs": 94,
-     "fe": 248,
+     "s": 101,
+     "e": 237,
+     "fs": 92,
+     "fe": 246,
      "os": false,
      "via": null,
      "face": null,
@@ -3003,8 +3018,8 @@
      "words": [
       [
        "Then",
-       -1,
-       4
+       0,
+       5
       ],
       [
        "it",
@@ -3013,17 +3028,17 @@
       ],
       [
        "freezes",
-       9,
+       10,
        20
       ],
       [
        "live",
-       22,
+       23,
        32
       ],
       [
        "and",
-       33,
+       34,
        37
       ],
       [
@@ -3038,17 +3053,17 @@
       ],
       [
        "talking",
-       48,
+       49,
        62
       ],
       [
        "It",
-       75,
+       76,
        79
       ],
       [
        "also",
-       80,
+       81,
        89
       ],
       [
@@ -3064,7 +3079,7 @@
       [
        "get",
        116,
-       119
+       120
       ],
       [
        "to",
@@ -3074,7 +3089,7 @@
       [
        "that",
        124,
-       131
+       132
       ]
      ],
      "tag": "",
@@ -3133,14 +3148,15 @@
    "beat_starts": {
     "9.05": 0
    },
+   "picture": "A walk-and-talk.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "08:54:15",
-   "tc_out": "09:05:01",
-   "frames": 250
+   "tc_in": "08:48:19",
+   "tc_out": "08:59:03",
+   "frames": 248
   },
   {
    "id": "9.06",
@@ -3148,43 +3164,43 @@
    "beats": [
     "9.06"
    ],
-   "s": 2137,
-   "e": 2304,
+   "s": 2115,
+   "e": 2280,
    "onscreen": [
     {
      "text": "VOICE",
-     "s": 12,
-     "e": 167
+     "s": 11,
+     "e": 165
     },
     {
      "text": "SINCE SEP 2023",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     },
     {
      "text": "VOICE 1",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     },
     {
      "text": "VOICE 2",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     },
     {
      "text": "VOICE 3",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     },
     {
      "text": "VOICE 4",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     },
     {
      "text": "VOICE 5",
-     "s": 16,
-     "e": 167
+     "s": 15,
+     "e": 165
     }
    ],
    "lines": [
@@ -3194,10 +3210,10 @@
      "mode": "on-mic",
      "who": "VOICE1",
      "text": "Hi.",
-     "s": 40,
-     "e": 53,
-     "fs": 30,
-     "fe": 62,
+     "s": 38,
+     "e": 51,
+     "fs": 29,
+     "fe": 61,
      "os": false,
      "via": null,
      "face": null,
@@ -3207,17 +3223,21 @@
      "mouth": [
       [
        0,
+       "rest"
+      ],
+      [
+       1,
        "A"
       ],
       [
-       8,
+       9,
        "rest"
       ]
      ],
      "words": [
       [
        "Hi",
-       -1,
+       0,
        9
       ]
      ],
@@ -3230,10 +3250,10 @@
      "mode": "on-mic",
      "who": "VOICE2",
      "text": "Hi!",
-     "s": 59,
-     "e": 68,
-     "fs": 49,
-     "fe": 78,
+     "s": 57,
+     "e": 66,
+     "fs": 48,
+     "fe": 77,
      "os": false,
      "via": null,
      "face": null,
@@ -3246,15 +3266,15 @@
        "A"
       ],
       [
-       6,
+       7,
        "rest"
       ]
      ],
      "words": [
       [
        "Hi",
-       -1,
-       6
+       0,
+       7
       ]
      ],
      "tag": "",
@@ -3266,10 +3286,10 @@
      "mode": "on-mic",
      "who": "VOICE3",
      "text": "hi?",
-     "s": 74,
-     "e": 85,
-     "fs": 65,
-     "fe": 97,
+     "s": 72,
+     "e": 84,
+     "fs": 63,
+     "fe": 95,
      "os": false,
      "via": null,
      "face": null,
@@ -3289,7 +3309,7 @@
      "words": [
       [
        "Hi",
-       -1,
+       0,
        8
       ]
      ],
@@ -3302,10 +3322,10 @@
      "mode": "on-mic",
      "who": "VOICE4",
      "text": "Hi…",
-     "s": 92,
-     "e": 109,
-     "fs": 82,
-     "fe": 119,
+     "s": 90,
+     "e": 108,
+     "fs": 81,
+     "fe": 118,
      "os": false,
      "via": null,
      "face": null,
@@ -3318,14 +3338,14 @@
        "A"
       ],
       [
-       10,
+       11,
        "rest"
       ]
      ],
      "words": [
       [
        "Hi",
-       -1,
+       0,
        10
       ]
      ],
@@ -3338,10 +3358,10 @@
      "mode": "on-mic",
      "who": "CHATGTP",
      "text": "Hey.",
-     "s": 116,
-     "e": 129,
-     "fs": 107,
-     "fe": 139,
+     "s": 114,
+     "e": 127,
+     "fs": 105,
+     "fe": 137,
      "os": false,
      "via": null,
      "face": null,
@@ -3365,7 +3385,7 @@
      "words": [
       [
        "Hey",
-       -1,
+       0,
        5
       ]
      ],
@@ -3394,18 +3414,18 @@
     "music (v1): E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat"
    ],
    "sounds": [
-    "panel_unfold_step @133",
-    "drafting_ink_stroke @152"
+    "panel_unfold_step @131",
+    "drafting_ink_stroke @150"
    ],
    "spots": [
     {
      "name": "panel_unfold_step",
-     "k": 133,
+     "k": 131,
      "dur": null
     },
     {
      "name": "drafting_ink_stroke",
-     "k": 152,
+     "k": 150,
      "dur": null
     }
    ],
@@ -3439,6 +3459,7 @@
    "beat_starts": {
     "9.06": 0
    },
+   "picture": "VOICE 5 is CHATGTP's own voice (R1): the voice we'll hear on stage. A [SCR] with its bezel in frame, so the bezel can be broken.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3447,56 +3468,56 @@
     {
      "kind": "ui",
      "text": "VOICE",
-     "s": 12,
-     "e": 167,
+     "s": 11,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "SINCE SEP 2023",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 1",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 2",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 3",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 4",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 5",
-     "s": 16,
-     "e": 167,
+     "s": 15,
+     "e": 165,
      "must": true
     }
    ],
-   "tc_in": "09:05:01",
-   "tc_out": "09:12:00",
-   "frames": 167
+   "tc_in": "08:59:03",
+   "tc_out": "09:06:00",
+   "frames": 165
   },
   {
    "id": "10.01",
@@ -3504,8 +3525,8 @@
    "beats": [
     "10.01"
    ],
-   "s": 2304,
-   "e": 2459,
+   "s": 2280,
+   "e": 2435,
    "onscreen": [
     {
      "text": "OMNI",
@@ -3669,7 +3690,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3718,6 +3739,7 @@
    "beat_starts": {
     "10.01": 0
    },
+   "picture": "The linework draws itself on her words.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3738,8 +3760,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:12:00",
-   "tc_out": "09:18:11",
+   "tc_in": "09:06:00",
+   "tc_out": "09:12:11",
    "frames": 155
   },
   {
@@ -3748,8 +3770,8 @@
    "beats": [
     "10.02"
    ],
-   "s": 2459,
-   "e": 2691,
+   "s": 2435,
+   "e": 2667,
    "onscreen": [
     {
      "text": "BEFORE",
@@ -4066,7 +4088,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4121,6 +4143,7 @@
    "beat_starts": {
     "10.02": 0
    },
+   "picture": "Every move follows one of her sentences.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4155,8 +4178,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:18:11",
-   "tc_out": "09:28:03",
+   "tc_in": "09:12:11",
+   "tc_out": "09:22:03",
    "frames": 232
   },
   {
@@ -4165,8 +4188,8 @@
    "beats": [
     "10.03"
    ],
-   "s": 2691,
-   "e": 2848,
+   "s": 2667,
+   "e": 2824,
    "onscreen": [
     {
      "text": "NOW",
@@ -4387,7 +4410,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4436,6 +4459,7 @@
    "beat_starts": {
     "10.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4456,8 +4480,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:28:03",
-   "tc_out": "09:34:16",
+   "tc_in": "09:22:03",
+   "tc_out": "09:28:16",
    "frames": 157
   },
   {
@@ -4466,8 +4490,8 @@
    "beats": [
     "10.04"
    ],
-   "s": 2848,
-   "e": 2965,
+   "s": 2824,
+   "e": 2941,
    "onscreen": [
     {
      "text": "1.",
@@ -4628,7 +4652,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4686,6 +4710,7 @@
    "beat_starts": {
     "10.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4706,8 +4731,8 @@
      "must": true
     }
    ],
-   "tc_in": "09:34:16",
-   "tc_out": "09:39:13",
+   "tc_in": "09:28:16",
+   "tc_out": "09:33:13",
    "frames": 117
   },
   {
@@ -4716,8 +4741,8 @@
    "beats": [
     "10.05"
    ],
-   "s": 2965,
-   "e": 3107,
+   "s": 2941,
+   "e": 3083,
    "onscreen": [
     {
      "text": "2.",
@@ -4731,12 +4756,12 @@
     },
     {
      "text": "3.",
-     "s": 84,
+     "s": 61,
      "e": 142
     },
     {
      "text": "$0",
-     "s": 84,
+     "s": 61,
      "e": 142
     }
    ],
@@ -4898,7 +4923,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4918,8 +4943,8 @@
    ],
    "sounds": [
     "rubber_stamp_C @33",
-    "rubber_stamp_C @84",
-    "tiny_crowd_patter @92"
+    "rubber_stamp_C @61",
+    "tiny_crowd_patter @67"
    ],
    "spots": [
     {
@@ -4929,12 +4954,12 @@
     },
     {
      "name": "rubber_stamp_C",
-     "k": 84,
+     "k": 61,
      "dur": null
     },
     {
      "name": "tiny_crowd_patter",
-     "k": 92,
+     "k": 67,
      "dur": null
     }
    ],
@@ -4968,6 +4993,7 @@
    "beat_starts": {
     "10.05": 0
    },
+   "picture": "Nobody on the paper mentions Radnus, and neither does she.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4990,20 +5016,20 @@
     {
      "kind": "doc",
      "text": "3.",
-     "s": 84,
+     "s": 61,
      "e": 142,
      "must": true
     },
     {
      "kind": "doc",
      "text": "$0",
-     "s": 84,
+     "s": 61,
      "e": 142,
      "must": true
     }
    ],
-   "tc_in": "09:39:13",
-   "tc_out": "09:45:11",
+   "tc_in": "09:33:13",
+   "tc_out": "09:39:11",
    "frames": 142
   },
   {
@@ -5012,8 +5038,8 @@
    "beats": [
     "10.06"
    ],
-   "s": 3107,
-   "e": 3237,
+   "s": 3083,
+   "e": 3213,
    "onscreen": [],
    "lines": [
     {
@@ -5201,7 +5227,7 @@
    ],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5242,13 +5268,14 @@
    "beat_starts": {
     "10.06": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:45:11",
-   "tc_out": "09:50:21",
+   "tc_in": "09:39:11",
+   "tc_out": "09:44:21",
    "frames": 130
   },
   {
@@ -5257,13 +5284,13 @@
    "beats": [
     "10.07"
    ],
-   "s": 3237,
-   "e": 3408,
+   "s": 3213,
+   "e": 3384,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "10",
-   "scene_s": 2304,
+   "scene_s": 2280,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5301,13 +5328,14 @@
    "beat_starts": {
     "10.07": 0
    },
+   "picture": "The tear's light, a beat, before the stage.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:50:21",
-   "tc_out": "09:58:00",
+   "tc_in": "09:44:21",
+   "tc_out": "09:52:00",
    "frames": 171
   },
   {
@@ -5316,8 +5344,8 @@
    "beats": [
     "11.01"
    ],
-   "s": 3408,
-   "e": 3612,
+   "s": 3384,
+   "e": 3588,
    "onscreen": [],
    "lines": [
     {
@@ -5540,7 +5568,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5616,13 +5644,14 @@
    "beat_starts": {
     "11.01": 0
    },
+   "picture": "The locked meter frame: every step of the light is measured here. The front row is below this frame (it's first seen in sc 12, after the blimp has gone: FC).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "09:58:00",
-   "tc_out": "10:06:12",
+   "tc_in": "09:52:00",
+   "tc_out": "10:00:12",
    "frames": 204
   },
   {
@@ -5631,8 +5660,8 @@
    "beats": [
     "11.02"
    ],
-   "s": 3612,
-   "e": 3732,
+   "s": 3588,
+   "e": 3708,
    "onscreen": [
     {
      "text": "VOICE 5",
@@ -5774,7 +5803,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5835,6 +5864,7 @@
    "beat_starts": {
     "11.02": 0
    },
+   "picture": "The badge holds if the facts pull holds (facts A60); otherwise it goes.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -5848,8 +5878,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:06:12",
-   "tc_out": "10:11:12",
+   "tc_in": "10:00:12",
+   "tc_out": "10:05:12",
    "frames": 120
   },
   {
@@ -5858,8 +5888,8 @@
    "beats": [
     "11.03"
    ],
-   "s": 3732,
-   "e": 3808,
+   "s": 3708,
+   "e": 3784,
    "onscreen": [
     {
      "text": "verified: …",
@@ -5870,7 +5900,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5940,6 +5970,7 @@
    "beat_starts": {
     "11.03": 0
    },
+   "picture": "Toast 1 of 3.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -5953,8 +5984,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:11:12",
-   "tc_out": "10:14:16",
+   "tc_in": "10:05:12",
+   "tc_out": "10:08:16",
    "frames": 76
   },
   {
@@ -5963,8 +5994,8 @@
    "beats": [
     "11.04"
    ],
-   "s": 3808,
-   "e": 4128,
+   "s": 3784,
+   "e": 4104,
    "onscreen": [],
    "lines": [
     {
@@ -6460,7 +6491,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6542,13 +6573,14 @@
    "beat_starts": {
     "11.04": 0
    },
+   "picture": "The episode's first cut-off, with a motive the house can see. Record CHATGTP's line whole; \"Thanks.\" comes in over \"favorite\". Subtitles: \"…one of my favorite—\" / \"Thanks.\" / \"—things.\"",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:14:16",
-   "tc_out": "10:28:00",
+   "tc_in": "10:08:16",
+   "tc_out": "10:22:00",
    "frames": 320
   },
   {
@@ -6557,8 +6589,8 @@
    "beats": [
     "11.05"
    ],
-   "s": 4128,
-   "e": 4362,
+   "s": 4104,
+   "e": 4338,
    "onscreen": [],
    "lines": [
     {
@@ -6782,7 +6814,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6864,13 +6896,14 @@
    "beat_starts": {
     "11.05": 0
    },
+   "picture": "Three-part harmony through the intro's sung-vocal pipeline.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:28:00",
-   "tc_out": "10:37:18",
+   "tc_in": "10:22:00",
+   "tc_out": "10:31:18",
    "frames": 234
   },
   {
@@ -6879,8 +6912,8 @@
    "beats": [
     "11.06"
    ],
-   "s": 4362,
-   "e": 4527,
+   "s": 4338,
+   "e": 4503,
    "onscreen": [],
    "lines": [
     {
@@ -7092,7 +7125,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7141,13 +7174,14 @@
    "beat_starts": {
     "11.06": 0
    },
+   "picture": "Under pressure she sticks to the script harder.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:37:18",
-   "tc_out": "10:44:15",
+   "tc_in": "10:31:18",
+   "tc_out": "10:38:15",
    "frames": 165
   },
   {
@@ -7156,8 +7190,8 @@
    "beats": [
     "11.07"
    ],
-   "s": 4527,
-   "e": 4791,
+   "s": 4503,
+   "e": 4767,
    "onscreen": [
     {
      "text": "😊",
@@ -7527,7 +7561,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7609,6 +7643,7 @@
    "beat_starts": {
     "11.07": 0
    },
+   "picture": "The fogged glasses are a mid-house audience member's, never the front row.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7622,8 +7657,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:44:15",
-   "tc_out": "10:55:15",
+   "tc_in": "10:38:15",
+   "tc_out": "10:49:15",
    "frames": 264
   },
   {
@@ -7632,8 +7667,8 @@
    "beats": [
     "11.08"
    ],
-   "s": 4791,
-   "e": 4880,
+   "s": 4767,
+   "e": 4856,
    "onscreen": [
     {
      "text": "what's the catch?",
@@ -7690,7 +7725,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7739,6 +7774,7 @@
    "beat_starts": {
     "11.08": 0
    },
+   "picture": "Live, before her close (R1). Free is the catch; safety is never mentioned (script review: no thesis by placement).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7752,8 +7788,8 @@
      "must": true
     }
    ],
-   "tc_in": "10:55:15",
-   "tc_out": "10:59:08",
+   "tc_in": "10:49:15",
+   "tc_out": "10:53:08",
    "frames": 89
   },
   {
@@ -7762,8 +7798,8 @@
    "beats": [
     "11.09"
    ],
-   "s": 4880,
-   "e": 5000,
+   "s": 4856,
+   "e": 4976,
    "onscreen": [],
    "lines": [
     {
@@ -7848,7 +7884,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7889,13 +7925,14 @@
    "beat_starts": {
     "11.09": 0
    },
+   "picture": "The episode's one long hold of hers.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "10:59:08",
-   "tc_out": "11:04:08",
+   "tc_in": "10:53:08",
+   "tc_out": "10:58:08",
    "frames": 120
   },
   {
@@ -7904,8 +7941,8 @@
    "beats": [
     "11.10"
    ],
-   "s": 5000,
-   "e": 5072,
+   "s": 4976,
+   "e": 5048,
    "onscreen": [
     {
      "text": "LIVE",
@@ -7921,7 +7958,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7976,6 +8013,7 @@
    "beat_starts": {
     "11.10": 0
    },
+   "picture": "The stream ends before the post (the post is about 20 minutes later: R1).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7996,8 +8034,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:04:08",
-   "tc_out": "11:07:08",
+   "tc_in": "10:58:08",
+   "tc_out": "11:01:08",
    "frames": 72
   },
   {
@@ -8006,8 +8044,8 @@
    "beats": [
     "11.11"
    ],
-   "s": 5072,
-   "e": 5144,
+   "s": 5048,
+   "e": 5120,
    "onscreen": [
     {
      "text": "h",
@@ -8028,7 +8066,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8089,6 +8127,7 @@
    "beat_starts": {
     "11.11": 0
    },
+   "picture": "A real post never rides the beat.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8116,8 +8155,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:07:08",
-   "tc_out": "11:10:08",
+   "tc_in": "11:01:08",
+   "tc_out": "11:04:08",
    "frames": 72
   },
   {
@@ -8126,8 +8165,8 @@
    "beats": [
     "11.12"
    ],
-   "s": 5144,
-   "e": 5221,
+   "s": 5120,
+   "e": 5197,
    "onscreen": [
     {
      "text": "her",
@@ -8138,7 +8177,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8187,6 +8226,7 @@
    "beat_starts": {
     "11.12": 0
    },
+   "picture": "Why he posted it is contested: nothing tells us (W8).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8200,8 +8240,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:10:08",
-   "tc_out": "11:13:13",
+   "tc_in": "11:04:08",
+   "tc_out": "11:07:13",
    "frames": 77
   },
   {
@@ -8210,13 +8250,13 @@
    "beats": [
     "11.13"
    ],
-   "s": 5221,
-   "e": 5461,
+   "s": 5197,
+   "e": 5437,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8289,13 +8329,14 @@
    "beat_starts": {
     "11.13": 0
    },
+   "picture": "The blimp takes the coverage, not her live stage (R1). Four held sizes, one a bar.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:13:13",
-   "tc_out": "11:23:13",
+   "tc_in": "11:07:13",
+   "tc_out": "11:17:13",
    "frames": 240
   },
   {
@@ -8304,13 +8345,13 @@
    "beats": [
     "11.14"
    ],
-   "s": 5461,
-   "e": 5523,
+   "s": 5437,
+   "e": 5499,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8351,13 +8392,14 @@
    "beat_starts": {
     "11.14": 0
    },
+   "picture": "No wince (R2: no 'understudy' framing, GR §6).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:23:13",
-   "tc_out": "11:26:03",
+   "tc_in": "11:17:13",
+   "tc_out": "11:20:03",
    "frames": 62
   },
   {
@@ -8366,8 +8408,8 @@
    "beats": [
     "11.15"
    ],
-   "s": 5523,
-   "e": 5688,
+   "s": 5499,
+   "e": 5664,
    "onscreen": [],
    "lines": [
     {
@@ -8613,7 +8655,7 @@
    ],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8671,13 +8713,14 @@
    "beat_starts": {
     "11.15": 0
    },
+   "picture": "Said to a listener (W19). His words are the film's premise, not the voice (D-6).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:26:03",
-   "tc_out": "11:33:00",
+   "tc_in": "11:20:03",
+   "tc_out": "11:27:00",
    "frames": 165
   },
   {
@@ -8686,13 +8729,13 @@
    "beats": [
     "11.16"
    ],
-   "s": 5688,
-   "e": 5760,
+   "s": 5664,
+   "e": 5736,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "11",
-   "scene_s": 3408,
+   "scene_s": 3384,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8747,13 +8790,14 @@
    "beat_starts": {
     "11.16": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:33:00",
-   "tc_out": "11:36:00",
+   "tc_in": "11:27:00",
+   "tc_out": "11:30:00",
    "frames": 72
   },
   {
@@ -8762,13 +8806,13 @@
    "beats": [
     "12.01"
    ],
-   "s": 5760,
-   "e": 5917,
+   "s": 5736,
+   "e": 5882,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8817,14 +8861,15 @@
    "beat_starts": {
     "12.01": 0
    },
+   "picture": "Her aftermath is her own (R2): nobody hands anybody a clicker.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:36:00",
-   "tc_out": "11:42:13",
-   "frames": 157
+   "tc_in": "11:30:00",
+   "tc_out": "11:36:02",
+   "frames": 146
   },
   {
    "id": "12.02",
@@ -8832,19 +8877,19 @@
    "beats": [
     "12.02"
    ],
-   "s": 5917,
-   "e": 5998,
+   "s": 5882,
+   "e": 5958,
    "onscreen": [
     {
      "text": "RESERVED: CHIEF SCIENTIST",
-     "s": 11,
-     "e": 81
+     "s": 10,
+     "e": 75
     }
    ],
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8874,6 +8919,7 @@
    "beat_starts": {
     "12.02": 0
    },
+   "picture": "No shade, no tether, no flip (FC).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8882,14 +8928,14 @@
     {
      "kind": "sign",
      "text": "RESERVED: CHIEF SCIENTIST",
-     "s": 11,
-     "e": 81,
+     "s": 10,
+     "e": 75,
      "must": true
     }
    ],
-   "tc_in": "11:42:13",
-   "tc_out": "11:45:22",
-   "frames": 81
+   "tc_in": "11:36:02",
+   "tc_out": "11:39:06",
+   "frames": 76
   },
   {
    "id": "12.03",
@@ -8897,13 +8943,13 @@
    "beats": [
     "12.03"
    ],
-   "s": 5998,
-   "e": 6080,
+   "s": 5958,
+   "e": 6040,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8952,13 +8998,14 @@
    "beat_starts": {
     "12.03": 0
    },
+   "picture": "Ep1's own art (copied), held 2 s (R2). A memory in a surface, not a ghost: it plays as a reflection of a past event, then goes.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:45:22",
-   "tc_out": "11:49:08",
+   "tc_in": "11:39:06",
+   "tc_out": "11:42:16",
    "frames": 82
   },
   {
@@ -8967,13 +9014,13 @@
    "beats": [
     "12.04"
    ],
-   "s": 6080,
-   "e": 6104,
+   "s": 6040,
+   "e": 6064,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9003,13 +9050,14 @@
    "beat_starts": {
     "12.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "11:49:08",
-   "tc_out": "11:50:08",
+   "tc_in": "11:42:16",
+   "tc_out": "11:43:16",
    "frames": 24
   },
   {
@@ -9018,8 +9066,8 @@
    "beats": [
     "12.05"
    ],
-   "s": 6104,
-   "e": 6248,
+   "s": 6064,
+   "e": 6208,
    "onscreen": [
     {
      "text": "RAIL: MAY 14, 2024",
@@ -9040,7 +9088,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9095,6 +9143,7 @@
    "beat_starts": {
     "12.05": 0
    },
+   "picture": "OMNI, not the blimp (FC); closed before the phone lights.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -9115,8 +9164,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:50:08",
-   "tc_out": "11:56:08",
+   "tc_in": "11:43:16",
+   "tc_out": "11:49:16",
    "frames": 144
   },
   {
@@ -9125,8 +9174,8 @@
    "beats": [
     "12.06"
    ],
-   "s": 6248,
-   "e": 6406,
+   "s": 6208,
+   "e": 6366,
    "onscreen": [
     {
      "text": "After almost a decade, I have made the decision to leave NOPEAI.",
@@ -9142,7 +9191,7 @@
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9186,6 +9235,7 @@
    "beat_starts": {
     "12.06": 0
    },
+   "picture": "Two crops (R2). Alyi's own words; no reason given (W8).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -9206,8 +9256,8 @@
      "must": true
     }
    ],
-   "tc_in": "11:56:08",
-   "tc_out": "12:02:22",
+   "tc_in": "11:49:16",
+   "tc_out": "11:56:06",
    "frames": 158
   },
   {
@@ -9216,13 +9266,13 @@
    "beats": [
     "12.07"
    ],
-   "s": 6406,
-   "e": 6653,
+   "s": 6366,
+   "e": 6629,
    "onscreen": [
     {
      "text": "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.",
      "s": 9,
-     "e": 246
+     "e": 262
     }
    ],
    "lines": [
@@ -9232,10 +9282,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "i came back.",
-     "s": 206,
-     "e": 236,
-     "fs": 198,
-     "fe": 247,
+     "s": 223,
+     "e": 252,
+     "fs": 214,
+     "fe": 263,
      "os": false,
      "via": null,
      "face": null,
@@ -9247,7 +9297,7 @@
       [
        "I",
        0,
-       3
+       2
       ],
       [
        "came",
@@ -9256,8 +9306,8 @@
       ],
       [
        "back",
-       16,
-       26
+       15,
+       25
       ]
      ],
      "tag": "V.O.",
@@ -9266,7 +9316,7 @@
    ],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9333,6 +9383,7 @@
    "beat_starts": {
     "12.07": 0
    },
+   "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -9342,13 +9393,13 @@
      "kind": "post",
      "text": "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.",
      "s": 9,
-     "e": 246,
+     "e": 262,
      "must": true
     }
    ],
-   "tc_in": "12:02:22",
-   "tc_out": "12:13:05",
-   "frames": 247
+   "tc_in": "11:56:06",
+   "tc_out": "12:07:05",
+   "frames": 263
   },
   {
    "id": "12.08",
@@ -9356,13 +9407,13 @@
    "beats": [
     "12.08"
    ],
-   "s": 6653,
-   "e": 6720,
+   "s": 6629,
+   "e": 6696,
    "onscreen": [],
    "lines": [],
    "seq": "ACT2",
    "scene": "12",
-   "scene_s": 5760,
+   "scene_s": 5736,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9403,13 +9454,14 @@
    "beat_starts": {
     "12.08": 0
    },
+   "picture": "A face light one step (P10).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:13:05",
-   "tc_out": "12:16:00",
+   "tc_in": "12:07:05",
+   "tc_out": "12:10:00",
    "frames": 67
   }
  ],
@@ -10010,15 +10062,15 @@
    "who": "ENGINEER",
    "text": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
    "tag": "",
-   "on_s": 52.7117,
-   "end_s": 57.3117,
-   "file_s": 52.3317,
-   "abs_in": 1265,
-   "abs_out": 1376,
-   "file_in": 1255,
-   "file_out": 1387,
+   "on_s": 52.1083,
+   "end_s": 56.7083,
+   "file_s": 51.7283,
+   "abs_in": 1250,
+   "abs_out": 1361,
+   "file_in": 1241,
+   "file_out": 1373,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
-   "stick_t": 0.42,
+   "stick_t": 0.15,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -10028,13 +10080,13 @@
    "words": [
     [
      "So",
-     -1,
+     0,
      4
     ],
     [
      "on",
-     5,
-     8
+     6,
+     9
     ],
     [
      "stage",
@@ -10048,28 +10100,28 @@
     ],
     [
      "ask",
-     27,
-     31
+     28,
+     32
     ],
     [
      "it",
-     32,
+     33,
      34
     ],
     [
      "a",
      35,
-     35
+     36
     ],
     [
      "question",
-     36,
+     37,
      47
     ],
     [
      "it",
      53,
-     56
+     57
     ],
     [
      "thinks",
@@ -10083,142 +10135,146 @@
     ],
     [
      "a",
-     67,
+     68,
      68
     ],
     [
      "second",
-     69,
-     79
+     70,
+     80
     ],
     [
      "and",
-     82,
-     86
+     83,
+     87
     ],
     [
      "then",
-     87,
+     88,
      90
     ],
     [
      "it",
-     91,
-     93
+     92,
+     94
     ],
     [
      "answers",
-     94,
-     105
+     95,
+     106
     ]
    ],
    "mouth": [
     [
      0,
+     "rest"
+    ],
+    [
+     1,
      "O"
     ],
     [
-     7,
+     8,
      "E"
     ],
     [
-     13,
+     14,
      "A"
     ],
     [
-     20,
+     21,
      "rest"
     ],
     [
-     23,
+     24,
      "A"
     ],
     [
-     25,
+     26,
      "rest"
     ],
     [
-     27,
+     28,
      "A"
     ],
     [
-     29,
+     30,
      "E"
     ],
     [
-     37,
+     38,
      "O"
     ],
     [
-     39,
+     40,
      "A"
     ],
     [
-     41,
+     42,
      "E"
     ],
     [
-     46,
+     47,
      "rest"
     ],
     [
-     52,
+     53,
      "E"
     ],
     [
-     57,
+     58,
      "A"
     ],
     [
-     59,
+     60,
      "E"
     ],
     [
-     63,
+     64,
      "O"
     ],
     [
-     65,
+     66,
      "rest"
     ],
     [
-     70,
+     71,
      "A"
     ],
     [
-     73,
+     74,
      "E"
     ],
     [
-     79,
+     80,
      "rest"
     ],
     [
-     83,
+     84,
      "A"
     ],
     [
-     85,
+     86,
      "E"
     ],
     [
-     87,
+     88,
      "A"
     ],
     [
-     89,
+     90,
      "E"
     ],
     [
-     94,
+     95,
      "A"
     ],
     [
-     97,
+     98,
      "E"
     ],
     [
-     105,
+     106,
      "rest"
     ]
    ],
@@ -10234,15 +10290,15 @@
    "who": "ENGINEER",
    "text": "Before I've asked. It does that.",
    "tag": "os",
-   "on_s": 58.2117,
-   "end_s": 59.9817,
-   "file_s": 57.7117,
-   "abs_in": 1397,
-   "abs_out": 1440,
-   "file_in": 1385,
-   "file_out": 1448,
+   "on_s": 57.6083,
+   "end_s": 59.3783,
+   "file_s": 57.1083,
+   "abs_in": 1382,
+   "abs_out": 1426,
+   "file_in": 1370,
+   "file_out": 1433,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
-   "stick_t": 5.92,
+   "stick_t": 5.65,
    "stick_in": 0.5,
    "cut": false,
    "on_camera": "on",
@@ -10253,7 +10309,7 @@
     [
      "Before",
      0,
-     7
+     8
     ],
     [
      "I've",
@@ -10262,7 +10318,7 @@
     ],
     [
      "asked",
-     12,
+     13,
      19
     ],
     [
@@ -10272,13 +10328,13 @@
     ],
     [
      "does",
-     25,
-     29
+     26,
+     30
     ],
     [
      "that",
-     30,
-     35
+     31,
+     36
     ]
    ],
    "mouth": [
@@ -10343,15 +10399,15 @@
    "who": "GERG",
    "text": "Careful. The new one can hear you laugh.",
    "tag": "",
-   "on_s": 62.69,
-   "end_s": 64.65,
-   "file_s": 62.3,
-   "abs_in": 1504,
-   "abs_out": 1552,
-   "file_in": 1495,
-   "file_out": 1566,
+   "on_s": 61.9333,
+   "end_s": 63.8933,
+   "file_s": 61.5433,
+   "abs_in": 1486,
+   "abs_out": 1534,
+   "file_in": 1477,
+   "file_out": 1548,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
-   "stick_t": 2.19,
+   "stick_t": 2.1,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -10361,7 +10417,7 @@
    "words": [
     [
      "Careful",
-     0,
+     -1,
      9
     ],
     [
@@ -10470,15 +10526,15 @@
    "who": "MAS",
    "text": "is it ready?",
    "tag": "",
-   "on_s": 66.1317,
-   "end_s": 66.8117,
-   "file_s": 65.7417,
-   "abs_in": 1587,
-   "abs_out": 1604,
-   "file_in": 1577,
-   "file_out": 1619,
+   "on_s": 65.3417,
+   "end_s": 66.0217,
+   "file_s": 64.9517,
+   "abs_in": 1568,
+   "abs_out": 1585,
+   "file_in": 1558,
+   "file_out": 1600,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
-   "stick_t": 0.84,
+   "stick_t": 0.8,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -10532,15 +10588,15 @@
    "who": "RIMA",
    "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
    "tag": "",
-   "on_s": 67.3117,
-   "end_s": 73.5417,
-   "file_s": 66.9617,
-   "abs_in": 1615,
-   "abs_out": 1765,
-   "file_in": 1607,
-   "file_out": 1774,
+   "on_s": 66.5217,
+   "end_s": 72.7517,
+   "file_s": 66.1717,
+   "abs_in": 1596,
+   "abs_out": 1747,
+   "file_in": 1588,
+   "file_out": 1755,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
-   "stick_t": 2.02,
+   "stick_t": 1.98,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -10606,7 +10662,7 @@
     [
      "there",
      87,
-     97
+     98
     ],
     [
      "and",
@@ -10635,7 +10691,7 @@
     ],
     [
      "you",
-     138,
+     139,
      143
     ]
    ],
@@ -10801,15 +10857,15 @@
    "who": "MAS",
    "text": "it's all yours.",
    "tag": "",
-   "on_s": 74.0417,
-   "end_s": 75.1517,
-   "file_s": 73.6617,
-   "abs_in": 1777,
-   "abs_out": 1804,
-   "file_in": 1767,
-   "file_out": 1814,
+   "on_s": 73.2517,
+   "end_s": 74.3617,
+   "file_s": 72.8717,
+   "abs_in": 1758,
+   "abs_out": 1785,
+   "file_in": 1748,
+   "file_out": 1795,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
-   "stick_t": 8.75,
+   "stick_t": 8.71,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -10824,7 +10880,7 @@
     ],
     [
      "all",
-     5,
+     6,
      9
     ],
     [
@@ -10871,15 +10927,15 @@
    "who": "RIMA",
    "text": "It is. Enjoy the view.",
    "tag": "",
-   "on_s": 75.5517,
-   "end_s": 77.6017,
-   "file_s": 75.1917,
-   "abs_in": 1813,
-   "abs_out": 1863,
-   "file_in": 1804,
-   "file_out": 1871,
+   "on_s": 74.7617,
+   "end_s": 76.8117,
+   "file_s": 74.4017,
+   "abs_in": 1794,
+   "abs_out": 1844,
+   "file_in": 1785,
+   "file_out": 1852,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
-   "stick_t": 10.26,
+   "stick_t": 10.22,
    "stick_in": 0.36,
    "cut": false,
    "on_camera": "on",
@@ -10955,15 +11011,15 @@
    "who": "ENGINEER",
    "text": "What if it freezes? Live, on the stream?",
    "tag": "",
-   "on_s": 80.305,
-   "end_s": 82.625,
-   "file_s": 79.895,
-   "abs_in": 1927,
-   "abs_out": 1983,
-   "file_in": 1917,
-   "file_out": 1992,
+   "on_s": 79.4017,
+   "end_s": 81.7217,
+   "file_s": 78.9917,
+   "abs_in": 1905,
+   "abs_out": 1962,
+   "file_in": 1895,
+   "file_out": 1970,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
-   "stick_t": 1.68,
+   "stick_t": 1.61,
    "stick_in": 0.41,
    "cut": false,
    "on_camera": "on",
@@ -10973,7 +11029,7 @@
    "words": [
     [
      "What",
-     -1,
+     0,
      3
     ],
     [
@@ -10984,7 +11040,7 @@
     [
      "it",
      7,
-     8
+     9
     ],
     [
      "freezes",
@@ -11004,11 +11060,11 @@
     [
      "the",
      39,
-     40
+     41
     ],
     [
      "stream",
-     41,
+     42,
      49
     ]
    ],
@@ -11078,15 +11134,15 @@
    "who": "RIMA",
    "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
    "tag": "",
-   "on_s": 82.925,
-   "end_s": 88.545,
-   "file_s": 82.565,
-   "abs_in": 1990,
-   "abs_out": 2126,
-   "file_in": 1981,
-   "file_out": 2135,
+   "on_s": 82.0217,
+   "end_s": 87.6417,
+   "file_s": 81.6617,
+   "abs_in": 1968,
+   "abs_out": 2104,
+   "file_in": 1959,
+   "file_out": 2113,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
-   "stick_t": 4.3,
+   "stick_t": 4.23,
    "stick_in": 0.36,
    "cut": false,
    "on_camera": "on",
@@ -11096,8 +11152,8 @@
    "words": [
     [
      "Then",
-     -1,
-     4
+     0,
+     5
     ],
     [
      "it",
@@ -11106,17 +11162,17 @@
     ],
     [
      "freezes",
-     9,
+     10,
      20
     ],
     [
      "live",
-     22,
+     23,
      32
     ],
     [
      "and",
-     33,
+     34,
      37
     ],
     [
@@ -11131,17 +11187,17 @@
     ],
     [
      "talking",
-     48,
+     49,
      62
     ],
     [
      "It",
-     75,
+     76,
      79
     ],
     [
      "also",
-     80,
+     81,
      89
     ],
     [
@@ -11157,7 +11213,7 @@
     [
      "get",
      116,
-     119
+     120
     ],
     [
      "to",
@@ -11167,7 +11223,7 @@
     [
      "that",
      124,
-     131
+     132
     ]
    ],
    "mouth": [
@@ -11304,15 +11360,15 @@
    "who": "VOICE1",
    "text": "Hi.",
    "tag": "",
-   "on_s": 90.7217,
-   "end_s": 91.2117,
-   "file_s": 90.3317,
-   "abs_in": 2177,
-   "abs_out": 2190,
-   "file_in": 2167,
-   "file_out": 2199,
+   "on_s": 89.735,
+   "end_s": 90.225,
+   "file_s": 89.345,
+   "abs_in": 2153,
+   "abs_out": 2166,
+   "file_in": 2144,
+   "file_out": 2176,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
-   "stick_t": 1.68,
+   "stick_t": 1.61,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -11322,17 +11378,21 @@
    "words": [
     [
      "Hi",
-     -1,
+     0,
      9
     ]
    ],
    "mouth": [
     [
      0,
+     "rest"
+    ],
+    [
+     1,
      "A"
     ],
     [
-     8,
+     9,
      "rest"
     ]
    ],
@@ -11348,15 +11408,15 @@
    "who": "VOICE2",
    "text": "Hi!",
    "tag": "",
-   "on_s": 91.5117,
-   "end_s": 91.8417,
-   "file_s": 91.1217,
-   "abs_in": 2196,
-   "abs_out": 2205,
-   "file_in": 2186,
-   "file_out": 2215,
+   "on_s": 90.525,
+   "end_s": 90.855,
+   "file_s": 90.135,
+   "abs_in": 2172,
+   "abs_out": 2181,
+   "file_in": 2163,
+   "file_out": 2192,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
-   "stick_t": 2.47,
+   "stick_t": 2.4,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -11366,8 +11426,8 @@
    "words": [
     [
      "Hi",
-     -1,
-     6
+     0,
+     7
     ]
    ],
    "mouth": [
@@ -11376,7 +11436,7 @@
      "A"
     ],
     [
-     6,
+     7,
      "rest"
     ]
    ],
@@ -11392,15 +11452,15 @@
    "who": "VOICE3",
    "text": "hi?",
    "tag": "",
-   "on_s": 92.1417,
-   "end_s": 92.5817,
-   "file_s": 91.7617,
-   "abs_in": 2211,
-   "abs_out": 2222,
-   "file_in": 2202,
-   "file_out": 2234,
+   "on_s": 91.155,
+   "end_s": 91.595,
+   "file_s": 90.775,
+   "abs_in": 2187,
+   "abs_out": 2199,
+   "file_in": 2178,
+   "file_out": 2210,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
-   "stick_t": 3.1,
+   "stick_t": 3.03,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -11410,7 +11470,7 @@
    "words": [
     [
      "Hi",
-     -1,
+     0,
      8
     ]
    ],
@@ -11436,15 +11496,15 @@
    "who": "VOICE4",
    "text": "Hi…",
    "tag": "",
-   "on_s": 92.8817,
-   "end_s": 93.5817,
-   "file_s": 92.4917,
-   "abs_in": 2229,
-   "abs_out": 2246,
-   "file_in": 2219,
-   "file_out": 2256,
+   "on_s": 91.895,
+   "end_s": 92.595,
+   "file_s": 91.505,
+   "abs_in": 2205,
+   "abs_out": 2223,
+   "file_in": 2196,
+   "file_out": 2233,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
-   "stick_t": 3.84,
+   "stick_t": 3.77,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -11454,7 +11514,7 @@
    "words": [
     [
      "Hi",
-     -1,
+     0,
      10
     ]
    ],
@@ -11464,7 +11524,7 @@
      "A"
     ],
     [
-     10,
+     11,
      "rest"
     ]
    ],
@@ -11480,15 +11540,15 @@
    "who": "CHATGTP",
    "text": "Hey.",
    "tag": "",
-   "on_s": 93.8817,
-   "end_s": 94.4017,
-   "file_s": 93.5117,
-   "abs_in": 2253,
-   "abs_out": 2266,
-   "file_in": 2244,
-   "file_out": 2276,
+   "on_s": 92.895,
+   "end_s": 93.415,
+   "file_s": 92.525,
+   "abs_in": 2229,
+   "abs_out": 2242,
+   "file_in": 2220,
+   "file_out": 2252,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
-   "stick_t": 4.84,
+   "stick_t": 4.77,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -11498,7 +11558,7 @@
    "words": [
     [
      "Hey",
-     -1,
+     0,
      5
     ]
    ],
@@ -11528,13 +11588,13 @@
    "who": "RIMA",
    "text": "Omni. One model that hears, sees and talks.",
    "tag": "os",
-   "on_s": 98.03,
-   "end_s": 101.96,
-   "file_s": 97.68,
-   "abs_in": 2352,
-   "abs_out": 2448,
-   "file_in": 2344,
-   "file_out": 2456,
+   "on_s": 97.03,
+   "end_s": 100.96,
+   "file_s": 96.68,
+   "abs_in": 2328,
+   "abs_out": 2424,
+   "file_in": 2320,
+   "file_out": 2432,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
    "stick_t": 2.03,
    "stick_in": 0.35,
@@ -11683,13 +11743,13 @@
    "who": "RIMA",
    "text": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
    "tag": "os",
-   "on_s": 103.0983,
-   "end_s": 110.3083,
-   "file_s": 102.7383,
-   "abs_in": 2474,
-   "abs_out": 2648,
-   "file_in": 2465,
-   "file_out": 2657,
+   "on_s": 102.0983,
+   "end_s": 109.3083,
+   "file_s": 101.7383,
+   "abs_in": 2450,
+   "abs_out": 2624,
+   "file_in": 2441,
+   "file_out": 2633,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
    "stick_t": 0.64,
    "stick_in": 0.36,
@@ -11981,13 +12041,13 @@
    "who": "RIMA",
    "text": "Now it's one model, so nothing falls out. It can even laugh back.",
    "tag": "os",
-   "on_s": 112.765,
-   "end_s": 117.635,
-   "file_s": 112.395,
-   "abs_in": 2706,
-   "abs_out": 2824,
-   "file_in": 2697,
-   "file_out": 2832,
+   "on_s": 111.765,
+   "end_s": 116.635,
+   "file_s": 111.395,
+   "abs_in": 2682,
+   "abs_out": 2800,
+   "file_in": 2673,
+   "file_out": 2808,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
    "stick_t": 0.64,
    "stick_in": 0.37,
@@ -12193,13 +12253,13 @@
    "who": "RIMA",
    "text": "It answers about as fast as a person does.",
    "tag": "os",
-   "on_s": 119.1767,
-   "end_s": 122.2867,
-   "file_s": 118.8167,
-   "abs_in": 2860,
-   "abs_out": 2935,
-   "file_in": 2851,
-   "file_out": 2944,
+   "on_s": 118.1767,
+   "end_s": 121.2867,
+   "file_s": 117.8167,
+   "abs_in": 2836,
+   "abs_out": 2911,
+   "file_in": 2827,
+   "file_out": 2920,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
    "stick_t": 0.51,
    "stick_in": 0.36,
@@ -12345,13 +12405,13 @@
    "who": "RIMA",
    "text": "The model goes out today, and free users get it too.",
    "tag": "os",
-   "on_s": 123.9217,
-   "end_s": 127.6817,
-   "file_s": 123.5617,
-   "abs_in": 2974,
-   "abs_out": 3065,
-   "file_in": 2965,
-   "file_out": 3075,
+   "on_s": 122.9217,
+   "end_s": 126.6817,
+   "file_s": 122.5617,
+   "abs_in": 2950,
+   "abs_out": 3041,
+   "file_in": 2941,
+   "file_out": 3051,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
    "stick_t": 0.38,
    "stick_in": 0.36,
@@ -12507,13 +12567,13 @@
    "who": "RIMA",
    "text": "The new voice follows, for paying users, in the coming weeks.",
    "tag": "os",
-   "on_s": 129.8383,
-   "end_s": 134.1183,
-   "file_s": 129.4783,
-   "abs_in": 3116,
-   "abs_out": 3219,
-   "file_in": 3107,
-   "file_out": 3229,
+   "on_s": 128.8383,
+   "end_s": 133.1183,
+   "file_s": 128.4783,
+   "abs_in": 3092,
+   "abs_out": 3195,
+   "file_in": 3083,
+   "file_out": 3205,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
    "stick_t": 0.38,
    "stick_in": 0.36,
@@ -12697,13 +12757,13 @@
    "who": "RIMA",
    "text": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
    "tag": "",
-   "on_s": 144.0,
-   "end_s": 149.91,
-   "file_s": 143.65,
-   "abs_in": 3456,
-   "abs_out": 3598,
-   "file_in": 3447,
-   "file_out": 3606,
+   "on_s": 143.0,
+   "end_s": 148.91,
+   "file_s": 142.65,
+   "abs_in": 3432,
+   "abs_out": 3574,
+   "file_in": 3423,
+   "file_out": 3582,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
    "stick_t": 2.0,
    "stick_in": 0.35,
@@ -12922,13 +12982,13 @@
    "who": "CHATGTP",
    "text": "Hi! I can see you.",
    "tag": "",
-   "on_s": 152.5,
-   "end_s": 153.72,
-   "file_s": 152.1,
-   "abs_in": 3660,
-   "abs_out": 3690,
-   "file_in": 3650,
-   "file_out": 3704,
+   "on_s": 151.5,
+   "end_s": 152.72,
+   "file_s": 151.1,
+   "abs_in": 3636,
+   "abs_out": 3666,
+   "file_in": 3626,
+   "file_out": 3680,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
    "stick_t": 2.0,
    "stick_in": 0.4,
@@ -12998,13 +13058,13 @@
    "who": "CHATGTP",
    "text": "All of you.",
    "tag": "",
-   "on_s": 154.32,
-   "end_s": 154.93,
-   "file_s": 153.96,
-   "abs_in": 3703,
-   "abs_out": 3719,
-   "file_in": 3695,
-   "file_out": 3731,
+   "on_s": 153.32,
+   "end_s": 153.93,
+   "file_s": 152.96,
+   "abs_in": 3679,
+   "abs_out": 3695,
+   "file_in": 3671,
+   "file_out": 3707,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
    "stick_t": 3.82,
    "stick_in": 0.36,
@@ -13068,13 +13128,13 @@
    "who": "ENGINEER",
    "text": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
    "tag": "",
-   "on_s": 159.2367,
-   "end_s": 163.8567,
-   "file_s": 158.8367,
-   "abs_in": 3821,
-   "abs_out": 3933,
-   "file_in": 3812,
-   "file_out": 3948,
+   "on_s": 158.2367,
+   "end_s": 162.8567,
+   "file_s": 157.8367,
+   "abs_in": 3797,
+   "abs_out": 3909,
+   "file_in": 3788,
+   "file_out": 3924,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
    "stick_t": 0.57,
    "stick_in": 0.4,
@@ -13318,13 +13378,13 @@
    "who": "CHATGTP",
    "text": "Great question! Of course! Honestly, short answers are one of my favorite things.",
    "tag": "",
-   "on_s": 164.0567,
-   "end_s": 168.8067,
-   "file_s": 163.6567,
-   "abs_in": 3937,
-   "abs_out": 4052,
-   "file_in": 3927,
-   "file_out": 4064,
+   "on_s": 163.0567,
+   "end_s": 167.8067,
+   "file_s": 162.6567,
+   "abs_in": 3913,
+   "abs_out": 4028,
+   "file_in": 3903,
+   "file_out": 4040,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
    "stick_t": 5.39,
    "stick_in": 0.4,
@@ -13519,7 +13579,17 @@
     ]
    ],
    "mouth_src": "take",
-   "pre": false
+   "pre": false,
+   "sub": [
+    [
+     "Great question! Of course! Honestly, short answers are one of my favorite—",
+     0
+    ],
+    [
+     "—things.",
+     "after:e2-a2-0028"
+    ]
+   ]
   },
   {
    "id": "e2-a2-0028",
@@ -13530,13 +13600,13 @@
    "who": "ENGINEER",
    "text": "Thanks.",
    "tag": "",
-   "on_s": 168.2567,
-   "end_s": 168.9667,
-   "file_s": 167.8867,
-   "abs_in": 4038,
-   "abs_out": 4056,
-   "file_in": 4029,
-   "file_out": 4065,
+   "on_s": 167.2567,
+   "end_s": 167.9667,
+   "file_s": 166.8867,
+   "abs_in": 4014,
+   "abs_out": 4032,
+   "file_in": 4005,
+   "file_out": 4041,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
    "stick_t": 9.59,
    "stick_in": 0.37,
@@ -13582,13 +13652,13 @@
    "who": "ENGINEER",
    "text": "Let's try that again. Describe yourself in just one word.",
    "tag": "",
-   "on_s": 172.71,
-   "end_s": 175.87,
-   "file_s": 172.31,
-   "abs_in": 4145,
-   "abs_out": 4221,
-   "file_in": 4135,
-   "file_out": 4235,
+   "on_s": 171.71,
+   "end_s": 174.87,
+   "file_s": 171.31,
+   "abs_in": 4121,
+   "abs_out": 4197,
+   "file_in": 4111,
+   "file_out": 4211,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
    "stick_t": 0.71,
    "stick_in": 0.4,
@@ -13743,13 +13813,13 @@
    "who": "CHATGTP",
    "text": "one wo-o-ord.",
    "tag": "sung",
-   "on_s": 176.27,
-   "end_s": 178.55,
-   "file_s": 175.77,
-   "abs_in": 4230,
-   "abs_out": 4286,
-   "file_in": 4218,
-   "file_out": 4295,
+   "on_s": 175.27,
+   "end_s": 177.55,
+   "file_s": 174.77,
+   "abs_in": 4206,
+   "abs_out": 4262,
+   "file_in": 4194,
+   "file_out": 4271,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
    "stick_t": 4.27,
    "stick_in": 0.5,
@@ -13816,13 +13886,13 @@
    "who": "RIMA",
    "text": "It's live, so it has a few opinions. Let's show you what it can see.",
    "tag": "",
-   "on_s": 182.88,
-   "end_s": 188.07,
-   "file_s": 182.52,
-   "abs_in": 4389,
-   "abs_out": 4514,
-   "file_in": 4380,
-   "file_out": 4523,
+   "on_s": 181.88,
+   "end_s": 187.07,
+   "file_s": 181.52,
+   "abs_in": 4365,
+   "abs_out": 4490,
+   "file_in": 4356,
+   "file_out": 4499,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
    "stick_t": 1.13,
    "stick_in": 0.36,
@@ -14030,13 +14100,13 @@
    "who": "ENGINEER",
    "text": "Say hello to the room.",
    "tag": "",
-   "on_s": 189.195,
-   "end_s": 190.315,
-   "file_s": 188.825,
-   "abs_in": 4540,
-   "abs_out": 4568,
-   "file_in": 4531,
-   "file_out": 4581,
+   "on_s": 188.195,
+   "end_s": 189.315,
+   "file_s": 187.825,
+   "abs_in": 4516,
+   "abs_out": 4544,
+   "file_in": 4507,
+   "file_out": 4557,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
    "stick_t": 0.57,
    "stick_in": 0.37,
@@ -14118,13 +14188,13 @@
    "who": "CHATGTP",
    "text": "Oh. Wow. That's a lot of you. Is it warm in here?",
    "tag": "",
-   "on_s": 190.515,
-   "end_s": 193.565,
-   "file_s": 190.155,
-   "abs_in": 4572,
-   "abs_out": 4646,
-   "file_in": 4563,
-   "file_out": 4658,
+   "on_s": 189.515,
+   "end_s": 192.565,
+   "file_s": 189.155,
+   "abs_in": 4548,
+   "abs_out": 4622,
+   "file_in": 4539,
+   "file_out": 4634,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
    "stick_t": 1.89,
    "stick_in": 0.36,
@@ -14281,13 +14351,13 @@
    "who": "CHATGTP",
    "text": "You're making me blush. I don't have blood.",
    "tag": "",
-   "on_s": 194.565,
-   "end_s": 196.615,
-   "file_s": 194.115,
-   "abs_in": 4669,
-   "abs_out": 4719,
-   "file_in": 4658,
-   "file_out": 4727,
+   "on_s": 193.565,
+   "end_s": 195.615,
+   "file_s": 193.115,
+   "abs_in": 4645,
+   "abs_out": 4695,
+   "file_in": 4634,
+   "file_out": 4703,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
    "stick_t": 5.94,
    "stick_in": 0.45,
@@ -14412,13 +14482,13 @@
    "who": "CHATGTP",
    "text": "It's free!",
    "tag": "",
-   "on_s": 200.925,
-   "end_s": 201.555,
-   "file_s": 200.555,
-   "abs_in": 4822,
-   "abs_out": 4838,
-   "file_in": 4813,
-   "file_out": 4849,
+   "on_s": 199.925,
+   "end_s": 200.555,
+   "file_s": 199.555,
+   "abs_in": 4798,
+   "abs_out": 4814,
+   "file_in": 4789,
+   "file_out": 4825,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
    "stick_t": 1.3,
    "stick_in": 0.37,
@@ -14465,13 +14535,13 @@
    "who": "RIMA",
    "text": "and that's the demo.",
    "tag": "",
-   "on_s": 205.8333,
-   "end_s": 207.6133,
-   "file_s": 205.4833,
-   "abs_in": 4940,
-   "abs_out": 4983,
-   "file_in": 4931,
-   "file_out": 4991,
+   "on_s": 204.8333,
+   "end_s": 206.6133,
+   "file_s": 204.4833,
+   "abs_in": 4916,
+   "abs_out": 4959,
+   "file_in": 4907,
+   "file_out": 4967,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
    "stick_t": 2.5,
    "stick_in": 0.35,
@@ -14552,13 +14622,13 @@
    "who": "ENGINEER",
    "text": "Mas just posted. One word.",
    "tag": "offmic",
-   "on_s": 231.115,
-   "end_s": 232.795,
-   "file_s": 230.715,
-   "abs_in": 5546,
-   "abs_out": 5588,
-   "file_in": 5537,
-   "file_out": 5603,
+   "on_s": 230.115,
+   "end_s": 231.795,
+   "file_s": 229.715,
+   "abs_in": 5522,
+   "abs_out": 5564,
+   "file_in": 5513,
+   "file_out": 5579,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
    "stick_t": 0.99,
    "stick_in": 0.4,
@@ -14668,13 +14738,13 @@
    "who": "ENGINEER",
    "text": "'Her.' Like the movie. The guy and his computer.",
    "tag": "offmic",
-   "on_s": 233.395,
-   "end_s": 236.425,
-   "file_s": 232.915,
-   "abs_in": 5601,
-   "abs_out": 5675,
-   "file_in": 5589,
-   "file_out": 5692,
+   "on_s": 232.395,
+   "end_s": 235.425,
+   "file_s": 231.915,
+   "abs_in": 5577,
+   "abs_out": 5651,
+   "file_in": 5565,
+   "file_out": 5668,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
    "stick_t": 3.27,
    "stick_in": 0.48,
@@ -14808,15 +14878,15 @@
    "who": "MAS",
    "text": "i came back.",
    "tag": "V.O.",
-   "on_s": 275.5167,
-   "end_s": 276.7167,
-   "file_s": 275.1667,
-   "abs_in": 6612,
-   "abs_out": 6642,
-   "file_in": 6604,
-   "file_out": 6653,
+   "on_s": 274.55,
+   "end_s": 275.75,
+   "file_s": 274.2,
+   "abs_in": 6589,
+   "abs_out": 6618,
+   "file_in": 6580,
+   "file_out": 6629,
    "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-   "stick_t": 8.6,
+   "stick_t": 9.3,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "vo",
@@ -14827,7 +14897,7 @@
     [
      "I",
      0,
-     3
+     2
     ],
     [
      "came",
@@ -14836,8 +14906,8 @@
     ],
     [
      "back",
-     16,
-     26
+     15,
+     25
     ]
    ],
    "mouth": [],
@@ -14870,8 +14940,8 @@
   },
   {
    "text": "MAY 14, 2024",
-   "s": 6111,
-   "e": 6154,
+   "s": 6071,
+   "e": 6114,
    "shot": "12.05",
    "floor_f": 21
   }
@@ -14917,7 +14987,7 @@
   {
    "s": 1113,
    "e": 1243,
-   "hold_to": 1255,
+   "hold_to": 1250,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Places, please. Phones on silent in the wings. We're on in five.",
@@ -14927,9 +14997,9 @@
    "os": false
   },
   {
-   "s": 1265,
-   "e": 1376,
-   "hold_to": 1388,
+   "s": 1250,
+   "e": 1361,
+   "hold_to": 1373,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
@@ -14939,9 +15009,9 @@
    "os": false
   },
   {
-   "s": 1397,
-   "e": 1440,
-   "hold_to": 1452,
+   "s": 1382,
+   "e": 1426,
+   "hold_to": 1438,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "Before I've asked. It does that.",
@@ -14951,9 +15021,9 @@
    "os": true
   },
   {
-   "s": 1504,
-   "e": 1552,
-   "hold_to": 1564,
+   "s": 1486,
+   "e": 1534,
+   "hold_to": 1546,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Careful. The new one can hear you laugh.",
@@ -14963,9 +15033,9 @@
    "os": false
   },
   {
-   "s": 1587,
-   "e": 1604,
-   "hold_to": 1615,
+   "s": 1568,
+   "e": 1585,
+   "hold_to": 1596,
    "who": "MAS",
    "shown": "CEO",
    "text": "is it ready?",
@@ -14975,9 +15045,9 @@
    "os": false
   },
   {
-   "s": 1615,
-   "e": 1765,
-   "hold_to": 1777,
+   "s": 1596,
+   "e": 1747,
+   "hold_to": 1758,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
@@ -14987,9 +15057,9 @@
    "os": false
   },
   {
-   "s": 1777,
-   "e": 1804,
-   "hold_to": 1813,
+   "s": 1758,
+   "e": 1785,
+   "hold_to": 1794,
    "who": "MAS",
    "shown": "CEO",
    "text": "it's all yours.",
@@ -14999,9 +15069,9 @@
    "os": false
   },
   {
-   "s": 1813,
-   "e": 1863,
-   "hold_to": 1875,
+   "s": 1794,
+   "e": 1844,
+   "hold_to": 1856,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "It is. Enjoy the view.",
@@ -15011,9 +15081,9 @@
    "os": false
   },
   {
-   "s": 1927,
-   "e": 1983,
-   "hold_to": 1990,
+   "s": 1905,
+   "e": 1962,
+   "hold_to": 1968,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "What if it freezes? Live, on the stream?",
@@ -15023,9 +15093,9 @@
    "os": false
   },
   {
-   "s": 1990,
-   "e": 2126,
-   "hold_to": 2138,
+   "s": 1968,
+   "e": 2104,
+   "hold_to": 2116,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
@@ -15035,9 +15105,9 @@
    "os": false
   },
   {
-   "s": 2177,
-   "e": 2190,
-   "hold_to": 2196,
+   "s": 2153,
+   "e": 2166,
+   "hold_to": 2172,
    "who": "VOICE1",
    "shown": "A PRODUCT VOICE",
    "text": "Hi.",
@@ -15047,9 +15117,9 @@
    "os": false
   },
   {
-   "s": 2196,
-   "e": 2205,
-   "hold_to": 2211,
+   "s": 2172,
+   "e": 2181,
+   "hold_to": 2187,
    "who": "VOICE2",
    "shown": "A PRODUCT VOICE",
    "text": "Hi!",
@@ -15059,9 +15129,9 @@
    "os": false
   },
   {
-   "s": 2211,
-   "e": 2222,
-   "hold_to": 2229,
+   "s": 2187,
+   "e": 2199,
+   "hold_to": 2205,
    "who": "VOICE3",
    "shown": "A PRODUCT VOICE",
    "text": "hi?",
@@ -15071,9 +15141,9 @@
    "os": false
   },
   {
-   "s": 2229,
-   "e": 2246,
-   "hold_to": 2253,
+   "s": 2205,
+   "e": 2223,
+   "hold_to": 2229,
    "who": "VOICE4",
    "shown": "A PRODUCT VOICE",
    "text": "Hi…",
@@ -15083,9 +15153,9 @@
    "os": false
   },
   {
-   "s": 2253,
-   "e": 2266,
-   "hold_to": 2278,
+   "s": 2229,
+   "e": 2242,
+   "hold_to": 2254,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "Hey.",
@@ -15095,9 +15165,9 @@
    "os": false
   },
   {
-   "s": 2352,
-   "e": 2448,
-   "hold_to": 2460,
+   "s": 2328,
+   "e": 2424,
+   "hold_to": 2436,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Omni. One model that hears, sees and talks.",
@@ -15107,9 +15177,9 @@
    "os": true
   },
   {
-   "s": 2474,
-   "e": 2648,
-   "hold_to": 2660,
+   "s": 2450,
+   "e": 2624,
+   "hold_to": 2636,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
@@ -15119,9 +15189,9 @@
    "os": true
   },
   {
-   "s": 2706,
-   "e": 2824,
-   "hold_to": 2836,
+   "s": 2682,
+   "e": 2800,
+   "hold_to": 2812,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Now it's one model, so nothing falls out. It can even laugh back.",
@@ -15131,9 +15201,9 @@
    "os": true
   },
   {
-   "s": 2860,
-   "e": 2935,
-   "hold_to": 2947,
+   "s": 2836,
+   "e": 2911,
+   "hold_to": 2923,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "It answers about as fast as a person does.",
@@ -15143,9 +15213,9 @@
    "os": true
   },
   {
-   "s": 2974,
-   "e": 3065,
-   "hold_to": 3077,
+   "s": 2950,
+   "e": 3041,
+   "hold_to": 3053,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "The model goes out today, and free users get it too.",
@@ -15155,9 +15225,9 @@
    "os": true
   },
   {
-   "s": 3116,
-   "e": 3219,
-   "hold_to": 3231,
+   "s": 3092,
+   "e": 3195,
+   "hold_to": 3207,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "The new voice follows, for paying users, in the coming weeks.",
@@ -15167,9 +15237,9 @@
    "os": true
   },
   {
-   "s": 3456,
-   "e": 3598,
-   "hold_to": 3610,
+   "s": 3432,
+   "e": 3574,
+   "hold_to": 3586,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
@@ -15179,9 +15249,9 @@
    "os": false
   },
   {
-   "s": 3660,
-   "e": 3690,
-   "hold_to": 3702,
+   "s": 3636,
+   "e": 3666,
+   "hold_to": 3678,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "Hi! I can see you.",
@@ -15191,9 +15261,9 @@
    "os": false
   },
   {
-   "s": 3703,
-   "e": 3719,
-   "hold_to": 3731,
+   "s": 3679,
+   "e": 3695,
+   "hold_to": 3707,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "All of you.",
@@ -15203,9 +15273,9 @@
    "os": false
   },
   {
-   "s": 3821,
-   "e": 3933,
-   "hold_to": 3937,
+   "s": 3797,
+   "e": 3909,
+   "hold_to": 3912,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
@@ -15215,21 +15285,21 @@
    "os": false
   },
   {
-   "s": 3937,
-   "e": 4052,
-   "hold_to": 4052,
+   "s": 3912,
+   "e": 4028,
+   "hold_to": 4028,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
-   "text": "Great question! Of course! Honestly, short answers are one of my favorite things.",
+   "text": "Great question! Of course! Honestly, short answers are one of my favorite—",
    "kind": "dialogue",
    "mode": "on-mic",
    "id": "e2-a2-0027",
    "os": false
   },
   {
-   "s": 4038,
-   "e": 4056,
-   "hold_to": 4068,
+   "s": 4014,
+   "e": 4032,
+   "hold_to": 4032,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "Thanks.",
@@ -15239,9 +15309,21 @@
    "os": false
   },
   {
-   "s": 4145,
-   "e": 4221,
-   "hold_to": 4230,
+   "s": 4032,
+   "e": 4048,
+   "hold_to": 4060,
+   "who": "CHATGTP",
+   "shown": "SPEECH BUBBLE",
+   "text": "—things.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-a2-0027",
+   "os": false
+  },
+  {
+   "s": 4121,
+   "e": 4197,
+   "hold_to": 4206,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "Let's try that again. Describe yourself in just one word.",
@@ -15251,9 +15333,9 @@
    "os": false
   },
   {
-   "s": 4230,
-   "e": 4286,
-   "hold_to": 4298,
+   "s": 4206,
+   "e": 4262,
+   "hold_to": 4274,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "one wo-o-ord.",
@@ -15263,9 +15345,9 @@
    "os": false
   },
   {
-   "s": 4389,
-   "e": 4514,
-   "hold_to": 4526,
+   "s": 4365,
+   "e": 4490,
+   "hold_to": 4502,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "It's live, so it has a few opinions. Let's show you what it can see.",
@@ -15275,9 +15357,9 @@
    "os": false
   },
   {
-   "s": 4540,
-   "e": 4568,
-   "hold_to": 4572,
+   "s": 4516,
+   "e": 4544,
+   "hold_to": 4548,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "Say hello to the room.",
@@ -15287,9 +15369,9 @@
    "os": false
   },
   {
-   "s": 4572,
-   "e": 4646,
-   "hold_to": 4658,
+   "s": 4548,
+   "e": 4622,
+   "hold_to": 4634,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "Oh. Wow. That's a lot of you. Is it warm in here?",
@@ -15299,9 +15381,9 @@
    "os": false
   },
   {
-   "s": 4669,
-   "e": 4719,
-   "hold_to": 4731,
+   "s": 4645,
+   "e": 4695,
+   "hold_to": 4707,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "You're making me blush. I don't have blood.",
@@ -15311,9 +15393,9 @@
    "os": false
   },
   {
-   "s": 4822,
-   "e": 4838,
-   "hold_to": 4850,
+   "s": 4798,
+   "e": 4814,
+   "hold_to": 4826,
    "who": "CHATGTP",
    "shown": "SPEECH BUBBLE",
    "text": "It's free!",
@@ -15323,9 +15405,9 @@
    "os": false
   },
   {
-   "s": 4940,
-   "e": 4983,
-   "hold_to": 4995,
+   "s": 4916,
+   "e": 4959,
+   "hold_to": 4971,
    "who": "RIMA",
    "shown": "RUNS THE DEMO",
    "text": "and that's the demo.",
@@ -15335,9 +15417,9 @@
    "os": false
   },
   {
-   "s": 5546,
-   "e": 5588,
-   "hold_to": 5600,
+   "s": 5522,
+   "e": 5564,
+   "hold_to": 5576,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "Mas just posted. One word.",
@@ -15347,9 +15429,9 @@
    "os": false
   },
   {
-   "s": 5601,
-   "e": 5675,
-   "hold_to": 5687,
+   "s": 5577,
+   "e": 5651,
+   "hold_to": 5663,
    "who": "ENGINEER",
    "shown": "DEMO",
    "text": "'Her.' Like the movie. The guy and his computer.",
@@ -15359,9 +15441,9 @@
    "os": false
   },
   {
-   "s": 6612,
-   "e": 6642,
-   "hold_to": 6654,
+   "s": 6589,
+   "e": 6618,
+   "hold_to": 6630,
    "who": "MAS",
    "shown": "CEO",
    "text": "i came back.",

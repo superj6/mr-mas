@@ -4,82 +4,82 @@
   {
    "id": "coldopen",
    "start": 0,
-   "frames": 1344
+   "frames": 1320
   },
   {
    "id": "intro",
-   "start": 1344,
+   "start": 1320,
    "frames": 720
   },
   {
    "id": "card",
-   "start": 2064,
+   "start": 2040,
    "frames": 48
   },
   {
    "id": "act1",
-   "start": 2112,
-   "frames": 8832
+   "start": 2088,
+   "frames": 8736
   },
   {
    "id": "act2",
-   "start": 10944,
-   "frames": 6720
+   "start": 10824,
+   "frames": 6696
   },
   {
    "id": "act3",
-   "start": 17664,
-   "frames": 7704
-  },
-  {
-   "id": "act4",
-   "start": 25368,
+   "start": 17520,
    "frames": 7680
   },
   {
+   "id": "act4",
+   "start": 25200,
+   "frames": 7656
+  },
+  {
    "id": "tag",
-   "start": 33048,
+   "start": 32856,
    "frames": 888
   },
   {
    "id": "tag-hum",
-   "start": 33936,
+   "start": 33744,
    "frames": 18
   },
   {
    "id": "outro",
-   "start": 33954,
+   "start": 33762,
    "frames": 243
   }
  ],
- "total_frames": 34197,
+ "total_frames": 34005,
  "segments": {
   "coldopen": {
-   "frames": 1344,
-   "seconds": 56.0,
-   "timeline_s": 56.0,
+   "frames": 1320,
+   "seconds": 55.0,
+   "timeline_s": 55.0,
    "ep_in": "00:00:00",
-   "ep_out": "00:56:00",
+   "ep_out": "00:55:00",
    "shots": 13,
    "lines": 6,
    "vo": 0,
    "scenes": 1,
-   "plan_s": 56,
+   "plan_s": 55,
    "checks_ok": true,
    "checks": 8,
    "problems": []
   },
   "act1": {
-   "frames": 8832,
-   "seconds": 368.0,
-   "timeline_s": 368.0,
-   "ep_in": "01:28:00",
-   "ep_out": "07:36:00",
+   "frames": 8736,
+   "seconds": 364.0,
+   "timeline_s": 364.0,
+   "ep_in": "01:27:00",
+   "ep_out": "07:31:00",
    "shots": 62,
    "lines": 59,
    "vo": 3,
    "scenes": 5,
-   "plan_s": 368,
+   "plan_s": 364,
    "checks_ok": true,
    "checks": 8,
    "problems": [
@@ -88,31 +88,31 @@
    ]
   },
   "act2": {
-   "frames": 6720,
-   "seconds": 280.0,
-   "timeline_s": 280.0,
-   "ep_in": "07:36:00",
-   "ep_out": "12:16:00",
+   "frames": 6696,
+   "seconds": 279.0,
+   "timeline_s": 279.0,
+   "ep_in": "07:31:00",
+   "ep_out": "12:10:00",
    "shots": 44,
    "lines": 41,
    "vo": 3,
    "scenes": 5,
-   "plan_s": 280,
+   "plan_s": 279,
    "checks_ok": true,
    "checks": 8,
    "problems": []
   },
   "act3": {
-   "frames": 7704,
-   "seconds": 321.0,
-   "timeline_s": 321.0,
-   "ep_in": "12:16:00",
-   "ep_out": "17:37:00",
+   "frames": 7680,
+   "seconds": 320.0,
+   "timeline_s": 320.0,
+   "ep_in": "12:10:00",
+   "ep_out": "17:30:00",
    "shots": 58,
    "lines": 28,
    "vo": 4,
    "scenes": 4,
-   "plan_s": 321,
+   "plan_s": 320,
    "checks_ok": true,
    "checks": 8,
    "problems": [
@@ -121,16 +121,16 @@
    ]
   },
   "act4": {
-   "frames": 7680,
-   "seconds": 320.0,
-   "timeline_s": 320.0,
-   "ep_in": "17:37:00",
-   "ep_out": "22:57:00",
+   "frames": 7656,
+   "seconds": 319.0,
+   "timeline_s": 319.0,
+   "ep_in": "17:30:00",
+   "ep_out": "22:49:00",
    "shots": 57,
    "lines": 38,
    "vo": 3,
    "scenes": 4,
-   "plan_s": 320,
+   "plan_s": 319,
    "checks_ok": true,
    "checks": 8,
    "problems": [
@@ -141,8 +141,8 @@
    "frames": 888,
    "seconds": 37.0,
    "timeline_s": 37.0,
-   "ep_in": "22:57:00",
-   "ep_out": "23:34:00",
+   "ep_in": "22:49:00",
+   "ep_out": "23:26:00",
    "shots": 9,
    "lines": 1,
    "vo": 1,
@@ -158,18 +158,18 @@
    "seg": "coldopen",
    "scene": "1",
    "title": "The mammoth, and what came through the door",
-   "frames": 1344,
-   "seconds": 56.0,
+   "frames": 1320,
+   "seconds": 55.0,
    "tc_in": "00:00:00",
-   "tc_out": "00:56:00",
-   "plan_s": 56,
-   "proposal_s": 56,
-   "fit_scale": 1.157,
+   "tc_out": "00:55:00",
+   "plan_s": 55,
+   "proposal_s": 55,
+   "fit_scale": 1.134,
    "shots": 13,
    "lines": 6,
    "arrival_s": 3.54,
    "arrival_spoken_s": 3.54,
-   "aftermath_s": 18.67,
+   "aftermath_s": 18.46,
    "plan_arrive": [
     "1.01: 2.0 s, the meadow in the wall screen, the votive tick and the rack hum under it, 2 s before Selbeep turns"
    ],
@@ -182,17 +182,17 @@
    "seg": "act1",
    "scene": "4",
    "title": "The Email Séance (with Move 37 and F2.3)",
-   "frames": 4704,
-   "seconds": 196.0,
-   "tc_in": "01:28:00",
-   "tc_out": "04:44:00",
-   "plan_s": 196,
-   "proposal_s": 196,
-   "fit_scale": 1.146,
+   "frames": 4632,
+   "seconds": 193.0,
+   "tc_in": "01:27:00",
+   "tc_out": "04:40:00",
+   "plan_s": 193,
+   "proposal_s": 193,
+   "fit_scale": 1.131,
    "shots": 36,
    "lines": 34,
    "arrival_s": 5.67,
-   "arrival_spoken_s": 13.17,
+   "arrival_spoken_s": 13.12,
    "aftermath_s": 4.83,
    "plan_arrive": [
     "4.01: 2.5 s, the lit table, the room colour playing, the staffers' hands joined, before his click"
@@ -206,18 +206,18 @@
    "seg": "act1",
    "scene": "4A",
    "title": "You can sit down now",
-   "frames": 840,
-   "seconds": 35.0,
-   "tc_in": "04:44:00",
-   "tc_out": "05:19:00",
-   "plan_s": 35,
-   "proposal_s": 35,
-   "fit_scale": 1.781,
+   "frames": 792,
+   "seconds": 33.0,
+   "tc_in": "04:40:00",
+   "tc_out": "05:13:00",
+   "plan_s": 33,
+   "proposal_s": 33,
+   "fit_scale": 1.68,
    "shots": 6,
    "lines": 3,
    "arrival_s": 2.58,
    "arrival_spoken_s": 2.58,
-   "aftermath_s": 12.46,
+   "aftermath_s": 11.96,
    "plan_arrive": [
     "4A.01: 2.0 s, the room in morning light, candles gone, Mas already standing"
    ],
@@ -228,18 +228,18 @@
    "seg": "act1",
    "scene": "4B",
    "title": "The booking",
-   "frames": 192,
-   "seconds": 8.0,
-   "tc_in": "05:19:00",
-   "tc_out": "05:27:00",
-   "plan_s": 8,
-   "proposal_s": 8,
-   "fit_scale": 1.425,
+   "frames": 216,
+   "seconds": 9.0,
+   "tc_in": "05:13:00",
+   "tc_out": "05:22:00",
+   "plan_s": 9,
+   "proposal_s": 9,
+   "fit_scale": 0.991,
    "shots": 1,
    "lines": 1,
-   "arrival_s": 1.42,
+   "arrival_s": 1.0,
    "arrival_spoken_s": null,
-   "aftermath_s": 0.83,
+   "aftermath_s": 2.25,
    "plan_arrive": [
     "4B.01: 1.0 s, the phone's glow on the nameplate (continuous from 4A)"
    ],
@@ -252,8 +252,8 @@
    "title": "Chapter 1 of 6",
    "frames": 1944,
    "seconds": 81.0,
-   "tc_in": "05:27:00",
-   "tc_out": "06:48:00",
+   "tc_in": "05:22:00",
+   "tc_out": "06:43:00",
    "plan_s": 81,
    "proposal_s": 81,
    "fit_scale": 1.532,
@@ -274,8 +274,8 @@
    "title": "A tenant",
    "frames": 1152,
    "seconds": 48.0,
-   "tc_in": "06:48:00",
-   "tc_out": "07:36:00",
+   "tc_in": "06:43:00",
+   "tc_out": "07:31:00",
    "plan_s": 48,
    "proposal_s": 48,
    "fit_scale": 1.646,
@@ -298,8 +298,8 @@
    "title": "The dark room",
    "frames": 1056,
    "seconds": 44.0,
-   "tc_in": "07:36:00",
-   "tc_out": "08:20:00",
+   "tc_in": "07:31:00",
+   "tc_out": "08:15:00",
    "plan_s": 44,
    "proposal_s": 44,
    "fit_scale": 1.681,
@@ -320,13 +320,13 @@
    "seg": "act2",
    "scene": "9",
    "title": "Backstage",
-   "frames": 1248,
-   "seconds": 52.0,
-   "tc_in": "08:20:00",
-   "tc_out": "09:12:00",
-   "plan_s": 52,
-   "proposal_s": 52,
-   "fit_scale": 1.679,
+   "frames": 1224,
+   "seconds": 51.0,
+   "tc_in": "08:15:00",
+   "tc_out": "09:06:00",
+   "plan_s": 51,
+   "proposal_s": 51,
+   "fit_scale": 1.609,
    "shots": 6,
    "lines": 15,
    "arrival_s": 2.38,
@@ -346,8 +346,8 @@
    "title": "THE PLAN: OMNI",
    "frames": 1104,
    "seconds": 46.0,
-   "tc_in": "09:12:00",
-   "tc_out": "09:58:00",
+   "tc_in": "09:06:00",
+   "tc_out": "09:52:00",
    "plan_s": 46,
    "proposal_s": 46,
    "fit_scale": 1.272,
@@ -370,10 +370,10 @@
    "title": "\"her\"",
    "frames": 2352,
    "seconds": 98.0,
-   "tc_in": "09:58:00",
-   "tc_out": "11:36:00",
+   "tc_in": "09:52:00",
+   "tc_out": "11:30:00",
    "plan_s": 98,
-   "proposal_s": 111,
+   "proposal_s": 98,
    "fit_scale": 1.413,
    "shots": 16,
    "lines": 16,
@@ -394,14 +394,14 @@
    "title": "The empty seat",
    "frames": 960,
    "seconds": 40.0,
-   "tc_in": "11:36:00",
-   "tc_out": "12:16:00",
+   "tc_in": "11:30:00",
+   "tc_out": "12:10:00",
    "plan_s": 40,
    "proposal_s": 40,
-   "fit_scale": 1.209,
+   "fit_scale": 1.128,
    "shots": 8,
    "lines": 1,
-   "arrival_s": 35.5,
+   "arrival_s": 35.54,
    "arrival_spoken_s": null,
    "aftermath_s": 3.25,
    "plan_arrive": [
@@ -419,10 +419,10 @@
    "title": "Leave them up",
    "frames": 744,
    "seconds": 31.0,
-   "tc_in": "12:16:00",
-   "tc_out": "12:47:00",
+   "tc_in": "12:10:00",
+   "tc_out": "12:41:00",
    "plan_s": 31,
-   "proposal_s": 36,
+   "proposal_s": 31,
    "fit_scale": 1.363,
    "shots": 6,
    "lines": 5,
@@ -441,8 +441,8 @@
    "title": "The open floor",
    "frames": 1416,
    "seconds": 59.0,
-   "tc_in": "12:47:00",
-   "tc_out": "13:46:00",
+   "tc_in": "12:41:00",
+   "tc_out": "13:40:00",
    "plan_s": 59,
    "proposal_s": 59,
    "fit_scale": 1.631,
@@ -465,8 +465,8 @@
    "title": "Where u at? (with F2.2)",
    "frames": 2400,
    "seconds": 100.0,
-   "tc_in": "13:46:00",
-   "tc_out": "15:26:00",
+   "tc_in": "13:40:00",
+   "tc_out": "15:20:00",
    "plan_s": 100,
    "proposal_s": 100,
    "fit_scale": 1.342,
@@ -487,18 +487,18 @@
    "seg": "act3",
    "scene": "17",
    "title": "The NDA across the bridge (the S3)",
-   "frames": 3144,
-   "seconds": 131.0,
-   "tc_in": "15:26:00",
-   "tc_out": "17:37:00",
-   "plan_s": 131,
-   "proposal_s": 131,
-   "fit_scale": 1.912,
+   "frames": 3120,
+   "seconds": 130.0,
+   "tc_in": "15:20:00",
+   "tc_out": "17:30:00",
+   "plan_s": 130,
+   "proposal_s": 130,
+   "fit_scale": 1.943,
    "shots": 21,
    "lines": 9,
    "arrival_s": 17.38,
    "arrival_spoken_s": 17.38,
-   "aftermath_s": 34.08,
+   "aftermath_s": 34.21,
    "plan_arrive": [
     "17.01: 4.0 s, NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in"
    ],
@@ -511,18 +511,18 @@
    "seg": "act4",
    "scene": "18",
    "title": "Present",
-   "frames": 2304,
-   "seconds": 96.0,
-   "tc_in": "17:37:00",
-   "tc_out": "19:13:00",
-   "plan_s": 96,
-   "proposal_s": 96,
-   "fit_scale": 0.974,
+   "frames": 2280,
+   "seconds": 95.0,
+   "tc_in": "17:30:00",
+   "tc_out": "19:05:00",
+   "plan_s": 95,
+   "proposal_s": 95,
+   "fit_scale": 0.987,
    "shots": 15,
    "lines": 17,
-   "arrival_s": 8.67,
-   "arrival_spoken_s": 8.67,
-   "aftermath_s": 4.25,
+   "arrival_s": 8.75,
+   "arrival_spoken_s": 8.75,
+   "aftermath_s": 4.33,
    "plan_arrive": [
     "18.01: 2.0 s, full frame on the lighthouse with the beacon already turning",
     "18.03: 1.0 s, the boardroom with the TV already playing"
@@ -538,10 +538,10 @@
    "title": "Every phone they sell (with F2.1 and the walled garden)",
    "frames": 3216,
    "seconds": 134.0,
-   "tc_in": "19:13:00",
-   "tc_out": "21:27:00",
+   "tc_in": "19:05:00",
+   "tc_out": "21:19:00",
    "plan_s": 134,
-   "proposal_s": 138,
+   "proposal_s": 134,
    "fit_scale": 1.409,
    "shots": 20,
    "lines": 19,
@@ -563,10 +563,10 @@
    "title": "(FOR NOW)",
    "frames": 1248,
    "seconds": 52.0,
-   "tc_in": "21:27:00",
-   "tc_out": "22:19:00",
+   "tc_in": "21:19:00",
+   "tc_out": "22:11:00",
    "plan_s": 52,
-   "proposal_s": 48,
+   "proposal_s": 52,
    "fit_scale": 1.03,
    "shots": 13,
    "lines": 2,
@@ -589,8 +589,8 @@
    "title": "One door",
    "frames": 912,
    "seconds": 38.0,
-   "tc_in": "22:19:00",
-   "tc_out": "22:57:00",
+   "tc_in": "22:11:00",
+   "tc_out": "22:49:00",
    "plan_s": 38,
    "proposal_s": 38,
    "fit_scale": 1.431,
@@ -613,8 +613,8 @@
    "title": "The other company",
    "frames": 888,
    "seconds": 37.0,
-   "tc_in": "22:57:00",
-   "tc_out": "23:34:00",
+   "tc_in": "22:49:00",
+   "tc_out": "23:26:00",
    "plan_s": 37,
    "proposal_s": 37,
    "fit_scale": 1.345,
@@ -639,7 +639,17 @@
    "who": "selbeep",
    "pace": "quick",
    "plan_s": 0.25,
-   "lock_s": 0.25,
+   "lock_s": 0.248,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
+   "beat": "1.08",
+   "line": "e2-co-0006",
+   "who": "gerg",
+   "pace": "normal",
+   "plan_s": 0.5,
+   "lock_s": 0.528,
    "in_band": true,
    "as_planned": true
   },
@@ -654,12 +664,22 @@
    "as_planned": true
   },
   {
+   "beat": "4.08",
+   "line": "e2-a1-0006",
+   "who": "nole",
+   "pace": "quick",
+   "plan_s": 0.3,
+   "lock_s": 0.307,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
    "beat": "4.09",
    "line": "e2-a1-0008",
    "who": "nole",
    "pace": "quick",
    "plan_s": 0.25,
-   "lock_s": 0.247,
+   "lock_s": 0.25,
    "in_band": true,
    "as_planned": true
   },
@@ -729,7 +749,7 @@
    "who": "nole",
    "pace": "quick",
    "plan_s": 0.25,
-   "lock_s": 0.268,
+   "lock_s": 0.237,
    "in_band": true,
    "as_planned": true
   },
@@ -759,7 +779,17 @@
    "who": "gerg",
    "pace": "quick",
    "plan_s": 0.2,
-   "lock_s": 0.178,
+   "lock_s": 0.22,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
+   "beat": "4.23",
+   "line": "e2-a1-0024",
+   "who": "nole",
+   "pace": "normal",
+   "plan_s": 0.5,
+   "lock_s": 0.513,
    "in_band": true,
    "as_planned": true
   },
@@ -769,7 +799,7 @@
    "who": "nole",
    "pace": "quick",
    "plan_s": 0.3,
-   "lock_s": 0.273,
+   "lock_s": 0.268,
    "in_band": true,
    "as_planned": true
   },
@@ -790,6 +820,16 @@
    "pace": "weighted",
    "plan_s": 1.0,
    "lock_s": 1.0,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
+   "beat": "4A.03",
+   "line": "e2-a1-0033",
+   "who": "terb",
+   "pace": "quick",
+   "plan_s": 0.3,
+   "lock_s": 0.28,
    "in_band": true,
    "as_planned": true
   },
@@ -900,6 +940,16 @@
    "pace": "free",
    "plan_s": 0.9,
    "lock_s": 0.9,
+   "in_band": null,
+   "as_planned": true
+  },
+  {
+   "beat": "9.02",
+   "line": "e2-a2-0003",
+   "who": "engineer",
+   "pace": "quick",
+   "plan_s": 0.3,
+   "lock_s": 0.318,
    "in_band": true,
    "as_planned": true
   },
@@ -990,7 +1040,7 @@
    "pace": "free",
    "plan_s": 0.6,
    "lock_s": 0.6,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1010,7 +1060,7 @@
    "pace": "free",
    "plan_s": -0.55,
    "lock_s": -0.55,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1020,7 +1070,7 @@
    "pace": "free",
    "plan_s": 0.4,
    "lock_s": 0.4,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1040,7 +1090,7 @@
    "pace": "free",
    "plan_s": 1.0,
    "lock_s": 1.0,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1050,7 +1100,7 @@
    "pace": "free",
    "plan_s": 0.6,
    "lock_s": 0.6,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1130,7 +1180,7 @@
    "pace": "free",
    "plan_s": 0.1,
    "lock_s": 0.1,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1164,12 +1214,22 @@
    "as_planned": true
   },
   {
+   "beat": "17.05",
+   "line": "e2-a3-0017",
+   "who": "driver",
+   "pace": "quick",
+   "plan_s": 0.3,
+   "lock_s": 0.305,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
    "beat": "17.06",
    "line": "e2-a3-0018",
    "who": "forecaster",
    "pace": "normal",
    "plan_s": 0.5,
-   "lock_s": 0.507,
+   "lock_s": 0.498,
    "in_band": true,
    "as_planned": true
   },
@@ -1187,9 +1247,9 @@
    "beat": "18.08",
    "line": "e2-a4-0005",
    "who": "terb",
-   "pace": "normal",
-   "plan_s": 0.5,
-   "lock_s": 0.5,
+   "pace": "quick",
+   "plan_s": 0.25,
+   "lock_s": 0.25,
    "in_band": true,
    "as_planned": true
   },
@@ -1200,7 +1260,7 @@
    "pace": "free",
    "plan_s": 0.6,
    "lock_s": 0.6,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1210,6 +1270,16 @@
    "pace": "weighted",
    "plan_s": 2.3,
    "lock_s": 2.3,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
+   "beat": "18.10",
+   "line": "e2-a4-0007",
+   "who": "terb",
+   "pace": "quick",
+   "plan_s": 0.25,
+   "lock_s": 0.27,
    "in_band": true,
    "as_planned": true
   },
@@ -1240,7 +1310,7 @@
    "pace": "free",
    "plan_s": 2.6,
    "lock_s": 2.6,
-   "in_band": true,
+   "in_band": null,
    "as_planned": true
   },
   {
@@ -1259,7 +1329,7 @@
    "who": "mario",
    "pace": "normal",
    "plan_s": 0.5,
-   "lock_s": 0.518,
+   "lock_s": 0.498,
    "in_band": true,
    "as_planned": true
   },
@@ -1406,25 +1476,25 @@
   {
    "seg": "coldopen",
    "beat": "1.06",
-   "seconds": 4.17,
+   "seconds": 4.08,
    "events": 7,
-   "longest_still_s": 1.04,
+   "longest_still_s": 1.02,
    "frame": "WIDE · the lobby master, two weeks on: DOT on the ladder swapping the number plates"
   },
   {
    "seg": "coldopen",
    "beat": "1.09",
-   "seconds": 5.09,
+   "seconds": 4.99,
    "events": 9,
-   "longest_still_s": 3.01,
+   "longest_still_s": 2.95,
    "frame": "OTS-WIDE · over Mas's shoulder straight down the axis: the doors blow open on the hand tru"
   },
   {
    "seg": "coldopen",
    "beat": "1.12",
-   "seconds": 5.33,
+   "seconds": 5.23,
    "events": 3,
-   "longest_still_s": 2.78,
+   "longest_still_s": 2.73,
    "frame": "LOW · the sign from below, DOT holding out a spare 0 → MCU MAS: one pixel of a head shake "
   },
   {
@@ -1438,9 +1508,9 @@
   {
    "seg": "act1",
    "beat": "4.15",
-   "seconds": 4.12,
+   "seconds": 4.07,
    "events": 7,
-   "longest_still_s": 2.29,
+   "longest_still_s": 2.26,
    "frame": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !"
   },
   {
@@ -1462,9 +1532,9 @@
   {
    "seg": "act1",
    "beat": "4.30",
-   "seconds": 4.81,
+   "seconds": 4.75,
    "events": 3,
-   "longest_still_s": 2.4,
+   "longest_still_s": 2.38,
    "frame": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch clo"
   },
   {
@@ -1478,9 +1548,9 @@
   {
    "seg": "act1",
    "beat": "4A.05",
-   "seconds": 5.0,
+   "seconds": 4.71,
    "events": 0,
-   "longest_still_s": 5.0,
+   "longest_still_s": 4.71,
    "frame": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch"
   },
   {
@@ -1550,9 +1620,9 @@
   {
    "seg": "act2",
    "beat": "12.01",
-   "seconds": 6.53,
+   "seconds": 6.09,
    "events": 1,
-   "longest_still_s": 6.29,
+   "longest_still_s": 5.86,
    "frame": "WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark →"
   },
   {
@@ -1734,9 +1804,9 @@
   {
    "seg": "act3",
    "beat": "17.07",
-   "seconds": 4.59,
+   "seconds": 4.66,
    "events": 1,
-   "longest_still_s": 2.68,
+   "longest_still_s": 2.72,
    "frame": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit"
   },
   {
@@ -1766,9 +1836,9 @@
   {
    "seg": "act3",
    "beat": "17.18",
-   "seconds": 6.9,
+   "seconds": 7.0,
    "events": 3,
-   "longest_still_s": 4.22,
+   "longest_still_s": 4.28,
    "frame": "WIDE · it rains letterhead; the receipt's ink runs in the rain"
   },
   {
@@ -1798,9 +1868,9 @@
   {
    "seg": "act4",
    "beat": "18.01",
-   "seconds": 5.66,
+   "seconds": 5.74,
    "events": 5,
-   "longest_still_s": 2.54,
+   "longest_still_s": 2.57,
    "frame": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the "
   },
   {
@@ -1990,15 +2060,231 @@
  ],
  "fails": [],
  "looks": [
-  "sc 4B: arrival 1.42 s before the first line (P3 2-4 s; the plan: 4B.01: 1.0 s, the phone's glow on the nameplate (continuous from 4A))",
-  "sc 4B: aftermath 0.83 s after the last line (P3 1.5 s at least)",
+  "sc 4B: arrival 1.00 s before the first line (P3 2-4 s; the plan: 4B.01: 1.0 s, the phone's glow on the nameplate (continuous from 4A))",
   "sc 6: arrival 1.38 s before the first line (P3 2-4 s; the plan: 6.01: 1.4 s, enter late on the locked two-shot, the sting ending)",
   "sc 7: arrival 1.50 s before the first line (P3 2-4 s; the plan: 7.01: 1.5 s, the split already opening, his voice on the phone leading us down)"
  ],
- "story_frames": 33168,
+ "story_frames": 32976,
+ "pace": [
+  {
+   "after": "e2-co-0005",
+   "line": "e2-co-0006",
+   "mark": "quick",
+   "source": "script 1.07-1.08: quick (Gerg at 0.25 s); proposal Pace: 1 quick",
+   "lock_s": 0.528,
+   "in_band": false,
+   "guide_break": "the second THUD lands 0.1 s after Selbeep's line and the coffee jumps; Gerg answers the THUD 0.4 s after it"
+  },
+  {
+   "after": "sound:4.07:landing_thunk",
+   "line": "e2-a1-0005",
+   "mark": "quick-mas",
+   "source": "proposal Pace: 4 \"you're early.\" quick; Mas 0.4-0.5 s",
+   "lock_s": 0.467,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a1-0005",
+   "line": "e2-a1-0006",
+   "mark": "quick",
+   "source": "proposal Pace: 4 Nole's volleys quick; script 4.08: Nole loud, fast, first",
+   "lock_s": 0.307,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a1-0056",
+   "line": "e2-a1-0024",
+   "mark": "normal",
+   "source": "script 4.20-4.24: normal for Nole's fear (0.5 s)",
+   "lock_s": 0.513,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a1-0032",
+   "line": "e2-a1-0033",
+   "mark": "quick",
+   "source": "script 4A: the line to Mas quick and dry",
+   "lock_s": 0.28,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a2-0002",
+   "line": "e2-a2-0003",
+   "mark": "quick",
+   "source": "proposal Pace: 9 quick (the engineer, Gerg)",
+   "lock_s": 0.318,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a1-0042",
+   "line": "e2-a1-0043",
+   "mark": "weighted",
+   "source": "script 6.06-6.07 and proposal Pace: weighted (Mas's long answer)",
+   "lock_s": 1.508,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a3-0016",
+   "line": "e2-a3-0017",
+   "mark": "quick",
+   "source": "script 17.04-17.06: the driver quick (0.3 s)",
+   "lock_s": 0.305,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a3-0017",
+   "line": "e2-a3-0018",
+   "mark": "normal",
+   "source": "script 17.04-17.06: the answer normal (0.5 s)",
+   "lock_s": 0.498,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a4-0004",
+   "line": "e2-a4-0005",
+   "mark": "quick",
+   "source": "script 18.08-18.10: quick (Terb)",
+   "lock_s": 0.25,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a4-0005",
+   "line": "e2-a4-0006",
+   "mark": "quick-mas",
+   "source": "script 18.08-18.10: Mas at 0.45-0.6 s",
+   "lock_s": 1.53,
+   "in_band": false,
+   "guide_break": "the script's own HOLD 2 BEATS on \"our chief executive.\": every face at the table turns to Mas before \"present.\""
+  },
+  {
+   "after": "e2-a4-0006",
+   "line": "e2-a4-0007",
+   "mark": "quick",
+   "source": "script 18.08-18.10: quick (Terb)",
+   "lock_s": 0.27,
+   "in_band": true,
+   "guide_break": null
+  },
+  {
+   "after": "e2-a4-0007",
+   "line": "e2-a4-0008",
+   "mark": "normal",
+   "source": "script 18.08-18.10: Mas at 0.45-0.6 s",
+   "lock_s": 0.6,
+   "in_band": true,
+   "guide_break": null
+  }
+ ],
+ "pace_unlisted": [
+  {
+   "after": "e2-a1-0002",
+   "line": "e2-a1-0003",
+   "beats": "4.04 -> 4.05",
+   "lock_s": 1.803,
+   "not_an_exchange": "a new exchange: a staffer's eyes go to the empty chair first, and Gerg answers her look"
+  },
+  {
+   "after": "e2-a1-0003",
+   "line": "e2-a1-0004",
+   "beats": "4.05 -> 4.06",
+   "lock_s": 1.172,
+   "not_an_exchange": "not a reply: Mas puts the séance's next question to the table"
+  },
+  {
+   "after": "e2-a1-0018",
+   "line": "e2-a1-0019",
+   "beats": "4.18 -> 4.19",
+   "lock_s": 1.107,
+   "not_an_exchange": "not a reply to the ghost: Mas asks the board the question he wants answered (the concept's door)"
+  },
+  {
+   "after": "e2-a1-0025",
+   "line": "e2-a1-0026",
+   "beats": "4.24 -> 4.25",
+   "lock_s": 0.915,
+   "not_an_exchange": "not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)"
+  },
+  {
+   "after": "e2-a2-0005",
+   "line": "e2-a2-0006",
+   "beats": "9.03 -> 9.04",
+   "lock_s": 1.448,
+   "not_an_exchange": "a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer"
+  },
+  {
+   "after": "e2-a2-0031",
+   "line": "e2-a2-0032",
+   "beats": "11.06 -> 11.07",
+   "lock_s": 1.125,
+   "not_an_exchange": "the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks"
+  },
+  {
+   "after": "e2-a3-0010",
+   "line": "e2-a3-0011",
+   "beats": "15.06 -> 15.07",
+   "lock_s": 1.592,
+   "not_an_exchange": "not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07"
+  }
+ ],
+ "marks": [
+  {
+   "check": "the cheer cuts \"And profit—\"",
+   "ok": true,
+   "detail": "crowd_cheer at 119.708 s; her line 119.568-120.338 s, \"profit\" from 119.708 s"
+  },
+  {
+   "check": "its cause comes first",
+   "ok": true,
+   "detail": "the stream's announcement up at 119.333 s, the cheer at 119.708 s"
+  },
+  {
+   "check": "\"Thanks.\" over \"favorite\"",
+   "ok": true,
+   "detail": "\"Thanks.\" at 167.257 s; \"favorite\" 167.000-167.333 s; CHATGTP's line ends 167.807 s"
+  },
+  {
+   "check": "the subtitles of the two cut-offs",
+   "ok": true,
+   "detail": "e2-a2-0027 ['Great question! Of course! Honestly, short answers are one of my favorite—', '—things.']; e2-a4-0021 ['And profit—']"
+  },
+  {
+   "check": "stamp 2. on \"today\"",
+   "ok": true,
+   "detail": "the stamp at 123.917 s, \"today\" from 123.917 s"
+  },
+  {
+   "check": "stamp 3. on \"free\"",
+   "ok": true,
+   "detail": "the stamp at 125.083 s, \"free\" from 125.083 s"
+  },
+  {
+   "check": "V.O. 6 after the post's read floor",
+   "ok": true,
+   "detail": "the post up at 265.625 s, \"i came back.\" at 274.550 s: 8.93 s against 8.85"
+  },
+  {
+   "check": "4B: the click a beat after his thought, 1.5 s after it",
+   "ok": true,
+   "detail": "V.O. 3 ends 232.720 s, the click 233.083 s, the scene ends 235.000 s"
+  },
+  {
+   "check": "the engineer's laugh stops on \"laugh\"",
+   "ok": true,
+   "detail": "engineer_laugh_take 60.042 s + 3.74 s; Gerg's \"laugh\" ends 63.792 s"
+  }
+ ],
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
   "lines": 174,
-  "rows": 279
+  "rows": 401
  }
 }

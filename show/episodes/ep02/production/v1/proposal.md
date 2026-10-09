@@ -1,6 +1,6 @@
 # Ep2 v1: the full episode flow (`ep1.1_her.wav`)
 
-> **Status: PROPOSAL, revised after review rounds 1 and 2 and the final check, 2026-10-08, for the one-go build; updated after the script review of [script-v1.md](script-v1.md) (D-71 to D-87).** The showrunner asked for all of Episode 2 in one go, with no notes in between: "i want you to attempt making the entirety of episode 2 in one go now using all the learnings up to now". In this run, this document stands in for the scene-by-scene agreement Ep1 got before its final pass ([LEARNINGS](LEARNINGS.md) R2). The build follows it exactly; any change goes back into it with a reason.
+> **Status: PROPOSAL, revised after review rounds 1 and 2 and the final check, 2026-10-08, for the one-go build; updated after the script review of [script-v1.md](script-v1.md) (D-71 to D-87), the lock (D-88, D-89) and the lock QA (D-90 to D-96; [lock-v1.md](lock-v1.md)).** The showrunner asked for all of Episode 2 in one go, with no notes in between: "i want you to attempt making the entirety of episode 2 in one go now using all the learnings up to now". In this run, this document stands in for the scene-by-scene agreement Ep1 got before its final pass ([LEARNINGS](LEARNINGS.md) R2). The build follows it exactly; any change goes back into it with a reason.
 >
 > **Nothing has been built:** no takes, no beat plans, no picture, no score. No bible, outline, script or Ep1 file was edited.
 >
@@ -86,9 +86,9 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 ---
 
-## COLD OPEN (CHANGED · about 56 s)
+## COLD OPEN (CHANGED · about 55 s)
 
-### 1. The mammoth, and what came through the door · `FEB 15 → FEB 29, 2024` · the NopeAI lobby · CHANGED · about 56 s
+### 1. The mammoth, and what came through the door · `FEB 15 → FEB 29, 2024` · the NopeAI lobby · CHANGED · about 55 s
 - **Status vs draft 4:** CHANGED. 5.2's spoken misdirect kept (Selbeep and Gerg talk through the thuds). **Cut:** YRREP's frozen cranes and "Our first review." (a reference that's nobody's problem; the name load); the six-fingered extra (style-range §6.2 H2: no flaw on a person). **Moved:** the AI tell to the mammoth (a fifth leg flickers for 2 frames as it steps out).
 - **Round 1:** the thuds come from outside, closing in (the hand truck on the front steps), and the last one is the complaint hitting the floor; Mas is placed at the back of the lobby for the mammoth; the rail is a date only; the complaint carries its caption.
 - **Who:** MAS (at the back), GERG, SELBEEP, DOT (back to camera), the Orb, staff on beanbags.
@@ -130,7 +130,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 ---
 
-## ACT ONE · "the séance" (about 6:08)
+## ACT ONE · "the séance" (about 6:04)
 
 | # | Scene | Date | Mode | What causes the next |
 |---|---|---|---|---|
@@ -145,7 +145,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Changes:** Act One opens on his Publish click; the third ghost carries both the "0%" and the billions lines, so the bill is set up before Move 37; the coda becomes its own scene with "You can sit down now, Mas."; the `$5–7T` rail is cut; F2.3 moves into Ep1's own first office, with Alyi present in it. **Round 2:** Move 37 is Gerg's correction of Nole; F2.3 shows the room refusing to follow Nole and the look between Alyi and Mas, the two who stayed; the cow line disputes nothing; XEL's count is the player's chapter counter and the $7T exchange is cut; Tasya's spare was packed after November, and the podcast only reminds him.
 - **New:** Move 37 (the episode's ML concept, about 27 s; **SR:** about 33 s, split with the staffer's misunderstanding, sc 4 +4 s); the XEL booking.
 
-### 4. The Email Séance · `MAR 5, 2024` · the NopeAI boardroom, night · CHANGED · about 3:16
+### 4. The Email Séance · `MAR 5, 2024` · the NopeAI boardroom, night · CHANGED · about 3:13
 - **Status vs draft 4:** CHANGED. Kept: 5.2–5.4's scene shape (Nole's case → OPEN → NOPE → the ghosts rebut it → the quiet line → F2.3 → the wound), the three hands, the cow, the `!` ghost, "You kept them." / "we keep everything.", "You sat at the back." and "Keep that too. See you in court.". **New:** the Publish click and V.O. 1; the third ghost's "0%" header; Move 37 and V.O. 2; F2.3 set in Ep1's first office. **Cut:** "i just ask the questions." (a wink), and (5.4) the unsent ghost and "…anyone?".
 - **Round 1:** reordered so the bill is set up before it's conceded; Move 37 cut to one concept and told once; Alyi appears only as a living author, never in the brass or the stone; the third hand on the planchette is Gerg's; the planchette has no pointer glyph; Mas's still hand carries the slap; F2.3 enters on his glass and has Alyi present at a desk.
 - **Round 2:**
@@ -212,7 +212,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** Mas blows out the last candle; darkness. **Cause:** three days later the review is back. **Sound:** the room colour's last chord rings into PROCEDURE's low strings as the lights step up. **Object:** the same table, the candles gone, Terb's single sheet where the Ouija board was.
 - **Score:** the séance's room colour, one performance: **audition first** a glass harmonica (the period séance instrument) or celesta and chip over a low reed pad, against the corny bar, before the build (manifest E02-02); it thins to a chip Go figure on the open fifth under Move 37 (no third); crossfades to the cut-paper chamber tier on the smoke, with Nole's Launch on slow horns (its one sincere version, OST §2.7), thinning under the look to the Door's first bar, its first note missing; back to the room colour; Nole's fanfare stops one note short on his exit.
 
-### 4A. You can sit down now · `MAR 8, 2024` · the boardroom, morning · CHANGED (was 5.4's coda) · about 35 s
+### 4A. You can sit down now · `MAR 8, 2024` · the boardroom, morning · CHANGED (was 5.4's coda) · about 33 s
 - **Status vs draft 4:** CHANGED. Draft 4 had a rail with both halves; 5.0–5.4 have Terb read the finding. Kept: the reading, both halves together. **Changed:** "So, your seat's where you left it, Mas." becomes "You can sit down now, Mas.", and Mas **stands** through the reading, so the line pays Ep1's "we'll stand." at 0 s.
 - **Round 1:** the three new directors are plated as new directors (Omis named, two unnamed); no bracketed placeholder; Gerg, who said "we'll stand." with him in Ep1, is at the back with his laptop, still standing, and Mas glances at him as he sits.
 - **Script review (SR):** **the blocker** (D-73). The crop "…the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." dropped "WilmerHale found that", so read aloud the old board became the finder of both halves: that it "also found that his conduct did not mandate removal", which is false (it fired him). Terb now reads "The law firm found" in his own words and the quote from "that", so the reviewer stays the subject of both findings; the firm has no registry name, so its name stays outside the quote.
@@ -231,7 +231,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** **Cause:** under the last click his phone, face up on the table, lights with an invite. **Sound:** the invite's soft chime over the click. **Object:** the nameplate's slot → the invite card.
 - **Score:** PROCEDURE, thinning to its pedal under the reading (the record plays dry).
 
-### 4B. The booking · same day · his phone on the boardroom table · NEW · about 8 s
+### 4B. The booking · same day · his phone on the boardroom table · NEW · about 9 s
 - **Round 1:** V.O. 3 rewritten as a practical plan; arrival and aftermath written down.
 - **Who:** MAS.
 - **Mode:** SINGLE IMAGE / INSERT.
@@ -240,8 +240,8 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Feeling:** a smile at the rhyme: in Ep1 he accepted an invite without looking; this time he looks.
 - **Understanding:** FULL: he's going on a long podcast.
 - **Lines:** **NEW** MAS (V.O.) "two hours on his show, once. after that, november is a link." `[INVENTED · V.O. 3, plan; SR: "room" is the Ep1 motif he's chasing, so it isn't spent on a studio, and "everyone gets" no longer repeats V.O. 1]`
-- **Arrival / aftermath:** arrive on the phone's glow on the nameplate (continuous from 4A). Aftermath: his thumb lifts off `Accept`; the card settles into his calendar.
-- **Out:** **Cause:** he accepts. **Sound:** an original podcast-intro sting pre-laps under the tap (J 0.8 s). **Object:** the invite's mic icon → XEL's mic, same place in frame.
+- **Arrival / aftermath:** arrive on the phone's glow on the nameplate (continuous from 4A; 1.0 s). Aftermath: a beat after his thought, his thumb on `Accept`; the card settles into his calendar (1.9 s after the click, P3; **lock QA**, D-93).
+- **Out:** **Cause:** he accepts. **Sound:** an original podcast-intro sting pre-laps under the card settling (J 0.8 s). **Object:** the invite's mic icon → XEL's mic, same place in frame.
 
 ### 6. Chapter 1 of 6 · `MAR 18, 2024` · XEL's studio · CHANGED · about 1:21
 - **Status vs draft 4:** CHANGED. 5.1–5.2's real first question and the relationship exchange kept whole. **Cut:** the `$5–7 TRILLION` rail ([K] stated as fact; the joke doesn't need it). The card lands on the first hop (5.2).
@@ -286,7 +286,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 ---
 
-## ACT TWO · "her" (about 4:53)
+## ACT TWO · "her" (about 4:39)
 
 | # | Scene | Date | Mode | What causes the next |
 |---|---|---|---|---|
@@ -332,7 +332,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** **Cause:** the Monday arrives. **Sound:** a stage manager's distant count and the demo's walk-on music warming up through a wall pre-lap (J 1.0 s). **Object:** the lit `MON` square's glow → the work light backstage.
 - **Score:** DARK ROOM (the Water Line, low) with each show's tiny ducked media bed (a news-desk sting under the lineup); under the call the Water Line thins to its pedal; one chip note on `CONFIRMED`. **R2:** RUMPT's Podium in its FEAR colour moves to the tag.
 
-### 9. Backstage · `MAY 13, 2024` · the demo stage's wings, morning · KEPT (5.4) · about 52 s
+### 9. Backstage · `MAY 13, 2024` · the demo stage's wings, morning · KEPT (5.4) · about 51 s
 - **Status vs draft 4:** KEPT as 5.2–5.4 built it: "is it ready?", "it's all yours." / "It is. Enjoy the view.", the walk-and-talk, the five hellos.
 - **Round 1:** VOICE 5's `Hey.` is the same voice as the demo's CHATGTP (the voice paused in sc 17); the May 13 rail moves here, to the act's first day.
 - **Round 2:** VOICE 5 and CHATGTP are Ep1's approved CHATGTP voice (Maya) with Ep1's direction, unchanged: the programmatic stand-in for the ear check, which moves to the delivery note's human list.
@@ -365,7 +365,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Arrival / aftermath:** arrive as the panel's last square becomes the grid's first cell, the waltz already on its downbeat. Aftermath: the tear's light, a beat, before the stage.
 - **Out:** **Cause:** the empty bubble. **Sound:** a tape-stop into the demo cue. **Object:** the tear → the real stage lights pouring through it.
 
-### 11. "her" · `MAY 13, 2024` · the demo stage · CHANGED · about 1:51
+### 11. "her" · `MAY 13, 2024` · the demo stage · CHANGED · about 1:38
 - **Status vs draft 4:** KEPT as 5.2–5.4 built it: the locked meter frame, the spotlight one step per laugh, the cut-off, the three-part "one wo-o-ord.", the typed post at its own pace, "…and that's the demo.".
 - **Round 1:** **the stream ends before the post** (the post's timestamp is about 20 minutes after the stream): Rima's held "…and that's the demo." closes it (`LIVE` → `ENDED`), and only then does Mas type; the blimp takes the coverage, not her live stage; the engineer reads the post off mic, after the stream, and his gloss is the film's premise ("falls for the computer"), not the voice; `is it safe?` → "It's free!" plays live, before her close; a `VOICE 5` badge on the big screen; ECU cut-ins of his thumb and his face.
 - **Round 2:** **Rima doesn't react to the blimp.** She holds her mark, composed: no wince held on the coverage she earned (it read as resentment, close to the "understudy" framing GR §6 bans for her, and pre-loaded a reason for her Ep3 exit). **THE COPY is out of the demo's harmony** (an "imitation" cue under the demo voice touched contested item 2): the harmony's echo is the demo tune's own chip echo, and THE COPY moves to sc 7's out. **Rima's invented keynote lines stay:** an invented line on AI at a dated demo is allowed (D-32, narrowed).
@@ -423,7 +423,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 ---
 
-## ACT THREE · "leave them up" (about 5:26)
+## ACT THREE · "leave them up" (about 5:20)
 
 | # | Scene | Date | Mode | What causes the next |
 |---|---|---|---|---|
@@ -434,7 +434,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 **Round 2 in this act:** retitled from "where's alyi?" (his post has already said where he stands; the old title also hinted at an outcome, M1). The act is Mas trying to **reach** Alyi, not find him: February's flyers stay up, his rehearsal plays back in his own reflection, and he decides to ask in person. Nothing about compute travels with the IOU. Mas is heard acting at the bridge. **Final check:** no image of Alyi in any surface; the note is never defined; the exit papers start at NopeAI's doors, not near his office.
 
-### 13. Leave them up · `MAY 15, 2024` · the lobby, day · CHANGED · about 36 s
+### 13. Leave them up · `MAY 15, 2024` · the lobby, day · CHANGED · about 31 s
 - **Status vs draft 4:** CHANGED. 5.2's staffers' exchange and "leave them up." kept; the roadmap on the lobby TV kept (the political counterweight).
 - **Round 1:** V.O. 7 cut; Mas tapes a flyer up himself, upside down; the roadmap lectern carries nine `FORUM` stickers.
 - **Round 2:**
@@ -564,7 +564,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** **Cause:** the exit papers are public: the press is asking. **Sound:** his phone's buzz; then the receipt's thermal chatter at NopeAI's doors pre-laps the bridge's band (J 1.0 s). **Object:** the push's receipt-strip thumbnail → the receipt pouring out of NopeAI's front doors.
 - **Score:** DARK ROOM, one felt piano (his interior), the Ep1 line under it unscored → F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift, thinning under the exchange; under the post and "Someone should." the choir thins to its no-third chord; the Publish click on the Door's held ♯4 (warm resolve, no cadence); the fire's dread (the Ache under the choir) → the felt returns on the pin, and thins to its pedal on the stairs; the buzz is the out.
 
-### 17. The NDA across the bridge · `MAY 17 → MAY 20, 2024` · the Bay Bridge · CHANGED · about 2:11 (the S3)
+### 17. The NDA across the bridge · `MAY 17 → MAY 20, 2024` · the Bay Bridge · CHANGED · about 2:10 (the S3)
 - **Status vs draft 4:** CHANGED. Kept from 5.3–5.4: the receipt across the bridge, the Forecaster's terms in his own mouth, "Already did…", the refusal before the apology, the four trims one per honk, the driver, the storm with a blank letterhead, the grey `VOICE 5`. **Cut:** the exit-papers rail ([K] stated as fact; the Forecaster says the terms).
 - **Round 1:** Mas outside the refusal; a 20 s scramble; the forecast as his first contact with the Forecaster; a night passes before he posts; he pauses VOICE 5 with his own thumb, with his company's note beside it; the rain plays on the receipt's ink.
 - **Round 2:**
@@ -602,7 +602,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 ---
 
-## ACT FOUR · "as a guest" (about 5:20)
+## ACT FOUR · "as a guest" (about 5:19)
 
 | # | Scene | Date | Mode | What causes the next |
 |---|---|---|---|---|
@@ -613,7 +613,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 
 **Round 2 in this act:** Mas acts after he takes the lanyard: he posts his own line about the deal from the crowd, and his post is what Nole answers. The pocket dial is cut. He takes his own flyer off the pillar, and at the white door he posts it through the slot and sees Alyi in person; nothing is offered and nothing comes back. **Final check:** on Jun 19 we see him read Alyi's post, take the flyer out and stand; at the door Alyi never looks up, and the note stays unseen in his jacket.
 
-### 18. Present · `MAY 28, 2024` · Misanthropic's lighthouse | the NopeAI boardroom · CHANGED · about 1:36
+### 18. Present · `MAY 28, 2024` · Misanthropic's lighthouse | the NopeAI boardroom · CHANGED · about 1:35
 - **Status vs draft 4:** CHANGED. Kept: the split rhyming on one action (a lanyard over a head), Terb on the committee's first task, "present." / "also present.", Mario annotating the resignation, "It's that we might win.", the Golden Gate box. **New (AUDIT):** Ekiel climbs carrying sc 14's box (the seam); **Mas takes the lanyard from Terb's hand** (A2); Neleh's podcast with the board's reply beside it (A8; the answer Ep1 withheld).
 - **Round 1:** Neleh's podcast gets its own beat, full frame, before the split, and is heard in her Ep1 library voice with captions; Mario's V.O. cut; a plan line in Mas's own pane; the aftermath plants sc 19 (the reminder).
 - **Round 2:**
@@ -663,7 +663,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** **Cause:** the deal he closed in May comes due: his calendar says Jun 10. **Sound:** the quartet carries; the keynote's walk-on music comes up under it (J 0.8 s). **Object:** the reminder card on his phone → the lobby's wall screen, same place in frame.
 - **Score:** LEVERAGE, played by a string quartet (pizzicato over a muted 808), one performance through sc 18–20; under Neleh's voice and the card it thins to its pedal; the 808 drops out on "present."; Mario's Addendum in the right pane (it gains a bar each time).
 
-### 19. Every phone they sell · `JUN 10, 2024` · the NopeAI lobby watch party | ELPPA's campus · CHANGED · about 2:18
+### 19. Every phone they sell · `JUN 10, 2024` · the NopeAI lobby watch party | ELPPA's campus · CHANGED · about 2:14
 - **Status vs draft 4:** CHANGED. **Re-staged to the record:** Mas was at ELPPA's campus for the keynote (press reports), so he watches from the edge of the crowd there and Gerg's exchange becomes a call from the lobby. Kept: Haras and Gerg ("Compute. Different compute."), the cheer cutting off "And profit—", "i was up there once. they let me hold the clicker.", F2.1, the walled garden, "as a guest.", "they ask first in there.", the line cross at the gate. MIT KOOC's plate dropped (A14).
 - **Round 1:** the deal pays sc 8's call; the stream's crowd shot catches Mas and Gerg calls; Radnus polite, outside the hedge.
 - **Round 2:**
@@ -678,7 +678,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Who:** LOBBY: GERG, HARAS, staff. CAMPUS: MAS, a crowd. GARDEN: CHATGTP (text only), MIT KOOC, RADNUS, IRIS. F2.1: YOUNG MAS, THE SLEEVE.
 - **Mode:** EXTENDED CONVERSATION (the lobby) → HIS POST → a CALL → FLASHBACK → SET-PIECE (the garden).
 - **What happens and why:**
-  - **The lobby.** Enter with ELPPA's keynote already on the wall screen. The signs read `202` and `102`; the flyers are still up, curling, Mas's upside-down one among them; the complaint is still a side table in the middle of the floor; behind the back row of beanbags, the tip of a mammoth's tusk; on the corner TV, muted and held 1.5 s so it reads, the roadmap lectern is still stuck at `FLOOR`, a tally on it now: `0 BILLS`. The new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her, and starts with the easy ones: biggest cost? Compute. Second? Compute, a different compute: some trains the next model, the rest keeps this one talking. And profit— The stream says `…AND LATER THIS YEAR: CHATGTP.`, the lobby erupts, and nobody answers her. Upside.
+  - **The lobby.** Enter with ELPPA's keynote already on the wall screen. The signs read `202` and `102`; the flyers are still up, curling, Mas's upside-down one among them; the complaint is still a side table in the middle of the floor; behind the back row of beanbags, the tip of a mammoth's tusk; on the corner TV, muted and held 1.5 s so it reads, the roadmap lectern is still stuck at `FLOOR`, a tally on it now: `0 BILLS`. The new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her, and starts with the easy ones: biggest cost? Compute. Second? Compute, a different compute: some trains the next model, the rest keeps this one talking. And profit— As she asks, the stream on the wall screen behind them says `…AND LATER THIS YEAR: CHATGTP.` and its own crowd roars; the lobby's cheer takes her last word (**lock QA**, D-92), and nobody answers her. Upside.
   - **The crowd shot.** The stream cuts away to its outdoor audience; at the edge of it, small, Mas, head down over his phone, typing. A staffer points: is that Mas? The lobby laughs. Gerg, the only one not cheering, takes out his phone.
   - **The campus: his post.** At the edge of the crowd under a giant screen, ELPPA still on its stage, Mas finishes his post at a post's pace and sends it. On the giant screen, the stream's chat lights with it; across the lawn, phones buzz. V.O. 12 (**SR**).
   - **The call.** Gerg calls: there's a screen the size of a building in front of him, and he's on his phone. The phone's closer. They just said our name up there. He heard. Half the lobby's standing on a beanbag. Which half? The half on the beanbags. Does he ever miss being up there? He was up there once; they let him hold the clicker. (**SR**)
@@ -712,7 +712,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 - **Out:** **Cause:** his post; the rival who hates the deal answers it that afternoon. **Sound:** the quartet's cello pedal carries; zAI's industrial drone comes up on the right (L 0.6 s). **Object:** his phone going into his pocket → the same post lighting Nole's phone in the right pane.
 - **Score:** LEVERAGE continues, the quartet alone under the keynote's own walk-on bed, thinning to its pedal under his post; F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours) over the quartet's held pedal, each pin's greying a step dimmer on the sample-chip's falling figure; the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate.
 
-### 20. (FOR NOW) · `JUN 10 → JUN 19, 2024` · ELPPA's campus | the zAI lobby; the NopeAI lobby; his dark room · CHANGED · about 48 s
+### 20. (FOR NOW) · `JUN 10 → JUN 19, 2024` · ELPPA's campus | the zAI lobby; the NopeAI lobby; his dark room · CHANGED · about 52 s
 - **Status vs draft 4:** CHANGED. Kept: the held split, the threat (not a done ban), the empty Faraday cage, no lamp tell at the drop, `(FOR NOW)`. **Changed:** the left pane opens on the campus (sc 19's re-staging).
 - **Round 1:** the call became a pocket dial; the docket tab before the drop; Nole's line to a visitor; the location ping moved here.
 - **Round 2:**
@@ -934,6 +934,7 @@ Each act retold as cause and effect (LEARNINGS W1; calibration §9). Real events
 | **Weighted** | longer, only on turns | 4 ("You kept them." / "we keep everything."; "You sat at the back."), 4A (the reading), 6 (Mas's long answer; XEL's trimmed pauses are the meter), 11 (Rima's "…and that's the demo."), 12, 15 (the count; "Someone should."), 17 (the Forecaster), 18 (the podcast and his face), 19 ("You ever miss being up there?"), 20 (Alyi's post), 22 |
 
 - **Overlaps and cut-offs, two, each motivated:** "Thanks." over CHATGTP's "favorite" (sc 11; he asked for short), and the cheer over "And profit—" (sc 19; the world talks over the one key word). Record both lines complete.
+- **Measured in the lock** ([lock-v1.md](lock-v1.md) §4.1, the lock QA): every exchange this table names is checked in the lock itself (`lock_report.py`, `PACE_LIST`), and each one that crosses a cut is pinned in the plan (D-91). Two GUIDE breaks are logged with their reasons: Gerg answers the second THUD 0.4 s after it (sc 1; 0.5 s after Selbeep), and "present." comes after the table's two-beat hold (sc 18).
 - **Speaking rates (W18):** most characters 165–185 wpm; Mas about 140, with one exception: his call line to legal in the scramble (sc 17), level and a hair quicker, the one time he hurries; his V.O. 110–130.
 
 ---
@@ -1376,6 +1377,18 @@ As the showrunner's proxy, decided the way the recorded notes point (LEARNINGS R
 |---|---|---|
 | D-88 | **Sc 11 is 1:38 and sc 13 is 0:31: the air the fit tripled comes back to the episode.** Each keeps its designed air at about the episode's median breath (×1.41, ×1.36); every line, tempo gap, overlap, laugh hold, arrival, aftermath and on-screen item is unchanged (`beat-plan/_spec.py` `SCENE_ADJUST`) | the takes run far under their words-at-rate plans (CHATGTP 164–246 wpm against 150; the engineer and the staffers at 55–70 %), so fitting the two quick scenes to this table's estimates tripled their air (×3.51, ×3.03 against ×0.97–1.91 everywhere else): 11.08's tail 4.59 s, the walk-off 7.27 s against a 2.4 s design. This table is "±0:40 until the takes"; "No dead air, and never lengthen things for the sake of runtime" (the showrunner, *Pacing*); W17: tighten means dead time. Nothing moves to another scene (R4), and nothing on the keep list is touched (R5) |
 | D-89 | **Sc 14's sentence line holds until the next command replaces it** (`Look at heatsink` to 2.8 s, `Pick up reflection` to the beat's end, `Talk to reflection` 0.4 s into its dialogue tree) | each was up 0.7–0.8 s against its read floor of 1.05–1.15 s (P15, FIRM); the adventure game's own convention meets the floor at no cost in time |
+| D-90 | **Sc 20 is 0:52 and sc 19 2:14: 4 s move inside Act Four, which holds 5:20** (the script pass's change, `beat-plan/_spec.py` `SCENE_ADJUST`; recorded here at the lock QA, R2, because it had no row) | sc 20's read floors (Nole's post with its condition, 139 characters, 7.2 s; Alyi's post and card, 4.2 s; the docket tab, 2.1 s) and the final check's 2 s arrivals at Jun 11 and Jun 19 don't fit 48 s without rushing the split to under 3 s a pane; sc 19 had the air (its fit ×1.32 then) |
+
+### New at the lock QA (each with its reason; the record is [lock-v1.md](lock-v1.md) §3.5)
+
+| ID | Decision | Reasoning |
+|---|---|---|
+| D-91 | **The tempo marks are pinned, and the stretched time comes back: story 22:54.** Pinned in the plan (`XGAP`, 4.07's head, Terb's roll call): the driver 0.3 s after the Forecaster (was 1.92), Nole's fear 0.5 s after the frozen wall's line (1.59), "you're early." 0.45 s after the landing (1.0) and Nole 0.3 s after him (1.07), Terb's roll call 0.25 s (0.5) and his next line 0.25 s after "present." (1.26), Terb's line to Mas 0.3 s after the reading (1.69), the engineer 0.3 s after "We're on in five." (0.92), Gerg 0.5 s after Selbeep (1.10). Each scene gives the time back in whole seconds (`SCENE_ADJUST_LQ`): sc 1 0:55, sc 4 3:13, sc 4A 0:33, sc 9 0:51, sc 17 2:10, sc 18 1:35. Two GUIDE breaks, logged: Gerg answers the second THUD 0.4 s after it; "present." after the table's HOLD 2 BEATS | the script's TEMPO lines and the Pace table above marked these quick or normal, but the plan pinned only the across-cut gaps it listed, so the fit stretched the rest (W18: fast exchanges, unhurried Mas; SN 00000: "dialogue back and forth could also be faster paced"); the time is dead air, so it comes back to the episode rather than spreading over the scene (MEM-QB *Pacing*: "No dead air, and never lengthen things for the sake of runtime"; D-88's rule); nothing on the keep list moves (R5) |
+| D-92 | **The cheer cuts "And profit—" on the word, with its cause first.** As Haras asks, the wall screen behind her shows the stream's `…AND LATER THIS YEAR: CHATGTP.` and the stream's own crowd roars (0.2 s before her line); the lobby's cheer lands on "profit" (0.15 s in) and runs on across the cut. Her take plays whole; the subtitle reads "And profit—", and the duplicate caption item is gone. 11.04's subtitles read "…one of my favorite—" / "Thanks." / "—things." as the script asks | the keep list's second designed cut-off wasn't in the lock: the cheer came 0.83 s after her last word and the announcement after both, so the caption promised a cut-off the sound never delivered (W13: the cause comes before the turn); the plan, not the mix, places it, so a rebuild keeps it |
+| D-93 | **Sc 4B is 0:09 and sc 4A 0:33 (a second moves from 4A's long tail).** V.O. 3 starts on the planned 1.0 s arrival; the Accept click comes a beat after his thought (0.36 s); the card settles 1.9 s after the click before the sting's J-cut | his decision, the insert's turn, had no beat after the thought (0.08 s), and its aftermath was 0.83 s against P3's 1.5 s; Act One's total holds for this move |
+| D-94 | **Word-anchored items and read floors from the takes:** THE PLAN's stamp 3 (`3.`, `$0`) lands on "free", as stamp 2 does on "today"; V.O. 6 comes 8.9 s after his May 14 post appears (172 characters: 8.85 s, P15; the plan had counted 165); the engineer's laugh is a timed request for the sound pass, from 9.03's first frames to Gerg's "laugh." | each was anchored to a line's end or to a guess where the take's own word times exist (W15's setups: the laugh sets up the `[laughter]` tag and "It can even laugh back") |
+| D-95 | **V.O. 9 is read with a full stop after "signed"** (speed 1.2): "everyone who signed. the post. everyone who signed." is heard as three items, 0.47 s after "signed"; 138 wpm, its articulation still the quicker of the two reads | sent with commas it left 0.21 s after "signed" and the recogniser heard "Everyone who signed the post, …": the count-repeat (his rattled tell, MIV §3) could parse as "signed the post"; on the ear list either way (takes-qa.md §6) |
+| D-96 | **The plan's picture notes reach the shot pass** (each pixel-lock shot's `picture`, and the bare scene stubs' headers); 18.14 carries the op-ed egg `NELEH & THE QUIET VOTE`; 8.01 names Ep1's framed `GUEST` lanyard; the transcript carries every in-world text (toasts, lower thirds, plates, signs, UI) and the outro's `viewer: verified: human` | the GUEST lanyard, the odometer egg and "No image of Alyi in any surface" were only in the EL master's `passes`, and the op-ed egg in no plan at all; the Aug 21 lower third's real words were in the lock but not in the readable record |
 
 ## Runtime per act
 
@@ -1435,6 +1448,21 @@ Estimates [J], from 5.4's per-scene ledger, word counts at Ep1's paces, and the 
 | **Episode** | ≈ 24:02 | **23:44.88** | Ep1 shipped 23:31.58 |
 
 **The episode clock (the lock):** cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:16 · Act Four 17:37 · tag 22:57 · the hum 23:34 · outro 23:34.75 · end 23:44.88. The midpoint act-out lands at 51.7 %; the S3 (the bridge) runs 15:26–17:37 (65–74 %).
+
+**After the lock QA ([lock-v1.md](lock-v1.md) §3.5, 2026-10-09; measured [M]):** story **22:54.00** (32,976 frames), episode **23:36.88** (34,005 frames). The tempo marks the plan had left unpinned are pinned, and the 8 s the fit had stretched them by comes back (D-91); one second moves from sc 4A to sc 4B inside Act One (D-93).
+
+| | The lock | **The lock QA** | What moved |
+|---|---|---|---|
+| Cold open | 0:56 | **0:55** | Gerg answers the second THUD 0.4 s after it (sc 1) |
+| Act One | 6:08 | **6:04** | sc 4 3:16 → 3:13 ("you're early." 0.45 s after the landing, Nole 0.3 s after him, Nole's fear at 0.5 s); sc 4A 0:35 → 0:33 (the line to Mas quick and dry; a second to 4B); sc 4B 0:08 → 0:09 (his decision's beat and aftermath) |
+| Act Two | 4:40 | **4:39** | sc 9 0:52 → 0:51 (the engineer at 0.3 s); sc 12 unchanged (V.O. 6 later inside it) |
+| Act Three | 5:21 | **5:20** | sc 17 2:11 → 2:10 (the driver at 0.3 s) |
+| Act Four | 5:20 | **5:19** | sc 18 1:36 → 1:35 (Terb at 0.25 s) |
+| Tag | 0:37 | **0:37** | — |
+| **Story** | 23:02.00 | **22:54.00** | |
+| **Episode** | 23:44.88 | **23:36.88** | Ep1 shipped 23:31.58 |
+
+**The episode clock (the lock QA):** cold open 0:00 · intro 0:55 · card 1:25 · Act One 1:27 · Act Two 7:31 · Act Three 12:10 · Act Four 17:30 · tag 22:49 · the hum 23:26 · outro 23:26.75 · end 23:36.88. The midpoint act-out lands at 51.5 %; the S3 (the bridge) runs 15:20–17:30 (65–74 %).
 
 **Must-read real text, per act (R2; a guide, P10).** Crops of real words a viewer has to read on screen (posts, cards, captions, documents); heard real lines (the Lex exchange, Terb's finding, Neleh's voice) are counted apart.
 

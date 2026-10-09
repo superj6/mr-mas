@@ -89,6 +89,8 @@ export interface PxShot {
   scene: string;
   /** the scene's first frame, on the same clock as s/e (segment frames). The host hands a layout f - sceneS */
   sceneS: number;
+  /** Ep2: the beat plan's picture note(s) for this shot (eggs, Ep1 payoffs, constraints), " / " between beats */
+  picture?: string;
 }
 export interface PxRail { text: string; s: number; e: number; shot: string }
 export interface PxSeq { id: string; chapter: string; title: string; place: string; time: string; s: number; e: number; cue: string; side: string }

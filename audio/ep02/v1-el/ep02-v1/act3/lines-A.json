@@ -3206,7 +3206,7 @@
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
   "text": "everyone who signed. the post. everyone who signed.",
-  "spoken_as": "Everyone who signed, the post, everyone who signed.",
+  "spoken_as": "Everyone who signed. The post, everyone who signed.",
   "tag": "V.O.",
   "delivery": "faster than he thinks, the one time the voice hurries; each item a new call, not louder (MIV §3's rattled repeat); nothing about what he knew",
   "on_camera": "vo",
@@ -3215,87 +3215,87 @@
   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 4.085,
-  "frames_24": 98,
-  "voiced_span_s": 3.24,
+  "duration_s": 4.365,
+  "frames_24": 105,
+  "voiced_span_s": 3.48,
   "pace": {
-   "audible_in_s": 0.37,
-   "audible_out_s": 3.61,
+   "audible_in_s": 0.38,
+   "audible_out_s": 3.86,
    "measured": {
-    "span_s": 3.24,
-    "wpm": 148.1,
+    "span_s": 3.48,
+    "wpm": 137.9,
     "syllables": 12,
-    "articulation_sps": 4.29,
+    "articulation_sps": 4.46,
     "pauses_s": [
-     0.15,
-     0.29
+     0.44,
+     0.35
     ]
    },
-   "longest_internal_gap_s": 0.29,
+   "longest_internal_gap_s": 0.44,
    "words": 8,
-   "wpm": 148.1,
-   "speed": 1.15,
+   "wpm": 137.9,
+   "speed": 1.2,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "Everyone",
-    "t0": 0.35,
-    "t1": 0.791
+    "t0": 0.36,
+    "t1": 0.768
    },
    {
     "w": "who",
-    "t0": 0.826,
-    "t1": 0.93
+    "t0": 0.791,
+    "t1": 0.884
    },
    {
     "w": "signed",
-    "t0": 0.989,
-    "t1": 1.36
+    "t0": 0.942,
+    "t1": 1.348
    },
    {
     "w": "the",
-    "t0": 1.557,
-    "t1": 1.662
+    "t0": 1.813,
+    "t1": 1.917
    },
    {
     "w": "post",
-    "t0": 1.72,
-    "t1": 2.173
+    "t0": 1.975,
+    "t1": 2.417
    },
    {
     "w": "everyone",
-    "t0": 2.556,
-    "t1": 3.009
+    "t0": 2.835,
+    "t1": 3.252
    },
    {
     "w": "who",
-    "t0": 3.044,
-    "t1": 3.136
+    "t0": 3.276,
+    "t1": 3.369
    },
    {
     "w": "signed",
-    "t0": 3.194,
-    "t1": 3.578
+    "t0": 3.427,
+    "t1": 3.845
    }
   ],
   "qa": {
-   "asr": "Everyone who signed the post, everyone who signed.",
+   "asr": "Everyone who signed. The post. Everyone who signed.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -3.46,
+   "true_peak_dbtp": -3.49,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 113.7,
-   "f0_range_st": 14.4,
-   "speech_head_s": 0.37,
-   "speech_tail_s": 0.475,
+   "median_f0_hz": 101.8,
+   "f0_range_st": 13.3,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.505,
    "raw_tail_cut": false,
-   "align_median_s": 0.106
+   "align_median_s": 0.091
   },
-  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 1.15",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 1.2",
   "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
@@ -3310,11 +3310,11 @@
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 1.15
+    "speed": 1.2
    },
    "seed": 1899661321,
    "chars_sent": 51,
-   "request_key": "bc3b37cb4204b1b5",
+   "request_key": "31bf661d2f3f4126",
    "derived_from": null,
    "reused_from": null
   },

@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
  "logline": "The Ep2 v1 base lock of coldopen: the beat plan applied to no source (every beat new).",
  "dateSpan": "Feb 15 - 29, 2024",
- "runtimeMin": 0.93,
+ "runtimeMin": 0.92,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -43,7 +43,7 @@
   "builder": "audio/reel/ep02-v1/build_timeline.py",
   "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/coldopen-bed.wav",
   "notes": "show/episodes/ep02/production/v1/pipeline.md",
-  "seconds": 56.0,
+  "seconds": 55.0,
   "kokoro_lock": "show/reel/ep02-v1/ep02-v1-coldopen.json",
   "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
@@ -133,7 +133,7 @@
      "id": "e2-co-0001",
      "who": "selbeep",
      "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
-     "t": 0.58,
+     "t": 0.57,
      "dur": 6.03,
      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
      "in": 0.37,
@@ -241,13 +241,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
       "in": 0.37,
-      "t": 0.58,
+      "t": 0.57,
       "dur": 6.03
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 7.3,
+   "reelDur": 7.28,
    "fx": [],
    "cues": [
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
@@ -255,7 +255,7 @@
    "sounds": [
     {
      "name": "mammoth_step_pixel",
-     "at": 6.21,
+     "at": 6.2,
      "gain": -22,
      "note": "the foot through the bezel"
     }
@@ -294,7 +294,7 @@
      "id": "e2-co-0002",
      "who": "gerg",
      "text": "Which sentence?",
-     "t": 1.85,
+     "t": 1.81,
      "dur": 0.78,
      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
      "in": 0.38,
@@ -322,13 +322,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
       "in": 0.38,
-      "t": 1.85,
+      "t": 1.81,
       "dur": 0.78
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 2.75,
+   "reelDur": 2.71,
    "fx": [],
    "cues": [
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
@@ -336,12 +336,12 @@
    "sounds": [
     {
      "name": "mammoth_step_pixel",
-     "at": 0.347,
+     "at": 0.339,
      "gain": -20
     },
     {
      "name": "mammoth_step_pixel",
-     "at": 1.272,
+     "at": 1.244,
      "gain": -21
     }
    ],
@@ -483,7 +483,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 7.01,
+   "reelDur": 6.99,
    "fx": [],
    "cues": [
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
@@ -535,7 +535,7 @@
      "id": "e2-co-0004",
      "who": "selbeep",
      "text": "Directionally.",
-     "t": 0.29,
+     "t": 0.28,
      "dur": 0.91,
      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
      "in": 0.35,
@@ -558,7 +558,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
       "in": 0.35,
-      "t": 0.29,
+      "t": 0.28,
       "dur": 0.91
      }
     }
@@ -566,18 +566,18 @@
    "onscreen": [
     {
      "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
-     "at": 1.3,
-     "until": 3.8,
+     "at": 1.29,
+     "until": 3.79,
      "kind": "card"
     },
     {
      "text": "MAMMOTHS CONTAINED: 0",
-     "at": 1.8,
-     "until": 3.8,
+     "at": 1.79,
+     "until": 3.79,
      "kind": "stat"
     }
    ],
-   "reelDur": 3.8,
+   "reelDur": 3.79,
    "fx": [],
    "cues": [
     "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
@@ -585,14 +585,14 @@
    "sounds": [
     {
      "name": "freeze_hit_F",
-     "at": 1.3,
+     "at": 1.29,
      "gain": -16
     }
    ],
    "names": [
     {
      "id": "selbeep",
-     "at": 1.3
+     "at": 1.29
     }
    ],
    "passes": {
@@ -630,18 +630,18 @@
    "onscreen": [
     {
      "text": "RAIL: FEB 29, 2024",
-     "at": 0.35,
-     "until": 2.43,
+     "at": 0.34,
+     "until": 2.38,
      "kind": "rail"
     },
     {
      "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
-     "at": 1.39,
-     "until": 4.17,
+     "at": 1.36,
+     "until": 4.08,
      "kind": "sign"
     }
    ],
-   "reelDur": 4.17,
+   "reelDur": 4.08,
    "fx": [],
    "cues": [
     "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
@@ -649,18 +649,18 @@
    "sounds": [
     {
      "name": "plate_hang",
-     "at": 1.158,
+     "at": 1.133,
      "gain": -24
     },
     {
      "name": "hand_truck_step",
-     "at": 3.127,
+     "at": 3.06,
      "gain": -22,
      "note": "THUD 1, outside"
     },
     {
      "name": "door_glass_rattle",
-     "at": 3.336,
+     "at": 3.264,
      "gain": -28
     }
    ],
@@ -693,7 +693,7 @@
      "id": "e2-co-0005",
      "who": "selbeep",
      "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
-     "t": 0.46,
+     "t": 0.45,
      "dur": 4.73,
      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
      "in": 0.43,
@@ -791,13 +791,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
       "in": 0.43,
-      "t": 0.46,
+      "t": 0.45,
       "dur": 4.73
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 6.0,
+   "reelDur": 5.43,
    "fx": [],
    "cues": [
     "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
@@ -805,18 +805,18 @@
    "sounds": [
     {
      "name": "hand_truck_step",
-     "at": 5.29,
+     "at": 5.28,
      "gain": -18,
      "note": "THUD 2, closer"
     },
     {
      "name": "cup_jump",
-     "at": 5.34,
+     "at": 5.33,
      "gain": -26
     },
     {
      "name": "ladder_sway_creak",
-     "at": 5.49,
+     "at": 5.38,
      "gain": -28
     }
    ],
@@ -853,7 +853,7 @@
      "id": "e2-co-0006",
      "who": "gerg",
      "text": "That's not the mammoth. The mammoth's on the fourth floor.",
-     "t": 0.29,
+     "t": 0.25,
      "dur": 2.98,
      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
      "in": 0.38,
@@ -921,13 +921,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
       "in": 0.38,
-      "t": 0.29,
+      "t": 0.25,
       "dur": 2.98
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 3.85,
+   "reelDur": 3.8,
    "fx": [],
    "cues": [
     "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
@@ -938,8 +938,15 @@
     "pace": "quick",
     "tempo": {
      "pace": "quick",
-     "gaps": {},
-     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+     "gaps": {
+      "e2-co-0006": 0.5
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-co-0005",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
     },
     "camera": "OTS-WIDE · over Gerg's laptop; Gerg doesn't look up",
     "picture": "His keys under the line; the doors glint far right."
@@ -963,24 +970,24 @@
    "onscreen": [
     {
      "text": "NOLE v. MANALT ET AL.",
-     "at": 1.39,
-     "until": 5.09,
+     "at": 1.36,
+     "until": 4.99,
      "kind": "doc"
     },
     {
      "text": "YOU PROMISED!!!",
-     "at": 1.39,
-     "until": 5.09,
+     "at": 1.36,
+     "until": 4.99,
      "kind": "doc"
     },
     {
      "text": "PAUSE",
-     "at": 0.69,
-     "until": 2.08,
+     "at": 0.68,
+     "until": 2.04,
      "kind": "sign"
     }
    ],
-   "reelDur": 5.09,
+   "reelDur": 4.99,
    "fx": [],
    "cues": [
     "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
@@ -988,18 +995,18 @@
    "sounds": [
     {
      "name": "hand_truck_step",
-     "at": 0.231,
+     "at": 0.227,
      "gain": -14,
      "note": "THUD 3: the top step"
     },
     {
      "name": "door_bang_open",
-     "at": 0.636,
+     "at": 0.624,
      "gain": -16
     },
     {
      "name": "hand_truck_roll",
-     "at": 1.041,
+     "at": 1.021,
      "gain": -22
     }
    ],
@@ -1135,12 +1142,12 @@
    "onscreen": [
     {
      "text": "DAYS SINCE SOMEONE SUED MAS: 0",
-     "at": 3.01,
-     "until": 5.33,
+     "at": 2.96,
+     "until": 5.23,
      "kind": "sign"
     }
    ],
-   "reelDur": 5.33,
+   "reelDur": 5.23,
    "fx": [],
    "cues": [
     "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
@@ -1148,7 +1155,7 @@
    "sounds": [
     {
      "name": "plate_hang",
-     "at": 2.781,
+     "at": 2.729,
      "gain": -22
     }
    ],
@@ -1199,8 +1206,8 @@
  ],
  "_el_retimed": {
   "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
-  "seconds_kokoro": 56.0,
-  "seconds_el": 56.0,
+  "seconds_kokoro": 55.0,
+  "seconds_el": 55.0,
   "delta_s": 0.0,
   "beats_changed": 0,
   "missing_takes": [],

@@ -3,9 +3,9 @@
   "timeline": "show/reel/ep02-v1/ep02-v1-coldopen.json",
   "source": null,
   "source_story_s": 0.0,
-  "estimate_s": 56.0,
-  "seconds": 56.0,
-  "frames": 1344,
+  "estimate_s": 55.0,
+  "seconds": 55.0,
+  "frames": 1320,
   "source_frames": 0,
   "beats": 13,
   "lines": 6,
@@ -20,9 +20,9 @@
   "median_gap": {
    "inside_beats_s": null,
    "inside_beats_n": 0,
-   "segment_s": 1.33,
+   "segment_s": 1.3,
    "segment_n": 5,
-   "spoken_only_segment_s": 1.33
+   "spoken_only_segment_s": 1.3
   },
   "beat_lengths": [
    {
@@ -39,8 +39,8 @@
     "action": "new",
     "scene": "1",
     "src_s": null,
-    "est_s": 7.3,
-    "lock_s": 7.3,
+    "est_s": 7.28,
+    "lock_s": 7.28,
     "diff_s": 0.0
    },
    {
@@ -48,8 +48,8 @@
     "action": "new",
     "scene": "1",
     "src_s": null,
-    "est_s": 2.75,
-    "lock_s": 2.75,
+    "est_s": 2.71,
+    "lock_s": 2.71,
     "diff_s": 0.0
    },
    {
@@ -57,12 +57,39 @@
     "action": "new",
     "scene": "1",
     "src_s": null,
-    "est_s": 7.01,
-    "lock_s": 7.01,
+    "est_s": 6.99,
+    "lock_s": 6.99,
     "diff_s": 0.0
    },
    {
     "beat": "1.05",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 3.79,
+    "lock_s": 3.79,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.06",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 4.08,
+    "lock_s": 4.08,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.07",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 5.43,
+    "lock_s": 5.43,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.08",
     "action": "new",
     "scene": "1",
     "src_s": null,
@@ -71,39 +98,12 @@
     "diff_s": 0.0
    },
    {
-    "beat": "1.06",
-    "action": "new",
-    "scene": "1",
-    "src_s": null,
-    "est_s": 4.17,
-    "lock_s": 4.17,
-    "diff_s": 0.0
-   },
-   {
-    "beat": "1.07",
-    "action": "new",
-    "scene": "1",
-    "src_s": null,
-    "est_s": 6.0,
-    "lock_s": 6.0,
-    "diff_s": 0.0
-   },
-   {
-    "beat": "1.08",
-    "action": "new",
-    "scene": "1",
-    "src_s": null,
-    "est_s": 3.85,
-    "lock_s": 3.85,
-    "diff_s": 0.0
-   },
-   {
     "beat": "1.09",
     "action": "new",
     "scene": "1",
     "src_s": null,
-    "est_s": 5.09,
-    "lock_s": 5.09,
+    "est_s": 4.99,
+    "lock_s": 4.99,
     "diff_s": 0.0
    },
    {
@@ -129,8 +129,8 @@
     "action": "new",
     "scene": "1",
     "src_s": null,
-    "est_s": 5.33,
-    "lock_s": 5.33,
+    "est_s": 5.23,
+    "lock_s": 5.23,
     "diff_s": 0.0
    },
    {
@@ -149,6 +149,13 @@
     "line": "e2-co-0003",
     "plan_s": 0.25,
     "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "1.08",
+    "line": "e2-co-0006",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
     "ok": true
    }
   ],
@@ -176,15 +183,15 @@
    },
    {
     "beat": "1.02",
-    "what": "new line e2-co-0001 (selbeep, 6.03 s, new take) at start+0.58"
+    "what": "new line e2-co-0001 (selbeep, 6.03 s, new take) at start+0.57"
    },
    {
     "beat": "1.02",
-    "what": "the plan's 7.3 s: its tail 0.69 s after the last line"
+    "what": "the plan's 7.28 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "1.02",
-    "what": "sound mammoth_step_pixel at 6.21 s (the plan's)"
+    "what": "sound mammoth_step_pixel at 6.20 s (the plan's)"
    },
    {
     "beat": "1.03",
@@ -192,19 +199,19 @@
    },
    {
     "beat": "1.03",
-    "what": "new line e2-co-0002 (gerg, 0.78 s, new take) at start+1.85"
+    "what": "new line e2-co-0002 (gerg, 0.78 s, new take) at start+1.81"
    },
    {
     "beat": "1.03",
-    "what": "the plan's 2.75 s: its tail 0.12 s after the last line"
+    "what": "the plan's 2.71 s: its tail 0.12 s after the last line"
    },
    {
     "beat": "1.03",
-    "what": "sound mammoth_step_pixel at 0.35 s (the plan's)"
+    "what": "sound mammoth_step_pixel at 0.34 s (the plan's)"
    },
    {
     "beat": "1.03",
-    "what": "sound mammoth_step_pixel at 1.27 s (the plan's)"
+    "what": "sound mammoth_step_pixel at 1.24 s (the plan's)"
    },
    {
     "beat": "1.04",
@@ -216,7 +223,7 @@
    },
    {
     "beat": "1.04",
-    "what": "the plan's 7.01 s: its tail 1.04 s after the last line"
+    "what": "the plan's 6.99 s: its tail 1.02 s after the last line"
    },
    {
     "beat": "1.04",
@@ -228,27 +235,27 @@
    },
    {
     "beat": "1.05",
-    "what": "on-screen add: \"SELBEEP / DIRECTOR OF MAMMOTHS.\" (1.3-3.8)"
+    "what": "on-screen add: \"SELBEEP / DIRECTOR OF MAMMOTHS.\" (1.29-3.79)"
    },
    {
     "beat": "1.05",
-    "what": "on-screen add: \"MAMMOTHS CONTAINED: 0\" (1.8-3.8)"
+    "what": "on-screen add: \"MAMMOTHS CONTAINED: 0\" (1.79-3.79)"
    },
    {
     "beat": "1.05",
-    "what": "new line e2-co-0004 (selbeep, 0.91 s, new take) at start+0.29"
+    "what": "new line e2-co-0004 (selbeep, 0.91 s, new take) at start+0.28"
    },
    {
     "beat": "1.05",
-    "what": "the plan's 3.8 s: its tail 2.60 s after the last line"
+    "what": "the plan's 3.79 s: its tail 2.60 s after the last line"
    },
    {
     "beat": "1.05",
-    "what": "sound freeze_hit_F at 1.30 s (the plan's)"
+    "what": "sound freeze_hit_F at 1.29 s (the plan's)"
    },
    {
     "beat": "1.05",
-    "what": "names[]: selbeep at 1.3 s (its plate)"
+    "what": "names[]: selbeep at 1.29 s (its plate)"
    },
    {
     "beat": "1.06",
@@ -256,23 +263,23 @@
    },
    {
     "beat": "1.06",
-    "what": "on-screen add: \"RAIL: FEB 29, 2024\" (0.35-2.43)"
+    "what": "on-screen add: \"RAIL: FEB 29, 2024\" (0.34-2.38)"
    },
    {
     "beat": "1.06",
-    "what": "on-screen add: \"DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100\" (1.39-4.17)"
+    "what": "on-screen add: \"DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100\" (1.36-4.08)"
    },
    {
     "beat": "1.06",
-    "what": "sound plate_hang at 1.16 s (the plan's)"
+    "what": "sound plate_hang at 1.13 s (the plan's)"
    },
    {
     "beat": "1.06",
-    "what": "sound hand_truck_step at 3.13 s (the plan's)"
+    "what": "sound hand_truck_step at 3.06 s (the plan's)"
    },
    {
     "beat": "1.06",
-    "what": "sound door_glass_rattle at 3.34 s (the plan's)"
+    "what": "sound door_glass_rattle at 3.26 s (the plan's)"
    },
    {
     "beat": "1.07",
@@ -280,23 +287,23 @@
    },
    {
     "beat": "1.07",
-    "what": "new line e2-co-0005 (selbeep, 4.73 s, new take) at start+0.46"
+    "what": "new line e2-co-0005 (selbeep, 4.73 s, new take) at start+0.45"
    },
    {
     "beat": "1.07",
-    "what": "the plan's 6.0 s: its tail 0.81 s after the last line"
+    "what": "the plan's 5.43 s: its tail 0.25 s after the last line"
    },
    {
     "beat": "1.07",
-    "what": "sound hand_truck_step at 5.29 s (the plan's)"
+    "what": "sound hand_truck_step at 5.28 s (the plan's)"
    },
    {
     "beat": "1.07",
-    "what": "sound cup_jump at 5.34 s (the plan's)"
+    "what": "sound cup_jump at 5.33 s (the plan's)"
    },
    {
     "beat": "1.07",
-    "what": "sound ladder_sway_creak at 5.49 s (the plan's)"
+    "what": "sound ladder_sway_creak at 5.38 s (the plan's)"
    },
    {
     "beat": "1.08",
@@ -304,11 +311,11 @@
    },
    {
     "beat": "1.08",
-    "what": "new line e2-co-0006 (gerg, 2.98 s, new take) at start+0.29"
+    "what": "new line e2-co-0006 (gerg, 2.98 s, new take) at start+0.25"
    },
    {
     "beat": "1.08",
-    "what": "the plan's 3.85 s: its tail 0.58 s after the last line"
+    "what": "the plan's 3.8 s: its tail 0.57 s after the last line"
    },
    {
     "beat": "1.09",
@@ -316,15 +323,15 @@
    },
    {
     "beat": "1.09",
-    "what": "on-screen add: \"NOLE v. MANALT ET AL.\" (1.39-5.09)"
+    "what": "on-screen add: \"NOLE v. MANALT ET AL.\" (1.36-4.99)"
    },
    {
     "beat": "1.09",
-    "what": "on-screen add: \"YOU PROMISED!!!\" (1.39-5.09)"
+    "what": "on-screen add: \"YOU PROMISED!!!\" (1.36-4.99)"
    },
    {
     "beat": "1.09",
-    "what": "on-screen add: \"PAUSE\" (0.69-2.08)"
+    "what": "on-screen add: \"PAUSE\" (0.68-2.04)"
    },
    {
     "beat": "1.09",
@@ -332,11 +339,11 @@
    },
    {
     "beat": "1.09",
-    "what": "sound door_bang_open at 0.64 s (the plan's)"
+    "what": "sound door_bang_open at 0.62 s (the plan's)"
    },
    {
     "beat": "1.09",
-    "what": "sound hand_truck_roll at 1.04 s (the plan's)"
+    "what": "sound hand_truck_roll at 1.02 s (the plan's)"
    },
    {
     "beat": "1.10",
@@ -380,11 +387,11 @@
    },
    {
     "beat": "1.12",
-    "what": "on-screen add: \"DAYS SINCE SOMEONE SUED MAS: 0\" (3.01-5.33)"
+    "what": "on-screen add: \"DAYS SINCE SOMEONE SUED MAS: 0\" (2.96-5.23)"
    },
    {
     "beat": "1.12",
-    "what": "sound plate_hang at 2.78 s (the plan's)"
+    "what": "sound plate_hang at 2.73 s (the plan's)"
    },
    {
     "beat": "1.13",
@@ -402,9 +409,9 @@
   "timeline": "show/reel/ep02-v1/ep02-v1-act1.json",
   "source": null,
   "source_story_s": 0.0,
-  "estimate_s": 368.0,
-  "seconds": 368.0,
-  "frames": 8832,
+  "estimate_s": 364.0,
+  "seconds": 364.0,
+  "frames": 8736,
   "source_frames": 0,
   "beats": 62,
   "lines": 59,
@@ -427,9 +434,9 @@
   "median_gap": {
    "inside_beats_s": 0.3,
    "inside_beats_n": 17,
-   "segment_s": 1.23,
+   "segment_s": 1.08,
    "segment_n": 58,
-   "spoken_only_segment_s": 1.25
+   "spoken_only_segment_s": 1.14
   },
   "beat_lengths": [
    {
@@ -455,8 +462,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.79,
-    "lock_s": 4.79,
+    "est_s": 4.77,
+    "lock_s": 4.77,
     "diff_s": 0.0
    },
    {
@@ -464,8 +471,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.6,
-    "lock_s": 4.6,
+    "est_s": 4.59,
+    "lock_s": 4.59,
     "diff_s": 0.0
    },
    {
@@ -473,8 +480,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 3.84,
-    "lock_s": 3.84,
+    "est_s": 3.81,
+    "lock_s": 3.81,
     "diff_s": 0.0
    },
    {
@@ -482,8 +489,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 6.58,
-    "lock_s": 6.58,
+    "est_s": 6.57,
+    "lock_s": 6.57,
     "diff_s": 0.0
    },
    {
@@ -491,8 +498,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.96,
-    "lock_s": 4.96,
+    "est_s": 3.91,
+    "lock_s": 3.91,
     "diff_s": 0.0
    },
    {
@@ -500,8 +507,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 8.42,
-    "lock_s": 8.42,
+    "est_s": 8.0,
+    "lock_s": 8.0,
     "diff_s": 0.0
    },
    {
@@ -527,8 +534,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.57,
-    "lock_s": 4.57,
+    "est_s": 4.56,
+    "lock_s": 4.56,
     "diff_s": 0.0
    },
    {
@@ -536,8 +543,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.59,
-    "lock_s": 4.59,
+    "est_s": 4.56,
+    "lock_s": 4.56,
     "diff_s": 0.0
    },
    {
@@ -563,8 +570,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.12,
-    "lock_s": 4.12,
+    "est_s": 4.07,
+    "lock_s": 4.07,
     "diff_s": 0.0
    },
    {
@@ -581,8 +588,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 2.75,
-    "lock_s": 2.75,
+    "est_s": 2.71,
+    "lock_s": 2.71,
     "diff_s": 0.0
    },
    {
@@ -608,8 +615,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 2.19,
-    "lock_s": 2.19,
+    "est_s": 2.18,
+    "lock_s": 2.18,
     "diff_s": 0.0
    },
    {
@@ -626,8 +633,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 17.27,
-    "lock_s": 17.27,
+    "est_s": 16.57,
+    "lock_s": 16.57,
     "diff_s": 0.0
    },
    {
@@ -635,8 +642,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 6.11,
-    "lock_s": 6.11,
+    "est_s": 5.74,
+    "lock_s": 5.74,
     "diff_s": 0.0
    },
    {
@@ -644,8 +651,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 3.12,
-    "lock_s": 3.12,
+    "est_s": 3.11,
+    "lock_s": 3.11,
     "diff_s": 0.0
    },
    {
@@ -653,8 +660,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 6.11,
-    "lock_s": 6.11,
+    "est_s": 6.09,
+    "lock_s": 6.09,
     "diff_s": 0.0
    },
    {
@@ -662,8 +669,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.42,
-    "lock_s": 4.42,
+    "est_s": 4.4,
+    "lock_s": 4.4,
     "diff_s": 0.0
    },
    {
@@ -671,8 +678,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 2.75,
-    "lock_s": 2.75,
+    "est_s": 2.71,
+    "lock_s": 2.71,
     "diff_s": 0.0
    },
    {
@@ -698,8 +705,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.81,
-    "lock_s": 4.81,
+    "est_s": 4.75,
+    "lock_s": 4.75,
     "diff_s": 0.0
    },
    {
@@ -725,8 +732,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 2.98,
-    "lock_s": 2.98,
+    "est_s": 2.94,
+    "lock_s": 2.94,
     "diff_s": 0.0
    },
    {
@@ -734,8 +741,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 9.05,
-    "lock_s": 9.05,
+    "est_s": 9.02,
+    "lock_s": 9.02,
     "diff_s": 0.0
    },
    {
@@ -743,8 +750,8 @@
     "action": "new",
     "scene": "4",
     "src_s": null,
-    "est_s": 4.09,
-    "lock_s": 4.09,
+    "est_s": 4.06,
+    "lock_s": 4.06,
     "diff_s": 0.0
    },
    {
@@ -761,8 +768,8 @@
     "action": "new",
     "scene": "4A",
     "src_s": null,
-    "est_s": 7.61,
-    "lock_s": 7.61,
+    "est_s": 7.58,
+    "lock_s": 7.58,
     "diff_s": 0.0
    },
    {
@@ -770,8 +777,8 @@
     "action": "new",
     "scene": "4A",
     "src_s": null,
-    "est_s": 12.5,
-    "lock_s": 12.5,
+    "est_s": 11.52,
+    "lock_s": 11.52,
     "diff_s": 0.0
    },
    {
@@ -779,8 +786,8 @@
     "action": "new",
     "scene": "4A",
     "src_s": null,
-    "est_s": 4.0,
-    "lock_s": 4.0,
+    "est_s": 3.44,
+    "lock_s": 3.44,
     "diff_s": 0.0
    },
    {
@@ -797,8 +804,8 @@
     "action": "new",
     "scene": "4A",
     "src_s": null,
-    "est_s": 5.0,
-    "lock_s": 5.0,
+    "est_s": 4.71,
+    "lock_s": 4.71,
     "diff_s": 0.0
    },
    {
@@ -806,8 +813,8 @@
     "action": "new",
     "scene": "4A",
     "src_s": null,
-    "est_s": 2.49,
-    "lock_s": 2.49,
+    "est_s": 2.35,
+    "lock_s": 2.35,
     "diff_s": 0.0
    },
    {
@@ -815,8 +822,8 @@
     "action": "new",
     "scene": "4B",
     "src_s": null,
-    "est_s": 8.0,
-    "lock_s": 8.0,
+    "est_s": 9.0,
+    "lock_s": 9.0,
     "diff_s": 0.0
    },
    {
@@ -1000,6 +1007,13 @@
     "ok": true
    },
    {
+    "beat": "4.08",
+    "line": "e2-a1-0006",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
     "beat": "4.09",
     "line": "e2-a1-0008",
     "plan_s": 0.25,
@@ -1077,6 +1091,13 @@
     "ok": true
    },
    {
+    "beat": "4.23",
+    "line": "e2-a1-0024",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
     "beat": "4.24",
     "line": "e2-a1-0025",
     "plan_s": 0.3,
@@ -1095,6 +1116,13 @@
     "line": "e2-a1-0028",
     "plan_s": 1.0,
     "lock_s": 1.0,
+    "ok": true
+   },
+   {
+    "beat": "4A.03",
+    "line": "e2-a1-0033",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
     "ok": true
    },
    {
@@ -1224,19 +1252,19 @@
    },
    {
     "beat": "4.03",
-    "what": "new line e2-a1-0001 (mas, 2.96 s, new take) at start+0.46"
+    "what": "new line e2-a1-0001 (mas, 2.96 s, new take) at start+0.45"
    },
    {
     "beat": "4.03",
-    "what": "the plan's 4.79 s: its tail 1.37 s after the last line"
+    "what": "the plan's 4.77 s: its tail 1.36 s after the last line"
    },
    {
     "beat": "4.03",
-    "what": "sound inbox_chime_low at 3.92 s (the plan's)"
+    "what": "sound inbox_chime_low at 3.91 s (the plan's)"
    },
    {
     "beat": "4.03",
-    "what": "sound planchette_glide at 3.62 s (the plan's)"
+    "what": "sound planchette_glide at 3.61 s (the plan's)"
    },
    {
     "beat": "4.04",
@@ -1244,11 +1272,11 @@
    },
    {
     "beat": "4.04",
-    "what": "on-screen add: \"FROM: ALYI · JAN 2016\" (0.3-4.6)"
+    "what": "on-screen add: \"FROM: ALYI · JAN 2016\" (0.3-4.59)"
    },
    {
     "beat": "4.04",
-    "what": "on-screen add: \"\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"\" (0.6-4.6)"
+    "what": "on-screen add: \"\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"\" (0.6-4.59)"
    },
    {
     "beat": "4.04",
@@ -1256,7 +1284,7 @@
    },
    {
     "beat": "4.04",
-    "what": "the plan's 4.6 s: its tail 0.69 s after the last line"
+    "what": "the plan's 4.59 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "4.04",
@@ -1272,11 +1300,11 @@
    },
    {
     "beat": "4.05",
-    "what": "new line e2-a1-0003 (gerg, 2.00 s, new take) at start+1.15"
+    "what": "new line e2-a1-0003 (gerg, 2.00 s, new take) at start+1.13"
    },
    {
     "beat": "4.05",
-    "what": "the plan's 3.84 s: its tail 0.69 s after the last line"
+    "what": "the plan's 3.81 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "4.06",
@@ -1284,23 +1312,23 @@
    },
    {
     "beat": "4.06",
-    "what": "new line e2-a1-0004 (mas, 2.76 s, new take) at start+0.52"
+    "what": "new line e2-a1-0004 (mas, 2.76 s, new take) at start+0.51"
    },
    {
     "beat": "4.06",
-    "what": "the plan's 6.58 s: its tail 3.30 s after the last line"
+    "what": "the plan's 6.57 s: its tail 3.30 s after the last line"
    },
    {
     "beat": "4.06",
-    "what": "sound ceiling_knock at 4.58 s (the plan's)"
+    "what": "sound ceiling_knock at 4.57 s (the plan's)"
    },
    {
     "beat": "4.06",
-    "what": "sound ceiling_knock at 5.28 s (the plan's)"
+    "what": "sound ceiling_knock at 5.27 s (the plan's)"
    },
    {
     "beat": "4.06",
-    "what": "sound ceiling_knock at 5.98 s (the plan's)"
+    "what": "sound ceiling_knock at 5.97 s (the plan's)"
    },
    {
     "beat": "4.07",
@@ -1308,11 +1336,11 @@
    },
    {
     "beat": "4.07",
-    "what": "new line e2-a1-0005 (mas, 2.21 s, new take) at start+2.29"
+    "what": "new line e2-a1-0005 (mas, 2.21 s, new take) at start+1.55"
    },
    {
     "beat": "4.07",
-    "what": "the plan's 4.96 s: its tail 0.46 s after the last line"
+    "what": "the plan's 3.91 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "4.07",
@@ -1320,11 +1348,11 @@
    },
    {
     "beat": "4.07",
-    "what": "sound cable_drop at 0.46 s (the plan's)"
+    "what": "sound cable_drop at 0.40 s (the plan's)"
    },
    {
     "beat": "4.07",
-    "what": "sound landing_thunk at 1.26 s (the plan's)"
+    "what": "sound landing_thunk at 1.10 s (the plan's)"
    },
    {
     "beat": "4.08",
@@ -1332,11 +1360,11 @@
    },
    {
     "beat": "4.08",
-    "what": "on-screen add: \"NOLE · FUNDED IT. LEFT IT. SUING IT.\" (0.23-5.19)"
+    "what": "on-screen add: \"NOLE · FUNDED IT. LEFT IT. SUING IT.\" (0.2-4.77)"
    },
    {
     "beat": "4.08",
-    "what": "new line e2-a1-0006 (nole, 3.92 s, new take) at start+0.57"
+    "what": "new line e2-a1-0006 (nole, 3.92 s, new take) at start+0.15"
    },
    {
     "beat": "4.08",
@@ -1344,11 +1372,11 @@
    },
    {
     "beat": "4.08",
-    "what": "the plan's 8.42 s: its tail 0.12 s after the last line"
+    "what": "the plan's 8.0 s: its tail 0.12 s after the last line"
    },
    {
     "beat": "4.08",
-    "what": "names[]: nole at 0.23 s (its plate)"
+    "what": "names[]: nole at 0.2 s (its plate)"
    },
    {
     "beat": "4.09",
@@ -1400,19 +1428,19 @@
    },
    {
     "beat": "4.11",
-    "what": "on-screen add: \"N O P E\" (3.57-4.57)"
+    "what": "on-screen add: \"N O P E\" (3.56-4.56)"
    },
    {
     "beat": "4.11",
-    "what": "new line e2-a1-0010 (nole, 2.08 s, new take) at start+0.29"
+    "what": "new line e2-a1-0010 (nole, 2.08 s, new take) at start+0.28"
    },
    {
     "beat": "4.11",
-    "what": "the plan's 4.57 s: its tail 2.20 s after the last line"
+    "what": "the plan's 4.56 s: its tail 2.20 s after the last line"
    },
    {
     "beat": "4.11",
-    "what": "sound planchette_glide at 3.07 s (the plan's)"
+    "what": "sound planchette_glide at 3.06 s (the plan's)"
    },
    {
     "beat": "4.12",
@@ -1420,11 +1448,11 @@
    },
    {
     "beat": "4.12",
-    "what": "new line e2-a1-0011 (nole, 2.47 s, new take) at start+0.29"
+    "what": "new line e2-a1-0011 (nole, 2.47 s, new take) at start+0.28"
    },
    {
     "beat": "4.12",
-    "what": "the plan's 4.59 s: its tail 1.83 s after the last line"
+    "what": "the plan's 4.56 s: its tail 1.81 s after the last line"
    },
    {
     "beat": "4.13",
@@ -1468,11 +1496,11 @@
    },
    {
     "beat": "4.15",
-    "what": "on-screen add: \"NOLE · JUST NOW\" (1.83-4.12)"
+    "what": "on-screen add: \"NOLE · JUST NOW\" (1.81-4.07)"
    },
    {
     "beat": "4.15",
-    "what": "on-screen add: \"!!!!!!!!\" (1.83-4.12)"
+    "what": "on-screen add: \"!!!!!!!!\" (1.81-4.07)"
    },
    {
     "beat": "4.15",
@@ -1480,15 +1508,15 @@
    },
    {
     "beat": "4.15",
-    "what": "sound key_tap_soft_01 at 0.69 s (the plan's)"
+    "what": "sound key_tap_soft_01 at 0.68 s (the plan's)"
    },
    {
     "beat": "4.15",
-    "what": "sound reverse_swell_1beat at 1.72 s (the plan's)"
+    "what": "sound reverse_swell_1beat at 1.70 s (the plan's)"
    },
    {
     "beat": "4.15",
-    "what": "names[]: nole at 1.83 s (its plate)"
+    "what": "names[]: nole at 1.81 s (its plate)"
    },
    {
     "beat": "4.16",
@@ -1524,7 +1552,7 @@
    },
    {
     "beat": "4.17",
-    "what": "sound candle_flare at 0.29 s (the plan's)"
+    "what": "sound candle_flare at 0.28 s (the plan's)"
    },
    {
     "beat": "4.18",
@@ -1580,7 +1608,7 @@
    },
    {
     "beat": "4.20",
-    "what": "new line e2-a1-0020 (nole, 0.82 s, new take) at start+0.46"
+    "what": "new line e2-a1-0020 (nole, 0.82 s, new take) at start+0.45"
    },
    {
     "beat": "4.20",
@@ -1588,7 +1616,7 @@
    },
    {
     "beat": "4.20",
-    "what": "the plan's 2.19 s: its tail 0.12 s after the last line"
+    "what": "the plan's 2.18 s: its tail 0.12 s after the last line"
    },
    {
     "beat": "4.21",
@@ -1620,7 +1648,7 @@
    },
    {
     "beat": "4.22",
-    "what": "the plan's 17.27 s: its tail 1.00 s after the last line"
+    "what": "the plan's 16.57 s: its tail 0.30 s after the last line"
    },
    {
     "beat": "4.22",
@@ -1632,11 +1660,11 @@
    },
    {
     "beat": "4.23",
-    "what": "new line e2-a1-0024 (nole, 5.39 s, new take) at start+0.57"
+    "what": "new line e2-a1-0024 (nole, 5.39 s, new take) at start+0.2"
    },
    {
     "beat": "4.23",
-    "what": "the plan's 6.11 s: its tail 0.15 s after the last line"
+    "what": "the plan's 5.74 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "4.24",
@@ -1648,7 +1676,7 @@
    },
    {
     "beat": "4.24",
-    "what": "the plan's 3.12 s: its tail 0.46 s after the last line"
+    "what": "the plan's 3.11 s: its tail 0.45 s after the last line"
    },
    {
     "beat": "4.25",
@@ -1656,7 +1684,7 @@
    },
    {
     "beat": "4.25",
-    "what": "new line e2-a1-0026 (ghost-nole, 0.94 s, cut from e2-a1-0014) at start+0.46"
+    "what": "new line e2-a1-0026 (ghost-nole, 0.94 s, cut from e2-a1-0014) at start+0.45"
    },
    {
     "beat": "4.25",
@@ -1664,7 +1692,7 @@
    },
    {
     "beat": "4.25",
-    "what": "the plan's 6.11 s: its tail 0.69 s after the last line"
+    "what": "the plan's 6.09 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "4.26",
@@ -1672,7 +1700,7 @@
    },
    {
     "beat": "4.26",
-    "what": "new line e2-a1-0027 (nole, 0.92 s, new take) at start+0.69"
+    "what": "new line e2-a1-0027 (nole, 0.92 s, new take) at start+0.68"
    },
    {
     "beat": "4.26",
@@ -1680,7 +1708,7 @@
    },
    {
     "beat": "4.26",
-    "what": "the plan's 4.42 s: its tail 0.69 s after the last line"
+    "what": "the plan's 4.4 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "4.27",
@@ -1688,11 +1716,11 @@
    },
    {
     "beat": "4.27",
-    "what": "sound candle_snuff at 0.57 s (the plan's)"
+    "what": "sound candle_snuff at 0.56 s (the plan's)"
    },
    {
     "beat": "4.27",
-    "what": "sound render_front_sweep at 1.83 s (the plan's)"
+    "what": "sound render_front_sweep at 1.81 s (the plan's)"
    },
    {
     "beat": "4.28",
@@ -1720,15 +1748,15 @@
    },
    {
     "beat": "4.30",
-    "what": "sound glass_sip at 0.46 s (the plan's)"
+    "what": "sound glass_sip at 0.45 s (the plan's)"
    },
    {
     "beat": "4.30",
-    "what": "sound ladder_climb at 1.37 s (the plan's)"
+    "what": "sound ladder_climb at 1.36 s (the plan's)"
    },
    {
     "beat": "4.30",
-    "what": "sound hatch_slide_shut at 3.78 s (the plan's)"
+    "what": "sound hatch_slide_shut at 3.73 s (the plan's)"
    },
    {
     "beat": "4.31",
@@ -1752,7 +1780,7 @@
    },
    {
     "beat": "4.33",
-    "what": "sound match_strike at 1.60 s (the plan's)"
+    "what": "sound match_strike at 1.58 s (the plan's)"
    },
    {
     "beat": "4.34",
@@ -1760,15 +1788,15 @@
    },
    {
     "beat": "4.34",
-    "what": "new line e2-a1-0029 (nole, 6.76 s, new take) at start+0.69"
+    "what": "new line e2-a1-0029 (nole, 6.76 s, new take) at start+0.68"
    },
    {
     "beat": "4.34",
-    "what": "the plan's 9.05 s: its tail 1.60 s after the last line"
+    "what": "the plan's 9.02 s: its tail 1.58 s after the last line"
    },
    {
     "beat": "4.34",
-    "what": "sound glass_sip at 7.95 s (the plan's)"
+    "what": "sound glass_sip at 7.94 s (the plan's)"
    },
    {
     "beat": "4.35",
@@ -1776,19 +1804,19 @@
    },
    {
     "beat": "4.35",
-    "what": "new line e2-a1-0030 (nole, 1.57 s, new take) at start+0.46"
+    "what": "new line e2-a1-0030 (nole, 1.57 s, new take) at start+0.45"
    },
    {
     "beat": "4.35",
-    "what": "the plan's 4.09 s: its tail 2.06 s after the last line"
+    "what": "the plan's 4.06 s: its tail 2.04 s after the last line"
    },
    {
     "beat": "4.35",
-    "what": "sound rocket_roar at 2.23 s (the plan's)"
+    "what": "sound rocket_roar at 2.22 s (the plan's)"
    },
    {
     "beat": "4.35",
-    "what": "sound tile_land_1 at 3.79 s (the plan's)"
+    "what": "sound tile_land_1 at 3.76 s (the plan's)"
    },
    {
     "beat": "4.36",
@@ -1812,7 +1840,7 @@
    },
    {
     "beat": "4A.01",
-    "what": "the plan's 7.61 s: its tail 0.53 s after the last line"
+    "what": "the plan's 7.58 s: its tail 0.50 s after the last line"
    },
    {
     "beat": "4A.02",
@@ -1820,11 +1848,11 @@
    },
    {
     "beat": "4A.02",
-    "what": "new line e2-a1-0032 (terb, 10.36 s, new take) at start+1.07"
+    "what": "new line e2-a1-0032 (terb, 10.36 s, new take) at start+1.01"
    },
    {
     "beat": "4A.02",
-    "what": "the plan's 12.5 s: its tail 1.07 s after the last line"
+    "what": "the plan's 11.52 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "4A.03",
@@ -1832,15 +1860,15 @@
    },
    {
     "beat": "4A.03",
-    "what": "new line e2-a1-0033 (terb, 1.78 s, new take) at start+0.62"
+    "what": "new line e2-a1-0033 (terb, 1.78 s, new take) at start+0.15"
    },
    {
     "beat": "4A.03",
-    "what": "the plan's 4.0 s: its tail 1.60 s after the last line"
+    "what": "the plan's 3.44 s: its tail 1.51 s after the last line"
    },
    {
     "beat": "4A.03",
-    "what": "sound chair_unfold at 2.70 s (the plan's)"
+    "what": "sound chair_unfold at 2.23 s (the plan's)"
    },
    {
     "beat": "4A.04",
@@ -1892,7 +1920,7 @@
    },
    {
     "beat": "4A.06",
-    "what": "sound ui_toast_pop at 0.53 s (the plan's)"
+    "what": "sound ui_toast_pop at 0.50 s (the plan's)"
    },
    {
     "beat": "4B.01",
@@ -1900,23 +1928,23 @@
    },
    {
     "beat": "4B.01",
-    "what": "on-screen add: \"XEL · LONG-FORM · MAR 18 · 2 HRS\" (0.29-8.0)"
+    "what": "on-screen add: \"XEL · LONG-FORM · MAR 18 · 2 HRS\" (0.2-9.0)"
    },
    {
     "beat": "4B.01",
-    "what": "new line e2-vo-03 (mas, 5.72 s, new take) at start+1.43"
+    "what": "new line e2-vo-03 (mas, 5.72 s, new take) at start+1"
    },
    {
     "beat": "4B.01",
-    "what": "the plan's 8.0 s: its tail 0.85 s after the last line"
+    "what": "the plan's 9.0 s: its tail 2.28 s after the last line"
    },
    {
     "beat": "4B.01",
-    "what": "sound post_click at 7.25 s (the plan's)"
+    "what": "sound post_click at 7.12 s (the plan's)"
    },
    {
     "beat": "4B.01",
-    "what": "names[]: xel at 0.29 s (its plate)"
+    "what": "names[]: xel at 0.2 s (its plate)"
    },
    {
     "beat": "6.01",
@@ -2290,9 +2318,9 @@
   "timeline": "show/reel/ep02-v1/ep02-v1-act2.json",
   "source": null,
   "source_story_s": 0.0,
-  "estimate_s": 280.0,
-  "seconds": 280.0,
-  "frames": 6720,
+  "estimate_s": 279.0,
+  "seconds": 279.0,
+  "frames": 6696,
   "source_frames": 0,
   "beats": 44,
   "lines": 41,
@@ -2315,7 +2343,7 @@
   "median_gap": {
    "inside_beats_s": 0.35,
    "inside_beats_n": 16,
-   "segment_s": 1.52,
+   "segment_s": 1.485,
    "segment_n": 40,
    "spoken_only_segment_s": 1.15
   },
@@ -2388,8 +2416,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 8.29,
-    "lock_s": 8.29,
+    "est_s": 7.94,
+    "lock_s": 7.94,
     "diff_s": 0.0
    },
    {
@@ -2397,8 +2425,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 8.19,
-    "lock_s": 8.19,
+    "est_s": 7.9,
+    "lock_s": 7.9,
     "diff_s": 0.0
    },
    {
@@ -2406,8 +2434,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 4.82,
-    "lock_s": 4.82,
+    "est_s": 4.7,
+    "lock_s": 4.7,
     "diff_s": 0.0
    },
    {
@@ -2415,8 +2443,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 13.32,
-    "lock_s": 13.32,
+    "est_s": 13.24,
+    "lock_s": 13.24,
     "diff_s": 0.0
    },
    {
@@ -2424,8 +2452,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 10.42,
-    "lock_s": 10.42,
+    "est_s": 10.33,
+    "lock_s": 10.33,
     "diff_s": 0.0
    },
    {
@@ -2433,8 +2461,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 6.96,
-    "lock_s": 6.96,
+    "est_s": 6.89,
+    "lock_s": 6.89,
     "diff_s": 0.0
    },
    {
@@ -2649,8 +2677,8 @@
     "action": "new",
     "scene": "12",
     "src_s": null,
-    "est_s": 6.53,
-    "lock_s": 6.53,
+    "est_s": 6.09,
+    "lock_s": 6.09,
     "diff_s": 0.0
    },
    {
@@ -2658,8 +2686,8 @@
     "action": "new",
     "scene": "12",
     "src_s": null,
-    "est_s": 3.39,
-    "lock_s": 3.39,
+    "est_s": 3.16,
+    "lock_s": 3.16,
     "diff_s": 0.0
    },
    {
@@ -2703,8 +2731,8 @@
     "action": "new",
     "scene": "12",
     "src_s": null,
-    "est_s": 10.28,
-    "lock_s": 10.28,
+    "est_s": 10.95,
+    "lock_s": 10.95,
     "diff_s": 0.0
    },
    {
@@ -2723,6 +2751,13 @@
     "line": "e2-a2-0004",
     "plan_s": 0.9,
     "lock_s": 0.9,
+    "ok": true
+   },
+   {
+    "beat": "9.02",
+    "line": "e2-a2-0003",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
     "ok": true
    },
    {
@@ -2987,7 +3022,7 @@
    },
    {
     "beat": "9.01",
-    "what": "the plan's 8.29 s: its tail 0.50 s after the last line"
+    "what": "the plan's 7.94 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "9.02",
@@ -2995,11 +3030,11 @@
    },
    {
     "beat": "9.02",
-    "what": "on-screen add: \"yes!!\" (5.12-8.19)"
+    "what": "on-screen add: \"yes!!\" (4.85-7.9)"
    },
    {
     "beat": "9.02",
-    "what": "new line e2-a2-0003 (engineer, 4.60 s, new take) at start+0.42"
+    "what": "new line e2-a2-0003 (engineer, 4.60 s, new take) at start+0.15"
    },
    {
     "beat": "9.02",
@@ -3007,11 +3042,11 @@
    },
    {
     "beat": "9.02",
-    "what": "the plan's 8.19 s: its tail 0.50 s after the last line"
+    "what": "the plan's 7.9 s: its tail 0.48 s after the last line"
    },
    {
     "beat": "9.02",
-    "what": "sound ui_chirp_bright at 5.12 s (the plan's)"
+    "what": "sound ui_chirp_bright at 4.85 s (the plan's)"
    },
    {
     "beat": "9.03",
@@ -3019,23 +3054,23 @@
    },
    {
     "beat": "9.03",
-    "what": "on-screen add: \"[laughter]\" (0.84-4.82)"
+    "what": "on-screen add: \"[laughter]\" (0.81-4.7)"
    },
    {
     "beat": "9.03",
-    "what": "new line e2-a2-0005 (gerg, 1.96 s, new take) at start+2.19"
+    "what": "new line e2-a2-0005 (gerg, 1.96 s, new take) at start+2.1"
    },
    {
     "beat": "9.03",
-    "what": "the plan's 4.82 s: its tail 0.67 s after the last line"
+    "what": "the plan's 4.7 s: its tail 0.64 s after the last line"
    },
    {
     "beat": "9.03",
-    "what": "sound engineer_laugh_take at 0.17 s (the plan's)"
+    "what": "sound engineer_laugh_take at 0.24 s (the plan's)"
    },
    {
     "beat": "9.03",
-    "what": "sound tag_drop at 1.01 s (the plan's)"
+    "what": "sound tag_drop at 0.97 s (the plan's)"
    },
    {
     "beat": "9.04",
@@ -3043,7 +3078,7 @@
    },
    {
     "beat": "9.04",
-    "what": "new line e2-a2-0006 (mas, 0.68 s, new take) at start+0.84"
+    "what": "new line e2-a2-0006 (mas, 0.68 s, new take) at start+0.8"
    },
    {
     "beat": "9.04",
@@ -3059,7 +3094,7 @@
    },
    {
     "beat": "9.04",
-    "what": "the plan's 13.32 s: its tail 1.01 s after the last line"
+    "what": "the plan's 13.24 s: its tail 0.97 s after the last line"
    },
    {
     "beat": "9.05",
@@ -3067,7 +3102,7 @@
    },
    {
     "beat": "9.05",
-    "what": "new line e2-a2-0010 (engineer, 2.32 s, new take) at start+1.68"
+    "what": "new line e2-a2-0010 (engineer, 2.32 s, new take) at start+1.61"
    },
    {
     "beat": "9.05",
@@ -3075,7 +3110,7 @@
    },
    {
     "beat": "9.05",
-    "what": "the plan's 10.42 s: its tail 0.50 s after the last line"
+    "what": "the plan's 10.33 s: its tail 0.48 s after the last line"
    },
    {
     "beat": "9.06",
@@ -3083,35 +3118,35 @@
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE\" (0.5-6.96)"
+    "what": "on-screen add: \"VOICE\" (0.48-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"SINCE SEP 2023\" (0.67-6.96)"
+    "what": "on-screen add: \"SINCE SEP 2023\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 1\" (0.67-6.96)"
+    "what": "on-screen add: \"VOICE 1\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 2\" (0.67-6.96)"
+    "what": "on-screen add: \"VOICE 2\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 3\" (0.67-6.96)"
+    "what": "on-screen add: \"VOICE 3\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 4\" (0.67-6.96)"
+    "what": "on-screen add: \"VOICE 4\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 5\" (0.67-6.96)"
+    "what": "on-screen add: \"VOICE 5\" (0.64-6.89)"
    },
    {
     "beat": "9.06",
-    "what": "new line e2-a2-0012 (voice1, 0.49 s, new take) at start+1.68"
+    "what": "new line e2-a2-0012 (voice1, 0.49 s, new take) at start+1.61"
    },
    {
     "beat": "9.06",
@@ -3131,15 +3166,15 @@
    },
    {
     "beat": "9.06",
-    "what": "the plan's 6.96 s: its tail 1.60 s after the last line"
+    "what": "the plan's 6.89 s: its tail 1.60 s after the last line"
    },
    {
     "beat": "9.06",
-    "what": "sound panel_unfold_step at 5.56 s (the plan's)"
+    "what": "sound panel_unfold_step at 5.49 s (the plan's)"
    },
    {
     "beat": "9.06",
-    "what": "sound drafting_ink_stroke at 6.36 s (the plan's)"
+    "what": "sound drafting_ink_stroke at 6.29 s (the plan's)"
    },
    {
     "beat": "10.01",
@@ -3263,11 +3298,11 @@
    },
    {
     "beat": "10.05",
-    "what": "on-screen add: \"3.\" (3.54-5.92)"
+    "what": "on-screen add: \"3.\" (2.56-5.92)"
    },
    {
     "beat": "10.05",
-    "what": "on-screen add: \"$0\" (3.54-5.92)"
+    "what": "on-screen add: \"$0\" (2.56-5.92)"
    },
    {
     "beat": "10.05",
@@ -3283,11 +3318,11 @@
    },
    {
     "beat": "10.05",
-    "what": "sound rubber_stamp_C at 3.54 s (the plan's)"
+    "what": "sound rubber_stamp_C at 2.56 s (the plan's)"
    },
    {
     "beat": "10.05",
-    "what": "sound tiny_crowd_patter at 3.84 s (the plan's)"
+    "what": "sound tiny_crowd_patter at 2.83 s (the plan's)"
    },
    {
     "beat": "10.06",
@@ -3635,7 +3670,7 @@
    },
    {
     "beat": "12.01",
-    "what": "sound house_lights_up at 0.24 s (the plan's)"
+    "what": "sound house_lights_up at 0.23 s (the plan's)"
    },
    {
     "beat": "12.02",
@@ -3643,7 +3678,7 @@
    },
    {
     "beat": "12.02",
-    "what": "on-screen add: \"RESERVED: CHIEF SCIENTIST\" (0.48-3.39)"
+    "what": "on-screen add: \"RESERVED: CHIEF SCIENTIST\" (0.45-3.16)"
    },
    {
     "beat": "12.03",
@@ -3707,15 +3742,15 @@
    },
    {
     "beat": "12.07",
-    "what": "on-screen add: \"ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI i\" (0.4-10.28)"
+    "what": "on-screen add: \"ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI i\" (0.4-10.95)"
    },
    {
     "beat": "12.07",
-    "what": "new line e2-vo-06 (mas, 1.20 s, new take) at start+8.6"
+    "what": "new line e2-vo-06 (mas, 1.20 s, new take) at start+9.3"
    },
    {
     "beat": "12.07",
-    "what": "the plan's 10.28 s: its tail 0.48 s after the last line"
+    "what": "the plan's 10.95 s: its tail 0.45 s after the last line"
    },
    {
     "beat": "12.07",
@@ -3745,9 +3780,9 @@
   "timeline": "show/reel/ep02-v1/ep02-v1-act3.json",
   "source": null,
   "source_story_s": 0.0,
-  "estimate_s": 321.0,
-  "seconds": 321.0,
-  "frames": 7704,
+  "estimate_s": 320.0,
+  "seconds": 320.0,
+  "frames": 7680,
   "source_frames": 0,
   "beats": 58,
   "lines": 28,
@@ -3770,9 +3805,9 @@
   "median_gap": {
    "inside_beats_s": 0.45,
    "inside_beats_n": 9,
-   "segment_s": 1.61,
+   "segment_s": 1.2,
    "segment_n": 27,
-   "spoken_only_segment_s": 0.9
+   "spoken_only_segment_s": 0.6
   },
   "beat_lengths": [
    {
@@ -4140,8 +4175,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 15.28,
-    "lock_s": 15.28,
+    "est_s": 14.62,
+    "lock_s": 14.62,
     "diff_s": 0.0
    },
    {
@@ -4149,8 +4184,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 4.16,
-    "lock_s": 4.16,
+    "est_s": 3.21,
+    "lock_s": 3.21,
     "diff_s": 0.0
    },
    {
@@ -4158,8 +4193,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 5.86,
-    "lock_s": 5.86,
+    "est_s": 5.9,
+    "lock_s": 5.9,
     "diff_s": 0.0
    },
    {
@@ -4167,8 +4202,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 4.59,
-    "lock_s": 4.59,
+    "est_s": 4.66,
+    "lock_s": 4.66,
     "diff_s": 0.0
    },
    {
@@ -4185,8 +4220,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 6.49,
-    "lock_s": 6.49,
+    "est_s": 6.55,
+    "lock_s": 6.55,
     "diff_s": 0.0
    },
    {
@@ -4203,8 +4238,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 4.3,
-    "lock_s": 4.3,
+    "est_s": 4.56,
+    "lock_s": 4.56,
     "diff_s": 0.0
    },
    {
@@ -4212,8 +4247,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 10.07,
-    "lock_s": 10.07,
+    "est_s": 10.12,
+    "lock_s": 10.12,
     "diff_s": 0.0
    },
    {
@@ -4221,8 +4256,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 5.0,
-    "lock_s": 5.0,
+    "est_s": 5.03,
+    "lock_s": 5.03,
     "diff_s": 0.0
    },
    {
@@ -4266,8 +4301,8 @@
     "action": "new",
     "scene": "17",
     "src_s": null,
-    "est_s": 6.9,
-    "lock_s": 6.9,
+    "est_s": 7.0,
+    "lock_s": 7.0,
     "diff_s": 0.0
    },
    {
@@ -4374,6 +4409,13 @@
     "line": "e2-a3-0015",
     "plan_s": 0.9,
     "lock_s": 0.9,
+    "ok": true
+   },
+   {
+    "beat": "17.05",
+    "line": "e2-a3-0017",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
     "ok": true
    },
    {
@@ -5115,7 +5157,7 @@
    },
    {
     "beat": "17.04",
-    "what": "the plan's 15.28 s: its tail 0.76 s after the last line"
+    "what": "the plan's 14.62 s: its tail 0.10 s after the last line"
    },
    {
     "beat": "17.04",
@@ -5127,15 +5169,15 @@
    },
    {
     "beat": "17.05",
-    "what": "new line e2-a3-0017 (driver, 2.86 s, new take) at start+1.15"
+    "what": "new line e2-a3-0017 (driver, 2.86 s, new take) at start+0.2"
    },
    {
     "beat": "17.05",
-    "what": "the plan's 4.16 s: its tail 0.15 s after the last line"
+    "what": "the plan's 3.21 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "17.05",
-    "what": "sound car_window_down at 0.19 s (the plan's)"
+    "what": "sound car_window_down at 0.10 s (the plan's)"
    },
    {
     "beat": "17.06",
@@ -5147,7 +5189,7 @@
    },
    {
     "beat": "17.06",
-    "what": "the plan's 5.86 s: its tail 2.29 s after the last line"
+    "what": "the plan's 5.9 s: its tail 2.33 s after the last line"
    },
    {
     "beat": "17.06",
@@ -5159,7 +5201,7 @@
    },
    {
     "beat": "17.07",
-    "what": "sound phone_buzz_step_1 at 1.91 s (the plan's)"
+    "what": "sound phone_buzz_step_1 at 1.94 s (the plan's)"
    },
    {
     "beat": "17.08",
@@ -5195,11 +5237,11 @@
    },
    {
     "beat": "17.09",
-    "what": "new line e2-a3-0019 (mas, 3.44 s, new take) at start+2.29"
+    "what": "new line e2-a3-0019 (mas, 3.44 s, new take) at start+2.33"
    },
    {
     "beat": "17.09",
-    "what": "the plan's 6.49 s: its tail 0.76 s after the last line"
+    "what": "the plan's 6.55 s: its tail 0.78 s after the last line"
    },
    {
     "beat": "17.09",
@@ -5207,7 +5249,7 @@
    },
    {
     "beat": "17.09",
-    "what": "sound call_connect at 1.53 s (the plan's)"
+    "what": "sound call_connect at 1.55 s (the plan's)"
    },
    {
     "beat": "17.10",
@@ -5231,11 +5273,11 @@
    },
    {
     "beat": "17.11",
-    "what": "new line e2-vo-09 (mas, 3.24 s, new take) at start+0.3"
+    "what": "new line e2-vo-09 (mas, 3.48 s, new take) at start+0.3"
    },
    {
     "beat": "17.11",
-    "what": "the plan's 4.3 s: its tail 0.76 s after the last line"
+    "what": "the plan's 4.56 s: its tail 0.78 s after the last line"
    },
    {
     "beat": "17.11",
@@ -5247,11 +5289,11 @@
    },
    {
     "beat": "17.12",
-    "what": "new line e2-a3-0020 (forecaster, 6.82 s, new take) at start+2.68"
+    "what": "new line e2-a3-0020 (forecaster, 6.82 s, new take) at start+2.72"
    },
    {
     "beat": "17.12",
-    "what": "the plan's 10.07 s: its tail 0.57 s after the last line"
+    "what": "the plan's 10.12 s: its tail 0.58 s after the last line"
    },
    {
     "beat": "17.13",
@@ -5259,11 +5301,11 @@
    },
    {
     "beat": "17.13",
-    "what": "new line e2-vo-10 (mas, 2.51 s, new take) at start+1.53"
+    "what": "new line e2-vo-10 (mas, 2.51 s, new take) at start+1.55"
    },
    {
     "beat": "17.13",
-    "what": "the plan's 5.0 s: its tail 0.96 s after the last line"
+    "what": "the plan's 5.03 s: its tail 0.97 s after the last line"
    },
    {
     "beat": "17.14",
@@ -5359,7 +5401,7 @@
    },
    {
     "beat": "17.18",
-    "what": "sound ink_run_drip at 0.77 s (the plan's)"
+    "what": "sound ink_run_drip at 0.78 s (the plan's)"
    },
    {
     "beat": "17.18",
@@ -5367,7 +5409,7 @@
    },
    {
     "beat": "17.18",
-    "what": "sound umbrella_pop at 4.98 s (the plan's)"
+    "what": "sound umbrella_pop at 5.06 s (the plan's)"
    },
    {
     "beat": "17.19",
@@ -5454,9 +5496,9 @@
   "timeline": "show/reel/ep02-v1/ep02-v1-act4.json",
   "source": null,
   "source_story_s": 0.0,
-  "estimate_s": 320.0,
-  "seconds": 320.0,
-  "frames": 7680,
+  "estimate_s": 319.0,
+  "seconds": 319.0,
+  "frames": 7656,
   "source_frames": 0,
   "beats": 57,
   "lines": 38,
@@ -5478,9 +5520,9 @@
   "median_gap": {
    "inside_beats_s": 0.45,
    "inside_beats_n": 19,
-   "segment_s": 0.9,
+   "segment_s": 0.6,
    "segment_n": 37,
-   "spoken_only_segment_s": 0.6
+   "spoken_only_segment_s": 0.55
   },
   "beat_lengths": [
    {
@@ -5488,8 +5530,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 5.66,
-    "lock_s": 5.66,
+    "est_s": 5.74,
+    "lock_s": 5.74,
     "diff_s": 0.0
    },
    {
@@ -5506,8 +5548,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 10.55,
-    "lock_s": 10.55,
+    "est_s": 10.56,
+    "lock_s": 10.56,
     "diff_s": 0.0
    },
    {
@@ -5515,8 +5557,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 5.91,
-    "lock_s": 5.91,
+    "est_s": 5.93,
+    "lock_s": 5.93,
     "diff_s": 0.0
    },
    {
@@ -5542,8 +5584,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 3.51,
-    "lock_s": 3.51,
+    "est_s": 3.55,
+    "lock_s": 3.55,
     "diff_s": 0.0
    },
    {
@@ -5551,8 +5593,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 12.76,
-    "lock_s": 12.76,
+    "est_s": 12.52,
+    "lock_s": 12.52,
     "diff_s": 0.0
    },
    {
@@ -5560,8 +5602,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 2.83,
-    "lock_s": 2.83,
+    "est_s": 1.98,
+    "lock_s": 1.98,
     "diff_s": 0.0
    },
    {
@@ -5569,8 +5611,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 12.85,
-    "lock_s": 12.85,
+    "est_s": 12.7,
+    "lock_s": 12.7,
     "diff_s": 0.0
    },
    {
@@ -5596,8 +5638,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 9.94,
-    "lock_s": 9.94,
+    "est_s": 9.96,
+    "lock_s": 9.96,
     "diff_s": 0.0
    },
    {
@@ -5605,8 +5647,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 2.78,
-    "lock_s": 2.78,
+    "est_s": 2.8,
+    "lock_s": 2.8,
     "diff_s": 0.0
    },
    {
@@ -5614,8 +5656,8 @@
     "action": "new",
     "scene": "18",
     "src_s": null,
-    "est_s": 3.31,
-    "lock_s": 3.31,
+    "est_s": 3.36,
+    "lock_s": 3.36,
     "diff_s": 0.0
    },
    {
@@ -6001,8 +6043,8 @@
    {
     "beat": "18.08",
     "line": "e2-a4-0005",
-    "plan_s": 0.5,
-    "lock_s": 0.5,
+    "plan_s": 0.25,
+    "lock_s": 0.25,
     "ok": true
    },
    {
@@ -6017,6 +6059,13 @@
     "line": "e2-vo-11",
     "plan_s": 2.3,
     "lock_s": 2.3,
+    "ok": true
+   },
+   {
+    "beat": "18.10",
+    "line": "e2-a4-0007",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
     "ok": true
    },
    {
@@ -6154,7 +6203,7 @@
    },
    {
     "beat": "18.01",
-    "what": "on-screen add: \"RAIL: MAY 28, 2024\" (0.29-2.05)"
+    "what": "on-screen add: \"RAIL: MAY 28, 2024\" (0.3-2.08)"
    },
    {
     "beat": "18.01",
@@ -6162,11 +6211,11 @@
    },
    {
     "beat": "18.01",
-    "what": "sound footstep_soft_1 at 2.34 s (the plan's)"
+    "what": "sound footstep_soft_1 at 2.38 s (the plan's)"
    },
    {
     "beat": "18.01",
-    "what": "sound footstep_soft_2 at 3.12 s (the plan's)"
+    "what": "sound footstep_soft_2 at 3.17 s (the plan's)"
    },
    {
     "beat": "18.02",
@@ -6182,7 +6231,7 @@
    },
    {
     "beat": "18.03",
-    "what": "on-screen add: \"We learned about CHATGTP on RETTIWT.\" (8.02-10.55)"
+    "what": "on-screen add: \"We learned about CHATGTP on RETTIWT.\" (8.02-10.56)"
    },
    {
     "beat": "18.03",
@@ -6190,7 +6239,7 @@
    },
    {
     "beat": "18.03",
-    "what": "the plan's 10.55 s: its tail 0.58 s after the last line"
+    "what": "the plan's 10.56 s: its tail 0.59 s after the last line"
    },
    {
     "beat": "18.04",
@@ -6198,15 +6247,15 @@
    },
    {
     "beat": "18.04",
-    "what": "on-screen add: \"…MAS didn't inform the board that he owned the NOPEAI Startup Fund…\" (0.58-5.91)"
+    "what": "on-screen add: \"…MAS didn't inform the board that he owned the NOPEAI Startup Fund…\" (0.59-5.93)"
    },
    {
     "beat": "18.04",
-    "what": "new line e2-a4-0002 (neleh, 4.75 s, new take) at start+0.58"
+    "what": "new line e2-a4-0002 (neleh, 4.75 s, new take) at start+0.59"
    },
    {
     "beat": "18.04",
-    "what": "the plan's 5.91 s: its tail 0.58 s after the last line"
+    "what": "the plan's 5.93 s: its tail 0.59 s after the last line"
    },
    {
     "beat": "18.05",
@@ -6242,19 +6291,19 @@
    },
    {
     "beat": "18.07",
-    "what": "on-screen add: \"SAFETY COMMITTEE\" (0.29-3.51)"
+    "what": "on-screen add: \"SAFETY COMMITTEE\" (0.3-3.55)"
    },
    {
     "beat": "18.07",
-    "what": "on-screen add: \"212\" (1.75-3.51)"
+    "what": "on-screen add: \"212\" (1.77-3.55)"
    },
    {
     "beat": "18.07",
-    "what": "sound lanyard_drop at 1.75 s (the plan's)"
+    "what": "sound lanyard_drop at 1.77 s (the plan's)"
    },
    {
     "beat": "18.07",
-    "what": "sound lanyard_drop at 1.80 s (the plan's)"
+    "what": "sound lanyard_drop at 1.82 s (the plan's)"
    },
    {
     "beat": "18.08",
@@ -6262,15 +6311,15 @@
    },
    {
     "beat": "18.08",
-    "what": "new line e2-a4-0004 (terb, 7.56 s, new take) at start+0.29"
+    "what": "new line e2-a4-0004 (terb, 7.56 s, new take) at start+0.3"
    },
    {
     "beat": "18.08",
-    "what": "new line e2-a4-0005 (terb, 4.11 s, new take) after e2-a4-0004 +0.5"
+    "what": "new line e2-a4-0005 (terb, 4.11 s, new take) after e2-a4-0004 +0.25"
    },
    {
     "beat": "18.08",
-    "what": "the plan's 12.76 s: its tail 0.30 s after the last line"
+    "what": "the plan's 12.52 s: its tail 0.30 s after the last line"
    },
    {
     "beat": "18.09",
@@ -6282,11 +6331,11 @@
    },
    {
     "beat": "18.09",
-    "what": "the plan's 2.83 s: its tail 0.97 s after the last line"
+    "what": "the plan's 1.98 s: its tail 0.12 s after the last line"
    },
    {
     "beat": "18.09",
-    "what": "sound pen_scribble_short at 2.16 s (the plan's)"
+    "what": "sound pen_scribble_short at 1.91 s (the plan's)"
    },
    {
     "beat": "18.10",
@@ -6294,7 +6343,7 @@
    },
    {
     "beat": "18.10",
-    "what": "new line e2-a4-0007 (terb, 5.77 s, new take) at start+0.29"
+    "what": "new line e2-a4-0007 (terb, 5.77 s, new take) at start+0.13"
    },
    {
     "beat": "18.10",
@@ -6306,11 +6355,11 @@
    },
    {
     "beat": "18.10",
-    "what": "the plan's 12.85 s: its tail 0.78 s after the last line"
+    "what": "the plan's 12.7 s: its tail 0.79 s after the last line"
    },
    {
     "beat": "18.10",
-    "what": "sound pen_scribble_short at 8.02 s (the plan's)"
+    "what": "sound pen_scribble_short at 7.86 s (the plan's)"
    },
    {
     "beat": "18.11",
@@ -6354,7 +6403,7 @@
    },
    {
     "beat": "18.13",
-    "what": "new line e2-a4-0013 (mario, 1.63 s, new take) at start+1.56"
+    "what": "new line e2-a4-0013 (mario, 1.63 s, new take) at start+1.58"
    },
    {
     "beat": "18.13",
@@ -6366,23 +6415,23 @@
    },
    {
     "beat": "18.13",
-    "what": "the plan's 9.94 s: its tail 0.15 s after the last line"
+    "what": "the plan's 9.96 s: its tail 0.15 s after the last line"
    },
    {
     "beat": "18.13",
-    "what": "sound glint_tick at 0.29 s (the plan's)"
+    "what": "sound glint_tick at 0.30 s (the plan's)"
    },
    {
     "beat": "18.13",
-    "what": "sound glint_tick at 0.78 s (the plan's)"
+    "what": "sound glint_tick at 0.79 s (the plan's)"
    },
    {
     "beat": "18.13",
-    "what": "sound glint_tick at 1.27 s (the plan's)"
+    "what": "sound glint_tick at 1.28 s (the plan's)"
    },
    {
     "beat": "18.13",
-    "what": "sound scroll_unroll_fall at 3.39 s (the plan's)"
+    "what": "sound scroll_unroll_fall at 3.41 s (the plan's)"
    },
    {
     "beat": "18.14",
@@ -6390,11 +6439,15 @@
    },
    {
     "beat": "18.14",
+    "what": "on-screen add: \"NELEH & THE QUIET VOTE\" (0.2-2.8)"
+   },
+   {
+    "beat": "18.14",
     "what": "new line e2-a4-0016 (mario, 1.46 s, new take) at start+0.35"
    },
    {
     "beat": "18.14",
-    "what": "the plan's 2.78 s: its tail 0.97 s after the last line"
+    "what": "the plan's 2.8 s: its tail 0.99 s after the last line"
    },
    {
     "beat": "18.15",
@@ -6402,15 +6455,15 @@
    },
    {
     "beat": "18.15",
-    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.39-2.34)"
+    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.4-2.37)"
    },
    {
     "beat": "18.15",
-    "what": "sound ui_toast_pop at 0.39 s (the plan's)"
+    "what": "sound ui_toast_pop at 0.40 s (the plan's)"
    },
    {
     "beat": "18.15",
-    "what": "sound phone_turn_over at 2.34 s (the plan's)"
+    "what": "sound phone_turn_over at 2.37 s (the plan's)"
    },
    {
     "beat": "19.01",
@@ -6462,7 +6515,7 @@
    },
    {
     "beat": "19.04",
-    "what": "on-screen add: \"And profit—\" (13.86-14.83)"
+    "what": "on-screen add: \"…AND LATER THIS YEAR: CHATGTP.\" (13.66-14.93)"
    },
    {
     "beat": "19.04",
@@ -6489,12 +6542,20 @@
     "what": "the plan's 14.93 s: its tail 0.30 s after the last line"
    },
    {
+    "beat": "19.04",
+    "what": "sound stream_announce_roar at 13.66 s (the plan's)"
+   },
+   {
+    "beat": "19.04",
+    "what": "sound crowd_cheer at 14.01 s (the plan's)"
+   },
+   {
     "beat": "19.05",
     "what": "new beat (scene): SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer (lobby, lobby_watchparty, haras, staff, gerg)"
    },
    {
     "beat": "19.05",
-    "what": "on-screen add: \"…AND LATER THIS YEAR: CHATGTP.\" (0.1-2.2)"
+    "what": "on-screen add: \"…AND LATER THIS YEAR: CHATGTP.\" (0.0-2.2)"
    },
    {
     "beat": "19.05",
@@ -6503,10 +6564,6 @@
    {
     "beat": "19.05",
     "what": "the plan's 4.7 s: its tail 0.70 s after the last line"
-   },
-   {
-    "beat": "19.05",
-    "what": "sound crowd_cheer at 0.60 s (the plan's)"
    },
    {
     "beat": "19.05",

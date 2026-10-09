@@ -3,7 +3,7 @@
 > **Status: every line of the beat plans recorded through the Ep2 route and measured, 2026-10-09, by the dialogue recordist (the takes pass).** Nobody has listened (R8). Every verdict here is a measurement [M] unless it says it is a judgement [J]; the lines a human ear must check are in [§6](#6-for-the-ear).
 >
 > <!-- BEGIN generated:summary -->
-173 of 173 lines have a take (missing: none; unmeasured: none). **60 PASS** every check, **113 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 31 lines were read more than once. The takes pass sent 9,053 characters in 190 calls, **3,999 credits** by the API's own character-cost headers.
+173 of 173 lines have a take (missing: none; unmeasured: none). **59 PASS** every check, **114 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 32 lines were read more than once. The takes pass sent 9,206 characters in 193 calls, **4,065 credits** by the API's own character-cost headers.
 <!-- END generated:summary -->
 
 **Contents:** [1. What was recorded, and how](#1-what-was-recorded-and-how) · [2. The checks and the rule](#2-the-checks-and-the-rule) · [3. Every line](#3-every-line) · [4. Retakes](#4-retakes) · [5. The special lines](#5-the-special-lines) · [6. For the ear](#6-for-the-ear) · [7. Credits](#7-credits) · [8. Files and how to re-run](#8-files-and-how-to-re-run) · [9. Open issues, and the rules checked](#9-open-issues-and-the-rules-checked)
@@ -31,7 +31,7 @@ Every line of the six beat plans (`beat-plan/<seg>.json`, 173 lines: 159 spoken,
 | Line | Brief | Role's settings gave | Kept |
 |---|---|---|---|
 | `e2-a3-0019` MAS's call to LEGAL | "level and quicker than he ever talks, about 180 wpm" | 134 wpm at speed 1.10 with the script's full stops (slower than his ordinary lines) | speed **1.20**, sent with commas: **174 wpm**, 3.44 s against the plan's 3.32 |
-| `e2-vo-09` V.O. 9 | "faster than he thinks, about 145 wpm against his usual 110–130" | 109 wpm at speed 1.0 with full stops | speed **1.15**, stability 0.60, sent with commas: **148 wpm**, 3.24 s against 3.25 |
+| `e2-vo-09` V.O. 9 | "faster than he thinks, about 145 wpm against his usual 110–130" | 109 wpm at speed 1.0 with full stops | speed **1.15**, stability 0.60, sent with commas: **148 wpm**, 3.24 s against 3.25. **Replaced at the lock QA** (lock-v1.md §3.5): that read left 0.21 s after "signed" and was heard "Everyone who signed the post, everyone who signed.", so the count could parse as "signed the post". Kept now: speed **1.2**, a full stop after "signed" (`Everyone who signed. The post, everyone who signed.`): 0.47 s after "signed", 0.42 s after "post", heard "Everyone who signed. The post. Everyone who signed.", **138 wpm** (articulation 4.46 syllables a second, against 4.29), 3.48 s |
 | `e2-a2-0037`, `-0038` the ENGINEER off mic | "lower and closer" (the casting read measured 151 Hz against his 118 Hz stage line) | 146 and 151 Hz (the cast reads, kept in the cache) | stability 0.60, style 0: **140 and 128 Hz**, against his stage lines' median of 138 Hz. `-0038`'s first two reads at these settings were heard "the guy *in* his computer" (forced margins −10.7, −8.9: misreads, retaken); its third read is verbatim |
 | six of Mas's V.O. lines (`e2-vo-02`, `-05`, `-08`, `-10`, `-12`, `-13`) | "close and dry, 110–130 wpm" | 160–205 wpm at the V.O. settings (speed 0.85) | speed **0.75**: 143–188 wpm, each slower, all verbatim |
 | four of Mas's spoken lines (`e2-a1-0004`, `-0009`, `e2-a3-0012`, `e2-a4-0029`) | "his ordinary lines unhurried, about 140 wpm", and the call "quicker than he ever talks" | 183–233 wpm at speed 0.95, faster than the call | speed **0.82**: 152–192 wpm, verbatim |
@@ -200,7 +200,7 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a3-0007 | bukaj | `e2-a3-0007__bukaj-A.wav` · retake, seed +1000 | Not yet, I'd like a week in it before anyone asks me for a schedule. | 4.17 / 5.84 (0.71) | 216 (136-184) | 107 | -16.0 · -2.4 | -78 · 59 dB |  | **LOOK**: 2 reads; length 0.71 of the plan; tempo 216 wpm against bukaj at the planned 160 wpm +-15 % |
 | e2-a3-0008 | alyi | `e2-a3-0008__alyi-A.wav` · cut from e1-a1-5-13 (Ep1's take) | 6 years and 11 months. | 2.10 / 2.10 (1.00) | 143 (128-172) | 86 | -16.0 · -3.5 | take -62 |  | **PASS** |
 | e2-vo-07 | mas | `e2-vo-07__mas-manalt-C.wav` | 176 days. | 2.40 / 2.44 (0.98) | 125 (110-130) | 117 | -18.0 · -3.7 | -82 · 59 dB |  | **PASS** |
-| e2-a3-0009 | alyi | `e2-a3-0009__alyi-A.wav` | Feel the AGI. | 1.59 / 1.20 (1.32) | 113 | 99 | -16.0 · -2.7 | -68 · 54 dB | AGI +12.6 | **LOOK**: length +0.39 s off the plan |
+| e2-a3-0009 | alyi | `e2-a3-0009__alyi-A.wav` | Feel the AGI. | 1.59 / 1.20 (1.32) | 113 | 99 | -16.0 · -2.7 | -68 · 54 dB | AGI +13.1 (AGE +13.4) | **LOOK**: length +0.39 s off the plan |
 | e2-a3-0010 | crowd | `e2-a3-0010__crowd-layered.wav` · 10 layers | Feel the AGI, AGI, Feel the AGI, AGI | 3.03 / 2.60 (1.17) | 119 | 170 | -19.0 · -3.5 | take -63 | AGI +7.8 | **LOOK**: asr: '(nothing)' heard 'agi'; '(nothing)' heard 'agi' (a crowd take: the recogniser is not built for it) |
 | e2-a3-0011 | alyi | `e2-a3-0011__alyi-A.wav` | You're not chanting. | 1.19 / 1.30 (0.92) | 151 | 103 | -16.3 · -2.6 | -64 · 50 dB |  | **PASS** |
 | e2-a3-0012 | mas | `e2-a3-0012__mas-manalt-C.wav` · line settings: stability 0.6, style 0.0, speed 0.82 | Someone has to hold the glass. | 1.99 / 2.67 (0.74) | 181 (120-160) | 108 | -16.0 · -2.9 | -82 · 61 dB |  | **LOOK**: 2 reads; length 0.74 of the plan; tempo 181 wpm against Mas unhurried (~140) |
@@ -212,7 +212,7 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a3-0017 | driver | `e2-a3-0017__driver-A.wav` | You gonna think it over or can we move we're parked on it | 2.86 / 4.33 (0.66) | 273 (162-218) | 220 | -16.0 · -3.4 | -86 · 66 dB |  | **LOOK**: length 0.66 of the plan; tempo 273 wpm against driver at the planned 190 wpm +-15 % |
 | e2-a3-0018 | forecaster | `e2-a3-0018__forecaster-A.wav` | Already did. It's the one thing I didn't need a number for. | 3.22 / 4.33 (0.74) | 224 (149-201) | 139 | -16.0 · -2.2 | -84 · 58 dB |  | **LOOK**: length 0.74 of the plan; tempo 224 wpm against forecaster at the planned 175 wpm +-15 % |
 | e2-a3-0019 | mas | `e2-a3-0019__mas-manalt-C.wav` · line settings: stability 0.6, style 0.0, speed 1.2 | Everyone who signed one, find them, all of them, today. | 3.44 / 3.32 (1.04) | 174 (160-200) | 112 | -16.0 · -2.0 | -85 · 67 dB |  | **PASS** |
-| e2-vo-09 | mas | `e2-vo-09__mas-manalt-C.wav` · line settings: stability 0.6, style 0.0, speed 1.15 | Everyone who signed the post, everyone who signed. | 3.24 / 3.25 (1.00) | 148 (145-175) | 114 | -18.0 · -3.5 | -84 · 65 dB |  | **PASS** |
+| e2-vo-09 | mas | `e2-vo-09__mas-manalt-C.wav` · line settings: stability 0.6, style 0.0, speed 1.2 | Everyone who signed. The post. Everyone who signed. | 3.48 / 3.25 (1.07) | 138 (145-175) | 102 | -18.0 · -3.5 | -86 · 66 dB |  | **LOOK**: 2 reads; tempo 138 wpm against V.O. 9, faster than he thinks (~145-165) |
 | e2-a3-0020 | forecaster | `e2-a3-0020__forecaster-A.wav` | I've got a forecast on you, median, an apology within the hour in lower case. | 6.82 / 5.14 (1.33) | 123 (149-201) | 141 | -16.0 · -2.7 | -85 · 60 dB |  | **LOOK**: length 1.33 of the plan; tempo 123 wpm against forecaster at the planned 175 wpm +-15 % |
 | e2-vo-10 | mas | `e2-vo-10__mas-manalt-C.wav` · line settings: stability 0.65, style 0.0, speed 0.75 | Not until legal has every name. | 2.51 / 2.91 (0.86) | 143 (110-130) | 108 | -18.0 · -4.3 | -82 · 62 dB |  | **LOOK**: 2 reads; tempo 143 wpm against his V.O. 110-130 |
 | e2-a3-0021 | forecaster | `e2-a3-0021__forecaster-A.wav` | updating | 0.82 / 0.80 (1.02) | 73 | 94 | -16.0 · -1.6 | -79 · 54 dB |  | **LOOK**: pitch 94 Hz, -6.7 st from the role's 139 (a short line) |
@@ -298,6 +298,7 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a3-0014 | ekiel | 2 | asked (--force): one more read, the one nearer the plan kept | seed +1000: LOOK (length 0.69 of the plan; tempo 223 wpm against ekiel at the planned 160 wpm +-15 %; floor 38 dB under the speech (p5; house bed depth 45)) |
 | e2-vo-08 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.60 of the plan; tempo 206 wpm against his V.O. 110-130 | the first read: LOOK (length 0.66 of the plan; tempo 188 wpm against his V.O. 110-130) |
 | e2-a3-0016 | forecaster | 2 | a 1.06 s silence inside the read | seed +1000: PASS |
+| e2-vo-09 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed | the first read: LOOK (tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)) |
 | e2-vo-10 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.77 of the plan; tempo 160 wpm against his V.O. 110-130 | the first read: LOOK (tempo 143 wpm against his V.O. 110-130) |
 | e2-a4-0001 | neleh | 4 | name Rettiwt: -8.6 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech / name Rettiwt: -3.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 16 dB under the speech / name Rettiwt: -4.5 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech | seed +1000: LOOK (name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; length 1.31 of the plan; tempo 140 wpm against neleh at the planned 190 wpm +-15 %; floor 16 dB under the speech (p5; house bed depth 45)) |
 | e2-a4-0002 | neleh | 4 | noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech / noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech / noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 20 dB under the speech | the first read: LOOK (length 1.22 of the plan; tempo 152 wpm against neleh at the planned 190 wpm +-15 %; floor 15 dB under the speech (p5; house bed depth 45)) |
@@ -327,7 +328,8 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 Nobody has listened (R8). Before anything else:
 1. **CHATGTP's reads** (sc 9, 11): every one of Maya's Ep2 lines runs fast against the plan (the plan set her at 150 wpm from Ep1's one five-word line; her Ep2 reads of five words or more run 164–246 wpm). "Hi!… I can see you." and "Oh… Wow…" were given their beats in the text (§4); listen that the beats land and that the voice still sounds like no real actress and no film character (cast.md §8.5's first item).
 2. **The engineer's off-mic lines** (11.15): calmer, 140 and 128 Hz, "The guy and his computer" heard verbatim on the third read. The cast reads (146, 151 Hz) are in the cache if these sound wrong.
-3. **The hurried pair**: the call to LEGAL (17.09) at 174 wpm and V.O. 9 at 148, sent with commas; do they read as the one time he hurries, rattled, not louder? And Mas's ordinary tempo (§1).
+3. **The hurried pair**: the call to LEGAL (17.09) at 174 wpm, sent with commas, and V.O. 9 at 138 wpm (its articulation the quicker of the two takes, 4.46 syllables a second; the time is its two breaks); do they read as the one time he hurries, rattled, not louder? And Mas's ordinary tempo (§1).
+   - **V.O. 9's count** (17.11, the lock QA): "everyone who signed. the post. everyone who signed." must be heard as three items, the first repeated, never "signed the post". The first take (commas, 0.21 s after "signed") was heard "Everyone who signed the post, everyone who signed."; it was re-read with a full stop after "signed" (0.47 s) and the recogniser now hears the three items. If the ear still hears "signed the post", the next step is a longer break after "signed" (about 0.6 s), cut into this take; if the new read sounds slower than he thinks, the comma read (148 wpm) is in the cache and costs nothing to restore.
 4. **Nole's "The N goes at the end."** (4.12): the recogniser hears "the end" on every read and on both controls (§3), so only an ear can say the letter is heard.
 5. **"Rettiwt"** (18.03, Neleh, the podcast chain): heard "red twit" on every read; the forced choice puts "Reddit" a hair over the respelling on the kept read (−0.8), and "Twitter" well under it (+4.5). The joke is the "twit".
 6. **Alyi's name** (6.04, 6.06, 6.07): heard "Al-Yi"; against "Ali" −1.2 to −1.8, against the real name +8.4 or more.
@@ -374,7 +376,7 @@ The lines the numbers single out (a recogniser or name question, a pitch jump, o
 | e2-a4-0029 | mas-manalt | LOOK | length 0.70 of the plan; tempo 192 wpm against Mas unhurried (~140) |
 | e2-a4-0016 | mario | LOOK | asr: 'win' heard 'wins' (the recogniser's; the text scores -2.5 against what it heard) |
 
-The other 81 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
+The other 82 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
 <!-- END generated:ear -->
 
 ---
@@ -389,12 +391,13 @@ The other 81 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure
 | The singer's source ("One. Word.") | 1 | 10 | 4 |
 | **The takes pass** | **190** | **9,053** | **3,999** |
 | The casting pass (cast.md §8.6) | 117 | 5,444 | 2,394 |
-| **The episode so far** | | | **6,393** of the 25,000 cap |
+| The lock QA's three reads of V.O. 9 (lock-v1.md §3.5) | 3 | 153 | 66 |
+| **The episode so far** | | | **6,459** of the 25,000 cap |
 
-**How it was counted** [M]: credits are the API's own `character-cost` headers, summed from every `manifest.json` under `audio/ep02/v1-el/ep02-v1/` (`el_qa.py report`). The subscription's counter moved **17,722 → 21,721** over the pass, a delta of exactly **3,999**, so no other pass spent credits meanwhile. MARIO (Kokoro), the cuts and the crowd sent nothing.
+**How it was counted** [M]: credits are the API's own `character-cost` headers, summed from every `manifest.json` under `audio/ep02/v1-el/ep02-v1/` (`el_qa.py report`). The subscription's counter moved **17,722 → 21,721** over the pass, a delta of exactly **3,999**, so no other pass spent credits meanwhile. MARIO (Kokoro), the cuts and the crowd sent nothing. **The lock QA (2026-10-09) added 66 credits**: three reads of V.O. 9 (`variants/variant-e2-vo-09-*.json`; the kept one is `stop1-s120`), which the generated total below now includes.
 
 <!-- BEGIN generated:credits -->
-Summed from every manifest at report time: 190 calls, 9,053 characters, **3,999 credits** (the takes pass).
+Summed from every manifest at report time: 193 calls, 9,206 characters, **4,065 credits** (the takes pass).
 <!-- END generated:credits -->
 
 ---

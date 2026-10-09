@@ -427,6 +427,8 @@ def main() -> int:
                     os=on_camera == "os" or mode == "speaker" or tag.upper() in ("O.S.", "OS"), via=device, words=words, mouth=mouth,
                     mouth_src="take" if R is not None and mouth else ("words" if mouth else "none"), pre=t < 0,
                 )
+                if l.get("sub"):
+                    LINES[lid]["sub"] = l["sub"]    # the subtitle as drawn, when not the recorded words (section 8)
     if no_take:
         decisions.append(f"{len(no_take)} lines have no take in the takes files: kind/mode from the tag, mouth track from the words ({', '.join(no_take[:8])}{'...' if len(no_take) > 8 else ''})")
 
@@ -712,9 +714,38 @@ def main() -> int:
 
     SUBS = []
     allrows = sorted(list(LINES.values()) + list(POSTS.values()), key=lambda l: l["abs_in"])
+
+    def sub_pieces(l):
+        """Ep2 (the lock QA, 2026-10-09): a cut-off's subtitle as the script draws it, from the line's `sub` pieces
+        [text, from]: from = a word index of the take (its first frame) or "after:<line id>" (that line's last frame),
+        so "…one of my favorite—" / "Thanks." / "—things." read in turn while the take plays whole. A piece runs to the
+        next piece's start or the line's end; the last one holds at least its read floor. No `sub`: the line's text"""
+        if not l.get("sub"):
+            return [(l["abs_in"], l["abs_out"], l["text"])]
+        starts = []
+        for text, st in l["sub"]:
+            if isinstance(st, int):
+                w = l["words"][st] if 0 <= st < len(l["words"]) else None
+                if w is None:
+                    problems.append(f"{l['id']}: subtitle piece {text!r} names word {st}, the take has {len(l['words'])}")
+                starts.append((l["abs_in"] + (w[1] if w else 0), text))
+            else:
+                o = LINES.get(st[6:])
+                if o is None:
+                    problems.append(f"{l['id']}: subtitle piece {text!r} waits for {st[6:]}, not in this segment")
+                starts.append((o["abs_out"] if o else l["abs_in"], text))
+        out = []
+        for i, (s_, text) in enumerate(starts):
+            nxt = starts[i + 1][0] if i + 1 < len(starts) else None
+            e_ = min(l["abs_out"], nxt) if nxt is not None and nxt > s_ else max(l["abs_out"], s_ + floor_f(text))
+            out.append((s_, max(e_, s_ + 1), text))
+        return out
+
     for l in allrows:
-        SUBS.append(OrderedDict(s=l["abs_in"], e=l["abs_out"], hold_to=l["abs_out"] + (12 if l["kind"] != "post" else 0), who=l["who"],
-                                shown=shown_as(l["who"], l["abs_in"]), text=l["text"], kind=l["kind"], mode=l["mode"], id=l["id"], os=l["os"]))
+        for s_, e_, text in sub_pieces(l):
+            SUBS.append(OrderedDict(s=s_, e=e_, hold_to=e_ + (12 if l["kind"] != "post" else 0), who=l["who"],
+                                    shown=shown_as(l["who"], s_), text=text, kind=l["kind"], mode=l["mode"], id=l["id"], os=l["os"]))
+    SUBS.sort(key=lambda x: x["s"])
     for a, b in zip(SUBS, SUBS[1:]):
         a["hold_to"] = min(a["hold_to"], max(a["e"], b["s"]))
 
@@ -816,6 +847,10 @@ def main() -> int:
             speak=[OrderedDict(who=x["id"].upper(), s=s0 + fr(x["at"]) - sh["s"], e=s0 + fr(x["at"] + x.get("dur", 1)) - sh["s"])
                    for (b, s0, _e) in sh["_beats"] for x in (b.get("speak") or [])],
             beat_starts={b["id"]: s0 - sh["s"] for (b, s0, _e) in sh["_beats"]},
+            # Ep2 (the lock QA, 2026-10-09): the beat plan's `picture` note (the art and shot passes' brief: the eggs,
+            # the Ep1 payoffs, the constraints such as "no image of Alyi in any surface"), carried by the base lock as
+            # passes.picture; the copy dropped it, so the shot pass saw only the caption
+            picture=" / ".join(dict.fromkeys(p for p in ((b.get("passes") or {}).get("picture", "") for (b, _s, _e) in sh["_beats"]) if p)),
             names=[OrderedDict(id=n["id"], k=s0 + fr(n.get("at", 0)) - sh["s"]) for (b, s0, _e) in sh["_beats"] for n in (b.get("names") or [])],
             fg=b0.get("fg"),
         ))
@@ -861,7 +896,7 @@ def main() -> int:
             # the general fields (the Act Four v5 records stop at `marks`)
             kind=sh["kind"], set=sh["set"], room=sh["room"], style=sh["style"], fx=sh["fx"], slate=sh["slate"], sideLabel=sh["side_label"],
             cues=sh["cues"], spots=sh["spots"], onscreen=sh["onscreen"], speak=sh["speak"], beatStarts=sh["beat_starts"], names=sh["names"],
-            fg=sh["fg"], cast=sh["cast"], scene=sh["scene"], sceneS=sh["scene_s"],
+            fg=sh["fg"], cast=sh["cast"], scene=sh["scene"], sceneS=sh["scene_s"], picture=sh["picture"],
         ))
     J = lambda o: json.dumps(o, ensure_ascii=False, separators=(",", ":"))  # noqa: E731
     data = OrderedDict(

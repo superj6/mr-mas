@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "01:28:00",
-  "ep_in_frames": 2112,
+  "ep_in": "01:27:00",
+  "ep_in_frames": 2088,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -28,18 +28,18 @@
  "summary": {
   "shots": 62,
   "beats": 62,
-  "frames": 8832,
-  "seconds": 368.0,
-  "length": "6:08.00",
-  "episode_in": "01:28:00",
-  "episode_out": "07:36:00",
+  "frames": 8736,
+  "seconds": 364.0,
+  "length": "6:04.00",
+  "episode_in": "01:27:00",
+  "episode_out": "07:31:00",
   "verdicts": {
    "-": 62
   },
-  "mean_s": 5.935,
-  "median_s": 4.792,
+  "mean_s": 5.871,
+  "median_s": 4.729,
   "min_s": 1.792,
-  "max_s": 17.292,
+  "max_s": 16.583,
   "lines": 59,
   "posts": 0,
   "vo": 3,
@@ -56,7 +56,7 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "5 scenes: 4(4704f) 4A(840f) 4B(192f) 6(1944f) 7(1152f)"
+   "detail": "5 scenes: 4(4632f) 4A(792f) 4B(216f) 6(1944f) 7(1152f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -66,7 +66,7 @@
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 8832"
+   "detail": "0 -> 8736"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -101,7 +101,7 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 8832,
+   "e": 8736,
    "shots": [
     "4.01",
     "4.02",
@@ -168,17 +168,17 @@
    ],
    "chapter": "ACT1",
    "title": "",
-   "cue": "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line · music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes · music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing · music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03 · music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry) · music (v1): E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the tap (J 0.8 s) · music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX · music (v1): none; under the part, his recorded voice on a phone speaker pre-laps (J 0.8 s) · music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone · music (v1): E02-05 out · the key ring's jangle on the downbeat (diegetic); THE COPY (his line on the chip, a note late) rings out under it into the black",
-   "frames": 8832,
-   "tc_in": "01:28:00",
-   "tc_out": "07:36:00"
+   "cue": "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line · music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes · music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing · music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03 · music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry) · music (v1): E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the card settling (J 0.8 s) · music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX · music (v1): none; under the part, his recorded voice on a phone speaker pre-laps (J 0.8 s) · music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone · music (v1): E02-05 out · the key ring's jangle on the downbeat (diegetic); THE COPY (his line on the chip, a note late) rings out under it into the black",
+   "frames": 8736,
+   "tc_in": "01:27:00",
+   "tc_out": "07:31:00"
   }
  ],
  "scenes": [
   {
    "id": "4",
    "s": 0,
-   "e": 4704,
+   "e": 4632,
    "shots": [
     "4.01",
     "4.02",
@@ -217,13 +217,13 @@
     "4.35",
     "4.36"
    ],
-   "tc_in": "01:28:00",
-   "tc_out": "04:44:00"
+   "tc_in": "01:27:00",
+   "tc_out": "04:40:00"
   },
   {
    "id": "4A",
-   "s": 4704,
-   "e": 5544,
+   "s": 4632,
+   "e": 5424,
    "shots": [
     "4A.01",
     "4A.02",
@@ -232,23 +232,23 @@
     "4A.05",
     "4A.06"
    ],
-   "tc_in": "04:44:00",
-   "tc_out": "05:19:00"
+   "tc_in": "04:40:00",
+   "tc_out": "05:13:00"
   },
   {
    "id": "4B",
-   "s": 5544,
-   "e": 5736,
+   "s": 5424,
+   "e": 5640,
    "shots": [
     "4B.01"
    ],
-   "tc_in": "05:19:00",
-   "tc_out": "05:27:00"
+   "tc_in": "05:13:00",
+   "tc_out": "05:22:00"
   },
   {
    "id": "6",
-   "s": 5736,
-   "e": 7680,
+   "s": 5640,
+   "e": 7584,
    "shots": [
     "6.01",
     "6.02",
@@ -262,13 +262,13 @@
     "6.10",
     "6.11"
    ],
-   "tc_in": "05:27:00",
-   "tc_out": "06:48:00"
+   "tc_in": "05:22:00",
+   "tc_out": "06:43:00"
   },
   {
    "id": "7",
-   "s": 7680,
-   "e": 8832,
+   "s": 7584,
+   "e": 8736,
    "shots": [
     "7.01",
     "7.02",
@@ -279,8 +279,8 @@
     "7.07",
     "7.08"
    ],
-   "tc_in": "06:48:00",
-   "tc_out": "07:36:00"
+   "tc_in": "06:43:00",
+   "tc_out": "07:31:00"
   }
  ],
  "shots": [
@@ -392,6 +392,7 @@
    "beat_starts": {
     "4.01": 0
    },
+   "picture": "The planchette has no pointer glyph (P6): it reads as a planchette, never a cursor. The byline row legible at 1080p (… · ALYI · … · MAS).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -412,8 +413,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:28:00",
-   "tc_out": "01:30:12",
+   "tc_in": "01:27:00",
+   "tc_out": "01:29:12",
    "frames": 60
   },
   {
@@ -587,6 +588,7 @@
    "beat_starts": {
     "4.02": 0
    },
+   "picture": "The click is his move. The rail clears before the V.O. types in his cyan (P18).",
    "names": [
     {
      "id": "nole",
@@ -597,8 +599,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:30:12",
-   "tc_out": "01:40:17",
+   "tc_in": "01:29:12",
+   "tc_out": "01:39:17",
    "frames": 245
   },
   {
@@ -617,10 +619,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "is there anyone here… from 2016.",
-     "s": 11,
-     "e": 83,
-     "fs": 2,
-     "fe": 93,
+     "s": 10,
+     "e": 82,
+     "fs": 1,
+     "fe": 92,
      "os": false,
      "via": null,
      "face": null,
@@ -704,33 +706,33 @@
      "words": [
       [
        "Is",
-       -1,
-       3
+       0,
+       4
       ],
       [
        "there",
-       4,
-       8
+       5,
+       9
       ],
       [
        "anyone",
-       9,
-       18
+       10,
+       19
       ],
       [
        "here",
-       19,
-       27
+       20,
+       28
       ],
       [
        "from",
-       37,
+       38,
        42
       ],
       [
        "2016",
-       44,
-       66
+       45,
+       67
       ]
      ],
      "tag": "",
@@ -760,7 +762,7 @@
    ],
    "sounds": [
     "planchette_glide @86",
-    "inbox_chime_low @94"
+    "inbox_chime_low @93"
    ],
    "spots": [
     {
@@ -770,7 +772,7 @@
     },
     {
      "name": "inbox_chime_low",
-     "k": 94,
+     "k": 93,
      "dur": null
     }
    ],
@@ -812,13 +814,14 @@
    "beat_starts": {
     "4.03": 0
    },
+   "picture": "Base setup for his questions; the HIGH planchette answers them.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:40:17",
-   "tc_out": "01:45:12",
+   "tc_in": "01:39:17",
+   "tc_out": "01:44:12",
    "frames": 115
   },
   {
@@ -962,6 +965,7 @@
    "beat_starts": {
     "4.04": 0
    },
+   "picture": "Alyi appears only as an author (his name on the header), never in brass or stone (R1). The spirit-photo pass (2.G) on the ghosts only.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -982,8 +986,8 @@
      "must": true
     }
    ],
-   "tc_in": "01:45:12",
-   "tc_out": "01:50:02",
+   "tc_in": "01:44:12",
+   "tc_out": "01:49:02",
    "frames": 110
   },
   {
@@ -993,7 +997,7 @@
     "4.05"
    ],
    "s": 530,
-   "e": 623,
+   "e": 621,
    "onscreen": [],
    "lines": [
     {
@@ -1065,8 +1069,8 @@
      "words": [
       [
        "He",
-       0,
-       3
+       -1,
+       2
       ],
       [
        "signed",
@@ -1076,22 +1080,22 @@
       [
        "it",
        11,
-       14
+       13
       ],
       [
        "He's",
-       22,
-       26
+       21,
+       25
       ],
       [
        "just",
-       27,
+       26,
        30
       ],
       [
        "not",
-       31,
-       34
+       30,
+       33
       ],
       [
        "here",
@@ -1155,14 +1159,15 @@
    "beat_starts": {
     "4.05": 0
    },
+   "picture": "The empty chair is a chair: no image of Alyi in it.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:50:02",
-   "tc_out": "01:53:23",
-   "frames": 93
+   "tc_in": "01:49:02",
+   "tc_out": "01:52:21",
+   "frames": 91
   },
   {
    "id": "4.06",
@@ -1170,8 +1175,8 @@
    "beats": [
     "4.06"
    ],
-   "s": 623,
-   "e": 780,
+   "s": 621,
+   "e": 779,
    "onscreen": [],
    "lines": [
     {
@@ -1271,28 +1276,28 @@
      "words": [
       [
        "One",
-       0,
+       -1,
        5
       ],
       [
        "knock",
-       7,
-       15
+       6,
+       14
       ],
       [
        "if",
-       17,
+       16,
        19
       ],
       [
        "we",
        20,
-       24
+       23
       ],
       [
        "promised",
        25,
-       37
+       36
       ],
       [
        "a",
@@ -1302,7 +1307,7 @@
       [
        "nonprofit",
        40,
-       64
+       63
       ]
      ],
      "tag": "",
@@ -1390,14 +1395,15 @@
    "beat_starts": {
     "4.06": 0
    },
+   "picture": "HOLD 2 BEATS (the table's, waiting) before the first knock.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "01:53:23",
-   "tc_out": "02:00:12",
-   "frames": 157
+   "tc_in": "01:52:21",
+   "tc_out": "01:59:11",
+   "frames": 158
   },
   {
    "id": "4.07",
@@ -1405,8 +1411,8 @@
    "beats": [
     "4.07"
    ],
-   "s": 780,
-   "e": 900,
+   "s": 779,
+   "e": 873,
    "onscreen": [],
    "lines": [
     {
@@ -1415,10 +1421,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "you're early. we're on 2016.",
-     "s": 54,
-     "e": 108,
-     "fs": 45,
-     "fe": 119,
+     "s": 37,
+     "e": 91,
+     "fs": 27,
+     "fe": 101,
      "os": false,
      "via": null,
      "face": null,
@@ -1431,91 +1437,91 @@
        "rest"
       ],
       [
-       2,
+       1,
        "O"
       ],
       [
-       4,
+       3,
        "E"
       ],
       [
-       7,
+       6,
        "O"
       ],
       [
-       10,
+       9,
        "E"
       ],
       [
-       17,
+       16,
        "rest"
       ],
       [
-       20,
+       19,
        "O"
       ],
       [
-       22,
+       21,
        "E"
       ],
       [
-       26,
+       25,
        "O"
       ],
       [
-       28,
+       27,
        "E"
       ],
       [
-       30,
+       29,
        "O"
       ],
       [
-       32,
+       31,
        "A"
       ],
       [
-       34,
+       33,
        "E"
       ],
       [
-       46,
+       45,
        "A"
       ],
       [
-       48,
+       47,
        "E"
       ],
       [
-       50,
+       49,
        "rest"
       ]
      ],
      "words": [
       [
        "You're",
-       0,
+       -1,
        5
       ],
       [
        "early",
-       7,
-       17
+       6,
+       16
       ],
       [
        "we're",
-       20,
+       19,
        24
       ],
       [
        "on",
-       25,
-       27
+       24,
+       26
       ],
       [
        "2016",
-       29,
-       49
+       28,
+       48
       ]
      ],
      "tag": "",
@@ -1546,8 +1552,8 @@
    ],
    "sounds": [
     "ceiling_burst @0",
-    "cable_drop @10",
-    "landing_thunk @30"
+    "cable_drop @9",
+    "landing_thunk @26"
    ],
    "spots": [
     {
@@ -1557,12 +1563,12 @@
     },
     {
      "name": "cable_drop",
-     "k": 10,
+     "k": 9,
      "dur": null
     },
     {
      "name": "landing_thunk",
-     "k": 30,
+     "k": 26,
      "dur": null
     }
    ],
@@ -1612,14 +1618,15 @@
    "beat_starts": {
     "4.07": 0
    },
+   "picture": "The door he didn't use stays in frame.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:00:12",
-   "tc_out": "02:05:12",
-   "frames": 120
+   "tc_in": "01:59:11",
+   "tc_out": "02:03:09",
+   "frames": 94
   },
   {
    "id": "4.08",
@@ -1627,13 +1634,13 @@
    "beats": [
     "4.08"
    ],
-   "s": 900,
-   "e": 1102,
+   "s": 873,
+   "e": 1065,
    "onscreen": [
     {
      "text": "NOLE · FUNDED IT. LEFT IT. SUING IT.",
-     "s": 5,
-     "e": 124
+     "s": 4,
+     "e": 114
     }
    ],
    "lines": [
@@ -1643,10 +1650,10 @@
      "mode": "on-mic",
      "who": "NOLE",
      "text": "Is this a séance or a deposition? Because I've got lawyers for both.",
-     "s": 13,
-     "e": 108,
-     "fs": 4,
-     "fe": 117,
+     "s": 3,
+     "e": 98,
+     "fs": -6,
+     "fe": 107,
      "os": false,
      "via": null,
      "face": null,
@@ -1787,7 +1794,7 @@
       ],
       [
        "this",
-       5,
+       4,
        8
       ],
       [
@@ -1818,7 +1825,7 @@
       [
        "Because",
        50,
-       59
+       58
       ],
       [
        "I've",
@@ -1827,7 +1834,7 @@
       ],
       [
        "got",
-       66,
+       65,
        69
       ],
       [
@@ -1837,7 +1844,7 @@
       ],
       [
        "for",
-       78,
+       77,
        80
       ],
       [
@@ -1855,10 +1862,10 @@
      "mode": "on-mic",
      "who": "GERG",
      "text": "It's a blog post. We put some of your old emails up today. The candles were extra.",
-     "s": 112,
-     "e": 200,
-     "fs": 102,
-     "fe": 214,
+     "s": 102,
+     "e": 190,
+     "fs": 92,
+     "fe": 204,
      "os": false,
      "via": null,
      "face": null,
@@ -2005,7 +2012,7 @@
       ],
       [
        "post",
-       13,
+       12,
        18
       ],
       [
@@ -2015,7 +2022,7 @@
       ],
       [
        "put",
-       23,
+       22,
        25
       ],
       [
@@ -2031,7 +2038,7 @@
       [
        "your",
        32,
-       35
+       34
       ],
       [
        "old",
@@ -2056,7 +2063,7 @@
       [
        "The",
        61,
-       64
+       63
       ],
       [
        "candles",
@@ -2139,10 +2146,11 @@
    "beat_starts": {
     "4.08": 0
    },
+   "picture": "Plate on his entrance: name plus what he is to Mas, told once.",
    "names": [
     {
      "id": "nole",
-     "k": 5
+     "k": 4
     }
    ],
    "fg": null,
@@ -2152,14 +2160,14 @@
     {
      "kind": "plate",
      "text": "NOLE · FUNDED IT. LEFT IT. SUING IT.",
-     "s": 5,
-     "e": 124,
+     "s": 4,
+     "e": 114,
      "must": true
     }
    ],
-   "tc_in": "02:05:12",
-   "tc_out": "02:13:22",
-   "frames": 202
+   "tc_in": "02:03:09",
+   "tc_out": "02:11:09",
+   "frames": 192
   },
   {
    "id": "4.09",
@@ -2167,8 +2175,8 @@
    "beats": [
     "4.09"
    ],
-   "s": 1102,
-   "e": 1465,
+   "s": 1065,
+   "e": 1428,
    "onscreen": [],
    "lines": [
     {
@@ -2799,13 +2807,14 @@
    "beat_starts": {
     "4.09": 0
    },
+   "picture": "The scene's one speech.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:13:22",
-   "tc_out": "02:29:01",
+   "tc_in": "02:11:09",
+   "tc_out": "02:26:12",
    "frames": 363
   },
   {
@@ -2814,8 +2823,8 @@
    "beats": [
     "4.10"
    ],
-   "s": 1465,
-   "e": 1577,
+   "s": 1428,
+   "e": 1540,
    "onscreen": [
     {
      "text": "O P E N",
@@ -3011,6 +3020,7 @@
    "beat_starts": {
     "4.10": 0
    },
+   "picture": "Each letter a tick on the beat.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3024,8 +3034,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:29:01",
-   "tc_out": "02:33:17",
+   "tc_in": "02:26:12",
+   "tc_out": "02:31:04",
    "frames": 112
   },
   {
@@ -3034,8 +3044,8 @@
    "beats": [
     "4.11"
    ],
-   "s": 1577,
-   "e": 1687,
+   "s": 1540,
+   "e": 1650,
    "onscreen": [
     {
      "text": "N O P E",
@@ -3052,8 +3062,8 @@
      "text": "There. Even the furniture knows.",
      "s": 6,
      "e": 57,
-     "fs": -2,
-     "fe": 72,
+     "fs": -3,
+     "fe": 71,
      "os": false,
      "via": null,
      "face": null,
@@ -3063,50 +3073,46 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "E"
       ],
       [
-       3,
+       2,
        "A"
       ],
       [
-       9,
+       8,
        "E"
       ],
       [
-       12,
+       11,
        "rest"
       ],
       [
-       23,
+       22,
        "A"
       ],
       [
-       25,
+       24,
        "E"
       ],
       [
-       33,
+       32,
        "O"
       ],
       [
-       35,
+       34,
        "E"
       ],
       [
-       44,
+       43,
        "O"
       ],
       [
-       48,
+       47,
        "E"
       ],
       [
-       50,
+       49,
        "rest"
       ]
      ],
@@ -3114,7 +3120,7 @@
       [
        "There",
        0,
-       12
+       11
       ],
       [
        "Even",
@@ -3124,7 +3130,7 @@
       [
        "the",
        29,
-       31
+       30
       ],
       [
        "furniture",
@@ -3192,6 +3198,7 @@
    "beat_starts": {
     "4.11": 0
    },
+   "picture": "The N moves in one held glide.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3205,8 +3212,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:33:17",
-   "tc_out": "02:38:07",
+   "tc_in": "02:31:04",
+   "tc_out": "02:35:18",
    "frames": 110
   },
   {
@@ -3215,8 +3222,8 @@
    "beats": [
     "4.12"
    ],
-   "s": 1687,
-   "e": 1797,
+   "s": 1650,
+   "e": 1759,
    "onscreen": [],
    "lines": [
     {
@@ -3226,9 +3233,9 @@
      "who": "NOLE",
      "text": "No. Not like that. The N goes at the end.",
      "s": 6,
-     "e": 67,
-     "fs": -2,
-     "fe": 75,
+     "e": 66,
+     "fs": -3,
+     "fe": 74,
      "os": false,
      "via": null,
      "face": null,
@@ -3238,78 +3245,74 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "E"
       ],
       [
-       3,
+       2,
        "O"
       ],
       [
-       11,
+       10,
        "A"
       ],
       [
-       13,
+       12,
        "E"
       ],
       [
-       16,
+       15,
        "A"
       ],
       [
-       18,
+       17,
        "E"
       ],
       [
-       20,
+       19,
        "A"
       ],
       [
-       25,
+       24,
        "rest"
       ],
       [
-       28,
+       27,
        "E"
       ],
       [
-       32,
+       31,
        "A"
       ],
       [
-       34,
+       33,
        "E"
       ],
       [
-       38,
+       37,
        "O"
       ],
       [
-       40,
+       39,
        "E"
       ],
       [
-       42,
+       41,
        "A"
       ],
       [
-       45,
+       44,
        "E"
       ],
       [
-       48,
+       47,
        "A"
       ],
       [
-       51,
+       50,
        "E"
       ],
       [
-       53,
+       52,
        "rest"
       ]
      ],
@@ -3322,21 +3325,21 @@
       [
        "Not",
        10,
-       14
+       13
       ],
       [
        "like",
        14,
-       18
+       17
       ],
       [
        "that",
        18,
-       25
+       24
       ],
       [
        "The",
-       28,
+       27,
        30
       ],
       [
@@ -3352,11 +3355,11 @@
       [
        "at",
        42,
-       44
+       43
       ],
       [
        "the",
-       45,
+       44,
        46
       ],
       [
@@ -3439,14 +3442,15 @@
    "beat_starts": {
     "4.12": 0
    },
+   "picture": "The three hands: Mas's, ghost-Nole's, Gerg's (R1). Nobody's reflection.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:38:07",
-   "tc_out": "02:42:21",
-   "frames": 110
+   "tc_in": "02:35:18",
+   "tc_out": "02:40:07",
+   "frames": 109
   },
   {
    "id": "4.13",
@@ -3454,8 +3458,8 @@
    "beats": [
     "4.13"
    ],
-   "s": 1797,
-   "e": 1907,
+   "s": 1759,
+   "e": 1869,
    "onscreen": [
     {
      "text": "2018",
@@ -3543,6 +3547,7 @@
    "beat_starts": {
     "4.13": 0
    },
+   "picture": "The caption reads over the chewing; the scene keeps moving under it.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3570,8 +3575,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:42:21",
-   "tc_out": "02:47:11",
+   "tc_in": "02:40:07",
+   "tc_out": "02:44:21",
    "frames": 110
   },
   {
@@ -3580,8 +3585,8 @@
    "beats": [
     "4.14"
    ],
-   "s": 1907,
-   "e": 2022,
+   "s": 1869,
+   "e": 1985,
    "onscreen": [],
    "lines": [
     {
@@ -3806,14 +3811,15 @@
    "beat_starts": {
     "4.14": 0
    },
+   "picture": "No invented line disputes the record (R2).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "02:47:11",
-   "tc_out": "02:52:06",
-   "frames": 115
+   "tc_in": "02:44:21",
+   "tc_out": "02:49:17",
+   "frames": 116
   },
   {
    "id": "4.15",
@@ -3821,18 +3827,18 @@
    "beats": [
     "4.15"
    ],
-   "s": 2022,
-   "e": 2121,
+   "s": 1985,
+   "e": 2082,
    "onscreen": [
     {
      "text": "NOLE · JUST NOW",
      "s": 43,
-     "e": 98
+     "e": 97
     },
     {
      "text": "!!!!!!!!",
      "s": 43,
-     "e": 98
+     "e": 97
     }
    ],
    "lines": [],
@@ -3858,7 +3864,7 @@
    "sounds": [
     "lamp_click @5",
     "key_tap_soft_01 @16",
-    "reverse_swell_1beat @41"
+    "reverse_swell_1beat @40"
    ],
    "spots": [
     {
@@ -3873,7 +3879,7 @@
     },
     {
      "name": "reverse_swell_1beat",
-     "k": 41,
+     "k": 40,
      "dur": null
     }
    ],
@@ -3899,6 +3905,7 @@
    "beat_starts": {
     "4.15": 0
    },
+   "picture": "His answer goes to the internet, and has no words in it.",
    "names": [
     {
      "id": "nole",
@@ -3913,20 +3920,20 @@
      "kind": "post",
      "text": "NOLE · JUST NOW",
      "s": 43,
-     "e": 98,
+     "e": 97,
      "must": true
     },
     {
      "kind": "post",
      "text": "!!!!!!!!",
      "s": 43,
-     "e": 98,
+     "e": 97,
      "must": true
     }
    ],
-   "tc_in": "02:52:06",
-   "tc_out": "02:56:09",
-   "frames": 99
+   "tc_in": "02:49:17",
+   "tc_out": "02:53:18",
+   "frames": 97
   },
   {
    "id": "4.16",
@@ -3934,8 +3941,8 @@
    "beats": [
     "4.16"
    ],
-   "s": 2121,
-   "e": 2292,
+   "s": 2082,
+   "e": 2253,
    "onscreen": [
     {
      "text": "DEC 2018",
@@ -4159,6 +4166,7 @@
    "beat_starts": {
     "4.16": 0
    },
+   "picture": "The header must read at 1080p; the voice plays while it holds.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4179,8 +4187,8 @@
      "must": true
     }
    ],
-   "tc_in": "02:56:09",
-   "tc_out": "03:03:12",
+   "tc_in": "02:53:18",
+   "tc_out": "03:00:21",
    "frames": 171
   },
   {
@@ -4189,8 +4197,8 @@
    "beats": [
     "4.17"
    ],
-   "s": 2292,
-   "e": 2358,
+   "s": 2253,
+   "e": 2318,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -4259,14 +4267,15 @@
    "beat_starts": {
     "4.17": 0
    },
+   "picture": "ECU: his still hand carries the slap (R1).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:03:12",
-   "tc_out": "03:06:06",
-   "frames": 66
+   "tc_in": "03:00:21",
+   "tc_out": "03:03:14",
+   "frames": 65
   },
   {
    "id": "4.18",
@@ -4274,8 +4283,8 @@
    "beats": [
     "4.18"
    ],
-   "s": 2358,
-   "e": 2597,
+   "s": 2318,
+   "e": 2556,
    "onscreen": [],
    "lines": [
     {
@@ -4739,14 +4748,15 @@
    "beat_starts": {
     "4.18": 0
    },
+   "picture": "HOLD 2 BEATS before the ghost's answer: the hold is Nole's.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:06:06",
-   "tc_out": "03:16:05",
-   "frames": 239
+   "tc_in": "03:03:14",
+   "tc_out": "03:13:12",
+   "frames": 238
   },
   {
    "id": "4.19",
@@ -4754,8 +4764,8 @@
    "beats": [
     "4.19"
    ],
-   "s": 2597,
-   "e": 2710,
+   "s": 2556,
+   "e": 2670,
    "onscreen": [
     {
      "text": "MAR 2016 · GAME 2 · MOVE 37",
@@ -4892,6 +4902,7 @@
    "beat_starts": {
     "4.19": 0
    },
+   "picture": "SET-04 in the board's corner (T3 cut-paper; slate and shell stones). The stone label legible.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4905,9 +4916,9 @@
      "must": true
     }
    ],
-   "tc_in": "03:16:05",
-   "tc_out": "03:20:22",
-   "frames": 113
+   "tc_in": "03:13:12",
+   "tc_out": "03:18:06",
+   "frames": 114
   },
   {
    "id": "4.20",
@@ -4915,8 +4926,8 @@
    "beats": [
     "4.20"
    ],
-   "s": 2710,
-   "e": 2763,
+   "s": 2670,
+   "e": 2722,
    "onscreen": [],
    "lines": [
     {
@@ -4925,64 +4936,11 @@
      "mode": "on-mic",
      "who": "NOLE",
      "text": "That's why.",
-     "s": 11,
+     "s": 10,
      "e": 31,
      "fs": 1,
      "fe": 39,
      "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [
-      [
-       0,
-       "A"
-      ],
-      [
-       3,
-       "E"
-      ],
-      [
-       6,
-       "O"
-      ],
-      [
-       8,
-       "A"
-      ],
-      [
-       12,
-       "rest"
-      ]
-     ],
-     "words": [
-      [
-       "That's",
-       -1,
-       6
-      ],
-      [
-       "why",
-       6,
-       12
-      ]
-     ],
-     "tag": "",
-     "pre": false
-    },
-    {
-     "id": "e2-a1-0021",
-     "kind": "dialogue",
-     "mode": "on-mic",
-     "who": "STAFFER",
-     "text": "What's that?",
-     "s": 37,
-     "e": 50,
-     "fs": 27,
-     "fe": 60,
-     "os": true,
      "via": null,
      "face": null,
      "lip": false,
@@ -5002,11 +4960,64 @@
        "E"
       ],
       [
-       8,
+       7,
+       "O"
+      ],
+      [
+       9,
        "A"
       ],
       [
-       12,
+       13,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "That's",
+       0,
+       6
+      ],
+      [
+       "why",
+       7,
+       12
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e2-a1-0021",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "STAFFER",
+     "text": "What's that?",
+     "s": 37,
+     "e": 50,
+     "fs": 26,
+     "fe": 59,
+     "os": true,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       11,
        "rest"
       ]
      ],
@@ -5078,14 +5089,15 @@
    "beat_starts": {
     "4.20": 0
    },
+   "picture": "The room goes quiet for the only time.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:20:22",
-   "tc_out": "03:23:03",
-   "frames": 53
+   "tc_in": "03:18:06",
+   "tc_out": "03:20:10",
+   "frames": 52
   },
   {
    "id": "4.21",
@@ -5093,8 +5105,8 @@
    "beats": [
     "4.21"
    ],
-   "s": 2763,
-   "e": 2822,
+   "s": 2722,
+   "e": 2782,
    "onscreen": [],
    "lines": [
     {
@@ -5282,14 +5294,15 @@
    "beat_starts": {
     "4.21": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:23:03",
-   "tc_out": "03:25:14",
-   "frames": 59
+   "tc_in": "03:20:10",
+   "tc_out": "03:22:22",
+   "frames": 60
   },
   {
    "id": "4.22",
@@ -5297,8 +5310,8 @@
    "beats": [
     "4.22"
    ],
-   "s": 2822,
-   "e": 3237,
+   "s": 2782,
+   "e": 3180,
    "onscreen": [],
    "lines": [
     {
@@ -6083,14 +6096,15 @@
    "beat_starts": {
     "4.22": 0
    },
+   "picture": "The knobs tick only while the stream pours in, and freeze at the match (the numbers were fixed during play). No players, no hands. The wall starts on \"Nobody wrote it.\", so the picture carries the second half.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:25:14",
-   "tc_out": "03:42:21",
-   "frames": 415
+   "tc_in": "03:22:22",
+   "tc_out": "03:39:12",
+   "frames": 398
   },
   {
    "id": "4.23",
@@ -6098,8 +6112,8 @@
    "beats": [
     "4.23"
    ],
-   "s": 3237,
-   "e": 3383,
+   "s": 3180,
+   "e": 3317,
    "onscreen": [],
    "lines": [
     {
@@ -6108,10 +6122,10 @@
      "mode": "on-mic",
      "who": "NOLE",
      "text": "One player in ten thousand would have made that move. It made it anyway. And it was right.",
-     "s": 13,
-     "e": 144,
-     "fs": 5,
-     "fe": 153,
+     "s": 4,
+     "e": 135,
+     "fs": -4,
+     "fe": 144,
      "os": false,
      "via": null,
      "face": null,
@@ -6286,12 +6300,12 @@
       [
        "in",
        15,
-       16
+       17
       ],
       [
        "ten",
-       17,
-       21
+       18,
+       22
       ],
       [
        "thousand",
@@ -6306,7 +6320,7 @@
       [
        "have",
        39,
-       41
+       42
       ],
       [
        "made",
@@ -6360,7 +6374,7 @@
       ],
       [
        "right",
-       116,
+       117,
        125
       ]
      ],
@@ -6411,14 +6425,15 @@
    "beat_starts": {
     "4.23": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:42:21",
-   "tc_out": "03:48:23",
-   "frames": 146
+   "tc_in": "03:39:12",
+   "tc_out": "03:45:05",
+   "frames": 137
   },
   {
    "id": "4.24",
@@ -6426,8 +6441,8 @@
    "beats": [
     "4.24"
    ],
-   "s": 3383,
-   "e": 3458,
+   "s": 3317,
+   "e": 3392,
    "onscreen": [],
    "lines": [
     {
@@ -6629,13 +6644,14 @@
    "beat_starts": {
     "4.24": 0
    },
+   "picture": "The board's corner goes back to letters.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:48:23",
-   "tc_out": "03:52:02",
+   "tc_in": "03:45:05",
+   "tc_out": "03:48:08",
    "frames": 75
   },
   {
@@ -6644,8 +6660,8 @@
    "beats": [
     "4.25"
    ],
-   "s": 3458,
-   "e": 3605,
+   "s": 3392,
+   "e": 3538,
    "onscreen": [],
    "lines": [
     {
@@ -6654,7 +6670,7 @@
      "mode": "on-mic",
      "who": "GHOST-NOLE",
      "text": "billions per year…",
-     "s": 11,
+     "s": 10,
      "e": 34,
      "fs": 0,
      "fe": 40,
@@ -6670,49 +6686,49 @@
        "A"
       ],
       [
-       2,
+       3,
        "E"
       ],
       [
-       10,
+       11,
        "M"
       ],
       [
-       12,
+       13,
        "O"
       ],
       [
-       14,
+       15,
        "E"
       ],
       [
-       17,
+       18,
        "A"
       ],
       [
-       19,
+       20,
        "E"
       ],
       [
-       21,
+       22,
        "rest"
       ]
      ],
      "words": [
       [
        "billions",
-       -2,
+       -1,
        11
       ],
       [
        "per",
-       12,
-       15
+       13,
+       16
       ],
       [
        "year",
-       17,
-       21
+       18,
+       22
       ]
      ],
      "tag": "ghost",
@@ -6724,8 +6740,8 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "he was right about the bill. it's bigger now.",
-     "s": 48,
-     "e": 131,
+     "s": 47,
+     "e": 130,
      "fs": 37,
      "fe": 147,
      "os": false,
@@ -6738,43 +6754,43 @@
      "words": [
       [
        "He",
-       -1,
-       2
+       0,
+       3
       ],
       [
        "was",
-       4,
-       8
+       5,
+       9
       ],
       [
        "right",
-       11,
+       12,
        18
       ],
       [
        "about",
-       19,
-       25
+       20,
+       26
       ],
       [
        "the",
-       27,
-       29
+       28,
+       30
       ],
       [
        "bill",
-       31,
-       41
+       32,
+       42
       ],
       [
        "it's",
-       50,
-       57
+       51,
+       58
       ],
       [
        "bigger",
-       59,
-       68
+       60,
+       69
       ],
       [
        "now",
@@ -6838,14 +6854,15 @@
    "beat_starts": {
     "4.25": 0
    },
+   "picture": "The bill has its referent in the frame (R2). The V.O. types in his cyan.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:52:02",
-   "tc_out": "03:58:05",
-   "frames": 147
+   "tc_in": "03:48:08",
+   "tc_out": "03:54:10",
+   "frames": 146
   },
   {
    "id": "4.26",
@@ -6853,8 +6870,8 @@
    "beats": [
     "4.26"
    ],
-   "s": 3605,
-   "e": 3711,
+   "s": 3538,
+   "e": 3644,
    "onscreen": [],
    "lines": [
     {
@@ -6865,8 +6882,8 @@
      "text": "You kept them.",
      "s": 16,
      "e": 39,
-     "fs": 8,
-     "fe": 49,
+     "fs": 7,
+     "fe": 48,
      "os": false,
      "via": null,
      "face": null,
@@ -6879,31 +6896,31 @@
        "E"
       ],
       [
-       2,
+       1,
        "O"
       ],
       [
-       8,
+       7,
        "A"
       ],
       [
-       10,
+       9,
        "M"
       ],
       [
-       12,
+       11,
        "E"
       ],
       [
-       14,
+       13,
        "A"
       ],
       [
-       16,
+       15,
        "M"
       ],
       [
-       18,
+       17,
        "rest"
       ]
      ],
@@ -6976,7 +6993,7 @@
      "words": [
       [
        "We",
-       0,
+       -1,
        3
       ],
       [
@@ -6986,7 +7003,7 @@
       ],
       [
        "everything",
-       13,
+       12,
        24
       ]
      ],
@@ -7037,13 +7054,14 @@
    "beat_starts": {
     "4.26": 0
    },
+   "picture": "The lamp's tell: off. A slow drift in.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "03:58:05",
-   "tc_out": "04:02:15",
+   "tc_in": "03:54:10",
+   "tc_out": "03:58:20",
    "frames": 106
   },
   {
@@ -7052,8 +7070,8 @@
    "beats": [
     "4.27"
    ],
-   "s": 3711,
-   "e": 3777,
+   "s": 3644,
+   "e": 3709,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7113,14 +7131,15 @@
    "beat_starts": {
     "4.27": 0
    },
+   "picture": "The glass is the matched object into F2.3.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:02:15",
-   "tc_out": "04:05:09",
-   "frames": 66
+   "tc_in": "03:58:20",
+   "tc_out": "04:01:13",
+   "frames": 65
   },
   {
    "id": "4.28",
@@ -7128,8 +7147,8 @@
    "beats": [
     "4.28"
    ],
-   "s": 3777,
-   "e": 3882,
+   "s": 3709,
+   "e": 3814,
    "onscreen": [
     {
      "text": "RAIL: FEB 20, 2018",
@@ -7227,6 +7246,7 @@
    "beat_starts": {
     "4.28": 0
    },
+   "picture": "No captions. The slide is the public reason (R2); the litigant's account stays off screen.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -7247,8 +7267,8 @@
      "must": true
     }
    ],
-   "tc_in": "04:05:09",
-   "tc_out": "04:09:18",
+   "tc_in": "04:01:13",
+   "tc_out": "04:05:22",
    "frames": 105
   },
   {
@@ -7257,8 +7277,8 @@
    "beats": [
     "4.29"
    ],
-   "s": 3882,
-   "e": 3990,
+   "s": 3814,
+   "e": 3922,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7322,13 +7342,14 @@
    "beat_starts": {
     "4.29": 0
    },
+   "picture": "The room's answer is the room: no prop, no sheet, nothing asked of anyone on screen (script review).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:09:18",
-   "tc_out": "04:14:06",
+   "tc_in": "04:05:22",
+   "tc_out": "04:10:10",
    "frames": 108
   },
   {
@@ -7337,8 +7358,8 @@
    "beats": [
     "4.30"
    ],
-   "s": 3990,
-   "e": 4106,
+   "s": 3922,
+   "e": 4036,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7364,7 +7385,7 @@
    "sounds": [
     "glass_sip @10",
     "ladder_climb @32",
-    "hatch_slide_shut @90"
+    "hatch_slide_shut @89"
    ],
    "spots": [
     {
@@ -7379,7 +7400,7 @@
     },
     {
      "name": "hatch_slide_shut",
-     "k": 90,
+     "k": 89,
      "dur": null
     }
    ],
@@ -7413,14 +7434,15 @@
    "beat_starts": {
     "4.30": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:14:06",
-   "tc_out": "04:19:02",
-   "frames": 116
+   "tc_in": "04:10:10",
+   "tc_out": "04:15:04",
+   "frames": 114
   },
   {
    "id": "4.31",
@@ -7428,8 +7450,8 @@
    "beats": [
     "4.31"
    ],
-   "s": 4106,
-   "e": 4149,
+   "s": 4036,
+   "e": 4080,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7472,14 +7494,15 @@
    "beat_starts": {
     "4.31": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:19:02",
-   "tc_out": "04:20:21",
-   "frames": 43
+   "tc_in": "04:15:04",
+   "tc_out": "04:17:00",
+   "frames": 44
   },
   {
    "id": "4.32",
@@ -7487,8 +7510,8 @@
    "beats": [
     "4.32"
    ],
-   "s": 4149,
-   "e": 4250,
+   "s": 4080,
+   "e": 4180,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7543,14 +7566,15 @@
    "beat_starts": {
     "4.32": 0
    },
+   "picture": "Alyi present, lit, a person (P8), part of him cut off by the frame (his rule). Warm. About 2 s on the look.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:20:21",
-   "tc_out": "04:25:02",
-   "frames": 101
+   "tc_in": "04:17:00",
+   "tc_out": "04:21:04",
+   "frames": 100
   },
   {
    "id": "4.33",
@@ -7558,8 +7582,8 @@
    "beats": [
     "4.33"
    ],
-   "s": 4250,
-   "e": 4321,
+   "s": 4180,
+   "e": 4251,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -7584,7 +7608,7 @@
    ],
    "sounds": [
     "render_front_sweep @5",
-    "match_strike @38"
+    "match_strike @37"
    ],
    "spots": [
     {
@@ -7594,7 +7618,7 @@
     },
     {
      "name": "match_strike",
-     "k": 38,
+     "k": 37,
      "dur": null
     }
    ],
@@ -7628,13 +7652,14 @@
    "beat_starts": {
     "4.33": 0
    },
+   "picture": "The relit candle is the matched object out.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:25:02",
-   "tc_out": "04:28:01",
+   "tc_in": "04:21:04",
+   "tc_out": "04:24:03",
    "frames": 71
   },
   {
@@ -7643,8 +7668,8 @@
    "beats": [
     "4.34"
    ],
-   "s": 4321,
-   "e": 4539,
+   "s": 4251,
+   "e": 4467,
    "onscreen": [],
    "lines": [
     {
@@ -7860,7 +7885,7 @@
      "words": [
       [
        "You",
-       0,
+       -1,
        3
       ],
       [
@@ -7871,7 +7896,7 @@
       [
        "at",
        10,
-       12
+       11
       ],
       [
        "the",
@@ -7880,18 +7905,18 @@
       ],
       [
        "back",
-       16,
-       25
+       15,
+       24
       ],
       [
        "I",
        40,
-       42
+       41
       ],
       [
        "stood",
        45,
-       52
+       51
       ],
       [
        "up",
@@ -7906,12 +7931,12 @@
       [
        "front",
        60,
-       64
+       63
       ],
       [
        "of",
-       65,
-       66
+       64,
+       65
       ],
       [
        "the",
@@ -7921,7 +7946,7 @@
       [
        "whole",
        69,
-       75
+       74
       ],
       [
        "room",
@@ -7930,8 +7955,8 @@
       ],
       [
        "and",
-       95,
-       99
+       94,
+       98
       ],
       [
        "you",
@@ -7941,7 +7966,7 @@
       [
        "sat",
        105,
-       110
+       109
       ],
       [
        "at",
@@ -7950,7 +7975,7 @@
       ],
       [
        "the",
-       113,
+       112,
        114
       ],
       [
@@ -7971,7 +7996,7 @@
       [
        "glass",
        135,
-       143
+       142
       ],
       [
        "of",
@@ -8048,14 +8073,15 @@
    "beat_starts": {
     "4.34": 0
    },
+   "picture": "Base setup for the confrontation.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:28:01",
-   "tc_out": "04:37:03",
-   "frames": 218
+   "tc_in": "04:24:03",
+   "tc_out": "04:33:03",
+   "frames": 216
   },
   {
    "id": "4.35",
@@ -8063,8 +8089,8 @@
    "beats": [
     "4.35"
    ],
-   "s": 4539,
-   "e": 4637,
+   "s": 4467,
+   "e": 4565,
    "onscreen": [],
    "lines": [
     {
@@ -8073,7 +8099,7 @@
      "mode": "on-mic",
      "who": "NOLE",
      "text": "Keep that too. See you in court.",
-     "s": 11,
+     "s": 10,
      "e": 49,
      "fs": 0,
      "fe": 59,
@@ -8086,96 +8112,100 @@
      "mouth": [
       [
        0,
-       "A"
-      ],
-      [
-       2,
-       "M"
-      ],
-      [
-       5,
-       "A"
-      ],
-      [
-       7,
-       "E"
-      ],
-      [
-       10,
-       "O"
-      ],
-      [
-       14,
        "rest"
       ],
       [
-       17,
-       "E"
-      ],
-      [
-       19,
+       1,
        "A"
       ],
       [
-       22,
-       "O"
+       3,
+       "M"
       ],
       [
-       24,
+       6,
        "A"
       ],
       [
-       26,
+       8,
        "E"
       ],
       [
-       28,
+       11,
        "O"
       ],
       [
-       31,
+       15,
+       "rest"
+      ],
+      [
+       18,
        "E"
       ],
       [
-       33,
+       20,
+       "A"
+      ],
+      [
+       23,
+       "O"
+      ],
+      [
+       25,
+       "A"
+      ],
+      [
+       27,
+       "E"
+      ],
+      [
+       29,
+       "O"
+      ],
+      [
+       32,
+       "E"
+      ],
+      [
+       34,
        "rest"
       ]
      ],
      "words": [
       [
        "Keep",
-       -1,
-       3
+       0,
+       4
       ],
       [
        "that",
        5,
-       8
+       9
       ],
       [
        "too",
-       9,
-       14
+       10,
+       15
       ],
       [
        "See",
-       17,
-       21
+       18,
+       22
       ],
       [
        "you",
-       22,
+       23,
        24
       ],
       [
        "in",
        25,
-       26
+       27
       ],
       [
        "court",
-       27,
-       33
+       28,
+       34
       ]
      ],
      "tag": "",
@@ -8248,13 +8278,14 @@
    "beat_starts": {
     "4.35": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:37:03",
-   "tc_out": "04:41:05",
+   "tc_in": "04:33:03",
+   "tc_out": "04:37:05",
    "frames": 98
   },
   {
@@ -8263,8 +8294,8 @@
    "beats": [
     "4.36"
    ],
-   "s": 4637,
-   "e": 4704,
+   "s": 4565,
+   "e": 4632,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
@@ -8318,13 +8349,14 @@
    "beat_starts": {
     "4.36": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:41:05",
-   "tc_out": "04:44:00",
+   "tc_in": "04:37:05",
+   "tc_out": "04:40:00",
    "frames": 67
   },
   {
@@ -8333,8 +8365,8 @@
    "beats": [
     "4A.01"
    ],
-   "s": 4704,
-   "e": 4887,
+   "s": 4632,
+   "e": 4814,
    "onscreen": [
     {
      "text": "RAIL: MAR 8",
@@ -8546,7 +8578,7 @@
    ],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8623,14 +8655,15 @@
    "beat_starts": {
     "4A.01": 0
    },
+   "picture": "Mas is already standing on arrival: Ep1's \"we'll stand.\" in picture.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:44:00",
-   "tc_out": "04:51:15",
-   "frames": 183
+   "tc_in": "04:40:00",
+   "tc_out": "04:47:14",
+   "frames": 182
   },
   {
    "id": "4A.02",
@@ -8638,8 +8671,8 @@
    "beats": [
     "4A.02"
    ],
-   "s": 4887,
-   "e": 5187,
+   "s": 4814,
+   "e": 5090,
    "onscreen": [],
    "lines": [
     {
@@ -8648,10 +8681,10 @@
      "mode": "on-mic",
      "who": "TERB",
      "text": "The law firm found that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.",
-     "s": 25,
-     "e": 275,
-     "fs": 17,
-     "fe": 283,
+     "s": 24,
+     "e": 273,
+     "fs": 15,
+     "fe": 281,
      "os": false,
      "via": null,
      "face": null,
@@ -8664,263 +8697,263 @@
        "E"
       ],
       [
-       7,
+       6,
        "O"
       ],
       [
-       14,
+       13,
        "M"
       ],
       [
-       18,
+       17,
        "A"
       ],
       [
-       20,
+       19,
        "E"
       ],
       [
-       24,
+       23,
        "A"
       ],
       [
-       26,
+       25,
        "E"
       ],
       [
-       30,
+       29,
        "M"
       ],
       [
-       33,
+       32,
        "A"
       ],
       [
-       36,
+       35,
        "E"
       ],
       [
-       42,
+       41,
        "M"
       ],
       [
-       44,
+       43,
        "O"
       ],
       [
-       48,
+       47,
        "E"
       ],
       [
-       53,
+       52,
        "A"
       ],
       [
-       56,
+       55,
        "E"
       ],
       [
-       63,
+       62,
        "O"
       ],
       [
-       65,
+       64,
        "E"
       ],
       [
-       67,
+       66,
        "A"
       ],
       [
-       69,
+       68,
        "E"
       ],
       [
-       76,
+       75,
        "M"
       ],
       [
-       78,
+       77,
        "E"
       ],
       [
-       80,
+       79,
        "O"
       ],
       [
-       83,
+       82,
        "E"
       ],
       [
-       93,
+       92,
        "A"
       ],
       [
-       96,
+       95,
        "E"
       ],
       [
-       103,
+       102,
        "O"
       ],
       [
-       107,
+       106,
        "A"
       ],
       [
-       110,
+       109,
        "M"
       ],
       [
-       112,
+       111,
        "E"
       ],
       [
-       115,
+       114,
        "A"
       ],
       [
-       118,
+       117,
        "E"
       ],
       [
-       122,
+       121,
        "A"
       ],
       [
-       124,
+       123,
        "E"
       ],
       [
-       129,
+       128,
        "M"
       ],
       [
-       131,
+       130,
        "A"
       ],
       [
-       134,
+       133,
        "E"
       ],
       [
-       136,
+       135,
        "A"
       ],
       [
-       140,
+       139,
        "E"
       ],
       [
-       143,
+       142,
        "rest"
       ],
       [
-       153,
+       152,
        "M"
       ],
       [
-       155,
+       154,
        "A"
       ],
       [
-       158,
+       157,
        "O"
       ],
       [
-       160,
+       159,
        "E"
       ],
       [
-       162,
+       161,
        "O"
       ],
       [
-       167,
+       166,
        "A"
       ],
       [
-       169,
+       168,
        "E"
       ],
       [
-       173,
+       172,
        "A"
       ],
       [
-       175,
+       174,
        "E"
       ],
       [
-       183,
+       182,
        "A"
       ],
       [
-       187,
+       186,
        "E"
       ],
       [
-       190,
+       189,
        "A"
       ],
       [
-       193,
+       192,
        "E"
       ],
       [
-       197,
+       196,
        "rest"
       ],
       [
-       201,
+       200,
        "A"
       ],
       [
-       203,
+       202,
        "E"
       ],
       [
-       207,
+       206,
        "A"
       ],
       [
-       210,
+       209,
        "E"
       ],
       [
-       213,
+       212,
        "M"
       ],
       [
-       215,
+       214,
        "A"
       ],
       [
-       217,
+       216,
        "E"
       ],
       [
-       220,
+       219,
        "A"
       ],
       [
-       224,
+       223,
        "E"
       ],
       [
-       231,
+       230,
        "M"
       ],
       [
-       233,
+       232,
        "O"
       ],
       [
-       236,
+       235,
        "E"
       ],
       [
-       243,
+       242,
        "rest"
       ]
      ],
@@ -8928,17 +8961,17 @@
       [
        "The",
        0,
-       4
+       3
       ],
       [
        "law",
        5,
-       9
+       8
       ],
       [
        "firm",
-       10,
-       15
+       9,
+       14
       ],
       [
        "found",
@@ -8947,33 +8980,33 @@
       ],
       [
        "that",
-       24,
+       23,
        26
       ],
       [
        "the",
        27,
-       29
+       28
       ],
       [
        "prior",
        30,
-       40
+       39
       ],
       [
        "Board",
-       42,
-       51
+       41,
+       50
       ],
       [
        "acted",
        53,
-       62
+       61
       ],
       [
        "within",
-       63,
-       70
+       62,
+       69
       ],
       [
        "its",
@@ -8983,32 +9016,32 @@
       [
        "broad",
        76,
-       85
+       84
       ],
       [
        "discretion",
-       86,
-       101
+       85,
+       100
       ],
       [
        "to",
        102,
-       104
+       103
       ],
       [
        "terminate",
-       106,
-       119
+       105,
+       118
       ],
       [
        "Mr",
-       120,
+       119,
        127
       ],
       [
        "Manalt",
-       129,
-       143
+       128,
+       142
       ],
       [
        "but",
@@ -9028,7 +9061,7 @@
       [
        "that",
        172,
-       175
+       174
       ],
       [
        "his",
@@ -9038,22 +9071,22 @@
       [
        "conduct",
        181,
-       197
+       196
       ],
       [
        "did",
-       200,
-       204
+       199,
+       203
       ],
       [
        "not",
-       206,
-       211
+       205,
+       210
       ],
       [
        "mandate",
-       213,
-       225
+       212,
+       224
       ],
       [
        "removal",
@@ -9067,7 +9100,7 @@
    ],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9126,14 +9159,15 @@
    "beat_starts": {
     "4A.02": 0
    },
+   "picture": "Nothing on Mas's face: at a real event his surface stays blank. Mada does nothing (any action could read as a view).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "04:51:15",
-   "tc_out": "05:04:03",
-   "frames": 300
+   "tc_in": "04:47:14",
+   "tc_out": "04:59:02",
+   "frames": 276
   },
   {
    "id": "4A.03",
@@ -9141,8 +9175,8 @@
    "beats": [
     "4A.03"
    ],
-   "s": 5187,
-   "e": 5283,
+   "s": 5090,
+   "e": 5173,
    "onscreen": [],
    "lines": [
     {
@@ -9151,10 +9185,10 @@
      "mode": "on-mic",
      "who": "TERB",
      "text": "You can sit down now, Mas.",
-     "s": 14,
-     "e": 58,
-     "fs": 6,
-     "fe": 66,
+     "s": 3,
+     "e": 47,
+     "fs": -5,
+     "fe": 55,
      "os": false,
      "via": null,
      "face": null,
@@ -9219,32 +9253,32 @@
       [
        "You",
        0,
-       4
+       3
       ],
       [
        "can",
        5,
-       8
+       7
       ],
       [
        "sit",
-       9,
-       13
+       8,
+       12
       ],
       [
        "down",
-       14,
-       19
+       13,
+       18
       ],
       [
        "now",
-       20,
+       19,
        24
       ],
       [
        "Mas",
-       26,
-       36
+       25,
+       35
       ]
      ],
      "tag": "",
@@ -9253,7 +9287,7 @@
    ],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9272,12 +9306,12 @@
     "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
    ],
    "sounds": [
-    "chair_unfold @64"
+    "chair_unfold @53"
    ],
    "spots": [
     {
      "name": "chair_unfold",
-     "k": 64,
+     "k": 53,
      "dur": null
     }
    ],
@@ -9311,14 +9345,15 @@
    "beat_starts": {
     "4A.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "05:04:03",
-   "tc_out": "05:08:03",
-   "frames": 96
+   "tc_in": "04:59:02",
+   "tc_out": "05:02:13",
+   "frames": 83
   },
   {
    "id": "4A.04",
@@ -9326,8 +9361,8 @@
    "beats": [
     "4A.04"
    ],
-   "s": 5283,
-   "e": 5364,
+   "s": 5173,
+   "e": 5255,
    "onscreen": [
     {
      "text": "MAS MANALT · BOARD",
@@ -9353,7 +9388,7 @@
    "lines": [],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9409,6 +9444,7 @@
    "beat_starts": {
     "4A.04": 0
    },
+   "picture": "Four plates, four clicks.",
    "names": [
     {
      "id": "omis",
@@ -9448,9 +9484,9 @@
      "must": true
     }
    ],
-   "tc_in": "05:08:03",
-   "tc_out": "05:11:12",
-   "frames": 81
+   "tc_in": "05:02:13",
+   "tc_out": "05:05:23",
+   "frames": 82
   },
   {
    "id": "4A.05",
@@ -9458,13 +9494,13 @@
    "beats": [
     "4A.05"
    ],
-   "s": 5364,
-   "e": 5484,
+   "s": 5255,
+   "e": 5368,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9514,14 +9550,15 @@
    "beat_starts": {
     "4A.05": 0
    },
+   "picture": "A warm half-second.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "05:11:12",
-   "tc_out": "05:16:12",
-   "frames": 120
+   "tc_in": "05:05:23",
+   "tc_out": "05:10:16",
+   "frames": 113
   },
   {
    "id": "4A.06",
@@ -9529,13 +9566,13 @@
    "beats": [
     "4A.06"
    ],
-   "s": 5484,
-   "e": 5544,
+   "s": 5368,
+   "e": 5424,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
    "scene": "4A",
-   "scene_s": 4704,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9573,14 +9610,15 @@
    "beat_starts": {
     "4A.06": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "05:16:12",
-   "tc_out": "05:19:00",
-   "frames": 60
+   "tc_in": "05:10:16",
+   "tc_out": "05:13:00",
+   "frames": 56
   },
   {
    "id": "4B.01",
@@ -9588,13 +9626,13 @@
    "beats": [
     "4B.01"
    ],
-   "s": 5544,
-   "e": 5736,
+   "s": 5424,
+   "e": 5640,
    "onscreen": [
     {
      "text": "XEL · LONG-FORM · MAR 18 · 2 HRS",
-     "s": 6,
-     "e": 192
+     "s": 4,
+     "e": 216
     }
    ],
    "lines": [
@@ -9604,10 +9642,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "two hours on his show, once. after that, november is a link.",
-     "s": 34,
-     "e": 172,
-     "fs": 23,
-     "fe": 182,
+     "s": 24,
+     "e": 162,
+     "fs": 13,
+     "fe": 172,
      "os": false,
      "via": null,
      "face": null,
@@ -9624,7 +9662,7 @@
       [
        "hours",
        6,
-       16
+       15
       ],
       [
        "on",
@@ -9633,22 +9671,22 @@
       ],
       [
        "his",
-       22,
+       21,
        24
       ],
       [
        "show",
        26,
-       35
+       34
       ],
       [
        "once",
-       45,
+       44,
        60
       ],
       [
        "after",
-       78,
+       77,
        87
       ],
       [
@@ -9663,12 +9701,12 @@
       ],
       [
        "is",
-       119,
+       118,
        121
       ],
       [
        "a",
-       123,
+       122,
        124
       ],
       [
@@ -9683,7 +9721,7 @@
    ],
    "seq": "ACT1",
    "scene": "4B",
-   "scene_s": 5544,
+   "scene_s": 5424,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9698,15 +9736,15 @@
     "mas"
    ],
    "cues": [
-    "music (v1): E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the tap (J 0.8 s)"
+    "music (v1): E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the card settling (J 0.8 s)"
    ],
    "sounds": [
-    "post_click @174"
+    "post_click @170"
    ],
    "spots": [
     {
      "name": "post_click",
-     "k": 174,
+     "k": 170,
      "dur": null
     }
    ],
@@ -9732,10 +9770,11 @@
    "beat_starts": {
     "4B.01": 0
    },
+   "picture": "In Ep1 he accepted an invite without looking; this time he looks.",
    "names": [
     {
      "id": "xel",
-     "k": 6
+     "k": 4
     }
    ],
    "fg": null,
@@ -9745,14 +9784,14 @@
     {
      "kind": "ui",
      "text": "XEL · LONG-FORM · MAR 18 · 2 HRS",
-     "s": 6,
-     "e": 192,
+     "s": 4,
+     "e": 216,
      "must": true
     }
    ],
-   "tc_in": "05:19:00",
-   "tc_out": "05:27:00",
-   "frames": 192
+   "tc_in": "05:13:00",
+   "tc_out": "05:22:00",
+   "frames": 216
   },
   {
    "id": "6.01",
@@ -9760,8 +9799,8 @@
    "beats": [
     "6.01"
    ],
-   "s": 5736,
-   "e": 5954,
+   "s": 5640,
+   "e": 5858,
    "onscreen": [
     {
      "text": "CH. 1 OF 6",
@@ -10096,7 +10135,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -10146,6 +10185,7 @@
    "beat_starts": {
     "6.01": 0
    },
+   "picture": "The locked meter frame: every hop plays in it, against the same curtain and chairs.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -10166,8 +10206,8 @@
      "must": true
     }
    ],
-   "tc_in": "05:27:00",
-   "tc_out": "05:36:02",
+   "tc_in": "05:22:00",
+   "tc_out": "05:31:02",
    "frames": 218
   },
   {
@@ -10176,8 +10216,8 @@
    "beats": [
     "6.02"
    ],
-   "s": 5954,
-   "e": 6036,
+   "s": 5858,
+   "e": 5940,
    "onscreen": [
     {
      "text": "CH. 2 OF 6",
@@ -10198,7 +10238,7 @@
    "lines": [],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -10268,6 +10308,7 @@
    "beat_starts": {
     "6.02": 0
    },
+   "picture": "The card on the first hop, as the topper.",
    "names": [
     {
      "id": "xel",
@@ -10300,8 +10341,8 @@
      "must": true
     }
    ],
-   "tc_in": "05:36:02",
-   "tc_out": "05:39:12",
+   "tc_in": "05:31:02",
+   "tc_out": "05:34:12",
    "frames": 82
   },
   {
@@ -10310,8 +10351,8 @@
    "beats": [
     "6.03"
    ],
-   "s": 6036,
-   "e": 6311,
+   "s": 5940,
+   "e": 6215,
    "onscreen": [],
    "lines": [
     {
@@ -10657,7 +10698,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -10707,13 +10748,14 @@
    "beat_starts": {
     "6.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "05:39:12",
-   "tc_out": "05:50:23",
+   "tc_in": "05:34:12",
+   "tc_out": "05:45:23",
    "frames": 275
   },
   {
@@ -10722,8 +10764,8 @@
    "beats": [
     "6.04"
    ],
-   "s": 6311,
-   "e": 6483,
+   "s": 6215,
+   "e": 6387,
    "onscreen": [
     {
      "text": "CH. 3 OF 6",
@@ -10954,7 +10996,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -11018,6 +11060,7 @@
    "beat_starts": {
     "6.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -11031,8 +11074,8 @@
      "must": true
     }
    ],
-   "tc_in": "05:50:23",
-   "tc_out": "05:58:03",
+   "tc_in": "05:45:23",
+   "tc_out": "05:53:03",
    "frames": 172
   },
   {
@@ -11041,8 +11084,8 @@
    "beats": [
     "6.05"
    ],
-   "s": 6483,
-   "e": 6702,
+   "s": 6387,
+   "e": 6606,
    "onscreen": [],
    "lines": [
     {
@@ -11425,7 +11468,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -11475,13 +11518,14 @@
    "beat_starts": {
     "6.05": 0
    },
+   "picture": "Its shortness is the joke.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "05:58:03",
-   "tc_out": "06:07:06",
+   "tc_in": "05:53:03",
+   "tc_out": "06:02:06",
    "frames": 219
   },
   {
@@ -11490,8 +11534,8 @@
    "beats": [
     "6.06"
    ],
-   "s": 6702,
-   "e": 6959,
+   "s": 6606,
+   "e": 6863,
    "onscreen": [
     {
      "text": "CH. 4 OF 6",
@@ -11915,7 +11959,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -11979,6 +12023,7 @@
    "beat_starts": {
     "6.06": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -11992,8 +12037,8 @@
      "must": true
     }
    ],
-   "tc_in": "06:07:06",
-   "tc_out": "06:17:23",
+   "tc_in": "06:02:06",
+   "tc_out": "06:12:23",
    "frames": 257
   },
   {
@@ -12002,8 +12047,8 @@
    "beats": [
     "6.07"
    ],
-   "s": 6959,
-   "e": 7344,
+   "s": 6863,
+   "e": 7248,
    "onscreen": [],
    "lines": [
     {
@@ -12556,7 +12601,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -12597,13 +12642,14 @@
    "beat_starts": {
     "6.07": 0
    },
+   "picture": "The mic never grows while he talks, so the meter stays honest. A face light one step (P10).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "06:17:23",
-   "tc_out": "06:34:00",
+   "tc_in": "06:12:23",
+   "tc_out": "06:29:00",
    "frames": 385
   },
   {
@@ -12612,8 +12658,8 @@
    "beats": [
     "6.08"
    ],
-   "s": 7344,
-   "e": 7454,
+   "s": 7248,
+   "e": 7358,
    "onscreen": [
     {
      "text": "CH. 5 OF 6",
@@ -12624,7 +12670,7 @@
    "lines": [],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -12694,6 +12740,7 @@
    "beat_starts": {
     "6.08": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
@@ -12707,8 +12754,8 @@
      "must": true
     }
    ],
-   "tc_in": "06:34:00",
-   "tc_out": "06:38:14",
+   "tc_in": "06:29:00",
+   "tc_out": "06:33:14",
    "frames": 110
   },
   {
@@ -12717,8 +12764,8 @@
    "beats": [
     "6.09"
    ],
-   "s": 7454,
-   "e": 7497,
+   "s": 7358,
+   "e": 7401,
    "onscreen": [
     {
      "text": "CH. 6 OF 6",
@@ -12729,7 +12776,7 @@
    "lines": [],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -12773,6 +12820,7 @@
    "beat_starts": {
     "6.09": 0
    },
+   "picture": "\"tell it once\" took six chapters.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -12786,8 +12834,8 @@
      "must": true
     }
    ],
-   "tc_in": "06:38:14",
-   "tc_out": "06:40:09",
+   "tc_in": "06:33:14",
+   "tc_out": "06:35:09",
    "frames": 43
   },
   {
@@ -12796,8 +12844,8 @@
    "beats": [
     "6.10"
    ],
-   "s": 7497,
-   "e": 7629,
+   "s": 7401,
+   "e": 7533,
    "onscreen": [],
    "lines": [
     {
@@ -12963,7 +13011,7 @@
    ],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -13013,13 +13061,14 @@
    "beat_starts": {
     "6.10": 0
    },
+   "picture": "Kept only if the reel's laugh test passes (D-20: −4 s if not).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "06:40:09",
-   "tc_out": "06:45:21",
+   "tc_in": "06:35:09",
+   "tc_out": "06:40:21",
    "frames": 132
   },
   {
@@ -13028,13 +13077,13 @@
    "beats": [
     "6.11"
    ],
-   "s": 7629,
-   "e": 7680,
+   "s": 7533,
+   "e": 7584,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
    "scene": "6",
-   "scene_s": 5736,
+   "scene_s": 5640,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -13072,13 +13121,14 @@
    "beat_starts": {
     "6.11": 0
    },
+   "picture": "Match cut: the curtain → the dollhouse halves.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "06:45:21",
-   "tc_out": "06:48:00",
+   "tc_in": "06:40:21",
+   "tc_out": "06:43:00",
    "frames": 51
   },
   {
@@ -13087,8 +13137,8 @@
    "beats": [
     "7.01"
    ],
-   "s": 7680,
-   "e": 7830,
+   "s": 7584,
+   "e": 7734,
    "onscreen": [
     {
      "text": "BELOW · ABOVE · AROUND",
@@ -13208,7 +13258,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -13290,6 +13340,7 @@
    "beat_starts": {
     "7.01": 0
    },
+   "picture": "Egg: Ep1's odometer still wedged in the bedrock. The phone's voice is small and band-passed.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -13303,8 +13354,8 @@
      "must": true
     }
    ],
-   "tc_in": "06:48:00",
-   "tc_out": "06:54:06",
+   "tc_in": "06:43:00",
+   "tc_out": "06:49:06",
    "frames": 150
   },
   {
@@ -13313,8 +13364,8 @@
    "beats": [
     "7.02"
    ],
-   "s": 7830,
-   "e": 7977,
+   "s": 7734,
+   "e": 7881,
    "onscreen": [
     {
      "text": "DEFLECTION (LICENSED)",
@@ -13496,7 +13547,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -13554,6 +13605,7 @@
    "beat_starts": {
     "7.02": 0
    },
+   "picture": "The boxes say this was weeks in the making (R2): November recalled, not caused.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -13574,8 +13626,8 @@
      "must": true
     }
    ],
-   "tc_in": "06:54:06",
-   "tc_out": "07:00:09",
+   "tc_in": "06:49:06",
+   "tc_out": "06:55:09",
    "frames": 147
   },
   {
@@ -13584,8 +13636,8 @@
    "beats": [
     "7.03"
    ],
-   "s": 7977,
-   "e": 8181,
+   "s": 7881,
+   "e": 8085,
    "onscreen": [],
    "lines": [
     {
@@ -13859,7 +13911,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -13909,13 +13961,14 @@
    "beat_starts": {
     "7.03": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:00:09",
-   "tc_out": "07:08:21",
+   "tc_in": "06:55:09",
+   "tc_out": "07:03:21",
    "frames": 204
   },
   {
@@ -13924,8 +13977,8 @@
    "beats": [
     "7.04"
    ],
-   "s": 8181,
-   "e": 8389,
+   "s": 8085,
+   "e": 8293,
    "onscreen": [],
    "lines": [
     {
@@ -14252,7 +14305,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -14302,13 +14355,14 @@
    "beat_starts": {
     "7.04": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:08:21",
-   "tc_out": "07:17:13",
+   "tc_in": "07:03:21",
+   "tc_out": "07:12:13",
    "frames": 208
   },
   {
@@ -14317,8 +14371,8 @@
    "beats": [
     "7.05"
    ],
-   "s": 8389,
-   "e": 8515,
+   "s": 8293,
+   "e": 8419,
    "onscreen": [
     {
      "text": "RAIL: MAR 19",
@@ -14418,7 +14472,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -14482,6 +14536,7 @@
    "beat_starts": {
     "7.05": 0
    },
+   "picture": "Eggs: LE CHIEN's paw print; THE TRUSTBUSTER's INQUIRY envelope.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -14495,8 +14550,8 @@
      "must": true
     }
    ],
-   "tc_in": "07:17:13",
-   "tc_out": "07:22:19",
+   "tc_in": "07:12:13",
+   "tc_out": "07:17:19",
    "frames": 126
   },
   {
@@ -14505,8 +14560,8 @@
    "beats": [
     "7.06"
    ],
-   "s": 8515,
-   "e": 8576,
+   "s": 8419,
+   "e": 8480,
    "onscreen": [],
    "lines": [
     {
@@ -14587,7 +14642,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -14637,13 +14692,14 @@
    "beat_starts": {
     "7.06": 0
    },
+   "picture": "",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:22:19",
-   "tc_out": "07:25:08",
+   "tc_in": "07:17:19",
+   "tc_out": "07:20:08",
    "frames": 61
   },
   {
@@ -14652,8 +14708,8 @@
    "beats": [
     "7.07"
    ],
-   "s": 8576,
-   "e": 8697,
+   "s": 8480,
+   "e": 8601,
    "onscreen": [],
    "lines": [
     {
@@ -14720,7 +14776,7 @@
    ],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -14761,13 +14817,14 @@
    "beat_starts": {
     "7.07": 0
    },
+   "picture": "An L-cut: the line on Mas. When the basement's lights came on, his monitor dimmed one palette step.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:25:08",
-   "tc_out": "07:30:09",
+   "tc_in": "07:20:08",
+   "tc_out": "07:25:09",
    "frames": 121
   },
   {
@@ -14776,13 +14833,13 @@
    "beats": [
     "7.08"
    ],
-   "s": 8697,
-   "e": 8832,
+   "s": 8601,
+   "e": 8736,
    "onscreen": [],
    "lines": [],
    "seq": "ACT1",
    "scene": "7",
-   "scene_s": 7680,
+   "scene_s": 7584,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -14831,13 +14888,14 @@
    "beat_starts": {
     "7.08": 0
    },
+   "picture": "1.5 s on Mas before the jangle (R1).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "07:30:09",
-   "tc_out": "07:36:00",
+   "tc_in": "07:25:09",
+   "tc_out": "07:31:00",
    "frames": 135
   }
  ],
@@ -14941,15 +14999,15 @@
    "who": "MAS",
    "text": "is there anyone here… from 2016.",
    "tag": "",
-   "on_s": 13.1683,
-   "end_s": 16.1283,
-   "file_s": 12.7983,
-   "abs_in": 316,
-   "abs_out": 388,
-   "file_in": 307,
-   "file_out": 398,
+   "on_s": 13.1583,
+   "end_s": 16.1183,
+   "file_s": 12.7883,
+   "abs_in": 315,
+   "abs_out": 387,
+   "file_in": 306,
+   "file_out": 397,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
-   "stick_t": 0.46,
+   "stick_t": 0.45,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -14959,33 +15017,33 @@
    "words": [
     [
      "Is",
-     -1,
-     3
+     0,
+     4
     ],
     [
      "there",
-     4,
-     8
+     5,
+     9
     ],
     [
      "anyone",
-     9,
-     18
+     10,
+     19
     ],
     [
      "here",
-     19,
-     27
+     20,
+     28
     ],
     [
      "from",
-     37,
+     38,
      42
     ],
     [
      "2016",
-     44,
-     66
+     45,
+     67
     ]
    ],
    "mouth": [
@@ -15126,15 +15184,15 @@
    "who": "GERG",
    "text": "He signed it. He's just not here.",
    "tag": "",
-   "on_s": 23.2333,
-   "end_s": 25.2333,
-   "file_s": 22.8633,
+   "on_s": 23.2133,
+   "end_s": 25.2133,
+   "file_s": 22.8433,
    "abs_in": 557,
    "abs_out": 606,
    "file_in": 548,
    "file_out": 614,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
-   "stick_t": 1.15,
+   "stick_t": 1.13,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -15144,8 +15202,8 @@
    "words": [
     [
      "He",
-     0,
-     3
+     -1,
+     2
     ],
     [
      "signed",
@@ -15155,22 +15213,22 @@
     [
      "it",
      11,
-     14
+     13
     ],
     [
      "He's",
-     22,
-     26
+     21,
+     25
     ],
     [
      "just",
-     27,
+     26,
      30
     ],
     [
      "not",
-     31,
-     34
+     30,
+     33
     ],
     [
      "here",
@@ -15240,15 +15298,15 @@
    "who": "MAS",
    "text": "one knock if we promised a nonprofit.",
    "tag": "",
-   "on_s": 26.4783,
-   "end_s": 29.2383,
-   "file_s": 26.0983,
-   "abs_in": 635,
-   "abs_out": 702,
-   "file_in": 626,
-   "file_out": 713,
+   "on_s": 26.385,
+   "end_s": 29.145,
+   "file_s": 26.005,
+   "abs_in": 633,
+   "abs_out": 700,
+   "file_in": 624,
+   "file_out": 711,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
-   "stick_t": 0.52,
+   "stick_t": 0.51,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -15258,28 +15316,28 @@
    "words": [
     [
      "One",
-     0,
+     -1,
      5
     ],
     [
      "knock",
-     7,
-     15
+     6,
+     14
     ],
     [
      "if",
-     17,
+     16,
      19
     ],
     [
      "we",
      20,
-     24
+     23
     ],
     [
      "promised",
      25,
-     37
+     36
     ],
     [
      "a",
@@ -15289,7 +15347,7 @@
     [
      "nonprofit",
      40,
-     64
+     63
     ]
    ],
    "mouth": [
@@ -15382,15 +15440,15 @@
    "who": "MAS",
    "text": "you're early. we're on 2016.",
    "tag": "",
-   "on_s": 34.79,
-   "end_s": 37.0,
-   "file_s": 34.38,
-   "abs_in": 834,
-   "abs_out": 888,
-   "file_in": 825,
-   "file_out": 899,
+   "on_s": 34.0083,
+   "end_s": 36.2183,
+   "file_s": 33.5983,
+   "abs_in": 816,
+   "abs_out": 870,
+   "file_in": 806,
+   "file_out": 880,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
-   "stick_t": 2.29,
+   "stick_t": 1.55,
    "stick_in": 0.41,
    "cut": false,
    "on_camera": "on",
@@ -15400,28 +15458,28 @@
    "words": [
     [
      "You're",
-     0,
+     -1,
      5
     ],
     [
      "early",
-     7,
-     17
+     6,
+     16
     ],
     [
      "we're",
-     20,
+     19,
      24
     ],
     [
      "on",
-     25,
-     27
+     24,
+     26
     ],
     [
      "2016",
-     29,
-     49
+     28,
+     48
     ]
    ],
    "mouth": [
@@ -15430,63 +15488,63 @@
      "rest"
     ],
     [
-     2,
+     1,
      "O"
     ],
     [
-     4,
+     3,
      "E"
     ],
     [
-     7,
+     6,
      "O"
     ],
     [
-     10,
+     9,
      "E"
     ],
     [
-     17,
+     16,
      "rest"
     ],
     [
-     20,
+     19,
      "O"
     ],
     [
-     22,
+     21,
      "E"
     ],
     [
-     26,
+     25,
      "O"
     ],
     [
-     28,
+     27,
      "E"
     ],
     [
-     30,
+     29,
      "O"
     ],
     [
-     32,
+     31,
      "A"
     ],
     [
-     34,
+     33,
      "E"
     ],
     [
-     46,
+     45,
      "A"
     ],
     [
-     48,
+     47,
      "E"
     ],
     [
-     50,
+     49,
      "rest"
     ]
    ],
@@ -15502,15 +15560,15 @@
    "who": "NOLE",
    "text": "Is this a séance or a deposition? Because I've got lawyers for both.",
    "tag": "",
-   "on_s": 38.07,
-   "end_s": 41.99,
-   "file_s": 37.68,
-   "abs_in": 913,
-   "abs_out": 1008,
-   "file_in": 904,
-   "file_out": 1017,
+   "on_s": 36.525,
+   "end_s": 40.445,
+   "file_s": 36.135,
+   "abs_in": 876,
+   "abs_out": 971,
+   "file_in": 867,
+   "file_out": 980,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
-   "stick_t": 0.57,
+   "stick_t": 0.15,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -15525,7 +15583,7 @@
     ],
     [
      "this",
-     5,
+     4,
      8
     ],
     [
@@ -15556,7 +15614,7 @@
     [
      "Because",
      50,
-     59
+     58
     ],
     [
      "I've",
@@ -15565,7 +15623,7 @@
     ],
     [
      "got",
-     66,
+     65,
      69
     ],
     [
@@ -15575,7 +15633,7 @@
     ],
     [
      "for",
-     78,
+     77,
      80
     ],
     [
@@ -15722,15 +15780,15 @@
    "who": "GERG",
    "text": "It's a blog post. We put some of your old emails up today. The candles were extra.",
    "tag": "",
-   "on_s": 42.19,
-   "end_s": 45.8,
-   "file_s": 41.78,
-   "abs_in": 1012,
-   "abs_out": 1100,
-   "file_in": 1002,
-   "file_out": 1114,
+   "on_s": 40.645,
+   "end_s": 44.255,
+   "file_s": 40.235,
+   "abs_in": 975,
+   "abs_out": 1063,
+   "file_in": 965,
+   "file_out": 1077,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0007__gerg-mockbran-A.wav",
-   "stick_t": 4.69,
+   "stick_t": 4.27,
    "stick_in": 0.41,
    "cut": false,
    "on_camera": "on",
@@ -15755,7 +15813,7 @@
     ],
     [
      "post",
-     13,
+     12,
      18
     ],
     [
@@ -15765,7 +15823,7 @@
     ],
     [
      "put",
-     23,
+     22,
      25
     ],
     [
@@ -15781,7 +15839,7 @@
     [
      "your",
      32,
-     35
+     34
     ],
     [
      "old",
@@ -15806,7 +15864,7 @@
     [
      "The",
      61,
-     64
+     63
     ],
     [
      "candles",
@@ -15958,13 +16016,13 @@
    "who": "NOLE",
    "text": "Great. Put this on the blog too. I paid for the table. I paid for the candles. I paid for the ceiling I just came through. And I asked for one thing, and it's in the name. Open. It was supposed to be open.",
    "tag": "",
-   "on_s": 46.0467,
-   "end_s": 60.9167,
-   "file_s": 45.6267,
-   "abs_in": 1105,
-   "abs_out": 1462,
-   "file_in": 1095,
-   "file_out": 1473,
+   "on_s": 44.505,
+   "end_s": 59.375,
+   "file_s": 44.085,
+   "abs_in": 1068,
+   "abs_out": 1425,
+   "file_in": 1058,
+   "file_out": 1436,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0008__nole-A.wav",
    "stick_t": 0.13,
    "stick_in": 0.42,
@@ -16541,13 +16599,13 @@
    "who": "MAS",
    "text": "spirit, what did we call it?",
    "tag": "",
-   "on_s": 61.3417,
-   "end_s": 63.5017,
-   "file_s": 60.9917,
-   "abs_in": 1472,
-   "abs_out": 1525,
-   "file_in": 1463,
-   "file_out": 1538,
+   "on_s": 59.8,
+   "end_s": 61.96,
+   "file_s": 59.45,
+   "abs_in": 1435,
+   "abs_out": 1488,
+   "file_in": 1426,
+   "file_out": 1501,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0009__mas-manalt-C.wav",
    "stick_t": 0.3,
    "stick_in": 0.35,
@@ -16666,15 +16724,15 @@
    "who": "NOLE",
    "text": "There. Even the furniture knows.",
    "tag": "",
-   "on_s": 65.9983,
-   "end_s": 68.0783,
-   "file_s": 65.6283,
-   "abs_in": 1583,
-   "abs_out": 1634,
-   "file_in": 1575,
-   "file_out": 1649,
+   "on_s": 64.4467,
+   "end_s": 66.5267,
+   "file_s": 64.0767,
+   "abs_in": 1546,
+   "abs_out": 1597,
+   "file_in": 1537,
+   "file_out": 1611,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
-   "stick_t": 0.29,
+   "stick_t": 0.28,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -16685,7 +16743,7 @@
     [
      "There",
      0,
-     12
+     11
     ],
     [
      "Even",
@@ -16695,7 +16753,7 @@
     [
      "the",
      29,
-     31
+     30
     ],
     [
      "furniture",
@@ -16711,50 +16769,46 @@
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "E"
     ],
     [
-     3,
+     2,
      "A"
     ],
     [
-     9,
+     8,
      "E"
     ],
     [
-     12,
+     11,
      "rest"
     ],
     [
-     23,
+     22,
      "A"
     ],
     [
-     25,
+     24,
      "E"
     ],
     [
-     33,
+     32,
      "O"
     ],
     [
-     35,
+     34,
      "E"
     ],
     [
-     44,
+     43,
      "O"
     ],
     [
-     48,
+     47,
      "E"
     ],
     [
-     50,
+     49,
      "rest"
     ]
    ],
@@ -16770,15 +16824,15 @@
    "who": "NOLE",
    "text": "No. Not like that. The N goes at the end.",
    "tag": "",
-   "on_s": 70.5817,
-   "end_s": 73.0517,
-   "file_s": 70.2117,
-   "abs_in": 1693,
-   "abs_out": 1754,
-   "file_in": 1685,
-   "file_out": 1762,
+   "on_s": 69.03,
+   "end_s": 71.5,
+   "file_s": 68.66,
+   "abs_in": 1656,
+   "abs_out": 1716,
+   "file_in": 1647,
+   "file_out": 1724,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
-   "stick_t": 0.29,
+   "stick_t": 0.28,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -16794,21 +16848,21 @@
     [
      "Not",
      10,
-     14
+     13
     ],
     [
      "like",
      14,
-     18
+     17
     ],
     [
      "that",
      18,
-     25
+     24
     ],
     [
      "The",
-     28,
+     27,
      30
     ],
     [
@@ -16824,11 +16878,11 @@
     [
      "at",
      42,
-     44
+     43
     ],
     [
      "the",
-     45,
+     44,
      46
     ],
     [
@@ -16840,78 +16894,74 @@
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "E"
     ],
     [
-     3,
+     2,
      "O"
     ],
     [
-     11,
+     10,
      "A"
     ],
     [
-     13,
+     12,
      "E"
     ],
     [
-     16,
+     15,
      "A"
     ],
     [
-     18,
+     17,
      "E"
     ],
     [
-     20,
+     19,
      "A"
     ],
     [
-     25,
+     24,
      "rest"
     ],
     [
-     28,
+     27,
      "E"
     ],
     [
-     32,
+     31,
      "A"
     ],
     [
-     34,
+     33,
      "E"
     ],
     [
-     38,
+     37,
      "O"
     ],
     [
-     40,
+     39,
      "E"
     ],
     [
-     42,
+     41,
      "A"
     ],
     [
-     45,
+     44,
      "E"
     ],
     [
-     48,
+     47,
      "A"
     ],
     [
-     51,
+     50,
      "E"
     ],
     [
-     53,
+     52,
      "rest"
     ]
    ],
@@ -16927,13 +16977,13 @@
    "who": "NOLE",
    "text": "I forwarded that. I didn't write it.",
    "tag": "",
-   "on_s": 79.7983,
-   "end_s": 81.6783,
-   "file_s": 79.4283,
-   "abs_in": 1915,
-   "abs_out": 1961,
-   "file_in": 1906,
-   "file_out": 1974,
+   "on_s": 78.215,
+   "end_s": 80.095,
+   "file_s": 77.845,
+   "abs_in": 1877,
+   "abs_out": 1923,
+   "file_in": 1868,
+   "file_out": 1936,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0012__nole-A.wav",
    "stick_t": 0.34,
    "stick_in": 0.37,
@@ -17037,13 +17087,13 @@
    "who": "MAS",
    "text": "you wrote 'exactly right.'",
    "tag": "",
-   "on_s": 82.1283,
-   "end_s": 83.6883,
-   "file_s": 81.7283,
-   "abs_in": 1971,
-   "abs_out": 2009,
-   "file_in": 1961,
-   "file_out": 2020,
+   "on_s": 80.545,
+   "end_s": 82.105,
+   "file_s": 80.145,
+   "abs_in": 1933,
+   "abs_out": 1971,
+   "file_in": 1923,
+   "file_out": 1982,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0013__mas-manalt-C.wav",
    "stick_t": 2.67,
    "stick_in": 0.4,
@@ -17112,13 +17162,13 @@
    "who": "GHOST-NOLE",
    "text": "This needs billions per year immediately or forget it.",
    "tag": "ghost",
-   "on_s": 90.575,
-   "end_s": 93.475,
-   "file_s": 90.135,
-   "abs_in": 2173,
-   "abs_out": 2244,
-   "file_in": 2163,
-   "file_out": 2260,
+   "on_s": 88.95,
+   "end_s": 91.85,
+   "file_s": 88.51,
+   "abs_in": 2134,
+   "abs_out": 2205,
+   "file_in": 2124,
+   "file_out": 2221,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0014__ghost-nole-A.wav",
    "stick_t": 2.2,
    "stick_in": 0.44,
@@ -17260,13 +17310,13 @@
    "who": "NOLE",
    "text": "That was a different me. That was 2018. Everybody said things in 2018.",
    "tag": "",
-   "on_s": 98.59,
-   "end_s": 102.6,
-   "file_s": 98.21,
-   "abs_in": 2366,
-   "abs_out": 2463,
-   "file_in": 2357,
-   "file_out": 2475,
+   "on_s": 96.9233,
+   "end_s": 100.9333,
+   "file_s": 96.5433,
+   "abs_in": 2326,
+   "abs_out": 2423,
+   "file_in": 2317,
+   "file_out": 2435,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0015__nole-A.wav",
    "stick_t": 0.34,
    "stick_in": 0.38,
@@ -17456,13 +17506,13 @@
    "who": "GERG",
    "text": "Same email address, though. I checked.",
    "tag": "os",
-   "on_s": 102.8,
-   "end_s": 104.4,
-   "file_s": 102.42,
-   "abs_in": 2467,
-   "abs_out": 2506,
-   "file_in": 2458,
-   "file_out": 2520,
+   "on_s": 101.1333,
+   "end_s": 102.7333,
+   "file_s": 100.7533,
+   "abs_in": 2427,
+   "abs_out": 2466,
+   "file_in": 2418,
+   "file_out": 2480,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0016__gerg-mockbran-A.wav",
    "stick_t": 4.55,
    "stick_in": 0.38,
@@ -17565,13 +17615,13 @@
    "who": "NOLE",
    "text": "Say something ELSE.",
    "tag": "",
-   "on_s": 104.6,
-   "end_s": 105.57,
-   "file_s": 104.23,
-   "abs_in": 2510,
-   "abs_out": 2534,
-   "file_in": 2501,
-   "file_out": 2548,
+   "on_s": 102.9333,
+   "end_s": 103.9033,
+   "file_s": 102.5633,
+   "abs_in": 2470,
+   "abs_out": 2494,
+   "file_in": 2461,
+   "file_out": 2508,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0017__nole-A.wav",
    "stick_t": 6.35,
    "stick_in": 0.37,
@@ -17639,13 +17689,13 @@
    "who": "GHOST-NOLE",
    "text": "Yup.",
    "tag": "ghost",
-   "on_s": 106.82,
-   "end_s": 107.63,
-   "file_s": 106.39,
-   "abs_in": 2563,
-   "abs_out": 2584,
-   "file_in": 2553,
-   "file_out": 2592,
+   "on_s": 105.1533,
+   "end_s": 105.9633,
+   "file_s": 104.7233,
+   "abs_in": 2523,
+   "abs_out": 2544,
+   "file_in": 2513,
+   "file_out": 2552,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
    "stick_t": 8.57,
    "stick_in": 0.43,
@@ -17691,13 +17741,13 @@
    "who": "MAS",
    "text": "spirit, why zero?",
    "tag": "",
-   "on_s": 108.7783,
-   "end_s": 110.3383,
-   "file_s": 108.4283,
-   "abs_in": 2610,
-   "abs_out": 2649,
-   "file_in": 2602,
-   "file_out": 2659,
+   "on_s": 107.07,
+   "end_s": 108.63,
+   "file_s": 106.72,
+   "abs_in": 2569,
+   "abs_out": 2608,
+   "file_in": 2561,
+   "file_out": 2618,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0019__mas-manalt-C.wav",
    "stick_t": 0.57,
    "stick_in": 0.35,
@@ -17769,15 +17819,15 @@
    "who": "NOLE",
    "text": "That's why.",
    "tag": "",
-   "on_s": 113.3767,
-   "end_s": 114.1967,
-   "file_s": 112.9867,
-   "abs_in": 2721,
-   "abs_out": 2741,
-   "file_in": 2711,
-   "file_out": 2749,
+   "on_s": 111.7,
+   "end_s": 112.52,
+   "file_s": 111.31,
+   "abs_in": 2680,
+   "abs_out": 2701,
+   "file_in": 2671,
+   "file_out": 2709,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
-   "stick_t": 0.46,
+   "stick_t": 0.45,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -17787,34 +17837,38 @@
    "words": [
     [
      "That's",
-     -1,
+     0,
      6
     ],
     [
      "why",
-     6,
+     7,
      12
     ]
    ],
    "mouth": [
     [
      0,
+     "rest"
+    ],
+    [
+     1,
      "A"
     ],
     [
-     3,
+     4,
      "E"
     ],
     [
-     6,
+     7,
      "O"
     ],
     [
-     8,
+     9,
      "A"
     ],
     [
-     12,
+     13,
      "rest"
     ]
    ],
@@ -17830,15 +17884,15 @@
    "who": "STAFFER",
    "text": "What's that?",
    "tag": "os",
-   "on_s": 114.4967,
-   "end_s": 114.9867,
-   "file_s": 114.0467,
-   "abs_in": 2747,
-   "abs_out": 2760,
-   "file_in": 2737,
-   "file_out": 2770,
+   "on_s": 112.82,
+   "end_s": 113.31,
+   "file_s": 112.37,
+   "abs_in": 2707,
+   "abs_out": 2720,
+   "file_in": 2696,
+   "file_out": 2729,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0021__tiled-employee-A.wav",
-   "stick_t": 1.58,
+   "stick_t": 1.57,
    "stick_in": 0.45,
    "cut": false,
    "on_camera": "on",
@@ -17860,22 +17914,18 @@
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "A"
     ],
     [
-     4,
+     3,
      "E"
     ],
     [
-     8,
+     7,
      "A"
     ],
     [
-     12,
+     11,
      "rest"
     ]
    ],
@@ -17891,13 +17941,13 @@
    "who": "NOLE",
    "text": "Nobody wrote that move. It came out of nowhere.",
    "tag": "",
-   "on_s": 115.255,
-   "end_s": 117.505,
-   "file_s": 114.865,
-   "abs_in": 2766,
-   "abs_out": 2821,
-   "file_in": 2756,
-   "file_out": 2832,
+   "on_s": 113.5467,
+   "end_s": 115.7967,
+   "file_s": 113.1567,
+   "abs_in": 2725,
+   "abs_out": 2780,
+   "file_in": 2715,
+   "file_out": 2791,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0022__nole-A.wav",
    "stick_t": 0.13,
    "stick_in": 0.39,
@@ -18031,13 +18081,13 @@
    "who": "GERG",
    "text": "It didn't come out of nowhere. It learned. Thirty million positions from people's games.",
    "tag": "",
-   "on_s": 117.6833,
-   "end_s": 121.9233,
-   "file_s": 117.2933,
-   "abs_in": 2824,
-   "abs_out": 2927,
-   "file_in": 2815,
-   "file_out": 2942,
+   "on_s": 116.0167,
+   "end_s": 120.2567,
+   "file_s": 115.6267,
+   "abs_in": 2784,
+   "abs_out": 2887,
+   "file_in": 2775,
+   "file_out": 2902,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0023__gerg-mockbran-A.wav",
    "stick_t": 0.1,
    "stick_in": 0.39,
@@ -18248,13 +18298,13 @@
    "who": "STAFFER",
    "text": "So somebody did write it.",
    "tag": "os",
-   "on_s": 122.1733,
-   "end_s": 123.3433,
-   "file_s": 121.7933,
-   "abs_in": 2932,
-   "abs_out": 2961,
-   "file_in": 2923,
-   "file_out": 2971,
+   "on_s": 120.5067,
+   "end_s": 121.6767,
+   "file_s": 120.1267,
+   "abs_in": 2892,
+   "abs_out": 2921,
+   "file_in": 2883,
+   "file_out": 2931,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0055__tiled-employee-A.wav",
    "stick_t": 4.59,
    "stick_in": 0.38,
@@ -18344,13 +18394,13 @@
    "who": "GERG",
    "text": "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games.",
    "tag": "",
-   "on_s": 123.5933,
-   "end_s": 133.8533,
-   "file_s": 123.2233,
-   "abs_in": 2966,
-   "abs_out": 3213,
-   "file_in": 2957,
-   "file_out": 3223,
+   "on_s": 121.9267,
+   "end_s": 132.1867,
+   "file_s": 121.5567,
+   "abs_in": 2926,
+   "abs_out": 3173,
+   "file_in": 2917,
+   "file_out": 3183,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0056__gerg-mockbran-A.wav",
    "stick_t": 6.01,
    "stick_in": 0.37,
@@ -18776,15 +18826,15 @@
    "who": "NOLE",
    "text": "One player in ten thousand would have made that move. It made it anyway. And it was right.",
    "tag": "",
-   "on_s": 135.445,
-   "end_s": 140.835,
-   "file_s": 135.085,
-   "abs_in": 3250,
-   "abs_out": 3381,
-   "file_in": 3242,
-   "file_out": 3390,
+   "on_s": 132.7,
+   "end_s": 138.09,
+   "file_s": 132.34,
+   "abs_in": 3184,
+   "abs_out": 3315,
+   "file_in": 3176,
+   "file_out": 3324,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
-   "stick_t": 0.57,
+   "stick_t": 0.2,
    "stick_in": 0.36,
    "cut": false,
    "on_camera": "on",
@@ -18805,12 +18855,12 @@
     [
      "in",
      15,
-     16
+     17
     ],
     [
      "ten",
-     17,
-     21
+     18,
+     22
     ],
     [
      "thousand",
@@ -18825,7 +18875,7 @@
     [
      "have",
      39,
-     41
+     42
     ],
     [
      "made",
@@ -18879,7 +18929,7 @@
     ],
     [
      "right",
-     116,
+     117,
      125
     ]
    ],
@@ -19049,13 +19099,13 @@
    "who": "NOLE",
    "text": "MINDDEEP had that in 2016. We had a blog.",
    "tag": "",
-   "on_s": 141.1083,
-   "end_s": 143.6183,
-   "file_s": 140.7383,
-   "abs_in": 3386,
-   "abs_out": 3447,
-   "file_in": 3377,
-   "file_out": 3461,
+   "on_s": 138.3583,
+   "end_s": 140.8683,
+   "file_s": 137.9883,
+   "abs_in": 3320,
+   "abs_out": 3381,
+   "file_in": 3311,
+   "file_out": 3395,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0025__nole-A.wav",
    "stick_t": 0.15,
    "stick_in": 0.37,
@@ -19185,15 +19235,15 @@
    "who": "GHOST-NOLE",
    "text": "billions per year…",
    "tag": "ghost",
-   "on_s": 144.5433,
-   "end_s": 145.4833,
-   "file_s": 144.1233,
-   "abs_in": 3469,
-   "abs_out": 3492,
-   "file_in": 3458,
-   "file_out": 3498,
+   "on_s": 141.7833,
+   "end_s": 142.7233,
+   "file_s": 141.3633,
+   "abs_in": 3402,
+   "abs_out": 3426,
+   "file_in": 3392,
+   "file_out": 3432,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
-   "stick_t": 0.46,
+   "stick_t": 0.45,
    "stick_in": 0.42,
    "cut": false,
    "on_camera": "on",
@@ -19203,18 +19253,18 @@
    "words": [
     [
      "billions",
-     -2,
+     -1,
      11
     ],
     [
      "per",
-     12,
-     15
+     13,
+     16
     ],
     [
      "year",
-     17,
-     21
+     18,
+     22
     ]
    ],
    "mouth": [
@@ -19223,31 +19273,31 @@
      "A"
     ],
     [
-     2,
+     3,
      "E"
     ],
     [
-     10,
+     11,
      "M"
     ],
     [
-     12,
+     13,
      "O"
     ],
     [
-     14,
+     15,
      "E"
     ],
     [
-     17,
+     18,
      "A"
     ],
     [
-     19,
+     20,
      "E"
     ],
     [
-     21,
+     22,
      "rest"
     ]
    ],
@@ -19263,15 +19313,15 @@
    "who": "MAS",
    "text": "he was right about the bill. it's bigger now.",
    "tag": "V.O.",
-   "on_s": 146.0833,
-   "end_s": 149.5033,
-   "file_s": 145.6433,
-   "abs_in": 3506,
-   "abs_out": 3589,
-   "file_in": 3495,
-   "file_out": 3605,
+   "on_s": 143.3233,
+   "end_s": 146.7433,
+   "file_s": 142.8833,
+   "abs_in": 3439,
+   "abs_out": 3522,
+   "file_in": 3429,
+   "file_out": 3539,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-02__mas-manalt-C.wav",
-   "stick_t": 2.0,
+   "stick_t": 1.99,
    "stick_in": 0.44,
    "cut": false,
    "on_camera": "vo",
@@ -19281,43 +19331,43 @@
    "words": [
     [
      "He",
-     -1,
-     2
+     0,
+     3
     ],
     [
      "was",
-     4,
-     8
+     5,
+     9
     ],
     [
      "right",
-     11,
+     12,
      18
     ],
     [
      "about",
-     19,
-     25
+     20,
+     26
     ],
     [
      "the",
-     27,
-     29
+     28,
+     30
     ],
     [
      "bill",
-     31,
-     41
+     32,
+     42
     ],
     [
      "it's",
-     50,
-     57
+     51,
+     58
     ],
     [
      "bigger",
-     59,
-     68
+     60,
+     69
     ],
     [
      "now",
@@ -19338,15 +19388,15 @@
    "who": "NOLE",
    "text": "You kept them.",
    "tag": "",
-   "on_s": 150.8983,
-   "end_s": 151.8183,
-   "file_s": 150.5483,
-   "abs_in": 3621,
-   "abs_out": 3644,
-   "file_in": 3613,
-   "file_out": 3654,
+   "on_s": 148.0967,
+   "end_s": 149.0167,
+   "file_s": 147.7467,
+   "abs_in": 3554,
+   "abs_out": 3577,
+   "file_in": 3545,
+   "file_out": 3586,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
-   "stick_t": 0.69,
+   "stick_t": 0.68,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -19376,31 +19426,31 @@
      "E"
     ],
     [
-     2,
+     1,
      "O"
     ],
     [
-     8,
+     7,
      "A"
     ],
     [
-     10,
+     9,
      "M"
     ],
     [
-     12,
+     11,
      "E"
     ],
     [
-     14,
+     13,
      "A"
     ],
     [
-     16,
+     15,
      "M"
     ],
     [
-     18,
+     17,
      "rest"
     ]
    ],
@@ -19416,15 +19466,15 @@
    "who": "MAS",
    "text": "we keep everything.",
    "tag": "os",
-   "on_s": 152.8183,
-   "end_s": 153.9383,
-   "file_s": 152.4283,
-   "abs_in": 3667,
-   "abs_out": 3695,
-   "file_in": 3658,
-   "file_out": 3708,
+   "on_s": 150.0167,
+   "end_s": 151.1367,
+   "file_s": 149.6267,
+   "abs_in": 3600,
+   "abs_out": 3628,
+   "file_in": 3591,
+   "file_out": 3641,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0028__mas-manalt-C.wav",
-   "stick_t": 2.61,
+   "stick_t": 2.6,
    "stick_in": 0.39,
    "cut": false,
    "on_camera": "on",
@@ -19434,7 +19484,7 @@
    "words": [
     [
      "We",
-     0,
+     -1,
      3
     ],
     [
@@ -19444,7 +19494,7 @@
     ],
     [
      "everything",
-     13,
+     12,
      24
     ]
    ],
@@ -19490,15 +19540,15 @@
    "who": "NOLE",
    "text": "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water.",
    "tag": "",
-   "on_s": 180.7317,
-   "end_s": 187.4917,
-   "file_s": 180.3617,
-   "abs_in": 4337,
-   "abs_out": 4500,
-   "file_in": 4328,
-   "file_out": 4510,
+   "on_s": 177.805,
+   "end_s": 184.565,
+   "file_s": 177.435,
+   "abs_in": 4267,
+   "abs_out": 4430,
+   "file_in": 4258,
+   "file_out": 4440,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
-   "stick_t": 0.69,
+   "stick_t": 0.68,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -19508,7 +19558,7 @@
    "words": [
     [
      "You",
-     0,
+     -1,
      3
     ],
     [
@@ -19519,7 +19569,7 @@
     [
      "at",
      10,
-     12
+     11
     ],
     [
      "the",
@@ -19528,18 +19578,18 @@
     ],
     [
      "back",
-     16,
-     25
+     15,
+     24
     ],
     [
      "I",
      40,
-     42
+     41
     ],
     [
      "stood",
      45,
-     52
+     51
     ],
     [
      "up",
@@ -19554,12 +19604,12 @@
     [
      "front",
      60,
-     64
+     63
     ],
     [
      "of",
-     65,
-     66
+     64,
+     65
     ],
     [
      "the",
@@ -19569,7 +19619,7 @@
     [
      "whole",
      69,
-     75
+     74
     ],
     [
      "room",
@@ -19578,8 +19628,8 @@
     ],
     [
      "and",
-     95,
-     99
+     94,
+     98
     ],
     [
      "you",
@@ -19589,7 +19639,7 @@
     [
      "sat",
      105,
-     110
+     109
     ],
     [
      "at",
@@ -19598,7 +19648,7 @@
     ],
     [
      "the",
-     113,
+     112,
      114
     ],
     [
@@ -19619,7 +19669,7 @@
     [
      "glass",
      135,
-     143
+     142
     ],
     [
      "of",
@@ -19838,15 +19888,15 @@
    "who": "NOLE",
    "text": "Keep that too. See you in court.",
    "tag": "",
-   "on_s": 189.585,
-   "end_s": 191.155,
-   "file_s": 189.155,
-   "abs_in": 4550,
-   "abs_out": 4588,
-   "file_in": 4539,
-   "file_out": 4598,
+   "on_s": 186.575,
+   "end_s": 188.145,
+   "file_s": 186.145,
+   "abs_in": 4477,
+   "abs_out": 4516,
+   "file_in": 4467,
+   "file_out": 4526,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
-   "stick_t": 0.46,
+   "stick_t": 0.45,
    "stick_in": 0.43,
    "cut": false,
    "on_camera": "on",
@@ -19856,95 +19906,99 @@
    "words": [
     [
      "Keep",
-     -1,
-     3
+     0,
+     4
     ],
     [
      "that",
      5,
-     8
+     9
     ],
     [
      "too",
-     9,
-     14
+     10,
+     15
     ],
     [
      "See",
-     17,
-     21
+     18,
+     22
     ],
     [
      "you",
-     22,
+     23,
      24
     ],
     [
      "in",
      25,
-     26
+     27
     ],
     [
      "court",
-     27,
-     33
+     28,
+     34
     ]
    ],
    "mouth": [
     [
      0,
-     "A"
-    ],
-    [
-     2,
-     "M"
-    ],
-    [
-     5,
-     "A"
-    ],
-    [
-     7,
-     "E"
-    ],
-    [
-     10,
-     "O"
-    ],
-    [
-     14,
      "rest"
     ],
     [
-     17,
-     "E"
-    ],
-    [
-     19,
+     1,
      "A"
     ],
     [
-     22,
-     "O"
+     3,
+     "M"
     ],
     [
-     24,
+     6,
      "A"
     ],
     [
-     26,
+     8,
      "E"
     ],
     [
-     28,
+     11,
      "O"
     ],
     [
-     31,
+     15,
+     "rest"
+    ],
+    [
+     18,
      "E"
     ],
     [
-     33,
+     20,
+     "A"
+    ],
+    [
+     23,
+     "O"
+    ],
+    [
+     25,
+     "A"
+    ],
+    [
+     27,
+     "E"
+    ],
+    [
+     29,
+     "O"
+    ],
+    [
+     32,
+     "E"
+    ],
+    [
+     34,
      "rest"
     ]
    ],
@@ -19960,13 +20014,13 @@
    "who": "TERB",
    "text": "Before we start, the independent review is back. I'll read you the finding.",
    "tag": "",
-   "on_s": 198.6,
-   "end_s": 203.08,
-   "file_s": 198.25,
-   "abs_in": 4766,
-   "abs_out": 4874,
-   "file_in": 4758,
-   "file_out": 4883,
+   "on_s": 195.6,
+   "end_s": 200.08,
+   "file_s": 195.25,
+   "abs_in": 4694,
+   "abs_out": 4802,
+   "file_in": 4686,
+   "file_out": 4811,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0031__terb-A.wav",
    "stick_t": 2.6,
    "stick_in": 0.35,
@@ -20168,15 +20222,15 @@
    "who": "TERB",
    "text": "The law firm found that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.",
    "tag": "",
-   "on_s": 204.695,
-   "end_s": 215.055,
-   "file_s": 204.345,
-   "abs_in": 4912,
-   "abs_out": 5162,
-   "file_in": 4904,
-   "file_out": 5170,
+   "on_s": 201.5933,
+   "end_s": 211.9533,
+   "file_s": 201.2433,
+   "abs_in": 4838,
+   "abs_out": 5087,
+   "file_in": 4829,
+   "file_out": 5095,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
-   "stick_t": 1.07,
+   "stick_t": 1.01,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -20187,17 +20241,17 @@
     [
      "The",
      0,
-     4
+     3
     ],
     [
      "law",
      5,
-     9
+     8
     ],
     [
      "firm",
-     10,
-     15
+     9,
+     14
     ],
     [
      "found",
@@ -20206,33 +20260,33 @@
     ],
     [
      "that",
-     24,
+     23,
      26
     ],
     [
      "the",
      27,
-     29
+     28
     ],
     [
      "prior",
      30,
-     40
+     39
     ],
     [
      "Board",
-     42,
-     51
+     41,
+     50
     ],
     [
      "acted",
      53,
-     62
+     61
     ],
     [
      "within",
-     63,
-     70
+     62,
+     69
     ],
     [
      "its",
@@ -20242,32 +20296,32 @@
     [
      "broad",
      76,
-     85
+     84
     ],
     [
      "discretion",
-     86,
-     101
+     85,
+     100
     ],
     [
      "to",
      102,
-     104
+     103
     ],
     [
      "terminate",
-     106,
-     119
+     105,
+     118
     ],
     [
      "Mr",
-     120,
+     119,
      127
     ],
     [
      "Manalt",
-     129,
-     143
+     128,
+     142
     ],
     [
      "but",
@@ -20287,7 +20341,7 @@
     [
      "that",
      172,
-     175
+     174
     ],
     [
      "his",
@@ -20297,22 +20351,22 @@
     [
      "conduct",
      181,
-     197
+     196
     ],
     [
      "did",
-     200,
-     204
+     199,
+     203
     ],
     [
      "not",
-     206,
-     211
+     205,
+     210
     ],
     [
      "mandate",
-     213,
-     225
+     212,
+     224
     ],
     [
      "removal",
@@ -20326,263 +20380,263 @@
      "E"
     ],
     [
-     7,
+     6,
      "O"
     ],
     [
-     14,
+     13,
      "M"
     ],
     [
-     18,
+     17,
      "A"
     ],
     [
-     20,
+     19,
      "E"
     ],
     [
-     24,
+     23,
      "A"
     ],
     [
-     26,
+     25,
      "E"
     ],
     [
-     30,
+     29,
      "M"
     ],
     [
-     33,
+     32,
      "A"
     ],
     [
-     36,
+     35,
      "E"
     ],
     [
-     42,
+     41,
      "M"
     ],
     [
-     44,
+     43,
      "O"
     ],
     [
-     48,
+     47,
      "E"
     ],
     [
-     53,
+     52,
      "A"
     ],
     [
-     56,
+     55,
      "E"
     ],
     [
-     63,
+     62,
      "O"
     ],
     [
-     65,
+     64,
      "E"
     ],
     [
-     67,
+     66,
      "A"
     ],
     [
-     69,
+     68,
      "E"
     ],
     [
-     76,
+     75,
      "M"
     ],
     [
-     78,
+     77,
      "E"
     ],
     [
-     80,
+     79,
      "O"
     ],
     [
-     83,
+     82,
      "E"
     ],
     [
-     93,
+     92,
      "A"
     ],
     [
-     96,
+     95,
      "E"
     ],
     [
-     103,
+     102,
      "O"
     ],
     [
-     107,
+     106,
      "A"
     ],
     [
-     110,
+     109,
      "M"
     ],
     [
-     112,
+     111,
      "E"
     ],
     [
-     115,
+     114,
      "A"
     ],
     [
-     118,
+     117,
      "E"
     ],
     [
-     122,
+     121,
      "A"
     ],
     [
-     124,
+     123,
      "E"
     ],
     [
-     129,
+     128,
      "M"
     ],
     [
-     131,
+     130,
      "A"
     ],
     [
-     134,
+     133,
      "E"
     ],
     [
-     136,
+     135,
      "A"
     ],
     [
-     140,
+     139,
      "E"
     ],
     [
-     143,
+     142,
      "rest"
     ],
     [
-     153,
+     152,
      "M"
     ],
     [
-     155,
+     154,
      "A"
     ],
     [
-     158,
+     157,
      "O"
     ],
     [
-     160,
+     159,
      "E"
     ],
     [
-     162,
+     161,
      "O"
     ],
     [
-     167,
+     166,
      "A"
     ],
     [
-     169,
+     168,
      "E"
     ],
     [
-     173,
+     172,
      "A"
     ],
     [
-     175,
+     174,
      "E"
     ],
     [
-     183,
+     182,
      "A"
     ],
     [
-     187,
+     186,
      "E"
     ],
     [
-     190,
+     189,
      "A"
     ],
     [
-     193,
+     192,
      "E"
     ],
     [
-     197,
+     196,
      "rest"
     ],
     [
-     201,
+     200,
      "A"
     ],
     [
-     203,
+     202,
      "E"
     ],
     [
-     207,
+     206,
      "A"
     ],
     [
-     210,
+     209,
      "E"
     ],
     [
-     213,
+     212,
      "M"
     ],
     [
-     215,
+     214,
      "A"
     ],
     [
-     217,
+     216,
      "E"
     ],
     [
-     220,
+     219,
      "A"
     ],
     [
-     224,
+     223,
      "E"
     ],
     [
-     231,
+     230,
      "M"
     ],
     [
-     233,
+     232,
      "O"
     ],
     [
-     236,
+     235,
      "E"
     ],
     [
-     243,
+     242,
      "rest"
     ]
    ],
@@ -20598,15 +20652,15 @@
    "who": "TERB",
    "text": "You can sit down now, Mas.",
    "tag": "",
-   "on_s": 216.745,
-   "end_s": 218.525,
-   "file_s": 216.395,
-   "abs_in": 5201,
-   "abs_out": 5245,
-   "file_in": 5193,
-   "file_out": 5253,
+   "on_s": 212.2333,
+   "end_s": 214.0133,
+   "file_s": 211.8833,
+   "abs_in": 5093,
+   "abs_out": 5137,
+   "file_in": 5085,
+   "file_out": 5145,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
-   "stick_t": 0.62,
+   "stick_t": 0.15,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -20617,32 +20671,32 @@
     [
      "You",
      0,
-     4
+     3
     ],
     [
      "can",
      5,
-     8
+     7
     ],
     [
      "sit",
-     9,
-     13
+     8,
+     12
     ],
     [
      "down",
-     14,
-     19
+     13,
+     18
     ],
     [
      "now",
-     20,
+     19,
      24
     ],
     [
      "Mas",
-     26,
-     36
+     25,
+     35
     ]
    ],
    "mouth": [
@@ -20711,15 +20765,15 @@
    "who": "MAS",
    "text": "two hours on his show, once. after that, november is a link.",
    "tag": "V.O.",
-   "on_s": 232.43,
-   "end_s": 238.15,
-   "file_s": 231.98,
-   "abs_in": 5578,
-   "abs_out": 5716,
-   "file_in": 5567,
-   "file_out": 5726,
+   "on_s": 227.0,
+   "end_s": 232.72,
+   "file_s": 226.55,
+   "abs_in": 5448,
+   "abs_out": 5586,
+   "file_in": 5437,
+   "file_out": 5596,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
-   "stick_t": 1.43,
+   "stick_t": 1.0,
    "stick_in": 0.45,
    "cut": false,
    "on_camera": "vo",
@@ -20735,7 +20789,7 @@
     [
      "hours",
      6,
-     16
+     15
     ],
     [
      "on",
@@ -20744,22 +20798,22 @@
     ],
     [
      "his",
-     22,
+     21,
      24
     ],
     [
      "show",
      26,
-     35
+     34
     ],
     [
      "once",
-     45,
+     44,
      60
     ],
     [
      "after",
-     78,
+     77,
      87
     ],
     [
@@ -20774,12 +20828,12 @@
     ],
     [
      "is",
-     119,
+     118,
      121
     ],
     [
      "a",
-     123,
+     122,
      124
     ],
     [
@@ -20801,13 +20855,13 @@
    "who": "XEL",
    "text": "Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
    "tag": "",
-   "on_s": 240.4,
-   "end_s": 247.62,
-   "file_s": 239.99,
-   "abs_in": 5769,
-   "abs_out": 5943,
-   "file_in": 5759,
-   "file_out": 5954,
+   "on_s": 236.4,
+   "end_s": 243.62,
+   "file_s": 235.99,
+   "abs_in": 5673,
+   "abs_out": 5847,
+   "file_in": 5663,
+   "file_out": 5858,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0034__xel-A.wav",
    "stick_t": 1.4,
    "stick_in": 0.41,
@@ -21127,13 +21181,13 @@
    "who": "MAS",
    "text": "the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things.",
    "tag": "",
-   "on_s": 252.27,
-   "end_s": 262.21,
-   "file_s": 251.92,
-   "abs_in": 6054,
-   "abs_out": 6294,
-   "file_in": 6046,
-   "file_out": 6304,
+   "on_s": 248.27,
+   "end_s": 258.21,
+   "file_s": 247.92,
+   "abs_in": 5958,
+   "abs_out": 6198,
+   "file_in": 5950,
+   "file_out": 6208,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0035__mas-manalt-C.wav",
    "stick_t": 0.77,
    "stick_in": 0.35,
@@ -21475,13 +21529,13 @@
    "who": "XEL",
    "text": "Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?",
    "tag": "",
-   "on_s": 264.9483,
-   "end_s": 269.9583,
-   "file_s": 264.5483,
-   "abs_in": 6358,
-   "abs_out": 6479,
-   "file_in": 6349,
-   "file_out": 6490,
+   "on_s": 260.9483,
+   "end_s": 265.9583,
+   "file_s": 260.5483,
+   "abs_in": 6262,
+   "abs_out": 6383,
+   "file_in": 6253,
+   "file_out": 6394,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0036__xel-A.wav",
    "stick_t": 1.99,
    "stick_in": 0.4,
@@ -21702,13 +21756,13 @@
    "who": "MAS",
    "text": "no.",
    "tag": "",
-   "on_s": 270.425,
-   "end_s": 270.885,
-   "file_s": 270.045,
-   "abs_in": 6490,
-   "abs_out": 6502,
-   "file_in": 6481,
-   "file_out": 6512,
+   "on_s": 266.425,
+   "end_s": 266.885,
+   "file_s": 266.045,
+   "abs_in": 6394,
+   "abs_out": 6406,
+   "file_in": 6385,
+   "file_out": 6416,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0037__mas-manalt-C.wav",
    "stick_t": 0.3,
    "stick_in": 0.38,
@@ -21750,13 +21804,13 @@
    "who": "XEL",
    "text": "What about a regular secret facility?",
    "tag": "",
-   "on_s": 271.085,
-   "end_s": 272.915,
-   "file_s": 270.665,
-   "abs_in": 6506,
-   "abs_out": 6550,
-   "file_in": 6495,
-   "file_out": 6560,
+   "on_s": 267.085,
+   "end_s": 268.915,
+   "file_s": 266.665,
+   "abs_in": 6410,
+   "abs_out": 6454,
+   "file_in": 6399,
+   "file_out": 6464,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0038__xel-A.wav",
    "stick_t": 0.96,
    "stick_in": 0.42,
@@ -21855,13 +21909,13 @@
    "who": "MAS",
    "text": "no.",
    "tag": "",
-   "on_s": 273.365,
-   "end_s": 273.855,
-   "file_s": 272.995,
-   "abs_in": 6560,
-   "abs_out": 6573,
-   "file_in": 6551,
-   "file_out": 6586,
+   "on_s": 269.365,
+   "end_s": 269.855,
+   "file_s": 268.995,
+   "abs_in": 6464,
+   "abs_out": 6477,
+   "file_in": 6455,
+   "file_out": 6490,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0039__mas-manalt-C.wav",
    "stick_t": 3.24,
    "stick_in": 0.37,
@@ -21903,13 +21957,13 @@
    "who": "XEL",
    "text": "What about a nuclear non-secret facility?",
    "tag": "",
-   "on_s": 274.055,
-   "end_s": 276.405,
-   "file_s": 273.685,
-   "abs_in": 6577,
-   "abs_out": 6634,
-   "file_in": 6568,
-   "file_out": 6645,
+   "on_s": 270.055,
+   "end_s": 272.405,
+   "file_s": 269.685,
+   "abs_in": 6481,
+   "abs_out": 6538,
+   "file_in": 6472,
+   "file_out": 6549,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0040__xel-A.wav",
    "stick_t": 3.93,
    "stick_in": 0.37,
@@ -22020,13 +22074,13 @@
    "who": "MAS",
    "text": "neither. not that either.",
    "tag": "",
-   "on_s": 276.855,
-   "end_s": 278.635,
-   "file_s": 276.465,
-   "abs_in": 6644,
-   "abs_out": 6688,
-   "file_in": 6635,
-   "file_out": 6698,
+   "on_s": 272.855,
+   "end_s": 274.635,
+   "file_s": 272.465,
+   "abs_in": 6548,
+   "abs_out": 6592,
+   "file_in": 6539,
+   "file_out": 6602,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0041__mas-manalt-C.wav",
    "stick_t": 6.73,
    "stick_in": 0.39,
@@ -22119,13 +22173,13 @@
    "who": "XEL",
    "text": "You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?",
    "tag": "",
-   "on_s": 281.24,
-   "end_s": 289.37,
-   "file_s": 280.74,
-   "abs_in": 6749,
-   "abs_out": 6945,
-   "file_in": 6737,
-   "file_out": 6956,
+   "on_s": 277.24,
+   "end_s": 285.37,
+   "file_s": 276.74,
+   "abs_in": 6653,
+   "abs_out": 6849,
+   "file_in": 6641,
+   "file_out": 6860,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0042__xel-A.wav",
    "stick_t": 1.99,
    "stick_in": 0.5,
@@ -22539,13 +22593,13 @@
    "who": "MAS",
    "text": "i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career.",
    "tag": "",
-   "on_s": 290.8783,
-   "end_s": 305.0583,
-   "file_s": 290.5283,
-   "abs_in": 6981,
-   "abs_out": 7322,
-   "file_in": 6972,
-   "file_out": 7332,
+   "on_s": 286.8783,
+   "end_s": 301.0583,
+   "file_s": 286.5283,
+   "abs_in": 6885,
+   "abs_out": 7226,
+   "file_in": 6876,
+   "file_out": 7236,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0043__mas-manalt-C.wav",
    "stick_t": 0.92,
    "stick_in": 0.35,
@@ -23094,13 +23148,13 @@
    "who": "XEL",
    "text": "Is it… conscious, though?",
    "tag": "",
-   "on_s": 312.985,
-   "end_s": 314.435,
-   "file_s": 312.615,
-   "abs_in": 7511,
-   "abs_out": 7547,
-   "file_in": 7502,
-   "file_out": 7556,
+   "on_s": 308.985,
+   "end_s": 310.435,
+   "file_s": 308.615,
+   "abs_in": 7415,
+   "abs_out": 7451,
+   "file_in": 7406,
+   "file_out": 7460,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0044__xel-A.wav",
    "stick_t": 0.61,
    "stick_in": 0.37,
@@ -23169,13 +23223,13 @@
    "who": "MAS",
    "text": "the mic?",
    "tag": "",
-   "on_s": 314.885,
-   "end_s": 315.525,
-   "file_s": 314.455,
-   "abs_in": 7557,
-   "abs_out": 7573,
-   "file_in": 7546,
-   "file_out": 7582,
+   "on_s": 310.885,
+   "end_s": 311.525,
+   "file_s": 310.455,
+   "abs_in": 7461,
+   "abs_out": 7477,
+   "file_in": 7450,
+   "file_out": 7486,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0045__mas-manalt-C.wav",
    "stick_t": 2.51,
    "stick_in": 0.43,
@@ -23226,13 +23280,13 @@
    "who": "XEL",
    "text": "Yes.",
    "tag": "",
-   "on_s": 315.825,
-   "end_s": 316.325,
-   "file_s": 315.455,
-   "abs_in": 7579,
-   "abs_out": 7592,
-   "file_in": 7570,
-   "file_out": 7600,
+   "on_s": 311.825,
+   "end_s": 312.325,
+   "file_s": 311.455,
+   "abs_in": 7483,
+   "abs_out": 7496,
+   "file_in": 7474,
+   "file_out": 7504,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0046__xel-A.wav",
    "stick_t": 3.45,
    "stick_in": 0.37,
@@ -23278,13 +23332,13 @@
    "who": "MAS",
    "text": "chaotic and shameful and upsetting…",
    "tag": "phone",
-   "on_s": 321.5,
-   "end_s": 323.93,
-   "file_s": 321.18,
-   "abs_in": 7716,
-   "abs_out": 7775,
-   "file_in": 7708,
-   "file_out": 7781,
+   "on_s": 317.5,
+   "end_s": 319.93,
+   "file_s": 317.18,
+   "abs_in": 7620,
+   "abs_out": 7679,
+   "file_in": 7612,
+   "file_out": 7685,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0047__mas-manalt-C.wav",
    "stick_t": 1.5,
    "stick_in": 0.32,
@@ -23394,13 +23448,13 @@
    "who": "HUMANIST",
    "text": "I'm just moving in downstairs. I hope that's all right.",
    "tag": "",
-   "on_s": 328.55,
-   "end_s": 332.26,
-   "file_s": 328.13,
-   "abs_in": 7885,
-   "abs_out": 7975,
-   "file_in": 7875,
-   "file_out": 7990,
+   "on_s": 324.55,
+   "end_s": 328.26,
+   "file_s": 324.13,
+   "abs_in": 7789,
+   "abs_out": 7879,
+   "file_in": 7779,
+   "file_out": 7894,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0048__humanist-A.wav",
    "stick_t": 2.3,
    "stick_in": 0.42,
@@ -23567,13 +23621,13 @@
    "who": "TASYA",
    "text": "Welcome. Make yourself at home. Everything's on us: the heat, the power, the floor you're standing on.",
    "tag": "",
-   "on_s": 332.725,
-   "end_s": 340.725,
-   "file_s": 332.345,
-   "abs_in": 7985,
-   "abs_out": 8178,
-   "file_in": 7976,
-   "file_out": 8188,
+   "on_s": 328.725,
+   "end_s": 336.725,
+   "file_s": 328.345,
+   "abs_in": 7889,
+   "abs_out": 8082,
+   "file_in": 7880,
+   "file_out": 8092,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0049__tasya-A.wav",
    "stick_t": 0.35,
    "stick_in": 0.38,
@@ -23843,13 +23897,13 @@
    "who": "HUMANIST",
    "text": "I brought my own team. Is there room for them?",
    "tag": "",
-   "on_s": 341.225,
-   "end_s": 344.095,
-   "file_s": 340.805,
-   "abs_in": 8189,
-   "abs_out": 8259,
-   "file_in": 8179,
-   "file_out": 8273,
+   "on_s": 337.225,
+   "end_s": 340.095,
+   "file_s": 336.805,
+   "abs_in": 8093,
+   "abs_out": 8163,
+   "file_in": 8083,
+   "file_out": 8177,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0050__humanist-A.wav",
    "stick_t": 0.35,
    "stick_in": 0.42,
@@ -24012,13 +24066,13 @@
    "who": "TASYA",
    "text": "There's always room down here. It's quieter than upstairs.",
    "tag": "",
-   "on_s": 344.595,
-   "end_s": 349.055,
-   "file_s": 344.145,
-   "abs_in": 8270,
-   "abs_out": 8378,
-   "file_in": 8259,
-   "file_out": 8388,
+   "on_s": 340.595,
+   "end_s": 345.055,
+   "file_s": 340.145,
+   "abs_in": 8174,
+   "abs_out": 8282,
+   "file_in": 8163,
+   "file_out": 8292,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0051__tasya-A.wav",
    "stick_t": 3.72,
    "stick_in": 0.45,
@@ -24180,13 +24234,13 @@
    "who": "TASYA",
    "text": "We keep a spare.",
    "tag": "",
-   "on_s": 351.9417,
-   "end_s": 353.3017,
-   "file_s": 351.5517,
-   "abs_in": 8446,
-   "abs_out": 8480,
-   "file_in": 8437,
-   "file_out": 8492,
+   "on_s": 347.9417,
+   "end_s": 349.3017,
+   "file_s": 347.5517,
+   "abs_in": 8350,
+   "abs_out": 8384,
+   "file_in": 8341,
+   "file_out": 8396,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0052__tasya-A.wav",
    "stick_t": 2.4,
    "stick_in": 0.39,
@@ -24271,13 +24325,13 @@
    "who": "HUMANIST",
    "text": "Who else lives here?",
    "tag": "",
-   "on_s": 355.4517,
-   "end_s": 356.8417,
-   "file_s": 354.9917,
-   "abs_in": 8530,
-   "abs_out": 8565,
-   "file_in": 8519,
-   "file_out": 8576,
+   "on_s": 351.4517,
+   "end_s": 352.8417,
+   "file_s": 350.9917,
+   "abs_in": 8434,
+   "abs_out": 8469,
+   "file_in": 8423,
+   "file_out": 8480,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0053__humanist-A.wav",
    "stick_t": 0.66,
    "stick_in": 0.46,
@@ -24354,13 +24408,13 @@
    "who": "TASYA",
    "text": "A tenant.",
    "tag": "os",
-   "on_s": 360.9333,
-   "end_s": 361.7233,
-   "file_s": 360.5533,
-   "abs_in": 8662,
-   "abs_out": 8682,
-   "file_in": 8653,
-   "file_out": 8692,
+   "on_s": 356.9333,
+   "end_s": 357.7233,
+   "file_s": 356.5533,
+   "abs_in": 8566,
+   "abs_out": 8586,
+   "file_in": 8557,
+   "file_out": 8596,
    "file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0054__tasya-A.wav",
    "stick_t": 3.6,
    "stick_in": 0.38,
@@ -24426,22 +24480,22 @@
   },
   {
    "text": "FEB 20, 2018",
-   "s": 3786,
-   "e": 3829,
+   "s": 3718,
+   "e": 3761,
    "shot": "4.28",
    "floor_f": 21
   },
   {
    "text": "MAR 8",
-   "s": 4711,
-   "e": 4749,
+   "s": 4639,
+   "e": 4677,
    "shot": "4A.01",
    "floor_f": 12
   },
   {
    "text": "MAR 19",
-   "s": 8408,
-   "e": 8441,
+   "s": 8312,
+   "e": 8345,
    "shot": "7.05",
    "floor_f": 14
   }
@@ -24461,9 +24515,9 @@
    "os": false
   },
   {
-   "s": 316,
-   "e": 388,
-   "hold_to": 400,
+   "s": 315,
+   "e": 387,
+   "hold_to": 399,
    "who": "MAS",
    "shown": "CEO",
    "text": "is there anyone here… from 2016.",
@@ -24497,9 +24551,9 @@
    "os": false
   },
   {
-   "s": 635,
-   "e": 702,
-   "hold_to": 714,
+   "s": 633,
+   "e": 700,
+   "hold_to": 712,
    "who": "MAS",
    "shown": "CEO",
    "text": "one knock if we promised a nonprofit.",
@@ -24509,9 +24563,9 @@
    "os": false
   },
   {
-   "s": 834,
-   "e": 888,
-   "hold_to": 900,
+   "s": 816,
+   "e": 870,
+   "hold_to": 876,
    "who": "MAS",
    "shown": "CEO",
    "text": "you're early. we're on 2016.",
@@ -24521,9 +24575,9 @@
    "os": false
   },
   {
-   "s": 913,
-   "e": 1008,
-   "hold_to": 1012,
+   "s": 876,
+   "e": 971,
+   "hold_to": 975,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Is this a séance or a deposition? Because I've got lawyers for both.",
@@ -24533,9 +24587,9 @@
    "os": false
   },
   {
-   "s": 1012,
-   "e": 1100,
-   "hold_to": 1105,
+   "s": 975,
+   "e": 1063,
+   "hold_to": 1068,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "It's a blog post. We put some of your old emails up today. The candles were extra.",
@@ -24545,9 +24599,9 @@
    "os": false
   },
   {
-   "s": 1105,
-   "e": 1462,
-   "hold_to": 1472,
+   "s": 1068,
+   "e": 1425,
+   "hold_to": 1435,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Great. Put this on the blog too. I paid for the table. I paid for the candles. I paid for the ceiling I just came through. And I asked for one thing, and it's in the name. Open. It was supposed to be open.",
@@ -24557,9 +24611,9 @@
    "os": false
   },
   {
-   "s": 1472,
-   "e": 1525,
-   "hold_to": 1537,
+   "s": 1435,
+   "e": 1488,
+   "hold_to": 1500,
    "who": "MAS",
    "shown": "CEO",
    "text": "spirit, what did we call it?",
@@ -24569,9 +24623,9 @@
    "os": false
   },
   {
-   "s": 1583,
-   "e": 1634,
-   "hold_to": 1646,
+   "s": 1546,
+   "e": 1597,
+   "hold_to": 1609,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "There. Even the furniture knows.",
@@ -24581,9 +24635,9 @@
    "os": false
   },
   {
-   "s": 1693,
-   "e": 1754,
-   "hold_to": 1766,
+   "s": 1656,
+   "e": 1716,
+   "hold_to": 1728,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "No. Not like that. The N goes at the end.",
@@ -24593,9 +24647,9 @@
    "os": false
   },
   {
-   "s": 1915,
-   "e": 1961,
-   "hold_to": 1971,
+   "s": 1877,
+   "e": 1923,
+   "hold_to": 1933,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "I forwarded that. I didn't write it.",
@@ -24605,9 +24659,9 @@
    "os": false
   },
   {
-   "s": 1971,
-   "e": 2009,
-   "hold_to": 2021,
+   "s": 1933,
+   "e": 1971,
+   "hold_to": 1983,
    "who": "MAS",
    "shown": "CEO",
    "text": "you wrote 'exactly right.'",
@@ -24617,9 +24671,9 @@
    "os": false
   },
   {
-   "s": 2173,
-   "e": 2244,
-   "hold_to": 2256,
+   "s": 2134,
+   "e": 2205,
+   "hold_to": 2217,
    "who": "GHOST-NOLE",
    "shown": "HIS OLD EMAILS",
    "text": "This needs billions per year immediately or forget it.",
@@ -24629,9 +24683,9 @@
    "os": false
   },
   {
-   "s": 2366,
-   "e": 2463,
-   "hold_to": 2467,
+   "s": 2326,
+   "e": 2423,
+   "hold_to": 2427,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "That was a different me. That was 2018. Everybody said things in 2018.",
@@ -24641,9 +24695,9 @@
    "os": false
   },
   {
-   "s": 2467,
-   "e": 2506,
-   "hold_to": 2510,
+   "s": 2427,
+   "e": 2466,
+   "hold_to": 2470,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Same email address, though. I checked.",
@@ -24653,9 +24707,9 @@
    "os": true
   },
   {
-   "s": 2510,
-   "e": 2534,
-   "hold_to": 2546,
+   "s": 2470,
+   "e": 2494,
+   "hold_to": 2506,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Say something ELSE.",
@@ -24665,9 +24719,9 @@
    "os": false
   },
   {
-   "s": 2563,
-   "e": 2584,
-   "hold_to": 2596,
+   "s": 2523,
+   "e": 2544,
+   "hold_to": 2556,
    "who": "GHOST-NOLE",
    "shown": "HIS OLD EMAILS",
    "text": "Yup.",
@@ -24677,9 +24731,9 @@
    "os": false
   },
   {
-   "s": 2610,
-   "e": 2649,
-   "hold_to": 2661,
+   "s": 2569,
+   "e": 2608,
+   "hold_to": 2620,
    "who": "MAS",
    "shown": "CEO",
    "text": "spirit, why zero?",
@@ -24689,9 +24743,9 @@
    "os": false
   },
   {
-   "s": 2721,
-   "e": 2741,
-   "hold_to": 2747,
+   "s": 2680,
+   "e": 2701,
+   "hold_to": 2707,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "That's why.",
@@ -24701,9 +24755,9 @@
    "os": false
   },
   {
-   "s": 2747,
-   "e": 2760,
-   "hold_to": 2766,
+   "s": 2707,
+   "e": 2720,
+   "hold_to": 2725,
    "who": "STAFFER",
    "shown": "STAFF",
    "text": "What's that?",
@@ -24713,9 +24767,9 @@
    "os": true
   },
   {
-   "s": 2766,
-   "e": 2821,
-   "hold_to": 2824,
+   "s": 2725,
+   "e": 2780,
+   "hold_to": 2784,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Nobody wrote that move. It came out of nowhere.",
@@ -24725,9 +24779,9 @@
    "os": false
   },
   {
-   "s": 2824,
-   "e": 2927,
-   "hold_to": 2932,
+   "s": 2784,
+   "e": 2887,
+   "hold_to": 2892,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "It didn't come out of nowhere. It learned. Thirty million positions from people's games.",
@@ -24737,9 +24791,9 @@
    "os": false
   },
   {
-   "s": 2932,
-   "e": 2961,
-   "hold_to": 2966,
+   "s": 2892,
+   "e": 2921,
+   "hold_to": 2926,
    "who": "STAFFER",
    "shown": "STAFF",
    "text": "So somebody did write it.",
@@ -24749,9 +24803,9 @@
    "os": true
   },
   {
-   "s": 2966,
-   "e": 3213,
-   "hold_to": 3225,
+   "s": 2926,
+   "e": 3173,
+   "hold_to": 3184,
    "who": "GERG",
    "shown": "CO-FOUNDER",
    "text": "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games.",
@@ -24761,9 +24815,9 @@
    "os": false
   },
   {
-   "s": 3250,
-   "e": 3381,
-   "hold_to": 3386,
+   "s": 3184,
+   "e": 3315,
+   "hold_to": 3320,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "One player in ten thousand would have made that move. It made it anyway. And it was right.",
@@ -24773,9 +24827,9 @@
    "os": false
   },
   {
-   "s": 3386,
-   "e": 3447,
-   "hold_to": 3459,
+   "s": 3320,
+   "e": 3381,
+   "hold_to": 3393,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "MINDDEEP had that in 2016. We had a blog.",
@@ -24785,9 +24839,9 @@
    "os": false
   },
   {
-   "s": 3469,
-   "e": 3492,
-   "hold_to": 3504,
+   "s": 3402,
+   "e": 3426,
+   "hold_to": 3438,
    "who": "GHOST-NOLE",
    "shown": "HIS OLD EMAILS",
    "text": "billions per year…",
@@ -24797,9 +24851,9 @@
    "os": false
   },
   {
-   "s": 3506,
-   "e": 3589,
-   "hold_to": 3601,
+   "s": 3439,
+   "e": 3522,
+   "hold_to": 3534,
    "who": "MAS",
    "shown": "CEO",
    "text": "he was right about the bill. it's bigger now.",
@@ -24809,9 +24863,9 @@
    "os": false
   },
   {
-   "s": 3621,
-   "e": 3644,
-   "hold_to": 3656,
+   "s": 3554,
+   "e": 3577,
+   "hold_to": 3589,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "You kept them.",
@@ -24821,9 +24875,9 @@
    "os": false
   },
   {
-   "s": 3667,
-   "e": 3695,
-   "hold_to": 3707,
+   "s": 3600,
+   "e": 3628,
+   "hold_to": 3640,
    "who": "MAS",
    "shown": "CEO",
    "text": "we keep everything.",
@@ -24833,9 +24887,9 @@
    "os": true
   },
   {
-   "s": 4337,
-   "e": 4500,
-   "hold_to": 4512,
+   "s": 4267,
+   "e": 4430,
+   "hold_to": 4442,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water.",
@@ -24845,9 +24899,9 @@
    "os": false
   },
   {
-   "s": 4550,
-   "e": 4588,
-   "hold_to": 4600,
+   "s": 4477,
+   "e": 4516,
+   "hold_to": 4528,
    "who": "NOLE",
    "shown": "NOLE",
    "text": "Keep that too. See you in court.",
@@ -24857,9 +24911,9 @@
    "os": false
   },
   {
-   "s": 4766,
-   "e": 4874,
-   "hold_to": 4886,
+   "s": 4694,
+   "e": 4802,
+   "hold_to": 4814,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "Before we start, the independent review is back. I'll read you the finding.",
@@ -24869,9 +24923,9 @@
    "os": false
   },
   {
-   "s": 4912,
-   "e": 5162,
-   "hold_to": 5174,
+   "s": 4838,
+   "e": 5087,
+   "hold_to": 5093,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "The law firm found that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.",
@@ -24881,9 +24935,9 @@
    "os": false
   },
   {
-   "s": 5201,
-   "e": 5245,
-   "hold_to": 5257,
+   "s": 5093,
+   "e": 5137,
+   "hold_to": 5149,
    "who": "TERB",
    "shown": "CHAIR",
    "text": "You can sit down now, Mas.",
@@ -24893,9 +24947,9 @@
    "os": false
   },
   {
-   "s": 5578,
-   "e": 5716,
-   "hold_to": 5728,
+   "s": 5448,
+   "e": 5586,
+   "hold_to": 5598,
    "who": "MAS",
    "shown": "CEO",
    "text": "two hours on his show, once. after that, november is a link.",
@@ -24905,9 +24959,9 @@
    "os": false
   },
   {
-   "s": 5769,
-   "e": 5943,
-   "hold_to": 5955,
+   "s": 5673,
+   "e": 5847,
+   "hold_to": 5859,
    "who": "XEL",
    "shown": "XEL",
    "text": "Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
@@ -24917,9 +24971,9 @@
    "os": false
   },
   {
-   "s": 6054,
-   "e": 6294,
-   "hold_to": 6306,
+   "s": 5958,
+   "e": 6198,
+   "hold_to": 6210,
    "who": "MAS",
    "shown": "CEO",
    "text": "the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things.",
@@ -24929,9 +24983,9 @@
    "os": false
   },
   {
-   "s": 6358,
-   "e": 6479,
-   "hold_to": 6490,
+   "s": 6262,
+   "e": 6383,
+   "hold_to": 6394,
    "who": "XEL",
    "shown": "XEL",
    "text": "Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?",
@@ -24941,9 +24995,9 @@
    "os": false
   },
   {
-   "s": 6490,
-   "e": 6502,
-   "hold_to": 6506,
+   "s": 6394,
+   "e": 6406,
+   "hold_to": 6410,
    "who": "MAS",
    "shown": "CEO",
    "text": "no.",
@@ -24953,9 +25007,9 @@
    "os": false
   },
   {
-   "s": 6506,
-   "e": 6550,
-   "hold_to": 6560,
+   "s": 6410,
+   "e": 6454,
+   "hold_to": 6464,
    "who": "XEL",
    "shown": "XEL",
    "text": "What about a regular secret facility?",
@@ -24965,9 +25019,9 @@
    "os": false
   },
   {
-   "s": 6560,
-   "e": 6573,
-   "hold_to": 6577,
+   "s": 6464,
+   "e": 6477,
+   "hold_to": 6481,
    "who": "MAS",
    "shown": "CEO",
    "text": "no.",
@@ -24977,9 +25031,9 @@
    "os": false
   },
   {
-   "s": 6577,
-   "e": 6634,
-   "hold_to": 6644,
+   "s": 6481,
+   "e": 6538,
+   "hold_to": 6548,
    "who": "XEL",
    "shown": "XEL",
    "text": "What about a nuclear non-secret facility?",
@@ -24989,9 +25043,9 @@
    "os": false
   },
   {
-   "s": 6644,
-   "e": 6688,
-   "hold_to": 6700,
+   "s": 6548,
+   "e": 6592,
+   "hold_to": 6604,
    "who": "MAS",
    "shown": "CEO",
    "text": "neither. not that either.",
@@ -25001,9 +25055,9 @@
    "os": false
   },
   {
-   "s": 6749,
-   "e": 6945,
-   "hold_to": 6957,
+   "s": 6653,
+   "e": 6849,
+   "hold_to": 6861,
    "who": "XEL",
    "shown": "XEL",
    "text": "You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?",
@@ -25013,9 +25067,9 @@
    "os": false
   },
   {
-   "s": 6981,
-   "e": 7322,
-   "hold_to": 7334,
+   "s": 6885,
+   "e": 7226,
+   "hold_to": 7238,
    "who": "MAS",
    "shown": "CEO",
    "text": "i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career.",
@@ -25025,9 +25079,9 @@
    "os": false
   },
   {
-   "s": 7511,
-   "e": 7547,
-   "hold_to": 7557,
+   "s": 7415,
+   "e": 7451,
+   "hold_to": 7461,
    "who": "XEL",
    "shown": "XEL",
    "text": "Is it… conscious, though?",
@@ -25037,9 +25091,9 @@
    "os": false
   },
   {
-   "s": 7557,
-   "e": 7573,
-   "hold_to": 7579,
+   "s": 7461,
+   "e": 7477,
+   "hold_to": 7483,
    "who": "MAS",
    "shown": "CEO",
    "text": "the mic?",
@@ -25049,9 +25103,9 @@
    "os": false
   },
   {
-   "s": 7579,
-   "e": 7592,
-   "hold_to": 7604,
+   "s": 7483,
+   "e": 7496,
+   "hold_to": 7508,
    "who": "XEL",
    "shown": "XEL",
    "text": "Yes.",
@@ -25061,9 +25115,9 @@
    "os": false
   },
   {
-   "s": 7716,
-   "e": 7775,
-   "hold_to": 7787,
+   "s": 7620,
+   "e": 7679,
+   "hold_to": 7691,
    "who": "MAS",
    "shown": "CEO",
    "text": "chaotic and shameful and upsetting…",
@@ -25073,9 +25127,9 @@
    "os": false
   },
   {
-   "s": 7885,
-   "e": 7975,
-   "hold_to": 7985,
+   "s": 7789,
+   "e": 7879,
+   "hold_to": 7889,
    "who": "HUMANIST",
    "shown": "MACROSOFT'S NEW AI CHIEF",
    "text": "I'm just moving in downstairs. I hope that's all right.",
@@ -25085,9 +25139,9 @@
    "os": false
   },
   {
-   "s": 7985,
-   "e": 8178,
-   "hold_to": 8189,
+   "s": 7889,
+   "e": 8082,
+   "hold_to": 8093,
    "who": "TASYA",
    "shown": "THE LANDLORD",
    "text": "Welcome. Make yourself at home. Everything's on us: the heat, the power, the floor you're standing on.",
@@ -25097,9 +25151,9 @@
    "os": false
   },
   {
-   "s": 8189,
-   "e": 8259,
-   "hold_to": 8270,
+   "s": 8093,
+   "e": 8163,
+   "hold_to": 8174,
    "who": "HUMANIST",
    "shown": "MACROSOFT'S NEW AI CHIEF",
    "text": "I brought my own team. Is there room for them?",
@@ -25109,9 +25163,9 @@
    "os": false
   },
   {
-   "s": 8270,
-   "e": 8378,
-   "hold_to": 8390,
+   "s": 8174,
+   "e": 8282,
+   "hold_to": 8294,
    "who": "TASYA",
    "shown": "THE LANDLORD",
    "text": "There's always room down here. It's quieter than upstairs.",
@@ -25121,9 +25175,9 @@
    "os": false
   },
   {
-   "s": 8446,
-   "e": 8480,
-   "hold_to": 8492,
+   "s": 8350,
+   "e": 8384,
+   "hold_to": 8396,
    "who": "TASYA",
    "shown": "THE LANDLORD",
    "text": "We keep a spare.",
@@ -25133,9 +25187,9 @@
    "os": false
   },
   {
-   "s": 8530,
-   "e": 8565,
-   "hold_to": 8577,
+   "s": 8434,
+   "e": 8469,
+   "hold_to": 8481,
    "who": "HUMANIST",
    "shown": "MACROSOFT'S NEW AI CHIEF",
    "text": "Who else lives here?",
@@ -25145,9 +25199,9 @@
    "os": false
   },
   {
-   "s": 8662,
-   "e": 8682,
-   "hold_to": 8694,
+   "s": 8566,
+   "e": 8586,
+   "hold_to": 8598,
    "who": "TASYA",
    "shown": "THE LANDLORD",
    "text": "A tenant.",
@@ -25161,7 +25215,7 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "53 beat lengths are not whole frames (4.02, 4.03, 4.04, 4.05, 4.06, 4.07...): beats start on the rounded running total, as the stick reel draws them"
+  "56 beat lengths are not whole frames (4.02, 4.03, 4.04, 4.05, 4.06, 4.07...): beats start on the rounded running total, as the stick reel draws them"
  ],
  "problems": [
   "e2-a1-0021: the stick's speaker staffer vs the take's TILED EMPLOYEE",

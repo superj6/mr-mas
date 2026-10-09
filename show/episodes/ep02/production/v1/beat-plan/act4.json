@@ -5,21 +5,23 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 320,
-  "estimate": 320.0
+  "target": 319,
+  "estimate": 319.0
  },
  "scenes": [
   {
    "id": "18",
-   "target_s": 96,
+   "target_s": 95,
    "title": "Present",
    "date": "MAY 28, 2024",
    "place": "Misanthropic's lighthouse | the NopeAI boardroom",
    "status": "CHANGED",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "estimate_s": 96.0,
-   "fit_scale": 0.974
+   "proposal_s": 96,
+   "adjust": "the lock QA: Terb's roll call 0.25 s after his first task (was 0.5) and his next line 0.25 s after \"present.\" (was 1.26 s); x0.974 -> x0.987",
+   "estimate_s": 95.0,
+   "fit_scale": 0.987
   },
   {
    "id": "19",
@@ -168,7 +170,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 5.66,
+   "est_s": 5.74,
    "frame": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
    "camera": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
    "set": "lighthouse",
@@ -183,14 +185,14 @@
    "picture": "Sc 14's box in his arms (the seam).",
    "onscreen": {
     "add": [
-     "RAIL: MAY 28, 2024 (0.29-2.05 s)"
+     "RAIL: MAY 28, 2024 (0.3-2.08 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "RAIL: MAY 28, 2024",
-     "at": 0.29,
-     "until": 2.05,
+     "at": 0.3,
+     "until": 2.08,
      "kind": "rail"
     }
    ],
@@ -206,14 +208,14 @@
     },
     {
      "name": "footstep_soft_1",
-     "at": 2.342,
-     "at_s": 2.34,
+     "at": 2.375,
+     "at_s": 2.38,
      "gain": -28
     },
     {
      "name": "footstep_soft_2",
-     "at": 3.123,
-     "at_s": 3.12,
+     "at": 3.167,
+     "at_s": 3.17,
      "gain": -28
     }
    ],
@@ -272,7 +274,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "weighted",
-   "est_s": 10.55,
+   "est_s": 10.56,
    "frame": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
    "camera": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
    "set": "screen",
@@ -303,7 +305,7 @@
    "onscreen": {
     "add": [
      "When CHATGTP came out November, 2022, the board was not informed in advance about that. (1-8.02 s)",
-     "We learned about CHATGTP on RETTIWT. (8.02-10.55 s)"
+     "We learned about CHATGTP on RETTIWT. (8.02-10.56 s)"
     ]
    },
    "onscreen_items": [
@@ -316,7 +318,7 @@
     {
      "text": "We learned about CHATGTP on RETTIWT.",
      "at": 8.02,
-     "until": 10.55,
+     "until": 10.56,
      "kind": "caption"
     }
    ],
@@ -346,7 +348,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "weighted",
-   "est_s": 5.91,
+   "est_s": 5.93,
    "frame": "FULL FRAME · the TV: her second claim",
    "camera": "FULL FRAME · the TV: her second claim",
    "set": "screen",
@@ -366,24 +368,24 @@
      "take": "new · NELEH (Alexandra · EL, through the podcast chain) · podcast chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
      "note": "[V · facts A38: the same transcript; name swaps]",
-     "after": "start+0.58",
+     "after": "start+0.59",
      "gap_s": 0.0,
      "len_s": 4.75,
-     "t_s": 0.58
+     "t_s": 0.59
     }
    ],
    "caption": "Her second claim.",
    "picture": "",
    "onscreen": {
     "add": [
-     "…MAS didn't inform the board that he owned the NOPEAI Startup Fund… (0.58-5.91 s)"
+     "…MAS didn't inform the board that he owned the NOPEAI Startup Fund… (0.59-5.93 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
-     "at": 0.58,
-     "until": 5.91,
+     "at": 0.59,
+     "until": 5.93,
      "kind": "caption"
     }
    ],
@@ -515,7 +517,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.51,
+   "est_s": 3.55,
    "frame": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "camera": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "set": "boardroom",
@@ -532,22 +534,22 @@
    "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action.",
    "onscreen": {
     "add": [
-     "SAFETY COMMITTEE (0.29-3.51 s)",
-     "212 (1.75-3.51 s)"
+     "SAFETY COMMITTEE (0.3-3.55 s)",
+     "212 (1.77-3.55 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "SAFETY COMMITTEE",
-     "at": 0.29,
-     "until": 3.51,
+     "at": 0.3,
+     "until": 3.55,
      "kind": "sign",
      "holds": true
     },
     {
      "text": "212",
-     "at": 1.75,
-     "until": 3.51,
+     "at": 1.77,
+     "until": 3.55,
      "kind": "doc",
      "holds": true
     }
@@ -556,15 +558,15 @@
    "sounds": [
     {
      "name": "lanyard_drop",
-     "at": 1.755,
-     "at_s": 1.75,
+     "at": 1.775,
+     "at_s": 1.77,
      "gain": -24,
      "new": true
     },
     {
      "name": "lanyard_drop",
-     "at": 1.804,
-     "at_s": 1.8,
+     "at": 1.824,
+     "at_s": 1.82,
      "gain": -26,
      "new": true
     }
@@ -583,7 +585,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 12.76,
+   "est_s": 12.52,
    "frame": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "camera": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "set": "boardroom",
@@ -605,10 +607,10 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0004__terb-A.wav",
      "note": "[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36)]",
-     "after": "start+0.29",
+     "after": "start+0.3",
      "gap_s": 0.0,
      "len_s": 7.56,
-     "t_s": 0.29
+     "t_s": 0.3
     },
     {
      "id": "e2-a4-0005",
@@ -621,9 +623,9 @@
      "take_file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
      "note": "[INVENTED · paraphrase of the May 28, 2024 post's membership (facts A36: Taylor, D'Angelo, Seligman, Altman)]",
      "after": "e2-a4-0004",
-     "gap_s": 0.5,
+     "gap_s": 0.25,
      "len_s": 4.11,
-     "t_s": 8.35
+     "t_s": 8.11
     }
    ],
    "caption": "LEFT: TERB says what the committee will do and how long it has. Then, without looking up, he reads its members like a roll call.",
@@ -632,7 +634,7 @@
    "tempo": {
     "pace": "quick",
     "gaps": {
-     "e2-a4-0005": 0.5
+     "e2-a4-0005": 0.25
     },
     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
    },
@@ -640,7 +642,8 @@
     "P",
     "R2",
     "FACT",
-    "SR"
+    "SR",
+    "LQ"
    ],
    "why": "Ninety days and the membership, in his own words (facts A36); nobody says who checks whom (W7)."
   },
@@ -652,7 +655,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 2.83,
+   "est_s": 1.98,
    "frame": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "camera": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "set": "boardroom",
@@ -685,8 +688,8 @@
    "sounds": [
     {
      "name": "pen_scribble_short",
-     "at": "after:e2-a4-0006+0.3",
-     "at_s": 2.16,
+     "at": "after:e2-a4-0006+0.05",
+     "at_s": 1.91,
      "gain": -26
     }
    ],
@@ -698,9 +701,10 @@
    "fix": [
     "P",
     "KEEP",
-    "PACE"
+    "PACE",
+    "LQ"
    ],
-   "why": "\"present.\""
+   "why": "\"present.\" Mada's one word goes down as Terb, brisk, is already on the next line (lock QA)."
   },
   {
    "id": "18.10",
@@ -710,7 +714,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 12.85,
+   "est_s": 12.7,
    "frame": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
    "camera": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
    "set": "boardroom",
@@ -732,10 +736,10 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0007__terb-A.wav",
      "note": "[INVENTED · paraphrase of the post (facts A36)]",
-     "after": "start+0.29",
+     "after": "start+0.13",
      "gap_s": 0.0,
      "len_s": 5.77,
-     "t_s": 0.29
+     "t_s": 0.13
     },
     {
      "id": "e2-a4-0008",
@@ -750,7 +754,7 @@
      "after": "e2-a4-0007",
      "gap_s": 0.6,
      "len_s": 1.06,
-     "t_s": 6.66
+     "t_s": 6.5
     },
     {
      "id": "e2-vo-11",
@@ -767,7 +771,7 @@
      "after": "e2-a4-0008",
      "gap_s": 2.3,
      "len_s": 2.05,
-     "t_s": 10.02
+     "t_s": 9.86
     }
    ],
    "caption": "TERB, brisk, the next line. The table turns to Mas again. Mada writes a second word. A held breath on the table (about 1.5 s). Then his thought, in his pane.",
@@ -777,7 +781,7 @@
     {
      "name": "pen_scribble_short",
      "at": "after:e2-a4-0008+0.3",
-     "at_s": 8.02,
+     "at_s": 7.86,
      "gain": -26
     }
    ],
@@ -785,9 +789,15 @@
     "pace": "quick",
     "gaps": {
      "e2-a4-0008": 0.6,
-     "e2-vo-11": 2.3
+     "e2-vo-11": 2.3,
+     "e2-a4-0007": 0.25
     },
-    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "across_cut": {
+     "from": "e2-a4-0006",
+     "gap_s": 0.25,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
     "P",
@@ -952,7 +962,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 9.94,
+   "est_s": 9.96,
    "frame": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
    "camera": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
    "set": "lighthouse",
@@ -973,10 +983,10 @@
      "take": "new · Kokoro am_liam (a-liam-earnest), matched into the EL room (voices-el §AB3) · audio/ep02/",
      "take_file": "audio/ep02/v1/act4/wav/e2-a4-0013.wav",
      "note": "[INVENTED]",
-     "after": "start+1.56",
+     "after": "start+1.58",
      "gap_s": 0.0,
      "len_s": 1.63,
-     "t_s": 1.56
+     "t_s": 1.58
     },
     {
      "id": "e2-a4-0014",
@@ -991,7 +1001,7 @@
      "after": "e2-a4-0013",
      "gap_s": 2.6,
      "len_s": 1.07,
-     "t_s": 5.79
+     "t_s": 5.81
     },
     {
      "id": "e2-a4-0015",
@@ -1006,7 +1016,7 @@
      "after": "e2-a4-0014",
      "gap_s": 0.2,
      "len_s": 2.73,
-     "t_s": 7.06
+     "t_s": 7.08
     }
    ],
    "caption": "The beacon glints across a case of CLOD boxes, each one in turn; the last one's art is the Golden Gate Bridge. MARIO, finger rising. A scroll drops down the stairwell; the pane pans with it down the spiral and back up to EKIEL, squinting after it. MARIO sets his pen down for the first time.",
@@ -1015,29 +1025,29 @@
    "sounds": [
     {
      "name": "glint_tick",
-     "at": 0.292,
-     "at_s": 0.29,
+     "at": 0.296,
+     "at_s": 0.3,
      "gain": -28,
      "new": true
     },
     {
      "name": "glint_tick",
-     "at": 0.78,
-     "at_s": 0.78,
+     "at": 0.79,
+     "at_s": 0.79,
      "gain": -28,
      "new": true
     },
     {
      "name": "glint_tick",
-     "at": 1.268,
-     "at_s": 1.27,
+     "at": 1.284,
+     "at_s": 1.28,
      "gain": -27,
      "new": true
     },
     {
      "name": "scroll_unroll_fall",
      "at": "after:e2-a4-0013+0.2",
-     "at_s": 3.39,
+     "at_s": 3.41,
      "gain": -22,
      "new": true
     }
@@ -1064,7 +1074,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 2.78,
+   "est_s": 2.8,
    "frame": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "camera": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "set": "lighthouse",
@@ -1091,7 +1101,21 @@
     }
    ],
    "caption": "MARIO, finger up: his concern.",
-   "picture": "",
+   "picture": "Egg on his desk, by the lamp: an op-ed clipping, byline NELEH & THE QUIET VOTE (facts A37; a byline egg only, no hold, never read out).",
+   "onscreen": {
+    "add": [
+     "NELEH & THE QUIET VOTE (0.2-2.8 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "NELEH & THE QUIET VOTE",
+     "at": 0.2,
+     "until": 2.8,
+     "kind": "sign",
+     "holds": true
+    }
+   ],
    "music": "E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp)",
    "tempo": {
     "pace": "quick",
@@ -1119,7 +1143,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.31,
+   "est_s": 3.36,
    "frame": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "camera": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "set": "boardroom",
@@ -1133,14 +1157,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "ELPPA · KEYNOTE · JUN 10 (0.39-2.34 s)"
+     "ELPPA · KEYNOTE · JUN 10 (0.4-2.37 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "ELPPA · KEYNOTE · JUN 10",
-     "at": 0.39,
-     "until": 2.34,
+     "at": 0.4,
+     "until": 2.37,
      "kind": "ui"
     }
    ],
@@ -1148,14 +1172,14 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 0.389,
-     "at_s": 0.39,
+     "at": 0.395,
+     "at_s": 0.4,
      "gain": -26
     },
     {
      "name": "phone_turn_over",
-     "at": 2.336,
-     "at_s": 2.34,
+     "at": 2.372,
+     "at_s": 2.37,
      "gain": -26,
      "new": true
     }
@@ -1436,28 +1460,53 @@
      "take": "new · HARAS (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0021__haras-A.wav",
      "note": "[INVENTED]",
+     "sub": [
+      [
+       "And profit—",
+       0
+      ]
+     ],
      "after": "e2-a4-0020",
      "gap_s": 0.25,
      "len_s": 0.77,
      "t_s": 13.86
     }
    ],
-   "caption": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it.",
-   "picture": "The cheer cuts \"And profit—\" (the episode's second and last cut-off). Record it complete.",
+   "caption": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it: as she asks, the wall screen behind them puts up the announcement and the stream's own crowd roars, and the lobby's cheer takes her last word.",
+   "picture": "The cheer cuts \"And profit—\" (the episode's second and last cut-off): its cause, the stream's …AND LATER THIS YEAR: CHATGTP. on the wall screen behind them, comes up and roars 0.2 s before her line; the lobby's cheer lands on \"profit\" (lock QA). Record it complete; the take plays whole under the cheer, and the subtitle reads \"And profit—\".",
    "onscreen": {
     "add": [
-     "And profit— (13.86-14.83 s)"
+     "…AND LATER THIS YEAR: CHATGTP. (13.66-14.93 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "And profit—",
-     "at": 13.86,
-     "until": 14.83,
-     "kind": "caption"
+     "text": "…AND LATER THIS YEAR: CHATGTP.",
+     "at": 13.66,
+     "until": 14.93,
+     "kind": "ui",
+     "holds": true
     }
    ],
    "music": "E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)",
+   "sounds": [
+    {
+     "name": "stream_announce_roar",
+     "at": "before:e2-a4-0021-0.2",
+     "at_s": 13.66,
+     "gain": -24,
+     "new": true,
+     "note": "the keynote stream's own crowd roars at the announcement, low on the wall screen: the cheer's cause, under her question"
+    },
+    {
+     "name": "crowd_cheer",
+     "at": 14.01,
+     "at_s": 14.01,
+     "gain": -18,
+     "new": true,
+     "note": "the lobby erupts on \"profit\" and talks over it (the cut-off); it runs on across the cut into 19.05"
+    }
+   ],
    "tempo": {
     "pace": "quick",
     "gaps": {
@@ -1471,9 +1520,10 @@
    "fix": [
     "P",
     "KEEP",
-    "PACE"
+    "PACE",
+    "LQ"
    ],
-   "why": "The race is fought over compute, for training and for running (the concept's callback)."
+   "why": "The race is fought over compute, for training and for running (the concept's callback). The world talks over the one key word."
   },
   {
    "id": "19.05",
@@ -1511,30 +1561,23 @@
      "t_s": 2.4
     }
    ],
-   "caption": "The stream says it. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
-   "picture": "",
+   "caption": "On the stream, full frame, the announcement that the lobby is already cheering. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
+   "picture": "The cheer started under her question in 19.04 and carries across the cut.",
    "onscreen": {
     "add": [
-     "…AND LATER THIS YEAR: CHATGTP. (0.1-2.2 s)"
+     "…AND LATER THIS YEAR: CHATGTP. (0-2.2 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "…AND LATER THIS YEAR: CHATGTP.",
-     "at": 0.1,
+     "at": 0.0,
      "until": 2.2,
      "kind": "ui"
     }
    ],
    "music": "E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)",
    "sounds": [
-    {
-     "name": "crowd_cheer",
-     "at": 0.6,
-     "at_s": 0.6,
-     "gain": -18,
-     "new": true
-    },
     {
      "name": "confetti_pop",
      "at": 0.9,
@@ -1551,7 +1594,8 @@
    "fix": [
     "P",
     "FACT",
-    "KEEP"
+    "KEEP",
+    "LQ"
    ],
    "why": "Upside (facts A40)."
   },

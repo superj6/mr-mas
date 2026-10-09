@@ -5,13 +5,13 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 368,
-  "estimate": 368.0
+  "target": 364,
+  "estimate": 364.0
  },
  "scenes": [
   {
    "id": "4",
-   "target_s": 196,
+   "target_s": 193,
    "title": "The Email Séance (with Move 37 and F2.3)",
    "date": "MAR 5, 2024",
    "place": "the NopeAI boardroom, night",
@@ -19,33 +19,37 @@
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
    "proposal_s": 192,
-   "adjust": "the script review: Move 37's correction split with the staffer's misunderstanding and its accuracy wording (W22, W18); the beat grows about 4.7 s, so the scene gets 4 s (the review asked for about 2; with 2 the rest of the scene's air, F2.3's included, fit at 0.83); added to the setup act (R4), so Act One is 6:08",
-   "estimate_s": 196.0,
-   "fit_scale": 1.146
+   "adjust": "the script review: Move 37's correction split with the staffer's misunderstanding and its accuracy wording (W22, W18); the beat grows about 4.7 s, so the scene gets 4 s (the review asked for about 2; with 2 the rest of the scene's air, F2.3's included, fit at 0.83); added to the setup act (R4), so Act One is 6:08 | the lock QA: \"you're early.\" 0.45 s after the landing (was 1.0 s), Nole 0.3 s after him (was 1.07), Nole's fear 0.5 s after the frozen wall's line (was 1.59): about 2.6 s back; x1.146 -> x1.131",
+   "estimate_s": 193.0,
+   "fit_scale": 1.131
   },
   {
    "id": "4A",
-   "target_s": 35,
+   "target_s": 33,
    "title": "You can sit down now",
    "date": "MAR 8, 2024",
    "place": "the boardroom, morning",
    "status": "CHANGED",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "estimate_s": 35.0,
-   "fit_scale": 1.781
+   "proposal_s": 35,
+   "adjust": "the lock QA: \"You can sit down now, Mas.\" quick and dry, 0.3 s after the reading (was 1.69 s): about 1.1 s back; and 1 s to 4B (below); x1.781 -> x1.68, the 12.5 s after Terb's line now about 10 s",
+   "estimate_s": 33.0,
+   "fit_scale": 1.68
   },
   {
    "id": "4B",
-   "target_s": 8,
+   "target_s": 9,
    "title": "The booking",
    "date": "MAR 8, 2024",
    "place": "his phone on the boardroom table",
    "status": "NEW",
    "mode": "SINGLE IMAGE / INSERT",
    "pace": "normal",
-   "estimate_s": 8.0,
-   "fit_scale": 1.425
+   "proposal_s": 8,
+   "adjust": "the lock QA: V.O. 3 starts on the planned 1.0 s arrival (was 1.42), the Accept click comes a beat after his thought (0.4 s, was 0.1), and the card settles for 1.9 s after the click (was 0.75; P3: 1.5 s at least); the second comes from 4A's long tail, so Act One's move is inside the act",
+   "estimate_s": 9.0,
+   "fit_scale": 0.991
   },
   {
    "id": "6",
@@ -312,7 +316,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.79,
+   "est_s": 4.77,
    "frame": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
    "camera": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
    "set": "boardroom",
@@ -334,10 +338,10 @@
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+0.46",
+     "after": "start+0.45",
      "gap_s": 0.0,
      "len_s": 2.96,
-     "t_s": 0.46
+     "t_s": 0.45
     }
    ],
    "caption": "MAS runs it like a procedure. The planchette slides to >>>, and an inbox chime sounds, pitched down two octaves.",
@@ -347,14 +351,14 @@
     {
      "name": "inbox_chime_low",
      "at": "after:e2-a1-0001+0.5",
-     "at_s": 3.92,
+     "at_s": 3.91,
      "gain": -22,
      "new": true
     },
     {
      "name": "planchette_glide",
      "at": "after:e2-a1-0001+0.2",
-     "at_s": 3.62,
+     "at_s": 3.61,
      "gain": -26,
      "new": true
     }
@@ -378,7 +382,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.6,
+   "est_s": 4.59,
    "frame": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
    "camera": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
    "set": "boardroom",
@@ -410,22 +414,22 @@
    "picture": "Alyi appears only as an author (his name on the header), never in brass or stone (R1). The spirit-photo pass (2.G) on the ghosts only.",
    "onscreen": {
     "add": [
-     "FROM: ALYI · JAN 2016 (0.3-4.6 s)",
-     "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\" (0.6-4.6 s)"
+     "FROM: ALYI · JAN 2016 (0.3-4.59 s)",
+     "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\" (0.6-4.59 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "FROM: ALYI · JAN 2016",
      "at": 0.3,
-     "until": 4.6,
+     "until": 4.59,
      "kind": "doc",
      "holds": true
     },
     {
      "text": "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"",
      "at": 0.6,
-     "until": 4.6,
+     "until": 4.59,
      "kind": "doc",
      "holds": true
     }
@@ -466,7 +470,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 3.84,
+   "est_s": 3.81,
    "frame": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
    "camera": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
    "set": "boardroom",
@@ -487,10 +491,10 @@
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.15",
+     "after": "start+1.13",
      "gap_s": 0.0,
      "len_s": 2.0,
-     "t_s": 1.15
+     "t_s": 1.13
     }
    ],
    "caption": "A staffer's eyes go to the empty chair at the table's end. GERG, quietly, to her.",
@@ -514,7 +518,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 6.58,
+   "est_s": 6.57,
    "frame": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
    "camera": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
    "set": "boardroom",
@@ -536,10 +540,10 @@
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
      "note": "[INVENTED · says what the suit claims before the knocks answer it]",
-     "after": "start+0.52",
+     "after": "start+0.51",
      "gap_s": 0.0,
      "len_s": 2.76,
-     "t_s": 0.52
+     "t_s": 0.51
     }
    ],
    "caption": "MAS puts the question to the table. The held hands and the planchette perfectly still. The organ drops to its pad. Then, from the ceiling: KNOCK. KNOCK. KNOCK, each one louder.",
@@ -549,21 +553,21 @@
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+1.3",
-     "at_s": 4.58,
+     "at_s": 4.57,
      "gain": -22,
      "new": true
     },
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+2.0",
-     "at_s": 5.28,
+     "at_s": 5.27,
      "gain": -19,
      "new": true
     },
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+2.7",
-     "at_s": 5.98,
+     "at_s": 5.97,
      "gain": -16,
      "new": true
     }
@@ -587,7 +591,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.96,
+   "est_s": 3.91,
    "frame": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
    "camera": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
    "set": "boardroom",
@@ -610,10 +614,10 @@
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+2.29",
+     "after": "start+1.55",
      "gap_s": 0.0,
      "len_s": 2.21,
-     "t_s": 2.29
+     "t_s": 1.55
     }
    ],
    "caption": "CRASH. Ceiling tiles rain down over the foot of the table and NOLE drops through the hole on a cable, landing screen-right. On the right wall the boardroom door, which he didn't use, stays shut. In the foreground Mas doesn't look up from the laptop.",
@@ -628,15 +632,15 @@
     },
     {
      "name": "cable_drop",
-     "at": 0.458,
-     "at_s": 0.46,
+     "at": 0.4,
+     "at_s": 0.4,
      "gain": -22,
      "new": true
     },
     {
      "name": "landing_thunk",
-     "at": 1.26,
-     "at_s": 1.26,
+     "at": 1.1,
+     "at_s": 1.1,
      "gain": -16
     }
    ],
@@ -648,9 +652,10 @@
    "fix": [
     "P",
     "KEEP",
-    "PACE"
+    "PACE",
+    "LQ"
    ],
-   "why": "He crashes his own séance."
+   "why": "He crashes his own séance. Mas doesn't look up: \"you're early.\" comes 0.45 s after the landing (quick, Mas), not a held second (lock QA)."
   },
   {
    "id": "4.08",
@@ -660,7 +665,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 8.42,
+   "est_s": 8.0,
    "frame": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
    "camera": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
    "set": "boardroom",
@@ -682,10 +687,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.57",
+     "after": "start+0.15",
      "gap_s": 0.0,
      "len_s": 3.92,
-     "t_s": 0.57
+     "t_s": 0.15
     },
     {
      "id": "e2-a1-0007",
@@ -700,21 +705,21 @@
      "after": "e2-a1-0006",
      "gap_s": 0.2,
      "len_s": 3.61,
-     "t_s": 4.69
+     "t_s": 4.27
     }
    ],
    "caption": "NOLE, brushing tiles off his jacket, the 2016 ghost and its Yup still hovering behind him. His plate. GERG answers him, typing.",
    "picture": "Plate on his entrance: name plus what he is to Mas, told once.",
    "onscreen": {
     "add": [
-     "NOLE · FUNDED IT. LEFT IT. SUING IT. (0.23-5.19 s)"
+     "NOLE · FUNDED IT. LEFT IT. SUING IT. (0.2-4.77 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "NOLE · FUNDED IT. LEFT IT. SUING IT.",
-     "at": 0.23,
-     "until": 5.19,
+     "at": 0.2,
+     "until": 4.77,
      "kind": "plate"
     }
    ],
@@ -722,9 +727,15 @@
    "tempo": {
     "pace": "quick",
     "gaps": {
-     "e2-a1-0007": 0.2
+     "e2-a1-0007": 0.2,
+     "e2-a1-0006": 0.3
     },
-    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "across_cut": {
+     "from": "e2-a1-0005",
+     "gap_s": 0.3,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
     "P",
@@ -898,7 +909,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.57,
+   "est_s": 4.56,
    "frame": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
    "camera": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
    "set": "boardroom",
@@ -918,24 +929,24 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.29",
+     "after": "start+0.28",
      "gap_s": 0.0,
      "len_s": 2.08,
-     "t_s": 0.29
+     "t_s": 0.28
     }
    ],
    "caption": "NOLE spreads his hands at the board, vindicated. The planchette pauses. Then it drifts back to the N and carries it to the front: N · O · P · E.",
    "picture": "The N moves in one held glide.",
    "onscreen": {
     "add": [
-     "N O P E (3.57-4.57 s)"
+     "N O P E (3.56-4.56 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "N O P E",
-     "at": 3.57,
-     "until": 4.57,
+     "at": 3.56,
+     "until": 4.56,
      "kind": "ui",
      "holds": true
     }
@@ -945,7 +956,7 @@
     {
      "name": "planchette_glide",
      "at": "after:e2-a1-0010+0.7",
-     "at_s": 3.07,
+     "at_s": 3.06,
      "gain": -24,
      "new": true
     }
@@ -969,7 +980,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.59,
+   "est_s": 4.56,
    "frame": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
    "camera": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
    "set": "boardroom",
@@ -992,10 +1003,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.29",
+     "after": "start+0.28",
      "gap_s": 0.0,
      "len_s": 2.47,
-     "t_s": 0.29
+     "t_s": 0.28
     }
    ],
    "caption": "NOLE, jabbing at the board as the N moves. Everyone looks down: three hands are resting on the planchette, Mas's, GHOST-NOLE's and Gerg's. All three lift off at once.",
@@ -1158,7 +1169,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.12,
+   "est_s": 4.07,
    "frame": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
    "camera": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
    "set": "boardroom",
@@ -1172,22 +1183,22 @@
    "picture": "His answer goes to the internet, and has no words in it.",
    "onscreen": {
     "add": [
-     "NOLE · JUST NOW (1.83-4.12 s)",
-     "!!!!!!!! (1.83-4.12 s)"
+     "NOLE · JUST NOW (1.81-4.07 s)",
+     "!!!!!!!! (1.81-4.07 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "NOLE · JUST NOW",
-     "at": 1.83,
-     "until": 4.12,
+     "at": 1.81,
+     "until": 4.07,
      "kind": "post",
      "holds": true
     },
     {
      "text": "!!!!!!!!",
-     "at": 1.83,
-     "until": 4.12,
+     "at": 1.81,
+     "until": 4.07,
      "kind": "post",
      "holds": true
     }
@@ -1196,21 +1207,21 @@
    "sounds": [
     {
      "name": "lamp_click",
-     "at": 0.229,
+     "at": 0.226,
      "at_s": 0.23,
      "gain": -22,
      "new": true
     },
     {
      "name": "key_tap_soft_01",
-     "at": 0.687,
-     "at_s": 0.69,
+     "at": 0.678,
+     "at_s": 0.68,
      "gain": -28
     },
     {
      "name": "reverse_swell_1beat",
-     "at": 1.717,
-     "at_s": 1.72,
+     "at": 1.696,
+     "at_s": 1.7,
      "gain": -26
     }
    ],
@@ -1309,7 +1320,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 2.75,
+   "est_s": 2.71,
    "frame": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
    "camera": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
    "set": "boardroom",
@@ -1326,14 +1337,14 @@
    "sounds": [
     {
      "name": "phone_clack_floor",
-     "at": 0.229,
+     "at": 0.226,
      "at_s": 0.23,
      "gain": -16
     },
     {
      "name": "candle_flare",
-     "at": 0.286,
-     "at_s": 0.29,
+     "at": 0.282,
+     "at_s": 0.28,
      "gain": -24,
      "new": true
     }
@@ -1538,7 +1549,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 2.19,
+   "est_s": 2.18,
    "frame": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
    "camera": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
    "set": "boardroom",
@@ -1559,10 +1570,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.46",
+     "after": "start+0.45",
      "gap_s": 0.0,
      "len_s": 0.82,
-     "t_s": 0.46
+     "t_s": 0.45
     },
     {
      "id": "e2-a1-0021",
@@ -1577,7 +1588,7 @@
      "after": "e2-a1-0020",
      "gap_s": 0.3,
      "len_s": 0.49,
-     "t_s": 1.58
+     "t_s": 1.57
     }
    ],
    "caption": "NOLE, quiet for once. The staffer beside Gerg whispers at the stone.",
@@ -1663,7 +1674,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 17.27,
+   "est_s": 16.57,
    "frame": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
    "camera": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
    "set": "boardroom",
@@ -1765,7 +1776,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 6.11,
+   "est_s": 5.74,
    "frame": "MCU · NOLE takes the fear back",
    "camera": "MCU · NOLE takes the fear back",
    "set": "boardroom",
@@ -1785,10 +1796,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
      "note": "[INVENTED · his claim; accurate as the program's own estimate, about 1 in 10,000 (facts A57)]",
-     "after": "start+0.57",
+     "after": "start+0.2",
      "gap_s": 0.0,
      "len_s": 5.39,
-     "t_s": 0.57
+     "t_s": 0.2
     }
    ],
    "caption": "NOLE takes the fear back, in plainer words.",
@@ -1796,8 +1807,15 @@
    "music": "E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes",
    "tempo": {
     "pace": "quick",
-    "gaps": {},
-    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    "gaps": {
+     "e2-a1-0024": 0.5
+    },
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+    "across_cut": {
+     "from": "e2-a1-0056",
+     "gap_s": 0.5,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
     "P",
@@ -1814,7 +1832,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 3.12,
+   "est_s": 3.11,
    "frame": "WIDE · NOLE, loud again, to the table",
    "camera": "WIDE · NOLE, loud again, to the table",
    "set": "boardroom",
@@ -1872,7 +1890,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 6.11,
+   "est_s": 6.09,
    "frame": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
    "camera": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
    "set": "boardroom",
@@ -1894,10 +1912,10 @@
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
      "note": "[the same email's words (facts §B), cut from e2-a1-0014's take]",
      "cut_from": "e2-a1-0014",
-     "after": "start+0.46",
+     "after": "start+0.45",
      "gap_s": 0.0,
      "len_s": 0.94,
-     "t_s": 0.46
+     "t_s": 0.45
     },
     {
      "id": "e2-vo-02",
@@ -1914,7 +1932,7 @@
      "after": "e2-a1-0026",
      "gap_s": 0.6,
      "len_s": 3.42,
-     "t_s": 2.0
+     "t_s": 1.99
     }
    ],
    "caption": "Ghost 3 drifts into Mas's eyeline and says its line again.",
@@ -1942,7 +1960,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.42,
+   "est_s": 4.4,
    "frame": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
    "camera": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
    "set": "boardroom",
@@ -1962,10 +1980,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.69",
+     "after": "start+0.68",
      "gap_s": 0.0,
      "len_s": 0.92,
-     "t_s": 0.69
+     "t_s": 0.68
     },
     {
      "id": "e2-a1-0028",
@@ -1980,7 +1998,7 @@
      "after": "e2-a1-0027",
      "gap_s": 1.0,
      "len_s": 1.12,
-     "t_s": 2.61
+     "t_s": 2.6
     }
    ],
    "caption": "NOLE turns to Mas. The lamp beside him does not click on. Then Mas's answer lands on Nole's face.",
@@ -2008,7 +2026,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 2.75,
+   "est_s": 2.71,
    "frame": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
    "camera": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
    "set": "boardroom",
@@ -2024,15 +2042,15 @@
    "sounds": [
     {
      "name": "candle_snuff",
-     "at": 0.573,
-     "at_s": 0.57,
+     "at": 0.565,
+     "at_s": 0.56,
      "gain": -24,
      "new": true
     },
     {
      "name": "render_front_sweep",
-     "at": 1.833,
-     "at_s": 1.83,
+     "at": 1.807,
+     "at_s": 1.81,
      "gain": -26
     }
    ],
@@ -2175,7 +2193,7 @@
    "scene": "4",
    "mode": "FLASHBACK",
    "pace": "quick",
-   "est_s": 4.81,
+   "est_s": 4.75,
    "frame": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
    "camera": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
    "set": "office",
@@ -2192,22 +2210,22 @@
    "sounds": [
     {
      "name": "glass_sip",
-     "at": 0.458,
-     "at_s": 0.46,
+     "at": 0.452,
+     "at_s": 0.45,
      "gain": -28,
      "new": true
     },
     {
      "name": "ladder_climb",
-     "at": 1.374,
-     "at_s": 1.37,
+     "at": 1.357,
+     "at_s": 1.36,
      "gain": -24,
      "new": true
     },
     {
      "name": "hatch_slide_shut",
-     "at": 3.779,
-     "at_s": 3.78,
+     "at": 3.732,
+     "at_s": 3.73,
      "gain": -20,
      "new": true
     }
@@ -2319,7 +2337,7 @@
    "scene": "4",
    "mode": "FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 2.98,
+   "est_s": 2.94,
    "frame": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
    "camera": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
    "set": "boardroom",
@@ -2336,14 +2354,14 @@
    "sounds": [
     {
      "name": "render_front_sweep",
-     "at": 0.229,
+     "at": 0.226,
      "at_s": 0.23,
      "gain": -26
     },
     {
      "name": "match_strike",
-     "at": 1.605,
-     "at_s": 1.6,
+     "at": 1.583,
+     "at_s": 1.58,
      "gain": -22,
      "new": true
     }
@@ -2377,7 +2395,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 9.05,
+   "est_s": 9.02,
    "frame": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
    "camera": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
    "set": "boardroom",
@@ -2398,10 +2416,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
      "note": "[INVENTED · matches what F2.3 showed: he spoke to the room; says nothing about what was said there or asked of it (facts A11)]",
-     "after": "start+0.69",
+     "after": "start+0.68",
      "gap_s": 0.0,
      "len_s": 6.76,
-     "t_s": 0.69
+     "t_s": 0.68
     }
    ],
    "caption": "NOLE holds the candle up to Mas's face like evidence. Mas lifts his glass and sips: F2.3's sip, six years on.",
@@ -2411,7 +2429,7 @@
     {
      "name": "glass_sip",
      "at": "after:e2-a1-0029+0.5",
-     "at_s": 7.95,
+     "at_s": 7.94,
      "gain": -26,
      "new": true
     }
@@ -2435,7 +2453,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.09,
+   "est_s": 4.06,
    "frame": "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
    "camera": "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
    "set": "boardroom",
@@ -2456,10 +2474,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.46",
+     "after": "start+0.45",
      "gap_s": 0.0,
      "len_s": 1.57,
-     "t_s": 0.46
+     "t_s": 0.45
     }
    ],
    "caption": "NOLE sets the candle down in front of Mas, hard, already rising. He rockets back up through his hole. One ceiling tile drops back into place.",
@@ -2469,13 +2487,13 @@
     {
      "name": "rocket_roar",
      "at": "after:e2-a1-0030+0.2",
-     "at_s": 2.23,
+     "at_s": 2.22,
      "gain": -16
     },
     {
      "name": "tile_land_1",
-     "at": 3.79,
-     "at_s": 3.79,
+     "at": 3.76,
+     "at_s": 3.76,
      "gain": -22
     }
    ],
@@ -2541,7 +2559,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 7.61,
+   "est_s": 7.58,
    "frame": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
    "camera": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
    "set": "boardroom",
@@ -2616,7 +2634,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 12.5,
+   "est_s": 11.52,
    "frame": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
    "camera": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
    "set": "boardroom",
@@ -2638,10 +2656,10 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
      "note": "[P · facts A12: the Mar 8, 2024 post (\"WilmerHale found that the prior Board…\"), both halves; the review's law firm stays the subject of both findings (Terb's own words, outside the quote: the firm has no registry name); name swap Altman → Manalt; open the live post]",
-     "after": "start+1.07",
+     "after": "start+1.01",
      "gap_s": 0.0,
      "len_s": 10.36,
-     "t_s": 1.07
+     "t_s": 1.01
     }
    ],
    "caption": "TERB reads the finding to the people it concerns, both halves together. The first half lands on MADA, perfectly still; the second on MAS, standing.",
@@ -2667,7 +2685,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 4.0,
+   "est_s": 3.44,
    "frame": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet",
    "camera": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet",
    "set": "boardroom",
@@ -2688,10 +2706,10 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
      "note": "[INVENTED · pays Ep1's \"we'll stand.\"]",
-     "after": "start+0.62",
+     "after": "start+0.15",
      "gap_s": 0.0,
      "len_s": 1.78,
-     "t_s": 0.62
+     "t_s": 0.15
     }
    ],
    "caption": "TERB looks up. Mas sits.",
@@ -2701,14 +2719,21 @@
     {
      "name": "chair_unfold",
      "at": "after:e2-a1-0033+0.3",
-     "at_s": 2.7,
+     "at_s": 2.23,
      "gain": -26
     }
    ],
    "tempo": {
     "pace": "weighted",
-    "gaps": {},
-    "rule": "longer, only on turns"
+    "gaps": {
+     "e2-a1-0033": 0.3
+    },
+    "rule": "longer, only on turns",
+    "across_cut": {
+     "from": "e2-a1-0032",
+     "gap_s": 0.3,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
     "P",
@@ -2818,7 +2843,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 5.0,
+   "est_s": 4.71,
    "frame": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
    "camera": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
    "set": "boardroom",
@@ -2846,7 +2871,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 2.49,
+   "est_s": 2.35,
    "frame": "ECU · his phone, face up on the table beside the nameplate, lights with an invite",
    "camera": "ECU · his phone, face up on the table beside the nameplate, lights with an invite",
    "set": "boardroom",
@@ -2860,8 +2885,8 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 0.534,
-     "at_s": 0.53,
+     "at": 0.504,
+     "at_s": 0.5,
      "gain": -24,
      "note": "the invite's soft chime over the click"
     }
@@ -2886,7 +2911,7 @@
    "scene": "4B",
    "mode": "SINGLE IMAGE / INSERT",
    "pace": "normal",
-   "est_s": 8.0,
+   "est_s": 9.0,
    "frame": "ECU · the calendar card on his phone (the look of Ep1's Board sync invite); his thumb on Accept",
    "camera": "ECU · the calendar card on his phone (the look of Ep1's Board sync invite); his thumb on Accept",
    "set": "screen",
@@ -2908,36 +2933,36 @@
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+1.43",
+     "after": "start+1",
      "gap_s": 0.0,
      "len_s": 5.72,
-     "t_s": 1.43
+     "t_s": 1.0
     }
    ],
    "caption": "The calendar card: XEL · LONG-FORM · MAR 18 · 2 HRS, with a mic icon. He reads it and accepts with his thumb. The card settles into his calendar.",
    "picture": "In Ep1 he accepted an invite without looking; this time he looks.",
    "onscreen": {
     "add": [
-     "XEL · LONG-FORM · MAR 18 · 2 HRS (0.29-8 s)"
+     "XEL · LONG-FORM · MAR 18 · 2 HRS (0.2-9 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "XEL · LONG-FORM · MAR 18 · 2 HRS",
-     "at": 0.29,
-     "until": 8.0,
+     "at": 0.2,
+     "until": 9.0,
      "kind": "ui",
      "holds": true
     }
    ],
-   "music": "E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the tap (J 0.8 s)",
+   "music": "E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the card settling (J 0.8 s)",
    "sounds": [
     {
      "name": "post_click",
-     "at": "after:e2-vo-03+0.1",
-     "at_s": 7.25,
+     "at": "after:e2-vo-03+0.4",
+     "at_s": 7.12,
      "gain": -22,
-     "note": "Accept"
+     "note": "Accept: a beat after his thought, then the card settles (1.5 s or more)"
     }
    ],
    "jcut": [

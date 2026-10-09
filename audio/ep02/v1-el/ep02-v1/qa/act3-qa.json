@@ -804,11 +804,11 @@
       "names": [
        {
         "word": "AGI",
-        "margin": 12.6,
+        "margin": 13.09,
         "best_intended": "FEEL THE AGI!",
-        "best_competitor": "FEEL THE AGE!",
+        "best_competitor": "FEEL THE a GI!",
         "real": "AGE",
-        "margin_vs_real": 12.6
+        "margin_vs_real": 13.36
        }
       ],
       "span_s": 1.59,
@@ -1173,11 +1173,11 @@
       "duration_s": 2.65,
       "raw_floor_dbfs": -70.6,
       "raw_speech_to_floor_db": 39.2,
-      "raw_peak_dbfs": -8.73,
-      "raw_clip_runs": 0,
       "raw_pause_floor_dbfs": -69.8,
       "raw_pause_sf_db": 38.4,
-      "raw_quiet_frames": 25
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -8.73,
+      "raw_clip_runs": 0
      },
      "fail": [],
      "look": [
@@ -1813,6 +1813,62 @@
    "take": "e2-vo-09__mas-manalt-C",
    "attempts": [
     {
+     "label": "first",
+     "bump": 0,
+     "seed": 1899661321,
+     "key": "31bf661d2f3f4126",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.2
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Everyone who signed. The post. Everyone who signed.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.48,
+      "plan_len_s": 3.25,
+      "ratio": 1.071,
+      "words": 8,
+      "wpm": 137.9,
+      "longest_gap_s": 0.44,
+      "lufs": -18.0,
+      "true_peak": -3.49,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 101.8,
+      "f0_range_st": 13.3,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 4.365,
+      "raw_floor_dbfs": -85.8,
+      "raw_speech_to_floor_db": 66.3,
+      "raw_pause_floor_dbfs": -76.3,
+      "raw_pause_sf_db": 56.9,
+      "raw_quiet_frames": 63,
+      "raw_peak_dbfs": -1.1,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)"
+     ],
+     "sent": "Everyone who signed. The post, everyone who signed.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "31bf661d2f3f4126"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)"
+   ],
+   "superseded": [
+    {
      "label": "the take",
      "bump": 0,
      "seed": 1899661321,
@@ -1858,23 +1914,18 @@
      "base_key": "bc3b37cb4204b1b5"
     }
    ],
-   "picked_bump": 0,
-   "status": "pass",
-   "fail": [],
-   "look": [],
-   "superseded": [],
-   "sent": "Everyone who signed, the post, everyone who signed.",
+   "sent": "Everyone who signed. The post, everyone who signed.",
    "settings": {
     "stability": 0.6,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 1.15
+    "speed": 1.2
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
-    "bc3b37cb4204b1b5",
-    4.085
+    "31bf661d2f3f4126",
+    4.365
    ]
   },
   "e2-a3-0020": {
@@ -2346,5 +2397,5 @@
    "special": "crowd"
   }
  },
- "updated": "2026-10-09 05:23:14"
+ "updated": "2026-10-09 06:28:29"
 }

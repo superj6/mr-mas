@@ -25,6 +25,7 @@ Fix codes (the "fix" list on each beat):
   GR     a guardrail-driven staging (proposal "Guardrails pre-check")
   ML     the episode's concept (Move 37)
   SR     the script review's change (script-v1.md, "Review log (script review)")
+  LQ     the lock-QA pass's change (lock-v1.md §3.5): a tempo pin, a cut-off or a word-anchored item re-timed
 Every est_s is a planning length, never a measurement; the lock sets the frames.
 """
 import glob
@@ -125,12 +126,37 @@ for _sc, (_d, _why) in SCENE_ADJUST.items():
     SCENES[_sc]["proposal_s"] = SCENES[_sc]["target_s"]
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = _why
+# The lock-QA pass (lock-v1.md §3.5, 2026-10-09). The script's and the proposal's tempo marks that the plan had left
+# unpinned are pinned now (XGAP's LQ rows, 4.07's head, Terb's roll call), so 0.9-1.9 s gaps come back to 0.25-0.5 s.
+# Each scene gives that time back (whole seconds, the length nearest its air's earlier fit), as sc 11 and sc 13 did,
+# rather than spread it over its other air; and 4B takes a second from 4A for his decision's aftermath (P3).
+SCENE_ADJUST_LQ = {
+    "1": (-1, "the lock QA: Gerg answers the second THUD 0.4 s after it, not 1.0 s (1.10 -> 0.5 s after Selbeep); "
+              "x1.157 -> x1.134"),
+    "4": (-3, "the lock QA: \"you're early.\" 0.45 s after the landing (was 1.0 s), Nole 0.3 s after him (was 1.07), "
+              "Nole's fear 0.5 s after the frozen wall's line (was 1.59): about 2.6 s back; x1.146 -> x1.131"),
+    "4A": (-2, "the lock QA: \"You can sit down now, Mas.\" quick and dry, 0.3 s after the reading (was 1.69 s): about "
+               "1.1 s back; and 1 s to 4B (below); x1.781 -> x1.68, the 12.5 s after Terb's line now about 10 s"),
+    "4B": (+1, "the lock QA: V.O. 3 starts on the planned 1.0 s arrival (was 1.42), the Accept click comes a beat after "
+               "his thought (0.4 s, was 0.1), and the card settles for 1.9 s after the click (was 0.75; P3: 1.5 s at "
+               "least); the second comes from 4A's long tail, so Act One's move is inside the act"),
+    "9": (-1, "the lock QA: the engineer rehearses to Rima 0.3 s after \"We're on in five.\" (was 0.92 s); x1.679 -> x1.609"),
+    "17": (-1, "the lock QA: the driver cuts in 0.3 s after the Forecaster (was 1.92 s); x1.912 -> x1.943"),
+    "18": (-1, "the lock QA: Terb's roll call 0.25 s after his first task (was 0.5) and his next line 0.25 s after "
+               "\"present.\" (was 1.26 s); x0.974 -> x0.987"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_LQ.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
 # script review's +4 s in sc 4, Act One is 6:08 and the story 23:20; the lock pass gives back sc 11's 13 s and sc 13's
-# 5 s of fitted air (above), so Act Two is 4:40, Act Three 5:21 and the story 23:02
-SEG_TARGET = {"coldopen": 56, "act1": 368, "act2": 280, "act3": 321, "act4": 320, "tag": 37}
+# 5 s of fitted air (above), so Act Two is 4:40, Act Three 5:21 and the story 23:02; the lock QA gives back 8 s of
+# stretched tempo (SCENE_ADJUST_LQ): cold open 0:55, Act One 6:04, Act Two 4:39, Act Three 5:20, Act Four 5:19, the
+# story 22:54
+SEG_TARGET = {"coldopen": 55, "act1": 364, "act2": 279, "act3": 320, "act4": 319, "tag": 37}
 EPISODE_EXTRA_S = 30 + 2 + 10.0   # the intro (30 s), the filename card (2 s), the Orb outro (about 10 s)
 
 # the sequence markers (the reel's margin slate), one per scene and one per flashback
@@ -714,7 +740,8 @@ def line(lid, gap=None, pace=None, overlap=False, **kw):
 # ================================================================================================ helpers for beats
 def S(name, at, gain, new=False, note="", **kw):
     """a sound: at = seconds from the beat's start, "fX" (a fraction of the beat), "end-S", "E:<line>+S" (after the
-    line ends; Ep1's after:<id>+S), "L:<line>-S" (before it starts; Ep1's before:<id>-S) or "L:<line>+S" (inside it)"""
+    line ends; Ep1's after:<id>+S), "L:<line>-S" (before it starts; Ep1's before:<id>-S) or "L:<line>+S" (inside it).
+    until= (the same forms) sets its dur from the resolved times, so a sound can stop on a word of a recorded take"""
     d = {"name": name, "_at": at, "gain": gain}
     if new:
         d["new"] = True
@@ -838,7 +865,7 @@ nb("coldopen", "1.07", "WIDE · the master; Selbeep O.S.; a staffer's coffee jum
    "The coffee jumps, Mas's water doesn't (the glass is a prop only, R1: no beat hangs on it).",
    lines=[line("e2-co-0005")], head=0.4, tail=0.7, music=M1b,
    sounds=[S("hand_truck_step", "E:e2-co-0005+0.1", -18, new=True, note="THUD 2, closer"), S("cup_jump", "E:e2-co-0005+0.15", -26, new=True),
-           S("ladder_sway_creak", "E:e2-co-0005+0.3", -28, new=True)],
+           S("ladder_sway_creak", "E:e2-co-0005+0.2", -28, new=True)],
    fix=("P", "KEEP"), why="The spoken misdirect: it's the mammoth.")
 nb("coldopen", "1.08", "OTS-WIDE · over Gerg's laptop; Gerg doesn't look up",
    "lobby", "SET-01", "lobby_day", ["gerg", "staff"],
@@ -942,9 +969,9 @@ nb("act1", "4.07", "WIDE · the table, one shot for the landing: Nole through th
    "boardroom", "SET-02", "seance", ["nole", "mas", "gerg", "staffer"],
    "CRASH. Ceiling tiles rain down over the foot of the table and NOLE drops through the hole on a cable, landing screen-right. On the right wall the boardroom door, which he didn't use, stays shut. In the foreground Mas doesn't look up from the laptop.",
    "The door he didn't use stays in frame.",
-   lines=[line("e2-a1-0005")], head=2.0, tail=0.4, music=M4,
+   lines=[line("e2-a1-0005")], head=1.55, tail=0.4, fixed=("head",), music=M4,
    sounds=[S("ceiling_burst", 0.0, -14), S("cable_drop", 0.4, -22, new=True), S("landing_thunk", 1.1, -16)],
-   fix=("P", "KEEP", "PACE"), why="He crashes his own séance.")
+   fix=("P", "KEEP", "PACE", "LQ"), why="He crashes his own séance. Mas doesn't look up: \"you're early.\" comes 0.45 s after the landing (quick, Mas), not a held second (lock QA).")
 nb("act1", "4.08", "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
    "boardroom", "SET-02", "seance", ["nole", "gerg", "mas"],
    "NOLE, brushing tiles off his jacket, the 2016 ghost and its Yup still hovering behind him. His plate. GERG answers him, typing.",
@@ -1187,9 +1214,9 @@ nb("act1", "4B.01", "ECU · the calendar card on his phone (the look of Ep1's Bo
    "screen", "SET-02", "boardroom_day", ["mas"],
    "The calendar card: XEL · LONG-FORM · MAR 18 · 2 HRS, with a mic icon. He reads it and accepts with his thumb. The card settles into his calendar.",
    "In Ep1 he accepted an invite without looking; this time he looks.",
-   lines=[line("e2-vo-03")], head=1.0, tail=0.6, onscreen=[O("XEL · LONG-FORM · MAR 18 · 2 HRS", 0.2, None, "ui")],
-   music="E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the tap (J 0.8 s)",
-   sounds=[S("post_click", "E:e2-vo-03+0.1", -22, note="Accept")],
+   lines=[line("e2-vo-03")], head=1.0, tail=2.3, fixed=("head",), onscreen=[O("XEL · LONG-FORM · MAR 18 · 2 HRS", 0.2, None, "ui")],
+   music="E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the card settling (J 0.8 s)",
+   sounds=[S("post_click", "E:e2-vo-03+0.4", -22, note="Accept: a beat after his thought, then the card settles (1.5 s or more)")],
    jcut=[{"sound": "an original podcast-intro sting, under the tap", "lead_s": 0.8}],
    arrive={"s": 1.0, "what": "the phone's glow on the nameplate (continuous from 4A)"},
    transition={"to": "6", "cause": "he accepts", "sound": "the podcast-intro sting (J 0.8 s)", "object": "the invite's mic icon → XEL's mic, same place in frame"},
@@ -1336,7 +1363,7 @@ M8call = "E02-06 · under the call the Water Line thins to its pedal; one chip n
 nb("act2", "8.01", "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
    "darkroom", "SET-07", "darkroom", ["mas", "orb"],
    "The dark room, the monitor's glow already on his face. A notification slides down: EUROPE PASSES ITS AI RULEBOOK · 523–46. Its thumbnail is a 400-page book with a SNOOZE button bolted to its spine. He swipes it away, unopened.",
-   "Undated (R1). The SNOOZE stays unpressed until Ep8.",
+   "Undated (R1). The SNOOZE stays unpressed until Ep8. On the wall behind him, the framed GUEST lanyard from Ep1 (the dark room's, as in sc 23).",
    dur=4.8, onscreen=[O("EUROPE PASSES ITS AI RULEBOOK · 523–46", 1.4, 3.9, "ui"), O("SNOOZE", 1.4, 3.9, "ui")],
    music=M8, sounds=[S("ui_toast_pop", 1.3, -26), S("ui_swipe", 4.0, -24, new=True)],
    jcut=[{"sound": "the Water Line under act-out 1's black", "lead_s": 1.0}],
@@ -1405,8 +1432,12 @@ nb("act2", "9.03", "SCR · the monitor's transcript drops a [laughter] tag → W
    "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"laugh.\"",
    "The tag is THE PLAN's plant (it lies at the bottom of the grate).",
    lines=[line("e2-a2-0005")], head=1.3, tail=0.4, onscreen=[O("[laughter]", 0.5, None, "ui")], music=M9,
-   sounds=[S("engineer_laugh_take", 0.1, -22, new=True, note="his laugh: a separate take in the ENGINEER's voice"), S("tag_drop", 0.6, -26, new=True)],
-   fix=("P", "KEEP"), why="Gerg sets up the demo's laughs.")
+   sounds=[S("engineer_laugh_take", 0.15, -22, new=True, until="L:e2-a2-0005+1.88",
+             note="the sound pass's request (lock-v1.md §6): a nervous laugh in the ENGINEER's own library voice, never an "
+                  "imitation of anyone (S6), from the beat's first frames, ducked under Gerg's line, stopping on his "
+                  "\"laugh.\" (the word ends 1.88 s into the take); it sets up the [laughter] tag and \"It can even laugh back\""),
+           S("tag_drop", 0.6, -26, new=True)],
+   fix=("P", "KEEP", "LQ"), why="Gerg sets up the demo's laughs.")
 nb("act2", "9.04", "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
    "stage", "SET-10", "wings", ["mas", "rima"],
    "MAS asks the question Gerg asked him in Ep1. RIMA answers the next question. He grants her a stage that isn't his to grant; she takes it back as a fact.",
@@ -1467,10 +1498,10 @@ nb("act2", "10.05", "GFX · step 2 (MON, a tiny RADNUS on the Tuesday square) an
    "Step 2 lands on \"today\": a tiny calendar with MON circled; a tiny RADNUS stands on the Tuesday square. Step 3 lands on \"free\": $0, and a tiny crowd floods in.",
    "Nobody on the paper mentions Radnus, and neither does she.",
    lines=[line("e2-a2-0021")], head=0.3, tail=1.4, onscreen=[O("2.", "L:e2-a2-0021+1.0", None, "doc"), O("MON", "L:e2-a2-0021+1.0", None, "doc"),
-                                                    O("3.", "E:e2-a2-0021-0.6", None, "doc"), O("$0", "E:e2-a2-0021-0.6", None, "doc")],
-   music=M10, sounds=[S("rubber_stamp_C", "L:e2-a2-0021+1.0", -22), S("rubber_stamp_C", "E:e2-a2-0021-0.6", -22),
-                      S("tiny_crowd_patter", "E:e2-a2-0021-0.3", -28, new=True)],
-   style=BP, fix=("P", "FACT"), why="The Monday Mas picked; free (facts A23, A24).")
+                                                    O("3.", "L:e2-a2-0021+2.18", None, "doc"), O("$0", "L:e2-a2-0021+2.18", None, "doc")],
+   music=M10, sounds=[S("rubber_stamp_C", "L:e2-a2-0021+1.0", -22), S("rubber_stamp_C", "L:e2-a2-0021+2.18", -22),
+                      S("tiny_crowd_patter", "L:e2-a2-0021+2.45", -28, new=True)],
+   style=BP, fix=("P", "FACT", "LQ"), why="The Monday Mas picked; free (facts A23, A24). Each stamp on its own word, from the take: \"today\" at 1.0 s, \"free\" at 2.18 s into the line (lock QA).")
 nb("act2", "10.06", "GFX · the full sheet again: the tiny stage in the last square, tiny RIMA in a tiny spotlight",
    "void", "SET-11", "blueprint", ["rima"],
    "The full sheet. In the last square, the tiny stage: tiny lights, tiny RIMA in a tiny spotlight, under her last sentence.",
@@ -1512,7 +1543,10 @@ nb("act2", "11.04", "WIDE · the meter frame: the ENGINEER at his mark downstage
    "stage", "SET-10", "demo_house", CH11,
    "The ENGINEER asks for short answers. CHATGTP gets three words from the end, and he comes in over its last word. It finishes anyway. A laugh from the house; in the same frame the spotlight slides one step off Rima toward the big screen.",
    "The episode's first cut-off, with a motive the house can see. Record CHATGTP's line whole; \"Thanks.\" comes in over \"favorite\". Subtitles: \"…one of my favorite—\" / \"Thanks.\" / \"—things.\"",
-   lines=[line("e2-a2-0026"), line("e2-a2-0027", 0.2, QUICK), line("e2-a2-0028", -0.55, FREE, overlap=True)],
+   lines=[line("e2-a2-0026"),
+          line("e2-a2-0027", 0.2, QUICK, sub=[["Great question! Of course! Honestly, short answers are one of my favorite—", 0],
+                                              ["—things.", "after:e2-a2-0028"]]),
+          line("e2-a2-0028", -0.55, FREE, overlap=True)],
    head=0.4, tail=3.0, fixed=("tail",),
    music=M11, sounds=[S("crowd_laugh_m", "E:e2-a2-0027+0.3", -20, new=True), S("spotlight_swing", "E:e2-a2-0027+0.8", -24)],
    fix=("P", "KEEP", "PACE"), why="Laugh 1; the light's first step.")
@@ -1641,10 +1675,10 @@ nb("act2", "12.07", "ECU · he types his own post at a post's pace and posts it 
    "screen", "SET-07", "darkroom", ["mas"],
    "He types his own post, at a post's pace, and posts it. His posted words hold. Over them, after both posts have had their read time, his voice.",
    "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll.",
-   lines=[line("e2-vo-06")], head=8.6, tail=0.4, fixed=("head",),
+   lines=[line("e2-vo-06")], head=9.3, tail=0.4, fixed=("head",),
    onscreen=[O("ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.", 0.4, "end", "post")],
    music=M12b, sounds=[S("key_tap_soft_01", 0.6, -30), S("key_tap_soft_03", 1.4, -30), S("key_tap_soft_05", 2.2, -30), S("post_click", 3.2, -28)],
-   fix=("P", "VO", "FACT", "R1", "SR"), why="V.O. 6 over his act: his want, as a fact about himself, the hope unsaid (facts A61). The post's text is 165 characters: 8.5 s to read from its first letter.")
+   fix=("P", "VO", "FACT", "R1", "SR"), why="V.O. 6 over his act: his want, as a fact about himself, the hope unsaid (facts A61). The post's text is 172 characters: 8.85 s to read from its first letter (P15), so the voice comes 8.9 s after it (lock QA: it came at 8.2; the plan had counted 165).")
 nb("act2", "12.08", "MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "Hold on his face. The cue stops mid-phrase on the downbeat. Black: the midpoint act-out.",
@@ -2107,13 +2141,13 @@ nb("act4", "18.07", "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the fr
 nb("act4", "18.08", "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "mada"],
    "LEFT: TERB says what the committee will do and how long it has. Then, without looking up, he reads its members like a roll call.",
-   "", lines=[line("e2-a4-0004"), line("e2-a4-0005", 0.5, NORMAL)], head=0.3, tail=0.3, music=M18L, fix=("P", "R2", "FACT", "SR"),
+   "", lines=[line("e2-a4-0004"), line("e2-a4-0005", 0.25, QUICK)], head=0.3, tail=0.3, music=M18L, fix=("P", "R2", "FACT", "SR", "LQ"),
    why="Ninety days and the membership, in his own words (facts A36); nobody says who checks whom (W7).")
 nb("act4", "18.09", "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "boardroom", "SET-18", "split_lighthouse", ["mas", "mada"],
    "On \"our chief executive.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
    "HOLD 2 BEATS (the table's).", lines=[line("e2-a4-0006")], head=1.25, tail=1.0, fixed=("head",), music=M18L,
-   sounds=[S("pen_scribble_short", "E:e2-a4-0006+0.3", -26)], fix=("P", "KEEP", "PACE"), why="\"present.\"")
+   sounds=[S("pen_scribble_short", "E:e2-a4-0006+0.05", -26)], fix=("P", "KEEP", "PACE", "LQ"), why="\"present.\" Mada's one word goes down as Terb, brisk, is already on the next line (lock QA).")
 nb("act4", "18.10", "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "mada"],
    "TERB, brisk, the next line. The table turns to Mas again. Mada writes a second word. A held breath on the table (about 1.5 s). Then his thought, in his pane.",
@@ -2142,7 +2176,10 @@ nb("act4", "18.13", "RIGHT pane: the beacon glints across the CLOD boxes; the br
            S("scroll_unroll_fall", "E:e2-a4-0013+0.2", -22, new=True)], fix=("P", "KEEP"), why="The brief document.")
 nb("act4", "18.14", "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "lighthouse", "SET-18", "split_lighthouse", ["mario"],
-   "MARIO, finger up: his concern.", "", lines=[line("e2-a4-0016", pace=NORMAL)], head=0.5, tail=1.0, music=M18R,
+   "MARIO, finger up: his concern.",
+   "Egg on his desk, by the lamp: an op-ed clipping, byline NELEH & THE QUIET VOTE (facts A37; a byline egg only, no hold, never read out).",
+   lines=[line("e2-a4-0016", pace=NORMAL)], head=0.5, tail=1.0, music=M18R,
+   onscreen=[O("NELEH & THE QUIET VOTE", 0.2, None, "sign")],
    fix=("P", "KEEP"), why="\"It's that we might win.\": a dry chill.")
 nb("act4", "18.15", "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "boardroom", "SET-18", "split_lighthouse", ["mas"],
@@ -2180,18 +2217,23 @@ nb("act4", "19.03", "WIDE · the doors: the new CFO comes in along the hand truc
    sounds=[S("calc_tape_spool", 0.3, -26, new=True, dur=2.6)], fix=("P", "FACT"), why="(facts A42)")
 nb("act4", "19.04", "2S · Haras and Gerg on the beanbags, the wall screen low behind them (no cut-ins)",
    "lobby", "SET-01", "lobby_watchparty", ["haras", "gerg"],
-   "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it.",
-   "The cheer cuts \"And profit—\" (the episode's second and last cut-off). Record it complete.",
+   "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it: as she asks, the wall screen behind them puts up the announcement and the stream's own crowd roars, and the lobby's cheer takes her last word.",
+   "The cheer cuts \"And profit—\" (the episode's second and last cut-off): its cause, the stream's …AND LATER THIS YEAR: CHATGTP. on the wall screen behind them, comes up and roars 0.2 s before her line; the lobby's cheer lands on \"profit\" (lock QA). Record it complete; the take plays whole under the cheer, and the subtitle reads \"And profit—\".",
    lines=[line("e2-a4-0017"), line("e2-a4-0018", 0.2, QUICK), line("e2-a4-0019", 0.25, QUICK), line("e2-a4-0020", 0.2, QUICK),
-          line("e2-a4-0021", 0.25, QUICK)], head=0.4, tail=0.1,
-   onscreen=[O("And profit—", "L:e2-a4-0021+0.0", "E:e2-a4-0021+0.2", "caption")], music=M19, fix=("P", "KEEP", "PACE"),
-   why="The race is fought over compute, for training and for running (the concept's callback).")
+          line("e2-a4-0021", 0.25, QUICK, sub=[["And profit—", 0]])], head=0.4, tail=0.1,
+   onscreen=[O("…AND LATER THIS YEAR: CHATGTP.", "L:e2-a4-0021-0.2", None, "ui")], music=M19,
+   sounds=[S("stream_announce_roar", "L:e2-a4-0021-0.2", -24, new=True,
+             note="the keynote stream's own crowd roars at the announcement, low on the wall screen: the cheer's cause, under her question"),
+           S("crowd_cheer", "L:e2-a4-0021+0.15", -18, new=True,
+             note="the lobby erupts on \"profit\" and talks over it (the cut-off); it runs on across the cut into 19.05")],
+   fix=("P", "KEEP", "PACE", "LQ"),
+   why="The race is fought over compute, for training and for running (the concept's callback). The world talks over the one key word.")
 nb("act4", "19.05", "SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer",
    "lobby", "SET-01", "lobby_watchparty", ["haras", "staff", "gerg"],
-   "The stream says it. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
-   "", lines=[line("e2-a4-0022")], head=2.4, tail=0.5, fixed=("head",),
-   onscreen=[O("…AND LATER THIS YEAR: CHATGTP.", 0.1, 2.2, "ui")], music=M19,
-   sounds=[S("crowd_cheer", 0.6, -18, new=True), S("confetti_pop", 0.9, -22, new=True)], fix=("P", "FACT", "KEEP"),
+   "On the stream, full frame, the announcement that the lobby is already cheering. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
+   "The cheer started under her question in 19.04 and carries across the cut.", lines=[line("e2-a4-0022")], head=2.4, tail=0.5, fixed=("head",),
+   onscreen=[O("…AND LATER THIS YEAR: CHATGTP.", 0.0, 2.2, "ui")], music=M19,
+   sounds=[S("confetti_pop", 0.9, -22, new=True)], fix=("P", "FACT", "KEEP", "LQ"),
    why="Upside (facts A40).")
 nb("act4", "19.06", "SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby",
    "lobby", "SET-01", "lobby_watchparty", ["staffer", "gerg", "staff"],
@@ -2509,28 +2551,47 @@ nb("tag", "23.09", "MCU · Mas at his monitor, its glow on his still face; cut t
 
 # ================================================================================================ gaps across a cut
 # A tempo-marked exchange that crosses a cut: the gap is the outgoing beat's tail plus the incoming beat's head. Pinned
-# here (both parts fixed) so the fit can't stretch an answer past its mark: (out beat, in beat, gap s, pace class).
+# here (both parts fixed) so the fit can't stretch an answer past its mark: (out beat, in beat, gap s, pace class[,
+# the outgoing tail s]). The tail defaults to min(0.15, gap / 2); a row names its own where the picture needs the cut
+# later (the wall's freeze, the window's drop).
+# The lock-QA pass (lock-v1.md §3.5, 2026-10-09) added the rows marked LQ: exchanges the script's TEMPO lines and the
+# proposal's Pace table mark, which the plan had left unpinned, so the fit had stretched them to 0.9-1.9 s. Two are
+# GUIDE breaks, each with its one line: 1.07 → 1.08 (the second THUD sits between the lines) and 18.08 → 18.09 (the
+# script's own HOLD 2 BEATS; not a row here: 18.09's fixed head).
 XGAP = [
     ("1.03", "1.04", 0.25, QUICK),       # Gerg's "Which sentence?" → Selbeep
+    ("1.07", "1.08", 0.5, NORMAL, 0.25),  # LQ · Selbeep → Gerg's correction. GUIDE break (script: quick 0.25 s): the
+                                          # second THUD lands 0.1 s after Selbeep's line, the coffee jumps; Gerg answers
+                                          # the THUD 0.4 s after it, not looking up
+    ("4.07", "4.08", 0.3, QUICK),        # LQ · "you're early." → Nole, loud, fast, first (proposal Pace: quick)
+    ("4A.02", "4A.03", 0.3, QUICK),      # LQ · the reading → "You can sit down now, Mas." (script: quick and dry); the
+                                          # finding's second half has been on Mas's still face for its whole length
+    ("9.01", "9.02", 0.3, QUICK),        # LQ · "We're on in five." → the engineer rehearsing to her (proposal Pace: 9 quick)
     ("4.08", "4.09", 0.25, QUICK),       # Gerg's blog post → Nole's case
     ("4.09", "4.10", 0.45, QMAS),        # Nole's case → "spirit, what did we call it?"
     ("4.20", "4.21", 0.25, QUICK),       # "What's that?" → Nole, hushed
     ("4.21", "4.22", 0.2, QUICK),        # "…out of nowhere." → Gerg's correction lands quick
+    ("4.22", "4.23", 0.5, NORMAL, 0.3),  # LQ · "…millions of games." → Nole's fear (script: normal, 0.5 s); the knobs stop
+                                          # ticking on "games", so the frozen wall holds 0.3 s after the line, then Nole
     ("4.23", "4.24", 0.3, QUICK),        # the fear → the credit
     ("6.04", "6.05", 0.45, QMAS),        # the Alyi question → "no."
     ("7.02", "7.03", 0.5, NORMAL),       # the Humanist → "Welcome."
     ("7.03", "7.04", 0.5, NORMAL),       # Tasya → "I brought my own team."
     ("13.01", "13.02", 0.3, QUICK),      # Staffer 2 → "He posted, though."
     ("14.07", "14.08", 0.5, NORMAL),     # "congratulations." → Bukaj's "Thank you."
+    ("17.04", "17.05", 0.3, QUICK, 0.1),  # LQ · "…I don't forecast that far." → the driver, impatient (script: quick
+                                          # 0.3 s); his window is already coming down under the cut
     ("17.05", "17.06", 0.5, NORMAL),     # the driver → "Already did."
     ("17.15", "17.16", 0.6, NORMAL),     # "Updating." → the driver leans out
+    ("18.09", "18.10", 0.25, QUICK),     # LQ · "present." → Terb, brisk, the next line of the page (script: quick (Terb))
     ("18.13", "18.14", 0.5, NORMAL),     # "…one concern." → "It's that we might win."
     ("19.09", "19.10", 0.45, NORMAL),    # "the phone's closer." → Gerg
 ]
 _BY_ID = {b["id"]: b for seg in SEGS for b in NEW[seg]}
-for _a, _b, _g, _p in XGAP:
+for _row in XGAP:
+    _a, _b, _g, _p = _row[:4]
     A_, B_ = _BY_ID[_a], _BY_ID[_b]
-    A_["_tail"] = round(min(0.15, _g / 2), 2)
+    A_["_tail"] = round(_row[4] if len(_row) > 4 else min(0.15, _g / 2), 2)
     B_["_head"] = round(_g - A_["_tail"], 2)
     A_["_fixed"].add("tail")
     B_["_fixed"].add("head")

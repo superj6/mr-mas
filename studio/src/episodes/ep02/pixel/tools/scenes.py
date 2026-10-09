@@ -4,12 +4,14 @@
 A segment's layouts live one module per scene, <seg>/scenes/sc-<slug>.ts (spec.ts defineScene), so the per-scene render
 (tools/render.ts `scenes`) can hash each scene's own code and re-render only what changed. After a (re-)lock this tool:
   * writes a stub module for every scene of the lock that has none (its shots listed in a comment, no layouts: they
-    render as the host's STAND-IN until the shot pass fills them), and never touches an existing module;
+    render as the host's STAND-IN until the shot pass fills them), and never touches an existing module, except with
+    --refresh-stubs: a module that is still a bare stub (its code exactly the stub's, nothing drawn) gets its header
+    rewritten for the new lock (the shots' frames, and the plan's picture notes: the lock QA, 2026-10-09);
   * rewrites the block between `// <scenes>` and `// </scenes>` in <seg>/shots.ts: one import per scene module, in the
     lock's order (a module whose scene left the lock stays imported, flagged, so no drawing is lost);
   * --new-segment also writes <seg>/shots.ts itself (only when it doesn't exist).
 
-  python3 studio/src/episodes/ep02/pixel/tools/scenes.py <seg> [--new-segment] [--dry]
+  python3 studio/src/episodes/ep02/pixel/tools/scenes.py <seg> [--new-segment] [--refresh-stubs] [--dry]
       reads  studio/src/episodes/ep02/pixel/<seg>/data.ts (the lock tools/lock.py wrote)
       writes studio/src/episodes/ep02/pixel/<seg>/scenes/sc-<slug>.ts (new stubs) and <seg>/shots.ts (the import block)
 The scene id's file name: lowercase, every run of other characters -> '-' (spec.ts sceneSlug: '4A' -> sc-4a.ts).
@@ -57,7 +59,7 @@ export const SEGMENT = defineSegment({{seg: '{seg}', lock: LOCK, layouts: fromSc
 
 STUB = """// MR. MAS — Ep2 v1 · {seg} · scene {scene}: {n} shot(s), {frames} f at the lock of {when}:
 //   {shots}
-// A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
+{pictures}// A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
 // fails on stand-ins). Fill it with L.add(<shot id>, {{st, draw: (fb, k, sh, f) => ...}}) per shot (README.md); `f` is
 // the frame inside this scene. Name every file a layout reads at run time in defineScene({{assets}}).
 import {{defineScene, layouts}} from '../../kit';
@@ -66,6 +68,40 @@ const L = layouts();
 
 export const SCENE = defineScene({{scene: {scene_js}, layouts: L.all}});
 """
+
+
+STUB_MARK = 'A stub written by tools/scenes.py: no layouts yet'
+
+
+def code_of(txt: str) -> str:
+    """a module's code without its comment lines (a bare stub's code is the template's)"""
+    return '\n'.join(x for x in txt.splitlines() if not x.lstrip().startswith('//')).strip()
+
+
+def wrap(text: str, width: int = 112) -> list[str]:
+    out, cur = [], ''
+    for w in text.split():
+        if cur and len(cur) + 1 + len(w) > width:
+            out.append(cur)
+            cur = w
+        else:
+            cur = f'{cur} {w}' if cur else w
+    return out + ([cur] if cur else [])
+
+
+def stub_body(seg: str, sc: dict, shots: dict, when: str) -> str:
+    ids = sc['shots']
+    desc = ' · '.join(f"{i} ({shots[i]['e'] - shots[i]['s']} f, {shots[i]['framing'][:40]})" for i in ids)
+    notes = [(i, shots[i].get('picture') or '') for i in ids if shots[i].get('picture')]
+    pictures = ''
+    if notes:
+        pictures = "// The plan's picture notes (eggs, Ep1 payoffs, constraints; each shot's `picture` in data.ts):\n"
+        for i, t in notes:
+            ls = wrap(f'{i}: {t}')
+            pictures += ''.join(f"//   {x}\n" if k == 0 else f"//     {x}\n" for k, x in enumerate(ls))
+    return STUB.format(seg=seg, scene=sc['id'], n=len(ids), frames=sc['e'] - sc['s'], when=when,
+                       shots=re.sub(r'(.{1,112})(?: |$)', '\\1\n//   ', desc).rstrip('/ \n'), scene_js=json.dumps(sc['id']),
+                       pictures=pictures)
 
 
 def main(argv: list[str]) -> int:
@@ -78,15 +114,20 @@ def main(argv: list[str]) -> int:
     scenes = lock.get('scenes') or []
     shots = {s['id']: s for s in lock['shots']}
     d = os.path.join(PIXEL, seg, 'scenes')
-    made = []
+    made, refreshed, kept = [], [], []
     for sc in scenes:
         f = os.path.join(d, f'sc-{slug(sc["id"])}.ts')
+        body = stub_body(seg, sc, shots, lock['source']['timeline'])
         if os.path.exists(f):
+            old = open(f).read()
+            if '--refresh-stubs' in argv and STUB_MARK in old and code_of(old) == code_of(body):
+                if old != body:
+                    refreshed.append(os.path.relpath(f, PIXEL))
+                    if not dry:
+                        open(f, 'w').write(body)
+            elif '--refresh-stubs' in argv:
+                kept.append(os.path.relpath(f, PIXEL))      # drawn in (or edited): never touched
             continue
-        ids = sc['shots']
-        desc = ' · '.join(f"{i} ({shots[i]['e'] - shots[i]['s']} f, {shots[i]['framing'][:40]})" for i in ids)
-        body = STUB.format(seg=seg, scene=sc['id'], n=len(ids), frames=sc['e'] - sc['s'], when=lock['source']['timeline'],
-                           shots=re.sub(r'(.{1,112})(?: |$)', '\\1\n//   ', desc).rstrip('/ \n'), scene_js=json.dumps(sc['id']))
         made.append(os.path.relpath(f, PIXEL))
         if not dry:
             os.makedirs(d, exist_ok=True)
@@ -115,6 +156,8 @@ def main(argv: list[str]) -> int:
         os.makedirs(os.path.dirname(sp), exist_ok=True)
         open(sp, 'w').write(new)
     print(f'{seg}: {len(scenes)} scenes in the lock; new stubs {made or "none"}; shots.ts imports {len(order)}'
+          + (f'; stub headers refreshed {refreshed or "none"}' if '--refresh-stubs' in argv else '')
+          + (f'; drawn in, not touched {kept}' if kept else '')
           + (f'; NOT IN THE LOCK (kept): {gone}' if gone else '') + (' (dry run: nothing written)' if dry else ''))
     return 0
 

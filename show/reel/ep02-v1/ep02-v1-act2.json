@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed",
  "logline": "The Ep2 v1 base lock of act2: the beat plan applied to no source (every beat new).",
  "dateSpan": "Apr 1 - May 14, 2024",
- "runtimeMin": 4.67,
+ "runtimeMin": 4.65,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -71,7 +71,7 @@
   "builder": "audio/reel/ep02-v1/build_timeline.py",
   "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act2-bed.wav",
   "notes": "show/episodes/ep02/production/v1/pipeline.md",
-  "seconds": 280.0
+  "seconds": 279.0
  },
  "beats": [
   {
@@ -126,7 +126,7 @@
     "mode": "MONTAGE on one surface → a CALL",
     "pace": "normal",
     "camera": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
-    "picture": "Undated (R1). The SNOOZE stays unpressed until Ep8."
+    "picture": "Undated (R1). The SNOOZE stays unpressed until Ep8. On the wall behind him, the framed GUEST lanyard from Ep1 (the dark room's, as in sc 23)."
    }
   },
   {
@@ -738,7 +738,7 @@
      "kind": "rail"
     }
    ],
-   "reelDur": 8.29,
+   "reelDur": 7.94,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -777,7 +777,7 @@
      "id": "e2-a2-0003",
      "who": "engineer",
      "text": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
-     "t": 0.42,
+     "t": 0.15,
      "dur": 4.6,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
      "in": 0.38,
@@ -875,7 +875,7 @@
      "id": "e2-a2-0004",
      "who": "engineer",
      "text": "Before I've asked. It does that.",
-     "t": 5.92,
+     "t": 5.65,
      "dur": 1.77,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
      "in": 0.5,
@@ -918,12 +918,12 @@
    "onscreen": [
     {
      "text": "yes!!",
-     "at": 5.12,
-     "until": 8.19,
+     "at": 4.85,
+     "until": 7.9,
      "kind": "ui"
     }
    ],
-   "reelDur": 8.19,
+   "reelDur": 7.9,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -931,7 +931,7 @@
    "sounds": [
     {
      "name": "ui_chirp_bright",
-     "at": 5.12,
+     "at": 4.85,
      "gain": -22
     }
    ],
@@ -942,9 +942,15 @@
     "tempo": {
      "pace": "quick",
      "gaps": {
-      "e2-a2-0004": 0.9
+      "e2-a2-0004": 0.9,
+      "e2-a2-0003": 0.3
      },
-     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a2-0002",
+      "gap_s": 0.3,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
     },
     "camera": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
     "picture": "The product answers before it's asked (the season's hint)."
@@ -970,7 +976,7 @@
      "id": "e2-a2-0005",
      "who": "gerg",
      "text": "Careful. The new one can hear you laugh.",
-     "t": 2.19,
+     "t": 2.1,
      "dur": 1.96,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
      "in": 0.39,
@@ -1023,12 +1029,12 @@
    "onscreen": [
     {
      "text": "[laughter]",
-     "at": 0.84,
-     "until": 4.82,
+     "at": 0.81,
+     "until": 4.7,
      "kind": "ui"
     }
    ],
-   "reelDur": 4.82,
+   "reelDur": 4.7,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1036,13 +1042,14 @@
    "sounds": [
     {
      "name": "engineer_laugh_take",
-     "at": 0.168,
+     "at": 0.242,
      "gain": -22,
-     "note": "his laugh: a separate take in the ENGINEER's voice"
+     "dur": 3.74,
+     "note": "the sound pass's request (lock-v1.md §6): a nervous laugh in the ENGINEER's own library voice, never an imitation of anyone (S6), from the beat's first frames, ducked under Gerg's line, stopping on his \"laugh.\" (the word ends 1.88 s into the take); it sets up the [laughter] tag and \"It can even laugh back\""
     },
     {
      "name": "tag_drop",
-     "at": 1.011,
+     "at": 0.969,
      "gain": -26
     }
    ],
@@ -1079,7 +1086,7 @@
      "id": "e2-a2-0006",
      "who": "mas",
      "text": "is it ready?",
-     "t": 0.84,
+     "t": 0.8,
      "dur": 0.68,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
      "in": 0.39,
@@ -1107,7 +1114,7 @@
      "id": "e2-a2-0007",
      "who": "rima",
      "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
-     "t": 2.02,
+     "t": 1.98,
      "dur": 6.23,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
      "in": 0.35,
@@ -1210,7 +1217,7 @@
      "id": "e2-a2-0008",
      "who": "mas",
      "text": "it's all yours.",
-     "t": 8.75,
+     "t": 8.71,
      "dur": 1.11,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
      "in": 0.38,
@@ -1238,7 +1245,7 @@
      "id": "e2-a2-0009",
      "who": "rima",
      "text": "It is. Enjoy the view.",
-     "t": 10.26,
+     "t": 10.22,
      "dur": 2.05,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
      "in": 0.36,
@@ -1274,7 +1281,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 13.32,
+   "reelDur": 13.24,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1315,7 +1322,7 @@
      "id": "e2-a2-0010",
      "who": "engineer",
      "text": "What if it freezes? Live, on the stream?",
-     "t": 1.68,
+     "t": 1.61,
      "dur": 2.32,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
      "in": 0.41,
@@ -1368,7 +1375,7 @@
      "id": "e2-a2-0011",
      "who": "rima",
      "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
-     "t": 4.3,
+     "t": 4.23,
      "dur": 5.62,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
      "in": 0.36,
@@ -1454,7 +1461,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 10.42,
+   "reelDur": 10.33,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1494,7 +1501,7 @@
      "id": "e2-a2-0012",
      "who": "voice1",
      "text": "Hi.",
-     "t": 1.68,
+     "t": 1.61,
      "dur": 0.49,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
      "in": 0.39,
@@ -1512,7 +1519,7 @@
      "id": "e2-a2-0013",
      "who": "voice2",
      "text": "Hi!",
-     "t": 2.47,
+     "t": 2.4,
      "dur": 0.33,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
      "in": 0.39,
@@ -1530,7 +1537,7 @@
      "id": "e2-a2-0014",
      "who": "voice3",
      "text": "hi?",
-     "t": 3.1,
+     "t": 3.03,
      "dur": 0.44,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
      "in": 0.38,
@@ -1548,7 +1555,7 @@
      "id": "e2-a2-0015",
      "who": "voice4",
      "text": "Hi…",
-     "t": 3.84,
+     "t": 3.77,
      "dur": 0.7,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
      "in": 0.39,
@@ -1566,7 +1573,7 @@
      "id": "e2-a2-0016",
      "who": "chatgtp",
      "text": "Hey.",
-     "t": 4.84,
+     "t": 4.77,
      "dur": 0.52,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
      "in": 0.37,
@@ -1584,48 +1591,48 @@
    "onscreen": [
     {
      "text": "VOICE",
-     "at": 0.5,
-     "until": 6.96,
+     "at": 0.48,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "SINCE SEP 2023",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "VOICE 1",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "VOICE 2",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "VOICE 3",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "VOICE 4",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     },
     {
      "text": "VOICE 5",
-     "at": 0.67,
-     "until": 6.96,
+     "at": 0.64,
+     "until": 6.89,
      "kind": "ui"
     }
    ],
-   "reelDur": 6.96,
+   "reelDur": 6.89,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat"
@@ -1633,12 +1640,12 @@
    "sounds": [
     {
      "name": "panel_unfold_step",
-     "at": 5.56,
+     "at": 5.49,
      "gain": -26
     },
     {
      "name": "drafting_ink_stroke",
-     "at": 6.36,
+     "at": 6.29,
      "gain": -26
     }
    ],
@@ -2297,13 +2304,13 @@
     },
     {
      "text": "3.",
-     "at": 3.54,
+     "at": 2.56,
      "until": 5.92,
      "kind": "doc"
     },
     {
      "text": "$0",
-     "at": 3.54,
+     "at": 2.56,
      "until": 5.92,
      "kind": "doc"
     }
@@ -2321,12 +2328,12 @@
     },
     {
      "name": "rubber_stamp_C",
-     "at": 3.54,
+     "at": 2.56,
      "gain": -22
     },
     {
      "name": "tiny_crowd_patter",
-     "at": 3.84,
+     "at": 2.83,
      "gain": -28
     }
    ],
@@ -2995,7 +3002,17 @@
       ]
      ],
      "tag": "",
-     "cut": false
+     "cut": false,
+     "sub": [
+      [
+       "Great question! Of course! Honestly, short answers are one of my favorite—",
+       0
+      ],
+      [
+       "—things.",
+       "after:e2-a2-0028"
+      ]
+     ]
     },
     {
      "id": "e2-a2-0028",
@@ -4126,7 +4143,7 @@
    "caption": "On stage, the house lights come up full. The blimp has drifted out through the rig and is gone. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 6.53,
+   "reelDur": 6.09,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
@@ -4134,7 +4151,7 @@
    "sounds": [
     {
      "name": "house_lights_up",
-     "at": 0.242,
+     "at": 0.226,
      "gain": -24
     }
    ],
@@ -4162,12 +4179,12 @@
    "onscreen": [
     {
      "text": "RESERVED: CHIEF SCIENTIST",
-     "at": 0.48,
-     "until": 3.39,
+     "at": 0.45,
+     "until": 3.16,
      "kind": "sign"
     }
    ],
-   "reelDur": 3.39,
+   "reelDur": 3.16,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
@@ -4376,7 +4393,7 @@
      "id": "e2-vo-06",
      "who": "mas",
      "text": "i came back.",
-     "t": 8.6,
+     "t": 9.3,
      "dur": 1.2,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
      "in": 0.35,
@@ -4405,11 +4422,11 @@
     {
      "text": "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.",
      "at": 0.4,
-     "until": 10.28,
+     "until": 10.95,
      "kind": "post"
     }
    ],
-   "reelDur": 10.28,
+   "reelDur": 10.95,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the news's tiny ducked bed under the pad until he minimises it; the pad thins to its pedal under Alyi's post; the designed stop after the hold on his face (the midpoint act-out)"

@@ -259,9 +259,18 @@ def build():
                 d = {"id": lid, "new": True, "who": ln["who"]}
                 if ln.get("vo"):
                     d["vo"] = True
-                for k in ("tag", "text", "delivery", "kind", "take", "take_file", "note", "cut_from"):
+                for k in ("tag", "text", "delivery", "kind", "take", "take_file", "note", "cut_from", "sub"):
                     if k in ln:
                         d[k] = ln[k]
+                for piece in ln.get("sub") or []:
+                    # the subtitle as drawn, when it isn't the line's words as recorded (a cut-off): [text, from] pieces,
+                    # from = a word index of the take, or "after:<line id>" (shown once that line ends)
+                    st_ = piece[1]
+                    if not (isinstance(piece, list) and len(piece) == 2 and isinstance(piece[0], str) and (
+                            isinstance(st_, int) or (isinstance(st_, str) and st_.startswith("after:")))):
+                        fail(f"{b['id']} {lid}: subtitle piece {piece!r} is not [text, word index | 'after:<line>']")
+                    elif isinstance(st_, str) and st_[6:] not in {x[0] for x in lw}:
+                        fail(f"{b['id']} {lid}: subtitle piece {piece[0]!r} waits for {st_[6:]}, which isn't in the beat")
                 if j == 0:
                     d["after"] = f"start+{fmt_s(air['head'])}"
                     d["gap_s"] = 0.0
@@ -336,6 +345,12 @@ def build():
                 for k in ("new", "dur", "note"):
                     if k in sd:
                         d[k] = sd[k]
+                if sd.get("until") is not None:       # a sound that stops on a word: its dur from the resolved times
+                    u_s = resolve(sd["until"], b, air, old_air, est, lw)
+                    if u_s <= at_s:
+                        fail(f"{b['id']}: sound {sd['name']} until {sd['until']!r} ({u_s:.2f} s) is not after its start ({at_s:.2f} s)")
+                    d["dur"] = round(u_s - max(0.0, at_s), 2)
+                    d["until_s"] = round(u_s, 2)
                 if at_s > est + 0.05:
                     warn(f"{b['id']}: sound {sd['name']} at {at_s:.2f} s, past the beat's end ({est:.2f})")
                 snds.append(d)

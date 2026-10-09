@@ -22,8 +22,9 @@ The layout helpers (`kit.ts`: the pixel font, `held`, the framing moves, lip-syn
 cd /home/jgon/project/art/mrmas
 # 1. Lock (light). The master is the EL lock (once its takes exist); before that, the Kokoro base lock:
 bash show/episodes/ep02/production/v1/assembly/tools/el_lock.sh act1            # or KOKORO=1 bash .../el_lock.sh act1
-# 2. A stub module for every scene the lock has and shots.ts doesn't import yet (never touches a module that exists):
-python3 studio/src/episodes/ep02/pixel/tools/scenes.py act1
+# 2. A stub module for every scene the lock has and shots.ts doesn't import yet (never touches a module that exists;
+#    --refresh-stubs rewrites only a bare stub's header, its frames and picture notes, for the new lock):
+python3 studio/src/episodes/ep02/pixel/tools/scenes.py act1 --refresh-stubs
 # 3. Draw: fill studio/src/episodes/ep02/pixel/act1/scenes/sc-<scene>.ts, L.add(<shot id>, {st, draw, marks, face, ...})
 cd studio
 node src/episodes/ep02/pixel/tools/build.mjs act1 $S/r-act1.cjs     # the renderer + its metafile (<bundle>.meta.json)
@@ -46,7 +47,7 @@ node $S/r-act1.cjs sceneprune                                      # drop cache 
 
 | Folder | What |
 |---|---|
-| `coldopen/ act1/ act2/ act3/ act4/ tag/` | the six story segments. **Locked on the v1 EL master (2026-10-09, [lock-v1.md](../../../../../show/episodes/ep02/production/v1/lock-v1.md)):** `data.ts` is the real lock (243 shots, 20 scenes) and `scenes/` holds a stub module per scene (no layouts yet: every shot renders as a stand-in until the shot pass draws). Each text carries the beat plan's own kind (post, doc, sign, plate, …), and a line the plan tags `os` is off screen. Before a lock, `data.ts` was the **scaffold** (`tools/lock.py --scaffold`) |
+| `coldopen/ act1/ act2/ act3/ act4/ tag/` | the six story segments. **Locked on the v1 EL master (2026-10-09, [lock-v1.md](../../../../../show/episodes/ep02/production/v1/lock-v1.md)):** `data.ts` is the real lock (243 shots, 20 scenes) and `scenes/` holds a stub module per scene (no layouts yet: every shot renders as a stand-in until the shot pass draws). Each text carries the beat plan's own kind (post, doc, sign, plate, …), and a line the plan tags `os` is off screen. **Since the lock QA** (2026-10-09): each shot carries the beat plan's `picture` note (`sh.picture`: the eggs, the Ep1 payoffs and constraints such as "no image of Alyi in any surface"), the bare stubs list those notes in their headers, and a cut-off line's subtitle is drawn from its `sub` pieces (`lock.subs`: "…one of my favorite—" / "Thanks." / "—things."; "And profit—"). Before a lock, `data.ts` was the **scaffold** (`tools/lock.py --scaffold`) |
 | `card/` | the 2 s filename card, `ep1.1_her.wav` (Ep1's card, re-typed at 1 character a frame so the cursor keeps Ep1's rhythm and the cut lands on an off frame). Its own `timeline.json` and lock |
 | `example/` | the per-scene test bed (not the show): three scenes, a rail that runs from A into B, a V.O. line, a dither exit from B into C. `tools/scenetest.sh <scratch>` renders it, changes it and shows only the changed scenes render |
 

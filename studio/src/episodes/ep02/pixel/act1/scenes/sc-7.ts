@@ -3,6 +3,12 @@
 //   · 7.03 (204 f, 2S · the same: Tasya's welcome) · 7.04 (208 f, 2S · the same: the team, the room; Tasya) · 7.05
 //   (126 f, ECU · the key ring: a key twisted off; a) · 7.06 (61 f, 2S · the Humanist, looking up where Tasy) · 7.07
 //   (121 f, WIDE · Tasya's glance, and a whole-pixel) · 7.08 (135 f, MCU · Mas at his monitor four floors up )
+// The plan's picture notes (eggs, Ep1 payoffs, constraints; each shot's `picture` in data.ts):
+//   7.01: Egg: Ep1's odometer still wedged in the bedrock. The phone's voice is small and band-passed.
+//   7.02: The boxes say this was weeks in the making (R2): November recalled, not caused.
+//   7.05: Eggs: LE CHIEN's paw print; THE TRUSTBUSTER's INQUIRY envelope.
+//   7.07: An L-cut: the line on Mas. When the basement's lights came on, his monitor dimmed one palette step.
+//   7.08: 1.5 s on Mas before the jangle (R1).
 // A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
 // fails on stand-ins). Fill it with L.add(<shot id>, {st, draw: (fb, k, sh, f) => ...}) per shot (README.md); `f` is
 // the frame inside this scene. Name every file a layout reads at run time in defineScene({assets}).
