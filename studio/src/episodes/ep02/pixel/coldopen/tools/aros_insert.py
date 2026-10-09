@@ -13,7 +13,8 @@ The step-out is our own conversion (manifest §4: "the step-out stays our conver
                  (it re-uses f018-f071 across the cut: the wide's tiny mammoth reads the same size as the medium's)
         k148-    the take HOLDS on f165, the frame its foot reaches the bottom edge: the preview stops as the foot
                  breaks the bezel (the pixel foot is the layout's, at AROS_FOOT, under the screen)
-  1.03  k0-7     the master's screen on f165: real (k0-1) -> 2 px blocks (k2-3) -> the native grid in true colour
+  1.03  k0-7     the master's screen REFRAMED for the OTS over Gerg (sets.ts CAM.OTS: the room 32 px right, 4 down, so
+                 native 376,28) on f165: real (k0-1) -> 2 px blocks (k2-3) -> the native grid in true colour
                  (k4-5) -> the master palette on the native grid (k6-7): it becomes ours. From k8 the layout draws
                  the empty meadow in the palette (AROS_MEADOW, below) and the pixel mammoth stepping out
 
@@ -51,7 +52,9 @@ W, H = 1920, 1080
 
 # native rects (x, y, w, h); x4 for 1080p
 MASTER = (344, 24, 103, 101)        # sets/lobby2.ts LOBBY2.SCREEN (x0 344 .. x1 446, y0 24 .. y1 124)
-MEDIUM = (206, 12, 262, 148)        # coldopen/art.ts MED.screen
+MEDIUM = (206, 12, 262, 148)        # coldopen/sets.ts MED.screen
+CAM_OTS = (32, 4)                   # coldopen/sets.ts CAM.OTS: 1.03 reframes the master (its own setup)
+MASTER_OTS = (MASTER[0] + CAM_OTS[0], MASTER[1] + CAM_OTS[1], MASTER[2], MASTER[3])
 HOLD = 165                          # the take's frame where the near foot reaches the bottom edge
 MED_FROM = 18                       # 1.02's first take frame
 BREAK_K = 148                       # 1.02: the foot's step (mammoth_step_pixel @148)
@@ -149,7 +152,7 @@ def main() -> None:
     write("1.02", plan02, x4(MEDIUM), chk)
     # 1.03: the step-down on the master's screen, k0-7
     modes = ["real", "real", "2px", "2px", "native", "native", "pal", "pal"]
-    write("1.03", [(k, HOLD, m) for k, m in enumerate(modes)], x4(MASTER))
+    write("1.03", [(k, HOLD, m) for k, m in enumerate(modes)], x4(MASTER_OTS))
 
     # ---- the native plates for the layout (aros.ts)
     names = {tuple(c["rgb"]): c["name"] for c in json.loads((ROOT / "studio/tools/genvideo/palettes.json").read_text())["master"]}
