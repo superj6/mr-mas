@@ -1,0 +1,111 @@
+{
+ "takes": {
+  "e2-a3-0012__mas-manalt-C": {
+   "take": "e2-a3-0012__mas-manalt-C",
+   "key": "9a98dec3ce4511cb",
+   "base_key": "9a98dec3ce4511cb",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/slow/e2-a3-0012/wav/e2-a3-0012__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.83,
+   "offset_s": 0.35,
+   "sent": "Someone has to hold the glass.",
+   "seed": 2019535260,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.37,
+    "span_s": 1.99,
+    "words": 6,
+    "wpm": 180.9,
+    "syllables": 7,
+    "articulation_sps": 3.52,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.46,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 107.9,
+    "f0_range_st": 11.9
+   },
+   "words": [
+    {
+     "w": "Someone",
+     "t0": 0.36,
+     "t1": 0.849
+    },
+    {
+     "w": "has",
+     "t0": 0.896,
+     "t1": 1.07
+    },
+    {
+     "w": "to",
+     "t0": 1.139,
+     "t1": 1.186
+    },
+    {
+     "w": "hold",
+     "t0": 1.256,
+     "t1": 1.476
+    },
+    {
+     "w": "the",
+     "t0": 1.534,
+     "t1": 1.604
+    },
+    {
+     "w": "glass",
+     "t0": 1.662,
+     "t1": 2.277
+    }
+   ],
+   "qa": {
+    "asr": "Someone has to hold the glass.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.93,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 107.9,
+    "f0_range_st": 11.9,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.46,
+    "raw_tail_cut": false,
+    "align_median_s": 0.119
+   },
+   "raw": {
+    "raw_first_sound_s": 0.035,
+    "raw_len_s": 2.368,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a3-0012__mas-manalt-C",
+   "key": "9a98dec3ce4511cb",
+   "chars": 30,
+   "cost_header": "13",
+   "request_id": "19SWkVaEn20WXO3Cej9m",
+   "at": "05:20:53"
+  }
+ ]
+}

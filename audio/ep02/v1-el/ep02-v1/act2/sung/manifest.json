@@ -1,0 +1,93 @@
+{
+ "takes": {
+  "e2-a2-0030-src__chatgtp-A": {
+   "take": "e2-a2-0030-src__chatgtp-A",
+   "key": "86e13db04c7f27f2",
+   "base_key": "86e13db04c7f27f2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act2/sung/wav/e2-a2-0030-src__chatgtp-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.675,
+   "offset_s": 0.35,
+   "sent": "One. Word.",
+   "seed": 75184376,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "voice_id": "Y2pP8eXRDH19yyV1Tslt",
+   "voice_name": "Maya - The Upbeat Creator",
+   "cand": "A",
+   "role": "chatgtp",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 1.24,
+    "span_s": 0.89,
+    "words": 2,
+    "wpm": 134.8,
+    "syllables": 2,
+    "articulation_sps": 2.94,
+    "pauses_s": [
+     0.21
+    ],
+    "longest_internal_gap_s": 0.21,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.435,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 221.4,
+    "f0_range_st": 11.7
+   },
+   "words": [
+    {
+     "w": "One",
+     "t0": 0.35,
+     "t1": 0.605
+    },
+    {
+     "w": "Word",
+     "t0": 0.861,
+     "t1": 1.174
+    }
+   ],
+   "qa": {
+    "asr": "One word",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.8,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 221.4,
+    "f0_range_st": 11.7,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.435,
+    "raw_tail_cut": false,
+    "align_median_s": 0.35
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 0.975,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0030-src__chatgtp-A",
+   "key": "86e13db04c7f27f2",
+   "chars": 10,
+   "cost_header": "4",
+   "request_id": "zPP8R7MkdZakRXnbfhsp",
+   "at": "05:14:30"
+  }
+ ]
+}

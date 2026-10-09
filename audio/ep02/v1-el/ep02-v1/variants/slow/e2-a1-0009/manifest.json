@@ -1,0 +1,113 @@
+{
+ "takes": {
+  "e2-a1-0009__mas-manalt-C": {
+   "take": "e2-a1-0009__mas-manalt-C",
+   "key": "c70537b157e98dfe",
+   "base_key": "c70537b157e98dfe",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/slow/e2-a1-0009/wav/e2-a1-0009__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.11,
+   "offset_s": 0.35,
+   "sent": "Spirit, what did we call it?",
+   "seed": 2888264183,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 2.51,
+    "span_s": 2.16,
+    "words": 6,
+    "wpm": 166.7,
+    "syllables": 7,
+    "articulation_sps": 3.24,
+    "pauses_s": [
+     0.06
+    ],
+    "longest_internal_gap_s": 0.06,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.6,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 122.0,
+    "f0_range_st": 14.0
+   },
+   "words": [
+    {
+     "w": "Spirit",
+     "t0": 0.35,
+     "t1": 1.093
+    },
+    {
+     "w": "what",
+     "t0": 1.244,
+     "t1": 1.453
+    },
+    {
+     "w": "did",
+     "t0": 1.499,
+     "t1": 1.627
+    },
+    {
+     "w": "we",
+     "t0": 1.685,
+     "t1": 1.801
+    },
+    {
+     "w": "call",
+     "t0": 1.871,
+     "t1": 2.161
+    },
+    {
+     "w": "it",
+     "t0": 2.242,
+     "t1": 2.428
+    }
+   ],
+   "qa": {
+    "asr": "Spirit, what did we call it?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.57,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 122.0,
+    "f0_range_st": 14.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.6,
+    "raw_tail_cut": false,
+    "align_median_s": 0.085
+   },
+   "raw": {
+    "raw_first_sound_s": 0.005,
+    "raw_len_s": 2.461,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a1-0009__mas-manalt-C",
+   "key": "c70537b157e98dfe",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "mIvSkJ8DYXqrJvNmmiWw",
+   "at": "05:20:46"
+  }
+ ]
+}

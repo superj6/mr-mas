@@ -85,6 +85,7 @@ HF_HUB_OFFLINE=1 bash ops/heavy.sh $PY audio/ep02/v1-el/tools/el_render.py rende
 - **The `--dry-run` trap is fixed.** Ep1's `render --dry-run` returned early for the rows not yet cached, then wrote `lines-<set>.json` with only the cached rows and saved `manifest.json`, so a dry run before a real one cut the segment's takes list. The copy's dry run writes nothing (no lines JSON, no manifest, no log, no folders) and prints each row it would send. **[M]** a scratch folder holding a `lines-A.json` and a `manifest.json`: after a dry run of three rows ("would send 116 chars"), both files are byte-identical.
 - **Beat plans as input.** `el_render.py` reads a beat plan's own lines (Ep1's format), so the voices pass can render before the base lock exists.
 - **Not copied** (Ep1-table-driven; a voices pass copies them with Ep2's tables when it needs them): `el_cut.py` (lines cut from another take: the plans' `cut_from`), `pron_check.py` (the forced-choice name checks), `el_intro.py` (§8).
+- **The takes pass (2026-10-09)** copied `el_cut.py` (its table read from the plan's `_spec.py` CUT) and `pron_check.py` (Ep2's names), and added `el_qa.py` (every take measured, failures retaken, the report), `el_crowd.py` (the layered chant), `el_sung.py` (the sung line through the intro's singer), `el_mario.py` (MARIO on Kokoro through Ep1's fastrec, run, never edited) and `render_v1.sh`, the one command that records the episode. The record: [takes-qa.md](takes-qa.md).
 - **The auditions** (the casting pass, 2026-10-09): `audio/ep02/v1-el/tools/el_audition.py`, Ep1's method with Ep2's roles, shortlists and scene neighbours. It renders through `el_render.render_take` on the episode's seeds, so each pick's auditioned lines are cached as its film takes. The picks are in `cast-el.json`, and the numbers and reasons are in [cast.md](cast.md) §3 and §8.
 
 ---
@@ -279,7 +280,7 @@ Run after every Ep2 file was in place (2026-10-08, about 22:00), `MRMAS_MAX_LOAD
 2. **The real chain waits on the takes.** The base lock needs a take for every line; the voices pass renders them (§2), then §1.2, then the picture and the score.
 3. **The intro variant and the outro** are planned, not built (§8.3, §8.4); each needs Ep1's own output proven unchanged if it touches the shared moments.
 4. **New SFX beds** (manifest §7) play through stand-ins until the SFX pass adds them to the board (`rooms.py` picks them up by name).
-5. **`el_cut.py` and `pron_check.py`** were not copied (Ep1 tables); the voices pass copies them with Ep2's. `el_audition.py` was copied by the casting pass ([cast.md](cast.md) §8).
+5. ~~**`el_cut.py` and `pron_check.py`** were not copied (Ep1 tables); the voices pass copies them with Ep2's.~~ Done by the takes pass (§2, [takes-qa.md](takes-qa.md)). `el_audition.py` was copied by the casting pass ([cast.md](cast.md) §8).
 6. **The review frame** still renders per act; only the picture is per scene.
 7. **Machine load:** other projects held the load at 16–18 during this pass, so `heavy.sh` waited (MAX_LOAD 16); the tiny test renders ran with `MRMAS_MAX_LOAD=24`. A full act render should wait for the default.
 8. **Resource asks (R16, non-blocking):** none beyond the manifest's §10; a faster picture would come only from more cores (the drawing is CPU-bound and already parallel per scene).

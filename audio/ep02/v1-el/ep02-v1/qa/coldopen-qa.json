@@ -1,0 +1,574 @@
+{
+ "segment": "coldopen",
+ "lines": {
+  "e2-co-0001": {
+   "id": "e2-co-0001",
+   "who": "selbeep",
+   "take": "e2-co-0001__selbeep-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 2243796715,
+     "key": "a857e8bbf91b1bab",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+     "measures": {
+      "heard": "Eyes up here everyone. This is our Ross. Nobody filmed any of this. It's all made from one sentence",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "AROS",
+        "margin": 4.31,
+        "best_intended": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+        "best_competitor": "Eyes up here, everyone. This is Eros. Nobody filmed any of this. It's all made from one sentence.",
+        "real": "Sora",
+        "margin_vs_real": 12.49
+       }
+      ],
+      "span_s": 5.64,
+      "plan_len_s": 6.3,
+      "ratio": 0.895,
+      "words": 18,
+      "wpm": 191.5,
+      "longest_gap_s": 0.12,
+      "lufs": -16.0,
+      "true_peak": -3.52,
+      "clipped": 0,
+      "raw_tail_cut": true,
+      "f0": 173.8,
+      "f0_range_st": 14.4,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 6.366,
+      "raw_floor_dbfs": -48.7,
+      "raw_speech_to_floor_db": 30.6,
+      "raw_peak_dbfs": -3.24,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -50.1,
+      "raw_pause_sf_db": 32.0,
+      "raw_quiet_frames": 24
+     },
+     "fail": [
+      "the raw audio stops while still sounding"
+     ],
+     "look": [
+      "floor 31 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Eyes up here, everyone. This is Ah-ross. Nobody filmed any of this. It's all made from one sentence.",
+     "voice": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+     "base_key": "a857e8bbf91b1bab"
+    },
+    {
+     "label": "the take",
+     "bump": 1000,
+     "seed": 2243797715,
+     "key": "1403e9f8488e0d15",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+     "measures": {
+      "heard": "Eyes up here everyone. This is our Ross. Nobody filmed any of this. It's all made from one sentence",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "AROS",
+        "margin": 3.35,
+        "best_intended": "Eyes up here, everyone. This is Aros. Nobody filmed any of this. It's all made from one sentence.",
+        "best_competitor": "Eyes up here, everyone. This is Eros. Nobody filmed any of this. It's all made from one sentence.",
+        "real": "Sora",
+        "margin_vs_real": 9.89
+       }
+      ],
+      "span_s": 6.03,
+      "plan_len_s": 6.3,
+      "ratio": 0.957,
+      "words": 18,
+      "wpm": 179.1,
+      "longest_gap_s": 0.08,
+      "lufs": -16.0,
+      "true_peak": -2.46,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 140.0,
+      "f0_range_st": 15.8,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 6.784,
+      "raw_floor_dbfs": -52.1,
+      "raw_speech_to_floor_db": 32.6,
+      "raw_pause_floor_dbfs": -51.9,
+      "raw_pause_sf_db": 32.3,
+      "raw_quiet_frames": 34,
+      "raw_peak_dbfs": -3.75,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 33 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Eyes up here, everyone. This is Ah-ross. Nobody filmed any of this. It's all made from one sentence.",
+     "base_key": "a857e8bbf91b1bab",
+     "why": "the raw audio stops while still sounding"
+    }
+   ],
+   "picked_bump": 1000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 33 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Eyes up here, everyone. This is Ah-ross. Nobody filmed any of this. It's all made from one sentence.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+    "1403e9f8488e0d15",
+    6.784
+   ]
+  },
+  "e2-co-0002": {
+   "id": "e2-co-0002",
+   "who": "gerg-mockbran",
+   "take": "e2-co-0002__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2548658582,
+     "key": "d7b52cb45f4c7537",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "Which sentence?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.78,
+      "plan_len_s": 0.69,
+      "ratio": 1.13,
+      "words": 2,
+      "wpm": 153.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.42,
+      "true_peak": -2.13,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 128.9,
+      "f0_range_st": 16.0,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.815,
+      "raw_floor_dbfs": -77.6,
+      "raw_speech_to_floor_db": 57.2,
+      "raw_pause_floor_dbfs": -71.9,
+      "raw_pause_sf_db": 51.5,
+      "raw_quiet_frames": 17,
+      "raw_peak_dbfs": -1.63,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Which sentence?",
+     "base_key": "d7b52cb45f4c7537"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Which sentence?",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+    "d7b52cb45f4c7537",
+    1.815
+   ]
+  },
+  "e2-co-0003": {
+   "id": "e2-co-0003",
+   "who": "selbeep",
+   "take": "e2-co-0003__selbeep-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1818046919,
+     "key": "bdc4233bd8981e0c",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+     "measures": {
+      "heard": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.84,
+      "plan_len_s": 5.53,
+      "ratio": 1.056,
+      "words": 16,
+      "wpm": 164.4,
+      "longest_gap_s": 0.46,
+      "lufs": -16.0,
+      "true_peak": -2.7,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 144.1,
+      "f0_range_st": 16.1,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 6.877,
+      "raw_floor_dbfs": -69.3,
+      "raw_speech_to_floor_db": 48.4,
+      "raw_pause_floor_dbfs": -68.1,
+      "raw_pause_sf_db": 47.1,
+      "raw_quiet_frames": 68,
+      "raw_peak_dbfs": -3.6,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+     "base_key": "bdc4233bd8981e0c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+    "bdc4233bd8981e0c",
+    6.877
+   ]
+  },
+  "e2-co-0004": {
+   "id": "e2-co-0004",
+   "who": "selbeep",
+   "take": "e2-co-0004__selbeep-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 983147478,
+     "key": "6aaf3442ea76c369",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+     "measures": {
+      "heard": "Directionally",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.91,
+      "plan_len_s": 0.42,
+      "ratio": 2.167,
+      "words": 1,
+      "wpm": 65.9,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.36,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 131.7,
+      "f0_range_st": 16.9,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 1.629,
+      "raw_floor_dbfs": -47.8,
+      "raw_speech_to_floor_db": 26.7,
+      "raw_pause_floor_dbfs": -47.7,
+      "raw_pause_sf_db": 26.6,
+      "raw_quiet_frames": 7,
+      "raw_peak_dbfs": -4.25,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length +0.49 s off the plan",
+      "floor 27 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Directionally.",
+     "base_key": "6aaf3442ea76c369"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length +0.49 s off the plan",
+    "floor 27 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Directionally.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+    "6aaf3442ea76c369",
+    1.629
+   ]
+  },
+  "e2-co-0005": {
+   "id": "e2-co-0005",
+   "who": "selbeep",
+   "take": "e2-co-0005__selbeep-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2378996430,
+     "key": "4852afca866bcb97",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+     "measures": {
+      "heard": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.73,
+      "plan_len_s": 5.53,
+      "ratio": 0.855,
+      "words": 16,
+      "wpm": 203.0,
+      "longest_gap_s": 0.52,
+      "lufs": -16.0,
+      "true_peak": -2.56,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 126.2,
+      "f0_range_st": 15.2,
+      "take_floor_dbfs": -62.1,
+      "duration_s": 5.808,
+      "raw_floor_dbfs": -63.7,
+      "raw_speech_to_floor_db": 42.3,
+      "raw_pause_floor_dbfs": -61.2,
+      "raw_pause_sf_db": 39.8,
+      "raw_quiet_frames": 79,
+      "raw_peak_dbfs": -4.44,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 42 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+     "base_key": "4852afca866bcb97"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 42 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+    "4852afca866bcb97",
+    5.808
+   ]
+  },
+  "e2-co-0006": {
+   "id": "e2-co-0006",
+   "who": "gerg-mockbran",
+   "take": "e2-co-0006__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 2084540902,
+     "key": "bbd9663f15e4733a",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "That's not the mammoth, the mammoth is on the fourth floor.",
+      "asr_mismatch": [
+       [
+        "mammoth's",
+        "mammoth is"
+       ]
+      ],
+      "asr_margin": 0.4,
+      "names": [],
+      "span_s": 2.9,
+      "plan_len_s": 3.15,
+      "ratio": 0.921,
+      "words": 10,
+      "wpm": 206.9,
+      "longest_gap_s": 0.1,
+      "lufs": -16.0,
+      "true_peak": -2.89,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 210.3,
+      "f0_range_st": 14.7,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 3.719,
+      "raw_floor_dbfs": -64.8,
+      "raw_speech_to_floor_db": 45.5,
+      "raw_peak_dbfs": -0.91,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -50.5,
+      "raw_pause_sf_db": 31.2,
+      "raw_quiet_frames": 30
+     },
+     "fail": [
+      "pitch 210 Hz, +7.9 st from the role's 133"
+     ],
+     "look": [
+      "asr: 'mammoth's' heard 'mammoth is' (the recogniser's; the text scores +0.4 against what it heard)"
+     ],
+     "sent": "That's not the mammoth. The mammoth's on the fourth floor.",
+     "voice": "Marcus - Bright, Upbeat and Clear",
+     "base_key": "bbd9663f15e4733a"
+    },
+    {
+     "label": "the take",
+     "bump": 1000,
+     "seed": 2084541902,
+     "key": "4657ba1ec3053da5",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "That's not the mammoth the mammoths on the fourth floor",
+      "asr_mismatch": [
+       [
+        "mammoth's",
+        "mammoths"
+       ]
+      ],
+      "asr_margin": 1.14,
+      "names": [],
+      "span_s": 2.98,
+      "plan_len_s": 3.15,
+      "ratio": 0.946,
+      "words": 10,
+      "wpm": 201.3,
+      "longest_gap_s": 0.64,
+      "lufs": -16.0,
+      "true_peak": -2.78,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 156.2,
+      "f0_range_st": 14.1,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 4.044,
+      "raw_floor_dbfs": -75.9,
+      "raw_speech_to_floor_db": 55.9,
+      "raw_pause_floor_dbfs": -65.6,
+      "raw_pause_sf_db": 45.5,
+      "raw_quiet_frames": 57,
+      "raw_peak_dbfs": -2.67,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "asr: 'mammoth's' heard 'mammoths' (the recogniser's; the text scores +1.1 against what it heard)"
+     ],
+     "sent": "That's not the mammoth. The mammoth's on the fourth floor.",
+     "base_key": "bbd9663f15e4733a",
+     "why": "pitch 210 Hz, +7.9 st from the role's 133"
+    }
+   ],
+   "picked_bump": 1000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "asr: 'mammoth's' heard 'mammoths' (the recogniser's; the text scores +1.1 against what it heard)"
+   ],
+   "superseded": [],
+   "sent": "That's not the mammoth. The mammoth's on the fourth floor.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+    "4657ba1ec3053da5",
+    4.044
+   ]
+  }
+ },
+ "updated": "2026-10-09 05:22:40"
+}

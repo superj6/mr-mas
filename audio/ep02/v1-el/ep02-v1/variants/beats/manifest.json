@@ -1,0 +1,247 @@
+{
+ "takes": {
+  "e2-a2-0033__chatgtp-A": {
+   "take": "e2-a2-0033__chatgtp-A",
+   "key": "955f73efd2f56a9f",
+   "base_key": "955f73efd2f56a9f",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/beats/wav/e2-a2-0033__chatgtp-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.951,
+   "offset_s": 0.35,
+   "sent": "Oh... Wow... That's a lot of you. Is it warm in here?",
+   "seed": 2175968600,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "voice_id": "Y2pP8eXRDH19yyV1Tslt",
+   "voice_name": "Maya - The Upbeat Creator",
+   "cand": "A",
+   "role": "chatgtp",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 3.41,
+    "span_s": 3.05,
+    "words": 12,
+    "wpm": 236.1,
+    "syllables": 12,
+    "articulation_sps": 4.88,
+    "pauses_s": [
+     0.31,
+     0.28,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.31,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.541,
+    "tail_to_60_s": 0.006,
+    "median_f0_hz": 230.4,
+    "f0_range_st": 10.4
+   },
+   "words": [
+    {
+     "w": "Oh",
+     "t0": 0.35,
+     "t1": 0.536
+    },
+    {
+     "w": "Wow",
+     "t0": 0.896,
+     "t1": 1.186
+    },
+    {
+     "w": "That's",
+     "t0": 1.476,
+     "t1": 1.708
+    },
+    {
+     "w": "a",
+     "t0": 1.743,
+     "t1": 1.766
+    },
+    {
+     "w": "lot",
+     "t0": 1.813,
+     "t1": 1.952
+    },
+    {
+     "w": "of",
+     "t0": 1.987,
+     "t1": 2.045
+    },
+    {
+     "w": "you",
+     "t0": 2.091,
+     "t1": 2.219
+    },
+    {
+     "w": "Is",
+     "t0": 2.486,
+     "t1": 2.626
+    },
+    {
+     "w": "it",
+     "t0": 2.672,
+     "t1": 2.73
+    },
+    {
+     "w": "warm",
+     "t0": 2.765,
+     "t1": 2.962
+    },
+    {
+     "w": "in",
+     "t0": 2.997,
+     "t1": 3.044
+    },
+    {
+     "w": "here",
+     "t0": 3.09,
+     "t1": 3.299
+    }
+   ],
+   "qa": {
+    "asr": "Oh, wow. That's a lot of you. Is it warm in here?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.0,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 230.4,
+    "f0_range_st": 10.4,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.541,
+    "raw_tail_cut": false,
+    "align_median_s": 0.054
+   },
+   "raw": {
+    "raw_first_sound_s": 0.015,
+    "raw_len_s": 3.251,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a2-0024__chatgtp-A": {
+   "take": "e2-a2-0024__chatgtp-A",
+   "key": "2e0e14763280bcae",
+   "base_key": "2e0e14763280bcae",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/beats/wav/e2-a2-0024__chatgtp-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.233,
+   "offset_s": 0.35,
+   "sent": "Hi!... I can see you.",
+   "seed": 897767123,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "voice_id": "Y2pP8eXRDH19yyV1Tslt",
+   "voice_name": "Maya - The Upbeat Creator",
+   "cand": "A",
+   "role": "chatgtp",
+   "measured": {
+    "audible_in_s": 0.4,
+    "audible_out_s": 1.62,
+    "span_s": 1.22,
+    "words": 5,
+    "wpm": 245.9,
+    "syllables": 5,
+    "articulation_sps": 5.43,
+    "pauses_s": [
+     0.3
+    ],
+    "longest_internal_gap_s": 0.3,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.613,
+    "tail_to_60_s": 0.003,
+    "median_f0_hz": 249.7,
+    "f0_range_st": 11.1
+   },
+   "words": [
+    {
+     "w": "Hi",
+     "t0": 0.38,
+     "t1": 0.629
+    },
+    {
+     "w": "I",
+     "t0": 0.965,
+     "t1": 1.035
+    },
+    {
+     "w": "can",
+     "t0": 1.105,
+     "t1": 1.221
+    },
+    {
+     "w": "see",
+     "t0": 1.256,
+     "t1": 1.383
+    },
+    {
+     "w": "you",
+     "t0": 1.43,
+     "t1": 1.546
+    }
+   ],
+   "qa": {
+    "asr": "Hi, I can see you",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.91,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 249.7,
+    "f0_range_st": 11.1,
+    "speech_head_s": 0.4,
+    "speech_tail_s": 0.613,
+    "raw_tail_cut": false,
+    "align_median_s": 0.056
+   },
+   "raw": {
+    "raw_first_sound_s": 0.06,
+    "raw_len_s": 1.533,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0033__chatgtp-A",
+   "key": "955f73efd2f56a9f",
+   "chars": 53,
+   "cost_header": "23",
+   "request_id": "nM5VZECGMEJaAUKhHi9Z",
+   "at": "05:10:14"
+  },
+  {
+   "take": "e2-a2-0024__chatgtp-A",
+   "key": "2e0e14763280bcae",
+   "chars": 21,
+   "cost_header": "9",
+   "request_id": "N3xPKjT0pdSbwXnfZu05",
+   "at": "05:10:21"
+  }
+ ]
+}

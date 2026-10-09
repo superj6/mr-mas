@@ -1,0 +1,129 @@
+{
+ "takes": {
+  "e2-vo-12__mas-manalt-C": {
+   "take": "e2-vo-12__mas-manalt-C",
+   "key": "94066d9c836005bb",
+   "base_key": "94066d9c836005bb",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/slow/e2-vo-12/wav/e2-vo-12__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.69,
+   "offset_s": 0.35,
+   "sent": "Whatever we ship next goes in their phones too.",
+   "seed": 1919338259,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 4.06,
+    "span_s": 3.69,
+    "words": 9,
+    "wpm": 146.3,
+    "syllables": 11,
+    "articulation_sps": 2.98,
+    "pauses_s": [
+     0.07,
+     0.07
+    ],
+    "longest_internal_gap_s": 0.07,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.63,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 107.1,
+    "f0_range_st": 11.7
+   },
+   "words": [
+    {
+     "w": "Whatever",
+     "t0": 0.35,
+     "t1": 0.872
+    },
+    {
+     "w": "we",
+     "t0": 0.954,
+     "t1": 1.081
+    },
+    {
+     "w": "ship",
+     "t0": 1.163,
+     "t1": 1.476
+    },
+    {
+     "w": "next",
+     "t0": 1.604,
+     "t1": 2.068
+    },
+    {
+     "w": "goes",
+     "t0": 2.173,
+     "t1": 2.475
+    },
+    {
+     "w": "in",
+     "t0": 2.521,
+     "t1": 2.602
+    },
+    {
+     "w": "their",
+     "t0": 2.66,
+     "t1": 2.869
+    },
+    {
+     "w": "phones",
+     "t0": 2.951,
+     "t1": 3.438
+    },
+    {
+     "w": "too",
+     "t0": 3.52,
+     "t1": 3.926
+    }
+   ],
+   "qa": {
+    "asr": "Whatever we ship next goes in their phones, too.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -3.97,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 107.1,
+    "f0_range_st": 11.7,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.63,
+    "raw_tail_cut": false,
+    "align_median_s": 0.153
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 4.133,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-vo-12__mas-manalt-C",
+   "key": "94066d9c836005bb",
+   "chars": 47,
+   "cost_header": "21",
+   "request_id": "ntyNpJDv7G0NIx5jpkmU",
+   "at": "05:20:26"
+  }
+ ]
+}

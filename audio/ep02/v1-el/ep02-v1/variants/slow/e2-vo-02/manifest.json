@@ -1,0 +1,130 @@
+{
+ "takes": {
+  "e2-vo-02__mas-manalt-C": {
+   "take": "e2-vo-02__mas-manalt-C",
+   "key": "23225039b733bba8",
+   "base_key": "23225039b733bba8",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/slow/e2-vo-02/wav/e2-vo-02__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.595,
+   "offset_s": 0.35,
+   "sent": "He was right about the bill. It's bigger now.",
+   "seed": 2930247135,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 3.86,
+    "span_s": 3.42,
+    "words": 9,
+    "wpm": 157.9,
+    "syllables": 11,
+    "articulation_sps": 3.47,
+    "pauses_s": [
+     0.07,
+     0.25,
+     0.08
+    ],
+    "longest_internal_gap_s": 0.25,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.735,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 103.5,
+    "f0_range_st": 9.4
+   },
+   "words": [
+    {
+     "w": "He",
+     "t0": 0.42,
+     "t1": 0.559
+    },
+    {
+     "w": "was",
+     "t0": 0.64,
+     "t1": 0.791
+    },
+    {
+     "w": "right",
+     "t0": 0.919,
+     "t1": 1.198
+    },
+    {
+     "w": "about",
+     "t0": 1.244,
+     "t1": 1.523
+    },
+    {
+     "w": "the",
+     "t0": 1.581,
+     "t1": 1.685
+    },
+    {
+     "w": "bill",
+     "t0": 1.766,
+     "t1": 2.161
+    },
+    {
+     "w": "it's",
+     "t0": 2.544,
+     "t1": 2.846
+    },
+    {
+     "w": "bigger",
+     "t0": 2.927,
+     "t1": 3.311
+    },
+    {
+     "w": "now",
+     "t0": 3.403,
+     "t1": 3.74
+    }
+   ],
+   "qa": {
+    "asr": "He was right about the bill. It's bigger now.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -3.42,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 103.5,
+    "f0_range_st": 9.4,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.735,
+    "raw_tail_cut": false,
+    "align_median_s": 0.124
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 3.901,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-vo-02__mas-manalt-C",
+   "key": "23225039b733bba8",
+   "chars": 45,
+   "cost_header": "20",
+   "request_id": "AQ7Pdi9ui8zU82k7L8a9",
+   "at": "05:19:58"
+  }
+ ]
+}

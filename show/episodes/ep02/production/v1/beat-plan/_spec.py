@@ -687,7 +687,7 @@ def line(lid, gap=None, pace=None, overlap=False, **kw):
         if lid in CUT:
             e["cut_from"] = CUT[lid][0]
     e["take"] = take_slot(lid)
-    e["take_file"] = None
+    e["take_file"] = (take_rows().get(lid) or {}).get("file")    # the voice pass's take, once it is recorded
     e["_gap"] = gap
     e["_pace"] = pace
     if overlap:

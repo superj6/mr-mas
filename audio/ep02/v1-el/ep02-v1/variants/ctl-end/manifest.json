@@ -1,0 +1,134 @@
+{
+ "takes": {
+  "e2-a1-0011__nole-A": {
+   "take": "e2-a1-0011__nole-A",
+   "key": "c13b93f98a53860e",
+   "base_key": "c13b93f98a53860e",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/ctl-end/wav/e2-a1-0011__nole-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.254,
+   "offset_s": 0.35,
+   "sent": "No. Not like that. The end goes at the end.",
+   "seed": 1293467741,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "voice_id": "ya031zGCAxyRGrvB3or9",
+   "voice_name": "Ryan - Confident and Bold",
+   "cand": "A",
+   "role": "nole",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.79,
+    "span_s": 2.43,
+    "words": 10,
+    "wpm": 246.9,
+    "syllables": 10,
+    "articulation_sps": 4.39,
+    "pauses_s": [
+     0.15,
+     0.09
+    ],
+    "longest_internal_gap_s": 0.15,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.464,
+    "tail_to_60_s": 0.004,
+    "median_f0_hz": 111.3,
+    "f0_range_st": 14.2
+   },
+   "words": [
+    {
+     "w": "No",
+     "t0": 0.35,
+     "t1": 0.663
+    },
+    {
+     "w": "Not",
+     "t0": 0.78,
+     "t1": 0.942
+    },
+    {
+     "w": "like",
+     "t0": 0.977,
+     "t1": 1.105
+    },
+    {
+     "w": "that",
+     "t0": 1.139,
+     "t1": 1.418
+    },
+    {
+     "w": "The",
+     "t0": 1.674,
+     "t1": 1.79
+    },
+    {
+     "w": "N",
+     "t0": 1.848,
+     "t1": 1.964
+    },
+    {
+     "w": "goes",
+     "t0": 2.022,
+     "t1": 2.219
+    },
+    {
+     "w": "at",
+     "t0": 2.266,
+     "t1": 2.324
+    },
+    {
+     "w": "the",
+     "t0": 2.359,
+     "t1": 2.428
+    },
+    {
+     "w": "end",
+     "t0": 2.475,
+     "t1": 2.649
+    }
+   ],
+   "qa": {
+    "asr": "No, not like that. The end goes at the end.",
+    "cer": 0.053,
+    "word_recall_nonames": 0.9,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.84,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 111.3,
+    "f0_range_st": 14.2,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.464,
+    "raw_tail_cut": false,
+    "align_median_s": 0.057
+   },
+   "raw": {
+    "raw_first_sound_s": 0.025,
+    "raw_len_s": 2.554,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a1-0011__nole-A",
+   "key": "c13b93f98a53860e",
+   "chars": 43,
+   "cost_header": "19",
+   "request_id": "AgD49dnbkFTnbeAdjSJ1",
+   "at": "05:10:05"
+  }
+ ]
+}

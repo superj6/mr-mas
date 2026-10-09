@@ -1,0 +1,404 @@
+{
+ "id": "e2-a4-0009",
+ "scene": "18.11",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
+ "spoken_as": "Come in, [Ekiel](/ˈɛkil/), sit down. I read your thread. Twice. I've made some notes.",
+ "delivery": "still writing; warm and precise",
+ "tag": "[INVENTED]",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.11",
+ "shot_id": "18.11",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.88,
+ "file": "audio/ep02/v1/act4/wav/e2-a4-0009.wav",
+ "mp3": null,
+ "duration_s": 4.625,
+ "frames_24": 111,
+ "voiced_span_s": 3.6,
+ "pace": {
+  "words": 14,
+  "wpm": 233.3,
+  "speed": 0.95,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.95,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "still writing; warm and precise"
+  },
+  "measured": {
+   "wpm": 233.3,
+   "articulation_sps": 4.17,
+   "syllables": 15,
+   "span_s": 3.6,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.11
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 0.950",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 0.950 (the plan speed; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "M"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "O"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "rest"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "M"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "A"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "E"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "O"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Come",
+   "t0": 0.495,
+   "t1": 0.682,
+   "f0": 12,
+   "f1": 16,
+   "ph": "kˈʌm"
+  },
+  {
+   "w": "in",
+   "t0": 0.682,
+   "t1": 0.82,
+   "f0": 16,
+   "f1": 20,
+   "ph": "ˈɪn"
+  },
+  {
+   "w": "Ekiel",
+   "t0": 0.857,
+   "t1": 1.17,
+   "f0": 21,
+   "f1": 28,
+   "ph": "ˈɛkil"
+  },
+  {
+   "w": "sit",
+   "t0": 1.22,
+   "t1": 1.42,
+   "f0": 29,
+   "f1": 34,
+   "ph": "sˈɪt"
+  },
+  {
+   "w": "down",
+   "t0": 1.42,
+   "t1": 1.67,
+   "f0": 34,
+   "f1": 40,
+   "ph": "dˌWn"
+  },
+  {
+   "w": "I",
+   "t0": 1.707,
+   "t1": 1.845,
+   "f0": 41,
+   "f1": 44,
+   "ph": "ˌI"
+  },
+  {
+   "w": "read",
+   "t0": 1.845,
+   "t1": 2.007,
+   "f0": 44,
+   "f1": 48,
+   "ph": "ɹˈɛd"
+  },
+  {
+   "w": "your",
+   "t0": 2.007,
+   "t1": 2.158,
+   "f0": 48,
+   "f1": 52,
+   "ph": "jʊɹ"
+  },
+  {
+   "w": "thread",
+   "t0": 2.158,
+   "t1": 2.47,
+   "f0": 52,
+   "f1": 59,
+   "ph": "θɹˈɛd"
+  },
+  {
+   "w": "Twice",
+   "t0": 2.558,
+   "t1": 3.12,
+   "f0": 61,
+   "f1": 75,
+   "ph": "twˈIs"
+  },
+  {
+   "w": "I've",
+   "t0": 3.195,
+   "t1": 3.358,
+   "f0": 77,
+   "f1": 81,
+   "ph": "ˌIv"
+  },
+  {
+   "w": "made",
+   "t0": 3.358,
+   "t1": 3.545,
+   "f0": 81,
+   "f1": 85,
+   "ph": "mˌAd"
+  },
+  {
+   "w": "some",
+   "t0": 3.545,
+   "t1": 3.695,
+   "f0": 85,
+   "f1": 89,
+   "ph": "sˌʌm"
+  },
+  {
+   "w": "notes",
+   "t0": 3.695,
+   "t1": 4.13,
+   "f0": 89,
+   "f1": 99,
+   "ph": "nˈOts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.74,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 115.9,
+  "f0_range_st": 14.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Come in, Akkiel, sit down. I read your thread twice. I've made some notes.",
+  "cer": 0.037,
+  "word_recall_nonames": 0.929,
+  "logprob": -0.459,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 5.0,
+  "decay_ms": 60.0,
+  "decay_to_60_s": 0.065
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "c0e79201817624e6",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.13,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 3.58,
+   "rechecked_alone": true
+  }
+ }
+}

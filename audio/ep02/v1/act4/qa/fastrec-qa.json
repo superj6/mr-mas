@@ -1,0 +1,48 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e2-a4-0009",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Come in, Akkiel, sit down. I read your thread twice. I've made some notes.' (recall 0.929)"
+  },
+  {
+   "id": "e2-a4-0011",
+   "kind": "pace",
+   "note": "articulation 3.21 syll/s against the guide 4.6-5.4"
+  },
+  {
+   "id": "e2-a4-0012",
+   "kind": "asr",
+   "note": "ASR missed a word: 'We agree I underlined. Inherently.' (recall 0.667)"
+  },
+  {
+   "id": "e2-a4-0013",
+   "kind": "pace",
+   "note": "articulation 3.68 syll/s against the guide 4.6-5.4"
+  },
+  {
+   "id": "e2-a4-0016",
+   "kind": "asr",
+   "note": "ASR missed a word: 'It's that we might wins.' (recall 0.8)"
+  },
+  {
+   "id": "e2-a4-0016",
+   "kind": "pace",
+   "note": "articulation 3.42 syll/s against the guide 4.6-5.4"
+  }
+ ],
+ "totals": {
+  "lines": 6,
+  "words": 42,
+  "audible_s": 13.8,
+  "wpm_overall": 182.0
+ },
+ "stringouts": [
+  "audio/ep02/v1/act4/reel/sc18.11-fast-stringout.mp3",
+  "audio/ep02/v1/act4/reel/sc18.12-fast-stringout.mp3",
+  "audio/ep02/v1/act4/reel/sc18.13-fast-stringout.mp3",
+  "audio/ep02/v1/act4/reel/sc18.14-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

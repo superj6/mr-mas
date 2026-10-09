@@ -21,9 +21,14 @@
   "Macrosoft": "Mack-roh-soft",
   "Manalt": "Man-alt",
   "GTP-4": "G-T-P four",
-  "judgement": "judgment"
+  "judgement": "judgment",
+  "MINDDEEP": "Mind Deep",
+  "AROS": "Ah-ross",
+  "RETTIWT": "Rett-twit",
+  "Ekiel": "Eh-keel",
+  "ELSE": "else"
  },
- "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'. v3.1: 'judgement' -> 'judgment' (the v3.1 page's spelling of the staff letter; the same word and the lock's take stands, so the EL take does too).",
+ "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'. v3.1: 'judgement' -> 'judgment' (the v3.1 page's spelling of the staff letter; the same word and the lock's take stands, so the EL take does too). Ep2 (the takes pass, 2026-10-09; cast.md §5): MINDDEEP -> 'Mind Deep' (two words, never run together), AROS -> 'Ah-ross' (not 'arrows', 'Eros' or the real product), RETTIWT -> 'Rett-twit' (the joke is the 'twit'), Ekiel -> 'Eh-keel' (said only by MARIO, on Kokoro, with its own IPA), ELSE -> 'else' (Nole's 'Say something ELSE.': the stress is a reading note, not capitals, which a voice may spell). Each name's take is checked by pron_check.py's forced choice against its competitors (show/episodes/ep02/production/v1/takes-qa.md).",
  "names": [
   "mas",
   "manalt",
@@ -57,7 +62,16 @@
   "chatgtp",
   "clod",
   "misanthropic",
-  "rumpt"
+  "rumpt",
+  "aros",
+  "minddeep",
+  "rettiwt",
+  "ekiel",
+  "xel",
+  "haras",
+  "bukaj",
+  "selbeep",
+  "elppa"
  ],
  "labels": {
   "MAS": "mas-manalt",
@@ -162,7 +176,11 @@
   "HARAS": "haras",
   "crowd": "crowd",
   "THE CROWD": "crowd",
-  "CROWD": "crowd"
+  "CROWD": "crowd",
+  "staffer": "tiled-employee",
+  "STAFFER": "tiled-employee",
+  "ghost-nole": "ghost-nole",
+  "GHOST-NOLE": "ghost-nole"
  },
  "roles": {
   "mas-manalt": {
@@ -8304,6 +8322,12 @@
     "J"
    ],
    "layered_note": "the chant (e2-a3-0010) is 8-12 layered reads: every candidate in 'layered', each its own seed (seed_of(line, voice)) and an offset of 40-180 ms, ducked under Alyi's lead. el_render.py renders only candidate A per set: the crowd needs the voice pass's layering step, which finds each listed voice's audition read in the cache (nothing sent)"
+  },
+  "ghost-nole": {
+   "name": "GHOST-NOLE",
+   "derived_from": "nole",
+   "settings_override": {},
+   "why": "Ep2 (the takes pass, 2026-10-09; cast.md §1, §2, §4): Nole's own voice and settings (Ryan - Confident and Bold, candidate A, 0.35 / 0.20 / 1.05), unchanged; each ghost line on its own seed (seed_of(line id, voice id), so 'Yup' and '…Yup.' differ). The ghost treatment (a short dark reverb, a chip doubler a hair late) is the mix's chain on the 'ghost' tag: the takes are dry. e2-a1-0026 is cut from e2-a1-0014's take (el_cut.py)."
   }
  },
  "respell_lines": {},
@@ -8311,9 +8335,17 @@
  "say_lines": {
   "v35-a4-0007": "the tender's in trouble,",
   "e2-a2-0015": "Hi...",
-  "e2-a3-0010": "Feel the A.G.I.! Feel the A.G.I.!"
+  "e2-a3-0010": "Feel the A.G.I.! Feel the A.G.I.!",
+  "e2-a3-0009": "Feel the A.G.I.!",
+  "e2-a1-0001": "Is there anyone here... from 2016.",
+  "e2-a1-0013": "You wrote 'exactly right.'",
+  "e2-a4-0007": "And at the end of the ninety days, we take our recommendations to the full board, which is...",
+  "e2-a3-0019": "Everyone who signed one, find them, all of them, today.",
+  "e2-vo-09": "Everyone who signed, the post, everyone who signed.",
+  "e2-a2-0033": "Oh... Wow... That's a lot of you. Is it warm in here?",
+  "e2-a2-0024": "Hi!... I can see you."
  },
- "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence). Ep2 (the casting pass, 2026-10-08): e2-a2-0015 VOICE 4 'Hi...' (the trail is the read; the house would drop a trailing print ellipsis); e2-a3-0010 the CROWD 'Feel the A.G.I.! Feel the A.G.I.!' (cast.md §5: sentence case, the letters).",
+ "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence). Ep2 (the casting pass, 2026-10-08): e2-a2-0015 VOICE 4 'Hi...' (the trail is the read; the house would drop a trailing print ellipsis); e2-a3-0010 the CROWD 'Feel the A.G.I.! Feel the A.G.I.!' (cast.md §5: sentence case, the letters). Ep2 (the takes pass, 2026-10-09): e2-a3-0009 ALYI 'Feel the A.G.I.!' (his lead of the chant, sent as the crowd's is: sentence case and the letters; all capitals can be spelled or shouted flat). e2-a1-0001 MAS 'Is there anyone here... from 2016.' (one sentence, the procedure's pause inside it: the house capitalises after an ellipsis, which would make 'From 2016.' a second sentence); e2-a1-0013 MAS 'You wrote 'exactly right.'' (the house adds a full stop after a closing quote: '.'.'); e2-a4-0007 TERB '... which is...' (the line hangs for Mas's 'also present.': the house drops a trailing ellipsis and lands it with a full stop). e2-a3-0019 MAS (the call to LEGAL) and e2-vo-09 (V.O. 9) are sent with commas for the script's full stops: the two hurried lines read slower than his ordinary ones with a stop between items (134 and 109 wpm); with commas, at their line_settings speed, 174 and 148 wpm (takes-qa.md §1). The subtitles keep the script's stops. e2-a2-0024 and e2-a2-0033 CHATGTP (11.02, 11.07) are sent with ellipses for the beats the plan holds ('Hi!' then 'I can see you.'; 'Oh.' 'Wow.'): at Ep1's settings, unchanged, the script's punctuation read them at 297 and 268 wpm, 0.46 and 0.51 of the plan, on four seeds each (flagged); with the beats written in, 1.22 and 3.05 s (0.55, 0.58), verbatim (takes-qa.md §4). Speed and direction are Ep1's.",
  "say_full": {
   "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
   "a5-29-24": "Has anyone read the charter?"
@@ -8363,6 +8395,116 @@
     "stability": 0.55,
     "style": 0.0,
     "_why": "the lead, 2026-09-28: the war room's count is his rattled moment, 'faster than he ever thinks'. The V.O. settings (speed 0.85, stability 0.65, style 0) read it at 72 wpm over 6.71 s voiced (Kokoro 3.42 s); this read is 4.90 s, 98 wpm, 4.5 syll/s (voices-el.md §AC3). The slow take stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-a3-0019": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.2,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): the call to LEGAL (17.09), 'level and quicker than he ever talks, about 180 wpm' (cast.md §2; the plan's MAS_HURRIED). His spoken settings (0.60 / 0 / 0.95) with speed 1.20, and the line sent with commas (say_lines): at speed 1.10 with the script's full stops it read 134 wpm, slower than his ordinary lines (each stop a pause); with commas at 1.20 it reads 174 wpm, 3.44 s against the plan's 3.32, verbatim (takes-qa.md §1). Level: stability and style as his."
+   }
+  },
+  "e2-vo-09": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.15,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): V.O. 9 (17.11), 'read faster than he thinks, about 145 wpm against his usual 110-130' (cast.md §2; the plan's VO_RATES 165), each item a new call, not louder. The V.O. settings (0.65 / 0 / 0.85) with speed 1.15 and stability 0.60, and the line sent with commas (say_lines): at speed 1.0 with the script's full stops it read 109 wpm, slower than his usual V.O.; with commas at 1.15 it reads 148 wpm, 3.24 s against the plan's 3.25 (takes-qa.md §1)."
+   }
+  },
+  "e2-a2-0037": {
+   "qHR09fcvu6SoDtFzqFvm": {
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass; cast.md §3.4, §8.5 #5): the ENGINEER's off-mic lines (11.15), 'lower and closer, statements', after the casting read measured them higher than his stage line (151 Hz against 118). A calmer read: stability 0.40 -> 0.60, style 0.15 -> 0; speed 1.0 unchanged. Kept only if it measures lower and reads verbatim (takes-qa.md); otherwise this entry goes and the cached audition read stands."
+   }
+  },
+  "e2-a2-0038": {
+   "qHR09fcvu6SoDtFzqFvm": {
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass; cast.md §3.4, §8.5 #5): the ENGINEER's off-mic lines (11.15), 'lower and closer, statements', after the casting read measured them higher than his stage line (151 Hz against 118). A calmer read: stability 0.40 -> 0.60, style 0.15 -> 0; speed 1.0 unchanged. Kept only if it measures lower and reads verbatim (takes-qa.md); otherwise this entry goes and the cached audition read stands."
+   }
+  },
+  "e2-vo-02": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 170 wpm; at 0.75 it reads 158 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-vo-05": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 183 wpm; at 0.75 it reads 163 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-vo-08": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 205 wpm; at 0.75 it reads 188 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-vo-10": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 160 wpm; at 0.75 it reads 143 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-vo-12": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 167 wpm; at 0.75 it reads 146 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-vo-13": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.75,
+    "stability": 0.65,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): his V.O. is 'close and dry, 110-130 wpm' (cast.md §2, W18). At the V.O. settings (speed 0.85) this read 174 wpm; at 0.75 it reads 157 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-a1-0004": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.82,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): 'his ordinary lines unhurried, about 140 wpm' (cast.md §2, W18), and the call to LEGAL 'quicker than he ever talks'. At his spoken settings (speed 0.95) this read 183 wpm, faster than the call (174); at 0.82 it reads 152 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-a1-0009": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.82,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): 'his ordinary lines unhurried, about 140 wpm' (cast.md §2, W18), and the call to LEGAL 'quicker than he ever talks'. At his spoken settings (speed 0.95) this read 204 wpm, faster than the call (174); at 0.82 it reads 167 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-a3-0012": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.82,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): 'his ordinary lines unhurried, about 140 wpm' (cast.md §2, W18), and the call to LEGAL 'quicker than he ever talks'. At his spoken settings (speed 0.95) this read 216 wpm, faster than the call (174); at 0.82 it reads 181 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
+   }
+  },
+  "e2-a4-0029": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 0.82,
+    "stability": 0.6,
+    "style": 0.0,
+    "_why": "Ep2 (the takes pass): 'his ordinary lines unhurried, about 140 wpm' (cast.md §2, W18), and the call to LEGAL 'quicker than he ever talks'. At his spoken settings (speed 0.95) this read 233 wpm, faster than the call (174); at 0.82 it reads 192 wpm, verbatim (takes-qa.md §1). The faster read stays in the cache: dropping this entry brings it back for free."
    }
   }
  },

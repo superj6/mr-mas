@@ -1,0 +1,3408 @@
+{
+ "segment": "act4",
+ "lines": {
+  "e2-a4-0001": {
+   "id": "e2-a4-0001",
+   "who": "neleh",
+   "take": "e2-a4-0001__neleh-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 626645045,
+     "key": "43236768f1d4470c",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "measures": {
+      "heard": "When chat GTP came out November 2022, the board was not informed in advance about that. We learned about chat GTP on red twit.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "ChatGTP",
+        "margin": 13.29,
+        "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+        "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+        "real": "ChatGPT",
+        "margin_vs_real": 16.04
+       },
+       {
+        "word": "Rettiwt",
+        "margin": -5.35,
+        "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Ret twit.",
+        "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+        "real": "Twitter",
+        "margin_vs_real": 0.73
+       }
+      ],
+      "span_s": 9.85,
+      "plan_len_s": 6.85,
+      "ratio": 1.438,
+      "words": 21,
+      "wpm": 127.9,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.26,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 189.4,
+      "f0_range_st": 6.5,
+      "take_floor_dbfs": -61.4,
+      "duration_s": 10.592,
+      "raw_floor_dbfs": -47.5,
+      "raw_speech_to_floor_db": 17.2,
+      "raw_peak_dbfs": -13.32,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": null,
+      "raw_pause_sf_db": null,
+      "raw_quiet_frames": 3
+     },
+     "fail": [
+      "name Rettiwt: -5.3 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'"
+     ],
+     "look": [
+      "length 1.44 of the plan",
+      "tempo 128 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 17 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "43236768f1d4470c"
+    },
+    {
+     "label": "the take",
+     "bump": 1000,
+     "seed": 626646045,
+     "key": "33c33ef3c2565622",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "measures": {
+      "heard": "When ChatGTP came out November 2022, the board was not informed in advance about that. We learned about ChatGTP on RhettTwit.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "ChatGTP",
+        "margin": 15.12,
+        "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+        "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+        "real": "ChatGPT",
+        "margin_vs_real": 16.73
+       },
+       {
+        "word": "Rettiwt",
+        "margin": -0.75,
+        "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Rhett twit.",
+        "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+        "real": "Twitter",
+        "margin_vs_real": 4.44
+       }
+      ],
+      "span_s": 8.97,
+      "plan_len_s": 6.85,
+      "ratio": 1.309,
+      "words": 21,
+      "wpm": 140.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.0,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 195.3,
+      "f0_range_st": 6.4,
+      "take_floor_dbfs": -61.7,
+      "duration_s": 9.709,
+      "raw_floor_dbfs": -46.1,
+      "raw_speech_to_floor_db": 16.0,
+      "raw_pause_floor_dbfs": -59.5,
+      "raw_pause_sf_db": 29.3,
+      "raw_quiet_frames": 11,
+      "raw_peak_dbfs": -11.33,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'",
+      "length 1.31 of the plan",
+      "tempo 140 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 16 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+     "base_key": "43236768f1d4470c",
+     "why": "name Rettiwt: -8.6 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech"
+    },
+    {
+     "label": "retake 2000",
+     "bump": 2000,
+     "seed": 626647045,
+     "key": "1e7937a297a54b2f",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "measures": {
+      "heard": "When ChatGTP came out November 2022, the board was not informed in advance about that. We learned about ChatGTP on RedTwit.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "ChatGTP",
+        "margin": 14.25,
+        "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+        "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+        "real": "ChatGPT",
+        "margin_vs_real": 15.77
+       },
+       {
+        "word": "Rettiwt",
+        "margin": -0.54,
+        "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Rhett twit.",
+        "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+        "real": "Twitter",
+        "margin_vs_real": 5.05
+       }
+      ],
+      "span_s": 8.75,
+      "plan_len_s": 6.85,
+      "ratio": 1.277,
+      "words": 21,
+      "wpm": 144.0,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.98,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 192.5,
+      "f0_range_st": 5.9,
+      "take_floor_dbfs": -61.8,
+      "duration_s": 9.477,
+      "raw_floor_dbfs": -45.4,
+      "raw_speech_to_floor_db": 15.2,
+      "raw_peak_dbfs": -12.47,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": null,
+      "raw_pause_sf_db": null,
+      "raw_quiet_frames": 1
+     },
+     "fail": [],
+     "look": [
+      "name Rettiwt: -0.5 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'",
+      "length 1.28 of the plan",
+      "tempo 144 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 15 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "43236768f1d4470c",
+     "why": "name Rettiwt: -3.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 16 dB under the speech"
+    },
+    {
+     "label": "retake 3000",
+     "bump": 3000,
+     "seed": 626648045,
+     "key": "39eb6a8f22b6e105",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "measures": {
+      "heard": "When chat GTP came out November 2022 the board was not informed in advance about that We learned about chat GTP on red twit",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "ChatGTP",
+        "margin": 14.23,
+        "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+        "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+        "real": "ChatGPT",
+        "margin_vs_real": 15.74
+       },
+       {
+        "word": "Rettiwt",
+        "margin": -0.75,
+        "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Rhett twit.",
+        "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+        "real": "Twitter",
+        "margin_vs_real": 4.53
+       }
+      ],
+      "span_s": 8.27,
+      "plan_len_s": 6.85,
+      "ratio": 1.207,
+      "words": 21,
+      "wpm": 152.4,
+      "longest_gap_s": 0.06,
+      "lufs": -16.0,
+      "true_peak": -4.14,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 193.0,
+      "f0_range_st": 8.1,
+      "take_floor_dbfs": -61.7,
+      "duration_s": 9.013,
+      "raw_floor_dbfs": -48.2,
+      "raw_speech_to_floor_db": 17.1,
+      "raw_peak_dbfs": -10.41,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -63.3,
+      "raw_pause_sf_db": 32.1,
+      "raw_quiet_frames": 11
+     },
+     "fail": [],
+     "look": [
+      "name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'",
+      "length 1.21 of the plan",
+      "tempo 152 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 17 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "43236768f1d4470c",
+     "why": "name Rettiwt: -4.5 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech"
+    }
+   ],
+   "picked_bump": 1000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'",
+    "length 1.31 of the plan",
+    "tempo 140 wpm against neleh at the planned 190 wpm +-15 %",
+    "floor 16 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+    "33c33ef3c2565622",
+    9.709
+   ]
+  },
+  "e2-a4-0002": {
+   "id": "e2-a4-0002",
+   "who": "neleh",
+   "take": "e2-a4-0002__neleh-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1789670990,
+     "key": "82a3ccc81320cd93",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+     "measures": {
+      "heard": "Moss didn't inform the board that he owned the NOPE AI Startup Fund.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 7.35,
+        "best_intended": "... Moss didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "best_competitor": "... Mass didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "real": "Max",
+        "margin_vs_real": 9.19
+       },
+       {
+        "word": "NopeAI",
+        "margin": 7.52,
+        "best_intended": "... MAS didn't inform the board that he owned the Nope AI Startup Fund.",
+        "best_competitor": "... MAS didn't inform the board that he owned the OpenAI Startup Fund.",
+        "real": "OpenAI",
+        "margin_vs_real": 7.52
+       }
+      ],
+      "span_s": 4.75,
+      "plan_len_s": 3.89,
+      "ratio": 1.221,
+      "words": 12,
+      "wpm": 151.6,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.59,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 192.3,
+      "f0_range_st": 4.9,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 5.483,
+      "raw_floor_dbfs": -44.4,
+      "raw_speech_to_floor_db": 15.1,
+      "raw_pause_floor_dbfs": null,
+      "raw_pause_sf_db": null,
+      "raw_quiet_frames": 2,
+      "raw_peak_dbfs": -12.29,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.22 of the plan",
+      "tempo 152 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 15 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... Moss didn't inform the board that he owned the Nope A.I. Startup Fund.",
+     "base_key": "82a3ccc81320cd93"
+    },
+    {
+     "label": "retake 1000",
+     "bump": 1000,
+     "seed": 1789671990,
+     "key": "f06282090e97d33b",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+     "measures": {
+      "heard": "Moss didn't inform the board that he owned the NOPE AI Startup Fund.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 6.34,
+        "best_intended": "... Moss didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "best_competitor": "... Mass didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "real": "Max",
+        "margin_vs_real": 9.04
+       },
+       {
+        "word": "NopeAI",
+        "margin": 7.78,
+        "best_intended": "... MAS didn't inform the board that he owned the Nope AI Startup Fund.",
+        "best_competitor": "... MAS didn't inform the board that he owned the Open AI Startup Fund.",
+        "real": "OpenAI",
+        "margin_vs_real": 9.94
+       }
+      ],
+      "span_s": 5.13,
+      "plan_len_s": 3.89,
+      "ratio": 1.319,
+      "words": 12,
+      "wpm": 140.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.12,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 189.6,
+      "f0_range_st": 7.0,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 5.855,
+      "raw_floor_dbfs": -46.2,
+      "raw_speech_to_floor_db": 17.2,
+      "raw_peak_dbfs": -11.61,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": null,
+      "raw_pause_sf_db": null,
+      "raw_quiet_frames": 1
+     },
+     "fail": [],
+     "look": [
+      "length 1.32 of the plan",
+      "tempo 140 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 17 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... Moss didn't inform the board that he owned the Nope A.I. Startup Fund.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "82a3ccc81320cd93",
+     "why": "noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech"
+    },
+    {
+     "label": "retake 2000",
+     "bump": 2000,
+     "seed": 1789672990,
+     "key": "46d3795d919a7acb",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+     "measures": {
+      "heard": "Moss didn't inform the board that he owned the NOPE AI startup fund.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 7.06,
+        "best_intended": "... Moss didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "best_competitor": "... Mass didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "real": "Max",
+        "margin_vs_real": 8.64
+       },
+       {
+        "word": "NopeAI",
+        "margin": 9.19,
+        "best_intended": "... MAS didn't inform the board that he owned the Nope AI Startup Fund.",
+        "best_competitor": "... MAS didn't inform the board that he owned the Open AI Startup Fund.",
+        "real": "OpenAI",
+        "margin_vs_real": 9.5
+       }
+      ],
+      "span_s": 4.06,
+      "plan_len_s": 3.89,
+      "ratio": 1.044,
+      "words": 12,
+      "wpm": 177.3,
+      "longest_gap_s": 0.07,
+      "lufs": -16.0,
+      "true_peak": -3.92,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 202.4,
+      "f0_range_st": 8.0,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 4.787,
+      "raw_floor_dbfs": -51.0,
+      "raw_speech_to_floor_db": 20.0,
+      "raw_peak_dbfs": -13.91,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -63.0,
+      "raw_pause_sf_db": 32.0,
+      "raw_quiet_frames": 9
+     },
+     "fail": [],
+     "look": [
+      "floor 20 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... Moss didn't inform the board that he owned the Nope A.I. Startup Fund.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "82a3ccc81320cd93",
+     "why": "noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech"
+    },
+    {
+     "label": "retake 3000",
+     "bump": 3000,
+     "seed": 1789673990,
+     "key": "57cc90e9d8b86fe2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+     "measures": {
+      "heard": "Moss didn't inform the board that he owned the NOPE AI startup fund.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 7.35,
+        "best_intended": "... Moss didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "best_competitor": "... Mass didn't inform the board that he owned the NOPEAI Startup Fund.",
+        "real": "Max",
+        "margin_vs_real": 9.1
+       },
+       {
+        "word": "NopeAI",
+        "margin": 8.83,
+        "best_intended": "... MAS didn't inform the board that he owned the Nope AI Startup Fund.",
+        "best_competitor": "... MAS didn't inform the board that he owned the OpenAI Startup Fund.",
+        "real": "OpenAI",
+        "margin_vs_real": 8.83
+       }
+      ],
+      "span_s": 5.82,
+      "plan_len_s": 3.89,
+      "ratio": 1.496,
+      "words": 12,
+      "wpm": 123.7,
+      "longest_gap_s": 0.09,
+      "lufs": -16.0,
+      "true_peak": -3.01,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 199.5,
+      "f0_range_st": 7.3,
+      "take_floor_dbfs": -62.1,
+      "duration_s": 6.551,
+      "raw_floor_dbfs": -62.5,
+      "raw_speech_to_floor_db": 33.7,
+      "raw_peak_dbfs": -7.1,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -66.6,
+      "raw_pause_sf_db": 37.8,
+      "raw_quiet_frames": 21
+     },
+     "fail": [],
+     "look": [
+      "length 1.50 of the plan",
+      "tempo 124 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... Moss didn't inform the board that he owned the Nope A.I. Startup Fund.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "82a3ccc81320cd93",
+     "why": "noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 20 dB under the speech"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.22 of the plan",
+    "tempo 152 wpm against neleh at the planned 190 wpm +-15 %",
+    "floor 15 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "... Moss didn't inform the board that he owned the Nope A.I. Startup Fund.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+    "82a3ccc81320cd93",
+    5.483
+   ]
+  },
+  "e2-a4-0003": {
+   "id": "e2-a4-0003",
+   "who": "terb",
+   "take": "e2-a4-0003__terb-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3984050936,
+     "key": "81d330b20b382ac7",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0003__terb-A.wav",
+     "measures": {
+      "heard": "First item.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.93,
+      "plan_len_s": 0.8,
+      "ratio": 1.163,
+      "words": 2,
+      "wpm": 129.0,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.77,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 93.3,
+      "f0_range_st": 6.4,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.675,
+      "raw_floor_dbfs": -53.3,
+      "raw_speech_to_floor_db": 32.1,
+      "raw_pause_floor_dbfs": -50.8,
+      "raw_pause_sf_db": 29.6,
+      "raw_quiet_frames": 13,
+      "raw_peak_dbfs": -2.47,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 32 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "First item.",
+     "base_key": "81d330b20b382ac7"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 32 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "First item.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0003__terb-A.wav",
+    "81d330b20b382ac7",
+    1.675
+   ]
+  },
+  "e2-a4-0004": {
+   "id": "e2-a4-0004",
+   "who": "terb",
+   "take": "e2-a4-0004__terb-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4132701400,
+     "key": "1ff14ce806cb4cc8",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0004__terb-A.wav",
+     "measures": {
+      "heard": "First task, this committee goes through our safety processes and safeguards, and it has 90 days to do it.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 7.56,
+      "plan_len_s": 7.13,
+      "ratio": 1.06,
+      "words": 19,
+      "wpm": 150.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.59,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 101.4,
+      "f0_range_st": 10.2,
+      "take_floor_dbfs": -61.9,
+      "duration_s": 8.316,
+      "raw_floor_dbfs": -54.1,
+      "raw_speech_to_floor_db": 32.0,
+      "raw_pause_floor_dbfs": -53.1,
+      "raw_pause_sf_db": 31.1,
+      "raw_quiet_frames": 55,
+      "raw_peak_dbfs": -4.69,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 32 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
+     "base_key": "1ff14ce806cb4cc8"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 32 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0004__terb-A.wav",
+    "1ff14ce806cb4cc8",
+    8.316
+   ]
+  },
+  "e2-a4-0005": {
+   "id": "e2-a4-0005",
+   "who": "terb",
+   "take": "e2-a4-0005__terb-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 3236627502,
+     "key": "df5535579c30d0af",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
+     "measures": {
+      "heard": "members, myself, two directors, and our chief executive.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.66,
+      "plan_len_s": 3.13,
+      "ratio": 1.169,
+      "words": 8,
+      "wpm": 131.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.66,
+      "clipped": 0,
+      "raw_tail_cut": true,
+      "f0": 96.8,
+      "f0_range_st": 8.1,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 4.369,
+      "raw_floor_dbfs": -48.0,
+      "raw_speech_to_floor_db": 27.3,
+      "raw_peak_dbfs": -5.12,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -50.3,
+      "raw_pause_sf_db": 29.6,
+      "raw_quiet_frames": 11
+     },
+     "fail": [
+      "the raw audio stops while still sounding"
+     ],
+     "look": [
+      "length 1.17 of the plan",
+      "tempo 131 wpm against terb at the planned 165 wpm +-15 %",
+      "floor 27 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Members: myself, two directors, and our chief executive.",
+     "voice": "Ethan - Calm, Optimistic and Clear",
+     "base_key": "df5535579c30d0af"
+    },
+    {
+     "label": "the take",
+     "bump": 1000,
+     "seed": 3236628502,
+     "key": "fab212921cea2e00",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
+     "measures": {
+      "heard": "Members, myself, two directors, and our Chief Executive.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.11,
+      "plan_len_s": 3.13,
+      "ratio": 1.313,
+      "words": 8,
+      "wpm": 116.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.96,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 94.2,
+      "f0_range_st": 12.5,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 4.833,
+      "raw_floor_dbfs": -55.3,
+      "raw_speech_to_floor_db": 31.2,
+      "raw_pause_floor_dbfs": -55.0,
+      "raw_pause_sf_db": 30.9,
+      "raw_quiet_frames": 26,
+      "raw_peak_dbfs": -7.02,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.31 of the plan",
+      "tempo 117 wpm against terb at the planned 165 wpm +-15 %",
+      "floor 31 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Members: myself, two directors, and our chief executive.",
+     "base_key": "df5535579c30d0af",
+     "why": "the raw audio stops while still sounding"
+    }
+   ],
+   "picked_bump": 1000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.31 of the plan",
+    "tempo 117 wpm against terb at the planned 165 wpm +-15 %",
+    "floor 31 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Members: myself, two directors, and our chief executive.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
+    "fab212921cea2e00",
+    4.833
+   ]
+  },
+  "e2-a4-0006": {
+   "id": "e2-a4-0006",
+   "who": "mas-manalt",
+   "take": "e2-a4-0006__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2726927289,
+     "key": "833311f584a49ddf",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0006__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Present",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.61,
+      "plan_len_s": 0.7,
+      "ratio": 0.871,
+      "words": 1,
+      "wpm": 98.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.88,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 96.5,
+      "f0_range_st": 13.4,
+      "take_floor_dbfs": -63.4,
+      "duration_s": 1.48,
+      "raw_floor_dbfs": -89.8,
+      "raw_speech_to_floor_db": 65.5,
+      "raw_pause_floor_dbfs": -80.8,
+      "raw_pause_sf_db": 56.6,
+      "raw_quiet_frames": 22,
+      "raw_peak_dbfs": -0.66,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Present.",
+     "base_key": "833311f584a49ddf"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Present.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0006__mas-manalt-C.wav",
+    "833311f584a49ddf",
+    1.48
+   ]
+  },
+  "e2-a4-0007": {
+   "id": "e2-a4-0007",
+   "who": "terb",
+   "take": "e2-a4-0007__terb-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1762647853,
+     "key": "b22ff062a2ed17f3",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0007__terb-A.wav",
+     "measures": {
+      "heard": "And at the end of the 90 days we take our recommendations to the full board which is",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.77,
+      "plan_len_s": 6.65,
+      "ratio": 0.868,
+      "words": 18,
+      "wpm": 187.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.95,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 98.0,
+      "f0_range_st": 9.4,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 6.505,
+      "raw_floor_dbfs": -56.4,
+      "raw_speech_to_floor_db": 30.1,
+      "raw_pause_floor_dbfs": -56.1,
+      "raw_pause_sf_db": 29.8,
+      "raw_quiet_frames": 34,
+      "raw_peak_dbfs": -9.79,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 30 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "And at the end of the ninety days, we take our recommendations to the full board, which is...",
+     "base_key": "b22ff062a2ed17f3"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 30 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "And at the end of the ninety days, we take our recommendations to the full board, which is...",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0007__terb-A.wav",
+    "b22ff062a2ed17f3",
+    6.505
+   ]
+  },
+  "e2-a4-0008": {
+   "id": "e2-a4-0008",
+   "who": "mas-manalt",
+   "take": "e2-a4-0008__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 827966127,
+     "key": "a025f67b6608f6cb",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0008__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Also present.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.06,
+      "plan_len_s": 0.96,
+      "ratio": 1.104,
+      "words": 2,
+      "wpm": 113.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.62,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 122.8,
+      "f0_range_st": 8.9,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 1.925,
+      "raw_floor_dbfs": -87.9,
+      "raw_speech_to_floor_db": 68.5,
+      "raw_pause_floor_dbfs": -82.3,
+      "raw_pause_sf_db": 62.9,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -0.9,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Also present.",
+     "base_key": "a025f67b6608f6cb"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Also present.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0008__mas-manalt-C.wav",
+    "a025f67b6608f6cb",
+    1.925
+   ]
+  },
+  "e2-vo-11": {
+   "id": "e2-vo-11",
+   "who": "mas-manalt",
+   "take": "e2-vo-11__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2510627830,
+     "key": "77fb2b97b4160c4b",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-11__mas-manalt-C.wav",
+     "measures": {
+      "heard": "The next one's already training.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.05,
+      "plan_len_s": 2.44,
+      "ratio": 0.84,
+      "words": 5,
+      "wpm": 146.3,
+      "longest_gap_s": 0.0,
+      "lufs": -18.0,
+      "true_peak": -3.49,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 108.0,
+      "f0_range_st": 5.8,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.161,
+      "raw_floor_dbfs": -89.8,
+      "raw_speech_to_floor_db": 70.5,
+      "raw_pause_floor_dbfs": -79.5,
+      "raw_pause_sf_db": 60.2,
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -1.05,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.84 of the plan",
+      "tempo 146 wpm against his V.O. 110-130"
+     ],
+     "sent": "The next one's already training.",
+     "base_key": "77fb2b97b4160c4b"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.84 of the plan",
+    "tempo 146 wpm against his V.O. 110-130"
+   ],
+   "superseded": [],
+   "sent": "The next one's already training.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-11__mas-manalt-C.wav",
+    "77fb2b97b4160c4b",
+    3.161
+   ]
+  },
+  "e2-a4-0010": {
+   "id": "e2-a4-0010",
+   "who": "ekiel",
+   "take": "e2-a4-0010__ekiel-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4266159304,
+     "key": "40b08c6d6c7fce86",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0010__ekiel-A.wav",
+     "measures": {
+      "heard": "You annotated my resignation?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.95,
+      "plan_len_s": 1.6,
+      "ratio": 1.219,
+      "words": 4,
+      "wpm": 123.1,
+      "longest_gap_s": 0.11,
+      "lufs": -16.0,
+      "true_peak": -3.54,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 103.8,
+      "f0_range_st": 8.5,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 2.79,
+      "raw_floor_dbfs": -68.9,
+      "raw_speech_to_floor_db": 39.7,
+      "raw_pause_floor_dbfs": -67.2,
+      "raw_pause_sf_db": 38.0,
+      "raw_quiet_frames": 23,
+      "raw_peak_dbfs": -12.19,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.22 of the plan",
+      "floor 40 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "You annotated my resignation?",
+     "base_key": "40b08c6d6c7fce86"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.22 of the plan",
+    "floor 40 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "You annotated my resignation?",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0010__ekiel-A.wav",
+    "40b08c6d6c7fce86",
+    2.79
+   ]
+  },
+  "e2-a4-0014": {
+   "id": "e2-a4-0014",
+   "who": "ekiel",
+   "take": "e2-a4-0014__ekiel-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3372922561,
+     "key": "136024d2fa58ec7e",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0014__ekiel-A.wav",
+     "measures": {
+      "heard": "That's the brief one",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.07,
+      "plan_len_s": 1.6,
+      "ratio": 0.669,
+      "words": 4,
+      "wpm": 224.3,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.5,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 126.7,
+      "f0_range_st": 7.6,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.14,
+      "raw_floor_dbfs": -70.8,
+      "raw_speech_to_floor_db": 40.5,
+      "raw_pause_floor_dbfs": -68.7,
+      "raw_pause_sf_db": 38.4,
+      "raw_quiet_frames": 23,
+      "raw_peak_dbfs": -10.62,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.67 of the plan",
+      "floor 40 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "That's the brief one?",
+     "base_key": "136024d2fa58ec7e"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.67 of the plan",
+    "floor 40 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "That's the brief one?",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.8
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0014__ekiel-A.wav",
+    "136024d2fa58ec7e",
+    2.14
+   ]
+  },
+  "e2-a4-0017": {
+   "id": "e2-a4-0017",
+   "who": "haras",
+   "take": "e2-a4-0017__haras-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1313264222,
+     "key": "2f8e7bebf459ea72",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0017__haras-A.wav",
+     "measures": {
+      "heard": "I'm new, so I'm starting with the easy ones, what's our biggest cost?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.01,
+      "plan_len_s": 4.44,
+      "ratio": 0.903,
+      "words": 13,
+      "wpm": 194.5,
+      "longest_gap_s": 0.2,
+      "lufs": -16.0,
+      "true_peak": -3.78,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 232.4,
+      "f0_range_st": 12.4,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 4.84,
+      "raw_floor_dbfs": -90.4,
+      "raw_speech_to_floor_db": 73.4,
+      "raw_pause_floor_dbfs": -80.9,
+      "raw_pause_sf_db": 63.9,
+      "raw_quiet_frames": 48,
+      "raw_peak_dbfs": -2.73,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+     "base_key": "2f8e7bebf459ea72"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0017__haras-A.wav",
+    "2f8e7bebf459ea72",
+    4.84
+   ]
+  },
+  "e2-a4-0018": {
+   "id": "e2-a4-0018",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0018__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3376056830,
+     "key": "fb5542dff3c22540",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0018__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "Compute.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.52,
+      "plan_len_s": 0.6,
+      "ratio": 0.867,
+      "words": 1,
+      "wpm": 115.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.89,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 223.0,
+      "f0_range_st": 7.5,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 1.51,
+      "raw_floor_dbfs": -89.5,
+      "raw_speech_to_floor_db": 74.0,
+      "raw_pause_floor_dbfs": -70.8,
+      "raw_pause_sf_db": 55.4,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -1.11,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "pitch 223 Hz, +8.9 st from the role's 133 (a short line)"
+     ],
+     "sent": "Compute.",
+     "base_key": "fb5542dff3c22540"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "pitch 223 Hz, +8.9 st from the role's 133 (a short line)"
+   ],
+   "superseded": [],
+   "sent": "Compute.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0018__gerg-mockbran-A.wav",
+    "fb5542dff3c22540",
+    1.51
+   ]
+  },
+  "e2-a4-0019": {
+   "id": "e2-a4-0019",
+   "who": "haras",
+   "take": "e2-a4-0019__haras-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2853463915,
+     "key": "4492da7222a79c4a",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0019__haras-A.wav",
+     "measures": {
+      "heard": "Got it. And the second biggest?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.89,
+      "plan_len_s": 2.17,
+      "ratio": 0.871,
+      "words": 6,
+      "wpm": 190.5,
+      "longest_gap_s": 0.25,
+      "lufs": -16.0,
+      "true_peak": -3.41,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 200.6,
+      "f0_range_st": 12.9,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 2.745,
+      "raw_floor_dbfs": -90.7,
+      "raw_speech_to_floor_db": 71.7,
+      "raw_pause_floor_dbfs": -77.5,
+      "raw_pause_sf_db": 58.4,
+      "raw_quiet_frames": 35,
+      "raw_peak_dbfs": -3.72,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Got it. And the second biggest?",
+     "base_key": "4492da7222a79c4a"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Got it. And the second biggest?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0019__haras-A.wav",
+    "4492da7222a79c4a",
+    2.745
+   ]
+  },
+  "e2-a4-0020": {
+   "id": "e2-a4-0020",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0020__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1270860170,
+     "key": "e1ab473037f4a446",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0020__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "Compute. Different compute. Some of it trains the next model and the rest keeps this one talking.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.98,
+      "plan_len_s": 5.32,
+      "ratio": 1.124,
+      "words": 17,
+      "wpm": 170.6,
+      "longest_gap_s": 0.61,
+      "lufs": -16.0,
+      "true_peak": -3.09,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 126.5,
+      "f0_range_st": 11.2,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 7.062,
+      "raw_floor_dbfs": -68.9,
+      "raw_speech_to_floor_db": 52.2,
+      "raw_pause_floor_dbfs": -61.8,
+      "raw_pause_sf_db": 45.0,
+      "raw_quiet_frames": 102,
+      "raw_peak_dbfs": -2.25,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 171 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking.",
+     "base_key": "e1ab473037f4a446"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 171 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0020__gerg-mockbran-A.wav",
+    "e1ab473037f4a446",
+    7.062
+   ]
+  },
+  "e2-a4-0021": {
+   "id": "e2-a4-0021",
+   "who": "haras",
+   "take": "e2-a4-0021__haras-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4280517390,
+     "key": "7ee978145e8cfabb",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0021__haras-A.wav",
+     "measures": {
+      "heard": "and profit.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.77,
+      "plan_len_s": 0.8,
+      "ratio": 0.963,
+      "words": 2,
+      "wpm": 155.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.47,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 162.0,
+      "f0_range_st": 14.8,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.63,
+      "raw_floor_dbfs": -90.8,
+      "raw_speech_to_floor_db": 72.9,
+      "raw_pause_floor_dbfs": -90.1,
+      "raw_pause_sf_db": 72.2,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -3.04,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "And profit?",
+     "base_key": "7ee978145e8cfabb"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "And profit?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0021__haras-A.wav",
+    "7ee978145e8cfabb",
+    1.63
+   ]
+  },
+  "e2-a4-0022": {
+   "id": "e2-a4-0022",
+   "who": "haras",
+   "take": "e2-a4-0022__haras-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3211090557,
+     "key": "f419ce15fe651c54",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0022__haras-A.wav",
+     "measures": {
+      "heard": "Let me reframe that. Upside.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.6,
+      "plan_len_s": 1.84,
+      "ratio": 0.87,
+      "words": 5,
+      "wpm": 187.5,
+      "longest_gap_s": 0.17,
+      "lufs": -16.0,
+      "true_peak": -2.83,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 193.6,
+      "f0_range_st": 13.2,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.515,
+      "raw_floor_dbfs": -91.2,
+      "raw_speech_to_floor_db": 71.6,
+      "raw_pause_floor_dbfs": -88.5,
+      "raw_pause_sf_db": 68.9,
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -1.95,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Let me reframe that. Upside.",
+     "base_key": "f419ce15fe651c54"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Let me reframe that. Upside.",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0022__haras-A.wav",
+    "f419ce15fe651c54",
+    2.515
+   ]
+  },
+  "e2-a4-0023": {
+   "id": "e2-a4-0023",
+   "who": "tiled-employee",
+   "take": "e2-a4-0023__tiled-employee-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 660587864,
+     "key": "079ae03475672284",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0023__tiled-employee-A.wav",
+     "measures": {
+      "heard": "Is that Moss?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 6.7,
+        "best_intended": "Is that Moss?",
+        "best_competitor": "Is that Mass?",
+        "real": "Max",
+        "margin_vs_real": 10.29
+       }
+      ],
+      "span_s": 0.79,
+      "plan_len_s": 1.05,
+      "ratio": 0.752,
+      "words": 3,
+      "wpm": 227.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.2,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 198.8,
+      "f0_range_st": 6.9,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 1.66,
+      "raw_floor_dbfs": -88.1,
+      "raw_speech_to_floor_db": 71.8,
+      "raw_pause_floor_dbfs": -87.1,
+      "raw_pause_sf_db": 70.9,
+      "raw_quiet_frames": 22,
+      "raw_peak_dbfs": -0.73,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Is that Moss?",
+     "base_key": "079ae03475672284"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Is that Moss?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0023__tiled-employee-A.wav",
+    "079ae03475672284",
+    1.66
+   ]
+  },
+  "e2-vo-12": {
+   "id": "e2-vo-12",
+   "who": "mas-manalt",
+   "take": "e2-vo-12__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1919338259,
+     "key": "94066d9c836005bb",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-12__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Whatever we ship next goes in their phones, too.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.69,
+      "plan_len_s": 4.32,
+      "ratio": 0.854,
+      "words": 9,
+      "wpm": 146.3,
+      "longest_gap_s": 0.07,
+      "lufs": -18.0,
+      "true_peak": -3.97,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 107.1,
+      "f0_range_st": 11.7,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.69,
+      "raw_floor_dbfs": -76.8,
+      "raw_speech_to_floor_db": 57.6,
+      "raw_pause_floor_dbfs": -75.3,
+      "raw_pause_sf_db": 56.1,
+      "raw_quiet_frames": 36,
+      "raw_peak_dbfs": -1.53,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 146 wpm against his V.O. 110-130"
+     ],
+     "sent": "Whatever we ship next goes in their phones too.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "94066d9c836005bb"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 146 wpm against his V.O. 110-130"
+   ],
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1919338259,
+     "key": "db4afb35e27467eb",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-12__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Whatever we ship next goes in their phones too.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.24,
+      "plan_len_s": 4.32,
+      "ratio": 0.75,
+      "words": 9,
+      "wpm": 166.7,
+      "longest_gap_s": 0.08,
+      "lufs": -18.0,
+      "true_peak": -3.96,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 122.1,
+      "f0_range_st": 8.3,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 4.155,
+      "raw_floor_dbfs": -78.7,
+      "raw_speech_to_floor_db": 59.3,
+      "raw_pause_floor_dbfs": -74.4,
+      "raw_pause_sf_db": 55.1,
+      "raw_quiet_frames": 34,
+      "raw_peak_dbfs": -1.34,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.75 of the plan",
+      "tempo 167 wpm against his V.O. 110-130"
+     ],
+     "sent": "Whatever we ship next goes in their phones too.",
+     "base_key": "db4afb35e27467eb"
+    }
+   ],
+   "sent": "Whatever we ship next goes in their phones too.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-12__mas-manalt-C.wav",
+    "94066d9c836005bb",
+    4.69
+   ]
+  },
+  "e2-a4-0024": {
+   "id": "e2-a4-0024",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0024__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1519078410,
+     "key": "997345a6d3cc6d9c",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0024__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "There's a screen the size of a building in front of you, and you're on your phone.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.25,
+      "plan_len_s": 5.08,
+      "ratio": 0.64,
+      "words": 17,
+      "wpm": 313.8,
+      "longest_gap_s": 0.1,
+      "lufs": -16.0,
+      "true_peak": -3.74,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.5,
+      "f0_range_st": 13.4,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 4.276,
+      "raw_floor_dbfs": -72.3,
+      "raw_speech_to_floor_db": 49.4,
+      "raw_pause_floor_dbfs": -69.3,
+      "raw_pause_sf_db": 46.4,
+      "raw_quiet_frames": 32,
+      "raw_peak_dbfs": -8.68,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.64 of the plan",
+      "tempo 314 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "There's a screen the size of a building in front of you, and you're on your phone.",
+     "base_key": "997345a6d3cc6d9c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.64 of the plan",
+    "tempo 314 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "There's a screen the size of a building in front of you, and you're on your phone.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0024__gerg-mockbran-A.wav",
+    "997345a6d3cc6d9c",
+    4.276
+   ]
+  },
+  "e2-a4-0025": {
+   "id": "e2-a4-0025",
+   "who": "mas-manalt",
+   "take": "e2-a4-0025__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1509761958,
+     "key": "3f3600c217c5e8bd",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0025__mas-manalt-C.wav",
+     "measures": {
+      "heard": "The phone's closer.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.23,
+      "plan_len_s": 1.39,
+      "ratio": 0.885,
+      "words": 3,
+      "wpm": 146.3,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.56,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.0,
+      "f0_range_st": 9.0,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 2.279,
+      "raw_floor_dbfs": -84.7,
+      "raw_speech_to_floor_db": 61.8,
+      "raw_pause_floor_dbfs": -79.1,
+      "raw_pause_sf_db": 56.2,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -6.94,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "The phone's closer.",
+     "base_key": "3f3600c217c5e8bd"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "The phone's closer.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0025__mas-manalt-C.wav",
+    "3f3600c217c5e8bd",
+    2.279
+   ]
+  },
+  "e2-a4-0026": {
+   "id": "e2-a4-0026",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0026__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3236186500,
+     "key": "d453f708404ee679",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0026__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "They just said our name up there.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.67,
+      "plan_len_s": 2.15,
+      "ratio": 0.777,
+      "words": 7,
+      "wpm": 251.5,
+      "longest_gap_s": 0.1,
+      "lufs": -16.0,
+      "true_peak": -2.99,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 144.1,
+      "f0_range_st": 15.4,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 2.418,
+      "raw_floor_dbfs": -59.3,
+      "raw_speech_to_floor_db": 39.7,
+      "raw_pause_floor_dbfs": -51.2,
+      "raw_pause_sf_db": 31.6,
+      "raw_quiet_frames": 22,
+      "raw_peak_dbfs": -3.29,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.78 of the plan",
+      "tempo 252 wpm against gerg at the planned 205 wpm +-15 %",
+      "floor 40 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "They just said our name up there.",
+     "base_key": "d453f708404ee679"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.78 of the plan",
+    "tempo 252 wpm against gerg at the planned 205 wpm +-15 %",
+    "floor 40 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "They just said our name up there.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0026__gerg-mockbran-A.wav",
+    "d453f708404ee679",
+    2.418
+   ]
+  },
+  "e2-a4-0027": {
+   "id": "e2-a4-0027",
+   "who": "mas-manalt",
+   "take": "e2-a4-0027__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2740180216,
+     "key": "00594862437cb9ab",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0027__mas-manalt-C.wav",
+     "measures": {
+      "heard": "I heard.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.63,
+      "plan_len_s": 0.7,
+      "ratio": 0.9,
+      "words": 2,
+      "wpm": 190.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.16,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 107.9,
+      "f0_range_st": 6.7,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 1.46,
+      "raw_floor_dbfs": -87.2,
+      "raw_speech_to_floor_db": 64.2,
+      "raw_pause_floor_dbfs": -84.1,
+      "raw_pause_sf_db": 61.2,
+      "raw_quiet_frames": 18,
+      "raw_peak_dbfs": -2.09,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "I heard.",
+     "base_key": "00594862437cb9ab"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "I heard.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0027__mas-manalt-C.wav",
+    "00594862437cb9ab",
+    1.46
+   ]
+  },
+  "e2-a4-0033": {
+   "id": "e2-a4-0033",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0033__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2194475620,
+     "key": "26cf4261867e63fe",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0033__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "Half the lobby is standing on a beanbag.",
+      "asr_mismatch": [
+       [
+        "lobby's",
+        "lobby is"
+       ]
+      ],
+      "asr_margin": -0.12,
+      "names": [],
+      "span_s": 1.76,
+      "plan_len_s": 2.15,
+      "ratio": 0.819,
+      "words": 7,
+      "wpm": 238.6,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.36,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 136.1,
+      "f0_range_st": 13.9,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.79,
+      "raw_floor_dbfs": -68.8,
+      "raw_speech_to_floor_db": 51.1,
+      "raw_pause_floor_dbfs": -66.1,
+      "raw_pause_sf_db": 48.4,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -0.68,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "asr: 'lobby's' heard 'lobby is' (the recogniser's; the text scores -0.1 against what it heard)",
+      "length 0.82 of the plan",
+      "tempo 239 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "Half the lobby's standing on a beanbag.",
+     "base_key": "26cf4261867e63fe"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "asr: 'lobby's' heard 'lobby is' (the recogniser's; the text scores -0.1 against what it heard)",
+    "length 0.82 of the plan",
+    "tempo 239 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "Half the lobby's standing on a beanbag.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0033__gerg-mockbran-A.wav",
+    "26cf4261867e63fe",
+    2.79
+   ]
+  },
+  "e2-a4-0034": {
+   "id": "e2-a4-0034",
+   "who": "mas-manalt",
+   "take": "e2-a4-0034__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3774089794,
+     "key": "4299cd109482b2d1",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0034__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Which half?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.7,
+      "plan_len_s": 1.0,
+      "ratio": 0.7,
+      "words": 2,
+      "wpm": 171.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.48,
+      "true_peak": -2.51,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 144.1,
+      "f0_range_st": 11.8,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 1.768,
+      "raw_floor_dbfs": -90.1,
+      "raw_speech_to_floor_db": 73.6,
+      "raw_pause_floor_dbfs": -76.8,
+      "raw_pause_sf_db": 60.4,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -0.8,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "pitch 144 Hz, +4.4 st from the role's 112 (a short line)"
+     ],
+     "sent": "Which half?",
+     "base_key": "4299cd109482b2d1"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "pitch 144 Hz, +4.4 st from the role's 112 (a short line)"
+   ],
+   "superseded": [],
+   "sent": "Which half?",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0034__mas-manalt-C.wav",
+    "4299cd109482b2d1",
+    1.768
+   ]
+  },
+  "e2-a4-0035": {
+   "id": "e2-a4-0035",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0035__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 65187418,
+     "key": "efb0ff285346fdfe",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0035__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "The half on the beanbags",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.17,
+      "plan_len_s": 1.56,
+      "ratio": 0.75,
+      "words": 5,
+      "wpm": 256.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.09,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 127.4,
+      "f0_range_st": 13.7,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 2.279,
+      "raw_floor_dbfs": -74.8,
+      "raw_speech_to_floor_db": 53.7,
+      "raw_pause_floor_dbfs": -72.2,
+      "raw_pause_sf_db": 51.1,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -2.76,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.75 of the plan",
+      "tempo 256 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "The half on the beanbags.",
+     "base_key": "efb0ff285346fdfe"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.75 of the plan",
+    "tempo 256 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "The half on the beanbags.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0035__gerg-mockbran-A.wav",
+    "efb0ff285346fdfe",
+    2.279
+   ]
+  },
+  "e2-a4-0028": {
+   "id": "e2-a4-0028",
+   "who": "gerg-mockbran",
+   "take": "e2-a4-0028__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 432391792,
+     "key": "e1b191937d4861e2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0028__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "You ever miss being up there?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.16,
+      "plan_len_s": 1.86,
+      "ratio": 0.624,
+      "words": 6,
+      "wpm": 310.3,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.71,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 122.7,
+      "f0_range_st": 10.8,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 2.186,
+      "raw_floor_dbfs": -72.5,
+      "raw_speech_to_floor_db": 52.2,
+      "raw_pause_floor_dbfs": -67.6,
+      "raw_pause_sf_db": 47.2,
+      "raw_quiet_frames": 24,
+      "raw_peak_dbfs": -7.43,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.62 of the plan",
+      "tempo 310 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "You ever miss being up there?",
+     "base_key": "e1b191937d4861e2"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.62 of the plan",
+    "tempo 310 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "You ever miss being up there?",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0028__gerg-mockbran-A.wav",
+    "e1b191937d4861e2",
+    2.186
+   ]
+  },
+  "e2-a4-0029": {
+   "id": "e2-a4-0029",
+   "who": "mas-manalt",
+   "take": "e2-a4-0029__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1000209526,
+     "key": "46bcb307f4315453",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.82
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0029__mas-manalt-C.wav",
+     "measures": {
+      "heard": "I was up there once. They let me hold the clicker.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.44,
+      "plan_len_s": 4.93,
+      "ratio": 0.698,
+      "words": 11,
+      "wpm": 191.9,
+      "longest_gap_s": 0.39,
+      "lufs": -16.0,
+      "true_peak": -2.41,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 121.1,
+      "f0_range_st": 10.8,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.295,
+      "raw_floor_dbfs": -83.5,
+      "raw_speech_to_floor_db": 64.8,
+      "raw_pause_floor_dbfs": -77.5,
+      "raw_pause_sf_db": 58.8,
+      "raw_quiet_frames": 45,
+      "raw_peak_dbfs": -2.4,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.70 of the plan",
+      "tempo 192 wpm against Mas unhurried (~140)"
+     ],
+     "sent": "I was up there once. They let me hold the clicker.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "46bcb307f4315453"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.70 of the plan",
+    "tempo 192 wpm against Mas unhurried (~140)"
+   ],
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1000209526,
+     "key": "5743d48f29abb7c3",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0029__mas-manalt-C.wav",
+     "measures": {
+      "heard": "I was up there once, they let me hold the clicker.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.83,
+      "plan_len_s": 4.93,
+      "ratio": 0.574,
+      "words": 11,
+      "wpm": 233.2,
+      "longest_gap_s": 0.32,
+      "lufs": -16.0,
+      "true_peak": -2.47,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 120.8,
+      "f0_range_st": 13.5,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 3.725,
+      "raw_floor_dbfs": -84.3,
+      "raw_speech_to_floor_db": 67.9,
+      "raw_pause_floor_dbfs": -79.0,
+      "raw_pause_sf_db": 62.6,
+      "raw_quiet_frames": 44,
+      "raw_peak_dbfs": -1.62,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.57 of the plan",
+      "tempo 233 wpm against Mas unhurried (~140)"
+     ],
+     "sent": "I was up there once. They let me hold the clicker.",
+     "base_key": "5743d48f29abb7c3"
+    }
+   ],
+   "sent": "I was up there once. They let me hold the clicker.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0029__mas-manalt-C.wav",
+    "46bcb307f4315453",
+    4.295
+   ]
+  },
+  "e2-a4-0030": {
+   "id": "e2-a4-0030",
+   "who": "radnus",
+   "take": "e2-a4-0030__radnus-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 795025673,
+     "key": "04f0ef4a2d04e4ba",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0030__radnus-A.wav",
+     "measures": {
+      "heard": "Lovely Garden, I see they let your chatbot in.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.85,
+      "plan_len_s": 3.06,
+      "ratio": 0.931,
+      "words": 9,
+      "wpm": 189.5,
+      "longest_gap_s": 0.24,
+      "lufs": -16.0,
+      "true_peak": -2.56,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 121.7,
+      "f0_range_st": 4.9,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 3.858,
+      "raw_floor_dbfs": -62.7,
+      "raw_speech_to_floor_db": 44.0,
+      "raw_pause_floor_dbfs": -58.7,
+      "raw_pause_sf_db": 39.9,
+      "raw_quiet_frames": 39,
+      "raw_peak_dbfs": -1.92,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Lovely garden. I see they let your chatbot in.",
+     "base_key": "04f0ef4a2d04e4ba"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Lovely garden. I see they let your chatbot in.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.9
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0030__radnus-A.wav",
+    "04f0ef4a2d04e4ba",
+    3.858
+   ]
+  },
+  "e2-a4-0031": {
+   "id": "e2-a4-0031",
+   "who": "mas-manalt",
+   "take": "e2-a4-0031__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2352097177,
+     "key": "ce2c16da4fd7459b",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0031__mas-manalt-C.wav",
+     "measures": {
+      "heard": "As a guest.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.95,
+      "plan_len_s": 0.9,
+      "ratio": 1.056,
+      "words": 3,
+      "wpm": 189.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.68,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 110.4,
+      "f0_range_st": 8.2,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 1.805,
+      "raw_floor_dbfs": -83.7,
+      "raw_speech_to_floor_db": 58.4,
+      "raw_pause_floor_dbfs": -80.2,
+      "raw_pause_sf_db": 54.9,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -2.78,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "As a guest.",
+     "base_key": "ce2c16da4fd7459b"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "As a guest.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0031__mas-manalt-C.wav",
+    "ce2c16da4fd7459b",
+    1.805
+   ]
+  },
+  "e2-a4-0032": {
+   "id": "e2-a4-0032",
+   "who": "nole",
+   "take": "e2-a4-0032__nole-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1097662769,
+     "key": "9f8c5c6938fd7b97",
+     "settings": {
+      "stability": 0.35,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0032__nole-A.wav",
+     "measures": {
+      "heard": "If they go through with it, visitors' phones go in here, like this.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.2,
+      "plan_len_s": 4.12,
+      "ratio": 1.019,
+      "words": 13,
+      "wpm": 185.7,
+      "longest_gap_s": 0.23,
+      "lufs": -16.0,
+      "true_peak": -2.74,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 112.2,
+      "f0_range_st": 14.6,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 5.019,
+      "raw_floor_dbfs": -75.4,
+      "raw_speech_to_floor_db": 48.2,
+      "raw_pause_floor_dbfs": -67.0,
+      "raw_pause_sf_db": 39.8,
+      "raw_quiet_frames": 66,
+      "raw_peak_dbfs": -13.45,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "If they go through with it, visitors' phones go in here. Like this.",
+     "base_key": "9f8c5c6938fd7b97"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "If they go through with it, visitors' phones go in here. Like this.",
+   "settings": {
+    "stability": 0.35,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.05
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0032__nole-A.wav",
+    "9f8c5c6938fd7b97",
+    5.019
+   ]
+  },
+  "e2-vo-13": {
+   "id": "e2-vo-13",
+   "who": "mas-manalt",
+   "take": "e2-vo-13__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 146657101,
+     "key": "70f6843e9d8c99c3",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
+     "measures": {
+      "heard": "We raise in the fall. She has till then.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.44,
+      "plan_len_s": 4.44,
+      "ratio": 0.775,
+      "words": 9,
+      "wpm": 157.0,
+      "longest_gap_s": 0.43,
+      "lufs": -18.0,
+      "true_peak": -4.01,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 102.6,
+      "f0_range_st": 12.8,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 4.585,
+      "raw_floor_dbfs": -86.6,
+      "raw_speech_to_floor_db": 63.2,
+      "raw_pause_floor_dbfs": -77.9,
+      "raw_pause_sf_db": 54.5,
+      "raw_quiet_frames": 50,
+      "raw_peak_dbfs": -5.25,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.78 of the plan",
+      "tempo 157 wpm against his V.O. 110-130"
+     ],
+     "sent": "We raise in the fall. She has till then.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "70f6843e9d8c99c3"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.78 of the plan",
+    "tempo 157 wpm against his V.O. 110-130"
+   ],
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 146657101,
+     "key": "9066ad4ca9bbdb6f",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
+     "measures": {
+      "heard": "We raise in the fall she has till then",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.11,
+      "plan_len_s": 4.44,
+      "ratio": 0.7,
+      "words": 9,
+      "wpm": 173.6,
+      "longest_gap_s": 0.39,
+      "lufs": -18.0,
+      "true_peak": -3.9,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.7,
+      "f0_range_st": 6.5,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 4.02,
+      "raw_floor_dbfs": -82.3,
+      "raw_speech_to_floor_db": 61.1,
+      "raw_pause_floor_dbfs": -75.5,
+      "raw_pause_sf_db": 54.3,
+      "raw_quiet_frames": 47,
+      "raw_peak_dbfs": -2.74,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.70 of the plan",
+      "tempo 174 wpm against his V.O. 110-130"
+     ],
+     "sent": "We raise in the fall. She has till then.",
+     "base_key": "9066ad4ca9bbdb6f"
+    }
+   ],
+   "sent": "We raise in the fall. She has till then.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
+    "70f6843e9d8c99c3",
+    4.585
+   ]
+  },
+  "e2-a4-0009": {
+   "id": "e2-a4-0009",
+   "who": "mario",
+   "take": "e2-a4-0009",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0009.wav",
+     "measures": {
+      "heard": "Come in, Akkiel, sit down. I read your thread twice. I've made some notes.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Ekiel",
+        "margin": 1.98,
+        "best_intended": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
+        "best_competitor": "Come in, Ezekiel, sit down. I read your thread. Twice. I've made some notes.",
+        "real": "Ezekiel",
+        "margin_vs_real": 1.98
+       }
+      ],
+      "span_s": 3.6,
+      "plan_len_s": 4.88,
+      "ratio": 0.738,
+      "words": 14,
+      "wpm": 233.3,
+      "longest_gap_s": 0.06,
+      "lufs": -16.0,
+      "true_peak": -3.74,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 115.9,
+      "f0_range_st": 14.0,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.625
+     },
+     "fail": [],
+     "look": [
+      "length 0.74 of the plan",
+      "tempo 233 wpm against mario at the planned 190 wpm +-15 %"
+     ],
+     "sent": "Come in, [Ekiel](/ˈɛkil/), sit down. I read your thread. Twice. I've made some notes.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.74 of the plan",
+    "tempo 233 wpm against mario at the planned 190 wpm +-15 %"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0009.wav",
+    null,
+    4.625
+   ],
+   "special": "kokoro"
+  },
+  "e2-a4-0011": {
+   "id": "e2-a4-0011",
+   "who": "mario",
+   "take": "e2-a4-0011",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0011.wav",
+     "measures": {
+      "heard": "Lightly, four pages.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.56,
+      "plan_len_s": 1.17,
+      "ratio": 1.333,
+      "words": 3,
+      "wpm": 115.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.76,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 110.2,
+      "f0_range_st": 13.1,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 2.565
+     },
+     "fail": [],
+     "look": [
+      "length +0.39 s off the plan"
+     ],
+     "sent": "Lightly. Four pages.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length +0.39 s off the plan"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0011.wav",
+    null,
+    2.565
+   ],
+   "special": "kokoro"
+  },
+  "e2-a4-0012": {
+   "id": "e2-a4-0012",
+   "who": "mario",
+   "take": "e2-a4-0012",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0012.wav",
+     "measures": {
+      "heard": "We agree I underlined. Inherently.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.84,
+      "plan_len_s": 2.6,
+      "ratio": 1.092,
+      "words": 5,
+      "wpm": 105.6,
+      "longest_gap_s": 0.29,
+      "lufs": -16.0,
+      "true_peak": -4.43,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 113.4,
+      "f0_range_st": 14.6,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.85
+     },
+     "fail": [],
+     "look": [
+      "tempo 106 wpm against mario at the planned 190 wpm +-15 %"
+     ],
+     "sent": "We agree. I underlined{s0.3} inherently.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 106 wpm against mario at the planned 190 wpm +-15 %"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0012.wav",
+    null,
+    3.85
+   ],
+   "special": "kokoro",
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0012.wav",
+     "measures": {
+      "heard": "We agree, I underline inherently.",
+      "asr_mismatch": [
+       [
+        "underlined",
+        "underline"
+       ]
+      ],
+      "asr_margin": -33.0,
+      "names": [],
+      "span_s": 2.33,
+      "plan_len_s": 2.6,
+      "ratio": 0.896,
+      "words": 5,
+      "wpm": 128.8,
+      "longest_gap_s": 0.31,
+      "lufs": -16.0,
+      "true_peak": -3.79,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 114.4,
+      "f0_range_st": 15.3,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.355
+     },
+     "fail": [
+      "asr: 'underlined' heard 'underline' (forced margin -33.0)"
+     ],
+     "look": [
+      "tempo 129 wpm against mario at the planned 190 wpm +-15 %"
+     ],
+     "sent": "We agree. I underlined{0.3} inherently.",
+     "base_key": null
+    }
+   ]
+  },
+  "e2-a4-0013": {
+   "id": "e2-a4-0013",
+   "who": "mario",
+   "take": "e2-a4-0013",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0013.wav",
+     "measures": {
+      "heard": "There's a brief document.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.63,
+      "plan_len_s": 1.36,
+      "ratio": 1.199,
+      "words": 4,
+      "wpm": 147.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.37,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 110.2,
+      "f0_range_st": 13.6,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 2.655
+     },
+     "fail": [],
+     "look": [
+      "length 1.20 of the plan"
+     ],
+     "sent": "There's a brief document.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.20 of the plan"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0013.wav",
+    null,
+    2.655
+   ],
+   "special": "kokoro"
+  },
+  "e2-a4-0015": {
+   "id": "e2-a4-0015",
+   "who": "mario",
+   "take": "e2-a4-0015",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0015.wav",
+     "measures": {
+      "heard": "That's the brief one, it only has the one concern.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.73,
+      "plan_len_s": 3.38,
+      "ratio": 0.808,
+      "words": 10,
+      "wpm": 219.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -4.22,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 114.1,
+      "f0_range_st": 12.7,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.765
+     },
+     "fail": [],
+     "look": [
+      "length 0.81 of the plan",
+      "tempo 220 wpm against mario at the planned 190 wpm +-15 %"
+     ],
+     "sent": "That's the brief one. It only has the one concern.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.81 of the plan",
+    "tempo 220 wpm against mario at the planned 190 wpm +-15 %"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0015.wav",
+    null,
+    3.765
+   ],
+   "special": "kokoro"
+  },
+  "e2-a4-0016": {
+   "id": "e2-a4-0016",
+   "who": "mario",
+   "take": "e2-a4-0016",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1/act4/wav/e2-a4-0016.wav",
+     "measures": {
+      "heard": "It's that we might wins.",
+      "asr_mismatch": [
+       [
+        "win",
+        "wins"
+       ]
+      ],
+      "asr_margin": -2.45,
+      "names": [],
+      "span_s": 1.46,
+      "plan_len_s": 1.68,
+      "ratio": 0.869,
+      "words": 5,
+      "wpm": 205.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.9,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 109.6,
+      "f0_range_st": 13.8,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 2.46
+     },
+     "fail": [],
+     "look": [
+      "asr: 'win' heard 'wins' (the recogniser's; the text scores -2.5 against what it heard)"
+     ],
+     "sent": "It's that we might win.",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "asr: 'win' heard 'wins' (the recogniser's; the text scores -2.5 against what it heard)"
+   ],
+   "sig": [
+    "audio/ep02/v1/act4/wav/e2-a4-0016.wav",
+    null,
+    2.46
+   ],
+   "special": "kokoro"
+  }
+ },
+ "updated": "2026-10-09 05:23:26"
+}

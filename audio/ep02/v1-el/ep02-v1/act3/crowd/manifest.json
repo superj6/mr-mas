@@ -1,0 +1,995 @@
+{
+ "takes": {
+  "e2-a3-0010__crowd-A": {
+   "take": "e2-a3-0010__crowd-A",
+   "key": "81a1d0bee91681f1",
+   "base_key": "81a1d0bee91681f1",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.12,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 3673439476,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "TbMNBJ27fH2U0VgpSNko",
+   "voice_name": "Lori - Happy, Sweet and Compassionate",
+   "cand": "A",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.65,
+    "span_s": 2.27,
+    "words": 6,
+    "wpm": 158.6,
+    "syllables": 8,
+    "articulation_sps": 4.02,
+    "pauses_s": [
+     0.28
+    ],
+    "longest_internal_gap_s": 0.28,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.47,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 292.4,
+    "f0_range_st": 12.2
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.36,
+     "t1": 0.64
+    },
+    {
+     "w": "THE",
+     "t0": 0.687,
+     "t1": 0.756
+    },
+    {
+     "w": "AGI",
+     "t0": 0.849,
+     "t1": 1.348
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.732,
+     "t1": 1.964
+    },
+    {
+     "w": "THE",
+     "t0": 2.01,
+     "t1": 2.08
+    },
+    {
+     "w": "AGI",
+     "t0": 2.161,
+     "t1": 2.591
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI. Feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.71,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 292.4,
+    "f0_range_st": 12.2,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.47,
+    "raw_tail_cut": false,
+    "align_median_s": 0.108
+   },
+   "raw": {
+    "raw_first_sound_s": 0.09,
+    "raw_len_s": 2.554,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-B": {
+   "take": "e2-a3-0010__crowd-B",
+   "key": "482bfb72223e2faf",
+   "base_key": "482bfb72223e2faf",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-B.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.44,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 2034028727,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "fIGaHjfrR8KmMy0vGEVJ",
+   "voice_name": "Larry - High-Energy Social Media Voice for Reels & Shorts",
+   "cand": "B",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.36,
+    "audible_out_s": 2.77,
+    "span_s": 2.41,
+    "words": 6,
+    "wpm": 149.4,
+    "syllables": 8,
+    "articulation_sps": 3.62,
+    "pauses_s": [
+     0.2
+    ],
+    "longest_internal_gap_s": 0.2,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.67,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 218.4,
+    "f0_range_st": 16.5
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.35,
+     "t1": 0.629
+    },
+    {
+     "w": "THE",
+     "t0": 0.675,
+     "t1": 0.756
+    },
+    {
+     "w": "AGI",
+     "t0": 0.826,
+     "t1": 1.29
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.662,
+     "t1": 1.929
+    },
+    {
+     "w": "THE",
+     "t0": 1.975,
+     "t1": 2.045
+    },
+    {
+     "w": "AGI",
+     "t0": 2.115,
+     "t1": 2.614
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI. Feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.54,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 218.4,
+    "f0_range_st": 16.5,
+    "speech_head_s": 0.36,
+    "speech_tail_s": 0.67,
+    "raw_tail_cut": false,
+    "align_median_s": 0.118
+   },
+   "raw": {
+    "raw_first_sound_s": 0.01,
+    "raw_len_s": 2.74,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-C": {
+   "take": "e2-a3-0010__crowd-C",
+   "key": "760934d9bffb59b5",
+   "base_key": "760934d9bffb59b5",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.88,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 2729820939,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "dfeOmy6Uay63tNhyO99j",
+   "voice_name": "Kristen - Natural, Upbeat and Focused",
+   "cand": "C",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 4.29,
+    "span_s": 3.94,
+    "words": 6,
+    "wpm": 91.4,
+    "syllables": 8,
+    "articulation_sps": 2.36,
+    "pauses_s": [
+     0.55
+    ],
+    "longest_internal_gap_s": 0.55,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.59,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 220.8,
+    "f0_range_st": 10.4
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.35,
+     "t1": 0.722
+    },
+    {
+     "w": "THE",
+     "t0": 0.803,
+     "t1": 0.93
+    },
+    {
+     "w": "AGI",
+     "t0": 1.047,
+     "t1": 1.79
+    },
+    {
+     "w": "FEEL",
+     "t0": 2.556,
+     "t1": 2.927
+    },
+    {
+     "w": "THE",
+     "t0": 3.02,
+     "t1": 3.148
+    },
+    {
+     "w": "AGI",
+     "t0": 3.264,
+     "t1": 4.1
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI Feel the AGI",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.33,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 220.8,
+    "f0_range_st": 10.4,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.59,
+    "raw_tail_cut": false,
+    "align_median_s": 0.22
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 4.18,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-D": {
+   "take": "e2-a3-0010__crowd-D",
+   "key": "6d24dde67a86a390",
+   "base_key": "6d24dde67a86a390",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-D.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.82,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 2144472635,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "3liN8q8YoeB9Hk6AboKe",
+   "voice_name": "Lauren - Friendly Customer Care Agent",
+   "cand": "D",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 3.34,
+    "span_s": 2.9,
+    "words": 6,
+    "wpm": 124.1,
+    "syllables": 8,
+    "articulation_sps": 2.97,
+    "pauses_s": [
+     0.1,
+     0.11
+    ],
+    "longest_internal_gap_s": 0.11,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.48,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 273.6,
+    "f0_range_st": 16.4
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.42,
+     "t1": 0.663
+    },
+    {
+     "w": "THE",
+     "t0": 0.733,
+     "t1": 0.838
+    },
+    {
+     "w": "AGI",
+     "t0": 0.93,
+     "t1": 1.592
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.917,
+     "t1": 2.266
+    },
+    {
+     "w": "THE",
+     "t0": 2.359,
+     "t1": 2.451
+    },
+    {
+     "w": "AGI",
+     "t0": 2.544,
+     "t1": 3.125
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI, feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -4.71,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 273.6,
+    "f0_range_st": 16.4,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.48,
+    "raw_tail_cut": false,
+    "align_median_s": 0.137
+   },
+   "raw": {
+    "raw_first_sound_s": 0.09,
+    "raw_len_s": 3.344,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-E": {
+   "take": "e2-a3-0010__crowd-E",
+   "key": "1bf9db8585c6eeaa",
+   "base_key": "1bf9db8585c6eeaa",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-E.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.115,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 1392049849,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "tgfcQY9SGvn3GfmnNWIi",
+   "voice_name": "Larry - Easygoing Customer Care Agent",
+   "cand": "E",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 2.55,
+    "span_s": 2.16,
+    "words": 6,
+    "wpm": 166.7,
+    "syllables": 8,
+    "articulation_sps": 3.7,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.565,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 184.2,
+    "f0_range_st": 8.6
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.37,
+     "t1": 0.64
+    },
+    {
+     "w": "THE",
+     "t0": 0.698,
+     "t1": 0.78
+    },
+    {
+     "w": "AGI",
+     "t0": 0.849,
+     "t1": 1.29
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.476,
+     "t1": 1.708
+    },
+    {
+     "w": "THE",
+     "t0": 1.755,
+     "t1": 1.824
+    },
+    {
+     "w": "AGI",
+     "t0": 1.894,
+     "t1": 2.382
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI. Feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.86,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 184.2,
+    "f0_range_st": 8.6,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.565,
+    "raw_tail_cut": false,
+    "align_median_s": 0.084
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 2.415,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-F": {
+   "take": "e2-a3-0010__crowd-F",
+   "key": "4a9c2f9864980861",
+   "base_key": "4a9c2f9864980861",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-F.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.79,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 4157422257,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "gScUm0AQVZBQ1uUp8KvE",
+   "voice_name": "Chris - Friendly conversational guide",
+   "cand": "F",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.09,
+    "span_s": 1.71,
+    "words": 6,
+    "wpm": 210.5,
+    "syllables": 8,
+    "articulation_sps": 5.13,
+    "pauses_s": [
+     0.15
+    ],
+    "longest_internal_gap_s": 0.15,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.7,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 118.6,
+    "f0_range_st": 12.7
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.36,
+     "t1": 0.605
+    },
+    {
+     "w": "THE",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "AGI",
+     "t0": 0.768,
+     "t1": 1.139
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.372,
+     "t1": 1.569
+    },
+    {
+     "w": "THE",
+     "t0": 1.615,
+     "t1": 1.685
+    },
+    {
+     "w": "AGI",
+     "t0": 1.72,
+     "t1": 2.068
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI, feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.63,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 118.6,
+    "f0_range_st": 12.7,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.7,
+    "raw_tail_cut": false,
+    "align_median_s": 0.072
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 2.09,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-G": {
+   "take": "e2-a3-0010__crowd-G",
+   "key": "888e9892788707d2",
+   "base_key": "888e9892788707d2",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-G.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.78,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 3827169479,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "OHbs18UsFunlwffsTLNn",
+   "voice_name": "Lyan - Friendly Female Authentic UGC",
+   "cand": "G",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.19,
+    "span_s": 1.75,
+    "words": 6,
+    "wpm": 205.7,
+    "syllables": 8,
+    "articulation_sps": 4.94,
+    "pauses_s": [
+     0.13
+    ],
+    "longest_internal_gap_s": 0.13,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.59,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 383.3,
+    "f0_range_st": 2.3
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.42,
+     "t1": 0.594
+    },
+    {
+     "w": "THE",
+     "t0": 0.64,
+     "t1": 0.71
+    },
+    {
+     "w": "AGI",
+     "t0": 0.768,
+     "t1": 1.116
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.267,
+     "t1": 1.476
+    },
+    {
+     "w": "THE",
+     "t0": 1.534,
+     "t1": 1.604
+    },
+    {
+     "w": "AGI",
+     "t0": 1.662,
+     "t1": 2.126
+    }
+   ],
+   "qa": {
+    "asr": "Feel the A .G .I. Feel the A .G .I.",
+    "cer": 0.16,
+    "word_recall_nonames": 0.667,
+    "lufs_i": -16.19,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -5.0,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 383.3,
+    "f0_range_st": 2.3,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.59,
+    "raw_tail_cut": false,
+    "align_median_s": 0.114
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 2.136,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-H": {
+   "take": "e2-a3-0010__crowd-H",
+   "key": "710797307410402c",
+   "base_key": "710797307410402c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-H.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.165,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 2413467272,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "UpphzPau5vxibPYV2NeV",
+   "voice_name": "Joe Inglewood - Magnetic and Captivating",
+   "cand": "H",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 2.68,
+    "span_s": 2.24,
+    "words": 6,
+    "wpm": 160.7,
+    "syllables": 8,
+    "articulation_sps": 3.81,
+    "pauses_s": [
+     0.14
+    ],
+    "longest_internal_gap_s": 0.14,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.485,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 133.6,
+    "f0_range_st": 13.4
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.42,
+     "t1": 0.605
+    },
+    {
+     "w": "THE",
+     "t0": 0.652,
+     "t1": 0.722
+    },
+    {
+     "w": "AGI",
+     "t0": 0.791,
+     "t1": 1.267
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.592,
+     "t1": 1.824
+    },
+    {
+     "w": "THE",
+     "t0": 1.871,
+     "t1": 1.952
+    },
+    {
+     "w": "AGI",
+     "t0": 2.01,
+     "t1": 2.533
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI. Feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.62,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 133.6,
+    "f0_range_st": 13.4,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.485,
+    "raw_tail_cut": false,
+    "align_median_s": 0.088
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 2.508,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-I": {
+   "take": "e2-a3-0010__crowd-I",
+   "key": "54aa095d57e0cacc",
+   "base_key": "54aa095d57e0cacc",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-I.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.347,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 4025269875,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "hxPRa8HUuKYsm1kiWDEi",
+   "voice_name": "Jake – Informative and Energetic",
+   "cand": "I",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.38,
+    "audible_out_s": 2.88,
+    "span_s": 2.5,
+    "words": 6,
+    "wpm": 144.0,
+    "syllables": 8,
+    "articulation_sps": 3.36,
+    "pauses_s": [
+     0.12,
+     0.09
+    ],
+    "longest_internal_gap_s": 0.12,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.467,
+    "tail_to_60_s": 0.002,
+    "median_f0_hz": 103.9,
+    "f0_range_st": 6.6
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.36,
+     "t1": 0.617
+    },
+    {
+     "w": "THE",
+     "t0": 0.663,
+     "t1": 0.733
+    },
+    {
+     "w": "AGI",
+     "t0": 0.803,
+     "t1": 1.43
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.732,
+     "t1": 1.964
+    },
+    {
+     "w": "THE",
+     "t0": 2.01,
+     "t1": 2.08
+    },
+    {
+     "w": "AGI",
+     "t0": 2.15,
+     "t1": 2.73
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI. Feel the AGI.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.62,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 103.9,
+    "f0_range_st": 6.6,
+    "speech_head_s": 0.38,
+    "speech_tail_s": 0.467,
+    "raw_tail_cut": false,
+    "align_median_s": 0.088
+   },
+   "raw": {
+    "raw_first_sound_s": 0.1,
+    "raw_len_s": 2.647,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0010__crowd-J": {
+   "take": "e2-a3-0010__crowd-J",
+   "key": "a0ebdccbc9143c50",
+   "base_key": "a0ebdccbc9143c50",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/crowd/wav/e2-a3-0010__crowd-J.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.811,
+   "offset_s": 0.35,
+   "sent": "Feel the A.G.I.! Feel the A.G.I.!",
+   "seed": 2733951392,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "scOwDtmlUjD3prqpp97I",
+   "voice_name": "Sam - Support Agent",
+   "cand": "J",
+   "role": "crowd",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 3.31,
+    "span_s": 2.94,
+    "words": 6,
+    "wpm": 122.4,
+    "syllables": 8,
+    "articulation_sps": 2.84,
+    "pauses_s": [
+     0.12
+    ],
+    "longest_internal_gap_s": 0.12,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.501,
+    "tail_to_60_s": 0.001,
+    "median_f0_hz": 175.3,
+    "f0_range_st": 13.7
+   },
+   "words": [
+    {
+     "w": "FEEL",
+     "t0": 0.35,
+     "t1": 0.733
+    },
+    {
+     "w": "THE",
+     "t0": 0.814,
+     "t1": 0.919
+    },
+    {
+     "w": "AGI",
+     "t0": 1.012,
+     "t1": 1.604
+    },
+    {
+     "w": "FEEL",
+     "t0": 1.987,
+     "t1": 2.266
+    },
+    {
+     "w": "THE",
+     "t0": 2.324,
+     "t1": 2.417
+    },
+    {
+     "w": "AGI",
+     "t0": 2.498,
+     "t1": 3.09
+    }
+   ],
+   "qa": {
+    "asr": "Feel the AGI feel the AGI",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.86,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 175.3,
+    "f0_range_st": 13.7,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.501,
+    "raw_tail_cut": false,
+    "align_median_s": 0.174
+   },
+   "raw": {
+    "raw_first_sound_s": 0.03,
+    "raw_len_s": 3.111,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": []
+}

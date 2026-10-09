@@ -1,0 +1,139 @@
+{
+ "takes": {
+  "e2-a4-0029__mas-manalt-C": {
+   "take": "e2-a4-0029__mas-manalt-C",
+   "key": "46bcb307f4315453",
+   "base_key": "46bcb307f4315453",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/slow/e2-a4-0029/wav/e2-a4-0029__mas-manalt-C.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 4.295,
+   "offset_s": 0.35,
+   "sent": "I was up there once. They let me hold the clicker.",
+   "seed": 1000209526,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.82
+   },
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "cand": "C",
+   "role": "mas-manalt",
+   "measured": {
+    "audible_in_s": 0.39,
+    "audible_out_s": 3.83,
+    "span_s": 3.44,
+    "words": 11,
+    "wpm": 191.9,
+    "syllables": 12,
+    "articulation_sps": 3.93,
+    "pauses_s": [
+     0.06,
+     0.39
+    ],
+    "longest_internal_gap_s": 0.39,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.465,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 121.1,
+    "f0_range_st": 10.8
+   },
+   "words": [
+    {
+     "w": "I",
+     "t0": 0.37,
+     "t1": 0.478
+    },
+    {
+     "w": "was",
+     "t0": 0.559,
+     "t1": 0.71
+    },
+    {
+     "w": "up",
+     "t0": 0.791,
+     "t1": 0.93
+    },
+    {
+     "w": "there",
+     "t0": 0.989,
+     "t1": 1.198
+    },
+    {
+     "w": "once",
+     "t0": 1.279,
+     "t1": 1.883
+    },
+    {
+     "w": "they",
+     "t0": 2.184,
+     "t1": 2.382
+    },
+    {
+     "w": "let",
+     "t0": 2.451,
+     "t1": 2.602
+    },
+    {
+     "w": "me",
+     "t0": 2.649,
+     "t1": 2.753
+    },
+    {
+     "w": "hold",
+     "t0": 2.823,
+     "t1": 3.055
+    },
+    {
+     "w": "the",
+     "t0": 3.113,
+     "t1": 3.183
+    },
+    {
+     "w": "clicker",
+     "t0": 3.241,
+     "t1": 3.752
+    }
+   ],
+   "qa": {
+    "asr": "I was up there once. They let me hold the clicker.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -2.41,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 121.1,
+    "f0_range_st": 10.8,
+    "speech_head_s": 0.39,
+    "speech_tail_s": 0.465,
+    "raw_tail_cut": false,
+    "align_median_s": 0.089
+   },
+   "raw": {
+    "raw_first_sound_s": 0.05,
+    "raw_len_s": 3.808,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a4-0029__mas-manalt-C",
+   "key": "46bcb307f4315453",
+   "chars": 50,
+   "cost_header": "22",
+   "request_id": "sfD02mAmQ3ITnikSeKmv",
+   "at": "05:21:00"
+  }
+ ]
+}

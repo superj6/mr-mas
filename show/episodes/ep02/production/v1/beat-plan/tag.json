@@ -19,7 +19,7 @@
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
    "estimate_s": 37.0,
-   "fit_scale": 1.336
+   "fit_scale": 1.345
   }
  ],
  "cast": {
@@ -127,7 +127,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 4.27,
+   "est_s": 4.3,
    "frame": "ECU · its pages lose their exclamation points; he slides it aside",
    "camera": "ECU · its pages lose their exclamation points; he slides it aside",
    "set": "darkroom",
@@ -141,28 +141,28 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "!! (0.27-1.2 s)",
-     "! (1.2-2.13 s)",
-     ". (2.13-3.2 s)"
+     "!! (0.27-1.21 s)",
+     "! (1.21-2.15 s)",
+     ". (2.15-3.22 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "!!",
      "at": 0.27,
-     "until": 1.2,
+     "until": 1.21,
      "kind": "doc"
     },
     {
      "text": "!",
-     "at": 1.2,
-     "until": 2.13,
+     "at": 1.21,
+     "until": 2.15,
      "kind": "doc"
     },
     {
      "text": ".",
-     "at": 2.13,
-     "until": 3.2,
+     "at": 2.15,
+     "until": 3.22,
      "kind": "doc"
     }
    ],
@@ -170,22 +170,22 @@
    "sounds": [
     {
      "name": "page_turn",
-     "at": 0.267,
+     "at": 0.269,
      "at_s": 0.27,
      "gain": -26,
      "new": true
     },
     {
      "name": "page_turn",
-     "at": 1.201,
-     "at_s": 1.2,
+     "at": 1.209,
+     "at_s": 1.21,
      "gain": -26,
      "new": true
     },
     {
      "name": "page_turn",
-     "at": 2.135,
-     "at_s": 2.13,
+     "at": 2.15,
+     "at_s": 2.15,
      "gain": -26,
      "new": true
     }
@@ -348,7 +348,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 3.04,
+   "est_s": 2.98,
    "frame": "OTS · Mas at the monitor, the toast cleared",
    "camera": "OTS · Mas at the monitor, the toast cleared",
    "set": "darkroom",
@@ -369,12 +369,12 @@
      "delivery": "after the Orb's verdict; a count, dry; no pleasure in it and no politics in it",
      "kind": "plan (personhood: a count)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.53",
+     "after": "start+0.54",
      "gap_s": 0.0,
-     "len_s": 1.98,
-     "t_s": 0.53
+     "len_s": 1.9,
+     "t_s": 0.54
     }
    ],
    "caption": "Mas at the monitor.",
@@ -461,7 +461,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 5.89,
+   "est_s": 5.92,
    "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "camera": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "set": "screen",
@@ -477,29 +477,29 @@
    "sounds": [
     {
      "name": "balloon_pump",
-     "at": 0.803,
-     "at_s": 0.8,
+     "at": 0.807,
+     "at_s": 0.81,
      "gain": -26,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 1.874,
-     "at_s": 1.87,
+     "at": 1.884,
+     "at_s": 1.88,
      "gain": -25,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 2.945,
-     "at_s": 2.94,
+     "at": 2.96,
+     "at_s": 2.96,
      "gain": -24,
      "new": true
     },
     {
      "name": "knot_tie",
-     "at": 4.551,
-     "at_s": 4.55,
+     "at": 4.575,
+     "at_s": 4.57,
      "gain": -26,
      "new": true
     }

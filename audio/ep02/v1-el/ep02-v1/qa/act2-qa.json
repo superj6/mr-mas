@@ -1,0 +1,3801 @@
+{
+ "segment": "act2",
+ "lines": {
+  "e2-vo-04": {
+   "id": "e2-vo-04",
+   "who": "mas-manalt",
+   "take": "e2-vo-04__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 667726771,
+     "key": "c3f518b47c92155a",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
+     "measures": {
+      "heard": "The next model runs on the Landlord's servers. The one after runs on ours.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 6.06,
+      "plan_len_s": 6.78,
+      "ratio": 0.894,
+      "words": 14,
+      "wpm": 138.6,
+      "longest_gap_s": 0.55,
+      "lufs": -18.0,
+      "true_peak": -3.59,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 113.1,
+      "f0_range_st": 13.2,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 7.11,
+      "raw_floor_dbfs": -84.2,
+      "raw_speech_to_floor_db": 65.9,
+      "raw_pause_floor_dbfs": -73.9,
+      "raw_pause_sf_db": 55.7,
+      "raw_quiet_frames": 65,
+      "raw_peak_dbfs": -1.39,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 139 wpm against his V.O. 110-130"
+     ],
+     "sent": "The next model runs on the landlord's servers. The one after runs on ours.",
+     "base_key": "c3f518b47c92155a"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 139 wpm against his V.O. 110-130"
+   ],
+   "superseded": [],
+   "sent": "The next model runs on the landlord's servers. The one after runs on ours.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
+    "c3f518b47c92155a",
+    7.11
+   ]
+  },
+  "e2-vo-05": {
+   "id": "e2-vo-05",
+   "who": "mas-manalt",
+   "take": "e2-vo-05__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 4205079465,
+     "key": "53631bf05133f4c4",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+     "measures": {
+      "heard": "One day ahead is enough.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.84,
+      "plan_len_s": 2.44,
+      "ratio": 0.754,
+      "words": 5,
+      "wpm": 163.0,
+      "longest_gap_s": 0.0,
+      "lufs": -18.0,
+      "true_peak": -3.84,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 103.2,
+      "f0_range_st": 11.0,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 2.929,
+      "raw_floor_dbfs": -78.8,
+      "raw_speech_to_floor_db": 59.5,
+      "raw_pause_floor_dbfs": -72.6,
+      "raw_pause_sf_db": 53.2,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -1.75,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.75 of the plan",
+      "tempo 163 wpm against his V.O. 110-130"
+     ],
+     "sent": "One day ahead is enough.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "53631bf05133f4c4"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.75 of the plan",
+    "tempo 163 wpm against his V.O. 110-130"
+   ],
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4205079465,
+     "key": "3d756ef9edb6cb05",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+     "measures": {
+      "heard": "One day ahead is enough.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.64,
+      "plan_len_s": 2.44,
+      "ratio": 0.672,
+      "words": 5,
+      "wpm": 182.9,
+      "longest_gap_s": 0.0,
+      "lufs": -18.0,
+      "true_peak": -1.89,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 112.6,
+      "f0_range_st": 9.1,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.69,
+      "raw_floor_dbfs": -88.4,
+      "raw_speech_to_floor_db": 70.2,
+      "raw_pause_floor_dbfs": -78.5,
+      "raw_pause_sf_db": 60.2,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -3.55,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.67 of the plan",
+      "tempo 183 wpm against his V.O. 110-130"
+     ],
+     "sent": "One day ahead is enough.",
+     "base_key": "3d756ef9edb6cb05"
+    }
+   ],
+   "sent": "One day ahead is enough.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+    "53631bf05133f4c4",
+    2.929
+   ]
+  },
+  "e2-a2-0001": {
+   "id": "e2-a2-0001",
+   "who": "mas-manalt",
+   "take": "e2-a2-0001__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3220093483,
+     "key": "e5925df6a7f85426",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
+     "measures": {
+      "heard": "No money either way. You put us in your new assistant. That's the price.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.94,
+      "plan_len_s": 6.34,
+      "ratio": 0.779,
+      "words": 14,
+      "wpm": 170.0,
+      "longest_gap_s": 0.58,
+      "lufs": -16.18,
+      "true_peak": -2.35,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 127.3,
+      "f0_range_st": 9.7,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 5.785,
+      "raw_floor_dbfs": -85.5,
+      "raw_speech_to_floor_db": 69.7,
+      "raw_pause_floor_dbfs": -76.8,
+      "raw_pause_sf_db": 61.0,
+      "raw_quiet_frames": 78,
+      "raw_peak_dbfs": -1.5,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.78 of the plan",
+      "tempo 170 wpm against Mas unhurried (~140)"
+     ],
+     "sent": "No money either way. You put us in your new assistant. That's the price.",
+     "base_key": "e5925df6a7f85426"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.78 of the plan",
+    "tempo 170 wpm against Mas unhurried (~140)"
+   ],
+   "superseded": [],
+   "sent": "No money either way. You put us in your new assistant. That's the price.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
+    "e5925df6a7f85426",
+    5.785
+   ]
+  },
+  "e2-a2-0002": {
+   "id": "e2-a2-0002",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0002__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 560963434,
+     "key": "1e5107a954b14809",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0002__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Places, please. Phones on silent in the wings. We're on in five.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.39,
+      "plan_len_s": 4.63,
+      "ratio": 1.164,
+      "words": 12,
+      "wpm": 133.6,
+      "longest_gap_s": 0.08,
+      "lufs": -16.0,
+      "true_peak": -2.53,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 162.3,
+      "f0_range_st": 13.4,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 6.21,
+      "raw_floor_dbfs": -58.6,
+      "raw_speech_to_floor_db": 36.7,
+      "raw_pause_floor_dbfs": -56.1,
+      "raw_pause_sf_db": 34.2,
+      "raw_quiet_frames": 60,
+      "raw_peak_dbfs": -6.09,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.16 of the plan",
+      "tempo 134 wpm against rima at the planned 168 wpm +-15 %",
+      "floor 37 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Places, please. Phones on silent in the wings. We're on in five.",
+     "base_key": "1e5107a954b14809"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.16 of the plan",
+    "tempo 134 wpm against rima at the planned 168 wpm +-15 %",
+    "floor 37 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Places, please. Phones on silent in the wings. We're on in five.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0002__rima-tamuri-A.wav",
+    "1e5107a954b14809",
+    6.21
+   ]
+  },
+  "e2-a2-0003": {
+   "id": "e2-a2-0003",
+   "who": "engineer",
+   "take": "e2-a2-0003__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3452621253,
+     "key": "f4d0a8170a271ad4",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
+     "measures": {
+      "heard": "So, on stage, I ask it a question, it thinks for a second, and then it answers.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.6,
+      "plan_len_s": 5.47,
+      "ratio": 0.841,
+      "words": 17,
+      "wpm": 221.7,
+      "longest_gap_s": 0.14,
+      "lufs": -16.0,
+      "true_peak": -3.62,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 117.8,
+      "f0_range_st": 13.5,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 5.483,
+      "raw_floor_dbfs": -56.7,
+      "raw_speech_to_floor_db": 40.3,
+      "raw_pause_floor_dbfs": -54.0,
+      "raw_pause_sf_db": 37.5,
+      "raw_quiet_frames": 48,
+      "raw_peak_dbfs": -1.55,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.84 of the plan",
+      "tempo 222 wpm against engineer at the planned 190 wpm +-15 %",
+      "floor 40 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+     "base_key": "f4d0a8170a271ad4"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.84 of the plan",
+    "tempo 222 wpm against engineer at the planned 190 wpm +-15 %",
+    "floor 40 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
+    "f4d0a8170a271ad4",
+    5.483
+   ]
+  },
+  "e2-a2-0004": {
+   "id": "e2-a2-0004",
+   "who": "engineer",
+   "take": "e2-a2-0004__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4004891504,
+     "key": "86b04d7b10eed042",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
+     "measures": {
+      "heard": "Before I've asked, it does that.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.77,
+      "plan_len_s": 2.11,
+      "ratio": 0.839,
+      "words": 6,
+      "wpm": 203.4,
+      "longest_gap_s": 0.11,
+      "lufs": -16.0,
+      "true_peak": -3.16,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 149.3,
+      "f0_range_st": 16.2,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.645,
+      "raw_floor_dbfs": -59.7,
+      "raw_speech_to_floor_db": 42.0,
+      "raw_pause_floor_dbfs": -56.6,
+      "raw_pause_sf_db": 38.9,
+      "raw_quiet_frames": 37,
+      "raw_peak_dbfs": -3.25,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.84 of the plan",
+      "floor 42 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... Before I've asked. It does that.",
+     "base_key": "86b04d7b10eed042"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.84 of the plan",
+    "floor 42 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "... Before I've asked. It does that.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
+    "86b04d7b10eed042",
+    2.645
+   ]
+  },
+  "e2-a2-0005": {
+   "id": "e2-a2-0005",
+   "who": "gerg-mockbran",
+   "take": "e2-a2-0005__gerg-mockbran-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1430443009,
+     "key": "b2ad4e934f52a105",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
+     "measures": {
+      "heard": "Careful, the new one can hear you laugh.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.96,
+      "plan_len_s": 2.56,
+      "ratio": 0.766,
+      "words": 8,
+      "wpm": 244.9,
+      "longest_gap_s": 0.07,
+      "lufs": -16.0,
+      "true_peak": -1.55,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 148.8,
+      "f0_range_st": 15.8,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.976,
+      "raw_floor_dbfs": -65.9,
+      "raw_speech_to_floor_db": 49.7,
+      "raw_pause_floor_dbfs": -62.9,
+      "raw_pause_sf_db": 46.7,
+      "raw_quiet_frames": 21,
+      "raw_peak_dbfs": -3.86,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.77 of the plan",
+      "tempo 245 wpm against gerg at the planned 205 wpm +-15 %"
+     ],
+     "sent": "Careful. The new one can hear you laugh.",
+     "base_key": "b2ad4e934f52a105"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.77 of the plan",
+    "tempo 245 wpm against gerg at the planned 205 wpm +-15 %"
+   ],
+   "superseded": [],
+   "sent": "Careful. The new one can hear you laugh.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
+    "b2ad4e934f52a105",
+    2.976
+   ]
+  },
+  "e2-a2-0006": {
+   "id": "e2-a2-0006",
+   "who": "mas-manalt",
+   "take": "e2-a2-0006__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1888216780,
+     "key": "0e9a6762986d4f9e",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Is it ready?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.68,
+      "plan_len_s": 1.39,
+      "ratio": 0.489,
+      "words": 3,
+      "wpm": 264.7,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.18,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.7,
+      "f0_range_st": 13.8,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 1.768,
+      "raw_floor_dbfs": -90.7,
+      "raw_speech_to_floor_db": 70.4,
+      "raw_pause_floor_dbfs": -72.8,
+      "raw_pause_sf_db": 52.5,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -3.93,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length -0.71 s off the plan"
+     ],
+     "sent": "Is it ready?",
+     "base_key": "0e9a6762986d4f9e"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length -0.71 s off the plan"
+   ],
+   "superseded": [],
+   "sent": "Is it ready?",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
+    "0e9a6762986d4f9e",
+    1.768
+   ]
+  },
+  "e2-a2-0007": {
+   "id": "e2-a2-0007",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0007__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 954234825,
+     "key": "5f309da61842765b",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "You'll be stage right you can see the whole screen from there and the stream can't see you",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 6.23,
+      "plan_len_s": 6.65,
+      "ratio": 0.937,
+      "words": 18,
+      "wpm": 173.4,
+      "longest_gap_s": 0.09,
+      "lufs": -16.0,
+      "true_peak": -2.98,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 173.2,
+      "f0_range_st": 11.7,
+      "take_floor_dbfs": -62.1,
+      "duration_s": 6.969,
+      "raw_floor_dbfs": -56.6,
+      "raw_speech_to_floor_db": 35.1,
+      "raw_pause_floor_dbfs": -54.2,
+      "raw_pause_sf_db": 32.7,
+      "raw_quiet_frames": 69,
+      "raw_peak_dbfs": -6.03,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 35 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
+     "base_key": "5f309da61842765b"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 35 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
+    "5f309da61842765b",
+    6.969
+   ]
+  },
+  "e2-a2-0008": {
+   "id": "e2-a2-0008",
+   "who": "mas-manalt",
+   "take": "e2-a2-0008__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 798030484,
+     "key": "a78c4ce291f6a427",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
+     "measures": {
+      "heard": "It's all yours.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.11,
+      "plan_len_s": 1.39,
+      "ratio": 0.799,
+      "words": 3,
+      "wpm": 162.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.74,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 129.6,
+      "f0_range_st": 9.4,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 1.95,
+      "raw_floor_dbfs": -84.8,
+      "raw_speech_to_floor_db": 70.3,
+      "raw_pause_floor_dbfs": -83.5,
+      "raw_pause_sf_db": 69.1,
+      "raw_quiet_frames": 17,
+      "raw_peak_dbfs": -1.46,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "It's all yours.",
+     "base_key": "a78c4ce291f6a427"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "It's all yours.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
+    "a78c4ce291f6a427",
+    1.95
+   ]
+  },
+  "e2-a2-0009": {
+   "id": "e2-a2-0009",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0009__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 922003989,
+     "key": "83c2df0c00d6ffd9",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "It is. Enjoy the view.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.05,
+      "plan_len_s": 2.01,
+      "ratio": 1.02,
+      "words": 5,
+      "wpm": 146.3,
+      "longest_gap_s": 0.06,
+      "lufs": -16.0,
+      "true_peak": -1.87,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 170.6,
+      "f0_range_st": 9.6,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.79,
+      "raw_floor_dbfs": -56.5,
+      "raw_speech_to_floor_db": 34.8,
+      "raw_pause_floor_dbfs": -54.5,
+      "raw_pause_sf_db": 32.9,
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -7.86,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 35 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "It is. Enjoy the view.",
+     "base_key": "83c2df0c00d6ffd9"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 35 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "It is. Enjoy the view.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
+    "83c2df0c00d6ffd9",
+    2.79
+   ]
+  },
+  "e2-a2-0010": {
+   "id": "e2-a2-0010",
+   "who": "engineer",
+   "take": "e2-a2-0010__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 20299285,
+     "key": "c0307f538a1f91f8",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
+     "measures": {
+      "heard": "What if it freezes, live on the stream?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.32,
+      "plan_len_s": 2.75,
+      "ratio": 0.844,
+      "words": 8,
+      "wpm": 206.9,
+      "longest_gap_s": 0.19,
+      "lufs": -16.0,
+      "true_peak": -3.19,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 141.0,
+      "f0_range_st": 14.3,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.115,
+      "raw_floor_dbfs": -56.3,
+      "raw_speech_to_floor_db": 37.6,
+      "raw_pause_floor_dbfs": -55.0,
+      "raw_pause_sf_db": 36.3,
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -2.46,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.84 of the plan",
+      "floor 38 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "What if it freezes? Live, on the stream?",
+     "base_key": "c0307f538a1f91f8"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.84 of the plan",
+    "floor 38 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "What if it freezes? Live, on the stream?",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
+    "c0307f538a1f91f8",
+    3.115
+   ]
+  },
+  "e2-a2-0011": {
+   "id": "e2-a2-0011",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0011__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2437168939,
+     "key": "447cd33289eef639",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Then it freezes live and I keep talking it also sings we'll get to that",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.62,
+      "plan_len_s": 5.7,
+      "ratio": 0.986,
+      "words": 15,
+      "wpm": 160.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.08,
+      "true_peak": -2.21,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 167.0,
+      "f0_range_st": 14.5,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 6.435,
+      "raw_floor_dbfs": -57.9,
+      "raw_speech_to_floor_db": 34.4,
+      "raw_pause_floor_dbfs": -55.8,
+      "raw_pause_sf_db": 32.4,
+      "raw_quiet_frames": 67,
+      "raw_peak_dbfs": -4.77,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
+     "base_key": "447cd33289eef639"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 34 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
+    "447cd33289eef639",
+    6.435
+   ]
+  },
+  "e2-a2-0012": {
+   "id": "e2-a2-0012",
+   "who": "voice1",
+   "take": "e2-a2-0012__voice1-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3399484824,
+     "key": "0e5b706830653fa7",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
+     "measures": {
+      "heard": "Hi",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.49,
+      "plan_len_s": 0.45,
+      "ratio": 1.089,
+      "words": 1,
+      "wpm": 122.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.22,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 188.9,
+      "f0_range_st": 11.7,
+      "take_floor_dbfs": -63.1,
+      "duration_s": 1.345,
+      "raw_floor_dbfs": -83.0,
+      "raw_speech_to_floor_db": 70.0,
+      "raw_pause_floor_dbfs": -82.5,
+      "raw_pause_sf_db": 69.5,
+      "raw_quiet_frames": 16,
+      "raw_peak_dbfs": -1.43,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Hi.",
+     "base_key": "0e5b706830653fa7"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Hi.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
+    "0e5b706830653fa7",
+    1.345
+   ]
+  },
+  "e2-a2-0013": {
+   "id": "e2-a2-0013",
+   "who": "voice2",
+   "take": "e2-a2-0013__voice2-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 4053328504,
+     "key": "7bb5ab9475b7de8e",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
+     "measures": {
+      "heard": "Hi",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.33,
+      "plan_len_s": 0.45,
+      "ratio": 0.733,
+      "words": 1,
+      "wpm": 181.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.66,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 290.4,
+      "f0_range_st": 11.8,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.211,
+      "raw_floor_dbfs": -75.8,
+      "raw_speech_to_floor_db": 59.9,
+      "raw_pause_floor_dbfs": -66.3,
+      "raw_pause_sf_db": 50.4,
+      "raw_quiet_frames": 10,
+      "raw_peak_dbfs": -2.93,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Hi!",
+     "base_key": "7bb5ab9475b7de8e"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Hi!",
+   "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
+    "7bb5ab9475b7de8e",
+    1.211
+   ]
+  },
+  "e2-a2-0014": {
+   "id": "e2-a2-0014",
+   "who": "voice3",
+   "take": "e2-a2-0014__voice3-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2272263916,
+     "key": "293dda9ef9413c54",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
+     "measures": {
+      "heard": "Hi?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.44,
+      "plan_len_s": 0.45,
+      "ratio": 0.978,
+      "words": 1,
+      "wpm": 136.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.58,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 131.5,
+      "f0_range_st": 7.3,
+      "take_floor_dbfs": -63.1,
+      "duration_s": 1.35,
+      "raw_floor_dbfs": -82.0,
+      "raw_speech_to_floor_db": 56.3,
+      "raw_pause_floor_dbfs": -78.7,
+      "raw_pause_sf_db": 53.0,
+      "raw_quiet_frames": 12,
+      "raw_peak_dbfs": -16.46,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Hi?",
+     "base_key": "293dda9ef9413c54"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Hi?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
+    "293dda9ef9413c54",
+    1.35
+   ]
+  },
+  "e2-a2-0015": {
+   "id": "e2-a2-0015",
+   "who": "voice4",
+   "take": "e2-a2-0015__voice4-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2088896475,
+     "key": "8583d1bb37da0343",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
+     "measures": {
+      "heard": "Hi.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.7,
+      "plan_len_s": 0.5,
+      "ratio": 1.4,
+      "words": 1,
+      "wpm": 85.7,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.5,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 216.1,
+      "f0_range_st": 4.2,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 1.536,
+      "raw_floor_dbfs": -76.7,
+      "raw_speech_to_floor_db": 49.3,
+      "raw_pause_floor_dbfs": -65.9,
+      "raw_pause_sf_db": 38.5,
+      "raw_quiet_frames": 12,
+      "raw_peak_dbfs": -12.87,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Hi...",
+     "base_key": "8583d1bb37da0343"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Hi...",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
+    "8583d1bb37da0343",
+    1.536
+   ]
+  },
+  "e2-a2-0016": {
+   "id": "e2-a2-0016",
+   "who": "chatgtp",
+   "take": "e2-a2-0016__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1103774538,
+     "key": "27e051c833a35f56",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
+     "measures": {
+      "heard": "Hey",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.52,
+      "plan_len_s": 0.45,
+      "ratio": 1.156,
+      "words": 1,
+      "wpm": 115.4,
+      "longest_gap_s": 0.23,
+      "lufs": -16.0,
+      "true_peak": -1.62,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 335.3,
+      "f0_range_st": 8.1,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.35,
+      "raw_floor_dbfs": -68.5,
+      "raw_speech_to_floor_db": 43.6,
+      "raw_pause_floor_dbfs": -64.5,
+      "raw_pause_sf_db": 39.6,
+      "raw_quiet_frames": 21,
+      "raw_peak_dbfs": -7.78,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 44 dB under the speech (p5; house bed depth 45)",
+      "pitch 335 Hz, +6.5 st from the role's 230 (a short line)"
+     ],
+     "sent": "Hey.",
+     "base_key": "27e051c833a35f56"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 44 dB under the speech (p5; house bed depth 45)",
+    "pitch 335 Hz, +6.5 st from the role's 230 (a short line)"
+   ],
+   "superseded": [],
+   "sent": "Hey.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
+    "27e051c833a35f56",
+    1.35
+   ]
+  },
+  "e2-a2-0017": {
+   "id": "e2-a2-0017",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0017__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 2596995977,
+     "key": "f24de08d4d731bd6",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Omni, one model that hears, sees, and talks.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.71,
+      "plan_len_s": 3.08,
+      "ratio": 1.205,
+      "words": 8,
+      "wpm": 129.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.61,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 76.6,
+      "f0_range_st": 14.7,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.462,
+      "raw_floor_dbfs": -55.8,
+      "raw_speech_to_floor_db": 33.1,
+      "raw_peak_dbfs": -4.93,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -54.1,
+      "raw_pause_sf_db": 31.3,
+      "raw_quiet_frames": 37
+     },
+     "fail": [
+      "pitch 77 Hz, -13.3 st from the role's 165"
+     ],
+     "look": [
+      "length 1.21 of the plan",
+      "tempo 129 wpm against rima at the planned 168 wpm +-15 %",
+      "floor 33 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Omni. One model that hears, sees and talks.",
+     "voice": "Mia - Clear, Smooth, Professional",
+     "base_key": "f24de08d4d731bd6"
+    },
+    {
+     "label": "the take",
+     "bump": 1000,
+     "seed": 2596996977,
+     "key": "3840aa23d09d4c3f",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Omni, one model that hears, sees, and talks.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.93,
+      "plan_len_s": 3.08,
+      "ratio": 1.276,
+      "words": 8,
+      "wpm": 122.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.09,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 149.1,
+      "f0_range_st": 16.4,
+      "take_floor_dbfs": -62.1,
+      "duration_s": 4.647,
+      "raw_floor_dbfs": -55.2,
+      "raw_speech_to_floor_db": 32.2,
+      "raw_pause_floor_dbfs": -53.1,
+      "raw_pause_sf_db": 30.2,
+      "raw_quiet_frames": 46,
+      "raw_peak_dbfs": -5.55,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.28 of the plan",
+      "tempo 122 wpm against rima at the planned 168 wpm +-15 %",
+      "floor 32 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Omni. One model that hears, sees and talks.",
+     "base_key": "f24de08d4d731bd6",
+     "why": "pitch 77 Hz, -13.1 st from the role's 164"
+    }
+   ],
+   "picked_bump": 1000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.28 of the plan",
+    "tempo 122 wpm against rima at the planned 168 wpm +-15 %",
+    "floor 32 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Omni. One model that hears, sees and talks.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+    "3840aa23d09d4c3f",
+    4.647
+   ]
+  },
+  "e2-a2-0018": {
+   "id": "e2-a2-0018",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0018__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2213063899,
+     "key": "88523c2702471bc6",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 7.21,
+      "plan_len_s": 6.89,
+      "ratio": 1.046,
+      "words": 19,
+      "wpm": 158.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.6,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 159.8,
+      "f0_range_st": 16.4,
+      "take_floor_dbfs": -62.0,
+      "duration_s": 7.991,
+      "raw_floor_dbfs": -56.9,
+      "raw_speech_to_floor_db": 34.3,
+      "raw_pause_floor_dbfs": -55.7,
+      "raw_pause_sf_db": 33.2,
+      "raw_quiet_frames": 52,
+      "raw_peak_dbfs": -7.69,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
+     "base_key": "88523c2702471bc6"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 34 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
+    "88523c2702471bc6",
+    7.991
+   ]
+  },
+  "e2-a2-0019": {
+   "id": "e2-a2-0019",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0019__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1800455083,
+     "key": "2fa4f8e87cf0112b",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Now it's one model so nothing falls out it can even laugh back",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.87,
+      "plan_len_s": 4.86,
+      "ratio": 1.002,
+      "words": 13,
+      "wpm": 160.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.52,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 167.0,
+      "f0_range_st": 7.5,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 5.623,
+      "raw_floor_dbfs": -56.0,
+      "raw_speech_to_floor_db": 33.5,
+      "raw_pause_floor_dbfs": -54.2,
+      "raw_pause_sf_db": 31.8,
+      "raw_quiet_frames": 59,
+      "raw_peak_dbfs": -5.47,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Now it's one model, so nothing falls out. It can even laugh back.",
+     "base_key": "2fa4f8e87cf0112b"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 34 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Now it's one model, so nothing falls out. It can even laugh back.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
+    "2fa4f8e87cf0112b",
+    5.623
+   ]
+  },
+  "e2-a2-0020": {
+   "id": "e2-a2-0020",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0020__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1982981726,
+     "key": "f38b95ae6aff65f0",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "It answers about as fast as a person does.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.11,
+      "plan_len_s": 3.31,
+      "ratio": 0.94,
+      "words": 9,
+      "wpm": 173.6,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.42,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 158.4,
+      "f0_range_st": 8.5,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 3.858,
+      "raw_floor_dbfs": -53.0,
+      "raw_speech_to_floor_db": 30.4,
+      "raw_pause_floor_dbfs": -52.3,
+      "raw_pause_sf_db": 29.7,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -5.18,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 30 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "It answers about as fast as a person does.",
+     "base_key": "f38b95ae6aff65f0"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 30 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "It answers about as fast as a person does.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
+    "f38b95ae6aff65f0",
+    3.858
+   ]
+  },
+  "e2-a2-0021": {
+   "id": "e2-a2-0021",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0021__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1900930541,
+     "key": "ac871d81fa0bf55c",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "The model goes out today, and free users get it too.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.76,
+      "plan_len_s": 4.03,
+      "ratio": 0.933,
+      "words": 11,
+      "wpm": 175.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.54,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 168.5,
+      "f0_range_st": 8.9,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.575,
+      "raw_floor_dbfs": -57.4,
+      "raw_speech_to_floor_db": 34.6,
+      "raw_pause_floor_dbfs": -54.5,
+      "raw_pause_sf_db": 31.6,
+      "raw_quiet_frames": 43,
+      "raw_peak_dbfs": -6.82,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 35 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "The model goes out today, and free users get it too.",
+     "base_key": "ac871d81fa0bf55c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 35 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "The model goes out today, and free users get it too.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
+    "ac871d81fa0bf55c",
+    4.575
+   ]
+  },
+  "e2-a2-0022": {
+   "id": "e2-a2-0022",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0022__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3288538519,
+     "key": "0b75d4f1bed7b3d8",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "The new voice follows for paying users in the coming weeks.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.28,
+      "plan_len_s": 4.03,
+      "ratio": 1.062,
+      "words": 11,
+      "wpm": 154.2,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.27,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 163.6,
+      "f0_range_st": 12.4,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 5.095,
+      "raw_floor_dbfs": -58.9,
+      "raw_speech_to_floor_db": 35.3,
+      "raw_pause_floor_dbfs": -55.9,
+      "raw_pause_sf_db": 32.4,
+      "raw_quiet_frames": 39,
+      "raw_peak_dbfs": -6.96,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 35 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "The new voice follows, for paying users, in the coming weeks.",
+     "base_key": "0b75d4f1bed7b3d8"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 35 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "The new voice follows, for paying users, in the coming weeks.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
+    "0b75d4f1bed7b3d8",
+    5.095
+   ]
+  },
+  "e2-a2-0023": {
+   "id": "e2-a2-0023",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0023__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2602293815,
+     "key": "8351913a8ca23679",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.91,
+      "plan_len_s": 5.34,
+      "ratio": 1.107,
+      "words": 14,
+      "wpm": 142.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.88,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 160.6,
+      "f0_range_st": 7.6,
+      "take_floor_dbfs": -62.0,
+      "duration_s": 6.644,
+      "raw_floor_dbfs": -56.7,
+      "raw_speech_to_floor_db": 33.6,
+      "raw_pause_floor_dbfs": -53.6,
+      "raw_pause_sf_db": 30.6,
+      "raw_quiet_frames": 86,
+      "raw_peak_dbfs": -5.57,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 142 wpm against rima at the planned 168 wpm +-15 %",
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
+     "base_key": "8351913a8ca23679"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 142 wpm against rima at the planned 168 wpm +-15 %",
+    "floor 34 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
+    "8351913a8ca23679",
+    6.644
+   ]
+  },
+  "e2-a2-0024": {
+   "id": "e2-a2-0024",
+   "who": "chatgtp",
+   "take": "e2-a2-0024__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 897767123,
+     "key": "2e0e14763280bcae",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
+     "measures": {
+      "heard": "Hi, I can see you",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.22,
+      "plan_len_s": 2.22,
+      "ratio": 0.55,
+      "words": 5,
+      "wpm": 245.9,
+      "longest_gap_s": 0.3,
+      "lufs": -16.0,
+      "true_peak": -1.91,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 249.7,
+      "f0_range_st": 11.1,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 2.233,
+      "raw_floor_dbfs": -68.6,
+      "raw_speech_to_floor_db": 50.3,
+      "raw_pause_floor_dbfs": -63.7,
+      "raw_pause_sf_db": 45.3,
+      "raw_quiet_frames": 34,
+      "raw_peak_dbfs": -0.38,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.55 of the plan",
+      "tempo 246 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ],
+     "sent": "Hi!... I can see you.",
+     "base_key": "2e0e14763280bcae"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.55 of the plan",
+    "tempo 246 wpm against chatgtp at the planned 150 wpm +-15 %"
+   ],
+   "superseded": [
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 0,
+     "seed": 897767123,
+     "key": "8c806fd347f2564d",
+     "sent": "Hi! I can see you.",
+     "measures": {
+      "heard": "Hi, I can see you",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.03,
+      "plan_len_s": 2.22,
+      "ratio": 0.464,
+      "words": 5,
+      "wpm": 291.3,
+      "longest_gap_s": 0.11,
+      "lufs": -16.0,
+      "true_peak": -2.05,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 326.9,
+      "f0_range_st": null,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.954,
+      "raw_floor_dbfs": -70.5,
+      "raw_speech_to_floor_db": 43.7,
+      "raw_pause_floor_dbfs": -67.5,
+      "raw_pause_sf_db": 40.8,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -5.79,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 1.03 s against the plan's 2.22 (0.46)",
+      "pitch 327 Hz, +6.1 st from the role's 230"
+     ],
+     "look": [
+      "tempo 291 wpm against chatgtp at the planned 150 wpm +-15 %",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 1000,
+     "seed": 897768123,
+     "key": "f3e23b80a30f21fd",
+     "sent": "Hi! I can see you.",
+     "measures": {
+      "heard": "Hi, I can see you",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.95,
+      "plan_len_s": 2.22,
+      "ratio": 0.428,
+      "words": 5,
+      "wpm": 315.8,
+      "longest_gap_s": 0.06,
+      "lufs": -16.0,
+      "true_peak": -2.38,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 303.4,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 2.0,
+      "raw_floor_dbfs": -66.5,
+      "raw_speech_to_floor_db": 46.4,
+      "raw_pause_floor_dbfs": -63.1,
+      "raw_pause_sf_db": 42.9,
+      "raw_quiet_frames": 24,
+      "raw_peak_dbfs": -2.82,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 0.95 s against the plan's 2.22 (0.43)",
+      "pitch 303 Hz, +4.8 st from the role's 230"
+     ],
+     "look": [
+      "tempo 316 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 2000,
+     "seed": 897769123,
+     "key": "dcc129a5d2a1dd8a",
+     "sent": "Hi! I can see you.",
+     "measures": {
+      "heard": "Hi, I can see you.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.15,
+      "plan_len_s": 2.22,
+      "ratio": 0.518,
+      "words": 5,
+      "wpm": 260.9,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.4,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 309.7,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 2.047,
+      "raw_floor_dbfs": -63.7,
+      "raw_speech_to_floor_db": 44.0,
+      "raw_pause_floor_dbfs": -56.6,
+      "raw_pause_sf_db": 36.9,
+      "raw_quiet_frames": 19,
+      "raw_peak_dbfs": -1.07,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 1.15 s against the plan's 2.22 (0.52)",
+      "pitch 310 Hz, +5.1 st from the role's 230"
+     ],
+     "look": [
+      "tempo 261 wpm against chatgtp at the planned 150 wpm +-15 %",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 3000,
+     "seed": 897770123,
+     "key": "242541bdf75b86bb",
+     "sent": "Hi! I can see you.",
+     "measures": {
+      "heard": "Hi, I can see you",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.01,
+      "plan_len_s": 2.22,
+      "ratio": 0.455,
+      "words": 5,
+      "wpm": 297.0,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.75,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 269.0,
+      "f0_range_st": null,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 1.995,
+      "raw_floor_dbfs": -72.7,
+      "raw_speech_to_floor_db": 52.5,
+      "raw_pause_floor_dbfs": -62.7,
+      "raw_pause_sf_db": 42.5,
+      "raw_quiet_frames": 17,
+      "raw_peak_dbfs": -4.0,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 1.01 s against the plan's 2.22 (0.46)"
+     ],
+     "look": [
+      "tempo 297 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ]
+    }
+   ],
+   "sent": "Hi!... I can see you.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
+    "2e0e14763280bcae",
+    2.233
+   ]
+  },
+  "e2-a2-0025": {
+   "id": "e2-a2-0025",
+   "who": "chatgtp",
+   "take": "e2-a2-0025__chatgtp-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 4113136481,
+     "key": "a4e6e7140aae72a0",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+     "measures": {
+      "heard": "All of you.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.79,
+      "plan_len_s": 1.3,
+      "ratio": 0.608,
+      "words": 3,
+      "wpm": 227.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.05,
+      "clipped": 0,
+      "raw_tail_cut": true,
+      "f0": 228.9,
+      "f0_range_st": 4.2,
+      "take_floor_dbfs": -63.1,
+      "duration_s": 1.489,
+      "raw_floor_dbfs": -46.5,
+      "raw_speech_to_floor_db": 12.1,
+      "raw_peak_dbfs": -10.43,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": null,
+      "raw_pause_sf_db": null,
+      "raw_quiet_frames": 1
+     },
+     "fail": [
+      "the raw audio stops while still sounding"
+     ],
+     "look": [
+      "length -0.51 s off the plan",
+      "floor 12 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "All of you.",
+     "voice": "Maya - The Upbeat Creator",
+     "base_key": "a4e6e7140aae72a0"
+    },
+    {
+     "label": "retake 1000",
+     "bump": 1000,
+     "seed": 4113137481,
+     "key": "74873416a5d4300f",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+     "measures": {
+      "heard": "All of you.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.59,
+      "plan_len_s": 1.3,
+      "ratio": 0.454,
+      "words": 3,
+      "wpm": 305.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.54,
+      "true_peak": -2.1,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 231.9,
+      "f0_range_st": 5.7,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 1.489,
+      "raw_floor_dbfs": -75.2,
+      "raw_speech_to_floor_db": 46.4,
+      "raw_peak_dbfs": -13.3,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -64.1,
+      "raw_pause_sf_db": 35.3,
+      "raw_quiet_frames": 13
+     },
+     "fail": [
+      "level -16.5 LUFS against -16"
+     ],
+     "look": [
+      "length -0.71 s off the plan"
+     ],
+     "sent": "All of you.",
+     "voice": "Maya - The Upbeat Creator",
+     "base_key": "a4e6e7140aae72a0",
+     "why": "the raw audio stops while still sounding; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 12 dB under the speech"
+    },
+    {
+     "label": "the take",
+     "bump": 2000,
+     "seed": 4113138481,
+     "key": "20f5a26fa47dd9ab",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+     "measures": {
+      "heard": "All of you.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.61,
+      "plan_len_s": 1.3,
+      "ratio": 0.469,
+      "words": 3,
+      "wpm": 295.1,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.78,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 225.4,
+      "f0_range_st": 12.1,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 1.489,
+      "raw_floor_dbfs": -68.2,
+      "raw_speech_to_floor_db": 44.5,
+      "raw_pause_floor_dbfs": -64.6,
+      "raw_pause_sf_db": 40.9,
+      "raw_quiet_frames": 10,
+      "raw_peak_dbfs": -1.37,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length -0.69 s off the plan",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "All of you.",
+     "base_key": "a4e6e7140aae72a0",
+     "why": "level -16.5 LUFS against -16"
+    }
+   ],
+   "picked_bump": 2000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length -0.69 s off the plan",
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "All of you.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+    "20f5a26fa47dd9ab",
+    1.489
+   ]
+  },
+  "e2-a2-0026": {
+   "id": "e2-a2-0026",
+   "who": "engineer",
+   "take": "e2-a2-0026__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2905608021,
+     "key": "a925443fa328b4fc",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
+     "measures": {
+      "heard": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.62,
+      "plan_len_s": 6.1,
+      "ratio": 0.757,
+      "words": 19,
+      "wpm": 246.8,
+      "longest_gap_s": 0.11,
+      "lufs": -16.0,
+      "true_peak": -3.84,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 137.9,
+      "f0_range_st": 14.7,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 5.669,
+      "raw_floor_dbfs": -57.7,
+      "raw_speech_to_floor_db": 40.5,
+      "raw_pause_floor_dbfs": -55.7,
+      "raw_pause_sf_db": 38.5,
+      "raw_quiet_frames": 42,
+      "raw_peak_dbfs": -1.76,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.76 of the plan",
+      "tempo 247 wpm against engineer at the planned 190 wpm +-15 %",
+      "floor 40 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
+     "base_key": "a925443fa328b4fc"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.76 of the plan",
+    "tempo 247 wpm against engineer at the planned 190 wpm +-15 %",
+    "floor 40 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
+    "a925443fa328b4fc",
+    5.669
+   ]
+  },
+  "e2-a2-0027": {
+   "id": "e2-a2-0027",
+   "who": "chatgtp",
+   "take": "e2-a2-0027__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 191673341,
+     "key": "97c952fa391ab228",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
+     "measures": {
+      "heard": "Great question. Of course, honestly short answers are one of my favorite things.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 4.75,
+      "plan_len_s": 5.54,
+      "ratio": 0.857,
+      "words": 13,
+      "wpm": 164.2,
+      "longest_gap_s": 0.22,
+      "lufs": -16.0,
+      "true_peak": -3.05,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 242.2,
+      "f0_range_st": 10.9,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 5.716,
+      "raw_floor_dbfs": -68.9,
+      "raw_speech_to_floor_db": 45.1,
+      "raw_pause_floor_dbfs": -63.5,
+      "raw_pause_sf_db": 39.7,
+      "raw_quiet_frames": 54,
+      "raw_peak_dbfs": -4.87,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Great question! Of course! Honestly, short answers are one of my favorite things.",
+     "base_key": "97c952fa391ab228"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "Great question! Of course! Honestly, short answers are one of my favorite things.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
+    "97c952fa391ab228",
+    5.716
+   ]
+  },
+  "e2-a2-0028": {
+   "id": "e2-a2-0028",
+   "who": "engineer",
+   "take": "e2-a2-0028__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3998223035,
+     "key": "78367673f0abaaeb",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
+     "measures": {
+      "heard": "Thanks.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.71,
+      "plan_len_s": 0.5,
+      "ratio": 1.42,
+      "words": 1,
+      "wpm": 84.5,
+      "longest_gap_s": 0.13,
+      "lufs": -16.0,
+      "true_peak": -2.9,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 109.8,
+      "f0_range_st": 15.3,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 1.489,
+      "raw_floor_dbfs": -61.1,
+      "raw_speech_to_floor_db": 43.0,
+      "raw_pause_floor_dbfs": -58.0,
+      "raw_pause_sf_db": 39.9,
+      "raw_quiet_frames": 18,
+      "raw_peak_dbfs": -2.1,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 43 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Thanks.",
+     "base_key": "78367673f0abaaeb"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 43 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Thanks.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
+    "78367673f0abaaeb",
+    1.489
+   ]
+  },
+  "e2-a2-0029": {
+   "id": "e2-a2-0029",
+   "who": "engineer",
+   "take": "e2-a2-0029__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1963038747,
+     "key": "2e5ce7e886a39bb3",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
+     "measures": {
+      "heard": "Let's try that again. Describe yourself in just one word.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.16,
+      "plan_len_s": 3.38,
+      "ratio": 0.935,
+      "words": 10,
+      "wpm": 189.9,
+      "longest_gap_s": 0.16,
+      "lufs": -16.0,
+      "true_peak": -3.17,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 138.0,
+      "f0_range_st": 15.6,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 4.183,
+      "raw_floor_dbfs": -62.1,
+      "raw_speech_to_floor_db": 44.3,
+      "raw_pause_floor_dbfs": -60.4,
+      "raw_pause_sf_db": 42.6,
+      "raw_quiet_frames": 35,
+      "raw_peak_dbfs": -1.65,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Let's try that again. Describe yourself in just one word.",
+     "base_key": "2e5ce7e886a39bb3"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Let's try that again. Describe yourself in just one word.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
+    "2e5ce7e886a39bb3",
+    4.183
+   ]
+  },
+  "e2-a2-0031": {
+   "id": "e2-a2-0031",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0031__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2891727773,
+     "key": "12aea0fde264923f",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "It's live, so it has a few opinions. Let's show you what it can see.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.19,
+      "plan_len_s": 5.58,
+      "ratio": 0.93,
+      "words": 15,
+      "wpm": 173.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.73,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 171.5,
+      "f0_range_st": 11.2,
+      "take_floor_dbfs": -62.1,
+      "duration_s": 5.948,
+      "raw_floor_dbfs": -54.4,
+      "raw_speech_to_floor_db": 31.8,
+      "raw_pause_floor_dbfs": -52.0,
+      "raw_pause_sf_db": 29.4,
+      "raw_quiet_frames": 65,
+      "raw_peak_dbfs": -5.2,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 32 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "It's live, so it has a few opinions. Let's show you what it can see.",
+     "base_key": "12aea0fde264923f"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 32 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "It's live, so it has a few opinions. Let's show you what it can see.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
+    "12aea0fde264923f",
+    5.948
+   ]
+  },
+  "e2-a2-0032": {
+   "id": "e2-a2-0032",
+   "who": "engineer",
+   "take": "e2-a2-0032__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2570892595,
+     "key": "6930423e09e53ba2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
+     "measures": {
+      "heard": "Say hello to the room.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.12,
+      "plan_len_s": 1.68,
+      "ratio": 0.667,
+      "words": 5,
+      "wpm": 267.9,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.94,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 133.3,
+      "f0_range_st": 15.2,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.093,
+      "raw_floor_dbfs": -62.5,
+      "raw_speech_to_floor_db": 44.0,
+      "raw_pause_floor_dbfs": -60.0,
+      "raw_pause_sf_db": 41.4,
+      "raw_quiet_frames": 14,
+      "raw_peak_dbfs": -2.26,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.67 of the plan",
+      "tempo 268 wpm against engineer at the planned 190 wpm +-15 %",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Say hello to the room.",
+     "base_key": "6930423e09e53ba2"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.67 of the plan",
+    "tempo 268 wpm against engineer at the planned 190 wpm +-15 %",
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Say hello to the room.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
+    "6930423e09e53ba2",
+    2.093
+   ]
+  },
+  "e2-a2-0033": {
+   "id": "e2-a2-0033",
+   "who": "chatgtp",
+   "take": "e2-a2-0033__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 2175968600,
+     "key": "955f73efd2f56a9f",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
+     "measures": {
+      "heard": "Oh, wow. That's a lot of you. Is it warm in here?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.05,
+      "plan_len_s": 5.26,
+      "ratio": 0.58,
+      "words": 12,
+      "wpm": 236.1,
+      "longest_gap_s": 0.31,
+      "lufs": -16.0,
+      "true_peak": -3.0,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 230.4,
+      "f0_range_st": 10.4,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 3.951,
+      "raw_floor_dbfs": -71.2,
+      "raw_speech_to_floor_db": 48.5,
+      "raw_pause_floor_dbfs": -67.0,
+      "raw_pause_sf_db": 44.4,
+      "raw_quiet_frames": 61,
+      "raw_peak_dbfs": -6.33,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.58 of the plan",
+      "tempo 236 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ],
+     "sent": "Oh... Wow... That's a lot of you. Is it warm in here?",
+     "base_key": "955f73efd2f56a9f"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.58 of the plan",
+    "tempo 236 wpm against chatgtp at the planned 150 wpm +-15 %"
+   ],
+   "superseded": [
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 0,
+     "seed": 2175968600,
+     "key": "66f0d2604ddcb930",
+     "sent": "Oh. Wow. That's a lot of you. Is it warm in here?",
+     "measures": {
+      "heard": "Oh, wow. That's a lot of you. Is it warm in here?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.69,
+      "plan_len_s": 5.26,
+      "ratio": 0.511,
+      "words": 12,
+      "wpm": 267.7,
+      "longest_gap_s": 0.23,
+      "lufs": -16.0,
+      "true_peak": -3.12,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 224.9,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.3,
+      "duration_s": 3.533,
+      "raw_floor_dbfs": -71.7,
+      "raw_speech_to_floor_db": 47.5,
+      "raw_pause_floor_dbfs": -66.9,
+      "raw_pause_sf_db": 42.6,
+      "raw_quiet_frames": 42,
+      "raw_peak_dbfs": -8.96,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 2.69 s against the plan's 5.26 (0.51)"
+     ],
+     "look": [
+      "tempo 268 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 1000,
+     "seed": 2175969600,
+     "key": "2f5ae4e5e4ebb466",
+     "sent": "Oh. Wow. That's a lot of you. Is it warm in here?",
+     "measures": {
+      "heard": "Oh, wow. That's a lot of you. Is it warm in here?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.34,
+      "plan_len_s": 5.26,
+      "ratio": 0.445,
+      "words": 12,
+      "wpm": 307.7,
+      "longest_gap_s": 0.11,
+      "lufs": -16.0,
+      "true_peak": -3.65,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 267.1,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 3.301,
+      "raw_floor_dbfs": -70.4,
+      "raw_speech_to_floor_db": 47.1,
+      "raw_pause_floor_dbfs": -67.9,
+      "raw_pause_sf_db": 44.6,
+      "raw_quiet_frames": 26,
+      "raw_peak_dbfs": -7.06,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 2.34 s against the plan's 5.26 (0.45)"
+     ],
+     "look": [
+      "tempo 308 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 2000,
+     "seed": 2175970600,
+     "key": "8dc372e084b7f169",
+     "sent": "Oh. Wow. That's a lot of you. Is it warm in here?",
+     "measures": {
+      "heard": "Oh, wow. That's a lot of you. Is it warm in here?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.53,
+      "plan_len_s": 5.26,
+      "ratio": 0.481,
+      "words": 12,
+      "wpm": 284.6,
+      "longest_gap_s": 0.22,
+      "lufs": -16.14,
+      "true_peak": -3.31,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 239.8,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.5,
+      "duration_s": 3.486,
+      "raw_floor_dbfs": -70.6,
+      "raw_speech_to_floor_db": 50.8,
+      "raw_pause_floor_dbfs": -66.0,
+      "raw_pause_sf_db": 46.2,
+      "raw_quiet_frames": 40,
+      "raw_peak_dbfs": -2.67,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 2.53 s against the plan's 5.26 (0.48)"
+     ],
+     "look": [
+      "tempo 285 wpm against chatgtp at the planned 150 wpm +-15 %"
+     ]
+    },
+    {
+     "label": "earlier reading (the script's punctuation)",
+     "bump": 3000,
+     "seed": 2175971600,
+     "key": "599001a82afa0a89",
+     "sent": "Oh. Wow. That's a lot of you. Is it warm in here?",
+     "measures": {
+      "heard": "Oh, wow, that's a lot of you. Is it warm in here?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.61,
+      "plan_len_s": 5.26,
+      "ratio": 0.496,
+      "words": 12,
+      "wpm": 275.9,
+      "longest_gap_s": 0.12,
+      "lufs": -16.0,
+      "true_peak": -2.43,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 244.3,
+      "f0_range_st": null,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 3.44,
+      "raw_floor_dbfs": -66.4,
+      "raw_speech_to_floor_db": 42.5,
+      "raw_pause_floor_dbfs": -58.4,
+      "raw_pause_sf_db": 34.5,
+      "raw_quiet_frames": 43,
+      "raw_peak_dbfs": -4.78,
+      "raw_clip_runs": 0
+     },
+     "fail": [
+      "length 2.61 s against the plan's 5.26 (0.50)"
+     ],
+     "look": [
+      "tempo 276 wpm against chatgtp at the planned 150 wpm +-15 %",
+      "floor 42 dB under the speech (p5; house bed depth 45)"
+     ]
+    }
+   ],
+   "sent": "Oh... Wow... That's a lot of you. Is it warm in here?",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
+    "955f73efd2f56a9f",
+    3.951
+   ]
+  },
+  "e2-a2-0034": {
+   "id": "e2-a2-0034",
+   "who": "chatgtp",
+   "take": "e2-a2-0034__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 3909878735,
+     "key": "b78a514dfe47200e",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
+     "measures": {
+      "heard": "You're making me blush. I don't have blood",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.05,
+      "plan_len_s": 3.42,
+      "ratio": 0.599,
+      "words": 8,
+      "wpm": 234.1,
+      "longest_gap_s": 0.1,
+      "lufs": -16.0,
+      "true_peak": -2.56,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 225.4,
+      "f0_range_st": 8.5,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.883,
+      "raw_floor_dbfs": -67.7,
+      "raw_speech_to_floor_db": 44.4,
+      "raw_pause_floor_dbfs": -60.4,
+      "raw_pause_sf_db": 37.0,
+      "raw_quiet_frames": 24,
+      "raw_peak_dbfs": -3.97,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.60 of the plan",
+      "tempo 234 wpm against chatgtp at the planned 150 wpm +-15 %",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "You're making me blush. I don't have blood.",
+     "base_key": "b78a514dfe47200e"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.60 of the plan",
+    "tempo 234 wpm against chatgtp at the planned 150 wpm +-15 %",
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "You're making me blush. I don't have blood.",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
+    "b78a514dfe47200e",
+    2.883
+   ]
+  },
+  "e2-a2-0035": {
+   "id": "e2-a2-0035",
+   "who": "chatgtp",
+   "take": "e2-a2-0035__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1511288616,
+     "key": "5a10462823502acb",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
+     "measures": {
+      "heard": "It's free",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.63,
+      "plan_len_s": 0.9,
+      "ratio": 0.7,
+      "words": 2,
+      "wpm": 190.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.1,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 288.6,
+      "f0_range_st": 9.5,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 1.489,
+      "raw_floor_dbfs": -60.3,
+      "raw_speech_to_floor_db": 37.1,
+      "raw_pause_floor_dbfs": -57.6,
+      "raw_pause_sf_db": 34.4,
+      "raw_quiet_frames": 8,
+      "raw_peak_dbfs": -6.98,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 37 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "It's free!",
+     "base_key": "5a10462823502acb"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 37 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "It's free!",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.25,
+    "use_speaker_boost": true,
+    "speed": 1.08
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
+    "5a10462823502acb",
+    1.489
+   ]
+  },
+  "e2-a2-0036": {
+   "id": "e2-a2-0036",
+   "who": "rima-tamuri",
+   "take": "e2-a2-0036__rima-tamuri-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 2373028325,
+     "key": "b359d808f4faacdb",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "Um, and that's the demo.",
+      "asr_mismatch": [
+       [
+        "(nothing)",
+        "um"
+       ]
+      ],
+      "asr_margin": -6.03,
+      "names": [],
+      "span_s": 2.0,
+      "plan_len_s": 1.53,
+      "ratio": 1.307,
+      "words": 4,
+      "wpm": 120.0,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.08,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 129.2,
+      "f0_range_st": 13.4,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.743,
+      "raw_floor_dbfs": -57.7,
+      "raw_speech_to_floor_db": 33.9,
+      "raw_peak_dbfs": -7.35,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -55.1,
+      "raw_pause_sf_db": 31.3,
+      "raw_quiet_frames": 26
+     },
+     "fail": [
+      "asr: '(nothing)' heard 'um' (forced margin -6.0)",
+      "pitch 129 Hz, -4.2 st from the role's 165"
+     ],
+     "look": [
+      "length 1.31 of the plan",
+      "floor 34 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... and that's the demo.",
+     "voice": "Mia - Clear, Smooth, Professional",
+     "base_key": "b359d808f4faacdb"
+    },
+    {
+     "label": "retake 1000",
+     "bump": 1000,
+     "seed": 2373029325,
+     "key": "76df2a4fc5e80042",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "And that's the demo.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.44,
+      "plan_len_s": 1.53,
+      "ratio": 0.941,
+      "words": 4,
+      "wpm": 166.7,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.95,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 72.5,
+      "f0_range_st": 12.7,
+      "take_floor_dbfs": -63.1,
+      "duration_s": 2.186,
+      "raw_floor_dbfs": -60.0,
+      "raw_speech_to_floor_db": 35.9,
+      "raw_peak_dbfs": -7.46,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -57.5,
+      "raw_pause_sf_db": 33.5,
+      "raw_quiet_frames": 16
+     },
+     "fail": [
+      "pitch 72 Hz, -14.2 st from the role's 165"
+     ],
+     "look": [
+      "floor 36 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... and that's the demo.",
+     "voice": "Mia - Clear, Smooth, Professional",
+     "base_key": "b359d808f4faacdb",
+     "why": "asr: '(nothing)' heard 'um' (forced margin -6.0); pitch 129 Hz, -4.1 st from the role's 164"
+    },
+    {
+     "label": "the take",
+     "bump": 2000,
+     "seed": 2373030325,
+     "key": "74deb36056b87652",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+     "measures": {
+      "heard": "And that's the demo.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.78,
+      "plan_len_s": 1.53,
+      "ratio": 1.163,
+      "words": 4,
+      "wpm": 134.8,
+      "longest_gap_s": 0.07,
+      "lufs": -16.0,
+      "true_peak": -1.96,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 165.1,
+      "f0_range_st": 6.7,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 2.511,
+      "raw_floor_dbfs": -56.3,
+      "raw_speech_to_floor_db": 35.2,
+      "raw_pause_floor_dbfs": -54.8,
+      "raw_pause_sf_db": 33.7,
+      "raw_quiet_frames": 18,
+      "raw_peak_dbfs": -8.03,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.16 of the plan",
+      "floor 35 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "... and that's the demo.",
+     "base_key": "b359d808f4faacdb",
+     "why": "pitch 72 Hz, -14.1 st from the role's 164"
+    }
+   ],
+   "picked_bump": 2000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.16 of the plan",
+    "floor 35 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "... and that's the demo.",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.05,
+    "use_speaker_boost": true,
+    "speed": 0.92
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+    "74deb36056b87652",
+    2.511
+   ]
+  },
+  "e2-a2-0037": {
+   "id": "e2-a2-0037",
+   "who": "engineer",
+   "take": "e2-a2-0037__engineer-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 1568929361,
+     "key": "61a4ecd07f730368",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
+     "measures": {
+      "heard": "Moss just posted one word",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "Mas",
+        "margin": 7.81,
+        "best_intended": "Moss just posted. One word.",
+        "best_competitor": "Mass just posted. One word.",
+        "real": "Max",
+        "margin_vs_real": 10.72
+       }
+      ],
+      "span_s": 1.68,
+      "plan_len_s": 1.8,
+      "ratio": 0.933,
+      "words": 5,
+      "wpm": 178.6,
+      "longest_gap_s": 0.2,
+      "lufs": -16.0,
+      "true_peak": -3.23,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 139.7,
+      "f0_range_st": 13.9,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 2.743,
+      "raw_floor_dbfs": -62.0,
+      "raw_speech_to_floor_db": 44.4,
+      "raw_pause_floor_dbfs": -59.5,
+      "raw_pause_sf_db": 41.9,
+      "raw_quiet_frames": 32,
+      "raw_peak_dbfs": -3.1,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Moss just posted. One word.",
+     "base_key": "61a4ecd07f730368"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 44 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "Moss just posted. One word.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
+    "61a4ecd07f730368",
+    2.743
+   ]
+  },
+  "e2-a2-0038": {
+   "id": "e2-a2-0038",
+   "who": "engineer",
+   "take": "e2-a2-0038__engineer-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1126244905,
+     "key": "51d06e5d9c9ce0b4",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+     "measures": {
+      "heard": "Her, like the movie, the guy in his computer.",
+      "asr_mismatch": [
+       [
+        "and",
+        "in"
+       ]
+      ],
+      "asr_margin": -10.71,
+      "names": [],
+      "span_s": 2.82,
+      "plan_len_s": 3.06,
+      "ratio": 0.922,
+      "words": 9,
+      "wpm": 191.5,
+      "longest_gap_s": 0.4,
+      "lufs": -16.0,
+      "true_peak": -2.94,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 131.4,
+      "f0_range_st": 15.2,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 4.09,
+      "raw_floor_dbfs": -63.0,
+      "raw_speech_to_floor_db": 45.9,
+      "raw_peak_dbfs": -1.41,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -59.7,
+      "raw_pause_sf_db": 42.6,
+      "raw_quiet_frames": 67
+     },
+     "fail": [
+      "asr: 'and' heard 'in' (forced margin -10.7)"
+     ],
+     "look": [],
+     "sent": "'Her.' Like the movie. The guy and his computer.",
+     "voice": "Ryan - Articulate, Friendly and Youthful",
+     "base_key": "51d06e5d9c9ce0b4"
+    },
+    {
+     "label": "retake 1000",
+     "bump": 1000,
+     "seed": 1126245905,
+     "key": "08c0346c18b20d35",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+     "measures": {
+      "heard": "Her, like the movie, the guy in his computer.",
+      "asr_mismatch": [
+       [
+        "and",
+        "in"
+       ]
+      ],
+      "asr_margin": -8.91,
+      "names": [],
+      "span_s": 2.81,
+      "plan_len_s": 3.06,
+      "ratio": 0.918,
+      "words": 9,
+      "wpm": 192.2,
+      "longest_gap_s": 0.4,
+      "lufs": -16.0,
+      "true_peak": -3.11,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 120.4,
+      "f0_range_st": 12.4,
+      "take_floor_dbfs": -62.4,
+      "duration_s": 4.09,
+      "raw_floor_dbfs": -63.5,
+      "raw_speech_to_floor_db": 46.8,
+      "raw_peak_dbfs": -1.27,
+      "raw_clip_runs": 0,
+      "raw_pause_floor_dbfs": -59.1,
+      "raw_pause_sf_db": 42.4,
+      "raw_quiet_frames": 69
+     },
+     "fail": [
+      "asr: 'and' heard 'in' (forced margin -8.9)"
+     ],
+     "look": [],
+     "sent": "'Her.' Like the movie. The guy and his computer.",
+     "voice": "Ryan - Articulate, Friendly and Youthful",
+     "base_key": "51d06e5d9c9ce0b4",
+     "why": "asr: 'and' heard 'in' (forced margin -10.7)"
+    },
+    {
+     "label": "the take",
+     "bump": 2000,
+     "seed": 1126246905,
+     "key": "2bffad2b471e7433",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+     "measures": {
+      "heard": "Her. Like the movie. The guy and his computer.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.03,
+      "plan_len_s": 3.06,
+      "ratio": 0.99,
+      "words": 9,
+      "wpm": 178.2,
+      "longest_gap_s": 0.25,
+      "lufs": -16.0,
+      "true_peak": -3.04,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 128.3,
+      "f0_range_st": 13.6,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 4.276,
+      "raw_floor_dbfs": -61.1,
+      "raw_speech_to_floor_db": 43.1,
+      "raw_pause_floor_dbfs": -56.8,
+      "raw_pause_sf_db": 38.9,
+      "raw_quiet_frames": 72,
+      "raw_peak_dbfs": -2.21,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "floor 43 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "'Her.' Like the movie. The guy and his computer.",
+     "base_key": "51d06e5d9c9ce0b4",
+     "why": "asr: 'and' heard 'in' (forced margin -8.9)"
+    }
+   ],
+   "picked_bump": 2000,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "floor 43 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [],
+   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+    "2bffad2b471e7433",
+    4.276
+   ]
+  },
+  "e2-vo-06": {
+   "id": "e2-vo-06",
+   "who": "mas-manalt",
+   "take": "e2-vo-06__mas-manalt-C",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": 370459737,
+     "key": "c91ce6c1ccd42e50",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+     "measures": {
+      "heard": "I came back.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.2,
+      "plan_len_s": 1.51,
+      "ratio": 0.795,
+      "words": 3,
+      "wpm": 150.0,
+      "longest_gap_s": 0.08,
+      "lufs": -18.0,
+      "true_peak": -2.71,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 113.5,
+      "f0_range_st": 8.6,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.035,
+      "raw_floor_dbfs": -82.7,
+      "raw_speech_to_floor_db": 64.1,
+      "raw_pause_floor_dbfs": -80.6,
+      "raw_pause_sf_db": 62.0,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -2.08,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "I came back.",
+     "base_key": "c91ce6c1ccd42e50"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "I came back.",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+    "c91ce6c1ccd42e50",
+    2.035
+   ]
+  },
+  "e2-a2-0030": {
+   "id": "e2-a2-0030",
+   "who": "chatgtp",
+   "take": "e2-a2-0030__chatgtp-A",
+   "attempts": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
+     "measures": {
+      "heard": "One word!",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.28,
+      "plan_len_s": 2.5,
+      "ratio": 0.912,
+      "words": 2,
+      "wpm": 52.6,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -5.18,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 65.7,
+      "f0_range_st": 7.1,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 3.225,
+      "raw_floor_dbfs": -74.2,
+      "raw_speech_to_floor_db": 51.4,
+      "raw_pause_floor_dbfs": -71.8,
+      "raw_pause_sf_db": 49.0,
+      "raw_quiet_frames": 18,
+      "raw_peak_dbfs": -2.23,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "(sung) one wo-o-ord",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
+    "86e13db04c7f27f2",
+    3.225
+   ],
+   "special": "sung",
+   "superseded": []
+  }
+ },
+ "updated": "2026-10-09 05:24:38"
+}

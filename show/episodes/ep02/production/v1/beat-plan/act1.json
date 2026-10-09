@@ -21,7 +21,7 @@
    "proposal_s": 192,
    "adjust": "the script review: Move 37's correction split with the staffer's misunderstanding and its accuracy wording (W22, W18); the beat grows about 4.7 s, so the scene gets 4 s (the review asked for about 2; with 2 the rest of the scene's air, F2.3's included, fit at 0.83); added to the setup act (R4), so Act One is 6:08",
    "estimate_s": 196.0,
-   "fit_scale": 0.867
+   "fit_scale": 1.146
   },
   {
    "id": "4A",
@@ -33,7 +33,7 @@
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
    "estimate_s": 35.0,
-   "fit_scale": 1.547
+   "fit_scale": 1.781
   },
   {
    "id": "4B",
@@ -45,7 +45,7 @@
    "mode": "SINGLE IMAGE / INSERT",
    "pace": "normal",
    "estimate_s": 8.0,
-   "fit_scale": 1.35
+   "fit_scale": 1.425
   },
   {
    "id": "6",
@@ -57,7 +57,7 @@
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
    "estimate_s": 81.0,
-   "fit_scale": 0.921
+   "fit_scale": 1.532
   },
   {
    "id": "7",
@@ -69,7 +69,7 @@
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
    "estimate_s": 48.0,
-   "fit_scale": 1.684
+   "fit_scale": 1.646
   }
  ],
  "cast": {
@@ -225,7 +225,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 9.59,
+   "est_s": 10.21,
    "frame": "ECU · his finger on the bare Publish button → MCU MAS",
    "camera": "ECU · his finger on the bare Publish button → MCU MAS",
    "set": "boardroom",
@@ -246,11 +246,11 @@
      "delivery": "his finger just off Publish; practical, almost pleased with the arithmetic; 'nole's emails.' a label, no weight on 'tonight.'",
      "kind": "plan",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-01__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
      "after": "start+3.2",
      "gap_s": 0.0,
-     "len_s": 5.96,
+     "len_s": 6.44,
      "t_s": 3.2
     }
    ],
@@ -312,7 +312,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.18,
+   "est_s": 4.79,
    "frame": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
    "camera": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
    "set": "boardroom",
@@ -332,12 +332,12 @@
      "text": "is there anyone here… from 2016.",
      "delivery": "reading, flat; a host running a procedure",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+0.35",
+     "after": "start+0.46",
      "gap_s": 0.0,
-     "len_s": 2.79,
-     "t_s": 0.35
+     "len_s": 2.96,
+     "t_s": 0.46
     }
    ],
    "caption": "MAS runs it like a procedure. The planchette slides to >>>, and an inbox chime sounds, pitched down two octaves.",
@@ -347,14 +347,14 @@
     {
      "name": "inbox_chime_low",
      "at": "after:e2-a1-0001+0.5",
-     "at_s": 3.64,
+     "at_s": 3.92,
      "gain": -22,
      "new": true
     },
     {
      "name": "planchette_glide",
      "at": "after:e2-a1-0001+0.2",
-     "at_s": 3.34,
+     "at_s": 3.62,
      "gain": -26,
      "new": true
     }
@@ -378,7 +378,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.52,
+   "est_s": 4.6,
    "frame": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
    "camera": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
    "set": "boardroom",
@@ -398,11 +398,11 @@
      "text": "Yup",
      "delivery": "the ghost: one syllable, a little bored",
      "take": "new · GHOST-NOLE (Nole's voice + the ghost treatment) · ghost chain · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0002__ghost-nole-A.wav",
      "note": "[K · facts §B ghost-NOLE Jan 2016 (the Mar 5, 2024 post); confirm the period]",
      "after": "start+3.4",
      "gap_s": 0.0,
-     "len_s": 0.6,
+     "len_s": 0.51,
      "t_s": 3.4
     }
    ],
@@ -410,22 +410,22 @@
    "picture": "Alyi appears only as an author (his name on the header), never in brass or stone (R1). The spirit-photo pass (2.G) on the ghosts only.",
    "onscreen": {
     "add": [
-     "FROM: ALYI · JAN 2016 (0.3-4.52 s)",
-     "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\" (0.6-4.52 s)"
+     "FROM: ALYI · JAN 2016 (0.3-4.6 s)",
+     "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\" (0.6-4.6 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "FROM: ALYI · JAN 2016",
      "at": 0.3,
-     "until": 4.52,
+     "until": 4.6,
      "kind": "doc",
      "holds": true
     },
     {
      "text": "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"",
      "at": 0.6,
-     "until": 4.52,
+     "until": 4.6,
      "kind": "doc",
      "holds": true
     }
@@ -466,7 +466,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 3.66,
+   "est_s": 3.84,
    "frame": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
    "camera": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
    "set": "boardroom",
@@ -485,12 +485,12 @@
      "text": "He signed it. He's just not here.",
      "delivery": "quiet, to the staffer looking at the empty chair; kind",
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.87",
+     "after": "start+1.15",
      "gap_s": 0.0,
-     "len_s": 2.27,
-     "t_s": 0.87
+     "len_s": 2.0,
+     "t_s": 1.15
     }
    ],
    "caption": "A staffer's eyes go to the empty chair at the table's end. GERG, quietly, to her.",
@@ -514,7 +514,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 6.79,
+   "est_s": 6.58,
    "frame": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
    "camera": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
    "set": "boardroom",
@@ -534,12 +534,12 @@
      "text": "one knock if we promised a nonprofit.",
      "delivery": "to the table, as if calling a vote",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
      "note": "[INVENTED · says what the suit claims before the knocks answer it]",
-     "after": "start+0.39",
+     "after": "start+0.52",
      "gap_s": 0.0,
-     "len_s": 3.1,
-     "t_s": 0.39
+     "len_s": 2.76,
+     "t_s": 0.52
     }
    ],
    "caption": "MAS puts the question to the table. The held hands and the planchette perfectly still. The organ drops to its pad. Then, from the ceiling: KNOCK. KNOCK. KNOCK, each one louder.",
@@ -549,21 +549,21 @@
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+1.3",
-     "at_s": 4.79,
+     "at_s": 4.58,
      "gain": -22,
      "new": true
     },
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+2.0",
-     "at_s": 5.49,
+     "at_s": 5.28,
      "gain": -19,
      "new": true
     },
     {
      "name": "ceiling_knock",
      "at": "after:e2-a1-0004+2.7",
-     "at_s": 6.19,
+     "at_s": 5.98,
      "gain": -16,
      "new": true
     }
@@ -587,7 +587,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.44,
+   "est_s": 4.96,
    "frame": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
    "camera": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
    "set": "boardroom",
@@ -608,12 +608,12 @@
      "text": "you're early. we're on 2016.",
      "delivery": "not looking up from the laptop",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+1.73",
+     "after": "start+2.29",
      "gap_s": 0.0,
-     "len_s": 2.36,
-     "t_s": 1.73
+     "len_s": 2.21,
+     "t_s": 2.29
     }
    ],
    "caption": "CRASH. Ceiling tiles rain down over the foot of the table and NOLE drops through the hole on a cable, landing screen-right. On the right wall the boardroom door, which he didn't use, stays shut. In the foreground Mas doesn't look up from the laptop.",
@@ -628,15 +628,15 @@
     },
     {
      "name": "cable_drop",
-     "at": 0.346,
-     "at_s": 0.35,
+     "at": 0.458,
+     "at_s": 0.46,
      "gain": -22,
      "new": true
     },
     {
      "name": "landing_thunk",
-     "at": 0.952,
-     "at_s": 0.95,
+     "at": 1.26,
+     "at_s": 1.26,
      "gain": -16
     }
    ],
@@ -660,7 +660,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 10.49,
+   "est_s": 8.42,
    "frame": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
    "camera": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
    "set": "boardroom",
@@ -680,12 +680,12 @@
      "text": "Is this a séance or a deposition? Because I've got lawyers for both.",
      "delivery": "to the whole table; loud, fast, first",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.43",
+     "after": "start+0.57",
      "gap_s": 0.0,
-     "len_s": 4.42,
-     "t_s": 0.43
+     "len_s": 3.92,
+     "t_s": 0.57
     },
     {
      "id": "e2-a1-0007",
@@ -695,26 +695,26 @@
      "text": "It's a blog post. We put some of your old emails up today. The candles were extra.",
      "delivery": "typing; cheerful, literal",
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0007__gerg-mockbran-A.wav",
      "note": "[INVENTED · the post is the record on the rail (facts A10)]",
      "after": "e2-a1-0006",
      "gap_s": 0.2,
-     "len_s": 5.32,
-     "t_s": 5.05
+     "len_s": 3.61,
+     "t_s": 4.69
     }
    ],
    "caption": "NOLE, brushing tiles off his jacket, the 2016 ghost and its Yup still hovering behind him. His plate. GERG answers him, typing.",
    "picture": "Plate on his entrance: name plus what he is to Mas, told once.",
    "onscreen": {
     "add": [
-     "NOLE · FUNDED IT. LEFT IT. SUING IT. (0.17-5.55 s)"
+     "NOLE · FUNDED IT. LEFT IT. SUING IT. (0.23-5.19 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "NOLE · FUNDED IT. LEFT IT. SUING IT.",
-     "at": 0.17,
-     "until": 5.55,
+     "at": 0.23,
+     "until": 5.19,
      "kind": "plate"
     }
    ],
@@ -741,7 +741,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 14.42,
+   "est_s": 15.15,
    "frame": "OTS · the same setup: Nole's case, the 2016 ghost's \"less open\" hanging behind him",
    "camera": "OTS · the same setup: Nole's case, the 2016 ghost's \"less open\" hanging behind him",
    "set": "boardroom",
@@ -760,11 +760,11 @@
      "text": "Great. Put this on the blog too. I paid for the table. I paid for the candles. I paid for the ceiling I just came through. And I asked for one thing, and it's in the name. Open. It was supposed to be open.",
      "delivery": "brushing off the last tile; fast, to the whole table: his case, the scene's one speech",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0008__nole-A.wav",
      "note": "[INVENTED · his suit's public position in his own words (facts A9, A10b); disputes no email]",
      "after": "start+0.13",
      "gap_s": 0.0,
-     "len_s": 14.14,
+     "len_s": 14.87,
      "t_s": 0.13
     }
    ],
@@ -798,7 +798,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 5.17,
+   "est_s": 4.66,
    "frame": "LOW·DESK · Mas → HIGH · the planchette spells O · P · E · N",
    "camera": "LOW·DESK · Mas → HIGH · the planchette spells O · P · E · N",
    "set": "boardroom",
@@ -816,11 +816,11 @@
      "text": "spirit, what did we call it?",
      "delivery": "to the planchette, not to him",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0009__mas-manalt-C.wav",
      "note": "[INVENTED]",
      "after": "start+0.3",
      "gap_s": 0.0,
-     "len_s": 2.67,
+     "len_s": 2.16,
      "t_s": 0.3
     }
    ],
@@ -828,14 +828,14 @@
    "picture": "Each letter a tick on the beat.",
    "onscreen": {
     "add": [
-     "O P E N (3.27-5.17 s)"
+     "O P E N (2.76-4.66 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "O P E N",
-     "at": 3.27,
-     "until": 5.17,
+     "at": 2.76,
+     "until": 4.66,
      "kind": "ui",
      "holds": true
     }
@@ -845,28 +845,28 @@
     {
      "name": "planchette_letter_tick",
      "at": "after:e2-a1-0009+0.3",
-     "at_s": 3.27,
+     "at_s": 2.76,
      "gain": -24,
      "new": true
     },
     {
      "name": "planchette_letter_tick",
      "at": "after:e2-a1-0009+0.8",
-     "at_s": 3.77,
+     "at_s": 3.26,
      "gain": -24,
      "new": true
     },
     {
      "name": "planchette_letter_tick",
      "at": "after:e2-a1-0009+1.3",
-     "at_s": 4.27,
+     "at_s": 3.76,
      "gain": -24,
      "new": true
     },
     {
      "name": "planchette_letter_tick",
      "at": "after:e2-a1-0009+1.8",
-     "at_s": 4.77,
+     "at_s": 4.26,
      "gain": -24,
      "new": true
     }
@@ -898,7 +898,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.14,
+   "est_s": 4.57,
    "frame": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
    "camera": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
    "set": "boardroom",
@@ -916,26 +916,26 @@
      "text": "There. Even the furniture knows.",
      "delivery": "to all of them, vindicated",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.22",
+     "after": "start+0.29",
      "gap_s": 0.0,
-     "len_s": 1.72,
-     "t_s": 0.22
+     "len_s": 2.08,
+     "t_s": 0.29
     }
    ],
    "caption": "NOLE spreads his hands at the board, vindicated. The planchette pauses. Then it drifts back to the N and carries it to the front: N · O · P · E.",
    "picture": "The N moves in one held glide.",
    "onscreen": {
     "add": [
-     "N O P E (3.14-4.14 s)"
+     "N O P E (3.57-4.57 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "N O P E",
-     "at": 3.14,
-     "until": 4.14,
+     "at": 3.57,
+     "until": 4.57,
      "kind": "ui",
      "holds": true
     }
@@ -945,7 +945,7 @@
     {
      "name": "planchette_glide",
      "at": "after:e2-a1-0010+0.7",
-     "at_s": 2.64,
+     "at_s": 3.07,
      "gain": -24,
      "new": true
     }
@@ -969,7 +969,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.95,
+   "est_s": 4.59,
    "frame": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
    "camera": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
    "set": "boardroom",
@@ -990,12 +990,12 @@
      "text": "No. Not like that. The N goes at the end.",
      "delivery": "jabbing at the board as the N moves",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.22",
+     "after": "start+0.29",
      "gap_s": 0.0,
-     "len_s": 3.34,
-     "t_s": 0.22
+     "len_s": 2.47,
+     "t_s": 0.29
     }
    ],
    "caption": "NOLE, jabbing at the board as the N moves. Everyone looks down: three hands are resting on the planchette, Mas's, GHOST-NOLE's and Gerg's. All three lift off at once.",
@@ -1090,7 +1090,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 5.27,
+   "est_s": 4.8,
    "frame": "OTS · Nole at the cow → LOW·DESK · Mas",
    "camera": "OTS · Nole at the cow → LOW·DESK · Mas",
    "set": "boardroom",
@@ -1109,12 +1109,12 @@
      "text": "I forwarded that. I didn't write it.",
      "delivery": "quick, defensive",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0012__nole-A.wav",
      "note": "[INVENTED · disputes nothing in the record: he forwarded it, and replied \"exactly right\" (facts §B, the cow)]",
-     "after": "start+0.26",
+     "after": "start+0.34",
      "gap_s": 0.0,
-     "len_s": 2.32,
-     "t_s": 0.26
+     "len_s": 1.88,
+     "t_s": 0.34
     },
     {
      "id": "e2-a1-0013",
@@ -1124,12 +1124,12 @@
      "text": "you wrote 'exactly right.'",
      "delivery": "level, a fact read off the ghost",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0013__mas-manalt-C.wav",
      "note": "[INVENTED · accurate to the record]",
      "after": "e2-a1-0012",
      "gap_s": 0.45,
-     "len_s": 1.81,
-     "t_s": 3.03
+     "len_s": 1.56,
+     "t_s": 2.67
     }
    ],
    "caption": "NOLE disputes the medium, not the words. MAS answers with the words.",
@@ -1158,7 +1158,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 3.12,
+   "est_s": 4.12,
    "frame": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
    "camera": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
    "set": "boardroom",
@@ -1172,22 +1172,22 @@
    "picture": "His answer goes to the internet, and has no words in it.",
    "onscreen": {
     "add": [
-     "NOLE · JUST NOW (1.39-3.12 s)",
-     "!!!!!!!! (1.39-3.12 s)"
+     "NOLE · JUST NOW (1.83-4.12 s)",
+     "!!!!!!!! (1.83-4.12 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "NOLE · JUST NOW",
-     "at": 1.39,
-     "until": 3.12,
+     "at": 1.83,
+     "until": 4.12,
      "kind": "post",
      "holds": true
     },
     {
      "text": "!!!!!!!!",
-     "at": 1.39,
-     "until": 3.12,
+     "at": 1.83,
+     "until": 4.12,
      "kind": "post",
      "holds": true
     }
@@ -1196,21 +1196,21 @@
    "sounds": [
     {
      "name": "lamp_click",
-     "at": 0.173,
-     "at_s": 0.17,
+     "at": 0.229,
+     "at_s": 0.23,
      "gain": -22,
      "new": true
     },
     {
      "name": "key_tap_soft_01",
-     "at": 0.52,
-     "at_s": 0.52,
+     "at": 0.687,
+     "at_s": 0.69,
      "gain": -28
     },
     {
      "name": "reverse_swell_1beat",
-     "at": 1.3,
-     "at_s": 1.3,
+     "at": 1.717,
+     "at_s": 1.72,
      "gain": -26
     }
    ],
@@ -1228,7 +1228,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 7.9,
+   "est_s": 7.1,
    "frame": "WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" clause; GHOST-NOLE in a 2018 hoodie leans across the table",
    "camera": "WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" clause; GHOST-NOLE in a 2018 hoodie leans across the table",
    "set": "boardroom",
@@ -1248,11 +1248,11 @@
      "text": "This needs billions per year immediately or forget it.",
      "delivery": "the 2018 ghost, in a hoodie, leaning across the table; matter-of-fact",
      "take": "new · GHOST-NOLE (Nole's voice + the ghost treatment) · ghost chain · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0014__ghost-nole-A.wav",
      "note": "[V · facts §B ghost-NOLE Dec 26, 2018 (the Mar 5, 2024 post), verbatim: CNBC and NBC News, Mar 6, 2024]",
      "after": "start+2.2",
      "gap_s": 0.0,
-     "len_s": 3.7,
+     "len_s": 2.9,
      "t_s": 2.2
     }
    ],
@@ -1260,22 +1260,22 @@
    "picture": "The header must read at 1080p; the voice plays while it holds.",
    "onscreen": {
     "add": [
-     "DEC 2018 (0.3-7.9 s)",
-     "\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%.\" (0.5-7.9 s)"
+     "DEC 2018 (0.3-7.1 s)",
+     "\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%.\" (0.5-7.1 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "DEC 2018",
      "at": 0.3,
-     "until": 7.9,
+     "until": 7.1,
      "kind": "doc",
      "holds": true
     },
     {
      "text": "\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%.\"",
      "at": 0.5,
-     "until": 7.9,
+     "until": 7.1,
      "kind": "doc",
      "holds": true
     }
@@ -1309,7 +1309,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 2.08,
+   "est_s": 2.75,
    "frame": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
    "camera": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
    "set": "boardroom",
@@ -1326,14 +1326,14 @@
    "sounds": [
     {
      "name": "phone_clack_floor",
-     "at": 0.173,
-     "at_s": 0.17,
+     "at": 0.229,
+     "at_s": 0.23,
      "gain": -16
     },
     {
      "name": "candle_flare",
-     "at": 0.217,
-     "at_s": 0.22,
+     "at": 0.286,
+     "at_s": 0.29,
      "gain": -24,
      "new": true
     }
@@ -1352,7 +1352,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 10.36,
+   "est_s": 9.95,
    "frame": "2S · NOLE and GHOST-NOLE side by side, same jaw, same phone (no cut-ins)",
    "camera": "2S · NOLE and GHOST-NOLE side by side, same jaw, same phone (no cut-ins)",
    "set": "boardroom",
@@ -1372,12 +1372,12 @@
      "text": "…That was a different me. That was 2018. Everybody said things in 2018.",
      "delivery": "to the table, moving it in time; he never denies what it says",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0015__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.26",
+     "after": "start+0.34",
      "gap_s": 0.0,
-     "len_s": 4.24,
-     "t_s": 0.26
+     "len_s": 4.01,
+     "t_s": 0.34
     },
     {
      "id": "e2-a1-0016",
@@ -1387,12 +1387,12 @@
      "text": "Same email address, though. I checked.",
      "delivery": "O.S., typing",
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0016__gerg-mockbran-A.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0015",
      "gap_s": 0.2,
-     "len_s": 1.98,
-     "t_s": 4.7
+     "len_s": 1.6,
+     "t_s": 4.55
     },
     {
      "id": "e2-a1-0017",
@@ -1402,12 +1402,12 @@
      "text": "Say something ELSE.",
      "delivery": "to the ghost; his one caps word",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0017__nole-A.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0016",
      "gap_s": 0.2,
-     "len_s": 1.0,
-     "t_s": 6.88
+     "len_s": 0.97,
+     "t_s": 6.35
     },
     {
      "id": "e2-a1-0018",
@@ -1417,12 +1417,12 @@
      "text": "…Yup.",
      "delivery": "after a long consideration",
      "take": "new · GHOST-NOLE (Nole's voice + the ghost treatment) · ghost chain · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
      "note": "[INVENTED · the ghost repeats its word; no quotation marks]",
      "after": "e2-a1-0017",
      "gap_s": 1.25,
-     "len_s": 0.8,
-     "t_s": 9.13
+     "len_s": 0.81,
+     "t_s": 8.57
     }
    ],
    "caption": "NOLE moves the email in time. GERG (O.S.) has checked. NOLE turns on the ghost. The ghost considers this for a long time.",
@@ -1452,7 +1452,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 4.42,
+   "est_s": 4.73,
    "frame": "LOW·DESK · Mas → HIGH · the planchette slides into the board's corner, where the letters become a Go board; ECU the stone",
    "camera": "LOW·DESK · Mas → HIGH · the planchette slides into the board's corner, where the letters become a Go board; ECU the stone",
    "set": "boardroom",
@@ -1470,26 +1470,26 @@
      "text": "spirit, why zero?",
      "delivery": "to the planchette; the question he actually wants answered",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0019__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+0.43",
+     "after": "start+0.57",
      "gap_s": 0.0,
-     "len_s": 1.39,
-     "t_s": 0.43
+     "len_s": 1.56,
+     "t_s": 0.57
     }
    ],
    "caption": "MAS asks the question he wants answered. The planchette slides into the board's corner, where the letters become a Go board, and a stone clicks down.",
    "picture": "SET-04 in the board's corner (T3 cut-paper; slate and shell stones). The stone label legible.",
    "onscreen": {
     "add": [
-     "MAR 2016 · GAME 2 · MOVE 37 (2.62-4.42 s)"
+     "MAR 2016 · GAME 2 · MOVE 37 (2.93-4.73 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "MAR 2016 · GAME 2 · MOVE 37",
-     "at": 2.62,
-     "until": 4.42,
+     "at": 2.93,
+     "until": 4.73,
      "kind": "doc",
      "holds": true
     }
@@ -1499,14 +1499,14 @@
     {
      "name": "planchette_glide",
      "at": "after:e2-a1-0019+0.1",
-     "at_s": 1.92,
+     "at_s": 2.23,
      "gain": -24,
      "new": true
     },
     {
      "name": "go_stone_click",
      "at": "after:e2-a1-0019+0.8",
-     "at_s": 2.62,
+     "at_s": 2.93,
      "gain": -16,
      "new": true
     }
@@ -1538,7 +1538,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 2.2,
+   "est_s": 2.19,
    "frame": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
    "camera": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
    "set": "boardroom",
@@ -1557,12 +1557,12 @@
      "text": "That's why.",
      "delivery": "quiet for once, to the board",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.35",
+     "after": "start+0.46",
      "gap_s": 0.0,
-     "len_s": 0.7,
-     "t_s": 0.35
+     "len_s": 0.82,
+     "t_s": 0.46
     },
     {
      "id": "e2-a1-0021",
@@ -1572,12 +1572,12 @@
      "text": "What's that?",
      "delivery": "whispering, at the stone",
      "take": "new · STAFFER (Avery · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0021__tiled-employee-A.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0020",
      "gap_s": 0.3,
-     "len_s": 0.73,
-     "t_s": 1.35
+     "len_s": 0.49,
+     "t_s": 1.58
     }
    ],
    "caption": "NOLE, quiet for once. The staffer beside Gerg whispers at the stone.",
@@ -1605,7 +1605,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 3.15,
+   "est_s": 2.48,
    "frame": "MCU · NOLE to her, hushed",
    "camera": "MCU · NOLE to her, hushed",
    "set": "boardroom",
@@ -1624,11 +1624,11 @@
      "text": "Nobody wrote that move. It came out of nowhere.",
      "delivery": "to her, hushed, a man at a séance",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0022__nole-A.wav",
      "note": "[INVENTED · his claim; Gerg corrects it]",
      "after": "start+0.13",
      "gap_s": 0.0,
-     "len_s": 2.92,
+     "len_s": 2.25,
      "t_s": 0.13
     }
    ],
@@ -1663,7 +1663,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 17.31,
+   "est_s": 17.27,
    "frame": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
    "camera": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
    "set": "boardroom",
@@ -1682,11 +1682,11 @@
      "text": "It didn't come out of nowhere. It learned. Thirty million positions from people's games.",
      "delivery": "typing; cheerful, literal, never smug; unhurried for him: the correction, not a read-out",
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0023__gerg-mockbran-A.wav",
      "note": "[INVENTED · accurate: the policy network learned from about 30M positions of expert human games (facts A57: Nature 529:484; DeepMind's account); 'It learned.' first, so the human data isn't the move's author]",
      "after": "start+0.1",
      "gap_s": 0.0,
-     "len_s": 4.65,
+     "len_s": 4.24,
      "t_s": 0.1
     },
     {
@@ -1697,12 +1697,12 @@
      "text": "So somebody did write it.",
      "delivery": "whispering, to Gerg; she thinks people's games means people wrote it",
      "take": "new · STAFFER (Avery · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0055__tiled-employee-A.wav",
      "note": "[INVENTED · the misunderstanding Gerg corrects, so 'learned, not programmed' lands in the scene (W22)]",
      "after": "e2-a1-0023",
      "gap_s": 0.25,
-     "len_s": 1.68,
-     "t_s": 5.0
+     "len_s": 1.17,
+     "t_s": 4.59
     },
     {
      "id": "e2-a1-0056",
@@ -1712,12 +1712,12 @@
      "text": "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games.",
      "delivery": "still typing; cheerful, literal; one knob at a time, the last sentence the plainest",
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0056__gerg-mockbran-A.wav",
      "note": "[INVENTED · accurate (facts A57): millions of adjustable numbers nudged toward the human move in each position, then improved by self-play over millions of games; 'it played itself' is Ep1's phrase]",
      "after": "e2-a1-0055",
      "gap_s": 0.25,
-     "len_s": 9.38,
-     "t_s": 6.93
+     "len_s": 10.26,
+     "t_s": 6.01
     }
    ],
    "caption": "GERG, typing, cheerfully literal, corrects him: it learned, from people's games. The staffer beside him, whispering, takes that to mean somebody wrote it. Nobody did: behind the board, a wall of tiny knobs, a stream of tiny human boards pouring into it, each one ticking every knob a hair. On \"Then it played itself, millions of games.\" the stream turns into the program's own boards. The wall freezes.",
@@ -1726,8 +1726,8 @@
    "sounds": [
     {
      "name": "knob_tick_grain",
-     "at": 7.73,
-     "at_s": 7.73,
+     "at": 6.81,
+     "at_s": 6.81,
      "gain": -30,
      "new": true,
      "dur": 9.0,
@@ -1765,7 +1765,7 @@
    "scene": "4",
    "mode": "SET-PIECE · the explainer (Move 37)",
    "pace": "quick",
-   "est_s": 6.32,
+   "est_s": 6.11,
    "frame": "MCU · NOLE takes the fear back",
    "camera": "MCU · NOLE takes the fear back",
    "set": "boardroom",
@@ -1783,12 +1783,12 @@
      "text": "One player in ten thousand would have made that move. It made it anyway. And it was right.",
      "delivery": "a fear, not a boast; quiet, then quieter",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
      "note": "[INVENTED · his claim; accurate as the program's own estimate, about 1 in 10,000 (facts A57)]",
-     "after": "start+0.43",
+     "after": "start+0.57",
      "gap_s": 0.0,
-     "len_s": 5.74,
-     "t_s": 0.43
+     "len_s": 5.39,
+     "t_s": 0.57
     }
    ],
    "caption": "NOLE takes the fear back, in plainer words.",
@@ -1814,7 +1814,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 3.42,
+   "est_s": 3.12,
    "frame": "WIDE · NOLE, loud again, to the table",
    "camera": "WIDE · NOLE, loud again, to the table",
    "set": "boardroom",
@@ -1835,11 +1835,11 @@
      "text": "MINDDEEP had that in 2016. We had a blog.",
      "delivery": "loud again, to the table; on credit and rivalry",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0025__nole-A.wav",
      "note": "[INVENTED · names the rival from his own 0% email (4.16); disputes no email]",
      "after": "start+0.15",
      "gap_s": 0.0,
-     "len_s": 2.92,
+     "len_s": 2.51,
      "t_s": 0.15
     }
    ],
@@ -1872,7 +1872,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 7.21,
+   "est_s": 6.11,
    "frame": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
    "camera": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
    "set": "boardroom",
@@ -1891,13 +1891,13 @@
      "text": "…billions per year…",
      "delivery": "ghost 3, drifting into Mas's eyeline: the same words, replayed",
      "take": "cut from e2-a1-0014 (\"billions\" … \"year\") · ghost chain · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
      "note": "[the same email's words (facts §B), cut from e2-a1-0014's take]",
      "cut_from": "e2-a1-0014",
-     "after": "start+0.35",
+     "after": "start+0.46",
      "gap_s": 0.0,
-     "len_s": 1.3,
-     "t_s": 0.35
+     "len_s": 0.94,
+     "t_s": 0.46
     },
     {
      "id": "e2-vo-02",
@@ -1909,12 +1909,12 @@
      "delivery": "the ghost's words still in the air; a private concession, plain; the second sentence a fact, not a worry",
      "kind": "gap (the compute goal)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-02__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
      "after": "e2-a1-0026",
      "gap_s": 0.6,
-     "len_s": 4.44,
-     "t_s": 2.25
+     "len_s": 3.42,
+     "t_s": 2.0
     }
    ],
    "caption": "Ghost 3 drifts into Mas's eyeline and says its line again.",
@@ -1942,7 +1942,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.43,
+   "est_s": 4.42,
    "frame": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
    "camera": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
    "set": "boardroom",
@@ -1960,12 +1960,12 @@
      "text": "You kept them.",
      "delivery": "quiet; his one quiet line, and his one short one",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.52",
+     "after": "start+0.69",
      "gap_s": 0.0,
-     "len_s": 1.0,
-     "t_s": 0.52
+     "len_s": 0.92,
+     "t_s": 0.69
     },
     {
      "id": "e2-a1-0028",
@@ -1975,12 +1975,12 @@
      "text": "we keep everything.",
      "delivery": "off, landing on Nole's face (an L-cut)",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0028__mas-manalt-C.wav",
      "note": "[INVENTED · ruled in by the facts pass: it refers to the published emails]",
      "after": "e2-a1-0027",
      "gap_s": 1.0,
-     "len_s": 1.39,
-     "t_s": 2.52
+     "len_s": 1.12,
+     "t_s": 2.61
     }
    ],
    "caption": "NOLE turns to Mas. The lamp beside him does not click on. Then Mas's answer lands on Nole's face.",
@@ -2008,7 +2008,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 2.08,
+   "est_s": 2.75,
    "frame": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
    "camera": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
    "set": "boardroom",
@@ -2024,15 +2024,15 @@
    "sounds": [
     {
      "name": "candle_snuff",
-     "at": 0.433,
-     "at_s": 0.43,
+     "at": 0.573,
+     "at_s": 0.57,
      "gain": -24,
      "new": true
     },
     {
      "name": "render_front_sweep",
-     "at": 1.387,
-     "at_s": 1.39,
+     "at": 1.833,
+     "at_s": 1.83,
      "gain": -26
     }
    ],
@@ -2175,7 +2175,7 @@
    "scene": "4",
    "mode": "FLASHBACK",
    "pace": "quick",
-   "est_s": 3.65,
+   "est_s": 4.81,
    "frame": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
    "camera": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
    "set": "office",
@@ -2192,22 +2192,22 @@
    "sounds": [
     {
      "name": "glass_sip",
-     "at": 0.348,
-     "at_s": 0.35,
+     "at": 0.458,
+     "at_s": 0.46,
      "gain": -28,
      "new": true
     },
     {
      "name": "ladder_climb",
-     "at": 1.043,
-     "at_s": 1.04,
+     "at": 1.374,
+     "at_s": 1.37,
      "gain": -24,
      "new": true
     },
     {
      "name": "hatch_slide_shut",
-     "at": 2.868,
-     "at_s": 2.87,
+     "at": 3.779,
+     "at_s": 3.78,
      "gain": -20,
      "new": true
     }
@@ -2319,7 +2319,7 @@
    "scene": "4",
    "mode": "FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 2.25,
+   "est_s": 2.98,
    "frame": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
    "camera": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
    "set": "boardroom",
@@ -2336,14 +2336,14 @@
    "sounds": [
     {
      "name": "render_front_sweep",
-     "at": 0.173,
-     "at_s": 0.17,
+     "at": 0.229,
+     "at_s": 0.23,
      "gain": -26
     },
     {
      "name": "match_strike",
-     "at": 1.212,
-     "at_s": 1.21,
+     "at": 1.605,
+     "at_s": 1.6,
      "gain": -22,
      "new": true
     }
@@ -2377,7 +2377,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 9.45,
+   "est_s": 9.05,
    "frame": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
    "camera": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
    "set": "boardroom",
@@ -2396,12 +2396,12 @@
      "text": "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water.",
      "delivery": "low at first, then not; the candle held to Mas's face like evidence",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
      "note": "[INVENTED · matches what F2.3 showed: he spoke to the room; says nothing about what was said there or asked of it (facts A11)]",
-     "after": "start+0.52",
+     "after": "start+0.69",
      "gap_s": 0.0,
-     "len_s": 7.72,
-     "t_s": 0.52
+     "len_s": 6.76,
+     "t_s": 0.69
     }
    ],
    "caption": "NOLE holds the candle up to Mas's face like evidence. Mas lifts his glass and sips: F2.3's sip, six years on.",
@@ -2411,7 +2411,7 @@
     {
      "name": "glass_sip",
      "at": "after:e2-a1-0029+0.5",
-     "at_s": 8.74,
+     "at_s": 7.95,
      "gain": -26,
      "new": true
     }
@@ -2435,7 +2435,7 @@
    "scene": "4",
    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
    "pace": "quick",
-   "est_s": 4.23,
+   "est_s": 4.09,
    "frame": "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
    "camera": "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
    "set": "boardroom",
@@ -2454,12 +2454,12 @@
      "text": "Keep that too. See you in court.",
      "delivery": "to Mas, already rising on his cable; the candle set down hard",
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.35",
+     "after": "start+0.46",
      "gap_s": 0.0,
-     "len_s": 2.32,
-     "t_s": 0.35
+     "len_s": 1.57,
+     "t_s": 0.46
     }
    ],
    "caption": "NOLE sets the candle down in front of Mas, hard, already rising. He rockets back up through his hole. One ceiling tile drops back into place.",
@@ -2469,13 +2469,13 @@
     {
      "name": "rocket_roar",
      "at": "after:e2-a1-0030+0.2",
-     "at_s": 2.87,
+     "at_s": 2.23,
      "gain": -16
     },
     {
      "name": "tile_land_1",
-     "at": 3.93,
-     "at_s": 3.93,
+     "at": 3.79,
+     "at_s": 3.79,
      "gain": -22
     }
    ],
@@ -2541,7 +2541,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 8.01,
+   "est_s": 7.61,
    "frame": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
    "camera": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
    "set": "boardroom",
@@ -2563,11 +2563,11 @@
      "text": "Before we start, the independent review is back. I'll read you the finding.",
      "delivery": "brisk; a chair telling his table what he's about to do",
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0031__terb-A.wav",
      "note": "[INVENTED · 'independent' is Ep1's word]",
      "after": "start+2.6",
      "gap_s": 0.0,
-     "len_s": 4.95,
+     "len_s": 4.48,
      "t_s": 2.6
     }
    ],
@@ -2616,7 +2616,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 12.88,
+   "est_s": 12.5,
    "frame": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
    "camera": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
    "set": "boardroom",
@@ -2636,12 +2636,12 @@
      "text": "The law firm found \"that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.\"",
      "delivery": "reading the sheet word for word, weighted, both halves together; no view in the voice; 'The law firm found' his own lead-in, the quote from 'that'",
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
      "note": "[P · facts A12: the Mar 8, 2024 post (\"WilmerHale found that the prior Board…\"), both halves; the review's law firm stays the subject of both findings (Terb's own words, outside the quote: the firm has no registry name); name swap Altman → Manalt; open the live post]",
-     "after": "start+0.93",
+     "after": "start+1.07",
      "gap_s": 0.0,
-     "len_s": 11.02,
-     "t_s": 0.93
+     "len_s": 10.36,
+     "t_s": 1.07
     }
    ],
    "caption": "TERB reads the finding to the people it concerns, both halves together. The first half lands on MADA, perfectly still; the second on MAS, standing.",
@@ -2667,7 +2667,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 4.21,
+   "est_s": 4.0,
    "frame": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet",
    "camera": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet",
    "set": "boardroom",
@@ -2686,12 +2686,12 @@
      "text": "You can sit down now, Mas.",
      "delivery": "to Mas, dry; a chair moving to the next item",
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
      "note": "[INVENTED · pays Ep1's \"we'll stand.\"]",
-     "after": "start+0.54",
+     "after": "start+0.62",
      "gap_s": 0.0,
-     "len_s": 2.28,
-     "t_s": 0.54
+     "len_s": 1.78,
+     "t_s": 0.62
     }
    ],
    "caption": "TERB looks up. Mas sits.",
@@ -2701,7 +2701,7 @@
     {
      "name": "chair_unfold",
      "at": "after:e2-a1-0033+0.3",
-     "at_s": 3.12,
+     "at_s": 2.7,
      "gain": -26
     }
    ],
@@ -2818,7 +2818,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 4.33,
+   "est_s": 5.0,
    "frame": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
    "camera": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
    "set": "boardroom",
@@ -2846,7 +2846,7 @@
    "scene": "4A",
    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
    "pace": "weighted",
-   "est_s": 2.17,
+   "est_s": 2.49,
    "frame": "ECU · his phone, face up on the table beside the nameplate, lights with an invite",
    "camera": "ECU · his phone, face up on the table beside the nameplate, lights with an invite",
    "set": "boardroom",
@@ -2860,8 +2860,8 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 0.465,
-     "at_s": 0.46,
+     "at": 0.534,
+     "at_s": 0.53,
      "gain": -24,
      "note": "the invite's soft chime over the click"
     }
@@ -2906,25 +2906,25 @@
      "delivery": "reading the invite; a scheduler's thought; 'once.' a small decision; 'november' plain, no weight",
      "kind": "plan",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+1.35",
+     "after": "start+1.43",
      "gap_s": 0.0,
-     "len_s": 5.84,
-     "t_s": 1.35
+     "len_s": 5.72,
+     "t_s": 1.43
     }
    ],
    "caption": "The calendar card: XEL · LONG-FORM · MAR 18 · 2 HRS, with a mic icon. He reads it and accepts with his thumb. The card settles into his calendar.",
    "picture": "In Ep1 he accepted an invite without looking; this time he looks.",
    "onscreen": {
     "add": [
-     "XEL · LONG-FORM · MAR 18 · 2 HRS (0.27-8 s)"
+     "XEL · LONG-FORM · MAR 18 · 2 HRS (0.29-8 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "XEL · LONG-FORM · MAR 18 · 2 HRS",
-     "at": 0.27,
+     "at": 0.29,
      "until": 8.0,
      "kind": "ui",
      "holds": true
@@ -2935,7 +2935,7 @@
     {
      "name": "post_click",
      "at": "after:e2-vo-03+0.1",
-     "at_s": 7.29,
+     "at_s": 7.25,
      "gain": -22,
      "note": "Accept"
     }
@@ -2983,7 +2983,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 8.71,
+   "est_s": 9.08,
    "frame": "2S · the locked meter frame inside the podcast player's chrome: curtain, two chairs, one mic (size 1)",
    "camera": "2S · the locked meter frame inside the podcast player's chrome: curtain, two chairs, one mic (size 1)",
    "set": "stage",
@@ -3002,11 +3002,11 @@
      "text": "Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
      "delivery": "a calm, earnest interviewer; the pause is cut in the edit, never performed",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0034__xel-A.wav",
      "note": "[P · facts A15: Lex #419, Mar 18, 2024 (1:05 on the lexfridman.com transcript); OpenAI → NOPEAI]",
      "after": "start+1.4",
      "gap_s": 0.0,
-     "len_s": 7.01,
+     "len_s": 7.22,
      "t_s": 1.4
     }
    ],
@@ -3014,21 +3014,21 @@
    "picture": "The locked meter frame: every hop plays in it, against the same curtain and chairs.",
    "onscreen": {
     "add": [
-     "CH. 1 OF 6 (0-8.71 s)",
-     "REC (0-8.71 s)"
+     "CH. 1 OF 6 (0-9.08 s)",
+     "REC (0-9.08 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "CH. 1 OF 6",
      "at": 0.0,
-     "until": 8.71,
+     "until": 9.08,
      "kind": "ui"
     },
     {
      "text": "REC",
      "at": 0.0,
-     "until": 8.71,
+     "until": 9.08,
      "kind": "ui",
      "holds": true
     }
@@ -3144,7 +3144,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 10.02,
+   "est_s": 11.48,
    "frame": "2S · the meter frame: Mas answers; the mic doesn't move",
    "camera": "2S · the meter frame: Mas answers; the mic doesn't move",
    "set": "stage",
@@ -3163,12 +3163,12 @@
      "text": "…the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things.",
      "delivery": "his own pace; plain, a little rueful; no performance of pain",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0035__mas-manalt-C.wav",
      "note": "[P · facts §B MAS Mar 18, 2024 (Lex #419)]",
-     "after": "start+0.46",
+     "after": "start+0.77",
      "gap_s": 0.0,
-     "len_s": 9.1,
-     "t_s": 0.46
+     "len_s": 9.94,
+     "t_s": 0.77
     }
    ],
    "caption": "MAS answers, in his own words. The mic doesn't move.",
@@ -3193,7 +3193,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 7.39,
+   "est_s": 7.15,
    "frame": "2S · the meter frame: XEL lets it sit; hop 2 (2 → 3); the Alyi question",
    "camera": "2S · the meter frame: XEL lets it sit; hop 2 (2 → 3); the Alyi question",
    "set": "stage",
@@ -3212,26 +3212,26 @@
      "text": "Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?",
      "delivery": "earnest, almost apologetic for the question",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0036__xel-A.wav",
      "note": "[P · facts §B XEL/MAS Mar 18, 2024 (Lex #419, 18:34 on the lexfridman.com transcript); Ilya → ALYI]",
-     "after": "start+1.2",
+     "after": "start+1.99",
      "gap_s": 0.0,
-     "len_s": 6.04,
-     "t_s": 1.2
+     "len_s": 5.01,
+     "t_s": 1.99
     }
    ],
    "caption": "XEL lets it sit. The mic hops again; the counter ticks. Then he asks about Alyi.",
    "picture": "",
    "onscreen": {
     "add": [
-     "CH. 3 OF 6 (0.55-7.39 s)"
+     "CH. 3 OF 6 (0.92-7.15 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "CH. 3 OF 6",
-     "at": 0.55,
-     "until": 7.39,
+     "at": 0.92,
+     "until": 7.15,
      "kind": "ui",
      "holds": true
     }
@@ -3240,15 +3240,15 @@
    "sounds": [
     {
      "name": "mic_grow_step",
-     "at": 0.462,
-     "at_s": 0.46,
+     "at": 0.765,
+     "at_s": 0.77,
      "gain": -19,
      "new": true
     },
     {
      "name": "chapter_tick",
-     "at": 0.554,
-     "at_s": 0.55,
+     "at": 0.918,
+     "at_s": 0.92,
      "gain": -26,
      "new": true
     }
@@ -3273,7 +3273,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 9.46,
+   "est_s": 9.12,
    "frame": "2S · the meter frame: the \"no.\" ladder, quick",
    "camera": "2S · the meter frame: the \"no.\" ladder, quick",
    "set": "stage",
@@ -3292,11 +3292,11 @@
      "text": "no.",
      "delivery": "quick, amused",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0037__mas-manalt-C.wav",
      "note": "[P · Lex #419]",
      "after": "start+0.3",
      "gap_s": 0.0,
-     "len_s": 0.5,
+     "len_s": 0.46,
      "t_s": 0.3
     },
     {
@@ -3307,12 +3307,12 @@
      "text": "What about a regular secret facility?",
      "delivery": "straight on",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0038__xel-A.wav",
      "note": "[P · Lex #419]",
      "after": "e2-a1-0037",
      "gap_s": 0.2,
-     "len_s": 2.28,
-     "t_s": 1.0
+     "len_s": 1.83,
+     "t_s": 0.96
     },
     {
      "id": "e2-a1-0039",
@@ -3322,12 +3322,12 @@
      "text": "no.",
      "delivery": "quick",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0039__mas-manalt-C.wav",
      "note": "[P · Lex #419]",
      "after": "e2-a1-0038",
      "gap_s": 0.45,
-     "len_s": 0.5,
-     "t_s": 3.73
+     "len_s": 0.49,
+     "t_s": 3.24
     },
     {
      "id": "e2-a1-0040",
@@ -3337,12 +3337,12 @@
      "text": "What about a nuclear non-secret facility?",
      "delivery": "straight on, determined",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0040__xel-A.wav",
      "note": "[P · Lex #419]",
      "after": "e2-a1-0039",
      "gap_s": 0.2,
-     "len_s": 2.28,
-     "t_s": 4.43
+     "len_s": 2.35,
+     "t_s": 3.93
     },
     {
      "id": "e2-a1-0041",
@@ -3352,12 +3352,12 @@
      "text": "neither. not that either.",
      "delivery": "a small laugh under it",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0041__mas-manalt-C.wav",
      "note": "[P · Lex #419]",
      "after": "e2-a1-0040",
      "gap_s": 0.45,
-     "len_s": 1.93,
-     "t_s": 7.16
+     "len_s": 1.78,
+     "t_s": 6.73
     }
    ],
    "caption": "The ladder: no; no; neither.",
@@ -3394,7 +3394,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 12.46,
+   "est_s": 10.73,
    "frame": "2S · the meter frame: XEL pauses; hop 3 (3 → 4); the relationship question",
    "camera": "2S · the meter frame: XEL pauses; hop 3 (3 → 4); the relationship question",
    "set": "stage",
@@ -3413,26 +3413,26 @@
      "text": "…You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?",
      "delivery": "the real question at last; warm, careful",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0042__xel-A.wav",
      "note": "[P · Lex #419 (18:57 on the transcript); the leading ellipsis trims \"This is becoming a meme at some point.\"; Ilya → ALYI]",
-     "after": "start+1.2",
+     "after": "start+1.99",
      "gap_s": 0.0,
-     "len_s": 10.89,
-     "t_s": 1.2
+     "len_s": 8.13,
+     "t_s": 1.99
     }
    ],
    "caption": "XEL pauses. The mic hops; the counter ticks. Then the real question.",
    "picture": "",
    "onscreen": {
     "add": [
-     "CH. 4 OF 6 (0.55-12.46 s)"
+     "CH. 4 OF 6 (0.92-10.73 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "CH. 4 OF 6",
-     "at": 0.55,
-     "until": 12.46,
+     "at": 0.92,
+     "until": 10.73,
      "kind": "ui",
      "holds": true
     }
@@ -3441,15 +3441,15 @@
    "sounds": [
     {
      "name": "mic_grow_step",
-     "at": 0.462,
-     "at_s": 0.46,
+     "at": 0.765,
+     "at_s": 0.77,
      "gain": -18,
      "new": true
     },
     {
      "name": "chapter_tick",
-     "at": 0.554,
-     "at_s": 0.55,
+     "at": 0.918,
+     "at_s": 0.92,
      "gain": -26,
      "new": true
     }
@@ -3474,7 +3474,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 18.7,
+   "est_s": 16.02,
    "frame": "MCU · MAS against the curtain (the one cut-in), screen-left, facing camera-right toward XEL",
    "camera": "MCU · MAS against the curtain (the one cut-in), screen-left, facing camera-right toward XEL",
    "set": "stage",
@@ -3492,12 +3492,12 @@
      "text": "i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career.",
      "delivery": "his own pace, the longest thing he says in the episode; warm, unguarded on the first sentence, careful on the third",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0043__mas-manalt-C.wav",
      "note": "[P · Lex #419 (19:15 on the transcript); trimmed after \"career.\"; Ilya → ALYI]",
-     "after": "start+0.55",
+     "after": "start+0.92",
      "gap_s": 0.0,
-     "len_s": 17.6,
-     "t_s": 0.55
+     "len_s": 14.18,
+     "t_s": 0.92
     }
    ],
    "caption": "MAS answers, at his own pace.",
@@ -3523,7 +3523,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 2.76,
+   "est_s": 4.6,
    "frame": "2S · back to the meter frame: the mic hasn't moved a pixel; XEL's pause; hop 4 (4 → 5): the mic fills the frame",
    "camera": "2S · back to the meter frame: the mic hasn't moved a pixel; XEL's pause; hop 4 (4 → 5): the mic fills the frame",
    "set": "stage",
@@ -3538,14 +3538,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "CH. 5 OF 6 (1.1-2.76 s)"
+     "CH. 5 OF 6 (1.84-4.6 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "CH. 5 OF 6",
-     "at": 1.1,
-     "until": 2.76,
+     "at": 1.84,
+     "until": 4.6,
      "kind": "ui",
      "holds": true
     }
@@ -3554,22 +3554,22 @@
    "sounds": [
     {
      "name": "mic_grow_step",
-     "at": 1.012,
-     "at_s": 1.01,
+     "at": 1.687,
+     "at_s": 1.69,
      "gain": -16,
      "new": true
     },
     {
      "name": "chapter_tick",
-     "at": 1.104,
-     "at_s": 1.1,
+     "at": 1.84,
+     "at_s": 1.84,
      "gain": -26,
      "new": true
     },
     {
      "name": "chair_creak",
-     "at": 1.656,
-     "at_s": 1.66,
+     "at": 2.76,
+     "at_s": 2.76,
      "gain": -28,
      "new": true
     }
@@ -3643,7 +3643,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 5.01,
+   "est_s": 5.48,
    "frame": "2S · off the record: XEL leans toward the giant mic; Mas pressed flat against the curtain",
    "camera": "2S · off the record: XEL leans toward the giant mic; Mas pressed flat against the curtain",
    "set": "stage",
@@ -3662,12 +3662,12 @@
      "text": "Is it… conscious, though?",
      "delivery": "off the record, leaning toward the giant mic; sincerely curious",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0044__xel-A.wav",
      "note": "[INVENTED · after the recording; kept only if the reel's laugh test passes]",
-     "after": "start+0.37",
+     "after": "start+0.61",
      "gap_s": 0.0,
-     "len_s": 1.67,
-     "t_s": 0.37
+     "len_s": 1.45,
+     "t_s": 0.61
     },
     {
      "id": "e2-a1-0045",
@@ -3677,12 +3677,12 @@
      "text": "the mic?",
      "delivery": "pressed against the curtain; genuinely asking",
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0045__mas-manalt-C.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0044",
      "gap_s": 0.45,
-     "len_s": 0.8,
-     "t_s": 2.49
+     "len_s": 0.64,
+     "t_s": 2.51
     },
     {
      "id": "e2-a1-0046",
@@ -3692,12 +3692,12 @@
      "text": "Yes.",
      "delivery": "from inside the mic, it seems",
      "take": "new · XEL (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0046__xel-A.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0045",
      "gap_s": 0.3,
      "len_s": 0.5,
-     "t_s": 3.59
+     "t_s": 3.45
     }
    ],
    "caption": "Off the record, XEL leans toward the giant mic. MAS, pressed flat against the curtain by it. XEL's answer seems to come from inside the mic.",
@@ -3726,7 +3726,7 @@
    "scene": "6",
    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
    "pace": "quick",
-   "est_s": 1.29,
+   "est_s": 2.14,
    "frame": "2S → MATCH · the curtain parts, and in the same motion the building splits open",
    "camera": "2S → MATCH · the curtain parts, and in the same motion the building splits open",
    "set": "stage",
@@ -3740,8 +3740,8 @@
    "sounds": [
     {
      "name": "curtain_draw",
-     "at": 0.092,
-     "at_s": 0.09,
+     "at": 0.153,
+     "at_s": 0.15,
      "gain": -24,
      "new": true
     }
@@ -3774,7 +3774,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 6.1,
+   "est_s": 6.23,
    "frame": "WIDE · the cathedral splits open like a dollhouse, the halves sliding apart; lights click on floor by floor down to the basement",
    "camera": "WIDE · the cathedral splits open like a dollhouse, the halves sliding apart; lights click on floor by floor down to the basement",
    "set": "datacenter",
@@ -3793,12 +3793,12 @@
      "text": "…chaotic and shameful and upsetting…",
      "delivery": "sc 6's take through Tasya's phone speaker, small",
      "take": "cut from e2-a1-0035 (\"chaotic\" … \"upsetting\") · phone chain · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0047__mas-manalt-C.wav",
      "note": "[P · replayed (e2-a1-0035); cut from its take]",
      "cut_from": "e2-a1-0035",
      "after": "start+1.5",
      "gap_s": 0.0,
-     "len_s": 2.24,
+     "len_s": 2.43,
      "t_s": 1.5
     }
    ],
@@ -3806,14 +3806,14 @@
    "picture": "Egg: Ep1's odometer still wedged in the bedrock. The phone's voice is small and band-passed.",
    "onscreen": {
     "add": [
-     "BELOW · ABOVE · AROUND (1-6.1 s)"
+     "BELOW · ABOVE · AROUND (1-6.23 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "BELOW · ABOVE · AROUND",
      "at": 1.0,
-     "until": 6.1,
+     "until": 6.23,
      "kind": "sign",
      "holds": true
     }
@@ -3844,14 +3844,14 @@
     {
      "name": "light_bank_click",
      "at": "after:e2-a1-0047+0.2",
-     "at_s": 3.94,
+     "at_s": 4.13,
      "gain": -26,
      "new": true
     },
     {
      "name": "light_bank_click",
      "at": "after:e2-a1-0047+0.8",
-     "at_s": 4.54,
+     "at_s": 4.73,
      "gain": -24,
      "new": true
     }
@@ -3904,34 +3904,34 @@
      "text": "I'm just moving in downstairs. I hope that's all right.",
      "delivery": "to the landlord in the doorway, a little caught out",
      "take": "new · THE HUMANIST (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0048__humanist-A.wav",
      "note": "[INVENTED]",
-     "after": "start+2.36",
+     "after": "start+2.3",
      "gap_s": 0.0,
-     "len_s": 3.65,
-     "t_s": 2.36
+     "len_s": 3.71,
+     "t_s": 2.3
     }
    ],
    "caption": "THE HUMANIST carries boxes in, DEFLECTION (LICENSED), packed and sealed long before today, their shipping labels faded. TASYA is already in the doorway, his phone face up on a box, playing yesterday's interview; he turns it down on \"chaotic\", the way you'd turn down a song you've heard enough of. The Humanist sets a box down and turns.",
    "picture": "The boxes say this was weeks in the making (R2): November recalled, not caused.",
    "onscreen": {
     "add": [
-     "DEFLECTION (LICENSED) (0.34-6.16 s)",
-     "THE HUMANIST · MACROSOFT'S NEW AI CHIEF (0.51-3.96 s)"
+     "DEFLECTION (LICENSED) (0.33-6.16 s)",
+     "THE HUMANIST · MACROSOFT'S NEW AI CHIEF (0.49-3.9 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "DEFLECTION (LICENSED)",
-     "at": 0.34,
+     "at": 0.33,
      "until": 6.16,
      "kind": "sign",
      "holds": true
     },
     {
      "text": "THE HUMANIST · MACROSOFT'S NEW AI CHIEF",
-     "at": 0.51,
-     "until": 3.96,
+     "at": 0.49,
+     "until": 3.9,
      "kind": "plate"
     }
    ],
@@ -3939,8 +3939,8 @@
    "sounds": [
     {
      "name": "box_set",
-     "at": 1.517,
-     "at_s": 1.52,
+     "at": 1.479,
+     "at_s": 1.48,
      "gain": -24,
      "new": true
     }
@@ -3965,7 +3965,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 7.76,
+   "est_s": 8.5,
    "frame": "2S · the same: Tasya's welcome",
    "camera": "2S · the same: Tasya's welcome",
    "set": "datacenter",
@@ -3984,11 +3984,11 @@
      "text": "Welcome. Make yourself at home. Everything's on us: the heat, the power, the floor you're standing on.",
      "delivery": "warm, unhurried; the welcome is the lease",
      "take": "new · TASYA (Tyler Kurk · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0049__tasya-A.wav",
      "note": "[INVENTED]",
      "after": "start+0.35",
      "gap_s": 0.0,
-     "len_s": 7.26,
+     "len_s": 8.0,
      "t_s": 0.35
     }
    ],
@@ -4021,7 +4021,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 8.83,
+   "est_s": 8.67,
    "frame": "2S · the same: the team, the room; Tasya's glance up through the floors",
    "camera": "2S · the same: the team, the room; Tasya's glance up through the floors",
    "set": "datacenter",
@@ -4040,11 +4040,11 @@
      "text": "I brought my own team. Is there room for them?",
      "delivery": "at his DEFLECTION boxes",
      "take": "new · THE HUMANIST (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0050__humanist-A.wav",
      "note": "[INVENTED · accurate: the license-and-hire brought his team (facts A16)]",
      "after": "start+0.35",
      "gap_s": 0.0,
-     "len_s": 3.65,
+     "len_s": 2.87,
      "t_s": 0.35
     },
     {
@@ -4055,12 +4055,12 @@
      "text": "There's always room down here. It's quieter than upstairs.",
      "delivery": "a glance up through the floors, and back",
      "take": "new · TASYA (Tyler Kurk · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0051__tasya-A.wav",
      "note": "[INVENTED]",
      "after": "e2-a1-0050",
      "gap_s": 0.5,
-     "len_s": 3.82,
-     "t_s": 4.5
+     "len_s": 4.46,
+     "t_s": 3.72
     }
    ],
    "caption": "THE HUMANIST asks about his team. TASYA glances up through the floors, and back.",
@@ -4093,7 +4093,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 5.62,
+   "est_s": 5.24,
    "frame": "ECU · the key ring: a key twisted off; a new one grows back, stamped MAR 19",
    "camera": "ECU · the key ring: a key twisted off; a new one grows back, stamped MAR 19",
    "set": "datacenter",
@@ -4112,11 +4112,11 @@
      "text": "We keep a spare.",
      "delivery": "pocketing the ring; pleasant",
      "take": "new · TASYA (Tyler Kurk · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0052__tasya-A.wav",
      "note": "[INVENTED]",
      "after": "start+2.4",
      "gap_s": 0.0,
-     "len_s": 1.7,
+     "len_s": 1.36,
      "t_s": 2.4
     }
    ],
@@ -4125,7 +4125,7 @@
    "onscreen": {
     "add": [
      "RAIL: MAR 19 (0.8-2.2 s)",
-     "INQUIRY (4.3-5.62 s)"
+     "INQUIRY (3.96-5.24 s)"
     ]
    },
    "onscreen_items": [
@@ -4137,8 +4137,8 @@
     },
     {
      "text": "INQUIRY",
-     "at": 4.3,
-     "until": 5.62,
+     "at": 3.96,
+     "until": 5.24,
      "kind": "sign",
      "holds": true
     }
@@ -4154,7 +4154,7 @@
     {
      "name": "alert_bonk",
      "at": "after:e2-a1-0052+0.3",
-     "at_s": 4.4,
+     "at_s": 4.06,
      "gain": -26
     }
    ],
@@ -4178,7 +4178,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 2.65,
+   "est_s": 2.54,
    "frame": "2S · the Humanist, looking up where Tasya looked",
    "camera": "2S · the Humanist, looking up where Tasya looked",
    "set": "datacenter",
@@ -4197,12 +4197,12 @@
      "text": "Who else lives here?",
      "delivery": "looking up where Tasya looked",
      "take": "new · THE HUMANIST (new · audition) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0053__humanist-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.67",
+     "after": "start+0.66",
      "gap_s": 0.0,
-     "len_s": 1.47,
-     "t_s": 0.67
+     "len_s": 1.39,
+     "t_s": 0.66
     }
    ],
    "caption": "THE HUMANIST looks up where Tasya looked.",
@@ -4227,7 +4227,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 5.17,
+   "est_s": 5.05,
    "frame": "WIDE · Tasya's glance, and a whole-pixel pan up the cross-section, floor by floor, to MAS at his monitor",
    "camera": "WIDE · Tasya's glance, and a whole-pixel pan up the cross-section, floor by floor, to MAS at his monitor",
    "set": "datacenter",
@@ -4245,11 +4245,11 @@
      "text": "A tenant.",
      "delivery": "O.S., from four floors down; warm",
      "take": "new · TASYA (Tyler Kurk · EL) · audio/ep02/",
-     "take_file": null,
+     "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0054__tasya-A.wav",
      "note": "[INVENTED]",
      "after": "start+3.6",
      "gap_s": 0.0,
-     "len_s": 0.9,
+     "len_s": 0.79,
      "t_s": 3.6
     }
    ],
@@ -4275,7 +4275,7 @@
    "scene": "7",
    "mode": "EXTENDED CONVERSATION (short)",
    "pace": "normal",
-   "est_s": 5.71,
+   "est_s": 5.61,
    "frame": "MCU · Mas at his monitor four floors up (held) → the key ring jangles below frame; black",
    "camera": "MCU · Mas at his monitor four floors up (held) → the key ring jangles below frame; black",
    "set": "datacenter",
@@ -4291,8 +4291,8 @@
    "sounds": [
     {
      "name": "key_ring_jangle_1",
-     "at": 2.687,
-     "at_s": 2.69,
+     "at": 2.64,
+     "at_s": 2.64,
      "gain": -18
     }
    ],
