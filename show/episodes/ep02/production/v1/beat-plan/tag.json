@@ -13,13 +13,13 @@
    "id": "23",
    "target_s": 37,
    "title": "The other company",
-   "date": "AUG 5 → AUG 22, 2024",
+   "date": "AUG 5 → AUG 21, 2024",
    "place": "the dark room",
    "status": "CHANGED",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
    "estimate_s": 37.0,
-   "fit_scale": 1.169
+   "fit_scale": 1.336
   }
  ],
  "cast": {
@@ -106,7 +106,7 @@
    "seq": {
     "id": "23",
     "place": "the dark room: the monitor",
-    "time": "Aug 5 → Aug 22, 2024",
+    "time": "Aug 5 → Aug 21, 2024",
     "side": ""
    },
    "arrive": {
@@ -127,7 +127,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 3.74,
+   "est_s": 4.27,
    "frame": "ECU · its pages lose their exclamation points; he slides it aside",
    "camera": "ECU · its pages lose their exclamation points; he slides it aside",
    "set": "darkroom",
@@ -141,28 +141,28 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "!! (0.23-1.05 s)",
-     "! (1.05-1.87 s)",
-     ". (1.87-2.8 s)"
+     "!! (0.27-1.2 s)",
+     "! (1.2-2.13 s)",
+     ". (2.13-3.2 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "!!",
-     "at": 0.23,
-     "until": 1.05,
+     "at": 0.27,
+     "until": 1.2,
      "kind": "doc"
     },
     {
      "text": "!",
-     "at": 1.05,
-     "until": 1.87,
+     "at": 1.2,
+     "until": 2.13,
      "kind": "doc"
     },
     {
      "text": ".",
-     "at": 1.87,
-     "until": 2.8,
+     "at": 2.13,
+     "until": 3.2,
      "kind": "doc"
     }
    ],
@@ -170,22 +170,22 @@
    "sounds": [
     {
      "name": "page_turn",
-     "at": 0.234,
-     "at_s": 0.23,
+     "at": 0.267,
+     "at_s": 0.27,
      "gain": -26,
      "new": true
     },
     {
      "name": "page_turn",
-     "at": 1.052,
-     "at_s": 1.05,
+     "at": 1.201,
+     "at_s": 1.2,
      "gain": -26,
      "new": true
     },
     {
      "name": "page_turn",
-     "at": 1.87,
-     "at_s": 1.87,
+     "at": 2.135,
+     "at_s": 2.13,
      "gain": -26,
      "new": true
     }
@@ -348,7 +348,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 4.32,
+   "est_s": 3.04,
    "frame": "OTS · Mas at the monitor, the toast cleared",
    "camera": "OTS · Mas at the monitor, the toast cleared",
    "set": "darkroom",
@@ -365,16 +365,16 @@
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "a good week for the other company.",
-     "delivery": "after the Orb's verdict; dry; the faintest pleasure",
-     "kind": "plan (personhood)",
+     "text": "sixty elections this year.",
+     "delivery": "after the Orb's verdict; a count, dry; no pleasure in it and no politics in it",
+     "kind": "plan (personhood: a count)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.47",
+     "after": "start+0.53",
      "gap_s": 0.0,
-     "len_s": 3.38,
-     "t_s": 0.47
+     "len_s": 1.98,
+     "t_s": 0.53
     }
    ],
    "caption": "Mas at the monitor.",
@@ -387,9 +387,11 @@
    },
    "fix": [
     "P",
-    "VO"
+    "VO",
+    "FACT",
+    "SR"
    ],
-   "why": "V.O. 14: proof of personhood (pays Ep1's \"my other company.\")."
+   "why": "V.O. 14: proof of personhood as a count, the Orb's market in an election year (facts A71; pays Ep1's \"my other company. for when it gets harder to tell.\" through the Orb)."
   },
   {
    "id": "23.06",
@@ -400,8 +402,8 @@
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
    "est_s": 4.6,
-   "frame": "POV · Aug 22: a TV interview in its own player (hands and tie only); his own words on its lower third",
-   "camera": "POV · Aug 22: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "camera": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
    "set": "screen",
    "set_id": "SET-08",
    "room": "darkroom",
@@ -413,13 +415,13 @@
    "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice.",
    "onscreen": {
     "add": [
-     "RAIL: AUG 22 (0.2-1.4 s)",
+     "RAIL: AUG 21 (0.2-1.4 s)",
      "…having me speak… It's a little bit dangerous out there. (1.4-4.55 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "RAIL: AUG 22",
+     "text": "RAIL: AUG 21",
      "at": 0.2,
      "until": 1.4,
      "kind": "rail"
@@ -446,9 +448,10 @@
     "FACT",
     "R2",
     "FC",
-    "GR"
+    "GR",
+    "SR"
    ],
-   "why": "His own words (facts A69)."
+   "why": "His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024)."
   },
   {
    "id": "23.07",
@@ -458,7 +461,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 5.14,
+   "est_s": 5.89,
    "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "camera": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "set": "screen",
@@ -474,29 +477,29 @@
    "sounds": [
     {
      "name": "balloon_pump",
-     "at": 0.701,
-     "at_s": 0.7,
+     "at": 0.803,
+     "at_s": 0.8,
      "gain": -26,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 1.635,
-     "at_s": 1.64,
+     "at": 1.874,
+     "at_s": 1.87,
      "gain": -25,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 2.57,
-     "at_s": 2.57,
+     "at": 2.945,
+     "at_s": 2.94,
      "gain": -24,
      "new": true
     },
     {
      "name": "knot_tie",
-     "at": 3.972,
-     "at_s": 3.97,
+     "at": 4.551,
+     "at_s": 4.55,
      "gain": -26,
      "new": true
     }

@@ -19,7 +19,7 @@
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
    "estimate_s": 36.0,
-   "fit_scale": 2.36
+   "fit_scale": 2.293
   },
   {
    "id": "14",
@@ -31,7 +31,7 @@
    "mode": "the episode's one adventure-game scene and its one dialogue tree",
    "pace": "normal",
    "estimate_s": 59.0,
-   "fit_scale": 1.435
+   "fit_scale": 1.453
   },
   {
    "id": "15",
@@ -43,7 +43,7 @@
    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
    "pace": "weighted",
    "estimate_s": 100.0,
-   "fit_scale": 1.28
+   "fit_scale": 1.257
   },
   {
    "id": "17",
@@ -55,7 +55,7 @@
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
    "estimate_s": 131.0,
-   "fit_scale": 1.938
+   "fit_scale": 1.876
   }
  ],
  "cast": {
@@ -144,8 +144,8 @@
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
    "est_s": 9.3,
-   "frame": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs, flyers and tape between them",
-   "camera": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs, flyers and tape between them",
+   "frame": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down",
+   "camera": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down",
    "set": "lobby",
    "set_id": "SET-01",
    "room": "lobby_day",
@@ -163,7 +163,7 @@
      "who": "staffer",
      "tag": "",
      "text": "When did anybody actually see him last? In person, I mean.",
-     "delivery": "taping; to the staffer beside her",
+     "delivery": "peeling one corner of a curled flyer off the pillar; to the staffer beside her",
      "take": "new · STAFFER (Avery · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · office talk under the flyers (facts A29)]",
@@ -178,7 +178,7 @@
      "who": "staffer2",
      "tag": "",
      "text": "In the corridor, last week. For a second.",
-     "delivery": "smoothing the tape down",
+     "delivery": "smoothing the tape back down on hers",
      "take": "new · STAFFER 2 (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · no reflection (FC)]",
@@ -188,7 +188,7 @@
      "t_s": 6.34
     }
    ],
-   "caption": "The lobby by day. February's WHERE IS ALYI? flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor the February complaint has become a side table. Two STAFFERS stand under the pillars with a roll of tape; the lobby TV murmurs.",
+   "caption": "The lobby by day. February's WHERE IS ALYI? flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor the February complaint has become a side table. Two STAFFERS stand at the next pillar: one peels a curled corner off a flyer, the other smooths the tape back down on hers; the lobby TV murmurs.",
    "picture": "February's flyers, curling (R2): not fresh ones.",
    "onscreen": {
     "add": [
@@ -226,7 +226,7 @@
    },
    "arrive": {
     "s": 2.0,
-    "what": "the staffers already under the pillars, tape in hand, the TV murmuring"
+    "what": "the staffers already at the pillar, one peeling, one smoothing, the TV murmuring"
    },
    "fix": [
     "P",
@@ -244,9 +244,9 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 5.56,
-   "frame": "OTS-WIDE · the first staffer turns to Mas, tape in hand",
-   "camera": "OTS-WIDE · the first staffer turns to Mas, tape in hand",
+   "est_s": 5.74,
+   "frame": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
+   "camera": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
    "set": "lobby",
    "set_id": "SET-01",
    "room": "lobby_day",
@@ -261,7 +261,7 @@
      "who": "staffer",
      "tag": "",
      "text": "He posted, though. Do we take these down now?",
-     "delivery": "turning to Mas, tape in hand",
+     "delivery": "turning to Mas, the peeled corner in her hand",
      "take": "new · STAFFER (Avery · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
@@ -282,12 +282,12 @@
      "note": "[INVENTED]",
      "after": "e2-a3-0003",
      "gap_s": 0.45,
-     "len_s": 1.19,
+     "len_s": 1.39,
      "t_s": 3.66
     }
    ],
-   "caption": "The first staffer turns to Mas.",
-   "picture": "",
+   "caption": "The first staffer turns to Mas, the corner she was peeling still in her hand.",
+   "picture": "Her question follows from her hands (script review).",
    "music": "E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed",
    "tempo": {
     "pace": "quick",
@@ -457,7 +457,7 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 4.68,
+   "est_s": 4.66,
    "frame": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
    "camera": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
    "set": "screen",
@@ -477,10 +477,10 @@
      "take": "new · the TV REPORTER (new · audition) · tv chain · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · a generic question; no answer in a real senator's mouth (D-50)]",
-     "after": "start+0.71",
+     "after": "start+0.69",
      "gap_s": 0.0,
      "len_s": 2.37,
-     "t_s": 0.71
+     "t_s": 0.69
     }
    ],
    "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
@@ -490,7 +490,7 @@
     {
      "name": "sticker_slap_tv",
      "at": "after:e2-a3-0005+0.6",
-     "at_s": 3.68,
+     "at_s": 3.66,
      "gain": -24,
      "new": true
     }
@@ -515,7 +515,7 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 5.66,
+   "est_s": 5.5,
    "frame": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold",
    "camera": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold",
    "set": "lobby",
@@ -531,8 +531,8 @@
    "sounds": [
     {
      "name": "ui_band_on",
-     "at": 3.773,
-     "at_s": 3.77,
+     "at": 3.667,
+     "at_s": 3.67,
      "gain": -26,
      "new": true
     }
@@ -778,7 +778,7 @@
    "scene": "14",
    "mode": "the episode's one adventure-game scene and its one dialogue tree",
    "pace": "normal",
-   "est_s": 4.59,
+   "est_s": 4.65,
    "frame": "MCU · his own reflection mouthing can we talk? back to him",
    "camera": "MCU · his own reflection mouthing can we talk? back to him",
    "set": "bullpen",
@@ -806,7 +806,7 @@
    "scene": "14",
    "mode": "the episode's one adventure-game scene and its one dialogue tree",
    "pace": "normal",
-   "est_s": 3.16,
+   "est_s": 3.2,
    "frame": "WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door",
    "camera": "WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door",
    "set": "bullpen",
@@ -898,7 +898,7 @@
    "scene": "14",
    "mode": "the episode's one adventure-game scene and its one dialogue tree",
    "pace": "normal",
-   "est_s": 4.8,
+   "est_s": 4.65,
    "frame": "WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts",
    "camera": "WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts",
    "set": "bullpen",
@@ -908,13 +908,29 @@
     "bukaj",
     "mas"
    ],
-   "lines": [],
-   "caption": "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: congratulations.",
-   "picture": "",
+   "lines": [
+    {
+     "id": "e2-a3-0023",
+     "new": true,
+     "who": "mas",
+     "tag": "",
+     "text": "congratulations.",
+     "delivery": "the strip's line, said as the box types it; plain, meant",
+     "take": "new · MAS (Jeremy · EL) · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED · the chosen strip line, voiced (P9): Bukaj hears and answers it]",
+     "after": "start+3.5",
+     "gap_s": 0.0,
+     "len_s": 1.0,
+     "t_s": 3.5
+    }
+   ],
+   "caption": "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: the box types congratulations. as he says it.",
+   "picture": "The chosen strip line is voiced in his own voice as the box types it (voiced adventure games do this; P9).",
    "onscreen": {
     "add": [
      "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM. (0.4-3.2 s)",
-     "congratulations. (3.5-4.8 s)"
+     "congratulations. (3.4-4.65 s)"
     ]
    },
    "onscreen_items": [
@@ -926,8 +942,8 @@
     },
     {
      "text": "congratulations.",
-     "at": 3.5,
-     "until": 4.8,
+     "at": 3.4,
+     "until": 4.65,
      "kind": "ui",
      "holds": true
     }
@@ -945,11 +961,17 @@
     }
    ],
    "style": "UI LIT (the adventure game's band)",
+   "tempo": {
+    "pace": "normal",
+    "gaps": {},
+    "rule": "0.4-0.6 s"
+   },
    "fix": [
     "P",
-    "FACT"
+    "FACT",
+    "SR"
    ],
-   "why": "A new chief scientist in his chair (facts A26)."
+   "why": "A new chief scientist in his chair (facts A26); Mas says it aloud."
   },
   {
    "id": "14.08",
@@ -980,10 +1002,25 @@
      "take": "new · BUKAJ (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+0.72",
+     "after": "start+0.35",
      "gap_s": 0.0,
      "len_s": 2.1,
-     "t_s": 0.72
+     "t_s": 0.35
+    },
+    {
+     "id": "e2-a3-0024",
+     "new": true,
+     "who": "mas",
+     "tag": "",
+     "text": "need anything?",
+     "delivery": "the strip's second line, said as the box types it; plain",
+     "take": "new · MAS (Jeremy · EL) · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED · the chosen strip line, voiced (P9)]",
+     "after": "e2-a3-0006",
+     "gap_s": 0.5,
+     "len_s": 0.96,
+     "t_s": 2.95
     },
     {
      "id": "e2-a3-0007",
@@ -995,24 +1032,24 @@
      "take": "new · BUKAJ (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "e2-a3-0006",
-     "gap_s": 1.6,
+     "after": "e2-a3-0024",
+     "gap_s": 0.5,
      "len_s": 5.84,
-     "t_s": 4.42
+     "t_s": 4.41
     }
    ],
-   "caption": "BUKAJ thanks him. The strip: need anything? Mas takes it. BUKAJ doesn't take his hand off the armrest.",
-   "picture": "The typed lines stay in the band; Bukaj's answers in the two-shot.",
+   "caption": "BUKAJ thanks him. The strip: need anything? Mas takes it, and says it as the box types it. BUKAJ doesn't take his hand off the armrest.",
+   "picture": "The typed lines stay in the band, voiced as they type; Bukaj's answers in the two-shot.",
    "onscreen": {
     "add": [
-     "need anything? (3.12-4.22 s)"
+     "need anything? (2.85-4.51 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "need anything?",
-     "at": 3.12,
-     "until": 4.22,
+     "at": 2.85,
+     "until": 4.51,
      "kind": "ui"
     }
    ],
@@ -1021,14 +1058,22 @@
    "tempo": {
     "pace": "normal",
     "gaps": {
-     "e2-a3-0007": 1.6
+     "e2-a3-0024": 0.5,
+     "e2-a3-0007": 0.5,
+     "e2-a3-0006": 0.5
     },
-    "rule": "0.4-0.6 s"
+    "rule": "0.4-0.6 s",
+    "across_cut": {
+     "from": "e2-a3-0023",
+     "gap_s": 0.5,
+     "note": "the gap from the last line of the beat before (its tail + this head)"
+    }
    },
    "fix": [
-    "P"
+    "P",
+    "SR"
    ],
-   "why": "Room to work; the job, not Alyi."
+   "why": "Room to work; the job, not Alyi. Mas trying hardest, aloud (P9)."
   },
   {
    "id": "14.09",
@@ -1105,12 +1150,12 @@
     "mas"
    ],
    "lines": [],
-   "caption": "He sets his resignation thread down as one domino, in its own UI, MAY 17. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
-   "picture": "One domino (R2). His own words.",
+   "caption": "He sets his resignation thread down as one domino, in its own UI, MAY 17: its first post. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
+   "picture": "One domino (R2). His own words: the thread's first post, which states the departure and carries no grievance (script review).",
    "onscreen": {
     "add": [
      "MAY 17 (0.6-6 s)",
-     "Over the past few months my team has been sailing against the wind. (0.7-4.4 s)"
+     "Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI. (0.7-5.6 s)"
     ]
    },
    "onscreen_items": [
@@ -1122,9 +1167,9 @@
      "holds": true
     },
     {
-     "text": "Over the past few months my team has been sailing against the wind.",
+     "text": "Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI.",
      "at": 0.7,
-     "until": 4.4,
+     "until": 5.6,
      "kind": "post"
     }
    ],
@@ -1150,9 +1195,10 @@
     "P",
     "FACT",
     "R2",
-    "FC"
+    "FC",
+    "SR"
    ],
-   "why": "The safety co-lead leaves, in his own words (facts A27)."
+   "why": "The safety co-lead leaves, in his own words (facts A27: the thread's first post, May 17, 2024)."
   },
   {
    "id": "14.11",
@@ -1268,7 +1314,7 @@
    "scene": "14",
    "mode": "the episode's one adventure-game scene and its one dialogue tree",
    "pace": "normal",
-   "est_s": 4.02,
+   "est_s": 4.07,
    "frame": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
    "camera": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
    "set": "bullpen",
@@ -1282,14 +1328,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "Pivot door (0.29-1.44 s)"
+     "Pivot door (0.29-1.45 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "Pivot door",
      "at": 0.29,
-     "until": 1.44,
+     "until": 1.45,
      "kind": "ui"
     }
    ],
@@ -1297,15 +1343,15 @@
    "sounds": [
     {
      "name": "ui_verb_select",
-     "at": 0.287,
+     "at": 0.291,
      "at_s": 0.29,
      "gain": -26,
      "new": true
     },
     {
      "name": "door_pivot_creak",
-     "at": 1.292,
-     "at_s": 1.29,
+     "at": 1.308,
+     "at_s": 1.31,
      "gain": -22,
      "new": true
     }
@@ -1376,7 +1422,7 @@
    "scene": "15",
    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
    "pace": "weighted",
-   "est_s": 3.58,
+   "est_s": 3.52,
    "frame": "ECU · his phone: the thread, collapsed to dates and first lines",
    "camera": "ECU · his phone: the thread, collapsed to dates and first lines",
    "set": "screen",
@@ -1388,30 +1434,30 @@
    "picture": "Dates and hearts, not must-read text (R2).",
    "onscreen": {
     "add": [
-     "NOV 20, 2023 (0.38-3.58 s)",
-     "♥ ♥ ♥ (0.77-3.58 s)",
-     "MAY 14, 2024 (1.28-3.58 s)"
+     "NOV 20, 2023 (0.38-3.52 s)",
+     "♥ ♥ ♥ (0.75-3.52 s)",
+     "MAY 14, 2024 (1.26-3.52 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "NOV 20, 2023",
      "at": 0.38,
-     "until": 3.58,
+     "until": 3.52,
      "kind": "post",
      "holds": true
     },
     {
      "text": "♥ ♥ ♥",
-     "at": 0.77,
-     "until": 3.58,
+     "at": 0.75,
+     "until": 3.52,
      "kind": "post",
      "holds": true
     },
     {
      "text": "MAY 14, 2024",
-     "at": 1.28,
-     "until": 3.58,
+     "at": 1.26,
+     "until": 3.52,
      "kind": "post",
      "holds": true
     }
@@ -1420,8 +1466,8 @@
    "sounds": [
     {
      "name": "thumb_scroll",
-     "at": 0.256,
-     "at_s": 0.26,
+     "at": 0.251,
+     "at_s": 0.25,
      "gain": -28,
      "new": true
     }
@@ -1442,7 +1488,7 @@
    "scene": "15",
    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
    "pace": "weighted",
-   "est_s": 7.15,
+   "est_s": 7.12,
    "frame": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "camera": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "set": "office",
@@ -1463,10 +1509,10 @@
      "take_file": null,
      "note": "[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13; read, never edited]",
      "cut_from": "e1-a1-5-13",
-     "after": "start+0.51",
+     "after": "start+0.5",
      "gap_s": 0.0,
      "len_s": 2.1,
-     "t_s": 0.51
+     "t_s": 0.5
     },
     {
      "id": "e2-vo-07",
@@ -1483,7 +1529,7 @@
      "after": "e2-a3-0008",
      "gap_s": 1.2,
      "len_s": 2.44,
-     "t_s": 3.81
+     "t_s": 3.8
     }
    ],
    "caption": "For one second, far off, Alyi's voice from launch night. Now Mas counts.",
@@ -1691,7 +1737,7 @@
    "scene": "15",
    "mode": "FLASHBACK · want",
    "pace": "weighted",
-   "est_s": 6.21,
+   "est_s": 6.2,
    "frame": "WIDE · the holiday party, Dec 2022: silhouettes under palette-cycled string lights; Alyi leads the chant",
    "camera": "WIDE · the holiday party, Dec 2022: silhouettes under palette-cycled string lights; Alyi leads the chant",
    "set": "bullpen",
@@ -1790,7 +1836,7 @@
    "scene": "15",
    "mode": "FLASHBACK · want",
    "pace": "weighted",
-   "est_s": 8.71,
+   "est_s": 9.48,
    "frame": "2S · across the crowd: Alyi (cropped by the light swag) and Mas, small in the crowd, a glass in his hand",
    "camera": "2S · across the crowd: Alyi (cropped by the light swag) and Mas, small in the crowd, a glass in his hand",
    "set": "bullpen",
@@ -1811,10 +1857,10 @@
      "take": "new · ALYI (Louis · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · a company party; no reason, no vote]",
-     "after": "start+1.02",
+     "after": "start+1.01",
      "gap_s": 0.0,
      "len_s": 1.3,
-     "t_s": 1.02
+     "t_s": 1.01
     },
     {
      "id": "e2-a3-0012",
@@ -1828,23 +1874,23 @@
      "note": "[INVENTED]",
      "after": "e2-a3-0011",
      "gap_s": 0.45,
-     "len_s": 2.28,
-     "t_s": 2.77
+     "len_s": 2.67,
+     "t_s": 2.76
     },
     {
      "id": "e2-a3-0013",
      "new": true,
      "who": "alyi",
      "tag": "",
-     "text": "Then feel it for both of us.",
+     "text": "Then I'll feel it for both of us.",
      "delivery": "laughing",
      "take": "new · ALYI (Louis · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
      "after": "e2-a3-0012",
      "gap_s": 0.25,
-     "len_s": 2.9,
-     "t_s": 5.3
+     "len_s": 3.3,
+     "t_s": 5.68
     }
    ],
    "caption": "His raised hand finds Mas in the crowd, the only one not chanting, a glass in his hand. Under the chant, a word between them.",
@@ -1884,7 +1930,7 @@
    "scene": "15",
    "mode": "FLASHBACK · want",
    "pace": "weighted",
-   "est_s": 6.17,
+   "est_s": 6.03,
    "frame": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the screen to Mas",
    "camera": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the screen to Mas",
    "set": "bullpen",
@@ -1899,21 +1945,21 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "CHECK IN (0.51-2.06 s)",
-     "feel the agi (2.06-6.17 s)"
+     "CHECK IN (0.5-2.01 s)",
+     "feel the agi (2.01-6.03 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "CHECK IN",
-     "at": 0.51,
-     "until": 2.06,
+     "at": 0.5,
+     "until": 2.01,
      "kind": "ui"
     },
     {
      "text": "feel the agi",
-     "at": 2.06,
-     "until": 6.17,
+     "at": 2.01,
+     "until": 6.03,
      "kind": "ui",
      "holds": true
     }
@@ -1922,8 +1968,8 @@
    "sounds": [
     {
      "name": "check_in_blip",
-     "at": 1.8,
-     "at_s": 1.8,
+     "at": 1.759,
+     "at_s": 1.76,
      "gain": -26,
      "new": true
     }
@@ -1953,7 +1999,7 @@
    "scene": "15",
    "mode": "FLASHBACK · want",
    "pace": "weighted",
-   "est_s": 3.33,
+   "est_s": 3.27,
    "frame": "WIDE · the racks in the corner hum along; at the chant's peak their status lights become token streams across the whole room",
    "camera": "WIDE · the racks in the corner hum along; at the chant's peak their status lights become token streams across the whole room",
    "set": "bullpen",
@@ -1971,8 +2017,8 @@
    "sounds": [
     {
      "name": "glyph_shimmer",
-     "at": 0.768,
-     "at_s": 0.77,
+     "at": 0.755,
+     "at_s": 0.75,
      "gain": -28
     }
    ],
@@ -2002,8 +2048,8 @@
    "mode": "FLASHBACK · obstacle",
    "pace": "weighted",
    "est_s": 8.9,
-   "frame": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's first sentence",
-   "camera": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's first sentence",
+   "frame": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
+   "camera": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
    "set": "office",
    "set_id": "SET-13",
    "room": "office_2023",
@@ -2012,7 +2058,7 @@
     "ekiel"
    ],
    "lines": [],
-   "caption": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its first hard sentence. EKIEL beside him, squinting at it.",
+   "caption": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
    "picture": "The post's words are the record's; its numbers don't print (R2).",
    "onscreen": {
     "add": [
@@ -2069,7 +2115,7 @@
    "scene": "15",
    "mode": "FLASHBACK · obstacle",
    "pace": "weighted",
-   "est_s": 6.06,
+   "est_s": 6.04,
    "frame": "2S · the same: Ekiel; Alyi, without looking away from the screen",
    "camera": "2S · the same: Ekiel; Alyi, without looking away from the screen",
    "set": "office",
@@ -2090,10 +2136,10 @@
      "take": "new · EKIEL (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+0.51",
+     "after": "start+0.5",
      "gap_s": 0.0,
      "len_s": 2.73,
-     "t_s": 0.51
+     "t_s": 0.5
     },
     {
      "id": "e2-a3-0015",
@@ -2108,7 +2154,7 @@
      "after": "e2-a3-0014",
      "gap_s": 0.9,
      "len_s": 0.9,
-     "t_s": 4.14
+     "t_s": 4.13
     }
    ],
    "caption": "EKIEL says it plainly. ALYI answers without looking away from the screen.",
@@ -2146,7 +2192,7 @@
    "scene": "15",
    "mode": "FLASHBACK · turn",
    "pace": "weighted",
-   "est_s": 3.07,
+   "est_s": 3.02,
    "frame": "ECU · his finger above the bare Publish button",
    "camera": "ECU · his finger above the bare Publish button",
    "set": "office",
@@ -2184,7 +2230,7 @@
    "scene": "15",
    "mode": "FLASHBACK · turn",
    "pace": "weighted",
-   "est_s": 4.61,
+   "est_s": 4.53,
    "frame": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut off by a lodge doorway, with the flame",
    "camera": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut off by a lodge doorway, with the flame",
    "set": "void",
@@ -2199,14 +2245,14 @@
    "picture": "No zealot framing; no religious iconography. The month isn't asserted.",
    "onscreen": {
     "add": [
-     "UNALIGNED (0.38-4.61 s)"
+     "UNALIGNED (0.38-4.53 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "UNALIGNED",
      "at": 0.38,
-     "until": 4.61,
+     "until": 4.53,
      "kind": "sign",
      "holds": true
     }
@@ -2215,8 +2261,8 @@
    "sounds": [
     {
      "name": "torch_light",
-     "at": 1.024,
-     "at_s": 1.02,
+     "at": 1.007,
+     "at_s": 1.01,
      "gain": -24,
      "new": true
     }
@@ -2248,7 +2294,7 @@
    "scene": "15",
    "mode": "FLASHBACK · turn",
    "pace": "weighted",
-   "est_s": 1.79,
+   "est_s": 1.76,
    "frame": "ECU · he presses Publish",
    "camera": "ECU · he presses Publish",
    "set": "office",
@@ -2264,7 +2310,7 @@
    "sounds": [
     {
      "name": "post_click",
-     "at": 0.384,
+     "at": 0.377,
      "at_s": 0.38,
      "gain": -20
     }
@@ -2294,7 +2340,7 @@
    "scene": "15",
    "mode": "FLASHBACK · turn",
    "pace": "weighted",
-   "est_s": 4.61,
+   "est_s": 4.53,
    "frame": "WIDE · the effigy catches",
    "camera": "WIDE · the effigy catches",
    "set": "void",
@@ -2310,14 +2356,14 @@
    "sounds": [
     {
      "name": "flame_whoomph",
-     "at": 0.256,
-     "at_s": 0.26,
+     "at": 0.252,
+     "at_s": 0.25,
      "gain": -18
     },
     {
      "name": "fire_crackle",
-     "at": 0.768,
-     "at_s": 0.77,
+     "at": 0.755,
+     "at_s": 0.76,
      "gain": -24,
      "new": true,
      "dur": 3.0
@@ -2348,7 +2394,7 @@
    "scene": "15",
    "mode": "FLASHBACK · out",
    "pace": "weighted",
-   "est_s": 4.35,
+   "est_s": 4.27,
    "frame": "WIDE → ECU · the fire's glow shrinks to one point of light",
    "camera": "WIDE → ECU · the fire's glow shrinks to one point of light",
    "set": "void",
@@ -2390,7 +2436,7 @@
    "scene": "15",
    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
    "pace": "weighted",
-   "est_s": 5.51,
+   "est_s": 5.46,
    "frame": "ECU · the point is the pin, pulsing on his phone; his thumb covers it",
    "camera": "ECU · the point is the pin, pulsing on his phone; his thumb covers it",
    "set": "screen",
@@ -2412,10 +2458,10 @@
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+1.79",
+     "after": "start+1.76",
      "gap_s": 0.0,
      "len_s": 2.44,
-     "t_s": 1.79
+     "t_s": 1.76
     }
    ],
    "caption": "The point of light is the pin, pulsing on his phone. His thumb covers it.",
@@ -2442,7 +2488,7 @@
    "scene": "15",
    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
    "pace": "weighted",
-   "est_s": 4.35,
+   "est_s": 4.27,
    "frame": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut on the empty room",
    "camera": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut on the empty room",
    "set": "office",
@@ -2458,8 +2504,8 @@
    "sounds": [
     {
      "name": "door_close_soft",
-     "at": 2.815,
-     "at_s": 2.81,
+     "at": 2.763,
+     "at_s": 2.76,
      "gain": -24,
      "new": true
     }
@@ -2554,8 +2600,8 @@
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
    "est_s": 4.4,
-   "frame": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster steps out beside it",
-   "camera": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster steps out beside it",
+   "frame": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it",
+   "camera": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it",
    "set": "skyline",
    "set_id": "SET-16",
    "room": "bridge",
@@ -2563,8 +2609,8 @@
     "forecaster"
    ],
    "lines": [],
-   "caption": "The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER steps out of the same doors with a clipboard of dates, the first person beside it, and looks down at it.",
-   "picture": "The papers start at NopeAI's doors, never near Alyi (FC).",
+   "caption": "The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER walks up from the street with a clipboard of dates, the first person to stop beside it, and looks down at it.",
+   "picture": "The papers start at NopeAI's doors, never near Alyi (FC). He comes from the street, not out of the building: he had already left (his refusal was in April; facts A32).",
    "onscreen": {
     "add": [
      "RAIL: MAY 17, 2024 (0.3-2.1 s)"
@@ -2597,12 +2643,13 @@
    },
    "arrive": {
     "s": 4.0,
-    "what": "NopeAI's front doors, the receipt already pouring out, the Forecaster stepping out beside it, the band in"
+    "what": "NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in"
    },
    "fix": [
     "P",
     "FC",
-    "FACT"
+    "FACT",
+    "SR"
    ],
    "why": "The papers go public (facts A31)."
   },
@@ -2750,7 +2797,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "weighted",
-   "est_s": 14.81,
+   "est_s": 14.78,
    "frame": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
    "camera": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
    "set": "skyline",
@@ -2810,7 +2857,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 5.64,
+   "est_s": 5.61,
    "frame": "MEDIUM · a DRIVER parked on the receipt leans out of his window",
    "camera": "MEDIUM · a DRIVER parked on the receipt leans out of his window",
    "set": "skyline",
@@ -2830,10 +2877,10 @@
      "take": "new · the DRIVER (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+1.16",
+     "after": "start+1.13",
      "gap_s": 0.0,
      "len_s": 4.33,
-     "t_s": 1.16
+     "t_s": 1.13
     }
    ],
    "caption": "A DRIVER, parked on the receipt, leans out.",
@@ -2842,7 +2889,7 @@
    "sounds": [
     {
      "name": "car_window_down",
-     "at": 0.193,
+     "at": 0.188,
      "at_s": 0.19,
      "gain": -26,
      "new": true
@@ -2868,7 +2915,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 7.01,
+   "est_s": 6.93,
    "frame": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
    "camera": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
    "set": "skyline",
@@ -2933,7 +2980,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 4.65,
+   "est_s": 4.5,
    "frame": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
    "camera": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
    "set": "skyline",
@@ -2949,15 +2996,15 @@
    "sounds": [
     {
      "name": "phone_buzz_step_1",
-     "at": 1.938,
-     "at_s": 1.94,
+     "at": 1.875,
+     "at_s": 1.88,
      "gain": -24
     }
    ],
    "fix": [
     "P"
    ],
-   "why": "He's caught out (W4)."
+   "why": "The scramble starts, with a still face (W4)."
   },
   {
    "id": "17.08",
@@ -3040,7 +3087,7 @@
    "scene": "17",
    "mode": "QUICK-CUT RUN (the scramble)",
    "pace": "quick",
-   "est_s": 6.81,
+   "est_s": 6.32,
    "frame": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
    "camera": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
    "set": "call",
@@ -3056,30 +3103,30 @@
      "who": "mas",
      "tag": "call",
      "text": "everyone who signed one. find them. all of them. today.",
-     "delivery": "on the call to LEGAL; level and a hair quicker than he ever talks; we hear only his side",
+     "delivery": "on the call to LEGAL; level, and quicker than he ever talks (the one time he hurries); we hear only his side",
      "take": "new · MAS (Jeremy · EL) · call chain · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · about the fix he made public (facts A31: \"…they can contact me and we'll fix that too.\"); nothing about what he knew]",
-     "after": "start+2.33",
+     "after": "start+2.25",
      "gap_s": 0.0,
-     "len_s": 3.7,
-     "t_s": 2.33
+     "len_s": 3.32,
+     "t_s": 2.25
     }
    ],
-   "caption": "He calls LEGAL. We hear only his side, level and a hair quicker than he ever talks. His face doesn't move.",
+   "caption": "He calls LEGAL. We hear only his side, level, and quicker than he ever talks. His face doesn't move.",
    "picture": "The one time he hurries.",
    "music": "E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line",
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.194,
+     "at": 0.188,
      "at_s": 0.19,
      "gain": -26
     },
     {
      "name": "call_connect",
-     "at": 1.553,
-     "at_s": 1.55,
+     "at": 1.5,
+     "at_s": 1.5,
      "gain": -26
     }
    ],
@@ -3112,7 +3159,7 @@
    "chars": [],
    "lines": [],
    "caption": "A draft opened, typed, deleted, typed, its words grey bars.",
-   "picture": "No legible word (R2: nothing at contested item 3).",
+   "picture": "No legible word and no voice over it (R2: nothing at contested item 3).",
    "music": "E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line",
    "sounds": [
     {
@@ -3150,7 +3197,7 @@
    "scene": "17",
    "mode": "QUICK-CUT RUN (the scramble)",
    "pace": "quick",
-   "est_s": 2.8,
+   "est_s": 4.3,
    "frame": "MCU · his still face; the receipt still unrolling under his shoes",
    "camera": "MCU · his still face; the receipt still unrolling under his shoes",
    "set": "skyline",
@@ -3159,9 +3206,27 @@
    "chars": [
     "mas"
    ],
-   "lines": [],
-   "caption": "His face doesn't move. The receipt is still unrolling under his shoes.",
-   "picture": "",
+   "lines": [
+    {
+     "id": "e2-vo-09",
+     "new": true,
+     "who": "mas",
+     "vo": true,
+     "tag": "V.O.",
+     "text": "everyone who signed. the post. everyone who signed.",
+     "delivery": "faster than he thinks, the one time the voice hurries; each item a new call, not louder (MIV §3's rattled repeat); nothing about what he knew",
+     "kind": "the scramble (his rattled tell)",
+     "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED · V.O. · script-v1]",
+     "after": "start+0.3",
+     "gap_s": 0.0,
+     "len_s": 3.25,
+     "t_s": 0.3
+    }
+   ],
+   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "picture": "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft.",
    "music": "E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line",
    "sounds": [
     {
@@ -3170,14 +3235,22 @@
      "at_s": 0.0,
      "gain": -28,
      "new": true,
-     "dur": 2.8
+     "dur": 3.6
     }
    ],
+   "tempo": {
+    "pace": "quick",
+    "gaps": {},
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
    "fix": [
     "P",
-    "R1"
+    "R1",
+    "VO",
+    "GR",
+    "SR"
    ],
-   "why": "Frantic hands under a still face."
+   "why": "Frantic hands under a still face; V.O. 9, a cluster with V.O. 10 (W6)."
   },
   {
    "id": "17.12",
@@ -3187,7 +3260,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 8.43,
+   "est_s": 8.33,
    "frame": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "camera": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "set": "skyline",
@@ -3208,10 +3281,10 @@
      "take": "new · THE FORECASTER (new · audition) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+2.71",
+     "after": "start+2.63",
      "gap_s": 0.0,
      "len_s": 5.14,
-     "t_s": 2.71
+     "t_s": 2.63
     }
    ],
    "caption": "THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.",
@@ -3236,7 +3309,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "weighted",
-   "est_s": 7.55,
+   "est_s": 5.35,
    "frame": "ECU · Mas's thumb hovers over Post; he doesn't press",
    "camera": "ECU · Mas's thumb hovers over Post; he doesn't press",
    "set": "screen",
@@ -3247,21 +3320,21 @@
    ],
    "lines": [
     {
-     "id": "e2-vo-09",
+     "id": "e2-vo-10",
      "new": true,
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "not within the hour. the fix first. then the post.",
-     "delivery": "thumb over Post, not pressing; correcting a forecast, not making one; level",
-     "kind": "plan (the fix)",
+     "text": "not until legal has every name.",
+     "delivery": "thumb over Post, not pressing; level again; his own condition, a reply to nobody",
+     "kind": "plan (the fix: a condition)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+1.55",
+     "after": "start+1.5",
      "gap_s": 0.0,
-     "len_s": 5.03,
-     "t_s": 1.55
+     "len_s": 2.91,
+     "t_s": 1.5
     }
    ],
    "caption": "Mas's thumb hovers over Post. He doesn't press.",
@@ -3276,9 +3349,10 @@
     "P",
     "VO",
     "R2",
-    "GR"
+    "GR",
+    "SR"
    ],
-   "why": "V.O. 9: the fix first; never what he knew."
+   "why": "V.O. 10: his own condition for the post, a reply to nobody; never what he knew."
   },
   {
    "id": "17.14",
@@ -3567,7 +3641,7 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 6.97,
+   "est_s": 6.75,
    "frame": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
    "camera": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
    "set": "skyline",
@@ -3583,8 +3657,8 @@
    "sounds": [
     {
      "name": "ink_run_drip",
-     "at": 0.774,
-     "at_s": 0.77,
+     "at": 0.75,
+     "at_s": 0.75,
      "gain": -26,
      "new": true
     },
@@ -3598,8 +3672,8 @@
     },
     {
      "name": "umbrella_pop",
-     "at": 5.034,
-     "at_s": 5.03,
+     "at": 4.875,
+     "at_s": 4.88,
      "gain": -32,
      "new": true
     }
@@ -3693,27 +3767,34 @@
    "scene": "17",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
    "pace": "quick",
-   "est_s": 3.6,
-   "frame": "ECU · beside it, his company's note pops up in its own UI, two fragments",
-   "camera": "ECU · beside it, his company's note pops up in its own UI, two fragments",
+   "est_s": 5.4,
+   "frame": "ECU · beside it, his company's post pops up in its own UI, two fragments",
+   "camera": "ECU · beside it, his company's post pops up in its own UI, two fragments",
    "set": "screen",
    "set_id": "SET-16",
    "room": "bridge_rain",
    "chars": [],
    "lines": [],
-   "caption": "Beside it, his company's note pops up in its own UI.",
-   "picture": "Two fragments; no name appears.",
+   "caption": "Beside it, his company's post pops up in its own UI: questions heard; a pause.",
+   "picture": "Two fragments, cropped before the voice's name; no name appears. The post claims nothing about how the voice was made (facts §F) and answers no one.",
    "onscreen": {
     "add": [
-     "…not an imitation… her own natural speaking voice. (0.3-3.4 s)"
+     "We've heard questions about how we chose the voices… (0.3-5.3 s)",
+     "…We are working to pause the use of… (2-5.3 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "…not an imitation… her own natural speaking voice.",
+     "text": "We've heard questions about how we chose the voices…",
      "at": 0.3,
-     "until": 3.4,
-     "kind": "doc"
+     "until": 5.3,
+     "kind": "post"
+    },
+    {
+     "text": "…We are working to pause the use of…",
+     "at": 2.0,
+     "until": 5.3,
+     "kind": "post"
     }
    ],
    "music": "E02-10 · a pad in the rain",
@@ -3729,9 +3810,10 @@
     "P",
     "FACT",
     "R2",
-    "GR"
+    "GR",
+    "SR"
    ],
-   "why": "His company says the voice is another actress's own (facts A64)."
+   "why": "His company pauses the voice, in its own words (facts A64: the May 20, 2024 post)."
   },
   {
    "id": "17.21",

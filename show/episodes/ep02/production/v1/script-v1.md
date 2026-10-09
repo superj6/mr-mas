@@ -5,11 +5,11 @@
 | | |
 |---|---|
 | **Episode** | 2 of 12 |
-| **Date span** | Feb 15 → Aug 22, 2024. Flashbacks: `FEB 20, 2018` (F2.3, Nole → Mas) · `MAR 2016 · GAME 2 · MOVE 37` (the concept) · `DEC 2022 → 2023` (F2.2, Alyi: the full motive flashback) · Sep 2006 → Jun 9, 2008 (F2.1, Mas) |
-| **Runtime** | **Story 23:16 planned**, the proposal's runtime table after its final check, scene by scene; with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 23:58**. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
+| **Date span** | Feb 15 → Aug 21, 2024. Flashbacks: `FEB 20, 2018` (F2.3, Nole → Mas) · `MAR 2016 · GAME 2 · MOVE 37` (the concept) · `DEC 2022 → 2023` (F2.2, Alyi: the full motive flashback) · Sep 2006 → Jun 9, 2008 (F2.1, Mas) |
+| **Runtime** | **Story 23:18 planned**: the proposal's runtime table after its final check, scene by scene, plus the 2 s the script review gave Move 37 (sc 4; Act One is the setup act, R4); with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 24:00**. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock, Mas pulled to W18's 140 wpm), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
 | **Format** | Cold open · intro (30 s) · filename card (2 s) · four acts (`the séance` · `her` · `leave them up` · `as a guest`) · tag (`august`) · the Orb outro |
 | **Written by** | MR. MAS writers' room (the Ep2 v1 script writer) |
-| **Draft** | **Script v1 (Ep2 v1, the one-go build), 2026-10-08.** The shooting script of [proposal.md](proposal.md) exactly as agreed, with its Decisions (D-01 to D-70) and its three review logs, and [manifest.md](manifest.md); the binding checklist is [LEARNINGS.md](LEARNINGS.md). Every scene, in order; nothing added or cut. The best lines of staff draft 5.4 ([script.md](../../script.md)) are kept wherever the proposal keeps them. Not locked |
+| **Draft** | **Script v1 (Ep2 v1, the one-go build), 2026-10-08, revised after its script review.** The shooting script of [proposal.md](proposal.md) as agreed, with its Decisions (D-01 to D-70) and its three review logs, and [manifest.md](manifest.md); the binding checklist is [LEARNINGS.md](LEARNINGS.md). Every scene, in order; no scene added or cut. The script review's changes (one blocker, thirteen majors and twenty-two minors, every one applied or answered) are in the [Review log (script review)](#review-log-script-review) at the end, and went back into the proposal as D-71 to D-87. The best lines of staff draft 5.4 ([script.md](../../script.md)) are kept wherever the proposal keeps them; two keep-list lines changed or were cut, each with its reason in the review log's ledger. Not locked |
 | **Hand-off** | The beat plans [beat-plan/](beat-plan/) (`coldopen`, `act1`–`act4`, `tag`.json, Ep1 v3.5's format, built by `beat-plan/_build.py` from `beat-plan/_spec.py`, which also feeds the takes tool); the voices [cast.md](cast.md). Each shot below carries its beat id and planned length, as `[beat] (≈ seconds)`; each line its line id, such as `e2-a1-0006`. The two are checked against each other (§8) |
 
 **How to read this script**
@@ -23,42 +23,42 @@
 - **Every scene** opens with `ARRIVE` (the room with its people in it before the first line), turns, and closes with its `AFTERMATH` and its `OUT` (the cause, the sound lead, the matched object).
 - **MUSIC** names the cue (manifest §6) and what it does; **ROOM** the bed (manifest §7); SFX are in the beat plan with their levels.
 
-**Contents:** [1. Facts key](#1-facts-key) · [Cold open](#cold-open) · [Intro and card](#intro-30-s) · [Act One](#act-one--the-séance) · [Act Two](#act-two--her) · [Act Three](#act-three--leave-them-up) · [Act Four](#act-four--as-a-guest) · [Tag](#tag--august) · [Outro](#outro) · [2. The inner voice](#2-the-inner-voice-in-order-14-lines) · [3. Tempo](#3-tempo) · [4. The seams](#4-the-seams) · [5. On-screen text and rails](#5-on-screen-text-and-rails) · [6. Runtime](#6-runtime) · [7. For the next passes](#7-for-the-next-passes) · [8. How this was checked](#8-how-this-was-checked)
+**Contents:** [1. Facts key](#1-facts-key) · [Cold open](#cold-open) · [Intro and card](#intro-30-s) · [Act One](#act-one--the-séance) · [Act Two](#act-two--her) · [Act Three](#act-three--leave-them-up) · [Act Four](#act-four--as-a-guest) · [Tag](#tag--august) · [Outro](#outro) · [2. The inner voice](#2-the-inner-voice-in-order-14-lines) · [3. Tempo](#3-tempo) · [4. The seams](#4-the-seams) · [5. On-screen text and rails](#5-on-screen-text-and-rails) · [6. Runtime](#6-runtime) · [7. For the next passes](#7-for-the-next-passes) · [8. How this was checked](#8-how-this-was-checked) · [Review log (script review)](#review-log-script-review)
 
 ---
 
 ## 1. Facts key
 
-Every real line and real item in the episode, with its row in [facts.md](../../facts.md) (§A rows `A1`–`A56`, §B quotes, `PP2.1`). Rows **A57–A69 are new**: they are the proposal's "Facts to pull before lock" and go into facts.md at the companion regeneration under these numbers. Tags as the proposal's: [P] primary · [V] verified · [V·press] verified in press reports, primary to pull · [K] known, re-check before lock · [H] headline wording.
+Every real line and real item in the episode, with its row in [facts.md](../../facts.md) (§A rows `A1`–`A56`, §B quotes, `PP2.1`). Rows **A57–A71 are new**: A57–A69 are the proposal's "Facts to pull before lock", A70–A71 the script review's; facts.md was regenerated from this key at the script review, under these numbers. Tags as the proposal's: [P] primary · [V] verified · [V·press] verified in press reports, primary to pull · [K] known, re-check before lock · [H] headline wording.
 
 | Id | What | Where | Tag · source · action |
 |---|---|---|---|
 | A6 | AROS's preview (a mammoth in the snow) | sc 1 | [V] |
 | A9 | Nole's state complaint, Feb 29, 2024 | sc 1, 4 | [V]; confirm the caption `NOLE v. MANALT ET AL.` on the docket |
-| A10 | NopeAI's Mar 5, 2024 post of Nole's emails | sc 4 | [P]; pull the post: "less open" [P], "Yup" [K, confirm the period], the forwarded "cash cow" and his "…exactly right…" reply [K], the late-2018 "0%" email [V·press] and "This needs billions per year immediately or forget it." [K] (all §B) |
+| A10 | NopeAI's Mar 5, 2024 post of Nole's emails | sc 4 | [P]; pull the post. "less open" [P]; "Yup" [K] only for its period (the word is confirmed; press prints "Yup." with the period inside US-style quotes, so the post itself decides); the forwarded early-2018 email's "…attach to Tesla as its cash cow…" and his reply "Andrej is exactly right." [V · TechCrunch, Mar 5, 2024]; the Dec 26, 2018 email's "…0%. Not 1%." and "This needs billions per year immediately or forget it." [V · CNBC and NBC News, Mar 6, 2024] (all §B) |
 | A10b | Nole funded the lab and left its board in 2018 | sc 4 (his plate) | [V] |
-| A11 | Nole's Feb 20, 2018 goodbye all-hands; the room "didn't entirely buy the story" | F2.3 | [V] (Semafor); the slide `ALSET · AI` is the announcement's public reason; the litigant's account stays off screen |
-| A12 | The Mar 8, 2024 review finding, both halves | sc 4A | [P]; open the live post |
+| A11 | Nole's Feb 20, 2018 goodbye all-hands; the room "didn't entirely buy the story" | F2.3 | [V] (Semafor); the slide `ALSET · AI` is the announcement's public reason; the litigant's account stays off screen; **no recruitment shown or said**: no sign-up sheet, and Nole's 2024 line says only that he stood up in front of the room (no source says he asked staff to follow him; the merits of his suit are contested, W8) |
+| A12 | The Mar 8, 2024 review finding, both halves: "WilmerHale found that the prior Board acted within its broad discretion to terminate Mr. Altman, but also found that his conduct did not mandate removal." | sc 4A | [P]; read from "that", after Terb's own "The law firm found", so the reviewer stays the subject of both findings (cropping "WilmerHale found" made the old board the finder); the firm has no registry name, so its name stays outside the quote; open the live post |
 | A13 | Three new directors, Mar 8, 2024 (Brockman not among them) | sc 4A | [V] |
 | A14 | Europe's AI Act, 523–46 | sc 8 | [V]; undated on screen |
-| A15 | Lex Fridman #419, Mar 18, 2024 | sc 6 | [P]; every XEL and Mas line matched on the transcript page (the stand-in for the video check) |
+| A15 | Lex Fridman #419, Mar 18, 2024 | sc 6 | [P]; every XEL and Mas line matched on the transcript page (the stand-in for the video check); the transcript's timestamps: 1:05, 18:34, 18:57, 19:15 |
 | A16 | Macrosoft's AI team, license-and-hire, Mar 19, 2024 | sc 7 | [V]; confirm the plate's title |
-| A19 | The Apr 1, 2024 segment card `"MAS, TASYA AND RADNUS"` | sc 8 | [H] |
+| A19 | The Apr 1, 2024 segment, in Business Insider's headline: "Jon Stewart takes aim at Sam, Satya and Sundar for 'false promises' on AI and jobs" | sc 8 | [H]; shown only as the headline's exact words, cropped (`…TAKES AIM AT MAS, TASYA AND RADNUS…`), in a news site's UI; no card from the segment itself is claimed |
 | A22 | Five voices since Sep 2023 | sc 9 | [V] |
 | A23 | The May 13, 2024 demo; one model; `232 MS (AVG 320)`; free users; the voice "in the coming weeks" | sc 9–11 | [V]; pull the 232 ms figure to [P] |
 | A23b | "her", May 13, 2024 | intro, sc 11 | [V] · x.com/sama/status/1790075827666796666 (10:45 AM PDT, decoded) |
 | A24 | Elgoog's keynote, Tue May 14, 2024 | sc 8, 10, 12 | [V] |
 | A25 | Alyi's May 14, 2024 post | sc 12, 15 | [V] (TechCrunch, May 14, 2024); pull to [P] |
 | A26 | Bukaj named chief scientist, May 14, 2024 | sc 14 | [V] |
-| A27 | Ekiel's May 17, 2024 thread: "…sailing against the wind." (its first sentence) and "Building smarter-than-human machines is an inherently dangerous endeavor." (its own post); the team's disbanding | sc 14, 18 | [V] · x.com/janleike/status/1791498182125584843 and /1791498183543251017; the disbanding (CNBC, Wired, May 17, 2024) |
+| A27 | Ekiel's May 17, 2024 thread: its first post, "Yesterday was my last day as head of alignment, superalignment lead, and executive @OpenAI." (the domino; @NOPEAI on screen), and "Building smarter-than-human machines is an inherently dangerous endeavor." (a later post of its own; Mario's highlight); the team's disbanding | sc 14, 18 | [V] · x.com/janleike/status/1791498174659715494 (8:57 AM PDT) and /1791498183543251017; the disbanding (CNBC, Wired, May 17, 2024). "…sailing against the wind." (/1791498182125584843) opens a later post and is no longer on screen |
 | A29 | The "where is he?" meme | sc 1, 13 | [K]; add a source |
 | A30 | The Senate roadmap: "at least $32 billion annually", after nine AI Insight Forums | sc 13, 19 | [V] (Roll Call; Sen. Young's release, May 15, 2024) |
 | A31 | The exit papers' terms (Vox, May 17–18, 2024); his May 18 apology, four trims | sc 15, 17 | [V·press] (the terms); [V] · x.com/sama/status/1791936857594581428 (2:00 PM PDT); pull to [P], confirm casing |
-| A32 | The Forecaster's ~$2M at stake | sc 17 | [V] (TIME100, Sep 5, 2024; some reports say $1.7M) |
+| A32 | The Forecaster's ~$2M at stake; he had already quit (April 2024), so he arrives from the street | sc 17 | [V] (TIME100, Sep 5, 2024; some reports say $1.7M) |
 | A33 | Voice 5 paused, May 20, 2024 | sc 17 | [V·press] (CNBC, May 20, 2024) |
 | A34 | The Golden Gate box | sc 18 | [P✓]; an egg, never named |
 | A35 | Ekiel joins Misanthropic, May 28, 2024 | sc 18 | [V] |
-| A36 | The safety committee, May 28, 2024: its first task, ninety days, the full board | sc 18 | [P]; Terb paraphrases |
+| A36 | The safety committee, May 28, 2024: its members (the chair, two directors, the CEO: Taylor, D'Angelo, Seligman, Altman), its first task, ninety days, the full board; and the same post's "OpenAI has recently begun training its next frontier model…" | sc 18 | [P]; Terb paraphrases; V.O. 11 ("the next one's already training.") is the post's own news, read as his priority: guardrails read below (Review log, S-3) |
 | A38 | Neleh's May 28, 2024 podcast interview: two lines | sc 18 | [V] (its published transcript; name swaps); confirm against the audio; ASR-verify the takes |
 | A40 | ELPPA's Jun 10, 2024 keynote: the chatbot in its assistant, opt-in, on new devices; ask-before-sending | sc 8, 19 | [V] |
 | A41 | Nole's Jun 10, 2024 post, with its condition; his Faraday-cage follow-up (off screen) | sc 20 | [V] · x.com/elonmusk/status/1800265431078551973 (1:35 PM PDT); pull to [P] |
@@ -70,19 +70,21 @@ Every real line and real item in the episode, with its row in [facts.md](../../f
 | A53 | TSOOB's 2006 tagline "WHERE YOU AT?" | F2.1 | [V] |
 | A55 | Jun 9, 2008: the keynote walk-on, two collars popped | F2.1 | [V] |
 | A56 | The 2022 holiday party chant; the 2023 offsite effigy he set alight | F2.2 | [V] (The Atlantic, Nov 19, 2023); the month of the offsite isn't asserted |
-| A57 | **new** · Move 37: Mar 10, 2016, game 2; the policy network learned from about 30 million positions of expert games, then self-play; its own estimate, about 1 in 10,000 that a human plays the move | sc 4 | [V·press] (Nature 529:484; DeepMind's account); pull both; the accuracy review |
+| A57 | **new** · Move 37: Mar 10, 2016, game 2; the policy network learned from about 30 million positions of expert games, then self-play (millions of games; the value network's 30M positions each came from a separate self-play game); its own estimate, about 1 in 10,000 that a human plays the move | sc 4 | [V·press] (Nature 529:484; DeepMind's account); pull both; the accuracy review |
 | A58 | **new** · the phone deal's shape: terms being finalized (Bloomberg, May 11, 2024); neither side pays, exposure as the price (Bloomberg, Jun 12, 2024) | sc 8 | [V·press]; pull both |
 | A59 | **new** · the Mar 5 post's byline (Altman, Sutskever, Brockman, Schulman, Zaremba) | sc 4 | [V] (TechCrunch, Mar 5, 2024) |
 | A60 | **new** · the demo's voice was the one later paused | sc 11 (the `VOICE 5` badge) | [V·press] (CBC, May 20, 2024); if it doesn't hold, the badge goes |
 | A61 | **new** · Mas's May 14, 2024 post | sc 12 | [P] · x.com/sama/status/1790518031640347056 (4:02 PM PDT); the crop's sentence case is the source's, with no capital "I" on screen |
 | A62 | **new** · REMUHCS as Senate Majority Leader, May 2024; the majority leader schedules the floor | sc 13 | [V] (Roll Call; senate.gov) |
-| A63 | **new** · the Superalignment post (Jul 5, 2023), its first sentence and byline | F2.2 | [V·press]; open the post |
-| A64 | **new** · NopeAI's note on how the voices were chosen, May 19–20, 2024: "…not an imitation… her own natural speaking voice." | sc 17 | [V]; pull; no name appears |
-| A65 | **new** · the board's statement on Neleh's podcast, its first sentence | sc 18 | [V·press]; pull the statement and its date |
+| A63 | **new** · the Superalignment post (Jul 5, 2023): the sentence on screen, "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.", verbatim but a later one (the post opens "We need scientific and technical breakthroughs to steer and control AI systems much smarter than us."); its byline | F2.2 | [V·press]; open the post |
+| A64 | **new** · NopeAI's pause post, May 20, 2024: "We've heard questions about how we chose the voices in ChatGPT, especially Sky. We are working to pause the use of Sky while we address them." | sc 17 | [V] · x.com/OpenAI/status/1792443575839678909; pull to [P]; cropped before "Sky" (two fragments), so no name appears; it claims nothing about how the voice was made (facts §F). Replaces the voices note ("…not an imitation…"), which §F excludes |
+| A65 | **new** · the board's statement on Neleh's podcast, its first sentence: "We are disappointed that Ms. Toner continues to revisit these issues." | sc 18 | [V·press]; pull the statement and its date; only the name changes (naming rule 12), so "Ms." stays |
 | A66 | **new** · `0 BILLS` on the roadmap by Jun 10, 2024 | sc 19 | [H] (guardrails matrix row 2); if a bill had passed the Senate, the tally reads `FLOOR VOTES: 0` |
 | A67 | **new** · Mas's Jun 10, 2024 post | sc 19 | [V] · x.com/sama/status/1800237314360127905 (11:43 AM PDT, as the keynote closed); pull to [P] |
 | A68 | **new** · Alyi's Jun 19, 2024 post "I am starting a new company:", its link card's line "one goal and one product: a safe superintelligence" | sc 20 | [V] · x.com/ilyasut/status/1803472978753303014; the line is the company's own announcement (row 46) |
-| A69 | **new** · the candidate's Aug 22, 2024 interview: "…having me speak… It's a little bit dangerous out there." (about AI fakes of himself) | tag | [V·press] (Variety, Fox59, Rolling Stone); pull the interview; supersedes row 52 |
+| A69 | **new** · the candidate's Fox Business interview (with Grady Trimble), aired Wednesday, Aug 21, 2024: "They're making — having me speak. I speak perfectly, I mean, absolutely perfectly on AI, and I'm, like, endorsing other products and things. It's a little bit dangerous out there." (about AI fakes of himself) | tag | [V·press] (The Hill, Aug 21, 2024: "asked Trump on Wednesday"; Mediaite, Aug 22: "Wednesday's edition"; Consequence, Variety, Fox59); the rail is `AUG 21`; pull the broadcast; supersedes row 52 (Aug 22, [H]) |
+| A70 | **new** · Mas at ELPPA's campus on Jun 10, 2024 (Altman at Apple Park) | sc 19 | [V] (NBC News live blog, Jun 10, 2024). One live blog (TechRadar) also lists Brockman in attendance [SINGLE]: Gerg's call from the lobby is **invented staging**, logged (Review log, S-32); nothing on screen says where he was beyond the show's own lobby |
+| A71 | **new** · more than sixty countries held national elections in 2024 ("sixty elections this year.", V.O. 14) | tag | [V·press] (TIME, "The Ultimate Election Year: All the Elections Around the World in 2024", Dec 2023: "at least 64 countries (plus the European Union)"); "sixty" sits under the count, so it holds whichever list is used |
 | PP2.1 | The `PAUSE` sign | sc 1 | [V]/[H]; a group sign only, no date, group or grievance |
 | eggs | A1 (THE TRUSTBUSTER's envelope), A8 (LE CHIEN's key), A37 (the op-ed byline) | sc 7, 18 | memory / [K]; never on a dated card |
 | Ep1 | Alyi's "Six years and eleven months." (lock 2:10.45) and "Someone should." (2:17.96); his Nov 20, 2023 regret post | sc 15, F2.2 | Ep1's lock and its EL take `e1-a1-5-13`, read and copied into `audio/ep02/`, never edited |
@@ -105,14 +107,14 @@ AXIS — the lobby master (sc 13, 19, 20 reuse it) is a side-on `[W]`. MAS at th
 
 *2.A, the first Tier 2 leap (style-range): owner MACHINE, door the bezel, beat the preview. Filler a three.js PBR walk; final a video model, objects only. No person, face or hand anywhere near it.*
 
-`[M]` [1.02] (≈ 7.6 s) SELBEEP steps under the screen with a remote the size of a clapperboard and turns to the room.
+`[M]` [1.02] (≈ 7.5 s) SELBEEP steps under the screen with a remote the size of a clapperboard and turns to the room.
 
 **SELBEEP** *(to the room, proud)*\
 Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence. `[INVENTED · accurate: video from a written prompt (facts A6) · e2-co-0001]`
 
 On "sentence", the mammoth's foot breaks the bezel.
 
-`[W]` [1.03] (≈ 2.7 s) As it crosses the frame it becomes ours: pixel art, its own colour ramp, palette-cycled fur, eight drawings held three frames each, gliding one whole pixel a frame. For two frames, as it steps out, it has a fifth leg. It steps onto the carpet, heading screen-left. `[OTS]` over Gerg's laptop:
+`[W]` [1.03] (≈ 2.6 s) As it crosses the frame it becomes ours: pixel art, its own colour ramp, palette-cycled fur, eight drawings held three frames each, gliding one whole pixel a frame. For two frames, as it steps out, it has a fifth leg. It steps onto the carpet, heading screen-left. `[OTS]` over Gerg's laptop:
 
 **GERG** *(typing on his knees; not looking up, so he's missed the whole thing)*\
 Which sentence? `[INVENTED · e2-co-0002]`
@@ -133,7 +135,7 @@ CARD, the topper: `SELBEEP / DIRECTOR OF MAMMOTHS.` · stat `MAMMOTHS CONTAINED:
 
 TEMPO · quick (Selbeep and Gerg, 0.25 s).
 
-`[W]` [1.06] (≈ 4.2 s) The master, two weeks on. The mammoth wanders off screen-left toward the elevators; its footprints stay in the carpet in its own colour ramp. DOT is up a ladder at the sign, orange lanyard, back to camera: `86` comes down, `100` goes up. THUD, outside, somewhere beyond the doors. The door glass rattles.
+`[W]` [1.06] (≈ 4.1 s) The master, two weeks on. The mammoth wanders off screen-left toward the elevators; its footprints stay in the carpet in its own colour ramp. DOT is up a ladder at the sign, orange lanyard, back to camera: `86` comes down, `100` goes up. THUD, outside, somewhere beyond the doors. The door glass rattles.
 
 `RAIL: FEB 29, 2024` [V · facts A9]
 
@@ -146,14 +148,14 @@ That's the mammoth. It's been two weeks, and it has mass now. We're working on i
 
 THUD, closer: the hand truck on the front steps. At Mas's counter, a staffer's coffee jumps. The ladder sways; DOT holds on.
 
-`[OTS-W]` [1.08] (≈ 3.4 s) Over Gerg's laptop.
+`[OTS-W]` [1.08] (≈ 4.0 s) Over Gerg's laptop.
 
 **GERG** *(typing; still not looking up)*\
-That's not the mammoth. The mammoth's on four. `[INVENTED · the misdirect, spoken · e2-co-0006]`
+That's not the mammoth. The mammoth's on the fourth floor. `[INVENTED · the misdirect, spoken · e2-co-0006]`
 
 TEMPO · quick (Gerg at 0.25 s).
 
-`[OTS-W]` [1.09] (≈ 5.2 s; one shot for the whole arrival) Over Mas's shoulder, straight down the axis to the doors. THUD: a hand truck takes the top step. The doors blow open in depth. On the hand truck, a complaint as tall as a person, its caption over its title:
+`[OTS-W]` [1.09] (≈ 5.0 s; one shot for the whole arrival) Over Mas's shoulder, straight down the axis to the doors. THUD: a hand truck takes the top step. The doors blow open in depth. On the hand truck, a complaint as tall as a person, its caption over its title:
 
 ON SCREEN (the complaint): `NOLE v. MANALT ET AL.` over `YOU PROMISED!!!` [V · facts A9; the title is ours]
 
@@ -163,7 +165,7 @@ It rolls straight down the axis and stops at his feet. The room layer shakes two
 
 `[W]` [1.11] (≈ 2.6 s) The complaint tips off the hand truck and hits the floor: the last THUD, and the knee's first note. It shakes a curling flyer off a rack pillar, `WHERE IS ALYI?`, its photo a doorway. The flyer floats down face-up onto the complaint. [facts A29]
 
-`[LOW]` → `[MCU]` [1.12] (≈ 5.4 s) The sign from below. DOT, still back to camera, holds a spare `0` plate out toward him. MAS shakes his head, one pixel. She lowers it, considers, and hangs a second, smaller sign underneath:
+`[LOW]` → `[MCU]` [1.12] (≈ 5.2 s) The sign from below. DOT, still back to camera, holds a spare `0` plate out toward him. MAS shakes his head, one pixel. She lowers it, considers, and hangs a second, smaller sign underneath:
 
 SIGN: `DAYS SINCE SOMEONE SUED MAS: 0` `[INVENTED]`
 
@@ -191,7 +193,7 @@ Built by the intro pipeline, not the beat plan: picture `out/ep02/v1/intro/`, au
 
 ## ACT ONE · "the séance"
 
-`Act One, 6:04 · sc 4 (3:12) · 4A (0:35) · 4B (0:08) · 6 (1:21) · 7 (0:48)`
+`Act One, 6:08 · sc 4 (3:16) · 4A (0:35) · 4B (0:08) · 6 (1:21) · 7 (0:48)`
 
 ### 4. INT. NOPEAI BOARDROOM — NIGHT · MAR 5, 2024 [BASE · 2.G spirit-photo pass on the ghosts; T3 cut-paper for Move 37's board and F2.3] · SET-PIECE → EXTENDED CONVERSATION, with an explainer (Move 37) and a flashback (F2.3) · P sc 4
 
@@ -199,27 +201,27 @@ MUSIC — **E02-02 The Séance.** The room colour, one performance under the sé
 ROOM — candle crackle over the boardroom at night; the rack's hum through the wall.
 AXIS — MAS at the head of the table, screen-left; the foot of the table, where NOLE lands, screen-right, under the ceiling hole; the shut boardroom door on the right wall. The `[OTS]` pair is over Mas's shoulder onto Nole and, for the confrontation, its reverse.
 
-`SCENE:` Mas answers the suit in public, with the man's own words. Nole crashes his own séance to make his case: he paid for it, and it was supposed to be open. Mas runs the room with questions, and the emails answer Nole: "less open", Yup; the cow he called "exactly right"; zero percent without billions. "Why zero?" turns the room quiet: in 2016 a rival's machine played a move nobody wrote. The cost is the quiet line, and 2018: nobody followed Nole up the ladder, and two stayed.
+`SCENE:` Mas answers the suit in public, with the man's own words. Nole crashes his own séance to make his case: he paid for it, and it was supposed to be open. Mas runs the room with questions, and the emails answer Nole: "less open", Yup; the cow he called "exactly right"; zero percent without billions. "Why zero?" turns the room quiet: in 2016 a rival's machine played a move nobody wrote. The cost is the quiet line, and 2018: Nole spoke to the room, the room went back to work, and two of the ones who stayed looked at each other.
 
 `[W]` → `[LOW·DESK]` [4.01] (≈ 2.5 s · ARRIVE: the whole shot) The boardroom, lit only by candles, already lit. On the table a Ouija board whose letters are reply chevrons, `>>>`, and a plain brass-rimmed planchette (no pointer glyph: it reads as a planchette, never a cursor). Three STAFFERS hold hands. GERG at the table's corner, one hand on the planchette, typing with the other. THE ORB hangs over it all like a chandelier. An empty chair at the table's end. At the head, MAS has the post open on his laptop:
 
 ON SCREEN (the post, the editor): `NOPEAI AND NOLE` · its byline row `… · ALYI · … · MAS` [P · facts A10; the byline [V · facts A59]; name swaps]
 
-`[ECU]` → `[MCU]` [4.02] (≈ 8.6 s) His finger on the bare Publish button, no hover. Click. Every candle flares one step; the planchette moves by itself.
+`[ECU]` → `[MCU]` [4.02] (≈ 9.6 s) His finger on the bare Publish button, no hover. Click. Every candle flares one step; the planchette moves by itself.
 
 `RAIL: MAR 5, 2024` *(after the click; it clears before the voice)*
 
 **MAS (V.O.)**\
-the court gets these eventually. everyone else gets them tonight. `[INVENTED · V.O. 1, plan · e2-vo-01]`
+nole's emails. the court gets them eventually. everyone else gets them tonight. `[INVENTED · V.O. 1, plan · e2-vo-01]`
 
-`[LOW·DESK]` → `[HIGH]` [4.03] (≈ 4.0 s)
+`[LOW·DESK]` → `[HIGH]` [4.03] (≈ 4.2 s)
 
 **MAS** *(reading, flat; a host running a procedure)*\
 is there anyone here… from 2016. `[INVENTED · e2-a1-0001]`
 
 The planchette slides to `>>>`. An inbox chime, pitched down two octaves.
 
-`[W]` [4.04] (≈ 4.6 s) A GHOST rises from the table in double exposure inside the candle's pool: an email thread of translucent reply chevrons, its header `FROM: ALYI · JAN 2016`. Inside it:
+`[W]` [4.04] (≈ 4.5 s) A GHOST rises from the table in double exposure inside the candle's pool: an email thread of translucent reply chevrons, its header `FROM: ALYI · JAN 2016`. Inside it:
 
 ON SCREEN (the ghost): `"…IT WILL MAKE SENSE TO START BEING LESS OPEN."` [P · facts A10, §B]
 
@@ -230,12 +232,12 @@ A second ghost unfurls beneath it, `RE:` from a 2016 GHOST-NOLE.
 
 *Alyi is here only as an author, his name on the header; never in brass or stone.*
 
-`[M]` [4.05] (≈ 3.9 s) A staffer's eyes go to the empty chair at the table's end. GERG, quietly, to her:
+`[M]` [4.05] (≈ 3.7 s) A staffer's eyes go to the empty chair at the table's end. GERG, quietly, to her:
 
 **GERG**\
 He signed it. He's just not here. `[INVENTED · e2-a1-0003]`
 
-`[LOW·DESK]` → `[HIGH]` [4.06] (≈ 6.4 s)
+`[LOW·DESK]` → `[HIGH]` [4.06] (≈ 6.8 s)
 
 **MAS** *(to the table, as if calling a vote)*\
 one knock if we promised a nonprofit. `[INVENTED · says what the suit claims before the knocks answer it · e2-a1-0004]`
@@ -247,7 +249,7 @@ The held hands and the planchette, perfectly still [HOLD 2 BEATS: the table's, w
 **MAS** *(not looking up)*\
 you're early. we're on 2016. `[INVENTED · e2-a1-0005]`
 
-`[OTS]` [4.08] (≈ 10.6 s; base setup for Nole's case) Over Mas's shoulder onto NOLE at the foot of the table, brushing tiles off his jacket; behind him the 2016 ghost and its `Yup` still hovering.
+`[OTS]` [4.08] (≈ 10.5 s; base setup for Nole's case) Over Mas's shoulder onto NOLE at the foot of the table, brushing tiles off his jacket; behind him the 2016 ghost and its `Yup` still hovering.
 
 PLATE: `NOLE · FUNDED IT. LEFT IT. SUING IT.` [facts A10b, A9]
 
@@ -266,21 +268,21 @@ Great. Put this on the blog too. I paid for the table. I paid for the candles. I
 
 TEMPO · quick (Gerg 0.2 s after Nole; Nole 0.2 s after Gerg).
 
-`[LOW·DESK]` → `[HIGH]` [4.10] (≈ 4.8 s)
+`[LOW·DESK]` → `[HIGH]` [4.10] (≈ 5.2 s)
 
 **MAS** *(to the planchette, not to him)*\
 spirit, what did we call it? `[INVENTED · e2-a1-0009]`
 
 The planchette glides from letter to letter: `O` · `P` · `E` · `N`.
 
-`[OTS]` → `[HIGH]` [4.11] (≈ 4.2 s) Nole spreads his hands at the board, vindicated.
+`[OTS]` → `[HIGH]` [4.11] (≈ 4.1 s) Nole spreads his hands at the board, vindicated.
 
 **NOLE** *(to all of them)*\
 There. Even the furniture knows. `[INVENTED · e2-a1-0010]`
 
 The planchette pauses. Then it drifts back to the `N` and carries it to the front: `N` · `O` · `P` · `E`.
 
-`[MCU]` → `[HIGH]` [4.12] (≈ 5.2 s) NOLE, jabbing at the board as the N moves.
+`[MCU]` → `[HIGH]` [4.12] (≈ 5.0 s) NOLE, jabbing at the board as the N moves.
 
 **NOLE**\
 No. Not like that. The N goes at the end. `[INVENTED · e2-a1-0011]`
@@ -289,9 +291,9 @@ Everyone looks down. Three hands are resting on the planchette: Mas's, GHOST-NOL
 
 `[W]` [4.13] (≈ 4.6 s) Another ghost lumbers up: a COW made of chevrons, a charging cable for a tail, its plug stamped `ALSET`, its chevron header dated `2018`. It moos, reverbed, and chews.
 
-ON SCREEN (the cow's caption): `FWD: …ATTACH IT TO ALSET "AS ITS CASH COW"` · and under it, his reply: `NOLE: "…EXACTLY RIGHT…"` [K · facts A10, §B: the early-2018 email he forwarded, and his reply; pull the exact wording; name swap]
+ON SCREEN (the cow's caption): `FWD: "…ATTACH TO ALSET AS ITS CASH COW…"` · and under it, his reply: `NOLE: "…EXACTLY RIGHT…"` [V · facts A10, §B: the early-2018 email he forwarded, and his reply ("Andrej is exactly right."); both crops verbatim (TechCrunch, Mar 5, 2024); name swap]
 
-`[OTS]` → `[LOW·DESK]` [4.14] (≈ 5.1 s)
+`[OTS]` → `[LOW·DESK]` [4.14] (≈ 5.3 s)
 
 **NOLE** *(quick, defensive)*\
 I forwarded that. I didn't write it. `[INVENTED · disputes nothing in the record: he forwarded it and replied "exactly right" · e2-a1-0012]`
@@ -301,20 +303,20 @@ you wrote 'exactly right.' `[INVENTED · accurate to the record · e2-a1-0013]`
 
 TEMPO · quick (Mas at 0.45 s).
 
-`[M]` [4.15] (≈ 3.6 s) Nole doesn't answer him. A desk lamp clicks on beside him, his post lamp, and he types furiously. His post leaves the phone and rises as a brand-new ghost, `NOLE · JUST NOW`, made entirely of `!`. It floats up to join the others. *(His answer goes to the internet, and it has no words in it.)*
+`[M]` [4.15] (≈ 3.1 s) Nole doesn't answer him. A desk lamp clicks on beside him, his post lamp, and he types furiously. His post leaves the phone and rises as a brand-new ghost, `NOLE · JUST NOW`, made entirely of `!`. It floats up to join the others. *(His answer goes to the internet, and it has no words in it.)*
 
 `[W]` [4.16] (≈ 7.9 s) The planchette slides one last time. A third ghost, its header dated `DEC 2018`:
 
-ON SCREEN (the ghost's header): `"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%."` [V·press · facts A10, §B; pull the exact text]
+ON SCREEN (the ghost's header): `"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%."` [V · facts A10, §B: the Dec 26, 2018 email, verbatim (CNBC, NBC News, Mar 6, 2024)]
 
 GHOST-NOLE, in a 2018 hoodie, leans across the table.
 
 **GHOST-NOLE**\
-"This needs billions per year immediately or forget it." `[K · facts A10, §B; pull · e2-a1-0014]`
+"This needs billions per year immediately or forget it." `[V · facts A10, §B: the same email, verbatim · e2-a1-0014]`
 
-`[M]` → `[ECU]` [4.17] (≈ 2.4 s) Nole slaps his phone down on the table. Every flame jumps. Mas's hand on his glass doesn't move.
+`[M]` → `[ECU]` [4.17] (≈ 2.1 s) Nole slaps his phone down on the table. Every flame jumps. Mas's hand on his glass doesn't move.
 
-`[2S]` [4.18] (≈ 10.5 s; no cut-ins) NOLE and GHOST-NOLE side by side: same jaw, same phone. The ghost holds its dated header up to him.
+`[2S]` [4.18] (≈ 10.4 s; no cut-ins) NOLE and GHOST-NOLE side by side: same jaw, same phone. The ghost holds its dated header up to him.
 
 **NOLE** *(to the table, moving it in time)*\
 …That was a different me. That was 2018. Everybody said things in 2018. `[INVENTED · e2-a1-0015]`
@@ -332,7 +334,7 @@ The ghost considers this for a long time [HOLD 2 BEATS: Nole's].
 
 TEMPO · quick (Gerg and Nole 0.2 s), then the ghost's weighted 1.25 s.
 
-`[LOW·DESK]` → `[HIGH]` → `[ECU]` [4.19] (≈ 4.3 s · the concept begins)
+`[LOW·DESK]` → `[HIGH]` → `[ECU]` [4.19] (≈ 4.4 s · the concept begins)
 
 **MAS** *(to the planchette; the question he actually wants answered)*\
 spirit, why zero? `[INVENTED · e2-a1-0019]`
@@ -356,26 +358,34 @@ What's that? `[INVENTED · e2-a1-0021]`
 **NOLE** *(to her, hushed, a man at a séance)*\
 Nobody wrote that move. It came out of nowhere. `[INVENTED · his claim; Gerg corrects it · e2-a1-0022]`
 
-`[MCU]` [4.22] (≈ 13.3 s) GERG, typing, cheerfully literal. Behind the board, a wall of tiny knobs: a stream of tiny human boards pours into it, each one ticking every knob a hair. On "Then it played itself." the stream turns into the program's own boards. The wall freezes.
+`[MCU]` ↔ `[MCU]` [4.22] (≈ 17.3 s) GERG, typing, cheerfully literal; the STAFFER beside him, whispering.
 
 **GERG**\
-It didn't come out of nowhere. It came out of thirty million positions from people's games. It's millions of little numbers, like knobs, and every position nudged every knob a hair toward what the people played. Then it played itself. `[INVENTED · accurate (facts A57): the policy network learned from about 30 million positions of expert games, then improved by self-play; "it played itself" is Ep1's phrase · e2-a1-0023]`
+It didn't come out of nowhere. It learned. Thirty million positions from people's games. `[INVENTED · accurate (facts A57): the policy network learned from about 30 million positions of expert games; "It learned." first, so the people's games aren't the move's author · e2-a1-0023]`
 
-*The concept's accuracy note: millions of adjustable numbers, nudged toward human moves from about 30 million positions, then by playing itself; the knobs tick only while the stream pours in and freeze at the match (the numbers were fixed during play). It doesn't say how the move was chosen (search: Ep10), doesn't say the program taught itself from nothing (Ep11), and says nobody typed it in, not that nobody could explain it. No paper byline on the stone.*
+**STAFFER** *(whispering, to Gerg; she hears "people's games" as "people wrote it")*\
+So somebody did write it. `[INVENTED · the misunderstanding he corrects · e2-a1-0055]`
 
-`[MCU]` [4.23] (≈ 6.4 s)
+Behind the board, on "Nobody", a wall of tiny knobs: a stream of tiny human boards pours into it, each one ticking every knob a hair. On "Then it played itself, millions of games." the stream turns into the program's own boards. The wall freezes.
+
+**GERG** *(still typing; one knob at a time)*\
+Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games. `[INVENTED · accurate (facts A57): millions of adjustable numbers nudged toward the human move in each position, then improved by self-play over millions of games; "it played itself" is Ep1's phrase · e2-a1-0056]`
+
+*The concept's accuracy note: millions of adjustable numbers, nudged toward human moves from about 30 million positions, then by playing itself (millions of games); the knobs tick only while the stream pours in and freeze at the match (the numbers were fixed during play). It doesn't say how the move was chosen (search: Ep10), doesn't say the program taught itself from nothing (Ep11), and says nobody typed it in, not that nobody could explain it. No paper byline on the stone.*
+
+`[MCU]` [4.23] (≈ 6.3 s)
 
 **NOLE** *(the fear, in plainer words; quiet, then quieter)*\
 One player in ten thousand would have made that move. It made it anyway. And it was right. `[INVENTED · his claim; accurate as the program's own estimate, about 1 in 10,000 (facts A57) · e2-a1-0024]`
 
-`[W]` [4.24] (≈ 3.5 s) The board's corner goes back to letters.
+`[W]` [4.24] (≈ 3.4 s) The board's corner goes back to letters.
 
 **NOLE** *(loud again, to the table)*\
-They had that in 2016. We had a blog. `[INVENTED · on credit and rivalry; disputes no email · e2-a1-0025]`
+MINDDEEP had that in 2016. We had a blog. `[INVENTED · on credit and rivalry; names the rival from his own 0% email (4.16); disputes no email · e2-a1-0025]`
 
-TEMPO · quick on "nowhere" (Gerg 0.2 s); normal for Nole's fear (0.5 s); quick for the credit.
+TEMPO · quick on "nowhere" (Gerg 0.2 s) and through the whisper (0.25 s each way); normal for Nole's fear (0.5 s); quick for the credit.
 
-`[OTS]` [4.25] (≈ 7.3 s) Over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again.
+`[OTS]` [4.25] (≈ 7.2 s) Over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again.
 
 **GHOST-NOLE**\
 "…billions per year…" `[the same email's words (facts A10, §B), cut from e2-a1-0014's take · e2-a1-0026]`
@@ -393,9 +403,9 @@ we keep everything. `[INVENTED · the facts pass ruled it in: it refers to the p
 
 TEMPO · weighted (1.0 s).
 
-`[ECU]` [4.27] (≈ 2.4 s) Mas lifts his glass. The candle nearest Nole snuffs out; its smoke crosses the glass, and the glass carries us into 2018.
+`[ECU]` [4.27] (≈ 2.1 s) Mas lifts his glass. The candle nearest Nole snuffs out; its smoke crosses the glass, and the glass carries us into 2018.
 
-> #### F2.3 · INT. NOPEAI'S FIRST OFFICE — DAY · FEB 20, 2018 [T3 cut-paper memory, Ep1's first-office set] · FLASHBACK (about 22 s; no voices heard, no captions)
+> #### F2.3 · INT. NOPEAI'S FIRST OFFICE — DAY · FEB 20, 2018 [T3 cut-paper memory, Ep1's first-office set] · FLASHBACK (about 21 s; no voices heard, no captions)
 >
 > *Ep1's own room, four months before the night the machine taught itself. No inner voice in a memory.*
 >
@@ -403,24 +413,24 @@ TEMPO · weighted (1.0 s).
 >
 > `RAIL: FEB 20, 2018` [V · facts A11]
 >
-> `[W]` [4.29] (≈ 4.5 s; the slide and the ladder in one frame) NOLE points at the slide, then at the ladder to the ceiling hatch, where a sign-up sheet is taped. Nobody stands. One by one the staff turn back to their monitors; the arena match keeps playing. GERG, second row, keeps typing.
+> `[W]` [4.29] (≈ 4.5 s; the slide and the room in one frame) NOLE finishes, one hand still on the slide. Nobody applauds. One by one the staff turn back to their monitors; the arena match keeps playing. GERG, second row, keeps typing. *(The room's answer is the room: nothing on screen asks anyone to follow him.)*
 >
-> `[W]` [4.30] (≈ 4.2 s) At the back, MAS sips from the same crystal glass. NOLE climbs the ladder alone. The hatch slides shut on him.
+> `[W]` [4.30] (≈ 3.6 s) At the back, MAS sips from the same crystal glass. NOLE climbs the ladder to the ceiling hatch. The hatch slides shut on him.
 >
-> `[INSERT]` [4.31] (≈ 1.8 s) The sign-up sheet by the ladder, still empty, lifts in the hatch's draught. [facts A11: the room "didn't entirely buy the story"]
+> `[INSERT]` [4.31] (≈ 1.8 s) The arena match on the one monitor plays on under the hatch's draught; nobody has paused it. [facts A11: the room "didn't entirely buy the story"]
 >
-> `[2S]` [4.32] (≈ 4.2 s; across the room) ALYI, at the next desk, lit, cropped by his monitor's edge, turns and looks back at Mas. Mas lifts his glass an inch. *(The two who stayed. Alyi is a person here, warm; some part of him is cut off by a frame, his rule.)*
+> `[2S]` [4.32] (≈ 4.2 s; across the room) ALYI, at the next desk, lit, cropped by his monitor's edge, turns and looks back at Mas. Mas lifts his glass an inch. *(Two of the ones who stayed. Alyi is a person here, warm; some part of him is cut off by a frame, his rule.)*
 >
-> `[W → MATCH]` [4.33] (≈ 2.6 s) The glass carries us back. In 2024 the smoke thins. Nole strikes a match and relights the candle himself.
+> `[W → MATCH]` [4.33] (≈ 2.2 s) The glass carries us back. In 2024 the smoke thins. Nole strikes a match and relights the candle himself.
 
-`[OTS]` [4.34] (≈ 8.5 s; the reverse, the base for the confrontation) Over NOLE's shoulder, the candle in his hand, onto MAS candlelit in the left third. Nole holds the candle up to Mas's face like evidence.
+`[OTS]` [4.34] (≈ 9.4 s; the reverse, the base for the confrontation) Over NOLE's shoulder, the candle in his hand, onto MAS candlelit in the left third. Nole holds the candle up to Mas's face like evidence.
 
 **NOLE** *(low at first, then not)*\
-You sat at the back. I asked the whole room, and you sat at the back with your glass of water. `[INVENTED · matches what F2.3 showed · e2-a1-0029]`
+You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water. `[INVENTED · matches what F2.3 showed: he spoke to the room; nothing he asked of it (facts A11) · e2-a1-0029]`
 
 Mas lifts his glass and sips: F2.3's sip, six years on.
 
-`[W]` [4.35] (≈ 4.5 s) Nole sets the candle down in front of him, hard, already rising on his cable.
+`[W]` [4.35] (≈ 4.2 s) Nole sets the candle down in front of him, hard, already rising on his cable.
 
 **NOLE** *(to Mas, going up)*\
 Keep that too. See you in court. `[INVENTED · e2-a1-0030]`
@@ -439,21 +449,21 @@ ROOM — the boardroom by day.
 
 `SCENE:` The chair closes the matter in the record. Both halves of the finding, read whole to the people they concern; then a dry line that pays Ep1's "we'll stand."
 
-`[W]` [4A.01] (≈ 8.1 s · ARRIVE: the room in morning light, candles gone, Mas already standing) The same table by day, from its foot. TERB at the head with a single sheet. MADA halfway down. OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.
+`[W]` [4A.01] (≈ 8.0 s · ARRIVE: the room in morning light, candles gone, Mas already standing) The same table by day, from its foot. TERB at the head with a single sheet. MADA halfway down. OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.
 
 `RAIL: MAR 8`
 
 **TERB** *(brisk; to the table before the first item)*\
 Before we start, the independent review is back. I'll read you the finding. `[INVENTED · "independent" is Ep1's word · e2-a1-0031]`
 
-`[2S]` → `[MCU]` [4A.02] (≈ 11.2 s) The reading crosses one cut so each half lands on the man it's about: the first half on MADA, perfectly still; the second on MAS, standing.
+`[2S]` → `[MCU]` [4A.02] (≈ 12.9 s) The reading crosses one cut so each half lands on the man it's about: the first half on MADA, perfectly still; the second on MAS, standing.
 
-**TERB** *(reading the sheet word for word, weighted)*\
-"…the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." `[P · facts A12; both halves together; name swap · e2-a1-0032]`
+**TERB** *(reading the sheet word for word, weighted; "The law firm found" is his own lead-in, the quote starts at "that")*\
+The law firm found "that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." `[P · facts A12; both halves together, the review's law firm the subject of both findings; name swap · e2-a1-0032]`
 
 *Nothing on Mas's face: at a real event his surface stays blank. Mada does nothing at all; any act timed to a finding about his own vote could read as a view.*
 
-`[OTS]` [4A.03] (≈ 4.6 s) Over Mas's shoulder onto TERB, who looks up from the sheet.
+`[OTS]` [4A.03] (≈ 4.2 s) Over Mas's shoulder onto TERB, who looks up from the sheet.
 
 **TERB** *(to Mas, dry)*\
 You can sit down now, Mas. `[INVENTED · pays Ep1's "we'll stand." · e2-a1-0033]`
@@ -466,9 +476,9 @@ TEMPO · weighted for the reading; the line to Mas quick and dry.
 
 PLATE: `MAS MANALT · BOARD` · `OMIS · NEW DIRECTOR` · `NEW DIRECTOR` · `NEW DIRECTOR` [V · facts A13]
 
-`[W]` [4A.05] (≈ 5.1 s) As he sits he glances at GERG, at the back with his laptop, still standing. Gerg lifts the laptop an inch, like a toast.
+`[W]` [4A.05] (≈ 4.3 s) As he sits he glances at GERG, at the back with his laptop, still standing. Gerg lifts the laptop an inch, like a toast.
 
-`[ECU]` [4A.06] (≈ 2.6 s) Under the last click, his phone, face up on the table, lights with an invite.
+`[ECU]` [4A.06] (≈ 2.2 s) Under the last click, his phone, face up on the table, lights with an invite.
 
 AFTERMATH — he sits; the four clicks; the glance at Gerg.
 OUT — **Cause:** an invite. **Sound:** the invite's soft chime over the click. **Object:** the nameplate's slot → the invite card.
@@ -482,7 +492,7 @@ UI: `XEL · LONG-FORM · MAR 18 · 2 HRS`, with a mic icon `[INVENTED]`
 He reads it.
 
 **MAS (V.O.)**\
-two hours in his room, once. after that, everyone gets the link. `[INVENTED · V.O. 3, plan · e2-vo-03]`
+two hours on his show, once. after that, november is a link. `[INVENTED · V.O. 3, plan · e2-vo-03]`
 
 His thumb on Accept. The card settles into his calendar. *(In Ep1 he accepted an invite without looking. This time he looks.)*
 
@@ -497,28 +507,28 @@ AXIS — MAS screen-left, XEL screen-right facing camera-left, one mic on a stan
 
 `SCENE:` Mas wants to tell the firing story once, warmly, on the friendliest long-form show there is, and to give nothing on Alyi's plans. XEL wants the long answer. The rule the audience learns by the second hop: the mic grows one size on each of XEL's long pauses, and never while Mas talks. Four hops; the counter advances on each, and once more when the recording ends. "Once" takes six chapters.
 
-`[2S]` [6.01] (≈ 8.8 s · ARRIVE: enter late, the sting ending) A black curtain, two chairs, one microphone (size 1) between them, all inside the player's chrome: `CH. 1 OF 6` · `REC`. XEL screen-right; MAS screen-left with his glass.
+`[2S]` [6.01] (≈ 8.7 s · ARRIVE: enter late, the sting ending) A black curtain, two chairs, one microphone (size 1) between them, all inside the player's chrome: `CH. 1 OF 6` · `REC`. XEL screen-right; MAS screen-left with his glass.
 
 **XEL**\
-"Take me through the NopeAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you." `[P · facts A15 (≈1:05); OpenAI → NopeAI · e2-a1-0034]`
+"Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you." `[P · facts A15 (1:05); OpenAI → NOPEAI · e2-a1-0034]`
 
 `[2S]` [6.02] (≈ 3.4 s) XEL waits. The mic hops one size. The counter ticks: `CH. 2 OF 6`.
 
 CARD, the topper, on the hop: `XEL / ASKS THE LONG QUESTIONS.` · stat `EPISODE: 419` [2-TONE FREEZE · 1 BAR]
 
-`[2S]` [6.03] (≈ 9.0 s)
+`[2S]` [6.03] (≈ 10.0 s)
 
 **MAS**\
 "…the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things." `[P · facts A15, §B · e2-a1-0035]`
 
 The mic doesn't move.
 
-`[2S]` [6.04] (≈ 7.9 s) XEL lets it sit. The mic hops; `CH. 3 OF 6`.
+`[2S]` [6.04] (≈ 7.4 s) XEL lets it sit. The mic hops; `CH. 3 OF 6`.
 
 **XEL**\
-"Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?" `[P · facts A15 (≈18:19); Ilya → ALYI · e2-a1-0036]`
+"Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?" `[P · facts A15 (18:34); Ilya → ALYI · e2-a1-0036]`
 
-`[2S]` [6.05] (≈ 9.3 s; the ladder)
+`[2S]` [6.05] (≈ 9.5 s; the ladder)
 
 **MAS**\
 "no." `[P · e2-a1-0037]`
@@ -537,23 +547,23 @@ The mic doesn't move.
 
 TEMPO · quick (XEL 0.2 s; Mas 0.45 s). Its shortness is the joke.
 
-`[2S]` [6.06] (≈ 13.1 s) XEL pauses. The mic hops; `CH. 4 OF 6`. Then the real question:
+`[2S]` [6.06] (≈ 12.5 s) XEL pauses. The mic hops; `CH. 4 OF 6`. Then the real question:
 
 **XEL** *(warm, careful)*\
-"…You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?" `[P · facts A15 (≈18:44); the ellipsis trims its first sentence; Ilya → ALYI · e2-a1-0042]`
+"…You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?" `[P · facts A15 (18:57); the ellipsis trims its first sentence; Ilya → ALYI · e2-a1-0042]`
 
-`[MCU]` [6.07] (≈ 16.6 s; the one cut-in) MAS against the curtain, screen-left, facing camera-right toward XEL. A face light, one step.
+`[MCU]` [6.07] (≈ 18.7 s; the one cut-in) MAS against the curtain, screen-left, facing camera-right toward XEL. A face light, one step.
 
 **MAS** *(his own pace; the longest thing he says in the episode)*\
-"i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career." `[P · facts A15 (≈18:57); trimmed after "career."; Ilya → ALYI · e2-a1-0043]`
+"i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career." `[P · facts A15 (19:15); trimmed after "career."; Ilya → ALYI · e2-a1-0043]`
 
 TEMPO · weighted. The mic never grows while he talks, so the meter stays honest.
 
-`[2S]` [6.08] (≈ 3.9 s) Back to the meter frame. The mic hasn't moved a pixel through any of it. XEL's pause. The mic hops to fill the frame; Mas leans around it. `CH. 5 OF 6`.
+`[2S]` [6.08] (≈ 2.8 s) Back to the meter frame. The mic hasn't moved a pixel through any of it. XEL's pause. The mic hops to fill the frame; Mas leans around it. `CH. 5 OF 6`.
 
 `[INSERT]` [6.09] (≈ 1.8 s) The player's chrome: the counter ticks to `CH. 6 OF 6`, and the `REC` light goes out.
 
-`[2S]` [6.10] (≈ 5.5 s) Off the record. XEL leans toward the giant mic. MAS, pressed flat against the curtain by it.
+`[2S]` [6.10] (≈ 5.0 s) Off the record. XEL leans toward the giant mic. MAS, pressed flat against the curtain by it.
 
 **XEL** *(sincerely curious)*\
 Is it… conscious, though? `[INVENTED · after the recording; kept only if the reel's laugh test passes · e2-a1-0044]`
@@ -566,7 +576,7 @@ Yes. `[INVENTED · e2-a1-0046]`
 
 TEMPO · quick (Mas 0.45 s; XEL 0.3 s).
 
-`[2S → MATCH]` [6.11] (≈ 1.8 s) The curtain parts, and in the same motion the building splits open.
+`[2S → MATCH]` [6.11] (≈ 1.3 s) The curtain parts, and in the same motion the building splits open.
 
 AFTERMATH — `CH. 6 OF 6`, `REC` out, the off-record exchange, Mas pressed flat against the curtain.
 OUT — **Cause:** his own words are on the record, and the landlord has them on his phone the next morning. **Sound:** Mas's recorded voice, small, through a phone speaker, pre-laps under the curtain's part (J 0.8 s). **Object:** the parting curtain → the building splitting open (match cut).
@@ -579,7 +589,7 @@ AXIS — the cross-section is drawn taller than the frame: the dark room at the 
 
 `SCENE:` The landlord schemes: after a chaotic November he set up a second team underneath the first, and today it moves in. Tasya wants the lease signed without anyone calling it one; the Humanist wants a room for his team. The welcome is the lease, the key grows back, and the man upstairs is a tenant. *The scene leaves Mas's point of view on his own recorded voice and returns to him on the button: the exception is signposted at both ends.*
 
-`[W]` [7.01] (≈ 5.8 s · ARRIVE: the split already opening, his voice on the phone leading us down) The building splits open like a dollhouse, two halves sliding apart in whole-pixel steps. At the top, the dark room, Mas at his monitor. Below it NopeAI's floors; below the foundation MACROSOFT's plinth, `BELOW · ABOVE · AROUND`; below that, a basement. The lights click on one floor at a time. *Egg: Ep1's odometer still wedged in the bedrock.*
+`[W]` [7.01] (≈ 6.1 s · ARRIVE: the split already opening, his voice on the phone leading us down) The building splits open like a dollhouse, two halves sliding apart in whole-pixel steps. At the top, the dark room, Mas at his monitor. Below it NopeAI's floors; below the foundation MACROSOFT's plinth, `BELOW · ABOVE · AROUND`; below that, a basement. The lights click on one floor at a time. *Egg: Ep1's odometer still wedged in the bedrock.*
 
 ON TASYA'S PHONE, small:
 
@@ -606,7 +616,7 @@ I brought my own team. Is there room for them? `[INVENTED · accurate: the hire 
 **TASYA** *(a glance up through the floors, and back)*\
 There's always room down here. It's quieter than upstairs. `[INVENTED · e2-a1-0051]`
 
-`[ECU]` [7.05] (≈ 5.7 s) He twists a key off his ring and holds it out. The Humanist takes it. A new key grows back into the gap at once, stamped:
+`[ECU]` [7.05] (≈ 5.6 s) He twists a key off his ring and holds it out. The Humanist takes it. A new key grows back into the gap at once, stamped:
 
 `RAIL, stamped on the new key: MAR 19` [V · facts A16]
 
@@ -617,7 +627,7 @@ We keep a spare. `[INVENTED · e2-a1-0052]`
 
 An `INQUIRY` envelope sails in through the cut-away and bonks off the ring *(egg: THE TRUSTBUSTER, facts A1)*.
 
-`[2S]` [7.06] (≈ 2.7 s)
+`[2S]` [7.06] (≈ 2.6 s)
 
 **THE HUMANIST** *(looking up where Tasya looked)*\
 Who else lives here? `[INVENTED · e2-a1-0053]`
@@ -629,7 +639,7 @@ A tenant. `[INVENTED · e2-a1-0054]`
 
 TEMPO · normal throughout; Tasya unhurried.
 
-`[MCU]` [7.08] (≈ 5.8 s) Hold on Mas at his monitor, who doesn't hear it. Below frame, the key ring jangles once, on the downbeat. THE COPY rings under it.
+`[MCU]` [7.08] (≈ 5.7 s) Hold on Mas at his monitor, who doesn't hear it. Below frame, the key ring jangles once, on the downbeat. THE COPY rings under it.
 
 AFTERMATH — 1.5 s on Mas at his monitor, then the jangle.
 OUT — CUT TO BLACK: **act-out 1.** **Cause:** the act's end. **Sound:** the jangle and THE COPY into the black; the dark room's Water Line under it. **Object:** black → the monitor's glow.
@@ -650,21 +660,21 @@ AXIS — over Mas's right shoulder onto the monitor; he's screen-left, the monit
 
 `SCENE:` The act opens on his moves: the rules swiped away unopened, the launch set on the Monday because Elgoog has Tuesday, and the phone deal closed in one sentence on a call.
 
-`[OTS]` [8.01] (≈ 6.8 s · ARRIVE: the dark room with the monitor's glow already on his face) A notification slides down over the monitor:
+`[OTS]` [8.01] (≈ 6.9 s · ARRIVE: the dark room with the monitor's glow already on his face) A notification slides down over the monitor:
 
 UI: `EUROPE PASSES ITS AI RULEBOOK · 523–46` [V · facts A14; undated]
 
 Its thumbnail is a 400-page book with a big `SNOOZE` button bolted to its spine. `[ECU]` He swipes it away, unopened. *(The button stays unpressed until Ep8.)*
 
-`[POV]` [8.02] (≈ 5.2 s) One whole-pixel scroll to a news desk: three cardboard cutouts in lanyards stand in a lineup against a height chart. Mas, his landlord, and Elgoog's. Behind them, the segment's own card. The host (unplated) turns from the lineup and looks straight down the lens.
+`[POV]` [8.02] (≈ 5.2 s) One whole-pixel scroll to a news site: a headline over the segment's video still. In the still, a news desk: three cardboard cutouts in lanyards stand in a lineup against a height chart. Mas, his landlord, and Elgoog's. The still plays; the host (unplated) turns from the lineup and looks straight down the lens.
 
 `RAIL: APR 1, 2024`
-ON SCREEN (the segment's card): `"MAS, TASYA AND RADNUS"` [H · facts A19]
+ON SCREEN (the news site's headline, in its own UI): `…TAKES AIM AT MAS, TASYA AND RADNUS…` [H · facts A19: Business Insider's headline on the segment, its exact words cropped; name swaps; never shown as the show's own card]
 
-`[OTS]` [8.03] (≈ 7.7 s) Mas at the monitor, the lineup on it.
+`[OTS]` [8.03] (≈ 8.2 s) Mas at the monitor, the lineup on it.
 
 **MAS (V.O.)**\
-the next model runs on rented racks. the one after runs on ours. `[INVENTED · V.O. 4, plan: own compute · e2-vo-04]`
+the next model runs on the landlord's servers. the one after runs on ours. `[INVENTED · V.O. 4, plan: own compute · e2-vo-04]`
 
 `[POV]` [8.04] (≈ 4.6 s) His calendar. Elgoog's keynote is already on Tuesday:
 
@@ -673,21 +683,21 @@ UI: `ELGOOG · DEVELOPER KEYNOTE · TUE 14` [V · facts A24]
 
 He drags his own block, `NOPEAI · SPRING UPDATE`, onto the `MON 13` square. It snaps in. `[INVENTED staging: who picked the date isn't on record]`
 
-`[MCU]` [8.05] (≈ 4.6 s) Mas, the lit Monday square in his eyes.
+`[MCU]` [8.05] (≈ 3.6 s) Mas, the lit Monday square in his eyes.
 
 **MAS (V.O.)**\
-monday. their tuesday opens on our news. `[INVENTED · V.O. 5, plan: ship first; paid at sc 12 · e2-vo-05]`
+one day ahead is enough. `[INVENTED · V.O. 5, plan: ship first, as a condition; it reads as foresight at sc 12 · e2-vo-05]`
 
-`[ECU]` → `[MCU]` [8.06] (≈ 10.5 s) His phone, face up, rings: a call tile, `ELPPA`, no face and no name. He answers. We hear only him.
+`[ECU]` → `[MCU]` [8.06] (≈ 10.8 s) His phone, face up, rings: a call tile, `ELPPA`, no face and no name. He answers. We hear only him.
 
 **MAS** *(on the call; unhurried, level, no smile in it: his one full sentence of terms)*\
-no money either way. you put it in your new assistant, and we call that even. `[INVENTED · the reported shape (facts A58: neither side pays, exposure as the price); opt-in, in ELPPA's assistant on its new devices (facts A40) · e2-a2-0001]`
+no money either way. you put us in your new assistant. that's the price. `[INVENTED · the reported shape (facts A58: neither side pays, exposure as the price); opt-in, in ELPPA's assistant on its new devices (facts A40) · e2-a2-0001]`
 
 The tile shows `…`, then `CONFIRMED`. One chip note.
 
 TEMPO · normal: the call is Mas's alone, unhurried; the montage's items each hold long enough to read.
 
-`[POV]` [8.07] (≈ 4.5 s) An invite drops into his calendar under the Monday square: `ELPPA · KEYNOTE · JUN 10` `[INVENTED staging]`. He accepts it.
+`[POV]` [8.07] (≈ 4.6 s) An invite drops into his calendar under the Monday square: `ELPPA · KEYNOTE · JUN 10` `[INVENTED staging]`. He accepts it.
 
 AFTERMATH — the Monday square lit; the June invite under it.
 OUT — **Cause:** the Monday arrives. **Sound:** a stage manager's distant count and the demo's walk-on music warming up through a wall (J 1.0 s). **Object:** the lit `MON` square's glow → the work light backstage.
@@ -700,14 +710,14 @@ AXIS — the wings are stage right (screen-left from the house), so Mas keeps th
 
 `SCENE:` The engineer wants reassurance; Rima wants the demo run her way; Mas wants to be in it without being on it. He asks his question; she answers the next one. He grants her what isn't his to grant, and she takes it back as a fact.
 
-`[W]` [9.01] (≈ 7.3 s · ARRIVE: the wings in work light, the count already going) Road cases and cables. RIMA stands poised with a clicker; a hard circular spotlight finds her even back here. The DEMO ENGINEER (headset, `DEMO` lanyard) holds a phone. On a monitor, screen-right, CHATGTP is a plain speech bubble with no face yet. GERG types on a road case in the foreground. Mas nearby with his glass and THE ORB.
+`[W]` [9.01] (≈ 7.4 s · ARRIVE: the wings in work light, the count already going) Road cases and cables. RIMA stands poised with a clicker; a hard circular spotlight finds her even back here. The DEMO ENGINEER (headset, `DEMO` lanyard) holds a phone. On a monitor, screen-right, CHATGTP is a plain speech bubble with no face yet. GERG types on a road case in the foreground. Mas nearby with his glass and THE ORB.
 
 `RAIL: MAY 13, 2024` [V · facts A23]
 
 **RIMA** *(clicker up; to the wings, composed)*\
 Places, please. Phones on silent in the wings. We're on in five. `[INVENTED · e2-a2-0002]`
 
-`[M]` → `[SCR]` [9.02] (≈ 9.0 s)
+`[M]` → `[SCR]` [9.02] (≈ 9.2 s)
 
 **ENGINEER** *(holding the phone up, rehearsing it to her)*\
 So on stage, I ask it a question, it thinks for a second, and then it answers. `[INVENTED · e2-a2-0003]`
@@ -717,14 +727,14 @@ On the monitor, instantly, with a bright UI chirp: `yes!!`
 **ENGINEER** *(O.S., looking at it)*\
 …Before I've asked. It does that. `[INVENTED · e2-a2-0004]`
 
-`[SCR]` → `[W]` [9.03] (≈ 6.1 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
+`[SCR]` → `[W]` [9.03] (≈ 4.6 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
 
 **GERG** *(typing; cheerful)*\
-Careful. The new one can hear you laugh. So don't, unless you mean it. `[INVENTED · accurate (facts A23) · e2-a2-0005]`
+Careful. The new one can hear you laugh. `[INVENTED · accurate (facts A23) · e2-a2-0005]`
 
-Beyond him, the engineer's laugh stops on "mean it."
+Beyond him, the engineer's laugh stops on "laugh."
 
-`[2S]` [9.04] (≈ 13.5 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
+`[2S]` [9.04] (≈ 14.2 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
 
 **MAS**\
 is it ready? `[INVENTED · Gerg's Ep1 question, his now · e2-a2-0006]`
@@ -740,7 +750,7 @@ It is. Enjoy the view. `[INVENTED · e2-a2-0009]`
 
 TEMPO · normal (0.4–0.5 s): her answers composed, never rushed.
 
-`[W]` [9.05] (≈ 10.0 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
+`[W]` [9.05] (≈ 10.3 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
 
 **ENGINEER** *(a walk-and-talk)*\
 What if it freezes? Live, on the stream? `[INVENTED · e2-a2-0010]`
@@ -750,7 +760,7 @@ Then it freezes live, and I keep talking. It also sings. We'll get to that. `[IN
 
 TEMPO · quick (Rima 0.3 s).
 
-`[SCR]` [9.06] (≈ 6.1 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
+`[SCR]` [9.06] (≈ 6.3 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
 
 **VOICE 1**\
 Hi. `[INVENTED · e2-a2-0012]`
@@ -831,12 +841,12 @@ AXIS — the stage `[W]` is shot from mid-house and **locked: it's the spotlight
 
 `SCENE:` Rima wants her demo to run on its running order. The product flirts, and each laugh slides her light one step toward the screen; she sticks to the script harder, and closes it in the half-dark. Only after the stream has ended does Mas type one word, and the word takes the coverage. Why he posted it, and whether the voice was meant to sound like anyone, are contested: nothing here tells us.
 
-`[W]` [11.01] (≈ 8.1 s · ARRIVE: the stage wide as Rima takes her mark and the spot finds her) A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.
+`[W]` [11.01] (≈ 8.2 s · ARRIVE: the stage wide as Rima takes her mark and the spot finds her) A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.
 
 **RIMA** *(to the house; composed, the keynote voice)*\
 Good morning. We've spent a long time teaching it to talk. Today, it listens. `[INVENTED · e2-a2-0023]`
 
-`[SCR]` [11.02] (≈ 6.9 s) On the big screen, CHATGTP's bubble grows features in three held steps, one chip note each: ears, eyes, a mouth. A small `VOICE 5` badge in the screen's corner [V·press · facts A60; if it doesn't hold, the badge goes].
+`[SCR]` [11.02] (≈ 7.0 s) On the big screen, CHATGTP's bubble grows features in three held steps, one chip note each: ears, eyes, a mouth. A small `VOICE 5` badge in the screen's corner [V·press · facts A60; if it doesn't hold, the badge goes].
 
 **CHATGTP** *(bright, fast, relentlessly affirming)*\
 Hi! I can see you. `[INVENTED · e2-a2-0024]`
@@ -850,7 +860,7 @@ All of you. `[INVENTED · e2-a2-0025]`
 
 TOAST: `verified: …` *(The dots never resolve into a word. It gives up. Toast 1 of 3.)*
 
-`[W]` [11.04] (≈ 15.6 s; the meter frame) At his mark, the ENGINEER raises the phone; the product answers from the big screen.
+`[W]` [11.04] (≈ 15.7 s; the meter frame) At his mark, the ENGINEER raises the phone; the product answers from the big screen.
 
 **ENGINEER** *(to the phone, presenter-bright; a request, not a question)*\
 We've got a lot to show everybody, so I'm going to ask you to keep your answers short today. `[INVENTED · e2-a2-0026]`
@@ -865,7 +875,7 @@ A laugh from the house. In the same frame, the spotlight slides one step off Rim
 
 TEMPO · quick (CHATGTP 0.2 s); "Thanks." overlaps the last 0.55 s.
 
-`[W]` → `[SCR]` [11.05] (≈ 10.5 s)
+`[W]` → `[SCR]` [11.05] (≈ 10.6 s)
 
 **ENGINEER** *(tired; to the house, then back to the phone)*\
 Let's try that again. Describe yourself in just one word. `[INVENTED · e2-a2-0029]`
@@ -877,7 +887,7 @@ one wo-o-ord. `[INVENTED · e2-a2-0030]`
 
 A bigger laugh. The spotlight slides a second step.
 
-`[MCU]` [11.06] (≈ 8.0 s) RIMA, half in the light now, perfectly still. She clicks to the next slide exactly on the running order.
+`[MCU]` [11.06] (≈ 8.2 s) RIMA, half in the light now, perfectly still. She clicks to the next slide exactly on the running order.
 
 **RIMA** *(to the house; never rushed)*\
 It's live, so it has a few opinions. Let's show you what it can see. `[INVENTED · e2-a2-0031]`
@@ -897,14 +907,14 @@ You're making me blush. I don't have blood. `[INVENTED · e2-a2-0034]`
 
 On the big screen: `😊`, the emoji SYDNEY used in Ep1. `[W]` The third step: the spotlight is more on the screen than on her.
 
-`[SCR]` [11.08] (≈ 4.8 s) The livestream chat scrolls up the side of the big screen. One comment sticks: `is it safe?`
+`[SCR]` [11.08] (≈ 5.0 s) The livestream chat scrolls up the side of the big screen. One comment sticks: `what's the catch?`
 
 **CHATGTP** *(instantly, delighted)*\
-It's free! `[INVENTED · accurate: free users got the model · e2-a2-0035]`
+It's free! `[INVENTED · accurate: free users got the model; it answers "what's the catch?", never safety · e2-a2-0035]`
 
-The house's cold little laugh.
+The house's cold little laugh: free is the catch.
 
-`[MCU]` [11.09] (≈ 5.0 s) RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it [HOLD 1 BAR: the episode's one long hold, hers].
+`[MCU]` [11.09] (≈ 5.1 s) RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it [HOLD 1 BAR: the episode's one long hold, hers].
 
 **RIMA**\
 …and that's the demo. `[INVENTED · e2-a2-0036]`
@@ -921,13 +931,15 @@ ON SCREEN (his post, in its own UI): "her" [V · facts A23b · x.com/sama/status
 
 `[MCU]` [11.14] (≈ 2.6 s) RIMA holds her mark, composed. She doesn't look up. *(Her close made; no wince, no reproach.)*
 
-`[M]` [11.15] (≈ 8.6 s) The ENGINEER, unclipping his headset, off mic, reads it off his phone.
+`[2S]` [11.15] (≈ 7.8 s) The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it off his phone. She doesn't look up.
 
-**ENGINEER** *(off mic, lower and closer)*\
-Mas just posted. It's one word. `[INVENTED · e2-a2-0037]`
+**ENGINEER** *(off mic, to RIMA; lower and closer)*\
+Mas just posted. One word. `[INVENTED · said to a listener · e2-a2-0037]`
 
-**ENGINEER**\
-…Like the movie? The one where he falls for the computer? `[INVENTED · the film's premise only; never the actress, never the voice · e2-a2-0038]`
+**ENGINEER** *(still to her; a statement)*\
+'Her.' Like the movie. The guy and his computer. `[INVENTED · the film's premise only; never the actress, never the voice · e2-a2-0038]`
+
+*Rima's held mark is the reaction (11.14); she says nothing.*
 
 `[W]` [11.16] (≈ 3.0 s) Every head near the wings turns. The blimp over the emptying house.
 
@@ -941,9 +953,9 @@ ROOM — the emptying house; then the dark room.
 
 `SCENE:` Two things happen on the same day, and nothing in the picture ties one to the other. The win: Elgoog's day ran under NopeAI's news, and he closes it and goes back to work. The loss: his chief scientist leaves, in his own warm words, and Mas answers him in public, warmly. Why Alyi left is withheld, always.
 
-`[W]` → `[MCU]` [12.01] (≈ 5.7 s · ARRIVE: the stage as the house lights come up full, the blimp gone, the murmur thinning) On stage, the house lights come up full; the rig is empty. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.
+`[W]` → `[MCU]` [12.01] (≈ 6.3 s · ARRIVE: the stage as the house lights come up full, the blimp gone, the murmur thinning) On stage, the house lights come up full; the rig is empty. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.
 
-`[W]` [12.02] (≈ 2.9 s) The front row, from the wings, in plain house light, the house empty. The seat reserved for the chief scientist is empty.
+`[W]` [12.02] (≈ 3.3 s) The front row, from the wings, in plain house light, the house empty. The seat reserved for the chief scientist is empty.
 
 SIGN: `RESERVED: CHIEF SCIENTIST` *(the placard stays as it is)*
 
@@ -962,14 +974,14 @@ He minimises it and goes back to work. A beat.
 
 ON SCREEN (ALYI's post): "After almost a decade, I have made the decision to leave NOPEAI." · *(scroll)* "…I will miss everyone dearly." [V · facts A25; pull to [P]; name swap]
 
-`[ECU]` [12.07] (≈ 11.6 s) He types his own post, at a post's pace, and posts it. No scroll.
+`[ECU]` [12.07] (≈ 10.6 s) He types his own post, at a post's pace, and posts it. No scroll.
 
 ON SCREEN (his post, typed, hard-stopped at the crop): "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend." [P · facts A61 · x.com/sama/status/1790518031640347056; the source's own sentence case, no capital "I" on screen; name swaps]
 
 After both posts have had their read time:
 
 **MAS (V.O.)**\
-people come back. i did. `[INVENTED · V.O. 6, his want · e2-vo-06]`
+i came back. `[INVENTED · V.O. 6, his want: a fact about himself, the hope unsaid · e2-vo-06]`
 
 TEMPO · weighted: each post held for its read before the voice.
 
@@ -994,15 +1006,15 @@ AXIS — the lobby master by day. Mas at a pillar in the left third; the two sta
 
 `SCENE:` The staff want someone else to decide whether to take the flyers down, now that he's posted. Mas decides: leave them up, and puts one back himself. Then the TV gets a beat of its own: a roadmap that can't get through its own door.
 
-`[OTS-W]` [13.01] (≈ 9.3 s · ARRIVE: the staffers already under the pillars, tape in hand, the TV murmuring) The lobby by day. February's `WHERE IS ALYI?` flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor, February's complaint has become a side table. Over Mas's shoulder at his pillar, onto two STAFFERS at theirs, flyers and a roll of tape between them.
+`[OTS-W]` [13.01] (≈ 9.3 s · ARRIVE: the staffers already at the next pillar, one peeling, one smoothing, the TV murmuring) The lobby by day. February's `WHERE IS ALYI?` flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor, February's complaint has become a side table. Over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled corner off a flyer; the other smooths the tape back down on hers.
 
-**STAFFER** *(taping; to the staffer beside her)*\
+**STAFFER** *(peeling one corner; to the staffer beside her)*\
 When did anybody actually see him last? In person, I mean. `[INVENTED · facts A29 · e2-a3-0001]`
 
-**STAFFER 2** *(smoothing the tape down)*\
+**STAFFER 2** *(smoothing the tape back down on hers)*\
 In the corridor, last week. For a second. `[INVENTED · no reflection · e2-a3-0002]`
 
-`[OTS-W]` [13.02] (≈ 5.6 s) The first staffer turns to Mas, tape in hand.
+`[OTS-W]` [13.02] (≈ 5.7 s) The first staffer turns to Mas, the peeled corner still in her hand.
 
 **STAFFER**\
 He posted, though. Do we take these down now? `[INVENTED · e2-a3-0003]`
@@ -1027,7 +1039,7 @@ Senator, when does it get a vote? `[INVENTED · a generic question; no answer in
 
 An aide slaps a tenth `FORUM` sticker on the lectern. `[INVENTED business, wordless]`
 
-`[W]` [13.06] (≈ 5.7 s) Mas walks off the lobby floor, frame-right, into the open-plan office. The adventure band lights up as he crosses the threshold.
+`[W]` [13.06] (≈ 5.5 s) Mas walks off the lobby floor, frame-right, into the open-plan office. The adventure band lights up as he crosses the threshold.
 
 AFTERMATH — his upside-down flyer, a beat; then the TV's own beat and the tenth sticker.
 OUT — **Cause:** he goes to reach him. **Sound:** the open floor's band lights as he crosses, and THE CLOCK's first step carries. **Object:** his exit frame-right → his entry frame-left.
@@ -1055,29 +1067,35 @@ UI: `> where are you going?` · `> can we talk?` · `> ~~come back~~` *(greyed, 
 
 He taps the greyed `come back` first. *Bonk.*
 
-`[MCU]` [14.04] (≈ 4.6 s) Then `can we talk?`, and his own reflection mouths it back to him. No voice.
+`[MCU]` [14.04] (≈ 4.7 s) Then `can we talk?`, and his own reflection mouths it back to him. No voice.
 
 `[W]` [14.05] (≈ 3.2 s) From her ladder, DOT's orange cuff points a screwdriver at Alyi's office door.
 
 `[W]` [14.06] (≈ 4.2 s) At Alyi's door: UI `~~Open~~` is greyed. *Bonk.* The knock shakes Ep1's yellowed note off the door frame; it flutters down into his inventory, which is his pocket. UI: `Pick up note`. *(At the spread's scale: no insert, no tag, not in his colour. It is never defined in Ep2.)*
 
-`[W]` → `[2S]` [14.07] (≈ 4.8 s) Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him.
+`[W]` → `[2S]` [14.07] (≈ 4.7 s) Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him.
 
 PLATE: `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` [V · facts A26]
 
-The strip offers one line, and Mas takes it at once: UI `congratulations.`
+The strip offers one line, and Mas takes it at once: the box types `congratulations.` as he says it.
+
+**MAS** *(the strip's line, said as the box types it; plain, meant)*\
+congratulations. `[INVENTED · the chosen strip line, voiced: Bukaj hears and answers it · e2-a3-0023]`
 
 `[2S]` [14.08] (≈ 10.8 s) Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest.
 
 **BUKAJ** *(soft, exact)*\
 Thank you. It's still warm. `[INVENTED · e2-a3-0006]`
 
-UI: `need anything?` *(Mas takes it; the box types it.)*
+UI: `need anything?` *(Mas takes it; the box types it as he says it.)*
+
+**MAS**\
+need anything? `[INVENTED · the strip's second line, voiced · e2-a3-0024]`
 
 **BUKAJ** *(soft, exact; he doesn't take his hand off the armrest)*\
 Not yet. I'd like a week in it before anyone asks me for a schedule. `[INVENTED · on the job, not on Alyi · e2-a3-0007]`
 
-TEMPO · normal; Bukaj soft and exact.
+TEMPO · normal (Mas and Bukaj 0.5 s); Bukaj soft and exact.
 
 `[W]` [14.09] (≈ 3.4 s) EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks.
 
@@ -1085,7 +1103,7 @@ CARD: `EKIEL / CO-LED THE SAFETY TEAM.` · stat `SQUINT: 100%` [2-TONE FREEZE ·
 
 `[HIGH]` [14.10] (≈ 6.0 s) He sets his resignation thread down as one domino, standing in its own UI:
 
-ON SCREEN (EKIEL's post, the domino, `MAY 17`): "Over the past few months my team has been sailing against the wind." [V · facts A27: the thread's first sentence]
+ON SCREEN (EKIEL's post, the domino, `MAY 17`): "Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI." [V · facts A27: the thread's first post; name swap]
 
 He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.
 
@@ -1093,7 +1111,7 @@ He walks out. The domino topples across the floor and stops against the toe of M
 
 SIGN (the plate): `SUPERALIGNMENT` / `SAFETY TEAM` · the box `MISC`, its label `MAY 17` [V · facts A27: the disbanding]
 
-`[W]` [14.12] (≈ 4.0 s) Back at Alyi's door, Mas tries the other verb: UI `Pivot door`. It turns on its centre pin. The old chair's hum swells.
+`[W]` [14.12] (≈ 4.1 s) Back at Alyi's door, Mas tries the other verb: UI `Pivot door`. It turns on its centre pin. The old chair's hum swells.
 
 AFTERMATH — the plate in the box; then his hand on Alyi's door as it pivots.
 OUT — **Cause:** the door he couldn't open turns on its pin, and evening has come. **Sound:** the old chair's hum swells and rings over the cut (L). **Object:** the pivoting door → the same door from inside the office.
@@ -1108,9 +1126,9 @@ AXIS — the desk centre, where the chair used to be; the door screen-right. Mas
 
 `[W]` [15.01] (≈ 2.6 s · ARRIVE: the empty office as the carried hum stops) An empty office: a desk with no chair. Carried over the cut, the chair's hum sounds where it stood, and stops. Mas sits on the edge of the desk.
 
-`[ECU]` [15.02] (≈ 3.6 s) On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both collapsed to their dates and first lines: `NOV 20, 2023` · `♥ ♥ ♥` · `MAY 14, 2024` [P · Ep1; facts A25].
+`[ECU]` [15.02] (≈ 3.5 s) On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both collapsed to their dates and first lines: `NOV 20, 2023` · `♥ ♥ ♥` · `MAY 14, 2024` [P · Ep1; facts A25].
 
-`[MCU]` [15.03] (≈ 7.2 s) Mas on the desk's edge. A face light, one step. For one second, far off, Alyi's voice from launch night:
+`[MCU]` [15.03] (≈ 7.1 s) Mas on the desk's edge. A face light, one step. For one second, far off, Alyi's voice from launch night:
 
 **ALYI** *(Ep1's own take, far off)*\
 Six years and eleven months. `[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13 · e2-a3-0008]`
@@ -1156,7 +1174,7 @@ Its ripple turns warm and breaks into string lights.
 > **CROWD**\
 > "FEEL THE AGI! FEEL THE AGI!" `[V · facts A56 · e2-a3-0010]`
 >
-> `[2S]` [15.07] (≈ 8.7 s; across the crowd: Alyi cropped by the light swag, Mas small in the crowd) His raised hand finds Mas, the only one not chanting, a glass in his hand. Under the chant, a word between them.
+> `[2S]` [15.07] (≈ 9.5 s; across the crowd: Alyi cropped by the light swag, Mas small in the crowd) His raised hand finds Mas, the only one not chanting, a glass in his hand. Under the chant, a word between them.
 >
 > **ALYI** *(delighted to catch him)*\
 > You're not chanting. `[INVENTED · e2-a3-0011]`
@@ -1165,11 +1183,11 @@ Its ripple turns warm and breaks into string lights.
 > someone has to hold the glass. `[INVENTED · e2-a3-0012]`
 >
 > **ALYI** *(laughing)*\
-> Then feel it for both of us. `[INVENTED · e2-a3-0013]`
+> Then I'll feel it for both of us. `[INVENTED · e2-a3-0013]`
 >
 > TEMPO · quick and warm under the chant (Mas 0.45 s; Alyi 0.25 s).
 >
-> `[ECU]` [15.08] (≈ 6.2 s) He holds up his phone, Mas's old app open on it: `CHECK IN` → he types `feel the agi`, and turns the screen to Mas, grinning. Mas raises his glass.
+> `[ECU]` [15.08] (≈ 6.0 s) He holds up his phone, Mas's old app open on it: `CHECK IN` → he types `feel the agi`, and turns the screen to Mas, grinning. Mas raises his glass.
 >
 > `[W]` [15.09] (≈ 3.3 s) The racks in the corner hum along. At the chant's peak their status lights become token streams that run across the whole room, him included. [GLYPH · 12 FRAMES, on the room, never in his eyes]
 >
@@ -1178,11 +1196,11 @@ Its ripple turns warm and breaks into string lights.
 > `[2S]` [15.10] (≈ 8.9 s) This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI:
 >
 > `RAIL: 2023`
-> ON SCREEN (the post): `INTRODUCING SUPERALIGNMENT · ALYI, EKIEL` · "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue." [V·press · facts A63; open the post; its numbers don't print]
+> ON SCREEN (the post): `INTRODUCING SUPERALIGNMENT · ALYI, EKIEL` · "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue." [V·press · facts A63: a later sentence of the post, verbatim (it opens "We need scientific and technical breakthroughs…"); open the post; its numbers don't print]
 >
 > EKIEL beside him, squinting at it.
 >
-> `[2S]` [15.11] (≈ 6.1 s)
+> `[2S]` [15.11] (≈ 6.0 s)
 >
 > **EKIEL** *(quiet, dry)*\
 > Nobody knows how to do this yet. `[INVENTED · e2-a3-0014]`
@@ -1194,13 +1212,13 @@ Its ripple turns warm and breaks into string lights.
 >
 > **Turn** (a crosscut; it claims no order between the two).
 >
-> `[ECU]` [15.12] (≈ 3.1 s) His finger above the bare Publish button, as Mas's was in sc 4.
+> `[ECU]` [15.12] (≈ 3.0 s) His finger above the bare Publish button, as Mas's was in sc 4.
 >
-> `[W]` [15.13] (≈ 4.6 s) A leadership offsite at night: a wooden effigy, a paperclip robot, stencilled `UNALIGNED` [V · facts A56; the design is ours]. Staff in silhouette. ALYI, half cut off by a lodge doorway, carries the flame to it himself, his face lit and calm.
+> `[W]` [15.13] (≈ 4.5 s) A leadership offsite at night: a wooden effigy, a paperclip robot, stencilled `UNALIGNED` [V · facts A56; the design is ours]. Staff in silhouette. ALYI, half cut off by a lodge doorway, carries the flame to it himself, his face lit and calm.
 >
 > `[ECU]` [15.14] (≈ 1.8 s) He presses it.
 >
-> `[W]` [15.15] (≈ 4.6 s) The effigy catches. *(Palette-cycled fire, never strobing.)*
+> `[W]` [15.15] (≈ 4.5 s) The effigy catches. *(Palette-cycled fire, never strobing.)*
 >
 > **Out.**
 >
@@ -1228,9 +1246,9 @@ MUSIC — **E02-10 The Bridge.** SET-PIECE SWING, the full band in 4-bar phrases
 ROOM — the bridge's traffic, right to left, wind off the water (a stalled variant); the night (sparse traffic, a far foghorn); then a moving morning and rain on an umbrella.
 AXIS — Mas mid-span in the left third, facing the city; the traffic runs right to left behind him. THE FORECASTER on the far pedestrian lane from screen-right; he crosses to stand screen-right of Mas, and leaves screen-right.
 
-`SCENE:` The papers go public. A man who left refuses to sign in front of Mas, at a price, without needing a number. Mas, caught out, scrambles with a still face, says the fix aloud, holds the post until the fix is real, and apologises the next afternoon. Then the voice: letters he can't answer, and his own thumb on Pause. What he knew about the clause, and whether the voice was meant to sound like anyone, are contested: nothing tells us.
+`SCENE:` The papers go public. A man who left refuses to sign in front of Mas, at a price, without needing a number. Mas scrambles with a still face, says the fix aloud, holds the post until the fix is real, and apologises the next afternoon. Then the voice: letters he can't answer, and his own thumb on Pause. What he knew about the clause, and whether the voice was meant to sound like anyone, are contested: nothing tells us.
 
-**Phrase 1.** `[W]` [17.01] (≈ 4.4 s · ARRIVE: NopeAI's front doors, the receipt already pouring out, the Forecaster stepping out beside it, the band in) The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER steps out of the same doors with a clipboard of dates, the first person beside it, and looks down at it.
+**Phrase 1.** `[W]` [17.01] (≈ 4.4 s · ARRIVE: NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in) The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER walks up from the street with a clipboard of dates, the first person to stop beside it, and looks down at it. *(He comes from the street, not out of the building: he had already left.)*
 
 `RAIL: MAY 17, 2024` [V·press · facts A31]
 
@@ -1252,7 +1270,7 @@ Here's where I am. If I sign, I keep what I've vested, and I never say a bad wor
 **DRIVER**\
 You gonna think it over, or can we move? We're parked on it. `[INVENTED · the receipt has stopped traffic · e2-a3-0017]`
 
-`[W]` [17.06] (≈ 7.0 s; back across the lanes)
+`[W]` [17.06] (≈ 6.9 s; back across the lanes)
 
 **THE FORECASTER** *(letting the pen go)*\
 Already did. It's the one thing I didn't need a number for. `[INVENTED · keep list, word for word; his refusal reads as already made (facts A32) · e2-a3-0018]`
@@ -1261,30 +1279,33 @@ The chain draws the pen back into the paper.
 
 TEMPO · the Forecaster weighted; the driver quick (0.3 s); the answer normal (0.5 s).
 
-`[W]` [17.07] (≈ 4.7 s) Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.
+`[W]` [17.07] (≈ 4.5 s) Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.
 
 **Phrase 3, the scramble.** *(Quick cuts on his hands; one locked MCU of his face, which never moves.)*
 
 `[ECU]` [17.08] (≈ 4.8 s) His phone won't stop: staff screenshots of a clause; a grey tile, `LEGAL · call me` (an icon, never named, never heard); a second `request for comment`.
 
-`[MCU]` [17.09] (≈ 6.8 s; locked on his face) He calls LEGAL. We hear only his side, level and a hair quicker than he ever talks.
+`[MCU]` [17.09] (≈ 6.3 s; locked on his face) He calls LEGAL. We hear only his side, level, and quicker than he ever talks.
 
 **MAS** *(on the call)*\
 everyone who signed one. find them. all of them. today. `[INVENTED · about the fix he made public (facts A31); nothing about what he knew · e2-a3-0019]`
 
-`[ECU]` [17.10] (≈ 4.6 s) A draft opened, typed, deleted, typed: its words grey bars, no legible word.
+`[ECU]` [17.10] (≈ 4.6 s) A draft opened, typed, deleted, typed: its words grey bars, no legible word, and no voice over it.
 
-`[MCU]` [17.11] (≈ 2.8 s) His face doesn't move. The receipt is still unrolling under his shoes.
+`[MCU]` [17.11] (≈ 4.3 s) His face doesn't move. The receipt is still unrolling under his shoes.
 
-**Phrase 4.** `[MCU]` [17.12] (≈ 8.4 s) THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.
+**MAS (V.O.)** *(faster than he thinks; each item a new call, not louder)*\
+everyone who signed. the post. everyone who signed. `[INVENTED · V.O. 9, his rattled tell (the count repeats) on his still face: the fix's items, nothing about what he knew · e2-vo-09]`
+
+**Phrase 4.** `[MCU]` [17.12] (≈ 8.3 s) THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.
 
 **THE FORECASTER** *(to Mas, pleasantly)*\
 I've got a forecast on you. Median: an apology, within the hour, in lowercase. `[INVENTED · e2-a3-0020]`
 
-`[ECU]` [17.13] (≈ 7.5 s) Mas's thumb hovers over `Post`. He doesn't press.
+`[ECU]` [17.13] (≈ 5.3 s) Mas's thumb hovers over `Post`. He doesn't press.
 
 **MAS (V.O.)**\
-not within the hour. the fix first. then the post. `[INVENTED · V.O. 9, plan: the fix; never what he knew · e2-vo-09]`
+not until legal has every name. `[INVENTED · V.O. 10, plan: his own condition for the post, a reply to nobody; never what he knew · e2-vo-10]`
 
 `[W]` [17.14] (≈ 2.0 s; one held wide) The night: the bridge's lights cycle once (a palette cycle, no strobe). Mas still on the receipt. The Forecaster asleep against the rail, clipboard on his chest.
 
@@ -1309,13 +1330,13 @@ He finds a line on the receipt, reads it, and very carefully takes his hand off 
 
 `RAIL: MAY 20` [V·press · facts A33]
 
-`[W]` [17.18] (≈ 7.0 s) It rains letterhead. The receipt's ink runs down the lanes in the rain. *Egg: far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.*
+`[W]` [17.18] (≈ 6.8 s) It rains letterhead. The receipt's ink runs down the lanes in the rain. *Egg: far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.*
 
 `[POV]` [17.19] (≈ 4.4 s) His rain-beaded phone: the voice menu, five live waveforms. His thumb finds `VOICE 5` and taps `Pause`. The slot greys; its `Hey.` greys under it: `VOICE 5 [PAUSED]` [V·press · facts A33].
 
-`[ECU]` [17.20] (≈ 3.6 s) Beside it, his company's note pops up in its own UI:
+`[ECU]` [17.20] (≈ 5.4 s) Beside it, his company's post pops up in its own UI:
 
-ON SCREEN (NOPEAI's note, two fragments): "…not an imitation… her own natural speaking voice." [V · facts A64; no name appears]
+ON SCREEN (NOPEAI's post, two fragments, the second a beat after the first): "We've heard questions about how we chose the voices…" · "…We are working to pause the use of…" [V · facts A64: cropped before the voice's name; it claims nothing about how the voice was made]
 
 `[W]` [17.21] (≈ 4.6 s) The blimp sags three pixels, its running lights clicking off one by one. The last one clicks off: the DREAD sting.
 
@@ -1338,7 +1359,7 @@ AXIS — LEFT, the boardroom: Mas at the table's near end, screen-left; TERB at 
 
 `SCENE:` The answer Ep1 withheld, in a former board member's own voice, with the board's reply beside it; Mas holds still. Then the rhyme on one action: two lanyards over two heads. Mas takes a seat in the room where his company's safety gets decided; across the bay, Mario recruits the careful one who left, by agreeing with him.
 
-`[W]` [18.01] (≈ 6.5 s · ARRIVE: full frame on the lighthouse, the beacon already turning) The lighthouse, built from stacked essays, its spiral stair made of bound drafts. EKIEL climbs it, carrying the box he walked out with. At the top, ADELINA raises a lanyard.
+`[W]` [18.01] (≈ 6.1 s · ARRIVE: full frame on the lighthouse, the beacon already turning) The lighthouse, built from stacked essays, its spiral stair made of bound drafts. EKIEL climbs it, carrying the box he walked out with. At the top, ADELINA raises a lanyard.
 
 `RAIL: MAY 28, 2024` [P · facts A36; facts A35]
 
@@ -1354,9 +1375,9 @@ Full frame `[SCR]` [18.03] (≈ 8.5 s · ARRIVE: the boardroom with the TV alrea
 **NELEH**\
 "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…" `[V · facts A38; cropped before its next clause · e2-a4-0002]`
 
-`[SCR]` [18.05] (≈ 4.0 s) Under it, the board's same-day reply, one sentence in its own statement card:
+`[SCR]` [18.05] (≈ 4.2 s) Under it, the board's same-day reply, one sentence in its own statement card:
 
-ON SCREEN (the board's card): "We are disappointed that NELEH continues to revisit these issues." — TERB, CHAIR [V·press · facts A65; its first sentence only]
+ON SCREEN (the board's card): "We are disappointed that Ms. NELEH continues to revisit these issues." — TERB, CHAIR [V·press · facts A65; its first sentence only; only the name changes]
 
 TEMPO · weighted: her own pace; the card held for its read.
 
@@ -1367,24 +1388,24 @@ First item. `[INVENTED · e2-a4-0003]`
 
 *No V.O. through the podcast, the card or his face.*
 
-`[M]` → SPLIT [18.07] (≈ 4.0 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel; it's printed on page `212` of a Mario draft. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
+`[M]` → SPLIT [18.07] (≈ 3.8 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel; it's printed on page `212` of a Mario draft. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
 
-LEFT *(the right pane steps down a rung)*. [18.08] (≈ 10.7 s)
+LEFT *(the right pane steps down a rung)*. [18.08] (≈ 11.4 s)
 
 **TERB** *(brisk, procedural)*\
 First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it. `[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36) · e2-a4-0004]`
 
-**TERB** *(looking up; a hand round the table on "We do.")*\
-So, who checks it? We do. `[INVENTED · e2-a4-0005]`
+**TERB** *(brisk, reading the next line like a roll call; he doesn't look up)*\
+Members: myself, two directors, and our chief executive. `[INVENTED · paraphrase of the post's membership (facts A36: the chair, two directors, the CEO) · e2-a4-0005]`
 
-`[M]` [18.09] (≈ 3.1 s; inside the left pane, at table level) Every face at the table turns to Mas [HOLD 2 BEATS: the table's].
+`[M]` [18.09] (≈ 3.0 s; inside the left pane, at table level) On "our chief executive.", every face at the table turns to Mas [HOLD 2 BEATS: the table's].
 
 **MAS**\
 present. `[INVENTED · e2-a4-0006]`
 
 The 808 drops out. Mada writes one word in the minutes.
 
-[18.10] (≈ 13.9 s)
+[18.10] (≈ 14.1 s)
 
 **TERB** *(brisk)*\
 And at the end of the ninety days, we take our recommendations to the full board, which is… `[INVENTED · paraphrase of the post (facts A36) · e2-a4-0007]`
@@ -1394,14 +1415,14 @@ The table turns to Mas again.
 **MAS**\
 also present. `[INVENTED · accurate: he is on both (facts A36) · e2-a4-0008]`
 
+Mada writes a second word. The table holds its breath, about 1.5 s.
+
 **MAS (V.O.)**\
-the room where it's decided. i'm in it. `[INVENTED · V.O. 10, the room goal Ep1 set ("someone gets to be in the room. i'm glad it's me.") · e2-vo-10]`
+the next one's already training. `[INVENTED · V.O. 11, plan: the next model; new information from the same May 28 post (facts A36); his priority, nothing about the committee · e2-vo-11]`
 
-Mada writes a second word.
+TEMPO · quick (Terb); Mas at 0.45–0.6 s; the V.O. weighted, after the hold (2.3 s).
 
-TEMPO · quick (Terb); Mas at 0.45–0.6 s.
-
-RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 9.0 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
+RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.9 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
 
 **MARIO** *(still writing; warm and precise)*\
 Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes. `[INVENTED · e2-a4-0009]`
@@ -1412,14 +1433,14 @@ You annotated my resignation? `[INVENTED · e2-a4-0010]`
 **MARIO**\
 Lightly. Four pages. `[INVENTED · e2-a4-0011]`
 
-`[ECU]` [18.12] (≈ 6.7 s; an insert, the line readable at 1080p) Four pages; one line highlighted in yellow, Ekiel's own:
+`[ECU]` [18.12] (≈ 7.4 s; an insert, the line readable at 1080p) Four pages; one line highlighted in yellow, Ekiel's own:
 
 ON SCREEN (the highlighted line): "Building smarter-than-human machines is an inherently dangerous endeavor." [V · facts A27: his own post in the May 17 thread]
 
-**MARIO**\
+**MARIO** *(pleased; a small beat before the word the joke turns on)*\
 We agree. I underlined 'inherently.' `[INVENTED · e2-a4-0012]`
 
-[18.13] (≈ 11.7 s; the right pane) The beacon swings past a glass case of CLOD boxes, and each one glints as the light passes; the last box's art is the Golden Gate Bridge *(egg, never named: facts A34)*. MARIO, finger rising:
+[18.13] (≈ 11.0 s; the right pane) The beacon swings past a glass case of CLOD boxes, and each one glints as the light passes; the last box's art is the Golden Gate Bridge *(egg, never named: facts A34)*. MARIO, finger rising:
 
 **MARIO**\
 There's a brief document. `[INVENTED · e2-a4-0013]`
@@ -1430,7 +1451,7 @@ A scroll drops down the stairwell. The pane pans with it, down the spiral, past 
 That's the brief one? `[INVENTED · e2-a4-0014]`
 
 **MARIO** *(setting his pen down for the first time)*\
-That's the brief one. It'd be shorter, but I have one concern. `[INVENTED · e2-a4-0015]`
+That's the brief one. It only has the one concern. `[INVENTED · e2-a4-0015]`
 
 `[MCU]` [18.14] (≈ 3.1 s; inside the right pane, the left pane holding beside it with Mas in it) Mario, finger up.
 
@@ -1441,7 +1462,7 @@ TEMPO · quick (Mario and Ekiel, 0.2–0.25 s); "It's that we might win." normal
 
 *Egg: on the desk, an op-ed clipping, byline `NELEH & THE QUIET VOTE` (facts A37).*
 
-[18.15] (≈ 3.8 s; the left pane) In his pane, Mas's phone, face up on the table, lights with a reminder: UI `ELPPA · KEYNOTE · JUN 10` (sc 8's invite). He turns it over.
+[18.15] (≈ 3.6 s; the left pane) In his pane, Mas's phone, face up on the table, lights with a reminder: UI `ELPPA · KEYNOTE · JUN 10` (sc 8's invite). He turns it over.
 
 AFTERMATH — the reminder on his phone; he turns it over.
 OUT — **Cause:** the deal he closed in May comes due: his calendar says Jun 10. **Sound:** the quartet carries; the keynote's walk-on music comes up under it (J 0.8 s). **Object:** the reminder card on his phone → the lobby's wall screen, the same place in frame.
@@ -1461,7 +1482,7 @@ SIGN: `DAYS SINCE SOMEONE TRIED TO FIRE MAS: 202` · `DAYS SINCE SOMEONE SUED MA
 
 `[SCR]` [19.02] (≈ 1.6 s) On the corner TV, muted: the roadmap lectern, still stuck at `FLOOR`, a tally on it now: `0 BILLS` [H · facts A66].
 
-`[W]` [19.03] (≈ 3.9 s) The doors open. HARAS walks in along the path the hand truck took in February, a calculator tape unspooling behind her, and drops onto the beanbag beside Gerg.
+`[W]` [19.03] (≈ 3.8 s) The doors open. HARAS walks in along the path the hand truck took in February, a calculator tape unspooling behind her, and drops onto the beanbag beside Gerg.
 
 PLATE: `HARAS · FIRST CFO` [V · facts A42]
 
@@ -1504,26 +1525,35 @@ The lobby laughs. GERG, the only one not cheering, takes out his phone.
 
 ON SCREEN (his post, in its own UI): "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it." [V · facts A67 · x.com/sama/status/1800237314360127905; verbatim, his lowercase; name swaps]
 
-`[W]` → `[MCU]` [19.08] (≈ 7.7 s) On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.
+`[W]` → `[MCU]` [19.08] (≈ 7.1 s) On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.
 
 **MAS (V.O.)**\
-their new phones first. then every model after this one. `[INVENTED · V.O. 11, plan: distribution, then the models to come · e2-vo-11]`
+whatever we ship next goes in their phones too. `[INVENTED · V.O. 12, plan: distribution · e2-vo-12]`
 
-`[MCU]` ↔ `[MCU]` [19.09] (≈ 10.1 s; crosscut: Mas on the lawn, phone to his ear, the base; Gerg in the cheering lobby, the cut-ins) Gerg calls.
+`[MCU]` ↔ `[MCU]` [19.09] (≈ 8.7 s; crosscut: Mas on the lawn, phone to his ear, the base; Gerg in the cheering lobby, the cut-ins) Gerg calls.
 
 **GERG** *(on the call; fond)*\
-You're there, and you're posting about it from the lawn. There's a screen the size of a building in front of you. `[INVENTED · e2-a4-0024]`
+There's a screen the size of a building in front of you, and you're on your phone. `[INVENTED · e2-a4-0024]`
 
 **MAS** *(eyes still on the stage)*\
 the phone's closer. `[INVENTED · e2-a4-0025]`
 
-[19.10] (≈ 13.9 s; the crosscut)
+[19.10] (≈ 18.4 s; the crosscut)
 
 **GERG**\
-They just said our name up there. Half the lobby's standing on a beanbag. `[INVENTED · e2-a4-0026]`
+They just said our name up there. `[INVENTED · e2-a4-0026]`
 
 **MAS**\
 i heard. `[INVENTED · e2-a4-0027]`
+
+**GERG** *(delighted; behind him, they are)*\
+Half the lobby's standing on a beanbag. `[INVENTED · e2-a4-0033]`
+
+**MAS** *(eyes still on the stage; his precision question)*\
+which half? `[INVENTED · e2-a4-0034]`
+
+**GERG** *(literal, helpful)*\
+The half on the beanbags. `[INVENTED · e2-a4-0035]`
 
 **GERG** *(eyes on the stream, then on him)*\
 You ever miss being up there? `[INVENTED · e2-a4-0028]`
@@ -1531,7 +1561,7 @@ You ever miss being up there? `[INVENTED · e2-a4-0028]`
 **MAS** *(the fact, not the feeling)*\
 i was up there once. they let me hold the clicker. `[INVENTED · keep list · e2-a4-0029]`
 
-TEMPO · normal; Mas at 0.45 s; Gerg's last question weighted (0.9 s), and Mas's answer (0.6 s).
+TEMPO · normal; Mas at 0.45 s; Gerg's literal answer quick (0.25 s); his last question weighted (0.9 s), and Mas's answer (0.6 s).
 
 `[POV]` [19.11] (≈ 2.0 s) A push from his face into his phone, full-bleed: a dotted line draws itself across the stream's stage in a few quick strokes, a GPS breadcrumb in colours older than the phone, crossing the boards he once stood on.
 
@@ -1545,7 +1575,7 @@ TEMPO · normal; Mas at 0.45 s; Gerg's last question weighted (0.9 s), and Mas's
 >
 > `[W]` [19.13] (≈ 4.3 s) A match on the pin: 2008, this company's stage, the intro's own frame. Two polos, both collars popped [V · facts A55]. THE SLEEVE tosses him the clicker, and he catches it. The tiled 2008 crowd applauds.
 >
-> `[W]` [19.14] (≈ 6.1 s) He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads `LAST UPDATED 2012` [V · the app shut down in 2012; the greying is ours, and no cause is claimed].
+> `[W]` [19.14] (≈ 6.0 s) He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads `LAST UPDATED 2012` [V · the app shut down in 2012; the greying is ours, and no cause is claimed].
 >
 > `[ECU · MATCH]` [19.15] (≈ 3.1 s) The clicker in his 2008 hand becomes his 2024 phone, in the same grip, his post from the lawn still on its screen.
 
@@ -1555,7 +1585,7 @@ TEMPO · normal; Mas at 0.45 s; Gerg's last question weighted (0.9 s), and Mas's
 
 `[M]` → `[W]` [19.17] (≈ 10.0 s; phrase 2) Inside, beds of phone-shaped flowers. At each one the bubble stops, raises one tiny hand, and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice *(voice 5 is paused)* [V · facts A40: the ask-before-sending flow]. On a bench sits IRIS, a small progress bar with a face, stuck at `99%`.
 
-`[2S]` [19.18] (≈ 10.6 s; phrase 3, held) Outside the hedge: Mas, screen-left, phone in hand, watching the raised hands go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
+`[2S]` [19.18] (≈ 8.5 s; phrase 3, held) Outside the hedge: Mas, screen-left, phone in hand, watching the raised hands go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
 
 **RADNUS** *(to Mas, along the hedge; quick, gracious)*\
 Lovely garden. I see they let your chatbot in. `[INVENTED · e2-a4-0030]`
@@ -1563,12 +1593,9 @@ Lovely garden. I see they let your chatbot in. `[INVENTED · e2-a4-0030]`
 **MAS** *(not looking away from the row; dry, unbothered: terms he set)*\
 as a guest. `[INVENTED · keep list · e2-a4-0031]`
 
-Radnus's polite smile holds a beat too long.
+Radnus's polite smile holds a beat too long, and nobody says anything else.
 
-**MAS (V.O.)**\
-they ask first in there. `[INVENTED · V.O. 12, his want · e2-vo-12]`
-
-TEMPO · quick (Mas at 0.45 s); the V.O. weighted.
+TEMPO · quick (Mas at 0.45 s); then the held smile (about 2 s).
 
 `[W]` [19.19] (≈ 3.6 s; the reverse, from inside the garden) Through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock, as tall as MIT KOOC, turns once. Mas is on the outside of it, screen-right: the one shot where he loses the left third.
 
@@ -1585,7 +1612,7 @@ AXIS — LEFT pane, the campus: Mas screen-left. RIGHT pane, the zAI lobby: the 
 
 `SCENE:` The rival who hates the deal answers Mas's post: a ban if it goes through, and a cage for visitors' phones, his own first. The next morning, a day before a judge would hear the motion to dismiss it, the complaint leaves Mas's lobby on a rope, for now. Mas takes his own flyer down and finds the old note still in his jacket. A week later, Alyi says where he is, in his own words, and Mas stands.
 
-SPLIT [20.01] (≈ 2.9 s · ARRIVE: the thinning crowd as the quartet's pedal carries over) LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby. A brand-new birdcage at the doors, its shipping tag still on; from the rafters, a banner that has clearly been up a while: `KORG 2: NEXT QUARTER`. NOLE's phone lights with Mas's post.
+SPLIT [20.01] (≈ 3.5 s · ARRIVE: the thinning crowd as the quartet's pedal carries over) LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby. A brand-new birdcage at the doors, its shipping tag still on; from the rafters, a banner that has clearly been up a while: `KORG 2: NEXT QUARTER`. NOLE's phone lights with Mas's post.
 
 SPLIT, RIGHT [20.02] (≈ 7.6 s) His lamp clicks on. His own post goes up:
 
@@ -1600,7 +1627,7 @@ He puts his own phone in the cage, shuts its door and snaps the padlock.
 
 TEMPO · quick in the split; the lobby normal; Alyi's post and Mas's face weighted.
 
-SPLIT, RIGHT `[ECU]` [20.04] (≈ 2.4 s) Inside the cage, his phone starts to buzz: replies to his own post, stacking up where he can't reach them (nothing legible). He looks at the padlock, then at his empty hands. The lamp clicks off.
+SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.0 s) Inside the cage, his phone starts to buzz: replies to his own post, stacking up where he can't reach them (nothing legible). He looks at the padlock, then at his empty hands. The lamp clicks off.
 
 `[W]` [20.05] (≈ 4.8 s · ARRIVE: the lobby on its morning bed, the confetti already swept; the cage's bars become the lobby's rack pillars as the divider slides away) The NopeAI lobby, morning. The confetti swept into a pile; the staff taking the party down, and the flyers with it. Mas, at the back with his glass, peels his own upside-down flyer off the pillar, folds it and puts it inside his jacket.
 
@@ -1608,10 +1635,10 @@ SPLIT, RIGHT `[ECU]` [20.04] (≈ 2.4 s) Inside the cage, his phone starts to bu
 
 `[ECU]` [20.06] (≈ 1.2 s) His fingers find something already in there: the yellowed corner of the old note. No words legible.
 
-`[W]` [20.07] (≈ 6.9 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it.
+`[W]` [20.07] (≈ 5.7 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it.
 
 **MAS (V.O.)**\
-we raise again in the fall. haras needs a number by then. `[INVENTED · V.O. 13, plan: the money behind the next model; true (Ep3's facts) · e2-vo-13]`
+we raise in the fall. she has till then. `[INVENTED · V.O. 13, plan: the money behind the next model; "she" is Haras, in frame; true (Ep3's facts) · e2-vo-13]`
 
 `[ECU]` [20.08] (≈ 2.2 s; full frame) In the middle of the floor, the complaint has sat since February, coffee cups on it. Its docket tab:
 
@@ -1672,20 +1699,20 @@ OUT — **Cause:** summer; the news keeps coming. **Sound:** the Door resolves w
 
 ## TAG · "august"
 
-### 23. INT. THE DARK ROOM — NIGHT · AUG 5 → AUG 22, 2024 [BASE · 2.E TERMINAL for the Orb's scan] · MONTAGE on his monitor · P sc 23
+### 23. INT. THE DARK ROOM — NIGHT · AUG 5 → AUG 21, 2024 [BASE · 2.E TERMINAL for the Orb's scan] · MONTAGE on his monitor · P sc 23
 
-MUSIC — **E02-13 August.** THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato), a knee stab on each item; it holds its pedal under the suit's landing; the Orb's F chime, then its verdict a beat later (F → C on vibes and glass). Under the Aug 22 lower third THE RUN thins to its pedal and a neutral text blip carries his words. **RUMPT's Podium in its FEAR colour** (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only, thinning to one held chord under Mas's face. Out: cut on the downbeat to black.
+MUSIC — **E02-13 August.** THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato), a knee stab on each item; it holds its pedal under the suit's landing; the Orb's F chime, then its verdict a beat later (F → C on vibes and glass). Under the Aug 21 lower third THE RUN thins to its pedal and a neutral text blip carries his words. **RUMPT's Podium in its FEAR colour** (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only, thinning to one held chord under Mas's face. Out: cut on the downbeat to black.
 ROOM — the dark room. The framed `GUEST` lanyard from Ep1 on the wall.
 AXIS — over Mas's right shoulder onto the monitor, as in sc 8.
 
-`SCENE:` Summer, three dated beats running forward, then the hook. The suit comes back, calmer; the candidate claims a crowd was fake and the Orb proves it real, a good week for Mas's other company; the candidate, on AI fakes of himself, says it's a little dangerous out there, and ties a balloon shaped like Mas's chatbot to his podium. Something takes hold of the string.
+`SCENE:` Summer, three dated beats running forward, then the hook. The suit comes back, calmer; the candidate claims a crowd was fake and the Orb proves it real, in an election year, his other company's business; the candidate, on AI fakes of himself, says it's a little dangerous out there, and ties a balloon shaped like Mas's chatbot to his podium. Something takes hold of the string.
 
 `[OTS]` [23.01] (≈ 4.6 s · ARRIVE: his back as he sits at the desk, sc 22's match, the monitor's glow on) His back as he sits. Something heavy lands on the desk from above: THUD.
 
 `RAIL: AUG 5`
 ON SCREEN (the cover): `NOLE v. MANALT ET AL. · FEDERAL COURT` [V · facts A48] · stuck to it, the `(FOR NOW)` note, crossed out
 
-`[ECU]` [23.02] (≈ 3.7 s) Page one: `!!`. Page two: `!`. Page three: `.` He slides it aside so he can see the monitor.
+`[ECU]` [23.02] (≈ 4.3 s) Page one: `!!`. Page two: `!`. Page three: `.` He slides it aside so he can see the monitor.
 
 `[POV]` [23.03] (≈ 4.2 s) The candidate's post arrives all at once, in its own UI (his text never types). The photo: a rally crowd under SIRRAH's plate, a `SUMMER 2024` decal on its corner.
 
@@ -1698,19 +1725,19 @@ TOAST: `verified: human (all of them)` *(toast 3 of 3)*
 
 It floats back. In a background tab, an egg sits on a bill *(Ep3's)*.
 
-`[OTS]` [23.05] (≈ 4.3 s) Mas at the monitor, the toast cleared.
+`[OTS]` [23.05] (≈ 3.0 s) Mas at the monitor, the toast cleared.
 
 **MAS (V.O.)**\
-a good week for the other company. `[INVENTED · V.O. 14, plan: proof of personhood; pays Ep1's "my other company. for when it gets harder to tell." · e2-vo-14]`
+sixty elections this year. `[INVENTED · V.O. 14, plan: proof of personhood, as a count (facts A71); the Orb's market; pays Ep1's "my other company. for when it gets harder to tell." through the Orb · e2-vo-14]`
 
 TEMPO · normal: the run's items each held for their read; the voice after the toast clears.
 
 `[POV]` [23.06] (≈ 4.6 s) A TV interview in its own player: hands and tie only, no face, no voice.
 
-`RAIL: AUG 22`
-LOWER THIRD (the broadcast's own): "…having me speak… It's a little bit dangerous out there." [V·press · facts A69: about AI fakes of himself; fragments, verbatim]
+`RAIL: AUG 21`
+LOWER THIRD (the broadcast's own): "…having me speak… It's a little bit dangerous out there." [V·press · facts A69: the Fox Business interview that aired Aug 21; about AI fakes of himself; fragments, verbatim]
 
-`[POV]` [23.07] (≈ 5.1 s) The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all: Mas's product's shape, and none of Mas's say. They tie it to the podium. `[INVENTED business, wordless, outside the broadcast]`
+`[POV]` [23.07] (≈ 5.9 s) The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all: Mas's product's shape, and none of Mas's say. They tie it to the podium. `[INVENTED business, wordless, outside the broadcast]`
 
 `[POV]` [23.08] (≈ 1.6 s) The string goes taut, as if someone on the far side of the podium had just taken hold of it.
 
@@ -1733,34 +1760,36 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 
 | # | Line id | Beat | Line | Kind |
 |---|---|---|---|---|
-| 1 | e2-vo-01 | 4.02 | the court gets these eventually. everyone else gets them tonight. | plan |
+| 1 | e2-vo-01 | 4.02 | nole's emails. the court gets them eventually. everyone else gets them tonight. | plan |
 | 2 | e2-vo-02 | 4.25 | he was right about the bill. it's bigger now. | gap (the compute goal) |
-| 3 | e2-vo-03 | 4B.01 | two hours in his room, once. after that, everyone gets the link. | plan |
-| 4 | e2-vo-04 | 8.03 | the next model runs on rented racks. the one after runs on ours. | plan (own compute) |
-| 5 | e2-vo-05 | 8.05 | monday. their tuesday opens on our news. | plan (ship first) |
-| 6 | e2-vo-06 | 12.07 | people come back. i did. | want |
+| 3 | e2-vo-03 | 4B.01 | two hours on his show, once. after that, november is a link. | plan |
+| 4 | e2-vo-04 | 8.03 | the next model runs on the landlord's servers. the one after runs on ours. | plan (own compute) |
+| 5 | e2-vo-05 | 8.05 | one day ahead is enough. | plan (ship first: a condition) |
+| 6 | e2-vo-06 | 12.07 | i came back. | want |
 | 7 | e2-vo-07 | 15.03 | a hundred and seventy-six days. | count |
 | 8 | e2-vo-08 | 15.17 | i'll ask him in person. | plan |
-| 9 | e2-vo-09 | 17.13 | not within the hour. the fix first. then the post. | plan (the fix) |
-| 10 | e2-vo-10 | 18.10 | the room where it's decided. i'm in it. | plan (the room) |
-| 11 | e2-vo-11 | 19.08 | their new phones first. then every model after this one. | plan (distribution) |
-| 12 | e2-vo-12 | 19.18 | they ask first in there. | want (being asked) |
-| 13 | e2-vo-13 | 20.07 | we raise again in the fall. haras needs a number by then. | plan (the money) |
-| 14 | e2-vo-14 | 23.05 | a good week for the other company. | plan (personhood) |
+| 9 | e2-vo-09 | 17.11 | everyone who signed. the post. everyone who signed. | the scramble (his rattled tell) |
+| 10 | e2-vo-10 | 17.13 | not until legal has every name. | plan (the fix: a condition) |
+| 11 | e2-vo-11 | 18.10 | the next one's already training. | plan (the next model) |
+| 12 | e2-vo-12 | 19.08 | whatever we ship next goes in their phones too. | plan (distribution) |
+| 13 | e2-vo-13 | 20.07 | we raise in the fall. she has till then. | plan (the money) |
+| 14 | e2-vo-14 | 23.05 | sixty elections this year. | plan (personhood: a count) |
 
-**Per act:** One 3 · Two 3 · Three 3 · Four 4 · tag 1. Ten of fourteen are plan; no predictions; 118 words. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post and the plate (14), inside every flashback, at the refusal, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
+**The ids follow the playing order,** so the script review renumbered them (nothing is recorded yet): the old V.O. 10 ("the room where it's decided. i'm in it.") and 12 ("they ask first in there.") are cut; the new 9 (the scramble) and 11 (the next model) take their places in the count; the old 9 and 11 are now 10 and 12.
+
+**Per act:** One 3 · Two 3 · Three 4 · Four 3 · tag 1. Ten of fourteen are plan; one is his rattled tell (MIV §3); none is a prediction, none narrates the picture, and none states the thesis; 106 words. **Clusters:** three in the séance's act (4.02, 4.25, 4B.01); two in the S3's scramble (17.11, 17.13), the blindside W4 names. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post and the plate (14), inside every flashback, at the refusal, the draft, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), in the garden after "as a guest." (19), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
 
 ## 3. Tempo
 
-The marks in the scenes, gathered. Each gap in seconds is in the beat plan's `tempo.gaps`; where an exchange crosses a cut, the gap (the outgoing beat's tail plus the incoming beat's head) is pinned so the fit can't stretch it, and recorded as `tempo.across_cut`. The build checks every one against its mark: 70 gaps (14 across a cut), all inside.
+The marks in the scenes, gathered. Each gap in seconds is in the beat plan's `tempo.gaps`; where an exchange crosses a cut, the gap (the outgoing beat's tail plus the incoming beat's head) is pinned so the fit can't stretch it, and recorded as `tempo.across_cut`. The build checks every one against its mark: 76 gaps (15 across a cut), all inside.
 
 | Pace | Gaps | Exchanges |
 |---|---|---|
-| **Quick** | others 0.15–0.35 s; Mas 0.4–0.5 s | Selbeep and Gerg (1); Nole and Gerg's volleys, the cow, "Say something ELSE.", Gerg's correction on "nowhere", the credit (4); the "no." ladder and the off-record mic (6); the engineer and Gerg, Rima's walk-and-talk, the hellos (9); the engineer and CHATGTP (11); the staffers (13); the party under the chant (F2.2); the driver (17); Terb, Mario and Ekiel (18); Haras and Gerg, Radnus and Mas (19); the split (20) |
-| **Normal** | 0.4–0.6 s | Nole's fear (4); Tasya and the Humanist (7); the call (8); Mas and Rima (9); Bukaj (14); the Forecaster's answer and his forecast (17); the call with Gerg (19); the lobby (20); the tag |
-| **Weighted** | longer, only on turns | the ghost's "…Yup." and "You kept them." / "we keep everything." (4); Terb's reading (4A); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
+| **Quick** | others 0.15–0.35 s; Mas 0.4–0.5 s | Selbeep and Gerg (1); Nole and Gerg's volleys, the cow, "Say something ELSE.", Gerg's correction on "nowhere" and the staffer's whisper inside it, the credit (4); the "no." ladder and the off-record mic (6); the engineer and Gerg, Rima's walk-and-talk, the hellos (9); the engineer and CHATGTP (11); the staffers (13); the party under the chant (F2.2); the driver (17); Terb, Mario and Ekiel (18); Haras and Gerg, Gerg's "The half on the beanbags.", Radnus and Mas (19); the split (20) |
+| **Normal** | 0.4–0.6 s | Nole's fear (4); Tasya and the Humanist (7); the call (8); Mas and Rima (9); Mas and Bukaj, aloud (14); the Forecaster's answer and his forecast (17); the call with Gerg, "which half?" included (19); the lobby (20); the tag |
+| **Weighted** | longer, only on turns | the ghost's "…Yup." and "You kept them." / "we keep everything." (4); Terb's reading (4A); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card, the held breath before V.O. 11 (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
 
-**Two cut-offs, each motivated, both recorded complete:** "Thanks." over CHATGTP's "favorite" (11.04; he asked for short), and the cheer over "And profit—" (19.04; the world talks over the one key word). **Speaking rates:** the planning rates are Ep1's shipped EL lock's (median audible wpm on lines of five or more words), pulled toward W18's targets; Mas's call to legal (17.09) is a hair quicker than he ever talks, the one time he hurries.
+**Two cut-offs, each motivated, both recorded complete:** "Thanks." over CHATGTP's "favorite" (11.04; he asked for short), and the cheer over "And profit—" (19.04; the world talks over the one key word). **Speaking rates:** the planning rates are Ep1's shipped EL lock's (median audible wpm on lines of five or more words), pulled toward W18's targets. Mas's ordinary lines plan at about 140 wpm (W18) and his call to legal (17.09) at about 180, so the one time he hurries stands out; Gerg's Move 37 correction at about 183 (inside W18's 165–185 band); his V.O. at 128, except the scramble's rattled V.O. 9 at about 145.
 
 ## 4. The seams
 
@@ -1801,44 +1830,130 @@ Every scene change and every inserted scene: cause · sound lead · matched obje
 
 ## 5. On-screen text and rails
 
-**Rails** (22, every one a date only; the build fails any other word and checks the list against manifest §3): `FEB 15, 2024` · `FEB 29, 2024` · `MAR 5, 2024` · `FEB 20, 2018` · `MAR 8` · `MAR 19` (stamped on the key) · `APR 1, 2024` · `MAY 10` · `MAY 13, 2024` · `MAY 14, 2024` · `DEC 2022` · `2023` · `MAY 17, 2024` · `MAY 18` · `MAY 20` · `MAY 28, 2024` · `JUN 10, 2024` · `JUN 11` · `JUN 19, 2024` · `AUG 5` · `AUG 11` · `AUG 22`. No rail names an event; no rail tells the viewer what to think; none shares the screen with a V.O. line or a toast.
+**Rails** (22, every one a date only; the build fails any other word and checks the list against manifest §3): `FEB 15, 2024` · `FEB 29, 2024` · `MAR 5, 2024` · `FEB 20, 2018` · `MAR 8` · `MAR 19` (stamped on the key) · `APR 1, 2024` · `MAY 10` · `MAY 13, 2024` · `MAY 14, 2024` · `DEC 2022` · `2023` · `MAY 17, 2024` · `MAY 18` · `MAY 20` · `MAY 28, 2024` · `JUN 10, 2024` · `JUN 11` · `JUN 19, 2024` · `AUG 5` · `AUG 11` · `AUG 21`. No rail names an event; no rail tells the viewer what to think; none shares the screen with a V.O. line or a toast.
 
 **Cards** (2-TONE FREEZE, name plus one relation word, at least 45 s apart): `SELBEEP / DIRECTOR OF MAMMOTHS.` (1.05) · `XEL / ASKS THE LONG QUESTIONS.` (6.02) · `EKIEL / CO-LED THE SAFETY TEAM.` (14.09) · `THE FORECASTER / EX-NOPEAI.` (17.03). **Plates:** `NOLE · FUNDED IT. LEFT IT. SUING IT.` · `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` · `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` · `HARAS · FIRST CFO` · `REMUHCS · MAJORITY LEADER` · `SIRRAH` (on the rally photo) · the four nameplates (4A). **Toasts:** three verdicts (`verified: …`, `verified: 2008`, `verified: human (all of them)`) and nothing at the door. **No labels:** no `(REPORTED)`, no disclaimer, no hedge anywhere on screen.
 
-**Must-read real text**, held at least 0.25 s + 0.05 s a character (P15): every window is in the beat plan's `onscreen_items`, and the build checks each against its floor. The longest: his May 14 post (165 characters, 12.07), Nole's Jun 10 post (139, 20.02), the Superalignment sentence (133, 15.10), his Jun 10 post (126, 19.07).
+**Must-read real text**, held at least 0.25 s + 0.05 s a character (P15): every window is in the beat plan's `onscreen_items`, and the build checks each against its floor. The longest: his May 14 post (165 characters, 12.07), Nole's Jun 10 post (139, 20.02), the Superalignment sentence (133, 15.10), his Jun 10 post (126, 19.07), Ekiel's first post on the domino (92, 14.10). **The script check also holds the rails** (§8): every `RAIL` line here, in order, against the plan's.
 
 ## 6. Runtime
 
-Planned, not measured. Per scene, the proposal's runtime table (after its final check); the plan lands on each exactly, except one move inside Act Four.
+Planned, not measured. Per scene, the proposal's runtime table (after its final check); the plan lands on each exactly, except the script review's +4 s in sc 4 and one move inside Act Four.
 
 | | Proposal | Plan | | Proposal | Plan |
 |---|---|---|---|---|---|
 | Cold open (sc 1) | 0:56 | 0:56 | **Act Three** | **5:26** | **5:26** |
-| **Act One** | **6:04** | **6:04** | sc 13 · 14 · 15 · 17 | 0:36 · 0:59 · 1:40 · 2:11 | the same |
-| sc 4 · 4A · 4B · 6 · 7 | 3:12 · 0:35 · 0:08 · 1:21 · 0:48 | the same | **Act Four** | **5:20** | **5:20** |
+| **Act One** | **6:04** | **6:08** | sc 13 · 14 · 15 · 17 | 0:36 · 0:59 · 1:40 · 2:11 | the same |
+| sc 4 · 4A · 4B · 6 · 7 | 3:12 · 0:35 · 0:08 · 1:21 · 0:48 | **3:16** · the rest the same | **Act Four** | **5:20** | **5:20** |
 | **Act Two** | **4:53** | **4:53** | sc 18 · 19 · 20 · 22 | 1:36 · 2:18 · 0:48 · 0:38 | 1:36 · **2:14** · **0:52** · 0:38 |
 | sc 8 · 9 · 10 · 11 · 12 | 0:44 · 0:52 · 0:46 · 1:51 · 0:40 | the same | **Tag** (sc 23) | 0:37 | 0:37 |
-| | | | **Story** | **23:16** | **23:16** |
+| | | | **Story** | **23:16** | **23:20** |
 
+- **The script review's +4 s, sc 4 (Act One 6:08).** Move 37's correction now plays through the staffer's misunderstanding ("So somebody did write it." / "Nobody wrote it.") with the accuracy review's "It learned." and "millions of games": the beat grows about 4.7 s. The review asked for about 2 s; with 2 the rest of the scene's air, F2.3's included, fit at 0.83. Length goes into the setup act (R4). The concept now runs about 33 s from the stone to the fear, a little over W22's "about 20–30 s": the split is what makes it a scene, not a lecture. F2.3's refusal and look are pinned (4.5 s and 4.2 s), so the flashback holds about 21 s. Recorded in `beat-plan/_spec.py` (`SCENE_ADJUST`).
+- **Mas at 140 wpm** (W18) lengthens his lines across the episode, so the fitted air is tighter: sc 4 fits at 0.87 and sc 6 (his long answer) at 0.92; every other scene at 1.0 or more. No fitted head or tail is over 3 s, and no read floor is broken. The takes replace all of it.
 - **The one move, sc 19 → sc 20 (4 s; Act Four holds 5:20).** Sc 20's read floors (Nole's post with its condition, 139 characters, 7.2 s; Alyi's post and card, 4.2 s; the docket tab, 2.1 s) and the final check's 2 s arrivals at Jun 11 and Jun 19 don't fit 48 s without rushing the split to under 3 s a pane. Sc 19 has the air. Recorded in `beat-plan/_spec.py` (`SCENE_ADJUST`).
 - **How a scene's length is built:** its lines at their natural length (until the takes exist, words at each voice's rate, calibrated on Ep1's shipped EL lock), its gaps at their tempo marks, its designed holds fixed (arrivals, read floors, the bar-long holds, the 4-bar phrases), and the rest of its air fitted to the scene's length. No fitted head or tail runs over 3 s, and no wordless beat over 8 s (the build warns otherwise). When the takes are recorded, the build re-fits around them.
-- **The clock** (with the 30 s intro and the 2 s card): cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:32 · Act Three 12:25 · Act Four 17:51 · tag 23:11 · outro 23:48 · end ≈ 23:58. The midpoint act-out lands at about 52%; the S3 (the bridge) runs 15:40–17:51.
-- **If the reel runs long** (the proposal's D-20, in its order): F2.3 to about 15 s, keeping the empty sheet and the look (−9 s); the APR 1 lineup, V.O. 4 moving onto the calendar square (−10 s); the off-record mic gag, if its laugh test fails (−4 s). Never a conversation's middle, an arrival, a keep-list line, or a review fix.
+- **The clock** (with the 30 s intro and the 2 s card): cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:29 · Act Four 17:55 · tag 23:15 · outro 23:52 · end ≈ 24:02. The midpoint act-out lands at about 52%; the S3 (the bridge) runs 15:44–17:55.
+- **If the reel runs long** (the proposal's D-20, in its order): F2.3 to about 15 s, keeping the room's refusal and the look (−6 s; the sheet is gone); the APR 1 lineup, V.O. 4 moving onto the calendar square (−10 s); the off-record mic gag, if its laugh test fails (−4 s). Never a conversation's middle, an arrival, a keep-list line, or a review fix.
 
 ## 7. For the next passes
 
-**The beat plan** ([beat-plan/](beat-plan/)): 243 beats in six files, every one `action: "new"`, chained by `after`; `source` is null (Ep2 has no earlier lock). Each beat has its id, frame and camera, set (the stick set) and `set_id` (manifest §1), room (a bed in each file's `rooms`, manifest §7), chars, the lines (speaker, text, delivery, device tag, facts note, the take slot `take` and `take_file: null`, placement `after` + `gap_s`, `len_s`), caption and picture, on-screen text with windows, music (the cue and its state), sounds with levels (`gain` in dB; `new: true` = to make), J/L cuts, style and leap, flashback, tempo, the scene's `arrive`, `aftermath` and `transition` (cause, sound, object), fix and why. **What the copied lock tools need beyond Ep1's:** read `act`, `seq` and each file's `cast` from the plan (no source timeline to inherit them from); carry `transition`, `arrive`, `aftermath`, `set_id`, `onscreen_items` and `tempo.across_cut` into the lock's `passes`; an overlapped line is `gap_s` negative with `overlap: true` (11.04); `onscreen_items` is authoritative for on-screen text, because Ep1's `strip_note` drops trailing parentheses from `onscreen.add`'s strings, and five texts end in their own (each file's `keep_parens`: `DEFLECTION (LICENSED)`, `(o = omni)`, `232 MS (AVG 320)`, `(FOR NOW)`, `verified: human (all of them)`).
+**The beat plan** ([beat-plan/](beat-plan/)): 243 beats in six files, every one `action: "new"`, chained by `after`; `source` is null (Ep2 has no earlier lock). Each beat has its id, frame and camera, set (the stick set) and `set_id` (manifest §1), room (a bed in each file's `rooms`, manifest §7), chars, the lines (speaker, text, delivery, device tag, facts note, the take slot `take` and `take_file: null`, placement `after` + `gap_s`, `len_s`), caption and picture, on-screen text with windows, music (the cue and its state), sounds with levels (`gain` in dB; `new: true` = to make), J/L cuts, style and leap, flashback, tempo, the scene's `arrive`, `aftermath` and `transition` (cause, sound, object), fix and why. **What the copied lock tools need beyond Ep1's:** read `act`, `seq` and each file's `cast` from the plan (no source timeline to inherit them from); carry `transition`, `arrive`, `aftermath`, `set_id`, `onscreen_items` and `tempo.across_cut` into the lock's `passes`; an overlapped line is `gap_s` negative with `overlap: true` (11.04); `onscreen_items` is authoritative for on-screen text, because Ep1's `strip_note` drops trailing parentheses from `onscreen.add`'s strings, and five texts end in their own (each file's `keep_parens`: `DEFLECTION (LICENSED)`, `(o = omni)`, `232 MS (AVG 320)`, `(FOR NOW)`, `verified: human (all of them)`). **The schema is a documented superset of Ep1 v3.5's, not an exact match:** at the top level it adds `act`, `title`, `scenes`, `cast`, `keep_parens` and `rooms`; on beats `set_id`, `seq`, `arrive`, `aftermath`, `transition` and `onscreen_items`; on lines `t_s`; on sounds `at_s` and `new`; and `tempo.across_cut`. It renames `story_s.source` to `story_s.target`, keeps `scene` as a string (Ep1 uses an int except for ids like `"30A"`), and starts each file's chain at `after: "(start)"`. The Ep2 copy of the lock builder reads all of these; Ep1's own builder would not, and is never pointed at them.
 
-**The voice pass** ([cast.md](cast.md)): 166 lines (152 spoken, 14 V.O.). Recorded whole; cut-offs recorded complete ("…one of my favorite things."; "And profit?"); three cuts from other takes (`e2-a1-0026` and `e2-a1-0047` from Ep2's own takes; `e2-a3-0008` from Ep1's EL take `e1-a1-5-13`, "Six" … "months", copied into `audio/ep02/`, never edited). Takes go under `audio/ep02/` (the pipeline's layout: ElevenLabs `lines-A*.json`; Kokoro `v1/<seg>/lines-v1.json`); a take row with the line's id and its audible in/out replaces the planning length on the next build.
+**The voice pass** ([cast.md](cast.md)): 173 lines (159 spoken, 14 V.O.). Recorded whole; cut-offs recorded complete ("…one of my favorite things."; "And profit?"); three cuts from other takes (`e2-a1-0026` and `e2-a1-0047` from Ep2's own takes; `e2-a3-0008` from Ep1's EL take `e1-a1-5-13`, "Six" … "months", copied into `audio/ep02/`, never edited). Takes go under `audio/ep02/` (the pipeline's layout: ElevenLabs `lines-A*.json`; Kokoro `v1/<seg>/lines-v1.json`); a take row with the line's id and its audible in/out replaces the planning length on the next build.
 
-**Facts to pull before lock:** the proposal's list (its "Facts to pull before lock"), with ids A57–A69 above for the new rows.
+**Facts to pull before lock:** the proposal's list (its "Facts to pull before lock"), with ids A57–A71 above for the new rows; [facts.md](../../facts.md) is regenerated from §1 (script review), so W26's row-per-line test holds.
 
-**What a human must check** (none blocks the build): the Lex #419 lines against the video; Neleh's two lines against the podcast audio; the VOICE 5 / CHATGTP voice by ear (no real actress, no film character); the séance's room colour by ear; the reel's pace against the tempo marks; the newcomer questions (why did Alyi leave? → what he said and did, and no grievance the show asserted: not compute, not Mas, not "her", not "safety lost to products"; what is the IOU? → a note from Alyi's old door that Mas keeps; is Alyi a person? → never asked; why did Nole drop the suit? → the hearing was the next day; why Dec 2022? → Alyi checked in at a party); whether the political pair reads as even; the off-record mic gag's laugh; the concept's accuracy; the score's moods by ear.
+**What a human must check** (none blocks the build): the Lex #419 lines against the video; Neleh's two lines against the podcast audio; the VOICE 5 / CHATGTP voice by ear (no real actress, no film character); the séance's room colour by ear; the reel's pace against the tempo marks; the newcomer questions (why did Alyi leave? → what he said and did, and no grievance the show asserted: not compute, not Mas, not "her", not "safety lost to products"; what is the IOU? → a note from Alyi's old door that Mas keeps; is Alyi a person? → never asked; why did Nole drop the suit? → the hearing was the next day; why Dec 2022? → Alyi checked in at a party; why didn't anyone follow Nole? → nothing says he asked); whether the political pair reads as even; whether V.O. 11 ("the next one's already training.") reads as his priority and never as a view of the committee; whether "which half?" plays dry; the off-record mic gag's laugh; the concept's accuracy; the score's moods by ear.
 
 ## 8. How this was checked
 
-- **Against the proposal, scene by scene:** every scene of proposal.md, in its order (1, 4, 4A, 4B, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23), with every beat its "What happens and why" lists, its lines as worded there, its V.O. as its map, its rails as manifest §3. Nothing added, nothing cut. [J]
-- **Staging made concrete where the proposal left it open** (each consistent with its rules): the four hops placed on XEL's four pauses (after his first question, before the Alyi question, before the relationship question, after the answer) so the counter reads 1 → 5 on hops and 6 at the end (sc 6); THE PLAN's second and third stamps both on Rima's second sentence, `MON` on "today" and `$0` on "free", so every number lands on its own word (sc 10); the fogged glasses mid-house, never the front row (sc 11); the call with Gerg crosscut between the lawn and the lobby, so the speaker is in frame (sc 19); Terb's committee line said as two (the task; then "So, who checks it? We do.") (sc 18). [J]
-- **The build** (`python3 show/episodes/ep02/production/v1/beat-plan/_build.py`), all passing [M]: every scene and segment on its length; 166 line ids, each defined once and used once, in its beat; the V.O. 14 lines in the map's order, lowercase, no banned word; 22 rails, dates only, exactly manifest §3's list; no V.O. on screen with a rail or a toast; 70 tempo gaps inside their marks (14 of them across a cut); every must-read text over its read floor; every scene with an arrival and a transition.
-- **Script ↔ plan:** every `[beat] (≈ s)` here matches the beat plan's `est_s` to 0.1 s, and every line's text and id here match the plan's (a script check run on this file; §7). [M]
-- **LEARNINGS rules checked:** W1 (a move in every act), W2, W3, W5–W8, W10–W16, W18–W22, W24–W27; P2, P3, P6, P7, P9, P10, P12, P14–P17; S1, S3, S4, S6, S10; R1, R2, R4, R8. **Broken on purpose:** none; one length moved inside an act (§6), with its reason.
+- **Against the proposal, scene by scene:** every scene of proposal.md, in its order (1, 4, 4A, 4B, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 22, 23), with every beat its "What happens and why" lists, its lines as worded there, its V.O. as its map, its rails as manifest §3. No scene added or cut. The script review's changes (its log, below) went back into the proposal as D-71 to D-87 and into its lines, V.O. map and runtime table, and into the manifest's rails, props and on-screen text, so the three still agree. [J]
+- **Staging made concrete where the proposal left it open** (each consistent with its rules): the four hops placed on XEL's four pauses (after his first question, before the Alyi question, before the relationship question, after the answer) so the counter reads 1 → 5 on hops and 6 at the end (sc 6); THE PLAN's second and third stamps both on Rima's second sentence, `MON` on "today" and `$0` on "free", so every number lands on its own word (sc 10); the fogged glasses mid-house, never the front row (sc 11); the call with Gerg crosscut between the lawn and the lobby, so the speaker is in frame (sc 19); Terb's committee lines said as two (the task; then its members, read like a roll call) (sc 18). [J]
+- **The build** (`python3 show/episodes/ep02/production/v1/beat-plan/_build.py`), all passing, no warning [M]: every scene and segment on its length; 173 line ids, each defined once and used once, in its beat; the V.O. 14 lines in the map's order, lowercase, no banned word; 22 rails, dates only, exactly manifest §3's list; no V.O. on screen with a rail or a toast; 76 tempo gaps inside their marks (15 of them across a cut); every must-read text over its read floor; every scene with an arrival and a transition. `--write` rebuilt all six JSON files.
+- **Script ↔ plan:** every `[beat] (≈ s)` here matches the beat plan's `est_s` to 0.1 s; every line's text and id here match the plan's, and each line sits under its own beat; every `RAIL` line here matches the plan's rails in order (`beat-plan/_check_script.py`, extended at the script review to hold line placement and the rails, and shown to catch a line moved to the wrong beat and a wrong rail; it doesn't compare speakers, tags or other on-screen text, which the script review checked by reading). [M]
+- **LEARNINGS rules checked:** W1 (a move in every act), W2, W3, W5–W8, W10–W16, W18–W22, W24–W27; P2, P3, P6, P7, P9, P10, P12, P14–P17; S1, S3, S4, S6, S10; R1, R2, R4, R5, R8. **Broken on purpose:** none; sc 4 +4 s and one length moved inside an act (§6), with their reasons; W22's "about 20–30 s" stretched to about 33 s (§6), with its reason.
+
+---
+
+## Review log (script review)
+
+One reader went through this script, its beat plans and its cast against the binding checklist, the guardrails, the showrunner's notes and the record (the reader checked the quotes on the web). There were **36 findings: one blocker, thirteen majors and twenty-two minors.** Every one is applied or answered below; where a finding offered two options, the one taken and the reason are in the row. The changes went back into [proposal.md](proposal.md) as decisions **D-71 to D-87** (each scene there has a **Script review (SR)** line), into [manifest.md](manifest.md) (items marked **SR**), [cast.md](cast.md), the regenerated [facts.md](../../facts.md), and [naming.md](../../../../bible/naming.md) (MADA and TERB now list Ep2). The beat plans were rebuilt with `beat-plan/_build.py --write`.
+
+### How overlapping findings were combined
+
+1. **The V.O. count (S-3, S-8, S-18).** Two lines were cut (the old 10, "the room where it's decided. i'm in it."; the old 12, "they ask first in there.") and two added: S-3's optional line with new information at 18.10, "the next one's already training.", after the hold it asked for; and S-18's rattled cluster line, "everyone who signed. the post. everyone who signed.". The count stays at 14, in every act, with a two-line cluster in the S3. **One departure:** S-18 put the rattled line on the draft (17.10). The draft is wordless on purpose because it is the apology at contested item 3 (what he knew), so the line plays on his still face in the next shot (17.11), where W4's grammar wants it: the face still, the inside fast. The ids follow the playing order, so the old 9 and 11 are now 10 and 12 (nothing is recorded yet).
+2. **V.O. 9 (S-15) and the planner template (S-16).** S-15's wording, "not until legal has every name.", answers both: his own condition, a reply to nobody, and no "X first, then Y".
+3. **Move 37 (S-10) and its accuracy (S-31).** S-10's split through the staffer, with S-31's "It learned." first and "millions of games". The beat grows about 4.7 s, not the 2 s S-10 estimated, so sc 4 gets 4 s (R4: the setup act), and F2.3's refusal and look are pinned so the fit can't squeeze them. Gerg's planning rate drops from 205 to 195 (about 183 wpm effective, inside W18's band). The concept now runs about 33 s from the stone to the fear, a little over W22's "about 20–30 s"; the split is what makes it a scene, and that is W22's first ask.
+4. **V.O. 3 (S-16, S-17).** S-17's line, "two hours on his show, once. after that, november is a link.", which also drops the second "everyone gets".
+5. **The sc 14 chain (S-13).** The domino changes to Ekiel's first post. The note's fall stays in sc 14: S-13's other option (the office door in sc 15, after F2.2) would put the note beside the motive flashback, the chain FC-1 removed as a blocker.
+6. **Sc 19's call (S-9, S-25, S-32).** The call stays a call (the lobby carries the cheer and "Half the lobby's standing on a beanbag."): Gerg's first line stops narrating the shot (S-25), "which half?" is added (S-9), and the lobby is logged as invented staging with a facts row (S-32's second option), because Brockman at Apple Park rests on one live blog.
+7. **Tempo (S-27) and the legal call.** Mas's ordinary lines plan at 140 wpm and the legal call at about 180, so the hurry reads; the takes replace both.
+
+### Findings
+
+| # | Sev. | Where | Finding | What I did |
+|---|---|---|---|---|
+| S-1 | blocker | 4A.02 (`e2-a1-0032`), the proposal's 4A, `_spec.py` | The crop dropped "WilmerHale found that", so read aloud the old board became the finder of both halves: it "also found that his conduct did not mandate removal" (false; it fired him) | **Applied** (D-73): TERB *(reading)* The law firm found "that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal." The firm has no registry name, so Terb's own words name it, outside the quote. Facts A12 and §B carry the original |
+| S-2 | major | 18.08 (`e2-a4-0005`) | "So, who checks it? We do." states the scene's satire before "present." lands, in a chair's mouth (W7) | **Applied** (D-80): TERB *(brisk, reading)* "Members: myself, two directors, and our chief executive." → every face turns to Mas → "present." (accurate: Taylor, D'Angelo, Seligman, Altman) |
+| S-3 | major | 18.10 (`e2-vo-10`, old) | V.O. 10 steps on "also present.", narrates the picture, restates Ep1's room line flatly (MIV §3.2), echoes a song title | **Applied** (D-81): cut; "also present." and Mada's second word land, the table holds about 1.5 s, then V.O. 11 "the next one's already training." (new information from the same May 28 post, facts A36; V.O. 4's next-model thread). **Guardrails read:** the post itself says the company "has recently begun training its next frontier model" [P]; the line is his priority and says nothing about why the committee exists or what it will find; the committee is not in W8's contested set; MIV §6's lint words are absent; the reading is listed for the human check (§7) |
+| S-4 | major | 11.08 (`e2-a2-0035`) | `is it safe?` answered "It's free!" states "safety lost to products" by placement, 40 s before the empty seat | **Applied** (D-75): `what's the catch?`; "It's free!" and its L-cut stay; the house's laugh lands because free is the catch |
+| S-5 | major | F2.2, 15.07 (`e2-a3-0013`) | Spoken, "Then feel it for both of us." is an order to Mas | **Applied:** "Then I'll feel it for both of us." |
+| S-6 | major | 8.05 (`e2-vo-05`) | "monday. their tuesday opens on our news." narrates the snap and predicts what sc 12 pays; it works as a post | **Applied** (D-74): "one day ahead is enough." |
+| S-7 | major | 12.07 (`e2-vo-06`) | "people come back." is a maxim (MIV §8) and a quiet forecast (W5); a keep-list line | **Applied** (D-76): "i came back."; ledger row below |
+| S-8 | major | 19.18 (`e2-vo-12`, old) | "they ask first in there." narrates the gag (MIV §4.5); its echo of Ep1's Gerg line can't be recovered; it steps on the button; a keep-list line | **Applied** (D-82): cut; "as a guest." and Radnus's held smile (2.2 s, pinned) end the exchange; ledger row below. **Not taken:** "next time, our own phone." (a new thread needing its own facts row and decision) |
+| S-9 | major | Acts Three and Four | After "is it ready?" Mas asks nothing aloud for 11 minutes; his strip lines in sc 14 are silent text Bukaj answers (P9; SN 1's "distance") | **Applied** (D-83): (1) MAS "congratulations." (`e2-a3-0023`) and "need anything?" (`e2-a3-0024`) said aloud as the box types them; (2) GERG "Half the lobby's standing on a beanbag." (`e2-a4-0033`) · MAS "which half?" (`e2-a4-0034`) · GERG *(literal)* "The half on the beanbags." (`e2-a4-0035`), with Gerg's line split so "i heard." still answers "They just said our name up there." The bridge's "answers nobody" stays |
+| S-10 | major | 4.22 (`e2-a1-0023`) | The concept at 197 wpm in one 21-word breath plays as a read-out (W22, W18) | **Applied** (D-72; combined with S-31): GERG "It didn't come out of nowhere. It learned. Thirty million positions from people's games." · STAFFER *(whispering)* "So somebody did write it." (`e2-a1-0055`) · GERG "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games." (`e2-a1-0056`); the knob wall starts on "Nobody"; sc 4 +4 s (conflict 3); the accuracy note unchanged but for "(millions of games)" |
+| S-11 | major | tag 23.06, A69, the heading, the header, manifest §3, `RAILS_EXPECTED` | The interview aired Wednesday, Aug 21, 2024, not Aug 22 | **Applied** (D-85), after pulling the date: The Hill (Aug 21) "asked Trump on Wednesday"; Mediaite (Aug 22) "Wednesday's edition". `RAIL: AUG 21` in 23.06, §5, the heading, the header's date span, the music note, `_spec.py` (the scene table, SEQ, the beat), `_build.py`'s `RAILS_EXPECTED`, manifest §3 and its other Aug 22 mentions, the proposal, facts A69; row 52 is marked superseded. The words are unchanged |
+| S-12 | major | 17.20, A64 | The voices note claims how the voice was made (facts §F), gives one party's answer at contested item 2 the last word, and points at the cropped name | **Applied** (D-78): the pause post, two fragments, "We've heard questions about how we chose the voices…" · "…We are working to pause the use of…" (x.com/OpenAI/status/1792443575839678909, May 20, 2024; cropped before "Sky"); the beat grows to 5.4 s for its read floors |
+| S-13 | major | sc 14 (14.06–14.11), with F2.2 | Ep1 aired the note as `IOU: 20% COMPUTE`; the note's fall, "sailing against the wind" (next real sentence: "Sometimes we were struggling for compute…") and the plate rebuild contested item 1 | **Applied** (D-77; conflict 5): the domino is the thread's first post, "Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI." (status 1791498174659715494); it states the departure, carries no grievance, and sets up the plate's word. The proposal's pre-check now says why "never defined in Ep2" wasn't enough |
+| S-14 | major | F2.3 (4.29–4.31), 4.34 (`e2-a1-0029`) | The sign-up sheet and "I asked the whole room" invent a recruitment act by a real person at the departure the suit litigates (W8) | **Applied** (D-71): no sheet; Nole finishes at his slide, nobody applauds, the staff turn back to their monitors, and the insert (4.31) is the arena match nobody paused; "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water."; facts A11 updated; manifest SET-03, the props and the SFX (`sheet_flutter` → `arena_blip_soft`) updated; D-20's F2.3 trim now keeps the room's refusal and the look |
+| S-15 | minor | 17.13 (`e2-vo-09` → `e2-vo-10`) | "not within the hour…" answers the Forecaster (SN 000) in the template | **Applied:** "not until legal has every name." |
+| S-16 | minor | V.O. 3, 4, 9, 11, 13 | Five lines share the "X first, then Y" / "once, after that" shape; V.O. 11's second half doesn't parse; V.O. 13's number is unnamed | **Applied** (D-74, D-86): V.O. 4 "the next model runs on the landlord's servers. the one after runs on ours."; V.O. 12 (was 11) "whatever we ship next goes in their phones too."; V.O. 13 "we raise in the fall. she has till then." (Haras in frame; the name no longer has to survive the voice: cast §5); V.O. 10 and 3 as S-15 and S-17 |
+| S-17 | minor | 4.02 (`e2-vo-01`), 4B.01 (`e2-vo-03`) | "these" has no referent; "everyone gets" repeats; "room" is spent on a studio | **Applied:** "nole's emails. the court gets them eventually. everyone else gets them tonight." · "two hours on his show, once. after that, november is a link." |
+| S-18 | minor | the V.O. distribution | No cluster of 3–6; W4's blindside gets one interior line | **Applied, moved one shot** (conflict 1): V.O. 9 "everyone who signed. the post. everyone who signed." at 17.11, read faster than he thinks (planned at about 145 wpm, against his V.O.'s 110–130), with V.O. 10 at 17.13: a two-line cluster in the S3. It says nothing about what he knew (W8's test: no motive, no intent) |
+| S-19 | minor | 23.05 (`e2-vo-14`) | "a good week for the other company." reads the news and is shaped like a gloat post | **Applied** (D-86): "sixty elections this year." with its facts row (A71: TIME's count, at least 64 countries plus the EU) |
+| S-20 | minor | 11.15 (`e2-a2-0037`/`0038`) | The engineer asks and answers himself, to nobody (W19); a gloss for the audience | **Applied:** to RIMA, who doesn't look up: "Mas just posted. One word." … "'Her.' Like the movie. The guy and his computer." Her held mark is the reaction; never the actress, never the voice |
+| S-21 | minor | 1.08 (`e2-co-0006`) | "on four" can be heard as "on all fours" | **Applied:** "That's not the mammoth. The mammoth's on the fourth floor." |
+| S-22 | minor | 4.24 (`e2-a1-0025`) | "They" has no referent | **Applied:** "MINDDEEP had that in 2016. We had a blog." (his own 0% email names it; cast §5 has its respelling) |
+| S-23 | minor | 18.13 (`e2-a4-0015`), 18.12 | "It'd be shorter, but I have one concern." doesn't parse; "I underlined 'inherently.'" planned at 200 wpm | **Applied:** "That's the brief one. It only has the one concern." → "It's that we might win." (word for word); "We agree. I underlined 'inherently.'" planned at 2.6 s with a beat before its word |
+| S-24 | minor | 9.03 (`e2-a2-0005`) | "So don't, unless you mean it." is a maxim-shaped quip; Gerg is literal | **Applied:** "Careful. The new one can hear you laugh."; the laugh stops on "laugh." |
+| S-25 | minor | 19.09 (`e2-a4-0024`) | Two sentences narrate the shot | **Applied:** "There's a screen the size of a building in front of you, and you're on your phone." → "the phone's closer." |
+| S-26 | minor | 8.06 (`e2-a2-0001`) | "we call that even" is folksy, and "it" has no antecedent on a one-sided call | **Applied:** "no money either way. you put us in your new assistant. that's the price." (facts A58) |
+| S-27 | minor | `_spec.py`, Mas's lines | Mas's ordinary lines plan at 150–194 wpm, so the hurried legal call doesn't stand out (W18: Mas about 140) | **Applied:** `RATE["mas"]` 165 → 140; `MAS_HURRIED` 185 → 210, so the call's ten words with their three stops plan at about 180 wpm. Every scene re-fits (§6) |
+| S-28 | minor | 13.01–13.02 (`e2-a3-0001`/`0003`) | The staffer is "taping" while asking whether to take the flyers down | **Applied:** *(peeling one corner; to the staffer beside her)*; she turns to Mas with the peeled corner in her hand; Staffer 2 smooths hers back down |
+| S-29 | minor | 4.04, 4.13, 4.16, 18.05, 6.01 | [K] items on dated ghost headers (GR §3, W26); the cow caption adds "IT" inside the quote; the board card drops "Ms." (rule 12); XEL's quote uses "NopeAI" | **Applied** (D-87): "0%", the billions line, the cow and "exactly right" upgraded to [V] (CNBC and NBC News, Mar 6; TechCrunch, Mar 5, 2024); "Yup" stays [K] only for its period; the caption is `FWD: "…ATTACH TO ALSET AS ITS CASH COW…"`; "We are disappointed that Ms. NELEH continues…" (its card held 3.9 s for the longer read); "Take me through the NOPEAI board saga…" |
+| S-30 | minor | 14.10/A27, 15.10/A63, sc 6's timestamps | Three wrong source notes | **Applied** everywhere they appear (this script, the proposal, `_spec.py`, facts.md): A27 names the thread's real first post; A63's sentence is a later one (the post opens "We need scientific and technical breakthroughs…"); the transcript's timestamps are 18:34, 18:57 and 19:15 (the lexfridman.com page read this pass gives 18:34 for the hostage question's block; the review said 18:36) |
+| S-31 | minor | 4.22 | "It came out of thirty million positions from people's games." credits the move to the human data | **Applied** with S-10 (conflict 3) |
+| S-32 | minor | sc 19 (19.04–19.10) | One live blog places Brockman at Apple Park; the script has no facts row for the campus | **Answered** (D-84): Brockman's attendance rests on TechRadar's live blog alone (NBC confirms Altman only), so the call from the lobby stays and is **logged as invented staging**, with facts A70 for the campus (and the fallback: in person at the crowd's edge, if a second source confirms). Nothing on screen turns on where Gerg's counterpart was |
+| S-33 | minor | 8.02 (A19) | `"MAS, TASYA AND RADNUS"` is presented as the segment's own card, but its source is a news headline | **Applied:** a news site's headline over the segment's video still, `…TAKES AIM AT MAS, TASYA AND RADNUS…` (Business Insider's exact words, cropped, name swaps) |
+| S-34 | minor | 17.01, 17.03, sc 17's SCENE line | The Forecaster steps out of NopeAI's doors on May 17, but he had quit in April; "caught out" was renamed in round 2 | **Applied:** he walks up from the street, the first to stop beside the receipt; the SCENE line says "scrambles with a still face"; the beat's `why` too |
+| S-35 | minor | facts.md, naming.md | facts.md was synced to draft 4 (no A57–A69; four rows contradicting the script; §F excluding the voice note); MADA and TERB listed for Ep1 only | **Applied:** [facts.md](../../facts.md) regenerated from §1 (A1–A71, every row the script uses, every unused one marked, §B with the originals, §E and §F updated); naming.md's MADA and TERB rows list Ep1–2 |
+| S-36 | minor | the beat plans, `_check_script.py` | The schema is a documented superset of Ep1 v3.5's; the check doesn't compare on-screen text | **Answered:** the superset is written down for the handoff (§7). **Extended** `_check_script.py`: it now holds every `RAIL` line against the plan's rails in order, and checks each line sits under its own beat; both were shown to catch an error on a scratch copy (a V.O. moved one beat, a rail one day off). Other on-screen text is still compared by reading |
+
+### The ledger (R5): keep-list lines
+
+| Keep-list item (AUDIT §4) | Change | WHY | Reason |
+|---|---|---|---|
+| "people come back. i did." | → "i came back." | REVIEW (S-7) | a maxim (MIV §8; W7) and a quiet forecast about Alyi (W5); the fact keeps the want and the echo |
+| "they ask first in there." | cut | REVIEW (S-8) | it narrates the picture (MIV §4.5), its echo can't be recovered, and it stepped on "as a guest." |
+| "present." / "also present." | kept word for word; the setup and the V.O. around them change | REVIEW (S-2, S-3) | the dry words now pay Ep1's room line by themselves |
+| "It's that we might win." | kept word for word; its setup changes | REVIEW (S-23) | the setup didn't parse |
+| The séance's cross-examination, F2.3's sip, "You sat at the back." | kept; the sign-up sheet (a round-2 addition, not on the keep list) is cut, and "I asked the whole room" becomes "I stood up in front of the whole room" | REVIEW (S-14) | an invented recruitment act at the suit's contested merits |
+
+**Swings:** the V.O. now has one rattled line where it had none (a cluster in the S3, as W6 and MIV §3 ask), and one fewer line in Act Four; Mas has five more spoken lines after the midpoint (P9). Neither swings the voice back toward Ep1 v3.1's "forced" 28: the count stays 14 and the words drop from 118 to 106.
+
+### Checked on the web this pass
+
+The Hill (Aug 21, 2024) and the Fox Business interview's date; OpenAI's May 20, 2024 pause post (its text and status); the May 28, 2024 committee post's membership and "recently begun training its next frontier model" (NBC, Axios, PBS, PYMNTS); Business Insider's Jon Stewart headline; the lexfridman.com transcript's timestamps; TechRadar's and NBC's WWDC live blogs (Brockman: one source); TIME's 2024 election count. The review's own web checks (the Mar 8 sentence, Leike's thread, the Dec 2018 and early-2018 emails, AlphaGo's numbers) are used as it reported them. **[M]** measured: the build and the script check. **[J]** judged: every rewrite's register and the guardrails reads.
+
+### Runtime
+
+Story ≈ 23:20 (+4 s, all in sc 4, the setup act), episode ≈ 24:02, planned. Every other change fits inside its scene's air. Mas at 140 wpm tightens the fitted air in his talk scenes (sc 4 at 0.87, sc 6 at 0.92). D-20's reel-dependent list is now about −20 s (F2.3's trim keeps the room's refusal and the look).
+
+### For the next passes
+
+- **The V.O. ids changed** (playing order): `e2-vo-09` is the new rattled line at 17.11; `e2-vo-10` "not until legal has every name." (17.13); `e2-vo-11` "the next one's already training." (18.10); `e2-vo-12` "whatever we ship next goes in their phones too." (19.08); `e2-vo-13` and `-14` keep their ids with new words. Nothing is recorded, so no take is orphaned; the voice pass takes ids from the plan.
+- **New line ids:** `e2-a1-0055` (the staffer's whisper), `e2-a1-0056` (Gerg's second half), `e2-a3-0023` and `-0024` (Mas's strip lines), `e2-a4-0033` to `-0035` (the beanbag exchange). 173 lines in all (159 spoken, 14 V.O.).
+- **On screen, changed:** the cow caption, the news-site headline (8.02), `what's the catch?`, the domino's text, the pause post's two fragments (17.20, 5.4 s), the board card's "Ms.", `RAIL: AUG 21`; the F2.3 insert is the arena match (`arena_blip_soft`, new). `onscreen_items` in the plans is authoritative.
+- **Human checks added** (§7): V.O. 11's reading (priority, never a view of the committee); V.O. 9's speed (rattled, never panicked); "which half?" played dry; whether a newcomer thinks Nole asked anyone to follow him.

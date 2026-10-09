@@ -24,6 +24,7 @@ Fix codes (the "fix" list on each beat):
   FACT   a real line or item with a facts row (script-v1.md "Facts key")
   GR     a guardrail-driven staging (proposal "Guardrails pre-check")
   ML     the episode's concept (Move 37)
+  SR     the script review's change (script-v1.md, "Review log (script review)")
 Every est_s is a planning length, never a measurement; the lock sets the frames.
 """
 import glob
@@ -93,11 +94,15 @@ SCENES = {
                mode="a held SPLIT → the lobby → SINGLE IMAGE / INSERT", pace="quick"),
     "22": dict(seg="act4", target_s=38, title="One door", date="JUN 19, 2024", place="ISS, an empty lot",
                status="CHANGED (a Tier 2 leap)", mode="SINGLE IMAGE / INSERT, silent by design", pace="weighted"),
-    "23": dict(seg="tag", target_s=37, title="The other company", date="AUG 5 → AUG 22, 2024",
+    "23": dict(seg="tag", target_s=37, title="The other company", date="AUG 5 → AUG 21, 2024",
                place="the dark room", status="CHANGED", mode="MONTAGE on his monitor", pace="normal"),
 }
-# Moves inside an act (the act's total, the runtime table's number, holds): scene -> (seconds, why)
+# Changes to the runtime table: scene -> (seconds, why). sc 19/20 move inside Act Four (the act's total holds); sc 4's
+# +4 s is the script review's (the Move 37 split), added to the setup act (R4), so Act One is 6:08 (SEG_TARGET).
 SCENE_ADJUST = {
+    "4": (+4, "the script review: Move 37's correction split with the staffer's misunderstanding and its accuracy wording "
+              "(W22, W18); the beat grows about 4.7 s, so the scene gets 4 s (the review asked for about 2; with 2 the "
+              "rest of the scene's air, F2.3's included, fit at 0.83); added to the setup act (R4), so Act One is 6:08"),
     "20": (+4, "sc 20's read floors (Nole's post with its condition, 139 characters: 7.2 s; Alyi's post and card: 4.2 s; "
                "the docket tab: 2.1 s) and the final check's 2 s arrivals at Jun 11 and Jun 19 don't fit 48 s without "
                "rushing the split; sc 19 has the air (its fit scale was 1.32)"),
@@ -109,8 +114,9 @@ for _sc, (_d, _why) in SCENE_ADJUST.items():
     SCENES[_sc]["adjust"] = _why
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
-# the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16
-SEG_TARGET = {"coldopen": 56, "act1": 364, "act2": 293, "act3": 326, "act4": 320, "tag": 37}
+# the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
+# script review's +4 s in sc 4, Act One is 6:08 and the story 23:20
+SEG_TARGET = {"coldopen": 56, "act1": 368, "act2": 293, "act3": 326, "act4": 320, "tag": 37}
 EPISODE_EXTRA_S = 30 + 2 + 10.0   # the intro (30 s), the filename card (2 s), the Orb outro (about 10 s)
 
 # the sequence markers (the reel's margin slate), one per scene and one per flashback
@@ -139,7 +145,7 @@ SEQ = {
     "19.16": {"sub": "the walled garden", "place": "the walled garden (his phone's picture)", "time": "Mon Jun 10, 2024"},
     "20": {"id": "20", "place": "ELPPA's campus | the zAI lobby; the lobby; his dark room", "time": "Jun 10 → Wed Jun 19, 2024"},
     "22": {"id": "22", "place": "ISS: the white cube on an empty lot", "time": "Wed Jun 19, 2024"},
-    "23": {"id": "23", "place": "the dark room: the monitor", "time": "Aug 5 → Aug 22, 2024"},
+    "23": {"id": "23", "place": "the dark room: the monitor", "time": "Aug 5 → Aug 21, 2024"},
 }
 
 # ================================================================================================ rooms (the beds)
@@ -239,14 +245,17 @@ CAST = {
 # words at each voice's rate, calibrated on Ep1's shipped EL lock (show/reel/ep01-v35-el/, the median audible rate of
 # lines of 5+ words: Mas 189 spoken / 135 V.O., Gerg 211, Alyi 158, Rima 173, Neleh 229, Tasya 156, Terb 165, Nole 223,
 # Radnus 213, Mario 206, CHATGTP 148, the employee 212), pulled toward LEARNINGS W18's targets where they disagree (Mas
-# about 140 spoken, his V.O. 110-130; most characters 165-185): Mas 165, his V.O. 128. New roles sit at their brief's
-# pace. A recorded take replaces the estimate (L()).
-RATE = {"mas": 165, "gerg": 205, "nole": 200, "ghost-nole": 150, "selbeep": 185, "staffer": 190, "staffer2": 185,
+# about 140 spoken, his V.O. 110-130; most characters 165-185): Mas 140 (script review: his ordinary lines had planned
+# at 150-194 wpm, so the one hurried call didn't stand out), his V.O. 128. New roles sit at their brief's pace. A
+# recorded take replaces the estimate (L()).
+RATE = {"mas": 140, "gerg": 205, "nole": 200, "ghost-nole": 150, "selbeep": 185, "staffer": 190, "staffer2": 185,
         "terb": 165, "xel": 165, "humanist": 175, "tasya": 150, "rima": 168, "engineer": 190, "chatgtp": 150,
         "reporter": 185, "bukaj": 160, "alyi": 150, "ekiel": 160, "forecaster": 175, "driver": 190, "neleh": 190,
         "mario": 190, "haras": 185, "radnus": 190}
 VO_RATE = 128
-MAS_HURRIED = 185   # the call to legal (sc 17): level and a hair quicker, the one time he hurries
+VO_RATES = {"e2-vo-09": 165}   # the scramble's V.O. (17.11): faster than he thinks, his rattled tell (MIV §3)
+MAS_HURRIED = 210   # the call to legal (sc 17): with its three stops the line plans at about 180 wpm, against about
+                    # 140 for his ordinary lines: level and quicker than he ever talks, the one time he hurries
 
 
 def words(t):
@@ -297,34 +306,39 @@ def L(lid, fallback):
 # Mas's inner voice, the proposal's V.O. map in order: id -> (seg, beat, text, kind, delivery)
 # Voice: Jeremy at the V.O. settings (voices-el §AD: stability 0.65, speed 0.85), close and dry, 110-130 wpm.
 NEW_VO = {
-    "e2-vo-01": ("act1", "4.02", "the court gets these eventually. everyone else gets them tonight.", "plan",
-                 "his finger just off Publish; practical, almost pleased with the arithmetic; no weight on 'tonight.'"),
+    "e2-vo-01": ("act1", "4.02", "nole's emails. the court gets them eventually. everyone else gets them tonight.", "plan",
+                 "his finger just off Publish; practical, almost pleased with the arithmetic; 'nole's emails.' a label, "
+                 "no weight on 'tonight.'"),
     "e2-vo-02": ("act1", "4.25", "he was right about the bill. it's bigger now.", "gap (the compute goal)",
                  "the ghost's words still in the air; a private concession, plain; the second sentence a fact, not a worry"),
-    "e2-vo-03": ("act1", "4B.01", "two hours in his room, once. after that, everyone gets the link.", "plan",
-                 "reading the invite; a scheduler's thought; 'once.' a small decision"),
-    "e2-vo-04": ("act2", "8.03", "the next model runs on rented racks. the one after runs on ours.", "plan (own compute)",
+    "e2-vo-03": ("act1", "4B.01", "two hours on his show, once. after that, november is a link.", "plan",
+                 "reading the invite; a scheduler's thought; 'once.' a small decision; 'november' plain, no weight"),
+    "e2-vo-04": ("act2", "8.03", "the next model runs on the landlord's servers. the one after runs on ours.",
+                 "plan (own compute)",
                  "watching himself in a lineup beside his landlord; dry, unbothered, already past it"),
-    "e2-vo-05": ("act2", "8.05", "monday. their tuesday opens on our news.", "plan (ship first)",
-                 "as the block snaps onto Monday; the smallest smile in the voice, never on the face"),
-    "e2-vo-06": ("act2", "12.07", "people come back. i did.", "want",
-                 "over his own posted words; quiet; a hope, not an argument; the second sentence almost to himself"),
+    "e2-vo-05": ("act2", "8.05", "one day ahead is enough.", "plan (ship first: a condition)",
+                 "as the block snaps onto Monday; a condition, settled; the smallest smile in the voice, never on the face"),
+    "e2-vo-06": ("act2", "12.07", "i came back.", "want",
+                 "over his own posted words; quiet; a fact about himself, the hope in it left unsaid"),
     "e2-vo-07": ("act3", "15.03", "a hundred and seventy-six days.", "count",
                  "after Alyi's far-off count; flat, exact; the number is the feeling"),
     "e2-vo-08": ("act3", "15.17", "i'll ask him in person.", "plan",
                  "his thumb on the pin; decided, plain; no weight on 'him'"),
-    "e2-vo-09": ("act3", "17.13", "not within the hour. the fix first. then the post.", "plan (the fix)",
-                 "thumb over Post, not pressing; correcting a forecast, not making one; level"),
-    "e2-vo-10": ("act4", "18.10", "the room where it's decided. i'm in it.", "plan (the room)",
-                 "after 'also present.'; Ep1's register ('someone gets to be in the room.'); plain, private"),
-    "e2-vo-11": ("act4", "19.08", "their new phones first. then every model after this one.", "plan (distribution)",
-                 "his post landing on their stream; practical; the second sentence the real one, still unemphatic"),
-    "e2-vo-12": ("act4", "19.18", "they ask first in there.", "want (being asked)",
-                 "watching the raised hands go down the row; quiet; it pays Ep1's never being asked, never says so"),
-    "e2-vo-13": ("act4", "20.07", "we raise again in the fall. haras needs a number by then.", "plan (the money)",
-                 "folding the flyer away, Haras passing; a calendar thought; brisk for him"),
-    "e2-vo-14": ("tag", "23.05", "a good week for the other company.", "plan (personhood)",
-                 "after the Orb's verdict; dry; the faintest pleasure"),
+    "e2-vo-09": ("act3", "17.11", "everyone who signed. the post. everyone who signed.", "the scramble (his rattled tell)",
+                 "faster than he thinks, the one time the voice hurries; each item a new call, not louder (MIV §3's "
+                 "rattled repeat); nothing about what he knew"),
+    "e2-vo-10": ("act3", "17.13", "not until legal has every name.", "plan (the fix: a condition)",
+                 "thumb over Post, not pressing; level again; his own condition, a reply to nobody"),
+    "e2-vo-11": ("act4", "18.10", "the next one's already training.", "plan (the next model)",
+                 "after Mada's second word and a held breath; practical, a calendar thought; no weight on 'already', "
+                 "nothing about the committee"),
+    "e2-vo-12": ("act4", "19.08", "whatever we ship next goes in their phones too.", "plan (distribution)",
+                 "his post landing on their stream; practical; 'too' unemphatic"),
+    "e2-vo-13": ("act4", "20.07", "we raise in the fall. she has till then.", "plan (the money)",
+                 "folding the flyer away, Haras passing with UPSIDE circled ('she' is in frame); a calendar thought; "
+                 "brisk for him"),
+    "e2-vo-14": ("tag", "23.05", "sixty elections this year.", "plan (personhood: a count)",
+                 "after the Orb's verdict; a count, dry; no pleasure in it and no politics in it"),
 }
 
 # Everyone else's lines, and Mas's spoken lines: id -> dict(seg, beat, who, text, delivery, device, note[, len, rate])
@@ -351,7 +365,7 @@ _l("e2-co-0004", "coldopen", "1.05", "selbeep", "Directionally.",
    "beside the melting chair; a pro's correction, not a joke", "[INVENTED]")
 _l("e2-co-0005", "coldopen", "1.07", "selbeep", "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
    "O.S., to the room, not missing a beat; reassuring", "[INVENTED · tells a newcomer two weeks have passed]", device="os")
-_l("e2-co-0006", "coldopen", "1.08", "gerg", "That's not the mammoth. The mammoth's on four.",
+_l("e2-co-0006", "coldopen", "1.08", "gerg", "That's not the mammoth. The mammoth's on the fourth floor.",
    "still typing, still not looking up; cheerful, literal", "[INVENTED · the misdirect, spoken]")
 
 # ---- ACT ONE · sc 4, the Email Séance
@@ -382,7 +396,7 @@ _l("e2-a1-0012", "act1", "4.14", "nole", "I forwarded that. I didn't write it.",
 _l("e2-a1-0013", "act1", "4.14", "mas", "you wrote 'exactly right.'",
    "level, a fact read off the ghost", "[INVENTED · accurate to the record]")
 _l("e2-a1-0014", "act1", "4.16", "ghost-nole", "This needs billions per year immediately or forget it.",
-   "the 2018 ghost, in a hoodie, leaning across the table; matter-of-fact", "[K · facts §B ghost-NOLE Dec 26, 2018 (the Mar 5, 2024 post); pull]", device="ghost")
+   "the 2018 ghost, in a hoodie, leaning across the table; matter-of-fact", "[V · facts §B ghost-NOLE Dec 26, 2018 (the Mar 5, 2024 post), verbatim: CNBC and NBC News, Mar 6, 2024]", device="ghost")
 _l("e2-a1-0015", "act1", "4.18", "nole", "…That was a different me. That was 2018. Everybody said things in 2018.",
    "to the table, moving it in time; he never denies what it says", "[INVENTED]")
 _l("e2-a1-0016", "act1", "4.18", "gerg", "Same email address, though. I checked.",
@@ -399,45 +413,49 @@ _l("e2-a1-0021", "act1", "4.20", "staffer", "What's that?",
    "whispering, at the stone", "[INVENTED]", device="os")
 _l("e2-a1-0022", "act1", "4.21", "nole", "Nobody wrote that move. It came out of nowhere.",
    "to her, hushed, a man at a séance", "[INVENTED · his claim; Gerg corrects it]")
-_l("e2-a1-0023", "act1", "4.22", "gerg", "It didn't come out of nowhere. It came out of thirty million positions from people's games. It's millions of little numbers, like knobs, and every position nudged every knob a hair toward what the people played. Then it played itself.",
-   "typing; cheerful, literal, never smug; record it whole", "[INVENTED · accurate: the policy network learned from about 30M positions of expert human games, then improved by self-play (facts A57: Nature 529:484; DeepMind's account); 'it played itself' is Ep1's phrase]")
+_l("e2-a1-0023", "act1", "4.22", "gerg", "It didn't come out of nowhere. It learned. Thirty million positions from people's games.",
+   "typing; cheerful, literal, never smug; unhurried for him: the correction, not a read-out", "[INVENTED · accurate: the policy network learned from about 30M positions of expert human games (facts A57: Nature 529:484; DeepMind's account); 'It learned.' first, so the human data isn't the move's author]", rate=195)
+_l("e2-a1-0055", "act1", "4.22", "staffer", "So somebody did write it.",
+   "whispering, to Gerg; she thinks people's games means people wrote it", "[INVENTED · the misunderstanding Gerg corrects, so 'learned, not programmed' lands in the scene (W22)]", device="os")
+_l("e2-a1-0056", "act1", "4.22", "gerg", "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games.",
+   "still typing; cheerful, literal; one knob at a time, the last sentence the plainest", "[INVENTED · accurate (facts A57): millions of adjustable numbers nudged toward the human move in each position, then improved by self-play over millions of games; 'it played itself' is Ep1's phrase]", rate=195)
 _l("e2-a1-0024", "act1", "4.23", "nole", "One player in ten thousand would have made that move. It made it anyway. And it was right.",
    "a fear, not a boast; quiet, then quieter", "[INVENTED · his claim; accurate as the program's own estimate, about 1 in 10,000 (facts A57)]")
-_l("e2-a1-0025", "act1", "4.24", "nole", "They had that in 2016. We had a blog.",
-   "loud again, to the table; on credit and rivalry", "[INVENTED · disputes no email]")
+_l("e2-a1-0025", "act1", "4.24", "nole", "MINDDEEP had that in 2016. We had a blog.",
+   "loud again, to the table; on credit and rivalry", "[INVENTED · names the rival from his own 0% email (4.16); disputes no email]")
 _l("e2-a1-0026", "act1", "4.25", "ghost-nole", "…billions per year…",
    "ghost 3, drifting into Mas's eyeline: the same words, replayed", "[the same email's words (facts §B), cut from e2-a1-0014's take]", device="ghost")
 _l("e2-a1-0027", "act1", "4.26", "nole", "You kept them.",
    "quiet; his one quiet line, and his one short one", "[INVENTED]")
 _l("e2-a1-0028", "act1", "4.26", "mas", "we keep everything.",
    "off, landing on Nole's face (an L-cut)", "[INVENTED · ruled in by the facts pass: it refers to the published emails]", device="os")
-_l("e2-a1-0029", "act1", "4.34", "nole", "You sat at the back. I asked the whole room, and you sat at the back with your glass of water.",
-   "low at first, then not; the candle held to Mas's face like evidence", "[INVENTED · matches what F2.3 showed; says nothing about what was said in that room]")
+_l("e2-a1-0029", "act1", "4.34", "nole", "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water.",
+   "low at first, then not; the candle held to Mas's face like evidence", "[INVENTED · matches what F2.3 showed: he spoke to the room; says nothing about what was said there or asked of it (facts A11)]")
 _l("e2-a1-0030", "act1", "4.35", "nole", "Keep that too. See you in court.",
    "to Mas, already rising on his cable; the candle set down hard", "[INVENTED]")
 # ---- sc 4A
 _l("e2-a1-0031", "act1", "4A.01", "terb", "Before we start, the independent review is back. I'll read you the finding.",
    "brisk; a chair telling his table what he's about to do", "[INVENTED · 'independent' is Ep1's word]")
-_l("e2-a1-0032", "act1", "4A.02", "terb", "…the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.",
-   "reading the sheet word for word, weighted, both halves together; no view in the voice", "[P · facts A12: the Mar 8, 2024 post, both halves; name swap Altman → Manalt; open the live post]", rate=150)
+_l("e2-a1-0032", "act1", "4A.02", "terb", "The law firm found \"that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.\"",
+   "reading the sheet word for word, weighted, both halves together; no view in the voice; 'The law firm found' his own lead-in, the quote from 'that'", "[P · facts A12: the Mar 8, 2024 post (\"WilmerHale found that the prior Board…\"), both halves; the review's law firm stays the subject of both findings (Terb's own words, outside the quote: the firm has no registry name); name swap Altman → Manalt; open the live post]", rate=150)
 _l("e2-a1-0033", "act1", "4A.03", "terb", "You can sit down now, Mas.",
    "to Mas, dry; a chair moving to the next item", "[INVENTED · pays Ep1's \"we'll stand.\"]")
 # ---- sc 6, XEL's studio (every [P] line matched on the Lex #419 transcript page; facts A15)
-_l("e2-a1-0034", "act1", "6.01", "xel", "Take me through the NopeAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
-   "a calm, earnest interviewer; the pause is cut in the edit, never performed", "[P · facts A15: Lex #419, Mar 18, 2024 (≈1:05); OpenAI → NopeAI]")
+_l("e2-a1-0034", "act1", "6.01", "xel", "Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
+   "a calm, earnest interviewer; the pause is cut in the edit, never performed", "[P · facts A15: Lex #419, Mar 18, 2024 (1:05 on the lexfridman.com transcript); OpenAI → NOPEAI]")
 _l("e2-a1-0035", "act1", "6.03", "mas", "…the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things.",
    "his own pace; plain, a little rueful; no performance of pain", "[P · facts §B MAS Mar 18, 2024 (Lex #419)]")
 _l("e2-a1-0036", "act1", "6.04", "xel", "Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?",
-   "earnest, almost apologetic for the question", "[P · facts §B XEL/MAS Mar 18, 2024 (Lex #419, ≈18:19); Ilya → ALYI]")
+   "earnest, almost apologetic for the question", "[P · facts §B XEL/MAS Mar 18, 2024 (Lex #419, 18:34 on the lexfridman.com transcript); Ilya → ALYI]")
 _l("e2-a1-0037", "act1", "6.05", "mas", "no.", "quick, amused", "[P · Lex #419]", len=0.5)
 _l("e2-a1-0038", "act1", "6.05", "xel", "What about a regular secret facility?", "straight on", "[P · Lex #419]")
 _l("e2-a1-0039", "act1", "6.05", "mas", "no.", "quick", "[P · Lex #419]", len=0.5)
 _l("e2-a1-0040", "act1", "6.05", "xel", "What about a nuclear non-secret facility?", "straight on, determined", "[P · Lex #419]")
 _l("e2-a1-0041", "act1", "6.05", "mas", "neither. not that either.", "a small laugh under it", "[P · Lex #419]")
 _l("e2-a1-0042", "act1", "6.06", "xel", "…You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?",
-   "the real question at last; warm, careful", "[P · Lex #419 (≈18:44); the leading ellipsis trims \"This is becoming a meme at some point.\"; Ilya → ALYI]")
+   "the real question at last; warm, careful", "[P · Lex #419 (18:57 on the transcript); the leading ellipsis trims \"This is becoming a meme at some point.\"; Ilya → ALYI]")
 _l("e2-a1-0043", "act1", "6.07", "mas", "i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career.",
-   "his own pace, the longest thing he says in the episode; warm, unguarded on the first sentence, careful on the third", "[P · Lex #419 (≈18:57); trimmed after \"career.\"; Ilya → ALYI]")
+   "his own pace, the longest thing he says in the episode; warm, unguarded on the first sentence, careful on the third", "[P · Lex #419 (19:15 on the transcript); trimmed after \"career.\"; Ilya → ALYI]")
 _l("e2-a1-0044", "act1", "6.10", "xel", "Is it… conscious, though?",
    "off the record, leaning toward the giant mic; sincerely curious", "[INVENTED · after the recording; kept only if the reel's laugh test passes]")
 _l("e2-a1-0045", "act1", "6.10", "mas", "the mic?", "pressed against the curtain; genuinely asking", "[INVENTED]", len=0.8)
@@ -458,7 +476,7 @@ _l("e2-a1-0053", "act1", "7.06", "humanist", "Who else lives here?", "looking up
 _l("e2-a1-0054", "act1", "7.07", "tasya", "A tenant.", "O.S., from four floors down; warm", "[INVENTED]", device="os")
 
 # ---- ACT TWO · sc 8
-_l("e2-a2-0001", "act2", "8.06", "mas", "no money either way. you put it in your new assistant, and we call that even.",
+_l("e2-a2-0001", "act2", "8.06", "mas", "no money either way. you put us in your new assistant. that's the price.",
    "on the call; unhurried, level, no smile in it; his one full sentence of terms", "[INVENTED · the reported shape: neither side pays, exposure as the price (facts A58: Bloomberg, May 11 and Jun 12, 2024); opt-in, in ELPPA's assistant on its new devices (facts A40)]", device="call")
 # ---- sc 9
 _l("e2-a2-0002", "act2", "9.01", "rima", "Places, please. Phones on silent in the wings. We're on in five.",
@@ -466,7 +484,7 @@ _l("e2-a2-0002", "act2", "9.01", "rima", "Places, please. Phones on silent in th
 _l("e2-a2-0003", "act2", "9.02", "engineer", "So on stage, I ask it a question, it thinks for a second, and then it answers.",
    "holding the phone up, rehearsing it to her; presenter-bright, nervous under it", "[INVENTED]")
 _l("e2-a2-0004", "act2", "9.02", "engineer", "…Before I've asked. It does that.", "O.S., looking at the monitor", "[INVENTED]", device="os")
-_l("e2-a2-0005", "act2", "9.03", "gerg", "Careful. The new one can hear you laugh. So don't, unless you mean it.",
+_l("e2-a2-0005", "act2", "9.03", "gerg", "Careful. The new one can hear you laugh.",
    "typing on a road case; cheerful", "[INVENTED · accurate: the old voice mode lost laughter; the new model hears it (facts A23)]")
 _l("e2-a2-0006", "act2", "9.04", "mas", "is it ready?", "plain; Gerg's Ep1 question, his now", "[INVENTED]")
 _l("e2-a2-0007", "act2", "9.04", "rima", "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
@@ -510,24 +528,28 @@ _l("e2-a2-0031", "act2", "11.06", "rima", "It's live, so it has a few opinions. 
 _l("e2-a2-0032", "act2", "11.07", "engineer", "Say hello to the room.", "turning the phone's camera on the audience", "[INVENTED]")
 _l("e2-a2-0033", "act2", "11.07", "chatgtp", "Oh. Wow. That's a lot of you. Is it warm in here?", "flustered-delighted", "[INVENTED]")
 _l("e2-a2-0034", "act2", "11.07", "chatgtp", "You're making me blush. I don't have blood.", "delighted", "[INVENTED]")
-_l("e2-a2-0035", "act2", "11.08", "chatgtp", "It's free!", "instantly, delighted", "[INVENTED · accurate: free users got the model (facts A23)]")
+_l("e2-a2-0035", "act2", "11.08", "chatgtp", "It's free!", "instantly, delighted", "[INVENTED · accurate: free users got the model (facts A23); it answers 'what's the catch?', never safety]")
 _l("e2-a2-0036", "act2", "11.09", "rima", "…and that's the demo.", "in the half-dark, perfectly composed; her close", "[INVENTED · keep list]")
-_l("e2-a2-0037", "act2", "11.15", "engineer", "Mas just posted. It's one word.",
-   "off mic, after the stream, unclipping his headset, reading his phone; lower and closer", "[INVENTED]", device="offmic")
-_l("e2-a2-0038", "act2", "11.15", "engineer", "…Like the movie? The one where he falls for the computer?",
-   "off mic; the film's premise, the way people actually recall it", "[INVENTED · the film's premise only (D-6); never the actress, never the voice]", device="offmic")
+_l("e2-a2-0037", "act2", "11.15", "engineer", "Mas just posted. One word.",
+   "off mic, after the stream, unclipping his headset, to RIMA at her mark (she doesn't look up), reading his phone; lower and closer", "[INVENTED · said to a listener (W19)]", device="offmic")
+_l("e2-a2-0038", "act2", "11.15", "engineer", "'Her.' Like the movie. The guy and his computer.",
+   "off mic, still to Rima; a statement, the film's premise the way people recall it", "[INVENTED · the film's premise only (D-6); never the actress, never the voice]", device="offmic")
 
 # ---- ACT THREE · sc 13
 _l("e2-a3-0001", "act3", "13.01", "staffer", "When did anybody actually see him last? In person, I mean.",
-   "taping; to the staffer beside her", "[INVENTED · office talk under the flyers (facts A29)]")
+   "peeling one corner of a curled flyer off the pillar; to the staffer beside her", "[INVENTED · office talk under the flyers (facts A29)]")
 _l("e2-a3-0002", "act3", "13.01", "staffer2", "In the corridor, last week. For a second.",
-   "smoothing the tape down", "[INVENTED · no reflection (FC)]")
+   "smoothing the tape back down on hers", "[INVENTED · no reflection (FC)]")
 _l("e2-a3-0003", "act3", "13.02", "staffer", "He posted, though. Do we take these down now?",
-   "turning to Mas, tape in hand", "[INVENTED]")
+   "turning to Mas, the peeled corner in her hand", "[INVENTED]")
 _l("e2-a3-0004", "act3", "13.02", "mas", "leave them up.", "plain; already reaching for the fallen one", "[INVENTED]")
 _l("e2-a3-0005", "act3", "13.05", "reporter", "Senator, when does it get a vote?",
    "from the TV; a press-conference question", "[INVENTED · a generic question; no answer in a real senator's mouth (D-50)]", device="tv")
 # ---- sc 14
+_l("e2-a3-0023", "act3", "14.07", "mas", "congratulations.",
+   "the strip's line, said as the box types it; plain, meant", "[INVENTED · the chosen strip line, voiced (P9): Bukaj hears and answers it]", len=1.0)
+_l("e2-a3-0024", "act3", "14.08", "mas", "need anything?",
+   "the strip's second line, said as the box types it; plain", "[INVENTED · the chosen strip line, voiced (P9)]")
 _l("e2-a3-0006", "act3", "14.08", "bukaj", "Thank you. It's still warm.", "soft, exact; one hand flat on the humming armrest", "[INVENTED]")
 _l("e2-a3-0007", "act3", "14.08", "bukaj", "Not yet. I'd like a week in it before anyone asks me for a schedule.",
    "soft, exact; on the job, not on Alyi", "[INVENTED]")
@@ -540,7 +562,7 @@ _l("e2-a3-0010", "act3", "15.06", "crowd", "FEEL THE AGI! FEEL THE AGI!",
    "the room joining, building from one to all", "[V · facts A56]", device="chant", len=2.6)
 _l("e2-a3-0011", "act3", "15.07", "alyi", "You're not chanting.", "under the chant, to Mas; delighted to catch him", "[INVENTED · a company party; no reason, no vote]")
 _l("e2-a3-0012", "act3", "15.07", "mas", "someone has to hold the glass.", "dry, fond", "[INVENTED]")
-_l("e2-a3-0013", "act3", "15.07", "alyi", "Then feel it for both of us.", "laughing", "[INVENTED]")
+_l("e2-a3-0013", "act3", "15.07", "alyi", "Then I'll feel it for both of us.", "laughing", "[INVENTED]")
 _l("e2-a3-0014", "act3", "15.11", "ekiel", "Nobody knows how to do this yet.", "squinting at the screen; quiet, dry", "[INVENTED]")
 _l("e2-a3-0015", "act3", "15.11", "alyi", "Someone should.",
    "without looking away from the screen; quiet; a want, not a reason", "[INVENTED · his own Ep1 line (lock 2:17.96); fallback: Ep1's take e1-a1-5-15, reused]")
@@ -552,7 +574,7 @@ _l("e2-a3-0017", "act3", "17.05", "driver", "You gonna think it over, or can we 
 _l("e2-a3-0018", "act3", "17.06", "forecaster", "Already did. It's the one thing I didn't need a number for.",
    "letting the pen go; plain; word for word (keep list)", "[INVENTED · keep list; his refusal (April) reads as already made (facts A32)]")
 _l("e2-a3-0019", "act3", "17.09", "mas", "everyone who signed one. find them. all of them. today.",
-   "on the call to LEGAL; level and a hair quicker than he ever talks; we hear only his side", "[INVENTED · about the fix he made public (facts A31: \"…they can contact me and we'll fix that too.\"); nothing about what he knew]", device="call", rate=MAS_HURRIED)
+   "on the call to LEGAL; level, and quicker than he ever talks (the one time he hurries); we hear only his side", "[INVENTED · about the fix he made public (facts A31: \"…they can contact me and we'll fix that too.\"); nothing about what he knew]", device="call", rate=MAS_HURRIED)
 _l("e2-a3-0020", "act3", "17.12", "forecaster", "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
    "to Mas, pleasantly", "[INVENTED]")
 _l("e2-a3-0021", "act3", "17.15", "forecaster", "Updating.", "crossing out an hour; satisfied", "[INVENTED]", len=0.8)
@@ -567,8 +589,8 @@ _l("e2-a4-0002", "act4", "18.04", "neleh", "…MAS didn't inform the board that 
 _l("e2-a4-0003", "act4", "18.06", "terb", "First item.", "clicking the TV off", "[INVENTED]", len=0.8)
 _l("e2-a4-0004", "act4", "18.08", "terb", "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
    "brisk, procedural", "[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36)]")
-_l("e2-a4-0005", "act4", "18.08", "terb", "So, who checks it? We do.",
-   "looking up; a hand round the table on 'We do.'", "[INVENTED]")
+_l("e2-a4-0005", "act4", "18.08", "terb", "Members: myself, two directors, and our chief executive.",
+   "brisk, reading the next line of the page like a roll call; he doesn't look up", "[INVENTED · paraphrase of the May 28, 2024 post's membership (facts A36: Taylor, D'Angelo, Seligman, Altman)]")
 _l("e2-a4-0006", "act4", "18.09", "mas", "present.", "level", "[INVENTED]", len=0.7)
 _l("e2-a4-0007", "act4", "18.10", "terb", "And at the end of the ninety days, we take our recommendations to the full board, which is…",
    "brisk; the next line of the page in his own words", "[INVENTED · paraphrase of the post (facts A36)]")
@@ -577,10 +599,11 @@ _l("e2-a4-0009", "act4", "18.11", "mario", "Come in, Ekiel, sit down. I read you
    "still writing; warm and precise", "[INVENTED]")
 _l("e2-a4-0010", "act4", "18.11", "ekiel", "You annotated my resignation?", "squinting", "[INVENTED]")
 _l("e2-a4-0011", "act4", "18.11", "mario", "Lightly. Four pages.", "not looking up", "[INVENTED]")
-_l("e2-a4-0012", "act4", "18.12", "mario", "We agree. I underlined 'inherently.'", "pleased with the underline", "[INVENTED]")
+_l("e2-a4-0012", "act4", "18.12", "mario", "We agree. I underlined 'inherently.'",
+   "pleased with the underline; a small beat before 'inherently.', the word the joke turns on", "[INVENTED]", len=2.6)
 _l("e2-a4-0013", "act4", "18.13", "mario", "There's a brief document.", "finger rising", "[INVENTED]")
 _l("e2-a4-0014", "act4", "18.13", "ekiel", "That's the brief one?", "squinting down the stairwell after it", "[INVENTED]")
-_l("e2-a4-0015", "act4", "18.13", "mario", "That's the brief one. It'd be shorter, but I have one concern.",
+_l("e2-a4-0015", "act4", "18.13", "mario", "That's the brief one. It only has the one concern.",
    "setting his pen down for the first time", "[INVENTED]")
 _l("e2-a4-0016", "act4", "18.14", "mario", "It's that we might win.", "finger up; sincere", "[INVENTED · keep list]")
 # ---- sc 19
@@ -594,11 +617,17 @@ _l("e2-a4-0021", "act4", "19.04", "haras", "And profit?",
    "pleasantly, the real one; record it complete: the cheer takes its tail ('And profit—' on screen)", "[INVENTED]", len=0.8)
 _l("e2-a4-0022", "act4", "19.05", "haras", "Let me reframe that. Upside.", "writing on her tape, under the cheer", "[INVENTED]")
 _l("e2-a4-0023", "act4", "19.06", "staffer", "Is that Mas?", "pointing at the wall screen", "[INVENTED · our staging: the stream's crowd shot]")
-_l("e2-a4-0024", "act4", "19.09", "gerg", "You're there, and you're posting about it from the lawn. There's a screen the size of a building in front of you.",
+_l("e2-a4-0024", "act4", "19.09", "gerg", "There's a screen the size of a building in front of you, and you're on your phone.",
    "on the call, from the lobby; fond", "[INVENTED]", device="call")
 _l("e2-a4-0025", "act4", "19.09", "mas", "the phone's closer.", "eyes still on the stage", "[INVENTED]")
-_l("e2-a4-0026", "act4", "19.10", "gerg", "They just said our name up there. Half the lobby's standing on a beanbag.",
+_l("e2-a4-0026", "act4", "19.10", "gerg", "They just said our name up there.",
    "on the call", "[INVENTED · 'our name' is the stream's announcement (facts A40)]", device="call")
+_l("e2-a4-0033", "act4", "19.10", "gerg", "Half the lobby's standing on a beanbag.",
+   "on the call, delighted; behind him, they are", "[INVENTED]", device="call")
+_l("e2-a4-0034", "act4", "19.10", "mas", "which half?",
+   "eyes still on the stage; his precision question (Ep1's register)", "[INVENTED · P9: he asks aloud again]", len=1.0)
+_l("e2-a4-0035", "act4", "19.10", "gerg", "The half on the beanbags.",
+   "on the call; literal, helpful", "[INVENTED]", device="call")
 _l("e2-a4-0027", "act4", "19.10", "mas", "i heard.", "", "[INVENTED]", len=0.7)
 _l("e2-a4-0028", "act4", "19.10", "gerg", "You ever miss being up there?", "on the call; a real question, weighted", "[INVENTED]", device="call")
 _l("e2-a4-0029", "act4", "19.10", "mas", "i was up there once. they let me hold the clicker.",
@@ -622,7 +651,7 @@ CUT = {
 def l(lid):
     """the planning length of any Ep2 line"""
     if lid in NEW_VO:
-        return L(lid, est_len("mas", NEW_VO[lid][2], vo=True))
+        return L(lid, est_len("mas", NEW_VO[lid][2], vo=True, rate=VO_RATES.get(lid)))
     d = NEW_LINES[lid]
     fb = d.get("len") or est_len(d["who"], d["text"], rate=d.get("rate"))
     return L(lid, fb)
@@ -941,10 +970,10 @@ nb("act1", "4.13", "WIDE · the cow ghost rises, chewing; its caption and its re
    "boardroom", "SET-02", "seance", ["mas", "nole", "gerg"],
    "Another ghost lumbers up: a COW made of chevrons, a charging cable for a tail, the plug stamped ALSET, its chevron header dated 2018. It moos, reverbed, and chews. Its caption, and under it his reply.",
    "The caption reads over the chewing; the scene keeps moving under it.",
-   dur=4.6, fixed=("dur",), onscreen=[O("2018", 0.2, None, "doc"), O("FWD: …ATTACH IT TO ALSET \"AS ITS CASH COW\"", 0.4, None, "doc"),
+   dur=4.6, fixed=("dur",), onscreen=[O("2018", 0.2, None, "doc"), O("FWD: \"…ATTACH TO ALSET AS ITS CASH COW…\"", 0.4, None, "doc"),
                                       O("NOLE: \"…EXACTLY RIGHT…\"", 2.0, None, "doc")],
    music=M4, sounds=[S("cow_moo_reverb", 0.3, -22, new=True)], fix=("P", "FACT", "R2"),
-   why="Control, in his own forwarded email and his reply (facts §B, the cow: [K], pull).")
+   why="Control, in his own forwarded email and his reply (facts §B, the cow: [V], TechCrunch, Mar 5, 2024; both crops verbatim).")
 nb("act1", "4.14", "OTS · Nole at the cow → LOW·DESK · Mas",
    "boardroom", "SET-02", "seance", ["nole", "mas"],
    "NOLE disputes the medium, not the words. MAS answers with the words.",
@@ -966,7 +995,7 @@ nb("act1", "4.16", "WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" claus
    onscreen=[O("DEC 2018", 0.3, None, "doc"),
              O("\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%.\"", 0.5, None, "doc")],
    music=M4, sounds=[S("reverse_swell_1beat", 0.1, -24)], fix=("P", "FACT", "R1"),
-   why="The bill is set up before it's conceded (facts §B: the late-2018 email, [V·press]; pull).")
+   why="The bill is set up before it's conceded (facts §B: the Dec 26, 2018 email, [V], verbatim in CNBC and NBC News, Mar 6, 2024).")
 nb("act1", "4.17", "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
    "boardroom", "SET-02", "seance", ["nole", "mas"],
    "NOLE slaps his phone down on the table. Every flame jumps. Mas's hand on his glass doesn't move.",
@@ -999,13 +1028,14 @@ nb("act1", "4.21", "MCU · NOLE to her, hushed",
    "NOLE, to her, hushed, a man at a séance.",
    "", lines=[line("e2-a1-0022", pace=QUICK)], head=0.25, tail=0.15, mode="SET-PIECE · the explainer (Move 37)",
    music=M4go, fix=("P", "ML", "R2", "PACE"), why="He calls it magic.")
-nb("act1", "4.22", "MCU · GERG typing (his correction) → the knob wall behind the board: the training stream, then its own boards, then the freeze",
-   "boardroom", "SET-04", "seance", ["gerg"],
-   "GERG, typing, cheerfully literal, corrects him. Behind the board, a wall of tiny knobs: a stream of tiny human boards pours into it, each one ticking every knob a hair. On \"Then it played itself.\" the stream turns into the program's own boards. The wall freezes.",
-   "The knobs tick only while the stream pours in, and freeze at the match (the numbers were fixed during play). No players, no hands.",
-   lines=[line("e2-a1-0023", pace=QUICK)], head=0.2, tail=1.0, fixed=("tail",), mode="SET-PIECE · the explainer (Move 37)",
-   music=M4go, sounds=[S("knob_tick_grain", "L:e2-a1-0023+3.0", -30, new=True, note="soft, continuous until the freeze", dur=9.0)],
-   fix=("P", "ML", "R2", "PACE"), why="Learned, not programmed: millions of knobs nudged by examples (facts A57).")
+nb("act1", "4.22", "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
+   "boardroom", "SET-04", "seance", ["gerg", "staffer"],
+   "GERG, typing, cheerfully literal, corrects him: it learned, from people's games. The staffer beside him, whispering, takes that to mean somebody wrote it. Nobody did: behind the board, a wall of tiny knobs, a stream of tiny human boards pouring into it, each one ticking every knob a hair. On \"Then it played itself, millions of games.\" the stream turns into the program's own boards. The wall freezes.",
+   "The knobs tick only while the stream pours in, and freeze at the match (the numbers were fixed during play). No players, no hands. The wall starts on \"Nobody wrote it.\", so the picture carries the second half.",
+   lines=[line("e2-a1-0023", pace=QUICK), line("e2-a1-0055", 0.25, QUICK), line("e2-a1-0056", 0.25, QUICK)],
+   head=0.2, tail=1.0, fixed=("tail",), mode="SET-PIECE · the explainer (Move 37)",
+   music=M4go, sounds=[S("knob_tick_grain", "L:e2-a1-0056+0.8", -30, new=True, note="soft, continuous until the freeze", dur=9.0)],
+   fix=("P", "ML", "R2", "PACE", "SR"), why="Learned, not programmed, through a misunderstanding: millions of knobs nudged by examples, then self-play (facts A57). Script review: split with the staffer, about 2 s more (Act One is the setup act, R4).")
 nb("act1", "4.23", "MCU · NOLE takes the fear back",
    "boardroom", "SET-04", "seance", ["nole"],
    "NOLE takes the fear back, in plainer words.",
@@ -1047,28 +1077,28 @@ nb("act1", "4.28", "WIDE · NopeAI's first office, Feb 2018, by day: the all-han
    dur=4.4, fixed=("dur",), onscreen=[O("RAIL: FEB 20, 2018", 0.4, 2.2, "rail"), O("ALSET · AI", 1.2, None, "doc"), O("AGI", 0.4, None, "ui")],
    music=M4f, style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK",
    fix=("P", "FACT", "R2"), why="F2.3: his exit (facts A11).")
-nb("act1", "4.29", "WIDE · the slide and the ladder in one frame: Nole points at one, then the other; nobody stands",
+nb("act1", "4.29", "WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds",
    "office", "SET-03", "allhands", ["nole", "gerg", "staff"],
-   "NOLE points at the slide, then at the ladder to the ceiling hatch, where a sign-up sheet is taped. Nobody stands. One by one the staff turn back to their monitors; the arena match keeps playing. GERG, second row, keeps typing.",
-   "The refusal shown, not a freeze (R2).",
-   dur=4.6, music=M4f, style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2"),
-   why="The room didn't follow him (facts A11, Semafor).")
+   "NOLE finishes, one hand still on the slide. Nobody applauds. One by one the staff turn back to their monitors; the arena match keeps playing. GERG, second row, keeps typing.",
+   "The room's answer is the room: no prop, no sheet, nothing asked of anyone on screen (script review).",
+   dur=4.5, fixed=("dur",), music=M4f, style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2", "SR", "GR"),
+   why="The room didn't buy the story (facts A11, Semafor); no recruitment shown (W8: the suit's merits).")
 nb("act1", "4.30", "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
    "office", "SET-03", "allhands", ["mas", "nole"],
-   "At the back, MAS sips from the same crystal glass. NOLE climbs the ladder alone. The hatch slides shut on him.",
+   "At the back, MAS sips from the same crystal glass. NOLE climbs the ladder to the ceiling hatch. The hatch slides shut on him.",
    "", dur=4.2, music=M4f, sounds=[S("glass_sip", 0.4, -28, new=True), S("ladder_climb", 1.2, -24, new=True), S("hatch_slide_shut", 3.3, -20, new=True)],
    style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P",), why="He leaves by the only exit he recognizes.")
-nb("act1", "4.31", "INSERT · the sign-up sheet by the ladder, still empty",
+nb("act1", "4.31", "INSERT · the arena monitor: the match still playing, nobody has paused it",
    "office", "SET-03", "allhands", [],
-   "The sign-up sheet by the ladder, still empty, lifts in the hatch's draught.",
-   "", dur=1.8, fixed=("dur",), music=M4f, sounds=[S("sheet_flutter", 0.3, -26, new=True)],
-   style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2"), why="Nobody followed him.")
+   "The arena match on the one monitor plays on under the hatch's draught; nobody has paused it.",
+   "", dur=1.8, fixed=("dur",), music=M4f, sounds=[S("arena_blip_soft", 0.3, -28, new=True)],
+   style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2", "SR"), why="The work goes on without him (facts A11).")
 nb("act1", "4.32", "2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back at MAS at the back",
    "office", "SET-03", "allhands", ["alyi", "mas"],
    "ALYI, at the next desk, cropped by his monitor's edge, turns and looks back at Mas. Mas lifts his glass an inch.",
    "Alyi present, lit, a person (P8), part of him cut off by the frame (his rule). Warm. About 2 s on the look.",
-   dur=4.2, music=M4f, style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2"),
-   why="The two who stayed (W14: the bond before the loss).")
+   dur=4.2, fixed=("dur",), music=M4f, style="T3 cut-paper memory", flashback=F23, mode="FLASHBACK", fix=("P", "R2", "SR"),
+   why="Two of the ones who stayed, together (W14: the bond before the loss).")
 nb("act1", "4.33", "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
    "boardroom", "SET-02", "seance", ["nole", "mas"],
    "The glass carries us back. In 2024 the smoke thins. Nole strikes a match and relights the candle himself.",
@@ -1083,7 +1113,7 @@ nb("act1", "4.34", "OTS · the reverse, over Nole's shoulder, the candle in his 
    "NOLE holds the candle up to Mas's face like evidence. Mas lifts his glass and sips: F2.3's sip, six years on.",
    "Base setup for the confrontation.",
    lines=[line("e2-a1-0029")], head=0.6, tail=1.4, music=M4x, sounds=[S("glass_sip", "E:e2-a1-0029+0.5", -26, new=True)],
-   fix=("P", "KEEP"), why="\"I asked the whole room\": matches what we saw.")
+   fix=("P", "KEEP"), why="\"I stood up in front of the whole room\": matches what we saw, and says nothing he asked of it.")
 nb("act1", "4.35", "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
    "boardroom", "SET-02", "seance", ["nole", "mas"],
    "NOLE sets the candle down in front of Mas, hard, already rising. He rockets back up through his hole. One ceiling tile drops back into place.",
@@ -1298,17 +1328,17 @@ nb("act2", "8.01", "OTS · over Mas's shoulder in the dark, glass in the foregro
    jcut=[{"sound": "the Water Line under act-out 1's black", "lead_s": 1.0}],
    arrive={"s": 2.0, "what": "the dark room with the monitor's glow already on his face"},
    fix=("P", "FACT", "R1", "R2"), why="The act opens on his moves: the rules swiped away (facts A14).")
-nb("act2", "8.02", "POV · the monitor scrolls to a news desk: three cardboard CEOs in lanyards against a height chart; the host turns to the lens",
+nb("act2", "8.02", "POV · the monitor scrolls to a news site: a headline over the segment's video still (three cardboard CEOs in lanyards against a height chart; the host turns to the lens)",
    "screen", "SET-09", "darkroom", ["mas"],
-   "One whole-pixel scroll to a news desk. Three cardboard cutouts in lanyards stand in a lineup against a height chart: Mas, his landlord, and Elgoog's. The segment's card behind them. The host turns from the lineup and looks down the lens.",
-   "The host is unplated (A14). A news-desk sting, tiny and ducked.",
-   dur=5.2, fixed=("dur",), onscreen=[O("RAIL: APR 1, 2024", 0.3, 2.1, "rail"), O("\"MAS, TASYA AND RADNUS\"", 2.3, None, "doc")],
+   "One whole-pixel scroll to a news site. Its headline, over the segment's video still: a news desk where three cardboard cutouts in lanyards stand in a lineup against a height chart: Mas, his landlord, and Elgoog's. The still plays; the host turns from the lineup and looks down the lens.",
+   "The words are the news site's headline, framed as a headline in its own UI (GR §3: an [H] quote only as the headline's exact words), never as the show's own card. The host is unplated (A14). A news-desk sting, tiny and ducked.",
+   dur=5.2, fixed=("dur",), onscreen=[O("RAIL: APR 1, 2024", 0.3, 2.1, "rail"), O("…TAKES AIM AT MAS, TASYA AND RADNUS…", 2.3, None, "doc")],
    music=M8, sounds=[S("mouse_scroll", 0.1, -28), S("news_desk_sting", 0.5, -30, new=True)],
-   fix=("P", "FACT"), why="Mas watching himself in a lineup beside his landlord (facts A19).")
+   fix=("P", "FACT", "SR"), why="Mas watching himself in a lineup beside his landlord (facts A19: Business Insider's headline on the Apr 1 segment, [H], name swaps).")
 nb("act2", "8.03", "OTS · Mas at the monitor, the lineup on it",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "Mas at the monitor, the lineup on it.", "The V.O. types in his cyan.",
-   lines=[line("e2-vo-04")], head=0.5, tail=0.5, music=M8, fix=("P", "VO"), why="V.O. 4: own compute someday.")
+   lines=[line("e2-vo-04")], head=0.5, tail=0.5, music=M8, fix=("P", "VO"), why="V.O. 4: own compute someday (the landlord's servers now; ours after).")
 nb("act2", "8.04", "POV · his calendar: Elgoog's keynote already on Tuesday; he drags his own launch onto the Monday square",
    "screen", "SET-07", "darkroom", ["mas"],
    "His calendar. ELGOOG · DEVELOPER KEYNOTE is already on TUE 14. He drags his own block, NOPEAI · SPRING UPDATE, onto the MON 13 square. It snaps in.",
@@ -1319,7 +1349,7 @@ nb("act2", "8.04", "POV · his calendar: Elgoog's keynote already on Tuesday; he
 nb("act2", "8.05", "MCU · Mas, the lit Monday square in his eyes",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "The Monday square lit.", "",
-   lines=[line("e2-vo-05")], head=0.4, tail=0.4, music=M8, fix=("P", "VO"), why="V.O. 5: their Tuesday opens on our news (paid at sc 12).")
+   lines=[line("e2-vo-05")], head=0.4, tail=0.4, music=M8, fix=("P", "VO", "SR"), why="V.O. 5: a condition, one day ahead is enough; it reads as foresight once sc 12 shows Elgoog's day under OMNI.")
 nb("act2", "8.06", "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
    "call", "SET-07", "darkroom", ["mas"],
    "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers. Mas, unhurried, says the episode's one full sentence of terms. The tile shows …, then CONFIRMED.",
@@ -1358,7 +1388,7 @@ nb("act2", "9.02", "MEDIUM · the ENGINEER rehearsing to her → SCR · the moni
    sounds=[S("ui_chirp_bright", "E:e2-a2-0003+0.1", -22, new=True)], fix=("P", "KEEP"), why="")
 nb("act2", "9.03", "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
    "stage", "SET-10", "wings", ["engineer", "gerg"],
-   "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"mean it.\"",
+   "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"laugh.\"",
    "The tag is THE PLAN's plant (it lies at the bottom of the grate).",
    lines=[line("e2-a2-0005")], head=1.3, tail=0.4, onscreen=[O("[laughter]", 0.5, None, "ui")], music=M9,
    sounds=[S("engineer_laugh_take", 0.1, -22, new=True, note="his laugh: a separate take in the ENGINEER's voice"), S("tag_drop", 0.6, -26, new=True)],
@@ -1492,12 +1522,13 @@ nb("act2", "11.07", "WIDE · the engineer turns the phone's camera on the audien
    onscreen=[O("😊", "E:e2-a2-0034+0.1", None, "ui")], music=M11,
    sounds=[S("crowd_laugh_m", "E:e2-a2-0034+0.3", -20, new=True), S("spotlight_swing", "E:e2-a2-0034+1.1", -24)],
    fix=("P", "KEEP"), why="Laugh 3; the third step (SYDNEY's emoji from Ep1).")
-nb("act2", "11.08", "SCR · the stream's chat scrolls up the side: is it safe? sticks",
+nb("act2", "11.08", "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
    "stage", "SET-10", "demo_house", ["chatgtp"],
-   "On the big screen the livestream chat scrolls up the side. One comment sticks: is it safe? CHATGTP answers, delighted, and gets the last laugh.",
-   "Live, before her close (R1).", lines=[line("e2-a2-0035")], head=1.3, tail=1.3, fixed=("head",),
-   onscreen=[O("is it safe?", 0.3, None, "ui")], music=M11, sounds=[S("crowd_laugh_s", "E:e2-a2-0035+0.2", -22, new=True)],
-   fix=("P", "R1"), why="A cold little laugh.")
+   "On the big screen the livestream chat scrolls up the side. One comment sticks: what's the catch? CHATGTP answers, delighted, and gets the last laugh.",
+   "Live, before her close (R1). Free is the catch; safety is never mentioned (script review: no thesis by placement).",
+   lines=[line("e2-a2-0035")], head=1.3, tail=1.3, fixed=("head",),
+   onscreen=[O("what's the catch?", 0.3, None, "ui")], music=M11, sounds=[S("crowd_laugh_s", "E:e2-a2-0035+0.2", -22, new=True)],
+   fix=("P", "R1", "SR"), why="A cold little laugh.")
 nb("act2", "11.09", "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
    "stage", "SET-10", "demo_house", ["rima"],
    "RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it. Then her close.",
@@ -1532,12 +1563,12 @@ nb("act2", "11.14", "MCU · RIMA on her mark, composed, not looking up",
    "stage", "SET-10", "demo_house", ["rima"],
    "RIMA holds her mark, composed. She doesn't look up.",
    "No wince (R2: no 'understudy' framing, GR §6).", dur=2.6, fixed=("dur",), music=M11end, fix=("P", "R2", "GR"), why="Her close made.")
-nb("act2", "11.15", "MEDIUM · the ENGINEER, unclipping his headset, off mic, reading his phone",
-   "stage", "SET-10", "demo_house", ["engineer"],
-   "The ENGINEER, unclipping his headset, off mic, reads it off his phone.",
-   "His gloss is the film's premise, not the voice (D-6).",
+nb("act2", "11.15", "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
+   "stage", "SET-10", "demo_house", ["engineer", "rima"],
+   "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
+   "Said to a listener (W19). His words are the film's premise, not the voice (D-6).",
    lines=[line("e2-a2-0037"), line("e2-a2-0038", 0.6, FREE)], head=0.7, tail=0.4, music=M11end,
-   sounds=[S("headset_unclip", 0.2, -26, new=True)], fix=("P", "R1", "GR"), why="What the word points at (the film's premise only).")
+   sounds=[S("headset_unclip", 0.2, -26, new=True)], fix=("P", "R1", "GR", "SR"), why="What the word points at (the film's premise only), told to the one person who doesn't look up.")
 nb("act2", "11.16", "WIDE · every head near the wings turns; the blimp over the emptying house",
    "stage", "SET-10", "demo_house", ["staff"],
    "Every head near the wings turns. The blimp over the emptying house.",
@@ -1599,7 +1630,7 @@ nb("act2", "12.07", "ECU · he types his own post at a post's pace and posts it 
    lines=[line("e2-vo-06")], head=8.6, tail=0.4, fixed=("head",),
    onscreen=[O("ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.", 0.4, "end", "post")],
    music=M12b, sounds=[S("key_tap_soft_01", 0.6, -30), S("key_tap_soft_03", 1.4, -30), S("key_tap_soft_05", 2.2, -30), S("post_click", 3.2, -28)],
-   fix=("P", "VO", "FACT", "R1"), why="V.O. 6 over his act: his want (facts A61). The post's text is 165 characters: 8.5 s to read from its first letter.")
+   fix=("P", "VO", "FACT", "R1", "SR"), why="V.O. 6 over his act: his want, as a fact about himself, the hope unsaid (facts A61). The post's text is 165 characters: 8.5 s to read from its first letter.")
 nb("act2", "12.08", "MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "Hold on his face. The cue stops mid-phrase on the downbeat. Black: the midpoint act-out.",
@@ -1611,18 +1642,18 @@ nb("act2", "12.08", "MCU · his face, held 2–3 s; the cue stops mid-phrase on 
 # ------------------------------------------------------------------------------------- ACT THREE · sc 13 · 0:36
 M13 = ("E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's "
        "rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed")
-nb("act3", "13.01", "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs, flyers and tape between them",
+nb("act3", "13.01", "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down",
    "lobby", "SET-01", "lobby_day", ["mas", "staffer", "staffer2", "gerg", "staff"],
-   "The lobby by day. February's WHERE IS ALYI? flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor the February complaint has become a side table. Two STAFFERS stand under the pillars with a roll of tape; the lobby TV murmurs.",
+   "The lobby by day. February's WHERE IS ALYI? flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor the February complaint has become a side table. Two STAFFERS stand at the next pillar: one peels a curled corner off a flyer, the other smooths the tape back down on hers; the lobby TV murmurs.",
    "February's flyers, curling (R2): not fresh ones.",
    lines=[line("e2-a3-0001"), line("e2-a3-0002", 0.25, QUICK)], head=2.4, tail=0.3, fixed=("head",),
    onscreen=[O("WHERE IS ALYI?", 0.3, None, "sign")], music=M13,
    jcut=[{"sound": "THE CLOCK's first tick under the midpoint's black", "lead_s": 0.8}],
-   arrive={"s": 2.0, "what": "the staffers already under the pillars, tape in hand, the TV murmuring"},
+   arrive={"s": 2.0, "what": "the staffers already at the pillar, one peeling, one smoothing, the TV murmuring"},
    fix=("P", "R2", "FC", "PACE"), why="Everyone misses him (facts A29).")
-nb("act3", "13.02", "OTS-WIDE · the first staffer turns to Mas, tape in hand",
+nb("act3", "13.02", "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
    "lobby", "SET-01", "lobby_day", ["staffer", "mas"],
-   "The first staffer turns to Mas.", "",
+   "The first staffer turns to Mas, the corner she was peeling still in her hand.", "Her question follows from her hands (script review).",
    lines=[line("e2-a3-0003", pace=QUICK), line("e2-a3-0004", 0.45, QMAS)], head=0.3, tail=0.3, music=M13,
    fix=("P", "R2", "PACE"), why="Mas decides: the flyers stay up.")
 nb("act3", "13.03", "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down",
@@ -1697,17 +1728,19 @@ nb("act3", "14.06", "WIDE · Alyi's door: Open greyed, bonk; the knock shakes Ep
    why="The note goes into his pocket and stays there (Ep11).")
 nb("act3", "14.07", "WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts",
    "bullpen", "SET-12", "open_floor", ["bukaj", "mas"],
-   "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: congratulations.",
-   "", dur=4.8, fixed=("dur",), onscreen=[O("BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.", 0.4, 3.2, "plate"), O("congratulations.", 3.5, None, "ui")],
+   "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: the box types congratulations. as he says it.",
+   "The chosen strip line is voiced in his own voice as the box types it (voiced adventure games do this; P9).",
+   lines=[line("e2-a3-0023")], head=3.5, tail=0.15, fixed=("head",),
+   onscreen=[O("BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.", 0.4, 3.2, "plate"), O("congratulations.", "L:e2-a3-0023-0.1", None, "ui")],
    music=M14, sounds=[S("chair_hum_choir", 0.0, -30, new=True, note="diegetic: the GPU choir chord", dur=4.8)], style=UI14,
-   fix=("P", "FACT"), why="A new chief scientist in his chair (facts A26).")
+   fix=("P", "FACT", "SR"), why="A new chief scientist in his chair (facts A26); Mas says it aloud.")
 nb("act3", "14.08", "2S · Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest",
    "bullpen", "SET-12", "open_floor", ["bukaj", "mas"],
-   "BUKAJ thanks him. The strip: need anything? Mas takes it. BUKAJ doesn't take his hand off the armrest.",
-   "The typed lines stay in the band; Bukaj's answers in the two-shot.",
-   lines=[line("e2-a3-0006", pace=NORMAL), line("e2-a3-0007", 1.6, FREE)], head=0.5, tail=0.4,
-   onscreen=[O("need anything?", "E:e2-a3-0006+0.3", "E:e2-a3-0006+1.4", "ui")], music=M14, style=UI14, fix=("P",),
-   why="Room to work; the job, not Alyi.")
+   "BUKAJ thanks him. The strip: need anything? Mas takes it, and says it as the box types it. BUKAJ doesn't take his hand off the armrest.",
+   "The typed lines stay in the band, voiced as they type; Bukaj's answers in the two-shot.",
+   lines=[line("e2-a3-0006", pace=NORMAL), line("e2-a3-0024", 0.5, NORMAL), line("e2-a3-0007", 0.5, NORMAL)], head=0.5, tail=0.4,
+   onscreen=[O("need anything?", "L:e2-a3-0024-0.1", "E:e2-a3-0024+0.6", "ui")], music=M14, style=UI14, fix=("P", "SR"),
+   why="Room to work; the job, not Alyi. Mas trying hardest, aloud (P9).")
 nb("act3", "14.09", "WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card",
    "bullpen", "SET-12", "open_floor", ["ekiel"],
    "EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks. The card freezes on him.",
@@ -1715,11 +1748,11 @@ nb("act3", "14.09", "WIDE · EKIEL walks out with a box past ordinary desks, squ
    music=M14, sounds=[S("freeze_hit_F", 0.6, -18)], style="2-TONE FREEZE (the card, 1 bar)", fix=("P", "FC"), why="")
 nb("act3", "14.10", "HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topples to Mas's shoe",
    "bullpen", "SET-12", "open_floor", ["ekiel", "mas"],
-   "He sets his resignation thread down as one domino, in its own UI, MAY 17. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
-   "One domino (R2). His own words.", dur=6.0, fixed=("dur",),
-   onscreen=[O("MAY 17", 0.6, None, "post"), O("Over the past few months my team has been sailing against the wind.", 0.7, 4.4, "post")],
+   "He sets his resignation thread down as one domino, in its own UI, MAY 17: its first post. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
+   "One domino (R2). His own words: the thread's first post, which states the departure and carries no grievance (script review).", dur=6.0, fixed=("dur",),
+   onscreen=[O("MAY 17", 0.6, None, "post"), O("Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI.", 0.7, 5.6, "post")],
    music="E02-08 · thins to its pedal under Ekiel's post", sounds=[S("domino_set", 0.5, -24, new=True), S("domino_topple_run", 4.6, -24, new=True)],
-   style=UI14, fix=("P", "FACT", "R2", "FC"), why="The safety co-lead leaves, in his own words (facts A27).")
+   style=UI14, fix=("P", "FACT", "R2", "FC", "SR"), why="The safety co-lead leaves, in his own words (facts A27: the thread's first post, May 17, 2024).")
 nb("act3", "14.11", "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws",
    "bullpen", "SET-12", "open_floor", ["dot"],
    "Down the corridor, beside Ekiel's empty desk, the safety team's own door. An orange-cuffed hand backs four screws out of its plate, one per beat, and drops it in a box marked MISC.",
@@ -1807,9 +1840,9 @@ nb("act3", "15.09", "WIDE · the racks in the corner hum along; at the chant's p
    "GLYPH 12 frames on the room, never in his eyes (GR §6).", dur=2.6, music=M15w,
    sounds=[S("glyph_shimmer", 0.6, -28)], style="T4 + GLYPH (12 frames, on the room)", flashback=F22, mode="FLASHBACK · want",
    fix=("P", "GR"), why="")
-nb("act3", "15.10", "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's first sentence",
+nb("act3", "15.10", "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
    "office", "SET-13", "office_2023", ["alyi", "ekiel"],
-   "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its first hard sentence. EKIEL beside him, squinting at it.",
+   "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
    "The post's words are the record's; its numbers don't print (R2).", dur=8.9, fixed=("dur",),
    onscreen=[O("RAIL: 2023", 0.2, 1.4, "rail"), O("INTRODUCING SUPERALIGNMENT · ALYI, EKIEL", 1.4, None, "post"),
              O("Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.", 1.6, 8.8, "post")],
@@ -1874,13 +1907,13 @@ M17n = "E02-10 · one held chord through the night (2 s)"
 M17p = "E02-10 · thins to the bass pedal under the posts; the honks on the phrase ends"
 M17r = "E02-10 · a pad in the rain"
 CH17 = ["mas", "forecaster", "driver"]
-nb("act3", "17.01", "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster steps out beside it",
+nb("act3", "17.01", "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it",
    "skyline", "SET-16", "bridge", ["forecaster"],
-   "The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER steps out of the same doors with a clipboard of dates, the first person beside it, and looks down at it.",
-   "The papers start at NopeAI's doors, never near Alyi (FC).", dur=4.4, fixed=("dur",),
+   "The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER walks up from the street with a clipboard of dates, the first person to stop beside it, and looks down at it.",
+   "The papers start at NopeAI's doors, never near Alyi (FC). He comes from the street, not out of the building: he had already left (his refusal was in April; facts A32).", dur=4.4, fixed=("dur",),
    onscreen=[O("RAIL: MAY 17, 2024", 0.3, 2.1, "rail")], music=M17, sounds=[S("receipt_printer", 0.0, -22, new=True, dur=4.4)],
-   arrive={"s": 4.0, "what": "NopeAI's front doors, the receipt already pouring out, the Forecaster stepping out beside it, the band in"},
-   fix=("P", "FC", "FACT"), why="The papers go public (facts A31).")
+   arrive={"s": 4.0, "what": "NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in"},
+   fix=("P", "FC", "FACT", "SR"), why="The papers go public (facts A31).")
 nb("act3", "17.02", "WIDE · one quick run: down the hill and across all five lanes of the bridge in the evening rush (three parallax planes)",
    "skyline", "SET-16", "bridge", ["staff"],
    "In one quick run down the hill the receipt crosses all five lanes of the Bay Bridge in the evening rush. Commuters read it as they drive; traffic slows on it, then stops. Its lines scroll under the tyres.",
@@ -1915,7 +1948,7 @@ nb("act3", "17.06", "WIDE · across the lanes: the Forecaster lets the pen go; t
 nb("act3", "17.07", "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
    "skyline", "SET-16", "bridge", ["mas"],
    "Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.",
-   "", dur=2.4, music=M17, sounds=[S("phone_buzz_step_1", 1.0, -24)], fix=("P",), why="He's caught out (W4).")
+   "", dur=2.4, music=M17, sounds=[S("phone_buzz_step_1", 1.0, -24)], fix=("P",), why="The scramble starts, with a still face (W4).")
 nb("act3", "17.08", "ECU · the scramble on his phone: staff screenshots of a clause; a grey LEGAL tile; a second request for comment",
    "screen", "SET-16", "bridge", [],
    "His phone won't stop: staff screenshots of a clause; a grey LEGAL tile, call me; a second request for comment. Quick cuts on his thumbs.",
@@ -1925,21 +1958,23 @@ nb("act3", "17.08", "ECU · the scramble on his phone: staff screenshots of a cl
    mode="QUICK-CUT RUN (the scramble)", fix=("P", "R1", "R2"), why="The scramble (The Social Network's grammar).")
 nb("act3", "17.09", "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
    "call", "SET-16", "bridge", ["mas"],
-   "He calls LEGAL. We hear only his side, level and a hair quicker than he ever talks. His face doesn't move.",
+   "He calls LEGAL. We hear only his side, level, and quicker than he ever talks. His face doesn't move.",
    "The one time he hurries.", lines=[line("e2-a3-0019")], head=1.2, tail=0.4, music=M17s,
    sounds=[S("call_ring", 0.1, -26), S("call_connect", 0.8, -26)], mode="QUICK-CUT RUN (the scramble)",
    fix=("P", "R2", "GR"), why="Mas is heard acting: the fix he made public.")
 nb("act3", "17.10", "ECU · a draft opened, typed, deleted, typed: grey bars",
    "screen", "SET-16", "bridge", [],
    "A draft opened, typed, deleted, typed, its words grey bars.",
-   "No legible word (R2: nothing at contested item 3).", dur=4.6, fixed=("dur",), music=M17s,
+   "No legible word and no voice over it (R2: nothing at contested item 3).", dur=4.6, fixed=("dur",), music=M17s,
    sounds=[S("key_tap_soft_01", 0.4, -28), S("key_delete_run", 1.8, -26, new=True), S("key_tap_soft_03", 3.0, -28)],
    mode="QUICK-CUT RUN (the scramble)", fix=("P", "R2", "GR"), why="")
 nb("act3", "17.11", "MCU · his still face; the receipt still unrolling under his shoes",
    "skyline", "SET-16", "bridge", ["mas"],
-   "His face doesn't move. The receipt is still unrolling under his shoes.",
-   "", dur=2.8, fixed=("dur",), music=M17s, sounds=[S("receipt_unroll_loop", 0.0, -28, new=True, dur=2.8)], mode="QUICK-CUT RUN (the scramble)",
-   fix=("P", "R1"), why="Frantic hands under a still face.")
+   "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft.",
+   lines=[line("e2-vo-09")], head=0.3, tail=0.4, fixed=("head",), music=M17s,
+   sounds=[S("receipt_unroll_loop", 0.0, -28, new=True, dur=3.6)], mode="QUICK-CUT RUN (the scramble)",
+   fix=("P", "R1", "VO", "GR", "SR"), why="Frantic hands under a still face; V.O. 9, a cluster with V.O. 10 (W6).")
 nb("act3", "17.12", "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "skyline", "SET-16", "bridge", ["forecaster", "mas"],
    "THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.",
@@ -1947,8 +1982,8 @@ nb("act3", "17.12", "MCU · the Forecaster, having crossed the stalled lanes, st
 nb("act3", "17.13", "ECU · Mas's thumb hovers over Post; he doesn't press",
    "screen", "SET-16", "bridge", ["mas"],
    "Mas's thumb hovers over Post. He doesn't press.",
-   "", lines=[line("e2-vo-09")], head=0.8, tail=0.5, music=M17, pace="weighted", fix=("P", "VO", "R2", "GR"),
-   why="V.O. 9: the fix first; never what he knew.")
+   "", lines=[line("e2-vo-10")], head=0.8, tail=0.5, music=M17, pace="weighted", fix=("P", "VO", "R2", "GR", "SR"),
+   why="V.O. 10: his own condition for the post, a reply to nobody; never what he knew.")
 nb("act3", "17.14", "WIDE · the night, one held shot: the bridge's lights cycle once; Mas still on the receipt; the Forecaster asleep against the rail",
    "skyline", "SET-16", "bridge_night", ["mas", "forecaster"],
    "The night, one held shot: the bridge's lights cycle once. Mas still on the receipt. The Forecaster asleep against the rail, clipboard on his chest.",
@@ -1987,11 +2022,13 @@ nb("act3", "17.19", "POV · his rain-beaded phone: the voice menu, five live wav
    "No bonk, no notification here.", dur=4.4, fixed=("dur",),
    onscreen=[O("VOICE 5", 0.4, None, "ui"), O("Pause", 1.4, 2.2, "ui"), O("VOICE 5 [PAUSED]", 2.2, None, "ui"), O("Hey.", 2.2, None, "ui")],
    music=M17r, sounds=[S("ui_pause_tap", 2.0, -22, new=True)], fix=("P", "R1", "FACT"), why="He pauses the voice himself (facts A33).")
-nb("act3", "17.20", "ECU · beside it, his company's note pops up in its own UI, two fragments",
+nb("act3", "17.20", "ECU · beside it, his company's post pops up in its own UI, two fragments",
    "screen", "SET-16", "bridge_rain", [],
-   "Beside it, his company's note pops up in its own UI.",
-   "Two fragments; no name appears.", dur=3.6, fixed=("dur",), onscreen=[O("…not an imitation… her own natural speaking voice.", 0.3, 3.4, "doc")],
-   music=M17r, sounds=[S("ui_toast_pop", 0.3, -26)], fix=("P", "FACT", "R2", "GR"), why="His company says the voice is another actress's own (facts A64).")
+   "Beside it, his company's post pops up in its own UI: questions heard; a pause.",
+   "Two fragments, cropped before the voice's name; no name appears. The post claims nothing about how the voice was made (facts §F) and answers no one.",
+   dur=5.4, fixed=("dur",),
+   onscreen=[O("We've heard questions about how we chose the voices…", 0.3, 5.3, "post"), O("…We are working to pause the use of…", 2.0, 5.3, "post")],
+   music=M17r, sounds=[S("ui_toast_pop", 0.3, -26)], fix=("P", "FACT", "R2", "GR", "SR"), why="His company pauses the voice, in its own words (facts A64: the May 20, 2024 post).")
 nb("act3", "17.21", "WIDE · the blimp sags, its running lights clicking off one by one; the last light; black",
    "skyline", "SET-16", "bridge_rain", [],
    "The blimp sags three pixels, its running lights clicking off one by one. The last one clicks off. Black: act-out 2.",
@@ -2038,9 +2075,9 @@ nb("act4", "18.04", "FULL FRAME · the TV: her second claim",
 nb("act4", "18.05", "FULL FRAME · under it, the board's same-day reply in its own statement card",
    "screen", "SET-02", "boardroom_day", [],
    "Under it, the board's same-day reply, one sentence in its own statement card.",
-   "Her account and the reply side by side (W16).", dur=4.0, fixed=("dur",),
-   onscreen=[O("\"We are disappointed that NELEH continues to revisit these issues.\"", 0.2, 3.9, "doc"), O("— TERB, CHAIR", 0.2, 3.9, "doc")],
-   music=M18p, fix=("P", "FACT", "R2", "GR"), why="The board disputes her account the same day (facts A65).")
+   "Her account and the reply side by side (W16). The quote keeps its honorific (naming rule 12: only the name changes).", dur=4.2, fixed=("dur",),
+   onscreen=[O("\"We are disappointed that Ms. NELEH continues to revisit these issues.\"", 0.2, 4.1, "doc"), O("— TERB, CHAIR", 0.2, 4.1, "doc")],
+   music=M18p, fix=("P", "FACT", "R2", "GR", "SR"), why="The board disputes her account the same day (facts A65).")
 nb("act4", "18.06", "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
    "boardroom", "SET-02", "boardroom_day", ["mas", "mada", "terb"],
    "Mas, at the table, holds still. Mada doesn't move. TERB clicks the TV off.",
@@ -2055,20 +2092,21 @@ nb("act4", "18.07", "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the fr
    why="Mas takes the lanyard himself (A2).")
 nb("act4", "18.08", "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "mada"],
-   "LEFT: TERB says what the committee will do and how long it has. Then he looks up, and a hand goes round the table.",
-   "", lines=[line("e2-a4-0004"), line("e2-a4-0005", 0.5, NORMAL)], head=0.3, tail=0.3, music=M18L, fix=("P", "R2", "FACT"),
-   why="Ninety days, in his own words (facts A36).")
+   "LEFT: TERB says what the committee will do and how long it has. Then, without looking up, he reads its members like a roll call.",
+   "", lines=[line("e2-a4-0004"), line("e2-a4-0005", 0.5, NORMAL)], head=0.3, tail=0.3, music=M18L, fix=("P", "R2", "FACT", "SR"),
+   why="Ninety days and the membership, in his own words (facts A36); nobody says who checks whom (W7).")
 nb("act4", "18.09", "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "boardroom", "SET-18", "split_lighthouse", ["mas", "mada"],
-   "On \"We do.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
+   "On \"our chief executive.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
    "HOLD 2 BEATS (the table's).", lines=[line("e2-a4-0006")], head=1.25, tail=1.0, fixed=("head",), music=M18L,
    sounds=[S("pen_scribble_short", "E:e2-a4-0006+0.3", -26)], fix=("P", "KEEP", "PACE"), why="\"present.\"")
-nb("act4", "18.10", "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word",
+nb("act4", "18.10", "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "mada"],
-   "TERB, brisk, the next line. The table turns to Mas again. Then his thought, in his pane. Mada writes a second word.",
-   "The V.O. types in his cyan, in his pane.",
-   lines=[line("e2-a4-0007", pace=QUICK), line("e2-a4-0008", 0.6, FREE), line("e2-vo-10", 0.6, WEIGHTED)], head=0.3, tail=0.8, music=M18L,
-   sounds=[S("pen_scribble_short", "E:e2-vo-10+0.2", -26)], fix=("P", "VO", "KEEP", "R2"), why="V.O. 10: the room goal Ep1 set.")
+   "TERB, brisk, the next line. The table turns to Mas again. Mada writes a second word. A held breath on the table (about 1.5 s). Then his thought, in his pane.",
+   "\"also present.\" and Mada's second word land first; the V.O. types in his cyan, in his pane, with new information (the same post's news), never a reading of the committee.",
+   lines=[line("e2-a4-0007", pace=QUICK), line("e2-a4-0008", 0.6, FREE), line("e2-vo-11", 2.3, WEIGHTED)], head=0.3, tail=0.8, music=M18L,
+   sounds=[S("pen_scribble_short", "E:e2-a4-0008+0.3", -26)], fix=("P", "VO", "KEEP", "R2", "SR"),
+   why="V.O. 11: the next model is already training (facts A36: the May 28 post); his priority, not a view of the committee.")
 nb("act4", "18.11", "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
    "lighthouse", "SET-18", "split_lighthouse", ["mario", "ekiel"],
    "RIGHT: MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.",
@@ -2162,20 +2200,22 @@ nb("act4", "19.07", "WIDE · ELPPA's campus: the crowd's backs and the giant scr
 nb("act4", "19.08", "WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas",
    "skyline", "SET-19", "campus", ["mas", "staff"],
    "On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.",
-   "The V.O. after the post's read has cleared.", lines=[line("e2-vo-11")], head=1.8, tail=0.5, music=M19post,
-   sounds=[S("chat_ping_run", 0.2, -26, new=True), S("phone_wave_buzz", 0.8, -26, new=True)], fix=("P", "VO", "R2"),
-   why="V.O. 11: distribution, then the models to come.")
+   "The V.O. after the post's read has cleared.", lines=[line("e2-vo-12")], head=1.8, tail=0.5, music=M19post,
+   sounds=[S("chat_ping_run", 0.2, -26, new=True), S("phone_wave_buzz", 0.8, -26, new=True)], fix=("P", "VO", "R2", "SR"),
+   why="V.O. 12: distribution: whatever ships next goes in their phones too.")
 nb("act4", "19.09", "MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins)",
    "call", "SET-19", "campus", ["mas", "gerg"],
    "Gerg calls. He's watching him on the stream from the lobby.",
-   "Crosscut: the speaker is in frame, or his voice is already established (P9).",
+   "Crosscut: the speaker is in frame, or his voice is already established (P9). Gerg in the lobby is invented staging (facts A70: the press placed Mas at the campus; one live blog also listed Gerg's counterpart there, which the call doesn't contradict on screen and nothing in the scene turns on).",
    lines=[line("e2-a4-0024"), line("e2-a4-0025", 0.45, QMAS)], head=1.4, tail=0.3, music=M19,
-   sounds=[S("call_ring", 0.1, -26), S("call_connect", 0.9, -26)], pace="normal", fix=("P", "R2"), why="Gerg checks on him.")
+   sounds=[S("call_ring", 0.1, -26), S("call_connect", 0.9, -26)], pace="normal", fix=("P", "R2", "SR"), why="Gerg checks on him: the screen, and the phone.")
 nb("act4", "19.10", "MCU · the call, crosscut; Gerg's last question weighted",
    "call", "SET-19", "campus", ["mas", "gerg"],
-   "They just said our name. Does he ever miss being up there?",
-   "", lines=[line("e2-a4-0026", pace=NORMAL), line("e2-a4-0027", 0.45, QMAS), line("e2-a4-0028", 0.9, WEIGHTED), line("e2-a4-0029", 0.6, WEIGHTED)],
-   head=0.4, tail=0.5, music=M19, pace="normal", fix=("P", "KEEP", "PACE"), why="\"they let me hold the clicker.\"")
+   "They just said our name. Half the lobby's on a beanbag; which half? Then: does he ever miss being up there?",
+   "Mas asks aloud again (P9): his Ep1 precision question.",
+   lines=[line("e2-a4-0026", pace=NORMAL), line("e2-a4-0027", 0.45, QMAS), line("e2-a4-0033", 0.5, NORMAL), line("e2-a4-0034", 0.45, QMAS),
+          line("e2-a4-0035", 0.25, QUICK), line("e2-a4-0028", 0.9, WEIGHTED), line("e2-a4-0029", 0.6, WEIGHTED)],
+   head=0.4, tail=0.5, music=M19, pace="normal", fix=("P", "KEEP", "PACE", "SR"), why="\"which half?\"; then \"they let me hold the clicker.\"")
 nb("act4", "19.11", "POV · a push into his phone, full-bleed: a GPS breadcrumb in older colours draws itself across the stream's stage",
    "screen", "SET-20", "era_2008", [],
    "A dotted line draws itself across the stream's stage in a few quick strokes: a GPS breadcrumb in colours older than the phone, crossing the boards he once stood on.",
@@ -2228,8 +2268,9 @@ nb("act4", "19.17", "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower i
 nb("act4", "19.18", "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
    "void", "SET-21", "garden", ["mas", "radnus"],
    "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
-   "Radnus not burning (R1).", lines=[line("e2-a4-0030"), line("e2-a4-0031", 0.45, QMAS), line("e2-vo-12", 1.2, WEIGHTED)], head=1.6, tail=0.5,
-   music=M19g, mode="SET-PIECE (the walled garden)", fix=("P", "KEEP", "VO", "FC"), why="\"as a guest.\": terms he set; V.O. 12.")
+   "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture).",
+   lines=[line("e2-a4-0030"), line("e2-a4-0031", 0.45, QMAS)], head=1.6, tail=2.2, fixed=("tail",),
+   music=M19g, mode="SET-PIECE (the walled garden)", fix=("P", "KEEP", "FC", "SR"), why="\"as a guest.\": terms he set; Radnus's smile holds too long.")
 nb("act4", "19.19", "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
    "void", "SET-21", "garden", ["mas"],
    "From inside the garden, through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock turns once. Mas is outside it, screen-right.",
@@ -2290,7 +2331,7 @@ nb("act4", "20.07", "WIDE · Haras passes, her tape trailing, UPSIDE circled on 
    "lobby", "SET-01", "lobby_morning", ["haras", "mas"],
    "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
    "The V.O. after the note's insert has cleared, before the docket.", lines=[line("e2-vo-13")], head=1.0, tail=0.4,
-   onscreen=[O("UPSIDE", 0.2, "L:e2-vo-13+0.5", "doc")], music="E02-11 · the quartet's pedal", fix=("P", "VO", "R2"), why="V.O. 13: the money behind the next model.")
+   onscreen=[O("UPSIDE", 0.2, "L:e2-vo-13+0.5", "doc")], music="E02-11 · the quartet's pedal", fix=("P", "VO", "R2", "SR"), why="V.O. 13: the money behind the next model; she has till the raise.")
 nb("act4", "20.08", "ECU · full frame: the complaint in the middle of the floor, coffee cups on it; its docket tab",
    "lobby", "SET-01", "lobby_morning", [],
    "In the middle of the floor, the complaint has sat since February, coffee cups on it. Its docket tab.",
@@ -2425,14 +2466,14 @@ nb("tag", "23.04", "2S → TERMINAL · the Orb floats to the monitor and scans t
 nb("tag", "23.05", "OTS · Mas at the monitor, the toast cleared",
    "darkroom", "SET-07", "darkroom", ["mas", "orb"],
    "Mas at the monitor.", "After the Orb's toast clears.", lines=[line("e2-vo-14")], head=0.4, tail=0.4, music=M23,
-   fix=("P", "VO"), why="V.O. 14: proof of personhood (pays Ep1's \"my other company.\").")
-nb("tag", "23.06", "POV · Aug 22: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   fix=("P", "VO", "FACT", "SR"), why="V.O. 14: proof of personhood as a count, the Orb's market in an election year (facts A71; pays Ep1's \"my other company. for when it gets harder to tell.\" through the Orb).")
+nb("tag", "23.06", "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
    "screen", "SET-08", "darkroom", ["rumpt-hands"],
    "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
    "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice.", dur=4.6, fixed=("dur",),
-   onscreen=[O("RAIL: AUG 22", 0.2, 1.4, "rail"), O("…having me speak… It's a little bit dangerous out there.", 1.4, 4.55, "lower-third")],
+   onscreen=[O("RAIL: AUG 21", 0.2, 1.4, "rail"), O("…having me speak… It's a little bit dangerous out there.", 1.4, 4.55, "lower-third")],
    music="E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words", sounds=[S("blip_text_neutral", 1.5, -26, new=True)],
-   fix=("P", "FACT", "R2", "FC", "GR"), why="His own words (facts A69).")
+   fix=("P", "FACT", "R2", "FC", "GR", "SR"), why="His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024).")
 nb("tag", "23.07", "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "screen", "SET-08", "darkroom", ["rumpt-hands"],
    "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
@@ -2466,6 +2507,7 @@ XGAP = [
     ("7.02", "7.03", 0.5, NORMAL),       # the Humanist → "Welcome."
     ("7.03", "7.04", 0.5, NORMAL),       # Tasya → "I brought my own team."
     ("13.01", "13.02", 0.3, QUICK),      # Staffer 2 → "He posted, though."
+    ("14.07", "14.08", 0.5, NORMAL),     # "congratulations." → Bukaj's "Thank you."
     ("17.05", "17.06", 0.5, NORMAL),     # the driver → "Already did."
     ("17.15", "17.16", 0.6, NORMAL),     # "Updating." → the driver leans out
     ("18.13", "18.14", 0.5, NORMAL),     # "…one concern." → "It's that we might win."

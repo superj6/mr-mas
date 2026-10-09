@@ -19,7 +19,7 @@
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
    "estimate_s": 96.0,
-   "fit_scale": 1.125
+   "fit_scale": 1.06
   },
   {
    "id": "19",
@@ -33,7 +33,7 @@
    "proposal_s": 138,
    "adjust": "gives sc 20 its 4 s (above); Act Four stays 5:20",
    "estimate_s": 134.0,
-   "fit_scale": 1.209
+   "fit_scale": 1.196
   },
   {
    "id": "20",
@@ -47,7 +47,7 @@
    "proposal_s": 48,
    "adjust": "sc 20's read floors (Nole's post with its condition, 139 characters: 7.2 s; Alyi's post and card: 4.2 s; the docket tab: 2.1 s) and the final check's 2 s arrivals at Jun 11 and Jun 19 don't fit 48 s without rushing the split; sc 19 has the air (its fit scale was 1.32)",
    "estimate_s": 52.0,
-   "fit_scale": 0.763
+   "fit_scale": 0.924
   },
   {
    "id": "22",
@@ -168,7 +168,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 6.54,
+   "est_s": 6.13,
    "frame": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
    "camera": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
    "set": "lighthouse",
@@ -183,14 +183,14 @@
    "picture": "Sc 14's box in his arms (the seam).",
    "onscreen": {
     "add": [
-     "RAIL: MAY 28, 2024 (0.34-2.37 s)"
+     "RAIL: MAY 28, 2024 (0.32-2.22 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "RAIL: MAY 28, 2024",
-     "at": 0.34,
-     "until": 2.37,
+     "at": 0.32,
+     "until": 2.22,
      "kind": "rail"
     }
    ],
@@ -206,14 +206,14 @@
     },
     {
      "name": "footstep_soft_1",
-     "at": 2.706,
-     "at_s": 2.71,
+     "at": 2.537,
+     "at_s": 2.54,
      "gain": -28
     },
     {
      "name": "footstep_soft_2",
-     "at": 3.608,
-     "at_s": 3.61,
+     "at": 3.382,
+     "at_s": 3.38,
      "gain": -28
     }
    ],
@@ -272,7 +272,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "weighted",
-   "est_s": 8.52,
+   "est_s": 8.49,
    "frame": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
    "camera": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
    "set": "screen",
@@ -346,7 +346,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "weighted",
-   "est_s": 5.23,
+   "est_s": 5.17,
    "frame": "FULL FRAME · the TV: her second claim",
    "camera": "FULL FRAME · the TV: her second claim",
    "set": "screen",
@@ -366,24 +366,24 @@
      "take": "new · NELEH (Alexandra · EL, through the podcast chain) · podcast chain · audio/ep02/",
      "take_file": null,
      "note": "[V · facts A38: the same transcript; name swaps]",
-     "after": "start+0.67",
+     "after": "start+0.64",
      "gap_s": 0.0,
      "len_s": 3.89,
-     "t_s": 0.67
+     "t_s": 0.64
     }
    ],
    "caption": "Her second claim.",
    "picture": "",
    "onscreen": {
     "add": [
-     "…MAS didn't inform the board that he owned the NOPEAI Startup Fund… (0.67-5.16 s)"
+     "…MAS didn't inform the board that he owned the NOPEAI Startup Fund… (0.64-5.13 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
-     "at": 0.67,
-     "until": 5.16,
+     "at": 0.64,
+     "until": 5.13,
      "kind": "caption"
     }
    ],
@@ -408,7 +408,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 4.0,
+   "est_s": 4.2,
    "frame": "FULL FRAME · under it, the board's same-day reply in its own statement card",
    "camera": "FULL FRAME · under it, the board's same-day reply in its own statement card",
    "set": "screen",
@@ -417,24 +417,24 @@
    "chars": [],
    "lines": [],
    "caption": "Under it, the board's same-day reply, one sentence in its own statement card.",
-   "picture": "Her account and the reply side by side (W16).",
+   "picture": "Her account and the reply side by side (W16). The quote keeps its honorific (naming rule 12: only the name changes).",
    "onscreen": {
     "add": [
-     "\"We are disappointed that NELEH continues to revisit these issues.\" (0.2-3.9 s)",
-     "— TERB, CHAIR (0.2-3.9 s)"
+     "\"We are disappointed that Ms. NELEH continues to revisit these issues.\" (0.2-4.1 s)",
+     "— TERB, CHAIR (0.2-4.1 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "\"We are disappointed that NELEH continues to revisit these issues.\"",
+     "text": "\"We are disappointed that Ms. NELEH continues to revisit these issues.\"",
      "at": 0.2,
-     "until": 3.9,
+     "until": 4.1,
      "kind": "doc"
     },
     {
      "text": "— TERB, CHAIR",
      "at": 0.2,
-     "until": 3.9,
+     "until": 4.1,
      "kind": "doc"
     }
    ],
@@ -443,7 +443,8 @@
     "P",
     "FACT",
     "R2",
-    "GR"
+    "GR",
+    "SR"
    ],
    "why": "The board disputes her account the same day (facts A65)."
   },
@@ -455,7 +456,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.65,
+   "est_s": 3.62,
    "frame": "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
    "camera": "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
    "set": "boardroom",
@@ -514,7 +515,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 4.05,
+   "est_s": 3.81,
    "frame": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "camera": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "set": "boardroom",
@@ -531,22 +532,22 @@
    "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action.",
    "onscreen": {
     "add": [
-     "SAFETY COMMITTEE (0.34-4.05 s)",
-     "212 (2.02-4.05 s)"
+     "SAFETY COMMITTEE (0.32-3.81 s)",
+     "212 (1.91-3.81 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "SAFETY COMMITTEE",
-     "at": 0.34,
-     "until": 4.05,
+     "at": 0.32,
+     "until": 3.81,
      "kind": "sign",
      "holds": true
     },
     {
      "text": "212",
-     "at": 2.02,
-     "until": 4.05,
+     "at": 1.91,
+     "until": 3.81,
      "kind": "doc",
      "holds": true
     }
@@ -555,15 +556,15 @@
    "sounds": [
     {
      "name": "lanyard_drop",
-     "at": 2.025,
-     "at_s": 2.02,
+     "at": 1.905,
+     "at_s": 1.91,
      "gain": -24,
      "new": true
     },
     {
      "name": "lanyard_drop",
-     "at": 2.081,
-     "at_s": 2.08,
+     "at": 1.958,
+     "at_s": 1.96,
      "gain": -26,
      "new": true
     }
@@ -582,7 +583,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 10.71,
+   "est_s": 11.4,
    "frame": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "camera": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
    "set": "boardroom",
@@ -604,28 +605,28 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36)]",
-     "after": "start+0.34",
+     "after": "start+0.32",
      "gap_s": 0.0,
      "len_s": 7.13,
-     "t_s": 0.34
+     "t_s": 0.32
     },
     {
      "id": "e2-a4-0005",
      "new": true,
      "who": "terb",
      "tag": "",
-     "text": "So, who checks it? We do.",
-     "delivery": "looking up; a hand round the table on 'We do.'",
+     "text": "Members: myself, two directors, and our chief executive.",
+     "delivery": "brisk, reading the next line of the page like a roll call; he doesn't look up",
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": null,
-     "note": "[INVENTED]",
+     "note": "[INVENTED · paraphrase of the May 28, 2024 post's membership (facts A36: Taylor, D'Angelo, Seligman, Altman)]",
      "after": "e2-a4-0004",
      "gap_s": 0.5,
-     "len_s": 2.4,
-     "t_s": 7.97
+     "len_s": 3.13,
+     "t_s": 7.95
     }
    ],
-   "caption": "LEFT: TERB says what the committee will do and how long it has. Then he looks up, and a hand goes round the table.",
+   "caption": "LEFT: TERB says what the committee will do and how long it has. Then, without looking up, he reads its members like a roll call.",
    "picture": "",
    "music": "E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone",
    "tempo": {
@@ -638,9 +639,10 @@
    "fix": [
     "P",
     "R2",
-    "FACT"
+    "FACT",
+    "SR"
    ],
-   "why": "Ninety days, in his own words (facts A36)."
+   "why": "Ninety days and the membership, in his own words (facts A36); nobody says who checks whom (W7)."
   },
   {
    "id": "18.09",
@@ -650,7 +652,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.07,
+   "est_s": 3.01,
    "frame": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "camera": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
    "set": "boardroom",
@@ -677,7 +679,7 @@
      "t_s": 1.25
     }
    ],
-   "caption": "On \"We do.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
+   "caption": "On \"our chief executive.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
    "picture": "HOLD 2 BEATS (the table's).",
    "music": "E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone",
    "sounds": [
@@ -708,9 +710,9 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 13.89,
-   "frame": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word",
-   "camera": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word",
+   "est_s": 14.12,
+   "frame": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
+   "camera": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
    "set": "boardroom",
    "set_id": "SET-18",
    "room": "split_lighthouse",
@@ -730,10 +732,10 @@
      "take": "new · TERB (Ethan · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · paraphrase of the post (facts A36)]",
-     "after": "start+0.34",
+     "after": "start+0.32",
      "gap_s": 0.0,
      "len_s": 6.65,
-     "t_s": 0.34
+     "t_s": 0.32
     },
     {
      "id": "e2-a4-0008",
@@ -747,35 +749,35 @@
      "note": "[INVENTED · accurate: he is on both (facts A36)]",
      "after": "e2-a4-0007",
      "gap_s": 0.6,
-     "len_s": 0.83,
-     "t_s": 7.59
+     "len_s": 0.96,
+     "t_s": 7.57
     },
     {
-     "id": "e2-vo-10",
+     "id": "e2-vo-11",
      "new": true,
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "the room where it's decided. i'm in it.",
-     "delivery": "after 'also present.'; Ep1's register ('someone gets to be in the room.'); plain, private",
-     "kind": "plan (the room)",
+     "text": "the next one's already training.",
+     "delivery": "after Mada's second word and a held breath; practical, a calendar thought; no weight on 'already', nothing about the committee",
+     "kind": "plan (the next model)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
      "after": "e2-a4-0008",
-     "gap_s": 0.6,
-     "len_s": 3.97,
-     "t_s": 9.02
+     "gap_s": 2.3,
+     "len_s": 2.44,
+     "t_s": 10.83
     }
    ],
-   "caption": "TERB, brisk, the next line. The table turns to Mas again. Then his thought, in his pane. Mada writes a second word.",
-   "picture": "The V.O. types in his cyan, in his pane.",
+   "caption": "TERB, brisk, the next line. The table turns to Mas again. Mada writes a second word. A held breath on the table (about 1.5 s). Then his thought, in his pane.",
+   "picture": "\"also present.\" and Mada's second word land first; the V.O. types in his cyan, in his pane, with new information (the same post's news), never a reading of the committee.",
    "music": "E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone",
    "sounds": [
     {
      "name": "pen_scribble_short",
-     "at": "after:e2-vo-10+0.2",
-     "at_s": 13.19,
+     "at": "after:e2-a4-0008+0.3",
+     "at_s": 8.83,
      "gain": -26
     }
    ],
@@ -783,7 +785,7 @@
     "pace": "quick",
     "gaps": {
      "e2-a4-0008": 0.6,
-     "e2-vo-10": 0.6
+     "e2-vo-11": 2.3
     },
     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
    },
@@ -791,9 +793,10 @@
     "P",
     "VO",
     "KEEP",
-    "R2"
+    "R2",
+    "SR"
    ],
-   "why": "V.O. 10: the room goal Ep1 set."
+   "why": "V.O. 11: the next model is already training (facts A36: the May 28 post); his priority, not a view of the committee."
   },
   {
    "id": "18.11",
@@ -803,7 +806,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 9.0,
+   "est_s": 8.95,
    "frame": "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
    "camera": "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
    "set": "lighthouse",
@@ -824,10 +827,10 @@
      "take": "new · Kokoro am_liam (a-liam-earnest), matched into the EL room (voices-el §AB3) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+0.56",
+     "after": "start+0.53",
      "gap_s": 0.0,
      "len_s": 4.88,
-     "t_s": 0.56
+     "t_s": 0.53
     },
     {
      "id": "e2-a4-0010",
@@ -842,7 +845,7 @@
      "after": "e2-a4-0009",
      "gap_s": 0.25,
      "len_s": 1.6,
-     "t_s": 5.69
+     "t_s": 5.66
     },
     {
      "id": "e2-a4-0011",
@@ -857,7 +860,7 @@
      "after": "e2-a4-0010",
      "gap_s": 0.2,
      "len_s": 1.17,
-     "t_s": 7.49
+     "t_s": 7.46
     }
    ],
    "caption": "RIGHT: MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.",
@@ -886,7 +889,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 6.65,
+   "est_s": 7.42,
    "frame": "ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p",
    "camera": "ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p",
    "set": "lighthouse",
@@ -902,13 +905,13 @@
      "who": "mario",
      "tag": "",
      "text": "We agree. I underlined 'inherently.'",
-     "delivery": "pleased with the underline",
+     "delivery": "pleased with the underline; a small beat before 'inherently.', the word the joke turns on",
      "take": "new · Kokoro am_liam (a-liam-earnest), matched into the EL room (voices-el §AB3) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
      "after": "start+4.4",
      "gap_s": 0.0,
-     "len_s": 1.8,
+     "len_s": 2.6,
      "t_s": 4.4
     }
    ],
@@ -949,7 +952,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 11.72,
+   "est_s": 10.99,
    "frame": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
    "camera": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
    "set": "lighthouse",
@@ -970,10 +973,10 @@
      "take": "new · Kokoro am_liam (a-liam-earnest), matched into the EL room (voices-el §AB3) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+1.8",
+     "after": "start+1.7",
      "gap_s": 0.0,
      "len_s": 1.36,
-     "t_s": 1.8
+     "t_s": 1.7
     },
     {
      "id": "e2-a4-0014",
@@ -988,22 +991,22 @@
      "after": "e2-a4-0013",
      "gap_s": 2.6,
      "len_s": 1.6,
-     "t_s": 5.76
+     "t_s": 5.66
     },
     {
      "id": "e2-a4-0015",
      "new": true,
      "who": "mario",
      "tag": "",
-     "text": "That's the brief one. It'd be shorter, but I have one concern.",
+     "text": "That's the brief one. It only has the one concern.",
      "delivery": "setting his pen down for the first time",
      "take": "new · Kokoro am_liam (a-liam-earnest), matched into the EL room (voices-el §AB3) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
      "after": "e2-a4-0014",
      "gap_s": 0.2,
-     "len_s": 4.01,
-     "t_s": 7.56
+     "len_s": 3.38,
+     "t_s": 7.46
     }
    ],
    "caption": "The beacon glints across a case of CLOD boxes, each one in turn; the last one's art is the Golden Gate Bridge. MARIO, finger rising. A scroll drops down the stairwell; the pane pans with it down the spiral and back up to EKIEL, squinting after it. MARIO sets his pen down for the first time.",
@@ -1012,29 +1015,29 @@
    "sounds": [
     {
      "name": "glint_tick",
-     "at": 0.337,
-     "at_s": 0.34,
+     "at": 0.319,
+     "at_s": 0.32,
      "gain": -28,
      "new": true
     },
     {
      "name": "glint_tick",
-     "at": 0.9,
-     "at_s": 0.9,
+     "at": 0.85,
+     "at_s": 0.85,
      "gain": -28,
      "new": true
     },
     {
      "name": "glint_tick",
-     "at": 1.463,
-     "at_s": 1.46,
+     "at": 1.381,
+     "at_s": 1.38,
      "gain": -27,
      "new": true
     },
     {
      "name": "scroll_unroll_fall",
      "at": "after:e2-a4-0013+0.2",
-     "at_s": 3.36,
+     "at_s": 3.26,
      "gain": -22,
      "new": true
     }
@@ -1061,7 +1064,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.15,
+   "est_s": 3.09,
    "frame": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "camera": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "set": "lighthouse",
@@ -1116,7 +1119,7 @@
    "scene": "18",
    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
    "pace": "quick",
-   "est_s": 3.82,
+   "est_s": 3.6,
    "frame": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "camera": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "set": "boardroom",
@@ -1130,14 +1133,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "ELPPA · KEYNOTE · JUN 10 (0.45-2.7 s)"
+     "ELPPA · KEYNOTE · JUN 10 (0.42-2.54 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "ELPPA · KEYNOTE · JUN 10",
-     "at": 0.45,
-     "until": 2.7,
+     "at": 0.42,
+     "until": 2.54,
      "kind": "ui"
     }
    ],
@@ -1145,14 +1148,14 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 0.449,
-     "at_s": 0.45,
+     "at": 0.424,
+     "at_s": 0.42,
      "gain": -26
     },
     {
      "name": "phone_turn_over",
-     "at": 2.696,
-     "at_s": 2.7,
+     "at": 2.541,
+     "at_s": 2.54,
      "gain": -26,
      "new": true
     }
@@ -1301,7 +1304,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 3.87,
+   "est_s": 3.83,
    "frame": "WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her",
    "camera": "WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her",
    "set": "lobby",
@@ -1316,14 +1319,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "HARAS · FIRST CFO (0.73-3.39 s)"
+     "HARAS · FIRST CFO (0.72-3.35 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "HARAS · FIRST CFO",
-     "at": 0.73,
-     "until": 3.39,
+     "at": 0.72,
+     "until": 3.35,
      "kind": "plate"
     }
    ],
@@ -1331,7 +1334,7 @@
    "sounds": [
     {
      "name": "calc_tape_spool",
-     "at": 0.363,
+     "at": 0.359,
      "at_s": 0.36,
      "gain": -26,
      "new": true,
@@ -1560,7 +1563,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 6.13,
+   "est_s": 6.07,
    "frame": "SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby",
    "camera": "SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby",
    "set": "lobby",
@@ -1582,10 +1585,10 @@
      "take": "new · STAFFER (Avery · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · our staging: the stream's crowd shot]",
-     "after": "start+2.18",
+     "after": "start+2.15",
      "gap_s": 0.0,
      "len_s": 1.05,
-     "t_s": 2.18
+     "t_s": 2.15
     }
    ],
    "caption": "The stream cuts away to its outdoor audience. At the edge of it, small, Mas, head down over his phone, typing. A STAFFER points. The lobby laughs. GERG, the only one not cheering, takes out his phone.",
@@ -1595,7 +1598,7 @@
     {
      "name": "lobby_laugh_s",
      "at": "after:e2-a4-0023+0.3",
-     "at_s": 3.53,
+     "at_s": 3.5,
      "gain": -22,
      "new": true
     }
@@ -1699,7 +1702,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 7.69,
+   "est_s": 7.07,
    "frame": "WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas",
    "camera": "WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas",
    "set": "skyline",
@@ -1711,21 +1714,21 @@
    ],
    "lines": [
     {
-     "id": "e2-vo-11",
+     "id": "e2-vo-12",
      "new": true,
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "their new phones first. then every model after this one.",
-     "delivery": "his post landing on their stream; practical; the second sentence the real one, still unemphatic",
+     "text": "whatever we ship next goes in their phones too.",
+     "delivery": "his post landing on their stream; practical; 'too' unemphatic",
      "kind": "plan (distribution)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+2.18",
+     "after": "start+2.15",
      "gap_s": 0.0,
-     "len_s": 4.91,
-     "t_s": 2.18
+     "len_s": 4.32,
+     "t_s": 2.15
     }
    ],
    "caption": "On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.",
@@ -1734,15 +1737,15 @@
    "sounds": [
     {
      "name": "chat_ping_run",
-     "at": 0.242,
+     "at": 0.239,
      "at_s": 0.24,
      "gain": -26,
      "new": true
     },
     {
      "name": "phone_wave_buzz",
-     "at": 0.969,
-     "at_s": 0.97,
+     "at": 0.956,
+     "at_s": 0.96,
      "gain": -26,
      "new": true
     }
@@ -1755,9 +1758,10 @@
    "fix": [
     "P",
     "VO",
-    "R2"
+    "R2",
+    "SR"
    ],
-   "why": "V.O. 11: distribution, then the models to come."
+   "why": "V.O. 12: distribution: whatever ships next goes in their phones too."
   },
   {
    "id": "19.09",
@@ -1767,7 +1771,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "normal",
-   "est_s": 10.14,
+   "est_s": 8.74,
    "frame": "MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins)",
    "camera": "MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins)",
    "set": "call",
@@ -1783,15 +1787,15 @@
      "new": true,
      "who": "gerg",
      "tag": "call",
-     "text": "You're there, and you're posting about it from the lawn. There's a screen the size of a building in front of you.",
+     "text": "There's a screen the size of a building in front of you, and you're on your phone.",
      "delivery": "on the call, from the lobby; fond",
      "take": "new · GERG (Marcus · EL) · call chain · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+1.69",
+     "after": "start+1.67",
      "gap_s": 0.0,
-     "len_s": 6.66,
-     "t_s": 1.69
+     "len_s": 5.08,
+     "t_s": 1.67
     },
     {
      "id": "e2-a4-0025",
@@ -1805,24 +1809,24 @@
      "note": "[INVENTED]",
      "after": "e2-a4-0024",
      "gap_s": 0.45,
-     "len_s": 1.19,
-     "t_s": 8.8
+     "len_s": 1.39,
+     "t_s": 7.2
     }
    ],
    "caption": "Gerg calls. He's watching him on the stream from the lobby.",
-   "picture": "Crosscut: the speaker is in frame, or his voice is already established (P9).",
+   "picture": "Crosscut: the speaker is in frame, or his voice is already established (P9). Gerg in the lobby is invented staging (facts A70: the press placed Mas at the campus; one live blog also listed Gerg's counterpart there, which the call doesn't contradict on screen and nothing in the scene turns on).",
    "music": "E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)",
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.121,
+     "at": 0.119,
      "at_s": 0.12,
      "gain": -26
     },
     {
      "name": "call_connect",
-     "at": 1.086,
-     "at_s": 1.09,
+     "at": 1.074,
+     "at_s": 1.07,
      "gain": -26
     }
    ],
@@ -1835,9 +1839,10 @@
    },
    "fix": [
     "P",
-    "R2"
+    "R2",
+    "SR"
    ],
-   "why": "Gerg checks on him."
+   "why": "Gerg checks on him: the screen, and the phone."
   },
   {
    "id": "19.10",
@@ -1847,7 +1852,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "normal",
-   "est_s": 13.95,
+   "est_s": 18.4,
    "frame": "MCU · the call, crosscut; Gerg's last question weighted",
    "camera": "MCU · the call, crosscut; Gerg's last question weighted",
    "set": "call",
@@ -1863,14 +1868,14 @@
      "new": true,
      "who": "gerg",
      "tag": "call",
-     "text": "They just said our name up there. Half the lobby's standing on a beanbag.",
+     "text": "They just said our name up there.",
      "delivery": "on the call",
      "take": "new · GERG (Marcus · EL) · call chain · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · 'our name' is the stream's announcement (facts A40)]",
      "after": "start+0.3",
      "gap_s": 0.0,
-     "len_s": 4.32,
+     "len_s": 2.15,
      "t_s": 0.3
     },
     {
@@ -1886,7 +1891,52 @@
      "after": "e2-a4-0026",
      "gap_s": 0.45,
      "len_s": 0.7,
-     "t_s": 5.07
+     "t_s": 2.9
+    },
+    {
+     "id": "e2-a4-0033",
+     "new": true,
+     "who": "gerg",
+     "tag": "call",
+     "text": "Half the lobby's standing on a beanbag.",
+     "delivery": "on the call, delighted; behind him, they are",
+     "take": "new · GERG (Marcus · EL) · call chain · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED]",
+     "after": "e2-a4-0027",
+     "gap_s": 0.5,
+     "len_s": 2.15,
+     "t_s": 4.1
+    },
+    {
+     "id": "e2-a4-0034",
+     "new": true,
+     "who": "mas",
+     "tag": "",
+     "text": "which half?",
+     "delivery": "eyes still on the stage; his precision question (Ep1's register)",
+     "take": "new · MAS (Jeremy · EL) · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED · P9: he asks aloud again]",
+     "after": "e2-a4-0033",
+     "gap_s": 0.45,
+     "len_s": 1.0,
+     "t_s": 6.7
+    },
+    {
+     "id": "e2-a4-0035",
+     "new": true,
+     "who": "gerg",
+     "tag": "call",
+     "text": "The half on the beanbags.",
+     "delivery": "on the call; literal, helpful",
+     "take": "new · GERG (Marcus · EL) · call chain · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED]",
+     "after": "e2-a4-0034",
+     "gap_s": 0.25,
+     "len_s": 1.56,
+     "t_s": 7.95
     },
     {
      "id": "e2-a4-0028",
@@ -1898,10 +1948,10 @@
      "take": "new · GERG (Marcus · EL) · call chain · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "e2-a4-0027",
+     "after": "e2-a4-0035",
      "gap_s": 0.9,
      "len_s": 1.86,
-     "t_s": 6.67
+     "t_s": 10.41
     },
     {
      "id": "e2-a4-0029",
@@ -1915,17 +1965,20 @@
      "note": "[INVENTED · keep list]",
      "after": "e2-a4-0028",
      "gap_s": 0.6,
-     "len_s": 4.22,
-     "t_s": 9.13
+     "len_s": 4.93,
+     "t_s": 12.87
     }
    ],
-   "caption": "They just said our name. Does he ever miss being up there?",
-   "picture": "",
+   "caption": "They just said our name. Half the lobby's on a beanbag; which half? Then: does he ever miss being up there?",
+   "picture": "Mas asks aloud again (P9): his Ep1 precision question.",
    "music": "E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)",
    "tempo": {
     "pace": "normal",
     "gaps": {
      "e2-a4-0027": 0.45,
+     "e2-a4-0033": 0.5,
+     "e2-a4-0034": 0.45,
+     "e2-a4-0035": 0.25,
      "e2-a4-0028": 0.9,
      "e2-a4-0029": 0.6,
      "e2-a4-0026": 0.45
@@ -1940,9 +1993,10 @@
    "fix": [
     "P",
     "KEEP",
-    "PACE"
+    "PACE",
+    "SR"
    ],
-   "why": "\"they let me hold the clicker.\""
+   "why": "\"which half?\"; then \"they let me hold the clicker.\""
   },
   {
    "id": "19.11",
@@ -2007,7 +2061,7 @@
    "scene": "19",
    "mode": "FLASHBACK · want",
    "pace": "quick",
-   "est_s": 4.11,
+   "est_s": 4.07,
    "frame": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; the end card",
    "camera": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; the end card",
    "set": "stage",
@@ -2021,14 +2075,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "\"WHERE YOU AT?\" (2.18-3.99 s)"
+     "\"WHERE YOU AT?\" (2.15-3.95 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "\"WHERE YOU AT?\"",
-     "at": 2.18,
-     "until": 3.99,
+     "at": 2.15,
+     "until": 3.95,
      "kind": "doc"
     }
    ],
@@ -2056,7 +2110,7 @@
    "scene": "19",
    "mode": "FLASHBACK · want",
    "pace": "quick",
-   "est_s": 4.35,
+   "est_s": 4.31,
    "frame": "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker",
    "camera": "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker",
    "set": "stage",
@@ -2073,15 +2127,15 @@
    "sounds": [
     {
      "name": "clicker_catch",
-     "at": 1.933,
-     "at_s": 1.93,
+     "at": 1.916,
+     "at_s": 1.92,
      "gain": -24,
      "new": true
     },
     {
      "name": "vhs_applause",
-     "at": 2.417,
-     "at_s": 2.42,
+     "at": 2.394,
+     "at_s": 2.39,
      "gain": -28,
      "new": true
     }
@@ -2110,7 +2164,7 @@
    "scene": "19",
    "mode": "FLASHBACK · obstacle",
    "pace": "quick",
-   "est_s": 6.06,
+   "est_s": 5.97,
    "frame": "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out",
    "camera": "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out",
    "set": "stage",
@@ -2124,14 +2178,14 @@
    "picture": "No cause claimed (FC).",
    "onscreen": {
     "add": [
-     "LAST UPDATED 2012 (4.61-6.06 s)"
+     "LAST UPDATED 2012 (4.54-5.97 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "LAST UPDATED 2012",
-     "at": 4.61,
-     "until": 6.06,
+     "at": 4.54,
+     "until": 5.97,
      "kind": "ui",
      "holds": true
     }
@@ -2140,29 +2194,29 @@
    "sounds": [
     {
      "name": "pin_grey_tick",
-     "at": 1.939,
-     "at_s": 1.94,
+     "at": 1.91,
+     "at_s": 1.91,
      "gain": -28,
      "new": true
     },
     {
      "name": "pin_grey_tick",
-     "at": 2.666,
-     "at_s": 2.67,
+     "at": 2.627,
+     "at_s": 2.63,
      "gain": -29,
      "new": true
     },
     {
      "name": "pin_grey_tick",
-     "at": 3.394,
-     "at_s": 3.39,
+     "at": 3.343,
+     "at_s": 3.34,
      "gain": -30,
      "new": true
     },
     {
      "name": "pin_grey_tick",
-     "at": 4.121,
-     "at_s": 4.12,
+     "at": 4.06,
+     "at_s": 4.06,
      "gain": -31,
      "new": true
     }
@@ -2191,7 +2245,7 @@
    "scene": "19",
    "mode": "FLASHBACK · turn",
    "pace": "quick",
-   "est_s": 3.14,
+   "est_s": 3.11,
    "frame": "ECU · match: the clicker in his 2008 hand becomes his 2024 phone in the same grip, his post from the lawn on its screen",
    "camera": "ECU · match: the clicker in his 2008 hand becomes his 2024 phone in the same grip, his post from the lawn on its screen",
    "set": "screen",
@@ -2377,7 +2431,7 @@
    "scene": "19",
    "mode": "SET-PIECE (the walled garden)",
    "pace": "quick",
-   "est_s": 10.58,
+   "est_s": 8.52,
    "frame": "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
    "camera": "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
    "set": "void",
@@ -2398,10 +2452,10 @@
      "take": "new · RADNUS (Dylan Malc · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED]",
-     "after": "start+1.93",
+     "after": "start+1.91",
      "gap_s": 0.0,
      "len_s": 3.06,
-     "t_s": 1.93
+     "t_s": 1.91
     },
     {
      "id": "e2-a4-0031",
@@ -2416,44 +2470,26 @@
      "after": "e2-a4-0030",
      "gap_s": 0.45,
      "len_s": 0.9,
-     "t_s": 5.44
-    },
-    {
-     "id": "e2-vo-12",
-     "new": true,
-     "who": "mas",
-     "vo": true,
-     "tag": "V.O.",
-     "text": "they ask first in there.",
-     "delivery": "watching the raised hands go down the row; quiet; it pays Ep1's never being asked, never says so",
-     "kind": "want (being asked)",
-     "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": null,
-     "note": "[INVENTED · V.O. · script-v1]",
-     "after": "e2-a4-0031",
-     "gap_s": 1.2,
-     "len_s": 2.44,
-     "t_s": 7.54
+     "t_s": 5.42
     }
    ],
    "caption": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
-   "picture": "Radnus not burning (R1).",
+   "picture": "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture).",
    "music": "E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate",
    "tempo": {
     "pace": "quick",
     "gaps": {
-     "e2-a4-0031": 0.45,
-     "e2-vo-12": 1.2
+     "e2-a4-0031": 0.45
     },
     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
    },
    "fix": [
     "P",
     "KEEP",
-    "VO",
-    "FC"
+    "FC",
+    "SR"
    ],
-   "why": "\"as a guest.\": terms he set; V.O. 12."
+   "why": "\"as a guest.\": terms he set; Radnus's smile holds too long."
   },
   {
    "id": "19.19",
@@ -2463,7 +2499,7 @@
    "scene": "19",
    "mode": "SET-PIECE (the walled garden)",
    "pace": "quick",
-   "est_s": 3.63,
+   "est_s": 3.59,
    "frame": "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
    "camera": "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
    "set": "void",
@@ -2479,15 +2515,15 @@
    "sounds": [
     {
      "name": "gate_iron_swing",
-     "at": 0.363,
+     "at": 0.359,
      "at_s": 0.36,
      "gain": -24,
      "new": true
     },
     {
      "name": "lock_big_turn",
-     "at": 1.694,
-     "at_s": 1.69,
+     "at": 1.675,
+     "at_s": 1.68,
      "gain": -22,
      "new": true
     }
@@ -2506,7 +2542,7 @@
    "scene": "19",
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "quick",
-   "est_s": 2.9,
+   "est_s": 2.87,
    "frame": "WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket",
    "camera": "WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket",
    "set": "void",
@@ -2522,8 +2558,8 @@
    "sounds": [
     {
      "name": "phone_into_pocket",
-     "at": 2.175,
-     "at_s": 2.17,
+     "at": 2.153,
+     "at_s": 2.15,
      "gain": -28,
      "new": true
     }
@@ -2555,7 +2591,7 @@
    "scene": "20",
    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
    "pace": "quick",
-   "est_s": 2.9,
+   "est_s": 3.51,
    "frame": "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights",
    "camera": "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights",
    "set": "lobby",
@@ -2570,14 +2606,14 @@
    "picture": "",
    "onscreen": {
     "add": [
-     "KORG 2: NEXT QUARTER (0.23-2.9 s)"
+     "KORG 2: NEXT QUARTER (0.28-3.51 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "KORG 2: NEXT QUARTER",
-     "at": 0.23,
-     "until": 2.9,
+     "at": 0.28,
+     "until": 3.51,
      "kind": "sign",
      "holds": true
     }
@@ -2586,8 +2622,8 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 2.137,
-     "at_s": 2.14,
+     "at": 2.586,
+     "at_s": 2.59,
      "gain": -26
     }
    ],
@@ -2672,7 +2708,7 @@
    "scene": "20",
    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
    "pace": "quick",
-   "est_s": 5.95,
+   "est_s": 6.0,
    "frame": "SPLIT · RIGHT: MCU Nole at the cage, to a visitor at the door; he locks his own phone in it",
    "camera": "SPLIT · RIGHT: MCU Nole at the cage, to a visitor at the door; he locks his own phone in it",
    "set": "lobby",
@@ -2693,10 +2729,10 @@
      "take": "new · NOLE (Ryan - Confident and Bold · EL) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · carries his follow-up post (visitors' devices \"stored in a Faraday cage\", facts A41)]",
-     "after": "start+0.23",
+     "after": "start+0.28",
      "gap_s": 0.0,
      "len_s": 4.12,
-     "t_s": 0.23
+     "t_s": 0.28
     }
    ],
    "caption": "To a visitor at the door, a silhouette. He puts his own phone in the cage and snaps the padlock.",
@@ -2706,14 +2742,14 @@
     {
      "name": "cage_door_shut",
      "at": "after:e2-a4-0032+0.6",
-     "at_s": 4.95,
+     "at_s": 5.0,
      "gain": -22,
      "new": true
     },
     {
      "name": "padlock_snap",
      "at": "after:e2-a4-0032+1.2",
-     "at_s": 5.55,
+     "at_s": 5.6,
      "gain": -20,
      "new": true
     }
@@ -2738,7 +2774,7 @@
    "scene": "20",
    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
    "pace": "quick",
-   "est_s": 2.44,
+   "est_s": 2.96,
    "frame": "SPLIT · RIGHT: ECU the padlock and the buzzing phone; Nole looks at his empty hands; the lamp clicks off",
    "camera": "SPLIT · RIGHT: ECU the padlock and the buzzing phone; Nole looks at his empty hands; the lamp clicks off",
    "set": "lobby",
@@ -2754,16 +2790,16 @@
    "sounds": [
     {
      "name": "phone_buzz_muffled",
-     "at": 0.152,
-     "at_s": 0.15,
+     "at": 0.185,
+     "at_s": 0.18,
      "gain": -26,
      "new": true,
      "dur": 2.4
     },
     {
      "name": "lamp_click",
-     "at": 2.135,
-     "at_s": 2.13,
+     "at": 2.59,
+     "at_s": 2.59,
      "gain": -24,
      "new": true
     }
@@ -2890,7 +2926,7 @@
    "scene": "20",
    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
    "pace": "quick",
-   "est_s": 6.91,
+   "est_s": 5.73,
    "frame": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
    "camera": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
    "set": "lobby",
@@ -2907,30 +2943,30 @@
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "we raise again in the fall. haras needs a number by then.",
-     "delivery": "folding the flyer away, Haras passing; a calendar thought; brisk for him",
+     "text": "we raise in the fall. she has till then.",
+     "delivery": "folding the flyer away, Haras passing with UPSIDE circled ('she' is in frame); a calendar thought; brisk for him",
      "kind": "plan (the money)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": null,
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.76",
+     "after": "start+0.92",
      "gap_s": 0.0,
-     "len_s": 5.84,
-     "t_s": 0.76
+     "len_s": 4.44,
+     "t_s": 0.92
     }
    ],
    "caption": "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
    "picture": "The V.O. after the note's insert has cleared, before the docket.",
    "onscreen": {
     "add": [
-     "UPSIDE (0.15-1.26 s)"
+     "UPSIDE (0.18-1.42 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "UPSIDE",
-     "at": 0.15,
-     "until": 1.26,
+     "at": 0.18,
+     "until": 1.42,
      "kind": "doc"
     }
    ],
@@ -2943,9 +2979,10 @@
    "fix": [
     "P",
     "VO",
-    "R2"
+    "R2",
+    "SR"
    ],
-   "why": "V.O. 13: the money behind the next model."
+   "why": "V.O. 13: the money behind the next model; she has till the raise."
   },
   {
    "id": "20.08",

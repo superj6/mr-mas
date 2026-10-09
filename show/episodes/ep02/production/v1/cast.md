@@ -1,6 +1,6 @@
 # Ep2 v1: the cast (`ep1.1_her.wav`)
 
-> **Status: the voice plan for the one-go build, 2026-10-08. Nothing is recorded yet.** Every speaking role in [script-v1.md](script-v1.md) and its beat plans ([beat-plan/](beat-plan/)), with its voice: Ep1's ElevenLabs cast where the role exists ([voices-el.md](../../../ep01/production/full-v3/voices-el.md); [cast-el.json](../../../../../audio/ep01/v3-el/cast-el.json), read, never edited), MARIO on Kokoro, and a shortlist of 3–4 ElevenLabs **library** voices to audition for every new role. Ep2's own cast file is `audio/ep02/cast-el.json` (the pipeline's copy of Ep1's, its starting point; the voice pass adds each new role's pick to it from this page).
+> **Status: the voice plan for the one-go build, 2026-10-08, updated after the script review (its log is at the end of [script-v1.md](script-v1.md#review-log-script-review)). Nothing is recorded yet.** Every speaking role in [script-v1.md](script-v1.md) and its beat plans ([beat-plan/](beat-plan/)), with its voice: Ep1's ElevenLabs cast where the role exists ([voices-el.md](../../../ep01/production/full-v3/voices-el.md); [cast-el.json](../../../../../audio/ep01/v3-el/cast-el.json), read, never edited), MARIO on Kokoro, and a shortlist of 3–4 ElevenLabs **library** voices to audition for every new role. Ep2's own cast file is `audio/ep02/cast-el.json` (the pipeline's copy of Ep1's, its starting point; the voice pass adds each new role's pick to it from this page).
 >
 > **The firm rules** (LEARNINGS S6, S7; guardrails §5–§6): library voices only (ElevenLabs premade voices, or shared Voice Library voices called by `voice_id`: each a voice its owner made of their own voice). **No cloning, no voice design from anyone's audio, no "sounds like" prompt, no laugh mimicry, no voice chosen or directed to resemble a real person.** One film: Mas is Jeremy; MARIO keeps his Kokoro voice, matched into the room. No two roles share a voice. Nobody here has listened: the shortlists are a screen by the library's own words and a pitch measure of each preview; the pick is made by measurement with a written reason (Ep1's method, voices-el §AA), and the human listen goes on the delivery note.
 
@@ -10,13 +10,13 @@
 
 ## 1. Every speaking role
 
-All 166 lines of the beat plans (152 spoken, 14 V.O.), by speaker. `who` is the beat plan's speaker id; the line ids are the plan's.
+All 173 lines of the beat plans (159 spoken, 14 V.O.), by speaker. `who` is the beat plan's speaker id; the line ids are the plan's.
 
 | Role | `who` | Lines | Scenes | Voice | Status |
 |---|---|---|---|---|---|
-| **MAS** (spoken) | `mas` | 26 (e2-a1-0001 … e2-a4-0031) | 4, 6, 7 (his recorded voice), 8, 9, 13, 15, 17, 18, 19 | **Jeremy** (EL) | carried |
+| **MAS** (spoken) | `mas` | 29 (e2-a1-0001 … e2-a4-0034) | 4, 6, 7 (his recorded voice), 8, 9, 13, 14, 15, 17, 18, 19 | **Jeremy** (EL) | carried |
 | **MAS** (V.O.) | `mas` (`vo`) | 14 (e2-vo-01 … e2-vo-14) | 4, 4B, 8, 12, 15, 17, 18, 19, 20, 23 | **Jeremy**, V.O. settings | carried |
-| **GERG** | `gerg` | 12 | 1, 4, 9, 19 | Marcus (EL) | carried |
+| **GERG** | `gerg` | 15 | 1, 4, 9, 19 | Marcus (EL) | carried |
 | **NOLE** | `nole` | 15 | 4, 20 | Ryan - Confident and Bold (EL) | carried |
 | **GHOST-NOLE** | `ghost-nole` | 4 (one cut from his own take) | 4 | Nole's voice + the ghost treatment | carried |
 | **TERB** | `terb` | 7 | 4A, 18 | Ethan (EL) | carried |
@@ -26,7 +26,7 @@ All 166 lines of the beat plans (152 spoken, 14 V.O.), by speaker. `who` is the 
 | **ALYI** | `alyi` | 5 (one cut from Ep1's take) | 15 (F2.2) | Louis (EL); Ep1's own take for "Six years and eleven months." | carried |
 | **NELEH** | `neleh` | 2 | 18 | Alexandra (EL), through the podcast chain | carried |
 | **RADNUS** | `radnus` | 1 | 19 | Dylan Malc (EL) | carried |
-| **STAFFER** | `staffer` | 4 | 4, 13, 19 | Avery (EL; Ep1's tiled employee) | carried |
+| **STAFFER** | `staffer` | 5 | 4, 13, 19 | Avery (EL; Ep1's tiled employee) | carried |
 | **MARIO** | `mario` | 6 | 18 | **Kokoro** `am_liam` (a-liam-earnest), matched | carried (Kokoro) |
 | **SELBEEP** | `selbeep` | 4 | 1 | shortlist §3.1 | **new** |
 | **XEL** | `xel` | 7 | 6 | shortlist §3.2 | **new** |
@@ -52,19 +52,19 @@ The voices, ids and settings are Ep1's, exactly (cast-el.json; voices-el §2, §
 
 | Role | Library voice (`voice_id`) | Stability / style / speed | Ep2 direction (only what's new) |
 |---|---|---|---|
-| **MAS** | Jeremy - Warm, Trustworthy, Sincere (`EwzF7Z2UMSib9JaKx0Kg`; Ep1's set A, candidate C) | spoken 0.60 / 0 / 0.95 · **V.O. 0.65 / 0 / 0.85** | Lane 105–125 Hz. Spoken level, unhurried, no smile in it; the ELPPA call (8.06) his one full sentence of terms; **the call to legal (17.09) level and a hair quicker than he ever talks**, the one time he hurries. V.O. close and dry, 110–130 wpm (lines e2-vo-01 … 14; each delivery note is in the plan). His lowercase lines are sent in sentence case so the voice reads them as speech (Ep1's rule). His recorded voice in sc 7 (`e2-a1-0047`) is a cut of sc 6's take, through the phone chain |
-| **GERG** | Marcus - Bright, Upbeat and Clear (`y0s2ExEMuum3muUnA6Zd`) | 0.40 / 0.15 / 1.00 | The Move 37 correction (`e2-a1-0023`, 40 words): cheerful and literal, never smug; record it whole. "He signed it. He's just not here." quiet. The call (19.09–19.10) through the call chain when we're on Mas |
-| **NOLE** | Ryan - Confident and Bold (`ya031zGCAxyRGrvB3or9`) | 0.35 / 0.20 / 1.05 | Bursts. "That's why." and "You kept them." quiet; "Nobody wrote that move…" hushed, a man at a séance; "One player in ten thousand…" a fear, not a boast; "I forwarded that…" quick, defensive |
+| **MAS** | Jeremy - Warm, Trustworthy, Sincere (`EwzF7Z2UMSib9JaKx0Kg`; Ep1's set A, candidate C) | spoken 0.60 / 0 / 0.95 · **V.O. 0.65 / 0 / 0.85** | Lane 105–125 Hz. Spoken level, unhurried, no smile in it; the ELPPA call (8.06) his one full sentence of terms; **his ordinary lines unhurried, about 140 wpm (W18), and the call to legal (17.09) level and quicker than he ever talks, about 180**, the one time he hurries. **Two new kinds of line (script review, P9):** the open floor's chosen strip lines, `congratulations.` and `need anything?` (14.07–14.08), said aloud as the dialogue box types them (a voiced adventure game's convention; plain, meant); and "which half?" (19.10), his Ep1 precision question, dry. V.O. close and dry, 110–130 wpm (lines e2-vo-01 … 14; each delivery note is in the plan), **except V.O. 9 (17.10), "everyone who signed. the post. everyone who signed.", read faster than he thinks** (about 145 wpm against his usual 110–130, his rattled tell: each item a new call, not louder). His lowercase lines are sent in sentence case so the voice reads them as speech (Ep1's rule). His recorded voice in sc 7 (`e2-a1-0047`) is a cut of sc 6's take, through the phone chain |
+| **GERG** | Marcus - Bright, Upbeat and Clear (`y0s2ExEMuum3muUnA6Zd`) | 0.40 / 0.15 / 1.00 | The Move 37 correction, now in two parts around the staffer's whisper (`e2-a1-0023`, 13 words; `e2-a1-0056`, 30 words): cheerful and literal, never smug, **unhurried for him** (the plan sits at about 183 wpm, inside W18's band, against his Ep1 211): a correction, not a read-out; record each part whole. "He signed it. He's just not here." quiet. The call (19.09–19.10) through the call chain when we're on Mas; "The half on the beanbags." literal and helpful, quick on "which half?" |
+| **NOLE** | Ryan - Confident and Bold (`ya031zGCAxyRGrvB3or9`) | 0.35 / 0.20 / 1.05 | Bursts. "That's why." and "You kept them." quiet; "Nobody wrote that move…" hushed, a man at a séance; "One player in ten thousand…" a fear, not a boast; "I forwarded that…" quick, defensive; "MINDDEEP had that in 2016." loud again |
 | **GHOST-NOLE** | the same voice | the same | The ghost treatment (§4). "Yup" (`e2-a1-0002`) and "…Yup." (`e2-a1-0018`) on different seeds. `e2-a1-0026` is cut from `e2-a1-0014`'s take ("billions" … "year") |
 | **TERB** | Ethan - Calm, Optimistic and Clear (`Pcfg2Zc6kmNWQ9ji3J5F`) | 0.55 / 0 / 1.05 | The Mar 8 finding (`e2-a1-0032`) read word for word and weighted, both halves together, no view in the voice |
 | **TASYA** | Tyler Kurk - Smooth, Pleasant and Clear (`raMcNf2S8wCmuaBcyI6E`) | 0.50 / 0.10 / 0.90 | Warm, unhurried; "A tenant." O.S. |
 | **RIMA** | Mia - Clear, Smooth, Professional (`rCuVrCHOUMY3OwyJBJym`) | 0.55 / 0.05 / 0.92 | Composed throughout; THE PLAN's six lines O.S. as if running her first slides in her head; "…and that's the demo." after a bar's hold |
 | **CHATGTP** (and VOICE 5) | Maya - The Upbeat Creator (`Y2pP8eXRDH19yyV1Tslt`) | 0.40 / 0.25 / 1.08 | **Ep1's approved voice and Ep1's direction, reused unchanged** (the programmatic stand-in for the ear check; D-30, D-49): no "breathy", "husky", "sultry" or film-referencing word in any prompt, setting note or take name. VOICE 5's `Hey.` (`e2-a2-0016`) is this voice, so the slot paused in sc 17 is the voice heard on stage. "Great question! … favorite things." recorded whole (the engineer's "Thanks." comes in over "favorite"). "one wo-o-ord." (`e2-a2-0030`) in three parts through the intro's sung-vocal pipeline, not TTS. **After the pause (17.19) CHATGTP has no spoken line in Ep2**: the garden's bubbles are text and a chip blip; Ep3 decides its speaking voice |
-| **ALYI** | Louis - Deep, Profound and Thoughtful (`8x8Otoub1daqoxY72hug`) | 0.60 / 0 / 0.78 | Three new lines in F2.2: "You're not chanting." (delighted), "Then feel it for both of us." (laughing), "Someone should." (quiet; fallback, Ep1's take `e1-a1-5-15`, reused); and the chant's first "FEEL THE AGI!". Warm, his Ep1 register; **no direction toward mysticism or intensity**. `e2-a3-0008` is **Ep1's own take** `e1-a1-5-13`, cut "Six" … "months" (`audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav`, about 2.0 s), copied into `audio/ep02/` and played far off; Ep1's file is read, never edited |
+| **ALYI** | Louis - Deep, Profound and Thoughtful (`8x8Otoub1daqoxY72hug`) | 0.60 / 0 / 0.78 | Three new lines in F2.2: "You're not chanting." (delighted), "Then I'll feel it for both of us." (laughing), "Someone should." (quiet; fallback, Ep1's take `e1-a1-5-15`, reused); and the chant's first "FEEL THE AGI!". Warm, his Ep1 register; **no direction toward mysticism or intensity**. `e2-a3-0008` is **Ep1's own take** `e1-a1-5-13`, cut "Six" … "months" (`audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav`, about 2.0 s), copied into `audio/ep02/` and played far off; Ep1's file is read, never edited |
 | **NELEH** | Alexandra - Confident, Clear and Steady (`3dzJXoCYueSQiptQ6euE`; her Ep1 A voice) | 0.55 / 0 / 0.95 (voices-el §AE–§AF) | Her two lines (`e2-a4-0001`, `e2-a4-0002`) are her own transcript's words with name swaps: recorded whole, then **ASR-verified against the text** (the stand-in for the audio check). **Ep1's settings unchanged; no processing or direction toward anyone's timbre.** Through the podcast-player chain (§4); the player on screen carries no show name |
-| **RADNUS** | Dylan Malc - Calm & Educational (`PMWmvqAOXhLm54FLpmYS`) | 0.55 / 0.05 / 0.90 | Quick, gracious, along the hedge |
-| **STAFFER** | Avery - Healthcare & Clinical Education (`w25dAwxibNES1hcDBvXx`; Ep1's tiled employee) | 0.50 / 0 / 0.95 | "What's that?" whispered (4.20); three plain staff reads (13, 19) |
-| **MARIO** | **Kokoro** `am_liam` (Kokoro-82M stock), the `a-liam-earnest` preset (`audio/voices/cast.json`) | Ep1's Kokoro settings | The showrunner kept his Kokoro voice ("i actually liked dario's kokoro voice more"). Matched into the EL room: the takes' format (48 kHz / 24-bit mono, −16 LUFS, −1.5 dBTP, dry, 0.35 s room-tone handles), the room, chain and EQ of voices-el §AB3; **within about 1 dB of EKIEL**, who answers him in the same pane |
+| **RADNUS** | Dylan Malc - Calm & Educational (`PMWmvqAOXhLm54FLpmYS`) | 0.55 / 0.05 / 0.90 | Quick, gracious, along the hedge; his smile holds after "as a guest." with no V.O. over it |
+| **STAFFER** | Avery - Healthcare & Clinical Education (`w25dAwxibNES1hcDBvXx`; Ep1's tiled employee) | 0.50 / 0 / 0.95 | "What's that?" whispered (4.20), and "So somebody did write it." whispered to Gerg (4.22: she hears "people's games" as "people wrote it"); three plain staff reads (13, 19), the first peeling a flyer's corner |
+| **MARIO** | **Kokoro** `am_liam` (Kokoro-82M stock), the `a-liam-earnest` preset (`audio/voices/cast.json`) | Ep1's Kokoro settings | The showrunner kept his Kokoro voice ("i actually liked dario's kokoro voice more"). "We agree. I underlined 'inherently.'" with a small beat before "inherently.", the word the joke turns on (planned 2.6 s). Matched into the EL room: the takes' format (48 kHz / 24-bit mono, −16 LUFS, −1.5 dBTP, dry, 0.35 s room-tone handles), the room, chain and EQ of voices-el §AB3; **within about 1 dB of EKIEL**, who answers him in the same pane |
 
 **On file, silent in Ep2:** ADELINA (Gracy, `biKKUtquxxZTxOnPw4Tk`), MADA (Alex - Smooth, Balanced and Clear, `S9UjcNYIwfBOtZiDnIQT`), REMUHCS (Marc Laurent, `o0t0Wz5oSDuuCV6p7rba`): no line in Ep2 (§7).
 
@@ -111,7 +111,7 @@ The voices, ids and settings are Ep1's, exactly (cast-el.json; voices-el §2, §
 
 ### 3.4 The DEMO ENGINEER · 9 lines (sc 9, 11) + his laugh
 
-**Brief:** presenter-bright, nervous under it; a generic composite (headset, `DEMO` lanyard), nobody real. His laugh (9.03) recorded as a **separate take** in his own voice (never a laugh modelled on anyone's). The two lines after the stream (11.15) are read off mic: lower and closer. **Lane:** 125–160 Hz. **Separate from:** CHATGTP (Maya, 238–281 Hz), Rima (Mia, about 170 Hz), and Gerg (Marcus, 143–152 Hz) in the wings.
+**Brief:** presenter-bright, nervous under it; a generic composite (headset, `DEMO` lanyard), nobody real. His laugh (9.03) recorded as a **separate take** in his own voice (never a laugh modelled on anyone's); it stops on Gerg's "laugh.". The two lines after the stream (11.15) are read off mic, to Rima beside him: lower and closer, statements ("Mas just posted. One word." · "'Her.' Like the movie. The guy and his computer."). **Lane:** 125–160 Hz. **Separate from:** CHATGTP (Maya, 238–281 Hz), Rima (Mia, about 170 Hz), and Gerg (Marcus, 143–152 Hz) in the wings.
 
 | Candidate | `voice_id` | Library labels | Preview F0 | Why it's here |
 |---|---|---|---|---|
@@ -224,10 +224,10 @@ The beat plans' line `tag` names the chain; the mix pass owns the settings (Ep1'
 | Tag | What it is | Lines |
 |---|---|---|
 | *(none)* | in the room, dry, the scene's room tone under it | most |
-| `os` | off screen, in the same room | the Selbeep and Gerg O.S. lines, "we keep everything." (an L-cut), "A tenant.", THE PLAN's O.S. lines |
+| `os` | off screen, in the same room | the Selbeep and Gerg O.S. lines, the staffers' whispers at the stone (4.20, 4.22), "we keep everything." (an L-cut), "A tenant.", THE PLAN's O.S. lines |
 | `ghost` | the ghost treatment: a short dark reverb, a chip doubler a hair late | GHOST-NOLE |
 | `phone` | a phone's small speaker (band-passed copy of the take) | Mas's recorded voice on Tasya's phone (7.01) |
-| `call` | a phone call (the speaker in frame stays dry; the far end band-passed) | Mas to ELPPA (8.06), to LEGAL (17.09); Gerg's call (19.09–19.10) |
+| `call` | a phone call (the speaker in frame stays dry; the far end band-passed) | Mas to ELPPA (8.06), to LEGAL (17.09); Gerg's call (19.09–19.10), "which half?" included |
 | `podcast` | the boardroom TV's podcast player: a small-speaker band-pass, then the room | NELEH (18.03–18.04) |
 | `tv` | the lobby TV | the REPORTER (13.05) |
 | `far` | Ep1's take, far off, as if down a corridor | ALYI's "Six years and eleven months." (15.03) |
@@ -246,12 +246,13 @@ Only the text **sent** to a voice changes; the lines keep the script's spelling 
 | Mas / MAS | Terb (4A.03), the Engineer (11.15), the Staffer (19.06), Neleh (18.04) | "Moss" | Ep1 |
 | Manalt | Terb's reading (4A.02) | "Man-alt" ("Mr." stays "Mister") | Ep1 |
 | ALYI / alyi | XEL (6.04, 6.06), Mas (6.07) | "Al-yee" | Ep1 |
-| NopeAI / NOPEAI | XEL (6.01), Neleh (18.04) | "Nope A.I." | Ep1 |
+| NopeAI / NOPEAI | XEL (6.01; NOPEAI in the script since the script review, as every other quote), Neleh (18.04) | "Nope A.I." | Ep1 |
+| MINDDEEP | Nole (4.24) | "Mind Deep" | **new**; check it isn't run together |
 | CHATGTP | Neleh (18.03) | "Chat G-T-P" | Ep1 |
 | AROS | Selbeep (1.02) | "Ah-ross" | **new**; check against "arrows" and "Eros" |
 | RETTIWT | Neleh (18.03) | "Rett-twit" | **new**; the joke is the "twit" |
 | Ekiel | Mario (18.11; Kokoro: its own IPA, as Ep1's Kokoro respellings) | "Eh-keel" | **new**; check |
-| haras | Mas's V.O. 13 (20.07) | "Hah-rahs" | **new**; **must not be heard as "harass" or "Harris"** (SIRRAH is Harris); check on three seeds |
+| haras | (nobody says it since the script review: V.O. 13 now says "she", with Haras in frame) | "Hah-rahs", if a later line needs it | on file; **must not be heard as "harass" or "Harris"** (SIRRAH is Harris) |
 | AGI | Alyi and the crowd (15.06) | "A.G.I." (the letters) | **new**; the chant sent in sentence case ("Feel the A.G.I.!"), the screen keeps capitals |
 | ELSE | Nole (4.18) | "else" (sentence case; the stress is a reading note, not capitals) | **new** |
 
@@ -265,9 +266,9 @@ Only the text **sent** to a voice changes; the lines keep the script's spelling 
 4. **Record the takes** for every line (`el_render.py` per segment, under `audio/ep02/`: the pipeline reads ElevenLabs takes as `lines-A*.json` anywhere there, and Kokoro takes as `audio/ep02/v1/<seg>/lines-v1.json`), the carried roles at Ep1's settings, the new ones at their picked settings. **Long reads recorded whole and cut by the lock; cut-offs recorded complete** (CHATGTP's "…one of my favorite things."; Haras's "And profit?"); the three cuts made from their source takes (§2). Dialogue −16 LUFS, V.O. −18 LUFS at the take.
 5. **Re-run the plan** (`python3 show/episodes/ep02/production/v1/beat-plan/_build.py --write`): each take row under `audio/ep02/` (`**/lines*.json`) with the line's id and its audible in/out replaces the planning length, and each scene re-fits around the takes.
 
-**Budget** (Ep1 billed about 55 credits per 100 characters on `eleven_multilingual_v2`): the episode's takes are about 7,700 characters of text (MARIO is Kokoro and costs nothing) ≈ **4,200 credits** at one read each; the new roles' auditions, about 2,100 characters × 3.5 voices ≈ **4,000 credits**; the crowd, about 12 short reads; retakes on a bad read add about a fifth. This is the manifest's resource ask (§10): ElevenLabs credits for the auditions and the takes.
+**Budget** (Ep1 billed about 55 credits per 100 characters on `eleven_multilingual_v2`): the episode's takes are about 7,600 characters of text (MARIO is Kokoro and costs nothing) ≈ **4,200 credits** at one read each; the new roles' auditions, about 2,100 characters × 3.5 voices ≈ **4,000 credits**; the crowd, about 12 short reads; retakes on a bad read add about a fifth. This is the manifest's resource ask (§10): ElevenLabs credits for the auditions and the takes.
 
-**For an ear first** (the delivery note's human list): VOICE 5 / CHATGTP by ear (it must sound like no real actress and no film character); HARAS's name in V.O. 13; Neleh's two lines against the podcast audio; whether XEL reads clearly unlike the real host; the crowd's chant (warm, never a rally).
+**For an ear first** (the delivery note's human list): VOICE 5 / CHATGTP by ear (it must sound like no real actress and no film character); V.O. 9's speed (rattled, never panicked); "which half?" dry, not a gag reading; Neleh's two lines against the podcast audio; whether XEL reads clearly unlike the real host; the crowd's chant (warm, never a rally).
 
 ---
 

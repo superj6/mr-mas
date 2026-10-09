@@ -83,9 +83,9 @@
 | **RETEP** | Peter Steinberger | CAMEO | Agents/Products → NopeAI | 7 | 7 | "RENAMED THRICE. HIRED ONCE." |
 | **THE OTHER PAUL** | Paul Christiano | CAMEO | Critics/Academia (Woodrose guest; later head of safety at the US AI Safety Institute) | 3 (fb) | 3 fb, 5, 12 fb | In Ep5 he stands under the institute sign while KCINTUL erases SAFETY (critic E47). |
 | [**NELEH**](../characters/neleh.md) | Helen Toner | RECURRING | Critics/Academia (ex-board) | 1 | 1–2, 8 | Principled, never a villain. |
-| [**MADA**](../characters/mada.md) | Adam D'Angelo | CAMEO | NopeAI (board) | 1 | 1 | "LAST FIRER STANDING." Confirm he's still on the board before any 2026 use. |
+| [**MADA**](../characters/mada.md) | Adam D'Angelo | CAMEO | NopeAI (board) | 1 | 1–2 | "LAST FIRER STANDING." Confirm he's still on the board before any 2026 use. |
 | [**TTEMME**](../characters/ttemme.md) | Emmett Shear | CAMEO | NopeAI (board-appointed CEO) | 1 | 1 | "CEO (72 HOURS)." |
-| [**TERB**](../characters/terb.md) | Bret Taylor | CAMEO | NopeAI (board) | 1 | 1 | |
+| [**TERB**](../characters/terb.md) | Bret Taylor | CAMEO | NopeAI (board) | 1 | 1–2 | Ep2: chair; reads the Mar 8 finding and the safety committee's members |
 | **THE OTHER YRRAL** | Larry Summers | CAMEO, **mute** | NopeAI (board) | 1 | **1 only** | Never his Nov 2025 resignation. Dropped from Ep8's TOO MANY LARRYS (critic D29). |
 | **THE QUIET VOTE** | Tasha McCauley | CAMEO | NopeAI (board) | 1 | 1, 2 | Camera-off tile. Not AHSAT (too close to TASYA). |
 | **DRUH** | Will Hurd | CAMEO | NopeAI (ex-board) | 1 | 1 | Musical-chairs cold open: his chair walks out with a campaign sticker. |
