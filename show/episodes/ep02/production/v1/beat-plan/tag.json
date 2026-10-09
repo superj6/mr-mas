@@ -1,0 +1,582 @@
+{
+ "segment": "tag",
+ "act": "TAG",
+ "title": "august",
+ "source": null,
+ "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
+ "story_s": {
+  "target": 37,
+  "estimate": 37.0
+ },
+ "scenes": [
+  {
+   "id": "23",
+   "target_s": 37,
+   "title": "The other company",
+   "date": "AUG 5 → AUG 22, 2024",
+   "place": "the dark room",
+   "status": "CHANGED",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "estimate_s": 37.0,
+   "fit_scale": 1.169
+  }
+ ],
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "rumpt-hands": {
+   "name": "RUMPT",
+   "role": "HANDS ONLY",
+   "blank": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "keep_parens": [
+  "(FOR NOW)",
+  "verified: human (all of them)"
+ ],
+ "rooms": {
+  "darkroom": "room_drone ✓ + server_hum ✓ (the monitor's whine on top)"
+ },
+ "beats": [
+  {
+   "id": "23.01",
+   "action": "new",
+   "after": "(start)",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 4.6,
+   "frame": "OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD",
+   "camera": "OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD",
+   "set": "darkroom",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "lines": [],
+   "caption": "His back as he sits at the desk, the monitor's glow on. Something heavy lands on it from above: THUD. The suit is back, in federal court. Stuck to it, the (FOR NOW) note, crossed out.",
+   "picture": "The framed GUEST lanyard from Ep1 on the wall.",
+   "onscreen": {
+    "add": [
+     "RAIL: AUG 5 (0.2-1.4 s)",
+     "NOLE v. MANALT ET AL. · FEDERAL COURT (2.2-4.6 s)",
+     "(FOR NOW) (2.2-4.6 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "RAIL: AUG 5",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "NOLE v. MANALT ET AL. · FEDERAL COURT",
+     "at": 2.2,
+     "until": 4.6,
+     "kind": "doc",
+     "holds": true
+    },
+    {
+     "text": "(FOR NOW)",
+     "at": 2.2,
+     "until": 4.6,
+     "kind": "sign",
+     "holds": true
+    }
+   ],
+   "music": "E02-13 · THE RUN holds its pedal under the suit's landing",
+   "sounds": [
+    {
+     "name": "landing_thunk",
+     "at": 1.6,
+     "at_s": 1.6,
+     "gain": -14
+    }
+   ],
+   "seq": {
+    "id": "23",
+    "place": "the dark room: the monitor",
+    "time": "Aug 5 → Aug 22, 2024",
+    "side": ""
+   },
+   "arrive": {
+    "s": 1.5,
+    "what": "his back as he sits at the desk (sc 22's match), the monitor's glow on"
+   },
+   "fix": [
+    "P",
+    "FACT"
+   ],
+   "why": "The suit comes back (facts A48). No V.O. (W8)."
+  },
+  {
+   "id": "23.02",
+   "action": "new",
+   "after": "23.01",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 3.74,
+   "frame": "ECU · its pages lose their exclamation points; he slides it aside",
+   "camera": "ECU · its pages lose their exclamation points; he slides it aside",
+   "set": "darkroom",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "Page one: !!. Page two: !. Page three: a full stop. He slides it aside so he can see the monitor.",
+   "picture": "",
+   "onscreen": {
+    "add": [
+     "!! (0.23-1.05 s)",
+     "! (1.05-1.87 s)",
+     ". (1.87-2.8 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "!!",
+     "at": 0.23,
+     "until": 1.05,
+     "kind": "doc"
+    },
+    {
+     "text": "!",
+     "at": 1.05,
+     "until": 1.87,
+     "kind": "doc"
+    },
+    {
+     "text": ".",
+     "at": 1.87,
+     "until": 2.8,
+     "kind": "doc"
+    }
+   ],
+   "music": "E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item",
+   "sounds": [
+    {
+     "name": "page_turn",
+     "at": 0.234,
+     "at_s": 0.23,
+     "gain": -26,
+     "new": true
+    },
+    {
+     "name": "page_turn",
+     "at": 1.052,
+     "at_s": 1.05,
+     "gain": -26,
+     "new": true
+    },
+    {
+     "name": "page_turn",
+     "at": 1.87,
+     "at_s": 1.87,
+     "gain": -26,
+     "new": true
+    }
+   ],
+   "fix": [
+    "P"
+   ],
+   "why": "Calmer punctuation."
+  },
+  {
+   "id": "23.03",
+   "action": "new",
+   "after": "23.02",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 4.2,
+   "frame": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal",
+   "camera": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal",
+   "set": "screen",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [],
+   "lines": [],
+   "caption": "The candidate's post, in its own UI: a rival \"A.I.'d\" her crowd. The photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal on its corner.",
+   "picture": "His text never types: it arrives as one block.",
+   "onscreen": {
+    "add": [
+     "RAIL: AUG 11 (0.2-1.4 s)",
+     "…and she 'A.I.'d' it… (1.6-4.1 s)",
+     "SIRRAH (1.6-4.2 s)",
+     "SUMMER 2024 (1.6-4.2 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "RAIL: AUG 11",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "…and she 'A.I.'d' it…",
+     "at": 1.6,
+     "until": 4.1,
+     "kind": "post"
+    },
+    {
+     "text": "SIRRAH",
+     "at": 1.6,
+     "until": 4.2,
+     "kind": "plate",
+     "holds": true
+    },
+    {
+     "text": "SUMMER 2024",
+     "at": 1.6,
+     "until": 4.2,
+     "kind": "sign",
+     "holds": true
+    }
+   ],
+   "music": "E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item",
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 1.6,
+     "at_s": 1.6,
+     "gain": -26
+    }
+   ],
+   "fix": [
+    "P",
+    "FACT",
+    "GR"
+   ],
+   "why": "His claim is false (facts A49)."
+  },
+  {
+   "id": "23.04",
+   "action": "new",
+   "after": "23.03",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 6.8,
+   "frame": "2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill",
+   "camera": "2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill",
+   "set": "screen",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [
+    "orb",
+    "mas"
+   ],
+   "lines": [],
+   "caption": "THE ORB floats off Mas's shoulder to the monitor and scans the crowd, face by face: human, human, human, human. Its toast. It floats back. In a background tab, an egg sits on a bill.",
+   "picture": "Toast 3 of 3. The egg is Ep3's.",
+   "onscreen": {
+    "add": [
+     "human · human · human · human (1.4-4 s)",
+     "verified: human (all of them) (4.2-6.6 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "human · human · human · human",
+     "at": 1.4,
+     "until": 4.0,
+     "kind": "ui"
+    },
+    {
+     "text": "verified: human (all of them)",
+     "at": 4.2,
+     "until": 6.6,
+     "kind": "toast"
+    }
+   ],
+   "music": "E02-13 · the Orb's F chime, then its verdict a beat later (F → C on vibes and glass)",
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.3,
+     "at_s": 0.3,
+     "gain": -24
+    },
+    {
+     "name": "orb_scan_sweep",
+     "at": 1.4,
+     "at_s": 1.4,
+     "gain": -26
+    },
+    {
+     "name": "orb_chime_F",
+     "at": 4.2,
+     "at_s": 4.2,
+     "gain": -22
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 4.2,
+     "at_s": 4.2,
+     "gain": -28
+    }
+   ],
+   "style": "2.E TERMINAL (the Orb's POV)",
+   "fix": [
+    "P",
+    "FACT"
+   ],
+   "why": "The fact-check."
+  },
+  {
+   "id": "23.05",
+   "action": "new",
+   "after": "23.04",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 4.32,
+   "frame": "OTS · Mas at the monitor, the toast cleared",
+   "camera": "OTS · Mas at the monitor, the toast cleared",
+   "set": "darkroom",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "lines": [
+    {
+     "id": "e2-vo-14",
+     "new": true,
+     "who": "mas",
+     "vo": true,
+     "tag": "V.O.",
+     "text": "a good week for the other company.",
+     "delivery": "after the Orb's verdict; dry; the faintest pleasure",
+     "kind": "plan (personhood)",
+     "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
+     "take_file": null,
+     "note": "[INVENTED · V.O. · script-v1]",
+     "after": "start+0.47",
+     "gap_s": 0.0,
+     "len_s": 3.38,
+     "t_s": 0.47
+    }
+   ],
+   "caption": "Mas at the monitor.",
+   "picture": "After the Orb's toast clears.",
+   "music": "E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item",
+   "tempo": {
+    "pace": "normal",
+    "gaps": {},
+    "rule": "0.4-0.6 s"
+   },
+   "fix": [
+    "P",
+    "VO"
+   ],
+   "why": "V.O. 14: proof of personhood (pays Ep1's \"my other company.\")."
+  },
+  {
+   "id": "23.06",
+   "action": "new",
+   "after": "23.05",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 4.6,
+   "frame": "POV · Aug 22: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "camera": "POV · Aug 22: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "set": "screen",
+   "set_id": "SET-08",
+   "room": "darkroom",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "lines": [],
+   "caption": "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
+   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice.",
+   "onscreen": {
+    "add": [
+     "RAIL: AUG 22 (0.2-1.4 s)",
+     "…having me speak… It's a little bit dangerous out there. (1.4-4.55 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "RAIL: AUG 22",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "…having me speak… It's a little bit dangerous out there.",
+     "at": 1.4,
+     "until": 4.55,
+     "kind": "lower-third"
+    }
+   ],
+   "music": "E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words",
+   "sounds": [
+    {
+     "name": "blip_text_neutral",
+     "at": 1.5,
+     "at_s": 1.5,
+     "gain": -26,
+     "new": true
+    }
+   ],
+   "fix": [
+    "P",
+    "FACT",
+    "R2",
+    "FC",
+    "GR"
+   ],
+   "why": "His own words (facts A69)."
+  },
+  {
+   "id": "23.07",
+   "action": "new",
+   "after": "23.06",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 5.14,
+   "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
+   "camera": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
+   "set": "screen",
+   "set_id": "SET-08",
+   "room": "darkroom",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "lines": [],
+   "caption": "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
+   "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say.",
+   "music": "E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only",
+   "sounds": [
+    {
+     "name": "balloon_pump",
+     "at": 0.701,
+     "at_s": 0.7,
+     "gain": -26,
+     "new": true
+    },
+    {
+     "name": "balloon_pump",
+     "at": 1.635,
+     "at_s": 1.64,
+     "gain": -25,
+     "new": true
+    },
+    {
+     "name": "balloon_pump",
+     "at": 2.57,
+     "at_s": 2.57,
+     "gain": -24,
+     "new": true
+    },
+    {
+     "name": "knot_tie",
+     "at": 3.972,
+     "at_s": 3.97,
+     "gain": -26,
+     "new": true
+    }
+   ],
+   "fix": [
+    "P",
+    "R2",
+    "FC",
+    "GR"
+   ],
+   "why": "The candidate has hold of something shaped like Mas's chatbot."
+  },
+  {
+   "id": "23.08",
+   "action": "new",
+   "after": "23.07",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 1.6,
+   "frame": "POV · the hook: the string goes taut",
+   "camera": "POV · the hook: the string goes taut",
+   "set": "screen",
+   "set_id": "SET-08",
+   "room": "darkroom",
+   "chars": [],
+   "lines": [],
+   "caption": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "picture": "",
+   "music": "E02-13 · the Podium thins to one held chord",
+   "sounds": [
+    {
+     "name": "string_taut",
+     "at": 0.3,
+     "at_s": 0.3,
+     "gain": -20,
+     "new": true
+    }
+   ],
+   "fix": [
+    "P",
+    "R2"
+   ],
+   "why": "The hook (Ep3)."
+  },
+  {
+   "id": "23.09",
+   "action": "new",
+   "after": "23.08",
+   "act": "TAG",
+   "scene": "23",
+   "mode": "MONTAGE on his monitor",
+   "pace": "normal",
+   "est_s": 2.0,
+   "frame": "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
+   "camera": "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
+   "set": "darkroom",
+   "set_id": "SET-07",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "lines": [],
+   "caption": "Mas at his monitor, its glow on his still face. Cut to black.",
+   "picture": "Mas's face is the last image (R2).",
+   "music": "E02-13 out · cut on the downbeat to black",
+   "aftermath": "the taut string, then his face",
+   "transition": {
+    "to": "OUTRO",
+    "cause": "the hook",
+    "sound": "cut on the downbeat to black",
+    "object": "the taut string → Mas's face → black"
+   },
+   "fix": [
+    "P",
+    "TR",
+    "R2"
+   ],
+   "why": "Seam 30."
+  }
+ ]
+}
