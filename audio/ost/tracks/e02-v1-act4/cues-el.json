@@ -1,0 +1,2035 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e02-v1-act4-el",
+ "segment": "act4",
+ "file": "audio/ost/tracks/e02-v1-act4/render/music-el.wav",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act4.json",
+ "length_s": 319.0,
+ "frames": 7656,
+ "samples": 15312000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame",
+ "level": "underscore (each cue at its engine master: E02-11 -20.5, the keynote bed -24 (laid through a wall screen and a far PA), E02-12 -21.5 LUFS-I), dry of dialogue; the mixer ducks it (E02-11 9 dB, E02-12 7 by mood)",
+ "cues": [
+  {
+   "cue": "e02-11-leverage-quartet",
+   "key": "leverage",
+   "start": 0.0,
+   "end": 267.3,
+   "what": "a jolt of truth and a held breath; comedy and a dry chill; a giddy cheer; a small thrill (the stop on his post); a lonely call; nostalgia, then a pang; wit; a pang at the gate; a laugh (no hit); a smile at the rope; the last pizzicato",
+   "family": "P03 LEVERAGE (a string quartet: pizzicato over a muted 808) -> the pedal -> the Addendum -> the lobby's cycle -> P10 ERA T2 (F2.1) -> a garden-party quartet -> the cello's pedal, the 808 -> the morning pedal",
+   "render": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11-leverage-quartet-underscore.wav",
+   "laid_at_s": -4.7917,
+   "post": null,
+   "level": {
+    "lufs_i": -20.11,
+    "st_p95": -17.86,
+    "st_max": -16.61,
+    "true_peak_dbtp": -3.62
+   },
+   "target_lufs": -20.5,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.5,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.5,
+      "lra": 4.28,
+      "true_peak_db": -3.62,
+      "peak_db": -3.64,
+      "rms_db": -22.26,
+      "crest_db": 18.62,
+      "seconds": 272.5917
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.587,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 3,
+     "of": 3,
+     "worst_ms": 3.0
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 929,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "LEVERAGE: pizzicato eighths (3+3+2) on varied pitches, the muted 808, the violins' semitone dyads",
+    "the Lighthouse cell (marimba + harp) and Mario's Addendum (it gains a bar each time)",
+    "the Ache (G + D-flat over F) under \"It's that we might win.\"",
+    "Neleh's harmonic (C6 to D-flat 6)",
+    "the young Water Line (the nudge twice) through the 16-bit sample-chip",
+    "the pins' falling figure",
+    "the garden-party tune (the knee's steps and leaps in D-flat)",
+    "Nole's Launch (short, one note short)"
+   ],
+   "events": {
+    "j0": -1.2,
+    "beam": 5.521,
+    "tv": 7.75,
+    "face": 28.417,
+    "click_tv": 30.717,
+    "split": 32.167,
+    "lanyard": 33.942,
+    "left": 35.708,
+    "right": 62.917,
+    "mario_end": 91.625,
+    "remind": 91.625,
+    "toast": 92.02,
+    "lobby": 95.0,
+    "campus": 132.042,
+    "click_post": 134.542,
+    "call": 148.375,
+    "ring": 148.516,
+    "f21": 170.125,
+    "sweep": 170.925,
+    "ad": 172.125,
+    "stage": 176.917,
+    "click_map": 181.958,
+    "match": 189.042,
+    "garden": 192.708,
+    "g2": 202.708,
+    "g3": 212.708,
+    "gate": 221.375,
+    "gate_swing": 221.798,
+    "lock_turn": 223.349,
+    "fold": 225.625,
+    "split2": 229.0,
+    "lamp": 233.017,
+    "fanfare": 233.217,
+    "padlock": 246.21,
+    "lamp_off": 249.512,
+    "morning": 249.917,
+    "rope": 263.2,
+    "haul": 264.1,
+    "flutter": 265.6,
+    "landing": 266.0,
+    "dark": 267.0,
+    "pins": [
+     184.21733333333333,
+     185.06433333333334,
+     185.91233333333335,
+     186.75933333333333
+    ],
+    "last_updated": 187.328,
+    "card_end": 28.35,
+    "first": -1.042,
+    "bar0": 0.208,
+    "stop_tv": 7.396,
+    "t_rise": 28.958,
+    "re_in": 31.771,
+    "lan": 33.958,
+    "last808": 49.271,
+    "t_present": 49.458,
+    "t_d1": 50.208,
+    "t_d2": 58.333,
+    "rp": 62.708,
+    "s1": 62.708,
+    "s2": 75.833,
+    "s3": 85.833,
+    "stop_win": 88.958,
+    "ache_end": 92.083,
+    "t_rem": 92.083,
+    "lob": 94.583,
+    "stop_post": 134.583,
+    "call_in": 147.708,
+    "end_call": 169.896,
+    "band_in": 170.833,
+    "gpick": 191.458,
+    "push": 192.396,
+    "ph3": 212.396,
+    "fall_t": 219.583,
+    "gate_in": 221.146,
+    "z_in": 228.958,
+    "last_z": 245.208,
+    "morn": 249.583,
+    "out_t": 265.1,
+    "pz": 266.0,
+    "eighths": 323,
+    "thuds": 27,
+    "addendum": [
+     [
+      62.708,
+      "Bb3",
+      "head"
+     ],
+     [
+      63.333,
+      "C4",
+      "head"
+     ],
+     [
+      63.958,
+      "Db4",
+      "head"
+     ],
+     [
+      64.583,
+      "F4",
+      "head"
+     ],
+     [
+      65.208,
+      "Eb4",
+      "head"
+     ],
+     [
+      66.146,
+      "Db4",
+      "head"
+     ],
+     [
+      66.458,
+      "C4",
+      "head"
+     ],
+     [
+      67.083,
+      "Bb3",
+      "head"
+     ],
+     [
+      67.708,
+      "C4",
+      "tail"
+     ],
+     [
+      68.021,
+      "Db4",
+      "tail"
+     ],
+     [
+      75.833,
+      "Bb3",
+      "head"
+     ],
+     [
+      76.458,
+      "C4",
+      "head"
+     ],
+     [
+      77.083,
+      "Db4",
+      "head"
+     ],
+     [
+      77.708,
+      "F4",
+      "head"
+     ],
+     [
+      78.333,
+      "Eb4",
+      "head"
+     ],
+     [
+      79.271,
+      "Db4",
+      "head"
+     ],
+     [
+      79.583,
+      "C4",
+      "head"
+     ],
+     [
+      80.208,
+      "Bb3",
+      "head"
+     ],
+     [
+      80.833,
+      "C4",
+      "tail"
+     ],
+     [
+      81.146,
+      "Db4",
+      "tail"
+     ],
+     [
+      81.458,
+      "Eb4",
+      "tail"
+     ],
+     [
+      82.083,
+      "F4",
+      "tail"
+     ],
+     [
+      83.333,
+      "Gb4",
+      "tail"
+     ],
+     [
+      85.833,
+      "Bb3",
+      "head"
+     ],
+     [
+      86.458,
+      "C4",
+      "head"
+     ],
+     [
+      87.083,
+      "Db4",
+      "head"
+     ],
+     [
+      87.708,
+      "F4",
+      "head"
+     ],
+     [
+      88.333,
+      "Eb4",
+      "head"
+     ]
+    ],
+    "lobby_cycle": [
+     [
+      94.583,
+      "Eb"
+     ],
+     [
+      95.208,
+      "Ab"
+     ],
+     [
+      97.708,
+      "Ab"
+     ],
+     [
+      100.208,
+      "Db"
+     ],
+     [
+      102.708,
+      "Db"
+     ],
+     [
+      105.208,
+      "Bbm"
+     ],
+     [
+      107.708,
+      "Bbm"
+     ],
+     [
+      110.208,
+      "Eb"
+     ],
+     [
+      112.708,
+      "Eb"
+     ],
+     [
+      115.208,
+      "Ab"
+     ],
+     [
+      117.708,
+      "Ab"
+     ],
+     [
+      120.208,
+      "Db"
+     ],
+     [
+      122.708,
+      "Db"
+     ],
+     [
+      125.208,
+      "Bbm"
+     ],
+     [
+      127.708,
+      "Bbm"
+     ],
+     [
+      130.208,
+      "Eb"
+     ],
+     [
+      132.708,
+      "Eb"
+     ],
+     [
+      147.708,
+      "Bbm"
+     ],
+     [
+      150.208,
+      "Eb"
+     ],
+     [
+      152.708,
+      "Eb"
+     ],
+     [
+      155.208,
+      "Ab"
+     ],
+     [
+      157.708,
+      "Ab"
+     ],
+     [
+      160.208,
+      "Db"
+     ],
+     [
+      162.708,
+      "Db"
+     ],
+     [
+      165.208,
+      "Bbm"
+     ],
+     [
+      167.708,
+      "Bbm"
+     ]
+    ],
+    "garden_rows": [
+     [
+      192.708,
+      "Db2"
+     ],
+     [
+      195.208,
+      "Gb2"
+     ],
+     [
+      197.708,
+      "Eb2"
+     ],
+     [
+      200.208,
+      "Ab2"
+     ],
+     [
+      202.708,
+      "Db2"
+     ],
+     [
+      205.208,
+      "Bb2"
+     ],
+     [
+      207.708,
+      "Gb2"
+     ],
+     [
+      210.208,
+      "Ab2"
+     ]
+    ],
+    "lighthouse_head": 10,
+    "doc_hl": [
+     71.45,
+     75.55
+    ],
+    "end_card": [
+     174.665,
+     176.775
+    ],
+    "post": [
+     134.642,
+     141.242
+    ],
+    "nole_post": [
+     233.217,
+     240.417
+    ],
+    "docket": [
+     260.892,
+     262.992
+    ]
+   },
+   "sync": [
+    {
+     "t": -1.042,
+     "what": "the quartet's first pizzicato, J 1.042 s into Act Three's black (17.21 J 1.2 s): in render/music-el-prelap.wav",
+     "hit": false
+    },
+    {
+     "t": -0.417,
+     "what": "the Lighthouse cell (marimba + harp, F B-flat D-flat in quarters: the beam) over the B-flat eighths: Misanthropic's lighthouse, Ekiel climbing with his box",
+     "hit": false
+    },
+    {
+     "t": 0.208,
+     "what": "DESIGNED HIT: the muted 808's first thud on the lighthouse's first bar line (the quartet already running from the black): the mix keeps its attack",
+     "hit": true
+    },
+    {
+     "t": 5.521,
+     "what": "the beam crosses the NopeAI boardroom's window (on an eighth, 0.23 s before the cut): the eighths and the 808 move to F; the Lighthouse cell stays behind",
+     "hit": false
+    },
+    {
+     "t": 7.396,
+     "what": "the TV: Neleh's voice through the podcast player (on an eighth, 0.35 s before the cut): the quartet thins to its pedal (F2 + C3, sul tasto; no eighths, no 808); a high violin harmonic (C6, her colour) enters softly before her first word; her words and the board's card play dry",
+     "hit": false
+    },
+    {
+     "t": 28.958,
+     "what": "his face holds still (2 s), after the card's read: the harmonic rises a semitone (C6 to D-flat 6: Neleh's question colour, OST §2.16): the held breath",
+     "hit": false
+    },
+    {
+     "t": 30.717,
+     "what": "Terb clicks the TV off: the harmonic goes with it; the pedal holds under \"First item.\"",
+     "hit": false
+    },
+    {
+     "t": 31.771,
+     "what": "the split (on an eighth, 0.40 s before the cut): LEVERAGE back: the eighths, the 808, the violins' close dyad (C5 + D-flat 5, sul tasto)",
+     "hit": false
+    },
+    {
+     "t": 33.958,
+     "what": "the lanyards drop in both panes on one beat (lanyard_drop 33.942): the rhyme on one action; an 808 thud on that beat (the 808's, not a hit on the lanyard)",
+     "hit": false
+    },
+    {
+     "t": 49.458,
+     "what": "\"present.\": THE 808 DROPS OUT (its last thud 49.271; the stop is the move, P03); the quartet carries on alone",
+     "hit": false
+    },
+    {
+     "t": 50.208,
+     "what": "after \"present.\": the violins' dyad a semitone up (D-flat + D: the leverage moved)",
+     "hit": false
+    },
+    {
+     "t": 58.333,
+     "what": "after \"also present.\": the dyad a semitone up again (D + E-flat); Mada's second word; the table holds its breath; V.O. 11 inside the bed (the eighths softer, nothing attacks on the words)",
+     "hit": false
+    },
+    {
+     "t": 62.708,
+     "what": "RIGHT: Mario's pane (on the beat, 0.21 s before the cut): B-flat minor; Mario's Addendum (B-flat C D-flat F | E-flat D-flat C B-flat) in the viola's pizzicato, the cello's off-beats, a soft arco bass on B-flat; the Lighthouse cell (marimba, harp) beside it; the chip a triangle bass only (OST §2.8)",
+     "hit": false
+    },
+    {
+     "t": 62.708,
+     "what": "the Addendum, statement 1: the head and a one-bar tail (C D-flat, then a rest)",
+     "hit": false
+    },
+    {
+     "t": 71.45,
+     "what": "the highlighted line (Ekiel's own, [V]): the Addendum rests; the cell and the bass hold (the record dry)",
+     "hit": false
+    },
+    {
+     "t": 75.833,
+     "what": "statement 2: it gains a bar (the tail climbs C D-flat E-flat F, then G-flat; never cadences)",
+     "hit": false
+    },
+    {
+     "t": 85.833,
+     "what": "statement 3: it gains another bar...",
+     "hit": false
+    },
+    {
+     "t": 88.958,
+     "what": "...and is cut off before \"It's that we might win.\" (89.18): the stop; the dry chill: the Ache (glass G4 + D-flat 5) over an F pedal, under the line",
+     "hit": false
+    },
+    {
+     "t": 92.083,
+     "what": "LEFT: his phone lights with the reminder (ELPPA · KEYNOTE · JUN 10): the F eighths again, softly; the keynote's walk-on bed comes up under them (J 0.8 s, E02-11b)",
+     "hit": false
+    },
+    {
+     "t": 94.583,
+     "what": "the lobby (on the beat, 0.42 s before the cut): the quartet alone (no 808) on the deal day's A-flat cycle (A-flat maj9, D-flat maj9(#11), B-flat m9, E-flat 9sus, two bars each), the violins' pizzicato double stops on the accents (giddy), over the keynote's own walk-on bed on the wall screen; the cheer gets no hit",
+     "hit": false
+    },
+    {
+     "t": 134.583,
+     "what": "THE STOP: his thumb sends the post (post_click 134.542): the eighths stop dead on the next eighth (the stop is the move, P03); the quartet holds its A-flat pedal under his post (dry) and V.O. 12",
+     "hit": false
+    },
+    {
+     "t": 147.708,
+     "what": "the call: the eighths back after V.O. 12, softer, cello and viola only (lonely, a little funny), the keynote's bed on the campus PA far off; his lines dry",
+     "hit": false
+    },
+    {
+     "t": 164.197,
+     "what": "\"You ever miss being up there?\": the eighths thin to the cello alone, no tick (weighted)",
+     "hit": false
+    },
+    {
+     "t": 169.896,
+     "what": "after \"they let me hold the clicker.\" (on an eighth, 0.23 s before the cut): the eighths stop; the quartet holds its A-flat pedal (cello, viola) through F2.1",
+     "hit": false
+    },
+    {
+     "t": 187.328,
+     "what": "LAST UPDATED 2012: the band (E02-11c) is gone; the quartet's A-flat pedal alone (the pang)",
+     "hit": false
+    },
+    {
+     "t": 192.396,
+     "what": "the garden's push (on an eighth, 0.31 s before the cut): back from the memory, the quartet takes the garden-party arrangement (D-flat; the #11 its one wrong element; never a wedding march)",
+     "hit": false
+    },
+    {
+     "t": 192.708,
+     "what": "the garden, phrase 1 (the gate opens; the guest on its velvet rope): the first violin's tune, the viola's broken chords, the cello's pizzicato; the chip's square doubles its top note",
+     "hit": false
+    },
+    {
+     "t": 202.708,
+     "what": "phrase 2 (the raised hands, the nods, the text bubbles: the SFX's chip blips): the tune asks (the #11 held), then answers",
+     "hit": false
+    },
+    {
+     "t": 212.396,
+     "what": "phrase 3 (on an eighth, 0.31 s before the cut): the quartet thins to one violin (D-flat 5, sul tasto) under Radnus and \"as a guest.\"",
+     "hit": false
+    },
+    {
+     "t": 219.583,
+     "what": "Radnus's smile holds a beat too long: the violin falls a semitone (D-flat to C: the pang begins)",
+     "hit": false
+    },
+    {
+     "t": 221.146,
+     "what": "the gate swings shut (on an eighth, 0.23 s before the cut): the violin's C hands down to the cello's C pedal (arco, sul tasto): the pang at the gate; the viola's C3 joins on the lock's turn (223.35); the pedal carries across the fold into sc 20 (L 0.6 s)",
+     "hit": false
+    },
+    {
+     "t": 228.958,
+     "what": "the split (on the beat, 0.04 s before the cut): the muted 808 returns under zAI's drone (on C, the pedal's root); the cello's C pedal; a sparse chip tick",
+     "hit": false
+    },
+    {
+     "t": 233.217,
+     "what": "DESIGNED HIT: Nole's lamp clicks on (the SFX's, 233.017) and his short fanfare (claimed nole_fanfare_short): the Launch's quartal stack C F B-flat E-flat on staccato trumpets, a chip burst, a timpani C; it falls off one note short of A-flat (OST §2.7), done before his post can be read",
+     "hit": true
+    },
+    {
+     "t": 233.217,
+     "what": "Nole's post (the record): dry: the C pedal and the 808, softer; no tick, no change",
+     "hit": false
+    },
+    {
+     "t": 246.21,
+     "what": "the padlock snaps on his own phone: THE 808 DROPS OUT (its last thud 245.208): the stop is the move, his own; the buzzing inside the cage gets nothing (the laugh is the picture's)",
+     "hit": false
+    },
+    {
+     "t": 249.583,
+     "what": "the lobby's morning (on the beat, 0.33 s before the cut): the C pedal resolves to F (the quartet's pedal: F3 C4 G4 C5, sul tasto, nothing below C3 under the lobby's hum); V.O. 13 and the docket play inside it, no change",
+     "hit": false
+    },
+    {
+     "t": 265.1,
+     "what": "the complaint rises out of frame (rope_haul + 1.0 s): the quartet's pedal lifts; the quartet ends",
+     "hit": false
+    },
+    {
+     "t": 266.0,
+     "what": "DESIGNED HIT: the (FOR NOW) note lands on the clean rectangle: the cello's last pizzicato, C3 (the dominant, left open: for now). E02-11 ends; room tone only from here (the designed silence)",
+     "hit": true
+    }
+   ]
+  },
+  {
+   "cue": "e02-11b-keynote-bed (wall screen)",
+   "key": "keynote",
+   "start": 94.2,
+   "end": 132.842,
+   "what": "polished, polite, a little too glassy: someone else's stage",
+   "family": "ROOM COLOURS: ELPPA's walk-on bed (diegetic, a wall screen and a PA)",
+   "render": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11b-keynote-bed-underscore.wav",
+   "laid_at_s": -4.7917,
+   "post": "futz tv: the lobby's wall screen",
+   "level": {
+    "lufs_i": -20.12,
+    "st_p95": -19.31,
+    "st_max": -18.81,
+    "true_peak_dbtp": -4.11
+   },
+   "target_lufs": -24.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -24.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -24.0,
+      "lra": 2.47,
+      "true_peak_db": -11.43,
+      "peak_db": -11.44,
+      "rms_db": -29.15,
+      "crest_db": 17.72,
+      "seconds": 176.8167
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.007,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 602,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "none (diegetic source music; it follows the quartet's two-bar cycle so the two agree)"
+   ],
+   "events": {
+    "j_in": 94.2,
+    "t_out": 171.025,
+    "rows": [
+     [
+      95.208,
+      "Ab"
+     ],
+     [
+      100.208,
+      "Db"
+     ],
+     [
+      105.208,
+      "Bbm"
+     ],
+     [
+      110.208,
+      "Eb"
+     ],
+     [
+      115.208,
+      "Ab"
+     ],
+     [
+      120.208,
+      "Db"
+     ],
+     [
+      125.208,
+      "Bbm"
+     ],
+     [
+      130.208,
+      "Eb"
+     ],
+     [
+      135.208,
+      "Ab"
+     ],
+     [
+      140.208,
+      "Db"
+     ],
+     [
+      145.208,
+      "Bbm"
+     ],
+     [
+      150.208,
+      "Eb"
+     ],
+     [
+      155.208,
+      "Ab"
+     ],
+     [
+      160.208,
+      "Db"
+     ],
+     [
+      165.208,
+      "Bbm"
+     ],
+     [
+      170.208,
+      "Eb"
+     ]
+    ],
+    "campus": 132.042
+   },
+   "sync": [
+    {
+     "t": 94.2,
+     "what": "the keynote's walk-on bed comes up under the quartet (18.15 J 0.8 s): ELPPA's stage music on the lobby's wall screen, low",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-11b-keynote-bed (campus PA)",
+   "key": "keynote",
+   "start": 132.042,
+   "end": 171.025,
+   "what": "polished, polite, a little too glassy: someone else's stage",
+   "family": "ROOM COLOURS: ELPPA's walk-on bed (diegetic, a wall screen and a PA)",
+   "render": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11b-keynote-bed-underscore.wav",
+   "laid_at_s": -4.7917,
+   "post": "futz pa, low-passed, -5 dB: the campus PA far off",
+   "level": {
+    "lufs_i": -21.25,
+    "st_p95": -19.59,
+    "st_max": -18.95,
+    "true_peak_dbtp": -5.31
+   },
+   "target_lufs": -24.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -24.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -24.0,
+      "lra": 2.47,
+      "true_peak_db": -11.43,
+      "peak_db": -11.44,
+      "rms_db": -29.15,
+      "crest_db": 17.72,
+      "seconds": 176.8167
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.007,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 602,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "none (diegetic source music; it follows the quartet's two-bar cycle so the two agree)"
+   ],
+   "events": {
+    "j_in": 94.2,
+    "t_out": 171.025,
+    "rows": [
+     [
+      95.208,
+      "Ab"
+     ],
+     [
+      100.208,
+      "Db"
+     ],
+     [
+      105.208,
+      "Bbm"
+     ],
+     [
+      110.208,
+      "Eb"
+     ],
+     [
+      115.208,
+      "Ab"
+     ],
+     [
+      120.208,
+      "Db"
+     ],
+     [
+      125.208,
+      "Bbm"
+     ],
+     [
+      130.208,
+      "Eb"
+     ],
+     [
+      135.208,
+      "Ab"
+     ],
+     [
+      140.208,
+      "Db"
+     ],
+     [
+      145.208,
+      "Bbm"
+     ],
+     [
+      150.208,
+      "Eb"
+     ],
+     [
+      155.208,
+      "Ab"
+     ],
+     [
+      160.208,
+      "Db"
+     ],
+     [
+      165.208,
+      "Bbm"
+     ],
+     [
+      170.208,
+      "Eb"
+     ]
+    ],
+    "campus": 132.042
+   },
+   "sync": [
+    {
+     "t": 94.2,
+     "what": "the keynote's walk-on bed comes up under the quartet (18.15 J 0.8 s): ELPPA's stage music on the lobby's wall screen, low",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-11c-f21-band",
+   "key": "f21",
+   "start": 170.783,
+   "end": 188.728,
+   "what": "nostalgia (the 2006 ad, the 2008 stage), a little cocky; then a pang (the pins going grey)",
+   "family": "P10 ERA TIERS, T2 EARLY-WEB16: the band through the 16-bit sample-chip (BRR, 144 ms echo), swung",
+   "render": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11c-f21-band-underscore.wav",
+   "laid_at_s": 167.7083,
+   "post": null,
+   "level": {
+    "lufs_i": -18.33,
+    "st_p95": -17.4,
+    "st_max": -17.16,
+    "true_peak_dbtp": -4.14
+   },
+   "target_lufs": -21.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.0,
+      "lra": 9.84,
+      "true_peak_db": -4.8,
+      "peak_db": -4.8,
+      "rms_db": -25.21,
+      "crest_db": 20.41,
+      "seconds": 21.1197
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.0,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 130,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "the young Water Line (F G-F G-F: the nudge twice; the settle C F), the chip square on the nudges",
+    "the pins' falling figure (A-flat G F E-flat, each dimmer)"
+   ],
+   "events": {
+    "band_in": 170.833,
+    "t_wl1": 172.708,
+    "t_wl2": 177.708,
+    "t2": [
+     [
+      170.208,
+      "Abmaj9"
+     ],
+     [
+      172.708,
+      "Abmaj9"
+     ],
+     [
+      175.208,
+      "Dbmaj9"
+     ],
+     [
+      177.708,
+      "Abmaj9"
+     ],
+     [
+      180.208,
+      "Dbmaj9"
+     ],
+     [
+      182.708,
+      "Ebsus"
+     ]
+    ],
+    "fall": [
+     [
+      184.217,
+      "Ab5"
+     ],
+     [
+      185.064,
+      "G5"
+     ],
+     [
+      185.912,
+      "F5"
+     ],
+     [
+      186.759,
+      "Eb5"
+     ]
+    ],
+    "wl": [
+     [
+      "the 2006 ad",
+      172.708
+     ],
+     [
+      "the 2008 stage (the settle C F)",
+      177.708
+     ]
+    ],
+    "pins": [
+     184.21733333333333,
+     185.06433333333334,
+     185.91233333333335,
+     186.75933333333333
+    ],
+    "last_updated": 187.328
+   },
+   "sync": [
+    {
+     "t": 170.833,
+     "what": "F2.1 (the render front, render_front_sweep 170.925): the ERA T2 band (MM-06 II) comes in through the 16-bit sample-chip on the quartet's own chord (A-flat maj9): sample-chip piano, upright, brushes, swung; the quartet's A-flat pedal under it (OST P10: the same chord upgraded)",
+     "hit": false
+    },
+    {
+     "t": 172.708,
+     "what": "the young Water Line on the sample-chip piano (F G-F G-F: the nudge twice, a little cocky), the chip's 50 % square on the nudges: the 2006 phone ad, before its end card",
+     "hit": false
+    },
+    {
+     "t": 174.665,
+     "what": "\"WHERE YOU AT?\" (the ad's end card, the record): the band comps, no lead",
+     "hit": false
+    },
+    {
+     "t": 177.708,
+     "what": "the 2008 stage, after the card: the young Water Line again, settling (C F) as TPOOL's map fills with pins",
+     "hit": false
+    },
+    {
+     "t": 184.217,
+     "what": "the pins grey out one by one (pin_grey_tick x4, the SFX's): the sample-chip's falling figure, one note a pin, each a step lower and dimmer (A-flat G F E-flat); the band drops away under it",
+     "hit": false
+    },
+    {
+     "t": 187.328,
+     "what": "LAST UPDATED 2012: the band is gone (E02-11's A-flat pedal alone: the pang)",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-12-one-door",
+   "key": "door",
+   "start": 282.98,
+   "end": 319.0,
+   "what": "stillness; a held breath at the gap; the one quiet ache, landing on his choice",
+   "family": "P01 DARK ROOM (one felt note a phrase) + the Door through the door + the GPU choir",
+   "render": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-12-one-door-underscore.wav",
+   "laid_at_s": 280.5,
+   "post": null,
+   "level": {
+    "lufs_i": -21.48,
+    "st_p95": -19.2,
+    "st_max": -18.84,
+    "true_peak_dbtp": -7.07
+   },
+   "target_lufs": -21.5,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -21.5,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -21.5,
+      "lra": 8.25,
+      "true_peak_db": -7.07,
+      "peak_db": -7.07,
+      "rms_db": -24.98,
+      "crest_db": 17.91,
+      "seconds": 41.5
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.0,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 42,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "the felt, one note a phrase (the first: the Door's missing A-flat)",
+    "THE DOOR with its first note missing (flute, through the door), twice; its G held, no cadence",
+    "the GPU choir (D-flat sus2(#11)) under the glimpse"
+   ],
+   "events": {
+    "b22": 281.0,
+    "pin": 281.429,
+    "lot": 283.0,
+    "walk": 288.458,
+    "orb": 292.749,
+    "band": 295.0,
+    "verb": 295.4,
+    "slot": 301.004,
+    "lift": 302.149,
+    "glimpse": 303.583,
+    "shut": 307.408,
+    "flap_mcu": 308.417,
+    "hand": 311.0,
+    "away": 314.208,
+    "end": 319.0,
+    "jdrone": 318.0,
+    "stop": 307.388,
+    "ret": 313.0,
+    "door1": [
+     [
+      295.5,
+      "Db5"
+     ],
+     [
+      296.75,
+      "C5"
+     ],
+     [
+      297.375,
+      "G4"
+     ]
+    ],
+    "door2": [
+     [
+      314.25,
+      "Db5"
+     ],
+     [
+      315.5,
+      "C5"
+     ],
+     [
+      316.125,
+      "G4"
+     ]
+    ],
+    "felt": [
+     [
+      283.0,
+      "Ab4"
+     ],
+     [
+      288.0,
+      "Eb4"
+     ],
+     [
+      293.0,
+      "Db4"
+     ],
+     [
+      300.5,
+      "C4"
+     ],
+     [
+      313.0,
+      "Bb3"
+     ],
+     [
+      315.5,
+      "Ab3"
+     ]
+    ],
+    "t_walk2": 314.25,
+    "ch_on": 302.149
+   },
+   "sync": [
+    {
+     "t": 283.0,
+     "what": "felt Ab4: the lot appears: the first felt note, A-flat 4, alone in the sky (the Door's missing first note, on his own piano)",
+     "hit": false
+    },
+    {
+     "t": 288.0,
+     "what": "felt Eb4: he walks up from frame-left, never running",
+     "hit": false
+    },
+    {
+     "t": 293.0,
+     "what": "felt Db4: the Orb scans the cube and toasts nothing",
+     "hit": false
+    },
+    {
+     "t": 295.5,
+     "what": "\"Use flyer on door\" (the band, 295.00): THE DOOR, its first note missing (D-flat 5, C5, then G4 held: the #4), non-vibrato flute through the door (low-passed, one side)",
+     "hit": false
+    },
+    {
+     "t": 300.5,
+     "what": "felt C4: the flyer out of his jacket, unfolded",
+     "hit": false
+    },
+    {
+     "t": 302.149,
+     "what": "the flap lifts (302.15): the GPU choir (D-flat sus2(#11), no third, + C5) swells in under the glimpse of Alyi at work (he never looks up); the Door's G becomes the choir's G",
+     "hit": false
+    },
+    {
+     "t": 307.388,
+     "what": "THE DESIGNED STOP: the flap swings shut on its spring in room tone only (mail_flap_spring_shut 307.408): every voice and tail to zero 0.02 s before it",
+     "hit": false
+    },
+    {
+     "t": 313.0,
+     "what": "felt Bb3: THE RETURN: his raised hand lowers (held two beats): the felt's B-flat, the D-flat fifth under it again (soft entries)",
+     "hit": false
+    },
+    {
+     "t": 314.25,
+     "what": "he turns and walks away: THE DOOR again, its first note missing, its G held across the walk and over the cut: no cadence (the Door cadences only in Ep11)",
+     "hit": false
+    },
+    {
+     "t": 315.5,
+     "what": "felt Ab3: his back, small, crossing the lot",
+     "hit": false
+    },
+    {
+     "t": 318.0,
+     "what": "the dark room's drone fades up under the Door's last bar (22.09 J 1.0 s, the stems's): the G rings on into the tag (render/music-el-ringout.wav: the out)",
+     "hit": false
+    }
+   ]
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 266.35,
+   "t1": 282.98,
+   "why": "the quartet has ended as the complaint left the lobby (the cello's last pizzicato on the (FOR NOW) note's landing); room tone only under the dark room's Jun 19 post (Alyi's own act: W8, the plan's \"under the dark room, room tone only\") and the hard cut to white; the re-entry is E02-12's first felt note as the lot appears"
+  },
+  {
+   "t0": 307.388,
+   "t1": 313.0,
+   "why": "THE DESIGNED STOP (22.06): the flap swings shut on its spring in room tone only; Mas at the shut flap; the re-entry as his raised hand lowers (22.08)"
+  }
+ ],
+ "designed_hit": [
+  {
+   "t": 0.208,
+   "cue": "e02-11-leverage-quartet",
+   "what": "DESIGNED HIT: the muted 808's first thud on the lighthouse's first bar line (the quartet already running from the black): the mix keeps its attack",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 233.217,
+   "cue": "e02-11-leverage-quartet",
+   "what": "DESIGNED HIT: Nole's lamp clicks on (the SFX's, 233.017) and his short fanfare (claimed nole_fanfare_short): the Launch's quartal stack C F B-flat E-flat on staccato trumpets, a chip burst, a timpani C; it falls off one note short of A-flat (OST §2.7), done before his post can be read",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 266.0,
+   "cue": "e02-11-leverage-quartet",
+   "what": "DESIGNED HIT: the (FOR NOW) note lands on the clean rectangle: the cello's last pizzicato, C3 (the dominant, left open: for now). E02-11 ends; room tone only from here (the designed silence)",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  }
+ ],
+ "claims_sfx": [
+  "20.02:nole_fanfare_short"
+ ],
+ "sections": [
+  {
+   "section": "e02-11-leverage-quartet: A1 the black's pre-lap; the lighthouse (B-flat): the eighths, the 808, the Lighthouse cell",
+   "start": 0.0,
+   "end": 5.521
+  },
+  {
+   "section": "e02-11-leverage-quartet: A2 the beam crosses the boardroom (F)",
+   "start": 5.521,
+   "end": 7.396
+  },
+  {
+   "section": "e02-11-leverage-quartet: B1 Neleh's voice and the board's card: the pedal, the harmonic (dry)",
+   "start": 7.396,
+   "end": 28.958
+  },
+  {
+   "section": "e02-11-leverage-quartet: B2 his face (the harmonic a semitone up); \"First item.\"",
+   "start": 28.958,
+   "end": 31.771
+  },
+  {
+   "section": "e02-11-leverage-quartet: C1 the split, the lanyards; Terb (F: the eighths, the 808, the dyad)",
+   "start": 31.771,
+   "end": 49.458
+  },
+  {
+   "section": "e02-11-leverage-quartet: C2 \"present.\": the 808 out; \"also present.\"; V.O. 11",
+   "start": 49.458,
+   "end": 62.667
+  },
+  {
+   "section": "e02-11-leverage-quartet: D1 RIGHT: Mario, the Addendum (statements 1 and 2), the Lighthouse cell",
+   "start": 62.708,
+   "end": 85.833
+  },
+  {
+   "section": "e02-11-leverage-quartet: D2 statement 3, cut off; the dry chill (the Ache) under \"It's that we might win.\"",
+   "start": 85.833,
+   "end": 92.083
+  },
+  {
+   "section": "e02-11-leverage-quartet: E1 the reminder (F)",
+   "start": 92.083,
+   "end": 94.583
+  },
+  {
+   "section": "e02-11-leverage-quartet: E2 the lobby: the quartet alone, giddy (A-flat cycle), the keynote bed under it",
+   "start": 94.583,
+   "end": 132.042
+  },
+  {
+   "section": "e02-11-leverage-quartet: E3 the campus: the crowd, the giant screen, his thumbs",
+   "start": 132.042,
+   "end": 134.583
+  },
+  {
+   "section": "e02-11-leverage-quartet: F his post (dry): the pedal; the chat, the phones; V.O. 12",
+   "start": 134.583,
+   "end": 147.708
+  },
+  {
+   "section": "e02-11-leverage-quartet: G the call (the A-flat cycle, thinner)",
+   "start": 147.708,
+   "end": 169.896
+  },
+  {
+   "section": "e02-11-leverage-quartet: H1 F2.1: the quartet's A-flat pedal under the band (E02-11c)",
+   "start": 169.896,
+   "end": 187.328
+  },
+  {
+   "section": "e02-11-leverage-quartet: H2 LAST UPDATED 2012; the match: the pedal; the garden's pickup",
+   "start": 187.328,
+   "end": 192.708
+  },
+  {
+   "section": "e02-11-leverage-quartet: I1 the garden: phrases 1 and 2 (the garden-party quartet)",
+   "start": 192.708,
+   "end": 212.396
+  },
+  {
+   "section": "e02-11-leverage-quartet: I2 phrase 3: one violin under the exchange; the held smile",
+   "start": 212.396,
+   "end": 221.146
+  },
+  {
+   "section": "e02-11-leverage-quartet: J1 the gate: the cello's C pedal; the fold",
+   "start": 221.146,
+   "end": 228.958
+  },
+  {
+   "section": "e02-11-leverage-quartet: J2 zAI: the 808 again; the lamp; the Launch (short); his post (dry); the cage",
+   "start": 228.958,
+   "end": 246.21
+  },
+  {
+   "section": "e02-11-leverage-quartet: J3 the padlock: the 808 out; the buzzing; the lamp off: the cello's pedal",
+   "start": 246.21,
+   "end": 249.583
+  },
+  {
+   "section": "e02-11-leverage-quartet: K the lobby's morning: the F pedal; V.O. 13; the docket; the rope; the last pizzicato",
+   "start": 249.583,
+   "end": 266.8
+  },
+  {
+   "section": "e02-11b-keynote-bed: the keynote's walk-on bed (diegetic; the lobby's wall screen, then the campus PA)",
+   "start": 94.2,
+   "end": 171.025
+  },
+  {
+   "section": "e02-11c-f21-band: 1 F2.1: the render front; the 2006 ad; the end card (the band, the young Water Line)",
+   "start": 170.833,
+   "end": 176.917
+  },
+  {
+   "section": "e02-11c-f21-band: 2 F2.1: the 2008 stage; the map; the pins grey (the falling figure)",
+   "start": 176.917,
+   "end": 187.328
+  },
+  {
+   "section": "e02-12-one-door: 1 the lot appears: the first felt note (A-flat); the walk-up; the Orb",
+   "start": 283.0,
+   "end": 295.5
+  },
+  {
+   "section": "e02-12-one-door: 2 \"Use flyer on door\": THE DOOR (first note missing); the flyer into the slot",
+   "start": 295.5,
+   "end": 302.149
+  },
+  {
+   "section": "e02-12-one-door: 3 the glimpse: the GPU choir under it",
+   "start": 302.149,
+   "end": 307.388
+  },
+  {
+   "section": "e02-12-one-door: 4 THE DESIGNED STOP: the flap shuts in room tone only; Mas at the shut flap",
+   "start": 307.388,
+   "end": 313.0
+  },
+  {
+   "section": "e02-12-one-door: 5 the return as his hand lowers; the walk away: THE DOOR again, no cadence",
+   "start": 313.0,
+   "end": 319.0
+  }
+ ],
+ "real_lines": [
+  "e2-a4-0001",
+  "e2-a4-0002"
+ ],
+ "record_on_screen": [
+  {
+   "t0": 24.45,
+   "t1": 28.35,
+   "text": "\"We are disappointed that Ms. NELEH continues to"
+  },
+  {
+   "t0": 71.45,
+   "t1": 75.55,
+   "text": "Building smarter-than-human machines is an inher"
+  },
+  {
+   "t0": 134.642,
+   "t1": 141.242,
+   "text": "very happy to be partnering with ELPPA to integr"
+  },
+  {
+   "t0": 174.665,
+   "t1": 176.775,
+   "text": "\"WHERE YOU AT?\""
+  },
+  {
+   "t0": 233.217,
+   "t1": 240.417,
+   "text": "If ELPPA integrates NOPEAI at the OS level, then"
+  },
+  {
+   "t0": 260.892,
+   "t1": 262.992,
+   "text": "HEARING · JUN 12 · MOTION TO DISMISS"
+  },
+  {
+   "t0": 269.6,
+   "t1": 273.9,
+   "text": "I am starting a new company:"
+  },
+  {
+   "t0": 270.0,
+   "t1": 273.9,
+   "text": "ISS"
+  },
+  {
+   "t0": 270.0,
+   "t1": 273.9,
+   "text": "one goal and one product: a safe superintelligen"
+  }
+ ],
+ "prelap": {
+  "file": "audio/ost/tracks/e02-v1-act4/render/music-el-prelap.wav",
+  "seconds": 1.2,
+  "starts_at_act3_s": 318.8,
+  "first_pizzicato_s": -1.042,
+  "peak_dbfs": -12.2,
+  "lay": "under Act Three's black: its last 1.200 s (from 318.800 s on Act Three's clock; its DREAD sting at 318.217 rings on underneath), so the quartet's first pizzicato sounds 1.042 s before Act Four's first frame (17.21 J 1.2 s: the beacon's motor and the quartet's first pizzicato under the black); continuous with music-el.wav's first sample. mix_episode.py lays no pre-lap: a mix pass that lays this adds it to Act Three's score bus from that time; Act Four's head keeps its attack (designed_hit at 0.208)",
+  "fade_in_s": 0.005
+ },
+ "ringout": {
+  "file": "audio/ost/tracks/e02-v1-act4/render/music-el-ringout.wav",
+  "seconds": 2.6,
+  "peak_dbfs": -10.9,
+  "lay": "the tag's head: mix_episode.py lays music-el-ringout.wav (the previous chapter's score released past its last frame) at the tag's 0 and crossfades it out over 2.5 s from the tag's own score entry; continuous with music-el.wav's last sample (the act's last 5 ms are not faded)",
+  "fade": "a cosine^1.5 over its length"
+ },
+ "tail_unfaded": true,
+ "measured": {
+  "length_s": 319.0,
+  "samples": 15312000,
+  "frames": 7656,
+  "exact": true,
+  "whole": {
+   "lufs_i": -20.22,
+   "st_p95": -17.92,
+   "st_max": -16.61,
+   "true_peak_dbtp": -3.62
+  },
+  "cues": {
+   "e02-11-leverage-quartet": {
+    "lufs_i": -20.11,
+    "st_p95": -17.86,
+    "st_max": -16.61,
+    "true_peak_dbtp": -3.62
+   },
+   "e02-11b-keynote-bed (wall screen)": {
+    "lufs_i": -20.12,
+    "st_p95": -19.31,
+    "st_max": -18.81,
+    "true_peak_dbtp": -4.11
+   },
+   "e02-11b-keynote-bed (campus PA)": {
+    "lufs_i": -21.25,
+    "st_p95": -19.59,
+    "st_max": -18.95,
+    "true_peak_dbtp": -5.31
+   },
+   "e02-11c-f21-band": {
+    "lufs_i": -18.33,
+    "st_p95": -17.4,
+    "st_max": -17.16,
+    "true_peak_dbtp": -4.14
+   },
+   "e02-12-one-door": {
+    "lufs_i": -21.48,
+    "st_p95": -19.2,
+    "st_max": -18.84,
+    "true_peak_dbtp": -7.07
+   }
+  },
+  "rows": [
+   {
+    "section": "e02-11-leverage-quartet: A1 the black's pre-lap; the lighthouse (B-flat): the eighths, the 808, the Lighthouse cell",
+    "start": 0.0,
+    "end": 5.52,
+    "lufs_i": -18.88,
+    "st_p95": -18.07,
+    "st_max": -17.83,
+    "true_peak_dbtp": -5.01
+   },
+   {
+    "section": "e02-11-leverage-quartet: A2 the beam crosses the boardroom (F)",
+    "start": 5.52,
+    "end": 7.4,
+    "lufs_i": -21.33,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -8.66
+   },
+   {
+    "section": "e02-11-leverage-quartet: B1 Neleh's voice and the board's card: the pedal, the harmonic (dry)",
+    "start": 7.4,
+    "end": 28.96,
+    "lufs_i": -20.86,
+    "st_p95": -19.4,
+    "st_max": -19.19,
+    "true_peak_dbtp": -7.79
+   },
+   {
+    "section": "e02-11-leverage-quartet: B2 his face (the harmonic a semitone up); \"First item.\"",
+    "start": 28.96,
+    "end": 31.77,
+    "lufs_i": -21.81,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -10.47
+   },
+   {
+    "section": "e02-11-leverage-quartet: C1 the split, the lanyards; Terb (F: the eighths, the 808, the dyad)",
+    "start": 31.77,
+    "end": 49.46,
+    "lufs_i": -19.15,
+    "st_p95": -17.75,
+    "st_max": -17.14,
+    "true_peak_dbtp": -3.81
+   },
+   {
+    "section": "e02-11-leverage-quartet: C2 \"present.\": the 808 out; \"also present.\"; V.O. 11",
+    "start": 49.46,
+    "end": 62.67,
+    "lufs_i": -21.42,
+    "st_p95": -19.87,
+    "st_max": -19.79,
+    "true_peak_dbtp": -8.99
+   },
+   {
+    "section": "e02-11-leverage-quartet: D1 RIGHT: Mario, the Addendum (statements 1 and 2), the Lighthouse cell",
+    "start": 62.71,
+    "end": 85.83,
+    "lufs_i": -19.36,
+    "st_p95": -17.97,
+    "st_max": -17.75,
+    "true_peak_dbtp": -4.72
+   },
+   {
+    "section": "e02-11-leverage-quartet: D2 statement 3, cut off; the dry chill (the Ache) under \"It's that we might win.\"",
+    "start": 85.83,
+    "end": 92.08,
+    "lufs_i": -20.44,
+    "st_p95": -18.91,
+    "st_max": -18.77,
+    "true_peak_dbtp": -5.96
+   },
+   {
+    "section": "e02-11-leverage-quartet: E1 the reminder (F)",
+    "start": 92.08,
+    "end": 94.58,
+    "lufs_i": -21.52,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -6.38
+   },
+   {
+    "section": "e02-11-leverage-quartet: E2 the lobby: the quartet alone, giddy (A-flat cycle), the keynote bed under it",
+    "start": 94.58,
+    "end": 132.04,
+    "lufs_i": -20.17,
+    "st_p95": -19.19,
+    "st_max": -18.86,
+    "true_peak_dbtp": -4.11
+   },
+   {
+    "section": "e02-11-leverage-quartet: E3 the campus: the crowd, the giant screen, his thumbs",
+    "start": 132.04,
+    "end": 134.58,
+    "lufs_i": -19.67,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -5.31
+   },
+   {
+    "section": "e02-11-leverage-quartet: F his post (dry): the pedal; the chat, the phones; V.O. 12",
+    "start": 134.58,
+    "end": 147.71,
+    "lufs_i": -20.62,
+    "st_p95": -19.2,
+    "st_max": -18.94,
+    "true_peak_dbtp": -8.5
+   },
+   {
+    "section": "e02-11-leverage-quartet: G the call (the A-flat cycle, thinner)",
+    "start": 147.71,
+    "end": 169.9,
+    "lufs_i": -21.76,
+    "st_p95": -20.11,
+    "st_max": -19.85,
+    "true_peak_dbtp": -7.78
+   },
+   {
+    "section": "e02-11-leverage-quartet: H1 F2.1: the quartet's A-flat pedal under the band (E02-11c)",
+    "start": 169.9,
+    "end": 187.33,
+    "lufs_i": -18.34,
+    "st_p95": -17.37,
+    "st_max": -17.31,
+    "true_peak_dbtp": -4.14
+   },
+   {
+    "section": "e02-11-leverage-quartet: H2 LAST UPDATED 2012; the match: the pedal; the garden's pickup",
+    "start": 187.33,
+    "end": 192.71,
+    "lufs_i": -21.44,
+    "st_p95": -20.41,
+    "st_max": -20.33,
+    "true_peak_dbtp": -9.72
+   },
+   {
+    "section": "e02-11-leverage-quartet: I1 the garden: phrases 1 and 2 (the garden-party quartet)",
+    "start": 192.71,
+    "end": 212.4,
+    "lufs_i": -19.42,
+    "st_p95": -16.76,
+    "st_max": -16.68,
+    "true_peak_dbtp": -3.62
+   },
+   {
+    "section": "e02-11-leverage-quartet: I2 phrase 3: one violin under the exchange; the held smile",
+    "start": 212.4,
+    "end": 221.15,
+    "lufs_i": -22.42,
+    "st_p95": -20.92,
+    "st_max": -20.86,
+    "true_peak_dbtp": -11.74
+   },
+   {
+    "section": "e02-11-leverage-quartet: J1 the gate: the cello's C pedal; the fold",
+    "start": 221.15,
+    "end": 228.96,
+    "lufs_i": -21.08,
+    "st_p95": -19.35,
+    "st_max": -19.31,
+    "true_peak_dbtp": -9.49
+   },
+   {
+    "section": "e02-11-leverage-quartet: J2 zAI: the 808 again; the lamp; the Launch (short); his post (dry); the cage",
+    "start": 228.96,
+    "end": 246.21,
+    "lufs_i": -19.51,
+    "st_p95": -17.73,
+    "st_max": -17.38,
+    "true_peak_dbtp": -4.44
+   },
+   {
+    "section": "e02-11-leverage-quartet: J3 the padlock: the 808 out; the buzzing; the lamp off: the cello's pedal",
+    "start": 246.21,
+    "end": 249.58,
+    "lufs_i": -19.69,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -10.36
+   },
+   {
+    "section": "e02-11-leverage-quartet: K the lobby's morning: the F pedal; V.O. 13; the docket; the rope; the last pizzicato",
+    "start": 249.58,
+    "end": 266.8,
+    "lufs_i": -20.98,
+    "st_p95": -19.55,
+    "st_max": -19.49,
+    "true_peak_dbtp": -8.34
+   },
+   {
+    "section": "e02-11b-keynote-bed: the keynote's walk-on bed (diegetic; the lobby's wall screen, then the campus PA)",
+    "start": 94.2,
+    "end": 171.03,
+    "lufs_i": -20.65,
+    "st_p95": -19.29,
+    "st_max": -18.81,
+    "true_peak_dbtp": -4.11
+   },
+   {
+    "section": "e02-11c-f21-band: 1 F2.1: the render front; the 2006 ad; the end card (the band, the young Water Line)",
+    "start": 170.83,
+    "end": 176.92,
+    "lufs_i": -18.05,
+    "st_p95": -17.67,
+    "st_max": -17.59,
+    "true_peak_dbtp": -4.83
+   },
+   {
+    "section": "e02-11c-f21-band: 2 F2.1: the 2008 stage; the map; the pins grey (the falling figure)",
+    "start": 176.92,
+    "end": 187.33,
+    "lufs_i": -18.27,
+    "st_p95": -17.34,
+    "st_max": -17.32,
+    "true_peak_dbtp": -4.14
+   },
+   {
+    "section": "e02-12-one-door: 1 the lot appears: the first felt note (A-flat); the walk-up; the Orb",
+    "start": 283.0,
+    "end": 295.5,
+    "lufs_i": -25.1,
+    "st_p95": -23.45,
+    "st_max": -23.36,
+    "true_peak_dbtp": -10.65
+   },
+   {
+    "section": "e02-12-one-door: 2 \"Use flyer on door\": THE DOOR (first note missing); the flyer into the slot",
+    "start": 295.5,
+    "end": 302.15,
+    "lufs_i": -19.67,
+    "st_p95": -19.37,
+    "st_max": -19.17,
+    "true_peak_dbtp": -7.16
+   },
+   {
+    "section": "e02-12-one-door: 3 the glimpse: the GPU choir under it",
+    "start": 302.15,
+    "end": 307.39,
+    "lufs_i": -20.27,
+    "st_p95": -20.19,
+    "st_max": -20.19,
+    "true_peak_dbtp": -9.42
+   },
+   {
+    "section": "e02-12-one-door: 4 THE DESIGNED STOP: the flap shuts in room tone only; Mas at the shut flap",
+    "start": 307.39,
+    "end": 313.0,
+    "lufs_i": -52.13,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -22.13
+   },
+   {
+    "section": "e02-12-one-door: 5 the return as his hand lowers; the walk away: THE DOOR again, no cadence",
+    "start": 313.0,
+    "end": 319.0,
+    "lufs_i": -20.81,
+    "st_p95": -19.33,
+    "st_max": -19.32,
+    "true_peak_dbtp": -7.07
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 267.3,
+    "t1": 282.98,
+    "dur": 15.68,
+    "marked": true,
+    "why": "the quartet has ended as the complaint left the lobby (the cello's last pizzicato on the (FOR NOW) note's landing); room tone only under the dark room's Jun 19 post (Alyi's own act: W8, the plan's \"under the dark room, room tone only\") and the hard cut to white; the re-entry is E02-12's first felt note as the lot appears"
+   },
+   {
+    "t0": 307.393,
+    "t1": 312.986,
+    "dur": 5.592,
+    "marked": true,
+    "why": "THE DESIGNED STOP (22.06): the flap swings shut on its spring in room tone only; Mas at the shut flap; the re-entry as his raised hand lowers (22.08)"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 267.3,
+    "t1": 282.95,
+    "inside_marked": true
+   },
+   {
+    "t0": 307.4,
+    "t1": 312.95,
+    "inside_marked": true
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 267.3,
+    "dur": 267.3
+   },
+   {
+    "t0": 282.95,
+    "t1": 307.4,
+    "dur": 24.45
+   },
+   {
+    "t0": 312.95,
+    "t1": 319.0,
+    "dur": 6.05
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": [],
+  "head_momentary_max": -14.16,
+  "momentary": {
+   "the lighthouse": -14.16,
+   "Neleh, the card (the pedal)": -17.23,
+   "the committee": -14.39,
+   "Mario": -15.61,
+   "the chill": -21.22,
+   "the lobby": -16.2,
+   "his post (the pedal)": -18.21,
+   "the call": -18.33,
+   "F2.1": -14.72,
+   "the garden": -13.13,
+   "one violin": -19.15,
+   "the gate": -16.83,
+   "zAI": -14.42,
+   "the fanfare": -14.41,
+   "the morning": -18.51,
+   "the last pizzicato": -17.83,
+   "the lot": -18.84,
+   "the Door (1)": -16.52,
+   "the glimpse": -18.97,
+   "the return, the walk": -16.59
+  },
+  "vo_windows_lufs": [
+   {
+    "line": "e2-vo-11",
+    "t0": 60.07,
+    "t1": 62.12,
+    "lufs": -23.03
+   },
+   {
+    "line": "e2-vo-12",
+    "t0": 144.0,
+    "t1": 147.69,
+    "lufs": -22.17
+   },
+   {
+    "line": "e2-vo-13",
+    "t0": 256.95,
+    "t1": 260.39,
+    "lufs": -22.72
+   }
+  ]
+ },
+ "laid": [
+  {
+   "name": "e02-11-leverage-quartet",
+   "file": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11-leverage-quartet-underscore.wav",
+   "laid_at_s": -4.7917,
+   "window": [
+    0.0,
+    267.3
+   ],
+   "fade_in_s": 0.0,
+   "fade_out_s": 0.6,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-11b-keynote-bed (wall screen)",
+   "file": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11b-keynote-bed-underscore.wav",
+   "laid_at_s": -4.7917,
+   "window": [
+    94.2,
+    132.842
+   ],
+   "fade_in_s": 0.8,
+   "fade_out_s": 0.8,
+   "gain_db": 0.0,
+   "post": "futz tv: the lobby's wall screen"
+  },
+  {
+   "name": "e02-11b-keynote-bed (campus PA)",
+   "file": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11b-keynote-bed-underscore.wav",
+   "laid_at_s": -4.7917,
+   "window": [
+    132.042,
+    171.025
+   ],
+   "fade_in_s": 0.8,
+   "fade_out_s": 0.9,
+   "gain_db": 0.0,
+   "post": "futz pa, low-passed, -5 dB: the campus PA far off"
+  },
+  {
+   "name": "e02-11c-f21-band",
+   "file": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-11c-f21-band-underscore.wav",
+   "laid_at_s": 167.7083,
+   "window": [
+    170.783,
+    188.728
+   ],
+   "fade_in_s": 0.05,
+   "fade_out_s": 0.9,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-12-one-door",
+   "file": "audio/ost/tracks/e02-v1-act4/render/_work/el/e02-12-one-door-underscore.wav",
+   "laid_at_s": 280.5,
+   "window": [
+    282.98,
+    319.0
+   ],
+   "fade_in_s": 0.01,
+   "fade_out_s": 0.005,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e02-v1-act4/track.py",
+ "sfx_requests": [
+  "nole_fanfare_short (20.02): CLAIMED by the score (Nole's Launch, short: it is music, tuned to the C pedal); the SFX board has none",
+  "lamp_click (20.02, 20.04): the SFX's; the fanfare starts 0.2 s after the first",
+  "pin_grey_tick x4 (19.14): the SFX's soft ticks; the score's falling figure puts one chip note on each (A-flat 5, G5, F5, E-flat 5): tune each tick a step lower, never to A",
+  "lanyard_drop x2 (18.07): on an 808 beat; keep them dry",
+  "post_click (19.07): the eighths stop on the next eighth (the stop is the move): keep its attack",
+  "padlock_snap (20.03): the 808 drops out there: keep it dry",
+  "mail_flap_spring_shut (22.06): THE DESIGNED STOP: the music is at zero from 0.02 s before it to the return; the flap plays in room tone only",
+  "render_front_sweep (19.11): F4 to F6; the T2 band enters on the quartet's own A-flat chord",
+  "the keynote's walk-on bed is the score's (E02-11b, an original media bed, not an SFX)"
+ ],
+ "heard": "nothing here has been listened to; every number is measured"
+}
