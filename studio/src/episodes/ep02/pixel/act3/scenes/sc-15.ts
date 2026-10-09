@@ -1,34 +1,218 @@
-// MR. MAS — Ep2 v1 · act3 · scene 15: 19 shot(s), 2400 f at the lock of show/reel/ep02-v1-el/ep02-v1-el-act3.json:
-//   15.01 (62 f, WIDE · the empty office: a desk with no ) · 15.02 (91 f, ECU · his phone: the thread, collapsed t)
-//   · 15.03 (172 f, MCU · Mas on the desk's edge; far off, A) · 15.04 (158 f, ECU · TPOOL: its splash; welcome back,
-//   m) · 15.05 (178 f, ECU · he types where u at? → POV · the m) · 15.06 (169 f, WIDE · the holiday party, Dec 2022:
-//   silh) · 15.07 (179 f, 2S · across the crowd: Alyi (cropped by ) · 15.08 (155 f, ECU · Alyi holds up his phone,
-//   Mas's dea) · 15.09 (84 f, WIDE · the racks in the corner hum along) · 15.10 (213 f, 2S · this office, 2023,
-//   night: Alyi at h) · 15.11 (130 f, 2S · the same: Ekiel; Alyi, without look) · 15.12 (77 f, ECU · his finger
-//   above the bare Publish ) · 15.13 (116 f, WIDE · a leadership offsite at night: a ) · 15.14 (46 f, ECU · he
-//   presses Publish) · 15.15 (115 f, WIDE · the effigy catches) · 15.16 (110 f, WIDE → ECU · the fire's glow shrinks
-//   to ) · 15.17 (116 f, ECU · the point is the pin, pulsing on h) · 15.18 (109 f, WIDE · he pockets the phone, gets
-//   up off) · 15.19 (120 f, WIDE · the stairwell, Mas small on the s)
-// The plan's picture notes (eggs, Ep1 payoffs, constraints; each shot's `picture` in data.ts):
-//   15.02: Dates and hearts, not must-read text (R2).
-//   15.03: A face light one step.
-//   15.04: TPOOL in EARLY-WEB16 colours inside a 2024 phone. Toast 2 of 3.
-//   15.05: The check-in has a cause, seen in F2.2.
-//   15.06: T4 glossy. Warm, never a hymn. The string lights palette-cycle, never strobe (P15).
-//   15.07: Lip-sync both. Alyi warm (P5: warm reads warm).
-//   15.09: GLYPH 12 frames on the room, never in his eyes (GR §6).
-//   15.10: The post's words are the record's; its numbers don't print (R2).
-//   15.11: Lip-sync both; Ekiel's card already paid in sc 14.
-//   15.12: No hover, no cursor.
-//   15.13: No zealot framing; no religious iconography. The month isn't asserted.
-//   15.15: Palette-cycled fire, never strobing (P15).
-//   15.17: No IOU in the shot, no hand near it (R2).
-//   15.19: No outlet named, no headline words.
-// A stub written by tools/scenes.py: no layouts yet, so every shot renders as the host's STAND-IN (render.ts `check`
-// fails on stand-ins). Fill it with L.add(<shot id>, {st, draw: (fb, k, sh, f) => ...}) per shot (README.md); `f` is
-// the frame inside this scene. Name every file a layout reads at run time in defineScene({assets}).
-import {defineScene, layouts} from '../../kit';
+// MR. MAS — Ep2 v1 · act3 · scene 15: WHERE U AT? (MAY 17, 2024; Alyi's office in the evening; F2.2 in T4 glossy; a
+// stairwell). 19 shots, 2,400 f on the v1 EL lock. The shots pass, 2026-10-09; the record is shots-act3.md. The staging
+// is proposal.md sc 15 (round 2: the pin has a cause; one second of Ep1's own audio; F2.2 gives Alyi his acts and his
+// voice; final check: the turn is the Publish click crosscut with the flame, the papers never start near Alyi, the
+// office is evening) / script-v1:
+//   ARRIVE   15.01 the empty office as the carried hum stops: a desk with no chair, the wheel marks; the door he pivoted
+//            turns shut on its pin behind him; Mas on the desk's edge · 15.02 his phone: the thread, two dates, three
+//            hearts · 15.03 his face; far off, Alyi's voice from launch night; V.O. 7, the count
+//   DOOR IN  15.04 his thumb past every modern icon to a tiny old one: TPOOL; its splash WHERE U AT?; welcome back, mas;
+//            the 2008 hourglass; the Orb scans it: verified: 2008 · 15.05 he types the app's own question; the map:
+//            every pin LAST SEEN: 2012 but one, ALYI CHECKED IN · DEC 2022 · "feel the agi"; its ripple warms and breaks
+//            into string lights
+//   F2.2     WANT 15.06 the party, the chant from his voice to everyone's · 15.07 a word with Mas under it · 15.08 his
+//            check-in held up to Mas; Mas raises his glass · 15.09 the racks' lights become token streams (GLYPH, 12
+//            frames, on the room, never in his eyes) · OBSTACLE 15.10-15.11 this office, 2023, night: the post's hard
+//            sentence; "Nobody knows how to do this yet." "Someone should." · TURN (a crosscut, no order claimed)
+//            15.12 his finger over Publish · 15.13 the offsite, the flame in his hand · 15.14 he presses it · 15.15 the
+//            effigy catches · OUT 15.16 the glow shrinks to one point of light
+//   AFTER    15.17 the point is the pin; his thumb covers it; V.O. 8 · 15.18 he goes; the door shuts on the empty room ·
+//            15.19 the stairs; the buzz: a reporter's request for comment, its thumbnail a strip of receipt paper
+// Nothing here is a reason for Alyi's vote or his leaving (W8). No V.O. inside the memory.
+import {defineScene, layouts, mouth, roomMouth, mk} from '../../kit';
+import {Buf} from '../../../../../shared/pixel/px';
+import {PAL, stepColor} from '../../../../../shared/pixel/palette';
+import {glyphLayer} from '../../../../../shared/pixel/glyph';
+import {drawOrb as drawOrbSmall} from '../../../../../shared/pixel/cast/orb';
+import {orbBob} from '../../../../../shared/pixel/cast/orb-medium';
+import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
+import type {Mas2Legs} from '../../art/cast/mas2';
+import {officeWide, phoneInHand, threadScreen, tpoolScreen, orbScan, masEvening, stairs, pushECU, typeECU, PH, PIN, ICON_SCROLL, ICON_AT} from '../sets/office';
+import {partyWide, chantMedium, partyTwoShot, checkIn, streamSource, STREAMS_MASK, office2023, publish, offsiteWide, offsiteMedium, toPoint} from '../sets/f22';
 
 const L = layouts();
+const walk = (k: number) => roomWalkAt(k) as Mas2Legs;
+const SEAT_X = 262;
+const orbAt = (b: Buf, f: number, x: number, y: number) => drawOrbSmall(b, x, y + orbBob(f), 5, {look: [-0.6, 0.3], aperture: 0.5});
 
-export const SCENE = defineScene({scene: "15", layouts: L.all});
+L.add('15.01', {
+  st: 'act3/sets/office officeWide ([W] the empty office in the evening (art/sets/alyioffice: a desk with no chair, four wheel marks in the carpet where it stood, the window\'s dusk): the door he pivoted in 14.12, the same door from inside on its centre pin, turns shut behind him in held steps; Mas on the desk\'s edge (Ep1\'s seated rig), his phone; the Orb at his shoulder; the carried hum stops)',
+  draw: (fb, k, sh, f) => {
+    const door = (k < 4 ? 3 : k < 8 ? 2 : k < 12 ? 1 : 0) as 0 | 1 | 2 | 3;
+    officeWide(fb, f, {door, mas: {seated: true}});
+    orbAt(fb, f, SEAT_X + 26, 92);
+    void sh;
+  },
+});
+L.add('15.02', {
+  st: 'act3/sets/office phoneInHand + threadScreen ([ECU] his phone in his hand in the evening (the wrap grip, his thumb on its edge): the thread, Alyi\'s regret post from last November with three hearts under it, his, and below it Alyi\'s post from three days ago, both collapsed to their dates and first lines (NOV 20, 2023 · ♥ ♥ ♥ · MAY 14, 2024); his thumb scrolls it a step)',
+  marks: {sc: ['snd', 'thumb_scroll', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const sc = mk(sh, 'sc', 6);
+    const scroll = k < sc ? 0 : Math.min(18, Math.floor((k - sc) / 2) * 3);
+    phoneInHand(fb, f, (scr) => threadScreen(scr, scroll), {thumb: k < sc ? 0 : Math.min(1, (k - sc) / 8)});
+  },
+});
+L.add('15.03', {
+  st: 'act3/sets/office masEvening ([MCU] Mas on the desk\'s edge in the evening: his approved portrait, the window\'s warm dusk keyed one step on his face, the office soft behind him; his eyes down at the phone, then up and away (the window) as, far off, Alyi\'s voice from launch night says it (Ep1\'s take); then he counts: V.O. 7 typed by the host, his lips still)',
+  marks: {up: ['end', 'e2-a3-0008', 6]},
+  draw: (fb, k, sh, f) => {
+    const up = mk(sh, 'up', 70);
+    masEvening(fb, f, {lid: k < up ? 1 : 0, look: k < up ? 0 : -1});
+  },
+});
+L.add('15.04', {
+  st: 'act3/sets/office phoneInHand + tpoolScreen → orbScan ([ECU] his thumb scrolls past every modern icon to a tiny old one at the end of his home screen, TPOOL · 2012, and taps it; its splash in its own 2008 colours (EARLY-WEB16 inside the 2024 phone): WHERE U AT?; it still knows him: welcome back, mas; a 2008 hourglass spinning; the Orb comes in beside the phone and scans it (its fan, held steps) and settles: its toast verified: 2008 (toast 2 of 3))',
+  marks: {spl: ['snd', 'app_splash_2006', 1, 0], hg: ['snd', 'hourglass_cursor_2008', 1, 0], scan: ['snd', 'orb_scan_sweep', 1, 0], toast: ['snd', 'ui_toast_pop', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const spl = mk(sh, 'spl', 33), hg = mk(sh, 'hg', 76), scan = mk(sh, 'scan', 100), t0 = mk(sh, 'toast', 120);
+    const welcome = hg - 4;
+    const screen = k < spl ? 'icon' : k < welcome ? 'splash' : 'welcome';
+    const scroll = Math.min(ICON_SCROLL, Math.floor(Math.max(0, k - 2) / 2) * 13);
+    const tapping = k >= spl - 8 && k < spl;
+    phoneInHand(fb, f, (scr) => tpoolScreen(scr, screen, {f, scroll, tap: k >= spl - 5 && k < spl ? 1 : -1}), {thumb: k < 18 ? ((k >> 2) % 2) * 0.4 : 0.2, tip: tapping ? [PH.x + ICON_AT[0], PH.y + ICON_AT[1] + 4] : undefined});
+    if (k >= scan - 12) orbScan(fb, f, {scan: k >= scan && k < t0 ? Math.floor((k - scan) / 3) + 1 : 0, toast: k >= t0 ? k - t0 : -1});
+  },
+});
+L.add('15.05', {
+  st: 'act3/sets/office typeECU → phoneInHand + tpoolScreen map ([ECU] the phone held from below, TPOOL\'s field and the phone\'s keyboard: his thumb types the app\'s own question, where u at?, posed on each key (common cupThumb), the key\'s preview above it; the map loads in its 2008 colours: every pin LAST SEEN: 2012 but one: ALYI CHECKED IN · DEC 2022 · "feel the agi" (its card); its ripple turns warm and breaks into string lights that spread past the phone over the frame (the door into F2.2))',
+  marks: {ping: ['snd', 'pin_ping', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const ping = mk(sh, 'ping', 72), go = 50, brk = 144;
+    if (k < go) { typeECU(fb, f, {typed: k < 9 ? 0 : Math.min(11, Math.floor((k - 9) * 11 / 33) + 1)}); return; }
+    const kk = k - ping;
+    phoneInHand(fb, f, (scr) => tpoolScreen(scr, 'map', {k: Math.max(0, kk), f, warm: k >= brk - 20 ? 1 : 0, label: k >= ping && k < brk + 4}), {});
+    if (k < 57) for (let y = 0; y < 203; y++) for (let x = PH.x; x < PH.x + PH.w; x++) if (y >= PH.y + 38) fb.set(x, y, stepColor(fb.get(x, y), -(57 - k) > 3 ? -3 : -1));
+    if (k >= brk) {
+      // the ripple breaks into string lights: rings of bulbs from the pin outward, the room going dark round them
+      const j = k - brk, cx = PH.x + PIN.x, cy = PH.y + PIN.y;
+      for (let y = 0; y < 203; y++) for (let x = 0; x < 480; x++) fb.set(x, y, stepColor(fb.get(x, y), -Math.min(4, 1 + Math.floor(j / 6))));
+      const BUL = [PAL.W7, PAL.R3, PAL.L3, PAL.C7];
+      for (let q = 0; q < 1 + Math.floor(j / 5); q++) {
+        const r = 10 + q * 26 + (j % 5) * 3, n = Math.max(8, Math.round(r / 6));
+        for (let a = 0; a < n; a++) {
+          const t = (a / n) * Math.PI * 2 + q * 0.3, x = Math.round(cx + Math.cos(t) * r), y = Math.round(cy + Math.sin(t) * r * 0.8);
+          const c = BUL[(a + q + Math.floor(f / 10)) % 4];
+          for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) if (Math.abs(dx) + Math.abs(dy) === 2 && y + dy >= 0 && y + dy < 203) fb.set(x + dx, y + dy, stepColor(c, -3));
+          fb.set(x, y, c); fb.set(x + 1, y, c); fb.set(x, y + 1, stepColor(c, -1)); fb.set(x + 1, y + 1, stepColor(c, -1));
+        }
+      }
+    }
+  },
+});
+// ------------------------------------------------------------------ F2.2
+L.add('15.06', {
+  st: 'act3/sets/f22 partyWide → chantMedium → partyWide ([W] the holiday party, Dec 2022, in T4 glossy (art/sets/f22 party22: silhouettes under palette-cycled string lights on a slow chase, never a strobe; the racks in the corner; bloom); ALYI lit and laughing in the crowd; [M] closer: Alyi under a low swag of lights (it crops the top of his frame), laughing, his hand up, leading the chant: "FEEL THE AGI!" (lip-synced, warm: his own eyes crinkled); [W] the chant builds to everyone\'s, every hand up; rail DEC 2022)',
+  face: {ALYI: 'lip'},
+  marks: {ch: ['on', 'e2-a3-0009', 0], all: ['on', 'e2-a3-0010', 0]},
+  draw: (fb, k, sh, f) => {
+    const ch = mk(sh, 'ch', 43), all = mk(sh, 'all', 83);
+    if (k < ch - 5) { partyWide(fb, f, {chant: k < 20 ? 0 : 1}); return; }
+    if (k < all + 2) { chantMedium(fb, f, {mouth: mouth(sh, k, 'ALYI'), mood: 'laugh', arm: 'raise'}); return; }
+    partyWide(fb, f, {chant: k < all + 10 ? 2 : 3});
+  },
+});
+L.add('15.07', {
+  st: 'act3/sets/f22 partyTwoShot ([2S] across the crowd: Alyi close at the right under the swag of lights (it crops his frame), his raised hand finding Mas, then talking to him (Ep1\'s Alyi in Ep2\'s warm states: smiling, then laughing; lip-synced); Mas small in the crowd at the left, the only one not chanting, his glass in his hand, his room-scale mouth on "someone has to hold the glass.")',
+  face: {ALYI: 'lip', MAS: 'room'},
+  marks: {last: ['on', 'e2-a3-0013', 0]},
+  draw: (fb, k, sh, f) => {
+    const last = mk(sh, 'last', 118);
+    partyTwoShot(fb, f, {alyi: {mouth: mouth(sh, k, 'ALYI'), mood: k >= last - 2 ? 'laugh' : 'smile', arm: k < 20 ? 'raise' : 'none'}, mas: {mouth: roomMouth(sh, k, 'MAS') === 'open' ? 'open' : k > last ? 'smile' : 'rest', arm: 'glass'}});
+  },
+});
+L.add('15.08', {
+  st: 'act3/sets/f22 checkIn → partyTwoShot ([ECU] his phone held up in his warm hand (art/sets/f22 checkInECU), Mas\'s old app open on it: CHECK IN, then he types feel the agi; the blip; [2S] he turns the screen to Mas, grinning (his phone arm), and Mas raises his glass back)',
+  marks: {blip: ['snd', 'check_in_blip', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const blip = mk(sh, 'blip', 45);
+    if (k < 104) { checkIn(fb, f, k < blip + 6 ? 0 : Math.min(12, Math.floor((k - blip - 6) / 2))); return; }
+    partyTwoShot(fb, f, {alyi: {mouth: 'rest', mood: 'laugh', arm: 'phone'}, mas: {mouth: 'smile', arm: k >= 116 ? 'glassUp' : 'glass'}});
+  },
+});
+L.add('15.09', {
+  st: 'act3/sets/f22 partyWide + GLYPH ([W] the party, every hand up; the racks in the corner hum along; at the chant\'s peak, for 12 frames, their status lights become token streams that run out of the racks and across the whole room (a GLYPH layer: real glyph tokens drawn by the Remotion host in rows, dense at each stream\'s head), the rows skipping his face: on the room, never in his eyes)',
+  glyph: true,
+  marks: {sh: ['snd', 'glyph_shimmer', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const g = mk(sh, 'sh', 19);
+    partyWide(fb, f, {chant: 3});
+    if (k >= g && k < g + 12) return {layers: [glyphLayer(streamSource(fb, k - g), {tint: PAL.C6, tintAmt: 0.5, seed: 1509, bg: PAL.N0, shimmer: 0.3, cell: [2, 3]}, STREAMS_MASK, k)]};
+  },
+});
+L.add('15.10', {
+  st: 'act3/sets/f22 office2023 ([2S] this office, 2023, night (art/sets/alyioffice screen2023, under the flashback\'s glossy bloom): his screen close at frame left, its bezel cropping his near shoulder; the post in its own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, and its hard sentence, held to its read time; Ekiel beside him squinting at it; rail 2023)',
+  draw: (fb, k, sh, f) => { office2023(fb, f, {ekielLid: (k >= 64 && k < 68) || (k >= 158 && k < 162) ? 2 : 0, alyiRead: Math.floor(k / 40) % 2}); void sh; },
+});
+L.add('15.11', {
+  st: 'act3/sets/f22 office2023 ([2S] the same: Ekiel says it plainly, "Nobody knows how to do this yet." (lip-synced); Alyi answers without looking away from the screen, "Someone should." (lip-synced))',
+  face: {EKIEL: 'lip', ALYI: 'lip'},
+  draw: (fb, k, sh, f) => {
+    office2023(fb, f, {ekielMouth: mouth(sh, k, 'EKIEL'), alyiMouth: mouth(sh, k, 'ALYI')});
+  },
+});
+L.add('15.12', {
+  st: 'act3/sets/f22 publish ([ECU] his finger above the bare Publish button (art/sets/alyioffice publishECU: a real pointing hand, his sleeve; no hover, no cursor), as Mas\'s was in sc 4)',
+  draw: (fb, k, sh, f) => { publish(fb, f, {press: false}); void k; void sh; },
+});
+L.add('15.13', {
+  st: 'act3/sets/f22 offsiteWide → offsiteMedium ([W] a leadership offsite at night (art/sets/f22 offsite): the trees, the staff in silhouette, the wooden effigy, a paperclip robot of our own design stencilled UNALIGNED; ALYI half cut off by the lodge doorway\'s jamb, the long match lit; [M] closer: Alyi in the doorway, the jamb cutting off his near half, the match\'s flame lighting his face, lit and calm (no zealot framing, no religious iconography))',
+  marks: {lit: ['snd', 'torch_light', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const lit = mk(sh, 'lit', 25);
+    if (k < lit + 26) { offsiteWide(fb, f, {fire: 0, alyi: k < lit ? 'stand' : 'torch'}); return; }
+    offsiteMedium(fb, f);
+  },
+});
+L.add('15.14', {
+  st: 'act3/sets/f22 publish ([ECU] he presses it: his fingertip on the bare Publish, the button a rung down)',
+  marks: {cl: ['snd', 'post_click', 1, 0]},
+  draw: (fb, k, sh, f) => { const cl = mk(sh, 'cl', 9); publish(fb, f, {press: k >= cl - 1}); },
+});
+L.add('15.15', {
+  st: 'act3/sets/f22 offsiteWide ([W] the effigy catches: the fire, palette-cycled (the shape holds, the colours walk; never a strobe), its light on everything; Alyi in the doorway, the match lowered)',
+  marks: {wh: ['snd', 'flame_whoomph', 1, 0]},
+  draw: (fb, k, sh, f) => { const wh = mk(sh, 'wh', 6); offsiteWide(fb, f, {fire: k < wh ? 0 : k < wh + 8 ? 1 : 2, alyi: 'stand'}); },
+});
+L.add('15.16', {
+  st: 'act3/sets/f22 toPoint ([W → ECU] the fire\'s glow shrinks in held steps to one point of light at the frame\'s centre (where the next shot\'s pin pulses))',
+  draw: (fb, k, sh, f) => { toPoint(fb, f, Math.floor(k / 8)); void sh; },
+});
+L.add('15.17', {
+  st: 'act3/sets/office phoneInHand + tpoolScreen map ([ECU] the point of light is the pin, pulsing on his phone (the same frame point); his thumb comes in and covers it; V.O. 8 typed by the host; no IOU in the shot, no hand near his pocket)',
+  marks: {vo: ['on', 'e2-vo-08', 0]},
+  draw: (fb, k, sh, f) => {
+    const cover = 26;
+    const paint = (scr: Buf) => tpoolScreen(scr, 'map', {k: k + 200, f, warm: 1, label: false});
+    // his thumb leaves the foot of the glass and covers the pin (the same hand: the thumb goes up the screen)
+    const t = k < cover ? 0 : Math.min(1, (k - cover) / 10);
+    const pin: [number, number] = [PH.x + PIN.x + 1, PH.y + PIN.y - 2], rest: [number, number] = [PH.x + PH.w - 18, 196];
+    phoneInHand(fb, f, paint, {tip: [Math.round(rest[0] + (pin[0] - rest[0]) * t), Math.round(rest[1] + (pin[1] - rest[1]) * t)]});
+    void sh;
+  },
+});
+L.add('15.18', {
+  st: 'act3/sets/office officeWide ([W] he pockets the phone, gets up off the desk\'s edge and walks out (his walk), the Orb with him; the door turns on its pin as he goes and turns shut on the empty office; the room holds a second and more: the desk with no chair, the wheel marks)',
+  marks: {cl: ['snd', 'door_close_soft', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const cl = mk(sh, 'cl', 70), up = 14, out = cl - 8;
+    const door = (k < out - 10 ? 0 : k < out - 6 ? 1 : k < out - 2 ? 2 : k < cl - 4 ? 3 : k < cl - 2 ? 2 : k < cl ? 1 : 0) as 0 | 1 | 2 | 3;
+    if (k < up) { officeWide(fb, f, {door, mas: {seated: true}}); orbAt(fb, f, SEAT_X + 26, 92); return; }
+    const x = Math.round(SEAT_X - 40 + (k - up) * 3.3);
+    const inRoom = x < 430;
+    officeWide(fb, f, {door, mas: inRoom ? {x, legs: walk(k), arm: 'pocket'} : null});
+    if (inRoom) orbAt(fb, f, x + 22, 92);
+  },
+});
+L.add('15.19', {
+  st: 'act3/sets/office stairs → pushECU → stairs ([W] the stairwell (art/sets/alyioffice), Mas small on the stairs going down; his phone buzzes; [ECU] the push on his phone in his hand: request for comment, its thumbnail a strip of receipt paper (no outlet named, no headline words); [W] he reads it without stopping and keeps going down)',
+  marks: {bz: ['snd', 'phone_buzz_step_1', 1, 0]},
+  draw: (fb, k, sh, f) => {
+    const bz = mk(sh, 'bz', 28), e1 = 36, e2 = 86;
+    if (k < e1) { stairs(fb, f, {x: 150 + Math.round(k * 1.4), step: 0, legs: walk(k), phone: k >= bz + 2}); return; }
+    if (k < e2) { pushECU(fb, f, {k: k - 38}); return; }
+    stairs(fb, f, {x: 200 + Math.round((k - e2) * 1.4), step: 0, legs: walk(k), phone: k < e2 + 20});
+  },
+});
+
+export const SCENE = defineScene({scene: '15', layouts: L.all});
