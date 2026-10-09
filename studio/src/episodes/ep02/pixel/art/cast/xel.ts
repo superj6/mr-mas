@@ -31,8 +31,9 @@ const spec: BustSpec3 = {
   torso: {kind: 'suit'},
   ramps: {skin: SKIN.light, hair: HAIR.dark, suit: SUIT.black, shirt: SHIRT_WHITE, tie: TIE},
   backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.G2},
-  // his warmth reaches the eyes (crinkled, the cheeks up); his curiosity lifts the brows without the worry's mouth
-  expr: {smile: {eye: 'crinkle', mouth: 'smile', pose: {cheekUp: 1.2}}, worry: {eye: 'wide', brow: 'up', mouth: 'rest'}, focus: {eye: 'open', brow: 'up', mouth: 'flat', pose: {nod: 3}}},
+  // his warmth is open-eyed and gentle (2026-10-09, the picture review: the crinkled, half-lidded eyes over a lopsided
+  // mouth read as a smirk); his curiosity lifts the brows without the worry's mouth
+  expr: {smile: {eye: 'open', brow: 'level', mouth: 'smile', pose: {cheekUp: 0.5}}, worry: {eye: 'wide', brow: 'up', mouth: 'rest'}, focus: {eye: 'open', brow: 'up', mouth: 'flat', pose: {nod: 3}}},
 };
 const bust = makeBust3<XelBust>(spec);
 export const xelBust = (s: Partial<XelBust> = {}) => bust({...XEL_DEFAULT, ...s});

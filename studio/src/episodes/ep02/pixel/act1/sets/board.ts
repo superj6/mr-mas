@@ -19,7 +19,8 @@ import {PAL, stepColor, familyOf, FAMILIES} from '../../../../../shared/pixel/pa
 import {blitImg} from '../../../../../shared/pixel/figure';
 import {boardroomLayers, BR, END_SEAT_Y} from '../../../../../shared/pixel/rooms/boardroom';
 import {overlay} from '../../../../../shared/pixel/rooms/setkit';
-import {drawTerbSheetRoom, TERB_SHEET_DEFAULT} from '../../../../../shared/pixel/cast/terb-sheet';
+import {terbSheetRoom, TERB_SHEET_DEFAULT} from '../../../../../shared/pixel/cast/terb-sheet';
+import {TERB_FOOT} from '../../../../../shared/pixel/cast/terb';
 import {terbPortrait} from '../../../../../shared/pixel/cast/terb';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import {drawMadaSeated, MADA_SEAT_DEFAULT} from '../../../../../shared/pixel/cast/mada';
@@ -68,9 +69,12 @@ const morning = (src: Buf, opaque: boolean) => {
     // the night's cool rungs to the day's neutral greys (two rungs up), the warm ones a rung up; skin as it is
     const [fam, i] = fm;
     let v = c;
-    if (fam === 'N' || fam === 'C' || fam === 'F' || fam === 'U' || fam === 'K' && false) v = G[Math.min(G.length - 1, i + 1 + (x < 220 ? 1 : 0))];
+    // the window's light on the near half: a rung more toward the window, FEATHERED across x 170..270 in an ordered
+    // dither (a hard edge at x 220 read as a compositing seam through the wall, the table and the floor)
+    const near = x < 170 ? 1 : x >= 270 ? 0 : bayer(x, y) < (270 - x) / 100 ? 1 : 0;
+    if (fam === 'N' || fam === 'C' || fam === 'F' || fam === 'U') v = G[Math.min(G.length - 1, i + 1 + near)];
     else if (fam === 'G') v = G[Math.min(G.length - 1, i + 2)];
-    else if (fam === 'D' || fam === 'W' || fam === 'B') v = stepColor(c, x < 220 ? 2 : 1);
+    else if (fam === 'D' || fam === 'W' || fam === 'B') v = stepColor(c, 1 + near);
     void D;
     b.c[y * W + x] = v;
   }
@@ -103,12 +107,15 @@ export interface DaySt {
 export const day = (b: Buf, st: DaySt) => {
   const L = dayLayers(st.plates ? PLATES1 : PLATES0);
   overlay(b, L.far);
-  // at the back wall: Gerg by the door with his laptop; Mas standing behind his empty chair
+  // at the back wall: Mas standing behind his empty chair
   const gl = st.gerg === 'lift';
-  drawGergStand(b, 444, 150 - (gl ? 1 : 0), {legs: 'stand', type: gl ? 0 : ((Math.floor(st.f / 3) % 3) as 0 | 1 | 2), look: gl ? 'up' : 'screen', mouth: gl ? 'rest' : 'rest', light: 'room'}, {flip: true});
   // (beside his chair, between A and B: the far chairs' high backs would hide all but his head)
   if (st.mas === 'stand') drawMasStand2(b, 159, 152, {arm: 'down', light: 'room'});
   overlay(b, L.mid);
+  // Gerg by the door with his laptop, in front of the end chair's high back (behind it, the back's day grade read as
+  // see-through trousers); his own skin on his face (the laptop's green only on the screen's edge, never his mouth)
+  drawGergStand(b, 450, 150 - (gl ? 1 : 0), {legs: 'stand', type: gl ? 0 : ((Math.floor(st.f / 3) % 3) as 0 | 1 | 2), look: gl ? 'up' : 'screen', mouth: 'rest', light: 'room'}, {flip: true});
+  for (let y = 60; y < 104; y++) for (let x = 436; x < 476; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && fm[0] === 'L') b.set(x, y, PAL.S4); }
   // seated: the new directors (A, E), Mada (C) perfectly still, Omis (D); Mas at B once he sits
   drawSenator(b, BR.SEATS.A.x, SEN_Y, 1, 'sit');
   drawMadaSeated(b, BR.SEATS.C.x, 152, {...MADA_SEAT_DEFAULT, light: 'room'}, {spin: null});
@@ -117,8 +124,15 @@ export const day = (b: Buf, st: DaySt) => {
   if (st.mas !== 'stand') drawMasSeated(b, BR.SEATS.B.x - 6, 134, {...MAS_SEATED_DEFAULT, arm: 'lap', head: st.mas === 'glance' ? 'host' : 'host', collars: 3, light: 'room'}, {flip: st.mas === 'glance' ? false : false});
   overlay(b, L.front);
   if (st.sheet) { poly([226, 158, 252, 156, 254, 166, 228, 168], b.ink(PAL.P2)); for (let r = 0; r < 3; r++) line(230, 159 + r * 3, 248, 158 + r * 3, b.ink(PAL.G5)); }
-  // Terb at the head (seat L), seated, his single sheet up; no helmet (no fire)
-  drawTerbSheetRoom(b, BR.SEATS.L.x + 2, 194, {...TERB_SHEET_DEFAULT, legs: 'seat', arm: st.sheet ? 'none' : 'sheet', helmet: false, read: st.terb?.read ?? true, mouth: st.terb?.mouth ?? 'rest', light: 'room'});
+  // Terb at the head (seat L), seated, his single sheet up; no helmet and no extinguisher (no fire this morning: the
+  // rig's sheet arm carries Ep1's extinguisher in the far hand, so its pixels are left out and his hand hangs empty)
+  {
+    const pose = {...TERB_SHEET_DEFAULT, legs: 'seat' as const, arm: (st.sheet ? 'none' : 'sheet') as 'none' | 'sheet', helmet: false, read: st.terb?.read ?? true, mouth: st.terb?.mouth ?? 'rest', light: 'room' as const};
+    const img = terbSheetRoom(pose), x0 = BR.SEATS.L.x + 2 - TERB_FOOT[0], y0 = 194 - TERB_FOOT[1];
+    // (the only red on him is the extinguisher's; its grey nozzle sits beside his far hand, seated: local x 8..30, y 50..90)
+    const RED = new Set([PAL.R0, PAL.R1, PAL.R2, PAL.R3]), NOZ = new Set([PAL.G1, PAL.G6]);
+    blitImg(b, img, x0, y0, {clip: (px, py) => { const i = px - x0, j = py - y0, v = img.c[j * img.w + i]; if (RED.has(v)) return false; return !(NOZ.has(v) && i >= 8 && i <= 30 && j >= 50 && j <= 90); }});
+  }
   overlay(b, L.fore);
   // the morning's light through the window on the table's near half (a soft warm pool)
   glow(b, 150, 150, 170, 60, 1);
@@ -237,6 +251,9 @@ export const invite = (b: Buf, st: InviteSt) => {
     const lerp = (a: number, z: number) => Math.round(a + (z - a) * s);
     const r = {x: lerp(big.x, small.x), y: lerp(big.y, small.y), w: lerp(big.w, small.w), h: lerp(big.h, small.h)};
     fill(b, r.x - 1, r.y - 1, r.w + 2, r.h + 2, PAL.N0); fill(b, r.x, r.y, r.w, r.h, PAL.N3); fill(b, r.x, r.y, r.w, 2, PAL.C5);
+    // shrinking, the card keeps what it is (never a blank box): its mic and the confirmation, then its mic and XEL
+    if (s > 0 && s < 0.5) { micIcon(b, r.x + 12, r.y + 18); pt(b, 'XEL', r.x + 24, r.y + 8, PAL.P2); fill(b, r.x + 6, r.y + r.h - 20, r.w - 12, 14, PAL.C5); pt(b, 'Accepted', r.x + 10, r.y + r.h - 16, PAL.P2); }
+    else if (s >= 0.5) { micIcon(b, r.x + (r.w >> 1), r.y + 18); pt(b, 'XEL', r.x + (r.w >> 1) - 8, r.y + r.h - 12, PAL.P2); }
     if (s === 0) {
       // the mic icon (left of the title), the title and its date, Accept and Decline
       micIcon(b, r.x + 16, r.y + 22);

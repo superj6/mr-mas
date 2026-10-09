@@ -5,14 +5,16 @@
 //            MACROSOFT's plinth (BELOW · ABOVE · AROUND), to the basement, whose lights come on last (and his monitor,
 //            four floors up, steps down a rung)
 //   TURN     7.02-7.06 the Humanist moving in (his plate), Tasya in the doorway, the phone turned down; the welcome is
-//            the lease; the key twisted off grows back (MAR 19), LE CHIEN's paw, the INQUIRY envelope bonks off it
+//            the lease (on Tasya, a medium, warm); his fingers twist a key off the ring and carry it to the Humanist,
+//            the spare grows back (MAR 19), LE CHIEN's paw, the INQUIRY envelope bonks off it; the key in the
+//            Humanist's hand as he looks up
 //   AFTER    7.07 the camera goes with Tasya's glance up the section to Mas: "A tenant." lands on him; 7.08 1.5 s on Mas
 //            at his monitor, the key ring's jangle below frame, then black: act-out 1
 // The scene leaves Mas's point of view on his own recorded voice and returns to him on the jangle.
 import {defineScene, layouts, mouth, mk, drawPlate} from '../../kit';
 import type {PxText} from '../../kit';
 import {PAL} from '../../../../../shared/pixel/palette';
-import {section7, basement, keys, masDark, SECTION_H} from '../sets/tenant';
+import {section7, basement, keys, masDark, tasyaMCU, SECTION_H} from '../sets/tenant';
 import {stepOf, RH} from '../sets/common';
 import {fill} from '../../art/kit';
 
@@ -42,29 +44,34 @@ L.add('7.02', {
   },
 });
 L.add('7.03', {
-  st: 'act1/sets/tenant basement: TASYA\'s welcome (warm, unhurried; lip-synced), one Rhodes chord under it; the Humanist\'s polite smile',
+  st: 'act1/sets/tenant tasyaMCU ([MCU] TASYA in the doorway, closer: his approved portrait in the room\'s warm skin (Ep1 tasya-phone tasyaRoomPortrait), the stair\'s warm light behind him, the bare bulb keying his face from the upper left; his welcome, warm and unhurried, lip-synced, a pleasant smile between the words)',
   face: {TASYA: 'lip'},
-  draw: (fb, k, sh, f) => { basement(fb, f, {hum: {mouth: 'rest', expr: 'smile', arm: 'none'}, tasya: {mouth: mouth(sh, k, 'TASYA'), brow: 'warm'}, phone: 'down'}); },
+  draw: (fb, k, sh, f) => { const m = mouth(sh, k, 'TASYA'); tasyaMCU(fb, f, {mouth: m === 'rest' ? 'smile' : m}); },
 });
 L.add('7.04', {
-  st: 'act1/sets/tenant basement: THE HUMANIST at his boxes asks about his team (lip-synced); TASYA\'s answer, warm (lip-synced)',
+  st: 'act1/sets/tenant basement: THE HUMANIST at his boxes asks about his team, his hands spread ("people first"; lip-synced); TASYA\'s answer, warm (lip-synced)',
   face: {HUMANIST: 'lip', TASYA: 'lip'},
-  draw: (fb, k, sh, f) => { basement(fb, f, {hum: {mouth: mouth(sh, k, 'HUMANIST'), expr: 'neutral', arm: 'none'}, tasya: {mouth: mouth(sh, k, 'TASYA'), brow: 'warm'}, phone: 'down'}); },
+  // his "people first" hands while he asks about his team
+  draw: (fb, k, sh, f) => { const asks = sh.lines.find((l) => l.who === 'HUMANIST'); const spread = !!asks && k >= asks.s - 2 && k < asks.e + 6; basement(fb, f, {hum: {mouth: mouth(sh, k, 'HUMANIST'), expr: 'neutral', arm: spread ? 'spread' : 'none'}, tasya: {mouth: mouth(sh, k, 'TASYA'), brow: 'warm'}, phone: 'down'}); },
 });
 L.add('7.05', {
-  st: 'act1/sets/tenant keys (art/sets/cutaway keyECU: [ECU] the ring at his belt; a key twisted off and handed over, the new one grown back into the gap, stamped MAR 19 (the rail, stamped); LE CHIEN\'s paw-print key; Tasya\'s line off frame; THE TRUSTBUSTER\'s INQUIRY envelope sails in and bonks off the ring)',
+  st: 'act1/sets/tenant keys ([ECU] the ring at his belt (kits/key-ring-insert and art/sets/cutaway keyECU, copied): TASYA\'s fingers pinch the middle key, twist it off the ring in two held steps on the door-key click and carry it out of frame left, toward the Humanist; the gap; then the spare grows into it in held steps, its bow stamped MAR 19 (the stamp is the date: no rail under it); LE CHIEN\'s paw-print key (a pad and four toes); Tasya\'s line off frame; THE TRUSTBUSTER\'s INQUIRY envelope sails in and bonks off the ring)',
   marks: {turn: ['snd', 'door_key_turn', 1, 0], bonk: ['snd', 'alert_bonk', 1, 0]},
   draw: (fb, k, sh, f) => {
     const tw = mk(sh, 'turn', 7), bk = mk(sh, 'bonk', 97);
-    keys(fb, f, {grown: k >= tw + 22, env: k < bk - 6 ? 0 : k < bk ? 1 : 2});
-    // the moment between: the gap where the key was (a bare split ring) before the new one grows
-    if (k >= tw && k < tw + 22) { fill(fb, 236, 118, 12, 30, PAL.N3); }
+    // his fingers come onto the key (k3), twist it on the click (two held steps), carry it off frame left in held
+    // steps of 4 frames; the gap 5 frames; the spare grows in four held steps of 4 frames
+    const take = (k < 3 ? 0 : k < tw ? 1 : k < tw + 6 ? 2 : k < tw + 12 ? 3 : k < tw + 28 ? 4 : 5) as 0 | 1 | 2 | 3 | 4 | 5;
+    const carry = take === 4 ? Math.min(1, (Math.floor((k - tw - 12) / 4) + 1) / 4) : 0;
+    const g0 = tw + 33, grow = k < g0 ? 0 : Math.min(4, Math.floor((k - g0) / 4) + 1);
+    keys(fb, f, {take, carry, grow, env: k < bk - 6 ? 0 : k < bk ? 1 : 2});
+    return {noRail: true};
   },
 });
 L.add('7.06', {
-  st: 'act1/sets/tenant basement: THE HUMANIST looks up where Tasya looked (lip-synced: "Who else lives here?")',
+  st: 'act1/sets/tenant basement: THE HUMANIST, the key Tasya gave him in his hand, looks up where Tasya looked (lip-synced: "Who else lives here?")',
   face: {HUMANIST: 'lip'},
-  draw: (fb, k, sh, f) => { basement(fb, f, {hum: {mouth: mouth(sh, k, 'HUMANIST'), expr: 'worry', arm: 'none', look: -1}, tasya: {mouth: 'smile', brow: 'warm'}, phone: 'down', up: true}); },
+  draw: (fb, k, sh, f) => { basement(fb, f, {hum: {mouth: mouth(sh, k, 'HUMANIST'), expr: 'worry', arm: 'none', look: -1}, tasya: {mouth: 'smile', brow: 'warm'}, phone: 'down', up: true, key: true}); },
 });
 L.add('7.07', {
   st: 'act1/sets/tenant section7: Tasya glances up again and the camera goes with his look, a whole-pixel pan up the section floor by floor to MAS at his monitor in the dimmed light; "A tenant." from four floors down lands on him (an L-cut); he doesn\'t hear it',

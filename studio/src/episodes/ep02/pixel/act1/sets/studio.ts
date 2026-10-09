@@ -9,7 +9,8 @@
 //                     lip-synced, a face light one step (art studioMCU's framing)
 //   chromeInsert      [INSERT] the chrome close (art)
 import {Buf, ellipse} from '../../../../../shared/pixel/px';
-import {PAL} from '../../../../../shared/pixel/palette';
+import type {Img} from '../../../../../shared/pixel/figure';
+import {PAL, familyOf} from '../../../../../shared/pixel/palette';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasMouth} from '../../../../../shared/pixel/cast/mas';
 import {putBust} from '../../../../../shared/pixel/rooms/bullpen-launch';
@@ -50,10 +51,30 @@ export interface MeterSt {
   /** XEL (his sculpted bust, faced camera-left): mouth, expression, lean toward the mic (0..3: 3 = his head behind the
    *  giant capsule); null = left out */
   xel?: {mouth?: Viseme; expr?: Expr; lean?: 0 | 1 | 2 | 3} | null;
-  /** the giant mic pressing Mas against the curtain: 1 leaning round it, 2 pressed flat */
+  /** the giant mic pressing Mas against the curtain: 1 leaning round it, 2 pressed flat (the capsule has crept over
+   *  to him: it rests against his cheek and shoulder) */
   squeeze?: 0 | 1 | 2;
   part?: number;
 }
+/** where the mic stands (its capsule's centre x): pressed against Mas at squeeze 2 */
+const micX = (st: MeterSt) => CHROME.pic.x + (CHROME.pic.w >> 1) - (st.mic === 5 ? 6 : 0) - ((st.squeeze ?? 0) === 2 ? 84 : 0);
+/** the sculpted busts' skin, smoothed: a skin pixel that stands alone in its 3 x 3 (one or no neighbour of its own
+ *  tone, five or more of one other skin tone) takes that tone; the shading's planes stay, the speckle goes */
+const smoothSkin = (im: Img): Img => {
+  const c = new Int32Array(im.c), W2 = im.w;
+  const sk = (v: number) => { const fm = familyOf(v); return !!fm && fm[0] === 'S' && fm[1] >= 2; };
+  for (let y = 1; y < im.h - 1; y++) for (let x = 1; x < W2 - 1; x++) {
+    const v = im.c[y * W2 + x]; if (!sk(v)) continue;
+    const n = new Map<number, number>(); let same = 0;
+    for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) { if (!i && !j) continue; const u = im.c[(y + j) * W2 + x + i]; if (u === v) same++; else if (sk(u)) n.set(u, (n.get(u) ?? 0) + 1); }
+    if (same > 1) continue;
+    let best = -1, bn = 0; for (const [u, m] of n) if (m > bn) { bn = m; best = u; }
+    if (bn >= 5) c[y * W2 + x] = best;
+  }
+  return {w: im.w, h: im.h, c};
+};
+const XEL_SMOOTH = new Map<string, Img>();
+const xelSmooth = (s: {mouth: Viseme; expr: Expr}) => { const k = `${s.mouth}:${s.expr}`; let im = XEL_SMOOTH.get(k); if (!im) { im = smoothSkin(smoothSkin(xelBust(s))); XEL_SMOOTH.set(k, im); } return im; };
 /** the mic on its stand at five held sizes, at the two-shot's scale: the capsule (its grille, the dark band, the shock
  *  mount's ring), the stand down out of the picture; size 5 fills the frame */
 const MIC = [{hw: 7, hh: 15, top: 78}, {hw: 11, hh: 23, top: 66}, {hw: 17, hh: 35, top: 50}, {hw: 28, hh: 56, top: 26}, {hw: 58, hh: 118, top: 2}];
@@ -80,17 +101,20 @@ export const meter = (b: Buf, f: number, st: MeterSt) => {
   const t = new Buf(W, 270, PAL.N0);
   curtain(t, r, st.part ?? 0);
   const sq = st.squeeze ?? 0;
-  const mx = r.x + 6 - [0, 22, 58][sq], my = r.y + 30;
+  const mc = micX(st);
+  const mx = r.x + 6 - [0, 22, 30][sq], my = r.y + 30;
   const ms = {...MAS_PORTRAIT_DEFAULT, light: 'warm' as const, mouth: st.mas?.mouth ?? 'rest', look: st.mas?.look ?? 0, head: st.mas?.head ?? '34'};
   putBust(t, masPortrait(ms), mx, my, {flip: true});
   drawCollarsPortrait(t, mx, my, 3, {head: ms.head ?? '34', light: 'warm'});
   faceKey(t, mx, my, mx + 112, my + 100, 1, 1);
   if (st.xel !== null) {
     const x = st.xel ?? {};
-    const xl = [0, 6, 30, 92][x.lean ?? 0];
-    putBust(t, xelBust({mouth: x.mouth ?? 'rest', expr: x.expr ?? 'neutral'}), r.x + r.w - 124 - xl, r.y + 26);
+    // leaning toward the mic; at 3 his head is behind its capsule (wherever it stands)
+    const ln = x.lean ?? 0;
+    const xx = ln === 3 ? mc - 64 : ln === 2 && sq === 2 ? mc + 64 : r.x + r.w - 124 - [0, 6, 30][ln];
+    putBust(t, xelSmooth({mouth: x.mouth ?? 'rest', expr: x.expr ?? 'neutral'}), xx, r.y + 26);
   }
-  micAt(t, r.x + (r.w >> 1) - (st.mic === 5 ? 6 : 0), r.y, r.y + r.h, st.mic);
+  micAt(t, mc, r.y, r.y + r.h, st.mic);
   for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) b.set(x, y, t.c[y * 480 + x]);
   playerChrome(b, {ch: st.ch, rec: st.rec});
   void f;

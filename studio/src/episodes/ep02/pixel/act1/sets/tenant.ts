@@ -15,6 +15,8 @@
 import {Buf, ellipse, line, bayer, hash, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../../shared/pixel/palette';
 import {drawTasyaRoom} from '../../../../../shared/pixel/cast/tasya-speak';
+import {tasyaRoomPortrait} from '../../../../../shared/pixel/cast/tasya-phone';
+import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import {drawTasyaMedium, TASYA_MEDIUM_DEFAULT} from '../../../../../shared/pixel/cast/tasya-medium';
 import type {TasyaMediumState} from '../../../../../shared/pixel/cast/tasya-medium';
 import {drawMasSeated, MAS_SEATED_DEFAULT} from '../../../../../shared/pixel/cast/mas-seated';
@@ -24,7 +26,8 @@ import {blitImg} from '../../../../../shared/pixel/figure';
 import {humanistBust, drawHumanistRoom} from '../../art/cast/humanist';
 import type {HumanistBust} from '../../art/cast/humanist';
 import {seatedStaff, staffChair} from '../../art/cast/civic2';
-import {keyECU, SECTION_H, FLOORS} from '../../art/sets/cutaway';
+import {SECTION_H, FLOORS} from '../../art/sets/cutaway';
+import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, dith} from '../../art/kit';
 import {RH, W, isSkin} from './common';
 
@@ -96,7 +99,7 @@ export const section7 = (b: Buf, f: number, st: Section7) => {
 };
 
 // ================================================================== the basement two-shot
-export interface BasementSt { hum?: Partial<HumanistBust>; tasya?: Partial<TasyaMediumState>; phone?: 'loud' | 'down'; up?: boolean }
+export interface BasementSt { hum?: Partial<HumanistBust>; tasya?: Partial<TasyaMediumState>; phone?: 'loud' | 'down'; up?: boolean; key?: boolean }
 /** [2S] the Humanist by his boxes (screen-left), Tasya in the doorway (screen-right), the phone face up on a box between
  *  them playing yesterday's interview (one bar once he's turned it down); `up`: the Humanist looks up (the floors above) */
 export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
@@ -109,8 +112,20 @@ export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
   fill(b, 330, 10, 120, 193, PAL.W4); fill(b, 330, 10, 4, 193, PAL.W2); dith(b, 334, 10, 116, 193, 0.2, PAL.W5);
   // the bare bulb over them, its cord
   line(240, 0, 240, 22, b.ink(PAL.N2)); ellipse(240, 26, 3, 4, b.ink(PAL.W8)); b.set(239, 25, PAL.W9);
-  putBustCut(b, humanistBust({mouth: 'rest', expr: 'worry', arm: 'box', ...st.hum}), 70, st.up ? 56 : 60, RH);
+  const hy = st.up ? 56 : 60;
+  putBustCut(b, humanistBust({mouth: 'rest', expr: 'worry', arm: 'box', ...st.hum}), 70, hy, RH);
+  // the key Tasya gave him, in his hand at his chest (his near hand up from below the frame, the brass key in it)
+  if (st.key) {
+    const kx = 92, ky = hy + 112;
+    fill(b, kx + 4, ky - 14, 3, 10, PAL.W5); fill(b, kx + 4, ky - 14, 1, 10, PAL.W7); fill(b, kx + 7, ky - 11, 2, 2, PAL.W5); fill(b, kx + 7, ky - 7, 2, 2, PAL.W5);
+    ellipse(kx + 5, ky - 18, 4, 4, b.ink(PAL.W5)); b.set(kx + 5, ky - 18, PAL.D2); b.set(kx + 3, ky - 20, PAL.W8);
+    fill(b, kx, ky - 6, 12, 9, PAL.S4); fill(b, kx, ky - 6, 12, 1, PAL.S5); for (let i = 1; i < 12; i += 3) b.set(kx + i, ky - 5, PAL.S3); fill(b, kx + 11, ky - 5, 1, 8, PAL.S3);
+    fill(b, kx - 1, ky + 3, 14, RH - ky - 3, PAL.N3); fill(b, kx - 1, ky + 3, 14, 1, PAL.N5);
+  }
   drawTasyaMedium(b, 350, 92, {...TASYA_MEDIUM_DEFAULT, arm: 'ring', ...st.tasya}, {flip: true});
+  // (the 'ring' arm's far hand is a stamp whose arm is hidden behind his coat: it floated as a skin dot on the coat;
+  // his far hand is in his pocket, the coat over it)
+  { const fx = 350 + 84 - 1 - 64, fy = 92 + 100; for (let y = fy - 4; y <= fy + 4; y++) for (let x = fx - 4; x <= fx + 4; x++) { if (isSkin(b.get(x, y))) b.set(x, y, b.get(fx + 6, fy - 8)); } }
   // the phone face up on a box between them (its waveform; turned down: one bar)
   fill(b, 196, 168, 88, 35, PAL.D3); fill(b, 196, 168, 88, 2, PAL.D4); fill(b, 232, 168, 10, 35, PAL.D2); fill(b, 204, 182, 70, 8, PAL.P0);
   const px = 210, py = 158;
@@ -120,8 +135,150 @@ export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
   const bars = st.phone === 'loud' ? 7 : 1;
   for (let i = 0; i < bars; i++) { const h = 1 + ((i * 7 + Math.floor(f / 3)) % 5); fill(b, px + 12 + i * 4, py + 9 - h, 2, h, PAL.C7); }
 };
-/** [ECU] the ring: art keyECU (grown: the MAR 19 key; env 0 none, 1 sailing in, 2 the bonk) */
-export const keys = (b: Buf, f: number, st: {grown: boolean; env: 0 | 1 | 2}) => keyECU(b, f, st);
+// ================================================================== 7.03 Tasya's welcome, closer
+/** [MCU] TASYA in the doorway, closer (his approved portrait in the room's warm skin, tasya-phone's tasyaRoomPortrait):
+ *  the stair's warm light behind him, the basement's concrete at the left; the bare bulb overhead keys his face from
+ *  the upper left (a step up on the planes toward it, a rim), so "warm, unhurried; the welcome is the lease" plays on
+ *  a face we can read; lip-synced, a pleasant smile between the words */
+export const tasyaMCU = (b: Buf, f: number, st: {mouth: Viseme; lid?: 0 | 1 | 2}) => {
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
+    const door = x >= 168;
+    b.set(x, y, door ? (x < 174 ? PAL.W1 : bayer(x, y) < 0.12 + (x - 174) / 1200 ? PAL.W4 : PAL.W3) : (bayer(x, y) < 0.25 ? PAL.G2 : PAL.G1));
+  }
+  // the bulb's cord at the top left (the light's source)
+  line(96, 0, 96, 10, b.ink(PAL.N2)); ellipse(96, 13, 2, 3, b.ink(PAL.W8)); b.set(95, 12, PAL.W9);
+  const img = tasyaRoomPortrait({mouth: st.mouth, lid: st.lid ?? 0, brow: 'warm', arms: 'clasp', jangle: 0});
+  const X = 200, Y = 40;
+  putBustCut(b, img, X, Y, RH, TASYA_FACES_LEFT ? false : true);
+  // the key from the bulb (upper left): a step up on the skin toward it, a warm rim on its edge; the doorway's light a
+  // rim on the far edge of him
+  const snap = new Int32Array(b.c);
+  const sk = (x: number, y: number) => isSkin(snap[y * W + x]);
+  for (let y = Y; y < RH; y++) for (let x = X; x < X + 112; x++) {
+    const c = snap[y * W + x];
+    if (!isSkin(c)) continue;
+    // the whole face a step up from the bulb, its planes toward it (left, top) two
+    b.set(x, y, !sk(x - 1, y) || !sk(x, y - 1) || !sk(x - 3, y) ? stepColor(c, 2) : stepColor(c, 1));
+    if (!sk(x + 1, y) && x > X + 50) b.set(x, y, PAL.W6);
+  }
+  void f;
+};
+/** which way the approved portrait faces (it is authored facing screen-left, toward Mas in Ep1's lobby) */
+const TASYA_FACES_LEFT = true;
+
+// ================================================================== 7.05 the ring: the handover (shared kits/key-ring-insert and
+// art/sets/cutaway keyECU, copied: the middle key is a separate drawing so a hand can take it)
+type KeyCol = [number, number, number, number];
+const METALS: KeyCol[] = [[PAL.W3, PAL.W5, PAL.W6, PAL.W8], [PAL.G3, PAL.G4, PAL.G5, PAL.G6], [PAL.W2, PAL.W4, PAL.W5, PAL.W7], [PAL.G2, PAL.G3, PAL.G4, PAL.G6]];
+/** one key along a direction (the kit's): a bow with its hole, a toothed blade */
+const key = (b: Buf, ax: number, ay: number, deg: number, col: KeyCol, len: number, bowR: number, seed: number) => {
+  const a = (deg * Math.PI) / 180, ux = Math.cos(a), uy = Math.sin(a), vx = -uy, vy = ux;
+  const R = len + bowR * 2 + 4;
+  for (let y = Math.round(ay - R); y <= Math.round(ay + R); y++) for (let x = Math.round(ax - R); x <= Math.round(ax + R); x++) {
+    const dx = x - ax, dy = y - ay, s = dx * ux + dy * uy, q = dx * vx + dy * vy;
+    let inside = false, lit = false, edge = false;
+    const bs = s - bowR - 1, round = seed % 3 !== 1;
+    const dBow = round ? Math.hypot(bs, q) / bowR : Math.max(Math.abs(bs), Math.abs(q)) / bowR;
+    if (dBow <= 1) { const hole = Math.hypot(bs + bowR * 0.45, q) < 1.6; if (!hole) { inside = true; edge = dBow > 0.8; lit = q < -bowR * 0.2; } }
+    const t = s - bowR * 2;
+    if (!inside && t >= 0 && t <= len) {
+      const tooth = Math.floor(t / 3 + hash(seed, Math.floor(t / 3), 71) * 2) % 2 === 0 && t > 3 && t < len - 2;
+      const w0 = -2, w1 = tooth ? 3 : 1;
+      if (q >= w0 && q <= w1 && !(t > len - 2 && q > 0)) { inside = true; lit = q < -1; edge = q === w1 || t > len - 1; }
+    }
+    if (!inside || y < 0 || y >= RH) continue;
+    b.set(x, y, edge ? col[0] : lit ? col[2] : col[1]);
+  }
+  b.set(Math.round(ax + ux * (bowR * 0.6) - vx * bowR * 0.5), Math.round(ay + uy * (bowR * 0.6) - vy * bowR * 0.5), col[3]);
+};
+const RING = {cx: 240, cy: 62, r: 50, n: 11, mid: 5};
+/** the middle key's own drawing (it hangs straight down at the front): its ring point, colour, blade and bow */
+const midKey = (jangle: 0 | 1) => {
+  const i = RING.mid, th = 12 + (i / (RING.n - 1)) * 156 + (i % 2 ? (jangle ? 4 : 0) : -(jangle ? 4 : 0)), a = (th * Math.PI) / 180;
+  return {ax: RING.cx + Math.cos(a) * RING.r, ay: RING.cy + Math.sin(a) * RING.r, deg: 90 + (th - 90) * 0.55, col: METALS[(i * 7 + 3) % 4], len: 30 + Math.round(hash(i, 1, 72) * 12), bowR: 8 + Math.round(hash(i, 2, 72) * 2), seed: i + 1};
+};
+/** his belt and the ring, its keys round the lower arc; `taken`: the middle key isn't on it */
+const ringECU = (b: Buf, f: number, taken: boolean) => {
+  const jangle = (Math.floor(f / 4) % 2) as 0 | 1, sw = jangle ? 4 : 0;
+  const {cx, cy, r, n} = RING;
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) { const d = x / 480; b.set(x, y, bayer(x, y) < 0.45 - d * 0.3 ? PAL.N4 : (x + y * 3) % 23 === 0 ? PAL.N2 : PAL.N3); }
+  for (let y = 0; y < RH; y++) { const l = 70 - Math.round(y * 0.08), r0 = 404 + Math.round(y * 0.1); for (let x = 0; x < l; x++) b.set(x, y, x > l - 3 ? PAL.N7 : bayer(x, y) < 0.4 ? PAL.N5 : PAL.N4); for (let x = r0; x < 480; x++) b.set(x, y, x < r0 + 2 ? PAL.N2 : bayer(x, y) < 0.25 ? PAL.N4 : PAL.N3); }
+  fill(b, 0, 14, 480, 14, PAL.N1); fill(b, 0, 14, 480, 1, PAL.N3); fill(b, 0, 27, 480, 1, PAL.N0);
+  for (let x = 0; x < 480; x += 7) b.set(x, 21, PAL.N2);
+  // (the art's Ep2 belt: a belt loop where the shared insert's buckle read as a stray bracket)
+  fill(b, 92, 12, 30, 2, PAL.N3); fill(b, 92, 14, 30, 13, PAL.N1); fill(b, 92, 14, 30, 1, PAL.N3); fill(b, 92, 27, 30, 1, PAL.N0); fill(b, 92, 28, 30, 3, PAL.N3); for (let x = 92; x < 122; x++) if (x % 7 === 0) b.set(x, 21, PAL.N2);
+  for (let y = 10; y < 31; y++) { b.set(150, y, PAL.N0); fill(b, 151, y, 5, 1, y < 12 || y > 28 ? PAL.N3 : PAL.N2); b.set(156, y, PAL.N0); }
+  fill(b, cx - 5, 10, 10, 22, PAL.W4); fill(b, cx - 5, 10, 10, 1, PAL.W7); fill(b, cx - 1, 30, 3, 4, PAL.W3);
+  const back = (lx: number, ly: number) => { const d = Math.hypot(lx, ly); return d >= r - 2.5 && d <= r + 2.5; };
+  for (let y = -r - 3; y <= r + 3; y++) for (let x = -r - 3; x <= r + 3; x++) if (back(x, y) && y < 0) { const d = Math.hypot(x, y); b.set(cx + x, cy + y, d > r + 1.5 || d < r - 1.5 ? PAL.W3 : -x - y > r * 0.6 ? PAL.W7 : PAL.W5); }
+  for (let i = 0; i < n; i++) {
+    if (taken && i === RING.mid) continue;
+    const t = i / (n - 1), th = 12 + t * 156 + (i % 2 ? sw : -sw), a = (th * Math.PI) / 180;
+    key(b, cx + Math.cos(a) * r, cy + Math.sin(a) * r, 90 + (th - 90) * 0.55, METALS[(i * 7 + 3) % 4], 30 + Math.round(hash(i, 1, 72) * 12), 8 + Math.round(hash(i, 2, 72) * 2), i + 1);
+  }
+  for (let y = -r - 3; y <= r + 3; y++) for (let x = -r - 3; x <= r + 3; x++) if (back(x, y) && y >= 0) { const d = Math.hypot(x, y); b.set(cx + x, cy + y, d > r + 1.5 || d < r - 1.5 ? PAL.W3 : x < -r * 0.5 ? PAL.W6 : PAL.W5); }
+  b.set(cx - Math.round(r * 0.7), cy + Math.round(r * 0.7) - 1, PAL.W8);
+  // LE CHIEN's small key: a round bow stamped with a paw print (a broad pad and four toes splayed round it, close: a
+  // paw, never two eyes and a mouth), its short blade
+  const px = 306, py = 124;
+  fill(b, px - 1, py - 8, 3, 6, PAL.G4);
+  ellipse(px, py + 7, 10, 10, b.ink(PAL.G5)); ellipse(px, py + 7, 9, 9, b.ink(PAL.G6));
+  const PAW = ['...tt.tt...', '..ttt.ttt..', 't.ttt.ttt.t', 'tt.tt.tt.tt', 'tt.......tt', '....ppp....', '..ppppppp..', '.ppppppppp.', '.ppppppppp.', '..ppp.ppp..'];
+  PAW.forEach((r, j) => { for (let i = 0; i < r.length; i++) if (r[i] !== '.') b.set(px - 5 + i, py + 1 + j, PAL.N2); });
+  fill(b, px - 1, py + 18, 3, 16, PAL.G5); fill(b, px + 2, py + 24, 2, 2, PAL.G5); fill(b, px + 2, py + 29, 2, 2, PAL.G5);
+};
+/** the spare grown into the gap, its bow a tag stamped MAR 19 (the rail, stamped): `g` 0..4 (held steps: the tag
+ *  half, the tag whole, the blade half, the blade whole) */
+const spare = (b: Buf, g: number) => {
+  if (g <= 0) return;
+  const bw = pw('MAR 19') + 8, x0 = 241 - (bw >> 1);
+  fill(b, 239, 110, 4, 10, PAL.W5); fill(b, 239, 110, 1, 10, PAL.W7);
+  const th = g >= 2 ? 22 : 11;
+  fill(b, x0, 118, bw, th, PAL.W6); fill(b, x0, 118, bw, 2, PAL.W8); fill(b, x0, 118 + th - 1, bw, 1, PAL.W4);
+  if (g >= 2) pt(b, 'MAR 19', 245 - (bw >> 1), 125, PAL.N1);
+  if (g >= 3) { const L = g >= 4 ? 50 : 24; fill(b, 237, 140, 8, L, PAL.W5); fill(b, 237, 140, 2, L, PAL.W6); if (g >= 4) for (let t = 0; t < 4; t++) fill(b, 245, 150 + t * 9, 6, 4, PAL.W5); }
+};
+export interface KeysSt {
+  /** the handover: 0 the ring whole; 1 his fingers on the key; 2..3 the twist (held steps); 4.. carried off toward the
+   *  Humanist (frame left), `carry` 0..1; 5 gone (the gap) */
+  take: 0 | 1 | 2 | 3 | 4 | 5;
+  carry?: number;
+  /** the spare growing into the gap: 0..4 */
+  grow: number;
+  env: 0 | 1 | 2;
+}
+/** [ECU] 7.05: Tasya's fingers come in, pinch the middle key, twist it off the ring in two held steps and carry it out
+ *  of frame left (toward the Humanist), the gap, then the spare grows in, stamped MAR 19; LE CHIEN's paw-print key;
+ *  THE TRUSTBUSTER's INQUIRY envelope bonks off the ring */
+export const keys = (b: Buf, f: number, st: KeysSt) => {
+  const jangle = (Math.floor(f / 4) % 2) as 0 | 1;
+  ringECU(b, f, st.take >= 2);
+  spare(b, st.grow);
+  if (st.take >= 1 && st.take <= 4) {
+    const k = midKey(jangle);
+    const tw = st.take >= 3 ? 26 : st.take >= 2 ? 14 : 0;
+    const c = st.take === 4 ? clamp(st.carry ?? 0, 0, 1) : 0;
+    // carried up and away to the left, toward the Humanist (out of the frame's top left)
+    const ox = -Math.round(c * 170), oy = -Math.round(c * 190) + (st.take >= 2 ? 6 : 0);
+    const deg = k.deg + tw;
+    const a = (deg * Math.PI) / 180;
+    const bx = k.ax + ox, by = k.ay + oy;
+    if (st.take >= 2) key(b, bx, by, deg, k.col, k.len, k.bowR, k.seed);
+    // his hand, at the ring's scale (a hand is longer than a key), down from his elbow off the frame's top right; its
+    // thumb and forefinger pinch the key's bow; the forearm on the wrist's own line up to the elbow (never a bar)
+    const bowC: [number, number] = [Math.round(bx + Math.cos(a) * (k.bowR + 1)), Math.round(by + Math.sin(a) * (k.bowR + 1))];
+    const E: [number, number] = [520, -170];
+    const dx0 = bowC[0] - E[0], dy0 = bowC[1] - E[1], dL = Math.hypot(dx0, dy0) || 1;
+    const rot = (tw * Math.PI) / 360, fx = dx0 / dL, fy = dy0 / dL;
+    const fwd: [number, number, number] = [(fx * Math.cos(rot) - fy * Math.sin(rot)) * 0.92, (fx * Math.sin(rot) + fy * Math.cos(rot)) * 0.92, -0.3];
+    const h = placeHand(POSES.pinch(fwd, [0.2, -0.3, 0.93], 'R'), {s: 6.2, at: [bowC[0] + 2, bowC[1] - 1], anchor: 'index', light: 'lobby', key: [-0.4, -0.6, 0.7], cuffRamp: [PAL.N0, PAL.G3, PAL.G4, PAL.G5, PAL.P1, PAL.P1, PAL.P2]});
+    // his shirt's cuff at the wrist (the hand's own), then the navy blazer sleeve up to the elbow, widening
+    const ax = h.cuffEnd[0] - h.wrist[0], ay = h.cuffEnd[1] - h.wrist[1], aL = Math.hypot(ax, ay) || 1, ux = ax / aL, uy = ay / aL;
+    sleeve(b, h.cuffEnd, [h.cuffEnd[0] + ux * 340, h.cuffEnd[1] + uy * 340], 20, 30, [PAL.N0, PAL.N2, PAL.N3, PAL.N4, PAL.N6]);
+    drawHand(b, h.hand, h.x, h.y);
+  }
+  if (st.env) { const ex = st.env === 1 ? 380 : 330, ey = st.env === 1 ? 40 : 70; fill(b, ex, ey, 70, 40, PAL.P2); line(ex, ey, ex + 35, ey + 22, b.ink(PAL.P0)); line(ex + 70, ey, ex + 35, ey + 22, b.ink(PAL.P0)); pt(b, 'INQUIRY', ex + 12, ey + 28, PAL.R2); }
+};
 /** [MCU] Mas at his monitor in the dark room (Ep1's drawDark2S), still; the room a rung down (his monitor stepped down
  *  when the basement's lights came on); his face kept */
 export const masDark = (b: Buf, f: number) => {

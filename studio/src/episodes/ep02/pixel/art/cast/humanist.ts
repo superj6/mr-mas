@@ -17,19 +17,29 @@ import {sheetPlate, sheetBust, sheetRoom} from './sheet';
 import {sp, tiny, fill} from '../kit';
 import type {ArtAsset} from '../asset';
 
-export interface HumanistBust extends BustState { arm: 'none' | 'box' }
+export interface HumanistBust extends BustState { arm: 'none' | 'box' | 'spread' }
 export const HUMANIST_DEFAULT: HumanistBust = {mouth: 'rest', expr: 'neutral', arm: 'none'};
 const AMBER = [PAL.D2, PAL.W4, PAL.W6, PAL.W7, PAL.W8, PAL.W9];
 const BOX = [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.W4, PAL.W5];
-// his own head: long and narrow (a tall cranium, a long jaw, a long nose with a slight bridge), deep-set eyes under an
-// arched, earnest brow, a high hairline with a neat side part; the earnest long face his file asks for
+// his own head: long (a tall cranium, a long jaw), a plain, ordinary nose (2026-10-09, the picture review: the art
+// pass's long, pointed, shadowed nose on a gaunt face risked reading as an ethnic caricature of a real figure of Syrian
+// descent; the caricature is carried by his file's own features instead), open eyes under an arched, EARNEST LIFTED
+// brow, a fuller face, a high hairline with a neat side part; the open amber collar and the spread "people first"
+// hands are his signature (the NOT A PERSON lanyard comes later, Ep5)
 const spec: BustSpec3 = {
-  head: {yaw: 26, at: [57, 52], scale: 1.04, cranium: [19, 27, 23], craniumY: -10, cheekW: 15, jawW: 13, jawY: 21, jawH: 12, chinY: 38, chinW: 6, chinZ: 11, cheekbone: 1.1, full: 0.2, brow: 2.4, socket: 1.35,
-    nose: {tipY: 15, proj: 7, wing: 3.8, hook: 0.5}, mouthY: 25, lips: 0.6, muzzle: 13, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'side', thick: 2.4, line: -22, side: -1},
+  head: {yaw: 26, at: [57, 52], scale: 1.04, cranium: [19, 27, 23], craniumY: -10, cheekW: 15.5, jawW: 13.5, jawY: 21, jawH: 12, chinY: 37, chinW: 6.5, chinZ: 11, cheekbone: 0.7, full: 0.55, brow: 1.8, socket: 1.0,
+    nose: {tipY: 14, proj: 5.5, wing: 3.6, tip: 2.8, hook: 0}, mouthY: 25, lips: 0.8, muzzle: 12, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'side', thick: 2.4, line: -22, side: -1},
     skin: SKIN.light, hairRamp: HAIR.dark, back: {skin: PAL.S3, hair: PAL.G3}},
-  face: {eye: 'deep', eyeW: 8, eyeH: 2, brow: 'arched', browCol: PAL.B0, mouthW: 9, age: 1},
+  face: {eye: 'almond', eyeW: 8, eyeH: 2, brow: 'arched', browCol: PAL.B0, mouthW: 9, age: 1},
   torso: {kind: 'blazer', noTie: true},
+  // earnest: the brows lifted at rest and in the polite smile
+  expr: {neutral: {eye: 'open', brow: 'up', mouth: 'rest'}, smile: {eye: 'crinkle', brow: 'up', mouth: 'smile', pose: {cheekUp: 0.8}}},
   extras: (s) => {
+    if (s.arm === 'spread') {
+      // "people first": both forearms up and out from the elbows at his sides, the hands open, palms toward us
+      // (the open palms themselves are stamped over the render: humanistBust)
+      return {parts: [{group: 'slvL', mat: 'suit', tone: 3, prims: [P.poly(8, 150, 10, 124, 22, 116, 30, 124, 26, 150)]}, {group: 'slvR', mat: 'suit', tone: 2, prims: [P.poly(104, 150, 102, 124, 90, 116, 82, 124, 86, 150)]}]};
+    }
     if (s.arm !== 'box') return {};
     // the box at his chest, both hands round its near corners (the box's front is painted after: humanistBust)
     const l = handParts('hl', {at: [26, 130], dir: [0.45, -0.9], thumb: -1, curl: 0.5, len: 12, width: 10});
@@ -47,9 +57,30 @@ const drawBoxB = (b: Buf, x: number, y: number) => {
   fill(b, x + 6, y + 9, 52, 13, PAL.P1); fill(b, x + 6, y + 9, 52, 1, PAL.P2); fill(b, x + 6, y + 21, 52, 1, PAL.P0);
   tiny(b, 'DEFLECTION', x + 9, y + 10, PAL.G4); tiny(b, '(LICENSED)', x + 10, y + 16, PAL.G4);
 };
+/** an open palm toward us, fingers up (bust scale, 12 x 20): the palm, four fingers (the middle two longest) with a
+ *  shadow between them, the thumb toward the side `out` (-1 left, 1 right: palms toward us, the thumbs point in), the wrist's crease; lit, so it reads as a
+ *  hand held open ("people first"), never a paw */
+const openPalm = (c: Int32Array, w: number, x: number, y: number, out: -1 | 1) => {
+  const S = [PAL.S2, PAL.S3, PAL.S4, PAL.S5, PAL.S6];
+  const set = (X: number, Y: number, v: number) => { if (X >= 0 && Y >= 0 && X < w && Y < c.length / w) c[Y * w + X] = v; };
+  for (let j = 0; j < 9; j++) for (let i = 0; i < 11; i++) set(x + i, y + 11 + j, j === 8 ? S[1] : i === 0 || i === 10 ? S[2] : j < 2 ? S[4] : S[3]);
+  const L = [7, 10, 11, 8];
+  for (let f = 0; f < 4; f++) {
+    const fx = x + (out > 0 ? 8 - f * 3 : f * 3) + (out > 0 ? 0 : 0);
+    const len = L[out > 0 ? 3 - f : f];
+    for (let j = 1; j <= len; j++) { set(fx, y + 11 - j, j === len ? S[4] : S[3]); set(fx + 1, y + 11 - j, j === len ? S[3] : S[2]); }
+  }
+  for (let j = 0; j < 6; j++) { const tx = out > 0 ? x + 11 + Math.floor(j / 2) : x - 1 - Math.floor(j / 2); set(tx, y + 18 - j, S[3]); set(tx + (out > 0 ? -1 : 1), y + 18 - j, S[2]); }
+  for (let i = 2; i < 9; i++) set(x + i, y + 15, S[2]);
+};
 export const humanistBust = (s: Partial<HumanistBust> = {}) => {
   const st = {...HUMANIST_DEFAULT, ...s};
   const img = bust(st);
+  if (st.arm === 'spread') {
+    const c = new Int32Array(img.c);
+    openPalm(c, img.w, 8, 98, 1); openPalm(c, img.w, 93, 98, -1);
+    return {w: img.w, h: img.h, c};
+  }
   if (st.arm !== 'box') return img;
   const out = {w: img.w, h: img.h, c: new Int32Array(img.c)};
   const b = new Buf(img.w, img.h, 0x1000000);
@@ -84,7 +115,7 @@ export const ART: ArtAsset[] = [{
     sheetBust(b, humanistBust(e('worry', 'rest', 'box')), -8, 50, 'caught out + box');
     sheetBust(b, humanistBust(e('worry', 'E')), 88, 50, 'is there room? (E)');
     sheetBust(b, humanistBust(e('smile')), 184, 50, 'polite smile');
-    sheetBust(b, humanistBust(e('neutral', 'O')), 280, 50, 'talk O');
+    sheetBust(b, humanistBust(e('neutral', 'O', 'spread')), 280, 50, 'people first (O)');
     sheetRoom(b, 402, 'carry', (x, y) => drawHumanistRoom(b, x, y, {arm: 'carry'}));
     sheetRoom(b, 436, 'walk', (x, y) => drawHumanistRoom(b, x, y, {arm: 'carry', legs: 'w1'}));
     sheetRoom(b, 466, 'down', (x, y) => drawHumanistRoom(b, x, y, {arm: 'down', mouth: 'open'}));

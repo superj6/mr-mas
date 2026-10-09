@@ -1,8 +1,9 @@
 // MR. MAS — Ep2 v1 · act1 · scene 4: THE EMAIL SÉANCE (MAR 5, 2024; the NopeAI boardroom, night; with Move 37 and
 // F2.3). 36 shots, 4632 f on the v1 EL lock (lock-v1.md). The shots pass, 2026-10-09; the record is
 // show/episodes/ep02/production/v1/shots-act1.md. The staging is proposal.md sc 4 and script-v1.md sc 4:
-//   ARRIVE   4.01 the candle-lit table, the staffers' hands joined, the Orb over it: 1.0 s on the wide, then 1.5 s at his
-//            end of the table, the post on his laptop (NOPEAI AND NOLE, its byline) legible: 2.5 s before his click
+//   ARRIVE   4.01 the candle-lit table, the staffers' hands joined, the Orb over it: 1.5 s on the wide, then 1.0 s at his
+//            end of the table, the post on his laptop (NOPEAI AND NOLE, its byline) legible (and again over the
+//            Publish button in 4.02): 2.5 s before his click
 //   THE MOVE 4.02 his finger on the bare Publish, the click; every candle flares a step and the planchette moves by
 //            itself; MAS's face while V.O. 1 types (lips still)
 //   TURNS    the ghosts answer Nole (less open / Yup; OPEN -> NOPE; the cow; 0%); Move 37 (the stone, the knob wall:
@@ -17,7 +18,6 @@ import type {PxShot, PxText} from '../../kit';
 import {drawPlate} from '../../kit';
 import {PAL} from '../../../../../shared/pixel/palette';
 import type {MasMouth} from '../../../../../shared/pixel/cast/mas';
-import {move37} from '../../art/sets/office2018';
 import {drawGhost, drawGhostNole} from '../../art/sets/seance';
 import {layer, pt as pt0, pw as pw0} from '../../art/kit';
 import type {Buf} from '../../../../../shared/pixel/px';
@@ -27,7 +27,7 @@ import {
   stafferMCU, noles2S, glassECU, masReverse, masBlow, letterAt, S4, NEAR_NOLE,
 } from '../sets/seance';
 import type {Room4} from '../sets/seance';
-import {office18, arenaInsert, alyiLooksBack, sweepEdge} from '../sets/f23';
+import {office18, arenaInsert, alyiLooksBack, sweepEdge, STAFF_N, move37} from '../sets/f23';
 import {glide, stepOf, noleMouth, TR, RH, W} from '../sets/common';
 
 const L = layouts();
@@ -47,9 +47,9 @@ const P_REPLY = letterAt('>>>');
 
 // ------------------------------------------------------------------ 4.01 ARRIVE: the table, then his end of it
 L.add('4.01', {
-  st: 'act1/sets/seance room (Ep1 rooms/boardroom at night, re-lit by six candles: art/sets/seance\'s board, candles and ghosts; MAS seated at the head, seat L, his laptop; the EMPTY CHAIR at seat A; GERG at B typing, a hand on the planchette; three STAFFERS at C D E holding hands; the Orb as the chandelier) for 1.0 s, then deskPOV: his laptop big at desk height, the post NOPEAI AND NOLE with its byline row … · ALYI · … · MAS legible, the candle-lit table beyond',
+  st: 'act1/sets/seance room (Ep1 rooms/boardroom at night, re-lit by six candles: art/sets/seance\'s board, candles and ghosts; MAS seated at the head, seat L, his laptop; the EMPTY CHAIR at seat A; GERG at B typing, a hand on the planchette; three STAFFERS at C D E holding hands, their arms bent at the elbow, the clasped hands low on the table; the Orb as the chandelier) for 1.5 s, then deskPOV: his laptop big at desk height, the post NOPEAI AND NOLE with its byline row … · ALYI · … · MAS legible, the candle-lit table beyond',
   draw: (fb, k, sh, f) => {
-    if (k < 24) { room(fb, base(f, {mas: {head: 'down'}})); return; }
+    if (k < 36) { room(fb, base(f, {mas: {head: 'down'}})); return; }
     deskPOV(fb, f);
   },
 });
@@ -197,11 +197,13 @@ L.add('4.11', {
 
 // ------------------------------------------------------------------ 4.12 "No. Not like that." Three hands lift
 L.add('4.12', {
-  st: 'act1/sets/seance noleMCU ([MCU] NOLE, Ep1\'s portrait warmed by the candles, jabbing at the board, lip-synced; then he looks down) → boardHigh (three hands resting on the planchette: Mas\'s grey cuff, GHOST-NOLE\'s in the spirit screen, Gerg\'s; all three lift off at once, a gap of shadow under the fingertips, then gone)',
+  st: 'act1/sets/seance noleMCU ([MCU] NOLE, Ep1\'s portrait warmed by the candles, jabbing at the board, lip-synced; then he looks down) → boardHigh (closer over the planchette, mid-frame: three hands resting on it, Mas\'s grey cuff from the left, GHOST-NOLE\'s whole hand from above in the spirit screen, Gerg\'s from the lower right, held 0.7 s; all three lift off at once, a gap of shadow under the fingertips, then gone)',
   face: {NOLE: 'lip'},
   draw: (fb, k, sh, f) => {
-    if (k < 71) { const talking = k >= 6 && k < 66; noleMCU(fb, {mouth: noleM(sh, k), brow: 1, jab: talking ? ((k >> 2) % 3 === 0 ? 1 : (k >> 2) % 3 === 1 ? 2 : 0) : 0, down: k >= 64}); return; }
-    boardHigh(fb, {f, at: '>>>', word: 'NOPE', hands: k < 88 ? 1 : k < 94 ? 2 : 3});
+    if (k < 71) { const talking = k >= 6 && k < 66; noleMCU(fb, {f, mouth: noleM(sh, k), brow: 1, jab: talking ? ((k >> 2) % 3 === 0 ? 1 : (k >> 2) % 3 === 1 ? 2 : 0) : 0, down: k >= 64}); return; }
+    // closer over the planchette (the camera moved so it sits mid-frame): the three hands rest on it from k71 (0.7 s),
+    // all three lift together at k88, gone at k94
+    boardHigh(fb, {f, at: '>>>', word: 'NOPE', hands: k < 88 ? 1 : k < 94 ? 2 : 3, cam: [80, 78]});
   },
 });
 
@@ -221,7 +223,7 @@ L.add('4.13', {
     const cap = sh.texts.find((t) => t.text.startsWith('FWD')), rep = sh.texts.find((t) => t.text.startsWith('NOLE:'));
     const rise = Math.min(1, on2(k) / 12);
     const chew = (k >> 3) % 2;
-    room(fb, base(f, {planchette: P_REPLY, nole: {pose: {arm: 'down', mouth: 0}}, hole: 2, mas: {head: 'host'}, over: (b) => {
+    room(fb, base(f, {planchette: P_REPLY, nole: {pose: {arm: 'down', mouth: 0}}, hole: 2, mas: {head: 'host'}, gerg: {hand: false}, over: (b) => {
       over(b, (t) => drawGhost(t, 214, 96 - Math.round(rise * 40) + chew, {kind: 'cow', header: '2018'}));
       if (cap && k >= cap.s) ghostPlate(b, COW_CAPTION, 14, 10, (k - cap.s) * 3);
       if (rep && k >= rep.s) ghostPlate(b, COW_REPLY, 14, 26, (k - rep.s) * 3);
@@ -247,7 +249,7 @@ L.add('4.15', {
   marks: {lamp: ['snd', 'lamp_click', 1, 0], swell: ['snd', 'reverse_swell_1beat', 1, 0]},
   draw: (fb, k, sh, f) => {
     const lamp = mk(sh, 'lamp', 5), sw = mk(sh, 'swell', 40);
-    noleMCU(fb, {mouth: 0, brow: 1, lamp: k >= lamp, screen: 'post', jab: k >= 14 && k < sw ? ((k >> 1) % 2 ? 1 : 2) : 0, down: k >= 14 && k < sw + 6});
+    noleMCU(fb, {f, mouth: 0, brow: 1, lamp: k >= lamp, screen: 'post', jab: k >= 14 && k < sw ? ((k >> 1) % 2 ? 1 : 2) : 0, down: k >= 14 && k < sw + 6});
     if (k >= sw - 2) over(fb, (t) => drawGhost(t, 150, 110 - on2(k - sw), {kind: 'bang', header: 'NOLE · JUST NOW', body: '!!!!!!!!'}));
   },
 });
@@ -260,7 +262,7 @@ L.add('4.16', {
   draw: (fb, k, sh, f) => {
     const rise = Math.min(1, on2(Math.max(0, k - 2)) / 14);
     const a = P_REPLY, c = letterAt('M');
-    room(fb, base(f, {planchette: [glide(k, 0, 10, a[0], c[0]), a[1]], nole: {pose: {arm: 'phone', mouth: 0}}, hole: 2, mas: {head: 'host'}, over: (b) => over(b, (t) => {
+    room(fb, base(f, {planchette: [glide(k, 0, 10, a[0], c[0]), a[1]], nole: {pose: {arm: 'phone', mouth: 0}}, hole: 2, mas: {head: 'host'}, gerg: {hand: false}, over: (b) => over(b, (t) => {
       if (rise <= 0) return;
       drawGhostNole(t, 300, 186 + Math.round((1 - rise) * 60), {hoodie: true, pose: {arm: 'point', mouth: room3Mouth(sh, k, 'GHOST-NOLE'), lean: 2}, flip: true, header: 'DEC 2018', quote: ZERO, headerAt: [12, 6]});
     })}));
@@ -273,7 +275,7 @@ L.add('4.17', {
   marks: {clack: ['snd', 'phone_clack_floor', 1, 0], flare: ['snd', 'candle_flare', 1, 0]},
   draw: (fb, k, sh, f) => {
     const clack = mk(sh, 'clack', 5), fl = mk(sh, 'flare', 6);
-    if (k <= clack) { noleMCU(fb, {mouth: 4, brow: 1, jab: k < clack - 2 ? 1 : 2, dip: k >= clack - 1 ? 2 : 0}); return; }
+    if (k <= clack) { noleMCU(fb, {f, mouth: 4, brow: 1, jab: k < clack - 2 ? 1 : 2, dip: k >= clack - 1 ? 2 : 0}); return; }
     const j = k - fl;
     glassECU(fb, {f, flame: j < 6 ? 2 : j < 14 ? 1 : 0});
   },
@@ -309,7 +311,7 @@ L.add('4.20', {
   face: {NOLE: 'lip'},
   draw: (fb, k, sh, f) => {
     const w = sh.lines.find((l) => l.who === 'STAFFER');
-    if (k < (w?.s ?? 37) - 3) { noleMCU(fb, {mouth: noleM(sh, k), brow: 0, dip: 1, down: true, x: 214, y: 58}); return; }
+    if (k < (w?.s ?? 37) - 3) { noleMCU(fb, {f, mouth: noleM(sh, k), brow: 0, dip: 1, down: true, x: 214, y: 58}); return; }
     stafferMCU(fb, {f, look: 0, expr: 'worry'});
   },
 });
@@ -318,12 +320,12 @@ L.add('4.20', {
 L.add('4.21', {
   st: 'act1/sets/seance noleMCU (NOLE to her, hushed, a man at a séance; lip-synced; his head dipped toward her)',
   face: {NOLE: 'lip'},
-  draw: (fb, k, sh, f) => { noleMCU(fb, {mouth: noleM(sh, k), brow: 0, dip: 2, x: 196, y: 50}); void f; },
+  draw: (fb, k, sh, f) => { noleMCU(fb, {f, mouth: noleM(sh, k), brow: 0, dip: 2, x: 196, y: 50}); void f; },
 });
 
 // ------------------------------------------------------------------ 4.22 Gerg's correction; the knob wall
 L.add('4.22', {
-  st: 'act1/sets/seance gergMCU ([MCU] GERG typing, cheerfully literal, his room-scale mouth) → stafferMCU (she whispers to him behind her hand: off-mic) → art/sets/office2018 move37 (from "Nobody wrote it.": behind the board the wall of tiny knobs, a stream of tiny human boards pouring in, each ticking every knob a hair; on "Then it played itself, millions of games." the stream turns to the program\'s own boards; the wall freezes; no players, no hands; Gerg\'s voice over it)',
+  st: 'act1/sets/seance gergMCU ([MCU] GERG typing, cheerfully literal, his room-scale mouth) → stafferMCU (she whispers to him behind her hand: off-mic) → art/sets/office2018 move37 (from "Nobody wrote it.": behind the board the wall of tiny knobs, a stream of tiny human boards pouring in, each ticking every knob a hair; on "Then it played itself, millions of games." the stream turns to the program\'s own boards (dark, cyan-bordered, two stones on each, no face; the knobs they land on light cyan); the stream runs above the Go board into the wall; the wall freezes; no players, no hands; Gerg\'s voice over it)',
   face: {GERG: 'room'},
   marks: {nobody: ['on', 'e2-a1-0056', 0], then: ['w', 'e2-a1-0056', 'Then', 0], games: ['w', 'e2-a1-0056', 'games', 0]},
   draw: (fb, k, sh, f) => {
@@ -340,7 +342,7 @@ L.add('4.23', {
   st: 'act1/sets/seance noleMCU (NOLE takes the fear back: quiet, then quieter; lip-synced)',
   face: {NOLE: 'lip'},
   marks: {right: ['w', 'e2-a1-0024', 'right', 0]},
-  draw: (fb, k, sh, f) => { const r = mk(sh, 'right', 117); noleMCU(fb, {mouth: noleM(sh, k), brow: 0, dip: k >= r ? 2 : 1, x: 222, y: 34}); void f; },
+  draw: (fb, k, sh, f) => { const r = mk(sh, 'right', 117); noleMCU(fb, {f, mouth: noleM(sh, k), brow: 0, dip: k >= r ? 2 : 1, x: 222, y: 34}); void f; },
 });
 
 // ------------------------------------------------------------------ 4.24 "MINDDEEP had that in 2016. We had a blog."
@@ -366,7 +368,7 @@ L.add('4.25', {
 L.add('4.26', {
   st: 'act1/sets/seance noleMCU (NOLE turned to Mas, quiet, his one short line; the post lamp beside him does not click on; a slow whole-pixel drift in; Mas\'s answer lands on his face, an L-cut)',
   face: {NOLE: 'lip'},
-  draw: (fb, k, sh, f) => { noleMCU(fb, {mouth: noleM(sh, k), brow: 0, dip: 0, drift: Math.floor(k / 14)}); void f; },
+  draw: (fb, k, sh, f) => { noleMCU(fb, {f, mouth: noleM(sh, k), brow: 0, dip: 0, drift: Math.floor(k / 14)}); void f; },
 });
 
 // ------------------------------------------------------------------ 4.27 the glass; the snuff; into 2018
@@ -389,12 +391,14 @@ L.add('4.27', {
 
 // ------------------------------------------------------------------ F2.3: 4.28-4.32
 L.add('4.28', {
-  st: 'act1/sets/f23 office18 (art/sets/office2018 office2018feb, copied with parameters: NopeAI\'s first office, FEB 20, 2018, by day, in T3 cut paper: one rack, the arena on one monitor, the whiteboard AGI with three crossed-out arrows, the Go stone on the desk; NOLE at the front by his slide ALSET · AI, mid-speech, his mouth moving with no sound; the all-hands facing him; GERG typing; MAS at the back with his glass); no captions',
+  st: 'act1/sets/f23 office18 (art/sets/office2018 office2018feb, copied with parameters: NopeAI\'s first office, FEB 20, 2018, by day, in T3 cut paper: one rack, the arena on one monitor, the whiteboard AGI with three crossed-out arrows, the Go stone on the desk; NOLE at the front by his slide ALSET · AI, mid-speech, his mouth moving with no sound; the all-hands at their desks, every chair swivelled round toward him, their monitors on behind them; GERG typing; ALYI at his desk turned to Nole; MAS at the back with his glass of water); no captions',
   draw: (fb, k, sh, f) => { const m = silentMouth(k); office18(fb, f, {nole: {at: 'slide', mouth: (m === 'open' ? 2 : 0) as 0 | 2, arm: 'point'}, turned: 0, alyiDesk: false}); },
 });
 L.add('4.29', {
-  st: 'act1/sets/f23 office18: NOLE finishes, one hand still on the slide; nobody applauds; one by one the staff turn back to their monitors (held steps); the arena match keeps playing; GERG keeps typing',
-  draw: (fb, k, sh, f) => { const n = Math.min(8, Math.max(0, Math.floor((k - 8) / 11))); office18(fb, f, {nole: {at: 'slide', mouth: 0, arm: 'point'}, turned: n, alyiDesk: n >= 6}); void sh; },
+  st: 'act1/sets/f23 office18: NOLE finishes, one hand still on the slide; nobody applauds; one by one the staff swivel back to the monitors behind them (held steps, a scattered order), Alyi with them; the arena match keeps playing; GERG keeps typing',
+  // one staffer every 6 frames swivels back to the monitor behind them (a held step each, in a scattered order), from
+  // k8 to about k86; Alyi turns back to his with the room
+  draw: (fb, k, sh, f) => { const n = k < 8 ? 0 : Math.min(STAFF_N, Math.floor((k - 8) / 6) + 1); office18(fb, f, {nole: {at: 'slide', mouth: 0, arm: 'point'}, turned: n, alyiDesk: n >= 9}); void sh; },
 });
 L.add('4.30', {
   st: 'act1/sets/f23 office18: at the back MAS sips from the same crystal glass; NOLE climbs the ladder to the ceiling hatch rung by rung; the hatch slides shut on him',
@@ -403,7 +407,7 @@ L.add('4.30', {
     const sip = mk(sh, 'sip', 10), climb = mk(sh, 'climb', 32), shut = mk(sh, 'shut', 89);
     const rung = Math.floor((k - climb) / 5);
     const nole = k < climb ? {at: 'slide' as const, mouth: 0 as const, arm: 'down' as const} : rung <= 9 ? {at: 'ladder' as const, rung} : {at: 'gone' as const};
-    office18(fb, f, {nole, turned: 8, hatch: k < shut - 6 ? 0 : k < shut ? 1 : 2, mas: k >= sip - 4 && k < sip + 14 ? 'glassUp' : 'glass', alyiDesk: true});
+    office18(fb, f, {nole, turned: STAFF_N, hatch: k < shut - 6 ? 0 : k < shut ? 1 : 2, mas: k >= sip - 4 && k < sip + 14 ? 'glassUp' : 'glass', alyiDesk: true});
   },
 });
 L.add('4.31', {
@@ -411,8 +415,10 @@ L.add('4.31', {
   draw: (fb, k, sh, f) => { arenaInsert(fb, f); void k; void sh; },
 });
 L.add('4.32', {
-  st: 'art/sets/office2018 alyiLooksBack ([2S] across the room: ALYI at the next desk, lit, warm, a person, cropped by his monitor\'s edge, turns and looks back at MAS at the back; Mas lifts his glass an inch); about 2.5 s on the look',
-  draw: (fb, k, sh, f) => { alyiLooksBack(fb, f, {turn: k < 24 ? 0 : k < 30 ? 1 : 2, lift: k >= 56}); void sh; },
+  st: 'art/sets/office2018 alyiLooksBack ([2S] across the room: ALYI at the next desk, lit, warm, a person, cropped by his monitor\'s edge, turns and looks back at MAS at the back, his eyes open on him (whites, irises, a glint) and a soft open smile, the crinkle only after the eyes meet; Mas lifts his glass an inch); about 2.9 s on the look',
+  // the turn (k24-30), then his eyes open on Mas with a soft open smile, held 1.1 s before Mas lifts his glass (k56);
+  // the crinkle comes in after the eyes have met (k66)
+  draw: (fb, k, sh, f) => { alyiLooksBack(fb, f, {turn: k < 24 ? 0 : k < 30 ? 1 : 2, lift: k >= 56, crinkle: k >= 66}); void sh; },
 });
 
 // ------------------------------------------------------------------ 4.33 back by the glass; Nole relights the candle
@@ -423,7 +429,7 @@ L.add('4.33', {
     const sw = mk(sh, 'sweep', 5), mt = mk(sh, 'match', 37);
     if (k < 21) {
       // the 2018 look, then the front sweeps back left to right onto 2024: his glass, the smoke thinning over it
-      alyiLooksBack(fb, f, {turn: 2, lift: true});
+      alyiLooksBack(fb, f, {turn: 2, lift: true, crinkle: true});
       if (k >= sw) {
         const x = Math.round(((k - sw + 1) / Math.max(1, 21 - sw)) * W);
         const t = new BufC(W, 270, PAL.N0); glassECU(t, {f, lift: 8, snuffed: 50 + k});
@@ -441,14 +447,15 @@ L.add('4.33', {
 
 // ------------------------------------------------------------------ 4.34 the reverse: "You sat at the back."
 L.add('4.34', {
-  st: 'act1/sets/seance masReverse ([OTS] the reverse over NOLE\'s shoulder (the back of his head, his black tee, his arm up) holding the relit candle up to MAS\'s face like evidence; Mas candlelit in the left third (Ep1\'s approved portrait), still; Nole\'s voice from behind his own head (no mouth to show); Mas lifts his glass and sips: F2.3\'s sip, six years on)',
+  st: 'act1/sets/seance masReverse ([OTS] the reverse over NOLE\'s shoulder (the back of his head, his black tee, his arm up) holding the relit candle up at MAS\'s cheek like evidence, his arm bent at the elbow; Mas candlelit from that side in the left third (Ep1\'s approved portrait), still; Nole\'s voice from behind his own head (no mouth to show); Mas lifts his glass and sips: F2.3\'s sip, six years on)',
   marks: {sip: ['snd', 'glass_sip', 1, 0]},
   draw: (fb, k, sh, f) => {
     const sp = mk(sh, 'sip', 190);
     const j = k - sp;
     const sip = j < -6 ? 0 : j < -4 ? 1 : j < -2 ? 2 : j < 8 ? 3 : j < 10 ? 2 : j < 12 ? 1 : 0;
-    const cy = glide(k, 0, 14, 128, 108, 2, true);
-    masReverse(fb, {f, candle: [262, cy], sip, look: 1});
+    // the candle comes up to his cheek (held there like evidence), its light falling across his face
+    const cx = glide(k, 0, 14, 214, 188, 2, true), cy = glide(k, 0, 14, 126, 104, 2, true);
+    masReverse(fb, {f, candle: [cx, cy], sip, look: 1});
   },
 });
 

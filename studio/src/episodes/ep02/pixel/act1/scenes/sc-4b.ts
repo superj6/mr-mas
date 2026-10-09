@@ -11,12 +11,13 @@ import {invite} from '../sets/board';
 
 const L = layouts();
 L.add('4B.01', {
-  st: 'act1/sets/board invite ([ECU] the phone on the table, the calendar app, the card in Ep1\'s invite look: the mic icon, XEL · LONG-FORM, MAR 18 · 2 HRS, Accept / Decline; his index finger (no cursor) on Accept on the click; the card settles in three held steps into the MAR 18 cell, its mic icon where the next shot\'s mic stands)',
+  st: 'act1/sets/board invite ([ECU] the phone on the table, the calendar app, the card in Ep1\'s invite look: the mic icon, XEL · LONG-FORM, MAR 18 · 2 HRS, Accept / Decline; his index finger (no cursor) on Accept on the click, then Accepted held on the lit button 8 frames; the card (its mic, Accepted, then XEL on it) settles in three held steps into the MAR 18 cell, its mic icon where the next shot\'s mic stands)',
   marks: {click: ['snd', 'post_click', 1, 0]},
   draw: (fb, k, sh, f) => {
     const c = mk(sh, 'click', 170);
+    // the finger on Accept (k c-4 .. c+1), then `Accepted` held on the lit button 8 frames before the card collapses
     const accept = (k < c - 4 ? 0 : k < c + 2 ? 1 : 2) as 0 | 1 | 2;
-    const j = k - (c + 8);
+    const j = k - (c + 10);
     invite(fb, {f, accept, settle: j < 0 ? 0 : j < 6 ? 0.34 : j < 12 ? 0.67 : 1});
   },
 });
