@@ -1,0 +1,624 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e02-v1-tag-el",
+ "segment": "tag",
+ "file": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
+ "length_s": 37.0,
+ "frames": 888,
+ "samples": 1776000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame",
+ "level": "underscore (the engine master at -20 LUFS-I, shaped by fader rides), dry of dialogue; the mixer ducks it under the V.O. (E02-13: 8 dB)",
+ "cues": [
+  {
+   "cue": "e02-13-august",
+   "key": "august",
+   "start": 0.0,
+   "end": 37.0,
+   "what": "momentum; a laugh; satisfaction (the verdict); a chill (the balloon, the taut string, his face)",
+   "family": "P07 THE RUN -> P13 THE PODIUM (FEAR)",
+   "render": "audio/ost/tracks/e02-v1-tag/render/_work/el/e02-13-august-underscore.wav",
+   "laid_at_s": -0.5,
+   "level": {
+    "lufs_i": -19.95,
+    "st_p95": -17.11,
+    "st_max": -16.57,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -20.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.0,
+      "lra": 8.57,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -22.66,
+      "crest_db": 19.51,
+      "seconds": 38.3
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.254,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 6,
+     "of": 6,
+     "worst_ms": 5.5
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 378,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "THE RUN's pedal, engine and stabs: the knee stab (the title's quartal C F B-flat E-flat), one per item",
+    "the Build's chip arpeggio (Gerg's cell, moved through the loop)",
+    "the felt ostinato (3+3+2)",
+    "THE VERDICT (F5 -> C6, a beat after the chime)",
+    "RUMPT's Podium in FEAR (cup-muted trombone: E-flat F | G-flat B-flat | E-flat held)",
+    "his felt F4 on his face (the ninth of the candidate's chord)"
+   ],
+   "events": {
+    "end": 37.0,
+    "thud": 1.6,
+    "b02": 4.583,
+    "b03": 8.917,
+    "b04": 13.083,
+    "scan": 14.483,
+    "chime": 17.283,
+    "toast_end": 19.683,
+    "b05": 19.917,
+    "b06": 22.875,
+    "b07": 27.5,
+    "knot": 32.075,
+    "b08": 33.417,
+    "taut": 33.717,
+    "b09": 35.0,
+    "pages": [
+     4.852333333333333,
+     5.792333333333334,
+     6.7333333333333325
+    ],
+    "pumps": [
+     28.307,
+     29.384,
+     30.46
+    ],
+    "vo_on": 20.457,
+    "vo_end": 22.357,
+    "doc": [
+     2.2,
+     4.583333333333333
+    ],
+    "post": [
+     10.516666666666666,
+     13.016666666666666
+    ],
+    "lower": [
+     24.275,
+     27.425
+    ],
+    "t_run": 4.5,
+    "t_fm": 7.0,
+    "t_bbm": 8.562,
+    "t_st2": 13.094,
+    "t_lay": 14.5,
+    "t_stop1": 17.233,
+    "t_v1": 17.938,
+    "t_v2": 18.562,
+    "t_res": 19.5,
+    "t_st3": 22.625,
+    "t_fear": 27.625,
+    "t_hold": 32.0,
+    "t_thin": 33.25,
+    "t_felt": 34.812,
+    "chords": [
+     [
+      0.0,
+      "Db5"
+     ],
+     [
+      4.5,
+      "Dbmaj9"
+     ],
+     [
+      7.0,
+      "Fm9"
+     ],
+     [
+      8.562,
+      "Bbm9"
+     ],
+     [
+      13.094,
+      "C7sus"
+     ],
+     [
+      17.938,
+      "F5"
+     ],
+     [
+      19.5,
+      "Fm9b"
+     ],
+     [
+      22.625,
+      "Fped"
+     ]
+    ],
+    "t_felt0": 0.75,
+    "engine": {
+     "felt": 42,
+     "hats": 102,
+     "chip": 77,
+     "xylo": 7,
+     "vln_pz": 10
+    },
+    "fear_line": [
+     [
+      "Eb3",
+      27.625
+     ],
+     [
+      "F3",
+      28.875
+     ],
+     [
+      "Gb3",
+      29.5
+     ],
+     [
+      "Bb3",
+      30.75
+     ],
+     [
+      "Eb4",
+      32.0
+     ]
+    ]
+   },
+   "changes": [
+    {
+     "t": 0.0,
+     "chord": "Db5",
+     "nearest_cut": 4.583,
+     "lead_s": 4.583
+    },
+    {
+     "t": 4.5,
+     "chord": "Dbmaj9",
+     "nearest_cut": 4.583,
+     "lead_s": 0.083
+    },
+    {
+     "t": 7.0,
+     "chord": "Fm9",
+     "nearest_cut": 8.917,
+     "lead_s": 1.917
+    },
+    {
+     "t": 8.562,
+     "chord": "Bbm9",
+     "nearest_cut": 8.917,
+     "lead_s": 0.355
+    },
+    {
+     "t": 13.094,
+     "chord": "C7sus",
+     "nearest_cut": 13.083,
+     "lead_s": -0.011
+    },
+    {
+     "t": 17.938,
+     "chord": "F5",
+     "nearest_cut": 19.917,
+     "lead_s": 1.979
+    },
+    {
+     "t": 19.5,
+     "chord": "Fm9b",
+     "nearest_cut": 19.917,
+     "lead_s": 0.417
+    },
+    {
+     "t": 22.625,
+     "chord": "Fped",
+     "nearest_cut": 22.875,
+     "lead_s": 0.25
+    },
+    {
+     "t": 27.625,
+     "chord": "Ebm (FEAR)",
+     "nearest_cut": 27.5,
+     "lead_s": -0.125
+    },
+    {
+     "t": 33.25,
+     "chord": "Ebm (one held chord)",
+     "nearest_cut": 33.417,
+     "lead_s": 0.167
+    }
+   ],
+   "sync": [
+    {
+     "t": 0.0,
+     "what": "the tag's first frame: THE RUN's pedal, the D-flat fifth bowed sul tasto, swelling in under Act Four's ring-out (the Door's held G and its D-flat fifth, laid by the mix): the same D-flat, taken over",
+     "hit": false
+    },
+    {
+     "t": 0.75,
+     "what": "as he sits: the felt's open fifth D-flat 3 + A-flat 3 (ppp), his piano under the Door's fading G",
+     "hit": false
+    },
+    {
+     "t": 1.6,
+     "what": "THE THUD (landing_thunk 1.60, the SFX's): the pedal holds; nothing hits with it",
+     "hit": false
+    },
+    {
+     "t": 4.5,
+     "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over Db), item 1 (AUG 5, the suit is back): THE RUN's first downbeat, D-flat maj9; on the bar, 0.08 s before the cut to the pages",
+     "hit": true
+    },
+    {
+     "t": 8.562,
+     "what": "B-flat m9 (the iv), on an eighth, 0.35 s before the cut to the post; then under the post (the record, 10.52-13.02) THE RUN thins: the chip and the felt out, the hats and the pizzicato soft, the pad holds",
+     "hit": false
+    },
+    {
+     "t": 13.094,
+     "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over C), item 2 (AUG 11, his post): the stab waited for the record to clear (post ends 13.017); C7sus, on a sixteenth, 0.01 s after the cut to the Orb",
+     "hit": true
+    },
+    {
+     "t": 14.5,
+     "what": "xylophone and wood join (a layer) as the scan starts (orb_scan_sweep 14.48; the bar nearest it)",
+     "hit": false
+    },
+    {
+     "t": 17.233,
+     "what": "the Orb's F chime (17.283, the SFX's): THE RUN's engine stops; the C7sus pad holds through the toast",
+     "hit": false
+    },
+    {
+     "t": 17.938,
+     "what": "DESIGNED HIT: THE VERDICT, F5 (vibes + glass), 0.65 s after the chime (a beat, never with it); the pad resolves C7sus -> the open fifth F (no third): iv - V - I on the machine's answer",
+     "hit": true
+    },
+    {
+     "t": 18.562,
+     "what": "THE VERDICT, C6 a beat later, let ring",
+     "hit": true
+    },
+    {
+     "t": 19.5,
+     "what": "THE RUN again, F m9 (on the bar, 0.42 s before the cut to Mas at the monitor); the violins' pizzicato join; the V.O. (20.46-22.36) sits inside the bed: nothing starts on its words but the engine's own 16ths, the chip and the kit softer",
+     "hit": false
+    },
+    {
+     "t": 22.625,
+     "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over F), item 3 (AUG 21): the last stab, F7sus, and THE RUN's stop; on the beat, 0.25 s before the cut to the interview",
+     "hit": true
+    },
+    {
+     "t": 22.635,
+     "what": "THE RUN's stop: it thins to its pedal, the open fifth F (the room's own F, no third), under the AUG 21 lower third (24.27-27.43); the neutral text blip (SFX) carries his words",
+     "hit": false
+    },
+    {
+     "t": 27.625,
+     "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on the beat, 0.12 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 27.425; OST §2.10)",
+     "hit": true
+    },
+    {
+     "t": 32.0,
+     "what": "the Podium's held E-flat on the knot (knot_tie 32.075): the timpani roll's arrival, one soft chip glint (the gold, muted)",
+     "hit": false
+    },
+    {
+     "t": 33.25,
+     "what": "the hook (on the beat, 0.17 s before the cut): the Podium thins to ONE HELD CHORD (E-flat minor: the muted horns, the trombone's held E-flat, the cello sul tasto); the tremolo and the timpani out; the string goes taut (33.72, the SFX's) over it",
+     "hit": false
+    },
+    {
+     "t": 34.812,
+     "what": "his face (on an eighth, 0.19 s before the cut): his felt F4, the chord's ninth and his home note, inside the candidate's E-flat minor",
+     "hit": false
+    },
+    {
+     "t": 37.0,
+     "what": "THE OUT: the cut to black on the downbeat (the tag's last frame is a bar line): every voice stops dead (5 ms), the tails cut",
+     "hit": false
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [
+  {
+   "t": 4.5,
+   "cue": "e02-13-august",
+   "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over Db), item 1 (AUG 5, the suit is back): THE RUN's first downbeat, D-flat maj9; on the bar, 0.08 s before the cut to the pages",
+   "exempt": "a designed attack on a story beat; keep its attack"
+  },
+  {
+   "t": 13.094,
+   "cue": "e02-13-august",
+   "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over C), item 2 (AUG 11, his post): the stab waited for the record to clear (post ends 13.017); C7sus, on a sixteenth, 0.01 s after the cut to the Orb",
+   "exempt": "a designed attack on a story beat; keep its attack"
+  },
+  {
+   "t": 22.625,
+   "cue": "e02-13-august",
+   "what": "DESIGNED HIT: THE KNEE STAB (C F B-flat E-flat over F), item 3 (AUG 21): the last stab, F7sus, and THE RUN's stop; on the beat, 0.25 s before the cut to the interview",
+   "exempt": "a designed attack on a story beat; keep its attack"
+  },
+  {
+   "t": 17.938,
+   "cue": "e02-13-august",
+   "what": "DESIGNED HIT: THE VERDICT, F5 (vibes + glass), 0.65 s after the chime (a beat, never with it); the pad resolves C7sus -> the open fifth F (no third): iv - V - I on the machine's answer",
+   "exempt": "a designed attack on a story beat; keep its attack"
+  },
+  {
+   "t": 27.625,
+   "cue": "e02-13-august",
+   "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on the beat, 0.12 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 27.425; OST §2.10)",
+   "exempt": "a designed attack on a story beat; keep its attack"
+  }
+ ],
+ "claims_sfx": [],
+ "sections": [
+  {
+   "section": "e02-13-august: 1 the pedal under the suit's landing (D-flat fifth; the docket's caption)",
+   "start": 0.0,
+   "end": 4.5
+  },
+  {
+   "section": "e02-13-august: 2 THE RUN: the pages (D-flat maj9, F m9)",
+   "start": 4.5,
+   "end": 8.562
+  },
+  {
+   "section": "e02-13-august: 3 THE RUN: the post (B-flat m9; thinned under the record)",
+   "start": 8.562,
+   "end": 13.094
+  },
+  {
+   "section": "e02-13-august: 4 THE RUN: the Orb's scan (C7sus; xylophone and wood)",
+   "start": 13.094,
+   "end": 17.233
+  },
+  {
+   "section": "e02-13-august: 5 the chime and THE VERDICT (the open fifth F)",
+   "start": 17.233,
+   "end": 19.5
+  },
+  {
+   "section": "e02-13-august: 6 THE RUN again: Mas at the monitor, the V.O. inside it (F m9)",
+   "start": 19.5,
+   "end": 22.625
+  },
+  {
+   "section": "e02-13-august: 7 THE RUN's pedal: the AUG 21 lower third (the open fifth F)",
+   "start": 22.625,
+   "end": 27.625
+  },
+  {
+   "section": "e02-13-august: 8 RUMPT's Podium, FEAR: the balloon",
+   "start": 27.625,
+   "end": 33.25
+  },
+  {
+   "section": "e02-13-august: 9 one held chord: the taut string, his face; the cut on the downbeat",
+   "start": 33.25,
+   "end": 37.0
+  }
+ ],
+ "real_lines": [],
+ "record_on_screen": [
+  {
+   "t0": 2.2,
+   "t1": 4.583,
+   "text": "NOLE v. MANALT ET AL. · FEDERAL COURT"
+  },
+  {
+   "t0": 10.517,
+   "t1": 13.017,
+   "text": "…and she 'A.I.'d' it…"
+  },
+  {
+   "t0": 24.275,
+   "t1": 27.425,
+   "text": "…having me speak… It's a little bit dangerous ou"
+  }
+ ],
+ "prelap": null,
+ "ringout": null,
+ "head": "no head fade (mix_episode.py has none for the tag); Act Four's render/music-el-ringout.wav (the Door's held G4 and its D-flat fifth) is laid at the tag's 0 and crossfaded out over 2.5 s from this score's entry; the score enters at 0.02 s on the same D-flat fifth",
+ "out": "the cut to black on the downbeat at the last frame (37.000 s, a bar line of the cue's grid): every voice stops dead, a 5 ms fade, the tails cut; no ring-out (the outro starts on its own music, E02-14)",
+ "measured": {
+  "length_s": 37.0,
+  "samples": 1776000,
+  "frames": 888,
+  "exact": true,
+  "whole": {
+   "lufs_i": -19.95,
+   "st_p95": -17.11,
+   "st_max": -16.57,
+   "true_peak_dbtp": -3.15
+  },
+  "cues": {
+   "e02-13-august": {
+    "lufs_i": -19.95,
+    "st_p95": -17.11,
+    "st_max": -16.57,
+    "true_peak_dbtp": -3.15
+   }
+  },
+  "rows": [
+   {
+    "section": "e02-13-august: 1 the pedal under the suit's landing (D-flat fifth; the docket's caption)",
+    "start": 0.0,
+    "end": 4.5,
+    "lufs_i": -24.82,
+    "st_p95": -25.17,
+    "st_max": -25.11,
+    "true_peak_dbtp": -11.32
+   },
+   {
+    "section": "e02-13-august: 2 THE RUN: the pages (D-flat maj9, F m9)",
+    "start": 4.5,
+    "end": 8.56,
+    "lufs_i": -17.47,
+    "st_p95": -17.26,
+    "st_max": -17.25,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-13-august: 3 THE RUN: the post (B-flat m9; thinned under the record)",
+    "start": 8.56,
+    "end": 13.09,
+    "lufs_i": -21.36,
+    "st_p95": -20.14,
+    "st_max": -19.97,
+    "true_peak_dbtp": -7.34
+   },
+   {
+    "section": "e02-13-august: 4 THE RUN: the Orb's scan (C7sus; xylophone and wood)",
+    "start": 13.09,
+    "end": 17.23,
+    "lufs_i": -16.77,
+    "st_p95": -16.53,
+    "st_max": -16.49,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-13-august: 5 the chime and THE VERDICT (the open fifth F)",
+    "start": 17.23,
+    "end": 19.5,
+    "lufs_i": -19.35,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -10.61
+   },
+   {
+    "section": "e02-13-august: 6 THE RUN again: Mas at the monitor, the V.O. inside it (F m9)",
+    "start": 19.5,
+    "end": 22.62,
+    "lufs_i": -20.78,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -6.73
+   },
+   {
+    "section": "e02-13-august: 7 THE RUN's pedal: the AUG 21 lower third (the open fifth F)",
+    "start": 22.62,
+    "end": 27.62,
+    "lufs_i": -26.57,
+    "st_p95": -24.32,
+    "st_max": -23.17,
+    "true_peak_dbtp": -3.58
+   },
+   {
+    "section": "e02-13-august: 8 RUMPT's Podium, FEAR: the balloon",
+    "start": 27.62,
+    "end": 33.25,
+    "lufs_i": -20.52,
+    "st_p95": -20.24,
+    "st_max": -20.13,
+    "true_peak_dbtp": -9.68
+   },
+   {
+    "section": "e02-13-august: 9 one held chord: the taut string, his face; the cut on the downbeat",
+    "start": 33.25,
+    "end": 37.0,
+    "lufs_i": -22.32,
+    "st_p95": -22.07,
+    "st_max": -22.06,
+    "true_peak_dbtp": -12.95
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.05,
+    "t1": 37.0,
+    "dur": 36.95
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": [],
+  "head_momentary_max": -20.47,
+  "momentary": {
+   "the pedal": -20.47,
+   "the first stab": -15.24,
+   "the pages": -15.24,
+   "the post (thinned)": -25.24,
+   "the scan": -13.85,
+   "the verdict": -17.71,
+   "with Mas": -15.86,
+   "the pedal (lower third)": -27.25,
+   "FEAR": -18.67,
+   "one held chord": -20.74
+  },
+  "vo_windows_lufs": [
+   {
+    "line": "e2-vo-14",
+    "t0": 20.46,
+    "t1": 22.36,
+    "lufs": -22.94
+   }
+  ],
+  "tail_last_10ms_dbfs": -19.4
+ },
+ "laid": [
+  {
+   "name": "e02-13-august",
+   "file": "audio/ost/tracks/e02-v1-tag/render/_work/el/e02-13-august-underscore.wav",
+   "laid_at_s": -0.5,
+   "window": [
+    0.0,
+    37.0
+   ],
+   "fade_in_s": 0.0,
+   "fade_out_s": 0.003,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e02-v1-tag/track.py",
+ "sfx_requests": [
+  "landing_thunk (23.01): the pedal holds under it; nothing in the score hits with it",
+  "page_turn x3 (23.02): THE RUN runs under them and does not comment on them",
+  "orb_chime_F + ui_toast_pop (23.04): THE RUN's engine stops 0.05 s before the chime; the verdict (F5, C6 on vibes + glass) follows a beat later. Keep the chime at F",
+  "blip_text_neutral (23.06): it carries his words over THE RUN's pedal (the open fifth F)",
+  "balloon_pump x3, knot_tie (23.07): FEAR plays under them; nothing is cut to them",
+  "string_taut (23.08): over the one held chord (E-flat minor): untuned is fine, or E-flat / B-flat; never A"
+ ],
+ "heard": "nothing here has been listened to; every number is measured"
+}
