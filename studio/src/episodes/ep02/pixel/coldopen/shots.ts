@@ -4,7 +4,8 @@
 import {defineSegment, fromScenes} from '../spec';
 import type {SceneSpec} from '../spec';
 import {LOCK} from './data';
-// <scenes>
-const SCENES: SceneSpec[] = [];
+// <scenes> (tools/scenes.py: one import per scene module, in the lock's order)
+import {SCENE as sc_1} from './scenes/sc-1';
+const SCENES: SceneSpec[] = [sc_1];
 // </scenes>
 export const SEGMENT = defineSegment({seg: 'coldopen', lock: LOCK, layouts: fromScenes(...SCENES)});

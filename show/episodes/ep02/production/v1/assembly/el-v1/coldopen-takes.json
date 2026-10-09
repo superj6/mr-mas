@@ -1,0 +1,1620 @@
+[
+ {
+  "id": "e2-co-0001",
+  "kind": "dialogue",
+  "scene": "1.02",
+  "speaker": "SELBEEP",
+  "speaker_slug": "selbeep",
+  "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+  "spoken_as": "Eyes up here, everyone. This is Ah-ross. Nobody filmed any of this. It's all made from one sentence.",
+  "tag": "",
+  "delivery": "to the room, proud; a showman with a remote the size of a clapperboard",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 6.784,
+  "frames_24": 163,
+  "voiced_span_s": 6.03,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 6.4,
+   "measured": {
+    "span_s": 6.03,
+    "wpm": 179.1,
+    "syllables": 25,
+    "articulation_sps": 4.15,
+    "pauses_s": [
+     0.06,
+     0.08,
+     0.06
+    ]
+   },
+   "longest_internal_gap_s": 0.08,
+   "words": 18,
+   "wpm": 179.1,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Eyes",
+    "t0": 0.35,
+    "t1": 0.571,
+    "ph": "ˈIz"
+   },
+   {
+    "w": "up",
+    "t0": 0.617,
+    "t1": 0.71,
+    "ph": "ˌʌp"
+   },
+   {
+    "w": "here",
+    "t0": 0.756,
+    "t1": 0.896,
+    "ph": "hˈɪɹ"
+   },
+   {
+    "w": "everyone",
+    "t0": 0.942,
+    "t1": 1.337,
+    "ph": "ˈɛvɹiwən"
+   },
+   {
+    "w": "This",
+    "t0": 1.534,
+    "t1": 1.708,
+    "ph": "ðˈɪs"
+   },
+   {
+    "w": "is",
+    "t0": 1.755,
+    "t1": 1.836,
+    "ph": "ɪz"
+   },
+   {
+    "w": "AROS",
+    "t0": 1.952,
+    "t1": 2.568,
+    "ph": "ˌAˌɑɹˌOˈɛs"
+   },
+   {
+    "w": "Nobody",
+    "t0": 3.125,
+    "t1": 3.415,
+    "ph": "nˈObˌɑdi"
+   },
+   {
+    "w": "filmed",
+    "t0": 3.473,
+    "t1": 3.729,
+    "ph": "fˈɪlmd"
+   },
+   {
+    "w": "any",
+    "t0": 3.763,
+    "t1": 3.879,
+    "ph": "ˈɛni"
+   },
+   {
+    "w": "of",
+    "t0": 3.926,
+    "t1": 3.984,
+    "ph": "ʌv"
+   },
+   {
+    "w": "this",
+    "t0": 4.03,
+    "t1": 4.274,
+    "ph": "ðˈɪs"
+   },
+   {
+    "w": "It's",
+    "t0": 4.692,
+    "t1": 4.878,
+    "ph": "ˌɪts"
+   },
+   {
+    "w": "all",
+    "t0": 4.901,
+    "t1": 5.017,
+    "ph": "ˈɔl"
+   },
+   {
+    "w": "made",
+    "t0": 5.064,
+    "t1": 5.226,
+    "ph": "mˌAd"
+   },
+   {
+    "w": "from",
+    "t0": 5.249,
+    "t1": 5.377,
+    "ph": "fɹʌm"
+   },
+   {
+    "w": "one",
+    "t0": 5.458,
+    "t1": 5.621,
+    "ph": "wˈʌn"
+   },
+   {
+    "w": "sentence",
+    "t0": 5.667,
+    "t1": 6.178,
+    "ph": "sˈɛntᵊns"
+   }
+  ],
+  "qa": {
+   "asr": "Eyes up here everyone. This is our Ross. Nobody filmed any of this. It's all made from one sentence",
+   "cer": 0.054,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.46,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 140.0,
+   "f0_range_st": 15.8,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.384,
+   "raw_tail_cut": false,
+   "align_median_s": 0.084
+  },
+  "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "Qziuou6kCJ2R3w53L2Zs",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "selbeep",
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 2243797715,
+   "chars_sent": 100,
+   "request_key": "1403e9f8488e0d15",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "A"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "M"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "A"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "E"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "A"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "O"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.333,
+    "f": 32,
+    "shape": "rest"
+   },
+   {
+    "t": 1.583,
+    "f": 38,
+    "shape": "A"
+   },
+   {
+    "t": 1.667,
+    "f": 40,
+    "shape": "E"
+   },
+   {
+    "t": 1.833,
+    "f": 44,
+    "shape": "rest"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "A"
+   },
+   {
+    "t": 2.25,
+    "f": 54,
+    "shape": "O"
+   },
+   {
+    "t": 2.417,
+    "f": 58,
+    "shape": "A"
+   },
+   {
+    "t": 2.583,
+    "f": 62,
+    "shape": "rest"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "O"
+   },
+   {
+    "t": 3.25,
+    "f": 78,
+    "shape": "A"
+   },
+   {
+    "t": 3.333,
+    "f": 80,
+    "shape": "E"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "A"
+   },
+   {
+    "t": 3.583,
+    "f": 86,
+    "shape": "E"
+   },
+   {
+    "t": 3.667,
+    "f": 88,
+    "shape": "M"
+   },
+   {
+    "t": 3.75,
+    "f": 90,
+    "shape": "A"
+   },
+   {
+    "t": 3.833,
+    "f": 92,
+    "shape": "E"
+   },
+   {
+    "t": 3.917,
+    "f": 94,
+    "shape": "A"
+   },
+   {
+    "t": 4.0,
+    "f": 96,
+    "shape": "E"
+   },
+   {
+    "t": 4.083,
+    "f": 98,
+    "shape": "A"
+   },
+   {
+    "t": 4.208,
+    "f": 101,
+    "shape": "E"
+   },
+   {
+    "t": 4.292,
+    "f": 103,
+    "shape": "rest"
+   },
+   {
+    "t": 4.708,
+    "f": 113,
+    "shape": "E"
+   },
+   {
+    "t": 4.917,
+    "f": 118,
+    "shape": "O"
+   },
+   {
+    "t": 5.0,
+    "f": 120,
+    "shape": "E"
+   },
+   {
+    "t": 5.083,
+    "f": 122,
+    "shape": "A"
+   },
+   {
+    "t": 5.333,
+    "f": 128,
+    "shape": "M"
+   },
+   {
+    "t": 5.417,
+    "f": 130,
+    "shape": "O"
+   },
+   {
+    "t": 5.5,
+    "f": 132,
+    "shape": "A"
+   },
+   {
+    "t": 5.583,
+    "f": 134,
+    "shape": "E"
+   },
+   {
+    "t": 5.708,
+    "f": 137,
+    "shape": "A"
+   },
+   {
+    "t": 5.833,
+    "f": 140,
+    "shape": "E"
+   },
+   {
+    "t": 6.167,
+    "f": 148,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-co-0002",
+  "kind": "dialogue",
+  "scene": "1.03",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "Which sentence?",
+  "spoken_as": "Which sentence?",
+  "tag": "",
+  "delivery": "typing on his knees, not looking up; he's missed the whole thing",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.815,
+  "frames_24": 44,
+  "voiced_span_s": 0.78,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 1.16,
+   "measured": {
+    "span_s": 0.78,
+    "wpm": 153.8,
+    "syllables": 3,
+    "articulation_sps": 3.85,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 2,
+   "wpm": 153.8,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Which",
+    "t0": 0.36,
+    "t1": 0.605,
+    "ph": "wˌɪʧ"
+   },
+   {
+    "w": "sentence",
+    "t0": 0.663,
+    "t1": 1.116,
+    "ph": "sˈɛntᵊns"
+   }
+  ],
+  "qa": {
+   "asr": "Which sentence?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.42,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.13,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 128.9,
+   "f0_range_st": 16.0,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.655,
+   "raw_tail_cut": false,
+   "align_median_s": 0.36
+  },
+  "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "y0s2ExEMuum3muUnA6Zd",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 2548658582,
+   "chars_sent": 15,
+   "request_key": "d7b52cb45f4c7537",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.375,
+    "f": 9,
+    "shape": "O"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 1.125,
+    "f": 27,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-co-0003",
+  "kind": "dialogue",
+  "scene": "1.04",
+  "speaker": "SELBEEP",
+  "speaker_slug": "selbeep",
+  "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+  "spoken_as": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+  "tag": "",
+  "delivery": "patient with Gerg, then proud again on the last sentence",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 6.877,
+  "frames_24": 165,
+  "voiced_span_s": 5.84,
+  "pace": {
+   "audible_in_s": 0.4,
+   "audible_out_s": 6.24,
+   "measured": {
+    "span_s": 5.84,
+    "wpm": 164.4,
+    "syllables": 26,
+    "articulation_sps": 5.26,
+    "pauses_s": [
+     0.46,
+     0.44
+    ]
+   },
+   "longest_internal_gap_s": 0.46,
+   "words": 16,
+   "wpm": 164.4,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "A",
+    "t0": 0.38,
+    "t1": 0.443,
+    "ph": "ɐ"
+   },
+   {
+    "w": "mammoth",
+    "t0": 0.559,
+    "t1": 0.965,
+    "ph": "mˈæməθ"
+   },
+   {
+    "w": "walking",
+    "t0": 1.047,
+    "t1": 1.395,
+    "ph": "wˈɔkɪŋ"
+   },
+   {
+    "w": "through",
+    "t0": 1.441,
+    "t1": 1.674,
+    "ph": "θɹˈu"
+   },
+   {
+    "w": "the",
+    "t0": 1.708,
+    "t1": 1.778,
+    "ph": "ðə"
+   },
+   {
+    "w": "snow",
+    "t0": 1.824,
+    "t1": 2.184,
+    "ph": "snˈO"
+   },
+   {
+    "w": "We",
+    "t0": 2.753,
+    "t1": 2.869,
+    "ph": "wˌi"
+   },
+   {
+    "w": "never",
+    "t0": 2.927,
+    "t1": 3.09,
+    "ph": "nˈɛvəɹ"
+   },
+   {
+    "w": "said",
+    "t0": 3.136,
+    "t1": 3.299,
+    "ph": "sˈɛd"
+   },
+   {
+    "w": "anything",
+    "t0": 3.345,
+    "t1": 3.659,
+    "ph": "ˈɛniθˌɪŋ"
+   },
+   {
+    "w": "about",
+    "t0": 3.705,
+    "t1": 3.891,
+    "ph": "əbˈWt"
+   },
+   {
+    "w": "a",
+    "t0": 3.926,
+    "t1": 3.949,
+    "ph": "ɐ"
+   },
+   {
+    "w": "lobby",
+    "t0": 4.03,
+    "t1": 4.495,
+    "ph": "lˈɑbi"
+   },
+   {
+    "w": "It",
+    "t0": 4.994,
+    "t1": 5.122,
+    "ph": "ˌɪt"
+   },
+   {
+    "w": "understands",
+    "t0": 5.168,
+    "t1": 5.725,
+    "ph": "ˌʌndəɹstˈændz"
+   },
+   {
+    "w": "physics",
+    "t0": 5.772,
+    "t1": 6.225,
+    "ph": "fˈɪzɪks"
+   }
+  ],
+  "qa": {
+   "asr": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.7,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 144.1,
+   "f0_range_st": 16.1,
+   "speech_head_s": 0.4,
+   "speech_tail_s": 0.637,
+   "raw_tail_cut": false,
+   "align_median_s": 0.086
+  },
+  "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "Qziuou6kCJ2R3w53L2Zs",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "selbeep",
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 1818046919,
+   "chars_sent": 97,
+   "request_key": "bdc4233bd8981e0c",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "M"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "A"
+   },
+   {
+    "t": 0.75,
+    "f": 18,
+    "shape": "M"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "E"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "O"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "E"
+   },
+   {
+    "t": 1.542,
+    "f": 37,
+    "shape": "O"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "E"
+   },
+   {
+    "t": 1.958,
+    "f": 47,
+    "shape": "O"
+   },
+   {
+    "t": 2.167,
+    "f": 52,
+    "shape": "rest"
+   },
+   {
+    "t": 2.792,
+    "f": 67,
+    "shape": "E"
+   },
+   {
+    "t": 2.958,
+    "f": 71,
+    "shape": "A"
+   },
+   {
+    "t": 3.042,
+    "f": 73,
+    "shape": "E"
+   },
+   {
+    "t": 3.167,
+    "f": 76,
+    "shape": "A"
+   },
+   {
+    "t": 3.25,
+    "f": 78,
+    "shape": "E"
+   },
+   {
+    "t": 3.333,
+    "f": 80,
+    "shape": "A"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "E"
+   },
+   {
+    "t": 3.75,
+    "f": 90,
+    "shape": "M"
+   },
+   {
+    "t": 3.833,
+    "f": 92,
+    "shape": "A"
+   },
+   {
+    "t": 4.042,
+    "f": 97,
+    "shape": "E"
+   },
+   {
+    "t": 4.125,
+    "f": 99,
+    "shape": "A"
+   },
+   {
+    "t": 4.25,
+    "f": 102,
+    "shape": "M"
+   },
+   {
+    "t": 4.333,
+    "f": 104,
+    "shape": "E"
+   },
+   {
+    "t": 4.5,
+    "f": 108,
+    "shape": "rest"
+   },
+   {
+    "t": 5.0,
+    "f": 120,
+    "shape": "E"
+   },
+   {
+    "t": 5.167,
+    "f": 124,
+    "shape": "A"
+   },
+   {
+    "t": 5.25,
+    "f": 126,
+    "shape": "E"
+   },
+   {
+    "t": 5.542,
+    "f": 133,
+    "shape": "A"
+   },
+   {
+    "t": 5.625,
+    "f": 135,
+    "shape": "E"
+   },
+   {
+    "t": 5.833,
+    "f": 140,
+    "shape": "A"
+   },
+   {
+    "t": 5.958,
+    "f": 143,
+    "shape": "E"
+   },
+   {
+    "t": 6.208,
+    "f": 149,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-co-0004",
+  "kind": "dialogue",
+  "scene": "1.05",
+  "speaker": "SELBEEP",
+  "speaker_slug": "selbeep",
+  "text": "Directionally.",
+  "spoken_as": "Directionally.",
+  "tag": "",
+  "delivery": "beside the melting chair; a pro's correction, not a joke",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.629,
+  "frames_24": 39,
+  "voiced_span_s": 0.91,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 1.26,
+   "measured": {
+    "span_s": 0.91,
+    "wpm": 65.9,
+    "syllables": 5,
+    "articulation_sps": 5.49,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 1,
+   "wpm": 65.9,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Directionally",
+    "t0": 0.35,
+    "t1": 1.07,
+    "ph": "dəɹˈɛkʃənᵊli"
+   }
+  ],
+  "qa": {
+   "asr": "Directionally",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.36,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 131.7,
+   "f0_range_st": 16.9,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.369,
+   "raw_tail_cut": false,
+   "align_median_s": 0.35
+  },
+  "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "Qziuou6kCJ2R3w53L2Zs",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "selbeep",
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 983147478,
+   "chars_sent": 14,
+   "request_key": "6aaf3442ea76c369",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "A"
+   },
+   {
+    "t": 0.625,
+    "f": 15,
+    "shape": "E"
+   },
+   {
+    "t": 1.083,
+    "f": 26,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-co-0005",
+  "kind": "dialogue",
+  "scene": "1.07",
+  "speaker": "SELBEEP",
+  "speaker_slug": "selbeep",
+  "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+  "spoken_as": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+  "tag": "os",
+  "delivery": "O.S., to the room, not missing a beat; reassuring",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.808,
+  "frames_24": 139,
+  "voiced_span_s": 4.73,
+  "pace": {
+   "audible_in_s": 0.43,
+   "audible_out_s": 5.16,
+   "measured": {
+    "span_s": 4.73,
+    "wpm": 203.0,
+    "syllables": 18,
+    "articulation_sps": 4.8,
+    "pauses_s": [
+     0.46,
+     0.52,
+     0.08
+    ]
+   },
+   "longest_internal_gap_s": 0.52,
+   "words": 16,
+   "wpm": 203.0,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "That's",
+    "t0": 0.41,
+    "t1": 0.617,
+    "ph": "ðˈæts"
+   },
+   {
+    "w": "the",
+    "t0": 0.652,
+    "t1": 0.722,
+    "ph": "ðə"
+   },
+   {
+    "w": "mammoth",
+    "t0": 0.78,
+    "t1": 1.163,
+    "ph": "mˈæməθ"
+   },
+   {
+    "w": "It's",
+    "t0": 1.662,
+    "t1": 1.836,
+    "ph": "ˌɪts"
+   },
+   {
+    "w": "been",
+    "t0": 1.859,
+    "t1": 1.999,
+    "ph": "bˌɪn"
+   },
+   {
+    "w": "two",
+    "t0": 2.045,
+    "t1": 2.173,
+    "ph": "tˈu"
+   },
+   {
+    "w": "weeks",
+    "t0": 2.231,
+    "t1": 2.544,
+    "ph": "wˈiks"
+   },
+   {
+    "w": "and",
+    "t0": 3.102,
+    "t1": 3.241,
+    "ph": "ænd"
+   },
+   {
+    "w": "it",
+    "t0": 3.299,
+    "t1": 3.369,
+    "ph": "ˌɪt"
+   },
+   {
+    "w": "has",
+    "t0": 3.403,
+    "t1": 3.554,
+    "ph": "hˈæz"
+   },
+   {
+    "w": "mass",
+    "t0": 3.624,
+    "t1": 3.891,
+    "ph": "mˈæs"
+   },
+   {
+    "w": "now",
+    "t0": 3.949,
+    "t1": 4.181,
+    "ph": "nˈW"
+   },
+   {
+    "w": "We're",
+    "t0": 4.355,
+    "t1": 4.553,
+    "ph": "wˌɪɹ"
+   },
+   {
+    "w": "working",
+    "t0": 4.576,
+    "t1": 4.855,
+    "ph": "wˈɜɹkɪŋ"
+   },
+   {
+    "w": "on",
+    "t0": 4.901,
+    "t1": 4.971,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "it",
+    "t0": 5.017,
+    "t1": 5.133,
+    "ph": "ˌɪt"
+   }
+  ],
+  "qa": {
+   "asr": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.56,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 126.2,
+   "f0_range_st": 15.2,
+   "speech_head_s": 0.43,
+   "speech_tail_s": 0.648,
+   "raw_tail_cut": false,
+   "align_median_s": 0.065
+  },
+  "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "Qziuou6kCJ2R3w53L2Zs",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "selbeep",
+   "voice_id": "Qziuou6kCJ2R3w53L2Zs",
+   "voice_name": "The Pharaoh 3 - Energetic, Lively & Cheerful",
+   "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 2378996430,
+   "chars_sent": 82,
+   "request_key": "4852afca866bcb97",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "A"
+   },
+   {
+    "t": 0.542,
+    "f": 13,
+    "shape": "E"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "M"
+   },
+   {
+    "t": 0.875,
+    "f": 21,
+    "shape": "A"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "rest"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "E"
+   },
+   {
+    "t": 2.083,
+    "f": 50,
+    "shape": "O"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "A"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "E"
+   },
+   {
+    "t": 2.542,
+    "f": 61,
+    "shape": "rest"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "E"
+   },
+   {
+    "t": 3.417,
+    "f": 82,
+    "shape": "A"
+   },
+   {
+    "t": 3.5,
+    "f": 84,
+    "shape": "E"
+   },
+   {
+    "t": 3.625,
+    "f": 87,
+    "shape": "M"
+   },
+   {
+    "t": 3.708,
+    "f": 89,
+    "shape": "A"
+   },
+   {
+    "t": 3.833,
+    "f": 92,
+    "shape": "E"
+   },
+   {
+    "t": 4.0,
+    "f": 96,
+    "shape": "A"
+   },
+   {
+    "t": 4.167,
+    "f": 100,
+    "shape": "rest"
+   },
+   {
+    "t": 4.375,
+    "f": 105,
+    "shape": "O"
+   },
+   {
+    "t": 4.458,
+    "f": 107,
+    "shape": "E"
+   },
+   {
+    "t": 4.583,
+    "f": 110,
+    "shape": "O"
+   },
+   {
+    "t": 4.667,
+    "f": 112,
+    "shape": "E"
+   },
+   {
+    "t": 4.917,
+    "f": 118,
+    "shape": "O"
+   },
+   {
+    "t": 5.0,
+    "f": 120,
+    "shape": "E"
+   },
+   {
+    "t": 5.125,
+    "f": 123,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-co-0006",
+  "kind": "dialogue",
+  "scene": "1.08",
+  "speaker": "GERG MOCKBRAN",
+  "speaker_slug": "gerg-mockbran",
+  "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+  "spoken_as": "That's not the mammoth. The mammoth's on the fourth floor.",
+  "tag": "",
+  "delivery": "still typing, still not looking up; cheerful, literal",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 4.044,
+  "frames_24": 97,
+  "voiced_span_s": 2.98,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 3.36,
+   "measured": {
+    "span_s": 2.98,
+    "wpm": 201.3,
+    "syllables": 12,
+    "articulation_sps": 5.13,
+    "pauses_s": [
+     0.64
+    ]
+   },
+   "longest_internal_gap_s": 0.64,
+   "words": 10,
+   "wpm": 201.3,
+   "speed": 1.0,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "That's",
+    "t0": 0.36,
+    "t1": 0.605,
+    "ph": "ðˈæts"
+   },
+   {
+    "w": "not",
+    "t0": 0.652,
+    "t1": 0.791,
+    "ph": "nˌɑt"
+   },
+   {
+    "w": "the",
+    "t0": 0.826,
+    "t1": 0.896,
+    "ph": "ðə"
+   },
+   {
+    "w": "mammoth",
+    "t0": 0.977,
+    "t1": 1.383,
+    "ph": "mˈæməθ"
+   },
+   {
+    "w": "The",
+    "t0": 1.987,
+    "t1": 2.115,
+    "ph": "ðə"
+   },
+   {
+    "w": "mammoth's",
+    "t0": 2.173,
+    "t1": 2.486,
+    "ph": "mˈæməθs"
+   },
+   {
+    "w": "on",
+    "t0": 2.521,
+    "t1": 2.579,
+    "ph": "ˌɔn"
+   },
+   {
+    "w": "the",
+    "t0": 2.614,
+    "t1": 2.684,
+    "ph": "ðə"
+   },
+   {
+    "w": "fourth",
+    "t0": 2.73,
+    "t1": 2.962,
+    "ph": "fˈɔɹθ"
+   },
+   {
+    "w": "floor",
+    "t0": 3.02,
+    "t1": 3.311,
+    "ph": "flˈɔɹ"
+   }
+  ],
+  "qa": {
+   "asr": "That's not the mammoth the mammoths on the fourth floor",
+   "cer": 0.018,
+   "word_recall_nonames": 0.9,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -2.78,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 156.2,
+   "f0_range_st": 14.1,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.684,
+   "raw_tail_cut": false,
+   "align_median_s": 0.066
+  },
+  "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+  "voiceId": "y0s2ExEMuum3muUnA6Zd",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "gerg-mockbran",
+   "voice_id": "y0s2ExEMuum3muUnA6Zd",
+   "voice_name": "Marcus - Bright, Upbeat and Clear",
+   "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "seed": 2084541902,
+   "chars_sent": 58,
+   "request_key": "4657ba1ec3053da5",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.417,
+    "f": 10,
+    "shape": "A"
+   },
+   {
+    "t": 0.5,
+    "f": 12,
+    "shape": "E"
+   },
+   {
+    "t": 0.708,
+    "f": 17,
+    "shape": "A"
+   },
+   {
+    "t": 0.792,
+    "f": 19,
+    "shape": "E"
+   },
+   {
+    "t": 0.958,
+    "f": 23,
+    "shape": "M"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "A"
+   },
+   {
+    "t": 1.167,
+    "f": 28,
+    "shape": "M"
+   },
+   {
+    "t": 1.25,
+    "f": 30,
+    "shape": "E"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "rest"
+   },
+   {
+    "t": 2.0,
+    "f": 48,
+    "shape": "E"
+   },
+   {
+    "t": 2.125,
+    "f": 51,
+    "shape": "M"
+   },
+   {
+    "t": 2.208,
+    "f": 53,
+    "shape": "A"
+   },
+   {
+    "t": 2.292,
+    "f": 55,
+    "shape": "M"
+   },
+   {
+    "t": 2.375,
+    "f": 57,
+    "shape": "E"
+   },
+   {
+    "t": 2.75,
+    "f": 66,
+    "shape": "O"
+   },
+   {
+    "t": 2.875,
+    "f": 69,
+    "shape": "E"
+   },
+   {
+    "t": 3.125,
+    "f": 75,
+    "shape": "O"
+   },
+   {
+    "t": 3.292,
+    "f": 79,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ }
+]

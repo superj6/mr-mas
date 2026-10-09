@@ -1,0 +1,113 @@
+[
+ {
+  "id": "e2-vo-14",
+  "kind": "vo",
+  "scene": "23.05",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "sixty elections this year.",
+  "spoken_as": "Sixty elections this year.",
+  "tag": "V.O.",
+  "delivery": "after the Orb's verdict; a count, dry; no pleasure in it and no politics in it",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.735,
+  "frames_24": 66,
+  "voiced_span_s": 1.9,
+  "pace": {
+   "audible_in_s": 0.37,
+   "audible_out_s": 2.27,
+   "measured": {
+    "span_s": 1.9,
+    "wpm": 126.3,
+    "syllables": 7,
+    "articulation_sps": 3.68,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 4,
+   "wpm": 126.3,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Sixty",
+    "t0": 0.35,
+    "t1": 0.826
+   },
+   {
+    "w": "elections",
+    "t0": 0.896,
+    "t1": 1.488
+   },
+   {
+    "w": "this",
+    "t0": 1.557,
+    "t1": 1.755
+   },
+   {
+    "w": "year",
+    "t0": 1.824,
+    "t1": 2.15
+   }
+  ],
+  "qa": {
+   "asr": "60 elections this year.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.0,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.42,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 100.7,
+   "f0_range_st": 13.6,
+   "speech_head_s": 0.37,
+   "speech_tail_s": 0.465,
+   "raw_tail_cut": false,
+   "align_median_s": 0.124
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 1758907284,
+   "chars_sent": 26,
+   "request_key": "2a0a7e1f8a8a1ab3",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ }
+]

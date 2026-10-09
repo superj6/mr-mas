@@ -36,7 +36,8 @@ export interface PxLine {
   tag: string; // the stick's tag: 'V.O.', 'O.S.', 'laptop', ...
   pre: boolean; // a pre-lap: owned by a later shot, starts under this one
 }
-/** an in-world text item (not a rail, not a post): kind = plate | card | label | ui | toast | sign | stamp | clock | ticker */
+/** an in-world text item (not a rail): kind = plate | card | label | ui | toast | sign | stamp | clock | ticker, or, on an Ep2
+ *  lock, the beat plan's own kind (onscreen_items: card | stat | plate | post | doc | caption | lower-third | toast | ui | sign) */
 export interface PxText { kind: string; text: string; s: number; e: number; must: boolean }
 /** a stick sound spot in the shot (k = its frame) */
 export interface PxSpot { name: string; k: number; dur: number | null }

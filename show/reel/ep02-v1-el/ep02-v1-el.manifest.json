@@ -1,0 +1,191 @@
+{
+ "kind": "episode-manifest",
+ "key": "ep02-v1-el-stick",
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "variant": "full-episode stick reel Ep2 v1 LOCK, ElevenLabs-timed (the master) · the base lock's picture and gaps · every line in the ElevenLabs cast (library voices, eleven_multilingual_v2) · temp rooms, SFX and pads · MARIO on Kokoro (the lock's own takes)",
+ "dateSpan": "Feb - Aug 2024",
+ "runtimeMin": 23.74,
+ "_about": "The ElevenLabs-timed Ep2 v1 lock (the master, LEARNINGS R9): the chapters of show/reel/ep02-v1/ep02-v1.manifest.json with the six story chapters from show/reel/ep02-v1-el/ep02-v1-el-<seg>.json (audio/ep02/v1-el/tools/el_lock.py: the base lock's timelines with every take swapped for its ElevenLabs take, the lock's gaps and J-cut leads kept, beats longer or shorter only by the takes' lengths). Notes: show/episodes/ep02/production/v1/pipeline.md. Nothing here was watched or heard.",
+ "titleCard": 3,
+ "actCards": "margin",
+ "actCardSec": 4,
+ "known": [],
+ "chapters": [
+  {
+   "id": "coldopen",
+   "label": "COLD OPEN",
+   "sub": "sc 1 · the mammoth, and what came through the door · EL",
+   "from": "ep02-v1-el-coldopen",
+   "acts": [
+    "COLD OPEN"
+   ]
+  },
+  {
+   "id": "intro",
+   "kind": "video",
+   "label": "INTRO",
+   "act": "INTRO",
+   "sub": "main title · V1 Chip Chamber Jazz · the Ep2 variant",
+   "src": "out/ep02/v1/intro/intro-ep2-V1-1080p.mp4",
+   "in": 0,
+   "dur": 30,
+   "fit": "full",
+   "audio": {
+    "own": true,
+    "src": "audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav",
+    "gain": -3,
+    "tail": 0.3
+   },
+   "note": "The Ep2 intro variant (show/episodes/ep02/intro-slot.md; pipeline.md §8): its own picture and its own mix (Jeremy's \"her\"), at Ep1's -3 dB."
+  },
+  {
+   "id": "card",
+   "label": "CARD",
+   "act": "INTRO",
+   "sub": "the filename card (2 s): ep1.1_her.wav",
+   "from": "ep02-v1-card",
+   "beats": [
+    "card.01"
+   ]
+  },
+  {
+   "id": "act1",
+   "label": "ACT ONE",
+   "sub": "the séance · sc 4-7 · EL",
+   "from": "ep02-v1-el-act1"
+  },
+  {
+   "id": "act2",
+   "label": "ACT TWO",
+   "sub": "her · sc 8-12 · EL",
+   "from": "ep02-v1-el-act2"
+  },
+  {
+   "id": "act3",
+   "label": "ACT THREE",
+   "sub": "leave them up · sc 13-17 · EL",
+   "from": "ep02-v1-el-act3"
+  },
+  {
+   "id": "act4",
+   "label": "ACT FOUR",
+   "sub": "as a guest · sc 18-22 · EL",
+   "from": "ep02-v1-el-act4"
+  },
+  {
+   "id": "tag",
+   "label": "TAG",
+   "sub": "august · sc 23 · EL",
+   "from": "ep02-v1-el-tag",
+   "acts": [
+    "TAG"
+   ]
+  },
+  {
+   "id": "outro",
+   "kind": "video",
+   "label": "OUTRO",
+   "act": "CREDITS",
+   "sub": "the Orb scan (B) · credits · opus 5.5",
+   "src": "out/ep02/v1/outro/outro-b-ep2.mp4",
+   "in": 0,
+   "dur": 10.125,
+   "fit": "full",
+   "audio": {
+    "own": true,
+    "src": "out/ep02/v1/outro/outro-b-ep2.wav",
+    "gain": -1,
+    "tail": 0
+   },
+   "note": "The Orb outro (B), Ep2's: mr. mas · ep1.1_her.wav / art · script · music · voices · edit: opus 5.5 / prompt: jgon."
+  }
+ ],
+ "beds": [
+  {
+   "chapter": "coldopen",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "coldopen stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/coldopen-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "1.01"
+  },
+  {
+   "chapter": "card",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "card stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/card-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05
+  },
+  {
+   "chapter": "act1",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "act1 stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/act1-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "4.01"
+  },
+  {
+   "chapter": "act2",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "act2 stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/act2-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "8.01"
+  },
+  {
+   "chapter": "act3",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "act3 stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/act3-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "13.01"
+  },
+  {
+   "chapter": "act4",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "act4 stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/act4-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "18.01"
+  },
+  {
+   "chapter": "tag",
+   "cue": "temp: rooms + SFX + pads per mood",
+   "label": "tag stick bed (Ep2 v1)",
+   "src": "audio/reel/ep02-v1/tag-bed.wav",
+   "in": 0,
+   "loop": "none",
+   "lufs": null,
+   "xfade": 0.05,
+   "beat": "23.01"
+  }
+ ],
+ "mix": {
+  "lufs": null,
+  "floor": -50,
+  "ceiling": -1,
+  "duck": -10,
+  "bedLufs": -26,
+  "xfade": 2.0,
+  "dialogueGain": -3
+ }
+}

@@ -5,21 +5,23 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 326,
-  "estimate": 326.0
+  "target": 321,
+  "estimate": 321.0
  },
  "scenes": [
   {
    "id": "13",
-   "target_s": 36,
+   "target_s": 31,
    "title": "Leave them up",
    "date": "MAY 15, 2024",
    "place": "the lobby, day",
    "status": "CHANGED",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "estimate_s": 36.0,
-   "fit_scale": 3.03
+   "proposal_s": 36,
+   "adjust": "the lock pass: the staffers' takes run short, so the table's 0:36 tripled the lobby's air (x3.03; 13.06's walk-off 7.27 s against its 2.4 s design); at 31 s it fits x1.36, the arrival and the presser's beats kept",
+   "estimate_s": 31.0,
+   "fit_scale": 1.363
   },
   {
    "id": "14",
@@ -244,7 +246,7 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 4.87,
+   "est_s": 4.37,
    "frame": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
    "camera": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
    "set": "lobby",
@@ -457,7 +459,7 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 4.52,
+   "est_s": 4.02,
    "frame": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
    "camera": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
    "set": "screen",
@@ -477,10 +479,10 @@
      "take": "new · the TV REPORTER (new · audition) · tv chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0005__reporter-A.wav",
      "note": "[INVENTED · a generic question; no answer in a real senator's mouth (D-50)]",
-     "after": "start+0.91",
+     "after": "start+0.41",
      "gap_s": 0.0,
      "len_s": 2.01,
-     "t_s": 0.91
+     "t_s": 0.41
     }
    ],
    "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
@@ -490,7 +492,7 @@
     {
      "name": "sticker_slap_tv",
      "at": "after:e2-a3-0005+0.6",
-     "at_s": 3.52,
+     "at_s": 3.02,
      "gain": -24,
      "new": true
     }
@@ -515,7 +517,7 @@
    "scene": "13",
    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
    "pace": "quick",
-   "est_s": 7.27,
+   "est_s": 3.27,
    "frame": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold",
    "camera": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold",
    "set": "lobby",
@@ -531,8 +533,8 @@
    "sounds": [
     {
      "name": "ui_band_on",
-     "at": 4.847,
-     "at_s": 4.85,
+     "at": 2.18,
+     "at_s": 2.18,
      "gain": -26,
      "new": true
     }

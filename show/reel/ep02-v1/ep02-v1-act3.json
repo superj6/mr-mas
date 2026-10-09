@@ -1,0 +1,4447 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "ACT THREE · leave them up · sc 13-17",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed",
+ "logline": "The Ep2 v1 base lock of act3: the beat plan applied to no source (every beat new).",
+ "dateSpan": "May 15 - 20, 2024",
+ "runtimeMin": 5.35,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "gerg": {
+   "role": "CO-FOUNDER"
+  },
+  "staffer": {
+   "name": "STAFFER",
+   "role": "STAFF"
+  },
+  "staffer2": {
+   "name": "STAFFER 2",
+   "role": "STAFF"
+  },
+  "remuhcs": {
+   "name": "REMUHCS",
+   "role": "MAJORITY LEADER"
+  },
+  "bukaj": {
+   "name": "BUKAJ",
+   "role": "NEW CHIEF SCIENTIST"
+  },
+  "ekiel": {
+   "name": "EKIEL",
+   "role": "CO-LED THE SAFETY TEAM"
+  },
+  "dot": {
+   "name": "DOT",
+   "role": "ORANGE CUFF",
+   "blank": true
+  },
+  "alyi": {
+   "role": "CO-FOUNDER (a memory)"
+  },
+  "forecaster": {
+   "name": "THE FORECASTER",
+   "role": "EX-NOPEAI"
+  },
+  "driver": {
+   "name": "DRIVER",
+   "role": "DRIVER"
+  },
+  "reporter": {
+   "name": "REPORTER",
+   "role": "ON THE TV",
+   "blank": true
+  },
+  "crowd": {
+   "name": "CROWD",
+   "role": "THE PARTY",
+   "known": true
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/act3.json",
+  "timeline": null,
+  "takes": "audio/ep02/v1-el/ep02-v1/act3/lines-A.json",
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/act3/lines-A.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act3-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 321.0
+ },
+ "beats": [
+  {
+   "id": "13.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas",
+    "staffer",
+    "staffer2",
+    "gerg",
+    "staff"
+   ],
+   "caption": "The lobby by day. February's WHERE IS ALYI? flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor the February complaint has become a side table. Two STAFFERS stand at the next pillar: one peels a curled corner off a flyer, the other smooths the tape back down on hers; the lobby TV murmurs.",
+   "lines": [
+    {
+     "id": "e2-a3-0001",
+     "who": "staffer",
+     "text": "When did anybody actually see him last? In person, I mean.",
+     "t": 2.4,
+     "dur": 3.36,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0001__tiled-employee-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "When",
+       -0.02,
+       0.139
+      ],
+      [
+       "did",
+       0.174,
+       0.302
+      ],
+      [
+       "anybody",
+       0.348,
+       0.719
+      ],
+      [
+       "actually",
+       0.778,
+       1.126
+      ],
+      [
+       "see",
+       1.172,
+       1.323
+      ],
+      [
+       "him",
+       1.358,
+       1.451
+      ],
+      [
+       "last",
+       1.509,
+       1.904
+      ],
+      [
+       "In",
+       2.403,
+       2.542
+      ],
+      [
+       "person",
+       2.612,
+       2.972
+      ],
+      [
+       "I",
+       3.041,
+       3.065
+      ],
+      [
+       "mean",
+       3.134,
+       3.332
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0002",
+     "who": "staffer2",
+     "text": "In the corridor, last week. For a second.",
+     "t": 6.01,
+     "dur": 2.38,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0002__staffer2-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "In",
+       -0.02,
+       0.079
+      ],
+      [
+       "the",
+       0.126,
+       0.195
+      ],
+      [
+       "corridor",
+       0.242,
+       0.671
+      ],
+      [
+       "last",
+       0.799,
+       1.043
+      ],
+      [
+       "week",
+       1.089,
+       1.322
+      ],
+      [
+       "For",
+       1.438,
+       1.577
+      ],
+      [
+       "a",
+       1.623,
+       1.647
+      ],
+      [
+       "second",
+       1.693,
+       2.076
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "WHERE IS ALYI?",
+     "at": 0.3,
+     "until": 8.54,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 8.54,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a3-0002": 0.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down",
+    "picture": "February's flyers, curling (R2): not fresh ones."
+   }
+  },
+  {
+   "id": "13.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "staffer",
+    "mas"
+   ],
+   "caption": "The first staffer turns to Mas, the corner she was peeling still in her hand.",
+   "lines": [
+    {
+     "id": "e2-a3-0003",
+     "who": "staffer",
+     "text": "He posted, though. Do we take these down now?",
+     "t": 0.15,
+     "dur": 2.57,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0003__tiled-employee-A.wav",
+     "in": 0.47,
+     "words": [
+      [
+       "He",
+       -0.02,
+       0.043
+      ],
+      [
+       "posted",
+       0.112,
+       0.495
+      ],
+      [
+       "though",
+       0.553,
+       0.797
+      ],
+      [
+       "Do",
+       1.389,
+       1.505
+      ],
+      [
+       "we",
+       1.552,
+       1.61
+      ],
+      [
+       "take",
+       1.656,
+       1.83
+      ],
+      [
+       "these",
+       1.865,
+       2.039
+      ],
+      [
+       "down",
+       2.074,
+       2.283
+      ],
+      [
+       "now",
+       2.33,
+       2.504
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0004",
+     "who": "mas",
+     "text": "leave them up.",
+     "t": 3.17,
+     "dur": 0.79,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0004__mas-manalt-C.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Leave",
+       -0.02,
+       0.24
+      ],
+      [
+       "them",
+       0.275,
+       0.414
+      ],
+      [
+       "up",
+       0.507,
+       0.693
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.37,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a3-0004": 0.45,
+      "e2-a3-0003": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a3-0002",
+      "gap_s": 0.3,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand",
+    "picture": "Her question follows from her hands (script review)."
+   }
+  },
+  {
+   "id": "13.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. Nobody corrects him. His upside-down flyer, a beat.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "sounds": [
+    {
+     "name": "paper_flutter",
+     "at": 0.4,
+     "gain": -26
+    },
+    {
+     "name": "tape_pull",
+     "at": 2.4,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "camera": "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down",
+    "picture": "It's still a doorway."
+   }
+  },
+  {
+   "id": "13.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "remuhcs"
+   ],
+   "caption": "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "REMUHCS · MAJORITY LEADER",
+     "at": 0.3,
+     "until": 2.6,
+     "kind": "plate"
+    },
+    {
+     "text": "BIPARTISAN SENATE AI ROADMAP",
+     "at": 0.5,
+     "until": 4.4,
+     "kind": "lower-third"
+    },
+    {
+     "text": "ROADMAP · $32B/YR",
+     "at": 0.6,
+     "until": 4.4,
+     "kind": "sign"
+    },
+    {
+     "text": "FORUM ×9",
+     "at": 0.6,
+     "until": 4.4,
+     "kind": "sign"
+    },
+    {
+     "text": "FLOOR",
+     "at": 1.6,
+     "until": 4.4,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "sounds": [
+    {
+     "name": "blip_text_neutral",
+     "at": 0.5,
+     "gain": -26
+    },
+    {
+     "name": "lectern_bump",
+     "at": 2.2,
+     "gain": -26
+    },
+    {
+     "name": "lectern_bump",
+     "at": 3.4,
+     "gain": -26
+    }
+   ],
+   "names": [
+    {
+     "id": "remuhcs",
+     "at": 0.3
+    }
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "camera": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
+    "picture": "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC)."
+   }
+  },
+  {
+   "id": "13.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "remuhcs"
+   ],
+   "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
+   "lines": [
+    {
+     "id": "e2-a3-0005",
+     "who": "reporter",
+     "text": "Senator, when does it get a vote?",
+     "t": 0.41,
+     "dur": 2.01,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0005__reporter-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Senator",
+       0.0,
+       0.534
+      ],
+      [
+       "when",
+       0.639,
+       0.894
+      ],
+      [
+       "does",
+       0.952,
+       1.115
+      ],
+      [
+       "it",
+       1.161,
+       1.231
+      ],
+      [
+       "get",
+       1.289,
+       1.463
+      ],
+      [
+       "a",
+       1.498,
+       1.533
+      ],
+      [
+       "vote",
+       1.602,
+       2.009
+      ]
+     ],
+     "tag": "tv",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.02,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "sounds": [
+    {
+     "name": "sticker_slap_tv",
+     "at": 3.02,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+    "picture": "No invented words in a real senator's mouth (D-50)."
+   }
+  },
+  {
+   "id": "13.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas walks off the lobby floor, frame-right, into the open-plan office. The adventure band lights up as he crosses the threshold.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.27,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK's first step carries"
+   ],
+   "sounds": [
+    {
+     "name": "ui_band_on",
+     "at": 2.18,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "13",
+    "mode": "EXTENDED CONVERSATION (short), the TV in the background",
+    "pace": "quick",
+    "camera": "WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold"
+   }
+  },
+  {
+   "id": "14.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the spread: tiled staff, glass walls, polished heatsinks, a coffee urn, a spoon in a mug, a chiller puddle; the band lit",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas",
+    "staff",
+    "dot"
+   ],
+   "caption": "The open floor as a find-the-man spread: dozens of tiled staff, glass walls, polished heatsinks catching the light, a coffee urn, a spoon standing in a mug, a puddle under a leaking chiller. The band: Look at · Talk to · Pick up · Use · Open (greyed) · Pivot · Raise. Inventory: CTRL · ESC · glass · phone.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Look at · Talk to · Pick up · Use · Open · Pivot · Raise",
+     "at": 0.2,
+     "until": 2.8,
+     "kind": "ui"
+    },
+    {
+     "text": "CTRL · ESC · glass · phone",
+     "at": 0.2,
+     "until": 2.8,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 2.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · the spread: tiled staff, glass walls, polished heatsinks, a coffee urn, a spoon in a mug, a chiller puddle; the band lit",
+    "picture": "No image of Alyi in any surface (FC). The band is the episode's one dialogue tree; his choices are his phone's strip, never a cursor (P6).",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the spread: Look at heatsink; Pick up reflection",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Look at heatsink. The dialogue box types, in his lowercase: i can see my face in it. Pick up reflection: i can't pick that up.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Look at heatsink",
+     "at": 0.2,
+     "until": 2.8,
+     "kind": "ui"
+    },
+    {
+     "text": "i can see my face in it.",
+     "at": 1.0,
+     "until": 2.6,
+     "kind": "ui"
+    },
+    {
+     "text": "Pick up reflection",
+     "at": 2.8,
+     "until": 5.0,
+     "kind": "ui"
+    },
+    {
+     "text": "i can't pick that up.",
+     "at": 3.5,
+     "until": 4.9,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "ui_verb_select",
+     "at": 0.2,
+     "gain": -26
+    },
+    {
+     "name": "ui_verb_select",
+     "at": 2.8,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · the spread: Look at heatsink; Pick up reflection",
+    "picture": "The adventure game's refusal, in the game's register.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers three lines, what he'd say to Alyi. He taps the greyed come back first. Bonk.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Talk to reflection",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "ui"
+    },
+    {
+     "text": "> where are you going?",
+     "at": 1.0,
+     "until": 5.0,
+     "kind": "ui"
+    },
+    {
+     "text": "> can we talk?",
+     "at": 1.0,
+     "until": 5.0,
+     "kind": "ui"
+    },
+    {
+     "text": "> come back",
+     "at": 1.0,
+     "until": 5.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "ui_verb_select",
+     "at": 0.2,
+     "gain": -26
+    },
+    {
+     "name": "alert_bonk",
+     "at": 4.0,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
+    "picture": "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · his own reflection mouthing can we talk? back to him",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Then can we talk? His own reflection mouths it back to him. No voice.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 5.22,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · the Door (first note missing) blooms once, on his own reflection"
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "MCU · his own reflection mouthing can we talk? back to him",
+    "picture": "The Door blooms once, first note missing.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "dot",
+    "mas"
+   ],
+   "caption": "From her ladder, DOT's orange cuff points a screwdriver at Alyi's office door.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.59,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door",
+    "picture": "Her hands only.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · Alyi's door: Open greyed, bonk; the knock shakes Ep1's yellowed note off the frame into his pocket",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas"
+   ],
+   "caption": "At Alyi's door: Open is greyed. Bonk. The knock shakes Ep1's yellowed note off the door frame; it flutters down into his inventory, which is his pocket. Pick up note.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Open",
+     "at": 0.2,
+     "until": 0.8,
+     "kind": "ui"
+    },
+    {
+     "text": "Pick up note",
+     "at": 2.6,
+     "until": 3.8,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "alert_bonk",
+     "at": 0.6,
+     "gain": -22
+    },
+    {
+     "name": "paper_flutter",
+     "at": 1.2,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · Alyi's door: Open greyed, bonk; the knock shakes Ep1's yellowed note off the frame into his pocket",
+    "picture": "At the spread's scale: no insert, no tag, no Mas colour (FC). Never defined.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.07",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "bukaj",
+    "mas"
+   ],
+   "caption": "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: the box types congratulations. as he says it.",
+   "lines": [
+    {
+     "id": "e2-a3-0023",
+     "who": "mas",
+     "text": "congratulations.",
+     "t": 3.5,
+     "dur": 1.27,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0023__mas-manalt-C.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Congratulations",
+       -0.02,
+       1.147
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.",
+     "at": 0.4,
+     "until": 3.2,
+     "kind": "plate"
+    },
+    {
+     "text": "congratulations.",
+     "at": 3.4,
+     "until": 4.92,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.92,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "chair_hum_choir",
+     "at": 0.0,
+     "gain": -30,
+     "dur": 4.8,
+     "note": "diegetic: the GPU choir chord"
+    }
+   ],
+   "names": [
+    {
+     "id": "bukaj",
+     "at": 0.4
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts",
+    "picture": "The chosen strip line is voiced in his own voice as the box types it (voiced adventure games do this; P9).",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.08",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "bukaj",
+    "mas"
+   ],
+   "caption": "BUKAJ thanks him. The strip: need anything? Mas takes it, and says it as the box types it. BUKAJ doesn't take his hand off the armrest.",
+   "lines": [
+    {
+     "id": "e2-a3-0006",
+     "who": "bukaj",
+     "text": "Thank you. It's still warm.",
+     "t": 0.35,
+     "dur": 2.18,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0006__bukaj-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Thank",
+       -0.02,
+       0.253
+      ],
+      [
+       "you",
+       0.3,
+       0.462
+      ],
+      [
+       "It's",
+       1.322,
+       1.542
+      ],
+      [
+       "still",
+       1.565,
+       1.798
+      ],
+      [
+       "warm",
+       1.856,
+       2.111
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0024",
+     "who": "mas",
+     "text": "need anything?",
+     "t": 3.03,
+     "dur": 0.75,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0024__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Need",
+       -0.02,
+       0.235
+      ],
+      [
+       "anything",
+       0.282,
+       0.711
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0007",
+     "who": "bukaj",
+     "text": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
+     "t": 4.28,
+     "dur": 4.17,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0007__bukaj-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Not",
+       0.0,
+       0.313
+      ],
+      [
+       "yet",
+       0.372,
+       0.627
+      ],
+      [
+       "I'd",
+       0.917,
+       1.115
+      ],
+      [
+       "like",
+       1.161,
+       1.37
+      ],
+      [
+       "a",
+       1.393,
+       1.416
+      ],
+      [
+       "week",
+       1.486,
+       1.718
+      ],
+      [
+       "in",
+       1.788,
+       1.858
+      ],
+      [
+       "it",
+       1.916,
+       2.009
+      ],
+      [
+       "before",
+       2.09,
+       2.415
+      ],
+      [
+       "anyone",
+       2.461,
+       2.81
+      ],
+      [
+       "asks",
+       2.856,
+       3.181
+      ],
+      [
+       "me",
+       3.239,
+       3.344
+      ],
+      [
+       "for",
+       3.402,
+       3.541
+      ],
+      [
+       "a",
+       3.587,
+       3.611
+      ],
+      [
+       "schedule",
+       3.657,
+       4.19
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "need anything?",
+     "at": 2.93,
+     "until": 4.38,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 9.1,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e2-a3-0024": 0.5,
+      "e2-a3-0007": 0.5,
+      "e2-a3-0006": 0.5
+     },
+     "rule": "0.4-0.6 s",
+     "across_cut": {
+      "from": "e2-a3-0023",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "2S · Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest",
+    "picture": "The typed lines stay in the band, voiced as they type; Bukaj's answers in the two-shot.",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.09",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "ekiel"
+   ],
+   "caption": "EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks. The card freezes on him.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "EKIEL / CO-LED THE SAFETY TEAM.",
+     "at": 0.6,
+     "until": 2.9,
+     "kind": "card"
+    },
+    {
+     "text": "SQUINT: 100%",
+     "at": 1.0,
+     "until": 2.9,
+     "kind": "stat"
+    }
+   ],
+   "reelDur": 3.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "freeze_hit_F",
+     "at": 0.6,
+     "gain": -18
+    }
+   ],
+   "names": [
+    {
+     "id": "ekiel",
+     "at": 0.6
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card",
+    "picture": "No shiny-product pedestals (FC).",
+    "style": "2-TONE FREEZE (the card, 1 bar)"
+   }
+  },
+  {
+   "id": "14.10",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topples to Mas's shoe",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "ekiel",
+    "mas"
+   ],
+   "caption": "He sets his resignation thread down as one domino, in its own UI, MAY 17: its first post. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "MAY 17",
+     "at": 0.6,
+     "until": 6.0,
+     "kind": "post"
+    },
+    {
+     "text": "Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI.",
+     "at": 0.7,
+     "until": 5.6,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 6.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · thins to its pedal under Ekiel's post"
+   ],
+   "sounds": [
+    {
+     "name": "domino_set",
+     "at": 0.5,
+     "gain": -24
+    },
+    {
+     "name": "domino_topple_run",
+     "at": 4.6,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topples to Mas's shoe",
+    "picture": "One domino (R2). His own words: the thread's first post, which states the departure and carries no grievance (script review).",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.11",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "dot"
+   ],
+   "caption": "Down the corridor, beside Ekiel's empty desk, the safety team's own door. An orange-cuffed hand backs four screws out of its plate, one per beat, and drops it in a box marked MISC.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "SUPERALIGNMENT",
+     "at": 0.3,
+     "until": 5.2,
+     "kind": "sign"
+    },
+    {
+     "text": "SAFETY TEAM",
+     "at": 0.3,
+     "until": 5.2,
+     "kind": "sign"
+    },
+    {
+     "text": "MISC",
+     "at": 4.0,
+     "until": 5.2,
+     "kind": "sign"
+    },
+    {
+     "text": "MAY 17",
+     "at": 4.0,
+     "until": 5.2,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 5.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "screw_turn_1",
+     "at": 1.0,
+     "gain": -24
+    },
+    {
+     "name": "screw_turn_2",
+     "at": 1.625,
+     "gain": -24
+    },
+    {
+     "name": "screw_turn_3",
+     "at": 2.25,
+     "gain": -24
+    },
+    {
+     "name": "screw_turn_4",
+     "at": 2.875,
+     "gain": -24
+    },
+    {
+     "name": "nameplate_off",
+     "at": 3.4,
+     "gain": -22
+    },
+    {
+     "name": "plate_drop_box",
+     "at": 3.9,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws",
+    "picture": "The team's own door, never Alyi's (R2).",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "14.12",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
+   "side": "",
+   "room": "open_floor",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Back at Alyi's door, Mas tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Pivot door",
+     "at": 0.33,
+     "until": 1.63,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.57,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
+   ],
+   "sounds": [
+    {
+     "name": "ui_verb_select",
+     "at": 0.326,
+     "gain": -26
+    },
+    {
+     "name": "door_pivot_creak",
+     "at": 1.469,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "14",
+    "mode": "the episode's one adventure-game scene and its one dialogue tree",
+    "pace": "normal",
+    "camera": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
+    "style": "UI LIT (the adventure game's band)"
+   }
+  },
+  {
+   "id": "15.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the empty office: a desk with no chair; Mas sits on the desk's edge",
+   "side": "",
+   "room": "office_evening",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "An empty office in the evening: a desk with no chair. Carried over the cut, the chair's hum sounds in the empty space where it stood, and stops. Mas sits on the edge of the desk.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "WIDE · the empty office: a desk with no chair; Mas sits on the desk's edge"
+   }
+  },
+  {
+   "id": "15.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his phone: the thread, collapsed to dates and first lines",
+   "side": "",
+   "room": "office_evening",
+   "chars": [],
+   "caption": "On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both dates in frame.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOV 20, 2023",
+     "at": 0.4,
+     "until": 3.76,
+     "kind": "post"
+    },
+    {
+     "text": "♥ ♥ ♥",
+     "at": 0.81,
+     "until": 3.76,
+     "kind": "post"
+    },
+    {
+     "text": "MAY 14, 2024",
+     "at": 1.34,
+     "until": 3.76,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 3.76,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
+   ],
+   "sounds": [
+    {
+     "name": "thumb_scroll",
+     "at": 0.269,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "ECU · his phone: the thread, collapsed to dates and first lines",
+    "picture": "Dates and hearts, not must-read text (R2)."
+   }
+  },
+  {
+   "id": "15.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
+   "side": "",
+   "room": "office_evening",
+   "chars": [
+    "mas"
+   ],
+   "caption": "For one second, far off, Alyi's voice from launch night. Now Mas counts.",
+   "lines": [
+    {
+     "id": "e2-a3-0008",
+     "who": "alyi",
+     "text": "Six years and eleven months.",
+     "t": 0.54,
+     "dur": 2.1,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Six",
+       0.0,
+       0.383
+      ],
+      [
+       "years",
+       0.476,
+       0.882
+      ],
+      [
+       "and",
+       0.94,
+       1.057
+      ],
+      [
+       "eleven",
+       1.126,
+       1.486
+      ],
+      [
+       "months",
+       1.579,
+       2.009
+      ]
+     ],
+     "tag": "far",
+     "cut": false
+    },
+    {
+     "id": "e2-vo-07",
+     "who": "mas",
+     "text": "a hundred and seventy-six days.",
+     "t": 3.84,
+     "dur": 2.4,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "A",
+       -0.02,
+       0.086
+      ],
+      [
+       "hundred",
+       0.225,
+       0.632
+      ],
+      [
+       "and",
+       0.678,
+       0.794
+      ],
+      [
+       "seventy-six",
+       0.876,
+       1.688
+      ],
+      [
+       "days",
+       1.77,
+       2.269
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.18,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {
+      "e2-vo-07": 1.2
+     },
+     "rule": "longer, only on turns"
+    },
+    "camera": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
+    "picture": "A face light one step."
+   }
+  },
+  {
+   "id": "15.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · TPOOL: its splash; welcome back, mas; the Orb scans the hourglass",
+   "side": "",
+   "room": "office_evening",
+   "chars": [
+    "orb"
+   ],
+   "caption": "He scrolls past every modern icon to a tiny old one: TPOOL, his first company's app, LAST UPDATED 2012. Its splash still plays: WHERE U AT? It still knows him: welcome back, mas. A 2008 hourglass spins. The Orb scans it and settles: verified: 2008.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "TPOOL",
+     "at": 0.4,
+     "until": 6.6,
+     "kind": "ui"
+    },
+    {
+     "text": "LAST UPDATED 2012",
+     "at": 0.6,
+     "until": 6.6,
+     "kind": "ui"
+    },
+    {
+     "text": "WHERE U AT?",
+     "at": 1.4,
+     "until": 2.8,
+     "kind": "ui"
+    },
+    {
+     "text": "welcome back, mas",
+     "at": 3.0,
+     "until": 6.6,
+     "kind": "ui"
+    },
+    {
+     "text": "verified: 2008",
+     "at": 5.0,
+     "until": 6.5,
+     "kind": "toast"
+    }
+   ],
+   "reelDur": 6.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
+   ],
+   "sounds": [
+    {
+     "name": "app_splash_2006",
+     "at": 1.4,
+     "gain": -24
+    },
+    {
+     "name": "hourglass_cursor_2008",
+     "at": 3.2,
+     "gain": -28
+    },
+    {
+     "name": "orb_scan_sweep",
+     "at": 4.2,
+     "gain": -26
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 5.0,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "ECU · TPOOL: its splash; welcome back, mas; the Orb scans the hourglass",
+    "picture": "TPOOL in EARLY-WEB16 colours inside a 2024 phone. Toast 2 of 3."
+   }
+  },
+  {
+   "id": "15.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · he types where u at? → POV · the map: every pin LAST SEEN: 2012, except one",
+   "side": "",
+   "room": "office_evening",
+   "chars": [],
+   "caption": "He types the app's own question: where u at? The map loads. Every pin reads LAST SEEN: 2012, except one: ALYI CHECKED IN · DEC 2022 · \"feel the agi\". Its ripple turns warm and breaks into string lights.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "where u at?",
+     "at": 0.4,
+     "until": 2.0,
+     "kind": "ui"
+    },
+    {
+     "text": "LAST SEEN: 2012",
+     "at": 2.4,
+     "until": 7.4,
+     "kind": "ui"
+    },
+    {
+     "text": "ALYI CHECKED IN · DEC 2022 · \"feel the agi\"",
+     "at": 3.0,
+     "until": 6.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 7.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_soft_02",
+     "at": 0.5,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_soft_04",
+     "at": 1.1,
+     "gain": -30
+    },
+    {
+     "name": "pin_ping",
+     "at": 3.0,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "ECU · he types where u at? → POV · the map: every pin LAST SEEN: 2012, except one",
+    "picture": "The check-in has a cause, seen in F2.2."
+   }
+  },
+  {
+   "id": "15.06",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the holiday party, Dec 2022: silhouettes under palette-cycled string lights; Alyi leads the chant",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "alyi",
+    "crowd",
+    "mas",
+    "staff"
+   ],
+   "caption": "A holiday party: silhouettes under palette-cycled string lights. ALYI, lit and laughing, a swag of lights across the top of his frame, raises one hand, and the chant builds from his voice to everyone's.",
+   "lines": [
+    {
+     "id": "e2-a3-0009",
+     "who": "alyi",
+     "text": "FEEL THE AGI!",
+     "t": 1.8,
+     "dur": 1.59,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0009__alyi-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "FEEL",
+       -0.01,
+       0.373
+      ],
+      [
+       "THE",
+       0.466,
+       0.582
+      ],
+      [
+       "AGI",
+       0.687,
+       1.464
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0010",
+     "who": "crowd",
+     "text": "FEEL THE AGI! FEEL THE AGI!",
+     "t": 3.49,
+     "dur": 3.03,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0010__crowd-layered.wav",
+     "in": 0.49,
+     "words": [
+      [
+       "FEEL",
+       -0.08,
+       0.2
+      ],
+      [
+       "THE",
+       0.247,
+       0.316
+      ],
+      [
+       "AGI",
+       0.409,
+       0.908
+      ],
+      [
+       "FEEL",
+       1.262,
+       1.494
+      ],
+      [
+       "THE",
+       1.54,
+       1.61
+      ],
+      [
+       "AGI",
+       1.691,
+       2.121
+      ]
+     ],
+     "tag": "chant",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: DEC 2022",
+     "at": 0.2,
+     "until": 1.7,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 7.06,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · want",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {
+      "e2-a3-0010": 0.1
+     },
+     "rule": "longer, only on turns"
+    },
+    "camera": "WIDE · the holiday party, Dec 2022: silhouettes under palette-cycled string lights; Alyi leads the chant",
+    "picture": "T4 glossy. Warm, never a hymn. The string lights palette-cycle, never strobe (P15).",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.07",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · across the crowd: Alyi (cropped by the light swag) and Mas, small in the crowd, a glass in his hand",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "alyi",
+    "mas"
+   ],
+   "caption": "His raised hand finds Mas in the crowd, the only one not chanting, a glass in his hand. Under the chant, a word between them.",
+   "lines": [
+    {
+     "id": "e2-a3-0011",
+     "who": "alyi",
+     "text": "You're not chanting.",
+     "t": 1.07,
+     "dur": 1.19,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0011__alyi-A.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "You're",
+       -0.02,
+       0.257
+      ],
+      [
+       "not",
+       0.303,
+       0.454
+      ],
+      [
+       "chanting",
+       0.512,
+       1.139
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0012",
+     "who": "mas",
+     "text": "someone has to hold the glass.",
+     "t": 2.71,
+     "dur": 1.99,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0012__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Someone",
+       -0.02,
+       0.469
+      ],
+      [
+       "has",
+       0.516,
+       0.69
+      ],
+      [
+       "to",
+       0.759,
+       0.806
+      ],
+      [
+       "hold",
+       0.876,
+       1.096
+      ],
+      [
+       "the",
+       1.154,
+       1.224
+      ],
+      [
+       "glass",
+       1.282,
+       1.897
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0013",
+     "who": "alyi",
+     "text": "Then I'll feel it for both of us.",
+     "t": 4.95,
+     "dur": 1.97,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0013__alyi-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "Then",
+       -0.02,
+       0.209
+      ],
+      [
+       "I'll",
+       0.255,
+       0.441
+      ],
+      [
+       "feel",
+       0.499,
+       0.719
+      ],
+      [
+       "it",
+       0.778,
+       0.859
+      ],
+      [
+       "for",
+       0.917,
+       1.056
+      ],
+      [
+       "both",
+       1.114,
+       1.37
+      ],
+      [
+       "of",
+       1.428,
+       1.497
+      ],
+      [
+       "us",
+       1.602,
+       1.846
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.46,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · want",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {
+      "e2-a3-0012": 0.45,
+      "e2-a3-0013": 0.25
+     },
+     "rule": "longer, only on turns"
+    },
+    "camera": "2S · across the crowd: Alyi (cropped by the light swag) and Mas, small in the crowd, a glass in his hand",
+    "picture": "Lip-sync both. Alyi warm (P5: warm reads warm).",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.08",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the screen to Mas",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "alyi",
+    "mas"
+   ],
+   "caption": "He holds up his phone, Mas's old app open on it, checks in, types feel the agi, and turns the screen to Mas, grinning. Mas raises his glass.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CHECK IN",
+     "at": 0.54,
+     "until": 2.15,
+     "kind": "ui"
+    },
+    {
+     "text": "feel the agi",
+     "at": 2.15,
+     "until": 6.44,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 6.44,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
+   ],
+   "sounds": [
+    {
+     "name": "check_in_blip",
+     "at": 1.878,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · want",
+    "pace": "weighted",
+    "camera": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the screen to Mas",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.09",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "bullpen",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the racks in the corner hum along; at the chant's peak their status lights become token streams across the whole room",
+   "side": "",
+   "room": "party",
+   "chars": [
+    "alyi",
+    "mas",
+    "staff"
+   ],
+   "caption": "The racks in the corner hum along. At the chant's peak their status lights become token streams that run across the whole room, him included.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.49,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
+   ],
+   "sounds": [
+    {
+     "name": "glyph_shimmer",
+     "at": 0.805,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · want",
+    "pace": "weighted",
+    "camera": "WIDE · the racks in the corner hum along; at the chant's peak their status lights become token streams across the whole room",
+    "picture": "GLYPH 12 frames on the room, never in his eyes (GR §6).",
+    "style": "T4 + GLYPH (12 frames, on the room)",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.10",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
+   "side": "",
+   "room": "office_2023",
+   "chars": [
+    "alyi",
+    "ekiel"
+   ],
+   "caption": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: 2023",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "INTRODUCING SUPERALIGNMENT · ALYI, EKIEL",
+     "at": 1.4,
+     "until": 8.9,
+     "kind": "post"
+    },
+    {
+     "text": "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.",
+     "at": 1.6,
+     "until": 8.8,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 8.9,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the choir thins to its no-third chord under the post and \"Someone should.\""
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · obstacle",
+    "pace": "weighted",
+    "camera": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
+    "picture": "The post's words are the record's; its numbers don't print (R2).",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.11",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the same: Ekiel; Alyi, without looking away from the screen",
+   "side": "",
+   "room": "office_2023",
+   "chars": [
+    "ekiel",
+    "alyi"
+   ],
+   "caption": "EKIEL says it plainly. ALYI answers without looking away from the screen.",
+   "lines": [
+    {
+     "id": "e2-a3-0014",
+     "who": "ekiel",
+     "text": "Nobody knows how to do this yet.",
+     "t": 0.54,
+     "dur": 1.88,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0014__ekiel-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Nobody",
+       -0.02,
+       0.355
+      ],
+      [
+       "knows",
+       0.401,
+       0.599
+      ],
+      [
+       "how",
+       0.645,
+       0.715
+      ],
+      [
+       "to",
+       0.761,
+       0.808
+      ],
+      [
+       "do",
+       0.866,
+       0.958
+      ],
+      [
+       "this",
+       1.017,
+       1.179
+      ],
+      [
+       "yet",
+       1.237,
+       1.493
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a3-0015",
+     "who": "alyi",
+     "text": "Someone should.",
+     "t": 3.32,
+     "dur": 1.02,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0015__alyi-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Someone",
+       0.0,
+       0.557
+      ],
+      [
+       "should",
+       0.604,
+       0.975
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.41,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the choir thins to its no-third chord under the post and \"Someone should.\""
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · obstacle",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {
+      "e2-a3-0015": 0.9
+     },
+     "rule": "longer, only on turns"
+    },
+    "camera": "2S · the same: Ekiel; Alyi, without looking away from the screen",
+    "picture": "Lip-sync both; Ekiel's card already paid in sc 14.",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.12",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his finger above the bare Publish button",
+   "side": "",
+   "room": "office_2023",
+   "chars": [
+    "alyi"
+   ],
+   "caption": "His finger above the bare Publish button, as Mas's was in sc 4.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.22,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · turn",
+    "pace": "weighted",
+    "camera": "ECU · his finger above the bare Publish button",
+    "picture": "No hover, no cursor.",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.13",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut off by a lodge doorway, with the flame",
+   "side": "",
+   "room": "fire_night",
+   "chars": [
+    "alyi",
+    "staff"
+   ],
+   "caption": "A leadership offsite at night: a wooden effigy, a paperclip robot, stencilled UNALIGNED. Staff in silhouette. ALYI, half cut off by a lodge doorway, carries the flame to it himself, his face lit and calm.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "UNALIGNED",
+     "at": 0.4,
+     "until": 4.83,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.83,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
+   ],
+   "sounds": [
+    {
+     "name": "torch_light",
+     "at": 1.073,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · turn",
+    "pace": "weighted",
+    "camera": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut off by a lodge doorway, with the flame",
+    "picture": "No zealot framing; no religious iconography. The month isn't asserted.",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.14",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · he presses Publish",
+   "side": "",
+   "room": "office_2023",
+   "chars": [
+    "alyi"
+   ],
+   "caption": "He presses it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.88,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
+   ],
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 0.403,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · turn",
+    "pace": "weighted",
+    "camera": "ECU · he presses Publish",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.15",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the effigy catches",
+   "side": "",
+   "room": "fire_night",
+   "chars": [
+    "alyi"
+   ],
+   "caption": "The effigy catches.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.83,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
+   ],
+   "sounds": [
+    {
+     "name": "flame_whoomph",
+     "at": 0.268,
+     "gain": -18
+    },
+    {
+     "name": "fire_crackle",
+     "at": 0.805,
+     "gain": -24,
+     "dur": 3.0
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · turn",
+    "pace": "weighted",
+    "camera": "WIDE · the effigy catches",
+    "picture": "Palette-cycled fire, never strobing (P15).",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.16",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "void",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "WIDE → ECU · the fire's glow shrinks to one point of light",
+   "side": "",
+   "room": "fire_night",
+   "chars": [],
+   "caption": "The fire's glow shrinks to one point of light.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.56,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "FLASHBACK · out",
+    "pace": "weighted",
+    "camera": "WIDE → ECU · the fire's glow shrinks to one point of light",
+    "style": "T4 glossy memory",
+    "flashback": {
+     "when": "DEC 2022 → 2023",
+     "of": "F2.2 (Alyi: the full motive flashback)",
+     "shape": "want → obstacle → turn",
+     "tier": "T4 glossy: glass, bloom, lit by its own light; rim #FF6A1A",
+     "in": "the pin's ripple turning warm and breaking into string lights (15.05)",
+     "out": "the fire's glow shrinking to the pin (15.16)",
+     "no_vo": "no inner voice in a memory",
+     "rule": "some part of Alyi is always cut off by a frame"
+    }
+   }
+  },
+  {
+   "id": "15.17",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the point is the pin, pulsing on his phone; his thumb covers it",
+   "side": "",
+   "room": "office_evening",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The point of light is the pin, pulsing on his phone. His thumb covers it.",
+   "lines": [
+    {
+     "id": "e2-vo-08",
+     "who": "mas",
+     "text": "i'll ask him in person.",
+     "t": 1.88,
+     "dur": 1.6,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-08__mas-manalt-C.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "I'll",
+       -0.02,
+       0.255
+      ],
+      [
+       "ask",
+       0.313,
+       0.534
+      ],
+      [
+       "him",
+       0.592,
+       0.719
+      ],
+      [
+       "in",
+       0.778,
+       0.859
+      ],
+      [
+       "person",
+       0.952,
+       1.544
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.82,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "ECU · the point is the pin, pulsing on his phone; his thumb covers it",
+    "picture": "No IOU in the shot, no hand near it (R2)."
+   }
+  },
+  {
+   "id": "15.18",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut on the empty room",
+   "side": "",
+   "room": "office_evening",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He pockets the phone, gets up off the desk's edge and leaves. The door swings shut on the empty room; it holds a second.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.56,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
+   ],
+   "sounds": [
+    {
+     "name": "door_close_soft",
+     "at": 2.951,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut on the empty room"
+   }
+  },
+  {
+   "id": "15.19",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for comment",
+   "side": "",
+   "room": "stairwell",
+   "chars": [
+    "mas"
+   ],
+   "caption": "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "request for comment",
+     "at": 1.6,
+     "until": 3.6,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
+   ],
+   "sounds": [
+    {
+     "name": "footstep_soft_1",
+     "at": 0.2,
+     "gain": -28
+    },
+    {
+     "name": "phone_buzz_step_1",
+     "at": 1.2,
+     "gain": -22
+    },
+    {
+     "name": "footstep_soft_2",
+     "at": 3.8,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "SINGLE IMAGE / INSERT → FLASHBACK → INSERT",
+    "pace": "weighted",
+    "camera": "WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for comment",
+    "picture": "No outlet named, no headline words."
+   }
+  },
+  {
+   "id": "17.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "forecaster"
+   ],
+   "caption": "The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER walks up from the street with a clipboard of dates, the first person to stop beside it, and looks down at it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 17, 2024",
+     "at": 0.3,
+     "until": 2.1,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 4.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "receipt_printer",
+     "at": 0.0,
+     "gain": -22,
+     "dur": 4.4
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it",
+    "picture": "The papers start at NopeAI's doors, never near Alyi (FC). He comes from the street, not out of the building: he had already left (his refusal was in April; facts A32)."
+   }
+  },
+  {
+   "id": "17.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · one quick run: down the hill and across all five lanes of the bridge in the evening rush (three parallax planes)",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "staff"
+   ],
+   "caption": "In one quick run down the hill the receipt crosses all five lanes of the Bay Bridge in the evening rush. Commuters read it as they drive; traffic slows on it, then stops. Its lines scroll under the tyres.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NON-DISPARAGEMENT",
+     "at": 1.2,
+     "until": 2.6,
+     "kind": "doc"
+    },
+    {
+     "text": "IN PERPETUITY",
+     "at": 2.6,
+     "until": 4.0,
+     "kind": "doc"
+    },
+    {
+     "text": "CLAUSE 9: THIS RECEIPT DOES NOT EXIST.",
+     "at": 3.3,
+     "until": 5.6,
+     "kind": "doc"
+    },
+    {
+     "text": "SAVE 0% ON YOUR NEXT EXIT",
+     "at": 4.9,
+     "until": 6.5,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 6.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "receipt_unroll_loop",
+     "at": 0.0,
+     "gain": -24,
+     "dur": 6.6
+    },
+    {
+     "name": "car_honk_1",
+     "at": 5.8,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · one quick run: down the hill and across all five lanes of the bridge in the evening rush (three parallax planes)",
+    "picture": "Egg at the very bottom: the coupon."
+   }
+  },
+  {
+   "id": "17.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · across the lanes: the Forecaster walks up the far pedestrian lane with his clipboard; Mas small in the foreground; the card",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "forecaster",
+    "mas"
+   ],
+   "caption": "THE FORECASTER walks up the far pedestrian lane with his clipboard. The card freezes on him.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "THE FORECASTER / EX-NOPEAI.",
+     "at": 1.0,
+     "until": 3.6,
+     "kind": "card"
+    },
+    {
+     "text": "AT STAKE: ~$2M",
+     "at": 1.4,
+     "until": 3.6,
+     "kind": "stat"
+    }
+   ],
+   "reelDur": 3.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "freeze_hit_F",
+     "at": 1.0,
+     "gain": -18
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · across the lanes: the Forecaster walks up the far pedestrian lane with his clipboard; Mas small in the foreground; the card",
+    "picture": "The stakes land before the pen does.",
+    "style": "2-TONE FREEZE (the card) · LEDGER 6 frames on the stat"
+   }
+  },
+  {
+   "id": "17.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "forecaster",
+    "mas"
+   ],
+   "caption": "A pen on a bank chain rises out of the receipt and offers itself to him. He looks at it and doesn't take it. He tells the pen where he is.",
+   "lines": [
+    {
+     "id": "e2-a3-0016",
+     "who": "forecaster",
+     "text": "Here's where I am. If I sign, I keep what I've vested, and I never say a bad word about the place again. It says in perpetuity. I don't forecast that far.",
+     "t": 2.6,
+     "dur": 11.92,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0016__forecaster-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Here's",
+       -0.02,
+       0.219
+      ],
+      [
+       "where",
+       0.242,
+       0.416
+      ],
+      [
+       "I",
+       0.486,
+       0.509
+      ],
+      [
+       "am",
+       0.648,
+       0.88
+      ],
+      [
+       "If",
+       1.577,
+       1.716
+      ],
+      [
+       "I",
+       1.786,
+       1.809
+      ],
+      [
+       "sign",
+       1.914,
+       2.285
+      ],
+      [
+       "I",
+       2.366,
+       2.506
+      ],
+      [
+       "keep",
+       2.761,
+       3.028
+      ],
+      [
+       "what",
+       3.051,
+       3.144
+      ],
+      [
+       "I've",
+       3.191,
+       3.284
+      ],
+      [
+       "vested",
+       3.307,
+       3.795
+      ],
+      [
+       "and",
+       3.864,
+       4.038
+      ],
+      [
+       "I",
+       4.178,
+       4.317
+      ],
+      [
+       "never",
+       4.503,
+       4.723
+      ],
+      [
+       "say",
+       4.793,
+       4.967
+      ],
+      [
+       "a",
+       5.025,
+       5.048
+      ],
+      [
+       "bad",
+       5.095,
+       5.304
+      ],
+      [
+       "word",
+       5.362,
+       5.675
+      ],
+      [
+       "about",
+       5.733,
+       6.0
+      ],
+      [
+       "the",
+       6.024,
+       6.093
+      ],
+      [
+       "place",
+       6.117,
+       6.395
+      ],
+      [
+       "again",
+       6.418,
+       6.79
+      ],
+      [
+       "It",
+       7.614,
+       7.684
+      ],
+      [
+       "says",
+       7.742,
+       7.986
+      ],
+      [
+       "in",
+       8.09,
+       8.346
+      ],
+      [
+       "perpetuity",
+       8.601,
+       9.402
+      ],
+      [
+       "I",
+       10.226,
+       10.284
+      ],
+      [
+       "don't",
+       10.354,
+       10.598
+      ],
+      [
+       "forecast",
+       10.656,
+       11.155
+      ],
+      [
+       "that",
+       11.202,
+       11.376
+      ],
+      [
+       "far",
+       11.445,
+       11.736
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 15.28,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "pen_chain_rattle",
+     "at": 0.4,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes)",
+    "picture": "Mas is outside the refusal (R1), small in the foreground. The pen comes from the receipt, never from Mas's hand."
+   }
+  },
+  {
+   "id": "17.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · a DRIVER parked on the receipt leans out of his window",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "driver"
+   ],
+   "caption": "A DRIVER, parked on the receipt, leans out.",
+   "lines": [
+    {
+     "id": "e2-a3-0017",
+     "who": "driver",
+     "text": "You gonna think it over, or can we move? We're parked on it.",
+     "t": 1.15,
+     "dur": 2.86,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0017__driver-A.wav",
+     "in": 0.44,
+     "words": [
+      [
+       "You",
+       -0.02,
+       0.061
+      ],
+      [
+       "gonna",
+       0.107,
+       0.27
+      ],
+      [
+       "think",
+       0.305,
+       0.444
+      ],
+      [
+       "it",
+       0.49,
+       0.56
+      ],
+      [
+       "over",
+       0.607,
+       0.85
+      ],
+      [
+       "or",
+       0.978,
+       1.094
+      ],
+      [
+       "can",
+       1.129,
+       1.257
+      ],
+      [
+       "we",
+       1.315,
+       1.384
+      ],
+      [
+       "move",
+       1.454,
+       1.802
+      ],
+      [
+       "We're",
+       2.058,
+       2.267
+      ],
+      [
+       "parked",
+       2.313,
+       2.604
+      ],
+      [
+       "on",
+       2.662,
+       2.754
+      ],
+      [
+       "it",
+       2.801,
+       2.88
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.16,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "car_window_down",
+     "at": 0.192,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · a DRIVER parked on the receipt leans out of his window"
+   }
+  },
+  {
+   "id": "17.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "forecaster",
+    "mas"
+   ],
+   "caption": "THE FORECASTER lets the pen go. The pen withdraws.",
+   "lines": [
+    {
+     "id": "e2-a3-0018",
+     "who": "forecaster",
+     "text": "Already did. It's the one thing I didn't need a number for.",
+     "t": 0.35,
+     "dur": 3.22,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0018__forecaster-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Already",
+       -0.02,
+       0.41
+      ],
+      [
+       "did",
+       0.468,
+       0.758
+      ],
+      [
+       "It's",
+       1.257,
+       1.443
+      ],
+      [
+       "the",
+       1.466,
+       1.536
+      ],
+      [
+       "one",
+       1.582,
+       1.721
+      ],
+      [
+       "thing",
+       1.745,
+       1.884
+      ],
+      [
+       "I",
+       1.93,
+       1.954
+      ],
+      [
+       "didn't",
+       2.012,
+       2.221
+      ],
+      [
+       "need",
+       2.244,
+       2.383
+      ],
+      [
+       "a",
+       2.43,
+       2.453
+      ],
+      [
+       "number",
+       2.499,
+       2.755
+      ],
+      [
+       "for",
+       2.824,
+       3.091
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.86,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "pen_chain_rattle",
+     "at": 3.77,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a3-0018": 0.5
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a3-0017",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper",
+    "picture": "Word for word (keep list)."
+   }
+  },
+  {
+   "id": "17.07",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.59,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "sounds": [
+    {
+     "name": "phone_buzz_step_1",
+     "at": 1.913,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit"
+   }
+  },
+  {
+   "id": "17.08",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the scramble on his phone: staff screenshots of a clause; a grey LEGAL tile; a second request for comment",
+   "side": "",
+   "room": "bridge",
+   "chars": [],
+   "caption": "His phone won't stop: staff screenshots of a clause; a grey LEGAL tile, call me; a second request for comment. Quick cuts on his thumbs.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NON-DISPARAGEMENT",
+     "at": 0.3,
+     "until": 1.5,
+     "kind": "ui"
+    },
+    {
+     "text": "LEGAL · call me",
+     "at": 1.6,
+     "until": 3.2,
+     "kind": "ui"
+    },
+    {
+     "text": "request for comment",
+     "at": 3.3,
+     "until": 4.7,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
+   ],
+   "sounds": [
+    {
+     "name": "phone_buzz_step_2",
+     "at": 0.2,
+     "gain": -22
+    },
+    {
+     "name": "phone_buzz_step_3",
+     "at": 1.6,
+     "gain": -22
+    },
+    {
+     "name": "phone_buzz_step_4",
+     "at": 3.3,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "QUICK-CUT RUN (the scramble)",
+    "pace": "quick",
+    "camera": "ECU · the scramble on his phone: staff screenshots of a clause; a grey LEGAL tile; a second request for comment",
+    "picture": "Hands fast; the LEGAL tile a grey icon, never named."
+   }
+  },
+  {
+   "id": "17.09",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He calls LEGAL. We hear only his side, level, and quicker than he ever talks. His face doesn't move.",
+   "lines": [
+    {
+     "id": "e2-a3-0019",
+     "who": "mas",
+     "text": "everyone who signed one. find them. all of them. today.",
+     "t": 2.29,
+     "dur": 3.44,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0019__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Everyone",
+       -0.02,
+       0.352
+      ],
+      [
+       "who",
+       0.375,
+       0.456
+      ],
+      [
+       "signed",
+       0.514,
+       0.769
+      ],
+      [
+       "one",
+       0.839,
+       1.06
+      ],
+      [
+       "find",
+       1.28,
+       1.536
+      ],
+      [
+       "them",
+       1.582,
+       1.814
+      ],
+      [
+       "all",
+       2.139,
+       2.325
+      ],
+      [
+       "of",
+       2.372,
+       2.418
+      ],
+      [
+       "them",
+       2.465,
+       2.674
+      ],
+      [
+       "today",
+       2.917,
+       3.347
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.49,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
+   ],
+   "sounds": [
+    {
+     "name": "call_ring",
+     "at": 0.191,
+     "gain": -26
+    },
+    {
+     "name": "call_connect",
+     "at": 1.527,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "QUICK-CUT RUN (the scramble)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL",
+    "picture": "The one time he hurries."
+   }
+  },
+  {
+   "id": "17.10",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · a draft opened, typed, deleted, typed: grey bars",
+   "side": "",
+   "room": "bridge",
+   "chars": [],
+   "caption": "A draft opened, typed, deleted, typed, its words grey bars.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_soft_01",
+     "at": 0.4,
+     "gain": -28
+    },
+    {
+     "name": "key_delete_run",
+     "at": 1.8,
+     "gain": -26
+    },
+    {
+     "name": "key_tap_soft_03",
+     "at": 3.0,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "QUICK-CUT RUN (the scramble)",
+    "pace": "quick",
+    "camera": "ECU · a draft opened, typed, deleted, typed: grey bars",
+    "picture": "No legible word and no voice over it (R2: nothing at contested item 3)."
+   }
+  },
+  {
+   "id": "17.11",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · his still face; the receipt still unrolling under his shoes",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "lines": [
+    {
+     "id": "e2-vo-09",
+     "who": "mas",
+     "text": "everyone who signed. the post. everyone who signed.",
+     "t": 0.3,
+     "dur": 3.24,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Everyone",
+       -0.02,
+       0.421
+      ],
+      [
+       "who",
+       0.456,
+       0.56
+      ],
+      [
+       "signed",
+       0.619,
+       0.99
+      ],
+      [
+       "the",
+       1.187,
+       1.292
+      ],
+      [
+       "post",
+       1.35,
+       1.803
+      ],
+      [
+       "everyone",
+       2.186,
+       2.639
+      ],
+      [
+       "who",
+       2.674,
+       2.766
+      ],
+      [
+       "signed",
+       2.824,
+       3.208
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
+   ],
+   "sounds": [
+    {
+     "name": "receipt_unroll_loop",
+     "at": 0.0,
+     "gain": -28,
+     "dur": 3.6
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "QUICK-CUT RUN (the scramble)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · his still face; the receipt still unrolling under his shoes",
+    "picture": "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft."
+   }
+  },
+  {
+   "id": "17.12",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "forecaster",
+    "mas"
+   ],
+   "caption": "THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.",
+   "lines": [
+    {
+     "id": "e2-a3-0020",
+     "who": "forecaster",
+     "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
+     "t": 2.68,
+     "dur": 6.82,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0020__forecaster-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "I've",
+       -0.02,
+       0.27
+      ],
+      [
+       "got",
+       0.293,
+       0.444
+      ],
+      [
+       "a",
+       0.468,
+       0.491
+      ],
+      [
+       "forecast",
+       0.549,
+       1.129
+      ],
+      [
+       "on",
+       1.199,
+       1.304
+      ],
+      [
+       "you",
+       1.373,
+       1.559
+      ],
+      [
+       "Median",
+       2.128,
+       2.697
+      ],
+      [
+       "an",
+       3.289,
+       3.405
+      ],
+      [
+       "apology",
+       3.451,
+       3.962
+      ],
+      [
+       "within",
+       4.009,
+       4.299
+      ],
+      [
+       "the",
+       4.345,
+       4.415
+      ],
+      [
+       "hour",
+       4.461,
+       4.81
+      ],
+      [
+       "in",
+       5.506,
+       5.878
+      ],
+      [
+       "lowercase",
+       6.017,
+       6.83
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 10.07,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · the Forecaster, having crossed the stalled lanes, stops beside him"
+   }
+  },
+  {
+   "id": "17.13",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · Mas's thumb hovers over Post; he doesn't press",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas's thumb hovers over Post. He doesn't press.",
+   "lines": [
+    {
+     "id": "e2-vo-10",
+     "who": "mas",
+     "text": "not until legal has every name.",
+     "t": 1.53,
+     "dur": 2.51,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "Not",
+       -0.02,
+       0.232
+      ],
+      [
+       "until",
+       0.29,
+       0.661
+      ],
+      [
+       "legal",
+       0.754,
+       1.23
+      ],
+      [
+       "has",
+       1.323,
+       1.521
+      ],
+      [
+       "every",
+       1.613,
+       1.915
+      ],
+      [
+       "name",
+       2.008,
+       2.449
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "ECU · Mas's thumb hovers over Post; he doesn't press"
+   }
+  },
+  {
+   "id": "17.14",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the night, one held shot: the bridge's lights cycle once; Mas still on the receipt; the Forecaster asleep against the rail",
+   "side": "",
+   "room": "bridge_night",
+   "chars": [
+    "mas",
+    "forecaster"
+   ],
+   "caption": "The night, one held shot: the bridge's lights cycle once. Mas still on the receipt. The Forecaster asleep against the rail, clipboard on his chest.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · one held chord through the night (2 s)"
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · the night, one held shot: the bridge's lights cycle once; Mas still on the receipt; the Forecaster asleep against the rail",
+    "picture": "Palette cycle, no strobe."
+   }
+  },
+  {
+   "id": "17.15",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the next afternoon: Mas posts; the post pops up over the sky, one trim per honk; the Forecaster wakes",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "mas",
+    "forecaster",
+    "driver"
+   ],
+   "caption": "The next afternoon. Mas posts. The post pops up over the sky in its own UI, one trim per honk from the car behind him. The Forecaster wakes, checks his watch and crosses out an hour.",
+   "lines": [
+    {
+     "id": "e2-a3-0021",
+     "who": "forecaster",
+     "text": "Updating.",
+     "t": 10.9,
+     "dur": 0.82,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0021__forecaster-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Updating",
+       -0.02,
+       0.678
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 18",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "vested equity is vested equity, full stop.",
+     "at": 1.6,
+     "until": 4.1,
+     "kind": "post"
+    },
+    {
+     "text": "this is on me…",
+     "at": 4.1,
+     "until": 5.2,
+     "kind": "post"
+    },
+    {
+     "text": "…i did not know this was happening and i should have.",
+     "at": 5.2,
+     "until": 8.2,
+     "kind": "post"
+    },
+    {
+     "text": "…they can contact me and we'll fix that too.",
+     "at": 8.2,
+     "until": 10.8,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 11.87,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · thins to the bass pedal under the posts; the honks on the phrase ends"
+   ],
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 1.5,
+     "gain": -24
+    },
+    {
+     "name": "car_honk_2",
+     "at": 4.1,
+     "gain": -22
+    },
+    {
+     "name": "car_honk_3",
+     "at": 5.2,
+     "gain": -22
+    },
+    {
+     "name": "car_honk_4",
+     "at": 8.2,
+     "gain": -22
+    },
+    {
+     "name": "car_honk_5",
+     "at": 10.75,
+     "gain": -22
+    },
+    {
+     "name": "pen_scribble_short",
+     "at": 11.42,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the next afternoon: Mas posts; the post pops up over the sky, one trim per honk; the Forecaster wakes",
+    "picture": "Posts are pop-ups, never speeches. His real lowercase."
+   }
+  },
+  {
+   "id": "17.16",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · the honking driver leans out; then the car behind him honks; the Forecaster walks off",
+   "side": "",
+   "room": "bridge",
+   "chars": [
+    "driver",
+    "forecaster",
+    "mas"
+   ],
+   "caption": "The DRIVER who has been honking leans out to Mas. He finds a line on the receipt, reads it, and very carefully takes his hand off the horn. The car behind him honks. The Forecaster tucks his clipboard under his arm and walks off the bridge.",
+   "lines": [
+    {
+     "id": "e2-a3-0022",
+     "who": "driver",
+     "text": "Excuse me. Does honking count as disparagement?",
+     "t": 0.45,
+     "dur": 2.63,
+     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0022__driver-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Excuse",
+       -0.02,
+       0.424
+      ],
+      [
+       "me",
+       0.459,
+       0.61
+      ],
+      [
+       "Does",
+       0.877,
+       1.063
+      ],
+      [
+       "honking",
+       1.109,
+       1.446
+      ],
+      [
+       "count",
+       1.504,
+       1.771
+      ],
+      [
+       "as",
+       1.818,
+       1.899
+      ],
+      [
+       "disparagement",
+       1.957,
+       2.642
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.88,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · thins to the bass pedal under the posts; the honks on the phrase ends"
+   ],
+   "sounds": [
+    {
+     "name": "car_honk_1",
+     "at": 4.68,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a3-0022": 0.6
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a3-0021",
+      "gap_s": 0.6,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MEDIUM · the honking driver leans out; then the car behind him honks; the Forecaster walks off",
+    "picture": "Mas answers nobody: at a real event his surface stays blank."
+   }
+  },
+  {
+   "id": "17.17",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · May 20, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp drifts in; the storm cloud with a blank letterhead parks over it",
+   "side": "",
+   "room": "bridge_rain",
+   "chars": [
+    "mas"
+   ],
+   "caption": "A new day on the bridge: traffic moving again, the receipt trodden flat into the lane lines, Mas under an umbrella on the pedestrian lane. The her blimp drifts in over the bay. A storm cloud with a blank letterhead rolls out of the city and parks directly over it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 20",
+     "at": 0.2,
+     "until": 1.6,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 10.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · a pad in the rain"
+   ],
+   "sounds": [
+    {
+     "name": "thunder_tuned_F",
+     "at": 7.4,
+     "gain": -18
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · May 20, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp drifts in; the storm cloud with a blank letterhead parks over it",
+    "picture": "Thunder at most 3 flashes per 24 frames, every pop at or under 80% white (P15). One 4-bar phrase."
+   }
+  },
+  {
+   "id": "17.18",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
+   "side": "",
+   "room": "bridge_rain",
+   "chars": [
+    "mas"
+   ],
+   "caption": "It rains letterhead. The receipt's ink runs down the lanes in the rain. Far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6.9,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · a pad in the rain"
+   ],
+   "sounds": [
+    {
+     "name": "umbrella_rain",
+     "at": 0.0,
+     "gain": -24,
+     "dur": 3.6
+    },
+    {
+     "name": "ink_run_drip",
+     "at": 0.767,
+     "gain": -26
+    },
+    {
+     "name": "umbrella_pop",
+     "at": 4.983,
+     "gain": -32
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · it rains letterhead; the receipt's ink runs in the rain",
+    "picture": "The letterhead is blank: the actress is never drawn, voiced or named."
+   }
+  },
+  {
+   "id": "17.19",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+   "side": "",
+   "room": "bridge_rain",
+   "chars": [
+    "mas"
+   ],
+   "caption": "On his rain-beaded phone, the voice menu: five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "VOICE 5",
+     "at": 0.4,
+     "until": 4.4,
+     "kind": "ui"
+    },
+    {
+     "text": "Pause",
+     "at": 1.4,
+     "until": 2.2,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 5 [PAUSED]",
+     "at": 2.2,
+     "until": 4.4,
+     "kind": "ui"
+    },
+    {
+     "text": "Hey.",
+     "at": 2.2,
+     "until": 4.4,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · a pad in the rain"
+   ],
+   "sounds": [
+    {
+     "name": "ui_pause_tap",
+     "at": 2.0,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+    "picture": "No bonk, no notification here."
+   }
+  },
+  {
+   "id": "17.20",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · beside it, his company's post pops up in its own UI, two fragments",
+   "side": "",
+   "room": "bridge_rain",
+   "chars": [],
+   "caption": "Beside it, his company's post pops up in its own UI: questions heard; a pause.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "We've heard questions about how we chose the voices…",
+     "at": 0.3,
+     "until": 5.3,
+     "kind": "post"
+    },
+    {
+     "text": "…We are working to pause the use of…",
+     "at": 2.0,
+     "until": 5.3,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 5.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 · a pad in the rain"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 0.3,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "ECU · beside it, his company's post pops up in its own UI, two fragments",
+    "picture": "Two fragments, cropped before the voice's name; no name appears. The post claims nothing about how the voice was made (facts §F) and answers no one."
+   }
+  },
+  {
+   "id": "17.21",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the blimp sags, its running lights clicking off one by one; the last light; black",
+   "side": "",
+   "room": "bridge_rain",
+   "chars": [],
+   "caption": "The blimp sags three pixels, its running lights clicking off one by one. The last one clicks off. Black: act-out 2.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-10 out · the DREAD sting (MM-14) on the blimp's last light"
+   ],
+   "sounds": [
+    {
+     "name": "blimp_lights_off",
+     "at": 0.6,
+     "gain": -26
+    },
+    {
+     "name": "blimp_lights_off",
+     "at": 1.3,
+     "gain": -26
+    },
+    {
+     "name": "blimp_lights_off",
+     "at": 2.0,
+     "gain": -26
+    },
+    {
+     "name": "blimp_lights_off",
+     "at": 2.8,
+     "gain": -24
+    },
+    {
+     "name": "dread_sting",
+     "at": 2.8,
+     "gain": -16
+    }
+   ],
+   "passes": {
+    "scene": "17",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
+    "pace": "quick",
+    "camera": "WIDE · the blimp sags, its running lights clicking off one by one; the last light; black"
+   }
+  }
+ ]
+}

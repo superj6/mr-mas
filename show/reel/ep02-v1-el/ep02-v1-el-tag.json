@@ -1,0 +1,545 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "TAG · august · sc 23",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep2 v1 base lock of tag: the beat plan applied to no source (every beat new).",
+ "dateSpan": "Aug 5 - 22, 2024",
+ "runtimeMin": 0.62,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "rumpt-hands": {
+   "name": "RUMPT",
+   "role": "HANDS ONLY",
+   "blank": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/tag.json",
+  "timeline": null,
+  "takes": "audio/ep02/v1-el/ep02-v1/tag/lines-A.json",
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/tag/lines-A.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/tag-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 37.0,
+  "kokoro_lock": "show/reel/ep02-v1/ep02-v1-tag.json",
+  "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "23.01",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "His back as he sits at the desk, the monitor's glow on. Something heavy lands on it from above: THUD. The suit is back, in federal court. Stuck to it, the (FOR NOW) note, crossed out.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 5",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "NOLE v. MANALT ET AL. · FEDERAL COURT",
+     "at": 2.2,
+     "until": 4.6,
+     "kind": "doc"
+    },
+    {
+     "text": "(FOR NOW)",
+     "at": 2.2,
+     "until": 4.6,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 · THE RUN holds its pedal under the suit's landing"
+   ],
+   "sounds": [
+    {
+     "name": "landing_thunk",
+     "at": 1.6,
+     "gain": -14
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD",
+    "picture": "The framed GUEST lanyard from Ep1 on the wall."
+   }
+  },
+  {
+   "id": "23.02",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · its pages lose their exclamation points; he slides it aside",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Page one: !!. Page two: !. Page three: a full stop. He slides it aside so he can see the monitor.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "!!",
+     "at": 0.27,
+     "until": 1.21,
+     "kind": "doc"
+    },
+    {
+     "text": "!",
+     "at": 1.21,
+     "until": 2.15,
+     "kind": "doc"
+    },
+    {
+     "text": ".",
+     "at": 2.15,
+     "until": 3.22,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "sounds": [
+    {
+     "name": "page_turn",
+     "at": 0.269,
+     "gain": -26
+    },
+    {
+     "name": "page_turn",
+     "at": 1.209,
+     "gain": -26
+    },
+    {
+     "name": "page_turn",
+     "at": 2.15,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "ECU · its pages lose their exclamation points; he slides it aside"
+   }
+  },
+  {
+   "id": "23.03",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal",
+   "side": "",
+   "room": "darkroom",
+   "chars": [],
+   "caption": "The candidate's post, in its own UI: a rival \"A.I.'d\" her crowd. The photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal on its corner.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 11",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "…and she 'A.I.'d' it…",
+     "at": 1.6,
+     "until": 4.1,
+     "kind": "post"
+    },
+    {
+     "text": "SIRRAH",
+     "at": 1.6,
+     "until": 4.2,
+     "kind": "plate"
+    },
+    {
+     "text": "SUMMER 2024",
+     "at": 1.6,
+     "until": 4.2,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 1.6,
+     "gain": -26
+    }
+   ],
+   "names": [
+    {
+     "id": "sirrah",
+     "at": 1.6
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal",
+    "picture": "His text never types: it arrives as one block."
+   }
+  },
+  {
+   "id": "23.04",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "orb",
+    "mas"
+   ],
+   "caption": "THE ORB floats off Mas's shoulder to the monitor and scans the crowd, face by face: human, human, human, human. Its toast. It floats back. In a background tab, an egg sits on a bill.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "human · human · human · human",
+     "at": 1.4,
+     "until": 4.0,
+     "kind": "ui"
+    },
+    {
+     "text": "verified: human (all of them)",
+     "at": 4.2,
+     "until": 6.6,
+     "kind": "toast"
+    }
+   ],
+   "reelDur": 6.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 · the Orb's F chime, then its verdict a beat later (F → C on vibes and glass)"
+   ],
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.3,
+     "gain": -24
+    },
+    {
+     "name": "orb_scan_sweep",
+     "at": 1.4,
+     "gain": -26
+    },
+    {
+     "name": "orb_chime_F",
+     "at": 4.2,
+     "gain": -22
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 4.2,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill",
+    "picture": "Toast 3 of 3. The egg is Ep3's.",
+    "style": "2.E TERMINAL (the Orb's POV)"
+   }
+  },
+  {
+   "id": "23.05",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · Mas at the monitor, the toast cleared",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Mas at the monitor.",
+   "lines": [
+    {
+     "id": "e2-vo-14",
+     "who": "mas",
+     "text": "sixty elections this year.",
+     "t": 0.54,
+     "dur": 1.9,
+     "audio": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Sixty",
+       -0.02,
+       0.456
+      ],
+      [
+       "elections",
+       0.526,
+       1.118
+      ],
+      [
+       "this",
+       1.187,
+       1.385
+      ],
+      [
+       "year",
+       1.454,
+       1.78
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "e2-vo-14__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
+      "in": 0.37,
+      "t": 0.54,
+      "dur": 1.9
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.98,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "OTS · Mas at the monitor, the toast cleared",
+    "picture": "After the Orb's toast clears."
+   }
+  },
+  {
+   "id": "23.06",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "caption": "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 21",
+     "at": 0.2,
+     "until": 1.4,
+     "kind": "rail"
+    },
+    {
+     "text": "…having me speak… It's a little bit dangerous out there.",
+     "at": 1.4,
+     "until": 4.55,
+     "kind": "lower-third"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words"
+   ],
+   "sounds": [
+    {
+     "name": "blip_text_neutral",
+     "at": 1.5,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
+    "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice."
+   }
+  },
+  {
+   "id": "23.07",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "caption": "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 5.92,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only"
+   ],
+   "sounds": [
+    {
+     "name": "balloon_pump",
+     "at": 0.807,
+     "gain": -26
+    },
+    {
+     "name": "balloon_pump",
+     "at": 1.884,
+     "gain": -25
+    },
+    {
+     "name": "balloon_pump",
+     "at": 2.96,
+     "gain": -24
+    },
+    {
+     "name": "knot_tie",
+     "at": 4.575,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
+    "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say."
+   }
+  },
+  {
+   "id": "23.08",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · the hook: the string goes taut",
+   "side": "",
+   "room": "darkroom",
+   "chars": [],
+   "caption": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 · the Podium thins to one held chord"
+   ],
+   "sounds": [
+    {
+     "name": "string_taut",
+     "at": 0.3,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "POV · the hook: the string goes taut"
+   }
+  },
+  {
+   "id": "23.09",
+   "act": "TAG",
+   "kind": "montage",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas at his monitor, its glow on his still face. Cut to black.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-13 out · cut on the downbeat to black"
+   ],
+   "passes": {
+    "scene": "23",
+    "mode": "MONTAGE on his monitor",
+    "pace": "normal",
+    "camera": "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
+    "picture": "Mas's face is the last image (R2)."
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 37.0,
+  "seconds_el": 37.0,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": []
+ }
+}

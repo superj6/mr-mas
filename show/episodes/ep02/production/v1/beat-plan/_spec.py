@@ -107,6 +107,19 @@ SCENE_ADJUST = {
                "the docket tab: 2.1 s) and the final check's 2 s arrivals at Jun 11 and Jun 19 don't fit 48 s without "
                "rushing the split; sc 19 has the air (its fit scale was 1.32)"),
     "19": (-4, "gives sc 20 its 4 s (above); Act Four stays 5:20"),
+    # the lock pass (lock-v1.md §3, 2026-10-09): the recorded takes run short in these two scenes (CHATGTP, the engineer
+    # and the staffers at 55-70 % of their words-at-rate plans), so fitting them to the table tripled their air (sc 11
+    # x3.51, sc 13 x3.03; the other 18 scenes x0.97-1.91, median x1.43): every head and tail of a quick exchange 3x its
+    # design, 11.08's tail 4.59 s. The table was an estimate, +-0:40 until the takes (proposal "Runtime per act"), and
+    # runtime is an outcome, never lengthened for its own sake (MEM-QB "Pacing": "No dead air"; W17: tighten = dead time).
+    # So these two scenes keep their designed air at about the episode's median breath; arrivals, laugh holds and
+    # aftermaths are fixed air and untouched; the time comes back to the episode, none of it moved elsewhere.
+    "11": (-13, "the lock pass: the takes run short (CHATGTP at 164-246 wpm against the plan's 150), so the table's "
+                "1:51 tripled the demo's air (x3.51; 11.08's tail 4.59 s); at 98 s it fits x1.41, about the episode's "
+                "median, every fixed hold (the arrival, the three laugh tails, Rima's bar, the post and the blimp) kept"),
+    "13": (-5, "the lock pass: the staffers' takes run short, so the table's 0:36 tripled the lobby's air (x3.03; "
+               "13.06's walk-off 7.27 s against its 2.4 s design); at 31 s it fits x1.36, the arrival and the "
+               "presser's beats kept"),
 }
 for _sc, (_d, _why) in SCENE_ADJUST.items():
     SCENES[_sc]["proposal_s"] = SCENES[_sc]["target_s"]
@@ -115,8 +128,9 @@ for _sc, (_d, _why) in SCENE_ADJUST.items():
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
-# script review's +4 s in sc 4, Act One is 6:08 and the story 23:20
-SEG_TARGET = {"coldopen": 56, "act1": 368, "act2": 293, "act3": 326, "act4": 320, "tag": 37}
+# script review's +4 s in sc 4, Act One is 6:08 and the story 23:20; the lock pass gives back sc 11's 13 s and sc 13's
+# 5 s of fitted air (above), so Act Two is 4:40, Act Three 5:21 and the story 23:02
+SEG_TARGET = {"coldopen": 56, "act1": 368, "act2": 280, "act3": 321, "act4": 320, "tag": 37}
 EPISODE_EXTRA_S = 30 + 2 + 10.0   # the intro (30 s), the filename card (2 s), the Orb outro (about 10 s)
 
 # the sequence markers (the reel's margin slate), one per scene and one per flashback

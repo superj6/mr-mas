@@ -1,0 +1,1209 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "COLD OPEN · sc 1",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep2 v1 base lock of coldopen: the beat plan applied to no source (every beat new).",
+ "dateSpan": "Feb 15 - 29, 2024",
+ "runtimeMin": 0.93,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "MAN AT THE BACK"
+  },
+  "gerg": {
+   "role": "MAN ON THE BEANBAG"
+  },
+  "selbeep": {
+   "name": "SELBEEP",
+   "role": "DIRECTOR OF MAMMOTHS"
+  },
+  "dot": {
+   "name": "DOT",
+   "role": "WOMAN ON THE LADDER",
+   "blank": true
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/coldopen.json",
+  "timeline": null,
+  "takes": "audio/ep02/v1-el/ep02-v1/coldopen/lines-A.json",
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/coldopen/lines-A.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/coldopen-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 56.0,
+  "kokoro_lock": "show/reel/ep02-v1/ep02-v1-coldopen.json",
+  "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "1.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the lobby master: the wall screen's snowy meadow (near-photoreal in its bezel), the room around it",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas",
+    "gerg",
+    "selbeep",
+    "orb",
+    "staff"
+   ],
+   "caption": "The NopeAI lobby: rack pillars, LED votives, the neon NOPE AI. Over reception, Ep1's sign: DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86. Staff in tiled rows on beanbags face the wall-sized screen; GERG types on a laptop on his knees. At the back, MAS stands at a high counter with a water glass, THE ORB at his shoulder. On the screen, inside its bezel: a woolly mammoth plodding toward camera through a snowy meadow, too smooth for this building.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: FEB 15, 2024",
+     "at": 0.6,
+     "until": 2.4,
+     "kind": "rail"
+    },
+    {
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86",
+     "at": 0.2,
+     "until": 3.0,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 3.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    {
+     "name": "server_hum",
+     "at": 0.0,
+     "gain": -30,
+     "note": "the lobby's rack hum (bed)"
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "WIDE · the lobby master: the wall screen's snowy meadow (near-photoreal in its bezel), the room around it",
+    "picture": "The 2.A leap: near-photoreal inside the bezel only (objects only: the animal, the meadow; nothing human). The votives tick on eighths. Mas small at the back, left third; the doors far right (the axis).",
+    "style_leap": {
+     "id": "2.A",
+     "tier": 2,
+     "look": "near-photoreal woolly mammoth and snowy meadow inside the bezel, silent",
+     "owner": "MACHINE (the product's claim is that it looks real)",
+     "door": "the bezel",
+     "beat": "the preview",
+     "filler": "a three.js PBR walk in a snow plate",
+     "final": "video model, objects only (no person, face or hand)"
+    }
+   }
+  },
+  {
+   "id": "1.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · SELBEEP under the screen, the remote the size of a clapperboard; the mammoth's foot breaking the bezel on \"sentence\"",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "selbeep",
+    "staff"
+   ],
+   "caption": "SELBEEP steps under the screen and turns to the room. On \"sentence\", the mammoth's foot breaks the bezel.",
+   "lines": [
+    {
+     "id": "e2-co-0001",
+     "who": "selbeep",
+     "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+     "t": 0.58,
+     "dur": 6.03,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Eyes",
+       -0.02,
+       0.201
+      ],
+      [
+       "up",
+       0.247,
+       0.34
+      ],
+      [
+       "here",
+       0.386,
+       0.526
+      ],
+      [
+       "everyone",
+       0.572,
+       0.967
+      ],
+      [
+       "This",
+       1.164,
+       1.338
+      ],
+      [
+       "is",
+       1.385,
+       1.466
+      ],
+      [
+       "AROS",
+       1.582,
+       2.198
+      ],
+      [
+       "Nobody",
+       2.755,
+       3.045
+      ],
+      [
+       "filmed",
+       3.103,
+       3.359
+      ],
+      [
+       "any",
+       3.393,
+       3.509
+      ],
+      [
+       "of",
+       3.556,
+       3.614
+      ],
+      [
+       "this",
+       3.66,
+       3.904
+      ],
+      [
+       "It's",
+       4.322,
+       4.508
+      ],
+      [
+       "all",
+       4.531,
+       4.647
+      ],
+      [
+       "made",
+       4.694,
+       4.856
+      ],
+      [
+       "from",
+       4.879,
+       5.007
+      ],
+      [
+       "one",
+       5.088,
+       5.251
+      ],
+      [
+       "sentence",
+       5.297,
+       5.808
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0001__selbeep-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+      "in": 0.37,
+      "t": 0.58,
+      "dur": 6.03
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    {
+     "name": "mammoth_step_pixel",
+     "at": 6.21,
+     "gain": -22,
+     "note": "the foot through the bezel"
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · SELBEEP under the screen, the remote the size of a clapperboard; the mammoth's foot breaking the bezel on \"sentence\"",
+    "picture": "An internal preview: the beanbags are his audience. The foot crosses the bezel on the word."
+   }
+  },
+  {
+   "id": "1.03",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the step-out: the mammoth turns pixel as it crosses the bezel; OTS over Gerg's laptop",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "gerg",
+    "selbeep",
+    "staff"
+   ],
+   "caption": "As it crosses the frame it becomes ours: pixel art, its own colour ramp, palette-cycled fur, 8 drawings held 3 frames each. For two frames, as it steps out, it has a fifth leg. It steps onto the carpet, heading screen-left. Over Gerg's laptop: GERG, not looking up.",
+   "lines": [
+    {
+     "id": "e2-co-0002",
+     "who": "gerg",
+     "text": "Which sentence?",
+     "t": 1.85,
+     "dur": 0.78,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Which",
+       -0.02,
+       0.225
+      ],
+      [
+       "sentence",
+       0.283,
+       0.736
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0002__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+      "in": 0.38,
+      "t": 1.85,
+      "dur": 0.78
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.75,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    {
+     "name": "mammoth_step_pixel",
+     "at": 0.347,
+     "gain": -20
+    },
+    {
+     "name": "mammoth_step_pixel",
+     "at": 1.272,
+     "gain": -21
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the step-out: the mammoth turns pixel as it crosses the bezel; OTS over Gerg's laptop",
+    "picture": "The AI tell is on the animal (a fifth leg, 2 frames), never on a person (style-range H2). The OTS over Gerg keeps Selbeep and the mammoth beyond him."
+   }
+  },
+  {
+   "id": "1.04",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · SELBEEP; the lobby chair beside the mammoth sags and melts; at the back, MAS glances at it",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "selbeep",
+    "mas",
+    "staff"
+   ],
+   "caption": "SELBEEP answers Gerg. The lobby chair beside the mammoth sags, then melts into the carpet like candle wax. At the back of the lobby, Mas glances at the chair.",
+   "lines": [
+    {
+     "id": "e2-co-0003",
+     "who": "selbeep",
+     "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+     "t": 0.13,
+     "dur": 5.84,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "A",
+       -0.02,
+       0.043
+      ],
+      [
+       "mammoth",
+       0.159,
+       0.565
+      ],
+      [
+       "walking",
+       0.647,
+       0.995
+      ],
+      [
+       "through",
+       1.041,
+       1.274
+      ],
+      [
+       "the",
+       1.308,
+       1.378
+      ],
+      [
+       "snow",
+       1.424,
+       1.784
+      ],
+      [
+       "We",
+       2.353,
+       2.469
+      ],
+      [
+       "never",
+       2.527,
+       2.69
+      ],
+      [
+       "said",
+       2.736,
+       2.899
+      ],
+      [
+       "anything",
+       2.945,
+       3.259
+      ],
+      [
+       "about",
+       3.305,
+       3.491
+      ],
+      [
+       "a",
+       3.526,
+       3.549
+      ],
+      [
+       "lobby",
+       3.63,
+       4.095
+      ],
+      [
+       "It",
+       4.594,
+       4.722
+      ],
+      [
+       "understands",
+       4.768,
+       5.325
+      ],
+      [
+       "physics",
+       5.372,
+       5.825
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0003__selbeep-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+      "in": 0.4,
+      "t": 0.13,
+      "dur": 5.84
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.01,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    {
+     "name": "palette_drip",
+     "at": 4.77,
+     "gain": -24,
+     "note": "three steps, the chair"
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-co-0003": 0.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-co-0002",
+      "gap_s": 0.25,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MEDIUM · SELBEEP; the lobby chair beside the mammoth sags and melts; at the back, MAS glances at it",
+    "picture": "The chair melts in three held palette-drip steps under \"It understands physics.\" Mas's glance is one pixel of eye."
+   }
+  },
+  {
+   "id": "1.05",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · SELBEEP beside the melted chair; the 2-TONE FREEZE card",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "selbeep"
+   ],
+   "caption": "SELBEEP, beside the melted chair: \"Directionally.\" The card freezes on him.",
+   "lines": [
+    {
+     "id": "e2-co-0004",
+     "who": "selbeep",
+     "text": "Directionally.",
+     "t": 0.29,
+     "dur": 0.91,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Directionally",
+       0.0,
+       0.72
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0004__selbeep-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+      "in": 0.35,
+      "t": 0.29,
+      "dur": 0.91
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
+     "at": 1.3,
+     "until": 3.8,
+     "kind": "card"
+    },
+    {
+     "text": "MAMMOTHS CONTAINED: 0",
+     "at": 1.8,
+     "until": 3.8,
+     "kind": "stat"
+    }
+   ],
+   "reelDur": 3.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    {
+     "name": "freeze_hit_F",
+     "at": 1.3,
+     "gain": -16
+    }
+   ],
+   "names": [
+    {
+     "id": "selbeep",
+     "at": 1.3
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · SELBEEP beside the melted chair; the 2-TONE FREEZE card",
+    "picture": "Comedy cuts on the joke. The card is the topper.",
+    "style": "2-TONE FREEZE (the card, 1 bar)"
+   }
+  },
+  {
+   "id": "1.06",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the lobby master, two weeks on: DOT on the ladder swapping the number plates",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "dot",
+    "mas",
+    "gerg",
+    "staff"
+   ],
+   "caption": "Two weeks later. DOT, up a ladder at the sign, orange lanyard, back to camera, swaps the plates: 86 comes down, 100 goes up. The mammoth wanders off screen-left toward the elevators, its footprints in its own colour ramp. THUD, outside, somewhere beyond the doors. The door glass rattles.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: FEB 29, 2024",
+     "at": 0.35,
+     "until": 2.43,
+     "kind": "rail"
+    },
+    {
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
+     "at": 1.39,
+     "until": 4.17,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.17,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    {
+     "name": "plate_hang",
+     "at": 1.158,
+     "gain": -24
+    },
+    {
+     "name": "hand_truck_step",
+     "at": 3.127,
+     "gain": -22,
+     "note": "THUD 1, outside"
+    },
+    {
+     "name": "door_glass_rattle",
+     "at": 3.336,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "WIDE · the lobby master, two weeks on: DOT on the ladder swapping the number plates",
+    "picture": "DOT's face is never shown (Ep5); nobody names her. The first THUD is outside the building (R1): the hand truck on the front steps."
+   }
+  },
+  {
+   "id": "1.07",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the master; Selbeep O.S.; a staffer's coffee jumps on Mas's counter",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas",
+    "staff",
+    "dot"
+   ],
+   "caption": "SELBEEP (O.S.) explains the thud to the room. A second THUD, closer; at Mas's counter a staffer's coffee jumps. The ladder sways; DOT holds on.",
+   "lines": [
+    {
+     "id": "e2-co-0005",
+     "who": "selbeep",
+     "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+     "t": 0.46,
+     "dur": 4.73,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "That's",
+       -0.02,
+       0.187
+      ],
+      [
+       "the",
+       0.222,
+       0.292
+      ],
+      [
+       "mammoth",
+       0.35,
+       0.733
+      ],
+      [
+       "It's",
+       1.232,
+       1.406
+      ],
+      [
+       "been",
+       1.429,
+       1.569
+      ],
+      [
+       "two",
+       1.615,
+       1.743
+      ],
+      [
+       "weeks",
+       1.801,
+       2.114
+      ],
+      [
+       "and",
+       2.672,
+       2.811
+      ],
+      [
+       "it",
+       2.869,
+       2.939
+      ],
+      [
+       "has",
+       2.973,
+       3.124
+      ],
+      [
+       "mass",
+       3.194,
+       3.461
+      ],
+      [
+       "now",
+       3.519,
+       3.751
+      ],
+      [
+       "We're",
+       3.925,
+       4.123
+      ],
+      [
+       "working",
+       4.146,
+       4.425
+      ],
+      [
+       "on",
+       4.471,
+       4.541
+      ],
+      [
+       "it",
+       4.587,
+       4.703
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'The Pharaoh 3 - Energetic, Lively & Cheerful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0005__selbeep-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+      "in": 0.43,
+      "t": 0.46,
+      "dur": 4.73
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    {
+     "name": "hand_truck_step",
+     "at": 5.29,
+     "gain": -18,
+     "note": "THUD 2, closer"
+    },
+    {
+     "name": "cup_jump",
+     "at": 5.34,
+     "gain": -26
+    },
+    {
+     "name": "ladder_sway_creak",
+     "at": 5.49,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the master; Selbeep O.S.; a staffer's coffee jumps on Mas's counter",
+    "picture": "The coffee jumps, Mas's water doesn't (the glass is a prop only, R1: no beat hangs on it)."
+   }
+  },
+  {
+   "id": "1.08",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS-WIDE · over Gerg's laptop; Gerg doesn't look up",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "gerg",
+    "staff"
+   ],
+   "caption": "GERG, typing, not looking up, corrects Selbeep.",
+   "lines": [
+    {
+     "id": "e2-co-0006",
+     "who": "gerg",
+     "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+     "t": 0.29,
+     "dur": 2.98,
+     "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "That's",
+       -0.02,
+       0.225
+      ],
+      [
+       "not",
+       0.272,
+       0.411
+      ],
+      [
+       "the",
+       0.446,
+       0.516
+      ],
+      [
+       "mammoth",
+       0.597,
+       1.003
+      ],
+      [
+       "The",
+       1.607,
+       1.735
+      ],
+      [
+       "mammoth's",
+       1.793,
+       2.106
+      ],
+      [
+       "on",
+       2.141,
+       2.199
+      ],
+      [
+       "the",
+       2.234,
+       2.304
+      ],
+      [
+       "fourth",
+       2.35,
+       2.582
+      ],
+      [
+       "floor",
+       2.64,
+       2.931
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-co-0006__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+      "in": 0.38,
+      "t": 0.29,
+      "dur": 2.98
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.85,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS-WIDE · over Gerg's laptop; Gerg doesn't look up",
+    "picture": "His keys under the line; the doors glint far right."
+   }
+  },
+  {
+   "id": "1.09",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS-WIDE · over Mas's shoulder straight down the axis: the doors blow open on the hand truck and the complaint",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "THUD: a hand truck takes the top step. The doors blow open. On the hand truck, a complaint as tall as a person, its caption NOLE v. MANALT ET AL. over YOU PROMISED!!! It rolls down the axis to his feet. Through the door glass, for the length of the swing, a PAUSE sign leaning on the planter outside.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOLE v. MANALT ET AL.",
+     "at": 1.39,
+     "until": 5.09,
+     "kind": "doc"
+    },
+    {
+     "text": "YOU PROMISED!!!",
+     "at": 1.39,
+     "until": 5.09,
+     "kind": "doc"
+    },
+    {
+     "text": "PAUSE",
+     "at": 0.69,
+     "until": 2.08,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 5.09,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    {
+     "name": "hand_truck_step",
+     "at": 0.231,
+     "gain": -14,
+     "note": "THUD 3: the top step"
+    },
+    {
+     "name": "door_bang_open",
+     "at": 0.636,
+     "gain": -16
+    },
+    {
+     "name": "hand_truck_roll",
+     "at": 1.041,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "OTS-WIDE · over Mas's shoulder straight down the axis: the doors blow open on the hand truck and the complaint",
+    "picture": "One shot for the whole arrival. The room layer shakes 2 px; the UI never shakes. Mas's silhouette never moves. The PAUSE sign is a group sign only: no date, group or grievance (PP2.1)."
+   }
+  },
+  {
+   "id": "1.10",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · page one; the table of contents",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Page one is exclamation points, all of it. The table of contents: ! .... 1 · !! .... 2 · !!! .... 3.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "! .... 1",
+     "at": 0.4,
+     "until": 2.8,
+     "kind": "doc"
+    },
+    {
+     "text": "!! .... 2",
+     "at": 0.4,
+     "until": 2.8,
+     "kind": "doc"
+    },
+    {
+     "text": "!!! .... 3",
+     "at": 0.4,
+     "until": 2.8,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 2.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    {
+     "name": "paper_flutter",
+     "at": 0.2,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "ECU · page one; the table of contents",
+    "picture": "Read time for the contents: three short lines."
+   }
+  },
+  {
+   "id": "1.11",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the complaint tips off the truck and hits the floor; a flyer shakes off a pillar and lands on it",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "The complaint tips off the hand truck and hits the floor: the last THUD. It shakes a curling flyer off a rack pillar, WHERE IS ALYI?, its photo a doorway. The flyer floats down face-up onto the complaint.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "WHERE IS ALYI?",
+     "at": 1.2,
+     "until": 2.6,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 2.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    {
+     "name": "paper_stack_fall",
+     "at": 0.15,
+     "gain": -12,
+     "note": "the last THUD; the knee's note 1 on it"
+    },
+    {
+     "name": "paper_flutter",
+     "at": 0.9,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "WIDE · the complaint tips off the truck and hits the floor; a flyer shakes off a pillar and lands on it",
+    "picture": "The first of the knee's four notes lands on the THUD."
+   }
+  },
+  {
+   "id": "1.12",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW · the sign from below, DOT holding out a spare 0 → MCU MAS: one pixel of a head shake → she hangs a second sign",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "dot",
+    "mas"
+   ],
+   "caption": "DOT, still back to camera, holds a spare 0 plate out toward him. MAS shakes his head, one pixel. She lowers it, considers, and hangs a second, smaller sign underneath: DAYS SINCE SOMEONE SUED MAS: 0.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "DAYS SINCE SOMEONE SUED MAS: 0",
+     "at": 3.01,
+     "until": 5.33,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 5.33,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    {
+     "name": "plate_hang",
+     "at": 2.781,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "LOW · the sign from below, DOT holding out a spare 0 → MCU MAS: one pixel of a head shake → she hangs a second sign",
+    "picture": "Aftermath: the complaint at his feet, the flyer on it, the head shake, the second sign (P3)."
+   }
+  },
+  {
+   "id": "1.13",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the flyer's doorway photo on the complaint; the Orb's iris steps onto it",
+   "side": "",
+   "room": "lobby_day",
+   "chars": [
+    "orb"
+   ],
+   "caption": "The flyer's photo, a doorway, on the complaint. THE ORB's iris steps onto it. SMASH TO INTRO on the knee's fourth note.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    {
+     "name": "orb_servo",
+     "at": 0.4,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE with a short conversation",
+    "pace": "quick",
+    "camera": "ECU · the flyer's doorway photo on the complaint; the Orb's iris steps onto it",
+    "picture": "The doorway → the intro's first frame (the intro's own imagery isn't repeated here)."
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 56.0,
+  "seconds_el": 56.0,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": []
+ }
+}

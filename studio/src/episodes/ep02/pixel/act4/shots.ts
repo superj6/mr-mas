@@ -4,7 +4,11 @@
 import {defineSegment, fromScenes} from '../spec';
 import type {SceneSpec} from '../spec';
 import {LOCK} from './data';
-// <scenes>
-const SCENES: SceneSpec[] = [];
+// <scenes> (tools/scenes.py: one import per scene module, in the lock's order)
+import {SCENE as sc_18} from './scenes/sc-18';
+import {SCENE as sc_19} from './scenes/sc-19';
+import {SCENE as sc_20} from './scenes/sc-20';
+import {SCENE as sc_22} from './scenes/sc-22';
+const SCENES: SceneSpec[] = [sc_18, sc_19, sc_20, sc_22];
 // </scenes>
 export const SEGMENT = defineSegment({seg: 'act4', lock: LOCK, layouts: fromScenes(...SCENES)});

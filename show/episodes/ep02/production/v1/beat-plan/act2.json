@@ -5,8 +5,8 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 293,
-  "estimate": 293.0
+  "target": 280,
+  "estimate": 280.0
  },
  "scenes": [
   {
@@ -47,15 +47,17 @@
   },
   {
    "id": "11",
-   "target_s": 111,
+   "target_s": 98,
    "title": "\"her\"",
    "date": "MAY 13, 2024",
    "place": "the demo stage",
    "status": "CHANGED",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "estimate_s": 111.0,
-   "fit_scale": 3.51
+   "proposal_s": 111,
+   "adjust": "the lock pass: the takes run short (CHATGTP at 164-246 wpm against the plan's 150), so the table's 1:51 tripled the demo's air (x3.51; 11.08's tail 4.59 s); at 98 s it fits x1.41, about the episode's median, every fixed hold (the arrival, the three laugh tails, Rima's bar, the post and the blimp) kept",
+   "estimate_s": 98.0,
+   "fit_scale": 1.413
   },
   {
    "id": "12",
@@ -1792,7 +1794,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 9.31,
+   "est_s": 8.48,
    "frame": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
    "camera": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
    "set": "stage",
@@ -1861,7 +1863,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 5.83,
+   "est_s": 5.0,
    "frame": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
    "camera": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
    "set": "stage",
@@ -1906,14 +1908,14 @@
    "picture": "The badge holds if the facts pull holds (facts A60); otherwise it goes.",
    "onscreen": {
     "add": [
-     "VOICE 5 (1.6-5.83 s)"
+     "VOICE 5 (1.6-5 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "VOICE 5",
      "at": 1.6,
-     "until": 5.83,
+     "until": 5.0,
      "kind": "ui",
      "holds": true
     }
@@ -2023,7 +2025,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 14.13,
+   "est_s": 13.3,
    "frame": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
    "camera": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
    "set": "stage",
@@ -2046,10 +2048,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.4",
+     "after": "start+0.57",
      "gap_s": 0.0,
      "len_s": 4.62,
-     "t_s": 1.4
+     "t_s": 0.57
     },
     {
      "id": "e2-a2-0027",
@@ -2064,7 +2066,7 @@
      "after": "e2-a2-0026",
      "gap_s": 0.2,
      "len_s": 4.75,
-     "t_s": 6.22
+     "t_s": 5.39
     },
     {
      "id": "e2-a2-0028",
@@ -2080,7 +2082,7 @@
      "gap_s": -0.55,
      "overlap": true,
      "len_s": 0.71,
-     "t_s": 10.42
+     "t_s": 9.59
     }
    ],
    "caption": "The ENGINEER asks for short answers. CHATGTP gets three words from the end, and he comes in over its last word. It finishes anyway. A laugh from the house; in the same frame the spotlight slides one step off Rima toward the big screen.",
@@ -2090,14 +2092,14 @@
     {
      "name": "crowd_laugh_m",
      "at": "after:e2-a2-0027+0.3",
-     "at_s": 11.27,
+     "at_s": 10.44,
      "gain": -20,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0027+0.8",
-     "at_s": 11.77,
+     "at_s": 10.94,
      "gain": -24
     }
    ],
@@ -2124,7 +2126,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 10.79,
+   "est_s": 9.75,
    "frame": "WIDE · the meter frame → SCR · three mouths",
    "camera": "WIDE · the meter frame → SCR · three mouths",
    "set": "stage",
@@ -2147,10 +2149,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.75",
+     "after": "start+0.71",
      "gap_s": 0.0,
      "len_s": 3.16,
-     "t_s": 1.75
+     "t_s": 0.71
     },
     {
      "id": "e2-a2-0030",
@@ -2165,7 +2167,7 @@
      "after": "e2-a2-0029",
      "gap_s": 0.4,
      "len_s": 2.28,
-     "t_s": 5.31
+     "t_s": 4.27
     }
    ],
    "caption": "The ENGINEER tries again. CHATGTP's mouth splits into three mouths, and it harmonises with itself. A bigger laugh. The spotlight slides a second step.",
@@ -2175,14 +2177,14 @@
     {
      "name": "crowd_laugh_l",
      "at": "after:e2-a2-0030+0.2",
-     "at_s": 7.79,
+     "at_s": 6.75,
      "gain": -18,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0030+1.0",
-     "at_s": 8.59,
+     "at_s": 7.55,
      "gain": -24
     }
    ],
@@ -2207,7 +2209,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 9.4,
+   "est_s": 6.89,
    "frame": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
    "camera": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
    "set": "stage",
@@ -2227,10 +2229,10 @@
      "take": "new · RIMA (Mia · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
      "note": "[INVENTED]",
-     "after": "start+2.81",
+     "after": "start+1.13",
      "gap_s": 0.0,
      "len_s": 5.19,
-     "t_s": 2.81
+     "t_s": 1.13
     }
    ],
    "caption": "RIMA, half in the light, clicks to the next slide exactly on the running order.",
@@ -2239,8 +2241,8 @@
    "sounds": [
     {
      "name": "clicker_click",
-     "at": 1.405,
-     "at_s": 1.41,
+     "at": 0.565,
+     "at_s": 0.56,
      "gain": -28,
      "new": true
     }
@@ -2264,7 +2266,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 11.82,
+   "est_s": 10.99,
    "frame": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
    "camera": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
    "set": "stage",
@@ -2287,10 +2289,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.4",
+     "after": "start+0.57",
      "gap_s": 0.0,
      "len_s": 1.12,
-     "t_s": 1.4
+     "t_s": 0.57
     },
     {
      "id": "e2-a2-0033",
@@ -2305,7 +2307,7 @@
      "after": "e2-a2-0032",
      "gap_s": 0.2,
      "len_s": 3.05,
-     "t_s": 2.72
+     "t_s": 1.89
     },
     {
      "id": "e2-a2-0034",
@@ -2320,21 +2322,21 @@
      "after": "e2-a2-0033",
      "gap_s": 1.0,
      "len_s": 2.05,
-     "t_s": 6.77
+     "t_s": 5.94
     }
    ],
    "caption": "The ENGINEER turns the phone's camera around, onto the audience. CHATGTP is overwhelmed. In the audience, one pair of glasses fogs. It blushes: on the big screen, 😊. The third step: the spotlight is more on the screen than on her.",
    "picture": "The fogged glasses are a mid-house audience member's, never the front row.",
    "onscreen": {
     "add": [
-     "😊 (8.92-11.82 s)"
+     "😊 (8.09-10.99 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "😊",
-     "at": 8.92,
-     "until": 11.82,
+     "at": 8.09,
+     "until": 10.99,
      "kind": "ui",
      "holds": true
     }
@@ -2344,14 +2346,14 @@
     {
      "name": "crowd_laugh_m",
      "at": "after:e2-a2-0034+0.3",
-     "at_s": 9.12,
+     "at_s": 8.29,
      "gain": -20,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0034+1.1",
-     "at_s": 9.92,
+     "at_s": 9.09,
      "gain": -24
     }
    ],
@@ -2377,7 +2379,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.52,
+   "est_s": 3.73,
    "frame": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
    "camera": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
    "set": "stage",
@@ -2407,14 +2409,14 @@
    "picture": "Live, before her close (R1). Free is the catch; safety is never mentioned (script review: no thesis by placement).",
    "onscreen": {
     "add": [
-     "what's the catch? (0.3-6.52 s)"
+     "what's the catch? (0.3-3.73 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "what's the catch?",
      "at": 0.3,
-     "until": 6.52,
+     "until": 3.73,
      "kind": "ui",
      "holds": true
     }
@@ -2449,7 +2451,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "weighted",
-   "est_s": 6.03,
+   "est_s": 4.99,
    "frame": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
    "camera": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
    "set": "stage",
@@ -2782,7 +2784,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 9.17,
+   "est_s": 6.87,
    "frame": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
    "camera": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
    "set": "stage",
@@ -2803,10 +2805,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · offmic chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
      "note": "[INVENTED · said to a listener (W19)]",
-     "after": "start+2.46",
+     "after": "start+0.99",
      "gap_s": 0.0,
      "len_s": 1.68,
-     "t_s": 2.46
+     "t_s": 0.99
     },
     {
      "id": "e2-a2-0038",
@@ -2821,7 +2823,7 @@
      "after": "e2-a2-0037",
      "gap_s": 0.6,
      "len_s": 3.03,
-     "t_s": 4.74
+     "t_s": 3.27
     }
    ],
    "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
@@ -2830,8 +2832,8 @@
    "sounds": [
     {
      "name": "headset_unclip",
-     "at": 0.703,
-     "at_s": 0.7,
+     "at": 0.283,
+     "at_s": 0.28,
      "gain": -26,
      "new": true
     }

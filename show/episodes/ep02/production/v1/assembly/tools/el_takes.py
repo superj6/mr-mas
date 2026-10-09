@@ -88,7 +88,7 @@ def main(segs):
         tl = f"{ROOT}/show/reel/ep02-{LOCKV}/ep02-{LOCKV}-{seg}.json"           # the Kokoro base lock's takes, if any
         files = (json.load(open(tl)).get("_source") or {}).get("takes_files") or [] if os.path.exists(tl) else []
         for p in files:
-            if not os.path.exists(f"{ROOT}/{p}") or os.path.basename(p).startswith("lines-A"):
+            if not os.path.exists(f"{ROOT}/{p}") or os.path.basename(p).startswith("lines-A") or not p.endswith(".json"):
                 continue
             for r in json.load(open(f"{ROOT}/{p}")):
                 kokoro.setdefault(seg, {})[r["id"]] = r

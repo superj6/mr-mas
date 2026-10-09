@@ -1,0 +1,5027 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "ACT TWO · her · sc 8-12",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep2 v1 base lock of act2: the beat plan applied to no source (every beat new).",
+ "dateSpan": "Apr 1 - May 14, 2024",
+ "runtimeMin": 4.67,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "gerg": {
+   "role": "CO-FOUNDER"
+  },
+  "rima": {
+   "role": "RUNS THE DEMO"
+  },
+  "engineer": {
+   "name": "ENGINEER",
+   "role": "DEMO"
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "role": "SPEECH BUBBLE"
+  },
+  "alyi": {
+   "role": "CHIEF SCIENTIST (in the chrome, 2 s)"
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "AUDIENCE",
+   "known": true
+  },
+  "radnus": {
+   "role": "ELGOOG (tiny, on the plan)"
+  },
+  "voice1": {
+   "name": "VOICE 1",
+   "role": "A PRODUCT VOICE",
+   "blank": true
+  },
+  "voice2": {
+   "name": "VOICE 2",
+   "role": "A PRODUCT VOICE",
+   "blank": true
+  },
+  "voice3": {
+   "name": "VOICE 3",
+   "role": "A PRODUCT VOICE",
+   "blank": true
+  },
+  "voice4": {
+   "name": "VOICE 4",
+   "role": "A PRODUCT VOICE",
+   "blank": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/act2.json",
+  "timeline": null,
+  "takes": "audio/ep02/v1-el/ep02-v1/act2/lines-A.json",
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/act2/lines-A.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act2-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 280.0,
+  "kokoro_lock": "show/reel/ep02-v1/ep02-v1-act2.json",
+  "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "8.01",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "The dark room, the monitor's glow already on his face. A notification slides down: EUROPE PASSES ITS AI RULEBOOK · 523–46. Its thumbnail is a 400-page book with a SNOOZE button bolted to its spine. He swipes it away, unopened.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "EUROPE PASSES ITS AI RULEBOOK · 523–46",
+     "at": 2.35,
+     "until": 6.56,
+     "kind": "ui"
+    },
+    {
+     "text": "SNOOZE",
+     "at": 2.35,
+     "until": 6.56,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 8.07,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 2.186,
+     "gain": -26
+    },
+    {
+     "name": "ui_swipe",
+     "at": 6.725,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "camera": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
+    "picture": "Undated (R1). The SNOOZE stays unpressed until Ep8."
+   }
+  },
+  {
+   "id": "8.02",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · the monitor scrolls to a news site: a headline over the segment's video still (three cardboard CEOs in lanyards against a height chart; the host turns to the lens)",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "One whole-pixel scroll to a news site. Its headline, over the segment's video still: a news desk where three cardboard cutouts in lanyards stand in a lineup against a height chart: Mas, his landlord, and Elgoog's. The still plays; the host turns from the lineup and looks down the lens.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: APR 1, 2024",
+     "at": 0.3,
+     "until": 2.1,
+     "kind": "rail"
+    },
+    {
+     "text": "…TAKES AIM AT MAS, TASYA AND RADNUS…",
+     "at": 2.3,
+     "until": 5.2,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 5.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "sounds": [
+    {
+     "name": "mouse_scroll",
+     "at": 0.1,
+     "gain": -28
+    },
+    {
+     "name": "news_desk_sting",
+     "at": 0.5,
+     "gain": -30
+    }
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "camera": "POV · the monitor scrolls to a news site: a headline over the segment's video still (three cardboard CEOs in lanyards against a height chart; the host turns to the lens)",
+    "picture": "The words are the news site's headline, framed as a headline in its own UI (GR §3: an [H] quote only as the headline's exact words), never as the show's own card. The host is unplated (A14). A news-desk sting, tiny and ducked."
+   }
+  },
+  {
+   "id": "8.03",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · Mas at the monitor, the lineup on it",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas at the monitor, the lineup on it.",
+   "lines": [
+    {
+     "id": "e2-vo-04",
+     "who": "mas",
+     "text": "the next model runs on the landlord's servers. the one after runs on ours.",
+     "t": 0.84,
+     "dur": 6.06,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.086
+      ],
+      [
+       "next",
+       0.155,
+       0.434
+      ],
+      [
+       "model",
+       0.515,
+       0.875
+      ],
+      [
+       "runs",
+       0.957,
+       1.247
+      ],
+      [
+       "on",
+       1.305,
+       1.398
+      ],
+      [
+       "the",
+       1.456,
+       1.525
+      ],
+      [
+       "landlord's",
+       1.583,
+       2.234
+      ],
+      [
+       "servers",
+       2.28,
+       2.942
+      ],
+      [
+       "the",
+       3.534,
+       3.696
+      ],
+      [
+       "one",
+       3.789,
+       3.998
+      ],
+      [
+       "after",
+       4.056,
+       4.544
+      ],
+      [
+       "runs",
+       4.834,
+       5.159
+      ],
+      [
+       "on",
+       5.241,
+       5.357
+      ],
+      [
+       "ours",
+       5.438,
+       5.984
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "e2-vo-04__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
+      "in": 0.45,
+      "t": 0.84,
+      "dur": 6.06
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.74,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "OTS · Mas at the monitor, the lineup on it",
+    "picture": "The V.O. types in his cyan."
+   }
+  },
+  {
+   "id": "8.04",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · his calendar: Elgoog's keynote already on Tuesday; he drags his own launch onto the Monday square",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His calendar. ELGOOG · DEVELOPER KEYNOTE is already on TUE 14. He drags his own block, NOPEAI · SPRING UPDATE, onto the MON 13 square. It snaps in.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 10",
+     "at": 0.2,
+     "until": 1.8,
+     "kind": "rail"
+    },
+    {
+     "text": "ELGOOG · DEVELOPER KEYNOTE · TUE 14",
+     "at": 1.9,
+     "until": 4.6,
+     "kind": "ui"
+    },
+    {
+     "text": "NOPEAI · SPRING UPDATE",
+     "at": 2.4,
+     "until": 4.6,
+     "kind": "ui"
+    },
+    {
+     "text": "MON 13",
+     "at": 2.4,
+     "until": 4.6,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "sounds": [
+    {
+     "name": "ui_drop_snap",
+     "at": 4.0,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "camera": "POV · his calendar: Elgoog's keynote already on Tuesday; he drags his own launch onto the Monday square",
+    "picture": "Who picked the date isn't on record: invented staging of a public result."
+   }
+  },
+  {
+   "id": "8.05",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas, the lit Monday square in his eyes",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The Monday square lit.",
+   "lines": [
+    {
+     "id": "e2-vo-05",
+     "who": "mas",
+     "text": "one day ahead is enough.",
+     "t": 0.67,
+     "dur": 1.84,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "One",
+       -0.02,
+       0.224
+      ],
+      [
+       "day",
+       0.27,
+       0.479
+      ],
+      [
+       "ahead",
+       0.56,
+       0.967
+      ],
+      [
+       "is",
+       1.048,
+       1.153
+      ],
+      [
+       "enough",
+       1.245,
+       1.721
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
+     "el": {
+      "take": "e2-vo-05__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+      "in": 0.37,
+      "t": 0.67,
+      "dur": 1.84
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.18,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "MCU · Mas, the lit Monday square in his eyes"
+   }
+  },
+  {
+   "id": "8.06",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers. Mas, unhurried, says the episode's one full sentence of terms. The tile shows …, then CONFIRMED.",
+   "lines": [
+    {
+     "id": "e2-a2-0001",
+     "who": "mas",
+     "text": "no money either way. you put us in your new assistant. that's the price.",
+     "t": 2.69,
+     "dur": 4.94,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "No",
+       -0.02,
+       0.156
+      ],
+      [
+       "money",
+       0.249,
+       0.481
+      ],
+      [
+       "either",
+       0.55,
+       0.771
+      ],
+      [
+       "way",
+       0.841,
+       1.201
+      ],
+      [
+       "you",
+       1.793,
+       1.932
+      ],
+      [
+       "put",
+       2.025,
+       2.176
+      ],
+      [
+       "us",
+       2.222,
+       2.304
+      ],
+      [
+       "in",
+       2.35,
+       2.408
+      ],
+      [
+       "your",
+       2.455,
+       2.559
+      ],
+      [
+       "new",
+       2.617,
+       2.733
+      ],
+      [
+       "assistant",
+       2.791,
+       3.441
+      ],
+      [
+       "that's",
+       3.906,
+       4.196
+      ],
+      [
+       "the",
+       4.254,
+       4.335
+      ],
+      [
+       "price",
+       4.393,
+       4.96
+      ]
+     ],
+     "tag": "call",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a2-0001__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
+      "in": 0.38,
+      "t": 2.69,
+      "dur": 4.94
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "ELPPA",
+     "at": 0.34,
+     "until": 9.83,
+     "kind": "ui"
+    },
+    {
+     "text": "…",
+     "at": 7.93,
+     "until": 8.93,
+     "kind": "ui"
+    },
+    {
+     "text": "CONFIRMED",
+     "at": 8.93,
+     "until": 9.83,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 9.83,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 · under the call the Water Line thins to its pedal; one chip note on CONFIRMED"
+   ],
+   "sounds": [
+    {
+     "name": "call_ring",
+     "at": 0.336,
+     "gain": -24
+    },
+    {
+     "name": "call_connect",
+     "at": 2.017,
+     "gain": -26
+    },
+    {
+     "name": "ui_confirm_chip",
+     "at": 8.93,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
+    "picture": "We hear only Mas. No face on the tile, ever."
+   }
+  },
+  {
+   "id": "8.07",
+   "act": "ACT TWO",
+   "kind": "montage",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · an invite drops into his calendar under the Monday square; he accepts",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "An invite drops into his calendar: ELPPA · KEYNOTE · JUN 10. He accepts it. The Monday square lit; the June invite under it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "ELPPA · KEYNOTE · JUN 10",
+     "at": 0.84,
+     "until": 5.38,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5.38,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
+   ],
+   "sounds": [
+    {
+     "name": "invite_drop",
+     "at": 0.672,
+     "gain": -24
+    },
+    {
+     "name": "post_click",
+     "at": 2.69,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "8",
+    "mode": "MONTAGE on one surface → a CALL",
+    "pace": "normal",
+    "camera": "POV · an invite drops into his calendar under the Monday square; he accepts",
+    "picture": "Through the wall: a stage manager's distant count, the walk-on music warming up."
+   }
+  },
+  {
+   "id": "9.01",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the wings in work light: road cases, cables, the monitor screen-right, Gerg's road case in the foreground",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "rima",
+    "engineer",
+    "gerg",
+    "mas",
+    "orb",
+    "chatgtp"
+   ],
+   "caption": "The wings: road cases and cables, the count from the stage already going. RIMA stands poised with a clicker; a hard circular spotlight finds her even back here. The DEMO ENGINEER holds a phone. On a monitor, CHATGTP is a plain speech bubble. GERG types on a road case. Mas nearby with his glass and THE ORB.",
+   "lines": [
+    {
+     "id": "e2-a2-0002",
+     "who": "rima",
+     "text": "Places, please. Phones on silent in the wings. We're on in five.",
+     "t": 2.4,
+     "dur": 5.39,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0002__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Places",
+       -0.01,
+       0.605
+      ],
+      [
+       "please",
+       0.687,
+       1.314
+      ],
+      [
+       "Phones",
+       1.755,
+       2.208
+      ],
+      [
+       "on",
+       2.289,
+       2.428
+      ],
+      [
+       "silent",
+       2.521,
+       3.009
+      ],
+      [
+       "in",
+       3.067,
+       3.148
+      ],
+      [
+       "the",
+       3.206,
+       3.276
+      ],
+      [
+       "wings",
+       3.322,
+       3.763
+      ],
+      [
+       "We're",
+       4.158,
+       4.39
+      ],
+      [
+       "on",
+       4.448,
+       4.553
+      ],
+      [
+       "in",
+       4.611,
+       4.68
+      ],
+      [
+       "five",
+       4.785,
+       5.273
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0002__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0002__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0002__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 2.4,
+      "dur": 5.39
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 13, 2024",
+     "at": 0.3,
+     "until": 2.1,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 8.29,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the wings in work light: road cases, cables, the monitor screen-right, Gerg's road case in the foreground",
+    "picture": "Wings are stage right (screen-left from the house): Mas keeps the left third."
+   }
+  },
+  {
+   "id": "9.02",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "engineer",
+    "rima",
+    "chatgtp"
+   ],
+   "caption": "The ENGINEER holds the phone up, rehearsing it to her. On the monitor, instantly, with a bright UI chirp: yes!! He looks at it.",
+   "lines": [
+    {
+     "id": "e2-a2-0003",
+     "who": "engineer",
+     "text": "So on stage, I ask it a question, it thinks for a second, and then it answers.",
+     "t": 0.42,
+     "dur": 4.6,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "So",
+       -0.02,
+       0.167
+      ],
+      [
+       "on",
+       0.237,
+       0.353
+      ],
+      [
+       "stage",
+       0.423,
+       0.887
+      ],
+      [
+       "I",
+       1.003,
+       1.05
+      ],
+      [
+       "ask",
+       1.143,
+       1.317
+      ],
+      [
+       "it",
+       1.363,
+       1.433
+      ],
+      [
+       "a",
+       1.456,
+       1.479
+      ],
+      [
+       "question",
+       1.526,
+       1.967
+      ],
+      [
+       "it",
+       2.222,
+       2.35
+      ],
+      [
+       "thinks",
+       2.385,
+       2.594
+      ],
+      [
+       "for",
+       2.64,
+       2.756
+      ],
+      [
+       "a",
+       2.814,
+       2.838
+      ],
+      [
+       "second",
+       2.907,
+       3.325
+      ],
+      [
+       "and",
+       3.453,
+       3.604
+      ],
+      [
+       "then",
+       3.65,
+       3.766
+      ],
+      [
+       "it",
+       3.813,
+       3.894
+      ],
+      [
+       "answers",
+       3.952,
+       4.393
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0003__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0003__engineer-A.wav",
+      "in": 0.38,
+      "t": 0.42,
+      "dur": 4.6
+     }
+    },
+    {
+     "id": "e2-a2-0004",
+     "who": "engineer",
+     "text": "Before I've asked. It does that.",
+     "t": 5.92,
+     "dur": 1.77,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Before",
+       0.007,
+       0.309
+      ],
+      [
+       "I've",
+       0.344,
+       0.471
+      ],
+      [
+       "asked",
+       0.518,
+       0.808
+      ],
+      [
+       "It",
+       0.924,
+       1.04
+      ],
+      [
+       "does",
+       1.075,
+       1.238
+      ],
+      [
+       "that",
+       1.284,
+       1.493
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0004__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0004__engineer-A.wav",
+      "in": 0.5,
+      "t": 5.92,
+      "dur": 1.77
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "yes!!",
+     "at": 5.12,
+     "until": 8.19,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 8.19,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "sounds": [
+    {
+     "name": "ui_chirp_bright",
+     "at": 5.12,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0004": 0.9
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
+    "picture": "The product answers before it's asked (the season's hint)."
+   }
+  },
+  {
+   "id": "9.03",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "engineer",
+    "gerg"
+   ],
+   "caption": "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"laugh.\"",
+   "lines": [
+    {
+     "id": "e2-a2-0005",
+     "who": "gerg",
+     "text": "Careful. The new one can hear you laugh.",
+     "t": 2.19,
+     "dur": 1.96,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Careful",
+       -0.02,
+       0.39
+      ],
+      [
+       "The",
+       0.715,
+       0.831
+      ],
+      [
+       "new",
+       0.877,
+       0.993
+      ],
+      [
+       "one",
+       1.04,
+       1.133
+      ],
+      [
+       "can",
+       1.167,
+       1.26
+      ],
+      [
+       "hear",
+       1.307,
+       1.423
+      ],
+      [
+       "you",
+       1.458,
+       1.527
+      ],
+      [
+       "laugh",
+       1.585,
+       1.876
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0005__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
+      "in": 0.39,
+      "t": 2.19,
+      "dur": 1.96
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "[laughter]",
+     "at": 0.84,
+     "until": 4.82,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.82,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "sounds": [
+    {
+     "name": "engineer_laugh_take",
+     "at": 0.168,
+     "gain": -22,
+     "note": "his laugh: a separate take in the ENGINEER's voice"
+    },
+    {
+     "name": "tag_drop",
+     "at": 1.011,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
+    "picture": "The tag is THE PLAN's plant (it lies at the bottom of the grate)."
+   }
+  },
+  {
+   "id": "9.04",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "mas",
+    "rima"
+   ],
+   "caption": "MAS asks the question Gerg asked him in Ep1. RIMA answers the next question. He grants her a stage that isn't his to grant; she takes it back as a fact.",
+   "lines": [
+    {
+     "id": "e2-a2-0006",
+     "who": "mas",
+     "text": "is it ready?",
+     "t": 0.84,
+     "dur": 0.68,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Is",
+       -0.02,
+       0.134
+      ],
+      [
+       "it",
+       0.192,
+       0.262
+      ],
+      [
+       "ready",
+       0.332,
+       0.657
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a2-0006__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
+      "in": 0.39,
+      "t": 0.84,
+      "dur": 0.68
+     }
+    },
+    {
+     "id": "e2-a2-0007",
+     "who": "rima",
+     "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
+     "t": 2.02,
+     "dur": 6.23,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "You'll",
+       0.0,
+       0.29
+      ],
+      [
+       "be",
+       0.337,
+       0.418
+      ],
+      [
+       "stage",
+       0.464,
+       0.894
+      ],
+      [
+       "right",
+       0.952,
+       1.347
+      ],
+      [
+       "You",
+       1.962,
+       2.125
+      ],
+      [
+       "can",
+       2.183,
+       2.322
+      ],
+      [
+       "see",
+       2.38,
+       2.566
+      ],
+      [
+       "the",
+       2.612,
+       2.682
+      ],
+      [
+       "whole",
+       2.728,
+       2.972
+      ],
+      [
+       "screen",
+       3.007,
+       3.344
+      ],
+      [
+       "from",
+       3.402,
+       3.576
+      ],
+      [
+       "there",
+       3.634,
+       4.063
+      ],
+      [
+       "and",
+       4.319,
+       4.516
+      ],
+      [
+       "the",
+       4.574,
+       4.644
+      ],
+      [
+       "stream",
+       4.69,
+       5.027
+      ],
+      [
+       "can't",
+       5.12,
+       5.422
+      ],
+      [
+       "see",
+       5.48,
+       5.712
+      ],
+      [
+       "you",
+       5.77,
+       5.968
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0007__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
+      "in": 0.35,
+      "t": 2.02,
+      "dur": 6.23
+     }
+    },
+    {
+     "id": "e2-a2-0008",
+     "who": "mas",
+     "text": "it's all yours.",
+     "t": 8.75,
+     "dur": 1.11,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "It's",
+       -0.02,
+       0.191
+      ],
+      [
+       "all",
+       0.249,
+       0.4
+      ],
+      [
+       "yours",
+       0.481,
+       1.003
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a2-0008__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
+      "in": 0.38,
+      "t": 8.75,
+      "dur": 1.11
+     }
+    },
+    {
+     "id": "e2-a2-0009",
+     "who": "rima",
+     "text": "It is. Enjoy the view.",
+     "t": 10.26,
+     "dur": 2.05,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "It",
+       -0.01,
+       0.338
+      ],
+      [
+       "is",
+       0.42,
+       0.675
+      ],
+      [
+       "Enjoy",
+       0.814,
+       1.279
+      ],
+      [
+       "the",
+       1.36,
+       1.441
+      ],
+      [
+       "view",
+       1.488,
+       1.755
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0009__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 10.26,
+      "dur": 2.05
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 13.32,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0007": 0.5,
+      "e2-a2-0008": 0.5,
+      "e2-a2-0009": 0.4
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)"
+   }
+  },
+  {
+   "id": "9.05",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "rima",
+    "engineer"
+   ],
+   "caption": "Mas walks off frame-left, to stage right. RIMA crosses the wings to the monitor; the engineer follows her.",
+   "lines": [
+    {
+     "id": "e2-a2-0010",
+     "who": "engineer",
+     "text": "What if it freezes? Live, on the stream?",
+     "t": 1.68,
+     "dur": 2.32,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "What",
+       -0.02,
+       0.137
+      ],
+      [
+       "if",
+       0.172,
+       0.242
+      ],
+      [
+       "it",
+       0.3,
+       0.358
+      ],
+      [
+       "freezes",
+       0.416,
+       0.915
+      ],
+      [
+       "Live",
+       1.171,
+       1.461
+      ],
+      [
+       "on",
+       1.507,
+       1.589
+      ],
+      [
+       "the",
+       1.623,
+       1.693
+      ],
+      [
+       "stream",
+       1.728,
+       2.041
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0010__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
+      "in": 0.41,
+      "t": 1.68,
+      "dur": 2.32
+     }
+    },
+    {
+     "id": "e2-a2-0011",
+     "who": "rima",
+     "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
+     "t": 4.3,
+     "dur": 5.62,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Then",
+       -0.01,
+       0.199
+      ],
+      [
+       "it",
+       0.257,
+       0.327
+      ],
+      [
+       "freezes",
+       0.408,
+       0.849
+      ],
+      [
+       "live",
+       0.942,
+       1.337
+      ],
+      [
+       "and",
+       1.395,
+       1.557
+      ],
+      [
+       "I",
+       1.639,
+       1.662
+      ],
+      [
+       "keep",
+       1.755,
+       1.964
+      ],
+      [
+       "talking",
+       2.022,
+       2.579
+      ],
+      [
+       "It",
+       3.148,
+       3.31
+      ],
+      [
+       "also",
+       3.357,
+       3.705
+      ],
+      [
+       "sings",
+       3.798,
+       4.262
+      ],
+      [
+       "We'll",
+       4.588,
+       4.808
+      ],
+      [
+       "get",
+       4.843,
+       4.982
+      ],
+      [
+       "to",
+       5.017,
+       5.087
+      ],
+      [
+       "that",
+       5.168,
+       5.482
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0011__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 4.3,
+      "dur": 5.62
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 10.42,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0011": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
+    "picture": "A walk-and-talk."
+   }
+  },
+  {
+   "id": "9.06",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "rima",
+    "chatgtp"
+   ],
+   "caption": "She taps the monitor and a settings panel opens: VOICE, five labelled slots, VOICE 1 to VOICE 5, under a tag, SINCE SEP 2023. She hovers each, and each says hello in a different tone. The fifth, Hey., holds a beat longer than the others as the panel keeps unfolding past the monitor's bezel, square by square, onto the floor, and the floor is a drafting grid.",
+   "lines": [
+    {
+     "id": "e2-a2-0012",
+     "who": "voice1",
+     "text": "Hi.",
+     "t": 1.68,
+     "dur": 0.49,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Hi",
+       -0.02,
+       0.378
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alexander - Clear, Steady and Refined' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0012__voice1-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
+      "in": 0.39,
+      "t": 1.68,
+      "dur": 0.49
+     }
+    },
+    {
+     "id": "e2-a2-0013",
+     "who": "voice2",
+     "text": "Hi!",
+     "t": 2.47,
+     "dur": 0.33,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Hi",
+       -0.02,
+       0.273
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Brad - Welcoming & Casual' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0013__voice2-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
+      "in": 0.39,
+      "t": 2.47,
+      "dur": 0.33
+     }
+    },
+    {
+     "id": "e2-a2-0014",
+     "who": "voice3",
+     "text": "hi?",
+     "t": 3.1,
+     "dur": 0.44,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Hi",
+       -0.02,
+       0.33
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Quinn - Comforting & Approachable' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0014__voice3-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
+      "in": 0.38,
+      "t": 3.1,
+      "dur": 0.44
+     }
+    },
+    {
+     "id": "e2-a2-0015",
+     "who": "voice4",
+     "text": "Hi…",
+     "t": 3.84,
+     "dur": 0.7,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Hi",
+       -0.02,
+       0.424
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Sarah Eve - Inviting and Friendly' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0015__voice4-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
+      "in": 0.39,
+      "t": 3.84,
+      "dur": 0.7
+     }
+    },
+    {
+     "id": "e2-a2-0016",
+     "who": "chatgtp",
+     "text": "Hey.",
+     "t": 4.84,
+     "dur": 0.52,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Hey",
+       -0.02,
+       0.224
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0016__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
+      "in": 0.37,
+      "t": 4.84,
+      "dur": 0.52
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "VOICE",
+     "at": 0.5,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "SINCE SEP 2023",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 1",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 2",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 3",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 4",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    },
+    {
+     "text": "VOICE 5",
+     "at": 0.67,
+     "until": 6.96,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 6.96,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat"
+   ],
+   "sounds": [
+    {
+     "name": "panel_unfold_step",
+     "at": 5.56,
+     "gain": -26
+    },
+    {
+     "name": "drafting_ink_stroke",
+     "at": 6.36,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0013": 0.3,
+      "e2-a2-0014": 0.3,
+      "e2-a2-0015": 0.3,
+      "e2-a2-0016": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
+    "picture": "VOICE 5 is CHATGTP's own voice (R1): the voice we'll hear on stage. A [SCR] with its bezel in frame, so the bezel can be broken."
+   }
+  },
+  {
+   "id": "10.01",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · the full sheet: the stamp OMNI",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima"
+   ],
+   "caption": "The panel's last square becomes the grid's first cell. The sheet. A stamp: OMNI, and in fine print (o = omni). RIMA (O.S.), as if running her keynote's first slides in her head.",
+   "lines": [
+    {
+     "id": "e2-a2-0017",
+     "who": "rima",
+     "text": "Omni. One model that hears, sees and talks.",
+     "t": 2.03,
+     "dur": 3.93,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Omni",
+       0.0,
+       0.522
+      ],
+      [
+       "One",
+       1.312,
+       1.567
+      ],
+      [
+       "model",
+       1.614,
+       1.939
+      ],
+      [
+       "that",
+       1.997,
+       2.136
+      ],
+      [
+       "hears",
+       2.218,
+       2.554
+      ],
+      [
+       "sees",
+       2.612,
+       2.926
+      ],
+      [
+       "and",
+       2.984,
+       3.088
+      ],
+      [
+       "talks",
+       3.135,
+       3.634
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0017__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0017__rima-tamuri-A.wav",
+      "in": 0.35,
+      "t": 2.03,
+      "dur": 3.93
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "OMNI",
+     "at": 0.76,
+     "until": 6.47,
+     "kind": "doc"
+    },
+    {
+     "text": "(o = omni)",
+     "at": 1.14,
+     "until": 6.47,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 6.47,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "sounds": [
+    {
+     "name": "rubber_stamp_C",
+     "at": 0.761,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · the full sheet: the stamp OMNI",
+    "picture": "The linework draws itself on her words.",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.02",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · section, a pan from BEFORE to NOW, starting on BEFORE: three clerks passing a note → detail: the grate",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima"
+   ],
+   "caption": "BEFORE: a three-box relay drawn as clerks passing a note. On \"fell out\", the grate at box 1: labelled objects drop through it and fall out of the diagram. At the bottom of the grate lies backstage's [laughter] tag.",
+   "lines": [
+    {
+     "id": "e2-a2-0018",
+     "who": "rima",
+     "text": "Before, it took three models passing a note, and anything that wasn't a word fell out on the way.",
+     "t": 0.64,
+     "dur": 7.21,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Before",
+       -0.01,
+       0.814
+      ],
+      [
+       "it",
+       1.116,
+       1.279
+      ],
+      [
+       "took",
+       1.325,
+       1.546
+      ],
+      [
+       "three",
+       1.627,
+       1.882
+      ],
+      [
+       "models",
+       1.94,
+       2.358
+      ],
+      [
+       "passing",
+       2.44,
+       2.904
+      ],
+      [
+       "a",
+       2.962,
+       2.985
+      ],
+      [
+       "note",
+       3.067,
+       3.473
+      ],
+      [
+       "and",
+       3.798,
+       3.984
+      ],
+      [
+       "anything",
+       4.088,
+       4.576
+      ],
+      [
+       "that",
+       4.622,
+       4.762
+      ],
+      [
+       "wasn't",
+       4.843,
+       5.214
+      ],
+      [
+       "a",
+       5.273,
+       5.331
+      ],
+      [
+       "word",
+       5.423,
+       5.783
+      ],
+      [
+       "fell",
+       5.911,
+       6.213
+      ],
+      [
+       "out",
+       6.271,
+       6.399
+      ],
+      [
+       "on",
+       6.457,
+       6.538
+      ],
+      [
+       "the",
+       6.584,
+       6.654
+      ],
+      [
+       "way",
+       6.712,
+       7.026
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0018__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0018__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 0.64,
+      "dur": 7.21
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "BEFORE",
+     "at": 0.26,
+     "until": 9.65,
+     "kind": "doc"
+    },
+    {
+     "text": "EAR → [1 · SPEECH TO TEXT] → [2 · MODEL] → [3 · TEXT TO SPEECH] → MOUTH",
+     "at": 0.74,
+     "until": 9.65,
+     "kind": "doc"
+    },
+    {
+     "text": "TONE · LAUGHTER · WHO'S TALKING · BACKGROUND NOISE",
+     "at": 6.65,
+     "until": 9.65,
+     "kind": "doc"
+    },
+    {
+     "text": "[laughter]",
+     "at": 8.25,
+     "until": 9.65,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 9.65,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "sounds": [
+    {
+     "name": "drafting_ink_stroke",
+     "at": 0.512,
+     "gain": -26
+    },
+    {
+     "name": "paper_curl",
+     "at": 6.85,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · section, a pan from BEFORE to NOW, starting on BEFORE: three clerks passing a note → detail: the grate",
+    "picture": "Every move follows one of her sentences.",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.03",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · NOW: an ear, an eye and a mouth wired into one box, GTP-4o",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima"
+   ],
+   "caption": "NOW: one box, GTP-4o. Nothing falls through the grate. On \"laugh back\", the ear hears a laugh and the mouth laughs back.",
+   "lines": [
+    {
+     "id": "e2-a2-0019",
+     "who": "rima",
+     "text": "Now it's one model, so nothing falls out. It can even laugh back.",
+     "t": 0.64,
+     "dur": 4.87,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Now",
+       -0.02,
+       0.177
+      ],
+      [
+       "it's",
+       0.235,
+       0.363
+      ],
+      [
+       "one",
+       0.444,
+       0.619
+      ],
+      [
+       "model",
+       0.653,
+       1.048
+      ],
+      [
+       "so",
+       1.443,
+       1.617
+      ],
+      [
+       "nothing",
+       1.71,
+       1.989
+      ],
+      [
+       "falls",
+       2.07,
+       2.383
+      ],
+      [
+       "out",
+       2.441,
+       2.697
+      ],
+      [
+       "It",
+       3.08,
+       3.242
+      ],
+      [
+       "can",
+       3.289,
+       3.428
+      ],
+      [
+       "even",
+       3.533,
+       3.823
+      ],
+      [
+       "laugh",
+       3.904,
+       4.136
+      ],
+      [
+       "back",
+       4.218,
+       4.554
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0019__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0019__rima-tamuri-A.wav",
+      "in": 0.37,
+      "t": 0.64,
+      "dur": 4.87
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "NOW",
+     "at": 0.26,
+     "until": 6.53,
+     "kind": "doc"
+    },
+    {
+     "text": "GTP-4o",
+     "at": 0.64,
+     "until": 6.53,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 6.53,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "sounds": [
+    {
+     "name": "tiny_laugh_back",
+     "at": 5.01,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · NOW: an ear, an eye and a mouth wired into one box, GTP-4o",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.04",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · a pan down the three steps: step 1",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima",
+    "engineer"
+   ],
+   "caption": "Three steps, stamped as numbers. Step 1: 232 MS (AVG 320). A tiny engineer opens his mouth, and the tiny bubble has already answered.",
+   "lines": [
+    {
+     "id": "e2-a2-0020",
+     "who": "rima",
+     "text": "It answers about as fast as a person does.",
+     "t": 0.51,
+     "dur": 3.11,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "It",
+       -0.01,
+       0.164
+      ],
+      [
+       "answers",
+       0.245,
+       0.814
+      ],
+      [
+       "about",
+       0.872,
+       1.139
+      ],
+      [
+       "as",
+       1.174,
+       1.255
+      ],
+      [
+       "fast",
+       1.337,
+       1.685
+      ],
+      [
+       "as",
+       1.743,
+       1.848
+      ],
+      [
+       "a",
+       1.906,
+       1.94
+      ],
+      [
+       "person",
+       2.022,
+       2.393
+      ],
+      [
+       "does",
+       2.451,
+       2.823
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0020__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0020__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 0.51,
+      "dur": 3.11
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "1.",
+     "at": 3.62,
+     "until": 4.89,
+     "kind": "doc"
+    },
+    {
+     "text": "232 MS (AVG 320)",
+     "at": 3.72,
+     "until": 4.89,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.89,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "sounds": [
+    {
+     "name": "rubber_stamp_C",
+     "at": 3.62,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · a pan down the three steps: step 1",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.05",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · step 2 (MON, a tiny RADNUS on the Tuesday square) and step 3 ($0, a tiny crowd floods in)",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima",
+    "radnus"
+   ],
+   "caption": "Step 2 lands on \"today\": a tiny calendar with MON circled; a tiny RADNUS stands on the Tuesday square. Step 3 lands on \"free\": $0, and a tiny crowd floods in.",
+   "lines": [
+    {
+     "id": "e2-a2-0021",
+     "who": "rima",
+     "text": "The model goes out today, and free users get it too.",
+     "t": 0.38,
+     "dur": 3.76,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "The",
+       -0.01,
+       0.129
+      ],
+      [
+       "model",
+       0.211,
+       0.489
+      ],
+      [
+       "goes",
+       0.547,
+       0.745
+      ],
+      [
+       "out",
+       0.791,
+       0.954
+      ],
+      [
+       "today",
+       1.0,
+       1.488
+      ],
+      [
+       "and",
+       1.917,
+       2.091
+      ],
+      [
+       "free",
+       2.184,
+       2.416
+      ],
+      [
+       "users",
+       2.475,
+       2.904
+      ],
+      [
+       "get",
+       2.962,
+       3.136
+      ],
+      [
+       "it",
+       3.194,
+       3.276
+      ],
+      [
+       "too",
+       3.322,
+       3.624
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0021__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0021__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 0.38,
+      "dur": 3.76
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "2.",
+     "at": 1.38,
+     "until": 5.92,
+     "kind": "doc"
+    },
+    {
+     "text": "MON",
+     "at": 1.38,
+     "until": 5.92,
+     "kind": "doc"
+    },
+    {
+     "text": "3.",
+     "at": 3.54,
+     "until": 5.92,
+     "kind": "doc"
+    },
+    {
+     "text": "$0",
+     "at": 3.54,
+     "until": 5.92,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 5.92,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "sounds": [
+    {
+     "name": "rubber_stamp_C",
+     "at": 1.38,
+     "gain": -22
+    },
+    {
+     "name": "rubber_stamp_C",
+     "at": 3.54,
+     "gain": -22
+    },
+    {
+     "name": "tiny_crowd_patter",
+     "at": 3.84,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · step 2 (MON, a tiny RADNUS on the Tuesday square) and step 3 ($0, a tiny crowd floods in)",
+    "picture": "Nobody on the paper mentions Radnus, and neither does she.",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.06",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · the full sheet again: the tiny stage in the last square, tiny RIMA in a tiny spotlight",
+   "side": "",
+   "room": "blueprint",
+   "chars": [
+    "rima"
+   ],
+   "caption": "The full sheet. In the last square, the tiny stage: tiny lights, tiny RIMA in a tiny spotlight, under her last sentence.",
+   "lines": [
+    {
+     "id": "e2-a2-0022",
+     "who": "rima",
+     "text": "The new voice follows, for paying users, in the coming weeks.",
+     "t": 0.38,
+     "dur": 4.28,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "The",
+       -0.01,
+       0.153
+      ],
+      [
+       "new",
+       0.211,
+       0.338
+      ],
+      [
+       "voice",
+       0.396,
+       0.687
+      ],
+      [
+       "follows",
+       0.733,
+       1.348
+      ],
+      [
+       "for",
+       1.72,
+       1.906
+      ],
+      [
+       "paying",
+       1.964,
+       2.277
+      ],
+      [
+       "users",
+       2.358,
+       2.904
+      ],
+      [
+       "in",
+       2.974,
+       3.09
+      ],
+      [
+       "the",
+       3.148,
+       3.218
+      ],
+      [
+       "coming",
+       3.276,
+       3.636
+      ],
+      [
+       "weeks",
+       3.717,
+       4.146
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0022__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0022__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 0.38,
+      "dur": 4.28
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.42,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · BLUEPRINT: the walk-on tune as a chip music-box waltz (pizzicato, harp, celesta; F dorian; no piano, no brass); THE PLAN never carries his voice"
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "GFX · the full sheet again: the tiny stage in the last square, tiny RIMA in a tiny spotlight",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "10.07",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "GFX · the break: an empty speech bubble drifts in from the margin and blots out the tiny stage; the blueprint tears",
+   "side": "",
+   "room": "blueprint",
+   "chars": [],
+   "caption": "From the margin, an empty speech bubble drifts onto the paper, lowercase-sized, nothing in it. It was never on the plan. Every tiny figure looks up at it. It drifts over the tiny stage and blots out its lights. The blueprint tears down the middle, and through the tear pour the real stage lights.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 7.12,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · a tape-stop into the demo cue at the tear"
+   ],
+   "sounds": [
+    {
+     "name": "paper_tear",
+     "at": 5.34,
+     "gain": -18
+    }
+   ],
+   "passes": {
+    "scene": "10",
+    "mode": "DOCUMENT (the explainer)",
+    "pace": "normal",
+    "camera": "GFX · the break: an empty speech bubble drifts in from the margin and blots out the tiny stage; the blueprint tears",
+    "picture": "The tear's light, a beat, before the stage.",
+    "style": "BLUEPRINT · cyan #7FDBFF on navy #0B1E3F"
+   }
+  },
+  {
+   "id": "11.01",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima",
+    "chatgtp",
+    "engineer",
+    "staff"
+   ],
+   "caption": "A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.",
+   "lines": [
+    {
+     "id": "e2-a2-0023",
+     "who": "rima",
+     "text": "Good morning. We've spent a long time teaching it to talk. Today, it listens.",
+     "t": 2.0,
+     "dur": 5.91,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Good",
+       0.0,
+       0.221
+      ],
+      [
+       "morning",
+       0.267,
+       0.639
+      ],
+      [
+       "We've",
+       1.184,
+       1.416
+      ],
+      [
+       "spent",
+       1.451,
+       1.695
+      ],
+      [
+       "a",
+       1.741,
+       1.765
+      ],
+      [
+       "long",
+       1.846,
+       2.078
+      ],
+      [
+       "time",
+       2.136,
+       2.426
+      ],
+      [
+       "teaching",
+       2.473,
+       2.833
+      ],
+      [
+       "it",
+       2.891,
+       2.972
+      ],
+      [
+       "to",
+       3.019,
+       3.088
+      ],
+      [
+       "talk",
+       3.181,
+       3.587
+      ],
+      [
+       "Today",
+       4.191,
+       4.748
+      ],
+      [
+       "it",
+       5.097,
+       5.259
+      ],
+      [
+       "listens",
+       5.317,
+       5.875
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0023__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0023__rima-tamuri-A.wav",
+      "in": 0.35,
+      "t": 2.0,
+      "dur": 5.91
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.48,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "spotlight_swing",
+     "at": 0.6,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
+    "picture": "The locked meter frame: every step of the light is measured here. The front row is below this frame (it's first seen in sc 12, after the blimp has gone: FC)."
+   }
+  },
+  {
+   "id": "11.02",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "chatgtp"
+   ],
+   "caption": "On the big screen, CHATGTP's bubble grows features in three held steps, one chip note each: ears, eyes, a mouth. A small VOICE 5 badge in the screen's corner. It speaks.",
+   "lines": [
+    {
+     "id": "e2-a2-0024",
+     "who": "chatgtp",
+     "text": "Hi! I can see you.",
+     "t": 2.0,
+     "dur": 1.22,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Hi",
+       -0.02,
+       0.229
+      ],
+      [
+       "I",
+       0.565,
+       0.635
+      ],
+      [
+       "can",
+       0.705,
+       0.821
+      ],
+      [
+       "see",
+       0.856,
+       0.983
+      ],
+      [
+       "you",
+       1.03,
+       1.146
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0024__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0024__chatgtp-A.wav",
+      "in": 0.4,
+      "t": 2.0,
+      "dur": 1.22
+     }
+    },
+    {
+     "id": "e2-a2-0025",
+     "who": "chatgtp",
+     "text": "All of you.",
+     "t": 3.82,
+     "dur": 0.61,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "All",
+       -0.01,
+       0.187
+      ],
+      [
+       "of",
+       0.245,
+       0.303
+      ],
+      [
+       "you",
+       0.362,
+       0.512
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0025__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0025__chatgtp-A.wav",
+      "in": 0.36,
+      "t": 3.82,
+      "dur": 0.61
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "VOICE 5",
+     "at": 1.6,
+     "until": 5.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "palette_step_F",
+     "at": 0.2,
+     "gain": -24
+    },
+    {
+     "name": "palette_step_F",
+     "at": 0.8,
+     "gain": -24
+    },
+    {
+     "name": "palette_step_F",
+     "at": 1.4,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0025": 0.6
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
+    "picture": "The badge holds if the facts pull holds (facts A60); otherwise it goes.",
+    "style": "2.C STREAM (pass)"
+   }
+  },
+  {
+   "id": "11.03",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "GLYPH 5 frames · its eyes are tokens pointed screen-left, into the wings → 2S · the wings: Mas and THE ORB",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "For five frames its eyes are tokens, pointed screen-left into the wings, at Mas. Then they're friendly again. In the wings, Mas and the Orb; the Orb scans the big screen. Its toast: verified: … The dots never resolve into a word. It gives up.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "verified: …",
+     "at": 0.9,
+     "until": 2.6,
+     "kind": "toast"
+    }
+   ],
+   "reelDur": 3.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "glyph_blink",
+     "at": 0.05,
+     "gain": -26
+    },
+    {
+     "name": "orb_scan_sweep",
+     "at": 0.6,
+     "gain": -26
+    },
+    {
+     "name": "ui_toast_pop",
+     "at": 0.9,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "GLYPH 5 frames · its eyes are tokens pointed screen-left, into the wings → 2S · the wings: Mas and THE ORB",
+    "picture": "Toast 1 of 3.",
+    "style": "GLYPH (5 frames, the eyes)"
+   }
+  },
+  {
+   "id": "11.04",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima",
+    "chatgtp",
+    "engineer",
+    "staff"
+   ],
+   "caption": "The ENGINEER asks for short answers. CHATGTP gets three words from the end, and he comes in over its last word. It finishes anyway. A laugh from the house; in the same frame the spotlight slides one step off Rima toward the big screen.",
+   "lines": [
+    {
+     "id": "e2-a2-0026",
+     "who": "engineer",
+     "text": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
+     "t": 0.57,
+     "dur": 4.62,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "We've",
+       -0.02,
+       0.194
+      ],
+      [
+       "got",
+       0.217,
+       0.345
+      ],
+      [
+       "a",
+       0.391,
+       0.414
+      ],
+      [
+       "lot",
+       0.461,
+       0.623
+      ],
+      [
+       "to",
+       0.658,
+       0.716
+      ],
+      [
+       "show",
+       0.763,
+       0.937
+      ],
+      [
+       "everybody",
+       1.007,
+       1.529
+      ],
+      [
+       "so",
+       1.889,
+       2.005
+      ],
+      [
+       "I'm",
+       2.063,
+       2.168
+      ],
+      [
+       "going",
+       2.214,
+       2.376
+      ],
+      [
+       "to",
+       2.423,
+       2.481
+      ],
+      [
+       "ask",
+       2.562,
+       2.783
+      ],
+      [
+       "you",
+       2.829,
+       2.899
+      ],
+      [
+       "to",
+       2.957,
+       3.003
+      ],
+      [
+       "keep",
+       3.05,
+       3.247
+      ],
+      [
+       "your",
+       3.305,
+       3.421
+      ],
+      [
+       "answers",
+       3.491,
+       3.886
+      ],
+      [
+       "short",
+       3.932,
+       4.188
+      ],
+      [
+       "today",
+       4.234,
+       4.594
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0026__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
+      "in": 0.4,
+      "t": 0.57,
+      "dur": 4.62
+     }
+    },
+    {
+     "id": "e2-a2-0027",
+     "who": "chatgtp",
+     "text": "Great question! Of course! Honestly, short answers are one of my favorite things.",
+     "t": 5.39,
+     "dur": 4.75,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Great",
+       -0.02,
+       0.275
+      ],
+      [
+       "question",
+       0.333,
+       0.809
+      ],
+      [
+       "Of",
+       1.053,
+       1.169
+      ],
+      [
+       "course",
+       1.239,
+       1.668
+      ],
+      [
+       "Honestly",
+       1.866,
+       2.318
+      ],
+      [
+       "short",
+       2.388,
+       2.655
+      ],
+      [
+       "answers",
+       2.725,
+       3.131
+      ],
+      [
+       "are",
+       3.201,
+       3.387
+      ],
+      [
+       "one",
+       3.433,
+       3.561
+      ],
+      [
+       "of",
+       3.596,
+       3.654
+      ],
+      [
+       "my",
+       3.723,
+       3.863
+      ],
+      [
+       "favorite",
+       3.944,
+       4.292
+      ],
+      [
+       "things",
+       4.327,
+       4.664
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0027__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
+      "in": 0.4,
+      "t": 5.39,
+      "dur": 4.75
+     }
+    },
+    {
+     "id": "e2-a2-0028",
+     "who": "engineer",
+     "text": "Thanks.",
+     "t": 9.59,
+     "dur": 0.71,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Thanks",
+       -0.02,
+       0.375
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0028__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
+      "in": 0.37,
+      "t": 9.59,
+      "dur": 0.71
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 13.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "crowd_laugh_m",
+     "at": 10.44,
+     "gain": -20
+    },
+    {
+     "name": "spotlight_swing",
+     "at": 10.94,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0027": 0.2,
+      "e2-a2-0028": -0.55
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
+    "picture": "The episode's first cut-off, with a motive the house can see. Record CHATGTP's line whole; \"Thanks.\" comes in over \"favorite\". Subtitles: \"…one of my favorite—\" / \"Thanks.\" / \"—things.\""
+   }
+  },
+  {
+   "id": "11.05",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the meter frame → SCR · three mouths",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima",
+    "chatgtp",
+    "engineer",
+    "staff"
+   ],
+   "caption": "The ENGINEER tries again. CHATGTP's mouth splits into three mouths, and it harmonises with itself. A bigger laugh. The spotlight slides a second step.",
+   "lines": [
+    {
+     "id": "e2-a2-0029",
+     "who": "engineer",
+     "text": "Let's try that again. Describe yourself in just one word.",
+     "t": 0.71,
+     "dur": 3.16,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Let's",
+       -0.02,
+       0.205
+      ],
+      [
+       "try",
+       0.24,
+       0.38
+      ],
+      [
+       "that",
+       0.438,
+       0.565
+      ],
+      [
+       "again",
+       0.612,
+       0.948
+      ],
+      [
+       "Describe",
+       1.239,
+       1.68
+      ],
+      [
+       "yourself",
+       1.715,
+       2.005
+      ],
+      [
+       "in",
+       2.063,
+       2.121
+      ],
+      [
+       "just",
+       2.168,
+       2.33
+      ],
+      [
+       "one",
+       2.411,
+       2.667
+      ],
+      [
+       "word",
+       2.725,
+       3.108
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0029__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
+      "in": 0.4,
+      "t": 0.71,
+      "dur": 3.16
+     }
+    },
+    {
+     "id": "e2-a2-0030",
+     "who": "chatgtp",
+     "text": "one wo-o-ord.",
+     "t": 4.27,
+     "dur": 2.28,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "one",
+       0.025,
+       0.442
+      ],
+      [
+       "wo-o-ord",
+       0.442,
+       2.317
+      ]
+     ],
+     "tag": "sung",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (CHATGTP, Ep1's settings) spoken, re-sung in three parts through the intro's WORLD singer (audio/intro/vocals/scripts/sing.py)",
+     "el": {
+      "take": "e2-a2-0030__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
+      "in": 0.5,
+      "t": 4.27,
+      "dur": 2.28
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 9.75,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "crowd_laugh_l",
+     "at": 6.75,
+     "gain": -18
+    },
+    {
+     "name": "spotlight_swing",
+     "at": 7.55,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0030": 0.4
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the meter frame → SCR · three mouths",
+    "picture": "Three-part harmony through the intro's sung-vocal pipeline."
+   }
+  },
+  {
+   "id": "11.06",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima"
+   ],
+   "caption": "RIMA, half in the light, clicks to the next slide exactly on the running order.",
+   "lines": [
+    {
+     "id": "e2-a2-0031",
+     "who": "rima",
+     "text": "It's live, so it has a few opinions. Let's show you what it can see.",
+     "t": 1.13,
+     "dur": 5.19,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "It's",
+       -0.01,
+       0.211
+      ],
+      [
+       "live",
+       0.315,
+       0.826
+      ],
+      [
+       "so",
+       1.139,
+       1.325
+      ],
+      [
+       "it",
+       1.383,
+       1.453
+      ],
+      [
+       "has",
+       1.499,
+       1.708
+      ],
+      [
+       "a",
+       1.766,
+       1.801
+      ],
+      [
+       "few",
+       1.882,
+       2.103
+      ],
+      [
+       "opinions",
+       2.161,
+       2.846
+      ],
+      [
+       "Let's",
+       3.357,
+       3.624
+      ],
+      [
+       "show",
+       3.659,
+       3.845
+      ],
+      [
+       "you",
+       3.937,
+       4.03
+      ],
+      [
+       "what",
+       4.077,
+       4.228
+      ],
+      [
+       "it",
+       4.274,
+       4.332
+      ],
+      [
+       "can",
+       4.367,
+       4.518
+      ],
+      [
+       "see",
+       4.599,
+       4.971
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0031__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
+      "in": 0.36,
+      "t": 1.13,
+      "dur": 5.19
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.89,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "clicker_click",
+     "at": 0.565,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
+    "picture": "Under pressure she sticks to the script harder."
+   }
+  },
+  {
+   "id": "11.07",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima",
+    "chatgtp",
+    "engineer",
+    "staff"
+   ],
+   "caption": "The ENGINEER turns the phone's camera around, onto the audience. CHATGTP is overwhelmed. In the audience, one pair of glasses fogs. It blushes: on the big screen, 😊. The third step: the spotlight is more on the screen than on her.",
+   "lines": [
+    {
+     "id": "e2-a2-0032",
+     "who": "engineer",
+     "text": "Say hello to the room.",
+     "t": 0.57,
+     "dur": 1.12,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Say",
+       -0.02,
+       0.212
+      ],
+      [
+       "hello",
+       0.247,
+       0.468
+      ],
+      [
+       "to",
+       0.537,
+       0.595
+      ],
+      [
+       "the",
+       0.653,
+       0.723
+      ],
+      [
+       "room",
+       0.781,
+       1.048
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0032__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
+      "in": 0.37,
+      "t": 0.57,
+      "dur": 1.12
+     }
+    },
+    {
+     "id": "e2-a2-0033",
+     "who": "chatgtp",
+     "text": "Oh. Wow. That's a lot of you. Is it warm in here?",
+     "t": 1.89,
+     "dur": 3.05,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "Oh",
+       -0.01,
+       0.176
+      ],
+      [
+       "Wow",
+       0.536,
+       0.826
+      ],
+      [
+       "That's",
+       1.116,
+       1.348
+      ],
+      [
+       "a",
+       1.383,
+       1.406
+      ],
+      [
+       "lot",
+       1.453,
+       1.592
+      ],
+      [
+       "of",
+       1.627,
+       1.685
+      ],
+      [
+       "you",
+       1.731,
+       1.859
+      ],
+      [
+       "Is",
+       2.126,
+       2.266
+      ],
+      [
+       "it",
+       2.312,
+       2.37
+      ],
+      [
+       "warm",
+       2.405,
+       2.602
+      ],
+      [
+       "in",
+       2.637,
+       2.684
+      ],
+      [
+       "here",
+       2.73,
+       2.939
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0033__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
+      "in": 0.36,
+      "t": 1.89,
+      "dur": 3.05
+     }
+    },
+    {
+     "id": "e2-a2-0034",
+     "who": "chatgtp",
+     "text": "You're making me blush. I don't have blood.",
+     "t": 5.94,
+     "dur": 2.05,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "You're",
+       -0.02,
+       0.144
+      ],
+      [
+       "making",
+       0.167,
+       0.399
+      ],
+      [
+       "me",
+       0.446,
+       0.527
+      ],
+      [
+       "blush",
+       0.573,
+       0.875
+      ],
+      [
+       "I",
+       1.119,
+       1.177
+      ],
+      [
+       "don't",
+       1.247,
+       1.386
+      ],
+      [
+       "have",
+       1.421,
+       1.537
+      ],
+      [
+       "blood",
+       1.56,
+       1.816
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0034__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
+      "in": 0.45,
+      "t": 5.94,
+      "dur": 2.05
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "😊",
+     "at": 8.09,
+     "until": 10.99,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 10.99,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "crowd_laugh_m",
+     "at": 8.29,
+     "gain": -20
+    },
+    {
+     "name": "spotlight_swing",
+     "at": 9.09,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0033": 0.2,
+      "e2-a2-0034": 1.0
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
+    "picture": "The fogged glasses are a mid-house audience member's, never the front row."
+   }
+  },
+  {
+   "id": "11.08",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "chatgtp"
+   ],
+   "caption": "On the big screen the livestream chat scrolls up the side. One comment sticks: what's the catch? CHATGTP answers, delighted, and gets the last laugh.",
+   "lines": [
+    {
+     "id": "e2-a2-0035",
+     "who": "chatgtp",
+     "text": "It's free!",
+     "t": 1.3,
+     "dur": 0.63,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "It's",
+       -0.02,
+       0.177
+      ],
+      [
+       "free",
+       0.235,
+       0.537
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Maya - The Upbeat Creator' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.08",
+     "el": {
+      "take": "e2-a2-0035__chatgtp-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0035__chatgtp-A.wav",
+      "in": 0.37,
+      "t": 1.3,
+      "dur": 0.63
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "what's the catch?",
+     "at": 0.3,
+     "until": 3.73,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 3.73,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "sounds": [
+    {
+     "name": "crowd_laugh_s",
+     "at": 2.13,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
+    "picture": "Live, before her close (R1). Free is the catch; safety is never mentioned (script review: no thesis by placement)."
+   }
+  },
+  {
+   "id": "11.09",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima"
+   ],
+   "caption": "RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it. Then her close.",
+   "lines": [
+    {
+     "id": "e2-a2-0036",
+     "who": "rima",
+     "text": "and that's the demo.",
+     "t": 2.5,
+     "dur": 1.78,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "and",
+       0.406,
+       0.557
+      ],
+      [
+       "that's",
+       0.604,
+       0.848
+      ],
+      [
+       "the",
+       0.894,
+       0.987
+      ],
+      [
+       "demo",
+       1.045,
+       1.509
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Mia - Clear, Smooth, Professional' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.92",
+     "el": {
+      "take": "e2-a2-0036__rima-tamuri-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0036__rima-tamuri-A.wav",
+      "in": 0.35,
+      "t": 2.5,
+      "dur": 1.78
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.99,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
+    "picture": "The episode's one long hold of hers."
+   }
+  },
+  {
+   "id": "11.10",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR → WIDE · the big screen: LIVE → ENDED; the house lights up a step; people start to move",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "staff"
+   ],
+   "caption": "The big screen goes from LIVE to ENDED. The house lights come up a step. People start to move.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "LIVE",
+     "at": 0.0,
+     "until": 0.8,
+     "kind": "ui"
+    },
+    {
+     "text": "ENDED",
+     "at": 0.8,
+     "until": 3.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 3.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "stream_end_tone",
+     "at": 0.7,
+     "gain": -24
+    },
+    {
+     "name": "house_lights_up",
+     "at": 1.2,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "SCR → WIDE · the big screen: LIVE → ENDED; the house lights up a step; people start to move",
+    "picture": "The stream ends before the post (the post is about 20 minutes later: R1)."
+   }
+  },
+  {
+   "id": "11.11",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · in the wings, Mas takes out his phone → ECU · his thumb typing h · e · r",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "mas"
+   ],
+   "caption": "In the wings, Mas takes out his phone, his face unchanged. His thumb types h · e · r at a post's own pace, off the beat.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "h",
+     "at": 1.0,
+     "until": 3.0,
+     "kind": "ui"
+    },
+    {
+     "text": "he",
+     "at": 1.5,
+     "until": 3.0,
+     "kind": "ui"
+    },
+    {
+     "text": "her",
+     "at": 2.1,
+     "until": 3.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 3.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "typing_soft",
+     "at": 1.0,
+     "gain": -28
+    },
+    {
+     "name": "typing_soft",
+     "at": 1.5,
+     "gain": -28
+    },
+    {
+     "name": "typing_soft",
+     "at": 2.1,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "MEDIUM · in the wings, Mas takes out his phone → ECU · his thumb typing h · e · r",
+    "picture": "A real post never rides the beat."
+   }
+  },
+  {
+   "id": "11.12",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · his face in the work light, still (2 beats) → POV · the post lands",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His face in the work light, still, two beats. Post. The softest click. His post, in its own UI.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "her",
+     "at": 1.4,
+     "until": 3.2,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 3.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 1.3,
+     "gain": -30
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "MCU · his face in the work light, still (2 beats) → POV · the post lands",
+    "picture": "Why he posted it is contested: nothing tells us (W8)."
+   }
+  },
+  {
+   "id": "11.13",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the word becomes a blimp and rises over the emptying house; the press row's screens and the raised phones swing to it",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "staff"
+   ],
+   "caption": "The word lifts off his screen. It swells into a lowercase blimp, her, and rises out of the wings in four held sizes over the emptying house. The press row's screens and a wall of raised phones swing to it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 10.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "blimp_inflate_step",
+     "at": 0.3,
+     "gain": -24
+    },
+    {
+     "name": "blimp_inflate_step",
+     "at": 2.8,
+     "gain": -23
+    },
+    {
+     "name": "blimp_inflate_step",
+     "at": 5.3,
+     "gain": -22
+    },
+    {
+     "name": "phone_wave_buzz",
+     "at": 6.0,
+     "gain": -24
+    },
+    {
+     "name": "blimp_inflate_step",
+     "at": 7.8,
+     "gain": -21
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "WIDE · the word becomes a blimp and rises over the emptying house; the press row's screens and the raised phones swing to it",
+    "picture": "The blimp takes the coverage, not her live stage (R1). Four held sizes, one a bar."
+   }
+  },
+  {
+   "id": "11.14",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · RIMA on her mark, composed, not looking up",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima"
+   ],
+   "caption": "RIMA holds her mark, composed. She doesn't look up.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "MCU · RIMA on her mark, composed, not looking up",
+    "picture": "No wince (R2: no 'understudy' framing, GR §6)."
+   }
+  },
+  {
+   "id": "11.15",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "engineer",
+    "rima"
+   ],
+   "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
+   "lines": [
+    {
+     "id": "e2-a2-0037",
+     "who": "engineer",
+     "text": "Mas just posted. One word.",
+     "t": 0.99,
+     "dur": 1.68,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Mas",
+       -0.02,
+       0.252
+      ],
+      [
+       "just",
+       0.298,
+       0.472
+      ],
+      [
+       "posted",
+       0.507,
+       0.914
+      ],
+      [
+       "One",
+       1.169,
+       1.366
+      ],
+      [
+       "word",
+       1.401,
+       1.691
+      ]
+     ],
+     "tag": "offmic",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0037__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
+      "in": 0.4,
+      "t": 0.99,
+      "dur": 1.68
+     }
+    },
+    {
+     "id": "e2-a2-0038",
+     "who": "engineer",
+     "text": "'Her.' Like the movie. The guy and his computer.",
+     "t": 3.27,
+     "dur": 3.03,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+     "in": 0.48,
+     "words": [
+      [
+       "'Her.'",
+       0.021,
+       0.323
+      ],
+      [
+       "Like",
+       0.787,
+       0.973
+      ],
+      [
+       "the",
+       1.008,
+       1.077
+      ],
+      [
+       "movie",
+       1.124,
+       1.507
+      ],
+      [
+       "The",
+       1.751,
+       1.867
+      ],
+      [
+       "guy",
+       1.925,
+       2.122
+      ],
+      [
+       "and",
+       2.169,
+       2.25
+      ],
+      [
+       "his",
+       2.285,
+       2.366
+      ],
+      [
+       "computer",
+       2.413,
+       2.889
+      ]
+     ],
+     "tag": "offmic",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a2-0038__engineer-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+      "in": 0.48,
+      "t": 3.27,
+      "dur": 3.03
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.87,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "headset_unclip",
+     "at": 0.283,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a2-0038": 0.6
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
+    "picture": "Said to a listener (W19). His words are the film's premise, not the voice (D-6)."
+   }
+  },
+  {
+   "id": "11.16",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · every head near the wings turns; the blimp over the emptying house",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "staff"
+   ],
+   "caption": "Every head near the wings turns. The blimp over the emptying house.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
+   ],
+   "sounds": [
+    {
+     "name": "cloth_rustle",
+     "at": 0.2,
+     "gain": -28
+    },
+    {
+     "name": "crowd_hush",
+     "at": 0.4,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "11",
+    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
+    "pace": "quick",
+    "camera": "WIDE · every head near the wings turns; the blimp over the emptying house"
+   }
+  },
+  {
+   "id": "12.01",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark → MCU · Rima, one breath",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "rima"
+   ],
+   "caption": "On stage, the house lights come up full. The blimp has drifted out through the rig and is gone. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6.53,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
+   ],
+   "sounds": [
+    {
+     "name": "house_lights_up",
+     "at": 0.242,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark → MCU · Rima, one breath",
+    "picture": "Her aftermath is her own (R2): nobody hands anybody a clicker."
+   }
+  },
+  {
+   "id": "12.02",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the front row from the wings, in plain house light, the house empty",
+   "side": "",
+   "room": "demo_house",
+   "chars": [],
+   "caption": "The front row, in plain house light, the house empty. The seat reserved for the chief scientist is empty. The placard stays as it is.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RESERVED: CHIEF SCIENTIST",
+     "at": 0.48,
+     "until": 3.39,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 3.39,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "WIDE · the front row from the wings, in plain house light, the house empty",
+    "picture": "No shade, no tether, no flip (FC)."
+   }
+  },
+  {
+   "id": "12.03",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
+   "side": "",
+   "room": "demo_house",
+   "chars": [
+    "alyi"
+   ],
+   "caption": "In its chrome armrest, for two seconds, the party from last September: Alyi turning to Mas with a toast and a smile. Then the chrome shows only the empty seat.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
+   ],
+   "sounds": [
+    {
+     "name": "door_motif_note",
+     "at": 0.2,
+     "gain": -26,
+     "note": "the Door, first note missing (score)"
+    }
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
+    "picture": "Ep1's own art (copied), held 2 s (R2). A memory in a surface, not a ghost: it plays as a reflection of a past event, then goes."
+   }
+  },
+  {
+   "id": "12.04",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "BLACK · a beat",
+   "side": "",
+   "room": "black",
+   "chars": [],
+   "caption": "A beat of black. The pad holds across it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast"
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "BLACK · a beat"
+   }
+  },
+  {
+   "id": "12.05",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas at his desk, the monitor beside him (the news graphic legible); his hand minimising it",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His dark room, in the afternoon. On his monitor, the news recaps Elgoog's keynote under NopeAI's OMNI stamp from the day before: their Tuesday opened on his news. He minimises it and goes back to work. A beat.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 14, 2024",
+     "at": 0.3,
+     "until": 2.1,
+     "kind": "rail"
+    },
+    {
+     "text": "ELGOOG'S KEYNOTE",
+     "at": 2.0,
+     "until": 4.6,
+     "kind": "ui"
+    },
+    {
+     "text": "OMNI",
+     "at": 2.0,
+     "until": 4.6,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 6.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the news's tiny ducked bed under the pad until he minimises it; the pad thins to its pedal under Alyi's post; the designed stop after the hold on his face (the midpoint act-out)"
+   ],
+   "sounds": [
+    {
+     "name": "news_bed_tiny",
+     "at": 0.0,
+     "gain": -34,
+     "dur": 4.6,
+     "note": "ducked; cut as he minimises it"
+    },
+    {
+     "name": "ui_minimise",
+     "at": 4.6,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "MCU · Mas at his desk, the monitor beside him (the news graphic legible); his hand minimising it",
+    "picture": "OMNI, not the blimp (FC); closed before the phone lights."
+   }
+  },
+  {
+   "id": "12.06",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his phone lights: Alyi's post, in its own UI; his thumb scrolls once",
+   "side": "",
+   "room": "darkroom",
+   "chars": [],
+   "caption": "His phone lights: Alyi's post, in its own UI. His thumb scrolls once.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "After almost a decade, I have made the decision to leave NOPEAI.",
+     "at": 0.4,
+     "until": 3.9,
+     "kind": "post"
+    },
+    {
+     "text": "…I will miss everyone dearly.",
+     "at": 4.3,
+     "until": 6.4,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 6.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the news's tiny ducked bed under the pad until he minimises it; the pad thins to its pedal under Alyi's post; the designed stop after the hold on his face (the midpoint act-out)"
+   ],
+   "sounds": [
+    {
+     "name": "phone_buzz_step_1",
+     "at": 0.1,
+     "gain": -26
+    },
+    {
+     "name": "thumb_scroll",
+     "at": 4.0,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "ECU · his phone lights: Alyi's post, in its own UI; his thumb scrolls once",
+    "picture": "Two crops (R2). Alyi's own words; no reason given (W8)."
+   }
+  },
+  {
+   "id": "12.07",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…and a dear friend.\"",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He types his own post, at a post's pace, and posts it. His posted words hold. Over them, after both posts have had their read time, his voice.",
+   "lines": [
+    {
+     "id": "e2-vo-06",
+     "who": "mas",
+     "text": "i came back.",
+     "t": 8.6,
+     "dur": 1.2,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "I",
+       0.0,
+       0.116
+      ],
+      [
+       "came",
+       0.255,
+       0.592
+      ],
+      [
+       "back",
+       0.65,
+       1.068
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "e2-vo-06__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+      "in": 0.35,
+      "t": 8.6,
+      "dur": 1.2
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.",
+     "at": 0.4,
+     "until": 10.28,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 10.28,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the news's tiny ducked bed under the pad until he minimises it; the pad thins to its pedal under Alyi's post; the designed stop after the hold on his face (the midpoint act-out)"
+   ],
+   "sounds": [
+    {
+     "name": "key_tap_soft_01",
+     "at": 0.6,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_soft_03",
+     "at": 1.4,
+     "gain": -30
+    },
+    {
+     "name": "key_tap_soft_05",
+     "at": 2.2,
+     "gain": -30
+    },
+    {
+     "name": "post_click",
+     "at": 3.2,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…and a dear friend.\"",
+    "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll."
+   }
+  },
+  {
+   "id": "12.08",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Hold on his face. The cue stops mid-phrase on the downbeat. Black: the midpoint act-out.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 · the designed stop, mid-phrase on the downbeat"
+   ],
+   "passes": {
+    "scene": "12",
+    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
+    "pace": "weighted",
+    "camera": "MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat",
+    "picture": "A face light one step (P10)."
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 280.0,
+  "seconds_el": 280.0,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": []
+ }
+}

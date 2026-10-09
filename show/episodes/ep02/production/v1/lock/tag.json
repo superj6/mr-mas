@@ -4,15 +4,17 @@
   "episode": "ep02",
   "seg": "tag",
   "label": "TAG",
-  "timeline": "(scaffold: no timeline for tag yet)",
-  "takes": [],
+  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
+  "takes": [
+   "show/episodes/ep02/production/v1/assembly/el-v1/tag-takes.json"
+  ],
   "plan": null,
   "plan_py": null,
   "base_lock": null,
   "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "00:00:00",
-  "ep_in_frames": 0,
+  "ep_in": "22:57:00",
+  "ep_in_frames": 33048,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -24,23 +26,23 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 1,
-  "beats": 1,
-  "frames": 48,
-  "seconds": 2.0,
-  "length": "0:02.00",
-  "episode_in": "00:00:00",
-  "episode_out": "00:02:00",
+  "shots": 9,
+  "beats": 9,
+  "frames": 888,
+  "seconds": 37.0,
+  "length": "0:37.00",
+  "episode_in": "22:57:00",
+  "episode_out": "23:34:00",
   "verdicts": {
-   "-": 1
+   "-": 9
   },
-  "mean_s": 2.0,
-  "median_s": 2.0,
-  "min_s": 2.0,
-  "max_s": 2.0,
-  "lines": 0,
+  "mean_s": 4.111,
+  "median_s": 4.333,
+  "min_s": 1.583,
+  "max_s": 6.833,
+  "lines": 1,
   "posts": 0,
-  "vo": 0,
+  "vo": 1,
   "lines_with_mouth": 0,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
@@ -54,22 +56,37 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "1 scenes: pending(48f)"
+   "detail": "1 scenes: 23(888f)"
   },
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "1 shots from 1 beats"
+   "detail": "9 shots from 9 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 48"
+   "detail": "0 -> 888"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 0; other: 0"
+   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 1; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "1 of 1 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "0 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -84,43 +101,75 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 48,
+   "e": 888,
    "shots": [
-    "pending"
+    "23.01",
+    "23.02",
+    "23.03",
+    "23.04",
+    "23.05",
+    "23.06",
+    "23.07",
+    "23.08",
+    "23.09"
    ],
    "chapter": "TAG",
    "title": "",
-   "cue": "",
-   "frames": 48,
-   "tc_in": "00:00:00",
-   "tc_out": "00:02:00"
+   "cue": "music (v1): E02-13 · THE RUN holds its pedal under the suit's landing · music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item · music (v1): E02-13 · the Orb's F chime, then its verdict a beat later (F → C on vibes and glass) · music (v1): E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words · music (v1): E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only · music (v1): E02-13 · the Podium thins to one held chord · music (v1): E02-13 out · cut on the downbeat to black",
+   "frames": 888,
+   "tc_in": "22:57:00",
+   "tc_out": "23:34:00"
   }
  ],
  "scenes": [
   {
-   "id": "pending",
+   "id": "23",
    "s": 0,
-   "e": 48,
+   "e": 888,
    "shots": [
-    "pending"
+    "23.01",
+    "23.02",
+    "23.03",
+    "23.04",
+    "23.05",
+    "23.06",
+    "23.07",
+    "23.08",
+    "23.09"
    ],
-   "tc_in": "00:00:00",
-   "tc_out": "00:02:00"
+   "tc_in": "22:57:00",
+   "tc_out": "23:34:00"
   }
  ],
  "shots": [
   {
-   "id": "pending",
-   "setup": "pending",
+   "id": "23.01",
+   "setup": "23.01",
    "beats": [
-    "pending"
+    "23.01"
    ],
    "s": 0,
-   "e": 48,
-   "onscreen": [],
+   "e": 110,
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 5",
+     "s": 4,
+     "e": 33
+    },
+    {
+     "text": "NOLE v. MANALT ET AL. · FEDERAL COURT",
+     "s": 52,
+     "e": 110
+    },
+    {
+     "text": "(FOR NOW)",
+     "s": 52,
+     "e": 110
+    }
+   ],
    "lines": [],
    "seq": "TAG",
-   "scene": "pending",
+   "scene": "23",
    "scene_s": 0,
    "verdict": "",
    "v4": null,
@@ -128,45 +177,940 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "CARD · no lock yet",
-   "cls": "GFX",
-   "move": "cut",
-   "does": "Ep2 v1 · tag: no lock yet. The base lock (audio/reel/ep02-v1/build_timeline.py) and tools/lock.py write data.ts.",
-   "chars": [],
-   "cues": [],
-   "sounds": [],
-   "spots": [],
+   "frame": "OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "His back as he sits at the desk, the monitor's glow on. Something heavy lands on it from above: THUD. The suit is back, in federal court. Stuck to it, the (FOR NOW) note, crossed out.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E02-13 · THE RUN holds its pedal under the suit's landing"
+   ],
+   "sounds": [
+    "landing_thunk @38"
+   ],
+   "spots": [
+    {
+     "name": "landing_thunk",
+     "k": 38,
+     "dur": null
+    }
+   ],
    "v4_frames": null,
-   "kind": "card",
-   "set": "void",
-   "room": "",
+   "kind": "montage",
+   "set": "darkroom",
+   "room": "darkroom",
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Ep2 v1 · tag: no lock yet. The base lock (audio/reel/ep02-v1/build_timeline.py) and tools/lock.py write data.ts.",
+   "caption": "His back as he sits at the desk, the monitor's glow on. Something heavy lands on it from above: THUD. The suit is back, in federal court. Stuck to it, the (FOR NOW) note, crossed out.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "doc",
+     "text": "NOLE v. MANALT ET AL. · FEDERAL COURT",
+     "s": 52,
+     "e": 110,
+     "must": true
+    },
+    {
+     "kind": "sign",
+     "text": "(FOR NOW)",
+     "s": 52,
+     "e": 110,
+     "must": true
+    }
+   ],
+   "tc_in": "22:57:00",
+   "tc_out": "23:01:14",
+   "frames": 110
+  },
+  {
+   "id": "23.02",
+   "setup": "23.02",
+   "beats": [
+    "23.02"
+   ],
+   "s": 110,
+   "e": 214,
+   "onscreen": [
+    {
+     "text": "!!",
+     "s": 6,
+     "e": 29
+    },
+    {
+     "text": "!",
+     "s": 29,
+     "e": 51
+    },
+    {
+     "text": ".",
+     "s": 51,
+     "e": 77
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "ECU · its pages lose their exclamation points; he slides it aside",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "Page one: !!. Page two: !. Page three: a full stop. He slides it aside so he can see the monitor.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "sounds": [
+    "page_turn @6",
+    "page_turn @29",
+    "page_turn @51"
+   ],
+   "spots": [
+    {
+     "name": "page_turn",
+     "k": 6,
+     "dur": null
+    },
+    {
+     "name": "page_turn",
+     "k": 29,
+     "dur": null
+    },
+    {
+     "name": "page_turn",
+     "k": 51,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Page one: !!. Page two: !. Page three: a full stop. He slides it aside so he can see the monitor.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.02": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "doc",
+     "text": "!!",
+     "s": 6,
+     "e": 29,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": "!",
+     "s": 29,
+     "e": 51,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": ".",
+     "s": 51,
+     "e": 77,
+     "must": true
+    }
+   ],
+   "tc_in": "23:01:14",
+   "tc_out": "23:05:22",
+   "frames": 104
+  },
+  {
+   "id": "23.03",
+   "setup": "23.03",
+   "beats": [
+    "23.03"
+   ],
+   "s": 214,
+   "e": 314,
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 11",
+     "s": 4,
+     "e": 33
+    },
+    {
+     "text": "…and she 'A.I.'d' it…",
+     "s": 38,
+     "e": 98
+    },
+    {
+     "text": "SIRRAH",
+     "s": 38,
+     "e": 100
+    },
+    {
+     "text": "SUMMER 2024",
+     "s": 38,
+     "e": 100
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal",
+   "cls": "SC",
+   "move": "cut",
+   "does": "The candidate's post, in its own UI: a rival \"A.I.'d\" her crowd. The photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal on its corner.",
+   "chars": [],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "sounds": [
+    "ui_toast_pop @38"
+   ],
+   "spots": [
+    {
+     "name": "ui_toast_pop",
+     "k": 38,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The candidate's post, in its own UI: a rival \"A.I.'d\" her crowd. The photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal on its corner.",
    "cast": [],
    "speak": [],
    "beat_starts": {
-    "pending": 0
+    "23.03": 0
+   },
+   "names": [
+    {
+     "id": "sirrah",
+     "k": 38
+    }
+   ],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "post",
+     "text": "…and she 'A.I.'d' it…",
+     "s": 38,
+     "e": 98,
+     "must": true
+    },
+    {
+     "kind": "plate",
+     "text": "SIRRAH",
+     "s": 38,
+     "e": 100,
+     "must": true
+    },
+    {
+     "kind": "sign",
+     "text": "SUMMER 2024",
+     "s": 38,
+     "e": 100,
+     "must": true
+    }
+   ],
+   "tc_in": "23:05:22",
+   "tc_out": "23:10:02",
+   "frames": 100
+  },
+  {
+   "id": "23.04",
+   "setup": "23.04",
+   "beats": [
+    "23.04"
+   ],
+   "s": 314,
+   "e": 478,
+   "onscreen": [
+    {
+     "text": "human · human · human · human",
+     "s": 33,
+     "e": 96
+    },
+    {
+     "text": "verified: human (all of them)",
+     "s": 100,
+     "e": 158
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill",
+   "cls": "M",
+   "move": "hold",
+   "does": "THE ORB floats off Mas's shoulder to the monitor and scans the crowd, face by face: human, human, human, human. Its toast. It floats back. In a background tab, an egg sits on a bill.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E02-13 · the Orb's F chime, then its verdict a beat later (F → C on vibes and glass)"
+   ],
+   "sounds": [
+    "orb_servo @7",
+    "orb_scan_sweep @33",
+    "orb_chime_F @100",
+    "ui_toast_pop @100"
+   ],
+   "spots": [
+    {
+     "name": "orb_servo",
+     "k": 7,
+     "dur": null
+    },
+    {
+     "name": "orb_scan_sweep",
+     "k": 33,
+     "dur": null
+    },
+    {
+     "name": "orb_chime_F",
+     "k": 100,
+     "dur": null
+    },
+    {
+     "name": "ui_toast_pop",
+     "k": 100,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "THE ORB floats off Mas's shoulder to the monitor and scans the crowd, face by face: human, human, human, human. Its toast. It floats back. In a background tab, an egg sits on a bill.",
+   "cast": [
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "ui",
+     "text": "human · human · human · human",
+     "s": 33,
+     "e": 96,
+     "must": true
+    },
+    {
+     "kind": "toast",
+     "text": "verified: human (all of them)",
+     "s": 100,
+     "e": 158,
+     "must": true
+    }
+   ],
+   "tc_in": "23:10:02",
+   "tc_out": "23:16:22",
+   "frames": 164
+  },
+  {
+   "id": "23.05",
+   "setup": "23.05",
+   "beats": [
+    "23.05"
+   ],
+   "s": 478,
+   "e": 549,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-vo-14",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "sixty elections this year.",
+     "s": 12,
+     "e": 59,
+     "fs": 4,
+     "fe": 70,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "Sixty",
+       0,
+       11
+      ],
+      [
+       "elections",
+       13,
+       27
+      ],
+      [
+       "this",
+       29,
+       34
+      ],
+      [
+       "year",
+       35,
+       43
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "OTS · Mas at the monitor, the toast cleared",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "Mas at the monitor.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas at the monitor.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.05": 0
    },
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:00:00",
-   "tc_out": "00:02:00",
+   "tc_in": "23:16:22",
+   "tc_out": "23:19:21",
+   "frames": 71
+  },
+  {
+   "id": "23.06",
+   "setup": "23.06",
+   "beats": [
+    "23.06"
+   ],
+   "s": 549,
+   "e": 660,
+   "onscreen": [
+    {
+     "text": "RAIL: AUG 21",
+     "s": 4,
+     "e": 33
+    },
+    {
+     "text": "…having me speak… It's a little bit dangerous out there.",
+     "s": 33,
+     "e": 109
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
+   "cls": "SC",
+   "move": "cut",
+   "does": "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "cues": [
+    "music (v1): E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words"
+   ],
+   "sounds": [
+    "blip_text_neutral @36"
+   ],
+   "spots": [
+    {
+     "name": "blip_text_neutral",
+     "k": 36,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
+   "cast": [
+    {
+     "id": "rumpt-hands",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.06": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "lower-third",
+     "text": "…having me speak… It's a little bit dangerous out there.",
+     "s": 33,
+     "e": 109,
+     "must": true
+    }
+   ],
+   "tc_in": "23:19:21",
+   "tc_out": "23:24:12",
+   "frames": 111
+  },
+  {
+   "id": "23.07",
+   "setup": "23.07",
+   "beats": [
+    "23.07"
+   ],
+   "s": 660,
+   "e": 802,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
+   "cls": "SC",
+   "move": "cut",
+   "does": "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
+   "chars": [
+    "rumpt-hands"
+   ],
+   "cues": [
+    "music (v1): E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only"
+   ],
+   "sounds": [
+    "balloon_pump @19",
+    "balloon_pump @45",
+    "balloon_pump @71",
+    "knot_tie @109"
+   ],
+   "spots": [
+    {
+     "name": "balloon_pump",
+     "k": 19,
+     "dur": null
+    },
+    {
+     "name": "balloon_pump",
+     "k": 45,
+     "dur": null
+    },
+    {
+     "name": "balloon_pump",
+     "k": 71,
+     "dur": null
+    },
+    {
+     "name": "knot_tie",
+     "k": 109,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
+   "cast": [
+    {
+     "id": "rumpt-hands",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.07": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "23:24:12",
+   "tc_out": "23:30:10",
+   "frames": 142
+  },
+  {
+   "id": "23.08",
+   "setup": "23.08",
+   "beats": [
+    "23.08"
+   ],
+   "s": 802,
+   "e": 840,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "POV · the hook: the string goes taut",
+   "cls": "SC",
+   "move": "cut",
+   "does": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "chars": [],
+   "cues": [
+    "music (v1): E02-13 · the Podium thins to one held chord"
+   ],
+   "sounds": [
+    "string_taut @7"
+   ],
+   "spots": [
+    {
+     "name": "string_taut",
+     "k": 7,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "screen",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "23.08": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "23:30:10",
+   "tc_out": "23:32:00",
+   "frames": 38
+  },
+  {
+   "id": "23.09",
+   "setup": "23.09",
+   "beats": [
+    "23.09"
+   ],
+   "s": 840,
+   "e": 888,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "23",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
+   "cls": "MCU",
+   "move": "cut",
+   "does": "Mas at his monitor, its glow on his still face. Cut to black.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E02-13 out · cut on the downbeat to black"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "montage",
+   "set": "darkroom",
+   "room": "darkroom",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas at his monitor, its glow on his still face. Cut to black.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "23.09": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "23:32:00",
+   "tc_out": "23:34:00",
    "frames": 48
   }
  ],
- "lines": [],
+ "lines": [
+  {
+   "id": "e2-vo-14",
+   "shot": "23.05",
+   "beat": "23.05",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "sixty elections this year.",
+   "tag": "V.O.",
+   "on_s": 20.4567,
+   "end_s": 22.3567,
+   "file_s": 20.0867,
+   "abs_in": 490,
+   "abs_out": 537,
+   "file_in": 482,
+   "file_out": 548,
+   "file": "audio/ep02/v1-el/ep02-v1/tag/wav/e2-vo-14__mas-manalt-C.wav",
+   "stick_t": 0.54,
+   "stick_in": 0.37,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Sixty",
+     0,
+     11
+    ],
+    [
+     "elections",
+     13,
+     27
+    ],
+    [
+     "this",
+     29,
+     34
+    ],
+    [
+     "year",
+     35,
+     43
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  }
+ ],
  "posts": [],
- "rails": [],
+ "rails": [
+  {
+   "text": "AUG 5",
+   "s": 4,
+   "e": 33,
+   "shot": "23.01",
+   "floor_f": 12
+  },
+  {
+   "text": "AUG 11",
+   "s": 218,
+   "e": 247,
+   "shot": "23.03",
+   "floor_f": 14
+  },
+  {
+   "text": "AUG 21",
+   "s": 553,
+   "e": 582,
+   "shot": "23.06",
+   "floor_f": 14
+  }
+ ],
  "sound_marks": [],
- "subs": [],
+ "subs": [
+  {
+   "s": 490,
+   "e": 537,
+   "hold_to": 549,
+   "who": "MAS",
+   "shown": "CEO",
+   "text": "sixty elections this year.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "e2-vo-14",
+   "os": false
+  }
+ ],
  "refs": {},
  "v4_ids": {},
  "base_marks_scaled": [],
- "decisions": [],
+ "decisions": [
+  "8 beat lengths are not whole frames (23.01, 23.02, 23.03, 23.04, 23.05, 23.06...): beats start on the rounded running total, as the stick reel draws them"
+ ],
  "problems": []
 }

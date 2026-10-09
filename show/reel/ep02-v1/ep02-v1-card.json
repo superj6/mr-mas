@@ -1,0 +1,41 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "CARD · the filename card · 2 s",
+ "variant": "Ep2 v1 · the filename card as a one-beat segment",
+ "logline": "The filename alone, typed on black.",
+ "dateSpan": "",
+ "runtimeMin": 0.03,
+ "dialogueReel": true,
+ "cast": {},
+ "_source": {
+  "about": "One beat, 2.0 s (48 f): the filename typed on black with a cursor (LEARNINGS P16 item 3).",
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "takes": null,
+  "act_seconds": 2.0
+ },
+ "beats": [
+  {
+   "id": "card.01",
+   "act": "INTRO",
+   "kind": "card",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "CARD · the filename, typed on black",
+   "side": "",
+   "room": "",
+   "chars": [],
+   "caption": "Black. A cursor; the filename types on quickly, ep1.1_her.wav, and the cursor blinks after it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [],
+   "sounds": [],
+   "passes": {
+    "scene": "card"
+   }
+  }
+ ]
+}

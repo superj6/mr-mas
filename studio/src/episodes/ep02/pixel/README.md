@@ -46,7 +46,7 @@ node $S/r-act1.cjs sceneprune                                      # drop cache 
 
 | Folder | What |
 |---|---|
-| `coldopen/ act1/ act2/ act3/ act4/ tag/` | the six story segments. Until their first lock, `data.ts` is the **scaffold** (`tools/lock.py --scaffold`: one 2 s stand-in shot saying no lock yet) and `shots.ts` imports no scenes, so each still registers and renders |
+| `coldopen/ act1/ act2/ act3/ act4/ tag/` | the six story segments. **Locked on the v1 EL master (2026-10-09, [lock-v1.md](../../../../../show/episodes/ep02/production/v1/lock-v1.md)):** `data.ts` is the real lock (243 shots, 20 scenes) and `scenes/` holds a stub module per scene (no layouts yet: every shot renders as a stand-in until the shot pass draws). Each text carries the beat plan's own kind (post, doc, sign, plate, …), and a line the plan tags `os` is off screen. Before a lock, `data.ts` was the **scaffold** (`tools/lock.py --scaffold`) |
 | `card/` | the 2 s filename card, `ep1.1_her.wav` (Ep1's card, re-typed at 1 character a frame so the cursor keeps Ep1's rhythm and the cut lands on an off frame). Its own `timeline.json` and lock |
 | `example/` | the per-scene test bed (not the show): three scenes, a rail that runs from A into B, a V.O. line, a dither exit from B into C. `tools/scenetest.sh <scratch>` renders it, changes it and shows only the changed scenes render |
 

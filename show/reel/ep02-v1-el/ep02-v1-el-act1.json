@@ -1,0 +1,7508 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "ACT ONE · the séance · sc 4-7",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep2 v1 base lock of act1: the beat plan applied to no source (every beat new).",
+ "dateSpan": "Mar 5 - 19, 2024",
+ "runtimeMin": 6.13,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "gerg": {
+   "role": "CO-FOUNDER"
+  },
+  "nole": {
+   "name": "NOLE",
+   "role": "FUNDED IT. LEFT IT. SUING IT."
+  },
+  "ghost-nole": {
+   "name": "GHOST-NOLE",
+   "role": "HIS OLD EMAILS"
+  },
+  "staffer": {
+   "name": "STAFFER",
+   "role": "STAFF"
+  },
+  "alyi": {
+   "role": "CO-FOUNDER (2018)"
+  },
+  "terb": {
+   "role": "CHAIR"
+  },
+  "mada": {
+   "role": "DIRECTOR"
+  },
+  "omis": {
+   "name": "OMIS",
+   "role": "NEW DIRECTOR"
+  },
+  "xel": {
+   "name": "XEL",
+   "role": "ASKS THE LONG QUESTIONS"
+  },
+  "tasya": {
+   "role": "THE LANDLORD"
+  },
+  "humanist": {
+   "name": "THE HUMANIST",
+   "role": "MACROSOFT'S NEW AI CHIEF"
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/act1.json",
+  "timeline": null,
+  "takes": "audio/ep02/v1-el/ep02-v1/act1/lines-A.json",
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/act1/lines-A.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act1-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 368.0,
+  "kokoro_lock": "show/reel/ep02-v1/ep02-v1-act1.json",
+  "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "4.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the candle-lit table (establish) → LOW·DESK at Mas's end: the laptop big in the foreground",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "gerg",
+    "staffer",
+    "staff",
+    "orb"
+   ],
+   "caption": "The boardroom, lit only by candles, already lit. On the table a Ouija board whose letters are reply chevrons, and a plain brass-rimmed planchette. Three staffers hold hands; GERG at the table's corner, one hand on the planchette, typing with the other. THE ORB hangs over it all like a chandelier. An empty chair at the table's end. At the head, MAS has the post open: NOPEAI AND NOLE, a byline row of co-founders with ALYI among them.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOPEAI AND NOLE",
+     "at": 0.4,
+     "until": 2.5,
+     "kind": "post"
+    },
+    {
+     "text": "… · ALYI · … · MAS",
+     "at": 0.8,
+     "until": 2.5,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 2.5,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "candle_crackle",
+     "at": 0.0,
+     "gain": -32,
+     "note": "bed detail"
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "WIDE · the candle-lit table (establish) → LOW·DESK at Mas's end: the laptop big in the foreground",
+    "picture": "The planchette has no pointer glyph (P6): it reads as a planchette, never a cursor. The byline row legible at 1080p (… · ALYI · … · MAS)."
+   }
+  },
+  {
+   "id": "4.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his finger on the bare Publish button → MCU MAS",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "His finger on the bare Publish button, no hover. Click. Every candle flares one step; the planchette moves by itself.",
+   "lines": [
+    {
+     "id": "e2-vo-01",
+     "who": "mas",
+     "text": "nole's emails. the court gets them eventually. everyone else gets them tonight.",
+     "t": 3.2,
+     "dur": 6.44,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-01__mas-manalt-C.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "Nole's",
+       -0.02,
+       0.408
+      ],
+      [
+       "emails",
+       0.489,
+       1.197
+      ],
+      [
+       "the",
+       1.929,
+       2.068
+      ],
+      [
+       "court",
+       2.138,
+       2.428
+      ],
+      [
+       "gets",
+       2.497,
+       2.753
+      ],
+      [
+       "them",
+       2.811,
+       2.962
+      ],
+      [
+       "eventually",
+       3.031,
+       3.798
+      ],
+      [
+       "everyone",
+       4.332,
+       4.901
+      ],
+      [
+       "else",
+       4.947,
+       5.214
+      ],
+      [
+       "gets",
+       5.272,
+       5.516
+      ],
+      [
+       "them",
+       5.574,
+       5.737
+      ],
+      [
+       "tonight",
+       5.806,
+       6.364
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "e2-vo-01__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-01__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-01__mas-manalt-C.wav",
+      "in": 0.43,
+      "t": 3.2,
+      "dur": 6.44
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: MAR 5, 2024",
+     "at": 0.8,
+     "until": 2.6,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 10.21,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 0.4,
+     "gain": -18
+    },
+    {
+     "name": "candle_flare",
+     "at": 0.5,
+     "gain": -24
+    },
+    {
+     "name": "planchette_glide",
+     "at": 1.0,
+     "gain": -26
+    }
+   ],
+   "names": [
+    {
+     "id": "nole",
+     "at": 3.18
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "ECU · his finger on the bare Publish button → MCU MAS",
+    "picture": "The click is his move. The rail clears before the V.O. types in his cyan (P18)."
+   }
+  },
+  {
+   "id": "4.03",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "gerg",
+    "staffer"
+   ],
+   "caption": "MAS runs it like a procedure. The planchette slides to >>>, and an inbox chime sounds, pitched down two octaves.",
+   "lines": [
+    {
+     "id": "e2-a1-0001",
+     "who": "mas",
+     "text": "is there anyone here… from 2016.",
+     "t": 0.46,
+     "dur": 2.96,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Is",
+       -0.02,
+       0.143
+      ],
+      [
+       "there",
+       0.189,
+       0.363
+      ],
+      [
+       "anyone",
+       0.41,
+       0.769
+      ],
+      [
+       "here",
+       0.828,
+       1.153
+      ],
+      [
+       "from",
+       1.559,
+       1.756
+      ],
+      [
+       "2016",
+       1.849,
+       2.766
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0001__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0001__mas-manalt-C.wav",
+      "in": 0.37,
+      "t": 0.46,
+      "dur": 2.96
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.79,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "planchette_glide",
+     "at": 3.62,
+     "gain": -26
+    },
+    {
+     "name": "inbox_chime_low",
+     "at": 3.92,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "LOW·DESK · Mas reading → HIGH · the planchette to >>>",
+    "picture": "Base setup for his questions; the HIGH planchette answers them."
+   }
+  },
+  {
+   "id": "4.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "ghost-nole",
+    "mas",
+    "gerg"
+   ],
+   "caption": "A GHOST rises from the table: an email thread of translucent reply chevrons, its header FROM: ALYI · JAN 2016. Inside it: \"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\" A second ghost unfurls beneath it, RE: from a 2016 GHOST-NOLE.",
+   "lines": [
+    {
+     "id": "e2-a1-0002",
+     "who": "ghost-nole",
+     "text": "Yup",
+     "t": 3.4,
+     "dur": 0.51,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0002__ghost-nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Yup",
+       -0.02,
+       0.282
+      ]
+     ],
+     "tag": "ghost",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0002__ghost-nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0002__ghost-nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0002__ghost-nole-A.wav",
+      "in": 0.37,
+      "t": 3.4,
+      "dur": 0.51
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "FROM: ALYI · JAN 2016",
+     "at": 0.3,
+     "until": 4.6,
+     "kind": "doc"
+    },
+    {
+     "text": "\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"",
+     "at": 0.6,
+     "until": 4.6,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "reverse_swell_1beat",
+     "at": 0.1,
+     "gain": -24
+    },
+    {
+     "name": "glyph_shimmer",
+     "at": 0.2,
+     "gain": -30
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool",
+    "picture": "Alyi appears only as an author (his name on the header), never in brass or stone (R1). The spirit-photo pass (2.G) on the ghosts only.",
+    "style": "2.G SPIRIT PHOTO (pass)"
+   }
+  },
+  {
+   "id": "4.05",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "gerg",
+    "staffer"
+   ],
+   "caption": "A staffer's eyes go to the empty chair at the table's end. GERG, quietly, to her.",
+   "lines": [
+    {
+     "id": "e2-a1-0003",
+     "who": "gerg",
+     "text": "He signed it. He's just not here.",
+     "t": 1.15,
+     "dur": 2.0,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "He",
+       -0.02,
+       0.119
+      ],
+      [
+       "signed",
+       0.177,
+       0.421
+      ],
+      [
+       "it",
+       0.456,
+       0.56
+      ],
+      [
+       "He's",
+       0.897,
+       1.071
+      ],
+      [
+       "just",
+       1.106,
+       1.245
+      ],
+      [
+       "not",
+       1.28,
+       1.408
+      ],
+      [
+       "here",
+       1.454,
+       1.71
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0003__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0003__gerg-mockbran-A.wav",
+      "in": 0.37,
+      "t": 1.15,
+      "dur": 2.0
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.84,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly",
+    "picture": "The empty chair is a chair: no image of Alyi in it."
+   }
+  },
+  {
+   "id": "4.06",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "staffer",
+    "gerg"
+   ],
+   "caption": "MAS puts the question to the table. The held hands and the planchette perfectly still. The organ drops to its pad. Then, from the ceiling: KNOCK. KNOCK. KNOCK, each one louder.",
+   "lines": [
+    {
+     "id": "e2-a1-0004",
+     "who": "mas",
+     "text": "one knock if we promised a nonprofit.",
+     "t": 0.52,
+     "dur": 2.76,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "One",
+       -0.02,
+       0.214
+      ],
+      [
+       "knock",
+       0.272,
+       0.609
+      ],
+      [
+       "if",
+       0.69,
+       0.783
+      ],
+      [
+       "we",
+       0.852,
+       0.98
+      ],
+      [
+       "promised",
+       1.061,
+       1.526
+      ],
+      [
+       "a",
+       1.584,
+       1.63
+      ],
+      [
+       "nonprofit",
+       1.688,
+       2.652
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.82",
+     "el": {
+      "take": "e2-a1-0004__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0004__mas-manalt-C.wav",
+      "in": 0.38,
+      "t": 0.52,
+      "dur": 2.76
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.58,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "ceiling_knock",
+     "at": 4.58,
+     "gain": -22
+    },
+    {
+     "name": "ceiling_knock",
+     "at": 5.28,
+     "gain": -19
+    },
+    {
+     "name": "ceiling_knock",
+     "at": 5.98,
+     "gain": -16
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still",
+    "picture": "HOLD 2 BEATS (the table's, waiting) before the first knock."
+   }
+  },
+  {
+   "id": "4.07",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas",
+    "gerg",
+    "staffer"
+   ],
+   "caption": "CRASH. Ceiling tiles rain down over the foot of the table and NOLE drops through the hole on a cable, landing screen-right. On the right wall the boardroom door, which he didn't use, stays shut. In the foreground Mas doesn't look up from the laptop.",
+   "lines": [
+    {
+     "id": "e2-a1-0005",
+     "who": "mas",
+     "text": "you're early. we're on 2016.",
+     "t": 2.29,
+     "dur": 2.21,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "You're",
+       -0.02,
+       0.207
+      ],
+      [
+       "early",
+       0.265,
+       0.671
+      ],
+      [
+       "we're",
+       0.811,
+       0.997
+      ],
+      [
+       "on",
+       1.031,
+       1.113
+      ],
+      [
+       "2016",
+       1.182,
+       2.03
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0005__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0005__mas-manalt-C.wav",
+      "in": 0.41,
+      "t": 2.29,
+      "dur": 2.21
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.96,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "ceiling_burst",
+     "at": 0.0,
+     "gain": -14
+    },
+    {
+     "name": "cable_drop",
+     "at": 0.458,
+     "gain": -22
+    },
+    {
+     "name": "landing_thunk",
+     "at": 1.26,
+     "gain": -16
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the table, one shot for the landing: Nole through the ceiling on a cable",
+    "picture": "The door he didn't use stays in frame."
+   }
+  },
+  {
+   "id": "4.08",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "gerg",
+    "mas"
+   ],
+   "caption": "NOLE, brushing tiles off his jacket, the 2016 ghost and its Yup still hovering behind him. His plate. GERG answers him, typing.",
+   "lines": [
+    {
+     "id": "e2-a1-0006",
+     "who": "nole",
+     "text": "Is this a séance or a deposition? Because I've got lawyers for both.",
+     "t": 0.57,
+     "dur": 3.92,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Is",
+       -0.02,
+       0.123
+      ],
+      [
+       "this",
+       0.181,
+       0.343
+      ],
+      [
+       "a",
+       0.401,
+       0.424
+      ],
+      [
+       "séance",
+       0.494,
+       0.982
+      ],
+      [
+       "or",
+       1.04,
+       1.202
+      ],
+      [
+       "a",
+       1.249,
+       1.272
+      ],
+      [
+       "deposition",
+       1.318,
+       1.957
+      ],
+      [
+       "Because",
+       2.096,
+       2.433
+      ],
+      [
+       "I've",
+       2.503,
+       2.7
+      ],
+      [
+       "got",
+       2.723,
+       2.851
+      ],
+      [
+       "lawyers",
+       2.909,
+       3.176
+      ],
+      [
+       "for",
+       3.222,
+       3.315
+      ],
+      [
+       "both",
+       3.362,
+       3.582
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0006__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0006__nole-A.wav",
+      "in": 0.39,
+      "t": 0.57,
+      "dur": 3.92
+     }
+    },
+    {
+     "id": "e2-a1-0007",
+     "who": "gerg",
+     "text": "It's a blog post. We put some of your old emails up today. The candles were extra.",
+     "t": 4.69,
+     "dur": 3.61,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0007__gerg-mockbran-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "It's",
+       -0.02,
+       0.126
+      ],
+      [
+       "a",
+       0.161,
+       0.184
+      ],
+      [
+       "blog",
+       0.219,
+       0.462
+      ],
+      [
+       "post",
+       0.52,
+       0.753
+      ],
+      [
+       "We",
+       0.799,
+       0.88
+      ],
+      [
+       "put",
+       0.938,
+       1.055
+      ],
+      [
+       "some",
+       1.089,
+       1.205
+      ],
+      [
+       "of",
+       1.24,
+       1.287
+      ],
+      [
+       "your",
+       1.322,
+       1.438
+      ],
+      [
+       "old",
+       1.496,
+       1.635
+      ],
+      [
+       "emails",
+       1.693,
+       2.007
+      ],
+      [
+       "up",
+       2.053,
+       2.123
+      ],
+      [
+       "today",
+       2.158,
+       2.413
+      ],
+      [
+       "The",
+       2.541,
+       2.645
+      ],
+      [
+       "candles",
+       2.692,
+       3.051
+      ],
+      [
+       "were",
+       3.075,
+       3.191
+      ],
+      [
+       "extra",
+       3.237,
+       3.597
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0007__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0007__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0007__gerg-mockbran-A.wav",
+      "in": 0.41,
+      "t": 4.69,
+      "dur": 3.61
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "NOLE · FUNDED IT. LEFT IT. SUING IT.",
+     "at": 0.23,
+     "until": 5.19,
+     "kind": "plate"
+    }
+   ],
+   "reelDur": 8.42,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "names": [
+    {
+     "id": "nole",
+     "at": 0.23
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0007": 0.2
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case)",
+    "picture": "Plate on his entrance: name plus what he is to Mas, told once."
+   }
+  },
+  {
+   "id": "4.09",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · the same setup: Nole's case, the 2016 ghost's \"less open\" hanging behind him",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "ghost-nole"
+   ],
+   "caption": "NOLE makes his case to the whole table. Behind him, in the same frame, the 2016 ghost's \"less open\" and its Yup hang in the air while he says \"open\". Nobody points at it.",
+   "lines": [
+    {
+     "id": "e2-a1-0008",
+     "who": "nole",
+     "text": "Great. Put this on the blog too. I paid for the table. I paid for the candles. I paid for the ceiling I just came through. And I asked for one thing, and it's in the name. Open. It was supposed to be open.",
+     "t": 0.13,
+     "dur": 14.87,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0008__nole-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "Great",
+       -0.02,
+       0.325
+      ],
+      [
+       "Put",
+       1.242,
+       1.404
+      ],
+      [
+       "this",
+       1.439,
+       1.567
+      ],
+      [
+       "on",
+       1.625,
+       1.718
+      ],
+      [
+       "the",
+       1.753,
+       1.822
+      ],
+      [
+       "blog",
+       1.846,
+       2.113
+      ],
+      [
+       "too",
+       2.159,
+       2.403
+      ],
+      [
+       "I",
+       2.925,
+       2.983
+      ],
+      [
+       "paid",
+       3.123,
+       3.343
+      ],
+      [
+       "for",
+       3.39,
+       3.483
+      ],
+      [
+       "the",
+       3.517,
+       3.587
+      ],
+      [
+       "table",
+       3.634,
+       4.098
+      ],
+      [
+       "I",
+       4.737,
+       4.795
+      ],
+      [
+       "paid",
+       4.911,
+       5.085
+      ],
+      [
+       "for",
+       5.12,
+       5.201
+      ],
+      [
+       "the",
+       5.236,
+       5.305
+      ],
+      [
+       "candles",
+       5.34,
+       5.828
+      ],
+      [
+       "I",
+       6.304,
+       6.362
+      ],
+      [
+       "paid",
+       6.478,
+       6.652
+      ],
+      [
+       "for",
+       6.687,
+       6.757
+      ],
+      [
+       "the",
+       6.791,
+       6.861
+      ],
+      [
+       "ceiling",
+       6.908,
+       7.244
+      ],
+      [
+       "I",
+       7.302,
+       7.326
+      ],
+      [
+       "just",
+       7.407,
+       7.569
+      ],
+      [
+       "came",
+       7.616,
+       7.813
+      ],
+      [
+       "through",
+       7.848,
+       8.173
+      ],
+      [
+       "And",
+       8.893,
+       9.055
+      ],
+      [
+       "I",
+       9.113,
+       9.137
+      ],
+      [
+       "asked",
+       9.23,
+       9.531
+      ],
+      [
+       "for",
+       9.578,
+       9.706
+      ],
+      [
+       "one",
+       9.764,
+       9.949
+      ],
+      [
+       "thing",
+       9.984,
+       10.216
+      ],
+      [
+       "and",
+       10.274,
+       10.344
+      ],
+      [
+       "it's",
+       10.391,
+       10.518
+      ],
+      [
+       "in",
+       10.565,
+       10.623
+      ],
+      [
+       "the",
+       10.669,
+       10.739
+      ],
+      [
+       "name",
+       10.809,
+       11.168
+      ],
+      [
+       "Open",
+       12.295,
+       12.736
+      ],
+      [
+       "It",
+       13.432,
+       13.56
+      ],
+      [
+       "was",
+       13.607,
+       13.699
+      ],
+      [
+       "supposed",
+       13.734,
+       14.106
+      ],
+      [
+       "to",
+       14.129,
+       14.175
+      ],
+      [
+       "be",
+       14.222,
+       14.315
+      ],
+      [
+       "open",
+       14.361,
+       14.663
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0008__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0008__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0008__nole-A.wav",
+      "in": 0.42,
+      "t": 0.13,
+      "dur": 14.87
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 15.15,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0008": 0.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0007",
+      "gap_s": 0.25,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "OTS · the same setup: Nole's case, the 2016 ghost's \"less open\" hanging behind him",
+    "picture": "The scene's one speech."
+   }
+  },
+  {
+   "id": "4.10",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW·DESK · Mas → HIGH · the planchette spells O · P · E · N",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas"
+   ],
+   "caption": "MAS puts Nole's own word to the board. The planchette glides from letter to letter: O · P · E · N.",
+   "lines": [
+    {
+     "id": "e2-a1-0009",
+     "who": "mas",
+     "text": "spirit, what did we call it?",
+     "t": 0.3,
+     "dur": 2.16,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0009__mas-manalt-C.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Spirit",
+       0.0,
+       0.743
+      ],
+      [
+       "what",
+       0.894,
+       1.103
+      ],
+      [
+       "did",
+       1.149,
+       1.277
+      ],
+      [
+       "we",
+       1.335,
+       1.451
+      ],
+      [
+       "call",
+       1.521,
+       1.811
+      ],
+      [
+       "it",
+       1.892,
+       2.078
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.82",
+     "el": {
+      "take": "e2-a1-0009__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0009__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0009__mas-manalt-C.wav",
+      "in": 0.35,
+      "t": 0.3,
+      "dur": 2.16
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "O P E N",
+     "at": 2.76,
+     "until": 4.66,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.66,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "planchette_letter_tick",
+     "at": 2.76,
+     "gain": -24
+    },
+    {
+     "name": "planchette_letter_tick",
+     "at": 3.26,
+     "gain": -24
+    },
+    {
+     "name": "planchette_letter_tick",
+     "at": 3.76,
+     "gain": -24
+    },
+    {
+     "name": "planchette_letter_tick",
+     "at": 4.26,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0009": 0.45
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0008",
+      "gap_s": 0.45,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "LOW·DESK · Mas → HIGH · the planchette spells O · P · E · N",
+    "picture": "Each letter a tick on the beat."
+   }
+  },
+  {
+   "id": "4.11",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole"
+   ],
+   "caption": "NOLE spreads his hands at the board, vindicated. The planchette pauses. Then it drifts back to the N and carries it to the front: N · O · P · E.",
+   "lines": [
+    {
+     "id": "e2-a1-0010",
+     "who": "nole",
+     "text": "There. Even the furniture knows.",
+     "t": 0.29,
+     "dur": 2.08,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "There",
+       -0.02,
+       0.468
+      ],
+      [
+       "Even",
+       0.909,
+       1.153
+      ],
+      [
+       "the",
+       1.187,
+       1.257
+      ],
+      [
+       "furniture",
+       1.292,
+       1.698
+      ],
+      [
+       "knows",
+       1.733,
+       2.035
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0010__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0010__nole-A.wav",
+      "in": 0.37,
+      "t": 0.29,
+      "dur": 2.08
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "N O P E",
+     "at": 3.57,
+     "until": 4.57,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.57,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "planchette_glide",
+     "at": 3.07,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front",
+    "picture": "The N moves in one held glide."
+   }
+  },
+  {
+   "id": "4.12",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas",
+    "ghost-nole",
+    "gerg"
+   ],
+   "caption": "NOLE, jabbing at the board as the N moves. Everyone looks down: three hands are resting on the planchette, Mas's, GHOST-NOLE's and Gerg's. All three lift off at once.",
+   "lines": [
+    {
+     "id": "e2-a1-0011",
+     "who": "nole",
+     "text": "No. Not like that. The N goes at the end.",
+     "t": 0.29,
+     "dur": 2.47,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "No",
+       -0.02,
+       0.293
+      ],
+      [
+       "Not",
+       0.398,
+       0.549
+      ],
+      [
+       "like",
+       0.584,
+       0.711
+      ],
+      [
+       "that",
+       0.746,
+       1.002
+      ],
+      [
+       "The",
+       1.129,
+       1.245
+      ],
+      [
+       "N",
+       1.315,
+       1.431
+      ],
+      [
+       "goes",
+       1.501,
+       1.687
+      ],
+      [
+       "at",
+       1.733,
+       1.803
+      ],
+      [
+       "the",
+       1.838,
+       1.907
+      ],
+      [
+       "end",
+       1.977,
+       2.186
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0011__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0011__nole-A.wav",
+      "in": 0.37,
+      "t": 0.29,
+      "dur": 2.47
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.59,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette",
+    "picture": "The three hands: Mas's, ghost-Nole's, Gerg's (R1). Nobody's reflection."
+   }
+  },
+  {
+   "id": "4.13",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the cow ghost rises, chewing; its caption and its reply",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "nole",
+    "gerg"
+   ],
+   "caption": "Another ghost lumbers up: a COW made of chevrons, a charging cable for a tail, the plug stamped ALSET, its chevron header dated 2018. It moos, reverbed, and chews. Its caption, and under it his reply.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "2018",
+     "at": 0.2,
+     "until": 4.6,
+     "kind": "doc"
+    },
+    {
+     "text": "FWD: \"…ATTACH TO ALSET AS ITS CASH COW…\"",
+     "at": 0.4,
+     "until": 4.6,
+     "kind": "doc"
+    },
+    {
+     "text": "NOLE: \"…EXACTLY RIGHT…\"",
+     "at": 2.0,
+     "until": 4.6,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "cow_moo_reverb",
+     "at": 0.3,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "WIDE · the cow ghost rises, chewing; its caption and its reply",
+    "picture": "The caption reads over the chewing; the scene keeps moving under it."
+   }
+  },
+  {
+   "id": "4.14",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · Nole at the cow → LOW·DESK · Mas",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas"
+   ],
+   "caption": "NOLE disputes the medium, not the words. MAS answers with the words.",
+   "lines": [
+    {
+     "id": "e2-a1-0012",
+     "who": "nole",
+     "text": "I forwarded that. I didn't write it.",
+     "t": 0.34,
+     "dur": 1.88,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0012__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "I",
+       -0.02,
+       0.084
+      ],
+      [
+       "forwarded",
+       0.247,
+       0.711
+      ],
+      [
+       "that",
+       0.758,
+       0.978
+      ],
+      [
+       "I",
+       1.048,
+       1.083
+      ],
+      [
+       "didn't",
+       1.164,
+       1.431
+      ],
+      [
+       "write",
+       1.454,
+       1.687
+      ],
+      [
+       "it",
+       1.721,
+       1.849
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0012__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0012__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0012__nole-A.wav",
+      "in": 0.37,
+      "t": 0.34,
+      "dur": 1.88
+     }
+    },
+    {
+     "id": "e2-a1-0013",
+     "who": "mas",
+     "text": "you wrote 'exactly right.'",
+     "t": 2.67,
+     "dur": 1.56,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0013__mas-manalt-C.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "You",
+       -0.02,
+       0.124
+      ],
+      [
+       "wrote",
+       0.182,
+       0.426
+      ],
+      [
+       "'exactly",
+       0.472,
+       1.007
+      ],
+      [
+       "right.'",
+       1.088,
+       1.448
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0013__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0013__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0013__mas-manalt-C.wav",
+      "in": 0.4,
+      "t": 2.67,
+      "dur": 1.56
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0013": 0.45
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS · Nole at the cow → LOW·DESK · Mas",
+    "picture": "No invented line disputes the record (R2)."
+   }
+  },
+  {
+   "id": "4.15",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole"
+   ],
+   "caption": "Nole doesn't answer him. The cow chews. A desk lamp clicks on beside Nole, his post lamp, and he types furiously. His post leaves the phone and rises as a brand-new ghost, NOLE · JUST NOW, made entirely of !. It floats up to join the others.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOLE · JUST NOW",
+     "at": 1.83,
+     "until": 4.12,
+     "kind": "post"
+    },
+    {
+     "text": "!!!!!!!!",
+     "at": 1.83,
+     "until": 4.12,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 4.12,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "lamp_click",
+     "at": 0.229,
+     "gain": -22
+    },
+    {
+     "name": "key_tap_soft_01",
+     "at": 0.687,
+     "gain": -28
+    },
+    {
+     "name": "reverse_swell_1beat",
+     "at": 1.717,
+     "gain": -26
+    }
+   ],
+   "names": [
+    {
+     "id": "nole",
+     "at": 1.83
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "MEDIUM · Nole's lamp clicks on; his post rises as a ghost of !",
+    "picture": "His answer goes to the internet, and has no words in it."
+   }
+  },
+  {
+   "id": "4.16",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" clause; GHOST-NOLE in a 2018 hoodie leans across the table",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "ghost-nole",
+    "nole",
+    "mas"
+   ],
+   "caption": "The planchette slides one last time. A third ghost, its header dated DEC 2018, carrying the 0% sentence. GHOST-NOLE, in a 2018 hoodie, leans across the table.",
+   "lines": [
+    {
+     "id": "e2-a1-0014",
+     "who": "ghost-nole",
+     "text": "This needs billions per year immediately or forget it.",
+     "t": 2.2,
+     "dur": 2.9,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0014__ghost-nole-A.wav",
+     "in": 0.44,
+     "words": [
+      [
+       "This",
+       -0.02,
+       0.119
+      ],
+      [
+       "needs",
+       0.177,
+       0.374
+      ],
+      [
+       "billions",
+       0.467,
+       1.001
+      ],
+      [
+       "per",
+       1.048,
+       1.199
+      ],
+      [
+       "year",
+       1.257,
+       1.431
+      ],
+      [
+       "immediately",
+       1.524,
+       2.186
+      ],
+      [
+       "or",
+       2.267,
+       2.371
+      ],
+      [
+       "forget",
+       2.441,
+       2.801
+      ],
+      [
+       "it",
+       2.836,
+       2.92
+      ]
+     ],
+     "tag": "ghost",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0014__ghost-nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0014__ghost-nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0014__ghost-nole-A.wav",
+      "in": 0.44,
+      "t": 2.2,
+      "dur": 2.9
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "DEC 2018",
+     "at": 0.3,
+     "until": 7.1,
+     "kind": "doc"
+    },
+    {
+     "text": "\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%.\"",
+     "at": 0.5,
+     "until": 7.1,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 7.1,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "reverse_swell_1beat",
+     "at": 0.1,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" clause; GHOST-NOLE in a 2018 hoodie leans across the table",
+    "picture": "The header must read at 1080p; the voice plays while it holds."
+   }
+  },
+  {
+   "id": "4.17",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas"
+   ],
+   "caption": "NOLE slaps his phone down on the table. Every flame jumps. Mas's hand on his glass doesn't move.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.75,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "sounds": [
+    {
+     "name": "phone_clack_floor",
+     "at": 0.229,
+     "gain": -16
+    },
+    {
+     "name": "candle_flare",
+     "at": 0.286,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move",
+    "picture": "ECU: his still hand carries the slap (R1)."
+   }
+  },
+  {
+   "id": "4.18",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · NOLE and GHOST-NOLE side by side, same jaw, same phone (no cut-ins)",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "ghost-nole",
+    "gerg"
+   ],
+   "caption": "NOLE moves the email in time. GERG (O.S.) has checked. NOLE turns on the ghost. The ghost considers this for a long time.",
+   "lines": [
+    {
+     "id": "e2-a1-0015",
+     "who": "nole",
+     "text": "That was a different me. That was 2018. Everybody said things in 2018.",
+     "t": 0.34,
+     "dur": 4.01,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0015__nole-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "That",
+       0.434,
+       0.597
+      ],
+      [
+       "was",
+       0.632,
+       0.713
+      ],
+      [
+       "a",
+       0.759,
+       0.783
+      ],
+      [
+       "different",
+       0.829,
+       1.096
+      ],
+      [
+       "me",
+       1.143,
+       1.247
+      ],
+      [
+       "That",
+       1.294,
+       1.398
+      ],
+      [
+       "was",
+       1.421,
+       1.503
+      ],
+      [
+       "2018",
+       1.549,
+       2.06
+      ],
+      [
+       "Everybody",
+       2.129,
+       2.501
+      ],
+      [
+       "said",
+       2.559,
+       2.756
+      ],
+      [
+       "things",
+       2.803,
+       3.081
+      ],
+      [
+       "in",
+       3.128,
+       3.186
+      ],
+      [
+       "2018",
+       3.244,
+       3.859
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0015__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0015__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0015__nole-A.wav",
+      "in": 0.38,
+      "t": 0.34,
+      "dur": 4.01
+     }
+    },
+    {
+     "id": "e2-a1-0016",
+     "who": "gerg",
+     "text": "Same email address, though. I checked.",
+     "t": 4.55,
+     "dur": 1.6,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0016__gerg-mockbran-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Same",
+       -0.02,
+       0.225
+      ],
+      [
+       "email",
+       0.26,
+       0.504
+      ],
+      [
+       "address",
+       0.55,
+       0.794
+      ],
+      [
+       "though",
+       0.841,
+       1.05
+      ],
+      [
+       "I",
+       1.143,
+       1.201
+      ],
+      [
+       "checked",
+       1.282,
+       1.584
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0016__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0016__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0016__gerg-mockbran-A.wav",
+      "in": 0.38,
+      "t": 4.55,
+      "dur": 1.6
+     }
+    },
+    {
+     "id": "e2-a1-0017",
+     "who": "nole",
+     "text": "Say something ELSE.",
+     "t": 6.35,
+     "dur": 0.97,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0017__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Say",
+       -0.02,
+       0.212
+      ],
+      [
+       "something",
+       0.27,
+       0.584
+      ],
+      [
+       "ELSE",
+       0.642,
+       0.897
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0017__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0017__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0017__nole-A.wav",
+      "in": 0.37,
+      "t": 6.35,
+      "dur": 0.97
+     }
+    },
+    {
+     "id": "e2-a1-0018",
+     "who": "ghost-nole",
+     "text": "Yup.",
+     "t": 8.57,
+     "dur": 0.81,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "Yup",
+       0.35,
+       0.617
+      ]
+     ],
+     "tag": "ghost",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0018__ghost-nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
+      "in": 0.43,
+      "t": 8.57,
+      "dur": 0.81
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 9.95,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0016": 0.2,
+      "e2-a1-0017": 0.2,
+      "e2-a1-0018": 1.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · NOLE and GHOST-NOLE side by side, same jaw, same phone (no cut-ins)",
+    "picture": "HOLD 2 BEATS before the ghost's answer: the hold is Nole's."
+   }
+  },
+  {
+   "id": "4.19",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW·DESK · Mas → HIGH · the planchette slides into the board's corner, where the letters become a Go board; ECU the stone",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas"
+   ],
+   "caption": "MAS asks the question he wants answered. The planchette slides into the board's corner, where the letters become a Go board, and a stone clicks down.",
+   "lines": [
+    {
+     "id": "e2-a1-0019",
+     "who": "mas",
+     "text": "spirit, why zero?",
+     "t": 0.57,
+     "dur": 1.56,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0019__mas-manalt-C.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Spirit",
+       0.0,
+       0.569
+      ],
+      [
+       "why",
+       0.731,
+       0.929
+      ],
+      [
+       "zero",
+       1.01,
+       1.474
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0019__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0019__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0019__mas-manalt-C.wav",
+      "in": 0.35,
+      "t": 0.57,
+      "dur": 1.56
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "MAR 2016 · GAME 2 · MOVE 37",
+     "at": 2.93,
+     "until": 4.73,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.73,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes"
+   ],
+   "sounds": [
+    {
+     "name": "planchette_glide",
+     "at": 2.23,
+     "gain": -24
+    },
+    {
+     "name": "go_stone_click",
+     "at": 2.93,
+     "gain": -16
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE · the explainer (Move 37)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "LOW·DESK · Mas → HIGH · the planchette slides into the board's corner, where the letters become a Go board; ECU the stone",
+    "picture": "SET-04 in the board's corner (T3 cut-paper; slate and shell stones). The stone label legible.",
+    "style": "T3 cut-paper (the Go board)"
+   }
+  },
+  {
+   "id": "4.20",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "staffer"
+   ],
+   "caption": "NOLE, quiet for once. The staffer beside Gerg whispers at the stone.",
+   "lines": [
+    {
+     "id": "e2-a1-0020",
+     "who": "nole",
+     "text": "That's why.",
+     "t": 0.46,
+     "dur": 0.82,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "That's",
+       -0.02,
+       0.25
+      ],
+      [
+       "why",
+       0.285,
+       0.506
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0020__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0020__nole-A.wav",
+      "in": 0.39,
+      "t": 0.46,
+      "dur": 0.82
+     }
+    },
+    {
+     "id": "e2-a1-0021",
+     "who": "staffer",
+     "text": "What's that?",
+     "t": 1.58,
+     "dur": 0.49,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0021__tiled-employee-A.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "What's",
+       -0.02,
+       0.202
+      ],
+      [
+       "that",
+       0.248,
+       0.48
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Avery - Healthcare & Clinical Education' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0021__tiled-employee-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0021__tiled-employee-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0021__tiled-employee-A.wav",
+      "in": 0.45,
+      "t": 1.58,
+      "dur": 0.49
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.19,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE · the explainer (Move 37)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0021": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone",
+    "picture": "The room goes quiet for the only time."
+   }
+  },
+  {
+   "id": "4.21",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · NOLE to her, hushed",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "staffer"
+   ],
+   "caption": "NOLE, to her, hushed, a man at a séance.",
+   "lines": [
+    {
+     "id": "e2-a1-0022",
+     "who": "nole",
+     "text": "Nobody wrote that move. It came out of nowhere.",
+     "t": 0.13,
+     "dur": 2.25,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0022__nole-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Nobody",
+       -0.02,
+       0.32
+      ],
+      [
+       "wrote",
+       0.355,
+       0.529
+      ],
+      [
+       "that",
+       0.552,
+       0.668
+      ],
+      [
+       "move",
+       0.738,
+       1.04
+      ],
+      [
+       "It",
+       1.284,
+       1.4
+      ],
+      [
+       "came",
+       1.434,
+       1.574
+      ],
+      [
+       "out",
+       1.609,
+       1.701
+      ],
+      [
+       "of",
+       1.725,
+       1.771
+      ],
+      [
+       "nowhere",
+       1.794,
+       2.131
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0022__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0022__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0022__nole-A.wav",
+      "in": 0.39,
+      "t": 0.13,
+      "dur": 2.25
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.48,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE · the explainer (Move 37)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0022": 0.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0021",
+      "gap_s": 0.25,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MCU · NOLE to her, hushed"
+   }
+  },
+  {
+   "id": "4.22",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "gerg",
+    "staffer"
+   ],
+   "caption": "GERG, typing, cheerfully literal, corrects him: it learned, from people's games. The staffer beside him, whispering, takes that to mean somebody wrote it. Nobody did: behind the board, a wall of tiny knobs, a stream of tiny human boards pouring into it, each one ticking every knob a hair. On \"Then it played itself, millions of games.\" the stream turns into the program's own boards. The wall freezes.",
+   "lines": [
+    {
+     "id": "e2-a1-0023",
+     "who": "gerg",
+     "text": "It didn't come out of nowhere. It learned. Thirty million positions from people's games.",
+     "t": 0.1,
+     "dur": 4.24,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0023__gerg-mockbran-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "It",
+       -0.02,
+       0.088
+      ],
+      [
+       "didn't",
+       0.123,
+       0.308
+      ],
+      [
+       "come",
+       0.332,
+       0.448
+      ],
+      [
+       "out",
+       0.471,
+       0.564
+      ],
+      [
+       "of",
+       0.599,
+       0.645
+      ],
+      [
+       "nowhere",
+       0.703,
+       1.109
+      ],
+      [
+       "It",
+       1.4,
+       1.539
+      ],
+      [
+       "learned",
+       1.62,
+       1.98
+      ],
+      [
+       "Thirty",
+       2.201,
+       2.514
+      ],
+      [
+       "million",
+       2.572,
+       2.839
+      ],
+      [
+       "positions",
+       2.886,
+       3.269
+      ],
+      [
+       "from",
+       3.304,
+       3.408
+      ],
+      [
+       "people's",
+       3.455,
+       3.756
+      ],
+      [
+       "games",
+       3.803,
+       4.198
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0023__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0023__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0023__gerg-mockbran-A.wav",
+      "in": 0.39,
+      "t": 0.1,
+      "dur": 4.24
+     }
+    },
+    {
+     "id": "e2-a1-0055",
+     "who": "staffer",
+     "text": "So somebody did write it.",
+     "t": 4.59,
+     "dur": 1.17,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0055__tiled-employee-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "So",
+       -0.02,
+       0.156
+      ],
+      [
+       "somebody",
+       0.214,
+       0.562
+      ],
+      [
+       "did",
+       0.632,
+       0.794
+      ],
+      [
+       "write",
+       0.829,
+       1.061
+      ],
+      [
+       "it",
+       1.096,
+       1.189
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Avery - Healthcare & Clinical Education' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0055__tiled-employee-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0055__tiled-employee-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0055__tiled-employee-A.wav",
+      "in": 0.38,
+      "t": 4.59,
+      "dur": 1.17
+     }
+    },
+    {
+     "id": "e2-a1-0056",
+     "who": "gerg",
+     "text": "Nobody wrote it. It's millions of little numbers, like knobs. Every position nudged every knob a hair toward what the person played. Then it played itself, millions of games.",
+     "t": 6.01,
+     "dur": 10.26,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0056__gerg-mockbran-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Nobody",
+       -0.02,
+       0.363
+      ],
+      [
+       "wrote",
+       0.398,
+       0.607
+      ],
+      [
+       "it",
+       0.63,
+       0.746
+      ],
+      [
+       "It's",
+       1.129,
+       1.327
+      ],
+      [
+       "millions",
+       1.443,
+       1.849
+      ],
+      [
+       "of",
+       1.884,
+       1.93
+      ],
+      [
+       "little",
+       1.989,
+       2.198
+      ],
+      [
+       "numbers",
+       2.232,
+       2.615
+      ],
+      [
+       "like",
+       2.732,
+       3.01
+      ],
+      [
+       "knobs",
+       3.103,
+       3.695
+      ],
+      [
+       "Every",
+       3.962,
+       4.264
+      ],
+      [
+       "position",
+       4.322,
+       4.775
+      ],
+      [
+       "nudged",
+       4.845,
+       5.1
+      ],
+      [
+       "every",
+       5.181,
+       5.46
+      ],
+      [
+       "knob",
+       5.506,
+       5.704
+      ],
+      [
+       "a",
+       5.75,
+       5.773
+      ],
+      [
+       "hair",
+       5.831,
+       5.982
+      ],
+      [
+       "toward",
+       6.029,
+       6.226
+      ],
+      [
+       "what",
+       6.249,
+       6.354
+      ],
+      [
+       "the",
+       6.389,
+       6.458
+      ],
+      [
+       "person",
+       6.493,
+       6.749
+      ],
+      [
+       "played",
+       6.783,
+       7.05
+      ],
+      [
+       "Then",
+       7.294,
+       7.561
+      ],
+      [
+       "it",
+       7.677,
+       7.794
+      ],
+      [
+       "played",
+       7.852,
+       8.153
+      ],
+      [
+       "itself",
+       8.188,
+       8.722
+      ],
+      [
+       "millions",
+       9.117,
+       9.593
+      ],
+      [
+       "of",
+       9.628,
+       9.674
+      ],
+      [
+       "games",
+       9.744,
+       10.139
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Marcus - Bright, Upbeat and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0056__gerg-mockbran-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0056__gerg-mockbran-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0056__gerg-mockbran-A.wav",
+      "in": 0.37,
+      "t": 6.01,
+      "dur": 10.26
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 17.27,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes"
+   ],
+   "sounds": [
+    {
+     "name": "knob_tick_grain",
+     "at": 6.81,
+     "gain": -30,
+     "dur": 9.0,
+     "note": "soft, continuous until the freeze"
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE · the explainer (Move 37)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0055": 0.25,
+      "e2-a1-0056": 0.25,
+      "e2-a1-0023": 0.2
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0022",
+      "gap_s": 0.2,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze",
+    "picture": "The knobs tick only while the stream pours in, and freeze at the match (the numbers were fixed during play). No players, no hands. The wall starts on \"Nobody wrote it.\", so the picture carries the second half."
+   }
+  },
+  {
+   "id": "4.23",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · NOLE takes the fear back",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole"
+   ],
+   "caption": "NOLE takes the fear back, in plainer words.",
+   "lines": [
+    {
+     "id": "e2-a1-0024",
+     "who": "nole",
+     "text": "One player in ten thousand would have made that move. It made it anyway. And it was right.",
+     "t": 0.57,
+     "dur": 5.39,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
+     "in": 0.36,
+     "words": [
+      [
+       "One",
+       -0.01,
+       0.199
+      ],
+      [
+       "player",
+       0.245,
+       0.559
+      ],
+      [
+       "in",
+       0.605,
+       0.675
+      ],
+      [
+       "ten",
+       0.721,
+       0.884
+      ],
+      [
+       "thousand",
+       0.954,
+       1.383
+      ],
+      [
+       "would",
+       1.43,
+       1.581
+      ],
+      [
+       "have",
+       1.604,
+       1.72
+      ],
+      [
+       "made",
+       1.766,
+       1.94
+      ],
+      [
+       "that",
+       1.975,
+       2.126
+      ],
+      [
+       "move",
+       2.196,
+       2.521
+      ],
+      [
+       "It",
+       2.962,
+       3.078
+      ],
+      [
+       "made",
+       3.125,
+       3.287
+      ],
+      [
+       "it",
+       3.31,
+       3.38
+      ],
+      [
+       "anyway",
+       3.415,
+       3.786
+      ],
+      [
+       "And",
+       4.39,
+       4.53
+      ],
+      [
+       "it",
+       4.564,
+       4.622
+      ],
+      [
+       "was",
+       4.646,
+       4.75
+      ],
+      [
+       "right",
+       4.843,
+       5.18
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0024__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0024__nole-A.wav",
+      "in": 0.36,
+      "t": 0.57,
+      "dur": 5.39
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.11,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · Move 37: the room colour thins to a chip Go figure on the open fifth (no third); celesta and chip; the knobs as soft pizzicato grains that stop when the wall freezes"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE · the explainer (Move 37)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · NOLE takes the fear back"
+   }
+  },
+  {
+   "id": "4.24",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · NOLE, loud again, to the table",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas",
+    "gerg",
+    "staffer"
+   ],
+   "caption": "NOLE, loud again, to the table: the credit.",
+   "lines": [
+    {
+     "id": "e2-a1-0025",
+     "who": "nole",
+     "text": "MINDDEEP had that in 2016. We had a blog.",
+     "t": 0.15,
+     "dur": 2.51,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0025__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "MINDDEEP",
+       -0.02,
+       0.468
+      ],
+      [
+       "had",
+       0.537,
+       0.688
+      ],
+      [
+       "that",
+       0.735,
+       0.886
+      ],
+      [
+       "in",
+       0.932,
+       0.978
+      ],
+      [
+       "2016",
+       1.037,
+       1.698
+      ],
+      [
+       "We",
+       1.768,
+       1.849
+      ],
+      [
+       "had",
+       1.896,
+       2.012
+      ],
+      [
+       "a",
+       2.047,
+       2.07
+      ],
+      [
+       "blog",
+       2.105,
+       2.476
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0025__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0025__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0025__nole-A.wav",
+      "in": 0.37,
+      "t": 0.15,
+      "dur": 2.51
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.12,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0025": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0024",
+      "gap_s": 0.3,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "WIDE · NOLE, loud again, to the table",
+    "picture": "The board's corner goes back to letters."
+   }
+  },
+  {
+   "id": "4.25",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas",
+    "ghost-nole"
+   ],
+   "caption": "Ghost 3 drifts into Mas's eyeline and says its line again.",
+   "lines": [
+    {
+     "id": "e2-a1-0026",
+     "who": "ghost-nole",
+     "text": "billions per year…",
+     "t": 0.46,
+     "dur": 0.94,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "billions",
+       -0.07,
+       0.464
+      ],
+      [
+       "per",
+       0.511,
+       0.662
+      ],
+      [
+       "year",
+       0.72,
+       0.894
+      ]
+     ],
+     "tag": "ghost",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0026__ghost-nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0026__ghost-nole-A.wav",
+      "in": 0.42,
+      "t": 0.46,
+      "dur": 0.94
+     }
+    },
+    {
+     "id": "e2-vo-02",
+     "who": "mas",
+     "text": "he was right about the bill. it's bigger now.",
+     "t": 2.0,
+     "dur": 3.42,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-02__mas-manalt-C.wav",
+     "in": 0.44,
+     "words": [
+      [
+       "He",
+       -0.02,
+       0.119
+      ],
+      [
+       "was",
+       0.2,
+       0.351
+      ],
+      [
+       "right",
+       0.479,
+       0.758
+      ],
+      [
+       "about",
+       0.804,
+       1.083
+      ],
+      [
+       "the",
+       1.141,
+       1.245
+      ],
+      [
+       "bill",
+       1.326,
+       1.721
+      ],
+      [
+       "it's",
+       2.104,
+       2.406
+      ],
+      [
+       "bigger",
+       2.487,
+       2.871
+      ],
+      [
+       "now",
+       2.963,
+       3.3
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
+     "el": {
+      "take": "e2-vo-02__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-02__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-02__mas-manalt-C.wav",
+      "in": 0.44,
+      "t": 2.0,
+      "dur": 3.42
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.11,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-vo-02": 0.6
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again",
+    "picture": "The bill has its referent in the frame (R2). The V.O. types in his cyan."
+   }
+  },
+  {
+   "id": "4.26",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole"
+   ],
+   "caption": "NOLE turns to Mas. The lamp beside him does not click on. Then Mas's answer lands on Nole's face.",
+   "lines": [
+    {
+     "id": "e2-a1-0027",
+     "who": "nole",
+     "text": "You kept them.",
+     "t": 0.69,
+     "dur": 0.92,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "You",
+       0.0,
+       0.174
+      ],
+      [
+       "kept",
+       0.255,
+       0.488
+      ],
+      [
+       "them",
+       0.534,
+       0.697
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0027__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0027__nole-A.wav",
+      "in": 0.35,
+      "t": 0.69,
+      "dur": 0.92
+     }
+    },
+    {
+     "id": "e2-a1-0028",
+     "who": "mas",
+     "text": "we keep everything.",
+     "t": 2.61,
+     "dur": 1.12,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0028__mas-manalt-C.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "We",
+       -0.02,
+       0.134
+      ],
+      [
+       "keep",
+       0.215,
+       0.448
+      ],
+      [
+       "everything",
+       0.517,
+       1.005
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0028__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0028__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0028__mas-manalt-C.wav",
+      "in": 0.39,
+      "t": 2.61,
+      "dur": 1.12
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.42,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 THE SÉANCE · ROOM COLOUR (audition first: (a) glass harmonica with chip, F minor; (b) celesta and chip over a low reed pad; judged against the corny bar), one performance under the séance; ducks under lines; thins to a pad under every ghost caption and real line"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0028": 1.0
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face)",
+    "picture": "The lamp's tell: off. A slow drift in."
+   }
+  },
+  {
+   "id": "4.27",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas lifts his glass. The candle nearest Nole snuffs out. Its smoke crosses the glass, and the glass carries us into 2018.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.75,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "sounds": [
+    {
+     "name": "candle_snuff",
+     "at": 0.573,
+     "gain": -24
+    },
+    {
+     "name": "render_front_sweep",
+     "at": 1.833,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass",
+    "picture": "The glass is the matched object into F2.3."
+   }
+  },
+  {
+   "id": "4.28",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · NopeAI's first office, Feb 2018, by day: the all-hands",
+   "side": "",
+   "room": "allhands",
+   "chars": [
+    "nole",
+    "gerg",
+    "mas",
+    "alyi",
+    "staff"
+   ],
+   "caption": "Ep1's own room, four months before the night the machine taught itself: fewer racks; the arena on one monitor; a whiteboard with AGI and three crossed-out arrows; a Go stone on a desk. NOLE at the front, mid-speech, unheard; his slide reads ALSET · AI.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: FEB 20, 2018",
+     "at": 0.4,
+     "until": 2.2,
+     "kind": "rail"
+    },
+    {
+     "text": "ALSET · AI",
+     "at": 1.2,
+     "until": 4.4,
+     "kind": "doc"
+    },
+    {
+     "text": "AGI",
+     "at": 0.4,
+     "until": 4.4,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "WIDE · NopeAI's first office, Feb 2018, by day: the all-hands",
+    "picture": "No captions. The slide is the public reason (R2); the litigant's account stays off screen.",
+    "style": "T3 cut-paper memory",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.29",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds",
+   "side": "",
+   "room": "allhands",
+   "chars": [
+    "nole",
+    "gerg",
+    "staff"
+   ],
+   "caption": "NOLE finishes, one hand still on the slide. Nobody applauds. One by one the staff turn back to their monitors; the arena match keeps playing. GERG, second row, keeps typing.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.5,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds",
+    "picture": "The room's answer is the room: no prop, no sheet, nothing asked of anyone on screen (script review).",
+    "style": "T3 cut-paper memory",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.30",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
+   "side": "",
+   "room": "allhands",
+   "chars": [
+    "mas",
+    "nole"
+   ],
+   "caption": "At the back, MAS sips from the same crystal glass. NOLE climbs the ladder to the ceiling hatch. The hatch slides shut on him.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.81,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "sounds": [
+    {
+     "name": "glass_sip",
+     "at": 0.458,
+     "gain": -28
+    },
+    {
+     "name": "ladder_climb",
+     "at": 1.374,
+     "gain": -24
+    },
+    {
+     "name": "hatch_slide_shut",
+     "at": 3.779,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes",
+    "style": "T3 cut-paper memory",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.31",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the arena monitor: the match still playing, nobody has paused it",
+   "side": "",
+   "room": "allhands",
+   "chars": [],
+   "caption": "The arena match on the one monitor plays on under the hatch's draught; nobody has paused it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "sounds": [
+    {
+     "name": "arena_blip_soft",
+     "at": 0.3,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "INSERT · the arena monitor: the match still playing, nobody has paused it",
+    "style": "T3 cut-paper memory",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.32",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "office",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back at MAS at the back",
+   "side": "",
+   "room": "allhands",
+   "chars": [
+    "alyi",
+    "mas"
+   ],
+   "caption": "ALYI, at the next desk, cropped by his monitor's edge, turns and looks back at Mas. Mas lifts his glass an inch.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · F2.3: the cut-paper chamber tier (ERA T3) crossfaded in on the smoke; Nole's Launch on slow horns, its one sincere version (OST §2.7); thins under the look to the Door's first bar, its first note missing"
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back at MAS at the back",
+    "picture": "Alyi present, lit, a person (P8), part of him cut off by the frame (his rule). Warm. About 2 s on the look.",
+    "style": "T3 cut-paper memory",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.33",
+   "act": "ACT ONE",
+   "kind": "flashback",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas"
+   ],
+   "caption": "The glass carries us back. In 2024 the smoke thins. Nole strikes a match and relights the candle himself.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.98,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03"
+   ],
+   "sounds": [
+    {
+     "name": "render_front_sweep",
+     "at": 0.229,
+     "gain": -26
+    },
+    {
+     "name": "match_strike",
+     "at": 1.605,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face",
+    "picture": "The relit candle is the matched object out.",
+    "flashback": {
+     "when": "FEB 20, 2018",
+     "of": "F2.3 (Nole → Mas)",
+     "tier": "T3 cut-paper (Ep1's first-office set, copied), by day",
+     "in": "his glass and the smoke (4.27)",
+     "out": "his glass lifted an inch to Alyi → the relit candle at his face (4.33)",
+     "no_vo": "no inner voice in a memory",
+     "captions": "none: no words heard"
+    }
+   }
+  },
+  {
+   "id": "4.34",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas"
+   ],
+   "caption": "NOLE holds the candle up to Mas's face like evidence. Mas lifts his glass and sips: F2.3's sip, six years on.",
+   "lines": [
+    {
+     "id": "e2-a1-0029",
+     "who": "nole",
+     "text": "You sat at the back. I stood up in front of the whole room, and you sat at the back with your glass of water.",
+     "t": 0.69,
+     "dur": 6.76,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "You",
+       -0.02,
+       0.131
+      ],
+      [
+       "sat",
+       0.201,
+       0.375
+      ],
+      [
+       "at",
+       0.421,
+       0.479
+      ],
+      [
+       "the",
+       0.514,
+       0.584
+      ],
+      [
+       "back",
+       0.653,
+       1.025
+      ],
+      [
+       "I",
+       1.675,
+       1.733
+      ],
+      [
+       "stood",
+       1.872,
+       2.151
+      ],
+      [
+       "up",
+       2.198,
+       2.29
+      ],
+      [
+       "in",
+       2.348,
+       2.418
+      ],
+      [
+       "front",
+       2.488,
+       2.65
+      ],
+      [
+       "of",
+       2.685,
+       2.732
+      ],
+      [
+       "the",
+       2.766,
+       2.836
+      ],
+      [
+       "whole",
+       2.882,
+       3.103
+      ],
+      [
+       "room",
+       3.138,
+       3.417
+      ],
+      [
+       "and",
+       3.939,
+       4.102
+      ],
+      [
+       "you",
+       4.183,
+       4.287
+      ],
+      [
+       "sat",
+       4.369,
+       4.566
+      ],
+      [
+       "at",
+       4.612,
+       4.67
+      ],
+      [
+       "the",
+       4.694,
+       4.763
+      ],
+      [
+       "back",
+       4.821,
+       5.123
+      ],
+      [
+       "with",
+       5.239,
+       5.425
+      ],
+      [
+       "your",
+       5.46,
+       5.576
+      ],
+      [
+       "glass",
+       5.622,
+       5.936
+      ],
+      [
+       "of",
+       5.971,
+       6.04
+      ],
+      [
+       "water",
+       6.157,
+       6.505
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0029__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0029__nole-A.wav",
+      "in": 0.37,
+      "t": 0.69,
+      "dur": 6.76
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 9.05,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03"
+   ],
+   "sounds": [
+    {
+     "name": "glass_sip",
+     "at": 7.95,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third",
+    "picture": "Base setup for the confrontation."
+   }
+  },
+  {
+   "id": "4.35",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the table: Nole sets the candle down hard, already rising on his cable",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "nole",
+    "mas"
+   ],
+   "caption": "NOLE sets the candle down in front of Mas, hard, already rising. He rockets back up through his hole. One ceiling tile drops back into place.",
+   "lines": [
+    {
+     "id": "e2-a1-0030",
+     "who": "nole",
+     "text": "Keep that too. See you in court.",
+     "t": 0.46,
+     "dur": 1.57,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "Keep",
+       -0.02,
+       0.152
+      ],
+      [
+       "that",
+       0.21,
+       0.361
+      ],
+      [
+       "too",
+       0.396,
+       0.605
+      ],
+      [
+       "See",
+       0.744,
+       0.895
+      ],
+      [
+       "you",
+       0.93,
+       1.0
+      ],
+      [
+       "in",
+       1.046,
+       1.093
+      ],
+      [
+       "court",
+       1.151,
+       1.406
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ryan - Confident and Bold' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0030__nole-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0030__nole-A.wav",
+      "in": 0.43,
+      "t": 0.46,
+      "dur": 1.57
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.09,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03"
+   ],
+   "sounds": [
+    {
+     "name": "rocket_roar",
+     "at": 2.23,
+     "gain": -16
+    },
+    {
+     "name": "tile_land_1",
+     "at": 3.79,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the table: Nole sets the candle down hard, already rising on his cable"
+   }
+  },
+  {
+   "id": "4.36",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU → WIDE · Mas blows out the last candle; darkness",
+   "side": "",
+   "room": "seance",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas leans over and blows out the last candle. Darkness, 1.5 s.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-02 · back to the room colour; Nole's fanfare stops one note short on his exit; the last candle: the last chord rings into E02-03"
+   ],
+   "sounds": [
+    {
+     "name": "candle_blow",
+     "at": 0.5,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "4",
+    "mode": "SET-PIECE → EXTENDED CONVERSATION (explainer: Move 37; FLASHBACK: F2.3)",
+    "pace": "quick",
+    "camera": "MCU → WIDE · Mas blows out the last candle; darkness"
+   }
+  },
+  {
+   "id": "4A.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "terb",
+    "mas",
+    "mada",
+    "omis",
+    "gerg"
+   ],
+   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "lines": [
+    {
+     "id": "e2-a1-0031",
+     "who": "terb",
+     "text": "Before we start, the independent review is back. I'll read you the finding.",
+     "t": 2.6,
+     "dur": 4.48,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0031__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Before",
+       0.0,
+       0.337
+      ],
+      [
+       "we",
+       0.372,
+       0.441
+      ],
+      [
+       "start",
+       0.511,
+       0.871
+      ],
+      [
+       "the",
+       0.987,
+       1.115
+      ],
+      [
+       "independent",
+       1.196,
+       1.788
+      ],
+      [
+       "review",
+       1.834,
+       2.171
+      ],
+      [
+       "is",
+       2.206,
+       2.276
+      ],
+      [
+       "back",
+       2.357,
+       2.694
+      ],
+      [
+       "I'll",
+       2.926,
+       3.17
+      ],
+      [
+       "read",
+       3.228,
+       3.402
+      ],
+      [
+       "you",
+       3.437,
+       3.506
+      ],
+      [
+       "the",
+       3.553,
+       3.622
+      ],
+      [
+       "finding",
+       3.68,
+       4.18
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ethan - Calm, Optimistic and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0031__terb-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0031__terb-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0031__terb-A.wav",
+      "in": 0.35,
+      "t": 2.6,
+      "dur": 4.48
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: MAR 8",
+     "at": 0.3,
+     "until": 1.9,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 7.61,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
+    "picture": "Mas is already standing on arrival: Ep1's \"we'll stand.\" in picture."
+   }
+  },
+  {
+   "id": "4A.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "terb",
+    "mada",
+    "mas"
+   ],
+   "caption": "TERB reads the finding to the people it concerns, both halves together. The first half lands on MADA, perfectly still; the second on MAS, standing.",
+   "lines": [
+    {
+     "id": "e2-a1-0032",
+     "who": "terb",
+     "text": "The law firm found that the prior Board acted within its broad discretion to terminate Mr. Manalt, but also found that his conduct did not mandate removal.",
+     "t": 1.07,
+     "dur": 10.36,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "The",
+       0.0,
+       0.151
+      ],
+      [
+       "law",
+       0.209,
+       0.348
+      ],
+      [
+       "firm",
+       0.406,
+       0.604
+      ],
+      [
+       "found",
+       0.673,
+       0.929
+      ],
+      [
+       "that",
+       0.975,
+       1.091
+      ],
+      [
+       "the",
+       1.115,
+       1.184
+      ],
+      [
+       "prior",
+       1.254,
+       1.649
+      ],
+      [
+       "Board",
+       1.73,
+       2.113
+      ],
+      [
+       "acted",
+       2.206,
+       2.566
+      ],
+      [
+       "within",
+       2.612,
+       2.891
+      ],
+      [
+       "its",
+       2.949,
+       3.088
+      ],
+      [
+       "broad",
+       3.158,
+       3.518
+      ],
+      [
+       "discretion",
+       3.564,
+       4.191
+      ],
+      [
+       "to",
+       4.249,
+       4.319
+      ],
+      [
+       "terminate",
+       4.4,
+       4.934
+      ],
+      [
+       "Mr",
+       4.981,
+       5.283
+      ],
+      [
+       "Manalt",
+       5.352,
+       5.944
+      ],
+      [
+       "but",
+       6.409,
+       6.548
+      ],
+      [
+       "also",
+       6.583,
+       6.827
+      ],
+      [
+       "found",
+       6.908,
+       7.117
+      ],
+      [
+       "that",
+       7.163,
+       7.279
+      ],
+      [
+       "his",
+       7.338,
+       7.465
+      ],
+      [
+       "conduct",
+       7.546,
+       8.197
+      ],
+      [
+       "did",
+       8.313,
+       8.475
+      ],
+      [
+       "not",
+       8.557,
+       8.766
+      ],
+      [
+       "mandate",
+       8.847,
+       9.358
+      ],
+      [
+       "removal",
+       9.416,
+       10.089
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ethan - Calm, Optimistic and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0032__terb-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0032__terb-A.wav",
+      "in": 0.35,
+      "t": 1.07,
+      "dur": 10.36
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 12.5,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half)",
+    "picture": "Nothing on Mas's face: at a real event his surface stays blank. Mada does nothing (any action could read as a view)."
+   }
+  },
+  {
+   "id": "4A.03",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "terb",
+    "mas"
+   ],
+   "caption": "TERB looks up. Mas sits.",
+   "lines": [
+    {
+     "id": "e2-a1-0033",
+     "who": "terb",
+     "text": "You can sit down now, Mas.",
+     "t": 0.62,
+     "dur": 1.78,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "You",
+       0.0,
+       0.139
+      ],
+      [
+       "can",
+       0.186,
+       0.302
+      ],
+      [
+       "sit",
+       0.348,
+       0.511
+      ],
+      [
+       "down",
+       0.557,
+       0.755
+      ],
+      [
+       "now",
+       0.801,
+       0.975
+      ],
+      [
+       "Mas",
+       1.057,
+       1.474
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Ethan - Calm, Optimistic and Clear' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.05",
+     "el": {
+      "take": "e2-a1-0033__terb-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0033__terb-A.wav",
+      "in": 0.35,
+      "t": 0.62,
+      "dur": 1.78
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "sounds": [
+    {
+     "name": "chair_unfold",
+     "at": 2.7,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "OTS · over Mas's shoulder onto TERB, who looks up from the sheet"
+   }
+  },
+  {
+   "id": "4A.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the nameplates click into their slots, his first",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [],
+   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "MAS MANALT · BOARD",
+     "at": 0.3,
+     "until": 3.4,
+     "kind": "plate"
+    },
+    {
+     "text": "OMIS · NEW DIRECTOR",
+     "at": 1.0,
+     "until": 3.4,
+     "kind": "plate"
+    },
+    {
+     "text": "NEW DIRECTOR",
+     "at": 1.6,
+     "until": 3.4,
+     "kind": "plate"
+    },
+    {
+     "text": "NEW DIRECTOR",
+     "at": 2.2,
+     "until": 3.4,
+     "kind": "plate"
+    }
+   ],
+   "reelDur": 3.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "sounds": [
+    {
+     "name": "nameplate_click",
+     "at": 0.3,
+     "gain": -20
+    },
+    {
+     "name": "nameplate_click",
+     "at": 1.0,
+     "gain": -22
+    },
+    {
+     "name": "nameplate_click",
+     "at": 1.6,
+     "gain": -22
+    },
+    {
+     "name": "nameplate_click",
+     "at": 2.2,
+     "gain": -22
+    }
+   ],
+   "names": [
+    {
+     "id": "omis",
+     "at": 1.0
+    }
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "camera": "ECU · the nameplates click into their slots, his first",
+    "picture": "Four plates, four clicks."
+   }
+  },
+  {
+   "id": "4A.05",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "caption": "As he sits, Mas glances at GERG, at the back with his laptop, still standing. Gerg lifts the laptop an inch, like a toast.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 5.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "camera": "WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch",
+    "picture": "A warm half-second."
+   }
+  },
+  {
+   "id": "4A.06",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his phone, face up on the table beside the nameplate, lights with an invite",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [],
+   "caption": "Under the last click his phone, face up on the table, lights with an invite.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.49,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 0.534,
+     "gain": -24,
+     "note": "the invite's soft chime over the click"
+    }
+   ],
+   "passes": {
+    "scene": "4A",
+    "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
+    "pace": "weighted",
+    "camera": "ECU · his phone, face up on the table beside the nameplate, lights with an invite"
+   }
+  },
+  {
+   "id": "4B.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the calendar card on his phone (the look of Ep1's Board sync invite); his thumb on Accept",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The calendar card: XEL · LONG-FORM · MAR 18 · 2 HRS, with a mic icon. He reads it and accepts with his thumb. The card settles into his calendar.",
+   "lines": [
+    {
+     "id": "e2-vo-03",
+     "who": "mas",
+     "text": "two hours on his show, once. after that, november is a link.",
+     "t": 1.43,
+     "dur": 5.72,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "Two",
+       -0.02,
+       0.19
+      ],
+      [
+       "hours",
+       0.272,
+       0.655
+      ],
+      [
+       "on",
+       0.736,
+       0.852
+      ],
+      [
+       "his",
+       0.91,
+       1.026
+      ],
+      [
+       "show",
+       1.084,
+       1.456
+      ],
+      [
+       "once",
+       1.874,
+       2.512
+      ],
+      [
+       "after",
+       3.244,
+       3.627
+      ],
+      [
+       "that",
+       3.685,
+       4.022
+      ],
+      [
+       "november",
+       4.265,
+       4.892
+      ],
+      [
+       "is",
+       4.95,
+       5.043
+      ],
+      [
+       "a",
+       5.124,
+       5.171
+      ],
+      [
+       "link",
+       5.252,
+       5.635
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+     "el": {
+      "take": "e2-vo-03__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-vo-03__mas-manalt-C.wav",
+      "in": 0.45,
+      "t": 1.43,
+      "dur": 5.72
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "XEL · LONG-FORM · MAR 18 · 2 HRS",
+     "at": 0.29,
+     "until": 8.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 8.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · none under the read; the podcast-intro sting pre-laps under the tap (J 0.8 s)"
+   ],
+   "sounds": [
+    {
+     "name": "post_click",
+     "at": 7.25,
+     "gain": -22,
+     "note": "Accept"
+    }
+   ],
+   "names": [
+    {
+     "id": "xel",
+     "at": 0.29
+    }
+   ],
+   "passes": {
+    "scene": "4B",
+    "mode": "SINGLE IMAGE / INSERT",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "ECU · the calendar card on his phone (the look of Ep1's Board sync invite); his thumb on Accept",
+    "picture": "In Ep1 he accepted an invite without looking; this time he looks."
+   }
+  },
+  {
+   "id": "6.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the locked meter frame inside the podcast player's chrome: curtain, two chairs, one mic (size 1)",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "Enter late: a black curtain, two chairs, one microphone on a stand between them, all inside a podcast player's chrome, its chapter counter at CH. 1 OF 6 and a REC light. XEL screen-right; MAS screen-left with his glass. XEL asks his real first question.",
+   "lines": [
+    {
+     "id": "e2-a1-0034",
+     "who": "xel",
+     "text": "Take me through the NOPEAI board saga that started on Thursday, November 16th, maybe Friday, November 17th for you.",
+     "t": 1.4,
+     "dur": 7.22,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0034__xel-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Take",
+       -0.02,
+       0.242
+      ],
+      [
+       "me",
+       0.288,
+       0.37
+      ],
+      [
+       "through",
+       0.404,
+       0.602
+      ],
+      [
+       "the",
+       0.637,
+       0.706
+      ],
+      [
+       "NOPEAI",
+       0.753,
+       1.264
+      ],
+      [
+       "board",
+       1.345,
+       1.612
+      ],
+      [
+       "saga",
+       1.681,
+       2.03
+      ],
+      [
+       "that",
+       2.076,
+       2.204
+      ],
+      [
+       "started",
+       2.262,
+       2.622
+      ],
+      [
+       "on",
+       2.68,
+       2.784
+      ],
+      [
+       "Thursday",
+       2.842,
+       3.26
+      ],
+      [
+       "November",
+       3.33,
+       3.713
+      ],
+      [
+       "16th",
+       3.783,
+       4.329
+      ],
+      [
+       "maybe",
+       4.723,
+       5.083
+      ],
+      [
+       "Friday",
+       5.176,
+       5.64
+      ],
+      [
+       "November",
+       5.733,
+       6.163
+      ],
+      [
+       "17th",
+       6.233,
+       6.813
+      ],
+      [
+       "for",
+       6.86,
+       6.987
+      ],
+      [
+       "you",
+       7.057,
+       7.196
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0034__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0034__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0034__xel-A.wav",
+      "in": 0.41,
+      "t": 1.4,
+      "dur": 7.22
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "CH. 1 OF 6",
+     "at": 0.0,
+     "until": 9.08,
+     "kind": "ui"
+    },
+    {
+     "text": "REC",
+     "at": 0.0,
+     "until": 9.08,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 9.08,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · the locked meter frame inside the podcast player's chrome: curtain, two chairs, one mic (size 1)",
+    "picture": "The locked meter frame: every hop plays in it, against the same curtain and chairs.",
+    "style": "2.D PODCAST (pass)"
+   }
+  },
+  {
+   "id": "6.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the meter frame: XEL waits; the mic hops one size (1 → 2); the counter ticks; the card",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "XEL waits. The mic hops one size, and the player's chapter counter ticks. The card freezes on XEL.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CH. 2 OF 6",
+     "at": 0.6,
+     "until": 3.4,
+     "kind": "ui"
+    },
+    {
+     "text": "XEL / ASKS THE LONG QUESTIONS.",
+     "at": 0.8,
+     "until": 3.2,
+     "kind": "card"
+    },
+    {
+     "text": "EPISODE: 419",
+     "at": 1.3,
+     "until": 3.2,
+     "kind": "stat"
+    }
+   ],
+   "reelDur": 3.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "sounds": [
+    {
+     "name": "mic_grow_step",
+     "at": 0.5,
+     "gain": -20
+    },
+    {
+     "name": "chapter_tick",
+     "at": 0.6,
+     "gain": -26
+    },
+    {
+     "name": "freeze_hit_F",
+     "at": 0.8,
+     "gain": -18
+    }
+   ],
+   "names": [
+    {
+     "id": "xel",
+     "at": 0.8
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "camera": "2S · the meter frame: XEL waits; the mic hops one size (1 → 2); the counter ticks; the card",
+    "picture": "The card on the first hop, as the topper.",
+    "style": "2-TONE FREEZE (the card, 1 bar)"
+   }
+  },
+  {
+   "id": "6.03",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the meter frame: Mas answers; the mic doesn't move",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "MAS answers, in his own words. The mic doesn't move.",
+   "lines": [
+    {
+     "id": "e2-a1-0035",
+     "who": "mas",
+     "text": "the most painful professional experience of my life, and chaotic and shameful and upsetting and a bunch of other negative things.",
+     "t": 0.77,
+     "dur": 9.94,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0035__mas-manalt-C.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "the",
+       0.987,
+       1.115
+      ],
+      [
+       "most",
+       1.184,
+       1.393
+      ],
+      [
+       "painful",
+       1.463,
+       1.95
+      ],
+      [
+       "professional",
+       2.043,
+       2.635
+      ],
+      [
+       "experience",
+       2.705,
+       3.367
+      ],
+      [
+       "of",
+       3.413,
+       3.483
+      ],
+      [
+       "my",
+       3.564,
+       3.704
+      ],
+      [
+       "life",
+       3.796,
+       4.307
+      ],
+      [
+       "and",
+       4.772,
+       4.957
+      ],
+      [
+       "chaotic",
+       5.039,
+       5.7
+      ],
+      [
+       "and",
+       5.782,
+       5.898
+      ],
+      [
+       "shameful",
+       5.979,
+       6.56
+      ],
+      [
+       "and",
+       6.629,
+       6.745
+      ],
+      [
+       "upsetting",
+       6.815,
+       7.384
+      ],
+      [
+       "and",
+       7.721,
+       7.976
+      ],
+      [
+       "a",
+       8.034,
+       8.069
+      ],
+      [
+       "bunch",
+       8.139,
+       8.406
+      ],
+      [
+       "of",
+       8.452,
+       8.51
+      ],
+      [
+       "other",
+       8.58,
+       8.777
+      ],
+      [
+       "negative",
+       8.858,
+       9.288
+      ],
+      [
+       "things",
+       9.334,
+       9.834
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0035__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0035__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0035__mas-manalt-C.wav",
+      "in": 0.35,
+      "t": 0.77,
+      "dur": 9.94
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 11.48,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · the meter frame: Mas answers; the mic doesn't move"
+   }
+  },
+  {
+   "id": "6.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the meter frame: XEL lets it sit; hop 2 (2 → 3); the Alyi question",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "XEL lets it sit. The mic hops again; the counter ticks. Then he asks about Alyi.",
+   "lines": [
+    {
+     "id": "e2-a1-0036",
+     "who": "xel",
+     "text": "Let me ask you about ALYI. Is he being held hostage in a secret nuclear facility?",
+     "t": 1.99,
+     "dur": 5.01,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0036__xel-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "Let",
+       -0.02,
+       0.171
+      ],
+      [
+       "me",
+       0.229,
+       0.31
+      ],
+      [
+       "ask",
+       0.368,
+       0.577
+      ],
+      [
+       "you",
+       0.623,
+       0.705
+      ],
+      [
+       "about",
+       0.763,
+       0.983
+      ],
+      [
+       "ALYI",
+       1.03,
+       1.564
+      ],
+      [
+       "Is",
+       1.959,
+       2.133
+      ],
+      [
+       "he",
+       2.191,
+       2.26
+      ],
+      [
+       "being",
+       2.33,
+       2.527
+      ],
+      [
+       "held",
+       2.597,
+       2.806
+      ],
+      [
+       "hostage",
+       2.876,
+       3.398
+      ],
+      [
+       "in",
+       3.445,
+       3.537
+      ],
+      [
+       "a",
+       3.596,
+       3.619
+      ],
+      [
+       "secret",
+       3.677,
+       4.013
+      ],
+      [
+       "nuclear",
+       4.083,
+       4.431
+      ],
+      [
+       "facility",
+       4.478,
+       5.012
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0036__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0036__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0036__xel-A.wav",
+      "in": 0.4,
+      "t": 1.99,
+      "dur": 5.01
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "CH. 3 OF 6",
+     "at": 0.92,
+     "until": 7.15,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 7.15,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "sounds": [
+    {
+     "name": "mic_grow_step",
+     "at": 0.765,
+     "gain": -19
+    },
+    {
+     "name": "chapter_tick",
+     "at": 0.918,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · the meter frame: XEL lets it sit; hop 2 (2 → 3); the Alyi question"
+   }
+  },
+  {
+   "id": "6.05",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the meter frame: the \"no.\" ladder, quick",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "The ladder: no; no; neither.",
+   "lines": [
+    {
+     "id": "e2-a1-0037",
+     "who": "mas",
+     "text": "no.",
+     "t": 0.3,
+     "dur": 0.46,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0037__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "No",
+       -0.02,
+       0.318
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0037__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0037__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0037__mas-manalt-C.wav",
+      "in": 0.38,
+      "t": 0.3,
+      "dur": 0.46
+     }
+    },
+    {
+     "id": "e2-a1-0038",
+     "who": "xel",
+     "text": "What about a regular secret facility?",
+     "t": 0.96,
+     "dur": 1.83,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0038__xel-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "What",
+       -0.02,
+       0.151
+      ],
+      [
+       "about",
+       0.197,
+       0.371
+      ],
+      [
+       "a",
+       0.406,
+       0.429
+      ],
+      [
+       "regular",
+       0.499,
+       0.847
+      ],
+      [
+       "secret",
+       0.905,
+       1.219
+      ],
+      [
+       "facility",
+       1.254,
+       1.799
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0038__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0038__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0038__xel-A.wav",
+      "in": 0.42,
+      "t": 0.96,
+      "dur": 1.83
+     }
+    },
+    {
+     "id": "e2-a1-0039",
+     "who": "mas",
+     "text": "no.",
+     "t": 3.24,
+     "dur": 0.49,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0039__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "No",
+       -0.02,
+       0.328
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0039__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0039__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0039__mas-manalt-C.wav",
+      "in": 0.37,
+      "t": 3.24,
+      "dur": 0.49
+     }
+    },
+    {
+     "id": "e2-a1-0040",
+     "who": "xel",
+     "text": "What about a nuclear non-secret facility?",
+     "t": 3.93,
+     "dur": 2.35,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0040__xel-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "What",
+       -0.02,
+       0.212
+      ],
+      [
+       "about",
+       0.247,
+       0.444
+      ],
+      [
+       "a",
+       0.479,
+       0.502
+      ],
+      [
+       "nuclear",
+       0.572,
+       1.002
+      ],
+      [
+       "non-secret",
+       1.095,
+       1.721
+      ],
+      [
+       "facility",
+       1.768,
+       2.314
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0040__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0040__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0040__xel-A.wav",
+      "in": 0.37,
+      "t": 3.93,
+      "dur": 2.35
+     }
+    },
+    {
+     "id": "e2-a1-0041",
+     "who": "mas",
+     "text": "neither. not that either.",
+     "t": 6.73,
+     "dur": 1.78,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0041__mas-manalt-C.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Neither",
+       -0.02,
+       0.413
+      ],
+      [
+       "not",
+       0.877,
+       1.086
+      ],
+      [
+       "that",
+       1.133,
+       1.342
+      ],
+      [
+       "either",
+       1.4,
+       1.69
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0041__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0041__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0041__mas-manalt-C.wav",
+      "in": 0.39,
+      "t": 6.73,
+      "dur": 1.78
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 9.12,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0038": 0.2,
+      "e2-a1-0039": 0.45,
+      "e2-a1-0040": 0.2,
+      "e2-a1-0041": 0.45,
+      "e2-a1-0037": 0.45
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a1-0036",
+      "gap_s": 0.45,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "2S · the meter frame: the \"no.\" ladder, quick",
+    "picture": "Its shortness is the joke."
+   }
+  },
+  {
+   "id": "6.06",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the meter frame: XEL pauses; hop 3 (3 → 4); the relationship question",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "XEL pauses. The mic hops; the counter ticks. Then the real question.",
+   "lines": [
+    {
+     "id": "e2-a1-0042",
+     "who": "xel",
+     "text": "You've known ALYI for a long time. He was obviously part of this drama with the board and all that kind of stuff. What's your relationship with him now?",
+     "t": 1.99,
+     "dur": 8.13,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0042__xel-A.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "You've",
+       -0.004,
+       0.286
+      ],
+      [
+       "known",
+       0.309,
+       0.53
+      ],
+      [
+       "ALYI",
+       0.599,
+       1.029
+      ],
+      [
+       "for",
+       1.087,
+       1.215
+      ],
+      [
+       "a",
+       1.261,
+       1.284
+      ],
+      [
+       "long",
+       1.342,
+       1.551
+      ],
+      [
+       "time",
+       1.621,
+       2.051
+      ],
+      [
+       "He",
+       2.271,
+       2.387
+      ],
+      [
+       "was",
+       2.445,
+       2.573
+      ],
+      [
+       "obviously",
+       2.654,
+       3.142
+      ],
+      [
+       "part",
+       3.212,
+       3.397
+      ],
+      [
+       "of",
+       3.432,
+       3.49
+      ],
+      [
+       "this",
+       3.537,
+       3.664
+      ],
+      [
+       "drama",
+       3.711,
+       4.071
+      ],
+      [
+       "with",
+       4.129,
+       4.268
+      ],
+      [
+       "the",
+       4.303,
+       4.373
+      ],
+      [
+       "board",
+       4.419,
+       4.709
+      ],
+      [
+       "and",
+       4.756,
+       4.825
+      ],
+      [
+       "all",
+       4.883,
+       4.988
+      ],
+      [
+       "that",
+       5.046,
+       5.174
+      ],
+      [
+       "kind",
+       5.232,
+       5.394
+      ],
+      [
+       "of",
+       5.452,
+       5.499
+      ],
+      [
+       "stuff",
+       5.545,
+       5.905
+      ],
+      [
+       "What's",
+       6.381,
+       6.636
+      ],
+      [
+       "your",
+       6.671,
+       6.776
+      ],
+      [
+       "relationship",
+       6.822,
+       7.403
+      ],
+      [
+       "with",
+       7.438,
+       7.577
+      ],
+      [
+       "him",
+       7.612,
+       7.728
+      ],
+      [
+       "now",
+       7.786,
+       8.053
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0042__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0042__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0042__xel-A.wav",
+      "in": 0.5,
+      "t": 1.99,
+      "dur": 8.13
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "CH. 4 OF 6",
+     "at": 0.92,
+     "until": 10.73,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 10.73,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "sounds": [
+    {
+     "name": "mic_grow_step",
+     "at": 0.765,
+     "gain": -18
+    },
+    {
+     "name": "chapter_tick",
+     "at": 0.918,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · the meter frame: XEL pauses; hop 3 (3 → 4); the relationship question"
+   }
+  },
+  {
+   "id": "6.07",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · MAS against the curtain (the one cut-in), screen-left, facing camera-right toward XEL",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "mas"
+   ],
+   "caption": "MAS answers, at his own pace.",
+   "lines": [
+    {
+     "id": "e2-a1-0043",
+     "who": "mas",
+     "text": "i love alyi. i have tremendous respect for alyi. i don't have anything i can say about his plans right now. that's a question for him, but i really hope we work together for certainly the rest of my career.",
+     "t": 0.92,
+     "dur": 14.18,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0043__mas-manalt-C.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "I",
+       0.0,
+       0.104
+      ],
+      [
+       "love",
+       0.29,
+       0.592
+      ],
+      [
+       "alyi",
+       0.65,
+       1.324
+      ],
+      [
+       "i",
+       1.95,
+       2.009
+      ],
+      [
+       "have",
+       2.101,
+       2.229
+      ],
+      [
+       "tremendous",
+       2.264,
+       2.844
+      ],
+      [
+       "respect",
+       2.914,
+       3.332
+      ],
+      [
+       "for",
+       3.39,
+       3.506
+      ],
+      [
+       "alyi",
+       3.587,
+       4.272
+      ],
+      [
+       "i",
+       4.969,
+       5.016
+      ],
+      [
+       "don't",
+       5.085,
+       5.259
+      ],
+      [
+       "have",
+       5.294,
+       5.422
+      ],
+      [
+       "anything",
+       5.457,
+       5.782
+      ],
+      [
+       "i",
+       5.84,
+       5.863
+      ],
+      [
+       "can",
+       5.933,
+       6.06
+      ],
+      [
+       "say",
+       6.118,
+       6.281
+      ],
+      [
+       "about",
+       6.327,
+       6.525
+      ],
+      [
+       "his",
+       6.56,
+       6.653
+      ],
+      [
+       "plans",
+       6.722,
+       7.094
+      ],
+      [
+       "right",
+       7.152,
+       7.372
+      ],
+      [
+       "now",
+       7.419,
+       7.686
+      ],
+      [
+       "that's",
+       8.406,
+       8.684
+      ],
+      [
+       "a",
+       8.719,
+       8.754
+      ],
+      [
+       "question",
+       8.824,
+       9.288
+      ],
+      [
+       "for",
+       9.358,
+       9.474
+      ],
+      [
+       "him",
+       9.532,
+       9.776
+      ],
+      [
+       "but",
+       10.368,
+       10.53
+      ],
+      [
+       "i",
+       10.577,
+       10.6
+      ],
+      [
+       "really",
+       10.728,
+       11.018
+      ],
+      [
+       "hope",
+       11.076,
+       11.25
+      ],
+      [
+       "we",
+       11.285,
+       11.378
+      ],
+      [
+       "work",
+       11.436,
+       11.622
+      ],
+      [
+       "together",
+       11.68,
+       12.063
+      ],
+      [
+       "for",
+       12.144,
+       12.283
+      ],
+      [
+       "certainly",
+       12.365,
+       12.841
+      ],
+      [
+       "the",
+       12.899,
+       12.968
+      ],
+      [
+       "rest",
+       13.038,
+       13.235
+      ],
+      [
+       "of",
+       13.282,
+       13.34
+      ],
+      [
+       "my",
+       13.41,
+       13.526
+      ],
+      [
+       "career",
+       13.607,
+       14.071
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0043__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0043__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0043__mas-manalt-C.wav",
+      "in": 0.35,
+      "t": 0.92,
+      "dur": 14.18
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 16.02,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · MAS against the curtain (the one cut-in), screen-left, facing camera-right toward XEL",
+    "picture": "The mic never grows while he talks, so the meter stays honest. A face light one step (P10)."
+   }
+  },
+  {
+   "id": "6.08",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · back to the meter frame: the mic hasn't moved a pixel; XEL's pause; hop 4 (4 → 5): the mic fills the frame",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "The mic hasn't moved a pixel through any of it. XEL's pause. The mic hops to fill the frame; Mas leans around it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CH. 5 OF 6",
+     "at": 1.84,
+     "until": 4.6,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "sounds": [
+    {
+     "name": "mic_grow_step",
+     "at": 1.687,
+     "gain": -16
+    },
+    {
+     "name": "chapter_tick",
+     "at": 1.84,
+     "gain": -26
+    },
+    {
+     "name": "chair_creak",
+     "at": 2.76,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "camera": "2S · back to the meter frame: the mic hasn't moved a pixel; XEL's pause; hop 4 (4 → 5): the mic fills the frame"
+   }
+  },
+  {
+   "id": "6.09",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the player's chrome: the counter ticks to CH. 6 OF 6; REC goes out",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [],
+   "caption": "The counter ticks to CH. 6 OF 6, and the REC light goes out.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "CH. 6 OF 6",
+     "at": 0.3,
+     "until": 1.8,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 1.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "sounds": [
+    {
+     "name": "chapter_tick",
+     "at": 0.3,
+     "gain": -24
+    },
+    {
+     "name": "rec_light_off",
+     "at": 0.9,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "camera": "INSERT · the player's chrome: the counter ticks to CH. 6 OF 6; REC goes out",
+    "picture": "\"tell it once\" took six chapters."
+   }
+  },
+  {
+   "id": "6.10",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · off the record: XEL leans toward the giant mic; Mas pressed flat against the curtain",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [
+    "xel",
+    "mas"
+   ],
+   "caption": "Off the record, XEL leans toward the giant mic. MAS, pressed flat against the curtain by it. XEL's answer seems to come from inside the mic.",
+   "lines": [
+    {
+     "id": "e2-a1-0044",
+     "who": "xel",
+     "text": "Is it… conscious, though?",
+     "t": 0.61,
+     "dur": 1.45,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0044__xel-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Is",
+       -0.02,
+       0.154
+      ],
+      [
+       "it",
+       0.224,
+       0.328
+      ],
+      [
+       "conscious",
+       0.572,
+       1.048
+      ],
+      [
+       "though",
+       1.106,
+       1.396
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0044__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0044__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0044__xel-A.wav",
+      "in": 0.37,
+      "t": 0.61,
+      "dur": 1.45
+     }
+    },
+    {
+     "id": "e2-a1-0045",
+     "who": "mas",
+     "text": "the mic?",
+     "t": 2.51,
+     "dur": 0.64,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0045__mas-manalt-C.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.083
+      ],
+      [
+       "mic",
+       0.152,
+       0.535
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0045__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0045__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0045__mas-manalt-C.wav",
+      "in": 0.43,
+      "t": 2.51,
+      "dur": 0.64
+     }
+    },
+    {
+     "id": "e2-a1-0046",
+     "who": "xel",
+     "text": "Yes.",
+     "t": 3.45,
+     "dur": 0.5,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0046__xel-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Yes",
+       -0.02,
+       0.375
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Alex Wright - Clear and Cheerful' (shared Voice Library (high_quality voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
+     "el": {
+      "take": "e2-a1-0046__xel-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0046__xel-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0046__xel-A.wav",
+      "in": 0.37,
+      "t": 3.45,
+      "dur": 0.5
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.48,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-04 LONG-FORM · the sting, then no score: the studio's padded room tone is the joke; the mic's hops are SFX"
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a1-0045": 0.45,
+      "e2-a1-0046": 0.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · off the record: XEL leans toward the giant mic; Mas pressed flat against the curtain",
+    "picture": "Kept only if the reel's laugh test passes (D-20: −4 s if not)."
+   }
+  },
+  {
+   "id": "6.11",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S → MATCH · the curtain parts, and in the same motion the building splits open",
+   "side": "",
+   "room": "podcast_studio",
+   "chars": [],
+   "caption": "The curtain parts, and in the same motion the building splits open.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.14,
+   "fx": [],
+   "cues": [
+    "music (v1): none; under the part, his recorded voice on a phone speaker pre-laps (J 0.8 s)"
+   ],
+   "sounds": [
+    {
+     "name": "curtain_draw",
+     "at": 0.153,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "6",
+    "mode": "EXTENDED CONVERSATION (inside the podcast player's frame)",
+    "pace": "quick",
+    "camera": "2S → MATCH · the curtain parts, and in the same motion the building splits open",
+    "picture": "Match cut: the curtain → the dollhouse halves."
+   }
+  },
+  {
+   "id": "7.01",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the cathedral splits open like a dollhouse, the halves sliding apart; lights click on floor by floor down to the basement",
+   "side": "",
+   "room": "cathedral",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "The building splits open, two halves sliding apart in whole-pixel steps. At the top, the dark room, Mas at his monitor. Below it NopeAI's floors; below the foundation MACROSOFT's plinth, BELOW · ABOVE · AROUND; below that a basement. The lights click on one floor at a time, and his recorded voice leads us down.",
+   "lines": [
+    {
+     "id": "e2-a1-0047",
+     "who": "mas",
+     "text": "chaotic and shameful and upsetting…",
+     "t": 1.5,
+     "dur": 2.43,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0047__mas-manalt-C.wav",
+     "in": 0.32,
+     "words": [
+      [
+       "chaotic",
+       0.03,
+       0.691
+      ],
+      [
+       "and",
+       0.773,
+       0.889
+      ],
+      [
+       "shameful",
+       0.97,
+       1.551
+      ],
+      [
+       "and",
+       1.62,
+       1.736
+      ],
+      [
+       "upsetting",
+       1.806,
+       2.375
+      ]
+     ],
+     "tag": "phone",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.95",
+     "el": {
+      "take": "e2-a1-0047__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0047__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0047__mas-manalt-C.wav",
+      "in": 0.32,
+      "t": 1.5,
+      "dur": 2.43
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "BELOW · ABOVE · AROUND",
+     "at": 1.0,
+     "until": 6.23,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 6.23,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "sounds": [
+    {
+     "name": "dollhouse_slide",
+     "at": 0.0,
+     "gain": -22
+    },
+    {
+     "name": "light_bank_click",
+     "at": 0.8,
+     "gain": -26
+    },
+    {
+     "name": "light_bank_click",
+     "at": 1.6,
+     "gain": -26
+    },
+    {
+     "name": "light_bank_click",
+     "at": 4.13,
+     "gain": -26
+    },
+    {
+     "name": "light_bank_click",
+     "at": 4.73,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "WIDE · the cathedral splits open like a dollhouse, the halves sliding apart; lights click on floor by floor down to the basement",
+    "picture": "Egg: Ep1's odometer still wedged in the bedrock. The phone's voice is small and band-passed."
+   }
+  },
+  {
+   "id": "7.02",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the basement: THE HUMANIST with his boxes, screen-left; TASYA already in the doorway, screen-right",
+   "side": "",
+   "room": "basement",
+   "chars": [
+    "humanist",
+    "tasya"
+   ],
+   "caption": "THE HUMANIST carries boxes in, DEFLECTION (LICENSED), packed and sealed long before today, their shipping labels faded. TASYA is already in the doorway, his phone face up on a box, playing yesterday's interview; he turns it down on \"chaotic\", the way you'd turn down a song you've heard enough of. The Humanist sets a box down and turns.",
+   "lines": [
+    {
+     "id": "e2-a1-0048",
+     "who": "humanist",
+     "text": "I'm just moving in downstairs. I hope that's all right.",
+     "t": 2.3,
+     "dur": 3.71,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0048__humanist-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "I'm",
+       -0.02,
+       0.174
+      ],
+      [
+       "just",
+       0.232,
+       0.429
+      ],
+      [
+       "moving",
+       0.522,
+       0.87
+      ],
+      [
+       "in",
+       0.94,
+       1.045
+      ],
+      [
+       "downstairs",
+       1.149,
+       2.066
+      ],
+      [
+       "I",
+       2.507,
+       2.565
+      ],
+      [
+       "hope",
+       2.658,
+       2.879
+      ],
+      [
+       "that's",
+       2.902,
+       3.111
+      ],
+      [
+       "all",
+       3.158,
+       3.297
+      ],
+      [
+       "right",
+       3.367,
+       3.634
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Luis - Relaxed, Calm and Polished' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.8",
+     "el": {
+      "take": "e2-a1-0048__humanist-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0048__humanist-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0048__humanist-A.wav",
+      "in": 0.42,
+      "t": 2.3,
+      "dur": 3.71
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "DEFLECTION (LICENSED)",
+     "at": 0.33,
+     "until": 6.16,
+     "kind": "sign"
+    },
+    {
+     "text": "THE HUMANIST · MACROSOFT'S NEW AI CHIEF",
+     "at": 0.49,
+     "until": 3.9,
+     "kind": "plate"
+    }
+   ],
+   "reelDur": 6.16,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "sounds": [
+    {
+     "name": "box_set",
+     "at": 1.479,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "2S · the basement: THE HUMANIST with his boxes, screen-left; TASYA already in the doorway, screen-right",
+    "picture": "The boxes say this was weeks in the making (R2): November recalled, not caused."
+   }
+  },
+  {
+   "id": "7.03",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the same: Tasya's welcome",
+   "side": "",
+   "room": "basement",
+   "chars": [
+    "tasya",
+    "humanist"
+   ],
+   "caption": "TASYA does the welcome. One Rhodes chord under it.",
+   "lines": [
+    {
+     "id": "e2-a1-0049",
+     "who": "tasya",
+     "text": "Welcome. Make yourself at home. Everything's on us: the heat, the power, the floor you're standing on.",
+     "t": 0.35,
+     "dur": 8.0,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0049__tasya-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Welcome",
+       -0.02,
+       0.69
+      ],
+      [
+       "Make",
+       1.003,
+       1.224
+      ],
+      [
+       "yourself",
+       1.259,
+       1.665
+      ],
+      [
+       "at",
+       1.735,
+       1.804
+      ],
+      [
+       "home",
+       1.874,
+       2.315
+      ],
+      [
+       "Everything's",
+       2.768,
+       3.337
+      ],
+      [
+       "on",
+       3.418,
+       3.557
+      ],
+      [
+       "us",
+       3.65,
+       3.894
+      ],
+      [
+       "the",
+       4.289,
+       4.405
+      ],
+      [
+       "heat",
+       4.498,
+       4.881
+      ],
+      [
+       "the",
+       5.311,
+       5.415
+      ],
+      [
+       "power",
+       5.496,
+       6.042
+      ],
+      [
+       "the",
+       6.367,
+       6.483
+      ],
+      [
+       "floor",
+       6.576,
+       6.982
+      ],
+      [
+       "you're",
+       7.052,
+       7.226
+      ],
+      [
+       "standing",
+       7.261,
+       7.702
+      ],
+      [
+       "on",
+       7.795,
+       7.992
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Tyler Kurk - Smooth, Pleasant and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+     "el": {
+      "take": "e2-a1-0049__tasya-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0049__tasya-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0049__tasya-A.wav",
+      "in": 0.38,
+      "t": 0.35,
+      "dur": 8.0
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.5,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e2-a1-0049": 0.5
+     },
+     "rule": "0.4-0.6 s",
+     "across_cut": {
+      "from": "e2-a1-0048",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "2S · the same: Tasya's welcome"
+   }
+  },
+  {
+   "id": "7.04",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the same: the team, the room; Tasya's glance up through the floors",
+   "side": "",
+   "room": "basement",
+   "chars": [
+    "humanist",
+    "tasya"
+   ],
+   "caption": "THE HUMANIST asks about his team. TASYA glances up through the floors, and back.",
+   "lines": [
+    {
+     "id": "e2-a1-0050",
+     "who": "humanist",
+     "text": "I brought my own team. Is there room for them?",
+     "t": 0.35,
+     "dur": 2.87,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0050__humanist-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "I",
+       -0.02,
+       0.046
+      ],
+      [
+       "brought",
+       0.151,
+       0.406
+      ],
+      [
+       "my",
+       0.464,
+       0.569
+      ],
+      [
+       "own",
+       0.661,
+       0.824
+      ],
+      [
+       "team",
+       0.882,
+       1.265
+      ],
+      [
+       "Is",
+       1.59,
+       1.788
+      ],
+      [
+       "there",
+       1.834,
+       1.997
+      ],
+      [
+       "room",
+       2.043,
+       2.252
+      ],
+      [
+       "for",
+       2.322,
+       2.438
+      ],
+      [
+       "them",
+       2.484,
+       2.693
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Luis - Relaxed, Calm and Polished' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.8",
+     "el": {
+      "take": "e2-a1-0050__humanist-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0050__humanist-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0050__humanist-A.wav",
+      "in": 0.42,
+      "t": 0.35,
+      "dur": 2.87
+     }
+    },
+    {
+     "id": "e2-a1-0051",
+     "who": "tasya",
+     "text": "There's always room down here. It's quieter than upstairs.",
+     "t": 3.72,
+     "dur": 4.46,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0051__tasya-A.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "There's",
+       -0.02,
+       0.237
+      ],
+      [
+       "always",
+       0.341,
+       0.887
+      ],
+      [
+       "room",
+       0.968,
+       1.2
+      ],
+      [
+       "down",
+       1.282,
+       1.514
+      ],
+      [
+       "here",
+       1.595,
+       1.978
+      ],
+      [
+       "It's",
+       2.385,
+       2.594
+      ],
+      [
+       "quieter",
+       2.675,
+       3.337
+      ],
+      [
+       "than",
+       3.406,
+       3.534
+      ],
+      [
+       "upstairs",
+       3.604,
+       4.358
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Tyler Kurk - Smooth, Pleasant and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+     "el": {
+      "take": "e2-a1-0051__tasya-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0051__tasya-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0051__tasya-A.wav",
+      "in": 0.45,
+      "t": 3.72,
+      "dur": 4.46
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.67,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e2-a1-0051": 0.5,
+      "e2-a1-0050": 0.5
+     },
+     "rule": "0.4-0.6 s",
+     "across_cut": {
+      "from": "e2-a1-0049",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "2S · the same: the team, the room; Tasya's glance up through the floors"
+   }
+  },
+  {
+   "id": "7.05",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the key ring: a key twisted off; a new one grows back, stamped MAR 19",
+   "side": "",
+   "room": "basement",
+   "chars": [
+    "tasya",
+    "humanist"
+   ],
+   "caption": "He twists a key off his ring and holds it out; the Humanist takes it. A new key grows back into the gap at once, MAR 19 stamped on it. On the ring, a tiny paw-print key. An INQUIRY envelope sails in through the cut-away and bonks off the ring.",
+   "lines": [
+    {
+     "id": "e2-a1-0052",
+     "who": "tasya",
+     "text": "We keep a spare.",
+     "t": 2.4,
+     "dur": 1.36,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0052__tasya-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "We",
+       -0.02,
+       0.181
+      ],
+      [
+       "keep",
+       0.273,
+       0.575
+      ],
+      [
+       "a",
+       0.645,
+       0.668
+      ],
+      [
+       "spare",
+       0.749,
+       1.307
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Tyler Kurk - Smooth, Pleasant and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+     "el": {
+      "take": "e2-a1-0052__tasya-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0052__tasya-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0052__tasya-A.wav",
+      "in": 0.39,
+      "t": 2.4,
+      "dur": 1.36
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "RAIL: MAR 19",
+     "at": 0.8,
+     "until": 2.2,
+     "kind": "rail"
+    },
+    {
+     "text": "INQUIRY",
+     "at": 3.96,
+     "until": 5.24,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 5.24,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "sounds": [
+    {
+     "name": "door_key_turn",
+     "at": 0.3,
+     "gain": -24
+    },
+    {
+     "name": "alert_bonk",
+     "at": 4.06,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "ECU · the key ring: a key twisted off; a new one grows back, stamped MAR 19",
+    "picture": "Eggs: LE CHIEN's paw print; THE TRUSTBUSTER's INQUIRY envelope."
+   }
+  },
+  {
+   "id": "7.06",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · the Humanist, looking up where Tasya looked",
+   "side": "",
+   "room": "basement",
+   "chars": [
+    "humanist",
+    "tasya"
+   ],
+   "caption": "THE HUMANIST looks up where Tasya looked.",
+   "lines": [
+    {
+     "id": "e2-a1-0053",
+     "who": "humanist",
+     "text": "Who else lives here?",
+     "t": 0.66,
+     "dur": 1.39,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0053__humanist-A.wav",
+     "in": 0.46,
+     "words": [
+      [
+       "Who",
+       -0.02,
+       0.169
+      ],
+      [
+       "else",
+       0.262,
+       0.517
+      ],
+      [
+       "lives",
+       0.575,
+       0.865
+      ],
+      [
+       "here",
+       0.923,
+       1.179
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Luis - Relaxed, Calm and Polished' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.8",
+     "el": {
+      "take": "e2-a1-0053__humanist-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0053__humanist-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0053__humanist-A.wav",
+      "in": 0.46,
+      "t": 0.66,
+      "dur": 1.39
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.54,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "2S · the Humanist, looking up where Tasya looked"
+   }
+  },
+  {
+   "id": "7.07",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · Tasya's glance, and a whole-pixel pan up the cross-section, floor by floor, to MAS at his monitor",
+   "side": "",
+   "room": "cathedral",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Tasya glances up again, and the camera goes with his look: a pan up the cross-section, floor by floor, to MAS at his monitor in the dimmed light. Tasya's answer lands on him, from four floors down. He doesn't hear it.",
+   "lines": [
+    {
+     "id": "e2-a1-0054",
+     "who": "tasya",
+     "text": "A tenant.",
+     "t": 3.6,
+     "dur": 0.79,
+     "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0054__tasya-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "A",
+       -0.02,
+       0.086
+      ],
+      [
+       "tenant",
+       0.214,
+       0.759
+      ]
+     ],
+     "tag": "os",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Tyler Kurk - Smooth, Pleasant and Clear' (shared Voice Library (high-quality instant voice of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.9",
+     "el": {
+      "take": "e2-a1-0054__tasya-A.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0054__tasya-A.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0054__tasya-A.wav",
+      "in": 0.38,
+      "t": 3.6,
+      "dur": 0.79
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.05,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 A TENANT · SET-PIECE SWING, low, on the split → Tasya's Rhodes, one chord under the welcome; ducks under the podcast on the phone"
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {},
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "WIDE · Tasya's glance, and a whole-pixel pan up the cross-section, floor by floor, to MAS at his monitor",
+    "picture": "An L-cut: the line on Mas. When the basement's lights came on, his monitor dimmed one palette step."
+   }
+  },
+  {
+   "id": "7.08",
+   "act": "ACT ONE",
+   "kind": "scene",
+   "set": "datacenter",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas at his monitor four floors up (held) → the key ring jangles below frame; black",
+   "side": "",
+   "room": "cathedral",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Hold on Mas at his monitor, who doesn't hear it. Below frame, the key ring jangles once, on the downbeat. Black: act-out 1.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 5.61,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-05 out · the key ring's jangle on the downbeat (diegetic); THE COPY (his line on the chip, a note late) rings out under it into the black"
+   ],
+   "sounds": [
+    {
+     "name": "key_ring_jangle_1",
+     "at": 2.64,
+     "gain": -18
+    }
+   ],
+   "passes": {
+    "scene": "7",
+    "mode": "EXTENDED CONVERSATION (short)",
+    "pace": "normal",
+    "camera": "MCU · Mas at his monitor four floors up (held) → the key ring jangles below frame; black",
+    "picture": "1.5 s on Mas before the jangle (R1)."
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 368.0,
+  "seconds_el": 368.0,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": []
+ }
+}

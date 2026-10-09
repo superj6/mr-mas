@@ -1,0 +1,4676 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "ACT FOUR · as a guest · sc 18-22",
+ "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed",
+ "logline": "The Ep2 v1 base lock of act4: the beat plan applied to no source (every beat new).",
+ "dateSpan": "May 28 - Jun 19, 2024",
+ "runtimeMin": 5.33,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "role": "CEO"
+  },
+  "terb": {
+   "role": "CHAIR"
+  },
+  "mada": {
+   "role": "DIRECTOR"
+  },
+  "neleh": {
+   "role": "FORMER DIRECTOR (a voice)"
+  },
+  "mario": {
+   "role": "MISANTHROPIC"
+  },
+  "adelina": {
+   "role": "MISANTHROPIC"
+  },
+  "ekiel": {
+   "name": "EKIEL",
+   "role": "NOW AT MISANTHROPIC"
+  },
+  "gerg": {
+   "role": "CO-FOUNDER"
+  },
+  "haras": {
+   "name": "HARAS",
+   "role": "FIRST CFO"
+  },
+  "staffer": {
+   "name": "STAFFER",
+   "role": "STAFF"
+  },
+  "radnus": {
+   "role": "ELGOOG"
+  },
+  "mit-kooc": {
+   "name": "MIT KOOC",
+   "role": "ELPPA",
+   "blank": true
+  },
+  "young-mas": {
+   "name": "MAS (2006–08)",
+   "role": "FOUNDER"
+  },
+  "sleeve": {
+   "name": "THE SLEEVE",
+   "role": "A SLEEVE",
+   "blank": true
+  },
+  "nole": {
+   "role": "ZAI"
+  },
+  "visitor": {
+   "name": "VISITOR",
+   "role": "VISITOR",
+   "blank": true
+  },
+  "alyi": {
+   "role": "AT WORK (ISS)"
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "role": "A GUEST"
+  },
+  "iris": {
+   "name": "IRIS",
+   "role": "99%",
+   "blank": true
+  },
+  "staff": {
+   "name": "STAFF",
+   "role": "STAFF",
+   "known": true
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "ORB"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep02/production/v1/beat-plan/act4.json",
+  "timeline": null,
+  "takes": null,
+  "takes_files": [
+   "audio/ep02/v1-el/ep02-v1/act4/lines-A.json",
+   "audio/ep02/v1/act4/lines-v1.json"
+  ],
+  "builder": "audio/reel/ep02-v1/build_timeline.py",
+  "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act4-bed.wav",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "seconds": 320.0
+ },
+ "beats": [
+  {
+   "id": "18.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
+   "side": "",
+   "room": "lighthouse",
+   "chars": [
+    "ekiel",
+    "adelina"
+   ],
+   "caption": "Full frame: the lighthouse of stacked essays, the beacon already turning. EKIEL climbs the stair of bound drafts, carrying the box he walked out with. At the top ADELINA raises a lanyard.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: MAY 28, 2024",
+     "at": 0.29,
+     "until": 2.05,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 5.66,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20"
+   ],
+   "sounds": [
+    {
+     "name": "beacon_motor",
+     "at": 0.0,
+     "gain": -28,
+     "dur": 5.8
+    },
+    {
+     "name": "footstep_soft_1",
+     "at": 2.342,
+     "gain": -28
+    },
+    {
+     "name": "footstep_soft_2",
+     "at": 3.123,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "camera": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box",
+    "picture": "Sc 14's box in his arms (the seam)."
+   }
+  },
+  {
+   "id": "18.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the beacon's beam sweeps across the frame… and across the NopeAI boardroom's window",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [],
+   "caption": "The beacon's beam sweeps across the frame, and across the NopeAI boardroom's window, the same morning.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "camera": "WIDE · the beacon's beam sweeps across the frame… and across the NopeAI boardroom's window"
+   }
+  },
+  {
+   "id": "18.03",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "neleh"
+   ],
+   "caption": "Full frame on the boardroom TV, still on before the meeting: a plain podcast player, no title, no logo. A former board member's voice, her words captioned large as she says them.",
+   "lines": [
+    {
+     "id": "e2-a4-0001",
+     "who": "neleh",
+     "text": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on RETTIWT.",
+     "t": 1.0,
+     "dur": 8.97,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "When",
+       0.0,
+       0.209
+      ],
+      [
+       "CHATGTP",
+       0.267,
+       1.231
+      ],
+      [
+       "came",
+       1.486,
+       1.683
+      ],
+      [
+       "out",
+       1.718,
+       1.846
+      ],
+      [
+       "November",
+       1.904,
+       2.357
+      ],
+      [
+       "2022",
+       2.461,
+       3.204
+      ],
+      [
+       "the",
+       3.309,
+       3.413
+      ],
+      [
+       "board",
+       3.483,
+       3.715
+      ],
+      [
+       "was",
+       3.773,
+       3.901
+      ],
+      [
+       "not",
+       3.994,
+       4.238
+      ],
+      [
+       "informed",
+       4.307,
+       4.714
+      ],
+      [
+       "in",
+       4.76,
+       4.83
+      ],
+      [
+       "advance",
+       4.888,
+       5.248
+      ],
+      [
+       "about",
+       5.271,
+       5.492
+      ],
+      [
+       "that",
+       5.538,
+       5.805
+      ],
+      [
+       "We",
+       6.235,
+       6.339
+      ],
+      [
+       "learned",
+       6.397,
+       6.606
+      ],
+      [
+       "about",
+       6.629,
+       6.827
+      ],
+      [
+       "CHATGTP",
+       6.873,
+       7.674
+      ],
+      [
+       "on",
+       7.86,
+       7.976
+      ],
+      [
+       "RETTIWT",
+       8.069,
+       8.696
+      ]
+     ],
+     "tag": "podcast",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "When CHATGTP came out November, 2022, the board was not informed in advance about that.",
+     "at": 1.0,
+     "until": 8.02,
+     "kind": "caption"
+    },
+    {
+     "text": "We learned about CHATGTP on RETTIWT.",
+     "at": 8.02,
+     "until": 10.55,
+     "kind": "caption"
+    }
+   ],
+   "reelDur": 10.55,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
+    "picture": "Captions legible at 1080p. Her words only (W8)."
+   }
+  },
+  {
+   "id": "18.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "FULL FRAME · the TV: her second claim",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "neleh"
+   ],
+   "caption": "Her second claim.",
+   "lines": [
+    {
+     "id": "e2-a4-0002",
+     "who": "neleh",
+     "text": "MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
+     "t": 0.58,
+     "dur": 4.75,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0002__neleh-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "MAS",
+       0.186,
+       0.546
+      ],
+      [
+       "didn't",
+       0.615,
+       0.871
+      ],
+      [
+       "inform",
+       0.929,
+       1.44
+      ],
+      [
+       "the",
+       1.521,
+       1.591
+      ],
+      [
+       "board",
+       1.649,
+       1.904
+      ],
+      [
+       "that",
+       1.95,
+       2.078
+      ],
+      [
+       "he",
+       2.136,
+       2.206
+      ],
+      [
+       "owned",
+       2.276,
+       2.496
+      ],
+      [
+       "the",
+       2.519,
+       2.589
+      ],
+      [
+       "NOPEAI",
+       2.647,
+       3.576
+      ],
+      [
+       "Startup",
+       3.669,
+       4.029
+      ],
+      [
+       "Fund",
+       4.098,
+       4.447
+      ]
+     ],
+     "tag": "podcast",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
+     "at": 0.58,
+     "until": 5.91,
+     "kind": "caption"
+    }
+   ],
+   "reelDur": 5.91,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {},
+     "rule": "longer, only on turns"
+    },
+    "camera": "FULL FRAME · the TV: her second claim"
+   }
+  },
+  {
+   "id": "18.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "FULL FRAME · under it, the board's same-day reply in its own statement card",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [],
+   "caption": "Under it, the board's same-day reply, one sentence in its own statement card.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "\"We are disappointed that Ms. NELEH continues to revisit these issues.\"",
+     "at": 0.2,
+     "until": 4.1,
+     "kind": "doc"
+    },
+    {
+     "text": "— TERB, CHAIR",
+     "at": 0.2,
+     "until": 4.1,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "camera": "FULL FRAME · under it, the board's same-day reply in its own statement card",
+    "picture": "Her account and the reply side by side (W16). The quote keeps its honorific (naming rule 12: only the name changes)."
+   }
+  },
+  {
+   "id": "18.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
+   "side": "",
+   "room": "boardroom_day",
+   "chars": [
+    "mas",
+    "mada",
+    "terb"
+   ],
+   "caption": "Mas, at the table, holds still. Mada doesn't move. TERB clicks the TV off.",
+   "lines": [
+    {
+     "id": "e2-a4-0003",
+     "who": "terb",
+     "text": "First item.",
+     "t": 2.4,
+     "dur": 0.93,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0003__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "First",
+       0.0,
+       0.325
+      ],
+      [
+       "item",
+       0.383,
+       0.662
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.72,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal"
+   ],
+   "sounds": [
+    {
+     "name": "tv_click_off",
+     "at": 2.3,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
+    "picture": "No V.O. (W8). A face light one step."
+   }
+  },
+  {
+   "id": "18.07",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "terb",
+    "mas",
+    "adelina",
+    "ekiel"
+   ],
+   "caption": "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel; it's printed on page 212 of a Mario draft. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "SAFETY COMMITTEE",
+     "at": 0.29,
+     "until": 3.51,
+     "kind": "sign"
+    },
+    {
+     "text": "212",
+     "at": 1.75,
+     "until": 3.51,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 3.51,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20"
+   ],
+   "sounds": [
+    {
+     "name": "lanyard_drop",
+     "at": 1.755,
+     "gain": -24
+    },
+    {
+     "name": "lanyard_drop",
+     "at": 1.804,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "camera": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
+    "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action."
+   }
+  },
+  {
+   "id": "18.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "terb",
+    "mas",
+    "mada"
+   ],
+   "caption": "LEFT: TERB says what the committee will do and how long it has. Then, without looking up, he reads its members like a roll call.",
+   "lines": [
+    {
+     "id": "e2-a4-0004",
+     "who": "terb",
+     "text": "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
+     "t": 0.29,
+     "dur": 7.56,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0004__terb-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "First",
+       -0.02,
+       0.41
+      ],
+      [
+       "task",
+       0.526,
+       1.129
+      ],
+      [
+       "this",
+       1.269,
+       1.478
+      ],
+      [
+       "committee",
+       1.547,
+       1.919
+      ],
+      [
+       "goes",
+       1.954,
+       2.174
+      ],
+      [
+       "through",
+       2.221,
+       2.441
+      ],
+      [
+       "our",
+       2.465,
+       2.581
+      ],
+      [
+       "safety",
+       2.65,
+       3.045
+      ],
+      [
+       "processes",
+       3.103,
+       3.753
+      ],
+      [
+       "and",
+       3.8,
+       3.881
+      ],
+      [
+       "safeguards",
+       3.951,
+       4.67
+      ],
+      [
+       "and",
+       5.123,
+       5.263
+      ],
+      [
+       "it",
+       5.332,
+       5.402
+      ],
+      [
+       "has",
+       5.448,
+       5.646
+      ],
+      [
+       "ninety",
+       5.785,
+       6.238
+      ],
+      [
+       "days",
+       6.307,
+       6.656
+      ],
+      [
+       "to",
+       6.725,
+       6.807
+      ],
+      [
+       "do",
+       6.888,
+       7.027
+      ],
+      [
+       "it",
+       7.12,
+       7.248
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0005",
+     "who": "terb",
+     "text": "Members: myself, two directors, and our chief executive.",
+     "t": 8.35,
+     "dur": 4.11,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0005__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Members",
+       0.0,
+       0.569
+      ],
+      [
+       "myself",
+       0.848,
+       1.405
+      ],
+      [
+       "two",
+       1.544,
+       1.765
+      ],
+      [
+       "directors",
+       1.811,
+       2.403
+      ],
+      [
+       "and",
+       2.461,
+       2.543
+      ],
+      [
+       "our",
+       2.589,
+       2.694
+      ],
+      [
+       "chief",
+       2.752,
+       3.007
+      ],
+      [
+       "executive",
+       3.077,
+       3.878
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 12.76,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0005": 0.5
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table"
+   }
+  },
+  {
+   "id": "18.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "mas",
+    "mada"
+   ],
+   "caption": "On \"our chief executive.\", every face at the table turns to Mas. The 808 drops out. Mada writes one word in the minutes.",
+   "lines": [
+    {
+     "id": "e2-a4-0006",
+     "who": "mas",
+     "text": "present.",
+     "t": 1.25,
+     "dur": 0.61,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0006__mas-manalt-C.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Present",
+       -0.02,
+       0.497
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.83,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone"
+   ],
+   "sounds": [
+    {
+     "name": "pen_scribble_short",
+     "at": 2.16,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MEDIUM · inside the left pane, at table level: every face turns to Mas",
+    "picture": "HOLD 2 BEATS (the table's)."
+   }
+  },
+  {
+   "id": "18.10",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "terb",
+    "mas",
+    "mada"
+   ],
+   "caption": "TERB, brisk, the next line. The table turns to Mas again. Mada writes a second word. A held breath on the table (about 1.5 s). Then his thought, in his pane.",
+   "lines": [
+    {
+     "id": "e2-a4-0007",
+     "who": "terb",
+     "text": "And at the end of the ninety days, we take our recommendations to the full board, which is…",
+     "t": 0.29,
+     "dur": 5.77,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0007__terb-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "And",
+       0.0,
+       0.163
+      ],
+      [
+       "at",
+       0.209,
+       0.267
+      ],
+      [
+       "the",
+       0.302,
+       0.383
+      ],
+      [
+       "end",
+       0.453,
+       0.592
+      ],
+      [
+       "of",
+       0.639,
+       0.685
+      ],
+      [
+       "the",
+       0.731,
+       0.801
+      ],
+      [
+       "ninety",
+       0.917,
+       1.289
+      ],
+      [
+       "days",
+       1.347,
+       1.765
+      ],
+      [
+       "we",
+       2.078,
+       2.206
+      ],
+      [
+       "take",
+       2.264,
+       2.45
+      ],
+      [
+       "our",
+       2.485,
+       2.566
+      ],
+      [
+       "recommendations",
+       2.624,
+       3.506
+      ],
+      [
+       "to",
+       3.564,
+       3.622
+      ],
+      [
+       "the",
+       3.692,
+       3.762
+      ],
+      [
+       "full",
+       3.855,
+       4.145
+      ],
+      [
+       "board",
+       4.203,
+       4.586
+      ],
+      [
+       "which",
+       4.888,
+       5.108
+      ],
+      [
+       "is",
+       5.166,
+       5.399
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0008",
+     "who": "mas",
+     "text": "also present.",
+     "t": 6.66,
+     "dur": 1.06,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0008__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Also",
+       -0.02,
+       0.33
+      ],
+      [
+       "present",
+       0.423,
+       0.945
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-vo-11",
+     "who": "mas",
+     "text": "the next one's already training.",
+     "t": 10.02,
+     "dur": 2.05,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-11__mas-manalt-C.wav",
+     "in": 0.45,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.109
+      ],
+      [
+       "next",
+       0.167,
+       0.434
+      ],
+      [
+       "one's",
+       0.515,
+       0.806
+      ],
+      [
+       "already",
+       0.864,
+       1.305
+      ],
+      [
+       "training",
+       1.374,
+       1.92
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 12.85,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone"
+   ],
+   "sounds": [
+    {
+     "name": "pen_scribble_short",
+     "at": 8.02,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0008": 0.6,
+      "e2-vo-11": 2.3
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought",
+    "picture": "\"also present.\" and Mada's second word land first; the V.O. types in his cyan, in his pane, with new information (the same post's news), never a reading of the committee."
+   }
+  },
+  {
+   "id": "18.11",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "mario",
+    "ekiel"
+   ],
+   "caption": "RIGHT: MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.",
+   "lines": [
+    {
+     "id": "e2-a4-0009",
+     "who": "mario",
+     "text": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
+     "t": 0.49,
+     "dur": 3.6,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0009.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Come",
+       -0.015,
+       0.172
+      ],
+      [
+       "in",
+       0.172,
+       0.31
+      ],
+      [
+       "Ekiel",
+       0.347,
+       0.66
+      ],
+      [
+       "sit",
+       0.71,
+       0.91
+      ],
+      [
+       "down",
+       0.91,
+       1.16
+      ],
+      [
+       "I",
+       1.197,
+       1.335
+      ],
+      [
+       "read",
+       1.335,
+       1.497
+      ],
+      [
+       "your",
+       1.497,
+       1.648
+      ],
+      [
+       "thread",
+       1.648,
+       1.96
+      ],
+      [
+       "Twice",
+       2.048,
+       2.61
+      ],
+      [
+       "I've",
+       2.685,
+       2.848
+      ],
+      [
+       "made",
+       2.848,
+       3.035
+      ],
+      [
+       "some",
+       3.035,
+       3.185
+      ],
+      [
+       "notes",
+       3.185,
+       3.62
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0010",
+     "who": "ekiel",
+     "text": "You annotated my resignation?",
+     "t": 4.34,
+     "dur": 1.95,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0010__ekiel-A.wav",
+     "in": 0.44,
+     "words": [
+      [
+       "You",
+       -0.02,
+       0.119
+      ],
+      [
+       "annotated",
+       0.212,
+       0.665
+      ],
+      [
+       "my",
+       0.723,
+       0.816
+      ],
+      [
+       "resignation",
+       0.908,
+       1.617
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0011",
+     "who": "mario",
+     "text": "Lightly. Four pages.",
+     "t": 6.49,
+     "dur": 1.56,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0011.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Lightly",
+       0.05,
+       0.425
+      ],
+      [
+       "Four",
+       0.512,
+       0.8
+      ],
+      [
+       "pages",
+       0.8,
+       1.58
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.35,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp)"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0010": 0.25,
+      "e2-a4-0011": 0.2
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
+    "picture": "The lighthouse always plays beside Mas's pane."
+   }
+  },
+  {
+   "id": "18.12",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p",
+   "side": "",
+   "room": "lighthouse",
+   "chars": [
+    "mario"
+   ],
+   "caption": "Four pages, one line highlighted in yellow: Ekiel's own. Mario on the underline.",
+   "lines": [
+    {
+     "id": "e2-a4-0012",
+     "who": "mario",
+     "text": "We agree. I underlined 'inherently.'",
+     "t": 4.4,
+     "dur": 2.84,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0012.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "We",
+       0.025,
+       0.2
+      ],
+      [
+       "agree",
+       0.2,
+       0.55
+      ],
+      [
+       "I",
+       0.6,
+       0.75
+      ],
+      [
+       "underlined",
+       0.75,
+       1.59
+      ],
+      [
+       "inherently",
+       1.885,
+       2.86
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "Building smarter-than-human machines is an inherently dangerous endeavor.",
+     "at": 0.2,
+     "until": 4.3,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 7.63,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp)"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p",
+    "picture": "An insert, not only in the pane (P7)."
+   }
+  },
+  {
+   "id": "18.13",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "mario",
+    "ekiel"
+   ],
+   "caption": "The beacon glints across a case of CLOD boxes, each one in turn; the last one's art is the Golden Gate Bridge. MARIO, finger rising. A scroll drops down the stairwell; the pane pans with it down the spiral and back up to EKIEL, squinting after it. MARIO sets his pen down for the first time.",
+   "lines": [
+    {
+     "id": "e2-a4-0013",
+     "who": "mario",
+     "text": "There's a brief document.",
+     "t": 1.56,
+     "dur": 1.63,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0013.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "There's",
+       0.0,
+       0.275
+      ],
+      [
+       "a",
+       0.275,
+       0.4
+      ],
+      [
+       "brief",
+       0.4,
+       0.787
+      ],
+      [
+       "document",
+       0.787,
+       1.65
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0014",
+     "who": "ekiel",
+     "text": "That's the brief one?",
+     "t": 5.79,
+     "dur": 1.07,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0014__ekiel-A.wav",
+     "in": 0.47,
+     "words": [
+      [
+       "That's",
+       -0.02,
+       0.159
+      ],
+      [
+       "the",
+       0.205,
+       0.275
+      ],
+      [
+       "brief",
+       0.321,
+       0.577
+      ],
+      [
+       "one",
+       0.681,
+       0.937
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0015",
+     "who": "mario",
+     "text": "That's the brief one. It only has the one concern.",
+     "t": 7.06,
+     "dur": 2.73,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0015.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "That's",
+       0.01,
+       0.31
+      ],
+      [
+       "the",
+       0.31,
+       0.41
+      ],
+      [
+       "brief",
+       0.41,
+       0.71
+      ],
+      [
+       "one",
+       0.71,
+       0.96
+      ],
+      [
+       "It",
+       0.998,
+       1.11
+      ],
+      [
+       "only",
+       1.11,
+       1.41
+      ],
+      [
+       "has",
+       1.41,
+       1.66
+      ],
+      [
+       "the",
+       1.66,
+       1.785
+      ],
+      [
+       "one",
+       1.785,
+       2.035
+      ],
+      [
+       "concern",
+       2.035,
+       2.75
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 9.94,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp)"
+   ],
+   "sounds": [
+    {
+     "name": "glint_tick",
+     "at": 0.292,
+     "gain": -28
+    },
+    {
+     "name": "glint_tick",
+     "at": 0.78,
+     "gain": -28
+    },
+    {
+     "name": "glint_tick",
+     "at": 1.268,
+     "gain": -27
+    },
+    {
+     "name": "scroll_unroll_fall",
+     "at": 3.39,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0014": 2.6,
+      "e2-a4-0015": 0.2
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
+    "picture": "The name GOLDEN GATE CLOD is never printed or spoken (O2.2: an egg)."
+   }
+  },
+  {
+   "id": "18.14",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "mario"
+   ],
+   "caption": "MARIO, finger up: his concern.",
+   "lines": [
+    {
+     "id": "e2-a4-0016",
+     "who": "mario",
+     "text": "It's that we might win.",
+     "t": 0.35,
+     "dur": 1.46,
+     "audio": "audio/ep02/v1/act4/wav/e2-a4-0016.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "It's",
+       0.0,
+       0.225
+      ],
+      [
+       "that",
+       0.225,
+       0.45
+      ],
+      [
+       "we",
+       0.45,
+       0.6
+      ],
+      [
+       "might",
+       0.6,
+       0.875
+      ],
+      [
+       "win",
+       0.875,
+       1.48
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 2.78,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp)"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0016": 0.5
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s",
+     "across_cut": {
+      "from": "e2-a4-0015",
+      "gap_s": 0.5,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up"
+   }
+  },
+  {
+   "id": "18.15",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "boardroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
+   "side": "",
+   "room": "split_lighthouse",
+   "chars": [
+    "mas"
+   ],
+   "caption": "In his pane, Mas's phone, face up on the table, lights with a reminder: ELPPA · KEYNOTE · JUN 10. He turns it over.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "ELPPA · KEYNOTE · JUN 10",
+     "at": 0.39,
+     "until": 2.34,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 3.31,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 0.389,
+     "gain": -26
+    },
+    {
+     "name": "phone_turn_over",
+     "at": 2.336,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "a podcast beat (DOCUMENT), then a held SPLIT with two EXTENDED CONVERSATIONS",
+    "pace": "quick",
+    "camera": "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over"
+   }
+  },
+  {
+   "id": "19.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the lobby master at a watch party: ELPPA's keynote on the wall screen; the signs; the flyers still up",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [
+    "gerg",
+    "staff"
+   ],
+   "caption": "Enter with ELPPA's keynote already running on the wall screen, low, on an immaculate stage of the show's own design. The staff sit cross-legged, tiled, half-listening. GERG types on a beanbag. Over reception the signs read 202 and 102. The flyers are still up, curling, Mas's upside-down one among them. The complaint is still a side table. Behind the back row of beanbags, the tip of a mammoth's tusk.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: JUN 10, 2024",
+     "at": 0.2,
+     "until": 1.8,
+     "kind": "rail"
+    },
+    {
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 202",
+     "at": 1.9,
+     "until": 4.6,
+     "kind": "sign"
+    },
+    {
+     "text": "DAYS SINCE SOMEONE SUED MAS: 102",
+     "at": 1.9,
+     "until": 4.6,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "WIDE · the lobby master at a watch party: ELPPA's keynote on the wall screen; the signs; the flyers still up",
+    "picture": "Eggs at 0 s: the tusk. ELPPA's stage is generic (no real building, logo or trade dress)."
+   }
+  },
+  {
+   "id": "19.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the corner TV, muted, held: the roadmap lectern still stuck at FLOOR, a tally on it now",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [],
+   "caption": "On the corner TV, muted, the roadmap lectern is still stuck at FLOOR, a tally on it now: 0 BILLS.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "FLOOR",
+     "at": 0.1,
+     "until": 1.6,
+     "kind": "sign"
+    },
+    {
+     "text": "0 BILLS",
+     "at": 0.1,
+     "until": 1.6,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 1.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "SCR · the corner TV, muted, held: the roadmap lectern still stuck at FLOOR, a tally on it now",
+    "picture": "Legible, 1.5 s (FC)."
+   }
+  },
+  {
+   "id": "19.03",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [
+    "haras",
+    "gerg"
+   ],
+   "caption": "The doors open. HARAS walks in along the path the hand truck took in February, a calculator tape unspooling behind her. She drops onto the beanbag beside Gerg.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "HARAS · FIRST CFO",
+     "at": 0.85,
+     "until": 3.95,
+     "kind": "plate"
+    }
+   ],
+   "reelDur": 4.51,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "sounds": [
+    {
+     "name": "calc_tape_spool",
+     "at": 0.423,
+     "gain": -26,
+     "dur": 2.6
+    }
+   ],
+   "names": [
+    {
+     "id": "haras",
+     "at": 0.85
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her"
+   }
+  },
+  {
+   "id": "19.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · Haras and Gerg on the beanbags, the wall screen low behind them (no cut-ins)",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [
+    "haras",
+    "gerg"
+   ],
+   "caption": "HARAS starts with the easy ones. GERG, typing, answers. Then the real one, and the stream talks over it.",
+   "lines": [
+    {
+     "id": "e2-a4-0017",
+     "who": "haras",
+     "text": "I'm new, so I'm starting with the easy ones. What's our biggest cost?",
+     "t": 0.56,
+     "dur": 4.01,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0017__haras-A.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "I'm",
+       -0.02,
+       0.177
+      ],
+      [
+       "new",
+       0.247,
+       0.502
+      ],
+      [
+       "so",
+       0.851,
+       0.978
+      ],
+      [
+       "I'm",
+       1.06,
+       1.187
+      ],
+      [
+       "starting",
+       1.257,
+       1.571
+      ],
+      [
+       "with",
+       1.594,
+       1.71
+      ],
+      [
+       "the",
+       1.733,
+       1.803
+      ],
+      [
+       "easy",
+       1.861,
+       2.116
+      ],
+      [
+       "ones",
+       2.186,
+       2.488
+      ],
+      [
+       "What's",
+       2.778,
+       3.045
+      ],
+      [
+       "our",
+       3.08,
+       3.161
+      ],
+      [
+       "biggest",
+       3.208,
+       3.486
+      ],
+      [
+       "cost",
+       3.544,
+       3.974
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0018",
+     "who": "gerg",
+     "text": "Compute.",
+     "t": 4.77,
+     "dur": 0.52,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0018__gerg-mockbran-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Compute",
+       -0.02,
+       0.451
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0019",
+     "who": "haras",
+     "text": "Got it. And the second biggest?",
+     "t": 5.54,
+     "dur": 1.89,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0019__haras-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "Got",
+       0.0,
+       0.29
+      ],
+      [
+       "it",
+       0.348,
+       0.511
+      ],
+      [
+       "And",
+       0.766,
+       0.906
+      ],
+      [
+       "the",
+       0.952,
+       1.022
+      ],
+      [
+       "second",
+       1.08,
+       1.37
+      ],
+      [
+       "biggest",
+       1.416,
+       1.858
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0020",
+     "who": "gerg",
+     "text": "Compute. Different compute. Some of it trains the next model, and the rest keeps this one talking.",
+     "t": 7.63,
+     "dur": 5.98,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0020__gerg-mockbran-A.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Compute",
+       -0.02,
+       0.555
+      ],
+      [
+       "Different",
+       1.31,
+       1.658
+      ],
+      [
+       "compute",
+       1.705,
+       2.146
+      ],
+      [
+       "Some",
+       2.819,
+       3.005
+      ],
+      [
+       "of",
+       3.04,
+       3.086
+      ],
+      [
+       "it",
+       3.144,
+       3.214
+      ],
+      [
+       "trains",
+       3.249,
+       3.539
+      ],
+      [
+       "the",
+       3.574,
+       3.644
+      ],
+      [
+       "next",
+       3.678,
+       3.864
+      ],
+      [
+       "model",
+       3.922,
+       4.236
+      ],
+      [
+       "and",
+       4.445,
+       4.584
+      ],
+      [
+       "the",
+       4.642,
+       4.712
+      ],
+      [
+       "rest",
+       4.747,
+       4.932
+      ],
+      [
+       "keeps",
+       4.979,
+       5.188
+      ],
+      [
+       "this",
+       5.211,
+       5.339
+      ],
+      [
+       "one",
+       5.397,
+       5.536
+      ],
+      [
+       "talking",
+       5.571,
+       5.966
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0021",
+     "who": "haras",
+     "text": "And profit?",
+     "t": 13.86,
+     "dur": 0.77,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0021__haras-A.wav",
+     "in": 0.4,
+     "words": [
+      [
+       "And",
+       -0.02,
+       0.113
+      ],
+      [
+       "profit",
+       0.171,
+       0.705
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "And profit—",
+     "at": 13.86,
+     "until": 14.83,
+     "kind": "caption"
+    }
+   ],
+   "reelDur": 14.93,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0018": 0.2,
+      "e2-a4-0019": 0.25,
+      "e2-a4-0020": 0.2,
+      "e2-a4-0021": 0.25
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · Haras and Gerg on the beanbags, the wall screen low behind them (no cut-ins)",
+    "picture": "The cheer cuts \"And profit—\" (the episode's second and last cut-off). Record it complete."
+   }
+  },
+  {
+   "id": "19.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [
+    "haras",
+    "staff",
+    "gerg"
+   ],
+   "caption": "The stream says it. The lobby erupts; somebody's desk confetti cannon goes off. Nobody answers her. HARAS, writing on her tape under the cheer.",
+   "lines": [
+    {
+     "id": "e2-a4-0022",
+     "who": "haras",
+     "text": "Let me reframe that. Upside.",
+     "t": 2.4,
+     "dur": 1.6,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0022__haras-A.wav",
+     "in": 0.44,
+     "words": [
+      [
+       "Let",
+       -0.02,
+       0.107
+      ],
+      [
+       "me",
+       0.142,
+       0.212
+      ],
+      [
+       "reframe",
+       0.282,
+       0.641
+      ],
+      [
+       "that",
+       0.676,
+       0.908
+      ],
+      [
+       "Upside",
+       1.094,
+       1.605
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "…AND LATER THIS YEAR: CHATGTP.",
+     "at": 0.1,
+     "until": 2.2,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.7,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "sounds": [
+    {
+     "name": "crowd_cheer",
+     "at": 0.6,
+     "gain": -18
+    },
+    {
+     "name": "confetti_pop",
+     "at": 0.9,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer"
+   }
+  },
+  {
+   "id": "19.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby",
+   "side": "",
+   "room": "lobby_watchparty",
+   "chars": [
+    "staffer",
+    "gerg",
+    "staff"
+   ],
+   "caption": "The stream cuts away to its outdoor audience. At the edge of it, small, Mas, head down over his phone, typing. A STAFFER points. The lobby laughs. GERG, the only one not cheering, takes out his phone.",
+   "lines": [
+    {
+     "id": "e2-a4-0023",
+     "who": "staffer",
+     "text": "Is that Mas?",
+     "t": 2.54,
+     "dur": 0.79,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0023__tiled-employee-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Is",
+       -0.02,
+       0.111
+      ],
+      [
+       "that",
+       0.169,
+       0.32
+      ],
+      [
+       "Mas",
+       0.39,
+       0.773
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.71,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "sounds": [
+    {
+     "name": "lobby_laugh_s",
+     "at": 3.63,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby",
+    "picture": "Our staging: the stream's crowd shot, in our stream's UI."
+   }
+  },
+  {
+   "id": "19.07",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · ELPPA's campus: the crowd's backs and the giant screen; at the crowd's edge Mas finishes his post and sends it",
+   "side": "",
+   "room": "campus",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "At the edge of the crowd under a giant screen, ELPPA still on its stage, Mas finishes his post at a post's pace and sends it. His post, in its own UI.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it.",
+     "at": 2.6,
+     "until": 9.2,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 9.4,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet thins to its pedal under his post"
+   ],
+   "sounds": [
+    {
+     "name": "typing_soft",
+     "at": 1.2,
+     "gain": -28
+    },
+    {
+     "name": "typing_soft",
+     "at": 1.8,
+     "gain": -28
+    },
+    {
+     "name": "post_click",
+     "at": 2.5,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "WIDE · ELPPA's campus: the crowd's backs and the giant screen; at the crowd's edge Mas finishes his post and sends it",
+    "picture": "His real post, verbatim, his lowercase (name swaps). No GUEST badge on him (D-15); three collars, no pop."
+   }
+  },
+  {
+   "id": "19.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas",
+   "side": "",
+   "room": "campus",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.",
+   "lines": [
+    {
+     "id": "e2-vo-12",
+     "who": "mas",
+     "text": "whatever we ship next goes in their phones too.",
+     "t": 2.54,
+     "dur": 3.69,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-12__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "Whatever",
+       -0.02,
+       0.502
+      ],
+      [
+       "we",
+       0.584,
+       0.711
+      ],
+      [
+       "ship",
+       0.793,
+       1.106
+      ],
+      [
+       "next",
+       1.234,
+       1.698
+      ],
+      [
+       "goes",
+       1.803,
+       2.105
+      ],
+      [
+       "in",
+       2.151,
+       2.232
+      ],
+      [
+       "their",
+       2.29,
+       2.499
+      ],
+      [
+       "phones",
+       2.581,
+       3.068
+      ],
+      [
+       "too",
+       3.15,
+       3.556
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.93,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet thins to its pedal under his post"
+   ],
+   "sounds": [
+    {
+     "name": "chat_ping_run",
+     "at": 0.282,
+     "gain": -26
+    },
+    {
+     "name": "phone_wave_buzz",
+     "at": 1.129,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas",
+    "picture": "The V.O. after the post's read has cleared."
+   }
+  },
+  {
+   "id": "19.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins)",
+   "side": "",
+   "room": "campus",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "caption": "Gerg calls. He's watching him on the stream from the lobby.",
+   "lines": [
+    {
+     "id": "e2-a4-0024",
+     "who": "gerg",
+     "text": "There's a screen the size of a building in front of you, and you're on your phone.",
+     "t": 1.97,
+     "dur": 3.25,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0024__gerg-mockbran-A.wav",
+     "in": 0.35,
+     "words": [
+      [
+       "There's",
+       0.0,
+       0.29
+      ],
+      [
+       "a",
+       0.313,
+       0.348
+      ],
+      [
+       "screen",
+       0.43,
+       0.766
+      ],
+      [
+       "the",
+       0.824,
+       0.894
+      ],
+      [
+       "size",
+       0.94,
+       1.184
+      ],
+      [
+       "of",
+       1.207,
+       1.265
+      ],
+      [
+       "a",
+       1.3,
+       1.335
+      ],
+      [
+       "building",
+       1.393,
+       1.695
+      ],
+      [
+       "in",
+       1.718,
+       1.776
+      ],
+      [
+       "front",
+       1.811,
+       1.974
+      ],
+      [
+       "of",
+       1.997,
+       2.043
+      ],
+      [
+       "you",
+       2.09,
+       2.206
+      ],
+      [
+       "and",
+       2.31,
+       2.438
+      ],
+      [
+       "you're",
+       2.473,
+       2.647
+      ],
+      [
+       "on",
+       2.694,
+       2.775
+      ],
+      [
+       "your",
+       2.81,
+       2.926
+      ],
+      [
+       "phone",
+       2.961,
+       3.27
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0025",
+     "who": "mas",
+     "text": "the phone's closer.",
+     "t": 5.67,
+     "dur": 1.23,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0025__mas-manalt-C.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.083
+      ],
+      [
+       "phone's",
+       0.129,
+       0.489
+      ],
+      [
+       "closer",
+       0.547,
+       1.116
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 7.05,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "sounds": [
+    {
+     "name": "call_ring",
+     "at": 0.141,
+     "gain": -26
+    },
+    {
+     "name": "call_connect",
+     "at": 1.266,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e2-a4-0025": 0.45
+     },
+     "rule": "0.4-0.6 s"
+    },
+    "camera": "MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins)",
+    "picture": "Crosscut: the speaker is in frame, or his voice is already established (P9). Gerg in the lobby is invented staging (facts A70: the press placed Mas at the campus; one live blog also listed Gerg's counterpart there, which the call doesn't contradict on screen and nothing in the scene turns on)."
+   }
+  },
+  {
+   "id": "19.10",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "call",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · the call, crosscut; Gerg's last question weighted",
+   "side": "",
+   "room": "campus",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "caption": "They just said our name. Half the lobby's on a beanbag; which half? Then: does he ever miss being up there?",
+   "lines": [
+    {
+     "id": "e2-a4-0026",
+     "who": "gerg",
+     "text": "They just said our name up there.",
+     "t": 0.3,
+     "dur": 1.67,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0026__gerg-mockbran-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "They",
+       -0.02,
+       0.179
+      ],
+      [
+       "just",
+       0.249,
+       0.4
+      ],
+      [
+       "said",
+       0.434,
+       0.574
+      ],
+      [
+       "our",
+       0.609,
+       0.701
+      ],
+      [
+       "name",
+       0.748,
+       0.91
+      ],
+      [
+       "up",
+       0.945,
+       1.038
+      ],
+      [
+       "there",
+       1.073,
+       1.363
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0027",
+     "who": "mas",
+     "text": "i heard.",
+     "t": 2.42,
+     "dur": 0.63,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0027__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "I",
+       -0.02,
+       0.084
+      ],
+      [
+       "heard",
+       0.212,
+       0.56
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0033",
+     "who": "gerg",
+     "text": "Half the lobby's standing on a beanbag.",
+     "t": 3.55,
+     "dur": 1.76,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0033__gerg-mockbran-A.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "Half",
+       -0.02,
+       0.215
+      ],
+      [
+       "the",
+       0.273,
+       0.343
+      ],
+      [
+       "lobby's",
+       0.401,
+       0.691
+      ],
+      [
+       "standing",
+       0.715,
+       1.005
+      ],
+      [
+       "on",
+       1.051,
+       1.098
+      ],
+      [
+       "a",
+       1.133,
+       1.156
+      ],
+      [
+       "beanbag",
+       1.202,
+       1.713
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0034",
+     "who": "mas",
+     "text": "which half?",
+     "t": 5.76,
+     "dur": 0.7,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0034__mas-manalt-C.wav",
+     "in": 0.41,
+     "words": [
+      [
+       "Which",
+       -0.02,
+       0.23
+      ],
+      [
+       "half",
+       0.288,
+       0.625
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0035",
+     "who": "gerg",
+     "text": "The half on the beanbags.",
+     "t": 6.71,
+     "dur": 1.17,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0035__gerg-mockbran-A.wav",
+     "in": 0.43,
+     "words": [
+      [
+       "The",
+       -0.02,
+       0.083
+      ],
+      [
+       "half",
+       0.152,
+       0.338
+      ],
+      [
+       "on",
+       0.396,
+       0.466
+      ],
+      [
+       "the",
+       0.5,
+       0.57
+      ],
+      [
+       "beanbags",
+       0.617,
+       1.162
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0028",
+     "who": "gerg",
+     "text": "You ever miss being up there?",
+     "t": 8.78,
+     "dur": 1.16,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0028__gerg-mockbran-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "You",
+       -0.02,
+       0.121
+      ],
+      [
+       "ever",
+       0.179,
+       0.318
+      ],
+      [
+       "miss",
+       0.365,
+       0.527
+      ],
+      [
+       "being",
+       0.562,
+       0.759
+      ],
+      [
+       "up",
+       0.794,
+       0.876
+      ],
+      [
+       "there",
+       0.922,
+       1.108
+      ]
+     ],
+     "tag": "call",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0029",
+     "who": "mas",
+     "text": "i was up there once. they let me hold the clicker.",
+     "t": 10.54,
+     "dur": 3.44,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0029__mas-manalt-C.wav",
+     "in": 0.39,
+     "words": [
+      [
+       "I",
+       -0.02,
+       0.088
+      ],
+      [
+       "was",
+       0.169,
+       0.32
+      ],
+      [
+       "up",
+       0.401,
+       0.54
+      ],
+      [
+       "there",
+       0.599,
+       0.808
+      ],
+      [
+       "once",
+       0.889,
+       1.493
+      ],
+      [
+       "they",
+       1.794,
+       1.992
+      ],
+      [
+       "let",
+       2.061,
+       2.212
+      ],
+      [
+       "me",
+       2.259,
+       2.363
+      ],
+      [
+       "hold",
+       2.433,
+       2.665
+      ],
+      [
+       "the",
+       2.723,
+       2.793
+      ],
+      [
+       "clicker",
+       2.851,
+       3.362
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 14.68,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low)"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e2-a4-0027": 0.45,
+      "e2-a4-0033": 0.5,
+      "e2-a4-0034": 0.45,
+      "e2-a4-0035": 0.25,
+      "e2-a4-0028": 0.9,
+      "e2-a4-0029": 0.6,
+      "e2-a4-0026": 0.45
+     },
+     "rule": "0.4-0.6 s",
+     "across_cut": {
+      "from": "e2-a4-0025",
+      "gap_s": 0.45,
+      "note": "the gap from the last line of the beat before (its tail + this head)"
+     }
+    },
+    "camera": "MCU · the call, crosscut; Gerg's last question weighted",
+    "picture": "Mas asks aloud again (P9): his Ep1 precision question."
+   }
+  },
+  {
+   "id": "19.11",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "POV · a push into his phone, full-bleed: a GPS breadcrumb in older colours draws itself across the stream's stage",
+   "side": "",
+   "room": "era_2008",
+   "chars": [],
+   "caption": "A dotted line draws itself across the stream's stage in a few quick strokes: a GPS breadcrumb in colours older than the phone, crossing the boards he once stood on.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure"
+   ],
+   "sounds": [
+    {
+     "name": "render_front_sweep",
+     "at": 0.8,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "FLASHBACK",
+    "pace": "quick",
+    "camera": "POV · a push into his phone, full-bleed: a GPS breadcrumb in older colours draws itself across the stream's stage",
+    "style": "EARLY-WEB16 / T2a",
+    "flashback": {
+     "when": "SEP 2006 → JUN 9, 2008",
+     "of": "F2.1 (Mas)",
+     "shape": "want → obstacle → turn",
+     "tier": "EARLY-WEB16 (16 colours, the 2008 camcorder)",
+     "in": "the breadcrumb across the stream's stage",
+     "out": "the 2008 clicker → his 2024 phone with his sent post on it",
+     "no_vo": "no inner voice in a memory"
+    }
+   }
+  },
+  {
+   "id": "19.12",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "stage",
+   "style": "EARLY-WEB16",
+   "shot": "wide",
+   "frame": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; the end card",
+   "side": "",
+   "room": "era_2008",
+   "chars": [
+    "young-mas"
+   ],
+   "caption": "A 2006 phone ad, in 16 colours with ordered dither: young MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "\"WHERE YOU AT?\"",
+     "at": 2.54,
+     "until": 4.65,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.79,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "FLASHBACK · want",
+    "pace": "quick",
+    "camera": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; the end card",
+    "style": "EARLY-WEB16",
+    "flashback": {
+     "when": "SEP 2006 → JUN 9, 2008",
+     "of": "F2.1 (Mas)",
+     "shape": "want → obstacle → turn",
+     "tier": "EARLY-WEB16 (16 colours, the 2008 camcorder)",
+     "no_vo": "no inner voice in a memory",
+     "guards": "THE SLEEVE has no face and no frailty cues; no cause claimed for the greying"
+    }
+   }
+  },
+  {
+   "id": "19.13",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "stage",
+   "style": "EARLY-WEB16",
+   "shot": "wide",
+   "frame": "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker",
+   "side": "",
+   "room": "era_2008",
+   "chars": [
+    "young-mas",
+    "sleeve"
+   ],
+   "caption": "A match on the pin: 2008, this company's stage, the intro's own frame. Two polos, both collars popped. THE SLEEVE, a sleeve and nothing else, tosses him the clicker, and he catches it. The tiled 2008 crowd applauds.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 5.07,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure"
+   ],
+   "sounds": [
+    {
+     "name": "clicker_catch",
+     "at": 2.253,
+     "gain": -24
+    },
+    {
+     "name": "vhs_applause",
+     "at": 2.817,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "FLASHBACK · want",
+    "pace": "quick",
+    "camera": "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker",
+    "style": "EARLY-WEB16",
+    "flashback": {
+     "when": "SEP 2006 → JUN 9, 2008",
+     "of": "F2.1 (Mas)",
+     "shape": "want → obstacle → turn",
+     "tier": "EARLY-WEB16 (16 colours, the 2008 camcorder)",
+     "no_vo": "no inner voice in a memory",
+     "guards": "THE SLEEVE has no face and no frailty cues; no cause claimed for the greying"
+    }
+   }
+  },
+  {
+   "id": "19.14",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "stage",
+   "style": "EARLY-WEB16",
+   "shot": "wide",
+   "frame": "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out",
+   "side": "",
+   "room": "era_2008",
+   "chars": [
+    "young-mas"
+   ],
+   "caption": "He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads LAST UPDATED 2012.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "LAST UPDATED 2012",
+     "at": 5.37,
+     "until": 7.06,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 7.06,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure"
+   ],
+   "sounds": [
+    {
+     "name": "pin_grey_tick",
+     "at": 2.259,
+     "gain": -28
+    },
+    {
+     "name": "pin_grey_tick",
+     "at": 3.106,
+     "gain": -29
+    },
+    {
+     "name": "pin_grey_tick",
+     "at": 3.954,
+     "gain": -30
+    },
+    {
+     "name": "pin_grey_tick",
+     "at": 4.801,
+     "gain": -31
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "FLASHBACK · obstacle",
+    "pace": "quick",
+    "camera": "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out",
+    "picture": "No cause claimed (FC).",
+    "style": "EARLY-WEB16",
+    "flashback": {
+     "when": "SEP 2006 → JUN 9, 2008",
+     "of": "F2.1 (Mas)",
+     "shape": "want → obstacle → turn",
+     "tier": "EARLY-WEB16 (16 colours, the 2008 camcorder)",
+     "no_vo": "no inner voice in a memory",
+     "guards": "THE SLEEVE has no face and no frailty cues; no cause claimed for the greying"
+    }
+   }
+  },
+  {
+   "id": "19.15",
+   "act": "ACT FOUR",
+   "kind": "flashback",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · match: the clicker in his 2008 hand becomes his 2024 phone in the same grip, his post from the lawn on its screen",
+   "side": "",
+   "room": "campus",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The clicker in his 2008 hand becomes his 2024 phone, in the same grip, his post from the lawn still on its screen.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.66,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "FLASHBACK · turn",
+    "pace": "quick",
+    "camera": "ECU · match: the clicker in his 2008 hand becomes his 2024 phone in the same grip, his post from the lawn on its screen",
+    "picture": "Turn: he doesn't need their stage now.",
+    "flashback": {
+     "when": "SEP 2006 → JUN 9, 2008",
+     "of": "F2.1 (Mas)",
+     "shape": "want → obstacle → turn",
+     "tier": "EARLY-WEB16 (16 colours, the 2008 camcorder)",
+     "no_vo": "no inner voice in a memory",
+     "guards": "THE SLEEVE has no face and no frailty cues; no cause claimed for the greying"
+    }
+   }
+  },
+  {
+   "id": "19.16",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the walled garden (phrase 1): his phone's picture opens outward; MIT KOOC turns one key; CHATGTP walked through on a velvet rope",
+   "side": "",
+   "room": "garden",
+   "chars": [
+    "mit-kooc",
+    "chatgtp"
+   ],
+   "caption": "His phone's picture opens outward in three held steps until it's the whole frame: a square-cut hedge with exactly one gate. MIT KOOC turns one key as tall as he is. The gate swings open. CHATGTP, its new face on, is walked through on a velvet rope, a wristband on its tail: GUEST.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "GUEST",
+     "at": 7.4,
+     "until": 10.0,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 10.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
+   ],
+   "sounds": [
+    {
+     "name": "lock_big_turn",
+     "at": 3.4,
+     "gain": -22
+    },
+    {
+     "name": "gate_iron_swing",
+     "at": 4.6,
+     "gain": -24
+    },
+    {
+     "name": "velvet_rope",
+     "at": 6.6,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "SET-PIECE (the walled garden)",
+    "pace": "quick",
+    "camera": "WIDE · the walled garden (phrase 1): his phone's picture opens outward; MIT KOOC turns one key; CHATGTP walked through on a velvet rope",
+    "picture": "Company to company only: no rings, no altar, no vows. One 4-bar phrase."
+   }
+  },
+  {
+   "id": "19.17",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
+   "side": "",
+   "room": "garden",
+   "chars": [
+    "chatgtp",
+    "iris"
+   ],
+   "caption": "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "99%",
+     "at": 6.4,
+     "until": 10.0,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 10.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
+   ],
+   "sounds": [
+    {
+     "name": "flower_nod",
+     "at": 2.0,
+     "gain": -30
+    },
+    {
+     "name": "chip_blip_bubble",
+     "at": 2.8,
+     "gain": -26
+    },
+    {
+     "name": "flower_nod",
+     "at": 4.6,
+     "gain": -30
+    },
+    {
+     "name": "chip_blip_bubble",
+     "at": 5.3,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "SET-PIECE (the walled garden)",
+    "pace": "quick",
+    "camera": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
+    "picture": "Text only: voice 5 is paused (D-56). One 4-bar phrase."
+   }
+  },
+  {
+   "id": "19.18",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
+   "side": "",
+   "room": "garden",
+   "chars": [
+    "mas",
+    "radnus"
+   ],
+   "caption": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "lines": [
+    {
+     "id": "e2-a4-0030",
+     "who": "radnus",
+     "text": "Lovely garden. I see they let your chatbot in.",
+     "t": 2.25,
+     "dur": 2.85,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0030__radnus-A.wav",
+     "in": 0.42,
+     "words": [
+      [
+       "Lovely",
+       -0.02,
+       0.302
+      ],
+      [
+       "garden",
+       0.348,
+       0.708
+      ],
+      [
+       "I",
+       1.114,
+       1.161
+      ],
+      [
+       "see",
+       1.265,
+       1.393
+      ],
+      [
+       "they",
+       1.428,
+       1.544
+      ],
+      [
+       "let",
+       1.625,
+       1.764
+      ],
+      [
+       "your",
+       1.799,
+       1.915
+      ],
+      [
+       "chatbot",
+       1.962,
+       2.484
+      ],
+      [
+       "in",
+       2.565,
+       2.728
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    },
+    {
+     "id": "e2-a4-0031",
+     "who": "mas",
+     "text": "as a guest.",
+     "t": 5.55,
+     "dur": 0.95,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0031__mas-manalt-C.wav",
+     "in": 0.37,
+     "words": [
+      [
+       "As",
+       -0.02,
+       0.166
+      ],
+      [
+       "a",
+       0.235,
+       0.27
+      ],
+      [
+       "guest",
+       0.34,
+       0.862
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.7,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "SET-PIECE (the walled garden)",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e2-a4-0031": 0.45
+     },
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
+    "picture": "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture)."
+   }
+  },
+  {
+   "id": "19.19",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
+   "side": "",
+   "room": "garden",
+   "chars": [
+    "mas"
+   ],
+   "caption": "From inside the garden, through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock turns once. Mas is outside it, screen-right.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.23,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
+   ],
+   "sounds": [
+    {
+     "name": "gate_iron_swing",
+     "at": 0.423,
+     "gain": -24
+    },
+    {
+     "name": "lock_big_turn",
+     "at": 1.974,
+     "gain": -22
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "SET-PIECE (the walled garden)",
+    "pace": "quick",
+    "camera": "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
+    "picture": "The one shot where he loses the left third, on purpose."
+   }
+  },
+  {
+   "id": "19.20",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket",
+   "side": "",
+   "room": "garden",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The garden folds back into the phone in three held steps. He puts it in his pocket.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.38,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the cello's pedal carries"
+   ],
+   "sounds": [
+    {
+     "name": "phone_into_pocket",
+     "at": 2.535,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
+    "pace": "quick",
+    "camera": "WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket"
+   }
+  },
+  {
+   "id": "20.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights",
+   "side": "",
+   "room": "split_zai",
+   "chars": [
+    "mas",
+    "nole"
+   ],
+   "caption": "The split, that afternoon. LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby, a brand-new birdcage at the doors, its shipping tag still on; a banner that's been up a while. NOLE's phone lights with Mas's post.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "KORG 2: NEXT QUARTER",
+     "at": 0.31,
+     "until": 3.91,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 3.91,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs"
+   ],
+   "sounds": [
+    {
+     "name": "ui_toast_pop",
+     "at": 2.881,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights"
+   }
+  },
+  {
+   "id": "20.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "SPLIT · RIGHT: his lamp clicks on; his post goes up, one crop, with its condition",
+   "side": "",
+   "room": "split_zai",
+   "chars": [
+    "nole"
+   ],
+   "caption": "His lamp clicks on. His own post goes up.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be banned at my companies. That is an unacceptable security violation.",
+     "at": 0.3,
+     "until": 7.5,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 7.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs"
+   ],
+   "sounds": [
+    {
+     "name": "lamp_click",
+     "at": 0.1,
+     "gain": -22
+    },
+    {
+     "name": "nole_fanfare_short",
+     "at": 0.3,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "SPLIT · RIGHT: his lamp clicks on; his post goes up, one crop, with its condition",
+    "picture": "One crop, with its condition (R2)."
+   }
+  },
+  {
+   "id": "20.03",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "SPLIT · RIGHT: MCU Nole at the cage, to a visitor at the door; he locks his own phone in it",
+   "side": "",
+   "room": "split_zai",
+   "chars": [
+    "nole",
+    "visitor"
+   ],
+   "caption": "To a visitor at the door, a silhouette. He puts his own phone in the cage and snaps the padlock.",
+   "lines": [
+    {
+     "id": "e2-a4-0032",
+     "who": "nole",
+     "text": "If they go through with it, visitors' phones go in here. Like this.",
+     "t": 0.31,
+     "dur": 4.2,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0032__nole-A.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "If",
+       -0.02,
+       0.133
+      ],
+      [
+       "they",
+       0.179,
+       0.318
+      ],
+      [
+       "go",
+       0.376,
+       0.469
+      ],
+      [
+       "through",
+       0.527,
+       0.759
+      ],
+      [
+       "with",
+       0.783,
+       0.91
+      ],
+      [
+       "it",
+       0.968,
+       1.096
+      ],
+      [
+       "visitors'",
+       1.294,
+       1.723
+      ],
+      [
+       "phones",
+       1.781,
+       2.083
+      ],
+      [
+       "go",
+       2.129,
+       2.234
+      ],
+      [
+       "in",
+       2.304,
+       2.385
+      ],
+      [
+       "here",
+       2.466,
+       2.722
+      ],
+      [
+       "Like",
+       3.453,
+       3.662
+      ],
+      [
+       "this",
+       3.697,
+       3.964
+      ]
+     ],
+     "tag": "",
+     "cut": false
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.11,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs"
+   ],
+   "sounds": [
+    {
+     "name": "cage_door_shut",
+     "at": 5.11,
+     "gain": -22
+    },
+    {
+     "name": "padlock_snap",
+     "at": 5.71,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "SPLIT · RIGHT: MCU Nole at the cage, to a visitor at the door; he locks his own phone in it"
+   }
+  },
+  {
+   "id": "20.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "SPLIT · RIGHT: ECU the padlock and the buzzing phone; Nole looks at his empty hands; the lamp clicks off",
+   "side": "",
+   "room": "split_zai",
+   "chars": [
+    "nole"
+   ],
+   "caption": "Inside the cage his phone starts to buzz: replies to his own post, stacking up where he can't reach them. He looks at the padlock, then at his empty hands. The lamp clicks off.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.3,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs"
+   ],
+   "sounds": [
+    {
+     "name": "phone_buzz_muffled",
+     "at": 0.206,
+     "gain": -26,
+     "dur": 2.4
+    },
+    {
+     "name": "lamp_click",
+     "at": 2.887,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "SPLIT · RIGHT: ECU the padlock and the buzzing phone; Nole looks at his empty hands; the lamp clicks off",
+    "picture": "Nothing legible in the replies."
+   }
+  },
+  {
+   "id": "20.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the NopeAI lobby, full frame, as the divider slides away: Jun 11, morning; Mas peels his own flyer off the pillar",
+   "side": "",
+   "room": "lobby_morning",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "caption": "The NopeAI lobby, morning. The confetti swept into a pile; the staff taking the party down, and the flyers with it. Mas, at the back with his glass, peels his own upside-down flyer off the pillar, folds it and puts it inside his jacket.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: JUN 11",
+     "at": 0.3,
+     "until": 1.8,
+     "kind": "rail"
+    }
+   ],
+   "reelDur": 4.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the lobby's morning under the quartet's pedal"
+   ],
+   "sounds": [
+    {
+     "name": "tape_peel",
+     "at": 2.6,
+     "gain": -24
+    },
+    {
+     "name": "paper_flutter",
+     "at": 3.8,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "WIDE · the NopeAI lobby, full frame, as the divider slides away: Jun 11, morning; Mas peels his own flyer off the pillar",
+    "picture": "The cage's bars (right pane) → the lobby's rack pillars as the divider slides away."
+   }
+  },
+  {
+   "id": "20.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · his fingers find the yellowed corner of the old note already in his jacket, no words legible",
+   "side": "",
+   "room": "lobby_morning",
+   "chars": [],
+   "caption": "His fingers find something already in there: the yellowed corner of the old note. No words legible.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet's pedal"
+   ],
+   "sounds": [
+    {
+     "name": "cloth_rustle",
+     "at": 0.1,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "ECU · his fingers find the yellowed corner of the old note already in his jacket, no words legible",
+    "picture": "1 s; away from Alyi and from every compute line (D-62)."
+   }
+  },
+  {
+   "id": "20.07",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
+   "side": "",
+   "room": "lobby_morning",
+   "chars": [
+    "haras",
+    "mas"
+   ],
+   "caption": "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
+   "lines": [
+    {
+     "id": "e2-vo-13",
+     "who": "mas",
+     "text": "we raise in the fall. she has till then.",
+     "t": 1.03,
+     "dur": 3.44,
+     "audio": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
+     "in": 0.46,
+     "words": [
+      [
+       "We",
+       -0.02,
+       0.122
+      ],
+      [
+       "raise",
+       0.227,
+       0.563
+      ],
+      [
+       "in",
+       0.61,
+       0.703
+      ],
+      [
+       "the",
+       0.761,
+       0.865
+      ],
+      [
+       "fall",
+       0.947,
+       1.446
+      ],
+      [
+       "she",
+       2.026,
+       2.247
+      ],
+      [
+       "has",
+       2.351,
+       2.653
+      ],
+      [
+       "till",
+       2.734,
+       2.955
+      ],
+      [
+       "then",
+       3.013,
+       3.338
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "UPSIDE",
+     "at": 0.21,
+     "until": 1.53,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 4.88,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet's pedal"
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
+    "picture": "The V.O. after the note's insert has cleared, before the docket."
+   }
+  },
+  {
+   "id": "20.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · full frame: the complaint in the middle of the floor, coffee cups on it; its docket tab",
+   "side": "",
+   "room": "lobby_morning",
+   "chars": [],
+   "caption": "In the middle of the floor, the complaint has sat since February, coffee cups on it. Its docket tab.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "HEARING · JUN 12 · MOTION TO DISMISS",
+     "at": 0.1,
+     "until": 2.2,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 2.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet's pedal"
+   ],
+   "sounds": [
+    {
+     "name": "docket_tab_flick",
+     "at": 0.2,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "ECU · full frame: the complaint in the middle of the floor, coffee cups on it; its docket tab",
+    "picture": "Legible for its read floor, 2.1 s (P7, P15)."
+   }
+  },
+  {
+   "id": "20.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "lobby",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · a rope drops from above and hooks it; a staffer lifts the cups off just in time; the complaint rises out of frame; (FOR NOW) on the clean rectangle",
+   "side": "",
+   "room": "lobby_morning",
+   "chars": [
+    "staff"
+   ],
+   "caption": "A rope drops from above and hooks it. A staffer lifts the cups off just in time. The complaint rises out of frame, leaving a clean rectangle on the carpet. A sticky note flutters down onto it.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "(FOR NOW)",
+     "at": 3.0,
+     "until": 4.0,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 4.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-11 · the quartet ends as the complaint leaves frame: the cello's last pizzicato on the note's landing"
+   ],
+   "sounds": [
+    {
+     "name": "rope_drop",
+     "at": 0.2,
+     "gain": -24
+    },
+    {
+     "name": "rope_haul",
+     "at": 1.1,
+     "gain": -22
+    },
+    {
+     "name": "sticky_flutter",
+     "at": 2.6,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "WIDE · a rope drops from above and hooks it; a staffer lifts the cups off just in time; the complaint rises out of frame; (FOR NOW) on the clean rectangle",
+    "picture": "No THUD at its exit (THUD means \"filed\")."
+   }
+  },
+  {
+   "id": "20.10",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it over: Alyi's post and its link card",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS, with its one line about what it's for.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "RAIL: JUN 19, 2024",
+     "at": 0.2,
+     "until": 1.8,
+     "kind": "rail"
+    },
+    {
+     "text": "I am starting a new company:",
+     "at": 2.6,
+     "until": 6.9,
+     "kind": "post"
+    },
+    {
+     "text": "ISS",
+     "at": 3.0,
+     "until": 6.9,
+     "kind": "post"
+    },
+    {
+     "text": "one goal and one product: a safe superintelligence",
+     "at": 3.0,
+     "until": 6.9,
+     "kind": "post"
+    }
+   ],
+   "reelDur": 7.0,
+   "fx": [],
+   "cues": [
+    "music (v1): room tone only (the quartet has ended)"
+   ],
+   "sounds": [
+    {
+     "name": "phone_buzz_step_1",
+     "at": 1.9,
+     "gain": -26
+    },
+    {
+     "name": "phone_turn_over",
+     "at": 2.3,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it over: Alyi's post and its link card",
+    "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place."
+   }
+  },
+  {
+   "id": "20.11",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · behind the post TPOOL is still open on its map; the link card lands on the old check-in pin and knocks it loose",
+   "side": "",
+   "room": "darkroom",
+   "chars": [],
+   "caption": "Behind the post, TPOOL is still open on its map. The link card lands on the old check-in pin and knocks it loose.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.6,
+   "fx": [],
+   "cues": [
+    "music (v1): room tone only"
+   ],
+   "sounds": [
+    {
+     "name": "pin_knock",
+     "at": 0.8,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "ECU · behind the post TPOOL is still open on its map; the link card lands on the old check-in pin and knocks it loose",
+    "picture": "No app tracks anyone (D-29)."
+   }
+  },
+  {
+   "id": "20.12",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas reading, still (2 s) → MEDIUM · he takes the folded flyer out of his jacket and stands",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas, reading, still. He takes the folded flyer out of his jacket and stands.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.0,
+   "fx": [],
+   "cues": [
+    "music (v1): room tone only"
+   ],
+   "sounds": [
+    {
+     "name": "cloth_rustle",
+     "at": 2.0,
+     "gain": -26
+    },
+    {
+     "name": "chair_creak",
+     "at": 3.0,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "MCU · Mas reading, still (2 s) → MEDIUM · he takes the folded flyer out of his jacket and stands",
+    "picture": "A face light one step. His decision shown (FC)."
+   }
+  },
+  {
+   "id": "20.13",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "screen",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · on the phone, the pin tips off the map and falls; hard cut to white",
+   "side": "",
+   "room": "darkroom",
+   "chars": [],
+   "caption": "On the phone, the pin tips off the map and falls. Hard cut to white as it falls.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.4,
+   "fx": [],
+   "cues": [
+    "music (v1): room tone only; the pin's soft knock"
+   ],
+   "sounds": [
+    {
+     "name": "pin_fall",
+     "at": 0.6,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "a held SPLIT → the lobby → SINGLE IMAGE / INSERT",
+    "pace": "quick",
+    "camera": "ECU · on the phone, the pin tips off the map and falls; hard cut to white"
+   }
+  },
+  {
+   "id": "22.01",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · white, room tone only; the pin falls into it; the white is sky over an empty lot; the white cube, one door, a brass plate, a mail slot",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "orb"
+   ],
+   "caption": "White, room tone only. The TPOOL pin falls into it from the top of frame, and the white turns out to be sky over an empty lot. On the lot, a white cube with one door, handleless, sealed by design, rendered in clean real 3D. A brass plate: ISS. A mail slot.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "ISS",
+     "at": 5.15,
+     "until": 7.44,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 7.44,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 · room tone only, then the first piano note as the lot appears"
+   ],
+   "sounds": [
+    {
+     "name": "pin_fall",
+     "at": 0.429,
+     "gain": -24
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "WIDE · white, room tone only; the pin falls into it; the white is sky over an empty lot; the white cube, one door, a brass plate, a mail slot",
+    "picture": "No mat, no lock, no sign (R1, R2). No rail: it runs on from sc 20's JUN 19, 2024.",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.02",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · Mas (pixel) walks up from frame-left, never running; the Orb scans the cube and toasts nothing",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Mas, pixel on the 3D plate, walks up from frame-left. He never runs. THE ORB scans the cube and toasts nothing: it can't verify a door.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6.58,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 ONE DOOR · DARK ROOM, sparse (one piano note per phrase); the Door with its first note missing, on non-vibrato flute, low-passed (\"through the door\")"
+   ],
+   "sounds": [
+    {
+     "name": "footstep_gravel",
+     "at": 0.572,
+     "gain": -28
+    },
+    {
+     "name": "footstep_gravel",
+     "at": 1.717,
+     "gain": -28
+    },
+    {
+     "name": "footstep_gravel",
+     "at": 2.861,
+     "gain": -28
+    },
+    {
+     "name": "orb_scan_sweep",
+     "at": 4.291,
+     "gain": -28
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "WIDE · Mas (pixel) walks up from frame-left, never running; the Orb scans the cube and toasts nothing",
+    "picture": "The contrast kept (P12).",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.03",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · the band lights for four seconds: Use flyer on door",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "The band lights for four seconds: Use flyer on door.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "Use flyer on door",
+     "at": 0.4,
+     "until": 3.8,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 4.0,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 ONE DOOR · DARK ROOM, sparse (one piano note per phrase); the Door with its first note missing, on non-vibrato flute, low-passed (\"through the door\")"
+   ],
+   "sounds": [
+    {
+     "name": "ui_band_on",
+     "at": 0.0,
+     "gain": -26
+    },
+    {
+     "name": "ui_band_off",
+     "at": 3.9,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "WIDE · the band lights for four seconds: Use flyer on door",
+    "style": "UI LIT (4 s)"
+   }
+  },
+  {
+   "id": "22.04",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · over his shoulder at the slot: he unfolds the flyer (his, upside down, tape on its corners) and pushes it in; it lifts the flap",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He unfolds the flyer, his, upside down, the tape still on its corners, and pushes it into the slot. It lifts the flap.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.58,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 ONE DOOR · DARK ROOM, sparse (one piano note per phrase); the Door with its first note missing, on non-vibrato flute, low-passed (\"through the door\")"
+   ],
+   "sounds": [
+    {
+     "name": "flyer_into_slot",
+     "at": 2.004,
+     "gain": -24
+    },
+    {
+     "name": "mail_flap_lift",
+     "at": 3.149,
+     "gain": -26
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "MCU · over his shoulder at the slot: he unfolds the flyer (his, upside down, tape on its corners) and pushes it in; it lifts the flap",
+    "picture": "A question, not a reason (D-37).",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.05",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "INSERT · the glimpse: the slot's gap fills the frame; a lit room; Alyi small inside at a desk, working, absorbed, cropped by the slot's edges",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "alyi"
+   ],
+   "caption": "Through the gap: a lit room, and Alyi at a desk, working, absorbed. He doesn't look up. The flyer drops out of frame onto the floor inside, unseen.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.6,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 · the GPU choir under the glimpse"
+   ],
+   "sounds": [
+    {
+     "name": "lab_room_tone",
+     "at": 0.0,
+     "gain": -34,
+     "dur": 3.6
+    },
+    {
+     "name": "paper_drop_floor",
+     "at": 2.4,
+     "gain": -32
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "INSERT · the glimpse: the slot's gap fills the frame; a lit room; Alyi small inside at a desk, working, absorbed, cropped by the slot's edges",
+    "picture": "Alyi in person (pixel), never a reflection; he never looks up (FC).",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.06",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "ECU · the flap swings shut on its spring (room tone only: the designed stop)",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [],
+   "caption": "The flap swings shut on its spring.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 1.2,
+   "fx": [],
+   "cues": [
+    "music (v1): the designed stop: room tone only"
+   ],
+   "sounds": [
+    {
+     "name": "mail_flap_spring_shut",
+     "at": 0.2,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "ECU · the flap swings shut on its spring (room tone only: the designed stop)",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.07",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas at the shut flap",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas at the shut flap.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 2.6,
+   "fx": [],
+   "cues": [
+    "music (v1): room tone only"
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "MCU · Mas at the shut flap",
+    "picture": "A face light one step. 2–3 s.",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.08",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM · the door and his raised hand in one frame: he raises a hand to knock, and lowers it",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He raises a hand to knock, and lowers it.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 3.2,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 · the cue returns as his raised hand lowers"
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "MEDIUM · the door and his raised hand in one frame: he raises a hand to knock, and lowers it",
+    "picture": "The raised hand held 2 beats. The cue returns as it lowers.",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  },
+  {
+   "id": "22.09",
+   "act": "ACT FOUR",
+   "kind": "scene",
+   "set": "void",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE · he turns and walks away the way he came: his back, small, crossing the 3D lot; the cube doesn't change",
+   "side": "",
+   "room": "empty_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "He turns and walks away the way he came. His back, small, crossing the lot. The cube doesn't change.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4.8,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-12 · the Door resolves with no cadence across the walk (it cadences only in Ep11)"
+   ],
+   "sounds": [
+    {
+     "name": "footstep_gravel",
+     "at": 0.6,
+     "gain": -30
+    },
+    {
+     "name": "footstep_gravel",
+     "at": 1.6,
+     "gain": -31
+    },
+    {
+     "name": "footstep_gravel",
+     "at": 2.6,
+     "gain": -32
+    }
+   ],
+   "passes": {
+    "scene": "22",
+    "mode": "SINGLE IMAGE / INSERT, silent by design",
+    "pace": "weighted",
+    "camera": "WIDE · he turns and walks away the way he came: his back, small, crossing the 3D lot; the cube doesn't change",
+    "picture": "4–5 s of his back.",
+    "style_leap": {
+     "id": "2.H",
+     "tier": 2,
+     "look": "real 3D: the white cube, the handleless sealed door, the brass plate ISS, a mail slot with a sprung flap, the lot, soft overcast light; through the flap, a lit interior plate",
+     "owner": "ALYI'S LAB (the one place outside Mas's medium)",
+     "door": "the pin dropping into white",
+     "beat": "the flap lifting on the flyer",
+     "filler": "Blender 4.5.3 EEVEE (may be final)",
+     "keeps_contrast": "no grade match, no pixel rim, no down-rez; Mas, Alyi and the flyer stay pixel"
+    }
+   }
+  }
+ ]
+}

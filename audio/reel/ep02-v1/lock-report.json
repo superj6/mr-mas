@@ -1,0 +1,7344 @@
+{
+ "coldopen": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-coldopen.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 56.0,
+  "seconds": 56.0,
+  "frames": 1344,
+  "source_frames": 0,
+  "beats": 13,
+  "lines": 6,
+  "vo": 0,
+  "vo_lines": [],
+  "scenes": [
+   "1"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": 1.33,
+   "segment_n": 5,
+   "spoken_only_segment_s": 1.33
+  },
+  "beat_lengths": [
+   {
+    "beat": "1.01",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.02",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 7.3,
+    "lock_s": 7.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.03",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 2.75,
+    "lock_s": 2.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.04",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 7.01,
+    "lock_s": 7.01,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.05",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 3.8,
+    "lock_s": 3.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.06",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 4.17,
+    "lock_s": 4.17,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.07",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 6.0,
+    "lock_s": 6.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.08",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 3.85,
+    "lock_s": 3.85,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.09",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 5.09,
+    "lock_s": 5.09,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.10",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.11",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.12",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 5.33,
+    "lock_s": 5.33,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "1.13",
+    "action": "new",
+    "scene": "1",
+    "src_s": null,
+    "est_s": 2.3,
+    "lock_s": 2.3,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "1.04",
+    "line": "e2-co-0003",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "1.01",
+    "what": "new beat (scene): WIDE · the lobby master: the wall screen's snowy meadow (near-photoreal in its bezel), the room around it (lobby, lobby_day, mas, gerg, selbeep, orb, staff)"
+   },
+   {
+    "beat": "1.01",
+    "what": "on-screen add: \"RAIL: FEB 15, 2024\" (0.6-2.4)"
+   },
+   {
+    "beat": "1.01",
+    "what": "on-screen add: \"DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86\" (0.2-3.0)"
+   },
+   {
+    "beat": "1.01",
+    "what": "sound server_hum at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "1.02",
+    "what": "new beat (scene): MEDIUM · SELBEEP under the screen, the remote the size of a clapperboard; the mammoth's foot breaking the bezel on \"sentence\" (lobby, lobby_day, selbeep, staff)"
+   },
+   {
+    "beat": "1.02",
+    "what": "new line e2-co-0001 (selbeep, 6.03 s, new take) at start+0.58"
+   },
+   {
+    "beat": "1.02",
+    "what": "the plan's 7.3 s: its tail 0.69 s after the last line"
+   },
+   {
+    "beat": "1.02",
+    "what": "sound mammoth_step_pixel at 6.21 s (the plan's)"
+   },
+   {
+    "beat": "1.03",
+    "what": "new beat (scene): WIDE · the step-out: the mammoth turns pixel as it crosses the bezel; OTS over Gerg's laptop (lobby, lobby_day, gerg, selbeep, staff)"
+   },
+   {
+    "beat": "1.03",
+    "what": "new line e2-co-0002 (gerg, 0.78 s, new take) at start+1.85"
+   },
+   {
+    "beat": "1.03",
+    "what": "the plan's 2.75 s: its tail 0.12 s after the last line"
+   },
+   {
+    "beat": "1.03",
+    "what": "sound mammoth_step_pixel at 0.35 s (the plan's)"
+   },
+   {
+    "beat": "1.03",
+    "what": "sound mammoth_step_pixel at 1.27 s (the plan's)"
+   },
+   {
+    "beat": "1.04",
+    "what": "new beat (scene): MEDIUM · SELBEEP; the lobby chair beside the mammoth sags and melts; at the back, MAS glances at it (lobby, lobby_day, selbeep, mas, staff)"
+   },
+   {
+    "beat": "1.04",
+    "what": "new line e2-co-0003 (selbeep, 5.84 s, new take) at start+0.13"
+   },
+   {
+    "beat": "1.04",
+    "what": "the plan's 7.01 s: its tail 1.04 s after the last line"
+   },
+   {
+    "beat": "1.04",
+    "what": "sound palette_drip at 4.77 s (the plan's)"
+   },
+   {
+    "beat": "1.05",
+    "what": "new beat (scene): MEDIUM · SELBEEP beside the melted chair; the 2-TONE FREEZE card (lobby, lobby_day, selbeep)"
+   },
+   {
+    "beat": "1.05",
+    "what": "on-screen add: \"SELBEEP / DIRECTOR OF MAMMOTHS.\" (1.3-3.8)"
+   },
+   {
+    "beat": "1.05",
+    "what": "on-screen add: \"MAMMOTHS CONTAINED: 0\" (1.8-3.8)"
+   },
+   {
+    "beat": "1.05",
+    "what": "new line e2-co-0004 (selbeep, 0.91 s, new take) at start+0.29"
+   },
+   {
+    "beat": "1.05",
+    "what": "the plan's 3.8 s: its tail 2.60 s after the last line"
+   },
+   {
+    "beat": "1.05",
+    "what": "sound freeze_hit_F at 1.30 s (the plan's)"
+   },
+   {
+    "beat": "1.05",
+    "what": "names[]: selbeep at 1.3 s (its plate)"
+   },
+   {
+    "beat": "1.06",
+    "what": "new beat (scene): WIDE · the lobby master, two weeks on: DOT on the ladder swapping the number plates (lobby, lobby_day, dot, mas, gerg, staff)"
+   },
+   {
+    "beat": "1.06",
+    "what": "on-screen add: \"RAIL: FEB 29, 2024\" (0.35-2.43)"
+   },
+   {
+    "beat": "1.06",
+    "what": "on-screen add: \"DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100\" (1.39-4.17)"
+   },
+   {
+    "beat": "1.06",
+    "what": "sound plate_hang at 1.16 s (the plan's)"
+   },
+   {
+    "beat": "1.06",
+    "what": "sound hand_truck_step at 3.13 s (the plan's)"
+   },
+   {
+    "beat": "1.06",
+    "what": "sound door_glass_rattle at 3.34 s (the plan's)"
+   },
+   {
+    "beat": "1.07",
+    "what": "new beat (scene): WIDE · the master; Selbeep O.S.; a staffer's coffee jumps on Mas's counter (lobby, lobby_day, mas, staff, dot)"
+   },
+   {
+    "beat": "1.07",
+    "what": "new line e2-co-0005 (selbeep, 4.73 s, new take) at start+0.46"
+   },
+   {
+    "beat": "1.07",
+    "what": "the plan's 6.0 s: its tail 0.81 s after the last line"
+   },
+   {
+    "beat": "1.07",
+    "what": "sound hand_truck_step at 5.29 s (the plan's)"
+   },
+   {
+    "beat": "1.07",
+    "what": "sound cup_jump at 5.34 s (the plan's)"
+   },
+   {
+    "beat": "1.07",
+    "what": "sound ladder_sway_creak at 5.49 s (the plan's)"
+   },
+   {
+    "beat": "1.08",
+    "what": "new beat (scene): OTS-WIDE · over Gerg's laptop; Gerg doesn't look up (lobby, lobby_day, gerg, staff)"
+   },
+   {
+    "beat": "1.08",
+    "what": "new line e2-co-0006 (gerg, 2.98 s, new take) at start+0.29"
+   },
+   {
+    "beat": "1.08",
+    "what": "the plan's 3.85 s: its tail 0.58 s after the last line"
+   },
+   {
+    "beat": "1.09",
+    "what": "new beat (scene): OTS-WIDE · over Mas's shoulder straight down the axis: the doors blow open on the hand truck and the complaint (lobby, lobby_day, mas)"
+   },
+   {
+    "beat": "1.09",
+    "what": "on-screen add: \"NOLE v. MANALT ET AL.\" (1.39-5.09)"
+   },
+   {
+    "beat": "1.09",
+    "what": "on-screen add: \"YOU PROMISED!!!\" (1.39-5.09)"
+   },
+   {
+    "beat": "1.09",
+    "what": "on-screen add: \"PAUSE\" (0.69-2.08)"
+   },
+   {
+    "beat": "1.09",
+    "what": "sound hand_truck_step at 0.23 s (the plan's)"
+   },
+   {
+    "beat": "1.09",
+    "what": "sound door_bang_open at 0.64 s (the plan's)"
+   },
+   {
+    "beat": "1.09",
+    "what": "sound hand_truck_roll at 1.04 s (the plan's)"
+   },
+   {
+    "beat": "1.10",
+    "what": "new beat (scene): ECU · page one; the table of contents (lobby, lobby_day, mas)"
+   },
+   {
+    "beat": "1.10",
+    "what": "on-screen add: \"! .... 1\" (0.4-2.8)"
+   },
+   {
+    "beat": "1.10",
+    "what": "on-screen add: \"!! .... 2\" (0.4-2.8)"
+   },
+   {
+    "beat": "1.10",
+    "what": "on-screen add: \"!!! .... 3\" (0.4-2.8)"
+   },
+   {
+    "beat": "1.10",
+    "what": "sound paper_flutter at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "1.11",
+    "what": "new beat (scene): WIDE · the complaint tips off the truck and hits the floor; a flyer shakes off a pillar and lands on it (lobby, lobby_day, mas, staff)"
+   },
+   {
+    "beat": "1.11",
+    "what": "on-screen add: \"WHERE IS ALYI?\" (1.2-2.6)"
+   },
+   {
+    "beat": "1.11",
+    "what": "sound paper_stack_fall at 0.15 s (the plan's)"
+   },
+   {
+    "beat": "1.11",
+    "what": "sound paper_flutter at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "1.12",
+    "what": "new beat (scene): LOW · the sign from below, DOT holding out a spare 0 → MCU MAS: one pixel of a head shake → she hangs a second sign (lobby, lobby_day, dot, mas)"
+   },
+   {
+    "beat": "1.12",
+    "what": "on-screen add: \"DAYS SINCE SOMEONE SUED MAS: 0\" (3.01-5.33)"
+   },
+   {
+    "beat": "1.12",
+    "what": "sound plate_hang at 2.78 s (the plan's)"
+   },
+   {
+    "beat": "1.13",
+    "what": "new beat (scene): ECU · the flyer's doorway photo on the complaint; the Orb's iris steps onto it (lobby, lobby_day, orb)"
+   },
+   {
+    "beat": "1.13",
+    "what": "sound orb_servo at 0.40 s (the plan's)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act1": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-act1.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 368.0,
+  "seconds": 368.0,
+  "frames": 8832,
+  "source_frames": 0,
+  "beats": 62,
+  "lines": 59,
+  "vo": 3,
+  "vo_lines": [
+   "e2-vo-01 (4.02): nole's emails. the court gets them eventually. everyone else gets them tonight.",
+   "e2-vo-02 (4.25): he was right about the bill. it's bigger now.",
+   "e2-vo-03 (4B.01): two hours on his show, once. after that, november is a link."
+  ],
+  "scenes": [
+   "4",
+   "4A",
+   "4B",
+   "6",
+   "7"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": 0.3,
+   "inside_beats_n": 17,
+   "segment_s": 1.23,
+   "segment_n": 58,
+   "spoken_only_segment_s": 1.25
+  },
+  "beat_lengths": [
+   {
+    "beat": "4.01",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.5,
+    "lock_s": 2.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.02",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 10.21,
+    "lock_s": 10.21,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.03",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.79,
+    "lock_s": 4.79,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.04",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.05",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 3.84,
+    "lock_s": 3.84,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.06",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 6.58,
+    "lock_s": 6.58,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.07",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.96,
+    "lock_s": 4.96,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.08",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 8.42,
+    "lock_s": 8.42,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.09",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 15.15,
+    "lock_s": 15.15,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.10",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.66,
+    "lock_s": 4.66,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.11",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.57,
+    "lock_s": 4.57,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.12",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.59,
+    "lock_s": 4.59,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.13",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.14",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.8,
+    "lock_s": 4.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.15",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.12,
+    "lock_s": 4.12,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.16",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 7.1,
+    "lock_s": 7.1,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.17",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.75,
+    "lock_s": 2.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.18",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 9.95,
+    "lock_s": 9.95,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.19",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.73,
+    "lock_s": 4.73,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.20",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.19,
+    "lock_s": 2.19,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.21",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.48,
+    "lock_s": 2.48,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.22",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 17.27,
+    "lock_s": 17.27,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.23",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 6.11,
+    "lock_s": 6.11,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.24",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 3.12,
+    "lock_s": 3.12,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.25",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 6.11,
+    "lock_s": 6.11,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.26",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.42,
+    "lock_s": 4.42,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.27",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.75,
+    "lock_s": 2.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.28",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.29",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.5,
+    "lock_s": 4.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.30",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.81,
+    "lock_s": 4.81,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.31",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 1.8,
+    "lock_s": 1.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.32",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.2,
+    "lock_s": 4.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.33",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.98,
+    "lock_s": 2.98,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.34",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 9.05,
+    "lock_s": 9.05,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.35",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 4.09,
+    "lock_s": 4.09,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4.36",
+    "action": "new",
+    "scene": "4",
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.01",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 7.61,
+    "lock_s": 7.61,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.02",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 12.5,
+    "lock_s": 12.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.03",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 4.0,
+    "lock_s": 4.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.04",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 3.4,
+    "lock_s": 3.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.05",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4A.06",
+    "action": "new",
+    "scene": "4A",
+    "src_s": null,
+    "est_s": 2.49,
+    "lock_s": 2.49,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "4B.01",
+    "action": "new",
+    "scene": "4B",
+    "src_s": null,
+    "est_s": 8.0,
+    "lock_s": 8.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.01",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 9.08,
+    "lock_s": 9.08,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.02",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 3.4,
+    "lock_s": 3.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.03",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 11.48,
+    "lock_s": 11.48,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.04",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 7.15,
+    "lock_s": 7.15,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.05",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 9.12,
+    "lock_s": 9.12,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.06",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 10.73,
+    "lock_s": 10.73,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.07",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 16.02,
+    "lock_s": 16.02,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.08",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.09",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 1.8,
+    "lock_s": 1.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.10",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 5.48,
+    "lock_s": 5.48,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "6.11",
+    "action": "new",
+    "scene": "6",
+    "src_s": null,
+    "est_s": 2.14,
+    "lock_s": 2.14,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.01",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 6.23,
+    "lock_s": 6.23,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.02",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 6.16,
+    "lock_s": 6.16,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.03",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 8.5,
+    "lock_s": 8.5,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.04",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 8.67,
+    "lock_s": 8.67,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.05",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 5.24,
+    "lock_s": 5.24,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.06",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 2.54,
+    "lock_s": 2.54,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.07",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 5.05,
+    "lock_s": 5.05,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "7.08",
+    "action": "new",
+    "scene": "7",
+    "src_s": null,
+    "est_s": 5.61,
+    "lock_s": 5.61,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "4.08",
+    "line": "e2-a1-0007",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "4.09",
+    "line": "e2-a1-0008",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "4.10",
+    "line": "e2-a1-0009",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "4.14",
+    "line": "e2-a1-0013",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "4.18",
+    "line": "e2-a1-0016",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "4.18",
+    "line": "e2-a1-0017",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "4.18",
+    "line": "e2-a1-0018",
+    "plan_s": 1.25,
+    "lock_s": 1.25,
+    "ok": true
+   },
+   {
+    "beat": "4.20",
+    "line": "e2-a1-0021",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "4.21",
+    "line": "e2-a1-0022",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "4.22",
+    "line": "e2-a1-0055",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "4.22",
+    "line": "e2-a1-0056",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "4.22",
+    "line": "e2-a1-0023",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "4.24",
+    "line": "e2-a1-0025",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "4.25",
+    "line": "e2-vo-02",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   },
+   {
+    "beat": "4.26",
+    "line": "e2-a1-0028",
+    "plan_s": 1.0,
+    "lock_s": 1.0,
+    "ok": true
+   },
+   {
+    "beat": "6.05",
+    "line": "e2-a1-0038",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "6.05",
+    "line": "e2-a1-0039",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "6.05",
+    "line": "e2-a1-0040",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "6.05",
+    "line": "e2-a1-0041",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "6.05",
+    "line": "e2-a1-0037",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "6.10",
+    "line": "e2-a1-0045",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "6.10",
+    "line": "e2-a1-0046",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "7.03",
+    "line": "e2-a1-0049",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "7.04",
+    "line": "e2-a1-0051",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "7.04",
+    "line": "e2-a1-0050",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "4.01",
+    "what": "new beat (scene): WIDE · the candle-lit table (establish) → LOW·DESK at Mas's end: the laptop big in the foreground (boardroom, seance, mas, gerg, staffer, staff, orb)"
+   },
+   {
+    "beat": "4.01",
+    "what": "on-screen add: \"NOPEAI AND NOLE\" (0.4-2.5)"
+   },
+   {
+    "beat": "4.01",
+    "what": "on-screen add: \"… · ALYI · … · MAS\" (0.8-2.5)"
+   },
+   {
+    "beat": "4.01",
+    "what": "sound candle_crackle at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "4.02",
+    "what": "new beat (scene): ECU · his finger on the bare Publish button → MCU MAS (boardroom, seance, mas, orb)"
+   },
+   {
+    "beat": "4.02",
+    "what": "on-screen add: \"RAIL: MAR 5, 2024\" (0.8-2.6)"
+   },
+   {
+    "beat": "4.02",
+    "what": "new line e2-vo-01 (mas, 6.44 s, new take) at start+3.2"
+   },
+   {
+    "beat": "4.02",
+    "what": "the plan's 10.21 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "4.02",
+    "what": "sound post_click at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "4.02",
+    "what": "sound candle_flare at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "4.02",
+    "what": "sound planchette_glide at 1.00 s (the plan's)"
+   },
+   {
+    "beat": "4.02",
+    "what": "names[]: nole at 3.18 s (his voice names them)"
+   },
+   {
+    "beat": "4.03",
+    "what": "new beat (scene): LOW·DESK · Mas reading → HIGH · the planchette to >>> (boardroom, seance, mas, gerg, staffer)"
+   },
+   {
+    "beat": "4.03",
+    "what": "new line e2-a1-0001 (mas, 2.96 s, new take) at start+0.46"
+   },
+   {
+    "beat": "4.03",
+    "what": "the plan's 4.79 s: its tail 1.37 s after the last line"
+   },
+   {
+    "beat": "4.03",
+    "what": "sound inbox_chime_low at 3.92 s (the plan's)"
+   },
+   {
+    "beat": "4.03",
+    "what": "sound planchette_glide at 3.62 s (the plan's)"
+   },
+   {
+    "beat": "4.04",
+    "what": "new beat (scene): WIDE · ghost 1 rises in double exposure (2.G) inside the candle's pool (boardroom, seance, ghost-nole, mas, gerg)"
+   },
+   {
+    "beat": "4.04",
+    "what": "on-screen add: \"FROM: ALYI · JAN 2016\" (0.3-4.6)"
+   },
+   {
+    "beat": "4.04",
+    "what": "on-screen add: \"\"…IT WILL MAKE SENSE TO START BEING LESS OPEN.\"\" (0.6-4.6)"
+   },
+   {
+    "beat": "4.04",
+    "what": "new line e2-a1-0002 (ghost-nole, 0.51 s, new take) at start+3.4"
+   },
+   {
+    "beat": "4.04",
+    "what": "the plan's 4.6 s: its tail 0.69 s after the last line"
+   },
+   {
+    "beat": "4.04",
+    "what": "sound reverse_swell_1beat at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "4.04",
+    "what": "sound glyph_shimmer at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "4.05",
+    "what": "new beat (scene): MEDIUM · a staffer's eyes to the empty chair at the table's end; GERG, quietly (boardroom, seance, gerg, staffer)"
+   },
+   {
+    "beat": "4.05",
+    "what": "new line e2-a1-0003 (gerg, 2.00 s, new take) at start+1.15"
+   },
+   {
+    "beat": "4.05",
+    "what": "the plan's 3.84 s: its tail 0.69 s after the last line"
+   },
+   {
+    "beat": "4.06",
+    "what": "new beat (scene): LOW·DESK · Mas, as if calling a vote → HIGH · the held hands and the planchette, still (boardroom, seance, mas, staffer, gerg)"
+   },
+   {
+    "beat": "4.06",
+    "what": "new line e2-a1-0004 (mas, 2.76 s, new take) at start+0.52"
+   },
+   {
+    "beat": "4.06",
+    "what": "the plan's 6.58 s: its tail 3.30 s after the last line"
+   },
+   {
+    "beat": "4.06",
+    "what": "sound ceiling_knock at 4.58 s (the plan's)"
+   },
+   {
+    "beat": "4.06",
+    "what": "sound ceiling_knock at 5.28 s (the plan's)"
+   },
+   {
+    "beat": "4.06",
+    "what": "sound ceiling_knock at 5.98 s (the plan's)"
+   },
+   {
+    "beat": "4.07",
+    "what": "new beat (scene): WIDE · the table, one shot for the landing: Nole through the ceiling on a cable (boardroom, seance, nole, mas, gerg, staffer)"
+   },
+   {
+    "beat": "4.07",
+    "what": "new line e2-a1-0005 (mas, 2.21 s, new take) at start+2.29"
+   },
+   {
+    "beat": "4.07",
+    "what": "the plan's 4.96 s: its tail 0.46 s after the last line"
+   },
+   {
+    "beat": "4.07",
+    "what": "sound ceiling_burst at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "4.07",
+    "what": "sound cable_drop at 0.46 s (the plan's)"
+   },
+   {
+    "beat": "4.07",
+    "what": "sound landing_thunk at 1.26 s (the plan's)"
+   },
+   {
+    "beat": "4.08",
+    "what": "new beat (scene): OTS · over Mas's shoulder onto NOLE at the foot of the table, brushing off tiles (base setup for his case) (boardroom, seance, nole, gerg, mas)"
+   },
+   {
+    "beat": "4.08",
+    "what": "on-screen add: \"NOLE · FUNDED IT. LEFT IT. SUING IT.\" (0.23-5.19)"
+   },
+   {
+    "beat": "4.08",
+    "what": "new line e2-a1-0006 (nole, 3.92 s, new take) at start+0.57"
+   },
+   {
+    "beat": "4.08",
+    "what": "new line e2-a1-0007 (gerg, 3.61 s, new take) after e2-a1-0006 +0.2"
+   },
+   {
+    "beat": "4.08",
+    "what": "the plan's 8.42 s: its tail 0.12 s after the last line"
+   },
+   {
+    "beat": "4.08",
+    "what": "names[]: nole at 0.23 s (its plate)"
+   },
+   {
+    "beat": "4.09",
+    "what": "new beat (scene): OTS · the same setup: Nole's case, the 2016 ghost's \"less open\" hanging behind him (boardroom, seance, nole, ghost-nole)"
+   },
+   {
+    "beat": "4.09",
+    "what": "new line e2-a1-0008 (nole, 14.87 s, new take) at start+0.13"
+   },
+   {
+    "beat": "4.09",
+    "what": "the plan's 15.15 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "4.10",
+    "what": "new beat (scene): LOW·DESK · Mas → HIGH · the planchette spells O · P · E · N (boardroom, seance, mas)"
+   },
+   {
+    "beat": "4.10",
+    "what": "on-screen add: \"O P E N\" (2.76-4.66)"
+   },
+   {
+    "beat": "4.10",
+    "what": "new line e2-a1-0009 (mas, 2.16 s, new take) at start+0.3"
+   },
+   {
+    "beat": "4.10",
+    "what": "the plan's 4.66 s: its tail 2.20 s after the last line"
+   },
+   {
+    "beat": "4.10",
+    "what": "sound planchette_letter_tick at 2.76 s (the plan's)"
+   },
+   {
+    "beat": "4.10",
+    "what": "sound planchette_letter_tick at 3.26 s (the plan's)"
+   },
+   {
+    "beat": "4.10",
+    "what": "sound planchette_letter_tick at 3.76 s (the plan's)"
+   },
+   {
+    "beat": "4.10",
+    "what": "sound planchette_letter_tick at 4.26 s (the plan's)"
+   },
+   {
+    "beat": "4.11",
+    "what": "new beat (scene): OTS · Nole spreads his hands → HIGH · the planchette drifts back to the N and carries it to the front (boardroom, seance, nole)"
+   },
+   {
+    "beat": "4.11",
+    "what": "on-screen add: \"N O P E\" (3.57-4.57)"
+   },
+   {
+    "beat": "4.11",
+    "what": "new line e2-a1-0010 (nole, 2.08 s, new take) at start+0.29"
+   },
+   {
+    "beat": "4.11",
+    "what": "the plan's 4.57 s: its tail 2.20 s after the last line"
+   },
+   {
+    "beat": "4.11",
+    "what": "sound planchette_glide at 3.07 s (the plan's)"
+   },
+   {
+    "beat": "4.12",
+    "what": "new beat (scene): MCU · Nole jabbing at the board → HIGH · three hands lift off the planchette (boardroom, seance, nole, mas, ghost-nole, gerg)"
+   },
+   {
+    "beat": "4.12",
+    "what": "new line e2-a1-0011 (nole, 2.47 s, new take) at start+0.29"
+   },
+   {
+    "beat": "4.12",
+    "what": "the plan's 4.59 s: its tail 1.83 s after the last line"
+   },
+   {
+    "beat": "4.13",
+    "what": "new beat (scene): WIDE · the cow ghost rises, chewing; its caption and its reply (boardroom, seance, mas, nole, gerg)"
+   },
+   {
+    "beat": "4.13",
+    "what": "on-screen add: \"2018\" (0.2-4.6)"
+   },
+   {
+    "beat": "4.13",
+    "what": "on-screen add: \"FWD: \"…ATTACH TO ALSET AS ITS CASH COW…\"\" (0.4-4.6)"
+   },
+   {
+    "beat": "4.13",
+    "what": "on-screen add: \"NOLE: \"…EXACTLY RIGHT…\"\" (2.0-4.6)"
+   },
+   {
+    "beat": "4.13",
+    "what": "sound cow_moo_reverb at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "4.14",
+    "what": "new beat (scene): OTS · Nole at the cow → LOW·DESK · Mas (boardroom, seance, nole, mas)"
+   },
+   {
+    "beat": "4.14",
+    "what": "new line e2-a1-0012 (nole, 1.88 s, new take) at start+0.34"
+   },
+   {
+    "beat": "4.14",
+    "what": "new line e2-a1-0013 (mas, 1.56 s, new take) after e2-a1-0012 +0.45"
+   },
+   {
+    "beat": "4.14",
+    "what": "the plan's 4.8 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "4.15",
+    "what": "new beat (scene): MEDIUM · Nole's lamp clicks on; his post rises as a ghost of ! (boardroom, seance, nole)"
+   },
+   {
+    "beat": "4.15",
+    "what": "on-screen add: \"NOLE · JUST NOW\" (1.83-4.12)"
+   },
+   {
+    "beat": "4.15",
+    "what": "on-screen add: \"!!!!!!!!\" (1.83-4.12)"
+   },
+   {
+    "beat": "4.15",
+    "what": "sound lamp_click at 0.23 s (the plan's)"
+   },
+   {
+    "beat": "4.15",
+    "what": "sound key_tap_soft_01 at 0.69 s (the plan's)"
+   },
+   {
+    "beat": "4.15",
+    "what": "sound reverse_swell_1beat at 1.72 s (the plan's)"
+   },
+   {
+    "beat": "4.15",
+    "what": "names[]: nole at 1.83 s (its plate)"
+   },
+   {
+    "beat": "4.16",
+    "what": "new beat (scene): WIDE · ghost 3 rises, DEC 2018, its header the \"0%\" clause; GHOST-NOLE in a 2018 hoodie leans across the table (boardroom, seance, ghost-nole, nole, mas)"
+   },
+   {
+    "beat": "4.16",
+    "what": "on-screen add: \"DEC 2018\" (0.3-7.1)"
+   },
+   {
+    "beat": "4.16",
+    "what": "on-screen add: \"\"…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION A\" (0.5-7.1)"
+   },
+   {
+    "beat": "4.16",
+    "what": "new line e2-a1-0014 (ghost-nole, 2.90 s, new take) at start+2.2"
+   },
+   {
+    "beat": "4.16",
+    "what": "the plan's 7.1 s: its tail 2.00 s after the last line"
+   },
+   {
+    "beat": "4.16",
+    "what": "sound reverse_swell_1beat at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "4.17",
+    "what": "new beat (scene): MEDIUM · Nole slaps his phone down → ECU · every flame jumps; Mas's hand on his glass doesn't move (boardroom, seance, nole, mas)"
+   },
+   {
+    "beat": "4.17",
+    "what": "sound phone_clack_floor at 0.23 s (the plan's)"
+   },
+   {
+    "beat": "4.17",
+    "what": "sound candle_flare at 0.29 s (the plan's)"
+   },
+   {
+    "beat": "4.18",
+    "what": "new beat (scene): 2S · NOLE and GHOST-NOLE side by side, same jaw, same phone (no cut-ins) (boardroom, seance, nole, ghost-nole, gerg)"
+   },
+   {
+    "beat": "4.18",
+    "what": "new line e2-a1-0015 (nole, 4.01 s, new take) at start+0.34"
+   },
+   {
+    "beat": "4.18",
+    "what": "new line e2-a1-0016 (gerg, 1.60 s, new take) after e2-a1-0015 +0.2"
+   },
+   {
+    "beat": "4.18",
+    "what": "new line e2-a1-0017 (nole, 0.97 s, new take) after e2-a1-0016 +0.2"
+   },
+   {
+    "beat": "4.18",
+    "what": "new line e2-a1-0018 (ghost-nole, 0.81 s, new take) after e2-a1-0017 +1.25"
+   },
+   {
+    "beat": "4.18",
+    "what": "the plan's 9.95 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "4.19",
+    "what": "new beat (scene): LOW·DESK · Mas → HIGH · the planchette slides into the board's corner, where the letters become a Go board; ECU the stone (boardroom, seance, mas)"
+   },
+   {
+    "beat": "4.19",
+    "what": "on-screen add: \"MAR 2016 · GAME 2 · MOVE 37\" (2.93-4.73)"
+   },
+   {
+    "beat": "4.19",
+    "what": "new line e2-a1-0019 (mas, 1.56 s, new take) at start+0.57"
+   },
+   {
+    "beat": "4.19",
+    "what": "the plan's 4.73 s: its tail 2.60 s after the last line"
+   },
+   {
+    "beat": "4.19",
+    "what": "sound planchette_glide at 2.23 s (the plan's)"
+   },
+   {
+    "beat": "4.19",
+    "what": "sound go_stone_click at 2.93 s (the plan's)"
+   },
+   {
+    "beat": "4.20",
+    "what": "new beat (scene): MCU · NOLE, quiet → MCU · the STAFFER beside Gerg, whispering at the stone (boardroom, seance, nole, staffer)"
+   },
+   {
+    "beat": "4.20",
+    "what": "new line e2-a1-0020 (nole, 0.82 s, new take) at start+0.46"
+   },
+   {
+    "beat": "4.20",
+    "what": "new line e2-a1-0021 (staffer, 0.49 s, new take) after e2-a1-0020 +0.3"
+   },
+   {
+    "beat": "4.20",
+    "what": "the plan's 2.19 s: its tail 0.12 s after the last line"
+   },
+   {
+    "beat": "4.21",
+    "what": "new beat (scene): MCU · NOLE to her, hushed (boardroom, seance, nole, staffer)"
+   },
+   {
+    "beat": "4.21",
+    "what": "new line e2-a1-0022 (nole, 2.25 s, new take) at start+0.13"
+   },
+   {
+    "beat": "4.21",
+    "what": "the plan's 2.48 s: its tail 0.10 s after the last line"
+   },
+   {
+    "beat": "4.22",
+    "what": "new beat (scene): MCU · GERG typing (his correction) ↔ MCU · the STAFFER whispering → the knob wall behind the board: the training stream, then its own boards, then the freeze (boardroom, seance, gerg, staffer)"
+   },
+   {
+    "beat": "4.22",
+    "what": "new line e2-a1-0023 (gerg, 4.24 s, new take) at start+0.1"
+   },
+   {
+    "beat": "4.22",
+    "what": "new line e2-a1-0055 (staffer, 1.17 s, new take) after e2-a1-0023 +0.25"
+   },
+   {
+    "beat": "4.22",
+    "what": "new line e2-a1-0056 (gerg, 10.26 s, new take) after e2-a1-0055 +0.25"
+   },
+   {
+    "beat": "4.22",
+    "what": "the plan's 17.27 s: its tail 1.00 s after the last line"
+   },
+   {
+    "beat": "4.22",
+    "what": "sound knob_tick_grain at 6.81 s (the plan's)"
+   },
+   {
+    "beat": "4.23",
+    "what": "new beat (scene): MCU · NOLE takes the fear back (boardroom, seance, nole)"
+   },
+   {
+    "beat": "4.23",
+    "what": "new line e2-a1-0024 (nole, 5.39 s, new take) at start+0.57"
+   },
+   {
+    "beat": "4.23",
+    "what": "the plan's 6.11 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "4.24",
+    "what": "new beat (scene): WIDE · NOLE, loud again, to the table (boardroom, seance, nole, mas, gerg, staffer)"
+   },
+   {
+    "beat": "4.24",
+    "what": "new line e2-a1-0025 (nole, 2.51 s, new take) at start+0.15"
+   },
+   {
+    "beat": "4.24",
+    "what": "the plan's 3.12 s: its tail 0.46 s after the last line"
+   },
+   {
+    "beat": "4.25",
+    "what": "new beat (scene): OTS · over Mas's shoulder: ghost 3 drifts into his eyeline and says its line again (boardroom, seance, mas, ghost-nole)"
+   },
+   {
+    "beat": "4.25",
+    "what": "new line e2-a1-0026 (ghost-nole, 0.94 s, cut from e2-a1-0014) at start+0.46"
+   },
+   {
+    "beat": "4.25",
+    "what": "new line e2-vo-02 (mas, 3.42 s, new take) after e2-a1-0026 +0.6"
+   },
+   {
+    "beat": "4.25",
+    "what": "the plan's 6.11 s: its tail 0.69 s after the last line"
+   },
+   {
+    "beat": "4.26",
+    "what": "new beat (scene): MCU · NOLE, the lamp dark (held through the pair; Mas's line an L-cut on his face) (boardroom, seance, nole)"
+   },
+   {
+    "beat": "4.26",
+    "what": "new line e2-a1-0027 (nole, 0.92 s, new take) at start+0.69"
+   },
+   {
+    "beat": "4.26",
+    "what": "new line e2-a1-0028 (mas, 1.12 s, new take) after e2-a1-0027 +1.0"
+   },
+   {
+    "beat": "4.26",
+    "what": "the plan's 4.42 s: its tail 0.69 s after the last line"
+   },
+   {
+    "beat": "4.27",
+    "what": "new beat (scene): ECU · Mas lifts his glass; the candle nearest Nole snuffs; its smoke crosses the glass (boardroom, seance, mas)"
+   },
+   {
+    "beat": "4.27",
+    "what": "sound candle_snuff at 0.57 s (the plan's)"
+   },
+   {
+    "beat": "4.27",
+    "what": "sound render_front_sweep at 1.83 s (the plan's)"
+   },
+   {
+    "beat": "4.28",
+    "what": "new beat (flashback): WIDE · NopeAI's first office, Feb 2018, by day: the all-hands (office, allhands, nole, gerg, mas, alyi, staff)"
+   },
+   {
+    "beat": "4.28",
+    "what": "on-screen add: \"RAIL: FEB 20, 2018\" (0.4-2.2)"
+   },
+   {
+    "beat": "4.28",
+    "what": "on-screen add: \"ALSET · AI\" (1.2-4.4)"
+   },
+   {
+    "beat": "4.28",
+    "what": "on-screen add: \"AGI\" (0.4-4.4)"
+   },
+   {
+    "beat": "4.29",
+    "what": "new beat (flashback): WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds (office, allhands, nole, gerg, staff)"
+   },
+   {
+    "beat": "4.30",
+    "what": "new beat (flashback): WIDE · at the back, Mas sips from the crystal glass; Nole climbs the ladder; the hatch closes (office, allhands, mas, nole)"
+   },
+   {
+    "beat": "4.30",
+    "what": "sound glass_sip at 0.46 s (the plan's)"
+   },
+   {
+    "beat": "4.30",
+    "what": "sound ladder_climb at 1.37 s (the plan's)"
+   },
+   {
+    "beat": "4.30",
+    "what": "sound hatch_slide_shut at 3.78 s (the plan's)"
+   },
+   {
+    "beat": "4.31",
+    "what": "new beat (flashback): INSERT · the arena monitor: the match still playing, nobody has paused it (office, allhands, no figures)"
+   },
+   {
+    "beat": "4.31",
+    "what": "sound arena_blip_soft at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "4.32",
+    "what": "new beat (flashback): 2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back at MAS at the back (office, allhands, alyi, mas)"
+   },
+   {
+    "beat": "4.33",
+    "what": "new beat (flashback): WIDE → MATCH · the glass at the back of 2018 → 2024: Nole relights the candle at Mas's face (boardroom, seance, nole, mas)"
+   },
+   {
+    "beat": "4.33",
+    "what": "sound render_front_sweep at 0.23 s (the plan's)"
+   },
+   {
+    "beat": "4.33",
+    "what": "sound match_strike at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "4.34",
+    "what": "new beat (scene): OTS · the reverse, over Nole's shoulder, the candle in his hand, onto MAS candlelit in the left third (boardroom, seance, nole, mas)"
+   },
+   {
+    "beat": "4.34",
+    "what": "new line e2-a1-0029 (nole, 6.76 s, new take) at start+0.69"
+   },
+   {
+    "beat": "4.34",
+    "what": "the plan's 9.05 s: its tail 1.60 s after the last line"
+   },
+   {
+    "beat": "4.34",
+    "what": "sound glass_sip at 7.95 s (the plan's)"
+   },
+   {
+    "beat": "4.35",
+    "what": "new beat (scene): WIDE · the table: Nole sets the candle down hard, already rising on his cable (boardroom, seance, nole, mas)"
+   },
+   {
+    "beat": "4.35",
+    "what": "new line e2-a1-0030 (nole, 1.57 s, new take) at start+0.46"
+   },
+   {
+    "beat": "4.35",
+    "what": "the plan's 4.09 s: its tail 2.06 s after the last line"
+   },
+   {
+    "beat": "4.35",
+    "what": "sound rocket_roar at 2.23 s (the plan's)"
+   },
+   {
+    "beat": "4.35",
+    "what": "sound tile_land_1 at 3.79 s (the plan's)"
+   },
+   {
+    "beat": "4.36",
+    "what": "new beat (scene): MCU → WIDE · Mas blows out the last candle; darkness (boardroom, seance, mas)"
+   },
+   {
+    "beat": "4.36",
+    "what": "sound candle_blow at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "4A.01",
+    "what": "new beat (scene): WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back (boardroom, boardroom_day, terb, mas, mada, omis, gerg)"
+   },
+   {
+    "beat": "4A.01",
+    "what": "on-screen add: \"RAIL: MAR 8\" (0.3-1.9)"
+   },
+   {
+    "beat": "4A.01",
+    "what": "new line e2-a1-0031 (terb, 4.48 s, new take) at start+2.6"
+   },
+   {
+    "beat": "4A.01",
+    "what": "the plan's 7.61 s: its tail 0.53 s after the last line"
+   },
+   {
+    "beat": "4A.02",
+    "what": "new beat (scene): 2S · across the table favouring MADA (the first half) → MCU · Mas standing (the second half) (boardroom, boardroom_day, terb, mada, mas)"
+   },
+   {
+    "beat": "4A.02",
+    "what": "new line e2-a1-0032 (terb, 10.36 s, new take) at start+1.07"
+   },
+   {
+    "beat": "4A.02",
+    "what": "the plan's 12.5 s: its tail 1.07 s after the last line"
+   },
+   {
+    "beat": "4A.03",
+    "what": "new beat (scene): OTS · over Mas's shoulder onto TERB, who looks up from the sheet (boardroom, boardroom_day, terb, mas)"
+   },
+   {
+    "beat": "4A.03",
+    "what": "new line e2-a1-0033 (terb, 1.78 s, new take) at start+0.62"
+   },
+   {
+    "beat": "4A.03",
+    "what": "the plan's 4.0 s: its tail 1.60 s after the last line"
+   },
+   {
+    "beat": "4A.03",
+    "what": "sound chair_unfold at 2.70 s (the plan's)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "new beat (scene): ECU · the nameplates click into their slots, his first (boardroom, boardroom_day, no figures)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "on-screen add: \"MAS MANALT · BOARD\" (0.3-3.4)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "on-screen add: \"OMIS · NEW DIRECTOR\" (1.0-3.4)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "on-screen add: \"NEW DIRECTOR\" (1.6-3.4)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "on-screen add: \"NEW DIRECTOR\" (2.2-3.4)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "sound nameplate_click at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "sound nameplate_click at 1.00 s (the plan's)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "sound nameplate_click at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "sound nameplate_click at 2.20 s (the plan's)"
+   },
+   {
+    "beat": "4A.04",
+    "what": "names[]: omis at 1.0 s (its plate)"
+   },
+   {
+    "beat": "4A.05",
+    "what": "new beat (scene): WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch (boardroom, boardroom_day, mas, gerg)"
+   },
+   {
+    "beat": "4A.06",
+    "what": "new beat (scene): ECU · his phone, face up on the table beside the nameplate, lights with an invite (boardroom, boardroom_day, no figures)"
+   },
+   {
+    "beat": "4A.06",
+    "what": "sound ui_toast_pop at 0.53 s (the plan's)"
+   },
+   {
+    "beat": "4B.01",
+    "what": "new beat (scene): ECU · the calendar card on his phone (the look of Ep1's Board sync invite); his thumb on Accept (screen, boardroom_day, mas)"
+   },
+   {
+    "beat": "4B.01",
+    "what": "on-screen add: \"XEL · LONG-FORM · MAR 18 · 2 HRS\" (0.29-8.0)"
+   },
+   {
+    "beat": "4B.01",
+    "what": "new line e2-vo-03 (mas, 5.72 s, new take) at start+1.43"
+   },
+   {
+    "beat": "4B.01",
+    "what": "the plan's 8.0 s: its tail 0.85 s after the last line"
+   },
+   {
+    "beat": "4B.01",
+    "what": "sound post_click at 7.25 s (the plan's)"
+   },
+   {
+    "beat": "4B.01",
+    "what": "names[]: xel at 0.29 s (its plate)"
+   },
+   {
+    "beat": "6.01",
+    "what": "new beat (scene): 2S · the locked meter frame inside the podcast player's chrome: curtain, two chairs, one mic (size 1) (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.01",
+    "what": "on-screen add: \"CH. 1 OF 6\" (0.0-9.08)"
+   },
+   {
+    "beat": "6.01",
+    "what": "on-screen add: \"REC\" (0.0-9.08)"
+   },
+   {
+    "beat": "6.01",
+    "what": "new line e2-a1-0034 (xel, 7.22 s, new take) at start+1.4"
+   },
+   {
+    "beat": "6.01",
+    "what": "the plan's 9.08 s: its tail 0.46 s after the last line"
+   },
+   {
+    "beat": "6.02",
+    "what": "new beat (scene): 2S · the meter frame: XEL waits; the mic hops one size (1 → 2); the counter ticks; the card (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.02",
+    "what": "on-screen add: \"CH. 2 OF 6\" (0.6-3.4)"
+   },
+   {
+    "beat": "6.02",
+    "what": "on-screen add: \"XEL / ASKS THE LONG QUESTIONS.\" (0.8-3.2)"
+   },
+   {
+    "beat": "6.02",
+    "what": "on-screen add: \"EPISODE: 419\" (1.3-3.2)"
+   },
+   {
+    "beat": "6.02",
+    "what": "sound mic_grow_step at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "6.02",
+    "what": "sound chapter_tick at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "6.02",
+    "what": "sound freeze_hit_F at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "6.02",
+    "what": "names[]: xel at 0.8 s (its plate)"
+   },
+   {
+    "beat": "6.03",
+    "what": "new beat (scene): 2S · the meter frame: Mas answers; the mic doesn't move (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.03",
+    "what": "new line e2-a1-0035 (mas, 9.94 s, new take) at start+0.77"
+   },
+   {
+    "beat": "6.03",
+    "what": "the plan's 11.48 s: its tail 0.77 s after the last line"
+   },
+   {
+    "beat": "6.04",
+    "what": "new beat (scene): 2S · the meter frame: XEL lets it sit; hop 2 (2 → 3); the Alyi question (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.04",
+    "what": "on-screen add: \"CH. 3 OF 6\" (0.92-7.15)"
+   },
+   {
+    "beat": "6.04",
+    "what": "new line e2-a1-0036 (xel, 5.01 s, new take) at start+1.99"
+   },
+   {
+    "beat": "6.04",
+    "what": "the plan's 7.15 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "6.04",
+    "what": "sound mic_grow_step at 0.77 s (the plan's)"
+   },
+   {
+    "beat": "6.04",
+    "what": "sound chapter_tick at 0.92 s (the plan's)"
+   },
+   {
+    "beat": "6.05",
+    "what": "new beat (scene): 2S · the meter frame: the \"no.\" ladder, quick (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.05",
+    "what": "new line e2-a1-0037 (mas, 0.46 s, new take) at start+0.3"
+   },
+   {
+    "beat": "6.05",
+    "what": "new line e2-a1-0038 (xel, 1.83 s, new take) after e2-a1-0037 +0.2"
+   },
+   {
+    "beat": "6.05",
+    "what": "new line e2-a1-0039 (mas, 0.49 s, new take) after e2-a1-0038 +0.45"
+   },
+   {
+    "beat": "6.05",
+    "what": "new line e2-a1-0040 (xel, 2.35 s, new take) after e2-a1-0039 +0.2"
+   },
+   {
+    "beat": "6.05",
+    "what": "new line e2-a1-0041 (mas, 1.78 s, new take) after e2-a1-0040 +0.45"
+   },
+   {
+    "beat": "6.05",
+    "what": "the plan's 9.12 s: its tail 0.61 s after the last line"
+   },
+   {
+    "beat": "6.06",
+    "what": "new beat (scene): 2S · the meter frame: XEL pauses; hop 3 (3 → 4); the relationship question (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.06",
+    "what": "on-screen add: \"CH. 4 OF 6\" (0.92-10.73)"
+   },
+   {
+    "beat": "6.06",
+    "what": "new line e2-a1-0042 (xel, 8.13 s, new take) at start+1.99"
+   },
+   {
+    "beat": "6.06",
+    "what": "the plan's 10.73 s: its tail 0.61 s after the last line"
+   },
+   {
+    "beat": "6.06",
+    "what": "sound mic_grow_step at 0.77 s (the plan's)"
+   },
+   {
+    "beat": "6.06",
+    "what": "sound chapter_tick at 0.92 s (the plan's)"
+   },
+   {
+    "beat": "6.07",
+    "what": "new beat (scene): MCU · MAS against the curtain (the one cut-in), screen-left, facing camera-right toward XEL (stage, podcast_studio, mas)"
+   },
+   {
+    "beat": "6.07",
+    "what": "new line e2-a1-0043 (mas, 14.18 s, new take) at start+0.92"
+   },
+   {
+    "beat": "6.07",
+    "what": "the plan's 16.02 s: its tail 0.92 s after the last line"
+   },
+   {
+    "beat": "6.08",
+    "what": "new beat (scene): 2S · back to the meter frame: the mic hasn't moved a pixel; XEL's pause; hop 4 (4 → 5): the mic fills the frame (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.08",
+    "what": "on-screen add: \"CH. 5 OF 6\" (1.84-4.6)"
+   },
+   {
+    "beat": "6.08",
+    "what": "sound mic_grow_step at 1.69 s (the plan's)"
+   },
+   {
+    "beat": "6.08",
+    "what": "sound chapter_tick at 1.84 s (the plan's)"
+   },
+   {
+    "beat": "6.08",
+    "what": "sound chair_creak at 2.76 s (the plan's)"
+   },
+   {
+    "beat": "6.09",
+    "what": "new beat (scene): INSERT · the player's chrome: the counter ticks to CH. 6 OF 6; REC goes out (stage, podcast_studio, no figures)"
+   },
+   {
+    "beat": "6.09",
+    "what": "on-screen add: \"CH. 6 OF 6\" (0.3-1.8)"
+   },
+   {
+    "beat": "6.09",
+    "what": "sound chapter_tick at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "6.09",
+    "what": "sound rec_light_off at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "6.10",
+    "what": "new beat (scene): 2S · off the record: XEL leans toward the giant mic; Mas pressed flat against the curtain (stage, podcast_studio, xel, mas)"
+   },
+   {
+    "beat": "6.10",
+    "what": "new line e2-a1-0044 (xel, 1.45 s, new take) at start+0.61"
+   },
+   {
+    "beat": "6.10",
+    "what": "new line e2-a1-0045 (mas, 0.64 s, new take) after e2-a1-0044 +0.45"
+   },
+   {
+    "beat": "6.10",
+    "what": "new line e2-a1-0046 (xel, 0.50 s, new take) after e2-a1-0045 +0.3"
+   },
+   {
+    "beat": "6.10",
+    "what": "the plan's 5.48 s: its tail 1.53 s after the last line"
+   },
+   {
+    "beat": "6.11",
+    "what": "new beat (scene): 2S → MATCH · the curtain parts, and in the same motion the building splits open (stage, podcast_studio, no figures)"
+   },
+   {
+    "beat": "6.11",
+    "what": "sound curtain_draw at 0.15 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "new beat (scene): WIDE · the cathedral splits open like a dollhouse, the halves sliding apart; lights click on floor by floor down to the basement (datacenter, cathedral, mas, staff)"
+   },
+   {
+    "beat": "7.01",
+    "what": "on-screen add: \"BELOW · ABOVE · AROUND\" (1.0-6.23)"
+   },
+   {
+    "beat": "7.01",
+    "what": "new line e2-a1-0047 (mas, 2.43 s, cut from e2-a1-0035) at start+1.5"
+   },
+   {
+    "beat": "7.01",
+    "what": "the plan's 6.23 s: its tail 2.30 s after the last line"
+   },
+   {
+    "beat": "7.01",
+    "what": "sound dollhouse_slide at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "sound light_bank_click at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "sound light_bank_click at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "sound light_bank_click at 4.13 s (the plan's)"
+   },
+   {
+    "beat": "7.01",
+    "what": "sound light_bank_click at 4.73 s (the plan's)"
+   },
+   {
+    "beat": "7.02",
+    "what": "new beat (scene): 2S · the basement: THE HUMANIST with his boxes, screen-left; TASYA already in the doorway, screen-right (datacenter, basement, humanist, tasya)"
+   },
+   {
+    "beat": "7.02",
+    "what": "on-screen add: \"DEFLECTION (LICENSED)\" (0.33-6.16)"
+   },
+   {
+    "beat": "7.02",
+    "what": "on-screen add: \"THE HUMANIST · MACROSOFT'S NEW AI CHIEF\" (0.49-3.9)"
+   },
+   {
+    "beat": "7.02",
+    "what": "new line e2-a1-0048 (humanist, 3.71 s, new take) at start+2.3"
+   },
+   {
+    "beat": "7.02",
+    "what": "the plan's 6.16 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "7.02",
+    "what": "sound box_set at 1.48 s (the plan's)"
+   },
+   {
+    "beat": "7.03",
+    "what": "new beat (scene): 2S · the same: Tasya's welcome (datacenter, basement, tasya, humanist)"
+   },
+   {
+    "beat": "7.03",
+    "what": "new line e2-a1-0049 (tasya, 8.00 s, new take) at start+0.35"
+   },
+   {
+    "beat": "7.03",
+    "what": "the plan's 8.5 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "7.04",
+    "what": "new beat (scene): 2S · the same: the team, the room; Tasya's glance up through the floors (datacenter, basement, humanist, tasya)"
+   },
+   {
+    "beat": "7.04",
+    "what": "new line e2-a1-0050 (humanist, 2.87 s, new take) at start+0.35"
+   },
+   {
+    "beat": "7.04",
+    "what": "new line e2-a1-0051 (tasya, 4.46 s, new take) after e2-a1-0050 +0.5"
+   },
+   {
+    "beat": "7.04",
+    "what": "the plan's 8.67 s: its tail 0.49 s after the last line"
+   },
+   {
+    "beat": "7.05",
+    "what": "new beat (scene): ECU · the key ring: a key twisted off; a new one grows back, stamped MAR 19 (datacenter, basement, tasya, humanist)"
+   },
+   {
+    "beat": "7.05",
+    "what": "on-screen add: \"RAIL: MAR 19\" (0.8-2.2)"
+   },
+   {
+    "beat": "7.05",
+    "what": "on-screen add: \"INQUIRY\" (3.96-5.24)"
+   },
+   {
+    "beat": "7.05",
+    "what": "new line e2-a1-0052 (tasya, 1.36 s, new take) at start+2.4"
+   },
+   {
+    "beat": "7.05",
+    "what": "the plan's 5.24 s: its tail 1.48 s after the last line"
+   },
+   {
+    "beat": "7.05",
+    "what": "sound door_key_turn at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "7.05",
+    "what": "sound alert_bonk at 4.06 s (the plan's)"
+   },
+   {
+    "beat": "7.06",
+    "what": "new beat (scene): 2S · the Humanist, looking up where Tasya looked (datacenter, basement, humanist, tasya)"
+   },
+   {
+    "beat": "7.06",
+    "what": "new line e2-a1-0053 (humanist, 1.39 s, new take) at start+0.66"
+   },
+   {
+    "beat": "7.06",
+    "what": "the plan's 2.54 s: its tail 0.49 s after the last line"
+   },
+   {
+    "beat": "7.07",
+    "what": "new beat (scene): WIDE · Tasya's glance, and a whole-pixel pan up the cross-section, floor by floor, to MAS at his monitor (datacenter, cathedral, mas)"
+   },
+   {
+    "beat": "7.07",
+    "what": "new line e2-a1-0054 (tasya, 0.79 s, new take) at start+3.6"
+   },
+   {
+    "beat": "7.07",
+    "what": "the plan's 5.05 s: its tail 0.66 s after the last line"
+   },
+   {
+    "beat": "7.08",
+    "what": "new beat (scene): MCU · Mas at his monitor four floors up (held) → the key ring jangles below frame; black (datacenter, cathedral, mas)"
+   },
+   {
+    "beat": "7.08",
+    "what": "sound key_ring_jangle_1 at 2.64 s (the plan's)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act2": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-act2.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 280.0,
+  "seconds": 280.0,
+  "frames": 6720,
+  "source_frames": 0,
+  "beats": 44,
+  "lines": 41,
+  "vo": 3,
+  "vo_lines": [
+   "e2-vo-04 (8.03): the next model runs on the landlord's servers. the one after runs on ours.",
+   "e2-vo-05 (8.05): one day ahead is enough.",
+   "e2-vo-06 (12.07): i came back."
+  ],
+  "scenes": [
+   "8",
+   "9",
+   "10",
+   "11",
+   "12"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": 0.35,
+   "inside_beats_n": 16,
+   "segment_s": 1.52,
+   "segment_n": 40,
+   "spoken_only_segment_s": 1.15
+  },
+  "beat_lengths": [
+   {
+    "beat": "8.01",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 8.07,
+    "lock_s": 8.07,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.02",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 5.2,
+    "lock_s": 5.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.03",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 7.74,
+    "lock_s": 7.74,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.04",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.05",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 3.18,
+    "lock_s": 3.18,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.06",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 9.83,
+    "lock_s": 9.83,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "8.07",
+    "action": "new",
+    "scene": "8",
+    "src_s": null,
+    "est_s": 5.38,
+    "lock_s": 5.38,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.01",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 8.29,
+    "lock_s": 8.29,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.02",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 8.19,
+    "lock_s": 8.19,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.03",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 4.82,
+    "lock_s": 4.82,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.04",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 13.32,
+    "lock_s": 13.32,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.05",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 10.42,
+    "lock_s": 10.42,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.06",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 6.96,
+    "lock_s": 6.96,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.01",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 6.47,
+    "lock_s": 6.47,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.02",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 9.65,
+    "lock_s": 9.65,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.03",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 6.53,
+    "lock_s": 6.53,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.04",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 4.89,
+    "lock_s": 4.89,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.05",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 5.92,
+    "lock_s": 5.92,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.06",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 5.42,
+    "lock_s": 5.42,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "10.07",
+    "action": "new",
+    "scene": "10",
+    "src_s": null,
+    "est_s": 7.12,
+    "lock_s": 7.12,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.01",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 8.48,
+    "lock_s": 8.48,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.02",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.03",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.2,
+    "lock_s": 3.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.04",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 13.3,
+    "lock_s": 13.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.05",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 9.75,
+    "lock_s": 9.75,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.06",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 6.89,
+    "lock_s": 6.89,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.07",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 10.99,
+    "lock_s": 10.99,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.08",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.73,
+    "lock_s": 3.73,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.09",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 4.99,
+    "lock_s": 4.99,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.10",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.11",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.12",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.2,
+    "lock_s": 3.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.13",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 10.0,
+    "lock_s": 10.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.14",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.15",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 6.87,
+    "lock_s": 6.87,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "11.16",
+    "action": "new",
+    "scene": "11",
+    "src_s": null,
+    "est_s": 3.0,
+    "lock_s": 3.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.01",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 6.53,
+    "lock_s": 6.53,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.02",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 3.39,
+    "lock_s": 3.39,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.03",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 3.4,
+    "lock_s": 3.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.04",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 1.0,
+    "lock_s": 1.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.05",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 6.0,
+    "lock_s": 6.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.06",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 6.6,
+    "lock_s": 6.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.07",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 10.28,
+    "lock_s": 10.28,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "12.08",
+    "action": "new",
+    "scene": "12",
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "9.02",
+    "line": "e2-a2-0004",
+    "plan_s": 0.9,
+    "lock_s": 0.9,
+    "ok": true
+   },
+   {
+    "beat": "9.04",
+    "line": "e2-a2-0007",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "9.04",
+    "line": "e2-a2-0008",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "9.04",
+    "line": "e2-a2-0009",
+    "plan_s": 0.4,
+    "lock_s": 0.4,
+    "ok": true
+   },
+   {
+    "beat": "9.05",
+    "line": "e2-a2-0011",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "9.06",
+    "line": "e2-a2-0013",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "9.06",
+    "line": "e2-a2-0014",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "9.06",
+    "line": "e2-a2-0015",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "9.06",
+    "line": "e2-a2-0016",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "11.02",
+    "line": "e2-a2-0025",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   },
+   {
+    "beat": "11.04",
+    "line": "e2-a2-0027",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "11.04",
+    "line": "e2-a2-0028",
+    "plan_s": -0.55,
+    "lock_s": -0.55,
+    "ok": true
+   },
+   {
+    "beat": "11.05",
+    "line": "e2-a2-0030",
+    "plan_s": 0.4,
+    "lock_s": 0.4,
+    "ok": true
+   },
+   {
+    "beat": "11.07",
+    "line": "e2-a2-0033",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "11.07",
+    "line": "e2-a2-0034",
+    "plan_s": 1.0,
+    "lock_s": 1.0,
+    "ok": true
+   },
+   {
+    "beat": "11.15",
+    "line": "e2-a2-0038",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "8.01",
+    "what": "new beat (montage): OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe (darkroom, darkroom, mas, orb)"
+   },
+   {
+    "beat": "8.01",
+    "what": "on-screen add: \"EUROPE PASSES ITS AI RULEBOOK · 523–46\" (2.35-6.56)"
+   },
+   {
+    "beat": "8.01",
+    "what": "on-screen add: \"SNOOZE\" (2.35-6.56)"
+   },
+   {
+    "beat": "8.01",
+    "what": "sound ui_toast_pop at 2.19 s (the plan's)"
+   },
+   {
+    "beat": "8.01",
+    "what": "sound ui_swipe at 6.72 s (the plan's)"
+   },
+   {
+    "beat": "8.02",
+    "what": "new beat (montage): POV · the monitor scrolls to a news site: a headline over the segment's video still (three cardboard CEOs in lanyards against a height chart; the host turns to the lens) (screen, darkroom, mas)"
+   },
+   {
+    "beat": "8.02",
+    "what": "on-screen add: \"RAIL: APR 1, 2024\" (0.3-2.1)"
+   },
+   {
+    "beat": "8.02",
+    "what": "on-screen add: \"…TAKES AIM AT MAS, TASYA AND RADNUS…\" (2.3-5.2)"
+   },
+   {
+    "beat": "8.02",
+    "what": "sound mouse_scroll at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "8.02",
+    "what": "sound news_desk_sting at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "8.03",
+    "what": "new beat (scene): OTS · Mas at the monitor, the lineup on it (darkroom, darkroom, mas)"
+   },
+   {
+    "beat": "8.03",
+    "what": "new line e2-vo-04 (mas, 6.06 s, new take) at start+0.84"
+   },
+   {
+    "beat": "8.03",
+    "what": "the plan's 7.74 s: its tail 0.84 s after the last line"
+   },
+   {
+    "beat": "8.04",
+    "what": "new beat (montage): POV · his calendar: Elgoog's keynote already on Tuesday; he drags his own launch onto the Monday square (screen, darkroom, mas)"
+   },
+   {
+    "beat": "8.04",
+    "what": "on-screen add: \"RAIL: MAY 10\" (0.2-1.8)"
+   },
+   {
+    "beat": "8.04",
+    "what": "on-screen add: \"ELGOOG · DEVELOPER KEYNOTE · TUE 14\" (1.9-4.6)"
+   },
+   {
+    "beat": "8.04",
+    "what": "on-screen add: \"NOPEAI · SPRING UPDATE\" (2.4-4.6)"
+   },
+   {
+    "beat": "8.04",
+    "what": "on-screen add: \"MON 13\" (2.4-4.6)"
+   },
+   {
+    "beat": "8.04",
+    "what": "sound ui_drop_snap at 4.00 s (the plan's)"
+   },
+   {
+    "beat": "8.05",
+    "what": "new beat (scene): MCU · Mas, the lit Monday square in his eyes (darkroom, darkroom, mas)"
+   },
+   {
+    "beat": "8.05",
+    "what": "new line e2-vo-05 (mas, 1.84 s, new take) at start+0.67"
+   },
+   {
+    "beat": "8.05",
+    "what": "the plan's 3.18 s: its tail 0.67 s after the last line"
+   },
+   {
+    "beat": "8.06",
+    "what": "new beat (scene): ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call (call, darkroom, mas)"
+   },
+   {
+    "beat": "8.06",
+    "what": "on-screen add: \"ELPPA\" (0.34-9.83)"
+   },
+   {
+    "beat": "8.06",
+    "what": "on-screen add: \"…\" (7.93-8.93)"
+   },
+   {
+    "beat": "8.06",
+    "what": "on-screen add: \"CONFIRMED\" (8.93-9.83)"
+   },
+   {
+    "beat": "8.06",
+    "what": "new line e2-a2-0001 (mas, 4.94 s, new take) at start+2.69"
+   },
+   {
+    "beat": "8.06",
+    "what": "the plan's 9.83 s: its tail 2.20 s after the last line"
+   },
+   {
+    "beat": "8.06",
+    "what": "sound call_ring at 0.34 s (the plan's)"
+   },
+   {
+    "beat": "8.06",
+    "what": "sound call_connect at 2.02 s (the plan's)"
+   },
+   {
+    "beat": "8.06",
+    "what": "sound ui_confirm_chip at 8.93 s (the plan's)"
+   },
+   {
+    "beat": "8.07",
+    "what": "new beat (montage): POV · an invite drops into his calendar under the Monday square; he accepts (screen, darkroom, mas)"
+   },
+   {
+    "beat": "8.07",
+    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.84-5.38)"
+   },
+   {
+    "beat": "8.07",
+    "what": "sound invite_drop at 0.67 s (the plan's)"
+   },
+   {
+    "beat": "8.07",
+    "what": "sound post_click at 2.69 s (the plan's)"
+   },
+   {
+    "beat": "9.01",
+    "what": "new beat (scene): WIDE · the wings in work light: road cases, cables, the monitor screen-right, Gerg's road case in the foreground (stage, wings, rima, engineer, gerg, mas, orb, chatgtp)"
+   },
+   {
+    "beat": "9.01",
+    "what": "on-screen add: \"RAIL: MAY 13, 2024\" (0.3-2.1)"
+   },
+   {
+    "beat": "9.01",
+    "what": "new line e2-a2-0002 (rima, 5.39 s, new take) at start+2.4"
+   },
+   {
+    "beat": "9.01",
+    "what": "the plan's 8.29 s: its tail 0.50 s after the last line"
+   },
+   {
+    "beat": "9.02",
+    "what": "new beat (scene): MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!! (stage, wings, engineer, rima, chatgtp)"
+   },
+   {
+    "beat": "9.02",
+    "what": "on-screen add: \"yes!!\" (5.12-8.19)"
+   },
+   {
+    "beat": "9.02",
+    "what": "new line e2-a2-0003 (engineer, 4.60 s, new take) at start+0.42"
+   },
+   {
+    "beat": "9.02",
+    "what": "new line e2-a2-0004 (engineer, 1.77 s, new take) after e2-a2-0003 +0.9"
+   },
+   {
+    "beat": "9.02",
+    "what": "the plan's 8.19 s: its tail 0.50 s after the last line"
+   },
+   {
+    "beat": "9.02",
+    "what": "sound ui_chirp_bright at 5.12 s (the plan's)"
+   },
+   {
+    "beat": "9.03",
+    "what": "new beat (scene): SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground (stage, wings, engineer, gerg)"
+   },
+   {
+    "beat": "9.03",
+    "what": "on-screen add: \"[laughter]\" (0.84-4.82)"
+   },
+   {
+    "beat": "9.03",
+    "what": "new line e2-a2-0005 (gerg, 1.96 s, new take) at start+2.19"
+   },
+   {
+    "beat": "9.03",
+    "what": "the plan's 4.82 s: its tail 0.67 s after the last line"
+   },
+   {
+    "beat": "9.03",
+    "what": "sound engineer_laugh_take at 0.17 s (the plan's)"
+   },
+   {
+    "beat": "9.03",
+    "what": "sound tag_drop at 1.01 s (the plan's)"
+   },
+   {
+    "beat": "9.04",
+    "what": "new beat (scene): 2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins) (stage, wings, mas, rima)"
+   },
+   {
+    "beat": "9.04",
+    "what": "new line e2-a2-0006 (mas, 0.68 s, new take) at start+0.84"
+   },
+   {
+    "beat": "9.04",
+    "what": "new line e2-a2-0007 (rima, 6.23 s, new take) after e2-a2-0006 +0.5"
+   },
+   {
+    "beat": "9.04",
+    "what": "new line e2-a2-0008 (mas, 1.11 s, new take) after e2-a2-0007 +0.5"
+   },
+   {
+    "beat": "9.04",
+    "what": "new line e2-a2-0009 (rima, 2.05 s, new take) after e2-a2-0008 +0.4"
+   },
+   {
+    "beat": "9.04",
+    "what": "the plan's 13.32 s: its tail 1.01 s after the last line"
+   },
+   {
+    "beat": "9.05",
+    "what": "new beat (scene): WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following (stage, wings, rima, engineer)"
+   },
+   {
+    "beat": "9.05",
+    "what": "new line e2-a2-0010 (engineer, 2.32 s, new take) at start+1.68"
+   },
+   {
+    "beat": "9.05",
+    "what": "new line e2-a2-0011 (rima, 5.62 s, new take) after e2-a2-0010 +0.3"
+   },
+   {
+    "beat": "9.05",
+    "what": "the plan's 10.42 s: its tail 0.50 s after the last line"
+   },
+   {
+    "beat": "9.06",
+    "what": "new beat (scene): SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid (stage, wings, rima, chatgtp)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE\" (0.5-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"SINCE SEP 2023\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE 1\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE 2\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE 3\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE 4\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "on-screen add: \"VOICE 5\" (0.67-6.96)"
+   },
+   {
+    "beat": "9.06",
+    "what": "new line e2-a2-0012 (voice1, 0.49 s, new take) at start+1.68"
+   },
+   {
+    "beat": "9.06",
+    "what": "new line e2-a2-0013 (voice2, 0.33 s, new take) after e2-a2-0012 +0.3"
+   },
+   {
+    "beat": "9.06",
+    "what": "new line e2-a2-0014 (voice3, 0.44 s, new take) after e2-a2-0013 +0.3"
+   },
+   {
+    "beat": "9.06",
+    "what": "new line e2-a2-0015 (voice4, 0.70 s, new take) after e2-a2-0014 +0.3"
+   },
+   {
+    "beat": "9.06",
+    "what": "new line e2-a2-0016 (chatgtp, 0.52 s, new take) after e2-a2-0015 +0.3"
+   },
+   {
+    "beat": "9.06",
+    "what": "the plan's 6.96 s: its tail 1.60 s after the last line"
+   },
+   {
+    "beat": "9.06",
+    "what": "sound panel_unfold_step at 5.56 s (the plan's)"
+   },
+   {
+    "beat": "9.06",
+    "what": "sound drafting_ink_stroke at 6.36 s (the plan's)"
+   },
+   {
+    "beat": "10.01",
+    "what": "new beat (scene): GFX · the full sheet: the stamp OMNI (void, blueprint, rima)"
+   },
+   {
+    "beat": "10.01",
+    "what": "on-screen add: \"OMNI\" (0.76-6.47)"
+   },
+   {
+    "beat": "10.01",
+    "what": "on-screen add: \"(o = omni)\" (1.14-6.47)"
+   },
+   {
+    "beat": "10.01",
+    "what": "new line e2-a2-0017 (rima, 3.93 s, new take) at start+2.03"
+   },
+   {
+    "beat": "10.01",
+    "what": "the plan's 6.47 s: its tail 0.51 s after the last line"
+   },
+   {
+    "beat": "10.01",
+    "what": "sound rubber_stamp_C at 0.76 s (the plan's)"
+   },
+   {
+    "beat": "10.02",
+    "what": "new beat (scene): GFX · section, a pan from BEFORE to NOW, starting on BEFORE: three clerks passing a note → detail: the grate (void, blueprint, rima)"
+   },
+   {
+    "beat": "10.02",
+    "what": "on-screen add: \"BEFORE\" (0.26-9.65)"
+   },
+   {
+    "beat": "10.02",
+    "what": "on-screen add: \"EAR → [1 · SPEECH TO TEXT] → [2 · MODEL] → [3 · TEXT TO SPEECH] → MOUT\" (0.74-9.65)"
+   },
+   {
+    "beat": "10.02",
+    "what": "on-screen add: \"TONE · LAUGHTER · WHO'S TALKING · BACKGROUND NOISE\" (6.65-9.65)"
+   },
+   {
+    "beat": "10.02",
+    "what": "on-screen add: \"[laughter]\" (8.25-9.65)"
+   },
+   {
+    "beat": "10.02",
+    "what": "new line e2-a2-0018 (rima, 7.21 s, new take) at start+0.64"
+   },
+   {
+    "beat": "10.02",
+    "what": "the plan's 9.65 s: its tail 1.80 s after the last line"
+   },
+   {
+    "beat": "10.02",
+    "what": "sound drafting_ink_stroke at 0.51 s (the plan's)"
+   },
+   {
+    "beat": "10.02",
+    "what": "sound paper_curl at 6.85 s (the plan's)"
+   },
+   {
+    "beat": "10.03",
+    "what": "new beat (scene): GFX · NOW: an ear, an eye and a mouth wired into one box, GTP-4o (void, blueprint, rima)"
+   },
+   {
+    "beat": "10.03",
+    "what": "on-screen add: \"NOW\" (0.26-6.53)"
+   },
+   {
+    "beat": "10.03",
+    "what": "on-screen add: \"GTP-4o\" (0.64-6.53)"
+   },
+   {
+    "beat": "10.03",
+    "what": "new line e2-a2-0019 (rima, 4.87 s, new take) at start+0.64"
+   },
+   {
+    "beat": "10.03",
+    "what": "the plan's 6.53 s: its tail 1.02 s after the last line"
+   },
+   {
+    "beat": "10.03",
+    "what": "sound tiny_laugh_back at 5.01 s (the plan's)"
+   },
+   {
+    "beat": "10.04",
+    "what": "new beat (scene): GFX · a pan down the three steps: step 1 (void, blueprint, rima, engineer)"
+   },
+   {
+    "beat": "10.04",
+    "what": "on-screen add: \"1.\" (3.62-4.89)"
+   },
+   {
+    "beat": "10.04",
+    "what": "on-screen add: \"232 MS (AVG 320)\" (3.72-4.89)"
+   },
+   {
+    "beat": "10.04",
+    "what": "new line e2-a2-0020 (rima, 3.11 s, new take) at start+0.51"
+   },
+   {
+    "beat": "10.04",
+    "what": "the plan's 4.89 s: its tail 1.27 s after the last line"
+   },
+   {
+    "beat": "10.04",
+    "what": "sound rubber_stamp_C at 3.62 s (the plan's)"
+   },
+   {
+    "beat": "10.05",
+    "what": "new beat (scene): GFX · step 2 (MON, a tiny RADNUS on the Tuesday square) and step 3 ($0, a tiny crowd floods in) (void, blueprint, rima, radnus)"
+   },
+   {
+    "beat": "10.05",
+    "what": "on-screen add: \"2.\" (1.38-5.92)"
+   },
+   {
+    "beat": "10.05",
+    "what": "on-screen add: \"MON\" (1.38-5.92)"
+   },
+   {
+    "beat": "10.05",
+    "what": "on-screen add: \"3.\" (3.54-5.92)"
+   },
+   {
+    "beat": "10.05",
+    "what": "on-screen add: \"$0\" (3.54-5.92)"
+   },
+   {
+    "beat": "10.05",
+    "what": "new line e2-a2-0021 (rima, 3.76 s, new take) at start+0.38"
+   },
+   {
+    "beat": "10.05",
+    "what": "the plan's 5.92 s: its tail 1.78 s after the last line"
+   },
+   {
+    "beat": "10.05",
+    "what": "sound rubber_stamp_C at 1.38 s (the plan's)"
+   },
+   {
+    "beat": "10.05",
+    "what": "sound rubber_stamp_C at 3.54 s (the plan's)"
+   },
+   {
+    "beat": "10.05",
+    "what": "sound tiny_crowd_patter at 3.84 s (the plan's)"
+   },
+   {
+    "beat": "10.06",
+    "what": "new beat (scene): GFX · the full sheet again: the tiny stage in the last square, tiny RIMA in a tiny spotlight (void, blueprint, rima)"
+   },
+   {
+    "beat": "10.06",
+    "what": "new line e2-a2-0022 (rima, 4.28 s, new take) at start+0.38"
+   },
+   {
+    "beat": "10.06",
+    "what": "the plan's 5.42 s: its tail 0.76 s after the last line"
+   },
+   {
+    "beat": "10.07",
+    "what": "new beat (scene): GFX · the break: an empty speech bubble drifts in from the margin and blots out the tiny stage; the blueprint tears (void, blueprint, no figures)"
+   },
+   {
+    "beat": "10.07",
+    "what": "sound paper_tear at 5.34 s (the plan's)"
+   },
+   {
+    "beat": "11.01",
+    "what": "new beat (scene): WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark (stage, demo_house, rima, chatgtp, engineer, staff)"
+   },
+   {
+    "beat": "11.01",
+    "what": "new line e2-a2-0023 (rima, 5.91 s, new take) at start+2"
+   },
+   {
+    "beat": "11.01",
+    "what": "the plan's 8.48 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "11.01",
+    "what": "sound spotlight_swing at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "11.02",
+    "what": "new beat (scene): SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner (stage, demo_house, chatgtp)"
+   },
+   {
+    "beat": "11.02",
+    "what": "on-screen add: \"VOICE 5\" (1.6-5.0)"
+   },
+   {
+    "beat": "11.02",
+    "what": "new line e2-a2-0024 (chatgtp, 1.22 s, new take) at start+2"
+   },
+   {
+    "beat": "11.02",
+    "what": "new line e2-a2-0025 (chatgtp, 0.61 s, new take) after e2-a2-0024 +0.6"
+   },
+   {
+    "beat": "11.02",
+    "what": "the plan's 5.0 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "11.02",
+    "what": "sound palette_step_F at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "11.02",
+    "what": "sound palette_step_F at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "11.02",
+    "what": "sound palette_step_F at 1.40 s (the plan's)"
+   },
+   {
+    "beat": "11.03",
+    "what": "new beat (scene): GLYPH 5 frames · its eyes are tokens pointed screen-left, into the wings → 2S · the wings: Mas and THE ORB (stage, wings, mas, orb)"
+   },
+   {
+    "beat": "11.03",
+    "what": "on-screen add: \"verified: …\" (0.9-2.6)"
+   },
+   {
+    "beat": "11.03",
+    "what": "sound glyph_blink at 0.05 s (the plan's)"
+   },
+   {
+    "beat": "11.03",
+    "what": "sound orb_scan_sweep at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "11.03",
+    "what": "sound ui_toast_pop at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "11.04",
+    "what": "new beat (scene): WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen (stage, demo_house, rima, chatgtp, engineer, staff)"
+   },
+   {
+    "beat": "11.04",
+    "what": "new line e2-a2-0026 (engineer, 4.62 s, new take) at start+0.57"
+   },
+   {
+    "beat": "11.04",
+    "what": "new line e2-a2-0027 (chatgtp, 4.75 s, new take) after e2-a2-0026 +0.2"
+   },
+   {
+    "beat": "11.04",
+    "what": "new line e2-a2-0028 (engineer, 0.71 s, new take) after e2-a2-0027 +-0.55"
+   },
+   {
+    "beat": "11.04",
+    "what": "the plan's 13.3 s: its tail 3.00 s after the last line"
+   },
+   {
+    "beat": "11.04",
+    "what": "sound crowd_laugh_m at 10.44 s (the plan's)"
+   },
+   {
+    "beat": "11.04",
+    "what": "sound spotlight_swing at 10.94 s (the plan's)"
+   },
+   {
+    "beat": "11.05",
+    "what": "new beat (scene): WIDE · the meter frame → SCR · three mouths (stage, demo_house, rima, chatgtp, engineer, staff)"
+   },
+   {
+    "beat": "11.05",
+    "what": "new line e2-a2-0029 (engineer, 3.16 s, new take) at start+0.71"
+   },
+   {
+    "beat": "11.05",
+    "what": "new line e2-a2-0030 (chatgtp, 2.28 s, new take) after e2-a2-0029 +0.4"
+   },
+   {
+    "beat": "11.05",
+    "what": "the plan's 9.75 s: its tail 3.20 s after the last line"
+   },
+   {
+    "beat": "11.05",
+    "what": "sound crowd_laugh_l at 6.75 s (the plan's)"
+   },
+   {
+    "beat": "11.05",
+    "what": "sound spotlight_swing at 7.55 s (the plan's)"
+   },
+   {
+    "beat": "11.06",
+    "what": "new beat (scene): MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order (stage, demo_house, rima)"
+   },
+   {
+    "beat": "11.06",
+    "what": "new line e2-a2-0031 (rima, 5.19 s, new take) at start+1.13"
+   },
+   {
+    "beat": "11.06",
+    "what": "the plan's 6.89 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "11.06",
+    "what": "sound clicker_click at 0.56 s (the plan's)"
+   },
+   {
+    "beat": "11.07",
+    "what": "new beat (scene): WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step (stage, demo_house, rima, chatgtp, engineer, staff)"
+   },
+   {
+    "beat": "11.07",
+    "what": "on-screen add: \"😊\" (8.09-10.99)"
+   },
+   {
+    "beat": "11.07",
+    "what": "new line e2-a2-0032 (engineer, 1.12 s, new take) at start+0.57"
+   },
+   {
+    "beat": "11.07",
+    "what": "new line e2-a2-0033 (chatgtp, 3.05 s, new take) after e2-a2-0032 +0.2"
+   },
+   {
+    "beat": "11.07",
+    "what": "new line e2-a2-0034 (chatgtp, 2.05 s, new take) after e2-a2-0033 +1.0"
+   },
+   {
+    "beat": "11.07",
+    "what": "the plan's 10.99 s: its tail 3.00 s after the last line"
+   },
+   {
+    "beat": "11.07",
+    "what": "sound crowd_laugh_m at 8.29 s (the plan's)"
+   },
+   {
+    "beat": "11.07",
+    "what": "sound spotlight_swing at 9.09 s (the plan's)"
+   },
+   {
+    "beat": "11.08",
+    "what": "new beat (scene): SCR · the stream's chat scrolls up the side: what's the catch? sticks (stage, demo_house, chatgtp)"
+   },
+   {
+    "beat": "11.08",
+    "what": "on-screen add: \"what's the catch?\" (0.3-3.73)"
+   },
+   {
+    "beat": "11.08",
+    "what": "new line e2-a2-0035 (chatgtp, 0.63 s, new take) at start+1.3"
+   },
+   {
+    "beat": "11.08",
+    "what": "the plan's 3.73 s: its tail 1.80 s after the last line"
+   },
+   {
+    "beat": "11.08",
+    "what": "sound crowd_laugh_s at 2.13 s (the plan's)"
+   },
+   {
+    "beat": "11.09",
+    "what": "new beat (scene): MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR) (stage, demo_house, rima)"
+   },
+   {
+    "beat": "11.09",
+    "what": "new line e2-a2-0036 (rima, 1.78 s, new take) at start+2.5"
+   },
+   {
+    "beat": "11.09",
+    "what": "the plan's 4.99 s: its tail 0.71 s after the last line"
+   },
+   {
+    "beat": "11.10",
+    "what": "new beat (scene): SCR → WIDE · the big screen: LIVE → ENDED; the house lights up a step; people start to move (stage, demo_house, staff)"
+   },
+   {
+    "beat": "11.10",
+    "what": "on-screen add: \"LIVE\" (0.0-0.8)"
+   },
+   {
+    "beat": "11.10",
+    "what": "on-screen add: \"ENDED\" (0.8-3.0)"
+   },
+   {
+    "beat": "11.10",
+    "what": "sound stream_end_tone at 0.70 s (the plan's)"
+   },
+   {
+    "beat": "11.10",
+    "what": "sound house_lights_up at 1.20 s (the plan's)"
+   },
+   {
+    "beat": "11.11",
+    "what": "new beat (scene): MEDIUM · in the wings, Mas takes out his phone → ECU · his thumb typing h · e · r (stage, wings, mas)"
+   },
+   {
+    "beat": "11.11",
+    "what": "on-screen add: \"h\" (1.0-3.0)"
+   },
+   {
+    "beat": "11.11",
+    "what": "on-screen add: \"he\" (1.5-3.0)"
+   },
+   {
+    "beat": "11.11",
+    "what": "on-screen add: \"her\" (2.1-3.0)"
+   },
+   {
+    "beat": "11.11",
+    "what": "sound typing_soft at 1.00 s (the plan's)"
+   },
+   {
+    "beat": "11.11",
+    "what": "sound typing_soft at 1.50 s (the plan's)"
+   },
+   {
+    "beat": "11.11",
+    "what": "sound typing_soft at 2.10 s (the plan's)"
+   },
+   {
+    "beat": "11.12",
+    "what": "new beat (scene): MCU · his face in the work light, still (2 beats) → POV · the post lands (stage, wings, mas)"
+   },
+   {
+    "beat": "11.12",
+    "what": "on-screen add: \"her\" (1.4-3.2)"
+   },
+   {
+    "beat": "11.12",
+    "what": "sound post_click at 1.30 s (the plan's)"
+   },
+   {
+    "beat": "11.13",
+    "what": "new beat (scene): WIDE · the word becomes a blimp and rises over the emptying house; the press row's screens and the raised phones swing to it (stage, demo_house, staff)"
+   },
+   {
+    "beat": "11.13",
+    "what": "sound blimp_inflate_step at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "11.13",
+    "what": "sound blimp_inflate_step at 2.80 s (the plan's)"
+   },
+   {
+    "beat": "11.13",
+    "what": "sound blimp_inflate_step at 5.30 s (the plan's)"
+   },
+   {
+    "beat": "11.13",
+    "what": "sound blimp_inflate_step at 7.80 s (the plan's)"
+   },
+   {
+    "beat": "11.13",
+    "what": "sound phone_wave_buzz at 6.00 s (the plan's)"
+   },
+   {
+    "beat": "11.14",
+    "what": "new beat (scene): MCU · RIMA on her mark, composed, not looking up (stage, demo_house, rima)"
+   },
+   {
+    "beat": "11.15",
+    "what": "new beat (scene): 2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up (stage, demo_house, engineer, rima)"
+   },
+   {
+    "beat": "11.15",
+    "what": "new line e2-a2-0037 (engineer, 1.68 s, new take) at start+0.99"
+   },
+   {
+    "beat": "11.15",
+    "what": "new line e2-a2-0038 (engineer, 3.03 s, new take) after e2-a2-0037 +0.6"
+   },
+   {
+    "beat": "11.15",
+    "what": "the plan's 6.87 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "11.15",
+    "what": "sound headset_unclip at 0.28 s (the plan's)"
+   },
+   {
+    "beat": "11.16",
+    "what": "new beat (scene): WIDE · every head near the wings turns; the blimp over the emptying house (stage, demo_house, staff)"
+   },
+   {
+    "beat": "11.16",
+    "what": "sound cloth_rustle at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "11.16",
+    "what": "sound crowd_hush at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "12.01",
+    "what": "new beat (scene): WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark → MCU · Rima, one breath (stage, demo_house, rima)"
+   },
+   {
+    "beat": "12.01",
+    "what": "sound house_lights_up at 0.24 s (the plan's)"
+   },
+   {
+    "beat": "12.02",
+    "what": "new beat (scene): WIDE · the front row from the wings, in plain house light, the house empty (stage, demo_house, no figures)"
+   },
+   {
+    "beat": "12.02",
+    "what": "on-screen add: \"RESERVED: CHIEF SCIENTIST\" (0.48-3.39)"
+   },
+   {
+    "beat": "12.03",
+    "what": "new beat (scene): ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat (stage, demo_house, alyi)"
+   },
+   {
+    "beat": "12.03",
+    "what": "sound door_motif_note at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "12.04",
+    "what": "new beat (scene): BLACK · a beat (void, black, no figures)"
+   },
+   {
+    "beat": "12.05",
+    "what": "new beat (scene): MCU · Mas at his desk, the monitor beside him (the news graphic legible); his hand minimising it (darkroom, darkroom, mas)"
+   },
+   {
+    "beat": "12.05",
+    "what": "on-screen add: \"RAIL: MAY 14, 2024\" (0.3-2.1)"
+   },
+   {
+    "beat": "12.05",
+    "what": "on-screen add: \"ELGOOG'S KEYNOTE\" (2.0-4.6)"
+   },
+   {
+    "beat": "12.05",
+    "what": "on-screen add: \"OMNI\" (2.0-4.6)"
+   },
+   {
+    "beat": "12.05",
+    "what": "sound news_bed_tiny at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "12.05",
+    "what": "sound ui_minimise at 4.60 s (the plan's)"
+   },
+   {
+    "beat": "12.06",
+    "what": "new beat (scene): ECU · his phone lights: Alyi's post, in its own UI; his thumb scrolls once (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "12.06",
+    "what": "on-screen add: \"After almost a decade, I have made the decision to leave NOPEAI.\" (0.4-3.9)"
+   },
+   {
+    "beat": "12.06",
+    "what": "on-screen add: \"…I will miss everyone dearly.\" (4.3-6.4)"
+   },
+   {
+    "beat": "12.06",
+    "what": "sound phone_buzz_step_1 at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "12.06",
+    "what": "sound thumb_scroll at 4.00 s (the plan's)"
+   },
+   {
+    "beat": "12.07",
+    "what": "new beat (scene): ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…and a dear friend.\" (screen, darkroom, mas)"
+   },
+   {
+    "beat": "12.07",
+    "what": "on-screen add: \"ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI i\" (0.4-10.28)"
+   },
+   {
+    "beat": "12.07",
+    "what": "new line e2-vo-06 (mas, 1.20 s, new take) at start+8.6"
+   },
+   {
+    "beat": "12.07",
+    "what": "the plan's 10.28 s: its tail 0.48 s after the last line"
+   },
+   {
+    "beat": "12.07",
+    "what": "sound key_tap_soft_01 at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "12.07",
+    "what": "sound key_tap_soft_03 at 1.40 s (the plan's)"
+   },
+   {
+    "beat": "12.07",
+    "what": "sound key_tap_soft_05 at 2.20 s (the plan's)"
+   },
+   {
+    "beat": "12.07",
+    "what": "sound post_click at 3.20 s (the plan's)"
+   },
+   {
+    "beat": "12.08",
+    "what": "new beat (scene): MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat (darkroom, darkroom, mas)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "act3": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-act3.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 321.0,
+  "seconds": 321.0,
+  "frames": 7704,
+  "source_frames": 0,
+  "beats": 58,
+  "lines": 28,
+  "vo": 4,
+  "vo_lines": [
+   "e2-vo-07 (15.03): a hundred and seventy-six days.",
+   "e2-vo-08 (15.17): i'll ask him in person.",
+   "e2-vo-09 (17.11): everyone who signed. the post. everyone who signed.",
+   "e2-vo-10 (17.13): not until legal has every name."
+  ],
+  "scenes": [
+   "13",
+   "14",
+   "15",
+   "17"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": 0.45,
+   "inside_beats_n": 9,
+   "segment_s": 1.61,
+   "segment_n": 27,
+   "spoken_only_segment_s": 0.9
+  },
+  "beat_lengths": [
+   {
+    "beat": "13.01",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 8.54,
+    "lock_s": 8.54,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.02",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 4.37,
+    "lock_s": 4.37,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.03",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 6.4,
+    "lock_s": 6.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.04",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.05",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 4.02,
+    "lock_s": 4.02,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.06",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 3.27,
+    "lock_s": 3.27,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.01",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 2.8,
+    "lock_s": 2.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.02",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.03",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.04",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 5.22,
+    "lock_s": 5.22,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.05",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 3.59,
+    "lock_s": 3.59,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.06",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 4.2,
+    "lock_s": 4.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.07",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 4.92,
+    "lock_s": 4.92,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.08",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 9.1,
+    "lock_s": 9.1,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.09",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 3.4,
+    "lock_s": 3.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.10",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 6.0,
+    "lock_s": 6.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.11",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 5.2,
+    "lock_s": 5.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "14.12",
+    "action": "new",
+    "scene": "14",
+    "src_s": null,
+    "est_s": 4.57,
+    "lock_s": 4.57,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.01",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.02",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 3.76,
+    "lock_s": 3.76,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.03",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 7.18,
+    "lock_s": 7.18,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.04",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 6.6,
+    "lock_s": 6.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.05",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 7.4,
+    "lock_s": 7.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.06",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 7.06,
+    "lock_s": 7.06,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.07",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 7.46,
+    "lock_s": 7.46,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.08",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 6.44,
+    "lock_s": 6.44,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.09",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 3.49,
+    "lock_s": 3.49,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.10",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 8.9,
+    "lock_s": 8.9,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.11",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 5.41,
+    "lock_s": 5.41,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.12",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 3.22,
+    "lock_s": 3.22,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.13",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 4.83,
+    "lock_s": 4.83,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.14",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 1.88,
+    "lock_s": 1.88,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.15",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 4.83,
+    "lock_s": 4.83,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.16",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 4.56,
+    "lock_s": 4.56,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.17",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 4.82,
+    "lock_s": 4.82,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.18",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 4.56,
+    "lock_s": 4.56,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "15.19",
+    "action": "new",
+    "scene": "15",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.01",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.02",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 6.6,
+    "lock_s": 6.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.03",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 3.8,
+    "lock_s": 3.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.04",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 15.28,
+    "lock_s": 15.28,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.05",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.16,
+    "lock_s": 4.16,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.06",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 5.86,
+    "lock_s": 5.86,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.07",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.59,
+    "lock_s": 4.59,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.08",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.8,
+    "lock_s": 4.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.09",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 6.49,
+    "lock_s": 6.49,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.10",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.11",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.3,
+    "lock_s": 4.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.12",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 10.07,
+    "lock_s": 10.07,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.13",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 5.0,
+    "lock_s": 5.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.14",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.15",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 11.87,
+    "lock_s": 11.87,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.16",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 5.88,
+    "lock_s": 5.88,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.17",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 10.0,
+    "lock_s": 10.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.18",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 6.9,
+    "lock_s": 6.9,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.19",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.4,
+    "lock_s": 4.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.20",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 5.4,
+    "lock_s": 5.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "17.21",
+    "action": "new",
+    "scene": "17",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "13.01",
+    "line": "e2-a3-0002",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "13.02",
+    "line": "e2-a3-0004",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "13.02",
+    "line": "e2-a3-0003",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
+    "beat": "14.08",
+    "line": "e2-a3-0024",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "14.08",
+    "line": "e2-a3-0007",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "14.08",
+    "line": "e2-a3-0006",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "15.03",
+    "line": "e2-vo-07",
+    "plan_s": 1.2,
+    "lock_s": 1.2,
+    "ok": true
+   },
+   {
+    "beat": "15.06",
+    "line": "e2-a3-0010",
+    "plan_s": 0.1,
+    "lock_s": 0.1,
+    "ok": true
+   },
+   {
+    "beat": "15.07",
+    "line": "e2-a3-0012",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "15.07",
+    "line": "e2-a3-0013",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "15.11",
+    "line": "e2-a3-0015",
+    "plan_s": 0.9,
+    "lock_s": 0.9,
+    "ok": true
+   },
+   {
+    "beat": "17.06",
+    "line": "e2-a3-0018",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "17.16",
+    "line": "e2-a3-0022",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "13.01",
+    "what": "new beat (scene): OTS-WIDE · over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled flyer's corner, one smooths hers back down (lobby, lobby_day, mas, staffer, staffer2, gerg, staff)"
+   },
+   {
+    "beat": "13.01",
+    "what": "on-screen add: \"WHERE IS ALYI?\" (0.3-8.54)"
+   },
+   {
+    "beat": "13.01",
+    "what": "new line e2-a3-0001 (staffer, 3.36 s, new take) at start+2.4"
+   },
+   {
+    "beat": "13.01",
+    "what": "new line e2-a3-0002 (staffer2, 2.38 s, new take) after e2-a3-0001 +0.25"
+   },
+   {
+    "beat": "13.01",
+    "what": "the plan's 8.54 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "13.02",
+    "what": "new beat (scene): OTS-WIDE · the first staffer turns to Mas, the peeled corner in her hand (lobby, lobby_day, staffer, mas)"
+   },
+   {
+    "beat": "13.02",
+    "what": "new line e2-a3-0003 (staffer, 2.57 s, new take) at start+0.15"
+   },
+   {
+    "beat": "13.02",
+    "what": "new line e2-a3-0004 (mas, 0.79 s, new take) after e2-a3-0003 +0.45"
+   },
+   {
+    "beat": "13.02",
+    "what": "the plan's 4.37 s: its tail 0.41 s after the last line"
+   },
+   {
+    "beat": "13.03",
+    "what": "new beat (scene): ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down (lobby, lobby_day, mas)"
+   },
+   {
+    "beat": "13.03",
+    "what": "sound paper_flutter at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "13.03",
+    "what": "sound tape_pull at 2.40 s (the plan's)"
+   },
+   {
+    "beat": "13.04",
+    "what": "new beat (scene): SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser (screen, lobby_day, remuhcs)"
+   },
+   {
+    "beat": "13.04",
+    "what": "on-screen add: \"REMUHCS · MAJORITY LEADER\" (0.3-2.6)"
+   },
+   {
+    "beat": "13.04",
+    "what": "on-screen add: \"BIPARTISAN SENATE AI ROADMAP\" (0.5-4.4)"
+   },
+   {
+    "beat": "13.04",
+    "what": "on-screen add: \"ROADMAP · $32B/YR\" (0.6-4.4)"
+   },
+   {
+    "beat": "13.04",
+    "what": "on-screen add: \"FORUM ×9\" (0.6-4.4)"
+   },
+   {
+    "beat": "13.04",
+    "what": "on-screen add: \"FLOOR\" (1.6-4.4)"
+   },
+   {
+    "beat": "13.04",
+    "what": "sound blip_text_neutral at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "13.04",
+    "what": "sound lectern_bump at 2.20 s (the plan's)"
+   },
+   {
+    "beat": "13.04",
+    "what": "sound lectern_bump at 3.40 s (the plan's)"
+   },
+   {
+    "beat": "13.04",
+    "what": "names[]: remuhcs at 0.3 s (its plate)"
+   },
+   {
+    "beat": "13.05",
+    "what": "new beat (scene): SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern (screen, lobby_day, remuhcs)"
+   },
+   {
+    "beat": "13.05",
+    "what": "new line e2-a3-0005 (reporter, 2.01 s, new take) at start+0.41"
+   },
+   {
+    "beat": "13.05",
+    "what": "the plan's 4.02 s: its tail 1.60 s after the last line"
+   },
+   {
+    "beat": "13.05",
+    "what": "sound sticker_slap_tv at 3.02 s (the plan's)"
+   },
+   {
+    "beat": "13.06",
+    "what": "new beat (scene): WIDE · the lobby master: Mas walks off frame-right into the open floor; the band lights as he crosses the threshold (lobby, lobby_day, mas)"
+   },
+   {
+    "beat": "13.06",
+    "what": "sound ui_band_on at 2.18 s (the plan's)"
+   },
+   {
+    "beat": "14.01",
+    "what": "new beat (scene): WIDE · the spread: tiled staff, glass walls, polished heatsinks, a coffee urn, a spoon in a mug, a chiller puddle; the band lit (bullpen, open_floor, mas, staff, dot)"
+   },
+   {
+    "beat": "14.01",
+    "what": "on-screen add: \"Look at · Talk to · Pick up · Use · Open · Pivot · Raise\" (0.2-2.8)"
+   },
+   {
+    "beat": "14.01",
+    "what": "on-screen add: \"CTRL · ESC · glass · phone\" (0.2-2.8)"
+   },
+   {
+    "beat": "14.02",
+    "what": "new beat (scene): WIDE · the spread: Look at heatsink; Pick up reflection (bullpen, open_floor, mas)"
+   },
+   {
+    "beat": "14.02",
+    "what": "on-screen add: \"Look at heatsink\" (0.2-1.0)"
+   },
+   {
+    "beat": "14.02",
+    "what": "on-screen add: \"i can see my face in it.\" (1.0-2.6)"
+   },
+   {
+    "beat": "14.02",
+    "what": "on-screen add: \"Pick up reflection\" (2.8-3.5)"
+   },
+   {
+    "beat": "14.02",
+    "what": "on-screen add: \"i can't pick that up.\" (3.5-4.9)"
+   },
+   {
+    "beat": "14.02",
+    "what": "\"Look at heatsink\" until 1.0 -> 2.8: the sentence line holds under his reply until \"Pick up reflection\" replaces it (0.8 s up against its 1.05 s read floor)"
+   },
+   {
+    "beat": "14.02",
+    "what": "\"Pick up reflection\" until 3.5 -> 5.0: held under his reply to the beat's end (0.7 s up against its 1.15 s read floor)"
+   },
+   {
+    "beat": "14.02",
+    "what": "sound ui_verb_select at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "14.02",
+    "what": "sound ui_verb_select at 2.80 s (the plan's)"
+   },
+   {
+    "beat": "14.03",
+    "what": "new beat (scene): WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip (bullpen, open_floor, mas)"
+   },
+   {
+    "beat": "14.03",
+    "what": "on-screen add: \"Talk to reflection\" (0.2-0.9)"
+   },
+   {
+    "beat": "14.03",
+    "what": "on-screen add: \"> where are you going?\" (1.0-5.0)"
+   },
+   {
+    "beat": "14.03",
+    "what": "on-screen add: \"> can we talk?\" (1.0-5.0)"
+   },
+   {
+    "beat": "14.03",
+    "what": "on-screen add: \"> come back\" (1.0-5.0)"
+   },
+   {
+    "beat": "14.03",
+    "what": "\"Talk to reflection\" until 0.9 -> 1.4: held 0.4 s into the dialogue tree that answers it (0.7 s up against its 1.15 s read floor)"
+   },
+   {
+    "beat": "14.03",
+    "what": "sound ui_verb_select at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "14.03",
+    "what": "sound alert_bonk at 4.00 s (the plan's)"
+   },
+   {
+    "beat": "14.04",
+    "what": "new beat (scene): MCU · his own reflection mouthing can we talk? back to him (bullpen, open_floor, mas)"
+   },
+   {
+    "beat": "14.05",
+    "what": "new beat (scene): WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door (bullpen, open_floor, dot, mas)"
+   },
+   {
+    "beat": "14.06",
+    "what": "new beat (scene): WIDE · Alyi's door: Open greyed, bonk; the knock shakes Ep1's yellowed note off the frame into his pocket (bullpen, open_floor, mas)"
+   },
+   {
+    "beat": "14.06",
+    "what": "on-screen add: \"Open\" (0.2-0.8)"
+   },
+   {
+    "beat": "14.06",
+    "what": "on-screen add: \"Pick up note\" (2.6-3.8)"
+   },
+   {
+    "beat": "14.06",
+    "what": "sound alert_bonk at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "14.06",
+    "what": "sound paper_flutter at 1.20 s (the plan's)"
+   },
+   {
+    "beat": "14.07",
+    "what": "new beat (scene): WIDE → 2S · beside the door, Alyi's old chair, still humming; BUKAJ sits in it with a box of printouts (bullpen, open_floor, bukaj, mas)"
+   },
+   {
+    "beat": "14.07",
+    "what": "on-screen add: \"BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.\" (0.4-3.2)"
+   },
+   {
+    "beat": "14.07",
+    "what": "on-screen add: \"congratulations.\" (3.4-4.92)"
+   },
+   {
+    "beat": "14.07",
+    "what": "new line e2-a3-0023 (mas, 1.27 s, new take) at start+3.5"
+   },
+   {
+    "beat": "14.07",
+    "what": "the plan's 4.92 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "14.07",
+    "what": "sound chair_hum_choir at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "14.07",
+    "what": "names[]: bukaj at 0.4 s (its plate)"
+   },
+   {
+    "beat": "14.08",
+    "what": "new beat (scene): 2S · Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest (bullpen, open_floor, bukaj, mas)"
+   },
+   {
+    "beat": "14.08",
+    "what": "on-screen add: \"need anything?\" (2.93-4.38)"
+   },
+   {
+    "beat": "14.08",
+    "what": "new line e2-a3-0006 (bukaj, 2.18 s, new take) at start+0.35"
+   },
+   {
+    "beat": "14.08",
+    "what": "new line e2-a3-0024 (mas, 0.75 s, new take) after e2-a3-0006 +0.5"
+   },
+   {
+    "beat": "14.08",
+    "what": "new line e2-a3-0007 (bukaj, 4.17 s, new take) after e2-a3-0024 +0.5"
+   },
+   {
+    "beat": "14.08",
+    "what": "the plan's 9.1 s: its tail 0.65 s after the last line"
+   },
+   {
+    "beat": "14.09",
+    "what": "new beat (scene): WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card (bullpen, open_floor, ekiel)"
+   },
+   {
+    "beat": "14.09",
+    "what": "on-screen add: \"EKIEL / CO-LED THE SAFETY TEAM.\" (0.6-2.9)"
+   },
+   {
+    "beat": "14.09",
+    "what": "on-screen add: \"SQUINT: 100%\" (1.0-2.9)"
+   },
+   {
+    "beat": "14.09",
+    "what": "sound freeze_hit_F at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "14.09",
+    "what": "names[]: ekiel at 0.6 s (its plate)"
+   },
+   {
+    "beat": "14.10",
+    "what": "new beat (scene): HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topples to Mas's shoe (bullpen, open_floor, ekiel, mas)"
+   },
+   {
+    "beat": "14.10",
+    "what": "on-screen add: \"MAY 17\" (0.6-6.0)"
+   },
+   {
+    "beat": "14.10",
+    "what": "on-screen add: \"Yesterday was my last day as head of alignment, superalignment lead, a\" (0.7-5.6)"
+   },
+   {
+    "beat": "14.10",
+    "what": "sound domino_set at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "14.10",
+    "what": "sound domino_topple_run at 4.60 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "new beat (scene): WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws (bullpen, open_floor, dot)"
+   },
+   {
+    "beat": "14.11",
+    "what": "on-screen add: \"SUPERALIGNMENT\" (0.3-5.2)"
+   },
+   {
+    "beat": "14.11",
+    "what": "on-screen add: \"SAFETY TEAM\" (0.3-5.2)"
+   },
+   {
+    "beat": "14.11",
+    "what": "on-screen add: \"MISC\" (4.0-5.2)"
+   },
+   {
+    "beat": "14.11",
+    "what": "on-screen add: \"MAY 17\" (4.0-5.2)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound screw_turn_1 at 1.00 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound screw_turn_2 at 1.62 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound screw_turn_3 at 2.25 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound screw_turn_4 at 2.88 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound nameplate_off at 3.40 s (the plan's)"
+   },
+   {
+    "beat": "14.11",
+    "what": "sound plate_drop_box at 3.90 s (the plan's)"
+   },
+   {
+    "beat": "14.12",
+    "what": "new beat (scene): WIDE · back at Alyi's door: Pivot door; it turns on its centre pin (bullpen, open_floor, mas)"
+   },
+   {
+    "beat": "14.12",
+    "what": "on-screen add: \"Pivot door\" (0.33-1.63)"
+   },
+   {
+    "beat": "14.12",
+    "what": "sound ui_verb_select at 0.33 s (the plan's)"
+   },
+   {
+    "beat": "14.12",
+    "what": "sound door_pivot_creak at 1.47 s (the plan's)"
+   },
+   {
+    "beat": "15.01",
+    "what": "new beat (scene): WIDE · the empty office: a desk with no chair; Mas sits on the desk's edge (office, office_evening, mas, orb)"
+   },
+   {
+    "beat": "15.02",
+    "what": "new beat (scene): ECU · his phone: the thread, collapsed to dates and first lines (screen, office_evening, no figures)"
+   },
+   {
+    "beat": "15.02",
+    "what": "on-screen add: \"NOV 20, 2023\" (0.4-3.76)"
+   },
+   {
+    "beat": "15.02",
+    "what": "on-screen add: \"♥ ♥ ♥\" (0.81-3.76)"
+   },
+   {
+    "beat": "15.02",
+    "what": "on-screen add: \"MAY 14, 2024\" (1.34-3.76)"
+   },
+   {
+    "beat": "15.02",
+    "what": "sound thumb_scroll at 0.27 s (the plan's)"
+   },
+   {
+    "beat": "15.03",
+    "what": "new beat (scene): MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count (office, office_evening, mas)"
+   },
+   {
+    "beat": "15.03",
+    "what": "new line e2-a3-0008 (alyi, 2.10 s, cut from e1-a1-5-13) at start+0.54"
+   },
+   {
+    "beat": "15.03",
+    "what": "new line e2-vo-07 (mas, 2.40 s, new take) after e2-a3-0008 +1.2"
+   },
+   {
+    "beat": "15.03",
+    "what": "the plan's 7.18 s: its tail 0.94 s after the last line"
+   },
+   {
+    "beat": "15.04",
+    "what": "new beat (scene): ECU · TPOOL: its splash; welcome back, mas; the Orb scans the hourglass (screen, office_evening, orb)"
+   },
+   {
+    "beat": "15.04",
+    "what": "on-screen add: \"TPOOL\" (0.4-6.6)"
+   },
+   {
+    "beat": "15.04",
+    "what": "on-screen add: \"LAST UPDATED 2012\" (0.6-6.6)"
+   },
+   {
+    "beat": "15.04",
+    "what": "on-screen add: \"WHERE U AT?\" (1.4-2.8)"
+   },
+   {
+    "beat": "15.04",
+    "what": "on-screen add: \"welcome back, mas\" (3.0-6.6)"
+   },
+   {
+    "beat": "15.04",
+    "what": "on-screen add: \"verified: 2008\" (5.0-6.5)"
+   },
+   {
+    "beat": "15.04",
+    "what": "sound app_splash_2006 at 1.40 s (the plan's)"
+   },
+   {
+    "beat": "15.04",
+    "what": "sound hourglass_cursor_2008 at 3.20 s (the plan's)"
+   },
+   {
+    "beat": "15.04",
+    "what": "sound orb_scan_sweep at 4.20 s (the plan's)"
+   },
+   {
+    "beat": "15.04",
+    "what": "sound ui_toast_pop at 5.00 s (the plan's)"
+   },
+   {
+    "beat": "15.05",
+    "what": "new beat (scene): ECU · he types where u at? → POV · the map: every pin LAST SEEN: 2012, except one (screen, office_evening, no figures)"
+   },
+   {
+    "beat": "15.05",
+    "what": "on-screen add: \"where u at?\" (0.4-2.0)"
+   },
+   {
+    "beat": "15.05",
+    "what": "on-screen add: \"LAST SEEN: 2012\" (2.4-7.4)"
+   },
+   {
+    "beat": "15.05",
+    "what": "on-screen add: \"ALYI CHECKED IN · DEC 2022 · \"feel the agi\"\" (3.0-6.0)"
+   },
+   {
+    "beat": "15.05",
+    "what": "sound key_tap_soft_02 at 0.50 s (the plan's)"
+   },
+   {
+    "beat": "15.05",
+    "what": "sound key_tap_soft_04 at 1.10 s (the plan's)"
+   },
+   {
+    "beat": "15.05",
+    "what": "sound pin_ping at 3.00 s (the plan's)"
+   },
+   {
+    "beat": "15.06",
+    "what": "new beat (flashback): WIDE · the holiday party, Dec 2022: silhouettes under palette-cycled string lights; Alyi leads the chant (bullpen, party, alyi, crowd, mas, staff)"
+   },
+   {
+    "beat": "15.06",
+    "what": "on-screen add: \"RAIL: DEC 2022\" (0.2-1.7)"
+   },
+   {
+    "beat": "15.06",
+    "what": "new line e2-a3-0009 (alyi, 1.59 s, new take) at start+1.8"
+   },
+   {
+    "beat": "15.06",
+    "what": "new line e2-a3-0010 (crowd, 3.03 s, new take) after e2-a3-0009 +0.1"
+   },
+   {
+    "beat": "15.06",
+    "what": "the plan's 7.06 s: its tail 0.54 s after the last line"
+   },
+   {
+    "beat": "15.07",
+    "what": "new beat (flashback): 2S · across the crowd: Alyi (cropped by the light swag) and Mas, small in the crowd, a glass in his hand (bullpen, party, alyi, mas)"
+   },
+   {
+    "beat": "15.07",
+    "what": "new line e2-a3-0011 (alyi, 1.19 s, new take) at start+1.07"
+   },
+   {
+    "beat": "15.07",
+    "what": "new line e2-a3-0012 (mas, 1.99 s, new take) after e2-a3-0011 +0.45"
+   },
+   {
+    "beat": "15.07",
+    "what": "new line e2-a3-0013 (alyi, 1.97 s, new take) after e2-a3-0012 +0.25"
+   },
+   {
+    "beat": "15.07",
+    "what": "the plan's 7.46 s: its tail 0.54 s after the last line"
+   },
+   {
+    "beat": "15.08",
+    "what": "new beat (flashback): ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the screen to Mas (bullpen, party, alyi, mas)"
+   },
+   {
+    "beat": "15.08",
+    "what": "on-screen add: \"CHECK IN\" (0.54-2.15)"
+   },
+   {
+    "beat": "15.08",
+    "what": "on-screen add: \"feel the agi\" (2.15-6.44)"
+   },
+   {
+    "beat": "15.08",
+    "what": "sound check_in_blip at 1.88 s (the plan's)"
+   },
+   {
+    "beat": "15.09",
+    "what": "new beat (flashback): WIDE · the racks in the corner hum along; at the chant's peak their status lights become token streams across the whole room (bullpen, party, alyi, mas, staff)"
+   },
+   {
+    "beat": "15.09",
+    "what": "sound glyph_shimmer at 0.81 s (the plan's)"
+   },
+   {
+    "beat": "15.10",
+    "what": "new beat (flashback): 2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence (office, office_2023, alyi, ekiel)"
+   },
+   {
+    "beat": "15.10",
+    "what": "on-screen add: \"RAIL: 2023\" (0.2-1.4)"
+   },
+   {
+    "beat": "15.10",
+    "what": "on-screen add: \"INTRODUCING SUPERALIGNMENT · ALYI, EKIEL\" (1.4-8.9)"
+   },
+   {
+    "beat": "15.10",
+    "what": "on-screen add: \"Currently, we don't have a solution for steering or controlling a pote\" (1.6-8.8)"
+   },
+   {
+    "beat": "15.11",
+    "what": "new beat (flashback): 2S · the same: Ekiel; Alyi, without looking away from the screen (office, office_2023, ekiel, alyi)"
+   },
+   {
+    "beat": "15.11",
+    "what": "new line e2-a3-0014 (ekiel, 1.88 s, new take) at start+0.54"
+   },
+   {
+    "beat": "15.11",
+    "what": "new line e2-a3-0015 (alyi, 1.02 s, new take) after e2-a3-0014 +0.9"
+   },
+   {
+    "beat": "15.11",
+    "what": "the plan's 5.41 s: its tail 1.07 s after the last line"
+   },
+   {
+    "beat": "15.12",
+    "what": "new beat (flashback): ECU · his finger above the bare Publish button (office, office_2023, alyi)"
+   },
+   {
+    "beat": "15.13",
+    "what": "new beat (flashback): WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut off by a lodge doorway, with the flame (void, fire_night, alyi, staff)"
+   },
+   {
+    "beat": "15.13",
+    "what": "on-screen add: \"UNALIGNED\" (0.4-4.83)"
+   },
+   {
+    "beat": "15.13",
+    "what": "sound torch_light at 1.07 s (the plan's)"
+   },
+   {
+    "beat": "15.14",
+    "what": "new beat (flashback): ECU · he presses Publish (office, office_2023, alyi)"
+   },
+   {
+    "beat": "15.14",
+    "what": "sound post_click at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "15.15",
+    "what": "new beat (flashback): WIDE · the effigy catches (void, fire_night, alyi)"
+   },
+   {
+    "beat": "15.15",
+    "what": "sound flame_whoomph at 0.27 s (the plan's)"
+   },
+   {
+    "beat": "15.15",
+    "what": "sound fire_crackle at 0.81 s (the plan's)"
+   },
+   {
+    "beat": "15.16",
+    "what": "new beat (flashback): WIDE → ECU · the fire's glow shrinks to one point of light (void, fire_night, no figures)"
+   },
+   {
+    "beat": "15.17",
+    "what": "new beat (scene): ECU · the point is the pin, pulsing on his phone; his thumb covers it (screen, office_evening, mas)"
+   },
+   {
+    "beat": "15.17",
+    "what": "new line e2-vo-08 (mas, 1.60 s, new take) at start+1.88"
+   },
+   {
+    "beat": "15.17",
+    "what": "the plan's 4.82 s: its tail 1.34 s after the last line"
+   },
+   {
+    "beat": "15.18",
+    "what": "new beat (scene): WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut on the empty room (office, office_evening, mas)"
+   },
+   {
+    "beat": "15.18",
+    "what": "sound door_close_soft at 2.95 s (the plan's)"
+   },
+   {
+    "beat": "15.19",
+    "what": "new beat (scene): WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for comment (office, stairwell, mas)"
+   },
+   {
+    "beat": "15.19",
+    "what": "on-screen add: \"request for comment\" (1.6-3.6)"
+   },
+   {
+    "beat": "15.19",
+    "what": "sound footstep_soft_1 at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "15.19",
+    "what": "sound phone_buzz_step_1 at 1.20 s (the plan's)"
+   },
+   {
+    "beat": "15.19",
+    "what": "sound footstep_soft_2 at 3.80 s (the plan's)"
+   },
+   {
+    "beat": "17.01",
+    "what": "new beat (scene): WIDE · NopeAI's front doors at the top of the hill: the receipt pouring out; the Forecaster arrives from the street beside it (skyline, bridge, forecaster)"
+   },
+   {
+    "beat": "17.01",
+    "what": "on-screen add: \"RAIL: MAY 17, 2024\" (0.3-2.1)"
+   },
+   {
+    "beat": "17.01",
+    "what": "sound receipt_printer at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "17.02",
+    "what": "new beat (scene): WIDE · one quick run: down the hill and across all five lanes of the bridge in the evening rush (three parallax planes) (skyline, bridge, staff)"
+   },
+   {
+    "beat": "17.02",
+    "what": "on-screen add: \"NON-DISPARAGEMENT\" (1.2-2.6)"
+   },
+   {
+    "beat": "17.02",
+    "what": "on-screen add: \"IN PERPETUITY\" (2.6-4.0)"
+   },
+   {
+    "beat": "17.02",
+    "what": "on-screen add: \"CLAUSE 9: THIS RECEIPT DOES NOT EXIST.\" (3.3-5.6)"
+   },
+   {
+    "beat": "17.02",
+    "what": "on-screen add: \"SAVE 0% ON YOUR NEXT EXIT\" (4.9-6.5)"
+   },
+   {
+    "beat": "17.02",
+    "what": "sound receipt_unroll_loop at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "17.02",
+    "what": "sound car_honk_1 at 5.80 s (the plan's)"
+   },
+   {
+    "beat": "17.03",
+    "what": "new beat (scene): WIDE · across the lanes: the Forecaster walks up the far pedestrian lane with his clipboard; Mas small in the foreground; the card (skyline, bridge, forecaster, mas)"
+   },
+   {
+    "beat": "17.03",
+    "what": "on-screen add: \"THE FORECASTER / EX-NOPEAI.\" (1.0-3.6)"
+   },
+   {
+    "beat": "17.03",
+    "what": "on-screen add: \"AT STAKE: ~$2M\" (1.4-3.6)"
+   },
+   {
+    "beat": "17.03",
+    "what": "sound freeze_hit_F at 1.00 s (the plan's)"
+   },
+   {
+    "beat": "17.04",
+    "what": "new beat (scene): LOW · a pen on a bank chain rises out of the receipt and offers itself to him (the refusal, held wide across the lanes) (skyline, bridge, forecaster, mas)"
+   },
+   {
+    "beat": "17.04",
+    "what": "new line e2-a3-0016 (forecaster, 11.92 s, new take) at start+2.6"
+   },
+   {
+    "beat": "17.04",
+    "what": "the plan's 15.28 s: its tail 0.76 s after the last line"
+   },
+   {
+    "beat": "17.04",
+    "what": "sound pen_chain_rattle at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "17.05",
+    "what": "new beat (scene): MEDIUM · a DRIVER parked on the receipt leans out of his window (skyline, bridge, driver)"
+   },
+   {
+    "beat": "17.05",
+    "what": "new line e2-a3-0017 (driver, 2.86 s, new take) at start+1.15"
+   },
+   {
+    "beat": "17.05",
+    "what": "the plan's 4.16 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "17.05",
+    "what": "sound car_window_down at 0.19 s (the plan's)"
+   },
+   {
+    "beat": "17.06",
+    "what": "new beat (scene): WIDE · across the lanes: the Forecaster lets the pen go; the chain draws it back into the paper (skyline, bridge, forecaster, mas)"
+   },
+   {
+    "beat": "17.06",
+    "what": "new line e2-a3-0018 (forecaster, 3.22 s, new take) at start+0.35"
+   },
+   {
+    "beat": "17.06",
+    "what": "the plan's 5.86 s: its tail 2.29 s after the last line"
+   },
+   {
+    "beat": "17.06",
+    "what": "sound pen_chain_rattle at 3.77 s (the plan's)"
+   },
+   {
+    "beat": "17.07",
+    "what": "new beat (scene): WIDE · mid-span on the receipt: Mas sees it, his phone already lit (skyline, bridge, mas)"
+   },
+   {
+    "beat": "17.07",
+    "what": "sound phone_buzz_step_1 at 1.91 s (the plan's)"
+   },
+   {
+    "beat": "17.08",
+    "what": "new beat (scene): ECU · the scramble on his phone: staff screenshots of a clause; a grey LEGAL tile; a second request for comment (screen, bridge, no figures)"
+   },
+   {
+    "beat": "17.08",
+    "what": "on-screen add: \"NON-DISPARAGEMENT\" (0.3-1.5)"
+   },
+   {
+    "beat": "17.08",
+    "what": "on-screen add: \"LEGAL · call me\" (1.6-3.2)"
+   },
+   {
+    "beat": "17.08",
+    "what": "on-screen add: \"request for comment\" (3.3-4.7)"
+   },
+   {
+    "beat": "17.08",
+    "what": "sound phone_buzz_step_2 at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "17.08",
+    "what": "sound phone_buzz_step_3 at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "17.08",
+    "what": "sound phone_buzz_step_4 at 3.30 s (the plan's)"
+   },
+   {
+    "beat": "17.09",
+    "what": "new beat (scene): MCU · his face, locked (where we hear his side of the call); ECU his thumb on LEGAL (call, bridge, mas)"
+   },
+   {
+    "beat": "17.09",
+    "what": "new line e2-a3-0019 (mas, 3.44 s, new take) at start+2.29"
+   },
+   {
+    "beat": "17.09",
+    "what": "the plan's 6.49 s: its tail 0.76 s after the last line"
+   },
+   {
+    "beat": "17.09",
+    "what": "sound call_ring at 0.19 s (the plan's)"
+   },
+   {
+    "beat": "17.09",
+    "what": "sound call_connect at 1.53 s (the plan's)"
+   },
+   {
+    "beat": "17.10",
+    "what": "new beat (scene): ECU · a draft opened, typed, deleted, typed: grey bars (screen, bridge, no figures)"
+   },
+   {
+    "beat": "17.10",
+    "what": "sound key_tap_soft_01 at 0.40 s (the plan's)"
+   },
+   {
+    "beat": "17.10",
+    "what": "sound key_delete_run at 1.80 s (the plan's)"
+   },
+   {
+    "beat": "17.10",
+    "what": "sound key_tap_soft_03 at 3.00 s (the plan's)"
+   },
+   {
+    "beat": "17.11",
+    "what": "new beat (scene): MCU · his still face; the receipt still unrolling under his shoes (skyline, bridge, mas)"
+   },
+   {
+    "beat": "17.11",
+    "what": "new line e2-vo-09 (mas, 3.24 s, new take) at start+0.3"
+   },
+   {
+    "beat": "17.11",
+    "what": "the plan's 4.3 s: its tail 0.76 s after the last line"
+   },
+   {
+    "beat": "17.11",
+    "what": "sound receipt_unroll_loop at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "17.12",
+    "what": "new beat (scene): MCU · the Forecaster, having crossed the stalled lanes, stops beside him (skyline, bridge, forecaster, mas)"
+   },
+   {
+    "beat": "17.12",
+    "what": "new line e2-a3-0020 (forecaster, 6.82 s, new take) at start+2.68"
+   },
+   {
+    "beat": "17.12",
+    "what": "the plan's 10.07 s: its tail 0.57 s after the last line"
+   },
+   {
+    "beat": "17.13",
+    "what": "new beat (scene): ECU · Mas's thumb hovers over Post; he doesn't press (screen, bridge, mas)"
+   },
+   {
+    "beat": "17.13",
+    "what": "new line e2-vo-10 (mas, 2.51 s, new take) at start+1.53"
+   },
+   {
+    "beat": "17.13",
+    "what": "the plan's 5.0 s: its tail 0.96 s after the last line"
+   },
+   {
+    "beat": "17.14",
+    "what": "new beat (scene): WIDE · the night, one held shot: the bridge's lights cycle once; Mas still on the receipt; the Forecaster asleep against the rail (skyline, bridge_night, mas, forecaster)"
+   },
+   {
+    "beat": "17.15",
+    "what": "new beat (scene): WIDE · the next afternoon: Mas posts; the post pops up over the sky, one trim per honk; the Forecaster wakes (skyline, bridge, mas, forecaster, driver)"
+   },
+   {
+    "beat": "17.15",
+    "what": "on-screen add: \"RAIL: MAY 18\" (0.2-1.4)"
+   },
+   {
+    "beat": "17.15",
+    "what": "on-screen add: \"vested equity is vested equity, full stop.\" (1.6-4.1)"
+   },
+   {
+    "beat": "17.15",
+    "what": "on-screen add: \"this is on me…\" (4.1-5.2)"
+   },
+   {
+    "beat": "17.15",
+    "what": "on-screen add: \"…i did not know this was happening and i should have.\" (5.2-8.2)"
+   },
+   {
+    "beat": "17.15",
+    "what": "on-screen add: \"…they can contact me and we'll fix that too.\" (8.2-10.8)"
+   },
+   {
+    "beat": "17.15",
+    "what": "new line e2-a3-0021 (forecaster, 0.82 s, new take) at start+10.9"
+   },
+   {
+    "beat": "17.15",
+    "what": "the plan's 11.87 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound post_click at 1.50 s (the plan's)"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound car_honk_2 at 4.10 s (the plan's)"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound car_honk_3 at 5.20 s (the plan's)"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound car_honk_4 at 8.20 s (the plan's)"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound car_honk_5 at 10.75 s (the plan's)"
+   },
+   {
+    "beat": "17.15",
+    "what": "sound pen_scribble_short at 11.42 s (the plan's)"
+   },
+   {
+    "beat": "17.16",
+    "what": "new beat (scene): MEDIUM · the honking driver leans out; then the car behind him honks; the Forecaster walks off (skyline, bridge, driver, forecaster, mas)"
+   },
+   {
+    "beat": "17.16",
+    "what": "new line e2-a3-0022 (driver, 2.63 s, new take) at start+0.45"
+   },
+   {
+    "beat": "17.16",
+    "what": "the plan's 5.88 s: its tail 2.80 s after the last line"
+   },
+   {
+    "beat": "17.16",
+    "what": "sound car_honk_1 at 4.68 s (the plan's)"
+   },
+   {
+    "beat": "17.17",
+    "what": "new beat (scene): WIDE · May 20, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp drifts in; the storm cloud with a blank letterhead parks over it (skyline, bridge_rain, mas)"
+   },
+   {
+    "beat": "17.17",
+    "what": "on-screen add: \"RAIL: MAY 20\" (0.2-1.6)"
+   },
+   {
+    "beat": "17.17",
+    "what": "sound thunder_tuned_F at 7.40 s (the plan's)"
+   },
+   {
+    "beat": "17.18",
+    "what": "new beat (scene): WIDE · it rains letterhead; the receipt's ink runs in the rain (skyline, bridge_rain, mas)"
+   },
+   {
+    "beat": "17.18",
+    "what": "sound ink_run_drip at 0.77 s (the plan's)"
+   },
+   {
+    "beat": "17.18",
+    "what": "sound umbrella_rain at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "17.18",
+    "what": "sound umbrella_pop at 4.98 s (the plan's)"
+   },
+   {
+    "beat": "17.19",
+    "what": "new beat (scene): POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5 (screen, bridge_rain, mas)"
+   },
+   {
+    "beat": "17.19",
+    "what": "on-screen add: \"VOICE 5\" (0.4-4.4)"
+   },
+   {
+    "beat": "17.19",
+    "what": "on-screen add: \"Pause\" (1.4-2.2)"
+   },
+   {
+    "beat": "17.19",
+    "what": "on-screen add: \"VOICE 5 [PAUSED]\" (2.2-4.4)"
+   },
+   {
+    "beat": "17.19",
+    "what": "on-screen add: \"Hey.\" (2.2-4.4)"
+   },
+   {
+    "beat": "17.19",
+    "what": "sound ui_pause_tap at 2.00 s (the plan's)"
+   },
+   {
+    "beat": "17.20",
+    "what": "new beat (scene): ECU · beside it, his company's post pops up in its own UI, two fragments (screen, bridge_rain, no figures)"
+   },
+   {
+    "beat": "17.20",
+    "what": "on-screen add: \"We've heard questions about how we chose the voices…\" (0.3-5.3)"
+   },
+   {
+    "beat": "17.20",
+    "what": "on-screen add: \"…We are working to pause the use of…\" (2.0-5.3)"
+   },
+   {
+    "beat": "17.20",
+    "what": "sound ui_toast_pop at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "17.21",
+    "what": "new beat (scene): WIDE · the blimp sags, its running lights clicking off one by one; the last light; black (skyline, bridge_rain, no figures)"
+   },
+   {
+    "beat": "17.21",
+    "what": "sound blimp_lights_off at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "17.21",
+    "what": "sound blimp_lights_off at 1.30 s (the plan's)"
+   },
+   {
+    "beat": "17.21",
+    "what": "sound blimp_lights_off at 2.00 s (the plan's)"
+   },
+   {
+    "beat": "17.21",
+    "what": "sound blimp_lights_off at 2.80 s (the plan's)"
+   },
+   {
+    "beat": "17.21",
+    "what": "sound dread_sting at 2.80 s (the plan's)"
+   }
+  ],
+  "deviations": [
+   {
+    "beat": "14.02",
+    "what": "the lock pass: \"Look at heatsink\" until 1.0 -> 2.8 (the sentence line holds under his reply until \"Pick up reflection\" replaces it (0.8 s up against its 1.05 s read floor))"
+   },
+   {
+    "beat": "14.02",
+    "what": "the lock pass: \"Pick up reflection\" until 3.5 -> 5.0 (held under his reply to the beat's end (0.7 s up against its 1.15 s read floor))"
+   },
+   {
+    "beat": "14.03",
+    "what": "the lock pass: \"Talk to reflection\" until 0.9 -> 1.4 (held 0.4 s into the dialogue tree that answers it (0.7 s up against its 1.15 s read floor))"
+   }
+  ],
+  "safety_net": []
+ },
+ "act4": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-act4.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 320.0,
+  "seconds": 320.0,
+  "frames": 7680,
+  "source_frames": 0,
+  "beats": 57,
+  "lines": 38,
+  "vo": 3,
+  "vo_lines": [
+   "e2-vo-11 (18.10): the next one's already training.",
+   "e2-vo-12 (19.08): whatever we ship next goes in their phones too.",
+   "e2-vo-13 (20.07): we raise in the fall. she has till then."
+  ],
+  "scenes": [
+   "18",
+   "19",
+   "20",
+   "22"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": 0.45,
+   "inside_beats_n": 19,
+   "segment_s": 0.9,
+   "segment_n": 37,
+   "spoken_only_segment_s": 0.6
+  },
+  "beat_lengths": [
+   {
+    "beat": "18.01",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 5.66,
+    "lock_s": 5.66,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.02",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.03",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 10.55,
+    "lock_s": 10.55,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.04",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 5.91,
+    "lock_s": 5.91,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.05",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 4.2,
+    "lock_s": 4.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.06",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 3.72,
+    "lock_s": 3.72,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.07",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 3.51,
+    "lock_s": 3.51,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.08",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 12.76,
+    "lock_s": 12.76,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.09",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 2.83,
+    "lock_s": 2.83,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.10",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 12.85,
+    "lock_s": 12.85,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.11",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 8.35,
+    "lock_s": 8.35,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.12",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 7.63,
+    "lock_s": 7.63,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.13",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 9.94,
+    "lock_s": 9.94,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.14",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 2.78,
+    "lock_s": 2.78,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "18.15",
+    "action": "new",
+    "scene": "18",
+    "src_s": null,
+    "est_s": 3.31,
+    "lock_s": 3.31,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.01",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.02",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 1.6,
+    "lock_s": 1.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.03",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 4.51,
+    "lock_s": 4.51,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.04",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 14.93,
+    "lock_s": 14.93,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.05",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 4.7,
+    "lock_s": 4.7,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.06",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 6.71,
+    "lock_s": 6.71,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.07",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 9.4,
+    "lock_s": 9.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.08",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 6.93,
+    "lock_s": 6.93,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.09",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 7.05,
+    "lock_s": 7.05,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.10",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 14.68,
+    "lock_s": 14.68,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.11",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.12",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 4.79,
+    "lock_s": 4.79,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.13",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 5.07,
+    "lock_s": 5.07,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.14",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 7.06,
+    "lock_s": 7.06,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.15",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 3.66,
+    "lock_s": 3.66,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.16",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 10.0,
+    "lock_s": 10.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.17",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 10.0,
+    "lock_s": 10.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.18",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 8.7,
+    "lock_s": 8.7,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.19",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 4.23,
+    "lock_s": 4.23,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "19.20",
+    "action": "new",
+    "scene": "19",
+    "src_s": null,
+    "est_s": 3.38,
+    "lock_s": 3.38,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.01",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 3.91,
+    "lock_s": 3.91,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.02",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 7.6,
+    "lock_s": 7.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.03",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 6.11,
+    "lock_s": 6.11,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.04",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 3.3,
+    "lock_s": 3.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.05",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 4.8,
+    "lock_s": 4.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.06",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 1.2,
+    "lock_s": 1.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.07",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 4.88,
+    "lock_s": 4.88,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.08",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 2.2,
+    "lock_s": 2.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.09",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 4.0,
+    "lock_s": 4.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.10",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 7.0,
+    "lock_s": 7.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.11",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 1.6,
+    "lock_s": 1.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.12",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 4.0,
+    "lock_s": 4.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "20.13",
+    "action": "new",
+    "scene": "20",
+    "src_s": null,
+    "est_s": 1.4,
+    "lock_s": 1.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.01",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 7.44,
+    "lock_s": 7.44,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.02",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 6.58,
+    "lock_s": 6.58,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.03",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 4.0,
+    "lock_s": 4.0,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.04",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 4.58,
+    "lock_s": 4.58,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.05",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 3.6,
+    "lock_s": 3.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.06",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 1.2,
+    "lock_s": 1.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.07",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 2.6,
+    "lock_s": 2.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.08",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 3.2,
+    "lock_s": 3.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "22.09",
+    "action": "new",
+    "scene": "22",
+    "src_s": null,
+    "est_s": 4.8,
+    "lock_s": 4.8,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [
+   {
+    "beat": "18.08",
+    "line": "e2-a4-0005",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "18.10",
+    "line": "e2-a4-0008",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   },
+   {
+    "beat": "18.10",
+    "line": "e2-vo-11",
+    "plan_s": 2.3,
+    "lock_s": 2.3,
+    "ok": true
+   },
+   {
+    "beat": "18.11",
+    "line": "e2-a4-0010",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "18.11",
+    "line": "e2-a4-0011",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "18.13",
+    "line": "e2-a4-0014",
+    "plan_s": 2.6,
+    "lock_s": 2.6,
+    "ok": true
+   },
+   {
+    "beat": "18.13",
+    "line": "e2-a4-0015",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "18.14",
+    "line": "e2-a4-0016",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "19.04",
+    "line": "e2-a4-0018",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "19.04",
+    "line": "e2-a4-0019",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "19.04",
+    "line": "e2-a4-0020",
+    "plan_s": 0.2,
+    "lock_s": 0.2,
+    "ok": true
+   },
+   {
+    "beat": "19.04",
+    "line": "e2-a4-0021",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "19.09",
+    "line": "e2-a4-0025",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0027",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0033",
+    "plan_s": 0.5,
+    "lock_s": 0.5,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0034",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0035",
+    "plan_s": 0.25,
+    "lock_s": 0.25,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0028",
+    "plan_s": 0.9,
+    "lock_s": 0.9,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0029",
+    "plan_s": 0.6,
+    "lock_s": 0.6,
+    "ok": true
+   },
+   {
+    "beat": "19.10",
+    "line": "e2-a4-0026",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   },
+   {
+    "beat": "19.18",
+    "line": "e2-a4-0031",
+    "plan_s": 0.45,
+    "lock_s": 0.45,
+    "ok": true
+   }
+  ],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "18.01",
+    "what": "new beat (scene): WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the stair of bound drafts with his box (lighthouse, lighthouse, ekiel, adelina)"
+   },
+   {
+    "beat": "18.01",
+    "what": "on-screen add: \"RAIL: MAY 28, 2024\" (0.29-2.05)"
+   },
+   {
+    "beat": "18.01",
+    "what": "sound beacon_motor at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "18.01",
+    "what": "sound footstep_soft_1 at 2.34 s (the plan's)"
+   },
+   {
+    "beat": "18.01",
+    "what": "sound footstep_soft_2 at 3.12 s (the plan's)"
+   },
+   {
+    "beat": "18.02",
+    "what": "new beat (scene): WIDE · the beacon's beam sweeps across the frame… and across the NopeAI boardroom's window (boardroom, boardroom_day, no figures)"
+   },
+   {
+    "beat": "18.03",
+    "what": "new beat (scene): FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned (screen, boardroom_day, neleh)"
+   },
+   {
+    "beat": "18.03",
+    "what": "on-screen add: \"When CHATGTP came out November, 2022, the board was not informed in ad\" (1.0-8.02)"
+   },
+   {
+    "beat": "18.03",
+    "what": "on-screen add: \"We learned about CHATGTP on RETTIWT.\" (8.02-10.55)"
+   },
+   {
+    "beat": "18.03",
+    "what": "new line e2-a4-0001 (neleh, 8.97 s, new take) at start+1"
+   },
+   {
+    "beat": "18.03",
+    "what": "the plan's 10.55 s: its tail 0.58 s after the last line"
+   },
+   {
+    "beat": "18.04",
+    "what": "new beat (scene): FULL FRAME · the TV: her second claim (screen, boardroom_day, neleh)"
+   },
+   {
+    "beat": "18.04",
+    "what": "on-screen add: \"…MAS didn't inform the board that he owned the NOPEAI Startup Fund…\" (0.58-5.91)"
+   },
+   {
+    "beat": "18.04",
+    "what": "new line e2-a4-0002 (neleh, 4.75 s, new take) at start+0.58"
+   },
+   {
+    "beat": "18.04",
+    "what": "the plan's 5.91 s: its tail 0.58 s after the last line"
+   },
+   {
+    "beat": "18.05",
+    "what": "new beat (scene): FULL FRAME · under it, the board's same-day reply in its own statement card (screen, boardroom_day, no figures)"
+   },
+   {
+    "beat": "18.05",
+    "what": "on-screen add: \"\"We are disappointed that Ms. NELEH continues to revisit these issues.\" (0.2-4.1)"
+   },
+   {
+    "beat": "18.05",
+    "what": "on-screen add: \"— TERB, CHAIR\" (0.2-4.1)"
+   },
+   {
+    "beat": "18.06",
+    "what": "new beat (scene): MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off (boardroom, boardroom_day, mas, mada, terb)"
+   },
+   {
+    "beat": "18.06",
+    "what": "new line e2-a4-0003 (terb, 0.93 s, new take) at start+2.4"
+   },
+   {
+    "beat": "18.06",
+    "what": "the plan's 3.72 s: its tail 0.39 s after the last line"
+   },
+   {
+    "beat": "18.06",
+    "what": "sound tv_click_off at 2.30 s (the plan's)"
+   },
+   {
+    "beat": "18.07",
+    "what": "new beat (scene): MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand (boardroom, split_lighthouse, terb, mas, adelina, ekiel)"
+   },
+   {
+    "beat": "18.07",
+    "what": "on-screen add: \"SAFETY COMMITTEE\" (0.29-3.51)"
+   },
+   {
+    "beat": "18.07",
+    "what": "on-screen add: \"212\" (1.75-3.51)"
+   },
+   {
+    "beat": "18.07",
+    "what": "sound lanyard_drop at 1.75 s (the plan's)"
+   },
+   {
+    "beat": "18.07",
+    "what": "sound lanyard_drop at 1.80 s (the plan's)"
+   },
+   {
+    "beat": "18.08",
+    "what": "new beat (scene): LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table (boardroom, split_lighthouse, terb, mas, mada)"
+   },
+   {
+    "beat": "18.08",
+    "what": "new line e2-a4-0004 (terb, 7.56 s, new take) at start+0.29"
+   },
+   {
+    "beat": "18.08",
+    "what": "new line e2-a4-0005 (terb, 4.11 s, new take) after e2-a4-0004 +0.5"
+   },
+   {
+    "beat": "18.08",
+    "what": "the plan's 12.76 s: its tail 0.30 s after the last line"
+   },
+   {
+    "beat": "18.09",
+    "what": "new beat (scene): MEDIUM · inside the left pane, at table level: every face turns to Mas (boardroom, split_lighthouse, mas, mada)"
+   },
+   {
+    "beat": "18.09",
+    "what": "new line e2-a4-0006 (mas, 0.61 s, new take) at start+1.25"
+   },
+   {
+    "beat": "18.09",
+    "what": "the plan's 2.83 s: its tail 0.97 s after the last line"
+   },
+   {
+    "beat": "18.09",
+    "what": "sound pen_scribble_short at 2.16 s (the plan's)"
+   },
+   {
+    "beat": "18.10",
+    "what": "new beat (scene): LEFT pane: Terb's next line; the table turns to Mas again; Mada writes a second word; a held breath; his thought (boardroom, split_lighthouse, terb, mas, mada)"
+   },
+   {
+    "beat": "18.10",
+    "what": "new line e2-a4-0007 (terb, 5.77 s, new take) at start+0.29"
+   },
+   {
+    "beat": "18.10",
+    "what": "new line e2-a4-0008 (mas, 1.06 s, new take) after e2-a4-0007 +0.6"
+   },
+   {
+    "beat": "18.10",
+    "what": "new line e2-vo-11 (mas, 2.05 s, new take) after e2-a4-0008 +2.3"
+   },
+   {
+    "beat": "18.10",
+    "what": "the plan's 12.85 s: its tail 0.78 s after the last line"
+   },
+   {
+    "beat": "18.10",
+    "what": "sound pen_scribble_short at 8.02 s (the plan's)"
+   },
+   {
+    "beat": "18.11",
+    "what": "new beat (scene): RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard (lighthouse, split_lighthouse, mario, ekiel)"
+   },
+   {
+    "beat": "18.11",
+    "what": "new line e2-a4-0009 (mario, 3.60 s, new take) at start+0.49"
+   },
+   {
+    "beat": "18.11",
+    "what": "new line e2-a4-0010 (ekiel, 1.95 s, new take) after e2-a4-0009 +0.25"
+   },
+   {
+    "beat": "18.11",
+    "what": "new line e2-a4-0011 (mario, 1.56 s, new take) after e2-a4-0010 +0.2"
+   },
+   {
+    "beat": "18.11",
+    "what": "the plan's 8.35 s: its tail 0.30 s after the last line"
+   },
+   {
+    "beat": "18.12",
+    "what": "new beat (scene): ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p (lighthouse, lighthouse, mario)"
+   },
+   {
+    "beat": "18.12",
+    "what": "on-screen add: \"Building smarter-than-human machines is an inherently dangerous endeav\" (0.2-4.3)"
+   },
+   {
+    "beat": "18.12",
+    "what": "new line e2-a4-0012 (mario, 2.84 s, new take) at start+4.4"
+   },
+   {
+    "beat": "18.12",
+    "what": "the plan's 7.63 s: its tail 0.39 s after the last line"
+   },
+   {
+    "beat": "18.13",
+    "what": "new beat (scene): RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell (lighthouse, split_lighthouse, mario, ekiel)"
+   },
+   {
+    "beat": "18.13",
+    "what": "new line e2-a4-0013 (mario, 1.63 s, new take) at start+1.56"
+   },
+   {
+    "beat": "18.13",
+    "what": "new line e2-a4-0014 (ekiel, 1.07 s, new take) after e2-a4-0013 +2.6"
+   },
+   {
+    "beat": "18.13",
+    "what": "new line e2-a4-0015 (mario, 2.73 s, new take) after e2-a4-0014 +0.2"
+   },
+   {
+    "beat": "18.13",
+    "what": "the plan's 9.94 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "18.13",
+    "what": "sound glint_tick at 0.29 s (the plan's)"
+   },
+   {
+    "beat": "18.13",
+    "what": "sound glint_tick at 0.78 s (the plan's)"
+   },
+   {
+    "beat": "18.13",
+    "what": "sound glint_tick at 1.27 s (the plan's)"
+   },
+   {
+    "beat": "18.13",
+    "what": "sound scroll_unroll_fall at 3.39 s (the plan's)"
+   },
+   {
+    "beat": "18.14",
+    "what": "new beat (scene): MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up (lighthouse, split_lighthouse, mario)"
+   },
+   {
+    "beat": "18.14",
+    "what": "new line e2-a4-0016 (mario, 1.46 s, new take) at start+0.35"
+   },
+   {
+    "beat": "18.14",
+    "what": "the plan's 2.78 s: its tail 0.97 s after the last line"
+   },
+   {
+    "beat": "18.15",
+    "what": "new beat (scene): LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over (boardroom, split_lighthouse, mas)"
+   },
+   {
+    "beat": "18.15",
+    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.39-2.34)"
+   },
+   {
+    "beat": "18.15",
+    "what": "sound ui_toast_pop at 0.39 s (the plan's)"
+   },
+   {
+    "beat": "18.15",
+    "what": "sound phone_turn_over at 2.34 s (the plan's)"
+   },
+   {
+    "beat": "19.01",
+    "what": "new beat (scene): WIDE · the lobby master at a watch party: ELPPA's keynote on the wall screen; the signs; the flyers still up (lobby, lobby_watchparty, gerg, staff)"
+   },
+   {
+    "beat": "19.01",
+    "what": "on-screen add: \"RAIL: JUN 10, 2024\" (0.2-1.8)"
+   },
+   {
+    "beat": "19.01",
+    "what": "on-screen add: \"DAYS SINCE SOMEONE TRIED TO FIRE MAS: 202\" (1.9-4.6)"
+   },
+   {
+    "beat": "19.01",
+    "what": "on-screen add: \"DAYS SINCE SOMEONE SUED MAS: 102\" (1.9-4.6)"
+   },
+   {
+    "beat": "19.02",
+    "what": "new beat (scene): SCR · the corner TV, muted, held: the roadmap lectern still stuck at FLOOR, a tally on it now (screen, lobby_watchparty, no figures)"
+   },
+   {
+    "beat": "19.02",
+    "what": "on-screen add: \"FLOOR\" (0.1-1.6)"
+   },
+   {
+    "beat": "19.02",
+    "what": "on-screen add: \"0 BILLS\" (0.1-1.6)"
+   },
+   {
+    "beat": "19.03",
+    "what": "new beat (scene): WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape unspooling behind her (lobby, lobby_watchparty, haras, gerg)"
+   },
+   {
+    "beat": "19.03",
+    "what": "on-screen add: \"HARAS · FIRST CFO\" (0.85-3.95)"
+   },
+   {
+    "beat": "19.03",
+    "what": "sound calc_tape_spool at 0.42 s (the plan's)"
+   },
+   {
+    "beat": "19.03",
+    "what": "names[]: haras at 0.85 s (its plate)"
+   },
+   {
+    "beat": "19.04",
+    "what": "new beat (scene): 2S · Haras and Gerg on the beanbags, the wall screen low behind them (no cut-ins) (lobby, lobby_watchparty, haras, gerg)"
+   },
+   {
+    "beat": "19.04",
+    "what": "on-screen add: \"And profit—\" (13.86-14.83)"
+   },
+   {
+    "beat": "19.04",
+    "what": "new line e2-a4-0017 (haras, 4.01 s, new take) at start+0.56"
+   },
+   {
+    "beat": "19.04",
+    "what": "new line e2-a4-0018 (gerg, 0.52 s, new take) after e2-a4-0017 +0.2"
+   },
+   {
+    "beat": "19.04",
+    "what": "new line e2-a4-0019 (haras, 1.89 s, new take) after e2-a4-0018 +0.25"
+   },
+   {
+    "beat": "19.04",
+    "what": "new line e2-a4-0020 (gerg, 5.98 s, new take) after e2-a4-0019 +0.2"
+   },
+   {
+    "beat": "19.04",
+    "what": "new line e2-a4-0021 (haras, 0.77 s, new take) after e2-a4-0020 +0.25"
+   },
+   {
+    "beat": "19.04",
+    "what": "the plan's 14.93 s: its tail 0.30 s after the last line"
+   },
+   {
+    "beat": "19.05",
+    "what": "new beat (scene): SCR · ON STREAM … → WIDE · the lobby erupts; a desk confetti cannon; Haras writing under the cheer (lobby, lobby_watchparty, haras, staff, gerg)"
+   },
+   {
+    "beat": "19.05",
+    "what": "on-screen add: \"…AND LATER THIS YEAR: CHATGTP.\" (0.1-2.2)"
+   },
+   {
+    "beat": "19.05",
+    "what": "new line e2-a4-0022 (haras, 1.60 s, new take) at start+2.4"
+   },
+   {
+    "beat": "19.05",
+    "what": "the plan's 4.7 s: its tail 0.70 s after the last line"
+   },
+   {
+    "beat": "19.05",
+    "what": "sound crowd_cheer at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "19.05",
+    "what": "sound confetti_pop at 0.90 s (the plan's)"
+   },
+   {
+    "beat": "19.06",
+    "what": "new beat (scene): SCR · the wall screen: the stream cuts to its outdoor audience; at the edge, small, Mas typing → WIDE · the lobby (lobby, lobby_watchparty, staffer, gerg, staff)"
+   },
+   {
+    "beat": "19.06",
+    "what": "new line e2-a4-0023 (staffer, 0.79 s, new take) at start+2.54"
+   },
+   {
+    "beat": "19.06",
+    "what": "the plan's 6.71 s: its tail 3.38 s after the last line"
+   },
+   {
+    "beat": "19.06",
+    "what": "sound lobby_laugh_s at 3.63 s (the plan's)"
+   },
+   {
+    "beat": "19.07",
+    "what": "new beat (scene): WIDE · ELPPA's campus: the crowd's backs and the giant screen; at the crowd's edge Mas finishes his post and sends it (skyline, campus, mas, staff)"
+   },
+   {
+    "beat": "19.07",
+    "what": "on-screen add: \"very happy to be partnering with ELPPA to integrate CHATGTP into their\" (2.6-9.2)"
+   },
+   {
+    "beat": "19.07",
+    "what": "sound typing_soft at 1.20 s (the plan's)"
+   },
+   {
+    "beat": "19.07",
+    "what": "sound typing_soft at 1.80 s (the plan's)"
+   },
+   {
+    "beat": "19.07",
+    "what": "sound post_click at 2.50 s (the plan's)"
+   },
+   {
+    "beat": "19.08",
+    "what": "new beat (scene): WIDE · the giant screen: the stream's chat lights with it; across the lawn, phones buzz → MCU · Mas (skyline, campus, mas, staff)"
+   },
+   {
+    "beat": "19.08",
+    "what": "new line e2-vo-12 (mas, 3.69 s, new take) at start+2.54"
+   },
+   {
+    "beat": "19.08",
+    "what": "the plan's 6.93 s: its tail 0.70 s after the last line"
+   },
+   {
+    "beat": "19.08",
+    "what": "sound chat_ping_run at 0.28 s (the plan's)"
+   },
+   {
+    "beat": "19.08",
+    "what": "sound phone_wave_buzz at 1.13 s (the plan's)"
+   },
+   {
+    "beat": "19.09",
+    "what": "new beat (scene): MCU · Mas on the lawn, phone to his ear (base) ↔ MCU · Gerg in the cheering lobby (cut-ins) (call, campus, mas, gerg)"
+   },
+   {
+    "beat": "19.09",
+    "what": "new line e2-a4-0024 (gerg, 3.25 s, new take) at start+1.97"
+   },
+   {
+    "beat": "19.09",
+    "what": "new line e2-a4-0025 (mas, 1.23 s, new take) after e2-a4-0024 +0.45"
+   },
+   {
+    "beat": "19.09",
+    "what": "the plan's 7.05 s: its tail 0.15 s after the last line"
+   },
+   {
+    "beat": "19.09",
+    "what": "sound call_ring at 0.14 s (the plan's)"
+   },
+   {
+    "beat": "19.09",
+    "what": "sound call_connect at 1.27 s (the plan's)"
+   },
+   {
+    "beat": "19.10",
+    "what": "new beat (scene): MCU · the call, crosscut; Gerg's last question weighted (call, campus, mas, gerg)"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0026 (gerg, 1.67 s, new take) at start+0.3"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0027 (mas, 0.63 s, new take) after e2-a4-0026 +0.45"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0033 (gerg, 1.76 s, new take) after e2-a4-0027 +0.5"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0034 (mas, 0.70 s, new take) after e2-a4-0033 +0.45"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0035 (gerg, 1.17 s, new take) after e2-a4-0034 +0.25"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0028 (gerg, 1.16 s, new take) after e2-a4-0035 +0.9"
+   },
+   {
+    "beat": "19.10",
+    "what": "new line e2-a4-0029 (mas, 3.44 s, new take) after e2-a4-0028 +0.6"
+   },
+   {
+    "beat": "19.10",
+    "what": "the plan's 14.68 s: its tail 0.70 s after the last line"
+   },
+   {
+    "beat": "19.11",
+    "what": "new beat (flashback): POV · a push into his phone, full-bleed: a GPS breadcrumb in older colours draws itself across the stream's stage (screen, era_2008, no figures)"
+   },
+   {
+    "beat": "19.11",
+    "what": "sound render_front_sweep at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "19.12",
+    "what": "new beat (flashback): WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; the end card (stage, era_2008, young-mas)"
+   },
+   {
+    "beat": "19.12",
+    "what": "on-screen add: \"\"WHERE YOU AT?\"\" (2.54-4.65)"
+   },
+   {
+    "beat": "19.13",
+    "what": "new beat (flashback): WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker (stage, era_2008, young-mas, sleeve)"
+   },
+   {
+    "beat": "19.13",
+    "what": "sound clicker_catch at 2.25 s (the plan's)"
+   },
+   {
+    "beat": "19.13",
+    "what": "sound vhs_applause at 2.82 s (the plan's)"
+   },
+   {
+    "beat": "19.14",
+    "what": "new beat (flashback): WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out (stage, era_2008, young-mas)"
+   },
+   {
+    "beat": "19.14",
+    "what": "on-screen add: \"LAST UPDATED 2012\" (5.37-7.06)"
+   },
+   {
+    "beat": "19.14",
+    "what": "sound pin_grey_tick at 2.26 s (the plan's)"
+   },
+   {
+    "beat": "19.14",
+    "what": "sound pin_grey_tick at 3.11 s (the plan's)"
+   },
+   {
+    "beat": "19.14",
+    "what": "sound pin_grey_tick at 3.95 s (the plan's)"
+   },
+   {
+    "beat": "19.14",
+    "what": "sound pin_grey_tick at 4.80 s (the plan's)"
+   },
+   {
+    "beat": "19.15",
+    "what": "new beat (flashback): ECU · match: the clicker in his 2008 hand becomes his 2024 phone in the same grip, his post from the lawn on its screen (screen, campus, mas)"
+   },
+   {
+    "beat": "19.16",
+    "what": "new beat (scene): WIDE · the walled garden (phrase 1): his phone's picture opens outward; MIT KOOC turns one key; CHATGTP walked through on a velvet rope (void, garden, mit-kooc, chatgtp)"
+   },
+   {
+    "beat": "19.16",
+    "what": "on-screen add: \"GUEST\" (7.4-10.0)"
+   },
+   {
+    "beat": "19.16",
+    "what": "sound lock_big_turn at 3.40 s (the plan's)"
+   },
+   {
+    "beat": "19.16",
+    "what": "sound gate_iron_swing at 4.60 s (the plan's)"
+   },
+   {
+    "beat": "19.16",
+    "what": "sound velvet_rope at 6.60 s (the plan's)"
+   },
+   {
+    "beat": "19.17",
+    "what": "new beat (scene): MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble (void, garden, chatgtp, iris)"
+   },
+   {
+    "beat": "19.17",
+    "what": "on-screen add: \"99%\" (6.4-10.0)"
+   },
+   {
+    "beat": "19.17",
+    "what": "sound flower_nod at 2.00 s (the plan's)"
+   },
+   {
+    "beat": "19.17",
+    "what": "sound chip_blip_bubble at 2.80 s (the plan's)"
+   },
+   {
+    "beat": "19.17",
+    "what": "sound flower_nod at 4.60 s (the plan's)"
+   },
+   {
+    "beat": "19.17",
+    "what": "sound chip_blip_bubble at 5.30 s (the plan's)"
+   },
+   {
+    "beat": "19.18",
+    "what": "new beat (scene): 2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right (void, garden, mas, radnus)"
+   },
+   {
+    "beat": "19.18",
+    "what": "new line e2-a4-0030 (radnus, 2.85 s, new take) at start+2.25"
+   },
+   {
+    "beat": "19.18",
+    "what": "new line e2-a4-0031 (mas, 0.95 s, new take) after e2-a4-0030 +0.45"
+   },
+   {
+    "beat": "19.18",
+    "what": "the plan's 8.7 s: its tail 2.20 s after the last line"
+   },
+   {
+    "beat": "19.19",
+    "what": "new beat (scene): WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame (void, garden, mas)"
+   },
+   {
+    "beat": "19.19",
+    "what": "sound gate_iron_swing at 0.42 s (the plan's)"
+   },
+   {
+    "beat": "19.19",
+    "what": "sound lock_big_turn at 1.97 s (the plan's)"
+   },
+   {
+    "beat": "19.20",
+    "what": "new beat (scene): WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket (void, garden, mas)"
+   },
+   {
+    "beat": "19.20",
+    "what": "sound phone_into_pocket at 2.54 s (the plan's)"
+   },
+   {
+    "beat": "20.01",
+    "what": "new beat (scene): SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights (lobby, split_zai, mas, nole)"
+   },
+   {
+    "beat": "20.01",
+    "what": "on-screen add: \"KORG 2: NEXT QUARTER\" (0.31-3.91)"
+   },
+   {
+    "beat": "20.01",
+    "what": "sound ui_toast_pop at 2.88 s (the plan's)"
+   },
+   {
+    "beat": "20.02",
+    "what": "new beat (scene): SPLIT · RIGHT: his lamp clicks on; his post goes up, one crop, with its condition (lobby, split_zai, nole)"
+   },
+   {
+    "beat": "20.02",
+    "what": "on-screen add: \"If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be\" (0.3-7.5)"
+   },
+   {
+    "beat": "20.02",
+    "what": "sound lamp_click at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "20.02",
+    "what": "sound nole_fanfare_short at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "20.03",
+    "what": "new beat (scene): SPLIT · RIGHT: MCU Nole at the cage, to a visitor at the door; he locks his own phone in it (lobby, split_zai, nole, visitor)"
+   },
+   {
+    "beat": "20.03",
+    "what": "new line e2-a4-0032 (nole, 4.20 s, new take) at start+0.31"
+   },
+   {
+    "beat": "20.03",
+    "what": "the plan's 6.11 s: its tail 1.60 s after the last line"
+   },
+   {
+    "beat": "20.03",
+    "what": "sound cage_door_shut at 5.11 s (the plan's)"
+   },
+   {
+    "beat": "20.03",
+    "what": "sound padlock_snap at 5.71 s (the plan's)"
+   },
+   {
+    "beat": "20.04",
+    "what": "new beat (scene): SPLIT · RIGHT: ECU the padlock and the buzzing phone; Nole looks at his empty hands; the lamp clicks off (lobby, split_zai, nole)"
+   },
+   {
+    "beat": "20.04",
+    "what": "sound phone_buzz_muffled at 0.21 s (the plan's)"
+   },
+   {
+    "beat": "20.04",
+    "what": "sound lamp_click at 2.89 s (the plan's)"
+   },
+   {
+    "beat": "20.05",
+    "what": "new beat (scene): WIDE · the NopeAI lobby, full frame, as the divider slides away: Jun 11, morning; Mas peels his own flyer off the pillar (lobby, lobby_morning, mas, staff)"
+   },
+   {
+    "beat": "20.05",
+    "what": "on-screen add: \"RAIL: JUN 11\" (0.3-1.8)"
+   },
+   {
+    "beat": "20.05",
+    "what": "sound tape_peel at 2.60 s (the plan's)"
+   },
+   {
+    "beat": "20.05",
+    "what": "sound paper_flutter at 3.80 s (the plan's)"
+   },
+   {
+    "beat": "20.06",
+    "what": "new beat (scene): ECU · his fingers find the yellowed corner of the old note already in his jacket, no words legible (lobby, lobby_morning, no figures)"
+   },
+   {
+    "beat": "20.06",
+    "what": "sound cloth_rustle at 0.10 s (the plan's)"
+   },
+   {
+    "beat": "20.07",
+    "what": "new beat (scene): WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas (lobby, lobby_morning, haras, mas)"
+   },
+   {
+    "beat": "20.07",
+    "what": "on-screen add: \"UPSIDE\" (0.21-1.53)"
+   },
+   {
+    "beat": "20.07",
+    "what": "new line e2-vo-13 (mas, 3.44 s, new take) at start+1.03"
+   },
+   {
+    "beat": "20.07",
+    "what": "the plan's 4.88 s: its tail 0.41 s after the last line"
+   },
+   {
+    "beat": "20.08",
+    "what": "new beat (scene): ECU · full frame: the complaint in the middle of the floor, coffee cups on it; its docket tab (lobby, lobby_morning, no figures)"
+   },
+   {
+    "beat": "20.08",
+    "what": "on-screen add: \"HEARING · JUN 12 · MOTION TO DISMISS\" (0.1-2.2)"
+   },
+   {
+    "beat": "20.08",
+    "what": "sound docket_tab_flick at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "20.09",
+    "what": "new beat (scene): WIDE · a rope drops from above and hooks it; a staffer lifts the cups off just in time; the complaint rises out of frame; (FOR NOW) on the clean rectangle (lobby, lobby_morning, staff)"
+   },
+   {
+    "beat": "20.09",
+    "what": "on-screen add: \"(FOR NOW)\" (3.0-4.0)"
+   },
+   {
+    "beat": "20.09",
+    "what": "sound rope_drop at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "20.09",
+    "what": "sound rope_haul at 1.10 s (the plan's)"
+   },
+   {
+    "beat": "20.09",
+    "what": "sound sticky_flutter at 2.60 s (the plan's)"
+   },
+   {
+    "beat": "20.10",
+    "what": "new beat (scene): ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it over: Alyi's post and its link card (screen, darkroom, mas)"
+   },
+   {
+    "beat": "20.10",
+    "what": "on-screen add: \"RAIL: JUN 19, 2024\" (0.2-1.8)"
+   },
+   {
+    "beat": "20.10",
+    "what": "on-screen add: \"I am starting a new company:\" (2.6-6.9)"
+   },
+   {
+    "beat": "20.10",
+    "what": "on-screen add: \"ISS\" (3.0-6.9)"
+   },
+   {
+    "beat": "20.10",
+    "what": "on-screen add: \"one goal and one product: a safe superintelligence\" (3.0-6.9)"
+   },
+   {
+    "beat": "20.10",
+    "what": "sound phone_buzz_step_1 at 1.90 s (the plan's)"
+   },
+   {
+    "beat": "20.10",
+    "what": "sound phone_turn_over at 2.30 s (the plan's)"
+   },
+   {
+    "beat": "20.11",
+    "what": "new beat (scene): ECU · behind the post TPOOL is still open on its map; the link card lands on the old check-in pin and knocks it loose (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "20.11",
+    "what": "sound pin_knock at 0.80 s (the plan's)"
+   },
+   {
+    "beat": "20.12",
+    "what": "new beat (scene): MCU · Mas reading, still (2 s) → MEDIUM · he takes the folded flyer out of his jacket and stands (darkroom, darkroom, mas)"
+   },
+   {
+    "beat": "20.12",
+    "what": "sound cloth_rustle at 2.00 s (the plan's)"
+   },
+   {
+    "beat": "20.12",
+    "what": "sound chair_creak at 3.00 s (the plan's)"
+   },
+   {
+    "beat": "20.13",
+    "what": "new beat (scene): ECU · on the phone, the pin tips off the map and falls; hard cut to white (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "20.13",
+    "what": "sound pin_fall at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "22.01",
+    "what": "new beat (scene): WIDE · white, room tone only; the pin falls into it; the white is sky over an empty lot; the white cube, one door, a brass plate, a mail slot (void, empty_lot, orb)"
+   },
+   {
+    "beat": "22.01",
+    "what": "on-screen add: \"ISS\" (5.15-7.44)"
+   },
+   {
+    "beat": "22.01",
+    "what": "sound pin_fall at 0.43 s (the plan's)"
+   },
+   {
+    "beat": "22.02",
+    "what": "new beat (scene): WIDE · Mas (pixel) walks up from frame-left, never running; the Orb scans the cube and toasts nothing (void, empty_lot, mas, orb)"
+   },
+   {
+    "beat": "22.02",
+    "what": "sound footstep_gravel at 0.57 s (the plan's)"
+   },
+   {
+    "beat": "22.02",
+    "what": "sound footstep_gravel at 1.72 s (the plan's)"
+   },
+   {
+    "beat": "22.02",
+    "what": "sound footstep_gravel at 2.86 s (the plan's)"
+   },
+   {
+    "beat": "22.02",
+    "what": "sound orb_scan_sweep at 4.29 s (the plan's)"
+   },
+   {
+    "beat": "22.03",
+    "what": "new beat (scene): WIDE · the band lights for four seconds: Use flyer on door (void, empty_lot, mas)"
+   },
+   {
+    "beat": "22.03",
+    "what": "on-screen add: \"Use flyer on door\" (0.4-3.8)"
+   },
+   {
+    "beat": "22.03",
+    "what": "sound ui_band_on at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "22.03",
+    "what": "sound ui_band_off at 3.90 s (the plan's)"
+   },
+   {
+    "beat": "22.04",
+    "what": "new beat (scene): MCU · over his shoulder at the slot: he unfolds the flyer (his, upside down, tape on its corners) and pushes it in; it lifts the flap (void, empty_lot, mas)"
+   },
+   {
+    "beat": "22.04",
+    "what": "sound flyer_into_slot at 2.00 s (the plan's)"
+   },
+   {
+    "beat": "22.04",
+    "what": "sound mail_flap_lift at 3.15 s (the plan's)"
+   },
+   {
+    "beat": "22.05",
+    "what": "new beat (scene): INSERT · the glimpse: the slot's gap fills the frame; a lit room; Alyi small inside at a desk, working, absorbed, cropped by the slot's edges (void, empty_lot, alyi)"
+   },
+   {
+    "beat": "22.05",
+    "what": "sound lab_room_tone at 0.00 s (the plan's)"
+   },
+   {
+    "beat": "22.05",
+    "what": "sound paper_drop_floor at 2.40 s (the plan's)"
+   },
+   {
+    "beat": "22.06",
+    "what": "new beat (scene): ECU · the flap swings shut on its spring (room tone only: the designed stop) (void, empty_lot, no figures)"
+   },
+   {
+    "beat": "22.06",
+    "what": "sound mail_flap_spring_shut at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "22.07",
+    "what": "new beat (scene): MCU · Mas at the shut flap (void, empty_lot, mas)"
+   },
+   {
+    "beat": "22.08",
+    "what": "new beat (scene): MEDIUM · the door and his raised hand in one frame: he raises a hand to knock, and lowers it (void, empty_lot, mas)"
+   },
+   {
+    "beat": "22.09",
+    "what": "new beat (scene): WIDE · he turns and walks away the way he came: his back, small, crossing the 3D lot; the cube doesn't change (void, empty_lot, mas)"
+   },
+   {
+    "beat": "22.09",
+    "what": "sound footstep_gravel at 0.60 s (the plan's)"
+   },
+   {
+    "beat": "22.09",
+    "what": "sound footstep_gravel at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "22.09",
+    "what": "sound footstep_gravel at 2.60 s (the plan's)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ },
+ "tag": {
+  "timeline": "show/reel/ep02-v1/ep02-v1-tag.json",
+  "source": null,
+  "source_story_s": 0.0,
+  "estimate_s": 37.0,
+  "seconds": 37.0,
+  "frames": 888,
+  "source_frames": 0,
+  "beats": 9,
+  "lines": 1,
+  "vo": 1,
+  "vo_lines": [
+   "e2-vo-14 (23.05): sixty elections this year."
+  ],
+  "scenes": [
+   "23"
+  ],
+  "jcuts": [],
+  "lcuts": [],
+  "median_gap_source": null,
+  "median_gap": {
+   "inside_beats_s": null,
+   "inside_beats_n": 0,
+   "segment_s": null,
+   "segment_n": 0,
+   "spoken_only_segment_s": null
+  },
+  "beat_lengths": [
+   {
+    "beat": "23.01",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.02",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 4.3,
+    "lock_s": 4.3,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.03",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 4.2,
+    "lock_s": 4.2,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.04",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 6.8,
+    "lock_s": 6.8,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.05",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 2.98,
+    "lock_s": 2.98,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.06",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 4.6,
+    "lock_s": 4.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.07",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 5.92,
+    "lock_s": 5.92,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.08",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 1.6,
+    "lock_s": 1.6,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "23.09",
+    "action": "new",
+    "scene": "23",
+    "src_s": null,
+    "est_s": 2.0,
+    "lock_s": 2.0,
+    "diff_s": 0.0
+   }
+  ],
+  "tempo": [],
+  "check_failures": [],
+  "edits": [
+   {
+    "beat": "23.01",
+    "what": "new beat (montage): OTS · his back as he sits at the desk; the monitor's glow; something heavy lands on the desk from above: THUD (darkroom, darkroom, mas, orb)"
+   },
+   {
+    "beat": "23.01",
+    "what": "on-screen add: \"RAIL: AUG 5\" (0.2-1.4)"
+   },
+   {
+    "beat": "23.01",
+    "what": "on-screen add: \"NOLE v. MANALT ET AL. · FEDERAL COURT\" (2.2-4.6)"
+   },
+   {
+    "beat": "23.01",
+    "what": "on-screen add: \"(FOR NOW)\" (2.2-4.6)"
+   },
+   {
+    "beat": "23.01",
+    "what": "sound landing_thunk at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "23.02",
+    "what": "new beat (montage): ECU · its pages lose their exclamation points; he slides it aside (darkroom, darkroom, mas)"
+   },
+   {
+    "beat": "23.02",
+    "what": "on-screen add: \"!!\" (0.27-1.21)"
+   },
+   {
+    "beat": "23.02",
+    "what": "on-screen add: \"!\" (1.21-2.15)"
+   },
+   {
+    "beat": "23.02",
+    "what": "on-screen add: \".\" (2.15-3.22)"
+   },
+   {
+    "beat": "23.02",
+    "what": "sound page_turn at 0.27 s (the plan's)"
+   },
+   {
+    "beat": "23.02",
+    "what": "sound page_turn at 1.21 s (the plan's)"
+   },
+   {
+    "beat": "23.02",
+    "what": "sound page_turn at 2.15 s (the plan's)"
+   },
+   {
+    "beat": "23.03",
+    "what": "new beat (montage): POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a SUMMER 2024 decal (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "23.03",
+    "what": "on-screen add: \"RAIL: AUG 11\" (0.2-1.4)"
+   },
+   {
+    "beat": "23.03",
+    "what": "on-screen add: \"…and she 'A.I.'d' it…\" (1.6-4.1)"
+   },
+   {
+    "beat": "23.03",
+    "what": "on-screen add: \"SIRRAH\" (1.6-4.2)"
+   },
+   {
+    "beat": "23.03",
+    "what": "on-screen add: \"SUMMER 2024\" (1.6-4.2)"
+   },
+   {
+    "beat": "23.03",
+    "what": "sound ui_toast_pop at 1.60 s (the plan's)"
+   },
+   {
+    "beat": "23.03",
+    "what": "names[]: sirrah at 1.6 s (its plate)"
+   },
+   {
+    "beat": "23.04",
+    "what": "new beat (montage): 2S → TERMINAL · the Orb floats to the monitor and scans the crowd face by face; its toast; it floats back. A background tab: an egg on a bill (screen, darkroom, orb, mas)"
+   },
+   {
+    "beat": "23.04",
+    "what": "on-screen add: \"human · human · human · human\" (1.4-4.0)"
+   },
+   {
+    "beat": "23.04",
+    "what": "on-screen add: \"verified: human (all of them)\" (4.2-6.6)"
+   },
+   {
+    "beat": "23.04",
+    "what": "sound orb_servo at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "23.04",
+    "what": "sound orb_scan_sweep at 1.40 s (the plan's)"
+   },
+   {
+    "beat": "23.04",
+    "what": "sound orb_chime_F at 4.20 s (the plan's)"
+   },
+   {
+    "beat": "23.04",
+    "what": "sound ui_toast_pop at 4.20 s (the plan's)"
+   },
+   {
+    "beat": "23.05",
+    "what": "new beat (scene): OTS · Mas at the monitor, the toast cleared (darkroom, darkroom, mas, orb)"
+   },
+   {
+    "beat": "23.05",
+    "what": "new line e2-vo-14 (mas, 1.90 s, new take) at start+0.54"
+   },
+   {
+    "beat": "23.05",
+    "what": "the plan's 2.98 s: its tail 0.54 s after the last line"
+   },
+   {
+    "beat": "23.06",
+    "what": "new beat (montage): POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third (screen, darkroom, rumpt-hands)"
+   },
+   {
+    "beat": "23.06",
+    "what": "on-screen add: \"RAIL: AUG 21\" (0.2-1.4)"
+   },
+   {
+    "beat": "23.06",
+    "what": "on-screen add: \"…having me speak… It's a little bit dangerous out there.\" (1.4-4.55)"
+   },
+   {
+    "beat": "23.06",
+    "what": "sound blip_text_neutral at 1.50 s (the plan's)"
+   },
+   {
+    "beat": "23.07",
+    "what": "new beat (montage): POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on (screen, darkroom, rumpt-hands)"
+   },
+   {
+    "beat": "23.07",
+    "what": "sound balloon_pump at 0.81 s (the plan's)"
+   },
+   {
+    "beat": "23.07",
+    "what": "sound balloon_pump at 1.88 s (the plan's)"
+   },
+   {
+    "beat": "23.07",
+    "what": "sound balloon_pump at 2.96 s (the plan's)"
+   },
+   {
+    "beat": "23.07",
+    "what": "sound knot_tie at 4.58 s (the plan's)"
+   },
+   {
+    "beat": "23.08",
+    "what": "new beat (montage): POV · the hook: the string goes taut (screen, darkroom, no figures)"
+   },
+   {
+    "beat": "23.08",
+    "what": "sound string_taut at 0.30 s (the plan's)"
+   },
+   {
+    "beat": "23.09",
+    "what": "new beat (montage): MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat (darkroom, darkroom, mas)"
+   }
+  ],
+  "deviations": [],
+  "safety_net": []
+ }
+}

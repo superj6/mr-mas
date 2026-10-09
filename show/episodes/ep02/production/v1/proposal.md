@@ -1370,6 +1370,13 @@ As the showrunner's proxy, decided the way the recorded notes point (LEARNINGS R
 | D-86 | **The last V.O. lines:** 12 "whatever we ship next goes in their phones too." · 13 "we raise in the fall. she has till then." · 14 "sixty elections this year." | the "first, then" template; "haras needs a number" didn't say which (and the name risked "harass"/"Harris" in the voice); "a good week for the other company." read the news and was shaped like a gloat post (W7); the count shows the Orb's market as foresight (facts A71) |
 | D-87 | **Fidelity and sources:** the cow caption is the verbatim crop; "0%", the billions line, the cow and "exactly right" are [V], "Yup" [K] for its period only; the board's card keeps "Ms." (naming rule 12); NOPEAI in XEL's quote; the Apr 1 lineup's words are a news site's [H] headline in its own UI; the Superalignment, Leike and Lex source notes are corrected (a later sentence; the thread's real first post; 1:05, 18:34, 18:57, 19:15); facts.md is regenerated from the script's facts key; MADA and TERB carry Ep2 in naming.md; smaller line fixes ("on the fourth floor", "MINDDEEP had that…", Gerg's "Careful. The new one can hear you laugh.", "you put us in your new assistant. that's the price.", "That's the brief one. It only has the one concern.", "Then I'll feel it for both of us.", the staffer peeling the flyer she asks about) | GR §3 and W26: no [K] on a dated header, an [H] quote only as a headline's exact words; rule 12: only the name changes; the rest are the review's clarity and register fixes, each in its scene's SR line |
 
+### New at the lock (each with its reason; the record is [lock-v1.md](lock-v1.md))
+
+| ID | Decision | Reasoning |
+|---|---|---|
+| D-88 | **Sc 11 is 1:38 and sc 13 is 0:31: the air the fit tripled comes back to the episode.** Each keeps its designed air at about the episode's median breath (×1.41, ×1.36); every line, tempo gap, overlap, laugh hold, arrival, aftermath and on-screen item is unchanged (`beat-plan/_spec.py` `SCENE_ADJUST`) | the takes run far under their words-at-rate plans (CHATGTP 164–246 wpm against 150; the engineer and the staffers at 55–70 %), so fitting the two quick scenes to this table's estimates tripled their air (×3.51, ×3.03 against ×0.97–1.91 everywhere else): 11.08's tail 4.59 s, the walk-off 7.27 s against a 2.4 s design. This table is "±0:40 until the takes"; "No dead air, and never lengthen things for the sake of runtime" (the showrunner, *Pacing*); W17: tighten means dead time. Nothing moves to another scene (R4), and nothing on the keep list is touched (R5) |
+| D-89 | **Sc 14's sentence line holds until the next command replaces it** (`Look at heatsink` to 2.8 s, `Pick up reflection` to the beat's end, `Talk to reflection` 0.4 s into its dialogue tree) | each was up 0.7–0.8 s against its read floor of 1.05–1.15 s (P15, FIRM); the adventure game's own convention meets the floor at no cost in time |
+
 ## Runtime per act
 
 Estimates [J], from 5.4's per-scene ledger, word counts at Ep1's paces, and the tempo marks; nothing here is heard yet. ±0:40 until the takes and the stick reel.
@@ -1416,6 +1423,18 @@ Estimates [J], from 5.4's per-scene ledger, word counts at Ep1's paces, and the 
 - **D-20, if the reel runs long:** F2.3 to about 15 s, keeping the room's refusal and the look (−6 s; SR: the sheet is gone; the newcomer read's order: before any cow trim); the APR 1 lineup, with V.O. 4 moving onto the calendar square (−10 s); the off-record mic gag, if its laugh test fails (−4 s). About −20 s (story ≈ 23:00 after the script review). Never a conversation's middle, an arrival, a keep-list line, or a round-1 or round-2 fix.
 
 **The episode clock (with the intro and card; SR):** cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:29 · Act Four 17:55 · tag 23:15 · outro 23:52 · end 24:02. The midpoint act-out lands at 52%; the S3 (the bridge) runs 15:44–17:55 (65–74%).
+
+**After the lock ([lock-v1.md](lock-v1.md), 2026-10-09; measured [M] on the EL-timed lock, the takes recorded):** story **23:02.00** (33,168 frames), episode **23:44.88** (34,197 frames, with the tag's 0.75 s hum under black). That is 18 s under the script review's table and inside its ±0:40. All 18 s is fitted air that the short takes left in two quick scenes, given back (D-88); every other act lands on the table to the frame.
+
+| | Script review | **The lock** | What moved |
+|---|---|---|---|
+| Cold open · Act One · Act Four · Tag | 0:56 · 6:08 · 5:20 · 0:37 | **the same, to the frame** | — |
+| Act Two | 4:53 | **4:40** | sc 11 1:51 → 1:38 (its air ×3.51 → ×1.41; no line, gap, laugh hold, arrival or aftermath moved) |
+| Act Three | 5:26 | **5:21** | sc 13 0:36 → 0:31 (its air ×3.03 → ×1.36; the walk-off 7.27 → 3.27 s) |
+| **Story** | ≈ 23:20 | **23:02.00** | D-20's trims are not needed |
+| **Episode** | ≈ 24:02 | **23:44.88** | Ep1 shipped 23:31.58 |
+
+**The episode clock (the lock):** cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:16 · Act Four 17:37 · tag 22:57 · the hum 23:34 · outro 23:34.75 · end 23:44.88. The midpoint act-out lands at 51.7 %; the S3 (the bridge) runs 15:26–17:37 (65–74 %).
 
 **Must-read real text, per act (R2; a guide, P10).** Crops of real words a viewer has to read on screen (posts, cards, captions, documents); heard real lines (the Lex exchange, Terb's finding, Neleh's voice) are counted apart.
 

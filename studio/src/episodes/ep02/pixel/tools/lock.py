@@ -420,8 +420,11 @@ def main() -> int:
                     on_s=round(on_s, 4), end_s=round(end_s, 4), file_s=round(file_s, 4), abs_in=on_f, abs_out=e_f,
                     file_in=fr(file_s), file_out=fr(file_s) + frames24, file=file, stick_t=l.get("t", 0), stick_in=fin,
                     cut=bool(l.get("cut")), on_camera=on_camera, take_lip_sync=lip_sync,
-                    # off screen: the take says so (lock_v5's rule); with no take, the stick's tag does
-                    os=on_camera == "os" or mode == "speaker" or (R is None and tag.upper() in ("O.S.", "OS")), via=device, words=words, mouth=mouth,
+                    # off screen: the take says so (lock_v5's rule), or the stick's tag does. Ep2 (the lock pass,
+                    # 2026-10-09): the EL takes carry no camera fields (no Kokoro row to copy them from), so the beat
+                    # plan's `os` tag is the only word on it; the copy read the tag only for a line with no take, and
+                    # every Ep2 off-screen line came out on screen
+                    os=on_camera == "os" or mode == "speaker" or tag.upper() in ("O.S.", "OS"), via=device, words=words, mouth=mouth,
                     mouth_src="take" if R is not None and mouth else ("words" if mouth else "none"), pre=t < 0,
                 )
     if no_take:
@@ -460,6 +463,13 @@ def main() -> int:
                 a = s0 + fr(float(o.get("at", 0) or 0))
                 u = s0 + fr(float(o["until"])) if o.get("until") is not None else sh["e"]
                 sh["onscreen"].append(OrderedDict(text=t, s=a - sh["s"], e=u - sh["s"]))
+                pk = o.get("kind")
+                if pk and pk != "rail":
+                    # Ep2: the beat plan's own kind (its onscreen_items, carried by the base lock): a post, doc, sign,
+                    # plate, card, stat, caption, lower-third, toast or ui item is drawn as what it is, with its words as
+                    # written (no "POST:"/"NAME:" prefix to parse; a post is a text of kind "post", never a silent line)
+                    sh["texts"].append(OrderedDict(kind=pk, text=t, abs_in=a, abs_out=u, floor_f=floor_f(t), must=pk not in ("clock",)))
+                    continue
                 kind, shown = text_kind(t)
                 # "NAME: text" with a cast name = a post (Act Four's S5.03 "RIMA: ..." is the case lock_v5 special-cased)
                 mm = re.match(r"^([A-Z][A-Z\-]*): (.+)$", t)

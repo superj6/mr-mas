@@ -105,7 +105,17 @@ DROP_TEXT = {}
 CAPTION_FIX = {}
 CAPTION_SUB = {}            # (seg, beat) -> [(old, new)]
 PLATE_SKIP = set()          # on-screen adds that are not name plates
-ONSCREEN_SET = {}           # (seg, beat, text) -> ({key: value}, why)
+ONSCREEN_SET = {            # (seg, beat, text) -> ({key: value}, why)
+    # The Ep2 lock pass (lock-v1.md §4, 2026-10-09). Sc 14's adventure-game sentence line was up for less than its read
+    # floor (P15, FIRM: 0.25 s + 0.05 s a character); the genre's own convention holds the sentence line until the next
+    # command replaces it, which meets the floor and costs no time.
+    ('act3', '14.02', 'Look at heatsink'): ({'until': 2.8}, 'the sentence line holds under his reply until "Pick up '
+                                           'reflection" replaces it (0.8 s up against its 1.05 s read floor)'),
+    ('act3', '14.02', 'Pick up reflection'): ({'until': 5.0}, 'held under his reply to the beat\'s end (0.7 s up against '
+                                             'its 1.15 s read floor)'),
+    ('act3', '14.03', 'Talk to reflection'): ({'until': 1.4}, 'held 0.4 s into the dialogue tree that answers it (0.7 s up '
+                                             'against its 1.15 s read floor)'),
+}
 CUE_SUB = {}                # (seg, beat) -> [(old, new)]
 END_ANCHORED = set()
 SOUND_DROP = {}             # (seg, beat, name, at|None) -> why
@@ -197,7 +207,13 @@ def strip_note(s):
         return s
     for _ in range(3):   # trailing source tags "[H · …]" / "[V · …]" and planning notes "(…)", in either order
         s = re.sub(r'\s*\[(?:H|V|P|K|V/K|P✓|INVENTED)\b[^\]]*\]\s*$', '', s)
+        if s.strip() in KEEP_PARENS:
+            return s.strip()
         s = re.sub(r'\s*\([^()]*\)\s*$', '', s).strip()
+        # Ep2 (the lock pass, 2026-10-09): an item whose own words end in parentheses ("(FOR NOW)", "DEFLECTION
+        # (LICENSED)") stops here, once its "(a-b s)" window is off; the copy stripped them too and lost five items
+        if s in KEEP_PARENS:
+            return s
     return s.strip()
 
 
@@ -252,6 +268,8 @@ class Seg:
     def __init__(self, seg, takes):
         self.seg = seg
         self.plan = jl(os.path.join(BP_DIR, f'{seg}.json'))
+        # the plan's texts whose own words end in parentheses (its _about: "listed in each file's keep_parens")
+        KEEP_PARENS.update(self.plan.get('keep_parens') or [])
         self.trims = []
         self.patched = []
         self.src_path = self.plan.get('source') or None
@@ -359,6 +377,11 @@ class Seg:
             else:
                 at, until = 0.2, None   # set dressing: from the shot's start
             d = {'text': t, 'at': at, 'until': until, '_add': True}
+            # Ep2: the plan's own kind for the item (onscreen_items is authoritative: rail, card, stat, plate, post, doc,
+            # caption, lower-third, toast, ui, sign), so the pixel lock and the shot pass know a post from a sign
+            kind = next((it.get('kind') for it in pb.get('onscreen_items') or [] if it.get('text') == t), None)
+            if kind:
+                d['kind'] = kind
             out.append(d)
             self.note(pb['id'], f'on-screen add: "{t[:70]}"' + (f' ({at}-{until})' if spec or tt else ''))
         b['onscreen'] = out
@@ -1238,6 +1261,8 @@ class Seg:
                 for o in b.get('onscreen', []):
                     if isinstance(o, dict) and o['text'] == text:
                         self.note(pb['id'], f'"{text}" ' + ', '.join(f'{k} {o.get(k)} -> {v}' for k, v in kv.items()) + f': {why}')
+                        self.deviate(pb['id'], f'the lock pass: "{text}" ' + ', '.join(f'{k} {o.get(k)} -> {v}' for k, v in kv.items())
+                                     + f' ({why})')
                         o.update(kv)
         for l in pb.get('lines', []):
             first = re.split(r'(?<=[.?!])\s', l.get('text', '') or '')[0].strip('"… ')
@@ -1405,7 +1430,9 @@ class Seg:
         extra = set()
         for pb in self.plan['beats']:
             for l in pb.get('lines', []):
-                if l.get('take_file'):
+                # a takes FILE (Ep1's restored lines named a lines JSON); Ep2's plans name each take's WAV in take_file,
+                # which is not a takes file (el_takes.py reads every listed file as JSON), so only JSON is listed
+                if l.get('take_file') and str(l['take_file']).endswith('.json'):
                     extra.add(l['take_file'])
         used = {TAKES_USED[l['id']] for b in self.beats for l in b.get('lines', []) if l['id'] in TAKES_USED}
         takes_files = sorted(set(prev) | extra | used)
@@ -1557,6 +1584,20 @@ def line_gaps(beats):
     return out
 
 
+def cut_gaps(beats):
+    """the gap before each beat's FIRST line, across the cut: its start on the segment clock minus the end of the last
+    line of the nearest earlier beat that has lines (the plan's tempo.across_cut), by id"""
+    out, t0, prev_end = {}, 0.0, None
+    for b in beats:
+        ls = sorted(b.get('lines', []), key=lambda l: l['t'])
+        if ls:
+            if prev_end is not None:
+                out[ls[0]['id']] = r3(t0 + ls[0]['t'] - prev_end)
+            prev_end = max(t0 + l['t'] + l['dur'] for l in ls)
+        t0 += b['reelDur']
+    return out
+
+
 def checks(seg, S, tl):
     plan = {pb['id']: pb for pb in S.plan['beats']}
     got = {b['id']: b for b in tl['beats']}
@@ -1577,6 +1618,24 @@ def checks(seg, S, tl):
                          'est_s': pb['est_s'], 'lock_s': r3(b['reelDur']), 'diff_s': d})
         if abs(d) > FIT_TOL and pb['id'] not in [x[1] for x in FIT_SKIP] and pb['id'] not in EXACT_ID:
             bad.append(f'{pb["id"]}: lock {b["reelDur"]:.3f} s against est_s {pb["est_s"]} ({d:+.2f})')
+        # Ep2: every on-screen item the plan lists (onscreen_items, authoritative) is in the lock beat with its exact
+        # words, its window (within 0.02 s) and its kind (the lock pass, 2026-10-09: the copy's strip_note had cut the
+        # items whose own words end in parentheses, and nothing checked)
+        pool = [o for o in b.get('onscreen', []) if isinstance(o, dict)]
+        for it in pb.get('onscreen_items') or []:
+            same = [o for o in pool if o['text'] == it['text']]          # a text the plan uses twice (4A.04) pairs in order
+            o = min(same, key=lambda x: abs((x.get('at') or 0.0) - it['at'])) if same else None
+            if o is not None:
+                pool.remove(o)
+            if o is None:
+                bad.append(f'{pb["id"]}: on-screen "{it["text"][:50]}" ({it.get("kind")}) is not in the lock')
+                continue
+            if (seg, pb['id'], it['text']) in ONSCREEN_SET:
+                pass    # the lock pass set this item's window on purpose (ONSCREEN_SET, a deviation with its reason)
+            elif abs((o.get('at') or 0.0) - it['at']) > 0.02 or (o.get('until') is not None and abs(o['until'] - it['until']) > 0.02):
+                bad.append(f'{pb["id"]}: on-screen "{it["text"][:40]}" {o.get("at")}-{o.get("until")} s, the plan {it["at"]}-{it["until"]} s')
+            if o.get('kind') != it.get('kind'):
+                bad.append(f'{pb["id"]}: on-screen "{it["text"][:40]}" kind {o.get("kind")}, the plan {it.get("kind")}')
         # lines: every kept / new / restored line is in, every dropped one is out
         ids = {l['id'] for l in b.get('lines', [])}
         for l in pb.get('lines', []):
@@ -1588,12 +1647,16 @@ def checks(seg, S, tl):
     order_lock = [b['id'] for b in tl['beats']]
     if order_plan != order_lock:
         bad.append('the beat order differs from the plan')
-    # the tempo table: the gap before each named line
+    # the tempo table: the gap before each named line. A beat's first line can carry a gap ACROSS the cut (the plan's
+    # tempo.across_cut: the beat before's tail + this head, Ep2's quick exchanges that cut on the reply); that one is
+    # measured on the segment clock, from the last line of the beat before (the Ep2 lock pass, 2026-10-09: the copy
+    # measured only inside a beat, so every across-cut gap read None and failed)
     gaps = line_gaps(tl['beats'])
+    across = cut_gaps(tl['beats'])
     tempo = []
     for pb in S.plan['beats']:
         for lid, g in ((pb.get('tempo') or {}).get('gaps') or {}).items():
-            m = gaps.get(lid)
+            m = gaps.get(lid, across.get(lid))
             ok = m is not None and abs(m - g) <= 0.02
             tempo.append({'beat': pb['id'], 'line': lid, 'plan_s': g, 'lock_s': m, 'ok': ok})
             if not ok:

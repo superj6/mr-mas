@@ -3,9 +3,11 @@
   "show": "MR. MAS",
   "episode": "ep02",
   "seg": "coldopen",
-  "label": "COLDOPEN",
-  "timeline": "(scaffold: no timeline for coldopen yet)",
-  "takes": [],
+  "label": "COLD OPEN",
+  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-coldopen.json",
+  "takes": [
+   "show/episodes/ep02/production/v1/assembly/el-v1/coldopen-takes.json"
+  ],
   "plan": null,
   "plan_py": null,
   "base_lock": null,
@@ -24,24 +26,24 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 1,
-  "beats": 1,
-  "frames": 48,
-  "seconds": 2.0,
-  "length": "0:02.00",
+  "shots": 13,
+  "beats": 13,
+  "frames": 1344,
+  "seconds": 56.0,
+  "length": "0:56.00",
   "episode_in": "00:00:00",
-  "episode_out": "00:02:00",
+  "episode_out": "00:56:00",
   "verdicts": {
-   "-": 1
+   "-": 13
   },
-  "mean_s": 2.0,
-  "median_s": 2.0,
-  "min_s": 2.0,
-  "max_s": 2.0,
-  "lines": 0,
+  "mean_s": 4.308,
+  "median_s": 3.833,
+  "min_s": 2.292,
+  "max_s": 7.292,
+  "lines": 6,
   "posts": 0,
   "vo": 0,
-  "lines_with_mouth": 0,
+  "lines_with_mouth": 6,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
   "lines_crossing_a_cut": [],
@@ -54,22 +56,37 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "1 scenes: pending(48f)"
+   "detail": "1 scenes: 1(1344f)"
   },
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "1 shots from 1 beats"
+   "detail": "13 shots from 13 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 48"
+   "detail": "0 -> 1344"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 0; other: 0"
+   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 6; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "6 of 6 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "6 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
@@ -84,43 +101,78 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 48,
+   "e": 1344,
    "shots": [
-    "pending"
+    "1.01",
+    "1.02",
+    "1.03",
+    "1.04",
+    "1.05",
+    "1.06",
+    "1.07",
+    "1.08",
+    "1.09",
+    "1.10",
+    "1.11",
+    "1.12",
+    "1.13"
    ],
    "chapter": "COLDOPEN",
    "title": "",
-   "cue": "",
-   "frames": 48,
+   "cue": "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here · music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors · music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO",
+   "frames": 1344,
    "tc_in": "00:00:00",
-   "tc_out": "00:02:00"
+   "tc_out": "00:56:00"
   }
  ],
  "scenes": [
   {
-   "id": "pending",
+   "id": "1",
    "s": 0,
-   "e": 48,
+   "e": 1344,
    "shots": [
-    "pending"
+    "1.01",
+    "1.02",
+    "1.03",
+    "1.04",
+    "1.05",
+    "1.06",
+    "1.07",
+    "1.08",
+    "1.09",
+    "1.10",
+    "1.11",
+    "1.12",
+    "1.13"
    ],
    "tc_in": "00:00:00",
-   "tc_out": "00:02:00"
+   "tc_out": "00:56:00"
   }
  ],
  "shots": [
   {
-   "id": "pending",
-   "setup": "pending",
+   "id": "1.01",
+   "setup": "1.01",
    "beats": [
-    "pending"
+    "1.01"
    ],
    "s": 0,
-   "e": 48,
-   "onscreen": [],
+   "e": 72,
+   "onscreen": [
+    {
+     "text": "RAIL: FEB 15, 2024",
+     "s": 14,
+     "e": 57
+    },
+    {
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86",
+     "s": 4,
+     "e": 72
+    }
+   ],
    "lines": [],
    "seq": "COLDOPEN",
-   "scene": "pending",
+   "scene": "1",
    "scene_s": 0,
    "verdict": "",
    "v4": null,
@@ -128,45 +180,3360 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "CARD · no lock yet",
-   "cls": "GFX",
+   "frame": "WIDE · the lobby master: the wall screen's snowy meadow (near-photoreal in its bezel), the room around it",
+   "cls": "W",
    "move": "cut",
-   "does": "Ep2 v1 · coldopen: no lock yet. The base lock (audio/reel/ep02-v1/build_timeline.py) and tools/lock.py write data.ts.",
-   "chars": [],
-   "cues": [],
-   "sounds": [],
-   "spots": [],
+   "does": "The NopeAI lobby: rack pillars, LED votives, the neon NOPE AI. Over reception, Ep1's sign: DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86. Staff in tiled rows on beanbags face the wall-sized screen; GERG types on a laptop on his knees. At the back, MAS stands at a high counter with a water glass, THE ORB at his shoulder. On the screen, inside its bezel: a woolly mammoth plodding toward camera through a snowy meadow, too smooth for this building.",
+   "chars": [
+    "gerg",
+    "mas",
+    "orb",
+    "selbeep",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    "server_hum @0"
+   ],
+   "spots": [
+    {
+     "name": "server_hum",
+     "k": 0,
+     "dur": null
+    }
+   ],
    "v4_frames": null,
-   "kind": "card",
-   "set": "void",
-   "room": "",
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Ep2 v1 · coldopen: no lock yet. The base lock (audio/reel/ep02-v1/build_timeline.py) and tools/lock.py write data.ts.",
-   "cast": [],
+   "caption": "The NopeAI lobby: rack pillars, LED votives, the neon NOPE AI. Over reception, Ep1's sign: DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86. Staff in tiled rows on beanbags face the wall-sized screen; GERG types on a laptop on his knees. At the back, MAS stands at a high counter with a water glass, THE ORB at his shoulder. On the screen, inside its bezel: a woolly mammoth plodding toward camera through a snowy meadow, too smooth for this building.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "selbeep",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
    "speak": [],
    "beat_starts": {
-    "pending": 0
+    "1.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 86",
+     "s": 4,
+     "e": 72,
+     "must": true
+    }
+   ],
+   "tc_in": "00:00:00",
+   "tc_out": "00:03:00",
+   "frames": 72
+  },
+  {
+   "id": "1.02",
+   "setup": "1.02",
+   "beats": [
+    "1.02"
+   ],
+   "s": 72,
+   "e": 247,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-co-0001",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SELBEEP",
+     "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+     "s": 13,
+     "e": 159,
+     "fs": 5,
+     "fe": 168,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       6,
+       "A"
+      ],
+      [
+       8,
+       "M"
+      ],
+      [
+       11,
+       "A"
+      ],
+      [
+       13,
+       "E"
+      ],
+      [
+       15,
+       "A"
+      ],
+      [
+       17,
+       "E"
+      ],
+      [
+       20,
+       "O"
+      ],
+      [
+       22,
+       "E"
+      ],
+      [
+       24,
+       "rest"
+      ],
+      [
+       30,
+       "A"
+      ],
+      [
+       32,
+       "E"
+      ],
+      [
+       36,
+       "rest"
+      ],
+      [
+       39,
+       "A"
+      ],
+      [
+       46,
+       "O"
+      ],
+      [
+       50,
+       "A"
+      ],
+      [
+       54,
+       "rest"
+      ],
+      [
+       68,
+       "O"
+      ],
+      [
+       70,
+       "A"
+      ],
+      [
+       72,
+       "E"
+      ],
+      [
+       76,
+       "A"
+      ],
+      [
+       78,
+       "E"
+      ],
+      [
+       80,
+       "M"
+      ],
+      [
+       82,
+       "A"
+      ],
+      [
+       84,
+       "E"
+      ],
+      [
+       86,
+       "A"
+      ],
+      [
+       88,
+       "E"
+      ],
+      [
+       90,
+       "A"
+      ],
+      [
+       93,
+       "E"
+      ],
+      [
+       95,
+       "rest"
+      ],
+      [
+       105,
+       "E"
+      ],
+      [
+       110,
+       "O"
+      ],
+      [
+       112,
+       "E"
+      ],
+      [
+       114,
+       "A"
+      ],
+      [
+       120,
+       "M"
+      ],
+      [
+       122,
+       "O"
+      ],
+      [
+       124,
+       "A"
+      ],
+      [
+       126,
+       "E"
+      ],
+      [
+       129,
+       "A"
+      ],
+      [
+       132,
+       "E"
+      ],
+      [
+       140,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Eyes",
+       0,
+       5
+      ],
+      [
+       "up",
+       6,
+       9
+      ],
+      [
+       "here",
+       10,
+       13
+      ],
+      [
+       "everyone",
+       14,
+       24
+      ],
+      [
+       "This",
+       28,
+       33
+      ],
+      [
+       "is",
+       34,
+       36
+      ],
+      [
+       "AROS",
+       38,
+       53
+      ],
+      [
+       "Nobody",
+       67,
+       74
+      ],
+      [
+       "filmed",
+       75,
+       81
+      ],
+      [
+       "any",
+       82,
+       85
+      ],
+      [
+       "of",
+       86,
+       87
+      ],
+      [
+       "this",
+       88,
+       94
+      ],
+      [
+       "It's",
+       104,
+       109
+      ],
+      [
+       "all",
+       109,
+       112
+      ],
+      [
+       "made",
+       113,
+       117
+      ],
+      [
+       "from",
+       118,
+       121
+      ],
+      [
+       "one",
+       123,
+       126
+      ],
+      [
+       "sentence",
+       128,
+       140
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM · SELBEEP under the screen, the remote the size of a clapperboard; the mammoth's foot breaking the bezel on \"sentence\"",
+   "cls": "M",
+   "move": "hold",
+   "does": "SELBEEP steps under the screen and turns to the room. On \"sentence\", the mammoth's foot breaks the bezel.",
+   "chars": [
+    "selbeep",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    "mammoth_step_pixel @149"
+   ],
+   "spots": [
+    {
+     "name": "mammoth_step_pixel",
+     "k": 149,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "SELBEEP steps under the screen and turns to the room. On \"sentence\", the mammoth's foot breaks the bezel.",
+   "cast": [
+    {
+     "id": "selbeep",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.02": 0
    },
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "00:00:00",
-   "tc_out": "00:02:00",
-   "frames": 48
+   "tc_in": "00:03:00",
+   "tc_out": "00:10:07",
+   "frames": 175
+  },
+  {
+   "id": "1.03",
+   "setup": "1.03",
+   "beats": [
+    "1.03"
+   ],
+   "s": 247,
+   "e": 313,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-co-0002",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "GERG",
+     "text": "Which sentence?",
+     "s": 44,
+     "e": 64,
+     "fs": 35,
+     "fe": 79,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "O"
+      ],
+      [
+       2,
+       "E"
+      ],
+      [
+       8,
+       "A"
+      ],
+      [
+       11,
+       "E"
+      ],
+      [
+       18,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Which",
+       -1,
+       5
+      ],
+      [
+       "sentence",
+       7,
+       18
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the step-out: the mammoth turns pixel as it crosses the bezel; OTS over Gerg's laptop",
+   "cls": "W",
+   "move": "cut",
+   "does": "As it crosses the frame it becomes ours: pixel art, its own colour ramp, palette-cycled fur, 8 drawings held 3 frames each. For two frames, as it steps out, it has a fifth leg. It steps onto the carpet, heading screen-left. Over Gerg's laptop: GERG, not looking up.",
+   "chars": [
+    "gerg",
+    "selbeep",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    "mammoth_step_pixel @8",
+    "mammoth_step_pixel @30"
+   ],
+   "spots": [
+    {
+     "name": "mammoth_step_pixel",
+     "k": 8,
+     "dur": null
+    },
+    {
+     "name": "mammoth_step_pixel",
+     "k": 30,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "As it crosses the frame it becomes ours: pixel art, its own colour ramp, palette-cycled fur, 8 drawings held 3 frames each. For two frames, as it steps out, it has a fifth leg. It steps onto the carpet, heading screen-left. Over Gerg's laptop: GERG, not looking up.",
+   "cast": [
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "selbeep",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.03": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:10:07",
+   "tc_out": "00:13:01",
+   "frames": 66
+  },
+  {
+   "id": "1.04",
+   "setup": "1.04",
+   "beats": [
+    "1.04"
+   ],
+   "s": 313,
+   "e": 481,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-co-0003",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SELBEEP",
+     "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+     "s": 3,
+     "e": 144,
+     "fs": -7,
+     "fe": 158,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       3,
+       "M"
+      ],
+      [
+       5,
+       "A"
+      ],
+      [
+       8,
+       "M"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       19,
+       "E"
+      ],
+      [
+       27,
+       "O"
+      ],
+      [
+       31,
+       "E"
+      ],
+      [
+       37,
+       "O"
+      ],
+      [
+       42,
+       "rest"
+      ],
+      [
+       57,
+       "E"
+      ],
+      [
+       61,
+       "A"
+      ],
+      [
+       63,
+       "E"
+      ],
+      [
+       66,
+       "A"
+      ],
+      [
+       68,
+       "E"
+      ],
+      [
+       70,
+       "A"
+      ],
+      [
+       72,
+       "E"
+      ],
+      [
+       80,
+       "M"
+      ],
+      [
+       82,
+       "A"
+      ],
+      [
+       87,
+       "E"
+      ],
+      [
+       89,
+       "A"
+      ],
+      [
+       92,
+       "M"
+      ],
+      [
+       94,
+       "E"
+      ],
+      [
+       98,
+       "rest"
+      ],
+      [
+       110,
+       "E"
+      ],
+      [
+       114,
+       "A"
+      ],
+      [
+       116,
+       "E"
+      ],
+      [
+       123,
+       "A"
+      ],
+      [
+       125,
+       "E"
+      ],
+      [
+       130,
+       "A"
+      ],
+      [
+       133,
+       "E"
+      ],
+      [
+       139,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "A",
+       -1,
+       1
+      ],
+      [
+       "mammoth",
+       3,
+       13
+      ],
+      [
+       "walking",
+       15,
+       24
+      ],
+      [
+       "through",
+       25,
+       30
+      ],
+      [
+       "the",
+       31,
+       33
+      ],
+      [
+       "snow",
+       34,
+       42
+      ],
+      [
+       "We",
+       56,
+       59
+      ],
+      [
+       "never",
+       60,
+       64
+      ],
+      [
+       "said",
+       65,
+       69
+      ],
+      [
+       "anything",
+       70,
+       78
+      ],
+      [
+       "about",
+       79,
+       83
+      ],
+      [
+       "a",
+       84,
+       85
+      ],
+      [
+       "lobby",
+       87,
+       98
+      ],
+      [
+       "It",
+       110,
+       113
+      ],
+      [
+       "understands",
+       114,
+       127
+      ],
+      [
+       "physics",
+       129,
+       139
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM · SELBEEP; the lobby chair beside the mammoth sags and melts; at the back, MAS glances at it",
+   "cls": "M",
+   "move": "hold",
+   "does": "SELBEEP answers Gerg. The lobby chair beside the mammoth sags, then melts into the carpet like candle wax. At the back of the lobby, Mas glances at the chair.",
+   "chars": [
+    "mas",
+    "selbeep",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    "palette_drip @114"
+   ],
+   "spots": [
+    {
+     "name": "palette_drip",
+     "k": 114,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "SELBEEP answers Gerg. The lobby chair beside the mammoth sags, then melts into the carpet like candle wax. At the back of the lobby, Mas glances at the chair.",
+   "cast": [
+    {
+     "id": "selbeep",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.04": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:13:01",
+   "tc_out": "00:20:01",
+   "frames": 168
+  },
+  {
+   "id": "1.05",
+   "setup": "1.05",
+   "beats": [
+    "1.05"
+   ],
+   "s": 481,
+   "e": 573,
+   "onscreen": [
+    {
+     "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
+     "s": 31,
+     "e": 91
+    },
+    {
+     "text": "MAMMOTHS CONTAINED: 0",
+     "s": 43,
+     "e": 91
+    }
+   ],
+   "lines": [
+    {
+     "id": "e2-co-0004",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SELBEEP",
+     "text": "Directionally.",
+     "s": 6,
+     "e": 29,
+     "fs": -2,
+     "fe": 37,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       5,
+       "A"
+      ],
+      [
+       7,
+       "E"
+      ],
+      [
+       18,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Directionally",
+       0,
+       18
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM · SELBEEP beside the melted chair; the 2-TONE FREEZE card",
+   "cls": "M",
+   "move": "hold",
+   "does": "SELBEEP, beside the melted chair: \"Directionally.\" The card freezes on him.",
+   "chars": [
+    "selbeep"
+   ],
+   "cues": [
+    "music (v1): E02-01 THE MAMMOTH · SET-PIECE SWING, low, chip lead only (the Build's chip lead), in under the clip; the full band never plays here"
+   ],
+   "sounds": [
+    "freeze_hit_F @31"
+   ],
+   "spots": [
+    {
+     "name": "freeze_hit_F",
+     "k": 31,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "SELBEEP, beside the melted chair: \"Directionally.\" The card freezes on him.",
+   "cast": [
+    {
+     "id": "selbeep",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.05": 0
+   },
+   "names": [
+    {
+     "id": "selbeep",
+     "k": 31
+    }
+   ],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "card",
+     "text": "SELBEEP / DIRECTOR OF MAMMOTHS.",
+     "s": 31,
+     "e": 91,
+     "must": true
+    },
+    {
+     "kind": "stat",
+     "text": "MAMMOTHS CONTAINED: 0",
+     "s": 43,
+     "e": 91,
+     "must": true
+    }
+   ],
+   "tc_in": "00:20:01",
+   "tc_out": "00:23:21",
+   "frames": 92
+  },
+  {
+   "id": "1.06",
+   "setup": "1.06",
+   "beats": [
+    "1.06"
+   ],
+   "s": 573,
+   "e": 673,
+   "onscreen": [
+    {
+     "text": "RAIL: FEB 29, 2024",
+     "s": 8,
+     "e": 58
+    },
+    {
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
+     "s": 33,
+     "e": 100
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the lobby master, two weeks on: DOT on the ladder swapping the number plates",
+   "cls": "W",
+   "move": "cut",
+   "does": "Two weeks later. DOT, up a ladder at the sign, orange lanyard, back to camera, swaps the plates: 86 comes down, 100 goes up. The mammoth wanders off screen-left toward the elevators, its footprints in its own colour ramp. THUD, outside, somewhere beyond the doors. The door glass rattles.",
+   "chars": [
+    "dot",
+    "gerg",
+    "mas",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    "plate_hang @27",
+    "hand_truck_step @75",
+    "door_glass_rattle @80"
+   ],
+   "spots": [
+    {
+     "name": "plate_hang",
+     "k": 27,
+     "dur": null
+    },
+    {
+     "name": "hand_truck_step",
+     "k": 75,
+     "dur": null
+    },
+    {
+     "name": "door_glass_rattle",
+     "k": 80,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Two weeks later. DOT, up a ladder at the sign, orange lanyard, back to camera, swaps the plates: 86 comes down, 100 goes up. The mammoth wanders off screen-left toward the elevators, its footprints in its own colour ramp. THUD, outside, somewhere beyond the doors. The door glass rattles.",
+   "cast": [
+    {
+     "id": "dot",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.06": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "DAYS SINCE SOMEONE TRIED TO FIRE MAS: 100",
+     "s": 33,
+     "e": 100,
+     "must": true
+    }
+   ],
+   "tc_in": "00:23:21",
+   "tc_out": "00:28:01",
+   "frames": 100
+  },
+  {
+   "id": "1.07",
+   "setup": "1.07",
+   "beats": [
+    "1.07"
+   ],
+   "s": 673,
+   "e": 817,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-co-0005",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SELBEEP",
+     "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+     "s": 11,
+     "e": 125,
+     "fs": 0,
+     "fe": 139,
+     "os": true,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       2,
+       "E"
+      ],
+      [
+       8,
+       "M"
+      ],
+      [
+       10,
+       "A"
+      ],
+      [
+       12,
+       "M"
+      ],
+      [
+       14,
+       "E"
+      ],
+      [
+       17,
+       "rest"
+      ],
+      [
+       30,
+       "E"
+      ],
+      [
+       39,
+       "O"
+      ],
+      [
+       44,
+       "A"
+      ],
+      [
+       46,
+       "E"
+      ],
+      [
+       50,
+       "rest"
+      ],
+      [
+       64,
+       "E"
+      ],
+      [
+       71,
+       "A"
+      ],
+      [
+       73,
+       "E"
+      ],
+      [
+       76,
+       "M"
+      ],
+      [
+       78,
+       "A"
+      ],
+      [
+       81,
+       "E"
+      ],
+      [
+       85,
+       "A"
+      ],
+      [
+       89,
+       "rest"
+      ],
+      [
+       94,
+       "O"
+      ],
+      [
+       96,
+       "E"
+      ],
+      [
+       99,
+       "O"
+      ],
+      [
+       101,
+       "E"
+      ],
+      [
+       107,
+       "O"
+      ],
+      [
+       109,
+       "E"
+      ],
+      [
+       112,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "That's",
+       -1,
+       4
+      ],
+      [
+       "the",
+       5,
+       7
+      ],
+      [
+       "mammoth",
+       8,
+       17
+      ],
+      [
+       "It's",
+       29,
+       33
+      ],
+      [
+       "been",
+       34,
+       37
+      ],
+      [
+       "two",
+       38,
+       41
+      ],
+      [
+       "weeks",
+       43,
+       50
+      ],
+      [
+       "and",
+       64,
+       67
+      ],
+      [
+       "it",
+       68,
+       70
+      ],
+      [
+       "has",
+       71,
+       75
+      ],
+      [
+       "mass",
+       76,
+       83
+      ],
+      [
+       "now",
+       84,
+       90
+      ],
+      [
+       "We're",
+       94,
+       98
+      ],
+      [
+       "working",
+       99,
+       106
+      ],
+      [
+       "on",
+       107,
+       109
+      ],
+      [
+       "it",
+       110,
+       112
+      ]
+     ],
+     "tag": "os",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the master; Selbeep O.S.; a staffer's coffee jumps on Mas's counter",
+   "cls": "W",
+   "move": "cut",
+   "does": "SELBEEP (O.S.) explains the thud to the room. A second THUD, closer; at Mas's counter a staffer's coffee jumps. The ladder sways; DOT holds on.",
+   "chars": [
+    "dot",
+    "mas",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    "hand_truck_step @126",
+    "cup_jump @128",
+    "ladder_sway_creak @131"
+   ],
+   "spots": [
+    {
+     "name": "hand_truck_step",
+     "k": 126,
+     "dur": null
+    },
+    {
+     "name": "cup_jump",
+     "k": 128,
+     "dur": null
+    },
+    {
+     "name": "ladder_sway_creak",
+     "k": 131,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "SELBEEP (O.S.) explains the thud to the room. A second THUD, closer; at Mas's counter a staffer's coffee jumps. The ladder sways; DOT holds on.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "dot",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.07": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:28:01",
+   "tc_out": "00:34:01",
+   "frames": 144
+  },
+  {
+   "id": "1.08",
+   "setup": "1.08",
+   "beats": [
+    "1.08"
+   ],
+   "s": 817,
+   "e": 909,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-co-0006",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "GERG",
+     "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+     "s": 6,
+     "e": 79,
+     "fs": -3,
+     "fe": 94,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "A"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       8,
+       "A"
+      ],
+      [
+       10,
+       "E"
+      ],
+      [
+       14,
+       "M"
+      ],
+      [
+       16,
+       "A"
+      ],
+      [
+       19,
+       "M"
+      ],
+      [
+       21,
+       "E"
+      ],
+      [
+       24,
+       "rest"
+      ],
+      [
+       39,
+       "E"
+      ],
+      [
+       42,
+       "M"
+      ],
+      [
+       44,
+       "A"
+      ],
+      [
+       46,
+       "M"
+      ],
+      [
+       48,
+       "E"
+      ],
+      [
+       57,
+       "O"
+      ],
+      [
+       60,
+       "E"
+      ],
+      [
+       66,
+       "O"
+      ],
+      [
+       70,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "That's",
+       0,
+       6
+      ],
+      [
+       "not",
+       7,
+       10
+      ],
+      [
+       "the",
+       11,
+       13
+      ],
+      [
+       "mammoth",
+       15,
+       25
+      ],
+      [
+       "The",
+       39,
+       42
+      ],
+      [
+       "mammoth's",
+       43,
+       51
+      ],
+      [
+       "on",
+       52,
+       53
+      ],
+      [
+       "the",
+       54,
+       56
+      ],
+      [
+       "fourth",
+       57,
+       62
+      ],
+      [
+       "floor",
+       64,
+       71
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "OTS-WIDE · over Gerg's laptop; Gerg doesn't look up",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "GERG, typing, not looking up, corrects Selbeep.",
+   "chars": [
+    "gerg",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "GERG, typing, not looking up, corrects Selbeep.",
+   "cast": [
+    {
+     "id": "gerg",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.08": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:34:01",
+   "tc_out": "00:37:21",
+   "frames": 92
+  },
+  {
+   "id": "1.09",
+   "setup": "1.09",
+   "beats": [
+    "1.09"
+   ],
+   "s": 909,
+   "e": 1031,
+   "onscreen": [
+    {
+     "text": "NOLE v. MANALT ET AL.",
+     "s": 33,
+     "e": 122
+    },
+    {
+     "text": "YOU PROMISED!!!",
+     "s": 33,
+     "e": 122
+    },
+    {
+     "text": "PAUSE",
+     "s": 16,
+     "e": 49
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "OTS-WIDE · over Mas's shoulder straight down the axis: the doors blow open on the hand truck and the complaint",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "THUD: a hand truck takes the top step. The doors blow open. On the hand truck, a complaint as tall as a person, its caption NOLE v. MANALT ET AL. over YOU PROMISED!!! It rolls down the axis to his feet. Through the door glass, for the length of the swing, a PAUSE sign leaning on the planter outside.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    "hand_truck_step @5",
+    "door_bang_open @15",
+    "hand_truck_roll @24"
+   ],
+   "spots": [
+    {
+     "name": "hand_truck_step",
+     "k": 5,
+     "dur": null
+    },
+    {
+     "name": "door_bang_open",
+     "k": 15,
+     "dur": null
+    },
+    {
+     "name": "hand_truck_roll",
+     "k": 24,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "THUD: a hand truck takes the top step. The doors blow open. On the hand truck, a complaint as tall as a person, its caption NOLE v. MANALT ET AL. over YOU PROMISED!!! It rolls down the axis to his feet. Through the door glass, for the length of the swing, a PAUSE sign leaning on the planter outside.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.09": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "doc",
+     "text": "NOLE v. MANALT ET AL.",
+     "s": 33,
+     "e": 122,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": "YOU PROMISED!!!",
+     "s": 33,
+     "e": 122,
+     "must": true
+    },
+    {
+     "kind": "sign",
+     "text": "PAUSE",
+     "s": 16,
+     "e": 49,
+     "must": true
+    }
+   ],
+   "tc_in": "00:37:21",
+   "tc_out": "00:42:23",
+   "frames": 122
+  },
+  {
+   "id": "1.10",
+   "setup": "1.10",
+   "beats": [
+    "1.10"
+   ],
+   "s": 1031,
+   "e": 1098,
+   "onscreen": [
+    {
+     "text": "! .... 1",
+     "s": 9,
+     "e": 67
+    },
+    {
+     "text": "!! .... 2",
+     "s": 9,
+     "e": 67
+    },
+    {
+     "text": "!!! .... 3",
+     "s": 9,
+     "e": 67
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "ECU · page one; the table of contents",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "Page one is exclamation points, all of it. The table of contents: ! .... 1 · !! .... 2 · !!! .... 3.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E02-01 · thins to a bass pedal on the first THUD (outside) and holds it through the doors"
+   ],
+   "sounds": [
+    "paper_flutter @4"
+   ],
+   "spots": [
+    {
+     "name": "paper_flutter",
+     "k": 4,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Page one is exclamation points, all of it. The table of contents: ! .... 1 · !! .... 2 · !!! .... 3.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.10": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "doc",
+     "text": "! .... 1",
+     "s": 9,
+     "e": 67,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": "!! .... 2",
+     "s": 9,
+     "e": 67,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": "!!! .... 3",
+     "s": 9,
+     "e": 67,
+     "must": true
+    }
+   ],
+   "tc_in": "00:42:23",
+   "tc_out": "00:45:18",
+   "frames": 67
+  },
+  {
+   "id": "1.11",
+   "setup": "1.11",
+   "beats": [
+    "1.11"
+   ],
+   "s": 1098,
+   "e": 1161,
+   "onscreen": [
+    {
+     "text": "WHERE IS ALYI?",
+     "s": 28,
+     "e": 62
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the complaint tips off the truck and hits the floor; a flyer shakes off a pillar and lands on it",
+   "cls": "W",
+   "move": "cut",
+   "does": "The complaint tips off the hand truck and hits the floor: the last THUD. It shakes a curling flyer off a rack pillar, WHERE IS ALYI?, its photo a doorway. The flyer floats down face-up onto the complaint.",
+   "chars": [
+    "mas",
+    "staff"
+   ],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    "paper_stack_fall @3",
+    "paper_flutter @21"
+   ],
+   "spots": [
+    {
+     "name": "paper_stack_fall",
+     "k": 3,
+     "dur": null
+    },
+    {
+     "name": "paper_flutter",
+     "k": 21,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The complaint tips off the hand truck and hits the floor: the last THUD. It shakes a curling flyer off a rack pillar, WHERE IS ALYI?, its photo a doorway. The flyer floats down face-up onto the complaint.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staff",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.11": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "WHERE IS ALYI?",
+     "s": 28,
+     "e": 62,
+     "must": true
+    }
+   ],
+   "tc_in": "00:45:18",
+   "tc_out": "00:48:09",
+   "frames": 63
+  },
+  {
+   "id": "1.12",
+   "setup": "1.12",
+   "beats": [
+    "1.12"
+   ],
+   "s": 1161,
+   "e": 1289,
+   "onscreen": [
+    {
+     "text": "DAYS SINCE SOMEONE SUED MAS: 0",
+     "s": 72,
+     "e": 127
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "LOW · the sign from below, DOT holding out a spare 0 → MCU MAS: one pixel of a head shake → she hangs a second sign",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "DOT, still back to camera, holds a spare 0 plate out toward him. MAS shakes his head, one pixel. She lowers it, considers, and hangs a second, smaller sign underneath: DAYS SINCE SOMEONE SUED MAS: 0.",
+   "chars": [
+    "dot",
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    "plate_hang @66"
+   ],
+   "spots": [
+    {
+     "name": "plate_hang",
+     "k": 66,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "DOT, still back to camera, holds a spare 0 plate out toward him. MAS shakes his head, one pixel. She lowers it, considers, and hangs a second, smaller sign underneath: DAYS SINCE SOMEONE SUED MAS: 0.",
+   "cast": [
+    {
+     "id": "dot",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.12": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "DAYS SINCE SOMEONE SUED MAS: 0",
+     "s": 72,
+     "e": 127,
+     "must": true
+    }
+   ],
+   "tc_in": "00:48:09",
+   "tc_out": "00:53:17",
+   "frames": 128
+  },
+  {
+   "id": "1.13",
+   "setup": "1.13",
+   "beats": [
+    "1.13"
+   ],
+   "s": 1289,
+   "e": 1344,
+   "onscreen": [],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "ECU · the flyer's doorway photo on the complaint; the Orb's iris steps onto it",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "The flyer's photo, a doorway, on the complaint. THE ORB's iris steps onto it. SMASH TO INTRO on the knee's fourth note.",
+   "chars": [
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E02-01 out · the knee's first four notes on dry piano, spaced across the aftermath: the first on the complaint's THUD, the fourth on the SMASH TO INTRO"
+   ],
+   "sounds": [
+    "orb_servo @9"
+   ],
+   "spots": [
+    {
+     "name": "orb_servo",
+     "k": 9,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The flyer's photo, a doorway, on the complaint. THE ORB's iris steps onto it. SMASH TO INTRO on the knee's fourth note.",
+   "cast": [
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.13": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:53:17",
+   "tc_out": "00:56:00",
+   "frames": 55
   }
  ],
- "lines": [],
+ "lines": [
+  {
+   "id": "e2-co-0001",
+   "shot": "1.02",
+   "beat": "1.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SELBEEP",
+   "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+   "tag": "",
+   "on_s": 3.58,
+   "end_s": 9.61,
+   "file_s": 3.21,
+   "abs_in": 85,
+   "abs_out": 231,
+   "file_in": 77,
+   "file_out": 240,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0001__selbeep-A.wav",
+   "stick_t": 0.58,
+   "stick_in": 0.37,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Eyes",
+     0,
+     5
+    ],
+    [
+     "up",
+     6,
+     9
+    ],
+    [
+     "here",
+     10,
+     13
+    ],
+    [
+     "everyone",
+     14,
+     24
+    ],
+    [
+     "This",
+     28,
+     33
+    ],
+    [
+     "is",
+     34,
+     36
+    ],
+    [
+     "AROS",
+     38,
+     53
+    ],
+    [
+     "Nobody",
+     67,
+     74
+    ],
+    [
+     "filmed",
+     75,
+     81
+    ],
+    [
+     "any",
+     82,
+     85
+    ],
+    [
+     "of",
+     86,
+     87
+    ],
+    [
+     "this",
+     88,
+     94
+    ],
+    [
+     "It's",
+     104,
+     109
+    ],
+    [
+     "all",
+     109,
+     112
+    ],
+    [
+     "made",
+     113,
+     117
+    ],
+    [
+     "from",
+     118,
+     121
+    ],
+    [
+     "one",
+     123,
+     126
+    ],
+    [
+     "sentence",
+     128,
+     140
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "A"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     6,
+     "A"
+    ],
+    [
+     8,
+     "M"
+    ],
+    [
+     11,
+     "A"
+    ],
+    [
+     13,
+     "E"
+    ],
+    [
+     15,
+     "A"
+    ],
+    [
+     17,
+     "E"
+    ],
+    [
+     20,
+     "O"
+    ],
+    [
+     22,
+     "E"
+    ],
+    [
+     24,
+     "rest"
+    ],
+    [
+     30,
+     "A"
+    ],
+    [
+     32,
+     "E"
+    ],
+    [
+     36,
+     "rest"
+    ],
+    [
+     39,
+     "A"
+    ],
+    [
+     46,
+     "O"
+    ],
+    [
+     50,
+     "A"
+    ],
+    [
+     54,
+     "rest"
+    ],
+    [
+     68,
+     "O"
+    ],
+    [
+     70,
+     "A"
+    ],
+    [
+     72,
+     "E"
+    ],
+    [
+     76,
+     "A"
+    ],
+    [
+     78,
+     "E"
+    ],
+    [
+     80,
+     "M"
+    ],
+    [
+     82,
+     "A"
+    ],
+    [
+     84,
+     "E"
+    ],
+    [
+     86,
+     "A"
+    ],
+    [
+     88,
+     "E"
+    ],
+    [
+     90,
+     "A"
+    ],
+    [
+     93,
+     "E"
+    ],
+    [
+     95,
+     "rest"
+    ],
+    [
+     105,
+     "E"
+    ],
+    [
+     110,
+     "O"
+    ],
+    [
+     112,
+     "E"
+    ],
+    [
+     114,
+     "A"
+    ],
+    [
+     120,
+     "M"
+    ],
+    [
+     122,
+     "O"
+    ],
+    [
+     124,
+     "A"
+    ],
+    [
+     126,
+     "E"
+    ],
+    [
+     129,
+     "A"
+    ],
+    [
+     132,
+     "E"
+    ],
+    [
+     140,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0002",
+   "shot": "1.03",
+   "beat": "1.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "GERG",
+   "text": "Which sentence?",
+   "tag": "",
+   "on_s": 12.1417,
+   "end_s": 12.9217,
+   "file_s": 11.7617,
+   "abs_in": 291,
+   "abs_out": 311,
+   "file_in": 282,
+   "file_out": 326,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0002__gerg-mockbran-A.wav",
+   "stick_t": 1.85,
+   "stick_in": 0.38,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Which",
+     -1,
+     5
+    ],
+    [
+     "sentence",
+     7,
+     18
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "O"
+    ],
+    [
+     2,
+     "E"
+    ],
+    [
+     8,
+     "A"
+    ],
+    [
+     11,
+     "E"
+    ],
+    [
+     18,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0003",
+   "shot": "1.04",
+   "beat": "1.04",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SELBEEP",
+   "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "tag": "",
+   "on_s": 13.1717,
+   "end_s": 19.0117,
+   "file_s": 12.7717,
+   "abs_in": 316,
+   "abs_out": 457,
+   "file_in": 306,
+   "file_out": 471,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0003__selbeep-A.wav",
+   "stick_t": 0.13,
+   "stick_in": 0.4,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "A",
+     -1,
+     1
+    ],
+    [
+     "mammoth",
+     3,
+     13
+    ],
+    [
+     "walking",
+     15,
+     24
+    ],
+    [
+     "through",
+     25,
+     30
+    ],
+    [
+     "the",
+     31,
+     33
+    ],
+    [
+     "snow",
+     34,
+     42
+    ],
+    [
+     "We",
+     56,
+     59
+    ],
+    [
+     "never",
+     60,
+     64
+    ],
+    [
+     "said",
+     65,
+     69
+    ],
+    [
+     "anything",
+     70,
+     78
+    ],
+    [
+     "about",
+     79,
+     83
+    ],
+    [
+     "a",
+     84,
+     85
+    ],
+    [
+     "lobby",
+     87,
+     98
+    ],
+    [
+     "It",
+     110,
+     113
+    ],
+    [
+     "understands",
+     114,
+     127
+    ],
+    [
+     "physics",
+     129,
+     139
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     3,
+     "M"
+    ],
+    [
+     5,
+     "A"
+    ],
+    [
+     8,
+     "M"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     15,
+     "O"
+    ],
+    [
+     19,
+     "E"
+    ],
+    [
+     27,
+     "O"
+    ],
+    [
+     31,
+     "E"
+    ],
+    [
+     37,
+     "O"
+    ],
+    [
+     42,
+     "rest"
+    ],
+    [
+     57,
+     "E"
+    ],
+    [
+     61,
+     "A"
+    ],
+    [
+     63,
+     "E"
+    ],
+    [
+     66,
+     "A"
+    ],
+    [
+     68,
+     "E"
+    ],
+    [
+     70,
+     "A"
+    ],
+    [
+     72,
+     "E"
+    ],
+    [
+     80,
+     "M"
+    ],
+    [
+     82,
+     "A"
+    ],
+    [
+     87,
+     "E"
+    ],
+    [
+     89,
+     "A"
+    ],
+    [
+     92,
+     "M"
+    ],
+    [
+     94,
+     "E"
+    ],
+    [
+     98,
+     "rest"
+    ],
+    [
+     110,
+     "E"
+    ],
+    [
+     114,
+     "A"
+    ],
+    [
+     116,
+     "E"
+    ],
+    [
+     123,
+     "A"
+    ],
+    [
+     125,
+     "E"
+    ],
+    [
+     130,
+     "A"
+    ],
+    [
+     133,
+     "E"
+    ],
+    [
+     139,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0004",
+   "shot": "1.05",
+   "beat": "1.05",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SELBEEP",
+   "text": "Directionally.",
+   "tag": "",
+   "on_s": 20.3317,
+   "end_s": 21.2417,
+   "file_s": 19.9817,
+   "abs_in": 487,
+   "abs_out": 510,
+   "file_in": 479,
+   "file_out": 518,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0004__selbeep-A.wav",
+   "stick_t": 0.29,
+   "stick_in": 0.35,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Directionally",
+     0,
+     18
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     5,
+     "A"
+    ],
+    [
+     7,
+     "E"
+    ],
+    [
+     18,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0005",
+   "shot": "1.07",
+   "beat": "1.07",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SELBEEP",
+   "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "tag": "os",
+   "on_s": 28.5017,
+   "end_s": 33.2317,
+   "file_s": 28.0717,
+   "abs_in": 684,
+   "abs_out": 798,
+   "file_in": 673,
+   "file_out": 812,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0005__selbeep-A.wav",
+   "stick_t": 0.46,
+   "stick_in": 0.43,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": true,
+   "via": null,
+   "words": [
+    [
+     "That's",
+     -1,
+     4
+    ],
+    [
+     "the",
+     5,
+     7
+    ],
+    [
+     "mammoth",
+     8,
+     17
+    ],
+    [
+     "It's",
+     29,
+     33
+    ],
+    [
+     "been",
+     34,
+     37
+    ],
+    [
+     "two",
+     38,
+     41
+    ],
+    [
+     "weeks",
+     43,
+     50
+    ],
+    [
+     "and",
+     64,
+     67
+    ],
+    [
+     "it",
+     68,
+     70
+    ],
+    [
+     "has",
+     71,
+     75
+    ],
+    [
+     "mass",
+     76,
+     83
+    ],
+    [
+     "now",
+     84,
+     90
+    ],
+    [
+     "We're",
+     94,
+     98
+    ],
+    [
+     "working",
+     99,
+     106
+    ],
+    [
+     "on",
+     107,
+     109
+    ],
+    [
+     "it",
+     110,
+     112
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     2,
+     "E"
+    ],
+    [
+     8,
+     "M"
+    ],
+    [
+     10,
+     "A"
+    ],
+    [
+     12,
+     "M"
+    ],
+    [
+     14,
+     "E"
+    ],
+    [
+     17,
+     "rest"
+    ],
+    [
+     30,
+     "E"
+    ],
+    [
+     39,
+     "O"
+    ],
+    [
+     44,
+     "A"
+    ],
+    [
+     46,
+     "E"
+    ],
+    [
+     50,
+     "rest"
+    ],
+    [
+     64,
+     "E"
+    ],
+    [
+     71,
+     "A"
+    ],
+    [
+     73,
+     "E"
+    ],
+    [
+     76,
+     "M"
+    ],
+    [
+     78,
+     "A"
+    ],
+    [
+     81,
+     "E"
+    ],
+    [
+     85,
+     "A"
+    ],
+    [
+     89,
+     "rest"
+    ],
+    [
+     94,
+     "O"
+    ],
+    [
+     96,
+     "E"
+    ],
+    [
+     99,
+     "O"
+    ],
+    [
+     101,
+     "E"
+    ],
+    [
+     107,
+     "O"
+    ],
+    [
+     109,
+     "E"
+    ],
+    [
+     112,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-co-0006",
+   "shot": "1.08",
+   "beat": "1.08",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "GERG",
+   "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+   "tag": "",
+   "on_s": 34.3317,
+   "end_s": 37.3117,
+   "file_s": 33.9517,
+   "abs_in": 823,
+   "abs_out": 896,
+   "file_in": 814,
+   "file_out": 911,
+   "file": "audio/ep02/v1-el/ep02-v1/coldopen/wav/e2-co-0006__gerg-mockbran-A.wav",
+   "stick_t": 0.29,
+   "stick_in": 0.38,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "That's",
+     0,
+     6
+    ],
+    [
+     "not",
+     7,
+     10
+    ],
+    [
+     "the",
+     11,
+     13
+    ],
+    [
+     "mammoth",
+     15,
+     25
+    ],
+    [
+     "The",
+     39,
+     42
+    ],
+    [
+     "mammoth's",
+     43,
+     51
+    ],
+    [
+     "on",
+     52,
+     53
+    ],
+    [
+     "the",
+     54,
+     56
+    ],
+    [
+     "fourth",
+     57,
+     62
+    ],
+    [
+     "floor",
+     64,
+     71
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "A"
+    ],
+    [
+     3,
+     "E"
+    ],
+    [
+     8,
+     "A"
+    ],
+    [
+     10,
+     "E"
+    ],
+    [
+     14,
+     "M"
+    ],
+    [
+     16,
+     "A"
+    ],
+    [
+     19,
+     "M"
+    ],
+    [
+     21,
+     "E"
+    ],
+    [
+     24,
+     "rest"
+    ],
+    [
+     39,
+     "E"
+    ],
+    [
+     42,
+     "M"
+    ],
+    [
+     44,
+     "A"
+    ],
+    [
+     46,
+     "M"
+    ],
+    [
+     48,
+     "E"
+    ],
+    [
+     57,
+     "O"
+    ],
+    [
+     60,
+     "E"
+    ],
+    [
+     66,
+     "O"
+    ],
+    [
+     70,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  }
+ ],
  "posts": [],
- "rails": [],
+ "rails": [
+  {
+   "text": "FEB 15, 2024",
+   "s": 14,
+   "e": 57,
+   "shot": "1.01",
+   "floor_f": 21
+  },
+  {
+   "text": "FEB 29, 2024",
+   "s": 581,
+   "e": 631,
+   "shot": "1.06",
+   "floor_f": 21
+  }
+ ],
  "sound_marks": [],
- "subs": [],
+ "subs": [
+  {
+   "s": 85,
+   "e": 231,
+   "hold_to": 243,
+   "who": "SELBEEP",
+   "shown": "DIRECTOR OF MAMMOTHS",
+   "text": "Eyes up here, everyone. This is AROS. Nobody filmed any of this. It's all made from one sentence.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0001",
+   "os": false
+  },
+  {
+   "s": 291,
+   "e": 311,
+   "hold_to": 316,
+   "who": "GERG",
+   "shown": "MAN ON THE BEANBAG",
+   "text": "Which sentence?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0002",
+   "os": false
+  },
+  {
+   "s": 316,
+   "e": 457,
+   "hold_to": 469,
+   "who": "SELBEEP",
+   "shown": "DIRECTOR OF MAMMOTHS",
+   "text": "A mammoth walking through the snow. We never said anything about a lobby. It understands physics.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0003",
+   "os": false
+  },
+  {
+   "s": 487,
+   "e": 510,
+   "hold_to": 522,
+   "who": "SELBEEP",
+   "shown": "DIRECTOR OF MAMMOTHS",
+   "text": "Directionally.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0004",
+   "os": false
+  },
+  {
+   "s": 684,
+   "e": 798,
+   "hold_to": 810,
+   "who": "SELBEEP",
+   "shown": "SELBEEP",
+   "text": "That's the mammoth. It's been two weeks, and it has mass now. We're working on it.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0005",
+   "os": true
+  },
+  {
+   "s": 823,
+   "e": 896,
+   "hold_to": 908,
+   "who": "GERG",
+   "shown": "MAN ON THE BEANBAG",
+   "text": "That's not the mammoth. The mammoth's on the fourth floor.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-co-0006",
+   "os": false
+  }
+ ],
  "refs": {},
  "v4_ids": {},
  "base_marks_scaled": [],
- "decisions": [],
+ "decisions": [
+  "10 beat lengths are not whole frames (1.02, 1.04, 1.05, 1.06, 1.08, 1.09...): beats start on the rounded running total, as the stick reel draws them"
+ ],
  "problems": []
 }
