@@ -24,8 +24,9 @@ import {drawMasPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel
 import {blitImg} from '../../../../../shared/pixel/figure';
 import {putBust} from '../../../../../shared/pixel/rooms/bullpen-launch';
 import {masPortrait} from '../../../../../shared/pixel/cast/mas';
-import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, paper, paperSprite, grain, RH, TR} from '../kit';
-import {seatedStaff} from '../cast/civic2';
+import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, paper, paperSprite, grain, RH, TR, warmSkin} from '../kit';
+import {seatedStaff, staffChair} from '../cast/civic2';
+import {drawMasStand2} from '../cast/mas2';
 import {alyiWarm} from '../cast/alyi2';
 import {glassInHand} from '../../../../ep01/pixel/act1/art/v35';
 import type {ArtAsset} from '../asset';
@@ -55,7 +56,7 @@ const roomDay = (b: Buf) => {
   paper(b, (t) => {
     const x0 = 150, y0 = 48;
     fill(t, x0 - 3, y0 - 3, 96, 64, PAL.G4); fill(t, x0, y0, 90, 58, PAL.P2);
-    bpt(t, 'AGI', x0 + 60, y0 + 8, PAL.I0);
+    bpt(t, 'AGI', x0 + 86 - bpw('AGI') - 4, y0 + 6, PAL.I0);
     const arrows: Array<[number, number]> = [[x0 + 8, y0 + 12], [x0 + 8, y0 + 28], [x0 + 8, y0 + 44]];
     arrows.forEach(([ax, ay]) => { line(ax, ay, ax + 40, ay - Math.round((ay - y0 - 14) * 0.3), t.ink(PAL.I0)); line(ax + 40, ay - Math.round((ay - y0 - 14) * 0.3), ax + 36, ay - 3 - Math.round((ay - y0 - 14) * 0.3), t.ink(PAL.I0)); line(ax + 14, ay - 4, ax + 26, ay + 4, t.ink(PAL.R2)); line(ax + 14, ay + 4, ax + 26, ay - 4, t.ink(PAL.R2)); });
     fill(t, x0 + 4, y0 + 58, 30, 3, PAL.G3);
@@ -81,20 +82,26 @@ export const office2018feb = (b: Buf, f: number, st: Office18St = {}) => {
   paper(b, (t) => { fill(t, 40, 128, 70, 3, PAL.D2); fill(t, 44, 131, 2, 19, PAL.N1); fill(t, 104, 131, 2, 19, PAL.N1); fill(t, 56, 104, 38, 24, PAL.N1); fill(t, 72, 128, 6, 2, PAL.N1); });
   arena(b, 58, 106, 34, 20, f, 3);
   paper(b, (t) => { ellipse(100, 126, 3, 2, t.ink(PAL.N0)); t.set(99, 125, PAL.G4); });
-  // Nole at the front, by his slide, then up the ladder
-  if (s.nole === 'slide') paperSprite(b, (t) => blitImg(t, noleImg({...NOLE_BASE, arm: 'point', mouth: 1}), 248 - NOLE_FOOT[0], 186 - NOLE_FOOT[1]));
-  if (s.nole === 'ladder') paperSprite(b, (t) => blitImg(t, noleImg({...NOLE_BASE, arm: 'raise', legs: 'w1'}), 372 - NOLE_FOOT[0], 112 - NOLE_FOOT[1]));
-  // the all-hands in rows (backs and three-quarters, facing Nole at screen-right); `turned` rows face their monitors
+  // the all-hands in rows (backs and three-quarters, facing Nole at screen-right); `turned` rows face their monitors:
+  // each turned staffer has a monitor on the low desk in front of them (they turn back to it, nobody applauds); the
+  // seats where Nole stands are empty (he stands in front of the rows, never under a staffer)
+  const noleX = s.nole === 'slide' ? 248 : -999;
   paperSprite(b, (t) => {
     let k = 0;
     for (const [ry, n, x0] of [[150, 7, 140], [168, 8, 120], [186, 8, 100]] as Array<[number, number, number]>) for (let i = 0; i < n; i++, k++) {
       const x = x0 + i * 24;
-      const img = seatedStaff({seed: k * 5 + 2, pose: k < (s.turned ?? 0) * 3 ? 'type' : 'watch'});
-      blitImg(t, img, x, ry - 30, {flip: k < (s.turned ?? 0) * 3});
+      if (Math.abs(x + 12 - noleX) < 22 && ry > 160) continue;
+      const turned = k < (s.turned ?? 0) * 3;
+      staffChair(t, x, ry - 30, [PAL.G2, PAL.G3, PAL.G4]);
+      if (turned) { fill(t, x - 9, ry - 16, 12, 2, PAL.D3); fill(t, x - 7, ry - 27, 9, 8, PAL.N1); fill(t, x - 6, ry - 26, 7, 6, PAL.C5); fill(t, x - 3, ry - 19, 2, 3, PAL.N1); }
+      blitImg(t, seatedStaff({seed: k * 5 + 2, pose: turned ? 'type' : 'watch'}), x, ry - 30, {flip: turned});
     }
   });
+  // Nole at the front, by his slide (in front of the rows), then up the ladder; daylight, his own warm skin
+  if (s.nole === 'slide') paperSprite(b, (t) => blitImg(t, noleImg({...NOLE_BASE, arm: 'point', mouth: 1}), 248 - NOLE_FOOT[0], 186 - NOLE_FOOT[1], {map: warmSkin}), {keepSkin: true});
+  if (s.nole === 'ladder') paperSprite(b, (t) => blitImg(t, noleImg({...NOLE_BASE, arm: 'raise', legs: 'w1'}), 372 - NOLE_FOOT[0], 112 - NOLE_FOOT[1], {map: warmSkin}), {keepSkin: true});
   if (s.gerg) paperSprite(b, (t) => drawGergStand(t, 334, 176, {legs: 'stand', type: Math.floor(f / 4) % 2 ? 1 : 2, look: 'screen', mouth: 'rest', light: 'room'}));
-  if (s.mas) paperSprite(b, (t) => { drawMasStand(t, 30, 190, {legs: 'stand', arm: 'down', mouth: 'rest', blink: false, guest: false, light: 'room'}); glassInHand(t, 39, 160); });
+  if (s.mas) paperSprite(b, (t) => drawMasStand2(t, 30, 190, {arm: 'glass'}));
   grain(b, 0, 0, 480, RH, (x, y) => x >= 58 && x < 92 && y >= 106 && y < 126);
 };
 export const arenaInsert = (b: Buf, f: number) => {
@@ -107,7 +114,8 @@ export const alyiLooksBack = (b: Buf, f: number, st: {turn?: 0 | 1 | 2; lift?: b
   // the room across (soft), Mas small at the back (left) with his glass, Alyi near (right) at his desk, lit by his
   // monitor, the monitor's edge cropping him at frame right
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, y < 120 ? brick(x, y) : PAL.D4);
-  paperSprite(b, (t) => { drawMasStand(t, 80, 178, {legs: 'stand', arm: 'down', mouth: 'smile', blink: false, guest: false, light: 'room'}); glassInHand(t, 89, st.lift ? 145 : 148); });
+  // Mas at the back with his glass in his hand; on 4.32 the hand lifts it an inch (the forearm up, the glass with it)
+  paperSprite(b, (t) => drawMasStand2(t, 80, 178, {arm: st.lift ? 'glassUp' : 'glass', mouth: 'smile'}));
   const turn = st.turn ?? 2;
   const img = alyiWarm({mood: turn === 2 ? 'smile' : 'calm', mouth: 'rest', arm: 'none', light: 'day'});
   paperSprite(b, (t) => putBust(t, img, 300, 46, {flip: turn === 0}), {rim: PAL.W6, side: 1});

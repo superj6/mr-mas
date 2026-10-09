@@ -19,11 +19,12 @@
 //   fireToPoint(b, f, k)       [W] -> [ECU] 15.16: the fire's glow shrinking to one point of light (the pin's, next)
 import {Buf, rect, line, ellipse, bayer, hash, clamp, poly} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, lightness} from '../../../../../shared/pixel/palette';
-import {fill, pt, pw, tiny, tinyWidth, vramp, RH, TR, glossBloom, glossSpec, grip, HANDSKIN, capsule, dith} from '../kit';
+import {fill, pt, pw, tiny, tinyWidth, vramp, RH, TR, glossBloom, glossSpec, grip, HANDSKIN, capsule, dith, untracked} from '../kit';
 import {crowdBacks} from '../cast/civic2';
 import {alyiWarm, drawAlyiRoom2, drawTpoolCheckIn} from '../cast/alyi2';
 import {drawMasStand2} from '../cast/mas2';
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
+import {holdPhone} from '../cast/hands2';
 import type {ArtAsset} from '../asset';
 
 // ------------------------------------------------------------------ string lights (a slow chase in four colours)
@@ -51,7 +52,23 @@ const racks = (b: Buf, f: number, glyph: boolean) => {
   // the humming racks in the corner (left), their status lights; at the chant's peak they become token streams that
   // run across the whole room (on the room, never in his eyes)
   for (const rx of [8, 34]) { fill(b, rx, 40, 22, 110, PAL.N1); fill(b, rx, 40, 22, 1, PAL.N3); for (let u = 0; u < 20; u++) { fill(b, rx + 2, 44 + u * 5, 18, 1, PAL.N0); b.set(rx + 17, 46 + u * 5, (u + Math.floor(f / 4)) % 3 ? PAL.C6 : PAL.L3); } }
-  if (glyph) for (let r = 0; r < 12; r++) { const y = 46 + r * 9; for (let x = 60 + ((f * 6 + r * 37) % 30); x < 480; x += 3 + (r % 3)) if (hash(x >> 2, r, Math.floor(f / 2)) < 0.55) b.set(x, y, (x + r) % 5 ? PAL.C6 : PAL.C8); }
+  // the token streams: real GLYPH tokens (the 3 x 5 type's letters, digits and marks), running out of the racks and
+  // across the room in rows, each row its own speed, the head of each run bright (never in his eyes: the rows skip
+  // the band where faces are)
+  if (glyph) untracked(() => {
+    const TOK = 'the agi 0 1 < > { } ; = + feel 7 # % a e i o u x y z 2 3 9 ( ) [ ]'.split(' ');
+    for (let r = 0; r < 10; r++) {
+      const y = 44 + r * 10;
+      if (y > 84 && y < 128) continue;
+      let x = 60 - ((f * (3 + (r % 3)) + r * 37) % 40);
+      for (let k = 0; x < 480; k++) {
+        const t = TOK[Math.floor(hash(k, r, 3) * TOK.length)];
+        const head = (k + Math.floor(f / 3) + r) % 9 === 0;
+        tiny(b, t.toUpperCase(), x, y, head ? PAL.C8 : (k + r) % 3 ? PAL.C5 : PAL.C6);
+        x += tinyWidth(t.toUpperCase()) + 3;
+      }
+    }
+  });
 };
 export interface Party22St { chant?: 0 | 1 | 2 | 3; glyph?: boolean }
 export const party22 = (b: Buf, f: number, st: Party22St = {}) => {
@@ -64,8 +81,8 @@ export const party22 = (b: Buf, f: number, st: Party22St = {}) => {
   crowdBacks(b, 60, 480, 150, 4, f, {seed: 9, cheer: chant >= 2, dim: 2});
   // ALYI: lit and laughing, his hand raised, a low swag of lights across the top of his frame (it crops him)
   drawAlyiRoom2(b, 190, 176, {arm: chant >= 1 ? 'raise' : 'down', light: 'party', smile: true});
-  stringLights(b, 150, 92, 236, 96, 6, f + 2, 5);
-  for (let x = 150; x < 236; x++) for (let y = 86; y < 98; y++) if (b.get(x, y) !== PAL.N2 && y < 96) { /* the swag's bulbs sit over his head */ }
+  // the low swag over him: above his head (it crops the top of his frame, never his eyes), his raised hand under it
+  stringLights(b, 150, 74, 236, 78, 5, f + 2, 5);
   // the party's warm light on the room round him
   for (let y = 80; y < RH; y++) for (let x = 120; x < 280; x++) { const d = Math.hypot((x - 192) / 90, (y - 140) / 70); if (d < 1 && bayer(x, y) < (1 - d) * 0.5) b.set(x, y, stepColor(b.get(x, y), 1)); }
   glossBloom(b, 0, 0, 480, RH, 0.7, 1);
@@ -89,10 +106,13 @@ export const checkInECU = (b: Buf, f: number, st: {k?: number} = {}) => {
   // bokeh string lights behind, the phone held up toward Mas, his warm hand round it
   vramp(b, 0, 0, 480, RH, [PAL.U0, PAL.U1, PAL.N1]);
   for (let k = 0; k < 24; k++) { const cx = Math.floor(hash(k, 1, 2) * 480), cy = Math.floor(hash(k, 2, 2) * 150), c = BULBS[(k + Math.floor(f / 10)) % 4]; for (let j = -5; j <= 5; j++) for (let i = -5; i <= 5; i++) if (i * i + j * j < 26 && bayer(cx + i, cy + j) < 0.45) b.set(cx + i, cy + j, stepColor(c, -2)); }
-  fill(b, 176, 20, 128, 170, PAL.N0); fill(b, 176, 20, 128, 1, PAL.G3);
-  drawTpoolCheckIn(b, 182, 28, 116, 156, st.k ?? 12);
-  capsule(b, 380, 210, 300, 150, 14, [PAL.X0, PAL.X1, PAL.X2, PAL.W5]);
-  grip(b, 290, 120, 18, 1, HANDSKIN[0]);
+  // his warm hand round it, from the right: the fingertips round its far edge, the thumb on its near edge, the wrist into
+  // the sweater's cuff and the sleeve down out of frame (Ep1's insert-hands grammar, the party's warm light)
+  // (a phone's own 1 : 2 proportions; the thumb low on the near edge, clear of the screen's words)
+  const P = {x: 196, y: 12, w: 92, h: 184};
+  holdPhone(b, P, {side: 'R', grip: 'wrap', light: 'lobby', thumbAt: 0.85, sleeveTo: [470, 260],
+    cuffRamp: [PAL.N0, PAL.X0, PAL.X0, PAL.X1, PAL.X2, PAL.X2, PAL.W5], sleeveRamp: [PAL.N0, PAL.X0, PAL.X1, PAL.X2, PAL.W5],
+    drawPhone: (bb) => { fill(bb, P.x, P.y, P.w, P.h, PAL.N0); fill(bb, P.x, P.y, P.w, 1, PAL.G3); drawTpoolCheckIn(bb, P.x + 5, P.y + 8, P.w - 10, P.h - 16, st.k ?? 12); }});
   glossBloom(b, 0, 0, 480, RH, 0.75, 1);
 };
 
@@ -119,7 +139,7 @@ const effigy = (b: Buf, x: number, y: number, burn: number) => {
   b.set(x + 16, y - 72, PAL.G5); b.set(x + 23, y - 72, PAL.G5);
   line(x + 4, y - 50, x - 10, y - 66, b.ink(wood[1])); line(x + 36, y - 50, x + 50, y - 66, b.ink(wood[1]));
   // the stencilled word on a front panel
-  fill(b, x + 2, y - 32, 36, 9, PAL.P1); tiny(b, 'UNALIGNED', x + 3, y - 30, PAL.N1);
+  const wd = tinyWidth('UNALIGNED') + 4; fill(b, x + 20 - (wd >> 1), y - 32, wd, 9, PAL.P1); tiny(b, 'UNALIGNED', x + 22 - (wd >> 1), y - 30, PAL.N1);
 };
 export const offsite = (b: Buf, f: number, st: {fire?: 0 | 1 | 2; alyi?: 'torch' | 'stand' | null} = {}) => {
   const fr = st.fire ?? 0;
@@ -135,7 +155,7 @@ export const offsite = (b: Buf, f: number, st: {fire?: 0 | 1 | 2; alyi?: 'torch'
   effigy(b, 300, 150, fr);
   if (fr >= 1) fire(b, 320, 150, fr === 1 ? 8 : 26, fr === 1 ? 16 : 70, f);
   // ALYI: half in the doorway (its jamb cuts him), carrying the flame to it, his face lit and calm
-  if (st.alyi) drawAlyiRoom2(b, 70, 150, {arm: st.alyi === 'torch' ? 'torch' : 'down', light: 'fire', f}, {clip: (x) => x >= 60});
+  if (st.alyi) drawAlyiRoom2(b, 62, 150, {arm: st.alyi === 'torch' ? 'torch' : 'down', light: 'fire', f}, {clip: (x) => x >= 60});
   // the doorway's left jamb and the lodge wall over his back half (his frame rule: half cut off)
   if (st.alyi) { fill(b, 56, 46, 4, 104, PAL.D3); fill(b, 56, 46, 1, 104, PAL.D4); }
   // the fire's light on everything (a palette walk, no blend); it never strobes (the shape holds, the colours walk)
@@ -167,10 +187,8 @@ export const ART: ArtAsset[] = [
     note: 'a paperclip robot of our own design; Alyi half cut off by the doorway\'s jamb, the flame in his hand, face lit and calm; palette-cycled fire, never strobing',
     stills: [
       {label: '[W] 15.13: the lodge doorway, Alyi half cut off by its frame carrying the flame to the effigy; staff in silhouette; trees', draw: (b) => offsite(b, 0, {fire: 0, alyi: 'torch'})},
-      {label: '[W] 15.15 the effigy catches (palette-cycled, never a strobe) · 15.16 the glow shrinking to one point of light', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); offsite(t1, 7, {fire: 2, alyi: 'stand'}); const t2 = new Buf(480, 270, PAL.N0); fireToPoint(t2, 0, 3);
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 320; x++) b.set(x, y, t1.c[y * 480 + 80 + x]); for (let y = 0; y < 203; y++) for (let x = 0; x < 160; x++) b.set(320 + x, y, t2.c[y * 480 + 160 + x]);
-      }},
+      {label: '[W] 15.15 the effigy catches (palette-cycled, never a strobe)', draw: (b) => offsite(b, 7, {fire: 2, alyi: 'stand'})},
+      {label: '[W] 15.16 the glow shrinking to one point of light', draw: (b) => fireToPoint(b, 0, 3)},
     ],
   },
 ];

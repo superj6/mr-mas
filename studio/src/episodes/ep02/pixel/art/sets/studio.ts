@@ -16,7 +16,7 @@ import {masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../../../../.
 import {putBust} from '../../../../../shared/pixel/rooms/bullpen-launch';
 import {drawCollarsPortrait} from '../../../../../shared/pixel/cast/mas-collars';
 import {faceKey} from '../../../../../shared/pixel/kits/face-light';
-import {drawXelSeated, XelSeatPose} from '../cast/xel';
+import {drawXelSeated, studioChair, XelSeatPose} from '../cast/xel';
 import {fill, pt, pw, bpt, bpw, tiny, RH, vramp, Rect} from '../kit';
 import type {ArtAsset} from '../asset';
 
@@ -82,11 +82,11 @@ export const studio2S = (b: Buf, f: number, st: StudioSt = {}) => {
   curtain(t, r, s.part);
   // the chairs: two plain studio chairs (black leather, chrome legs)
   const floorY = r.y + r.h - 10;
-  for (const [cx, flip] of [[r.x + 92 - s.squeeze * 30, false], [r.x + r.w - 96, true]] as Array<[number, boolean]>) {
-    fill(t, cx - 14, floorY - 34, 30, 4, PAL.N2); fill(t, cx + (flip ? 12 : -14), floorY - 64, 4, 34, PAL.N2); fill(t, cx - 12, floorY - 30, 2, 30, PAL.G4); fill(t, cx + 12, floorY - 30, 2, 30, PAL.G4);
-  }
+  // the chairs (tall studio chairs, each sitter's back to its chair's back), then the sitters on their seat lines
+  studioChair(t, r.x + 92 - s.squeeze * 30, floorY - 34, floorY, -1);
+  studioChair(t, r.x + r.w - 96, floorY - 34, floorY, 1);
   drawMasSeated(t, r.x + 92 - s.squeeze * 30, floorY - 34, {...MAS_SEATED_DEFAULT, arm: 'hold', collars: 3, ...s.mas});
-  drawXelSeated(t, r.x + r.w - 96 + 3, floorY + 12, {...s.xel});
+  drawXelSeated(t, r.x + r.w - 96, floorY - 34, {...s.xel});
   drawMic(t, r.x + (r.w >> 1) - (s.mic === 5 ? 30 : 0), floorY, s.mic);
   for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) b.set(x, y, t.c[y * 480 + x]);
   playerChrome(b, {ch: s.ch, rec: s.rec});

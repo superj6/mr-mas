@@ -65,9 +65,11 @@ const remap: Record<AlyiLight2, (c: number) => number> = {
   screen: (c) => {
     const fm = familyOf(c); if (!fm) return c;
     const L = lightness(c);
-    if (fm[0] === 'S') return [PAL.K0, PAL.K0, PAL.K1, PAL.K2, PAL.K3, PAL.K4, PAL.K5][Math.min(6, fm[1])];
+    // a person lit by a screen (P8): his own skin, the screen's cyan only on the lit planes (the key side)
+    if (fm[0] === 'S') return fm[1] >= 5 ? PAL.K3 : fm[1] === 4 ? PAL.K2 : fm[1] === 3 ? PAL.S3 : c;
     if (fm[0] === 'W') return L > 0.6 ? PAL.C7 : PAL.C4;
-    return L < 0.12 ? PAL.N0 : L < 0.2 ? PAL.N1 : L < 0.28 ? PAL.C0 : L < 0.38 ? PAL.C1 : PAL.C2;
+    // (the light things, an eye's white, a glint, stay light: the screen's cyan, not its dark)
+    return L < 0.12 ? PAL.N0 : L < 0.2 ? PAL.N1 : L < 0.28 ? PAL.C0 : L < 0.38 ? PAL.C1 : L < 0.55 ? PAL.C2 : L < 0.75 ? PAL.C5 : PAL.C7;
   },
   fire: (c) => {
     const fm = familyOf(c); if (!fm) return c;
@@ -99,17 +101,41 @@ const openPalm = (b: Buf, x: number, y: number) => {
 export const drawTpoolCheckIn = (b: Buf, x: number, y: number, w: number, h: number, k = 99) => {
   fill(b, x, y, w, h, PAL.U1);
   fill(b, x, y, w, 7, PAL.W5); tiny(b, 'TPOOL', x + 2, y + 1, PAL.P2);
-  fill(b, x + 2, y + 10, w - 4, 6, PAL.P2); tiny(b, 'CHECK IN', x + 3, y + 10, PAL.U2);
+  fill(b, x + 2, y + 9, w - 4, 8, PAL.P2); tiny(b, 'CHECK IN', x + 4, y + 10, PAL.U2);
   const s = 'feel the agi'.slice(0, Math.max(0, k));
-  fill(b, x + 2, y + 18, w - 4, h - 22, PAL.U0);
-  if (w >= 40) pt(b, s, x + 4, y + 20, PAL.L3); else tiny(b, s.toUpperCase().slice(0, 8), x + 3, y + 20, PAL.L3);
+  fill(b, x + 2, y + 19, w - 4, h - 23, PAL.U0);
+  if (w >= 40) pt(b, s, x + 4, y + 21, PAL.L3); else tiny(b, s.toUpperCase().slice(0, 8), x + 3, y + 21, PAL.L3);
   // the pin, bobbing on the map strip
   b.set(x + w - 6, y + h - 6, PAL.W7); b.set(x + w - 6, y + h - 5, PAL.W6);
+};
+/** a match's small flame (a teardrop, 3 px wide at most), its tip flickering on held drawings */
+const matchFlame = (b: Buf, x: number, y: number, f: number) => {
+  const ph = Math.floor(f / 3) % 3, H = [4, 5, 4][ph];
+  for (let j = 0; j < H; j++) { const w = j < 2 ? 1 : 0; for (let i = -w; i <= w; i++) b.set(x + i + (j === H - 1 && ph === 1 ? 1 : 0), y - j, j === 0 ? PAL.W8 : j < 2 ? (i === 0 ? PAL.W9 : PAL.W6) : PAL.W5); }
 };
 const flame = (b: Buf, x: number, y: number, f: number, big = false) => {
   const ph = Math.floor(f / 3) % 4;
   const H = big ? [8, 10, 9, 11][ph] : [5, 6, 5, 7][ph];
   for (let j = 0; j < H; j++) { const w = Math.max(1, Math.round((big ? 3.4 : 2.2) * Math.sin(((j + 1) / (H + 1)) * Math.PI))); for (let i = -w; i <= w; i++) b.set(x + i + (j > H / 2 && ph % 2 ? 1 : 0), y - j, j < H * 0.35 ? (Math.abs(i) < w ? PAL.W8 : PAL.W6) : Math.abs(i) < w - 1 ? PAL.W7 : PAL.W5); }
+};
+/** his eyes OPEN and warm (the art review: Ep1's deep sockets read as dark bands with a glint; warm reads warm only
+ *  when the eyes have whites and the brows soften): the sockets lifted to the cheek's skin, the eyes drawn with whites,
+ *  an iris and a glint, the heavy brows thinned and raised a pixel (local, the bust's coordinates) */
+const openWarmEyes = (b: Buf) => {
+  const [bx0, bx1, by0, by1] = ALYI_EYES.band;
+  // (the Ep1 portrait's dark S0 sockets go too, all but the silhouette's own outline: an S0 pixel with a transparent
+  // neighbour)
+  const edge = (x: number, y: number) => b.get(x - 1, y) === TR || b.get(x + 1, y) === TR || b.get(x, y - 1) === TR || b.get(x, y + 1) === TR;
+  for (let x = bx0; x <= bx1 + 6; x++) { const skin = b.get(x, by1 + 4); for (let y = by0 - 3; y <= by1 + 1; y++) { const c = b.get(x, y); if (c !== TR && c !== PAL.W8 && !(c === PAL.S0 && edge(x, y))) b.set(x, y, skin); } }
+  const near = ['..LLLLLLL..', '.LwwIIIgw..', '..wwIIIww..', '...kkkkk...'];
+  const far = ['.LLLL.', 'LwIIg.', '.kkk..'];
+  const P0: Record<string, number> = {L: PAL.N0, w: PAL.P1, I: PAL.B2, g: PAL.W8, k: PAL.S3};
+  const st = (x: number, y: number, rows: string[]) => rows.forEach((r, j) => { for (let i = 0; i < r.length; i++) { const v = P0[r[i]]; if (v !== undefined) b.set(x + i, y + j, v); } });
+  st(49, 46, near); st(38, 47, far);
+  b.set(54, 47, PAL.N0); b.set(53, 48, PAL.N0); b.set(40, 48, PAL.N0);
+  // the brows: softer, a pixel higher, arched (the earnest, open brow), the dark of the old ones gone
+  for (let x = 48; x <= 61; x++) b.set(x, x < 52 || x > 58 ? 43 : 42, PAL.B1);
+  for (let x = 37; x <= 43; x++) b.set(x, x < 40 ? 44 : 43, PAL.B1);
 };
 export const alyiWarm = memo((s: AlyiWarmState): Img => {
   const W = 112, H = 136;
@@ -117,10 +143,13 @@ export const alyiWarm = memo((s: AlyiWarmState): Img => {
   const laughOpen = s.mood === 'laugh' && s.mouth === 'rest';
   const base = alyiSpeakPortrait({mouth: laughOpen ? 'rest' : s.mood === 'smile' && s.mouth === 'rest' ? 'smile' : s.mouth, eyes: 'open', t: 0});
   blitImg(b, base, 0, 0);
-  if (s.mood === 'laugh' || (s.mood === 'smile' && s.mouth === 'rest')) happyEyes(b, ALYI_EYES.band, ALYI_EYES.eyes, ALYI_EYES.outer);
+  // smiling or laughing, talking or not, the eyes smile with the mouth (the crinkled happy eyes of Ep1's party);
+  // calm (the flame, the 2018 look back) and focused (2023) the eyes are open with whites and the brows soften
+  if (s.mood === 'laugh' || s.mood === 'smile') happyEyes(b, ALYI_EYES.band, ALYI_EYES.eyes, ALYI_EYES.outer);
+  else openWarmEyes(b);
   if (laughOpen) alyiLaugh(b, 4);
   else if (s.mood === 'smile' && s.mouth === 'rest') alyiSmile(b);
-  if (s.mood === 'focus') { for (let x = 47; x <= 60; x++) b.set(x, 42, PAL.B0); for (let x = 36; x <= 42; x++) b.set(x, 43, PAL.B0); }
+  if (s.mood === 'focus') { for (let x = 48; x <= 58; x++) b.set(x, 43, PAL.B0); }
   // arms (Ep1's party construction: shoulder -> elbow -> wrist, the hand gripping)
   if (s.arm === 'raise') {
     armTo(b, [22, 112], [8, 92], [12, 66], SW, 7, 6);
@@ -132,8 +161,10 @@ export const alyiWarm = memo((s: AlyiWarmState): Img => {
     fill(b, 24, 90, 4, 12, SK[2]); fill(b, 24, 90, 1, 12, SK[3]);
   } else if (s.arm === 'torch') {
     armTo(b, [22, 112], [10, 132], [24, 108], SW, 7, 6);
-    line(26, 104, 12, 64, b.ink(PAL.D3)); line(27, 104, 13, 64, b.ink(PAL.D2));
-    flame(b, 12, 63, s.f ?? 0, true);
+    // the long fireplace match: a pale wooden stick, its red head, a small flame (never a sparkler)
+    line(26, 104, 12, 64, b.ink(PAL.W5)); line(27, 104, 13, 64, b.ink(PAL.D4));
+    fill(b, 11, 62, 3, 3, PAL.R2); b.set(12, 61, PAL.R1);
+    flame(b, 12, 60, s.f ?? 0, false);
     for (let q = 0; q < 4; q++) { fill(b, 21, 100 + q * 3, 9, 2, SK[2]); b.set(21, 100 + q * 3, SK[3]); }
   }
   const img: Img = {w: W, h: H, c: new Int32Array(W * H).fill(-1)};
@@ -147,7 +178,7 @@ export const alyiWarm = memo((s: AlyiWarmState): Img => {
 // ------------------------------------------------------------------ room scale (Ep1's alyi-speak stand, copied, more arms)
 const SHEAD = [
   '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh2334444455o...', 'hhh23444bbbbb...', 'hhh2234eO4Oe4o..',
-  'hhh22334444444o.', '.hh22334444444o5', '.oh2233444444o..', '..o1223344m44o..', '..o122333444o...', '...o11222333o...', '....oo11122o....', '......o112o.....',
+  'hhh22334444444o.', '.hh22334444444o5', '.oh2233444444o..', '..o122334mmm4o..', '..o122334444443.', '...o1222333332..', '....o11222......', '.....o1122......', '.....o1122......', '.....o1122......',
 ];
 export interface AlyiRoom2 { arm: 'raise' | 'torch' | 'phone' | 'down'; light: 'party' | 'fire' | 'room'; smile?: boolean; f?: number }
 const rfig = (p: AlyiRoom2): FigureDef => {
@@ -156,20 +187,18 @@ const rfig = (p: AlyiRoom2): FigureDef => {
     {group: g + 's', mat: 'shoe', prims: [P.poly(ax - 2.4, 72, ax + 2.4, 72, ax + 6, 75, ax + 6, 78, ax - 2.8, 78)]},
   ];
   const sl = (g: string, sx: number, sy: number, ex: number, ey: number, hx: number, hy: number): Part => ({group: g, mat: 'sw', prims: [P.ell(sx, sy, 3.6, 3.8), seg(sx, sy, 6.6, ex, ey, 5.8), seg(ex, ey, 5.6, hx, hy, 4.8), P.ell(ex, ey, 2.8, 2.8)]});
-  const N = p.arm === 'raise' ? [30, 18, 31, 7] : p.arm === 'torch' ? [30, 30, 35, 24] : p.arm === 'phone' ? [30, 30, 33, 22] : [26, 32, 26.4, 41];
+  const N = p.arm === 'raise' ? [31, 15, 33, 3] : p.arm === 'torch' ? [30, 30, 35, 24] : p.arm === 'phone' ? [30, 30, 33, 22] : [26, 32, 26.4, 41];
   const parts: Part[] = [
     ...leg('legF', 15.5, 15.4, 15), sl('armF', 14, 21, 14, 32, 14.4, 41), ...leg('legN', 21, 21.4, 21.6),
     {group: 'torso', mat: 'sw', prims: [P.poly(13, 18, 19, 16, 25, 17, 28, 21, 28, 30, 27, 37, 28, 45, 11, 45, 11, 38, 10, 30, 10, 22)]},
-    {group: 'neck', mat: 'skin', prims: [P.poly(18, 13, 23, 13, 23, 17, 18, 17)]},
     sl('armN', 25, 21, N[0], N[1], N[2], N[3]),
   ];
   const rows = SHEAD.slice();
-  if (p.smile) { rows[6] = 'hhh2234bb4bb4o..'; rows[10] = '..o122m344m4o...'; rows[11] = '..o1223mmm44o...'; }
+  if (p.smile) { rows[6] = 'hhh2234bb4bb4o..'; rows[10] = '..o12233m444m4o.'; rows[11] = '..o122334mmm43..'; }
   const stamps: Stamp[] = [{x: 11, y: 0, rows, pal: {o: ['skin', 0], '1': ['skin', 1], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5], h: ['hair', 1], b: ['hair', 0], e: ['dark', 0], O: ['glint', 0], m: ['skin', 1], M: ['dark', 0]}}];
   const hand = (x: number, y: number) => ({x: Math.round(x) - 1, y: Math.round(y) - 1, rows: ['.34.', '3445', '2344', '.22.'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]} as Stamp['pal']});
   stamps.push(hand(14.4, 41));
-  if (p.arm === 'raise') stamps.push({x: 29, y: 2, rows: ['3.3.3', '34343', '34443', '.344.', '.22..'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4]}});
-  else stamps.push(hand(N[2], N[3]));
+  if (p.arm !== 'raise') stamps.push(hand(N[2], N[3]));
   return {w: ALYI_STAND_W, h: ALYI_STAND_H, parts, adjust: [{prims: [P.rect(0, 60, ALYI_STAND_W, 20)], add: -1, onlyMat: 'pants'}], stamps};
 };
 const RAMP = (light: AlyiRoom2['light']): Record<string, number[]> => light === 'fire' ? {
@@ -192,7 +221,18 @@ export const drawAlyiRoom2 = (b: Buf, footX: number, footY: number, p: AlyiRoom2
   const x0 = footX - fx, y0 = footY - ALYI_STAND_FOOT[1];
   blitImg(b, roomImg({...p, f: 0}), x0, y0, {flip: o.flip, clip: o.clip});
   const X = (lx: number) => (o.flip ? x0 + ALYI_STAND_W - 1 - lx : x0 + lx);
-  if (p.arm === 'torch') { line(X(35), y0 + 25, X(38), y0 + 10, b.ink(PAL.D3)); flame(b, X(38), y0 + 9, p.f ?? 0); }
+  // the long fireplace match: a pale wooden stick from his hand, its red head, a small flame at the tip
+  if (p.arm === 'torch') { line(X(35), y0 + 24, X(39), y0 + 7, b.ink(p.light === 'fire' ? PAL.W6 : PAL.P1)); b.set(X(39), y0 + 6, PAL.R2); b.set(X(39), y0 + 5, PAL.R1); matchFlame(b, X(39), y0 + 4, p.f ?? 0); }
+  // the raised hand above his head, open, the fingers spread (the chant)
+  if (p.arm === 'raise') {
+    const sk = p.light === 'fire' ? [PAL.S2, PAL.S4, PAL.S5, PAL.S6] : [PAL.S1, PAL.S3, PAL.S4, PAL.S5];
+    line(X(33), y0 + 4, X(34), y0 - 3, b.ink(sk[1])); line(X(32), y0 + 4, X(33), y0 - 3, b.ink(sk[2]));
+    const hx = X(34), hy = y0 - 4;
+    fill(b, hx - 2, hy - 3, 5, 4, sk[2]); fill(b, hx - 2, hy - 3, 5, 1, sk[3]);
+    for (const [fx, fh] of [[-2, 3], [0, 4], [2, 4]] as Array<[number, number]>) for (let j = 1; j <= fh; j++) b.set(hx + fx + (o.flip ? 0 : 0), hy - 3 - j, j === fh ? sk[3] : sk[2]);
+    b.set(hx - 3, hy - 2, sk[2]); b.set(hx - 4, hy - 3, sk[3]);
+    b.set(hx + 3, hy - 4, sk[2]); b.set(hx + 4, hy - 6, sk[2]);
+  }
   if (p.arm === 'phone') { fill(b, X(o.flip ? 35 : 32), y0 + 16, 4, 6, PAL.N0); fill(b, X(o.flip ? 34 : 33), y0 + 17, 2, 4, PAL.L2); }
 };
 

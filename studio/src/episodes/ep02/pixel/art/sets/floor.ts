@@ -22,7 +22,7 @@ import {drawBullpen, BULLPEN} from '../../../../../shared/pixel/rooms/bullpen';
 import {masPortrait, MAS_PORTRAIT_DEFAULT, MasPortraitState} from '../../../../../shared/pixel/cast/mas';
 import {blitImg} from '../../../../../shared/pixel/figure';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, dith} from '../kit';
-import {seatedStaff} from '../cast/civic2';
+import {seatedStaff, staffChair} from '../cast/civic2';
 import {drawDotLadder} from '../cast/dot';
 import type {ArtAsset} from '../asset';
 
@@ -68,21 +68,42 @@ export const openFloor = (b: Buf, f: number, st: FloorSt = {}, cast: {back?: (b:
   const C = B.hall;
   fill(b, C.x0 + 10, C.y0 + 10, 18, 50, PAL.D2); fill(b, C.x0 + 10, C.y0 + 10, 18, 1, PAL.D4); fill(b, C.x0 + 12, C.y0 + 24, 14, 6, PAL.G5); fill(b, C.x0 + 12, C.y0 + 24, 14, 1, PAL.G6);
   fill(b, C.x0 + 2, C.y0 + 60, 12, 2, PAL.D3); fill(b, C.x0 + 3, C.y0 + 62, 1, 14, PAL.N1); fill(b, C.x0 + 12, C.y0 + 62, 1, 14, PAL.N1);
+  // the MISC box on Ekiel's empty desk (its label unreadable at this scale; the 14.11 insert reads it)
+  fill(b, C.x0 + 3, C.y0 + 53, 9, 7, PAL.D3); fill(b, C.x0 + 3, C.y0 + 53, 9, 1, PAL.D4); fill(b, C.x0 + 5, C.y0 + 55, 5, 2, PAL.P2);
   pivotDoor(b, s.pivot ?? 0);
   if (!s.pivot) note(b, FLOOR.note.x, FLOOR.note.y, s.note ?? 'on', f);
   humChair(b, FLOOR.chair.x, FLOOR.chair.y, f, s.hum);
   // DOT on her ladder at the back (by the window), from behind
-  if (s.dot) drawDotLadder(b, 440, 146, s.dot === 'point' ? 'point' : 'reach');
+  if (s.dot) drawDotLadder(b, 440, 146, s.dot === 'point' ? 'pointL' : 'reach');
   cast.back?.(b);
   // the spread: ordinary desks in rows on the floor, tiled staff at them; the urn; a mug with a spoon; the chiller's
   // puddle; the heatsinks
-  for (let r = 0; r < 2; r++) for (let k = 0; k < 6; k++) {
+  // (the domino run lies on the floor between the two rows of desks: drawn after the far row, before the near one)
+  const deskRow = (r: number) => { for (let k = 0; k < 6; k++) {
     const x = 70 + k * 64 + r * 30, y = 178 + r * 16;
     if (x > 440) continue;
+    const seated = (k + r) % 3 !== 2;
+    // the staffer's office chair first (its back behind them, its seat under them, the gas column and the star base)
+    if (seated) staffChair(b, x - 14, y - 30);
     fill(b, x, y - 10, 40, 3, PAL.G5); fill(b, x, y - 10, 40, 1, PAL.P1); fill(b, x + 2, y - 7, 2, 10, PAL.G3); fill(b, x + 36, y - 7, 2, 10, PAL.G3);
     fill(b, x + 12, y - 20, 14, 10, PAL.N1); fill(b, x + 13, y - 19, 12, 7, PAL.C4);
-    if ((k + r) % 3 !== 2) blitImg(b, seatedStaff({seed: r * 13 + k * 7 + 2, pose: 'type'}), x - 14, y - 30);
+    if (seated) blitImg(b, seatedStaff({seed: r * 13 + k * 7 + 2, pose: 'type'}), x - 14, y - 30);
+  } };
+  deskRow(0);
+  // the domino (Ekiel's post) standing on the floor, then its run lying flat along the floor toward Mas's shoe
+  if (s.domino) {
+    const x0 = 300, y0 = 190;
+    if (s.domino === 'up') { fill(b, x0 - 4, y0 - 16, 8, 16, PAL.P2); fill(b, x0 - 4, y0 - 16, 8, 1, PAL.W9); fill(b, x0 + 3, y0 - 16, 1, 16, PAL.P0); fill(b, x0 - 3, y0 - 9, 6, 1, PAL.N2); fill(b, x0 - 5, y0, 10, 1, PAL.G2); }
+    else {
+      const n = s.domino === 'falling' ? 3 : 7, tx = s.dominoTo ?? 200, ty = 198;
+      for (let k = 0; k < n; k++) {
+        const t = k / 6, x = Math.round(x0 + (tx - x0) * t), y = Math.round(y0 + (ty - y0) * t);
+        // each tile lying flat in perspective (a short wide slab), its shadow, the next one overlapping it
+        fill(b, x - 7, y + 1, 15, 2, PAL.G2); fill(b, x - 7, y - 2, 14, 3, PAL.P2); fill(b, x - 7, y - 2, 14, 1, PAL.W9); fill(b, x - 1, y - 2, 1, 3, PAL.P0);
+      }
+    }
   }
+  deskRow(1);
   // the coffee urn (steel, a tap, the drip tray) and a mug with the spoon standing in it
   const U = FLOOR.urn;
   fill(b, U.x, U.y - 26, 14, 24, PAL.G4); fill(b, U.x, U.y - 26, 14, 2, PAL.G6); fill(b, U.x + 1, U.y - 24, 2, 20, PAL.G6); fill(b, U.x + 5, U.y - 4, 4, 2, PAL.N1); fill(b, U.x - 2, U.y - 2, 18, 2, PAL.G2);
@@ -92,13 +113,23 @@ export const openFloor = (b: Buf, f: number, st: FloorSt = {}, cast: {back?: (b:
   for (let i = -10; i < 30; i++) for (let j = 0; j < 4; j++) if (Math.hypot(i - 10, (j - 1.5) * 4) < 18 && bayer(Ch.x + i, Ch.y + j) < 0.7) b.set(Ch.x + i, Ch.y + 1 + j, PAL.C5);
   if (Math.floor(f / 8) % 3 === 0) b.set(Ch.x + 12, Ch.y - 2 + (f % 8) / 2, PAL.C7);
   heatsinks(b);
-  // the domino (Ekiel's post) and its run toward Mas's shoe
-  if (s.domino) {
-    const dx = s.domino === 'down' ? s.dominoTo : 300;
-    if (s.domino === 'up') { fill(b, 296, 160, 8, 16, PAL.P2); fill(b, 296, 160, 8, 1, PAL.W9); fill(b, 297, 167, 6, 1, PAL.N2); }
-    else { const n = s.domino === 'falling' ? 3 : 6; for (let k = 0; k < n; k++) fill(b, 300 - k * Math.round((300 - dx) / 6) - 12, 172, 14, 5, PAL.P2); }
-  }
   cast.floor?.(b);
+};
+/** [ECU] 14.11 the MISC box (a plain archive box, its lid off) on Ekiel's empty desk: its label MISC · MAY 17 in marker,
+ *  the SUPERALIGNMENT / SAFETY TEAM plate dropped in on its back, its four screws beside it */
+export const miscBoxECU = (b: Buf, f: number) => {
+  vramp(b, 0, 0, 480, RH, [PAL.G3, PAL.G4, PAL.G3]);
+  for (let x = 0; x < 480; x += 3) if (hash(x, 1, 5) < 0.3) fill(b, x, 150, 2, 53, PAL.G2);
+  // the box from above-front: its inside (darker), its front face with the label
+  fill(b, 110, 30, 260, 96, PAL.D2); fill(b, 110, 30, 260, 3, PAL.D4); fill(b, 116, 36, 248, 84, PAL.D1);
+  fill(b, 100, 120, 280, 80, PAL.D3); fill(b, 100, 120, 280, 3, PAL.D4); fill(b, 100, 196, 280, 4, PAL.D2);
+  fill(b, 200, 132, 140, 52, PAL.P2); fill(b, 200, 132, 140, 1, PAL.W9); fill(b, 339, 132, 1, 52, PAL.P0);
+  bpt(b, 'MISC', 270 - Math.round(bpw('MISC') / 2), 140, PAL.N1); bpt(b, 'MAY 17', 270 - Math.round(bpw('MAY 17') / 2), 162, PAL.N1);
+  // the plate inside (tilted, its words face down: only its back and its holes), the screws by it
+  fill(b, 150, 54, 150, 50, PAL.G5); fill(b, 150, 54, 150, 2, PAL.G6); fill(b, 298, 54, 2, 50, PAL.G3);
+  for (const [hx, hy] of [[160, 62], [288, 62], [160, 96], [288, 96]]) { b.set(hx, hy, PAL.N0); b.set(hx + 1, hy, PAL.N0); }
+  for (let k = 0; k < 4; k++) { const sx = 318 + (k % 2) * 12, sy = 64 + Math.floor(k / 2) * 14; ellipse(sx, sy, 3, 3, b.ink(PAL.G6)); line(sx - 2, sy, sx + 2, sy, b.ink(PAL.G3)); fill(b, sx + 3, sy - 1, 7, 2, PAL.G4); }
+  void f;
 };
 export const adventureBand = (b: Buf, st: {verb?: string; say?: string; k?: number; note?: boolean; f?: number} = {}) => {
   // UI LIT: the band as a lit wooden-and-glass adventure panel (dark navy, lit edges), verbs left, inventory right
@@ -161,11 +192,12 @@ export const dominoECU = (b: Buf, f: number, st: {fall?: 0 | 1 | 2 | 3} = {}) =>
 
 export const ART: ArtAsset[] = [{
   id: 'set12-openfloor', manifest: 'SET-12 · the open floor (the reach-for-him spread) · UI LIT', kind: 'set', name: 'The open floor: a find-the-man spread with the adventure band',
-  file: 'sets/floor.ts', exports: 'openFloor, FLOOR, adventureBand, heatsinkMCU, dominoECU', scenes: '14',
+  file: 'sets/floor.ts', exports: 'openFloor, FLOOR, adventureBand, heatsinkMCU, dominoECU, miscBoxECU', scenes: '14',
   note: 'ordinary desks (no pedestals); polished heatsinks show only Mas\'s face; Alyi\'s door on a centre pin with the note on its frame; the humming chair; the safety team\'s own door down the corridor',
   stills: [
-    {label: '[W] 14.01-14.06: the spread with the band lit (Open greyed), the note on Alyi\'s door frame, the humming chair, DOT pointing a screwdriver', draw: (b) => { openFloor(b, 0, {dot: 'point'}); adventureBand(b, {verb: 'Look at', say: 'i can see my face in it.'}); }},
-    {label: '[W] 14.12: Pivot door: it turns on its centre pin; the note gone into his pocket; the domino down at his shoe', draw: (b) => { openFloor(b, 6, {pivot: 2, note: 'gone', domino: 'down', dominoTo: 120}); adventureBand(b, {verb: 'Pivot', note: true}); }},
+    {label: '[W] 14.01-14.06: the spread with the band lit (Open greyed), the note on Alyi\'s door frame, the humming chair, DOT pointing a screwdriver at his door', ownBand: true, draw: (b) => { openFloor(b, 0, {dot: 'point'}); adventureBand(b, {verb: 'Look at', say: 'i can see my face in it.'}); }},
+    {label: '[W] 14.12: Pivot door: it turns on its centre pin; the note gone into his pocket; the domino run lying along the floor to his shoe', ownBand: true, draw: (b) => { openFloor(b, 6, {pivot: 2, note: 'gone', domino: 'down', dominoTo: 120}); adventureBand(b, {verb: 'Pivot', note: true}); }},
+    {label: '[ECU] 14.11: the MISC box on Ekiel\'s empty desk, its label MAY 17, the team\'s plate and its four screws dropped in', draw: (b) => miscBoxECU(b, 0)},
     {label: '[MCU] 14.03-14.04: his own face in the polished fins mouthing "can we talk?"; the strip with "come back" greyed', draw: (b) => heatsinkMCU(b, 0, {mouth: 'O', tap: 1})},
     {label: '[HIGH] 14.10 the domino: Ekiel\'s post, MAY 17', draw: (b) => dominoECU(b, 0, {fall: 0})},
   ],

@@ -90,20 +90,25 @@ export const drawMammoth = (b: Buf, x: number, y: number, f: number, o: {fifth?:
 export const mammothPrint = (b: Buf, x: number, y: number) => { for (let j = 0; j < 3; j++) for (let i = 0; i < 9; i++) { const d = Math.hypot((i - 4) / 4.5, (j - 1) / 1.6); if (d < 1) b.set(x + i, y + j, d > 0.6 ? MAMMOTH_RAMP[1] : MAMMOTH_RAMP[2]); } };
 /** the lobby chair melting into the carpet in three held palette-drip steps (0 = whole) */
 export const meltChair = (b: Buf, x: number, y: number, step: 0 | 1 | 2 | 3) => {
-  const C = [PAL.R0, PAL.R1, PAL.R2, PAL.R3];
-  const sag = [0, 4, 10, 16][step];
-  // seat and back (a club chair in the lobby's red), drooping: each column drips down by a hashed amount
+  // a moulded plastic lobby chair (NopeAI teal, a white sheen) on four steel legs, softening as the mammoth passes:
+  // the seat sags, the back folds forward, the legs splay; a slow plastic slump, glossy, never a drip of red
+  const C = [PAL.C1, PAL.C2, PAL.C3, PAL.C4, PAL.C5];
+  const sag = [0, 3, 7, 11][step], splay = [0, 1, 3, 5][step];
+  // the legs (steel), splaying outward and bowing as it slumps
+  for (const [lx, d] of [[x + 3, -1], [x + 8, -1], [x + 17, 1], [x + 21, 1]] as Array<[number, number]>) for (let k = 0; k < 9 - Math.floor(sag / 3); k++) b.set(lx + Math.round(d * splay * (k / 9)), y - k, k === 0 ? PAL.G2 : PAL.G4);
+  // the seat: a shell, its front edge rolled, sagging in the middle
+  const seatY = y - 9 + Math.floor(sag / 3);
   for (let i = 0; i < 24; i++) {
-    const drip = step ? Math.round(hash(i, 3, 5) * sag) : 0;
-    const top = y - 26 + sag + Math.round(Math.sin((i / 24) * Math.PI) * (step ? -2 : 0));
-    const bottom = y + Math.min(drip, 6);
-    for (let yy = top; yy < bottom; yy++) {
-      const back = i > 16 && yy < y - 12 + sag;
-      if (yy < y - 14 + sag && !back && step < 3) continue;
-      b.set(x + i, yy, yy > y - 3 ? C[0] : back ? C[2] : i < 4 ? C[3] : C[1]);
-    }
-    if (step >= 2) for (let k = 0; k < drip; k++) b.set(x + i, y + k, k === drip - 1 ? C[2] : C[1]);
+    const dip = Math.round(Math.sin((i / 23) * Math.PI) * sag * 0.5);
+    for (let j = 0; j < 4; j++) b.set(x + i, seatY + dip + j, j === 0 ? C[4] : j === 3 ? C[0] : C[2]);
+    if (step >= 2 && (i === 3 || i === 20)) for (let j = 4; j < 4 + sag / 2; j++) b.set(x + i, seatY + dip + j, C[1]);
   }
+  // the back: upright, then leaning and folding forward over the seat
+  const lean = [0, 2, 5, 9][step];
+  for (let j = 0; j < 16; j++) { const bx = x + 18 - Math.round((lean * (16 - j)) / 16), by = seatY - 16 + j + Math.floor(sag / 2); for (let i = 0; i < 6; i++) b.set(bx + i, by, i === 0 ? C[4] : i === 5 ? C[0] : C[2]); }
+  // the sheen: one white streak along the back and the seat's roll (it's glossy plastic)
+  for (let j = 2; j < 10; j++) b.set(x + 19 - Math.round((lean * (16 - j)) / 16), seatY - 16 + j + Math.floor(sag / 2), PAL.P2);
+  for (let i = 4; i < 12; i++) b.set(x + i, seatY + Math.round(Math.sin((i / 23) * Math.PI) * sag * 0.5), PAL.C7);
 };
 
 // ------------------------------------------------------------------ the blimp
@@ -186,7 +191,7 @@ export const drawIris = (b: Buf, x: number, y: number, o: {blink?: boolean; labe
 };
 
 // ------------------------------------------------------------------ the receipt (the exit agreement)
-export const RECEIPT_LINES = ['NON-DISPARAGEMENT', 'IN PERPETUITY', 'CLAUSE 9: THIS RECEIPT DOES NOT EXIST.', '- - - - - - - - - - -', 'SAVE 0% ON YOUR NEXT EXIT'];
+export const RECEIPT_LINES = ['NON-DISPARAGEMENT', 'IN PERPETUITY', 'CLAUSE 9 ...', '- - - - - - - - - - -', 'SAVE 0% ON YOUR NEXT EXIT'];
 /** the receipt as a straight run (a strip w wide at x, y, `len` long, scrolled by `scroll` px): thermal paper, its
  *  printed lines in the 7 px face; `run` = ink running in the rain (lines smear down in held steps) */
 export const drawReceiptStrip = (b: Buf, x: number, y: number, w: number, len: number, scroll: number, o: {run?: number; dir?: 'down' | 'right'; flat?: boolean} = {}) => {
@@ -200,7 +205,8 @@ export const drawReceiptStrip = (b: Buf, x: number, y: number, w: number, len: n
     if (pw(s) <= w - 4) pt(t, s, 2, yy, PAL.N2); else tiny(t, s, 2, yy + 1, PAL.N2);
     if (o.run) for (let r = 1; r <= o.run; r++) for (let i = 2; i < Math.min(w - 2, pw(s) + 2); i += 3) if (hash(i, k, 4) < 0.5) t.set(i, yy + 6 + r * 2, PAL.G5);
   }
-  for (let j = 0; j < len; j++) for (let i = 0; i < w; i++) { const v = t.c[j * w + i]; if (v === TR) continue; if (o.dir === 'right') b.set(x + j, y + i, v); else b.set(x + i, y + j, v); }
+  // (lying along a lane the paper is turned a quarter, not mirrored: its lines read bottom to top)
+  for (let j = 0; j < len; j++) for (let i = 0; i < w; i++) { const v = t.c[j * w + i]; if (v === TR) continue; if (o.dir === 'right') b.set(x + j, y + (w - 1 - i), v); else b.set(x + i, y + j, v); }
 };
 /** the receipt lying across a lane in perspective (a band from (x0, y) to (x1, y) of height h at the near end) */
 export const drawReceiptLane = (b: Buf, x0: number, x1: number, y: number, h: number, scroll: number, o: {run?: number; tyres?: number[]} = {}) => {

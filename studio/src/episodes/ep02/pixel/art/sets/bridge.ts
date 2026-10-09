@@ -24,12 +24,13 @@ import {PAL, stepColor, lightness} from '../../../../../shared/pixel/palette';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, hramp, RH, TR, dith, grip, HANDSKIN, capsule} from '../kit';
 import {drawReceiptStrip, drawReceiptLane, drawBlimp, drawStormCloud} from '../creatures';
 import {drawProbUmbrella} from '../cast/forecaster';
-import {makeBust, bustHair, BustState, CivicSpec, plane, bustArm} from '../cast/civic2';
+import {makeBust3, BustState, BustSpec3} from '../cast/civic2';
 import {SKIN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {P} from '../../../../../shared/pixel/figure';
 import {drawMasStand2} from '../cast/mas2';
 import {drawForecasterRoom} from '../cast/forecaster';
+import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../cast/hands2';
 import type {ArtAsset} from '../asset';
 
 // ------------------------------------------------------------------ cars
@@ -118,35 +119,42 @@ export const receiptRun = (b: Buf, f: number, st: {scroll?: number} = {}) => {
   drawReceiptLane(b, 0, 480, 150, 22, s);
 };
 // ------------------------------------------------------------------ the DRIVER (§2.2): a bust in his car window
-const driverSpec: CivicSpec = {
-  head: {long: 0, jaw: 2, age: 1},
+// his own head (an everyday man, nobody real): a broad, weathered face (a wide jaw, a big round nose, heavy cheeks, the
+// lines of a working life), a navy baseball cap, a red work jacket
+const driverSpec: BustSpec3 = {
+  head: {yaw: 20, at: [57, 56], scale: 1.05, cranium: [21, 24, 23], cheekW: 18, jawW: 17, jawY: 19, chinY: 33, chinW: 8, chinZ: 12, cheekbone: 0.5, full: 1, brow: 2.2,
+    nose: {tipY: 13.5, proj: 7, wing: 5, tip: 3.8}, mouthY: 23, eyeX: 8.5, neck: {r: 10.5, throat: true}, hair: {style: 'cap', thick: 2.6, line: -12},
+    skin: SKIN.medium, hairRamp: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5], back: {skin: PAL.S3, hair: PAL.F4}},
+  face: {eye: 'hooded', eyeW: 8, eyeH: 2, brow: 'heavy', browCol: PAL.B1, mouthW: 11, age: 2, stubble: true},
   torso: {kind: 'jacket', sy: 104},
-  browCol: PAL.B0,
-  hair: () => ({
-    // a baseball cap (a crown over the head, a brim forward over the brow) over short hair at the back
-    parts: [{group: 'cap', mat: 'cap', tone: 3, prims: [P.poly(44, 38, 46, 26, 54, 18, 66, 15, 78, 17, 86, 24, 89, 34, 88, 40, 70, 38, 56, 38)]}, {group: 'brim', mat: 'cap', tone: 2, prims: [P.poly(30, 42, 34, 37, 56, 36, 58, 41, 40, 44)]}, {group: 'hair', mat: 'hair', tone: 2, prims: [P.poly(82, 38, 89, 38, 88, 52, 84, 51)]}],
-    adjust: [plane('cap', 4, P.poly(46, 30, 52, 21, 62, 17, 58, 24, 50, 32)), plane('cap', 1, P.line(56, 38, 88, 40))],
-  }),
-  extras: (s) => {
-    const a = bustArm('arm', [32, 112], [10, 128], [-6, 120], {dir: [-1, 0.2], thumb: -1, curl: 0.4, len: 12, width: 10}, {mat: 'suit'});
-    return s.lean ? {parts: a.parts, adjust: a.adjust} : {};
-  },
-  ramps: {skin: SKIN.medium, hair: HAIR.dark, suit: [PAL.N0, PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.W5], shirt: [PAL.N1, PAL.G3, PAL.G4, PAL.G5, PAL.G6, PAL.P2], cap: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5]},
+  ramps: {skin: SKIN.medium, suit: [PAL.N0, PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.W5], shirt: [PAL.N1, PAL.G3, PAL.G4, PAL.G5, PAL.G6, PAL.P2]},
   backRamp: {skin: PAL.S3, suit: PAL.R2},
 };
-const driverBust = makeBust<BustState & {lean?: boolean}>(driverSpec);
+const driverBust = makeBust3<BustState>(driverSpec);
+const RED: number[] = [PAL.N0, PAL.R0, PAL.R1, PAL.R2, PAL.W5];
 export const driverWindow = (b: Buf, f: number, st: {mouth?: BustState['mouth']; expr?: BustState['expr']; lean?: boolean} = {}) => {
   // [M] the side of his car fills the frame: the red body round a window, the dark cabin behind him, the driver
-  // leaning out of the open window, his forearm along the sill, his hand toward the horn inside
+  // leaning out of the open window: his arm from his shoulder to the elbow on the sill, the forearm along it, the hand
+  // hanging over its edge (the art review: the arm was a bar that never met his shoulder)
   fill(b, 0, 0, 480, RH, PAL.R1); vramp(b, 0, 0, 480, 30, [PAL.U3, PAL.U2]);
   fill(b, 0, 28, 480, 4, PAL.R2);
   fill(b, 110, 36, 320, 142, PAL.N0); fill(b, 114, 40, 312, 134, PAL.N1); vramp(b, 114, 40, 312, 134, [PAL.N1, PAL.N2, PAL.N1]);
   fill(b, 270, 44, 4, 130, PAL.N0);
-  putBustCut(b, driverBust({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'neutral'}), 140, 60, RH);
+  const bx = 140, by = 60;
+  putBustCut(b, driverBust({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'neutral'}), bx, by, RH);
+  const lean = st.lean !== false;
+  // he sits low: the upper arm is below the window line, behind the door; the elbow comes up onto the sill beside
+  // him, the forearm lies along the sill's rubber, and the hand hangs over the door's outer edge
+  const el: [number, number] = [bx + 10, 169], wr: [number, number] = [bx - 48, 171];
   // the door below the window line (over his chest), the sill's rubber, the handle
   fill(b, 0, 174, 480, 29, PAL.R2); fill(b, 0, 174, 480, 3, PAL.N0); fill(b, 0, 177, 480, 2, PAL.R3); fill(b, 330, 188, 34, 4, PAL.G4);
-  // his forearm out along the sill (red jacket sleeve), his hand over the edge
-  if (st.lean !== false) { capsule(b, 150, 168, 92, 172, 7, [PAL.R0, PAL.R1, PAL.R2, PAL.W5]); grip(b, 80, 166, 10, 1, HANDSKIN[1]); }
+  if (lean) {
+    sleeve(b, el, wr, 8.5, 7, RED, [-0.55, -0.83], {fold: false});
+    // the cuff's shadow on the door under the hand
+    fill(b, wr[0] - 10, 177, 18, 2, PAL.R1);
+    const h = placeHand(POSES.open([-0.3, 0.94, 0.1], [-0.15, -0.3, 0.94], 'R'), {s: 3.4, at: [wr[0] + 2, wr[1] + 1], anchor: 'wrist', light: 'lobby', cuffRamp: [PAL.N0, PAL.R0, PAL.R1, PAL.R2, PAL.R2, PAL.R3, PAL.W5]});
+    drawHand(b, h.hand, h.x, h.y);
+  }
 };
 export const penChain = (b: Buf, f: number, st: {rise?: number} = {}) => {
   // [LOW] the receipt at lane level filling the bottom, the pen rising out of it on a bank chain toward the Forecaster
@@ -167,7 +175,27 @@ export const scramblePhone = (b: Buf, f: number, st: {step?: 0 | 1 | 2 | 3 | 4} 
   if (step >= 2) { fill(b, 152, 66, 176, 26, PAL.N3); ellipse(170, 79, 9, 9, b.ink(PAL.G4)); pt(b, 'LEGAL', 186, 70, PAL.G6); pt(b, 'call me', 186, 80, PAL.N7); }
   if (step >= 3) { fill(b, 152, 98, 176, 22, PAL.N3); fill(b, 158, 102, 8, 14, PAL.P2); pt(b, 'request for comment', 172, 106, PAL.P2); }
   if (step >= 4) { fill(b, 152, 126, 176, 30, PAL.L1); pt(b, 'calling...', 160, 130, PAL.P2); ellipse(310, 140, 8, 8, b.ink(PAL.G4)); fill(b, 152, 162, 176, 34, PAL.N1); for (let r = 0; r < 3; r++) fill(b, 158, 168 + r * 8, [140, 100, 60][r] - ((f >> 2) % 3) * 12 * (r === 2 ? 1 : 0), 4, PAL.G4); }
-  grip(b, 120, 150, 20, 1, HANDSKIN[0]); grip(b, 344, 150, 20, -1, HANDSKIN[0]);
+};
+/** the scramble with his hands round it: both hands cup the phone's lower half, his thumbs on the screen (the hoodie's
+ *  cuffs below), the monitor-dark evening light */
+export const scrambleInHands = (b: Buf, f: number, st: {step?: 0 | 1 | 2 | 3 | 4} = {}) => {
+  const r = {x: 140, y: 6, w: 200, h: 197};
+  const HOOD = [PAL.N0, PAL.G0, PAL.G0, PAL.G1, PAL.G2, PAL.G2, PAL.U4];
+  const SL = [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.U4];
+  const tmp = new Buf(480, 270, PAL.N0);
+  scramblePhone(tmp, f, st);
+  const phone = (bb: Buf) => { for (let y = r.y; y < r.y + r.h; y++) for (let x = r.x; x < r.x + r.w; x++) bb.set(x, y, tmp.c[y * 480 + x]); };
+  vramp(b, 0, 0, 480, RH, [PAL.N0, PAL.N1, PAL.N1]);
+  const thumbs = Math.floor(f / 4) % 2;
+  // two hands round one phone: the right hand's fingers behind it, the phone, its thumb; then the left hand drawn on its
+  // own layer with the phone as a stencil (its fingers behind the phone stay hidden, only its thumb crosses the
+  // screen), so neither hand's back fingers paint over the phone (the first pass drew the second hand's palm on top).
+  // Warm skin a rung down in the evening, not the monitor's cyan.
+  holdPhone(b, r, {side: 'R', grip: 'cup', light: 'lobby', skinMap: skinDown(1), widthCm: 8, thumbAt: 0.55 - thumbs * 0.2, cuffRamp: HOOD, sleeveRamp: SL, sleeveTo: [420, 300], drawPhone: phone});
+  const STENCIL = 0x1000001;
+  const tL = new Buf(480, 270, TR);
+  holdPhone(tL, r, {side: 'L', grip: 'cup', light: 'lobby', skinMap: skinDown(1), widthCm: 8, thumbAt: 0.35 + thumbs * 0.2, cuffRamp: HOOD, sleeveRamp: SL, sleeveTo: [60, 300], drawPhone: (bb) => fill(bb, r.x, r.y, r.w, r.h, STENCIL)});
+  for (let i = 0; i < tL.c.length; i++) { const v = tL.c[i]; if (v !== TR && v !== STENCIL) b.c[i] = v; }
 };
 export const voiceMenu = (b: Buf, f: number, st: {paused?: boolean; thumb?: boolean} = {}) => {
   vramp(b, 0, 0, 480, RH, [PAL.N2, PAL.N3, PAL.N3]);
@@ -182,24 +210,29 @@ export const voiceMenu = (b: Buf, f: number, st: {paused?: boolean; thumb?: bool
   }
   // rain beading on the glass (held), his wet thumb on Pause
   for (let k = 0; k < 40; k++) { const x = 130 + Math.floor(hash(k, 1, 3) * 220), y = 14 + Math.floor(hash(k, 2, 3) * 180); b.set(x, y, PAL.C8); b.set(x, y + 1, PAL.C5); }
-  if (st.thumb !== false) { capsule(b, 380, 210, 318, 172, 12, [PAL.S2, PAL.S3, PAL.S4, PAL.S5]); ellipse(312, 168, 9, 7, b.ink(PAL.S4)); b.set(310, 165, PAL.S6); }
+  // his wet thumb on Pause: the hand round the phone's right side (the fingers behind it), the thumb across to the
+  // button, the cuff and the sleeve out of frame
+  if (st.thumb !== false) {
+    const h = placeHand(POSES.grip([-0.35, -0.94, 0], [0.15, 0, -1], 'R', 0.3), {s: 9, at: [326, 166], anchor: 'thumb', light: 'lobby', skinMap: skinDown(1), cuffRamp: [PAL.N0, PAL.G0, PAL.G0, PAL.G1, PAL.G2, PAL.G2, PAL.C4]});
+    sleeve(b, h.cuffEnd, [h.cuffEnd[0] + 40, 260], 26, 30, [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.C4]);
+    // behind the phone but for the thumb, which lies across its face to the button
+    drawHand(b, h.hand, h.x, h.y, {caps: (id, x, y) => id.startsWith('t') || x < 120 || x >= 360 || y < 4 || y >= 203});
+  }
 };
 
 export const ART: ArtAsset[] = [
   {
     id: 'set16-bridge', manifest: 'SET-16 · the Bay Bridge, mid-span (evening rush, the night, the afternoon, May 20 in rain)', kind: 'set', name: 'The Bay Bridge: the receipt across five lanes, the night, the rain',
-    file: 'sets/bridge.ts', exports: 'bridgeDoors, receiptRun, bridgeDeck, drawCar, penChain, scramblePhone, voiceMenu', scenes: '17',
+    file: 'sets/bridge.ts', exports: 'bridgeDoors, receiptRun, bridgeDeck, drawCar, penChain, scramblePhone, scrambleInHands, voiceMenu', scenes: '17',
     note: 'NopeAI\'s doors at the top of the hill, the receipt pouring out; stalled traffic on it; the night\'s palette cycle (no strobe); May 20 rain, the storm cloud\'s blank letterhead, the sagging blimp',
     stills: [
       {label: '[W] 17.01: the cathedral\'s front doors up the hill, the exit agreement pouring out like a receipt, the Forecaster arriving from the street', draw: (b) => bridgeDoors(b, 0, {pour: 1}, (bb) => drawForecasterRoom(bb, 330, 190, {state: 'walk', legs: 'w2'}, {flip: true}))},
       {label: '[W] 17.03-17.07: mid-span, evening rush: five lanes stalled on the receipt, the Forecaster on the far lane, Mas small on the near one', draw: (b) => bridgeDeck(b, 0, {time: 'evening', receipt: 'fresh'}, {far: (bb) => drawForecasterRoom(bb, 360, 112, {state: 'talk', mouth: 'open'}, {flip: true}), near: (bb) => drawMasStand2(bb, 90, 200, {arm: 'phone', bow: true, light: 'dusk'})})},
       {label: '[W] 17.14 the night (the lights\' one cycle)', draw: (b) => bridgeDeck(b, 0, {time: 'night', cycle: 1, receipt: 'fresh'}, {near: (bb) => drawMasStand2(bb, 90, 200, {arm: 'down', light: 'sil'})})},
       {label: '[W] 17.17 May 20: traffic moving, the receipt trodden flat, Mas under an umbrella, the cloud\'s blank letterhead, the blimp', draw: (b) => bridgeDeck(b, 6, {time: 'rain', receipt: 'flat', moving: true, cloud: true, blimp: {size: 3, lights: 2, sag: 3}, umbrella: true}, {near: (bb) => drawMasStand2(bb, 90, 200, {arm: 'umbrella', light: 'room'}, {f: 6})})},
-      {label: '[W] 17.02 the quick run (three parallax planes) · [M] 17.05 the DRIVER leaning out of his window · [LOW] 17.04 the pen on its bank chain', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); receiptRun(t1, 0, {scroll: 40}); const t2 = new Buf(480, 270, PAL.N0); driverWindow(t2, 0, {mouth: 'E', lean: true}); const t3 = new Buf(480, 270, PAL.N0); penChain(t3, 0, {rise: 1});
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 160; x++) { b.set(x, y, t1.c[y * 480 + x * 3]); b.set(160 + x, y, t2.c[y * 480 + 160 + x]); b.set(320 + x, y, t3.c[y * 480 + 160 + x]); }
-      }},
-      {label: '[ECU] 17.08-17.10 the scramble: a clause, the grey LEGAL tile, a second request for comment, the call, a draft as grey bars', draw: (b) => scramblePhone(b, 0, {step: 4})},
+      {label: '[W] 17.02 the quick run (three parallax planes)', draw: (b) => receiptRun(b, 0, {scroll: 40})},
+      {label: '[LOW] 17.04 the pen on its bank chain', draw: (b) => penChain(b, 0, {rise: 1})},
+      {label: '[ECU] 17.08-17.10 the scramble in his hands: a clause, the grey LEGAL tile, a second request for comment, the call, a draft as grey bars', draw: (b) => scrambleInHands(b, 0, {step: 4})},
       {label: '[POV] 17.19 the voice menu, VOICE 5 [PAUSED]', draw: (b) => voiceMenu(b, 0, {paused: true})},
     ],
   },

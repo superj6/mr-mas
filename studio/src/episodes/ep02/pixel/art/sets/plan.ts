@@ -125,7 +125,7 @@ export const ART: ArtAsset[] = [{
   file: 'sets/plan.ts', exports: 'planFrame, planSheet, PLAN_PANS', scenes: '10',
   note: 'accurate on paper: the relay that drops TONE / LAUGHTER at the grate, GTP-4o, 232 MS (AVG 320), MON, $0; the empty bubble blots the tiny stage; the tear',
   stills: [
-    {label: '10.01-10.02: the OMNI stamp; BEFORE: the clerks passing the note; the grate: TONE · LAUGHTER · WHO\'S TALKING · BACKGROUND NOISE fall through', draw: (b) => planFrame(b, 0, {pan: 40})},
+    {label: '10.01-10.02: the OMNI stamp whole; BEFORE: the clerks passing the note; the grate: TONE · LAUGHTER · WHO\'S TALKING starting to fall through', draw: (b) => planFrame(b, 0, {pan: 28})},
     {label: '10.03-10.05: NOW: ear, eye, mouth wired into GTP-4o (it laughs back); 1. 232 MS (AVG 320) · 2. MON circled, tiny Radnus on Tuesday · 3. $0', draw: (b) => planFrame(b, 0, {pan: 230, laugh: true})},
     {label: '10.07: the empty bubble drifts over the tiny stage and blots its lights; the sheet tears to the real stage lights', draw: (b) => planFrame(b, 0, {pan: 337, bubble: 0.8, tear: 9, behind: stageLights()})},
   ],

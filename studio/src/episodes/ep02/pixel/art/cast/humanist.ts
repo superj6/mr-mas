@@ -11,7 +11,7 @@ import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
 import {SKIN, HAIR, SUIT} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustHair, BustState, CivicSpec, RoomFigSpec, Expr, Viseme} from './civic2';
+import {makeBust3, makeRoom, BustState, BustSpec3, RoomFigSpec, Expr, Viseme} from './civic2';
 import {handParts} from '../../../../../shared/pixel/cast/medium-kit';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
 import {sp, tiny, fill} from '../kit';
@@ -21,11 +21,14 @@ export interface HumanistBust extends BustState { arm: 'none' | 'box' }
 export const HUMANIST_DEFAULT: HumanistBust = {mouth: 'rest', expr: 'neutral', arm: 'none'};
 const AMBER = [PAL.D2, PAL.W4, PAL.W6, PAL.W7, PAL.W8, PAL.W9];
 const BOX = [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.W4, PAL.W5];
-const spec: CivicSpec = {
-  head: {long: 4, soft: true},
+// his own head: long and narrow (a tall cranium, a long jaw, a long nose with a slight bridge), deep-set eyes under an
+// arched, earnest brow, a high hairline with a neat side part; the earnest long face his file asks for
+const spec: BustSpec3 = {
+  head: {yaw: 26, at: [57, 52], scale: 1.04, cranium: [19, 27, 23], craniumY: -10, cheekW: 15, jawW: 13, jawY: 21, jawH: 12, chinY: 38, chinW: 6, chinZ: 11, cheekbone: 1.1, full: 0.2, brow: 2.4, socket: 1.35,
+    nose: {tipY: 15, proj: 7, wing: 3.8, hook: 0.5}, mouthY: 25, lips: 0.6, muzzle: 13, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'side', thick: 2.4, line: -22, side: -1},
+    skin: SKIN.light, hairRamp: HAIR.dark, back: {skin: PAL.S3, hair: PAL.G3}},
+  face: {eye: 'deep', eyeW: 8, eyeH: 2, brow: 'arched', browCol: PAL.B0, mouthW: 9, age: 1},
   torso: {kind: 'blazer', noTie: true},
-  browCol: PAL.B0,
-  hair: () => bustHair('side'),
   extras: (s) => {
     if (s.arm !== 'box') return {};
     // the box at his chest, both hands round its near corners (the box's front is painted after: humanistBust)
@@ -36,7 +39,7 @@ const spec: CivicSpec = {
   ramps: {skin: SKIN.light, hair: HAIR.dark, suit: SUIT.slate, shirt: AMBER, tie: AMBER, throat: SKIN.light},
   backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.N5},
 };
-const bust = makeBust<HumanistBust>(spec);
+const bust = makeBust3<HumanistBust>(spec);
 /** the box (bust scale): kraft, taped, its label faded, `DEFLECTION (LICENSED)` */
 const drawBoxB = (b: Buf, x: number, y: number) => {
   for (let j = 0; j < 30; j++) for (let i = 0; i < 64; i++) b.set(x + i, y + j, j < 2 ? BOX[4] : i < 2 ? BOX[3] : i > 61 ? BOX[1] : BOX[3]);
@@ -76,7 +79,7 @@ export const ART: ArtAsset[] = [{
   id: 'char-humanist', manifest: '§2.2 THE HUMANIST', kind: 'character', name: 'THE HUMANIST (Macrosoft\'s new AI chief)',
   file: 'cast/humanist.ts', exports: 'humanistBust, drawHumanistRoom, HUMANIST_DEFAULT', scenes: '7',
   note: 'slate blazer, amber open collar; caught out (worry), polite (smile), talking; carries the DEFLECTION (LICENSED) boxes',
-  stills: [{label: 'busts: caught out with his box (worry) · "Is there room?" (talk E) · polite smile · neutral; room: carry, walk, down', draw: (b) => {
+  stills: [{label: 'busts: caught out with his box (worry) · "Is there room?" (talk E) · polite smile · talking (O); room: carry, walk, down', draw: (b) => {
     sheetPlate(b, [PAL.N1, PAL.N1, PAL.N2, PAL.N2]);
     sheetBust(b, humanistBust(e('worry', 'rest', 'box')), -8, 50, 'caught out + box');
     sheetBust(b, humanistBust(e('worry', 'E')), 88, 50, 'is there room? (E)');

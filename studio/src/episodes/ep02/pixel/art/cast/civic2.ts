@@ -17,6 +17,8 @@ import {memo} from '../../../../../shared/pixel/cast/kit';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import {bustHead, suitTorso, plane, FaceState, HeadSpec, TorsoSpec, roomBody, headStamp, RoomArm, RoomLegs, ROOM_FW, ROOM_FH, ROOM_FOOT, CIV_W, CIV_H, FACE_INK} from '../../../../../shared/pixel/cast/civic-kit';
 import {handParts, sleeveParts, V2} from '../../../../../shared/pixel/cast/medium-kit';
+import {sculptHead, drawFace, faceAnchors, HeadSpec3, HeadPose, FaceSpec, FaceState as FaceState3, MouthShape} from './head3d';
+export type {HeadSpec3, FaceSpec, HeadPose};
 
 export {CIV_W, CIV_H, ROOM_FW, ROOM_FH, ROOM_FOOT, plane};
 export type {Viseme, RoomArm, RoomLegs};
@@ -123,8 +125,81 @@ export const civicRig = (spec: CivicSpec): LightRig => ({
   back: [1, -0.2], backBand: 1, backRamp: spec.backRamp ?? {skin: PAL.S3, hair: PAL.G4},
   ramps: {dark: [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], ...spec.ramps},
 });
-/** a memoised bust renderer for a spec */
+/** a memoised bust renderer for a spec (the civic kit's one skull: kept for reference, no Ep2 character uses it now) */
 export const makeBust = <S extends BustState>(spec: CivicSpec) => memo((s: S): Img => renderFigure(civicFig(spec, s as BustState & Record<string, unknown>), civicRig(spec)));
+
+// ------------------------------------------------------------------ the Ep2 bust: a sculpted head per character
+// (the art review: every bust was the same head). The torso and the extras are civic-kit parts as before; the head,
+// its neck and its hair are sculpted per character (cast/head3d.ts) and its face drawn per expression.
+export interface BustSpec3 {
+  head: HeadSpec3;
+  face: FaceSpec;
+  /** the torso: a civic-kit cut, or the blazer over a shell (a woman's blazer: notch lapels, a round shell neckline) */
+  torso: TorsoSpec | {kind: 'blazerShell'; sy?: number};
+  extras?: CivicSpec['extras'];
+  ramps: Record<string, number[]>;
+  backRamp?: Record<string, number>;
+  key?: [number, number];
+  noEdge?: string[];
+  /** per expression: the face's eye/brow/mouth and the head's pose (overrides of the defaults below) */
+  expr?: Partial<Record<Expr, Partial<FaceState3> & {pose?: HeadPose}>>;
+}
+const EXPR3: Record<Expr, FaceState3 & {pose?: HeadPose}> = {
+  neutral: {eye: 'open', brow: 'level', mouth: 'rest'},
+  smile: {eye: 'crinkle', brow: 'level', mouth: 'smile', pose: {cheekUp: 1}},
+  laugh: {eye: 'happy', brow: 'up', mouth: 'laugh', pose: {jaw: 2, cheekUp: 1.6}},
+  worry: {eye: 'wide', brow: 'worry', mouth: 'worry'},
+  proud: {eye: 'open', brow: 'up', mouth: 'proud', pose: {cheekUp: 0.5, nod: -3}},
+  squint: {eye: 'squint', brow: 'knit', mouth: 'flat', pose: {cheekUp: 0.6}},
+  focus: {eye: 'half', brow: 'knit', mouth: 'flat'},
+};
+/** the woman's blazer over a shell top: the pantsuit's shell neckline with the blazer's notch lapels */
+const blazerShell = (sy?: number) => {
+  const t = suitTorso({kind: 'pantsuit', sy});
+  const d = (sy ?? 101) - 104;
+  const Y = (...pts: number[]) => P.poly(...pts.map((v, i) => (i % 2 ? v + d : v)));
+  t.adjust.push(
+    plane('suit', 4, Y(47, 103, 52, 106, 56, 118, 58, 136, 55, 136, 51, 120)),
+    plane('suit', 3, Y(45, 106, 48, 108, 52, 122, 53, 136, 50, 136)),
+    plane('suit', 1, Y(73, 105, 77, 104, 72, 120, 67, 136, 64, 136, 68, 120)),
+    plane('suit', 0, P.line(48, 112 + d, 52, 109 + d), P.line(73, 111 + d, 76, 108 + d)),
+  );
+  return t;
+};
+export const makeBust3 = <S extends BustState>(spec: BustSpec3) => memo((s: S): Img => {
+  const st = s as BustState & Record<string, unknown>;
+  const ex = {...EXPR3[st.expr], ...(spec.expr?.[st.expr] ?? {})};
+  const pose: HeadPose = {...(ex.pose ?? {})};
+  // talking: the viseme replaces the expression's resting mouth (a smile stays a smile), the jaw drops on open vowels
+  let mouth: MouthShape = ex.mouth;
+  const v = st.mouth;
+  if (v === 'A') { mouth = 'A'; pose.jaw = Math.max(pose.jaw ?? 0, 2); }
+  else if (v === 'O') { mouth = 'O'; pose.jaw = Math.max(pose.jaw ?? 0, 1); }
+  else if (v === 'E') mouth = st.expr === 'smile' || st.expr === 'laugh' ? 'grin' : 'E';
+  else if (v === 'M') mouth = 'M';
+  else if (v === 'smile' && mouth !== 'laugh') mouth = 'smile';
+  let eye = ex.eye;
+  if (st.lid === 1 && eye !== 'happy' && eye !== 'squint') eye = 'half';
+  if (st.lid === 2) eye = 'closed';
+  const face: FaceState3 = {eye, brow: ex.brow, mouth, look: st.look ?? 0};
+  const sc = sculptHead(spec.head, pose);
+  const head = drawFace(sc, spec.head, spec.face, face, pose);
+  const rig = civicRig({head: {}, hair: () => ({parts: [], adjust: []}), browCol: 0, ramps: spec.ramps, backRamp: spec.backRamp, key: spec.key, noEdge: spec.noEdge});
+  const tor = spec.torso.kind === 'blazerShell' ? blazerShell(spec.torso.sy) : suitTorso(spec.torso as TorsoSpec);
+  const torso = renderFigure({w: CIV_W, h: CIV_H, parts: tor.parts, adjust: tor.adjust, stamps: tor.stamps}, rig);
+  const x = spec.extras?.(st) ?? {};
+  const extra = x.parts?.length || x.stamps?.length ? renderFigure({w: CIV_W, h: CIV_H, parts: x.parts ?? [], adjust: x.adjust ?? [], stamps: x.stamps ?? []}, rig) : null;
+  const out: Img = {w: CIV_W, h: CIV_H, c: new Int32Array(CIV_W * CIV_H).fill(-1)};
+  for (let i = 0; i < out.c.length; i++) {
+    const t = torso.c[i], h = head.c[i], m = sc.mat[i];
+    // the neck goes behind the collar; the head and the hair (a bob over the shoulders) in front of the torso
+    if (h >= 0 && (m !== 4 || t < 0)) out.c[i] = h; else if (t >= 0) out.c[i] = t;
+    if (extra && extra.c[i] >= 0) out.c[i] = extra.c[i];
+  }
+  return out;
+});
+/** where a bust's head landmarks are (for props that sit on the face: a headset's boom, a squint's glints) */
+export const bustAnchors = (spec: BustSpec3, pose: HeadPose = {}) => faceAnchors(sculptHead(spec.head, pose), spec.head);
 
 // ------------------------------------------------------------------ bust arms: an arm from the shoulder to a hand
 /** an arm into the bust frame: upper arm from the shoulder, the elbow, the forearm, a cuff and a hand (figure parts) */
@@ -139,7 +214,12 @@ export const bustArm = (g: string, sh: V2, el: V2, wr: V2, hand: {dir: V2; thumb
 // ------------------------------------------------------------------ the room tier
 /** hair templates for the 16 x 17 room head (3/4 to screen-right, like every room sprite: the face on the right, the
  *  back of the head on the left). The face rows are Ep1's room head (cast/lahtnemulb.ts RHEAD), the hair varies. */
-export type RoomHair = 'short' | 'crop' | 'swoop' | 'long' | 'bun' | 'bald' | 'cap' | 'curly' | 'silver';
+export type RoomHair = 'short' | 'crop' | 'swoop' | 'long' | 'bun' | 'bald' | 'cap' | 'curly' | 'silver' | 'bob';
+// The room head, 3/4 to screen-right (the art review: the old chin and neck put a dark column under the mouth that read
+// as a goatee, and the mouth sat far back under a pursed snout). Here the mouth sits forward under the nose, the chin is
+// a lit form below it, the jaw's underside is a mid shadow (never the outline tone), and the neck is set back under the
+// ear with its front edge in skin tones; the head map now carries the neck to the collar (the body's own neck is
+// dropped), so no outline runs from the lip into the collar.
 const BASE_HEAD = [
   '....hhhhhhh.....',
   '..hhHHHHHHHhh...',
@@ -150,14 +230,15 @@ const BASE_HEAD = [
   'hHHh22334e44eo..',
   'hHo12233444444o.',
   'hHo122334444445.',
-  '.ho1223344444o5.',
-  '..o1223344444o..',
-  '..o12233444o....',
-  '..o1223mmm4o....',
-  '...o22334o......',
-  '....o2233o......',
-  '.....o223o......',
-  '.....o223o......',
+  '.ho1223344444n4.',
+  '..o12233444444o.',
+  '..o1223344mmm4..',
+  '..o12233444443..',
+  '...o2233344443..',
+  '....o22223332...',
+  '.....o2233......',
+  '.....o2233......',
+  '.....o2233......',
 ];
 const TOPS4: Record<RoomHair, string[]> = {
   short: BASE_HEAD.slice(0, 4),
@@ -169,38 +250,51 @@ const TOPS4: Record<RoomHair, string[]> = {
   bald: ['................', '....ooooooo.....', '..o2233344444o..', '.o22233344444o..'],
   cap: ['...ccccccc......', '.cCCCCCCCCCc....', '.cCCCCCCCCCCkkkk', '.hHHHHHHHHHHHo..'],
   curly: ['...hHhHhHhH.....', '.hHhHhHhHhHhH...', 'hHhHHHHHHHHhHh..', 'hHHHHHHHHHHHHo..'],
+  bob: ['....hhhhhhh.....', '..hhHHHHHHHhh...', '.hHHHHHHHHHHHh..', 'hHHHHHHHHHHHHHo.'],
 };
-export interface RoomHeadOpts { hair: RoomHair; mouth?: 'rest' | 'open' | 'smile' | 'laugh'; glasses?: boolean; squint?: boolean; blink?: boolean; beard?: boolean; frown?: boolean }
-/** a 16 x 17 room head tone map: a hair template over Ep1's room face, with its mouth and eyes */
+export interface RoomHeadOpts { hair: RoomHair; mouth?: 'rest' | 'open' | 'smile' | 'laugh'; glasses?: boolean; squint?: boolean; blink?: boolean; beard?: boolean; frown?: boolean; woman?: boolean; soft?: boolean; browUp?: boolean }
+/** a 16 x 18 room head tone map (the neck to the collar): a hair template over the room face, its mouth and eyes */
 export const roomHead = (o: RoomHeadOpts): string[] => {
   const rows = BASE_HEAD.map((r) => r);
   TOPS4[o.hair].forEach((r, j) => (rows[j] = r));
   const setc = (j: number, i: number, ch: string) => { const r = rows[j].split(''); r[i] = ch; rows[j] = r.join(''); };
   if (o.hair === 'swoop') { rows[4] = 'hHHHHHHHh3444o..'; }
-  if (o.hair === 'crop') { rows[4] = 'hHHH122233444o..'; rows[5] = 'hHH22234bb4bo...'.padEnd(16, '.'); rows[5] = 'hHH12234bb4bo...'; }
+  if (o.hair === 'crop') { rows[4] = 'hHHH122233444o..'; rows[5] = 'hHH12234bb4bo...'; }
   if (o.hair === 'bald') { rows[4] = 'o222233334444o..'; rows[5] = 'o1222234bb4bo...'; rows[6] = 'o1222334e44eo...'; rows[7] = 'oo12233444444o..'; rows[8] = '.o122334444445..'; }
   if (o.hair === 'long') { for (const j of [7, 8, 9, 10, 11, 12]) { setc(j, 0, 'h'); setc(j, 1, 'H'); setc(j, 2, j < 10 ? 'h' : 'o'); } setc(13, 1, 'h'); setc(13, 2, 'h'); }
+  if (o.hair === 'bob') {
+    // a chin-length bob: the fringe across the brow, the hair hanging to the jaw behind the cheek
+    rows[4] = 'hHHHHHHHHHHHHh..'; rows[5] = 'hHHHHh234bb4bo..';
+    for (const j of [6, 7, 8, 9, 10, 11, 12]) { setc(j, 0, 'h'); setc(j, 1, 'H'); setc(j, 2, 'H'); setc(j, 3, j < 12 ? 'h' : 'H'); }
+    rows[13] = '.hHHo2233444....'; rows[14] = '..hhho223332....';
+  }
   if (o.hair === 'curly') { setc(7, 0, 'h'); setc(8, 0, 'h'); }
   if (o.hair === 'cap') { rows[4] = 'hHHHHo2233444o..'; }
   if (o.blink) { rows[6] = rows[6].replace(/e/g, '3'); setc(6, 9, 'b'); setc(6, 12, 'b'); }
-  else if (o.squint) { setc(6, 8, 'e'); setc(6, 11, 'e'); }
+  else if (o.squint) { setc(6, 8, 'e'); setc(6, 11, 'e'); setc(5, 9, 'b'); }
+  if (o.woman) { setc(6, 10, 'e'); setc(5, 8, 'b'); setc(8, 15, '.'); setc(8, 14, '4'); }
+  // an open, attentive brow: lifted a row where the forehead is skin
+  if (o.browUp) for (const i of [9, 10, 12]) if (/[2-4]/.test(rows[4][i]) && rows[5][i] === 'b') { setc(4, i, 'b'); setc(5, i, '4'); }
   if (o.glasses) { rows[6] = rows[6].slice(0, 7) + 'gLegLegg' + rows[6].slice(15); rows[5] = rows[5].slice(0, 8) + 'gggggg' + rows[5].slice(14); }
+  // the mouth (forward, under the nose): rest, open, smile, laugh; a woman's in her lip colour
   const M: Record<string, [string, string]> = {
-    rest: ['..o12233444o....', '..o1223mmm4o....'],
-    open: ['..o12233444o....', '..o1223mMm4o....'],
-    smile: ['..o1223m444m....', '..o12233mmm4o...'],
-    laugh: ['..o1223m444m....', '..o1223mMMm4o...'],
+    rest: ['..o1223344mmm4..', '..o12233444443..'],
+    open: ['..o1223344mMm4..', '..o122334444M3..'],
+    smile: ['..o122334m44m4..', '..o12233mmm443..'],
+    laugh: ['..o122334mMMm4..', '..o122334MM443..'],
   };
   const [r11, r12] = M[o.mouth ?? 'rest'];
   rows[11] = r11; rows[12] = r12;
-  if (o.frown) rows[12] = '..o1223m3m4o....';
-  if (o.beard) { rows[10] = '..oB223344444o..'; rows[11] = '..oBB2B4BBBo....'; rows[12] = rows[12].replace(/[2-4]/g, 'B'); rows[13] = '...oBBBBBo......'; }
+  if (o.hair === 'bob') { for (const j of [11, 12]) { setc(j, 0, 'h'); setc(j, 1, 'H'); setc(j, 2, 'H'); setc(j, 3, 'h'); } }
+  if (o.frown) rows[11] = '..o1223344m3m4..';
+  if (o.woman) { rows[11] = rows[11].replace(/m/g, 'r'); rows[12] = rows[12].replace(/m/g, 'r'); }
+  if (o.beard) { rows[10] = '..oB2233444444o.'; rows[11] = rows[11].replace(/[2-4]/g, (c, i) => (i > 3 ? 'B' : c)); rows[12] = '..oBBBBBBBBBB...'; rows[13] = '...oBBBBBBBB....'; }
   return rows.map((r) => r.padEnd(16, '.').slice(0, 16));
 };
 export const ROOM_HEAD_PAL: Record<string, [string, number] | number> = {
   o: ['skin', 0], '1': ['skin', 1], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5],
-  h: ['hair', 2], H: ['hair', 3], b: ['hair', 1], e: ['dark', 0], m: ['skin', 1], M: ['dark', 0],
-  c: ['cap', 2], C: ['cap', 3], k: ['cap', 1], g: ['lens', 1], L: ['lens', 4], B: ['hair', 1],
+  h: ['hair', 2], H: ['hair', 3], b: ['hair', 1], e: ['dark', 0], m: ['skin', 1], M: ['dark', 0], n: ['skin', 2],
+  c: ['cap', 2], C: ['cap', 3], k: ['cap', 1], g: ['lens', 1], L: ['lens', 4], B: ['hair', 1], r: ['lip', 3],
 };
 export interface RoomFigSpec {
   kind: 'suit' | 'pantsuit' | 'blazer' | 'jacket';
@@ -229,6 +323,7 @@ export const seatedLegs = (lm: string, cross = false): Part[] => {
 };
 export const roomFig = (spec: RoomFigSpec, p: RoomPose): FigureDef => {
   const body = roomBody({kind: spec.kind, broad: spec.broad, legMat: spec.legMat}, p.arm, p.legs ?? 'stand', {armF: p.armF, tie: p.tie});
+  { const keep = body.parts.filter((q) => q.group !== 'neck'); body.parts.length = 0; body.parts.push(...keep); }
   if (p.seat) {
     const lm = spec.legMat ?? 'suit';
     const keep = body.parts.filter((q) => !/^leg/.test(q.group));
@@ -246,7 +341,7 @@ export const roomFig = (spec: RoomFigSpec, p: RoomPose): FigureDef => {
 export const roomRig = (spec: RoomFigSpec): LightRig => ({
   key: [-0.55, -0.83], keyBand: 3, shadowBand: 3, rim: true, outline: true,
   back: [1, -0.1], backBand: 1, backRamp: spec.backRamp ?? {skin: PAL.S3},
-  ramps: {dark: [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], shoe: [PAL.N0, PAL.N0, PAL.N1, PAL.G1, PAL.G3, PAL.G4], lens: [PAL.N0, PAL.N1, PAL.G3, PAL.G5, PAL.C7, PAL.C9], cap: [PAL.N0, PAL.N1, PAL.N2, PAL.N4, PAL.N6, PAL.N7], ...spec.ramps},
+  ramps: {dark: [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], shoe: [PAL.N0, PAL.N0, PAL.N1, PAL.G1, PAL.G3, PAL.G4], lens: [PAL.N0, PAL.N1, PAL.G3, PAL.G5, PAL.C7, PAL.C9], cap: [PAL.N0, PAL.N1, PAL.N2, PAL.N4, PAL.N6, PAL.N7], lip: [PAL.U2, PAL.U3, PAL.U3, PAL.U4, PAL.U4, PAL.U5], ...spec.ramps},
   groupBands: {torso: {key: 4, shadow: 3}, armN: {key: 2, shadow: 2}, armF: {key: 1, shadow: 2}, legN: {key: 2, shadow: 2}, legF: {key: 1, shadow: 2}},
   keyGain: (_x, y) => (y < 48 ? 1 : Math.max(0.25, 1 - (y - 48) / 34)),
 });
@@ -293,7 +388,8 @@ export const seatedStaff = memo((p: {seed: number; pose: SeatPose; long?: boolea
     r(15, 7, 3, 8, top[1]); r(15, 3, 3, 4, sk[1]); r(4, 8, 3, 7, top[0]); r(4, 4, 3, 4, sk[0]);
   } else if (p.pose === 'type') {
     r(11, 20, 9, 2, top[1]); r(17, 22, 8, 1, PAL.G3); r(17, 17, 1, 5, PAL.G4); s(18, 21, sk[2]);
-    for (let j = 0; j < 3; j++) s(hx + 8, hy + 5 + j, PAL.C5);
+    // the screen's glow: its lid's inner edge, and one lifted pixel on the chin (never on the eye: it read as tears)
+    s(17, 17, PAL.C5); s(17, 18, PAL.C4); s(hx + 6, hy + 9, sk[2] === PAL.S6 ? PAL.K4 : stepColor(sk[2], 1));
   } else if (p.pose === 'hold') {
     r(15, 16, 3, 7, top[1]); r(17, 22, 6, 2, top[1]); r(23, 22, 3, 2, sk[1]);
   } else {
@@ -308,6 +404,14 @@ export const seatedStaff = memo((p: {seed: number; pose: SeatPose; long?: boolea
   }
   return img;
 });
+/** an office chair for a seated staffer blitted at (x, y) (the sprite's own frame, 26 x 36, facing screen-right):
+ *  its back behind them, the seat under their hips, the gas column and the five-star base (drawn before the staffer) */
+export const staffChair = (b: Buf, x: number, y: number, col: number[] = [PAL.N1, PAL.N2, PAL.N3]) => {
+  rect(x + 2, y + 12, 5, 17, b.ink(col[1])); rect(x + 2, y + 12, 5, 1, b.ink(col[2])); rect(x + 2, y + 12, 1, 17, b.ink(col[0]));
+  rect(x + 3, y + 29, 17, 3, b.ink(col[1])); rect(x + 3, y + 29, 17, 1, b.ink(col[2]));
+  rect(x + 10, y + 32, 2, 3, b.ink(PAL.G3));
+  rect(x + 4, y + 35, 14, 1, b.ink(PAL.G2)); b.set(x + 4, y + 35, PAL.N0); b.set(x + 17, y + 35, PAL.N0); b.set(x + 11, y + 35, PAL.N0);
+};
 /** a beanbag under a seated staffer (its colour from the seed), drawn before the staffer */
 export const beanbag = (b: Buf, x: number, y: number, seed: number) => {
   const cols = [[PAL.R0, PAL.R1, PAL.R2], [PAL.C1, PAL.C2, PAL.C3], [PAL.W3, PAL.W4, PAL.W5], [PAL.F2, PAL.F3, PAL.F4], [PAL.L0, PAL.L1, PAL.L2], [PAL.U2, PAL.U3, PAL.U4]][seed % 6];

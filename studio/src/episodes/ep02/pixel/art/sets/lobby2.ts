@@ -32,7 +32,7 @@ export const LOBBY2 = {
   FEET: {back: 150, mid: 170, near: 196},
   COUNTER: {x0: 8, x1: 46, top: 116},
   SIGN: {x0: 46, y0: 20, x1: 152, y1: 74},
-  SIGN2: {x0: 62, y0: 80, x1: 140, y1: 102},
+  SIGN2: {x0: 62, y0: 80, x1: 140, y1: 105},
   PILLARS: [[158, 174], [318, 336]] as Array<[number, number]>,
   ROSE: {cx: 246, cy: 34, r: 16},
   DESK: {x0: 184, x1: 308, top: 122, front: 128, base: 160},
@@ -142,9 +142,14 @@ const paintFar = (mb: MatBuf, s: Lobby2State) => {
   // Mas's high counter at the back left (stone top on a steel post), and the DAYS SINCE sign over it
   {
     const C = L2.COUNTER;
-    rect(C.x0, C.top, C.x1 - C.x0, 4, mb.mat('lb.stone', 1.6)); rect(C.x0, C.top, C.x1 - C.x0, 1, mb.shade(1.4));
-    rect(((C.x0 + C.x1) >> 1) - 2, C.top + 4, 4, L2.WALL_Y - C.top - 2, mb.mat('lb.steel', 0.4));
-    ellipse((C.x0 + C.x1) >> 1, L2.WALL_Y + 2, 10, 2, mb.mat('lb.steel', 0));
+    // a real reception counter (Ep1's lobby has one): the stone top with its lip, a solid front panel down to the floor
+    // in the lobby's steel, a recessed kick plate, a thin lit seam under the top
+    rect(C.x0, C.top + 4, C.x1 - C.x0, L2.WALL_Y + 4 - C.top - 4, mb.mat('lb.steel', 0.5));
+    rect(C.x0, C.top + 4, 2, L2.WALL_Y - C.top, mb.mat('lb.steel', 1.1)); rect(C.x1 - 2, C.top + 4, 2, L2.WALL_Y - C.top, mb.mat('lb.steel', -0.2));
+    rect(C.x0 + 2, C.top + 5, C.x1 - C.x0 - 4, 1, mb.emit(PAL.C5));
+    rect(C.x0 + 4, C.top + 12, C.x1 - C.x0 - 8, 1, mb.shade(-0.8)); rect(C.x0 + 4, C.top + 22, C.x1 - C.x0 - 8, 1, mb.shade(-0.8));
+    rect(C.x0 + 2, L2.WALL_Y, C.x1 - C.x0 - 4, 4, mb.mat('lb.steel', -0.6));
+    rect(C.x0 - 2, C.top, C.x1 - C.x0 + 4, 4, mb.mat('lb.stone', 1.6)); rect(C.x0 - 2, C.top, C.x1 - C.x0 + 4, 1, mb.shade(1.4));
   }
   // the floor: polished stone tiles, checkered, receding to the back wall; a long runner on the axis
   rect(0, L2.WALL_Y, 480, RH - L2.WALL_Y, mb.mat('lb.floor', 0.4));
@@ -216,22 +221,24 @@ export const drawSignBoard = (b: Buf, x0: number, y0: number, x1: number, y1: nu
 };
 /** the WHERE IS ALYI? flyer (room scale 12 x 16; o.scale 2/4 for inserts): a doorway photo, the headline, tape at the
  *  corners; `curl` lifts its lower corners (February's, by May), `upside` = Mas's, taped back upside down */
-export const drawFlyer = (b: Buf, x: number, y: number, o: {curl?: boolean; upside?: boolean; scale?: 1 | 2 | 4; tape?: boolean; folded?: boolean} = {}) => {
+export const drawFlyer = (b: Buf, x: number, y: number, o: {curl?: boolean; upside?: boolean; scale?: number; tape?: boolean; folded?: boolean} = {}) => {
   const s = o.scale ?? 1, W = 12 * s, H = 16 * s;
   const t = new Buf(W, H, TR);
   fill(t, 0, 0, W, H, PAL.P2); fill(t, W - s, 0, s, H, PAL.P1); fill(t, 0, H - s, W, s, PAL.P1);
   // the headline: at room scale a dark bar; at 2x+ the words
   if (s >= 2) { const hl = 'WHERE IS'; const hl2 = 'ALYI?'; if (s >= 4) { pt(t, hl, Math.round((W - pw(hl)) / 2), 3 * s, PAL.N1); pt(t, hl2, Math.round((W - pw(hl2)) / 2), 3 * s + 9, PAL.N1); } else { tiny(t, 'WHERE IS', 1, 2, PAL.N1); tiny(t, 'ALYI?', 5, 8, PAL.N1); } }
-  else fill(t, 2, 2, W - 4, 2, PAL.N1);
+  else { for (let i = 2; i < W - 2; i++) { if (i % 3 !== 1) t.set(i, 2, PAL.N1); if (i % 4 !== 2 && i < W - 3) t.set(i, 4, PAL.N2); } }
   // the photo: a doorway (a dark frame, the light through a half-open door), nobody in it
   const py = s >= 2 ? (s >= 4 ? 26 * s / 4 + 16 : 15) : 6, ph = H - py - 2 * s, px = 2 * s, pwid = W - 4 * s;
   fill(t, px, py, pwid, ph, PAL.G2);
   const dx = px + Math.round(pwid * 0.3), dw = Math.max(2, Math.round(pwid * 0.42));
   fill(t, dx, py + Math.round(ph * 0.1), dw, ph - Math.round(ph * 0.1), PAL.N1);
-  fill(t, dx + Math.round(dw * 0.5), py + Math.round(ph * 0.1) + s, Math.max(1, Math.round(dw * 0.4)), ph - Math.round(ph * 0.1) - s, PAL.W6);
-  if (o.tape !== false) for (const [tx, ty] of [[0, 0], [W - 2 * s, 0], [0, H - 2 * s], [W - 2 * s, H - 2 * s]]) fill(t, tx, ty, 2 * s, 2 * s, PAL.G6);
+  fill(t, dx + Math.round(dw * 0.5), py + Math.round(ph * 0.1) + s, Math.max(1, Math.round(dw * 0.4)), ph - Math.round(ph * 0.1) - s, s === 1 ? PAL.W3 : PAL.W6);
+  if (o.tape !== false) for (const [tx, ty] of [[0, 0], [W - 2 * s, 0], [0, H - 2 * s], [W - 2 * s, H - 2 * s]]) fill(t, tx, ty, 2 * s, 2 * s, s === 1 ? PAL.P1 : PAL.G6);
   if (o.curl) { for (let i = 0; i < 3 * s; i++) for (let j = 0; j <= i; j++) { t.set(W - 1 - j, H - 3 * s + i, TR); t.set(j, H - 3 * s + i, TR); } for (let i = 0; i < 3 * s; i++) { t.set(W - 1 - i, H - 1 - 3 * s + i, PAL.P0); } }
-  // composite (upside down = rotated 180°)
+  // its shadow on the surface it's taped to (paper, not a light: it casts, it doesn't glow), then the sheet (upside
+  // down = rotated 180°)
+  if (s === 1) for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const v = o.upside ? t.c[(H - 1 - j) * W + (W - 1 - i)] : t.c[j * W + i]; if (v !== TR) b.set(x + i + 1, y + j + 1, stepColor(b.get(x + i + 1, y + j + 1), -2)); }
   for (let j = 0; j < H; j++) for (let i = 0; i < W; i++) { const v = o.upside ? t.c[(H - 1 - j) * W + (W - 1 - i)] : t.c[j * W + i]; if (v !== TR) b.set(x + i, y + j, v); }
 };
 /** the hand truck (room scale): two wheels, a nose plate, the long handles */
@@ -246,28 +253,33 @@ export const drawHandTruck = (b: Buf, x: number, y: number) => {
 export const drawComplaint = (b: Buf, x: number, y: number, o: {state: 'upright' | 'floor'; cups?: boolean; docket?: boolean; refiled?: boolean; forNow?: boolean} = {state: 'upright'}) => {
   if (o.state === 'upright') {
     // pages edge-on at its right side, the cover facing us
-    fill(b, x + 30, y - 54, 4, 54, PAL.P1); for (let j = 0; j < 54; j += 2) b.set(x + 31 + (j % 3), y - 54 + j, PAL.P0);
-    fill(b, x, y - 56, 30, 56, PAL.P2); fill(b, x, y - 56, 30, 1, PAL.W9); fill(b, x + 29, y - 56, 1, 56, PAL.P0);
-    fill(b, x + 3, y - 52, 24, 1, PAL.N2);
+    // (the cover is as wide as its longest word plus a margin: PROMISED and FEDERAL fit inside it)
+    const CW = Math.max(tinyWidth('PROMISED'), tinyWidth('FEDERAL')) + 8;
+    fill(b, x + CW, y - 54, 4, 54, PAL.P1); for (let j = 0; j < 54; j += 2) b.set(x + CW + 1 + (j % 3), y - 54 + j, PAL.P0);
+    fill(b, x, y - 56, CW, 56, PAL.P2); fill(b, x, y - 56, CW, 1, PAL.W9); fill(b, x + CW - 1, y - 56, 1, 56, PAL.P0);
+    fill(b, x + 3, y - 52, CW - 6, 1, PAL.N2);
     tiny(b, 'NOLE V.', x + 4, y - 49, PAL.N1); tiny(b, 'MANALT', x + 4, y - 43, PAL.N1); tiny(b, 'ET AL.', x + 4, y - 37, PAL.N1);
-    fill(b, x + 3, y - 30, 24, 1, PAL.N2);
+    fill(b, x + 3, y - 30, CW - 6, 1, PAL.N2);
     tiny(b, o.refiled ? 'FEDERAL' : 'YOU', x + 4, y - 26, PAL.R2); tiny(b, o.refiled ? 'COURT' : 'PROMISED', x + 4, y - 20, PAL.R2);
     if (!o.refiled) tiny(b, '!!!', x + 4, y - 14, PAL.R2);
-    if (o.docket) { fill(b, x + 30, y - 46, 8, 6, PAL.W7); fill(b, x + 30, y - 46, 8, 1, PAL.W8); }
+    if (o.docket) { fill(b, x + CW, y - 46, 8, 6, PAL.W7); fill(b, x + CW, y - 46, 8, 1, PAL.W8); }
     return;
   }
   // lying flat: its top face (the cover) seen at a low angle, a thick stack of pages under it
-  poly([x, y - 10, x + 52, y - 10, x + 58, y - 4, x + 6, y - 4], b.ink(PAL.P2));
-  line(x, y - 10, x + 52, y - 10, b.ink(PAL.W9));
-  fill(b, x + 6, y - 4, 52, 6, PAL.P1); for (let i = 0; i < 52; i += 2) b.set(x + 6 + i, y - 1 - (i % 3 ? 1 : 0), PAL.P0);
-  tiny(b, 'NOLE V. MANALT', x + 10, y - 9, PAL.N2);
-  if (o.docket) { fill(b, x + 58, y - 8, 7, 5, PAL.W7); fill(b, x + 58, y - 8, 7, 1, PAL.W8); }
-  if (o.cups) for (const cx of [x + 14, x + 30, x + 42]) { fill(b, cx, y - 16, 5, 7, PAL.P2); fill(b, cx, y - 14, 5, 2, PAL.C4); fill(b, cx + 4, y - 15, 1, 5, PAL.P0); fill(b, cx + 1, y - 17, 3, 1, PAL.D3); }
+  // (the slab is as long as its caption plus room for the cups at its far end; the cups never sit on the words)
+  const L = tinyWidth('NOLE V. MANALT') + 34;
+  poly([x, y - 12, x + L, y - 12, x + L + 6, y - 4, x + 6, y - 4], b.ink(PAL.P2));
+  line(x, y - 12, x + L, y - 12, b.ink(PAL.W9));
+  fill(b, x + 6, y - 4, L, 6, PAL.P1); for (let i = 0; i < L; i += 2) b.set(x + 6 + i, y - 1 - (i % 3 ? 1 : 0), PAL.P0);
+  tiny(b, 'NOLE V. MANALT', x + 6, y - 10, PAL.N2);
+  if (o.docket) { fill(b, x + L + 6, y - 8, 7, 5, PAL.W7); fill(b, x + L + 6, y - 8, 7, 1, PAL.W8); }
+  if (o.cups) for (const cx of [x + L - 22, x + L - 12]) { fill(b, cx, y - 16, 5, 7, PAL.P2); fill(b, cx, y - 14, 5, 2, PAL.C4); fill(b, cx + 4, y - 15, 1, 5, PAL.P0); fill(b, cx + 1, y - 17, 3, 1, PAL.D3); }
   if (o.forNow) { fill(b, x + 20, y - 18, 16, 10, PAL.W7); fill(b, x + 20, y - 18, 16, 1, PAL.W8); tiny(b, '(FOR', x + 21, y - 16, PAL.N2); }
 };
 /** the clean rectangle the complaint leaves on the carpet (sc 20), and the (FOR NOW) note on it */
 export const drawCleanRect = (b: Buf, x: number, y: number, note = true) => {
-  for (let j = 0; j < 6; j++) for (let i = 0; i < 52; i++) { const X = x + 6 + i - Math.round(j * 0.9), Y = y - 4 - j; b.set(X, Y, stepColor(b.get(X, Y), 1)); }
+  const L = tinyWidth('NOLE V. MANALT') + 34;
+  for (let j = 0; j < 6; j++) for (let i = 0; i < L; i++) { const X = x + 6 + i - Math.round(j * 0.9), Y = y - 4 - j; b.set(X, Y, stepColor(b.get(X, Y), 1)); }
   if (note) { fill(b, x + 22, y - 9, 13, 8, PAL.W7); fill(b, x + 22, y - 9, 13, 1, PAL.W8); }
 };
 /** confetti: 'burst' (paper bits in the air) or 'pile' (swept into a heap at x, y) */
@@ -303,13 +315,13 @@ export const drawLobby2 = (b: Buf, st: Lobby2State, cast: {back?: (b: Buf) => vo
   // the corner TV's picture (small; the full-frame push-in is presserFull)
   if (s.tv && s.tv !== 'off') drawPresserSmall(b, L2.TV.x0 + dx, L2.TV.y0 + dy, L2.TV.x1 - L2.TV.x0 + 1, L2.TV.y1 - L2.TV.y0 + 1, s.tv === 'stuck');
   // the door glass: the sidewalk outside during the swing, the PAUSE sign leaning on the planter
-  if (s.door) D(() => { const x0 = L2.DOORS.x0 + 4 + dx; fill(b, x0 + 2, 110 + dy, 18, 12, PAL.L1); fill(b, x0 + 2, 108 + dy, 18, 2, PAL.L2); fill(b, x0 + 4, 92 + dy, 14, 14, PAL.P2); fill(b, x0 + 4, 92 + dy, 14, 1, PAL.N2); tiny(b, 'PAUSE', x0 + 5, 96 + dy, PAL.R2); line(x0 + 10, 106 + dy, x0 + 10, 112 + dy, b.ink(PAL.D2)); if (s.door === 2) fill(b, L2.DOORS.x0 + 1 + dx, 22 + dy, 2, 128, PAL.W8); });
+  if (s.door) D(() => { const x0 = L2.DOORS.x0 + 4 + dx; fill(b, x0 + 2, 110 + dy, 18, 12, PAL.L1); fill(b, x0 + 2, 108 + dy, 18, 2, PAL.L2); const sw = tinyWidth('PAUSE') + 4; fill(b, x0 + 11 - (sw >> 1), 92 + dy, sw, 14, PAL.P2); fill(b, x0 + 11 - (sw >> 1), 92 + dy, sw, 1, PAL.N2); tiny(b, 'PAUSE', x0 + 13 - (sw >> 1), 96 + dy, PAL.R2); line(x0 + 10, 106 + dy, x0 + 10, 112 + dy, b.ink(PAL.D2)); if (s.door === 2) fill(b, L2.DOORS.x0 + 1 + dx, 22 + dy, 2, 128, PAL.W8); });
   // the signs
   drawSignBoard(b, L2.SIGN.x0 + dx, L2.SIGN.y0 + dy, L2.SIGN.x1 + dx, L2.SIGN.y1 + dy, ['DAYS SINCE', 'SOMEONE', 'TRIED TO', 'FIRE MAS:'], s.sign1 ?? '86');
   if (s.sign2 !== null && s.sign2 !== undefined) drawSignBoard(b, L2.SIGN2.x0 + dx, L2.SIGN2.y0 + dy, L2.SIGN2.x1 + dx, L2.SIGN2.y1 + dy, ['DAYS SINCE', 'SOMEONE', 'SUED MAS:'], s.sign2, {small: true});
   // the flyers on the rack pillars
   if (s.flyers !== 'peeled' || true) {
-    const spots: Array<[number, number, boolean]> = [[160, 70, false], [160, 104, false], [321, 64, false], [321, 98, false]];
+    const spots: Array<[number, number, boolean]> = [[160, 104, false], [160, 84, false], [321, 64, false], [321, 98, false]];
     spots.forEach(([fx, fy], i) => {
       const mine = i === 1 && s.upside;
       if (mine && s.flyers === 'peeled') return;
@@ -349,7 +361,8 @@ export const drawPresserSmall = (b: Buf, x: number, y: number, w: number, h: num
   fill(b, x + w - 11, y + 3, 9, h - 10, PAL.D2); fill(b, x + w - 10, y + 4, 7, 2, PAL.P2); // the FLOOR door
   fill(b, x + w - 22, y + 8, 12, h - 15, PAL.P2); fill(b, x + w - 22, y + 8, 12, 2, PAL.W7); // the lectern, jammed
   for (let k = 0; k < 4; k++) fill(b, x + 4 + k * 5, y + 6, 3, 8, [PAL.G2, PAL.F3, PAL.N1, PAL.G3][k]);
-  if (stuck) { fill(b, x + w - 21, y + 12, 10, 4, PAL.N0); tiny(b, '0', x + w - 18, y + 12, PAL.R3); }
+  // the tally on its card above the jammed lectern, the whole word (it reads at 4x: 3 x 5 type, 12 x 20 px)
+  if (stuck) { const tw = tinyWidth('0 BILLS') + 2; fill(b, x + 1, y + 1, tw, 7, PAL.N0); tiny(b, '0 BILLS', x + 2, y + 2, PAL.R3); }
 };
 export {drawTusk};
 void text; void bpt; void bpw; void dith; void tinyWidth; void sp;

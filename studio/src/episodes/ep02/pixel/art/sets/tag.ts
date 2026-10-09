@@ -23,36 +23,36 @@ import {applyPalette} from '../../../../../shared/pixel/palettes';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, dith, grip, capsule, armTo} from '../kit';
 import {drawChatBalloon, drawEggTab} from '../creatures';
 import {crowdBacks} from '../cast/civic2';
+import {placeHand, drawHand, sleeve, POSES, HandPose} from '../cast/hands2';
 import type {ArtAsset} from '../asset';
 
 const NAVY: [number, number, number, number] = [PAL.N0, PAL.N1, PAL.N2, PAL.N4];
-const HAND = [PAL.S2, PAL.S3, PAL.S4, PAL.S5, PAL.S6];
 /** the over-long red tie (it hangs far past where a tie ends) */
 const tie = (b: Buf, x: number, y: number, len: number) => { poly([x - 4, y, x + 4, y, x + 3, y + 6, x + 6, y + len, x, y + len + 6, x - 6, y + len, x - 3, y + 6], b.ink(PAL.R2)); line(x + 2, y + 6, x + 4, y + len, b.ink(PAL.R1)); fill(b, x - 4, y, 8, 4, PAL.R1); };
-/** a hand (medium scale): a palm + four fingers + thumb, `open` (gesturing) or `fist` round a handle */
-const hand = (b: Buf, x: number, y: number, open: boolean, flip = false) => {
-  const d = flip ? -1 : 1;
-  fill(b, x - 5, y, 11, 9, HAND[2]); fill(b, x - 5, y, 11, 2, HAND[3]);
-  if (open) { for (let k = 0; k < 4; k++) fill(b, x - 5 + k * 3, y - 6 + (k === 0 || k === 3 ? 2 : 0), 2, 7, k % 2 ? HAND[2] : HAND[3]); fill(b, x + d * 6, y + 1, 4, 3, HAND[2]); }
-  else { for (let k = 0; k < 3; k++) fill(b, x - 5, y + 2 + k * 3, 11, 1, HAND[1]); fill(b, x + d * 5, y - 1, 3, 4, HAND[3]); }
-};
 export const rumptHands = (b: Buf, x: number, y: number, pose: 'talk' | 'pump' | 'tie', f = 0) => {
-  // two navy sleeves with white cuffs coming in from the sides of the frame toward the middle
+  // two navy sleeves with white cuffs coming in from below toward the middle, real hands at their ends
   const up = pose === 'pump' ? (Math.floor(f / 4) % 2 ? -10 : 0) : pose === 'talk' ? (Math.floor(f / 6) % 2 ? -3 : 0) : 0;
-  capsule(b, x - 70, y + 40, x - 24, y + 10 + up, 9, NAVY); capsule(b, x + 70, y + 40, x + 24, y + 10 + up, 9, NAVY);
-  fill(b, x - 30, y + 6 + up, 8, 8, PAL.P2); fill(b, x + 22, y + 6 + up, 8, 8, PAL.P2);
-  hand(b, x - 16, y + up, pose === 'talk'); hand(b, x + 16, y + up, pose === 'talk', true);
+  const P = pose === 'talk' ? POSES.open : POSES.grip;
+  rHand(b, P([-0.2, -1, 0.15], [0, 0, -1], 'R'), [x - 18, y + 14 + up], 'wrist', 1.6, [x - 40, y + 60]);
+  rHand(b, P([0.2, -1, 0.15], [0, 0, -1], 'L'), [x + 18, y + 14 + up], 'wrist', 1.6, [x + 40, y + 60]);
+};
+// ------------------------------------------------------------------ his hands: Ep1's insert-hands grammar
+// (the art review: the palms floated in front of the suit with no forearms). Each hand is a real hand (cast/hands2.ts):
+// knuckles, nails, the thumb, the wrist into a white shirt cuff, and the navy sleeve from the cuff back to the elbow
+// below the frame's edge.
+const CUFF_W = [PAL.N2, PAL.G4, PAL.G5, PAL.G6, PAL.P1, PAL.P2, PAL.P2];
+const SLEEVE_N = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5];
+const rHand = (scr: Buf, pose: HandPose, at: [number, number], anchor: 'index' | 'middle' | 'thumb' | 'wrist', s: number, elbow: [number, number], o: {before?: (b: Buf) => void} = {}) => {
+  const h = placeHand(pose, {s, at, anchor, light: 'lobby', cuffRamp: CUFF_W, key: [-0.3, -0.75, 0.6]});
+  // (the sleeve as wide as the cuff it leaves, widening to the elbow)
+  sleeve(scr, h.cuffEnd, elbow, Math.max(4, 4.2 * s), Math.max(5, 5.2 * s), SLEEVE_N);
+  o.before?.(scr);
+  drawHand(scr, h.hand, h.x, h.y);
+  return h;
 };
 
 // ------------------------------------------------------------------ the broadcast (Aug 21)
 const LOWER = '…having me speak… It\'s a little bit dangerous out there.';
-/** an open gesturing hand, palm toward camera, fingers up (w ~ 12 * s px); side -1 = the thumb to the left */
-const palm = (b: Buf, x: number, y: number, s: number, side: -1 | 1) => {
-  const H = HAND;
-  fill(b, x - 5 * s, y, 11 * s, 9 * s, H[2]); fill(b, x - 5 * s, y, 11 * s, s, H[3]); fill(b, x - 5 * s, y + 8 * s, 11 * s, s, H[1]);
-  for (let k = 0; k < 4; k++) { const fx = x - 5 * s + k * 3 * s, fh = (k === 1 || k === 2 ? 8 : 6) * s; fill(b, fx, y - fh, 2 * s, fh + s, H[k % 2 ? 2 : 3]); fill(b, fx + 2 * s - 1, y - fh, 1, fh, H[1]); }
-  const tx = side < 0 ? x - 8 * s : x + 6 * s; fill(b, tx, y + 2 * s, 3 * s, 4 * s, H[3]); fill(b, tx, y + 6 * s - 1, 3 * s, 1, H[1]);
-};
 export const broadcastPainter = (k = 999): Painter => (scr: Buf) => {
   const W = scr.w, H = scr.h, s = W < 200 ? 1 : 2;
   // a plain interview set (no network, no logo): a soft blue-grey ground with out-of-focus lights
@@ -67,10 +67,10 @@ export const broadcastPainter = (k = 999): Painter => (scr: Buf) => {
   // his hands up in front of the jacket, talking with them (held drawings on 6s): sleeves from the sides, white cuffs
   const up = Math.floor(k / 6) % 2;
   const hl: [number, number] = [cx - Math.round(W * 0.15), Math.round(H * 0.6) - up * 4 * s], hr: [number, number] = [cx + Math.round(W * 0.15), Math.round(H * 0.6) - (1 - up) * 4 * s];
-  armTo(scr, [cx - sh + 8 * s, top + 12 * s], [cx - sh + 4 * s, Math.round(H * 0.82)], [hl[0], hl[1] + 10 * s], [PAL.N1, PAL.N2, PAL.N3, PAL.N5], 7 * s, 6 * s);
-  armTo(scr, [cx + sh - 8 * s, top + 12 * s], [cx + sh - 4 * s, Math.round(H * 0.82)], [hr[0], hr[1] + 10 * s], [PAL.N1, PAL.N2, PAL.N3, PAL.N5], 7 * s, 6 * s);
-  fill(scr, hl[0] - 5 * s, hl[1] + 9 * s, 11 * s, 3 * s, PAL.P2); fill(scr, hr[0] - 5 * s, hr[1] + 9 * s, 11 * s, 3 * s, PAL.P2);
-  palm(scr, hl[0], hl[1], s, -1); palm(scr, hr[0], hr[1], s, 1);
+  // the forearms rise from the elbows below the frame's edge to the cuffs; the open hands, palms to the camera
+  const hs = 1.15 * s;
+  rHand(scr, POSES.open([-0.18, -1, 0.15], [0, 0, -1], 'R'), [hl[0], hl[1] + 10 * s], 'wrist', hs, [hl[0] - 10 * s, H + 12]);
+  rHand(scr, POSES.open([0.18, -1, 0.15], [0, 0, -1], 'L'), [hr[0], hr[1] + 10 * s], 'wrist', hs, [hr[0] + 10 * s, H + 12]);
   // the broadcast's own lower third, plain, his words typing on with a neutral blip (k chars)
   const lh = s > 1 ? 30 : 14;
   fill(scr, 0, H - lh - 6, W, lh, PAL.N0); fill(scr, 0, H - lh - 6, 6, lh, PAL.P2);
@@ -100,7 +100,6 @@ export const podiumPainter = (st: {size?: 0 | 1 | 2 | 3 | 4; tie?: boolean; taut
   podiumBack(scr, px, py, pwid, H - py);
   const size = st.size ?? 0, f = st.f ?? 0, bob = Math.floor(f / 4) % 2;
   const tieAt: [number, number] = [px - Math.round(pwid / 2) + 4, py - 4];
-  const NAVY4: [number, number, number, number] = [PAL.N0, PAL.N1, PAL.N2, PAL.N4];
   if (size && !st.tie && !st.taut) {
     // pumping: a hand pump stood on the reading top (right), his right hand on its T-handle; his left hand holding the
     // balloon's neck at the hose's end (left)
@@ -108,19 +107,17 @@ export const podiumPainter = (st: {size?: 0 | 1 | 2 | 3 | 4; tie?: boolean; taut
     fill(scr, pumpX - 3 * s, py - 24 * s, 6 * s, 20 * s, PAL.R1); fill(scr, pumpX - 3 * s, py - 24 * s, 2 * s, 20 * s, PAL.R2);
     fill(scr, pumpX - 1, handleY, 2, py - 24 * s - handleY, PAL.G5); fill(scr, pumpX - 8 * s, handleY - 2 * s, 16 * s, 3 * s, PAL.G4);
     for (let t = 0; t <= 30; t++) { const u = t / 30; scr.set(Math.round(pumpX - 4 * s + (tieAt[0] + 10 * s - pumpX) * u), Math.round(py - 6 * s + Math.sin(u * Math.PI) * 6), PAL.N2); }
-    armTo(scr, [W - 10, H + 30], [W - 40 * s, H - 10], [pumpX + 6 * s, handleY + 6 * s], NAVY4, 9 * s, 8 * s);
-    fill(scr, pumpX + 2 * s, handleY + 2 * s, 9 * s, 3 * s, PAL.P2);
-    grip(scr, pumpX - 6 * s, handleY - 3 * s, 12 * s, 1, HAND);
-    armTo(scr, [10, H + 30], [40 * s, H - 10], [tieAt[0] + 6 * s, tieAt[1] - 6 * s], NAVY4, 9 * s, 8 * s);
-    fill(scr, tieAt[0] - 4 * s, tieAt[1] - 8 * s, 9 * s, 3 * s, PAL.P2);
-    grip(scr, tieAt[0] + 2 * s, tieAt[1] - 14 * s, 10 * s, -1, HAND);
+    // his right hand round the T-handle (the back of it to us, the fingers over the bar), the arm from below the frame
+    rHand(scr, POSES.grip([0.05, -0.55, -0.83], [0.1, -0.83, 0.55], 'R', 0.7), [pumpX + 2 * s, handleY + 1], 'middle', 1.15 * s, [W - 30 * s, H + 14]);
+    // his left hand pinching the balloon's neck at the hose's end
+    rHand(scr, POSES.pinch([0.35, -0.75, -0.5], [0.15, -0.55, 0.8], 'L'), [tieAt[0] + 8 * s, tieAt[1] - 12 * s], 'index', 1.15 * s, [30 * s, H + 14]);
     drawChatBalloon(scr, tieAt[0] + 18 * s, tieAt[1] - 24 * s - size * 4 * s, size as 1 | 2 | 3 | 4, {scale: s * 1.4, string: [tieAt[0] + 8 * s, tieAt[1] - 12 * s]});
   } else if (st.tie) {
     // tying it on: both hands at the podium's corner, the knot
-    armTo(scr, [10, H + 30], [50 * s, H - 6], [tieAt[0] - 2 * s, tieAt[1] + 2 * s], NAVY4, 9 * s, 8 * s);
-    armTo(scr, [Math.round(W * 0.62), H + 30], [Math.round(W * 0.45), H - 10], [tieAt[0] + 14 * s, tieAt[1] + 2 * s], NAVY4, 9 * s, 8 * s);
-    grip(scr, tieAt[0] - 6 * s, tieAt[1] - 4 * s, 9 * s, -1, HAND); grip(scr, tieAt[0] + 8 * s, tieAt[1] - 4 * s, 9 * s, 1, HAND);
     drawChatBalloon(scr, tieAt[0] + 24 * s, tieAt[1] - 44 * s, 4, {scale: s * 1.3, string: [tieAt[0] + 4 * s, tieAt[1] - 4 * s]});
+    // both hands at the podium's corner, pinching the string into its knot
+    rHand(scr, POSES.pinch([0.45, -0.7, -0.5], [0.2, -0.5, 0.85], 'L'), [tieAt[0] + 1 * s, tieAt[1] - 2 * s], 'index', 1.15 * s, [26 * s, H + 14]);
+    rHand(scr, POSES.pinch([-0.45, -0.7, -0.5], [-0.2, -0.5, 0.85], 'R'), [tieAt[0] + 7 * s, tieAt[1] - 2 * s], 'index', 1.15 * s, [Math.round(W * 0.55), H + 14]);
   } else if (size) {
     // the hands gone; the string tied at the corner goes taut over the far edge, as if someone beyond took hold of it;
     // the balloon pulled down a little over the far side
@@ -163,7 +160,8 @@ export const rallyPostPainter = (st: {scan?: number; verdict?: boolean; egg?: bo
       ellipse(fx, fy, hr, hr + 1, scr.ink(SK[q % SK.length]));
       for (let k = -hr; k <= hr; k++) scr.set(fx + k, fy - hr - 1 + (Math.abs(k) > hr - 1 ? 1 : 0), HR[(q >> 3) % HR.length]);
       if (r >= 2) { scr.set(fx - Math.round(hr / 2), fy, PAL.N0); scr.set(fx + Math.round(hr / 2), fy, PAL.N0); }
-      if (r >= 2 && q % 9 === 0) { fill(scr, fx + hr + 1, fy - hr * 4, 2, hr * 4, SK[q % SK.length]); fill(scr, fx - 2, fy - hr * 4 - 8, hr * 3 + 4, 8, PAL.C5); }
+      // (a sign only where it fits inside the photo)
+      if (r >= 2 && q % 9 === 0 && fx - 2 >= ph.x && fx + hr * 2 + 2 < ph.x + ph.w) { fill(scr, fx + hr + 1, fy - hr * 4, 2, hr * 4, SK[q % SK.length]); fill(scr, fx - 2, fy - hr * 4 - 8, hr * 3 + 4, 8, PAL.C5); }
       if (r >= 1 && r < 4) faces.push([fx, fy, hr]);
     }
   }
@@ -190,7 +188,7 @@ export const refiledLanding = (b: Buf, f: number, st: {land?: number} = {}) => {
   const dy = [-120, -40, -4, 0][clamp(st.land ?? 3, 0, 3)];
   fill(b, 120, 80 + dy, 240, 110, PAL.P2); fill(b, 120, 80 + dy, 240, 2, PAL.W9); fill(b, 124, 190 + dy, 240, 6, PAL.P0);
   bpt(b, 'NOLE v. MANALT ET AL.', 134, 96 + dy, PAL.N1); pt(b, 'FEDERAL COURT', 136, 120 + dy, PAL.N2);
-  fill(b, 290, 130 + dy, 56, 40, PAL.W7); fill(b, 290, 130 + dy, 56, 2, PAL.W8); pt(b, '(FOR NOW)', 292, 146 + dy, PAL.N2); line(290, 168 + dy, 346, 132 + dy, b.ink(PAL.R2)); line(291, 168 + dy, 347, 132 + dy, b.ink(PAL.R2));
+  { const nw = pw('(FOR NOW)') + 12; fill(b, 318 - (nw >> 1), 130 + dy, nw, 40, PAL.W7); fill(b, 318 - (nw >> 1), 130 + dy, nw, 2, PAL.W8); pt(b, '(FOR NOW)', 324 - (nw >> 1), 146 + dy, PAL.N2); line(318 - (nw >> 1), 168 + dy, 318 + (nw >> 1), 132 + dy, b.ink(PAL.R2)); line(319 - (nw >> 1), 168 + dy, 319 + (nw >> 1), 132 + dy, b.ink(PAL.R2)); }
 };
 
 export const ART: ArtAsset[] = [

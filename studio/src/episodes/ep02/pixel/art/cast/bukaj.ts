@@ -10,7 +10,7 @@ import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
 import {SKIN, HAIR, SHIRT_WHITE} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustHair, bustArm, bustGlasses, BustState, CivicSpec, RoomFigSpec, Expr, Viseme} from './civic2';
+import {makeBust3, makeRoom, bustArm, BustState, BustSpec3, CivicSpec, RoomFigSpec, Expr, Viseme} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
 import {fill} from '../kit';
 import type {ArtAsset} from '../asset';
@@ -18,12 +18,14 @@ import type {ArtAsset} from '../asset';
 export interface BukajBust extends BustState { arm: 'none' | 'armrest' }
 export const BUKAJ_DEFAULT: BukajBust = {mouth: 'rest', expr: 'smile', arm: 'armrest'};
 const TEAL = [PAL.N0, PAL.C0, PAL.C1, PAL.C2, PAL.C3, PAL.C4];
-const HEAD = {long: 1, soft: true};
-const spec: CivicSpec = {
-  head: HEAD,
+// his own head: soft and round (a broad cranium, full cheeks, a small round chin, a short button nose), round eyes
+// behind thin dark glasses, soft brows, a close crop; the gentlest face in the episode
+const spec: BustSpec3 = {
+  head: {yaw: 16, at: [57, 57], scale: 1.05, cranium: [21, 23, 22], cheekW: 19, cheekY: 9, jawW: 17, jawY: 18, chinY: 31, chinW: 9, chinZ: 11, chinH: 6, cheekbone: 0.2, full: 1.35, brow: 0.8,
+    nose: {tipY: 12, proj: 5, wing: 4.6, tip: 3.4, hook: -0.6}, mouthY: 21, eyeX: 8.5, neck: {r: 10}, hair: {style: 'crop', thick: 2, line: -18},
+    skin: SKIN.medium, hairRamp: HAIR.dark, back: {skin: PAL.S3, hair: PAL.G3}},
+  face: {eye: 'round', eyeW: 8, eyeH: 2, brow: 'soft', browCol: PAL.N0, mouthW: 9, glasses: {col: PAL.N1, glint: PAL.C8}},
   torso: {kind: 'jacket'},
-  browCol: PAL.N0,
-  hair: () => bustHair('crop'),
   extras: (s) => {
     const parts = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['parts']>;
     const adjust = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['adjust']>;
@@ -33,12 +35,12 @@ const spec: CivicSpec = {
       const a = bustArm('arm', [32, 112], [20, 132], [12, 136], {dir: [-1, 0.15], thumb: -1, curl: 0, len: 12, width: 9}, {mat: 'suit', w: 12});
       parts.push(...a.parts); adjust.push(...a.adjust);
     }
-    return {parts, adjust, stamps: bustGlasses(HEAD, PAL.N1)};
+    return {parts, adjust};
   },
   ramps: {skin: SKIN.medium, hair: HAIR.dark, suit: TEAL, shirt: TEAL, collar: SHIRT_WHITE},
   backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.C3},
 };
-const bust = makeBust<BukajBust>(spec);
+const bust = makeBust3<BukajBust>(spec);
 export const bukajBust = (s: Partial<BukajBust> = {}) => bust({...BUKAJ_DEFAULT, ...s});
 
 const BOXC = [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.W4, PAL.W5];
@@ -67,7 +69,13 @@ export const ART: ArtAsset[] = [{
     sheetBust(b, bukajBust(e('focus', 'O')), 186, 52, 'not yet (focus)');
     sheetBust(b, bukajBust(e('neutral', 'rest', 'none')), 282, 52, 'neutral');
     sheetRoom(b, 402, 'carry', (x, y) => drawBukajRoom(b, x, y, {state: 'carry'}));
-    fill(b, 420, 154, 30, 3, PAL.N4); fill(b, 420, 126, 3, 30, PAL.N4);
+    // the humming chair: back, seat under his thighs, the armrest his hand sits on, gas column, star base on casters
+    fill(b, 417, 122, 6, 32, PAL.G3); fill(b, 417, 122, 6, 1, PAL.G5); fill(b, 417, 122, 1, 32, PAL.G2);
+    fill(b, 418, 153, 30, 4, PAL.G3); fill(b, 418, 153, 30, 1, PAL.G5); fill(b, 418, 156, 30, 1, PAL.G2);
+    fill(b, 426, 141, 20, 2, PAL.G4); fill(b, 426, 141, 20, 1, PAL.G5); fill(b, 442, 143, 2, 10, PAL.G2);
+    fill(b, 431, 157, 3, 22, PAL.G4); fill(b, 431, 157, 1, 22, PAL.G5);
+    fill(b, 419, 179, 28, 2, PAL.G3); fill(b, 419, 179, 28, 1, PAL.G4);
+    for (const cx of [419, 432, 445]) fill(b, cx - 1, 181, 3, 4, PAL.N0);
     sheetRoom(b, 432, 'seated', (x, y) => drawBukajRoom(b, x, 186, {state: 'seated', mouth: 'smile'}));
     sheetRoom(b, 468, 'stand', (x, y) => drawBukajRoom(b, x, y, {state: 'stand'}));
   }}],

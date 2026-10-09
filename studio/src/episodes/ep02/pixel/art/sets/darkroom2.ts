@@ -27,8 +27,9 @@ import {tasyaRoom} from '../../../../../shared/pixel/cast/tasya-speak';
 import {radnus, RADNUS_DEFAULT} from '../../../../../shared/pixel/cast/radnus';
 import {blitImg, Img} from '../../../../../shared/pixel/figure';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, grip, HANDSKIN, capsule} from '../kit';
-import {makeBust, plane, bustHair, CivicSpec, BustState} from '../cast/civic2';
+import {makeBust3, plane, BustSpec3, BustState} from '../cast/civic2';
 import {SKIN, SUIT, SHIRT_WHITE, HAIR, putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
+import {holdPhone, skinDown} from '../cast/hands2';
 import type {ArtAsset} from '../asset';
 
 // ------------------------------------------------------------------ the RULEBOOK notification
@@ -54,12 +55,17 @@ export const rulebookNotif = (k: number, swipe = 0): Painter => (scr: Buf) => {
 };
 
 // ------------------------------------------------------------------ SET-09: the news desk lineup (the segment's still)
-const hostSpec: CivicSpec = {
-  head: {long: 1, soft: true}, torso: {kind: 'blazer', noTie: true}, browCol: PAL.B0, lash: true,
-  hair: () => bustHair('bob'),
-  ramps: {skin: SKIN.medium, hair: [PAL.N0, PAL.B0, PAL.B1, PAL.B2, PAL.B3, PAL.B4], suit: SUIT.teal, shirt: SHIRT_WHITE, throat: SKIN.medium},
+// the host's own head (unplated, nobody real): an oval face, a long straight nose, a shoulder-length bob swept back,
+// lashes, a composed broadcaster's mouth
+const hostSpec: BustSpec3 = {
+  head: {yaw: 18, at: [57, 56], scale: 1.03, cranium: [19, 24, 22], cheekW: 15, jawW: 12.5, jawY: 18, chinY: 33, chinW: 5, chinZ: 11, cheekbone: 0.9, full: 0.5, brow: 0.5,
+    nose: {tipY: 13, proj: 6.5, wing: 3.4, bridge: 1.8, tip: 2.5}, mouthY: 22, lips: 1.2, eyeX: 8.5, neck: {r: 7.5}, hair: {style: 'bob', thick: 3, line: -18, side: 1, len: 34},
+    skin: SKIN.medium, hairRamp: [PAL.N0, PAL.B0, PAL.B1, PAL.B2, PAL.B3, PAL.B4], back: {skin: PAL.S3, hair: PAL.B3}},
+  face: {eye: 'lash', eyeW: 9, eyeH: 2, brow: 'arched', browCol: PAL.B0, mouthW: 9, lip: {line: PAL.U2, lower: PAL.U3}},
+  torso: {kind: 'blazerShell'},
+  ramps: {skin: SKIN.medium, suit: SUIT.teal, shirt: SHIRT_WHITE, throat: SKIN.medium},
 };
-const hostBust = makeBust<BustState>(hostSpec);
+const hostBust = makeBust3<BustState>(hostSpec);
 /** a cardboard cutout of a rig: the figure flattened to two tones of its own colours, a cardboard edge, a stand */
 const cutout = (b: Buf, img: Img, x: number, y: number, lanyard: number) => {
   blitImg(b, img, x, y, {map: (c) => stepColor(c, 1)});
@@ -80,7 +86,8 @@ export const newsDesk = (b: Buf, x: number, y: number, w: number, h: number, k: 
   cutout(t, radnus({...RADNUS_DEFAULT, arm: 'fold', fire: null}), 386, 90, PAL.C5);
   fill(t, 250, 172, 220, 4, PAL.F1);
   // the desk and the host (unplated), turning from the lineup to the lens
-  putBustCut(t, hostBust({mouth: 'rest', expr: st.turn ? 'neutral' : 'focus'}), 60, 60, 203, !st.turn);
+  // (sat higher so her shoulders and blazer clear the desk: the art pass's floating head)
+  putBustCut(t, hostBust({mouth: 'rest', expr: st.turn ? 'neutral' : 'focus'}), 60, 32, 203, !st.turn);
   fill(t, 20, 160, 220, 43, PAL.F1); fill(t, 20, 160, 220, 3, PAL.F5); fill(t, 20, 163, 220, 1, PAL.N0); fill(t, 60, 172, 140, 20, PAL.F2); fill(t, 60, 172, 140, 1, PAL.F4); for (let i = 0; i < 140; i += 10) fill(t, 64 + i, 178, 6, 2, PAL.C4);
   // fit the 480 x 203 studio into the clip rect (nearest sampling: a screen's own pixels)
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) b.set(clip.x + i, clip.y + j, t.c[Math.floor((j * 203) / h) * 480 + Math.floor((i * 480) / w)]);
@@ -106,7 +113,10 @@ export const calendarPainter = (st: {drag?: number; invite?: number}): Painter =
   const days = ['MON 13', 'TUE 14', 'WED 15', 'THU 16', 'FRI 17'];
   const cx0 = 8, top = small ? 12 : 24, cw = Math.floor((scr.w - 16) / 5), ch = small ? 26 : 80;
   if (!small) pt(scr, 'MAY 2024', 8, 8, PAL.P1);
-  days.forEach((d, i) => { const x = cx0 + i * cw; fill(scr, x, top, cw - 2, ch, PAL.N2); fill(scr, x, top, cw - 2, 9, PAL.N3); (small ? tiny : pt)(scr, d, x + 2, top + 1, i === 0 ? PAL.C7 : PAL.P1); });
+  // (the day headers a pixel taller with the date set a pixel lower, so the snap highlight along the top never
+  // touches the glyphs: the art review's 'MON 13' overdraw)
+  const hh = small ? 9 : 11;
+  days.forEach((d, i) => { const x = cx0 + i * cw; fill(scr, x, top, cw - 2, ch, PAL.N2); fill(scr, x, top, cw - 2, hh, PAL.N3); (small ? tiny : pt)(scr, d, x + 2, top + (small ? 2 : 3), i === 0 ? PAL.C7 : PAL.P1); });
   const block = (x: number, y: number, w: number, a: string, c: number) => { const ls = pwrap(a, w - 8).slice(0, 3); const bh = small ? 8 : 8 + ls.length * 10; fill(scr, x, y, w, bh, c); fill(scr, x, y, 2, bh, stepColor(c, 2)); if (!small) ls.forEach((l, j) => pt(scr, l, x + 5, y + 4 + j * 10, PAL.P2)); };
   // ELGOOG's keynote, already on Tuesday
   block(cx0 + cw + 2, top + 14, cw - 6, 'ELGOOG · DEVELOPER KEYNOTE', PAL.R1);
@@ -127,7 +137,8 @@ export const calendarPainter = (st: {drag?: number; invite?: number}): Painter =
 
 // ------------------------------------------------------------------ the call tile on his phone
 const deskTop = (b: Buf) => { for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, (x + y * 3) % 41 < 2 ? PAL.D1 : bayer(x, y) < 0.2 ? PAL.D1 : PAL.D0); };
-export const PHONE_ECU = {x: 160, y: 14, w: 160, h: 176};
+// (a phone's own proportions, about 1 : 2, not a square slab)
+export const PHONE_ECU = {x: 194, y: 8, w: 92, h: 186};
 const phoneSlab = (b: Buf, r = PHONE_ECU) => { fill(b, r.x + 4, r.y + 4, r.w, r.h, PAL.N0); fill(b, r.x - 2, r.y - 2, r.w + 4, r.h + 4, PAL.G1); fill(b, r.x - 2, r.y - 2, r.w + 4, 1, PAL.G3); fill(b, r.x, r.y, r.w, r.h, PAL.N0); };
 export const elppaCall = (b: Buf, f: number, st: {state: 'ring' | 'dots' | 'confirmed'}) => {
   deskTop(b);
@@ -158,38 +169,65 @@ export const newsRecapPainter = (k: number, min = 0): Painter => (scr: Buf) => {
   }
 };
 
+// ------------------------------------------------------------------ the OTS, Ep2's (the art review: Ep1's back of the head read as a
+// hatched disc). Ep1's kit draws the room, the monitor and the shoulder; this paints the back of his head over its own:
+// hair in strands that fall from the crown's whorl round the skull, the cowlick, the near ear and the nape in skin, a
+// cyan rim from the screen on the edges toward it
+export const drawMonitorOTS2 = (b: Buf, f: number, paint: Painter, o: Parameters<typeof drawMonitorOTS>[3] = {}) => {
+  drawMonitorOTS(b, f, paint, o);
+  const inHead = (x: number, y: number) => Math.hypot((x - 44) / 40, (y - 96) / 48) < 1;
+  const inHood = (x: number, y: number) => Math.hypot((x - 40) / 56, (y - 150) / 26) < 1 && y > 124;
+  const wx = 50, wy = 66;
+  for (let y = 48; y < 140; y++) for (let x = 4; x < 86; x++) {
+    if (!inHead(x, y) || inHood(x, y)) continue;
+    const rimR = !inHead(x + 1, y), rimL = !inHead(x - 1, y);
+    const a = Math.atan2(y - wy, x - wx), d = Math.hypot(x - wx, y - wy);
+    const strand = Math.sin(a * 9 + d * 0.18) > 0.72;
+    let c = y > 118 ? PAL.B0 : strand ? PAL.B0 : d < 30 && x > 40 ? PAL.B2 : PAL.B1;
+    if (rimR) c = PAL.C4; else if (rimL) c = PAL.N0;
+    b.set(x, y, c);
+  }
+  // the cowlick at the crown, the nape's skin above the hood, the near ear (screen side) lit cyan
+  for (const [x, y] of [[50, 50], [51, 49], [52, 49], [53, 50], [49, 51]] as Array<[number, number]>) b.set(x, y, PAL.B2);
+  for (let y = 120; y < 128; y++) for (let x = 30; x < 60; x++) if (inHead(x, y) && !inHood(x, y)) b.set(x, y, x > 54 ? PAL.X2 : x < 34 ? PAL.X0 : PAL.X1);
+  for (let j = 0; j < 16; j++) for (let i = 0; i < 6; i++) if (Math.hypot((i - 2.5) / 3, (j - 8) / 8) < 1) b.set(80 + i, 94 + j, i > 3 ? PAL.K2 : j < 4 ? PAL.K1 : PAL.X2);
+};
+
 // ------------------------------------------------------------------ the phone face down (sc 20)
 export const phoneFaceDown = (b: Buf, f: number, st: {turn?: 0 | 1 | 2; lit?: boolean; screen?: (b: Buf, r: {x: number; y: number; w: number; h: number}) => void}) => {
   deskTop(b);
   const turn = st.turn ?? 0;
-  const r = {x: 170, y: 40, w: 140, h: 124};
+  const r = {x: 202, y: 22, w: 76, h: 156};
   if (turn === 0) {
     // the back of the phone, lit at its edges by the screen underneath
     if (st.lit) for (let i = -4; i < r.w + 4; i++) for (let j = -4; j < r.h + 4; j++) { const d = Math.min(Math.abs(i < 0 ? i : i - r.w + 1), Math.abs(j < 0 ? j : j - r.h + 1)); if ((i < 0 || i >= r.w || j < 0 || j >= r.h) && bayer(r.x + i, r.y + j) < (4 - d) / 6) b.set(r.x + i, r.y + j, PAL.C3); }
-    fill(b, r.x, r.y, r.w, r.h, PAL.G1); fill(b, r.x, r.y, r.w, 2, PAL.G3); ellipse(r.x + 22, r.y + 22, 10, 10, b.ink(PAL.N0)); ellipse(r.x + 22, r.y + 22, 6, 6, b.ink(PAL.N2));
+    fill(b, r.x, r.y, r.w, r.h, PAL.G1); fill(b, r.x, r.y, r.w, 2, PAL.G3); ellipse(r.x + 16, r.y + 16, 8, 8, b.ink(PAL.N0)); ellipse(r.x + 16, r.y + 16, 5, 5, b.ink(PAL.N2));
     return;
   }
-  if (turn === 1) { fill(b, r.x + 30, r.y + 4, 80, r.h - 8, PAL.G1); fill(b, r.x + 30, r.y + 4, 4, r.h - 8, PAL.C4); }
-  else { phoneSlab(b, r); fill(b, r.x + 4, r.y + 4, r.w - 8, r.h - 8, PAL.N2); st.screen?.(b, {x: r.x + 4, y: r.y + 4, w: r.w - 8, h: r.h - 8}); }
-  // his hand turning it (the thumb on the near edge, the fingers under), from the right
-  capsule(b, 420, 200, 330, r.y + r.h - 10, 12, [PAL.G1, PAL.G2, PAL.G3, PAL.C4]);
-  grip(b, r.x + r.w - 6, r.y + r.h - 30, 14, -1, HANDSKIN[0]);
+  // his hand turning it over: from the right, the fingers under the phone's far edge, the thumb on its near edge; the
+  // wrist into the hoodie's cuff and the sleeve out of frame (Ep1's insert-hands grammar, the monitor's cyan light)
+  // (his skin in the room's own dim warm, a rung down, not the monitor's cyan: the cyan stays on the cuff)
+  const face = turn === 1 ? {x: r.x + 20, y: r.y + 4, w: 36, h: r.h - 8} : r;
+  holdPhone(b, face, {side: 'R', grip: 'wrap', light: 'lobby', skinMap: skinDown(2), widthCm: turn === 1 ? 3.6 : 7.2, thumbAt: 0.2, sleeveTo: [520, 250],
+    cuffRamp: [PAL.N0, PAL.G0, PAL.G0, PAL.G1, PAL.G2, PAL.G2, PAL.C4], sleeveRamp: [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.C4],
+    drawPhone: (bb) => {
+      if (turn === 1) { fill(bb, face.x, face.y, face.w, face.h, PAL.G1); fill(bb, face.x, face.y, 4, face.h, PAL.C4); fill(bb, face.x + face.w - 2, face.y, 2, face.h, PAL.G3); }
+      else { phoneSlab(bb, r); fill(bb, r.x + 4, r.y + 4, r.w - 8, r.h - 8, PAL.N2); st.screen?.(bb, {x: r.x + 4, y: r.y + 4, w: r.w - 8, h: r.h - 8}); }
+    }});
 };
 
 export const ART: ArtAsset[] = [
   {
     id: 'set07-darkroom-ui', manifest: 'SET-07 · the dark room (Ep2\'s monitor and phone items)', kind: 'prop', name: 'The dark room\'s monitor and phone items: RULEBOOK, the calendar, the ELPPA call, the news recap, the phone face down',
-    file: 'sets/darkroom2.ts', exports: 'rulebookNotif, calendarPainter, elppaCall, newsRecapPainter, phoneFaceDown (painters for kits/mas-monitor drawMonitorPOV / drawMonitorOTS)', scenes: '8, 12, 20',
+    file: 'sets/darkroom2.ts', exports: 'rulebookNotif, calendarPainter, elppaCall, newsRecapPainter, phoneFaceDown, drawMonitorOTS2 (painters for kits/mas-monitor drawMonitorPOV, and Ep2\'s OTS)', scenes: '8, 12, 20',
     note: 'monitor items are painters (POV / OTS / 2S); the SNOOZE button stays unpressed; the call tile has no face and no name; OMNI over Elgoog\'s keynote, no blimp',
     stills: [
       {label: '[POV] 8.01: the RULEBOOK notification slides down: the 400-page book, its SNOOZE button bolted to the spine (unpressed)', draw: (b) => drawMonitorPOV(b, 0, rulebookNotif(4))},
       {label: '[POV] 8.04 / 8.07: the calendar: his block snapped onto MON 13, Elgoog already on TUE 14, the June invite dropping in', draw: (b) => drawMonitorPOV(b, 0, calendarPainter({drag: 1, invite: 2}))},
       {label: '[ECU] 8.06: his phone face up, the call tile ELPPA (no face, no name), then CONFIRMED', draw: (b) => elppaCall(b, 0, {state: 'confirmed'})},
-      {label: '[OTS] 12.05: the afternoon recap on his monitor: ELGOOG\'S KEYNOTE under the OMNI stamp (no blimp)', draw: (b) => drawMonitorOTS(b, 0, newsRecapPainter(40, 0))},
-      {label: '[ECU] 20.10: the phone face down on the desk, lit at its edges; then turned over by his hand', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); phoneFaceDown(t1, 0, {turn: 0, lit: true}); const t2 = new Buf(480, 270, PAL.N0); phoneFaceDown(t2, 0, {turn: 2});
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 240; x++) { b.set(x, y, t1.c[y * 480 + 120 + x]); b.set(240 + x, y, t2.c[y * 480 + 120 + x]); }
-      }},
+      {label: '[OTS] 12.05: the afternoon recap on his monitor: ELGOOG\'S KEYNOTE under the OMNI stamp (no blimp)', draw: (b) => drawMonitorOTS2(b, 0, newsRecapPainter(40, 0))},
+      {label: '[ECU] 20.10: the phone face down on the desk, lit at its edges', draw: (b) => phoneFaceDown(b, 0, {turn: 0, lit: true})},
+      {label: '[ECU] 20.10: then turned over by his hand (the fingers under its far edge, the thumb on the near one)', draw: (b) => phoneFaceDown(b, 0, {turn: 2})},
     ],
   },
   {

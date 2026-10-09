@@ -33,11 +33,18 @@ const hedge = (b: Buf, x0: number, x1: number, top = HEDGE_TOP, bot = HEDGE_BOT)
   fill(b, x0, top, x1 - x0, 1, PAL.L3);
 };
 /** the gate: wrought iron bars in a frame; open = its leaves swung back (narrower) */
+/** the ONE gate design (the front, 19.16, and the reverse, 19.19, share it): two leaves of wrought-iron bars with a top,
+ *  a middle and a bottom rail, in a frame; the lock hangs on a hasp at the post on its latch side. Open = the leaves
+ *  swung back against the posts (foreshortened), the garden showing through */
 const gate = (b: Buf, open: number) => {
-  const w = GATE.x1 - GATE.x0, leaf = [w / 2, w / 4, 4][clamp(open, 0, 2)];
-  fill(b, GATE.x0, 50, w, 100, open ? PAL.L1 : PAL.N1);
-  if (open) vramp(b, GATE.x0 + 2, 54, w - 4, 96, [PAL.C7, PAL.L3, PAL.L2]);
-  for (const [sx, dir] of [[GATE.x0, 1], [GATE.x1, -1]] as Array<[number, number]>) for (let i = 0; i < leaf; i += 4) fill(b, sx + dir * i - (dir < 0 ? 1 : 0), 52, 2, 98, PAL.N0);
+  const w = GATE.x1 - GATE.x0, leaf = [w / 2, w / 4, 6][clamp(open, 0, 2)];
+  fill(b, GATE.x0, 50, w, 100, PAL.L1);
+  vramp(b, GATE.x0 + 2, 54, w - 4, 96, [PAL.C7, PAL.L3, PAL.L2]);
+  for (const [sx, dir] of [[GATE.x0, 1], [GATE.x1, -1]] as Array<[number, number]>) {
+    const pitch = Math.max(2, Math.round((leaf / (w / 2)) * 10));
+    for (let i = 0; i < leaf; i += pitch) { fill(b, sx + dir * i - (dir < 0 ? 2 : 0), 52, 2, 98, PAL.N0); b.set(sx + dir * i - (dir < 0 ? 2 : 0), 52, PAL.G3); }
+    for (const ry of [54, 98, 144]) fill(b, dir > 0 ? sx : sx - leaf, ry, Math.round(leaf), 3, PAL.N0);
+  }
   fill(b, GATE.x0 - 4, 44, 4, 106, PAL.N0); fill(b, GATE.x1, 44, 4, 106, PAL.N0); fill(b, GATE.x0 - 4, 44, w + 8, 4, PAL.N0);
 };
 /** the lock: a brass padlock as tall as MIT KOOC (about 78 px with its shackle), on a hasp; x = its centre, y = the
@@ -132,8 +139,10 @@ export const gateReverse = (b: Buf, f: number, st: {gate?: 0 | 1 | 2; lock?: 0 |
   bars(200, 272);
   if (shut < 2) bars(leafX, leafX + 72);
   drawChatSmall(b, 70, 160, {band: true});
-  // the lock, in the foreground on the latch where the leaves meet
-  drawGiantLock(b, 272, 56, st.lock ?? 0);
+  // the lock on its hasp at the gate's latch-side post (the same hasp as the front view's, seen from inside: on the
+  // left here), in the foreground, turning once
+  fill(b, 160, 112, 46, 6, PAL.G3); fill(b, 160, 112, 46, 1, PAL.G5);
+  drawGiantLock(b, 176, 64, st.lock ?? 0);
 };
 /** his phone's picture opening outward (0 = a phone in his hand-sized frame .. 3 = full frame), or folding back */
 export const phoneUnfold = (b: Buf, scene: (t: Buf) => void, step: 0 | 1 | 2 | 3) => {

@@ -24,6 +24,8 @@ import {alyiWarm} from '../cast/alyi2';
 import {ekielBust} from '../cast/ekiel';
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {drawMasStand2} from '../cast/mas2';
+import {placeHand, drawHand, sleeve, POSES} from '../cast/hands2';
+import {drawMasSeated, MAS_SEATED_DEFAULT} from '../../../../../shared/pixel/cast/mas-seated';
 import type {ArtAsset} from '../asset';
 
 // ------------------------------------------------------------------ the office
@@ -62,37 +64,48 @@ export const alyiOffice = (b: Buf, f: number, st: {when?: '2024' | '2023'; door?
   if (open === 2) fill(b, Dr.x0 + 6, 100, 3, 6, PAL.G5);
 };
 export const screen2023 = (b: Buf, f: number, st: {alyiMouth?: 'rest' | 'O' | 'E'; ekielMouth?: 'rest' | 'E' | 'A'} = {}) => {
-  // night, the screen's cyan on both faces; the screen itself close at frame right, cropping Alyi at its edge
+  // night. The screen is close at frame LEFT, in their eyeline: both of them face it (camera-left), its cyan the key on
+  // the sides of their faces turned to it, their own skin in the shadow (P8: two people at a screen). Alyi is nearest
+  // it, its bezel cropping his near shoulder (his frame rule); Ekiel behind his shoulder, squinting at the post.
   vramp(b, 0, 0, 480, RH, [PAL.N0, PAL.N1, PAL.N1]);
-  putBustCut(b, ekielBust({mouth: st.ekielMouth ?? 'rest', expr: 'squint', lanyard: 'none', light: 'screen'}), 40, 54, RH);
-  putBustCut(b, alyiWarm({mood: 'focus', mouth: st.alyiMouth ?? 'rest', arm: 'none', light: 'screen'}), 196, 56, RH);
-  // the screen (close, right), its post in its own UI, its bezel cropping him
-  fill(b, 290, 10, 190, 193, PAL.N0); fill(b, 296, 16, 184, 187, PAL.N2);
-  fill(b, 302, 24, 172, 18, PAL.C1); pt(b, 'INTRODUCING', 306, 26, PAL.P2); pt(b, 'SUPERALIGNMENT', 306, 34, PAL.C8);
-  pt(b, 'ALYI, EKIEL', 306, 48, PAL.N7);
+  // the screen's light falling across the room from the left
+  for (let y = 0; y < RH; y++) for (let x = 150; x < 480; x++) if (bayer(x, y) < Math.max(0, 0.5 - (x - 150) / 520)) b.set(x, y, stepColor(b.get(x, y), 1));
+  putBustCut(b, ekielBust({mouth: st.ekielMouth ?? 'rest', expr: 'squint', lanyard: 'none', light: 'screen'}), 300, 50, RH);
+  putBustCut(b, alyiWarm({mood: 'focus', mouth: st.alyiMouth ?? 'rest', arm: 'none', light: 'screen'}), 166, 58, RH);
+  // the screen (close, left), its post in its own UI, the bezel's right edge over his near shoulder
+  fill(b, 0, 8, 186, 195, PAL.N0); fill(b, 4, 14, 176, 189, PAL.N2); fill(b, 183, 8, 3, 195, PAL.N3);
+  fill(b, 10, 22, 164, 22, PAL.C1); pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8);
+  pt(b, 'ALYI, EKIEL', 14, 50, PAL.N7);
   const s = 'Currently, we don\'t have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.';
-  pwrap(s, 164).forEach((l, i) => pt(b, l, 306, 62 + i * 10, PAL.P1));
-  fill(b, 306, 176, 54, 16, PAL.C3); pt(b, 'Publish', 311, 180, PAL.P2);
-  // the screen's light on the room
-  for (let y = 0; y < RH; y++) for (let x = 180; x < 290; x++) if (bayer(x, y) < (x - 180) / 220) b.set(x, y, stepColor(b.get(x, y), 1));
+  pwrap(s, 156).forEach((l, i) => pt(b, l, 14, 66 + i * 11, PAL.P1));
+  fill(b, 14, 176, pw('Publish') + 12, 16, PAL.C3); pt(b, 'Publish', 20, 180, PAL.P2);
 };
+/** [ECU] 15.12 / 15.14: the bare Publish button (no hover, no cursor) and his hand from the right, the index out and
+ *  down, its tip hovering a few pixels above the button (15.12) or on it (15.14); a real hand (Ep1's insert-hands
+ *  grammar: knuckles, nails, the thumb tucked, the wrist into the sweater's cuff and sleeve) */
 export const publishECU = (b: Buf, f: number, st: {press?: boolean; who?: 'alyi' | 'mas'} = {}) => {
-  // the bare button (no hover, no cursor) and a finger above it / on it, from the right, the sleeve his
   vramp(b, 0, 0, 480, RH, [PAL.N1, PAL.N2, PAL.N2]);
-  fill(b, 120, 80, 220, 64, st.press ? PAL.C2 : PAL.C3); fill(b, 120, 80, 220, 2, st.press ? PAL.C3 : PAL.C5); fill(b, 120, 142, 220, 2, PAL.C1);
-  bpt(b, 'Publish', 230 - Math.round(bpw('Publish') / 2), 104, PAL.P2);
-  const sleeve = st.who === 'mas' ? [PAL.G1, PAL.G2, PAL.G3, PAL.C4] : [PAL.X0, PAL.X1, PAL.X2, PAL.W5];
-  const tipY = st.press ? 108 : 62;
-  fill(b, 300, tipY, 14, 50, HANDSKIN[0][2]); fill(b, 300, tipY, 14, 2, HANDSKIN[0][3]); fill(b, 312, tipY, 2, 50, HANDSKIN[0][1]);
-  fill(b, 296, tipY + 40, 60, 40, HANDSKIN[0][2]); fill(b, 296, tipY + 40, 60, 2, HANDSKIN[0][3]);
-  for (let k = 0; k < 3; k++) fill(b, 318 + k * 12, tipY + 34, 10, 12, HANDSKIN[0][2]);
-  fill(b, 340, tipY + 70, 140, 60, sleeve[1]); fill(b, 340, tipY + 70, 140, 3, sleeve[2]);
+  // the screen's own light: the page around the button, its grey text rows
+  fill(b, 40, 20, 400, 160, PAL.N3); for (let r = 0; r < 4; r++) fill(b, 60, 32 + r * 10, 300 - r * 40, 3, PAL.N5);
+  fill(b, 120, 96, 220, 60, st.press ? PAL.C2 : PAL.C3); fill(b, 120, 96, 220, 2, st.press ? PAL.C3 : PAL.C5); fill(b, 120, 154, 220, 2, PAL.C1);
+  bpt(b, 'Publish', 230 - Math.round(bpw('Publish') / 2), 118, PAL.P2);
+  const mas = st.who === 'mas';
+  const SL = mas ? [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.C4] : [PAL.N0, PAL.X0, PAL.X0, PAL.X1, PAL.X2, PAL.X2, PAL.W5];
+  const tip: [number, number] = st.press ? [214, 112] : [214, 84];
+  const h = placeHand(POSES.point([-0.78, 0.5, -0.38], [0.25, -0.6, 0.76]), {s: 6.4, at: tip, light: mas ? 'dark' : 'lobby', cuffRamp: SL, key: [-0.4, -0.6, 0.7]});
+  // the sleeve from the cuff out of frame right
+  const cx = h.cuffEnd[0], cy = h.cuffEnd[1], dx = cx - h.wrist[0], dy = cy - h.wrist[1], L = Math.hypot(dx, dy) || 1;
+  sleeve(b, [cx, cy], [cx + (dx / L) * 220, cy + (dy / L) * 220], 19, 22, [SL[0], SL[1], SL[3], SL[4], SL[6]]);
+  // its shadow on the screen (offset down-left), then the hand
+  if (!st.press) for (let j = 0; j < h.hand.img.h; j++) for (let i = 0; i < h.hand.img.w; i++) if (h.hand.img.c[j * h.hand.img.w + i] >= 0) { const X = h.x + i - 4, Y = h.y + j + 9; if (Y > 96 && Y < 154 && X > 120 && X < 340 && bayer(X, Y) < 0.5) b.set(X, Y, stepColor(b.get(X, Y), -1)); }
+  drawHand(b, h.hand, h.x, h.y);
 };
 export const stairwell = (b: Buf, f: number, st: {push?: boolean} = {}, cast?: (b: Buf) => void) => {
   // a plain stairwell: concrete flights zig-zagging down, a handrail, the exit light's green, evening through a slit window
   vramp(b, 0, 0, 480, RH, [PAL.G1, PAL.G2, PAL.G2]);
   for (let k = 0; k < 14; k++) { const x = 60 + k * 18, y = 40 + k * 10; fill(b, x, y, 18, 10, PAL.G3); fill(b, x, y, 18, 1, PAL.G5); fill(b, x, y + 10, 18, RH, PAL.G2); }
-  for (let k = 0; k < 14; k++) { const x = 60 + k * 18; line(x, 26 + k * 10, x + 18, 36 + k * 10, b.ink(PAL.G6)); }
+  // the far wall's handrail at a person's waist (about 38 px over the treads), its posts down to every other step
+  for (let k = 0; k < 14; k++) { const x = 60 + k * 18; line(x, 2 + k * 10, x + 18, 12 + k * 10, b.ink(PAL.G6)); if (k % 2 === 0) line(x + 9, 7 + k * 10, x + 9, 40 + k * 10, b.ink(PAL.G4)); }
   fill(b, 30, 20, 8, 70, PAL.U3); fill(b, 420, 20, 24, 8, PAL.L2); fill(b, 422, 22, 20, 4, PAL.L3);
   cast?.(b);
   if (st.push) {
@@ -114,10 +127,12 @@ export const tpoolPhone = (b: Buf, f: number, st: {screen: 'icon' | 'splash' | '
   if (st.screen === 'icon') {
     // the home screen: every modern icon, and a tiny old one at the end: TPOOL (orange, a pin)
     fill(b, S.x, S.y, S.w, S.h, PAL.N2);
-    for (let i = 0; i < 20; i++) { const ix = S.x + 10 + (i % 4) * 42, iy = S.y + 10 + Math.floor(i / 4) * 36; fill(b, ix, iy, 26, 26, [PAL.C4, PAL.R2, PAL.L2, PAL.W5, PAL.U4, PAL.F4, PAL.G5][i % 7]); fill(b, ix, iy, 26, 1, PAL.P1); }
-    const tx = S.x + 10 + 2 * 42, ty = S.y + 10 + 5 * 36 - 30;
-    fill(b, tx + 6, ty, 14, 14, PAL.W5); fill(b, tx + 6, ty, 14, 1, PAL.W7); fill(b, tx + 11, ty + 3, 4, 5, PAL.R2); b.set(tx + 13, ty + 9, PAL.R2);
-    tiny(b, 'TPOOL', tx + 3, ty + 16, PAL.P1); tiny(b, '2012', tx + 6, ty + 22, PAL.N7);
+    // (eighteen modern icons, then the tiny old one in the next empty slot, its name and year under it, inside the
+    // screen: it no longer sits on top of another app's tile)
+    for (let i = 0; i < 18; i++) { const ix = S.x + 10 + (i % 4) * 42, iy = S.y + 8 + Math.floor(i / 4) * 34; fill(b, ix, iy, 26, 26, [PAL.C4, PAL.R2, PAL.L2, PAL.W5, PAL.U4, PAL.F4, PAL.G5][i % 7]); fill(b, ix, iy, 26, 1, PAL.P1); }
+    const tx = S.x + 10 + 2 * 42, ty = S.y + 8 + 4 * 34;
+    fill(b, tx + 6, ty + 2, 14, 14, PAL.W5); fill(b, tx + 6, ty + 2, 14, 1, PAL.W7); fill(b, tx + 11, ty + 5, 4, 5, PAL.R2); b.set(tx + 13, ty + 11, PAL.R2);
+    tiny(b, 'TPOOL', tx + 13 - (tinyWidth('TPOOL') >> 1), ty + 19, PAL.P1); tiny(b, '2012', tx + 13 - (tinyWidth('2012') >> 1), ty + 26, PAL.N7);
   } else if (st.screen === 'splash' || st.screen === 'welcome' || st.screen === 'typed') {
     // the app's own 2008 look: orange header, a blue link colour, an hourglass spinning in 2008's grey
     fill(b, S.x, S.y, S.w, S.h, PAL.P2); fill(b, S.x, S.y, S.w, 22, PAL.W5); bpt(b, 'TPOOL', S.x + 8, S.y + 4, PAL.P2);
@@ -175,10 +190,10 @@ export const ART: ArtAsset[] = [
     file: 'sets/alyioffice.ts', exports: 'alyiOffice, OFFICE, screen2023, publishECU, stairwell', scenes: '15 (and F2.2)',
     note: 'the desk with no chair (wheel marks where it stood); 2023: his screen crops him, Ekiel squints at the post; the bare Publish (no cursor); the stairwell push',
     stills: [
-      {label: '[W] 15.01: the empty office in the evening: a desk with no chair, the door open; Mas sits on the desk\'s edge (cast)', draw: (b) => { alyiOffice(b, 0, {when: '2024'}); drawMasStand2(b, 180, 152, {arm: 'phone', bow: true}); }},
+      {label: '[W] 15.01: the empty office in the evening: a desk with no chair, the door open; Mas sits on the desk\'s edge (cast)', draw: (b) => { alyiOffice(b, 0, {when: '2024'}); drawMasSeated(b, 196, OFFICE.desk.top, {...MAS_SEATED_DEFAULT, arm: 'phone', head: 'down', light: 'room'}); }},
       {label: '[2S] F2.2 15.10-15.11: 2023, night: Ekiel squinting, Alyi at his screen ("Someone should."), the screen\'s edge cropping him, the post and its Publish', draw: (b) => screen2023(b, 0, {alyiMouth: 'O'})},
       {label: '[ECU] 15.12 his finger above the bare Publish (no hover)', draw: (b) => publishECU(b, 0, {press: false, who: 'alyi'})},
-      {label: '[W] 15.19 the stairwell, the request for comment push', draw: (b) => stairwell(b, 0, {push: true}, (bb) => drawMasStand2(bb, 170, 120, {arm: 'phone', bow: true, legs: 'w1'}))},
+      {label: '[W] 15.19 the stairwell, the request for comment push', draw: (b) => stairwell(b, 0, {push: true}, (bb) => drawMasStand2(bb, 177, 100, {arm: 'phone', bow: true, legs: 'stand'}))},
     ],
   },
   {
@@ -186,14 +201,12 @@ export const ART: ArtAsset[] = [
     file: 'sets/alyioffice.ts', exports: 'tpoolPhone, threadPhone', scenes: '15, 20, 22',
     note: 'EARLY-WEB colours inside a modern bezel; WHERE U AT?, welcome back, mas, the 2008 hourglass; the one warm pin; the link card knocks it loose',
     stills: [
-      {label: '[ECU] 15.02 the thread collapsed to its dates · 15.04 the tiny old icon · the splash WHERE U AT?', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); threadPhone(t1, 0); const t2 = new Buf(480, 270, PAL.N0); tpoolPhone(t2, 0, {screen: 'icon'}); const t3 = new Buf(480, 270, PAL.N0); tpoolPhone(t3, 0, {screen: 'splash'});
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 160; x++) { b.set(x, y, t1.c[y * 480 + 160 + x]); b.set(160 + x, y, t2.c[y * 480 + 160 + x]); b.set(320 + x, y, t3.c[y * 480 + 160 + x]); }
-      }},
-      {label: 'welcome back, mas (the 2008 hourglass) · typed: where u at? · the map: ALYI CHECKED IN · DEC 2022 · "feel the agi", its ripple warming', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); tpoolPhone(t1, 0, {screen: 'welcome'}); const t2 = new Buf(480, 270, PAL.N0); tpoolPhone(t2, 0, {screen: 'typed', k: 11}); const t3 = new Buf(480, 270, PAL.N0); tpoolPhone(t3, 20, {screen: 'map', k: 20});
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 160; x++) { b.set(x, y, t1.c[y * 480 + 160 + x]); b.set(160 + x, y, t2.c[y * 480 + 160 + x]); b.set(320 + x, y, t3.c[y * 480 + 160 + x]); }
-      }},
+      {label: '[ECU] 15.02 the thread collapsed to its dates and first lines', draw: (b) => threadPhone(b, 0)},
+      {label: '[ECU] 15.04 the tiny old icon at the end of his home screen: TPOOL · 2012', draw: (b) => tpoolPhone(b, 0, {screen: 'icon'})},
+      {label: '[ECU] the splash: WHERE U AT? · LAST UPDATED 2012', draw: (b) => tpoolPhone(b, 0, {screen: 'splash'})},
+      {label: 'welcome back, mas (the 2008 hourglass)', draw: (b) => tpoolPhone(b, 0, {screen: 'welcome'})},
+      {label: 'typed: where u at?', draw: (b) => tpoolPhone(b, 0, {screen: 'typed', k: 11})},
+      {label: 'the map: every pin LAST SEEN: 2012 but one, ALYI CHECKED IN · DEC 2022 · "feel the agi", its ripple warming', draw: (b) => tpoolPhone(b, 20, {screen: 'map', k: 20})},
     ],
   },
 ];

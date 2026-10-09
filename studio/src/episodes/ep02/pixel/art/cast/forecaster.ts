@@ -11,7 +11,7 @@ import {Buf, rect, line} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
 import {SKIN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustHair, bustArm, BustState, CivicSpec, RoomFigSpec, Expr, Viseme, RoomLegs, seatedStaff} from './civic2';
+import {makeBust3, makeRoom, plane, bustArm, BustState, BustSpec3, CivicSpec, RoomFigSpec, Expr, Viseme, RoomLegs, seatedStaff} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
 import {fill, sp} from '../kit';
 import type {ArtAsset} from '../asset';
@@ -19,11 +19,16 @@ import type {ArtAsset} from '../asset';
 export interface ForecasterBust extends BustState { arm: 'none' | 'clipboard' | 'watch' }
 export const FORECASTER_DEFAULT: ForecasterBust = {mouth: 'rest', expr: 'neutral', arm: 'clipboard'};
 const GREEN = [PAL.N0, PAL.L0, PAL.L0, PAL.L1, PAL.L2, PAL.L3];
-const spec: CivicSpec = {
-  head: {long: 0, soft: true},
+// his own head: young (a rounder cranium, a short face, a soft jaw, a small straight nose), big round attentive eyes
+// under straight brows, a thin face that still has its youth in the cheeks, tousled hair falling forward
+const spec: BustSpec3 = {
+  head: {yaw: 20, at: [57, 58], scale: 1.04, cranium: [20, 24, 22], cheekW: 15.5, jawW: 12.5, jawY: 17, chinY: 31, chinW: 6, chinZ: 11, cheekbone: 0.4, full: 0.8, brow: 1,
+    nose: {tipY: 12, proj: 6, wing: 3.5, tip: 2.6}, mouthY: 21, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'tousled', thick: 3.6, line: -14, side: 1, volume: 1.1},
+    skin: SKIN.light, hairRamp: HAIR.dark, back: {skin: PAL.S3, hair: PAL.G3}},
+  face: {eye: 'round', eyeW: 9, eyeH: 2, brow: 'straight', browCol: PAL.B0, mouthW: 9},
   torso: {kind: 'jacket'},
-  browCol: PAL.B0,
-  hair: () => bustHair('tousled'),
+  // his focus is precise, not stern: the eyes stay open, one brow lifts
+  expr: {focus: {eye: 'open', brow: 'one', mouth: 'flat'}},
   extras: (s) => {
     const parts = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['parts']>;
     const adjust = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['adjust']>;
@@ -44,7 +49,7 @@ const spec: CivicSpec = {
   ramps: {skin: SKIN.light, hair: HAIR.dark, suit: GREEN, shirt: GREEN, cord: [PAL.N1, PAL.G4, PAL.G5, PAL.P1, PAL.P2, PAL.P2], metal: [PAL.N0, PAL.G3, PAL.G4, PAL.G6, PAL.P2, PAL.W9]},
   backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.L2},
 };
-const bust = makeBust<ForecasterBust>(spec);
+const bust = makeBust3<ForecasterBust>(spec);
 /** the clipboard (bust scale, 30 x 38): brown board, steel clip, a sheet with a grid of dates, an hour crossed out */
 const clipboardB = (b: Buf, x: number, y: number, crossed = 0) => {
   fill(b, x, y, 30, 38, PAL.D3); fill(b, x, y, 30, 1, PAL.D4); fill(b, x + 29, y, 1, 38, PAL.D1);

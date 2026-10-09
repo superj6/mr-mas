@@ -10,21 +10,27 @@
 import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
-import {SKIN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustHair, bustArm, bustLanyard, BustState, CivicSpec, RoomFigSpec, Expr, Viseme} from './civic2';
+import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
+import {makeBust3, bustAnchors, makeRoom, plane, bustArm, bustLanyard, BustState, BustSpec3, CivicSpec, RoomFigSpec, Expr, Viseme} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
-import {fill, tiny} from '../kit';
+import {fill, tiny, tinyWidth} from '../kit';
 import type {ArtAsset} from '../asset';
 
 export interface EngineerBust extends BustState { arm: 'none' | 'phone' | 'unclip'; headset?: 'on' | 'off' }
 export const ENGINEER_DEFAULT: EngineerBust = {mouth: 'rest', expr: 'smile', arm: 'none', headset: 'on'};
 const TEAL = [PAL.N0, PAL.C0, PAL.C1, PAL.C2, PAL.C3, PAL.C5];
 const TEE = [PAL.N0, PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4];
-const spec: CivicSpec = {
-  head: {long: 0, soft: true},
-  torso: {kind: 'jacket'},
-  browCol: PAL.N0,
-  hair: () => bustHair('curly'),
+// his own head: young and open (a rounded cranium, full cheeks, a broad nose with wide wings, full lips, a soft brow),
+// tight curls cut close; the headset's band over the crown to its cup on his ear, the boom along his cheek to his mouth
+const HEAD3: BustSpec3['head'] = {yaw: 22, at: [57, 57], scale: 1.04, cranium: [20, 24, 23], cheekW: 16, jawW: 14.5, jawY: 18, chinY: 32, chinW: 7, chinZ: 12, cheekbone: 0.7, full: 0.8, brow: 1.6,
+  nose: {tipY: 13, proj: 6, wing: 5.4, tip: 3.6}, mouthY: 22, lips: 1.4, eyeX: 8.5, neck: {r: 9.5, throat: true}, hair: {style: 'curly', thick: 2.6, line: -18},
+  skin: SKIN.deep, hairRamp: [PAL.N0, PAL.N0, PAL.B0, PAL.B1, PAL.B2, PAL.B3], back: {skin: PAL.S2, hair: PAL.B2}};
+const spec0: BustSpec3 = {head: HEAD3, face: {eye: 'almond', eyeW: 9, eyeH: 2, brow: 'soft', browCol: PAL.N0, mouthW: 10, lip: {line: PAL.S0, lower: PAL.S2}}, torso: {kind: 'jacket'}, ramps: {}};
+const A = bustAnchors(spec0);
+const spec: BustSpec3 = {
+  ...spec0,
+  // the nervous laugh: a laugh with the worried brows; the presenter smile shows teeth
+  expr: {laugh: {eye: 'happy', brow: 'worry', mouth: 'laugh', pose: {jaw: 2, cheekUp: 1.4}}, smile: {eye: 'crinkle', brow: 'level', mouth: 'grin', pose: {cheekUp: 1}}},
   extras: (s) => {
     const parts = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['parts']>;
     const adjust = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['adjust']>;
@@ -32,17 +38,22 @@ const spec: CivicSpec = {
     adjust.push(plane('suit', 4, P.line(62, 108, 62, 150)));
     const ly = bustLanyard('cord', 'badge', 104);
     parts.push(...ly.parts); adjust.push(...ly.adjust);
-    // the headset: a band over the crown to the ear cup, and the boom along the cheek to the mouth (or swung up)
-    parts.push({group: 'band', mat: 'kit', tone: 2, prims: [P.poly(70, 12, 76, 13, 86, 30, 88, 48, 85, 48, 83, 31, 73, 16)]});
-    parts.push({group: 'cup', mat: 'kit', tone: 2, prims: [P.ell(85, 55, 5, 7)]});
-    adjust.push(plane('kit', 4, P.ell(84, 53, 2, 3)));
-    if ((s.headset ?? 'on') === 'on') parts.push({group: 'boom', mat: 'kit', tone: 1, prims: [P.poly(80, 60, 82, 62, 54, 76, 52, 74)]}, {group: 'foam', mat: 'kit', tone: 3, prims: [P.ell(50, 76, 3, 2.5)]});
-    else parts.push({group: 'boom', mat: 'kit', tone: 1, prims: [P.poly(80, 50, 82, 52, 70, 30, 68, 31)]}, {group: 'foam', mat: 'kit', tone: 3, prims: [P.ell(68, 29, 3, 2.5)]});
+    // the headset: a band over the crown to the cup on the near ear, and the boom from the cup to the mouth's corner
+    const [ex, ey] = A.ear, [mx, my] = A.mouth, [cx, cy] = A.crown;
+    // the band hugs the hair's curve from the crown down to the cup (a chain of short segments, 2 px thick)
+    const arc: number[] = [];
+    for (let k = 0; k <= 8; k++) { const t = k / 8, x = cx + (ex - cx) * t + Math.sin(t * Math.PI) * 4, y = cy + (ey - 6 - cy) * t - Math.sin(t * Math.PI) * 1; arc.push(x, y); }
+    const back = arc.slice().reverse().reduce((acc: number[], _v, i, a) => (i % 2 === 0 ? [...acc, a[i + 1] - 2, a[i]] : acc), []);
+    parts.push({group: 'band', mat: 'kit', tone: 2, prims: [P.poly(...arc, ...back)]});
+    parts.push({group: 'cup', mat: 'kit', tone: 2, prims: [P.ell(ex, ey, 5, 6.5)]});
+    adjust.push(plane('kit', 4, P.ell(ex - 1, ey - 2, 2, 3)));
+    if ((s.headset ?? 'on') === 'on') parts.push({group: 'boom', mat: 'kit', tone: 1, prims: [P.poly(ex - 2, ey + 4, ex, ey + 6, mx + 5, my + 2, mx + 4, my)]}, {group: 'foam', mat: 'kit', tone: 3, prims: [P.ell(mx + 3, my + 1, 3, 2.5)]});
+    else parts.push({group: 'boom', mat: 'kit', tone: 1, prims: [P.poly(ex - 3, ey - 5, ex - 1, ey - 3, ex - 12, ey - 26, ex - 14, ey - 25)]}, {group: 'foam', mat: 'kit', tone: 3, prims: [P.ell(ex - 14, ey - 27, 3, 2.5)]});
     if (s.arm === 'phone') {
       const a = bustArm('arm', [32, 112], [16, 136], [20, 108], {dir: [0, -1], thumb: 1, curl: 0.7, len: 12, width: 11}, {mat: 'suit'});
       parts.push(...a.parts); adjust.push(...a.adjust);
     } else if (s.arm === 'unclip') {
-      const a = bustArm('arm', [98, 112], [108, 96], [94, 72], {dir: [-0.3, -1], thumb: -1, curl: 0.5, len: 12, width: 10}, {mat: 'suit'});
+      const a = bustArm('arm', [98, 112], [108, 96], [ex + 4, ey + 8], {dir: [-0.3, -1], thumb: -1, curl: 0.5, len: 12, width: 10}, {mat: 'suit'});
       parts.push(...a.parts); adjust.push(...a.adjust);
     }
     return {parts, adjust};
@@ -50,14 +61,15 @@ const spec: CivicSpec = {
   ramps: {skin: SKIN.deep, hair: [PAL.N0, PAL.N0, PAL.B0, PAL.B1, PAL.B2, PAL.B3], suit: TEAL, shirt: TEE, cord: [PAL.N0, PAL.N4, PAL.N6, PAL.N7, PAL.N8, PAL.G6], badge: [PAL.N1, PAL.R1, PAL.R2, PAL.R3, PAL.R3, PAL.P2], kit: [PAL.N0, PAL.N0, PAL.N1, PAL.N2, PAL.N4, PAL.G5]},
   backRamp: {skin: PAL.S2, hair: PAL.B2, suit: PAL.C3},
 };
-const bust = makeBust<EngineerBust>(spec);
+const bust = makeBust3<EngineerBust>(spec);
 export const engineerBust = (s: Partial<EngineerBust> = {}) => {
   const st = {...ENGINEER_DEFAULT, ...s};
   const img = bust(st);
   const out = {w: img.w, h: img.h, c: new Int32Array(img.c)};
   const b = new Buf(img.w, img.h, 0x1000000);
-  // the badge's word, DEMO, white on red (legible at 4x)
-  tiny(b, 'DEMO', 55, 129, PAL.P2);
+  // the badge sized to its word, DEMO, white on red (legible at 4x), 1 px of red round the word
+  const bw = tinyWidth('DEMO') + 4; fill(b, 60 - (bw >> 1), 126, bw, 9, PAL.R2); fill(b, 60 - (bw >> 1), 126, bw, 1, PAL.R3); fill(b, 60 - (bw >> 1), 134, bw, 1, PAL.R1);
+  tiny(b, 'DEMO', 62 - (bw >> 1), 128, PAL.P2);
   if (st.arm === 'phone') { fill(b, 12, 80, 17, 28, PAL.N0); fill(b, 13, 81, 15, 26, PAL.C2); fill(b, 13, 81, 15, 1, PAL.C5); fill(b, 16, 86, 9, 7, PAL.P1); }
   for (let i = 0; i < b.c.length; i++) if (b.c[i] !== 0x1000000) { const y = Math.floor(i / img.w); if (!(st.arm === 'phone' && y >= 100 && out.c[i] >= 0)) out.c[i] = b.c[i]; }
   return out;

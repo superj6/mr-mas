@@ -12,7 +12,7 @@ import {Buf, rect, line, ellipse, bayer, hash, clamp, poly} from '../../../../..
 import {PAL, stepColor} from '../../../../../shared/pixel/palette';
 import {noleImg, NOLE_BASE, NOLE_FOOT, NolePose} from '../../../../../shared/pixel/cast/nole';
 import {blitImg} from '../../../../../shared/pixel/figure';
-import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, dith} from '../kit';
+import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, dith, warmSkin} from '../kit';
 import {makeRoom} from '../cast/civic2';
 import {SKIN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
 import type {ArtAsset} from '../asset';
@@ -53,7 +53,8 @@ export const zaiLobby = (b: Buf, f: number, st: ZaiSt = {}) => {
   fill(b, LX, 84, 3, 100, PAL.G3); fill(b, LX - 14, 182, 31, 3, PAL.G3); fill(b, LX - 22, 78, 20, 8, PAL.G4); fill(b, LX - 4, 80, 8, 2, PAL.G4);
   const lampOn = (st.lamp ?? 'on') === 'on';
   if (lampOn) { fill(b, LX - 20, 86, 16, 2, PAL.W8); for (let y = 88; y < 190; y++) for (let x = 240; x < 380; x++) { const d = Math.hypot((x - (LX - 12)) / 64, (y - 160) / 76); if (d < 1 && bayer(x, y) < (1 - d) * 0.6) b.set(x, y, stepColor(b.get(x, y), 1)); } }
-  if (st.nole !== null) blitImg(b, noleImg({...NOLE_BASE, arm: 'phone', ...st.nole}), 292 - NOLE_FOOT[0], 186 - NOLE_FOOT[1]);
+  // Nole under his warm lamp: his rig's monitor-cyan skin re-lit warm (his face stays his face, never grey-green)
+  if (st.nole !== null) blitImg(b, noleImg({...NOLE_BASE, arm: 'phone', ...st.nole}), 292 - NOLE_FOOT[0], 186 - NOLE_FOOT[1], {map: lampOn ? warmSkin : undefined});
 };
 export const cageECU = (b: Buf, f: number, st: {k?: number} = {}) => {
   vramp(b, 0, 0, 480, RH, [PAL.N0, PAL.N1, PAL.N1]);

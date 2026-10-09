@@ -19,8 +19,38 @@ import {Buf, rect, line, poly, ellipse, bayer, hash, clamp, TRANSPARENT} from '.
 import {PAL, stepColor, lightness, familyOf, FAMILIES} from '../../../../shared/pixel/palette';
 import type {Img} from '../../../../shared/pixel/figure';
 import {blitImg} from '../../../../shared/pixel/figure';
-export {pt, pw, pwrap, bpt, bpw, bpwrap, plain} from '../../../ep01/act4/animatic/lay';
-export {tiny, tinyWidth} from '../../../../shared/pixel/rooms/kit-b';
+import {pt as pt0, pw, bpt as bpt0, bpw} from '../../../ep01/act4/animatic/lay';
+import {tiny as tiny0, tinyWidth} from '../../../../shared/pixel/rooms/kit-b';
+export {pw, pwrap, bpw, bpwrap, plain} from '../../../ep01/act4/animatic/lay';
+export {tinyWidth};
+
+// ------------------------------------------------------------------ the text-fit check (the art review: labels clipped,
+// overflowing their plates, overdrawn). While TEXT_FIT.on, every pt / bpt / tiny call records where its glyph pixels
+// went and what was under the string's box (one pixel round it) before it was drawn. tools/stills.ts reads the record
+// after each still: a string that leaves the frame, one whose plate (the box's main colour) doesn't reach round it,
+// or one whose glyph pixels were later drawn over, is reported (stills/textfit.json).
+export interface TextRec { s: string; b: Buf; x: number; y: number; w: number; h: number; col: number; px: number[]; plate: number; plateShare: number; borderOff: number }
+export const TEXT_FIT: {on: boolean; recs: TextRec[]} = {on: false, recs: []};
+/** draw decorative type (token streams, texture) without the text-fit check */
+export const untracked = (fn: () => void) => { const on = TEXT_FIT.on; TEXT_FIT.on = false; try { fn(); } finally { TEXT_FIT.on = on; } };
+const recordText = (b: Buf, s: string, x: number, y: number, w: number, h: number, col: number, draw: (t: Buf) => void) => {
+  if (!TEXT_FIT.on || !s.trim()) return;
+  const t = new Buf(b.w, b.h, TRANSPARENT);
+  draw(t);
+  const px: number[] = [];
+  for (let j = Math.max(0, y - 1); j < Math.min(b.h, y + h + 2); j++) for (let i = Math.max(0, x - 1); i < Math.min(b.w, x + w + 2); i++) if (t.c[j * b.w + i] !== TRANSPARENT) px.push(j * b.w + i);
+  // the plate: the commonest colour under the box (before the text), and how much of the 1 px ring round it differs
+  const cnt = new Map<number, number>();
+  for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) if (i >= 0 && j >= 0 && i < b.w && j < b.h) { const c = b.c[j * b.w + i]; cnt.set(c, (cnt.get(c) ?? 0) + 1); }
+  let plate = -1, best = 0; for (const [c, n] of cnt) if (n > best) { best = n; plate = c; }
+  let ring = 0, off = 0;
+  for (let i = x - 1; i <= x + w; i++) for (const j of [y - 1, y + h]) { if (i < 0 || j < 0 || i >= b.w || j >= b.h) { ring++; off++; continue; } ring++; if (b.c[j * b.w + i] !== plate) off++; }
+  for (let j = y; j < y + h; j++) for (const i of [x - 1, x + w]) { if (i < 0 || j < 0 || i >= b.w || j >= b.h) { ring++; off++; continue; } ring++; if (b.c[j * b.w + i] !== plate) off++; }
+  TEXT_FIT.recs.push({s, b, x, y, w, h, col, px, plate, plateShare: best / Math.max(1, w * h), borderOff: off / Math.max(1, ring)});
+};
+export const pt = (b: Buf, s: string, x: number, y: number, col: number, o: {shadow?: number} = {}) => { recordText(b, s, x, y, pw(s), 7, col, (t) => pt0(t, s, x, y, col)); pt0(b, s, x, y, col, o); };
+export const bpt = (b: Buf, s: string, x: number, y: number, col: number, o: {shadow?: number} = {}) => { recordText(b, s, x, y, bpw(s), 14, col, (t) => bpt0(t, s, x, y, col)); bpt0(b, s, x, y, col, o); };
+export const tiny = (b: Buf, s: string, x: number, y: number, col: number, shadow?: number) => { recordText(b, s, x, y, tinyWidth(s), 5, col, (t) => tiny0(t, s, x, y, col)); tiny0(b, s, x, y, col, shadow); };
 export {micro, microWidth} from '../../../../shared/pixel/cast/bosses';
 
 export const RH = 203;
@@ -265,6 +295,15 @@ export const grip = (b: Buf, x: number, y: number, w: number, side: -1 | 1, sk: 
 };
 /** a small room-scale hand (3 x 3 + thumb) at (x, y) */
 export const handS = (b: Buf, x: number, y: number, sk: number[] = HANDSKIN[0]) => { fill(b, x, y, 3, 3, sk[2]); b.set(x, y, sk[3]); b.set(x + 1, y, sk[3]); b.set(x + 2, y + 2, sk[1]); };
+
+/** a rig lit by a monitor's cyan (Ep1's Nole: K / X skin) re-lit warm, for a room with warm or day light: the cyan
+ *  key's skin tones walk to the warm skin ramp, rung for rung (a face stays a face, never grey-green) */
+export const warmSkin = (c: number) => {
+  const fm = familyOf(c); if (!fm) return c;
+  if (fm[0] === 'K') return [PAL.S3, PAL.S4, PAL.S4, PAL.S5, PAL.S6, PAL.S6][Math.min(5, fm[1])];
+  if (fm[0] === 'X') return [PAL.S1, PAL.S2, PAL.S3, PAL.S3][Math.min(3, fm[1])];
+  return c;
+};
 
 // ------------------------------------------------------------------ misc
 /** deterministic pick */

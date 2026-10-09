@@ -28,6 +28,8 @@ import {draw2008} from '../f21/era2008';
 import {mas08, M08_FOOT} from '../f21/mas08';
 import {blitImg} from '../../../../../shared/pixel/figure';
 import {drawCollarsStand} from '../../../../../shared/pixel/cast/mas-collars';
+import {holdPhone} from '../cast/hands2';
+import {ERA08} from '../f21/palettes';
 import type {ArtAsset} from '../asset';
 
 // ------------------------------------------------------------------ the keynote's picture and the campus
@@ -37,7 +39,21 @@ export const keynotePainter = (b: Buf, r: Rect, st: {slide?: 'stage' | 'later' |
   fill(b, r.x, r.y + Math.round(r.h * 0.78), r.w, r.h - Math.round(r.h * 0.78), PAL.P2);
   if (st.slide === 'later') { const s1 = '...AND LATER THIS YEAR:', s2 = 'CHATGTP.'; pt(b, s1, r.x + Math.round(r.w / 2 - pw(s1) / 2), r.y + Math.round(r.h * 0.3), PAL.N1); bpt(b, s2, r.x + Math.round(r.w / 2 - bpw(s2) / 2), r.y + Math.round(r.h * 0.45), PAL.N1); }
   else if (st.slide === 'end') { fill(b, r.x, r.y, r.w, r.h, PAL.N0); const s = 'ELPPA'; bpt(b, s, r.x + Math.round(r.w / 2 - bpw(s) / 2), r.y + Math.round(r.h / 2 - 7), PAL.G6); }
-  else { fill(b, r.x + Math.round(r.w / 2) - 2, r.y + Math.round(r.h * 0.5), 4, Math.round(r.h * 0.28), PAL.N1); fill(b, r.x + Math.round(r.w / 2) - 1, r.y + Math.round(r.h * 0.44), 3, 4, PAL.S3); }
+  else {
+    // one presenter, small, walking the white stage: a person's silhouette (a head, shoulders, the dark top, the
+    // legs mid-stride), backlit by the screen behind (a pale rim), nobody we know
+    const H = Math.max(14, Math.round(r.h * 0.34)), fx = r.x + Math.round(r.w / 2), fy = r.y + Math.round(r.h * 0.8);
+    const u = H / 40;
+    const C0 = PAL.N1, C1 = PAL.N2;
+    for (let j = 0; j < H; j++) {
+      const v = j / u;
+      let hw = v < 7 ? Math.sqrt(Math.max(0, 1 - ((v - 3.5) / 3.6) ** 2)) * 3.2 : v < 9 ? 1.6 : v < 12 ? 2 + (v - 9) * 1.6 : v < 24 ? 6.4 - (v - 12) * 0.12 : 0;
+      if (v >= 24) { const sp = (v - 24) / 16; const l = Math.round(fx - 2 * u - sp * 3 * u), rr = Math.round(fx + 1 * u + sp * 2 * u); fill(b, l, fy - H + j, Math.max(1, Math.round(1.8 * u)), 1, C0); fill(b, rr, fy - H + j, Math.max(1, Math.round(1.8 * u)), 1, C0); continue; }
+      hw = Math.max(0.6, hw * u);
+      fill(b, Math.round(fx - hw), fy - H + j, Math.max(1, Math.round(hw * 2)), 1, v < 7 ? C1 : C0);
+      b.set(Math.round(fx + hw), fy - H + j, PAL.P2);
+    }
+  }
   if (st.chat) {
     // the stream's chat down the right edge, lighting with his post (the top message, cyan)
     const cw = Math.min(110, Math.round(r.w * 0.34)), cx = r.x + r.w - cw;
@@ -90,12 +106,16 @@ export const corner2006 = (b: Buf, f: number, st: {card?: boolean} = {}) => {
   // flip phone to the camera with a grin; a GPS pin bobbing over his head
   const img = mas08({arm: 'present', lid: 0, mouth: 'smile', look: 1}, 0, -1);
   blitImg(b, img, 240 - M08_FOOT[0], 186 - M08_FOOT[1]);
-  flipPhone(b, 226, 128);
+  // the open flip phone in his presenting hand (its keypad half in his fingers, the screen half up), over the rig's own
+  // tiny phone
+  flipPhone(b, 219, 112);
   gpsPin(b, 242, 98 - (Math.floor(f / 6) % 2));
   if (st.card) {
     fill(b, 0, 0, 480, RH, PAL.I0); const s = '"WHERE YOU AT?"'; bpt(b, s, 240 - Math.round(bpw(s) / 2), 80, PAL.P2); gpsPin(b, 240, 70);
   }
-  applyPalette(b, 'EARLYWEB16');
+  // the era's palette, hand-pinned (f21/palettes ERA08, the intro's own 2008 remap): skin in three flat web colours
+  // (never the hair's brown on a face), the polo green, the greys; the engine's unpinned set garbled his face
+  applyPalette(b, ERA08);
 };
 export const stage2008 = (b: Buf, g: number, st: {grey?: number; last?: boolean} = {}) => {
   draw2008(b, g, {screen: (w, r) => {
@@ -111,13 +131,18 @@ export const breadcrumb = (b: Buf, k: number) => {
   for (let i = 0; i < n; i += 2) { const t = i / 60, x = Math.round(40 + t * 400), y = Math.round(150 - (Math.exp(t * 3) - 1) / (Math.exp(3) - 1) * 90); fill(b, x - 2, y - 2, 4, 4, PAL.N2); fill(b, x - 1, y - 1, 2, 2, PAL.C6); }
 };
 export const matchClicker = (b: Buf, f: number, st: {phone?: boolean} = {}) => {
-  // the hand in the same grip: 2008's clicker (EARLY-WEB) -> 2024's phone with his post on it
+  // the hand in the same grip (the match cut): 2008's clicker (EARLY-WEB) -> 2024's phone with his post on it. One
+  // hand drawing, Ep1's insert-hands grammar: from the right, the fingers round the far edge, the thumb on the near
+  // edge, the wrist into his cuff and the sleeve out of frame; the object sits IN the grip, never beside it
   vramp(b, 0, 0, 480, RH, st.phone ? [PAL.L2, PAL.L1, PAL.L1] : [PAL.N1, PAL.N3, PAL.N3]);
-  capsule(b, 480, 200, 330, 150, 26, [PAL.G1, PAL.G2, PAL.G3, PAL.C4]);
-  if (st.phone) { fill(b, 196, 40, 110, 150, PAL.N0); fill(b, 200, 46, 102, 138, PAL.N2); fill(b, 206, 54, 90, 40, PAL.N3); fill(b, 206, 54, 90, 1, PAL.C5); fill(b, 210, 58, 10, 10, PAL.C4); pt(b, 'mas', 224, 58, PAL.P2); for (let r = 0; r < 3; r++) fill(b, 210, 72 + r * 7, 80 - r * 18, 3, PAL.P1); }
-  else { fill(b, 226, 70, 50, 110, PAL.G4); fill(b, 226, 70, 50, 3, PAL.G6); ellipse(251, 100, 10, 10, b.ink(PAL.R3)); fill(b, 240, 130, 22, 8, PAL.G5); fill(b, 240, 146, 22, 8, PAL.G5); }
-  grip(b, 230, 120, 50, 1, HANDSKIN[0]);
-  if (!st.phone) applyPalette(b, 'EARLYWEB16');
+  const r = st.phone ? {x: 196, y: 30, w: 110, h: 150} : {x: 212, y: 34, w: 84, h: 150};
+  holdPhone(b, r, {side: 'R', grip: 'wrap', light: 'lobby', widthCm: st.phone ? 7.2 : 5.5, thumbAt: 0.45, sleeveTo: [520, 240],
+    cuffRamp: [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.C4], sleeveRamp: [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.C4],
+    drawPhone: (bb) => {
+      if (st.phone) { fill(bb, r.x, r.y, r.w, r.h, PAL.N0); fill(bb, r.x + 4, r.y + 6, r.w - 8, r.h - 12, PAL.N2); fill(bb, r.x + 10, r.y + 14, 90, 40, PAL.N3); fill(bb, r.x + 10, r.y + 14, 90, 1, PAL.C5); fill(bb, r.x + 14, r.y + 18, 10, 10, PAL.C4); pt(bb, 'mas', r.x + 28, r.y + 18, PAL.P2); for (let q = 0; q < 3; q++) fill(bb, r.x + 14, r.y + 32 + q * 7, 80 - q * 18, 3, PAL.P1); }
+      else { fill(bb, r.x, r.y, r.w, r.h, PAL.G4); fill(bb, r.x, r.y, r.w, 3, PAL.G6); fill(bb, r.x + r.w - 3, r.y, 3, r.h, PAL.G3); ellipse(r.x + 42, r.y + 34, 12, 12, bb.ink(PAL.R3)); fill(bb, r.x + 28, r.y + 64, 28, 10, PAL.G5); fill(bb, r.x + 28, r.y + 82, 28, 10, PAL.G5); }
+    }});
+  if (!st.phone) applyPalette(b, ERA08);
 };
 
 export const ART: ArtAsset[] = [
@@ -136,10 +161,8 @@ export const ART: ArtAsset[] = [
     file: 'sets/elppa.ts (+ f21/era2008.ts, mas08.ts, palettes.ts, timeline.ts: copies of studio/src/dev/meras)', exports: 'corner2006, stage2008, breadcrumb, matchClicker', scenes: '19 (F2.1)',
     note: 'EARLY-WEB16 throughout; the end card WHERE YOU AT?; the 2008 big screen\'s pins grey out one by one to LAST UPDATED 2012 (no cause claimed); the clicker becomes the 2024 phone in the same grip',
     stills: [
-      {label: '[W] 19.12: 2006, a phone ad on a street corner: young Mas with a flip phone, grinning, the GPS pin bobbing over his head · the end card', draw: (b) => {
-        const t1 = new Buf(480, 270, PAL.N0); corner2006(t1, 0); const t2 = new Buf(480, 270, PAL.N0); corner2006(t2, 0, {card: true});
-        for (let y = 0; y < 203; y++) for (let x = 0; x < 320; x++) b.set(x, y, t1.c[y * 480 + 80 + x]); for (let y = 0; y < 203; y++) for (let x = 0; x < 160; x++) b.set(320 + x, y, t2.c[y * 480 + 160 + x]);
-      }},
+      {label: '[W] 19.12: 2006, a phone ad on a street corner: young Mas with a flip phone, grinning, the GPS pin bobbing over his head', draw: (b) => corner2006(b, 0)},
+      {label: '[W] 19.12: the ad\'s end card, "WHERE YOU AT?"', draw: (b) => corner2006(b, 0, {card: true})},
       {label: '[W] 19.13-19.14: the intro\'s 2008 frame, the clicker caught, the collars popped; the big screen\'s pins greying, LAST UPDATED 2012', draw: (b) => stage2008(b, 200, {grey: 6, last: true})},
       {label: '[ECU · MATCH] 19.15: the 2008 clicker in his hand (-> the 2024 phone in the same grip)', draw: (b) => matchClicker(b, 0, {phone: false})},
       {label: '[ECU · MATCH] 19.15: the 2024 phone in the same grip, his post on it', draw: (b) => matchClicker(b, 0, {phone: true})},

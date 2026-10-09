@@ -24,6 +24,7 @@ import {fill, vramp, RH, dith, capsule, grip, HANDSKIN, armTo} from '../kit';
 import {drawMasStand2, drawMasBack, MAS2_FOOT} from '../cast/mas2';
 import {drawAlyiAtWork} from '../cast/alyi2';
 import {drawFlyer} from './lobby2';
+import {placeHand, drawHand, sleeve, POSES} from '../cast/hands2';
 import type {ArtAsset} from '../asset';
 
 /** from iss_scene.py's anchors.json (render of 2026-10-09): [x, y] in native pixels of the 480 x 203 room area */
@@ -88,24 +89,36 @@ export const issRoom = (b: Buf, f: number, st: {drop?: number} = {}) => {
 
 // ------------------------------------------------------------------ the shoulder and arm at the slot (22.04)
 const shoulderOTS = (b: Buf, slot: [number, number], push: number) => {
-  // his near shoulder and the back of his head, very close and out of focus: soft-edged flat shapes at frame-left
+  // his near shoulder and the back of his head, very close and soft at frame-left: the hair (its strands, the lit
+  // edge toward the overcast left), the near ear, the hood's rolled edge, the hoodie's shoulder
   for (let y = 40; y < RH; y++) for (let x = 0; x < 150; x++) {
-    const hood = Math.hypot((x + 20) / 150, (y - 230) / 170) < 1, head = Math.hypot((x - 30) / 48, (y - 60) / 56) < 1;
-    const edge = Math.hypot((x + 20) / 150, (y - 230) / 170);
-    if (head) b.set(x, y, Math.hypot((x - 30) / 48, (y - 60) / 56) > 0.9 && bayer(x, y) < 0.5 ? TRANSPARENT : PAL.B1);
-    else if (hood) b.set(x, y, edge > 0.95 && bayer(x, y) < 0.5 ? TRANSPARENT : edge > 0.85 ? HOOD[3] : HOOD[2]);
+    const dh = Math.hypot((x - 30) / 48, (y - 60) / 56), dsh = Math.hypot((x + 20) / 150, (y - 230) / 170);
+    if (dh < 1) {
+      const soft = dh > 0.94 && bayer(x, y) < 0.5;
+      if (soft) continue;
+      const strand = ((x * 2 + Math.round(y * 0.6)) % 9) < 1;
+      b.set(x, y, dh > 0.86 && x < 30 ? PAL.B3 : strand ? PAL.B2 : y > 92 ? PAL.B0 : PAL.B1);
+    } else if (dsh < 1) b.set(x, y, dsh > 0.95 && bayer(x, y) < 0.5 ? TRANSPARENT : dsh > 0.85 ? HOOD[3] : HOOD[2]);
   }
-  // the arm from the shoulder to the slot: the sleeve, the hand holding the flyer's edge; the flyer, upside down, its
-  // tape still on its corners, half into the slot (it lifts the flap; the gap is the plate's)
+  // the near ear at the head's right edge, the nape in skin, the hood's roll round the neck
+  for (let j = 0; j < 16; j++) for (let i = 0; i < 6; i++) if (Math.hypot((i - 2.5) / 3, (j - 8) / 8) < 1) b.set(76 + i, 58 + j, i > 3 ? PAL.S2 : j < 3 ? PAL.S4 : PAL.S3);
+  fill(b, 58, 104, 16, 6, PAL.S2); for (let x = 20; x < 110; x++) { const y = 108 + Math.round(Math.abs(x - 64) * 0.12); b.set(x, y, HOOD[4]); b.set(x, y + 1, HOOD[3]); b.set(x, y + 2, HOOD[1]); }
+  // the flyer: letter-size, sized to the slot (a page about three quarters of its width), upside down, the tape still
+  // on its corners, its lower edge inside the gap (the part already in is hidden behind the flap)
   const [sx, sy] = slot;
-  const hx = sx - 30, hy = sy - 62 + [8, 26, 44][clamp(push, 0, 2)];
-  armTo(b, [100, 200], [118, 150], [hx - 2, hy + 6], [PAL.N1, PAL.G1, PAL.G2, PAL.G3], 10, 8);
-  // the flyer (2x), upright and upside down, its lower edge going into the slot (the part already in is hidden), the
-  // tape still on its corners; his hand pinching its top edge
-  const t = new Buf(48, 64, TRANSPARENT); drawFlyer(t, 0, 0, {upside: true, scale: 4});
-  const inside = [8, 26, 44][clamp(push, 0, 2)], fx0 = sx - 30, fy0 = sy - 62 + inside;
-  for (let j = 0; j < 64; j++) for (let i = 0; i < 48; i++) { const v = t.c[j * 48 + i], X = fx0 + i, Y = fy0 + j - Math.round(i * 0.18); if (v !== TRANSPARENT && Y < sy - 1 - Math.round(i * 0.18)) b.set(X, Y, v); }
-  grip(b, fx0 - 4, fy0 - 2, 12, 1, HANDSKIN[0]);
+  const inside = [8, 22, 36][clamp(push, 0, 2)];
+  const FW = 60, FH = 80;
+  const t = new Buf(FW, FH, TRANSPARENT); drawFlyer(t, 0, 0, {upside: true, scale: 5});
+  const fx0 = sx - 33, fy0 = sy - FH + 4 + inside;
+  for (let j = 0; j < FH; j++) for (let i = 0; i < FW; i++) { const v = t.c[j * FW + i], X = fx0 + i, Y = fy0 + j - Math.round(i * 0.18); if (v !== TRANSPARENT && Y < sy - 2 - Math.round((X - sx + 33) * 0.18)) b.set(X, Y, v); }
+  // his arm from the shoulder to the elbow to the cuff, a real hand pinching the flyer's top edge (the thumb on the
+  // page's face, the index behind it), Ep1's insert-hands grammar, the overcast light
+  const pinchAt: [number, number] = [fx0 + 10, fy0 + 3 - 2];
+  const h = placeHand(POSES.pinch([0.5, -0.55, -0.65], [-0.25, -0.7, 0.66], 'R'), {s: 3.2, at: pinchAt, anchor: 'thumb', light: 'lobby', cuffRamp: [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.G5]});
+  const elbow: [number, number] = [h.cuffEnd[0] - 34, h.cuffEnd[1] + 40];
+  sleeve(b, [104, 204], elbow, 14, 12, [PAL.N0, HOOD[1], HOOD[2], HOOD[3], HOOD[4]]);
+  sleeve(b, elbow, h.cuffEnd, 11, 9, [PAL.N0, HOOD[1], HOOD[2], HOOD[3], HOOD[4]]);
+  drawHand(b, h.hand, h.x, h.y);
 };
 
 export interface IssSt { t?: number; scan?: boolean; push?: number; lit?: boolean; raise?: number; drop?: number }
@@ -115,7 +128,9 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     const [x0, y0] = A('wide', 'walk0', [20, 170]), [x1, y1] = A('wide', 'doormark', [330, 168]);
     const t = clamp(st.t ?? 0.6, 0, 1), x = Math.round(x0 + (x1 - x0) * t), y = Math.round(y0 + (y1 - y0) * t);
     shadowAt(b, x, y, 14);
-    drawMasStand2(b, x, y, {arm: 'down', legs: t >= 1 ? 'stand' : (['w0', 'w1', 'w2', 'w3'] as const)[step]});
+    // walking in he is side-on; arrived at the door he faces it (his back to us)
+    if (t >= 1) drawMasBack(b, x, y, 'stand');
+    else drawMasStand2(b, x, y, {arm: 'down', legs: (['w0', 'w1', 'w2', 'w3'] as const)[step]});
     // THE ORB at his shoulder, looking at the cube, its lens firing; it toasts nothing (it can't verify a door)
     const ox = x + 24, oy = y - 86;
     if (st.scan) for (let k = 0; k < 40; k++) { const px = ox + 8 + k * 2, py = oy + Math.round(k * 0.3); if (bayer(px, py) < 0.5) b.set(px, py, PAL.C7); }
@@ -126,7 +141,9 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     const [hx, hy] = A('mcu', 'mcuMasHead', [150, 30]);
     const map = st.lit ? (c: number) => (c >> 16) > ((c >> 8) & 255) + 10 ? stepColor(c, 1) : c : undefined;
     const x0 = Math.round(hx) - Math.round(MAS_MW / 2), y0 = Math.round(hy) - 6;
-    drawMasMedium(b, x0, y0, {...MAS_MEDIUM_DEFAULT, head: '34', arm: 'down', light: 'warm', look: 1}, {flip: true, map});
+    // facing the flap (it is to his right, low on the door): the 3/4 head turned to it, his eyes on it
+    // (the medium rig's 3/4 head faces camera-left; flipped, it turns to the flap on the door at frame right)
+    drawMasMedium(b, x0, y0, {...MAS_MEDIUM_DEFAULT, head: '34', arm: 'down', light: 'warm', look: 0}, {map, flip: true});
     // the medium drawing stops at the desk line: carry his hoodie on down out of frame (each column's last row)
     // (each column's lowest drawn row, carried down; the two columns at each side become the outline, so the key
     // light's rims don't run down as stripes)

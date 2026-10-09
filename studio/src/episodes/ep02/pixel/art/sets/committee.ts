@@ -29,7 +29,7 @@ import type {ArtAsset} from '../asset';
 // ------------------------------------------------------------------ props
 export const lanyard = (b: Buf, x: number, y: number, o: {page212?: boolean} = {}) => {
   line(x, y, x + 6, y + 14, b.ink(PAL.R2)); line(x + 12, y, x + 6, y + 14, b.ink(PAL.R2));
-  if (o.page212) { fill(b, x + 1, y + 14, 12, 15, PAL.P2); for (let r = 0; r < 4; r++) fill(b, x + 3, y + 17 + r * 3, 8, 1, PAL.G5); tiny(b, '212', x + 2, y + 24, PAL.N2); }
+  if (o.page212) { const pw0 = tinyWidth('212') + 4; fill(b, x + 7 - (pw0 >> 1), y + 14, pw0, 17, PAL.P2); for (let r = 0; r < 3; r++) fill(b, x + 9 - (pw0 >> 1), y + 17 + r * 3, pw0 - 4, 1, PAL.G5); tiny(b, '212', x + 9 - (pw0 >> 1), y + 25, PAL.N2); }
   else { fill(b, x + 2, y + 14, 10, 7, PAL.P2); fill(b, x + 2, y + 14, 10, 2, PAL.R2); }
 };
 /** the glass case of CLOD boxes: six boxes on two shelves behind glass; the last box's art a red suspension bridge; the
@@ -49,8 +49,16 @@ export const clodCase = (b: Buf, x: number, y: number, glint = -1) => {
 const pagesOnDesk = (b: Buf, x: number, y: number) => {
   for (let k = 0; k < 4; k++) { fill(b, x + k * 9, y - k, 14, 10, PAL.P2); fill(b, x + k * 9, y - k, 14, 1, PAL.W9); for (let r = 0; r < 3; r++) fill(b, x + k * 9 + 2, y - k + 3 + r * 2, 10, 1, r === 1 && k === 2 ? PAL.W7 : PAL.G5); }
 };
-/** the op-ed clipping on the desk (an egg): byline NELEH & THE QUIET VOTE */
-const opedClip = (b: Buf, x: number, y: number) => { fill(b, x, y, 26, 14, PAL.P1); fill(b, x, y, 26, 1, PAL.P2); tiny(b, 'NELEH &', x + 1, y + 2, PAL.N2); for (let r = 0; r < 2; r++) fill(b, x + 2, y + 9 + r * 2, 20, 1, PAL.G4); };
+/** the op-ed clipping on the desk (an egg): at room scale it reads as newsprint and nothing more (a torn grey scrap, a
+ *  headline's bar, two columns of type, a small photo), never a word that could read as a nameplate on the desk */
+const opedClip = (b: Buf, x: number, y: number) => {
+  fill(b, x, y, 28, 18, PAL.P0); fill(b, x, y, 28, 1, PAL.P1);
+  for (let i = 0; i < 28; i += 3) b.set(x + i, y + 17, PAL.G4);
+  fill(b, x + 2, y + 2, 22, 2, PAL.N2);
+  fill(b, x + 2, y + 6, 8, 6, PAL.G4); fill(b, x + 3, y + 7, 6, 4, PAL.G3);
+  for (let r = 0; r < 5; r++) { fill(b, x + 12, y + 6 + r * 2, 6, 1, PAL.G4); fill(b, x + 20, y + 6 + r * 2, 6, 1, PAL.G4); }
+  for (let r = 0; r < 2; r++) fill(b, x + 2, y + 13 + r * 2, 8, 1, PAL.G4);
+};
 
 // ------------------------------------------------------------------ the lighthouse (sc 18)
 export interface Light18St { ekiel?: number | null; adelina?: 'raise' | 'drop' | null; mario?: boolean; clodGlint?: number }
@@ -69,7 +77,8 @@ export const lighthouse18 = (b: Buf, f: number, st: Light18St = {}) => {
 
 // ------------------------------------------------------------------ the boardroom, May 28
 export const boardroom18 = (b: Buf, f: number, st: {tv?: boolean; beam?: number} = {}, cast: Parameters<typeof drawBoardroom>[2] = {}) => {
-  drawBoardroom(b, {f, plates: {}, rolodex: false}, cast);
+  // the table's tent cards by date: on May 28 the board after 4A (his own plate, the new directors'), never Ep1's
+  drawBoardroom(b, {f, plates: {A: 'TERB', B: 'MAS MANALT', C: 'OMIS', D: 'NEW DIRECTOR', E: 'NEW DIRECTOR'}, rolodex: false}, cast);
   // the banner across the back wall over the window
   const s = 'SAFETY AND SECURITY COMMITTEE';
   const bx = 136;   // inside the split's left pane (x 120..358) as well as the full frame
@@ -132,7 +141,7 @@ export const ART: ArtAsset[] = [
     file: 'sets/committee.ts', exports: 'lighthouse18, clodCase, lanyard, pagesECU', scenes: '18',
     note: 'Ekiel climbs the stair of bound drafts with his box; Adelina raises a lanyard printed on page 212; the CLOD boxes glint as the beam passes (the last one\'s art the bridge, never named)',
     stills: [
-      {label: '[W] 18.01: the lighthouse, Ekiel on the stair with his box, Adelina at the top raising the lanyard, Mario writing, the CLOD case', draw: (b) => lighthouse18(b, 0, {ekiel: 8, adelina: 'raise', clodGlint: 5})},
+      {label: '[W] 18.01: the lighthouse, Ekiel on the stair with his box, Adelina at the top raising the lanyard, Mario writing, the CLOD case', draw: (b) => lighthouse18(b, 0, {ekiel: 3, adelina: 'raise', clodGlint: 5})},
       {label: '[ECU] 18.12: the four pages, the one line highlighted in yellow, "inherently" underlined in Mario\'s ink', draw: (b) => pagesECU(b, 0)},
     ],
   },

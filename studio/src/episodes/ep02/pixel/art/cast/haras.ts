@@ -11,9 +11,9 @@ import {Buf, line} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
 import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, bustHair, bustArm, BustState, CivicSpec, RoomFigSpec, Expr, Viseme, RoomLegs, beanbag} from './civic2';
+import {makeBust3, makeRoom, bustArm, BustState, BustSpec3, RoomFigSpec, Expr, Viseme, RoomLegs, beanbag} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
-import {fill, tiny, hash} from '../kit';
+import {fill, tiny, tinyWidth, hash} from '../kit';
 import type {ArtAsset} from '../asset';
 
 export interface HarasBust extends BustState { arm: 'none' | 'tape' | 'upside' }
@@ -21,11 +21,15 @@ export const HARAS_DEFAULT: HarasBust = {mouth: 'rest', expr: 'smile', arm: 'tap
 const TEAL = [PAL.N0, PAL.C0, PAL.C2, PAL.C3, PAL.C4, PAL.C6];
 const CREAM = [PAL.N2, PAL.P0, PAL.P1, PAL.P2, PAL.P2, PAL.W9];
 const HAIRD = [PAL.N0, PAL.B0, PAL.B0, PAL.B1, PAL.B2, PAL.B3];
-const spec: CivicSpec = {
-  head: {long: 1, soft: true},
-  torso: {kind: 'pantsuit'},
-  browCol: PAL.B0, lash: true,
-  hair: () => bustHair('bob'),
+// her own head (a woman's: the art review): a narrow, soft jaw to a small rounded chin, high cheekbones, a small straight
+// nose, full lips in a rose colour, almond eyes lined with lashes and a flick, arched brows, a sleek dark bob with a
+// blunt fringe; a slender neck (no throat) above a teal blazer over a cream shell
+const spec: BustSpec3 = {
+  head: {yaw: 22, at: [57, 56], scale: 1.03, cranium: [19, 24, 22], cheekW: 15, cheekY: 6, jawW: 11.5, jawY: 17, jawH: 10, chinY: 31, chinW: 4.5, chinZ: 11, chinH: 4.5, cheekbone: 1, full: 0.6, brow: 0.4,
+    nose: {tipY: 11.5, proj: 6, wing: 3.2, bridge: 1.7, tip: 2.4, hook: -0.4}, mouthY: 20.5, lips: 1.5, eyeX: 8.5, neck: {r: 7.2}, hair: {style: 'bob', thick: 3.2, line: -16, side: -1, len: 26},
+    skin: SKIN.medium, hairRamp: HAIRD, back: {skin: PAL.S3, hair: PAL.B3}},
+  face: {eye: 'lash', eyeW: 9, eyeH: 2, eyeTilt: 1, brow: 'arched', browCol: PAL.B0, mouthW: 9, lip: {line: PAL.U3, lower: PAL.U4}},
+  torso: {kind: 'blazerShell'},
   extras: (s) => {
     if (s.arm === 'none') return {};
     const a = s.arm === 'upside'
@@ -36,12 +40,12 @@ const spec: CivicSpec = {
   ramps: {skin: SKIN.medium, hair: HAIRD, suit: TEAL, shirt: CREAM},
   backRamp: {skin: PAL.S3, hair: PAL.B3, suit: PAL.C4},
 };
-const bust = makeBust<HarasBust>(spec);
+const bust = makeBust3<HarasBust>(spec);
 /** a strip of calculator tape (bust scale): `n` rows of digits, the last circled `UPSIDE` when asked */
 const tapeB = (b: Buf, x: number, y: number, h: number, upside: boolean) => {
   fill(b, x, y, 14, h, PAL.P2); fill(b, x + 13, y, 1, h, PAL.P0);
   for (let r = 0; r * 6 + 3 < h - 4; r++) for (let c = 0; c < 3; c++) if (hash(r, c, 5) < 0.8) fill(b, x + 3 + c * 3, y + 3 + r * 6, 2, 3, PAL.G4);
-  if (upside) { fill(b, x - 4, y + h - 14, 22, 9, PAL.P2); tiny(b, 'UPSIDE', x - 3, y + h - 12, PAL.N2); for (let i = -5; i < 19; i++) { b.set(x + i, y + h - 15, PAL.R2); b.set(x + i, y + h - 5, PAL.R2); } }
+  if (upside) { const uw = tinyWidth('UPSIDE') + 4; fill(b, x + 7 - (uw >> 1), y + h - 14, uw, 9, PAL.P2); tiny(b, 'UPSIDE', x + 9 - (uw >> 1), y + h - 12, PAL.N2); for (let i = -1; i <= uw; i++) { b.set(x + 7 - (uw >> 1) + i, y + h - 15, PAL.R2); b.set(x + 7 - (uw >> 1) + i, y + h - 5, PAL.R2); } }
 };
 export const harasBust = (s: Partial<HarasBust> = {}) => {
   const st = {...HARAS_DEFAULT, ...s};
@@ -65,7 +69,7 @@ const rspec: RoomFigSpec = {
 const room = makeRoom(rspec);
 export const drawHarasRoom = (b: Buf, footX: number, footY: number, p: Partial<HarasRoomPose> = {}, o: {flip?: boolean} = {}) => {
   const q: HarasRoomPose = {state: 'walk', mouth: 'rest', ...p};
-  room.draw(b, footX, footY, {arm: q.state === 'seated' ? 'clasp' : 'reach', seat: q.state === 'seated' ? 'cross' : undefined, legs: q.legs ?? 'stand', head: {hair: 'long', mouth: q.mouth}}, o);
+  room.draw(b, footX, footY, {arm: q.state === 'seated' ? 'clasp' : 'reach', seat: q.state === 'seated' ? 'cross' : undefined, legs: q.legs ?? 'stand', head: {hair: 'bob', mouth: q.mouth, woman: true}}, o);
 };
 /** the calculator tape along a path (each point [x, y]): a 2 px paper ribbon, a digit tick every 5 px, its lit edge */
 export const drawCalcTape = (b: Buf, pts: Array<[number, number]>, o: {upside?: [number, number]} = {}) => {

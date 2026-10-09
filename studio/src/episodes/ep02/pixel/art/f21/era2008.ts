@@ -142,13 +142,15 @@ const screen = (b: Buf, g: number) => {
     const ry = py0 + 6 + 14 + (13 - j) + 1;
     if (j > 6 && bayer4(px0 + 8 + i, ry) < (j - 6) / 14) b.set(px0 + 8 + i, ry, PAL.C7);
   }
-  const sx = px0 + pw - 4, sy = py0 + 2;
+  // (Ep2's copy: the starburst sized to its word and kept inside the panel, so BETA reads whole: the art review's 'BET')
+  const tw = textWidth('BETA');
+  const sx = px0 + pw - Math.ceil(tw / 2) - 6, sy = py0 + 4;
   const star: number[] = [];
-  for (let k = 0; k < 24; k++) { const a = (k / 24) * Math.PI * 2, r = k % 2 ? 9 : 13; star.push(sx + Math.cos(a) * r, sy + Math.sin(a) * r * 0.8); }
+  for (let k = 0; k < 24; k++) { const a = (k / 24) * Math.PI * 2, r = k % 2 ? tw / 2 + 3 : tw / 2 + 7; star.push(sx + Math.cos(a) * r, sy + Math.sin(a) * r * 0.7); }
   poly(star, b.ink(PAL.R2));
   const star2 = star.map((v, i) => (i % 2 ? sy + (v - sy) * 0.84 : sx + (v - sx) * 0.84));
   poly(star2, b.ink(PAL.R3));
-  text(b, 'BETA', sx - 9, sy - 3, PAL.P2);
+  text(b, 'BETA', sx - Math.floor(tw / 2), sy - 3, PAL.P2);
 };
 
 // ------------------------------------------------------------------ the audience (we're in it)

@@ -107,9 +107,15 @@ export const presserFull = (b: Buf, f: number, st: {turn?: 0 | 1 | 2; tenth?: bo
     if (lw > 40) { const sx = k < 9 ? lx + 4 + (k % 3) * (sw + 2) : lx + lw - sw - 6, sy = k < 9 ? 138 + Math.floor(k / 3) * 10 : 128; fill(b, sx, sy, sw, 8, k === 9 ? PAL.W7 : PAL.C5); tiny(b, 'FORUM', sx + 2, sy + 1, PAL.N1); }
     else fill(b, lx + 2 + (k % 2) * 6, 112 + Math.floor(k / 2) * 9, 5, 6, k === 9 ? PAL.W7 : PAL.C5);
   }
-  if (st.stuck) { const sx = lw > 40 ? lx + 6 : lx - 20; fill(b, sx, 166, pw('0 BILLS') + 6, 12, PAL.N0); pt(b, '0 BILLS', sx + 3, 168, PAL.R3); }
   // the aides at the lectern's sides (when they wheel it to the door)
   if (turn) { drawSenator(b, lx - 12, 180, 1, 'lean', {flip: true}); drawSenator(b, lx + lw + 10, 180, 2, 'lean'); }
+  // the tally (sc 19): a card taped ABOVE the jammed lectern, drawn after the aides so nothing stands in front of it;
+  // the big face so it reads in its 1.5 s hold, and at the corner TV's scale (lobby2 drawPresserSmall)
+  if (st.stuck) {
+    const s0 = '0 BILLS', cw = bpw(s0) + 12, cx = Math.min(372 - cw, Math.max(150, lx + Math.round(lw / 2) - Math.round(cw / 2)));
+    fill(b, cx, 76, cw, 22, PAL.N0); fill(b, cx, 76, cw, 1, PAL.G3); bpt(b, s0, cx + 6, 81, PAL.R3);
+    fill(b, cx + 4, 74, 6, 3, PAL.P1); fill(b, cx + cw - 10, 74, 6, 3, PAL.P1);
+  }
   // the presser's own lower third and REMUHCS's plate
   // the broadcast's lower third: his plate above the headline bar
   fill(b, 0, 168, pw('REMUHCS · MAJORITY LEADER') + 18, 13, PAL.P2); pt(b, 'REMUHCS · MAJORITY LEADER', 12, 171, PAL.N1);

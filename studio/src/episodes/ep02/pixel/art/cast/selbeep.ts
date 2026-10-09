@@ -14,9 +14,9 @@ import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
 import {SKIN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustArm, BustState, CivicSpec, RoomPose, RoomFigSpec, Expr, Viseme} from './civic2';
+import {makeBust3, makeRoom, plane, bustArm, BustState, BustSpec3, CivicSpec, RoomPose, RoomFigSpec, Expr, Viseme} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
-import {sp} from '../kit';
+import {sp, fill} from '../kit';
 import type {ArtAsset} from '../asset';
 
 export type SelbeepArm = 'none' | 'remote' | 'aim';
@@ -59,25 +59,17 @@ const REMOTE_ROOM = ['kWkWkWkW', 'gggggggg', 'nNNrNNNn', 'nNgNgNNn', 'nNNNNNNn',
 const REM_PAL = {k: PAL.N0, W: PAL.P2, g: PAL.G4, n: PAL.N0, N: PAL.N2, r: PAL.R1, R: PAL.R3};
 export const drawRemote = (b: Buf, x: number, y: number, size: 'room' | 'bust' = 'bust') => sp(b, x, y, size === 'bust' ? REMOTE_BUST : REMOTE_ROOM, REM_PAL);
 
-const spec: CivicSpec = {
-  head: {long: 1, age: 1},
+// his own head: a showman's (a big square jaw and a strong chin pushed forward, a long nose with a hook, a heavy brow
+// ridge, hooded eyes under heavy brows, a wide mouth made for grinning, the lines of a man past fifty) under the
+// swept-up quiff
+const spec: BustSpec3 = {
+  head: {yaw: 26, at: [57, 56], scale: 1.05, cranium: [21, 25, 24], cheekW: 17, jawW: 16.5, jawY: 20, jawH: 12, chinY: 35, chinW: 8.5, chinZ: 13, cheekbone: 0.9, full: 0.5, brow: 3,
+    nose: {tipY: 15, proj: 10, wing: 4.6, hook: 1.4, tip: 3.2}, mouthY: 25, lips: 0.9, muzzle: 13.5, eyeX: 8.5, neck: {r: 10, throat: true}, hair: {style: 'quiff', thick: 2.4, line: -18, volume: 1.25},
+    skin: SKIN.medium, hairRamp: HAIR.brown, back: {skin: PAL.S3, hair: PAL.B4}},
+  face: {eye: 'hooded', eyeW: 9, eyeH: 2, brow: 'heavy', browCol: PAL.B1, mouthW: 12, age: 2},
   torso: {kind: 'jacket', sy: 102},
-  browCol: PAL.B1,
-  hair: () => ({
-    parts: [
-      // the showman's swept-up quiff: high and forward over the brow, short at the back of the head, a sideburn
-      {group: 'hair', mat: 'hair', tone: 3, prims: [P.poly(44, 36, 42, 28, 45, 19, 52, 11, 63, 7, 75, 8, 84, 14, 89, 24, 90, 38, 88, 51, 85, 51, 84, 42, 80, 35, 73, 31, 64, 30, 56, 30, 50, 32, 46, 37), P.poly(77, 35, 82, 36, 81, 54, 78, 53)]},
-    ],
-    adjust: [
-      // the quiff's lit front roll, its crest, the strands combed back in arcs, the dark under the roll at the brow
-      plane('hair', 4, P.poly(44, 33, 43, 25, 48, 16, 56, 10, 64, 8, 58, 14, 52, 21, 47, 28)),
-      plane('hair', 5, P.line(45, 24, 52, 15), P.line(53, 13, 60, 10)),
-      plane('hair', 2, P.line(52, 19, 64, 13), P.line(64, 13, 78, 14), P.line(50, 25, 62, 19), P.line(62, 19, 84, 22), P.line(55, 29, 66, 25), P.line(66, 25, 87, 30)),
-      plane('hair', 1, P.poly(45, 36, 48, 32, 55, 30, 64, 30, 73, 31, 72, 33, 60, 32, 50, 34)),
-      plane('hair', 1, P.poly(84, 40, 89, 42, 88, 51, 85, 51)),
-      plane('hair', 2, P.poly(78, 37, 81, 37, 80, 53, 78, 52)),
-    ],
-  }),
+  // the showman: proud is the full grin with the brows up; laugh throws the head back
+  expr: {proud: {eye: 'crinkle', brow: 'up', mouth: 'grin', pose: {cheekUp: 1.2, nod: -4}}, laugh: {eye: 'happy', brow: 'up', mouth: 'laugh', pose: {jaw: 3, cheekUp: 1.6, nod: -6}}},
   extras: (s) => {
     const parts = [] as ReturnType<NonNullable<CivicSpec['extras']>>['parts'] & object;
     const adjust = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['adjust']>;
@@ -100,7 +92,7 @@ const spec: CivicSpec = {
   ramps: {skin: SKIN.medium, hair: HAIR.brown, suit: JACKET, shirt: TEE, cord: YELLOW, badge: [PAL.N1, PAL.G3, PAL.G5, PAL.P1, PAL.P2, PAL.P2]},
   backRamp: {skin: PAL.S3, hair: PAL.B4, suit: PAL.W3},
 };
-const bust = makeBust<SelbeepBust>(spec);
+const bust = makeBust3<SelbeepBust>(spec);
 /** the bust with its remote painted in the hand (the remote is a prop with fixed colours, not lit by the rig) */
 export const selbeepBust = (s: Partial<SelbeepBust> = {}) => {
   const st = {...SELBEEP_DEFAULT, ...s};
@@ -117,6 +109,28 @@ export const selbeepBust = (s: Partial<SelbeepBust> = {}) => {
     if (!(handRow && out.c[i] >= 0)) out.c[i] = b.c[i];
   }
   return out;
+};
+
+// ------------------------------------------------------------------ his silhouette's props (characters/selbeep.md: a director's
+// chair, a megaphone, a clapperboard): the folding director's chair (room scale, its canvas in studio-light yellow), a
+// megaphone resting on its seat; x, y = the chair's front-left foot on the floor
+export const drawDirectorsChair = (b: Buf, x: number, y: number, o: {megaphone?: boolean} = {}) => {
+  const wood = [PAL.D2, PAL.D3, PAL.D4];
+  // the crossed legs (an X each side), the seat rails, the back posts
+  for (let k = 0; k < 18; k++) { b.set(x + k, y - Math.round(k * 0.9), wood[1]); b.set(x + 18 - k, y - Math.round(k * 0.9), wood[2]); }
+  for (let k = 0; k < 18; k++) { b.set(x + 6 + k, y - 2 - Math.round(k * 0.9), wood[0]); }
+  fill(b, x - 1, y - 18, 22, 2, wood[2]); fill(b, x - 1, y - 16, 22, 1, wood[0]);
+  fill(b, x - 1, y - 40, 2, 24, wood[1]); fill(b, x + 19, y - 40, 2, 24, wood[2]);
+  // the canvas: the seat sling and the back panel (studio-light yellow)
+  fill(b, x + 1, y - 19, 18, 3, PAL.W6); fill(b, x + 1, y - 19, 18, 1, PAL.W7);
+  fill(b, x + 1, y - 38, 18, 9, PAL.W6); fill(b, x + 1, y - 38, 18, 1, PAL.W8); fill(b, x + 1, y - 30, 18, 1, PAL.W4);
+  // the armrests
+  fill(b, x - 3, y - 26, 6, 2, wood[2]); fill(b, x + 17, y - 26, 6, 2, wood[2]);
+  if (o.megaphone !== false) {
+    // a megaphone on the seat: its cone (white, a red band), its handle and its trigger
+    for (let k = 0; k < 10; k++) fill(b, x + 4 + k, y - 24 - Math.floor(k * 0.35), 1, 3 + Math.floor(k * 0.55), k > 7 ? PAL.R2 : PAL.P2);
+    fill(b, x + 13, y - 28, 2, 7, PAL.P1); fill(b, x + 6, y - 21, 3, 3, PAL.N1);
+  }
 };
 
 // ------------------------------------------------------------------ room
@@ -143,7 +157,7 @@ export const drawSelbeepRoom = (b: Buf, footX: number, footY: number, p: Partial
 const expr = (e: Expr, m: Viseme = 'rest', arm: SelbeepArm = 'none'): SelbeepBust => ({mouth: m, expr: e, arm});
 export const ART: ArtAsset[] = [{
   id: 'char-selbeep', manifest: '§2.2 SELBEEP', kind: 'character', name: 'SELBEEP (the AROS video lead)',
-  file: 'cast/selbeep.ts', exports: 'selbeepBust, drawSelbeepRoom, drawRemote, SELBEEP_DEFAULT', scenes: '1',
+  file: 'cast/selbeep.ts', exports: 'selbeepBust, drawSelbeepRoom, drawRemote, drawDirectorsChair, SELBEEP_DEFAULT', scenes: '1',
   note: 'proud showman; brown suede bomber, studio-yellow lanyard; the remote the size of a clapperboard; proud / talk / worry / laugh',
   stills: [{label: 'busts: proud with the remote · talking (A) · "Directionally." (worry) · laugh; room: present, point, down', draw: (b) => {
     sheetPlate(b);
@@ -153,6 +167,7 @@ export const ART: ArtAsset[] = [{
     sheetBust(b, selbeepBust(expr('laugh')), 288, 52, 'laugh');
     sheetRoom(b, 404, 'present', (x, y) => drawSelbeepRoom(b, x, y, {arm: 'present', mouth: 'open'}));
     sheetRoom(b, 436, 'point', (x, y) => drawSelbeepRoom(b, x, y, {arm: 'point', mouth: 'smile'}));
+    drawDirectorsChair(b, 446, 186);
     sheetRoom(b, 466, 'down', (x, y) => drawSelbeepRoom(b, x, y, {arm: 'down', mouth: 'rest'}));
   }}],
 }];

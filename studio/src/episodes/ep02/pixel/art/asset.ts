@@ -8,6 +8,9 @@ export interface ArtStill {
   label: string;
   /** draw one full 480 x 270 frame (the room area 0..202; the band below is free for the label) */
   draw: (b: Buf) => void;
+  /** the still draws its own band (rows 203..269: the adventure band, UI LIT): the label goes in a strip under the
+   *  frame instead of over it */
+  ownBand?: boolean;
 }
 export interface ArtAsset {
   /** a stable id (the still's file name) */

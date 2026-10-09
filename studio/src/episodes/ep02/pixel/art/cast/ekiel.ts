@@ -10,8 +10,8 @@
 import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {P} from '../../../../../shared/pixel/figure';
-import {SKIN, SKIN_CYAN, HAIR} from '../../../../../shared/pixel/cast/civic-kit';
-import {makeBust, makeRoom, plane, bustHair, bustLanyard, BustState, CivicSpec, RoomFigSpec, Expr, Viseme, RoomLegs} from './civic2';
+import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
+import {makeBust3, makeRoom, plane, bustLanyard, BustState, BustSpec3, CivicSpec, RoomFigSpec, Expr, Viseme, RoomLegs} from './civic2';
 import {sheetPlate, sheetBust, sheetRoom} from './sheet';
 import {tiny} from '../kit';
 import type {ArtAsset} from '../asset';
@@ -21,11 +21,18 @@ export const EKIEL_DEFAULT: EkielBust = {mouth: 'rest', expr: 'squint', lanyard:
 const NAVY = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5, PAL.N7];
 const TEE = [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6];
 const SANDY = [PAL.B1, PAL.B3, PAL.B4, PAL.W4, PAL.W5, PAL.W7];
-const mkSpec = (light: 'room' | 'screen'): CivicSpec => ({
-  head: {long: 2, jaw: 1},
+// his own head: lean and angular (high cheekbones, hollow cheeks, a long narrow jaw to a small pointed chin), a straight
+// nose, the brow ridge heavy over his eyes, and THE SQUINT as his resting face (the narrow eye: one row open, the lower
+// lid up, crow's feet), sandy tousled hair
+const mkSpec = (light: 'room' | 'screen'): BustSpec3 => ({
+  head: {yaw: 22, at: [57, 54], scale: 1.05, cranium: [19, 25, 23], cheekW: 14.5, jawW: 13, jawY: 19, chinY: 35, chinW: 4.5, chinZ: 12.5, chinH: 4, cheekbone: 1.4, full: 0.1, brow: 2.4, socket: 1.2,
+    nose: {tipY: 14, proj: 7, wing: 3.6, bridge: 2}, mouthY: 24, lips: 0.7, muzzle: 13, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'tousled', thick: 3.4, line: -17, side: -1},
+    // the 2023 night: his own skin, the screen's cyan only on the lit side (the screen is in front of him, camera-left)
+    skin: light === 'screen' ? [PAL.S0, PAL.S1, PAL.S2, PAL.K2, PAL.K3, PAL.K4] : SKIN.light,
+    hairRamp: light === 'screen' ? [PAL.B0, PAL.B1, PAL.B2, PAL.K1, PAL.K2, PAL.K3] : SANDY,
+    back: light === 'screen' ? {skin: PAL.S2, hair: PAL.B2} : {skin: PAL.S3, hair: PAL.W4}, key: light === 'screen' ? [-0.85, -0.1, 0.5] : undefined},
+  face: {eye: 'narrow', eyeW: 9, eyeH: 2, brow: 'straight', browCol: PAL.B2, mouthW: 9, age: 1, iris: light === 'screen' ? PAL.C3 : PAL.B3},
   torso: {kind: 'jacket'},
-  browCol: PAL.B2,
-  hair: () => bustHair('tousled'),
   extras: (s) => {
     const parts = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['parts']>;
     const adjust = [] as NonNullable<ReturnType<NonNullable<CivicSpec['extras']>>['adjust']>;
@@ -34,13 +41,15 @@ const mkSpec = (light: 'room' | 'screen'): CivicSpec => ({
     return {parts, adjust};
   },
   ramps: light === 'screen'
-    ? {skin: SKIN_CYAN.light, hair: [PAL.N1, PAL.C1, PAL.C2, PAL.K2, PAL.K3, PAL.K4], suit: [PAL.N0, PAL.N0, PAL.N1, PAL.C0, PAL.C1, PAL.C3], shirt: [PAL.N0, PAL.N1, PAL.N2, PAL.C1, PAL.C2, PAL.C3], cord: [PAL.N0, PAL.C2, PAL.C4, PAL.C5, PAL.C6, PAL.C7], badge: [PAL.N0, PAL.C3, PAL.C5, PAL.C7, PAL.C8, PAL.C9]}
-    : {skin: SKIN.light, hair: SANDY, suit: NAVY, shirt: TEE, cord: [PAL.N0, PAL.C2, PAL.C4, PAL.C5, PAL.C6, PAL.C7], badge: [PAL.N1, PAL.G3, PAL.G5, PAL.P1, PAL.P2, PAL.P2]},
-  backRamp: light === 'screen' ? {skin: PAL.K3, hair: PAL.C4, suit: PAL.C2} : {skin: PAL.S3, hair: PAL.W4, suit: PAL.N5},
+    ? {skin: [PAL.S0, PAL.S1, PAL.S2, PAL.K2, PAL.K3, PAL.K4], suit: [PAL.N0, PAL.N0, PAL.N1, PAL.C0, PAL.C1, PAL.C3], shirt: [PAL.N0, PAL.N1, PAL.N2, PAL.C1, PAL.C2, PAL.C3], cord: [PAL.N0, PAL.C2, PAL.C4, PAL.C5, PAL.C6, PAL.C7], badge: [PAL.N0, PAL.C3, PAL.C5, PAL.C7, PAL.C8, PAL.C9]}
+    : {skin: SKIN.light, suit: NAVY, shirt: TEE, cord: [PAL.N0, PAL.C2, PAL.C4, PAL.C5, PAL.C6, PAL.C7], badge: [PAL.N1, PAL.G3, PAL.G5, PAL.P1, PAL.P2, PAL.P2]},
+  backRamp: light === 'screen' ? {skin: PAL.K3, suit: PAL.C2} : {skin: PAL.S3, suit: PAL.N5},
   key: light === 'screen' ? [-1, 0.1] : undefined,
+  // his smile is dry: the mouth's near corner only, the squint stays
+  expr: {smile: {eye: 'open', mouth: 'proud', pose: {cheekUp: 0.6}}, squint: {eye: 'squint', brow: 'knit', mouth: 'flat', pose: {cheekUp: 0.8}}},
 });
-const bRoom = makeBust<EkielBust>(mkSpec('room'));
-const bScreen = makeBust<EkielBust>(mkSpec('screen'));
+const bRoom = makeBust3<EkielBust>(mkSpec('room'));
+const bScreen = makeBust3<EkielBust>(mkSpec('screen'));
 export const ekielBust = (s: Partial<EkielBust> & {light?: 'room' | 'screen'} = {}) => {
   const {light, ...rest} = s;
   const st = {...EKIEL_DEFAULT, ...rest};

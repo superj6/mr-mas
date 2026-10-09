@@ -107,7 +107,17 @@ export const mas08 = (pose: MasStagePose, collars: 0 | 1 | 2, walk: -1 | 0 | 1 |
   const key = JSON.stringify([pose, collars, walk]);
   let img = cache.get(key);
   if (!img) {
-    const base = withCollars(masStage(pose), collars);
+    const base0 = withCollars(masStage(pose), collars);
+    // (Ep2's copy: the stage drawing's mouth, a two-pixel dark stroke running back up the cheek, read as a moustache
+    // at this size and in the 2008 palette. The mouth is redrawn at the front of the face: a small open grin (teeth,
+    // the back corner, a crease) when he smiles, a short closed line at rest.)
+    const base = {...base0, c: Int32Array.from(base0.c)};
+    const at = (x: number, y: number) => base.c[y * base.w + x], put = (x: number, y: number, v: number) => { base.c[y * base.w + x] = v; };
+    if (at(19, 17) === PAL.S1 && at(17, 18) === PAL.S1) {
+      put(19, 17, PAL.S2); put(20, 17, PAL.S2); put(19, 18, PAL.S2);
+      if (pose.mouth === 'smile') { put(16, 18, PAL.P2); put(17, 18, PAL.P2); put(18, 18, PAL.S1); put(18, 17, PAL.S3); }
+      else put(18, 18, PAL.S3);
+    }
     if (walk < 0) img = base;
     else {
       img = {w: M08_W, h: M08_H, c: new Int32Array(M08_W * M08_H).fill(-1)};
