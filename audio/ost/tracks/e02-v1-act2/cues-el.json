@@ -1,0 +1,1771 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e02-v1-act2-el",
+ "segment": "act2",
+ "file": "audio/ost/tracks/e02-v1-act2/render/music-el.wav",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act2.json",
+ "length_s": 279.0,
+ "frames": 6696,
+ "samples": 13392000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "the segment's own clock: 0 = its first frame",
+ "level": "underscore (each cue at its engine master: E02-06 -20, the walk-on -24 (through a wall), BLUEPRINT -18 (featured), the demo and pad -19 LUFS-I), dry of dialogue; the mixer ducks it (E02-06 7 dB, E02-07 8; `sections` duck_db: the walk-on 5, BLUEPRINT 4)",
+ "cues": [
+  {
+   "cue": "e02-06-dark-room-spring",
+   "key": "darkroom",
+   "start": 0.0,
+   "end": 44.6,
+   "what": "dry amusement (the swipe, the lineup) -> a small thrill (the Monday, the line cocky) -> a quiet click of power (the call; CONFIRMED)",
+   "family": "P01 DARK ROOM (the Water Line, low) + a news-desk sting (MM-21)",
+   "render": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-06-dark-room-spring-underscore.wav",
+   "laid_at_s": -2.5,
+   "level": {
+    "lufs_i": -20.01,
+    "st_p95": -16.9,
+    "st_max": -16.01,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -20.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.02,
+      "lra": 7.15,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -22.61,
+      "crest_db": 19.46,
+      "seconds": 48.8
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.257,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 2,
+     "of": 2,
+     "worst_ms": 3.0
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 108,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "THE WATER LINE whole (F F F G-F | C F), the chip on its nudge; then cocky (the nudge twice: OST §2.2, Ep2-3)",
+    "the open fifth at the cadence (no third)",
+    "one chip note (CONFIRMED)",
+    "the news-desk sting (an original media bed through the monitor)"
+   ],
+   "events": {
+    "toast": 2.186,
+    "swipe": 6.725,
+    "sting": 8.583,
+    "snap": 25.0,
+    "ring": 29.128,
+    "confirmed": 37.722,
+    "invite": 39.297,
+    "accept": 41.315,
+    "out": 44.0,
+    "j_walkon": 43.0,
+    "H": [
+     [
+      0.0,
+      "Fm9"
+     ],
+     [
+      4.792,
+      "Dbmaj9"
+     ],
+     [
+      7.917,
+      "Bbm9"
+     ],
+     [
+      13.75,
+      "Gbmaj7#11"
+     ],
+     [
+      20.625,
+      "Bbm9"
+     ],
+     [
+      25.0,
+      "F5"
+     ],
+     [
+      28.542,
+      "Fped"
+     ],
+     [
+      38.125,
+      "Dbmaj9#11"
+     ]
+    ],
+    "s1": 0.0,
+    "s2": 22.5,
+    "sting_end": 10.046
+   },
+   "sync": [
+    {
+     "t": 0.0,
+     "what": "Fm9: the arrival: the Water Line whole on the felt from the first frame (the copy came first)",
+     "hit": false
+    },
+    {
+     "t": 0.02,
+     "what": "DESIGNED HIT: the Water Line's first F on the act's first frame: Act One's copy finished his line; now the original, whole (the felt, swung; the chip on the nudge)",
+     "hit": true
+    },
+    {
+     "t": 4.792,
+     "what": "Dbmaj9: statement 1 pushes into D-flat on a swung and; the RULEBOOK is on screen and his swipe is the SFX's: nothing moves for it",
+     "hit": false
+    },
+    {
+     "t": 7.917,
+     "what": "Bbm9: the news site (on a swung and, 0.17 s before the cut): the lineup; the monitor's sting; the headline plays dry",
+     "hit": false
+    },
+    {
+     "t": 8.583,
+     "what": "the news site's own desk sting, tiny, through the monitor's speaker (B-flat sus4, no third: the monitor's, not the score's; under the lineup)",
+     "hit": false
+    },
+    {
+     "t": 13.75,
+     "what": "Gbmaj7#11: after the headline, before V.O. 4 (\"the one after runs on ours.\"): G-flat lydian, held; the felt carries the V.O., nothing attacks under it",
+     "hit": false
+    },
+    {
+     "t": 20.625,
+     "what": "Bbm9: the calendar (on the beat, 0.38 s before the cut): the bed for statement 2",
+     "hit": false
+    },
+    {
+     "t": 22.5,
+     "what": "statement 2, a little cocky: the nudge twice (G-F G-F), the chip on both nudges (his launch dragged onto Monday)",
+     "hit": false
+    },
+    {
+     "t": 25.0,
+     "what": "F5: statement 2's settle on an open fifth: B-flat minor to F with no third (the block snaps onto Monday on its downbeat: the SFX owns the snap)",
+     "hit": false
+    },
+    {
+     "t": 25.0,
+     "what": "the block snaps onto Monday on the settle's downbeat (the SFX owns the snap; the felt's C4 under it is the line's own fifth below)",
+     "hit": false
+    },
+    {
+     "t": 28.542,
+     "what": "Fped: the call (on a swung and, 0.25 s before the cut): the Water Line thins to its pedal (the felt rests; the strings hold F and C under his one sentence of terms)",
+     "hit": false
+    },
+    {
+     "t": 37.722,
+     "what": "DESIGNED HIT: ONE chip note on CONFIRMED (F5, the 50 % square; the score plays the claimed ui_confirm_chip): a quiet click of power",
+     "hit": true
+    },
+    {
+     "t": 38.125,
+     "what": "Dbmaj9#11: the invite (on the beat, 0.50 s before the cut): a quiet click of power; the Monday square lit",
+     "hit": false
+    },
+    {
+     "t": 41.875,
+     "what": "after he accepts: the nudge alone (G-F) on the felt, the chip on its G: his button",
+     "hit": false
+    },
+    {
+     "t": 43.0,
+     "what": "the walk-on tune comes through the wall (E02-07, J 1.0 s); the dark room's D-flat rings out under it",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-07a-one-word-walk-on",
+   "key": "walkon",
+   "start": 43.0,
+   "end": 94.85,
+   "what": "nervous fun: the show about to start, heard through a wall",
+   "family": "ROOM COLOURS: the demo's walk-on (diegetic, the stage's PA through the wings' wall)",
+   "render": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07a-one-word-walk-on-underscore.wav",
+   "laid_at_s": 42.25,
+   "level": {
+    "lufs_i": -23.96,
+    "st_p95": -23.19,
+    "st_max": -22.88,
+    "true_peak_dbtp": -4.02
+   },
+   "target_lufs": -24.0,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -24.0,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -24.0,
+      "lra": 1.78,
+      "true_peak_db": -10.32,
+      "peak_db": -10.32,
+      "rms_db": -25.87,
+      "crest_db": 15.55,
+      "seconds": 53.45
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.011,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": null,
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 783,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "ONE WORD (the demo's walk-on): the call (F G A-flat C B-flat A-flat B-flat C), the answer (D C B-flat A-flat B-flat G F), the bridge; the chip echo at each phrase end"
+   ],
+   "events": {
+    "W0": 94.75,
+    "j_in": 43.0,
+    "first": 42.25,
+    "end": 94.9,
+    "form": [
+     "intro0",
+     "intro1",
+     "A0",
+     "A1",
+     "A2",
+     "A3",
+     "A0",
+     "A1",
+     "A2",
+     "A3",
+     "B0",
+     "B1",
+     "B2",
+     "B3",
+     "A0",
+     "A1",
+     "A2",
+     "A3",
+     "call10",
+     "vamp0",
+     "vamp1"
+    ]
+   },
+   "sync": [
+    {
+     "t": 43.0,
+     "what": "the walk-on tune through the wall (J 1.0 s under the invite): the stage band warming up, low-passed, mono, a slap off the corridor",
+     "hit": false
+    },
+    {
+     "t": 47.25,
+     "what": "the tune (ONE WORD): the call climbs the step cell, the chip echoes each phrase's end",
+     "hit": false
+    },
+    {
+     "t": 89.75,
+     "what": "the dominant vamp (C7sus) under the five hellos, into the waltz",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-07b-one-word-blueprint",
+   "key": "blueprint",
+   "start": 94.72,
+   "end": 140.502,
+   "what": "the explainer's lean-in: accurate, cheerful, precise; a twinge at the empty bubble",
+   "family": "P14 BLUEPRINT: the chip music-box waltz (3/4 on the 96 beat), straight",
+   "render": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07b-one-word-blueprint-underscore.wav",
+   "laid_at_s": 92.25,
+   "level": {
+    "lufs_i": -18.53,
+    "st_p95": -15.58,
+    "st_max": -15.0,
+    "true_peak_dbtp": -3.15
+   },
+   "target_lufs": -18.5,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -18.5,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -18.54,
+      "lra": 6.77,
+      "true_peak_db": -3.15,
+      "peak_db": -3.16,
+      "rms_db": -21.11,
+      "crest_db": 17.96,
+      "seconds": 48.502
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.144,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 1,
+     "of": 1,
+     "worst_ms": 4.0
+    },
+    "warnings": [
+     "underscore short-term p95 -15.59 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+    ]
+   },
+   "note_qa": {
+    "notes": 288,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "ONE WORD as a music box (one tune in three rooms)",
+    "the step cell on the plan's three steps (F G A-flat)",
+    "the stuck loop and the tape-stop (THE PLAN always breaks)"
+   ],
+   "events": {
+    "W0": 94.75,
+    "zero": 140.452,
+    "stuck": 137.875,
+    "chords": {
+     "0": "F",
+     "1": "F",
+     "2": "Bb",
+     "3": "Bb",
+     "4": "C",
+     "5": "D",
+     "6": "D",
+     "7": "C",
+     "8": "F",
+     "9": "G",
+     "10": "Ab",
+     "11": "Ab",
+     "12": "G",
+     "13": "G",
+     "14": "F",
+     "15": "G",
+     "16": "Bb",
+     "17": "C",
+     "18": "Ab",
+     "19": "Bb",
+     "20": "Bb",
+     "21": "F",
+     "22": "C",
+     "23": "C",
+     "24": "C"
+    },
+    "word": 94.75,
+    "before": 101.718,
+    "relay": 102.198,
+    "fell": 108.108,
+    "laugh_tag": 109.708,
+    "now": 111.385,
+    "gtp": 111.765,
+    "step1": 121.287,
+    "step2": 123.922,
+    "step3": 125.102,
+    "sheet": 128.458,
+    "brk": 133.875,
+    "tear": 139.215,
+    "line": [
+     [
+      94.75,
+      "F4"
+     ],
+     [
+      95.375,
+      "G4"
+     ],
+     [
+      96.0,
+      "Ab4"
+     ],
+     [
+      96.625,
+      "C5"
+     ],
+     [
+      101.625,
+      "Bb4"
+     ],
+     [
+      102.25,
+      "Ab4"
+     ],
+     [
+      108.188,
+      "G4"
+     ],
+     [
+      109.75,
+      "F4"
+     ],
+     [
+      111.312,
+      "Bb4"
+     ],
+     [
+      111.625,
+      "C5"
+     ],
+     [
+      117.25,
+      "D5"
+     ],
+     [
+      117.875,
+      "C5"
+     ],
+     [
+      121.312,
+      "F4"
+     ],
+     [
+      123.812,
+      "G4"
+     ],
+     [
+      125.062,
+      "Ab4"
+     ],
+     [
+      126.938,
+      "Bb4"
+     ],
+     [
+      127.25,
+      "Ab4"
+     ],
+     [
+      127.875,
+      "Bb4"
+     ],
+     [
+      128.5,
+      "C5"
+     ],
+     [
+      134.125,
+      "D5"
+     ],
+     [
+      134.75,
+      "C5"
+     ],
+     [
+      135.375,
+      "Bb4"
+     ],
+     [
+      136.0,
+      "Ab4"
+     ],
+     [
+      136.625,
+      "Bb4"
+     ],
+     [
+      137.25,
+      "G4"
+     ],
+     [
+      137.875,
+      "Bb4"
+     ],
+     [
+      138.5,
+      "G4"
+     ],
+     [
+      139.125,
+      "Bb4"
+     ]
+    ],
+    "dropped": []
+   },
+   "sync": [
+    {
+     "t": 94.75,
+     "what": "DESIGNED HIT: THE PLAN's waltz on its downbeat, 0.25 s before the cut: the walk-on's tune, now a chip music box in 3/4 (the panel's last square becomes the grid's first cell)",
+     "hit": true
+    },
+    {
+     "t": 94.75,
+     "what": "the line: F4 (the waltz on its downbeat: the walk-on tune's head as a music box (F G A-flat C))",
+     "hit": false
+    },
+    {
+     "t": 101.625,
+     "what": "the line: Bb4 (BEFORE)",
+     "hit": false
+    },
+    {
+     "t": 102.25,
+     "what": "the line: Ab4 (the relay drawn (soft, under her line))",
+     "hit": false
+    },
+    {
+     "t": 108.188,
+     "what": "the line: G4 (\"fell out\": the labels drop through the grate (soft))",
+     "hit": false
+    },
+    {
+     "t": 109.75,
+     "what": "the line: F4 (the [laughter] tag at the bottom of the grate)",
+     "hit": false
+    },
+    {
+     "t": 111.312,
+     "what": "the line: Bb4 (NOW)",
+     "hit": false
+    },
+    {
+     "t": 111.625,
+     "what": "the line: C5 (GTP-4o: one box)",
+     "hit": false
+    },
+    {
+     "t": 117.25,
+     "what": "the line: D5 (the answer begins in the gap)",
+     "hit": false
+    },
+    {
+     "t": 121.312,
+     "what": "the line: F4 (step 1: 232 MS (the step cell begins: F))",
+     "hit": false
+    },
+    {
+     "t": 123.812,
+     "what": "the line: G4 (step 2: MON (G))",
+     "hit": false
+    },
+    {
+     "t": 125.062,
+     "what": "the line: Ab4 (step 3: $0 (A-flat))",
+     "hit": false
+    },
+    {
+     "t": 126.938,
+     "what": "the line: Bb4 (the tiny crowd floods in: B-flat A-flat B-flat)",
+     "hit": false
+    },
+    {
+     "t": 128.5,
+     "what": "the line: C5 (the full sheet, the tiny stage: the leap lands on C)",
+     "hit": false
+    },
+    {
+     "t": 134.125,
+     "what": "THE BREAK: the answer starts under the empty bubble (D C B-flat | A-flat B-flat G ...)",
+     "hit": false
+    },
+    {
+     "t": 137.875,
+     "what": "its last two beats stick and loop (B-flat G, the chip's chord on every beat, no bass): it never reaches F",
+     "hit": false
+    },
+    {
+     "t": 139.215,
+     "what": "the tear: a TAPE-STOP (MM-07's curve), to nothing a quarter second before the demo's push",
+     "hit": false
+    }
+   ]
+  },
+  {
+   "cue": "e02-07c-one-word-the-demo",
+   "key": "demo",
+   "start": 140.7,
+   "end": 278.208,
+   "what": "the biggest laughs, scored straight (no hit on any punchline) -> the coverage swinging away while Rima holds her mark -> sudden quiet -> a small dry win, closed -> separately, a loss and a warmth that hurts",
+   "family": "SET-PIECE SWING, light (the walk-on on stage) -> the demo's pad -> the Door -> DARK ROOM -> a stop",
+   "render": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07c-one-word-the-demo-underscore.wav",
+   "laid_at_s": 135.92,
+   "level": {
+    "lufs_i": -20.52,
+    "st_p95": -18.07,
+    "st_max": -16.94,
+    "true_peak_dbtp": -3.35
+   },
+   "target_lufs": -20.5,
+   "engine_qa": {
+    "masters": {
+     "target_lufs": -20.5,
+     "ceiling_dbtp": -3.0,
+     "comp": {
+      "thresh_db": -28,
+      "ratio": 1.3,
+      "att_ms": 40.0,
+      "rel_ms": 350.0
+     },
+     "dialog_pocket": {
+      "f": 2500.0,
+      "db": -2.0,
+      "q": 0.7
+     },
+     "measured": {
+      "lufs": -20.5,
+      "lra": 8.07,
+      "true_peak_db": -3.35,
+      "peak_db": -3.4,
+      "rms_db": -22.62,
+      "crest_db": 19.22,
+      "seconds": 142.8883
+     }
+    },
+    "f_major_ok": true,
+    "f_major_ok_written": true,
+    "f_major_worst": 0.445,
+    "knee_whole": 0,
+    "knee_completion": 0,
+    "hit_check": {
+     "within_10ms": 1,
+     "of": 1,
+     "worst_ms": 3.0
+    },
+    "warnings": []
+   },
+   "note_qa": {
+    "notes": 551,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "motifs": [
+    "ONE WORD on stage (the chip lead in the pockets, the violins an octave under; the echo; brass taps)",
+    "the tune's own chip echo under the three-part \"one wo-o-ord.\" (THE COPY is out of the demo, R2)",
+    "THE DOOR, its first note missing (D-flat C | G, held: the #4), through the door",
+    "his Water Line's first bar, cut on the downbeat before its settle"
+   ],
+   "events": {
+    "S0": 175.295,
+    "push": 140.712,
+    "beat_after": 140.92,
+    "stop": 278.208,
+    "ended": 208.133,
+    "hold": 202.333,
+    "minimise": 257.267,
+    "post": 214.633,
+    "door": 248.45,
+    "news": 252.667,
+    "phone": 258.767,
+    "black": 251.667,
+    "home": 252.667,
+    "face": 276.208,
+    "hold_t": 202.17,
+    "end_t": 207.795,
+    "pad": [
+     [
+      207.795,
+      "Fm11"
+     ],
+     [
+      218.42,
+      "Dbmaj9#11"
+     ],
+     [
+      223.42,
+      "Bbm9"
+     ],
+     [
+      238.837,
+      "Abmaj9"
+     ],
+     [
+      244.67,
+      "Dbmaj9#11"
+     ],
+     [
+      257.795,
+      "Fped"
+     ]
+    ],
+    "bars": [
+     {
+      "t0": 140.92,
+      "sec": "A",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 143.42,
+      "sec": "A",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "Bb13"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 145.92,
+      "sec": "A",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "Abmaj9#11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 148.42,
+      "sec": "A",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ],
+       [
+        2,
+        "C7sus"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 150.92,
+      "sec": "A",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 153.42,
+      "sec": "A",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "Bb13"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 155.92,
+      "sec": "A",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "Abmaj9#11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 158.42,
+      "sec": "A",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ],
+       [
+        2,
+        "C7sus"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 160.92,
+      "sec": "B",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Dbmaj9#11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 163.42,
+      "sec": "B",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "Bbm9"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 165.92,
+      "sec": "B",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "Eb9"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 168.42,
+      "sec": "B",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "C7sus"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 170.92,
+      "sec": "A",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 173.42,
+      "sec": "A",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "C7sus"
+       ]
+      ],
+      "sung": true
+     },
+     {
+      "t0": 175.92,
+      "sec": "A",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "C7sus"
+       ]
+      ],
+      "sung": true
+     },
+     {
+      "t0": 178.42,
+      "sec": "A",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 180.92,
+      "sec": "A",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 183.42,
+      "sec": "A",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "Bb13"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 185.92,
+      "sec": "A",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "Abmaj9#11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 188.42,
+      "sec": "A",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ],
+       [
+        2,
+        "C7sus"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 190.92,
+      "sec": "B",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Dbmaj9#11"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 193.42,
+      "sec": "B",
+      "i": 1,
+      "chords": [
+       [
+        0,
+        "Bbm9"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 195.92,
+      "sec": "B",
+      "i": 2,
+      "chords": [
+       [
+        0,
+        "Eb9"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 198.42,
+      "sec": "B",
+      "i": 3,
+      "chords": [
+       [
+        0,
+        "C7sus"
+       ]
+      ],
+      "sung": false
+     },
+     {
+      "t0": 200.92,
+      "sec": "A",
+      "i": 0,
+      "chords": [
+       [
+        0,
+        "Fm11"
+       ]
+      ],
+      "sung": false
+     }
+    ],
+    "lead": [
+     {
+      "bar": 0,
+      "t": 140.92000000000002,
+      "n": 5,
+      "sec": "A",
+      "i": 0
+     },
+     {
+      "bar": 6,
+      "t": 155.92000000000002,
+      "n": 5,
+      "sec": "A",
+      "i": 2
+     },
+     {
+      "bar": 16,
+      "t": 180.92000000000002,
+      "n": 3,
+      "sec": "A",
+      "i": 0
+     }
+    ],
+    "frag": [
+     [
+      276.333,
+      "F4"
+     ],
+     [
+      276.958,
+      "F4"
+     ],
+     [
+      277.583,
+      "G4"
+     ],
+     [
+      278.0,
+      "F4"
+     ]
+    ],
+    "blimp": [
+     216.84166666666667,
+     219.34166666666667,
+     221.84166666666667,
+     224.34166666666667
+    ]
+   },
+   "sync": [
+    {
+     "t": 140.712,
+     "what": "DESIGNED HIT: the demo's push (on a swung and, 0.29 s before the cut to the stage): the walk-on's band on stage, the tape stopped a quarter second before",
+     "hit": true
+    },
+    {
+     "t": 140.92,
+     "what": "the lead in the pocket: A bar 1 (5 of 6 notes; the chip, the violins an octave under)",
+     "hit": false
+    },
+    {
+     "t": 155.92,
+     "what": "the lead in the pocket: A bar 3 (5 of 6 notes; the chip, the violins an octave under)",
+     "hit": false
+    },
+    {
+     "t": 175.295,
+     "what": "\"one wo-o-ord.\" (three mouths, on the band's beat): the band holds a C pedal under it",
+     "hit": false
+    },
+    {
+     "t": 176.962,
+     "what": "the tune's own chip echo (B-flat C) under the held \"-ord\": the echo every call has had, not a copy of the voice",
+     "hit": false
+    },
+    {
+     "t": 180.92,
+     "what": "the lead in the pocket: A bar 1 (3 of 6 notes; the chip, the violins an octave under)",
+     "hit": false
+    },
+    {
+     "t": 202.17,
+     "what": "Rima's hold (on the beat, 0.16 s before the cut): the band thins to one held chord (D-flat maj9(#11)): the house waits on her; nothing under \"...and that's the demo.\" moves",
+     "hit": false
+    },
+    {
+     "t": 207.795,
+     "what": "the pad: Fm11: ENDED: the rhythm stops; the strings and the bowed vibes hold the pad (dry under the post)",
+     "hit": false
+    },
+    {
+     "t": 218.42,
+     "what": "the pad: Dbmaj9#11: the blimp rises over the emptying house; the coverage swings away (the pad moves, once a two bars; no hit on the blimp's steps)",
+     "hit": false
+    },
+    {
+     "t": 223.42,
+     "what": "the pad: Bbm9: Rima holds her mark",
+     "hit": false
+    },
+    {
+     "t": 238.837,
+     "what": "the pad: Abmaj9: the house lights up full; her one breath, and she walks off with the clicker (her own close: warm)",
+     "hit": false
+    },
+    {
+     "t": 244.67,
+     "what": "the pad: Dbmaj9#11: the front row: the empty seat; D-flat for the Door; held across the black into the afternoon",
+     "hit": false
+    },
+    {
+     "t": 248.45,
+     "what": "DESIGNED HIT: THE DOOR on the chrome's toast, its first note missing (D-flat, C, then G held: its #4, no cadence), \"through the door\" (low-passed, one side, the room's reverb only); the score plays the claimed door_motif_note",
+     "hit": false
+    },
+    {
+     "t": 251.667,
+     "what": "the beat of black: the pad holds across it (one sequence); the Door's G rings into it",
+     "hit": false
+    },
+    {
+     "t": 252.667,
+     "what": "the news's tiny bed (Elgoog's keynote recapped under OMNI) through his monitor, under the pad; the score plays the claimed news_bed_tiny",
+     "hit": false
+    },
+    {
+     "t": 252.967,
+     "what": "his dark room: the felt's F within a bar of the home shot (OST rule 7)",
+     "hit": false
+    },
+    {
+     "t": 257.267,
+     "what": "he minimises it: the news's bed stops (the window closed); the pad goes on",
+     "hit": false
+    },
+    {
+     "t": 257.795,
+     "what": "the pad: Fped: he minimises the news; a beat; the pad thins to its pedal under Alyi's post (and his reply, and V.O. 6): the record plays dry",
+     "hit": false
+    },
+    {
+     "t": 276.333,
+     "what": "on his face: his Water Line begins (F4 F4 G4 F4), the chip on its nudge",
+     "hit": false
+    },
+    {
+     "t": 278.208,
+     "what": "DESIGNED STOP: the cue stops mid-phrase ON THE DOWNBEAT where the settle (C, then F) would land; black: the midpoint act-out (THE CLOCK's first tick is Act Three's, J 0.8 s)",
+     "hit": false
+    }
+   ]
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 140.402,
+   "t1": 140.7,
+   "why": "the tear's light, a beat (10.07 -> 11.01): THE PLAN's tape-stop reaches nothing a quarter second before the demo's push (the plan: \"a tape-stop into the demo cue\"); the blueprint has no room bed, the stems put a faint room tone under it"
+  },
+  {
+   "t0": 278.208,
+   "t1": 279.0,
+   "why": "THE MIDPOINT ACT-OUT (12.08): the cue stops mid-phrase on the downbeat after 2 s on his face (the plan: \"the designed stop, mid-phrase on the downbeat\"); the dark room's room tone under the black; the re-entry is Act Three's THE CLOCK, its first tick J 0.8 s under this black"
+  }
+ ],
+ "designed_hit": [
+  {
+   "t": 0.02,
+   "cue": "e02-06-dark-room-spring",
+   "what": "DESIGNED HIT: the Water Line's first F on the act's first frame: Act One's copy finished his line; now the original, whole (the felt, swung; the chip on the nudge)",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 37.722,
+   "cue": "e02-06-dark-room-spring",
+   "what": "DESIGNED HIT: ONE chip note on CONFIRMED (F5, the 50 % square; the score plays the claimed ui_confirm_chip): a quiet click of power",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 94.75,
+   "cue": "e02-07b-one-word-blueprint",
+   "what": "DESIGNED HIT: THE PLAN's waltz on its downbeat, 0.25 s before the cut: the walk-on's tune, now a chip music box in 3/4 (the panel's last square becomes the grid's first cell)",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 140.712,
+   "cue": "e02-07c-one-word-the-demo",
+   "what": "DESIGNED HIT: the demo's push (on a swung and, 0.29 s before the cut to the stage): the walk-on's band on stage, the tape stopped a quarter second before",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  },
+  {
+   "t": 248.45,
+   "cue": "e02-07c-one-word-the-demo",
+   "what": "DESIGNED HIT: THE DOOR on the chrome's toast, its first note missing (D-flat, C, then G held: its #4, no cadence), \"through the door\" (low-passed, one side, the room's reverb only); the score plays the claimed door_motif_note",
+   "exempt": "a designed attack or entry on a story beat; keep its attack"
+  }
+ ],
+ "claims_sfx": [
+  "8.02:news_desk_sting",
+  "8.06:ui_confirm_chip",
+  "12.03:door_motif_note",
+  "12.05:news_bed_tiny"
+ ],
+ "sections": [
+  {
+   "section": "e02-06-dark-room-spring: 1 the arrival: the Water Line whole (Fm9 -> D-flat), the RULEBOOK swiped",
+   "start": 0.0,
+   "end": 7.917
+  },
+  {
+   "section": "e02-06-dark-room-spring: 2 the lineup: B-flat minor, the monitor's sting, the headline dry",
+   "start": 7.917,
+   "end": 13.75
+  },
+  {
+   "section": "e02-06-dark-room-spring: 3 V.O. 4: G-flat lydian held (the felt alone)",
+   "start": 13.75,
+   "end": 22.5
+  },
+  {
+   "section": "e02-06-dark-room-spring: 4 the calendar: the Water Line cocky; its settle on an open fifth; V.O. 5 inside it",
+   "start": 22.5,
+   "end": 28.542
+  },
+  {
+   "section": "e02-06-dark-room-spring: 5 the call: thin to the pedal; one chip note on CONFIRMED",
+   "start": 28.542,
+   "end": 38.125
+  },
+  {
+   "section": "e02-06-dark-room-spring: 6 the invite: D-flat, the nudge as his button; out under the walk-on",
+   "start": 38.125,
+   "end": 44.6
+  },
+  {
+   "section": "e02-07a-one-word-walk-on: the walk-on through the wall: intro, A A B A",
+   "start": 42.25,
+   "end": 87.25
+  },
+  {
+   "section": "e02-07a-one-word-walk-on: the walk-on: the call's first bar, the dominant vamp under the hellos",
+   "start": 87.25,
+   "end": 94.9
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: the word: the head as a music box (F G A-flat C); under \"Omni.\"",
+   "start": 94.75,
+   "end": 101.418
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: the diagram: BEFORE (the relay's pizzicato), the grate, [laughter]",
+   "start": 101.418,
+   "end": 110.985
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: NOW: one model (the sul-tasto pad); the answer's head",
+   "start": 110.985,
+   "end": 120.687
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: the plan: the three steps on F G A-flat; the tiny crowd",
+   "start": 120.687,
+   "end": 128.058
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: the tiny stage: the leap to C; her last sentence",
+   "start": 128.058,
+   "end": 133.875
+  },
+  {
+   "section": "e02-07b-one-word-blueprint: the break: the answer sticks; the tape-stop",
+   "start": 133.875,
+   "end": 140.452
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: A the push; the walk-on on stage; Rima's welcome (the band under her)",
+   "start": 140.712,
+   "end": 157.667
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: B \"keep your answers short\" ... \"one wo-o-ord.\" (the C pedal; the chip echo)",
+   "start": 157.667,
+   "end": 180.75
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: C \"It's live...\" ... \"It's free!\" (no hit on any laugh)",
+   "start": 180.75,
+   "end": 202.17
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: D Rima's hold and close: one held chord",
+   "start": 202.17,
+   "end": 207.795
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: E ENDED: the pad, dry under the post; the blimp; the engineer",
+   "start": 207.795,
+   "end": 238.837
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: F the house lights up: Rima's close; the front row; THE DOOR; the black",
+   "start": 238.837,
+   "end": 252.667
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: G the afternoon: the felt; the news's bed; the pedal under the posts and V.O. 6",
+   "start": 252.667,
+   "end": 276.333
+  },
+  {
+   "section": "e02-07c-one-word-the-demo: H his face: the Water Line begins; THE STOP on the downbeat",
+   "start": 276.333,
+   "end": 278.208
+  },
+  {
+   "section": "e02-07a: the walk-on through the wall (a diegetic source, already low-passed and quiet)",
+   "start": 43.0,
+   "end": 94.75,
+   "duck_db": 5.0,
+   "duck_why": "the PA is behind a wall (nothing above 1.5 kHz) and rendered at -24: 5 dB under the quick talk keeps it a presence, not a hole"
+  },
+  {
+   "section": "e02-07b: BLUEPRINT (THE PLAN, featured)",
+   "start": 94.75,
+   "end": 140.452,
+   "duck_db": 4.0,
+   "duck_why": "P14: featured -16, -20 under the blueprint's lines; the cue already thins its line under her voice"
+  }
+ ],
+ "real_lines": [],
+ "record_on_screen": [
+  {
+   "t0": 10.383,
+   "t1": 13.283,
+   "text": "…TAKES AIM AT MAS, TASYA AND RADNUS…"
+  },
+  {
+   "t0": 214.733,
+   "t1": 216.533,
+   "text": "her"
+  },
+  {
+   "t0": 259.067,
+   "t1": 262.567,
+   "text": "After almost a decade, I have made the decision "
+  },
+  {
+   "t0": 262.967,
+   "t1": 265.067,
+   "text": "…I will miss everyone dearly."
+  },
+  {
+   "t0": 265.65,
+   "t1": 276.2,
+   "text": "ALYI and NOPEAI are going to part ways. This is "
+  }
+ ],
+ "prelap": null,
+ "ringout": null,
+ "prelap_note": "none: the Water Line starts whole on the act's first frame (a designed hit, so the mix keeps its attack); the J under act-out 1's black is carried by Act One's ring-out (THE COPY's last F)",
+ "measured": {
+  "length_s": 279.0,
+  "samples": 13392000,
+  "frames": 6696,
+  "exact": true,
+  "whole": {
+   "lufs_i": -20.46,
+   "st_p95": -17.17,
+   "st_max": -14.71,
+   "true_peak_dbtp": -3.15
+  },
+  "cues": {
+   "e02-06-dark-room-spring": {
+    "lufs_i": -20.01,
+    "st_p95": -16.9,
+    "st_max": -16.01,
+    "true_peak_dbtp": -3.15
+   },
+   "e02-07a-one-word-walk-on": {
+    "lufs_i": -23.96,
+    "st_p95": -23.19,
+    "st_max": -22.88,
+    "true_peak_dbtp": -4.02
+   },
+   "e02-07b-one-word-blueprint": {
+    "lufs_i": -18.53,
+    "st_p95": -15.58,
+    "st_max": -15.0,
+    "true_peak_dbtp": -3.15
+   },
+   "e02-07c-one-word-the-demo": {
+    "lufs_i": -20.52,
+    "st_p95": -18.07,
+    "st_max": -16.94,
+    "true_peak_dbtp": -3.35
+   }
+  },
+  "rows": [
+   {
+    "section": "e02-06-dark-room-spring: 1 the arrival: the Water Line whole (Fm9 -> D-flat), the RULEBOOK swiped",
+    "start": 0.0,
+    "end": 7.92,
+    "lufs_i": -18.6,
+    "st_p95": -16.86,
+    "st_max": -16.64,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-06-dark-room-spring: 2 the lineup: B-flat minor, the monitor's sting, the headline dry",
+    "start": 7.92,
+    "end": 13.75,
+    "lufs_i": -20.34,
+    "st_p95": -18.63,
+    "st_max": -17.91,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-06-dark-room-spring: 3 V.O. 4: G-flat lydian held (the felt alone)",
+    "start": 13.75,
+    "end": 22.5,
+    "lufs_i": -20.24,
+    "st_p95": -18.68,
+    "st_max": -18.35,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-06-dark-room-spring: 4 the calendar: the Water Line cocky; its settle on an open fifth; V.O. 5 inside it",
+    "start": 22.5,
+    "end": 28.54,
+    "lufs_i": -17.91,
+    "st_p95": -16.18,
+    "st_max": -16.01,
+    "true_peak_dbtp": -3.66
+   },
+   {
+    "section": "e02-06-dark-room-spring: 5 the call: thin to the pedal; one chip note on CONFIRMED",
+    "start": 28.54,
+    "end": 38.12,
+    "lufs_i": -23.59,
+    "st_p95": -23.28,
+    "st_max": -23.17,
+    "true_peak_dbtp": -11.84
+   },
+   {
+    "section": "e02-06-dark-room-spring: 6 the invite: D-flat, the nudge as his button; out under the walk-on",
+    "start": 38.12,
+    "end": 44.6,
+    "lufs_i": -21.64,
+    "st_p95": -20.45,
+    "st_max": -20.45,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-07a-one-word-walk-on: the walk-on through the wall: intro, A A B A",
+    "start": 42.25,
+    "end": 87.25,
+    "lufs_i": -23.86,
+    "st_p95": -23.1,
+    "st_max": -22.82,
+    "true_peak_dbtp": -9.34
+   },
+   {
+    "section": "e02-07a-one-word-walk-on: the walk-on: the call's first bar, the dominant vamp under the hellos",
+    "start": 87.25,
+    "end": 94.9,
+    "lufs_i": -24.29,
+    "st_p95": -23.81,
+    "st_max": -23.42,
+    "true_peak_dbtp": -4.02
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: the word: the head as a music box (F G A-flat C); under \"Omni.\"",
+    "start": 94.75,
+    "end": 101.42,
+    "lufs_i": -18.96,
+    "st_p95": -17.14,
+    "st_max": -16.76,
+    "true_peak_dbtp": -4.02
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: the diagram: BEFORE (the relay's pizzicato), the grate, [laughter]",
+    "start": 101.42,
+    "end": 110.98,
+    "lufs_i": -19.87,
+    "st_p95": -18.85,
+    "st_max": -18.77,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: NOW: one model (the sul-tasto pad); the answer's head",
+    "start": 110.98,
+    "end": 120.69,
+    "lufs_i": -19.07,
+    "st_p95": -17.39,
+    "st_max": -17.31,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: the plan: the three steps on F G A-flat; the tiny crowd",
+    "start": 120.69,
+    "end": 128.06,
+    "lufs_i": -18.44,
+    "st_p95": -17.66,
+    "st_max": -17.05,
+    "true_peak_dbtp": -4.24
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: the tiny stage: the leap to C; her last sentence",
+    "start": 128.06,
+    "end": 133.88,
+    "lufs_i": -20.05,
+    "st_p95": -18.8,
+    "st_max": -18.52,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-07b-one-word-blueprint: the break: the answer sticks; the tape-stop",
+    "start": 133.88,
+    "end": 140.45,
+    "lufs_i": -15.76,
+    "st_p95": -14.92,
+    "st_max": -14.81,
+    "true_peak_dbtp": -3.15
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: A the push; the walk-on on stage; Rima's welcome (the band under her)",
+    "start": 140.71,
+    "end": 157.67,
+    "lufs_i": -18.53,
+    "st_p95": -17.72,
+    "st_max": -17.38,
+    "true_peak_dbtp": -3.35
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: B \"keep your answers short\" ... \"one wo-o-ord.\" (the C pedal; the chip echo)",
+    "start": 157.67,
+    "end": 180.75,
+    "lufs_i": -18.76,
+    "st_p95": -17.95,
+    "st_max": -17.8,
+    "true_peak_dbtp": -4.29
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: C \"It's live...\" ... \"It's free!\" (no hit on any laugh)",
+    "start": 180.75,
+    "end": 202.17,
+    "lufs_i": -19.24,
+    "st_p95": -18.57,
+    "st_max": -17.93,
+    "true_peak_dbtp": -4.28
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: D Rima's hold and close: one held chord",
+    "start": 202.17,
+    "end": 207.8,
+    "lufs_i": -21.1,
+    "st_p95": -20.41,
+    "st_max": -20.38,
+    "true_peak_dbtp": -8.11
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: E ENDED: the pad, dry under the post; the blimp; the engineer",
+    "start": 207.8,
+    "end": 238.84,
+    "lufs_i": -22.4,
+    "st_p95": -20.79,
+    "st_max": -20.59,
+    "true_peak_dbtp": -10.39
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: F the house lights up: Rima's close; the front row; THE DOOR; the black",
+    "start": 238.84,
+    "end": 252.67,
+    "lufs_i": -21.09,
+    "st_p95": -19.14,
+    "st_max": -18.66,
+    "true_peak_dbtp": -10.01
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: G the afternoon: the felt; the news's bed; the pedal under the posts and V.O. 6",
+    "start": 252.67,
+    "end": 276.33,
+    "lufs_i": -24.57,
+    "st_p95": -21.3,
+    "st_max": -21.08,
+    "true_peak_dbtp": -7.14
+   },
+   {
+    "section": "e02-07c-one-word-the-demo: H his face: the Water Line begins; THE STOP on the downbeat",
+    "start": 276.33,
+    "end": 278.21,
+    "lufs_i": -20.43,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -10.11
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 140.453,
+    "t1": 140.7,
+    "dur": 0.248,
+    "marked": true,
+    "why": "the tear's light, a beat (10.07 -> 11.01): THE PLAN's tape-stop reaches nothing a quarter second before the demo's push (the plan: \"a tape-stop into the demo cue\"); the blueprint has no room bed, the stems put a faint room tone under it"
+   },
+   {
+    "t0": 278.208,
+    "t1": 279.0,
+    "dur": 0.792,
+    "marked": true,
+    "why": "THE MIDPOINT ACT-OUT (12.08): the cue stops mid-phrase on the downbeat after 2 s on his face (the plan: \"the designed stop, mid-phrase on the downbeat\"); the dark room's room tone under the black; the re-entry is Act Three's THE CLOCK, its first tick J 0.8 s under this black"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 278.25,
+    "t1": 279.0,
+    "inside_marked": true
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 278.25,
+    "dur": 278.25
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": [],
+  "head_momentary_max": -13.92,
+  "vo_windows_lufs": [
+   {
+    "line": "e2-vo-04",
+    "t0": 14.09,
+    "t1": 20.15,
+    "lufs": -23.38
+   },
+   {
+    "line": "e2-vo-05",
+    "t0": 26.3,
+    "t1": 28.14,
+    "lufs": -26.92
+   },
+   {
+    "line": "e2-vo-06",
+    "t0": 274.55,
+    "t1": 275.75,
+    "lufs": -25.31
+   }
+  ],
+  "stop_momentary_last_1s": -17.71
+ },
+ "laid": [
+  {
+   "name": "e02-06-dark-room-spring",
+   "file": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-06-dark-room-spring-underscore.wav",
+   "laid_at_s": -2.5,
+   "window": [
+    0.0,
+    44.6
+   ],
+   "fade_in_s": 0.0,
+   "fade_out_s": 1.6,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-07a-one-word-walk-on",
+   "file": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07a-one-word-walk-on-underscore.wav",
+   "laid_at_s": 42.25,
+   "window": [
+    43.0,
+    94.85
+   ],
+   "fade_in_s": 1.0,
+   "fade_out_s": 0.3,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-07b-one-word-blueprint",
+   "file": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07b-one-word-blueprint-underscore.wav",
+   "laid_at_s": 92.25,
+   "window": [
+    94.72,
+    140.502
+   ],
+   "fade_in_s": 0.02,
+   "fade_out_s": 0.005,
+   "gain_db": 0.0,
+   "post": null
+  },
+  {
+   "name": "e02-07c-one-word-the-demo",
+   "file": "audio/ost/tracks/e02-v1-act2/render/_work/el/e02-07c-one-word-the-demo-underscore.wav",
+   "laid_at_s": 135.92,
+   "window": [
+    140.7,
+    278.208
+   ],
+   "fade_in_s": 0.004,
+   "fade_out_s": 0.005,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e02-v1-act2/track.py",
+ "sfx_requests": [
+  "news_desk_sting (8.02), ui_confirm_chip (8.06), door_motif_note (12.03), news_bed_tiny (12.05): CLAIMED by the score (it plays them: the monitor's sting and bed through a small-speaker chain, the one chip note, the Door on flute); the SFX board has none of the four",
+  "ui_drop_snap (8.04): lands on the Water Line's settle downbeat (the felt's C4); keep it dry, off A",
+  "palette_step_F x3 (11.02): the score leaves them room (the lead is out there)",
+  "blimp_inflate_step x4 (11.13): the pad moves between them, never on them",
+  "stream_end_tone (11.10, NEW): the pad's Fm11 lands 0.3 s before it; tune it to F or C"
+ ],
+ "heard": "nothing here has been listened to; every number is measured"
+}
