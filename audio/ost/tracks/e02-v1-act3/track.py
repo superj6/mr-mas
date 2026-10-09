@@ -652,6 +652,7 @@ def tracks_feel(clk, choir_pts, felt_on):
     T = palette()
     T['felt'].gain_db, T['felt'].sends = -6.0, {'room': -12, 'hall': -16}   # (render 1: the felt read -18.8 and
     T['felt_mech'].gain_db = -21.0                                           # the party -24.8: the felt down 4 dB)
+    dup(T, 'felt', 'felt_ret', gain_db=-13.0)      # the felt's return at the pin: 7 dB under the felt (score review)
     for k in ('vla', 'vc'):
         T[k].gain_db, T[k].sends = -1.0, {'hall': -11, 'room': -16}
     T['tri'].gain_db, T['tri'].sends = -14.0, {'room': -14}                    # the chip, ≤ -10 dB under the felt
@@ -721,7 +722,10 @@ def cue_feel(tl, hum_stop, push):
                                  'under it (the sound lead into F2.2)'))
     # ---- F2.2: no felt, no chip pulse, no swing (OST rule 7: his POV is left); the GPU choir, glass, the lights
     t_party = lead_in(c, e['party'], swung=False)
-    t_lift = c.nearest_beat(chant['on']) if chant else t_party + 2 * BAR
+    # the chant's lift waits until the chant is established (its first word + 0.5 s: the score review, 2026-10-09,
+    # measured the lights' octave climb on its onset)
+    w_ch = (chant['words'][0][1] if chant['words'] else chant['on']) if chant else None
+    t_lift = c.next_beat(w_ch + 0.5) if chant else t_party + 2 * BAR
     t_ex = lead_in(c, e['c07'], swung=False)
     t_door1 = c.next_bar(e['c08'] + 0.4)
     t_racks = lead_in(c, e['racks'], swung=False, step=Q / 2)
@@ -768,12 +772,15 @@ def cue_feel(tl, hum_stop, push):
         c.mark(tc, 'TPOOL: the chip\'s triangle answers the felt (C, E-flat): his 2006 app still knows him', hit=False)
     # the felt's last chord before F2.2 lets go before the cut (the pedal up 0.1 s before)
     # ---- the choir: in on the ripple, through F2.2; its level as CC-free track automation
+    # (the glow: the choir thins to ppp and HOLDS to the pin, under the felt's return; the score review, 2026-10-09:
+    # the glass alone decayed under -48 dBFS from about 172.8 s, an undeclared dropout, then a +35 dB step)
     choir_pts = [(t_dbs - 0.1, -30.0), (t_party, -6.0), (t_lift, -5.0), (t_lift + 1.2, 0.0), (t_ex, 0.0),
                  (t_ex + 1.0, -6.0), (t_racks, -4.0), (t_racks + 1.5, 1.0), (t_23, 1.0), (t_23 + 1.2, -5.0),
-                 (t_ache, -5.0), (t_ache + 1.2, -8.0), (t_glow, -8.0), (t_glow + 1.6, -40.0)]
+                 (t_ache, -5.0), (t_ache + 1.2, -8.0), (t_glow, -8.0), (t_glow + 1.6, -11.0), (t_pin + 0.3, -11.0),
+                 (t_pin + 2.2, -40.0)]
     T = tracks_feel(c.clk, choir_pts, hs0)
     for inst, v in (('choir', 0.34), ('reed', 0.26)):
-        c.ch(inst, GPU, t_dbs - 0.05, t_glow + 1.8 - t_dbs, v, roll=0.0, lock=True)
+        c.ch(inst, GPU, t_dbs - 0.05, t_pin + 2.4 - t_dbs, v, roll=0.0, lock=True)
         c.ch(inst, GPU_UP, t_lift, t_ex + 0.8 - t_lift, v * 0.85, roll=0.0, lock=True)
         c.ch(inst, ['C5'], t_racks, t_23 + 0.4 - t_racks, v * 0.8, roll=0.0, lock=True)
     c.mark(t_dbs, 'the choir swells in under the pin\'s ripple (the GPU choir, D-flat sus2(#11), ppp): the sound lead '
@@ -841,15 +848,22 @@ def cue_feel(tl, hum_stop, push):
     c.n('glasspad', 'C6', t_ache + BAR, t_glow - (t_ache + BAR) + 1.0, 0.2, lock=True, rel=1.0)
     c.mark(t_ache, f'the fire ({how(c, t_ache, e["fire2"])}): the Ache under the choir (F C | G D-flat): the Door\'s G '
                    'is the Ache\'s G; resolve and dread together', hit=False)
-    c.mark(t_glow, f'the glow shrinks to one point ({how(c, t_glow, e["glow"])}): the choir and the bass let go; the '
-                   'glass holds', hit=False)
+    c.mark(t_glow, f'the glow shrinks to one point ({how(c, t_glow, e["glow"])}): the bass lets go; the choir thins to '
+                   'ppp and holds its no-third chord to the pin (no dropout: the bed stays over -35 LUFS-M)', hit=False)
     # ---- back: the felt a beat before the pin; V.O. 8 inside it; D-flat as he goes (the leap A-flat C); the pedal
-    c.pch('felt', DR['F5'][0], t_pin, t_go - t_pin + 0.05, 0.22, roll=0.025, span_end=t_go - 0.03)
-    c.n('felt_mech', 60, t_pin, 0.1, 0.25)
-    c.rebow('vc', 'F3', t_pin + 0.1, t_st + 0.4, 0.17, seg=5.0, xf=1.0, first_att=1.6, last_rel=0.3, art='sus', lp=1500)
-    c.rebow('vla', 'C4', t_pin + 0.2, t_st + 0.4, 0.15, seg=5.0, xf=1.0, first_att=1.8, last_rel=0.3, art='sus', lp=1700)
-    c.mark(t_pin, f'the pin ({how(c, t_pin, e["pin"])}): the felt returns (F, the open fifth); V.O. 8 inside it, '
-                  'nothing attacks', hit=False)
+    # the sul-tasto F pedal swells in first (over the choir's hold), the felt a beat later and soft (the score review:
+    # the felt's return jumped from -52.8 to -17.3 LUFS-M; S9's soft entry)
+    t_felt = t_pin + Q
+    if vo8 and t_felt > vo8['on'] - 0.6:
+        t_felt = t_pin
+    c.pch('felt_ret', DR['F5'][0], t_felt, t_go - t_felt + 0.05, 0.15, roll=0.04, span_end=t_go - 0.03)
+    c.n('felt_mech', 60, t_felt, 0.1, 0.18)
+    c.rebow('vc', 'F3', t_pin - 0.9, t_st + 0.4, 0.17, seg=5.0, xf=1.0, first_att=1.6, last_rel=0.3, art='sus', lp=1500)
+    c.rebow('vla', 'C4', t_pin - 0.8, t_st + 0.4, 0.15, seg=5.0, xf=1.0, first_att=1.8, last_rel=0.3, art='sus', lp=1700)
+    c.mark(t_pin - 0.9, f'the pin ({how(c, t_pin, e["pin"])}): the sul-tasto F pedal swells in over the choir\'s hold',
+           hit=False)
+    c.mark(t_felt, 'the felt returns a beat later, soft (F, the open fifth); V.O. 8 inside it, nothing attacks',
+           hit=False)
     lv = DR['Dbmaj9b'][0]
     c.pch('felt', lv, t_go, t_st - t_go + 0.3, 0.21, roll=0.025, span_end=t_st - 0.02)
     c.n('felt_mech', 60, t_go, 0.1, 0.25)
@@ -924,7 +938,8 @@ def cue_feel(tl, hum_stop, push):
                 door1=[(round(t, 3), p) for t, p in d1], door2=[(round(t, 3), p) for t, p in d2],
                 t_party=round(t_party, 3), t_lift=round(t_lift, 3), t_ex=round(t_ex, 3), t_racks=round(t_racks, 3),
                 t_23=round(t_23, 3), t_turn=round(t_turn, 3), g_t=round(g_t, 3), t_ache=round(t_ache, 3),
-                t_glow=round(t_glow, 3), t_pin=round(t_pin, 3), t_go=round(t_go, 3), t_st=round(t_st, 3))
+                t_glow=round(t_glow, 3), t_pin=round(t_pin, 3), t_felt=round(t_felt, 3), t_go=round(t_go, 3),
+                t_st=round(t_st, 3))
     return c, sc
 
 
@@ -957,7 +972,8 @@ RAIN = {   # the pad in the rain: four strings (vc vla vln2 vln1) and VOICE 5 (t
 }
 
 
-def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=False, double='cb_pizz', stop_at=None):
+def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=False, double='cb_pizz', stop_at=None,
+             gate=0.92):
     """a walking bass over one bar (chords: [(beat, name)]): the root on each change, scale tones between, an approach
     into the next bar's root on beat 4; two_feel: half notes (root, then fifth or approach)"""
     out = []
@@ -987,7 +1003,7 @@ def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=Fals
         if p % 12 == 9:                       # never an A natural, even passing
             p -= 1
         prev = p
-        d = (2 if two_feel else 1) * Q * 0.92
+        d = (2 if two_feel else 1) * Q * gate
         if stop_at is not None:
             d = min(d, stop_at - tb - 0.02)
         out.append(c.n(inst, p, tb, d, vel * (1.0 if bt == 0 else 0.9)))
@@ -1021,6 +1037,9 @@ def tracks_bridge(pause_s):
     for k in ('vln1', 'vln2', 'vla', 'vc'):
         T[k].gain_db, T[k].sends = -4.0, {'hall': -9, 'room': -16}
     T['harp'].gain_db, T['harp'].pan = -9.0, -0.3
+    # the floor under the two-feel and the forecast's swing: an arco bass on the root, low and dark (the score review,
+    # 2026-10-09: the band emptied to -40/-47 dBFS before each bar line, then re-attacked: a 20-30 dB pump)
+    dup(T, 'cb', 'cb_floor', gain_db=-1.0, sends={'hall': -14, 'room': -18}, eq=list(T['cb'].eq) + [('lp', 700)])
     T['grand'].gain_db = -4.0
     T['glasspad'].gain_db = -10.0
     T['timp'].gain_db = -8.0
@@ -1183,7 +1202,9 @@ def cue_bridge(tl):
         name = plan_d[min(k_, len(plan_d) - 1)]
         nxt = plan_d[min(k_ + 1, len(plan_d) - 1)] if k_ + 1 < len(bars_d) else 'Fm11'
         two = t0 < walkq - 0.05
-        walk_bar(c, t0, [(0, name)], TCH[nxt][1], rng, vel=0.44 if two else 0.48, two_feel=two, stop_at=scr)
+        walk_bar(c, t0, [(0, name)], TCH[nxt][1], rng, vel=0.44 if two else 0.48, two_feel=two, stop_at=scr,
+                 gate=0.98 if two else 0.92)
+        c.n('cb_floor', TCH[name][1], t0, min(BAR, scr - t0) + 0.08, 0.2, art='sus', att=0.25, rel=0.35)
         v = TCH[name][0]
         soft = 0.75 if inside(t0, talk) else 1.0
         c.ch('vibes', v, t0, Q * 1.3, 0.3 * soft, roll=0.008)
@@ -1245,6 +1266,7 @@ def cue_bridge(tl):
     # ================================================================ F: the forecast (the swing again, A-flat)
     c.ch('vibes', TCH['Abmaj9'][0], fcast, Q * 1.3, 0.32, roll=0.008)
     c.n('ubass', 'Ab2', fcast, c.next_bar(fcast) - fcast - 0.02, 0.46)
+    c.n('cb_floor', 'Ab1', fcast, c.next_bar(fcast + 0.05) - fcast + 0.08, 0.2, art='sus', att=0.25, rel=0.35)
     c.mark(fcast, f'the Forecaster beside him ({how(c, fcast, e["fcast"])}): the swing returns (A-flat), thin under his '
                   'forecast; no hit on the laugh', hit=False)
     plan_f = ['Abmaj9', 'Dbmaj9#11', 'Bbm9', 'Eb9sus', 'Eb9sus']
@@ -1254,6 +1276,7 @@ def cue_bridge(tl):
         name = plan_f[min(k_, len(plan_f) - 1)]
         nxt = plan_f[min(k_ + 1, len(plan_f) - 1)]
         walk_bar(c, t, [(0, name)], TCH[nxt][1], rng, vel=0.46, stop_at=hold)
+        c.n('cb_floor', TCH[name][1], t, min(BAR, hold - t) + 0.08, 0.2, art='sus', att=0.25, rel=0.35)
         v = TCH[name][0]
         soft = 0.75 if inside(t, talk) else 1.0
         c.ch('vibes', v, t, Q * 1.3, 0.3 * soft, roll=0.008)
@@ -1463,9 +1486,10 @@ def write_prelap(tl, built, work, tag):
                 lay=f'under Act Two\'s black: its last {len(y) / SR:.3f} s (Act Two\'s designed stop at {a:.3f} s on this '
                     f'clock, i.e. the black\'s first frame), so THE CLOCK\'s first tick sounds {-ck.ev["first"]:.3f} s '
                     'before Act Three\'s first frame (the plan\'s J 0.8 s, on the first grid beat after the stop); '
-                    'continuous with music' + tag + '.wav\'s first sample. mix_episode.py lays no prelap and Act Two\'s '
-                    'black is digital zero (its silences_designed): a mix pass that lays this adds it to Act Two\'s '
-                    'score bus from that time; Act Three\'s head keeps its attack (designed_hit at 0.0)',
+                    'continuous with music' + tag + '.wav\'s first sample. mix_episode.py lays it on Act Two\'s score bus '
+                    'from that time (score_bus: the next chapter\'s pre-lap, ending on Act Two\'s last sample, at Act '
+                    'Three\'s head gain), over Act Two\'s black (digital zero in Act Two\'s stem: its silences_designed), '
+                    'and Act Three\'s head fade is off (the score review, 2026-10-09)',
                 fade_in_s=0.005)
 
 
@@ -1528,7 +1552,7 @@ def main():
                                  end=round(min(tl.length, a1), 3)))
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (each cue at its engine master: E02-08 -20.5, E02-09 -20, E02-10 -19.5 LUFS-I), dry of '
               'dialogue; the mixer ducks it (E02-08 9 dB, E02-09 7, E02-10 9 by mood)',

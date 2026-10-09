@@ -4,6 +4,7 @@
  "segment": "tag",
  "file": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
+ "lock_sha1": "94102a08180b038fa9ac84901726f991431f6200",
  "length_s": 37.0,
  "frames": 888,
  "samples": 1776000,
@@ -23,8 +24,8 @@
    "laid_at_s": -0.5,
    "level": {
     "lufs_i": -19.95,
-    "st_p95": -17.11,
-    "st_max": -16.57,
+    "st_p95": -17.07,
+    "st_max": -16.54,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -66,7 +67,7 @@
     "warnings": []
    },
    "note_qa": {
-    "notes": 378,
+    "notes": 365,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -173,7 +174,7 @@
     "engine": {
      "felt": 42,
      "hats": 102,
-     "chip": 77,
+     "chip": 64,
      "xylo": 7,
      "vln_pz": 10
     },
@@ -466,15 +467,15 @@
   "exact": true,
   "whole": {
    "lufs_i": -19.95,
-   "st_p95": -17.11,
-   "st_max": -16.57,
+   "st_p95": -17.07,
+   "st_max": -16.54,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "e02-13-august": {
     "lufs_i": -19.95,
-    "st_p95": -17.11,
-    "st_max": -16.57,
+    "st_p95": -17.07,
+    "st_max": -16.54,
     "true_peak_dbtp": -3.15
    }
   },
@@ -483,82 +484,82 @@
     "section": "e02-13-august: 1 the pedal under the suit's landing (D-flat fifth; the docket's caption)",
     "start": 0.0,
     "end": 4.5,
-    "lufs_i": -24.82,
-    "st_p95": -25.17,
-    "st_max": -25.11,
-    "true_peak_dbtp": -11.32
+    "lufs_i": -24.78,
+    "st_p95": -25.13,
+    "st_max": -25.07,
+    "true_peak_dbtp": -11.28
    },
    {
     "section": "e02-13-august: 2 THE RUN: the pages (D-flat maj9, F m9)",
     "start": 4.5,
     "end": 8.56,
-    "lufs_i": -17.47,
-    "st_p95": -17.26,
-    "st_max": -17.25,
+    "lufs_i": -17.44,
+    "st_p95": -17.23,
+    "st_max": -17.22,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-13-august: 3 THE RUN: the post (B-flat m9; thinned under the record)",
     "start": 8.56,
     "end": 13.09,
-    "lufs_i": -21.36,
-    "st_p95": -20.14,
-    "st_max": -19.97,
-    "true_peak_dbtp": -7.34
+    "lufs_i": -21.33,
+    "st_p95": -20.11,
+    "st_max": -19.93,
+    "true_peak_dbtp": -7.31
    },
    {
     "section": "e02-13-august: 4 THE RUN: the Orb's scan (C7sus; xylophone and wood)",
     "start": 13.09,
     "end": 17.23,
-    "lufs_i": -16.77,
-    "st_p95": -16.53,
-    "st_max": -16.49,
+    "lufs_i": -16.74,
+    "st_p95": -16.5,
+    "st_max": -16.46,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-13-august: 5 the chime and THE VERDICT (the open fifth F)",
     "start": 17.23,
     "end": 19.5,
-    "lufs_i": -19.35,
+    "lufs_i": -19.32,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -10.61
+    "true_peak_dbtp": -10.57
    },
    {
     "section": "e02-13-august: 6 THE RUN again: Mas at the monitor, the V.O. inside it (F m9)",
     "start": 19.5,
     "end": 22.62,
-    "lufs_i": -20.78,
+    "lufs_i": -21.34,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.73
+    "true_peak_dbtp": -6.69
    },
    {
     "section": "e02-13-august: 7 THE RUN's pedal: the AUG 21 lower third (the open fifth F)",
     "start": 22.62,
     "end": 27.62,
-    "lufs_i": -26.57,
-    "st_p95": -24.32,
-    "st_max": -23.17,
-    "true_peak_dbtp": -3.58
+    "lufs_i": -26.54,
+    "st_p95": -24.3,
+    "st_max": -23.15,
+    "true_peak_dbtp": -3.57
    },
    {
     "section": "e02-13-august: 8 RUMPT's Podium, FEAR: the balloon",
     "start": 27.62,
     "end": 33.25,
-    "lufs_i": -20.52,
-    "st_p95": -20.24,
-    "st_max": -20.13,
-    "true_peak_dbtp": -9.68
+    "lufs_i": -20.48,
+    "st_p95": -20.21,
+    "st_max": -20.09,
+    "true_peak_dbtp": -9.65
    },
    {
     "section": "e02-13-august: 9 one held chord: the taut string, his face; the cut on the downbeat",
     "start": 33.25,
     "end": 37.0,
-    "lufs_i": -22.32,
-    "st_p95": -22.07,
-    "st_max": -22.06,
-    "true_peak_dbtp": -12.95
+    "lufs_i": -22.29,
+    "st_p95": -22.04,
+    "st_max": -22.02,
+    "true_peak_dbtp": -12.92
    }
   ],
   "digital_silence": [],
@@ -573,25 +574,25 @@
   ],
   "fragments_under_2s": [],
   "undesigned_fragments": [],
-  "head_momentary_max": -20.47,
+  "head_momentary_max": -20.44,
   "momentary": {
-   "the pedal": -20.47,
-   "the first stab": -15.24,
-   "the pages": -15.24,
-   "the post (thinned)": -25.24,
-   "the scan": -13.85,
-   "the verdict": -17.71,
-   "with Mas": -15.86,
-   "the pedal (lower third)": -27.25,
-   "FEAR": -18.67,
-   "one held chord": -20.74
+   "the pedal": -20.44,
+   "the first stab": -15.21,
+   "the pages": -15.21,
+   "the post (thinned)": -25.2,
+   "the scan": -13.83,
+   "the verdict": -17.68,
+   "with Mas": -15.82,
+   "the pedal (lower third)": -27.22,
+   "FEAR": -18.64,
+   "one held chord": -20.7
   },
   "vo_windows_lufs": [
    {
     "line": "e2-vo-14",
     "t0": 20.46,
     "t1": 22.36,
-    "lufs": -22.94
+    "lufs": -24.47
    }
   ],
   "tail_last_10ms_dbfs": -19.4

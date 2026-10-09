@@ -15,7 +15,7 @@
 - **The scenes and the mood map:** [proposal.md](../../../../show/episodes/ep02/production/v1/proposal.md) sc 13–17, "The feeling curve" and "The seams" 15–20.
 - **The script's MUSIC lines** (script-v1.md sc 13–17), **the beat plan's J and L cuts** (13.01 J 0.8, 14.12 L 1.0, 15.19 J 1.0, 17.21 J 1.2) and **the lock's music runs** (`track.py --dry --el`).
 - **The notes from the earlier segments:**
-  - Act Two ends on a designed stop at 278.208 s (digital zero to 279.0), and THE CLOCK's first tick is a J under that black. `mix_episode.py` lays no pre-lap, so this act writes `render/music-el-prelap.wav`, as Act One did.
+  - Act Two ends on a designed stop at 278.208 s (digital zero to 279.0), and THE CLOCK's first tick is a J under that black. This act writes `render/music-el-prelap.wav`, as Act One did, and since the score review `mix_episode.py` lays it on Act Two's score bus.
   - The record on screen (posts, a broadcast's lower third) is found with Act Two's `record_windows()`, widened for this act's kinds.
   - Score-like sounds missing from the SFX board are claimed in `cues-el.json` → `claims_sfx`.
   - Bowed vibes need about −14 dB of track gain against four sul-tasto strings.
@@ -36,13 +36,24 @@ The mood map, in order:
 |---|---|
 | `render/music-el.wav` | **320.000 s, 15,360,000 samples (7,680 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored |
 | `render/music-el-prelap.wav` | **0.792 s**: Act Two's black, from its designed stop (Act Three's −0.792 s) to Act Three's first frame. THE CLOCK's first tick sounds at −0.625 s. The file's last sample runs into `music-el.wav`'s first (0.0170 / 0.0130 against 0.0174 / 0.0125). Peak −8.0 dBFS. See "For the other passes" |
-| Level | −19.93 LUFS-I; true peak −3.15 dBTP; short-term p95 −16.99, max −14.93 |
-| `check.py` (the v35check copy) | `act3 7680 f 320.000 s exact=True −19.93 LUFS-I −3.15 dBTP \| silence 0 holes 0 frag 0 \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| PASS` |
+| Level | −19.93 LUFS-I; true peak −3.15 dBTP; short-term p95 −17.02, max −15.06 |
+| `check.py` (with the review's new checks) | `act3 7680 f 320.000 s exact=True lock=True −19.93 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 1) \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 12.3 min 11.2 fail 0 exempt 0 \| PASS` (the old check passed the dropout: its hole test was −60 dBFS) |
 | Engine QA, every cue | F-major OK, written and spectral (worst A/F 0.34, 0.32, 0.19). Rule 12 OK: no A-natural is written anywhere. Knee whole 0, completions 0. Every hit mark has an onset within 10 ms (1/1 and 4/4; E02-09 marks no hit). The sub under the lobby's `server_hum` reads −52.0 dB and under office 2023's −47.1 dB, against a −18 limit. The one warning left is E02-10's short-term p95 (−16.6, over the −17 underscore guide): judgement call 9 |
 | Music runs | **one run, 0 → 320.0.** There is no designed silence inside the act, no digital silence, no hole under −60 dBFS and no fragment |
 | `cues-el.json` | the cue sheet: each cue's sync marks and events, the designed hits, `claims_sfx`, the sections, the record on screen, the pre-lap's own entry, the measurements and the engine QA. It names the timeline it was laid to |
 
 The Kokoro lock (`show/reel/ep02-v1/`) was not rendered, because the film is the EL lock.
+
+## The score review's fixes (2026-10-09)
+
+| Finding | What changed in `track.py` | Result [M] |
+|---|---|---|
+| **E02-09: an undeclared dropout at the glow** (170.7–175.4): the glass decayed under −48 dBFS from about 172.8 s, under −42 dBFS for 1.55 s, then the felt's return jumped +35 dB in 0.5 s (Ep1's "3 AM bloom", S9) | the choir's no-third chord thins to ppp at the glow and **holds to the pin** (it let go over 1.6 s before); the **sul-tasto F pedal swells in first** (0.9 s before the pin's beat), and **the felt returns a beat later, softer** (its own track, 7 dB under the felt; 176.0, 1.5 s before V.O. 8) | the bed never falls under **−35.8 LUFS-M** (50 ms RMS under −39.1 dBFS at its lowest; S3's hole test is −42); the felt's return reads **−20.9 LUFS-M**, 4 dB over the strings' swell before it (the review: −52.8 → −17.3) |
+| **E02-10: the two-feel pumps 20–30 dB** at the bar lines (217.6, 220.1, 222.6, 255.1) | the upright legato in the two-feel; **an arco bass on each bar's root** under the refusal and the forecast (low-passed at 700 Hz: nothing in the voices' band) | the pump **7–17 dB, median 10.0** (the review: up to 30); no laugh sound falls in this act |
+| the chant's lift masked its onset (e2-a3-0010, +9.3 dB) | the lift waits until the chant is established: the first beat 0.5 s after its first word (121.625, was 121.0) | its onset **+12.4 dB** |
+| **the pre-lap was never laid** (seam 15: THE CLOCK's first tick lost under the midpoint's black) | `mix_episode.py` lays `music-el-prelap.wav` on Act Two's score bus from 278.208 at this act's head gain, and this act's head fade is off | on the score bus: Act Two's last 200 ms and this act's first 200 ms 8.6 dB apart (the ticks), a sample jump of 0.0005 |
+
+**The mood balance** [J]: this act's suspense is about 17 % of its scored time, and the episode's about 15 % against the plan's "about a third" (manifest.md §6). S2 holds (suspense a minority), so the balance is left as composed and **asked of the showrunner's proxy**. If the lighter balance is not intended, the targeted change is THE CLOCK in sc 13–14: the Ache (G + D♭ over the F pedal) at more of its thresholds (the walk-off, the threshold, DOT's cuff), not a broad re-score (S1).
 
 ## What plays (the cue sheet)
 
@@ -86,7 +97,7 @@ P04 THE CLOCK, straight (the machine's time), its first step: one tick a beat. *
 | 109.750 | G♭maj7(♯11), 0.38 s before 15.05; the felt's top D♭5 (112.04) | "where u at?", every pin `LAST SEEN: 2012` |
 | 113.500 | **D♭ sus(♯11) on the felt; the GPU choir swells in under the pin's ripple** (from −30 dB to its level by the cut). The felt lets go 0.1 s before F2.2 | "The ping's ripple; the choir": the sound lead into F2.2 (seam 18) |
 | 117.250 | **F2.2, 0.29 s before the cut**: the choir (D♭ sus2(♯11)), the glass's A♭4 + E♭5, the shimmer, and **the string lights**: celesta eighths cycling A♭ E♭ G D♭ C E♭ A♭ G, a harp under every other one (the lights palette-cycle, never strobe). −19.1 LUFS | The party: warmth. Alyi's "FEEL THE AGI!" ([V]) plays over the same texture, softer, with no melody |
-| 121.000 | **the chant's lift**: the choir adds C5 and E♭5, the lights climb an octave, the shimmer thickens. −15.6 LUFS-M | "The chant's giddy lift (warm, never a hymn)". The chant is [V]: texture only, no melody, no hit (judgement call 5) |
+| 121.625 | **the chant's lift**, the first beat 0.5 s after the chant's first word: the choir adds C5 and E♭5, the lights climb an octave, the shimmer thickens. −18.1 LUFS-M | "The chant's giddy lift (warm, never a hymn)". The chant is [V]: texture only, no melody, no hit (judgement call 5). It lifts once the chant is established, so its first word is clear |
 | 124.125 | **the exchange**: the lights stop, the choir thins (−6 dB), 0.46 s before 15.07 | "Thinning under the exchange": "You're not chanting." / "someone has to hold the glass." / "Then I'll feel it for both of us." |
 | 133.500 | **THE DOOR, whole** (A♭4 D♭5 \| C5 G4, its G held), over the choir, the lights back, softly | His joke check-in, turned to Mas; Mas raises his glass. The Door is whole here because Alyi is present. It never cadences |
 | 138.188 | **the racks hum along**: the choir swells (+C5), and **GLYPH's grains** (Ep2's stage: F5 C6 D♭6, straight sixteenths, half of them rests: 10 grains on celesta and a detuned 12.5 % chip pair), 0.31 s before the cut | The racks are the choir. The glyph is on the room, never in his eyes. The SFX's `glyph_shimmer` (G6–F7) keeps its band; the score's grains stay at F5–D♭6 |
@@ -94,8 +105,9 @@ P04 THE CLOCK, straight (the machine's time), its first step: one tick a beat. *
 | 156.000 | the viola's A♭3 and the violins' E♭4 join the choir's chord, 0.29 s before 15.12 | The turn begins: his finger, the bare Publish button |
 | 161.0 → 164.125 | **THE DOOR again**: A♭4 (161.0), D♭5, C5, then **G4 at 164.125**, 0.21 s before the cut to the click. **The Publish click (164.74) lands on the held ♯4.** −15.3 LUFS-M | "The Publish click on the Door's held ♯4 (warm resolve, no cadence)". The click is the SFX's |
 | 166.000 | **the Ache under the choir**: an arco F2 and a cello C3 under it, glass G4 + D♭5, and C6 from the next bar, 0.25 s before the fire. The Door's G rings on into it | "The Ache (D♭ + G over an F pedal) under the fire". The Door's G becomes the Ache's G: resolve and dread together. The flame's whoomph is the SFX's |
-| 170.688 | **the glow shrinks to one point**: the choir and the bass let go over 1.6 s; the glass alone holds (−21.4 LUFS-M) | |
-| 175.375 | **the felt returns**, 0.25 s before the pin: F (F3 C4 F4, the open fifth), the F pedal bowed under it. V.O. 8 ("i'll ask him in person.", 177.50) sits inside it (−22.7 LUFS) | "The felt returns within a bar of the pin"; his plan, with nothing attacking |
+| 170.688 | **the glow shrinks to one point**: the bass lets go; the choir thins over 1.6 s to ppp and **holds its no-third chord to the pin**, under the glass (−21.1 LUFS-M, then −32 to −36) | The bed never empties: no dropout before the felt returns (the review) |
+| 174.475 | **the sul-tasto F pedal** (cello F3, viola C4) swells in over the choir's hold, 0.9 s before the pin's beat | The return's soft entry (S9) |
+| 176.000 | **the felt returns**, a beat after, soft: F (F3 C4 F4, the open fifth), 0.38 s after the pin's cut. V.O. 8 ("i'll ask him in person.", 177.50) sits inside it (−22.9 LUFS). −20.9 LUFS-M | "The felt returns within a bar of the pin"; his plan, with nothing attacking |
 | 180.167 | **D♭maj9 as he goes**, on a swung and 0.29 s before 15.18: the felt's A♭4, then **C5 on the bar (181.0)**, the chip's triangle under the C | A determined evening: the knee's leap A♭ → C, with no F after it. The door's close (183.41) is the SFX's |
 | 184.750 | **the stairs: thin to the pedal** (F3 + C4, the felt rests), 0.25 s before the cut. The buzz (186.2) is the out; the pedal fades under the receipt's chatter (189.0, the SFX's J 1.0 s) into the band's push | "Thins to its pedal on the stairs; the buzz is the out" |
 
@@ -112,14 +124,14 @@ P11 SET-PIECE SWING, swung. **The grid's bar line is NopeAI's doors (190.0)**, i
 | 199.792 | **the phrase's last stab** (C7(♯9♭13), the and-of-4). Designed hit. **Then THE CUT-OFF on the downbeat (200.0)**; the honk (200.22) lands in the gap | The traffic stops on the receipt, so the band stops. The cut-off is the score's only comic tool (OST rule 1); the honk is the SFX's |
 | 200.0 → 204.375 | **the stall: a C pedal** (arco bass C2, cello C3, viola G3: an open fifth), through the card. `freeze_hit_F` (202.0) sits a fourth above it. −24.9 LUFS | The card, `THE FORECASTER / EX-NOPEAI.`; `AT STAKE: ~$2M`. "The stakes land before the pen does" |
 | 204.375 | the band again, thin: a vibes C7sus and the upright's C, 0.42 s before 17.04 | |
-| 205.0 → 230.0 | **a two-feel** (half notes on the upright), the ride soft with the hat on 2 and 4, the vibes comping softer under talk; Fm11, D♭maj9(♯11), C7sus, B♭m9, E♭9, A♭maj9. **No lead, no brass hit under his terms or the driver.** −18.9 LUFS | Respect: "I don't forecast that far." The phrase ends land inside lines, so they get no hits |
+| 205.0 → 230.0 | **a two-feel** (half notes on the upright, legato), **an arco bass holding each bar's root under it** (the floor), the ride soft with the hat on 2 and 4, the vibes comping softer under talk; Fm11, D♭maj9(♯11), C7sus, B♭m9, E♭9, A♭maj9. **No lead, no brass hit under his terms or the driver.** −18.7 LUFS | Respect: "I don't forecast that far." The phrase ends land inside lines, so they get no hits. The band never empties before a bar line (the review measured a 24–30 dB pump at 217.6–222.6) |
 | 226.250 | **the horns' soft D♭ chord** (A♭3 C4 E♭4 F4), on the beat after "Already did…" ends. −16.2 LUFS-M | Respect, with no hit. The pen withdrawing is the SFX's |
 | 230.0 | Mas sees it: the upright walks quarters again, the kick feathers in | His phone, lit |
 | 232.917 | **THE SCRAMBLE**, on a swung and 0.29 s before 17.08: the band drops to **the bass in swung eighths** (an F pedal: F F C F A♭ F E♭ G) **and the Build**, pass by pass (4, 8, 12, 8; 16, 8). No drums, no vibes | "The band drops to the bass and the Build's chip lead, busier on the same grid" |
 | 240.33 → 243.77 | **his call**: the Build out, the bass at 62 % (−18.7 LUFS-M) | "Ducks under his call line": he is heard acting |
 | 244.375 | **the draft**: the pedal moves a mediant down (F → D♭), 0.17 s before 17.10; the Build compiles again (16, then 8) | Frantic hands |
 | 249.43 → 252.91 | **V.O. 9** on his still face: the Build out, the bass on (−24.7 LUFS) | The still face over the fast inside. Nothing attacks on the words |
-| 253.542 | **the swing returns**, on a swung and 0.17 s before 17.12 (A♭maj9, D♭maj9(♯11), B♭m9, E♭9sus), thin under the forecast | "Median: an apology, within the hour, in lowercase." No hit on the laugh |
+| 253.542 | **the swing returns**, on a swung and 0.17 s before 17.12 (A♭maj9, D♭maj9(♯11), B♭m9, E♭9sus), thin under the forecast, the arco root under each bar | "Median: an apology, within the hour, in lowercase." No hit on the laugh |
 | 263.542 | his thumb over Post: **a held E♭9sus** (strings sul tasto, the arco bass), 0.29 s before 17.13. V.O. 10 sits inside it (−23.4 LUFS) | "not until legal has every name." Nothing attacks |
 | 268.542 | **one held chord through the night**: D♭maj9 (the strings, the arco D♭2, the bowed vibes), 2 s, 0.29 s before the cut | "One held chord through the night (2 s)" |
 | 270.625 | **the bass pedal** (F2, C2 on 1 and 3, the cello's F3 a whisper under it), 0.21 s before the next afternoon | "Thins to the bass pedal under the posts". His posts (272.43–281.63) play dry. **The honks take the phrase ends** (274.93, 276.03, 279.03, 281.58: no brass anywhere). "Updating." and the driver's "Does honking count as disparagement?" get no hit; the honk behind him (287.39) is the SFX's button |
@@ -184,40 +196,41 @@ Both re-laid every mark to the moved events: the screws and the clock's grid, th
 | E02-08 9 Ekiel: the card; his post (the pedal) | 70.6 → 80.6 | −21.6 | −6.2 |
 | E02-08 10 the screws: the Ache | 80.6 → 86.9 | −20.1 | −6.5 |
 | E02-08 11 the pivot: the stop; the hum's swell | 86.9 → 91.0 | −20.8 | −7.0 |
-| E02-09 1 the empty office (D♭, B♭ minor) | 91.0 → 99.1 | −19.9 | −3.2 |
-| E02-09 2 the far line; V.O. 7 inside F minor | 99.1 → 103.2 | −21.9 | −3.2 |
-| E02-09 3 TPOOL (A♭); the map (G♭); the ripple | 103.2 → 117.25 | −19.9 | −3.5 |
-| E02-09 4 F2.2 the party; the chant's lift | 117.25 → 124.1 | −19.1 | −6.2 |
-| E02-09 5 the exchange; the check-in's Door | 124.1 → 138.2 | −22.4 | −7.6 |
-| E02-09 6 the racks: GLYPH's grains | 138.2 → 141.6 | −20.4 | −9.7 |
-| E02-09 7 2023: the no-third chord | 141.6 → 161.0 | −19.7 | −6.1 |
-| E02-09 8 the turn: the Door's ♯4 under the click | 161.0 → 166.0 | −17.9 | −6.0 |
-| E02-09 9 the fire: the Ache; the glow | 166.0 → 175.4 | −21.2 | −6.0 |
-| E02-09 10 the pin (F); V.O. 8; D♭ as he goes | 175.4 → 184.75 | −19.7 | −3.2 |
-| E02-09 11 the stairs: the pedal | 184.75 → 189.8 | −21.2 | −9.6 |
-| E02-10 A the doors | 189.8 → 194.2 | −16.6 | −3.2 |
-| E02-10 B the run: THE FULL BAND; the cut-off | 194.2 → 200.0 | −15.6 | −3.2 |
-| E02-10 C the stall (the C pedal) | 200.0 → 204.4 | −24.9 | −9.3 |
-| E02-10 D the refusal (the two-feel) | 204.4 → 232.9 | −18.9 | −4.3 |
-| E02-10 E the scramble | 232.9 → 253.5 | −18.4 | −5.5 |
-| E02-10 F the forecast; V.O. 10 | 253.5 → 268.5 | −19.2 | −4.7 |
-| E02-10 G the night | 268.5 → 270.6 | −22.4 | −10.9 |
-| E02-10 H the posts (the bass pedal) | 270.6 → 288.1 | −22.7 | −6.1 |
-| E02-10 I the rain (the pad) | 288.1 → 315.6 | −22.0 | −8.9 |
-| E02-10 J the pedal; the DREAD; the black | 315.6 → 320.0 | −22.1 | −3.2 |
+| E02-09 1 the empty office (D♭, B♭ minor) | 91.0 → 99.1 | −19.8 | −3.2 |
+| E02-09 2 the far line; V.O. 7 inside F minor | 99.1 → 103.2 | −21.8 | −3.2 |
+| E02-09 3 TPOOL (A♭); the map (G♭); the ripple | 103.2 → 117.25 | −19.8 | −3.4 |
+| E02-09 4 F2.2 the party; the chant's lift | 117.25 → 124.1 | −19.6 | −6.1 |
+| E02-09 5 the exchange; the check-in's Door | 124.1 → 138.2 | −22.3 | −7.5 |
+| E02-09 6 the racks: GLYPH's grains | 138.2 → 141.6 | −20.3 | −9.6 |
+| E02-09 7 2023: the no-third chord | 141.6 → 161.0 | −19.6 | −6.0 |
+| E02-09 8 the turn: the Door's ♯4 under the click | 161.0 → 166.0 | −17.8 | −5.9 |
+| E02-09 9 the fire: the Ache; the glow; the choir's hold | 166.0 → 175.4 | −21.2 | −5.9 |
+| E02-09 10 the pin (F); V.O. 8; D♭ as he goes | 175.4 → 184.75 | −19.7 | −3.5 |
+| E02-09 11 the stairs: the pedal | 184.75 → 189.8 | −21.1 | −8.8 |
+| E02-10 A the doors | 189.8 → 194.2 | −16.8 | −3.3 |
+| E02-10 B the run: THE FULL BAND; the cut-off | 194.2 → 200.0 | −15.8 | −3.2 |
+| E02-10 C the stall (the C pedal) | 200.0 → 204.4 | −25.1 | −9.4 |
+| E02-10 D the refusal (the two-feel, the arco floor) | 204.4 → 232.9 | −18.7 | −4.3 |
+| E02-10 E the scramble | 232.9 → 253.5 | −18.5 | −5.7 |
+| E02-10 F the forecast; V.O. 10 | 253.5 → 268.5 | −19.0 | −4.9 |
+| E02-10 G the night | 268.5 → 270.6 | −22.6 | −11.1 |
+| E02-10 H the posts (the bass pedal) | 270.6 → 288.1 | −22.8 | −6.3 |
+| E02-10 I the rain (the pad) | 288.1 → 315.6 | −22.1 | −9.1 |
+| E02-10 J the pedal; the DREAD; the black | 315.6 → 320.0 | −22.2 | −3.2 |
 | **whole stem** | 0 → 320.0 | **−19.93** | **−3.15** |
 
 - **Engine masters (underscore):** E02-08 −20.5, E02-09 −20.0, E02-10 −19.5 (each reads within 0.03 of its target).
 - **Balance, piano · orch · big band · chip** (the engine's gated metric; rhythm excluded):
   - E02-08: 0 · 97 · 0 · 3
-  - E02-09: 19 · 73 · 0 · 8
-  - E02-10: 1 · 70 · 11 · 17
+  - E02-09: 19 · 74 · 0 · 8
+  - E02-10: 1 · 71 · 11 · 17
 - **Momentary peaks (LUFS-M)** [M]:
   - E02-08: the head −17.1; the presser −24.4; the threshold −16.4; the Door −16.2; the chair −16.6; Ekiel's post −21.9; the screws −15.9; the hum's swell −18.9.
-  - E02-09: the felt −13.9; TPOOL −14.1; the ripple −13.8; the party −14.3; the lift −15.6; the exchange −17.7; the check-in's Door −15.3; the racks −18.6; 2023 −17.8; the turn's Door −15.3; the fire −15.5; the glow −21.4; the pin −16.1; as he goes −13.3; the stairs −18.9.
-  - E02-10: the doors −12.6; the full band −13.2; the stall −20.9; the refusal −13.5; the respect −16.2; the scramble −13.9; his call −18.7; the draft −15.1; V.O. 9 −23.5; the forecast −14.5; V.O. 10 −22.2; the night −19.6; the posts −19.7; the rain −17.7; the pause and NopeAI's post −20.5; the DREAD −15.2.
-- **The V.O. windows** [M]: V.O. 7 −23.7 LUFS, V.O. 8 −22.7, V.O. 9 −24.7, V.O. 10 −23.4. The engine's guide is −24 ± 2.
-- **The dialogue pocket** [M]: the 2–6 kHz band reads −18.5 dB (E02-08), −24.8 (E02-09) and −22.9 (E02-10). The guide is ≤ −15. The underscore masters also carry the engine's −2 dB pocket at 2.5 kHz.
+  - E02-09: the felt −13.9; TPOOL −14.0; the ripple −13.7; the party −14.2; the lift −18.1; the exchange −19.7; the check-in's Door −15.2; the racks −18.5; 2023 −17.7; the turn's Door −14.3; the fire −15.4; the glow −21.1; the choir's hold −32 to −36; the felt's return −20.9; as he goes −13.2; the stairs −18.7.
+  - E02-10: the doors −12.8; the full band −13.2; the stall −21.0; the refusal −13.6; the respect −16.2; the scramble −14.1; his call −18.8; the draft −15.3; V.O. 9 −23.6; the forecast −14.6; V.O. 10 −22.3; the night −19.8; the posts' entry −16.4; the rain −17.8; the pause and NopeAI's post −20.7; the DREAD −15.3.
+- **The V.O. windows** [M]: V.O. 7 −23.6 LUFS, V.O. 8 −22.9, V.O. 9 −24.9, V.O. 10 −23.5. The engine's guide is −24 ± 2.
+- **The dialogue pocket** [M]: the engine's 2–6 kHz band reads −18.5 dB (E02-08), −24.7 (E02-09) and −23.0 (E02-10); the guide is ≤ −15. Per line in 1–4 kHz after the mix's duck (`e02-v1-common/pocket.py`): every one of the act's 28 lines has at least **+11.2 dB** at its onset (10th percentile +12.3; before the duck +4.6). The underscore masters also carry the engine's −2 dB pocket at 2.5 kHz.
+- **The pump at the two-feel's bar lines** [M] (50 ms RMS: the lowest in the 0.5 s before each bar line against the highest in the 0.2 s after), 205–263 s: 7–17 dB, median 10.0 (the review: up to 30).
 - **The mix's duck:** by mood, E02-08 9 dB, E02-09 7 and E02-10 9 under speech (`mix_episode.py`'s table). No `duck_db` override is asked for.
 - **The cut check** [M]: no step of 12 dB or more at any cut. The cut-off at 200.0 is not a cut; the card's cut at 201.0 falls inside the stall's pedal.
 - **Mood shares by scored time** (320 s) [J]:
@@ -228,7 +241,7 @@ Both re-laid every mark to the moved events: the screws and the clock's grid, th
   | warm, sincere, lonely, quiet | the Door; the chair; his room; F2.2's party, check-in, 2023 and turn; the pin and the stairs; the night; the rain | about 43 % |
   | suspense and dread | Ekiel and the screws; the fire; the scramble; the DREAD | about 17 % |
 
-  Suspense stays a minority (S2).
+  Suspense stays a minority (S2). Across the episode it is about 15 % against the plan's "about a third": an open question for the showrunner's proxy (above, and manifest.md §6).
 
 ## Judgement calls (rules bent on purpose, one line each)
 
@@ -236,7 +249,7 @@ Both re-laid every mark to the moved events: the screws and the clock's grid, th
 2. **The step to G lands 0.21 s after the flyer's cut, not before it.** The pre-lap point falls inside "leave them up.", and no change lands inside a line of his.
 3. **Some changes are not pre-lapped by about 0.25 s:** the Door blooms on the beat 0.04 s before 14.04; the screws' door enters 0.375 s after its cut (Ekiel's post runs to it); the pad's pedal enters 0.21 s after 17.21 (NopeAI's post runs to it). The record and the beat come first.
 4. **F2.2 has no felt, no chip pulse and no swing** (OST rule 7: his POV is left). E02-09's chip there is GLYPH's ten grains on the room.
-5. **The chant's lift plays under the [V] chant** (two more choir voices, the lights an octave up, the shimmer thicker) because the plan asks for it ("the chant's giddy lift"). It is texture only: no melody, no hit, no stinger (OST rule 10).
+5. **The chant's lift plays under the [V] chant** (two more choir voices, the lights an octave up, the shimmer thicker) because the plan asks for it ("the chant's giddy lift"). It is texture only: no melody, no hit, no stinger (OST rule 10), and it waits until the chant is established (0.6 s in), so its first word is clear.
 6. **The Door plays whole in F2.2, twice** (the check-in; the turn). The manifest's "first note missing" belongs to WHERE'S ALYI? (sc 14), Alyi's absence. In the memory he is there. Neither statement cadences.
 7. **VOICE 5 is the pad's fifth voice**, and it stops on his pause tap. The plan says "a pad in the rain" and "no bonk, no notification". This is inside the music, not a hit on the tap.
 8. **The presser is read as "a tiny bed"** (the clock thinned and ridden −5 dB, no change), not as an invented media bed. A Senate press conference has no music of its own.
@@ -249,7 +262,7 @@ Both re-laid every mark to the moved events: the screws and the clock's grid, th
 
 - **Mix:**
   - **The head.** `designed_hit` at 0.0 (THE CLOCK's third tick), so `mix_episode.py`'s head fade is 0.04 s, not 1.2. Act Two wrote no ring-out.
-  - **The pre-lap (`render/music-el-prelap.wav`, 0.792 s).** It belongs under Act Two's black, from Act Two's designed stop (278.208 on Act Two's clock) to its last sample (279.0). THE CLOCK's first tick sounds at 278.375 (Act Three's −0.625). It runs continuously into `music-el.wav`'s first sample. `mix_episode.py` lays no pre-lap today, and Act Two's black is digital zero in its stem (`silences_designed`). A mix pass that lays this file adds it to Act Two's score bus from 278.208, at Act Three's score gain. Its entry is also recorded in `cues-el.json` → `prelap`.
+  - **The pre-lap (`render/music-el-prelap.wav`, 0.792 s).** It belongs under Act Two's black, from Act Two's designed stop (278.208 on Act Two's clock) to its last sample (279.0). THE CLOCK's first tick sounds at 278.375 (Act Three's −0.625). It runs continuously into `music-el.wav`'s first sample. Act Two's black is digital zero in its stem (`silences_designed`); **`mix_episode.py` lays this file on Act Two's score bus** (`score_bus`: the next chapter's pre-lap, ending on Act Two's last sample, at this act's head gain), and this act's head fade is off (the review found it unused). Its entry is also recorded in `cues-el.json` → `prelap`.
   - **No ring-out.** The DREAD's air fades over the act's last 0.35 s. The black's J 1.2 s (the beacon's motor, the quartet's first pizzicato) is Act Four's own pre-lap to write.
 - **SFX:** the score claims two sounds the SFX board doesn't have (`claims_sfx`; `stems.py` reads them):
   - `14.07:chair_hum_choir` (the chair's hum as the GPU choir, diegetic into score);
@@ -301,8 +314,8 @@ E02-09 is built after the other two, because it starts on E02-08's hum stop and 
 8. **91–117 s:** the felt is his interior, never a sad-piano cliché; the chip's two notes on TPOOL are small.
 9. **117–124 s:** the party is warm and giddy, never a hymn; the lift is with the chant, not on it.
 10. **133.5–138 s and 161–166 s:** the Door over the check-in is warm; the Publish click lands on the held G; the Ache under the fire is dread, not horror.
-11. **175.4–185 s:** the felt returns; D♭ and the leap as he goes read as a decision.
-12. **189.8–200 s:** the band is the show's own (the chip Build, a walking upright, vibes, a brass shout), never lounge; the full band only for the run; the cut-off reads as the traffic stopping, not as a gag.
+11. **170.7–185 s:** the choir's hold after the glow is a held breath, not a gap; the F pedal leads the felt's return, which is soft, not a bloom; D♭ and the leap as he goes read as a decision.
+12. **189.8–200 s:** the band is the show's own (the chip Build, a walking upright, vibes, a brass shout), never lounge; the full band only for the run; the cut-off reads as the traffic stopping, not as a gag. **205–263 s:** with the arco floor the two-feel is continuous, not stop-start, and still not lounge (S1).
 13. **233–253 s:** the scramble is frantic in the hands and quiet under his voice.
 14. **268.5–270.6 s:** one held chord is the night.
 15. **288–318 s:** the rain pad is a played room; VOICE 5 leaving is felt, not noticed.
@@ -320,10 +333,10 @@ E02-09 is built after the other two, because it starts on E02-08's hum stop and 
 
   No lounge: the band is vibes, upright, chip and brass hits, not a piano trio. No generic pads: the sustained colours are played strings, bowed vibes, the choir and glass [J; ears 8, 12, 15].
 - **S2:** suspense is about 17 % of the scored time [J].
-- **S3:** one run for the act; 0 holes, 0 fragments, 0 digital silence. The music thins and ducks under lines rather than stopping. The two stops are punctuation with sound under them: the clock on the creak (the hum carries on) and the cut-off on the traffic (the C pedal carries on) [M].
+- **S3:** one run for the act; 0 holes (under −60, and under S3's own −42 dBFS for 0.3 s: the check that missed the glow's dropout now runs), 0 fragments (measured), 0 digital silence. The music thins and ducks under lines rather than stopping. The two stops are punctuation with sound under them: the clock on the creak (the hum carries on) and the cut-off on the traffic (the C pedal carries on) [M].
 - **S4:** the act's sound leads: the clock's tick under Act Two's black (J 0.625 s); the choir under the pin's ripple; the pedal under the receipt's chatter into the push [M].
 - **S5:** every layer is anchored to the lock's events and the plan's cuts, and the re-timed locks re-lay [M].
-- **S9:** laid to the lock's frames. The designed hits are marked: the head's tick, the push, the full band's pickup, its last stab, and the DREAD. Soft entries: the strings' silent attacks, the choir's swells, the felt after the hum [M].
+- **S9:** laid to the lock's frames. The designed hits are marked: the head's tick, the push, the full band's pickup, its last stab, and the DREAD. Soft entries: the strings' silent attacks, the choir's swells, the felt after the hum, and the felt's return at the pin after the F pedal (no step over 5 dB in 0.3 s) [M].
 - **S11:** the story sounds keep their room: the screws, the creak, the bonks, the click, the honks, the thunder and the blimp's lights [J].
 - **OST rules:**
   - 1: no comic scoring. Nothing lands on the tenth sticker, a bonk, the forecast's laugh, the honks or "Updating."; the cut-off is the run's only joke [J/M].
@@ -335,7 +348,7 @@ E02-09 is built after the other two, because it starts on E02-08's hum stop and 
   - 12: no A-natural anywhere [M].
 - **Guardrails:** no music gives Alyi a reason (W8). F2.2 scores what he wanted (the party's warmth, the gravity, the click and the fire), and the Door never cadences [J]. Nothing tells what Mas knew: his call and the V.O. play over the band thinned, with no comment [J].
 - **R10:** every render went through `heavy.sh` with `OST_WORKERS=2`, `MRMAS_MAX_LOAD=40` and `MRMAS_HEAVY_MEM_MAX=6G`, one at a time [M].
-- **R1:** Ep1 untouched. Only `audio/ost/tracks/e02-v1-act3/` was written. Ep1's tracks and `e02-v1-common` were read, never edited.
+- **R1:** Ep1 untouched. The score pass wrote only `audio/ost/tracks/e02-v1-act3/`; the review's fixes also touched Ep2's `e02-v1-common` (the lock hash, the per-line pocket, S3's −42 dBFS scan) and `audio/reel/ep02-v1/mix_episode.py` (the pre-laps). Ep1's tracks were read, never edited.
 - **R8:** nothing heard.
 - **Broken on purpose:** the twelve calls above.
 

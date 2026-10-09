@@ -568,7 +568,7 @@ def main():
         sections.append(row)
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (the engine\'s -20 LUFS-I master), dry of dialogue; the mixer ducks it (E02-01: 9 dB)',
         cues=cues, silences_designed=[],

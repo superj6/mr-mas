@@ -83,6 +83,7 @@ SEG = 'act2'
 Q, BAR, S16 = V.Q, V.BAR, V.S16
 SW = Q * 2.0 / 3.0                     # the house swing: the and lands 10 frames after its beat
 WBAR = 3 * Q                           # THE PLAN's waltz bar: 3/4 on the 96 beat (45 frames; 4 waltz bars = 3 bars)
+CLEAR = 0.6                            # s: BLUEPRINT's notes stay this far either side of a first word (score review)
 PLAN = os.path.join(V.REPO, 'show', 'episodes', 'ep02', 'production', 'v1', 'beat-plan', 'act2.json')
 
 
@@ -356,9 +357,14 @@ def cue_darkroom(tl):
     t = place(c, lead_in(c, B('8.02')), W)
     hs.append((t, 'Bbm9', f'the news site ({how(c, t, B("8.02"))}): the lineup; the monitor\'s sting; the headline '
                           'plays dry'))
-    t = place(c, lead_in(c, B('8.03')), W, floor=t, limit=(vo4['on'] - 0.15) if vo4 else 1e9)
+    t_g = lead_in(c, B('8.03'))
+    w_g = inside(t_g, W)
+    if w_g and vo4 and next_grid(c, w_g[1] + 0.05) <= vo4['on'] - 0.45:
+        t = next_grid(c, w_g[1] + 0.05)          # the first grid point after the headline (the record plays dry); the
+    else:                                        # score review (2026-10-09): as far before V.O. 4 as that allows
+        t = place(c, t_g, W, floor=t, limit=(vo4['on'] - 0.15) if vo4 else 1e9)
     hs.append((t, 'Gbmaj7#11', 'after the headline, before V.O. 4 ("the one after runs on ours."): G-flat lydian, '
-                               'held; the felt carries the V.O., nothing attacks under it'))
+                               'held, a slow roll at a soft touch; the felt carries the V.O., nothing attacks under it'))
     t = place(c, lead_in(c, B('8.04')), W, floor=t)
     hs.append((min(t, s2), 'Bbm9', f'the calendar ({how(c, min(t, s2), B("8.04"))}): the bed for statement 2'))
     hs.append((s2 + BAR, 'F5', 'statement 2\'s settle on an open fifth: B-flat minor to F with no third (the block '
@@ -390,9 +396,12 @@ def cue_darkroom(tl):
         lh, (vc, vla) = DR[col]
         last = i + 1 == len(H)
         if col not in ('Fm9',) and lh and abs(t0 - s2) > 0.05:      # (the statements strike their own left hand)
-            vv = 0.4 if col == 'Gbmaj7#11' else (0.27 if col == 'Dbmaj9#11' else (0.33 if col != 'F5' else 0.34))
-            c.pch('felt_lh', lh, t0, t1 - t0 + (1.2 if last else 0.05), vv, roll=0.018,
-                  span_end=t1 - 0.03 if not last else t1 + 1.5)
+            # the score review (2026-10-09): the B-flat minor and G-flat attacks read -12.3 / -11.4 LUFS-M, over the
+            # -14 ceiling; 3-4 dB softer, and the G-flat (struck just before V.O. 4) rolled slowly
+            vv = 0.2 if col == 'Gbmaj7#11' else (0.27 if col == 'Dbmaj9#11' else (0.19 if col == 'Bbm9' else
+                                                                                    (0.33 if col != 'F5' else 0.34)))
+            c.pch('felt_lh', lh, t0, t1 - t0 + (1.2 if last else 0.05), vv,
+                  roll=0.06 if col == 'Gbmaj7#11' else 0.018, span_end=t1 - 0.03 if not last else t1 + 1.5)
             c.n('felt_mech', 60, t0, 0.1, 0.25)
         sv = 0.25 if col in ('Fped', 'Gbmaj7#11', 'Bbm9') else 0.21
         c.rebow('vc', vc, t0 - (0.0 if i == 0 else 0.3), t1 + 0.35, sv, seg=5.0, xf=0.9,
@@ -492,6 +501,10 @@ TCH = {   # comp voicing (mid register), bass root, the walk's scale: no A natur
     'Dbmaj9#11': (['F3', 'C4', 'Eb4', 'G4'], 'Db2', ['Db2', 'Eb2', 'F2', 'G2', 'Ab2', 'Bb2', 'C3']),
     'Bbm9':      (['Db4', 'F4', 'Ab4', 'C5'], 'Bb1', ['Bb1', 'C2', 'Db2', 'Eb2', 'F2', 'Gb2', 'Ab2']),
     'Eb9':       (['Db4', 'F4', 'G4', 'Bb4'], 'Eb2', ['Eb2', 'F2', 'G2', 'Ab2', 'Bb2', 'C3', 'Db3']),
+    # the sung bars ("one wo-o-ord."): the take sings G4 D4 A3, then C5 G4 D4 held; C7sus's D-flat rubbed its D and its
+    # B-flat sat a semitone over its A (the score review, 2026-10-09). C9sus4 without the 7th: C | G D F G, the D the
+    # tune's own dorian D; the bass holds C (no walk)
+    'C9sus_sung': (['G3', 'D4', 'F4', 'G4'], 'C2', ['C2', 'D2', 'F2', 'G2']),
 }
 FORM_CH = {'A': [[(0, 'Fm11')], [(0, 'Bb13')], [(0, 'Abmaj9#11')], [(0, 'Fm11'), (2, 'C7sus')]],
            'B': [[(0, 'Dbmaj9#11')], [(0, 'Bbm9')], [(0, 'Eb9')], [(0, 'C7sus')]],
@@ -523,9 +536,12 @@ def bar_melody(sec, i):
     return mel, ech
 
 
-def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=False, double='cb_pizz'):
+def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=False, double='cb_pizz', gate=0.92,
+             first_vel=1.0, pedal=False):
     """a walking bass over one bar (chords: [(beat, name)]): the root on each change, scale tones between, an approach
-    into the next bar's root on beat 4; two_feel: half notes (root, then fifth or approach)"""
+    into the next bar's root on beat 4; two_feel: half notes (root, then fifth or approach); gate: each note's length
+    (0.98: legato, the floor under a two-feel); first_vel: the downbeat's factor (a laugh's window: soft, no double);
+    pedal: the root on every note (the sung bars hold C)"""
     out = []
     beats = [0, 2] if two_feel else [0, 1, 2, 3]
     prev = None
@@ -533,7 +549,7 @@ def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=Fals
         name = [n for b, n in chords if b <= bt + 1e-6][-1]
         _, root, scl = TCH[name]
         r = nm(root)
-        if any(abs(b - bt) < 1e-6 for b, _ in chords):
+        if pedal or any(abs(b - bt) < 1e-6 for b, _ in chords):
             p = r
         elif bt == beats[-1] and nxt_root is not None:
             tgt = nm(nxt_root)
@@ -550,9 +566,10 @@ def walk_bar(c, t0, chords, nxt_root, rng, vel=0.48, inst='ubass', two_feel=Fals
         if p % 12 == 9:                       # never an A natural, even passing
             p -= 1
         prev = p
-        d = (2 if two_feel else 1) * Q * 0.92
-        out.append(c.n(inst, p, t0 + bt * Q, d, vel * (1.0 if bt == 0 else 0.9)))
-        if double:
+        d = (2 if two_feel else 1) * Q * gate
+        fv = first_vel if bt == 0 else 1.0
+        out.append(c.n(inst, p, t0 + bt * Q, d, vel * (1.0 if bt == 0 else 0.9) * fv))
+        if double and fv >= 0.99:
             c.n(double, p, t0 + bt * Q, Q * 0.6, vel * 0.5, rel=0.16)
     return out
 
@@ -682,6 +699,10 @@ def tracks_blueprint(tear_s, zero_s):
     T['lead2'].gain_db, T['lead2'].pan, T['lead2'].sends = -9.0, 0.25, {'room': -12, 'chamber': -16}
     T['tri'].gain_db = -7.0
     dup(T, 'tri', 'tri2', gain_db=-10.0, pan=-0.2)
+    # under her words the box moves to the triangle an octave down, and the line to the triangle: the 1-4 kHz band
+    # thins (the score review, 2026-10-09: the square's harmonics sat in her presence band)
+    dup(T, 'tri', 'tri_box', gain_db=-6.0, pan=0.25)
+    dup(T, 'tri', 'tri_lead', gain_db=-4.0, pan=0.0)
     T['celesta'].gain_db, T['celesta'].sends = 9.0, {'hall': -12, 'chamber': -12}
     T['harp'].gain_db, T['harp'].pan = -7.0, -0.35
     T['woodclick'].gain_db, T['woodclick'].eq, T['woodclick'].pan = -16.0, [('hp', 900), ('hs', 6000, -4)], 0.35
@@ -712,6 +733,13 @@ def cue_blueprint(tl, demo_entry):
               swing=0.0)
     T, tape = tracks_blueprint(c.clk(tear), c.clk(zero))
     talk = talk_windows(tl, 0.1, 0.15)
+    # her lines' first words: no label or gap note starts within CLEAR s before a first word or inside its first CLEAR
+    # s, and none rings into one; from CLEAR s before a first word to the line's end the box is the triangle (the
+    # score review, 2026-10-09: the notes that rang into 'Omni', 'NOW', the plan and the sheet masked her)
+    lines_bp = [ln for ln in tl.lines if W0 - 1.0 < ln['on'] < zero]
+    firsts = sorted((ln['words'][0][1] if ln['words'] else ln['on']) for ln in lines_bp)
+    zones = [(w - CLEAR, w + CLEAR) for w in firsts]
+    under = merge([((ln['words'][0][1] if ln['words'] else ln['on']) - CLEAR, ln['end'] + 0.05) for ln in lines_bp])
     wb = lambda k: W0 + k * WBAR                  # noqa: E731
     wq = lambda t: W0 + round((t - W0) / (Q / 2)) * (Q / 2)      # noqa: E731  the plan's eighth grid
     nbar = int(math.floor((tear - W0) / WBAR)) + 1
@@ -753,8 +781,10 @@ def cue_blueprint(tl, demo_entry):
         brk_notes.append((t, ['Bb4', 'G4'][j % 2]))
         t += Q
         j += 1
-    # ---- the accompaniment: the triangle bass on 1, the chip's chord on 2 and 3, the drafting pizzicato in the
-    # relay and the steps, a sul-tasto pad for NOW (one model) and the tiny stage; softer under her lines
+    # ---- the accompaniment: the triangle bass on 1, the chip's chord on 2 and 3 (the triangle an octave down under
+    # her words), the drafting pizzicato in the relay and the steps, a sul-tasto pad for NOW (one model) and the tiny
+    # stage; softer under her lines
+    box = dict(tri=0, square=0)
     for k in range(nbar + 1):
         t0 = wb(k)
         if t0 >= stuck0 - 0.01 or t0 >= tear:
@@ -762,23 +792,33 @@ def cue_blueprint(tl, demo_entry):
         ch = chords[k]
         bass, cc, padv = WZ[ch]
         soft = 0.8 if inside(t0, talk) else 1.0
-        c.n('tri', bass, t0, WBAR * 0.95, 0.52 * soft, True, att=0.002, dec=0.6, sus=0.0, rel=0.12, steps=15)
+        c.n('tri', bass, t0, WBAR * 0.95, 0.52 * (0.62 if inside(t0, under) else soft), True, att=0.002, dec=0.6,
+            sus=0.0, rel=0.12, steps=15)
         for bt in (1, 2):
+            tb_ = t0 + bt * Q
+            if inside(tb_, under):
+                for p in cc:
+                    c.n('tri_box', nm(p) - 12, tb_, 0.42, (0.46 if bt == 1 else 0.4), True, att=0.003, dec=0.35,
+                        sus=0.0, rel=0.15, steps=15)
+                box['tri'] += 1
+                continue
             for p in cc:
-                c.n('lead2', p, t0 + bt * Q, 0.3, (0.4 if bt == 1 else 0.34) * soft, True, duty=0.5, att=0.002,
+                c.n('lead2', p, tb_, 0.3, (0.4 if bt == 1 else 0.34) * soft, True, duty=0.5, att=0.002,
                     dec=0.12, sus=0.0, rel=0.08, steps=15)
+            box['square'] += 1
         relay = S['before'] - 0.3 <= t0 < S['laugh_tag'] - 0.2
         steps = S['step1'] - 0.6 <= t0 < S['sheet'] - 0.4
         if relay or steps:
             for j, p in enumerate(WZ_PULSE[ch]):
                 tj = t0 + j * Q / 2
-                c.n('vla_pizz' if j % 2 else 'vln_pizz', p, tj, 0.25, (0.42 if j % 2 == 0 else 0.34) * soft, True)
+                sp = 0.6 if inside(tj, under) else soft
+                c.n('vla_pizz' if j % 2 else 'vln_pizz', p, tj, 0.25, (0.42 if j % 2 == 0 else 0.34) * sp, True)
         stage = S['now'] - 0.4 <= t0 < S['step1'] - 0.6 or S['sheet'] - 0.4 <= t0 < S['brk'] - 0.3
         if stage:
             for inst, p in zip(('vc', 'vla', 'vln2'), padv[:3]):
                 c.n(inst, p, t0, WBAR + 0.25, 0.18, True, art='sus', att=0.35, rel=0.5, lp=2300.0)
-        if k in (0, kb(S['before']), kb(S['now']), kb(S['step1']), kb(S['sheet'])):
-            for j, p in enumerate(padv):
+        if k in (0, kb(S['before']), kb(S['now']), kb(S['step1']), kb(S['sheet'])) and not inside(t0, under):
+            for j, p in enumerate(padv):                          # (a section's harp spread: never under her words)
                 c.n('harp', p, t0 + j * 0.06, 1.6, 0.45, True)
     # the stuck loop: the chip's chord on every beat, no bass (the mechanism caught), until the tear
     t = stuck0
@@ -786,44 +826,98 @@ def cue_blueprint(tl, demo_entry):
         for p in WZ['C'][1]:
             c.n('lead2', p, t, 0.28, 0.36, True, duty=0.5, att=0.002, dec=0.12, sus=0.0, rel=0.08, steps=15)
         t += Q
-    # ---- the line: one note per label (the plan's steps are the line's steps), the tune in 3/4 in the gaps
-    line = [(W0, 'F4', 'the waltz on its downbeat: the walk-on tune\'s head as a music box (F G A-flat C)'),
-            (W0 + Q, 'G4', None), (W0 + 2 * Q, 'Ab4', None), (W0 + 3 * Q, 'C5', None),
-            (wq(S['before']), 'Bb4', 'BEFORE'), (max(wq(S['before']) + Q / 2, wq(S['relay'])), 'Ab4',
-                                                 'the relay drawn (soft, under her line)'),
-            (wq(S['fell']), 'G4', '"fell out": the labels drop through the grate (soft)'),
-            (wq(S['laugh_tag']), 'F4', 'the [laughter] tag at the bottom of the grate'),
-            (wq(S['now']), 'Bb4', 'NOW'), (wq(S['now']) + Q / 2 if wq(S['gtp']) <= wq(S['now']) else wq(S['gtp']),
-                                         'C5', 'GTP-4o: one box'),
-            (wb(kb(S['step1']) - 2), 'D5', 'the answer begins in the gap'), (wb(kb(S['step1']) - 2) + Q, 'C5', None),
-            (wq(S['step1']), 'F4', 'step 1: 232 MS (the step cell begins: F)'),
-            (wq(S['step2']), 'G4', 'step 2: MON (G)'), (wq(S['step3']), 'Ab4', 'step 3: $0 (A-flat)'),
-            (wb(kr(S['sheet'])) - 3 * Q + Q / 2, 'Bb4', 'the tiny crowd floods in: B-flat A-flat B-flat'),
-            (wb(kr(S['sheet'])) - 2 * Q, 'Ab4', None), (wb(kr(S['sheet'])) - Q, 'Bb4', None),
-            (wb(kr(S['sheet'])), 'C5', 'the full sheet, the tiny stage: the leap lands on C')]
-    lt = dict(line=[], dropped=[])
-    for t, p, why in line + [(tt, pp, None) for tt, pp in brk_notes]:
+    # ---- the line: one note per label (the plan's steps are the line's steps), the tune in 3/4 in the gaps.  Each
+    # entry: (t, pitch, why, how) where `how` says what a note does when it lands in a first word's zone (CLEAR s either
+    # side of it): 'drop' it, move it 'early' (the latest eighth CLEAR s before the word, after the last note and the
+    # line before), or 'late' (the first eighth CLEAR s after the word, within 0.9 s of its label); a 'pick' figure
+    # moves whole so its last note clears the word (a note of it that would land in her line is left out)
+    wq_dn = lambda t: W0 + math.floor((t - W0) / (Q / 2) + 1e-6) * (Q / 2)        # noqa: E731
+    wq_up = lambda t: W0 + math.ceil((t - W0) / (Q / 2) - 1e-6) * (Q / 2)         # noqa: E731
+    a_head = wb(kb(S['step1']) - 2)
+    pick_c = wb(kr(S['sheet']))
+    line = [(W0, 'F4', 'the waltz on its downbeat: the walk-on tune\'s head as a music box (F G A-flat C)', 'drop'),
+            (W0 + Q, 'G4', None, 'drop'), (W0 + 2 * Q, 'Ab4', None, 'drop'), (W0 + 3 * Q, 'C5', None, 'drop'),
+            (wq(S['before']), 'Bb4', 'BEFORE', 'early'),
+            (max(wq(S['before']) + Q / 2, wq(S['relay'])), 'Ab4', 'the relay drawn (soft, under her line)', 'late'),
+            (wq(S['fell']), 'G4', '"fell out": the labels drop through the grate (soft)', 'late'),
+            (wq(S['laugh_tag']), 'F4', 'the [laughter] tag at the bottom of the grate', 'early'),
+            (wq(S['now']), 'Bb4', 'NOW', 'early'),
+            (wq(S['now']) + Q / 2 if wq(S['gtp']) <= wq(S['now']) else wq(S['gtp']), 'C5', 'GTP-4o: one box', 'drop'),
+            (a_head, 'D5', 'the answer begins in the gap', 'early'), (a_head + Q, 'C5', None, 'early'),
+            (wq(S['step1']), 'F4', 'step 1: 232 MS (the step cell begins: F)', 'late'),
+            (wq(S['step2']), 'G4', 'step 2: MON (G)', 'late'), (wq(S['step3']), 'Ab4', 'step 3: $0 (A-flat)', 'late'),
+            (pick_c - 3 * Q + Q / 2, 'Bb4', 'the tiny crowd floods in: B-flat A-flat B-flat', 'pick'),
+            (pick_c - 2 * Q, 'Ab4', None, 'pick'), (pick_c - Q, 'Bb4', None, 'pick'),
+            (pick_c, 'C5', 'the full sheet, the tiny stage: the leap lands on C', 'pick')]
+    # the pickup figure moves whole: its C on the latest eighth CLEAR s before the first word after it
+    w_after = min([w for w in firsts if w > pick_c - 1.0] + [1e9])
+    shift = min(0.0, wq_dn(w_after - CLEAR) - pick_c) if pick_c > w_after - CLEAR else 0.0
+    placed, moved, last_t = [], [], -1e9
+    for t, p, why, how_ in line:
+        z = next((zz for zz in zones if zz[0] - 1e-6 <= t < zz[1]), None)
+        t2 = t
+        if how_ == 'pick':
+            t2 = t + shift
+            if inside(t2, under):
+                moved.append(dict(t=round(t, 3), p=p, to=None, why='the pickup moved whole; this note would sound in '
+                                                                      'her line'))
+                continue
+        elif z is not None:
+            w_ = z[0] + CLEAR
+            if how_ == 'early':
+                t2 = wq_dn(w_ - CLEAR)
+                prev_end = max([ln['end'] + 0.15 for ln in lines_bp if ln['end'] <= w_ - 0.01] + [-1e9])
+                if t2 < last_t + Q / 2 - 1e-6 or t2 < prev_end:
+                    t2 = None
+            elif how_ == 'late':
+                t2 = wq_up(w_ + CLEAR)
+                if t2 > t + 0.9:
+                    t2 = None
+            else:
+                t2 = None
+            moved.append(dict(t=round(t, 3), p=p, to=(round(t2, 3) if t2 is not None else None), how=how_,
+                              word=round(w_, 3)))
+            if t2 is None:
+                continue
+        placed.append((t2, p, why))
+        last_t = t2
+    lt = dict(line=[], dropped=[], moved=moved)
+    allnotes = placed + [(tt, pp, None) for tt, pp in brk_notes]
+    for t, p, why in allnotes:
         if t >= tear - 0.03:
             continue
         in_talk = inside(t, talk)
         if in_talk and why is None and t < S['brk']:
             lt['dropped'].append((round(t, 3), p))
             continue
+        thin_ = bool(inside(t, under)) and t < S['brk']
         soft = 0.6 if in_talk else 1.0
-        k = kb(t)
-        nxt = min([tt for tt, _, _ in line if tt > t + 1e-3] + [t + 2 * Q])
+        nxt = min([tt for tt, _, _ in allnotes if tt > t + 1e-3] + [t + 2 * Q])
         d = max(0.25, min(0.9, (nxt - t) * 0.6))
-        c.n('lead', p, t, d, 0.6 * soft, True, duty=0.25, att=0.0015, dec=0.26 + 0.12 * min(d / Q, 2), sus=0.0,
-            rel=0.22, steps=15)
-        c.n('celesta', nm(p) + 12, t, max(0.6, d * 1.2), 0.42 * soft, True)
-        if p in FOURTH_BELOW and not in_talk and t < S['brk']:
-            c.n('tri2', FOURTH_BELOW[p], t, min(0.8, d), 0.36, True, duty=0.5, att=0.002, dec=0.2, sus=0.0,
-                rel=0.1, steps=15)
+        w_next = min([w for w in firsts if w > t + 1e-3] + [1e9])
+        ring_lim = w_next - 0.25 - 0.22 - t                  # nothing rings into her next first word
+        if not thin_ and ring_lim < d:
+            d = max(0.12, ring_lim)
+        if thin_:                                            # under her words: the triangle, no celesta, no fourth
+            c.n('tri_lead', p, t, d, 0.5, True, att=0.003, dec=0.3 + 0.1 * min(d / Q, 2), sus=0.0, rel=0.2, steps=15)
+        else:
+            c.n('lead', p, t, d, 0.52 * soft, True, duty=0.25, att=0.0015, dec=0.26 + 0.12 * min(d / Q, 2), sus=0.0,
+                rel=0.22, steps=15)
+            c.n('celesta', nm(p) + 12, t, max(0.25, min(max(0.6, d * 1.2), w_next - 0.35 - t)), 0.38 * soft, True)
+            if p in FOURTH_BELOW and not in_talk and t < S['brk']:
+                c.n('tri2', FOURTH_BELOW[p], t, min(0.8, d), 0.36, True, duty=0.5, att=0.002, dec=0.2, sus=0.0,
+                    rel=0.1, steps=15)
         if why and ('step' in why or why in ('BEFORE', 'NOW')):
-            c.n('woodclick', 60, t, 0.2, 0.3, True)                          # the pencil tick (score, soft)
+            c.n('woodclick', 60, t, 0.2, 0.3 if not thin_ else 0.22, True)   # the pencil tick (score, soft)
         lt['line'].append((round(t, 3), p))
         if why:
-            c.mark(t, f'the line: {p} ({why})', hit=False)
+            c.mark(t, f'the line: {p} ({why}){" (the triangle, under her words)" if thin_ else ""}', hit=False)
+    for m in moved:
+        c.mark(m['to'] if m.get('to') is not None else m['t'],
+               f"the line's {m['p']} at {m['t']:.2f} " + (f"moved to {m['to']:.2f}" if m.get('to') is not None else
+                                                         'left out') + (f" (clear of her first word at {m['word']})"
+                                                                        if m.get('word') else ' (it would sound in her line)'),
+               hit=False)
     c.mark(W0, 'DESIGNED HIT: THE PLAN\'s waltz on its downbeat, 0.25 s before the cut: the walk-on\'s tune, now a '
                'chip music box in 3/4 (the panel\'s last square becomes the grid\'s first cell)')
     c.mark(wb(kb1), 'THE BREAK: the answer starts under the empty bubble (D C B-flat | A-flat B-flat G ...)', hit=False)
@@ -856,7 +950,8 @@ def cue_blueprint(tl, demo_entry):
     #                                                                             featured ceiling (-14 LUFS-M)
     sc = c.finish(T, meta, length_end=zero + 0.3, tail_s=0.3, stem_post={fam: tape for fam in FAMILIES}, macro=macro)
     c.ev = dict(W0=W0, zero=zero, stuck=stuck0, chords={k: v for k, v in chords.items() if k <= nbar},
-                **{k: round(v, 3) for k, v in S.items()}, line=lt['line'], dropped=lt['dropped'])
+                **{k: round(v, 3) for k, v in S.items()}, line=lt['line'], dropped=lt['dropped'], moved=lt['moved'],
+                first_words=[round(w, 3) for w in firsts], box=box)
     return c, sc
 
 
@@ -892,6 +987,10 @@ def tracks_demo(news_cut_s):
     T['fl'].gain_db, T['fl'].pan, T['fl'].sends, T['fl'].eq = 1.0, -0.5, {'room': -9}, [('lp', 2600), ('hp', 300)]
     T['felt'].gain_db, T['felt'].sends = -3.0, {'room': -12, 'hall': -16}
     T['felt_mech'].gain_db = -18.0
+    # the floor under the two-feel: an arco bass on the root, low and dark, so the band never empties before a bar line
+    # (the score review, 2026-10-09: a 20-30 dB pump at the bar lines); nothing of it reaches the voices' band
+    dup(T, 'cb', 'cb_floor', gain_db=-1.0, sends={'hall': -14, 'room': -18}, eq=list(T['cb'].eq) + [V.PIZZ_NOTCH,
+                                                                                                  ('lp', 700)])
 
     def monitor(buf, ctx=None):
         """the news's tiny bed through his monitor's speaker; it stops when he minimises the window"""
@@ -946,7 +1045,12 @@ def cue_demo(tl):
              black=B('12.04'), home=B('12.05'), face=B('12.08'))
     # ---- the demo's bars: the form from the beat after the push; the band stops into the hold
     hold_t = lead_in(c, hold)                                # the band thins to a held chord for Rima's hold
-    end_t = lead_in(c, ended)                                # ENDED: the pad
+    end_t = lead_in(c, ended)                                # ENDED: the pad, pre-lapping the cut to 11.10 when
+    close0 = _line(tl, 'e2-a2-0036', 'rima', hold + 2.5)     # her close is over (the score review, 2026-10-09: it
+    if tl.has('11.10'):                                      # came 0.46 s after the cut)
+        t_cut = lead_in(c, B('11.10'))
+        if t_cut is not None and t_cut >= ((close0['end'] + 0.25) if close0 else hold + 3.0):
+            end_t = min(end_t, t_cut)
     nbars = int(math.ceil((hold_t - beat_after) / BAR)) + 1
     form = form_bars(nbars + 2, tail=False)[2:]              # the demo starts on the tune (no intro)
     bars = []
@@ -961,7 +1065,7 @@ def cue_demo(tl):
     sung_end = (sung['end'] if sung else S0 + 2.3)
     for b in bars:
         if b['t0'] <= S0 + 0.01 < b['t0'] + BAR or b['t0'] <= sung_end < b['t0'] + BAR or S0 < b['t0'] < sung_end:
-            b['chords'] = [(0, 'C7sus')]
+            b['chords'] = [(0, 'C9sus_sung')]
             b['sung'] = True
     for j, b in enumerate(bars):
         if b.get('sung') and j + 1 < len(bars) and not bars[j + 1].get('sung'):
@@ -984,22 +1088,43 @@ def cue_demo(tl):
     c.ch('tbn_stac', ['Bb3'], push, 0.14, 0.32, roll=0.0)
     c.mark(push, f'DESIGNED HIT: the demo\'s push ({how(c, push, cut)} to the stage): the walk-on\'s band on stage, the '
                  'tape stopped a quarter second before')
+    # the laughs' windows (no attack lands on a laugh: OST rule 1) and the lines' first words (no comp attack in the
+    # 0.4 s before one or the 0.5 s after: the score review, 2026-10-09)
+    laughs = merge([(s_['t'] - 0.1, s_['t'] + 0.9) for s_ in tl.sounds if s_['name'].startswith('crowd_laugh')])
+    firsts = merge([((ln['words'][0][1] if ln['words'] else ln['on']) - 0.4,
+                     (ln['words'][0][1] if ln['words'] else ln['on']) + 0.5) for ln in tl.lines
+                    if beat_after - 1.0 < ln['on'] < hold_t])
+    comp = dict(kept=0, skipped_word=[], skipped_laugh=[])
     for j, b in enumerate(bars):
         t0 = b['t0']
         nxt = bars[j + 1]['chords'][0][1] if j + 1 < len(bars) else 'Dbmaj9#11'
-        two = True
+        on_laugh = bool(inside(t0, laughs))
         walk_bar(c, t0, [(bt, n) for bt, n in b['chords']], TCH[nxt][1], rng,
-                 vel=0.44 if not b.get('sung') else 0.4, two_feel=two)
+                 vel=0.44 if not b.get('sung') else 0.4, two_feel=True, gate=0.98,
+                 first_vel=0.6 if on_laugh else 1.0, pedal=bool(b.get('sung')))
+        # the floor: the arco bass holds each chord's root (soft attack) under the two-feel
+        for idx, (bt, n) in enumerate(b['chords']):
+            ta = t0 + bt * Q
+            tz = t0 + (b['chords'][idx + 1][0] * Q if idx + 1 < len(b['chords']) else BAR)
+            c.n('cb_floor', TCH[n][1], ta, tz - ta + 0.08, 0.2, art='sus', att=0.25, rel=0.35)
         for idx, (bt, n) in enumerate(b['chords']):
             tc = b.get('prelap', {}).get(idx, t0 + bt * Q)
             v = TCH[n][0]
-            soft = 0.75 if inside(tc, talk) else 1.0
+            soft = 0.6 if inside(tc, talk) else 1.0                      # (the vibes' partials sit in her band)
             if b.get('sung'):
                 if idx == 0:
                     c.ch('vibes', v, tc, BAR * 0.95, 0.3, roll=0.01)          # held under the singing (no comping)
                 continue
-            c.ch('vibes', v, tc, Q * 1.3, 0.34 * soft, roll=0.008)
-            c.ch('vibes', v[1:], sw_at(t0, bt + 1.5), Q * 0.35, 0.22 * soft, roll=0.006)
+            if on_laugh and idx == 0:
+                comp['skipped_laugh'].append(round(tc, 3))                   # the downbeat on a laugh: no attack
+            elif inside(tc, firsts):
+                comp['skipped_word'].append(round(tc, 3))
+            else:
+                c.ch('vibes', v, tc, Q * 1.3, 0.34 * soft, roll=0.008)
+                comp['kept'] += 1
+            t2 = sw_at(t0, bt + 1.5)
+            if not inside(t2, firsts) and not inside(t2, laughs):
+                c.ch('vibes', v[1:], t2, Q * 0.35, 0.22 * (0.6 if inside(t2, talk) else 1.0), roll=0.006)
     drums_window(c, 'brushes', 'sweep: ~~~~~~~~\ntap: ..o...o.\nhatf[vel=0.5]: ..x...x.', beat_after, hold_t, 0.4)
     # ---- the lead: the tune's phrases ONLY in the pockets (a phrase starts only when its first notes are clear and
     # stops when a line begins), the chip with the violins an octave under; the echo; a brass tap at a clear phrase end
@@ -1071,13 +1196,16 @@ def cue_demo(tl):
     c.rebow('cb', 'Db2', hold_t, end_t + 0.3, 0.12, seg=5.0, xf=1.0, first_att=0.6, last_rel=0.8, art='sus', lp=900)
     hv, hvb = PAD['Dbmaj9#11']
     for inst, p in zip(('vc', 'vla', 'vln2', 'vln1'), hv):
-        c.rebow(inst, p, hold_t, end_t + 0.3, 0.16, seg=5.0, xf=1.0, first_att=0.9, last_rel=0.4, art='sus', lp=2400)
-    c.ch('vb', hvb, hold_t + 0.05, end_t - hold_t + 0.4, 0.24, roll=0.02, art='bowed')
+        c.rebow(inst, p, hold_t, end_t + 0.3, 0.16, seg=5.0, xf=1.0, first_att=0.9, last_rel=0.4, art='sus', lp=1800)
+    # (no bowed vibes in the hold: their E-flat5 G5 and the voices over C5 sat hotter in 1-4 kHz than her quiet take;
+    # the score review, 2026-10-09. The strings stay at or under F4 over the D-flat bass)
     c.n('swish', 'C4', hold_t, 1.2, 0.3, True, circles=0.6)
-    c.mark(hold_t, f'Rima\'s hold ({how(c, hold_t, hold)}): the band thins to one held chord (D-flat maj9(#11)): the '
-                   'house waits on her; nothing under "...and that\'s the demo." moves', hit=False)
+    c.mark(hold_t, f'Rima\'s hold ({how(c, hold_t, hold)}): the band thins to one held chord (D-flat maj9(#11): the '
+                   'strings at or under F4, the bass\'s D-flat): the house waits on her; nothing under "...and that\'s '
+                   'the demo." moves', hit=False)
     # ---- the pad: from ENDED, held (no tune: the demo's harmony only) to the stop
-    plan = [(end_t, 'Fm11', 'ENDED: the rhythm stops; the strings and the bowed vibes hold the pad (dry under the post)')]
+    plan = [(end_t, 'Fm11', f'ENDED ({how(c, end_t, B("11.10"))} to it): the rhythm stops; the strings and the bowed vibes '
+                            'hold the pad (dry under the post)')]
     blimp = [s['t'] for s in tl.sounds if s['name'] == 'blimp_inflate_step']
     t = place(c, c.next_bar(max(end_t + BAR, (rec_end(rec, e['post']) + 0.1))), W)
     plan.append((t, 'Dbmaj9#11', 'the blimp rises over the emptying house; the coverage swings away (the pad moves, '
@@ -1151,7 +1279,8 @@ def cue_demo(tl):
     c.mark(stop, 'DESIGNED STOP: the cue stops mid-phrase ON THE DOWNBEAT where the settle (C, then F) would land; '
                  'black: the midpoint act-out (THE CLOCK\'s first tick is Act Three\'s, J 0.8 s)', hit=False)
     # ---- thin: under every line the comp is softer and the brushes lighter (the lead is already out)
-    V.thin(c, {'talk': dict(soften={'vibes': 0.82, 'swish': 0.85, 'brush': 0.85, 'jazz': 0.8})}, t1=hold_t)
+    V.thin(c, {'talk': dict(soften={'vibes': 0.82, 'swish': 0.7, 'brush': 0.65, 'jazz': 0.65})}, t1=hold_t)
+    #          (the brushes' taps, the sweep and the hat are noise in her band: lighter under every line; score review)
     secs = [('A the push; the walk-on on stage; Rima\'s welcome (the band under her)', push, B('11.04')),
             ('B "keep your answers short" ... "one wo-o-ord." (the C pedal; the chip echo)', B('11.04'),
              B('11.06')),
@@ -1193,14 +1322,21 @@ def cue_demo(tl):
                   'the stop: his line cut on the downbeat into black, the midpoint'])
     # the fader rides (measured, then set): the hold and the Door sit under the band; his line on his face is a
     # whisper, not an out at full size
-    rides = [(push - 0.2, push + 2.6, -3.0), (hold_t, end_t, -2.0), (end_t, plan[3][0], -1.0),
-             (plan[3][0], e['home'], -2.0)]
+    rides = [(push - 0.2, push + 2.6, -3.0)]
+    if close:                     # her close ("...and that's the demo."): 4 dB further down from just before her first
+        w_c = close['words'][0][1] if close['words'] else close['on']   # word to her last (the score review: 12 dB of
+        rides += [(hold_t, w_c - 0.4, -2.0), (w_c - 0.4, close['end'] + 0.25, -6.0),  # 1-4 kHz room at its onset)
+                  (close['end'] + 0.25, end_t, -2.0)]
+    else:
+        rides.append((hold_t, end_t, -2.0))
+    rides += [(end_t, plan[3][0], -1.0), (plan[3][0], e['home'], -2.0)]
     if frag:
         rides.append((frag[0][0] - 0.15, stop + 0.6, -5.5))
     macro = ride_macro(rides, c.bar1 - 1.0, stop + 1.0)
     meta['rides'] = [dict(t0=round(a, 3), t1=round(b, 3), db=d) for a, b, d in rides]
     sc = c.finish(T, meta, length_end=stop + 0.6, tail_s=0.3, mutes=[(stop, stop + 2.0)], macro=macro)
     c.ev = dict({k: (round(v, 3) if isinstance(v, float) else v) for k, v in e.items()}, hold_t=round(hold_t, 3),
+                comp=comp,
                 end_t=round(end_t, 3), pad=[(round(t, 3), col) for t, col, _ in plan],
                 bars=[dict(t0=round(b['t0'], 3), sec=b['sec'], i=b['i'], chords=b['chords'], sung=b.get('sung', False))
                       for b in bars], lead=placed, frag=[(round(t, 3), p) for t, p in frag], blimp=blimp)
@@ -1328,17 +1464,15 @@ def main():
                                  'and quiet)', start=round(cw.ev['j_in'], 3), end=round(cb.ev['W0'], 3), duck_db=5.0,
                          duck_why='the PA is behind a wall (nothing above 1.5 kHz) and rendered at -24: 5 dB under the '
                                   'quick talk keeps it a presence, not a hole'))
-    sections.append(dict(section='e02-07b: BLUEPRINT (THE PLAN, featured)', start=round(cb.ev['W0'], 3),
-                         end=round(cb.ev['zero'], 3), duck_db=4.0,
-                         duck_why='P14: featured -16, -20 under the blueprint\'s lines; the cue already thins its line '
-                                  'under her voice'))
+    # (BLUEPRINT's 4 dB duck override is gone: the score review, 2026-10-09, measured the music over the first 0.6 s of
+    # her explainer lines; the mix's mood duck, E02-07's 8 dB, applies)
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (each cue at its engine master: E02-06 -20, the walk-on -24 (through a wall), BLUEPRINT -18 '
               '(featured), the demo and pad -19 LUFS-I), dry of dialogue; the mixer ducks it (E02-06 7 dB, E02-07 8; '
-              '`sections` duck_db: the walk-on 5, BLUEPRINT 4)',
+              '`sections` duck_db: the walk-on 5)',
         cues=cues,
         silences_designed=[dict(t0=round(a, 3), t1=round(b, 3), why=w) for a, b, w in designed],
         designed_hit=[dict(t=round(t, 3), cue=sc.name, what=lab, exempt='a designed attack or entry on a story beat; '
@@ -1357,7 +1491,8 @@ def main():
                       'ui_drop_snap (8.04): lands on the Water Line\'s settle downbeat (the felt\'s C4); keep it dry, '
                       'off A', 'palette_step_F x3 (11.02): the score leaves them room (the lead is out there)',
                       'blimp_inflate_step x4 (11.13): the pad moves between them, never on them',
-                      'stream_end_tone (11.10, NEW): the pad\'s Fm11 lands 0.3 s before it; tune it to F or C'],
+                      f'stream_end_tone (11.10, NEW): the pad\'s Fm11 lands '
+                      f'{built["demo"][0].ev["ended"] - built["demo"][0].ev["end_t"]:.2f} s before ENDED; tune it to F or C'],
         heard='nothing here has been listened to; every number is measured')
     V.write_json(os.path.join(HERE, f'cues{tag}.json'), doc)
     print(f'wrote {os.path.relpath(out, V.REPO)}: {res["length_s"]} s exact={res["exact"]}')

@@ -12,8 +12,15 @@ Per segment (cold open, Act One to Act Four, the tag), from render/music[-el].wa
   LENGTH     samples == the lock's frames x 2000 (exact)
   LOUDNESS   the whole stem's LUFS-I and true peak (dBTP)
   SILENCE    every run of digital zero >= 0.1 s sits in a marked silence or designed rest (+-0.35 s)
+  LOCK       the cue sheet's lock_sha1 == the lock's content hash (v3lib.lock_sha1): a score laid to another version of
+             the lock (a retime that kept the act's length) fails (S5)
   HOLES      no run under -60 dBFS of 0.3 s or more outside a marked silence or rest
-  FRAGMENTS  the cue sheet's own count of undesigned music runs under 2 s
+  HOLES-42   S3's own test on the music: no run of 50 ms windows under -42 dBFS RMS (the louder channel, as the mixer's
+             holes()) of 0.3 s or more outside a marked silence (silences_designed; 1.6 s of fade allowed before it)
+  FRAGMENTS  MEASURED from the stem: music runs above -60 dBFS (rests under 0.75 s don't split a run) shorter than 2 s,
+             other than a run that holds a designed hit or a sting the cue sheet marks
+  POCKET     every line's take against the score as the mix ducks it, 1-4 kHz (pocket.py): an onset margin under
+             +10 dB fails unless the cue sheet lists the line in pocket_exempt with its reason (--no-pocket skips it)
   CUT STEPS  the audit's method: the stem's K-weighted level 0.5 s either side of every cut (beat start); every step
              of 12 dB or more must sit within 0.8 s of a cue mark or designed hit, or inside a marked silence or rest
   ENGINE     each cue's F-major check (written and spectral), rule 12 (a written A-natural over an F bass), the knee
@@ -110,7 +117,27 @@ def engine(doc):
     return fm, r12, kw, kc, notes
 
 
-def check(seg, el=True):
+def neighbours(seg, tag, length):
+    """[(t0, t1)] on this segment's clock that the mix fills from the next-door chapters: the previous chapter's
+    ring-out over this one's head, the next chapter's pre-lap under this one's tail (mix_episode.py lays both)"""
+    out = []
+    i = SEGS.index(seg)
+
+    def sheet(s):
+        p = os.path.join(TRACKS, f'e02-v1-{s}', f'cues{tag}.json')
+        return json.load(open(p)) if os.path.exists(p) else {}
+    if seg not in ('coldopen', 'act1') and i > 0:
+        ro = sheet(SEGS[i - 1]).get('ringout')
+        if isinstance(ro, dict) and ro.get('seconds'):
+            out.append((0.0, float(ro['seconds'])))
+    if seg not in ('coldopen', 'tag') and i + 1 < len(SEGS):
+        pl = sheet(SEGS[i + 1]).get('prelap')
+        if isinstance(pl, dict) and pl.get('seconds'):
+            out.append((length - float(pl['seconds']), length))
+    return out
+
+
+def check(seg, el=True, pocket_on=True):
     import soundfile as sf
     from engine.mix import lufs, true_peak
     tag = '-el' if el else ''
@@ -154,11 +181,66 @@ def check(seg, el=True):
         else:
             i += 1
     res['holes'] = holes
+    # S3's holes: 50 ms RMS (the louder channel) under -42 dBFS for 0.3 s or more, outside a marked silence
+    dW = [(r['t0'], r['t1']) for r in doc.get('silences_designed') or [] if isinstance(r, dict) and 't0' in r]
+    dW += neighbours(seg, tag, N / sr)          # the previous chapter's ring-out over the head; the next one's pre-lap
+    rms = np.sqrt(np.mean(x[:, : (N // hop) * hop].reshape(2, -1, hop) ** 2, axis=2)).max(0)
+    q42 = rms < 10 ** (-42 / 20)
+    h42, i = [], 0
+    while i < len(q42):
+        if q42[i]:
+            j = i
+            while j < len(q42) and q42[j]:
+                j += 1
+            a, b = i * hop / sr, j * hop / sr
+            if b - a >= 0.3 - 1e-9 and not any(w0 - 1.6 <= a and b <= w1 + 0.4 for w0, w1 in dW):
+                h42.append((round(a, 2), round(b, 2)))
+            i = j
+        else:
+            i += 1
+    res['holes_42'] = h42
+    # fragments, measured: runs above -60 dBFS (rests under 0.75 s inside a phrase don't split a run) under 2 s
+    loud = ~q
+    spans, i = [], 0
+    while i < len(loud):
+        if loud[i]:
+            j = i
+            while j < len(loud) and loud[j]:
+                j += 1
+            if spans and i * hop / sr - spans[-1][1] < 0.75:
+                spans[-1][1] = j * hop / sr
+            else:
+                spans.append([i * hop / sr, j * hop / sr])
+            i = j
+        else:
+            i += 1
     m = doc.get('measured') or {}
-    fr = m.get('undesigned_fragments')
-    if fr is None:
-        fr = [f for f in (m.get('fragments_under_2s') or []) if not (isinstance(f, dict) and f.get('designed_sting'))]
+    stings = [(f['t0'], f['t1']) for f in (m.get('fragments_under_2s') or []) if isinstance(f, dict)
+              and f.get('designed_sting')]
+    hits = [h['t'] for h in doc.get('designed_hit') or [] if isinstance(h, dict) and 't' in h]
+    fr = []
+    for a, b in spans:
+        if b - a < 2.0 and not any(a - 0.3 <= t <= b + 0.3 for t in hits) and \
+                not any(s0 - 0.3 <= a and b <= s1 + 0.6 for s0, s1 in stings):
+            fr.append((round(a, 2), round(b, 2)))
     res['fragments'] = fr
+    res['music_runs'] = len(spans)
+    # the lock's content hash
+    want = V.lock_sha1(tl.path)
+    res['lock_sha1_ok'] = doc.get('lock_sha1') == want
+    if not res['lock_sha1_ok']:
+        res['lock_note'] = f"cue sheet {str(doc.get('lock_sha1'))[:12]} != lock {want[:12]}: re-render or re-lay the score"
+    # the pocket, per line (pocket.py: the mixer's own duck and takes)
+    res['pocket'] = None
+    if pocket_on:
+        import pocket as P
+        rows, summ = P.segment(seg, 'el' if el else 'kokoro')
+        ex = P.exempt(seg, 'el' if el else 'kokoro')
+        flagged = [r for r in rows if r['flag']]
+        res['pocket'] = dict(summ, exempt=[dict(line=r['line'], onset=r['onset'], why=ex[r['line']]) for r in flagged
+                                           if r['line'] in ex],
+                             failing=[dict(line=r['line'], who=r['who'], on=r['on'], onset=r['onset'], worst=r['worst'])
+                                      for r in flagged if r['line'] not in ex])
     # cut steps
     steps, bad = [], []
     for b in tl.beats[1:]:
@@ -180,17 +262,20 @@ def check(seg, el=True):
     res['cut_steps_unmarked'] = bad
     fm, r12, kw, kc, notes = engine(doc)
     res.update(f_major_ok=fm, rule12_ok=r12, knee_whole=kw, knee_completion=kc, engine_notes=notes)
-    res['pass'] = bool(res['exact'] and not unmarked and not holes and not fr and not bad and fm and r12 and kw == 0
-                       and kc == 0 and res['true_peak_dbtp'] <= -1.0)
+    pk_ok = res['pocket'] is None or not res['pocket'].get('failing')
+    res['pass'] = bool(res['exact'] and res['lock_sha1_ok'] and not unmarked and not holes and not h42 and not fr
+                       and not bad and fm and r12 and kw == 0 and kc == 0 and res['true_peak_dbtp'] <= -1.0 and pk_ok)
     return res
 
 
 def main():
     el = '--kokoro' not in sys.argv
+    pocket_on = '--no-pocket' not in sys.argv
+    segs = [a for a in sys.argv[1:] if a in SEGS] or SEGS
     out = []
-    for seg in SEGS:
+    for seg in segs:
         try:
-            r = check(seg, el)
+            r = check(seg, el, pocket_on)
         except FileNotFoundError as e:           # noqa: PERF203
             r = dict(seg=seg, error=str(e), **{'pass': False})
         if r is None:
@@ -199,14 +284,20 @@ def main():
         if 'error' in r:
             print(f'{seg:9s} MISSING {r["error"]}')
             continue
-        print(f"{seg:9s} {r['frames']:6d} f {r['seconds']:9.3f} s exact={r['exact']!s:5s} {r['lufs_i']:6.2f} LUFS-I "
-              f"{r['true_peak_dbtp']:6.2f} dBTP | silence {len(r['unmarked_silence'])} holes {len(r['holes'])} "
-              f"frag {len(r['fragments'])} | 12 dB steps {len(r['cut_steps_12db'])} unmarked "
-              f"{len(r['cut_steps_unmarked'])} | F-major {r['f_major_ok']} rule12 {r['rule12_ok']} knee "
-              f"{r['knee_whole']}/{r['knee_completion']} | {'PASS' if r['pass'] else 'FAIL'}")
-        for k in ('unmarked_silence', 'holes', 'fragments', 'cut_steps_unmarked', 'engine_notes'):
+        pk = r.get('pocket')
+        pks = (f"pocket p10 {pk.get('onset_p10')} min {pk.get('onset_min')} fail {len(pk['failing'])} exempt "
+               f"{len(pk['exempt'])}" if pk else 'pocket -')
+        print(f"{seg:9s} {r['frames']:6d} f {r['seconds']:9.3f} s exact={r['exact']!s:5s} lock={r['lock_sha1_ok']!s:5s} "
+              f"{r['lufs_i']:6.2f} LUFS-I {r['true_peak_dbtp']:6.2f} dBTP | silence {len(r['unmarked_silence'])} holes "
+              f"{len(r['holes'])} holes-42 {len(r['holes_42'])} frag {len(r['fragments'])} (runs {r['music_runs']}) | "
+              f"12 dB steps {len(r['cut_steps_12db'])} unmarked {len(r['cut_steps_unmarked'])} | F-major {r['f_major_ok']} "
+              f"rule12 {r['rule12_ok']} knee {r['knee_whole']}/{r['knee_completion']} | {pks} | "
+              f"{'PASS' if r['pass'] else 'FAIL'}")
+        for k in ('lock_note', 'unmarked_silence', 'holes', 'holes_42', 'fragments', 'cut_steps_unmarked', 'engine_notes'):
             if r.get(k):
                 print(f'   {k}: {r[k]}')
+        if pk and pk.get('failing'):
+            print(f"   pocket failing: {pk['failing']}")
     if '--json' in sys.argv:
         V.write_json(sys.argv[sys.argv.index('--json') + 1], out)
 

@@ -493,13 +493,16 @@ def cue_august(tl):
                     c.n('jazz', 36, t, 0.15, 0.5 * KICK[i] * g, lock=True)
                 if i in STICK:
                     c.n('jazz', 37, t, 0.1, 0.5 * STICK[i] * g, lock=True)
-            # the Build's chip arpeggio: eighths in its first bar, then 16ths; out under the post; soft under the V.O.
+            # the Build's chip arpeggio: eighths in its first bar, then 16ths; out under the post AND under the V.O.
+            # (OST rule 10, melody out under the V.O.: the score review, 2026-10-09, measured it at 60 % under "sixty
+            # elections this year."); the felt ostinato and the pizzicato carry the engine there
             if not in_post and (i % 2 == 0 or not first_bar):
                 p = build_note(ch, i)
                 acc = (1.0, 0.72, 0.84, 0.72)[i % 4]
-                c.n('lead', p, t, S16 * 0.62, 0.3 * acc * (0.6 if in_vo else 1.0), True, duty=0.25, att=0.002,
-                    dec=0.08, sus=0.45, rel=0.035)
-                n_chip += 1
+                if not (e['vo_on'] - 0.12 <= t < e['vo_end'] + 0.05):     # (back the 16th after his last word)
+                    c.n('lead', p, t, S16 * 0.62, 0.3 * acc, True, duty=0.25, att=0.002, dec=0.08, sus=0.45,
+                        rel=0.035)
+                    n_chip += 1
                 # xylophone and wood (a layer, from the bar the scan starts): the arpeggio's beats, the off-eighths
                 if t >= t_lay - 1e-6:
                     if i % 4 == 0 and not in_vo:                      # (the xylophone rests under the V.O.)
@@ -722,7 +725,7 @@ def main():
                 for lab, a0, a1 in c.sections]
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (the engine master at -20 LUFS-I, shaped by fader rides), dry of dialogue; the mixer ducks it '
               'under the V.O. (E02-13: 8 dB)',

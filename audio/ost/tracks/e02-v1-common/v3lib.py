@@ -89,6 +89,18 @@ def real_ids():
     return _REAL
 
 
+def lock_sha1(path):
+    """the lock's content hash: sha1 of its beats as canonical JSON (every timing, line, word, sound, on-screen item and
+    cue the score reads; the file's own notes left out). Each track.py writes it into its cue sheet (`lock_sha1`), and
+    check.py, audio/reel/ep02-v1/stems.py and mix_episode.py use a score only on the lock with the same hash: a retime
+    that keeps the act's length can't pass a stale score (S5; the score review, 2026-10-09). stems.py carries the same
+    function (it runs in another venv): keep the two equal"""
+    import hashlib
+    d = json.load(open(path))
+    return hashlib.sha1(json.dumps(d['beats'], sort_keys=True, ensure_ascii=False,
+                                   separators=(',', ':')).encode('utf-8')).hexdigest()
+
+
 def cli(seg, argv=None):
     """--el (the ElevenLabs-timed lock), --timeline PATH, or env V3_TIMELINE; default the Kokoro lock.
     Returns (args, timeline path, variant tag: '' for the Kokoro lock, '-el' for the EL one, '-alt' otherwise)"""

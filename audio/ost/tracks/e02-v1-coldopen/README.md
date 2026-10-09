@@ -10,7 +10,7 @@
 |---|---|
 | `render/music-el.wav` | **55.000 s, 2,640,000 samples (1,320 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored. md5 `d6a6e6c5…` |
 | Level | −20.04 LUFS-I (the engine's underscore master, −20); true peak −3.15 dBTP; short-term p95 −17.6, max −16.5 |
-| `check.py` (the v35check copy) | `coldopen 1320 f 55.000 s exact=True −20.04 LUFS-I −3.15 dBTP \| silence 0 holes 0 frag 0 \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| PASS` |
+| `check.py` (with the score review's new checks, 2026-10-09) | `coldopen 1320 f 55.000 s exact=True lock=True −20.04 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 1) \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 15.8 min 15.3 fail 0 exempt 0 \| PASS`. The review changed nothing in this cue: the stem was re-laid only to write the lock's content hash into `cues-el.json` (`lock_sha1`); its md5 is unchanged |
 | Engine QA | no warnings. F-major (written and spectral) ok; rule 12 ok (no A-natural anywhere); knee whole 0, completions 0; 11 of 11 hit marks have an onset within 10 ms (worst 7.7 ms); sub under the lobby's rack hum −18.5 dB (limit −18) |
 | Music runs | one run, 0 → 55.0 s: no digital silence, no hole under −60 dBFS, no fragment |
 | `cues-el.json` | The cue sheet: every sync mark, the lock's events, the sections (with the pedal's `duck_db`), the measurements and the engine QA. It names the timeline it was laid to |
@@ -72,7 +72,7 @@ EL seconds, on the segment's own clock (0 = the cold open's first frame; 55.0 = 
 - **Momentary peaks (LUFS-M, 0.5 s windows)** [M]: the entry −26 (it swells in); the step-out downbeat −14.1; the re-entry −14.3; the knee's notes −14.3, −17.6, −14.6, −19.2. The pedal rises −29 → −19 from THUD 1 to the THUD. The out's maximum is −14.2, and the outs guide is −14.
 - **Into the intro** [M]: the last 0.5 s peaks at −19.2 LUFS-M. The intro's first 0.5 s (V1's mix at the manifest's −3 dB; read from `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`, whose music the Ep2 variant keeps) peaks at −30.4. That is an 11 LU drop on the smash: the dry F5 is cut, and the intro's quiet felt F5 continues the line. Ep1's cold open handed over 7 LU above the intro. This one is a smash cut by design, so the drop is larger [J; ear check 5].
 - **Mood shares** (by time) [M/J]: wonder 18% (0–10), comic and giddy swing 27% (10–21.3, 23.5–26.8), the held breath 4%, suspense 33% (the pedal), the quiet question 18% (the out). Suspense stays a minority (S2).
-- **The dialogue pocket** [M]: thinned under every line, plus the engine master's 2.5 kHz pocket (−2 dB). The mixer ducks E02-01 9 dB under speech. `cues-el.json` → `sections` asks for **5 dB under the pedal** (26.8–45.0): it is already the thinned bed, and 9 dB under Selbeep's O.S. line would leave the room alone (`mix_episode.py` reads a section's `duck_db`).
+- **The dialogue pocket** [M]: thinned under every line, plus the engine master's 2.5 kHz pocket (−2 dB). Per line in 1–4 kHz after the mix's duck (`e02-v1-common/pocket.py`): all six lines at least **+15.3 dB** at their onsets (before the duck +8.2 at the 10th percentile). The mixer ducks E02-01 9 dB under speech. `cues-el.json` → `sections` asks for **5 dB under the pedal** (26.8–45.0): it is already the thinned bed, and 9 dB under Selbeep's O.S. line would leave the room alone (`mix_episode.py` reads a section's `duck_db`).
 
 ## Judgement calls (rules bent on purpose, one line each)
 

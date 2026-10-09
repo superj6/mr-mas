@@ -31,7 +31,10 @@ THE MIX, per segment:
             `music (v1): E02-NN ...`, default 9 dB) smoothed over 1.5 s; a cue sheet's "duck_db" overrides it for its
             window. -3 dB under a silent POST when no one speaks. The score's fade-in at each act's head (a designed hit
             keeps its attack). The previous chapter's score ring-out (music[-el]-ringout.wav, if its composer wrote one)
-            is laid at this chapter's head and crossfades out under its own score.
+            is laid at this chapter's head and crossfades out under its own score. The NEXT chapter's score pre-lap (its
+            cue sheet's `prelap`: music[-el]-prelap.wav) is laid under this chapter's tail, ending on its last sample, at
+            the next score's head gain; that chapter's head fade is then off (its score is already sounding). The card
+            gets a score bus for Act One's pre-lap (S4: the sound leads; S3: the re-entry after a designed stop).
   MASTER    -16 LUFS integrated per segment; a look-ahead peak limiter (ceiling -1.5 dBFS) and a 4x-oversampled
             true-peak check (< -1.0 dBTP). THE SEAMS: each story chapter's first 2 s ramp from the previous chapter's
             gain to its own. THE DIALOGUE GUARD (--all): a segment whose dialogue would land more than 1.5 LU above the
@@ -315,6 +318,60 @@ def take_lufs(path):
     return _TAKE_LUFS[path]
 
 
+def line_audio(l, room, variant, info=None):
+    """one take as the dialogue bus lays it: (x, gain_db), x mono float64 with the EL level match's source, MARIO's EQ,
+    the device chain and the interrupt cut applied, gain_db the level match plus the V.O. lift; the bus adds
+    x * 0.7071 * db(gain_db) to both channels from (line on - in). Shared with the score's pocket check
+    (audio/ost/tracks/e02-v1-common/pocket.py), so the check hears the takes exactly as the mix lays them"""
+    info = info if info is not None else {'device': {}, 'el_matched': 0}
+    x = take(l['audio']).astype('float64')
+    gain = 0.0
+    kref = l.get('kokoro_audio') or (l.get('kokoro') or {}).get('audio')
+    if variant == 'el' and kref and os.path.exists(os.path.join(ROOT, kref)):
+        ref, own = take_lufs(kref), take_lufs(l['audio'])
+        if ref > -90 and own > -90:
+            gain = ref - own
+            info['el_matched'] += 1
+    if variant == 'el' and l.get('engine') == 'kokoro':
+        # MARIO on his Kokoro takes in the EL film (voices-el.md §AB3): undo fastrec's own shaping, lightly
+        # (+1.5 dB at 350 Hz, Q 1.0; -1.5 dB at 2.2 kHz, Q 0.9) and -0.5 dB, before any device chain
+        x = signal.sosfilt(KOKORO_IN_EL_EQ, x) * db(KOKORO_IN_EL_DB)
+        info['kokoro_cast'] = info.get('kokoro_cast', 0) + 1
+    tg = (l.get('tag') or '').lower()
+    dev = tg if tg in SMALL else ROOM_DEVICE.get(room)
+    if dev:
+        pre = lufs(np.stack([x, x], 1) * 0.7071)
+        y = signal.sosfilt(DEVICE[dev], x)
+        if dev == 'stage':                 # the hall answering the PA
+            rv = np.zeros_like(y)
+            for d_, g_ in ((0.037, -9), (0.083, -12), (0.141, -15), (0.23, -19)):
+                k_ = int(d_ * SR)
+                rv[k_:] += y[:-k_] * db(g_)
+            y = y + signal.sosfilt(signal.butter(2, 4500, 'low', fs=SR, output='sos'), rv)
+        post = lufs(np.stack([y, y], 1) * 0.7071)
+        x = y * db(pre - post - 1.0) if pre > -90 and post > -90 else y
+        info['device'][dev] = info['device'].get(dev, 0) + 1
+    if l.get('cut'):                           # an interrupted line stops where it's cut off
+        k = int((l.get('in', 0) + l['dur'] + 0.015) * SR)
+        x = x[:k].copy()
+        f = min(len(x), int(0.015 * SR))
+        x[len(x) - f:] *= np.linspace(1, 0, f)
+    if l.get('tag') == 'V.O.' and VO_GAIN_DB:
+        gain += VO_GAIN_DB
+    return x, gain
+
+
+def speech_spans(g):
+    """(on, on + dur) of every line the dialogue bus lays (a line with a take on disk), as dialogue() returns them"""
+    out = []
+    for i, b in enumerate(g.beats):
+        for l in b.get('lines') or []:
+            if l.get('audio') and os.path.exists(os.path.join(ROOT, l['audio'])):
+                on = g.starts[i][0] + l['t']
+                out.append((on, on + l['dur']))
+    return sorted(out)
+
+
 def dialogue(g, variant, qa):
     N = g.N
     bus = np.zeros((N, 2), 'float32')
@@ -325,47 +382,194 @@ def dialogue(g, variant, qa):
             if not l.get('audio') or not os.path.exists(os.path.join(ROOT, l['audio'])):
                 info['missing'].append(l['id'])
                 continue
-            x = take(l['audio']).astype('float64')
-            gain = 0.0
-            kref = l.get('kokoro_audio') or (l.get('kokoro') or {}).get('audio')
-            if variant == 'el' and kref and os.path.exists(os.path.join(ROOT, kref)):
-                ref, own = take_lufs(kref), take_lufs(l['audio'])
-                if ref > -90 and own > -90:
-                    gain = ref - own
-                    info['el_matched'] += 1
-            if variant == 'el' and l.get('engine') == 'kokoro':
-                # MARIO on his Kokoro takes in the EL film (voices-el.md §AB3): undo fastrec's own shaping, lightly
-                # (+1.5 dB at 350 Hz, Q 1.0; -1.5 dB at 2.2 kHz, Q 0.9) and -0.5 dB, before any device chain
-                x = signal.sosfilt(KOKORO_IN_EL_EQ, x) * db(KOKORO_IN_EL_DB)
-                info['kokoro_cast'] = info.get('kokoro_cast', 0) + 1
-            tg = (l.get('tag') or '').lower()
-            dev = tg if tg in SMALL else ROOM_DEVICE.get(b.get('room'))
-            if dev:
-                pre = lufs(np.stack([x, x], 1) * 0.7071)
-                y = signal.sosfilt(DEVICE[dev], x)
-                if dev == 'stage':                 # the hall answering the PA
-                    rv = np.zeros_like(y)
-                    for d_, g_ in ((0.037, -9), (0.083, -12), (0.141, -15), (0.23, -19)):
-                        k_ = int(d_ * SR)
-                        rv[k_:] += y[:-k_] * db(g_)
-                    y = y + signal.sosfilt(signal.butter(2, 4500, 'low', fs=SR, output='sos'), rv)
-                post = lufs(np.stack([y, y], 1) * 0.7071)
-                x = y * db(pre - post - 1.0) if pre > -90 and post > -90 else y
-                info['device'][dev] = info['device'].get(dev, 0) + 1
+            x, gain = line_audio(l, b.get('room'), variant, info)
             on = s0 + l['t']
-            if l.get('cut'):                           # an interrupted line stops where it's cut off
-                k = int((l.get('in', 0) + l['dur'] + 0.015) * SR)
-                x = x[:k].copy()
-                f = min(len(x), int(0.015 * SR))
-                x[len(x) - f:] *= np.linspace(1, 0, f)
-            if l.get('tag') == 'V.O.' and VO_GAIN_DB:
-                gain += VO_GAIN_DB
             y = (np.stack([x, x], 1) * 0.7071 * db(gain)).astype('float32')
             S.add(bus, y, on - l.get('in', 0))
             speech.append((on, on + l['dur']))
             info['words'] = info.get('words', []) + ([on + w[1] for w in l.get('words', []) if len(w) >= 2] or [on])
             info['lines'] += 1
     return bus, sorted(speech), info
+
+
+# ------------------------------------------------------------------ the score bus
+def score_duck_db(g, cues, u, n_samples=None):
+    """the score's duck in dB per sample (<= 0) over the first n_samples (all of g by default): the depth by mood per
+    beat (DUCK_BY_MOOD), the cue sheet's duck_db over it, smoothed 1.5 s, times the speech envelope u; -3 dB under a
+    silent POST when no one speaks. Returns (gdb, mood rows, cue-sheet overrides). Shared with the score's pocket
+    check (audio/ost/tracks/e02-v1-common/pocket.py), so the check ducks the score exactly as the mix does"""
+    N = g.N if n_samples is None else n_samples
+    CR = 100
+    n = int(g.N / SR * CR) + 2
+    depth = np.full(n, DUCK_DEFAULT)
+    md = mood_depth(g)
+    for a, b, d, _ in md:
+        depth[int(a * CR):int(b * CR) + 1] = d
+    ov = cue_duck_overrides(cues)
+    for a, b, d in ov:
+        depth[int(a * CR):int(b * CR) + 1] = d
+    depth = ndimage.uniform_filter1d(depth, size=int(1.5 * CR))
+    dep = np.interp(np.arange(N) / SR, np.arange(n) / CR, depth).astype('float32')
+    # silent posts: -3 dB when nobody speaks
+    pt = np.zeros(N, 'float32')
+    for i, b in enumerate(g.beats):
+        for o in b.get('onscreen', []):
+            if o['text'].startswith('POST:'):
+                a = g.starts[i][0] + o['at']
+                e = g.starts[i][0] + o['until'] if o.get('until') is not None else g.starts[i][1]
+                pt[int(a * SR):int(e * SR)] = 1.0
+    pt = ndimage.uniform_filter1d(pt, size=int(0.5 * SR))
+    uu = u[:N]
+    return -dep * uu - 3.0 * pt * (1 - uu), md, ov
+
+
+def prelap_of(seg, variant):
+    """(the segment's score pre-lap [n, 2] float32 or None, its cue-sheet entry): the cue sheet's `prelap` file, which
+    plays under the PREVIOUS chapter's tail and ends on that chapter's last sample, continuous with this score's first
+    sample (each composer wrote it so)"""
+    if not seg or seg == 'card':
+        return None, None
+    wav, cp = S.score_files(seg, variant)
+    if not wav or not cp:
+        return None, None
+    try:
+        pl = json.load(open(cp)).get('prelap')
+    except Exception:  # noqa: BLE001
+        return None, None
+    if not isinstance(pl, dict) or not pl.get('file'):
+        return None, None
+    p = os.path.join(ROOT, pl['file'])
+    if not os.path.exists(p):
+        return None, dict(pl, missing=True)
+    x, sr = sf.read(p, dtype='float32', always_2d=True)
+    if sr != SR:
+        x = signal.resample_poly(x, SR, sr, axis=0).astype('float32')
+    if x.shape[1] == 1:
+        x = np.repeat(x, 2, axis=1)
+    return x, pl
+
+
+def score_head_gain_db(seg, variant):
+    """the gain (dB) a segment's own premix puts on its score's first sample (SCORE_GAIN_DB and the duck there; its head
+    fade is off when its pre-lap plays): the level its pre-lap is laid at under the previous chapter, so the two meet
+    without a step (the seam ramp starts the next chapter at the previous chapter's master gain)"""
+    p = S.timeline_path(seg, variant)
+    g = S.Seg(seg, json.load(open(p)), p)
+    _, cp = S.score_files(seg, variant)
+    cues = json.load(open(cp)) if cp else {}
+    k = int(0.05 * SR)
+    u, _ = duck_env(speech_spans(g), k)
+    gdb, _, _ = score_duck_db(g, cues, u, k)
+    return float(SCORE_GAIN_DB.get(seg, 0.0) + gdb[0])
+
+
+def score_bus(name, g, variant, u, use_score=True):
+    """the score bus of one chapter as the mix lays it, before the master: music[-el].wav on this lock, the previous
+    chapter's ring-out under its head, SCORE_GAIN_DB, the duck (score_duck_db), the head fade at an act break (none
+    when a designed hit is at the head or this score's pre-lap already plays under the previous chapter), the score
+    rides, and the NEXT chapter's pre-lap under this chapter's tail (at the next score's head gain). Returns
+    (mus [N, 2] float32 or None, the QA record, the cue sheet)"""
+    N = g.N
+    mus, cues = None, {}
+    sq = {}
+    if name != 'card':
+        why = []
+        wav, cues_p = S.score_files(name, variant, why)
+        sq = {'file': os.path.relpath(wav, ROOT) if wav else None, 'cues': os.path.relpath(cues_p, ROOT) if cues_p else None}
+        if why:
+            sq['not_this_lock'] = why
+        if wav and abs(sf.info(wav).frames - N) > SR // FPS + 1:             # more than a frame out: not this cut
+            sq['not_this_lock'] = why + [f'{os.path.relpath(wav, ROOT)} is {sf.info(wav).frames / SR:.3f} s, the segment {N / SR:.3f} s']
+            wav = None
+        if wav and use_score:
+            m, sr = sf.read(wav, dtype='float32', always_2d=True)
+            if sr != SR:
+                m = signal.resample_poly(m, SR, sr, axis=0).astype('float32')
+                sq['resampled_from'] = sr
+            if m.shape[1] == 1:
+                m = np.repeat(m, 2, axis=1)
+            sq['length_s'] = round(len(m) / SR, 3)
+            sq['length_vs_segment_s'] = round((len(m) - N) / SR, 3)
+            mus = np.zeros((N, 2), 'float32')
+            mus[:min(N, len(m))] = m[:N]
+            pv = PREV.get(name)
+            rw, _ = S.score_files(pv, variant) if pv and pv != 'card' else (None, None)
+            ro = rw.replace('.wav', '-ringout.wav') if rw else None
+            if ro and os.path.exists(ro):            # the previous chapter's score, released past its last frame
+                r_, rsr = sf.read(ro, dtype='float32', always_2d=True)
+                if rsr == SR:
+                    r_ = (r_ if r_.shape[1] == 2 else np.repeat(r_, 2, axis=1)).copy()
+                    w_ = win_db(mus[: 10 * SR], 0.01)
+                    t_in = float(np.argmax(w_ > -50) * 0.01) if np.any(w_ > -50) else 0.0
+                    i_in, k_ = int(t_in * SR), int(2.5 * SR)
+                    seg_ = np.clip((np.arange(len(r_)) - i_in) / k_, 0, 1)
+                    r_ *= np.cos(0.5 * np.pi * seg_).astype('float32')[:, None]
+                    mus[:min(N, len(r_))] += r_[:N]
+                    sq['prev_ringout'] = {'file': os.path.relpath(ro, ROOT), 'seconds': round(len(r_) / SR, 2),
+                                          'crossfade': f'full from 0 s, out (equal power) over 2.5 s from this score\'s entry at {t_in:.2f} s'}
+            if SCORE_GAIN_DB.get(name):
+                mus *= np.float32(db(SCORE_GAIN_DB[name]))
+                sq['gain_db'] = SCORE_GAIN_DB[name]
+                sq['gain_why'] = 'SCORE_GAIN_DB (a ruling)'
+            if cues_p:
+                try:
+                    cues = json.load(open(cues_p))
+                except Exception as ex:
+                    sq['cues_error'] = f'{ex.__class__.__name__}: {ex}'
+            sq['lufs_as_delivered'] = round(lufs(m[:N]), 2)
+            sq['lufs_after_gain'] = round(lufs(mus), 2)
+            gdb, md, ov = score_duck_db(g, cues, u)
+            mus *= db(gdb)[:, None].astype('float32')
+            sq['duck'] = {'by_mood_db': sorted({(m_, d) for _, _, d, m_ in md}, key=lambda z: z[1]),
+                          'cue_sheet_overrides': ov, 'posts_dip_db': -3.0,
+                          'envelope': 'pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s'}
+            sq['designed_silences'] = designed_silences(cues)
+        elif wav:
+            sq['used'] = False
+        else:
+            sq['missing'] = True
+        # the act breaks: the score enters on the act's first frame over a black; fade it in (the lead, v3.1), unless its
+        # pre-lap already plays under the previous chapter's tail (then the score is sounding: no fade, no dip)
+        own_pl = prelap_of(name, variant)[0] if (mus is not None and PREV.get(name)) else None
+        if mus is not None and SCORE_HEAD_FADE.get(name):
+            if own_pl is not None:
+                sq['head_fade_s'] = 0.0
+                sq['head_fade_why'] = (f'its pre-lap ({len(own_pl) / SR:.3f} s) plays under {PREV[name]}\'s tail, '
+                                       'continuous with this score\'s first sample')
+            else:
+                hits = designed_hits(cues, SCORE_HEAD_FADE[name] + 0.25)
+                fd = 0.04 if hits else SCORE_HEAD_FADE[name]          # a designed hit on the act's head keeps its attack
+                k = int(fd * SR)
+                mus[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2).astype('float32')[:, None]
+                sq['head_fade_s'] = fd
+                if hits:
+                    sq['head_fade_why'] = f'designed hit at the head (cues.json designed_hit): {hits[0]}'
+        # score rides (the score makes room for a featured sound): SCORE_RIDE[seg] = [(beat, from s, to s | 'end', dB, why)]
+        if mus is not None:
+            for bid, d0, d1, gdb_, why_ in SCORE_RIDE.get(name, []):
+                if bid in g.BI:
+                    a_ = g.starts[g.BI[bid]][0] + d0
+                    b_ = g.starts[g.BI[bid]][1] if d1 == 'end' else g.starts[g.BI[bid]][0] + d1
+                    tt = np.arange(N) / SR
+                    mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
+                    sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
+    # the NEXT chapter's pre-lap (its J under this chapter's tail: an act break's black, the card), at the next score's
+    # head gain, ending on this chapter's last sample (S4: the sound leads; S3: the re-entry after a designed stop)
+    nx = NEXT.get(name)
+    if use_score and nx:
+        pl, info = prelap_of(nx, variant)
+        if pl is not None and len(pl) <= N:
+            hg = score_head_gain_db(nx, variant)
+            if mus is None:
+                mus = np.zeros((N, 2), 'float32')
+            mus[N - len(pl):] += pl * np.float32(db(hg))
+            sq['next_prelap'] = {'file': info.get('file'), 'of': nx, 'seconds': round(len(pl) / SR, 3),
+                                 'laid_from_s': round((N - len(pl)) / SR, 3), 'gain_db': round(hg, 2),
+                                 'lay': f'ends on this chapter\'s last sample, continuous with {nx}\'s first; at '
+                                        f'{nx}\'s score head gain (its duck there), its head fade off'}
+        elif info and info.get('missing'):
+            sq['next_prelap'] = {'file': info.get('file'), 'of': nx, 'missing': True}
+    return mus, sq, cues
 
 
 # ------------------------------------------------------------------ one segment, up to the master
@@ -379,9 +583,14 @@ def premix(name, g, variant, use_score=True):
     fx = sf.read(os.path.join(sd, f'{name}-sfx.{ext}'), dtype='float32', always_2d=True)[0]
     assert len(room) == N and len(fx) == N, (name, len(room), len(fx), N)
     if name == 'card':
-        qa['layers'] = {'rooms': 'the card room stem', 'sfx': 'none', 'dialogue': 'none', 'score': 'none'}
-        return dict(qa=qa, mix=(room + fx), noscore=(room + fx), mus=None, speech=[], spans=[],
-                    stats={'dlg': None, 'room': lufs(room), 'sfx': lufs(fx)})
+        mus, sq, _ = score_bus('card', g, variant, np.zeros(N, 'float32'), use_score)
+        qa['score'] = sq
+        qa['layers'] = {'rooms': 'the card room stem', 'sfx': 'none', 'dialogue': 'none',
+                        'score': (f"Act One's pre-lap under the card's last {sq['next_prelap']['seconds']} s"
+                                  if mus is not None else 'none')}
+        body = room + fx
+        return dict(qa=qa, mix=(body + (mus if mus is not None else 0.0)).astype('float32'), noscore=body, mus=mus,
+                    speech=[], spans=[], stats={'dlg': None, 'room': lufs(room), 'sfx': lufs(fx)})
     dlg, speech, dinfo = dialogue(g, variant, qa)
     qa['dialogue'] = dinfo
     u, spans = duck_env(speech, N)
@@ -389,103 +598,8 @@ def premix(name, g, variant, use_score=True):
     room = room * db(-dip * u)[:, None].astype('float32')
     qa['rooms'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-room.{ext}'), ROOT), 'dip_under_speech_db': dip}
     qa['sfx'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-sfx.{ext}'), ROOT), 'ducked': False}
-    mus = None
-    why = []
-    wav, cues_p = S.score_files(name, variant, why)
-    sq = {'file': os.path.relpath(wav, ROOT) if wav else None, 'cues': os.path.relpath(cues_p, ROOT) if cues_p else None}
-    if why:
-        sq['not_this_lock'] = why
-    if wav and abs(sf.info(wav).frames - N) > SR // FPS + 1:             # more than a frame out: not this cut
-        sq['not_this_lock'] = why + [f'{os.path.relpath(wav, ROOT)} is {sf.info(wav).frames / SR:.3f} s, the segment {N / SR:.3f} s']
-        wav = None
-    if wav and use_score:
-        m, sr = sf.read(wav, dtype='float32', always_2d=True)
-        if sr != SR:
-            m = signal.resample_poly(m, SR, sr, axis=0).astype('float32')
-            sq['resampled_from'] = sr
-        if m.shape[1] == 1:
-            m = np.repeat(m, 2, axis=1)
-        sq['length_s'] = round(len(m) / SR, 3)
-        sq['length_vs_segment_s'] = round((len(m) - N) / SR, 3)
-        mus = np.zeros((N, 2), 'float32')
-        mus[:min(N, len(m))] = m[:N]
-        pv = PREV.get(name)
-        rw, _ = S.score_files(pv, variant) if pv and pv != 'card' else (None, None)
-        ro = rw.replace('.wav', '-ringout.wav') if rw else None
-        if ro and os.path.exists(ro):            # the previous chapter's score, released past its last frame
-            r_, rsr = sf.read(ro, dtype='float32', always_2d=True)
-            if rsr == SR:
-                r_ = (r_ if r_.shape[1] == 2 else np.repeat(r_, 2, axis=1)).copy()
-                w_ = win_db(mus[: 10 * SR], 0.01)
-                t_in = float(np.argmax(w_ > -50) * 0.01) if np.any(w_ > -50) else 0.0
-                i_in, k_ = int(t_in * SR), int(2.5 * SR)
-                seg_ = np.clip((np.arange(len(r_)) - i_in) / k_, 0, 1)
-                r_ *= np.cos(0.5 * np.pi * seg_).astype('float32')[:, None]
-                mus[:min(N, len(r_))] += r_[:N]
-                sq['prev_ringout'] = {'file': os.path.relpath(ro, ROOT), 'seconds': round(len(r_) / SR, 2),
-                                      'crossfade': f'full from 0 s, out (equal power) over 2.5 s from this score\'s entry at {t_in:.2f} s'}
-        if SCORE_GAIN_DB.get(name):
-            mus *= np.float32(db(SCORE_GAIN_DB[name]))
-            sq['gain_db'] = SCORE_GAIN_DB[name]
-            sq['gain_why'] = 'SCORE_GAIN_DB (a ruling)'
-        cues = {}
-        if cues_p:
-            try:
-                cues = json.load(open(cues_p))
-            except Exception as ex:
-                sq['cues_error'] = f'{ex.__class__.__name__}: {ex}'
-        sq['lufs_as_delivered'] = round(lufs(m[:N]), 2)
-        sq['lufs_after_gain'] = round(lufs(mus), 2)
-        # the duck depth: the mood per beat, the cue sheet's duck_db over it, smoothed 1.5 s
-        CR = 100
-        n = int(N / SR * CR) + 2
-        depth = np.full(n, DUCK_DEFAULT)
-        md = mood_depth(g)
-        for a, b, d, _ in md:
-            depth[int(a * CR):int(b * CR) + 1] = d
-        ov = cue_duck_overrides(cues)
-        for a, b, d in ov:
-            depth[int(a * CR):int(b * CR) + 1] = d
-        depth = ndimage.uniform_filter1d(depth, size=int(1.5 * CR))
-        dep = np.interp(np.arange(N) / SR, np.arange(n) / CR, depth).astype('float32')
-        # silent posts: -3 dB when nobody speaks
-        pt = np.zeros(N, 'float32')
-        for i, b in enumerate(g.beats):
-            for o in b.get('onscreen', []):
-                if o['text'].startswith('POST:'):
-                    a = g.starts[i][0] + o['at']
-                    e = g.starts[i][0] + o['until'] if o.get('until') is not None else g.starts[i][1]
-                    pt[int(a * SR):int(e * SR)] = 1.0
-        pt = ndimage.uniform_filter1d(pt, size=int(0.5 * SR))
-        gdb = -dep * u - 3.0 * pt * (1 - u)
-        mus *= db(gdb)[:, None].astype('float32')
-        sq['duck'] = {'by_mood_db': sorted({(m_, d) for _, _, d, m_ in md}, key=lambda z: z[1]),
-                      'cue_sheet_overrides': ov, 'posts_dip_db': -3.0,
-                      'envelope': 'pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s'}
-        sq['designed_silences'] = designed_silences(cues)
-    elif wav:
-        sq['used'] = False
-    else:
-        sq['missing'] = True
+    mus, sq, _ = score_bus(name, g, variant, u, use_score)
     qa['score'] = sq
-    # the act breaks: the score enters on the act's first frame over a black; fade it in (the lead, v3.1)
-    if mus is not None and SCORE_HEAD_FADE.get(name):
-        hits = designed_hits(cues, SCORE_HEAD_FADE[name] + 0.25)
-        fd = 0.04 if hits else SCORE_HEAD_FADE[name]          # a designed hit on the act's head keeps its attack
-        k = int(fd * SR)
-        mus[:k] *= (np.sin(np.linspace(0, np.pi / 2, k)) ** 2).astype('float32')[:, None]
-        sq['head_fade_s'] = fd
-        if hits:
-            sq['head_fade_why'] = f'designed hit at the head (cues.json designed_hit): {hits[0]}'
-    # score rides (the score makes room for a featured sound): SCORE_RIDE[seg] = [(beat, from s, to s | 'end', dB, why)]
-    if mus is not None:
-        for bid, d0, d1, gdb_, why_ in SCORE_RIDE.get(name, []):
-            if bid in g.BI:
-                a_ = g.starts[g.BI[bid]][0] + d0
-                b_ = g.starts[g.BI[bid]][1] if d1 == 'end' else g.starts[g.BI[bid]][0] + d1
-                tt = np.arange(N) / SR
-                mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
-                sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
     # the set pieces rise: +2-3 LU over the talk (mood-analysis §4 #3; the lead, v3.1)
     mus, fx = setpieces(name, g, dlg, room, fx, mus, speech, qa)
     body = dlg + room + fx
@@ -497,6 +611,7 @@ def premix(name, g, variant, use_score=True):
 
 SEAM_S = 2.0
 PREV = {'act1': 'card', 'act2': 'act1', 'act3': 'act2', 'act4': 'act3', 'tag': 'act4'}   # back to back on the episode clock
+NEXT = {v: k for k, v in PREV.items()}                    # the chapter whose pre-lap plays under each one's tail
 
 
 SCORE_HEAD_FADE = {'act1': 1.0, 'act2': 1.2, 'act3': 1.2, 'act4': 1.2}   # s: the score's fade-in at an act's head
@@ -899,7 +1014,8 @@ def run(names, variant, use_score=True, report_only=False):
         segs_rep[s] = {'file': qa['file'], 'seconds': qa['seconds'], 'lufs_i': m['lufs_i'], 'true_peak_dbtp': m['true_peak_dbtp'],
                        'lra_lu': m['lra_lu'], 'dialogue_lufs': m.get('dialogue_lufs'), 'gain_db': m['gain_db'],
                        'guard_db': qa.get('guard_db'),
-                       'score': 'none (card)' if s == 'card' else ('MISSING' if sc.get('missing') else sc.get('file')),
+                       'score': ((f"Act One's pre-lap ({sc['next_prelap']['seconds']} s)" if (sc.get('next_prelap') or {}).get('seconds')
+                                  else 'none') + ' (card)') if s == 'card' else ('MISSING' if sc.get('missing') else sc.get('file')),
                        'unmarked_holes': m['unmarked_holes'], 'unmarked_holes_without_score': m['unmarked_holes_without_score'],
                        'built': qa['built']}
     for s, why in skipped.items():

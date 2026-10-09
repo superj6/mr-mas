@@ -38,8 +38,8 @@ quiet ache (22).  README.md has the cue sheet (seconds, cue, what plays, why) an
                                                chord; the young Water Line (the nudge twice); one falling chip note a grey
                                                pin; over E02-11's A-flat pedal
   266.9 -  283.0     room tone only            the designed silence: the dark room's Jun 19 post (W8) and the white
-  283.0  - 319.0     E02-12 ONE DOOR           P01 DARK ROOM, sparse: one felt note a phrase (the first, A-flat, the Door's
-                                               missing note, as the lot appears), a sul-tasto D-flat fifth; the Door, its
+  283.0  - 319.0     E02-12 ONE DOOR           P01 DARK ROOM, sparse: one felt note a phrase (the first, E-flat, the D-flat
+                                               fifth's 9th, as the lot appears), a sul-tasto D-flat fifth; the Door, its
                                                first note missing, on non-vibrato flute through the door under "Use flyer
                                                on door"; the GPU choir under the glimpse; the designed stop on the flap's
                                                spring (room tone only); the return as his hand lowers; the Door again
@@ -116,6 +116,17 @@ def plan_cut(bid, kind, key, default):
         if isinstance(c, dict) and c.get(key) is not None:
             return float(c[key])
     return default
+
+
+def plan_arrive(bid, default):
+    """a beat's arrival length from the plan (`arrive`: {s, what}): the plan's own number, which the picture draws to"""
+    a = plan_doc()['beats'].get(bid, {}).get('arrive')
+    return float(a['s']) if isinstance(a, dict) and a.get('s') is not None else default
+
+
+HAND_S = 2.0        # 22.08: his hand is up by the shot's first beat, held two beats, and lowers at 2.0 s (frame 48 of the
+#                     shot): written into the beat plan's picture note for 22.08, so the picture draws to the score's
+#                     return (the score review, 2026-10-09, S5: it was an estimate in the code alone)
 
 
 def mark_real(tl):
@@ -867,8 +878,9 @@ def cue_leverage(tl):
     secs.append(('J2 zAI: the 808 again; the lamp; the Launch (short); his post (dry); the cage', z_in, e['padlock']))
     secs.append(('J3 the padlock: the 808 out; the buzzing; the lamp off: the cello\'s pedal', e['padlock'], morn))
     # ================================================================ K: the lobby's morning (F); the cello's last pizz
-    out_t = e['haul'] + 1.0                                                  # the complaint leaves frame (estimated)
-    out_t = max(e['haul'] + 0.5, min(out_t, e['flutter'] - 0.2))
+    # the quartet's pedal lifts on the lock's sticky_flutter (the note flutters down onto the clean rectangle once the
+    # complaint has gone), not on an estimate of the picture (the score review, 2026-10-09: rope_haul + 1.0 s was one)
+    out_t = e['flutter']
     for inst, p, v, att in (('vc', 'F3', 0.16, 0.6), ('vla', 'C4', 0.14, 0.8), ('vln2', 'G4', 0.1, 1.0),
                             ('vln1', 'C5', 0.09, 1.2)):
         c.rebow(inst, p, morn + (0.0 if inst == 'vc' else 0.08), out_t, v, seg=5.0, xf=1.0, first_att=att,
@@ -878,8 +890,8 @@ def cue_leverage(tl):
     c.mark(morn, f'the lobby\'s morning ({how(c, morn, e["morning"])}): the C pedal resolves to F (the quartet\'s pedal: F3 '
                  'C4 G4 C5, sul tasto, nothing below C3 under the lobby\'s hum); V.O. 13 and the docket play inside it, '
                  'no change', hit=False)
-    c.mark(out_t, 'the complaint rises out of frame (rope_haul + 1.0 s): the quartet\'s pedal lifts; the quartet ends',
-           hit=False)
+    c.mark(out_t, 'the complaint has risen out of frame; the sticky note flutters down (sticky_flutter, the lock\'s): the '
+                  'quartet\'s pedal lifts; the quartet ends', hit=False)
     c.mark(pz, 'DESIGNED HIT: the (FOR NOW) note lands on the clean rectangle: the cello\'s last pizzicato, C3 (the '
                'dominant, left open: for now). E02-11 ends; room tone only from here (the designed silence)')
     secs.append(('K the lobby\'s morning: the F pedal; V.O. 13; the docket; the rope; the last pizzicato', morn, pz + 0.8))
@@ -1178,7 +1190,8 @@ def cue_door(tl):
     B, E = tl.B, tl.E
     b22 = _B(tl, '22.01', 281.0)
     pin = _snd(tl, '22.01', 'pin_fall', b22 + 0.43)
-    lot = max(b22 + 2.0, pin + 1.2)                         # the white turns out to be sky over the lot
+    lot = max(b22 + plan_arrive('22.01', 2.0), pin + 1.2)   # the white turns out to be sky over the lot: the plan's
+    #                                                         arrival (22.01 arrive.s), the picture's own number
     c = V.Cue('e02-12-one-door', tl, anchor=lot, anchor_bar=2, bars=int((tl.length + 4.0 - (lot - BAR)) / BAR) + 3,
               swing=0.0)
     T = tracks_door()
@@ -1191,12 +1204,14 @@ def cue_door(tl):
              end=tl.length)
     e['jdrone'] = e['end'] - plan_cut('22.09', 'jcut', 'lead_s', 1.0)
     stop = e['shut'] - 0.02                                 # the designed stop: the flap shuts in room tone only
-    ret = c.next_beat(e['hand'] + 3 * Q - 0.05)             # his hand rises (a beat), holds two, lowers: the return
+    ret = e['hand'] + HAND_S                                # his hand lowers (the plan's 22.08 note): the return
     e.update(stop=stop, ret=ret)
     # ---- one felt note a phrase (the first, A-flat, is the Door's missing note, given by his own piano)
-    felt = [(lot, 'Ab4', 0.2, 'the lot appears: the first felt note, A-flat 4, alone in the sky (the Door\'s missing '
-                                'first note, on his own piano)'),
-            (c.bar(4), 'Eb4', 0.17, 'he walks up from frame-left, never running'),
+    # (the first note is E-flat 4, the D-flat fifth's 9th, open, no third; no A-flat in the lot's first phrase: an
+    # A-flat there would supply the Door's missing first note, which stays missing until Ep11; the score review)
+    felt = [(lot, 'Eb4', 0.2, 'the lot appears: the first felt note, E-flat 4, alone in the sky (the D-flat fifth\'s '
+                                '9th: open, no third)'),
+            (c.bar(4), 'Bb3', 0.17, 'he walks up from frame-left, never running (a fourth down: quartal, still)'),
             (c.bar(6), 'Db4', 0.16, 'the Orb scans the cube and toasts nothing')]
     door1 = c.next_bar(e['verb'] - 0.2) if c.next_bar(e['verb'] - 0.2) - e['verb'] < 0.7 else c.next_beat(e['verb'])
     felt.append((door1 + 2 * BAR if door1 + 2 * BAR < e['slot'] - 0.3 else door1 + BAR, 'C4', 0.15,
@@ -1240,7 +1255,7 @@ def cue_door(tl):
     c.mark(e['jdrone'], 'the dark room\'s drone fades up under the Door\'s last bar (22.09 J %.1f s, the stems\'s): the G '
                         'rings on into the tag (render/music-el-ringout.wav: the out)' % (e['end'] - e['jdrone']),
            hit=False)
-    secs = [('1 the lot appears: the first felt note (A-flat); the walk-up; the Orb', lot, door1),
+    secs = [('1 the lot appears: the first felt note (E-flat); the walk-up; the Orb', lot, door1),
             ('2 "Use flyer on door": THE DOOR (first note missing); the flyer into the slot', door1, ch_on),
             ('3 the glimpse: the GPU choir under it', ch_on, stop),
             ('4 THE DESIGNED STOP: the flap shuts in room tone only; Mas at the shut flap', stop, ret),
@@ -1358,8 +1373,9 @@ def write_prelap(tl, built, work, tag):
                     f'DREAD sting at 318.217 rings on underneath), so the quartet\'s first pizzicato sounds '
                     f'{-cl.ev["first"]:.3f} s before Act Four\'s first frame (17.21 J {-a:.1f} s: the beacon\'s motor '
                     'and the quartet\'s first pizzicato under the black); continuous with music' + tag + '.wav\'s first '
-                    'sample. mix_episode.py lays no pre-lap: a mix pass that lays this adds it to Act Three\'s score '
-                    'bus from that time; Act Four\'s head keeps its attack (designed_hit at %.3f)' % cl.ev['bar0']
+                    'sample. mix_episode.py lays it on Act Three\'s score bus from that time (score_bus: the next chapter\'s '
+                    'pre-lap, ending on Act Three\'s last sample, at Act Four\'s head gain), and Act Four\'s head fade is '
+                    'off: the texture is already playing (designed_hit at %.3f; the score review, 2026-10-09)' % cl.ev['bar0']
                 if a3 is not None else 'under Act Three\'s last 1.2 s', fade_in_s=0.005)
 
 
@@ -1481,7 +1497,7 @@ def main():
                                  end=round(min(tl.length, a1), 3)))
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (each cue at its engine master: E02-11 -20.5, the keynote bed -24 (laid through a wall screen '
               'and a far PA), E02-12 -21.5 LUFS-I), dry of dialogue; the mixer ducks it (E02-11 9 dB, E02-12 7 by mood)',
@@ -1493,6 +1509,17 @@ def main():
         sections=sections, real_lines=reals,
         record_on_screen=[dict(t0=round(a, 3), t1=round(b, 3), text=x) for a, b, x in record_windows(tl)],
         prelap=prelap, ringout=ringout, tail_unfaded=unf,
+        picture_sync=[
+            dict(what='the lot appears: the designed silence ends, E02-12\'s first felt note',
+                 t=round(cd.ev['lot'], 3), frame=int(round(cd.ev['lot'] * 24)),
+                 source='the beat plan\'s 22.01 arrive.s (2.0 s: "the white and the falling pin"), read by track.py; '
+                        'the picture draws its arrival to the same number'),
+            dict(what='the quartet\'s pedal lifts (the complaint has risen out of frame)', t=round(cl.ev['flutter'], 3),
+                 frame=int(round(cl.ev['flutter'] * 24)), source='the lock\'s 20.09 sticky_flutter (a sound)'),
+            dict(what='the return as his raised hand lowers', t=round(cd.ev['ret'], 3),
+                 frame=int(round(cd.ev['ret'] * 24)),
+                 source='the beat plan\'s 22.08 picture note: the hand lowers 2.0 s into the shot (frame 48); '
+                        'track.py HAND_S. The picture draws to it')],
         measured=res, laid=laid, source=os.path.relpath(__file__, V.REPO),
         sfx_requests=['nole_fanfare_short (20.02): CLAIMED by the score (Nole\'s Launch, short: it is music, tuned to '
                       'the C pedal); the SFX board has none',

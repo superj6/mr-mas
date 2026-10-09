@@ -7,6 +7,8 @@
 - `e02-04-long-form`
 - `e02-05-a-tenant`
 
+**Revised the same day after the score review** (the glass harmonica in the voices' band; the pre-lap now laid by the mix): see [The score review's fixes](#the-score-reviews-fixes-2026-10-09).
+
 **Nothing here has been listened to.** Every number below is measured [M]. The musical calls are judged [J]. The "For an ear" list says what only a person can check.
 
 **The brief:**
@@ -31,15 +33,41 @@ The mood map, in order:
 | | |
 |---|---|
 | `render/music-el.wav` | **364.000 s, 17,472,000 samples (8,736 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored |
-| `render/music-el-prelap.wav` | 1.000 s: the séance's room colour before the act's first frame (the plan's J 1.0 s under the filename card). It runs continuously into the stem's first sample. See "For the other passes" |
+| `render/music-el-prelap.wav` | 1.000 s: the séance's room colour before the act's first frame (the plan's J 1.0 s under the filename card). It runs continuously into the stem's first sample, and `mix_episode.py` lays it under the card (see "For the other passes") |
 | `render/music-el-ringout.wav` | 3.000 s: E02-05 past the act's last frame (THE COPY's last F and the room's tail) for Act Two's head. It runs continuously from the stem's last sample |
-| Level | −20.08 LUFS-I; true peak −3.15 dBTP; short-term p95 −17.74, max −16.22 |
-| `check.py` (the v35check copy) | `act1 8736 f 364.000 s exact=True −20.08 LUFS-I −3.15 dBTP \| silence 0 holes 0 frag 0 \| 12 dB steps 1 unmarked 0 \| F-major True rule12 True knee 0/0 \| PASS` |
+| Level | −20.11 LUFS-I; true peak −3.15 dBTP; short-term p95 −17.55, max −16.05 |
+| `check.py` (with the review's new checks) | `act1 8736 f 364.000 s exact=True lock=True −20.11 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 3) \| 12 dB steps 1 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 13.9 min 10.9 fail 0 exempt 0 \| PASS` |
 | Engine QA, every cue | no warnings. F-major ok (written and spectral). Rule 12 ok: no A-natural is written anywhere. Knee whole 0, completions 0. Every hit mark has an onset within 10 ms (5/5, 1/1, 2/2, 3/3). The sub under the cathedral's hum reads −23.9 dB (limit −18). |
 | Music runs | three runs: 0 → 226.55 (the séance into PROCEDURE, one run), 234.2 → 238.25 (the sting), 315.8 → 364.0 (A TENANT). There are two designed rests between them (below), with no unmarked digital silence, no hole under −60 dBFS and no fragment |
 | `cues-el.json` | the cue sheet: each cue's sync marks and events; the designed rests and hits; `claims_sfx`; the sections (with one `duck_db`); the real lines; the prelap and ring-out; the measurements and the engine QA. It names the timeline it was laid to |
 
 The Kokoro lock (`show/reel/ep02-v1/`) was not rendered, because the film is the EL lock.
+
+## The score review's fixes (2026-10-09)
+
+The review measured each line's take against the score as the mix ducks it, in the voices' 1–4 kHz band (the audition's 2–6 kHz pocket, −29.3 dB, missed this energy). The glass harmonica's top bowls and their rubbed harmonics sat at −27 to −30 dBFS there under the talk; the B♭m9's C6 bowl was the worst, and every line the review named sat under a B♭m9. What changed in `track.py` [M]:
+
+| Change | Why |
+|---|---|
+| **The séance's B♭m9 is re-voiced C5 F5 A♭5** (its 9th, 5th and 7th: no bowl over A♭5, no third), from D♭5 F5 C6 | the C6 bowl's fundamental (1,046 Hz) sat in the voices' band under the ghost email, "we keep everything." and "You sat at the back" |
+| **The top bowl lifts under his lines (on camera and V.O.) and the real ones**: it lets go 0.6 s before the line with a short ring (0.3 s) and is re-rubbed after it (10 lifts) | "Under real lines and Mas's on-camera lines, take the top bowl out"; its entries now come before a line or after it, never into one |
+| **The glass bus dips 5 dB above 1 kHz while voices sound** (a dynamic high shelf on the bowls and the phrase, in and out over 0.25 s around each line) | the rubbed 2nd and 3rd harmonics |
+| **The room thins 4 dB under the real lines** (the ghosts' emails read aloud), as under the V.O. | "the cue thins to a pad under every ghost caption and real line": the band under the real line now sits 10 dB under the level before it |
+| PROCEDURE's upper strings are darker (1.2 kHz, was 1.5) and its pulse and taps softer under talk | Terb's quiet take under the pedal (onset +9.8 → +10.9) |
+
+The per-line result (`e02-v1-common/pocket.py`; onset = the first 0.6 s from the first word, after the mix's 8 dB duck):
+
+| Line | s | onset, before → after (dB) | whole line | worst 0.5 s |
+|---|---|---|---|---|
+| e2-a1-0001 Mas: "is there anyone here… from 2016." | 13.16 | +6.6 → **+21.8** | 5.2 → 18.0 | −3.8 → 9.0 |
+| e2-a1-0014 the real ghost email: "This needs billions per year…" | 88.95 | +5.7 → **+20.8** | 6.3 → 22.4 | 0.0 → 17.7 |
+| e2-a1-0026 the ghost: "billions per year…" | 141.78 | +8.6 → **+13.6** | 9.5 → 13.5 | 5.3 → 10.7 |
+| e2-vo-02 V.O. 2 | 143.32 | +10.2 → **+21.3** | 10.5 → 22.4 | 1.6 → 14.2 |
+| e2-a1-0028 Mas: "we keep everything." (weighted) | 150.02 | +8.8 → **+20.3** | 6.1 → 18.3 | 2.6 → 15.3 |
+| e2-a1-0029 Nole: "You sat at the back…" | 177.81 | +13.9 → **+16.4** | 9.7 → 12.6 | −1.8 → 2.0 (mid-line, under a glass phrase in his pause) |
+| e2-a1-0033 Terb (PROCEDURE) | 212.23 | +9.8 → **+10.9** | 14.6 → 15.9 | 10.2 → 11.4 |
+
+Across the act: every line's onset is at least **+10.9 dB** (10th percentile +13.9 over the act's 46 lines with score under them; before the duck +5.9, against Ep1's final's +3.9 on that basis). Before: p10 +10.0, min +5.7, five lines under +10. The V.O. windows read −25.3 and −24.7 LUFS (the engine's guide −24 ± 2). The duck stays the mix's 8 dB: the music made the room, so E02-02's duck didn't need raising.
 
 ## The audition: the séance's room colour (manifest E02-02; proposal D-35, D-49)
 
@@ -84,10 +112,10 @@ The 96 BPM grid is anchored on the Go stone (109.43 is a downbeat). It's straigh
 
 | s | What plays | Why |
 |---|---|---|
-| −1.0 → 3.8 | **The room colour, already playing.** Glass Fm(add9) (A♭4 C5 G5) over a sul-tasto bass F2 + C3. The glass's first phrase (C5 D♭5 C5, the sigh onto the Ache's D♭) starts at 0.68, the chip shadowing it an octave up (its duty narrowing 25 → 12.5 %) | "Arrive on the lit table with the room colour already playing". The J 1.0 s is in `music-el-prelap.wav`. The phrase waits until after the mix's 1 s head fade |
+| −1.0 → 3.8 | **The room colour, already playing.** Glass Fm(add9) (A♭4 C5 G5) over a sul-tasto bass F2 + C3. The glass's first phrase (C5 D♭5 C5, the sigh onto the Ache's D♭) starts at 0.68, the chip shadowing it an octave up (its duty narrowing 25 → 12.5 %) | "Arrive on the lit table with the room colour already playing". The J 1.0 s is in `music-el-prelap.wav`, which the mix lays under the card (no head fade now) |
 | 3.8 | D♭maj9(♯11), the bowls entering one by one | After his click (2.90; `post_click` is the SFX's): the post is out. The change lands before the V.O. |
 | 5.06 → 12.5 | **The felt** (F3 + C4) under V.O. 1; a −4 dB fader ride on the cue | His room, inside the bed: nothing attacks under his words (OST rule 10). The V.O. window measures −23.0 LUFS (DARK ROOM's guide is −24 ± 2) |
-| 12.56 | B♭m9 | "is there anyone here… from 2016." held still under his line |
+| 12.56 | B♭m9 (glass C5 F5, its A♭5 bowl lifted until his line is over) | "is there anyone here… from 2016." held still under his line |
 | 17.35 | C7sus(♭9): ghost 1 rises | Thin under the caption `"…LESS OPEN."` and the Yup (real): melody and chip out |
 | 22.56 | Fm(add9), 0.47 s *after* the cut | The caption runs to the cut, so the change waits for it to clear. It's the one late change |
 | 25.68 | D♭maj9(♯11); **the pad** from 29.27 | "one knock if we promised a nonprofit." Then, as the script asks, the room colour drops to its pad (only the top bowl and the bass) through the HOLD and the knocks. No note doubles a knock |
@@ -98,7 +126,7 @@ The 96 BPM grid is anchored on the Go stone (109.43 is a downbeat). It's straigh
 | 59.22 → 73.0 | C7sus held: **OPEN, NOPE and the three hands play on a held chord** | No comic scoring (OST rule 1). The phrases are kept off the board's spellings, from NOPE to the hands lifting |
 | 72.97 | Fm(add9): the cow (−3 dB under its crop: no one speaks over it) | The record: thin under the caption |
 | 82.56 | C7sus; **NOLE'S LAUNCH, three times, each shorter** (83.34, 84.27, 85.06): staccato trumpets C4 F4 B♭4 E♭5, then C F B♭, then C F, each falling off its last note. A chip noise burst (his booster) on each, a soft timpani C2 on the first | The lamp clicks (his motif's own SFX), he types, and his post rises as a ghost of `!`: "the stack three times, each shorter" (OST §2.7, Ep2). It deflates into the `!` |
-| 86.31 | B♭m9: ghost 3 (DEC 2018) | Thin under its header and "billions per year" (both real) |
+| 86.31 | B♭m9: ghost 3 (DEC 2018); under the real email the top bowl lifts, the glass dips above 1 kHz and the room rides 4 dB down | Thin under its header and "billions per year" (both real) |
 | 94.10 | (nothing) | The slap is the SFX's: "Mas's hand on his glass doesn't move" |
 | 96.31 | C7sus; a phrase at 96.93 | "That was a different me." Held from Nole's beat through the ghost's "…Yup." (no scoring on the punchline) |
 | 106.31 | **Move 37: the room thins to the open fifth** (glass F4 + C5, softer; bass F2 + C3) | "spirit, why zero?" The room goes quiet for the only time |
@@ -108,7 +136,7 @@ The 96 BPM grid is anchored on the Go stone (109.43 is a downbeat). It's straigh
 | 132.27 | **THE WALL FREEZES**: the grains and the Go figure stop dead | "The knobs tick only while the stream pours in, and freeze at the match" |
 | 132.35 | **THE ACHE** on glass (G4 + D♭5 over F2 + C3) | Nole's fear ("One player in ten thousand…"): wonder and a chill, played by the séance's own bowls |
 | 137.97 | Fm(add9): back to the room colour | "MINDDEEP had that in 2016. We had a blog." |
-| 141.10 → 152.4 | B♭m9; **the felt** (D♭4 + F4) under V.O. 2 (ride −4 dB; −24.6 LUFS); held under "You kept them." / "we keep everything." | The ghost's "billions…" (real), then the V.O., the gap. "A sting, melancholy": nothing moves |
+| 141.10 → 152.4 | B♭m9; **the felt** (D♭4 + F4) under V.O. 2 (ride −4 dB; −24.7 LUFS); held under "You kept them." / "we keep everything.", the top bowl out under V.O. 2 and "we keep everything." | The ghost's "billions…", then the V.O., the gap. "A sting, melancholy": nothing moves |
 | 152.40 | **On the smoke, the glass rings free** (the finger lifts on the snuff), and the cut-paper chamber strings swell in on the same chord's tones (F, B♭, E♭) | "Crossfaded in on the smoke". The same chord is upgraded across the render front (P10) |
 | 154.22 | F2.3's arrival: a soft timpani C2 under the swell; the C pedal (bass, cello) | The T3 tier's "timpani hit on each arrival", 0.32 s before the cut to 2018 |
 | 155.06 | **NOLE'S LAUNCH on slow horns, its one sincere version**: C4, F4, B♭4, E♭5 in half notes. The A♭ never comes; the E♭ is held, then let go | His Feb 2018 goodbye (OST §2.7). The band-limited strings (6.5 kHz) are the memory's paper |
@@ -208,12 +236,12 @@ On this lock the notes are unchanged by those fixes (identical dry output).
 
 | Section | s | LUFS-I | True peak | Balance: piano · orch · big band · chip (engine; rhythm excluded) |
 |---|---|---|---|---|
-| E02-02 1 the room colour, Nole's case, the Launch ×3 | 0 → 106.3 | −19.3 | −6.6 | 2 · 89 · 6 · 3 |
-| E02-02 2 Move 37 (the Go figure, the knobs) | 106.3 → 132.4 | −22.8 | −9.3 | 0 · 94 · 0 · 6 |
-| E02-02 3 the fear (THE ACHE) | 132.4 → 138.0 | −21.2 | −12.5 | 0 · 100 · 0 · 0 |
-| E02-02 4 back; V.O. 2; "You kept them." | 138.0 → 152.4 | −20.4 | −9.2 | 5 · 95 · 0 · 0 |
-| E02-02 5 F2.3 (the chamber tier, the Launch, the Door) | 152.4 → 173.8 | −22.4 | −7.2 | 0 · 46 · 54 · 0 |
-| E02-02 6 back; the fanfare; the last chord | 173.8 → 193.0 | −19.4 | −8.7 | 0 · 90 · 8 · 2 |
+| E02-02 1 the room colour, Nole's case, the Launch ×3 | 0 → 106.3 | −19.5 | −6.9 | 2 · 89 · 7 · 3 |
+| E02-02 2 Move 37 (the Go figure, the knobs) | 106.3 → 132.4 | −23.4 | −11.5 | 0 · 94 · 0 · 6 |
+| E02-02 3 the fear (THE ACHE) | 132.4 → 138.0 | −21.3 | −12.7 | 0 · 100 · 0 · 0 |
+| E02-02 4 back; V.O. 2; "You kept them." | 138.0 → 152.4 | −19.8 | −8.7 | 4 · 96 · 0 · 0 |
+| E02-02 5 F2.3 (the chamber tier, the Launch, the Door) | 152.4 → 173.8 | −22.5 | −7.6 | 0 · 46 · 54 · 0 |
+| E02-02 6 back; the fanfare; the last chord | 173.8 → 193.0 | −18.5 | −6.4 | 0 · 91 · 7 · 2 |
 | E02-03 the pulse; thin under the reading | 192.75 → 215.25 | −21.3 | −7.9 | 0 · 100 · 0 · 0 |
 | E02-03 he sits; the warm half-second; the hanging chord | 215.25 → 226.6 | −20.4 | −7.0 | 0 · 54 · 31 · 14 |
 | E02-04 the sting | 234.2 → 238.9 | −20.0 | −7.0 | 0 · 96 · 0 · 4 |
@@ -223,19 +251,19 @@ On this lock the notes are unchanged by those fixes (identical dry output).
 | E02-05 D–F the swing; the hold on the Ache | 336.6 → 352.9 | −19.8 / −23.3 / −19.9 | ≤ −7.3 | |
 | E02-05 G the pan (Tasya's floor) | 352.9 → 358.5 | −23.0 | −10.3 | 0 · 100 · 0 · 0 |
 | E02-05 H home on Mas; THE COPY | 358.5 → 364.0 | −18.9 | −6.5 | 74 · 13 · 0 · 13 |
-| **whole stem** | 0 → 364.0 | **−20.08** | **−3.15** | E02-02 1·85·12·2 · E02-03 0·75·17·8 · E02-04 0·96·0·4 · E02-05 38·51·0·11 |
+| **whole stem** | 0 → 364.0 | **−20.11** | **−3.15** | E02-02 1·85·12·2 · E02-03 0·74·18·8 · E02-04 0·96·0·4 · E02-05 38·51·0·11 |
 
 - **Momentary peaks (LUFS-M)** [M]:
-  - the act's head −15.2; the Launch ×3 −16.8;
-  - Move 37 −20.3 (the quiet centre); the Ache −19.3;
-  - F2.3's horns −16.7; the Door −21.0; the fanfare −19.5;
-  - the last chord's ring −18.0;
+  - the act's head −15.5; the Launch ×3 −17.4;
+  - Move 37 −19.5 (the quiet centre); the Ache −19.2;
+  - F2.3's horns −17.0; the Door −21.3; the fanfare −18.8;
+  - the last chord's ring −17.3;
   - PROCEDURE's entry −22.2; the warm half-second −16.9;
   - the sting −16.9; the split's push −15.0; the welcome's chord −21.8;
   - THE COPY −14.7 (the outs guide is −14);
   - the act's last 0.4 s −32.9, and the ring-out's first 0.4 s −35.3: the copy rings across the cut and is gone about 1 s into Act Two.
-- **The V.O. windows** [M]: −23.0 and −24.6 LUFS (the engine's guide, −24 ± 2), from the felt plus a −4 dB ride.
-- **The dialogue pocket** [M]: the 2–6 kHz band reads −27.0 dB (the séance), −22.6, −24.9 and −19.4 dB (guide ≤ −15). The mix ducks E02-02 and E02-05 by 8 dB and E02-03 and E02-04 by 9 dB under speech. `cues-el.json` → `sections` asks for 5 dB over the knobs (121.7–132.6) instead.
+- **The V.O. windows** [M]: −25.3 and −24.7 LUFS (the engine's guide, −24 ± 2), from the felt plus a −4 dB ride, the top bowl out.
+- **The dialogue pocket** [M]: the engine's 2–6 kHz band reads −28.3 dB (the séance), −23.6, −24.9 and −19.4 dB (guide ≤ −15). Per line in 1–4 kHz after the mix's duck: every onset at least +10.9 dB (above). The mix ducks E02-02 and E02-05 by 8 dB and E02-03 and E02-04 by 9 dB under speech. `cues-el.json` → `sections` asks for 5 dB over the knobs (121.7–132.6) instead.
 - **The cut check** [M]: one step of 12 dB or more, at 4B.01 (226.0, −12.7 dB). That is PROCEDURE's ring-out into the marked rest, 0.6 s from its mark.
 - **Mood shares by scored time** (279.5 s of 364) [J]:
 
@@ -262,7 +290,7 @@ On this lock the notes are unchanged by those fixes (identical dry output).
 ## For the other passes
 
 - **Mix:**
-  - **The prelap.** `render/music-el-prelap.wav` is the plan's J 1.0 s under the filename card. `mix_episode.py` lays no score under the card yet. If the mix pass lays it, Act One's 1.0 s head fade should go, because the colour is already playing. If not, the head fade-in reads as "in under".
+  - **The prelap.** `render/music-el-prelap.wav` is the plan's J 1.0 s under the filename card. `mix_episode.py` now lays it: the card gets a score bus for it, ending on the card's last sample at Act One's head gain, and Act One's 1.0 s head fade is off, because the colour is already playing (the review found it unused; measured on the score bus: the card's last 200 ms and Act One's first 200 ms 0.8 dB apart, a sample jump of 0.005).
   - **The ring-out.** `render/music-el-ringout.wav` is read automatically under Act Two's head and crossfades out 2.5 s after Act Two's own entry.
   - **The tail.** The stem's last 5 ms fade was put back, so there is no notch at the seam (`laid[-1].tail_restored`).
   - **The duck.** `sections` duck_db is 5 over the knobs.
@@ -288,7 +316,7 @@ Render times through `heavy.sh` [M]:
 
 | Cue | Time |
 |---|---|
-| the séance | about 6–7 min (343 notes; the glass is synthesised per note) |
+| the séance | about 2–7 min (the glass is synthesised per note; 137–227 s on the review's re-renders) |
 | PROCEDURE | 5 s |
 | the sting | 2 s |
 | A TENANT | 11–14 s |
@@ -298,7 +326,7 @@ After any re-lock, re-render: every sync point comes from the lock (S5).
 
 ## For an ear, in order
 
-1. **0–30 s and the séance as a whole:** does the glass read as rubbed glass bowls, an instrument, rather than a synth pad? Is it uncanny and played straight, never a horror organ, a theremin or a Halloween music box? Is the chip's shadow audible as the show's stamp? If the glass reads as a pad, the fallback is the audition's (b), or bowed vibes.
+1. **0–30 s and the séance as a whole:** does the glass read as rubbed glass bowls, an instrument, rather than a synth pad? Is it uncanny and played straight, never a horror organ, a theremin or a Halloween music box? Is the chip's shadow audible as the show's stamp? If the glass reads as a pad, the fallback is the audition's (b), or bowed vibes. **Under the talk** (13–16, 86–92, 141–152, 177–185 s): every first word is clear; the top bowl's lift and its re-rub after the line read as the player breathing, not as a gap, and the 5 dB dip above 1 kHz isn't heard as a filter.
 2. **83–86 s:** Nole's three stacks, each shorter: a deflating fanfare, not a gag.
 3. **106–138 s:** Move 37. Does the room go quiet? Are the Go figure and the knobs a texture, not a tune? Is the freeze a clean stop? Does the Ache on glass give the chill under "it was right"?
 4. **152–174 s:** F2.3. Are the horns sincere? Do the strings leaving read as the room turning away? Is the Door on flute heard "through a door", and is the look warm?
@@ -329,7 +357,7 @@ After any re-lock, re-render: every sync point comes from the lock (S5).
   - 10: the record plays dry; nothing attacks under the V.O. [M].
   - 12: no A-natural anywhere [M].
 - **R10:** every render went through `heavy.sh` with `OST_WORKERS=2`, one at a time [M].
-- **R1:** Ep1 untouched. Only `audio/ost/tracks/e02-v1-act1/` was written. Ep1's tracks were read, never edited.
+- **R1:** Ep1 untouched. The score pass wrote only `audio/ost/tracks/e02-v1-act1/`; the review's fixes also touched Ep2's `e02-v1-common` (the lock hash, the per-line pocket) and `audio/reel/ep02-v1/mix_episode.py` (the pre-laps). Ep1's tracks were read, never edited.
 - **R8:** nothing heard.
 - **Broken on purpose:** the seven calls above.
 

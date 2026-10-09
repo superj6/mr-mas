@@ -349,8 +349,24 @@ def name_words(name):
 
 
 # ------------------------------------------------------------------ the score's claims
+_LOCK_SHA1 = {}
+
+
+def lock_sha1(path):
+    """the lock's content hash: sha1 of its beats as canonical JSON. The same function as audio/ost/tracks/e02-v1-common/
+    v3lib.py lock_sha1 (keep the two equal): each score's cue sheet carries the hash of the lock it was laid to"""
+    key = (path, os.path.getmtime(path))
+    if key not in _LOCK_SHA1:
+        d = json.load(open(path))
+        _LOCK_SHA1[key] = hashlib.sha1(json.dumps(d['beats'], sort_keys=True, ensure_ascii=False,
+                                                  separators=(',', ':')).encode('utf-8')).hexdigest()
+    return _LOCK_SHA1[key]
+
+
 def score_files(seg, variant, why=None):
-    """(music.wav, cues.json) for a segment's score rendered to THIS lock, or (None, None)"""
+    """(music.wav, cues.json) for a segment's score rendered to THIS lock, or (None, None): its cue sheet names this
+    timeline and carries this lock's content hash (`lock_sha1`; the score review, 2026-10-09: a retime that kept the act's
+    length used to pass a stale score, S5)"""
     d = os.path.join(OST, f'e02-{CUT}-{seg}')
     sfx = '-el' if variant == 'el' else ''
     w = os.path.join(d, 'render', f'music{sfx}.wav')
@@ -361,12 +377,19 @@ def score_files(seg, variant, why=None):
         try:
             cues = json.load(open(c))
             tl = cues.get('timeline') or (cues.get('clock') or {}).get('timeline')
+            h = cues.get('lock_sha1')
         except Exception:  # noqa: BLE001
-            tl = None
+            tl, h = None, None
         want = os.path.normpath(VARIANTS[variant]['tl'].format(seg=seg))
         if tl and os.path.normpath(tl) != want:
             if why is not None:
                 why.append(f'{os.path.relpath(w, ROOT)} is rendered to {tl}, not {want}: not used')
+            return None, None
+        want_h = lock_sha1(os.path.join(ROOT, want)) if os.path.exists(os.path.join(ROOT, want)) else None
+        if want_h and h != want_h:
+            if why is not None:
+                why.append(f'{os.path.relpath(c, ROOT)} was laid to a different version of {want} (lock_sha1 '
+                           f'{(h or "missing")[:12]}, the lock {want_h[:12]}): re-render the score; not used')
             return None, None
     return w, c
 

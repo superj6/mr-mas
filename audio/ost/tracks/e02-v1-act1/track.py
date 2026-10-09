@@ -83,7 +83,7 @@ import v3lib as V   # noqa: E402
 from v3lib import palette, nm, Drums   # noqa: E402
 from engine.render import Track   # noqa: E402
 from engine.arrange import CREDIT_SYN   # noqa: E402
-from engine.core import SR, midi_hz, bp   # noqa: E402
+from engine.core import SR, midi_hz, bp, hp, to_stereo   # noqa: E402
 
 SEG = 'act1'
 Q, BAR, S16 = V.Q, V.BAR, V.S16
@@ -260,12 +260,35 @@ def glass_track(name, gain_db, pan, sends):
                  hum_ms=4, rel=0.1, credit=CREDIT_SYN)
 
 
+def glass_shelf(spans, f=1000.0, cut_db=-5.0, ramp=0.25):
+    """the glass while voices sound: a dynamic high shelf, cut_db above about f Hz (the bowls' rubbed 2nd and 3rd
+    harmonics, a top bowl's fundamental: the voices' 1-4 kHz), in and out over `ramp` s around each line (spans: file
+    seconds).  The score review (2026-10-09): the room colour sat at -27 to -30 dBFS in 1-4 kHz under the talk"""
+    def post(buf):
+        x = to_stereo(np.asarray(buf, dtype=np.float64))
+        n = x.shape[1]
+        env = np.zeros(n)
+        for a, b in spans:
+            i0, i1 = max(0, int(a * SR)), min(n, int(b * SR))
+            if i1 > i0:
+                env[i0:i1] = 1.0
+        k = max(1, int(ramp * SR))
+        cs = np.concatenate([[0.0], np.cumsum(env)])
+        lo, hi_ = np.clip(np.arange(n) - k // 2, 0, n), np.clip(np.arange(n) + k // 2, 0, n)
+        env = (cs[hi_] - cs[lo]) / np.maximum(1, hi_ - lo)
+        y = x - (1.0 - 10 ** (cut_db / 20.0)) * env[None] * hp(x, f, 2)
+        return y.astype(np.float32)
+    return post
+
+
 # ================================================================ E02-02 THE SÉANCE
 # the room colour's harmony: (the glass's voicing, above the voices' core; the bass root and fifth, sul tasto)
 SEANCE = {
     'Fm9':       (['Ab4', 'C5', 'G5'], 'F2', 'C3'),        # Fm(add9): the room's home
     'Dbmaj9#11': (['F4', 'C5', 'G5'], 'Db2', 'Ab2'),       # the post is out: the room tilts to D-flat
-    'Bbm9':      (['Db5', 'F5', 'C6'], 'Bb1', 'F2'),
+    'Bbm9':      (['C5', 'F5', 'Ab5'], 'Bb1', 'F2'),         # (9, 5, 7: no bowl over A-flat5; its C6 sat in the
+    #                                                          voices' band under the ghost email, "we keep everything."
+    #                                                          and "You sat at the back": the score review, 2026-10-09)
     'C7sus':     (['Bb4', 'Db5', 'F5'], 'C2', 'G2'),       # Nole's dominant (C7sus(b9)): pushing, never landing
     'C11b9':     (['Ab4', 'Db5', 'F5'], 'C2', 'G2'),       # B-flat minor over his C: his case
     'Open5':     (['F4', 'C5'], 'F2', 'C3'),               # the Go board: the open fifth, no third
@@ -289,10 +312,13 @@ GRAINS_HUMAN = ['F5', 'G5', 'Ab5', 'C6', 'Db6', 'Eb5', 'C5', 'G5']     # people'
 GRAINS_SELF = ['F5', 'C6', 'G5', 'C6', 'F5', 'G5', 'C6', 'Db6']        # its own games: tighter, quantised
 
 
-def tracks_seance(colour='glass'):
+def tracks_seance(colour='glass', shelf=None):
     T = palette()
     T['arm'] = glass_track('arm', -3.0, -0.1, {'hall': -9, 'room': -16})          # the chords (the room)
     T['arm_lead'] = glass_track('arm_lead', -2.0, 0.18, {'hall': -8, 'room': -16})  # the phrase (the medium's call)
+    if shelf is not None:                                                          # the glass under the voices
+        T['arm'].post = shelf
+        T['arm_lead'].post = shelf
     T['reed'].gain_db, T['reed'].sends = -7.0, {'hall': -10, 'room': -14}      # (audition b: the low reed pad)
     T['celesta'].gain_db, T['celesta'].sends = -4.0, {'hall': -8}
     T['lead'].gain_db, T['lead'].sends, T['lead'].eq = -2.0, {'room': -14, 'snes': -14}, [('hp', 220), ('lp', 5200)]
@@ -353,7 +379,9 @@ def cue_seance(tl, colour='glass', end_at=None):
     name = 'e02-02-the-seance' + ('' if end_at is None else f'-audition-{colour}')
     c = V.Cue(name, tl, anchor=stone, anchor_bar=ab, bars=int((end + 6.0 - (stone - BAR * (ab - 1))) / BAR) + 2,
               swing=0.0)
-    T = tracks_seance(colour)
+    voice_spans = merge([(ln['on'] - 0.3, ln['end'] + 0.2) for ln in tl.lines if ln['on'] < end + 1.0])
+    T = tracks_seance(colour, shelf=glass_shelf([(a - c.T0, b - c.T0) for a, b in voice_spans]) if colour == 'glass'
+                      else None)
     glass = colour == 'glass'
     PADI, LEADI = ('arm', 'arm_lead') if glass else ('reed', 'celesta')
     stop = end_at if end_at is not None else 1e9
@@ -397,6 +425,23 @@ def cue_seance(tl, colour='glass', end_at=None):
         floor = t2
     f23_in, f23_out = e['snuff'], cut('4.33')            # the glass rests through F2.3 (it rings free on the snuff)
     pad_drop = (L['mas_knock']['end'] + 0.12) if L['mas_knock'] else None   # "the room colour drops to its pad"
+    # ---- the top bowl lifts under his lines (on camera and V.O.) and the real ones (the record): it lets go 0.6 s
+    # before the line with a short ring and is re-rubbed after it (the score review, 2026-10-09: the room colour sat in
+    # the voices' 1-4 kHz under the ghost email, "is there anyone here...", "we keep everything.")
+    lifts = merge([(ln['on'] - 0.6, ln['end'] + 0.15) for ln in tl.lines if ln['kind'] in ('real', 'mas', 'vo')])
+
+    def top_pieces(a, b):
+        out, t = [], a
+        for h0, h1 in lifts:
+            if h1 <= t or h0 >= b:
+                continue
+            if h0 - t >= 1.0:
+                out.append((t, h0, True))
+            t = max(t, h1)
+        if b - t >= 1.0:
+            out.append((t, b, False))
+        return out
+    n_lift = 0
     # ---- the chords and the bass
     for i, (t0, col, why) in enumerate(H):
         if t0 >= stop:
@@ -426,6 +471,15 @@ def cue_seance(tl, colour='glass', end_at=None):
             x = dict(att=att) if glass else {}
             if glass and ring:
                 x['ring'] = ring
+            if glass and k == len(voic) - 1 and len(voic) > 1:
+                pcs = top_pieces(tp, gp)
+                n_lift += sum(1 for _, _, lift in pcs if lift) + (1 if not pcs else 0)
+                for j, (a_, b_, lift) in enumerate(pcs):
+                    xx = dict(x, att=0.7) if (j or a_ > tp + 0.01) else dict(x)
+                    if lift:
+                        xx['ring'] = 0.3
+                    c.n(PADI, ps, a_, max(0.2, b_ - a_), vel * 0.92 * (0.9 if xx.get('att') == 0.7 else 1.0), **xx)
+                continue
             # the glass breathes: on a long chord the middle bowl is re-rubbed every two bars, never under a still line
             cuts = [tp]
             if glass and k == 1 and gp - tp > 7.0:
@@ -510,6 +564,7 @@ def cue_seance(tl, colour='glass', end_at=None):
             t = lead_in(c, ln['on'], 0.3, swung=False)
             c.pch('felt', ps, t, ln['end'] - t + 0.8, 0.13, roll=0.03)
             c.mark(t, f'the felt under V.O. {key[-1]} ({" + ".join(ps)}): his room, inside the bed', hit=False)
+    c.top_lifts = n_lift
     if end_at is not None:
         return _finish_seance(c, T, tl, e, H, end_at, colour)
 
@@ -684,17 +739,26 @@ def _finish_seance(c, T, tl, e, H, end_at, colour):
                   'the Door on flute is through a door (low-passed, one side); the last chord rings into PROCEDURE'])
     end = end_at if end_at is not None else e['end'] + 2.4
     rides = [(ln['on'] - 0.45, ln['end'] + 0.35, -4.0) for ln in vo]
+    # the real lines (the ghosts' emails read aloud): the room thins 4 dB under the record, as under the V.O.
+    rides += [(ln['on'] - 0.45, ln['end'] + 0.35, -4.0) for ln in tl.lines
+              if ln['kind'] == 'real' and ln['on'] < (end_at or e['end'])]
     speech = merge([(ln['on'] - 0.2, ln['end'] + 0.2) for ln in tl.lines])
     for a, b, _ in caps:
         if a < (end_at or e['end']) and not any(x < b and y > a for x, y in speech):
             rides.append((a - 0.3, b + 0.2, -3.0))
-    macro = [(-3.0, 0.0)]
+    mr = []                                         # (overlapping rides merge: the deeper one holds)
     for a, b, d in sorted(rides):
+        if mr and a <= mr[-1][1]:
+            mr[-1] = (mr[-1][0], max(mr[-1][1], b), min(mr[-1][2], d))
+        else:
+            mr.append((a, b, d))
+    macro = [(-3.0, 0.0)]
+    for a, b, d in mr:
         macro += [(a, 0.0), (a + 0.4, d), (b - 0.3, d), (b, 0.0)]
     sc = c.finish(T, meta, length_end=end, end_fade=((end_at - 1.5, end_at) if end_at is not None else None),
                   tail_s=0.5, macro=macro)
     meta['rides'] = [dict(t0=round(a, 3), t1=round(b, 3), db=d) for a, b, d in sorted(rides)]
-    c.ev = dict(e, H=[(round(t, 3), col) for t, col, _ in H])
+    c.ev = dict(e, H=[(round(t, 3), col) for t, col, _ in H], top_bowl_lifts=getattr(c, 'top_lifts', 0))
     return c, sc
 
 
@@ -746,8 +810,8 @@ def cue_procedure(tl):
         for inst, p, v in zip(('cb', 'vc', 'vla', 'vln2', 'vln1'), PROC[col][0], (0.17, 0.17, 0.15, 0.13, 0.12)):
             c.rebow(inst, p, t0 - (0.0 if i == 0 else 0.25), t1 + (0.25 if not last else 0.0), v, seg=5.0, xf=0.9,
                     first_att=1.4 if i == 0 else 0.8, last_rel=1.4 if last else 0.3, art='sus',
-                    lp=1500 if inst in ('vln1', 'vln2', 'vla') else 900)
-        c.mark(t0, f'{col}: {why}' + (f' ({how(c, t0, t_in)})' if i == 0 else ''), hit=False)
+                    lp=1200 if inst in ('vln1', 'vln2', 'vla') else 900)     # (1200, not 1500: Terb's quiet take
+        c.mark(t0, f'{col}: {why}' + (f' ({how(c, t0, t_in)})' if i == 0 else ''), hit=False)   # needs the room)
     # the pulse (spiccato 8ths, straight) and the dry snare taps: under Terb's opening, thin to the pedal under the
     # reading (the record plays dry), back as he sits, out under the invite
     p_end1 = lead_in(c, reading['on'], 0.35, swung=False) if reading else B('4A.02')
@@ -760,7 +824,8 @@ def cue_procedure(tl):
             col = [cl for tt, cl, _ in plan if tt <= t + 1e-6][-1]
             k = int(round((t - c.bar1) / (Q / 2))) % 8
             p = PROC[col][1][PULSE[k]]
-            c.n('vc', p, t, Q * 0.42, 0.3 if k % 2 == 0 else 0.24, art='spic')
+            sp = 0.75 if tl.talking(t, kinds={'talk', 'mas'}) else 1.0     # (softer under a line: score review)
+            c.n('vc', p, t, Q * 0.42, (0.3 if k % 2 == 0 else 0.24) * sp, art='spic')
             t += Q / 2
         b0 = int(math.floor(c.bar_of(a0) + 1e-6))
         b1 = int(math.ceil(c.bar_of(a1) - 1e-6))
@@ -782,7 +847,8 @@ def cue_procedure(tl):
     c.mark(lift, 'Gerg lifts the laptop like a toast: the Build\'s "shipped" tag on the chip (C5 F5)')
     c.mark(out, 'PROCEDURE rings out under the invite; none under the read (V.O. 3)', hit=False)
     V.thin(c, {'real': dict(drop={'vc_spic', 'snare_taps', 'timp', 'lead2', 'hn'}),
-               'vo': dict(drop={'lead2', 'hn', 'snare_taps'}), 'talk': dict(soften={'snare_taps': 0.85})})
+               'vo': dict(drop={'lead2', 'hn', 'snare_taps'}), 'talk': dict(soften={'snare_taps': 0.6})})
+    #   (the taps are noise in the voices' band: 0.6 under talk, not 0.85; the score review, 2026-10-09)
     c.a.notes = [nt for nt in c.a.notes if not (nt.inst == 'vc' and nt.x.get('art') == 'spic' and
                                                 tl.talking(c.clk.x(nt.start), kinds={'real'}))]
     c.section('PROCEDURE: the low strings, the pulse and taps; thin to the pedal under the reading', entry, plan[1][0])
@@ -1139,9 +1205,10 @@ def write_extras(tl, built, work, tag):
         sf.write(fp, y.astype(np.float32), SR, subtype='PCM_24')
         out['prelap'] = dict(file=os.path.relpath(fp, V.REPO), seconds=round(len(y) / SR, 3),
                              lay='under the filename card\'s last 1.0 s (the J 1.0 s: "the séance\'s room colour already '
-                                 'playing"); continuous with music' + tag + '.wav\'s first sample. mix_episode.py lays '
-                                 'no score under the card yet: if a later mix pass lays this, Act One\'s 1.0 s score head '
-                                 'fade should go (the colour is already playing)',
+                                 'playing"); continuous with music' + tag + '.wav\'s first sample. mix_episode.py lays it '
+                                 '(score_bus: the card gets a score bus for it, ending on the card\'s last sample, at '
+                                 'Act One\'s head gain) and drops Act One\'s 1.0 s head fade (the colour is already '
+                                 'playing; the score review, 2026-10-09)',
                              fade_in_s=0.3)
     ct, st = built['tenant']
     p = os.path.join(work, f'{st.name}-underscore.wav')
@@ -1278,7 +1345,7 @@ def main():
                                   'must read under Gerg\'s explanation (S11)'))
     doc = dict(
         schema='mrmas-reel-music/1', id=f'e02-v1-{SEG}{tag}', segment=SEG, file=os.path.relpath(out, V.REPO),
-        timeline=os.path.relpath(path, V.REPO), length_s=tl.length, frames=tl.frames, samples=tl.samples,
+        timeline=os.path.relpath(path, V.REPO), lock_sha1=V.lock_sha1(path), length_s=tl.length, frames=tl.frames, samples=tl.samples,
         sample_rate=V.SR, channels=2, clock="the segment's own clock: 0 = its first frame",
         level='underscore (each cue at its engine master: E02-02 -20, E02-03 -21, E02-04 -20, E02-05 -20 LUFS-I), dry '
               'of dialogue; the mixer ducks it (E02-02 8 dB, E02-03 9, E02-04 9, E02-05 8; `sections` duck_db overrides)',

@@ -4,6 +4,7 @@
  "segment": "act1",
  "file": "audio/ost/tracks/e02-v1-act1/render/music-el.wav",
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act1.json",
+ "lock_sha1": "6429df4dc0896ef8730431d3577d97c9d4b2e0f1",
  "length_s": 364.0,
  "frames": 8736,
  "samples": 17472000,
@@ -22,10 +23,10 @@
    "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-02-the-seance-underscore.wav",
    "laid_at_s": -3.07,
    "level": {
-    "lufs_i": -19.97,
-    "st_p95": -17.58,
-    "st_max": -16.22,
-    "true_peak_dbtp": -6.58
+    "lufs_i": -20.0,
+    "st_p95": -17.34,
+    "st_max": -16.05,
+    "true_peak_dbtp": -6.35
    },
    "target_lufs": -20.0,
    "engine_qa": {
@@ -45,11 +46,11 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 6.02,
-      "true_peak_db": -6.58,
-      "peak_db": -6.58,
-      "rms_db": -22.53,
-      "crest_db": 15.95,
+      "lra": 7.35,
+      "true_peak_db": -6.35,
+      "peak_db": -6.36,
+      "rms_db": -22.57,
+      "crest_db": 16.21,
       "seconds": 198.97
      }
     },
@@ -66,7 +67,7 @@
     "warnings": []
    },
    "note_qa": {
-    "notes": 343,
+    "notes": 341,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -183,7 +184,8 @@
       190.055,
       "Fm9"
      ]
-    ]
+    ],
+    "top_bowl_lifts": 10
    },
    "sync": [
     {
@@ -418,10 +420,10 @@
    "render": "audio/ost/tracks/e02-v1-act1/render/_work/el/e02-03-procedure-march-underscore.wav",
    "laid_at_s": 190.25,
    "level": {
-    "lufs_i": -20.98,
-    "st_p95": -18.64,
-    "st_max": -18.54,
-    "true_peak_dbtp": -6.99
+    "lufs_i": -21.01,
+    "st_p95": -18.54,
+    "st_max": -18.44,
+    "true_peak_dbtp": -6.93
    },
    "target_lufs": -21.0,
    "engine_qa": {
@@ -441,11 +443,11 @@
      },
      "measured": {
       "lufs": -21.0,
-      "lra": 4.75,
-      "true_peak_db": -6.99,
-      "peak_db": -7.0,
-      "rms_db": -23.64,
-      "crest_db": 16.65,
+      "lra": 4.9,
+      "true_peak_db": -6.93,
+      "peak_db": -6.94,
+      "rms_db": -23.61,
+      "crest_db": 16.68,
       "seconds": 36.95
      }
     },
@@ -979,7 +981,7 @@
  "prelap": {
   "file": "audio/ost/tracks/e02-v1-act1/render/music-el-prelap.wav",
   "seconds": 1.0,
-  "lay": "under the filename card's last 1.0 s (the J 1.0 s: \"the séance's room colour already playing\"); continuous with music-el.wav's first sample. mix_episode.py lays no score under the card yet: if a later mix pass lays this, Act One's 1.0 s score head fade should go (the colour is already playing)",
+  "lay": "under the filename card's last 1.0 s (the J 1.0 s: \"the séance's room colour already playing\"); continuous with music-el.wav's first sample. mix_episode.py lays it (score_bus: the card gets a score bus for it, ending on the card's last sample, at Act One's head gain) and drops Act One's 1.0 s head fade (the colour is already playing; the score review, 2026-10-09)",
   "fade_in_s": 0.3
  },
  "ringout": {
@@ -993,23 +995,23 @@
   "frames": 8736,
   "exact": true,
   "whole": {
-   "lufs_i": -20.08,
-   "st_p95": -17.74,
-   "st_max": -16.22,
+   "lufs_i": -20.11,
+   "st_p95": -17.55,
+   "st_max": -16.05,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "e02-02-the-seance": {
-    "lufs_i": -19.97,
-    "st_p95": -17.58,
-    "st_max": -16.22,
-    "true_peak_dbtp": -6.58
+    "lufs_i": -20.0,
+    "st_p95": -17.34,
+    "st_max": -16.05,
+    "true_peak_dbtp": -6.35
    },
    "e02-03-procedure-march": {
-    "lufs_i": -20.98,
-    "st_p95": -18.64,
-    "st_max": -18.54,
-    "true_peak_dbtp": -6.99
+    "lufs_i": -21.01,
+    "st_p95": -18.54,
+    "st_max": -18.44,
+    "true_peak_dbtp": -6.93
    },
    "e02-04-long-form": {
     "lufs_i": -20.0,
@@ -1029,82 +1031,82 @@
     "section": "e02-02-the-seance: F2.3 (ERA T3): the cut-paper chamber tier; Nole's Launch on slow horns; the Door under the look",
     "start": 152.4,
     "end": 173.81,
-    "lufs_i": -22.42,
-    "st_p95": -18.45,
-    "st_max": -18.37,
-    "true_peak_dbtp": -7.23
+    "lufs_i": -22.46,
+    "st_p95": -18.74,
+    "st_max": -18.67,
+    "true_peak_dbtp": -7.62
    },
    {
     "section": "e02-02-the-seance: 1 the room colour: the glass harmonica (F minor) under the séance; Nole's dominant; the Launch x3",
     "start": 0.0,
     "end": 106.31,
-    "lufs_i": -19.29,
-    "st_p95": -17.29,
-    "st_max": -16.22,
-    "true_peak_dbtp": -6.58
+    "lufs_i": -19.54,
+    "st_p95": -17.24,
+    "st_max": -16.56,
+    "true_peak_dbtp": -6.92
    },
    {
     "section": "e02-02-the-seance: 2 Move 37: the open fifth, the Go figure, the knobs (human, then its own), the freeze",
     "start": 106.31,
     "end": 132.35,
-    "lufs_i": -22.8,
-    "st_p95": -22.03,
-    "st_max": -20.85,
-    "true_peak_dbtp": -9.3
+    "lufs_i": -23.38,
+    "st_p95": -22.85,
+    "st_max": -22.11,
+    "true_peak_dbtp": -11.48
    },
    {
     "section": "e02-02-the-seance: 3 the fear: THE ACHE on glass",
     "start": 132.35,
     "end": 137.97,
-    "lufs_i": -21.19,
-    "st_p95": -20.98,
-    "st_max": -20.95,
-    "true_peak_dbtp": -12.49
+    "lufs_i": -21.28,
+    "st_p95": -21.05,
+    "st_max": -21.04,
+    "true_peak_dbtp": -12.65
    },
    {
     "section": "e02-02-the-seance: 4 back: the room colour, V.O. 2, \"You kept them.\"",
     "start": 137.97,
     "end": 152.4,
-    "lufs_i": -20.42,
-    "st_p95": -18.01,
-    "st_max": -17.92,
-    "true_peak_dbtp": -9.2
+    "lufs_i": -19.79,
+    "st_p95": -17.74,
+    "st_max": -17.48,
+    "true_peak_dbtp": -8.67
    },
    {
     "section": "e02-02-the-seance: 5 F2.3: the chamber tier, the Launch on horns, the Door",
     "start": 152.4,
     "end": 173.81,
-    "lufs_i": -22.42,
-    "st_p95": -18.45,
-    "st_max": -18.37,
-    "true_peak_dbtp": -7.23
+    "lufs_i": -22.46,
+    "st_p95": -18.74,
+    "st_max": -18.67,
+    "true_peak_dbtp": -7.62
    },
    {
     "section": "e02-02-the-seance: 6 back: \"You sat at the back.\", the fanfare one note short, the last chord",
     "start": 173.81,
     "end": 193.0,
-    "lufs_i": -19.4,
-    "st_p95": -17.5,
-    "st_max": -17.22,
-    "true_peak_dbtp": -8.73
+    "lufs_i": -18.47,
+    "st_p95": -16.12,
+    "st_max": -16.02,
+    "true_peak_dbtp": -6.35
    },
    {
     "section": "e02-03-procedure-march: PROCEDURE: the low strings, the pulse and taps; thin to the pedal under the reading",
     "start": 192.75,
     "end": 215.25,
-    "lufs_i": -21.29,
-    "st_p95": -20.32,
-    "st_max": -20.26,
-    "true_peak_dbtp": -7.89
+    "lufs_i": -21.36,
+    "st_p95": -20.49,
+    "st_max": -20.44,
+    "true_peak_dbtp": -8.57
    },
    {
     "section": "e02-03-procedure-march: he sits: a step warmer; the warm half-second; F7sus(b9) under the invite, rung out",
     "start": 215.25,
     "end": 226.6,
-    "lufs_i": -20.38,
-    "st_p95": -18.54,
-    "st_max": -18.52,
-    "true_peak_dbtp": -6.99
+    "lufs_i": -20.33,
+    "st_p95": -18.44,
+    "st_max": -18.43,
+    "true_peak_dbtp": -6.93
    },
    {
     "section": "e02-04-long-form: E02-04: the podcast-intro sting",

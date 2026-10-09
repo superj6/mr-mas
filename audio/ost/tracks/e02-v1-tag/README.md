@@ -33,8 +33,8 @@ The mood map:
 |---|---|
 | `render/music-el.wav` | **37.000 s, 1,776,000 samples (888 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored |
 | Level | −19.95 LUFS-I; true peak −3.15 dBTP; short-term p95 −17.11, max −16.57 |
-| `check.py` (the v35check copy) | `tag 888 f 37.000 s exact=True −19.95 LUFS-I −3.15 dBTP \| silence 0 holes 0 frag 0 \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| PASS` (all six segments PASS) |
-| Engine QA | F-major OK, written and spectral (worst raw A/F 0.254, sieved 0.178: partials of written notes, under the 0.08 limit once sieved). Rule 12 OK: no A-natural is written anywhere. Knee whole 0, completions 0. Every hit mark has an onset within 10 ms (6/6, worst 5.5 ms). The verdict's no-third window: A 0.008, A♭ 0.0 (limit 0.06). The sub under the dark room's hum −20.4 dB (limit −18), from the kick. 2–6 kHz −20.8 dB (limit −15); centroid 547 Hz. The V.O. window −22.9 LUFS (P01's −24 ±2). No warnings |
+| `check.py` (with the review's new checks) | `tag 888 f 37.000 s exact=True lock=True −19.95 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 1) \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 11.9 min 11.9 fail 0 exempt 0 \| PASS` (all six segments PASS). The −42 dBFS scan counts the head's first 0.3 s as Act Four's ring-out, which the mix lays there |
+| Engine QA | F-major OK, written and spectral (worst raw A/F 0.254, sieved 0.178: partials of written notes, under the 0.08 limit once sieved). Rule 12 OK: no A-natural is written anywhere. Knee whole 0, completions 0. Every hit mark has an onset within 10 ms (6/6, worst 5.5 ms). The verdict's no-third window: A 0.008, A♭ 0.0 (limit 0.06). The sub under the dark room's hum −20.4 dB (limit −18), from the kick. 2–6 kHz −20.8 dB (limit −15); centroid 547 Hz. The V.O. window −24.5 LUFS (P01's −24 ±2). No warnings |
 | Music runs | **one:** 0.05 → 37.0 (the bowed fifth's first 50 ms hop is under −60 dBFS, while Act Four's ring-out is still sounding over the seam). No digital silence, no hole, no fragment |
 | `cues-el.json` | the cue sheet: the window, every sync mark, the events, the chord changes against their cuts, the designed hits, the record on screen, the sections, the rides, the measurements and the engine QA. It names the timeline it was laid to (`mix_episode.py` and `stems.py` use a score only on its own lock) |
 
@@ -61,7 +61,7 @@ EL seconds, on the segment's own clock (0 = the tag's first frame). **One grid:*
 | **17.938** | **THE VERDICT: F5** on soft vibes and a struck glass, 0.65 s after the chime (the eighth nearest a beat). The pad resolves C7sus → **the open fifth F** (F3 C4 G4, no third). **Designed hit** | "The Orb's F chime, then its verdict a beat later (F → C on vibes and glass)" (OST §2.4: never at the moment of its chime). The post's iv, the scan's V and the verdict's I form a cadence that lands on the machine's answer: the satisfaction |
 | 18.562 | **C6**, a beat later, let ring. The no-third window (18.46–19.95) measures A 0.008, A♭ 0.0 | "No third, ever" |
 | 19.500 | **THE RUN again**, F m9, on the bar, 0.42 s before the cut to Mas at the monitor; **the violins' pizzicato join** (the arpeggio an octave down: a layer) | Back to his business. The run restarts on a downbeat (call 8) |
-| 20.46 → 22.36 | **V.O. 14 "sixty elections this year." inside the bed:** a −4.5 dB ride; the felt takes F where it had A♭; the xylophone rests; the chip is at 60 %. −22.9 LUFS in the window | "No sting or swell under V.O.; the V.O. sits inside the bed" (OST rule 10). Nothing starts on his words but the engine's own sixteenths |
+| 20.46 → 22.36 | **V.O. 14 "sixty elections this year." inside the bed:** a −4.5 dB ride; the felt takes F where it had A♭; the xylophone rests; **the Build's chip arpeggio is out** (from 0.12 s before his first word to the sixteenth after his last: the felt ostinato and the pizzicato carry the engine). −24.5 LUFS in the window | "No sting or swell under V.O.; the V.O. sits inside the bed"; OST rule 10, melody out under the V.O.: the score review measured the co-lead at 60 % under his words (13.0 dB of 1–4 kHz room after the duck, about 3.8 before it). Now 14.2 over the line, 11.9 at its onset. Nothing starts on his words but the engine's own pulse |
 | **22.625** | **THE KNEE STAB, item 3: F7sus, and THE RUN's stop**, on the beat, 0.25 s before the cut to the Aug 21 interview. **Designed hit** | "AUG 21". P07: "end on a stop" |
 | 22.63 → 27.63 | **THE RUN's pedal: the open fifth F** (F3 + C4, sul tasto, no third) under the lower third (24.28–27.43). The neutral text blip (the SFX's) carries his words. **Nothing starts under the lower third.** −27.3 LUFS-M at most, 11.4 dB under THE RUN with Mas | "THE RUN thins to its pedal; the neutral text blip carries his words" (D-70). His real words about AI fakes of himself get no fear cue and no melody. The pedal is the room's own F, so the music recedes into his room |
 | **27.625** | **RUMPT's Podium, FEAR** (MM-19's): the cup-muted trombone's Podium in E♭ minor at half-time, **on the beat, 0.12 s after the cut to the balloon**. The band waited for his words to clear (the lower third ends 27.425; OST §2.10: "the band waits for his real words"). Muted horns, pp (E♭m; C♭/E♭ under the B♭); **tremolo low strings** (cello E♭3, viola B♭3, pp → p). F a whole step down to RUMPT's E♭ minor. **Designed hit.** −20.5 LUFS, 3.5 dB under THE RUN | "RUMPT's Podium in its FEAR colour … under the balloon only" (D-70). It scores our invented, wordless business, never his words |
@@ -136,7 +136,7 @@ On the re-timed copies: THE RUN 0.04 s before its cut (a) and on it (b); the ver
   - the docket's caption: only THE RUN's first downbeat, 0.08 s before its cut (call 2);
   - his post: only the soft hats (17) and the cello's pizzicato (4);
   - the lower third: nothing;
-  - the V.O.: the engine's own pulse (felt, pizzicato, kit, chip, wood), softened; no new layer starts there.
+  - the V.O.: the engine's own pulse (felt, pizzicato, kit, wood), softened, the chip arpeggio out (the score review); no new layer starts there.
 
 ## Judgement calls (rules bent on purpose, one line each)
 
@@ -152,6 +152,7 @@ On the re-timed copies: THE RUN 0.04 s before its cut (a) and on it (b); the ver
 10. **Under the V.O., the felt's ostinato takes F where it had A♭, and the xylophone rests.** In render 2, the chip's short A♭4 sixteenths spread into the A band in a window where F carried only 6 % of the energy (sieved A/F 0.103, over the 0.08 limit).
 11. **The felt's ostinato has its own track (`felt_ost`)**, with its body's A-ish resonances notched (−9 dB at 112 and 217.5 Hz, −5 at 428 Hz). In render 1 they read as A over the F m9 bass (sieved 0.157), and `felt_post` lifts 220 Hz by 2 dB.
 12. **The head's felt fifth enters a beat in (0.75), not on the first frame.** In render 4, struck at 0.02, it was the pedal section's loudest moment, on top of the Door's held G.
+13. **The chip co-lead rests for V.O. 14** (about 2 s of THE RUN's 15.8 s). P07 makes the chip the co-lead; OST rule 10 takes the melody out under the V.O., and the rule wins there (the score review). It returns on the sixteenth after his last word, so the third stab lands on a running engine.
 
 ## For the other passes
 
@@ -224,8 +225,8 @@ A render takes 13–21 s through `heavy.sh` [M], with other projects holding the
   - 12: no A-natural anywhere [M].
 - **Guardrails:** RUMPT's real words (the faithful Aug 21 crop) play over THE RUN's neutral pedal, never under the FEAR cue. FEAR scores only the invented, wordless balloon (D-70), and no motif comments on his words or his claim [J]. Nole's refiled suit plays under the pedal with no V.O. and no sting (W8) [J].
 - **R10:** every render went through `heavy.sh` with `OST_WORKERS=2` and `MRMAS_MAX_LOAD=40`, one at a time (free memory 15 GB, so the default 8 G cap) [M].
-- **R1:** Ep1 untouched. Only `audio/ost/tracks/e02-v1-tag/` was written. Ep1's tracks, `e02-v1-common`, `mm19-renamed-it` and Act Four's track were read, never edited.
+- **R1:** Ep1 untouched. The score pass wrote only `audio/ost/tracks/e02-v1-tag/`; the review's fixes also touched Ep2's `e02-v1-common` (the lock hash, the per-line pocket) and `audio/reel/ep02-v1/mix_episode.py` (the pre-laps). Ep1's tracks, `mm19-renamed-it` and Act Four's track were read, never edited.
 - **R8:** nothing heard.
-- **Broken on purpose:** the twelve calls above.
+- **Broken on purpose:** the thirteen calls above.
 
 **Resource ask (R16, non-blocking):** one human listen of the nine points above, ears 2, 5 and 8 most of all. Whether THE RUN reads as the show's own and not corporate, whether the verdict lands as satisfaction, and whether FEAR is hushed and not horror-movie, are an ear's calls.

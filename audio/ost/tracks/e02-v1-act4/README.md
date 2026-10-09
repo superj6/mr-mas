@@ -18,7 +18,7 @@ E02-11b and E02-11c are layers of E02-11's one performance, on its grid. They ar
 - **The scenes and the mood map:** [proposal.md](../../../../show/episodes/ep02/production/v1/proposal.md) sc 18–22, "The feeling curve" and "The seams".
 - **The script's MUSIC lines** (script-v1.md sc 18–22), **the beat plan's J and L cuts** (17.21 J 1.2, 18.15 J 0.8, 19.06 L 0.8, 19.20 L 0.6, 20.05 J 0.8, 20.10 J 1.0, 22.09 J 1.0) and **the lock's music runs** (`track.py --dry --el`).
 - **The notes from the earlier segments:**
-  - Act Three ends on the DREAD sting at 318.217 and writes no ring-out. The black's J 1.2 s (the beacon's motor and the quartet's first pizzicato) is this act's to write, as `render/music-el-prelap.wav`, because `mix_episode.py` lays no pre-lap.
+  - Act Three ends on the DREAD sting at 318.217 and writes no ring-out. The black's J 1.2 s (the beacon's motor and the quartet's first pizzicato) is this act's to write, as `render/music-el-prelap.wav`; since the score review `mix_episode.py` lays it on Act Three's score bus.
   - The act-outs so far: THE COPY ringing into black (Act One), a stop mid-phrase (Act Two), DREAD (Act Three). Act Four uses a fourth kind: **the Door's ♯4 left open, ringing over the match cut into the tag** (`render/music-el-ringout.wav`).
   - The engine normalises each cue to its `underscore_lufs`, so the sections are shaped with the macro fader rides (Act Three's `ride_macro`, copied).
   - The cello's pizzicato bodies (A2, A3) are notched on a copy of `vc`; the brass `*_stac` samples get `latency_ms` 11.
@@ -41,13 +41,21 @@ The mood map, in order:
 | `render/music-el.wav` | **319.000 s, 15,312,000 samples (7,656 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored |
 | `render/music-el-prelap.wav` | **1.200 s**: Act Three's black, its last 1.2 s (318.8 → 320.0 on Act Three's clock). The quartet's first pizzicato sounds at −1.042 s. It runs straight into `music-el.wav`'s first sample. Peak −12.2 dBFS. See "For the other passes" |
 | `render/music-el-ringout.wav` | **2.600 s**: E02-12 past the act's last frame (the flute's held G4 and the D♭ fifth's release), a cos^1.5 fade. The act's last 5 ms are not faded, so it runs straight on from the stem's last sample. Peak −10.9 dBFS |
-| Level | −20.22 LUFS-I; true peak −3.62 dBTP; short-term p95 −17.92, max −16.61 |
-| `check.py` (the v35check copy) | `act4 7656 f 319.000 s exact=True −20.22 LUFS-I −3.62 dBTP \| silence 0 holes 0 frag 0 \| 12 dB steps 1 unmarked 0 \| F-major True rule12 True knee 0/0 \| PASS` |
+| Level | −20.22 LUFS-I; true peak −3.60 dBTP; short-term p95 −17.91, max −16.59 |
+| `check.py` (with the review's new checks) | `act4 7656 f 319.000 s exact=True lock=True −20.22 LUFS-I −3.60 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 3) \| 12 dB steps 1 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 16.4 min 12.4 fail 0 exempt 0 \| PASS` |
 | Engine QA, every cue | F-major OK, written and spectral (E02-11's worst raw A/F 0.59 is explained: partials of written notes, the dyad's D5 and the bass's F). Rule 12 OK: no A-natural is written anywhere. Knee whole 0, completions 0. Every hit mark has an onset within 10 ms (3/3, worst 3.0 ms). The sub under the lobby's morning (`server_hum` stand-in) reads −49.7 dB against a −18 limit. No warnings left |
 | Music runs | **three, by design:** 0 → 267.3 (E02-11), 282.95 → 307.4 and 312.95 → 319.0 (E02-12). The two gaps are the plan's two designed silences, marked in `silences_designed`. No unmarked digital silence, no hole under −60 dBFS, no fragment |
 | `cues-el.json` | the cue sheet: each layer's window, sync marks and events, the designed hits, the designed silences, `claims_sfx`, the sections, the record on screen, the pre-lap's and ring-out's entries, the measurements and the engine QA. It names the timeline it was laid to |
 
 The Kokoro lock (`show/reel/ep02-v1/`) was not rendered, because the film is the EL lock.
+
+## The score review's fixes (2026-10-09)
+
+| Finding | What changed | Result [M] |
+|---|---|---|
+| **E02-12 opened on A♭4, described as "the Door's missing first note, given by his own piano"**: the stated intent supplies the absence the leitmotif rule protects in Ep2 (first note missing until Ep11) | the lot's first felt note is **E♭4**, the D♭ fifth's 9th (open, no third), and the walk-up's note **B♭3** (a fourth down: quartal, still); no A♭ in the lot's first phrase. The descent still reaches A♭3 at the very end, under his back crossing the lot, an octave below and never at the Door's head (the flute's Door keeps its first note missing) | judgement call 12 rewritten |
+| **Three picture times were estimates in the code alone** (S5) | **the lot** = 22.01 + the beat plan's own `arrive.s` (2.0 s, "the white and the falling pin"), which the picture draws its arrival to; **the quartet's end** = the lock's `sticky_flutter` (20.09: the note flutters down once the complaint has gone; was `rope_haul` + 1.0 s), so the pedal lifts on a lock sound; **his hand lowers** at 22.08 + 2.0 s (frame 48 of the shot), now written into the beat plan's 22.08 picture note, which the picture draws from | all three in `cues-el.json` → `picture_sync` (seconds and frames); the times are unchanged except the quartet's pedal lift (265.6, was 265.1) |
+| **The pre-lap was never laid** (seam 20: Act Four opened mid-texture at −15.6 LUFS-M after the DREAD's air, a +15 LU step on a hard act break) | `mix_episode.py` lays `music-el-prelap.wav` on Act Three's score bus from 318.8, at this act's head gain, and this act's head fade is off | on the score bus: Act Three's last 400 ms and this act's first 400 ms read −21.3 and −15.5 LUFS-M (was −33.9 and −15.6), a sample jump of 0.003 |
 
 ## What plays (the cue sheet)
 
@@ -132,14 +140,14 @@ P01 DARK ROOM, sparse: one felt note a phrase (pedal down) over a sul-tasto D♭
 
 | s | What plays | Why |
 |---|---|---|
-| 283.000 | **the first felt note, A♭4, alone in the sky** (22.01 + 2.0 s: the pin falls at 281.43, the 2 s arrival); the D♭ fifth begins under it, 3 s attacks. −25.1 LUFS | "Room tone only, then the first piano note as the lot appears." A♭ is the Door's missing first note, given by his own piano: a hint, not a completion (judgement call 12) |
-| 288.0, 293.0 | the felt's E♭4 (he walks up, never running), D♭4 (the Orb scans and toasts nothing) | One note a phrase |
+| 283.000 | **the first felt note, E♭4, alone in the sky** (22.01 + the plan's 2.0 s arrival: the pin falls at 281.43); the D♭ fifth begins under it, 3 s attacks. −25.1 LUFS | "Room tone only, then the first piano note as the lot appears." The D♭ fifth's 9th: open, no third, and no A♭ (judgement call 12) |
+| 288.0, 293.0 | the felt's B♭3 (he walks up, never running: a fourth down), D♭4 (the Orb scans and toasts nothing) | One note a phrase |
 | 295.500 | **THE DOOR, its first note missing:** D♭5 (2 beats), C5, then **G4 held** (the ♯4), under the band's `Use flyer on door` (295.0–299.2). −16.5 LUFS-M | The Door "through the door" under the game's verb for it |
 | 300.5 | the felt's C4: the flyer out of his jacket, unfolded | |
 | 302.149 | **the GPU choir swells in on the flap's lift** (D♭3 A♭3 E♭4 G4 C5, choir aahs + reed organ, ppp, full by the glimpse at 303.58); **the Door's held G becomes the choir's G**. −20.3 LUFS | "The GPU choir under the glimpse." Alyi at work, absorbed, never looking up. Nothing gives a reason |
 | **307.388** | **THE DESIGNED STOP:** every voice and tail to zero 0.02 s before `mail_flap_spring_shut` (307.408) | "The flap's shutting plays in room tone only (the designed stop)." Marked in `silences_designed` |
 | 307.39 → 313.0 | room tone only: Mas at the shut flap; he raises a hand to knock | |
-| **313.000** | **the return as his raised hand lowers** (22.08 + three beats: the rise, the two-beat hold, the lowering): the felt's B♭3, a chip triangle doubling it 10 dB under, the D♭ fifth back with 1.2 s silent attacks | "The cue returns as his raised hand lowers." A soft entry (S9) |
+| **313.000** | **the return as his raised hand lowers** (22.08 + 2.0 s, frame 48 of the shot: up by its first beat, held two, lowering; the plan's 22.08 note now says so): the felt's B♭3, a chip triangle doubling it 10 dB under, the D♭ fifth back with 1.2 s silent attacks | "The cue returns as his raised hand lowers." A soft entry (S9) |
 | 314.250 | **THE DOOR again**, its first note missing: D♭5, C5 (315.5), **G4 held from 316.125 across the walk and over the cut**; the felt's A♭3 (315.5). −16.6 LUFS-M | "The Door resolves with no cadence across the walk (it cadences only in Ep11)" |
 | 318.0 → 319.0 | the Door's last bar; the dark room's drone fades up under it (22.09 J 1.0 s, the stems') | |
 | 319.0 → 321.6 | **the out: the G rings on into the tag** (`render/music-el-ringout.wav`), with the D♭ fifth's release | The act-out: the open ♯4, unresolved, over the match cut (his back on the lot → his back at the desk). A different out from the three before it |
@@ -210,23 +218,23 @@ Both re-laid every mark to the moved events: the grid on the garden's phrase, th
 | E02-11 J1 the gate: the cello's C | 221.1 → 229.0 | −21.1 | −9.5 |
 | E02-11 J2 zAI: the 808, the fanfare, his post | 229.0 → 246.2 | −19.5 | −4.4 |
 | E02-11 J3 the padlock; the pedal | 246.2 → 249.6 | −19.7 | −10.4 |
-| E02-11 K the morning; V.O. 13; the last pizzicato | 249.6 → 266.8 | −21.0 | −8.3 |
-| E02-12 1 the lot; the walk-up | 283.0 → 295.5 | −25.1 | −10.7 |
-| E02-12 2 the Door under the verb | 295.5 → 302.1 | −19.7 | −7.2 |
-| E02-12 3 the glimpse: the choir | 302.1 → 307.4 | −20.3 | −9.4 |
-| E02-12 5 the return; the walk: the Door | 313.0 → 319.0 | −20.8 | −7.1 |
-| **whole stem** | 0 → 319.0 | **−20.22** | **−3.62** |
+| E02-11 K the morning; V.O. 13; the last pizzicato | 249.6 → 266.8 | −21.3 | −8.5 |
+| E02-12 1 the lot; the walk-up | 283.0 → 295.5 | −25.1 | −10.1 |
+| E02-12 2 the Door under the verb | 295.5 → 302.1 | −19.6 | −7.1 |
+| E02-12 3 the glimpse: the choir | 302.1 → 307.4 | −20.2 | −9.3 |
+| E02-12 5 the return; the walk: the Door | 313.0 → 319.0 | −20.7 | −7.0 |
+| **whole stem** | 0 → 319.0 | **−20.22** | **−3.60** |
 
 - **Engine masters (underscore):** E02-11 −20.5, E02-11b −24.0, E02-11c −21.0, E02-12 −21.5 (each within 0.03 of its target).
 - **Balance, piano · orch · big band · chip** (the engine's gated metric; rhythm excluded):
   - E02-11: 0 · 81 · 11 · 8 (the big band is the Launch's 0.6 s in its section);
   - E02-11b: 42 · 58 · 0 · 0 (diegetic: ELPPA's);
   - E02-11c: 0 · 0 · 0 · 100 (the sample-chip);
-  - E02-12: 21 · 76 · 0 · 3.
+  - E02-12: 20 · 77 · 0 · 3.
 - **Feel [M]:** E02-11's eighths are straight (the off-beats measure 7.5 frames: LEVERAGE, the machine's time); E02-11c's are swung (10 frames: the people, his past).
-- **Momentary peaks (LUFS-M)** [M]: the lighthouse −14.2; Neleh's pedal −17.2; the committee −14.4; Mario −15.6; the chill −21.2; the lobby −16.2; his post −18.2; the call −18.3; F2.1 −14.7; the garden −13.1; one violin −19.2; the gate −16.8; zAI −14.4; the fanfare −14.4; the morning −18.5; the last pizzicato −17.8; the lot −18.8; the Door −16.5; the glimpse −19.0; the return and the walk −16.6.
+- **Momentary peaks (LUFS-M)** [M]: the lighthouse −14.2; Neleh's pedal −17.2; the committee −14.4; Mario −15.6; the chill −21.2; the lobby −16.2; his post −18.2; the call −18.3; F2.1 −14.7; the garden −13.1; one violin −19.2; the gate −16.8; zAI −14.4; the fanfare −14.4; the morning −19.1; the last pizzicato −17.8; the lot −21.4; the Door −16.5; the glimpse −19.0; the return and the walk −16.5.
 - **The V.O. windows** [M]: V.O. 11 −23.0 LUFS, V.O. 12 −22.2, V.O. 13 −22.7. The engine's guide is −24 ± 2.
-- **The dialogue pocket** [M]: the 2–6 kHz band reads −18.9 dB (E02-11), −22.7 (E02-11b), −32.1 (E02-11c), −30.3 (E02-12). The guide is ≤ −15.
+- **The dialogue pocket** [M]: the engine's 2–6 kHz band reads −18.9 dB (E02-11), −22.7 (E02-11b), −32.1 (E02-11c), −30.2 (E02-12); the guide is ≤ −15. Per line in 1–4 kHz after the mix's duck (`e02-v1-common/pocket.py`): every one of the act's 38 lines has at least **+12.4 dB** at its onset (10th percentile +16.4; before the duck +7.4).
 - **The mix's duck:** by mood, E02-11 9 dB and E02-12 7 under speech (`mix_episode.py`'s table). No `duck_db` override is asked for.
 - **The cut check** [M]: one step of 12 dB or more, at 20.10 (267.0, −14.0 dB), inside the marked silence: the dark room's room tone after the last pizzicato.
 - **Mood shares by scored time** (297.8 s) [J]:
@@ -237,7 +245,7 @@ Both re-laid every mark to the moved events: the grid on the garden's phrase, th
   | warm, nostalgic, quiet, sincere | his post's pedal; F2.1 and LAST UPDATED; one violin and the gate; the morning; E02-12 | about 34 % |
   | intrigue, tension, dread | the lighthouse and the committee (LEVERAGE); Neleh's pedal; the chill; zAI | about 29 % |
 
-  Suspense stays a minority (S2).
+  Suspense stays a minority (S2). Across the episode it is about 15 % against the plan's "about a third": an open question for the showrunner's proxy (manifest.md §6).
 
 ## Judgement calls (rules bent on purpose, one line each)
 
@@ -252,10 +260,10 @@ Both re-laid every mark to the moved events: the grid on the garden's phrase, th
 9. **The young Water Line is split by the ad's end card** (the record plays dry), and returns, settling, on the 2008 stage.
 10. **The pins' falling figure lands on the SFX's ticks.** The plan asks for exactly this ("each grey pin a step dimmer on the sample-chip's falling figure"). It is a figure on the record of his app, not a hit per object anywhere else.
 11. **F2.1's band has no F in its bass** (A♭, D♭, E♭). In render 3 an Fm9 bar read 0.09 A/F from the sample-chip upright's ~111 Hz grit, over the 0.08 limit.
-12. **E02-12's first felt note is A♭4, the Door's missing first note**, given by his own piano on the empty lot. The flute's Door keeps its first note missing and never cadences. It is a hint at what Ep11 completes, not a completion.
+12. **E02-12's first felt note is E♭4, not the Door's head.** The first version opened on A♭4 and called it "the Door's missing first note, given by his own piano"; the score review read that intent as supplying the absence the leitmotif rule protects until Ep11, so the lot's first phrase has no A♭ (E♭4, B♭3, D♭4, C4). The flute's Door keeps its first note missing and never cadences. The line's last note, A♭3 under his back crossing the lot, is the bottom of a falling line, an octave under the Door's register and never followed by its D♭.
 13. **The 808 drops out on the padlock as well as on "present."** The plan names only the first; the second is the same LEVERAGE gesture on Nole's own move (his phone locked away from him).
 14. **The last pizzicato is C3, not F**: the dominant, left open ("for now"). The suit comes back in the tag.
-15. **Three picture times are estimates, written into the lock-driven code** (the picture for Act Four is not drawn yet): the lot appears at 22.01 + 2.0 s; the complaint leaves frame at `rope_haul` + 1.0 s; his hand lowers at 22.08 + 3 beats (313.0). The picture pass should draw to these, or move them here.
+15. **Three picture times are shared numbers, not estimates** (the score review; the picture for Act Four is not drawn yet): the lot appears at 22.01 + the plan's `arrive.s` (2.0 s); the quartet's pedal lifts on the lock's `sticky_flutter`; his hand lowers 2.0 s into 22.08 (frame 48), written into the beat plan's 22.08 picture note. `cues-el.json` → `picture_sync` lists them with their frames. If the picture changes one, change the plan (and re-lock); the score re-lays from it.
 16. **The act's out is a ring-out** (the open ♯4 into the tag), a fourth kind after THE COPY, the stop and DREAD. OST P08 lists "a pre-lap" and "the kink" (an unresolved fragment); this is the Door's own unresolved end, carried over the match cut.
 17. **The bed thins under the call** to the cello and viola, and finally the cello alone. The plan's "the quartet alone under the keynote's walk-on bed" holds for the whole span; under the call, alone means thinner.
 
@@ -263,7 +271,7 @@ Both re-laid every mark to the moved events: the grid on the garden's phrase, th
 
 - **Mix:**
   - **The head.** `designed_hit` at 0.208 (the 808's first thud), so `mix_episode.py`'s head fade is 0.04 s, not 1.2. The quartet is already playing from the pre-lap.
-  - **The pre-lap (`render/music-el-prelap.wav`, 1.200 s).** It belongs under Act Three's black, from Act Three's 318.8 to its last sample (320.0); its first pizzicato sounds at Act Three's 318.958, 0.74 s after the DREAD sting (its air rings on underneath). It runs straight into `music-el.wav`'s first sample. `mix_episode.py` lays no pre-lap today, so a mix pass must lay this onto Act Three's score bus explicitly, at Act Four's score gain. Its entry is recorded in `cues-el.json` → `prelap`.
+  - **The pre-lap (`render/music-el-prelap.wav`, 1.200 s).** It belongs under Act Three's black, from Act Three's 318.8 to its last sample (320.0); its first pizzicato sounds at Act Three's 318.958, 0.74 s after the DREAD sting (its air rings on underneath). It runs straight into `music-el.wav`'s first sample. **`mix_episode.py` lays it on Act Three's score bus** (`score_bus`: the next chapter's pre-lap, ending on Act Three's last sample, at this act's head gain), and this act's head fade is off. Its entry is recorded in `cues-el.json` → `prelap`.
   - **The ring-out (`render/music-el-ringout.wav`, 2.600 s).** `mix_episode.py` already lays a previous chapter's `music-el-ringout.wav` at the next chapter's head and crossfades it out over 2.5 s from that chapter's own score entry. So the tag's head carries the Door's G for up to 2.6 s, under the dark room's drone. The act's last 5 ms are not faded, so the seam is continuous.
   - **The designed silences** (266.35–282.98, 307.39–313.0) are digital zero in the stem; the stems keep the room tone under both.
 - **SFX:** the score claims one sound the SFX board doesn't have (`claims_sfx`; `stems.py` reads it): `20.02:nole_fanfare_short` (Nole's Launch, tuned to the C pedal). The score leaves room for, and never doubles:
@@ -273,7 +281,7 @@ Both re-laid every mark to the moved events: the grid on the garden's phrase, th
   - `mail_flap_spring_shut` (22.06): the designed stop. The music is at zero from 0.02 s before it to the return, so the flap plays in room tone only;
   - `lanyard_drop` ×2, `tv_click_off`, `lamp_click` ×2, `lock_big_turn`, `render_front_sweep` (F4 → F6: the band enters on the quartet's A♭ chord under it), `rope_haul`, `pin_fall`, the chip blips, the cheer, the laugh, the buzzing: none gets a hit.
   - The keynote's walk-on bed is the score's (E02-11b), not an SFX.
-- **Picture:** judgement call 15's three times. The lanyards' drop should stay on the shared beat (33.958). The return in sc 22 assumes the plan's "the raised hand held 2 beats".
+- **Picture:** judgement call 15's three times (`cues-el.json` → `picture_sync`): the lot's arrival at the plan's 2.0 s (frame 6,792 of the act), the quartet's end on `sticky_flutter` (6,374), his hand lowering 2.0 s into 22.08 (frame 48 of the shot; 7,512 of the act), as the plan's 22.08 note now says. The lanyards' drop should stay on the shared beat (33.958).
 - **The tag's composer:** the ring-out (the flute's G4 and the D♭ fifth releasing) crossfades out under your score's entry; it needs nothing from you. The act-outs so far: THE COPY, a stop mid-phrase, DREAD, and now the open ♯4 ring-out. The tag's plan ("cut on the downbeat to black") is a fifth kind.
 - **The engine (`e02-v1-common/`, not edited):** findings for the other segments:
   - The cello pizzicato carries a fixed body resonance at 109.9 Hz that Act Three's 111.3 Hz notch misses over an F bass (render 1: sieved A/F 0.57). This track adds `('peq', 109.9, -12, 16)` to its `vc` copy.
@@ -320,7 +328,7 @@ E02-11b and E02-11c read E02-11's events (its grid, its cycle, its pedal times),
 12. **246.2 s:** the 808's drop on the padlock; the buzzing gets nothing.
 13. **249.6–266 s:** the morning pedal under V.O. 13; the last pizzicato on (FOR NOW) is a smile, not a stinger.
 14. **266.4–283 s:** the silence under Alyi's post and the white is room tone, and it holds.
-15. **283–307 s:** the felt notes are sparse and still, never a sad-piano cliché; the Door under the verb is longing, not a hymn; the choir under the glimpse is a held breath.
+15. **283–307 s:** the felt notes are sparse and still, never a sad-piano cliché; the first, E♭, reads as the open sky, not as the Door's head; the Door under the verb is longing, not a hymn; the choir under the glimpse is a held breath.
 16. **307.4 s:** the stop on the flap lands; the return at 313 is soft.
 17. **314–321.6 s:** the Door's G left open over the cut into the tag.
 
@@ -352,7 +360,7 @@ E02-11b and E02-11c read E02-11's events (its grid, its cycle, its pedal times),
   - 12: no A-natural anywhere [M].
 - **Guardrails:** no music gives Alyi a reason (W8): his post plays under room tone only; at the glimpse the choir holds (no sting, no cadence), and the Door never cadences [J]. Neleh's account and the board's reply play over the same held pedal: neither is scored as the truth [J]. Nole's post plays dry; his motif sounds on his own lamp [J].
 - **R10:** every render went through `heavy.sh` with `OST_WORKERS=2`, `MRMAS_MAX_LOAD=40` and `MRMAS_HEAVY_MEM_MAX=6G`, one at a time [M].
-- **R1:** Ep1 untouched. Only `audio/ost/tracks/e02-v1-act4/` was written. Ep1's tracks and `e02-v1-common` were read, never edited.
+- **R1:** Ep1 untouched. The score pass wrote only `audio/ost/tracks/e02-v1-act4/`; the review's fixes also wrote one sentence into the beat plan's 22.08 picture note (the hand's timing, no timing change to the lock), Ep2's `e02-v1-common` (the lock hash, the per-line pocket) and `audio/reel/ep02-v1/mix_episode.py` (the pre-laps). Ep1's tracks were read, never edited.
 - **R8:** nothing heard.
 - **Broken on purpose:** the seventeen calls above.
 
