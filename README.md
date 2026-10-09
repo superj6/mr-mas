@@ -113,7 +113,7 @@ Ep1 is locked, but its pipeline is the model for the next episodes. `ops/rebuild
 
 1. Read [`show/production/SHOWRUNNER-NOTES.md`](show/production/SHOWRUNNER-NOTES.md) (the showrunner's standing notes), the bible ([`show/bible/`](show/bible/), especially `guardrails.md`, `pov-and-framing.md` and `ml-concepts.md`), and the episode's folder, starting with [`show/episodes/ep02/outline.md`](show/episodes/ep02/outline.md).
 2. Follow Ep1's production as the template: [`full-v3/PLAN.md`](show/episodes/ep01/production/full-v3/PLAN.md) and [`pipeline.md`](show/episodes/ep01/production/full-v3/pipeline.md), and the lessons in its `version-ledger.md`.
-3. Put the new work where [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 says ("Starting a new episode"): `show/episodes/ep02/production/<cut>/`, `studio/src/episodes/ep02/`, `out/ep02/<cut>/`, `audio/ep02/` and `audio/ost/tracks/e02-<cut>-<seg>/`. Copy Ep1's tools rather than editing them.
+3. Put the new work where [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 says ("Starting a new episode"): `show/episodes/ep02/production/<cut>/`, `studio/src/episodes/ep02/`, `out/ep02/<cut>/`, `audio/ep02/` and `audio/ost/tracks/e02-<cut>-<seg>/`. Copy Ep1's tools rather than editing them. Ep2's copies are built (2026-10-08): [`show/episodes/ep02/production/v1/pipeline.md`](show/episodes/ep02/production/v1/pipeline.md) has every stage, per act and per scene (`ops/rebuild-act.sh --ep 2 <act> [--scene ID]`).
 4. Add the episode to [EPISODES.md](EPISODES.md) when it's published.
 
 ## Re-rendering

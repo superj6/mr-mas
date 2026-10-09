@@ -68,6 +68,7 @@ audio/ost/tracks/*/render/**/*.flac
 audio/ost/tracks/*/render/**/*.mp3
 # Dialogue takes (TTS WAVs; MP3 previews stay tracked) and mixes/premixes under out/
 audio/ep01/**/*.wav
+audio/ep02/**/*.wav
 out/**/*.wav
 # Derived web copies for the review page (sources live elsewhere in out/)
 out/review/*.mp4

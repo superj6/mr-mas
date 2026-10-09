@@ -1,0 +1,177 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep02",
+  "seg": "card",
+  "label": "CARD",
+  "timeline": "studio/src/episodes/ep02/pixel/card/timeline.json",
+  "takes": [],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "00:00:00",
+  "ep_in_frames": 0,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 1,
+  "beats": 1,
+  "frames": 48,
+  "seconds": 2.0,
+  "length": "0:02.00",
+  "episode_in": "00:00:00",
+  "episode_out": "00:02:00",
+  "verdicts": {
+   "-": 1
+  },
+  "mean_s": 2.0,
+  "median_s": 2.0,
+  "min_s": 2.0,
+  "max_s": 2.0,
+  "lines": 0,
+  "posts": 0,
+  "vo": 0,
+  "lines_with_mouth": 0,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": null,
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "segment length = the stick's act_seconds",
+   "ok": true,
+   "detail": "48 f vs act_seconds 2.0 s"
+  },
+  {
+   "check": "scenes tile the segment",
+   "ok": true,
+   "detail": "1 scenes: card(48f)"
+  },
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "1 shots from 1 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 48"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 0; other: 0"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "CARD",
+   "side": "",
+   "place": "",
+   "time": "",
+   "s": 0,
+   "e": 48,
+   "shots": [
+    "card.01"
+   ],
+   "chapter": "CARD",
+   "title": "",
+   "cue": "",
+   "frames": 48,
+   "tc_in": "00:00:00",
+   "tc_out": "00:02:00"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "card",
+   "s": 0,
+   "e": 48,
+   "shots": [
+    "card.01"
+   ],
+   "tc_in": "00:00:00",
+   "tc_out": "00:02:00"
+  }
+ ],
+ "shots": [
+  {
+   "id": "card.01",
+   "setup": "card.01",
+   "beats": [
+    "card.01"
+   ],
+   "s": 0,
+   "e": 48,
+   "onscreen": [],
+   "lines": [],
+   "seq": "CARD",
+   "scene": "card",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "CARD · the filename, typed on black",
+   "cls": "GFX",
+   "move": "cut",
+   "does": "Black. A cursor; the filename types on quickly, ep1.1_her.wav, and the cursor blinks after it. Nothing else.",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "card",
+   "set": "void",
+   "room": "card",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Black. A cursor; the filename types on quickly, ep1.1_her.wav, and the cursor blinks after it. Nothing else.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "card.01": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:00:00",
+   "tc_out": "00:02:00",
+   "frames": 48
+  }
+ ],
+ "lines": [],
+ "posts": [],
+ "rails": [],
+ "sound_marks": [],
+ "subs": [],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [],
+ "problems": []
+}

@@ -2,6 +2,7 @@
 # ops/rebuild-act.sh: rebuild ONE changed act of the Ep1 film end to end, in order, with the existing tools.
 #
 #   ops/rebuild-act.sh <act> [--from STEP] [--only STEP] [--dry-run]      act: coldopen act1 act2 act3 act4 tag
+#   ops/rebuild-act.sh --ep 2 <act> [--scene ID[,ID]] [...]               Ep2 v1: ops/rebuild-act-ep2.sh (per scene too)
 #   STEPS, in order:  lock  score  mix  picture  mux  film
 #     lock     the base (Kokoro) lock's timelines, the EL-timed lock of this act, its takes with mouth tracks and its
 #              picture lock (assembly/el-v35/), plus the tag's (its episode-in moves when an act changes length)
@@ -24,6 +25,17 @@
 # The lock version is LOCK (default v35). Written by the v3.5 finishing pass (assembly.md §Z) so the next episodes have
 # one command per changed act.
 REPO=${MRMAS_ROOT:-$(d=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd) || exit 1; while [ ! -e "$d/.mrmas-root" ]; do { [ "$d" = / ] || [ "$d" = . ]; } && { echo "MR. MAS: no .mrmas-root above ${BASH_SOURCE[0]}; set MRMAS_ROOT" >&2; exit 1; }; d=$(dirname "$d"); done; echo "$d")} || exit 1   # the project root (phase 1, docs/ORGANIZATION-PLAN.md §4)
+# --ep N (added 2026-10-08, the Ep2 pipeline pass): another episode's copy of this script, ops/rebuild-act-epN.sh, with
+# the same steps on that episode's tools (Ep2: per-scene targets too, --scene ID). With no --ep, or --ep 1, everything
+# below runs exactly as before: the arguments reach it unchanged, in order, without the --ep pair.
+_EP=1; _ARGS=()
+while [ $# -gt 0 ]; do if [ "$1" = --ep ]; then _EP=${2:?--ep needs an episode number}; shift 2; else _ARGS+=("$1"); shift; fi; done
+set -- "${_ARGS[@]+"${_ARGS[@]}"}"
+if [ "$((10#$_EP))" != 1 ]; then
+  _F=$REPO/ops/rebuild-act-ep$((10#$_EP)).sh
+  [ -f "$_F" ] || { echo "no $_F: an episode's rebuild script is ops/rebuild-act-epN.sh" >&2; exit 2; }
+  exec bash "$_F" "$@"
+fi
 set -euo pipefail
 ACT=${1:?usage: ops/rebuild-act.sh <act> [--from STEP] [--only STEP] [--dry-run]}; shift
 STEPS=(lock score mix picture mux film)

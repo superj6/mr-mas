@@ -1,0 +1,2658 @@
+{
+ "_about": "MR. MAS Ep2 v1 ElevenLabs cast: a COPY of Ep1's (audio/ep01/v3-el/cast-el.json, locked), the starting point for Ep2 (manifest.md §5: Ep1's picks carry over; each new role is auditioned 3-4 library voices and picked by measurement and a written reason, then added here). Every voice is a LIBRARY voice called by voice_id: no cloning, no voice design, no reference audio of anyone, no voice chosen to resemble a real person. cache_dir is Ep2's own (audio/ep02/v1-el/cache, git-ignored); cache_read lists caches only READ (Ep1's): a request identical to one Ep1 already paid for (voice, model, settings, text as sent, seed) is copied, not sent. engine_from_lock is dropped: a role cast on Kokoro (MARIO) keeps his Kokoro takes on every Ep2 lock. Ep1's own text follows: MR. MAS Ep1 ElevenLabs cast (track A4, pass v3-voices-el, 2026-09-27). Every voice is a LIBRARY voice (an ElevenLabs premade voice, or a shared Voice Library voice called by voice_id): no instant or professional cloning, no voice design, no reference audio of anyone. No voice was chosen for resembling a real person. The screen (tools/cast_el.py) removed every library voice whose name or description names or evokes a real person, a celebrity, an impression, a real assistant product, an accent or an age/health register before ranking. Picks are from the briefs in audio/voices/CASTING.md, cast_a4.py and the character files, by measurement: nobody has listened. Set A = every role's candidate A; set B = candidate B for the six principals (Mas, Gerg, Alyi, Rima, Neleh, Tasya) and A for everyone else.",
+ "model_default": "eleven_multilingual_v2",
+ "output_format": "mp3_44100_192",
+ "target_lufs": -18.0,
+ "cache_dir": "audio/ep02/v1-el/cache",
+ "model_note": "eleven_multilingual_v2 is the model for every role. eleven_v3 was tested and not used for this pass (see voices-el.md, 'Model'): on short single lines it ran fast and cut tails, and it has no speed control.",
+ "respell": {
+  "Gerg": "Gurg",
+  "Mas": "Moss",
+  "Alyi": "Al-yee",
+  "NopeAI": "Nope A.I.",
+  "v2": "V two",
+  "GNIB": "Guh-nib",
+  "CHATGTP": "Chat G-T-P",
+  "Yrral": "Yurrel",
+  "Ttemme": "Temmy",
+  "Tasya": "Tahs-yuh",
+  "Neleh": "Nell-eh",
+  "Nole": "Knoll",
+  "Macrosoft": "Mack-roh-soft",
+  "Manalt": "Man-alt",
+  "GTP-4": "G-T-P four",
+  "judgement": "judgment"
+ },
+ "respell_note": "names as the house lexicon (cast.json 'lexicon', naming.md §9) says them, respelled for the voice: Mas /mɑs/ -> 'Moss', Gerg /ɡɜɹɡ/ -> 'Gurg', Alyi /ˈælji/ -> 'Al-yee'. Only the text sent changes; lines JSON keep the script's text. Phase 2 (2026-09-27), chosen by a forced-choice ASR check (tools/pron_check.py; voices-el.md §9): Macrosoft -> 'Mack-roh-soft' (margin over 'Microsoft' +1.05; the plain spelling -7.71, 'Macro-soft' -5.88, Kokoro's IPA take -4.41, a 'Microsoft' control -16.34); Manalt -> 'Man-alt' (naming.md 'MAN-alt'; +1.13 over 'Menalt' etc., plain -1.78); GTP-4 -> 'G-T-P four' (the swap is the joke, as CHATGTP). respell_lines: a per-line fix, only where that take needed it: a5-29-01 'badge' -> 'badj' (+3.05 over 'batch'; the sample take -0.03, a new seed -0.40, a 'batch' control -6.05). respell_roles: where one voice needs its own spelling. mas-manalt (Giovanni): 'Gerg' -> 'Guhrg' (his 'Gurg' devoices to 'Kirk': 'Go to sleep, Gurg.' scored Kirk 13.8 over the name; 'Guhrg' puts the name 9.0 over Kirk and the plain ASR writes 'Gurg'; 'Ghurg', 'Gurrg' and 'Gerg' were still heard as Kirk); 'Noted' -> 'Noded' (the American flap; 'Noted.' was heard as 'Note it.' on three seeds, -0.37/-1.66/-1.31; 'Noded.' +1.89, heard 'Noted.'). v3-vo-23 (V.O., 'gerg never waits to be asked.'): 'Guhrg' was still heard as Kirk on three seeds (-6.19, -11.19, -5.52) and with a comma (-1.22); a soft lead-in '...Guhrg' +1.87 (the plain ASR writes 'Gorog': for an ear). v3-vo-21: a new seed (retake, bump 307), heard 'Gourg'. v3.1: 'judgement' -> 'judgment' (the v3.1 page's spelling of the staff letter; the same word and the lock's take stands, so the EL take does too).",
+ "names": [
+  "mas",
+  "manalt",
+  "gerg",
+  "mockbran",
+  "alyi",
+  "neleh",
+  "ttemme",
+  "yrral",
+  "nozama",
+  "macrosoft",
+  "nopeai",
+  "rima",
+  "terb",
+  "mada",
+  "mario",
+  "tasya",
+  "nole",
+  "nesnej",
+  "radnus",
+  "nirb",
+  "egap",
+  "sirrah",
+  "lahtnemulb",
+  "sucram",
+  "nedib",
+  "oigneb",
+  "remuhcs",
+  "elgoog",
+  "gnib",
+  "chatgtp",
+  "clod",
+  "misanthropic",
+  "rumpt"
+ ],
+ "labels": {
+  "MAS": "mas-manalt",
+  "MAS MANALT": "mas-manalt",
+  "MR. MAS": "mas-manalt",
+  "GERG": "gerg-mockbran",
+  "GERG MOCKBRAN": "gerg-mockbran",
+  "ALYI": "alyi",
+  "RIMA": "rima-tamuri",
+  "RIMA TAMURI": "rima-tamuri",
+  "MARIO": "mario",
+  "NOLE": "nole",
+  "NESNEJ": "nesnej",
+  "RUMPT": "rumpt",
+  "PRESIDENT RUMPT": "rumpt",
+  "DLANOD J. RUMPT": "rumpt",
+  "THE INTERN": "the-intern",
+  "THE ORB": "the-orb",
+  "NELEH": "neleh",
+  "MADA": "mada",
+  "TERB": "terb",
+  "TASYA": "tasya",
+  "TTEMME": "ttemme",
+  "ADELINA": "adelina",
+  "TILED EMPLOYEE": "tiled-employee",
+  "PANEL HOST": "panel-host",
+  "RADNUS": "radnus",
+  "NIRB": "nirb",
+  "EGAP": "egap",
+  "SYDNEY": "sydney",
+  "CHATGTP": "chatgtp",
+  "CLOD": "clod",
+  "OIGNEB": "oigneb",
+  "SIRRAH": "sirrah",
+  "PHOTOGRAPHER": "photographer",
+  "A WHITE HOUSE PHOTOGRAPHER": "photographer",
+  "NEDIB": "nedib",
+  "EOJ NEDIB": "nedib",
+  "PRESIDENT NEDIB": "nedib",
+  "LAHTNEMULB": "lahtnemulb",
+  "SUCRAM": "sucram",
+  "A SENATOR": "a-senator",
+  "REMUHCS": "remuhcs",
+  "LAHTNEMULB (THE CLONE)": "lahtnemulb-clone",
+  "THE CLONE": "lahtnemulb-clone",
+  "DEEPFAKE NEDIB": "deepfake-nedib",
+  "DEEPFAKE NEDIB #2": "deepfake-nedib-2",
+  "mas": "mas-manalt",
+  "gerg": "gerg-mockbran",
+  "rima": "rima-tamuri",
+  "staff": "tiled-employee",
+  "employee": "tiled-employee",
+  "mas-manalt": "mas-manalt",
+  "gerg-mockbran": "gerg-mockbran",
+  "rima-tamuri": "rima-tamuri",
+  "STAFF": "tiled-employee",
+  "EMPLOYEE": "tiled-employee",
+  "host": "panel-host",
+  "clone": "lahtnemulb-clone",
+  "senator": "a-senator",
+  "deepfake": "deepfake-nedib",
+  "deepfake-2": "deepfake-nedib-2",
+  "deepfake2": "deepfake-nedib-2",
+  "tiled": "tiled-employee",
+  "ELGOOG'S DEMO": "elgoog-demo",
+  "elgoog-demo": "elgoog-demo",
+  "AUHSOJ": "auhsoj"
+ },
+ "roles": {
+  "mas-manalt": {
+   "name": "MAS MANALT",
+   "brief": "soft-spoken, measured, earnest pauses, a lunch-order calm; light baritone, narrow range, level or falling finals; never smug, never ASMR. V.O.: close, dry, unhurried, slower than he talks (mas-inner-voice §9).",
+   "lane_hz": [
+    105,
+    125
+   ],
+   "pace_wpm": "120-140 spoken; 110-130 V.O.",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "g6fJBFvZZp41FerGMMx7",
+     "voice_name": "Giovanni - Tranquil, Clever and Educated",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "An American male voice with calm and soft-spoken tone, measured tone, drawing others in with its quiet intensity. Great for conversational content.",
+     "public_owner_id": "00d2a77d915e15196391e69d744c2c8e38f15b09e879f2dacacf26c6ac5209d6",
+     "why": "The library describes it as 'calm and soft-spoken ... measured ... quiet intensity'. In the audition it was the only candidate that paused between the V.O.'s three sentences (gaps to 1.17 s; 144 wpm at speed 0.86, against 207-239 for the others), with the narrowest pitch range (8.9 st on the V.O., 3.4 st on 'it's two in the morning, gerg.') and a median of 115-128 Hz, inside his lane.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.86
+     },
+     "vo_settings": {
+      "speed": 0.82,
+      "stability": 0.6
+     },
+     "measured_preview": {
+      "median_f0_hz": 117.3,
+      "f0_range_st": 12.1,
+      "wpm": 179.6,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-29-04",
+      "wpm": 251.7,
+      "median_f0_hz": 128.2,
+      "f0_range_st": 3.4,
+      "span_s": 1.43,
+      "asr": "It's two in the morning gurg",
+      "speed": 0.92
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 17,
+       "median_f0_hz": 120.3,
+       "f0_lo_hi": [
+        103.1,
+        138.6
+       ],
+       "median_f0_range_st": 9.9,
+       "median_wpm_5plus_words": 197.4,
+       "voiced_s": 19.43,
+       "kokoro_voiced_s": 20.35
+      },
+      "vo": {
+       "lines": 12,
+       "median_f0_hz": 121.7,
+       "f0_lo_hi": [
+        109.9,
+        137.2
+       ],
+       "median_f0_range_st": 11.6,
+       "median_wpm_5plus_words": 131.2,
+       "voiced_s": 42.41,
+       "kokoro_voiced_s": 32.48
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "TWutjvRaJqAX89preB4e",
+     "voice_name": "Evan - Calm, Grounded & Reflective",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A warm, calm mid-low voice with a natural, conversational cadence. Thoughtful, grounded, and emotionally expressive through tone and pacing.",
+     "public_owner_id": "d21974d9942daf4a59ec2091ca10f35862fc8643bd768b9e92a33600b4edd2e7",
+     "why": "The library describes it as 'warm, calm mid-low ... thoughtful, grounded'. The cleanest ASR read of the five (names included), with real sentence pauses (0.74 s) at 103 Hz, the low edge of his lane. Faster than A (223 wpm at 0.86), so it runs slower here.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.84
+     },
+     "vo_settings": {
+      "speed": 0.78,
+      "stability": 0.6
+     },
+     "measured_preview": {
+      "median_f0_hz": 92.5,
+      "f0_range_st": 9.2,
+      "wpm": 173.3,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-29-04",
+      "wpm": 246.6,
+      "median_f0_hz": 89.6,
+      "f0_range_st": 11.6,
+      "span_s": 1.46,
+      "asr": "It's two in the morning, gurg.",
+      "speed": 0.92
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 17,
+       "median_f0_hz": 106.9,
+       "f0_lo_hi": [
+        94.4,
+        129.2
+       ],
+       "median_f0_range_st": 10.0,
+       "median_wpm_5plus_words": 222.2,
+       "voiced_s": 17.51,
+       "kokoro_voiced_s": 20.35
+      },
+      "vo": {
+       "lines": 12,
+       "median_f0_hz": 113.5,
+       "f0_lo_hi": [
+        94.3,
+        134.4
+       ],
+       "median_f0_range_st": 13.1,
+       "median_wpm_5plus_words": 185.7,
+       "voiced_s": 30.78,
+       "kokoro_voiced_s": 32.48
+      }
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+     "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+     "source": "shared Voice Library (high_quality), used by voice_id",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "vo_settings": {
+      "stability": 0.65,
+      "speed": 0.85
+     },
+     "labels": {
+      "age": "middle_aged",
+      "use_case": "informative_educational",
+      "descriptive": "relaxed",
+      "description": "An American Adult male with a warm and trustworthy voice, speaking at a relaxed pace with a calm tone. Perfect for educational content. Professional Studio Quality Audio."
+     },
+     "why": "Phase 3 recast (2026-09-27), picked by measurement (audio/ep01/v3-el/mas-recast.json): the only candidate whose V.O. runs near the 110-140 wpm band at steady settings (146 wpm at speed 0.9; the others 170-233, which no speed setting in the 0.7-1.2 range brings in), mid-lane pitch (114 Hz in 105-125), no clipped tails or pitch outliers, and an English-detection score beside Kokoro's American takes (p(en) per take 0.976, joined 0.996; Giovanni 0.907 / 0.972). V.O. speed 0.85 (from the audition's 0.9) to land the V.O. inside the band.",
+     "audition": {
+      "file": "out/ep01/full-v3/voices/mas-recast.mp3",
+      "number": 2,
+      "measured": {
+       "p_en_takes": 0.9761,
+       "p_en_min": 0.9,
+       "f0": 114.0,
+       "vo_wpm": 146.1,
+       "talk_sps": 3.59,
+       "tail_cuts": []
+      }
+     }
+    }
+   ],
+   "sentence_case": true
+  },
+  "gerg-mockbran": {
+   "name": "GERG MOCKBRAN",
+   "brief": "quick, sunny, engineer-literal, the fastest human in the cast; bright mid register; clipped; dry; no nerd caricature, no sarcasm.",
+   "lane_hz": [
+    125,
+    160
+   ],
+   "pace_wpm": "185-205",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "y0s2ExEMuum3muUnA6Zd",
+     "voice_name": "Marcus - Bright, Upbeat and Clear",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "social_media"
+     },
+     "library_description": "Energetic American male voice for social media content. Bright, clear delivery that hooks viewers instantly. Perfect for explainers, quick tips, tech content, and viral-ready storytelling.",
+     "public_owner_id": "313aaafc591e563f00bdfedeeffe20703426a0b04572e794e203706ec88f143c",
+     "why": "The library describes it as 'Bright, Upbeat and Clear ... tech content'. It was the fastest articulation in the audition (6.3 syll/s at speed 1.1) at 152 Hz, bright and in lane, 4.8 st above Mas A. It runs at 1.0 here to land nearer his band.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 157.4,
+      "f0_range_st": 18.0,
+      "wpm": 172.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-03",
+      "wpm": 236.5,
+      "median_f0_hz": 152.4,
+      "f0_range_st": 14.8,
+      "span_s": 4.06,
+      "asr": "It's a research preview, Rima. Nobody reads research. We'll get 40 users and a nice thread.",
+      "speed": 1.1
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 19,
+       "median_f0_hz": 143.2,
+       "f0_lo_hi": [
+        123.1,
+        185.4
+       ],
+       "median_f0_range_st": 14.0,
+       "median_wpm_5plus_words": 203.9,
+       "voiced_s": 50.38,
+       "kokoro_voiced_s": 51.8
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "Lt5FXOzLdO40mAK9bVsS",
+     "voice_name": "Ryan - Clear, Fast and Conversational",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "An energetic, friendly, quirky male voice.",
+     "public_owner_id": "3cdd22c6d78872afd601dc914ffcbf44a2f9ba2f0e4542b68a843b63aa6dd606",
+     "why": "The library describes it as 'Clear, Fast and Conversational ... energetic, friendly, quirky'. It measured 131 Hz and 215 wpm, lower and less animated than A (13.3 st range) and closer to the Kokoro Gerg's register. It sits 4.2 st above Mas B.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 1.1
+     },
+     "measured_preview": {
+      "median_f0_hz": 120.0,
+      "f0_range_st": 10.5,
+      "wpm": 263.2,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-03",
+      "wpm": 214.8,
+      "median_f0_hz": 130.7,
+      "f0_range_st": 13.3,
+      "span_s": 4.47,
+      "asr": "It's a research preview, Rima. Nobody reads research. We'll get 40 users and a nice thread.",
+      "speed": 1.1
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 19,
+       "median_f0_hz": 123.1,
+       "f0_lo_hi": [
+        105.4,
+        173.9
+       ],
+       "median_f0_range_st": 12.6,
+       "median_wpm_5plus_words": 228.5,
+       "voiced_s": 47.41,
+       "kokoro_voiced_s": 51.8
+      }
+     }
+    }
+   ]
+  },
+  "alyi": {
+   "name": "ALYI",
+   "brief": "slow, sparse, weighty; every sentence the last line of a sermon; low and narrow with falling finals; mysticism as rhetoric, never illness; no liturgical colour, no accent.",
+   "lane_hz": [
+    80,
+    105
+   ],
+   "pace_wpm": "95-115",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "8x8Otoub1daqoxY72hug",
+     "voice_name": "Louis - Deep, Profound and Thoughtful",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "deep",
+      "use_case": "advertisement"
+     },
+     "library_description": "Deep, resonant narration. Professional studio quality. Ideal for storytelling and voiceovers.",
+     "public_owner_id": "52bb99afb0d41ec583a4f18655494532399c50eb922fb2dd93fa9ab2e9a1c57d",
+     "why": "The library describes it as 'Deep, Profound and Thoughtful'. It measured 88 Hz with the longest pause after a comma of the five (0.93 s after 'months'), the sermon's breath.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.78
+     },
+     "measured_preview": {
+      "median_f0_hz": 92.0,
+      "f0_range_st": 11.3,
+      "wpm": 157.1,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-13",
+      "wpm": 158.2,
+      "median_f0_hz": 87.7,
+      "f0_range_st": 12.5,
+      "span_s": 4.93,
+      "asr": "six years and 11 months from the day we started to that click",
+      "speed": 0.84
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 3,
+       "median_f0_hz": 88.0,
+       "f0_lo_hi": [
+        86.4,
+        101.6
+       ],
+       "median_f0_range_st": 13.7,
+       "median_wpm_5plus_words": 194.3,
+       "voiced_s": 7.77,
+       "kokoro_voiced_s": 7.83
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "3RbK5MAeB6NkutT3d6qF",
+     "voice_name": "Brent",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A deep, rich American male voice with a warm, resonant timbre and steady confidence. The delivery is smooth, natural, and conversational, with clear diction and a relaxed, grounded presence suitable for narration.",
+     "public_owner_id": "62c49dcebf84fe5a3ada6fa467ac1060ee7161a726c6480cde04c0b8003aeda5",
+     "why": "The library describes it as 'deep, rich ... steady confidence ... relaxed, grounded'. The slowest read in the audition (136 wpm) and the lowest (85 Hz); its range is wide (16 st), so it is less narrow than the brief.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.82
+     },
+     "measured_preview": {
+      "median_f0_hz": 88.9,
+      "f0_range_st": 14.7,
+      "wpm": 137.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-13",
+      "wpm": 136.4,
+      "median_f0_hz": 85.3,
+      "f0_range_st": 16.2,
+      "span_s": 5.72,
+      "asr": "6 years and 11 months, from the day we started to that click.",
+      "speed": 0.84
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 3,
+       "median_f0_hz": 101.2,
+       "f0_lo_hi": [
+        68.9,
+        106.8
+       ],
+       "median_f0_range_st": 13.9,
+       "median_wpm_5plus_words": 191.8,
+       "voiced_s": 8.35,
+       "kokoro_voiced_s": 7.83
+      }
+     }
+    }
+   ]
+  },
+  "rima-tamuri": {
+   "name": "RIMA TAMURI",
+   "brief": "calm, diplomatic, composed, never rushed; clean broadcast polish; alto to mezzo, controlled; never breathy or sultry, never icy.",
+   "lane_hz": [
+    160,
+    200
+   ],
+   "pace_wpm": "135-150",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "rCuVrCHOUMY3OwyJBJym",
+     "voice_name": "Mia - Clear, Smooth, Professional",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A clear, professional, friendly, confident  and empathic woman, perfect for narration, stories, news and conversational content.",
+     "public_owner_id": "b574841da3a907e3e0e9abfc0abd798b052d806b440d85389612d0733d312f4f",
+     "why": "The library describes it as 'Clear, Smooth, Professional ... confident and empathic'. It had the slowest articulation of the five (3.66 syll/s) and a controlled range (9.6 st) at 159 Hz. That is the bottom of her lane and 3.4 st under Neleh A, so the two are told apart in the board scenes.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "measured_preview": {
+      "median_f0_hz": 172.7,
+      "f0_range_st": 10.0,
+      "wpm": 129.9,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-06",
+      "wpm": 200.7,
+      "median_f0_hz": 159.4,
+      "f0_range_st": 9.6,
+      "span_s": 5.68,
+      "asr": "Maas, it's your call. If it breaks in front of people, and it will, what do we tell them?",
+      "speed": 0.95
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 8,
+       "median_f0_hz": 170.3,
+       "f0_lo_hi": [
+        162.6,
+        177.3
+       ],
+       "median_f0_range_st": 9.8,
+       "median_wpm_5plus_words": 145.6,
+       "voiced_s": 33.92,
+       "kokoro_voiced_s": 27.01
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "c1uwEpPUcC16tq1udqxk",
+     "voice_name": "Harper - Confident, Clear and Cool",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Harper is grounded and conversational, built for clarity and connection. Perfect for eLearning narration, audiobooks, training videos, explainers, and corporate communication, she makes complex ideas simple and engaging. With a professional yet approachable tone, Harper keeps listeners focused and i",
+     "public_owner_id": "f995f689648bc413c1b7fb9ec8524f634e4d32f5030ee172ef6d847ba9dc5ee9",
+     "why": "The library describes it as 'Confident, Clear and Cool ... grounded and conversational'. It measured 204 Hz and 11 st, the brighter option, 1.9 st above Neleh B. Hope (188 Hz) measured as well, but sat within 0.5 st of both Neleh picks.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.88
+     },
+     "measured_preview": {
+      "median_f0_hz": 186.1,
+      "f0_range_st": 9.7,
+      "wpm": 211.3,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-06",
+      "wpm": 228.9,
+      "median_f0_hz": 203.9,
+      "f0_range_st": 11.1,
+      "span_s": 4.98,
+      "asr": "Ma's, it's your call. If it breaks in front of people and it will, what do we tell them?",
+      "speed": 0.95
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 8,
+       "median_f0_hz": 186.2,
+       "f0_lo_hi": [
+        168.9,
+        215.1
+       ],
+       "median_f0_range_st": 8.9,
+       "median_wpm_5plus_words": 144.8,
+       "voiced_s": 30.37,
+       "kokoro_voiced_s": 27.01
+      }
+     }
+    }
+   ]
+  },
+  "neleh": {
+   "name": "NELEH",
+   "brief": "precise, even, polite, footnoted; a cool mezzo; crisp consonants; asking the correct question in the wrong room; never a villain, never scolding.",
+   "lane_hz": [
+    165,
+    200
+   ],
+   "pace_wpm": "150-165",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "3dzJXoCYueSQiptQ6euE",
+     "voice_name": "Alexandra - Confident, Clear and Steady",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "conversational"
+     },
+     "library_description": "Steady, clear, and capable of speaking to the C-Suite. Neutral North American accent with consistent tone and subtle authority.",
+     "public_owner_id": "77ce78ab14fcec5c32c639fe1e19e55e5e20302f3ed1902a371e63df6f8b1f55",
+     "why": "The library describes it as 'Confident, Clear and Steady ... consistent tone and subtle authority'. It had the evenest read of the five (5.3 st range) at 194 Hz, 3.4 st above Rima A.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "measured_preview": {
+      "median_f0_hz": 194.4,
+      "f0_range_st": 8.1,
+      "wpm": 161.7,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-25-02",
+      "wpm": 256.6,
+      "median_f0_hz": 194.1,
+      "f0_range_st": 5.3,
+      "span_s": 3.04,
+      "asr": "Leave out Moz and Gerg, and the four of us are a majority.",
+      "speed": 1.0
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 5,
+       "median_f0_hz": 209.2,
+       "f0_lo_hi": [
+        194.0,
+        231.5
+       ],
+       "median_f0_range_st": 5.5,
+       "median_wpm_5plus_words": 242.8,
+       "voiced_s": 12.62,
+       "kokoro_voiced_s": 13.71
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "299hhEjoz44O862N5H4G",
+     "voice_name": "Victoria - Intake Professional",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "conversational"
+     },
+     "library_description": "A highly articulate and composed professional voice tailored for long-form intake, complex Q&A sessions, and guided assessments. This voice maintains a consistent, patient, and neutral-yet-friendly tone that reduces listener fatigue during extended interactions. Ideal for medical intake, legal quest",
+     "public_owner_id": "384b79790f6aa4f20173516eaadfd8f58e3a5d79692a6a4253cd220f48f61403",
+     "why": "The library describes it as 'highly articulate and composed ... patient, neutral-yet-friendly'. It measured 183 Hz and 7.3 st, precise and polite, 1.9 st under Rima B.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 184.0,
+      "f0_range_st": 8.9,
+      "wpm": 165.1,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-25-02",
+      "wpm": 226.1,
+      "median_f0_hz": 182.8,
+      "f0_range_st": 7.3,
+      "span_s": 3.45,
+      "asr": "Leave out Moz and Gerg, and the four of us are a majority.",
+      "speed": 1.0
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 5,
+       "median_f0_hz": 175.4,
+       "f0_lo_hi": [
+        171.8,
+        192.0
+       ],
+       "median_f0_range_st": 9.4,
+       "median_wpm_5plus_words": 201.9,
+       "voiced_s": 14.39,
+       "kokoro_voiced_s": 13.71
+      }
+     }
+    }
+   ]
+  },
+  "tasya": {
+   "name": "TASYA",
+   "brief": "warm, measured, gently amused; business words like mindfulness mantras; soft onset, smiling, three moves ahead; absolutely no accent colour, no smugness.",
+   "lane_hz": [
+    130,
+    150
+   ],
+   "pace_wpm": "125-140",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "raMcNf2S8wCmuaBcyI6E",
+     "voice_name": "Tyler Kurk - Smooth, Pleasant and Clear",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "pleasant",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Pleasant middle-aged, American voice for narration, explainer videos, eLearning, and documentaries.",
+     "public_owner_id": "deba31f3d8d2617c7f74410eb2df75345949e4cda946b1f03bad1b02ee53dfff",
+     "why": "The library describes it as 'Smooth, Pleasant and Clear'. In the audition it was the only read inside his pace band (133 wpm, 3.5 syll/s), with even pauses (0.47 s) between his three phrases, at 136 Hz: in lane, 2.9 st above Mas A.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "measured_preview": {
+      "median_f0_hz": 146.9,
+      "f0_range_st": 12.1,
+      "wpm": 206.2,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-29-20",
+      "wpm": 133.3,
+      "median_f0_hz": 136.4,
+      "f0_range_st": 15.4,
+      "span_s": 4.95,
+      "asr": "Don't get up, Maz. I won't keep you. Everyone is welcome.",
+      "speed": 0.9
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 2,
+       "median_f0_hz": 158.9,
+       "f0_lo_hi": [
+        115.7,
+        202.1
+       ],
+       "median_f0_range_st": 13.2,
+       "median_wpm_5plus_words": 158.6,
+       "voiced_s": 8.7,
+       "kokoro_voiced_s": 6.94
+      }
+     }
+    },
+    {
+     "cand": "B",
+     "voice_id": "cjVigY5qzO86Huf0OWal",
+     "voice_name": "Eric - Smooth, Trustworthy",
+     "source": "premade (ElevenLabs default voice)",
+     "library_category": "premade",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "classy",
+      "use_case": "conversational"
+     },
+     "library_description": "A smooth tenor pitch from a man in his 40s - perfect for agentic use cases.",
+     "public_owner_id": null,
+     "why": "An ElevenLabs premade voice ('Smooth, Trustworthy', a tenor) at 146 Hz. It was fast in the audition (246 wpm at 0.9), so it runs at 0.8 here. It sits 6 st above Mas B, a warmer and brighter option than A.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.8
+     },
+     "measured_preview": {
+      "median_f0_hz": 166.3,
+      "f0_range_st": 9.1,
+      "wpm": 191.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "a5-29-20",
+      "wpm": 246.3,
+      "median_f0_hz": 146.2,
+      "f0_range_st": 14.2,
+      "span_s": 2.68,
+      "asr": "Don't get up, Moz. I won't keep you. Everyone is welcome.",
+      "speed": 0.9
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 2,
+       "median_f0_hz": 148.9,
+       "f0_lo_hi": [
+        146.6,
+        151.3
+       ],
+       "median_f0_range_st": 11.7,
+       "median_wpm_5plus_words": 223.6,
+       "voiced_s": 6.17,
+       "kokoro_voiced_s": 6.94
+      }
+     }
+    }
+   ]
+  },
+  "mada": {
+   "name": "MADA",
+   "brief": "the poker face: 'Good question.' is all he says; courteous non-answer; muted grey, level, neither smug nor robotic.",
+   "lane_hz": [
+    115,
+    130
+   ],
+   "pace_wpm": "unhurried (the two words about 0.8-1.0 s)",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "S9UjcNYIwfBOtZiDnIQT",
+     "voice_name": "Alex - Smooth, Balanced and Clear",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "This training audio features Alex Morris delivering a diverse 3-minute script in a neutral American male voice. The performance includes conversational, commercial, corporate, emotional, and narrative passages. The recording is clean, studio-quality, and showcases a range of tone, pacing, and inflec",
+     "public_owner_id": "a5ae974863583dda7edeced7adfac6f4c163c4729542f63d3e9d43d5c8248963",
+     "why": "The library describes it as 'Smooth, Balanced and Clear ... a neutral American male voice'. It measured 129 Hz on the preview, about 2 st above Mas A. High stability for the canned sameness.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.7,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "measured_preview": {
+      "median_f0_hz": 129.4,
+      "f0_range_st": 14.5,
+      "wpm": 167.6,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 1,
+       "median_f0_hz": 105.4,
+       "f0_lo_hi": [
+        105.4,
+        105.4
+       ],
+       "median_f0_range_st": 9.7,
+       "median_wpm_5plus_words": null,
+       "voiced_s": 0.76,
+       "kokoro_voiced_s": 0.9
+      }
+     }
+    }
+   ]
+  },
+  "chatgtp": {
+   "name": "CHATGTP",
+   "brief": "the first chat window: boundless sycophancy, bright and eager; resembles no real assistant product.",
+   "lane_hz": [
+    200,
+    250
+   ],
+   "pace_wpm": "165-185",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "Y2pP8eXRDH19yyV1Tslt",
+     "voice_name": "Maya - The Upbeat Creator",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "upbeat",
+      "use_case": "social_media"
+     },
+     "library_description": "Bright, upbeat, and naturally confident young American female voice. Features clear, crisp enunciation and steady forward momentum. Highly suited for video editors, digital marketers, and content creators.  Ideal for social media voiceovers, narration, explainer videos, podcast intros, and commercia",
+     "public_owner_id": "c4f488164eb082d488290f3abc5f82466a778a94c377d241233472288d48e25e",
+     "why": "The library describes it as 'Bright, upbeat ... crisp enunciation and steady forward momentum'. It measured 250 Hz on the preview, 4 st above Rima B (sc 5). A creator's own voice, not an assistant product's.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.4,
+      "similarity_boost": 0.75,
+      "style": 0.25,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "measured_preview": {
+      "median_f0_hz": 249.9,
+      "f0_range_st": 9.5,
+      "wpm": 199.4,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_sample": {
+      "dialogue": {
+       "lines": 2,
+       "median_f0_hz": 259.4,
+       "f0_lo_hi": [
+        238.1,
+        280.6
+       ],
+       "median_f0_range_st": 11.8,
+       "median_wpm_5plus_words": 152.3,
+       "voiced_s": 3.06,
+       "kokoro_voiced_s": 2.86
+      }
+     }
+    }
+   ]
+  },
+  "mario": {
+   "name": "MARIO",
+   "brief": "the anxious conscience with numbered caveats: worried, precise, sincere, a little proud of the worry; never a whine, never a villain.",
+   "lane_hz": [
+    115,
+    150
+   ],
+   "pace_wpm": "145-160",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "n5FCw0ouOVMADam2lTvQ",
+     "voice_name": "Caleb - Youthful, Quirky and Clear",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "anxious",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A Young American male voice. Works well for Informative & Educational content.",
+     "public_owner_id": "9c7eb899894aeb272133c1ed263158cf6dcfd43f77a1cacb41d079392b777749",
+     "why": "The library describes it as 'Youthful, Quirky and Clear', tagged 'anxious' (one of six in the library). It measured 133 Hz, in lane, 2.5 st above Mas A.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 133.1,
+      "f0_range_st": 7.6,
+      "wpm": 215.4,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ],
+   "engine": "kokoro",
+   "kokoro": {
+    "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest",
+    "cast": "audio/voices/cast.json",
+    "takes": "the Kokoro lock's own take for each line (its audio, in, dur and words), as the Kokoro film plays it: fast-v1/fast-v2 (acts one and two), act4 v5, and v3.5's new 'Point two...' from audio/ep01/v35/",
+    "format": "48 kHz / 24-bit mono, -16 LUFS integrated, -1.5 dBTP, dry, 0.35 s room-tone handles (-62 dBFS): the EL takes' format"
+   },
+   "engine_note": "The showrunner, 2026-09-28: \"i actually liked dario's kokoro voice more. let's just keep that while the rest are elevenlabs\" (proposal-v35 Voices, choice 11A). From the v3.5 lock on (engine_from_lock), el_render.py sends nothing for this role: it writes a pass-through row per line (a copy of the Kokoro take's row, 'engine': 'kokoro'). el_lock.py keeps the Kokoro lock's own take and timing for it, so only its start moves, with the EL lines before it in the beat. The v3.4 and earlier EL locks keep candidate A (Caleb) and rebuild unchanged. The mix: voices-el.md §AB."
+  },
+  "ttemme": {
+   "name": "TTEMME",
+   "brief": "the 72-hour CEO, talking to 'chat': affable, a little bemused, sincere; streamer patter without the gamer-bro caricature.",
+   "lane_hz": [
+    122,
+    160
+   ],
+   "pace_wpm": "155-175",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "DwwuoY7Uz8AP8zrY5TAo",
+     "voice_name": "Sean - Expressive and Conversational",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A casual, young-adult speaking in a natural, warm and relatable manner. Perfect for conversational AI.",
+     "public_owner_id": "3fe2230172d07ac02e6dd0130c51adb07535e01588e24038ea2c452ee40b842d",
+     "why": "The library describes it as 'a casual, young-adult speaking in a natural, warm and relatable manner'. It measured 160 Hz, clear of Tasya and Mada. The headset colour is a mix chain.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 159.7,
+      "f0_range_st": 13.0,
+      "wpm": 136.9,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "terb": {
+   "name": "TERB",
+   "brief": "the fire marshal of imploding boards: calm, capable, brisk, faintly bored by catastrophe; tall baritone; no barking.",
+   "lane_hz": [
+    95,
+    115
+   ],
+   "pace_wpm": "165-185",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "Pcfg2Zc6kmNWQ9ji3J5F",
+     "voice_name": "Ethan - Calm, Optimistic and Clear",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Young confident male voice.",
+     "public_owner_id": "8f40ccbbad578711008286d6d5c453a78f1b41981a1b25befa26734dfaaecc94",
+     "why": "The library describes it as a 'young confident male voice' ('Calm, Optimistic and Clear'). It measured 99 Hz with a narrow range (5.8 st) at 196 wpm on the preview: the brisk, level procedural register.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 98.6,
+      "f0_range_st": 5.8,
+      "wpm": 196.0,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "radnus": {
+   "name": "RADNUS",
+   "brief": "the rival CEO, politely on fire: gentle, courteous, unhurried, soft and warm; the smile never changes; no smugness, no menace.",
+   "lane_hz": [
+    110,
+    135
+   ],
+   "pace_wpm": "130-150",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "PMWmvqAOXhLm54FLpmYS",
+     "voice_name": "Dylan Malc - Calm & Educational",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "gentle",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Dylan's Voice is a warm, soft-spoken voice I designed for educational content and authentic idea-sharing. It feels less like a presentation and more like a thoughtful conversation between friends, which is gentle, sincere, and inviting. Best for explainer videos, tutorials, storytelling, and documen",
+     "public_owner_id": "53a04f0361620ef811e634240d829b49ea812f1843ccc0f48e4d147ccd266101",
+     "why": "The library describes it as 'a warm, soft-spoken voice ... gentle, sincere, and inviting'. It measured 123-136 Hz in the Mas audition (narrow, 4.9 st). Its owner recommends speed 0.88; 0.9 is used.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "measured_preview": {
+      "median_f0_hz": 130.5,
+      "f0_range_st": 8.9,
+      "wpm": 217.0,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "adelina": {
+   "name": "ADELINA",
+   "brief": "the adult in the other room: brisk but unhurried, warm, kind finality; no sibling framing, no coldness.",
+   "lane_hz": [
+    175,
+    215
+   ],
+   "pace_wpm": "150-165",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "biKKUtquxxZTxOnPw4Tk",
+     "voice_name": "Gracy - Clear, Articulate and Steady",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Warm and friendly female voice in her late 20s, ideal for storytelling and professional narration.",
+     "public_owner_id": "d4e1a7c873e7e40683eeaf9057a6905fb62d692131c381133ef30f50f9bb8b45",
+     "why": "The library describes it as 'Clear, Articulate and Steady ... warm and friendly'. It measured 192 Hz on the preview.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 191.6,
+      "f0_range_st": 11.9,
+      "wpm": 203.4,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "tiled-employee": {
+   "name": "TILED EMPLOYEE",
+   "brief": "one hand up in the crowd: earnest, direct, a little unsure; a plain lower-mid voice; never mocked.",
+   "lane_hz": [
+    135,
+    175
+   ],
+   "pace_wpm": "150-170",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "w25dAwxibNES1hcDBvXx",
+     "voice_name": "Avery - Healthcare & Clinical Education",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Avery delivers a calm, clear voice designed for healthcare communication, clinical education, and patient-focused content.  With steady pacing and a professional tone, she works well for medical explainers, patient education, compliance training, telehealth communication, and instructional healthcar",
+     "public_owner_id": "2b55fa113bcab21b84eec4c0028a83f2a0642126d89cf7ef71635953bc2b8960",
+     "why": "The library describes it as 'a calm, clear voice'. It measured 167 Hz and 8.4 st on the preview, inside the 135-175 Hz lane and about 2.6 st under Neleh A.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "measured_preview": {
+      "median_f0_hz": 166.8,
+      "f0_range_st": 8.4,
+      "wpm": 153.2,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "why_replaced": "the first pick (Kai - Real AI Receptionist) measured 202 Hz and 348 wpm on the employee's line: above her lane, within 1 st of Neleh A (194 Hz), and fast for 'a little unsure'"
+     },
+     "replaced": {
+      "voice_id": "gh9yOzacZabdERF6GI7O",
+      "voice_name": "Kai - Real AI Receptionist",
+      "why": "the first pick (Kai - Real AI Receptionist) measured 202 Hz and 348 wpm on the employee's line: above her lane, within 1 st of Neleh A (194 Hz), and fast for 'a little unsure'"
+     }
+    }
+   ]
+  },
+  "nedib": {
+   "name": "NEDIB",
+   "brief": "folksy, direct, leveling with the room, brisk and never slowed. HOUSE RULE 4 IN FULL: no rasp, no slowing, no tremor, no age or health coding, no impression.",
+   "lane_hz": [
+    105,
+    130
+   ],
+   "pace_wpm": "145-165",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "II2zvu784M1JmLdcOa7B",
+     "voice_name": "Johnny - Friendly, Optimistic and Warm",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "conversational"
+     },
+     "library_description": "North American male voice that’s warm, friendly, and effortlessly conversational — perfect for brands looking to connect with real people. This voice style shines in commercials, explainer videos, eLearning, and corporate narration, delivering messages with authenticity and trust. With a tone that f",
+     "public_owner_id": "c802036ac6ffdb26f16ddb137144be93823c74f2cb5c61f6692bb5be6dcf4dfb",
+     "why": "The library describes it as 'warm, friendly, and effortlessly conversational'. It measured 119 Hz on the preview. It is labelled middle-aged, not old, with no rasp or gravel in the description. It runs at speed 1.0, never slowed.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 119.3,
+      "f0_range_st": 17.7,
+      "wpm": 211.3,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "sydney": {
+   "name": "SYDNEY",
+   "brief": "the landlord's chatbot, sweet and a little unsettling: cloying warmth with a hurt edge; resembles no real product voice; no horror.",
+   "lane_hz": [
+    185,
+    235
+   ],
+   "pace_wpm": "140-160",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "WQhVGGVQ8EhNpBYHFE8c",
+     "voice_name": "Layla",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "social_media"
+     },
+     "library_description": "Young female voice, warm and clear, naturally soft with a calm, friendly tone. Smooth, relaxed, and gentle—like a chill young woman in her early twenties.",
+     "public_owner_id": "085f635da4e3a9f491f9bd2ffecba126f67224193487aa06e28ac946d140d37a",
+     "why": "The library describes it as 'warm and clear, naturally soft with a calm, friendly tone'. It measured 214 Hz on the preview. The sweetness comes from the lines; the sheen is a mix chain.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.15,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "measured_preview": {
+      "median_f0_hz": 213.8,
+      "f0_range_st": 6.7,
+      "wpm": 141.8,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "sucram": {
+   "name": "SUCRAM",
+   "brief": "the heckler: busy, certain, dry and close, point by point, never shouting.",
+   "lane_hz": [
+    105,
+    130
+   ],
+   "pace_wpm": "170-190",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "UgBBYS2sOqTuMpoF3BR0",
+     "voice_name": "Mark - Natural Conversations",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "A casual, young-adult speaking in a natural manner. Perfect for Conversational AI.",
+     "public_owner_id": "024c9393c6380665357f60b1062c863cd635d79791f13d6f0a834a319d5ff56c",
+     "why": "The library describes it as 'a casual, young-adult speaking in a natural manner'. It measured 120 Hz on the preview, and runs at speed 1.12 for his point-by-point pace.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.12
+     },
+     "measured_preview": {
+      "median_f0_hz": 119.7,
+      "f0_range_st": 15.7,
+      "wpm": 229.2,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "sirrah": {
+   "name": "SIRRAH",
+   "brief": "the Explainer: patient, precise, a lesson plan that never changes; crisp alto to mezzo; no imitation of any laugh, voice or mannerism.",
+   "lane_hz": [
+    170,
+    205
+   ],
+   "pace_wpm": "140-155",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "wsL2AB1kHVzgox3WvQP2",
+     "voice_name": "Marie - Professional & Warm",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A warm, articulate, and professional Standard American female voice. Features a steady, trustworthy tone with crisp enunciation. Perfect for corporate e-learning, clear virtual assistants, and engaging narrative storytelling.",
+     "public_owner_id": "14cf90b658e11bb8aa3142a238d2598c7d8d8361591e870c76488428ade5bcd7",
+     "why": "The library describes it as 'warm, articulate ... Standard American ... crisp enunciation'. It measured 205 Hz on the preview, 1.8 st above the Photographer (sc 13).",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "measured_preview": {
+      "median_f0_hz": 205.3,
+      "f0_range_st": 9.5,
+      "wpm": 140.7,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "recast": "v3.5: replaced in set A by candidate B (set_cand). The showrunner: \"harris's voice is not very good\". Measured on her episode takes: 226 Hz, above the 170-205 lane, 2.1 st over the Photographer; kept on file as candidate A."
+    },
+    {
+     "cand": "B",
+     "voice_id": "uod6Nn3FGhzBRM6gqPSU",
+     "voice_name": "Ida Freeist - Warm & Professional",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Ida Freeist offers a voice that is both deeply reassuring and professionally precise. Her tone is naturally grounded and soothing, making her the perfect choice for narration that requires a 'human touch'—such as healthcare explainers, educational series, and wellness content. With a steady, deliberate pace and a sincere delivery, she turns complex information into an inviting and clear listening experience.",
+     "public_owner_id": "a7ec31483602aa6c38ab2b3efa2ae0542bffeb90f8ba06c6f72712a2b3a0aea2",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "why": "v3.5 recast (2026-09-28; the showrunner: \"harris's voice is not very good. the rest are fine\"), picked by measurement and fit against the White House photo scene (tools/el_audition.py; auditions/sirrah/index.json, voices-el.md §AA). Over her four takes (the audition at speed 1.0 and the episode takes at 0.85) the median is 174.5 Hz: inside the 170-205 lane and 2.5 st under the Photographer, the scene's other woman (her episode takes 1.4 st). Marie sat 2.1 st over the Photographer at 226 Hz, above the lane. Of every voice measured, hers is the most distinct timbre from the Photographer (mean-MFCC distance 91-94; Miss La 66, Marie 87). She is warmer and darker than Marie (2-5 kHz presence -18.2 dB against -11.0). All four takes are verbatim on ASR with clean tails, and p(en) runs 0.975-0.997 (mean 0.990). Speed 0.85, from the audition's 1.0 (which read 'Any questions...' at 187 wpm): 166 wpm and 4.53 syll/s, between Marie's 157 and the Kokoro lock's 183. The library describes her as 'reassuring and professionally precise ... a steady, deliberate pace'. Chosen for fit to the brief, never for resembling anyone.",
+     "measured_audition": {
+      "rank": 1,
+      "score": 0.0,
+      "penalties": {
+       "lane": 0.0,
+       "separation": 0.0,
+       "accent": 0.0,
+       "artifacts": 0.0
+      },
+      "median_f0_hz_4_takes": 174.5,
+      "takes": [
+       {
+        "line": "e1-a2-13-02",
+        "speed": null,
+        "voiced_s": 2.25,
+        "wpm": 186.7,
+        "sps": 5.19,
+        "f0": 172.9,
+        "f0_range": 14.9,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9968,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": null,
+        "voiced_s": 1.27,
+        "wpm": 236.2,
+        "sps": 4.5,
+        "f0": 152.4,
+        "f0_range": 9.3,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9917,
+        "asr": "Is it just the one?"
+       },
+       {
+        "line": "e1-a2-13-02",
+        "speed": 0.85,
+        "voiced_s": 2.53,
+        "wpm": 166.0,
+        "sps": 4.53,
+        "f0": 192.3,
+        "f0_range": 11.9,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9957,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": 0.85,
+        "voiced_s": 1.29,
+        "wpm": 232.6,
+        "sps": 3.88,
+        "f0": 176.1,
+        "f0_range": 9.7,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9747,
+        "asr": "Is it just the one?"
+       }
+      ],
+      "scene_episode_takes": {
+       "f0_geo": 184.0,
+       "centroid_hz": 423,
+       "presence_db": -18.17,
+       "takes": 2,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 7.36,
+         "mfcc_dist": 56.6
+        },
+        "photographer": {
+         "st": -1.42,
+         "mfcc_dist": 91.0
+        },
+        "tasya": {
+         "st": 4.94,
+         "mfcc_dist": 63.6
+        },
+        "radnus": {
+         "st": 5.8,
+         "mfcc_dist": 55.3
+        },
+        "mas": {
+         "st": 6.51,
+         "mfcc_dist": 51.4
+        },
+        "nedib": {
+         "st": 5.94,
+         "mfcc_dist": 69.6
+        }
+       }
+      },
+      "scene_all_takes": {
+       "f0_geo": 172.8,
+       "centroid_hz": 457,
+       "presence_db": -18.2,
+       "takes": 4,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 6.28,
+         "mfcc_dist": 55.3
+        },
+        "photographer": {
+         "st": -2.51,
+         "mfcc_dist": 93.5
+        },
+        "tasya": {
+         "st": 3.86,
+         "mfcc_dist": 63.0
+        },
+        "radnus": {
+         "st": 4.71,
+         "mfcc_dist": 55.6
+        },
+        "mas": {
+         "st": 5.43,
+         "mfcc_dist": 49.4
+        },
+        "nedib": {
+         "st": 4.86,
+         "mfcc_dist": 68.1
+        }
+       }
+      }
+     },
+     "audition": {
+      "file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+      "candidate_one_at_s": 19.93,
+      "episode_takes_at_s": 60.78,
+      "episode_takes": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahB.json (el_render.py, the episode's own seeds: the v3.5 render gets them from the cache, nothing sent)"
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "5WdslVl9OFNf1eZigGfk",
+     "voice_name": "Pamela - Calm, Grounded and Natural",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A calm, grounded female voice with natural warmth and quiet authority. Reflective tone with measured pacing and clear articulation. Expressive but restrained — balanced between intellect and empathy. Ideal for thoughtful narration, podcast storytelling, and cinematic voiceover where clarity and composure are essential.",
+     "public_owner_id": "3e0d3ed3290f6de1039bf061151fa8bf8db116e7428928c79ec73c6025f78484",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "why": "v3.5 audition runner-up, on file for a swap (set_cand sirrah=C; her episode takes are cached, so a swap sends nothing). The library describes her as 'calm, grounded ... quiet authority, measured pacing'. At speed 0.9 her 'Any questions...' is 144 wpm, inside the 140-155 band. But over four takes her median is 208 Hz, above the lane and 0.8 st from the Photographer (1.1 st on the episode takes). Two of her four takes clipped a tail, and the one retake of 'Is it just the one?' dropped a word (recall 0.8), so take 1 is kept.",
+     "measured_audition": {
+      "rank": 4,
+      "score": 3.06,
+      "penalties": {
+       "lane": 0.27,
+       "separation": 0.79,
+       "accent": 0.0,
+       "artifacts": 2.0
+      },
+      "median_f0_hz_4_takes": 208.2,
+      "takes": [
+       {
+        "line": "e1-a2-13-02",
+        "speed": null,
+        "voiced_s": 2.45,
+        "wpm": 171.4,
+        "sps": 4.49,
+        "f0": 212.2,
+        "f0_range": 7.1,
+        "tail_cut": true,
+        "recall": 1.0,
+        "p_en": 0.9904,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": null,
+        "voiced_s": 1.55,
+        "wpm": 193.5,
+        "sps": 3.23,
+        "f0": 198.3,
+        "f0_range": 11.5,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.9865,
+        "asr": "Is it just the one?"
+       },
+       {
+        "line": "e1-a2-13-02",
+        "speed": 0.9,
+        "voiced_s": 2.91,
+        "wpm": 144.3,
+        "sps": 3.78,
+        "f0": 204.2,
+        "f0_range": 9.4,
+        "tail_cut": false,
+        "recall": 1.0,
+        "p_en": 0.985,
+        "asr": "Any questions before we take the picture?"
+       },
+       {
+        "line": "e1-a2-13-04",
+        "speed": 0.9,
+        "voiced_s": 1.53,
+        "wpm": 196.1,
+        "sps": 3.27,
+        "f0": 220.7,
+        "f0_range": 7.9,
+        "tail_cut": true,
+        "recall": 1.0,
+        "p_en": 0.9806,
+        "asr": "Is it just the one?"
+       }
+      ],
+      "scene_episode_takes": {
+       "f0_geo": 212.3,
+       "centroid_hz": 405,
+       "presence_db": -15.36,
+       "takes": 2,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 9.83,
+         "mfcc_dist": 57.3
+        },
+        "photographer": {
+         "st": 1.05,
+         "mfcc_dist": 98.6
+        },
+        "tasya": {
+         "st": 7.42,
+         "mfcc_dist": 59.2
+        },
+        "radnus": {
+         "st": 8.27,
+         "mfcc_dist": 58.8
+        },
+        "mas": {
+         "st": 8.99,
+         "mfcc_dist": 59.8
+        },
+        "nedib": {
+         "st": 8.42,
+         "mfcc_dist": 55.0
+        }
+       }
+      },
+      "scene_all_takes": {
+       "f0_geo": 208.7,
+       "centroid_hz": 396,
+       "presence_db": -16.36,
+       "takes": 4,
+       "vs": {
+        "mario (kokoro)": {
+         "st": 9.54,
+         "mfcc_dist": 50.0
+        },
+        "photographer": {
+         "st": 0.75,
+         "mfcc_dist": 89.0
+        },
+        "tasya": {
+         "st": 7.12,
+         "mfcc_dist": 52.1
+        },
+        "radnus": {
+         "st": 7.98,
+         "mfcc_dist": 51.1
+        },
+        "mas": {
+         "st": 8.69,
+         "mfcc_dist": 53.8
+        },
+        "nedib": {
+         "st": 8.12,
+         "mfcc_dist": 46.8
+        }
+       }
+      }
+     },
+     "audition": {
+      "file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+      "candidate_three_at_s": 40.35,
+      "episode_takes_at_s": 74.99,
+      "episode_takes": "audio/ep01/v3-el/auditions/sirrah/round2/lines-AsirrahC.json"
+     }
+    }
+   ],
+   "recast_v35": {
+    "pick": "B",
+    "listening_file": "out/ep01/full-v3/voices/sirrah-recast.mp3",
+    "index": "audio/ep01/v3-el/auditions/sirrah/index.json",
+    "also_auditioned": {
+     "Miss La - Confident and Engaging (Jx35Jvky2ob4xi16g1ha)": "rank 2 (score 0.42). In lane at 188 Hz but 1.1 st from the Photographer, with the least distinct timbre from her (MFCC 66). 222 wpm at speed 1.0: the band would need about 0.7. Not added as a candidate.",
+     "Amie - Pro (d2TIsnZlkvBAy2oXD9Dp)": "rank 5 (score 3.35). p(en) 0.93 on 'Any questions...' (the accent screen), 215 Hz, 219 wpm at speed 1.0. Not added as a candidate."
+    },
+    "guardrails": "Library voices only, called by voice_id; nothing cloned or designed. The screen dropped any voice whose name or description names or evokes a real person, anything political (politic, president, senator, campaign, vice, government, speech, impression, celebrity, parody, sound-alike), and every accent, age or register flag. No laugh, accent or mannerism was asked for; the lines were sent as written. (guardrails.md §6)"
+   }
+  },
+  "nole": {
+   "name": "NOLE",
+   "brief": "grievance as a joke: burst, one-beat stop, burst; pushed and forward, a wide range; no accent, no copied disfluency, no menace.",
+   "lane_hz": [
+    110,
+    140
+   ],
+   "pace_wpm": "165-185 in bursts",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "ya031zGCAxyRGrvB3or9",
+     "voice_name": "Ryan - Confident and Bold",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Confident, Male North American neutral accent.",
+     "public_owner_id": "5c339b45c1525da285559cae4679a50892bc5465486a1518ca743d870ea7c042",
+     "why": "The library describes it as 'Confident and Bold', a neutral North American accent. It had the widest range on the preview (15.9 st) at 116 Hz. Low stability and some style for the bursts.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.35,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 115.9,
+      "f0_range_st": 15.9,
+      "wpm": 195.7,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "lahtnemulb": {
+   "name": "LAHTNEMULB",
+   "brief": "the chairman, reading from cards: formal, level, earnest, a beat behind his own clone; no impression, no age coding.",
+   "lane_hz": [
+    100,
+    125
+   ],
+   "pace_wpm": "135-155",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "zL8BUx7dljdEZMmcSu8V",
+     "voice_name": "Will – Grounded Narrator",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A grounded, professional male narration voice designed for audiobooks, documentaries, and long-form educational content. Neutral American accent with steady pacing and clear articulation. Delivers consistent, composed narration ideal for extended listening, instructional material, and serious nonfic",
+     "public_owner_id": "612ca713c21708a430eac6d76ac3592fbb11855af36841cbfec38661990b7371",
+     "why": "The library describes it as 'grounded, professional ... steady pacing and clear articulation'. It measured 103 Hz on the preview, 2.7 st under Sucram in sc 15.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "measured_preview": {
+      "median_f0_hz": 103.3,
+      "f0_range_st": 12.2,
+      "wpm": 176.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "a-senator": {
+   "name": "A SENATOR",
+   "brief": "an unnamed senator at a lit microphone: courteous, pointed, a hearing-room level; no real senator's voice.",
+   "lane_hz": [
+    160,
+    205
+   ],
+   "pace_wpm": "145-160",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "tMXujoAjiboschVOhAnk",
+     "voice_name": "Clara – Corporate & Training Trusted Professional",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "narrative_story"
+     },
+     "library_description": "Clara is a calm, clear, and approachable professional voice designed for corporate training, onboarding, internal communications, and software explainers.  With steady pacing and natural warmth, Clara delivers long-form narration that feels supportive and easy to follow. Ideal for instructional cont",
+     "public_owner_id": "2b55fa113bcab21b84eec4c0028a83f2a0642126d89cf7ef71635953bc2b8960",
+     "why": "The library describes it as 'calm, clear, and approachable professional ... steady pacing'. It measured 184 Hz on the preview, clear of the chairman, Sucram and Mas.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "measured_preview": {
+      "median_f0_hz": 184.0,
+      "f0_range_st": 11.6,
+      "wpm": 121.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "photographer": {
+   "name": "PHOTOGRAPHER",
+   "brief": "an unnamed White House photographer herding eyelines: brisk, cheerful, slightly defeated by the second line.",
+   "lane_hz": [
+    100,
+    240
+   ],
+   "pace_wpm": "160-180",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "X03mvPuTfprif8QBAVeJ",
+     "voice_name": "Christina - Natural and Conversational",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "female",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "casual",
+      "use_case": "conversational"
+     },
+     "library_description": "Easy to listen to with a friendly, real vibe. I'd love to chat with you!",
+     "public_owner_id": "472b6ce1c71b3c5bf78fcadff4210e10addfd9820332cb1fbfa0d1cdeb55db68",
+     "why": "The library describes it as 'Easy to listen to with a friendly, real vibe'. It measured 185 Hz on the preview, 1.8 st under Sirrah.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.08
+     },
+     "measured_preview": {
+      "median_f0_hz": 185.1,
+      "f0_range_st": 12.8,
+      "wpm": 188.6,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "nirb": {
+   "name": "NIRB",
+   "brief": "a founder up from the crypt, asking after the thing he built: eager, curious, a little out of the loop; no age coding.",
+   "lane_hz": [
+    125,
+    150
+   ],
+   "pace_wpm": "150-170",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "RckSZHfvva0yOVRPzRfv",
+     "voice_name": "Arlo – Engaging Real-World Storyteller",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "social_media"
+     },
+     "library_description": "Arlo is a male voice, 20s–30s, blending youthful energy, crisp clarity, and confident expression. Ideal for creators and brands wanting content that feels real, relatable, and human. Trained for social media, tech ads, tutorials, and casual dialogue, Arlo adapts seamlessly to any tone. Whether guidi",
+     "public_owner_id": "35eb9275f54727f5fbe93cab11ff346bc6d7a4bb2f1c07b9ccee03bdabac5459",
+     "why": "The library describes it as 'youthful energy, crisp clarity, and confident expression'. It measured 160 Hz on Gerg's line in the principals' audition (it was Gerg candidate D), a bright-mid tenor, 4+ st above Egap in sc 8.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 157.4,
+      "f0_range_st": 9.7,
+      "wpm": 164.2,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     },
+     "measured_audition": {
+      "line": "e1-a1-5-03 (as a Gerg candidate)",
+      "median_f0_hz": 160.2,
+      "f0_range_st": 10.4,
+      "wpm": 214.8,
+      "why_replaced": "the first pick (Ryan - Explainer, Upbeat & Friendly) measured 108 Hz on NIRB's line, under his 125-150 Hz lane and 1.3 st from EGAP (101 Hz) in the same scene"
+     },
+     "replaced": {
+      "voice_id": "AvUYKSeryCcU2BHSM8x7",
+      "voice_name": "Ryan - Explainer , Upbeat & Friendly",
+      "why": "the first pick (Ryan - Explainer, Upbeat & Friendly) measured 108 Hz on NIRB's line, under his 125-150 Hz lane and 1.3 st from EGAP (101 Hz) in the same scene"
+     }
+    }
+   ]
+  },
+  "egap": {
+   "name": "EGAP",
+   "brief": "the quieter founder: one dry question about credit; low-mid, level, deliberate; no age or health coding.",
+   "lane_hz": [
+    95,
+    120
+   ],
+   "pace_wpm": "130-150",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "nmmIJ8k3ukOa1CSFlor3",
+     "voice_name": "Declan - Serious & Straightforward",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "serious",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A low, serious, narrative/podcast/documentary voice, also suitable for instructional content and audiobooks.",
+     "public_owner_id": "465295810ef94f8627fad34ba88551a02745957d1c3b09877a3fc3de528d6f2f",
+     "why": "The library describes it as 'A low, serious ... voice'. It measured 111 Hz on the preview, under Nirb and Radnus.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.9
+     },
+     "measured_preview": {
+      "median_f0_hz": 111.3,
+      "f0_range_st": 11.8,
+      "wpm": 151.1,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "oigneb": {
+   "name": "OIGNEB",
+   "brief": "the worried professor with the pause sign: gentle, precise, deeply worried, never shrill; a lecture-room warmth; no tremble.",
+   "lane_hz": [
+    110,
+    130
+   ],
+   "pace_wpm": "140-155",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "fIoDqeVKE9jI9AGvEvZU",
+     "voice_name": "CJ - Articulate & Educational",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A calm and articulate teacherly voice specifically optimized for long-form instructional content. It maintains a steady, informative cadence ideal for lectures, historical summaries, and educational narration. Mid-Age American Male.",
+     "public_owner_id": "a15563f67fed6aef55345fa0b2154d7410c64d873aca7814a2178947ed3598ae",
+     "why": "The library describes it as 'A calm and articulate teacherly voice ... a steady, informative cadence ideal for lectures'. It measured 109 Hz on the preview.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.92
+     },
+     "measured_preview": {
+      "median_f0_hz": 108.8,
+      "f0_range_st": 11.4,
+      "wpm": 159.6,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "remuhcs": {
+   "name": "REMUHCS",
+   "brief": "a host pleased with the room, heard on Mas's monitor; the line is real, the voice a generic library voice, no mimicry.",
+   "lane_hz": [
+    110,
+    135
+   ],
+   "pace_wpm": "145-165",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "o0t0Wz5oSDuuCV6p7rba",
+     "voice_name": "Marc Laurent - Confident and Engaging",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "narrative_story"
+     },
+     "library_description": "A warm, clear, and confident middle-aged American male voice with a professional yet approachable tone. Ideal for narration, audiobooks, and online courses, reflecting an engaging style grounded in online course voice-over experience.",
+     "public_owner_id": "e2b54c3ca6f58cef4a7bba0e79cf050a71d43749cffe849995edb491d2aa857b",
+     "why": "The library describes it as 'warm, clear, and confident middle-aged American male'. It measured 117 Hz on the preview. The monitor chain is applied by the renderer (file_device) or the mix.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.05,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "measured_preview": {
+      "median_f0_hz": 117.3,
+      "f0_range_st": 10.5,
+      "wpm": 132.5,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "panel-host": {
+   "name": "PANEL HOST",
+   "brief": "the cold open's first voice: a summit host with one last question, warm and easy; seen only as a hand; never gendered.",
+   "lane_hz": [
+    145,
+    175
+   ],
+   "pace_wpm": "150-170",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "SAz9YHcvj6GT2YYXdXww",
+     "voice_name": "River - Relaxed, Neutral, Informative",
+     "source": "premade (ElevenLabs default voice)",
+     "library_category": "premade",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "A relaxed, neutral voice ready for narrations or conversational projects.",
+     "public_owner_id": null,
+     "why": "An ElevenLabs premade voice, labelled gender 'neutral' ('Relaxed, Neutral, Informative'). It measured 177 Hz on the preview.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 176.7,
+      "f0_range_st": 4.5,
+      "wpm": 238.4,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "nesnej": {
+   "name": "NESNEJ",
+   "brief": "a keynote showman handing out big numbers like gifts: generous, delighted, warm and quick; ABSOLUTELY no accent; no infomercial mockery.",
+   "lane_hz": [
+    120,
+    150
+   ],
+   "pace_wpm": "160-176",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "bPMKpgEe88vKSwusXTMU",
+     "voice_name": "Bryan - Polished, Measured and Engaging",
+     "source": "shared Voice Library (high-quality instant voice of the voice owner), used by voice_id",
+     "library_category": "high_quality",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "A warm and confident American male voice, perfect for bringing your stories to life. With his professional tone and natural charisma, Bryan adds sparkle to narration, radio, television, and video projects. Elevate your content with a voice that delivers your message with impact.",
+     "public_owner_id": "2c844b83d8228881af750405483d551ffbc6fbad2577aa537b598854d2f2a917",
+     "why": "The library describes it as 'warm and confident American male ... natural charisma'. It measured 136 Hz on the preview. The arena is a mix send.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 136.3,
+      "f0_range_st": 12.2,
+      "wpm": 163.6,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "clod": {
+   "name": "CLOD",
+   "brief": "the rival lab's chatbot: earnest, eager to agree, mid-bow; a warm middle lane; resembles no real product voice.",
+   "lane_hz": [
+    150,
+    180
+   ],
+   "pace_wpm": "150-170",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "RCEgsn4n25vzQMwvNZ94",
+     "voice_name": "Alex - Friendly & Professional",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "neutral",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Alex is a friendly, gender-fluid American voice designed for educational content and corporate settings. Alex speaks confidently while also sounding warm and approachable. Recommended for narration and instructional media",
+     "public_owner_id": "dea7a24ff322e022f41417b52ea685d68ed2c94dba50809434707d648876e277",
+     "why": "The library describes it as 'a friendly, gender-fluid American voice ... warm and approachable'. It measured 150 Hz on the preview, 2 st above Mario, who dictates to it.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "measured_preview": {
+      "median_f0_hz": 149.5,
+      "f0_range_st": 11.8,
+      "wpm": 149.4,
+      "note": "the library preview MP3 (its own text), pYIN; a screen only"
+     }
+    }
+   ]
+  },
+  "lahtnemulb-clone": {
+   "name": "LAHTNEMULB (THE CLONE)",
+   "derived_from": "lahtnemulb",
+   "settings_override": {
+    "stability": 0.85,
+    "style": 0.0
+   },
+   "process": "gloss",
+   "why": "LAHTNEMULB's own library voice read steadier (stability 0.85), then the house 'gloss' process (-1.5 dB @350 Hz, +2.5 dB shelf @7 kHz, a slow 18 % chorus, 4:1). It is 'the same cadence, a shade too smooth': a process on our generic voice, never a clone of anyone. Raised 2 st, as the Kokoro clone was (audit-v2 #26), so the two men differ by ear.",
+   "pitch_st": 2.0
+  },
+  "deepfake-nedib": {
+   "name": "DEEPFAKE NEDIB",
+   "derived_from": "nedib",
+   "settings_override": {
+    "stability": 0.85,
+    "style": 0.0
+   },
+   "process": "gloss",
+   "why": "NEDIB's library voice, steadier, plus the gloss process (as the Kokoro pass did). A process on our generic voice, never a clone."
+  },
+  "deepfake-nedib-2": {
+   "name": "DEEPFAKE NEDIB #2",
+   "derived_from": "nedib",
+   "settings_override": {
+    "stability": 0.85,
+    "style": 0.0
+   },
+   "process": "gloss",
+   "pitch_st": 0.7,
+   "why": "The same as DEEPFAKE NEDIB, raised 0.7 st so the two fakes are told apart."
+  },
+  "elgoog-demo": {
+   "name": "ELGOOG'S DEMO",
+   "brief": "ELGOOG's product film's own voice (the tag's Runway insert): bright, surprised, a stock presenter; never a clone or a sound-alike of anyone, and no real product's voice.",
+   "lane_hz": [
+    160,
+    260
+   ],
+   "pace_wpm": "exclamation",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "hpp4J3VqNfWAUOO0d1Us",
+     "voice_name": "Bella - Professional, Bright, Warm",
+     "source": "ElevenLabs premade voice, used by voice_id",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.2,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "labels": {
+      "accent": "american",
+      "gender": "female",
+      "age": "middle_aged",
+      "descriptive": "professional",
+      "use_case": "informative_educational"
+     },
+     "why": "v3.1 (2026-09-27): a neutral stock-presenter voice no cast member uses (premade; 'warm, bright, and professional, characterized by a Standard American accent'), as the Kokoro lock gave the demo a stock voice of its own (bf_isabella). Style 0.2 for the surprise; the monitor chain is the mix's."
+    }
+   ]
+  },
+  "auhsoj": {
+   "name": "AUHSOJ",
+   "brief": "an investor on a call tile in the war room (sc 41), overheard mid-sentence under Mas's V.O.: brisk, quick, clipped, American; urgent but controlled; one fragment. Never the real person's voice.",
+   "lane_hz": [
+    165,
+    215
+   ],
+   "pace_wpm": "180-240 (the fragment)",
+   "candidates": [
+    {
+     "cand": "A",
+     "voice_id": "q7bTgwLsHXBGhc1u5pDy",
+     "voice_name": "Rick - Professional & Friendly",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Conversational male voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 158.5,
+      "f0_range_st": 11.8,
+      "p_en": 0.9981,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.1,
+      "wpm": 218.2,
+      "sps": 5.45,
+      "pauses_s": [],
+      "median_f0_hz": 192.9,
+      "f0_range_st": 10.3,
+      "final_st": 4.26,
+      "p_en": 0.9985,
+      "tail_cut": false,
+      "asr": "The tender's in trouble.",
+      "speed": 1.05,
+      "st_from_the_count": 10.38,
+      "st_from_tasya_then_we_should_talk": 6.3,
+      "timbre_from_the_count": 81.3,
+      "timbre_from_tasya": 56.3,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-B.wav",
+      "rank": 1
+     },
+     "why": "Picked by measurement (voices-el.md §AC; nobody has listened). Four of the five auditioned voices had no penalty (separation, accent, clean take); the brief broke the tie. His fragment is the only one that is both brisk and unfinished: 218 wpm with no pause inside it, and a final that rises 4.3 st (the others: Ryan +1.6, Blacklogic +2.7, Darren -1.8, falling like a finished statement, with a 0.17 s hitch). At 193 Hz he sits 10.4 st over Mas's count (the V.O. that starts under him) and 6.3 st over Tasya's 'Then we should talk.' (whose last word he overlaps), the widest pitch gaps measured, with p(en) 0.9985 and the only verbatim ASR. The library calls him 'Rick - Professional & Friendly', a middle-aged American conversational voice."
+    },
+    {
+     "cand": "B",
+     "voice_id": "AENbDSfaaTrHNSXAheTB",
+     "voice_name": "Ryan - Crisp, Direct and Reliable",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "informative_educational"
+     },
+     "library_description": "Middle-aged ale voice. Good for Podcast and explainer.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 155.8,
+      "f0_range_st": 9.9,
+      "p_en": 0.9976,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.13,
+      "wpm": 212.4,
+      "sps": 5.31,
+      "pauses_s": [],
+      "median_f0_hz": 181.5,
+      "f0_range_st": 8.1,
+      "final_st": 1.63,
+      "p_en": 0.9955,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": 9.23,
+      "st_from_tasya_then_we_should_talk": 5.15,
+      "timbre_from_the_count": 89.2,
+      "timbre_from_tasya": 48.4,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-A.wav",
+      "rank": 2
+     }
+    },
+    {
+     "cand": "C",
+     "voice_id": "d2ZHRJrmlIbTz4cF7FuP",
+     "voice_name": "Blacklogic - Confident, Clear",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "Natural-sounding male voice.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 170.4,
+      "f0_range_st": 9.8,
+      "p_en": 0.9992,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.0,
+      "wpm": 240.0,
+      "sps": 6.0,
+      "pauses_s": [],
+      "median_f0_hz": 152.8,
+      "f0_range_st": 12.5,
+      "final_st": 2.67,
+      "p_en": 0.9914,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": 7.79,
+      "st_from_tasya_then_we_should_talk": 3.71,
+      "timbre_from_the_count": 68.1,
+      "timbre_from_tasya": 46.6,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-C.wav",
+      "rank": 3
+     }
+    },
+    {
+     "cand": "D",
+     "voice_id": "74s0ZNaUEOKhDHSxgJZq",
+     "voice_name": "Darren - Direct, Clear Corporate Worker",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "young",
+      "accent": "american",
+      "descriptive": "confident",
+      "use_case": "conversational"
+     },
+     "library_description": "A young corporate American male voice. Good for casual conversations.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 85.5,
+      "f0_range_st": 9.5,
+      "p_en": 0.9981,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.31,
+      "wpm": 183.2,
+      "sps": 5.26,
+      "pauses_s": [
+       0.17
+      ],
+      "median_f0_hz": 90.5,
+      "f0_range_st": 6.0,
+      "final_st": -1.75,
+      "p_en": 0.9958,
+      "tail_cut": false,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": -2.7,
+      "st_from_tasya_then_we_should_talk": -6.78,
+      "timbre_from_the_count": 82.4,
+      "timbre_from_tasya": 60.6,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-E.wav",
+      "rank": 4
+     }
+    },
+    {
+     "cand": "E",
+     "voice_id": "xu4h8WWpwjjEFUl9OBNd",
+     "voice_name": "Chato Irias",
+     "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+     "library_category": "professional",
+     "library_labels": {
+      "gender": "male",
+      "age": "middle_aged",
+      "accent": "american",
+      "descriptive": "calm",
+      "use_case": "conversational"
+     },
+     "library_description": "Friendly customer success specialist. Energetic, confident, and persuasive without sounding pushy. Natural conversational pacing with clear pronunciation. Warm, engaging, and professional tone that builds trust quickly.",
+     "model": "eleven_multilingual_v2",
+     "settings": {
+      "stability": 0.45,
+      "similarity_boost": 0.75,
+      "style": 0.1,
+      "use_speaker_boost": true,
+      "speed": 1.05
+     },
+     "measured_preview": {
+      "median_f0_hz": 93.5,
+      "f0_range_st": 11.7,
+      "p_en": 0.9998,
+      "note": "the library preview MP3 (its own text); a screen only"
+     },
+     "measured_audition": {
+      "line": "v35-a4-0007",
+      "voiced_s": 1.41,
+      "wpm": 170.2,
+      "sps": 4.26,
+      "pauses_s": [],
+      "median_f0_hz": 81.6,
+      "f0_range_st": 13.1,
+      "final_st": -3.95,
+      "p_en": 0.9943,
+      "tail_cut": true,
+      "asr": "The tenders in trouble",
+      "speed": 1.05,
+      "st_from_the_count": -3.34,
+      "st_from_tasya_then_we_should_talk": -7.42,
+      "timbre_from_the_count": 36.6,
+      "timbre_from_tasya": 62.0,
+      "take": "audio/ep01/v3-el/auditions/auhsoj/round2/wav/v35-a4-0007__auhsoj-D.wav",
+      "rank": 5
+     }
+    }
+   ],
+   "cast_v35": "phase 10 (2026-09-28): cast by measurement (tools/el_audition.py --role auhsoj; voices-el.md §AC). The screen: 2335 male American young and middle-aged shared-library voices (the free listing), 1416 past the red flags (cast_el.py) and a ban on the real person's names and anything political or impression-like; the top 90 by the brief's words had their previews measured for pitch and p(en); five were read (one fragment each, the episode's seed, speed 1.05), on both sides of the window the two overlapped voices leave. Candidate letters here are the ranking's (A = the pick); the audition takes in auditions/auhsoj/round2/ keep their audition letters (measured_audition.take). Guardrails §6: no voice was chosen for resembling anyone, nothing was imitated, the line was sent as written (say_lines only drops the print dashes).",
+   "lane_note": "his take's 193 Hz with about 2 st either side, kept at least 2 st over Tasya's overlapped line (135 Hz) and far over Mas's count (106 Hz); the pitch pass reads it"
+  }
+ },
+ "respell_lines": {},
+ "respell_roles": {},
+ "say_lines": {
+  "v35-a4-0007": "the tender's in trouble,"
+ },
+ "say_lines_note": "Per-line readings: the same words with other punctuation, sent instead of the line (the lines JSON keeps the script's text). e1-a2-15-04: Mas's 'which one am i?' came back as a sharp rise on both takes (median F0 226 and 257 Hz, pYIN 107 -> 289 Hz), against his brief's level or falling finals; sent as a statement. v35-a4-0007 (AUHSOJ, v3.5): the fragment '—the tender's in trouble—' is overheard mid-sentence on a call tile, under Mas's V.O.; it is sent as the writer's Kokoro read was ('the tender's in trouble,': no dashes, and a comma so it doesn't land as a finished sentence).",
+ "say_full": {
+  "a5-27-31": "Neleh, hi. Wow. I've actually written up some thoughts on exactly this. Eleven pages, on the conditions under which we might, hypothetically, consider it.",
+  "a5-29-24": "Has anyone read the charter?"
+ },
+ "say_full_note": "Lines cut off by the world (the timeline's 'cut', text ending in a dash) are read whole, as the Kokoro takes were (their spoken_as in audio/ep01/act4/dialogue/lines-v5.json); the lock's 'dur' marks the cut-off and the mixer plays the whole file.",
+ "set_cand": {
+  "A": {
+   "mas-manalt": "C",
+   "sirrah": "B"
+  }
+ },
+ "set_cand_note": "Per-set overrides of the candidate letter. Set A (the episode set) uses candidate C for Mas since the phase-3 recast: the showrunner heard A (Giovanni) as accented ('strangely russian'). Giovanni stays on file as candidate A. v3.5 (2026-09-28): set A uses candidate B for Sirrah (Ida Freeist), recast after the showrunner's note (\"harris's voice is not very good\"); Marie stays on file as candidate A, Pamela as C (roles.sirrah.recast_v35, voices-el.md §AA).",
+ "respell_voices": {
+  "g6fJBFvZZp41FerGMMx7": {
+   "words": {
+    "Gerg": "Guhrg",
+    "Noted": "Noded"
+   },
+   "lines": {
+    "a5-29-01": {
+     "badge": "badj"
+    },
+    "v3-vo-23": {
+     "Gerg": "...Guhrg"
+    }
+   },
+   "say": {
+    "e1-a2-15-04": "Which one am I."
+   },
+   "name": "Giovanni (Mas, candidate A)",
+   "note": "The phase-2 fixes fitted to this voice (respell_note, say_lines_note): they apply only when this voice speaks."
+  }
+ },
+ "respell_voices_note": "respell_voices: {voice_id: {words, lines, say}}, fixes that belong to one voice (a new voice starts from the house respellings and gets its own name check). The phase-2 Mas fixes moved here from respell_roles, respell_lines and say_lines on 2026-09-27, when Mas was recast.",
+ "line_settings": {
+  "v34-vo-07": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.0,
+    "stability": 0.6,
+    "style": 0.1,
+    "_why": "the lead, 2026-09-28: one quicker retake, brisk and quietly pleased (his last confident thought before the blow: a man already planning the meeting). The V.O. settings (speed 0.85, stability 0.65, style 0) gave 114 wpm."
+   }
+  },
+  "v35-vo-04": {
+   "EwzF7Z2UMSib9JaKx0Kg": {
+    "speed": 1.15,
+    "stability": 0.55,
+    "style": 0.0,
+    "_why": "the lead, 2026-09-28: the war room's count is his rattled moment, 'faster than he ever thinks'. The V.O. settings (speed 0.85, stability 0.65, style 0) read it at 72 wpm over 6.71 s voiced (Kokoro 3.42 s); this read is 4.90 s, 98 wpm, 4.5 syll/s (voices-el.md §AC3). The slow take stays in the cache: dropping this entry brings it back for free."
+   }
+  }
+ },
+ "line_settings_note": "Per-line settings over the role's (and its V.O.) settings, keyed by line id and voice id, for a read one line needs. Keys starting with '_' are notes.",
+ "engine_note": "roles.<role>.engine: 'elevenlabs' (the default, absent) or 'kokoro' (the role keeps its Kokoro takes inside the EL film) on every Ep2 lock (Ep1's engine_from_lock is dropped in this copy).",
+ "cache_read": [
+  "audio/ep01/v3-el/cache"
+ ],
+ "cache_read_note": "read-only caches: a key found there is copied into cache_dir (no characters sent); nothing is written to them"
+}

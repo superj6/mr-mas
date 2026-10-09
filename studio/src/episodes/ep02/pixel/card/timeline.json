@@ -1,0 +1,22 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "CARD · the filename card · 2 s",
+ "variant": "Ep2 v1 · the filename card as a one-beat pixel segment",
+ "logline": "The filename alone, typed on quickly with a cursor, on black (no disclaimer).",
+ "dateSpan": "",
+ "runtimeMin": 0.03,
+ "dialogueReel": true,
+ "cast": {},
+ "_source": {
+  "about": "One beat, 2.0 s (48 f). Episode time, not story. The layout is ./shots.ts, the lock ./data.ts (tools/lock.py). The sound is the mix's card-mix.wav (out/ep02/v1/mix/: room tone, Act One's first room leading its cut).",
+  "notes": "show/episodes/ep02/production/v1/pipeline.md",
+  "takes": null,
+  "act_seconds": 2.0
+ },
+ "beats": [
+  {"id": "card.01", "act": "INTRO", "kind": "card", "set": "void", "style": "BASE", "shot": "wide", "frame": "CARD · the filename, typed on black",
+   "side": "", "room": "card", "chars": [], "caption": "Black. A cursor; the filename types on quickly, ep1.1_her.wav, and the cursor blinks after it. Nothing else.",
+   "lines": [], "onscreen": [], "reelDur": 2.0, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "card"}}
+ ]
+}

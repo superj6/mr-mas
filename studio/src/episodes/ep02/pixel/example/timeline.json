@@ -1,0 +1,30 @@
+{
+ "episode": 2,
+ "title": "ep1.1_her.wav",
+ "part": "EXAMPLE · the per-scene render's test bed (not a segment of the show)",
+ "variant": "a hand-written stick timeline: three scenes, five shots, a rail, a V.O. line, a dither exit",
+ "logline": "The Ep2 pixel pipeline's worked example: scene A (two shots and a rail), scene B (a V.O. line, then a shot that dissolves into scene C), scene C (one shot).",
+ "dateSpan": "",
+ "dialogueReel": true,
+ "cast": {"mas": {"name": "MAS", "role": "MAS"}},
+ "_source": {"about": "the test bed of tools/render.ts `scenes` (studio/src/episodes/ep02/pixel/README.md). Not the show.", "takes": null},
+ "beats": [
+  {"id": "ex-a1", "act": "EXAMPLE", "kind": "scene", "set": "void", "style": "BASE", "shot": "wide", "frame": "WIDE · the lobby, a bar crossing",
+   "side": "", "room": "lobby", "chars": [], "caption": "Scene A, shot 1: a bar crosses the frame.", "lines": [],
+   "onscreen": [{"text": "RAIL: MAR 5, 2024", "at": 0.2, "until": 4.2}], "reelDur": 2.0, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "A"}},
+  {"id": "ex-a2", "act": "EXAMPLE", "kind": "scene", "set": "void", "style": "BASE", "shot": "medium", "frame": "MEDIUM · the lamp blinking on the scene's clock",
+   "side": "", "room": "lobby", "chars": [], "caption": "Scene A, shot 2: a lamp blinks on f (the scene's frame).", "lines": [],
+   "onscreen": [], "reelDur": 1.5, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "A"}},
+  {"id": "ex-b1", "act": "EXAMPLE", "kind": "scene", "set": "void", "style": "BASE", "shot": "medium", "frame": "MEDIUM · the dark room, the V.O.",
+   "side": "", "room": "dark", "chars": [], "caption": "Scene B, shot 1: his V.O. typed above the band.",
+   "lines": [{"id": "ex-vo-1", "who": "mas", "text": "leave them up.", "t": 0.4, "dur": 1.2, "tag": "V.O.", "cut": false,
+              "words": [["leave", 0.0, 0.3], ["them", 0.35, 0.55], ["up.", 0.6, 1.0]]}],
+   "onscreen": [], "reelDur": 2.5, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "B"}},
+  {"id": "ex-b2", "act": "EXAMPLE", "kind": "scene", "set": "void", "style": "BASE", "shot": "wide", "frame": "WIDE · the dark room, dissolving out",
+   "side": "", "room": "dark", "chars": [], "caption": "Scene B, shot 2: a bayer dissolve into scene C's first frame.", "lines": [],
+   "onscreen": [], "reelDur": 1.5, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "B"}},
+  {"id": "ex-c1", "act": "EXAMPLE", "kind": "scene", "set": "void", "style": "BASE", "shot": "wide", "frame": "WIDE · the bridge",
+   "side": "", "room": "bridge", "chars": [], "caption": "Scene C: one held shot with a moving car.", "lines": [],
+   "onscreen": [], "reelDur": 2.0, "fx": [], "cues": [], "sounds": [], "passes": {"scene": "C"}}
+ ]
+}

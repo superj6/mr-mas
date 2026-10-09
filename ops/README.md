@@ -13,6 +13,8 @@ Operational helpers for running this project on one laptop.
   - `--dry-run` runs nothing and writes nothing in the repo. It prints every command in order and checks that every path it names exists, and for the film step every input `assemble.py` reads. It exits 1 if anything is missing. Use it first, and after any move.
   - **Act One stops at its lock step on purpose.** Its EL timeline carries two hand-placed V.O. lines that `el_lock.py` would drop, and `el_lock.py --fixed S7.13 <seg> …` swallows the segment names after `--fixed` and rebuilds all six segments (`voices-el.md` §AD, §AE). Splice a changed Act One beat by hand, then run `--from mix`.
 
+- `rebuild-act.sh --ep 2 <act> [--scene ID[,ID]] [--from STEP] [--only STEP] [--dry-run]` runs `rebuild-act-ep2.sh`, Ep2 v1's copy (2026-10-08): the same steps on Ep2's tools (lock, score, mix, picture, mux, scenecut, film). Its picture step is the per-scene render (only scenes whose content changed are drawn; the act picture is their lossless concat), and `--scene` renders just those scenes and cuts each one with its sound for review. Without `--ep` (or with `--ep 1`) `rebuild-act.sh` runs exactly as before (its six dry runs are identical). Documented in `show/episodes/ep02/production/v1/pipeline.md` §7.
+
 - `pressure-governor.sh [minutes] &`: pauses this project's heavy jobs (their `heavy.sh` scopes) while the session's memory pressure is above 20%, and resumes them under 5%. It never touches another project's processes.
 
 ### The reorganization tools (docs/ORGANIZATION-PLAN.md)

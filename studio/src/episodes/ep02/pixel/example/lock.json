@@ -1,0 +1,508 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep02",
+  "seg": "example",
+  "label": "EXAMPLE",
+  "timeline": "studio/src/episodes/ep02/pixel/example/timeline.json",
+  "takes": [],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "00:00:00",
+  "ep_in_frames": 0,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 5,
+  "beats": 5,
+  "frames": 228,
+  "seconds": 9.5,
+  "length": "0:09.50",
+  "episode_in": "00:00:00",
+  "episode_out": "00:09:12",
+  "verdicts": {
+   "-": 5
+  },
+  "mean_s": 1.9,
+  "median_s": 2.0,
+  "min_s": 1.5,
+  "max_s": 2.5,
+  "lines": 1,
+  "posts": 0,
+  "vo": 1,
+  "lines_with_mouth": 0,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": null,
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "scenes tile the segment",
+   "ok": true,
+   "detail": "3 scenes: A(84f) B(96f) C(48f)"
+  },
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "5 shots from 5 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 228"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 1; other: 0"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "EXAMPLE",
+   "side": "",
+   "place": "",
+   "time": "",
+   "s": 0,
+   "e": 228,
+   "shots": [
+    "ex-a1",
+    "ex-a2",
+    "ex-b1",
+    "ex-b2",
+    "ex-c1"
+   ],
+   "chapter": "EXAMPLE",
+   "title": "",
+   "cue": "",
+   "frames": 228,
+   "tc_in": "00:00:00",
+   "tc_out": "00:09:12"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "A",
+   "s": 0,
+   "e": 84,
+   "shots": [
+    "ex-a1",
+    "ex-a2"
+   ],
+   "tc_in": "00:00:00",
+   "tc_out": "00:03:12"
+  },
+  {
+   "id": "B",
+   "s": 84,
+   "e": 180,
+   "shots": [
+    "ex-b1",
+    "ex-b2"
+   ],
+   "tc_in": "00:03:12",
+   "tc_out": "00:07:12"
+  },
+  {
+   "id": "C",
+   "s": 180,
+   "e": 228,
+   "shots": [
+    "ex-c1"
+   ],
+   "tc_in": "00:07:12",
+   "tc_out": "00:09:12"
+  }
+ ],
+ "shots": [
+  {
+   "id": "ex-a1",
+   "setup": "ex-a1",
+   "beats": [
+    "ex-a1"
+   ],
+   "s": 0,
+   "e": 48,
+   "onscreen": [
+    {
+     "text": "RAIL: MAR 5, 2024",
+     "s": 4,
+     "e": 100
+    }
+   ],
+   "lines": [],
+   "seq": "EXAMPLE",
+   "scene": "A",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the lobby, a bar crossing",
+   "cls": "W",
+   "move": "cut",
+   "does": "Scene A, shot 1: a bar crosses the frame.",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "lobby",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Scene A, shot 1: a bar crosses the frame.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "ex-a1": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:00:00",
+   "tc_out": "00:02:00",
+   "frames": 48
+  },
+  {
+   "id": "ex-a2",
+   "setup": "ex-a2",
+   "beats": [
+    "ex-a2"
+   ],
+   "s": 48,
+   "e": 84,
+   "onscreen": [],
+   "lines": [],
+   "seq": "EXAMPLE",
+   "scene": "A",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM · the lamp blinking on the scene's clock",
+   "cls": "M",
+   "move": "hold",
+   "does": "Scene A, shot 2: a lamp blinks on f (the scene's frame).",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "lobby",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Scene A, shot 2: a lamp blinks on f (the scene's frame).",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "ex-a2": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:02:00",
+   "tc_out": "00:03:12",
+   "frames": 36
+  },
+  {
+   "id": "ex-b1",
+   "setup": "ex-b1",
+   "beats": [
+    "ex-b1"
+   ],
+   "s": 84,
+   "e": 144,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "ex-vo-1",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "leave them up.",
+     "s": 9,
+     "e": 39,
+     "fs": 9,
+     "fe": 45,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "leave",
+       0,
+       7
+      ],
+      [
+       "them",
+       9,
+       13
+      ],
+      [
+       "up.",
+       15,
+       24
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
+   "seq": "EXAMPLE",
+   "scene": "B",
+   "scene_s": 84,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM · the dark room, the V.O.",
+   "cls": "M",
+   "move": "hold",
+   "does": "Scene B, shot 1: his V.O. typed above the band.",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "dark",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Scene B, shot 1: his V.O. typed above the band.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "ex-b1": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:03:12",
+   "tc_out": "00:06:00",
+   "frames": 60
+  },
+  {
+   "id": "ex-b2",
+   "setup": "ex-b2",
+   "beats": [
+    "ex-b2"
+   ],
+   "s": 144,
+   "e": 180,
+   "onscreen": [],
+   "lines": [],
+   "seq": "EXAMPLE",
+   "scene": "B",
+   "scene_s": 84,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the dark room, dissolving out",
+   "cls": "W",
+   "move": "cut",
+   "does": "Scene B, shot 2: a bayer dissolve into scene C's first frame.",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "dark",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Scene B, shot 2: a bayer dissolve into scene C's first frame.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "ex-b2": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:06:00",
+   "tc_out": "00:07:12",
+   "frames": 36
+  },
+  {
+   "id": "ex-c1",
+   "setup": "ex-c1",
+   "beats": [
+    "ex-c1"
+   ],
+   "s": 180,
+   "e": 228,
+   "onscreen": [],
+   "lines": [],
+   "seq": "EXAMPLE",
+   "scene": "C",
+   "scene_s": 180,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE · the bridge",
+   "cls": "W",
+   "move": "cut",
+   "does": "Scene C: one held shot with a moving car.",
+   "chars": [],
+   "cues": [],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "void",
+   "room": "bridge",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Scene C: one held shot with a moving car.",
+   "cast": [],
+   "speak": [],
+   "beat_starts": {
+    "ex-c1": 0
+   },
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:07:12",
+   "tc_out": "00:09:12",
+   "frames": 48
+  }
+ ],
+ "lines": [
+  {
+   "id": "ex-vo-1",
+   "shot": "ex-b1",
+   "beat": "ex-b1",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "leave them up.",
+   "tag": "V.O.",
+   "on_s": 3.9,
+   "end_s": 5.1,
+   "file_s": 3.9,
+   "abs_in": 93,
+   "abs_out": 123,
+   "file_in": 93,
+   "file_out": 129,
+   "file": "",
+   "stick_t": 0.4,
+   "stick_in": 0.0,
+   "cut": false,
+   "on_camera": null,
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "leave",
+     0,
+     7
+    ],
+    [
+     "them",
+     9,
+     13
+    ],
+    [
+     "up.",
+     15,
+     24
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  }
+ ],
+ "posts": [],
+ "rails": [
+  {
+   "text": "MAR 5, 2024",
+   "s": 4,
+   "e": 100,
+   "shot": "ex-a1",
+   "floor_f": 20
+  }
+ ],
+ "sound_marks": [],
+ "subs": [
+  {
+   "s": 93,
+   "e": 123,
+   "hold_to": 135,
+   "who": "MAS",
+   "shown": "MAS",
+   "text": "leave them up.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "ex-vo-1",
+   "os": false
+  }
+ ],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [
+  "1 lines have no take in the takes files: kind/mode from the tag, mouth track from the words (ex-vo-1)",
+  "V.O. on screen with a rail item (§5.2 wants one must-read at a time; stagger by a beat): [\"ex-vo-1~'MAR 5, 2024'\"]"
+ ],
+ "problems": []
+}
