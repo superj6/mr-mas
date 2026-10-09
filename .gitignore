@@ -83,3 +83,7 @@ audio/sfx/wav/*.wav
 
 # full-v3 art: the 4x copies are reproducible from native/ (the sheet tools)
 out/ep01/full-v3/assets/*/full/
+
+# Ep2 cold open: the 2.A overlay layers (146 MB of 1080p RGBA PNGs), rebuilt from the Runway take by
+# studio/src/episodes/ep02/pixel/coldopen/tools/aros_insert.py; their manifests stay tracked
+out/ep02/v1/inserts/aros/*/l*.png

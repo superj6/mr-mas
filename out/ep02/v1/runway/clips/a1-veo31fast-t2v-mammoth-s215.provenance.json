@@ -1,0 +1,44 @@
+{
+ "tool": "studio/src/dev/genvideo/runway/gen.py",
+ "provider": "Runway API (api.dev.runwayml.com)",
+ "api_version": "2024-11-06",
+ "endpoint": "/v1/text_to_video",
+ "kind": "t2v",
+ "model": "veo3.1_fast",
+ "prompt": "Nature documentary footage, photorealistic. A single woolly mammoth with long shaggy brown fur and long curved ivory tusks plods slowly through a snowy meadow straight toward the camera. It starts in the middle distance, its whole body visible in the centre of the frame, and walks steadily closer until its head, trunk and tusks fill the frame and its front feet reach the bottom edge of the frame. Light snow is falling. Overcast soft daylight, a hazy line of pine trees far behind. Static locked-off camera on a tripod, no camera movement, one continuous shot.",
+ "negative_prompt": "people, person, human, hands, face of a person, rider, text, letters, watermark, logo, captions, camera shake, camera pan, zoom, cut, edit, two mammoths, elephant, cartoon",
+ "seed": 215,
+ "ratio": "1280:720",
+ "duration_s": 8,
+ "audio": false,
+ "content_moderation": null,
+ "inputs": {},
+ "request_body_elided": {
+  "model": "veo3.1_fast",
+  "promptText": "Nature documentary footage, photorealistic. A single woolly mammoth with long shaggy brown fur and long curved ivory tusks plods slowly through a snowy meadow straight toward the camera. It starts in the middle distance, its whole body visible in the centre of the frame, and walks steadily closer until its head, trunk and tusks fill the frame and its front feet reach the bottom edge of the frame. Light snow is falling. Overcast soft daylight, a hazy line of pine trees far behind. Static locked-off camera on a tripod, no camera movement, one continuous shot.",
+  "ratio": "1280:720",
+  "duration": 8,
+  "seed": 215,
+  "audio": false,
+  "negativePrompt": "people, person, human, hands, face of a person, rider, text, letters, watermark, logo, captions, camera shake, camera pan, zoom, cut, edit, two mammoths, elephant, cartoon"
+ },
+ "credits_before": 165,
+ "estimate_credits": 80.0,
+ "submitted_at": "2026-10-09T14:09:46+00:00",
+ "purpose": "Ep2 sc 1 (2.A): AROS's preview on the lobby wall screen, objects only",
+ "terms_note": "Not re-verified by this tool: per GENAI-UPGRADE-PLAN \u00a75.1, Runway claims no ownership of outputs; Veo outputs carry Google SynthID (invisible). Check each clip for a visible watermark; disclose in the end credits (GENAI \u00a76).",
+ "task_id": "df2640c7-bd11-41f2-9ca4-dfe3d5b544ef",
+ "status": "SUCCEEDED",
+ "task_created_at": "2026-10-09T14:09:47.172Z",
+ "outputs": [
+  {
+   "file": "a1-veo31fast-t2v-mammoth-s215.mp4",
+   "sha256": "d7191bd7c5e4be67d08222df5bd9ad97b64a2d9f19d4257557ef221bdd0338c6",
+   "bytes": 6684080
+  }
+ ],
+ "finished_at": "2026-10-09T14:11:03+00:00",
+ "wall_s": 76.8,
+ "credits_after": 85,
+ "credits_spent": 80
+}

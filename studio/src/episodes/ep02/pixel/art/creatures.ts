@@ -66,20 +66,36 @@ export const drawMammoth = (b: Buf, x: number, y: number, f: number, o: {fifth?:
       set(px, py, edge ? R[lit ? 8 : 6] : lit ? R[7] : strand(i, j, j > hm - 8 ? 2 : i < 20 ? 5 : i < 40 ? 4 : 3));
     }
   }
-  // the head's front: the brow, the small eye, the ear's fringe; the trunk hanging and curling forward
-  set(x + 13, y - 56 + bob, PAL.N0); set(x + 12, y - 56 + bob, PAL.N0); set(x + 12, y - 57 + bob, R[8]);
-  for (let j = 0; j < 10; j++) for (let i = 0; i < 6; i++) if (i + (j % 3) < 5) set(x + 20 + i, y - 58 + j + bob, strand(20 + i, j, 2));
+  // the head's front: the brow ridge over a small dark eye with a lit lid; the small ear a darker patch of shag
+  // behind it (the shot pass, 2026-10-09: the old ear fringe was three stacked bars that read as a letter E); the trunk
+  // hanging and curling forward
+  for (let i = 9; i < 17; i++) set(x + i, y - 59 + bob, R[6]);
+  set(x + 12, y - 57 + bob, PAL.N0); set(x + 13, y - 57 + bob, PAL.N0); set(x + 12, y - 58 + bob, R[7]); set(x + 13, y - 58 + bob, R[7]);
+  for (let j = 0; j < 9; j++) for (let i = 0; i < 6; i++) { const d = Math.hypot((i - 2.5) / 3.2, (j - 4) / 4.6); if (d < 1) set(x + 21 + i, y - 60 + j + bob, strand(21 + i, j, d > 0.7 ? 1 : 2)); }
   for (let k = 0; k < 30; k++) {
     const tx = x + 6 - Math.round(Math.sin((k / 30) * 2.6) * 7) + (k > 26 ? k - 26 : 0), ty = y - 46 + bob + k;
     const w = k < 10 ? 6 : k < 20 ? 5 : 4;
     for (let q = 0; q < w; q++) set(tx + q, ty, q === 0 ? R[1] : q === w - 1 ? R[3] : strand(tx + q, ty, 4));
   }
-  // the tusks: long ivory curves, forward, down and up again
-  for (let side = 0; side < 2; side++) for (let k = 0; k < 34; k++) {
-    const a = (k / 34) * Math.PI;
-    const tx = x + 12 - side * 3 - Math.round(k * 0.9), ty = y - 40 + bob + Math.round(Math.sin(a) * 9) - Math.round(Math.max(0, k - 22) * 0.9);
-    set(tx, ty, IVORY[side ? 1 : 2]); if (k < 24) set(tx, ty + 1, IVORY[side ? 0 : 1]);
-  }
+  // the tusks: two long ivory sweeps out of the jaw, forward and down, then curving up (a cubic, stepped one pixel at
+  // a time so the curve is whole: the old one stepped 0.9 px and broke into dots), thick at the root and tapering,
+  // lit on top and shadowed under; the far one a rung darker, behind
+  const tusk = (ox: number, oy: number, tone: number) => {
+    const P = [[x + 12 + ox, y - 41 + oy], [x - 4 + ox, y - 24 + oy], [x - 22 + ox, y - 28 + oy], [x - 17 + ox, y - 47 + oy]];
+    let px = -999, py = -999;
+    for (let s = 0; s <= 120; s++) {
+      const t = s / 120, u = 1 - t;
+      const bx = u * u * u * P[0][0] + 3 * u * u * t * P[1][0] + 3 * u * t * t * P[2][0] + t * t * t * P[3][0];
+      const by = u * u * u * P[0][1] + 3 * u * u * t * P[1][1] + 3 * u * t * t * P[2][1] + t * t * t * P[3][1] + bob;
+      const cx = Math.round(bx), cy = Math.round(by);
+      if (cx === px && cy === py) continue;
+      px = cx; py = cy;
+      const th = t < 0.35 ? 3 : t < 0.75 ? 2 : 1;
+      for (let q = 0; q < th; q++) set(cx, cy + q, q === 0 ? IVORY[clamp(2 - tone, 0, 2)] : q === th - 1 ? IVORY[0] : IVORY[clamp(1 - tone, 0, 2)]);
+    }
+  };
+  tusk(3, -1, 1);
+  tusk(0, 0, 0);
   leg(14, g[0], false); leg(58, g[2], false);
   // the fifth leg (2 frames at the step-out): a pale, wrong extra limb between the front pair
   if (o.fifth) for (let j = 46; j < 72; j++) for (let i = 0; i < 9; i++) set(x + 38 + i, y - 74 + j, i === 0 ? R[1] : strand(38 + i, j, 6));
