@@ -18,7 +18,7 @@
 //            she doesn't look up · 11.16 every head near the wings turns; the blimp over the emptying house
 // Why he posted it, and whether the voice was meant to sound like anyone: nothing here tells us (W8). No V.O.
 import {defineScene, layouts, mouth, roomMouth, talking, mk} from '../../kit';
-import {stageWide, screenSCR, rimaMCU, glassesECU, eng2S, demoOpen, rimaClicker, STG, scrEyes, CATCH} from '../sets/stage';
+import {stageWide, screenSCR, rimaMCU, glassesECU, eng2S, demoOpen, rimaClicker, STG, scrEyes, CATCH, houseClose} from '../sets/stage';
 import type {ScreenSt, StageSt} from '../sets/stage';
 import {masOrb2S, masPhoneMedium, thumbECU, masFaceWork, herPOV} from '../sets/wings';
 import {glyphLayer} from '../../../../../shared/pixel/glyph';
@@ -34,7 +34,7 @@ const meter = (sh: Parameters<typeof talking>[0], k: number, spot: 0 | 1 | 2 | 3
   spot, rig: 1, screen,
   house: {rows: 3, phones: 'down', press: true, ...(o.laugh ? {f: Math.floor(k / 3) * 8} : {})},
   eng: {pose: {arm: 'raise', mouth: o.engMouth ?? (roomMouth(sh, k, 'ENGINEER') === 'open' ? 'open' : 'smile')}, flip: o.engFlip},
-  rima: {pose: {mouth: roomMouth(sh, k, 'RIMA')}, light: spot === 0 ? 'spot' : spot === 1 ? 'half' : 'dark'},
+  rima: {pose: {mouth: roomMouth(sh, k, 'RIMA')}, light: spot === 0 ? 'spot' : spot === 1 ? 'half' : spot === 2 ? 'dim' : 'dark'},
   ...o,
 });
 
@@ -58,8 +58,15 @@ const EYES_MASK = (() => { const m = new Mask(480, 270); for (const [x, y] of sc
 const eyeSource = (fb: Buf) => {
   const src = fb.clone();
   for (let y = 0; y < 203; y++) for (let x = 0; x < 480; x++) if (EYES_MASK.get(x, y) > 0) src.set(x, y, PAL.N0);
-  // each eye a bright field of tokens, its brightest side turned screen-left (toward the wings, at Mas)
-  for (const [ex, ey] of scrEyes()) for (let j = -10; j <= 10; j++) for (let i = -22; i <= 22; i++) { const d = Math.hypot(i / 22, j / 10); if (d < 1) src.set(ex - 6 + i, ey + j, i < -8 ? PAL.C9 : d < 0.6 ? PAL.C7 : PAL.C5); }
+  // each eye: a faint field of tokens (the eye's white, sparse) and its pupil, a dense bright disc of tokens with a hot
+  // catchlight, in the eye's SCREEN-LEFT third (the review pass: the cyan mass sat right of centre, so the eyes looked
+  // away from the wings): it looks into the wings, at Mas
+  for (const [ex, ey] of scrEyes()) {
+    const mx = ex - 4;
+    for (let j = -14; j <= 14; j++) for (let i = -25; i <= 25; i++) { if (Math.hypot(i / 25, j / 14) < 1) src.set(mx + i, ey + j, PAL.C1); }
+    const px = mx - 13;
+    for (let j = -10; j <= 10; j++) for (let i = -10; i <= 10; i++) { const d = Math.hypot(i, j); if (d < 10) src.set(px + i, ey + j, d < 3 && i < 0 && j < 0 ? PAL.C9 : d < 7 ? PAL.C7 : PAL.C5); }
+  }
   void familyOf;
   return src;
 };
@@ -173,14 +180,21 @@ L.add('11.15', {
   marks: {un: ['snd', 'headset_unclip', 1, 0]},
   draw: (fb, k, sh, f) => { const un = mk(sh, 'un', 6); eng2S(fb, f, {mouth: mouth(sh, k, 'ENGINEER'), arm: k < un + 10 ? 'unclip' : 'phone', headset: k < un + 4 ? 'on' : 'off'}); },
 });
+const walk4 = (k: number) => (['w0', 'w1', 'w2', 'w3'] as const)[Math.floor(k / 3) % 4];
+/** the blimp's exit: up into the rig in held steps of 7 frames, then gone (it never shares a frame with the seat) */
+const BLIMP_OUT: Array<[number, number]> = [[154, 42], [158, 24], [162, 4], [166, -16]];
 L.add('11.16', {
-  st: 'act2/sets/stage stageWide (every head near the wings turns to them (cheeks and ears come round to the left), the blimp at its fourth size over the emptying house)',
+  st: 'act2/sets/stage houseClose → stageWide ([M] AFTER, low in the house by the wings: the rows nearest them from behind at a readable size (act2 backhead in the house light, a different person in every seat); on the rustle every head comes round to the wings in two held drawings, a few frames apart, nearest last, and the raised phones swing from the stage to the wings; [W] the meter frame: those heads turned, the blimp drifting up into the rig in held steps and out of the frame, the engineer walking off into the wings, Rima on her mark)',
   marks: {turn: ['snd', 'cloth_rustle', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const t = mk(sh, 'turn', 4);
+    const t = mk(sh, 'turn', 4), len = sh.e - sh.s, cut = len - 32;
+    if (k < cut) { houseClose(fb, f, {k, t0: t}); return; }
+    const bi = Math.floor((k - cut) / 7);
+    const ex = 200 - Math.max(0, k - t) * 3;
     stageWide(fb, f, {spot: 3, rig: 1, lights: 1, screen: {grow: 3, mouth: 'rest', chat: CATCH + 2, live: 'ended'},
-      house: {rows: 3, phones: 'swung', press: true, gone: 0.35, turn: k >= t ? Math.min(240, 80 + (k - t) * 12) : undefined},
-      eng: {x: 200, flip: true, pose: {arm: 'phone', mouth: 'rest', headset: 'off'}}, rima: {light: 'house'}, blimp: {size: 4, x: 154, y: 42}});
+      house: {rows: 3, phones: 'swung', press: true, gone: 0.35, turn: 240},
+      eng: ex > -24 ? {x: ex, flip: true, pose: {arm: 'phone', mouth: 'rest', headset: 'off', legs: walk4(k)}} : null, rima: {light: 'house'},
+      blimp: bi < BLIMP_OUT.length ? {size: 4, x: BLIMP_OUT[bi][0], y: BLIMP_OUT[bi][1]} : null, blimpBehindRig: bi >= 1, legOver: true});
   },
 });
 void STG;

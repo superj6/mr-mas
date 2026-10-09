@@ -1,6 +1,8 @@
 // MR. MAS — Ep2 v1 · act2: helpers every Act Two scene shares (the shots pass, 2026-10-09). A copy of act1/sets/common.ts
 // (a layer composite, a whole-room reframe, a room a rung down, held steps and glides, the warm-lamp map for the cool-lit
 // Ep1 rigs) plus act1/sets/figures.ts backHead (the OTS foreground), copied so the two acts never share a cache key.
+// The review pass added: forearm (a foreshortened sleeve), putBustSoft (a bust with a feathered falloff), rimaLook (her
+// eyes a step to one side), cupThumb (a phone typed on, the thumb posed per key), keyBalloon (a key's preview).
 // A change here re-renders every Act Two scene.
 import {Buf, clamp, bayer, hash} from '../../../../../shared/pixel/px';
 import {stepColor, familyOf, PAL} from '../../../../../shared/pixel/palette';
@@ -143,6 +145,9 @@ import {rimaStand, RIMA_STAND_W, RIMA_STAND_FOOT} from '../../../../../shared/pi
 import type {RimaStandPose} from '../../../../../shared/pixel/cast/rima-stand';
 import {blitImg} from '../../../../../shared/pixel/figure';
 import type {Img} from '../../../../../shared/pixel/figure';
+import {handRig, renderHand, drawHand} from '../../art/cast/hands2';
+import type {HandPose, V3} from '../../art/cast/hands2';
+import {bpt, bpw} from '../../art/kit';
 const RIMA_FIX = new Map<string, Img>();
 export const rimaRoomImg = (p: RimaStandPose): Img => {
   const key = JSON.stringify(p);
@@ -188,4 +193,151 @@ export const smoothSkin = <T extends Img>(im: T): T => {
   const out = {...im, c};
   SMOOTH.set(im, out);
   return out;
+};
+
+/** a FORESHORTENED forearm (the review pass: Ep1's "flat-bar arm", P5): the sleeve from the cuff `a` toward the lens
+ *  `c` (a point past the frame's edge), widening as it nears the lens (r0 at the cuff, r1 at `c`, the growth easing in
+ *  so the near end swells), with a CUFF BREAK (the sleeve bunched a few pixels behind the cuff: a fold ring, a rung
+ *  down, its lip a rung up) and a few soft creases; lit from `key` like hands2's sleeve: [outline, shadow, mid, lit,
+ *  rim]. `a` -> `c` need not continue the hand's own line: the angle between them is the wrist's bend. */
+export const forearm = (b: Buf, a: [number, number], c: [number, number], r0: number, r1: number, ramp: number[], key: [number, number] = [-0.55, -0.83]) => {
+  const [x0, y0] = a, [x1, y1] = c;
+  const dx = x1 - x0, dy = y1 - y0, L2 = Math.max(1, dx * dx + dy * dy), L = Math.sqrt(L2);
+  const R = Math.max(r0, r1) + 3;
+  const brk = Math.max(5, r0 * 0.5);
+  const rad = (t: number) => { const u = t * L; return r0 + (r1 - r0) * Math.pow(t, 1.5) + (u > brk - 3 && u < brk + 5 ? 1.5 : 0); };
+  for (let y = Math.floor(Math.min(y0, y1) - R); y <= Math.max(y0, y1) + R; y++) for (let x = Math.floor(Math.min(x0, x1) - R); x <= Math.max(x0, x1) + R; x++) {
+    if (x < 0 || y < 0 || x >= b.w || y >= RH) continue;
+    const t = clamp(((x + 0.5 - x0) * dx + (y + 0.5 - y0) * dy) / L2, 0, 1), cx = x0 + dx * t, cy = y0 + dy * t, d = Math.hypot(x + 0.5 - cx, y + 0.5 - cy);
+    const r = rad(t);
+    if (d > r) continue;
+    const nx = (x + 0.5 - cx) / Math.max(0.5, d), ny = (y + 0.5 - cy) / Math.max(0.5, d), lit = key[0] * nx + key[1] * ny;
+    let col = d > r - 1 ? (lit > 0.3 ? ramp[4] : lit < -0.2 ? ramp[0] : ramp[2]) : lit > 0.35 ? ramp[3] : lit < -0.3 ? ramp[1] : ramp[2];
+    const u = t * L;
+    if (d < r - 1) {
+      // the cuff break: the fold's shadow ring and its lit lip
+      if (u >= brk + 2 && u < brk + 4) col = ramp[1];
+      else if (u >= brk && u < brk + 2 && lit > -0.2) col = ramp[3];
+      // two long folds down the sleeve (cloth pulled along the arm, not rings round it): one on the shadow side, one
+      // shorter near the lit side, each a rung down, drifting across the sleeve as it widens
+      else {
+        const so = ((x + 0.5 - cx) * -dy + (y + 0.5 - cy) * dx) / L / r;
+        if ((u > brk + 10 && u < L * 0.75 && Math.abs(so - (0.5 - 0.25 * t)) < 1.1 / r) || (u > brk + 24 && u < L * 0.45 && Math.abs(so + 0.35) < 0.9 / r)) col = ramp[1];
+      }
+    }
+    b.set(x, y, col);
+  }
+};
+
+/** a bust placed like civic-kit putBustCut (read-only: the run-on below the portrait's foot, the shoulders falling
+ *  off to shadow toward the image's edges, the torso a band darker down the run-on), with its falloff FEATHERED: the
+ *  bands are one continuous falloff (from the sides, fading in below the neck, and from the foot) walked in whole
+ *  rungs through an ordered dither on the cloth, so no lighter panel with straight edges sits on the chest (the review
+ *  pass: Rima's lapels read as a pasted panel at 1080p). Skin and hair keep whole rungs (no dither on skin). */
+export const putBustSoft = (b: Buf, im: Img, x: number, y: number, cutY: number, flip = false, side = 34) => {
+  const col = (i: number) => (flip ? im.w - 1 - i : i);
+  const Wd = im.w;
+  for (let j = 0; y + j < cutY; j++) {
+    const sy = Math.min(j, im.h - 1);
+    for (let i = 0; i < Wd; i++) {
+      let v = im.c[sy * Wd + col(i)];
+      if (v < 0) continue;
+      if (j >= 84) {
+        const sd = side + (j >= im.h ? (j - im.h) * 0.7 : 0);
+        // the distance in from the image's edge, slanting outward down the chest so the bands follow the shoulders
+        const dx = Math.min(i, Wd - 1 - i) - (j - 96) * 0.22;
+        const ks = dx >= sd ? 0 : dx <= 0 ? 6 : 6 * Math.pow(1 - dx / sd, 1.7) * clamp((j - 84) / 18, 0, 1);
+        const kb = Math.max(0, (j - (im.h - 18)) / 10);
+        const kc = Math.min(6, Math.max(ks, kb)), fr = kc - Math.floor(kc);
+        const fm = familyOf(v), solid = !!fm && (fm[0] === 'S' || fm[0] === 'K' || fm[0] === 'X' || fm[0] === 'B');
+        // solid bands; only a seam of a few pixels between two rungs is dithered (cloth only)
+        const k = solid ? Math.round(kc) : fr < 0.38 ? Math.floor(kc) : fr > 0.62 ? Math.ceil(kc) : Math.floor(kc) + (bayer(x + i, y + j) < (fr - 0.38) / 0.24 ? 1 : 0);
+        if (k > 0) v = stepColor(v, -k);
+      }
+      b.set(x + i, y + j, v);
+    }
+  }
+};
+
+/** Rima's eyes turned a step (rima-speak, read-only, has no eye dart): in each eye's opening the pupil (its black and
+ *  its catchlight) moves one pixel toward `dir` (-1 screen-left) where the white has room, so she looks at whoever
+ *  stands on that side instead of into the lens. Cached per image. */
+const LOOKS = new WeakMap<object, Img>();
+export const rimaLook = <T extends Img>(im: T, dir: -1 | 1 = -1): T => {
+  const hit = LOOKS.get(im); if (hit) return hit as T;
+  const c = im.c.slice();
+  const isW = (v: number) => { const fm = familyOf(v); return !!fm && fm[0] === 'P'; };
+  const isP = (v: number) => v === PAL.N0 || v === PAL.W9;
+  for (let y = 48; y < 60; y++) for (const [xa, xb] of [[40, 58], [60, 78]]) {
+    // the pupil's run between whites
+    let s = -1, e = -1;
+    for (let x = xa; x < xb; x++) { const v = c[y * im.w + x]; if (isP(v) && x > xa && isW(c[y * im.w + x - 1])) { s = x; e = x; while (e + 1 < xb && isP(c[y * im.w + e + 1])) e++; break; } }
+    if (s < 0 || !isW(c[y * im.w + e + 1])) continue;
+    const row = y * im.w;
+    if (dir < 0 && isW(c[row + s - 1])) { const wv = c[row + s - 1]; for (let x = s - 1; x < e; x++) c[row + x] = c[row + x + 1]; c[row + e] = wv === PAL.P0 ? PAL.P1 : wv; }
+    if (dir > 0 && isW(c[row + e + 1])) { const wv = c[row + e + 1]; for (let x = e + 1; x > s; x--) c[row + x] = c[row + x - 1]; c[row + s] = wv === PAL.P0 ? PAL.P1 : wv; }
+  }
+  const out = {...im, c};
+  LOOKS.set(im, out);
+  return out as T;
+};
+
+/** a phone held from below for typing (art hands2's 'cup' grip, rebuilt here so the THUMB IS POSED PER KEY: the review
+ *  pass found the grip's own thumbAt range too short to reach the keys, so every press drew the same pose beside a lit
+ *  key). The thumb's tip is solved onto `tip` (frame px, the key's centre), a centimetre proud of the glass; when the
+ *  key is beyond the thumb's reach from its base, the whole hand slides under the phone toward it. The thumb is drawn
+ *  over the glass from the phone's near edge; the fingers stay behind the phone (the far fingertips, which read as a
+ *  shard at its far edge, are not drawn). Returns the rendered hand (`thumb` = the tip in frame px). */
+export const cupThumb = (b: Buf, P: {x: number; y: number; w: number; h: number}, tip: [number, number], o: {cuffRamp: number[]; sleeveRamp: number[]; sleeveTo: [number, number]; widthCm?: number; skinMap?: (c: number) => number; drawPhone: (b: Buf) => void}) => {
+  const s = P.w / (o.widthCm ?? 7.2);
+  const fwd: V3 = [-0.35, -1, 0], back: V3 = [0, 0, -1];
+  const nrm = (a: V3): V3 => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
+  const f = nrm(fwd), n = back, t: V3 = [f[1] * n[2] - f[2] * n[1], f[2] * n[0] - f[0] * n[2], f[0] * n[1] - f[1] * n[0]];
+  let W: V3 = [(P.x + P.w - 0.8 * s) / s, (P.y + P.h + 4.5 * s) / s, -2.8];
+  const T: V3 = [tip[0] / s, tip[1] / s, 1.0];
+  const at = (w: V3, l: V3): V3 => [w[0] + t[0] * l[0] + f[0] * l[1] + n[0] * l[2], w[1] + t[1] * l[0] + f[1] * l[1] + n[1] * l[2], w[2] + t[2] * l[0] + f[2] * l[1] + n[2] * l[2]];
+  // the thumb's reach from its base joint: slide the hand when the key is farther
+  const mcp = at(W, [3.9, 4.6, -1.1]), dx = T[0] - mcp[0], dy = T[1] - mcp[1], dist = Math.hypot(dx, dy), REACH = 5.4;
+  if (dist > REACH) { const k = (dist - REACH) / dist; W = [W[0] + dx * k, W[1] + dy * k, W[2]]; }
+  const d: V3 = [T[0] - W[0], T[1] - W[1], T[2] - W[2]];
+  const thumb: V3 = [d[0] * t[0] + d[1] * t[1] + d[2] * t[2], d[0] * f[0] + d[1] * f[1] + d[2] * f[2], d[0] * n[0] + d[1] * n[1] + d[2] * n[2]];
+  const pose: HandPose = {side: 'R', wrist: W, fwd, back, fingers: [0.1, 0.12, 0.14, 0.18], spread: 3, thumb, cuff: 4.5};
+  const hand = renderHand(handRig(pose), {s, w: b.w, h: b.h, ox: 0, oy: 0, light: 'lobby', cuffRamp: o.cuffRamp, skinMap: o.skinMap});
+  forearm(b, hand.cuffEnd, o.sleeveTo, 3.2 * s, 4.6 * s, o.sleeveRamp);
+  // behind the phone: the hand, but nothing past the phone's far (left) edge or above its foot's quarter
+  drawHand(b, hand, 0, 0, {behind: 0, clip: (x, y) => x >= P.x + P.w * 0.5 || y >= P.y + P.h});
+  o.drawPhone(b);
+  // the thumb over the glass (its two joints), from the near edge
+  drawHand(b, hand, 0, 0, {caps: (id) => id === 'tprox' || id === 'tdist' || id === 'tn'});
+  // its nail, which faces the lens when the thumb lies on the glass (the rig puts it on the hand's back, away from
+  // us): a rounded plate on the distal joint, its free edge pale at the tip, lit from the upper left
+  const midL: V3 = [(3.9 + thumb[0]) / 2 + 0.7, (4.6 + thumb[1]) / 2 - 0.2, (-1.1 + thumb[2]) / 2 + 0.5];
+  const m = at(W, midL), tx = hand.thumb[0], ty = hand.thumb[1], mx = m[0] * s, my = m[1] * s;
+  const len = Math.hypot(tx - mx, ty - my) || 1, ux = (tx - mx) / len, uy = (ty - my) / len;
+  const nl = 1.15 * s, nw = 0.95 * s, back0 = 0.12 * s;
+  for (let y = Math.floor(ty - nl - 4); y <= ty + nl + 4; y++) for (let x = Math.floor(tx - nl - 4); x <= tx + nl + 4; x++) {
+    const rx = x + 0.5 - tx, ry = y + 0.5 - ty, u = -(rx * ux + ry * uy) - back0, v = rx * -uy + ry * ux;
+    if (u < 0 || u > nl) continue;
+    const half = (nw / 2) * (u < nw * 0.4 ? Math.sqrt(Math.max(0, 1 - Math.pow((nw * 0.4 - u) / (nw * 0.4), 2))) : 1);
+    if (Math.abs(v) > half) continue;
+    const edge = Math.abs(v) > half - 1 || u > nl - 1;
+    const c = edge ? PAL.S3 : u < 2.2 ? PAL.P1 : v < -half * 0.3 && u < nl * 0.7 ? PAL.S6 : PAL.S5;
+    b.set(x, y, o.skinMap && c !== PAL.P1 ? o.skinMap(c) : c);
+  }
+  return hand;
+};
+
+/** a phone keyboard's key preview: the pressed key's letter big in a lit balloon rising above the key (centre `c`, in
+ *  the screen buffer's own coordinates), so the press reads above the thumb that covers the key */
+export const keyBalloon = (scr: Buf, c: [number, number], ch: string, kw: number, kh: number) => {
+  if (!ch.trim()) return;
+  const w = kw + 8, h = kh + 22, x = Math.round(c[0] - w / 2), y = Math.round(c[1] + kh / 2 - h);
+  for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) {
+    const corner = (i === 0 || i === w - 1) && (j === 0 || j === h - 1);
+    if (corner) continue;
+    const edge = i === 0 || i === w - 1 || j === 0 || j === h - 1;
+    scr.set(x + i, y + j, edge ? PAL.N1 : j < h - kh ? PAL.N8 : PAL.N7);
+  }
+  const L = ch.toUpperCase(), lw = bpw(L);
+  bpt(scr, L, x + Math.round((w - lw) / 2), y + 4, PAL.N0);
 };

@@ -2,35 +2,37 @@
 // of MAY 14). The shots pass, 2026-10-09; the record is shots-act2.md. Built on Ep1's dark room (rooms/darkroom-plate,
 // kits/mas-monitor: the POV and the OTS; the portrait, cast/mas.ts) and the art pass's SET-07 painters
 // (art/sets/darkroom2.ts: the RULEBOOK notification, the news site, the calendar, the ELPPA call, the news recap), with
-// Act Two's own pieces: the OTS foreground (Mas's back of head, act2 common backHead; the art's swirl read as a
-// pinwheel), his glass in the foreground, Ep1's framed GUEST lanyard on the wall, his fingertip on a touch screen (no
+// Act Two's own pieces: the OTS foreground (the back of his head: Ep1's turned-away bust redrawn at the OTS's size,
+// act2 backhead; the review pass), his glass in the foreground, Ep1's framed GUEST lanyard on the wall, his fingertip on a touch screen (no
 // cursor anywhere: LEARNINGS P6), the phone ECU at a phone's own proportions, and the afternoon (the window's sky lit).
 //   otsDark(b, f, paint, st)         [OTS] over his right shoulder onto the monitor; st.dim (the room a rung down)
 //   swipeECU(b, k, st)               [ECU] 8.01: the notification close, his index and middle fingers flick it away
 //   newsPainter(k, turn)             8.02 / 8.03: the news site scrolled into place a whole pixel step at a time
 //   calendarPOV(b, f, st)            [POV] 8.04 / 8.07: the week; his fingertip drags his block onto MON 13 / taps Accept
-//   masMCU(b, f, st)                 [MCU] Mas at the monitor (Ep1's portrait, the plate soft behind him); st.afternoon,
-//                                    st.monday (the lit MON square in his eyes), st.faceLight
+//   masMCU(b, f, st)                 [MCU] Mas at the monitor (Ep1's portrait, the plate soft behind him); st.afternoon
+//                                    (his natural skin keyed from the window: masAfternoonImg), st.monday (the lit MON
+//                                    square in his eyes), st.faceLight
 //   callECU(b, f, st)                [ECU] 8.06: the phone face up, the call tile ELPPA (no face, no name), Answer, …,
 //                                    CONFIRMED
 //   recapMCU(b, f, st)               [MCU] 12.05: Mas at his desk in the afternoon, the monitor beside him (the recap,
 //                                    legible), his fingertip on its minimise
 //   phoneECU(b, f, st)               [ECU] 12.06 / 12.07: the phone in his hand, a post in its own UI (scroll, compose)
 import {Buf, rect, ellipse, bayer, hash, clamp} from '../../../../../shared/pixel/px';
-import {PAL, stepColor, lightness} from '../../../../../shared/pixel/palette';
+import {PAL, stepColor, lightness, familyOf} from '../../../../../shared/pixel/palette';
 import {drawMonitorPOV, MON_OTS, MON_POV} from '../../../../../shared/pixel/kits/mas-monitor';
 import type {Painter} from '../../../../../shared/pixel/kits/mas-monitor';
+import type {Img} from '../../../../../shared/pixel/figure';
 import {drawDarkPlate, drawDarkPlateDesk, drawDarkPlateFront, DPLATE} from '../../../../../shared/pixel/rooms/darkroom-plate';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
-import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {vignette} from '../../../../../shared/pixel/rooms/kit-b';
 import {rulebookNotif, newsSitePainter, calendarPainter, newsRecapPainter} from '../../art/sets/darkroom2';
 import {drawEp2Post} from '../../art/props/ui';
 import {placeHand, drawHand, sleeve, holdPhone, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
-import {RH, W, glow, isSkin} from './common';
+import {RH, W, glow, isSkin, forearm, cupThumb, putBustSoft, keyBalloon} from './common';
+import {drawBackHead} from './backhead';
 
 // ================================================================== shared pieces
 /** his hoodie's sleeve in the monitor's light: [outline, shadow, mid, lit, rim] and the hand rig's 7-tone cuff */
@@ -52,7 +54,12 @@ export const fingerOn = (b: Buf, tip: [number, number], o: {press?: boolean; s?:
     const el: [number, number] = [cx + (dx / L) * o.elbow, cy + (dy / L) * o.elbow];
     sleeve(b, el, o.shoulder, 4.2 * s, 4.4 * s, SLEEVE);
     sleeve(b, [cx, cy], el, 3.3 * s, 4.1 * s, SLEEVE);
-  } else sleeve(b, [cx, cy], [cx + (dx / L) * 260, cy + (dy / L) * 260], 3.3 * s, 3.9 * s, SLEEVE);
+  } else {
+    // the forearm toward the lens, foreshortened (it widens as it nears the camera, below the frame), the wrist bent
+    // (the forearm turns down from the hand's own line), the cuff break behind the cuff (common forearm)
+    const ux = dx / L, uy = dy / L, bx = ux * 0.8 + 0.12, by = uy * 0.8 + 0.5, bl = Math.hypot(bx, by);
+    forearm(b, [cx, cy], [cx + (bx / bl) * 190, cy + (by / bl) * 190], 3.6 * s, 8.8 * s, SLEEVE);
+  }
   // its shadow on the glass when it hovers; the pad's own dark when it presses
   if (!o.press) for (let j = -3; j <= 3; j++) for (let i = -5; i <= 5; i++) if (Math.hypot(i / 5, j / 3) < 1 && bayer(at[0] + i + 3, at[1] + j + 6) < 0.5) b.set(at[0] + i + 3, at[1] + j + 6, stepColor(b.get(at[0] + i + 3, at[1] + j + 6), -1));
   // the room's light on his skin is the screen's cool one: the warm rig walked two rungs toward the dark room
@@ -106,45 +113,12 @@ const otsRoom = (): Buf => {
   otsBg = sh;
   return sh;
 };
-/** the back of his head and his shoulder, close (the OTS foreground): his brown hair in soft cel bands (the far side in
- *  the dark, the near side catching the screen), a few strands curving from the crown's whorl, the cowlick, the nape
- *  above the hood, the hoodie's shoulder out of frame; the screen's cyan rim on the edges toward it (screen-right) */
-const darkHead = (b: Buf) => {
-  const hx = 50, hy = 100, rx = 37, ry = 46;
-  const inHead = (x: number, y: number) => Math.hypot((x - hx) / rx, (y - hy) / ry) < 1;
-  const inHood = (x: number, y: number) => y > hy + ry * 0.62 && Math.hypot((x - hx + 4) / 54, (y - (hy + ry + 4)) / 22) < 1;
-  const inSh = (x: number, y: number) => Math.hypot((x - 20) / 150, (y - 262) / 104) < 1;
-  // the shoulder and the hood
-  for (let y = 60; y < RH; y++) for (let x = 0; x < 200; x++) {
-    const sh = inSh(x, y), hd = inHood(x, y);
-    if (!sh && !hd) continue;
-    const rim = !(inSh(x + 1, y) || inHood(x + 1, y) || inHead(x + 1, y));
-    // the hood: a rolled ring round his neck, its top edge and its screen side catching the light; the shoulder's
-    // slope lit toward the screen (elliptical bands, no straight seams)
-    const hu = (x - hx + 4) / 54, hv = (y - (hy + ry + 4)) / 22, su = (x - 20) / 150, sv = (y - 262) / 104;
-    const c = rim ? PAL.C3 : hd ? (hu + hv * 0.4 > 0.42 ? PAL.G2 : hv < -0.55 ? PAL.G2 : hu < -0.5 ? PAL.G0 : PAL.G1) : su - sv * 0.5 > 0.95 ? PAL.G1 : PAL.G0;
-    b.set(x, y, c);
-  }
-  // the skull
-  for (let y = hy - ry; y < hy + ry; y++) for (let x = hx - rx; x < hx + rx; x++) {
-    if (!inHead(x, y) || inHood(x, y)) continue;
-    const u = (x - hx) / rx, v = (y - hy) / ry;
-    const rim = !inHead(x + 1, y) || (!inHead(x + 1, y - 1) && u > 0.2);
-    const nape = v > 0.74 - Math.abs(u) * 0.2;
-    const t = u * 0.85 - v * 0.35;
-    let c: number;
-    if (rim && u > 0) c = PAL.C4;
-    else if (nape) c = u > 0.45 ? PAL.S2 : u > -0.2 ? PAL.S1 : PAL.S0;
-    else c = t > 0.62 ? PAL.B1 : t > -0.1 ? PAL.B0 : PAL.N0;
-    // strands: thin curves from the whorl (up and a little left), a rung up on the band they cross
-    if (!rim && !nape) { const a = Math.atan2(y - (hy - ry * 0.55), x - (hx - 6)), d = Math.hypot(x - (hx - 6), y - (hy - ry * 0.55)); if (Math.sin(a * 15 + Math.sin(d * 0.08) * 1.4) > 0.86 && d > 8 && hash(x >> 1, y >> 2, 3) < 0.8) c = c === PAL.N0 ? PAL.B0 : c === PAL.B0 ? PAL.B1 : PAL.B2; }
-    b.set(x, y, c);
-    if (rim && u > 0.3 && inHead(x - 1, y)) b.set(x - 1, y, PAL.C2);
-  }
-  // the cowlick at the crown
-  for (const [x, y] of [[hx + 2, hy - ry], [hx + 3, hy - ry - 1], [hx + 4, hy - ry - 1], [hx + 5, hy - ry]] as Array<[number, number]>) b.set(x, y, PAL.B1);
-  b.set(hx + 5, hy - ry - 1, PAL.C3);
-};
+/** the back of his head and his shoulder, close (the OTS foreground): Ep1's approved turned-away bust redrawn at the
+ *  OTS's size in the frame's own pixels (act2 backhead: the silhouette first, his hair in clumps sweeping forward, the
+ *  nape and neck, a hint of each ear, the hoodie's shoulders and the hood bunched on his back), turned a step toward the
+ *  monitor (the cheek's edge and the near ear on the screen side), the monitor's cyan rim on the edges toward it */
+export const OTS_HEAD = {x: -30, y: 30, scale: 1.5};
+const darkHead = (b: Buf) => { drawBackHead(b, OTS_HEAD.x, OTS_HEAD.y, {scale: OTS_HEAD.scale, turn: 1, light: 'monitor', flip: true}); };
 export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number} = {}) => {
   b.c.set(otsRoom().c.subarray(0, 480 * RH));
   const T = MON_OTS;
@@ -269,16 +243,45 @@ const mcuPlate = (afternoon: boolean): Buf => {
 };
 /** his eyes in the portrait (local), where a reflection lands */
 const EYES: Array<[number, number]> = [[39, 48], [52, 48]];
+/** HIS FACE IN THE AFTERNOON (12.05, 12.08; the review pass): his natural-skin portrait (the 'warm' light of 9.04 and
+ *  11.11), keyed one step from the window (cast/face-light-img: the side facing it a step up, a hard cel step at the
+ *  terminator, no dither on skin); the monitor's cyan kept only as the rim on the screen side (the warm rig's own rim
+ *  walked to the cyan, a rung lower once the screen shows his dark document); when the window is behind him, its pale
+ *  daylight along his far edge. key: where the window is ('left' = beside the monitor, 12.05; 'right' = behind him to
+ *  the right, 12.08) */
+const PM = new Map<string, Img>();
+export const masAfternoonImg = (o: {look?: -1 | 0 | 1; key: 'left' | 'right'; rim: 'on' | 'dim'; mouth?: MasPortraitState['mouth']}): Img => {
+  const id = JSON.stringify(o); const hit = PM.get(id); if (hit) return hit;
+  const im = masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: o.look ?? -1, mouth: o.mouth ?? 'rest'});
+  const RIM: Record<number, number> = o.rim === 'on' ? {[PAL.W5]: PAL.C4, [PAL.W6]: PAL.C5, [PAL.W8]: PAL.C7} : {[PAL.W5]: PAL.C2, [PAL.W6]: PAL.C3, [PAL.W8]: PAL.C5};
+  const c = im.c.slice();
+  for (let i = 0; i < c.length; i++) { const v = c[i]; if (v >= 0 && RIM[v] !== undefined) c[i] = RIM[v]; }
+  let out: Img = faceLightImg({...im, c}, 1, {key: o.key === 'left' ? [-1, -0.3] : [1, -0.3]});
+  if (o.key === 'right') {
+    // the window's daylight on his far edge: the hair, the ear and cheek, the hoodie's shoulder
+    const d = out.c.slice();
+    for (let y = 0; y < im.h; y++) for (let x = 0; x < im.w - 1; x++) {
+      const v = out.c[y * im.w + x];
+      if (v < 0 || out.c[y * im.w + x + 1] >= 0) continue;
+      const fm = familyOf(v); if (!fm) continue;
+      d[y * im.w + x] = fm[0] === 'B' ? PAL.B4 : fm[0] === 'S' || fm[0] === 'K' || fm[0] === 'X' ? PAL.S6 : fm[0] === 'G' ? PAL.G4 : v;
+    }
+    out = {...out, c: d};
+  }
+  PM.set(id, out);
+  return out;
+};
 export const masMCU = (b: Buf, f: number, st: {mas?: Partial<MasPortraitState>; afternoon?: boolean; monday?: boolean; faceLight?: number; x?: number} = {}) => {
   b.c.set(mcuPlate(!!st.afternoon).c.subarray(0, 480 * RH));
   const x = st.x ?? 100, y = 22;
   const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, look: -1, ...st.mas};
+  if (st.afternoon) { putBustSoft(b, masAfternoonImg({look: s.look, key: 'right', rim: 'dim', mouth: s.mouth}), x, y, RH); void f; return; }
   const im = masPortrait(s);
   const fl = st.faceLight ?? (st.monday ? 1 : 0);
-  putBustCut(b, fl ? faceLightImg(im, fl, {key: [-1, -0.2]}) : im, x, y, RH);
+  putBustSoft(b, fl ? faceLightImg(im, fl, {key: [-1, -0.2]}) : im, x, y, RH);
   if (st.monday) {
-    // the lit MON square in his eyes: a tiny bright rectangle in each, on the monitor's side of the pupil
-    for (const [ex, ey] of EYES) { const X = x + ex, Y = y + ey; b.set(X, Y, PAL.C9); b.set(X + 1, Y, PAL.C8); }
+    // the lit MON square in his eyes: a 2 x 2 teal-white square in each, on the monitor's side of the pupil
+    for (const [ex, ey] of EYES) { const X = x + ex, Y = y + ey; b.set(X, Y, PAL.C9); b.set(X + 1, Y, PAL.C8); b.set(X, Y + 1, PAL.C8); b.set(X + 1, Y + 1, PAL.C7); }
   }
   void f;
 };
@@ -343,11 +346,13 @@ export const recapMCU = (b: Buf, f: number, st: {min: number; tap?: 0 | 1 | 2; k
   for (let y = 0; y < M.h; y++) for (let x = 0; x < M.w; x++) b.set(M.x + x, M.y + y, scr.get(x, y));
   // its light on him and on the desk
   glow(b, M.x + M.w, M.y + M.h / 2, 120, 90, 1, (x) => x < M.x + M.w + 8);
-  masMCUOver(b, 262, {look: -1});
-  if (st.tap) fingerOn(b, [M.x + M.w - 23, M.y + M.h - 29], {press: st.tap === 2, s: 4.6, from: 'BR', skin: 2, elbow: 70, shoulder: [300, 140]});
+  // his face in the afternoon: the window and the monitor both on his left; the screen's cyan only as his near rim,
+  // a rung lower once the player has gone to the taskbar
+  putBustSoft(b, masAfternoonImg({look: -1, key: 'left', rim: st.min > 0.5 ? 'dim' : 'on'}), 262, 22, RH);
+  // his hand on the player's minimise, at his own scale (about three-quarters of his face's length), his arm bent
+  // from his shoulder
+  if (st.tap) fingerOn(b, [M.x + M.w - 23, M.y + M.h - 29], {press: st.tap === 2, s: 3.0, from: 'BR', skin: 2, elbow: 52, shoulder: [296, 150]});
 };
-/** the portrait over an already-drawn background at x (12.05's composition) */
-const masMCUOver = (b: Buf, x: number, mas: Partial<MasPortraitState>) => putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, ...mas}), x, 22, RH);
 
 // ================================================================== 12.06 / 12.07: his phone in his hand
 /** the phone's face in the ECU (a phone's proportions; the frame crops it): held by its edge (12.06, the 'wrap' grip:
@@ -365,15 +370,6 @@ const MAS_POST = 'ALYI and NOPEAI are going to part ways. This is very sad to me
 const KEYS = ['qwertyuiop', 'asdfghjkl', 'zxcvbnm'];
 const KBY = 216;
 const keyXY = (ch: string): [number, number] => { const c = ch.toLowerCase(); for (let r = 0; r < 3; r++) { const q = KEYS[r].indexOf(c); if (q >= 0) return [3 + q * 14 + r * 7 + 6, KBY + 4 + r * 24 + 10]; } return [74, KBY + 4 + 3 * 24 + 8]; };
-const TA = new Map<string, number>();
-const thumbFor = (P: {x: number; y: number; w: number; h: number}, at: [number, number]) => {
-  const key = `${at[0]},${at[1]}`;
-  const hit = TA.get(key); if (hit !== undefined) return hit;
-  let best = 0.5, bd = 1e9;
-  for (let i = 0; i <= 10; i++) { const ta = i / 10, t = new Buf(480, 270, 0); const h = holdPhone(t, P, {side: 'R', grip: 'cup', light: 'lobby', cuffRamp: CUFF, sleeveRamp: SLEEVE, widthCm: 7.4, thumbAt: ta, drawPhone: () => {}}); const d = Math.hypot(h.thumb[0] - at[0], h.thumb[1] - at[1]); if (d < bd) { bd = d; best = ta; } }
-  TA.set(key, best);
-  return best;
-};
 /**
  * st.mode: 'dark' (the screen off) · 'alyi' (Alyi's post, its first crop; st.scroll 0..1 runs it up a whole-pixel
  * step at a time to the second crop, …I will miss everyone dearly.) · 'compose' (his post being typed: st.typed
@@ -411,7 +407,9 @@ export const phoneECU = (b: Buf, f: number, st: {mode: 'dark' | 'alyi' | 'compos
       KEYS.forEach((row, r) => { for (let q = 0; q < row.length; q++) { const kx = 3 + q * 14 + r * 7, ky = KBY + 4 + r * 24, on = row[q] === ch.toLowerCase() && n < MAS_POST.length; fill(scr, kx, ky, 12, 20, on ? PAL.N7 : PAL.N4); fill(scr, kx, ky + 19, 12, 1, PAL.N1); tiny(scr, row[q].toUpperCase(), kx + 4, ky + 7, on ? PAL.P2 : PAL.N8); } });
       fill(scr, 30, KBY + 4 + 72, P.w - 60, 14, PAL.N4);
       const kxy = n < MAS_POST.length ? keyXY(ch === ' ' ? ' ' : ch) : [P.w - 22, 108] as [number, number];
-      thumb = [P.x + kxy[0], P.y + kxy[1]];
+      // the pressed key's preview above the thumb (a letter key: its balloon)
+      if (n > 0 && n < MAS_POST.length && /[a-z]/i.test(ch)) keyBalloon(scr, kxy, ch, 12, 20);
+      thumb = [P.x + kxy[0] + 2, P.y + kxy[1] + 5];
     } else {
       appChrome(scr, 'post', 84);
       drawEp2Post(scr, 4, 108, 'masAlyi', {size: 'phone', w: P.w - 8});
@@ -420,12 +418,16 @@ export const phoneECU = (b: Buf, f: number, st: {mode: 'dark' | 'alyi' | 'compos
     const lit = st.lit ?? 3;
     if (lit < 3) for (let y = 0; y < scr.h; y++) for (let x = 0; x < scr.w; x++) scr.set(x, y, stepColor(scr.get(x, y), -(3 - lit)));
   }
-  const ta = cup ? thumbFor(P, thumb) : 0.25 + (st.scroll ?? 0) * 0.3;
-  holdPhone(b, P, {side: 'R', grip: cup ? 'cup' : 'wrap', light: 'lobby', cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, thumbAt: ta, skinMap: (c) => stepColor(c, -1),
-    drawPhone: (bb) => {
-      fill(bb, P.x - 6, P.y - 6, P.w + 12, P.h + 12, PAL.N0); fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.G1); fill(bb, P.x - 5, P.y - 5, 1, P.h + 10, PAL.G3);
-      for (let y = 0; y < P.h; y++) for (let x = 0; x < P.w; x++) bb.set(P.x + x, P.y + y, scr.get(x, y));
-    }});
+  const drawPhone = (bb: Buf) => {
+    fill(bb, P.x - 6, P.y - 6, P.w + 12, P.h + 12, PAL.N0); fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.G1); fill(bb, P.x - 5, P.y - 5, 1, P.h + 10, PAL.G3);
+    for (let y = 0; y < P.h; y++) for (let x = 0; x < P.w; x++) bb.set(P.x + x, P.y + y, scr.get(x, y));
+  };
+  if (cup) {
+    // the thumb posed ON the key of the letter it types (the lit key), per key (common cupThumb); the check: within one
+    // key's width of it on every press
+    const h = cupThumb(b, P, thumb, {cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, skinMap: (c) => stepColor(c, -1), drawPhone});
+    if (st.mode === 'compose' && Math.hypot(h.thumb[0] - thumb[0], h.thumb[1] - thumb[1]) > 12) throw new Error(`12.07: the thumb is ${Math.round(Math.hypot(h.thumb[0] - thumb[0], h.thumb[1] - thumb[1]))} px from its key`);
+  } else holdPhone(b, P, {side: 'R', grip: 'wrap', light: 'lobby', cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, thumbAt: 0.25 + (st.scroll ?? 0) * 0.3, skinMap: (c) => stepColor(c, -1), drawPhone});
   // the screen's light on the desk round the phone
   if (st.mode !== 'dark') glow(b, P.x + P.w / 2, 110, 230, 150, 1, (x, y) => x >= P.x - 6 && x < P.x + P.w + 6 && y < P.y + P.h + 6);
 };

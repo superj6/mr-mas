@@ -16,7 +16,8 @@
 //   AFTER    12.08 his face held, a face light one step; the cue stops on the downbeat (the midpoint act-out)
 // No staging gives a reason for Alyi's leaving (W8): no reflection turning away, no look at the blimp, no tether.
 import {defineScene, layouts, mk} from '../../kit';
-import {houseUp, rimaMCU} from '../sets/stage';
+import {houseUp, rimaMCU, stageWide} from '../sets/stage';
+import {rimaWalkAt} from '../../../../../shared/pixel/cast/rima-stand';
 import {recapMCU, phoneECU, masMCU} from '../sets/dark';
 import {frontRow, armrestECU} from '../../art/sets/stage';
 import {glide} from '../sets/common';
@@ -26,14 +27,16 @@ import {PAL} from '../../../../../shared/pixel/palette';
 const L = layouts();
 
 L.add('12.01', {
-  st: 'act2/sets/stage houseUp → rimaMCU ([W] the meter frame as the house lights come up full on the lights-up: the rig dark and empty (the blimp gone), the big screen dark, the house empty but its seats; Rima small on her mark, the last one there, the clicker in her hand; [MCU] Rima (Ep1\'s portrait) in the house light: one breath (her shoulders rise a pixel and settle), then she walks off with it, frame left, in held steps)',
+  st: 'act2/sets/stage houseUp → rimaMCU → stageWide ([W] the meter frame as the house lights snap up full on the lights-up (a jump in time from 11.16: the blimp gone out through the rig, the engineer gone, the stream dark): the rig dark, the big screen dark, the last of the house filing out a few heads at a time; Rima small on her mark, the last one there, the clicker in her hand; [MCU] Rima (Ep1\'s portrait) in the house light: one breath (her shoulders rise a pixel and settle), held; [W] the wide again: she walks off with the clicker into the wings (her room sprite\'s walk, facing frame left), behind the masking leg)',
   marks: {up: ['snd', 'house_lights_up', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const up = mk(sh, 'up', 5), len = sh.e - sh.s;
+    const up = mk(sh, 'up', 5), W0 = 98;
     if (k < 64) { houseUp(fb, f, k, up); return; }
-    const breath = k >= 74 && k < 92 ? 1 : 0;
-    const off = k < len - 30 ? 0 : Math.floor((k - (len - 30)) / 2) * 16;
-    rimaMCU(fb, f, {mouth: 'rest', light: 'house', breath, x: 168 - off});
+    if (k < W0) { rimaMCU(fb, f, {mouth: 'rest', light: 'house', breath: k >= 68 && k < 84 ? 1 : 0}); return; }
+    // her walk off: whole pixels, three a frame, her walk cycle on the house's empty stage, into the wings
+    const x = 168 - (k - W0) * 3;
+    stageWide(fb, f, {spot: null, rig: 0, lights: 2, screen: {live: 'dark'}, house: {rows: 3, phones: 'down', gone: 1}, eng: null,
+      rima: {x, flip: true, pose: {body: rimaWalkAt(k)}, light: 'house'}, legOver: true});
   },
 });
 L.add('12.02', {
@@ -41,9 +44,9 @@ L.add('12.02', {
   draw: (fb, k, sh, f) => { frontRow(fb, f); void k; void sh; },
 });
 L.add('12.03', {
-  st: 'art/sets/stage armrestECU ([ECU] its chrome armrest: for two seconds, on the Door\'s note, the party from last September in it (Ep1\'s own art, act3 party partyToast, mirrored and bent by the curve, cooled: a reflection of a past event, not a ghost): Alyi turning to Mas with a toast and a smile; then the chrome shows only the empty seat\'s red)',
+  st: 'art/sets/stage armrestECU ([ECU] its chrome armrest, close: the post\'s rounded end and the red fabric of the seat beside it (12.02\'s armrest, nearer); on the Door\'s note a glint runs across the chrome and the party from last September comes up in it over six frames (Ep1\'s own art, act3 party partyToast: mirrored, wrapped round the post\'s curve and squashed toward its edges, graded cool and flat, the chrome\'s highlights streaking over it: a reflection of a past event, not a ghost): Alyi turning to Mas with a toast and a smile, the clink; two seconds, then it fades out behind the glint and the chrome shows only the seat\'s red)',
   marks: {note: ['snd', 'door_motif_note', 1, 0]},
-  draw: (fb, k, sh, f) => { const n = mk(sh, 'note', 4); armrestECU(fb, f, {toast: k >= n && k < n + 48}); },
+  draw: (fb, k, sh, f) => { const n = mk(sh, 'note', 4); armrestECU(fb, f, {k, on: n, off: n + 42}); },
 });
 L.add('12.04', {
   st: 'black (a beat; the pad holds across it)',

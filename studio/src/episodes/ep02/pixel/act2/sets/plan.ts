@@ -125,10 +125,16 @@ const sheetAt = (f: number, T: PlanT, st: {look?: boolean}): Buf => {
   if (on(f, T.s2)) {
     const d = T.s2 === DONE ? -999 : T.s2!;
     bpStamp(b, ['2.'], 40, 360, T.s2 === DONE ? 9 : f - T.s2!, {big: true});
-    bpBox(b, 64, 344, 120, 34, f, d, {speed: 20});
-    ['MON', 'TUE', 'WED', 'THU', 'FRI'].forEach((dd, i) => { if (f > d + 4 + i) micro(b, dd, 68 + i * 23, 348, BPX.line); if (i) L(b, 64 + i * 24, 344, 64 + i * 24, 378, f > d + 3 ? 9999 : 0, BPX.mid); });
+    bpBox(b, 64, 344, 120, 42, f, d, {speed: 20});
+    ['MON', 'TUE', 'WED', 'THU', 'FRI'].forEach((dd, i) => { if (f > d + 4 + i) micro(b, dd, 68 + i * 23, 348, BPX.line); if (i) L(b, 64 + i * 24, 344, 64 + i * 24, 386, f > d + 3 ? 9999 : 0, BPX.mid); });
     inkPath(b, ellipsePts(74, 351, 9, 5), prog(f, T.s2 === DONE ? DONE : d + 6, 60, 8), BPX.hot);
-    if (f > d + 10) tinyFigure(b, 100, 376, {arm: 'down', col: BPX.mid, look: st.look});
+    // his square carries his own block, as on Mas's calendar (8.04's ELGOOG keynote on TUE 14): a tiny filled tag
+    // typed ELGOOG, the tiny Radnus standing under it (unmentioned; the tag is how a viewer knows him)
+    if (f > d + 12) {
+      for (let y = 354; y < 363; y++) for (let x = 89; x < 112; x++) b.set(x, y, y === 354 || y === 362 ? BPX.mid : BPX.faint);
+      micro(b, 'ELGOOG'.slice(0, Math.max(0, f - d - 13)), 89, 356, BPX.hot);
+    }
+    if (f > d + 10) tinyFigure(b, 100, 384, {arm: 'down', col: BPX.mid, look: st.look});
   }
   // 3. $0, and a tiny crowd floods in
   if (on(f, T.s3)) {
@@ -166,7 +172,7 @@ export const planFrame2 = (b: Buf, f: number, T: PlanT, st: PlanSt) => {
   const sheet = sheetAt(f, T, {look: st.look});
   if (st.cell) {
     // the panel's last square, still lit: the grid's first cell (the match from 9.06)
-    const C = {x: 240 - 16, y: 96 - 16 + Math.round(st.pan), s: 32};
+    const C = {x: 224, y: 152 + Math.round(st.pan), s: 32}; // wings GRID_CELL, where 9.06's fifth cell settled
     for (const p of rectPts(C.x, C.y, C.s, C.s)) sheet.set(p[0], p[1], BPX.hot);
   }
   const bub = st.bubble ?? 0;

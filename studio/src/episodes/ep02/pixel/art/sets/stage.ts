@@ -19,7 +19,7 @@
 //   voicePanel(b, x, y, st)   sc 9.06: the settings panel VOICE · VOICE 1..5 · SINCE SEP 2023, st.hover (the slot
 //                             saying hello), st.unfold 0..10 (it keeps unfolding square by square onto a drafting grid)
 import {Buf, rect, line, ellipse, bayer, hash, clamp, poly} from '../../../../../shared/pixel/px';
-import {PAL, stepColor} from '../../../../../shared/pixel/palette';
+import {PAL, stepColor, familyOf, FAMILIES} from '../../../../../shared/pixel/palette';
 import {drawChatBubble, CHAT_BUBBLE} from '../../../../../shared/pixel/cast/chatgtp';
 import {partyToast} from '../../../../ep01/pixel/act3/art/party';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, dith, RH, TR} from '../kit';
@@ -212,24 +212,90 @@ export const frontRow = (b: Buf, f: number, st: {rope?: boolean} = {}) => {
   }
   if (st.rope !== false) { for (const px of [4, 470]) { fill(b, px, 120, 4, 70, PAL.W5); ellipse(px + 2, 118, 4, 4, b.ink(PAL.W6)); } for (let x = 8; x < 470; x++) b.set(x, 136 + Math.round(Math.sin((x - 8) / 462 * Math.PI) * 10), PAL.R2); }
 };
-export const armrestECU = (b: Buf, f: number, st: {toast?: boolean}) => {
-  // the chrome armrest fills the frame: a bright curved band; in it, for 2 s, Ep1's party toast (reflected: mirrored,
-  // squeezed into the curve, cooled); then only the empty seat's red
-  vramp(b, 0, 0, 480, RH, [PAL.R0, PAL.R1, PAL.R0]);
-  const top = 40, bot = 160;
-  const chrome = new Buf(480, 270, PAL.N0);
-  if (st.toast) partyToast(chrome, 60, {k: 60, toast: 0, laugh: 10, down: 999});
-  for (let y = top; y < bot; y++) for (let x = 0; x < 480; x++) {
-    const v = (y - top) / (bot - top);
-    const band = v < 0.08 ? PAL.G6 : v > 0.92 ? PAL.G2 : null;
-    if (band) { b.set(x, y, band); continue; }
-    // the reflection: the source mirrored horizontally and bent with the armrest's curve
+/** the reflection's grade: cooler and lower in contrast than the room (a past event in a chrome surface, not a window
+ *  onto it): each colour's family ramp pulled toward its middle, the warm families walked to cool ones (tungsten to
+ *  grey, red to dusk, hair and wood to the night's blues); skin stays skin, flatter */
+const COOL: Record<string, string> = {W: 'G', R: 'U', D: 'N', L: 'C', Q: 'U'};
+const gradeRefl = (c: number) => {
+  const fm = familyOf(c); if (!fm) return c;
+  let fam = fm[0], i = fm[1], ramp = FAMILIES[fam];
+  const tf = COOL[fam];
+  if (tf) { const r2 = FAMILIES[tf]; i = Math.round((i * (r2.length - 1)) / Math.max(1, ramp.length - 1)); ramp = r2; fam = tf; }
+  const n = ramp.length, mid = (n - 1) * 0.55;
+  return ramp[clamp(Math.round(mid + (i - mid) * 0.55), 0, n - 1)];
+};
+/** the armrest close: 12.02's chrome post (a vertical post beside each seat, a flat chrome highlight down it) seen from
+ *  a hand's width away: its rounded end, the reserved seat's red fabric beside it (its back and cushion, frame right)
+ *  and the neighbouring seat's (frame left, a rung down) */
+export const ARMREST = {cx: 236, r: 98, capY: 22, capH: 40};
+/** the party frame the chrome reflects at `ks` (Ep1's act3 partyToast, imported read-only: Alyi turns to Mas, a smile
+ *  and his warm eyes, the toast, the clink; never the laugh's shut eyes) */
+const PARTY = new Map<number, Buf>();
+const partyAt = (ks: number) => { let p = PARTY.get(ks); if (!p) { p = new Buf(480, 270, PAL.N0); partyToast(p, 60, {k: ks, toast: 20, laugh: 999, down: 999}); PARTY.set(ks, p); } return p; };
+/**
+ * [ECU] 12.03 the chrome armrest. st.k (frames into the shot), st.on / st.off: the reflection fades in over six frames
+ * from `on` (a glint runs across the chrome on the note, and the reflection comes up behind it in held dither steps)
+ * and out from `off` the same way; between them Ep1's party plays in the chrome (mirrored, wrapped round the post's
+ * curve and squashed toward its edges, graded cool and flat), the chrome's own highlights streaking across it.
+ * st.toast alone (the art sheet) = the reflection held.
+ */
+export const armrestECU = (b: Buf, f: number, st: {toast?: boolean; k?: number; on?: number; off?: number}) => {
+  const A = ARMREST, k = st.k ?? 0;
+  // the fabric: the reserved seat's back (frame right) and its cushion below, the neighbour's (frame left) a rung down;
+  // a fine weave (whole-pixel rows), the back's top edge rolled, the house beyond above it in plain light
+  const backTop = 14, cushion = 150;
+  for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
+    const right = x > A.cx;
     let c: number;
-    if (st.toast) { const sx = 479 - x, sy = Math.round(20 + ((y - top) / (bot - top)) * 170 + Math.sin((x / 480) * Math.PI) * 6); c = chrome.c[clamp(sy, 0, 202) * 480 + sx]; c = stepColor(c, 1); }
-    else c = (y - top) % 20 < 10 ? PAL.R2 : PAL.R1;
+    if (y < backTop) c = y < backTop - 4 ? PAL.N4 : PAL.N3;
+    else if (y < backTop + 3) c = PAL.R2;
+    else if (y >= cushion && right) c = y < cushion + 2 ? PAL.R0 : ((x + (y >> 1)) & 3) === 0 ? PAL.R0 : PAL.R1;
+    else c = ((x >> 1) + (y >> 1)) % 3 === 0 ? PAL.R1 : bayer(x, y) < 0.12 ? PAL.R2 : PAL.R1;
+    if (!right) c = stepColor(c, -1);
     b.set(x, y, c);
   }
-  for (let x = 0; x < 480; x += 3) { b.set(x, top + 6, PAL.P2); b.set(x, bot - 7, PAL.G3); }
+  // the reflection's fade (0..1) and the glint's place across the post (u, -1..1), or none
+  let a = st.toast ? 1 : 0, glint: number | null = null;
+  if (st.on !== undefined && st.off !== undefined) {
+    const kin = k - st.on, kout = k - st.off;
+    if (kin >= 0 && kout < 0) a = Math.min(1, (kin + 1) / 6);
+    if (kout >= 0) a = Math.max(0, 1 - (kout + 1) / 6);
+    if (kin >= -1 && kin < 7) glint = 1.1 - (kin + 1) * 0.3;
+    else if (kout >= -1 && kout < 7) glint = -1.1 + (kout + 1) * 0.3;
+  }
+  const src = a > 0 ? partyAt(st.toast && st.on === undefined ? 24 : 8 + 2 * Math.floor(Math.max(0, k - (st.on ?? 0)) / 4)) : null;
+  // the post: a vertical chrome cylinder, its rounded end at the top; chrome bands by the surface's angle (the room
+  // above it bright, the red seat in its right flank, dark at both edges), the specular streak down its left third
+  const BAY = (x: number, y: number) => bayer(x, y);
+  for (let y = A.capY; y < RH; y++) {
+    const capT = (y - A.capY) / A.capH, half = y < A.capY + A.capH ? A.r * Math.sqrt(Math.max(0, 1 - (1 - capT) * (1 - capT))) : A.r;
+    for (let x = Math.floor(A.cx - half); x <= Math.ceil(A.cx + half); x++) {
+      const u = (x + 0.5 - A.cx) / A.r;
+      if (Math.abs(x + 0.5 - A.cx) > half) continue;
+      const onCap = y < A.capY + A.capH;
+      let c = Math.abs(u) > 0.93 ? PAL.G1 : u < -0.62 ? PAL.G3 : u < -0.36 ? PAL.G5 : u < -0.24 ? PAL.P2 : u < 0.18 ? PAL.G4 : u < 0.5 ? PAL.G3 : u < 0.82 ? PAL.U3 : PAL.G2;
+      // the rounded end: lit from the house lights above (brighter toward its top), its specular spot a small ellipse
+      // where the streak turns over the curve
+      if (onCap) { const sp = Math.hypot((u + 0.3) / 0.13, (capT - 0.62) / 0.16); c = sp < 1 ? PAL.P2 : sp < 1.6 ? PAL.G6 : capT < 0.18 ? PAL.G3 : capT < 0.45 ? PAL.G5 : Math.abs(u) > 0.9 ? PAL.G2 : u > 0.5 ? PAL.G4 : stepColor(c, 1); }
+      // the reflection: the party, mirrored and wrapped round the curve (squashed toward the edges), its rows bowed;
+      // over the rounded end it runs on, squeezed hard toward the top (the room's upper half folded into the curve)
+      const y0 = A.capY + A.capH;
+      if (src && Math.abs(u) < 0.9 && (!onCap || capT > 0.3) && BAY(x, y) < a) {
+        const th = Math.asin(clamp(u, -1, 1));
+        const sx = Math.round(221 - (2 / Math.PI) * th * 175), sy = Math.round(30 + (y >= y0 ? (y - y0) : (y - y0) * 2.6) - 30 * u * u);
+        if (sy >= 0 && sy < RH) c = gradeRefl(src.c[sy * 480 + clamp(sx, 0, 479)]);
+      }
+      // the chrome's own highlights streak down over everything: the specular line and a fainter one in the right flank
+      if (!onCap && (Math.abs(u + 0.3) < 0.035 || (Math.abs(u - 0.38) < 0.02 && (y & 3) !== 0))) c = Math.abs(u + 0.3) < 0.035 ? PAL.P2 : PAL.G6;
+      // the glint running across on the note
+      if (glint !== null && Math.abs(u - glint) < 0.07 && !onCap) c = Math.abs(u - glint) < 0.035 ? PAL.P2 : PAL.G6;
+      b.set(x, y, c);
+    }
+  }
+  // the post's outline against the fabric
+  for (let y = A.capY; y < RH; y++) { const capT = (y - A.capY) / A.capH, half = y < A.capY + A.capH ? A.r * Math.sqrt(Math.max(0, 1 - (1 - capT) * (1 - capT))) : A.r; b.set(Math.round(A.cx - half) - 1, y, PAL.N1); b.set(Math.round(A.cx + half) + 1, y, PAL.N1); }
+  for (let x = A.cx - 30; x <= A.cx + 30; x++) b.set(x, A.capY - 1, PAL.N1);
+  void f;
 };
 
 export const ART: ArtAsset[] = [
@@ -243,7 +309,7 @@ export const ART: ArtAsset[] = [
       {label: '[W] 11.13: ENDED; the house lights up a step, the house emptying, the phones raised and swung', draw: (b) => stageWide(b, 0, {spot: 3, lights: 1, house: 'emptying', phones: 'swung', screen: {grow: 3, live: 'ended', chat: 6}})},
       {label: '[W] 11.08: the chat on (its own strip): "what\'s the catch?" scrolls up, lit; the face talking; LIVE', draw: (b) => stageWide(b, 4, {spot: 2, screen: {grow: 3, mouth: 'talk', chat: 1}})},
       {label: '[W] 12.02 the front row in plain house light, the placard (it never flips)', draw: (b) => frontRow(b, 0)},
-      {label: '[ECU] 12.03 the chrome armrest: Ep1\'s toast in it for 2 s', draw: (b) => armrestECU(b, 0, {toast: true})},
+      {label: '[ECU] 12.03 the chrome armrest (its rounded end, the seat\'s fabric): Ep1\'s toast in it for 2 s, cool and flat', draw: (b) => armrestECU(b, 0, {toast: true})},
     ],
   },
   {
