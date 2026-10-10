@@ -87,3 +87,9 @@ out/ep01/full-v3/assets/*/full/
 # Ep2 cold open: the 2.A overlay layers (146 MB of 1080p RGBA PNGs), rebuilt from the Runway take by
 # studio/src/episodes/ep02/pixel/coldopen/tools/aros_insert.py; their manifests stay tracked
 out/ep02/v1/inserts/aros/*/l*.png
+
+# Ep2 Act Four: the 2.H plates (Blender, act4/tools/iss22.py), their RGBA copies and the figure layers (~90 MB of
+# 1080p PNGs), rebuilt by studio/src/episodes/ep02/pixel/act4/tools/iss22-insert.ts; the manifests and anchors stay tracked
+out/ep02/v1/inserts/iss/plates/*.png
+out/ep02/v1/inserts/iss/rgba/
+out/ep02/v1/inserts/iss/*/fig-*.png
