@@ -55,7 +55,7 @@ MONTHS = "JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC"
 RAIL_RE = re.compile(rf"^RAIL: (?:(?:{MONTHS})(?: \d{{1,2}}(?:, \d{{4}})?| \d{{4}})?|\d{{4}})$")
 # manifest §3, "Rails", in order
 RAILS_EXPECTED = ["FEB 15, 2024", "FEB 29, 2024", "MAR 5, 2024", "FEB 20, 2018", "MAR 8", "MAR 19", "APR 1, 2024",
-                  "MAY 10", "MAY 13, 2024", "MAY 14, 2024", "DEC 2022", "2023", "MAY 17, 2024", "MAY 18", "MAY 20",
+                  "MAY 10", "MAY 13, 2024", "SEP 2023", "MAY 14, 2024", "DEC 2022", "2023", "MAY 17, 2024", "MAY 18", "MAY 20",
                   "MAY 28, 2024", "JUN 10, 2024", "JUN 11", "JUN 19, 2024", "AUG 5", "AUG 11", "AUG 21"]
 VO_BANNED = ["plan", "planned", "long game", "all along", "step one", "that part i"]
 MUST_READ = {"rail", "card", "stat", "plate", "post", "doc", "caption", "lower-third", "toast"}

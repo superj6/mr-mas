@@ -57,7 +57,7 @@ SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
 FPS = 24
 INTRO_F, CARD_F, HUM_F = 720, 48, 18
 TITLES = {"coldopen": "Cold open", "intro": "Intro", "card": "ep1.1_her.wav", "tag-hum": "the hum under black", "act1": "Act One · the séance",
-          "act2": "Act Two · her", "act3": "Act Three · leave them up", "act4": "Act Four · as a guest",
+          "act2": "Act Two · stage right", "act3": "Act Three · leave them up", "act4": "Act Four · as a guest",
           "tag": "Tag · august", "outro": "Outro · credits"}
 BANDS = {"quick": (0.15, 0.35), "quick-mas": (0.4, 0.5), "normal": (0.4, 0.6), "weighted": (0.6, 3.0), "free": (-1.0, 9.0)}
 DEVICE_TAGS = {"call": "call", "ghost": "ghost", "offmic": "off mic", "podcast": "podcast", "phone": "phone", "sung": "sung", "tv": "tv", "far": "far", "chant": "chant"}
@@ -96,6 +96,8 @@ NOT_EXCHANGE = {
     ("e2-a1-0025", "e2-a1-0026"): "not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)",
     ("e2-a2-0005", "e2-a2-0006"): "a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer",
     ("e2-a2-0031", "e2-a2-0032"): "the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks",
+    ("e2-a2-0011", "e2-a2-0012"): "not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since "
+                                  "the fixes pass gave sc 9's air to V.O. 6)",
     ("e2-a3-0010", "e2-a3-0011"): "not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07",
 }
 
@@ -318,12 +320,15 @@ def main(argv):
         w0 = word_on("e2-a2-0021", word)[0]
         mark(f"stamp {stamp} on \"{word}\"", it is not None and w0 is not None and abs(it[0] - w0) <= 2.0 / FPS + 1e-6,
              f"the stamp at {it[0]:.3f} s, \"{word}\" from {w0:.3f} s" if it and w0 is not None else "missing")
-    # V.O. 6 after his post's read floor (12.07; P15: 0.25 s + 0.05 s a character)
+    # the departure in silence (sc 12; the fixes pass, 2026-10-10: V.O. 6 was "i came back." over his farewell post, cut
+    # under W8): no V.O. from Alyi's post to the act-out, and his own post held for its read floor (P15)
     post = text_on("act2", "12.07", "ALYI and NOPEAI")
     floor = 0.25 + 0.05 * len(post[2]) if post else None
-    vo6 = on["e2-vo-06"][1]
-    mark("V.O. 6 after the post's read floor", post is not None and vo6 - post[0] >= floor - 1.0 / FPS,
-         f"the post up at {post[0] if post else None} s, \"i came back.\" at {vo6:.3f} s: {vo6 - post[0]:.2f} s against {floor:.2f}" if post else "no post")
+    sc12 = next(q for q in locks["act2"]["scenes"] if q["id"] == "12")
+    vo12 = [lid for lid, v in on.items() if v[0] == "act2" and v[4] == "vo" and v[1] >= sc12["s"] / FPS - 1e-6]
+    mark("sc 12 plays without V.O. (W8)", not vo12, f"V.O. in sc 12: {vo12 or 'none'}")
+    mark("his post held for its read floor", post is not None and post[1] - post[0] >= floor - 1.0 / FPS,
+         f"the post up {post[0]:.3f}-{post[1]:.3f} s against a floor of {floor:.2f} s" if post else "no post")
     # 4B: a beat after his thought, and P3's 1.5 s after the Accept click
     acc = snd_on.get(("4B.01", "post_click"))
     sc4b = next(q for q in locks["act1"]["scenes"] if q["id"] == "4B")

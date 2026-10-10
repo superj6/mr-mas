@@ -1463,7 +1463,9 @@ class Seg:
 
 DEFAULT_GAIN = {}   # filled in main(): a sound's median gain across Ep1's final lock (read only) and this one's plans
 # the segments' names (proposal.md's scenes; a plan's own `part` / `dateSpan` wins)
-PART = {'coldopen': 'COLD OPEN · sc 1', 'act1': 'ACT ONE · the séance · sc 4-7', 'act2': 'ACT TWO · her · sc 8-12',
+# Act Two's title was 'her' (the fixes pass, 2026-10-10: over the act that ends on Alyi's post it placed the word beside the
+# departure; _spec.py ACT_TITLE)
+PART = {'coldopen': 'COLD OPEN · sc 1', 'act1': 'ACT ONE · the séance · sc 4-7', 'act2': 'ACT TWO · stage right · sc 8-12',
         'act3': 'ACT THREE · leave them up · sc 13-17', 'act4': 'ACT FOUR · as a guest · sc 18-22', 'tag': 'TAG · august · sc 23'}
 DATESPAN = {'coldopen': 'Feb 15 - 29, 2024', 'act1': 'Mar 5 - 19, 2024', 'act2': 'Apr 1 - May 14, 2024',
             'act3': 'May 15 - 20, 2024', 'act4': 'May 28 - Jun 19, 2024', 'tag': 'Aug 5 - 22, 2024'}
@@ -1491,7 +1493,7 @@ INTRO_WAV = 'audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav'
 OUTRO_MP4, OUTRO_WAV = 'out/ep02/v1/outro/outro-b-ep2.mp4', 'out/ep02/v1/outro/outro-b-ep2.wav'
 CARD_NAME = 'ep1.1_her.wav'
 SUB = {'coldopen': 'sc 1 · the mammoth, and what came through the door', 'act1': 'the séance · sc 4-7',
-       'act2': 'her · sc 8-12', 'act3': 'leave them up · sc 13-17', 'act4': 'as a guest · sc 18-22', 'tag': 'august · sc 23'}
+       'act2': 'stage right · sc 8-12', 'act3': 'leave them up · sc 13-17', 'act4': 'as a guest · sc 18-22', 'tag': 'august · sc 23'}
 
 
 def card_timeline():

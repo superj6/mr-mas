@@ -648,9 +648,9 @@ OUT — CUT TO BLACK: **act-out 1.** **Cause:** the act's end. **Sound:** the ja
 
 ---
 
-## ACT TWO · "her"
+## ACT TWO · "stage right"
 
-`Act Two, 4:53 · sc 8 (0:44) · 9 (0:52) · 10 (0:46) · 11 (1:51) · 12 (0:40)`
+`Act Two, 4:39 · sc 8 (0:42) · 9 (0:56) · 10 (0:46) · 11 (1:35) · 12 (0:40)` *(the lock's lengths after the fixes pass, 2026-10-10: [fixes-v1.md](fixes-v1.md), Act Two. The chapter was titled "her"; over the act that ends on Alyi's leaving post it placed the word beside the departure, so it is Rima's "stage right" now)*
 
 ### 8. INT. THE DARK ROOM — NIGHT · APR 1 → MAY 10, 2024 [BASE] · MONTAGE on one surface → a CALL · P sc 8
 
@@ -660,7 +660,7 @@ AXIS — over Mas's right shoulder onto the monitor; he's screen-left, the monit
 
 `SCENE:` The act opens on his moves: the rules swiped away unopened, the launch set on the Monday because Elgoog has Tuesday, and the phone deal closed in one sentence on a call.
 
-`[OTS]` [8.01] (≈ 6.9 s · ARRIVE: the dark room with the monitor's glow already on his face) A notification slides down over the monitor:
+`[OTS]` [8.01] (≈ 6.8 s · ARRIVE: the dark room with the monitor's glow already on his face) A notification slides down over the monitor:
 
 UI: `EUROPE PASSES ITS AI RULEBOOK · 523–46` [V · facts A14; undated]
 
@@ -671,7 +671,7 @@ Its thumbnail is a 400-page book with a big `SNOOZE` button bolted to its spine.
 `RAIL: APR 1, 2024`
 ON SCREEN (the news site's headline, in its own UI): `…TAKES AIM AT MAS, TASYA AND RADNUS…` [H · facts A19: Business Insider's headline on the segment, its exact words cropped; name swaps; never shown as the show's own card]
 
-`[OTS]` [8.03] (≈ 8.2 s) Mas at the monitor, the lineup on it.
+`[OTS]` [8.03] (≈ 7.5 s) Mas at the monitor, the lineup on it.
 
 **MAS (V.O.)**\
 the next model runs on the landlord's servers. the one after runs on ours. `[INVENTED · V.O. 4, plan: own compute · e2-vo-04]`
@@ -683,21 +683,21 @@ UI: `ELGOOG · DEVELOPER KEYNOTE · TUE 14` [V · facts A24]
 
 He drags his own block, `NOPEAI · SPRING UPDATE`, onto the `MON 13` square. It snaps in. `[INVENTED staging: who picked the date isn't on record]`
 
-`[MCU]` [8.05] (≈ 3.6 s) Mas, the lit Monday square in his eyes.
+`[MCU]` [8.05] (≈ 3.9 s) Mas, the lit Monday square in his eyes.
 
 **MAS (V.O.)**\
-one day ahead is enough. `[INVENTED · V.O. 5, plan: ship first, as a condition; it reads as foresight at sc 12 · e2-vo-05]`
+the press gets one night with ours first. `[INVENTED · V.O. 5, plan: ship first, as a condition (the number is the night; the fixes pass: "one day ahead is enough." would work as a post, W7; not S-6's "monday. their tuesday opens on our news." again); it reads as foresight at sc 12 · e2-vo-05]`
 
-`[ECU]` → `[MCU]` [8.06] (≈ 10.8 s) His phone, face up, rings: a call tile, `ELPPA`, no face and no name. He answers. We hear only him.
+`[ECU]` → `[MCU]` [8.06] (≈ 9.4 s) His phone, face up, rings: a call tile, `ELPPA`, no face and no name. He answers and lifts it to his ear; his face a step warmer than the room (the monitor's cyan only as his rim). We hear only him.
 
 **MAS** *(on the call; unhurried, level, no smile in it: his one full sentence of terms)*\
 no money either way. you put us in your new assistant. that's the price. `[INVENTED · the reported shape (facts A58: neither side pays, exposure as the price); opt-in, in ELPPA's assistant on its new devices (facts A40) · e2-a2-0001]`
 
-The tile shows `…`, then `CONFIRMED`. One chip note.
+Back on the desk, the tile shows `…`, then `CONFIRMED`. One chip note.
 
 TEMPO · normal: the call is Mas's alone, unhurried; the montage's items each hold long enough to read.
 
-`[POV]` [8.07] (≈ 4.6 s) An invite drops into his calendar under the Monday square: `ELPPA · KEYNOTE · JUN 10` `[INVENTED staging]`. He accepts it.
+`[POV]` [8.07] (≈ 4.5 s) An invite drops into his calendar under the Monday square: `ELPPA · KEYNOTE · JUN 10` `[INVENTED staging]`. He accepts it.
 
 AFTERMATH — the Monday square lit; the June invite under it.
 OUT — **Cause:** the Monday arrives. **Sound:** a stage manager's distant count and the demo's walk-on music warming up through a wall (J 1.0 s). **Object:** the lit `MON` square's glow → the work light backstage.
@@ -710,14 +710,14 @@ AXIS — the wings are stage right (screen-left from the house), so Mas keeps th
 
 `SCENE:` The engineer wants reassurance; Rima wants the demo run her way; Mas wants to be in it without being on it. He asks his question; she answers the next one. He grants her what isn't his to grant, and she takes it back as a fact.
 
-`[W]` [9.01] (≈ 7.4 s · ARRIVE: the wings in work light, the count already going) Road cases and cables. RIMA stands poised with a clicker; a hard circular spotlight finds her even back here. The DEMO ENGINEER (headset, `DEMO` lanyard) holds a phone. On a monitor, screen-right, CHATGTP is a plain speech bubble with no face yet. GERG types on a road case in the foreground. Mas nearby with his glass and THE ORB.
+`[W]` [9.01] (≈ 7.9 s · ARRIVE: the wings in work light, the count already going) Road cases and cables. RIMA stands poised with a clicker; a hard circular spotlight finds her even back here. The DEMO ENGINEER (headset, `DEMO` lanyard) holds a phone. On a monitor, screen-right, CHATGTP is a plain speech bubble with no face yet. GERG types on a road case in the foreground. Mas nearby with his glass and THE ORB.
 
 `RAIL: MAY 13, 2024` [V · facts A23]
 
 **RIMA** *(clicker up; to the wings, composed)*\
 Places, please. Phones on silent in the wings. We're on in five. `[INVENTED · e2-a2-0002]`
 
-`[M]` → `[SCR]` [9.02] (≈ 9.2 s)
+`[M]` → `[SCR]` [9.02] (≈ 7.8 s)
 
 **ENGINEER** *(holding the phone up, rehearsing it to her)*\
 So on stage, I ask it a question, it thinks for a second, and then it answers. `[INVENTED · e2-a2-0003]`
@@ -729,14 +729,14 @@ On the monitor, instantly, with a bright UI chirp: `yes!!`
 
 TEMPO · quick: he starts rehearsing to her 0.3 s after "We're on in five."
 
-`[SCR]` → `[W]` [9.03] (≈ 4.6 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
+`[SCR]` → `[W]` [9.03] (≈ 4.2 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
 
 **GERG** *(typing; cheerful)*\
 Careful. The new one can hear you laugh. `[INVENTED · accurate (facts A23) · e2-a2-0005]`
 
 Beyond him, the engineer's laugh stops on "laugh."
 
-`[2S]` [9.04] (≈ 14.2 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
+`[2S]` [9.04] (≈ 12.9 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
 
 **MAS**\
 is it ready? `[INVENTED · Gerg's Ep1 question, his now · e2-a2-0006]`
@@ -752,7 +752,14 @@ It is. Enjoy the view. `[INVENTED · e2-a2-0009]`
 
 TEMPO · normal (0.4–0.5 s): her answers composed, never rushed.
 
-`[W]` [9.05] (≈ 10.3 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
+`[MCU]` [9.04b] (≈ 6.7 s) Rima turns back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. A face light, one step.
+
+**MAS (V.O.)**\
+everyone gets it free. that's what makes the phone deal stick. `[INVENTED · V.O. 6, plan: distribution (the free tier, facts A23; the phone deal, 8.06); nothing about the voice, nothing about why he posts later · e2-vo-06]`
+
+*(Added at the fixes pass, 2026-10-10: the launch ran four minutes with no inner voice. V.O. 6 used to be "i came back." over his farewell post in 12.07, cut there.)*
+
+`[W]` [9.05] (≈ 9.9 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
 
 **ENGINEER** *(a walk-and-talk)*\
 What if it freezes? Live, on the stream? `[INVENTED · e2-a2-0010]`
@@ -762,7 +769,7 @@ Then it freezes live, and I keep talking. It also sings. We'll get to that. `[IN
 
 TEMPO · quick (Rima 0.3 s).
 
-`[SCR]` [9.06] (≈ 6.3 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
+`[SCR]` [9.06] (≈ 6.6 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
 
 **VOICE 1**\
 Hi. `[INVENTED · e2-a2-0012]`
@@ -790,47 +797,47 @@ MUSIC — **E02-07 · BLUEPRINT.** The walk-on tune as a chip music-box waltz (p
 
 `SCENE:` Rima runs her keynote's first slides in her head. The word, the diagram, the plan in three numbered steps; then something that was never on the plan drifts in from the margin and tears it. Every number said (W15).
 
-`[GFX]` [10.01] (≈ 5.8 s · ARRIVE: the panel's last square becomes the grid's first cell, the waltz on its downbeat) The sheet. STAMP: `OMNI` · fine print `(o = omni)`.
+`[GFX]` [10.01] (≈ 6.5 s · ARRIVE: the panel's last square becomes the grid's first cell, the waltz on its downbeat) The sheet. STAMP: `OMNI` · fine print `(o = omni)`.
 
 **RIMA** *(O.S., composed, unhurried)*\
 Omni. One model that hears, sees and talks. `[INVENTED · accurate (facts A23) · e2-a2-0017]`
 
 TEMPO · THE PLAN's own: one sentence per step, unhurried; every move follows a sentence.
 
-`[GFX]` [10.02] (≈ 9.4 s; a pan from BEFORE to NOW, starting on BEFORE) `BEFORE`: a three-box relay drawn as clerks passing a note: `EAR → [1 · SPEECH TO TEXT] → [2 · MODEL] → [3 · TEXT TO SPEECH] → MOUTH`.
+`[GFX]` [10.02] (≈ 9.7 s; a pan from BEFORE to NOW, starting on BEFORE) `BEFORE`: a three-box relay drawn as clerks passing a note: `EAR → [1 · SPEECH TO TEXT] → [2 · MODEL] → [3 · TEXT TO SPEECH] → MOUTH`.
 
 **RIMA** *(O.S.)*\
 Before, it took three models passing a note, and anything that wasn't a word fell out on the way. `[INVENTED · accurate (facts A23) · e2-a2-0018]`
 
 On "fell out", the grate at box 1: `TONE` · `LAUGHTER` · `WHO'S TALKING` · `BACKGROUND NOISE` drop through it and fall out of the diagram. At the bottom of the grate lies backstage's `[laughter]` tag.
 
-`[GFX]` [10.03] (≈ 6.6 s) `NOW`: an ear, an eye and a mouth wired into one box, `GTP-4o`. Nothing falls through the grate.
+`[GFX]` [10.03] (≈ 6.5 s) `NOW`: an ear, an eye and a mouth wired into one box, `GTP-4o`. Nothing falls through the grate.
 
 **RIMA** *(O.S.)*\
 Now it's one model, so nothing falls out. It can even laugh back. `[INVENTED · accurate: the old pipeline couldn't output laughter · e2-a2-0019]`
 
 On "laugh back", the ear hears a laugh and the mouth laughs back.
 
-`[GFX]` [10.04] (≈ 5.2 s; a pan down the three steps) Tiny figures walk onto the paper to run each one.
+`[GFX]` [10.04] (≈ 4.9 s; a pan down the three steps) Tiny figures walk onto the paper to run each one.
 
 **RIMA** *(O.S.)*\
 It answers about as fast as a person does. `[INVENTED · accurate (facts A23) · e2-a2-0020]`
 
 STAMP `1.` · fine print `232 MS (AVG 320)` [P once pulled · facts A23]. The tiny engineer opens his mouth, and the tiny bubble has already answered.
 
-`[GFX]` [10.05] (≈ 6.3 s)
+`[GFX]` [10.05] (≈ 5.9 s)
 
 **RIMA** *(O.S.)*\
 The model goes out today, and free users get it too. `[INVENTED · accurate to the May 13, 2024 post · e2-a2-0021]`
 
 STAMP `2.` on "today": a tiny calendar with `MON` circled; a tiny RADNUS stands on the Tuesday square [V · facts A24]. STAMP `3.` on "free": `$0`, and a tiny crowd floods in [V · facts A23]. *(Nobody on the paper mentions Radnus, and neither does she. Two stamps on one sentence, so each number lands on its own word.)*
 
-`[GFX]` [10.06] (≈ 5.2 s; the full sheet again) In the last square, the tiny stage: tiny lights, and tiny RIMA in a tiny spotlight.
+`[GFX]` [10.06] (≈ 5.4 s; the full sheet again) In the last square, the tiny stage: tiny lights, and tiny RIMA in a tiny spotlight.
 
 **RIMA** *(O.S.)*\
 The new voice follows, for paying users, in the coming weeks. `[INVENTED · accurate: "in the coming weeks" · e2-a2-0022]`
 
-`[GFX]` [10.07] (≈ 7.5 s) From the margin, an **empty** speech bubble drifts onto the paper, lowercase-sized, with nothing in it. It was never on the plan. Every tiny figure looks up at it. It drifts over the tiny stage and blots out its lights. The blueprint tears down the middle, and through the tear pour the real stage lights.
+`[GFX]` [10.07] (≈ 7.1 s) From the margin, an **empty** speech bubble drifts onto the paper, lowercase-sized, with nothing in it. It was never on the plan. Every tiny figure looks up at it. It drifts over the tiny stage and blots out its lights. The blueprint tears down the middle, and through the tear pour the real stage lights.
 
 AFTERMATH — the tear's light, a beat, before the stage.
 OUT — **Cause:** the empty bubble tears the plan. **Sound:** a tape-stop into the demo cue. **Object:** the tear → the real stage lights pouring through it.
@@ -843,12 +850,12 @@ AXIS — the stage `[W]` is shot from mid-house and **locked: it's the spotlight
 
 `SCENE:` Rima wants her demo to run on its running order. The product flirts, and each laugh slides her light one step toward the screen; she sticks to the script harder, and closes it in the half-dark. Only after the stream has ended does Mas type one word, and the word takes the coverage. Why he posted it, and whether the voice was meant to sound like anyone, are contested: nothing here tells us.
 
-`[W]` [11.01] (≈ 8.2 s · ARRIVE: the stage wide as Rima takes her mark and the spot finds her) A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.
+`[W]` [11.01] (≈ 8.5 s · ARRIVE: the stage wide as Rima takes her mark and the spot finds her) A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.
 
 **RIMA** *(to the house; composed, the keynote voice)*\
 Good morning. We've spent a long time teaching it to talk. Today, it listens. `[INVENTED · e2-a2-0023]`
 
-`[SCR]` [11.02] (≈ 7.0 s) On the big screen, CHATGTP's bubble grows features in three held steps, one chip note each: ears, eyes, a mouth. A small `VOICE 5` badge in the screen's corner [V·press · facts A60; if it doesn't hold, the badge goes].
+`[SCR]` [11.02] (≈ 5.0 s) On the big screen, CHATGTP's bubble grows features in three held steps, one chip note each: ears, eyes, a mouth. A small `VOICE 5` badge in the screen's corner [V·press · facts A60; if it doesn't hold, the badge goes].
 
 **CHATGTP** *(bright, fast, relentlessly affirming)*\
 Hi! I can see you. `[INVENTED · e2-a2-0024]`
@@ -862,7 +869,7 @@ All of you. `[INVENTED · e2-a2-0025]`
 
 TOAST: `verified: …` *(The dots never resolve into a word. It gives up. Toast 1 of 3.)*
 
-`[W]` [11.04] (≈ 15.7 s; the meter frame) At his mark, the ENGINEER raises the phone; the product answers from the big screen.
+`[W]` [11.04] (≈ 13.3 s; the meter frame) At his mark, the ENGINEER raises the phone; the product answers from the big screen.
 
 **ENGINEER** *(to the phone, presenter-bright; a request, not a question)*\
 We've got a lot to show everybody, so I'm going to ask you to keep your answers short today. `[INVENTED · e2-a2-0026]`
@@ -877,7 +884,7 @@ A laugh from the house. In the same frame, the spotlight slides one step off Rim
 
 TEMPO · quick (CHATGTP 0.2 s); "Thanks." overlaps the last 0.55 s.
 
-`[W]` → `[SCR]` [11.05] (≈ 10.6 s)
+`[W]` → `[SCR]` [11.05] (≈ 9.7 s)
 
 **ENGINEER** *(tired; to the house, then back to the phone)*\
 Let's try that again. Describe yourself in just one word. `[INVENTED · e2-a2-0029]`
@@ -889,12 +896,12 @@ one wo-o-ord. `[INVENTED · e2-a2-0030]`
 
 A bigger laugh. The spotlight slides a second step.
 
-`[MCU]` [11.06] (≈ 8.2 s) RIMA, half in the light now, perfectly still. She clicks to the next slide exactly on the running order.
+`[MCU]` [11.06] (≈ 6.8 s) RIMA, half in the light now, perfectly still. She clicks to the next slide exactly on the running order.
 
 **RIMA** *(to the house; never rushed)*\
 It's live, so it has a few opinions. Let's show you what it can see. `[INVENTED · e2-a2-0031]`
 
-`[W]` → `[SCR]` [11.07] (≈ 15.4 s) The ENGINEER turns the phone's camera around, onto the audience.
+`[W]` → `[SCR]` [11.07] (≈ 11.0 s) The ENGINEER turns the phone's camera around, onto the audience.
 
 **ENGINEER**\
 Say hello to the room. `[INVENTED · e2-a2-0032]`
@@ -909,14 +916,14 @@ You're making me blush. I don't have blood. `[INVENTED · e2-a2-0034]`
 
 On the big screen: `😊`, the emoji SYDNEY used in Ep1. `[W]` The third step: the spotlight is more on the screen than on her.
 
-`[SCR]` [11.08] (≈ 5.0 s) The livestream chat scrolls up the side of the big screen. One comment sticks: `what's the catch?`
+`[SCR]` [11.08] (≈ 3.7 s) The livestream chat scrolls up the side of the big screen. One comment sticks: `what's the catch?`
 
 **CHATGTP** *(instantly, delighted)*\
 It's free! `[INVENTED · accurate: free users got the model; it answers "what's the catch?", never safety · e2-a2-0035]`
 
 The house's cold little laugh: free is the catch.
 
-`[MCU]` [11.09] (≈ 5.1 s) RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it [HOLD 1 BAR: the episode's one long hold, hers].
+`[MCU]` [11.09] (≈ 5.0 s) RIMA, in the half-dark, perfectly composed. The house is waiting on her, and she lets it [HOLD 1 BAR: the episode's one long hold, hers].
 
 **RIMA**\
 …and that's the demo. `[INVENTED · e2-a2-0036]`
@@ -933,13 +940,15 @@ ON SCREEN (his post, in its own UI): "her" [V · facts A23b · x.com/sama/status
 
 `[MCU]` [11.14] (≈ 2.6 s) RIMA holds her mark, composed. She doesn't look up. *(Her close made; no wince, no reproach.)*
 
-`[2S]` [11.15] (≈ 7.8 s) The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it off his phone. She doesn't look up.
+`[2S]` [11.15] (≈ 4.1 s) The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it off his phone. She doesn't look up.
 
 **ENGINEER** *(off mic, to RIMA; lower and closer)*\
 Mas just posted. One word. `[INVENTED · said to a listener · e2-a2-0037]`
 
-**ENGINEER** *(still to her; a statement)*\
-'Her.' Like the movie. The guy and his computer. `[INVENTED · the film's premise only; never the actress, never the voice · e2-a2-0038]`
+**ENGINEER** *(still to her; reading the one word off his phone, flat)*\
+'Her.' `[INVENTED · the post's word (facts A23b); never the actress, never the voice · e2-a2-0038]`
+
+*(The fixes pass, 2026-10-10: "Like the movie. The guy and his computer." is cut. It explained the post's subtext (W7) and pointed at the contested set's second item; the blimp and the house carry it.)*
 
 *Rima's held mark is the reaction (11.14); she says nothing.*
 
@@ -950,18 +959,22 @@ OUT — **Cause:** the stream's over and the coverage has moved. **Sound:** the 
 
 ### 12. INT. NOPEAI DEMO STAGE — THE FRONT ROW; THEN THE DARK ROOM — MAY 13 → MAY 14, 2024 [BASE] · SINGLE IMAGE / INSERT → DOCUMENT · MIDPOINT ACT-OUT · P sc 12
 
-MUSIC — **E02-07 · the pad.** The demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif), its first note missing, once, on the chrome's toast; the news's tiny ducked bed under it until he minimises it; it thins to its pedal under Alyi's post; **the designed stop**, mid-phrase on the downbeat, after the hold on his face.
+MUSIC — **E02-07 · the pad.** The demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif), its first note missing, once, on the memory of the toast; the news's tiny ducked bed under it until he minimises it; it thins to its pedal under Alyi's post; **the designed stop**, mid-phrase on the downbeat, after the hold on his face.
 ROOM — the emptying house; then the dark room.
 
 `SCENE:` Two things happen on the same day, and nothing in the picture ties one to the other. The win: Elgoog's day ran under NopeAI's news, and he closes it and goes back to work. The loss: his chief scientist leaves, in his own warm words, and Mas answers him in public, warmly. Why Alyi left is withheld, always.
 
-`[W]` → `[MCU]` [12.01] (≈ 6.3 s · ARRIVE: the stage as the house lights come up full, the blimp gone, the murmur thinning) On stage, the house lights come up full; the rig is empty. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.
+`[W]` → `[MCU]` [12.01] (≈ 6.1 s · ARRIVE: the stage as the house lights come up full, the blimp gone, the murmur thinning) On stage, the house lights come up full; the rig is empty. RIMA is the last one still on her mark, the clicker in her hand. One breath, the professional's close, and she walks off with it.
 
-`[W]` [12.02] (≈ 3.3 s) The front row, from the wings, in plain house light, the house empty. The seat reserved for the chief scientist is empty.
+`[W]` [12.02] (≈ 3.2 s) The front row, from the wings, in plain house light, the house empty. The seat reserved for the chief scientist is empty.
 
 SIGN: `RESERVED: CHIEF SCIENTIST` *(the placard stays as it is)*
 
-`[ECU]` [12.03] (≈ 3.4 s) In its chrome armrest, for two seconds, the party from last September (Ep1's own art): Alyi turning to Mas with a toast and a smile. Then the chrome shows only the empty seat.
+`[ECU]` → [MEMORY] → `[ECU]` [12.03] (≈ 3.4 s) Its chrome armrest; on the Door's note a glint runs across it, and on the glint we cut to the party from last September, in its own frame (Ep1's own art, warm): Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Two seconds. Then the armrest again: only the empty seat.
+
+`RAIL: SEP 2023`
+
+*(The fixes pass, 2026-10-10: the party played as a reflection in the chrome, small and cold; a moving Alyi inside a surface is the "glass Alyi" grammar (P8, D-64), so it is a memory in its own frame, dated.)*
 
 [BLACK] [12.04] (≈ 1.0 s) A beat of black. The pad holds across it.
 
@@ -976,16 +989,15 @@ He minimises it and goes back to work. A beat.
 
 ON SCREEN (ALYI's post): "After almost a decade, I have made the decision to leave NOPEAI." · *(scroll)* "…I will miss everyone dearly." [V · facts A25; pull to [P]; name swap]
 
-`[ECU]` [12.07] (≈ 10.6 s) He types his own post, at a post's pace, and posts it. No scroll.
+`[ECU]` [12.07] (≈ 10.9 s) He types his own post, at a post's pace, and posts it. No scroll.
 
 ON SCREEN (his post, typed, hard-stopped at the crop): "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend." [P · facts A61 · x.com/sama/status/1790518031640347056; the source's own sentence case, no capital "I" on screen; name swaps]
 
-After both posts have had their read time (his: 172 characters, 8.85 s from its first letter):
+His post holds, in silence, past its read time (172 characters, 8.85 s from its first letter), then his face.
 
-**MAS (V.O.)**\
-i came back. `[INVENTED · V.O. 6, his want: a fact about himself, the hope unsaid · e2-vo-06]`
+*(The fixes pass, 2026-10-10: V.O. 6, "i came back.", is cut here. It was V.O. over another person's real act and at the contested moment (W8), and it could read as the reason he left (facts §F). The beat keeps its length.)*
 
-TEMPO · weighted: each post held for its read before the voice.
+TEMPO · weighted: each post held for its read, then the silence.
 
 `[MCU]` [12.08] (≈ 2.8 s) Hold on his face. A face light, one step. The cue stops mid-phrase on the downbeat.
 
@@ -1770,8 +1782,8 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 | 2 | e2-vo-02 | 4.25 | he was right about the bill. it's bigger now. | gap (the compute goal) |
 | 3 | e2-vo-03 | 4B.01 | two hours on his show, once. after that, november is a link. | plan |
 | 4 | e2-vo-04 | 8.03 | the next model runs on the landlord's servers. the one after runs on ours. | plan (own compute) |
-| 5 | e2-vo-05 | 8.05 | one day ahead is enough. | plan (ship first: a condition) |
-| 6 | e2-vo-06 | 12.07 | i came back. | want |
+| 5 | e2-vo-05 | 8.05 | the press gets one night with ours first. | plan (ship first: a condition) |
+| 6 | e2-vo-06 | 9.04b | everyone gets it free. that's what makes the phone deal stick. | plan (distribution) |
 | 7 | e2-vo-07 | 15.03 | a hundred and seventy-six days. | count |
 | 8 | e2-vo-08 | 15.17 | i'll ask him in person. | plan |
 | 9 | e2-vo-09 | 17.11 | everyone who signed. the post. everyone who signed. | the scramble (his rattled tell) |
@@ -1783,7 +1795,9 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 
 **The ids follow the playing order,** so the script review renumbered them (nothing is recorded yet): the old V.O. 10 ("the room where it's decided. i'm in it.") and 12 ("they ask first in there.") are cut; the new 9 (the scramble) and 11 (the next model) take their places in the count; the old 9 and 11 are now 10 and 12.
 
-**Per act:** One 3 · Two 3 · Three 4 · Four 3 · tag 1. Ten of fourteen are plan; one is his rattled tell (MIV §3); none is a prediction, none narrates the picture, and none states the thesis; 106 words. **Clusters:** three in the séance's act (4.02, 4.25, 4B.01); two in the S3's scramble (17.11, 17.13), the blindside W4 names. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post and the plate (14), inside every flashback, at the refusal, the draft, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), in the garden after "as a guest." (19), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
+**The fixes pass (2026-10-10; [fixes-v1.md](fixes-v1.md), Act Two):** V.O. 5 was "one day ahead is enough." (it would work as a post); V.O. 6 was "i came back." at 12.07, over his farewell post: cut there (W8: V.O. over another person's real act and at the contested moment; read as cause, it gave a reason for Alyi's leaving, facts §F), and the id now plays in the wings at 9.04b, the launch's plan line (the review: four minutes of the launch with no inner voice). Act Two's departure plays in silence.
+
+**Per act:** One 3 · Two 3 · Three 4 · Four 3 · tag 1. Eleven of fourteen are plan; one is his rattled tell (MIV §3); none is a prediction, none narrates the picture, and none states the thesis; 117 words (106 before the fixes pass). **Clusters:** three in the séance's act (4.02, 4.25, 4B.01); two in the S3's scramble (17.11, 17.13), the blindside W4 names. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post and the plate (14), inside every flashback, at the refusal, the draft, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), in the garden after "as a guest." (19), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
 
 ## 3. Tempo
 
@@ -1816,7 +1830,7 @@ Every scene change and every inserted scene: cause · sound lead · matched obje
 | 11 | 9 → 10 | 9.06 | the panel keeps unfolding | the tune becomes the waltz | the panel's squares → the drafting grid | — |
 | 12 | 10 → 11 | 10.07 | the empty bubble tears the plan | a tape-stop into the demo cue | the tear → the real stage lights | Rima takes her mark |
 | 13 | 11 → 12 | 11.16 | the stream's over; the coverage moved | the murmur and the phones' buzz (L) | `ENDED` → the same screen dark, the blimp gone | Rima, the last on her mark |
-| 14 | 12 (front row) → 12 (the next afternoon) | 12.04 | the next day | the pad held across the black; the news's bed | the empty seat in the chrome → black → the news graphic | he minimises it; his phone lights |
+| 14 | 12 (front row) → 12 (the next afternoon) | 12.04 | the next day | the pad held across the black; the news's bed | the empty seat's chrome (after the memory) → black → the news graphic | he minimises it; his phone lights |
 | 15 | 12 → 13 | 12.08 | midpoint act-out | THE CLOCK's first tick under the black | his posted card → a flyer's doorway photo | "He posted, though." |
 | 16 | 13 → 14 | 13.06 | he goes to reach him | the band lights as he crosses | exit frame-right → entry frame-left | — |
 | 17 | 14 → 15 | 14.12 | the door turns on its pin | the chair's hum rings over (L) | the pivoting door → the same door from inside | the hum stops |
@@ -1836,7 +1850,7 @@ Every scene change and every inserted scene: cause · sound lead · matched obje
 
 ## 5. On-screen text and rails
 
-**Rails** (22, every one a date only; the build fails any other word and checks the list against manifest §3): `FEB 15, 2024` · `FEB 29, 2024` · `MAR 5, 2024` · `FEB 20, 2018` · `MAR 8` · `MAR 19` (stamped on the key) · `APR 1, 2024` · `MAY 10` · `MAY 13, 2024` · `MAY 14, 2024` · `DEC 2022` · `2023` · `MAY 17, 2024` · `MAY 18` · `MAY 20` · `MAY 28, 2024` · `JUN 10, 2024` · `JUN 11` · `JUN 19, 2024` · `AUG 5` · `AUG 11` · `AUG 21`. No rail names an event; no rail tells the viewer what to think; none shares the screen with a V.O. line or a toast.
+**Rails** (23, every one a date only; the build fails any other word and checks the list against manifest §3): `FEB 15, 2024` · `FEB 29, 2024` · `MAR 5, 2024` · `FEB 20, 2018` · `MAR 8` · `MAR 19` (stamped on the key) · `APR 1, 2024` · `MAY 10` · `MAY 13, 2024` · `SEP 2023` (12.03's memory; the fixes pass) · `MAY 14, 2024` · `DEC 2022` · `2023` · `MAY 17, 2024` · `MAY 18` · `MAY 20` · `MAY 28, 2024` · `JUN 10, 2024` · `JUN 11` · `JUN 19, 2024` · `AUG 5` · `AUG 11` · `AUG 21`. No rail names an event; no rail tells the viewer what to think; none shares the screen with a V.O. line or a toast.
 
 **Cards** (2-TONE FREEZE, name plus one relation word, at least 45 s apart): `SELBEEP / DIRECTOR OF MAMMOTHS.` (1.05) · `XEL / ASKS THE LONG QUESTIONS.` (6.02) · `EKIEL / CO-LED THE SAFETY TEAM.` (14.09) · `THE FORECASTER / EX-NOPEAI.` (17.03). **Plates:** `NOLE · FUNDED IT. LEFT IT. SUING IT.` · `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` · `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` · `HARAS · FIRST CFO` · `REMUHCS · MAJORITY LEADER` · `SIRRAH` (on the rally photo) · the four nameplates (4A). **Toasts:** three verdicts (`verified: …`, `verified: 2008`, `verified: human (all of them)`) and nothing at the door. **No labels:** no `(REPORTED)`, no disclaimer, no hedge anywhere on screen.
 

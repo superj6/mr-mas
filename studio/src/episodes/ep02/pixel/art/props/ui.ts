@@ -18,6 +18,7 @@ import {Buf, rect, line, ellipse, bayer, hash, clamp, poly} from '../../../../..
 import {PAL, stepColor} from '../../../../../shared/pixel/palette';
 import {drawPost, PostDraw} from '../../../../../shared/pixel/kits/post-card';
 import {drawPostFor, PosterAny, POSTERS_A1} from '../../../../../shared/pixel/kits/post-any';
+import {pt as uit, pw as uiw} from '../../../../../shared/pixel/kits/uitype';
 import {drawSenator} from '../../../../../shared/pixel/cast/civic-extras';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp, RH, TR, grip, HANDSKIN} from '../kit';
 import type {ArtAsset} from '../asset';
@@ -27,6 +28,14 @@ export const POSTERS_EP2: Record<string, PosterAny> = {
   ekiel: {name: 'Ekiel', handle: '@ekiel', accent: PAL.C5, bg: PAL.C2, avatar: FACE(['.kbhhhhhhhbbk.', '.khhhhhhhhhbk.', 'kbhhhsSSshhbbk', 'kbbhsSSSSsbbbk']), avatarPal: {k: PAL.N0, b: PAL.C1, h: PAL.B4, s: PAL.S4, S: PAL.S5, x: PAL.N2}, initial: ['###', '#..', '##.', '#..', '###']},
   nopeai: {name: 'NopeAI', handle: '@nopeai', accent: PAL.C7, bg: PAL.N0, avatar: Array.from({length: 14}, (_, j) => j < 2 || j > 11 ? '..kkkkkkkkkk..' : 'kkCCCCCCCCCCkk'), avatarPal: {k: PAL.N0, C: PAL.C5}, initial: ['#.#', '###', '###', '#.#', '#.#']},
   rumpt: {name: 'RUMPT', handle: '@rumpt', accent: PAL.R3, bg: PAL.R1, avatar: Array.from({length: 14}, (_, j) => j < 2 || j > 11 ? '..kkkkkkkkkk..' : 'kkRRRRRRRRRRkk'), avatarPal: {k: PAL.N0, R: PAL.R2}, initial: ['##.', '#.#', '##.', '#.#', '#.#']},
+  // MAS as data (the fixes pass, 2026-10-10): the shared post-card kit's poster has the handle '@mas', but naming.md gives
+  // his handle as @masa and Ep1 aired it (act1 v35: 'replying to @masa'); the shared kit stays as it is (Ep1 renders
+  // through it), so Ep2 draws his posts through post-any with post-card's own avatar, colours and initial, copied here:
+  // the same pixels but the handle
+  masa: {name: 'Mas Manalt', handle: '@masa', accent: PAL.C6, bg: PAL.C3,
+    avatar: ['....kkkkkk....', '..kkbbbbbbkk..', '.kbbbhhhhbbbk.', '.kbbhhhhhhhbk.', 'kbbhhsSSshhbbk', 'kbbhsSSSSshbbk', 'kbbbsSSSSsbbbk',
+      'kbbbsSSSSsbbbk', 'kbbbbsSSsbbbbk', 'kbbbxxssxxbbbk', '.kbxxxxxxxxbk.', '.kbxxxxxxxxbk.', '..kkxxxxxxkk..', '....kkkkkk....'],
+    avatarPal: {k: PAL.N0, b: PAL.C2, h: PAL.B2, s: PAL.S4, S: PAL.S5, x: PAL.G3}, initial: ['#.#', '###', '###', '#.#', '#.#']},
 };
 type PostDef = {who?: 'mas' | 'alyi'; poster?: PosterAny; text: string; ts?: string; hearts?: number};
 /** every post Ep2 shows, verbatim (name swaps; Mas's lowercase is his) */
@@ -47,8 +56,19 @@ export const EP2_POSTS: Record<string, PostDef> = {
   alyiIss: {who: 'alyi', text: 'I am starting a new company:', ts: 'JUN 19'},
   hturt: {poster: POSTERS_EP2.rumpt, text: '…and she \'A.I.\'d\' it…', ts: 'AUG 11'},
 };
-export const drawEp2Post = (b: Buf, x: number, y: number, id: keyof typeof EP2_POSTS, o: PostDraw) => {
+/** tsOver: the card's time as the app shows it at that moment (12.07: 'now', the post he has just sent) */
+export const drawEp2Post = (b: Buf, x: number, y: number, id: keyof typeof EP2_POSTS, o: PostDraw, tsOver?: string) => {
   const p = EP2_POSTS[id];
+  if (p.who === 'mas') {
+    // @masa (the fixes pass). If a narrow card's name row can't hold the name, the handle and the time, the time goes
+    // to the card's foot, right-aligned on the action row, as a post's own detail view dates it
+    const P = POSTERS_EP2.masa, w = o.w ?? (o.size === 'notify' ? 170 : 220), ts = tsOver ?? p.ts;
+    const tight = o.size !== 'notify' && !!ts && 30 + uiw(P.name) + uiw(P.handle) + 8 + uiw(ts!) > w - 6;
+    if (!tight) return drawPostFor(b, x, y, {poster: P, text: p.text, ts, hearts: p.hearts}, o);
+    const r = drawPostFor(b, x, y, {poster: P, text: p.text, hearts: p.hearts}, o);
+    if ((o.k ?? 99) >= 3) uit(b, ts!, x + r.w - 6 - uiw(ts!), y + r.h - 10, PAL.N6);
+    return r;
+  }
   if (p.who) return drawPost(b, x, y, {who: p.who, text: p.text, ts: p.ts, hearts: p.hearts}, o);
   return drawPostFor(b, x, y, {poster: p.poster!, text: p.text, ts: p.ts, hearts: p.hearts}, o);
 };

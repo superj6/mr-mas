@@ -9,35 +9,35 @@
    "room": "darkroom",
    "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
    "from": -1.0,
-   "to": 44.4,
+   "to": 42.4,
    "first": "8.01",
    "last": "8.07",
    "lead": 1.0,
    "trail": 0.4,
-   "lift_db": 2.2
+   "lift_db": 1.7
   },
   {
    "room": "wings",
    "recipe": "wings: bed_wings -40",
-   "from": 43.4,
-   "to": 95.2,
+   "from": 41.4,
+   "to": 98.2,
    "first": "9.01",
    "last": "9.06",
    "lead": 0.6,
    "trail": 0.2,
-   "lift_db": 2.3
+   "lift_db": 2.1
   },
   {
    "room": "black: room tone -54.0 LUFS",
-   "from": 95.0,
-   "to": 141.0,
+   "from": 98.0,
+   "to": 144.0,
    "first": "10.01"
   },
   {
    "room": "demo_house",
    "recipe": "demo_house: bed_demo_house -36",
-   "from": 140.4,
-   "to": 154.9,
+   "from": 143.4,
+   "to": 157.858,
    "first": "11.01",
    "last": "11.02",
    "lead": 0.6,
@@ -47,19 +47,19 @@
   {
    "room": "wings",
    "recipe": "wings: bed_wings -40",
-   "from": 153.9,
-   "to": 158.067,
+   "from": 156.858,
+   "to": 161.025,
    "first": "11.03",
    "last": "11.03",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 1.9
+   "lift_db": 2.1
   },
   {
    "room": "demo_house",
    "recipe": "demo_house: bed_demo_house -36",
-   "from": 157.067,
-   "to": 210.733,
+   "from": 160.025,
+   "to": 213.483,
    "first": "11.04",
    "last": "11.10",
    "lead": 0.6,
@@ -69,18 +69,18 @@
   {
    "room": "wings",
    "recipe": "wings: bed_wings -40",
-   "from": 209.733,
-   "to": 216.942,
+   "from": 212.483,
+   "to": 219.692,
    "first": "11.11",
    "last": "11.12",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 2.0
+   "lift_db": 2.1
   },
   {
    "room": "demo_house",
    "recipe": "demo_house: bed_demo_house -36",
-   "from": 215.942,
+   "from": 218.692,
    "to": 240.0,
    "first": "11.13",
    "last": "11.16",
@@ -121,255 +121,257 @@
   [
    "8.01",
    "ui_toast_pop",
-   2.186,
+   1.847,
    -12.6,
    "ride +13.4 dB (sfx-rides.json)"
   ],
   [
    "8.01",
    "ui_swipe",
-   6.725,
+   5.683,
    -24.0
   ],
   [
    "8.02",
    "mouse_scroll",
-   8.183,
+   6.933,
    -28.0
   ],
   [
    "8.04",
    "ui_drop_snap",
-   25.0,
+   23.5,
    -22.0
   ],
   [
    "8.06",
    "call_ring",
-   29.128,
-   -24.0
+   28.327,
+   -23.0,
+   "ride +1.0 dB (sfx-rides.json)"
   ],
   [
    "8.06",
    "call_connect",
-   30.809,
+   29.752,
    -23.0,
    "ride +3.0 dB (sfx-rides.json)"
   ],
   [
    "8.07",
    "invite_drop",
-   39.297,
-   -19.5,
-   "ride +4.5 dB (sfx-rides.json)"
+   38.027,
+   -18.5,
+   "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "8.07",
    "post_click",
-   41.315,
+   39.733,
    -26.0
   ],
   [
    "9.02",
    "ui_chirp_bright",
-   56.808,
+   54.808,
    -22.0
   ],
   [
    "9.03",
    "engineer_laugh_take",
-   60.075,
+   57.944,
    -22.0,
-   "ducked -9 dB under e2-a2-0005 (61.93-63.89 s)"
+   "ducked -9 dB under e2-a2-0005 (59.43-61.39 s)"
   ],
   [
    "9.03",
    "tag_drop",
-   60.802,
+   58.525,
    -26.0
   ],
   [
    "9.06",
    "panel_unfold_step",
-   93.615,
+   96.587,
    -26.0
   ],
   [
    "9.06",
    "drafting_ink_stroke",
-   94.415,
+   97.387,
    -26.0,
-   "cut at its scene's end (0.84 s early)"
+   "cut at its scene's end (0.81 s early)"
   ],
   [
    "10.01",
    "rubber_stamp_C",
-   95.761,
+   98.761,
    -20.0
   ],
   [
    "10.02",
    "drafting_ink_stroke",
-   101.97,
+   104.97,
    -26.0
   ],
   [
    "10.02",
    "paper_curl",
-   108.308,
+   111.308,
    -28.0
   ],
   [
    "10.03",
    "tiny_laugh_back",
-   116.135,
+   119.135,
    -28.0
   ],
   [
    "10.04",
    "rubber_stamp_C",
-   121.287,
+   124.287,
    -22.0
   ],
   [
    "10.05",
    "rubber_stamp_C",
-   123.922,
+   126.922,
    -20.9,
    "ride +1.1 dB (sfx-rides.json)"
   ],
   [
    "10.05",
    "rubber_stamp_C",
-   125.102,
+   128.102,
    -20.9,
    "ride +1.1 dB (sfx-rides.json)"
   ],
   [
    "10.05",
    "tiny_crowd_patter",
-   125.372,
+   128.372,
    -28.0
   ],
   [
    "10.07",
    "paper_tear",
-   139.215,
+   142.215,
    -18.0
   ],
   [
    "11.01",
    "spotlight_swing",
-   141.6,
+   144.4,
    -12.0,
    "ride +12.0 dB (sfx-rides.json)"
   ],
   [
    "11.02",
    "palette_step_F",
-   149.7,
+   152.658,
    -20.7,
    "ride +3.3 dB (sfx-rides.json)"
   ],
   [
    "11.02",
    "palette_step_F",
-   150.3,
+   153.258,
    -20.7,
    "ride +3.3 dB (sfx-rides.json)"
   ],
   [
    "11.02",
    "palette_step_F",
-   150.9,
+   153.858,
    -20.7,
    "ride +3.3 dB (sfx-rides.json)"
   ],
   [
    "11.03",
    "glyph_blink",
-   154.55,
+   157.508,
    -26.0
   ],
   [
    "11.03",
    "orb_scan_sweep",
-   155.1,
+   158.058,
    -26.0
   ],
   [
    "11.03",
    "ui_toast_pop",
-   155.4,
+   158.358,
    -28.0
   ],
   [
    "11.04",
    "crowd_laugh_m",
-   168.107,
+   171.045,
    -20.0
   ],
   [
    "11.04",
    "spotlight_swing",
-   168.607,
+   171.545,
    -24.0
   ],
   [
    "11.05",
    "crowd_laugh_l",
-   177.75,
+   180.637,
    -18.0
   ],
   [
    "11.05",
    "spotlight_swing",
-   178.55,
+   181.437,
    -24.0
   ],
   [
    "11.06",
    "clicker_click",
-   181.315,
+   184.17,
    -24.9,
    "ride +3.1 dB (sfx-rides.json)"
   ],
   [
    "11.07",
    "crowd_laugh_m",
-   195.915,
+   198.728,
    -19.1,
    "ride +0.9 dB (sfx-rides.json)"
   ],
   [
    "11.07",
    "spotlight_swing",
-   196.715,
+   199.528,
    -12.0,
    "ride +12.0 dB (sfx-rides.json)"
   ],
   [
    "11.08",
    "crowd_laugh_s",
-   200.755,
+   203.588,
    -22.0
   ],
   [
    "11.10",
    "stream_end_tone",
-   208.033,
+   210.783,
    -24.0
   ],
   [
    "11.10",
    "house_lights_up",
-   208.533,
-   -26.0
+   211.283,
+   -23.0,
+   "ride +3.0 dB (sfx-rides.json)"
   ],
   [
    "11.11",
    "phone_key_tap_1",
-   211.333,
+   214.083,
    -28.0,
    "swapped: phone_key_tap_1",
    "lock: typing_soft"
@@ -377,7 +379,7 @@
   [
    "11.11",
    "phone_key_tap_2",
-   211.833,
+   214.583,
    -28.0,
    "swapped: phone_key_tap_2",
    "lock: typing_soft"
@@ -385,7 +387,7 @@
   [
    "11.11",
    "phone_key_tap_3",
-   212.433,
+   215.183,
    -28.0,
    "swapped: phone_key_tap_3",
    "lock: typing_soft"
@@ -393,48 +395,48 @@
   [
    "11.12",
    "post_click",
-   214.633,
+   217.383,
    -30.0
   ],
   [
    "11.13",
    "blimp_inflate_step",
-   216.842,
+   219.592,
    -16.6,
    "ride +7.4 dB (sfx-rides.json)"
   ],
   [
    "11.13",
    "blimp_inflate_step",
-   219.342,
+   222.092,
    -15.6,
    "ride +7.4 dB (sfx-rides.json)"
   ],
   [
    "11.13",
    "blimp_inflate_step",
-   221.842,
+   224.592,
    -14.6,
    "ride +7.4 dB (sfx-rides.json)"
   ],
   [
    "11.13",
    "phone_wave_buzz",
-   222.542,
+   225.292,
    -18.5,
    "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "11.13",
    "blimp_inflate_step",
-   224.342,
+   227.092,
    -13.6,
    "ride +7.4 dB (sfx-rides.json)"
   ],
   [
    "11.15",
    "headset_unclip",
-   229.408,
+   232.146,
    -26.0
   ],
   [
@@ -457,6 +459,12 @@
    239.226,
    -23.7,
    "ride +0.3 dB (sfx-rides.json)"
+  ],
+  [
+   "12.03",
+   "glass_nudge",
+   248.87,
+   -30.0
   ],
   [
    "12.05",
@@ -536,9 +544,9 @@
   {
    "beat": "9.06",
    "name": "drafting_ink_stroke",
-   "at": 94.415,
-   "scene_end": 95.0,
-   "would_have_run_past_s": 0.838
+   "at": 97.387,
+   "scene_end": 98.0,
+   "would_have_run_past_s": 0.81
   }
  ],
  "score_claims": [
@@ -548,8 +556,8 @@
   "8.06:ui_confirm_chip"
  ],
  "room_stem": {
-  "lufs": -37.05,
-  "peak_dbfs": -23.41,
+  "lufs": -37.11,
+  "peak_dbfs": -22.93,
   "p10_50ms_dbfs": -54.4
  },
  "sfx_stem": {
@@ -567,46 +575,52 @@
    "boundaries": [],
    "cutoffs": [
     {
-     "at": 6.93,
+     "at": 5.885,
      "ratio": 10.9,
-     "from_dbfs": -38.8,
-     "to_dbfs": -61.7
+     "from_dbfs": -38.9,
+     "to_dbfs": -53.8
     },
     {
-     "at": 41.39,
-     "ratio": 27.7,
+     "at": 39.81,
+     "ratio": 26.4,
      "from_dbfs": -47.0,
-     "to_dbfs": -62.5
+     "to_dbfs": -63.8
     },
     {
-     "at": 93.68,
+     "at": 96.65,
      "ratio": 27.1,
      "from_dbfs": -40.1,
-     "to_dbfs": -55.5
+     "to_dbfs": -54.5
     },
     {
-     "at": 93.81,
+     "at": 96.78,
      "ratio": 16.6,
      "from_dbfs": -37.2,
-     "to_dbfs": -56.3
+     "to_dbfs": -55.1
     },
     {
-     "at": 93.94,
-     "ratio": 15.6,
+     "at": 96.91,
+     "ratio": 15.9,
      "from_dbfs": -38.8,
-     "to_dbfs": -55.5
+     "to_dbfs": -54.0
     },
     {
-     "at": 181.32,
-     "ratio": 943.9,
+     "at": 184.175,
+     "ratio": 944.6,
      "from_dbfs": -35.0,
      "to_dbfs": -51.2
     },
     {
-     "at": 229.41,
+     "at": 232.15,
      "ratio": 29.0,
-     "from_dbfs": -39.5,
-     "to_dbfs": -51.6
+     "from_dbfs": -39.2,
+     "to_dbfs": -64.5
+    },
+    {
+     "at": 248.9,
+     "ratio": 449.1,
+     "from_dbfs": -42.0,
+     "to_dbfs": -56.1
     },
     {
      "at": 257.46,
@@ -627,33 +641,33 @@
  "room_levels": [
   {
    "room": "darkroom@act2:8.01",
-   "p5_50ms_dbfs": -42.2,
-   "lift_db": 2.2
+   "p5_50ms_dbfs": -41.7,
+   "lift_db": 1.7
   },
   {
    "room": "wings@act2:9.01",
-   "p5_50ms_dbfs": -42.3,
-   "lift_db": 2.3
+   "p5_50ms_dbfs": -42.1,
+   "lift_db": 2.1
   },
   {
    "room": "demo_house@act2:11.01",
-   "p5_50ms_dbfs": -38.3,
+   "p5_50ms_dbfs": -38.0,
    "lift_db": 0.0
   },
   {
    "room": "wings@act2:11.03",
-   "p5_50ms_dbfs": -41.9,
-   "lift_db": 1.9
+   "p5_50ms_dbfs": -42.1,
+   "lift_db": 2.1
   },
   {
    "room": "demo_house@act2:11.04",
-   "p5_50ms_dbfs": -38.1,
+   "p5_50ms_dbfs": -38.2,
    "lift_db": 0.0
   },
   {
    "room": "wings@act2:11.11",
-   "p5_50ms_dbfs": -42.0,
-   "lift_db": 2.0
+   "p5_50ms_dbfs": -42.1,
+   "lift_db": 2.1
   },
   {
    "room": "demo_house@act2:11.13",

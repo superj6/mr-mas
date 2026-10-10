@@ -1,7 +1,7 @@
 {
  "segment": "act2",
  "act": "ACT TWO",
- "title": "her",
+ "title": "stage right",
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
@@ -11,19 +11,21 @@
  "scenes": [
   {
    "id": "8",
-   "target_s": 44,
+   "target_s": 42,
    "title": "The dark room",
    "date": "APR 1 → MAY 10, 2024",
    "place": "his dark room",
    "status": "CHANGED",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "estimate_s": 44.0,
-   "fit_scale": 1.681
+   "proposal_s": 44,
+   "adjust": "the fixes pass: 2 s to sc 9; V.O. 5's new take is 2.1 s longer, so the montage's air comes down from x1.68 (x1.32; its 8.01 hold no longer runs over 8 s)",
+   "estimate_s": 42.0,
+   "fit_scale": 1.422
   },
   {
    "id": "9",
-   "target_s": 51,
+   "target_s": 56,
    "title": "Backstage",
    "date": "MAY 13, 2024",
    "place": "the demo stage's wings, morning",
@@ -31,9 +33,9 @@
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
    "proposal_s": 52,
-   "adjust": "the lock QA: the engineer rehearses to Rima 0.3 s after \"We're on in five.\" (was 0.92 s); x1.679 -> x1.609",
-   "estimate_s": 51.0,
-   "fit_scale": 1.609
+   "adjust": "the lock QA: the engineer rehearses to Rima 0.3 s after \"We're on in five.\" (was 0.92 s); x1.679 -> x1.609 | the fixes pass: V.O. 6 in the wings (9.04b), the launch's plan line; at 56 s the scene fits x1.29 (at 53 it would fit x0.83, under its design air)",
+   "estimate_s": 56.0,
+   "fit_scale": 1.29
   },
   {
    "id": "10",
@@ -49,7 +51,7 @@
   },
   {
    "id": "11",
-   "target_s": 98,
+   "target_s": 95,
    "title": "\"her\"",
    "date": "MAY 13, 2024",
    "place": "the demo stage",
@@ -57,9 +59,9 @@
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
    "proposal_s": 111,
-   "adjust": "the lock pass: the takes run short (CHATGTP at 164-246 wpm against the plan's 150), so the table's 1:51 tripled the demo's air (x3.51; 11.08's tail 4.59 s); at 98 s it fits x1.41, about the episode's median, every fixed hold (the arrival, the three laugh tails, Rima's bar, the post and the blimp) kept",
-   "estimate_s": 98.0,
-   "fit_scale": 1.413
+   "adjust": "the lock pass: the takes run short (CHATGTP at 164-246 wpm against the plan's 150), so the table's 1:51 tripled the demo's air (x3.51; 11.08's tail 4.59 s); at 98 s it fits x1.41, about the episode's median, every fixed hold (the arrival, the three laugh tails, Rima's bar, the post and the blimp) kept | the fixes pass: the engineer's \"Like the movie. The guy and his computer.\" cut (the word alone), 2.7 s of take; 3 s go to sc 9 (x1.36)",
+   "estimate_s": 95.0,
+   "fit_scale": 1.363
   },
   {
    "id": "12",
@@ -93,7 +95,7 @@
    "role": "SPEECH BUBBLE"
   },
   "alyi": {
-   "role": "CHIEF SCIENTIST (in the chrome, 2 s)"
+   "role": "CHIEF SCIENTIST (a memory, 2 s)"
   },
   "staff": {
    "name": "STAFF",
@@ -148,7 +150,7 @@
    "scene": "8",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "est_s": 8.07,
+   "est_s": 6.82,
    "frame": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
    "camera": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides down; ECU his swipe",
    "set": "darkroom",
@@ -163,21 +165,21 @@
    "picture": "Undated (R1). The SNOOZE stays unpressed until Ep8. On the wall behind him, the framed GUEST lanyard from Ep1 (the dark room's, as in sc 23).",
    "onscreen": {
     "add": [
-     "EUROPE PASSES ITS AI RULEBOOK · 523–46 (2.35-6.56 s)",
-     "SNOOZE (2.35-6.56 s)"
+     "EUROPE PASSES ITS AI RULEBOOK · 523–46 (1.99-5.54 s)",
+     "SNOOZE (1.99-5.54 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "EUROPE PASSES ITS AI RULEBOOK · 523–46",
-     "at": 2.35,
-     "until": 6.56,
+     "at": 1.99,
+     "until": 5.54,
      "kind": "ui"
     },
     {
      "text": "SNOOZE",
-     "at": 2.35,
-     "until": 6.56,
+     "at": 1.99,
+     "until": 5.54,
      "kind": "ui"
     }
    ],
@@ -185,14 +187,14 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 2.186,
-     "at_s": 2.19,
+     "at": 1.847,
+     "at_s": 1.85,
      "gain": -26
     },
     {
      "name": "ui_swipe",
-     "at": 6.725,
-     "at_s": 6.73,
+     "at": 5.683,
+     "at_s": 5.68,
      "gain": -24,
      "new": true
     }
@@ -293,7 +295,7 @@
    "scene": "8",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "est_s": 7.74,
+   "est_s": 7.48,
    "frame": "OTS · Mas at the monitor, the lineup on it",
    "camera": "OTS · Mas at the monitor, the lineup on it",
    "set": "darkroom",
@@ -315,10 +317,10 @@
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.84",
+     "after": "start+0.71",
      "gap_s": 0.0,
      "len_s": 6.06,
-     "t_s": 0.84
+     "t_s": 0.71
     }
    ],
    "caption": "Mas at the monitor, the lineup on it.",
@@ -417,7 +419,7 @@
    "scene": "8",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "est_s": 3.18,
+   "est_s": 3.93,
    "frame": "MCU · Mas, the lit Monday square in his eyes",
    "camera": "MCU · Mas, the lit Monday square in his eyes",
    "set": "darkroom",
@@ -433,16 +435,16 @@
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "one day ahead is enough.",
-     "delivery": "as the block snaps onto Monday; a condition, settled; the smallest smile in the voice, never on the face",
+     "text": "the press gets one night with ours first.",
+     "delivery": "as the block snaps onto Monday; a scheduler's thought, settled; 'one night' the number, 'first' plain; the smallest smile in the voice, never on the face",
      "kind": "plan (ship first: a condition)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.67",
+     "after": "start+0.57",
      "gap_s": 0.0,
-     "len_s": 1.84,
-     "t_s": 0.67
+     "len_s": 2.79,
+     "t_s": 0.57
     }
    ],
    "caption": "The Monday square lit.",
@@ -456,9 +458,10 @@
    "fix": [
     "P",
     "VO",
-    "SR"
+    "SR",
+    "FX"
    ],
-   "why": "V.O. 5: a condition, one day ahead is enough; it reads as foresight once sc 12 shows Elgoog's day under OMNI."
+   "why": "V.O. 5: the press gets one night with NopeAI's launch before Elgoog's keynote (the fixes pass: the practical specific, W7); it reads as foresight once sc 12 shows Elgoog's day under OMNI."
   },
   {
    "id": "8.06",
@@ -468,9 +471,9 @@
    "scene": "8",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "est_s": 9.83,
-   "frame": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
-   "camera": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
+   "est_s": 9.42,
+   "frame": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear",
+   "camera": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear",
    "set": "call",
    "set_id": "SET-07",
    "room": "darkroom",
@@ -488,39 +491,39 @@
      "take": "new · MAS (Jeremy · EL) · call chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
      "note": "[INVENTED · the reported shape: neither side pays, exposure as the price (facts A58: Bloomberg, May 11 and Jun 12, 2024); opt-in, in ELPPA's assistant on its new devices (facts A40)]",
-     "after": "start+2.69",
+     "after": "start+2.28",
      "gap_s": 0.0,
      "len_s": 4.94,
-     "t_s": 2.69
+     "t_s": 2.28
     }
    ],
-   "caption": "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers. Mas, unhurried, says the episode's one full sentence of terms. The tile shows …, then CONFIRMED.",
-   "picture": "We hear only Mas. No face on the tile, ever.",
+   "caption": "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers and lifts it to his ear. Mas, unhurried, says the episode's one full sentence of terms, the phone at his ear, its screen's glow on his cheek. He lowers it to the desk: the tile shows …, then CONFIRMED.",
+   "picture": "We hear only Mas. No face on the tile, ever. The MCU a step warmer than the room (P10; the fixes pass: it read as talking to the air).",
    "onscreen": {
     "add": [
-     "ELPPA (0.34-9.83 s)",
-     "… (7.93-8.93 s)",
-     "CONFIRMED (8.93-9.83 s)"
+     "ELPPA (0.28-9.42 s)",
+     "… (7.52-8.52 s)",
+     "CONFIRMED (8.52-9.42 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "ELPPA",
-     "at": 0.34,
-     "until": 9.83,
+     "at": 0.28,
+     "until": 9.42,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "…",
-     "at": 7.93,
-     "until": 8.93,
+     "at": 7.52,
+     "until": 8.52,
      "kind": "ui"
     },
     {
      "text": "CONFIRMED",
-     "at": 8.93,
-     "until": 9.83,
+     "at": 8.52,
+     "until": 9.42,
      "kind": "ui",
      "holds": true
     }
@@ -529,20 +532,20 @@
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.336,
-     "at_s": 0.34,
+     "at": 0.285,
+     "at_s": 0.28,
      "gain": -24
     },
     {
      "name": "call_connect",
-     "at": 2.017,
-     "at_s": 2.02,
+     "at": 1.71,
+     "at_s": 1.71,
      "gain": -26
     },
     {
      "name": "ui_confirm_chip",
      "at": "after:e2-a2-0001+1.3",
-     "at_s": 8.93,
+     "at_s": 8.52,
      "gain": -22,
      "new": true
     }
@@ -556,7 +559,8 @@
     "P",
     "FACT",
     "R1",
-    "R2"
+    "R2",
+    "FX"
    ],
    "why": "He closes the phone deal: no money either way (facts A58, A40)."
   },
@@ -568,7 +572,7 @@
    "scene": "8",
    "mode": "MONTAGE on one surface → a CALL",
    "pace": "normal",
-   "est_s": 5.38,
+   "est_s": 4.55,
    "frame": "POV · an invite drops into his calendar under the Monday square; he accepts",
    "camera": "POV · an invite drops into his calendar under the Monday square; he accepts",
    "set": "screen",
@@ -582,14 +586,14 @@
    "picture": "Through the wall: a stage manager's distant count, the walk-on music warming up.",
    "onscreen": {
     "add": [
-     "ELPPA · KEYNOTE · JUN 10 (0.84-5.38 s)"
+     "ELPPA · KEYNOTE · JUN 10 (0.71-4.55 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "ELPPA · KEYNOTE · JUN 10",
-     "at": 0.84,
-     "until": 5.38,
+     "at": 0.71,
+     "until": 4.55,
      "kind": "ui",
      "holds": true
     }
@@ -598,15 +602,15 @@
    "sounds": [
     {
      "name": "invite_drop",
-     "at": 0.672,
-     "at_s": 0.67,
+     "at": 0.569,
+     "at_s": 0.57,
      "gain": -24,
      "new": true
     },
     {
      "name": "post_click",
-     "at": 2.69,
-     "at_s": 2.69,
+     "at": 2.275,
+     "at_s": 2.27,
      "gain": -26
     }
    ],
@@ -714,7 +718,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 7.9,
+   "est_s": 7.81,
    "frame": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
    "camera": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
    "set": "stage",
@@ -761,14 +765,14 @@
    "picture": "The product answers before it's asked (the season's hint).",
    "onscreen": {
     "add": [
-     "yes!! (4.85-7.9 s)"
+     "yes!! (4.85-7.81 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "yes!!",
      "at": 4.85,
-     "until": 7.9,
+     "until": 7.81,
      "kind": "ui",
      "holds": true
     }
@@ -810,7 +814,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 4.7,
+   "est_s": 4.16,
    "frame": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
    "camera": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
    "set": "stage",
@@ -831,24 +835,24 @@
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
      "note": "[INVENTED · accurate: the old voice mode lost laughter; the new model hears it (facts A23)]",
-     "after": "start+2.1",
+     "after": "start+1.68",
      "gap_s": 0.0,
      "len_s": 1.96,
-     "t_s": 2.1
+     "t_s": 1.68
     }
    ],
    "caption": "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"laugh.\"",
    "picture": "The tag is THE PLAN's plant (it lies at the bottom of the grate).",
    "onscreen": {
     "add": [
-     "[laughter] (0.81-4.7 s)"
+     "[laughter] (0.65-4.16 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "[laughter]",
-     "at": 0.81,
-     "until": 4.7,
+     "at": 0.65,
+     "until": 4.16,
      "kind": "ui",
      "holds": true
     }
@@ -857,18 +861,18 @@
    "sounds": [
     {
      "name": "engineer_laugh_take",
-     "at": 0.242,
-     "at_s": 0.24,
+     "at": 0.194,
+     "at_s": 0.19,
      "gain": -22,
      "new": true,
      "note": "the sound pass's request (lock-v1.md §6): a nervous laugh in the ENGINEER's own library voice, never an imitation of anyone (S6), from the beat's first frames, ducked under Gerg's line, stopping on his \"laugh.\" (the word ends 1.88 s into the take); it sets up the [laughter] tag and \"It can even laugh back\"",
-     "dur": 3.74,
-     "until_s": 3.98
+     "dur": 3.37,
+     "until_s": 3.56
     },
     {
      "name": "tag_drop",
-     "at": 0.969,
-     "at_s": 0.97,
+     "at": 0.775,
+     "at_s": 0.78,
      "gain": -26,
      "new": true
     }
@@ -893,7 +897,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 13.24,
+   "est_s": 12.88,
    "frame": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
    "camera": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
    "set": "stage",
@@ -914,10 +918,10 @@
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+0.8",
+     "after": "start+0.64",
      "gap_s": 0.0,
      "len_s": 0.68,
-     "t_s": 0.8
+     "t_s": 0.64
     },
     {
      "id": "e2-a2-0007",
@@ -932,7 +936,7 @@
      "after": "e2-a2-0006",
      "gap_s": 0.5,
      "len_s": 6.23,
-     "t_s": 1.98
+     "t_s": 1.82
     },
     {
      "id": "e2-a2-0008",
@@ -947,7 +951,7 @@
      "after": "e2-a2-0007",
      "gap_s": 0.5,
      "len_s": 1.11,
-     "t_s": 8.71
+     "t_s": 8.55
     },
     {
      "id": "e2-a2-0009",
@@ -962,7 +966,7 @@
      "after": "e2-a2-0008",
      "gap_s": 0.4,
      "len_s": 2.05,
-     "t_s": 10.22
+     "t_s": 10.06
     }
    ],
    "caption": "MAS asks the question Gerg asked him in Ep1. RIMA answers the next question. He grants her a stage that isn't his to grant; she takes it back as a fact.",
@@ -985,14 +989,65 @@
    "why": "Rima owns the demo; Mas watches from the wings."
   },
   {
-   "id": "9.05",
+   "id": "9.04b",
    "action": "new",
    "after": "9.04",
    "act": "ACT TWO",
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 10.33,
+   "est_s": 6.72,
+   "frame": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
+   "camera": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
+   "set": "stage",
+   "set_id": "SET-10",
+   "room": "wings",
+   "chars": [
+    "mas"
+   ],
+   "lines": [
+    {
+     "id": "e2-vo-06",
+     "new": true,
+     "who": "mas",
+     "vo": true,
+     "tag": "V.O.",
+     "text": "everyone gets it free. that's what makes the phone deal stick.",
+     "delivery": "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call behind it; 'free' plain, no weight on 'stick'",
+     "kind": "plan (distribution)",
+     "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
+     "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+     "note": "[INVENTED · V.O. · script-v1]",
+     "after": "start+0.77",
+     "gap_s": 0.0,
+     "len_s": 5.05,
+     "t_s": 0.77
+    }
+   ],
+   "caption": "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. His thought.",
+   "picture": "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8).",
+   "music": "E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)",
+   "tempo": {
+    "pace": "quick",
+    "gaps": {},
+    "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+   },
+   "fix": [
+    "P",
+    "VO",
+    "FX"
+   ],
+   "why": "V.O. 6: the launch's plan (distribution): the free tier is what makes the ELPPA deal stick (the fixes pass: four minutes of the launch with no inner voice; W5, W6)."
+  },
+  {
+   "id": "9.05",
+   "action": "new",
+   "after": "9.04b",
+   "act": "ACT TWO",
+   "scene": "9",
+   "mode": "EXTENDED CONVERSATION",
+   "pace": "quick",
+   "est_s": 9.92,
    "frame": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "camera": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "set": "stage",
@@ -1013,10 +1068,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.61",
+     "after": "start+1.29",
      "gap_s": 0.0,
      "len_s": 2.32,
-     "t_s": 1.61
+     "t_s": 1.29
     },
     {
      "id": "e2-a2-0011",
@@ -1031,7 +1086,7 @@
      "after": "e2-a2-0010",
      "gap_s": 0.3,
      "len_s": 5.62,
-     "t_s": 4.23
+     "t_s": 3.91
     }
    ],
    "caption": "Mas walks off frame-left, to stage right. RIMA crosses the wings to the monitor; the engineer follows her.",
@@ -1059,7 +1114,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.89,
+   "est_s": 6.57,
    "frame": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
    "camera": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
    "set": "stage",
@@ -1080,10 +1135,10 @@
      "take": "new · VOICE 1 (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.61",
+     "after": "start+1.29",
      "gap_s": 0.0,
      "len_s": 0.49,
-     "t_s": 1.61
+     "t_s": 1.29
     },
     {
      "id": "e2-a2-0013",
@@ -1098,7 +1153,7 @@
      "after": "e2-a2-0012",
      "gap_s": 0.3,
      "len_s": 0.33,
-     "t_s": 2.4
+     "t_s": 2.08
     },
     {
      "id": "e2-a2-0014",
@@ -1113,7 +1168,7 @@
      "after": "e2-a2-0013",
      "gap_s": 0.3,
      "len_s": 0.44,
-     "t_s": 3.03
+     "t_s": 2.71
     },
     {
      "id": "e2-a2-0015",
@@ -1128,7 +1183,7 @@
      "after": "e2-a2-0014",
      "gap_s": 0.3,
      "len_s": 0.7,
-     "t_s": 3.77
+     "t_s": 3.45
     },
     {
      "id": "e2-a2-0016",
@@ -1143,69 +1198,69 @@
      "after": "e2-a2-0015",
      "gap_s": 0.3,
      "len_s": 0.52,
-     "t_s": 4.77
+     "t_s": 4.45
     }
    ],
    "caption": "She taps the monitor and a settings panel opens: VOICE, five labelled slots, VOICE 1 to VOICE 5, under a tag, SINCE SEP 2023. She hovers each, and each says hello in a different tone. The fifth, Hey., holds a beat longer than the others as the panel keeps unfolding past the monitor's bezel, square by square, onto the floor, and the floor is a drafting grid.",
    "picture": "VOICE 5 is CHATGTP's own voice (R1): the voice we'll hear on stage. A [SCR] with its bezel in frame, so the bezel can be broken.",
    "onscreen": {
     "add": [
-     "VOICE (0.48-6.89 s)",
-     "SINCE SEP 2023 (0.64-6.89 s)",
-     "VOICE 1 (0.64-6.89 s)",
-     "VOICE 2 (0.64-6.89 s)",
-     "VOICE 3 (0.64-6.89 s)",
-     "VOICE 4 (0.64-6.89 s)",
-     "VOICE 5 (0.64-6.89 s)"
+     "VOICE (0.39-6.57 s)",
+     "SINCE SEP 2023 (0.52-6.57 s)",
+     "VOICE 1 (0.52-6.57 s)",
+     "VOICE 2 (0.52-6.57 s)",
+     "VOICE 3 (0.52-6.57 s)",
+     "VOICE 4 (0.52-6.57 s)",
+     "VOICE 5 (0.52-6.57 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "VOICE",
-     "at": 0.48,
-     "until": 6.89,
+     "at": 0.39,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "SINCE SEP 2023",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 1",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 2",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 3",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 4",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 5",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui",
      "holds": true
     }
@@ -1215,14 +1270,14 @@
     {
      "name": "panel_unfold_step",
      "at": "after:e2-a2-0016+0.2",
-     "at_s": 5.49,
+     "at_s": 5.17,
      "gain": -26,
      "new": true
     },
     {
      "name": "drafting_ink_stroke",
      "at": "after:e2-a2-0016+1.0",
-     "at_s": 6.29,
+     "at_s": 5.97,
      "gain": -26
     }
    ],
@@ -1806,7 +1861,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 8.48,
+   "est_s": 8.46,
    "frame": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
    "camera": "WIDE · the locked meter frame from mid-house: the stage, the big screen, Rima taking her mark",
    "set": "stage",
@@ -1841,9 +1896,10 @@
    "sounds": [
     {
      "name": "spotlight_swing",
-     "at": 0.6,
-     "at_s": 0.6,
-     "gain": -24
+     "at": 0.4,
+     "at_s": 0.4,
+     "gain": -24,
+     "note": "0.6 s until the fixes pass: with sc 11 laid 3 s later the demo cue's bass note came 0.11 s earlier under the swing and masked it (the audit: -1.2 dB in 60-250 Hz at its ride's cap)"
     }
    ],
    "tempo": {
@@ -1875,7 +1931,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 5.0,
+   "est_s": 4.98,
    "frame": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
    "camera": "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
    "set": "stage",
@@ -1920,14 +1976,14 @@
    "picture": "The badge holds if the facts pull holds (facts A60); otherwise it goes.",
    "onscreen": {
     "add": [
-     "VOICE 5 (1.6-5 s)"
+     "VOICE 5 (1.6-4.98 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "VOICE 5",
      "at": 1.6,
-     "until": 5.0,
+     "until": 4.98,
      "kind": "ui",
      "holds": true
     }
@@ -2037,7 +2093,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 13.3,
+   "est_s": 13.28,
    "frame": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
    "camera": "WIDE · the meter frame: the ENGINEER at his mark downstage right raises the phone; the product answers from the big screen",
    "set": "stage",
@@ -2060,10 +2116,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.57",
+     "after": "start+0.55",
      "gap_s": 0.0,
      "len_s": 4.62,
-     "t_s": 0.57
+     "t_s": 0.55
     },
     {
      "id": "e2-a2-0027",
@@ -2088,7 +2144,7 @@
      "after": "e2-a2-0026",
      "gap_s": 0.2,
      "len_s": 4.75,
-     "t_s": 5.39
+     "t_s": 5.37
     },
     {
      "id": "e2-a2-0028",
@@ -2104,7 +2160,7 @@
      "gap_s": -0.55,
      "overlap": true,
      "len_s": 0.71,
-     "t_s": 9.59
+     "t_s": 9.57
     }
    ],
    "caption": "The ENGINEER asks for short answers. CHATGTP gets three words from the end, and he comes in over its last word. It finishes anyway. A laugh from the house; in the same frame the spotlight slides one step off Rima toward the big screen.",
@@ -2114,14 +2170,14 @@
     {
      "name": "crowd_laugh_m",
      "at": "after:e2-a2-0027+0.3",
-     "at_s": 10.44,
+     "at_s": 10.42,
      "gain": -20,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0027+0.8",
-     "at_s": 10.94,
+     "at_s": 10.92,
      "gain": -24
     }
    ],
@@ -2148,7 +2204,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 9.75,
+   "est_s": 9.72,
    "frame": "WIDE · the meter frame → SCR · three mouths",
    "camera": "WIDE · the meter frame → SCR · three mouths",
    "set": "stage",
@@ -2171,10 +2227,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.71",
+     "after": "start+0.68",
      "gap_s": 0.0,
      "len_s": 3.16,
-     "t_s": 0.71
+     "t_s": 0.68
     },
     {
      "id": "e2-a2-0030",
@@ -2189,7 +2245,7 @@
      "after": "e2-a2-0029",
      "gap_s": 0.4,
      "len_s": 2.28,
-     "t_s": 4.27
+     "t_s": 4.24
     }
    ],
    "caption": "The ENGINEER tries again. CHATGTP's mouth splits into three mouths, and it harmonises with itself. A bigger laugh. The spotlight slides a second step.",
@@ -2199,14 +2255,14 @@
     {
      "name": "crowd_laugh_l",
      "at": "after:e2-a2-0030+0.2",
-     "at_s": 6.75,
+     "at_s": 6.72,
      "gain": -18,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0030+1.0",
-     "at_s": 7.55,
+     "at_s": 7.52,
      "gain": -24
     }
    ],
@@ -2231,7 +2287,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.89,
+   "est_s": 6.83,
    "frame": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
    "camera": "MCU · RIMA, half in the light now, perfectly still; she clicks to the next slide on the running order",
    "set": "stage",
@@ -2251,10 +2307,10 @@
      "take": "new · RIMA (Mia · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.13",
+     "after": "start+1.09",
      "gap_s": 0.0,
      "len_s": 5.19,
-     "t_s": 1.13
+     "t_s": 1.09
     }
    ],
    "caption": "RIMA, half in the light, clicks to the next slide exactly on the running order.",
@@ -2263,8 +2319,8 @@
    "sounds": [
     {
      "name": "clicker_click",
-     "at": 0.565,
-     "at_s": 0.56,
+     "at": 0.545,
+     "at_s": 0.55,
      "gain": -28,
      "new": true
     }
@@ -2288,7 +2344,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 10.99,
+   "est_s": 10.97,
    "frame": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
    "camera": "WIDE · the engineer turns the phone's camera on the audience → SCR · 😊 → WIDE · the third step",
    "set": "stage",
@@ -2311,10 +2367,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+0.57",
+     "after": "start+0.55",
      "gap_s": 0.0,
      "len_s": 1.12,
-     "t_s": 0.57
+     "t_s": 0.55
     },
     {
      "id": "e2-a2-0033",
@@ -2329,7 +2385,7 @@
      "after": "e2-a2-0032",
      "gap_s": 0.2,
      "len_s": 3.05,
-     "t_s": 1.89
+     "t_s": 1.87
     },
     {
      "id": "e2-a2-0034",
@@ -2344,21 +2400,21 @@
      "after": "e2-a2-0033",
      "gap_s": 1.0,
      "len_s": 2.05,
-     "t_s": 5.94
+     "t_s": 5.92
     }
    ],
    "caption": "The ENGINEER turns the phone's camera around, onto the audience. CHATGTP is overwhelmed. In the audience, one pair of glasses fogs. It blushes: on the big screen, 😊. The third step: the spotlight is more on the screen than on her.",
    "picture": "The fogged glasses are a mid-house audience member's, never the front row.",
    "onscreen": {
     "add": [
-     "😊 (8.09-10.99 s)"
+     "😊 (8.07-10.97 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "😊",
-     "at": 8.09,
-     "until": 10.99,
+     "at": 8.07,
+     "until": 10.97,
      "kind": "ui",
      "holds": true
     }
@@ -2368,14 +2424,14 @@
     {
      "name": "crowd_laugh_m",
      "at": "after:e2-a2-0034+0.3",
-     "at_s": 8.29,
+     "at_s": 8.27,
      "gain": -20,
      "new": true
     },
     {
      "name": "spotlight_swing",
      "at": "after:e2-a2-0034+1.1",
-     "at_s": 9.09,
+     "at_s": 9.07,
      "gain": -24
     }
    ],
@@ -2401,7 +2457,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 3.73,
+   "est_s": 3.68,
    "frame": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
    "camera": "SCR · the stream's chat scrolls up the side: what's the catch? sticks",
    "set": "stage",
@@ -2431,14 +2487,14 @@
    "picture": "Live, before her close (R1). Free is the catch; safety is never mentioned (script review: no thesis by placement).",
    "onscreen": {
     "add": [
-     "what's the catch? (0.3-3.73 s)"
+     "what's the catch? (0.3-3.68 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "what's the catch?",
      "at": 0.3,
-     "until": 3.73,
+     "until": 3.68,
      "kind": "ui",
      "holds": true
     }
@@ -2473,7 +2529,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "weighted",
-   "est_s": 4.99,
+   "est_s": 4.96,
    "frame": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
    "camera": "MCU · RIMA in the half-dark, perfectly composed; the house waits on her (HOLD 1 BAR)",
    "set": "stage",
@@ -2806,7 +2862,7 @@
    "scene": "11",
    "mode": "SET-PIECE with an EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.87,
+   "est_s": 4.12,
    "frame": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
    "camera": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
    "set": "stage",
@@ -2827,35 +2883,35 @@
      "take": "new · the DEMO ENGINEER (new · audition) · offmic chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
      "note": "[INVENTED · said to a listener (W19)]",
-     "after": "start+0.99",
+     "after": "start+0.95",
      "gap_s": 0.0,
      "len_s": 1.68,
-     "t_s": 0.99
+     "t_s": 0.95
     },
     {
      "id": "e2-a2-0038",
      "new": true,
      "who": "engineer",
      "tag": "offmic",
-     "text": "'Her.' Like the movie. The guy and his computer.",
-     "delivery": "off mic, still to Rima; a statement, the film's premise the way people recall it",
+     "text": "'Her.'",
+     "delivery": "off mic, still to Rima; reading the one word off his phone, flat, a statement, no comment in it",
      "take": "new · the DEMO ENGINEER (new · audition) · offmic chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
-     "note": "[INVENTED · the film's premise only (D-6); never the actress, never the voice]",
+     "note": "[INVENTED · the post's word, read off his phone (facts A23b); never the actress, never the voice]",
      "after": "e2-a2-0037",
      "gap_s": 0.6,
-     "len_s": 3.03,
-     "t_s": 3.27
+     "len_s": 0.34,
+     "t_s": 3.23
     }
    ],
-   "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
-   "picture": "Said to a listener (W19). His words are the film's premise, not the voice (D-6).",
+   "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic: the one word. She doesn't look up: her held mark (11.14) is the reaction.",
+   "picture": "Said to a listener (W19). The word alone, no gloss (the fixes pass: the film's premise explained the subtext, W7, and pointed at the contested set).",
    "music": "E02-07 · thins to a pad at ENDED and holds it under the post",
    "sounds": [
     {
      "name": "headset_unclip",
-     "at": 0.283,
-     "at_s": 0.28,
+     "at": 0.271,
+     "at_s": 0.27,
      "gain": -26,
      "new": true
     }
@@ -2871,9 +2927,10 @@
     "P",
     "R1",
     "GR",
-    "SR"
+    "SR",
+    "FX"
    ],
-   "why": "What the word points at (the film's premise only), told to the one person who doesn't look up."
+   "why": "The word, told to the one person who doesn't look up."
   },
   {
    "id": "11.16",
@@ -3026,17 +3083,31 @@
    "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
    "pace": "weighted",
    "est_s": 3.4,
-   "frame": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
-   "camera": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
+   "frame": "ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat",
+   "camera": "ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat",
    "set": "stage",
    "set_id": "SET-10",
    "room": "demo_house",
    "chars": [
-    "alyi"
+    "alyi",
+    "mas"
    ],
    "lines": [],
-   "caption": "In its chrome armrest, for two seconds, the party from last September: Alyi turning to Mas with a toast and a smile. Then the chrome shows only the empty seat.",
-   "picture": "Ep1's own art (copied), held 2 s (R2). A memory in a surface, not a ghost: it plays as a reflection of a past event, then goes.",
+   "caption": "On the Door's note a glint runs across the empty seat's chrome armrest, and on it we cut to the party from last September, in its own frame: Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Then the armrest again: only the empty seat.",
+   "picture": "Ep1's own art at full frame (its redrawn party: Alyi warm, real arms and hands on the cup and the glass), a memory with its date in the band, never a reflection (the fixes pass: a moving image of Alyi in a surface is the 'glass Alyi' grammar, P8, D-64; and the chrome had drawn both faces cold, P5).",
+   "onscreen": {
+    "add": [
+     "RAIL: SEP 2023 (0.4-2.55 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "RAIL: SEP 2023",
+     "at": 0.4,
+     "until": 2.55,
+     "kind": "rail"
+    }
+   ],
    "music": "E02-07 · the demo cue as a thin pad, held across the beat of black into the afternoon (one sequence); the Door (Alyi's motif) with its first note missing, once, on the chrome's toast",
    "sounds": [
     {
@@ -3046,11 +3117,19 @@
      "gain": -26,
      "new": true,
      "note": "the Door, first note missing (score)"
+    },
+    {
+     "name": "glass_nudge",
+     "at": 0.62,
+     "at_s": 0.62,
+     "gain": -30,
+     "note": "the memory's clink, far and soft under the Door"
     }
    ],
    "fix": [
     "P",
-    "R2"
+    "R2",
+    "FX"
    ],
    "why": "The bond, recalled before his own goodbye (W14)."
   },
@@ -3242,27 +3321,9 @@
    "chars": [
     "mas"
    ],
-   "lines": [
-    {
-     "id": "e2-vo-06",
-     "new": true,
-     "who": "mas",
-     "vo": true,
-     "tag": "V.O.",
-     "text": "i came back.",
-     "delivery": "over his own posted words; quiet; a fact about himself, the hope in it left unsaid",
-     "kind": "want",
-     "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
-     "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-     "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+9.3",
-     "gap_s": 0.0,
-     "len_s": 1.2,
-     "t_s": 9.3
-    }
-   ],
-   "caption": "He types his own post, at a post's pace, and posts it. His posted words hold. Over them, after both posts have had their read time, his voice.",
-   "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll.",
+   "lines": [],
+   "caption": "He types his own post, at a post's pace, and posts it. His posted words hold, in silence, past their read time.",
+   "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll. No V.O. here (the fixes pass: W8, silence over another person's real act and at the contested moment; facts §F).",
    "onscreen": {
     "add": [
      "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend. (0.4-10.95 s)"
@@ -3303,19 +3364,14 @@
      "gain": -28
     }
    ],
-   "tempo": {
-    "pace": "weighted",
-    "gaps": {},
-    "rule": "longer, only on turns"
-   },
    "fix": [
     "P",
-    "VO",
     "FACT",
     "R1",
-    "SR"
+    "SR",
+    "FX"
    ],
-   "why": "V.O. 6 over his act: his want, as a fact about himself, the hope unsaid (facts A61). The post's text is 172 characters: 8.85 s to read from its first letter (P15), so the voice comes 8.9 s after it (lock QA: it came at 8.2; the plan had counted 165)."
+   "why": "His answer, in public, warmly (facts A61). The post's text is 172 characters: 8.85 s to read from its first letter (P15); it holds 10.5 s, then his face. V.O. 6 used to come here (\"i came back.\"): cut at the fixes pass, the beat keeps its length (10.95 s), so the scene's frames are unchanged."
   },
   {
    "id": "12.08",

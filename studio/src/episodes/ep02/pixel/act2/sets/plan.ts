@@ -15,7 +15,9 @@ import {micro} from '../../../../../shared/pixel/cast/bosses';
 import {RH} from './common';
 
 export const DONE = -100000;
-export const PANS = {stamp: 0, before: 40, grate: 100, now: 150, steps: 250, stage: 337};
+// the fixes pass (2026-10-10): `steps` was 250, which cut the GTP-4o box (236-276) at the frame's top over an empty
+// grid; at 232 the box, step 1 and (in 10.05) steps 2 and 3 share the frame (and the pile's LAUGHTER is not half cut)
+export const PANS = {stamp: 0, before: 40, grate: 100, now: 150, steps: 232, stage: 337};
 /** every element's start frame (scene frames); undefined = not on the paper yet */
 export interface PlanT {
   icons?: [number?, number?, number?];
@@ -87,13 +89,16 @@ const sheetAt = (f: number, T: PlanT, st: {look?: boolean}): Buf => {
   // the grate at box 1; the words drop through it and out of the diagram; backstage's [laughter] tag at the bottom
   if (on(f, bt[0])) { for (let i = 0; i < 9; i++) L(b, 60 + i * 10, 190, 60 + i * 10, 198, prog(f, bt[0], 8, 1), BPX.mid); L(b, 58, 190, 148, 190, prog(f, bt[0], 90, 6), BPX.mid); L(b, 58, 198, 148, 198, prog(f, bt[0], 90, 6), BPX.mid); }
   if (on(f, T.fell)) {
+    // the fixes pass (2026-10-10): the words overlapped mid-fall (WHO'S TALKING over BACKGROUND NOISE). Now each drops
+    // 10 frames after the one before (when that one is 10 px or more below the grate's top) and they pile up from the
+    // bottom: the first lands lowest, each later one on top of the pile, so no word ever falls through another
     ['TONE', 'LAUGHTER', "WHO'S TALKING", 'BACKGROUND NOISE'].forEach((w, i) => {
-      const t = T.fell === DONE ? 99 : f - T.fell! - i * 6;
+      const t = T.fell === DONE ? 99 : f - T.fell! - i * 10;
       if (t < 0) return;
-      // each word starts on the grate's top, falls through it (held steps on 2s), and lands in its row below
-      const yEnd = 204 + i * 10, y0 = 180;
+      // each word starts on the grate's top, falls through it (held steps on 2s), and lands on the pile below
+      const yEnd = 234 - i * 10, y0 = 180;
       const y = t >= 14 ? yEnd : Math.min(yEnd, y0 + Math.round(((t - (t & 1)) / 14) ** 2 * (yEnd - y0)));
-      bpText(b, w, 60 + (i % 2) * 40, y, f, -999, {col: BPX.faint});
+      bpText(b, w, 60 + [0, 5, 1, 4][i], y, f, -999, {col: BPX.faint});
     });
   }
   if (on(f, T.tag)) {

@@ -12,7 +12,8 @@
 //   frontRow(b, f, st)        [W] sc 12.02, from the wings: the roped front row in plain house light, the RESERVED: CHIEF
 //                             SCIENTIST placard (it never flips) on the empty seat, its chrome armrest
 //   armrestECU(b, f, st)      [ECU] 12.03: the chrome armrest: Ep1's party toast in it for 2 s (st.toast), then only
-//                             the empty seat
+//                             the empty seat; st.noRefl (the fixes pass): only the seat, the glint still runs
+//   partyMemory(b, f, st)     [MEMORY] 12.03 (the fixes pass): Ep1's party 2S in its own frame, warm, a soft vignette
 //   drawChatFace(b, x, y, st) CHATGTP at the big screen's size (150 x 112, Ep1's ECU bubble): st.grow 0..3 (ears, eyes,
 //                             a mouth, one held step each), st.mouth 'rest' | 'talk' | 'three' (the harmony), st.tokens
 //                             (the 5 GLYPH frames: its eyes as tokens toward the wings), st.emoji (😊), st.badge
@@ -239,7 +240,7 @@ const partyAt = (ks: number) => { let p = PARTY.get(ks); if (!p) { p = new Buf(4
  * curve and squashed toward its edges, graded cool and flat), the chrome's own highlights streaking across it.
  * st.toast alone (the art sheet) = the reflection held.
  */
-export const armrestECU = (b: Buf, f: number, st: {toast?: boolean; k?: number; on?: number; off?: number}) => {
+export const armrestECU = (b: Buf, f: number, st: {toast?: boolean; k?: number; on?: number; off?: number; noRefl?: boolean}) => {
   const A = ARMREST, k = st.k ?? 0;
   // the fabric: the reserved seat's back (frame right) and its cushion below, the neighbour's (frame left) a rung down;
   // a fine weave (whole-pixel rows), the back's top edge rolled, the house beyond above it in plain light
@@ -263,6 +264,7 @@ export const armrestECU = (b: Buf, f: number, st: {toast?: boolean; k?: number; 
     if (kin >= -1 && kin < 7) glint = 1.1 - (kin + 1) * 0.3;
     else if (kout >= -1 && kout < 7) glint = -1.1 + (kout + 1) * 0.3;
   }
+  if (st.noRefl) a = 0;   // the fixes pass: the chrome shows only the seat (the party plays in its own frame: partyMemory)
   const src = a > 0 ? partyAt(st.toast && st.on === undefined ? 24 : 8 + 2 * Math.floor(Math.max(0, k - (st.on ?? 0)) / 4)) : null;
   // the post: a vertical chrome cylinder, its rounded end at the top; chrome bands by the surface's angle (the room
   // above it bright, the red seat in its right flank, dark at both edges), the specular streak down its left third
@@ -298,10 +300,40 @@ export const armrestECU = (b: Buf, f: number, st: {toast?: boolean; k?: number; 
   void f;
 };
 
+/**
+ * [MEMORY] 12.03 (the fixes pass, 2026-10-10): the party from last September in its OWN frame, cut to on the chrome's
+ * glint and cut away from back to the empty seat. The review: in the chrome the toast read as two small cold figures
+ * with closed mouths and blocky fists, and a moving Alyi inside a surface is the 'glass Alyi' grammar (P8, D-64) that
+ * Ep1's newcomer read as an AI. So it is Ep1's own redrawn 2S (act3 partyToast, imported read-only, unaltered: Alyi
+ * turns to Mas smiling as the toast comes, Mas's half-smile, real arms from each body, his hand round the glass and
+ * Alyi's round the cup, the clink, the shared laugh, Alyi's hand on his shoulder), full frame and warm, with one Tier 1
+ * pass for how it is remembered: a soft vignette, the corners a rung and two rungs down in dither, the faces untouched;
+ * its date is the band's rail (SEP 2023). ks: the party's own frame (its toast at 20, the laugh at st.laugh).
+ */
+const MEM = new Map<number, Buf>();
+export const partyMemory = (b: Buf, f: number, st: {ks: number; laugh?: number}) => {
+  void f;
+  const key = st.ks * 1000 + (st.laugh ?? 999);
+  let m = MEM.get(key);
+  if (!m) {
+    m = new Buf(480, 270, PAL.N0);
+    partyToast(m, st.ks, {k: st.ks, toast: 20, laugh: st.laugh ?? 999, down: 999});   // its own clock (deterministic per ks)
+    for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
+      const r = Math.hypot((x - 240) / 262, (y - RH / 2) / 132);
+      if (r < 0.8) continue;
+      const c = m.get(x, y), d = r > 1.0 ? (bayer(x, y) < (r - 1.0) / 0.12 ? 2 : 1) : bayer(x, y) < (r - 0.8) / 0.2 ? 1 : 0;
+      if (d) m.set(x, y, stepColor(c, -d));
+    }
+    if (MEM.size > 160) MEM.clear();
+    MEM.set(key, m);
+  }
+  b.c.set(m.c.subarray(0, 480 * RH));
+};
+
 export const ART: ArtAsset[] = [
   {
     id: 'set10-stage', manifest: 'SET-10 · the demo stage: the wings, the stage from the house, the front row', kind: 'set', name: 'The demo stage: the wings (work light), the locked wide (the spotlight\'s meter frame), the front row',
-    file: 'sets/stage.ts', exports: 'wings, stageWide, STAGE, frontRow, armrestECU', scenes: '9, 11, 12',
+    file: 'sets/stage.ts', exports: 'wings, stageWide, STAGE, frontRow, armrestECU, partyMemory', scenes: '9, 11, 12',
     note: 'the wings in work light, road cases, the monitor; the big screen with LIVE -> ENDED and the chat; the spot slides a step per laugh; RESERVED: CHIEF SCIENTIST never flips',
     stills: [
       {label: '[W] 9.01: the wings in work light: road cases, cables, the monitor (CHATGTP a plain bubble), Rima\'s hard spot, Gerg\'s road case', draw: (b) => wings(b, 0, {rimaSpot: [250, 108], screen: (bb, r) => { fill(bb, r.x, r.y, r.w, r.h, PAL.F2); drawChatBubble(bb, r.x + 26, r.y + 14, {size: 'screen', state: 'lit'}); }})},

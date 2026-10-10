@@ -26,6 +26,7 @@ Fix codes (the "fix" list on each beat):
   ML     the episode's concept (Move 37)
   SR     the script review's change (script-v1.md, "Review log (script review)")
   LQ     the lock-QA pass's change (lock-v1.md §3.5): a tempo pin, a cut-off or a word-anchored item re-timed
+  FX     the fixes pass's change (fixes-v1.md: the episode review's findings, segment by segment)
 Every est_s is a planning length, never a measurement; the lock sets the frames.
 """
 import glob
@@ -37,7 +38,9 @@ _ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 SEGS = ("coldopen", "act1", "act2", "act3", "act4", "tag")
 ACT = {"coldopen": "COLD OPEN", "act1": "ACT ONE", "act2": "ACT TWO", "act3": "ACT THREE", "act4": "ACT FOUR",
        "tag": "TAG"}
-ACT_TITLE = {"coldopen": "cold open", "act1": "the séance", "act2": "her", "act3": "leave them up",
+# Act Two's chapter title was "her": over the act that ends on Alyi's leaving post it was a second placement of the
+# word beside the departure (the episode review; facts §F; M1), so it is Rima's "stage right" (the fixes pass)
+ACT_TITLE = {"coldopen": "cold open", "act1": "the séance", "act2": "stage right", "act3": "leave them up",
              "act4": "as a guest", "tag": "august"}
 
 # ================================================================================================ scenes
@@ -149,6 +152,24 @@ for _sc, (_d, _why) in SCENE_ADJUST_LQ.items():
     SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The fixes pass (fixes-v1.md, Act Two, 2026-10-10). V.O. 6 moves from 12.07 (cut there; 12.07 keeps its length, so
+# sc 12's frames hold) to a new beat in the wings (9.04b: its take 5.05 s, with its air about 6.5 s); the engineer's
+# 11.15 line is trimmed to the one word (2.7 s shorter); V.O. 5's new take is 2.1 s longer. Sc 9's air was only about
+# 5 s of its 51 (the rest is lines and fixed holds), so at 53 s it fit x0.83, under its design air: it takes 5 s, 3 from
+# sc 11's trimmed line and 2 from sc 8's montage. Every act2 scene still fits at x1.13-1.36 (at or over its design air).
+# Act Two stays 4:39, so no later act's episode clock moves.
+SCENE_ADJUST_FX = {
+    "9": (+5, "the fixes pass: V.O. 6 in the wings (9.04b), the launch's plan line; at 56 s the scene fits x1.29 (at 53 "
+              "it would fit x0.83, under its design air)"),
+    "11": (-3, "the fixes pass: the engineer's \"Like the movie. The guy and his computer.\" cut (the word alone), 2.7 s "
+               "of take; 3 s go to sc 9 (x1.36)"),
+    "8": (-2, "the fixes pass: 2 s to sc 9; V.O. 5's new take is 2.1 s longer, so the montage's air comes down from x1.68 "
+              "(x1.32; its 8.01 hold no longer runs over 8 s)"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_FX.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
@@ -257,7 +278,7 @@ CAST = {
              "staff": {"name": "STAFF", "role": "STAFF", "known": True}, "orb": {"name": "THE ORB", "role": "ORB"}},
     "act2": {"mas": {"role": "CEO"}, "gerg": {"role": "CO-FOUNDER"}, "rima": {"role": "RUNS THE DEMO"},
              "engineer": {"name": "ENGINEER", "role": "DEMO"}, "chatgtp": {"name": "CHATGTP", "role": "SPEECH BUBBLE"},
-             "alyi": {"role": "CHIEF SCIENTIST (in the chrome, 2 s)"}, "staff": {"name": "STAFF", "role": "AUDIENCE", "known": True},
+             "alyi": {"role": "CHIEF SCIENTIST (a memory, 2 s)"}, "staff": {"name": "STAFF", "role": "AUDIENCE", "known": True},
              "radnus": {"role": "ELGOOG (tiny, on the plan)"},
              "voice1": {"name": "VOICE 1", "role": "A PRODUCT VOICE", "blank": True}, "voice2": {"name": "VOICE 2", "role": "A PRODUCT VOICE", "blank": True},
              "voice3": {"name": "VOICE 3", "role": "A PRODUCT VOICE", "blank": True}, "voice4": {"name": "VOICE 4", "role": "A PRODUCT VOICE", "blank": True},
@@ -356,10 +377,20 @@ NEW_VO = {
     "e2-vo-04": ("act2", "8.03", "the next model runs on the landlord's servers. the one after runs on ours.",
                  "plan (own compute)",
                  "watching himself in a lineup beside his landlord; dry, unbothered, already past it"),
-    "e2-vo-05": ("act2", "8.05", "one day ahead is enough.", "plan (ship first: a condition)",
-                 "as the block snaps onto Monday; a condition, settled; the smallest smile in the voice, never on the face"),
-    "e2-vo-06": ("act2", "12.07", "i came back.", "want",
-                 "over his own posted words; quiet; a fact about himself, the hope in it left unsaid"),
+    # the fixes pass (2026-10-10; fixes-v1.md, Act Two): "one day ahead is enough." would work as a post (W7); the review
+    # asked for the practical specific, a number or a name. Not "monday. their tuesday opens on our news." again (the
+    # script review cut it, S-6: it narrated the snap and forecast what sc 12 pays): the number is the night, the reason
+    # for Monday the picture doesn't show; 12.05 pays it
+    "e2-vo-05": ("act2", "8.05", "the press gets one night with ours first.", "plan (ship first: a condition)",
+                 "as the block snaps onto Monday; a scheduler's thought, settled; 'one night' the number, 'first' plain; "
+                 "the smallest smile in the voice, never on the face"),
+    # the fixes pass (2026-10-10; fixes-v1.md, Act Two): "i came back." over his farewell post was V.O. at a contested
+    # moment, on another person's act that hurts him, and could read as the cause of the departure (W8; facts §F): it is
+    # cut, and 12.07-12.08 hold in silence. V.O. 6 is now the launch's plan line, in the wings (the review: four
+    # minutes of the launch with no inner voice); nothing about the voice, nothing about why he posts
+    "e2-vo-06": ("act2", "9.04b", "everyone gets it free. that's what makes the phone deal stick.", "plan (distribution)",
+                 "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call "
+                 "behind it; 'free' plain, no weight on 'stick'"),
     "e2-vo-07": ("act3", "15.03", "a hundred and seventy-six days.", "count",
                  "after Alyi's far-off count; flat, exact; the number is the feeling"),
     "e2-vo-08": ("act3", "15.17", "i'll ask him in person.", "plan",
@@ -572,8 +603,11 @@ _l("e2-a2-0035", "act2", "11.08", "chatgtp", "It's free!", "instantly, delighted
 _l("e2-a2-0036", "act2", "11.09", "rima", "…and that's the demo.", "in the half-dark, perfectly composed; her close", "[INVENTED · keep list]")
 _l("e2-a2-0037", "act2", "11.15", "engineer", "Mas just posted. One word.",
    "off mic, after the stream, unclipping his headset, to RIMA at her mark (she doesn't look up), reading his phone; lower and closer", "[INVENTED · said to a listener (W19)]", device="offmic")
-_l("e2-a2-0038", "act2", "11.15", "engineer", "'Her.' Like the movie. The guy and his computer.",
-   "off mic, still to Rima; a statement, the film's premise the way people recall it", "[INVENTED · the film's premise only (D-6); never the actress, never the voice]", device="offmic")
+# the fixes pass (2026-10-10; fixes-v1.md, Act Two): "Like the movie. The guy and his computer." explained the post's
+# subtext (W7) and pointed at the contested set's second item right after the flirty demo; the word alone, read off his
+# phone, and the blimp and the house carry it
+_l("e2-a2-0038", "act2", "11.15", "engineer", "'Her.'",
+   "off mic, still to Rima; reading the one word off his phone, flat, a statement, no comment in it", "[INVENTED · the post's word, read off his phone (facts A23b); never the actress, never the voice]", device="offmic")
 
 # ---- ACT THREE · sc 13
 _l("e2-a3-0001", "act3", "13.01", "staffer", "When did anybody actually see him last? In person, I mean.",
@@ -1389,15 +1423,15 @@ nb("act2", "8.04", "POV · his calendar: Elgoog's keynote already on Tuesday; he
 nb("act2", "8.05", "MCU · Mas, the lit Monday square in his eyes",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "The Monday square lit.", "",
-   lines=[line("e2-vo-05")], head=0.4, tail=0.4, music=M8, fix=("P", "VO", "SR"), why="V.O. 5: a condition, one day ahead is enough; it reads as foresight once sc 12 shows Elgoog's day under OMNI.")
-nb("act2", "8.06", "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
+   lines=[line("e2-vo-05")], head=0.4, tail=0.4, music=M8, fix=("P", "VO", "SR", "FX"), why="V.O. 5: the press gets one night with NopeAI's launch before Elgoog's keynote (the fixes pass: the practical specific, W7); it reads as foresight once sc 12 shows Elgoog's day under OMNI.")
+nb("act2", "8.06", "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear",
    "call", "SET-07", "darkroom", ["mas"],
-   "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers. Mas, unhurried, says the episode's one full sentence of terms. The tile shows …, then CONFIRMED.",
-   "We hear only Mas. No face on the tile, ever.",
+   "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers and lifts it to his ear. Mas, unhurried, says the episode's one full sentence of terms, the phone at his ear, its screen's glow on his cheek. He lowers it to the desk: the tile shows …, then CONFIRMED.",
+   "We hear only Mas. No face on the tile, ever. The MCU a step warmer than the room (P10; the fixes pass: it read as talking to the air).",
    lines=[line("e2-a2-0001")], head=1.6, tail=2.2, fixed=("tail",), onscreen=[O("ELPPA", 0.2, None, "ui"), O("…", "E:e2-a2-0001+0.3", "E:e2-a2-0001+1.3", "ui"),
                                                                O("CONFIRMED", "E:e2-a2-0001+1.3", None, "ui")],
    music=M8call, sounds=[S("call_ring", 0.2, -24), S("call_connect", 1.2, -26), S("ui_confirm_chip", "E:e2-a2-0001+1.3", -22, new=True)],
-   pace="normal", fix=("P", "FACT", "R1", "R2"), why="He closes the phone deal: no money either way (facts A58, A40).")
+   pace="normal", fix=("P", "FACT", "R1", "R2", "FX"), why="He closes the phone deal: no money either way (facts A58, A40).")
 nb("act2", "8.07", "POV · an invite drops into his calendar under the Monday square; he accepts",
    "screen", "SET-07", "darkroom", ["mas"],
    "An invite drops into his calendar: ELPPA · KEYNOTE · JUN 10. He accepts it. The Monday square lit; the June invite under it.",
@@ -1442,6 +1476,12 @@ nb("act2", "9.04", "2S · Mas, screen-left, and RIMA, the wings behind them (no 
    "MAS asks the question Gerg asked him in Ep1. RIMA answers the next question. He grants her a stage that isn't his to grant; she takes it back as a fact.",
    "", lines=[line("e2-a2-0006"), line("e2-a2-0007", 0.5, NORMAL), line("e2-a2-0008", 0.5, NORMAL), line("e2-a2-0009", 0.4, NORMAL)],
    head=0.5, tail=0.6, music=M9, fix=("P", "KEEP", "PACE"), why="Rima owns the demo; Mas watches from the wings.")
+nb("act2", "9.04b", "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
+   "stage", "SET-10", "wings", ["mas"],
+   "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. His thought.",
+   "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8).",
+   lines=[line("e2-vo-06")], head=0.6, tail=0.7, music=M9, fix=("P", "VO", "FX"),
+   why="V.O. 6: the launch's plan (distribution): the free tier is what makes the ELPPA deal stick (the fixes pass: four minutes of the launch with no inner voice; W5, W6).")
 nb("act2", "9.05", "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "stage", "SET-10", "wings", ["rima", "engineer"],
    "Mas walks off frame-left, to stage right. RIMA crosses the wings to the monitor; the engineer follows her.",
@@ -1522,7 +1562,9 @@ nb("act2", "11.01", "WIDE · the locked meter frame from mid-house: the stage, t
    "stage", "SET-10", "demo_house", CH11,
    "A clean stage and a big screen. The audience, tiled. RIMA takes her mark, and the spotlight lands on her.",
    "The locked meter frame: every step of the light is measured here. The front row is below this frame (it's first seen in sc 12, after the blimp has gone: FC).",
-   lines=[line("e2-a2-0023")], head=2.0, tail=0.4, fixed=("head",), music=M11, sounds=[S("spotlight_swing", 0.6, -24)],
+   lines=[line("e2-a2-0023")], head=2.0, tail=0.4, fixed=("head",), music=M11,
+   sounds=[S("spotlight_swing", 0.4, -24, note="0.6 s until the fixes pass: with sc 11 laid 3 s later the demo cue's bass "
+             "note came 0.11 s earlier under the swing and masked it (the audit: -1.2 dB in 60-250 Hz at its ride's cap)")],
    arrive={"s": 2.0, "what": "the stage wide as Rima takes her mark and the spot finds her"}, fix=("P", "FC"), why="Her demo.")
 nb("act2", "11.02", "SCR · the big screen: CHATGTP grows ears, eyes and a mouth in three held steps; a VOICE 5 badge in its corner",
    "stage", "SET-10", "demo_house", ["chatgtp"],
@@ -1612,10 +1654,10 @@ nb("act2", "11.14", "MCU · RIMA on her mark, composed, not looking up",
    "No wince (R2: no 'understudy' framing, GR §6).", dur=2.6, fixed=("dur",), music=M11end, fix=("P", "R2", "GR"), why="Her close made.")
 nb("act2", "11.15", "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
    "stage", "SET-10", "demo_house", ["engineer", "rima"],
-   "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
-   "Said to a listener (W19). His words are the film's premise, not the voice (D-6).",
+   "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic: the one word. She doesn't look up: her held mark (11.14) is the reaction.",
+   "Said to a listener (W19). The word alone, no gloss (the fixes pass: the film's premise explained the subtext, W7, and pointed at the contested set).",
    lines=[line("e2-a2-0037"), line("e2-a2-0038", 0.6, FREE)], head=0.7, tail=0.4, music=M11end,
-   sounds=[S("headset_unclip", 0.2, -26, new=True)], fix=("P", "R1", "GR", "SR"), why="What the word points at (the film's premise only), told to the one person who doesn't look up.")
+   sounds=[S("headset_unclip", 0.2, -26, new=True)], fix=("P", "R1", "GR", "SR", "FX"), why="The word, told to the one person who doesn't look up.")
 nb("act2", "11.16", "WIDE · every head near the wings turns; the blimp over the emptying house",
    "stage", "SET-10", "demo_house", ["staff"],
    "Every head near the wings turns. The blimp over the emptying house.",
@@ -1642,12 +1684,14 @@ nb("act2", "12.02", "WIDE · the front row from the wings, in plain house light,
    "The front row, in plain house light, the house empty. The seat reserved for the chief scientist is empty. The placard stays as it is.",
    "No shade, no tether, no flip (FC).", dur=2.8, onscreen=[O("RESERVED: CHIEF SCIENTIST", 0.4, None, "sign")], music=M12,
    fix=("P", "FC", "GR"), why="An empty seat.")
-nb("act2", "12.03", "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
-   "stage", "SET-10", "demo_house", ["alyi"],
-   "In its chrome armrest, for two seconds, the party from last September: Alyi turning to Mas with a toast and a smile. Then the chrome shows only the empty seat.",
-   "Ep1's own art (copied), held 2 s (R2). A memory in a surface, not a ghost: it plays as a reflection of a past event, then goes.",
-   dur=3.4, fixed=("dur",), music=M12, sounds=[S("door_motif_note", 0.2, -26, new=True, note="the Door, first note missing (score)")],
-   fix=("P", "R2"), why="The bond, recalled before his own goodbye (W14).")
+nb("act2", "12.03", "ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat",
+   "stage", "SET-10", "demo_house", ["alyi", "mas"],
+   "On the Door's note a glint runs across the empty seat's chrome armrest, and on it we cut to the party from last September, in its own frame: Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Then the armrest again: only the empty seat.",
+   "Ep1's own art at full frame (its redrawn party: Alyi warm, real arms and hands on the cup and the glass), a memory with its date in the band, never a reflection (the fixes pass: a moving image of Alyi in a surface is the 'glass Alyi' grammar, P8, D-64; and the chrome had drawn both faces cold, P5).",
+   dur=3.4, fixed=("dur",), onscreen=[O("RAIL: SEP 2023", 0.4, 2.55, "rail")], music=M12,
+   sounds=[S("door_motif_note", 0.2, -26, new=True, note="the Door, first note missing (score)"),
+           S("glass_nudge", 0.62, -30, note="the memory's clink, far and soft under the Door")],
+   fix=("P", "R2", "FX"), why="The bond, recalled before his own goodbye (W14).")
 nb("act2", "12.04", "BLACK · a beat",
    "void", "SET-10", "black", [],
    "A beat of black. The pad holds across it.", "", dur=1.0, fixed=("dur",), music=M12,
@@ -1672,12 +1716,12 @@ nb("act2", "12.06", "ECU · his phone lights: Alyi's post, in its own UI; his th
    fix=("P", "FACT", "R1", "GR"), why="Alyi leaves in his own words, warmly (facts A25).")
 nb("act2", "12.07", "ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…and a dear friend.\"",
    "screen", "SET-07", "darkroom", ["mas"],
-   "He types his own post, at a post's pace, and posts it. His posted words hold. Over them, after both posts have had their read time, his voice.",
-   "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll.",
-   lines=[line("e2-vo-06")], head=9.3, tail=0.4, fixed=("head",),
+   "He types his own post, at a post's pace, and posts it. His posted words hold, in silence, past their read time.",
+   "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll. No V.O. here (the fixes pass: W8, silence over another person's real act and at the contested moment; facts §F).",
+   dur=10.95, fixed=("dur",),
    onscreen=[O("ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.", 0.4, "end", "post")],
    music=M12b, sounds=[S("key_tap_soft_01", 0.6, -30), S("key_tap_soft_03", 1.4, -30), S("key_tap_soft_05", 2.2, -30), S("post_click", 3.2, -28)],
-   fix=("P", "VO", "FACT", "R1", "SR"), why="V.O. 6 over his act: his want, as a fact about himself, the hope unsaid (facts A61). The post's text is 172 characters: 8.85 s to read from its first letter (P15), so the voice comes 8.9 s after it (lock QA: it came at 8.2; the plan had counted 165).")
+   fix=("P", "FACT", "R1", "SR", "FX"), why="His answer, in public, warmly (facts A61). The post's text is 172 characters: 8.85 s to read from its first letter (P15); it holds 10.5 s, then his face. V.O. 6 used to come here (\"i came back.\"): cut at the fixes pass, the beat keeps its length (10.95 s), so the scene's frames are unchanged.")
 nb("act2", "12.08", "MCU · his face, held 2–3 s; the cue stops mid-phrase on the downbeat",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "Hold on his face. The cue stops mid-phrase on the downbeat. Black: the midpoint act-out.",

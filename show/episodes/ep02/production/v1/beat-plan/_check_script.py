@@ -42,7 +42,7 @@ def main():
                 plan_beat[ln["id"]] = b["id"]
     bad = []
     seen = {}
-    for m in re.finditer(r"\[(\d+[A-Z]?\.\d{2})\] \(≈ ([\d.]+) s", text):
+    for m in re.finditer(r"\[(\d+[A-Z]?\.\d{2}[a-z]?)\] \(≈ ([\d.]+) s", text):
         bid, x = m.group(1), float(m.group(2))
         seen[bid] = seen.get(bid, 0) + 1
         if bid not in beats:
@@ -55,7 +55,7 @@ def main():
     found = {}
     cur = None
     for raw in lines:
-        mb = re.search(r"\[(\d+[A-Z]?\.\d{2})\] \(≈ [\d.]+ s", raw)
+        mb = re.search(r"\[(\d+[A-Z]?\.\d{2}[a-z]?)\] \(≈ [\d.]+ s", raw)
         if mb:
             cur = mb.group(1)
         m = re.search(r"^(.*?)\s*`\[[^`]*?(e2-(?:co|a1|a2|a3|a4|tg|vo)-\d{2,4})\]`\s*$", raw)

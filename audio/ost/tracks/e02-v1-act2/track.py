@@ -1461,9 +1461,11 @@ def main():
                                  end=round(min(tl.length, a1), 3)))
     cw, cb = built['walkon'][0], built['blueprint'][0]
     sections.append(dict(section='e02-07a: the walk-on through the wall (a diegetic source, already low-passed '
-                                 'and quiet)', start=round(cw.ev['j_in'], 3), end=round(cb.ev['W0'], 3), duck_db=5.0,
-                         duck_why='the PA is behind a wall (nothing above 1.5 kHz) and rendered at -24: 5 dB under the '
-                                  'quick talk keeps it a presence, not a hole'))
+                                 'and quiet)', start=round(cw.ev['j_in'], 3), end=round(cb.ev['W0'], 3), duck_db=6.0,
+                         duck_why='the PA is behind a wall (nothing above 1.5 kHz) and rendered at -24: 6 dB under the '
+                                  'quick talk keeps it a presence, not a hole (5 dB until the fixes pass, 2026-10-10: '
+                                  'with sc 9 5 s longer, the re-laid tune put a phrase on Rima\'s "You\'ll be stage '
+                                  'right", her onset +9.8 dB over it against the +10 floor; at 6 dB it clears)'))
     # (BLUEPRINT's 4 dB duck override is gone: the score review, 2026-10-09, measured the music over the first 0.6 s of
     # her explainer lines; the mix's mood duck, E02-07's 8 dB, applies)
     doc = dict(

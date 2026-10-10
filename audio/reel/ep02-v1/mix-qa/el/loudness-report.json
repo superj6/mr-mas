@@ -25,7 +25,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 12:59:00"
+   "built": "2026-10-10 15:49:09"
   },
   "act1": {
    "file": "out/ep02/v1/mix/act1-mix.wav",
@@ -40,22 +40,22 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 12:59:29"
+   "built": "2026-10-10 15:49:29"
   },
   "act2": {
    "file": "out/ep02/v1/mix/act2-mix.wav",
    "seconds": 279.0,
    "lufs_i": -16.01,
-   "true_peak_dbtp": -1.37,
-   "lra_lu": 7.0,
-   "dialogue_lufs": -14.29,
-   "gain_db": 2.11,
+   "true_peak_dbtp": -1.45,
+   "lra_lu": 7.1,
+   "dialogue_lufs": -14.32,
+   "gain_db": 2.03,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-act2/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 12:59:49"
+   "built": "2026-10-10 15:49:42"
   },
   "act3": {
    "file": "out/ep02/v1/mix/act3-mix.wav",
@@ -70,7 +70,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 13:00:24"
+   "built": "2026-10-10 15:49:57"
   },
   "act4": {
    "file": "out/ep02/v1/mix/act4-mix.wav",
@@ -85,7 +85,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 13:01:11"
+   "built": "2026-10-10 15:50:13"
   },
   "tag": {
    "file": "out/ep02/v1/mix/tag-mix.wav",
@@ -100,7 +100,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 13:01:14"
+   "built": "2026-10-10 15:50:15"
   },
   "card": {
    "file": "out/ep02/v1/mix/card-mix.wav",
@@ -115,7 +115,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 13:01:15"
+   "built": "2026-10-10 15:50:15"
   }
  },
  "episode": {
@@ -130,7 +130,7 @@
   ],
   "seconds": 1376.0,
   "lufs_i": -15.74,
-  "lra_lu": 7.0,
+  "lra_lu": 7.1,
   "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
  },
  "seams": [
@@ -143,15 +143,15 @@
   },
   {
    "seam": "act1 -> act2",
-   "last_200ms_dbfs": -31.1,
-   "first_200ms_dbfs": -18.7,
-   "step_db": 12.4,
-   "sample_jump": 0.0018
+   "last_200ms_dbfs": -31.3,
+   "first_200ms_dbfs": -18.6,
+   "step_db": 12.8,
+   "sample_jump": 0.0011
   },
   {
    "seam": "act2 -> act3",
    "last_200ms_dbfs": -29.1,
-   "first_200ms_dbfs": -21.7,
+   "first_200ms_dbfs": -21.8,
    "step_db": 7.3,
    "sample_jump": 0.0009
   },
@@ -172,8 +172,8 @@
  ],
  "spread": {
   "lufs_i_lu": 1.01,
-  "dialogue_lu": 0.83
+  "dialogue_lu": 0.86
  },
- "updated": "2026-10-10 13:01:27",
+ "updated": "2026-10-10 15:50:27",
  "heard": "nothing here has been listened to; every number is measured"
 }

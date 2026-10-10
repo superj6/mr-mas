@@ -12,6 +12,7 @@
 //                              VOICE panel (Rima's fingertip hovering each slot), the panel unfolding past the bezel onto
 //                              the drafting grid
 //   wings2S(b, f, st)          [2S] 9.04: Mas (left third) and Rima, their approved portraits, lip-synced
+//   masWingsMCU(b, f)          [MCU] 9.04b: Mas alone in the wings, turned to the stage, a face light (V.O. 6)
 //   masOrb2S(b, f, st)         [2S] 11.03: Mas and the Orb in the wings during the demo; the Orb scans the big screen,
 //                              its toast `verified: …` never resolves
 //   masPhoneMedium / thumbECU / masFaceWork / herPOV   11.11-11.12: the phone out, h · e · r, his face, the post lands
@@ -37,6 +38,7 @@ import {drawEp2Post} from '../../art/props/ui';
 import {gergSpeakPortrait} from '../../../../../shared/pixel/cast/gerg-speak';
 import type {GergSpeakState} from '../../../../../shared/pixel/cast/gerg-speak';
 import type {Img} from '../../../../../shared/pixel/figure';
+import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {placeHand, drawHand, sleeve, holdPhone, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
 import {RH, W, glow, isSkin, warm, dimRoom, bustRunOn, drawRima, smoothSkin, forearm, cupThumb, putBustSoft, rimaLook, keyBalloon} from './common';
@@ -333,6 +335,20 @@ export const wings2S = (b: Buf, f: number, st: {mas: Viseme; rima: Viseme; rimaB
   // Rima, right, composed (her approved portrait in its own key), her eyes a step toward him: she answers HIM, not the
   // lens (common rimaLook)
   putBustSoft(b, rimaLook(bustRunOn(rimaSpeakPortrait({mouth: st.rima, lid: 0, brow: st.rimaBrow ?? 'level', hand: 'none'}), 135), -1), 268, 28, RH);
+  void f;
+};
+
+// ================================================================== 9.04b: his face in the wings (V.O. 6)
+/** [MCU] (the fixes pass, 2026-10-10) Mas alone in the wings after "Enjoy the view.": his approved portrait in the work
+ *  light's warmth, turned to the stage (camera-right, as in 9.04's two-shot), a step closer than the two-shot; the
+ *  stage's lit side keyed one step on his face (P10: a face light, the room left alone); the wings soft behind him, the
+ *  monitor's glow beyond. Lips still: the V.O. is typed by the host */
+const MCU9 = new Map<string, Img>();
+export const masWingsMCU = (b: Buf, f: number) => {
+  wingsSoft(b, 60, 2);
+  let im = MCU9.get('m');
+  if (!im) { im = faceLightImg(masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: 0, mouth: 'rest'}), 1, {key: [-1, -0.3]}); MCU9.set('m', im); }
+  putBustSoft(b, im, 96, 26, RH, true);
   void f;
 };
 

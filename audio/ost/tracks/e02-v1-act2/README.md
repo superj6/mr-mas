@@ -57,6 +57,15 @@ The score review measured each line's take against the score as the mix ducks it
 
 The other checks still pass: the act is one music run with its two designed rests, no hole under −42 dBFS, no fragment, no 12 dB step at a cut, F-major and rule 12 clean, the knee 0/0, every hit within 10 ms.
 
+## The fixes pass (2026-10-10): re-laid on the new lock
+
+The episode review's Act Two fixes changed the lock inside the act (its 6,696 frames hold): sc 8 44 → 42 s (V.O. 5's new line, "the press gets one night with ours first.", 2.79 s), sc 9 51 → 56 s (V.O. 6 now in the wings, 9.04b, "everyone gets it free. that's what makes the phone deal stick.", 5.05 s), sc 11 98 → 95 s (the engineer's 11.15 line is the word alone), sc 10 and 12 unchanged (12.07 keeps its length; "i came back." is cut). So the four cues were rendered again and re-laid by the same code (the dark room's twice: once per V.O. 5 take) [M]:
+
+- **Every check passes** (`check.py`, the six segments): `act2 6696 f 279.000 s exact=True lock=True −20.49 LUFS-I −3.15 dBTP | silence 0 holes 0 holes-42 0 frag 0 (runs 1) | 12 dB steps 0 unmarked 0 | F-major True rule12 True knee 0/0 | pocket p10 13.5 min 10.8 fail 0 exempt 0 | PASS`. No unmarked digital silence, no hole, no undesigned fragment.
+- **One change in the code:** the walk-on's duck (`sections` duck_db) is **6 dB, was 5**. With sc 9 five seconds longer the re-laid tune put a phrase on Rima's "You'll be stage right…": her onset was +9.8 dB over the ducked score, under the +10 floor (the only pocket failure). At 6 dB it is +10.8 [M]; the tune is behind a wall, low-passed, and still a presence [J].
+- **The V.O. windows:** V.O. 5 sits at −27.3 LUFS of score (24.65–27.44 s), V.O. 6 at −24.2 under the walk-on (75.56–80.61 s), V.O. 4 −23.5 as before. The dark room's short-term p95 is −16.06 LUFS (the engine's underscore warning, −17; it was −16.6): its felt statements carry the cue, as before.
+- **The designed stop** is unchanged (12.08 is the same frames): the downbeat 2 s into his face.
+
 ## The tune: ONE WORD (one tune in three rooms)
 
 The manifest asks for the demo's walk-on to be "one tune in three rooms", with the knee's step cell in it. The tune is original, in F dorian (F G A♭ B♭ C D E♭; never an A-natural), and swung, because people play it:
@@ -93,7 +102,7 @@ P01 DARK ROOM, swung. The grid's bar 1 is the act's first frame. Nothing sounds 
 | 20.63 | B♭m9, 0.38 s before the cut to the calendar (−14.5 LUFS-M, was −12.3) | |
 | 22.50 | **the Water Line again, a little cocky: the nudge twice** (F F G–F G–F), the chip on both nudges | OST §2.2, Ep2–3: "the nudge twice, a little cocky". The small thrill: his launch dragged onto Monday |
 | 25.00 | **the settle on an open fifth** (F3 + C4: B♭ minor to F with no third). The felt's C4 lands on the downbeat, where `ui_drop_snap` puts the block on Monday; the settle's F4 lands on the cut to his face (25.63) | "He never takes a third at a cadence". The snap is the SFX's; the felt's C is the line's own fifth below |
-| 26.30 → 28.14 | V.O. 5 sits inside the settle's ring (−26.9 LUFS) | "one day ahead is enough." Nothing attacks |
+| 26.30 → 28.14 | V.O. 5 sits inside the settle's ring (−26.9 LUFS) | "one day ahead is enough." Nothing attacks (the score pass's numbers; since the fixes pass the line is "the press gets one night with ours first.", 24.65–27.44 s, −27.3 LUFS of score) |
 | 28.54 | **thin to the pedal**: the felt rests; the cello and viola hold F and C, 0.25 s before the call's cut | "Under the call the Water Line thins to its pedal". His one sentence of terms (31.48–36.42) plays over a held pedal (−23.6 LUFS) |
 | 37.72 | **ONE chip note on CONFIRMED** (F5, the 50 % square; −20.5 LUFS-M). Designed hit | "One chip note on CONFIRMED": a quiet click of power. The score plays the claimed `ui_confirm_chip` (it is not on the board) |
 | 38.13 | D♭maj9(♯11), 0.50 s before the cut, 0.4 s clear of CONFIRMED | The invite drops: the Monday square lit, the June invite under it |

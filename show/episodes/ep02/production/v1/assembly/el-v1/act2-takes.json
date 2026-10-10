@@ -169,77 +169,92 @@
   "scene": "8.05",
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
-  "text": "one day ahead is enough.",
-  "spoken_as": "One day ahead is enough.",
+  "text": "the press gets one night with ours first.",
+  "spoken_as": "The press gets one night with ours first.",
   "tag": "V.O.",
-  "delivery": "as the block snaps onto Monday; a condition, settled; the smallest smile in the voice, never on the face",
+  "delivery": "as the block snaps onto Monday; a scheduler's thought, settled; 'one night' the number, 'first' plain; the smallest smile in the voice, never on the face",
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
   "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.929,
-  "frames_24": 70,
-  "voiced_span_s": 1.84,
+  "duration_s": 3.755,
+  "frames_24": 90,
+  "voiced_span_s": 2.79,
   "pace": {
-   "audible_in_s": 0.37,
-   "audible_out_s": 2.21,
+   "audible_in_s": 0.47,
+   "audible_out_s": 3.26,
    "measured": {
-    "span_s": 1.84,
-    "wpm": 163.0,
-    "syllables": 7,
-    "articulation_sps": 3.8,
+    "span_s": 2.79,
+    "wpm": 172.0,
+    "syllables": 8,
+    "articulation_sps": 2.87,
     "pauses_s": []
    },
    "longest_internal_gap_s": 0.0,
-   "words": 5,
-   "wpm": 163.0,
+   "words": 8,
+   "wpm": 172.0,
    "speed": 0.75,
    "tsm": 1.0
   },
   "words": [
    {
-    "w": "One",
-    "t0": 0.35,
-    "t1": 0.594
+    "w": "The",
+    "t0": 0.45,
+    "t1": 0.559
    },
    {
-    "w": "day",
+    "w": "press",
     "t0": 0.64,
-    "t1": 0.849
+    "t1": 0.977
    },
    {
-    "w": "ahead",
-    "t0": 0.93,
-    "t1": 1.337
+    "w": "gets",
+    "t0": 1.058,
+    "t1": 1.314
    },
    {
-    "w": "is",
-    "t0": 1.418,
-    "t1": 1.523
+    "w": "one",
+    "t0": 1.395,
+    "t1": 1.615
    },
    {
-    "w": "enough",
-    "t0": 1.615,
-    "t1": 2.091
+    "w": "night",
+    "t0": 1.662,
+    "t1": 1.883
+   },
+   {
+    "w": "with",
+    "t0": 1.929,
+    "t1": 2.115
+   },
+   {
+    "w": "ours",
+    "t0": 2.173,
+    "t1": 2.533
+   },
+   {
+    "w": "first",
+    "t0": 2.626,
+    "t1": 3.194
    }
   ],
   "qa": {
-   "asr": "One day ahead is enough.",
+   "asr": "The press gets one night with ours first.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -3.84,
+   "true_peak_dbtp": -3.3,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 103.2,
-   "f0_range_st": 11.0,
-   "speech_head_s": 0.37,
-   "speech_tail_s": 0.719,
+   "median_f0_hz": 106.7,
+   "f0_range_st": 13.1,
+   "speech_head_s": 0.47,
+   "speech_tail_s": 0.495,
    "raw_tail_cut": false,
-   "align_median_s": 0.115
+   "align_median_s": 0.158
   },
   "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
   "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
@@ -259,8 +274,8 @@
     "speed": 0.75
    },
    "seed": 4205079465,
-   "chars_sent": 24,
-   "request_key": "53631bf05133f4c4",
+   "chars_sent": 41,
+   "request_key": "af75aa8d66dcd5fd",
    "derived_from": null,
    "reused_from": null
   },
@@ -346,7 +361,7 @@
     "w": "you",
     "t0": 2.173,
     "t1": 2.312,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "put",
@@ -1005,7 +1020,7 @@
     "w": "it",
     "t0": 1.743,
     "t1": 1.813,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "a",
@@ -1023,7 +1038,7 @@
     "w": "it",
     "t0": 2.602,
     "t1": 2.73,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "thinks",
@@ -1065,7 +1080,7 @@
     "w": "it",
     "t0": 4.193,
     "t1": 4.274,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "answers",
@@ -1329,7 +1344,7 @@
     "w": "It",
     "t0": 1.424,
     "t1": 1.54,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "does",
@@ -1542,7 +1557,7 @@
     "w": "you",
     "t0": 1.848,
     "t1": 1.917,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "laugh",
@@ -1716,13 +1731,13 @@
     "w": "Is",
     "t0": 0.37,
     "t1": 0.524,
-    "ph": "ɪz"
+    "ph": "ˌɪz"
    },
    {
     "w": "it",
     "t0": 0.582,
     "t1": 0.652,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "ready",
@@ -1878,7 +1893,7 @@
     "w": "You",
     "t0": 2.312,
     "t1": 2.475,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "can",
@@ -1956,7 +1971,7 @@
     "w": "you",
     "t0": 6.12,
     "t1": 6.318,
-    "ph": "jˌu"
+    "ph": "ju"
    }
   ],
   "qa": {
@@ -2391,13 +2406,13 @@
     "w": "It",
     "t0": 0.35,
     "t1": 0.698,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "is",
     "t0": 0.78,
     "t1": 1.035,
-    "ph": "ɪz"
+    "ph": "ˌɪz"
    },
    {
     "w": "Enjoy",
@@ -2514,6 +2529,155 @@
   "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
  },
  {
+  "id": "e2-vo-06",
+  "kind": "vo",
+  "scene": "9.04b",
+  "speaker": "MAS MANALT",
+  "speaker_slug": "mas-manalt",
+  "text": "everyone gets it free. that's what makes the phone deal stick.",
+  "spoken_as": "Everyone gets it free. That's what makes the phone deal stick.",
+  "tag": "V.O.",
+  "delivery": "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call behind it; 'free' plain, no weight on 'stick'",
+  "on_camera": "vo",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 5.93,
+  "frames_24": 142,
+  "voiced_span_s": 5.05,
+  "pace": {
+   "audible_in_s": 0.38,
+   "audible_out_s": 5.43,
+   "measured": {
+    "span_s": 5.05,
+    "wpm": 130.7,
+    "syllables": 13,
+    "articulation_sps": 2.97,
+    "pauses_s": [
+     0.68,
+     0.07
+    ]
+   },
+   "longest_internal_gap_s": 0.68,
+   "words": 11,
+   "wpm": 130.7,
+   "speed": 0.75,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Everyone",
+    "t0": 0.36,
+    "t1": 1.07
+   },
+   {
+    "w": "gets",
+    "t0": 1.128,
+    "t1": 1.395
+   },
+   {
+    "w": "it",
+    "t0": 1.476,
+    "t1": 1.569
+   },
+   {
+    "w": "free",
+    "t0": 1.65,
+    "t1": 2.208
+   },
+   {
+    "w": "that's",
+    "t0": 2.858,
+    "t1": 3.206
+   },
+   {
+    "w": "what",
+    "t0": 3.252,
+    "t1": 3.427
+   },
+   {
+    "w": "makes",
+    "t0": 3.508,
+    "t1": 3.775
+   },
+   {
+    "w": "the",
+    "t0": 3.833,
+    "t1": 3.937
+   },
+   {
+    "w": "phone",
+    "t0": 3.996,
+    "t1": 4.355
+   },
+   {
+    "w": "deal",
+    "t0": 4.413,
+    "t1": 4.704
+   },
+   {
+    "w": "stick",
+    "t0": 4.808,
+    "t1": 5.354
+   }
+  ],
+  "qa": {
+   "asr": "Everyone gets it free. That's what makes the phone deal stick.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -18.09,
+   "target_lufs": -18.0,
+   "true_peak_dbtp": -3.89,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 119.4,
+   "f0_range_st": 14.2,
+   "speech_head_s": 0.38,
+   "speech_tail_s": 0.5,
+   "raw_tail_cut": false,
+   "align_median_s": 0.153
+  },
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
+  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "C",
+   "role": "mas-manalt",
+   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
+   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
+   "source": "shared Voice Library (high_quality), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.65,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.75
+   },
+   "seed": 370459737,
+   "chars_sent": 62,
+   "request_key": "68423ccfc76cfb0f",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-C",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
   "id": "e2-a2-0010",
   "kind": "dialogue",
   "scene": "9.05",
@@ -2568,7 +2732,7 @@
     "w": "it",
     "t0": 0.71,
     "t1": 0.768,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "freezes",
@@ -2777,7 +2941,7 @@
     "w": "it",
     "t0": 0.617,
     "t1": 0.687,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "freezes",
@@ -2819,7 +2983,7 @@
     "w": "It",
     "t0": 3.508,
     "t1": 3.67,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "also",
@@ -3936,7 +4100,7 @@
     "w": "it",
     "t0": 1.476,
     "t1": 1.639,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "took",
@@ -4404,7 +4568,7 @@
     "w": "It",
     "t0": 3.45,
     "t1": 3.612,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "can",
@@ -4676,7 +4840,7 @@
     "w": "It",
     "t0": 0.35,
     "t1": 0.524,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "answers",
@@ -4976,7 +5140,7 @@
     "w": "it",
     "t0": 3.554,
     "t1": 3.636,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "too",
@@ -5521,7 +5685,7 @@
     "w": "it",
     "t0": 3.241,
     "t1": 3.322,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "to",
@@ -5545,7 +5709,7 @@
     "w": "it",
     "t0": 5.447,
     "t1": 5.609,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "listens",
@@ -5835,7 +5999,7 @@
     "w": "you",
     "t0": 1.43,
     "t1": 1.546,
-    "ph": "jˌu"
+    "ph": "ju"
    }
   ],
   "qa": {
@@ -5975,7 +6139,7 @@
     "w": "you",
     "t0": 0.722,
     "t1": 0.872,
-    "ph": "jˌu"
+    "ph": "ju"
    }
   ],
   "qa": {
@@ -6183,7 +6347,7 @@
     "w": "you",
     "t0": 3.229,
     "t1": 3.299,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "to",
@@ -7492,7 +7656,7 @@
     "w": "it",
     "t0": 1.743,
     "t1": 1.813,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "has",
@@ -7534,7 +7698,7 @@
     "w": "you",
     "t0": 4.297,
     "t1": 4.39,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "what",
@@ -7546,7 +7710,7 @@
     "w": "it",
     "t0": 4.634,
     "t1": 4.692,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "can",
@@ -7998,19 +8162,19 @@
     "w": "you",
     "t0": 2.091,
     "t1": 2.219,
-    "ph": "jˌu"
+    "ph": "ju"
    },
    {
     "w": "Is",
     "t0": 2.486,
     "t1": 2.626,
-    "ph": "ɪz"
+    "ph": "ˌɪz"
    },
    {
     "w": "it",
     "t0": 2.672,
     "t1": 2.73,
-    "ph": "ˌɪt"
+    "ph": "ɪt"
    },
    {
     "w": "warm",
@@ -8901,111 +9065,58 @@
   "scene": "11.15",
   "speaker": "THE DEMO ENGINEER",
   "speaker_slug": "engineer",
-  "text": "'Her.' Like the movie. The guy and his computer.",
-  "spoken_as": "'Her.' Like the movie. The guy and his computer.",
+  "text": "'Her.'",
+  "spoken_as": "'Her.'.",
   "tag": "offmic",
-  "delivery": "off mic, still to Rima; a statement, the film's premise the way people recall it",
+  "delivery": "off mic, still to Rima; reading the one word off his phone, flat, a statement, no comment in it",
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
   "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 4.276,
-  "frames_24": 103,
-  "voiced_span_s": 3.03,
+  "duration_s": 1.722,
+  "frames_24": 41,
+  "voiced_span_s": 0.34,
   "pace": {
-   "audible_in_s": 0.48,
-   "audible_out_s": 3.51,
+   "audible_in_s": 0.47,
+   "audible_out_s": 0.81,
    "measured": {
-    "span_s": 3.03,
-    "wpm": 178.2,
-    "syllables": 11,
-    "articulation_sps": 4.1,
-    "pauses_s": [
-     0.07,
-     0.25,
-     0.1,
-     0.07
-    ]
+    "span_s": 0.34,
+    "wpm": 176.5,
+    "syllables": 1,
+    "articulation_sps": 2.94,
+    "pauses_s": []
    },
-   "longest_internal_gap_s": 0.25,
-   "words": 9,
-   "wpm": 178.2,
+   "longest_internal_gap_s": 0.0,
+   "words": 1,
+   "wpm": 176.5,
    "speed": 1.0,
    "tsm": 1.0
   },
   "words": [
    {
     "w": "'Her.'",
-    "t0": 0.501,
-    "t1": 0.803,
+    "t0": 0.524,
+    "t1": 0.78,
     "ph": "hˌɜɹ"
-   },
-   {
-    "w": "Like",
-    "t0": 1.267,
-    "t1": 1.453,
-    "ph": "lˈIk"
-   },
-   {
-    "w": "the",
-    "t0": 1.488,
-    "t1": 1.557,
-    "ph": "ðə"
-   },
-   {
-    "w": "movie",
-    "t0": 1.604,
-    "t1": 1.987,
-    "ph": "mˈuvi"
-   },
-   {
-    "w": "The",
-    "t0": 2.231,
-    "t1": 2.347,
-    "ph": "ðə"
-   },
-   {
-    "w": "guy",
-    "t0": 2.405,
-    "t1": 2.602,
-    "ph": "ɡˈI"
-   },
-   {
-    "w": "and",
-    "t0": 2.649,
-    "t1": 2.73,
-    "ph": "ænd"
-   },
-   {
-    "w": "his",
-    "t0": 2.765,
-    "t1": 2.846,
-    "ph": "hˌɪz"
-   },
-   {
-    "w": "computer",
-    "t0": 2.893,
-    "t1": 3.369,
-    "ph": "kəmpjˈuTəɹ"
    }
   ],
   "qa": {
-   "asr": "Her. Like the movie. The guy and his computer.",
-   "cer": 0.065,
-   "word_recall_nonames": 0.8,
+   "asr": "Her.",
+   "cer": 0.5,
+   "word_recall_nonames": 0.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -3.04,
+   "true_peak_dbtp": -2.41,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 128.3,
-   "f0_range_st": 13.6,
-   "speech_head_s": 0.48,
-   "speech_tail_s": 0.766,
+   "median_f0_hz": 172.9,
+   "f0_range_st": 10.2,
+   "speech_head_s": 0.47,
+   "speech_tail_s": 0.912,
    "raw_tail_cut": false,
-   "align_median_s": 0.049
+   "align_median_s": null
   },
   "voice": "ElevenLabs library voice 'Ryan - Articulate, Friendly and Youthful' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 1.0",
   "voiceId": "qHR09fcvu6SoDtFzqFvm",
@@ -9024,9 +9135,9 @@
     "use_speaker_boost": true,
     "speed": 1.0
    },
-   "seed": 1126246905,
-   "chars_sent": 48,
-   "request_key": "2bffad2b471e7433",
+   "seed": 1126244905,
+   "chars_sent": 7,
+   "request_key": "c6614fddf105cfc8",
    "derived_from": null,
    "reused_from": null
   },
@@ -9049,8 +9160,8 @@
     "shape": "rest"
    },
    {
-    "t": 0.5,
-    "f": 12,
+    "t": 0.542,
+    "f": 13,
     "shape": "O"
    },
    {
@@ -9062,181 +9173,8 @@
     "t": 0.792,
     "f": 19,
     "shape": "rest"
-   },
-   {
-    "t": 1.292,
-    "f": 31,
-    "shape": "A"
-   },
-   {
-    "t": 1.417,
-    "f": 34,
-    "shape": "E"
-   },
-   {
-    "t": 1.583,
-    "f": 38,
-    "shape": "M"
-   },
-   {
-    "t": 1.667,
-    "f": 40,
-    "shape": "O"
-   },
-   {
-    "t": 1.792,
-    "f": 43,
-    "shape": "E"
-   },
-   {
-    "t": 2.0,
-    "f": 48,
-    "shape": "rest"
-   },
-   {
-    "t": 2.25,
-    "f": 54,
-    "shape": "E"
-   },
-   {
-    "t": 2.458,
-    "f": 59,
-    "shape": "A"
-   },
-   {
-    "t": 2.708,
-    "f": 65,
-    "shape": "E"
-   },
-   {
-    "t": 3.0,
-    "f": 72,
-    "shape": "M"
-   },
-   {
-    "t": 3.125,
-    "f": 75,
-    "shape": "O"
-   },
-   {
-    "t": 3.208,
-    "f": 77,
-    "shape": "E"
-   },
-   {
-    "t": 3.375,
-    "f": 81,
-    "shape": "rest"
    }
   ],
-  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
- },
- {
-  "id": "e2-vo-06",
-  "kind": "vo",
-  "scene": "12.07",
-  "speaker": "MAS MANALT",
-  "speaker_slug": "mas-manalt",
-  "text": "i came back.",
-  "spoken_as": "I came back.",
-  "tag": "V.O.",
-  "delivery": "over his own posted words; quiet; a fact about himself, the hope in it left unsaid",
-  "on_camera": "vo",
-  "mode": "on-mic",
-  "device": null,
-  "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-  "file_device": null,
-  "mp3": null,
-  "duration_s": 2.035,
-  "frames_24": 49,
-  "voiced_span_s": 1.2,
-  "pace": {
-   "audible_in_s": 0.35,
-   "audible_out_s": 1.55,
-   "measured": {
-    "span_s": 1.2,
-    "wpm": 150.0,
-    "syllables": 3,
-    "articulation_sps": 2.5,
-    "pauses_s": [
-     0.08
-    ]
-   },
-   "longest_internal_gap_s": 0.08,
-   "words": 3,
-   "wpm": 150.0,
-   "speed": 0.85,
-   "tsm": 1.0
-  },
-  "words": [
-   {
-    "w": "I",
-    "t0": 0.35,
-    "t1": 0.466
-   },
-   {
-    "w": "came",
-    "t0": 0.605,
-    "t1": 0.942
-   },
-   {
-    "w": "back",
-    "t0": 1.0,
-    "t1": 1.418
-   }
-  ],
-  "qa": {
-   "asr": "I came back.",
-   "cer": 0.0,
-   "word_recall_nonames": 1.0,
-   "lufs_i": -18.0,
-   "target_lufs": -18.0,
-   "true_peak_dbtp": -2.71,
-   "clipped_samples": 0,
-   "digital_black_runs": 0,
-   "median_f0_hz": 113.5,
-   "f0_range_st": 8.6,
-   "speech_head_s": 0.35,
-   "speech_tail_s": 0.485,
-   "raw_tail_cut": false,
-   "align_median_s": 0.16
-  },
-  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
-  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
-  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
-  "el": {
-   "cand": "C",
-   "role": "mas-manalt",
-   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
-   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
-   "source": "shared Voice Library (high_quality), used by voice_id",
-   "model_id": "eleven_multilingual_v2",
-   "settings": {
-    "stability": 0.65,
-    "similarity_boost": 0.75,
-    "style": 0.0,
-    "use_speaker_boost": true,
-    "speed": 0.85
-   },
-   "seed": 370459737,
-   "chars_sent": 12,
-   "request_key": "c91ce6c1ccd42e50",
-   "derived_from": null,
-   "reused_from": null
-  },
-  "status": "el",
-  "take": "el-C",
-  "processing": [
-   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
-   "HPF 60 Hz",
-   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
-   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
-  ],
-  "kokoro_ref": {
-   "timeline_in": null,
-   "timeline_dur": null
-  },
-  "mouth": [],
   "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
  }
 ]

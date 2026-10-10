@@ -271,10 +271,28 @@ export const masAfternoonImg = (o: {look?: -1 | 0 | 1; key: 'left' | 'right'; ri
   PM.set(id, out);
   return out;
 };
-export const masMCU = (b: Buf, f: number, st: {mas?: Partial<MasPortraitState>; afternoon?: boolean; monday?: boolean; faceLight?: number; x?: number} = {}) => {
+/** the phone pressed to his ear in the MCU (the portrait faces camera-left, so its visible ear is at its right, about
+ *  (80, 50) local; act3 bridge masCall's construction at this scale): the slab's edge against his cheek, the call's
+ *  green bar lit along its near edge, his hand round its back (fingers along it, the thumb on its near edge), the
+ *  sleeve down out of the frame's foot; the screen's spill a rung up on the cheek beside it */
+const phoneAtEar = (b: Buf, x: number, y: number) => {
+  const ex = x + 80, ey = y + 50;
+  for (let j = -14; j < 22; j++) for (let i = -9; i < -2; i++) { const X = ex + i, Y = ey + j, c = b.get(X, Y); if (isSkin(c) && bayer(X, Y) < 0.5 + i / 18) b.set(X, Y, stepColor(c, 1)); }
+  // the slab: its back to us in the dark room, so a grey body (black would vanish into the room), the monitor's cyan
+  // along its near edge, a lit far edge, the call's green bar on its rim
+  fill(b, ex - 3, ey - 18, 10, 40, PAL.N0); fill(b, ex - 2, ey - 17, 8, 38, PAL.G1); fill(b, ex - 2, ey - 17, 1, 38, PAL.C4);
+  fill(b, ex + 5, ey - 17, 1, 38, PAL.G3); fill(b, ex - 1, ey - 17, 6, 1, PAL.G3); fill(b, ex - 2, ey - 9, 1, 16, PAL.L3);
+  const h = placeHand(POSES.grip([0.1, -1, 0.1], [0.95, 0, 0.3], 'L', 0.55), {s: 2.6, at: [ex + 4, ey + 6], anchor: 'middle', light: 'lobby', cuffRamp: CUFF});
+  sleeve(b, h.cuffEnd, [ex + 30, RH + 40], 9, 13, SLEEVE);
+  drawHand(b, h.hand, h.x, h.y, {map: (c) => (isSkin(c) ? stepColor(c, -1) : c)});
+};
+/** HIS FACE ON THE CALL (8.06; the fixes pass: the cold cyan MCU read as talking to the air, P10): his natural-skin
+ *  portrait keyed one step from the monitor's side, the monitor's cyan only as his rim (12.05's warm rig, at night) */
+export const masMCU = (b: Buf, f: number, st: {mas?: Partial<MasPortraitState>; afternoon?: boolean; monday?: boolean; faceLight?: number; x?: number; call?: boolean} = {}) => {
   b.c.set(mcuPlate(!!st.afternoon).c.subarray(0, 480 * RH));
   const x = st.x ?? 100, y = 22;
   const s: MasPortraitState = {...MAS_PORTRAIT_DEFAULT, look: -1, ...st.mas};
+  if (st.call) { putBustSoft(b, masAfternoonImg({look: s.look, key: 'left', rim: 'on', mouth: s.mouth}), x, y, RH); phoneAtEar(b, x, y); void f; return; }
   if (st.afternoon) { putBustSoft(b, masAfternoonImg({look: s.look, key: 'right', rim: 'dim', mouth: s.mouth}), x, y, RH); void f; return; }
   const im = masPortrait(s);
   const fl = st.faceLight ?? (st.monday ? 1 : 0);
@@ -412,7 +430,7 @@ export const phoneECU = (b: Buf, f: number, st: {mode: 'dark' | 'alyi' | 'compos
       thumb = [P.x + kxy[0] + 2, P.y + kxy[1] + 5];
     } else {
       appChrome(scr, 'post', 84);
-      drawEp2Post(scr, 4, 108, 'masAlyi', {size: 'phone', w: P.w - 8});
+      drawEp2Post(scr, 4, 108, 'masAlyi', {size: 'phone', w: P.w - 8}, 'now');   // just sent: the app's 'now' (the fixes pass: @masa and MAY 14 ran together)
       thumb = [P.x + P.w * 0.75, P.y + P.h - 10];
     }
     const lit = st.lit ?? 3;

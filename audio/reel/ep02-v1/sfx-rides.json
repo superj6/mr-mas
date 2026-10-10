@@ -434,13 +434,11 @@
    "snr_before_db": -0.4,
    "band": "250-1000 Hz",
    "target_db": 6.0,
-   "ride_db": 4.5,
-   "why": "first heard -0.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "ride_db": 5.5,
+   "why": "first heard -0.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB | the fixes pass (2026-10-10): the re-rendered dark-room cue; +1.5 dB body, attack +5.1 (target +6): 4.5 -> 5.5",
    "measured_with_ride": {
     "ride_db": 4.5,
-    "attack_over_local_db": 6.0,
-    "body_db": 4.1,
-    "band": "250-1000 Hz"
+    "note": "the fixes pass, Act Two (2026-10-10)"
    }
   },
   {
@@ -1445,6 +1443,24 @@
     "body_db": 6.1,
     "band": "1000-2000 Hz"
    }
+  },
+  {
+   "seg": "act2",
+   "beat": "8.06",
+   "name": "call_ring",
+   "laid_as": "call_ring",
+   "ride_db": 1.0,
+   "why": "the fixes pass (2026-10-10): with sc 8's new V.O. 5 the re-rendered dark-room cue sits closer under the ring: +1.9 dB body, its attack +5.5 over the local mix (target +6); +1 dB",
+   "target_db": 6.0
+  },
+  {
+   "seg": "act2",
+   "beat": "11.10",
+   "name": "house_lights_up",
+   "laid_as": "house_lights_up",
+   "ride_db": 3.0,
+   "why": "the fixes pass (2026-10-10): sc 11 laid 3 s later on the demo cue: attack +3.2 over the local mix (target +6; was ok before); +3 dB",
+   "target_db": 6.0
   }
  ]
 }

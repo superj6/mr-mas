@@ -84,7 +84,7 @@
      "label": "first",
      "bump": 0,
      "seed": 4205079465,
-     "key": "53631bf05133f4c4",
+     "key": "af75aa8d66dcd5fd",
      "settings": {
       "stability": 0.65,
       "similarity_boost": 0.75,
@@ -94,48 +94,48 @@
      },
      "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
      "measures": {
-      "heard": "One day ahead is enough.",
+      "heard": "The press gets one night with ours first.",
       "asr_mismatch": [],
       "asr_margin": null,
       "names": [],
-      "span_s": 1.84,
-      "plan_len_s": 2.44,
-      "ratio": 0.754,
-      "words": 5,
-      "wpm": 163.0,
+      "span_s": 2.79,
+      "plan_len_s": 3.85,
+      "ratio": 0.725,
+      "words": 8,
+      "wpm": 172.0,
       "longest_gap_s": 0.0,
       "lufs": -18.0,
-      "true_peak": -3.84,
+      "true_peak": -3.3,
       "clipped": 0,
       "raw_tail_cut": false,
-      "f0": 103.2,
-      "f0_range_st": 11.0,
-      "take_floor_dbfs": -63.0,
-      "duration_s": 2.929,
-      "raw_floor_dbfs": -78.8,
-      "raw_speech_to_floor_db": 59.5,
-      "raw_pause_floor_dbfs": -72.6,
-      "raw_pause_sf_db": 53.2,
-      "raw_quiet_frames": 20,
-      "raw_peak_dbfs": -1.75,
+      "f0": 106.7,
+      "f0_range_st": 13.1,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.755,
+      "raw_floor_dbfs": -88.5,
+      "raw_speech_to_floor_db": 69.6,
+      "raw_pause_floor_dbfs": -76.4,
+      "raw_pause_sf_db": 57.6,
+      "raw_quiet_frames": 33,
+      "raw_peak_dbfs": -2.04,
       "raw_clip_runs": 0
      },
      "fail": [],
      "look": [
-      "length 0.75 of the plan",
-      "tempo 163 wpm against his V.O. 110-130"
+      "length 0.72 of the plan",
+      "tempo 172 wpm against his V.O. 110-130"
      ],
-     "sent": "One day ahead is enough.",
+     "sent": "The press gets one night with ours first.",
      "voice": "Jeremy - Warm, Trustworthy, Sincere",
-     "base_key": "53631bf05133f4c4"
+     "base_key": "af75aa8d66dcd5fd"
     }
    ],
    "picked_bump": 0,
    "status": "look",
    "fail": [],
    "look": [
-    "length 0.75 of the plan",
-    "tempo 163 wpm against his V.O. 110-130"
+    "length 0.72 of the plan",
+    "tempo 172 wpm against his V.O. 110-130"
    ],
    "superseded": [
     {
@@ -185,9 +185,104 @@
      ],
      "sent": "One day ahead is enough.",
      "base_key": "3d756ef9edb6cb05"
+    },
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 4205079465,
+     "key": "53631bf05133f4c4",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+     "measures": {
+      "heard": "One day ahead is enough.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.84,
+      "plan_len_s": 2.44,
+      "ratio": 0.754,
+      "words": 5,
+      "wpm": 163.0,
+      "longest_gap_s": 0.0,
+      "lufs": -18.0,
+      "true_peak": -3.84,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 103.2,
+      "f0_range_st": 11.0,
+      "take_floor_dbfs": -63.0,
+      "duration_s": 2.929,
+      "raw_floor_dbfs": -78.8,
+      "raw_speech_to_floor_db": 59.5,
+      "raw_pause_floor_dbfs": -72.6,
+      "raw_pause_sf_db": 53.2,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -1.75,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.75 of the plan",
+      "tempo 163 wpm against his V.O. 110-130"
+     ],
+     "sent": "One day ahead is enough.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "53631bf05133f4c4"
+    },
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 4205079465,
+     "key": "134b8a2b0ccc0a48",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Monday, so their Tuesday starts with our news.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.96,
+      "plan_len_s": 3.85,
+      "ratio": 1.029,
+      "words": 8,
+      "wpm": 121.2,
+      "longest_gap_s": 0.3,
+      "lufs": -18.0,
+      "true_peak": -3.85,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 109.0,
+      "f0_range_st": 10.5,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 4.835,
+      "raw_floor_dbfs": -85.2,
+      "raw_speech_to_floor_db": 65.0,
+      "raw_pause_floor_dbfs": -77.7,
+      "raw_pause_sf_db": 57.5,
+      "raw_quiet_frames": 43,
+      "raw_peak_dbfs": -1.37,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "Monday, so their tuesday starts with our news.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "134b8a2b0ccc0a48"
     }
    ],
-   "sent": "One day ahead is enough.",
+   "sent": "The press gets one night with ours first.",
    "settings": {
     "stability": 0.65,
     "similarity_boost": 0.75,
@@ -197,8 +292,8 @@
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
-    "53631bf05133f4c4",
-    2.929
+    "af75aa8d66dcd5fd",
+    3.755
    ]
   },
   "e2-a2-0001": {
@@ -3496,6 +3591,58 @@
      "label": "first",
      "bump": 0,
      "seed": 1126244905,
+     "key": "c6614fddf105cfc8",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
+     "measures": {
+      "heard": "Her.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.34,
+      "plan_len_s": 0.42,
+      "ratio": 0.81,
+      "words": 1,
+      "wpm": 176.5,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.41,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 172.9,
+      "f0_range_st": 10.2,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 1.722,
+      "raw_floor_dbfs": -62.6,
+      "raw_speech_to_floor_db": 49.1,
+      "raw_pause_floor_dbfs": -58.1,
+      "raw_pause_sf_db": 44.7,
+      "raw_quiet_frames": 36,
+      "raw_peak_dbfs": -4.01,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "'Her.'.",
+     "voice": "Ryan - Articulate, Friendly and Youthful",
+     "base_key": "c6614fddf105cfc8"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1126244905,
      "key": "51d06e5d9c9ce0b4",
      "settings": {
       "stability": 0.6,
@@ -3648,14 +3795,7 @@
      "why": "asr: 'and' heard 'in' (forced margin -8.9)"
     }
    ],
-   "picked_bump": 2000,
-   "status": "look",
-   "fail": [],
-   "look": [
-    "floor 43 dB under the speech (p5; house bed depth 45)"
-   ],
-   "superseded": [],
-   "sent": "'Her.' Like the movie. The guy and his computer.",
+   "sent": "'Her.'.",
    "settings": {
     "stability": 0.6,
     "similarity_boost": 0.75,
@@ -3665,8 +3805,8 @@
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
-    "2bffad2b471e7433",
-    4.276
+    "c6614fddf105cfc8",
+    1.722
    ]
   },
   "e2-vo-06": {
@@ -3674,6 +3814,62 @@
    "who": "mas-manalt",
    "take": "e2-vo-06__mas-manalt-C",
    "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 370459737,
+     "key": "68423ccfc76cfb0f",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Everyone gets it free. That's what makes the phone deal stick.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.05,
+      "plan_len_s": 5.38,
+      "ratio": 0.939,
+      "words": 11,
+      "wpm": 130.7,
+      "longest_gap_s": 0.68,
+      "lufs": -18.09,
+      "true_peak": -3.89,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 119.4,
+      "f0_range_st": 14.2,
+      "take_floor_dbfs": -62.6,
+      "duration_s": 5.93,
+      "raw_floor_dbfs": -82.7,
+      "raw_speech_to_floor_db": 63.2,
+      "raw_pause_floor_dbfs": -77.2,
+      "raw_pause_sf_db": 57.7,
+      "raw_quiet_frames": 64,
+      "raw_peak_dbfs": -2.65,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 131 wpm against his V.O. 110-130"
+     ],
+     "sent": "Everyone gets it free. That's what makes the phone deal stick.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "68423ccfc76cfb0f"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 131 wpm against his V.O. 110-130"
+   ],
+   "superseded": [
     {
      "label": "the take",
      "bump": 0,
@@ -3720,23 +3916,18 @@
      "base_key": "c91ce6c1ccd42e50"
     }
    ],
-   "picked_bump": 0,
-   "status": "pass",
-   "fail": [],
-   "look": [],
-   "superseded": [],
-   "sent": "I came back.",
+   "sent": "Everyone gets it free. That's what makes the phone deal stick.",
    "settings": {
     "stability": 0.65,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.85
+    "speed": 0.75
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-    "c91ce6c1ccd42e50",
-    2.035
+    "68423ccfc76cfb0f",
+    5.93
    ]
   },
   "e2-a2-0030": {
@@ -3797,5 +3988,5 @@
    "superseded": []
   }
  },
- "updated": "2026-10-09 05:24:38"
+ "updated": "2026-10-10 14:56:02"
 }

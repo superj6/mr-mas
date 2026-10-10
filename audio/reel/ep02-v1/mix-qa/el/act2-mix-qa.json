@@ -16,7 +16,15 @@
   "treat": {
    "os": 1,
    "offmic": 2
-  }
+  },
+  "tail_ducks": [
+   {
+    "line": "e2-a2-0027",
+    "under": "e2-a2-0028",
+    "db": -6.0,
+    "from_s": 170.155
+   }
+  ]
  },
  "rooms": {
   "stem": "audio/reel/ep02-v1/stems/el/act2-room.flac",
@@ -36,32 +44,32 @@
    "seconds": 3.0,
    "crossfade": "full from 0 s, out (equal power) over 2.5 s from this score's entry at 0.01 s"
   },
-  "lufs_as_delivered": -20.44,
-  "lufs_after_gain": -20.44,
+  "lufs_as_delivered": -20.49,
+  "lufs_after_gain": -20.49,
   "duck": {
    "by_mood_db": [
-    [
-     "E02-06 DARK ROOM, SPRING",
-     7
-    ],
     [
      "E02-06",
      7
     ],
     [
-     "E02-07 ONE WORD",
-     8
+     "E02-06 DARK ROOM, SPRING",
+     7
     ],
     [
      "E02-07",
+     8
+    ],
+    [
+     "E02-07 ONE WORD",
      8
     ]
    ],
    "cue_sheet_overrides": [
     [
-     43.0,
-     94.75,
-     5.0
+     41.0,
+     97.75,
+     6.0
     ]
    ],
    "posts_dip_db": -3.0,
@@ -69,8 +77,8 @@
   },
   "designed_silences": [
    [
-    140.402,
-    140.7,
+    143.288,
+    143.586,
     "the tear's light, a beat (10.07 -> 11.01): THE PLAN's tape-stop reaches nothing a quarter second before the demo's push (the plan: \"a tape-stop into the demo cue\"); the blueprint has no room bed, the stems put a faint room tone under it"
    ],
    [
@@ -91,8 +99,8 @@
    },
    {
     "beat": "11.11",
-    "from": 211.13,
-    "to": 212.73,
+    "from": 213.88,
+    "to": 215.48,
     "db": -4.0,
     "why": "S11: h \u00b7 e \u00b7 r typed in the wings (ECU), the taps over the pad"
    },
@@ -115,16 +123,16 @@
  },
  "measured": {
   "lufs_i": -16.01,
-  "true_peak_dbtp": -1.37,
+  "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 7.0,
-  "gain_db": 2.11,
+  "lra_lu": 7.1,
+  "gain_db": 2.03,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.466,
-  "dialogue_lufs": -14.29,
-  "score_lufs_after_duck": -20.86,
-  "score_rms_under_speech_dbfs": -27.6,
-  "score_rms_between_speech_dbfs": -20.7,
+  "limiter_active_s": 1.254,
+  "dialogue_lufs": -14.32,
+  "score_lufs_after_duck": -21.02,
+  "score_rms_under_speech_dbfs": -27.9,
+  "score_rms_between_speech_dbfs": -20.8,
   "score_runs": {
    "count": 1,
    "shortest_s": 279.0,
@@ -135,59 +143,65 @@
     ]
    ]
   },
-  "rooms_lufs": -35.88,
-  "sfx_lufs": -31.03,
+  "rooms_lufs": -36.02,
+  "sfx_lufs": -31.1,
   "holes_under_-42dBFS_0.3s": [],
-  "holes_mono_downmix": [],
+  "holes_mono_downmix": [
+   {
+    "at": 143.3,
+    "s": 0.3,
+    "what": "designed: a black (10.07)"
+   }
+  ],
   "holes_without_score": [
    {
-    "at": 95.15,
-    "s": 0.6,
+    "at": 98.1,
+    "s": 0.65,
     "what": "designed: a black (10.01)"
    },
    {
-    "at": 96.0,
+    "at": 99.0,
     "s": 1.0,
     "what": "designed: a black (10.01)"
    },
    {
-    "at": 97.6,
+    "at": 100.6,
     "s": 0.4,
     "what": "designed: a black (10.01)"
    },
    {
-    "at": 100.95,
-    "s": 1.05,
+    "at": 103.95,
+    "s": 1.1,
     "what": "designed: a black (10.01)"
    },
    {
-    "at": 109.15,
+    "at": 112.15,
     "s": 2.65,
     "what": "designed: a black (10.02)"
    },
    {
-    "at": 116.4,
+    "at": 119.4,
     "s": 1.8,
     "what": "designed: a black (10.03)"
    },
    {
-    "at": 121.5,
+    "at": 124.5,
     "s": 1.45,
     "what": "designed: a black (10.04)"
    },
    {
-    "at": 126.65,
+    "at": 129.65,
     "s": 2.25,
     "what": "designed: a black (10.05)"
    },
    {
-    "at": 133.1,
+    "at": 136.1,
     "s": 6.1,
     "what": "designed: a black (10.06)"
    },
    {
-    "at": 139.7,
-    "s": 0.9,
+    "at": 142.7,
+    "s": 0.85,
     "what": "designed: a black (10.07)"
    },
    {
@@ -200,16 +214,17 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 21,
-   "rising": 18,
-   "rising_at_a_word": 12,
+   "count": 23,
+   "rising": 20,
+   "rising_at_a_word": 13,
    "rising_at_an_sfx": 0,
    "rising_other": [
-    94.75,
-    97.85,
-    101.0,
-    109.75,
-    140.7,
+    72.15,
+    97.75,
+    100.85,
+    104.0,
+    112.75,
+    143.6,
     278.35
    ],
    "falling": 3
@@ -219,10 +234,10 @@
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.12,
-  "to_gain_db": 2.11,
+  "to_gain_db": 2.03,
   "ramp_s": 2.0,
   "after": "act1"
  },
- "built": "2026-10-10 12:59:49",
+ "built": "2026-10-10 15:49:42",
  "heard": "nothing here has been listened to; every number is measured"
 }

@@ -8,6 +8,7 @@
 > - **Against the proposal's runtime table** (23:20 after the script review; its own margin is "±0:40 until the takes"): 26 s shorter, all of it dead air (§1).
 > - **Every lock check the tools have was run (§5): 0 failures.** That includes the checks the lock pass and the lock QA added where the tools had none (§3.2, §3.5). What is left is listed as LOOK, each with its reason.
 > - **The fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md)) rebuilt Act One's lock for text only, no timing:** 4.18's `…Yup` (no period, as the post has it), 4A.04's plates (only `MAS MANALT · BOARD` is a read text; the three new directors' plates are soft), 4A.01's caption and the act's cast without `omis`. The frames, the takes and the score's audio are unchanged; the score's cue sheet was re-laid for the new content hash [M].
+> - **The fixes pass rebuilt Act Two's lock (2026-10-10, [fixes-v1.md](fixes-v1.md), Act Two), its 6,696 frames held:** V.O. 6 moved from 12.07 (cut there; the beat keeps its 10.95 s) to a new shot in the wings, 9.04b; V.O. 5's and the engineer's 11.15 lines re-recorded; 12.03 carries the rail `SEP 2023` and a far clink; 11.01's swing at 0.4 s; sc 8 0:42, sc 9 0:56, sc 11 1:35 (`SCENE_ADJUST_FX`). `lock_report.py`'s V.O.-6 floor mark is now two: "sc 12 plays without V.O. (W8)" and "his post held for its read floor". The chapter is "Act Two · stage right".
 > - **Nothing was watched or heard (R8).** Every number here is measured from the files [M]; every call is marked [J]. The ear list ([takes-qa.md](takes-qa.md) §6) gains one item, V.O. 9's count.
 
 **Contents:** [1. Frames and runtime](#1-frames-and-runtime) · [2. Scenes: arrival and aftermath](#2-scenes-arrival-and-aftermath) · [3. Where the lock differs from the plan, and why](#3-where-the-lock-differs-from-the-plan-and-why) · [4. The plan's marks, measured in the lock](#4-the-plans-marks-measured-in-the-lock) · [5. Every lock check](#5-every-lock-check) · [6. For the next passes](#6-for-the-next-passes) · [7. How to rebuild](#7-how-to-rebuild) · [8. Files](#8-files) · [9. LEARNINGS rules checked](#9-learnings-rules-checked)
@@ -23,13 +24,13 @@
 |---|---|---|---|---|---|---|---|---|
 | Cold open | **1,320** | 0:55.00 | 00:00:00 → 00:55:00 | 13 | 6 (0) | 1 | 0:55.00 | 8 ok |
 | Act One · the séance | **8,736** | 6:04.00 | 01:27:00 → 07:31:00 | 62 | 59 (3) | 5 | 6:04.00 | 9 ok |
-| Act Two · her | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 44 | 41 (3) | 5 | 4:39.00 | 8 ok |
+| Act Two · stage right | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 45 | 41 (3) | 5 | 4:39.00 | 9 ok |
 | Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 28 (4) | 4 | 5:20.00 | 8 ok |
 | Act Four · as a guest | **7,656** | 5:19.00 | 17:30:00 → 22:49:00 | 57 | 38 (3) | 4 | 5:19.00 | 8 ok |
 | Tag · august | **888** | 0:37.00 | 22:49:00 → 23:26:00 | 9 | 1 (1) | 1 | 0:37.00 | 8 ok |
-| **Story** | **32,976** | **22:54.00** | | 243 | 173 (14) | 20 | | |
+| **Story** | **32,976** | **22:54.00** | | 244 | 173 (14) | 20 | | |
 
-The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.wav 01:25:00 · Act One · the séance 01:27:00 · Act Two · her 07:31:00 · Act Three · leave them up 12:10:00 · Act Four · as a guest 17:30:00 · Tag · august 22:49:00 · the hum under black 23:26:00 · Outro · credits 23:26:18 · end 23:36:21 (**34,005 frames, 23:36.88**; the intro 720 f, the card 48 f, the hum 18 f, the outro 243 f at its planned length).
+The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.wav 01:25:00 · Act One · the séance 01:27:00 · Act Two · stage right 07:31:00 · Act Three · leave them up 12:10:00 · Act Four · as a guest 17:30:00 · Tag · august 22:49:00 · the hum under black 23:26:00 · Outro · credits 23:26:18 · end 23:36:21 (**34,005 frames, 23:36.88**; the intro 720 f, the card 48 f, the hum 18 f, the outro 243 f at its planned length).
 <!-- END generated:frames -->
 
 **Against the plans and the proposal [M]:**
@@ -65,11 +66,11 @@ The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.
 | 4B The booking | 216 | 9.00 | 05:13:00 → 05:22:00 | 0:09.00 · same | ×0.991 | 1.00 | 2.25 | 4B.01: 1.0 s, the phone's glow on the nameplate (continuous from 4A) |
 | 6 Chapter 1 of 6 | 1,944 | 81.00 | 05:22:00 → 06:43:00 | 1:21.00 · same | ×1.532 | 1.38 | 3.67 | 6.01: 1.4 s, enter late on the locked two-shot, the sting ending |
 | 7 A tenant | 1,152 | 48.00 | 06:43:00 → 07:31:00 | 0:48.00 · same | ×1.646 | 1.50 | 6.25 (act-out 1) | 7.01: 1.5 s, the split already opening, his voice on the phone leading us down; 7.08: 1.5 s on Mas at his monitor, then the jangle |
-| 8 The dark room | 1,056 | 44.00 | 07:31:00 → 08:15:00 | 0:44.00 · same | ×1.681 | 14.08 (31.46) | 7.54 | 8.01: 2.0 s, the dark room with the monitor's glow already on his face; 8.07: the Monday square lit; the June invite under it |
-| 9 Backstage | 1,224 | 51.00 | 08:15:00 → 09:06:00 | 0:51.00 · same | ×1.609 | 2.38 | 1.58 | 9.01: 2.0 s, the wings in work light, road cases and cables, the count from the stage already going; 9.06: the fifth square holding its Hey. a beat longer |
-| 10 THE PLAN: OMNI | 1,104 | 46.00 | 09:06:00 → 09:52:00 | 0:46.00 · same | ×1.272 | 2.00 | 7.88 | 10.01: 1.0 s, the panel's last square becomes the grid's first cell, the waltz on its downbeat; 10.07: the tear's light, a beat |
-| 11 "her" | 2,352 | 98.00 | 09:52:00 → 11:30:00 | 1:38.00 · same | ×1.413 | 2.00 | 3.54 | 11.01: 2.0 s, the stage wide as Rima takes her mark and the spot finds her; 11.16: the heads turning to the wings; the blimp over the emptying house |
-| 12 The empty seat | 960 | 40.00 | 11:30:00 → 12:10:00 | 0:40.00 · same | ×1.128 | 35.54 | 3.25 (the midpoint act-out) | 12.01: 2.0 s, the stage as the house lights come up full, the blimp gone, the murmur thinning; 12.05: 1.5 s, the dark room with the monitor's news already playing; 12.08: his face, 2–3 s, then the stop |
+| 8 The dark room | 1,008 | 42.00 | 07:31:00 → 08:13:00 | 0:42.00 · 0:44.00 | ×1.422 | 12.71 (30.29) | 6.71 | 8.01: 2.0 s, the dark room with the monitor's glow already on his face; 8.07: the Monday square lit; the June invite under it |
+| 9 Backstage | 1,344 | 56.00 | 08:13:00 → 09:09:00 | 0:56.00 · 0:51.00 | ×1.29 | 2.38 | 1.58 | 9.01: 2.0 s, the wings in work light, road cases and cables, the count from the stage already going; 9.06: the fifth square holding its Hey. a beat longer |
+| 10 THE PLAN: OMNI | 1,104 | 46.00 | 09:09:00 → 09:55:00 | 0:46.00 · same | ×1.272 | 2.00 | 7.88 | 10.01: 1.0 s, the panel's last square becomes the grid's first cell, the waltz on its downbeat; 10.07: the tear's light, a beat |
+| 11 "her" | 2,280 | 95.00 | 09:55:00 → 11:30:00 | 1:35.00 · 1:38.00 | ×1.363 | 2.00 | 3.54 | 11.01: 2.0 s, the stage wide as Rima takes her mark and the spot finds her; 11.16: the heads turning to the wings; the blimp over the emptying house |
+| 12 The empty seat | 960 | 40.00 | 11:30:00 → 12:10:00 | 0:40.00 · same | ×1.128 | — | — | 12.01: 2.0 s, the stage as the house lights come up full, the blimp gone, the murmur thinning; 12.05: 1.5 s, the dark room with the monitor's news already playing; 12.08: his face, 2–3 s, then the stop |
 | 13 Leave them up | 744 | 31.00 | 12:10:00 → 12:41:00 | 0:31.00 · same | ×1.363 | 2.38 | 4.83 | 13.01: 2.0 s, the staffers already at the pillar, one peeling, one smoothing, the TV murmuring |
 | 14 The open floor | 1,416 | 59.00 | 12:41:00 → 13:40:00 | 0:59.00 · same | ×1.631 | 29.29 | 19.79 | 14.01: 2.5 s, the spread with the band lit and the heatsinks' polish catching the light; 14.12: the plate in the box; then his hand on Alyi's door as it pivots |
 | 15 Where u at? (with F2.2) | 2,400 | 100.00 | 13:40:00 → 15:20:00 | 1:40.00 · same | ×1.342 | 6.88 | 10.88 | 15.01: 2.0 s, the empty office as the carried hum stops; 15.19: the empty room 1 s after the door shuts; then the stairs and the buzz |
@@ -241,7 +242,7 @@ Every gap the plan marks, measured in the pixel lock on the segment clock (line 
 | e2-a4-0006 | e2-a4-0007 | quick | 0.27 | in the mark | script 18.08-18.10: quick (Terb) |
 | e2-a4-0007 | e2-a4-0008 | normal | 0.60 | in the mark | script 18.08-18.10: Mas at 0.45-0.6 s |
 
-Other replies across a cut inside a scene under 2 s that neither the list nor the plan marks: 7, each not an exchange: 4.04 -> 4.05 1.80 s (a new exchange: a staffer's eyes go to the empty chair first, and Gerg answers her look); 4.05 -> 4.06 1.17 s (not a reply: Mas puts the séance's next question to the table); 4.18 -> 4.19 1.11 s (not a reply to the ghost: Mas asks the board the question he wants answered (the concept's door)); 4.24 -> 4.25 0.92 s (not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)); 9.03 -> 9.04 1.45 s (a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer); 11.06 -> 11.07 1.12 s (the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks); 15.06 -> 15.07 1.59 s (not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07).
+Other replies across a cut inside a scene under 2 s that neither the list nor the plan marks: 8, each not an exchange: 4.04 -> 4.05 1.80 s (a new exchange: a staffer's eyes go to the empty chair first, and Gerg answers her look); 4.05 -> 4.06 1.17 s (not a reply: Mas puts the séance's next question to the table); 4.18 -> 4.19 1.11 s (not a reply to the ghost: Mas asks the board the question he wants answered (the concept's door)); 4.24 -> 4.25 0.92 s (not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)); 9.03 -> 9.04 1.17 s (a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer); 9.05 -> 9.06 1.68 s (not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since the fixes pass gave sc 9's air to V.O. 6)); 11.06 -> 11.07 1.10 s (the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks); 15.06 -> 15.07 1.59 s (not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07).
 
 Overlaps (a line starting before the one before it ends): e2-a2-0028 over e2-a2-0027 by 0.55 s (act2).
 <!-- END generated:tempo -->
@@ -263,6 +264,7 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 <!-- BEGIN generated:holds -->
 | Beat | Seconds | Events in it | Longest still stretch (s) | Frame |
 |---|---|---|---|---|
+| 12.07 | 10.95 | 6 | 7.75 | ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at "…an |
 | 15.10 | 8.90 | 6 | 7.20 | 2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; |
 | 20.02 | 7.60 | 4 | 7.20 | SPLIT · RIGHT: his lamp clicks on; his post goes up, one crop, with its condition |
 | 19.07 | 9.40 | 5 | 6.60 | WIDE · ELPPA's campus: the crowd's backs and the giant screen; at the crowd's edge Mas fin |
@@ -276,7 +278,6 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 | 4.29 | 4.50 | 0 | 4.50 | WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds |
 | 15.08 | 6.44 | 5 | 4.29 | ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the  |
 | 17.18 | 7.00 | 3 | 4.28 | WIDE · it rains letterhead; the receipt's ink runs in the rain |
-| 8.01 | 8.07 | 6 | 4.21 | OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides do |
 | 4.32 | 4.20 | 0 | 4.20 | 2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back |
 | 15.15 | 4.83 | 2 | 4.03 | WIDE · the effigy catches |
 | 13.03 | 6.40 | 2 | 4.00 | ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down |
@@ -284,7 +285,7 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 | 18.05 | 4.20 | 4 | 3.90 | FULL FRAME · under it, the board's same-day reply in its own statement card |
 | 20.10 | 7.00 | 10 | 3.90 | ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it ov |
 
-73 wordless beats run over 4 s; the 20 with the longest stretch with no sound, text or line event are listed (all of them: assembly/lock-v1-checks.json, `holds`).
+74 wordless beats run over 4 s; the 20 with the longest stretch with no sound, text or line event are listed (all of them: assembly/lock-v1-checks.json, `holds`).
 <!-- END generated:holds -->
 
 No stretch reaches P4's "about 8 s with nothing changing". The longest (7.2 s) are post read holds (§3.4).
@@ -298,13 +299,14 @@ Each fix of §3.5 that a rebuild could undo has a check in `lock_report.py` (`MA
 |---|---|---|
 | the cheer cuts "And profit—" | ok | crowd_cheer at 119.708 s; her line 119.568-120.338 s, "profit" from 119.708 s |
 | its cause comes first | ok | the stream's announcement up at 119.333 s, the cheer at 119.708 s |
-| "Thanks." over "favorite" | ok | "Thanks." at 167.257 s; "favorite" 167.000-167.333 s; CHATGTP's line ends 167.807 s |
+| "Thanks." over "favorite" | ok | "Thanks." at 170.195 s; "favorite" 169.917-170.250 s; CHATGTP's line ends 170.745 s |
 | the subtitles of the two cut-offs | ok | e2-a2-0027 ['Great question! Of course! Honestly, short answers are one of my favorite—', '—things.']; e2-a4-0021 ['And profit—'] |
-| stamp 2. on "today" | ok | the stamp at 123.917 s, "today" from 123.917 s |
-| stamp 3. on "free" | ok | the stamp at 125.083 s, "free" from 125.083 s |
-| V.O. 6 after the post's read floor | ok | the post up at 265.625 s, "i came back." at 274.550 s: 8.93 s against 8.85 |
+| stamp 2. on "today" | ok | the stamp at 126.917 s, "today" from 126.917 s |
+| stamp 3. on "free" | ok | the stamp at 128.083 s, "free" from 128.083 s |
+| sc 12 plays without V.O. (W8) | ok | V.O. in sc 12: none |
+| his post held for its read floor | ok | the post up 265.625-276.167 s against a floor of 8.85 s |
 | 4B: the click a beat after his thought, 1.5 s after it | ok | V.O. 3 ends 232.720 s, the click 233.083 s, the scene ends 235.000 s |
-| the engineer's laugh stops on "laugh" | ok | engineer_laugh_take 60.042 s + 3.74 s; Gerg's "laugh" ends 63.792 s |
+| the engineer's laugh stops on "laugh" | ok | engineer_laugh_take 57.917 s + 3.37 s; Gerg's "laugh" ends 61.292 s |
 <!-- END generated:marks -->
 
 ---
@@ -402,7 +404,7 @@ One act alone: `ops/rebuild-act.sh --ep 2 <act> --only lock`. All of it took und
 - **W18** [M]: 74 of 74 marked gaps are in their marks, and the 83 (with the 9 free ones) as planned to a frame. The script's and the proposal's own pace list, measured in the lock: 11 of 13 in their marks, and 2 GUIDE breaks, each logged with its line (Gerg after the THUD; "present." after the table's two-beat hold). Mas's quick replies come at 0.42–0.47 s, the others' at 0.20–0.32 s. There is one line overlap, the motivated one, and the cheer is the episode's second cut-off.
 - **P3** [M, J]: arrivals and aftermaths per scene (§2). Three arrivals are under 2 s by the proposal's agreed design, kept and listed (GUIDE: broken on purpose by the proposal, with its reasons). Every talk scene now holds 1.5 s or more after its last word (4B: 2.25 s).
 - **P4** [M]: holds over 4 s with their longest still stretch. None reaches 8 s; the 8.01 and 19.06 WARNs were looked at.
-- **P15** [M]: sc 14's sentence line now meets its floor. 14.01's verb band is the scene's menu (§3.3). V.O. 6 now comes after his May 14 post's floor (172 characters, 8.85 s; the voice at 8.93 s).
+- **P15** [M]: sc 14's sentence line now meets its floor. 14.01's verb band is the scene's menu (§3.3). V.O. 6 now comes after his May 14 post's floor (172 characters, 8.85 s; the voice at 8.93 s). Since the fixes pass (2026-10-10) there is no V.O. there: the post holds 10.5 s in silence.
 - **R4, R5** [M, J]: the time came out of dead air: the lock pass's after (and at) the midpoint, the lock QA's from stretched replies, in whole seconds per scene; nothing on the keep list moved (the cheer's cut-off, a keep-list beat, is now in the lock); 4B's second came from 4A's own tail, inside Act One.
 - **R2** [M]: every change went back into the proposal (D-88 to D-96, the headings, its runtime section), and the script's TEMPO lines, §3 and header now match the lock.
 - **R1** [M]: no Ep1 file touched (`git status` shows no Ep1 path). Ep1's `build_timeline.py`, `lock.py` and `el_takes.py` were only read; no shared code changed, so the smoke test isn't needed.

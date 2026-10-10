@@ -129,6 +129,8 @@ Every take at its line's time, dual mono at −3 dB; the V.O. +2.0 dB (`VO_GAIN_
 | the monitor (`LINE_DEVICE`) | 5 (9.06: VOICE 1–4 and CHATGTP's "Hey.") | the wings' monitor speaker (180 Hz–6.5 kHz) and its desk's reflections |
 | `V.O.` | 14 | dry and close, +2 dB |
 
+**The designed cut-in, 11.04 (the fixes pass, 2026-10-10; `mix_episode.py LINE_TAIL_DUCK`):** CHATGTP's "…one of my favorite things." is ducked **6 dB** from 0.04 s before the ENGINEER's "Thanks." to its own end (a 30 ms ramp), so the cut-in reads over the line it cuts; CHATGTP still finishes, a step under him. Both play through the house PA; the episode review measured "Thanks." only +4.5 dB over everything at its onset. Measured on the premix's buses, 1–4 kHz, the line's voiced 20 ms frames, against everything else (CHATGTP's tail, the score, the room) [M]: **with the duck p10 +4.2 dB, median +5.1, the first frame +9.2, 0 % of frames under +3 dB; without it p10 +0.5, median +4.0, 18 % under +3** (at 8 dB the p10 is only +4.4: the score and the PA's hall carry the rest). The sound audit's pocket check masks with the beds, not the dialogue, so this table is the record (fixes-v1.md, Act Two).
+
 Each line's loudness as laid, after its chain and the segment's master gain [M]:
 
 | Tag | Lines | Median LUFS | Range |

@@ -1,4 +1,4 @@
-// MR. MAS — Ep2 v1 · act2 · scene 9: BACKSTAGE (MAY 13, 2024; the demo stage's wings, morning). 6 shots, 1224 f on the
+// MR. MAS — Ep2 v1 · act2 · scene 9: BACKSTAGE (MAY 13, 2024; the demo stage's wings, morning). 7 shots (6 before the fixes pass), 1224 f on the
 // v1 EL lock. The shots pass, 2026-10-09; the record is shots-act2.md. The staging is proposal.md sc 9 / script-v1:
 //   ARRIVE   9.01 the wings in work light (cut on the match: 8.07's lit Monday square -> the work light, the same
 //            place in frame), the count already going (the mix's), 2.4 s before Rima's first line: Mas in the left third
@@ -6,13 +6,14 @@
 //            CHATGTP a plain bubble on the monitor screen-right, Gerg typing behind his road case in the foreground
 //   TURN     9.02 the engineer rehearses to her (his bust, lip-synced) -> the monitor answers yes!! before he's asked ·
 //            9.03 the old transcript drops the [laughter] tag off its foot -> Gerg in the foreground, the engineer's
-//            laugh stopping on "laugh." · 9.04 the two-shot, no cut-ins (both lip-synced)
+//            laugh stopping on "laugh." · 9.04 the two-shot, no cut-ins (both lip-synced) · 9.04b (the fixes pass) his
+//            face alone in the wings, V.O. 6 (the launch's plan: the free tier makes the phone deal stick)
 //   AFTER    9.05 Mas walks off frame-left (to stage right); the camera pans with Rima to the monitor, the engineer
 //            following (room mouths) · 9.06 she taps the monitor (no cursor: her fingertip), the VOICE panel, each slot
 //            says hello under her fingertip, the fifth (Hey.) holds; the panel unfolds past the bezel onto the floor and
 //            the floor is a drafting grid: its last square is 10.01's first cell
 import {defineScene, layouts, mouth, roomMouth, mk} from '../../kit';
-import {wingsWide, engineerMedium, wingsMonitor, wings2S, gergFore} from '../sets/wings';
+import {wingsWide, engineerMedium, wingsMonitor, wings2S, gergFore, masWingsMCU} from '../sets/wings';
 import {rimaWalkAt} from '../../../../../shared/pixel/cast/rima-stand';
 import {glide} from '../sets/common';
 
@@ -57,6 +58,10 @@ L.add('9.04', {
   st: 'act2/sets/wings wings2S ([2S] the wings soft behind them: Mas in the left third (Ep1\'s approved portrait in the work light, flipped to face her) and Rima (Ep1 rima-speak), no cut-ins; both lip-synced; her "It is. Enjoy the view." pleasant, level brows, not a flicker)',
   face: {MAS: 'lip', RIMA: 'lip'},
   draw: (fb, k, sh, f) => { wings2S(fb, f, {mas: mouth(sh, k, 'MAS'), rima: mouth(sh, k, 'RIMA')}); },
+});
+L.add('9.04b', {
+  st: 'act2/sets/wings masWingsMCU ([MCU] the fixes pass: Mas alone in the wings after "Enjoy the view.", his approved portrait in the work light, turned to the stage (camera-right), the stage side keyed one step (P10); the wings soft behind him; still, lips at rest: V.O. 6 typed by the host)',
+  draw: (fb, k, sh, f) => { masWingsMCU(fb, f); void k; void sh; },
 });
 L.add('9.05', {
   st: 'act2/sets/wings wingsWide (the walk-and-talk: Mas walks off frame-left to stage right (mas2\'s walk, flipped); a whole-pixel pan with Rima as she crosses the wings to the monitor (rima-stand\'s walk), her hard spot keeping up with her; the engineer following (his room walk); room mouths on both lines)',

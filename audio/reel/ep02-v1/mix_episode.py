@@ -113,6 +113,14 @@ ROOM_DEVICE = {'demo_house': 'stage'}
 LINE_DEVICE = {'e2-a2-0012': 'monitor', 'e2-a2-0013': 'monitor', 'e2-a2-0014': 'monitor', 'e2-a2-0015': 'monitor',
                'e2-a2-0016': 'monitor'}
 NO_SPACE = {'black', 'void', 'none', '', 'blueprint'}   # rooms with no acoustic space (an `os` line there stays dry)
+# line id -> (the line that cuts in over its tail, dB, why): the tail of a line ducked from just before the other comes
+# in to its own end (a 30 ms ramp), so a designed cut-in reads over the line it cuts (the fixes pass, 2026-10-10)
+LINE_TAIL_DUCK = {
+    'e2-a2-0027': ('e2-a2-0028', -6.0, "11.04: the ENGINEER's \"Thanks.\" comes in over CHATGTP's \"...favorite things.\" "
+                                       "and both play through the house PA; the episode review measured \"Thanks.\" "
+                                       "only +4.5 dB over everything at its onset (10th percentile -0.1 dB, 22 % of its "
+                                       "frames under +3 dB): the joke needs it heard, and CHATGTP's tail finishes anyway"),
+}
 
 
 def db(x):
@@ -561,6 +569,19 @@ def dialogue(g, variant, qa):
                 continue
             x, gain = line_audio(l, b.get('room'), variant, info)
             on = s0 + l['t']
+            if l['id'] in LINE_TAIL_DUCK:              # a designed cut-in over this line's tail
+                oid, ddb, _ = LINE_TAIL_DUCK[l['id']]
+                other = next((o for o in b['lines'] if o['id'] == oid), None)
+                if other is not None:
+                    k0 = int((s0 + other['t'] - 0.04 - (on - l.get('in', 0))) * SR)
+                    if 0 < k0 < len(x):
+                        ramp = np.ones(len(x))
+                        kr = min(len(x) - k0, int(0.03 * SR))
+                        ramp[k0:k0 + kr] = np.linspace(1.0, float(db(ddb)), kr)
+                        ramp[k0 + kr:] = float(db(ddb))
+                        x = x * ramp
+                        info.setdefault('tail_ducks', []).append(dict(line=l['id'], under=oid, db=ddb,
+                                                                      from_s=round(s0 + other['t'] - 0.04, 3)))
             y = (np.stack([x, x], 1) * 0.7071 * db(gain)).astype('float32')
             S.add(bus, y, on - l.get('in', 0))
             speech.append((on, on + l['dur']))

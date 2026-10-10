@@ -6,8 +6,8 @@
 //   MOVES    8.02 one whole-pixel scroll to the news site (the headline in its own UI; the still plays, the host turns to
 //            the lens) · 8.03 V.O. 4 over the lineup · 8.04 his calendar: his fingertip drags his block onto MON 13
 //            (Elgoog already on TUE 14), it snaps in · 8.05 the lit square in his eyes, V.O. 5 · 8.06 the phone face up
-//            rings (ELPPA: no face, no name), he taps Answer; his one sentence of terms on his face (lip-synced); …,
-//            CONFIRMED
+//            rings (ELPPA: no face, no name), he taps Answer; his one sentence of terms on his face, the phone at his ear
+//            (lip-synced; the fixes pass: a step warmer); back on the desk: …, CONFIRMED
 //   AFTER    8.07 the invite drops under the Monday square, his fingertip on Accept; the Monday square lit, the June
 //            invite under it; its glow swells (the match into 9.01's work light, the same place in frame)
 // No cursor anywhere: the monitor is touched (his fingertip), as the phone is (P6). V.O. typed by the host; his lips
@@ -56,13 +56,15 @@ L.add('8.05', {
   draw: (fb, k, sh, f) => { masMCU(fb, f, {mas: {look: -1, mouth: 'rest'}, monday: true}); void k; void sh; },
 });
 L.add('8.06', {
-  st: 'act2/sets/dark callECU → masMCU → callECU ([ECU] his phone face up on the desk, ringing: the call tile ELPPA, a plain grey disc and the word, no face and no name; his fingertip taps Answer on the connect; [MCU] his face over the phone (Ep1\'s portrait, lids lowered to it), his one sentence of terms, unhurried, lip-synced; [ECU] the tile: …, then CONFIRMED on the chip note)',
+  st: 'act2/sets/dark callECU → masMCU → callECU ([ECU] his phone face up on the desk, ringing: the call tile ELPPA, a plain grey disc and the word, no face and no name; his fingertip taps Answer on the connect; [MCU] (the fixes pass) the phone at his ear, his hand round it, the call\'s green bar on its edge; his face a step warmer (his natural skin keyed from the monitor\'s side, its cyan only as his rim), his one sentence of terms, unhurried, lip-synced; [ECU] the phone back on the desk, the tile: …, then CONFIRMED on the chip note)',
   face: {MAS: 'lip'},
   marks: {conn: ['snd', 'call_connect', 1, 0], chip: ['snd', 'ui_confirm_chip', 1, 0], said: ['end', 'e2-a2-0001', 0]},
   draw: (fb, k, sh, f) => {
     const conn = mk(sh, 'conn', 48), chip = mk(sh, 'chip', 214), said = mk(sh, 'said', 184);
     if (k < conn + 8) { callECU(fb, f, {state: k < conn + 2 ? 'ring' : 'live', tap: k < conn - 8 ? 0 : k < conn - 2 ? 1 : k < conn + 4 ? 2 : 0, secs: 0}); return; }
-    if (k < said + 4) { const m = mouth(sh, k, 'MAS'); masMCU(fb, f, {mas: {look: -1, lid: 1, mouth: m === 'smile' ? 'rest' : m}}); return; } // level, no smile in it
+    // the fixes pass: the phone at his ear, his face a step warmer than the room (12.05's warm rig, the monitor's cyan
+    // only as his rim): it read as a cold MCU talking to the air
+    if (k < said + 4) { const m = mouth(sh, k, 'MAS'); masMCU(fb, f, {mas: {look: -1, mouth: m === 'smile' ? 'rest' : m}, call: true}); return; } // level, no smile in it
     callECU(fb, f, {state: k < chip ? 'dots' : 'confirmed'});
   },
 });

@@ -93,13 +93,13 @@
    "timeline_s": 279.0,
    "ep_in": "07:31:00",
    "ep_out": "12:10:00",
-   "shots": 44,
+   "shots": 45,
    "lines": 41,
    "vo": 3,
    "scenes": 5,
    "plan_s": 279,
    "checks_ok": true,
-   "checks": 8,
+   "checks": 9,
    "problems": []
   },
   "act3": {
@@ -296,18 +296,18 @@
    "seg": "act2",
    "scene": "8",
    "title": "The dark room",
-   "frames": 1056,
-   "seconds": 44.0,
+   "frames": 1008,
+   "seconds": 42.0,
    "tc_in": "07:31:00",
-   "tc_out": "08:15:00",
-   "plan_s": 44,
+   "tc_out": "08:13:00",
+   "plan_s": 42,
    "proposal_s": 44,
-   "fit_scale": 1.681,
+   "fit_scale": 1.422,
    "shots": 7,
    "lines": 3,
-   "arrival_s": 14.08,
-   "arrival_spoken_s": 31.46,
-   "aftermath_s": 7.54,
+   "arrival_s": 12.71,
+   "arrival_spoken_s": 30.29,
+   "aftermath_s": 6.71,
    "plan_arrive": [
     "8.01: 2.0 s, the dark room with the monitor's glow already on his face"
    ],
@@ -320,15 +320,15 @@
    "seg": "act2",
    "scene": "9",
    "title": "Backstage",
-   "frames": 1224,
-   "seconds": 51.0,
-   "tc_in": "08:15:00",
-   "tc_out": "09:06:00",
-   "plan_s": 51,
+   "frames": 1344,
+   "seconds": 56.0,
+   "tc_in": "08:13:00",
+   "tc_out": "09:09:00",
+   "plan_s": 56,
    "proposal_s": 51,
-   "fit_scale": 1.609,
-   "shots": 6,
-   "lines": 15,
+   "fit_scale": 1.29,
+   "shots": 7,
+   "lines": 16,
    "arrival_s": 2.38,
    "arrival_spoken_s": 2.38,
    "aftermath_s": 1.58,
@@ -346,8 +346,8 @@
    "title": "THE PLAN: OMNI",
    "frames": 1104,
    "seconds": 46.0,
-   "tc_in": "09:06:00",
-   "tc_out": "09:52:00",
+   "tc_in": "09:09:00",
+   "tc_out": "09:55:00",
    "plan_s": 46,
    "proposal_s": 46,
    "fit_scale": 1.272,
@@ -368,13 +368,13 @@
    "seg": "act2",
    "scene": "11",
    "title": "\"her\"",
-   "frames": 2352,
-   "seconds": 98.0,
-   "tc_in": "09:52:00",
+   "frames": 2280,
+   "seconds": 95.0,
+   "tc_in": "09:55:00",
    "tc_out": "11:30:00",
-   "plan_s": 98,
+   "plan_s": 95,
    "proposal_s": 98,
-   "fit_scale": 1.413,
+   "fit_scale": 1.363,
    "shots": 16,
    "lines": 16,
    "arrival_s": 2.0,
@@ -400,10 +400,10 @@
    "proposal_s": 40,
    "fit_scale": 1.128,
    "shots": 8,
-   "lines": 1,
-   "arrival_s": 35.54,
+   "lines": 0,
+   "arrival_s": null,
    "arrival_spoken_s": null,
-   "aftermath_s": 3.25,
+   "aftermath_s": null,
    "plan_arrive": [
     "12.01: 2.0 s, the stage as the house lights come up full, the blimp gone, the murmur thinning",
     "12.05: 1.5 s, the dark room with the monitor's news already playing"
@@ -1572,9 +1572,9 @@
   {
    "seg": "act2",
    "beat": "8.01",
-   "seconds": 8.07,
+   "seconds": 6.82,
    "events": 6,
-   "longest_still_s": 4.21,
+   "longest_still_s": 3.55,
    "frame": "OTS · over Mas's shoulder in the dark, glass in the foreground: the notification slides do"
   },
   {
@@ -1596,9 +1596,9 @@
   {
    "seg": "act2",
    "beat": "8.07",
-   "seconds": 5.38,
+   "seconds": 4.55,
    "events": 4,
-   "longest_still_s": 2.69,
+   "longest_still_s": 2.27,
    "frame": "POV · an invite drops into his calendar under the Monday square; he accepts"
   },
   {
@@ -1640,6 +1640,14 @@
    "events": 6,
    "longest_still_s": 3.5,
    "frame": "ECU · his phone lights: Alyi's post, in its own UI; his thumb scrolls once"
+  },
+  {
+   "seg": "act2",
+   "beat": "12.07",
+   "seconds": 10.95,
+   "events": 6,
+   "longest_still_s": 7.75,
+   "frame": "ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…an"
   },
   {
    "seg": "act3",
@@ -2217,14 +2225,21 @@
    "after": "e2-a2-0005",
    "line": "e2-a2-0006",
    "beats": "9.03 -> 9.04",
-   "lock_s": 1.448,
+   "lock_s": 1.167,
    "not_an_exchange": "a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer"
+  },
+  {
+   "after": "e2-a2-0011",
+   "line": "e2-a2-0012",
+   "beats": "9.05 -> 9.06",
+   "lock_s": 1.677,
+   "not_an_exchange": "not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since the fixes pass gave sc 9's air to V.O. 6)"
   },
   {
    "after": "e2-a2-0031",
    "line": "e2-a2-0032",
    "beats": "11.06 -> 11.07",
-   "lock_s": 1.125,
+   "lock_s": 1.103,
    "not_an_exchange": "the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks"
   },
   {
@@ -2249,7 +2264,7 @@
   {
    "check": "\"Thanks.\" over \"favorite\"",
    "ok": true,
-   "detail": "\"Thanks.\" at 167.257 s; \"favorite\" 167.000-167.333 s; CHATGTP's line ends 167.807 s"
+   "detail": "\"Thanks.\" at 170.195 s; \"favorite\" 169.917-170.250 s; CHATGTP's line ends 170.745 s"
   },
   {
    "check": "the subtitles of the two cut-offs",
@@ -2259,17 +2274,22 @@
   {
    "check": "stamp 2. on \"today\"",
    "ok": true,
-   "detail": "the stamp at 123.917 s, \"today\" from 123.917 s"
+   "detail": "the stamp at 126.917 s, \"today\" from 126.917 s"
   },
   {
    "check": "stamp 3. on \"free\"",
    "ok": true,
-   "detail": "the stamp at 125.083 s, \"free\" from 125.083 s"
+   "detail": "the stamp at 128.083 s, \"free\" from 128.083 s"
   },
   {
-   "check": "V.O. 6 after the post's read floor",
+   "check": "sc 12 plays without V.O. (W8)",
    "ok": true,
-   "detail": "the post up at 265.625 s, \"i came back.\" at 274.550 s: 8.93 s against 8.85"
+   "detail": "V.O. in sc 12: none"
+  },
+  {
+   "check": "his post held for its read floor",
+   "ok": true,
+   "detail": "the post up 265.625-276.167 s against a floor of 8.85 s"
   },
   {
    "check": "4B: the click a beat after his thought, 1.5 s after it",
@@ -2279,12 +2299,12 @@
   {
    "check": "the engineer's laugh stops on \"laugh\"",
    "ok": true,
-   "detail": "engineer_laugh_take 60.042 s + 3.74 s; Gerg's \"laugh\" ends 63.792 s"
+   "detail": "engineer_laugh_take 57.917 s + 3.37 s; Gerg's \"laugh\" ends 61.292 s"
   }
  ],
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
   "lines": 174,
-  "rows": 399
+  "rows": 400
  }
 }

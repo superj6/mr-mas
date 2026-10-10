@@ -68,7 +68,7 @@ X264 = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-tune", "animatio
         "-g", "48", "-threads", "6"]
 
 TITLES = {"coldopen": "Cold open", "intro": "Intro", "card": "ep1.1_her.wav", "act1": "Act One · the séance",
-          "act2": "Act Two · her", "act3": "Act Three · leave them up", "act4": "Act Four · as a guest",
+          "act2": "Act Two · stage right", "act3": "Act Three · leave them up", "act4": "Act Four · as a guest",
           "tag": "Tag · august", "outro": "Outro · credits"}
 # (the chapter titles are the proposal's act names; the release pass checks them against LEARNINGS M1 before publishing)
 # the variants: the manifest (chapter order, the intro and outro and their gains), the story pictures, the final mixes,

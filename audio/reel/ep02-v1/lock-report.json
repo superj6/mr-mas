@@ -2299,20 +2299,20 @@
   "safety_net": []
  },
  "act2": {
-  "timeline": "show/reel/ep02-v1/ep02-v1-act2.json",
+  "timeline": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/94315be4-2a32-4292-9b72-b25066268365/scratchpad/fix-act2/tl/ep02-v1-act2.json",
   "source": null,
   "source_story_s": 0.0,
   "estimate_s": 279.0,
   "seconds": 279.0,
   "frames": 6696,
   "source_frames": 0,
-  "beats": 44,
+  "beats": 45,
   "lines": 41,
   "vo": 3,
   "vo_lines": [
    "e2-vo-04 (8.03): the next model runs on the landlord's servers. the one after runs on ours.",
-   "e2-vo-05 (8.05): one day ahead is enough.",
-   "e2-vo-06 (12.07): i came back."
+   "e2-vo-05 (8.05): the press gets one night with ours first.",
+   "e2-vo-06 (9.04b): everyone gets it free. that's what makes the phone deal stick."
   ],
   "scenes": [
    "8",
@@ -2327,7 +2327,7 @@
   "median_gap": {
    "inside_beats_s": 0.35,
    "inside_beats_n": 16,
-   "segment_s": 1.485,
+   "segment_s": 1.345,
    "segment_n": 40,
    "spoken_only_segment_s": 1.15
   },
@@ -2337,8 +2337,8 @@
     "action": "new",
     "scene": "8",
     "src_s": null,
-    "est_s": 8.07,
-    "lock_s": 8.07,
+    "est_s": 6.82,
+    "lock_s": 6.82,
     "diff_s": 0.0
    },
    {
@@ -2355,8 +2355,8 @@
     "action": "new",
     "scene": "8",
     "src_s": null,
-    "est_s": 7.74,
-    "lock_s": 7.74,
+    "est_s": 7.48,
+    "lock_s": 7.48,
     "diff_s": 0.0
    },
    {
@@ -2373,8 +2373,8 @@
     "action": "new",
     "scene": "8",
     "src_s": null,
-    "est_s": 3.18,
-    "lock_s": 3.18,
+    "est_s": 3.93,
+    "lock_s": 3.93,
     "diff_s": 0.0
    },
    {
@@ -2382,8 +2382,8 @@
     "action": "new",
     "scene": "8",
     "src_s": null,
-    "est_s": 9.83,
-    "lock_s": 9.83,
+    "est_s": 9.42,
+    "lock_s": 9.42,
     "diff_s": 0.0
    },
    {
@@ -2391,8 +2391,8 @@
     "action": "new",
     "scene": "8",
     "src_s": null,
-    "est_s": 5.38,
-    "lock_s": 5.38,
+    "est_s": 4.55,
+    "lock_s": 4.55,
     "diff_s": 0.0
    },
    {
@@ -2409,8 +2409,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 7.9,
-    "lock_s": 7.9,
+    "est_s": 7.81,
+    "lock_s": 7.81,
     "diff_s": 0.0
    },
    {
@@ -2418,8 +2418,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 4.7,
-    "lock_s": 4.7,
+    "est_s": 4.16,
+    "lock_s": 4.16,
     "diff_s": 0.0
    },
    {
@@ -2427,8 +2427,17 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 13.24,
-    "lock_s": 13.24,
+    "est_s": 12.88,
+    "lock_s": 12.88,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "9.04b",
+    "action": "new",
+    "scene": "9",
+    "src_s": null,
+    "est_s": 6.72,
+    "lock_s": 6.72,
     "diff_s": 0.0
    },
    {
@@ -2436,8 +2445,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 10.33,
-    "lock_s": 10.33,
+    "est_s": 9.92,
+    "lock_s": 9.92,
     "diff_s": 0.0
    },
    {
@@ -2445,8 +2454,8 @@
     "action": "new",
     "scene": "9",
     "src_s": null,
-    "est_s": 6.89,
-    "lock_s": 6.89,
+    "est_s": 6.57,
+    "lock_s": 6.57,
     "diff_s": 0.0
    },
    {
@@ -2517,8 +2526,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 8.48,
-    "lock_s": 8.48,
+    "est_s": 8.46,
+    "lock_s": 8.46,
     "diff_s": 0.0
    },
    {
@@ -2526,8 +2535,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 5.0,
-    "lock_s": 5.0,
+    "est_s": 4.98,
+    "lock_s": 4.98,
     "diff_s": 0.0
    },
    {
@@ -2544,8 +2553,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 13.3,
-    "lock_s": 13.3,
+    "est_s": 13.28,
+    "lock_s": 13.28,
     "diff_s": 0.0
    },
    {
@@ -2553,8 +2562,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 9.75,
-    "lock_s": 9.75,
+    "est_s": 9.72,
+    "lock_s": 9.72,
     "diff_s": 0.0
    },
    {
@@ -2562,8 +2571,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 6.89,
-    "lock_s": 6.89,
+    "est_s": 6.83,
+    "lock_s": 6.83,
     "diff_s": 0.0
    },
    {
@@ -2571,8 +2580,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 10.99,
-    "lock_s": 10.99,
+    "est_s": 10.97,
+    "lock_s": 10.97,
     "diff_s": 0.0
    },
    {
@@ -2580,8 +2589,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 3.73,
-    "lock_s": 3.73,
+    "est_s": 3.68,
+    "lock_s": 3.68,
     "diff_s": 0.0
    },
    {
@@ -2589,8 +2598,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 4.99,
-    "lock_s": 4.99,
+    "est_s": 4.96,
+    "lock_s": 4.96,
     "diff_s": 0.0
    },
    {
@@ -2643,8 +2652,8 @@
     "action": "new",
     "scene": "11",
     "src_s": null,
-    "est_s": 6.87,
-    "lock_s": 6.87,
+    "est_s": 4.12,
+    "lock_s": 4.12,
     "diff_s": 0.0
    },
    {
@@ -2858,19 +2867,19 @@
    },
    {
     "beat": "8.01",
-    "what": "on-screen add: \"EUROPE PASSES ITS AI RULEBOOK · 523–46\" (2.35-6.56)"
+    "what": "on-screen add: \"EUROPE PASSES ITS AI RULEBOOK · 523–46\" (1.99-5.54)"
    },
    {
     "beat": "8.01",
-    "what": "on-screen add: \"SNOOZE\" (2.35-6.56)"
+    "what": "on-screen add: \"SNOOZE\" (1.99-5.54)"
    },
    {
     "beat": "8.01",
-    "what": "sound ui_toast_pop at 2.19 s (the plan's)"
+    "what": "sound ui_toast_pop at 1.85 s (the plan's)"
    },
    {
     "beat": "8.01",
-    "what": "sound ui_swipe at 6.72 s (the plan's)"
+    "what": "sound ui_swipe at 5.68 s (the plan's)"
    },
    {
     "beat": "8.02",
@@ -2898,11 +2907,11 @@
    },
    {
     "beat": "8.03",
-    "what": "new line e2-vo-04 (mas, 6.06 s, new take) at start+0.84"
+    "what": "new line e2-vo-04 (mas, 6.06 s, new take) at start+0.71"
    },
    {
     "beat": "8.03",
-    "what": "the plan's 7.74 s: its tail 0.84 s after the last line"
+    "what": "the plan's 7.48 s: its tail 0.71 s after the last line"
    },
    {
     "beat": "8.04",
@@ -2934,47 +2943,47 @@
    },
    {
     "beat": "8.05",
-    "what": "new line e2-vo-05 (mas, 1.84 s, new take) at start+0.67"
+    "what": "new line e2-vo-05 (mas, 2.79 s, new take) at start+0.57"
    },
    {
     "beat": "8.05",
-    "what": "the plan's 3.18 s: its tail 0.67 s after the last line"
+    "what": "the plan's 3.93 s: its tail 0.57 s after the last line"
    },
    {
     "beat": "8.06",
-    "what": "new beat (scene): ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call (call, darkroom, mas)"
+    "what": "new beat (scene): ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear (call, darkroom, mas)"
    },
    {
     "beat": "8.06",
-    "what": "on-screen add: \"ELPPA\" (0.34-9.83)"
+    "what": "on-screen add: \"ELPPA\" (0.28-9.42)"
    },
    {
     "beat": "8.06",
-    "what": "on-screen add: \"…\" (7.93-8.93)"
+    "what": "on-screen add: \"…\" (7.52-8.52)"
    },
    {
     "beat": "8.06",
-    "what": "on-screen add: \"CONFIRMED\" (8.93-9.83)"
+    "what": "on-screen add: \"CONFIRMED\" (8.52-9.42)"
    },
    {
     "beat": "8.06",
-    "what": "new line e2-a2-0001 (mas, 4.94 s, new take) at start+2.69"
+    "what": "new line e2-a2-0001 (mas, 4.94 s, new take) at start+2.28"
    },
    {
     "beat": "8.06",
-    "what": "the plan's 9.83 s: its tail 2.20 s after the last line"
+    "what": "the plan's 9.42 s: its tail 2.20 s after the last line"
    },
    {
     "beat": "8.06",
-    "what": "sound call_ring at 0.34 s (the plan's)"
+    "what": "sound call_ring at 0.28 s (the plan's)"
    },
    {
     "beat": "8.06",
-    "what": "sound call_connect at 2.02 s (the plan's)"
+    "what": "sound call_connect at 1.71 s (the plan's)"
    },
    {
     "beat": "8.06",
-    "what": "sound ui_confirm_chip at 8.93 s (the plan's)"
+    "what": "sound ui_confirm_chip at 8.52 s (the plan's)"
    },
    {
     "beat": "8.07",
@@ -2982,15 +2991,15 @@
    },
    {
     "beat": "8.07",
-    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.84-5.38)"
+    "what": "on-screen add: \"ELPPA · KEYNOTE · JUN 10\" (0.71-4.55)"
    },
    {
     "beat": "8.07",
-    "what": "sound invite_drop at 0.67 s (the plan's)"
+    "what": "sound invite_drop at 0.57 s (the plan's)"
    },
    {
     "beat": "8.07",
-    "what": "sound post_click at 2.69 s (the plan's)"
+    "what": "sound post_click at 2.27 s (the plan's)"
    },
    {
     "beat": "9.01",
@@ -3014,7 +3023,7 @@
    },
    {
     "beat": "9.02",
-    "what": "on-screen add: \"yes!!\" (4.85-7.9)"
+    "what": "on-screen add: \"yes!!\" (4.85-7.81)"
    },
    {
     "beat": "9.02",
@@ -3026,7 +3035,7 @@
    },
    {
     "beat": "9.02",
-    "what": "the plan's 7.9 s: its tail 0.48 s after the last line"
+    "what": "the plan's 7.81 s: its tail 0.39 s after the last line"
    },
    {
     "beat": "9.02",
@@ -3038,23 +3047,23 @@
    },
    {
     "beat": "9.03",
-    "what": "on-screen add: \"[laughter]\" (0.81-4.7)"
+    "what": "on-screen add: \"[laughter]\" (0.65-4.16)"
    },
    {
     "beat": "9.03",
-    "what": "new line e2-a2-0005 (gerg, 1.96 s, new take) at start+2.1"
+    "what": "new line e2-a2-0005 (gerg, 1.96 s, new take) at start+1.68"
    },
    {
     "beat": "9.03",
-    "what": "the plan's 4.7 s: its tail 0.64 s after the last line"
+    "what": "the plan's 4.16 s: its tail 0.52 s after the last line"
    },
    {
     "beat": "9.03",
-    "what": "sound engineer_laugh_take at 0.24 s (the plan's)"
+    "what": "sound engineer_laugh_take at 0.19 s (the plan's)"
    },
    {
     "beat": "9.03",
-    "what": "sound tag_drop at 0.97 s (the plan's)"
+    "what": "sound tag_drop at 0.78 s (the plan's)"
    },
    {
     "beat": "9.04",
@@ -3062,7 +3071,7 @@
    },
    {
     "beat": "9.04",
-    "what": "new line e2-a2-0006 (mas, 0.68 s, new take) at start+0.8"
+    "what": "new line e2-a2-0006 (mas, 0.68 s, new take) at start+0.64"
    },
    {
     "beat": "9.04",
@@ -3078,7 +3087,19 @@
    },
    {
     "beat": "9.04",
-    "what": "the plan's 13.24 s: its tail 0.97 s after the last line"
+    "what": "the plan's 12.88 s: its tail 0.77 s after the last line"
+   },
+   {
+    "beat": "9.04b",
+    "what": "new beat (scene): MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6) (stage, wings, mas)"
+   },
+   {
+    "beat": "9.04b",
+    "what": "new line e2-vo-06 (mas, 5.05 s, new take) at start+0.77"
+   },
+   {
+    "beat": "9.04b",
+    "what": "the plan's 6.72 s: its tail 0.90 s after the last line"
    },
    {
     "beat": "9.05",
@@ -3086,7 +3107,7 @@
    },
    {
     "beat": "9.05",
-    "what": "new line e2-a2-0010 (engineer, 2.32 s, new take) at start+1.61"
+    "what": "new line e2-a2-0010 (engineer, 2.32 s, new take) at start+1.29"
    },
    {
     "beat": "9.05",
@@ -3094,7 +3115,7 @@
    },
    {
     "beat": "9.05",
-    "what": "the plan's 10.33 s: its tail 0.48 s after the last line"
+    "what": "the plan's 9.92 s: its tail 0.39 s after the last line"
    },
    {
     "beat": "9.06",
@@ -3102,35 +3123,35 @@
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE\" (0.48-6.89)"
+    "what": "on-screen add: \"VOICE\" (0.39-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"SINCE SEP 2023\" (0.64-6.89)"
+    "what": "on-screen add: \"SINCE SEP 2023\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 1\" (0.64-6.89)"
+    "what": "on-screen add: \"VOICE 1\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 2\" (0.64-6.89)"
+    "what": "on-screen add: \"VOICE 2\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 3\" (0.64-6.89)"
+    "what": "on-screen add: \"VOICE 3\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 4\" (0.64-6.89)"
+    "what": "on-screen add: \"VOICE 4\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "on-screen add: \"VOICE 5\" (0.64-6.89)"
+    "what": "on-screen add: \"VOICE 5\" (0.52-6.57)"
    },
    {
     "beat": "9.06",
-    "what": "new line e2-a2-0012 (voice1, 0.49 s, new take) at start+1.61"
+    "what": "new line e2-a2-0012 (voice1, 0.49 s, new take) at start+1.29"
    },
    {
     "beat": "9.06",
@@ -3150,15 +3171,15 @@
    },
    {
     "beat": "9.06",
-    "what": "the plan's 6.89 s: its tail 1.60 s after the last line"
+    "what": "the plan's 6.57 s: its tail 1.60 s after the last line"
    },
    {
     "beat": "9.06",
-    "what": "sound panel_unfold_step at 5.49 s (the plan's)"
+    "what": "sound panel_unfold_step at 5.17 s (the plan's)"
    },
    {
     "beat": "9.06",
-    "what": "sound drafting_ink_stroke at 6.29 s (the plan's)"
+    "what": "sound drafting_ink_stroke at 5.97 s (the plan's)"
    },
    {
     "beat": "10.01",
@@ -3338,11 +3359,11 @@
    },
    {
     "beat": "11.01",
-    "what": "the plan's 8.48 s: its tail 0.57 s after the last line"
+    "what": "the plan's 8.46 s: its tail 0.55 s after the last line"
    },
    {
     "beat": "11.01",
-    "what": "sound spotlight_swing at 0.60 s (the plan's)"
+    "what": "sound spotlight_swing at 0.40 s (the plan's)"
    },
    {
     "beat": "11.02",
@@ -3350,7 +3371,7 @@
    },
    {
     "beat": "11.02",
-    "what": "on-screen add: \"VOICE 5\" (1.6-5.0)"
+    "what": "on-screen add: \"VOICE 5\" (1.6-4.98)"
    },
    {
     "beat": "11.02",
@@ -3362,7 +3383,7 @@
    },
    {
     "beat": "11.02",
-    "what": "the plan's 5.0 s: its tail 0.57 s after the last line"
+    "what": "the plan's 4.98 s: its tail 0.55 s after the last line"
    },
    {
     "beat": "11.02",
@@ -3402,7 +3423,7 @@
    },
    {
     "beat": "11.04",
-    "what": "new line e2-a2-0026 (engineer, 4.62 s, new take) at start+0.57"
+    "what": "new line e2-a2-0026 (engineer, 4.62 s, new take) at start+0.55"
    },
    {
     "beat": "11.04",
@@ -3414,15 +3435,15 @@
    },
    {
     "beat": "11.04",
-    "what": "the plan's 13.3 s: its tail 3.00 s after the last line"
+    "what": "the plan's 13.28 s: its tail 3.00 s after the last line"
    },
    {
     "beat": "11.04",
-    "what": "sound crowd_laugh_m at 10.44 s (the plan's)"
+    "what": "sound crowd_laugh_m at 10.42 s (the plan's)"
    },
    {
     "beat": "11.04",
-    "what": "sound spotlight_swing at 10.94 s (the plan's)"
+    "what": "sound spotlight_swing at 10.92 s (the plan's)"
    },
    {
     "beat": "11.05",
@@ -3430,7 +3451,7 @@
    },
    {
     "beat": "11.05",
-    "what": "new line e2-a2-0029 (engineer, 3.16 s, new take) at start+0.71"
+    "what": "new line e2-a2-0029 (engineer, 3.16 s, new take) at start+0.68"
    },
    {
     "beat": "11.05",
@@ -3438,15 +3459,15 @@
    },
    {
     "beat": "11.05",
-    "what": "the plan's 9.75 s: its tail 3.20 s after the last line"
+    "what": "the plan's 9.72 s: its tail 3.20 s after the last line"
    },
    {
     "beat": "11.05",
-    "what": "sound crowd_laugh_l at 6.75 s (the plan's)"
+    "what": "sound crowd_laugh_l at 6.72 s (the plan's)"
    },
    {
     "beat": "11.05",
-    "what": "sound spotlight_swing at 7.55 s (the plan's)"
+    "what": "sound spotlight_swing at 7.52 s (the plan's)"
    },
    {
     "beat": "11.06",
@@ -3454,15 +3475,15 @@
    },
    {
     "beat": "11.06",
-    "what": "new line e2-a2-0031 (rima, 5.19 s, new take) at start+1.13"
+    "what": "new line e2-a2-0031 (rima, 5.19 s, new take) at start+1.09"
    },
    {
     "beat": "11.06",
-    "what": "the plan's 6.89 s: its tail 0.57 s after the last line"
+    "what": "the plan's 6.83 s: its tail 0.55 s after the last line"
    },
    {
     "beat": "11.06",
-    "what": "sound clicker_click at 0.56 s (the plan's)"
+    "what": "sound clicker_click at 0.55 s (the plan's)"
    },
    {
     "beat": "11.07",
@@ -3470,11 +3491,11 @@
    },
    {
     "beat": "11.07",
-    "what": "on-screen add: \"😊\" (8.09-10.99)"
+    "what": "on-screen add: \"😊\" (8.07-10.97)"
    },
    {
     "beat": "11.07",
-    "what": "new line e2-a2-0032 (engineer, 1.12 s, new take) at start+0.57"
+    "what": "new line e2-a2-0032 (engineer, 1.12 s, new take) at start+0.55"
    },
    {
     "beat": "11.07",
@@ -3486,15 +3507,15 @@
    },
    {
     "beat": "11.07",
-    "what": "the plan's 10.99 s: its tail 3.00 s after the last line"
+    "what": "the plan's 10.97 s: its tail 3.00 s after the last line"
    },
    {
     "beat": "11.07",
-    "what": "sound crowd_laugh_m at 8.29 s (the plan's)"
+    "what": "sound crowd_laugh_m at 8.27 s (the plan's)"
    },
    {
     "beat": "11.07",
-    "what": "sound spotlight_swing at 9.09 s (the plan's)"
+    "what": "sound spotlight_swing at 9.07 s (the plan's)"
    },
    {
     "beat": "11.08",
@@ -3502,7 +3523,7 @@
    },
    {
     "beat": "11.08",
-    "what": "on-screen add: \"what's the catch?\" (0.3-3.73)"
+    "what": "on-screen add: \"what's the catch?\" (0.3-3.68)"
    },
    {
     "beat": "11.08",
@@ -3510,7 +3531,7 @@
    },
    {
     "beat": "11.08",
-    "what": "the plan's 3.73 s: its tail 1.80 s after the last line"
+    "what": "the plan's 3.68 s: its tail 1.75 s after the last line"
    },
    {
     "beat": "11.08",
@@ -3526,7 +3547,7 @@
    },
    {
     "beat": "11.09",
-    "what": "the plan's 4.99 s: its tail 0.71 s after the last line"
+    "what": "the plan's 4.96 s: its tail 0.68 s after the last line"
    },
    {
     "beat": "11.10",
@@ -3622,19 +3643,19 @@
    },
    {
     "beat": "11.15",
-    "what": "new line e2-a2-0037 (engineer, 1.68 s, new take) at start+0.99"
+    "what": "new line e2-a2-0037 (engineer, 1.68 s, new take) at start+0.95"
    },
    {
     "beat": "11.15",
-    "what": "new line e2-a2-0038 (engineer, 3.03 s, new take) after e2-a2-0037 +0.6"
+    "what": "new line e2-a2-0038 (engineer, 0.34 s, new take) after e2-a2-0037 +0.6"
    },
    {
     "beat": "11.15",
-    "what": "the plan's 6.87 s: its tail 0.57 s after the last line"
+    "what": "the plan's 4.12 s: its tail 0.55 s after the last line"
    },
    {
     "beat": "11.15",
-    "what": "sound headset_unclip at 0.28 s (the plan's)"
+    "what": "sound headset_unclip at 0.27 s (the plan's)"
    },
    {
     "beat": "11.16",
@@ -3666,11 +3687,19 @@
    },
    {
     "beat": "12.03",
-    "what": "new beat (scene): ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat (stage, demo_house, alyi)"
+    "what": "new beat (scene): ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat (stage, demo_house, alyi, mas)"
+   },
+   {
+    "beat": "12.03",
+    "what": "on-screen add: \"RAIL: SEP 2023\" (0.4-2.55)"
    },
    {
     "beat": "12.03",
     "what": "sound door_motif_note at 0.20 s (the plan's)"
+   },
+   {
+    "beat": "12.03",
+    "what": "sound glass_nudge at 0.62 s (the plan's)"
    },
    {
     "beat": "12.04",
@@ -3727,14 +3756,6 @@
    {
     "beat": "12.07",
     "what": "on-screen add: \"ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI i\" (0.4-10.95)"
-   },
-   {
-    "beat": "12.07",
-    "what": "new line e2-vo-06 (mas, 1.20 s, new take) at start+9.3"
-   },
-   {
-    "beat": "12.07",
-    "what": "the plan's 10.95 s: its tail 0.45 s after the last line"
    },
    {
     "beat": "12.07",

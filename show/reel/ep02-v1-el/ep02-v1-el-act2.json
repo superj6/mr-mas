@@ -1,7 +1,7 @@
 {
  "episode": 2,
  "title": "ep1.1_her.wav",
- "part": "ACT TWO · her · sc 8-12",
+ "part": "ACT TWO · stage right · sc 8-12",
  "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
  "logline": "The Ep2 v1 base lock of act2: the beat plan applied to no source (every beat new).",
  "dateSpan": "Apr 1 - May 14, 2024",
@@ -26,7 +26,7 @@
    "role": "SPEECH BUBBLE"
   },
   "alyi": {
-   "role": "CHIEF SCIENTIST (in the chrome, 2 s)"
+   "role": "CHIEF SCIENTIST (a memory, 2 s)"
   },
   "staff": {
    "name": "STAFF",
@@ -96,18 +96,18 @@
    "onscreen": [
     {
      "text": "EUROPE PASSES ITS AI RULEBOOK · 523–46",
-     "at": 2.35,
-     "until": 6.56,
+     "at": 1.99,
+     "until": 5.54,
      "kind": "ui"
     },
     {
      "text": "SNOOZE",
-     "at": 2.35,
-     "until": 6.56,
+     "at": 1.99,
+     "until": 5.54,
      "kind": "ui"
     }
    ],
-   "reelDur": 8.07,
+   "reelDur": 6.82,
    "fx": [],
    "cues": [
     "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
@@ -115,12 +115,12 @@
    "sounds": [
     {
      "name": "ui_toast_pop",
-     "at": 2.186,
+     "at": 1.847,
      "gain": -26
     },
     {
      "name": "ui_swipe",
-     "at": 6.725,
+     "at": 5.683,
      "gain": -24
     }
    ],
@@ -205,7 +205,7 @@
      "id": "e2-vo-04",
      "who": "mas",
      "text": "the next model runs on the landlord's servers. the one after runs on ours.",
-     "t": 0.84,
+     "t": 0.71,
      "dur": 6.06,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
      "in": 0.45,
@@ -293,13 +293,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-04__mas-manalt-C.wav",
       "in": 0.45,
-      "t": 0.84,
+      "t": 0.71,
       "dur": 6.06
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 7.74,
+   "reelDur": 7.48,
    "fx": [],
    "cues": [
     "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
@@ -396,36 +396,51 @@
     {
      "id": "e2-vo-05",
      "who": "mas",
-     "text": "one day ahead is enough.",
-     "t": 0.67,
-     "dur": 1.84,
+     "text": "the press gets one night with ours first.",
+     "t": 0.57,
+     "dur": 2.79,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
-     "in": 0.37,
+     "in": 0.47,
      "words": [
       [
-       "One",
+       "The",
        -0.02,
-       0.224
+       0.089
       ],
       [
-       "day",
-       0.27,
-       0.479
+       "press",
+       0.17,
+       0.507
       ],
       [
-       "ahead",
-       0.56,
-       0.967
+       "gets",
+       0.588,
+       0.844
       ],
       [
-       "is",
-       1.048,
-       1.153
+       "one",
+       0.925,
+       1.145
       ],
       [
-       "enough",
-       1.245,
-       1.721
+       "night",
+       1.192,
+       1.413
+      ],
+      [
+       "with",
+       1.459,
+       1.645
+      ],
+      [
+       "ours",
+       1.703,
+       2.063
+      ],
+      [
+       "first",
+       2.156,
+       2.724
       ]
      ],
      "tag": "V.O.",
@@ -439,14 +454,14 @@
      },
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-05__mas-manalt-C.wav",
-      "in": 0.37,
-      "t": 0.67,
-      "dur": 1.84
+      "in": 0.47,
+      "t": 0.57,
+      "dur": 2.79
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 3.18,
+   "reelDur": 3.93,
    "fx": [],
    "cues": [
     "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
@@ -470,19 +485,19 @@
    "set": "call",
    "style": "BASE",
    "shot": "insert",
-   "frame": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
+   "frame": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear",
    "side": "",
    "room": "darkroom",
    "chars": [
     "mas"
    ],
-   "caption": "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers. Mas, unhurried, says the episode's one full sentence of terms. The tile shows …, then CONFIRMED.",
+   "caption": "His phone, face up, rings: a call tile, ELPPA, no face and no name. He answers and lifts it to his ear. Mas, unhurried, says the episode's one full sentence of terms, the phone at his ear, its screen's glow on his cheek. He lowers it to the desk: the tile shows …, then CONFIRMED.",
    "lines": [
     {
      "id": "e2-a2-0001",
      "who": "mas",
      "text": "no money either way. you put us in your new assistant. that's the price.",
-     "t": 2.69,
+     "t": 2.28,
      "dur": 4.94,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
      "in": 0.38,
@@ -570,7 +585,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0001__mas-manalt-C.wav",
       "in": 0.38,
-      "t": 2.69,
+      "t": 2.28,
       "dur": 4.94
      }
     }
@@ -578,24 +593,24 @@
    "onscreen": [
     {
      "text": "ELPPA",
-     "at": 0.34,
-     "until": 9.83,
+     "at": 0.28,
+     "until": 9.42,
      "kind": "ui"
     },
     {
      "text": "…",
-     "at": 7.93,
-     "until": 8.93,
+     "at": 7.52,
+     "until": 8.52,
      "kind": "ui"
     },
     {
      "text": "CONFIRMED",
-     "at": 8.93,
-     "until": 9.83,
+     "at": 8.52,
+     "until": 9.42,
      "kind": "ui"
     }
    ],
-   "reelDur": 9.83,
+   "reelDur": 9.42,
    "fx": [],
    "cues": [
     "music (v1): E02-06 · under the call the Water Line thins to its pedal; one chip note on CONFIRMED"
@@ -603,17 +618,17 @@
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.336,
+     "at": 0.285,
      "gain": -24
     },
     {
      "name": "call_connect",
-     "at": 2.017,
+     "at": 1.71,
      "gain": -26
     },
     {
      "name": "ui_confirm_chip",
-     "at": 8.93,
+     "at": 8.52,
      "gain": -22
     }
    ],
@@ -626,8 +641,8 @@
      "gaps": {},
      "rule": "0.4-0.6 s"
     },
-    "camera": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call",
-    "picture": "We hear only Mas. No face on the tile, ever."
+    "camera": "ECU · his phone face up: a call tile ELPPA, no face, no name → MCU · Mas on the call, the phone at his ear",
+    "picture": "We hear only Mas. No face on the tile, ever. The MCU a step warmer than the room (P10; the fixes pass: it read as talking to the air)."
    }
   },
   {
@@ -648,12 +663,12 @@
    "onscreen": [
     {
      "text": "ELPPA · KEYNOTE · JUN 10",
-     "at": 0.84,
-     "until": 5.38,
+     "at": 0.71,
+     "until": 4.55,
      "kind": "ui"
     }
    ],
-   "reelDur": 5.38,
+   "reelDur": 4.55,
    "fx": [],
    "cues": [
     "music (v1): E02-06 DARK ROOM, SPRING · DARK ROOM (MM-01 the Water Line, low) + each show's tiny ducked media bed"
@@ -661,12 +676,12 @@
    "sounds": [
     {
      "name": "invite_drop",
-     "at": 0.672,
+     "at": 0.569,
      "gain": -24
     },
     {
      "name": "post_click",
-     "at": 2.69,
+     "at": 2.275,
      "gain": -26
     }
    ],
@@ -1000,11 +1015,11 @@
     {
      "text": "yes!!",
      "at": 4.85,
-     "until": 7.9,
+     "until": 7.81,
      "kind": "ui"
     }
    ],
-   "reelDur": 7.9,
+   "reelDur": 7.81,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1057,7 +1072,7 @@
      "id": "e2-a2-0005",
      "who": "gerg",
      "text": "Careful. The new one can hear you laugh.",
-     "t": 2.1,
+     "t": 1.68,
      "dur": 1.96,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
      "in": 0.39,
@@ -1115,7 +1130,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
       "in": 0.39,
-      "t": 2.1,
+      "t": 1.68,
       "dur": 1.96
      }
     }
@@ -1123,12 +1138,12 @@
    "onscreen": [
     {
      "text": "[laughter]",
-     "at": 0.81,
-     "until": 4.7,
+     "at": 0.65,
+     "until": 4.16,
      "kind": "ui"
     }
    ],
-   "reelDur": 4.7,
+   "reelDur": 4.16,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1136,14 +1151,14 @@
    "sounds": [
     {
      "name": "engineer_laugh_take",
-     "at": 0.242,
+     "at": 0.194,
      "gain": -22,
-     "dur": 3.74,
+     "dur": 3.37,
      "note": "the sound pass's request (lock-v1.md §6): a nervous laugh in the ENGINEER's own library voice, never an imitation of anyone (S6), from the beat's first frames, ducked under Gerg's line, stopping on his \"laugh.\" (the word ends 1.88 s into the take); it sets up the [laughter] tag and \"It can even laugh back\""
     },
     {
      "name": "tag_drop",
-     "at": 0.969,
+     "at": 0.775,
      "gain": -26
     }
    ],
@@ -1180,7 +1195,7 @@
      "id": "e2-a2-0006",
      "who": "mas",
      "text": "is it ready?",
-     "t": 0.8,
+     "t": 0.64,
      "dur": 0.68,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
      "in": 0.39,
@@ -1213,7 +1228,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
       "in": 0.39,
-      "t": 0.8,
+      "t": 0.64,
       "dur": 0.68
      }
     },
@@ -1221,7 +1236,7 @@
      "id": "e2-a2-0007",
      "who": "rima",
      "text": "You'll be stage right. You can see the whole screen from there, and the stream can't see you.",
-     "t": 1.98,
+     "t": 1.82,
      "dur": 6.23,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
      "in": 0.35,
@@ -1329,7 +1344,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0007__rima-tamuri-A.wav",
       "in": 0.35,
-      "t": 1.98,
+      "t": 1.82,
       "dur": 6.23
      }
     },
@@ -1337,7 +1352,7 @@
      "id": "e2-a2-0008",
      "who": "mas",
      "text": "it's all yours.",
-     "t": 8.71,
+     "t": 8.55,
      "dur": 1.11,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
      "in": 0.38,
@@ -1370,7 +1385,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0008__mas-manalt-C.wav",
       "in": 0.38,
-      "t": 8.71,
+      "t": 8.55,
       "dur": 1.11
      }
     },
@@ -1378,7 +1393,7 @@
      "id": "e2-a2-0009",
      "who": "rima",
      "text": "It is. Enjoy the view.",
-     "t": 10.22,
+     "t": 10.06,
      "dur": 2.05,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
      "in": 0.36,
@@ -1421,13 +1436,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0009__rima-tamuri-A.wav",
       "in": 0.36,
-      "t": 10.22,
+      "t": 10.06,
       "dur": 2.05
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 13.24,
+   "reelDur": 12.88,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1446,6 +1461,122 @@
      "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
     },
     "camera": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)"
+   }
+  },
+  {
+   "id": "9.04b",
+   "act": "ACT TWO",
+   "kind": "scene",
+   "set": "stage",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
+   "side": "",
+   "room": "wings",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. His thought.",
+   "lines": [
+    {
+     "id": "e2-vo-06",
+     "who": "mas",
+     "text": "everyone gets it free. that's what makes the phone deal stick.",
+     "t": 0.77,
+     "dur": 5.05,
+     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+     "in": 0.38,
+     "words": [
+      [
+       "Everyone",
+       -0.02,
+       0.69
+      ],
+      [
+       "gets",
+       0.748,
+       1.015
+      ],
+      [
+       "it",
+       1.096,
+       1.189
+      ],
+      [
+       "free",
+       1.27,
+       1.828
+      ],
+      [
+       "that's",
+       2.478,
+       2.826
+      ],
+      [
+       "what",
+       2.872,
+       3.047
+      ],
+      [
+       "makes",
+       3.128,
+       3.395
+      ],
+      [
+       "the",
+       3.453,
+       3.557
+      ],
+      [
+       "phone",
+       3.616,
+       3.975
+      ],
+      [
+       "deal",
+       4.033,
+       4.324
+      ],
+      [
+       "stick",
+       4.428,
+       4.974
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
+     "el": {
+      "take": "e2-vo-06__mas-manalt-C.wav",
+      "device_copy": false,
+      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+      "reused_from": null
+     },
+     "kokoro": {
+      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
+      "in": 0.38,
+      "t": 0.77,
+      "dur": 5.05
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.72,
+   "fx": [],
+   "cues": [
+    "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
+   ],
+   "passes": {
+    "scene": "9",
+    "mode": "EXTENDED CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {},
+     "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
+    },
+    "camera": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
+    "picture": "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8)."
    }
   },
   {
@@ -1468,7 +1599,7 @@
      "id": "e2-a2-0010",
      "who": "engineer",
      "text": "What if it freezes? Live, on the stream?",
-     "t": 1.61,
+     "t": 1.29,
      "dur": 2.32,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
      "in": 0.41,
@@ -1526,7 +1657,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
       "in": 0.41,
-      "t": 1.61,
+      "t": 1.29,
       "dur": 2.32
      }
     },
@@ -1534,7 +1665,7 @@
      "id": "e2-a2-0011",
      "who": "rima",
      "text": "Then it freezes live, and I keep talking. It also sings. We'll get to that.",
-     "t": 4.23,
+     "t": 3.91,
      "dur": 5.62,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
      "in": 0.36,
@@ -1627,13 +1758,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0011__rima-tamuri-A.wav",
       "in": 0.36,
-      "t": 4.23,
+      "t": 3.91,
       "dur": 5.62
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 10.33,
+   "reelDur": 9.92,
    "fx": [],
    "cues": [
     "music (v1): E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)"
@@ -1673,7 +1804,7 @@
      "id": "e2-a2-0012",
      "who": "voice1",
      "text": "Hi.",
-     "t": 1.61,
+     "t": 1.29,
      "dur": 0.49,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
      "in": 0.39,
@@ -1696,7 +1827,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
       "in": 0.39,
-      "t": 1.61,
+      "t": 1.29,
       "dur": 0.49
      }
     },
@@ -1704,7 +1835,7 @@
      "id": "e2-a2-0013",
      "who": "voice2",
      "text": "Hi!",
-     "t": 2.4,
+     "t": 2.08,
      "dur": 0.33,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
      "in": 0.39,
@@ -1727,7 +1858,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0013__voice2-A.wav",
       "in": 0.39,
-      "t": 2.4,
+      "t": 2.08,
       "dur": 0.33
      }
     },
@@ -1735,7 +1866,7 @@
      "id": "e2-a2-0014",
      "who": "voice3",
      "text": "hi?",
-     "t": 3.03,
+     "t": 2.71,
      "dur": 0.44,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
      "in": 0.38,
@@ -1758,7 +1889,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0014__voice3-A.wav",
       "in": 0.38,
-      "t": 3.03,
+      "t": 2.71,
       "dur": 0.44
      }
     },
@@ -1766,7 +1897,7 @@
      "id": "e2-a2-0015",
      "who": "voice4",
      "text": "Hi…",
-     "t": 3.77,
+     "t": 3.45,
      "dur": 0.7,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
      "in": 0.39,
@@ -1789,7 +1920,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0015__voice4-A.wav",
       "in": 0.39,
-      "t": 3.77,
+      "t": 3.45,
       "dur": 0.7
      }
     },
@@ -1797,7 +1928,7 @@
      "id": "e2-a2-0016",
      "who": "chatgtp",
      "text": "Hey.",
-     "t": 4.77,
+     "t": 4.45,
      "dur": 0.52,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
      "in": 0.37,
@@ -1820,7 +1951,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0016__chatgtp-A.wav",
       "in": 0.37,
-      "t": 4.77,
+      "t": 4.45,
       "dur": 0.52
      }
     }
@@ -1828,48 +1959,48 @@
    "onscreen": [
     {
      "text": "VOICE",
-     "at": 0.48,
-     "until": 6.89,
+     "at": 0.39,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "SINCE SEP 2023",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "VOICE 1",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "VOICE 2",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "VOICE 3",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "VOICE 4",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     },
     {
      "text": "VOICE 5",
-     "at": 0.64,
-     "until": 6.89,
+     "at": 0.52,
+     "until": 6.57,
      "kind": "ui"
     }
    ],
-   "reelDur": 6.89,
+   "reelDur": 6.57,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat"
@@ -1877,12 +2008,12 @@
    "sounds": [
     {
      "name": "panel_unfold_step",
-     "at": 5.49,
+     "at": 5.17,
      "gain": -26
     },
     {
      "name": "drafting_ink_stroke",
-     "at": 6.29,
+     "at": 5.97,
      "gain": -26
     }
    ],
@@ -2920,7 +3051,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 8.48,
+   "reelDur": 8.46,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -2928,8 +3059,9 @@
    "sounds": [
     {
      "name": "spotlight_swing",
-     "at": 0.6,
-     "gain": -24
+     "at": 0.4,
+     "gain": -24,
+     "note": "0.6 s until the fixes pass: with sc 11 laid 3 s later the demo cue's bass note came 0.11 s earlier under the swing and masked it (the audit: -1.2 dB in 60-250 Hz at its ride's cap)"
     }
    ],
    "passes": {
@@ -3057,11 +3189,11 @@
     {
      "text": "VOICE 5",
      "at": 1.6,
-     "until": 5.0,
+     "until": 4.98,
      "kind": "ui"
     }
    ],
-   "reelDur": 5.0,
+   "reelDur": 4.98,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -3176,7 +3308,7 @@
      "id": "e2-a2-0026",
      "who": "engineer",
      "text": "We've got a lot to show everybody, so I'm going to ask you to keep your answers short today.",
-     "t": 0.57,
+     "t": 0.55,
      "dur": 4.62,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
      "in": 0.4,
@@ -3289,7 +3421,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0026__engineer-A.wav",
       "in": 0.4,
-      "t": 0.57,
+      "t": 0.55,
       "dur": 4.62
      }
     },
@@ -3297,7 +3429,7 @@
      "id": "e2-a2-0027",
      "who": "chatgtp",
      "text": "Great question! Of course! Honestly, short answers are one of my favorite things.",
-     "t": 5.39,
+     "t": 5.37,
      "dur": 4.75,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
      "in": 0.4,
@@ -3390,7 +3522,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0027__chatgtp-A.wav",
       "in": 0.4,
-      "t": 5.39,
+      "t": 5.37,
       "dur": 4.75
      }
     },
@@ -3398,7 +3530,7 @@
      "id": "e2-a2-0028",
      "who": "engineer",
      "text": "Thanks.",
-     "t": 9.59,
+     "t": 9.57,
      "dur": 0.71,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
      "in": 0.37,
@@ -3421,13 +3553,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0028__engineer-A.wav",
       "in": 0.37,
-      "t": 9.59,
+      "t": 9.57,
       "dur": 0.71
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 13.3,
+   "reelDur": 13.28,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -3435,12 +3567,12 @@
    "sounds": [
     {
      "name": "crowd_laugh_m",
-     "at": 10.44,
+     "at": 10.42,
      "gain": -20
     },
     {
      "name": "spotlight_swing",
-     "at": 10.94,
+     "at": 10.92,
      "gain": -24
     }
    ],
@@ -3482,7 +3614,7 @@
      "id": "e2-a2-0029",
      "who": "engineer",
      "text": "Let's try that again. Describe yourself in just one word.",
-     "t": 0.71,
+     "t": 0.68,
      "dur": 3.16,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
      "in": 0.4,
@@ -3550,7 +3682,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0029__engineer-A.wav",
       "in": 0.4,
-      "t": 0.71,
+      "t": 0.68,
       "dur": 3.16
      }
     },
@@ -3558,7 +3690,7 @@
      "id": "e2-a2-0030",
      "who": "chatgtp",
      "text": "one wo-o-ord.",
-     "t": 4.27,
+     "t": 4.24,
      "dur": 2.28,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
      "in": 0.5,
@@ -3586,13 +3718,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0030__chatgtp-A.wav",
       "in": 0.5,
-      "t": 4.27,
+      "t": 4.24,
       "dur": 2.28
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 9.75,
+   "reelDur": 9.72,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -3600,12 +3732,12 @@
    "sounds": [
     {
      "name": "crowd_laugh_l",
-     "at": 6.75,
+     "at": 6.72,
      "gain": -18
     },
     {
      "name": "spotlight_swing",
-     "at": 7.55,
+     "at": 7.52,
      "gain": -24
     }
    ],
@@ -3643,7 +3775,7 @@
      "id": "e2-a2-0031",
      "who": "rima",
      "text": "It's live, so it has a few opinions. Let's show you what it can see.",
-     "t": 1.13,
+     "t": 1.09,
      "dur": 5.19,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
      "in": 0.36,
@@ -3736,13 +3868,13 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0031__rima-tamuri-A.wav",
       "in": 0.36,
-      "t": 1.13,
+      "t": 1.09,
       "dur": 5.19
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 6.89,
+   "reelDur": 6.83,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -3750,7 +3882,7 @@
    "sounds": [
     {
      "name": "clicker_click",
-     "at": 0.565,
+     "at": 0.545,
      "gain": -28
     }
    ],
@@ -3789,7 +3921,7 @@
      "id": "e2-a2-0032",
      "who": "engineer",
      "text": "Say hello to the room.",
-     "t": 0.57,
+     "t": 0.55,
      "dur": 1.12,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
      "in": 0.37,
@@ -3832,7 +3964,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0032__engineer-A.wav",
       "in": 0.37,
-      "t": 0.57,
+      "t": 0.55,
       "dur": 1.12
      }
     },
@@ -3840,7 +3972,7 @@
      "id": "e2-a2-0033",
      "who": "chatgtp",
      "text": "Oh. Wow. That's a lot of you. Is it warm in here?",
-     "t": 1.89,
+     "t": 1.87,
      "dur": 3.05,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
      "in": 0.36,
@@ -3918,7 +4050,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0033__chatgtp-A.wav",
       "in": 0.36,
-      "t": 1.89,
+      "t": 1.87,
       "dur": 3.05
      }
     },
@@ -3926,7 +4058,7 @@
      "id": "e2-a2-0034",
      "who": "chatgtp",
      "text": "You're making me blush. I don't have blood.",
-     "t": 5.94,
+     "t": 5.92,
      "dur": 2.05,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
      "in": 0.45,
@@ -3984,7 +4116,7 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0034__chatgtp-A.wav",
       "in": 0.45,
-      "t": 5.94,
+      "t": 5.92,
       "dur": 2.05
      }
     }
@@ -3992,12 +4124,12 @@
    "onscreen": [
     {
      "text": "😊",
-     "at": 8.09,
-     "until": 10.99,
+     "at": 8.07,
+     "until": 10.97,
      "kind": "ui"
     }
    ],
-   "reelDur": 10.99,
+   "reelDur": 10.97,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -4005,12 +4137,12 @@
    "sounds": [
     {
      "name": "crowd_laugh_m",
-     "at": 8.29,
+     "at": 8.27,
      "gain": -20
     },
     {
      "name": "spotlight_swing",
-     "at": 9.09,
+     "at": 9.07,
      "gain": -24
     }
    ],
@@ -4086,11 +4218,11 @@
     {
      "text": "what's the catch?",
      "at": 0.3,
-     "until": 3.73,
+     "until": 3.68,
      "kind": "ui"
     }
    ],
-   "reelDur": 3.73,
+   "reelDur": 3.68,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -4178,7 +4310,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 4.99,
+   "reelDur": 4.96,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · the demo cue (swung, chip lead, light band), one continuous performance; ducks under every line; the tune's own chip echo under the three-part harmony (THE COPY is out of the demo)"
@@ -4457,13 +4589,13 @@
     "engineer",
     "rima"
    ],
-   "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic. She doesn't look up: her held mark (11.14) is the reaction.",
+   "caption": "The ENGINEER, unclipping his headset, stops beside RIMA at her mark and reads it to her off his phone, off mic: the one word. She doesn't look up: her held mark (11.14) is the reaction.",
    "lines": [
     {
      "id": "e2-a2-0037",
      "who": "engineer",
      "text": "Mas just posted. One word.",
-     "t": 0.99,
+     "t": 0.95,
      "dur": 1.68,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
      "in": 0.4,
@@ -4506,63 +4638,23 @@
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0037__engineer-A.wav",
       "in": 0.4,
-      "t": 0.99,
+      "t": 0.95,
       "dur": 1.68
      }
     },
     {
      "id": "e2-a2-0038",
      "who": "engineer",
-     "text": "'Her.' Like the movie. The guy and his computer.",
-     "t": 3.27,
-     "dur": 3.03,
+     "text": "'Her.'",
+     "t": 3.23,
+     "dur": 0.34,
      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
-     "in": 0.48,
+     "in": 0.47,
      "words": [
       [
        "'Her.'",
-       0.021,
-       0.323
-      ],
-      [
-       "Like",
-       0.787,
-       0.973
-      ],
-      [
-       "the",
-       1.008,
-       1.077
-      ],
-      [
-       "movie",
-       1.124,
-       1.507
-      ],
-      [
-       "The",
-       1.751,
-       1.867
-      ],
-      [
-       "guy",
-       1.925,
-       2.122
-      ],
-      [
-       "and",
-       2.169,
-       2.25
-      ],
-      [
-       "his",
-       2.285,
-       2.366
-      ],
-      [
-       "computer",
-       2.413,
-       2.889
+       0.054,
+       0.31
       ]
      ],
      "tag": "offmic",
@@ -4576,14 +4668,14 @@
      },
      "kokoro": {
       "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0038__engineer-A.wav",
-      "in": 0.48,
-      "t": 3.27,
-      "dur": 3.03
+      "in": 0.47,
+      "t": 3.23,
+      "dur": 0.34
      }
     }
    ],
    "onscreen": [],
-   "reelDur": 6.87,
+   "reelDur": 4.12,
    "fx": [],
    "cues": [
     "music (v1): E02-07 · thins to a pad at ENDED and holds it under the post"
@@ -4591,7 +4683,7 @@
    "sounds": [
     {
      "name": "headset_unclip",
-     "at": 0.283,
+     "at": 0.271,
      "gain": -26
     }
    ],
@@ -4607,7 +4699,7 @@
      "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
     },
     "camera": "2S · the ENGINEER beside RIMA at her mark, unclipping his headset, off mic, reading his phone; she doesn't look up",
-    "picture": "Said to a listener (W19). His words are the film's premise, not the voice (D-6)."
+    "picture": "Said to a listener (W19). The word alone, no gloss (the fixes pass: the film's premise explained the subtext, W7, and pointed at the contested set)."
    }
   },
   {
@@ -4727,15 +4819,23 @@
    "set": "stage",
    "style": "BASE",
    "shot": "insert",
-   "frame": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
+   "frame": "ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat",
    "side": "",
    "room": "demo_house",
    "chars": [
-    "alyi"
+    "alyi",
+    "mas"
    ],
-   "caption": "In its chrome armrest, for two seconds, the party from last September: Alyi turning to Mas with a toast and a smile. Then the chrome shows only the empty seat.",
+   "caption": "On the Door's note a glint runs across the empty seat's chrome armrest, and on it we cut to the party from last September, in its own frame: Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Then the armrest again: only the empty seat.",
    "lines": [],
-   "onscreen": [],
+   "onscreen": [
+    {
+     "text": "RAIL: SEP 2023",
+     "at": 0.4,
+     "until": 2.55,
+     "kind": "rail"
+    }
+   ],
    "reelDur": 3.4,
    "fx": [],
    "cues": [
@@ -4747,14 +4847,20 @@
      "at": 0.2,
      "gain": -26,
      "note": "the Door, first note missing (score)"
+    },
+    {
+     "name": "glass_nudge",
+     "at": 0.62,
+     "gain": -30,
+     "note": "the memory's clink, far and soft under the Door"
     }
    ],
    "passes": {
     "scene": "12",
     "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
     "pace": "weighted",
-    "camera": "ECU · the chrome armrest: Ep1's Sep 25 party toast for two seconds, then only the empty seat",
-    "picture": "Ep1's own art (copied), held 2 s (R2). A memory in a surface, not a ghost: it plays as a reflection of a past event, then goes."
+    "camera": "ECU · the chrome armrest, a glint → Ep1's Sep 25 party in its own frame for two seconds → the armrest, only the empty seat",
+    "picture": "Ep1's own art at full frame (its redrawn party: Alyi warm, real arms and hands on the cup and the glass), a memory with its date in the band, never a reflection (the fixes pass: a moving image of Alyi in a surface is the 'glass Alyi' grammar, P8, D-64; and the chrome had drawn both faces cold, P5)."
    }
   },
   {
@@ -4910,50 +5016,8 @@
    "chars": [
     "mas"
    ],
-   "caption": "He types his own post, at a post's pace, and posts it. His posted words hold. Over them, after both posts have had their read time, his voice.",
-   "lines": [
-    {
-     "id": "e2-vo-06",
-     "who": "mas",
-     "text": "i came back.",
-     "t": 9.3,
-     "dur": 1.2,
-     "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-     "in": 0.35,
-     "words": [
-      [
-       "I",
-       0.0,
-       0.116
-      ],
-      [
-       "came",
-       0.255,
-       0.592
-      ],
-      [
-       "back",
-       0.65,
-       1.068
-      ]
-     ],
-     "tag": "V.O.",
-     "cut": false,
-     "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
-     "el": {
-      "take": "e2-vo-06__mas-manalt-C.wav",
-      "device_copy": false,
-      "dry": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-      "reused_from": null
-     },
-     "kokoro": {
-      "audio": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
-      "in": 0.35,
-      "t": 9.3,
-      "dur": 1.2
-     }
-    }
-   ],
+   "caption": "He types his own post, at a post's pace, and posts it. His posted words hold, in silence, past their read time.",
+   "lines": [],
    "onscreen": [
     {
      "text": "ALYI and NOPEAI are going to part ways. This is very sad to me; ALYI is easily one of the greatest minds of our generation, a guiding light of our field, and a dear friend.",
@@ -4993,13 +5057,8 @@
     "scene": "12",
     "mode": "SINGLE IMAGE / INSERT → DOCUMENT",
     "pace": "weighted",
-    "tempo": {
-     "pace": "weighted",
-     "gaps": {},
-     "rule": "longer, only on turns"
-    },
     "camera": "ECU · he types his own post at a post's pace and posts it → the post, hard-stopped at \"…and a dear friend.\"",
-    "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll."
+    "picture": "Sentence case as the source has it; no capital 'I' on screen (Ep7's slip is reserved). No scroll. No V.O. here (the fixes pass: W8, silence over another person's real act and at the contested moment; facts §F)."
    }
   },
   {
