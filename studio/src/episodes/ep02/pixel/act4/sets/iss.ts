@@ -20,15 +20,15 @@
 //   issRoom(b, f, st)           22.05 the lit room seen through the gap: Alyi at a desk, working, absorbed (he never
 //                               looks up); the flyer falling inside, out of frame, unseen (st.drop 0..3)
 //   drawMasBackSmall(b, x, footY, h, step)   Mas from behind at any small height (the walk away's distance)
-import {Buf, rect, line, ellipse, bayer, hash, clamp, TRANSPARENT} from '../../../../../shared/pixel/px';
+import {Buf, rect, line, ellipse, poly, bayer, hash, clamp, TRANSPARENT} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf} from '../../../../../shared/pixel/palette';
 import {drawOrb} from '../../../../../shared/pixel/cast/orb';
 import {drawMasMedium, MAS_MEDIUM_DEFAULT, MAS_MW, MAS_MH, MAS_M_DESK} from '../../../../../shared/pixel/cast/mas-medium';
 import {fill, vramp, RH, dith, capsule, grip, HANDSKIN, armTo} from '../../art/kit';
 import {drawMasStand2, drawMasBack, MAS2_FOOT} from '../../art/cast/mas2';
-import {drawAlyiAtWork} from '../../art/cast/alyi2';
 import {drawFlyer} from '../../art/sets/lobby2';
 import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
+import {bentArm, clothLine, clothArea} from './common';
 
 /** from iss_scene.py's anchors.json (render of 2026-10-09): [x, y] in native pixels of the 480 x 203 room area */
 export let ISS_ANCHORS: Record<string, Record<string, [number, number]>> = {"wide":{"slot":[368.3,112.1],"doorL0":[348.0,152.8],"doorR0":[388.0,152.8],"doormark":[353.3,157.0],"doormarkHead":[353.8,82.1],"walk0":[-10.8,157.7],"walkMid":[205.4,157.7],"walk0Head":[-12.0,82.0],"mcuMas":[350.8,114.1],"mcuMasHead":[351.0,85.1],"away0":[340.6,158.5],"away0Head":[341.1,81.8],"away1":[-220.6,171.3],"away1Head":[-223.2,79.7]},"ots":{"slot":[228.3,118.1],"doorL0":[110.3,433.7],"doorR0":[314.1,298.8],"doormark":[187.2,686.9],"doormarkHead":[119.6,-344.5],"mcuMas":[116.3,301.7],"mcuMasHead":[59.0,-249.5],"away0":[25.4,1181.8],"away0Head":[-4981.3,-6032.3]},"mcu":{"slot":[269.6,191.9],"doorL0":[243.6,327.1],"doorR0":[318.3,504.3],"doormark":[150.6,338.8],"doormarkHead":[152.7,64.3],"walk0":[148.8,156.2],"walkMid":[145.5,197.5],"walk0Head":[149.2,101.0],"mcuMas":[159.7,178.3],"mcuMasHead":[160.4,76.0],"away0":[122.2,310.8],"away0Head":[124.7,69.8],"away1":[110.1,147.1],"away1Head":[110.6,102.9]},"knock":{"slot":[271.5,106.3],"doorL0":[251.3,148.8],"doorR0":[291.4,148.1],"doormark":[254.8,151.2],"doormarkHead":[254.9,75.4],"walk0":[-147.7,159.5],"walkMid":[102.5,154.6],"walk0Head":[-148.7,73.7],"mcuMas":[252.3,107.9],"mcuMasHead":[252.3,78.5],"away0":[241.8,152.3],"away0Head":[241.8,75.2],"away1":[-369.8,172.3],"away1Head":[-371.6,71.0]},"away":{"slot":[382.5,121.1],"doorL0":[375.0,168.0],"doorR0":[390.3,178.8],"doormark":[345.4,167.1],"doormarkHead":[345.8,84.6],"walk0":[304.2,129.4],"walkMid":[319.2,145.0],"walk0Head":[304.3,89.5],"mcuMas":[347.5,119.9],"mcuMasHead":[347.7,87.9],"away0":[333.0,163.9],"away0Head":[333.4,85.0],"away1":[269.8,123.8],"away1Head":[269.9,90.2]}};
@@ -40,7 +40,9 @@ const HOOD = [PAL.N1, PAL.G0, PAL.G2, PAL.G3, PAL.G4, PAL.G5];
 /** a layer pixel that darkens the plate under it instead of covering it (the figures' contact shadows on the 3D lot) */
 export const ISS_SHADOW = 0x2000000;
 /** a dithered contact shadow under a figure's feet, on the layer */
-const shadowAt = (b: Buf, x: number, y: number, w: number) => { for (let i = -w; i <= w; i++) for (let j = -2; j <= 1; j++) if (Math.abs(i) / w + Math.abs(j + 0.5) / 2.5 < 1 && bayer(x + i, y + j) < 0.75 && b.get(x + i, y + j) === TRANSPARENT) b.set(x + i, y + j, ISS_SHADOW); };
+/** (the review pass: the dithered strip read as a grate or a mat at the door) a soft SOLID ellipse, 30% black where
+ *  the layer is laid over the plate, no tick pattern */
+const shadowAt = (b: Buf, x: number, y: number, w: number) => { for (let i = -w - 1; i <= w + 1; i++) for (let j = -3; j <= 2; j++) if (Math.hypot(i / (w + 0.5), (j + 0.5) / 2.6) < 1 && b.get(x + i, y + j) === TRANSPARENT) b.set(x + i, y + j, ISS_SHADOW); };
 /** composite one layer pixel over a plate pixel (0xRRGGBB) */
 export const issOver = (plate: number, v: number) => v === TRANSPARENT ? plate : v === ISS_SHADOW ? (((plate >> 16) * 0.7) << 16) | ((((plate >> 8) & 255) * 0.7) << 8) | ((plate & 255) * 0.7) : v;
 /** Mas from behind, h px tall (12..80), a 4-step walk (step 0..3); lit from the overcast left */
@@ -68,18 +70,81 @@ export const drawMasBackSmall = (b: Buf, x: number, footY: number, h: number, st
 };
 
 // ------------------------------------------------------------------ the lit room behind the slot (22.05)
+/** the review pass (P5, P8: the act's emotional peak had its worst anatomy: one straight slab of an arm, no neck, a
+ *  featureless profile in an orange void): ALYI at work, redrawn for the glimpse. A lamp-lit room seen through the slot
+ *  (the gap is the frame's rows 62..164): the far wall warm in the desk lamp's pool and falling off to the right, a
+ *  shelf of binders, his chair's back; Alyi seated at the desk, turned three-quarters to camera-left, bent over the
+ *  page: his head bowed (the high forehead and the short dark hair at the back, the ear), his face in the lamp's light
+ *  looking DOWN at the page (the lid low over the eye, the calm closed mouth), a neck into the sweater's collar; his
+ *  writing arm from the shoulder down to the elbow on the desk and the forearm forward to the hand with the pen (it
+ *  moves, on 4s), the far hand flat on the page; the lamp on the desk at the left. He never looks up. */
+/** his room head (art/cast/alyi2 SHEAD: Ep1's alyi-speak stand, the on-model 3/4 head, COPIED), with the eyes cast
+ *  down to the page: the lids lowered (a dark line) over the pupils under them, open; the calm closed mouth kept */
+const ALYI_HEAD = [
+  '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh2334444455o...', 'hhh23444bbbb4...', 'hhh2234ee4ee4o..',
+  'hhh22334i44i44o.', '.hh22334444444o5', '.oh2233444444o..', '..o122334mmm4o..', '..o122334444443.', '...o1222333332..', '....o11222......', '.....o1122......',
+];
+/** the lamp's warm light on him: the head's ramp (o outline, 1..5 shadow to highlight), the hair, the eyes */
+const AHP: Record<string, number> = {o: PAL.S1, '1': PAL.S2, '2': PAL.S3, '3': PAL.S4, '4': PAL.S5, '5': PAL.S6, h: PAL.B1, b: PAL.B2, e: PAL.N0, i: PAL.B1, m: PAL.S2};
+/** his sweater (alyi2's room ramp: the mauve X family), lit from the lamp at the left */
+const SWEAT = [PAL.N0, PAL.X0, PAL.X1, PAL.X2, PAL.X3];
+export const alyiAtWork = (b: Buf, f: number) => {
+  const DESK = 136, AX = 252;
+  // his chair's back behind him
+  fill(b, AX + 12, 106, 7, DESK - 106, PAL.D1); fill(b, AX + 12, 106, 7, 1, PAL.D3); fill(b, AX + 12, 106, 1, DESK - 106, PAL.D2);
+  // the torso, bent forward over the desk: the back's curve (rounded at the shoulders, the spine bowed toward us), the
+  // shoulders ahead of the hips, lit on its front from the lamp, the back in shadow
+  for (let y = 106; y < DESK + 2; y++) {
+    const t = (y - 106) / (DESK + 2 - 106), lean = Math.round((1 - t) * 7);
+    const sh = t < 0.12 ? Math.round((0.12 - t) * 40) : 0;
+    const x0 = AX - 15 - lean + Math.round(t * 4) + sh, x1 = AX + 6 - lean + Math.round(Math.sin(Math.PI * Math.min(1, t * 1.3)) * 4) + Math.round(t * 3) - Math.round(sh * 0.6);
+    for (let x = x0; x <= x1; x++) b.set(x, y, x === x0 || x === x1 ? SWEAT[0] : x - x0 < 4 ? SWEAT[3] : x1 - x < 5 ? SWEAT[1] : SWEAT[2]);
+  }
+  // the collar's rib round his neck
+  fill(b, AX - 18, 106, 11, 2, SWEAT[3]); fill(b, AX - 18, 106, 11, 1, SWEAT[4]);
+  // the head (mirrored to face camera-left, the face to the page), tipped forward over it: each row sheared toward
+  // the page, the crown leading; it sits down on the collar (a short neck: he is bent over)
+  const hx = AX - 27, hy = 93;
+  ALYI_HEAD.forEach((row, j) => {
+    const dx = -Math.round((ALYI_HEAD.length - 1 - j) * 0.32);
+    for (let i = 0; i < row.length; i++) { const c = AHP[row[row.length - 1 - i]]; if (c !== undefined) b.set(hx + i + dx, hy + j, c); }
+  });
+  // the desk: its top lit toward the lamp, its front panel (a drawer) under it, cut by the slot's lower edge
+  for (let x = 110; x < 360; x++) { const lit = Math.max(0, 1 - Math.abs(x - 200) / 120); b.set(x, DESK, lit > 0.5 ? PAL.D4 : PAL.D3); b.set(x, DESK + 1, lit > 0.3 ? PAL.D3 : PAL.D2); for (let y = DESK + 2; y < DESK + 5; y++) b.set(x, y, PAL.D3); for (let y = DESK + 5; y < RH; y++) b.set(x, y, (x - 110) % 70 === 0 ? PAL.D1 : PAL.D2); }
+  fill(b, 220, DESK + 12, 60, 1, PAL.D1); fill(b, 246, DESK + 15, 8, 2, PAL.W5);
+  // the page in the lamp's pool, his written lines
+  fill(b, 182, DESK - 2, 50, 3, PAL.P2); fill(b, 182, DESK - 2, 50, 1, PAL.W9); for (let i = 0; i < 4; i++) fill(b, 188 + i * 10, DESK - 1, 7 - (i % 2) * 2, 1, PAL.G5);
+  // the far hand flat on the page's corner
+  fill(b, 190, DESK - 4, 7, 3, PAL.S4); fill(b, 190, DESK - 4, 7, 1, PAL.S5); b.set(189, DESK - 3, PAL.S3);
+  // the writing arm: the upper arm from the shoulder down to the elbow resting on the desk by his side, the forearm
+  // forward along the desk to the hand; the sleeve narrowing to the cuff
+  const shd: [number, number] = [AX - 8, 112], elb: [number, number] = [AX - 4, DESK - 3], wr: [number, number] = [AX - 26, DESK - 4];
+  sleeve(b, shd, elb, 4, 3.4, SWEAT, [-0.8, -0.5], {fold: false});
+  sleeve(b, elb, wr, 3.4, 2.6, SWEAT, [-0.8, -0.5], {fold: false});
+  b.set(elb[0] - 1, elb[1] - 3, SWEAT[1]); b.set(elb[0] - 2, elb[1] - 4, SWEAT[1]);
+  // the hand round the pen (its knuckles up, the lamp on them), the pen's nib on the line, moving on 4s
+  const pen = Math.floor(f / 4) % 3;
+  fill(b, wr[0] - 6, wr[1] - 2, 6, 4, PAL.S4); fill(b, wr[0] - 6, wr[1] - 2, 6, 1, PAL.S5); fill(b, wr[0] - 6, wr[1] + 1, 6, 1, PAL.S2); b.set(wr[0] - 7, wr[1] - 1, PAL.S4);
+  const nib: [number, number] = [wr[0] - 9 + pen, DESK - 1];
+  line(nib[0], nib[1], nib[0] + 5, nib[1] - 7, b.ink(PAL.N1)); b.set(nib[0], nib[1], PAL.W7);
+  // the desk lamp at the left: its weighted base, the jointed arm, the shade tipped toward the page, the bulb
+  fill(b, 140, DESK - 3, 14, 3, PAL.N2); fill(b, 140, DESK - 3, 14, 1, PAL.G3);
+  line(147, DESK - 3, 140, 112, b.ink(PAL.N3)); line(140, 112, 156, 100, b.ink(PAL.N3));
+  poly([150, 94, 166, 98, 166, 110, 156, 110], b.ink(PAL.N2)); line(150, 94, 166, 98, b.ink(PAL.G3));
+  fill(b, 158, 108, 7, 2, PAL.W8);
+};
 export const issRoom = (b: Buf, f: number, st: {drop?: number} = {}) => {
-  // a warm room, plain: the far wall in lamp light falling off to the right, the floor, one desk, Alyi at work at it
-  const WALL = [PAL.W2, PAL.W3, PAL.W4, PAL.W5, PAL.W6], FLOOR = [PAL.D1, PAL.D2, PAL.D3, PAL.D4];
+  // a warm room, plain: the far wall in the desk lamp's pool, falling off to the right and down, the floor; one desk
+  const WALL = [PAL.W1, PAL.W2, PAL.W3, PAL.W4, PAL.W5, PAL.W6], FLOOR = [PAL.D1, PAL.D2, PAL.D3, PAL.D4];
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) {
-    const L = clamp(1 - Math.hypot((x - 200) / 330, (y - 90) / 240), 0, 1);
-    const ramp = y < 132 ? WALL : FLOOR, k = clamp(Math.floor(L * (ramp.length - 0.01) * 1.25 + bayer(x, y) - 0.5), 0, ramp.length - 1);
+    const L = clamp(1 - Math.hypot((x - 170) / 300, (y - 112) / 150), 0, 1);
+    const ramp = y < 150 ? WALL : FLOOR, k = clamp(Math.floor(L * (ramp.length - 0.01) * 1.2 + bayer(x, y) - 0.5), 0, ramp.length - 1);
     b.set(x, y, ramp[k]);
   }
-  fill(b, 0, 131, 480, 2, PAL.D1);
-  // a shelf of binders on the far wall (nothing legible), a window-less wall: the room has one job
-  fill(b, 300, 60, 120, 3, PAL.D2); for (let k = 0; k < 14; k++) fill(b, 304 + k * 8, 40 + (k % 3), 6, 20 - (k % 3), [PAL.N3, PAL.W3, PAL.G3][k % 3]);
-  drawAlyiAtWork(b, 196, 158, f);
+  // a shelf of binders on the far wall (nothing legible), its shadow; a framed print (blank) beside the lamp
+  fill(b, 312, 92, 112, 3, PAL.D2); fill(b, 312, 95, 112, 1, PAL.W1); for (let k = 0; k < 13; k++) fill(b, 316 + k * 8, 72 + (k % 3), 6, 20 - (k % 3), [PAL.N3, PAL.W3, PAL.G3, PAL.D3][k % 4]);
+  fill(b, 70, 72, 34, 26, PAL.D2); fill(b, 73, 75, 28, 20, PAL.W3); fill(b, 73, 75, 28, 1, PAL.W4);
+  alyiAtWork(b, f);
   // the flyer falling inside, at the bottom of the gap, out of frame (unseen by him)
   // the flyer falling just inside the door, close to the gap (big, soft), down out of frame: nobody sees it land
   const d = st.drop ?? -1;
@@ -126,9 +191,12 @@ const shoulderOTS = (b: Buf, slot: [number, number], push: number, unfold = 2, l
   // page's face, the index behind it), Ep1's insert-hands grammar, the overcast light
   const pinchAt: [number, number] = [fx0 + 10, fy0 + 3 - 2];
   const h = placeHand(POSES.pinch([0.5, -0.55, -0.65], [-0.25, -0.7, 0.66], 'R'), {s: 3.2, at: pinchAt, anchor: 'thumb', light: 'lobby', cuffRamp: [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.G5]});
-  const elbow: [number, number] = [h.cuffEnd[0] - 34, h.cuffEnd[1] + 40];
-  sleeve(b, [104, 204], elbow, 14, 12, [PAL.N0, HOOD[1], HOOD[2], HOOD[3], HOOD[4]]);
-  sleeve(b, elbow, h.cuffEnd, 11, 9, [PAL.N0, HOOD[1], HOOD[2], HOOD[3], HOOD[4]]);
+  // (the review pass: the arm was one straight bar from the frame's foot to the flyer) the arm bent: the upper arm out
+  // from his shoulder at the frame's lower left to the elbow, held out and low by the frame's foot, the forearm angled
+  // up from it to the cuff at the slot; it narrows toward the wrist, a fold inside the elbow
+  bentArm(b, [80, 160], [172, 197], h.cuffEnd, [16, 12.5, 9], [PAL.N0, HOOD[1], HOOD[2], HOOD[3], HOOD[4]], [-0.55, -0.83]);
+  // the upper arm comes out from under the shoulder's curve: the shoulder's own mass over the sleeve's root
+  for (let y = 130; y < RH; y++) for (let x = 40; x < 116; x++) { const dsh = Math.hypot((x + 20) / 150, (y - 230) / 170), dh = Math.hypot((x - 30) / 48, (y - 60) / 56); if (dsh < 0.86 && dh >= 1) b.set(x, y, dsh > 0.8 ? HOOD[3] : HOOD[2]); }
   drawHand(b, h.hand, h.x, h.y);
 };
 
@@ -163,7 +231,7 @@ export const drawMasBackKnock = (b: Buf, fx: number, fy: number, raise: number) 
   b.set(fi[0] - 3, fi[1] - 1, KN.skinD);
 };
 
-export interface IssSt { t?: number; scan?: boolean; push?: number; lit?: boolean; raise?: number; drop?: number; unfold?: number; lift?: number }
+export interface IssSt { t?: number; scan?: boolean; scanK?: number; push?: number; lit?: boolean; raise?: number; drop?: number; unfold?: number; lift?: number }
 export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away', f: number, st: IssSt = {}) => {
   const step = Math.floor(f / 3) % 4;
   if (shot === 'wide') {
@@ -175,8 +243,31 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     else drawMasStand2(b, x, y, {arm: 'down', legs: (['w0', 'w1', 'w2', 'w3'] as const)[step]});
     // THE ORB at his shoulder, looking at the cube, its lens firing; it toasts nothing (it can't verify a door)
     const ox = x + 24, oy = y - 86;
-    if (st.scan) for (let k = 0; k < 40; k++) { const px = ox + 8 + k * 2, py = oy + Math.round(k * 0.3); if (bayer(px, py) < 0.5) b.set(px, py, PAL.C7); }
-    drawOrb(b, ox, oy, 7, {look: [0.8, 0.1], aperture: st.scan ? 1 : 0.5, scanning: !!st.scan, monitor: 1});
+    // (the review pass: the scan was a few faint dots aimed past the cube into the sky) its scan SWEEPS THE DOOR: a fan
+    // from the lens to a line across the door's face, walking from the top of the door to its foot in held steps;
+    // then the aperture closes and an empty toast hangs a moment, dim: it can't verify a door
+    const sc = st.scanK ?? -1;
+    const [dl] = A('wide', 'doorL0', [348, 153]), [dr, db] = A('wide', 'doorR0', [388, 153]), dt = A('wide', 'slot', [368, 112])[1] - 32;
+    const lx = ox + 6, ly = oy + 1;
+    if (sc >= 0 && sc < 28) {
+      const yy = Math.round(dt + (db - 2 - dt) * Math.min(1, (Math.floor(sc / 3) * 3) / 24));
+      // the fan's fill (dithered, thin near the lens), its two edges, the line it draws on the door
+      for (let y2 = Math.min(ly, yy) - 1; y2 <= Math.max(ly, yy) + 1; y2++) for (let x2 = Math.min(lx, dl) - 1; x2 <= dr + 1; x2++) {
+        const u = (y2 - ly) / ((yy - ly) || 1); if (u < 0.05 || u > 1) continue;
+        const xa = lx + (dl - lx) * u, xb = lx + (dr - lx) * u;
+        if (x2 >= Math.min(xa, xb) && x2 <= Math.max(xa, xb) && bayer(x2, y2) < 0.18 + 0.2 * u && b.get(x2, y2) === TRANSPARENT) b.set(x2, y2, PAL.C7);
+      }
+      line(lx, ly, dl, yy, b.ink(PAL.C6)); line(lx, ly, dr, yy, b.ink(PAL.C6));
+      for (let x2 = dl; x2 <= dr; x2++) { b.set(x2, yy, PAL.C8); b.set(x2, yy + 1, PAL.C6); }
+    }
+    const closing = sc >= 28;
+    drawOrb(b, ox, oy, 7, {look: [0.35, 0.75], aperture: sc >= 0 && !closing ? 1 : closing ? 0.15 : 0.5, scanning: sc >= 0 && !closing, monitor: 1});
+    if (closing && sc < 46) {
+      // the empty toast: its frame only, dim, nothing in it
+      const tx = ox - 14, ty = oy - 22;
+      fill(b, tx, ty, 30, 12, PAL.N2); fill(b, tx, ty, 30, 1, PAL.C3); fill(b, tx, ty + 11, 30, 1, PAL.N1); fill(b, tx, ty, 1, 12, PAL.C3); fill(b, tx + 29, ty, 1, 12, PAL.C3);
+      b.set(tx + 13, ty + 12, PAL.N2); b.set(tx + 14, ty + 12, PAL.N2); b.set(tx + 14, ty + 13, PAL.N2);
+    }
   } else if (shot === 'ots') {
     shoulderOTS(b, A('ots', 'slot', [250, 110]), st.push ?? 1, st.unfold ?? 2, st.lift ?? 0);
   } else if (shot === 'mcu') {
@@ -200,6 +291,14 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     const row = [...Array(xmax - xmin + 1).keys()].map((i) => b.get(xmin + i, ybot));
     const dom = (i: number) => { const n = new Map<number, number>(); for (let j = Math.max(0, i - 3); j <= Math.min(row.length - 1, i + 3); j++) if (row[j] !== TRANSPARENT) n.set(row[j], (n.get(row[j]) ?? 0) + 1); return [...n.entries()].sort((a, c) => c[1] - a[1])[0]?.[0] ?? HOOD[2]; };
     for (let x = xmin; x <= xmax; x++) { const c = x <= xmin + 1 || x >= xmax - 1 ? HOOD[0] : dom(x - xmin); for (let y = ybot + 1; y < RH; y++) b.set(x, y, c); }
+    // (the review pass: carried down plain he read as cloaked) the hoodie's structure on the cloth: the near arm down
+    // his side (its lit face a rung up toward the overcast, the crease where it meets his body), the far arm's edge,
+    // the near shoulder's seam from the neckline
+    const cloth = (x: number, y: number) => { const v = b.get(x, y); if (v === TRANSPARENT) return false; const fm = familyOf(v); return !!fm && (fm[0] === 'G' || fm[0] === 'N'); };
+    clothArea(b, [[xmin + 1, RH], [xmin + 1, ybot - 6], [xmin + 8, ybot - 12], [xmin + 14, ybot - 2], [xmin + 15, RH]], cloth, 1);
+    clothLine(b, [[xmin + 14, ybot - 2], [xmin + 15, ybot + 20], [xmin + 16, RH - 1]], cloth, -2);
+    clothLine(b, [[xmax - 7, ybot + 2], [xmax - 8, RH - 1]], cloth, -2);
+    clothLine(b, [[xmin + 26, ybot - 16], [xmin + 18, ybot - 10], [xmin + 14, ybot - 3]], cloth, -1);
   } else if (shot === 'knock') {
     const [x, y] = A('knock', 'doormark', [250, 190]);
     shadowAt(b, Math.round(x), Math.round(y), 13);

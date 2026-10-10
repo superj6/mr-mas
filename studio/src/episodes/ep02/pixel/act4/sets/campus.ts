@@ -12,22 +12,22 @@
 //                          pockets his phone and walks out past it
 //   phonePush(b, f, st)    [POV] 19.11: a push from his face into his phone: the stream's stage full-bleed, the GPS
 //                          breadcrumb (in older colours) drawing itself across the boards he once stood on
-import {Buf, rect, line, ellipse, bayer, hash, clamp} from '../../../../../shared/pixel/px';
-import {PAL, stepColor} from '../../../../../shared/pixel/palette';
+import {Buf, rect, line, ellipse, bayer, hash, clamp, TRANSPARENT} from '../../../../../shared/pixel/px';
+import {PAL, stepColor, familyOf} from '../../../../../shared/pixel/palette';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {campus, keynotePainter, breadcrumb} from '../../art/sets/elppa';
-import {drawMasStand2} from '../../art/cast/mas2';
+import {drawMasStand2, MAS2_FOOT} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
 import {fill, pt, tiny, vramp} from '../../art/kit';
-import {RH, W, glow, putBustSoft} from './common';
+import {RH, W, glow, putBustSoft, mirror, bentArm} from './common';
 
 // ================================================================== the lawn, wide
 export interface LawnSt {
   /** Mas: his foot x, walking (legs) or standing, typing over his phone (arm 'phone', head bowed), or pocketing it */
-  mas?: {x: number; legs?: Mas2Legs; arm?: Mas2Arm; bow?: boolean} | null;
+  mas?: {x: number; legs?: Mas2Legs; arm?: Mas2Arm; bow?: boolean; typing?: boolean} | null;
   chat?: number;
   buzz?: boolean;
   thin?: number;
@@ -40,48 +40,89 @@ export const lawn = (b: Buf, f: number, st: LawnSt = {}) => {
     if (!m) return;
     // his shadow on the grass, then him (the art's stand rig: the grey hoodie, three collars, no pop, no badge)
     for (let i = -12; i <= 12; i++) for (let j = -1; j <= 1; j++) if (Math.abs(i) / 12 + Math.abs(j) / 1.5 < 1 && bayer(m.x + i, 196 + j) < 0.6) bb.set(m.x + i, 196 + j, stepColor(bb.get(m.x + i, 196 + j), -1));
-    drawMasStand2(bb, m.x, 196, {arm: m.arm ?? 'phone', legs: m.legs ?? 'stand', bow: m.bow ?? true, light: 'room'});
+    if ((m.arm ?? 'phone') === 'phone' && (m.bow ?? true)) drawMasBowed(bb, m.x, 196, f, {legs: m.legs ?? 'stand', typing: m.typing ?? true});
+    else drawMasStand2(bb, m.x, 196, {arm: m.arm ?? 'phone', legs: m.legs ?? 'stand', bow: m.bow ?? true, light: 'room'});
   });
+};
+/** Mas head DOWN over his lit phone (the review pass: the art rig's 'bow' drops the head a pixel and closes the eyes,
+ *  which read as head-up at the screen): the head tipped forward and down over the phone (its rows sheared toward the
+ *  way he faces and lowered, the crown leading), the phone's screen a little brighter with its light on his chin, the
+ *  thumbs moving on it (`typing`, held steps on 3s) */
+export const drawMasBowed = (b: Buf, footX: number, footY: number, f: number, o: {legs?: Mas2Legs; typing?: boolean} = {}) => {
+  const t = new Buf(W, 270, TRANSPARENT);
+  drawMasStand2(t, footX, footY, {arm: 'phone', legs: o.legs ?? 'stand', bow: true, light: 'room'});
+  const x0 = footX - MAS2_FOOT[0], y0 = footY - MAS2_FOOT[1];
+  const bob = o.legs === 'w0' || o.legs === 'w2' ? 1 : 0;
+  const HEAD_ROWS = 14 + bob;
+  // the body (every row below the head) as drawn
+  for (let y = y0 + HEAD_ROWS; y < Math.min(270, y0 + 80); y++) for (let x = x0 - 2; x < x0 + 48; x++) { const v = t.get(x, y); if (v !== TRANSPARENT) b.set(x, y, v); }
+  // the head, tipped: each row moved forward by a shear (the crown furthest) and down three
+  for (let j = 0; j < HEAD_ROWS; j++) {
+    const dx = 1 + Math.round((HEAD_ROWS - j) * 0.34), dy = 3;
+    for (let x = x0 - 2; x < x0 + 48; x++) { const v = t.get(x, y0 + j); if (v === TRANSPARENT) continue; b.set(x + dx, y0 + j + dy, v); }
+  }
+  // the phone's light on the underside of his face (the skin in the head's lower front)
+  for (let x = x0 + 18; x < x0 + 34; x++) for (let y = y0 + 22; y > y0 + 8; y--) { const c = b.get(x, y), fm = familyOf(c); if (fm && fm[0] === 'S') { b.set(x, y, stepColor(c, 1)); break; } }
+  // the phone: its screen lit, the thumbs on it (one lifted, then the other)
+  const px = x0 + 21, py = y0 + 27 + bob;
+  fill(b, px, py, 3, 4, PAL.N0); b.set(px + 1, py + 1, PAL.C8); b.set(px + 1, py + 2, PAL.C7);
+  if (o.typing !== false) { const tt = Math.floor(f / 3) % 3; if (tt !== 2) b.set(px + (tt === 0 ? 0 : 2), py - 1, PAL.S4); }
 };
 
 // ================================================================== Mas on the lawn, close
-/** the campus behind a close shot: the sky, the pavilions, the giant screen soft and big at frame right (the keynote's
- *  stage on it), the crowd's heads below; two rungs down. Cached */
+/** (the review pass: the giant screen sat behind him while he faced it, and he faced the other way from the wide) the
+ *  reverse: the camera stands on the screen's side, so behind him is the lawn he came across: the sky, the long
+ *  pavilion, the trees, a few late arrivals at the crowd's back; two rungs down, soft. Cached */
 let SOFT: Buf | null = null;
 const lawnSoft = () => {
   if (SOFT) return SOFT;
-  const t = new Buf(W, 270, PAL.N0);
-  campus(t, 0, {});
   const b = new Buf(W, RH, PAL.N0);
-  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(t.get(clamp(Math.round(150 + x * 0.6), 0, W - 1), clamp(Math.round(10 + y * 0.6), 0, RH - 1)), -1));
+  vramp(b, 0, 0, W, 96, [PAL.C6, PAL.C7, PAL.C8]);
+  // the pavilion: a long low white block, its band of teal glass, the roof's shadow line
+  fill(b, 0, 62, 300, 44, PAL.P2); fill(b, 0, 62, 300, 2, PAL.P1); for (let x = 6; x < 296; x += 22) fill(b, x, 76, 18, 14, PAL.C4); fill(b, 0, 104, 300, 2, PAL.G5);
+  // the trees beyond it, round canopies on short trunks
+  for (const [tx, r] of [[330, 26], [396, 30], [454, 24]] as Array<[number, number]>) { fill(b, tx - 2, 84, 5, 24, PAL.D2); ellipse(tx, 74, r, r * 0.8, b.ink(PAL.L2)); ellipse(tx - 4, 68, r * 0.7, r * 0.55, b.ink(PAL.L3)); }
+  // the lawn, then a few heads and shoulders at the crowd's back (people who came late, behind him)
+  vramp(b, 0, 106, W, RH - 106, [PAL.L3, PAL.L2, PAL.L1]);
+  for (const [hx, col] of [[26, PAL.F2], [70, PAL.R1], [118, PAL.G2], [402, PAL.U2], [452, PAL.D3]] as Array<[number, number]>) { for (let j = 0; j < 40; j++) fill(b, hx - Math.min(16, 8 + j), 150 + j, Math.min(32, 16 + j * 2), 1, col); ellipse(hx, 140, 8, 10, b.ink(PAL.B1)); }
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) { let c = stepColor(b.get(x, y), -1); if (bayer(x, y) < 0.25) c = stepColor(c, -1); b.set(x, y, c); }
   SOFT = b;
   return b;
 };
 const MASL = new Map<string, ReturnType<typeof masPortrait>>();
-/** his approved portrait in the noon light outdoors (the warm rig, keyed a step from the sun at camera-right) */
+/** his approved portrait at noon, MIRRORED to face camera-right (toward the screen, as in the wide), keyed one step
+ *  from the screen in front of him (the warm rig; the key on his face's front) */
 export const masNoonImg = (s: Partial<MasPortraitState>) => {
   const key = JSON.stringify(s); const hit = MASL.get(key); if (hit) return hit;
-  const out = faceLightImg(masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', ...s}), 1, {key: [1, -0.4]});
+  const out = mirror(faceLightImg(masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', ...s}), 1, {key: [-1, -0.4]}));
   MASL.set(key, out);
   return out;
 };
 const CUFF = [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.G5], SLV = [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.G5];
-export const masLawn = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; phone?: 'hand' | 'ear' | null; buzz?: boolean; look?: -1 | 0 | 1}) => {
+/** [MCU] Mas on the lawn (19.08-19.10), facing the screen (frame-right, off frame), the lawn behind him; his phone in
+ *  his hand low at his chest (`phone` 'hand', its screen lit), or at his ear ('ear', the arm bent at the elbow);
+ *  `down`: his eyes dropped to the phone (the lids lowered); lip-synced on the call. He stands right of centre, so the
+ *  typed V.O. under him runs over clean lawn */
+export const masLawn = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; phone?: 'hand' | 'ear' | null; buzz?: boolean; look?: -1 | 0 | 1; down?: boolean}) => {
   b.c.set(lawnSoft().c.subarray(0, W * RH));
-  const X = 118, Y = 28;
-  putBustSoft(b, masNoonImg({mouth: st.mouth ?? 'rest', look: st.look ?? -1}), X, Y, RH);
+  const X = 236, Y = 28;
+  const im = masNoonImg({mouth: st.mouth ?? 'rest', look: st.look ?? -1, lid: st.down ? 1 : 0});
+  putBustSoft(b, im, X, Y, RH);
+  // the screen's light on his near side: a pale wash on the front of his face and chest (the noon sun is overhead)
+  for (let y = Y + 20; y < RH; y++) for (let x = X + 70; x < X + 112; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && (fm[0] === 'S' || fm[0] === 'G') && bayer(x, y) < (x - X - 70) / 60) b.set(x, y, stepColor(c, 1)); }
   if (st.phone === 'ear') {
-    // the phone pressed to his ear (the portrait's visible ear at its right), his hand round its back, the sleeve down
-    const ex = X + 80, ey = Y + 50;
-    fill(b, ex - 3, ey - 18, 10, 40, PAL.N0); fill(b, ex - 2, ey - 17, 2, 38, PAL.G3);
-    const h = placeHand(POSES.grip([0.1, -1, 0.1], [0.95, 0, 0.3], 'L', 0.55), {s: 2.6, at: [ex + 4, ey + 6], anchor: 'middle', light: 'lobby', cuffRamp: CUFF});
-    sleeve(b, h.cuffEnd, [ex + 30, RH + 40], 9, 13, SLV);
+    // the phone pressed to his ear (the mirrored portrait's visible ear at its left), his hand round its back, the arm
+    // bent: the upper arm down from his shoulder to the elbow near the frame's foot, the forearm up to the hand
+    const ex = X + 31, ey = Y + 50;
+    const h = placeHand(POSES.grip([-0.1, -1, 0.1], [-0.95, 0, 0.3], 'R', 0.55), {s: 2.6, at: [ex - 4, ey + 6], anchor: 'middle', light: 'lobby', cuffRamp: CUFF});
+    bentArm(b, [X + 18, Y + 114], [X - 12, Y + 162], h.cuffEnd, [11, 9.5, 7], SLV, [0.5, -0.85]);
+    fill(b, ex - 6, ey - 18, 10, 40, PAL.N0); fill(b, ex + 1, ey - 17, 2, 38, PAL.G3);
     drawHand(b, h.hand, h.x, h.y);
   } else if (st.phone === 'hand') {
     // his phone low in his hand at his chest (it buzzes: a pixel of shake), its screen lit
     const sh = st.buzz && Math.floor(f / 2) % 2 ? 1 : 0;
-    const R = {x: X + 74 + sh, y: Y + 128, w: 32, h: 56};
-    holdPhone(b, R, {side: 'R', grip: 'wrap', light: 'lobby', widthCm: 7, thumbAt: 0.45, sleeveTo: [X + 160, RH + 60], cuffRamp: CUFF, sleeveRamp: SLV,
+    const R = {x: X + 54 + sh, y: Y + 128, w: 32, h: 56};
+    holdPhone(b, R, {side: 'L', grip: 'wrap', light: 'lobby', widthCm: 7, thumbAt: 0.45, sleeveTo: [X + 10, RH + 60], cuffRamp: CUFF, sleeveRamp: SLV,
       drawPhone: (bb) => { fill(bb, R.x, R.y, R.w, R.h, PAL.N0); fill(bb, R.x + 2, R.y + 3, R.w - 4, R.h - 6, st.buzz ? PAL.L2 : PAL.N3); if (st.buzz) tiny(bb, 'GERG', R.x + 5, R.y + 12, PAL.P2); }});
   }
   void f;

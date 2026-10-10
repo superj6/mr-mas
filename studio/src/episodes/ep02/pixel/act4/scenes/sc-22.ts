@@ -26,6 +26,7 @@ import type {PxShot} from '../../kit';
 import {Buf, clamp, ellipse, poly, TRANSPARENT} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {issLayer, issRoom, issOver, ISS_ANCHORS} from '../sets/iss';
+import {drawCheckPin} from '../sets/dark';
 import {adventureBand4} from '../sets/band';
 import {fill, vramp} from '../../art/kit';
 
@@ -33,12 +34,9 @@ const L = layouts();
 const W = 480, RH = 203;
 const OVL = (shot: string) => ({manifest: `out/ep02/v1/inserts/iss/${shot}/manifest.json`});
 
-/** the TPOOL pin (sc 20's, the matched object) at frame scale, falling into the white: a red map marker, its white
- *  dot, tumbling in two held drawings (upright, tipped) */
-const fallingPin = (b: Buf, x: number, y: number, tip: boolean) => {
-  if (tip) { poly([x - 6, y - 12, x + 6, y - 15, x + 7, y - 5, x - 2, y + 2, x - 6, y - 4], b.ink(PAL.R2)); ellipse(x, y - 9, 4, 4, b.ink(PAL.R3)); fill(b, x - 1, y - 10, 3, 3, PAL.P2); return; }
-  poly([x - 6, y - 14, x + 6, y - 14, x + 6, y - 8, x, y, x - 6, y - 8], b.ink(PAL.R2)); ellipse(x, y - 11, 5, 5, b.ink(PAL.R3)); fill(b, x - 1, y - 12, 3, 3, PAL.P2);
-};
+/** the TPOOL pin (sc 20's, the matched object), falling into the white at the ECU's size and x (the review pass: it
+ *  was a 12 px speck; 20.13 now ends on the same ~26 px pin dropping past the frame's foot at x ~253), tumbling on 3s */
+const fallingPin = (b: Buf, x: number, y: number, tip: boolean) => drawCheckPin(b, x, y, {rot: tip ? 1.5 : 0.6});
 
 // ================================================================== the plan: each frame's plate and pixel layer
 export interface IssFrame { plate: string | null; fig?: (b: Buf) => void }
@@ -51,7 +49,7 @@ export const ISS_PLAN: Record<string, Plan> = {
     if (k < t0) {
       // the pin falling through the white, accelerating, tumbling on 3s; out past the frame's foot
       const t = k - (fall - 10), y = Math.round(-16 + 0.16 * t * t + 2 * t);
-      return {plate: 'tilt_00', fig: y < RH + 16 ? (b) => fallingPin(b, 240 + Math.round(Math.sin(t / 7) * 6), y, Math.floor(t / 3) % 2 === 1) : undefined};
+      return {plate: 'tilt_00', fig: y < RH + 30 ? (b) => fallingPin(b, 253 + Math.round(Math.sin(t / 7) * 6), y, Math.floor(t / 3) % 2 === 1) : undefined};
     }
     if (k < iss - 4) return {plate: `tilt_${String(clamp(Math.floor((k - t0) / 2), 0, TILT_N - 1)).padStart(2, '0')}`};
     void t1;
@@ -59,7 +57,7 @@ export const ISS_PLAN: Record<string, Plan> = {
   },
   '22.02': (k, sh, f) => {
     const scan = mk(sh, 'scan', 102), arrive = scan - 6;
-    return {plate: 'wide', fig: (b) => issLayer(b, 'wide', f, {t: Math.min(1, Math.floor(k / 2) * 2 / arrive), scan: k >= scan && k < scan + 30})};
+    return {plate: 'wide', fig: (b) => issLayer(b, 'wide', f, {t: Math.min(1, Math.floor(k / 2) * 2 / arrive), scanK: k >= scan ? k - scan : -1})};
   },
   '22.03': (k, sh, f) => ({plate: 'wide', fig: (b) => issLayer(b, 'wide', f, {t: 1})}),
   '22.04': (k, sh, f) => {
@@ -90,7 +88,7 @@ export const ISS_PLAN: Record<string, Plan> = {
 const fallback = (fb: Buf, id: string, k: number, sh: PxShot, f: number) => {
   const p = ISS_PLAN[id](k, sh, f);
   if (id === '22.05') { issRoom(fb, f, {drop: dropAt(k, sh)}); return; }
-  if (p.plate === 'tilt_00') fill(fb, 0, 0, W, RH, PAL.P2);
+  if (p.plate === 'tilt_00') fill(fb, 0, 0, W, RH, PAL.P1);
   else { vramp(fb, 0, 0, W, 100, [PAL.G5, PAL.G6]); vramp(fb, 0, 100, W, RH - 100, [PAL.D3, PAL.D2]); if (p.plate === 'wide' || (p.plate ?? '').startsWith('tilt')) { fill(fb, 290, 40, 130, 124, PAL.P2); fill(fb, 336, 70, 40, 94, PAL.P1); } }
   if (p.fig) { const l = new Buf(W, 270, TRANSPARENT); p.fig(l); for (let i = 0; i < W * RH; i++) fb.c[i] = issOver(fb.c[i], l.c[i]); }
 };

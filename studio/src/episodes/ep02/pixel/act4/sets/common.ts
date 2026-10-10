@@ -329,3 +329,53 @@ export const footClean = <T extends Img>(im: T): T => {
   FOOT.set(im, out);
   return out as T;
 };
+
+// ------------------------------------------------------------------ the review pass (2026-10-10): cloth structure
+/** a seam or crease across cloth (P5: "a hoodie carried down plain reads as a cape"): along the polyline `pts`, only
+ *  where `cloth(x, y)` holds, the cloth a rung (k) down, and its lip (the pixel beside it on the `lip` side, dx) a rung
+ *  up, so the fold catches the light */
+export const clothLine = (b: Buf, pts: Array<[number, number]>, cloth: (x: number, y: number) => boolean, k = -1, lip: -1 | 0 | 1 = 0) => {
+  for (let i = 0; i + 1 < pts.length; i++) {
+    const [x0, y0] = pts[i], [x1, y1] = pts[i + 1], n = Math.max(1, Math.abs(x1 - x0), Math.abs(y1 - y0));
+    for (let s = 0; s <= n; s++) {
+      const x = Math.round(x0 + ((x1 - x0) * s) / n), y = Math.round(y0 + ((y1 - y0) * s) / n);
+      if (cloth(x, y)) b.set(x, y, stepColor(b.get(x, y), k));
+      if (lip && cloth(x + lip, y)) b.set(x + lip, y, stepColor(b.get(x + lip, y), -k));
+    }
+  }
+};
+/** a region of cloth (a polygon) a rung (k) up or down: an arm's lit side, a shoulder turned away */
+export const clothArea = (b: Buf, poly: Array<[number, number]>, cloth: (x: number, y: number) => boolean, k: number, dither = 0) => {
+  const ys = poly.map((p) => p[1]), xs = poly.map((p) => p[0]);
+  for (let y = Math.floor(Math.min(...ys)); y <= Math.ceil(Math.max(...ys)); y++) for (let x = Math.floor(Math.min(...xs)); x <= Math.ceil(Math.max(...xs)); x++) {
+    let inside = false;
+    for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y + 0.5) !== (yj > y + 0.5) && x + 0.5 < ((xj - xi) * (y + 0.5 - yi)) / (yj - yi) + xi) inside = !inside; }
+    if (!inside || !cloth(x, y)) continue;
+    if (dither && bayer(x, y) > dither) continue;
+    b.set(x, y, stepColor(b.get(x, y), k));
+  }
+};
+/** cloth = a figure pixel that isn't skin, hair or a warm rim (for clothLine / clothArea on an Img placed at x0, y0) */
+export const clothOf = (im: Img, x0: number, y0: number, flip = false) => (x: number, y: number) => {
+  const i = x - x0, j = y - y0;
+  if (i < 0 || j < 0 || i >= im.w) return false;
+  const v = im.c[Math.min(j, im.h - 1) * im.w + (flip ? im.w - 1 - i : i)];
+  if (v < 0) return false;
+  const fm = familyOf(v);
+  return !!fm && !['S', 'K', 'X', 'B', 'W', 'R'].includes(fm[0]);
+};
+/** an arm bent at the elbow (the review pass, P5: phone arms were straight slabs from the ear to the frame's foot): the
+ *  upper arm from the shoulder down to the elbow (its mass merging into the shoulder), the forearm from the elbow up to
+ *  the cuff, each a sleeve narrowing toward its far end, and the fold at the elbow's inside (two short creases a rung
+ *  down, the sleeve bunched). `ramp` = [outline, shadow, mid, lit, rim] */
+export const bentArm = (b: Buf, shoulder: [number, number], elbow: [number, number], cuff: [number, number], r: [number, number, number], ramp: number[], key: [number, number] = [-0.55, -0.83]) => {
+  sleeve(b, shoulder, elbow, r[0], r[1], ramp, key, {fold: false});
+  sleeve(b, elbow, cuff, r[1], r[2], ramp, key, {fold: false});
+  // the fold on the inside of the bend: toward the angle between the two segments
+  const ux = shoulder[0] - elbow[0], uy = shoulder[1] - elbow[1], vx = cuff[0] - elbow[0], vy = cuff[1] - elbow[1];
+  const lu = Math.hypot(ux, uy) || 1, lv = Math.hypot(vx, vy) || 1, bx = ux / lu + vx / lv, by = uy / lu + vy / lv, lb = Math.hypot(bx, by) || 1;
+  for (let i = 0; i < 2; i++) {
+    const cx = elbow[0] + (bx / lb) * (r[1] * 0.45 + i * 2), cy = elbow[1] + (by / lb) * (r[1] * 0.45 + i * 2);
+    for (let s = -2; s <= 2; s++) { const x = Math.round(cx - (by / lb) * s), y = Math.round(cy + (bx / lb) * s); if (x >= 0 && y >= 0 && x < b.w && y < RH) b.set(x, y, ramp[1]); }
+  }
+};

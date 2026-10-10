@@ -45,7 +45,7 @@ import {drawMasStand2} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, TR} from '../../art/kit';
-import {RH, W, glow, mirror, putBustSoft, compose, dimRoom, footClean} from './common';
+import {RH, W, glow, mirror, putBustSoft, compose, dimRoom, footClean, bentArm} from './common';
 import {lawn, MAS_EDGE} from './campus';
 
 // ================================================================== the staff, Gerg, the standing cheer
@@ -72,8 +72,32 @@ const gergSitting = (b: Buf, x: number, y: number, f: number, phone = false) => 
 };
 export type Crowd = 'watch' | 'cheer' | 'laugh';
 export const GERG_AT = {x: 196, y: 190};
-/** the beanbag where Haras sits (row 1's first, beside Gerg) */
-export const HARAS_SEAT = {x: 244, y: 190};
+/** where Haras sits: beside Gerg, in FRONT of the rows (the review pass: among the staff she sat twice their height;
+ *  brought forward to Gerg's depth, the frame's foot cutting her beanbag, her size is the foreground's), x her centre,
+ *  y her seat's foot (below the frame's edge) */
+export const HARAS_SEAT = {x: 246, y: 214};
+/** a beanbag at the foreground's scale (the staff's, half again), cut by the frame's foot */
+const bigBeanbag = (b: Buf, cx: number, top: number) => {
+  for (let j = 0; j < 26; j++) for (let i = 0; i < 52; i++) {
+    const d = Math.hypot((i - 26) / 26, (j - 14) / 14);
+    if (d >= 1) continue;
+    b.set(cx - 26 + i, top + j, j < 6 && i > 14 ? PAL.U4 : d > 0.84 ? PAL.U2 : i < 16 ? PAL.U2 : (i * 3 + j) % 17 === 0 ? PAL.U4 : PAL.U3);
+  }
+};
+/** the mammoth's tusk behind the back row (the review pass: it read as a cream plank): a long curve rising from behind
+ *  the staff to a point, thick at its root, ivory lit along its top (a cream-to-ivory ramp), a rung darker beneath, a
+ *  worn darker tip band, the tip pointed */
+const tusk = (b: Buf, x: number, y: number) => {
+  const N = 30;
+  for (let s = 0; s <= N; s++) {
+    const t = s / N, px = x + Math.round(20 * t + 4 * Math.sin(t * Math.PI)), py = y - Math.round(32 * Math.sin(t * 1.25)), r = 3.2 * (1 - t) + 0.4;
+    for (let j = -Math.ceil(r); j <= Math.ceil(r); j++) for (let i = -Math.ceil(r); i <= Math.ceil(r); i++) {
+      if (i * i + j * j > r * r + 0.3) continue;
+      const u = (i * -0.6 + j * -0.8) / Math.max(0.5, r);
+      b.set(px + i, py + j, u > 0.45 ? PAL.W9 : u > -0.1 ? PAL.P2 : u > -0.6 ? PAL.P1 : PAL.P0);
+    }
+  }
+};
 /** the staff rows (the art's beanbags), their poses by the moment; `up`: every other one standing on their beanbag,
  *  arms up (the cheer); Haras's seat left for her */
 const staffRows = (b: Buf, f: number, crowd: Crowd, up: boolean, harasSeat: boolean) => {
@@ -103,7 +127,7 @@ export interface PartySt {
   /** half the lobby up on its beanbags */
   up?: boolean;
   /** Haras: walking in (her foot x, the tape's trail from the doors) or seated beside Gerg */
-  haras?: {walk: number} | 'seated' | null;
+  haras?: {walk: number; y?: number} | 'seated' | null;
   /** Gerg: typing, or his phone out */
   gerg?: 'type' | 'phone';
   /** the staffer pointing at the screen, and his room mouth */
@@ -120,22 +144,22 @@ export const party = (b: Buf, f: number, st: PartySt = {}) => {
   const seated = st.haras === 'seated';
   drawLobby2(b, {f, time: 'day', sign1: '202', sign2: '102', flyers: 'curl', upside: true, complaint: 'table', cups: true, tv: 'stuck', beanbags: false, door: st.door ?? 0, screen: screenPainter(st, f)}, {
     front: (bb) => {
-      drawTusk(bb, 250, 172);
+      tusk(bb, 290, 168);
       staffRows(bb, f, st.crowd ?? 'watch', !!st.up, true);
       beanbag(bb, GERG_AT.x - 4, GERG_AT.y - 22, 4);
       gergSitting(bb, GERG_AT.x + 8, GERG_AT.y + 6, f, st.gerg === 'phone');
       // (the shots pass: the cross-legged drawing's foot is its standing foot, ~16 px under its hips, so at the seat's
       // y she sat on the air over the beanbag; dropped 14 px, her hips sink into its top)
-      if (seated) { beanbag(bb, HARAS_SEAT.x, HARAS_SEAT.y - 4, 9); drawHarasRoom(bb, HARAS_SEAT.x + 14, HARAS_SEAT.y + 12, {state: 'seated'}); drawCalcTape(bb, [[HARAS_SEAT.x + 22, HARAS_SEAT.y - 4], [HARAS_SEAT.x + 34, HARAS_SEAT.y + 6], [HARAS_SEAT.x + 60, HARAS_SEAT.y + 8], [LOBBY2.DOORS.x0, 194]]); }
+      if (seated) { bigBeanbag(bb, HARAS_SEAT.x, HARAS_SEAT.y - 20); drawHarasRoom(bb, HARAS_SEAT.x, HARAS_SEAT.y, {state: 'seated'}); drawCalcTape(bb, [[HARAS_SEAT.x + 8, HARAS_SEAT.y - 30], [HARAS_SEAT.x + 26, HARAS_SEAT.y - 16], [HARAS_SEAT.x + 60, HARAS_SEAT.y - 16], [LOBBY2.DOORS.x0, 196]]); }
       if (st.pointer) POINTER.draw(bb, 392, 192, {arm: 'point', legs: 'stand', head: {hair: 'short', mouth: st.pointer === 'open' ? 'open' : 'rest'}});
       if (st.confetti !== undefined && st.confetti >= 0 && st.confetti < 40) drawConfetti(bb, 320, 120, 'burst', st.confetti);
     },
   });
   // Haras walking in along the hand truck's path from the doors, her tape unspooling behind her to the door
   if (st.haras && typeof st.haras === 'object') {
-    const x = st.haras.walk;
-    drawHarasRoom(b, x, 194, {state: 'walk', legs: roomWalkAt(f)}, {flip: true});
-    drawCalcTape(b, [[x + 6, 166], [x + 14, 186], [x + 30, 194], [LOBBY2.DOORS.x0 + 2, 194]]);
+    const x = st.haras.walk, y = st.haras.y ?? 194;
+    drawHarasRoom(b, x, y, {state: 'walk', legs: roomWalkAt(f)}, {flip: true});
+    drawCalcTape(b, [[x + 6, y - 28], [x + 14, y - 8], [x + 30, Math.min(y, 198)], [LOBBY2.DOORS.x0 + 2, 194]]);
   }
 };
 
@@ -167,7 +191,7 @@ export const tvClose = (b: Buf, f: number) => {
 // ================================================================== 19.04-19.05: Haras and Gerg
 /** the background of the two-shot: the lobby's stone wall soft, the wall screen low behind them (the keynote, or the
  *  announcement), the staff on their beanbags out of focus behind them; at the cheer, the staff rising, arms up */
-const twoShotBack = (b: Buf, f: number, st: {slide: 'stage' | 'later'; cheer: number}) => {
+const twoShotBack = (b: Buf, f: number, st: {slide: 'stage' | 'later'; cheer: number; screen?: boolean}) => {
   // the stone wall (courses and joints, a step lighter toward the screen), the floor dark stone with the red runner
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
     const course = ((y + 6) % 22) < 2, joint = ((x + (Math.floor((y + 6) / 22) % 2) * 17) % 34) < 2;
@@ -176,13 +200,20 @@ const twoShotBack = (b: Buf, f: number, st: {slide: 'stage' | 'later'; cheer: nu
     else c = y > 150 && y < 160 ? ((x * 3 + y) % 23 < 2 ? PAL.R0 : PAL.R1) : (x * 7 + y * 3) % 41 < 2 ? PAL.G0 : PAL.G1;
     b.set(x, y, c);
   }
-  // the wall screen behind them, low and big (a bezel; its picture a rung down unless the announcement is up)
+  // the wall screen behind them, low and big (a bezel; its picture a rung down unless the announcement is up); left out
+  // for a reverse that faces away from it (Gerg's call: the screen is in front of him)
   const S = {x: 200, y: 6, w: 210, h: 104};
+  if (st.screen !== false) {
   fill(b, S.x - 5, S.y - 5, S.w + 10, S.h + 10, PAL.N0);
   const t = new Buf(W, 270, PAL.N0);
   keynotePainter(t, S, {slide: st.slide, f});
   for (let y = S.y; y < S.y + S.h; y++) for (let x = S.x; x < S.x + S.w; x++) b.set(x, y, st.slide === 'later' ? t.get(x, y) : stepColor(t.get(x, y), -1));
   glow(b, S.x + S.w / 2, S.y + S.h / 2, 190, 110, 1, (x, y) => x >= S.x - 5 && x < S.x + S.w + 5 && y >= S.y - 5 && y < S.y + S.h + 5);
+  } else {
+    // the lobby's far side instead: the NOPE AI desk's dark front with its sign unlit (out of focus), a pillar
+    fill(b, 150, 70, 190, 46, PAL.N1); fill(b, 150, 70, 190, 2, PAL.G2); for (let i = 0; i < 9; i++) fill(b, 168 + i * 18, 86, 10, 12, PAL.C2);
+    fill(b, 386, 0, 26, 132, PAL.N1); fill(b, 386, 0, 2, 132, PAL.G2);
+  }
   // the staff behind them, out of focus (two rungs down): a row of heads and shoulders on their beanbags; at the cheer
   // they come up off them, every other one standing, both arms up from the shoulders in a V, the hands open
   for (let k = 0; k < 8; k++) {
@@ -194,11 +225,12 @@ const twoShotBack = (b: Buf, f: number, st: {slide: 'stage' | 'later'; cheer: nu
     for (let j = 0; j < 34; j++) { const hw = Math.min(17, 9 + j * 0.8); fill(b, Math.round(x - hw), y + 14 + j, Math.round(hw * 2), 1, T); }
     ellipse(x, y + 6, 6, 7, b.ink(Sk)); ellipse(x, y + 1, 6, 4, b.ink(H));
     if (st.cheer > 0) {
+      // (the review pass: the stick arms read as antennae) each arm a sleeve from the shoulder tapering to the wrist,
+      // out of focus like the rest of them, and a mitten hand on top (the palm, the thumb a pixel out)
       for (const sd of [-1, 1]) {
-        const sx = x + sd * 11, sy = y + 18, hx = x + sd * (19 + ((k + bob) % 2) * 2), hy = y - 12 + ((k + sd) % 3);
-        const n = Math.max(Math.abs(hx - sx), Math.abs(hy - sy));
-        for (let i = 0; i <= n; i++) { const px = Math.round(sx + ((hx - sx) * i) / n), py = Math.round(sy + ((hy - sy) * i) / n); fill(b, px - 1, py, 3, 1, T); }
-        fill(b, hx - 2, hy - 4, 4, 4, Sk);
+        const sx = x + sd * 12, sy = y + 18, hx = x + sd * (20 + ((k + bob) % 2) * 2), hy = y - 10 + ((k + sd) % 3);
+        sleeve(b, [sx, sy], [hx, hy + 3], 4.2, 2.6, [stepColor(T, -1), stepColor(T, -1), T, stepColor(T, 1), T], [0.3, -0.95], {fold: false});
+        ellipse(hx, hy - 1, 2.6, 3.2, b.ink(Sk)); b.set(hx - sd * 3, hy + 1, Sk); b.set(hx, hy - 4, stepColor(Sk, 1));
       }
     }
   }
@@ -213,15 +245,26 @@ export const harasGerg = (b: Buf, f: number, st: HarasGergSt = {}) => {
   for (const [cx, col] of [[110, [PAL.U2, PAL.U3, PAL.U4]], [370, [PAL.F2, PAL.F3, PAL.F4]]] as Array<[number, number[]]>) for (let y = 160; y < RH; y++) for (let x = cx - 110; x < cx + 110; x++) { const d = Math.hypot((x - cx) / 110, (y - 205) / 44); if (d < 1) b.set(x, y, d > 0.9 ? col[0] : (x + y) % 9 === 0 ? col[2] : col[1]); }
   // GERG at the left, turned to her, his laptop on his knees, typing
   putBustSoft(b, gergImg(st.gerg ?? 'rest', 1), 56, 56, RH, false);
-  // the laptop: its deck across his lap at the frame's foot, the lid's dark back to us, its edges lit by the screen
-  // the laptop on his knees at the frame's foot: its lid's dark back angled toward him (its top edge and near edge lit
-  // by the screen), the deck under it, two fingertips on the keys when he types
-  const lx = 96, ly = 176;
-  poly([lx - 22, RH + 2, lx + 50, RH + 2, lx + 46, ly + 14, lx - 18, ly + 14], b.ink(PAL.N2));
-  poly([lx - 14, ly + 14, lx + 40, ly + 14, lx + 37, ly - 12, lx - 11, ly - 12], b.ink(PAL.N1));
-  line(lx - 11, ly - 12, lx + 37, ly - 12, b.ink(PAL.C5)); line(lx - 14, ly + 14, lx - 11, ly - 12, b.ink(PAL.C4));
-  fill(b, lx + 12, ly - 2, 3, 3, PAL.N2);
-  if (st.type !== false) { const ty = gergTypeAt(Math.floor(f / 2)); for (const [tx, i] of [[lx - 4, 1], [lx + 26, 2]] as Array<[number, number]>) { const dn = ty === i ? 1 : 0; fill(b, tx, ly + 14 + dn, 5, 3, PAL.S4); fill(b, tx, ly + 14 + dn, 5, 1, PAL.S5); } }
+  // the laptop in his lap (the review pass: it read as a cyan outline on his chest, nobody typing): the deck across
+  // his lap at the frame's foot seen from above its near edge (the keys), the lid raised at its far end and tilted back
+  // toward him (we see its dark back side-on, its screen edge lit), his two hands on the keys, the sleeves back to his
+  // body, the screen's cool glow on his chin and the underside of his face
+  const ty = st.type !== false ? gergTypeAt(Math.floor(f / 2)) : -1;
+  poly([60, 188, 160, 184, 166, RH + 1, 54, RH + 1], b.ink(PAL.N1));
+  poly([62, 189, 158, 185, 162, 194, 58, 198], b.ink(PAL.G1));
+  for (let r = 0; r < 3; r++) for (let i = 0; i < 15; i++) b.set(66 + i * 6 + r, 190 + r * 2 - Math.round(i * 0.25), PAL.G3);
+  poly([150, 185, 160, 184, 150, 140, 142, 142], b.ink(PAL.N0));
+  line(142, 142, 150, 185, b.ink(PAL.C6)); line(150, 140, 160, 184, b.ink(PAL.G2));
+  // his hands on the keys, the cuffs at the frame's foot (the forearms come up out of his lap toward us), the fingers
+  // apart on the keys, one lifting with each keystroke
+  for (const [hx, i] of [[84, 1], [118, 2]] as Array<[number, number]>) {
+    const dn = ty === i ? -1 : 0;
+    fill(b, hx - 8, 194, 16, 9, PAL.N2); fill(b, hx - 8, 194, 16, 1, PAL.N3);
+    fill(b, hx - 7, 187 + dn, 14, 8, PAL.S3); fill(b, hx - 7, 187 + dn, 14, 2, PAL.S4); fill(b, hx - 7, 194, 14, 1, PAL.S2);
+    for (let q = 0; q < 4; q++) { b.set(hx - 6 + q * 4, 186 + dn + (q === i ? -1 : 0), PAL.S4); b.set(hx - 5 + q * 4, 187 + dn, PAL.S2); }
+  }
+  // the screen's cool light along the underside of his jaw and chin (the lowest skin of each column of his face)
+  for (let x = 96; x < 160; x++) for (let y = 168; y > 100; y--) { const c = b.get(x, y), fm = familyOf(c); if (fm && fm[0] === 'S') { b.set(x, y, PAL.K3); b.set(x, y - 1, stepColor(c, 1)); break; } }
   // HARAS at the right on the beanbag beside him, turned to him, her calculator tape
   putBustSoft(b, harasBust({mouth: st.haras ?? 'rest', expr: st.harasExpr ?? 'smile', arm: st.harasArm ?? 'tape'}), 300, 52, RH, false);
   if (st.confetti !== undefined && st.confetti >= 0) {
@@ -246,20 +289,24 @@ export const onStream = (b: Buf, f: number, st: {view: 'later' | 'crowd'}) => {
 /** [MCU] Gerg on his beanbag in the cheering lobby (his speaking portrait, his own skin), his phone out at his chest
  *  (`phone` 'hand') or at his ear ('ear'); behind him the lobby half up on its beanbags; lip-synced */
 export const gergCall = (b: Buf, f: number, st: {mouth?: Viseme; phone: 'hand' | 'ear'; cheer?: number}) => {
-  twoShotBack(b, f, {slide: 'stage', cheer: st.cheer ?? 12});
+  // (the review pass: the wall screen sat behind him while he watched it) the reverse: the camera stands where the
+  // screen is, so behind him is the lobby itself, half of it up on its beanbags cheering, the desk dark; the screen's
+  // light falls on his face from in front of him (frame-right)
+  twoShotBack(b, f, {slide: 'stage', cheer: st.cheer ?? 12, screen: false});
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  // (mirrored: turned to camera-right, the crosscut's reverse of Mas on the lawn, who faces camera-left)
+  // (mirrored: turned to camera-right, toward the screen)
   const X = 230, Y = 30;
   const im = gergImg(st.mouth ?? 'rest', 0);
   putBustSoft(b, im, X, Y, RH, false);
+  for (let y = Y + 20; y < Y + 110; y++) for (let x = X + 56; x < X + 112; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && fm[0] === 'S' && bayer(x, y) < (x - X - 56) / 40) b.set(x, y, stepColor(c, 1)); }
   const CUFF = [PAL.N0, PAL.N1, PAL.N1, PAL.N2, PAL.N3, PAL.N3, PAL.C3], SLV = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.C3];
   if (st.phone === 'ear') {
-    // the phone pressed to his ear (his mirrored portrait's visible ear at its left), his hand round its back, the
-    // sleeve down out of frame
+    // the phone pressed to his ear (his mirrored portrait's visible ear at its left), his hand round its back; the arm
+    // bent: the upper arm down from his shoulder to the elbow near the frame's foot, the forearm up to the hand
     const ex = X + 30, ey = Y + 54;
-    fill(b, ex - 6, ey - 18, 10, 40, PAL.N0); fill(b, ex + 1, ey - 17, 2, 38, PAL.G3);
     const h = placeHand(POSES.grip([-0.1, -1, 0.1], [-0.95, 0, 0.3], 'R', 0.55), {s: 2.6, at: [ex - 5, ey + 6], anchor: 'middle', light: 'lobby', cuffRamp: CUFF});
-    sleeve(b, h.cuffEnd, [ex - 34, RH + 40], 9, 13, SLV);
+    bentArm(b, [X + 18, Y + 112], [X - 12, Y + 160], h.cuffEnd, [11, 9.5, 7], SLV, [0.5, -0.85]);
+    fill(b, ex - 6, ey - 18, 10, 40, PAL.N0); fill(b, ex + 1, ey - 17, 2, 38, PAL.G3);
     drawHand(b, h.hand, h.x, h.y);
   } else {
     // his phone out in his hand at his chest, its screen lit, about to call
@@ -312,6 +359,15 @@ export const morning = (b: Buf, f: number, st: MorningSt = {}) => {
         STANDERS[2].draw(bb, 236, 186, {arm: 'reach', legs: 'stand', head: {hair: 'short', mouth: 'open'}}, {flip: true});
         for (const cx of [214, 220]) { fill(bb, cx, 160 - lift, 5, 7, PAL.P2); fill(bb, cx, 162 - lift, 5, 2, PAL.C4); }
       }
+      if (comp === 'rect') {
+        // (the review pass: the clean rectangle was a faint slab under the floor's teal glow) a rung brighter again,
+        // its edge a dust line a rung down, so the gag reads under the note; the next shot's face-down phone lies here
+        const L = tinyWidth('NOLE V. MANALT') + 34;
+        for (let j = -1; j <= 6; j++) for (let i = -1; i <= L; i++) {
+          const X = 156 + i - Math.round(j * 0.9), Y = 174 - j, edge = j === -1 || j === 6 || i === -1 || i === L;
+          bb.set(X, Y, stepColor(bb.get(X, Y), edge ? -1 : 1));
+        }
+      }
       if (st.note !== null && st.note !== undefined) forNowNote(bb, st.note);
     },
   });
@@ -349,5 +405,59 @@ export const docket = (b: Buf, f: number, st: {flick?: number} = {}) => {
   pt(b, 'HEARING · JUN 12', 312, 128 + lift, PAL.N1); pt(b, 'MOTION TO', 312, 146 + lift, PAL.N1); pt(b, 'DISMISS', 312, 160 + lift, PAL.N1);
   void f;
 };
-void rect; void familyOf; void pw; void bpw; void dimRoom; void skinDown; void drawComplaint;
+void rect; void familyOf; void drawTusk; void pw; void bpw; void dimRoom; void skinDown; void drawComplaint;
 export type {Mas2Legs};
+
+// ================================================================== 20.06: the pocket (the review pass, 2026-10-10)
+/** [ECU] Jun 11: inside his jacket's pocket (art/cast/mas2 iouCornerECU, COPIED with the flyer added: a yellow card alone
+ *  read as the flyer going in, and the Ep11 plant was lost). Two papers: his folded cream flyer going in (`k` 0: above
+ *  the pocket in his fingers, 1: pushed in, its top edge with a tape strip showing), and beside it the yellowed corner
+ *  of the old note, already in there; his fingers leave the flyer and stop on that corner (2), a little lifted (3).
+ *  No words on the note: faded rules only, never read. */
+export const pocketECU = (b: Buf, f: number, st: {k: 0 | 1 | 2 | 3}) => {
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
+    const lit = 0.55 - 0.35 * ((x / W) * 0.6 + (y / RH) * 0.4);
+    let c = lit > 0.42 ? PAL.G4 : lit > 0.26 ? PAL.G3 : PAL.G2;
+    if (x % 3 === 0) c = stepColor(c, -1);
+    if (bayer(x, y) < 0.08) c = stepColor(c, 1);
+    b.set(x, y, c);
+  }
+  const hemY = (x: number) => 118 + Math.round(6 * Math.sin((x / W) * Math.PI));
+  // the gap's shadow, bowing open round the two papers
+  for (let x = 0; x < W; x++) { const bow = Math.max(0, 1 - Math.abs(x - 210) / 110); const d = 2 + Math.round(bow * 8); fill(b, x, hemY(x) - d, 1, d, x % 2 ? PAL.N1 : PAL.N0); }
+  // the old note's yellowed corner (right): standing in the pocket, leaning, dog-eared, two faded rules
+  const nx = 262, ny = 62, nw = 58, nh = 64, lean = 0.18, lift = st.k === 3 ? -6 : 0;
+  for (let j = 0; j < nh; j++) for (let i = 0; i < nw; i++) {
+    const X = nx + i + Math.round((nh - j) * lean), Y = ny + j + lift;
+    if (i + j < 9) continue;
+    let c = (i * 3 + j) % 13 === 0 ? PAL.W6 : PAL.W7;
+    if (i === 0 || j === 0 || i + j === 9) c = PAL.W8;
+    if (i > nw - 4) c = PAL.W6;
+    b.set(X, Y, c);
+  }
+  for (let i = 0; i < 9; i++) for (let j = 0; j < 9 - i; j++) b.set(nx + i + Math.round((nh - j) * lean), ny + j + lift, j + i > 6 ? PAL.W5 : PAL.W6);
+  for (const [ry, rw] of [[18, 38], [26, 30], [34, 36]] as const) for (let i = 8; i < 8 + rw; i++) if ((i + ry) % 4) b.set(nx + i + Math.round((nh - ry) * lean), ny + ry + lift, PAL.W5);
+  // his folded flyer (left): cream, folded in four (the crease), a strip of yellowed tape on its top corners, the
+  // upside-down headline's ink faint through the fold; going in, then in with its top edge showing
+  const fx = 120, fw = 96, fh = 86, fy = st.k === 0 ? 18 : 64;
+  for (let j = 0; j < fh; j++) for (let i = 0; i < fw; i++) {
+    const X = fx + i + Math.round((fh - j) * -0.08), Y = fy + j;
+    let c = (i * 5 + j) % 17 === 0 ? PAL.P1 : PAL.P2;
+    if (i === 0 || j === 0) c = PAL.W9;
+    if (i === fw - 1) c = PAL.P0;
+    if (Math.abs(i - fw / 2) < 0.6 || Math.abs(j - fh / 2) < 0.6) c = PAL.P0;
+    b.set(X, Y, c);
+  }
+  for (const tx of [4, fw - 20]) { fill(b, fx + tx, fy + 3, 16, 7, PAL.W6); fill(b, fx + tx, fy + 3, 16, 1, PAL.W7); }
+  for (let r = 0; r < 3; r++) fill(b, fx + 18, fy + 56 + r * 7, 56 - r * 12, 2, PAL.G5);
+  // the pocket panel over both papers' feet
+  for (let x = 0; x < W; x++) for (let y = hemY(x); y < RH; y++) { let c = y < hemY(x) + 6 ? PAL.G4 : (x % 3 === 0 ? PAL.G3 : PAL.G4); if (x > 330) c = stepColor(c, -1); if (y === hemY(x)) c = PAL.G5; b.set(x, y, c); }
+  for (let x = 4; x < W; x += 5) fill(b, x, hemY(x) + 8, 3, 1, PAL.G2);
+  for (let x = 0; x < W; x++) b.set(x, hemY(x) + 6, PAL.G3);
+  // his hand from the upper right: pushing the flyer down by its top edge (0, 1), then on the note's corner (2, 3)
+  const tip: [number, number] = st.k <= 1 ? [fx + fw - 18, fy + 2] : st.k === 2 ? [nx + 18 + Math.round(nh * lean), ny + 8] : [nx + 16 + Math.round(nh * lean), ny - 2 + lift];
+  const h = placeHand(POSES.pinch([-0.55, 0.62, -0.5], [0.2, -0.55, 0.8], 'R'), {s: 9, at: tip, anchor: 'index', light: 'lobby', key: [-0.4, -0.7, 0.6], cuffRamp: [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.P1]});
+  sleeve(b, h.cuffEnd, [h.cuffEnd[0] + 150, h.cuffEnd[1] - 150], 34, 38, [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.G4], [-0.55, -0.83]);
+  drawHand(b, h.hand, h.x, h.y);
+  void f;
+};

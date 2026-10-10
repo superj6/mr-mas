@@ -46,13 +46,23 @@ const plateRGBA = (name) => {
   if (done.has(name)) return done.get(name);
   const src = SRC.map((d) => path.join(d, `${name}.png`)).find((p) => fs.existsSync(p));
   if (!src) throw new Error(`no plate ${name} in ${SRC.join(' or ')}`);
-  const out = path.join(OUT, 'rgba', `${name}.png`);
+  // (the review pass, P15 FIRM: every pop at 80% white or less) the tilt's plates (the opening white is tilt_00, the
+  // first frames after 20.13's dark phone) go through a soft knee: luma above 0.70 eases toward a 0.79 ceiling, the
+  // colour kept (the RGB scaled with it); below the knee nothing changes, so tilt_27 still meets the art's wide plate
+  // (its brightest pixel 0.773 -> 0.761). A safety level, not a grade match: the leap keeps its contrast.
+  const cap = name.startsWith('tilt_');
+  const out = path.join(OUT, 'rgba', cap ? `${name}-c79.png` : `${name}.png`);
   if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(src).mtimeMs) {
     const r = readPNG(src);
     const px = new Uint8Array(W * H * 4);
+    const K0 = 0.70, CAP = 0.79;
     for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
       const sx = Math.floor((x * r.w) / W), sy = Math.floor((y * r.h) / H), v = r.c[sy * r.w + sx], o = (y * W + x) * 4;
-      const R = (v >> 16) & 255, G = (v >> 8) & 255, B = v & 255;
+      let R = (v >> 16) & 255, G = (v >> 8) & 255, B = v & 255;
+      if (cap) {
+        const Y = (0.299 * R + 0.587 * G + 0.114 * B) / 255;
+        if (Y > K0) { const Y2 = K0 + (CAP - K0) * Math.tanh((Y - K0) / (CAP - K0)), k = Y2 / Y; R = Math.round(R * k); G = Math.round(G * k); B = Math.round(B * k); }
+      }
       px[o] = R; px[o + 1] = G; px[o + 2] = B; px[o + 3] = name === 'insert' && KEYED(R, G, B) ? 0 : 255;
     }
     writeRGBA(out, px, W, H);

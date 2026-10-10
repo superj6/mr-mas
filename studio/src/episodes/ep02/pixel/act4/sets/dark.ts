@@ -16,7 +16,7 @@
 //   flyerOut(b, f, st)     [INSERT] 20.12: his hand taking the folded flyer (white, the tape on its corners) out of his
 //                          jacket; then he stands (the portrait rising out of the frame's top)
 // No V.O. at Alyi's post (W8: another person's real act). Nothing about why: his own words only.
-import {Buf, rect, line, ellipse, poly, bayer, clamp} from '../../../../../shared/pixel/px';
+import {Buf, rect, line, ellipse, poly, bayer, clamp, TRANSPARENT} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, lightness, familyOf} from '../../../../../shared/pixel/palette';
 import type {Img} from '../../../../../shared/pixel/figure';
 import {drawDarkPlate, drawDarkPlateDesk, DPLATE} from '../../../../../shared/pixel/rooms/darkroom-plate';
@@ -142,9 +142,9 @@ const plate = (): Buf => {
 const PM = new Map<string, Img>();
 /** his face in the morning (act2's masAfternoonImg, copied): the warm rig keyed a step from the window behind him to
  *  the right (its daylight on his far edge), the rim a dim cyan; a face light one step */
-const masMorningImg = (o: {look?: -1 | 0 | 1; mouth?: MasPortraitState['mouth']}): Img => {
+const masMorningImg = (o: {look?: -1 | 0 | 1; mouth?: MasPortraitState['mouth']; lid?: 0 | 1}): Img => {
   const id = JSON.stringify(o); const hit = PM.get(id); if (hit) return hit;
-  const im = masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: o.look ?? -1, mouth: o.mouth ?? 'rest'});
+  const im = masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', look: o.look ?? -1, mouth: o.mouth ?? 'rest', lid: o.lid ?? 0});
   const RIM: Record<number, number> = {[PAL.W5]: PAL.C2, [PAL.W6]: PAL.C3, [PAL.W8]: PAL.C5};
   const c = im.c.slice();
   for (let i = 0; i < c.length; i++) { const v = c[i]; if (v >= 0 && RIM[v] !== undefined) c[i] = RIM[v]; }
@@ -160,13 +160,17 @@ const masMorningImg = (o: {look?: -1 | 0 | 1; mouth?: MasPortraitState['mouth']}
   PM.set(id, out);
   return out;
 };
-/** [MCU] Mas reading, still; `rise` px: he stands (the portrait rising out of the frame's top) */
-export const masReading = (b: Buf, f: number, st: {rise?: number; look?: -1 | 0 | 1; out?: number}) => {
-  b.c.set(plate().c.subarray(0, W * RH));
+/** [MCU] Mas reading, still; `down`: his eyes on the phone below frame (the lids lowered, the phone's light on his chin);
+ *  the stand (the review pass: his rise left a headless torso sliding out): `pan` px the camera tilts up with him as
+ *  he rises (the room drops away under him, his head kept in frame, `rise` the little he gains on it), then `out` px he
+ *  steps out of frame right */
+export const masReading = (b: Buf, f: number, st: {rise?: number; look?: -1 | 0 | 1; out?: number; down?: boolean; pan?: number}) => {
+  const pan = st.pan ?? 0, src = plate();
+  for (let y = 0; y < RH; y++) { const sy = clamp(y - pan, 0, RH - 1); for (let x = 0; x < W; x++) b.c[y * W + x] = src.c[sy * W + x]; }
   const x = 110 + (st.out ?? 0), y = 26 - (st.rise ?? 0);
-  if (x < W) putBustSoft(b, masMorningImg({look: st.look ?? -1}), x, y, RH);
+  if (x < W) putBustSoft(b, masMorningImg({look: st.look ?? -1, lid: st.down ? 1 : 0}), x, y, RH);
   // the phone's light on his chin and the underside of his face (it is low in front of him, out of frame)
-  if (!st.rise) for (let yy = y + 60; yy < y + 92; yy++) for (let xx = x + 30; xx < x + 80; xx++) { const c = b.get(xx, yy), fm = familyOf(c); if (fm && fm[0] === 'S' && bayer(xx, yy) < (yy - y - 60) / 40) b.set(xx, yy, stepColor(c, 1)); }
+  if (!st.rise && !pan) for (let yy = y + 60; yy < y + 92; yy++) for (let xx = x + 30; xx < x + 80; xx++) { const c = b.get(xx, yy), fm = familyOf(c); if (fm && fm[0] === 'S' && bayer(xx, yy) < (yy - y - 60) / 40) b.set(xx, yy, stepColor(c, 1)); }
   void f;
 };
 /** [INSERT] his hand taking the folded flyer out of his jacket: the hoodie's front (the knit, the pocket's opening), the
@@ -199,3 +203,92 @@ export const flyerOut = (b: Buf, f: number, st: {up: number}) => {
   void f;
 };
 void rect; void line; void ellipse; void pt; void pw; void bpw; void vramp;
+
+// ================================================================== the review pass (2026-10-10): the pin at ECU
+/** the check-in pin at the ECU's size (the matched object into 22.01's white: the same drawing there): a map marker,
+ *  its head a red disc with the white centre, tapering to the point at (x, y); `rot` radians about the point (the
+ *  knock, the tumble); `grey` for the stale 2012 pins; `s` its scale (1 = 26 px tall) */
+export const drawCheckPin = (b: Buf, x: number, y: number, o: {rot?: number; grey?: boolean; s?: number} = {}) => {
+  const s = o.s ?? 1, R = 10 * s, H = 26 * s, Wd = Math.ceil(R * 2 + 4), Ht = Math.ceil(H + R * 0.2 + 4);
+  const t = new Buf(Wd, Ht, TRANSPARENT);
+  const cx = Wd / 2 - 0.5, cy = R + 2, py = cy + H - R;
+  const body = o.grey ? [PAL.N1, PAL.G2, PAL.G3, PAL.G5] : [PAL.N0, PAL.R1, PAL.R2, PAL.R3];
+  for (let j = 0; j < Ht; j++) for (let i = 0; i < Wd; i++) {
+    const dx = i - cx, dy = j - cy, inHead = Math.hypot(dx, dy) <= R;
+    const u = (j - cy) / Math.max(1, py - cy), inTail = j >= cy && j <= py && Math.abs(dx) <= R * (1 - u) * 0.92;
+    if (!inHead && !inTail) continue;
+    const edge = (Math.hypot(dx, dy) > R - 1.2 && (inHead && !(j > cy && Math.abs(dx) <= R * (1 - u) * 0.92 - 1))) || (inTail && !inHead && Math.abs(dx) > R * (1 - u) * 0.92 - 1.2);
+    t.set(i, j, edge ? body[0] : dx > R * 0.35 ? body[1] : dx < -R * 0.3 && dy < 0 ? body[3] : body[2]);
+  }
+  const dr = Math.max(2, R * 0.38);
+  for (let j = 0; j < Ht; j++) for (let i = 0; i < Wd; i++) if (Math.hypot(i - cx, j - cy) <= dr) t.set(i, j, o.grey ? PAL.G6 : PAL.P2);
+  // set on the frame rotated about its point
+  const a = o.rot ?? 0, ca = Math.cos(a), sa = Math.sin(a);
+  const reach = Math.ceil(Math.hypot(Wd, Ht));
+  for (let yy = -reach; yy <= reach; yy++) for (let xx = -reach; xx <= reach; xx++) {
+    const u = ca * xx + sa * yy + cx, v = -sa * xx + ca * yy + py;
+    const iu = Math.round(u), iv = Math.round(v);
+    if (iu < 0 || iv < 0 || iu >= Wd || iv >= Ht) continue;
+    const c = t.c[iv * Wd + iu]; if (c !== TRANSPARENT) b.set(x + xx, y + yy, c);
+  }
+};
+/** the ECU of the map (20.11, 20.13; the review pass: the pin was a 25-px speck in a phone the size of the frame's
+ *  middle third): pushed in on TPOOL's map until the check-in pin is ~26 px (about 100 at 1080p), in its 2008 colours
+ *  inside the 2024 glass (the bezel at the frame's edges); the stale 2012 pins grey; Alyi's pin red with sc 15's warm
+ *  ripple and its tag (ALYI · DEC 2022); the link card falling from the top of frame, its lower-left corner striking
+ *  the pin's head (`card` 0..1, 1 = landed); the pin `pin`: 0 in place, 1 knocked (tipped away from the corner), or a
+ *  fall in px (it tips off its spot and drops out past the frame's foot, tumbling) */
+export const ECU_PIN = {x: 240, y: 150};
+export const mapECU = (b: Buf, f: number, st: {card: number; pin: number}) => {
+  // the map: 2008 tiles (green blocks, beige streets, a corner of water), remapped to EARLY-WEB16
+  const m = new Buf(W, 270, PAL.N0);
+  fill(m, 0, 0, W, RH, PAL.L2);
+  for (let x = 70; x < W; x += 132) fill(m, x, 0, 16, RH, PAL.P1);
+  for (let y = 48; y < RH; y += 104) fill(m, 0, y, W, 16, PAL.P1);
+  fill(m, 0, 150, 60, RH - 150, PAL.C5);
+  applyPalette(m, 'EARLYWEB16', {rect: [0, 0, W, RH]});
+  // the screen at night in his dark room, filling the frame: two rungs down the era's own sixteen (the white streets to
+  // its grey, the grey blocks to its slate, the water to its deep blue), so a frame-filling glass doesn't glare
+  const DIM: Record<number, number> = {0xffffff: 0x999999, 0x999999: 0x666699, 0x66ccff: 0x336699, 0xccffff: 0x999999};
+  for (let i = 0; i < W * RH; i++) { const d = DIM[m.c[i]]; if (d !== undefined) m.c[i] = d; }
+  b.c.set(m.c.subarray(0, W * RH));
+  // the stale pins, grey, each tagged 2012
+  for (const [px, py] of [[64, 112], [390, 92], [150, 40], [430, 186], [330, 190]] as Array<[number, number]>) {
+    drawCheckPin(b, px, py, {grey: true, s: 0.8});
+    const tw = tinyWidth('2012') + 4; fill(b, px - (tw >> 1), py + 3, tw, 9, PAL.P2); fill(b, px - (tw >> 1), py + 11, tw, 1, PAL.G4); tiny(b, '2012', px - (tw >> 1) + 2, py + 5, PAL.N1);
+  }
+  const P = ECU_PIN, pin = st.pin;
+  // Alyi's: the ripple (sc 15's, warm, rings walking out) while it's checked in; the tag stays on the map
+  if (pin === 0) { const r0 = (f % 24) / 2; for (const rr of [14 + r0, 26 + r0]) for (let a = 0; a < 96; a++) { const t = (a / 96) * Math.PI * 2, x = Math.round(P.x + Math.cos(t) * rr), y = Math.round(P.y - 2 + Math.sin(t) * rr * 0.42); if (a % 2 === 0) b.set(x, y, rr > 28 ? PAL.W5 : PAL.W7); } }
+  fill(b, P.x + 16, P.y - 4, pw('ALYI') + 8, 22, PAL.P2); fill(b, P.x + 16, P.y - 4, pw('ALYI') + 8, 1, PAL.W5); fill(b, P.x + 16, P.y + 17, pw('ALYI') + 8, 1, PAL.G4);
+  pt(b, 'ALYI', P.x + 20, P.y - 1, PAL.N1); tiny(b, 'DEC 2022', P.x + 20, P.y + 9, PAL.I0);
+  if (pin === 0) drawCheckPin(b, P.x, P.y);
+  else if (pin === 1) { drawCheckPin(b, P.x + 5, P.y + 1, {rot: 0.5}); for (const [dx, dy] of [[-16, -30], [-20, -22], [14, -34], [20, -26]] as Array<[number, number]>) { b.set(P.x + dx, P.y + dy, PAL.N1); b.set(P.x + dx + Math.sign(dx), P.y + dy - 1, PAL.N1); } }
+  else drawCheckPin(b, P.x + 6 + Math.round(pin * 0.08), P.y + pin, {rot: 0.6 + (Math.floor(pin / 12) % 2) * 0.9});
+  // the link card, falling from the top of frame (only its lower part in the ECU): the cream block with ISS, the dark
+  // body with the company's line; its lower-left corner lands on the pin's head
+  const c = clamp(st.card, 0, 1), bot = Math.round(-10 + (P.y - 25 + 10) * c), x0 = P.x - 14;
+  if (st.card >= 0) {
+    fill(b, x0 + 4, bot - 116, W - x0, 120, PAL.N0);
+    fill(b, x0, bot - 120, W - x0, 120, PAL.N3); fill(b, x0, bot - 1, W - x0, 1, PAL.N1);
+    fill(b, x0, bot - 120, 104, 120, PAL.P2); fill(b, x0, bot - 120, 2, 120, PAL.W9);
+    bpt(b, 'ISS', x0 + 30, bot - 66, PAL.N1);
+    pt(b, '"one goal and one', x0 + 118, bot - 74, PAL.P1); pt(b, 'product: a safe', x0 + 118, bot - 60, PAL.P1); pt(b, 'superintelligence"', x0 + 118, bot - 46, PAL.P1);
+  }
+  // the phone's bezel at the frame's edges (we are in close on its glass), the glass's faint glare
+  fill(b, 0, 0, 10, RH, PAL.N0); fill(b, 10, 0, 2, RH, PAL.G2); fill(b, W - 10, 0, 10, RH, PAL.N0); fill(b, W - 12, 0, 2, RH, PAL.G2);
+  for (let i = 0; i < 70; i++) for (let j = 0; j < 3; j++) { const x = 300 + i, y = 6 + Math.round(i * 0.45) + j; if (bayer(x, y) < 0.25) b.set(x, y, stepColor(b.get(x, y), 1)); }
+};
+/** 20.10's first framing (the review pass: the object match from 20.09): his phone face down on the desk in the dark,
+ *  lying flat and horizontal where the clean rectangle lay on the lobby's carpet (the same shape, the same place in
+ *  the frame), its edges lit when it buzzes; the art's top-down ECU follows */
+export const faceDownMatch = (b: Buf, f: number, st: {lit?: boolean} = {}) => {
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, (x + y * 3) % 41 < 2 ? PAL.D1 : bayer(x, y) < 0.2 ? PAL.D1 : PAL.D0);
+  // (drawCleanRect's footprint: x 156.., y 169..174, slanting 0.9 px a row; the phone a little thicker: its back and
+  // its lit near edge)
+  const L = 92;
+  for (let j = 0; j < 9; j++) for (let i = 0; i < L; i++) { const X = 156 + i - Math.round(j * 0.9), Y = 176 - j; b.set(X, Y, j === 0 ? PAL.N0 : j === 8 ? PAL.G3 : PAL.G1); }
+  ellipse(156 + L - 14 - 5, 172, 3, 2, b.ink(PAL.N0));
+  if (st.lit) for (let i = -3; i < L + 3; i++) { const X = 156 + i, Y = 178; if (bayer(X, Y) < 0.6) b.set(X, Y, PAL.C3); if (bayer(X - 8, Y - 10) < 0.4) b.set(X - 8, 166, PAL.C3); }
+  void f;
+};

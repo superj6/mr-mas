@@ -26,6 +26,7 @@
 import {Buf, rect, line, ellipse, poly, bayer, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf, FAMILIES} from '../../../../../shared/pixel/palette';
 import {blitImg} from '../../../../../shared/pixel/figure';
+import type {Img} from '../../../../../shared/pixel/figure';
 import {boardroomLayers, BR} from '../../../../../shared/pixel/rooms/boardroom';
 import {overlay} from '../../../../../shared/pixel/rooms/setkit';
 import {terbSheetRoom, TERB_SHEET_DEFAULT} from '../../../../../shared/pixel/cast/terb-sheet';
@@ -34,8 +35,8 @@ import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import {drawMadaSeated, MADA_SEAT_DEFAULT} from '../../../../../shared/pixel/cast/mada';
 import {drawMadaMedium, MADA_MEDIUM_DEFAULT} from '../../../../../shared/pixel/cast/mada-medium';
 import {drawSenator} from '../../../../../shared/pixel/cast/civic-extras';
-import {drawMasSeated, MAS_SEATED_DEFAULT} from '../../../../../shared/pixel/cast/mas-seated';
-import type {MasSeatedArm} from '../../../../../shared/pixel/cast/mas-seated';
+import {drawMasSeat4, MAS_SEATED_DEFAULT} from './masseat4';
+import type {MasSeatedArm} from './masseat4';
 import {masCU} from '../../../../../shared/pixel/cast/mas-cu';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
@@ -43,7 +44,7 @@ import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
 import {fill, pt, pw, pwrap, bpt, bpw, bpwrap, tiny, tinyWidth, vramp} from '../../art/kit';
-import {RH, W, glow, putBustSoft} from './common';
+import {RH, W, glow, putBustSoft, forearm, clothLine, clothArea, clothOf} from './common';
 import {drawBackHead} from './backhead';
 
 // ================================================================== the room by day (Act One's morning, copied)
@@ -125,53 +126,95 @@ export interface Day18St {
   tv?: number | 'off';
   /** the beacon's beam across the window, 0..1 (left to right), or none */
   beam?: number;
-  /** the lanyard: 0 none · 1 Terb holds it out across the corner · 2 Mas has it (his hand on it at Terb's) · 3 over his
-   *  head (his hands up) · 4 on, its card on his chest */
-  lanyard?: 0 | 1 | 2 | 3 | 4;
-  /** heads: 'fwd' (the table's own business) or 'mas' (every face turned to him) */
-  look?: 'fwd' | 'mas';
+  /** the lanyard (the review pass: the handover drawn as a handover): 0 none · 1 Terb up at the table's corner, his arm
+   *  out across it with the lanyard hanging from his fingers, Mas leaning in, his hand going out to it · 2 Mas's hand
+   *  on the strap at Terb's fingers · 3 Mas has it, his hand up over his head, the loop hanging from it (Terb's arm
+   *  down) · 4 the loop over his crown, the two straps down either side of his face to the card under his chin · 5 on,
+   *  the card on his chest */
+  lanyard?: 0 | 1 | 2 | 3 | 4 | 5;
+  /** heads: 'fwd' (the table's own business), 'mas' (every face turned to him) or 'terb' (every face to Terb) */
+  look?: 'fwd' | 'mas' | 'terb';
+  /** Terb still up at the corner after the handover (18.07's last frames: he sits again off screen, before 18.09) */
+  terbUp?: boolean;
 }
-/** Terb at the head (seat L): seated, his sheet down; his near arm out across the table's corner with the lanyard
- *  (room scale: the shirtsleeve from the shoulder to the elbow to the hand, the lanyard hanging from his fingers) */
+/** Terb at the head (seat L), seated, his sheet down; for the handover (lanyard 1..4) he is up at the table's corner:
+ *  standing, his near arm out across the corner from the shoulder, the elbow, the forearm rising to the hand that holds
+ *  the strap (the room sprite's own forearm clipped off, so there is one arm, not a stick beside his lap) */
+const TERB_UP_X = 62;
 const terbAt = (b: Buf, st: Day18St) => {
-  const holding = (st.lanyard ?? 0) >= 1 && (st.lanyard ?? 0) <= 2;
-  const pose = {...TERB_SHEET_DEFAULT, legs: 'seat' as const, arm: 'none' as const, helmet: false, read: !holding && st.look !== 'mas', mouth: 'rest' as const, light: 'room' as const};
-  const img = terbSheetRoom(pose), x0 = BR.SEATS.L.x + 2 - TERB_FOOT[0], y0 = 194 - TERB_FOOT[1];
+  const l = st.lanyard ?? 0, up = st.terbUp ?? (l >= 1 && l <= 4), holding = l === 1 || l === 2;
   const RED = new Set([PAL.R0, PAL.R1, PAL.R2, PAL.R3]), NOZ = new Set([PAL.G1, PAL.G6]);
-  blitImg(b, img, x0, y0, {clip: (px, py) => { const i = px - x0, j = py - y0, v = img.c[j * img.w + i]; if (RED.has(v)) return false; return !(NOZ.has(v) && i >= 8 && i <= 30 && j >= 50 && j <= 90); }});
-  if (holding) {
-    // the near arm out toward seat A: the white shirtsleeve (two tones, its underside a rung down), the hand at the
-    // table's corner, the lanyard hanging from his fingers (its card turned to Mas)
-    const sh: [number, number] = [x0 + 30, y0 + 42], el: [number, number] = [sh[0] + 14, sh[1] + 8], hd: [number, number] = [el[0] + 18, el[1] - 4];
-    for (const [a, z] of [[sh, el], [el, hd]] as Array<[[number, number], [number, number]]>) { line(a[0], a[1], z[0], z[1], b.ink(PAL.G6)); line(a[0], a[1] + 1, z[0], z[1] + 1, b.ink(PAL.G5)); line(a[0], a[1] + 2, z[0], z[1] + 2, b.ink(PAL.G3)); }
-    fill(b, hd[0], hd[1] - 1, 4, 3, PAL.S4); fill(b, hd[0] + 1, hd[1] + 2, 3, 1, PAL.S2);
-    if (st.lanyard === 1) lanyardRoom(b, hd[0] + 2, hd[1] + 1, 'hang');
-  }
-};
-/** the lanyard at room scale: a red strap loop and the white card. 'hang' from a hand at (x, y) · 'up' a loop held
- *  over a head at (x, y) (the crown) · 'on' round a neck at (x, y) (the collar's middle), the card on the chest */
-export const lanyardRoom = (b: Buf, x: number, y: number, how: 'hang' | 'up' | 'on') => {
-  const R = PAL.R2, R1 = PAL.R1;
-  if (how === 'hang') { line(x - 2, y, x, y + 9, b.ink(R)); line(x + 2, y, x + 1, y + 9, b.ink(R1)); fill(b, x - 2, y + 10, 6, 7, PAL.P2); fill(b, x - 2, y + 10, 6, 2, PAL.R2); return; }
-  if (how === 'up') {
-    // the loop passing over his head: its two straps down either side of his head from above the crown (where his hand
-    // holds it), the card swinging under his chin
-    line(x - 6, y - 4, x - 5, y + 10, b.ink(R)); line(x + 6, y - 4, x + 5, y + 10, b.ink(R1)); line(x - 6, y - 4, x + 6, y - 4, b.ink(R));
-    fill(b, x - 3, y + 11, 6, 7, PAL.P2); fill(b, x - 3, y + 11, 6, 2, PAL.R2);
+  if (!up) {
+    const pose = {...TERB_SHEET_DEFAULT, legs: 'seat' as const, arm: 'none' as const, helmet: false, read: st.look !== 'mas' && st.look !== 'terb', mouth: 'rest' as const, light: 'room' as const};
+    const img = terbSheetRoom(pose), x0 = BR.SEATS.L.x + 2 - TERB_FOOT[0], y0 = 194 - TERB_FOOT[1];
+    blitImg(b, img, x0, y0, {clip: (px, py) => { const i = px - x0, j = py - y0, v = img.c[j * img.w + i]; if (RED.has(v)) return false; return !(NOZ.has(v) && i >= 8 && i <= 30 && j >= 50 && j <= 90); }});
     return;
   }
-  line(x - 4, y - 2, x - 1, y + 7, b.ink(R)); line(x + 4, y - 2, x + 1, y + 7, b.ink(R1)); fill(b, x - 2, y + 8, 6, 7, PAL.P2); fill(b, x - 2, y + 8, 6, 2, PAL.R2);
+  // up at the corner: 'hand' (his near arm forward) with its forearm and the paper clipped off while he holds the
+  // lanyard out (redrawn below at full reach); 'none' (arms at his sides) once Mas has it
+  const pose = {...TERB_SHEET_DEFAULT, legs: 'stand' as const, arm: (holding ? 'hand' : 'none') as 'hand' | 'none', helmet: false, read: false, mouth: 'rest' as const, light: 'room' as const};
+  const img = terbSheetRoom(pose), x0 = TERB_UP_X - TERB_FOOT[0], y0 = 194 - TERB_FOOT[1];
+  blitImg(b, img, x0, y0, {clip: (px, py) => {
+    const i = px - x0, j = py - y0, v = img.c[j * img.w + i];
+    if (RED.has(v)) return false;
+    if (holding && i >= 34 && j >= 24 && j <= 44) return false;
+    return !(NOZ.has(v) && i >= 8 && i <= 30 && j >= 50 && j <= 90);
+  }});
+  if (!holding) return;
+  // the arm: the white shirtsleeve from the shoulder to the elbow (a little below the shoulder's line) to the wrist,
+  // narrowing, its underside a rung down, then the hand pinching the strap's top
+  const sh: [number, number] = [x0 + 29, y0 + 28], el: [number, number] = [x0 + 38, y0 + 30], wr: [number, number] = [x0 + 47, y0 + 24];
+  const SHIRT = [PAL.G2, PAL.G4, PAL.G5, PAL.G6, PAL.P2];
+  sleeve(b, sh, el, 3.2, 2.8, SHIRT, [0.55, -0.83], {fold: false});
+  sleeve(b, el, wr, 2.8, 2.2, SHIRT, [0.55, -0.83], {fold: false});
+  fill(b, wr[0] - 1, wr[1] - 1, 2, 3, PAL.P2);
+  // the hand: the knuckles over the strap, the thumb pinching it from below
+  fill(b, wr[0] + 1, wr[1] - 2, 3, 3, PAL.S3); b.set(wr[0] + 1, wr[1] - 2, PAL.S4); b.set(wr[0] + 2, wr[1] - 2, PAL.S4); b.set(wr[0] + 3, wr[1], PAL.S2); b.set(wr[0] + 1, wr[1] + 1, PAL.S2);
+  if (l === 1) lanyardRoom(b, wr[0] + 2, wr[1] + 1, 'hang');
 };
-/** Mas at seat A: seated (Ep1's rig), his arm per the lanyard's step; the lanyard on him once it's on */
+/** the lanyard at room scale: a red strap loop and the white card. 'hang' from a hand at (x, y) · 'lift' the loop held
+ *  up in a hand at (x, y) above his head, its two straps falling to the card in front of his face (o.to) · 'crown' the
+ *  loop over his crown (x, y the crown's top), the two straps down either side of his face to the card under his chin
+ *  · 'on' round a neck at (x, y) (the collar's middle), the card on the chest. Never a closed box: two strap lines
+ *  meeting at the card's clip */
+export const lanyardRoom = (b: Buf, x: number, y: number, how: 'hang' | 'lift' | 'crown' | 'on', o: {to?: [number, number]; hw?: number} = {}) => {
+  const R = PAL.R2, R1 = PAL.R1;
+  const card = (cx: number, cy: number) => { fill(b, cx - 2, cy, 6, 7, PAL.P2); fill(b, cx - 2, cy, 6, 2, PAL.R2); b.set(cx + 3, cy + 6, PAL.G4); };
+  if (how === 'hang') { line(x - 2, y, x, y + 9, b.ink(R)); line(x + 2, y, x + 1, y + 9, b.ink(R1)); card(x, y + 10); return; }
+  if (how === 'lift') {
+    // the loop pinched at its top in the raised hand; its two straps open into a narrow V down to the card's clip
+    const [cx, cy] = o.to ?? [x + 1, y + 16];
+    line(x - 1, y, cx - 1, cy - 1, b.ink(R)); line(x + 1, y, cx + 2, cy - 1, b.ink(R1));
+    card(cx, cy);
+    return;
+  }
+  if (how === 'crown') {
+    // over his head: the straps from behind the crown down either side of his face, meeting at the card under his chin
+    // (the loop's top is behind his head: only the two straps show, from his temples down to the clip)
+    const hw = o.hw ?? 6, [cx, cy] = o.to ?? [x, y + 20];
+    line(x - hw, y, cx - 1, cy - 1, b.ink(R)); line(x + hw, y, cx + 2, cy - 1, b.ink(R1));
+    card(cx, cy);
+    return;
+  }
+  line(x - 4, y - 2, x - 1, y + 7, b.ink(R)); line(x + 4, y - 2, x + 1, y + 7, b.ink(R1)); card(x, y + 8);
+};
+/** Mas at seat A: seated (Ep1's rig, copied with the handover's arms: masseat4), turned to Terb (flipped: he faces
+ *  screen-left); for the handover he leans in across the table's corner, takes the strap from Terb's fingers, lifts the
+ *  loop over his head and puts it on */
 const SEAT_A_X = BR.SEATS.A.x - 6;
 const masAt = (b: Buf, st: Day18St) => {
   const l = st.lanyard ?? 0;
-  const arm: MasSeatedArm = l === 2 ? 'reach' : l === 3 ? 'hold' : 'lap';
-  drawMasSeated(b, SEAT_A_X, 134, {...MAS_SEATED_DEFAULT, arm, head: 'host', collars: 3, light: 'room'}, {flip: true});
+  const arm: MasSeatedArm = l === 1 ? 'reach0' : l === 2 ? 'take' : l === 3 ? 'lift' : l === 4 ? 'crown' : 'lap';
+  const lean = l === 1 ? 0.22 : l === 2 ? 0.3 : l === 3 ? 0.08 : 0;
+  const head = l === 1 || l === 2 || st.look === 'terb' ? 'down' as const : 'host' as const;
+  drawMasSeat4(b, SEAT_A_X, 134, {...MAS_SEATED_DEFAULT, arm, head, collars: 3, light: 'room'}, {flip: true, lean});
   // (the seated rig's face is at local [22, 8], its seat at [17, 44]; flipped, the face sits to the left of the seat)
   const fx = SEAT_A_X - 5, fy = 134 - 44 + 8;
-  if (l === 3) lanyardRoom(b, fx, fy - 6, 'up');
-  if (l === 4) lanyardRoom(b, fx + 1, fy + 12, 'on');
+  const at = (lx0: number, ly0: number): [number, number] => [SEAT_A_X + 17 - lx0 - Math.round((44 - ly0) * lean), 134 - 44 + ly0];
+  if (l === 2) { const [hx, hy] = at(43, 31); lanyardRoom(b, hx + 1, hy + 2, 'hang'); }
+  if (l === 3) { const [hx, hy] = at(27, -2); lanyardRoom(b, hx, hy + 1, 'lift', {to: [fx - 1, fy + 9]}); }
+  if (l === 4) lanyardRoom(b, fx, fy - 3, 'crown', {to: [fx, fy + 11], hw: 5});
+  if (l === 5) lanyardRoom(b, fx + 1, fy + 12, 'on');
 };
 export const day18 = (b: Buf, f: number, st: Day18St = {}) => {
   const L = dayLayers();
@@ -181,8 +224,10 @@ export const day18 = (b: Buf, f: number, st: Day18St = {}) => {
   banner(b);
   // seated: the unplated director (B), Mada (C) perfectly still; Mas at A beside Terb; on the roll call every face
   // turns to Mas (screen-left of them)
-  drawSenator(b, BR.SEATS.B.x, SEN_Y, 2, 'sit', {flip: st.look === 'mas'});
-  drawMadaSeated(b, BR.SEATS.C.x, 152, {...MADA_SEAT_DEFAULT, light: 'room'}, {spin: null, flip: st.look === 'mas'});
+  const turned = st.look === 'mas' || st.look === 'terb';
+  drawSenator(b, BR.SEATS.B.x, SEN_Y, 2, 'sit', {flip: turned});
+  // (the review pass: to Terb, who is lower in frame at the head, their eyes come down a lid)
+  drawMadaSeated(b, BR.SEATS.C.x, 152, {...MADA_SEAT_DEFAULT, light: 'room', lid: st.look === 'terb' ? 1 : 0}, {spin: null, flip: turned});
   masAt(b, st);
   overlay(b, L.front);
   terbAt(b, st);
@@ -260,14 +305,39 @@ const roomSoft = () => {
 export const masHold = (b: Buf, f: number) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  blitImg(b, masCU('tungsten'), 0, 0, {clip: (_x, y) => y < RH});
+  const cu = masCU('tungsten');
+  blitImg(b, cu, 0, 0, {clip: (_x, y) => y < RH});
+  // (the review pass: the hoodie carried down plain read as a cape) its structure on the cloth: the near shoulder's
+  // raglan seam, the near arm down his side (its lit face a rung up, the crease where it meets his body), the far
+  // shoulder's seam into the hood's shadow
+  const cloth = clothOf(cu, 0, 0);
+  clothArea(b, [[0, 203], [12, 186], [28, 174], [44, 175], [51, 190], [53, 203]], cloth, 1);
+  clothLine(b, [[80, 160], [64, 167], [50, 174], [44, 177]], cloth, -1, -1);
+  clothLine(b, [[44, 177], [49, 189], [52, 203]], cloth, -2);
+  clothLine(b, [[150, 158], [170, 168], [186, 184], [194, 203]], cloth, -2);
   void f;
 };
 /** [OTS] over Mas's shoulder onto TERB at the head (his approved portrait, helmet off), the remote in his near hand
  *  (Ep1's insert-hands grip); the TV's cool light on his near side until `off`; lip-synced */
+/** his mouths, brisk and procedural (the review pass: the portrait's wide toothy 'E' and its 'smile' read as a grin):
+ *  E speaks as the plain open A, the smile rests closed and level */
+export const briskTerb = (v: Viseme | undefined): Viseme => (v === 'E' ? 'A' : v === 'smile' || !v ? 'rest' : v);
+/** his portrait with the brisk mouths, and the open mouth's top teeth inked dark (a row of teeth under a lifted lip
+ *  read as a grin at 1080p; a dark opening reads as talk) */
+const TERB_F = new Map<string, Img>();
+const terbFace = (s: Parameters<typeof terbPortrait>[0]): Img => {
+  const key = JSON.stringify(s); const hit = TERB_F.get(key); if (hit) return hit;
+  const im = terbPortrait({...s, mouth: briskTerb(s.mouth)});
+  const c = im.c.slice();
+  for (let y = 70; y <= 78; y++) for (let x = 37; x <= 54; x++) { const i = y * im.w + x; if (c[i] === PAL.P1) c[i] = PAL.N0; }
+  const out = {...im, c};
+  TERB_F.set(key, out);
+  return out;
+};
 export const terbRemote = (b: Buf, f: number, st: {mouth?: Viseme; off?: boolean; aim?: number}) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
-  const img = terbPortrait({mouth: st.mouth ?? 'rest', lid: 0, look: 1, brow: 'level', helmet: false});
+  // (eyes on the TV until he clicks it off; then down to his business: "First item.", not to anyone)
+  const img = terbFace({mouth: briskTerb(st.mouth), lid: st.off ? 1 : 0, look: st.off ? 0 : 1, brow: 'level', helmet: false});
   // the TV's cool spill on his near (screen-right) side, gone when it clicks off
   const map = st.off ? undefined : (c: number) => { const fm = familyOf(c); return fm && fm[0] === 'S' && fm[1] >= 3 ? stepColor(c, 0) : c; };
   putBustCut(b, img, 120, 44, RH, true);
@@ -305,10 +375,17 @@ export const lanyardInsert = (b: Buf, f: number, st: {sway?: number} = {}) => {
   fill(b, cx - (cw >> 1) + 3, cy - 3, cw, ch, PAL.N1);
   fill(b, cx - (cw >> 1), cy - 4 + 1, cw, ch, PAL.P2); fill(b, cx - (cw >> 1), cy - 4 + 1, cw, 8, PAL.R2);
   bpt(b, s1, cx - (bpw(s1) >> 1), cy + 12, PAL.N1); bpt(b, s2, cx - (bpw(s2) >> 1), cy + 30, PAL.N1);
-  // his hand pinching the strap's loop (the white cuff, the shirtsleeve out of frame left)
+  // his hand pinching the strap's loop, the white cuff at the wrist, and his forearm (the review pass: it was a
+  // straight ribbed tube from the frame's left edge): the shirtsleeve rising from the frame's lower left (his elbow
+  // on the table's edge, out of frame) to the cuff, foreshortened and tapering toward the wrist, a cuff break, two
+  // long folds (common forearm)
   const h = placeHand(POSES.pinch([0.6, -0.45, -0.66], [0.15, -0.75, 0.64], 'R'), {s: 5.2, at: [top[0] + 6, top[1] + 2], anchor: 'thumb', light: 'lobby', cuffRamp: [PAL.G3, PAL.G4, PAL.G5, PAL.G6, PAL.P1, PAL.P1, PAL.P2]});
-  sleeve(b, h.cuffEnd, [h.cuffEnd[0] - 220, h.cuffEnd[1] + 40], 22, 26, [PAL.G3, PAL.G4, PAL.G5, PAL.G6, PAL.P2]);
+  // (drawn over the cuff's open end, so the cuff reads as the shirt's own band between the wrist and the sleeve, not a
+  // disc on a pipe; the sleeve widening fast toward the elbow below the frame)
   drawHand(b, h.hand, h.x, h.y);
+  forearm(b, [h.cuffEnd[0] - 2, h.cuffEnd[1] + 3], [h.cuffEnd[0] - 130, h.cuffEnd[1] + 240], 15, 40, [PAL.G2, PAL.G4, PAL.G5, PAL.G6, PAL.P2]);
+  // the cuff's button and its seam, on the band's lit side
+  fill(b, h.cuffEnd[0] + 6, h.cuffEnd[1] - 10, 3, 3, PAL.P2); b.set(h.cuffEnd[0] + 7, h.cuffEnd[1] - 9, PAL.G4);
   void f;
 };
 
@@ -317,7 +394,7 @@ export const lanyardInsert = (b: Buf, f: number, st: {sway?: number} = {}) => {
  *  drawn into a full frame for the split's left pane (its 238 px crop from x 0) */
 export const terbPane = (b: Buf, f: number, st: {mouth?: Viseme; read?: boolean}) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
-  const img = terbPortrait({mouth: st.mouth ?? 'rest', lid: st.read === false ? 0 : 1, look: st.read === false ? -1 : 0, brow: 'level', helmet: false});
+  const img = terbFace({mouth: briskTerb(st.mouth), lid: st.read === false ? 0 : 1, look: st.read === false ? -1 : 0, brow: 'level', helmet: false});
   putBustCut(b, img, 70, 40, RH, false);
   // his single sheet low at the frame's foot in his hand (its top edge tilted toward him, the lines of the post he's
   // reading from), his fingers on its corner
@@ -331,7 +408,14 @@ export const terbPane = (b: Buf, f: number, st: {mouth?: Viseme; read?: boolean}
 export const masPane = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']}) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  putBustSoft(b, masDayFace({mouth: st.mouth ?? 'rest', look: -1}), 70, 30, RH, false);
+  const face = masDayFace({mouth: st.mouth ?? 'rest', look: -1});
+  putBustSoft(b, face, 70, 30, RH, false);
+  // (the review pass: the hoodie's structure, not a cape: the near arm down his side, its crease, the far seam)
+  const cloth = clothOf(face, 70, 30);
+  clothArea(b, [[74, 203], [78, 160], [88, 142], [97, 150], [103, 203]], cloth, 1);
+  clothLine(b, [[118, 134], [106, 140], [97, 150]], cloth, -1, -1);
+  clothLine(b, [[97, 150], [100, 172], [103, 203]], cloth, -2);
+  clothLine(b, [[160, 140], [166, 162], [170, 203]], cloth, -2);
   // the lanyard: the red strap from behind his neck down his chest, the card
   const lx = 128, ly = 152;
   for (let i = 0; i < 2; i++) { line(lx - 14 + i, ly - 34, lx - 3 + i, ly, b.ink(i ? PAL.R1 : PAL.R2)); line(lx + 16 + i, ly - 36, lx + 6 + i, ly, b.ink(i ? PAL.R1 : PAL.R2)); }
@@ -392,7 +476,8 @@ export const phonePane = (b: Buf, f: number, st: {lit?: number; turn?: 0 | 1 | 2
       // the reminder: sc 8's invite, come due (the calendar's card in its own colour), legible
       const open = Math.min(1, (st.lit ?? 0) / 3), h = Math.max(3, Math.round(56 * open)), ty = r.y + 18 + Math.round((56 - h) / 2);
       fill(bb, r.x + 6, ty, r.w - 12, h, PAL.N3); fill(bb, r.x + 6, ty, r.w - 12, 2, PAL.C5);
-      if (open >= 1) { pt(bb, 'ELPPA ·', r.x + 12, ty + 10, PAL.P2); pt(bb, 'KEYNOTE ·', r.x + 12, ty + 22, PAL.P2); pt(bb, 'JUN 10', r.x + 12, ty + 34, PAL.C7); }
+      // (the review pass: no separators left dangling at the line ends: the event on its lines, the date under it)
+      if (open >= 1) { pt(bb, 'ELPPA', r.x + 12, ty + 10, PAL.P2); pt(bb, 'KEYNOTE', r.x + 12, ty + 22, PAL.P2); pt(bb, 'JUN 10', r.x + 12, ty + 34, PAL.C7); }
     }
   };
   if (turn === 0) {

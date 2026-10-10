@@ -100,10 +100,15 @@ L.add('18.07', {
   st: 'act4/sets/board lanyardInsert → splitAt(day18 | light stairPane) ([INSERT] Terb\'s hand holding out the lanyard by its strap, its card legible: SAFETY COMMITTEE; then the split, two 238 x 203 panes and a 4 px divider: LEFT the boardroom (Terb\'s arm out across the table\'s corner with it; Mas takes it from his hand and puts it over his head, three held drawings), RIGHT the lighthouse (Adelina drops hers over Ekiel two steps below her, its card printed on page 212), both landing on the same beat)',
   marks: {drop: ['snd', 'lanyard_drop', 1, 0]},
   draw: (fb, k, sh, f) => {
+    // (the review pass: a handover, not a jump: the insert holds the card for its read (26 f), then the split: Terb up
+    // at the corner with his arm out, Mas leaning in to it (4 f), his hand on the strap (4 f), the loop lifted over his
+    // head (4 f), over his crown (3 f), on, on the drop's beat with Adelina's on the right; every face at the table to
+    // Terb until it's on)
     const d = mk(sh, 'drop', 42);
-    if (k < d - 12) { lanyardInsert(fb, f, {sway: (Math.floor(k / 6) % 2)}); return; }
+    if (k < d - 16) { lanyardInsert(fb, f, {sway: (Math.floor(k / 6) % 2)}); return; }
     const left = frame(), right = frame();
-    day18(left, f, {tv: 'off', lanyard: k < d - 8 ? 1 : k < d - 4 ? 2 : k < d ? 3 : 4});
+    const l = (k < d - 11 ? 1 : k < d - 7 ? 2 : k < d - 3 ? 3 : k < d ? 4 : 5) as 1 | 2 | 3 | 4 | 5;
+    day18(left, f, {tv: 'off', lanyard: l, look: l <= 4 ? 'terb' : 'fwd', terbUp: true});
     stairPane(right, f, {drop: k < d - 6 ? 0 : k < d + 1 ? 1 : 2});
     splitAt(fb, left, right, {sxL: SXL_TABLE, sxR: SXR});
   },
@@ -113,9 +118,11 @@ const rightWait = (f: number, write = 0) => { const r = frame(); mario2S(r, f, {
 L.add('18.08', {
   st: 'act4/sets/board splitAt(terbPane | light mario2S) (LEFT pane: TERB reading the first task, then the members like a roll call, eyes on his sheet (his approved portrait, lip-synced); RIGHT pane a rung down: Mario writing, Ekiel in his new lanyard)',
   face: {TERB: 'lip'},
+  marks: {our: ['w', 'e2-a4-0005', 'our', 0]},
   draw: (fb, k, sh, f) => {
-    const left = frame();
-    terbPane(left, f, {mouth: mouth(sh, k, 'TERB'), read: true});
+    // (the review pass: eyes on his sheet through the task and the roll call; he looks up only on "our chief executive.")
+    const our = mk(sh, 'our', 256), left = frame();
+    terbPane(left, f, {mouth: mouth(sh, k, 'TERB'), read: k < our - 1});
     splitAt(fb, left, rightWait(f, k / 6), {sxL: 0, sxR: SXR, down: 'right'});
   },
 });
@@ -125,7 +132,7 @@ L.add('18.09', {
   marks: {line: ['on', 'e2-a4-0006', 0]},
   draw: (fb, k, sh, f) => {
     const on = mk(sh, 'line', 30), cut = on - 8, left = frame();
-    if (k < cut) { day18(left, f, {tv: 'off', lanyard: 4, look: k < 5 ? 'fwd' : 'mas'}); splitAt(fb, left, rightWait(f, 8 + k / 6), {sxL: SXL_TABLE, sxR: SXR, down: 'right'}); return; }
+    if (k < cut) { day18(left, f, {tv: 'off', lanyard: 5, look: k < 5 ? 'fwd' : 'mas'}); splitAt(fb, left, rightWait(f, 8 + k / 6), {sxL: SXL_TABLE, sxR: SXR, down: 'right'}); return; }
     masPane(left, f, {mouth: mouth(sh, k, 'MAS') as never});
     splitAt(fb, left, rightWait(f, 8 + k / 6), {sxL: 0, sxR: SXR, down: 'right'});
   },
@@ -139,7 +146,7 @@ L.add('18.10', {
     let sx = 0;
     if (k < 18) minutesInsert(left, f, {w: 1 + clamp(k / 8, 0, 1)});
     else if (k < also - 14) terbPane(left, f, {mouth: mouth(sh, k, 'TERB'), read: k < also - 28});
-    else if (k < also - 3) { day18(left, f, {tv: 'off', lanyard: 4, look: k < also - 9 ? 'fwd' : 'mas'}); sx = SXL_TABLE; }
+    else if (k < also - 3) { day18(left, f, {tv: 'off', lanyard: 5, look: k < also - 9 ? 'fwd' : 'mas'}); sx = SXL_TABLE; }
     else if (k >= alsoE + 3 && k < pen + 12) minutesInsert(left, f, {w: 2 + clamp((k - pen + 2) / 6, 0, 2)});
     else masPane(left, f, {mouth: mouth(sh, k, 'MAS') as never});
     splitAt(fb, left, rightWait(f, 16 + k / 6), {sxL: sx, sxR: SXR, down: 'right'});

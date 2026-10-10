@@ -148,6 +148,15 @@ const marioImg2 = (s: MarioPortrait) => {
   FINGERLESS.set(key, out);
   return out;
 };
+/** the committee lanyard on Ekiel's bust (x = his collar's centre, y = where the cord leaves it): two red cord lines
+ *  down to the card's clip, the white card with 212 in the badge's red */
+export const ekielLanyard = (b: Buf, x: number, y: number) => {
+  line(x - 10, y, x - 2, y + 13, b.ink(PAL.R2)); line(x - 9, y, x - 1, y + 13, b.ink(PAL.R1));
+  line(x + 10, y, x + 2, y + 13, b.ink(PAL.R2)); line(x + 9, y, x + 1, y + 13, b.ink(PAL.R1));
+  fill(b, x - 2, y + 12, 5, 3, PAL.G4);
+  fill(b, x - 8, y + 15, 17, 11, PAL.N0); fill(b, x - 7, y + 15, 15, 10, PAL.P2); fill(b, x - 7, y + 15, 15, 2, PAL.R2);
+  tiny(b, '212', x - 5, y + 18, PAL.R2);
+};
 /** viseme -> Mario's portrait mouths (0 rest, 1 small, 2 open, 3 round) */
 export const marioMouth = (v: string): 0 | 1 | 2 | 3 => (v === 'A' ? 2 : v === 'O' ? 3 : v === 'E' || v === 'M' ? 1 : 0);
 export interface Mario2SSt { mario?: Partial<MarioPortrait>; ekiel?: {mouth?: Viseme; expr?: 'squint' | 'worry' | 'neutral'}; write?: number; pages?: boolean }
@@ -158,6 +167,10 @@ export const mario2S = (b: Buf, f: number, st: Mario2SSt = {}) => {
   // lanyard on him
   const ek = mirror(ekielBust({mouth: st.ekiel?.mouth ?? 'rest', expr: st.ekiel?.expr ?? 'squint', lanyard: 'committee'}));
   putBustSoft(b, ek, 116, 52, RH, false);
+  // (the review pass: the bust's own badge sits under the desk's edge here, so the rhyme's other half was missing
+  // after the split) the committee lanyard carried onto his chest: the red cord from either side of his collar to the
+  // card, 212 on it, clear of the desk
+  ekielLanyard(b, 179, 141);
   // the desk across the frame's foot on Mario's side, his pages on it, the lamp
   deskTop(b, 168);
   deskLamp(b, 352, 168);

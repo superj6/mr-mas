@@ -24,9 +24,8 @@ import {PAL} from '../../../../../shared/pixel/palette';
 import {splitAt} from '../sets/board';
 import {thinning, MAS_EDGE} from '../sets/campus';
 import {zaiPane, noleMCU, cageClose, emptyHands, noleMouth, ZAI} from '../sets/zai';
-import {morning, docket} from '../sets/lobby';
-import {faceDown, phoneRead, masReading, flyerOut} from '../sets/dark';
-import {iouCornerECU} from '../../art/cast/mas2';
+import {morning, docket, pocketECU} from '../sets/lobby';
+import {faceDown, phoneRead, masReading, flyerOut, mapECU, faceDownMatch} from '../sets/dark';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import type {Mas2Legs} from '../../art/cast/mas2';
@@ -109,12 +108,16 @@ L.add('20.05', {
 L.add('20.06', {
   st: 'art/cast/mas2 iouCornerECU ([ECU] the inside of his jacket\'s pocket: as he folds the flyer in, his fingers find something already in there: the yellowed corner of the old note, a few faded rules, no words legible; 1 s)',
   marks: {rustle: ['snd', 'cloth_rustle', 1, 0]},
-  draw: (fb, k, sh, f) => { iouCornerECU(fb, f, {k: k >= mk(sh, 'rustle', 2) + 6 ? 1 : 0}); },
+  // (the review pass: two papers, so the plant reads: the folded cream flyer goes in, then his fingers stop on the
+  // yellowed corner already there)
+  draw: (fb, k, sh, f) => { const r = mk(sh, 'rustle', 2); pocketECU(fb, f, {k: k < r + 4 ? 0 : k < r + 9 ? 1 : k < r + 18 ? 2 : 3}); },
 });
 L.add('20.07', {
   st: 'act4/sets/lobby morning ([W] HARAS passes (art/cast/haras room, walking), her calculator tape trailing behind her, UPSIDE circled on it (legible); Mas at the back with his glass, the folded flyer in his jacket; V.O. 13 typed by the host, his lips still)',
   draw: (fb, k, sh, f) => {
-    morning(fb, f, {mas: {peel: 3, arm: 'glass'}, haras: Math.round(380 - k * 2.2)});
+    // (the review pass: her trailing tape and its UPSIDE tag struck through the typed V.O.; she passes and stops short
+    // of the line's end, her tape behind her to the right, clear of it)
+    morning(fb, f, {mas: {peel: 3, arm: 'glass'}, haras: Math.round(400 - Math.min(k, 100) * 1.95)});
     void sh;
   },
 });
@@ -142,6 +145,9 @@ L.add('20.10', {
   marks: {buzz: ['snd', 'phone_buzz_step_1', 1, 0], turn: ['snd', 'phone_turn_over', 1, 0], post: ['txt', 'I am starting', 'at', 0], card: ['txt', 'ISS', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const buzz = mk(sh, 'buzz', 45), turn = mk(sh, 'turn', 55), post = mk(sh, 'post', 62), card = mk(sh, 'card', 72);
+    // (the review pass: the object match from 20.09's clean rectangle: the phone face down lying where it lay, the
+    // same horizontal shape in the same place; then reframed to the top-down ECU for the buzz and the turn)
+    if (k < 24) { faceDownMatch(fb, f, {}); return; }
     if (k < turn) { faceDown(fb, f, {lit: k >= buzz, turn: 0}); return; }
     if (k < turn + 6) { faceDown(fb, f, {lit: true, turn: 1}); return; }
     phoneRead(fb, f, {post: k >= post ? k - post : undefined, card: k >= card ? 0 : undefined});
@@ -151,8 +157,10 @@ L.add('20.11', {
   st: 'act4/sets/dark phoneRead ([ECU] behind the post TPOOL is still open on its map; the link card drops out of the post and lands on the old check-in pin, and knocks it loose (it tips, the knock\'s ticks); no app tracks anyone)',
   marks: {knock: ['snd', 'pin_knock', 1, 0]},
   draw: (fb, k, sh, f) => {
+    // (the review pass: a true ECU on the map, the pin ~100 px at 1080p with sc 15's ripple and Alyi's tag; the card's
+    // corner falls into frame and strikes it on the knock)
     const kn = mk(sh, 'knock', 19);
-    phoneRead(fb, f, {post: 99, card: k < kn - 12 ? 0 : Math.min(1, (Math.floor((k - (kn - 12)) / 2) * 2) / 12), pin: k >= kn ? 1 : 0});
+    mapECU(fb, f, {card: k < kn - 10 ? 0 : Math.min(1, (Math.floor((k - (kn - 10)) / 2) * 2) / 10), pin: k >= kn ? 1 : 0});
   },
 });
 L.add('20.12', {
@@ -160,19 +168,24 @@ L.add('20.12', {
   marks: {rustle: ['snd', 'cloth_rustle', 1, 0], creak: ['snd', 'chair_creak', 1, 0]},
   draw: (fb, k, sh, f) => {
     const rs = mk(sh, 'rustle', 48), cr = mk(sh, 'creak', 72);
-    if (k < rs) { masReading(fb, f, {}); return; }
+    // (the review pass: reading is eyes DOWN on the phone below frame, the light on his chin; the decision is his eyes
+    // coming up, a beat before his hand goes to his jacket)
+    if (k < rs) { masReading(fb, f, {down: k < rs - 14}); return; }
     if (k < cr) { flyerOut(fb, f, {up: Math.min(2, Math.floor((k - rs) / 6))}); return; }
-    // he stands (three held steps up: his head leaves the frame's top), then steps out of frame right, leaving the room
+    // he stands: the camera tilts up with him in held steps (his head stays in frame), then he steps out of frame
+    // right, leaving the room
     const st = k - cr;
-    masReading(fb, f, {rise: st < 4 ? 30 : st < 8 ? 70 : 96, look: 0, out: st < 12 ? 0 : Math.min(400, Math.floor((st - 12) / 3) * 3 * 20)});
+    masReading(fb, f, {rise: st < 4 ? 4 : 10, pan: st < 4 ? 14 : st < 8 ? 30 : 40, look: 0, out: st < 12 ? 0 : Math.min(400, Math.floor((st - 12) / 3) * 3 * 24)});
   },
 });
 L.add('20.13', {
   st: 'act4/sets/dark phoneRead ([ECU] on the phone the knocked pin tips off the map and falls, out past the screen\'s foot (the hard cut to white is 22.01\'s first frame, the pin falling into it))',
   marks: {fall: ['snd', 'pin_fall', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const fall = mk(sh, 'fall', 14);
-    phoneRead(fb, f, {post: 99, card: 1, pin: k < fall ? 1 : 2 + Math.floor((k - fall) / 2) * 2 * 3});
+    // the knocked pin tips off its spot and drops out past the frame's foot, tumbling, accelerating on 2s, leaving the
+    // frame on the cut (it falls on into 22.01's white at the same size and the same x)
+    const fall = mk(sh, 'fall', 14), d = Math.floor(Math.max(0, k - fall) / 2) * 2;
+    mapECU(fb, f, {card: 1, pin: k < fall ? 1 : 2 + Math.round(0.1 * d * d + 1.0 * d)});
   },
 });
 

@@ -22,13 +22,11 @@ import {defineScene, layouts, mouth, roomMouth, mk, drawPlate} from '../../kit';
 import type {PxShot} from '../../kit';
 import {Buf, clamp} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
-import {party, tvClose, harasGerg, onStream, gergCall} from '../sets/lobby';
+import {party, tvClose, harasGerg, onStream, gergCall, HARAS_SEAT} from '../sets/lobby';
 import {lawn, masLawn, phonePush, MAS_EDGE} from '../sets/campus';
 import {corner2006, matchClicker} from '../../art/sets/elppa';
 import {stage08} from '../sets/f21';
-import {gardenGate, gardenBeds, outsideHedge, gateReverse, phoneUnfold} from '../../art/sets/garden';
-import {drawRadnus, RADNUS_DEFAULT} from '../../../../../shared/pixel/cast/radnus';
-import {drawMasStand2} from '../../art/cast/mas2';
+import {gardenGate, gardenBeds, gateReverse, phoneUnfold, outsideTruck, radnusMCU, masGuest} from '../sets/garden';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import {fill, bpt, bpw} from '../../art/kit';
@@ -54,8 +52,9 @@ L.add('19.03', {
   draw: (fb, k, sh, f) => {
     const sp = mk(sh, 'spool', 10), sit = sp + 66;
     const door = (k < 4 ? 1 : k < sit - 20 ? 2 : 1) as 0 | 1 | 2;
-    const x = Math.round(470 - Math.max(0, k - 2) * ((470 - 262) / (sit - 2)));
-    party(fb, f, {screen: 'stage', crowd: 'watch', door, haras: k < sit ? {walk: x} : 'seated'});
+    // (the review pass: she comes forward of the rows as she reaches Gerg, and sits at his depth, in front of the staff)
+    const x = Math.round(470 - Math.max(0, k - 2) * ((470 - (HARAS_SEAT.x + 6)) / (sit - 2))), y = 194 + Math.round(16 * clamp((k - (sit - 36)) / 36, 0, 1));
+    party(fb, f, {screen: 'stage', crowd: 'watch', door, haras: k < sit ? {walk: x, y} : 'seated'});
     const t = textOf(sh, 'plate');
     if (t && k >= t.s) drawPlate(fb, t, k - t.s, 250, 6, PAL.C6);
   },
@@ -99,7 +98,8 @@ L.add('19.07', {
     const click = mk(sh, 'click', 60), post = mk(sh, 'post', 62);
     // the crowd's backs and the screen first (1.5 s), then Mas comes up to the crowd's edge, head down over his phone
     const in0 = 30, arrive = 52, x = k < arrive ? Math.round(-24 + (MAS_EDGE + 24) * Math.max(0, (k - in0) / (arrive - in0))) : MAS_EDGE;
-    lawn(fb, f, {mas: k < in0 ? null : {x, legs: k < arrive ? walk(k) : 'stand', arm: 'phone', bow: true}});
+    // (the review pass: head DOWN over the lit phone, thumbs going, until the send; then he looks up at the stage)
+    lawn(fb, f, {mas: k < in0 ? null : {x, legs: k < arrive ? walk(k) : 'stand', arm: 'phone', bow: k < click + 6, typing: k >= arrive && k < click}});
     if (k >= post) drawEp2Post(fb, 16, 14, 'jun10', {size: 'popup', w: 230, k: k - post});
     void click;
   },
@@ -110,7 +110,8 @@ L.add('19.08', {
   draw: (fb, k, sh, f) => {
     const chat = mk(sh, 'chat', 6), buzz = mk(sh, 'buzz', 27), vo = mk(sh, 'vo', 60);
     if (k < vo - 12) { lawn(fb, f, {mas: {x: MAS_EDGE, arm: 'phone', bow: false}, chat: k >= chat ? 2 : 1, buzz: k >= buzz}); return; }
-    masLawn(fb, f, {phone: 'hand', look: 1});
+    // (his eyes down on the phone in his hand while the screen the size of a building plays in front of him)
+    masLawn(fb, f, {phone: 'hand', look: -1, down: true});
   },
 });
 L.add('19.09', {
@@ -119,7 +120,7 @@ L.add('19.09', {
   marks: {ring: ['snd', 'call_ring', 1, 0], con: ['snd', 'call_connect', 1, 0], g: ['on', 'e2-a4-0024', 0], m: ['on', 'e2-a4-0025', 0]},
   draw: (fb, k, sh, f) => {
     const con = mk(sh, 'con', 30), g = mk(sh, 'g', 47), m = mk(sh, 'm', 136);
-    if (k < g - 3) { masLawn(fb, f, {phone: k < con ? 'hand' : 'ear', buzz: k < con}); return; }
+    if (k < g - 3) { masLawn(fb, f, {phone: k < con ? 'hand' : 'ear', buzz: k < con, down: k < con}); return; }
     if (k < m - 6) { gergCall(fb, f, {mouth: mouth(sh, k, 'GERG'), phone: 'ear', cheer: 30}); return; }
     masLawn(fb, f, {phone: 'ear', mouth: mouth(sh, k, 'MAS') as never});
   },
@@ -192,19 +193,22 @@ L.add('19.17', {
     const n1 = mk(sh, 'n1', 48), b1 = mk(sh, 'b1', 67), n2 = mk(sh, 'n2', 110), b2 = mk(sh, 'b2', 127);
     const second = k >= b1 + 16;
     const n = second ? n2 : n1, bb = second ? b2 : b1;
-    gardenBeds(fb, f, {at: second ? 4 : 3, hand: k >= (second ? n2 - 18 : 20) && k < bb + 6, nod: k < n ? 0 : k < n + 4 ? 1 : k < n + 10 ? 2 : 0, bubble: k >= bb && k < bb + (second ? 120 : 16)});
+    gardenBeds(fb, f, {at: second ? 4 : 3, hand: k >= (second ? n2 - 18 : 20) && k < bb + 6, nod: k < n ? 0 : k < n + 4 ? 1 : k < n + 12 ? 2 : k < n + 16 ? 1 : 0, bubble: k >= bb && k < bb + (second ? 120 : 16)});
   },
 });
 L.add('19.18', {
-  st: 'art/sets/garden outsideHedge ([2S] phrase 3, outside the hedge: Mas screen-left, phone in hand, watching the row; a few feet along the same hedge, screen-right, RADNUS (cast/radnus) rises into frame, politely on the outside too, not burning; "Lovely garden. I see they let your chatbot in." (room mouth); "as a guest." (room mouth), dry; Radnus\'s polite smile holds a beat too long)',
-  face: {RADNUS: 'room', MAS: 'room'},
+  st: 'act4/sets/garden outsideTruck → radnusMCU → masGuest → radnusMCU ([2S] phrase 3, outside the hedge, established on a truck along it: Mas screen-left, phone in hand, watching the row; RADNUS already a few feet along the same hedge, screen-right, politely outside too, not burning; then the exchange in singles: [MCU] Radnus (the roll call\'s bust, turned to Mas): "Lovely garden. I see they let your chatbot in." lip-synced; [MCU] Mas, dry: "as a guest." lip-synced; [MCU] Radnus\'s polite smile holds a beat too long)',
+  face: {RADNUS: 'lip', MAS: 'lip'},
+  marks: {rad: ['on', 'e2-a4-0030', 0], mas: ['on', 'e2-a4-0031', 0], masE: ['end', 'e2-a4-0031', 0]},
   draw: (fb, k, sh, f) => {
-    const rise = (k < 14 ? 0 : k < 22 ? 1 : k < 30 ? 2 : 3) as 0 | 1 | 2 | 3;
-    outsideHedge(fb, f, {radnus: rise});
-    // the mouths on their takes (the same drawings redrawn over the art's, with the room mouth)
-    const rm = roomMouth(sh, k, 'RADNUS'), mm = roomMouth(sh, k, 'MAS');
-    if (rise === 3) drawRadnus(fb, 380, 196, {...RADNUS_DEFAULT, arm: 'fold', fire: null, mouth: rm === 'open' ? 'open' : 'smile'}, {});
-    if (mm === 'open') drawMasStand2(fb, 110, 196, {arm: 'phone', mouth: 'open'});
+    // (the review pass: one static wide carried the act's title line with 40 px faces, and Radnus rose out of the
+    // ground) the 2S on a truck in held steps (he is already there), then the singles; the smile held on his MCU
+    const rad = mk(sh, 'rad', 54), mas = mk(sh, 'mas', 133), masE = mk(sh, 'masE', 156);
+    const rm = (v: string) => (v === 'A' || v === 'E' ? 'open' : v === 'O' ? 'O' : 'smile') as 'open' | 'O' | 'smile';
+    if (k < rad - 8) { outsideTruck(fb, f, {cam: k < 8 ? 0 : Math.min(1, (Math.floor((k - 8) / 4) * 4) / 28)}); return; }
+    if (k < mas - 5) { radnusMCU(fb, f, {mouth: rm(mouth(sh, k, 'RADNUS'))}); return; }
+    if (k < masE + 4) { masGuest(fb, f, {mouth: mouth(sh, k, 'MAS') as never}); return; }
+    radnusMCU(fb, f, {mouth: 'smile'});
   },
 });
 L.add('19.19', {
