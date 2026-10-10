@@ -4,6 +4,10 @@
 
 ## Current notes, newest first
 
+00000C. **The intro's typed quote stays the same in every episode (2026-10-10).** The showrunner: "i did not want the quote near the singularity unclear which side changed per intro".
+   - Every episode's intro types "near the singularity; unclear which side.", picture and sound, exactly as Ep1's does.
+   - Per-episode intro changes may touch other elements only: the subtitle, the keycap, the `you are here` dot.
+   - Ep2's intro is being restored to match.
 00000B. **Ep1 is locked; ML concepts across the season (2026-09-29):**
    - **Ep1 is final.** It's `out/ep01/full-v3/ep01-v35.mp4`, 23:31.58, f21d274. The showrunner: "also to be clear we shouldn't make any changes to episode 1".
      - The last fixes before the lock: Neleh's "Step two." at the board's post, and Mada's "There is no step four." before "Then we'll write step four ourselves." The showrunner: "we never say step 2 either" and "we should've added there is no step 4".
