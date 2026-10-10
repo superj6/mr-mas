@@ -33,9 +33,11 @@ ROOMS = {
     'lobby_day': [[L('bed_lobby_day', -37)], [L('room_tone', -37), L('server_hum', -47, 2600)]],
     'lobby_watchparty': [[L('bed_lobby_watchparty', -36)], [L('bed_allhands', -37), L('room_tone', -43)]],
     'lobby_morning': [[L('bed_lobby_morning', -38)], [L('room_tone', -38), L('server_hum', -48, 2600)]],
+    # the lobby still cheering, under Gerg's shots of sc 19's crosscut call (stems.CROSS_ROOM)
+    'lobby_cheering': [[L('bed_lobby_cheer', -34)], [L('bed_lobby_watchparty', -34)]],
     'lobby_night': [[L('bed_lobby_night', -38)]],
     # the boardroom (SET-02): the séance by candlelight; Mar 8 and May 28 by day
-    'seance': [[L('bed_seance_candles', -38)], [L('bed_boardroom_night', -39)]],
+    'seance': [[L('bed_boardroom_night', -40), L('bed_seance_candles', -42)], [L('bed_boardroom_night', -39)]],
     'boardroom_day': [[L('bed_boardroom_day', -39)]],
     'boardroom_night': [[L('bed_boardroom_night', -39)]],
     'boardroom': [[L('bed_boardroom_night', -39)]],
@@ -52,27 +54,31 @@ ROOMS = {
     # the demo stage: the wings (work lights), the house
     'wings': [[L('bed_wings', -40)], [L('room_tone', -40), L('server_hum', -50, 1800)]],
     'demo_house': [[L('bed_demo_house', -36)], [L('bed_allhands', -37), L('room_tone', -42)]],
+    'demo_house_empty': [[L('bed_demo_house_empty', -38)], [L('bed_demo_house', -40)]],     # 12.01-12.03 (stems ROOM_OVERRIDE)
     # the open floor (SET-12), Alyi's office (SET-13), the stairwell, the 2022 party, the 2023 offsite fire
-    'open_floor': [[L('bed_open_floor', -38)], [L('bed_bullpen_packing', -38)]],
+    # (manifest §7's drip_clack is a 0.6 s one-shot, not a loop: the chillers are the racks' hum, low)
+    'open_floor': [[L('bed_office_day', -38), L('server_hum', -50, 1800)], [L('bed_bullpen_packing', -38)]],
     'office_evening': [[L('bed_office_evening', -40)]],
     'office_2023': [[L('bed_office_evening', -41), L('server_hum', -50, 1800)]],
     'stairwell': [[L('bed_stairwell', -42)], [L('room_tone', -42, 2500)]],
-    'party': [[L('bed_party_2022', -35)], [L('bed_allhands', -35)]],
-    'fire_night': [[L('bed_fires', -37)]],
+    'party': [[L('bed_party_crowd', -34)], [L('bed_allhands', -35)]],
+    'fire_night': [[L('bed_fire_night', -36)], [L('bed_fires', -37)]],
     # the Bay Bridge (SET-16): the evening rush, the night, the rain
-    'bridge': [[L('bed_bridge_traffic', -36)], [L('bed_lighthouse', -41), L('room_tone', -42, 600)]],
+    'bridge': [[L('bed_bridge_traffic', -35)], [L('bed_lighthouse', -41), L('room_tone', -42, 600)]],
+    'bridge_stalled': [[L('bed_bridge_stalled', -37)], [L('bed_bridge_traffic', -38)]],      # 17.03-17.16 (stems ROOM_OVERRIDE)
     'bridge_night': [[L('bed_bridge_night', -40)], [L('bed_lighthouse', -43), L('room_tone', -44, 600)]],
-    'bridge_rain': [[L('bed_bridge_rain', -37)], [L('bed_lighthouse', -40), L('room_tone', -40, 3000)]],
+    # May 20: the traffic moving again, the rain on his umbrella close (manifest §7: bed_rain, R2 close)
+    'bridge_rain': [[L('bed_bridge_traffic', -41), L('bed_rain', -36)], [L('bed_lighthouse', -40), L('room_tone', -40, 3000)]],
     # Misanthropic's lighthouse (SET-17) and the splits (SET-18: room tone panned to each pane)
-    'lighthouse': [[L('bed_lighthouse', -39)]],
+    'lighthouse': [[L('bed_lighthouse', -39), L('beacon_motor', -49)], [L('bed_lighthouse', -39)]],
     'split_lighthouse': [[L('bed_boardroom_day', -41, pan=(1.0, 0.35)), L('bed_lighthouse', -43, pan=(0.35, 1.0))]],
-    'split_zai': [[L('bed_campus_crowd', -40, pan=(1.0, 0.35)), L('bed_zai_lobby', -42, pan=(0.35, 1.0))],
+    'split_zai': [[L('bed_campus_outdoor', -40, pan=(1.0, 0.35)), L('bed_zai_warehouse', -41, pan=(0.35, 1.0))],
                   [L('bed_allhands', -41, pan=(1.0, 0.35)), L('room_tone', -42, 1800, pan=(0.35, 1.0))]],
     # ELPPA's campus (SET-19), the 2008 stage (SET-20), the walled garden (SET-21), ISS's empty lot (SET-23)
-    'campus': [[L('bed_campus_crowd', -37)], [L('bed_allhands', -40), L('room_tone', -42)]],
-    'era_2008': [[L('bed_tpool', -40), L('room_tone', -44, 1800)]],
+    'campus': [[L('bed_campus_outdoor', -36)], [L('bed_allhands', -40), L('room_tone', -42)]],
+    'era_2008': [[L('bed_camcorder_2008', -38)], [L('bed_tpool', -40), L('room_tone', -44, 1800)]],
     'garden': [[L('bed_garden', -40)], [L('room_tone', -42, 3000)]],
-    'empty_lot': [[L('bed_empty_lot', -42)], [L('room_tone', -44, 1500)]],
+    'empty_lot': [[L('bed_empty_lot_wind', -42)], [L('room_tone', -44, 1500)]],
     # the 2 s filename card: room tone (Ep1's card level), the next chapter's room leads under its end
     'card': [[L('room_tone', -38)]],
     # no bed: a black, the blueprint's card (THE PLAN plays its own score)

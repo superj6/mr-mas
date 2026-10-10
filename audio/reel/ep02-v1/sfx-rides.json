@@ -1,0 +1,1450 @@
+{
+ "about": "the sound audit's rides (sound_audit.py --rides; stems.py adds ride_db to the lock's gain): each masked sound lifted toward its target over rooms and score in its own band, measured where it sounds; one offset per (segment, beat, lock name)",
+ "rides": [
+  {
+   "seg": "act1",
+   "beat": "4.02",
+   "name": "candle_flare",
+   "laid_as": "candle_flare",
+   "snr_before_db": -6.4,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.6,
+   "why": "first heard -6.4 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.6,
+    "attack_over_local_db": 6.0,
+    "body_db": -5.9,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "4.02",
+   "name": "planchette_glide",
+   "laid_as": "planchette_glide",
+   "snr_before_db": 5.7,
+   "band": "2000-4000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.3,
+   "why": "first heard +5.7 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.3,
+    "attack_over_local_db": 5.5,
+    "body_db": 6.0,
+    "band": "2000-4000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "4.13",
+   "name": "cow_moo_reverb",
+   "laid_as": "cow_moo_reverb",
+   "snr_before_db": -9.1,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 9.2,
+   "why": "first heard -9.1 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 9.2,
+    "attack_over_local_db": 6.0,
+    "body_db": 0.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "4.27",
+   "name": "render_front_sweep",
+   "laid_as": "render_front_sweep",
+   "snr_before_db": 1.5,
+   "band": "1000-2000 Hz",
+   "target_db": 2.0,
+   "ride_db": 0.5,
+   "why": "first heard +1.5 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 0.5,
+    "attack_over_local_db": 1.9,
+    "body_db": 2.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "4A.06",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": 1.0,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 2.1,
+   "why": "first heard +1.0 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.7,
+    "attack_over_local_db": 7.6,
+    "body_db": 4.7,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "6.02",
+   "name": "chapter_tick",
+   "laid_as": "chapter_tick",
+   "snr_before_db": 5.8,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.6,
+   "why": "first heard +5.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.6,
+    "attack_over_local_db": 100.9,
+    "body_db": 5.8,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "7.01",
+   "name": "dollhouse_slide",
+   "laid_as": "dollhouse_slide",
+   "snr_before_db": -9.5,
+   "band": "250-1000 Hz",
+   "target_db": 2.0,
+   "ride_db": 4.3,
+   "why": "first heard -9.5 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 6.0,
+    "attack_over_local_db": 6.0,
+    "body_db": 3.7,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "7.01",
+   "name": "light_bank_click",
+   "laid_as": "light_bank_click",
+   "snr_before_db": -5.8,
+   "band": "250-1000 Hz",
+   "target_db": 2.0,
+   "ride_db": 7.0,
+   "why": "first heard -5.8 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": 10.3,
+    "body_db": 7.0,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "7.02",
+   "name": "box_set",
+   "laid_as": "box_set",
+   "snr_before_db": -10.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.0,
+   "why": "first heard -10.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": 6.3,
+    "body_db": 1.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act1",
+   "beat": "7.05",
+   "name": "alert_bonk",
+   "laid_as": "alert_bonk",
+   "snr_before_db": 1.5,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 1.5,
+   "why": "first heard +1.5 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 1.5,
+    "attack_over_local_db": 5.9,
+    "body_db": 3.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "10.05",
+   "name": "rubber_stamp_C",
+   "laid_as": "rubber_stamp_C",
+   "snr_before_db": 6.8,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 1.1,
+   "why": "first heard +6.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 1.1,
+    "attack_over_local_db": 6.1,
+    "body_db": 3.4,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.01",
+   "name": "spotlight_swing",
+   "laid_as": "spotlight_swing",
+   "snr_before_db": -6.2,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.0,
+   "why": "first heard -6.2 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": -2.8,
+    "body_db": 5.8,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.02",
+   "name": "palette_step_F",
+   "laid_as": "palette_step_F",
+   "snr_before_db": -2.8,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.3,
+   "why": "first heard -2.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.3,
+    "attack_over_local_db": 6.1,
+    "body_db": 0.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.06",
+   "name": "clicker_click",
+   "laid_as": "clicker_click",
+   "snr_before_db": 2.2,
+   "band": "4000-8000 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.1,
+   "why": "first heard +2.2 dB over rooms and score in its own band (4000-8000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 16.0,
+    "attack_over_local_db": 18.9,
+    "body_db": 18.2,
+    "band": "4000-8000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.07",
+   "name": "crowd_laugh_m",
+   "laid_as": "crowd_laugh_m",
+   "snr_before_db": 5.1,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.9,
+   "why": "first heard +5.1 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.9,
+    "attack_over_local_db": 15.7,
+    "body_db": 5.9,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.07",
+   "name": "spotlight_swing",
+   "laid_as": "spotlight_swing",
+   "snr_before_db": -8.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.0,
+   "why": "first heard -8.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": 1.3,
+    "body_db": 3.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.13",
+   "name": "blimp_inflate_step",
+   "laid_as": "blimp_inflate_step",
+   "snr_before_db": 1.5,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.4,
+   "why": "first heard +1.5 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.4,
+    "attack_over_local_db": 6.9,
+    "body_db": 6.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.13",
+   "name": "phone_wave_buzz",
+   "laid_as": "phone_wave_buzz",
+   "snr_before_db": -3.5,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 5.5,
+   "why": "first heard -3.5 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 5.5,
+    "attack_over_local_db": 3.4,
+    "body_db": 2.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.16",
+   "name": "cloth_rustle",
+   "laid_as": "cloth_rustle",
+   "snr_before_db": -5.6,
+   "band": "2000-4000 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.3,
+   "why": "first heard -5.6 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 5.3,
+    "attack_over_local_db": 6.0,
+    "body_db": -0.3,
+    "band": "2000-4000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "11.16",
+   "name": "crowd_hush",
+   "laid_as": "crowd_hush",
+   "snr_before_db": -6.6,
+   "band": "1000-2000 Hz",
+   "target_db": 2.0,
+   "ride_db": 6.1,
+   "why": "first heard -6.6 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 6.1,
+    "attack_over_local_db": 5.2,
+    "body_db": -0.8,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "12.01",
+   "name": "house_lights_up",
+   "laid_as": "house_lights_up",
+   "snr_before_db": 0.3,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 0.3,
+   "why": "first heard +0.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 0.3,
+    "attack_over_local_db": 8.8,
+    "body_db": 2.4,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "12.05",
+   "name": "ui_minimise",
+   "laid_as": "ui_minimise",
+   "snr_before_db": -2.5,
+   "band": "2000-4000 Hz",
+   "target_db": 6.0,
+   "ride_db": 2.3,
+   "why": "first heard -2.5 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 2.3,
+    "attack_over_local_db": 6.0,
+    "body_db": -0.2,
+    "band": "2000-4000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "12.06",
+   "name": "phone_buzz_step_1",
+   "laid_as": "phone_buzz_step_1",
+   "snr_before_db": -2.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.6,
+   "why": "first heard -2.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.6,
+    "attack_over_local_db": 6.0,
+    "body_db": 0.7,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "8.01",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": -7.4,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 13.4,
+   "why": "first heard -7.4 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 13.4,
+    "attack_over_local_db": 3.1,
+    "body_db": 6.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act2",
+   "beat": "8.06",
+   "name": "call_connect",
+   "laid_as": "call_connect",
+   "snr_before_db": -2.1,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.0,
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 3.0,
+    "body_db": -2.1,
+    "band": "1000-2000 Hz"
+   },
+   "why": "first heard -2.1 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB"
+  },
+  {
+   "seg": "act2",
+   "beat": "8.07",
+   "name": "invite_drop",
+   "laid_as": "invite_drop",
+   "snr_before_db": -0.4,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.5,
+   "why": "first heard -0.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 4.5,
+    "attack_over_local_db": 6.0,
+    "body_db": 4.1,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "13.04",
+   "name": "blip_text_neutral",
+   "laid_as": "blip_text_neutral",
+   "snr_before_db": 2.8,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 2.0,
+   "why": "first heard +2.8 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 2.0,
+    "attack_over_local_db": 6.0,
+    "body_db": 4.8,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "13.06",
+   "name": "ui_band_on",
+   "laid_as": "ui_band_on",
+   "snr_before_db": -6.4,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.2,
+   "why": "first heard -6.4 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 4.1,
+    "attack_over_local_db": 4.9,
+    "body_db": -2.3,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "14.02",
+   "name": "ui_verb_select",
+   "laid_as": "ui_verb_select",
+   "snr_before_db": -5.0,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 9.6,
+   "why": "first heard -5.0 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 9.6,
+    "attack_over_local_db": 6.4,
+    "body_db": 4.6,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "14.03",
+   "name": "alert_bonk",
+   "laid_as": "alert_bonk",
+   "snr_before_db": 1.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 1.4,
+   "why": "first heard +1.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 1.4,
+    "attack_over_local_db": 6.0,
+    "body_db": 3.3,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "14.03",
+   "name": "ui_verb_select",
+   "laid_as": "ui_verb_select",
+   "snr_before_db": -0.9,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.9,
+   "why": "first heard -0.9 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 5.9,
+    "attack_over_local_db": 6.4,
+    "body_db": 5.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "14.06",
+   "name": "alert_bonk",
+   "laid_as": "alert_bonk",
+   "snr_before_db": -1.7,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.2,
+   "why": "first heard -1.7 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 4.2,
+    "attack_over_local_db": 6.6,
+    "body_db": 2.5,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "14.12",
+   "name": "ui_verb_select",
+   "laid_as": "ui_verb_select",
+   "snr_before_db": -1.7,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.7,
+   "why": "first heard -1.7 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 9.5,
+    "attack_over_local_db": 7.2,
+    "body_db": 7.8,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.04",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": -6.1,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 10.0,
+   "why": "first heard -6.1 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 14.9,
+    "attack_over_local_db": 10.9,
+    "body_db": 8.8,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.05",
+   "name": "pin_ping",
+   "laid_as": "pin_ping",
+   "snr_before_db": 3.9,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.2,
+   "why": "first heard +3.9 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.2,
+    "attack_over_local_db": 7.9,
+    "body_db": 4.1,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.07",
+   "name": "crowd_chant_under",
+   "laid_as": "crowd_chant_under",
+   "snr_before_db": -3.8,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 5.8,
+   "why": "first heard -3.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 5.8,
+    "attack_over_local_db": -34.2,
+    "body_db": 2.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.09",
+   "name": "glyph_shimmer",
+   "laid_as": "glyph_shimmer",
+   "snr_before_db": -4.3,
+   "band": "2000-4000 Hz",
+   "target_db": 2.0,
+   "ride_db": 6.3,
+   "why": "first heard -4.3 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 6.3,
+    "attack_over_local_db": 4.9,
+    "body_db": 2.0,
+    "band": "2000-4000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.13",
+   "name": "torch_light",
+   "laid_as": "torch_light",
+   "snr_before_db": -6.2,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 9.3,
+   "why": "first heard -6.2 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 9.3,
+    "attack_over_local_db": 6.0,
+    "body_db": 3.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.15",
+   "name": "fire_crackle",
+   "laid_as": "fire_crackle",
+   "snr_before_db": -7.3,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 5.2,
+   "why": "first heard -7.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 5.2,
+    "attack_over_local_db": 6.0,
+    "body_db": -2.2,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.15",
+   "name": "flame_whoomph",
+   "laid_as": "flame_whoomph",
+   "snr_before_db": -5.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.8,
+   "why": "first heard -5.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 5.8,
+    "attack_over_local_db": 6.0,
+    "body_db": -0.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.18",
+   "name": "door_close_soft",
+   "laid_as": "door_close_soft",
+   "snr_before_db": -11.3,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.0,
+   "why": "first heard -11.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": 1.5,
+    "body_db": 0.7,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.19",
+   "name": "footstep_soft_1",
+   "laid_as": "footstep_soft_1",
+   "snr_before_db": -1.9,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.4,
+   "why": "first heard -1.9 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.4,
+    "attack_over_local_db": 6.0,
+    "body_db": 1.5,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.19",
+   "name": "footstep_soft_2",
+   "laid_as": "footstep_soft_2",
+   "snr_before_db": -5.0,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.0,
+   "why": "first heard -5.0 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 5.0,
+    "attack_over_local_db": 6.0,
+    "body_db": 0.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "15.19",
+   "name": "phone_buzz_step_1",
+   "laid_as": "phone_buzz_step_1",
+   "snr_before_db": -3.3,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.5,
+   "why": "first heard -3.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 4.5,
+    "attack_over_local_db": 6.0,
+    "body_db": 1.2,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.02",
+   "name": "car_honk_1",
+   "laid_as": "car_honk_1",
+   "snr_before_db": -3.8,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.7,
+   "why": "first heard -3.8 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.7,
+    "attack_over_local_db": 6.0,
+    "body_db": 3.8,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.05",
+   "name": "car_window_down",
+   "laid_as": "car_window_down",
+   "snr_before_db": -3.4,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.9,
+   "why": "first heard -3.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.9,
+    "attack_over_local_db": 21.5,
+    "body_db": -2.5,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.07",
+   "name": "phone_buzz_step_1",
+   "laid_as": "phone_buzz_step_1",
+   "snr_before_db": -14.9,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.0,
+   "why": "first heard -14.9 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 12.0,
+    "attack_over_local_db": 3.4,
+    "body_db": 0.1,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.08",
+   "name": "phone_buzz_step_2",
+   "laid_as": "phone_buzz_step_2",
+   "snr_before_db": -10.5,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 10.0,
+   "why": "first heard -10.5 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 10.0,
+    "attack_over_local_db": 6.0,
+    "body_db": 2.4,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.08",
+   "name": "phone_buzz_step_3",
+   "laid_as": "phone_buzz_step_3",
+   "snr_before_db": -13.4,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 10.0,
+   "why": "first heard -13.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 10.0,
+    "attack_over_local_db": 2.2,
+    "body_db": -0.4,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.08",
+   "name": "phone_buzz_step_4",
+   "laid_as": "phone_buzz_step_4",
+   "snr_before_db": -9.1,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 10.0,
+   "why": "first heard -9.1 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 10.0,
+    "attack_over_local_db": 5.7,
+    "body_db": 3.8,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.09",
+   "name": "call_connect",
+   "laid_as": "call_connect",
+   "snr_before_db": 1.2,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.5,
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 5.5,
+    "body_db": 1.2,
+    "band": "1000-2000 Hz"
+   },
+   "why": "first heard +1.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB"
+  },
+  {
+   "seg": "act3",
+   "beat": "17.17",
+   "name": "thunder_tuned_F",
+   "laid_as": "thunder_tuned_F",
+   "snr_before_db": 1.0,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 1.4,
+   "why": "first heard +1.0 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 1.4,
+    "attack_over_local_db": 6.0,
+    "body_db": 2.4,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.18",
+   "name": "umbrella_pop",
+   "laid_as": "umbrella_pop",
+   "snr_before_db": -14.0,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.6,
+   "why": "first heard -14.0 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.6,
+    "attack_over_local_db": 6.0,
+    "body_db": -6.4,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act3",
+   "beat": "17.20",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": -4.1,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.2,
+   "why": "first heard -4.1 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 11.1,
+    "attack_over_local_db": 11.9,
+    "body_db": 7.0,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "18.01",
+   "name": "footstep_soft_1",
+   "laid_as": "footstep_soft_1",
+   "snr_before_db": -17.6,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.0,
+   "why": "first heard -17.6 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 8.3,
+    "attack_over_local_db": 7.3,
+    "body_db": -10.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "18.01",
+   "name": "footstep_soft_2",
+   "laid_as": "footstep_soft_2",
+   "snr_before_db": -11.8,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 9.0,
+   "why": "first heard -11.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 2.8,
+    "attack_over_local_db": -0.2,
+    "body_db": -4.2,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "18.15",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": 3.2,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 2.8,
+   "why": "first heard +3.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 2.8,
+    "attack_over_local_db": -0.7,
+    "body_db": 6.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.06",
+   "name": "lobby_laugh_s",
+   "laid_as": "lobby_laugh_s",
+   "snr_before_db": -5.2,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 1.6,
+   "why": "first heard -5.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 1.6,
+    "attack_over_local_db": 6.0,
+    "body_db": -3.6,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.07",
+   "name": "typing_soft",
+   "laid_as": "phone_type_burst",
+   "snr_before_db": -14.4,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.6,
+   "why": "first heard -14.4 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 6.8,
+    "attack_over_local_db": 7.2,
+    "body_db": 7.1,
+    "band": "4000-8000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.08",
+   "name": "chat_ping_run",
+   "laid_as": "chat_ping_run",
+   "snr_before_db": 1.4,
+   "band": "2000-4000 Hz",
+   "target_db": 2.0,
+   "ride_db": 0.6,
+   "why": "first heard +1.4 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 2.2,
+    "attack_over_local_db": 6.9,
+    "body_db": 3.6,
+    "band": "2000-4000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.08",
+   "name": "phone_wave_buzz",
+   "laid_as": "phone_wave_buzz",
+   "snr_before_db": -0.2,
+   "band": "1000-2000 Hz",
+   "target_db": 2.0,
+   "ride_db": 1.0,
+   "why": "first heard -0.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 3.2,
+    "attack_over_local_db": 8.2,
+    "body_db": 2.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.14",
+   "name": "pin_grey_tick",
+   "laid_as": "pin_grey_tick",
+   "snr_before_db": -13.4,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 13.6,
+   "why": "first heard -13.4 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 15.3,
+    "attack_over_local_db": 7.7,
+    "body_db": 1.9,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.16",
+   "name": "gate_iron_swing",
+   "laid_as": "gate_iron_swing",
+   "snr_before_db": -10.0,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.1,
+   "why": "first heard -10.0 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.1,
+    "attack_over_local_db": 6.0,
+    "body_db": -2.9,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.17",
+   "name": "flower_nod",
+   "laid_as": "flower_nod",
+   "snr_before_db": -2.2,
+   "band": "8000-16000 Hz",
+   "target_db": 6.0,
+   "ride_db": 8.2,
+   "why": "first heard -2.2 dB over rooms and score in its own band (8000-16000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 8.2,
+    "attack_over_local_db": 0.2,
+    "body_db": 6.0,
+    "band": "8000-16000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "19.19",
+   "name": "gate_iron_swing",
+   "laid_as": "gate_iron_shut",
+   "snr_before_db": -1.6,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 7.6,
+   "why": "first heard -1.6 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.6,
+    "attack_over_local_db": -1.7,
+    "body_db": 6.0,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "20.01",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": -2.7,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 6.5,
+   "why": "first heard -2.7 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 5.1,
+    "attack_over_local_db": 4.6,
+    "body_db": 2.4,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "20.03",
+   "name": "padlock_snap",
+   "laid_as": "padlock_snap",
+   "snr_before_db": 5.4,
+   "band": "2000-4000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.6,
+   "why": "first heard +5.4 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.6,
+    "attack_over_local_db": 48.0,
+    "body_db": 42.2,
+    "band": "4000-8000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "20.04",
+   "name": "phone_buzz_muffled",
+   "laid_as": "phone_buzz_muffled",
+   "snr_before_db": -10.4,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 9.7,
+   "why": "first heard -10.4 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 9.7,
+    "attack_over_local_db": 6.0,
+    "body_db": -0.7,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "20.09",
+   "name": "rope_haul",
+   "laid_as": "rope_haul",
+   "snr_before_db": -9.2,
+   "band": "1000-2000 Hz",
+   "target_db": 2.0,
+   "ride_db": 5.4,
+   "why": "first heard -9.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 5.4,
+    "attack_over_local_db": 6.0,
+    "body_db": -3.8,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "22.02",
+   "name": "footstep_gravel",
+   "laid_as": "footstep_gravel",
+   "snr_before_db": -1.6,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.0,
+   "why": "first heard -1.6 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 7.2,
+    "attack_over_local_db": 9.2,
+    "body_db": 4.9,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "22.03",
+   "name": "ui_band_on",
+   "laid_as": "ui_band_on",
+   "snr_before_db": 5.2,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.8,
+   "why": "first heard +5.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.8,
+    "attack_over_local_db": 8.4,
+    "body_db": 6.0,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "22.05",
+   "name": "lab_room_tone",
+   "laid_as": "lab_room_tone",
+   "snr_before_db": -17.6,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 14.0,
+   "why": "first heard -17.6 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB (capped)",
+   "measured_with_ride": {
+    "ride_db": 14.0,
+    "attack_over_local_db": 2.7,
+    "body_db": -3.6,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "22.05",
+   "name": "paper_drop_floor",
+   "laid_as": "paper_drop_floor",
+   "snr_before_db": -14.7,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 13.4,
+   "why": "first heard -14.7 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 13.4,
+    "attack_over_local_db": 6.0,
+    "body_db": -1.3,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "act4",
+   "beat": "22.09",
+   "name": "footstep_gravel",
+   "laid_as": "footstep_gravel_2",
+   "snr_before_db": 0.6,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 12.1,
+   "why": "first heard +0.6 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 15.5,
+    "attack_over_local_db": 9.4,
+    "body_db": 3.6,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.01",
+   "name": "server_hum",
+   "laid_as": "server_hum",
+   "snr_before_db": -13.7,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 7.7,
+   "why": "first heard -13.7 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 7.7,
+    "attack_over_local_db": 6.0,
+    "body_db": -6.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.03",
+   "name": "mammoth_step_pixel",
+   "laid_as": "mammoth_step_pixel",
+   "snr_before_db": -0.4,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.7,
+   "why": "first heard -0.4 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 2.1,
+    "attack_over_local_db": 7.4,
+    "body_db": 1.7,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.06",
+   "name": "hand_truck_step",
+   "laid_as": "hand_truck_step",
+   "snr_before_db": -4.1,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 2.9,
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 3.1,
+    "body_db": -4.1,
+    "band": "60-250 Hz"
+   },
+   "why": "first heard -4.1 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB"
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.07",
+   "name": "hand_truck_step",
+   "laid_as": "hand_truck_step_mid",
+   "snr_before_db": 5.7,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.4,
+   "why": "first heard +5.7 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.4,
+    "attack_over_local_db": 11.0,
+    "body_db": 6.1,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.07",
+   "name": "ladder_sway_creak",
+   "laid_as": "ladder_sway_creak",
+   "snr_before_db": 0.1,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 3.0,
+   "why": "first heard +0.1 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.0,
+    "attack_over_local_db": 6.7,
+    "body_db": 0.5,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.09",
+   "name": "hand_truck_roll",
+   "laid_as": "hand_truck_roll",
+   "snr_before_db": -5.5,
+   "band": "60-250 Hz",
+   "target_db": 2.0,
+   "ride_db": 7.5,
+   "why": "first heard -5.5 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 7.5,
+    "attack_over_local_db": 4.9,
+    "body_db": 2.0,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "coldopen",
+   "beat": "1.09",
+   "name": "hand_truck_step",
+   "laid_as": "hand_truck_step_near",
+   "snr_before_db": 5.6,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.4,
+   "why": "first heard +5.6 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.4,
+    "attack_over_local_db": 12.0,
+    "body_db": 5.9,
+    "band": "60-250 Hz"
+   }
+  },
+  {
+   "seg": "tag",
+   "beat": "23.03",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": 0.0,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 5.3,
+   "why": "first heard +0.0 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 4.1,
+    "attack_over_local_db": 4.8,
+    "body_db": 4.1,
+    "band": "1000-2000 Hz"
+   }
+  },
+  {
+   "seg": "tag",
+   "beat": "23.04",
+   "name": "orb_chime_F",
+   "laid_as": "orb_chime_F",
+   "snr_before_db": -0.3,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.6,
+   "why": "first heard -0.3 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.7,
+    "attack_over_local_db": 9.1,
+    "body_db": 3.4,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "tag",
+   "beat": "23.04",
+   "name": "ui_toast_pop",
+   "laid_as": "ui_toast_pop",
+   "snr_before_db": -0.3,
+   "band": "250-1000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.6,
+   "why": "first heard -0.3 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 3.7,
+    "attack_over_local_db": 9.1,
+    "body_db": 3.4,
+    "band": "250-1000 Hz"
+   }
+  },
+  {
+   "seg": "tag",
+   "beat": "23.06",
+   "name": "blip_text_neutral",
+   "laid_as": "blip_text_neutral",
+   "snr_before_db": 5.6,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 0.5,
+   "why": "first heard +5.6 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.5,
+    "attack_over_local_db": 5.5,
+    "body_db": 6.1,
+    "band": "1000-2000 Hz"
+   }
+  }
+ ]
+}

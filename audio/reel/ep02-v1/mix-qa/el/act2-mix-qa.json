@@ -1,0 +1,227 @@
+{
+ "segment": "act2",
+ "variant": "el",
+ "seconds": 279.0,
+ "frames": 6696,
+ "samples": 13392000,
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act2.json",
+ "dialogue": {
+  "lines": 41,
+  "device": {
+   "monitor": 5,
+   "stage": 14
+  },
+  "el_matched": 41,
+  "missing": [],
+  "treat": {
+   "os": 1,
+   "offmic": 2
+  }
+ },
+ "rooms": {
+  "stem": "audio/reel/ep02-v1/stems/el/act2-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep02-v1/stems/el/act2-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e02-v1-act2/render/music-el.wav",
+  "cues": "audio/ost/tracks/e02-v1-act2/cues-el.json",
+  "length_s": 279.0,
+  "length_vs_segment_s": 0.0,
+  "prev_ringout": {
+   "file": "audio/ost/tracks/e02-v1-act1/render/music-el-ringout.wav",
+   "seconds": 3.0,
+   "crossfade": "full from 0 s, out (equal power) over 2.5 s from this score's entry at 0.01 s"
+  },
+  "lufs_as_delivered": -20.44,
+  "lufs_after_gain": -20.44,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E02-06",
+     7
+    ],
+    [
+     "E02-06 DARK ROOM, SPRING",
+     7
+    ],
+    [
+     "E02-07",
+     8
+    ],
+    [
+     "E02-07 ONE WORD",
+     8
+    ]
+   ],
+   "cue_sheet_overrides": [
+    [
+     43.0,
+     94.75,
+     5.0
+    ]
+   ],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    140.402,
+    140.7,
+    "the tear's light, a beat (10.07 -> 11.01): THE PLAN's tape-stop reaches nothing a quarter second before the demo's push (the plan: \"a tape-stop into the demo cue\"); the blueprint has no room bed, the stems put a faint room tone under it"
+   ],
+   [
+    278.208,
+    279.0,
+    "THE MIDPOINT ACT-OUT (12.08): the cue stops mid-phrase on the downbeat after 2 s on his face (the plan: \"the designed stop, mid-phrase on the downbeat\"); the dark room's room tone under the black; the re-entry is Act Three's THE CLOCK, its first tick J 0.8 s under this black"
+   ]
+  ],
+  "head_fade_s": 0.04,
+  "head_fade_why": "designed hit at the head (cues.json designed_hit): (0.02, \"DESIGNED HIT: the Water Line's first F on the act's first frame: Act One's copy \")",
+  "rides": [
+   {
+    "beat": "8.01",
+    "from": 0.0,
+    "to": 1.0,
+    "db": -7.0,
+    "why": "S9: the act-in hit out of the black, softened (attack kept)"
+   },
+   {
+    "beat": "11.11",
+    "from": 211.13,
+    "to": 212.73,
+    "db": -4.0,
+    "why": "S11: h \u00b7 e \u00b7 r typed in the wings (ECU), the taps over the pad"
+   },
+   {
+    "beat": "12.07",
+    "from": 265.65,
+    "to": 268.75,
+    "db": -3.0,
+    "why": "S11: his post typed and posted (ECU), the taps and the click"
+   }
+  ],
+  "next_prelap": {
+   "file": "audio/ost/tracks/e02-v1-act3/render/music-el-prelap.wav",
+   "of": "act3",
+   "seconds": 0.792,
+   "laid_from_s": 278.208,
+   "gain_db": 0.0,
+   "lay": "ends on this chapter's last sample, continuous with act3's first; at act3's score head gain (its duck there), its head fade off"
+  }
+ },
+ "measured": {
+  "lufs_i": -16.01,
+  "true_peak_dbtp": -1.37,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 7.0,
+  "gain_db": 2.11,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 1.466,
+  "dialogue_lufs": -14.29,
+  "score_lufs_after_duck": -20.86,
+  "score_rms_under_speech_dbfs": -27.6,
+  "score_rms_between_speech_dbfs": -20.7,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 279.0,
+   "runs": [
+    [
+     0.0,
+     279.0
+    ]
+   ]
+  },
+  "rooms_lufs": -35.88,
+  "sfx_lufs": -31.03,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [
+   {
+    "at": 95.15,
+    "s": 0.6,
+    "what": "designed: a black (10.01)"
+   },
+   {
+    "at": 96.0,
+    "s": 1.0,
+    "what": "designed: a black (10.01)"
+   },
+   {
+    "at": 97.6,
+    "s": 0.4,
+    "what": "designed: a black (10.01)"
+   },
+   {
+    "at": 100.95,
+    "s": 1.05,
+    "what": "designed: a black (10.01)"
+   },
+   {
+    "at": 109.15,
+    "s": 2.65,
+    "what": "designed: a black (10.02)"
+   },
+   {
+    "at": 116.4,
+    "s": 1.8,
+    "what": "designed: a black (10.03)"
+   },
+   {
+    "at": 121.5,
+    "s": 1.45,
+    "what": "designed: a black (10.04)"
+   },
+   {
+    "at": 126.65,
+    "s": 2.25,
+    "what": "designed: a black (10.05)"
+   },
+   {
+    "at": 133.1,
+    "s": 6.1,
+    "what": "designed: a black (10.06)"
+   },
+   {
+    "at": 139.7,
+    "s": 0.9,
+    "what": "designed: a black (10.07)"
+   },
+   {
+    "at": 251.8,
+    "s": 0.55,
+    "what": "designed: a black (12.04)"
+   }
+  ],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 21,
+   "rising": 18,
+   "rising_at_a_word": 12,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    94.75,
+    97.85,
+    101.0,
+    109.75,
+    140.7,
+    278.35
+   ],
+   "falling": 3
+  }
+ },
+ "file": "out/ep02/v1/mix/act2-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.12,
+  "to_gain_db": 2.11,
+  "ramp_s": 2.0,
+  "after": "act1"
+ },
+ "built": "2026-10-10 08:09:04",
+ "heard": "nothing here has been listened to; every number is measured"
+}

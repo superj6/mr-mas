@@ -1,0 +1,166 @@
+{
+ "variant": "el",
+ "target_lufs": -16.0,
+ "true_peak_max_dbtp": -1.05,
+ "dialogue_reference_lufs": -14.06,
+ "dialogue_reference_from": "this run",
+ "guard_lu": 1.5,
+ "segments": {
+  "coldopen": {
+   "file": "out/ep02/v1/mix/coldopen-mix.wav",
+   "seconds": 55.0,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.84,
+   "lra_lu": 5.5,
+   "dialogue_lufs": -14.18,
+   "gain_db": 2.23,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-coldopen/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:06:46"
+  },
+  "act1": {
+   "file": "out/ep02/v1/mix/act1-mix.wav",
+   "seconds": 364.0,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.39,
+   "lra_lu": 6.2,
+   "dialogue_lufs": -15.01,
+   "gain_db": 1.12,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-act1/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:08:29"
+  },
+  "act2": {
+   "file": "out/ep02/v1/mix/act2-mix.wav",
+   "seconds": 279.0,
+   "lufs_i": -16.01,
+   "true_peak_dbtp": -1.37,
+   "lra_lu": 7.0,
+   "dialogue_lufs": -14.29,
+   "gain_db": 2.11,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-act2/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:09:04"
+  },
+  "act3": {
+   "file": "out/ep02/v1/mix/act3-mix.wav",
+   "seconds": 320.0,
+   "lufs_i": -16.01,
+   "true_peak_dbtp": -1.2,
+   "lra_lu": 6.9,
+   "dialogue_lufs": -13.65,
+   "gain_db": 2.53,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-act3/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:10:15"
+  },
+  "act4": {
+   "file": "out/ep02/v1/mix/act4-mix.wav",
+   "seconds": 319.0,
+   "lufs_i": -16.0,
+   "true_peak_dbtp": -1.48,
+   "lra_lu": 8.6,
+   "dialogue_lufs": -13.94,
+   "gain_db": 2.22,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-act4/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:11:29"
+  },
+  "tag": {
+   "file": "out/ep02/v1/mix/tag-mix.wav",
+   "seconds": 37.0,
+   "lufs_i": -16.01,
+   "true_peak_dbtp": -1.15,
+   "lra_lu": 7.9,
+   "dialogue_lufs": -12.52,
+   "gain_db": 3.68,
+   "guard_db": null,
+   "score": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:11:30"
+  },
+  "card": {
+   "file": "out/ep02/v1/mix/card-mix.wav",
+   "seconds": 2.0,
+   "lufs_i": -22.16,
+   "true_peak_dbtp": -9.23,
+   "lra_lu": null,
+   "dialogue_lufs": null,
+   "gain_db": 1.12,
+   "guard_db": null,
+   "score": "Act One's pre-lap (1.0 s) (card)",
+   "unmarked_holes": 0,
+   "unmarked_holes_without_score": 0,
+   "built": "2026-10-10 08:11:30"
+  }
+ },
+ "episode": {
+  "segments": [
+   "coldopen",
+   "card",
+   "act1",
+   "act2",
+   "act3",
+   "act4",
+   "tag"
+  ],
+  "seconds": 1376.0,
+  "lufs_i": -16.01,
+  "lra_lu": 6.9,
+  "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
+ },
+ "seams": [
+  {
+   "seam": "card -> act1",
+   "last_200ms_dbfs": -19.1,
+   "first_200ms_dbfs": -18.3,
+   "step_db": 0.8,
+   "sample_jump": 0.005
+  },
+  {
+   "seam": "act1 -> act2",
+   "last_200ms_dbfs": -32.1,
+   "first_200ms_dbfs": -19.6,
+   "step_db": 12.5,
+   "sample_jump": 0.0016
+  },
+  {
+   "seam": "act2 -> act3",
+   "last_200ms_dbfs": -29.1,
+   "first_200ms_dbfs": -21.7,
+   "step_db": 7.3,
+   "sample_jump": 0.0009
+  },
+  {
+   "seam": "act3 -> act4",
+   "last_200ms_dbfs": -22.5,
+   "first_200ms_dbfs": -25.0,
+   "step_db": -2.5,
+   "sample_jump": 0.01
+  },
+  {
+   "seam": "act4 -> tag",
+   "last_200ms_dbfs": -19.8,
+   "first_200ms_dbfs": -19.7,
+   "step_db": 0.2,
+   "sample_jump": 0.0038
+  }
+ ],
+ "spread": {
+  "lufs_i_lu": 0.01,
+  "dialogue_lu": 2.49
+ },
+ "updated": "2026-10-10 08:13:16",
+ "heard": "nothing here has been listened to; every number is measured"
+}

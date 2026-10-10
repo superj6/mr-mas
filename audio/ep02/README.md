@@ -10,6 +10,7 @@
 | `v1-el/ep02-v1/qa/<seg>-qa.json` | every read's measures (ASR, names, length, tempo, level, clipping, floor, pitch), the retakes and the pick |
 | `v1-el/ep02-v1/act3/crowd/`, `act2/sung/`, `variants/` | the chant's ten layers, the sung line's source and part stems, the reads tried before a per-line reading or setting was kept |
 | `v1-el/tools/render_v1.sh` | the one command that records the episode: `el_render.py` per segment, `el_qa.py retake`, the special lines (`el_cut.py`, `el_crowd.py`, `el_sung.py`, `el_mario.py`), `el_qa.py measure` + `report`. `pron_check.py`: the forced-choice name check (Ep1's, with Ep2's names) |
+| `v1-el/sound/` | the sound pass's take (2026-10-10): the ENGINEER's nervous laugh (9.03, lock-v1.md §6), his own library voice through `el_render.py` (`laugh-lines.json` → `lines-A.json`, 31 characters; ASR "Ha, ha, ha…", 140 Hz in his lane). No `lines-A` id here matches a lock line, so no lock reads it as a take; `stems.py` lays it as a sound (`SOUND_FILE`) |
 | `v1-el/cache/` | the request cache (git-ignored) |
 | `v1/<seg>/lines-v1.json` | a Kokoro round (the base lock reads it first): `v1/act4/` holds MARIO's six lines (`el_mario.py`, through Ep1's fastrec, run, never edited) |
 

@@ -1,0 +1,862 @@
+{
+ "segment": "act3",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act3.json",
+ "seconds": 320.0,
+ "frames": 7680,
+ "rooms": [
+  {
+   "room": "lobby_day",
+   "recipe": "lobby_day: bed_lobby_day -37",
+   "from": -0.8,
+   "to": 31.4,
+   "first": "13.01",
+   "last": "13.06",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "open_floor",
+   "recipe": "open_floor: bed_office_day -38 + server_hum -50",
+   "from": 30.4,
+   "to": 91.0,
+   "first": "14.01",
+   "last": "14.12",
+   "lead": 0.6,
+   "trail": 1.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_evening",
+   "recipe": "office_evening: bed_office_evening -40",
+   "from": 89.4,
+   "to": 117.942,
+   "first": "15.01",
+   "last": "15.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.9
+  },
+  {
+   "room": "party",
+   "recipe": "party: bed_party_crowd -34",
+   "from": 116.942,
+   "to": 142.4,
+   "first": "15.06",
+   "last": "15.09",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_2023",
+   "recipe": "office_2023: bed_office_evening -41 + server_hum -50",
+   "from": 141.4,
+   "to": 159.9,
+   "first": "15.10",
+   "last": "15.12",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.6
+  },
+  {
+   "room": "fire_night",
+   "recipe": "fire_night: bed_fire_night -36",
+   "from": 158.9,
+   "to": 164.733,
+   "first": "15.13",
+   "last": "15.13",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.5
+  },
+  {
+   "room": "office_2023",
+   "recipe": "office_2023: bed_office_evening -41 + server_hum -50",
+   "from": 163.733,
+   "to": 166.65,
+   "first": "15.14",
+   "last": "15.14",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.7
+  },
+  {
+   "room": "fire_night",
+   "recipe": "fire_night: bed_fire_night -36",
+   "from": 165.65,
+   "to": 176.025,
+   "first": "15.15",
+   "last": "15.16",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_evening",
+   "recipe": "office_evening: bed_office_evening -40",
+   "from": 175.025,
+   "to": 185.4,
+   "first": "15.17",
+   "last": "15.18",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.6
+  },
+  {
+   "room": "stairwell",
+   "recipe": "stairwell: bed_stairwell -42",
+   "from": 184.0,
+   "to": 190.4,
+   "first": "15.19",
+   "last": "15.19",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 3.9
+  },
+  {
+   "room": "bridge",
+   "recipe": "bridge: bed_bridge_traffic -35",
+   "from": 189.4,
+   "to": 201.4,
+   "first": "17.01",
+   "last": "17.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.5
+  },
+  {
+   "room": "bridge_stalled",
+   "recipe": "bridge_stalled: bed_bridge_stalled -37",
+   "from": 200.4,
+   "to": 269.233,
+   "first": "17.03",
+   "last": "17.13",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bridge_night",
+   "recipe": "bridge_night: bed_bridge_night -40",
+   "from": 268.233,
+   "to": 271.233,
+   "first": "17.14",
+   "last": "17.14",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.3
+  },
+  {
+   "room": "bridge_stalled",
+   "recipe": "bridge_stalled: bed_bridge_stalled -37",
+   "from": 270.233,
+   "to": 288.983,
+   "first": "17.15",
+   "last": "17.16",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bridge_rain",
+   "recipe": "bridge_rain: bed_bridge_traffic -41 + bed_rain -36",
+   "from": 287.983,
+   "to": 320.4,
+   "first": "17.17",
+   "last": "17.21",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.4
+  }
+ ],
+ "sfx": [
+  [
+   "13.03",
+   "paper_flutter",
+   13.317,
+   -26.0
+  ],
+  [
+   "13.03",
+   "tape_pull",
+   15.317,
+   -24.0
+  ],
+  [
+   "13.04",
+   "blip_text_neutral",
+   19.792,
+   -24.0,
+   "ride +2.0 dB (sfx-rides.json)"
+  ],
+  [
+   "13.04",
+   "lectern_bump",
+   21.492,
+   -26.0
+  ],
+  [
+   "13.04",
+   "lectern_bump",
+   22.692,
+   -26.0
+  ],
+  [
+   "13.05",
+   "sticker_slap_tv",
+   26.728,
+   -24.0
+  ],
+  [
+   "13.06",
+   "ui_band_on",
+   29.93,
+   -20.8,
+   "ride +5.2 dB (sfx-rides.json)"
+  ],
+  [
+   "14.02",
+   "ui_verb_select",
+   33.992,
+   -16.4,
+   "ride +9.6 dB (sfx-rides.json)"
+  ],
+  [
+   "14.02",
+   "ui_verb_select",
+   36.592,
+   -16.4,
+   "ride +9.6 dB (sfx-rides.json)"
+  ],
+  [
+   "14.03",
+   "ui_verb_select",
+   38.992,
+   -20.1,
+   "ride +5.9 dB (sfx-rides.json)"
+  ],
+  [
+   "14.03",
+   "alert_bonk",
+   42.792,
+   -20.6,
+   "ride +1.4 dB (sfx-rides.json)"
+  ],
+  [
+   "14.06",
+   "alert_bonk",
+   53.225,
+   -17.8,
+   "ride +4.2 dB (sfx-rides.json)"
+  ],
+  [
+   "14.06",
+   "paper_flutter",
+   53.825,
+   -24.0
+  ],
+  [
+   "14.09",
+   "freeze_hit_F",
+   71.433,
+   -18.0
+  ],
+  [
+   "14.10",
+   "domino_set",
+   74.75,
+   -24.0
+  ],
+  [
+   "14.10",
+   "domino_topple_run",
+   78.85,
+   -24.0
+  ],
+  [
+   "14.11",
+   "screw_turn_1",
+   81.25,
+   -24.0
+  ],
+  [
+   "14.11",
+   "screw_turn_2",
+   81.875,
+   -24.0
+  ],
+  [
+   "14.11",
+   "screw_turn_3",
+   82.5,
+   -24.0
+  ],
+  [
+   "14.11",
+   "screw_turn_4",
+   83.125,
+   -24.0
+  ],
+  [
+   "14.11",
+   "nameplate_off",
+   83.65,
+   -22.0
+  ],
+  [
+   "14.11",
+   "plate_drop_box",
+   84.15,
+   -22.0
+  ],
+  [
+   "14.12",
+   "ui_verb_select",
+   85.743,
+   -18.3,
+   "ride +7.7 dB (sfx-rides.json)"
+  ],
+  [
+   "14.12",
+   "door_pivot_creak",
+   86.886,
+   -22.0
+  ],
+  [
+   "15.02",
+   "thumb_scroll",
+   92.852,
+   -28.0
+  ],
+  [
+   "15.04",
+   "app_splash_2006",
+   104.942,
+   -24.0
+  ],
+  [
+   "15.04",
+   "hourglass_cursor_2008",
+   106.742,
+   -28.0
+  ],
+  [
+   "15.04",
+   "orb_scan_sweep",
+   107.742,
+   -26.0
+  ],
+  [
+   "15.04",
+   "ui_toast_pop",
+   108.542,
+   -18.0,
+   "ride +10.0 dB (sfx-rides.json)"
+  ],
+  [
+   "15.05",
+   "phone_type_burst",
+   110.625,
+   -30.0,
+   "swapped: phone_type_burst",
+   "lock: key_tap_soft_02"
+  ],
+  [
+   "15.05",
+   "phone_key_tap_4",
+   111.225,
+   -30.0,
+   "swapped: phone_key_tap_4",
+   "lock: key_tap_soft_04"
+  ],
+  [
+   "15.05",
+   "pin_ping",
+   113.125,
+   -23.8,
+   "ride +0.2 dB (sfx-rides.json)"
+  ],
+  [
+   "15.07",
+   "crowd_chant_under",
+   124.583,
+   -24.2,
+   "ride +5.8 dB (sfx-rides.json)",
+   "added by the sound pass: the party keeps chanting under the exchange (the picture: \"the only one not chanting\")"
+  ],
+  [
+   "15.08",
+   "check_in_blip",
+   133.92,
+   -26.0
+  ],
+  [
+   "15.09",
+   "glyph_shimmer",
+   139.305,
+   -21.7,
+   "ride +6.3 dB (sfx-rides.json)"
+  ],
+  [
+   "15.13",
+   "torch_light",
+   160.573,
+   -14.7,
+   "ride +9.3 dB (sfx-rides.json)"
+  ],
+  [
+   "15.14",
+   "post_click",
+   164.736,
+   -20.0
+  ],
+  [
+   "15.15",
+   "flame_whoomph",
+   166.518,
+   -12.2,
+   "ride +5.8 dB (sfx-rides.json)"
+  ],
+  [
+   "15.15",
+   "fire_crackle",
+   167.055,
+   -18.8,
+   "ride +5.2 dB (sfx-rides.json)"
+  ],
+  [
+   "15.18",
+   "door_close_soft",
+   183.409,
+   -12.0,
+   "ride +12.0 dB (sfx-rides.json)"
+  ],
+  [
+   "15.19",
+   "footstep_soft_1",
+   185.2,
+   -24.6,
+   "ride +3.4 dB (sfx-rides.json)"
+  ],
+  [
+   "15.19",
+   "phone_buzz_step_1",
+   186.2,
+   -17.5,
+   "ride +4.5 dB (sfx-rides.json)"
+  ],
+  [
+   "15.19",
+   "footstep_soft_2",
+   188.8,
+   -23.0,
+   "ride +5.0 dB (sfx-rides.json)"
+  ],
+  [
+   "17.01",
+   "receipt_printer",
+   190.0,
+   -22.0
+  ],
+  [
+   "17.02",
+   "receipt_unroll_loop",
+   194.417,
+   -24.0
+  ],
+  [
+   "17.02",
+   "car_honk_1",
+   200.217,
+   -18.3,
+   "ride +7.7 dB (sfx-rides.json)"
+  ],
+  [
+   "17.03",
+   "freeze_hit_F",
+   202.0,
+   -18.0
+  ],
+  [
+   "17.04",
+   "pen_chain_rattle",
+   205.192,
+   -24.0
+  ],
+  [
+   "17.05",
+   "car_window_down",
+   219.517,
+   -25.1,
+   "ride +0.9 dB (sfx-rides.json)"
+  ],
+  [
+   "17.06",
+   "pen_chain_rattle",
+   226.395,
+   -26.0
+  ],
+  [
+   "17.07",
+   "phone_buzz_step_1",
+   230.484,
+   -12.0,
+   "ride +12.0 dB (sfx-rides.json)"
+  ],
+  [
+   "17.08",
+   "phone_buzz_step_2",
+   233.408,
+   -12.0,
+   "ride +10.0 dB (sfx-rides.json)"
+  ],
+  [
+   "17.08",
+   "phone_buzz_step_3",
+   234.808,
+   -12.0,
+   "ride +10.0 dB (sfx-rides.json)"
+  ],
+  [
+   "17.08",
+   "phone_buzz_step_4",
+   236.508,
+   -12.0,
+   "ride +10.0 dB (sfx-rides.json)"
+  ],
+  [
+   "17.09",
+   "call_ring",
+   238.194,
+   -26.0
+  ],
+  [
+   "17.09",
+   "call_connect",
+   239.553,
+   -25.5,
+   "ride +0.5 dB (sfx-rides.json)"
+  ],
+  [
+   "17.10",
+   "phone_type_burst",
+   244.942,
+   -28.0,
+   "swapped: phone_type_burst",
+   "lock: key_tap_soft_01"
+  ],
+  [
+   "17.10",
+   "key_delete_run",
+   246.342,
+   -26.0
+  ],
+  [
+   "17.10",
+   "phone_type_burst",
+   247.542,
+   -28.0,
+   "swapped: phone_type_burst",
+   "lock: key_tap_soft_03"
+  ],
+  [
+   "17.11",
+   "receipt_unroll_loop",
+   249.125,
+   -28.0
+  ],
+  [
+   "17.15",
+   "post_click",
+   272.333,
+   -24.0
+  ],
+  [
+   "17.15",
+   "car_honk_2",
+   274.933,
+   -22.0
+  ],
+  [
+   "17.15",
+   "car_honk_3",
+   276.033,
+   -22.0
+  ],
+  [
+   "17.15",
+   "car_honk_4",
+   279.033,
+   -22.0
+  ],
+  [
+   "17.15",
+   "car_honk_5",
+   281.583,
+   -22.0
+  ],
+  [
+   "17.15",
+   "pen_scribble_short",
+   282.253,
+   -26.0
+  ],
+  [
+   "17.16",
+   "car_honk_1",
+   287.388,
+   -20.0
+  ],
+  [
+   "17.17",
+   "thunder_tuned_F",
+   295.983,
+   -16.6,
+   "ride +1.4 dB (sfx-rides.json)"
+  ],
+  [
+   "17.18",
+   "umbrella_rain",
+   298.583,
+   -24.0
+  ],
+  [
+   "17.18",
+   "ink_run_drip",
+   299.361,
+   -26.0
+  ],
+  [
+   "17.18",
+   "umbrella_pop",
+   303.639,
+   -24.4,
+   "ride +7.6 dB (sfx-rides.json)"
+  ],
+  [
+   "17.19",
+   "ui_pause_tap",
+   307.583,
+   -22.0
+  ],
+  [
+   "17.20",
+   "ui_toast_pop",
+   310.3,
+   -20.8,
+   "ride +5.2 dB (sfx-rides.json)"
+  ],
+  [
+   "17.21",
+   "blimp_lights_off",
+   316.017,
+   -26.0
+  ],
+  [
+   "17.21",
+   "blimp_lights_off",
+   316.717,
+   -26.0
+  ],
+  [
+   "17.21",
+   "blimp_lights_off",
+   317.417,
+   -26.0
+  ],
+  [
+   "17.21",
+   "blimp_lights_off",
+   318.217,
+   -24.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "14.07",
+   "name": "chair_hum_choir",
+   "why": "the score claims it (claims_sfx)"
+  },
+  {
+   "beat": "17.21",
+   "name": "dread_sting",
+   "why": "the score claims it (claims_sfx)"
+  }
+ ],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [
+  "14.07:chair_hum_choir",
+  "17.21:dread_sting"
+ ],
+ "added": [
+  {
+   "beat": "15.07",
+   "name": "crowd_chant_under",
+   "at": 124.583,
+   "why": "the party keeps chanting under the exchange (the picture: \"the only one not chanting\")"
+  }
+ ],
+ "room_stem": {
+  "lufs": -36.14,
+  "peak_dbfs": -18.47,
+  "p10_50ms_dbfs": -39.4
+ },
+ "sfx_stem": {
+  "lufs": -32.22,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 34.055,
+     "ratio": 291.3,
+     "from_dbfs": -38.2,
+     "to_dbfs": -86.1
+    },
+    {
+     "at": 36.655,
+     "ratio": 291.3,
+     "from_dbfs": -38.2,
+     "to_dbfs": -86.1
+    },
+    {
+     "at": 39.055,
+     "ratio": 291.1,
+     "from_dbfs": -41.9,
+     "to_dbfs": -89.8
+    },
+    {
+     "at": 85.805,
+     "ratio": 315.0,
+     "from_dbfs": -38.8,
+     "to_dbfs": -59.1
+    },
+    {
+     "at": 106.745,
+     "ratio": 35.1,
+     "from_dbfs": -43.8,
+     "to_dbfs": -72.8
+    },
+    {
+     "at": 106.895,
+     "ratio": 36.5,
+     "from_dbfs": -41.0,
+     "to_dbfs": -72.0
+    },
+    {
+     "at": 107.045,
+     "ratio": 15.6,
+     "from_dbfs": -43.2,
+     "to_dbfs": -74.9
+    },
+    {
+     "at": 161.675,
+     "ratio": 77.9,
+     "from_dbfs": -32.6,
+     "to_dbfs": -49.2
+    },
+    {
+     "at": 170.03,
+     "ratio": 12.4,
+     "from_dbfs": -46.4,
+     "to_dbfs": -59.7
+    },
+    {
+     "at": 272.41,
+     "ratio": 26.4,
+     "from_dbfs": -45.0,
+     "to_dbfs": -61.8
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lobby_day@act3:13.01",
+   "p5_50ms_dbfs": -39.6,
+   "lift_db": 0.0
+  },
+  {
+   "room": "open_floor@act3:14.01",
+   "p5_50ms_dbfs": -40.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_evening@act3:15.01",
+   "p5_50ms_dbfs": -41.9,
+   "lift_db": 1.9
+  },
+  {
+   "room": "party@act3:15.06",
+   "p5_50ms_dbfs": -39.5,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_2023@act3:15.10",
+   "p5_50ms_dbfs": -42.6,
+   "lift_db": 2.6
+  },
+  {
+   "room": "fire_night@act3:15.13",
+   "p5_50ms_dbfs": -40.5,
+   "lift_db": 0.5
+  },
+  {
+   "room": "office_2023@act3:15.14",
+   "p5_50ms_dbfs": -42.7,
+   "lift_db": 2.7
+  },
+  {
+   "room": "fire_night@act3:15.15",
+   "p5_50ms_dbfs": -39.1,
+   "lift_db": 0.0
+  },
+  {
+   "room": "office_evening@act3:15.17",
+   "p5_50ms_dbfs": -41.6,
+   "lift_db": 1.6
+  },
+  {
+   "room": "stairwell@act3:15.19",
+   "p5_50ms_dbfs": -43.9,
+   "lift_db": 3.9
+  },
+  {
+   "room": "bridge@act3:17.01",
+   "p5_50ms_dbfs": -43.5,
+   "lift_db": 3.5
+  },
+  {
+   "room": "bridge_stalled@act3:17.03",
+   "p5_50ms_dbfs": -39.3,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bridge_night@act3:17.14",
+   "p5_50ms_dbfs": -42.3,
+   "lift_db": 2.3
+  },
+  {
+   "room": "bridge_stalled@act3:17.15",
+   "p5_50ms_dbfs": -39.3,
+   "lift_db": 0.0
+  },
+  {
+   "room": "bridge_rain@act3:17.17",
+   "p5_50ms_dbfs": -40.4,
+   "lift_db": 0.4
+  }
+ ]
+}

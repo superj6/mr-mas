@@ -1,0 +1,674 @@
+{
+ "segment": "act2",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act2.json",
+ "seconds": 279.0,
+ "frames": 6696,
+ "rooms": [
+  {
+   "room": "darkroom",
+   "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
+   "from": -1.0,
+   "to": 44.4,
+   "first": "8.01",
+   "last": "8.07",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 2.2
+  },
+  {
+   "room": "wings",
+   "recipe": "wings: bed_wings -40",
+   "from": 43.4,
+   "to": 95.2,
+   "first": "9.01",
+   "last": "9.06",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 2.3
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 95.0,
+   "to": 141.0,
+   "first": "10.01"
+  },
+  {
+   "room": "demo_house",
+   "recipe": "demo_house: bed_demo_house -36",
+   "from": 140.4,
+   "to": 154.9,
+   "first": "11.01",
+   "last": "11.02",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "wings",
+   "recipe": "wings: bed_wings -40",
+   "from": 153.9,
+   "to": 158.067,
+   "first": "11.03",
+   "last": "11.03",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.9
+  },
+  {
+   "room": "demo_house",
+   "recipe": "demo_house: bed_demo_house -36",
+   "from": 157.067,
+   "to": 210.733,
+   "first": "11.04",
+   "last": "11.10",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "wings",
+   "recipe": "wings: bed_wings -40",
+   "from": 209.733,
+   "to": 216.942,
+   "first": "11.11",
+   "last": "11.12",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.0
+  },
+  {
+   "room": "demo_house",
+   "recipe": "demo_house: bed_demo_house -36",
+   "from": 215.942,
+   "to": 240.0,
+   "first": "11.13",
+   "last": "11.16",
+   "lead": 0.6,
+   "trail": 1.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "demo_house_empty",
+   "recipe": "demo_house_empty: bed_demo_house_empty -38",
+   "from": 238.4,
+   "to": 251.867,
+   "first": "12.01",
+   "last": "12.03",
+   "lead": 0.6,
+   "trail": 0.2,
+   "lift_db": 0.0
+  },
+  {
+   "room": "black: room tone -54.0 LUFS",
+   "from": 251.667,
+   "to": 252.667,
+   "first": "12.04"
+  },
+  {
+   "room": "darkroom",
+   "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
+   "from": 252.067,
+   "to": 279.4,
+   "first": "12.05",
+   "last": "12.08",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.2
+  }
+ ],
+ "sfx": [
+  [
+   "8.01",
+   "ui_toast_pop",
+   2.186,
+   -12.6,
+   "ride +13.4 dB (sfx-rides.json)"
+  ],
+  [
+   "8.01",
+   "ui_swipe",
+   6.725,
+   -24.0
+  ],
+  [
+   "8.02",
+   "mouse_scroll",
+   8.183,
+   -28.0
+  ],
+  [
+   "8.04",
+   "ui_drop_snap",
+   25.0,
+   -22.0
+  ],
+  [
+   "8.06",
+   "call_ring",
+   29.128,
+   -24.0
+  ],
+  [
+   "8.06",
+   "call_connect",
+   30.809,
+   -23.0,
+   "ride +3.0 dB (sfx-rides.json)"
+  ],
+  [
+   "8.07",
+   "invite_drop",
+   39.297,
+   -19.5,
+   "ride +4.5 dB (sfx-rides.json)"
+  ],
+  [
+   "8.07",
+   "post_click",
+   41.315,
+   -26.0
+  ],
+  [
+   "9.02",
+   "ui_chirp_bright",
+   56.808,
+   -22.0
+  ],
+  [
+   "9.03",
+   "engineer_laugh_take",
+   60.075,
+   -22.0,
+   "ducked -9 dB under e2-a2-0005 (61.93-63.89 s)"
+  ],
+  [
+   "9.03",
+   "tag_drop",
+   60.802,
+   -26.0
+  ],
+  [
+   "9.06",
+   "panel_unfold_step",
+   93.615,
+   -26.0
+  ],
+  [
+   "9.06",
+   "drafting_ink_stroke",
+   94.415,
+   -26.0,
+   "cut at its scene's end (0.84 s early)"
+  ],
+  [
+   "10.01",
+   "rubber_stamp_C",
+   95.761,
+   -20.0
+  ],
+  [
+   "10.02",
+   "drafting_ink_stroke",
+   101.97,
+   -26.0
+  ],
+  [
+   "10.02",
+   "paper_curl",
+   108.308,
+   -28.0
+  ],
+  [
+   "10.03",
+   "tiny_laugh_back",
+   116.135,
+   -28.0
+  ],
+  [
+   "10.04",
+   "rubber_stamp_C",
+   121.287,
+   -22.0
+  ],
+  [
+   "10.05",
+   "rubber_stamp_C",
+   123.922,
+   -20.9,
+   "ride +1.1 dB (sfx-rides.json)"
+  ],
+  [
+   "10.05",
+   "rubber_stamp_C",
+   125.102,
+   -20.9,
+   "ride +1.1 dB (sfx-rides.json)"
+  ],
+  [
+   "10.05",
+   "tiny_crowd_patter",
+   125.372,
+   -28.0
+  ],
+  [
+   "10.07",
+   "paper_tear",
+   139.215,
+   -18.0
+  ],
+  [
+   "11.01",
+   "spotlight_swing",
+   141.6,
+   -12.0,
+   "ride +12.0 dB (sfx-rides.json)"
+  ],
+  [
+   "11.02",
+   "palette_step_F",
+   149.7,
+   -20.7,
+   "ride +3.3 dB (sfx-rides.json)"
+  ],
+  [
+   "11.02",
+   "palette_step_F",
+   150.3,
+   -20.7,
+   "ride +3.3 dB (sfx-rides.json)"
+  ],
+  [
+   "11.02",
+   "palette_step_F",
+   150.9,
+   -20.7,
+   "ride +3.3 dB (sfx-rides.json)"
+  ],
+  [
+   "11.03",
+   "glyph_blink",
+   154.55,
+   -26.0
+  ],
+  [
+   "11.03",
+   "orb_scan_sweep",
+   155.1,
+   -26.0
+  ],
+  [
+   "11.03",
+   "ui_toast_pop",
+   155.4,
+   -28.0
+  ],
+  [
+   "11.04",
+   "crowd_laugh_m",
+   168.107,
+   -20.0
+  ],
+  [
+   "11.04",
+   "spotlight_swing",
+   168.607,
+   -24.0
+  ],
+  [
+   "11.05",
+   "crowd_laugh_l",
+   177.75,
+   -18.0
+  ],
+  [
+   "11.05",
+   "spotlight_swing",
+   178.55,
+   -24.0
+  ],
+  [
+   "11.06",
+   "clicker_click",
+   181.315,
+   -24.9,
+   "ride +3.1 dB (sfx-rides.json)"
+  ],
+  [
+   "11.07",
+   "crowd_laugh_m",
+   195.915,
+   -19.1,
+   "ride +0.9 dB (sfx-rides.json)"
+  ],
+  [
+   "11.07",
+   "spotlight_swing",
+   196.715,
+   -12.0,
+   "ride +12.0 dB (sfx-rides.json)"
+  ],
+  [
+   "11.08",
+   "crowd_laugh_s",
+   200.755,
+   -22.0
+  ],
+  [
+   "11.10",
+   "stream_end_tone",
+   208.033,
+   -24.0
+  ],
+  [
+   "11.10",
+   "house_lights_up",
+   208.533,
+   -26.0
+  ],
+  [
+   "11.11",
+   "phone_key_tap_1",
+   211.333,
+   -28.0,
+   "swapped: phone_key_tap_1",
+   "lock: typing_soft"
+  ],
+  [
+   "11.11",
+   "phone_key_tap_2",
+   211.833,
+   -28.0,
+   "swapped: phone_key_tap_2",
+   "lock: typing_soft"
+  ],
+  [
+   "11.11",
+   "phone_key_tap_3",
+   212.433,
+   -28.0,
+   "swapped: phone_key_tap_3",
+   "lock: typing_soft"
+  ],
+  [
+   "11.12",
+   "post_click",
+   214.633,
+   -30.0
+  ],
+  [
+   "11.13",
+   "blimp_inflate_step",
+   216.842,
+   -16.6,
+   "ride +7.4 dB (sfx-rides.json)"
+  ],
+  [
+   "11.13",
+   "blimp_inflate_step",
+   219.342,
+   -15.6,
+   "ride +7.4 dB (sfx-rides.json)"
+  ],
+  [
+   "11.13",
+   "blimp_inflate_step",
+   221.842,
+   -14.6,
+   "ride +7.4 dB (sfx-rides.json)"
+  ],
+  [
+   "11.13",
+   "phone_wave_buzz",
+   222.542,
+   -18.5,
+   "ride +5.5 dB (sfx-rides.json)"
+  ],
+  [
+   "11.13",
+   "blimp_inflate_step",
+   224.342,
+   -13.6,
+   "ride +7.4 dB (sfx-rides.json)"
+  ],
+  [
+   "11.15",
+   "headset_unclip",
+   229.408,
+   -26.0
+  ],
+  [
+   "11.16",
+   "cloth_rustle",
+   236.2,
+   -22.7,
+   "ride +5.3 dB (sfx-rides.json)"
+  ],
+  [
+   "11.16",
+   "crowd_hush",
+   236.4,
+   -21.9,
+   "ride +6.1 dB (sfx-rides.json)"
+  ],
+  [
+   "12.01",
+   "house_lights_up",
+   239.226,
+   -23.7,
+   "ride +0.3 dB (sfx-rides.json)"
+  ],
+  [
+   "12.05",
+   "ui_minimise",
+   257.267,
+   -23.7,
+   "ride +2.3 dB (sfx-rides.json)"
+  ],
+  [
+   "12.06",
+   "phone_buzz_step_1",
+   258.767,
+   -22.4,
+   "ride +3.6 dB (sfx-rides.json)"
+  ],
+  [
+   "12.06",
+   "thumb_scroll",
+   262.667,
+   -28.0
+  ],
+  [
+   "12.07",
+   "phone_key_tap_1",
+   265.85,
+   -30.0,
+   "swapped: phone_key_tap_1",
+   "lock: key_tap_soft_01"
+  ],
+  [
+   "12.07",
+   "phone_key_tap_3",
+   266.65,
+   -30.0,
+   "swapped: phone_key_tap_3",
+   "lock: key_tap_soft_03"
+  ],
+  [
+   "12.07",
+   "phone_key_tap_5",
+   267.45,
+   -30.0,
+   "swapped: phone_key_tap_5",
+   "lock: key_tap_soft_05"
+  ],
+  [
+   "12.07",
+   "post_click",
+   268.45,
+   -28.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "8.02",
+   "name": "news_desk_sting",
+   "why": "the score claims it (claims_sfx)"
+  },
+  {
+   "beat": "8.06",
+   "name": "ui_confirm_chip",
+   "why": "the score claims it (claims_sfx)"
+  },
+  {
+   "beat": "12.03",
+   "name": "door_motif_note",
+   "why": "the score claims it (claims_sfx)"
+  },
+  {
+   "beat": "12.05",
+   "name": "news_bed_tiny",
+   "why": "the score claims it (claims_sfx)"
+  }
+ ],
+ "sfx_cut_at_scene_end": [
+  {
+   "beat": "9.06",
+   "name": "drafting_ink_stroke",
+   "at": 94.415,
+   "scene_end": 95.0,
+   "would_have_run_past_s": 0.838
+  }
+ ],
+ "score_claims": [
+  "12.03:door_motif_note",
+  "12.05:news_bed_tiny",
+  "8.02:news_desk_sting",
+  "8.06:ui_confirm_chip"
+ ],
+ "room_stem": {
+  "lufs": -37.05,
+  "peak_dbfs": -23.41,
+  "p10_50ms_dbfs": -54.4
+ },
+ "sfx_stem": {
+  "lufs": -33.14,
+  "peak_dbfs": -11.34,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 6.93,
+     "ratio": 10.9,
+     "from_dbfs": -38.8,
+     "to_dbfs": -61.7
+    },
+    {
+     "at": 41.39,
+     "ratio": 27.7,
+     "from_dbfs": -47.0,
+     "to_dbfs": -62.5
+    },
+    {
+     "at": 93.68,
+     "ratio": 27.1,
+     "from_dbfs": -40.1,
+     "to_dbfs": -55.5
+    },
+    {
+     "at": 93.81,
+     "ratio": 16.6,
+     "from_dbfs": -37.2,
+     "to_dbfs": -56.3
+    },
+    {
+     "at": 93.94,
+     "ratio": 15.6,
+     "from_dbfs": -38.8,
+     "to_dbfs": -55.5
+    },
+    {
+     "at": 181.32,
+     "ratio": 943.9,
+     "from_dbfs": -35.0,
+     "to_dbfs": -51.2
+    },
+    {
+     "at": 229.41,
+     "ratio": 29.0,
+     "from_dbfs": -39.5,
+     "to_dbfs": -51.6
+    },
+    {
+     "at": 257.46,
+     "ratio": 11.2,
+     "from_dbfs": -40.8,
+     "to_dbfs": -63.3
+    },
+    {
+     "at": 268.525,
+     "ratio": 27.7,
+     "from_dbfs": -49.0,
+     "to_dbfs": -64.5
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "darkroom@act2:8.01",
+   "p5_50ms_dbfs": -42.2,
+   "lift_db": 2.2
+  },
+  {
+   "room": "wings@act2:9.01",
+   "p5_50ms_dbfs": -42.3,
+   "lift_db": 2.3
+  },
+  {
+   "room": "demo_house@act2:11.01",
+   "p5_50ms_dbfs": -38.3,
+   "lift_db": 0.0
+  },
+  {
+   "room": "wings@act2:11.03",
+   "p5_50ms_dbfs": -41.9,
+   "lift_db": 1.9
+  },
+  {
+   "room": "demo_house@act2:11.04",
+   "p5_50ms_dbfs": -38.1,
+   "lift_db": 0.0
+  },
+  {
+   "room": "wings@act2:11.11",
+   "p5_50ms_dbfs": -42.0,
+   "lift_db": 2.0
+  },
+  {
+   "room": "demo_house@act2:11.13",
+   "p5_50ms_dbfs": -38.2,
+   "lift_db": 0.0
+  },
+  {
+   "room": "demo_house_empty@act2:12.01",
+   "p5_50ms_dbfs": -40.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "darkroom@act2:12.05",
+   "p5_50ms_dbfs": -42.2,
+   "lift_db": 2.2
+  }
+ ]
+}

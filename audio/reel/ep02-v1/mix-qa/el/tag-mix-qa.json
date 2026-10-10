@@ -1,0 +1,103 @@
+{
+ "segment": "tag",
+ "variant": "el",
+ "seconds": 37.0,
+ "frames": 888,
+ "samples": 1776000,
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
+ "dialogue": {
+  "lines": 1,
+  "device": {},
+  "el_matched": 1,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep02-v1/stems/el/tag-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep02-v1/stems/el/tag-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
+  "cues": "audio/ost/tracks/e02-v1-tag/cues-el.json",
+  "length_s": 37.0,
+  "length_vs_segment_s": 0.0,
+  "prev_ringout": {
+   "file": "audio/ost/tracks/e02-v1-act4/render/music-el-ringout.wav",
+   "seconds": 2.6,
+   "crossfade": "full from 0 s, out (equal power) over 2.5 s from this score's entry at 0.18 s"
+  },
+  "lufs_as_delivered": -19.95,
+  "lufs_after_gain": -19.94,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E02-13 AUGUST",
+     8
+    ],
+    [
+     "E02-13",
+     8
+    ],
+    [
+     "E02-13 out",
+     8
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": []
+ },
+ "measured": {
+  "lufs_i": -16.01,
+  "true_peak_dbtp": -1.15,
+  "sample_peak_dbfs": -2.0,
+  "lra_lu": 7.9,
+  "gain_db": 3.68,
+  "limiter_ceiling_dbfs": -2.0,
+  "limiter_active_s": 1.198,
+  "dialogue_lufs": -12.52,
+  "score_lufs_after_duck": -16.27,
+  "score_rms_under_speech_dbfs": -30.3,
+  "score_rms_between_speech_dbfs": -18.7,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 37.0,
+   "runs": [
+    [
+     0.0,
+     37.0
+    ]
+   ]
+  },
+  "rooms_lufs": -34.58,
+  "sfx_lufs": -30.19,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 1,
+   "rising": 1,
+   "rising_at_a_word": 1,
+   "rising_at_an_sfx": 0,
+   "rising_other": [],
+   "falling": 0
+  }
+ },
+ "file": "out/ep02/v1/mix/tag-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 2.22,
+  "to_gain_db": 3.68,
+  "ramp_s": 2.0,
+  "after": "act4"
+ },
+ "built": "2026-10-10 08:11:30",
+ "heard": "nothing here has been listened to; every number is measured"
+}

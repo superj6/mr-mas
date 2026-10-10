@@ -1,0 +1,163 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "seconds": 319.0,
+ "frames": 7656,
+ "samples": 15312000,
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act4.json",
+ "dialogue": {
+  "lines": 38,
+  "device": {
+   "podcast": 2,
+   "call (far end, off screen)": 3
+  },
+  "el_matched": 38,
+  "missing": [],
+  "kokoro_cast": 6
+ },
+ "rooms": {
+  "stem": "audio/reel/ep02-v1/stems/el/act4-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep02-v1/stems/el/act4-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e02-v1-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e02-v1-act4/cues-el.json",
+  "length_s": 319.0,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.22,
+  "lufs_after_gain": -20.22,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E02-12",
+     7
+    ],
+    [
+     "E02-12 ONE DOOR",
+     7
+    ],
+    [
+     "E02-11 LEVERAGE, QUARTET",
+     9
+    ],
+    [
+     "room tone only (the quartet has ended)",
+     9.0
+    ],
+    [
+     "E02-11",
+     9
+    ],
+    [
+     "room tone only",
+     9.0
+    ],
+    [
+     "the designed stop: room tone only",
+     9.0
+    ],
+    [
+     "room tone only; the pin's soft knock",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    266.35,
+    282.98,
+    "the quartet has ended as the complaint left the lobby (the cello's last pizzicato on the (FOR NOW) note's landing); room tone only under the dark room's Jun 19 post (Alyi's own act: W8, the plan's \"under the dark room, room tone only\") and the hard cut to white; the re-entry is E02-12's first felt note as the lot appears"
+   ],
+   [
+    307.388,
+    313.0,
+    "THE DESIGNED STOP (22.06): the flap swings shut on its spring in room tone only; Mas at the shut flap; the re-entry as his raised hand lowers (22.08)"
+   ]
+  ],
+  "head_fade_s": 0.0,
+  "head_fade_why": "its pre-lap (1.200 s) plays under act3's tail, continuous with this score's first sample"
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.48,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 8.6,
+  "gain_db": 2.22,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.148,
+  "dialogue_lufs": -13.94,
+  "score_lufs_after_duck": -19.69,
+  "score_rms_under_speech_dbfs": -29.1,
+  "score_rms_between_speech_dbfs": -20.1,
+  "score_runs": {
+   "count": 3,
+   "shortest_s": 6.05,
+   "runs": [
+    [
+     0.0,
+     267.25
+    ],
+    [
+     282.95,
+     24.45
+    ],
+    [
+     312.95,
+     6.05
+    ]
+   ]
+  },
+  "rooms_lufs": -34.76,
+  "sfx_lufs": -30.6,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [
+   {
+    "at": 282.5,
+    "s": 0.45,
+    "what": "UNMARKED (in beat 22.01)"
+   },
+   {
+    "at": 312.35,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 22.08)"
+   }
+  ],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 26,
+   "rising": 21,
+   "rising_at_a_word": 13,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    0.2,
+    2.7,
+    5.2,
+    21.9,
+    32.7,
+    112.5,
+    283.0,
+    313.0
+   ],
+   "falling": 5
+  }
+ },
+ "file": "out/ep02/v1/mix/act4-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 2.53,
+  "to_gain_db": 2.22,
+  "ramp_s": 2.0,
+  "after": "act3"
+ },
+ "built": "2026-10-10 08:11:29",
+ "heard": "nothing here has been listened to; every number is measured"
+}

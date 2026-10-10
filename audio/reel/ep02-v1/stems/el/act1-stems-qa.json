@@ -1,0 +1,662 @@
+{
+ "segment": "act1",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act1.json",
+ "seconds": 364.0,
+ "frames": 8736,
+ "rooms": [
+  {
+   "room": "seance",
+   "recipe": "seance: bed_boardroom_night -40 + bed_seance_candles -42",
+   "from": -1.0,
+   "to": 154.942,
+   "first": "4.01",
+   "last": "4.27",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 0.5
+  },
+  {
+   "room": "allhands",
+   "recipe": "allhands: bed_allhands -36",
+   "from": 153.942,
+   "to": 174.567,
+   "first": "4.28",
+   "last": "4.32",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.4
+  },
+  {
+   "room": "seance",
+   "recipe": "seance: bed_boardroom_night -40 + bed_seance_candles -42",
+   "from": 173.567,
+   "to": 193.4,
+   "first": "4.33",
+   "last": "4.36",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.3
+  },
+  {
+   "room": "boardroom_day",
+   "recipe": "boardroom_day: bed_boardroom_day -39",
+   "from": 192.4,
+   "to": 235.4,
+   "first": "4A.01",
+   "last": "4B.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.2
+  },
+  {
+   "room": "podcast_studio",
+   "recipe": "podcast_studio: bed_podcast_studio -42",
+   "from": 234.4,
+   "to": 316.4,
+   "first": "6.01",
+   "last": "6.11",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.9
+  },
+  {
+   "room": "cathedral",
+   "recipe": "cathedral: server_hum -37 + room_tone -44",
+   "from": 315.4,
+   "to": 322.65,
+   "first": "7.01",
+   "last": "7.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement",
+   "recipe": "basement: bed_basement -38",
+   "from": 321.65,
+   "to": 353.733,
+   "first": "7.02",
+   "last": "7.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "cathedral",
+   "recipe": "cathedral: server_hum -37 + room_tone -44",
+   "from": 352.733,
+   "to": 364.4,
+   "first": "7.07",
+   "last": "7.08",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  }
+ ],
+ "sfx": [
+  [
+   "4.01",
+   "candle_crackle",
+   0.0,
+   -32.0
+  ],
+  [
+   "4.02",
+   "post_click",
+   2.9,
+   -18.0
+  ],
+  [
+   "4.02",
+   "candle_flare",
+   3.0,
+   -23.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "4.02",
+   "planchette_glide",
+   3.5,
+   -25.7,
+   "ride +0.3 dB (sfx-rides.json)"
+  ],
+  [
+   "4.03",
+   "planchette_glide",
+   16.318,
+   -26.0
+  ],
+  [
+   "4.03",
+   "inbox_chime_low",
+   16.618,
+   -22.0
+  ],
+  [
+   "4.04",
+   "reverse_swell_1beat",
+   17.6,
+   -24.0
+  ],
+  [
+   "4.04",
+   "glyph_shimmer",
+   17.7,
+   -30.0
+  ],
+  [
+   "4.06",
+   "ceiling_knock",
+   30.445,
+   -22.0
+  ],
+  [
+   "4.06",
+   "ceiling_knock",
+   31.145,
+   -19.0
+  ],
+  [
+   "4.06",
+   "ceiling_knock",
+   31.845,
+   -16.0
+  ],
+  [
+   "4.07",
+   "ceiling_burst",
+   32.458,
+   -14.0
+  ],
+  [
+   "4.07",
+   "cable_drop",
+   32.858,
+   -22.0
+  ],
+  [
+   "4.07",
+   "landing_thunk",
+   33.558,
+   -16.0
+  ],
+  [
+   "4.10",
+   "planchette_letter_tick",
+   62.26,
+   -24.0
+  ],
+  [
+   "4.10",
+   "planchette_letter_tick",
+   62.76,
+   -24.0
+  ],
+  [
+   "4.10",
+   "planchette_letter_tick",
+   63.26,
+   -24.0
+  ],
+  [
+   "4.10",
+   "planchette_letter_tick",
+   63.76,
+   -24.0
+  ],
+  [
+   "4.11",
+   "planchette_glide",
+   67.227,
+   -24.0
+  ],
+  [
+   "4.13",
+   "cow_moo_reverb",
+   73.592,
+   -12.8,
+   "ride +9.2 dB (sfx-rides.json)"
+  ],
+  [
+   "4.15",
+   "lamp_click",
+   82.934,
+   -22.0
+  ],
+  [
+   "4.15",
+   "phone_type_furious",
+   83.386,
+   -28.0,
+   "swapped: phone_type_furious",
+   "lock: key_tap_soft_01"
+  ],
+  [
+   "4.15",
+   "reverse_swell_1beat",
+   84.404,
+   -26.0
+  ],
+  [
+   "4.16",
+   "reverse_swell_1beat",
+   86.85,
+   -24.0
+  ],
+  [
+   "4.17",
+   "phone_clack_floor",
+   94.101,
+   -16.0
+  ],
+  [
+   "4.17",
+   "candle_flare",
+   94.157,
+   -24.0
+  ],
+  [
+   "4.19",
+   "planchette_glide",
+   108.73,
+   -24.0
+  ],
+  [
+   "4.19",
+   "go_stone_click",
+   109.43,
+   -16.0
+  ],
+  [
+   "4.27",
+   "candle_snuff",
+   152.398,
+   -24.0
+  ],
+  [
+   "4.27",
+   "render_front_sweep",
+   153.64,
+   -25.5,
+   "ride +0.5 dB (sfx-rides.json)"
+  ],
+  [
+   "4.30",
+   "glass_sip",
+   163.869,
+   -28.0
+  ],
+  [
+   "4.30",
+   "ladder_climb",
+   164.774,
+   -24.0
+  ],
+  [
+   "4.30",
+   "hatch_slide_shut",
+   167.149,
+   -20.0
+  ],
+  [
+   "4.31",
+   "arena_blip_soft",
+   168.467,
+   -28.0
+  ],
+  [
+   "4.33",
+   "render_front_sweep",
+   174.393,
+   -26.0
+  ],
+  [
+   "4.33",
+   "match_strike",
+   175.75,
+   -22.0
+  ],
+  [
+   "4.34",
+   "glass_sip",
+   185.065,
+   -26.0
+  ],
+  [
+   "4.35",
+   "rocket_roar",
+   188.345,
+   -16.0
+  ],
+  [
+   "4.35",
+   "tile_land_1",
+   189.885,
+   -22.0
+  ],
+  [
+   "4.36",
+   "candle_blow",
+   190.708,
+   -22.0
+  ],
+  [
+   "4A.03",
+   "chair_unfold",
+   214.313,
+   -26.0
+  ],
+  [
+   "4A.04",
+   "nameplate_click",
+   215.842,
+   -20.0
+  ],
+  [
+   "4A.04",
+   "nameplate_click",
+   216.542,
+   -22.0
+  ],
+  [
+   "4A.04",
+   "nameplate_click",
+   217.142,
+   -22.0
+  ],
+  [
+   "4A.04",
+   "nameplate_click",
+   217.742,
+   -22.0
+  ],
+  [
+   "4A.06",
+   "ui_toast_pop",
+   224.171,
+   -21.9,
+   "ride +2.1 dB (sfx-rides.json)"
+  ],
+  [
+   "4B.01",
+   "post_click",
+   233.12,
+   -22.0
+  ],
+  [
+   "6.02",
+   "mic_grow_step",
+   244.583,
+   -20.0
+  ],
+  [
+   "6.02",
+   "chapter_tick",
+   244.683,
+   -25.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "6.02",
+   "freeze_hit_F",
+   244.883,
+   -18.0
+  ],
+  [
+   "6.04",
+   "mic_grow_step",
+   259.723,
+   -19.0
+  ],
+  [
+   "6.04",
+   "chapter_tick",
+   259.876,
+   -26.0
+  ],
+  [
+   "6.06",
+   "mic_grow_step",
+   276.015,
+   -18.0
+  ],
+  [
+   "6.06",
+   "chapter_tick",
+   276.168,
+   -26.0
+  ],
+  [
+   "6.08",
+   "mic_grow_step",
+   303.687,
+   -16.0
+  ],
+  [
+   "6.08",
+   "chapter_tick",
+   303.84,
+   -26.0
+  ],
+  [
+   "6.08",
+   "chair_creak",
+   304.76,
+   -28.0
+  ],
+  [
+   "6.09",
+   "chapter_tick",
+   306.883,
+   -24.0
+  ],
+  [
+   "6.09",
+   "rec_light_off",
+   307.483,
+   -26.0
+  ],
+  [
+   "6.11",
+   "curtain_draw",
+   314.028,
+   -24.0
+  ],
+  [
+   "7.01",
+   "dollhouse_slide",
+   316.0,
+   -17.7,
+   "ride +4.3 dB (sfx-rides.json)"
+  ],
+  [
+   "7.01",
+   "light_bank_click",
+   316.8,
+   -19.0,
+   "ride +7.0 dB (sfx-rides.json)"
+  ],
+  [
+   "7.01",
+   "light_bank_click",
+   317.6,
+   -19.0,
+   "ride +7.0 dB (sfx-rides.json)"
+  ],
+  [
+   "7.01",
+   "light_bank_click",
+   320.13,
+   -19.0,
+   "ride +7.0 dB (sfx-rides.json)"
+  ],
+  [
+   "7.01",
+   "light_bank_click",
+   320.73,
+   -17.0,
+   "ride +7.0 dB (sfx-rides.json)"
+  ],
+  [
+   "7.02",
+   "box_set",
+   323.729,
+   -12.0,
+   "ride +12.0 dB (sfx-rides.json)"
+  ],
+  [
+   "7.05",
+   "door_key_turn",
+   345.842,
+   -24.0
+  ],
+  [
+   "7.05",
+   "alert_bonk",
+   349.602,
+   -24.5,
+   "ride +1.5 dB (sfx-rides.json)"
+  ],
+  [
+   "7.08",
+   "key_ring_jangle_1",
+   361.015,
+   -18.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "4.22",
+   "name": "knob_tick_grain",
+   "why": "the score claims it (claims_sfx)"
+  }
+ ],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [
+  "4.22:knob_tick_grain"
+ ],
+ "room_stem": {
+  "lufs": -37.18,
+  "peak_dbfs": -20.01,
+  "p10_50ms_dbfs": -39.5
+ },
+ "sfx_stem": {
+  "lufs": -32.84,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [
+    {
+     "at": 86.736,
+     "boundary": 86.75,
+     "ratio": 10.0,
+     "kind": "step",
+     "before_dbfs": -35.8,
+     "after_dbfs": -37.8
+    }
+   ],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 2.975,
+     "ratio": 10.2,
+     "from_dbfs": -39.0,
+     "to_dbfs": -54.5
+    },
+    {
+     "at": 82.94,
+     "ratio": 771.3,
+     "from_dbfs": -32.6,
+     "to_dbfs": -45.9
+    },
+    {
+     "at": 215.865,
+     "ratio": 27.6,
+     "from_dbfs": -40.8,
+     "to_dbfs": -62.2
+    },
+    {
+     "at": 216.565,
+     "ratio": 27.6,
+     "from_dbfs": -42.8,
+     "to_dbfs": -64.2
+    },
+    {
+     "at": 217.165,
+     "ratio": 27.6,
+     "from_dbfs": -42.8,
+     "to_dbfs": -64.2
+    },
+    {
+     "at": 217.765,
+     "ratio": 27.6,
+     "from_dbfs": -42.8,
+     "to_dbfs": -64.2
+    },
+    {
+     "at": 233.195,
+     "ratio": 27.7,
+     "from_dbfs": -43.0,
+     "to_dbfs": -58.5
+    },
+    {
+     "at": 307.77,
+     "ratio": 1827.7,
+     "from_dbfs": -48.0,
+     "to_dbfs": -63.0
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "seance@act1:4.01",
+   "p5_50ms_dbfs": -40.5,
+   "lift_db": 0.5
+  },
+  {
+   "room": "allhands@act1:4.28",
+   "p5_50ms_dbfs": -42.4,
+   "lift_db": 2.4
+  },
+  {
+   "room": "seance@act1:4.33",
+   "p5_50ms_dbfs": -40.3,
+   "lift_db": 0.3
+  },
+  {
+   "room": "boardroom_day@act1:4A.01",
+   "p5_50ms_dbfs": -41.2,
+   "lift_db": 1.2
+  },
+  {
+   "room": "podcast_studio@act1:6.01",
+   "p5_50ms_dbfs": -43.9,
+   "lift_db": 3.9
+  },
+  {
+   "room": "cathedral@act1:7.01",
+   "p5_50ms_dbfs": -38.6,
+   "lift_db": 0.0
+  },
+  {
+   "room": "basement@act1:7.02",
+   "p5_50ms_dbfs": -39.2,
+   "lift_db": 0.0
+  },
+  {
+   "room": "cathedral@act1:7.07",
+   "p5_50ms_dbfs": -38.4,
+   "lift_db": 0.0
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "segment": "tag",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
+ "seconds": 37.0,
+ "frames": 888,
+ "rooms": [
+  {
+   "room": "darkroom",
+   "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
+   "from": -0.6,
+   "to": 39.5,
+   "first": "23.01",
+   "last": "23.09",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 2.1
+  }
+ ],
+ "sfx": [
+  [
+   "23.01",
+   "landing_thunk",
+   1.6,
+   -14.0
+  ],
+  [
+   "23.02",
+   "page_turn",
+   4.852,
+   -26.0
+  ],
+  [
+   "23.02",
+   "page_turn",
+   5.792,
+   -26.0
+  ],
+  [
+   "23.02",
+   "page_turn",
+   6.733,
+   -26.0
+  ],
+  [
+   "23.03",
+   "ui_toast_pop",
+   10.517,
+   -20.7,
+   "ride +5.3 dB (sfx-rides.json)"
+  ],
+  [
+   "23.04",
+   "orb_servo",
+   13.383,
+   -24.0
+  ],
+  [
+   "23.04",
+   "orb_scan_sweep",
+   14.483,
+   -26.0
+  ],
+  [
+   "23.04",
+   "orb_chime_F",
+   17.283,
+   -21.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "23.04",
+   "ui_toast_pop",
+   17.283,
+   -27.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "23.06",
+   "blip_text_neutral",
+   24.375,
+   -25.5,
+   "ride +0.5 dB (sfx-rides.json)"
+  ],
+  [
+   "23.07",
+   "balloon_pump",
+   28.307,
+   -26.0
+  ],
+  [
+   "23.07",
+   "balloon_pump",
+   29.384,
+   -25.0
+  ],
+  [
+   "23.07",
+   "balloon_pump",
+   30.46,
+   -24.0
+  ],
+  [
+   "23.07",
+   "knot_tie",
+   32.075,
+   -26.0
+  ],
+  [
+   "23.08",
+   "string_taut",
+   33.717,
+   -20.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -38.14,
+  "peak_dbfs": -24.92,
+  "p10_50ms_dbfs": -39.7
+ },
+ "sfx_stem": {
+  "lufs": -33.87,
+  "peak_dbfs": -14.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": [
+    {
+     "at": 32.38,
+     "ratio": 115.7,
+     "from_dbfs": -38.3,
+     "to_dbfs": -67.7
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "darkroom@tag:23.01",
+   "p5_50ms_dbfs": -42.1,
+   "lift_db": 2.1
+  }
+ ]
+}

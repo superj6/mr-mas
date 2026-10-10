@@ -1,0 +1,214 @@
+{
+ "segment": "act1",
+ "variant": "el",
+ "seconds": 364.0,
+ "frames": 8736,
+ "samples": 17472000,
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act1.json",
+ "dialogue": {
+  "lines": 59,
+  "device": {
+   "phone": 1
+  },
+  "el_matched": 59,
+  "missing": [],
+  "treat": {
+   "ghost": 4,
+   "os": 5
+  }
+ },
+ "rooms": {
+  "stem": "audio/reel/ep02-v1/stems/el/act1-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep02-v1/stems/el/act1-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e02-v1-act1/render/music-el.wav",
+  "cues": "audio/ost/tracks/e02-v1-act1/cues-el.json",
+  "length_s": 364.0,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -20.11,
+  "lufs_after_gain": -20.11,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E02-02",
+     8
+    ],
+    [
+     "E02-05 A TENANT",
+     8
+    ],
+    [
+     "E02-02 THE S\u00c9ANCE",
+     8
+    ],
+    [
+     "E02-05 out",
+     8
+    ],
+    [
+     "E02-03 PROCEDURE, MARCH",
+     9
+    ],
+    [
+     "none; under the part, his recorded voice",
+     9.0
+    ],
+    [
+     "E02-04 LONG-FORM",
+     9
+    ]
+   ],
+   "cue_sheet_overrides": [
+    [
+     121.707,
+     132.567,
+     5.0
+    ]
+   ],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [
+   [
+    226.1,
+    234.19,
+    "4B: none under the read (V.O. 3, 227.00-232.72): the boardroom's room tone; PROCEDURE has rung out under the invite, and the podcast sting is the re-entry (J 0.8 s)"
+   ],
+   [
+    238.4,
+    315.797,
+    "6: no score in XEL's studio (the padded room tone is the joke; the mic's hops and the counter's ticks are SFX), and none under the curtain's part (6.11); the swing's push into the split is the re-entry"
+   ]
+  ],
+  "head_fade_s": 0.0,
+  "head_fade_why": "its pre-lap (1.000 s) plays under card's tail, continuous with this score's first sample"
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.39,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 6.2,
+  "gain_db": 1.12,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.198,
+  "dialogue_lufs": -15.01,
+  "score_lufs_after_duck": -22.56,
+  "score_rms_under_speech_dbfs": -30.6,
+  "score_rms_between_speech_dbfs": -22.3,
+  "score_runs": {
+   "count": 3,
+   "shortest_s": 3.65,
+   "runs": [
+    [
+     0.0,
+     226.4
+    ],
+    [
+     234.25,
+     3.65
+    ],
+    [
+     315.8,
+     48.2
+    ]
+   ]
+  },
+  "rooms_lufs": -37.21,
+  "sfx_lufs": -31.72,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [
+   {
+    "at": 248.75,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 6.03)"
+   },
+   {
+    "at": 252.6,
+    "s": 0.45,
+    "what": "UNMARKED (in beat 6.03)"
+   },
+   {
+    "at": 255.75,
+    "s": 0.3,
+    "what": "UNMARKED (in beat 6.03)"
+   },
+   {
+    "at": 258.75,
+    "s": 0.75,
+    "what": "UNMARKED (in beat 6.03)"
+   },
+   {
+    "at": 262.55,
+    "s": 0.35,
+    "what": "UNMARKED (in beat 6.04)"
+   },
+   {
+    "at": 274.8,
+    "s": 0.9,
+    "what": "UNMARKED (in beat 6.05)"
+   },
+   {
+    "at": 276.25,
+    "s": 0.95,
+    "what": "UNMARKED (in beat 6.06)"
+   },
+   {
+    "at": 286.3,
+    "s": 0.55,
+    "what": "UNMARKED (in beat 6.07)"
+   },
+   {
+    "at": 291.2,
+    "s": 0.45,
+    "what": "UNMARKED (in beat 6.07)"
+   },
+   {
+    "at": 294.8,
+    "s": 0.4,
+    "what": "UNMARKED (in beat 6.07)"
+   },
+   {
+    "at": 296.75,
+    "s": 0.55,
+    "what": "UNMARKED (in beat 6.07)"
+   }
+  ],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 84,
+   "rising": 60,
+   "rising_at_a_word": 49,
+   "rising_at_an_sfx": 1,
+   "rising_other": [
+    229.25,
+    234.75,
+    251.2,
+    256.15,
+    258.0,
+    264.1,
+    290.0,
+    299.5,
+    311.35,
+    315.8
+   ],
+   "falling": 24
+  }
+ },
+ "file": "out/ep02/v1/mix/act1-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.12,
+  "to_gain_db": 1.12,
+  "ramp_s": 2.0,
+  "after": "card"
+ },
+ "built": "2026-10-10 08:08:29",
+ "heard": "nothing here has been listened to; every number is measured"
+}

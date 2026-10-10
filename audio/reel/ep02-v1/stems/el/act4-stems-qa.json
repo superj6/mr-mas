@@ -1,0 +1,944 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act4.json",
+ "seconds": 319.0,
+ "frames": 7656,
+ "rooms": [
+  {
+   "room": "lighthouse",
+   "recipe": "lighthouse: bed_lighthouse -39 + beacon_motor -49",
+   "from": -0.6,
+   "to": 6.15,
+   "first": "18.01",
+   "last": "18.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.8
+  },
+  {
+   "room": "boardroom_day",
+   "recipe": "boardroom_day: bed_boardroom_day -39",
+   "from": 5.15,
+   "to": 32.567,
+   "first": "18.02",
+   "last": "18.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.2
+  },
+  {
+   "room": "split_lighthouse",
+   "recipe": "split_lighthouse: bed_boardroom_day -41 + bed_lighthouse -43",
+   "from": 31.567,
+   "to": 71.65,
+   "first": "18.07",
+   "last": "18.11",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.7
+  },
+  {
+   "room": "lighthouse",
+   "recipe": "lighthouse: bed_lighthouse -39 + beacon_motor -49",
+   "from": 70.65,
+   "to": 79.275,
+   "first": "18.12",
+   "last": "18.12",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.6
+  },
+  {
+   "room": "split_lighthouse",
+   "recipe": "split_lighthouse: bed_boardroom_day -41 + bed_lighthouse -43",
+   "from": 78.275,
+   "to": 95.4,
+   "first": "18.13",
+   "last": "18.15",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.6
+  },
+  {
+   "room": "lobby_watchparty",
+   "recipe": "lobby_watchparty: bed_lobby_watchparty -36",
+   "from": 94.4,
+   "to": 132.842,
+   "first": "19.01",
+   "last": "19.06",
+   "lead": 0.6,
+   "trail": 0.8,
+   "lift_db": 0.4
+  },
+  {
+   "room": "campus",
+   "recipe": "campus: bed_campus_outdoor -36",
+   "from": 131.442,
+   "to": 170.525,
+   "first": "19.07",
+   "last": "19.10",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.3
+  },
+  {
+   "room": "era_2008",
+   "recipe": "era_2008: bed_camcorder_2008 -38",
+   "from": 169.525,
+   "to": 189.442,
+   "first": "19.11",
+   "last": "19.14",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.4
+  },
+  {
+   "room": "campus",
+   "recipe": "campus: bed_campus_outdoor -36",
+   "from": 188.442,
+   "to": 193.108,
+   "first": "19.15",
+   "last": "19.15",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "garden",
+   "recipe": "garden: bed_garden -40",
+   "from": 192.108,
+   "to": 229.6,
+   "first": "19.16",
+   "last": "19.20",
+   "lead": 0.6,
+   "trail": 0.6,
+   "lift_db": 3.1
+  },
+  {
+   "room": "split_zai",
+   "recipe": "split_zai: bed_campus_outdoor -40 + bed_zai_warehouse -41",
+   "from": 228.4,
+   "to": 250.317,
+   "first": "20.01",
+   "last": "20.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.4
+  },
+  {
+   "room": "lobby_morning",
+   "recipe": "lobby_morning: bed_lobby_morning -38",
+   "from": 249.117,
+   "to": 267.4,
+   "first": "20.05",
+   "last": "20.09",
+   "lead": 0.8,
+   "trail": 0.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "darkroom",
+   "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
+   "from": 266.0,
+   "to": 281.4,
+   "first": "20.10",
+   "last": "20.13",
+   "lead": 1.0,
+   "trail": 0.4,
+   "lift_db": 1.7
+  },
+  {
+   "room": "empty_lot",
+   "recipe": "empty_lot: bed_empty_lot_wind -42",
+   "from": 280.4,
+   "to": 319.4,
+   "first": "22.01",
+   "last": "22.09",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 6.0
+  },
+  {
+   "room": "lobby_cheering",
+   "recipe": "lobby_cheering: bed_lobby_cheer -34",
+   "from": 150.22,
+   "to": 153.795,
+   "cross": "GERG on screen (crosscut.py)",
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering",
+   "recipe": "lobby_cheering: bed_lobby_cheer -34",
+   "from": 155.417,
+   "to": 157.587,
+   "cross": "GERG on screen (crosscut.py)",
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering",
+   "recipe": "lobby_cheering: bed_lobby_cheer -34",
+   "from": 158.8,
+   "to": 160.927,
+   "cross": "GERG on screen (crosscut.py)",
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering",
+   "recipe": "lobby_cheering: bed_lobby_cheer -34",
+   "from": 161.96,
+   "to": 165.707,
+   "cross": "GERG on screen (crosscut.py)",
+   "lift_db": 0.6
+  }
+ ],
+ "sfx": [
+  [
+   "18.01",
+   "beacon_motor",
+   -1.2,
+   -21.0,
+   "J-cut: leads by 1.2 s"
+  ],
+  [
+   "18.01",
+   "footstep_drafts_1",
+   2.375,
+   -21.0,
+   "swapped: footstep_drafts_1",
+   "lock: footstep_soft_1",
+   "ride +7.0 dB (sfx-rides.json)"
+  ],
+  [
+   "18.01",
+   "footstep_drafts_2",
+   3.167,
+   -19.0,
+   "swapped: footstep_drafts_2",
+   "lock: footstep_soft_2",
+   "ride +9.0 dB (sfx-rides.json)"
+  ],
+  [
+   "18.06",
+   "tv_click_off",
+   30.717,
+   -22.0
+  ],
+  [
+   "18.07",
+   "lanyard_drop",
+   33.942,
+   -24.0
+  ],
+  [
+   "18.07",
+   "lanyard_drop",
+   33.991,
+   -26.0
+  ],
+  [
+   "18.09",
+   "pen_scribble_short",
+   50.118,
+   -26.0
+  ],
+  [
+   "18.10",
+   "pen_scribble_short",
+   58.068,
+   -26.0
+  ],
+  [
+   "18.13",
+   "glint_tick",
+   79.171,
+   -28.0
+  ],
+  [
+   "18.13",
+   "glint_tick",
+   79.665,
+   -28.0
+  ],
+  [
+   "18.13",
+   "glint_tick",
+   80.159,
+   -27.0
+  ],
+  [
+   "18.13",
+   "scroll_unroll_fall",
+   82.285,
+   -22.0
+  ],
+  [
+   "18.15",
+   "ui_toast_pop",
+   92.02,
+   -23.2,
+   "ride +2.8 dB (sfx-rides.json)"
+  ],
+  [
+   "18.15",
+   "phone_turn_over",
+   93.997,
+   -26.0
+  ],
+  [
+   "19.03",
+   "calc_tape_spool",
+   101.631,
+   -26.0
+  ],
+  [
+   "19.04",
+   "stream_announce_roar",
+   119.368,
+   -24.0
+  ],
+  [
+   "19.04",
+   "crowd_cheer",
+   119.718,
+   -18.0
+  ],
+  [
+   "19.05",
+   "confetti_pop",
+   121.525,
+   -22.0
+  ],
+  [
+   "19.06",
+   "lobby_laugh_s",
+   128.963,
+   -20.4,
+   "ride +1.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.07",
+   "phone_type_burst",
+   133.242,
+   -22.4,
+   "swapped: phone_type_burst",
+   "lock: typing_soft",
+   "ride +5.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.07",
+   "phone_type_burst",
+   133.842,
+   -22.4,
+   "swapped: phone_type_burst",
+   "lock: typing_soft",
+   "ride +5.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.07",
+   "post_click",
+   134.542,
+   -24.0
+  ],
+  [
+   "19.08",
+   "chat_ping_run",
+   141.74,
+   -25.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.08",
+   "phone_wave_buzz",
+   142.587,
+   -25.0,
+   "ride +1.0 dB (sfx-rides.json)"
+  ],
+  [
+   "19.09",
+   "call_ring",
+   148.516,
+   -26.0
+  ],
+  [
+   "19.09",
+   "call_connect",
+   149.641,
+   -26.0
+  ],
+  [
+   "19.11",
+   "render_front_sweep",
+   170.925,
+   -26.0
+  ],
+  [
+   "19.13",
+   "clicker_catch",
+   179.17,
+   -24.0
+  ],
+  [
+   "19.13",
+   "vhs_applause",
+   179.734,
+   -28.0
+  ],
+  [
+   "19.14",
+   "pin_grey_tick",
+   184.217,
+   -14.4,
+   "ride +13.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.14",
+   "pin_grey_tick_2",
+   185.064,
+   -15.4,
+   "swapped: pin_grey_tick_2",
+   "lock: pin_grey_tick",
+   "ride +13.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.14",
+   "pin_grey_tick_3",
+   185.912,
+   -16.4,
+   "swapped: pin_grey_tick_3",
+   "lock: pin_grey_tick",
+   "ride +13.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.14",
+   "pin_grey_tick_4",
+   186.759,
+   -17.4,
+   "swapped: pin_grey_tick_4",
+   "lock: pin_grey_tick",
+   "ride +13.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.16",
+   "lock_big_turn",
+   196.108,
+   -22.0
+  ],
+  [
+   "19.16",
+   "gate_iron_swing",
+   197.308,
+   -16.9,
+   "ride +7.1 dB (sfx-rides.json)"
+  ],
+  [
+   "19.16",
+   "velvet_rope",
+   199.308,
+   -28.0
+  ],
+  [
+   "19.17",
+   "flower_nod",
+   204.708,
+   -21.8,
+   "ride +8.2 dB (sfx-rides.json)"
+  ],
+  [
+   "19.17",
+   "chip_blip_bubble",
+   205.508,
+   -26.0
+  ],
+  [
+   "19.17",
+   "flower_nod",
+   207.308,
+   -21.8,
+   "ride +8.2 dB (sfx-rides.json)"
+  ],
+  [
+   "19.17",
+   "chip_blip_bubble",
+   208.008,
+   -26.0
+  ],
+  [
+   "19.19",
+   "gate_iron_shut",
+   221.798,
+   -16.4,
+   "swapped: gate_iron_shut",
+   "lock: gate_iron_swing",
+   "ride +7.6 dB (sfx-rides.json)"
+  ],
+  [
+   "19.19",
+   "lock_big_turn",
+   223.349,
+   -22.0
+  ],
+  [
+   "19.20",
+   "phone_into_pocket",
+   228.16,
+   -28.0
+  ],
+  [
+   "20.01",
+   "ui_toast_pop",
+   231.881,
+   -19.5,
+   "ride +6.5 dB (sfx-rides.json)"
+  ],
+  [
+   "20.02",
+   "lamp_click",
+   233.017,
+   -22.0
+  ],
+  [
+   "20.03",
+   "cage_door_shut",
+   245.61,
+   -22.0
+  ],
+  [
+   "20.03",
+   "padlock_snap",
+   246.21,
+   -19.4,
+   "ride +0.6 dB (sfx-rides.json)"
+  ],
+  [
+   "20.04",
+   "phone_buzz_muffled",
+   246.831,
+   -16.3,
+   "ride +9.7 dB (sfx-rides.json)"
+  ],
+  [
+   "20.04",
+   "lamp_click",
+   249.512,
+   -24.0
+  ],
+  [
+   "20.05",
+   "tape_peel",
+   252.517,
+   -24.0
+  ],
+  [
+   "20.05",
+   "paper_flutter",
+   253.717,
+   -28.0
+  ],
+  [
+   "20.06",
+   "cloth_rustle",
+   254.808,
+   -28.0
+  ],
+  [
+   "20.08",
+   "docket_tab_flick",
+   260.992,
+   -26.0
+  ],
+  [
+   "20.09",
+   "rope_drop",
+   263.2,
+   -24.0
+  ],
+  [
+   "20.09",
+   "rope_haul",
+   264.1,
+   -16.6,
+   "ride +5.4 dB (sfx-rides.json)"
+  ],
+  [
+   "20.09",
+   "sticky_flutter",
+   265.6,
+   -28.0
+  ],
+  [
+   "20.10",
+   "phone_buzz_step_1",
+   268.9,
+   -26.0
+  ],
+  [
+   "20.10",
+   "phone_turn_over",
+   269.3,
+   -24.0
+  ],
+  [
+   "20.11",
+   "pin_knock",
+   274.8,
+   -24.0
+  ],
+  [
+   "20.12",
+   "cloth_rustle",
+   277.583,
+   -26.0
+  ],
+  [
+   "20.12",
+   "chair_creak",
+   278.583,
+   -26.0
+  ],
+  [
+   "20.13",
+   "pin_fall",
+   280.183,
+   -24.0,
+   "cut at its scene's end (1.55 s early)"
+  ],
+  [
+   "22.01",
+   "pin_fall",
+   281.429,
+   -24.0
+  ],
+  [
+   "22.02",
+   "footstep_gravel",
+   289.03,
+   -24.0,
+   "ride +4.0 dB (sfx-rides.json)"
+  ],
+  [
+   "22.02",
+   "footstep_gravel_2",
+   290.175,
+   -24.0,
+   "swapped: footstep_gravel_2",
+   "lock: footstep_gravel",
+   "ride +4.0 dB (sfx-rides.json)"
+  ],
+  [
+   "22.02",
+   "footstep_gravel_3",
+   291.319,
+   -24.0,
+   "swapped: footstep_gravel_3",
+   "lock: footstep_gravel",
+   "ride +4.0 dB (sfx-rides.json)"
+  ],
+  [
+   "22.02",
+   "orb_scan_sweep",
+   292.749,
+   -28.0
+  ],
+  [
+   "22.03",
+   "ui_band_on",
+   295.0,
+   -25.2,
+   "ride +0.8 dB (sfx-rides.json)"
+  ],
+  [
+   "22.03",
+   "ui_band_off",
+   298.9,
+   -26.0
+  ],
+  [
+   "22.04",
+   "flyer_into_slot",
+   301.004,
+   -24.0
+  ],
+  [
+   "22.04",
+   "mail_flap_lift",
+   302.149,
+   -26.0
+  ],
+  [
+   "22.05",
+   "lab_room_tone",
+   303.583,
+   -20.0,
+   "ride +14.0 dB (sfx-rides.json)"
+  ],
+  [
+   "22.05",
+   "paper_drop_floor",
+   305.983,
+   -18.6,
+   "ride +13.4 dB (sfx-rides.json)"
+  ],
+  [
+   "22.06",
+   "mail_flap_spring_shut",
+   307.408,
+   -20.0
+  ],
+  [
+   "22.09",
+   "footstep_gravel_2",
+   314.808,
+   -17.9,
+   "swapped: footstep_gravel_2",
+   "lock: footstep_gravel",
+   "ride +12.1 dB (sfx-rides.json)"
+  ],
+  [
+   "22.09",
+   "footstep_gravel_3",
+   315.808,
+   -18.9,
+   "swapped: footstep_gravel_3",
+   "lock: footstep_gravel",
+   "ride +12.1 dB (sfx-rides.json)"
+  ],
+  [
+   "22.09",
+   "footstep_gravel",
+   316.808,
+   -19.9,
+   "ride +12.1 dB (sfx-rides.json)"
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [
+  {
+   "beat": "20.02",
+   "name": "nole_fanfare_short",
+   "why": "the score claims it (claims_sfx)"
+  }
+ ],
+ "sfx_cut_at_scene_end": [
+  {
+   "beat": "20.13",
+   "name": "pin_fall",
+   "at": 280.183,
+   "scene_end": 281.0,
+   "would_have_run_past_s": 1.553
+  }
+ ],
+ "score_claims": [
+  "20.02:nole_fanfare_short"
+ ],
+ "room_stem": {
+  "lufs": -36.29,
+  "peak_dbfs": -19.87,
+  "p10_50ms_dbfs": -40.1
+ },
+ "sfx_stem": {
+  "lufs": -32.81,
+  "peak_dbfs": -14.38,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 295.009,
+     "boundary": 295.0,
+     "ratio": 76.1,
+     "kind": "step",
+     "before_dbfs": -33.0,
+     "after_dbfs": -31.7
+    },
+    {
+     "at": 299.019,
+     "boundary": 299.0,
+     "ratio": 643.7,
+     "kind": "step",
+     "before_dbfs": -33.5,
+     "after_dbfs": -32.6
+    }
+   ],
+   "cutoffs": [
+    {
+     "at": 30.72,
+     "ratio": 91.2,
+     "from_dbfs": -41.0,
+     "to_dbfs": -63.9
+    },
+    {
+     "at": 94.055,
+     "ratio": 13.5,
+     "from_dbfs": -47.3,
+     "to_dbfs": -66.4
+    },
+    {
+     "at": 204.73,
+     "ratio": 185.6,
+     "from_dbfs": -41.1,
+     "to_dbfs": -78.4
+    },
+    {
+     "at": 204.75,
+     "ratio": 373.7,
+     "from_dbfs": -36.9,
+     "to_dbfs": -63.4
+    },
+    {
+     "at": 204.765,
+     "ratio": 152.2,
+     "from_dbfs": -34.1,
+     "to_dbfs": -53.3
+    },
+    {
+     "at": 204.855,
+     "ratio": 39.5,
+     "from_dbfs": -47.2,
+     "to_dbfs": -67.7
+    },
+    {
+     "at": 207.33,
+     "ratio": 185.6,
+     "from_dbfs": -41.1,
+     "to_dbfs": -78.4
+    },
+    {
+     "at": 207.35,
+     "ratio": 373.7,
+     "from_dbfs": -36.9,
+     "to_dbfs": -63.4
+    },
+    {
+     "at": 207.365,
+     "ratio": 152.2,
+     "from_dbfs": -34.1,
+     "to_dbfs": -53.3
+    },
+    {
+     "at": 207.455,
+     "ratio": 39.5,
+     "from_dbfs": -47.2,
+     "to_dbfs": -67.7
+    },
+    {
+     "at": 223.535,
+     "ratio": 10.4,
+     "from_dbfs": -42.7,
+     "to_dbfs": -56.0
+    },
+    {
+     "at": 274.895,
+     "ratio": 20.7,
+     "from_dbfs": -48.2,
+     "to_dbfs": -67.5
+    },
+    {
+     "at": 302.45,
+     "ratio": 57.7,
+     "from_dbfs": -42.3,
+     "to_dbfs": -60.6
+    }
+   ]
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lighthouse@act4:18.01",
+   "p5_50ms_dbfs": -42.8,
+   "lift_db": 2.8
+  },
+  {
+   "room": "boardroom_day@act4:18.02",
+   "p5_50ms_dbfs": -41.2,
+   "lift_db": 1.2
+  },
+  {
+   "room": "split_lighthouse@act4:18.07",
+   "p5_50ms_dbfs": -43.7,
+   "lift_db": 3.7
+  },
+  {
+   "room": "lighthouse@act4:18.12",
+   "p5_50ms_dbfs": -42.6,
+   "lift_db": 2.6
+  },
+  {
+   "room": "split_lighthouse@act4:18.13",
+   "p5_50ms_dbfs": -43.6,
+   "lift_db": 3.6
+  },
+  {
+   "room": "lobby_watchparty@act4:19.01",
+   "p5_50ms_dbfs": -40.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "campus@act4:19.07",
+   "p5_50ms_dbfs": -41.3,
+   "lift_db": 1.3
+  },
+  {
+   "room": "era_2008@act4:19.11",
+   "p5_50ms_dbfs": -42.4,
+   "lift_db": 2.4
+  },
+  {
+   "room": "campus@act4:19.15",
+   "p5_50ms_dbfs": -40.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "garden@act4:19.16",
+   "p5_50ms_dbfs": -43.1,
+   "lift_db": 3.1
+  },
+  {
+   "room": "split_zai@act4:20.01",
+   "p5_50ms_dbfs": -43.4,
+   "lift_db": 3.4
+  },
+  {
+   "room": "lobby_morning@act4:20.05",
+   "p5_50ms_dbfs": -40.4,
+   "lift_db": 0.4
+  },
+  {
+   "room": "darkroom@act4:20.10",
+   "p5_50ms_dbfs": -41.7,
+   "lift_db": 1.7
+  },
+  {
+   "room": "empty_lot@act4:22.01",
+   "p5_50ms_dbfs": -48.2,
+   "lift_db": 6.0
+  },
+  {
+   "room": "lobby_cheering@act4:cross",
+   "p5_50ms_dbfs": -39.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering@act4:cross",
+   "p5_50ms_dbfs": -38.5,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering@act4:cross",
+   "p5_50ms_dbfs": -39.0,
+   "lift_db": 0.0
+  },
+  {
+   "room": "lobby_cheering@act4:cross",
+   "p5_50ms_dbfs": -40.6,
+   "lift_db": 0.6
+  }
+ ]
+}

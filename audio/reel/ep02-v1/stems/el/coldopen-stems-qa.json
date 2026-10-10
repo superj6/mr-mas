@@ -1,0 +1,189 @@
+{
+ "segment": "coldopen",
+ "variant": "el",
+ "timeline": "show/reel/ep02-v1-el/ep02-v1-el-coldopen.json",
+ "seconds": 55.0,
+ "frames": 1320,
+ "rooms": [
+  {
+   "room": "lobby_day",
+   "recipe": "lobby_day: bed_lobby_day -37",
+   "from": 0.0,
+   "to": 55.0,
+   "first": "1.01",
+   "last": "1.13",
+   "lead": 0.0,
+   "trail": 0.0,
+   "lift_db": 0.0
+  }
+ ],
+ "sfx": [
+  [
+   "1.01",
+   "server_hum",
+   0.0,
+   -22.3,
+   "ride +7.7 dB (sfx-rides.json)"
+  ],
+  [
+   "1.02",
+   "mammoth_step_bezel",
+   9.2,
+   -22.0,
+   "swapped: mammoth_step_bezel",
+   "lock: mammoth_step_pixel"
+  ],
+  [
+   "1.03",
+   "mammoth_step_pixel",
+   10.631,
+   -19.3,
+   "ride +0.7 dB (sfx-rides.json)"
+  ],
+  [
+   "1.03",
+   "mammoth_step_pixel",
+   11.536,
+   -20.3,
+   "ride +0.7 dB (sfx-rides.json)"
+  ],
+  [
+   "1.04",
+   "palette_drip",
+   17.77,
+   -24.0
+  ],
+  [
+   "1.05",
+   "freeze_hit_F",
+   21.29,
+   -16.0
+  ],
+  [
+   "1.06",
+   "plate_hang",
+   24.883,
+   -24.0
+  ],
+  [
+   "1.06",
+   "hand_truck_step",
+   26.81,
+   -19.1,
+   "ride +2.9 dB (sfx-rides.json)"
+  ],
+  [
+   "1.06",
+   "door_glass_rattle",
+   27.014,
+   -28.0
+  ],
+  [
+   "1.07",
+   "hand_truck_step_mid",
+   33.113,
+   -17.6,
+   "swapped: hand_truck_step_mid",
+   "lock: hand_truck_step",
+   "ride +0.4 dB (sfx-rides.json)"
+  ],
+  [
+   "1.07",
+   "cup_jump",
+   33.163,
+   -26.0
+  ],
+  [
+   "1.07",
+   "ladder_sway_creak",
+   33.213,
+   -25.0,
+   "ride +3.0 dB (sfx-rides.json)"
+  ],
+  [
+   "1.09",
+   "hand_truck_step_near",
+   37.31,
+   -13.6,
+   "swapped: hand_truck_step_near",
+   "lock: hand_truck_step",
+   "ride +0.4 dB (sfx-rides.json)"
+  ],
+  [
+   "1.09",
+   "door_bang_open",
+   37.707,
+   -16.0
+  ],
+  [
+   "1.09",
+   "hand_truck_roll",
+   38.104,
+   -14.5,
+   "ride +7.5 dB (sfx-rides.json)"
+  ],
+  [
+   "1.10",
+   "paper_flutter",
+   42.283,
+   -26.0
+  ],
+  [
+   "1.11",
+   "paper_stack_fall",
+   45.025,
+   -12.0
+  ],
+  [
+   "1.11",
+   "paper_flutter",
+   45.775,
+   -24.0
+  ],
+  [
+   "1.12",
+   "plate_hang",
+   50.187,
+   -22.0
+  ],
+  [
+   "1.13",
+   "orb_servo",
+   53.108,
+   -24.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -36.99,
+  "peak_dbfs": -24.59,
+  "p10_50ms_dbfs": -39.1
+ },
+ "sfx_stem": {
+  "lufs": -31.41,
+  "peak_dbfs": -12.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lobby_day@coldopen:1.01",
+   "p5_50ms_dbfs": -39.5,
+   "lift_db": 0.0
+  }
+ ]
+}

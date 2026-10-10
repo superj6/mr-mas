@@ -41,6 +41,24 @@ THE MIX, per segment:
             episode's median dialogue loudness is turned down to it.
 The per-beat tables (SETPIECES, GAIN_ROWS, SCORE_RIDE, DESIGNED, ROOM_DEVICE) start empty: an Ep2 pass adds its own,
 with the reason. Nothing here has been listened to. The QA and the report say what was measured.
+
+THE SOUND PASS (2026-10-10; show/episodes/ep02/production/v1/sound-v1.md). Ep2's voice chains, cast.md §4:
+  ghost    GHOST-NOLE: the take a little darker, a short dark reverb (RT 0.75 s, -7 dB) and a chip doubler (8 kHz
+           sample-and-hold, 5 bits, 400-3500 Hz) 25 ms late at -15 dB; matched, -1 dB
+  far      Ep1's take down a corridor (Alyi's "Six years and eleven months."): 280 Hz-3 kHz, early reflections, a 1.3 s
+           tail; matched, -6 dB
+  os       off screen in the same room: off-axis (6.5 kHz) with the room's first reflections, -2 dB (dry where the room
+           has no space: a black, the blueprint)
+  offmic   the ENGINEER after the headset comes off: close and dry, a little darker, -2 dB, never the PA
+  chant    the CROWD's composite in the party room: reflections and a short tail
+  podcast  Neleh on the boardroom TV's podcast player: 150 Hz-7.5 kHz, then the boardroom's reflections (DEVICE_ROOM);
+           tv, phone and monitor take their rooms' reflections too
+  call     cast.md: dry while the speaker is in frame, the phone's band-pass only where he isn't (crosscut.py: sc 19's
+           crosscut; 8.06 and 17.09 hold on Mas, so dry); 30 ms crossfades at the picture's cuts
+  PA       ROOM_DEVICE: every line in the demo house (Rima, the ENGINEER, CHATGTP, the sung line) through the house PA
+           ('stage'); LINE_DEVICE: 9.06's VOICE previews from the wings' monitor
+The previous chapter's ring-out is kept apart from this score's head fade and rides (it continues across the seam);
+SCORE_RIDE['act2'] softens Act Two's act-in hit (S9). premix(keep_buses=True) hands the four buses to sound_audit.py.
 """
 from __future__ import annotations
 
@@ -77,7 +95,14 @@ DUCK_BY_MOOD = [                        # the beat's `music (v1): E02-NN ...` cu
 ]
 VO_GAIN_DB = 2.0   # the V.O. takes are -18 LUFS (2 under the spoken -16, the take pass's design); +2 puts them level
 DESIGNED = {}                           # seg -> [(first beat, last beat, why)]: holes that are story beats
-ROOM_DEVICE = {}                        # room -> a DEVICE chain every line in it goes through (Ep1: its phone POV)
+# room -> a DEVICE chain every line in it goes through. Ep2 (the sound pass): the demo house hears every line through the
+# house PA (Rima's headset, the ENGINEER's, CHATGTP on the phone the PA carries, the sung line); an `offmic` line never
+ROOM_DEVICE = {'demo_house': 'stage'}
+# line id -> a DEVICE chain (cast.md §4 names the tags; these lines play from a screen the tags don't name): 9.06's
+# VOICE panel, each slot saying hello from the wings' monitor
+LINE_DEVICE = {'e2-a2-0012': 'monitor', 'e2-a2-0013': 'monitor', 'e2-a2-0014': 'monitor', 'e2-a2-0015': 'monitor',
+               'e2-a2-0016': 'monitor'}
+NO_SPACE = {'black', 'void', 'none', '', 'blueprint'}   # rooms with no acoustic space (an `os` line there stays dry)
 
 
 def db(x):
@@ -227,7 +252,7 @@ def _chain(hp_hz, hp_o, lp_hz, lp_o, pk_hz, pk_db, q):
 
 DEVICE = {
     'stream': _chain(150, 2, 7000, 2, 3000, 2.0, 0.9),    # a stream's mic and encode
-    'podcast': _chain(90, 2, 9000, 2, 3200, 1.5, 0.9),    # a podcast player's voice (Ep2: XEL's chapters, Neleh's interview)
+    'podcast': _chain(150, 2, 7500, 2, 2800, 2.0, 0.9),   # Ep2: the boardroom TV's podcast player (Neleh), then the room
     'tv': _chain(200, 2, 6000, 2, 2500, 2.0, 0.9),        # a TV across a room
     'stage': _chain(110, 2, 9000, 2, 2800, 2.5, 0.8),     # v3.2 22.01: DevDay's PA in a hall (reflections added below)
     'call': _chain(300, 4, 3400, 4, 1700, 3.0, 1.0),       # a video call's codec and a laptop speaker
@@ -238,6 +263,120 @@ DEVICE = {
 
 
 SMALL = set(DEVICE)                     # line tags that take a DEVICE chain
+# the room a device's speaker sits in answers it (early reflections, ms and dB): cast.md §4's "then the room"
+DEVICE_ROOM = {'podcast': ((9, -11), (17, -14), (29, -17), (43, -21)), 'tv': ((13, -10), (27, -13), (41, -17), (66, -21)),
+               'phone': ((5, -13), (11, -16), (19, -20)), 'monitor': ((4, -13), (9, -16), (16, -20))}
+
+
+# ------------------------------------------------------------------ Ep2's voice treatments (cast.md §4; the sound pass)
+def _ir(rt60, lp_hz, pre_s, seed, length=None):
+    """a synthetic mono impulse response: exponentially decaying noise, low-passed, after a pre-delay (deterministic)"""
+    n = int((length or rt60 * 1.2) * SR)
+    r = np.random.default_rng(seed)
+    t = np.arange(n) / SR
+    x = r.standard_normal(n) * np.exp(-6.9078 * t / rt60) * (1 - np.exp(-t / 0.006))
+    x = signal.sosfilt(signal.butter(2, lp_hz, 'low', fs=SR, output='sos'), x)
+    x = np.concatenate([np.zeros(int(pre_s * SR)), x])
+    return x / (np.sqrt(np.sum(x ** 2)) + 1e-12)
+
+
+def _reflect(y, taps):
+    out = np.array(y, dtype='float64', copy=True)
+    for ms, g in taps:
+        k = int(ms / 1000 * SR)
+        if 0 < k < len(y):
+            out[k:] += y[:-k] * db(g)
+    return out
+
+
+def _rms(x):
+    return float(np.sqrt(np.mean(np.asarray(x, 'float64') ** 2)) + 1e-12)
+
+
+def _ext(x, s_):
+    return np.concatenate([x, np.zeros(int(s_ * SR))])
+
+
+def ghost(x):
+    """GHOST-NOLE (cast.md §4): a short dark reverb and a chip doubler a hair late, over a slightly darkened voice"""
+    x = _ext(x, 0.9)
+    dry = signal.sosfilt(signal.butter(2, 6500, 'low', fs=SR, output='sos'), x)
+    wet = signal.fftconvolve(x, _ir(0.75, 2600, 0.012, 2101))[:len(x)]
+    wet *= _rms(dry) / _rms(wet) * db(-7.0)
+    h = 6                                               # the chip: 8 kHz sample-and-hold, 5 bits, band-limited, 25 ms late
+    c = np.repeat(x[::h], h)[:len(x)]
+    pk = float(np.abs(c).max()) + 1e-12
+    c = np.round(c / pk * 15) / 15 * pk
+    c = signal.sosfilt(signal.butter(2, [400, 3500], 'band', fs=SR, output='sos'), c)
+    k = int(0.025 * SR)
+    c = np.concatenate([np.zeros(k), c[:-k]])
+    c *= _rms(dry) / _rms(c) * db(-15.0)
+    return dry + wet + c
+
+
+def far(x):
+    """Ep1's take, far off, as if down a corridor (cast.md §4: Alyi's 'Six years and eleven months.', 15.03)"""
+    x = _ext(x, 1.5)
+    b = signal.sosfilt(np.vstack([signal.butter(2, 280, 'high', fs=SR, output='sos'),
+                                  signal.butter(2, 3000, 'low', fs=SR, output='sos')]), x)
+    wet = signal.fftconvolve(b, _ir(1.3, 2200, 0.028, 2111))[:len(b)]
+    wet *= _rms(b) / _rms(wet) * db(-3.0)
+    return _reflect(b * db(-4.0), ((19, -9), (37, -12), (61, -15))) + wet
+
+
+def offmic(x):
+    """close and dry, a little lower and darker, after the headset comes off (11.15): no PA"""
+    return signal.sosfilt(signal.butter(2, 8500, 'low', fs=SR, output='sos'), x)
+
+
+def offscreen(x, room):
+    """O.S. in the same room: off-axis (the top end softened) and the room's first reflections"""
+    if (room or '') in NO_SPACE:
+        return x
+    y = signal.sosfilt(signal.butter(2, 6500, 'low', fs=SR, output='sos'), _ext(x, 0.1))
+    return _reflect(y, ((11, -10), (23, -13), (37, -16), (53, -20)))
+
+
+def chant(x):
+    """the CROWD's layered chant (el_crowd.py's composite): the party room around it"""
+    x = _ext(x, 0.8)
+    wet = signal.fftconvolve(x, _ir(0.6, 4000, 0.01, 2121))[:len(x)]
+    return _reflect(x, ((13, -11), (29, -14))) + wet * _rms(x) / _rms(wet) * db(-11.0)
+
+
+TREAT = {'ghost': ghost, 'far': far, 'offmic': offmic, 'chant': chant}
+TREAT_DB = {'ghost': -1.0, 'far': -6.0, 'offmic': -2.0, 'os': -2.0, 'chant': 0.0}   # after the loudness match
+_FAR = {}
+
+
+def far_index(variant):
+    """{line id: [(t0, t1)] in take-file seconds} where a `call` line's speaker is NOT on screen (crosscut.py): there the
+    line is the phone's far end (cast.md §4). Built from the lock itself, so the mix and the pocket check agree"""
+    if variant not in _FAR:
+        import crosscut as XC
+        out = {}
+        for seg in SEGS:
+            p = S.timeline_path(seg, variant)
+            if not os.path.exists(p):
+                continue
+            g = S.Seg(seg, json.load(open(p)), p)
+            sp = XC.spans(seg, g.beats, g.starts)
+            if not sp:
+                continue
+            for i, b in enumerate(g.beats):
+                for l in b.get('lines') or []:
+                    if (l.get('tag') or '').lower() != 'call':
+                        continue
+                    me = XC.WHO_OF.get(l.get('who'))
+                    on = g.starts[i][0] + float(l['t'])
+                    z = on - float(l.get('in', 0))
+                    rng_ = [(max(a, on), min(e, on + float(l['dur']) + 0.3)) for who, ss in sp.items() if who != me for a, e in ss]
+                    rng_ = [(round(a - z, 4), round(e - z, 4)) for a, e in rng_ if e > a]
+                    if rng_:
+                        out[l['id']] = rng_
+        _FAR[variant] = out
+    return _FAR[variant]
+
 # voices-el.md §AB3: a Kokoro-cast line in the EL film (MARIO): the two peaks that undo fastrec's chain, -0.5 dB
 KOKORO_IN_EL_EQ = np.vstack([_peq(350, 1.5, 1.0), _peq(2200, -1.5, 0.9)])
 KOKORO_IN_EL_DB = -0.5
@@ -338,7 +477,33 @@ def line_audio(l, room, variant, info=None):
         x = signal.sosfilt(KOKORO_IN_EL_EQ, x) * db(KOKORO_IN_EL_DB)
         info['kokoro_cast'] = info.get('kokoro_cast', 0) + 1
     tg = (l.get('tag') or '').lower()
-    dev = tg if tg in SMALL else ROOM_DEVICE.get(room)
+    if l.get('id') in LINE_DEVICE:
+        dev = LINE_DEVICE[l['id']]
+    elif tg in SMALL and tg != 'call':
+        dev = tg
+    elif tg in ('', 'sung'):
+        dev = ROOM_DEVICE.get(room)                # the demo house's PA; never under V.O., os, offmic, a call
+    else:
+        dev = None
+    if tg in TREAT or (tg == 'os' and (room or '') not in NO_SPACE):   # an O.S. line over a black or the blueprint: dry, level
+        pre = lufs(np.stack([x, x], 1) * 0.7071)
+        y = offscreen(x, room) if tg == 'os' else TREAT[tg](x)
+        post = lufs(np.stack([y, y], 1) * 0.7071)
+        x = y * db(pre - post + TREAT_DB[tg]) if pre > -90 and post > -90 else y
+        info.setdefault('treat', {})[tg] = info.get('treat', {}).get(tg, 0) + 1
+    if tg == 'call':                               # the far end only where the speaker is off screen (crosscut.py)
+        spans = far_index(variant).get(l.get('id'))
+        if spans:
+            pre = lufs(np.stack([x, x], 1) * 0.7071)
+            y = signal.sosfilt(DEVICE['call'], x)
+            post = lufs(np.stack([y, y], 1) * 0.7071)
+            y = y * db(pre - post - 1.0) if pre > -90 and post > -90 else y
+            w = np.zeros(len(x))
+            for a, e in spans:
+                w[max(0, int(a * SR)):max(0, int(e * SR))] = 1.0
+            w = ndimage.uniform_filter1d(w, int(0.03 * SR))                    # 30 ms crossfades at the cuts
+            x = x * np.cos(w * np.pi / 2) + y * np.sin(w * np.pi / 2)
+            info['device']['call (far end, off screen)'] = info['device'].get('call (far end, off screen)', 0) + 1
     if dev:
         pre = lufs(np.stack([x, x], 1) * 0.7071)
         y = signal.sosfilt(DEVICE[dev], x)
@@ -348,6 +513,8 @@ def line_audio(l, room, variant, info=None):
                 k_ = int(d_ * SR)
                 rv[k_:] += y[:-k_] * db(g_)
             y = y + signal.sosfilt(signal.butter(2, 4500, 'low', fs=SR, output='sos'), rv)
+        elif dev in DEVICE_ROOM:           # the room the speaker sits in (Ep2: cast.md §4, "then the room")
+            y = _reflect(np.concatenate([y, np.zeros(int(0.08 * SR))]), DEVICE_ROOM[dev])
         post = lufs(np.stack([y, y], 1) * 0.7071)
         x = y * db(pre - post - 1.0) if pre > -90 and post > -90 else y
         info['device'][dev] = info['device'].get(dev, 0) + 1
@@ -471,6 +638,7 @@ def score_bus(name, g, variant, u, use_score=True):
     (mus [N, 2] float32 or None, the QA record, the cue sheet)"""
     N = g.N
     mus, cues = None, {}
+    ro_arr = None
     sq = {}
     if name != 'card':
         why = []
@@ -492,7 +660,8 @@ def score_bus(name, g, variant, u, use_score=True):
             sq['length_vs_segment_s'] = round((len(m) - N) / SR, 3)
             mus = np.zeros((N, 2), 'float32')
             mus[:min(N, len(m))] = m[:N]
-            pv = PREV.get(name)
+            ro_arr = None                            # the previous chapter's ring-out, kept apart: the head fade and the
+            pv = PREV.get(name)                      # rides are this score's own; the ring-out continues across the seam
             rw, _ = S.score_files(pv, variant) if pv and pv != 'card' else (None, None)
             ro = rw.replace('.wav', '-ringout.wav') if rw else None
             if ro and os.path.exists(ro):            # the previous chapter's score, released past its last frame
@@ -504,11 +673,14 @@ def score_bus(name, g, variant, u, use_score=True):
                     i_in, k_ = int(t_in * SR), int(2.5 * SR)
                     seg_ = np.clip((np.arange(len(r_)) - i_in) / k_, 0, 1)
                     r_ *= np.cos(0.5 * np.pi * seg_).astype('float32')[:, None]
-                    mus[:min(N, len(r_))] += r_[:N]
+                    ro_arr = np.zeros((N, 2), 'float32')
+                    ro_arr[:min(N, len(r_))] = r_[:N]
                     sq['prev_ringout'] = {'file': os.path.relpath(ro, ROOT), 'seconds': round(len(r_) / SR, 2),
                                           'crossfade': f'full from 0 s, out (equal power) over 2.5 s from this score\'s entry at {t_in:.2f} s'}
             if SCORE_GAIN_DB.get(name):
                 mus *= np.float32(db(SCORE_GAIN_DB[name]))
+                if ro_arr is not None:
+                    ro_arr *= np.float32(db(SCORE_GAIN_DB[name]))
                 sq['gain_db'] = SCORE_GAIN_DB[name]
                 sq['gain_why'] = 'SCORE_GAIN_DB (a ruling)'
             if cues_p:
@@ -517,9 +689,11 @@ def score_bus(name, g, variant, u, use_score=True):
                 except Exception as ex:
                     sq['cues_error'] = f'{ex.__class__.__name__}: {ex}'
             sq['lufs_as_delivered'] = round(lufs(m[:N]), 2)
-            sq['lufs_after_gain'] = round(lufs(mus), 2)
+            sq['lufs_after_gain'] = round(lufs(mus if ro_arr is None else mus + ro_arr), 2)
             gdb, md, ov = score_duck_db(g, cues, u)
             mus *= db(gdb)[:, None].astype('float32')
+            if ro_arr is not None:
+                ro_arr *= db(gdb)[:, None].astype('float32')
             sq['duck'] = {'by_mood_db': sorted({(m_, d) for _, _, d, m_ in md}, key=lambda z: z[1]),
                           'cue_sheet_overrides': ov, 'posts_dip_db': -3.0,
                           'envelope': 'pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s'}
@@ -553,6 +727,8 @@ def score_bus(name, g, variant, u, use_score=True):
                     tt = np.arange(N) / SR
                     mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
                     sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
+        if mus is not None and name != 'card' and ro_arr is not None:
+            mus += ro_arr                            # the ring-out: ducked and gained as the score, never faded or ridden
     # the NEXT chapter's pre-lap (its J under this chapter's tail: an act break's black, the card), at the next score's
     # head gain, ending on this chapter's last sample (S4: the sound leads; S3: the re-entry after a designed stop)
     nx = NEXT.get(name)
@@ -573,7 +749,8 @@ def score_bus(name, g, variant, u, use_score=True):
 
 
 # ------------------------------------------------------------------ one segment, up to the master
-def premix(name, g, variant, use_score=True):
+def premix(name, g, variant, use_score=True, keep_buses=False):
+    """one segment up to the master; keep_buses also returns the four buses as laid (the sound audit's input)"""
     N = g.N
     qa = {'segment': name, 'variant': variant, 'seconds': round(g.total, 3), 'frames': g.frames, 'samples': N,
           'timeline': os.path.relpath(g.path, ROOT) if g.path else None}
@@ -605,8 +782,11 @@ def premix(name, g, variant, use_score=True):
     body = dlg + room + fx
     mix = body + (mus if mus is not None else 0.0)
     stats = {'dlg': lufs(dlg) if np.any(dlg) else None, 'room': lufs(room), 'sfx': lufs(fx)}
-    return dict(qa=qa, mix=mix.astype('float32'), noscore=body.astype('float32'), mus=mus, speech=speech, spans=spans,
-                stats=stats)
+    out = dict(qa=qa, mix=mix.astype('float32'), noscore=body.astype('float32'), mus=mus, speech=speech, spans=spans,
+               stats=stats)
+    if keep_buses:
+        out['buses'] = {'dlg': dlg, 'room': room, 'sfx': fx, 'score': mus}
+    return out
 
 
 SEAM_S = 2.0
@@ -616,7 +796,16 @@ NEXT = {v: k for k, v in PREV.items()}                    # the chapter whose pr
 
 SCORE_HEAD_FADE = {'act1': 1.0, 'act2': 1.2, 'act3': 1.2, 'act4': 1.2}   # s: the score's fade-in at an act's head
 # score rides: the score makes room for a featured sound (beat, from, to or 'end', dB)
-SCORE_RIDE = {}                                          # seg -> [(beat, from s, to s | 'end', dB, why)]
+SCORE_RIDE = {                                           # seg -> [(beat, from s, to s | 'end', dB, why)]
+    # the sound pass (2026-10-10): Act Two's head. The Water Line's first F is a designed hit on the act's first frame
+    # (its attack is kept: no fade), but it landed at -12 dBFS (100 ms RMS) straight out of Act One's black at -32: the
+    # jump LEARNINGS S9 names (Ep1's 3 AM bloom, -36 to -14 in 0.1 s). 7 dB down for its first second, back by 1.6 s.
+    'act2': [('8.01', 0.0, 1.0, -7.0, 'S9: the act-in hit out of the black, softened (attack kept)'),
+             # S11: the phone moments the picture holds on (ECUs on his thumb): the score makes room for the taps
+             ('11.11', 0.8, 2.4, -4.0, 'S11: h · e · r typed in the wings (ECU), the taps over the pad'),
+             ('12.07', 0.4, 3.5, -3.0, 'S11: his post typed and posted (ECU), the taps and the click')],
+    'act3': [('17.07', 1.7, 4.66 + 4.8, -3.0, 'S11: "His phone won\'t stop": the buzzes over the scramble (17.07-17.08)')],
+}
 LIFT_LU = 2.5                                             # a set piece's peak over the talk
 LIFT_MAX = {'st': 6.0, 'mom': 9.0}
 GAIN_ROWS = {}                                            # seg -> [(what, (beat, s), (beat, s | ('sound', name)), LU)]

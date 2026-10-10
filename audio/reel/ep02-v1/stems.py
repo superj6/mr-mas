@@ -28,8 +28,16 @@ SFX (the SFX stem). Every beat `sound` at its written peak: SFX-board files, NAM
   `align: peak` lands the loudest sample on the time. A plan J-cut whose words name one of the beat's own sounds starts
   that sound lead_s before the cut. A sound the segment's score claims (its cue sheet's "claims_sfx": ["<beat>:<name>"])
   is left out (the score plays it). Every SFX ends faded (tail_safe: no step above -60 dBFS).
+  THE SOUND PASS (2026-10-10, sound-v1.md): SOUND_SWAP lays a board sound in place of the lock's name where the picture
+  needs it (every Ep2 typing beat is on a phone: the lock's keyboard taps become thumb taps; the second and third THUDs
+  closer; the four pin ticks a step lower each; the gate's second swing shuts), SOUND_FILE lays a take as a sound (the
+  ENGINEER's laugh, 9.03), SOUND_DUCK dips one sound under a line (the laugh under Gerg's), SOUND_GAIN rides a sound
+  the audit found masked. S5: NOTHING RUNS PAST ITS SCENE: every sound is cut (60 ms fade) at the end of its beat's
+  scene (a run of beats with one `passes.scene`), unless SCENE_RUN_ON names it; each cut is listed. The crosscut call
+  (crosscut.py, sc 19) lays the lobby's watch-party bed under Gerg's shots, the campus under Mas's.
 QA: per segment, the stems' loudness, the room's quiet windows, the second-difference click scan at every cut (onsets
-  told apart from cut-offs), every sound laid, dropped or missing. Nothing here has been listened to.
+  told apart from cut-offs), every sound laid, swapped, cut at its scene's end, dropped or missing. Nothing here has
+  been listened to.
 """
 from __future__ import annotations
 
@@ -52,6 +60,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, '../../..'))
 sys.path.insert(0, HERE)
 import rooms as RM  # noqa: E402
+import crosscut as XC  # noqa: E402
 
 SR, FPS, SPF = 48000, 24, 2000
 SFXD = os.path.join(ROOT, 'audio/sfx/wav')
@@ -72,9 +81,70 @@ ROOM_FLOOR = -40.0            # dBFS: the 5th percentile of a room's 50 ms windo
 ROOM_LIFT_MAX = 6.0
 NAMED = {'BUZZ': 'phone_buzz_desk', 'RING': 'call_ring', 'SLOT': 'slot_whir', 'DIALTONE': 'dial_tone_speaker',
          'JANGLE': 'key_ring_jangle_1'}
-# per-beat fix tables, empty for Ep2 until a pass needs one (Ep1's are its record): (seg, beat) -> ...
-ROOM_OVERRIDE = {}            # (seg, beat) -> room
-SOUND_GAIN = {}               # (seg, beat, name) -> peak dBFS
+# per-beat fix tables (Ep1's are its record); Ep2's entries are the sound pass's (2026-10-10), each with its reason
+ROOM_OVERRIDE = {             # (seg, beat) -> room
+    # the demo house empties under full house lights (manifest §7: "an emptying variant, with the house lights' hum")
+    ('act2', '12.01'): 'demo_house_empty', ('act2', '12.02'): 'demo_house_empty', ('act2', '12.03'): 'demo_house_empty',
+    # 17.02: "traffic slows on it, then stops"; from 17.03 the lanes idle on the receipt until May 20 (manifest §7: a
+    # stalled variant, idling engines); 17.14 is the night (its own room)
+    **{('act3', f'17.{k:02d}'): 'bridge_stalled' for k in (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16)},
+}
+SOUND_GAIN = {                # (seg, beat, name) -> peak dBFS: a hand ruling (the lock's gain otherwise; no audit ride on top)
+    # the beacon's motor leads Act Four under Act Three's black (17.21's J 1.2 s): a texture under a black, so a judged
+    # level, not the audit's ride toward +2 dB over the quartet (which reached +14 dB and stepped at the seam)
+    ('act4', '18.01', 'beacon_motor'): -21.0,
+}
+# the lock's name -> the board sound laid instead (one name, or a list per occurrence in the beat, in order)
+_TAPS = ['phone_key_tap_1', 'phone_key_tap_2', 'phone_key_tap_3', 'phone_key_tap_4', 'phone_key_tap_5', 'phone_key_tap_6']
+SOUND_SWAP = {
+    ('coldopen', '1.02', 'mammoth_step_pixel'): 'mammoth_step_bezel',   # "the foot through the bezel"
+    ('coldopen', '1.07', 'hand_truck_step'): 'hand_truck_step_mid',     # THUD 2, closer
+    ('coldopen', '1.09', 'hand_truck_step'): 'hand_truck_step_near',    # THUD 3, the top step at the doors
+    ('act1', '4.15', 'key_tap_soft_01'): 'phone_type_furious',          # Nole "types furiously" on his phone
+    ('act2', '11.11', 'typing_soft'): _TAPS[:3],                        # h · e · r, a key each (the picture's t1..t3)
+    ('act2', '12.07', 'key_tap_soft_01'): 'phone_key_tap_1',            # his post, typed on his phone (sc-12.ts)
+    ('act2', '12.07', 'key_tap_soft_03'): 'phone_key_tap_3',
+    ('act2', '12.07', 'key_tap_soft_05'): 'phone_key_tap_5',
+    ('act3', '15.05', 'key_tap_soft_02'): 'phone_type_burst',           # "where u at?" on TPOOL's field
+    ('act3', '15.05', 'key_tap_soft_04'): 'phone_key_tap_4',
+    ('act3', '17.10', 'key_tap_soft_01'): 'phone_type_burst',           # a draft typed, deleted, typed (his phone)
+    ('act3', '17.10', 'key_tap_soft_03'): 'phone_type_burst',
+    ('act4', '19.07', 'typing_soft'): ['phone_type_burst', 'phone_type_burst'],   # he finishes his post on the lawn
+    ('act4', '18.01', 'footstep_soft_1'): 'footstep_drafts_1',          # "climbs the stair of bound drafts"
+    ('act4', '18.01', 'footstep_soft_2'): 'footstep_drafts_2',
+    ('act4', '19.14', 'pin_grey_tick'): ['pin_grey_tick', 'pin_grey_tick_2', 'pin_grey_tick_3', 'pin_grey_tick_4'],
+    ('act4', '19.19', 'gate_iron_swing'): 'gate_iron_shut',             # it swings shut behind CHATGTP
+    ('act4', '22.02', 'footstep_gravel'): ['footstep_gravel', 'footstep_gravel_2', 'footstep_gravel_3'],
+    ('act4', '22.09', 'footstep_gravel'): ['footstep_gravel_2', 'footstep_gravel_3', 'footstep_gravel'],
+}
+# the sound audit's rides (sound_audit.py --rides): (seg, beat, lock name) -> dB added to the lock's gain, each with its
+# measured reason in the file; sound-v1.md §4
+RIDES_FILE = os.path.join(HERE, 'sfx-rides.json')
+RIDE = ({(r['seg'], r['beat'], r['name']): float(r['ride_db']) for r in json.load(open(RIDES_FILE)).get('rides', [])}
+        if os.path.exists(RIDES_FILE) else {})
+# a sound that is a take, not a board file (repo path)
+SOUND_FILE = {
+    'engineer_laugh_take': 'audio/ep02/v1-el/sound/wav/e2-a2-0005-laugh__engineer-A.wav',   # lock-v1.md §6's request
+    'crowd_chant_under': 'audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0010__crowd-layered.wav',  # 15.06's composite (ADD)
+}
+# (seg, beat, name) -> (line id, dB): the sound dips under that line (80 ms ramps), as a voice under a voice
+SOUND_DUCK = {
+    ('act2', '9.03', 'engineer_laugh_take'): ('e2-a2-0005', -9.0),      # "ducked under Gerg's line" (the lock's note)
+}
+# sounds the sound pass adds where the picture needs one the lock doesn't name: (seg, beat) -> [{name, at, gain, ...}]
+# (dur, lp: a low-pass in Hz, fade_in: s); each with its reason
+ADD = {
+    # 15.07: "His raised hand finds Mas in the crowd, the only one not chanting... Under the chant, a word between them."
+    # The chant (15.06's line) has ended; the room keeps chanting under the exchange: its own composite again, far and
+    # low (the pocket check holds the three lines' margins)
+    ('act3', '15.07'): [{'name': 'crowd_chant_under', 'at': 0.0, 'gain': -30, 'dur': 7.0, 'lp': 1800, 'fade_in': 0.4,
+                         'why': 'the party keeps chanting under the exchange (the picture: "the only one not chanting")'}],
+}
+# (seg, beat, name): a sound allowed to ring past its scene's end (none: S5)
+SCENE_RUN_ON = set()
+SCENE_CUT_FADE = 0.06
+# the crosscut call: the room under each speaker's shots (crosscut.py)
+CROSS_ROOM = {('act4', 'GERG'): 'lobby_cheering'}
 
 
 # ------------------------------------------------------------------ small helpers (Ep1's, unchanged)
@@ -111,6 +181,21 @@ def add(bus, x, t):
 
 
 TAIL_FADE_S, TAIL_LIMIT_DB = 0.02, -60.0
+HEAD_FADE_S = 0.02            # the sound pass: a board LOOP laid as a sound (it starts mid-waveform) fades in over 20 ms
+_LOOPS_SET = None
+
+
+def board_loops():
+    """the ids the SFX board marks as loops (manifest.json and manifest-ep2.json): only these get a head fade, so a
+    one-shot keeps its attack"""
+    global _LOOPS_SET
+    if _LOOPS_SET is None:
+        _LOOPS_SET = set()
+        for m in ('audio/sfx/manifest.json', 'audio/sfx/manifest-ep2.json'):
+            p_ = os.path.join(ROOT, m)
+            if os.path.exists(p_):
+                _LOOPS_SET |= {r['id'] for r in json.load(open(p_)) if r.get('loop')}
+    return _LOOPS_SET
 
 
 def tail_safe(x):
@@ -280,7 +365,12 @@ def make_sound(name, dur, align, r):
     if name.endswith('@1bit'):
         co = v2_mods()[3]
         return co.one_bit(load(name[:-5]).astype('float64')), 0.0
-    x = load(name).astype('float64')
+    if name in SOUND_FILE:
+        x, sr = sf.read(os.path.join(ROOT, SOUND_FILE[name]), always_2d=True, dtype='float32')
+        assert sr == SR, (name, sr)
+        x = (x if x.shape[1] == 2 else np.repeat(x, 2, axis=1)).astype('float64')
+    else:
+        x = load(name).astype('float64')
     if dur:                               # truncated by its dur: a 50 ms tail fade
         x = x[: int(dur * SR)].copy()
         k = min(len(x), int(0.05 * SR))
@@ -451,28 +541,108 @@ def room_runs(segs, names):
 
 def cuts_from_plans(segs, names):
     """the plans' J-/L-cut sounds: {(seg, beat): lead_s} for a room leading its cut, {(seg, beat): over_s} for a trail,
-    {(seg, beat, sound): lead_s} for a beat's own sound moved earlier"""
+    {(seg, beat, sound): lead_s} for a beat's own sound moved earlier. A J on a chapter's LAST beat that names a sound of
+    the next chapter's first beat (17.21: "the lighthouse beacon's motor ... under the black") moves that sound earlier,
+    under this chapter's black (the sound pass, 2026-10-10)"""
     lead, trail, own = {}, {}, {}
-    for name in names:
-        if name == 'card':
-            continue
+    order = [n for n in names if n != 'card']
+    for ni, name in enumerate(order):
         PB = plan_beats(name)
-        for b in segs[name].beats:
+        bs = segs[name].beats
+        for bi, b in enumerate(bs):
             pb = PB.get(b['id'], {})
+            nxt = None
+            if bi + 1 == len(bs) and ni + 1 < len(order) and segs[order[ni + 1]].beats:
+                nxt = (order[ni + 1], segs[order[ni + 1]].beats[0])
             for j in as_list(pb.get('jcut')):
                 if not isinstance(j, dict) or 'sound' not in j:
                     continue
                 words = set(re.findall(r'[a-z]+', str(j['sound']).lower()))
                 hit = next((sd for sd in b.get('sounds', []) if words & name_words(sd['name'])), None)
                 ls = float(j.get('lead_s', LEAD))
+                nhit = next((sd for sd in nxt[1].get('sounds', []) if words & name_words(sd['name'])), None) if nxt else None
                 if hit is not None:
                     own[(name, b['id'], hit['name'])] = max(own.get((name, b['id'], hit['name']), 0.0), ls)
+                elif nhit is not None:
+                    k = (nxt[0], nxt[1]['id'], nhit['name'])
+                    own[k] = max(own.get(k, 0.0), ls)
                 else:
                     lead[(name, b['id'])] = ls
             for lc in as_list(pb.get('lcut')):
                 if isinstance(lc, dict):
                     trail[(name, b['id'])] = float(lc.get('over_s', 1.0))
     return lead, trail, own
+
+
+# ------------------------------------------------------------------ the sound pass's helpers
+def swap_of(seg, beat, name, occ):
+    """the board sound laid for the occ-th sound of this name in the beat (SOUND_SWAP), else the lock's name"""
+    v = SOUND_SWAP.get((seg, beat, name))
+    if v is None:
+        return name
+    if isinstance(v, list):
+        return v[(occ - 1) % len(v)]
+    return v
+
+
+def scene_ends(g):
+    """the end (segment clock) of each beat's scene: a run of consecutive beats with one passes.scene"""
+    sc = [(b.get('passes') or {}).get('scene') for b in g.beats]
+    ends = [0.0] * len(sc)
+    cur = g.total
+    for i in range(len(sc) - 1, -1, -1):
+        if i < len(sc) - 1 and sc[i] != sc[i + 1]:
+            cur = g.starts[i][1]
+        ends[i] = cur
+    return ends
+
+
+def line_span(g, lid):
+    for i, b in enumerate(g.beats):
+        for l in b.get('lines') or []:
+            if l['id'] == lid:
+                on = g.starts[i][0] + float(l['t'])
+                return on, on + float(l['dur'])
+    return None
+
+
+def duck_under(x, ts, g, spec):
+    """dip a laid sound by spec's dB while spec's line speaks (80 ms ramps)"""
+    lid, dbv = spec
+    sp = line_span(g, lid)
+    if sp is None:
+        return x, f'duck: {lid} not in the lock'
+    tt = ts + np.arange(len(x)) / SR
+    gcurve = np.interp(tt, [sp[0] - 0.08, sp[0], sp[1], sp[1] + 0.08], [0.0, dbv, dbv, 0.0])
+    return x * db(gcurve)[:, None], f'ducked {dbv:+.0f} dB under {lid} ({sp[0]:.2f}-{sp[1]:.2f} s)'
+
+
+def cross_rooms(segs, names, t_base, room, qa, lifts):
+    """the crosscut call (crosscut.py): under each speaker's shots, his own room crossfades in (40 ms, equal power)
+    over the beat's room (CROSS_ROOM: Gerg's shots in the lobby's watch party, Mas's on the campus as the lock has it)"""
+    for sname in names:
+        if sname == 'card':
+            continue
+        g = segs[sname]
+        for who, sp in XC.spans(sname, g.beats, g.starts).items():
+            rk = CROSS_ROOM.get((sname, who))
+            if not rk or RM.recipe(rk)[0] is None:
+                continue
+            for a, e in sp:
+                a0, e0 = g.off - t_base + a, g.off - t_base + e
+                i0, i1 = int(round(a0 * SR)), int(round(e0 * SR))
+                if i1 - i0 < int(0.1 * SR):
+                    continue
+                x, note = room_signal(rk, i1 - i0, a0 + t_base)
+                x, lift = lift_to_floor(x, f'{rk}@{sname}:cross', lifts)
+                k = int(0.04 * SR)
+                w = np.ones(i1 - i0, 'float32')
+                w[:k] = np.linspace(0, 1, k)
+                w[-k:] = np.linspace(1, 0, k)
+                th = (w * np.pi / 2).astype('float32')
+                room[i0:i1] = room[i0:i1] * np.cos(th)[:, None] + x * np.sin(th)[:, None]
+                qa[sname]['rooms'].append({'room': rk, 'recipe': note, 'from': round(a, 3), 'to': round(e, 3),
+                                           'cross': f'{who} on screen (crosscut.py)', 'lift_db': round(lift, 1)})
 
 
 # ------------------------------------------------------------------ one run of segments (the block, or the cold open)
@@ -517,30 +687,73 @@ def build_run(segs, names, qa, claims, tail_s=0.0):
             qa[sname]['rooms'].append({'room': key, 'recipe': note, 'from': round(a0 + t_base - segs[sname].off, 3),
                                        'to': round(e0 + t_base - segs[sname].off, 3), 'first': fb[1], 'last': lb[1],
                                        'lead': round(lead, 2), 'trail': round(trail, 2), 'lift_db': round(lift, 1)})
+    # the crosscut call: each speaker's own room under his shots (crosscut.py)
+    cross_rooms(segs, names, t_base, room, qa, lifts)
     # the beats' sounds
     for sname in names:
         g = segs[sname]
+        send = scene_ends(g)
         for i, b in enumerate(g.beats):
             moved = set()                                  # a J-cut moves the FIRST sound of its name in the beat
-            for k, sd in enumerate(b.get('sounds', [])):
-                if f"{b['id']}:{sd['name']}" in claims.get(sname, set()):
-                    qa[sname]['sfx_dropped'].append({'beat': b['id'], 'name': sd['name'], 'why': 'the score claims it (claims_sfx)'})
+            occ = {}
+            for k, sd in enumerate(list(b.get('sounds', [])) + [dict(a_, added=True) for a_ in ADD.get((sname, b['id']), [])]):
+                nm = sd['name']
+                occ[nm] = occ.get(nm, 0) + 1
+                if f"{b['id']}:{nm}" in claims.get(sname, set()):
+                    qa[sname]['sfx_dropped'].append({'beat': b['id'], 'name': nm, 'why': 'the score claims it (claims_sfx)'})
                     continue
-                r = reseed('sfx', sname, b['id'], sd['name'], k)
+                use = swap_of(sname, b['id'], nm, occ[nm])
+                r = reseed('sfx', sname, b['id'], nm, k)
                 try:
-                    x, off = make_sound(sd['name'], sd.get('dur'), sd.get('align'), r)
+                    x, off = make_sound(use, sd.get('dur'), sd.get('align'), r)
                 except Exception as ex:  # noqa: BLE001
-                    qa[sname]['sfx_missing'].append(f"{b['id']}:{sd['name']} ({ex.__class__.__name__}: {ex})")
+                    qa[sname]['sfx_missing'].append(f"{b['id']}:{use} ({ex.__class__.__name__}: {ex})")
                     continue
-                gain = SOUND_GAIN.get((sname, b['id'], sd['name']), sd.get('gain', -24))
+                gain = SOUND_GAIN.get((sname, b['id'], nm), sd.get('gain', -24))
+                ride = 0.0 if (sname, b['id'], nm) in SOUND_GAIN else RIDE.get((sname, b['id'], nm), 0.0)   # the audit's ride
+                gain = gain + ride
+                if sd.get('lp'):
+                    x = lp(np.asarray(x, dtype='float64'), float(sd['lp']), 4)
                 x = to_peak(np.asarray(x, dtype='float64'), gain)
-                lead = OWN.get((sname, b['id'], sd['name']), 0.0) if sd['name'] not in moved else 0.0
-                moved.add(sd['name'])
+                lead = OWN.get((sname, b['id'], nm), 0.0) if nm not in moved else 0.0
+                fin = float(sd.get('fade_in') or 0.0)
+                if lead:
+                    fin = max(fin, min(0.25, lead))                 # a J-led sound rises under the black
+                elif use in board_loops():
+                    fin = max(fin, HEAD_FADE_S)                     # a loop starts mid-waveform: no step (never a one-shot's attack)
+                if fin:
+                    x = pfade(x, fin, 0.0).astype('float64')
+                moved.add(nm)
                 at = (min(sd['at'], 0.0) - lead) if lead else sd['at']
-                t = g.off - t_base + g.starts[i][0] + at - off
+                ts = g.starts[i][0] + at - off             # on the segment clock
+                notes = []
+                if use != nm:
+                    notes += [f'swapped: {use}', f'lock: {nm}']
+                dk = SOUND_DUCK.get((sname, b['id'], nm))
+                if dk:
+                    x, why = duck_under(x, ts, g, dk)
+                    notes.append(why)
+                over = ts + len(x) / SR - send[i]
+                if over > 1e-3 and (sname, b['id'], nm) not in SCENE_RUN_ON:      # S5: nothing runs past its scene
+                    keep = max(0, int(round((send[i] - ts) * SR)))
+                    x = np.array(x[:keep], dtype='float64', copy=True)
+                    kf = min(len(x), int(SCENE_CUT_FADE * SR))
+                    if kf:
+                        x[len(x) - kf:] *= np.cos(np.linspace(0, np.pi / 2, kf))[:, None]
+                    qa[sname]['sfx_cut_at_scene_end'].append({'beat': b['id'], 'name': use, 'at': round(ts, 3),
+                                                              'scene_end': round(send[i], 3), 'would_have_run_past_s': round(over, 3)})
+                    notes.append(f'cut at its scene\'s end ({over:.2f} s early)')
+                if not len(x):
+                    continue
+                t = g.off - t_base + ts
                 add_fx(fx, x, t)
-                LAID.setdefault(sname, []).append((t + t_base - g.off, t + t_base - g.off + len(x) / SR, sd['name']))
-                qa[sname]['sfx'].append([b['id'], sd['name'], round(t + t_base - g.off, 3), gain] + ([f'J-cut: leads by {lead} s'] if lead else []))
+                LAID.setdefault(sname, []).append((ts, ts + len(x) / SR, use))
+                if ride:
+                    notes.append(f'ride {ride:+.1f} dB (sfx-rides.json)')
+                if sd.get('added'):
+                    notes.append(f"added by the sound pass: {sd.get('why', '')}")
+                    qa[sname].setdefault('added', []).append({'beat': b['id'], 'name': use, 'at': round(ts, 3), 'why': sd.get('why', '')})
+                qa[sname]['sfx'].append([b['id'], use, round(ts, 3), gain] + ([f'J-cut: leads by {lead} s'] if lead else []) + notes)
     qa['_room_levels'] = qa.get('_room_levels', []) + lifts
     return room, fx
 
@@ -628,8 +841,23 @@ def quiet_spans(x, thr=-55.0, min_s=0.3):
 # ------------------------------------------------------------------ fingerprint, build, main
 def fingerprint(variant, claims, segs=None):
     h = hashlib.sha1()
-    for p in [os.path.abspath(__file__), os.path.join(HERE, 'rooms.py')] + [os.path.join(ROOT, v) for v in MOD_PATHS.values()]:
+    for p in [os.path.abspath(__file__), os.path.join(HERE, 'rooms.py'), os.path.join(HERE, 'crosscut.py')] + \
+            [os.path.join(ROOT, v) for v in MOD_PATHS.values()]:
         h.update(open(p, 'rb').read())
+    # the board's Ep2 sounds (a re-made sound counts) and the takes laid as sounds
+    m2 = os.path.join(ROOT, 'audio/sfx/manifest-ep2.json')
+    if os.path.exists(m2):
+        h.update(open(m2, 'rb').read())
+        for r in json.load(open(m2)):
+            f = os.path.join(ROOT, 'audio/sfx', r['file'])
+            if os.path.exists(f):
+                st_ = os.stat(f)
+                h.update(f"{r['id']}:{st_.st_size}:{int(st_.st_mtime)}".encode())
+    if os.path.exists(RIDES_FILE):
+        h.update(open(RIDES_FILE, 'rb').read())
+    for p in SOUND_FILE.values():
+        f = os.path.join(ROOT, p)
+        h.update(f"{p}:{os.path.getsize(f) if os.path.exists(f) else -1}".encode())
     segs = segs or load_segs(variant)
     for name in SEGS:
         h.update(open(segs[name].path, 'rb').read())
@@ -674,7 +902,8 @@ def build(variant='el', only=None, quiet=False):
     d = out_dir(variant)
     qa = {s: {'segment': s, 'variant': variant, 'timeline': os.path.relpath(segs[s].path, ROOT) if segs[s].path else None,
               'seconds': round(segs[s].total, 3), 'frames': segs[s].frames, 'rooms': [], 'sfx': [], 'sfx_missing': [],
-              'sfx_dropped': [], 'score_claims': sorted(claims.get(s, set()))} for s in SEGS + ['card']}
+              'sfx_dropped': [], 'sfx_cut_at_scene_end': [], 'score_claims': sorted(claims.get(s, set()))}
+          for s in SEGS + ['card']}
     LAID.clear()
     LAID_BUS.clear()
     room_b, fx_b = build_card_and_block(segs, qa, claims)

@@ -1,0 +1,113 @@
+{
+ "takes": {
+  "e2-a2-0005-laugh__engineer-A": {
+   "take": "e2-a2-0005-laugh__engineer-A",
+   "key": "1fe998c361d6e986",
+   "base_key": "1fe998c361d6e986",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/sound/wav/e2-a2-0005-laugh__engineer-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 3.672,
+   "offset_s": 0.35,
+   "sent": "Heh. Ha, ha-ha... heh. Heh-heh.",
+   "seed": 1216295920,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.4,
+    "similarity_boost": 0.75,
+    "style": 0.15,
+    "use_speaker_boost": true,
+    "speed": 1.0
+   },
+   "voice_id": "qHR09fcvu6SoDtFzqFvm",
+   "voice_name": "Ryan - Articulate, Friendly and Youthful",
+   "cand": "A",
+   "role": "engineer",
+   "measured": {
+    "audible_in_s": 0.37,
+    "audible_out_s": 2.99,
+    "span_s": 2.62,
+    "words": 5,
+    "wpm": 114.5,
+    "syllables": 7,
+    "articulation_sps": 4.29,
+    "pauses_s": [
+     0.26,
+     0.1,
+     0.06,
+     0.22,
+     0.3,
+     0.11
+    ],
+    "longest_internal_gap_s": 0.3,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.682,
+    "tail_to_60_s": 0.007,
+    "median_f0_hz": 140.2,
+    "f0_range_st": 12.4
+   },
+   "words": [
+    {
+     "w": "Heh",
+     "t0": 0.35,
+     "t1": 0.594
+    },
+    {
+     "w": "Ha",
+     "t0": 0.838,
+     "t1": 1.07
+    },
+    {
+     "w": "ha-ha",
+     "t0": 1.174,
+     "t1": 1.674
+    },
+    {
+     "w": "heh",
+     "t0": 1.941,
+     "t1": 2.173
+    },
+    {
+     "w": "Heh-heh",
+     "t0": 2.428,
+     "t1": 3.009
+    }
+   ],
+   "qa": {
+    "asr": "Ha, ha, ha, ha, ha, ha, ha",
+    "cer": 0.333,
+    "word_recall_nonames": 0.429,
+    "lufs_i": -18.0,
+    "target_lufs": -18.0,
+    "true_peak_dbtp": -3.34,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 140.2,
+    "f0_range_st": 12.4,
+    "speech_head_s": 0.37,
+    "speech_tail_s": 0.682,
+    "raw_tail_cut": false,
+    "align_median_s": 0.838
+   },
+   "raw": {
+    "raw_first_sound_s": 0.02,
+    "raw_len_s": 2.972,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a2-0005-laugh__engineer-A",
+   "key": "1fe998c361d6e986",
+   "chars": 31,
+   "cost_header": "14",
+   "request_id": "Im2jBqF8diOaRwrdQuJ6",
+   "at": "03:44:04"
+  }
+ ]
+}
