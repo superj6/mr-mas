@@ -1,5 +1,7 @@
 # EP06 · Intro slot
 
+> **Item 1, the cold-open line: the typed quote stays "near the singularity; unclear which side." in every episode (showrunner, 2026-10-10).** The line planned in row 1 below is not used. Mas types and posts Ep1's line, with Ep1's picture and sound, as Ep2's intro now does ([ep02/intro-slot.md](../ep02/intro-slot.md)). Items 2–5 are unaffected.
+
 Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 6 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Eps 1–5 have already aired; item 1 is the epigraph, words only in their own medium. The v2.0 bar-9 news slot is retired, so `$1.4T` / `BACKSTOP` / `CODE RED`, the siren's flight and the old subtitle `backstop not included` (this episode's own story) are gone, and the `BACKSTOP` lint fix is moot. The v1 skyline items (the multiplying GATESTARs, the `$1.5B` book slot, the `RESERVED` window, the migrated siren) move to Ep7's intro, after they air. Source detail: [episode-slots.md](../../intro/episode-slots.md) (v1 reference; SCRIPT wins where they differ).
 
 ## The five changes

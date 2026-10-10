@@ -1,5 +1,7 @@
 # EP07 · Intro slot
 
+> **Item 1, the cold-open line: the typed quote stays "near the singularity; unclear which side." in every episode (showrunner, 2026-10-10).** The line planned in row 1 below is not used. Mas types and posts Ep1's line, with Ep1's picture and sound, as Ep2's intro now does ([ep02/intro-slot.md](../ep02/intro-slot.md)). Items 2–5 are unaffected.
+
 Master: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 7. **The intro is an intro, not a recap.** Only five kinds of thing change, and items 2–5 show only what Eps 1–6 have already aired. Nothing here previews Ep7.
 
 ## The five changes

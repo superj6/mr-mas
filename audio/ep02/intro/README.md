@@ -1,16 +1,34 @@
 # Ep2's intro sound (`intro_ep2.py`)
 
-**Status (2026-10-10, the titles pass): built and measured.** Nobody has listened yet [R8].
+**Status (2026-10-10, revised the same day): Ep1's line, Ep1's sound.** Nobody has listened yet [R8].
 
-**What it is:** the 30 s intro's sound for Ep2 (pipeline.md §8.3 step 4). It is Ep1's delivered V1 "chip chamber" master with only two things swapped in. Each swap goes through the delivered build's own faders and gain curve, the method Ep1's `audio/ep01/v3-el/tools/el_intro.py` used.
-- **The VO:** Ep1's Kokoro line becomes Jeremy's **"her"**. It uses the same close-mic chain, room and −66 dBFS dark-room tone (f22–95).
-- **The SFX:** Ep1's 40 key taps and the shift+enter become the 3 taps of "her" (f18, 19, 21). The typing indicator has no sound.
+**The showrunner, 2026-10-10:** "i did not want the quote near the singularity unclear which side changed per intro". The typed quote stays "near the singularity; unclear which side." in every episode. Ep2's picture types and posts Ep1's line again (`studio/src/episodes/ep02/intro/slot.ts`), and its other changes (the dot at 0.55, the ESC keycap, the subtitle) make no sound.
 
-Everything from f120 on is Ep1's master sample for sample [M]. The score's D♭ (f60) lands in the silence after the word.
+**The master** is therefore Ep1's aired intro master, copied byte for byte: `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav` (Ep1's EL film: Jeremy reads the line, and Jeremy voices Mas in Ep2) → `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav`, the path `show/reel/ep02-v1[-el]/*.manifest.json` plays at −3 dB. The D/M/E stems in `stems-V1/` (git-ignored) are Ep1's EL stems (`audio/ep01/v3-el/intro/stems-V1-el/`). Nothing is written into `audio/intro/mix/`, `sfx/` or `vox/`, which are Ep1's locked inputs.
 
-**The master:** `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav`. That is the path `show/reel/ep02-v1[-el]/*.manifest.json` plays at −3 dB, and it is committed like Ep1's intro masters. Nothing is written into `audio/intro/mix/`, `sfx/` or `vox/`, which are Ep1's locked inputs.
+## Measured [M] (`mix-qa.json`)
 
-## The read
+| | |
+|---|---|
+| The master vs Ep1's aired master | byte-identical (sha1 `c7915e1a0fbf5cf4b4a19afc7728f06bd41a06a4`); sample difference −240 dBFS (none) over f0–18, f18–120 and f120–720 |
+| vs Ep1's Kokoro V1 master | the same outside the VO (−240 dBFS after f120; 1 LSB before f18); the VO differs over f22.9–101, as Ep1's two masters do |
+| vs the retired "her" master | the same after f120; f18–120 replaced (peak difference −2.9 dBFS) |
+| The master | −13.99 LUFS-I, −1.3 dBTP; the cold open f0–120 −19.21 LUFS (Ep1's) |
+| The stems | sum to the master within −132.5 dBFS |
+
+## Re-run
+
+From the repo root:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-mix/bin/python audio/ep02/intro/intro_ep2.py mix
+```
+
+## Retired: the first build's "her" (09e604c, turned down 2026-10-10)
+
+The first build swapped two things into Ep1's delivered V1 "chip chamber" master, each through the delivered build's own faders and gain curve (the method of Ep1's `audio/ep01/v3-el/tools/el_intro.py`): Jeremy's **"her"** for the Kokoro line, and the 3 key taps of "her" (f18, 19, 21) for Ep1's 40 taps and the shift+enter. A typing indicator held the rest of the phrase in silence. Its takes and QA stay committed as the record (`takes/`, `reads-analysis.json`, `vo-qa.json`, `sfx-qa.json`); `mix --line her` rebuilds that master (it overwrites the production one, so only for comparison). The notes below are that build's.
+
+### The read
 
 - **The voice:** Jeremy (`EwzF7Z2UMSib9JaKx0Kg`, Mas's library voice), `eleven_multilingual_v2`, stability 0.62, style 0.
 - **The reads:** eight, `takes/h1`–`h8` (the MP3 and JSON are committed; 34 characters sent, 16 credits billed).
@@ -22,7 +40,7 @@ Everything from f120 on is Ep1's master sample for sample [M]. The score's D♭ 
   - The typing indicator takes over at f38 (`studio/src/episodes/ep02/intro/slot.ts`).
 - **The level:** the word's momentary (400 ms) maximum is −13.07 LUFS. That matches Ep1's EL line over "near the" (−12.97). A one-word line normalised the way Ep1's was (short-term maximum −16 over 3 s) would have come out about 8 dB hot.
 
-## Measured [M]
+### Measured [M] (the first build)
 
 | | |
 |---|---|
@@ -33,7 +51,7 @@ Everything from f120 on is Ep1's master sample for sample [M]. The score's D♭ 
 | The master | −13.83 LUFS-I (Ep1 −14.0: less voice in the cold open), −1.3 dBTP |
 | The cold open f0–120 | −21.8 LUFS (Ep1 −19.2); the word f22–36 −16.2; the silence f36–90 −28.5 |
 
-## Re-run
+### Re-run (the first build)
 
 From the repo root, in order:
 
@@ -42,17 +60,10 @@ PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/ep02/intro/intro_
 PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 bash ops/heavy.sh audio/.venv-casting/bin/python audio/ep02/intro/intro_ep2.py analyze
 PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-vocals/bin/python audio/ep02/intro/intro_ep2.py build --read h7
 PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv/bin/python audio/ep02/intro/intro_ep2.py sfx --scratch $S/sfx --events out/ep02/v1/intro/intro-ep2-events.json
-PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-mix/bin/python audio/ep02/intro/intro_ep2.py mix
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-mix/bin/python audio/ep02/intro/intro_ep2.py mix --line her
 ```
 
 **What each step writes:**
 - `reads-analysis.json`, `vo-qa.json`, `sfx-qa.json`, `mix-qa.json`: committed.
 - `intro-vox_vo-ep2.wav`, `intro-sfx_stem-ep2.wav`, `stems-V1/`, `takes/*.wav`: git-ignored.
 - The ElevenLabs key stays inside `audio/ep02/v1-el/tools/ellib.py`. No voice is cloned.
-
-## For a human
-
-Listen for three things:
-- whether a level "her" at 0.5 s sounds unhurried rather than flat;
-- whether f38–111 reads as designed silence (the music stays ducked from Ep1's stems);
-- whether the D♭ at f60 lands as the colour in that silence.

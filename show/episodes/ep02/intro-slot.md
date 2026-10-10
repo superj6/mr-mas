@@ -1,8 +1,10 @@
 # ep02 · intro slot
 
 > **Built 2026-10-10** (`intro-ep2`, [studio/src/episodes/ep02/intro/](../../../studio/src/episodes/ep02/intro/README.md); the sound, [audio/ep02/intro/](../../../audio/ep02/intro/README.md)):
-> - **Shipped:** "her", the typing indicator, the dot at 0.55, `back by popular demand` and ESC.
+> - **Shipped:** Ep1's cold-open line (unchanged), the dot at 0.55, `back by popular demand` and ESC.
 > - **Not shipped, because Ep1's final never aired them:** `$4B + $2B` (the tag stays blank), and the hill, lanyard, tally and hook layers (the shipped intro has none).
+>
+> **Revised the same day (showrunner, 2026-10-10):** "i did not want the quote near the singularity unclear which side changed per intro". The typed quote stays "near the singularity; unclear which side." in every episode. The first build's "her", its three key taps, Jeremy's read of it and the typing indicator are gone: over the cold open (f18–120) the picture is Ep1's (the dot's rest aside) and the sound is Ep1's aired intro master.
 
 Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 2 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Ep1 has already aired; item 1 is the epigraph, words only in their own medium. The v2.0 bar-9 news slot is retired, so this sheet no longer carries `AROS` / `SUED.` / `ELPPA` or the `WHERE IS ALYI?` flyers (all of them this episode's own events), and the old skyline courthouse and ISS cube (Ep2's aftermath, which belongs to Ep3's intro) are gone. The old subtitle `now with voice` is Ep3's (`now with voice (paused)`). Source detail: [episode-slots.md](../../intro/episode-slots.md) (v1 reference; SCRIPT wins where they differ).
 
@@ -12,7 +14,7 @@ Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-sp
 
 | # | Change | Ep2 value | Notes |
 |---|---|---|---|
-| 1 | **Cold-open line** (f18–112) | *"her"* | Post, May 13, 2024 [K]† → upgrade before lock. The VO reads "her" at about f24–33; then **silence under a pulsing typing indicator** (three dots and nothing) for the rest of the phrase; the D♭ lands in the silence. The words only: the blimp, the stage and the spotlight live in the episode |
+| 1 | **Cold-open line** (f18–112) | *"near the singularity; unclear which side."* (Ep1's, unchanged) | **The typed quote stays the same in every episode (showrunner, 2026-10-10).** Mas types it, voices it and posts it exactly as in Ep1: the same keys (f18–83, shift+enter f63), the same read (Jeremy's, Ep1's EL film), the same D♭ and the same token pop at Post (f112). The first build's *"her"* (Post, May 13, 2024) and its typing indicator were turned down |
 | 2 | **World state, after Ep1** | **Skyline:** Misanthropic's price tag `$4B + $2B` (NOZAMA and ELGOOG, Sep–Oct 2023 [V]); nothing on zAI's tower yet. **Hill:** a phone glow in the silhouette's hand (Ep1's anchor-clip repost [H]); across it, a scroll tied in a pinky-promise knot, `VOLUNTARY`, beside NEDIB's inkwell (Jul 21, 2023 [V]). **CZAR lanyard:** `SIRRAH` (2023 [H]) | Nothing from Ep2: no courthouse, no ISS cube, no balloon on the hill, no `KORG 5` banner. The podium stays a dark silhouette; its hands fill in only in Ep3's intro. The rows are in [facts.md](facts.md) §C2 |
 | 2 | **Small room layers** | `you are here` marker at x 0.55 · 1993 screen 0° · desk tally `III` (Ep1's NopeAI mark joins the two faint TPOOL marks) · **coat hook 3 collars** · gold threads: none | Ep1 earned the third (sc 9, MACROSOFT's check) and shows three in its own Nov 2023 cold open. No collar pops in Ep2, so Ep3's intro also reads 3, and the fourth first shows in Ep4's |
 | 2 | **Orb toast · last bar** | `verified: human` · standard | Ambient, not events |
@@ -26,4 +28,4 @@ Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-sp
 New must-read text: the subtitle (22) and the toast (15). The cold-open line is spoken as well as typed. Nothing on the hill, the skyline or the roll call is must-read.
 
 ## Delivery note for the line
-One syllable, lowercase, unhurried. **Let the silence carry the pause:** the pulsing typing indicator holds the rest of the phrase's slot with the low D♭ inside it, and the `you are here` marker slides on the silence, not on the word.
+Ep1's, unchanged: the line, its read and its timing are Ep1's aired intro (`audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`). The first build's note ("her": one syllable, lowercase, a pulsing typing indicator over the silence) is retired with the line.

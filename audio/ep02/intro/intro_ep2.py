@@ -1,25 +1,29 @@
 #!/usr/bin/env python3
-"""intro_ep2.py - the Ep2 intro variant's sound (pipeline.md §8.3 step 4; show/episodes/ep02/intro-slot.md item 1).
+"""intro_ep2.py - the Ep2 intro variant's sound (pipeline.md §8.3 step 4, §8.6; show/episodes/ep02/intro-slot.md item 1).
 
-Ep2's cold-open line is one word, "her", read by Jeremy (Mas's ElevenLabs voice, as Ep1's EL intro) at about f24-33,
-then silence under the composer's pulsing typing indicator; the score's D-flat (f60) lands in that silence. Everything
-else in the 30 s intro sounds exactly as Ep1's: the V1 "chip chamber" master is the delivered one, and only two things
-are swapped into it, each through the delivered build's own faders and gain curve (Ep1's el_intro.py method):
-  * the dialogue: Ep1's Kokoro VO stem -> Jeremy's "her" (the same close-mic chain, room and dark-room tone);
-  * the SFX: the key taps of Ep1's 40 keystrokes and the shift+enter -> the 3 key taps of "her" (f18, f19, f21).
+**The line is Ep1's (the showrunner, 2026-10-10: "the typed quote stays 'near the singularity; unclear which side.' in
+every episode").** Ep2's picture types and posts Ep1's line (studio/src/episodes/ep02/intro/slot.ts), so its sound over
+the cold open is Ep1's too, and the only Ep2 changes left in the intro (the dot's rest, the ESC keycap, the subtitle)
+are silent. The master is therefore Ep1's aired intro master, the EL film's (Jeremy reads the line, as he voices Mas in
+Ep2): audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav, copied byte for byte.
 
+  mix      (.venv-mix)      Ep1's aired master -> audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav (the name the
+                            manifest plays at -3 dB), its D/M/E stems (Ep1's EL stems) and mix-qa.json
+
+The first build (2026-10-10, 09e604c) swapped Ep1's line for Jeremy's "her" and its 3 key taps; the showrunner turned
+it down the same day. Its steps stay for the record (takes/, reads-analysis.json, vo-qa.json and sfx-qa.json are its
+QA) and rebuild it only with `mix --line her`:
   render   (.venv-casting)  the reads of "her" (Jeremy, eleven_multilingual_v2, Mas's V.O. settings); the key stays in ellib
   analyze  (.venv-casting)  each read: ASR, the voiced span, its pitch and loudness -> reads-analysis.json
   build    (.venv-vocals)   the chosen read on the intro clock (onset f24.0, fitted to end by f33), Ep1's intro-vox chain
                             verbatim, the -66 dBFS dark-room tone under f22-95 -> intro-vox_vo-ep2.wav + vo-qa.json
   sfx      (.venv)          Ep1's SFX builder imported read-only (its src/ cache redirected to scratch): the main bus
-                            rebuilt with Ep2's keystrokes, checked against the delivered Ep1 stem -> intro-sfx_stem-ep2.wav
-  mix      (.venv-mix)      the delivered V1 master + the two swaps -> audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav
-                            (the name the manifest plays at -3 dB), its D/M/E stems and mix-qa.json
+                            rebuilt with "her"'s keystrokes, checked against the delivered Ep1 stem -> intro-sfx_stem-ep2.wav
+  mix --line her (.venv-mix) the delivered V1 master + the two swaps (the retired master)
 
 Writes only under audio/ep02/intro/ and audio/intro/ep02/ (never audio/intro/mix/, audio/intro/sfx/ or audio/intro/vox/,
 which are Ep1's locked inputs). No voice is cloned; the read is a library voice from text.
-  PYTHONDONTWRITEBYTECODE=1 HF_HUB_OFFLINE=1 audio/.venv-casting/bin/python audio/ep02/intro/intro_ep2.py render
+  PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-mix/bin/python audio/ep02/intro/intro_ep2.py mix
 """
 from __future__ import annotations
 
@@ -33,6 +37,10 @@ REPO = os.path.abspath(os.path.join(HERE, "../../.."))
 TAKES = os.path.join(HERE, "takes")
 MASTER_DIR = os.path.join(REPO, "audio/intro/ep02")
 MASTER = os.path.join(MASTER_DIR, "intro-ep2-mix-V1-chipchamber.wav")
+# Ep1's aired intro: the EL film's master (show/reel/ep01-v35-el, Jeremy's read of the line) and its stems
+EP1_MASTER = os.path.join(REPO, "audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav")
+EP1_STEMS = os.path.join(REPO, "audio/ep01/v3-el/intro/stems-V1-el")
+EP1_KOKORO = os.path.join(REPO, "audio/intro/mix/intro-ep1-mix-V1-chipchamber.wav")
 EL_TOOLS = os.path.join(REPO, "audio/ep02/v1-el/tools")
 FPS, SR = 24, 48000
 
@@ -293,8 +301,60 @@ def cmd_sfx(a):
 
 
 # ------------------------------------------------------------------------------------------------ mix
+def sha1(p):
+    import hashlib
+    h = hashlib.sha1()
+    with open(p, "rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
 def cmd_mix(a):
-    """the delivered V1 master with the VO and the SFX swapped, through the delivered build's own gain curve (its master
+    """Ep1's line: the master is Ep1's aired intro master, byte for byte (its stems with it), measured against Ep1's
+    two masters and the retired "her" master it replaces."""
+    if a.line == "her":
+        return cmd_mix_her(a)
+    import shutil
+    sys.path.insert(0, os.path.join(REPO, "audio/intro/mix/scripts"))
+    import mix_intro as M
+    prev = M.read(MASTER) if os.path.exists(MASTER) else None
+    os.makedirs(MASTER_DIR, exist_ok=True)
+    shutil.copyfile(EP1_MASTER, MASTER + ".tmp")
+    os.replace(MASTER + ".tmp", MASTER)
+    stems = {}
+    for k in ("music", "sfx", "dialogue"):
+        dst = os.path.join(HERE, "stems-V1", f"intro-ep2-V1-stem-{k}.wav")
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        shutil.copyfile(os.path.join(EP1_STEMS, f"intro-ep1-V1-el-stem-{k}.wav"), dst)
+        stems[k] = M.read(dst)
+    out, ep1, kok = M.read(MASTER), M.read(EP1_MASTER), M.read(EP1_KOKORO)
+    seg = lambda x, f0, f1: x[:, int(M.SR * f0 / 24): int(M.SR * f1 / 24)]      # noqa: E731
+    spans = dict(f0_18=(0, 18), f18_120=(18, 120), f120_720=(120, 720))
+    pk = lambda x, y: {k: round(M.sample_peak_db(seg(x - y, *v)), 1) for k, v in spans.items()}    # noqa: E731
+    qa = dict(built_by="audio/ep02/intro/intro_ep2.py mix (the line is Ep1's: the master is Ep1's aired intro master, "
+                       "copied byte for byte)",
+              decision="the showrunner, 2026-10-10: the typed quote stays 'near the singularity; unclear which side.' in "
+                       "every episode; the first build's \"her\" and its key taps are dropped",
+              master=os.path.relpath(MASTER, REPO), source=os.path.relpath(EP1_MASTER, REPO),
+              sha1=dict(master=sha1(MASTER), source=sha1(EP1_MASTER)), byte_identical=sha1(MASTER) == sha1(EP1_MASTER),
+              stems=os.path.relpath(os.path.join(HERE, "stems-V1"), REPO) + " (Ep1's EL stems: "
+                    + os.path.relpath(EP1_STEMS, REPO) + ")",
+              stems_sum_residual_dbfs=round(M.sample_peak_db(sum(stems.values()) - out), 1),
+              difference_dbfs=dict(vs_ep1_aired_el=pk(out, ep1), vs_ep1_kokoro_v1=pk(out, kok),
+                                   vs_retired_her_master=pk(out, prev) if prev is not None else None),
+              ep2=dict(lufs_i=round(M.lufs(out), 3), dbtp=round(M.true_peak_db(out), 2),
+                       coldopen_f0_120_lufs=round(float(M.lufs(seg(out, 0, 120))), 2)),
+              note="the picture's only Ep2 changes (the dot's rest at 0.55, the ESC keycap, the subtitle) make no "
+                   "sound, so nothing else is swapped; the manifest plays this file at -3 dB as Ep1's film did")
+    if not qa["byte_identical"]:
+        raise SystemExit("the copy is not byte-identical to Ep1's aired master")
+    jdump(qa, os.path.join(HERE, "mix-qa.json"))
+    print(json.dumps(qa, indent=1))
+
+
+def cmd_mix_her(a):
+    """RETIRED (the first build, turned down 2026-10-10): the delivered V1 master with the VO and the SFX swapped, through the delivered build's own gain curve (its master
     gain and limiter): everything outside the cold open's line is the delivered master sample for sample."""
     import numpy as np
     sys.path.insert(0, os.path.join(REPO, "audio/intro/mix/scripts"))
@@ -361,7 +421,9 @@ def main():
     x = sp.add_parser("sfx")
     x.add_argument("--scratch", default=None, help="where the builder's synthesized one-shots are cached")
     x.add_argument("--events", default=None, help="the picture events (default: Ep1's intro-events.json)")
-    sp.add_parser("mix")
+    x = sp.add_parser("mix")
+    x.add_argument("--line", choices=["ep1", "her"], default="ep1",
+                   help="ep1 (the default, the showrunner's call): Ep1's aired master; her: the retired first build")
     a = ap.parse_args()
     dict(render=cmd_render, analyze=cmd_analyze, build=cmd_build, sfx=cmd_sfx, mix=cmd_mix)[a.cmd](a)
 

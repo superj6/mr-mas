@@ -1,5 +1,7 @@
 # ep03 · intro slot
 
+> **Item 1, the cold-open line: the typed quote stays "near the singularity; unclear which side." in every episode (showrunner, 2026-10-10).** The line planned in row 1 below is not used. Mas types and posts Ep1's line, with Ep1's picture and sound, as Ep2's intro now does ([ep02/intro-slot.md](../ep02/intro-slot.md)). Items 2–5 are unaffected.
+
 Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 3 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Eps 1–2 have already aired; item 1 is the epigraph, words only in their own medium.
 - **Retired with the v2.0 bar-9 news slot:**
   - the headlines `🍓` / `3 QUIT.` / `$157B` and the strawberries transition (all of them this episode's own events)

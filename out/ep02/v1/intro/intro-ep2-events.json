@@ -407,11 +407,11 @@
   },
   {
    "f": 18,
-   "end": 21,
+   "end": 49,
    "type": "text-type",
    "moment": "mcoldopen",
-   "what": "\"her\" types (3 keystrokes), 6 frames ahead of the VO",
-   "src": "studio/src/episodes/ep02/intro/slot.ts EP2_SLOT.cold.line.keys1"
+   "what": "\"near the singularity;\" types (21 keystrokes), 6 frames ahead of the VO",
+   "src": "studio/src/dev/mcoldopen/timeline.ts L1_KEYS"
   },
   {
    "f": 30,
@@ -420,14 +420,6 @@
    "moment": "mcoldopen",
    "what": "shot medium: beat 3: x3 again = 1:1. The reveal: composer over the log chart, Mas, the Orb; holds through \"singularity;\" (VO f35-57) so the typed line 1 stays readable.",
    "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
-  },
-  {
-   "f": 38,
-   "end": 111,
-   "type": "typing-indicator",
-   "moment": "mcoldopen",
-   "what": "the pulsing typing indicator (three dots, one lit per 5 frames, beat-locked) holds the rest of the phrase in silence; no sound",
-   "src": "studio/src/episodes/ep02/intro/slot.ts EP2_SLOT.cold.line.indicator / src/dev/mcoldopen/screen.ts drawIndicator"
   },
   {
    "f": 48,
@@ -446,10 +438,25 @@
   },
   {
    "f": 63,
+   "type": "text-type",
+   "moment": "mcoldopen",
+   "what": "shift+enter: caret to line 2",
+   "src": "studio/src/dev/mcoldopen/timeline.ts L2_BREAK"
+  },
+  {
+   "f": 63,
    "type": "acting",
    "moment": "mcoldopen",
    "what": "head tilt in the semicolon pause",
    "src": "studio/src/dev/mcoldopen/timeline.ts EV.tilt"
+  },
+  {
+   "f": 64,
+   "end": 83,
+   "type": "text-type",
+   "moment": "mcoldopen",
+   "what": "\"unclear which side.\" types (19 keystrokes), 7-8 frames ahead of the VO; line complete from 84",
+   "src": "studio/src/dev/mcoldopen/timeline.ts L2_KEYS"
   },
   {
    "f": 72,
@@ -1569,19 +1576,54 @@
  ],
  "slot": {
   "ep": 2,
-  "line": "her",
+  "line": "near the singularity; unclear which side.",
   "keys": [
    18,
    19,
-   21
-  ],
-  "indicator": [
+   21,
+   22,
+   24,
+   25,
+   26,
+   28,
+   30,
+   31,
+   33,
+   34,
+   35,
+   37,
    38,
-   111
+   40,
+   41,
+   43,
+   44,
+   46,
+   49,
+   63,
+   64,
+   65,
+   67,
+   68,
+   69,
+   70,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83
   ],
+  "indicator": null,
   "dot": 0.55,
   "keycap": "ESC",
   "subtitle": "back by popular demand"
  },
- "derived_from": "../out/season/intro/picture/intro-events.json"
+ "derived_from": "out/season/intro/picture/intro-events.json"
 }

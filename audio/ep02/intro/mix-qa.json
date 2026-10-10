@@ -1,58 +1,36 @@
 {
- "built_by": "audio/ep02/intro/intro_ep2.py mix (audio/intro/mix/scripts/mix_intro.py build('V1'), imported; only the vo and sfx inputs swapped)",
- "reproduction_residual_dbfs": -138.5,
+ "built_by": "audio/ep02/intro/intro_ep2.py mix (the line is Ep1's: the master is Ep1's aired intro master, copied byte for byte)",
+ "decision": "the showrunner, 2026-10-10: the typed quote stays 'near the singularity; unclear which side.' in every episode; the first build's \"her\" and its key taps are dropped",
  "master": "audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav",
- "vo": "audio/ep02/intro/intro-vox_vo-ep2.wav",
- "sfx": "audio/ep02/intro/intro-sfx_stem-ep2.wav",
- "limiter_over_f0_120_db": 0.001,
- "difference_after_f120_dbfs": -240.0,
- "method": "the delivered V1 master + (Ep2 VO - Kokoro VO) through mix_intro's VO fader (-4 dB) and centring + (Ep2 SFX - Ep1 SFX), each times the delivered build's gain curve (master gain + limiter). The limiter is idle over the cold open, so this equals the full rebuild at the delivered master gain, and everything from f120 on is the delivered master sample for sample.",
- "full_rebuild_crosscheck": {
-  "master_gain_db": 1.22,
-  "peak_difference_dbfs": -34.8
+ "source": "audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav",
+ "sha1": {
+  "master": "c7915e1a0fbf5cf4b4a19afc7728f06bd41a06a4",
+  "source": "c7915e1a0fbf5cf4b4a19afc7728f06bd41a06a4"
  },
- "stems_sum_residual_dbfs": -138.5,
- "vo_centre_lr_diff_lu": -1.25,
- "ep1": {
-  "lufs_i": -14.0,
-  "dbtp": -1.3
+ "byte_identical": true,
+ "stems": "audio/ep02/intro/stems-V1 (Ep1's EL stems: audio/ep01/v3-el/intro/stems-V1-el)",
+ "stems_sum_residual_dbfs": -132.5,
+ "difference_dbfs": {
+  "vs_ep1_aired_el": {
+   "f0_18": -240.0,
+   "f18_120": -240.0,
+   "f120_720": -240.0
+  },
+  "vs_ep1_kokoro_v1": {
+   "f0_18": -138.5,
+   "f18_120": -0.9,
+   "f120_720": -240.0
+  },
+  "vs_retired_her_master": {
+   "f0_18": -138.5,
+   "f18_120": -2.9,
+   "f120_720": -240.0
+  }
  },
  "ep2": {
-  "lufs_i": -13.825,
+  "lufs_i": -13.989,
   "dbtp": -1.3,
-  "coldopen_f0_120_lufs": -21.83,
-  "coldopen_f0_120_lufs_ep1": -19.21,
-  "word_f22_36_lufs": -16.17,
-  "silence_f36_90_lufs": -28.5
+  "coldopen_f0_120_lufs": -19.21
  },
- "checks": {
-  "momentary_max": {
-   "vo_line": -15.7,
-   "drop_f120": -14.4,
-   "gerg_f240": -12.4,
-   "alyi_f300": -11.3,
-   "mario_f360": -11.7,
-   "nole_f420": -10.2,
-   "title_f630": -9.6
-  },
-  "vo_over_music_lu": 6.5,
-  "shout_A_vs_music_lu": -2.3,
-  "klaxon_sfx_vs_music_lu": -2.0,
-  "mario_blips_vs_music_lu": -8.1,
-  "nole_blips_vs_music_lu": -7.5,
-  "gerg_blips_vs_music_lu": -6.1,
-  "bookend_music_lufs": {
-   "before": -12.3,
-   "after": -18.9
-  },
-  "ding_over_music_lu": 12.1,
-  "harmon_vs_rest_of_score_lu": {
-   "f540-565": -0.9,
-   "f570-585": -4.2,
-   "f585-600": -4.1,
-   "f600-630": -27.4
-  },
-  "rip_brass_vs_rest_lu": -2.6,
-  "rip_brass_vs_sfx_lu": 3.9
- }
+ "note": "the picture's only Ep2 changes (the dot's rest at 0.55, the ESC keycap, the subtitle) make no sound, so nothing else is swapped; the manifest plays this file at -3 dB as Ep1's film did"
 }
