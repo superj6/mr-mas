@@ -6,7 +6,7 @@ assemble.py, locked) pointed at Ep2: the same build, the same encoder (libfdk_aa
   (through ops/heavy.sh: the encode is heavy; ASM_SCRATCH=<dir> for the episode WAV)
 
 The order is the manifest's: cold open -> the Ep2 intro variant -> the filename card (ep1.1_her.wav) -> Acts One to
-Four -> the tag -> (the tag's hum held under black) -> the Orb outro (Ep2's, credit "opus 5.5").
+Four -> the tag -> the Orb outro (Ep2's, credit "opus 5.5"; 15.0 s with its cast page). No hum hold: see VARIANTS.
   PICTURE  each chapter's own 1080p render, decoded and concatenated frame for frame (the concat filter; nothing is
            trimmed, padded or shifted), re-encoded once: H.264 High, CRF 18, -tune animation, 24 fps, a keyframe on
            every chapter's first frame. The story chapters: out/ep02/v1/picture/<seg>.mp4 (the per-scene renders,
@@ -15,7 +15,7 @@ Four -> the tag -> (the tag's hum held under black) -> the Orb outro (Ep2's, cre
   SOUND    one 48 kHz stereo track built sample-exact in numpy, each chapter exactly its picture's length: the story
            segments and the card play the final mixes (out/ep02/v1/mix/<seg>-mix.wav) as they are, back to back; the
            intro and the outro play their own masters at the manifest's gains (-3 dB, -1 dB); the outro plays the mix's
-           outro-mix.wav (the tag's hum held 2 s under its head). Seams: a 3 ms de-click where a join isn't sample-
+           outro-mix.wav (the tag's room held 2 s under its head, its first hit -6 dB). Seams: a 3 ms de-click where a join isn't sample-
            continuous; at intro -> card the card's room is led in under the intro's last 0.3 s. AAC-LC 256 kb/s
            (libfdk_aac: the bundled ffmpeg's native aac wrote bursts of garbage on hot transients, Ep1 v3.4).
   CHAPTERS titled, from an ffconcat chapter list.
@@ -73,17 +73,23 @@ TITLES = {"coldopen": "Cold open", "intro": "Intro", "card": "ep1.1_her.wav", "a
 # (the chapter titles are the proposal's act names; the release pass checks them against LEARNINGS M1 before publishing)
 # the variants: the manifest (chapter order, the intro and outro and their gains), the story pictures, the final mixes,
 # the film's name, the locks the transcript reads, and chapter titles that differ from TITLES
+#
+# NO HUM HOLD in Ep2 (the assembly pass, 2026-10-10). Ep1's v3.2 seam held the tag's last frame for 18 frames because Ep1's
+# tag ended on 1.25 s of black under the vault's hum. Ep2's tag ends on Mas's face, and the cut to the outro's black IS the
+# downbeat: the proposal's seam 30 ("cut on the downbeat to black"), shots-tag.md 23.09 ("his reaction, not a freeze
+# frame"), and E02-13's cue sheet ("every voice stops dead ... no ring-out (the outro starts on its own music, E02-14)").
+# Holding the last frame would freeze his face for 0.75 s and put the outro's downbeat late. The tag's room still carries
+# across: outro-mix.wav has the tag-tail stem under the outro's first 2 s (mix_episode.outro_mix). hum_gap() is kept for
+# a variant that wants it (dict(frames=, tail=, out=)).
 VARIANTS = {
     # v1: THE film. The ElevenLabs cast (MARIO on Kokoro), on the EL-timed lock (the master): show/reel/ep02-v1-el/
     "v1": dict(man="show/reel/ep02-v1-el/ep02-v1-el.manifest.json", pic="picture", mix="mix", film="ep02-v1", label="v1",
-               locks="show/episodes/ep02/production/v1/lock/{seg}.json", transcript="transcript-v1.txt", titles={},
-               outro_audio="outro-mix.wav",
-               hum_gap=dict(frames=18, tail="audio/reel/ep02-v1/stems/el/tag-tail.flac", out="out/ep02/v1/assembly-v1")),
+               locks="show/episodes/ep02/production/v1/lock/{seg}.json", transcript="transcript-film.txt", titles={},
+               outro_audio="outro-mix.wav", hum_gap=None),
     # v1-kokoro: the base lock's film (Kokoro timing), for a check before the EL takes exist
     "v1-kokoro": dict(man="show/reel/ep02-v1/ep02-v1.manifest.json", pic="picture", mix="mix-kokoro", film="ep02-v1-kokoro",
                       label="v1, Kokoro timing", locks="show/episodes/ep02/production/v1/lock/{seg}.json",
-                      transcript="transcript-v1-kokoro.txt", titles={}, outro_audio="outro-mix.wav",
-                      hum_gap=dict(frames=18, tail="audio/reel/ep02-v1/stems/tag-tail.wav", out="out/ep02/v1/assembly-v1-kokoro")),
+                      transcript="transcript-film-kokoro.txt", titles={}, outro_audio="outro-mix.wav", hum_gap=None),
 }
 
 

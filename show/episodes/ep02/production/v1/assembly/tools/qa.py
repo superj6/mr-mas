@@ -15,7 +15,8 @@
   6. FLASHES     the whole film, flashcheck.py's method (Ep2's copy, studio/src/episodes/ep02/pixel/tools/), on
                  160 x 90 frames STREAMED (never the whole film in memory): limit 3 in any 1 s, red too
   7. SHEET       one frame every 10 s -> out/ep02/v1/<film>-sheet.png
-  8. TRANSCRIPT  every line of the six locks at its episode timecode -> assembly/transcript-v1.txt
+  8. TRANSCRIPT  every line of the six locks at its episode timecode, the intro's "her", the outro's two pages (read from
+                 its timeline.ts) -> assembly/<the variant's transcript> (v1: transcript-film.txt)
 Writes assembly/<variant>-qa.json.
 """
 from __future__ import annotations
@@ -263,6 +264,22 @@ def picture_qa(film, asm, sheet_out):
     return flash, {"file": os.path.relpath(sheet_out, ROOT), "frames": len(thumbs)}
 
 
+OUTRO_TS = f"{ROOT}/studio/src/episodes/ep02/outro/timeline.ts"
+INTRO_HER_F = 23   # the intro's "her": Jeremy's read starts on intro frame 23.4 (audio/ep02/intro/README.md, "The fit")
+
+
+def outro_text():
+    """the outro's words, read from its own timeline.ts (so the transcript can't drift from the picture): page 1's header,
+    credits and verdict; page 2's frame, header, cast and tools"""
+    src = open(OUTRO_TS, encoding="utf-8").read()
+    const = lambda name: re.search(rf"export const {name}\b[^=]*=\s*(.*?);\n", src, re.S).group(1)  # noqa: E731
+    strs = lambda name: re.findall(r"'([^']*)'", const(name))  # noqa: E731
+    show, file_ = strs("SHOW")[0], strs("FILE")[0]
+    pairs = lambda name: [f"{r}: {v}" for r, v in re.findall(r"\['([^']*)',\s*'([^']*)'\]", const(name))]  # noqa: E731
+    return dict(page1=[f"{show} · {file_}", *strs("CREDITS"), strs("VERDICT")[0]], head2=int(re.search(r"head2:\s*(\d+)", src).group(1)),
+                cast_head=strs("CAST_HEAD")[0], cast=pairs("CAST_A") + pairs("CAST_B"), tools=strs("TOOLS"))
+
+
 def transcript(variant, asm, out_txt):
     lock = lambda s: f"{ROOT}/" + asm.get("locks", "show/episodes/ep02/production/v1/lock/{seg}.json").format(seg=s)  # noqa: E731
     rows = []
@@ -270,10 +287,13 @@ def transcript(variant, asm, out_txt):
         f0 = c["start_frame"]
         if c["id"] == "intro":
             rows.append((f0, c["title"], "", "[the main title, 30 s: its own mix]"))
+            rows.append((f0 + INTRO_HER_F, c["title"], "mas (v.o.)", "her  [typed on the monitor; then the typing indicator]"))
         elif c["id"] == "card":
             rows.append((f0, c["title"], "", "ep1.1_her.wav  [typed on black, 2 s]"))
         elif c["id"] == "outro":
-            rows.append((f0, c["title"], "", "[the Orb's scan; mr. mas · ep1.1_her.wav / art · script · music · voices · edit: opus 5.5 / prompt: jgon]"))
+            o = outro_text()
+            rows.append((f0, c["title"], "", "[the Orb's scan; " + " / ".join(o["page1"]) + "]"))
+            rows.append((f0 + o["head2"], c["title"], "", f"[the cast page; {o['cast_head']}: " + " · ".join(o["cast"]) + " / " + " / ".join(o["tools"]) + "]"))
         elif c["id"] not in ("coldopen", "act1", "act2", "act3", "act4", "tag"):
             rows.append((f0, rows[-1][1] if rows else "", "", "[the vault's hum under black, %.2f s]" % c["seconds"]) if c["id"] == "tag-hum" else (f0, c["id"], "", ""))
         else:

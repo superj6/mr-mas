@@ -174,13 +174,15 @@ $PY audio/reel/ep02-v1/mix_episode.py act3 act4        # some segments (a change
 
 ### 7.1 The film
 
+**Built 2026-10-10 by the assembly pass:** `out/ep02/v1/ep02-v1.mp4`, 23:41.00, every QA check passing; the record, the chapters and the human checks are in [assembly.md](assembly.md).
+
 ```sh
 ASM_SCRATCH=$S bash ops/heavy.sh $PY $A/tools/assemble.py v1 [--dry]   # -> out/ep02/v1/ep02-v1.mp4 + $A/v1-assembly.json
-ASM_SCRATCH=$S bash ops/heavy.sh $PY $A/tools/qa.py v1                  # -> $A/v1-qa.json, $A/transcript-v1.txt, the sheet
+ASM_SCRATCH=$S bash ops/heavy.sh $PY $A/tools/qa.py v1                  # -> $A/v1-qa.json, $A/transcript-film.txt, the sheet
 bash ops/heavy.sh $PY $A/tools/seam_frames.py v1                        # each chapter's edge frames against its source
 ```
 
-- **The chapters:** the cold open, the Ep2 intro variant (§8), the card `ep1.1_her.wav` (`out/ep02/v1/picture/card.mp4`), the four acts (`out/ep02/v1/picture/<seg>.mp4`, the per-scene concat), the tag, the tag's hum under black, Ep2's outro (credit `art · script · music · voices · edit: opus 5.5` / `prompt: jgon`). Titles: Act One · the séance, Act Two · her, Act Three · leave them up, Act Four · as a guest, Tag · august (the proposal's names; the release pass checks them against LEARNINGS M1).
+- **The chapters:** the cold open, the Ep2 intro variant (§8), the card `ep1.1_her.wav` (`out/ep02/v1/picture/card.mp4`), the four acts (`out/ep02/v1/picture/<seg>.mp4`, the per-scene concat), the tag, Ep2's outro (credit `art · script · music · voices · edit: opus 5.5` / `prompt: jgon`). No hum hold between the tag and the outro: the tag cuts on the downbeat to the outro's black (assembly.md §3). Titles: Act One · the séance, Act Two · her, Act Three · leave them up, Act Four · as a guest, Tag · august (the proposal's names; the release pass checks them against LEARNINGS M1).
 - **Unchanged from Ep1:** the picture decoded and concatenated frame for frame and encoded once (CRF 18, a keyframe on every chapter); the sound built sample-exact in numpy, each chapter exactly its picture's length (it refuses to pad or trim); **libfdk_aac** at 256 kb/s; the QA's **decoded-vs-source check** per chapter (a burst = more than 0.2 of full scale off the source); the **flash check streamed** (160 × 90 frames, never the whole film in memory: Ep1's first version held 10 GB and was killed), with Ep2's copy of `flashcheck.py`. `v1-kokoro` is a second variant (the base lock's mixes) for a check before the EL takes exist.
 - `flash_seg.py <file.mp4>` measures one picture (limit 3 in any second); `scene_cut.py <seg> <scene>|--all` cuts a scene with its sound for review (§4).
 
