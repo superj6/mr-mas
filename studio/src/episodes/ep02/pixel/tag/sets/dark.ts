@@ -5,14 +5,17 @@
 // the monitor's cyan), with the tag's own drawings:
 //   wideBack(b, f, st)     [W] 23.01's arrival: the room from behind him, the monitor's glow on, Ep1's GUEST frame on
 //                          the wall; his back as he sits at the desk (sc 22's match: his back in the same place in frame,
-//                          x ~270, as he walked away across the lot); THE ORB at his shoulder; then the refiled complaint
+//                          x ~270, as he walked away across the lot), a window on the left wall; THE ORB on his right
+//                          shoulder; then the refiled complaint
 //                          dropping from above onto the desk in front of the monitor: THUD (the room jolts, he doesn't)
 //   coverOTS(b, f, st)     [OTS] 23.01: over his right shoulder, down onto the desk: the complaint's cover, legible:
 //                          NOLE v. MANALT ET AL. · FEDERAL COURT, the (FOR NOW) note stuck to it, crossed out
 //   pagesECU(b, f, st)     [ECU] 23.02: its pages turned by his hand: !! · ! · . (each page's one sentence ends in its
-//                          punctuation, drawn big, the cold open's ECU grammar); then he slides the stack aside
+//                          punctuation, drawn big, the cold open's ECU grammar); then he slides the stack aside, and
+//                          the camera tilts up to the monitor's lit screen
 //   otsDark(b, f, paint)   [OTS] 23.04-23.05: Act Two's OTS (copied), with THE ORB at his shoulder (st.mid)
-//   orbAt / ORB_*          the Orb's places in the OTS: at his shoulder, in front of the screen
+//   orbAt / ORB_*          the Orb's places in the OTS: on his right shoulder (over it, nearer the lens), in front of
+//                          the screen
 //   terminalScan(b, f, st) [TERMINAL] 23.04: THE ORB's point of view (the 2.E pass, Ep1's palettes TERMINAL: 4-level CRT
 //                          teal): the photo's crowd magnified, a scan line, a bracket stepping face to face, `human`
 //                          under each, its log counting every face in the photo
@@ -58,12 +61,29 @@ const otsGlass = (b: Buf, x: number, y: number) => {
   for (let i = -rx; i <= rx; i++) { const e = Math.round(Math.sqrt(Math.max(0, 1 - (i * i) / (rx * rx))) * 3); b.set(Math.round(cx + i), y - e, i < 0 ? PAL.C6 : PAL.G3); b.set(Math.round(cx + i), y + e, PAL.C5); }
   for (let i = -rx + 2; i <= rx - 2; i++) { const e = Math.round(Math.sqrt(Math.max(0, 1 - (i * i) / ((rx - 2) * (rx - 2)))) * 2); b.set(Math.round(cx + i), y + 9 - e, PAL.C7); b.set(Math.round(cx + i), y + 9 + e, PAL.C4); }
 };
-/** Ep1's framed GUEST lanyard on the wall (act2 guestFrame: rooms/darkroom-act3's frame at the OTS's soft depth) */
+/** Ep1's framed GUEST lanyard on the wall (rooms/darkroom-act3's frame, Ep1's lanyard: the grey-blue strap, the card
+ *  with its red band): drawn bigger than Act Two's so it reads as a lanyard and GUEST is legible at 1080p (the review:
+ *  at 26 x 22 with a blank card it read as a calendar icon, and the Ep1 callback was lost). The strap hangs in a V from
+ *  two pins to the clip, the card under it */
 const guestFrame = (b: Buf, x: number, y: number) => {
-  fill(b, x, y, 26, 22, PAL.D2); fill(b, x, y, 26, 1, PAL.D3); fill(b, x + 2, y + 2, 22, 18, PAL.N1);
-  for (let i = 4; i < 22; i++) b.set(x + i, y + 4, PAL.G2);
-  fill(b, x + 8, y + 8, 10, 8, PAL.G5); fill(b, x + 8, y + 8, 10, 2, PAL.R1);
-  for (let i = 0; i < 26; i++) b.set(x + i, y + 22, PAL.N0);
+  const w = 36, h = 38;
+  fill(b, x + 2, y + h, w, 1, PAL.N0); fill(b, x + w, y + 2, 1, h - 1, PAL.N0);
+  fill(b, x, y, w, h, PAL.D2); fill(b, x, y, w, 1, PAL.D3); fill(b, x, y, 1, h, PAL.D3); fill(b, x + w - 1, y + 1, 1, h - 1, PAL.D1);
+  fill(b, x + 3, y + 3, w - 6, h - 6, PAL.N1); fill(b, x + 3, y + 3, w - 6, 1, PAL.N0);
+  // the strap: from two pins at the mat's top corners down in a V to the clip, two px wide (lit side, shadow side)
+  const cx = x + (w >> 1), clipY = y + 17;
+  for (const side of [-1, 1]) {
+    const px0 = cx + side * 11, py0 = y + 6;
+    b.set(px0, py0 - 1, PAL.G6);
+    const n = clipY - py0;
+    for (let i = 0; i <= n; i++) { const X = Math.round(px0 + ((cx + side * 2 - px0) * i) / n), Y = py0 + i; b.set(X, Y, PAL.G3); b.set(X + side, Y, PAL.G2); }
+  }
+  fill(b, cx - 2, clipY - 1, 5, 4, PAL.G5); fill(b, cx - 2, clipY - 1, 5, 1, PAL.G6);
+  // the card: its red band, GUEST in the small caps (Ep1's lanyard)
+  const cw = tinyWidth('GUEST') + 7, cxl = cx - (cw >> 1), cy = clipY + 3;
+  fill(b, cxl + 1, cy + 1, cw, 13, PAL.N0);
+  fill(b, cxl, cy, cw, 13, PAL.P1); fill(b, cxl, cy, cw, 3, PAL.R2); fill(b, cxl, cy + 12, cw, 1, PAL.P0);
+  tiny(b, 'GUEST', cxl + 4, cy + 5, PAL.N1);
 };
 /** the room behind the monitor: Ep1's plate slid 60 px and stepped down 3 rungs (act2 otsRoom), the GUEST frame */
 let otsBg: Buf | null = null;
@@ -73,15 +93,28 @@ const otsRoom = (): Buf => {
   drawDarkPlate(bg, 0, {tally: 2, glass: true}); drawDarkPlateDesk(bg, 0, {tally: 2, glass: true}); drawDarkPlateFront(bg, 0, {tally: 2, glass: true});
   const sh = new Buf(480, 270, PAL.N0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) sh.set(x, y, stepColor(bg.get(Math.min(479, x + 60), y), -3));
-  guestFrame(sh, 396, 46);
+  // the plate's own monitor light came with the slide (a teal slab on the desk behind his head, left of the screen, with
+  // no source from here: the review): left of the OTS monitor the cyan walks to the navy, and the desk is the dark wood
+  for (let y = 0; y < RH; y++) for (let x = 0; x < MON_OTS.x - 12; x++) {
+    const fm = familyOf(sh.c[y * W + x]);
+    if (fm && (fm[0] === 'C' || fm[0] === 'K')) sh.c[y * W + x] = fm[1] < 2 ? PAL.N1 : fm[1] < 5 ? PAL.N2 : PAL.N3;
+  }
+  deskDark(sh, 0, MON_OTS.x - 12);
+  guestFrame(sh, 390, 36);
   otsBg = sh;
   return sh;
 };
+/** the desk's top band (y DESK_TOP..DESK_FOOT) as dark wood between x0 and x1: its far edge a rung up, the wood a rung
+ *  under the lit desk by the monitor (D1 with D0) */
+const DESK_TOP = 131, DESK_FOOT = 176;
+const deskDark = (b: Buf, x0: number, x1: number) => {
+  for (let y = DESK_TOP; y < DESK_FOOT; y++) for (let x = x0; x < x1; x++) b.c[y * W + x] = y === DESK_TOP ? PAL.D1 : bayer(x, y) < 0.3 ? PAL.D1 : PAL.D0;
+};
 export const OTS_HEAD = {x: -30, y: 30, scale: 1.5};
 const darkHead = (b: Buf) => { drawBackHead(b, OTS_HEAD.x, OTS_HEAD.y, {scale: OTS_HEAD.scale, turn: 1, light: 'monitor', flip: true}); };
-/** [OTS] over his right shoulder onto the monitor (act2 otsDark); st.mid draws between the room and his head (the Orb
- *  at his shoulder, its toast) */
-export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number; mid?: (b: Buf) => void} = {}) => {
+/** [OTS] over his right shoulder onto the monitor (act2 otsDark); st.mid draws between the room and his head, st.front
+ *  over him (the Orb on his shoulder and on its way to the screen, its toast) */
+export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number; mid?: (b: Buf) => void; front?: (b: Buf) => void} = {}) => {
   b.c.set(otsRoom().c.subarray(0, 480 * RH));
   const T = MON_OTS;
   rect(T.x - 8, T.y - 8, T.w + 16, T.h + 16, b.ink(PAL.G1)); rect(T.x - 8, T.y - 8, T.w + 16, 1, b.ink(PAL.G3)); rect(T.x - 1, T.y - 1, T.w + 2, T.h + 2, b.ink(PAL.N0));
@@ -94,13 +127,15 @@ export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number; mi
   otsGlass(b, 402, 160);
   st.mid?.(b);
   darkHead(b);
+  st.front?.(b);
   if (st.dim) for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -st.dim));
 };
 
 // ================================================================== THE ORB in the OTS (23.04-23.05)
-/** its home by his left shoulder (frame right of his head, in front of the screen's lower-left corner), and its place in
- *  front of the photo (nearer the screen: smaller) */
-export const ORB_HOME = {x: 156, y: 160, r: 10};
+/** its home ON his right shoulder (over his right shoulder the near shoulder is frame right of his head): perched over
+ *  the shoulder's line, nearer the lens than the screen so a size bigger (the review: it sat on the monitor's bezel,
+ *  150 px from him, and read as already at the screen); and its place in front of the photo (nearer the screen: smaller) */
+export const ORB_HOME = {x: 98, y: 171, r: 12};
 export const ORB_SCREEN = {x: 196, y: 104, r: 8};
 /** where its verdict hangs: centred under the photo it verified (the photo's foot in the OTS's screen) */
 export const TOAST_AT = {cx: MON_OTS.x + 22 + 79, y: MON_OTS.y + 50 + 72 - 18};
@@ -111,8 +146,9 @@ export const orbAt = (t: number): {x: number; y: number; r: number} => {
 };
 export const drawOrbOTS = (b: Buf, f: number, st: {t: number; aperture?: number; scanning?: boolean; look?: [number, number]; still?: boolean; toast?: number; toastText?: string}) => {
   const p = orbAt(st.t), bob = orbBob(f, !!st.still);
-  // its glow on the screen glass behind it (it is lit by the screen, a soft cyan halo a rung up)
-  glow(b, p.x, p.y + bob, p.r * 2.2, p.r * 2.2, 1);
+  // its glow on the screen glass behind it once it is out in front of the screen (it is lit by the screen, a soft cyan
+  // halo a rung up); none on his shoulder
+  if (st.t > 0.4) glow(b, p.x, p.y + bob, p.r * 2.2, p.r * 2.2, 1);
   drawOrb(b, p.x, p.y + bob, p.r, {look: st.look ?? [0.55, -0.6], aperture: st.aperture ?? 0.5, scanning: !!st.scanning, monitor: 1});
   if (st.toast !== undefined && st.toast >= 0) {
     const s = st.toastText ?? 'verified: human (all of them)';
@@ -147,21 +183,48 @@ const stackFar = (b: Buf, x: number, y: number) => {
   for (let j = 0; j < 9; j++) fill(b, x - 5, y + 12 + j, w + 10, 1, j % 2 ? PAL.P0 : PAL.G5);
   fill(b, x - 5, y + 21, w + 10, 1, PAL.N0);
 };
+/** a window on the left wall in the wide (x, y its glass's top-left): the city at night through it, in whole pixels:
+ *  the sky N0 to a faint glow over the skyline, the blocks as silhouettes with a grid of lit windows (a few warm, very
+ *  few bright), a red light on the tallest roof, the frame, its mullion and transom, the sill catching the monitor */
+const cityWindow = (b: Buf, x: number, y: number, w: number, h: number) => {
+  fill(b, x - 3, y - 3, w + 6, h + 6, PAL.N2); fill(b, x - 3, y - 3, w + 6, 1, PAL.N3); fill(b, x + w + 2, y - 2, 1, h + 4, PAL.N3);
+  vramp(b, x, y, w, h, [PAL.N0, PAL.N0, PAL.N1, PAL.U0]);
+  let bx = x, i = 0, tallest = {x: 0, y: y + h};
+  while (bx < x + w) {
+    const bw = 9 + Math.floor(hash(i, 3, 41) * 15), top = y + Math.round(h * (0.3 + hash(i, 5, 43) * 0.42)), xe = Math.min(bx + bw, x + w);
+    if (top < tallest.y) tallest = {x: bx + (bw >> 1), y: top};
+    for (let yy = top; yy < y + h; yy++) for (let xx = bx; xx < xe; xx++) b.set(xx, yy, yy === top ? PAL.N2 : PAL.N1);
+    for (let yy = top + 3; yy < y + h - 1; yy += 4) for (let xx = bx + 2; xx < xe - 1; xx += 3) {
+      const q = hash(xx, yy, 47);
+      if (q < 0.2) b.set(xx, yy, q < 0.012 ? PAL.W6 : q < 0.15 ? PAL.W3 : PAL.D3);
+    }
+    bx = xe + 1 + Math.floor(hash(i, 7, 49) * 3); i++;
+  }
+  b.set(tallest.x, tallest.y - 1, PAL.R3); b.set(tallest.x, tallest.y - 2, PAL.N2);
+  fill(b, x + (w >> 1) - 1, y, 3, h, PAL.N2); fill(b, x + (w >> 1) + 1, y, 1, h, PAL.N3);
+  fill(b, x, y + Math.round(h * 0.36), w, 2, PAL.N2);
+  fill(b, x - 6, y + h + 3, w + 12, 3, PAL.G0); fill(b, x - 6, y + h + 3, w + 12, 1, PAL.G1); fill(b, x + w - 30, y + h + 3, 36, 1, PAL.G2);
+};
 /**
  * st.sit 0 (standing at the chair) · 1 (half down) · 2 (seated); st.drop: -1 (nothing yet) · 0..2 the complaint falling
  * (held drawings) · 3 landed; st.jolt: the room's jolt on the landing (whole pixels down); st.dust 0..3
  */
 export const wideBack = (b: Buf, f: number, st: {sit: 0 | 1 | 2; drop: number; jolt?: number; dust?: number}) => {
   b.c.set(otsRoom().c.subarray(0, 480 * RH));
-  // the OTS room's left side carries Ep1's plate's own monitor light (its cone on the desk and the wall, cyan): from
-  // behind him, wider, that light has no source, so it goes to the room's dark (the cyan walked to the navy family)
-  for (let y = 0; y < RH; y++) for (let x = 0; x < WIDE_MON.x - 8; x++) {
-    const fm = familyOf(b.c[y * W + x]);
-    if (fm && (fm[0] === 'C' || fm[0] === 'K')) b.c[y * W + x] = fm[1] < 2 ? PAL.N1 : fm[1] < 5 ? PAL.N2 : PAL.N3;
+  // the OTS room's left side is Ep1's plate slid (its monitor's light, its board, its clock, a window's specks, all soft):
+  // from behind him, wider, it read as a smear (the review). Left of the monitor it is redrawn plain: the dark wall, the
+  // desk's dark wood running on under the monitor, the floor's dark; a window comes after the light (below)
+  const LX = WIDE_MON.x - 6;
+  for (let y = 8; y < RH; y++) for (let x = 0; x < LX; x++) {
+    if (y < DESK_TOP) b.c[y * W + x] = bayer(x, y) < 0.22 ? PAL.N1 : PAL.N0;
+    else if (y >= DESK_FOOT) { const fm = familyOf(b.c[y * W + x]); if (!fm || fm[0] !== 'N') b.c[y * W + x] = bayer(x, y) < 0.5 ? PAL.N1 : PAL.N0; }
   }
+  deskDark(b, 0, LX);
   // the room a rung up near the monitor (its light): the wall and the desk round it
   const M = WIDE_MON;
   glow(b, M.x + M.w / 2, M.y + M.h / 2 + 30, 230, 120, 2);
+  // the window on the left wall: the city at night, crisp (dim: the monitor is the light in this room)
+  cityWindow(b, 26, 22, 146, 82);
   // the monitor on the desk, its screen the tag's dim feed (Ep1's screenDim: sound off, nothing to read)
   rect(M.x - 6, M.y - 6, M.w + 12, M.h + 12, b.ink(PAL.G1)); rect(M.x - 6, M.y - 6, M.w + 12, 1, b.ink(PAL.G3)); rect(M.x - 1, M.y - 1, M.w + 2, M.h + 2, b.ink(PAL.N0));
   const scr = new Buf(M.w, M.h, PAL.N0);
@@ -173,8 +236,9 @@ export const wideBack = (b: Buf, f: number, st: {sit: 0 | 1 | 2; drop: number; j
   rect(M.x + M.w / 2 - 9, M.y + M.h + 6, 18, 10, b.ink(PAL.G1)); rect(M.x + M.w / 2 - 22, M.y + M.h + 15, 44, 3, b.ink(PAL.G2));
   // the screen's pool on the desk top in front of it
   for (let y = M.y + M.h + 12; y < M.y + M.h + 40; y++) for (let x = M.x - 20; x < M.x + M.w + 20; x++) if (((x + y) & 3) === 0) b.set(x, y, stepColor(b.get(x, y), 1));
-  // the complaint dropping from above onto the desk in front of the monitor's right half
-  const SX = 290, SY = 128;
+  // the complaint dropping from above onto the desk in front of the monitor's right end (clear of the Orb on his right
+  // shoulder)
+  const SX = 306, SY = 128;
   if (st.drop >= 0) {
     const dy = [-150, -86, -26, 0][clamp(st.drop, 0, 3)];
     if (st.drop < 3) {
@@ -206,8 +270,9 @@ export const wideBack = (b: Buf, f: number, st: {sit: 0 | 1 | 2; drop: number; j
   for (let x = x0; x <= x1; x++) { const c = x <= x0 + 1 || x >= x1 - 1 ? PAL.N1 : t.get(x, foot) === 0x1000000 ? PAL.G0 : t.get(x, foot); for (let y = foot + 1; y < RH; y++) t.set(x, y, c); }
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) { const v = t.c[y * 480 + x]; if (v !== 0x1000000) b.set(x, y, v); }
   chairBack(b, HX + Math.round(62 * sc), 150);
-  // THE ORB at his right shoulder (frame left of his head, clear of where the complaint falls), looking at the screen
-  drawOrb(b, 230, 106 + orbBob(f), 7, {look: [0.4, -0.7], aperture: 0.5, monitor: 1});
+  // THE ORB on his right shoulder (from behind him, frame right of his head, as in the OTS: perched over the shoulder's
+  // line, riding it down as he sits; the complaint falls beyond it), looking at the screen
+  drawOrb(b, 285, 131 + dy + orbBob(f), 7, {look: [0.05, -0.8], aperture: 0.5, monitor: 1});
 };
 
 // ================================================================== 23.01: the cover (over his shoulder, down)
@@ -301,13 +366,37 @@ const pageHand = (b: Buf, at: [number, number], pose: 'pinch' | 'flat') => {
   forearm(b, [cx, cy], [cx + (bx / bl) * 200, cy + (by / bl) * 200], 3.4 * 4.6, 8.6 * 4.6, HSLEEVE);
   drawHand(b, h.hand, h.x, h.y, {map: (c) => (isSkin(c) ? stepColor(c, -1) : c)});
 };
+/** above the ECU's top edge, for the tilt up (content y < 0, drawn at frame y + tl): the desk running on to its far
+ *  edge, the monitor's stand rising to the bezel's foot, and the screen's lower part lit, HTURT's feed on it (the
+ *  feed 23.03 opens on, a rung up: a screen glowing in a dark room), its light pooling on the desk under it */
+let tiltScr: Buf | null = null;
+const monitorAbove = (b: Buf, tl: number) => {
+  const Y = (cy: number) => cy + tl;
+  for (let y = 0; y < tl; y++) for (let x = 0; x < W; x++) { const cy = y - tl; b.set(x, y, cy >= -44 ? ((x + (cy + 4100) * 3) % 41 < 2 || bayer(x, y) < 0.2 ? PAL.D1 : PAL.D0) : bayer(x, y) < 0.2 ? PAL.N1 : PAL.N0); }
+  if (!tiltScr) {
+    tiltScr = new Buf(MON_POV.w, MON_POV.h, PAL.N0);
+    feedPainter({post: false})(tiltScr, 0);
+    for (let i = 0; i < tiltScr.c.length; i++) tiltScr.c[i] = stepColor(tiltScr.c[i], 1);
+    for (let y = 0; y < tiltScr.h; y += 3) for (let x = 0; x < tiltScr.w; x++) if (bayer(x, y) < 0.5) tiltScr.set(x, y, stepColor(tiltScr.get(x, y), -1));
+  }
+  const sx = 240 - (MON_POV.w >> 1), foot = -24;
+  // the screen's light on the desk under it, a rung up, falling off toward the camera (the desk only: drawn first)
+  for (let cy = foot + 12; cy < 0; cy++) { const fy = Y(cy); if (fy < 0) continue; for (let x = 0; x < W; x++) { const d = Math.hypot((x - 240) / 300, (cy - foot - 12) / 90); if (d < 1 && bayer(x, fy) < (1 - d) * 0.8) b.set(x, fy, stepColor(b.get(x, fy), 1)); } }
+  // the bezel round the screen's foot, its lower lip catching the desk's light
+  fill(b, sx - 9, Y(foot - MON_POV.h - 9), MON_POV.w + 18, MON_POV.h + 21, PAL.G1); fill(b, sx - 9, Y(foot + 11), MON_POV.w + 18, 1, PAL.G3);
+  fill(b, sx - 1, Y(foot - MON_POV.h - 1), MON_POV.w + 2, MON_POV.h + 2, PAL.N0);
+  for (let y = 0; y < MON_POV.h; y++) { const fy = Y(foot - MON_POV.h + y); if (fy < 0 || fy >= tl) continue; for (let x = 0; x < MON_POV.w; x++) b.set(sx + x, fy, tiltScr.get(x, y)); }
+  // the stand's neck from the bezel down to its base (the base is the ECU's own, at the old top edge)
+  for (let cy = foot + 12; cy < 0; cy++) { const fy = Y(cy); if (fy < 0) continue; fill(b, 226, fy, 28, 1, PAL.G1); fill(b, 226, fy, 2, 1, PAL.G2); }
+};
 /**
  * st.page: the page lying face up (0 the cover .. 3); st.turn 0 (flat) · 1..3 the top page lifting from its foot and
  * going over the top (its curled lip rising, its underside showing), held drawings; st.hand: where his pinching hand is
  * ('lip' on the lifting edge, 'rest' at the page's lower right, null gone); st.slide: px the stack has gone left (his
- * flat hand pushing it)
+ * flat hand pushing it); st.tilt: px the camera has tilted up off the clear desk to the monitor (the shot's tail: the
+ * review found 0.45 s on a near-black desk before the cut to the bright screen; the tilt matches the cut to the POV)
  */
-export const pagesECU = (b: Buf, f: number, st: {page: number; turn?: number; hand?: 'lip' | 'rest' | 'push' | null; slide?: number}) => {
+export const pagesECU = (b: Buf, f: number, st: {page: number; turn?: number; hand?: 'lip' | 'rest' | 'push' | null; slide?: number; tilt?: number}) => {
   deskWood(b);
   // the monitor's light from above the frame on the desk and the paper
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) { const d = Math.hypot((x - 240) / 380, (y + 60) / 260); if (d < 1 && bayer(x, y) < (1 - d) * 0.9) b.set(x, y, stepColor(b.get(x, y), 1)); }
@@ -341,6 +430,8 @@ export const pagesECU = (b: Buf, f: number, st: {page: number; turn?: number; ha
   }
   if (st.hand === 'rest') pageHand(b, [PAGE.x + 312, 196], 'pinch');
   if (st.hand === 'push') pageHand(b, [PAGE.x - sl + 250, 120], 'flat');
+  const tl = st.tilt ?? 0;
+  if (tl > 0) { reframe(b, 0, tl); monitorAbove(b, tl); }
 };
 
 // ================================================================== 23.04: THE ORB's TERMINAL view (2.E)
@@ -359,7 +450,7 @@ const drawCrowdBig = (b: Buf) => {
   const pl = 'SIRRAH', pw2 = bpw(pl) + 28;
   fill(b, Math.round(X1 / 2 - pw2 / 2), 10, pw2, 26, PAL.N1); fill(b, Math.round(X1 / 2 - pw2 / 2), 10, pw2, 2, PAL.W7);
   bpt(b, pl, Math.round(X1 / 2 - bpw(pl) / 2), 16, PAL.P2);
-  fill(b, X1 - 92, 4, 84, 14, PAL.P2); pt(b, 'SUMMER 2024', X1 - 88, 8, PAL.R2);
+  // (the decal is drawn after the remap, in TERMINAL's own darkest and lightest: crowd())
   const faces: Array<[number, number, number]> = [];
   ROWS.forEach(({hr, y, step}, r) => {
     for (let i = -((r * 11) % step); i < X1 + step; i += step) {
@@ -380,7 +471,14 @@ const drawCrowdBig = (b: Buf) => {
 };
 let crowdBuf: Buf | null = null, crowdFaces: Array<[number, number, number]> = [];
 const crowd = () => {
-  if (!crowdBuf) { crowdBuf = new Buf(480, 270, PAL.N0); crowdFaces = drawCrowdBig(crowdBuf); applyPalette(crowdBuf, 'TERMINAL', {rect: [0, 0, SCAN.panelX, RH]}); }
+  if (!crowdBuf) {
+    crowdBuf = new Buf(480, 270, PAL.N0); crowdFaces = drawCrowdBig(crowdBuf); applyPalette(crowdBuf, 'TERMINAL', {rect: [0, 0, SCAN.panelX, RH]});
+    // the SUMMER 2024 decal in the machine's view: its words at TERMINAL's darkest on its lightest, the plate a few px
+    // wider than the words (the review: mid teal on pale teal, its S clipped by the plate's edge)
+    const dw = pw('SUMMER 2024') + 14, dx = SCAN.panelX - 6 - dw;
+    fill(crowdBuf, dx - 1, 3, dw + 2, 17, T4[0]); fill(crowdBuf, dx, 4, dw, 15, T4[3]);
+    pt(crowdBuf, 'SUMMER 2024', dx + 7, 8, T4[0]);
+  }
   return crowdBuf;
 };
 /** the four faces the bracket steps through (the two front rows, spread across the frame), and every face in the photo

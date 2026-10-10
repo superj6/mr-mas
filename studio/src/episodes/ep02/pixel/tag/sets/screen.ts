@@ -7,20 +7,22 @@
 //                          SIRRAH's plate, a SUMMER 2024 decal); the egg on a bill in a background tab (Ep3's)
 //   photoFaces(w, h)       the crowd's faces in that photo (screen px), for the Orb's TERMINAL scan (23.04)
 //   broadcastPainter(st)   23.06-23.07: the Aug 21 interview in a PLAIN player (no network, no logo): hands and tie only,
-//                          no face, no voice (the player's speaker muted); its own lower third, whole, "…having me
+//                          no face, no voice (the player's speaker muted), the hands at a real size; its own lower third, whole, "…having me
 //                          speak… It's a little bit dangerous out there." (his real words, the faithful crop); the
 //                          player's chrome (its bar, the lower third, the frame) clearing in held steps (st.clear)
-//   podiumPainter(st)      23.07-23.08: THE PODIUM on its hill at dusk, still facing away; his hands from below the frame
-//                          (forearms foreshortened toward the lens, white cuffs, navy sleeves) pump up a balloon in
-//                          CHATGTP's bubble shape (dot eyes, no words, no sticker) on a hand pump, tie it to the
-//                          podium's corner, and go; the balloon on a slack string; then the string TAUT over the far edge
+//   podiumPainter(st, v)   23.07-23.08: THE PODIUM on its hill at dusk, still facing away, on the monitor or (v, the
+//                          review's fixes) FULL FRAME, the stage where the screen was; his hands from below the frame
+//                          (white cuffs, navy sleeves; in the pump each arm bent at an elbow inside the frame) pump up a
+//                          balloon in CHATGTP's bubble shape (dot eyes, no words, no sticker) on a hand pump, tie it to
+//                          the podium's corner, and go; the balloon on a slack string; then the string TAUT over the
+//                          lip, the balloon pulled down behind the podium, and tugged a step lower
 // The candidate is hands and tie only (guardrails; art.md §4): no face, no voice, no fist pumps.
 import {Buf, line, ellipse, poly, bayer, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../../shared/pixel/palette';
 import type {Painter} from '../../../../../shared/pixel/kits/mas-monitor';
 import {fill, pt, pw, pwrap, tiny, tinyWidth, vramp} from '../../art/kit';
 import {drawChatBalloon, drawEggTab} from '../../art/creatures';
-import {placeHand, drawHand, POSES} from '../../art/cast/hands2';
+import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
 import type {HandPose} from '../../art/cast/hands2';
 import {forearm} from './common';
 
@@ -34,6 +36,25 @@ const SLEEVE_N = [PAL.N0, PAL.N2, PAL.N3, PAL.N4, PAL.N6];
 const rHand = (scr: Buf, pose: HandPose, at: [number, number], anchor: 'index' | 'middle' | 'thumb' | 'wrist', s: number, elbow: [number, number], o: {key?: [number, number]} = {}) => {
   const h = placeHand(pose, {s, at, anchor, light: 'lobby', cuffRamp: CUFF_W, key: [-0.3, -0.75, 0.6]});
   forearm(scr, h.cuffEnd, elbow, Math.max(3, 3.6 * s), Math.max(6, 9.5 * s), SLEEVE_N, o.key);
+  drawHand(scr, h.hand, h.x, h.y);
+  return h;
+};
+/** a hand on an arm BENT at the elbow (the review, P5: in 23.07 each arm was one straight tapered pole from a corner
+ *  of the frame to the cuff): the upper arm from the shoulder below the frame up to the elbow inside it, nearest the
+ *  lens so widest and drawn over the forearm's root; the forearm from the elbow to the cuff, narrowing away from the
+ *  lens (common forearm: the cuff break, the long folds); the sleeve bunched on the inside of the bend */
+const rHandBent = (scr: Buf, pose: HandPose, at: [number, number], anchor: 'index' | 'middle' | 'thumb' | 'wrist', s: number, elbow: [number, number], shoulder: [number, number]) => {
+  const h = placeHand(pose, {s, at, anchor, light: 'lobby', cuffRamp: CUFF_W, key: [-0.3, -0.75, 0.6]});
+  const rc = Math.max(3, 3.3 * s), re = Math.max(5, 5.4 * s), rs = Math.max(6, 6.4 * s);
+  forearm(scr, h.cuffEnd, elbow, rc, re, SLEEVE_N);
+  sleeve(scr, shoulder, elbow, rs, re, SLEEVE_N, [-0.55, -0.83], {fold: false});
+  // the inside of the bend: two short creases a rung down, across the angle between the two segments
+  const ux = shoulder[0] - elbow[0], uy = shoulder[1] - elbow[1], vx = h.cuffEnd[0] - elbow[0], vy = h.cuffEnd[1] - elbow[1];
+  const lu = Math.hypot(ux, uy) || 1, lv = Math.hypot(vx, vy) || 1, bx = ux / lu + vx / lv, by = uy / lu + vy / lv, lb = Math.hypot(bx, by) || 1;
+  for (let i = 0; i < 2; i++) {
+    const cx = elbow[0] + (bx / lb) * (re * 0.35 + i * 3), cy = elbow[1] + (by / lb) * (re * 0.35 + i * 3);
+    for (let t = -3; t <= 3; t++) scr.set(Math.round(cx - (by / lb) * t), Math.round(cy + (bx / lb) * t), SLEEVE_N[1]);
+  }
   drawHand(scr, h.hand, h.x, h.y);
   return h;
 };
@@ -117,22 +138,26 @@ export const feedPainter = (st: {post: boolean; egg?: boolean; ticks?: Array<[nu
 const LOWER = '…having me speak… It\'s a little bit dangerous out there.';
 const tie = (b: Buf, x: number, y: number, len: number) => { poly([x - 4, y, x + 4, y, x + 3, y + 6, x + 6, y + len, x, y + len + 6, x - 6, y + len, x - 3, y + 6], b.ink(PAL.R2)); line(x + 2, y + 6, x + 4, y + len, b.ink(PAL.R1)); fill(b, x - 4, y, 8, 4, PAL.R1); };
 /** the interview's picture (no chrome): a plain set (no network, no logo), the suit from the chin down, the over-long red
- *  tie past the frame, his hands up in front of the jacket talking (held drawings on 6s) */
+ *  tie past the frame, his hands up in front of the jacket talking (held drawings on 6s). The hands are at a real
+ *  size for this framing (the review, a guardrail: at 1.15x against a jacket 60% of the screen wide a hand was about a
+ *  fifth of the shoulders, the meme's picture; the character file rules out any hand-size joke). Nearer the lens than
+ *  the chest, each hand is now about 0.4 of the shoulders' width (the jacket a little narrower, the hands about 1.9x),
+ *  held high enough that the cuffs and some sleeve stay clear of the lower third */
 const interview = (scr: Buf, k: number) => {
   const W = scr.w, H = scr.h, s = W < 200 ? 1 : 2;
   vramp(scr, 0, 0, W, H, [PAL.F1, PAL.F2, PAL.F3]);
   for (let i = 0; i < 14; i++) { const bx = (i * 67) % W, by = 10 + (i * 41) % Math.round(H * 0.5); ellipse(bx, by, 3 * s, 3 * s, scr.ink(i % 3 ? PAL.F3 : PAL.W4)); }
-  const cx = Math.round(W / 2), sh = Math.round(W * 0.3), top = Math.round(H * 0.04);
+  const cx = Math.round(W / 2), sh = Math.round(W * 0.265), top = Math.round(H * 0.04);
   // (the jacket a rung under his sleeves, so the forearms read against it: the review of the art's still)
   for (let y = top; y < H; y++) { const half = Math.min(sh, Math.round(sh * 0.78 + (y - top) * 1.4)); fill(scr, cx - half, y, half * 2, 1, PAL.N0); fill(scr, cx - half, y, 1, 1, PAL.N2); fill(scr, cx + half - 1, y, 1, 1, PAL.N2); }
   const vb = Math.round(H * 0.5);
   for (let y = top; y < vb; y++) { const hw = Math.round(((vb - y) / (vb - top)) * W * 0.07); fill(scr, cx - hw, y, hw * 2, 1, PAL.P2); line(cx - hw - 1, y, cx - hw - 3 * s, y, scr.ink(PAL.N3)); line(cx + hw, y, cx + hw + 3 * s - 1, y, scr.ink(PAL.N3)); }
   tie(scr, cx, top + 2, Math.round(H * 0.9));
   // his hands: the left palm open to the lens, the right a step lower and turned, swapping on 6s (talking, never a fist)
-  const up = Math.floor(k / 6) % 2, hs = 1.15 * s;
-  const hl: [number, number] = [cx - Math.round(W * 0.16), Math.round(H * 0.62) - up * 4 * s], hr: [number, number] = [cx + Math.round(W * 0.16), Math.round(H * 0.6) - (1 - up) * 5 * s];
-  rHand(scr, POSES.open([-0.25, -1, 0.1], [0, 0.1, -1], 'R'), [hl[0], hl[1] + 10 * s], 'wrist', hs, [hl[0] - 16 * s, H + 30]);
-  rHand(scr, POSES.open([0.3, -1, 0.2], [0.2, 0, -1], 'L'), [hr[0], hr[1] + 10 * s], 'wrist', hs, [hr[0] + 16 * s, H + 30]);
+  const up = Math.floor(k / 6) % 2, hs = 2.2 * s;
+  const hl: [number, number] = [cx - Math.round(W * 0.175), Math.round(H * 0.56) - up * 4 * s], hr: [number, number] = [cx + Math.round(W * 0.175), Math.round(H * 0.545) - (1 - up) * 5 * s];
+  rHand(scr, POSES.open([-0.25, -1, 0.1], [0, 0.1, -1], 'R'), hl, 'wrist', hs, [hl[0] - 18 * s, H + 46]);
+  rHand(scr, POSES.open([0.3, -1, 0.2], [0.2, 0, -1], 'L'), hr, 'wrist', hs, [hr[0] + 18 * s, H + 46]);
 };
 /** st.k: the frame (the hands' rhythm); st.lower: 0 none, 1 the bar sliding in, 2 the bar and his words, whole;
  *  st.clear 0..4: the player's chrome clearing (1 the lower third gone, 2 the bar gone, 3 the frame's edges gone, 4 the
@@ -162,23 +187,30 @@ export const broadcastPainter = (st: {k: number; lower: 0 | 1 | 2; clear?: numbe
 };
 
 // ================================================================== 23.07-23.08: THE PODIUM, the balloon
-/** THE PODIUM from behind (it faces away: the art's podiumBack, Ep1's roll-call podium, plain fluted gold) */
+/** THE PODIUM from behind (it faces away: the art's podiumBack, Ep1's roll-call podium, plain fluted gold); its two
+ *  mics are podiumMics (drawn after anything beyond the podium: they stand on its top, on this side) */
 const podiumBack = (b: Buf, x: number, y: number, w: number, h: number) => {
   const x0 = x - (w >> 1);
   for (let j = 0; j < h; j++) for (let i = 0; i < w; i++) { const u = i / w; let c = u < 0.05 ? PAL.W5 : u < 0.8 ? (bayer(x0 + i, y + j) < 0.3 ? PAL.W2 : PAL.W3) : PAL.W4; if (u >= 0.8 && (i - Math.round(w * 0.8)) % 5 === 0) c = PAL.W2; b.set(x0 + i, y + j, c); }
   fill(b, x0 - 3, y - 5, w + 6, 6, PAL.W6); fill(b, x0 - 3, y - 5, w + 6, 1, PAL.W8); fill(b, x0 - 3, y, w + 6, 1, PAL.W1);
   fill(b, x0 + 6, y + 6, w - 12, Math.round(h * 0.18), PAL.W1); fill(b, x0 + 6, y + 6, w - 12, 1, PAL.N1);
+};
+const podiumMics = (b: Buf, x: number, y: number) => {
   line(x - 4, y - 5, x - 7, y - 18, b.ink(PAL.N1)); line(x + 4, y - 5, x + 7, y - 18, b.ink(PAL.N1)); fill(b, x - 9, y - 21, 4, 4, PAL.N1); fill(b, x + 5, y - 21, 4, 4, PAL.N1);
 };
-/** the dusk hill behind the podium (the art's), cached per screen size; the ridge a little lower than the art's so the
- *  balloon has sky to float in */
+/** where the scene sits in the buffer: the stage box (the monitor's screen size) at (ox, oy). On the monitor the stage
+ *  is the whole screen; full frame (23.07 past the bezel, 23.08) it is where the screen was, so nothing jumps in the
+ *  dissolve, and the hill and the sky run on out to the frame's edges */
+export interface PodiumView { ox: number; oy: number; w: number; h: number }
+/** the dusk hill behind the podium (the art's), cached per buffer and stage; the ridge a little lower than the art's so
+ *  the balloon has sky to float in */
 const hillCache = new Map<string, Buf>();
-const hill = (W: number, H: number) => {
-  const key = `${W}x${H}`; const hit = hillCache.get(key); if (hit) return hit;
+const hill = (W: number, H: number, v: PodiumView) => {
+  const key = `${W}x${H}:${v.ox},${v.oy},${v.w},${v.h}`; const hit = hillCache.get(key); if (hit) return hit;
   const t = new Buf(W, H, PAL.N0);
   vramp(t, 0, 0, W, H, [PAL.U1, PAL.U2, PAL.U3, PAL.U4]);
-  const ridge = Math.round(H * 0.66);
-  for (let x = 0; x < W; x++) { const y = ridge + Math.round(Math.sin(x / 37) * 4 + Math.sin(x / 13) * 2); for (let yy = y; yy < H; yy++) t.set(x, yy, yy < y + 2 ? PAL.U1 : PAL.N1); }
+  const ridge = v.oy + Math.round(v.h * 0.66);
+  for (let x = 0; x < W; x++) { const xs = x - v.ox, y = ridge + Math.round(Math.sin(xs / 37) * 4 + Math.sin(xs / 13) * 2); for (let yy = y; yy < H; yy++) t.set(x, yy, yy < y + 2 ? PAL.U1 : PAL.N1); }
   hillCache.set(key, t);
   return t;
 };
@@ -187,41 +219,48 @@ const hill = (W: number, H: number) => {
  * 'pump' (st.size 2..4 the balloon after each stroke, st.down the handle pushed down) · 'tie' (both hands at the
  * podium's near corner post, below its lip, the string's knot; st.knot pulled) · 'tied' (st.away 0..3 the hands going
  * down out of frame; the balloon floating up and to the right on its slack string, bobbing on 6s) · 'taut' (st.taut 1
- * the jerk, 2 settled: the string snapped straight from the knot up over the podium's lip toward its far side, the
- * balloon pulled down behind the podium so only its top and its dot eyes show over the gold, as if someone on the far
- * side had just taken hold of it). st.f: the frame (the bob)
+ * the jerk, 2 settled: the string snapped straight from the knot up and over the podium's lip, cresting it and gone
+ * down the far side; the balloon pulled down behind the podium, its top and its dot eyes over the gold; 3 a beat later,
+ * tugged a step lower, the eyes' tops just over the lip, as if someone on the far side had taken hold of it and pulled).
+ * st.f: the frame (the bob)
  */
-export interface PodiumSt { phase: 'limp' | 'pump' | 'tie' | 'tied' | 'taut'; size?: number; down?: boolean; knot?: boolean; away?: number; f?: number; lift?: number; taut?: 1 | 2 }
-export const podiumPainter = (st: PodiumSt): Painter => (scr: Buf) => {
-  const W = scr.w, H = scr.h, s = W < 200 ? 1 : 2;
-  scr.c.set(hill(W, H).c);
-  const px = Math.round(W / 2), pwid = Math.round(W * 0.42), py = Math.round(H * 0.6);
+export interface PodiumSt { phase: 'limp' | 'pump' | 'tie' | 'tied' | 'taut'; size?: number; down?: boolean; knot?: boolean; away?: number; f?: number; lift?: number; taut?: 1 | 2 | 3 }
+export const podiumPainter = (st: PodiumSt, view?: PodiumView): Painter => (scr: Buf) => {
+  const W = scr.w, H = scr.h, v = view ?? {ox: 0, oy: 0, w: W, h: H}, s = v.w < 200 ? 1 : 2;
+  scr.c.set(hill(W, H, v).c);
+  const px = v.ox + Math.round(v.w / 2), pwid = Math.round(v.w * 0.42), py = v.oy + Math.round(v.h * 0.6);
   podiumBack(scr, px, py, pwid, H - py);
   const f = st.f ?? 0, BS = s * 1.2;
   const x0 = px - (pwid >> 1);
   /** the knot: on the podium's near-left corner, a little below its lip (where a string is tied off) */
   const knotAt: [number, number] = [x0 + 3, py + 8 * s];
   const size = clamp(st.size ?? 1, 1, 4) as 1 | 2 | 3 | 4;
-  const LEFT_EL: [number, number] = [px - Math.round(pwid * 0.62), H + 40], RIGHT_EL: [number, number] = [px + Math.round(pwid * 0.7), H + 40], MID_EL: [number, number] = [px + Math.round(pwid * 0.18), H + 40];
-  // the pump, stood on the reading top at the right (it stays there once they're done with it)
-  const pumpX = px + Math.round(pwid * 0.3);
+  const LEFT_EL: [number, number] = [px - Math.round(pwid * 0.62), v.oy + v.h + 40], MID_EL: [number, number] = [px + Math.round(pwid * 0.18), v.oy + v.h + 40];
+  // the pump, stood on the reading top at its near right corner (it stays there once they're done with it); short, so
+  // the hand on its handle isn't held up at shoulder height
+  const pumpX = px + Math.round(pwid * 0.42);
   const pump = (lift: number, down: boolean) => {
-    const base = py - 5 + lift * 8 * s, barrelTop = base - 20 * s, handleY = barrelTop - (down ? 2 * s : 9 * s);
+    const base = py - 5 + lift * 8 * s, barrelTop = base - 12 * s, handleY = barrelTop - (down ? 2 * s : 7 * s);
     fill(scr, pumpX - 3 * s, barrelTop, 6 * s, base - barrelTop, PAL.R1); fill(scr, pumpX - 3 * s, barrelTop, 2 * s, base - barrelTop, PAL.R2); fill(scr, pumpX - 5 * s, base - 2, 10 * s, 2, PAL.N1);
     fill(scr, pumpX - 1, handleY, 2, barrelTop - handleY, PAL.G5); fill(scr, pumpX - 8 * s, handleY - 2 * s, 16 * s, 3 * s, PAL.G4); fill(scr, pumpX - 8 * s, handleY - 2 * s, 16 * s, 1, PAL.G6);
     return {base, handleY};
   };
   const knot = () => { fill(scr, knotAt[0] - 1, knotAt[1] - 1, 3, 3, PAL.G6); scr.set(knotAt[0] + 2, knotAt[1] + 1, PAL.G5); scr.set(knotAt[0] - 2, knotAt[1] + 2, PAL.G5); };
+  if (st.phase !== 'taut') podiumMics(scr, px, py);
   if (st.phase === 'limp' || st.phase === 'pump') {
     // the hose from the pump's foot over the reading top to the balloon's neck, in his left hand at the near corner;
-    // the balloon over the neck, growing a size each stroke; his right hand round the pump's T-handle
+    // the balloon over the neck, growing a size each stroke; his right hand round the pump's T-handle. Each arm bent
+    // at an elbow inside the frame, low at the frame's sides (the review, P5: no flat bars): the elbows out, the
+    // forearms angling up and in to the hands, the upper arms going down and in, out of frame, to his shoulders (he
+    // stands close behind the podium, below the frame)
     const lift = st.lift ?? 0, P = pump(lift, !!st.down);
-    const neck: [number, number] = [x0 + 12 * s, py - 12 * s + lift * 8 * s];
+    const neck: [number, number] = [x0 + 8 * s, py - 8 * s + lift * 8 * s];
     for (let t = 0; t <= 40; t++) { const u = t / 40; scr.set(Math.round(pumpX - 3 * s + (neck[0] + 2 - (pumpX - 3 * s)) * u), Math.round(P.base - 3 + (neck[1] + 4 - (P.base - 3)) * u - Math.sin(u * Math.PI) * 6 * s), PAL.N2); }
     if (st.phase === 'limp') drawChatBalloon(scr, neck[0] + 5 * s, neck[1] + 1 * s, 1, {scale: BS});
     else { const bw = Math.round([10, 16, 22, 28][size - 1] * BS), bh = Math.round(bw * 0.78); drawChatBalloon(scr, neck[0] + (bw >> 1) - 2, neck[1] - (bh >> 1) - Math.round(bh * 0.3) - 2, size, {scale: BS, string: [neck[0], neck[1]]}); }
-    rHand(scr, POSES.grip([0.05, -0.55, -0.83], [0.1, -0.83, 0.55], 'R', 0.7), [pumpX + 2 * s, P.handleY + 1], 'middle', 1.15 * s, RIGHT_EL);
-    rHand(scr, POSES.pinch([0.35, -0.75, -0.5], [0.15, -0.55, 0.8], 'L'), [neck[0], neck[1]], 'index', 1.15 * s, LEFT_EL);
+    const dl = lift * 8 * s;
+    rHandBent(scr, POSES.grip([0.05, -0.55, -0.83], [0.1, -0.83, 0.55], 'R', 0.7), [pumpX + 2 * s, P.handleY + 1], 'middle', 1.15 * s, [px + Math.round(pwid * 0.83), H - 20 * s + dl], [px + Math.round(pwid * 0.58), H + 35 * s]);
+    rHandBent(scr, POSES.pinch([0.35, -0.75, -0.5], [0.15, -0.55, 0.8], 'L'), [neck[0], neck[1]], 'index', 1.15 * s, [px - Math.round(pwid * 0.78), H - 13 * s + dl], [px - Math.round(pwid * 0.52), H + 35 * s]);
     return;
   }
   if (st.phase === 'tie' || st.phase === 'tied') {
@@ -244,18 +283,29 @@ export const podiumPainter = (st: PodiumSt): Painter => (scr: Buf) => {
     }
     return;
   }
-  // taut: the string a straight line from the knot up over the lip (where it vanishes toward the far side), the
-  // balloon pulled down behind the podium, its top and its eyes over the gold; on the jerk (taut 1) a step higher
+  // taut: the string a straight line from the knot up the podium's back to its lip, over the lip (a short arch over its
+  // far edge) and gone down the far side; the balloon pulled down behind the podium beyond the mics, only its top and
+  // its dot eyes over the gold (the review: its whole face showed, flush on the lip, as if it had dropped onto the
+  // podium). The eyes sit at the bubble's middle, so with them clear of the lip a little over half of it shows (taut 2);
+  // the tug a beat later (taut 3) takes it a step lower, the eyes' tops just over the gold. The jerk (taut 1) is a
+  // step higher, on its way down
   knot();
-  const over: [number, number] = [px - Math.round(pwid * 0.05), py - 5];
-  const bw = Math.round(28 * BS), bh = Math.round(bw * 0.78), cy = py - 5 - Math.round(bh * (st.taut === 1 ? 0.62 : 0.4));
+  const bw = Math.round(28 * BS), bh = Math.round(bw * 0.78), er = Math.max(1, Math.round(bw / 12)), lip = py - 5;
+  const cyS = lip - 1 - er;
+  const cy = st.taut === 1 ? cyS - 30 : st.taut === 3 ? cyS + 9 : cyS;
+  const bx = px + Math.round(pwid * 0.24) + (st.taut === 1 ? -20 : 0);
+  const crest = bx - Math.round(bw * 0.4) + 1;
   const t = new Buf(W, H, 0x1000000);
-  drawChatBalloon(t, over[0] + Math.round(bw * 0.3), cy, 4, {scale: BS});
-  for (let y = 0; y < py - 5; y++) for (let x = 0; x < W; x++) { const v = t.c[y * W + x]; if (v !== 0x1000000) scr.set(x, y, v); }
-  // (the balloon is beyond the podium: the pump on its top stands in front of it)
+  drawChatBalloon(t, bx, cy, 4, {scale: BS});
+  for (let y = 0; y < lip; y++) for (let x = 0; x < W; x++) { const c = t.c[y * W + x]; if (c !== 0x1000000) scr.set(x, y, c); }
+  // (the balloon is beyond the podium: the mics and the pump on its top stand in front of it)
+  podiumMics(scr, px, py);
   pump(0, false);
-  // the string: two pixels wide where it crosses the gold so it reads against it, catching the light on the lip
-  line(knotAt[0], knotAt[1], over[0], over[1], scr.ink(PAL.G6)); line(knotAt[0] + 1, knotAt[1], over[0] + 1, over[1], scr.ink(PAL.G4));
-  fill(scr, over[0] - 1, over[1] - 1, 3, 2, PAL.P2);
+  // the string: two pixels wide (its lit side, its shadow) up the gold to the lip's foot, dark across the lit lip, then a
+  // short arch over the far edge, and nothing after it (it has gone down the far side)
+  const lx = crest - 2;
+  line(knotAt[0], knotAt[1], lx, py + 1, scr.ink(PAL.G6)); line(knotAt[0] + 1, knotAt[1] + 1, lx + 1, py + 2, scr.ink(PAL.G3));
+  line(lx, py, crest, lip, scr.ink(PAL.G3)); line(lx + 1, py, crest + 1, lip, scr.ink(PAL.N1));
+  scr.set(crest, lip - 1, PAL.G3); scr.set(crest + 1, lip - 2, PAL.G3); scr.set(crest + 1, lip - 1, PAL.N1); scr.set(crest + 2, lip - 3, PAL.G4); scr.set(crest + 3, lip - 3, PAL.G3); scr.set(crest + 4, lip - 2, PAL.G3); scr.set(crest + 5, lip - 1, PAL.N1);
 };
 void stepColor; void tinyWidth;

@@ -1,6 +1,7 @@
 // MR. MAS — Ep2 v1 · tag: THE BACK OF A HEAD, at any size: a COPY of act4/sets/backhead.ts (Act Two's, from its review
 // pass, 2026-10-09; copied so the tag never shares a cache key with an act), for the tag's OTS foregrounds and his back
-// at the desk (23.01). Unchanged. A copy of Ep1's approved
+// at the desk (23.01). One change (the tag's picture review, 2026-10-10): NO COWLICK from the back (the tuft read as a
+// wire loop above his crown in the wide and as a single horn in the OTS); the front portrait keeps it. A copy of Ep1's approved
 // turned-away bust (shared/pixel/cast/mas-turnaway.ts masTurnedAway, read-only: copied, never edited) as a figure that
 // renders at any scale in the frame's own pixels (its polygons scaled, then rasterised: no doubled pixels), with:
 //   - the hair redrawn as CLUMPS SWEEPING FORWARD (from the nape and the crown's back toward the face), not strands
@@ -21,7 +22,7 @@ export interface BackHeadSt {
   scale: number;
   turn: 0 | 1 | 2;
   light: 'monitor' | 'house';
-  /** hair: 'mas' (short, the cowlick), 'short', 'long' (to the shoulders), 'bun' */
+  /** hair: 'mas' (short; his cowlick isn't drawn from the back), 'short', 'long' (to the shoulders), 'bun' */
   hair?: 'mas' | 'short' | 'long' | 'bun';
   /** colour ramps (six tones each, outline..rim); omitted = Mas's own */
   hairRamp?: number[]; skinRamp?: number[]; topRamp?: number[];
@@ -65,12 +66,12 @@ const fig = (st: BackHeadSt): FigureDef => {
   if (turn === 2) head.push(Y(38, 50, 36, 58, 37, 66, 40, 74, 45, 80, 50, 82, 50, 60, 44, 46));
   if (turn === 1) head.push(Y(40, 52, 39, 60, 40, 68, 43, 75, 48, 80, 50, 80, 50, 60, 45, 48));
   parts.push({group: 'head', mat: 'skin', tone: 2, prims: head});
-  // the hair: Ep1's shape (short sides and nape, a little length on top); the cowlick for Mas; long hair to the
+  // the hair: Ep1's shape (short sides and nape, a little length on top); long hair to the
   // shoulders; a bun
   const crown = Y(42, 44, 40, 34, 44, 24, 52, 17, 62, 14, 74, 16, 82, 23, 86, 32, 87, 46, 85, 58, 81, 68, 74, 74, 64, 76, 54, 74, 48, 66, 46, 56);
   const hp = [crown];
   if (turn === 0) hp[0] = Y(39, 44, 38, 34, 43, 23, 52, 16, 62, 14, 74, 16, 82, 23, 86, 32, 87, 46, 85, 58, 81, 68, 74, 74, 64, 76, 52, 74, 44, 66, 40, 56);
-  if (hair === 'mas') hp.push(Y(47, 22, 45, 17, 41, 13, 37, 13, 39, 16, 42, 19, 44, 24));
+  // (no cowlick from the back: the tag's review, see the header)
   if (hair === 'long') hp.push(Y(40, 40, 38, 60, 38, 84, 44, 98, 62, 100, 80, 98, 88, 86, 88, 60, 86, 40));
   if (hair === 'bun') hp.push(E(66, 18, 10, 8));
   parts.push({group: 'hair', mat: 'hair', tone: 2, prims: hp});
@@ -92,7 +93,6 @@ const fig = (st: BackHeadSt): FigureDef => {
   const lits = [ribbon(78, 64, 81, 40, 60, 20, 1.3), ribbon(69, 70, 70, 48, 50, 25, 1.3), ribbon(59, 72, 56, 52, 44, 36, 1.2)];
   adjust.push(plane('hair', 1, ...gaps.map((g) => S(g))));
   adjust.push(plane('hair', 3, ...lits.map((g) => S(g))));
-  if (hair === 'mas') adjust.push(plane('hair', 3, Y(38, 13, 42, 13, 44, 18, 41, 16)), plane('hair', 4, Y(39, 13, 41, 13, 40, 14)));
   adjust.push(plane('hair', 0, Y(52, 70, 60, 74, 72, 73, 80, 67, 76, 72, 64, 77, 54, 75)));
   // the cheek's lit edge and the jaw going away (the turn), the nape's shadow, the ears' bowls
   if (turn === 2) adjust.push(plane('skin', 3, Y(38, 52, 40, 51, 40, 66, 42, 74, 39, 70, 37, 62)), plane('skin', 1, Y(44, 62, 48, 60, 50, 66, 50, 80, 46, 78)));
