@@ -1,5 +1,9 @@
 # ep02 · intro slot
 
+> **Built 2026-10-10** (`intro-ep2`, [studio/src/episodes/ep02/intro/](../../../studio/src/episodes/ep02/intro/README.md); the sound, [audio/ep02/intro/](../../../audio/ep02/intro/README.md)):
+> - **Shipped:** "her", the typing indicator, the dot at 0.55, `back by popular demand` and ESC.
+> - **Not shipped, because Ep1's final never aired them:** `$4B + $2B` (the tag stays blank), and the hill, lanyard, tally and hook layers (the shipped intro has none).
+
 Spec: [intro/SCRIPT.md §8](../../intro/SCRIPT.md#8-per-episode-changes-ep112-spoiler-safe), row 2 (v2.1). **Only five things change, and none of them shows this episode's plot.** Items 2–5 show only what Ep1 has already aired; item 1 is the epigraph, words only in their own medium. The v2.0 bar-9 news slot is retired, so this sheet no longer carries `AROS` / `SUED.` / `ELPPA` or the `WHERE IS ALYI?` flyers (all of them this episode's own events), and the old skyline courthouse and ISS cube (Ep2's aftermath, which belongs to Ep3's intro) are gone. The old subtitle `now with voice` is Ep3's (`now with voice (paused)`). Source detail: [episode-slots.md](../../intro/episode-slots.md) (v1 reference; SCRIPT wins where they differ).
 
 **Draft 4 changes (the continuity critic):** the coat hook reads **3** collars (Ep1 pops #3 on MACROSOFT's check and Ep2 pops none), and zAI's `COMING SOON: TRUTHGTP` banner and the `KORG 1` / `KORG 5: NEXT QUARTER` boards are out (Ep1 cut the TRUTHGTP set, and the `KORG 5` banner first airs in this episode's sc 20; both can start in Ep3's intro). **For the intro owner:** SCRIPT §8.1 row 2 (the skyline column) and §8.4 row 2 (the coat hook) still carry the old values.

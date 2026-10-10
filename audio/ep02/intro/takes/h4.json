@@ -1,0 +1,83 @@
+{
+ "read": {
+  "name": "h4",
+  "text": "her...",
+  "speed": 0.9,
+  "seed": 2404
+ },
+ "request": {
+  "text": "her...",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.62,
+   "similarity_boost": 0.75,
+   "style": 0.0,
+   "use_speaker_boost": true,
+   "speed": 0.9
+  },
+  "seed": 2404,
+  "language_code": "en"
+ },
+ "alignment": {
+  "alignment": {
+   "characters": [
+    "h",
+    "e",
+    "r",
+    ".",
+    ".",
+    "."
+   ],
+   "character_start_times_seconds": [
+    0.0,
+    0.139,
+    0.337,
+    0.464,
+    0.592,
+    0.627
+   ],
+   "character_end_times_seconds": [
+    0.139,
+    0.337,
+    0.464,
+    0.592,
+    0.627,
+    0.929
+   ]
+  },
+  "normalized_alignment": {
+   "characters": [
+    " ",
+    "h",
+    "e",
+    "r",
+    ".",
+    ".",
+    ".",
+    " "
+   ],
+   "character_start_times_seconds": [
+    0.0,
+    0.035,
+    0.139,
+    0.337,
+    0.464,
+    0.592,
+    0.627,
+    0.662
+   ],
+   "character_end_times_seconds": [
+    0.035,
+    0.139,
+    0.337,
+    0.464,
+    0.592,
+    0.627,
+    0.662,
+    0.929
+   ]
+  }
+ },
+ "cost_header": "3",
+ "request_id": "rZ3NJhBEYkIeVXP5WrHd"
+}

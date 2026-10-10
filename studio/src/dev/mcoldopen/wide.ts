@@ -8,7 +8,8 @@ import {PAL, lum} from '../../shared/pixel/palette';
 import {MatBuf, resolve} from '../../shared/pixel/light';
 import {drawMasDesk, MasDeskPose, MAS_DESK_EDGE, masDeskBack} from '../../shared/pixel/cast/mas';
 import {Mask} from '../../shared/pixel/mask';
-import {L1, L2, L1_KEYS, L2_KEYS, EV, typedCount} from './timeline';
+import {EV, typedCount, EP1_COLD, EP1_LINE, indicatorOn} from './timeline';
+import type {ColdLine, ColdSlot} from './timeline';
 import {drawOrb, orbBob} from '../../shared/pixel/cast/orb';
 import {vignette} from './paint';
 
@@ -208,7 +209,7 @@ const lights = () => {
 // Turned 3/4 toward him (he sits to its right): we see its near side edge and its face foreshortened to ~half its
 // width, the right edge receding (a pixel shorter top and bottom). The post does not need to read in the wide.
 const MON3Q = {x0: 224, x1: 250, yTop: 144, yBot: 178, recede: 3};
-const drawWideMonitor = (b: Buf, f: number) => {
+const drawWideMonitor = (b: Buf, f: number, cl: ColdLine) => {
   const {x0, x1, yTop, yBot, recede} = MON3Q;
   const w = x1 - x0;
   const topAt = (x: number) => yTop + Math.round(((x - x0) / w) * recede);
@@ -229,10 +230,17 @@ const drawWideMonitor = (b: Buf, f: number) => {
   for (let k = 0; k < 9; k++) scr.set(kx + 1 + Math.floor(k / 2), ky - Math.round(Math.pow(k / 8, 1.7) * (sh - 9)) - 1, PAL.C6);
   scr.set(kx, ky, PAL.C8);
   rect(2, 2, 34, 13, scr.ink(PAL.N3)); rect(3, 3, 32, 11, scr.ink(PAL.N0));
-  const n1 = typedCount(L1_KEYS, f), n2 = typedCount(L2_KEYS, f);
-  const l1 = Math.round((n1 / L1.length) * 25), l2 = Math.round((n2 / L2.length) * 22);
+  // the typed text as a dash per line, at Ep1's scale (its 21 + 19 characters drew 25 + 22 px)
+  const n1 = typedCount(cl.keys1, f), n2 = typedCount(cl.keys2, f);
+  const l1 = cl === EP1_LINE ? Math.round((n1 / cl.l1.length) * 25) : Math.round((n1 * 25) / 21);
+  const l2 = cl === EP1_LINE ? Math.round((n2 / cl.l2.length) * 22) : Math.round((n2 * 22) / 19);
   for (let i = 0; i < l1; i++) if (i % 5 !== 4 || i === 0) scr.set(5 + i, 5, PAL.P0);
   for (let i = 0; i < l2; i++) if (i % 6 !== 5 || i === 0) scr.set(5 + i, 8, PAL.P0);
+  // the typing indicator (Ep2): three points after the text, the lit one stepping on the beat
+  if (indicatorOn(cl, f) && f < EV.click) {
+    const lit = Math.floor((((f % 15) + 15) % 15) / 5);
+    for (let i = 0; i < 3; i++) scr.set(5 + l1 + 2 + i * 2, 5, i === lit ? PAL.P0 : PAL.N3);
+  }
   rect(29, 11, 5, 2, scr.ink(PAL.G5));
   for (let x = x0; x <= x1; x++) {
     const t0 = topAt(x), t1 = botAt(x);
@@ -268,8 +276,8 @@ const drawWideGlass = (b: Buf) => {
 };
 
 // ------------------------------------------------------------------ Mas's acting in the wide
-export const masDeskAt = (f: number): MasDeskPose => {
-  const typing = [...L1_KEYS, ...L2_KEYS].some((k) => f >= k - 1 && f <= k);
+export const masDeskAt = (f: number, cl: ColdLine = EP1_LINE): MasDeskPose => {
+  const typing = [...cl.keys1, ...cl.keys2].some((k) => f >= k - 1 && f <= k);
   const head = f >= EV.eyeSnap ? 'camera' : f === EV.eyeSnap - 1 ? 'turn' : 'screen';
   return {
     head, type: typing ? ((1 + (Math.floor(f / 2) % 3)) as 1 | 2 | 3) : 0,
@@ -279,7 +287,8 @@ export const masDeskAt = (f: number): MasDeskPose => {
   };
 };
 
-export interface WideOut { masMask?: Mask; orbMask?: Mask; scanning?: boolean }
+/** `cold`: the episode's cold-open slot (the typed line on the monitor, his typing); Ep1's when omitted */
+export interface WideOut { masMask?: Mask; orbMask?: Mask; scanning?: boolean; cold?: ColdSlot }
 
 let roomCache: {f: number; buf: Buf} | null = null;
 export const drawWide = (b: Buf, f: number, o: WideOut = {}) => {
@@ -299,7 +308,8 @@ export const drawWide = (b: Buf, f: number, o: WideOut = {}) => {
     if (k === 1 || k === 4 || k === 6) b.set(rack.x1 - 10, y + 6, (eighth + k) % 3 !== 0 ? PAL.R3 : PAL.R0);
   }
   // Mas (back layer, the desk top between, then his forearms + keyboard)
-  const pose = masDeskAt(f);
+  const co = o.cold ?? EP1_COLD;
+  const pose = masDeskAt(f, co.line);
   const [mx, my] = WIDE.mas;
   drawMasDesk(b, mx, my, pose);
   if (o.masMask) o.masMask.addImg(masDeskBack(pose), mx, my);
@@ -308,7 +318,7 @@ export const drawWide = (b: Buf, f: number, o: WideOut = {}) => {
   const look: [number, number] = f >= EV.irisTurn + 1 ? [0, 0] : [-0.62, 0.12];
   drawOrb(b, ox, oy + orbBob(f), WIDE.orbR, {look, aperture: o.scanning ? 1 : 0.5, scanning: o.scanning, monitor: -1}, o.orbMask?.a);
   drawWideGlass(b);
-  drawWideMonitor(b, f);
+  drawWideMonitor(b, f, co.line);
   vignette(b);
   return b;
 };

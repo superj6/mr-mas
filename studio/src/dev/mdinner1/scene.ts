@@ -108,7 +108,8 @@ const marioAt = (g: number): {pose: MarioPose; foot: [number, number]; inside: b
 // ------------------------------------------------------------------ the frame
 export interface FrameInfo { cam: ReturnType<typeof camera>; g: number; w: number; }
 
-export const drawFrame = (b: OwnedBuf, g: number): FrameInfo => {
+/** `legend`: the pocketed keycap's legend (the couch gag, SCRIPT §8 item 4); Ep1's CTRL when omitted */
+export const drawFrame = (b: OwnedBuf, g: number, legend?: string[]): FrameInfo => {
   const cam = camera(g);
   const w = worldClock(g);
   const ox = cam.x, oy = cam.y;
@@ -214,11 +215,11 @@ export const drawFrame = (b: OwnedBuf, g: number): FrameInfo => {
   // the CTRL key: pops at w226, hangs at its apex in the frozen world, then Mas takes it (248)
   if (g < 248) {
     const k = ctrlFlight(w);
-    if (k) { b.cur = g >= FREEZE_G.t0 ? OWN.mas : OWN.world; drawCtrlKey(b, k.x - ox, k.y - oy, k.d); b.cur = OWN.world; }
+    if (k) { b.cur = g >= FREEZE_G.t0 ? OWN.mas : OWN.world; drawCtrlKey(b, k.x - ox, k.y - oy, k.d, legend); b.cur = OWN.world; }
   } else if (mas.key === 'hand') {
     const [hx, hy] = MASD_HAND[mas.pose.arm];
     b.cur = OWN.mas;
-    drawCtrlKey(b, MAS_X + hx - KEY_HAND[0] - ox, MAS_Y + hy - KEY_HAND[1] - oy, mas.pose.arm === 'hold' ? 0 : 1);
+    drawCtrlKey(b, MAS_X + hx - KEY_HAND[0] - ox, MAS_Y + hy - KEY_HAND[1] - oy, mas.pose.arm === 'hold' ? 0 : 1, legend);
     b.cur = OWN.world;
   }
   // Mas's telescoping marshmallow fork
@@ -348,12 +349,13 @@ const printFrame = (fb: Buf, own: Uint8Array, who: 'gerg' | 'alyi', g: number) =
     }
 };
 
-export const SCENE: PixelSceneProps = {
+/** the span for an episode's keycap legend (the couch gag); Ep1's is SCENE */
+export const makeScene = (legend?: string[]): PixelSceneProps => ({
   bg: PAL.N0,
   draw: (fb, f) => {
     const g = toGlobal(f);
     const b = new OwnedBuf(W, H, PAL.N0);
-    const info = drawFrame(b, g);
+    const info = drawFrame(b, g, legend);
     void whipSmear; // (no whip after the 225 match cut: the camera holds the flame 225-229, hard cut at 230)
     // THE WOODROSE sign is lettering: it prints on the hard threshold, never as dot noise
     const [sx, sy, sw, sh] = SIGN_RECT;
@@ -395,7 +397,8 @@ export const SCENE: PixelSceneProps = {
     void TRANSPARENT; void WIPE_X;
     void anchoredX;
   },
-};
+});
+export const SCENE: PixelSceneProps = makeScene();
 
 /** Dev: a region of the world at world clock g (no camera, no cast). */
 export const debugWorld = (x: number, y: number, w: number, h: number, g: number) => {

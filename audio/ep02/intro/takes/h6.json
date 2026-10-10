@@ -1,0 +1,71 @@
+{
+ "read": {
+  "name": "h6",
+  "text": "Her.",
+  "speed": 0.85,
+  "seed": 2606
+ },
+ "request": {
+  "text": "Her.",
+  "model_id": "eleven_multilingual_v2",
+  "voice_settings": {
+   "stability": 0.62,
+   "similarity_boost": 0.75,
+   "style": 0.0,
+   "use_speaker_boost": true,
+   "speed": 0.85
+  },
+  "seed": 2606,
+  "language_code": "en"
+ },
+ "alignment": {
+  "alignment": {
+   "characters": [
+    "H",
+    "e",
+    "r",
+    "."
+   ],
+   "character_start_times_seconds": [
+    0.0,
+    0.151,
+    0.325,
+    0.464
+   ],
+   "character_end_times_seconds": [
+    0.151,
+    0.325,
+    0.464,
+    0.882
+   ]
+  },
+  "normalized_alignment": {
+   "characters": [
+    " ",
+    "H",
+    "e",
+    "r",
+    ".",
+    " "
+   ],
+   "character_start_times_seconds": [
+    0.0,
+    0.058,
+    0.151,
+    0.325,
+    0.464,
+    0.639
+   ],
+   "character_end_times_seconds": [
+    0.058,
+    0.151,
+    0.325,
+    0.464,
+    0.639,
+    0.882
+   ]
+  }
+ },
+ "cost_header": "2",
+ "request_id": "fQhsn8ZWebpH6PSWeKi6"
+}

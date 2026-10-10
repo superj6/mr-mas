@@ -1,0 +1,1587 @@
+{
+ "title": "MR. MAS — intro-ep2 picture events (as built; Ep1's export with the Ep2 slot applied)",
+ "version": "2026-10-10",
+ "composition": "intro-ep2",
+ "fps": 24,
+ "bpm": 96,
+ "framesPerBeat": 15,
+ "framesPerBar": 60,
+ "frames": 720,
+ "convention": "Global intro frames 0-719, inclusive ranges [f, end]. `script` = SCRIPT.md v2.1 frame where the build differs (for audio: cue the PICTURE frame; see studio/notes/intro.md \"Deviations\").",
+ "edl": [
+  {
+   "id": "mcoldopen",
+   "origin": 0,
+   "span": [
+    0,
+    119
+   ],
+   "from": 0,
+   "to": 119,
+   "cutIn": "head of the loop (f0 = the cursor blink, the f719 state)"
+  },
+  {
+   "id": "meras",
+   "origin": 120,
+   "span": [
+    120,
+    239
+   ],
+   "from": 120,
+   "to": 224,
+   "cutIn": "hard cut on the 3.1 downbeat, paper white -> 1-bit 1993"
+  },
+  {
+   "id": "mdinner1",
+   "origin": 225,
+   "span": [
+    225,
+    359
+   ],
+   "from": 225,
+   "to": 344,
+   "cutIn": "4.4 match cut: the crown glint becomes the candelabra flame on the same pixel"
+  },
+  {
+   "id": "mdinner2",
+   "origin": 345,
+   "span": [
+    345,
+    479
+   ],
+   "from": 345,
+   "to": 479,
+   "cutIn": "6.4 invisible edit inside the pixel-identical 345-359 overlap (first frame of the overlap)"
+  },
+  {
+   "id": "mrollcall",
+   "origin": 480,
+   "span": [
+    480,
+    539
+   ],
+   "from": 480,
+   "to": 539,
+   "cutIn": "9.1 hard cut on the downbeat (stab 1)"
+  },
+  {
+   "id": "mfinale",
+   "origin": 540,
+   "span": [
+    540,
+    719
+   ],
+   "from": 540,
+   "to": 719,
+   "cutIn": "10.1 hard cut on the downbeat onto the dusk skyline"
+  }
+ ],
+ "handoffs": {
+  "meras->mdinner1": 225,
+  "mdinner1->mdinner2": 345,
+  "mdinner2->mrollcall": 480,
+  "mrollcall->mfinale": 540
+ },
+ "beats": [
+  {
+   "n": 1,
+   "f": 0,
+   "bar": 1,
+   "beat": 1
+  },
+  {
+   "n": 2,
+   "f": 15,
+   "bar": 1,
+   "beat": 2
+  },
+  {
+   "n": 3,
+   "f": 30,
+   "bar": 1,
+   "beat": 3
+  },
+  {
+   "n": 4,
+   "f": 45,
+   "bar": 1,
+   "beat": 4
+  },
+  {
+   "n": 5,
+   "f": 60,
+   "bar": 2,
+   "beat": 1
+  },
+  {
+   "n": 6,
+   "f": 75,
+   "bar": 2,
+   "beat": 2
+  },
+  {
+   "n": 7,
+   "f": 90,
+   "bar": 2,
+   "beat": 3
+  },
+  {
+   "n": 8,
+   "f": 105,
+   "bar": 2,
+   "beat": 4
+  },
+  {
+   "n": 9,
+   "f": 120,
+   "bar": 3,
+   "beat": 1
+  },
+  {
+   "n": 10,
+   "f": 135,
+   "bar": 3,
+   "beat": 2
+  },
+  {
+   "n": 11,
+   "f": 150,
+   "bar": 3,
+   "beat": 3
+  },
+  {
+   "n": 12,
+   "f": 165,
+   "bar": 3,
+   "beat": 4
+  },
+  {
+   "n": 13,
+   "f": 180,
+   "bar": 4,
+   "beat": 1
+  },
+  {
+   "n": 14,
+   "f": 195,
+   "bar": 4,
+   "beat": 2
+  },
+  {
+   "n": 15,
+   "f": 210,
+   "bar": 4,
+   "beat": 3
+  },
+  {
+   "n": 16,
+   "f": 225,
+   "bar": 4,
+   "beat": 4
+  },
+  {
+   "n": 17,
+   "f": 240,
+   "bar": 5,
+   "beat": 1
+  },
+  {
+   "n": 18,
+   "f": 255,
+   "bar": 5,
+   "beat": 2
+  },
+  {
+   "n": 19,
+   "f": 270,
+   "bar": 5,
+   "beat": 3
+  },
+  {
+   "n": 20,
+   "f": 285,
+   "bar": 5,
+   "beat": 4
+  },
+  {
+   "n": 21,
+   "f": 300,
+   "bar": 6,
+   "beat": 1
+  },
+  {
+   "n": 22,
+   "f": 315,
+   "bar": 6,
+   "beat": 2
+  },
+  {
+   "n": 23,
+   "f": 330,
+   "bar": 6,
+   "beat": 3
+  },
+  {
+   "n": 24,
+   "f": 345,
+   "bar": 6,
+   "beat": 4
+  },
+  {
+   "n": 25,
+   "f": 360,
+   "bar": 7,
+   "beat": 1
+  },
+  {
+   "n": 26,
+   "f": 375,
+   "bar": 7,
+   "beat": 2
+  },
+  {
+   "n": 27,
+   "f": 390,
+   "bar": 7,
+   "beat": 3
+  },
+  {
+   "n": 28,
+   "f": 405,
+   "bar": 7,
+   "beat": 4
+  },
+  {
+   "n": 29,
+   "f": 420,
+   "bar": 8,
+   "beat": 1
+  },
+  {
+   "n": 30,
+   "f": 435,
+   "bar": 8,
+   "beat": 2
+  },
+  {
+   "n": 31,
+   "f": 450,
+   "bar": 8,
+   "beat": 3
+  },
+  {
+   "n": 32,
+   "f": 465,
+   "bar": 8,
+   "beat": 4
+  },
+  {
+   "n": 33,
+   "f": 480,
+   "bar": 9,
+   "beat": 1
+  },
+  {
+   "n": 34,
+   "f": 495,
+   "bar": 9,
+   "beat": 2
+  },
+  {
+   "n": 35,
+   "f": 510,
+   "bar": 9,
+   "beat": 3
+  },
+  {
+   "n": 36,
+   "f": 525,
+   "bar": 9,
+   "beat": 4
+  },
+  {
+   "n": 37,
+   "f": 540,
+   "bar": 10,
+   "beat": 1
+  },
+  {
+   "n": 38,
+   "f": 555,
+   "bar": 10,
+   "beat": 2
+  },
+  {
+   "n": 39,
+   "f": 570,
+   "bar": 10,
+   "beat": 3
+  },
+  {
+   "n": 40,
+   "f": 585,
+   "bar": 10,
+   "beat": 4
+  },
+  {
+   "n": 41,
+   "f": 600,
+   "bar": 11,
+   "beat": 1
+  },
+  {
+   "n": 42,
+   "f": 615,
+   "bar": 11,
+   "beat": 2
+  },
+  {
+   "n": 43,
+   "f": 630,
+   "bar": 11,
+   "beat": 3
+  },
+  {
+   "n": 44,
+   "f": 645,
+   "bar": 11,
+   "beat": 4
+  },
+  {
+   "n": 45,
+   "f": 660,
+   "bar": 12,
+   "beat": 1
+  },
+  {
+   "n": 46,
+   "f": 675,
+   "bar": 12,
+   "beat": 2
+  },
+  {
+   "n": 47,
+   "f": 690,
+   "bar": 12,
+   "beat": 3
+  },
+  {
+   "n": 48,
+   "f": 705,
+   "bar": 12,
+   "beat": 4
+  }
+ ],
+ "events": [
+  {
+   "f": 0,
+   "end": 7,
+   "type": "loop-cursor",
+   "moment": "mcoldopen",
+   "what": "cyan block caret ON (blink on 8 / off 7, beat-locked); loop entry",
+   "src": "studio/src/dev/mcoldopen/timeline.ts caretOn"
+  },
+  {
+   "f": 0,
+   "end": 14,
+   "type": "shot",
+   "moment": "mcoldopen",
+   "what": "shot macro9: beat 1: black LCD, the cyan block cursor blinks (on 8 / off 7). Subpixels.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 0,
+   "end": 119,
+   "type": "edit",
+   "moment": "mcoldopen",
+   "what": "mcoldopen on screen f0-119 (local 0 = f0); in: head of the loop (f0 = the cursor blink, the f719 state)",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 15,
+   "end": 29,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot macro3: beat 2: stepped dolly-out x3. Typing starts at f18, 6 frames ahead of the VO (f24).",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 18,
+   "end": 21,
+   "type": "text-type",
+   "moment": "mcoldopen",
+   "what": "\"her\" types (3 keystrokes), 6 frames ahead of the VO",
+   "src": "studio/src/episodes/ep02/intro/slot.ts EP2_SLOT.cold.line.keys1"
+  },
+  {
+   "f": 30,
+   "end": 59,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot medium: beat 3: x3 again = 1:1. The reveal: composer over the log chart, Mas, the Orb; holds through \"singularity;\" (VO f35-57) so the typed line 1 stays readable.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 38,
+   "end": 111,
+   "type": "typing-indicator",
+   "moment": "mcoldopen",
+   "what": "the pulsing typing indicator (three dots, one lit per 5 frames, beat-locked) holds the rest of the phrase in silence; no sound",
+   "src": "studio/src/episodes/ep02/intro/slot.ts EP2_SLOT.cold.line.indicator / src/dev/mcoldopen/screen.ts drawIndicator"
+  },
+  {
+   "f": 48,
+   "type": "acting",
+   "moment": "mcoldopen",
+   "what": "Mas blinks once while typing",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.blink"
+  },
+  {
+   "f": 60,
+   "end": 71,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot wide: bar 2 beat 1 (the D-flat in the pause): the dark room, Mas 3/4 front at his desk; the head tilt, shift+enter and \"unclear\" start typing here.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 63,
+   "type": "acting",
+   "moment": "mcoldopen",
+   "what": "head tilt in the semicolon pause",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.tilt"
+  },
+  {
+   "f": 72,
+   "end": 98,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot medium: f72 (VO \"unclear\"): cut back in for the performance.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 86,
+   "end": 89,
+   "type": "chart",
+   "moment": "mcoldopen",
+   "what": "\"you are here\" dot climbs the curve from its rest at 0.55",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.dotSlide"
+  },
+  {
+   "f": 90,
+   "type": "chart",
+   "moment": "mcoldopen",
+   "what": "dot leaves the top of the screen (pluck)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.dotExit",
+   "script": 89
+  },
+  {
+   "f": 94,
+   "type": "acting",
+   "moment": "mcoldopen",
+   "what": "eyes snap to the lens (near-front head drawing, held through Post)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.eyeSnap"
+  },
+  {
+   "f": 97,
+   "end": 98,
+   "type": "orb",
+   "moment": "mcoldopen",
+   "what": "Orb iris swivels to the lens (servo)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.irisTurn",
+   "script": "97-99"
+  },
+  {
+   "f": 99,
+   "end": 104,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot wide: the scan: 6-frame cutaway, the room is a cathedral inside the cone.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 99,
+   "end": 104,
+   "type": "scan-cone",
+   "moment": "mcoldopen",
+   "what": "Orb scan fan (thin cyan cone) opens f99 and sweeps (wide cutaway 99-104)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.scan / scene.ts FAN"
+  },
+  {
+   "f": 100,
+   "end": 104,
+   "type": "glyph",
+   "moment": "mcoldopen",
+   "what": "GLYPH-MASKED data-center cathedral inside the cone only (S1: 5 frames of the 15-frame GLYPH budget)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.glyph / scene.ts switch"
+  },
+  {
+   "f": 105,
+   "end": 117,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot medium: beat 8: micro-smile, Post, the words become tokens.",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 106,
+   "end": 111,
+   "type": "acting",
+   "moment": "mcoldopen",
+   "what": "mouse pointer travels to Post (on 2s)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.pointer"
+  },
+  {
+   "f": 107,
+   "type": "acting",
+   "moment": "mcoldopen",
+   "what": "the one-pixel smile",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.smile"
+  },
+  {
+   "f": 112,
+   "type": "ui",
+   "moment": "mcoldopen",
+   "what": "click on Post (button inverts)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.click"
+  },
+  {
+   "f": 112,
+   "end": 114,
+   "type": "tokens",
+   "moment": "mcoldopen",
+   "what": "the line bursts into token chips (pixel font 1x/2x/3x)",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.chips",
+   "script": "113-117"
+  },
+  {
+   "f": 113,
+   "type": "chart",
+   "moment": "mcoldopen",
+   "what": "the curve snaps vertical",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.chartSnap",
+   "script": 114
+  },
+  {
+   "f": 114,
+   "end": 117,
+   "type": "fade",
+   "moment": "mcoldopen",
+   "what": "exposure steps + ordered dither toward paper white",
+   "src": "studio/src/dev/mcoldopen/scene.ts EXPOSE_FROM/EXPOSURE",
+   "script": "116-119"
+  },
+  {
+   "f": 118,
+   "end": 119,
+   "type": "cut",
+   "moment": "mcoldopen",
+   "what": "shot white: white-to-white match cut into 1993 (1-bit paper).",
+   "src": "studio/src/dev/mcoldopen/timeline.ts SHOTS"
+  },
+  {
+   "f": 118,
+   "end": 119,
+   "type": "style",
+   "moment": "mcoldopen",
+   "what": "1-BIT paper #E9E6DA full frame (79% luminance), white-to-white into 1993",
+   "src": "studio/src/dev/mcoldopen/timeline.ts EV.white"
+  },
+  {
+   "f": 120,
+   "type": "cut",
+   "moment": "meras",
+   "what": "hard cut: 1993, 1-BIT, 3:2 pillarbox, animated on fours",
+   "src": "studio/src/dev/meras/timeline.ts T.y93"
+  },
+  {
+   "f": 120,
+   "end": 179,
+   "type": "date-card",
+   "moment": "meras",
+   "what": "ON SCREEN \"1993\" (shared era stamp, bottom-left inside the pillarbox; rule grows 8 px/frame) until the render front wipes it",
+   "src": "studio/src/dev/meras/era1993.ts slate93",
+   "script": "120-134"
+  },
+  {
+   "f": 120,
+   "end": 224,
+   "type": "edit",
+   "moment": "meras",
+   "what": "meras on screen f120-224 (local 0 = f120); in: hard cut on the 3.1 downbeat, paper white -> 1-bit 1993",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 128,
+   "type": "acting",
+   "moment": "meras",
+   "what": "kid's eyes go to the lens",
+   "src": "studio/src/dev/meras/timeline.ts T.eyes"
+  },
+  {
+   "f": 132,
+   "type": "acting",
+   "moment": "meras",
+   "what": "head follows: the stare (match on f94)",
+   "src": "studio/src/dev/meras/timeline.ts T.turn",
+   "script": 128
+  },
+  {
+   "f": 133,
+   "end": 134,
+   "type": "ui",
+   "moment": "meras",
+   "what": "world holds; zoom rectangles expand from the screen",
+   "src": "studio/src/dev/meras/timeline.ts T.freeze / era1993.ts zoomRects"
+  },
+  {
+   "f": 135,
+   "type": "ui",
+   "moment": "meras",
+   "what": "alert dialog fully open: \"MAS MANALT / no equity.\", Cancel greyed (original dialog: dithered title bar)",
+   "src": "studio/src/dev/meras/timeline.ts T.dialog"
+  },
+  {
+   "f": 146,
+   "end": 149,
+   "type": "ui",
+   "moment": "meras",
+   "what": "a stranger's pointer slides in from frame-right",
+   "src": "studio/src/dev/meras/timeline.ts T.ptrIn"
+  },
+  {
+   "f": 150,
+   "type": "ui",
+   "moment": "meras",
+   "what": "stranger clicks Cancel: nothing happens",
+   "src": "studio/src/dev/meras/timeline.ts T.cancel"
+  },
+  {
+   "f": 165,
+   "type": "ui",
+   "moment": "meras",
+   "what": "kid clicks OK (OK inverts one frame)",
+   "src": "studio/src/dev/meras/timeline.ts T.ok"
+  },
+  {
+   "f": 166,
+   "end": 167,
+   "type": "ui",
+   "moment": "meras",
+   "what": "dialog collapses into the staircase tip",
+   "src": "studio/src/dev/meras/timeline.ts T.collapse"
+  },
+  {
+   "f": 168,
+   "end": 179,
+   "type": "render-front",
+   "moment": "meras",
+   "what": "RENDER FRONT (cyan 1-px core, 5-px glow, spark on the curve) sweeps L->R: 1-BIT -> EARLY-WEB16; pillarbox retracts to 16:9; TPOOL keynote revealed",
+   "src": "studio/src/dev/meras/timeline.ts T.fire/T.frontFrames, scene.ts drawFront93to08"
+  },
+  {
+   "f": 180,
+   "type": "collar-pop",
+   "moment": "meras",
+   "what": "collar pop 1: the green outer polo collar stands (1-px hop)",
+   "src": "studio/src/dev/meras/timeline.ts T.y08 / era2008.ts collars"
+  },
+  {
+   "f": 180,
+   "end": 194,
+   "type": "date-card",
+   "moment": "meras",
+   "what": "ON SCREEN \"2008\" (shared era stamp; the camcorder OSD is cut)",
+   "src": "studio/src/dev/meras/era2008.ts osd -> eraStamp"
+  },
+  {
+   "f": 182,
+   "type": "acting",
+   "moment": "meras",
+   "what": "THE SLEEVE tosses the clicker",
+   "src": "studio/src/dev/meras/era2008.ts TOSS"
+  },
+  {
+   "f": 190,
+   "type": "collar-pop",
+   "moment": "meras",
+   "what": "collar pop 2: both collars popped (on the hook's swung F)",
+   "src": "studio/src/dev/meras/timeline.ts T.pop2"
+  },
+  {
+   "f": 190,
+   "type": "acting",
+   "moment": "meras",
+   "what": "Mas catches the clicker",
+   "src": "studio/src/dev/meras/timeline.ts T.take"
+  },
+  {
+   "f": 195,
+   "type": "cut",
+   "moment": "meras",
+   "what": "hard cut on the f195 brass stab: 2014 WHY COMBINATOR, EARLY-WEB16 (sign: flat #FF7F2A letters on a #F3EEDC cream plate, 1-px #000033 outline)",
+   "src": "studio/src/dev/meras/timeline.ts T.y14"
+  },
+  {
+   "f": 195,
+   "end": 224,
+   "type": "date-card",
+   "moment": "meras",
+   "what": "ON SCREEN \"2014\" (shared era stamp)",
+   "src": "studio/src/dev/meras/era2014.ts eraStamp"
+  },
+  {
+   "f": 205,
+   "type": "collar-pop",
+   "moment": "meras",
+   "what": "collar re-pop out of the hoodie (1-px hop)",
+   "src": "studio/src/dev/meras/timeline.ts T.repop"
+  },
+  {
+   "f": 205,
+   "end": 217,
+   "type": "prop",
+   "moment": "meras",
+   "what": "LUAP's paper crown hops down the dotted motion path",
+   "src": "studio/src/dev/meras/timeline.ts T.crownGo/T.crownLand",
+   "script": "205-220"
+  },
+  {
+   "f": 210,
+   "type": "acting",
+   "moment": "meras",
+   "what": "Mas lands on the laptop throne",
+   "src": "studio/src/dev/meras/timeline.ts T.seat"
+  },
+  {
+   "f": 217,
+   "type": "prop",
+   "moment": "meras",
+   "what": "crown lands on Mas's head",
+   "src": "studio/src/dev/meras/timeline.ts T.crownLand",
+   "script": 220
+  },
+  {
+   "f": 218,
+   "type": "prop",
+   "moment": "meras",
+   "what": "the crown glint grows (the match-cut object)",
+   "src": "studio/src/dev/meras/timeline.ts T.glint"
+  },
+  {
+   "f": 220,
+   "end": 224,
+   "type": "camera",
+   "moment": "meras",
+   "what": "whip pan (ease-in, highlight smear) landing the glint on native (84,95) at f224",
+   "src": "studio/src/dev/meras/era2014.ts panAt/HANDOFF"
+  },
+  {
+   "f": 225,
+   "type": "handoff",
+   "moment": "mdinner1",
+   "what": "meras->mdinner1: match cut: the 2014 crown glint (84,95 native on f224) becomes the candelabra flame core (84,95 on f225); hard palette switch EARLY-WEB16 -> BASE on the cut",
+   "src": "studio/src/intro/edl.ts HANDOFFS"
+  },
+  {
+   "f": 225,
+   "type": "style",
+   "moment": "mdinner1",
+   "what": "EARLY-WEB16 -> BASE hard switch on the cut (no second render front)",
+   "src": "studio/src/dev/mdinner1/scene.ts (225 comment)",
+   "script": "front 225-229"
+  },
+  {
+   "f": 225,
+   "end": 229,
+   "type": "camera",
+   "moment": "mdinner1",
+   "what": "camera LOCKED on the candelabra: the flame holds the glint's screen position for 5 frames (no whip)",
+   "src": "studio/src/dev/mdinner1/timeline.ts MATCH_HOLD"
+  },
+  {
+   "f": 225,
+   "end": 344,
+   "type": "edit",
+   "moment": "mdinner1",
+   "what": "mdinner1 on screen f225-344 (local 0 = f225); in: 4.4 match cut: the crown glint becomes the candelabra flame on the same pixel",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 226,
+   "type": "keycap-pop",
+   "moment": "mdinner1",
+   "what": "the ESC keycap pops (world clock 226) and hangs at its apex through the freeze",
+   "src": "studio/src/dev/mdinner1/props.ts ctrlFlight"
+  },
+  {
+   "f": 226,
+   "end": 379,
+   "type": "keycap-pop",
+   "moment": "mdinner1",
+   "what": "Gerg's popcorn keycaps: 42 launch frames on screen (world clock stops in the freezes). Launch frames: 226,228,231,232,234,236,238,240,257,259,261,263,265,267,269,271,273,275,277,279,281,283,285,287,290,291,293,295,297,300,341,344,345,347,349,352,354,356,357,359,376,379",
+   "src": "studio/src/shared/pixel/cast/gerg.ts gergKeycaps(w,{from:214,rate:2,max:48}) via mdinner1/mdinner2 worldClock",
+   "note": "6 launches (w214-224) happen before the cut and are already airborne at f225; 48 in all"
+  },
+  {
+   "f": 230,
+   "type": "cut",
+   "moment": "mdinner1",
+   "what": "hard cut to the GERG framing (Gerg typing, Mas at the head of the table)",
+   "src": "studio/src/dev/mdinner1/timeline.ts camRaw",
+   "script": "CAM locked x=0 225-239"
+  },
+  {
+   "f": 230,
+   "end": 239,
+   "type": "camera",
+   "moment": "mdinner1",
+   "what": "slow truck to the GERG framing (x 181 -> 195)",
+   "src": "studio/src/dev/mdinner1/timeline.ts camRaw"
+  },
+  {
+   "f": 230,
+   "end": 247,
+   "type": "date-card",
+   "moment": "mdinner1",
+   "what": "ON SCREEN \"2015\" (shared era stamp, UI layer; holds over the Gerg print)",
+   "src": "studio/src/dev/mdinner1/scene.ts after()"
+  },
+  {
+   "f": 232,
+   "type": "prop",
+   "moment": "mdinner1",
+   "what": "Gerg's napkin sketch becomes a live website",
+   "src": "studio/src/dev/mdinner1/scene.ts drawNapkin(w >= 232)"
+  },
+  {
+   "f": 240,
+   "type": "freeze",
+   "moment": "mdinner1",
+   "what": "GERG FREEZE: the world prints (cream paper + GERG ink); Mas, his pickups and the UI stay live",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_G",
+   "script": "freeze 240-284 (card close)"
+  },
+  {
+   "f": 240,
+   "end": 241,
+   "type": "flash-print",
+   "moment": "mdinner1",
+   "what": "GERG flash-print (the print nearly all paper, 2 frames) + 2-px drop kick 240-242",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_G / freeze.ts freezePop"
+  },
+  {
+   "f": 240,
+   "end": 254,
+   "type": "keycap-pop",
+   "moment": "mdinner1",
+   "what": "keycaps frozen mid-air (GERG print)",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_G"
+  },
+  {
+   "f": 240,
+   "end": 290,
+   "type": "card",
+   "moment": "mdinner1",
+   "what": "GERG name card: portrait window opens in 3 steps (240-242), name k3 (243), rule 244, tagline types from 245, fine print SLEEP: DEPRECATED from 254; holds over the live room; carried off by the 285 truck (285-290)",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_G / studio/src/shared/pixel/freeze.ts founderCard (plate k3, rule k4, tagline k5+ at 2 ch/f)",
+   "script": "240-284"
+  },
+  {
+   "f": 248,
+   "type": "gag",
+   "moment": "mdinner1",
+   "what": "Mas plucks the frozen ESC keycap (it takes his colour); pockets it 254-256",
+   "src": "studio/src/dev/mdinner1/scene.ts masAt",
+   "script": "270-282 (pluck 274)"
+  },
+  {
+   "f": 255,
+   "type": "unfreeze",
+   "moment": "mdinner1",
+   "what": "GERG unfreeze: the room runs again under the card",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_G",
+   "script": "freeze 240-284 (card close)"
+  },
+  {
+   "f": 259,
+   "end": 261,
+   "type": "acting",
+   "moment": "mdinner1",
+   "what": "the one-pixel smile",
+   "src": "studio/src/dev/mdinner1/scene.ts masAt"
+  },
+  {
+   "f": 266,
+   "type": "acting",
+   "moment": "mdinner1",
+   "what": "GERG portrait blinks once",
+   "src": "studio/src/dev/mdinner1/cards.ts"
+  },
+  {
+   "f": 285,
+   "end": 288,
+   "type": "set",
+   "moment": "mdinner1",
+   "what": "rack LEDs ripple on; the nave opens in 3 held steps (286-288)",
+   "src": "studio/src/dev/mdinner1/cathedral.ts cathAt"
+  },
+  {
+   "f": 285,
+   "end": 298,
+   "type": "camera",
+   "moment": "mdinner1",
+   "what": "truck right to ALYI (x 196 -> 330) + tilt up 290-298",
+   "src": "studio/src/dev/mdinner1/timeline.ts camRaw"
+  },
+  {
+   "f": 287,
+   "end": 299,
+   "type": "acting",
+   "moment": "mdinner1",
+   "what": "ALYI rises STILL SEATED in his dinner chair (the chair lifts with him, napkin in lap), 2 -> 22 px on 2s",
+   "src": "studio/src/dev/mdinner1/scene.ts liftAt / cast/alyi.ts alyiChairLift",
+   "script": "288-299, 1 px every 2 frames"
+  },
+  {
+   "f": 289,
+   "end": 291,
+   "type": "prop",
+   "moment": "mdinner1",
+   "what": "the paperclip effigy raises its own UNALIGNED sign",
+   "src": "studio/src/dev/mdinner1/scene.ts effArms"
+  },
+  {
+   "f": 290,
+   "type": "prop",
+   "moment": "mdinner1",
+   "what": "the effigy ignites (flame whoomph)",
+   "src": "studio/src/dev/mdinner1/scene.ts IGNITE"
+  },
+  {
+   "f": 300,
+   "type": "freeze",
+   "moment": "mdinner1",
+   "what": "ALYI FREEZE: the world prints (cream paper + ALYI ink); Mas, his pickups and the UI stay live",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_A",
+   "script": "freeze 300-339 (card close 340-341)"
+  },
+  {
+   "f": 300,
+   "end": 301,
+   "type": "flash-print",
+   "moment": "mdinner1",
+   "what": "ALYI flash-print (the print nearly all paper, 2 frames) + 2-px drop kick 300-302",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_A / freeze.ts freezePop"
+  },
+  {
+   "f": 300,
+   "end": 341,
+   "type": "card",
+   "moment": "mdinner1",
+   "what": "ALYI name card: stained-glass lancet drops in 4 held drawings (300-303, 3-px overshoot), name 303, tagline from 305, fine print PRODUCTS: 0 · EFFIGIES: 1 from 314; token eyes from 315; the world stays frozen through the marshmallow gag; closes in 2 steps on the thaw (340-341, back up)",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_A / studio/src/shared/pixel/freeze.ts founderCard (plate k3, rule k4, tagline k5+ at 2 ch/f)",
+   "script": "300-341"
+  },
+  {
+   "f": 315,
+   "type": "card",
+   "moment": "mdinner1",
+   "what": "ALYI portrait eyes open as scrolling token streams (BASE ticks, not a GLYPH switch)",
+   "src": "studio/src/dev/mdinner1/scene.ts after() eyes"
+  },
+  {
+   "f": 324,
+   "end": 339,
+   "type": "gag",
+   "moment": "mdinner1",
+   "what": "Mas's telescoping fork (324-327), toasts a marshmallow on the FROZEN effigy fire (it toasts it anyway: 328-335, 3 palette steps), bite 336-339",
+   "src": "studio/src/dev/mdinner1/scene.ts masAt seq",
+   "script": "328-339 (steps 330/334/338, blow 339)"
+  },
+  {
+   "f": 340,
+   "type": "unfreeze",
+   "moment": "mdinner1",
+   "what": "ALYI unfreeze: the room runs again under the card",
+   "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_A",
+   "script": "freeze 300-339 (card close 340-341)"
+  },
+  {
+   "f": 345,
+   "type": "handoff",
+   "moment": "mdinner2",
+   "what": "mdinner1->mdinner2: edit on beat 6.4 inside the pixel-identical 345-359 overlap (both moments draw mdinner1's frame); 345 is also a HARD CUT of the camera from the ALYI framing to the vault (the lens-side candle wipe is cut)",
+   "src": "studio/src/intro/edl.ts HANDOFFS"
+  },
+  {
+   "f": 345,
+   "type": "cut",
+   "moment": "mdinner2",
+   "what": "hard cut: the ALYI framing -> the vault framing (camera x 330 -> 606)",
+   "src": "studio/src/dev/mdinner1/timeline.ts camRaw"
+  },
+  {
+   "f": 345,
+   "end": 352,
+   "type": "set",
+   "moment": "mdinner2",
+   "what": "vault blast door swings open (held drawings 345/347/349), beacons, steam",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.vault / scene.ts vaultAt"
+  },
+  {
+   "f": 345,
+   "end": 479,
+   "type": "edit",
+   "moment": "mdinner2",
+   "what": "mdinner2 on screen f345-479 (local 0 = f345); in: 6.4 invisible edit inside the pixel-identical 345-359 overlap (first frame of the overlap)",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 348,
+   "type": "hud",
+   "moment": "mdinner2",
+   "what": "RED-TEAMED HUD tick 1",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.tick1"
+  },
+  {
+   "f": 350,
+   "type": "acting",
+   "moment": "mdinner2",
+   "what": "MARIO steps out of the vault",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.marioOut",
+   "script": 352
+  },
+  {
+   "f": 351,
+   "type": "hud",
+   "moment": "mdinner2",
+   "what": "RED-TEAMED HUD tick 2",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.tick2"
+  },
+  {
+   "f": 354,
+   "type": "hud",
+   "moment": "mdinner2",
+   "what": "RED-TEAMED HUD tick 3",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.tick3"
+  },
+  {
+   "f": 357,
+   "type": "acting",
+   "moment": "mdinner2",
+   "what": "MARIO raises a finger",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.finger",
+   "script": 352
+  },
+  {
+   "f": 360,
+   "type": "freeze",
+   "moment": "mdinner2",
+   "what": "MARIO FREEZE: the world prints (cream paper + MARIO ink); Mas, his pickups and the UI stay live",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_M",
+   "script": "freeze 360-402 (card close 403-404)"
+  },
+  {
+   "f": 360,
+   "end": 361,
+   "type": "flash-print",
+   "moment": "mdinner2",
+   "what": "MARIO flash-print (the print nearly all paper, 2 frames) + 2-px drop kick 360-362",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_M / freeze.ts freezePop"
+  },
+  {
+   "f": 360,
+   "end": 404,
+   "type": "card",
+   "moment": "mdinner2",
+   "what": "MARIO name card: rises from below in 3 held drawings (360-362), name 363, tagline 365-, live WORD COUNT fine print 366-374; holds over the room and over the 390 cut (UI layer); closes in 2 steps 403-404",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_M / studio/src/shared/pixel/freeze.ts founderCard (plate k3, rule k4, tagline k5+ at 2 ch/f)",
+   "script": "360-404"
+  },
+  {
+   "f": 375,
+   "type": "unfreeze",
+   "moment": "mdinner2",
+   "what": "MARIO unfreeze: the room runs again under the card",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_M",
+   "script": "freeze 360-402 (card close 403-404)"
+  },
+  {
+   "f": 375,
+   "end": 389,
+   "type": "prop",
+   "moment": "mdinner2",
+   "what": "Mario's essay scroll drops from his hand and races down the cloth to Mas (off frame-left ~386)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.marioLive",
+   "script": "378-389 (off the card)"
+  },
+  {
+   "f": 390,
+   "type": "cut",
+   "moment": "mdinner2",
+   "what": "hard cut to the telescope framing (camera x 606 -> 340; no whip)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.cut / scene.ts camRaw"
+  },
+  {
+   "f": 390,
+   "type": "gag",
+   "moment": "mdinner2",
+   "what": "Mas takes the scroll's tail (takes his colour); rolls it 391-394",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.grab"
+  },
+  {
+   "f": 395,
+   "end": 406,
+   "type": "gag",
+   "moment": "mdinner2",
+   "what": "paper telescope to the eye, aimed at the ceiling",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.telescope",
+   "script": "394-402"
+  },
+  {
+   "f": 405,
+   "type": "booster",
+   "moment": "mdinner2",
+   "what": "ceiling bursts (panel cracks 405, hole 406+, plaster dust 405-411, pendant falls 406-411)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.burst / booster.ts"
+  },
+  {
+   "f": 405,
+   "end": 419,
+   "type": "camera",
+   "moment": "mdinner2",
+   "what": "tilt up past the crown then ride the booster down (y -6..-26..14); 1-px seeded rumble 409-419",
+   "src": "studio/src/dev/mdinner2/scene.ts camRaw/camera",
+   "script": "tilt 405-409, down 410-419, 3-px shake 414-419"
+  },
+  {
+   "f": 409,
+   "end": 424,
+   "type": "prop",
+   "moment": "mdinner2",
+   "what": "OPEN AI neon swings in on its chains (lit from 411)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.signIn / scene.ts signAt",
+   "script": "405-411"
+  },
+  {
+   "f": 412,
+   "end": 469,
+   "type": "prop",
+   "moment": "mdinner2",
+   "what": "every glass sloshes except Mas's (frozen mid-slosh 420-464, settles 465-469)",
+   "src": "studio/src/dev/mdinner2/scene.ts slosh"
+  },
+  {
+   "f": 415,
+   "type": "booster",
+   "moment": "mdinner2",
+   "what": "hatch opens; NOLE leans out with the check 416-419",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.hatch"
+  },
+  {
+   "f": 420,
+   "type": "booster-touchdown",
+   "moment": "mdinner2",
+   "what": "SPACEZ booster touchdown (legs squat, basket crushed, smoke)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.touchdown / booster.ts"
+  },
+  {
+   "f": 420,
+   "type": "freeze",
+   "moment": "mdinner2",
+   "what": "NOLE FREEZE: the world prints (cream paper + NOLE ink); Mas, his pickups and the UI stay live",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_N",
+   "script": "freeze 420-464"
+  },
+  {
+   "f": 420,
+   "end": 421,
+   "type": "flash-print",
+   "moment": "mdinner2",
+   "what": "NOLE flash-print (the print nearly all paper, 2 frames) + 2-px drop kick 420-422",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_N / freeze.ts freezePop"
+  },
+  {
+   "f": 420,
+   "end": 464,
+   "type": "card",
+   "moment": "mdinner2",
+   "what": "NOLE name card: slams down from above in 4 held drawings (420-423), name 423, tagline 425-; closes into the place cards on the thaw (465)",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_N / studio/src/shared/pixel/freeze.ts founderCard (plate k3, rule k4, tagline k5+ at 2 ch/f)",
+   "script": "420-466"
+  },
+  {
+   "f": 435,
+   "type": "stamp",
+   "moment": "mdinner2",
+   "what": "ON SCREEN \"SUED OVER IT.\" rubber stamp lands (card k15)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.stamp / cards.ts kStamp 15"
+  },
+  {
+   "f": 450,
+   "end": 454,
+   "type": "gag",
+   "moment": "mdinner2",
+   "what": "inside the Nole freeze: Mas sips his water (lift 450, sip 451-453, lower 454); his water line never moves, every other glass frozen mid-slosh",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.sip / scene.ts masAt2",
+   "script": "450-455"
+  },
+  {
+   "f": 455,
+   "type": "acting",
+   "moment": "mdinner2",
+   "what": "Mas stands (half-stand drawing), glass in his other hand",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.stand"
+  },
+  {
+   "f": 456,
+   "end": 464,
+   "type": "n-move",
+   "moment": "mdinner2",
+   "what": "while time is stopped: the N comes off its hook (456, it takes his colour), rides behind O-P-E along the rail (457-463) and clunks into place (464): the frozen sign reads NOPE AI, its N in colour",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.nLift/T.nClunk / scene.ts signAt"
+  },
+  {
+   "f": 465,
+   "type": "unfreeze",
+   "moment": "mdinner2",
+   "what": "NOLE unfreeze: the room runs again under the card",
+   "src": "studio/src/dev/mdinner2/timeline.ts FREEZE_N",
+   "script": "freeze 420-464"
+  },
+  {
+   "f": 465,
+   "type": "neon",
+   "moment": "mdinner2",
+   "what": "the room thaws on the beat and the sign relights in ONE step: NOPE AI in full colour (no flicker), neon spill on the room",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.aiOn / scene.ts signAt"
+  },
+  {
+   "f": 465,
+   "end": 466,
+   "type": "card",
+   "moment": "mdinner2",
+   "what": "Nole's card closes into the place cards (GERG, ALYI, MARIO (JOINS 2016), NOLE; hop 465-466)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.touch"
+  },
+  {
+   "f": 465,
+   "end": 478,
+   "type": "camera",
+   "moment": "mdinner2",
+   "what": "the founding: camera trucks to the sign and cranes up 6 px (465-478)",
+   "src": "studio/src/dev/mdinner2/timeline.ts T.founding / scene.ts camRaw"
+  },
+  {
+   "f": 465,
+   "end": 479,
+   "type": "key-art",
+   "moment": "mdinner2",
+   "what": "KEY ART: NOPE AI over the founders' place cards, Mas standing in colour, glass in hand",
+   "src": "studio/src/dev/mdinner2/scene.ts"
+  },
+  {
+   "f": 480,
+   "type": "handoff",
+   "moment": "mrollcall",
+   "what": "mdinner2->mrollcall: hard cut on the 9.1 downbeat (stab 1): NOPE AI key art -> TASYA window",
+   "src": "studio/src/intro/edl.ts HANDOFFS"
+  },
+  {
+   "f": 480,
+   "end": 486,
+   "type": "cut",
+   "moment": "mrollcall",
+   "what": "flash 1 (F): TASYA jangles a giant key ring (2 drawings on 2s); 112x136 window at (16, 97) on the thread at y 236",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 480,
+   "end": 539,
+   "type": "edit",
+   "moment": "mrollcall",
+   "what": "mrollcall on screen f480-539 (local 0 = f480); in: 9.1 hard cut on the downbeat (stab 1)",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 480,
+   "end": 539,
+   "type": "thread",
+   "moment": "mrollcall",
+   "what": "one steady dusk surround (never changes across the cuts) and the cyan thread drawn on it left to right with the windows: flat y 236 under flashes 1-4, stairs 220/196/164/128, off the top at x 470 (whole knee up by f532)",
+   "src": "studio/src/dev/mrollcall/timeline.ts THREAD / scene.ts drawThread"
+  },
+  {
+   "f": 487,
+   "end": 494,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 2 (F): RADNUS: polite smile under a turning code-red siren (4 lamp drawings; the red stays inside the sprite); 112x136 window at (64, 97) on the thread at y 236",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 495,
+   "end": 501,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 3 (F): KRAM offers a soup thermos with a check floating in it; 112x136 window at (112, 97) on the thread at y 236",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 502,
+   "end": 509,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 4 (F): NESNEJ tosses a GPU (leaves the hand k2); 112x136 window at (160, 97) on the thread at y 236",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 510,
+   "end": 516,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 5 (G): RIMA TAMURI steps into a spotlight (house dark k0, light SNAPS on k1, on her mark k2+); 112x136 window at (208, 81) on the thread at y 220",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 517,
+   "end": 524,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 6 (Ab): THE WHALE breaches on a budget (snout k0-1, half out k2-3, apex k4-7); 112x136 window at (256, 57) on the thread at y 196",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 525,
+   "end": 531,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 7 (C): RUMPT, silhouette only (plain head, square shoulders, the tie over the lip) at a plain fluted gold podium; the point (under 15 degrees) snaps out k1; plate blank; 112x136 window at (304, 25) on the thread at y 164",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 532,
+   "end": 539,
+   "type": "rollcall-cut",
+   "moment": "mrollcall",
+   "what": "flash 8 (F): the player who doesn't exist yet: GLYPH-MASKED blinking cursor (on k0-3, off k4-5, on k6-7); 112x136 window at (352, -11) on the thread at y 128",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS (floor(480 + 7.5n)) / WINDOWS"
+  },
+  {
+   "f": 532,
+   "end": 539,
+   "type": "glyph",
+   "moment": "mrollcall",
+   "what": "GLYPH-MASKED cursor window (S6), held to 539 (hard cut to the skyline, no pull-back)",
+   "src": "studio/src/dev/mrollcall/timeline.ts CUTS[7]"
+  },
+  {
+   "f": 540,
+   "type": "handoff",
+   "moment": "mfinale",
+   "what": "mrollcall->mfinale: hard cut on the 10.1 downbeat: the cursor window (held to 539, no pull-back) -> the dusk skyline; NopeAI stands, MACROSOFT pops",
+   "src": "studio/src/intro/edl.ts HANDOFFS"
+  },
+  {
+   "f": 540,
+   "type": "cut",
+   "moment": "mfinale",
+   "what": "hard cut: the dusk skyline; NOPEAI stands at centre",
+   "src": "studio/src/dev/mfinale/timeline.ts T.sky"
+  },
+  {
+   "f": 540,
+   "end": 543,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "MACROSOFT pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): TASYA on the roof (keys)",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 540,
+   "end": 629,
+   "type": "prop",
+   "moment": "mfinale",
+   "what": "RIMA TAMURI on NopeAI's roof deck: her spotlight drifts (4 drawings on 8s: it swings onto her and drifts off)",
+   "src": "studio/src/dev/mfinale/skyline.ts RIMA_DECK / rimaSpotDx"
+  },
+  {
+   "f": 540,
+   "end": 689,
+   "type": "loop-cursor",
+   "moment": "mfinale",
+   "what": "the cursor (2x4 cyan) blinks on the tip of NopeAI's spire on the beat phase (the eighth player's rooftop)",
+   "src": "studio/src/dev/mfinale/skyline.ts drawSpire tip"
+  },
+  {
+   "f": 540,
+   "end": 719,
+   "type": "edit",
+   "moment": "mfinale",
+   "what": "mfinale on screen f540-719 (local 0 = f540); in: 10.1 hard cut on the downbeat onto the dusk skyline",
+   "src": "studio/src/intro/edl.ts EDL"
+  },
+  {
+   "f": 555,
+   "end": 558,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "ELGOOG (+ MINDDEEP annex +1) pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): RADNUS under the CODE RED siren, SIMED",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 570,
+   "end": 573,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "ATEM pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): KRAM with the thermos; METAVERSE billboard",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 585,
+   "end": 588,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "INVIDIA pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): NESNEJ; GPU tosses from 587 (they pile up red-hot and keep their shape)",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 600,
+   "end": 603,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "MISANTHROPIC + zAI (double pop) pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): MARIO + ADELINA (price tag blank); NOLE",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 615,
+   "end": 618,
+   "type": "tower-pop",
+   "moment": "mfinale",
+   "what": "PEEKDEEP (budget) pops (up out of the ground k0, 3-px overshoot k1, +1 k2, settled k3; dust k1-7): the whale's fin",
+   "src": "studio/src/dev/mfinale/timeline.ts POPS / skyline.ts popDy"
+  },
+  {
+   "f": 622,
+   "end": 629,
+   "type": "roofline-ignite",
+   "moment": "mfinale",
+   "what": "every rooftop edge ignites into one cyan line: the fuse runs L->R (622-627), up the spire (628-629)",
+   "src": "studio/src/dev/mfinale/timeline.ts T.line / skyline.ts ignition"
+  },
+  {
+   "f": 630,
+   "end": 632,
+   "type": "title-slam",
+   "moment": "mfinale",
+   "what": "TITLE SLAM \"MR. MAS\" in finished BASE chrome from 630 (no palette ladder; Orb period on the rose window hub, with a dark knock-out ring and N0 keyline); 3-px shake 630-632; rivals flinch; rose blazes 630-633",
+   "src": "studio/src/dev/mfinale/timeline.ts T.title / title.ts SHAKE"
+  },
+  {
+   "f": 630,
+   "end": 689,
+   "type": "plates",
+   "moment": "mfinale",
+   "what": "the tower wordmarks clear of the title (ELGOOG, MINDDEEP, ATEM, INVIDIA, PEEKDEEP) stay: one light step down from 634",
+   "src": "studio/src/dev/mfinale/title.ts drawTowerPlates"
+  },
+  {
+   "f": 640,
+   "end": 645,
+   "type": "text-type",
+   "moment": "mfinale",
+   "what": "subtitle \"back by popular demand\" types at 4 ch/frame (640-645)",
+   "src": "studio/src/dev/mfinale/timeline.ts T.subtitle / title.ts titleAfter"
+  },
+  {
+   "f": 660,
+   "type": "orb",
+   "moment": "mfinale",
+   "what": "Orb period catch-light glint (four-point, crosses its shoulder)",
+   "src": "studio/src/dev/mfinale/title.ts drawOrb (tw = g - 660)"
+  },
+  {
+   "f": 690,
+   "end": 691,
+   "type": "cut",
+   "moment": "mfinale",
+   "what": "cut/pull back: the title is on Mas's monitor (bezel in from the frame edge, LCD rows) — the cold open's MEDIUM two-shot",
+   "src": "studio/src/dev/mfinale/timeline.ts T.book / bookend.ts",
+   "script": "reverse angle behind his shoulder"
+  },
+  {
+   "f": 692,
+   "end": 704,
+   "type": "acting",
+   "moment": "mfinale",
+   "what": "the room: Mas and the Orb watch the screen (replays cold-open f56-62); dusk-violet key light",
+   "src": "studio/src/dev/mfinale/timeline.ts T.orbTurn / bookend.ts coldFrame"
+  },
+  {
+   "f": 692,
+   "end": 719,
+   "type": "toast",
+   "moment": "mfinale",
+   "what": "the Orb's toast [SLOT], a monitor notification: \"verified: human\" (Ep1), 692-719, holds through the dissolve (BLIP ORB: C7 chime at 692)",
+   "src": "studio/src/dev/mfinale/bookend.ts TOAST"
+  },
+  {
+   "f": 705,
+   "type": "ding",
+   "moment": "mfinale",
+   "what": "the last beat: Post (cold-open click drawing), eyes on the lens, one-pixel smile; the post flies up; key light back to cyan (SFX ding here)",
+   "src": "studio/src/dev/mfinale/timeline.ts T.last"
+  },
+  {
+   "f": 705,
+   "end": 706,
+   "type": "iris",
+   "moment": "mfinale",
+   "what": "Orb iris shows the skyline in GLYPH (S7), settles at 707",
+   "src": "studio/src/dev/mfinale/timeline.ts IRIS_GLYPH"
+  },
+  {
+   "f": 707,
+   "end": 712,
+   "type": "loop-cursor",
+   "moment": "mfinale",
+   "what": "composer empty again (the f0 state), caret ON at the cold-open home CARET_FRAME (beat phase: on 705-712; drawn from 707 once the post has flown)",
+   "src": "studio/src/dev/mfinale/bookend.ts + mcoldopen caretOn"
+  },
+  {
+   "f": 712,
+   "end": 719,
+   "type": "fade",
+   "moment": "mfinale",
+   "what": "the room dissolves to black on an ordered dither; caret OFF 713-719 (blink phase), ON again at f0: the loop",
+   "src": "studio/src/dev/mfinale/bookend.ts FADE0",
+   "script": "room steps down one light level at 716"
+  },
+  {
+   "f": 719,
+   "type": "loop",
+   "moment": "mfinale",
+   "what": "loop point: f719 black room, caret off (blink phase) -> f0 caret on in the cold-open macro",
+   "src": "studio/src/intro/edl.ts",
+   "note": "next frame is f0"
+  }
+ ],
+ "slot": {
+  "ep": 2,
+  "line": "her",
+  "keys": [
+   18,
+   19,
+   21
+  ],
+  "indicator": [
+   38,
+   111
+  ],
+  "dot": 0.55,
+  "keycap": "ESC",
+  "subtitle": "back by popular demand"
+ },
+ "derived_from": "../out/season/intro/picture/intro-events.json"
+}

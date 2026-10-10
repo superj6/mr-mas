@@ -32,6 +32,42 @@ export const L1_KEYS = [18, 19, 21, 22, 24, 25, 26, 28, 30, 31, 33, 34, 35, 37, 
 export const L2_BREAK = 63;
 /** "unclear which side." f64-83, 7-8 frames ahead of the VO ("unclear" f72, "which" f81, "side" f86); complete f84 */
 export const L2_KEYS = [64, 65, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83];
+/** tokenizer view of the post (the semicolon gets its own token): the Post burst's chips (chips.ts) */
+export const L_TOKENS: Array<{t: string; line: 0 | 1}> = [
+  {t: 'near', line: 0}, {t: ' the', line: 0}, {t: ' singular', line: 0}, {t: 'ity', line: 0}, {t: ';', line: 0},
+  {t: 'unclear', line: 1}, {t: ' which', line: 1}, {t: ' side', line: 1}, {t: '.', line: 1},
+];
+
+// ------------------------------------------------------------------ the episode slot (SCRIPT.md §8 items 1 and 2)
+// The cold open's per-episode values. Every function in this moment takes them with Ep1's as the default, so Ep1's
+// intro (intro-ep1) draws exactly as before; studio/src/intro/slot.ts gathers them with the other moments' slots, and
+// another episode's intro (Ep2: studio/src/episodes/ep02/intro/) passes its own.
+export interface ColdLine {
+  /** the typed line: line 1, line 2 ('' if the line is one line) */
+  l1: string;
+  l2: string;
+  /** the frame each character of l1 / l2 appears */
+  keys1: number[];
+  keys2: number[];
+  /** shift+enter to line 2 (null: no second line) */
+  brk: number | null;
+  /** the Post burst's tokens */
+  tokens: Array<{t: string; line: 0 | 1}>;
+  /** a pulsing typing indicator (three dots) after the typed text, holding the rest of the phrase's slot:
+   *  [first, last] frame, or null (Ep1 has none; Ep2's "her" is followed by one) */
+  indicator: [number, number] | null;
+}
+export interface ColdSlot {
+  line: ColdLine;
+  /** the `you are here` dot's rest on the chart (SCRIPT §8.4): 0.50 = at the knee (Ep1), 1.0 = the chart's top edge */
+  dot: number;
+}
+export const EP1_LINE: ColdLine = {l1: L1, l2: L2, keys1: L1_KEYS, keys2: L2_KEYS, brk: L2_BREAK, tokens: L_TOKENS, indicator: null};
+export const EP1_COLD: ColdSlot = {line: EP1_LINE, dot: 0.5};
+/** every keystroke of a line, the shift+enter included (Ep1: [...L1_KEYS, L2_BREAK, ...L2_KEYS]) */
+export const lineKeys = (line: ColdLine) => (line.brk === null ? [...line.keys1, ...line.keys2] : [...line.keys1, line.brk, ...line.keys2]);
+/** the indicator is up on frame f */
+export const indicatorOn = (line: ColdLine, f: number) => !!line.indicator && f >= line.indicator[0] && f <= line.indicator[1];
 
 // ------------------------------------------------------------------ acting / events
 export const EV = {
@@ -57,8 +93,8 @@ export const caretOn = (f: number) => ((f % FRAMES_PER_BEAT) + FRAMES_PER_BEAT) 
 /** characters of L1 / L2 visible at frame f */
 export const typedCount = (keys: number[], f: number) => keys.filter((k) => k <= f).length;
 /** frame of the most recent keystroke at or before f (either line), or -Infinity */
-export const lastKey = (f: number) => {
-  const all = [...L1_KEYS, L2_BREAK, ...L2_KEYS].filter((k) => k <= f);
+export const lastKey = (f: number, line: ColdLine = EP1_LINE) => {
+  const all = lineKeys(line).filter((k) => k <= f);
   return all.length ? Math.max(...all) : -Infinity;
 };
 

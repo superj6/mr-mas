@@ -10,7 +10,8 @@ import {masPortrait, MasPortraitState} from '../../shared/pixel/cast/mas';
 import {screenAt, SW, SH, CARET_HOME} from './screen';
 import {drawOrb, orbLookAt, orbBob} from '../../shared/pixel/cast/orb';
 import {boxPool, ringPool, litWindows, shearTop, vignette} from './paint';
-import {EV, L1_KEYS, L2_KEYS, L2_BREAK} from './timeline';
+import {EV, EP1_COLD, EP1_LINE, lineKeys} from './timeline';
+import type {ColdLine, ColdSlot} from './timeline';
 
 /** caret home in FRAME coords: the fixed point of the stepped dolly-out (macros centre on it too) */
 export const CARET_FRAME: [number, number] = [96, 76];
@@ -119,10 +120,9 @@ export const masPortraitAt = (f: number): {s: MasPortraitState; tilt: boolean; d
 };
 
 // ------------------------------------------------------------------ his hands at the desk line (typing on 2s)
-const ALL_KEYS = [...L1_KEYS, L2_BREAK, ...L2_KEYS];
 export type HandState = {near: 'rest' | 'typeA' | 'typeB' | 'lift' | 'mouse' | 'click'; far: 'rest' | 'typeA' | 'typeB'};
-export const handsAt = (f: number): HandState => {
-  const typing = ALL_KEYS.some((k) => f >= k - 1 && f <= k);
+export const handsAt = (f: number, cl: ColdLine = EP1_LINE): HandState => {
+  const typing = lineKeys(cl).some((k) => f >= k - 1 && f <= k);
   const t: 'typeA' | 'typeB' = Math.floor(f / 2) % 2 ? 'typeB' : 'typeA';
   if (f >= EV.pointer[0] && f < EV.pointer[0] + 2) return {near: 'lift', far: 'rest'};
   if (f === EV.click || f === EV.click + 1) return {near: 'click', far: 'rest'};
@@ -226,8 +226,8 @@ const drawMouse = (b: Buf) => {
 };
 
 /** Forearms, hands, the keyboard and the mouse: drawn over the desk top (they are nearer than its far edge). */
-export const drawHands = (b: Buf, f: number) => {
-  const h = handsAt(f);
+export const drawHands = (b: Buf, f: number, cl: ColdLine = EP1_LINE) => {
+  const h = handsAt(f, cl);
   const dip = h.near === 'click' ? 1 : 0;
   drawKeyboard(b);
   drawMouse(b);
@@ -331,7 +331,7 @@ const drawShelf = (b: Buf) => {
   rect(262, y - 5, 8, 5, b.ink(PAL.D1));
 };
 
-const drawMonitor = (b: Buf, f: number) => {
+const drawMonitor = (b: Buf, f: number, co: ColdSlot) => {
   // left side panel (it is turned toward him), bezel, chin, the arm pole
   poly([BZ.x0 - 6, BZ.y0 + 2, BZ.x0, BZ.y0, BZ.x0, BZ.y1, BZ.x0 - 6, BZ.y1 - 3], b.ink(PAL.N0));
   line(BZ.x0 - 6, BZ.y0 + 2, BZ.x0 - 6, BZ.y1 - 3, b.ink(PAL.N2));
@@ -365,7 +365,7 @@ const drawMonitor = (b: Buf, f: number) => {
   rect(bx + 1, by + 3, 2, 3, b.ink(PAL.N4));
   rect(bx + 4, by + 3, 2, 1, b.ink(PAL.G3)); rect(bx + 4, by + 5, 2, 1, b.ink(PAL.G3)); rect(bx + 1, by + 7, 5, 1, b.ink(PAL.G2));
   // the screen itself (emissive)
-  const s = screenAt(f);
+  const s = screenAt(f, co);
   for (let y = 0; y < SH; y++) for (let x = 0; x < SW; x++) b.set(SX + x, SY + y, s.c[y * SW + x]);
   // the dot escapes: one frame above the bezel, one fainter, gone
   if (f === EV.dotExit) b.set(SX + SW - 3, BZ.y0 - 3, PAL.C8);
@@ -424,7 +424,8 @@ const drawGlass = (b: Buf) => {
   for (let i = 0; i < w; i++) { b.set(x + i, y + h - 2, i < 5 ? PAL.C4 : PAL.C2); b.set(x + i, y + h - 1, PAL.C1); }
 };
 
-export interface MediumOut { masMask?: Uint8Array; orbMask?: Uint8Array }
+/** `cold`: the episode's cold-open slot (its line, its dot); Ep1's when omitted */
+export interface MediumOut { masMask?: Uint8Array; orbMask?: Uint8Array; cold?: ColdSlot }
 
 export const drawMedium = (b: Buf, f: number, o: MediumOut = {}) => {
   // ---- wall + the monitor's glow on it
@@ -449,8 +450,9 @@ export const drawMedium = (b: Buf, f: number, o: MediumOut = {}) => {
   // ---- the desk top in front of him, his glass, then the monitor (nearest to camera)
   drawDesk(b);
   drawGlass(b);
-  drawHands(b, f);
-  drawMonitor(b, f);
+  const co = o.cold ?? EP1_COLD;
+  drawHands(b, f, co.line);
+  drawMonitor(b, f, co);
   vignette(b);
   return b;
 };

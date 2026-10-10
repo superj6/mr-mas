@@ -16,9 +16,16 @@ import {radialMask} from '../../shared/pixel/mask';
 import type {SwitchSpec, DrawResult} from '../../shared/pixel/compose';
 import {drawMedium, MED, CARET_FRAME} from '../mcoldopen/medium';
 import {screenAt, SW, SH} from '../mcoldopen/screen';
+import {EP1_COLD} from '../mcoldopen/timeline';
+import type {ColdSlot} from '../mcoldopen/timeline';
 import {orbBob} from '../../shared/pixel/cast/orb';
 import {T, IRIS_GLYPH} from './timeline';
-import {drawTitle, titleAfter} from './title';
+import {drawTitle, titleAfter, SUB} from './title';
+
+/** the bookend's per-episode values: the cold open's slot (the room replays it; the composer's f0 state carries the
+ *  dot) and the subtitle (the title on his monitor). Ep1's when omitted. */
+export interface BookSlot { cold: ColdSlot; subtitle: string }
+export const EP1_BOOK: BookSlot = {cold: EP1_COLD, subtitle: SUB};
 
 // ================================================================== layout: the cold open's, imported
 export const SCREEN = {x: MED.screen[0], y: MED.screen[1], w: SW, h: SH};
@@ -37,15 +44,16 @@ const FADE0 = 712;
 
 // ================================================================== the picture on the screen (the title at f689)
 const IMG_H = 101;
-let thumbCache: Buf | null = null;
+const thumbCache = new Map<string, Buf>();
 /** the title frame at f689, box-filtered 8:3 onto the screen (a display showing a picture), snapped back to the
  *  master palette; bright hairlines (the cyan curve, type) win their cell so they survive the averaging */
-const thumb = () => {
-  if (thumbCache) return thumbCache;
+const thumb = (sub: string) => {
+  const hit = thumbCache.get(sub);
+  if (hit) return hit;
   const full = new Buf(W, H, PAL.N0);
   drawTitle(full, T.book - 1);
   const ui = new Buf(W, H, TRANSPARENT);
-  titleAfter(ui, T.book - 1);
+  titleAfter(ui, T.book - 1, sub);
   for (let i = 0; i < full.c.length; i++) if (ui.c[i] < TRANSPARENT) full.c[i] = ui.c[i];
   const tw = SCREEN.w, th = IMG_H, k = W / tw;
   const t = new Buf(tw, th, PAL.N0);
@@ -62,19 +70,19 @@ const thumb = () => {
       const avg = (Math.round(r / n) << 16) | (Math.round(g / n) << 8) | Math.round(b / n);
       t.c[y * tw + x] = mx > 3 * 150 && mx / 3 > ((r + g + b) / n) * 1.6 ? mc : nearest(avg, ALL_COLORS);
     }
-  thumbCache = t;
+  thumbCache.set(sub, t);
   return t;
 };
 
 /** the screen: the picture (the show) until he posts; then it flies up into the feed in 3 held steps */
-const drawScreenContent = (fb: Buf, g: number) => {
+const drawScreenContent = (fb: Buf, g: number, sl: BookSlot) => {
   const {x: sx, y: sy, w: sw, h: sh} = SCREEN;
   // underneath: the cold open's composer at its f0 state (empty, the caret on the beat, the knee on the chart)
-  const s = screenAt(((g % 15) + 15) % 15);
+  const s = screenAt(((g % 15) + 15) % 15, sl.cold);
   const off = g < POSTED ? 0 : [-34, -72, -112][Math.min(2, g - POSTED)];
   for (let j = 0; j < sh; j++) for (let i = 0; i < sw; i++) fb.set(sx + i, sy + j, s.c[j * sw + i]);
   if (g < POSTED + 3) {
-    const t = thumb();
+    const t = thumb(sl.subtitle);
     for (let j = 0; j < IMG_H; j++) { const Y = sy + j + off; if (Y < sy) continue; for (let i = 0; i < sw; i++) fb.set(sx + i, Y, t.c[j * sw + i]); }
     // the post bar under the picture, the Post button (pressed on the beat)
     const by = sy + IMG_H + off;
@@ -152,13 +160,13 @@ const irisSource = (g: number) => {
 };
 
 // ================================================================== the scene
-export const drawBook = (fb: Buf, g: number): void | DrawResult => {
+export const drawBook = (fb: Buf, g: number, sl: BookSlot = EP1_BOOK): void | DrawResult => {
   const k = g - T.book;
   if (k <= 1) {
     // the title is on a screen: the bezel comes in from the frame edge, LCD rows show
     drawTitle(fb, g);
     const ui = new Buf(W, H, TRANSPARENT);
-    titleAfter(ui, g);
+    titleAfter(ui, g, sl.subtitle);
     for (let i = 0; i < fb.c.length; i++) if (ui.c[i] < TRANSPARENT) fb.c[i] = ui.c[i];
     for (let y = 0; y < H; y += 2) for (let x = 0; x < W; x++) fb.set(x, y, stepColor(fb.get(x, y), -1));
     const ins = k === 0 ? 7 : 20;
@@ -171,8 +179,8 @@ export const drawBook = (fb: Buf, g: number): void | DrawResult => {
   }
   // the cold open's medium two-shot, with this span's picture on the monitor
   const mas = new Uint8Array(W * H);
-  drawMedium(fb, coldFrame(g), {masMask: mas});
-  drawScreenContent(fb, g);
+  drawMedium(fb, coldFrame(g), {masMask: mas, cold: sl.cold});
+  drawScreenContent(fb, g, sl);
   if (g < POSTED) duskKey(fb, mas);
   // zoom-rects: the frame collapsing onto the screen (2 frames: two outlines, then one)
   if (k === 2 || k === 3) {

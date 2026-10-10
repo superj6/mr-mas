@@ -1,0 +1,1193 @@
+{
+ "source": "out/ep02/v1/outro/outro-b-ep2.mp4 (decoded)",
+ "method": "Each text row of the ENCODED frame (page 1 at o170, page 2 at o330), box-reduced to 480x270, against the exact native frame from the Node preview: mean and max absolute RGB error over the row, and the luminance contrast of its ink vs its ground measured in the encode.",
+ "rows": [
+  {
+   "line": "mr. mas \u00b7 ep1.1_her.wav",
+   "page": 1,
+   "frame": 170,
+   "box": [
+    31,
+    95,
+    146,
+    109
+   ],
+   "mean_abs_err": 1.19,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3,
+   "seconds": 7.08
+  },
+  {
+   "line": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5",
+   "page": 1,
+   "frame": 170,
+   "box": [
+    31,
+    110,
+    237,
+    124
+   ],
+   "mean_abs_err": 1.2,
+   "max_abs_err": 5,
+   "encoded_contrast": 12.3,
+   "seconds": 5.54
+  },
+  {
+   "line": "prompt: jgon",
+   "page": 1,
+   "frame": 170,
+   "box": [
+    31,
+    125,
+    97,
+    139
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3,
+   "seconds": 5.46
+  },
+  {
+   "line": "viewer: verified: human",
+   "page": 1,
+   "frame": 170,
+   "box": [
+    31,
+    147,
+    142,
+    161
+   ],
+   "mean_abs_err": 1.3,
+   "max_abs_err": 6,
+   "encoded_contrast": 8.9,
+   "seconds": 2.46
+  },
+  {
+   "line": "voices \u00b7 role: library voice",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    31,
+    23,
+    159,
+    37
+   ],
+   "mean_abs_err": 1.2,
+   "max_abs_err": 3,
+   "encoded_contrast": 12.3,
+   "seconds": 6.58
+  },
+  {
+   "line": "mas: jeremy",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    43,
+    88,
+    53
+   ],
+   "mean_abs_err": 1.09,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.96
+  },
+  {
+   "line": "gerg: marcus",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    54,
+    91,
+    64
+   ],
+   "mean_abs_err": 1.09,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.6,
+   "seconds": 5.96
+  },
+  {
+   "line": "nole: ryan (confident)",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    65,
+    129,
+    75
+   ],
+   "mean_abs_err": 1.04,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.96
+  },
+  {
+   "line": "rima: mia",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    76,
+    73,
+    86
+   ],
+   "mean_abs_err": 1.07,
+   "max_abs_err": 6,
+   "encoded_contrast": 5.9,
+   "seconds": 5.92
+  },
+  {
+   "line": "chatgtp: maya",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    87,
+    96,
+    97
+   ],
+   "mean_abs_err": 1.08,
+   "max_abs_err": 6,
+   "encoded_contrast": 6.0,
+   "seconds": 5.92
+  },
+  {
+   "line": "alyi: louis",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    98,
+    78,
+    108
+   ],
+   "mean_abs_err": 1.08,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.7,
+   "seconds": 5.96
+  },
+  {
+   "line": "tasya: tyler kurk",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    109,
+    111,
+    119
+   ],
+   "mean_abs_err": 1.08,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.7,
+   "seconds": 5.88
+  },
+  {
+   "line": "terb: ethan",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    120,
+    85,
+    130
+   ],
+   "mean_abs_err": 1.13,
+   "max_abs_err": 7,
+   "encoded_contrast": 17.6,
+   "seconds": 5.92
+  },
+  {
+   "line": "neleh: alexandra",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    131,
+    108,
+    141
+   ],
+   "mean_abs_err": 1.14,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.6,
+   "seconds": 5.92
+  },
+  {
+   "line": "radnus: dylan malc",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    142,
+    117,
+    152
+   ],
+   "mean_abs_err": 1.12,
+   "max_abs_err": 7,
+   "encoded_contrast": 17.7,
+   "seconds": 5.83
+  },
+  {
+   "line": "staffer: avery",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    153,
+    99,
+    163
+   ],
+   "mean_abs_err": 1.15,
+   "max_abs_err": 6,
+   "encoded_contrast": 5.9,
+   "seconds": 5.88
+  },
+  {
+   "line": "mario: am_liam (kokoro)",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    36,
+    164,
+    137,
+    174
+   ],
+   "mean_abs_err": 1.01,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.79
+  },
+  {
+   "line": "selbeep: the pharaoh 3",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    43,
+    253,
+    53
+   ],
+   "mean_abs_err": 1.13,
+   "max_abs_err": 7,
+   "encoded_contrast": 17.7,
+   "seconds": 6.04
+  },
+  {
+   "line": "xel: alex wright",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    54,
+    219,
+    64
+   ],
+   "mean_abs_err": 1.07,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.7,
+   "seconds": 6
+  },
+  {
+   "line": "the humanist: luis",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    65,
+    228,
+    75
+   ],
+   "mean_abs_err": 1.15,
+   "max_abs_err": 7,
+   "encoded_contrast": 5.9,
+   "seconds": 6
+  },
+  {
+   "line": "demo engineer: ryan (articulate)",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    76,
+    289,
+    86
+   ],
+   "mean_abs_err": 1.08,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.96
+  },
+  {
+   "line": "voices 1-2: alexander, brad",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    87,
+    271,
+    97
+   ],
+   "mean_abs_err": 1.09,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.96
+  },
+  {
+   "line": "voices 3-4: quinn, sarah eve",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    98,
+    278,
+    108
+   ],
+   "mean_abs_err": 1.11,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.7,
+   "seconds": 5.92
+  },
+  {
+   "line": "staffer 2: jessi",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    109,
+    220,
+    119
+   ],
+   "mean_abs_err": 1.18,
+   "max_abs_err": 6,
+   "encoded_contrast": 5.9,
+   "seconds": 5.96
+  },
+  {
+   "line": "tv reporter: katherine",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    120,
+    248,
+    130
+   ],
+   "mean_abs_err": 1.09,
+   "max_abs_err": 6,
+   "encoded_contrast": 5.9,
+   "seconds": 5.88
+  },
+  {
+   "line": "bukaj: scypher",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    131,
+    215,
+    141
+   ],
+   "mean_abs_err": 1.12,
+   "max_abs_err": 7,
+   "encoded_contrast": 17.6,
+   "seconds": 5.83
+  },
+  {
+   "line": "ekiel: dexter",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    142,
+    206,
+    152
+   ],
+   "mean_abs_err": 1.09,
+   "max_abs_err": 6,
+   "encoded_contrast": 17.7,
+   "seconds": 5.88
+  },
+  {
+   "line": "the forecaster: jack john",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    153,
+    262,
+    163
+   ],
+   "mean_abs_err": 1.14,
+   "max_abs_err": 6,
+   "encoded_contrast": 5.9,
+   "seconds": 5.79
+  },
+  {
+   "line": "the driver: jerry b.",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    164,
+    235,
+    174
+   ],
+   "mean_abs_err": 1.08,
+   "max_abs_err": 5,
+   "encoded_contrast": 6.0,
+   "seconds": 5.75
+  },
+  {
+   "line": "haras: hannah",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    175,
+    212,
+    185
+   ],
+   "mean_abs_err": 1.12,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.75
+  },
+  {
+   "line": "the crowd: ten library voices",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    151,
+    186,
+    277,
+    196
+   ],
+   "mean_abs_err": 1.06,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.67
+  },
+  {
+   "line": "tools: claude code \u00b7 remotion \u00b7 elevenlabs \u00b7 kokoro-82m",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    31,
+    201,
+    292,
+    215
+   ],
+   "mean_abs_err": 1.22,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3,
+   "seconds": 5.54
+  },
+  {
+   "line": "blender \u00b7 veo 3.1 fast via runway \u00b7 ffmpeg",
+   "page": 2,
+   "frame": 330,
+   "box": [
+    31,
+    216,
+    233,
+    230
+   ],
+   "mean_abs_err": 1.16,
+   "max_abs_err": 4,
+   "encoded_contrast": 12.3,
+   "seconds": 5.63
+  }
+ ],
+ "checks": {
+  "rows": [
+   {
+    "page": 1,
+    "line": "mr. mas \u00b7 ep1.1_her.wav",
+    "chars": 23,
+    "px": 102,
+    "box": [
+     31,
+     95,
+     146,
+     109
+    ],
+    "right": 146,
+    "clearOfOrb": true,
+    "legibleFrom": 10,
+    "legibleTo": 179,
+    "seconds": 7.08,
+    "needP15": 1.4,
+    "perLineOk": true
+   },
+   {
+    "page": 1,
+    "line": "art \u00b7 script \u00b7 music \u00b7 voices \u00b7 edit: opus 5.5",
+    "chars": 46,
+    "px": 193,
+    "box": [
+     31,
+     110,
+     237,
+     124
+    ],
+    "right": 237,
+    "clearOfOrb": true,
+    "legibleFrom": 47,
+    "legibleTo": 179,
+    "seconds": 5.54,
+    "needP15": 2.55,
+    "perLineOk": true
+   },
+   {
+    "page": 1,
+    "line": "prompt: jgon",
+    "chars": 12,
+    "px": 53,
+    "box": [
+     31,
+     125,
+     97,
+     139
+    ],
+    "right": 97,
+    "clearOfOrb": true,
+    "legibleFrom": 49,
+    "legibleTo": 179,
+    "seconds": 5.46,
+    "needP15": 0.85,
+    "perLineOk": true
+   },
+   {
+    "page": 1,
+    "line": "viewer: verified: human",
+    "chars": 23,
+    "px": 98,
+    "box": [
+     31,
+     147,
+     142,
+     161
+    ],
+    "right": 142,
+    "clearOfOrb": true,
+    "legibleFrom": 121,
+    "legibleTo": 179,
+    "seconds": 2.46,
+    "needP15": 1.4,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "voices \u00b7 role: library voice",
+    "chars": 28,
+    "px": 115,
+    "box": [
+     31,
+     23,
+     159,
+     37
+    ],
+    "right": 159,
+    "clearOfOrb": true,
+    "legibleFrom": 187,
+    "legibleTo": 344,
+    "seconds": 6.58,
+    "needP15": 1.65,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "mas: jeremy",
+    "chars": 11,
+    "px": 49,
+    "box": [
+     36,
+     43,
+     88,
+     53
+    ],
+    "right": 88,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 0.8,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "gerg: marcus",
+    "chars": 12,
+    "px": 52,
+    "box": [
+     36,
+     54,
+     91,
+     64
+    ],
+    "right": 91,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 0.85,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "nole: ryan (confident)",
+    "chars": 22,
+    "px": 90,
+    "box": [
+     36,
+     65,
+     129,
+     75
+    ],
+    "right": 129,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 1.35,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "rima: mia",
+    "chars": 9,
+    "px": 34,
+    "box": [
+     36,
+     76,
+     73,
+     86
+    ],
+    "right": 73,
+    "clearOfOrb": true,
+    "legibleFrom": 203,
+    "legibleTo": 344,
+    "seconds": 5.92,
+    "needP15": 0.7,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "chatgtp: maya",
+    "chars": 13,
+    "px": 57,
+    "box": [
+     36,
+     87,
+     96,
+     97
+    ],
+    "right": 96,
+    "clearOfOrb": true,
+    "legibleFrom": 203,
+    "legibleTo": 344,
+    "seconds": 5.92,
+    "needP15": 0.9,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "alyi: louis",
+    "chars": 11,
+    "px": 39,
+    "box": [
+     36,
+     98,
+     78,
+     108
+    ],
+    "right": 78,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 0.8,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "tasya: tyler kurk",
+    "chars": 17,
+    "px": 72,
+    "box": [
+     36,
+     109,
+     111,
+     119
+    ],
+    "right": 111,
+    "clearOfOrb": true,
+    "legibleFrom": 204,
+    "legibleTo": 344,
+    "seconds": 5.88,
+    "needP15": 1.1,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "terb: ethan",
+    "chars": 11,
+    "px": 46,
+    "box": [
+     36,
+     120,
+     85,
+     130
+    ],
+    "right": 85,
+    "clearOfOrb": true,
+    "legibleFrom": 203,
+    "legibleTo": 344,
+    "seconds": 5.92,
+    "needP15": 0.8,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "neleh: alexandra",
+    "chars": 16,
+    "px": 69,
+    "box": [
+     36,
+     131,
+     108,
+     141
+    ],
+    "right": 108,
+    "clearOfOrb": true,
+    "legibleFrom": 203,
+    "legibleTo": 344,
+    "seconds": 5.92,
+    "needP15": 1.05,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "radnus: dylan malc",
+    "chars": 18,
+    "px": 78,
+    "box": [
+     36,
+     142,
+     117,
+     152
+    ],
+    "right": 117,
+    "clearOfOrb": true,
+    "legibleFrom": 205,
+    "legibleTo": 344,
+    "seconds": 5.83,
+    "needP15": 1.15,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "staffer: avery",
+    "chars": 14,
+    "px": 60,
+    "box": [
+     36,
+     153,
+     99,
+     163
+    ],
+    "right": 99,
+    "clearOfOrb": true,
+    "legibleFrom": 204,
+    "legibleTo": 344,
+    "seconds": 5.88,
+    "needP15": 0.95,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "mario: am_liam (kokoro)",
+    "chars": 23,
+    "px": 98,
+    "box": [
+     36,
+     164,
+     137,
+     174
+    ],
+    "right": 137,
+    "clearOfOrb": true,
+    "legibleFrom": 206,
+    "legibleTo": 344,
+    "seconds": 5.79,
+    "needP15": 1.4,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "selbeep: the pharaoh 3",
+    "chars": 22,
+    "px": 99,
+    "box": [
+     151,
+     43,
+     253,
+     53
+    ],
+    "right": 253,
+    "clearOfOrb": true,
+    "legibleFrom": 200,
+    "legibleTo": 344,
+    "seconds": 6.04,
+    "needP15": 1.35,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "xel: alex wright",
+    "chars": 16,
+    "px": 65,
+    "box": [
+     151,
+     54,
+     219,
+     64
+    ],
+    "right": 219,
+    "clearOfOrb": true,
+    "legibleFrom": 201,
+    "legibleTo": 344,
+    "seconds": 6,
+    "needP15": 1.05,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "the humanist: luis",
+    "chars": 18,
+    "px": 74,
+    "box": [
+     151,
+     65,
+     228,
+     75
+    ],
+    "right": 228,
+    "clearOfOrb": true,
+    "legibleFrom": 201,
+    "legibleTo": 344,
+    "seconds": 6,
+    "needP15": 1.15,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "demo engineer: ryan (articulate)",
+    "chars": 32,
+    "px": 135,
+    "box": [
+     151,
+     76,
+     289,
+     86
+    ],
+    "right": 289,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 1.85,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "voices 1-2: alexander, brad",
+    "chars": 27,
+    "px": 117,
+    "box": [
+     151,
+     87,
+     271,
+     97
+    ],
+    "right": 271,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 1.6,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "voices 3-4: quinn, sarah eve",
+    "chars": 28,
+    "px": 124,
+    "box": [
+     151,
+     98,
+     278,
+     108
+    ],
+    "right": 278,
+    "clearOfOrb": true,
+    "legibleFrom": 203,
+    "legibleTo": 344,
+    "seconds": 5.92,
+    "needP15": 1.65,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "staffer 2: jessi",
+    "chars": 16,
+    "px": 66,
+    "box": [
+     151,
+     109,
+     220,
+     119
+    ],
+    "right": 220,
+    "clearOfOrb": true,
+    "legibleFrom": 202,
+    "legibleTo": 344,
+    "seconds": 5.96,
+    "needP15": 1.05,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "tv reporter: katherine",
+    "chars": 22,
+    "px": 94,
+    "box": [
+     151,
+     120,
+     248,
+     130
+    ],
+    "right": 248,
+    "clearOfOrb": true,
+    "legibleFrom": 204,
+    "legibleTo": 344,
+    "seconds": 5.88,
+    "needP15": 1.35,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "bukaj: scypher",
+    "chars": 14,
+    "px": 61,
+    "box": [
+     151,
+     131,
+     215,
+     141
+    ],
+    "right": 215,
+    "clearOfOrb": true,
+    "legibleFrom": 205,
+    "legibleTo": 344,
+    "seconds": 5.83,
+    "needP15": 0.95,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "ekiel: dexter",
+    "chars": 13,
+    "px": 52,
+    "box": [
+     151,
+     142,
+     206,
+     152
+    ],
+    "right": 206,
+    "clearOfOrb": true,
+    "legibleFrom": 204,
+    "legibleTo": 344,
+    "seconds": 5.88,
+    "needP15": 0.9,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "the forecaster: jack john",
+    "chars": 25,
+    "px": 108,
+    "box": [
+     151,
+     153,
+     262,
+     163
+    ],
+    "right": 262,
+    "clearOfOrb": true,
+    "legibleFrom": 206,
+    "legibleTo": 344,
+    "seconds": 5.79,
+    "needP15": 1.5,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "the driver: jerry b.",
+    "chars": 20,
+    "px": 81,
+    "box": [
+     151,
+     164,
+     235,
+     174
+    ],
+    "right": 235,
+    "clearOfOrb": true,
+    "legibleFrom": 207,
+    "legibleTo": 344,
+    "seconds": 5.75,
+    "needP15": 1.25,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "haras: hannah",
+    "chars": 13,
+    "px": 58,
+    "box": [
+     151,
+     175,
+     212,
+     185
+    ],
+    "right": 212,
+    "clearOfOrb": true,
+    "legibleFrom": 207,
+    "legibleTo": 344,
+    "seconds": 5.75,
+    "needP15": 0.9,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "the crowd: ten library voices",
+    "chars": 29,
+    "px": 123,
+    "box": [
+     151,
+     186,
+     277,
+     196
+    ],
+    "right": 277,
+    "clearOfOrb": true,
+    "legibleFrom": 209,
+    "legibleTo": 344,
+    "seconds": 5.67,
+    "needP15": 1.7,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "tools: claude code \u00b7 remotion \u00b7 elevenlabs \u00b7 kokoro-82m",
+    "chars": 55,
+    "px": 248,
+    "box": [
+     31,
+     201,
+     292,
+     215
+    ],
+    "right": 292,
+    "clearOfOrb": true,
+    "legibleFrom": 212,
+    "legibleTo": 344,
+    "seconds": 5.54,
+    "needP15": 3,
+    "perLineOk": true
+   },
+   {
+    "page": 2,
+    "line": "blender \u00b7 veo 3.1 fast via runway \u00b7 ffmpeg",
+    "chars": 42,
+    "px": 189,
+    "box": [
+     31,
+     216,
+     233,
+     230
+    ],
+    "right": 233,
+    "clearOfOrb": true,
+    "legibleFrom": 210,
+    "legibleTo": 344,
+    "seconds": 5.63,
+    "needP15": 2.35,
+    "perLineOk": true
+   }
+  ],
+  "overlaps": [],
+  "inOrder": [
+   {
+    "page": 1,
+    "cps": 16,
+    "chars": 104,
+    "lastFinish": 168.5,
+    "pageEnds": 180,
+    "marginFrames": 11.5,
+    "ok": true
+   },
+   {
+    "page": 1,
+    "cps": 18,
+    "chars": 104,
+    "lastFinish": 155,
+    "pageEnds": 180,
+    "marginFrames": 25,
+    "ok": true
+   },
+   {
+    "page": 1,
+    "cps": 20,
+    "chars": 104,
+    "lastFinish": 148.6,
+    "pageEnds": 180,
+    "marginFrames": 31.4,
+    "ok": true
+   },
+   {
+    "page": 2,
+    "cps": 16,
+    "chars": 597,
+    "lastFinish": 1082.5,
+    "pageEnds": 345,
+    "marginFrames": -737.5,
+    "ok": false
+   },
+   {
+    "page": 2,
+    "cps": 18,
+    "chars": 597,
+    "lastFinish": 983,
+    "pageEnds": 345,
+    "marginFrames": -638,
+    "ok": false
+   },
+   {
+    "page": 2,
+    "cps": 20,
+    "chars": 597,
+    "lastFinish": 903.4,
+    "pageEnds": 345,
+    "marginFrames": -558.4,
+    "ok": false
+   }
+  ],
+  "clearOfOrb": true,
+  "perLineOk": true,
+  "ok": true
+ },
+ "ok": true
+}

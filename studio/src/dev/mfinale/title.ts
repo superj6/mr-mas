@@ -253,8 +253,10 @@ export const titleSwitch = (g: number): SwitchSpec[] | null => {
   return null;
 };
 
-const SUB = 'now in low-key research preview';
-export const titleAfter = (ui: Buf, g: number): void | DrawResult => {
+/** the subtitle: last week's release note, the episode's slot (SCRIPT §8 item 3). Ep1's is the premise. */
+export const SUB = 'now in low-key research preview';
+export const titleAfter = (ui: Buf, g: number, sub: string = SUB): void | DrawResult => {
+  const SUB = sub;
   if (g < T.subtitle) return;
   const n = clamp((g - T.subtitle) * 4, 0, SUB.length); // 4 characters per frame (SCRIPT §3.9 / §8: typed by f647)
   const [x0, y0] = wmOrigin();

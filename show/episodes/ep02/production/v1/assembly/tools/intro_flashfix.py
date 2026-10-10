@@ -13,7 +13,7 @@ import argparse
 import os
 import subprocess
 
-ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), *[".."] * 6))
+ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), *[".."] * 7))   # tools -> repo root (7 up)
 FFD = os.path.join(ROOT, 'studio/node_modules/@remotion/compositor-linux-x64-gnu')
 FF = FFD + '/ffmpeg'
 env = dict(os.environ, LD_LIBRARY_PATH=FFD)

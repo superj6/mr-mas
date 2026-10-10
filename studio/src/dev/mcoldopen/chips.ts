@@ -8,7 +8,8 @@ import {PAL} from '../../shared/pixel/palette';
 import {text, textWidth} from '../../shared/pixel/font';
 import {tokenBoxes} from './screen';
 import {MED} from './medium';
-import {EV} from './timeline';
+import {EV, EP1_LINE} from './timeline';
+import type {ColdLine} from './timeline';
 
 /** tokenizer-visualiser pastels (master palette) */
 const PASTEL = [PAL.W8, PAL.K4, PAL.S6, PAL.C8, PAL.G6];
@@ -24,12 +25,12 @@ const blitK = (b: Buf, src: Buf, x: number, y: number, k: number, col: number) =
   for (let j = 0; j < src.h; j++) for (let i = 0; i < src.w; i++) if (src.c[j * src.w + i] === 1) rect(x + i * k, y + j * k, k, k, b.ink(col));
 };
 
-export const drawChips = (b: Buf, f: number) => {
+export const drawChips = (b: Buf, f: number, cl: ColdLine = EP1_LINE) => {
   const t = f - EV.chips[0];
   if (t < 0 || f > EV.chips[1]) return;
   const k = t + 1; // 1x, 2x, 3x
   const [sx, sy] = MED.screen;
-  const boxes = tokenBoxes();
+  const boxes = tokenBoxes(cl);
   // the burst's centre: the middle of the text block (frame px)
   const cx = sx + 16 + 52, cy = sy + 16 + 7;
   boxes.forEach((bx, i) => {

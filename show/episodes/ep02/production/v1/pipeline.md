@@ -231,7 +231,7 @@ EP2_FIXED=22.04 ops/rebuild-act.sh --ep 2 act4 --only lock     # a beat with a r
 | 5 | Roll call | no change for Ep2 (RIMA NopeAI fill, THE WHALE, RUMPT a silhouette, the cursor alone) | — | — |
 | — | The Orb's toast | `verified: human`, unchanged | — | — |
 
-### 8.3 The plan for the Ep2 intro (the intro pass's work; nothing here is built yet)
+### 8.3 The plan for the Ep2 intro (built 2026-10-10 by the titles pass: §8.5)
 
 1. **Make the moments take an episode slot, Ep1's by default.** One `EpisodeSlot` object (the five items above, SCRIPT §8's columns) read by `mcoldopen`, `mdinner1` and `mfinale`, with Ep1's values as the default, and a second composition `intro-ep2` beside `intro-ep1` (an `intro-ep2.frame.tsx` or the dev entry). The moments are shared dev code, so the rule for shared code applies: **Ep1's intro must stay byte-identical**. Prove it by rendering `intro-ep1` to scratch and comparing it with `out/season/intro/picture/intro-ep1-1080p-silent.mp4` (`studio/src/episodes/ep02/pixel/tools/mp4cmp.mjs`: the stream md5 and sampled frames), and the events export with the committed `intro-events.json` (md5 `f37ea409…`). Never re-render into `out/season/intro/`. (A fork of the six moments into Ep2 is the fallback if the proof fails: thousands of lines, so a last resort.)
 2. **Check every row against what Ep1 aired** (`full-v3/lock-v35-transcript.txt` and the final assembly) before rendering, as proposal D-58 asks: the `$4B + $2B` tag is the one still to confirm.
@@ -245,6 +245,24 @@ EP2_FIXED=22.04 ops/rebuild-act.sh --ep 2 act4 --only lock     # a beat with a r
 - **The outro** is outro B (`studio/src/dev/outro/b/`, Ep1's, shared dev code), which keys every per-episode value in `timeline.ts` (`EPS`: the file name, the verdict, the score's verdict) and has the credit text in `CREDITS` (`art · script · music · voices · edit: opus 5.5`, `prompt: jgon`). Ep2's needs an `EPS` entry (`ep1.1_her.wav`, `viewer: verified: human`, no moth stinger: "no callback is booked for Ep2") and the E02-14 score (the knee whole in Ep2's colour: the wordless vocal pad takes the flat line and stops before the leap; celesta and chip finish it). The plan: an Ep2 copy under `studio/src/episodes/ep02/outro/` (or an `EPS[2]` entry plus an `outro-b-ep2` composition, with Ep1's `outro-b-ep1` proven unchanged as in §8.3 step 1), rendered to `out/ep02/v1/outro/outro-b-ep2.mp4` and its audio `outro-b-ep2.wav` (−16 LUFS), the names the manifest and `assemble.py` read.
 
 ---
+
+### 8.5 Built: the intro variant and the outro (the titles pass, 2026-10-10)
+
+The plan above, as built. Details, re-run commands and the human checks are in the folders' READMEs:
+- [studio/src/episodes/ep02/intro/](../../../../../studio/src/episodes/ep02/intro/README.md) (the picture);
+- [audio/ep02/intro/](../../../../../audio/ep02/intro/README.md) (the sound);
+- [studio/src/episodes/ep02/outro/](../../../../../studio/src/episodes/ep02/outro/README.md) (the outro).
+
+Nothing was watched or heard [R8].
+
+| | Built | Measured [M] / judged [J] |
+|---|---|---|
+| **Intro picture** | §8.3 step 1 as planned. The moments take an `IntroSlot` (`src/intro/slot.ts`, Ep1's by default; `scenesFor(slot)`, `IntroCut`); Ep2's `EP2_SLOT` and `intro-ep2` live in `studio/src/episodes/ep02/intro/`. Shipped: "her" (typed f18-21), the typing indicator f38-111, the dot at 0.55, `back by popular demand`, the ESC keycap. **Not added:** `$4B + $2B`, because Ep1's final never aired it (§8.2's open check, done: 19.13's NOZAMA meter was cut, S4.08's meters went in C14, neither is in the v3.5 lock or its transcript), so the tag stays blank; nor the hill, lanyard, tally or hook (never in the shipped intro) | [M] `intro-ep1` re-rendered from the slot code: H.264 stream identical to the committed master (md5 `2ae91638…`); all 720 native frames hash the same from HEAD's and the new code; the events export byte-identical (`f37ea409…`). [M] Ep2: 720 f; the flash fix (`intro_flashfix.py`, whose repo root was one level short, fixed) takes the smear's 4 flashes/s to 1. [J] looked at 1080p: the cold open, the keycap, the subtitle, the bookend |
+| **Intro sound** | `audio/ep02/intro/intro_ep2.py` (step 4). Jeremy's "her" (read h7: level 131 Hz, Mas's V.O. speed; f23.4-38.3) and the 3 key taps swapped into Ep1's delivered V1 master through its own gain curve. Written to `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav` (the manifest's path; the brief's `audio/ep02/intro/` holds the tool, the takes and the QA) | [M] builder and mix reproduce Ep1's stems and master to −138.5 dBFS; after f120 the master is Ep1's sample for sample; −13.83 LUFS-I, −1.3 dBTP |
+| **Outro** | An Ep2 copy of outro B in `studio/src/episodes/ep02/outro/` (Ep1's `dev/outro/b` untouched). Page 1 is Ep1's plain week with `ep1.1_her.wav`, the credits `art · script · music · voices · edit: opus 5.5` / `prompt: jgon` and `viewer: verified: human`. Page 2 (4.1) is a second scan that leaves the voice cast (27 roles by library voice) and the tools. E02-14 is swung, the title's wordless vocal pad singing the flat line and stopping before the leap (`audio/vocal.py`, the intro's singer). **15.0 s** (cut on 6.4, +15 f of black), not 10.125: the cast needs its page. `build_timeline.py` picks the length up from the WAV | [M] every row clear of the Orb, P15 per row; page 1 read in order at 16 cps finishes 0.5 s before the turn; page 2 holds 5.5 s (a credits page, not readable in order); encode max error 7/255, contrast ≥ 5.9:1; 0 flashes; page 1 −15.32 LUFS (Ep1 −15.29), file −16.55, −3.15 dBTP, momentary max −11.0 |
+| **Ep1 untouched** | — | [M] 953 files under `out/season/intro/`, `audio/intro/` (except `ep02/`), `audio/theme/` and `out/ep01/outro/` match their pre-pass sha1; `ops/reorg/smoke.sh` against a baseline taken before any change: **PASS** (tsc 20 errors as before, locks 12/12, score 6/6, dry runs 0 missing, film 31/31) |
+
+**For the mix and assembly passes:** `mix_episode.py` makes `outro-mix.wav` from `out/ep02/v1/outro/outro-b-ep2.wav` (now 15.0 s). The transcript's outro row (`lock_report.py`) doesn't yet list the cast page.
 
 ## 9. Ep1 is untouched
 
@@ -278,7 +296,7 @@ Run after every Ep2 file was in place (2026-10-08, about 22:00), `MRMAS_MAX_LOAD
 
 1. **Nothing has been watched or heard [R8].** The picture proof is measured (which scenes rendered, identical bytes and streams); the sound proof is measured on synthetic data (loudness, peaks, seams).
 2. ~~**The real chain waits on the takes.** The base lock needs a take for every line; the voices pass renders them (§2), then §1.2, then the picture and the score.~~ Done: the takes ([takes-qa.md](takes-qa.md)) and the locks, §1.1–§1.2 ([lock-v1.md](lock-v1.md), 2026-10-09: 23:02.00 of story, 0 check failures, 20 scene stubs; after the lock QA, §3.5 there, 22:54.00).
-3. **The intro variant and the outro** are planned, not built (§8.3, §8.4); each needs Ep1's own output proven unchanged if it touches the shared moments.
+3. ~~**The intro variant and the outro** are planned, not built (§8.3, §8.4).~~ Built, with Ep1's output proven unchanged (§8.5).
 4. **New SFX beds** (manifest §7) play through stand-ins until the SFX pass adds them to the board (`rooms.py` picks them up by name).
 5. ~~**`el_cut.py` and `pron_check.py`** were not copied (Ep1 tables); the voices pass copies them with Ep2's.~~ Done by the takes pass (§2, [takes-qa.md](takes-qa.md)). `el_audition.py` was copied by the casting pass ([cast.md](cast.md) §8).
 6. **The review frame** still renders per act; only the picture is per scene.

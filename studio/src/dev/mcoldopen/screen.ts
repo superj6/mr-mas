@@ -4,7 +4,8 @@
 import {Buf, rect, line, ellipse, spr, blit} from '../../shared/pixel/px';
 import {PAL} from '../../shared/pixel/palette';
 import {text, textWidth} from '../../shared/pixel/font';
-import {L1, L2, L1_KEYS, L2_KEYS, L2_BREAK, EV, caretOn, typedCount, lastKey} from './timeline';
+import {EV, caretOn, typedCount, lastKey, L_TOKENS, EP1_COLD, EP1_LINE, indicatorOn} from './timeline';
+import type {ColdLine, ColdSlot} from './timeline';
 
 export const SW = 180;
 export const SH = 112;
@@ -27,6 +28,9 @@ const risePoint = (u: number): [number, number] => {
   const x = Math.round(KNEE[0] + u * (RISE_END - KNEE[0]));
   return [x, riseY(x)];
 };
+/** the `you are here` dot's rest for an episode (SCRIPT §8.4's ladder): 0.50 sits at the knee (Ep1), past it the dot
+ *  rests that far up the rising curve (0.55 = a tenth of the way from the knee to the top edge), 1.0 at the top */
+export const dotRest = (d: number): [number, number] => (d <= 0.5 ? KNEE : risePoint(Math.min(1, (d - 0.5) / 0.5)));
 
 // 3x5 micro digits for the axis eggs
 const MICRO: Record<string, string[]> = {
@@ -61,8 +65,14 @@ const POINTER = spr(`
 
 export interface ScreenState {
   f: number;
+  /** the episode's line (its text and keys) */
+  line: ColdLine;
   l1: number;
   l2: number;
+  /** the typing indicator: which of its three dots is lit (0-2), or null when it isn't up */
+  indicator: number | null;
+  /** where the dot rests (and its label sits) this episode */
+  rest: [number, number];
   caret: boolean;
   caretLine: 0 | 1;
   /** the you-are-here dot, or null once it has left the top */
@@ -75,12 +85,16 @@ export interface ScreenState {
   posted: boolean;
 }
 
-export const screenState = (f: number): ScreenState => {
+export const screenState = (f: number, co: ColdSlot = EP1_COLD): ScreenState => {
+  const cl = co.line;
   const posted = f >= EV.click;
-  const l1 = posted ? 0 : typedCount(L1_KEYS, f);
-  const l2 = posted ? 0 : typedCount(L2_KEYS, f);
-  const idle = f - lastKey(f) >= 8;
-  let dot: [number, number] | null = KNEE;
+  const l1 = posted ? 0 : typedCount(cl.keys1, f);
+  const l2 = posted ? 0 : typedCount(cl.keys2, f);
+  const idle = f - lastKey(f, cl) >= 8;
+  const rest = dotRest(co.dot);
+  // the indicator's three dots light in turn, one beat a cycle, phase-locked to the beat grid (like the caret)
+  const ind = !posted && indicatorOn(cl, f) ? Math.floor((((f % 15) + 15) % 15) / 5) : null;
+  let dot: [number, number] | null = rest;
   if (f >= EV.dotSlide[0] && f <= EV.dotSlide[1]) dot = risePoint([0.3, 0.58, 0.82, 0.97][f - EV.dotSlide[0]]);
   else if (f >= EV.dotExit) dot = null;
   const px = f < EV.pointer[0] ? [152, 74] : f >= EV.pointer[1] ? [POST_BTN.x + 13, POST_BTN.y + 5] : null;
@@ -93,9 +107,10 @@ export const screenState = (f: number): ScreenState => {
     pointer = [Math.round(152 + (POST_BTN.x + 13 - 152) * e), Math.round(74 + (POST_BTN.y + 5 - 74) * e)];
   }
   return {
-    f, l1, l2,
-    caret: !idle || caretOn(f),
-    caretLine: !posted && f >= L2_BREAK ? 1 : 0,
+    f, line: cl, l1, l2, indicator: ind, rest,
+    // the indicator stands where the caret would be: the caret is off while it pulses
+    caret: ind === null && (!idle || caretOn(f)),
+    caretLine: !posted && cl.brk !== null && f >= cl.brk ? 1 : 0,
     dot, dotHalo: caretOn(f),
     chart: f >= EV.chartSnap ? 'vertical' : 'knee',
     pointer,
@@ -162,7 +177,7 @@ export const drawScreen = (b: Buf, s: ScreenState) => {
   }
   // you are here
   const label = 'you are here';
-  text(b, label, KNEE[0] - textWidth(label) + 1, KNEE[1] + 6, PAL.C5);
+  text(b, label, s.rest[0] - textWidth(label) + 1, s.rest[1] + 6, PAL.C5);
   if (s.dot) {
     const [dx, dy] = s.dot;
     if (s.dotHalo) for (const [i, j] of [[-2, 0], [2, 0], [0, -2], [0, 2], [-1, -1], [1, -1], [-1, 1], [1, 1]]) b.set(dx + i, dy + j, PAL.C3);
@@ -177,7 +192,7 @@ export const drawScreen = (b: Buf, s: ScreenState) => {
   rect(px + 1, py + 1, pw - 2, ph - 2, b.ink(PAL.N0));
   for (const [cx, cy] of [[px, py], [px + pw - 1, py], [px, py + ph - 1], [px + pw - 1, py + ph - 1]]) b.set(cx, cy, PAL.N1);
   // text + caret
-  const t1 = L1.slice(0, s.l1), t2 = L2.slice(0, s.l2);
+  const t1 = s.line.l1.slice(0, s.l1), t2 = s.line.l2.slice(0, s.l2);
   text(b, t1, TEXT_AT[0], TEXT_AT[1], PAL.P1);
   text(b, t2, TEXT_AT[0], TEXT_AT[1] + LINE_STEP, PAL.P1);
   if (s.caret) {
@@ -185,6 +200,7 @@ export const drawScreen = (b: Buf, s: ScreenState) => {
     const cx = TEXT_AT[0] + (ln.length ? textWidth(ln) + 1 : 0);
     rect(cx, TEXT_AT[1] + s.caretLine * LINE_STEP - 1, 4, 9, b.ink(PAL.C6));
   }
+  if (s.indicator !== null) drawIndicator(b, s, t1, t2);
   // divider + tool row
   for (let x = TEXT_AT[0]; x < px + pw - 4; x++) b.set(x, py + 38, PAL.N2);
   const iy = py + 44;
@@ -213,19 +229,35 @@ export const drawScreen = (b: Buf, s: ScreenState) => {
   return b;
 };
 
-export const screenAt = (f: number) => drawScreen(new Buf(SW, SH, PAL.N1), screenState(f));
+export const screenAt = (f: number, co: ColdSlot = EP1_COLD) => drawScreen(new Buf(SW, SH, PAL.N1), screenState(f, co));
+
+// ------------------------------------------------------------------ the typing indicator (Ep2)
+/** The pulsing typing indicator: a small rounded bubble of three dots where the caret would stand, after the typed
+ *  text on its line, holding the rest of the phrase's slot (SCRIPT §8.1, Ep2: "her", then silence under it). The dots
+ *  light in turn, one beat a cycle; nothing else on the screen moves. 14 x 7 screen px, the composer's own greys. */
+export const INDICATOR = {w: 14, h: 6, gap: 3};
+const drawIndicator = (b: Buf, s: ScreenState, t1: string, t2: string) => {
+  const ln = s.caretLine === 0 ? t1 : t2;
+  const x = TEXT_AT[0] + (ln.length ? textWidth(ln) + INDICATOR.gap : 0);
+  const y = TEXT_AT[1] + s.caretLine * LINE_STEP + 1; // on the x-height, beside the lowercase
+  const {w, h} = INDICATOR;
+  rect(x, y, w, h, b.ink(PAL.N3));
+  for (const [cx, cy] of [[x, y], [x + w - 1, y], [x, y + h - 1], [x + w - 1, y + h - 1]]) b.set(cx, cy, PAL.N1);
+  for (let i = 0; i < 3; i++) {
+    // the lit dot, the one it just left a step down (the trail), the third at rest
+    const col = i === s.indicator ? PAL.P2 : (i + 1) % 3 === s.indicator ? PAL.P0 : PAL.N6;
+    rect(x + 2 + i * 4, y + 2, 2, 2, b.ink(col));
+  }
+};
 
 // ------------------------------------------------------------------ tokens (for the Post burst)
-/** tokenizer view of the post (the semicolon gets its own token) */
-export const TOKENS: Array<{t: string; line: 0 | 1}> = [
-  {t: 'near', line: 0}, {t: ' the', line: 0}, {t: ' singular', line: 0}, {t: 'ity', line: 0}, {t: ';', line: 0},
-  {t: 'unclear', line: 1}, {t: ' which', line: 1}, {t: ' side', line: 1}, {t: '.', line: 1},
-];
+/** tokenizer view of the post (the semicolon gets its own token): Ep1's, from timeline.ts */
+export const TOKENS: Array<{t: string; line: 0 | 1}> = L_TOKENS;
 /** screen-px box of each token as typed: [x, y, w] (y = top of caps) */
-export const tokenBoxes = () => {
+export const tokenBoxes = (cl: ColdLine = EP1_LINE) => {
   const out: Array<{t: string; x: number; y: number; w: number; line: 0 | 1}> = [];
   let acc = ['', ''];
-  for (const tk of TOKENS) {
+  for (const tk of cl.tokens) {
     const before = acc[tk.line];
     const x0 = TEXT_AT[0] + (before.length ? textWidth(before) + 1 : 0);
     acc[tk.line] = before + tk.t;

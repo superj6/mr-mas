@@ -10,7 +10,8 @@ import {remap} from '../../shared/pixel/palettes';
 import type {GlyphStyle} from '../../shared/pixel/glyph';
 import type {PixelSceneProps} from '../../shared/pixel/compose';
 import {masDeskFront} from '../../shared/pixel/cast/mas';
-import {shotAt, EV} from './timeline';
+import {shotAt, EV, EP1_COLD} from './timeline';
+import type {ColdSlot} from './timeline';
 import {screenAt, CARET_HOME} from './screen';
 import {drawMacro} from './macro';
 import {drawMedium, CARET_FRAME} from './medium';
@@ -42,15 +43,14 @@ export const GLYPH_WORLD: GlyphStyle = {
 const EXPOSE_FROM = 114;
 const EXPOSURE: Array<[number, number]> = [[1, 0], [1, 0], [2, 0.25], [2, 0.62]];
 
-// state handed from draw() to switch()/after() for the same frame (draw always runs first)
-const frameState: {f: number; glyphMask: Mask | null; world: Buf; apex: [number, number]} = {f: -1, glyphMask: null, world: new Buf(W, H, PAL.N0), apex: [0, 0]};
+type FrameState = {f: number; glyphMask: Mask | null; world: Buf; apex: [number, number]};
 
-const drawScan = (fb: Buf, f: number) => {
+const drawScan = (fb: Buf, f: number, co: ColdSlot, frameState: FrameState) => {
   const masMask = new Mask();
   const orbMask = new Mask();
-  drawWide(fb, f, {masMask, orbMask, scanning: true});
+  drawWide(fb, f, {masMask, orbMask, scanning: true, cold: co});
   // Mas's forearms/hands are part of him too: they stay pixel
-  masMask.addImg(masDeskFront(masDeskAt(f)), WIDE.mas[0], WIDE.mas[1]);
+  masMask.addImg(masDeskFront(masDeskAt(f, co.line)), WIDE.mas[0], WIDE.mas[1]);
   const [dir, half] = fanAt(f);
   const [ax, ay] = orbIris(f);
   const cone = coneMask(ax + 0.5, ay + 0.5, dir, half, 520, {soft: 2.5, start: 6, fade: 30});
@@ -64,58 +64,65 @@ const drawScan = (fb: Buf, f: number) => {
 };
 
 // ------------------------------------------------------------------ the scene
-export const coldOpen: SceneDef = {
-  draw: (fb, f) => {
-    frameState.f = f;
-    frameState.glyphMask = null;
-    const shot = shotAt(f).id;
-    if (shot === 'macro9' || shot === 'macro3') {
-      // centred on the caret's CENTRE (98, 79.5 in the medium frame), so every step is a punch on the same cursor
-      // and the loop (f712 caret at 96-99 x 75-83) lands as a match, not a jump: anchor = Q + P * (CARET_FRAME - Q)
-      const P = shot === 'macro9' ? 9 : 3;
-      const anchor: [number, number] = [MACRO_Q[0] + P * (CARET_FRAME[0] - MACRO_Q[0]), MACRO_Q[1] + P * (CARET_FRAME[1] - MACRO_Q[1])];
-      drawMacro(fb, screenAt(f), P, {focus: CARET_HOME, anchor});
-      vignette(fb);
+/** The cold open for an episode's slot (its line and its dot; SCRIPT §8 items 1-2). Ep1's is `coldOpen`. */
+export const makeColdOpen = (co: ColdSlot = EP1_COLD): SceneDef => {
+  // state handed from draw() to switch()/after() for the same frame (draw always runs first)
+  const frameState: FrameState = {f: -1, glyphMask: null, world: new Buf(W, H, PAL.N0), apex: [0, 0]};
+  return {
+    draw: (fb, f) => {
+      frameState.f = f;
+      frameState.glyphMask = null;
+      const shot = shotAt(f).id;
+      if (shot === 'macro9' || shot === 'macro3') {
+        // centred on the caret's CENTRE (98, 79.5 in the medium frame), so every step is a punch on the same cursor
+        // and the loop (f712 caret at 96-99 x 75-83) lands as a match, not a jump: anchor = Q + P * (CARET_FRAME - Q)
+        const P = shot === 'macro9' ? 9 : 3;
+        const anchor: [number, number] = [MACRO_Q[0] + P * (CARET_FRAME[0] - MACRO_Q[0]), MACRO_Q[1] + P * (CARET_FRAME[1] - MACRO_Q[1])];
+        drawMacro(fb, screenAt(f, co), P, {focus: CARET_HOME, anchor});
+        vignette(fb);
+        return;
+      }
+      if (shot === 'white') { fb.c.fill(PAL.P2); return; }
+      if (shot === 'wide') {
+        if (scanActive(f)) drawScan(fb, f, co, frameState);
+        else drawWide(fb, f, {cold: co});
+        return;
+      }
+      drawMedium(fb, f, {cold: co});
+      // exposure ramp into the white: the room climbs its own light ramps (palette steps, never a blend);
+      // the token chips (pixel font, integer scale) are drawn over it, legible to their last frame
+      const e = EXPOSURE[f - EXPOSE_FROM];
+      if (e) remap(fb, (c, x, y) => (bayer4(x, y) < e[1] ? PAL.P2 : stepColor(c, e[0])));
+      drawChips(fb, f, co.line);
       return;
-    }
-    if (shot === 'white') { fb.c.fill(PAL.P2); return; }
-    if (shot === 'wide') {
-      if (scanActive(f)) drawScan(fb, f);
-      else drawWide(fb, f);
-      return;
-    }
-    drawMedium(fb, f);
-    // exposure ramp into the white: the room climbs its own light ramps (palette steps, never a blend);
-    // the token chips (pixel font, integer scale) are drawn over it, legible to their last frame
-    const e = EXPOSURE[f - EXPOSE_FROM];
-    if (e) remap(fb, (c, x, y) => (bayer4(x, y) < e[1] ? PAL.P2 : stepColor(c, e[0])));
-    drawChips(fb, f);
-    return;
-  },
-  // the white is the 1-bit paper of the next section: an exact white-to-white match cut into 1993
-  palette: (f) => (shotAt(f).id === 'white' ? 'ONEBIT' : null),
-  // the fan opens at f99 in BASE; the GLYPH window is f100-104 only (SCRIPT §3.2 / S1: 5 frames of the 15 budget)
-  switch: (f) => (scanActive(f) && f >= EV.glyph[0] && frameState.f === f && frameState.glyphMask
-    ? {type: 'glyph', mask: frameState.glyphMask, source: frameState.world, style: GLYPH_WORLD}
-    : null),
-  after: (ui, f) => {
-    if (!scanActive(f)) return;
-    // the fan's two edge rays (hot at the lens, cooling with distance) + a hot point on the iris
-    const [ax, ay] = frameState.apex;
-    const [dir, half] = fanAt(f);
-    for (const s of [-1, 1]) {
-      const a = ((dir + s * half) * Math.PI) / 180;
-      const len = 520;
-      let k = 0;
-      line(ax, ay, Math.round(ax + Math.cos(a) * len), Math.round(ay + Math.sin(a) * len), (x, y) => {
-        k++;
-        if (k < 7) return;
-        const col = k < 50 ? PAL.C8 : k < 140 ? PAL.C6 : PAL.C4;
-        if (k > 140 && (x + y) % 2) return;
-        ui.set(x, y, col);
-      });
-    }
-    ui.set(ax, ay, PAL.C9);
-    if (f <= EV.scan[0] + 1) for (const [dx, dy] of [[-1, 0], [1, 0], [0, -1], [0, 1], [-2, 0], [2, 0]]) ui.set(ax + dx, ay + dy, PAL.C8);
-  },
+    },
+    // the white is the 1-bit paper of the next section: an exact white-to-white match cut into 1993
+    palette: (f) => (shotAt(f).id === 'white' ? 'ONEBIT' : null),
+    // the fan opens at f99 in BASE; the GLYPH window is f100-104 only (SCRIPT §3.2 / S1: 5 frames of the 15 budget)
+    switch: (f) => (scanActive(f) && f >= EV.glyph[0] && frameState.f === f && frameState.glyphMask
+      ? {type: 'glyph', mask: frameState.glyphMask, source: frameState.world, style: GLYPH_WORLD}
+      : null),
+    after: (ui, f) => {
+      if (!scanActive(f)) return;
+      // the fan's two edge rays (hot at the lens, cooling with distance) + a hot point on the iris
+      const [ax, ay] = frameState.apex;
+      const [dir, half] = fanAt(f);
+      for (const s of [-1, 1]) {
+        const a = ((dir + s * half) * Math.PI) / 180;
+        const len = 520;
+        let k = 0;
+        line(ax, ay, Math.round(ax + Math.cos(a) * len), Math.round(ay + Math.sin(a) * len), (x, y) => {
+          k++;
+          if (k < 7) return;
+          const col = k < 50 ? PAL.C8 : k < 140 ? PAL.C6 : PAL.C4;
+          if (k > 140 && (x + y) % 2) return;
+          ui.set(x, y, col);
+        });
+      }
+      ui.set(ax, ay, PAL.C9);
+      if (f <= EV.scan[0] + 1) for (const [dx, dy] of [[-1, 0], [1, 0], [0, -1], [0, 1], [-2, 0], [2, 0]]) ui.set(ax + dx, ay + dy, PAL.C8);
+    },
+  };
 };
+/** Ep1's cold open (intro-ep1) */
+export const coldOpen: SceneDef = makeColdOpen(EP1_COLD);

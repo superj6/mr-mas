@@ -1,0 +1,100 @@
+{
+ "frames": 360,
+ "seconds": 15.0,
+ "sample_rate": 48000,
+ "music_file": "<scratch>/music/e02-14-end-credits-album.wav (track.py)",
+ "vocal_pad": "<scratch>/music/vocal-pad.wav (vocal.py)",
+ "vocal_pad_gain_db": -0.62,
+ "vocal_pad_vs_leap_lu": {
+  "flat_line": -13.71,
+  "leap": -14.67
+ },
+ "raw_lufs": -15.64,
+ "gain_db": -0.75,
+ "limiter_max_reduction_db": -1.79,
+ "target": {
+  "page1_o0_180_lufs": -15.29,
+  "measured_page1": -15.32,
+  "source": "Ep1 outro-b-v3.wav o0-180"
+ },
+ "page2_o180_345_lufs": -18.19,
+ "true_peak_ceiling_dbtp": -3.0,
+ "mix_lufs": -16.55,
+ "mix_true_peak_dbtp": -3.15,
+ "bars_mix_lufs": {
+  "bar 1": {
+   "integrated": -18.1,
+   "momentary_max": -11.4
+  },
+  "bar 2": {
+   "integrated": -14.3,
+   "momentary_max": -12.6
+  },
+  "bar 3": {
+   "integrated": -14.4,
+   "momentary_max": -11.0
+  },
+  "bar 4": {
+   "integrated": -19.2,
+   "momentary_max": -15.0
+  },
+  "bar 5": {
+   "integrated": -17.7,
+   "momentary_max": -15.0
+  },
+  "bar 6": {
+   "integrated": -18.3,
+   "momentary_max": -15.6
+  }
+ },
+ "mix_shortterm_p95": -14.6,
+ "mix_momentary_max": -11.0,
+ "tail_rms_dbfs_last_100ms": -83.4,
+ "sfx_true_peak_dbtp": -10.54,
+ "events": [
+  {
+   "sound": "orb_servo_C6 (intro-sfx): the iris to the lens",
+   "outro_frame": 15,
+   "sec": 0.625
+  },
+  {
+   "sound": "the scan: orb_scan_sweep_FC (intro-sfx) + sweep bed + grains (synth)",
+   "outro_frame": 30,
+   "sec": 1.25,
+   "until": 55
+  },
+  {
+   "sound": "toast ticks (synth): the header (o9), the credit chips (2.1, 2.2)",
+   "outro_frame": 9,
+   "sec": 0.375,
+   "until": 76
+  },
+  {
+   "sound": "blip_orb_toast_C7 (intro-sfx): the verdict, the lens lights",
+   "outro_frame": 120,
+   "sec": 5.0
+  },
+  {
+   "sound": "orb_servo_C6 (intro-sfx), softer: the glance back to its toast (3.3)",
+   "outro_frame": 150,
+   "sec": 6.25
+  },
+  {
+   "sound": "toast tick (synth): the cast page's header posts",
+   "outro_frame": 186,
+   "sec": 7.75
+  },
+  {
+   "sound": "the second scan (the cast): orb_scan_sweep_FC (intro-sfx) + sweep bed + grains (synth)",
+   "outro_frame": 190,
+   "sec": 7.917,
+   "until": 215
+  },
+  {
+   "sound": "toast ticks (synth): the tools chips (5.1, 5.2)",
+   "outro_frame": 240,
+   "sec": 10.0,
+   "until": 256
+  }
+ ]
+}

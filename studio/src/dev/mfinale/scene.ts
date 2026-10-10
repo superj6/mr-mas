@@ -7,16 +7,17 @@ import type {PixelSceneProps, SwitchSpec, DrawResult} from '../../shared/pixel/c
 import {T} from './timeline';
 import {drawSkyline, setStars, duskStars} from './skyline';
 import {drawTitle, titleSwitch, titleAfter} from './title';
-import {drawBook, bookSwitch, bookAfter} from './bookend';
+import {drawBook, bookSwitch, bookAfter, EP1_BOOK} from './bookend';
+import type {BookSlot} from './bookend';
 
 setStars(duskStars());
 
 export type SceneDef = Pick<PixelSceneProps, 'draw' | 'after' | 'palette' | 'switch' | 'bg'>;
 
-const draw = (fb: Buf, g: number): void | DrawResult => {
+const draw = (fb: Buf, g: number, sl: BookSlot = EP1_BOOK): void | DrawResult => {
   if (g < T.title) return void drawSkyline(fb, g);
   if (g < T.book) return drawTitle(fb, g);
-  return drawBook(fb, g);
+  return drawBook(fb, g, sl);
 };
 
 const sw = (g: number): SwitchSpec[] | null => {
@@ -25,18 +26,23 @@ const sw = (g: number): SwitchSpec[] | null => {
   return null;
 };
 
-export const mfinaleScene: SceneDef = {
-  draw,
+/** the span for an episode's slot (its subtitle, and the cold open the bookend replays); Ep1's is mfinaleScene */
+export const makeMfinaleScene = (sl: BookSlot = EP1_BOOK): SceneDef => ({
+  draw: (fb, g) => draw(fb, g, sl),
   switch: sw,
   after: (ui, g) => {
-    if (g >= T.title && g < T.book) return titleAfter(ui, g);
+    if (g >= T.title && g < T.book) return titleAfter(ui, g, sl.subtitle);
     if (g >= T.book) return bookAfter(ui, g);
   },
-};
+});
+export const mfinaleScene: SceneDef = makeMfinaleScene();
 
 /** the same scene addressed by LOCAL composition frame (0 = global `start`) */
-export const localScene = (start: number): SceneDef => ({
-  draw: (fb, f) => draw(fb, f + start),
-  switch: (f) => sw(f + start),
-  after: (ui, f) => mfinaleScene.after!(ui, f + start),
-});
+export const localScene = (start: number, sl: BookSlot = EP1_BOOK): SceneDef => {
+  const sc = sl === EP1_BOOK ? mfinaleScene : makeMfinaleScene(sl);
+  return {
+    draw: (fb, f) => sc.draw!(fb, f + start),
+    switch: (f) => sw(f + start),
+    after: (ui, f) => sc.after!(ui, f + start),
+  };
+};

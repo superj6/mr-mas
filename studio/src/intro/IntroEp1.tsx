@@ -6,22 +6,26 @@
 import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {PixelScene} from '../shared/pixel/PixelScene';
-import {EDL, Edit} from './edl';
-import {SCENES} from './scenes';
+import {EDL, Edit, MomentId} from './edl';
+import {SCENES, Scene} from './scenes';
 
-/** One edit: visible [from, to], running on the moment's own clock (local 0 = origin). */
-export const EditMount: React.FC<{e: Edit}> = ({e}) => (
+/** One edit: visible [from, to], running on the moment's own clock (local 0 = origin). `scenes`: the episode's moments
+ *  (scenes.ts scenesFor(slot)); Ep1's when omitted. */
+export const EditMount: React.FC<{e: Edit; scenes?: Record<MomentId, Scene>}> = ({e, scenes = SCENES}) => (
   <Sequence from={e.from} durationInFrames={e.to - e.from + 1} name={`${e.id} f${e.from}-${e.to}`}>
     <Sequence from={e.origin - e.from} name={`${e.id} clock (local 0 = f${e.origin})`} layout="absolute-fill">
-      <PixelScene {...SCENES[e.id]} />
+      <PixelScene {...scenes[e.id]} />
     </Sequence>
   </Sequence>
 );
 
-export const IntroEp1: React.FC = () => (
+/** The whole intro cut from one episode's moments (the EDL is every episode's). */
+export const IntroCut: React.FC<{scenes: Record<MomentId, Scene>}> = ({scenes}) => (
   <AbsoluteFill style={{background: '#000'}}>
     {EDL.map((e) => (
-      <EditMount key={e.id} e={e} />
+      <EditMount key={e.id} e={e} scenes={scenes} />
     ))}
   </AbsoluteFill>
 );
+
+export const IntroEp1: React.FC = () => <IntroCut scenes={SCENES} />;

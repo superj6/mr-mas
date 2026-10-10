@@ -1,0 +1,45 @@
+{
+ "read": "h7",
+ "text": "her.",
+ "stretch_ratio": 1.18,
+ "voiced_frames": [
+  23.4,
+  38.28
+ ],
+ "target": {
+  "onset_f": 24.0,
+  "end_max_f": 36.5
+ },
+ "level": {
+  "method": "momentary max (400 ms) of the word = Ep1 EL stem's over 'near the' (f23-35)",
+  "ref_lufs_m": -12.97,
+  "word_lufs_m": -13.07,
+  "gain_db": 4.0
+ },
+ "stem": {
+  "name": "ep2",
+  "lufs_I": -15.85,
+  "short_term_max": -21.59,
+  "short_term_max_at_f": 57.6,
+  "momentary_max": -13.03,
+  "momentary_max_at_f": 30.0,
+  "true_peak_dbtp": -3.68,
+  "sample_peak_dbfs": -3.69
+ },
+ "stem_ep1_el": {
+  "name": "ep1-el",
+  "lufs_I": -15.39,
+  "short_term_max": -16.0,
+  "short_term_max_at_f": 60.0,
+  "momentary_max": -12.76,
+  "momentary_max_at_f": 42.0,
+  "true_peak_dbtp": -2.2,
+  "sample_peak_dbfs": -2.22
+ },
+ "audible_span_frames": [
+  23.4,
+  39.96
+ ],
+ "deess_max_gr_db": 0.0,
+ "chain": "build_vo.py's, verbatim (el_intro.py): WORLD breath layer -24 dB, HPF 90, +1.5 dB shelf @170, -2 dB @3.2k, -1.5 dB @6.5k, -2.5 dB shelf @8k, 2:1 comp, tanh (5 dB, 22 %), split-band de-esser 4.8-10k, dark-room IR 14 % wet, -66 dBFS dark-room tone f22-95"
+}

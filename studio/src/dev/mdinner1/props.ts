@@ -11,11 +11,16 @@ const stamp = (b: Buf, x: number, y: number, rows: string[], pal: Record<string,
 // ------------------------------------------------------------------ the CTRL key (a modifier: wider than the popcorn caps)
 // The legend is printed ON the cap (no floating label): a 13x4 hand-pixelled "CTRL" in the key's green.
 const KEY_PAL: Record<string, number> = {z: PAL.N0, T: PAL.G5, t: PAL.G4, g: PAL.L3, G: PAL.L2, S: PAL.G3, s: PAL.G2, h: PAL.G6};
-const LEGEND = ['.##.###.##..#.', '#....#..#.#.#.', '#....#..##..#.', '.##..#..#.#.##'];
+// The legend is the episode's couch gag (SCRIPT §8 item 4: the keycap Mas pockets): Ep1's is CTRL, the default
+// everywhere below; another episode passes its own 14 x 4 legend (studio/src/intro/slot.ts).
+export const LEGEND = ['.##.###.##..#.', '#....#..#.#.#.', '#....#..##..#.', '.##..#..#.#.##'];
 const face = (row: string, lit: boolean) => row.split('').map((c) => (c === '#' ? (lit ? 'g' : 'G') : 'T')).join('');
+/** drawing 0, the flat key with the legend up (the read), for a legend */
+const flatKey = (legend: string[]) =>
+  ['.zzzzzzzzzzzzzz.', 'zhTTTTTTTTTTTTtz', ...legend.map((r) => 'z' + face(r, true) + 'z'), 'zSSSSSSSSSSSSSsz', '.zzzzzzzzzzzzzz.'];
 const KEY_DRAW = [
   // 0: flat, legend up (the read)
-  ['.zzzzzzzzzzzzzz.', 'zhTTTTTTTTTTTTtz', ...LEGEND.map((r) => 'z' + face(r, true) + 'z'), 'zSSSSSSSSSSSSSsz', '.zzzzzzzzzzzzzz.'],
+  flatKey(LEGEND),
   // 1: tumbling, edge-on
   ['.zzzz.', 'zhTTtz', 'zTgTtz', 'zTTTtz', 'zSSSsz', 'zSSSsz', '.zzzz.'],
   // 2: tumbling, the underside (the stem cross shows)
@@ -24,8 +29,8 @@ const KEY_DRAW = [
 export const KEY_W = 16, KEY_H = 8;
 /** the key's grip point inside the drawing (so Mas's hand stays on the same pixel whatever the key's size) */
 export const KEY_HAND: [number, number] = [8, 6];
-export const drawCtrlKey = (b: Buf, x: number, y: number, drawing: 0 | 1 | 2) => {
-  const d = KEY_DRAW[drawing];
+export const drawCtrlKey = (b: Buf, x: number, y: number, drawing: 0 | 1 | 2, legend: string[] = LEGEND) => {
+  const d = drawing === 0 && legend !== LEGEND ? flatKey(legend) : KEY_DRAW[drawing];
   // centre every drawing on the flat key's box so the tumble does not wander
   stamp(b, x + ((KEY_W - d[0].length) >> 1), y + ((KEY_H - d.length) >> 1), d, KEY_PAL);
 };

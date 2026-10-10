@@ -1,0 +1,32 @@
+{
+ "builder": "audio/intro/sfx/build_intro_sfx.py (imported read-only; src/ redirected to scratch)",
+ "events": "out/ep02/v1/intro/intro-ep2-events.json",
+ "ep1_rebuild_vs_delivered_peak_dbfs": -138.5,
+ "ep1_key_taps": 41,
+ "ep2_key_taps": [
+  {
+   "id": "co.key.L1.00",
+   "frame": 18,
+   "peak_dbfs": -31.0,
+   "file": "sfx/wav/key_tap_soft_01.wav"
+  },
+  {
+   "id": "co.key.L1.01",
+   "frame": 19,
+   "peak_dbfs": -31.7,
+   "file": "sfx/wav/key_tap_soft_02.wav"
+  },
+  {
+   "id": "co.key.L1.02",
+   "frame": 21,
+   "peak_dbfs": -31.4,
+   "file": "sfx/wav/key_tap_soft_03.wav"
+  }
+ ],
+ "every_other_event_unchanged": true,
+ "events_other": 86,
+ "difference_outside_f17_90_dbfs": -240.0,
+ "typing_check_ep1": [],
+ "typing_check_ep2": [],
+ "method": "the delivered Ep1 stem + (Ep2's main bus - Ep1's main bus), both rendered by the builder from the same events; the two differ only in the typed line's key-tap events"
+}
