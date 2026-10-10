@@ -35,7 +35,7 @@ Every real line and real item in the episode, with its row in [facts.md](../../f
 |---|---|---|---|
 | A6 | AROS's preview (a mammoth in the snow) | sc 1 | [V] |
 | A9 | Nole's state complaint, Feb 29, 2024 | sc 1, 4 | [V]; confirm the caption `NOLE v. MANALT ET AL.` on the docket |
-| A10 | NopeAI's Mar 5, 2024 post of Nole's emails | sc 4 | [P]; pull the post. "less open" [P]; "Yup" [K] only for its period (the word is confirmed; press prints "Yup." with the period inside US-style quotes, so the post itself decides); the forwarded early-2018 email's "…attach to Tesla as its cash cow…" and his reply "Andrej is exactly right." [V · TechCrunch, Mar 5, 2024]; the Dec 26, 2018 email's "…0%. Not 1%." and "This needs billions per year immediately or forget it." [V · CNBC and NBC News, Mar 6, 2024] (all §B) |
+| A10 | NopeAI's Mar 5, 2024 post of Nole's emails | sc 4 | [P]; pull the post. "less open" [P]; "Yup" with no period, as the post's email has it (settled by the fixes pass, 2026-10-10; press printed "Yup." only by US quote style); the forwarded early-2018 email's "…attach to Tesla as its cash cow…" and his reply "Andrej is exactly right." [V · TechCrunch, Mar 5, 2024]; the Dec 26, 2018 email's "…0%. Not 1%." and "This needs billions per year immediately or forget it." [V · CNBC and NBC News, Mar 6, 2024] (all §B) |
 | A10b | Nole funded the lab and left its board in 2018 | sc 4 (his plate) | [V] |
 | A11 | Nole's Feb 20, 2018 goodbye all-hands; the room "didn't entirely buy the story" | F2.3 | [V] (Semafor); the slide `ALSET · AI` is the announcement's public reason; the litigant's account stays off screen; **no recruitment shown or said**: no sign-up sheet, and Nole's 2024 line says only that he stood up in front of the room (no source says he asked staff to follow him; the merits of his suit are contested, W8) |
 | A12 | The Mar 8, 2024 review finding, both halves: "WilmerHale found that the prior Board acted within its broad discretion to terminate Mr. Altman, but also found that his conduct did not mandate removal." | sc 4A | [P]; read from "that", after Terb's own "The law firm found", so the reviewer stays the subject of both findings (cropping "WilmerHale found" made the old board the finder); the firm has no registry name, so its name stays outside the quote; open the live post |
@@ -228,7 +228,7 @@ ON SCREEN (the ghost): `"…IT WILL MAKE SENSE TO START BEING LESS OPEN."` [P ·
 A second ghost unfurls beneath it, `RE:` from a 2016 GHOST-NOLE.
 
 **GHOST-NOLE**\
-"Yup" `[K · facts A10, §B; confirm the period · e2-a1-0002]`
+"Yup" `[V · facts A10, §B; no period, as the post's email has it (the fixes pass, 2026-10-10) · e2-a1-0002]`
 
 *Alyi is here only as an author, his name on the header; never in brass or stone.*
 
@@ -330,7 +330,7 @@ Say something ELSE. `[INVENTED · his one caps word · e2-a1-0017]`
 The ghost considers this for a long time [HOLD 2 BEATS: Nole's].
 
 **GHOST-NOLE**\
-…Yup. `[INVENTED · the ghost repeats its word · e2-a1-0018]`
+…Yup `[INVENTED · the ghost repeats its word, as the post has it: no period (the fixes pass, 2026-10-10) · e2-a1-0018]`
 
 TEMPO · quick (Gerg and Nole 0.2 s), then the ghost's weighted 1.25 s.
 
@@ -449,7 +449,7 @@ ROOM — the boardroom by day.
 
 `SCENE:` The chair closes the matter in the record. Both halves of the finding, read whole to the people they concern; then a dry line that pays Ep1's "we'll stand."
 
-`[W]` [4A.01] (≈ 8.0 s · ARRIVE: the room in morning light, candles gone, Mas already standing) The same table by day, from its foot. TERB at the head with a single sheet. MADA halfway down. OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.
+`[W]` [4A.01] (≈ 8.0 s · ARRIVE: the room in morning light, candles gone, Mas already standing) The same table by day, from its foot. TERB at the head with a single sheet. MADA halfway down. Three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.
 
 `RAIL: MAR 8`
 
@@ -474,7 +474,7 @@ TEMPO · weighted for the reading; the line to Mas quick and dry.
 
 `[ECU]` [4A.04] (≈ 3.4 s) His nameplate clicks into its slot, then the three new directors', one by one:
 
-PLATE: `MAS MANALT · BOARD` · `OMIS · NEW DIRECTOR` · `NEW DIRECTOR` · `NEW DIRECTOR` [V · facts A13]
+PLATE: `MAS MANALT · BOARD` [V · facts A13]; the three new directors' plates click in past his, soft: their names never read (the fixes pass, 2026-10-10: name load, W21; no stand-in labels, P17)
 
 `[W]` [4A.05] (≈ 4.3 s) As he sits he glances at GERG, at the back with his laptop, still standing. Gerg lifts the laptop an inch, like a toast.
 
@@ -1793,7 +1793,7 @@ The marks in the scenes, gathered. Each gap in seconds is in the beat plan's `te
 |---|---|---|
 | **Quick** | others 0.15–0.35 s; Mas 0.4–0.5 s | Selbeep and Gerg (1); "you're early." after the landing, Nole and Gerg's volleys, the cow, "Say something ELSE.", Gerg's correction on "nowhere" and the staffer's whisper inside it, the credit (4); the "no." ladder and the off-record mic (6); the engineer and Gerg, Rima's walk-and-talk, the hellos (9); the engineer and CHATGTP (11); the staffers (13); the party under the chant (F2.2); the driver (17); Terb, Mario and Ekiel (18); Haras and Gerg, Gerg's "The half on the beanbags.", Radnus and Mas (19); the split (20) |
 | **Normal** | 0.4–0.6 s | Nole's fear (4); Tasya and the Humanist (7); the call (8); Mas and Rima (9); Mas and Bukaj, aloud (14); the Forecaster's answer and his forecast (17); the call with Gerg, "which half?" included (19); the lobby (20); the tag |
-| **Weighted** | longer, only on turns | the ghost's "…Yup." and "You kept them." / "we keep everything." (4); Terb's reading (4A; then his line to Mas quick and dry); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card, the held breath before V.O. 11 (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
+| **Weighted** | longer, only on turns | the ghost's "…Yup" and "You kept them." / "we keep everything." (4); Terb's reading (4A; then his line to Mas quick and dry); Mas's long answer (6); Rima's "…and that's the demo." after her bar's hold (11); the posts and his face (12); the count and "Someone should." (15); the Forecaster to the pen (17); Neleh's voice and the card, the held breath before V.O. 11 (18); "You ever miss being up there?" and its answer (19); Alyi's post and his face (20); the door (22) |
 
 **Two cut-offs, each motivated, both recorded complete:** "Thanks." over CHATGTP's "favorite" (11.04; he asked for short), and the cheer over "And profit—" (19.04; the world talks over the one key word). **Speaking rates:** the planning rates are Ep1's shipped EL lock's (median audible wpm on lines of five or more words), pulled toward W18's targets. Mas's ordinary lines plan at about 140 wpm (W18) and his call to legal (17.09) at about 180, so the one time he hurries stands out; Gerg's Move 37 correction at about 183 (inside W18's 165–185 band); his V.O. at 128, except the scramble's rattled V.O. 9 at about 145.
 

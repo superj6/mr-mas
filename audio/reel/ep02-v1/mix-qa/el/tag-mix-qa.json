@@ -9,7 +9,8 @@
   "lines": 1,
   "device": {},
   "el_matched": 1,
-  "missing": []
+  "missing": [],
+  "bus_gain_db": -1.0
  },
  "rooms": {
   "stem": "audio/reel/ep02-v1/stems/el/tag-room.flac",
@@ -34,11 +35,11 @@
   "duck": {
    "by_mood_db": [
     [
-     "E02-13 AUGUST",
+     "E02-13",
      8
     ],
     [
-     "E02-13",
+     "E02-13 AUGUST",
      8
     ],
     [
@@ -53,15 +54,15 @@
   "designed_silences": []
  },
  "measured": {
-  "lufs_i": -16.01,
-  "true_peak_dbtp": -1.15,
-  "sample_peak_dbfs": -2.0,
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.42,
+  "sample_peak_dbfs": -1.5,
   "lra_lu": 7.9,
-  "gain_db": 3.68,
-  "limiter_ceiling_dbfs": -2.0,
-  "limiter_active_s": 1.198,
-  "dialogue_lufs": -12.52,
-  "score_lufs_after_duck": -16.27,
+  "gain_db": 3.74,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.513,
+  "dialogue_lufs": -13.46,
+  "score_lufs_after_duck": -16.21,
   "score_rms_under_speech_dbfs": -30.3,
   "score_rms_between_speech_dbfs": -18.7,
   "score_runs": {
@@ -74,12 +75,13 @@
     ]
    ]
   },
-  "rooms_lufs": -34.58,
-  "sfx_lufs": -30.19,
+  "rooms_lufs": -34.51,
+  "sfx_lufs": -30.13,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
   "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
    "count": 1,
@@ -93,11 +95,11 @@
  "file": "out/ep02/v1/mix/tag-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 2.22,
-  "to_gain_db": 3.68,
+  "from_gain_db": 2.21,
+  "to_gain_db": 3.74,
   "ramp_s": 2.0,
   "after": "act4"
  },
- "built": "2026-10-10 08:11:30",
+ "built": "2026-10-10 13:01:14",
  "heard": "nothing here has been listened to; every number is measured"
 }

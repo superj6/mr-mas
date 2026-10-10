@@ -23,7 +23,8 @@ import {drawMasSeated, MAS_SEATED_DEFAULT} from '../../../../../shared/pixel/cas
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {drawDark2S} from '../../../../../shared/pixel/rooms/twoshots';
 import {blitImg} from '../../../../../shared/pixel/figure';
-import {humanistBust, drawHumanistRoom} from '../../art/cast/humanist';
+import {humanistBust, drawHumanistRoom, openPalm} from '../../art/cast/humanist';
+import {SUIT} from '../../../../../shared/pixel/cast/civic-kit';
 import type {HumanistBust} from '../../art/cast/humanist';
 import {seatedStaff, staffChair} from '../../art/cast/civic2';
 import {SECTION_H, FLOORS} from '../../art/sets/cutaway';
@@ -63,7 +64,9 @@ const section = (f: number, lit: number, dim: boolean): Buf => {
     fill(S, 20, py0, 440, py1 - py0, PAL.N4); fill(S, 20, py0, 440, 2, PAL.N6); fill(S, 20, py1 - 2, 440, 2, PAL.N2);
     const t = 'MACROSOFT'; bpt(S, t, 240 - Math.round(bpw(t) / 2), py0 + 1, PAL.P1);
     // its motto under the name, in the plate's own face (larger than the art's tiny type, so it reads at its read time)
-    const u = 'BELOW · ABOVE · AROUND'; fill(S, 240 - Math.round(pw(u) / 2) - 4, py1 - 10, pw(u) + 8, 9, PAL.N3); pt(S, u, 240 - Math.round(pw(u) / 2), py1 - 9, PAL.P2);
+    // (the fixes pass, 2026-10-10: the pan brought it in half cut by the frame's foot; it now lights with floor three's
+    // click, when the whole plinth is in frame, and holds to the cut: 2.1 s)
+    const u = 'BELOW · ABOVE · AROUND'; fill(S, 240 - Math.round(pw(u) / 2) - 4, py1 - 10, pw(u) + 8, 9, PAL.N3); if (lit >= 3) pt(S, u, 240 - Math.round(pw(u) / 2), py1 - 9, PAL.P2);
   }
   {
     const [by0, by1] = FLOORS[5];
@@ -99,6 +102,8 @@ export const section7 = (b: Buf, f: number, st: Section7) => {
 };
 
 // ================================================================== the basement two-shot
+/** his shirt's amber cuff (7 tones, shadow .. rim) for the insert-hands renderer's cuffs */
+const AMBER_CUFF = [PAL.D2, PAL.D2, PAL.W4, PAL.W5, PAL.W6, PAL.W7, PAL.W8];
 export interface BasementSt { hum?: Partial<HumanistBust>; tasya?: Partial<TasyaMediumState>; phone?: 'loud' | 'down'; up?: boolean; key?: boolean }
 /** [2S] the Humanist by his boxes (screen-left), Tasya in the doorway (screen-right), the phone face up on a box between
  *  them playing yesterday's interview (one bar once he's turned it down); `up`: the Humanist looks up (the floors above) */
@@ -113,14 +118,24 @@ export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
   // the bare bulb over them, its cord
   line(240, 0, 240, 22, b.ink(PAL.N2)); ellipse(240, 26, 3, 4, b.ink(PAL.W8)); b.set(239, 25, PAL.W9);
   const hy = st.up ? 56 : 60;
-  putBustCut(b, humanistBust({mouth: 'rest', expr: 'worry', arm: 'box', ...st.hum}), 70, hy, RH);
-  // the key Tasya gave him, in his hand at his chest (his near hand up from below the frame, the brass key in it)
+  // (the fixes pass, 2026-10-10: the bust's own 'spread' stamped two open palms at his shoulders with sleeves that
+  // merged into his blazer, so the hands floated; the arms are drawn here in the frame, outside his torso)
+  const spread = st.hum?.arm === 'spread';
+  putBustCut(b, humanistBust({mouth: 'rest', expr: 'worry', arm: 'box', ...st.hum, ...(spread ? {arm: 'none' as const} : {})}), 70, hy, RH);
+  if (spread) peopleFirst(b);
+  // the key Tasya gave him, in his hand at his chest: his near arm bent at the elbow (below the frame, outside his
+  // torso), the forearm rising across his blazer's edge to the fist, his shirt's amber cuff at the wrist, the brass key
+  // standing up out of the fist
   if (st.key) {
-    const kx = 92, ky = hy + 112;
-    fill(b, kx + 4, ky - 14, 3, 10, PAL.W5); fill(b, kx + 4, ky - 14, 1, 10, PAL.W7); fill(b, kx + 7, ky - 11, 2, 2, PAL.W5); fill(b, kx + 7, ky - 7, 2, 2, PAL.W5);
-    ellipse(kx + 5, ky - 18, 4, 4, b.ink(PAL.W5)); b.set(kx + 5, ky - 18, PAL.D2); b.set(kx + 3, ky - 20, PAL.W8);
-    fill(b, kx, ky - 6, 12, 9, PAL.S4); fill(b, kx, ky - 6, 12, 1, PAL.S5); for (let i = 1; i < 12; i += 3) b.set(kx + i, ky - 5, PAL.S3); fill(b, kx + 11, ky - 5, 1, 8, PAL.S3);
-    fill(b, kx - 1, ky + 3, 14, RH - ky - 3, PAL.N3); fill(b, kx - 1, ky + 3, 14, 1, PAL.N5);
+    // (a whole hand at his scale, as in 7.04: the back of his right hand toward us, the fingers curled round the key's
+    // blade, the bow standing up out of the fist at the index's side)
+    const h = placeHand(POSES.grip([0.95, -0.18, 0.2], [0.05, -0.2, 0.98], 'R', 0.66), {s: 2.2, at: [88, hy + 128], anchor: 'wrist', light: 'lobby', key: [-0.45, -0.6, 0.66], cuffRamp: AMBER_CUFF});
+    const tip = h.tips[0], kx = tip[0] - 4, ky = tip[1] - 6;
+    armUp(b, [64, RH + 16], h.cuffEnd, 8, 6.5);
+    // the key: the blade down into the fist, the bow above it (its hole, a glint)
+    fill(b, kx, ky - 12, 3, 16, PAL.W5); fill(b, kx, ky - 12, 1, 16, PAL.W7); fill(b, kx + 3, ky - 8, 2, 2, PAL.W5); fill(b, kx + 3, ky - 4, 2, 2, PAL.W5);
+    ellipse(kx + 1, ky - 17, 5, 5, b.ink(PAL.W5)); ellipse(kx + 1, ky - 17, 2, 2, b.ink(PAL.D2)); b.set(kx - 2, ky - 20, PAL.W8); b.set(kx - 1, ky - 21, PAL.W8);
+    drawHand(b, h.hand, h.x, h.y);
   }
   drawTasyaMedium(b, 350, 92, {...TASYA_MEDIUM_DEFAULT, arm: 'ring', ...st.tasya}, {flip: true});
   // (the 'ring' arm's far hand is a stamp whose arm is hidden behind his coat: it floated as a skin dot on the coat;
@@ -134,6 +149,28 @@ export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
   fill(b, px + 4, py + 12, 44, 2, PAL.D1);
   const bars = st.phone === 'loud' ? 7 : 1;
   for (let i = 0; i < bars; i++) { const h = 1 + ((i * 7 + Math.floor(f / 3)) % 5); fill(b, px + 12 + i * 4, py + 9 - h, 2, h, PAL.C7); }
+};
+/** an arm from the elbow (out of frame below, outside his torso) up to the wrist: the slate blazer sleeve with a dark
+ *  outline (so it reads in front of his blazer, never merged with it) and a lit edge toward the bulb, his shirt's amber
+ *  cuff at the wrist */
+const armUp = (b: Buf, elbow: [number, number], wrist: [number, number], r0: number, r1: number) => {
+  const SL = SUIT.slate;
+  const ux = wrist[0] - elbow[0], uy = wrist[1] - elbow[1], L = Math.hypot(ux, uy) || 1;
+  const cuff: [number, number] = [Math.round(wrist[0] - (ux / L) * 3), Math.round(wrist[1] - (uy / L) * 3)];
+  sleeve(b, elbow, cuff, r0 + 1, r1 + 1, [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], [-0.55, -0.83], {fold: false});
+  sleeve(b, elbow, cuff, r0, r1, [SL[0], SL[1], SL[2], SL[3], SL[4]], [-0.55, -0.83], {fold: false});
+  sleeve(b, cuff, wrist, r1, r1 - 0.4, [PAL.D2, PAL.W4, PAL.W6, PAL.W7, PAL.W8], [-0.55, -0.83], {fold: false});
+};
+/** "people first" (7.04): both forearms up and out from elbows at his sides (below the frame), outside his torso, the
+ *  hands open at chest height, palms toward us, the thumbs in: whole hands at his own scale (the insert-hands renderer
+ *  at 2.4 px/cm: a hand about as long as his face; the art's 12 x 20 stamps read as a child's hands once he had arms) */
+const peopleFirst = (b: Buf) => {
+  for (const [side, wrist, elbow, out] of [['R', [74, 172], [92, RH + 18], -1], ['L', [192, 172], [172, RH + 18], 1]] as Array<['R' | 'L', [number, number], [number, number], number]>) {
+    const h = placeHand(POSES.open([0.22 * out, -0.96, 0.12], [0, 0.12, -0.99], side), {s: 2.2, at: wrist, anchor: 'wrist', light: 'lobby', key: [-0.45, -0.6, 0.66], cuffRamp: AMBER_CUFF});
+    armUp(b, elbow, h.cuffEnd, 8, 6.5);
+    drawHand(b, h.hand, h.x, h.y);
+  }
+  void openPalm;
 };
 // ================================================================== 7.03 Tasya's welcome, closer
 /** [MCU] TASYA in the doorway, closer (his approved portrait in the room's warm skin, tasya-phone's tasyaRoomPortrait):

@@ -51,14 +51,14 @@
   },
   {
    "room": "podcast_studio",
-   "recipe": "podcast_studio: bed_podcast_studio -42",
+   "recipe": "podcast_studio: bed_podcast_studio -40",
    "from": 234.4,
    "to": 316.4,
    "first": "6.01",
    "last": "6.11",
    "lead": 0.6,
    "trail": 0.4,
-   "lift_db": 3.9
+   "lift_db": 2.4
   },
   {
    "room": "cathedral",
@@ -538,7 +538,7 @@
   "4.22:knob_tick_grain"
  ],
  "room_stem": {
-  "lufs": -37.18,
+  "lufs": -37.09,
   "peak_dbfs": -20.01,
   "p10_50ms_dbfs": -39.5
  },
@@ -640,8 +640,8 @@
   },
   {
    "room": "podcast_studio@act1:6.01",
-   "p5_50ms_dbfs": -43.9,
-   "lift_db": 3.9
+   "p5_50ms_dbfs": -42.4,
+   "lift_db": 2.4
   },
   {
    "room": "cathedral@act1:7.01",

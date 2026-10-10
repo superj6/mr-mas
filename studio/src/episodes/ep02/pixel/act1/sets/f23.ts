@@ -214,53 +214,87 @@ export const alyiLooksBack = (b: Buf, f: number, st: {turn?: 0 | 1 | 2; lift?: b
  *  across its edge); the human games are kaya-yellow boards with a little face over each; on "Then it played
  *  itself" the program's own games are a different thing: dark boards with a cyan border, two stones on each (the
  *  board's own motif), no face, and the knobs they land on light cyan */
-export interface Move37St { stone?: 0 | 1 | 2; stream?: 'human' | 'self' | 'frozen' | 'none'; label?: boolean }
+export interface Move37St {
+  stone?: 0 | 1 | 2; stream?: 'human' | 'self' | 'frozen' | 'none'; label?: boolean;
+  /** frames since people's games began pouring in (the knobs they've landed on stay warm, more and more of them), and
+   *  since its own games began (theirs turn cyan, over the warm): the wall visibly learns, then teaches itself */
+  t?: number; ts?: number;
+}
 const STONES: Array<[number, number, 0 | 1]> = [[3, 3, 0], [15, 3, 1], [3, 15, 1], [15, 15, 0], [16, 4, 0], [13, 2, 1], [2, 13, 0], [5, 2, 1], [16, 13, 1], [14, 16, 0], [9, 9, 1], [10, 3, 0], [4, 9, 1], [15, 9, 0], [12, 15, 1]];
+/** the knob wall (the fixes pass, 2026-10-10: the review found the incoming boards "tiny brown chips" and the frame's
+ *  lower 40 % empty): 12 rows x 21 knobs fill the right of the frame from under the stream's lane to the foot */
+const KW = {x0: 208, y0: 52, n: 21, rows: 12, pitch: 12.4, r: 5};
+const knobAt = (c: number, r: number): [number, number] => [Math.round(KW.x0 + c * KW.pitch), Math.round(KW.y0 + r * KW.pitch)];
+/** one person's game as it streams in (22 x 26): a kaya board with its grid and a few stones, and the player's face
+ *  over its far edge (a head, hair, two eyes): a game a person played */
+const humanGame = (b: Buf, x: number, y: number, k: number) => {
+  // the player's face peering over the board (round, skin, hair on top, two eyes, a mouth)
+  const sk = [PAL.S3, PAL.S4, PAL.S5][k % 3], hr = [PAL.B1, PAL.N1, PAL.B3][k % 3];
+  for (let j = 0; j < 10; j++) for (let i = 0; i < 10; i++) { const d = Math.hypot((i - 4.5) / 5, (j - 5) / 5.2); if (d < 1) b.set(x + 6 + i, y + j, j < 3 + (k % 2) ? hr : d > 0.8 ? PAL.S2 : sk); }
+  b.set(x + 9, y + 5, PAL.N0); b.set(x + 12, y + 5, PAL.N0); fill(b, x + 10, y + 8, 2, 1, PAL.S2);
+  // the board: kaya yellow, its grid, its edge, three stones
+  fill(b, x, y + 9, 22, 16, PAL.W5); fill(b, x, y + 9, 22, 1, PAL.W7); fill(b, x, y + 24, 22, 1, PAL.D3); fill(b, x + 21, y + 9, 1, 16, PAL.W4);
+  for (let i = 3; i < 21; i += 4) fill(b, x + i, y + 11, 1, 12, PAL.D3);
+  for (let j = 12; j < 24; j += 4) fill(b, x + 2, y + j, 18, 1, PAL.D3);
+  const st = [[7, 12, 0], [15, 16, 1], [11, 20, 0]] as const;
+  for (const [sx, sy, w] of st) { fill(b, x + sx - 1, y + sy - 1, 3, 3, w ? PAL.P2 : PAL.N0); b.set(x + sx - 1, y + sy - 1, w ? PAL.W9 : PAL.G3); }
+};
+/** one of the program's own games (22 x 18): a dark board with a cyan border, its grid, a black and a white stone (the
+ *  board's motif), and no face: nobody played it */
+const selfGame = (b: Buf, x: number, y: number) => {
+  fill(b, x, y + 7, 22, 18, PAL.C6); fill(b, x + 1, y + 8, 20, 16, PAL.N2);
+  for (let i = 4; i < 21; i += 4) fill(b, x + i, y + 8, 1, 16, PAL.C3);
+  for (let j = 11; j < 24; j += 4) fill(b, x + 1, y + j, 20, 1, PAL.C3);
+  fill(b, x + 6, y + 11, 3, 3, PAL.N0); b.set(x + 6, y + 11, PAL.G4); fill(b, x + 13, y + 18, 3, 3, PAL.P2); b.set(x + 13, y + 18, PAL.W9);
+};
 export const move37 = (b: Buf, f: number, st: Move37St = {}) => {
   const s = {stone: 2 as 0 | 1 | 2, stream: 'human' as Move37St['stream'], label: true, ...st};
   for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) b.set(x, y, PAL.F1);
   const tick = s.stream === 'frozen' || s.stream === 'none' ? 0 : Math.floor(f / 2);
   const self = s.stream === 'self';
+  const flowing = s.stream === 'human' || self;
+  // the stream's games: each runs along the lane over the top of the frame, turns down into the wall and lands on its
+  // knob; the knob it lands on lights (a person's game: warm; the program's own: cyan) and every knob ticks a hair
+  const N_G = 14, LANE = 6;
+  const lit = new Map<string, number>();
+  const games: Array<[number, number, number]> = [];
+  if (flowing) for (let k = 0; k < N_G; k++) {
+    const c = Math.floor(hash(k, Math.floor((f * 3 + k * 47) / 600), 13) * KW.n), r = Math.floor(hash(k, Math.floor((f * 3 + k * 47) / 600), 14) * KW.rows);
+    const [kx, ky] = knobAt(c, r);
+    const L1 = 214 + 24, L2 = Math.hypot(kx - 190, ky - LANE), hold = 40;
+    const pos = ((f * 3 + k * 47) % 600) / 600 * (L1 + L2 + hold);
+    if (pos < L1) games.push([Math.round(-24 + pos), LANE, k]);
+    else if (pos < L1 + L2) { const u = (pos - L1) / L2; games.push([Math.round(190 + (kx - 11 - 190) * u), Math.round(LANE + (ky - 12 - LANE) * u), k]); }
+    else lit.set(`${c},${r}`, 1);
+  }
   paper(b, (t) => {
-    for (let r = 0; r < 9; r++) for (let c = 0; c < 26; c++) {
-      const kx = 196 + c * 11, ky = 12 + r * 11;
-      ellipse(kx, ky, 4, 4, t.ink(PAL.F3)); ellipse(kx, ky, 3, 3, t.ink(PAL.F4));
+    for (let r = 0; r < KW.rows; r++) for (let c = 0; c < KW.n; c++) {
+      const [kx, ky] = knobAt(c, r);
+      const on = lit.has(`${c},${r}`);
+      const warmK = s.t !== undefined && hash(c, r, 21) < Math.min(0.6, Math.max(0, s.t) / 260);
+      const cyanK = s.ts !== undefined && hash(c, r, 22) < Math.min(0.92, Math.max(0, s.ts) / 70);
+      const rim = on ? (self ? PAL.C8 : PAL.W7) : cyanK ? PAL.C5 : warmK ? PAL.W4 : PAL.F3;
+      const face = on ? (self ? PAL.C9 : PAL.W8) : cyanK ? PAL.C6 : warmK ? PAL.W5 : PAL.F4;
+      ellipse(kx, ky, KW.r, KW.r, t.ink(rim)); ellipse(kx, ky, KW.r - 1, KW.r - 1, t.ink(face));
       const a = hash(c, r, 5) * Math.PI * 2 + (s.stream === 'frozen' ? 0.6 : tick * 0.18 * (hash(c, r, 6) > 0.5 ? 1 : -1));
-      line(kx, ky, kx + Math.round(Math.cos(a) * 3), ky + Math.round(Math.sin(a) * 3), t.ink(PAL.C7));
+      line(kx, ky, kx + Math.round(Math.cos(a) * 4), ky + Math.round(Math.sin(a) * 4), t.ink(on || warmK || cyanK ? PAL.N1 : PAL.C7));
     }
   }, 1);
-  const gx = 40, gy = 30, cell = 8;
+  const gx = 40, gy = 52, cell = 7;
   paper(b, (t) => {
     fill(t, gx - 8, gy - 8, cell * 18 + 16, cell * 18 + 16, PAL.W5);
     for (let i = 0; i < 19; i++) { fill(t, gx + i * cell, gy, 1, cell * 18 + 1, PAL.D2); fill(t, gx, gy + i * cell, cell * 18 + 1, 1, PAL.D2); }
     for (const [sx, sy] of [[3, 3], [9, 3], [15, 3], [3, 9], [9, 9], [15, 9], [3, 15], [9, 15], [15, 15]]) fill(t, gx + sx * cell - 1, gy + sy * cell - 1, 3, 3, PAL.D1);
   }, 2);
-  const stoneAt = (sx: number, sy: number, white: 0 | 1, dy = 0) => paper(b, (t) => { const cx = gx + sx * cell, cy = gy + sy * cell + dy; ellipse(cx, cy, 3.6, 3.6, t.ink(white ? PAL.P2 : PAL.N1)); t.set(cx - 1, cy - 2, white ? PAL.W9 : PAL.G3); }, 1);
+  const stoneAt = (sx: number, sy: number, white: 0 | 1, dy = 0) => paper(b, (t) => { const cx = gx + sx * cell, cy = gy + sy * cell + dy; ellipse(cx, cy, 3.2, 3.2, t.ink(white ? PAL.P2 : PAL.N1)); t.set(cx - 1, cy - 2, white ? PAL.W9 : PAL.G3); }, 1);
   STONES.forEach(([sx, sy, w]) => stoneAt(sx, sy, w));
   if (s.stone) stoneAt(4, 10, 0, s.stone === 1 ? -3 : 0);
-  // the stream: in from frame left along the top, ABOVE the board (its top edge at y 22), then down into the wall;
-  // each board, as it arrives, lights the knob it lands on
-  if (s.stream === 'human' || self) for (let k = 0; k < 22; k++) {
-    const ph = ((f * 5 + k * 29) % 300) / 300;
-    const bx = Math.round(-12 + ph * 300), lane = 2 + (k % 2) * 6;
-    const by = bx < 196 ? lane : Math.round(lane + (bx - 196) * 0.95);
-    if (bx > 200) { const kc = Math.min(25, Math.round((bx - 196) / 11)), kr = Math.min(8, Math.max(0, Math.round((by - 12) / 11))); ellipse(196 + kc * 11, 12 + kr * 11, 4, 4, b.ink(self ? PAL.C8 : PAL.W7)); continue; }
-    if (self) {
-      // the program's own game: a dark board, a cyan border, its grid, a black and a white stone (the board's motif)
-      fill(b, bx - 1, by - 1, 11, 11, PAL.C6); fill(b, bx, by, 9, 9, PAL.N2);
-      for (let i = 1; i < 9; i += 3) { fill(b, bx + i, by, 1, 9, PAL.C3); fill(b, bx, by + i, 9, 1, PAL.C3); }
-      fill(b, bx + 1, by + 1, 3, 3, PAL.N0); b.set(bx + 1, by + 1, PAL.G4); fill(b, bx + 5, by + 5, 3, 3, PAL.P2); b.set(bx + 5, by + 5, PAL.W9);
-    } else {
-      fill(b, bx, by, 9, 9, PAL.W5); for (let i = 0; i < 9; i += 2) { fill(b, bx + i, by, 1, 9, PAL.D2); fill(b, bx, by + i, 9, 1, PAL.D2); }
-      b.set(bx + 2, by + 2, PAL.N0); b.set(bx + 6, by + 4, PAL.P2); b.set(bx + 4, by + 6, PAL.N0);
-      // a person's game: a little face over the board
-      fill(b, bx + 10, by + 2, 3, 3, PAL.S4); fill(b, bx + 10, by + 2, 3, 1, PAL.B2);
-    }
-  }
+  // the games in flight, over everything (they come from outside the frame)
+  for (const [x, y, k] of games) { if (self) selfGame(b, x, y); else humanGame(b, x, y, k); }
   if (s.label && s.stone === 2) {
     const L = 'MAR 2016 · GAME 2 · MOVE 37';
-    paper(b, (t) => { fill(t, 30, 186, pw(L) + 12, 14, PAL.P2); pt(t, L, 36, 189, PAL.N1); });
-    line(gx + 4 * cell + 4, gy + 10 * cell + 4, 60, 186, b.ink(PAL.P2));
+    paper(b, (t) => { fill(t, 30, 188, pw(L) + 12, 14, PAL.P2); pt(t, L, 36, 191, PAL.N1); });
+    line(gx + 4 * cell + 4, gy + 10 * cell + 4, 60, 188, b.ink(PAL.P2));
   }
   grain(b);
 };

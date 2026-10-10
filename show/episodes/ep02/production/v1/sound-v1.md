@@ -3,7 +3,8 @@
 > **Status: the sound pass, 2026-10-10, by the sound designer and mixer.** Every segment of `ep1.1_her.wav` is mixed on the EL lock (the master, LEARNINGS R9), the lock the picture was drawn on (every segment's frame count is the lock's: coldopen 1,320, act1 8,736, act2 6,696, act3 7,680, act4 7,656, tag 888 [M]).
 >
 > - **Made:** 170 new SFX-board files (145 sounds and 25 loops: every manifest §7 bed and every sound the lock names that the board lacked), the ENGINEER's laugh take, cast.md §4's voice chains, the crosscut call, the chant under the exchange, and the audit tool that measured all of it.
-> - **The mix:** every story segment at **−16.0 LUFS** integrated (−16.00 to −16.01), true peak **−1.15 to −1.84 dBTP**, the episode −16.0 LUFS; dialogue −13.7 to −15.0 LUFS in the cold open and the acts (the tag's one V.O. line −12.5); MARIO 0.3 dB under his neighbours; **0 holes**; every 15 dB jump with a named cause; every lock sound laid at its frame, claimed by the score, or (S5) cut at its scene's end; **0 of 316 laid sounds masked** in their own band (12 marginal, §8.1); **0 lines under the score's +10 dB pocket floor**.
+> - **The mix:** every story segment at **−16.0 LUFS** integrated (−16.00 to −16.01), true peak **−1.15 to −1.84 dBTP**, the episode −16.0 LUFS; dialogue −13.7 to −15.0 LUFS in the cold open and the acts (the tag's one V.O. line −12.5); MARIO 0.3 dB under his neighbours; **0 holes** (the mono downmix included only since the fixes pass: see below); every 15 dB jump with a named cause; every lock sound laid at its frame, claimed by the score, or (S5) cut at its scene's end; **0 of 316 laid sounds masked** in their own band (12 marginal, §8.1); **0 lines under the score's +10 dB pocket floor**.
+> - **Corrected by the fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md) Act One rows 3 and 12).** The "0 holes" below had counted the louder channel only: the mono downmix had 10 unmarked holes in XEL's studio (act1, 248.75–296.75 s) and 2 in the empty lot (act4), the two beds' decorrelated stereo cancelling in mono. Both beds are now mostly mono-coherent and laid 2 and 1.5 dB higher, the mix QA counts the mono holes, and every segment has **0 unmarked holes in either measure** [M]. Act One now sits 1 LU over the target (**−15.0 LUFS**) so its lines (−14.0) match the other acts', and the tag's V.O. is 1 dB down on its bus: the dialogue spread is **0.83 LU** (was 2.49), the episode −15.74 LUFS. §7 and §8.4 carry the new numbers.
 > - **Nobody has listened (R8).** Every number here is measured [M] unless it says judged [J]. "Audible" below means measured over the rest of the mix in the sound's own band, not heard. §9 is the list for an ear.
 
 **Contents:** [1. What the pass made](#1-what-the-pass-made) · [2. Rooms](#2-rooms) · [3. SFX](#3-sfx) · [4. Levels: the audit's rides](#4-levels-the-audits-rides) · [5. Voices](#5-voices) · [6. The score in the mix](#6-the-score-in-the-mix) · [7. Loudness and seams](#7-loudness-and-seams) · [8. The audit](#8-the-audit) · [9. For an ear](#9-for-an-ear) · [10. How to rebuild](#10-how-to-rebuild) · [11. Files](#11-files) · [12. LEARNINGS rules checked](#12-learnings-rules-checked) · [13. Open issues and asks](#13-open-issues-and-asks)
@@ -80,7 +81,7 @@ One bed per run of beats with one room, always on (S3): a new room leads its cut
 
 **The rides** (`sfx-rides.json`, read by `stems.py`): for each (segment, beat, lock name), the smaller lift that meets either test, applied as one offset to every occurrence in the beat, so a beat's own steps keep their order (three knocks, each louder; the walk-away's three fading steps). Capped at +18 dB (+14 for a texture) and a laid peak of −12 dBFS; never under the lock's own gain; a change under 1 dB is ignored, so the loop settles. Re-derived over five audit passes, the last two after the head-fade fix (§3), which brought 37 rides down and 20 of them to nothing: a click with its attack back needs no lift.
 
-85 rides over the episode's 316 laid sounds (one ride covers every occurrence of its name in its beat); median +5.2 dB. By size: 0–3 dB: 29, 3–6 dB: 23, 6–9 dB: 14, 9–12 dB: 9, 12–15 dB: 10, 15–19 dB: 0.
+85 rides over the episode's 316 laid sounds (one ride covers every occurrence of its name in its beat); median +5.2 dB. By size: 0–3 dB: 29, 3–6 dB: 23, 6–9 dB: 14, 9–12 dB: 9, 12–15 dB: 10, 15–19 dB: 0. **The fixes pass (2026-10-10)** raised two rides by 1.5 dB, Act Four's gravel steps in the empty lot (22.02: +4.0 → +5.5; 22.09: +12.1 → +13.6): the lot's wind, made mostly mono-coherent and laid 1.5 dB higher against its mono holes (§8.4), had left the 2nd and 3rd steps 0.1–0.3 dB under the +6 dB attack; the counts and the median are unchanged [M].
 
 The largest (all in `sfx-rides.json` with their readings):
 
@@ -90,7 +91,7 @@ The largest (all in `sfx-rides.json` with their readings):
 | act4 | 19.14 | `pin_grey_tick` | +13.6 dB | -13.4 dB in 250-1000 Hz |
 | act2 | 8.01 | `ui_toast_pop` | +13.4 dB | -7.4 dB in 1000-2000 Hz |
 | act4 | 22.05 | `paper_drop_floor` | +13.4 dB | -14.7 dB in 1000-2000 Hz |
-| act4 | 22.09 | `footstep_gravel` (`footstep_gravel_2`) | +12.1 dB | +0.6 dB in 60-250 Hz |
+| act4 | 22.09 | `footstep_gravel` (`footstep_gravel_2`) | +13.6 dB (was +12.1: the fixes pass) | +0.6 dB in 60-250 Hz |
 | act1 | 7.02 | `box_set` | +12.0 dB | -10.9 dB in 60-250 Hz |
 | act2 | 11.01 | `spotlight_swing` | +12.0 dB | -6.2 dB in 60-250 Hz |
 | act2 | 11.07 | `spotlight_swing` | +12.0 dB | -8.9 dB in 60-250 Hz |
@@ -159,27 +160,29 @@ Each line's loudness as laid, after its chain and the segment's master gain [M]:
 
 ## 7. Loudness and seams
 
-| Segment | LUFS-I | True peak | LRA | Dialogue LUFS | Master gain | Holes (unmarked) |
-|---|---|---|---|---|---|---|
-| coldopen | -16.0 | -1.84 dBTP | 5.5 | -14.18 | +2.23 dB | 0 (0) |
-| card | -22.16 | -9.23 dBTP | None | None | +1.12 dB | 0 (0) |
-| act1 | -16.0 | -1.39 dBTP | 6.2 | -15.01 | +1.12 dB | 0 (0) |
-| act2 | -16.01 | -1.37 dBTP | 7.0 | -14.29 | +2.11 dB | 0 (0) |
-| act3 | -16.01 | -1.2 dBTP | 6.9 | -13.65 | +2.53 dB | 0 (0) |
-| act4 | -16.0 | -1.48 dBTP | 8.6 | -13.94 | +2.22 dB | 0 (0) |
-| tag | -16.01 | -1.15 dBTP | 7.9 | -12.52 | +3.68 dB | 0 (0) |
-| **the episode** (story chapters and the card back to back) | **-16.01** | | 6.9 | spread 2.49 LU | | |
+After the fixes pass (2026-10-10; `mix_episode.py --all`, `loudness-report.json`) [M]. **Holes** are now counted on both the louder channel and the mono downmix; the sound pass's table had reported the louder channel only (act1's mono downmix then had 10 unmarked holes in XEL's studio, act4's 2 in the empty lot: the beds' decorrelated stereo cancelling in mono). Act One's integrated loudness is 1 LU over the target (`SEG_TRIM_LU`), the tag's dialogue bus −1 dB (`DLG_SEG_DB`): fixes-v1.md, Act One row 12.
+
+| Segment | LUFS-I | True peak | LRA | Dialogue LUFS | Master gain | Holes, louder channel (unmarked) | Holes, mono downmix (unmarked) |
+|---|---|---|---|---|---|---|---|
+| coldopen | -16.0 | -1.84 dBTP | 5.5 | -14.18 | +2.23 dB | 0 (0) | 0 (0) |
+| card | -21.17 | -8.23 dBTP | None | None | +2.12 dB | 0 (0) | 0 (0) |
+| act1 | **-15.0** (+1 LU, `SEG_TRIM_LU`) | -1.37 dBTP | 6.2 | **-14.01** (was -15.01) | +2.12 dB | 0 (0) | 0 (0) (was 10 (10)) |
+| act2 | -16.01 | -1.37 dBTP | 7.0 | -14.29 | +2.11 dB | 0 (0) | 0 (0) |
+| act3 | -16.01 | -1.2 dBTP | 6.9 | -13.65 | +2.53 dB | 0 (0) | 0 (0) |
+| act4 | -16.0 | -1.48 dBTP | 8.5 | -13.94 | +2.21 dB | 0 (0) | 0 (0) (was 2 (2)) |
+| tag | -16.0 | -1.42 dBTP | 7.9 | **-13.46** (was -12.52; bus -1 dB) | +3.74 dB | 0 (0) | 0 (0) |
+| **the episode** (story chapters and the card back to back) | **-15.74** | | 7.0 | spread **0.83 LU** (was 2.49) | | | |
 
 | Seam | Last 200 ms | First 200 ms | Step | Sample jump |
 |---|---|---|---|---|
-| card -> act1 | -19.1 dBFS | -18.3 dBFS | +0.8 dB | 0.005 |
-| act1 -> act2 | -32.1 dBFS | -19.6 dBFS | +12.5 dB | 0.0016 |
+| card -> act1 | -18.1 dBFS | -17.3 dBFS | +0.8 dB | 0.0056 |
+| act1 -> act2 | -31.1 dBFS | -18.7 dBFS | +12.4 dB | 0.0018 |
 | act2 -> act3 | -29.1 dBFS | -21.7 dBFS | +7.3 dB | 0.0009 |
 | act3 -> act4 | -22.5 dBFS | -25.0 dBFS | -2.5 dB | 0.01 |
-| act4 -> tag | -19.8 dBFS | -19.7 dBFS | +0.2 dB | 0.0038 |
+| act4 -> tag | -19.8 dBFS | -19.7 dBFS | +0.2 dB | 0.0039 |
 | coldopen -> intro-ep2-mix-V1-chipchamber (as the assembly plays it) | -16.0 dBFS | -30.8 dBFS | -14.8 dB | |
-| intro-ep2-mix-V1-chipchamber -> card (as the assembly plays it) | -44.6 dBFS | -38.0 dBFS | +6.6 dB | |
-| tag -> outro (as the assembly plays it) | -22.4 dBFS | -21.3 dBFS | +1.2 dB | |
+| intro-ep2-mix-V1-chipchamber -> card (as the assembly plays it) | -44.6 dBFS | -37.0 dBFS | +7.6 dB (was +6.6: the card plays at Act One's gain, 1 dB up since the fixes pass) | |
+| tag -> outro (as the assembly plays it) | -22.4 dBFS | -21.3 dBFS | +1.1 dB | |
 
 **Reading the seams.** The mixer's own seam is clean by construction: each chapter's first 2 s ramp from the previous chapter's master gain, so the gain at the joint never steps (every `seam_head` in the mix QA starts at the previous segment's gain) and the sample jumps are tiny (the table's last column, all ≤ 0.01). The 200 ms level steps above are the **material** on each side of an act break: card → Act One +0.8 dB and Act Four → tag +0.2 dB are continuous; **Act One → Act Two (+12.5 dB)** is the act-out black against the Water Line's act-in hit (§6, softened by 7 dB); **Act Two → Act Three (+7.3)** is the midpoint's designed stop against THE CLOCK running; **Act Three → Act Four (−2.5)** is the DREAD ringing into the black against the quartet's pre-lap and the beacon rising under it. Around the intro, which plays its own master: cold open → intro −14.8 dB (the knee's fourth note on the smash, into the intro's quiet open; Ep1 aired −11.3 at the same seam), intro → card +6.6 dB (Ep1 +6.9), tag → outro +1.2 dB (the tag's hum held 2 s under the outro's head, its first hit −6 dB) [M]. The task's "within 1 dB" holds for the mixer's seams (the gain, the sample jumps, every continuous layer) and for two of the five story seams' material; the other three are act-ins after a black, each designed by the score and listed for an ear (§9).
 
@@ -187,7 +190,7 @@ Each line's loudness as laid, after its chain and the segment's master gain [M]:
 
 ## 8. The audit
 
-`sound_audit.py`, on the final mix. The JSON is `audio/reel/ep02-v1/mix-qa/el/sound-audit.json`; each segment's mix QA is beside it.
+`sound_audit.py`, on the final mix. The JSON is `audio/reel/ep02-v1/mix-qa/el/sound-audit.json`; each segment's mix QA is beside it. **Re-run after the fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md)) [M]:** the same counts in every table below (317 laid, 0 masked, the same 12 marginal; Act Four's two gravel steps that the lot's louder wind had pushed to marginal are back over the line after their +1.5 dB rides, §4); every line's onset margin against everything unchanged (Act One's lift is on its master, so voice and bed rose together) except the tag's V.O., 1 dB lower with its bus; the lock balanced in every segment; 0 unplaced jumps; MARIO −0.32 dB.
 
 ### 8.1 Every SFX where the picture needs it
 
@@ -228,7 +231,7 @@ Not yet over the line (each a judgement for an ear, §9; the reason is the measu
 | act2 | 41 | 41 | 14.0 | 11.4 | 6.1 | 0 |
 | act3 | 28 | 28 | 12.0 | 11.2 | 4.6 | 0 |
 | act4 | 38 | 38 | 15.1 | 12.4 | 6.1 | 0 |
-| tag | 1 | 1 | 11.9 | 11.9 | 3.9 | 0 |
+| tag | 1 | 1 | 10.9 (was 11.9: the fixes pass's −1 dB on its bus) | 10.9 | 2.9 | 0 |
 
 **Against everything** (`sound_audit.py`: the same onset against rooms + SFX + score as laid, after the rides):
 
@@ -239,7 +242,7 @@ Not yet over the line (each a judgement for an ear, §9; the reason is the measu
 | act2 | 41 | +12.3 dB | +20.4 dB | e2-a2-0020 (rima, 10.04: +12.3); e2-a2-0009 (rima, 9.04: +12.4); e2-a2-0018 (rima, 10.02: +12.5) |
 | act3 | 28 | +8.7 dB | +17.7 dB | e2-a3-0009 (alyi, 15.06: +8.7); e2-a3-0010 (crowd, 15.06: +10.5); e2-a3-0008 (alyi, 15.03: +12.3) |
 | act4 | 38 | +8.6 dB | +18.9 dB | e2-a4-0028 (gerg, 19.10: +8.6); e2-a4-0025 (mas, 19.09: +10.5); e2-a4-0024 (gerg, 19.09: +12.8) |
-| tag | 1 | +12.9 dB | +12.9 dB | e2-vo-14 (mas, 23.05: +12.9) |
+| tag | 1 | +11.9 dB | +11.9 dB | e2-vo-14 (mas, 23.05: +11.9; +12.9 before the fixes pass's −1 dB on its bus) |
 
 ### 8.3 Voices' levels
 
@@ -273,11 +276,11 @@ Per speaker, lines in the room (dry, O.S., call, off mic), LUFS as laid [M]:
 | voice3 | 1 | -14.89 | -14.89 to -14.89 |
 | voice4 | 1 | -14.89 | -14.89 to -14.89 |
 
-**MARIO** (S7): median -14.09 LUFS against -13.78 for Ekiel, Terb and Mas in sc 18: **-0.31 dB** (the rule: within about 1 dB). The spread between speakers comes from the segments' master gains (Act One's is about 1.1 dB under the others: its séance score and rooms are fuller), not from the takes, which are all −16 LUFS.
+**MARIO** (S7): median -14.09 LUFS against -13.78 for Ekiel, Terb and Mas in sc 18: **-0.31 dB** (the rule: within about 1 dB). The spread between speakers comes from the segments' master gains, not from the takes, which are all −16 LUFS. (This table is the sound pass's: Act One's lines then sat about 1.1 dB under the others, because its wall-to-wall talk took the −16 LUFS; since the fixes pass Act One sits at −15.0 LUFS and its dialogue at −14.0, so its speakers' medians are about 1 dB higher than listed here.)
 
 ### 8.4 Holes, jumps, loud moments
 
-- **Holes** (under −42 dBFS for 0.3 s or more, the louder channel and the mono downmix, with and without the score): **0** in every segment [M]. Every black has its faint room tone; every designed silence has its room.
+- **Holes** (under −42 dBFS for 0.3 s or more, with and without the score): **corrected by the fixes pass (2026-10-10).** The sound pass reported 0 for "the louder channel and the mono downmix", but its count (`unmarked_holes`) was the louder channel's only: the mix QA's own `holes_mono_downmix` listed **10 unmarked** in XEL's studio (act1 248.75–296.75 s, beats 6.03–6.07, between the lines; film 05:35–06:24) and **2** in the empty lot (act4 282.5 and 312.35 s, 22.01 and 22.08), measured on the decoded film down to −45.6 dBFS (50 ms, mono). The cause: `bed_podcast_studio` and `bed_empty_lot_wind` were decorrelated stereo at −42, which cancels about 3 dB in mono and dips further in 50 ms windows. The fix: both beds mostly mono-coherent at the same channel power (`sounds_ep2.py _narrow`: correlation 0.85; the wind 0.75 high, 0.9 low; the studio's hum 0.008 → 0.012; the wind's gust floor 0.3 → 0.4), laid at −40 and −40.5 (`rooms.py`). Now **0 unmarked holes in every segment, on the louder channel and in the mono downmix** (`unmarked_holes_mono`, a new count in each mix QA and the loudness report) [M]; XEL's studio's quietest 50 ms in mono is −42.6 dBFS and no 0.3 s span stays under −42 (its quietest 0.3 s peaks at −38.8); the lot's −40.5 and −38.0 [M]. Every black has its faint room tone; every designed silence has its room.
 - **Jumps over 15 dB** between 50 ms windows: the mix QA puts most on a word or an SFX onset; every one it couldn't place is named here by the bus that rose and its cause [M]:
 
 | Segment | At (s) | The bus that rose | Cause |

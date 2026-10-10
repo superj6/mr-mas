@@ -22,14 +22,14 @@
   "score": "Act One's pre-lap under the card's last 1.0 s"
  },
  "measured": {
-  "lufs_i": -22.16,
-  "true_peak_dbtp": -9.23,
-  "sample_peak_dbfs": -9.23,
+  "lufs_i": -21.17,
+  "true_peak_dbtp": -8.23,
+  "sample_peak_dbfs": -8.23,
   "lra_lu": null,
-  "gain_db": 1.12,
+  "gain_db": 2.12,
   "limiter_ceiling_dbfs": 0.0,
   "limiter_active_s": 0.0,
-  "score_lufs_after_duck": -21.23,
+  "score_lufs_after_duck": -20.23,
   "score_runs": {
    "count": 1,
    "shortest_s": 0.9,
@@ -40,12 +40,13 @@
     ]
    ]
   },
-  "rooms_lufs": -35.85,
+  "rooms_lufs": -34.85,
   "sfx_lufs": null,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
   "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
    "count": 0,
@@ -59,6 +60,6 @@
  "file": "out/ep02/v1/mix/card-mix.wav",
  "guard_db": null,
  "seam_head": null,
- "built": "2026-10-10 08:11:30",
+ "built": "2026-10-10 13:01:15",
  "heard": "nothing here has been listened to; every number is measured"
 }

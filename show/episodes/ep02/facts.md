@@ -18,7 +18,7 @@ Everything real in this episode, with dates, sources and tags, plus what gets dr
 - **[P]** primary source · **[P✓]** primary, opened and checked
 - **[V]** verified text · **[V·press]** verified in press reports; the primary is still to pull · **[V·wiki]** verified against Wikipedia only (open the cited source before lock)
 - **[H]** dated headline only: on screen only as the headline's exact words, framed as a headline (guardrails §3)
-- **[K]** widely reported but not re-checked. **Never on a dated card or header** (W26; guardrails §3); in script v1 only "Yup"'s period is still [K].
+- **[K]** widely reported but not re-checked. **Never on a dated card or header** (W26; guardrails §3); in script v1 nothing is [K] since the fixes pass settled "Yup"'s period (2026-10-10).
 - **[SINGLE]** one source only
 - **[UNVERIFIED]** not usable as fact
 
@@ -114,7 +114,7 @@ Everything real in this episode, with dates, sources and tags, plus what gets dr
 | Speaker (parody) | Date | Line as shown or heard | Original / note | Source · tag |
 |---|---|---|---|---|
 | ghost-ALYI (header) | Jan 2016 | "…IT WILL MAKE SENSE TO START BEING LESS OPEN." | Full: "As we get closer to building AI, it will make sense to start being less open." The ghost's header supplies the name and date (`FROM: ALYI · JAN 2016`) | fc-0926 · **[P]** (open the Mar 5, 2024 post before lock) |
-| ghost-NOLE | Jan 2, 2016 | "Yup" | His reply; the word is confirmed in press; press prints "Yup." with the period inside US-style quotes, so the post itself decides the period (it matters only for the subtitle) | sr-1008 · [K] for the period only |
+| ghost-NOLE | Jan 2, 2016 | "Yup" | His reply, **no period**: the email as the Mar 5, 2024 post shows it, in the transcription of the post's emails (LessWrong, "OpenAI Email Archives (from Musk v. Altman and OpenAI blog)": `Yup`, no period). Press printed "Yup." only by US quote style. The fixes pass (2026-10-10) checked it; openai.com itself refused the fetch (403), so a human glance at the post's image is the last confirmation | sr-1008 · [V] |
 | (the cow's caption) | early 2018 | `FWD: "…ATTACH TO ALSET AS ITS CASH COW…"` | The email he forwarded (from Karpathy, not named on screen): "…attach to Tesla as its cash cow…". Tesla → ALSET. Verbatim crop (sr-1008: the old caption added "IT" inside the quote) | sr-1008 · **[V]** (TechCrunch, Mar 5, 2024) |
 | (the cow's caption) NOLE | early 2018 | `NOLE: "…EXACTLY RIGHT…"` | His reply: "Andrej is exactly right." | sr-1008 · **[V]** (TechCrunch, Mar 5, 2024) |
 | ghost-NOLE (header) | Dec 26, 2018 | "…RELEVANT TO MINDDEEP/ELGOOG WITHOUT A DRAMATIC CHANGE IN EXECUTION AND RESOURCES IS 0%. NOT 1%." | Full: "My probability assessment of OpenAI being relevant to DeepMind/Google without a dramatic change in execution and resources is 0%. Not 1%." DeepMind/Google → MINDDEEP/ELGOOG | sr-1008 · **[V]** (CNBC and NBC News, Mar 6, 2024) |
@@ -199,7 +199,7 @@ Everything real in this episode, with dates, sources and tags, plus what gets dr
 ## E. Unverified / re-verify before lock
 | Item | Status | Handling |
 |---|---|---|
-| "Yup"'s period | [K] | the Mar 5 post decides it (subtitle only) |
+| "Yup"'s period | [V] | settled: no period (the fixes pass, 2026-10-10; subtitles 4.04 and 4.18 and the ghost plates read `Yup` / `"YUP"`) |
 | "less open"; the Mar 5 post's byline | [P] / [V] | open the Mar 5 post once to confirm the sentence and the byline |
 | The Mar 8 review's two halves | [P] fc-0926 | open the Mar 8 post once; Terb's lead-in stays outside the quote |
 | The Lex #419 lines | [P] (the transcript) | check against the video |

@@ -4,10 +4,10 @@
 // onto a pale morning sky (no reflection in it). The cast are Ep1's rigs (Terb with his sheet, Mada, Mas, Gerg, the
 // civic extras as the new directors), the art pass's nameplates and XEL invite redrawn for the shots.
 //   day(b, st)             [W] the table by day, from the séance's camera: TERB at the head (seat L) with his single
-//                          sheet; MADA halfway down (C); OMIS (D) and two new directors (A, E); MAS standing behind the
+//                          sheet; MADA halfway down (C); three new directors (A, D, E: their cards soft); MAS standing behind the
 //                          empty chair (B), or sitting in it; GERG at the back by the door with his laptop, standing
 //   mada2S(b, f, st)       [2S] favouring MADA (Ep1's medium rig, perfectly still), Mas standing at the frame's left edge
-//   masStill(b, f)         [MCU] Mas standing, Ep1's approved CU drawing (one silent, unchanging face) on this room by day
+//   masStill(b, f)         [MCU] Mas standing, the standard Mas head, Ep1's portrait (one silent, unchanging face) on this room by day
 //   terbOTS(b, f, st)      [OTS] over Mas's shoulder onto TERB (Ep1's portrait, no helmet), who looks up from the sheet
 //   plates(b, f, st)       [ECU] the nameplates clicking into their slots (art/props nameplatesECU)
 //   phoneTable(b, f, st)   [ECU] his phone face up on the table beside his nameplate: it lights with an invite
@@ -28,7 +28,9 @@ import {drawMadaMedium, MADA_MEDIUM_DEFAULT} from '../../../../../shared/pixel/c
 import {drawSenator} from '../../../../../shared/pixel/cast/civic-extras';
 import {drawGergStand} from '../../../../../shared/pixel/cast/gerg-stand';
 import {drawMasSeated, MAS_SEATED_DEFAULT} from '../../../../../shared/pixel/cast/mas-seated';
-import {masCU} from '../../../../../shared/pixel/cast/mas-cu';
+import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
+import {faceKey} from '../../../../../shared/pixel/kits/face-light';
+import {lightness} from '../../../../../shared/pixel/palette';
 import {drawMasMedium} from '../../../../../shared/pixel/cast/mas-medium';
 import {putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
 import {drawMasStand2} from '../../art/cast/mas2';
@@ -40,7 +42,9 @@ import {backHead} from './figures';
 
 // ================================================================== the room by day
 const PLATES0 = {A: null, B: null, C: null, D: null, E: null};
-const PLATES1 = {A: 'NEW DIRECTOR', B: 'MAS MANALT', C: null, D: 'OMIS', E: 'NEW DIRECTOR'};
+// (the fixes pass, 2026-10-10: "NEW DIRECTOR" read as a stand-in label and OMIS is nobody's problem in this episode;
+// the three new directors' cards stand at their seats with their names soft: blurName below)
+const PLATES1 = {A: null, B: 'MAS MANALT', C: null, D: null, E: null};
 const LAY = new Map<string, ReturnType<typeof boardroomLayers>>();
 /** the morning: every lit layer a rung or two up and warmer, the window a pale sky with the hills and the city soft */
 const morning = (src: Buf, opaque: boolean) => {
@@ -116,13 +120,14 @@ export const day = (b: Buf, st: DaySt) => {
   // see-through trousers); his own skin on his face (the laptop's green only on the screen's edge, never his mouth)
   drawGergStand(b, 450, 150 - (gl ? 1 : 0), {legs: 'stand', type: gl ? 0 : ((Math.floor(st.f / 3) % 3) as 0 | 1 | 2), look: gl ? 'up' : 'screen', mouth: 'rest', light: 'room'}, {flip: true});
   for (let y = 60; y < 104; y++) for (let x = 436; x < 476; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && fm[0] === 'L') b.set(x, y, PAL.S4); }
-  // seated: the new directors (A, E), Mada (C) perfectly still, Omis (D); Mas at B once he sits
+  // seated: the three new directors (A, D, E), Mada (C) perfectly still; Mas at B once he sits
   drawSenator(b, BR.SEATS.A.x, SEN_Y, 1, 'sit');
   drawMadaSeated(b, BR.SEATS.C.x, 152, {...MADA_SEAT_DEFAULT, light: 'room'}, {spin: null});
   drawSenator(b, BR.SEATS.D.x, SEN_Y, 2, 'sit', {flip: true});
   drawSenator(b, BR.SEATS.E.x, SEN_Y, 0, 'sit', {flip: true});
   if (st.mas !== 'stand') drawMasSeated(b, BR.SEATS.B.x - 6, 134, {...MAS_SEATED_DEFAULT, arm: 'lap', head: st.mas === 'glance' ? 'host' : 'host', collars: 3, light: 'room'}, {flip: st.mas === 'glance' ? false : false});
   overlay(b, L.front);
+  if (st.plates) for (const id of ['A', 'D', 'E'] as const) blurName(b, BR.SEATS[id].plate[0], BR.SEATS[id].plate[1]);
   if (st.sheet) { poly([226, 158, 252, 156, 254, 166, 228, 168], b.ink(PAL.P2)); for (let r = 0; r < 3; r++) line(230, 159 + r * 3, 248, 158 + r * 3, b.ink(PAL.G5)); }
   // Terb at the head (seat L), seated, his single sheet up; no helmet and no extinguisher (no fire this morning: the
   // rig's sheet arm carries Ep1's extinguisher in the far hand, so its pixels are left out and his hand hangs empty)
@@ -138,6 +143,14 @@ export const day = (b: Buf, st: DaySt) => {
   glow(b, 150, 150, 170, 60, 1);
 };
 
+/** a tent card whose name is too small to read from across the room (anchor = its bottom centre on the table): the
+ *  card's face, its fold catching the light, its shadow, and one soft grey stroke where the name is */
+const blurName = (b: Buf, bx: number, by: number) => {
+  const w = 34, h = 9, x0 = bx - (w >> 1), y0 = by - h;
+  fill(b, x0 + 1, by, w, 1, PAL.D1);
+  fill(b, x0, y0, w, h, PAL.G5); fill(b, x0, y0, w, 1, PAL.G6); fill(b, x0, by - 1, w, 1, PAL.G3);
+  for (let x = x0 + 4; x < x0 + w - 4; x++) if (bayer(x, y0 + 4) < 0.75) b.set(x, y0 + 4, PAL.G3);
+};
 // ================================================================== 4A.02 the reading: Mada, then Mas
 /** the room behind a medium (the far wall by day: the slats, the window's light from the left), soft */
 const roomSoft = (() => {
@@ -168,11 +181,16 @@ export const mada2S = (b: Buf, f: number) => {
   drawMadaMedium(b, 268, 70, {...MADA_MEDIUM_DEFAULT, head: 'front', arm: 'fold', light: 'room', chair: true}, {spin: null, table: (bb) => { for (let y = 150; y < RH; y++) for (let x = 150; x < W; x++) bb.set(x, y, y === 150 ? PAL.D4 : (x * 3 + y) % 37 < 2 ? PAL.D2 : PAL.D3); }});
   void f;
 };
-/** [MCU] Mas standing: Ep1's approved CU face (no mouths, no blink: nothing on his surface) on this room by day */
+/** [MCU] Mas standing: the episode's standard Mas head (Ep1's approved conversation portrait, as in sc 4 and sc 6: the
+ *  fixes pass, 2026-10-10, where Ep1's CU drawing gave him a bigger swoop and a wider jaw than every other shot of him),
+ *  faced screen-left toward Terb at the head, in the morning's warm light; one silent, unchanging face (no mouth, no
+ *  blink: nothing on his surface), a face light one step from the window (P10) */
 export const masStill = (b: Buf, f: number) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  blitImg(b, masCU('tungsten'), 0, 0, {clip: (_x, y) => y < RH});
+  const X = 150, Y = 36;
+  putBustCut(b, masPortrait({...MAS_PORTRAIT_DEFAULT, mouth: 'rest', lid: 0, look: 0, brow: 0, light: 'warm', head: '34'}), X, Y, RH, false);
+  faceKey(b, X, Y, X + 112, Y + 104, 1, -1);
   void f;
 };
 
@@ -192,7 +210,41 @@ export const terbOTS = (b: Buf, st: {f: number; mouth?: Viseme; read?: boolean; 
 };
 
 // ================================================================== 4A.04 the nameplates; 4A.06 his phone
-export const plates = (b: Buf, f: number, st: {n: number; click: boolean}) => { nameplatesECU(b, f, st); glow(b, 0, 0, 260, 90, 1); };
+/** [ECU] 4A.04 the nameplates (the fixes pass, 2026-10-10): low along the table's edge, his plate close and sharp,
+ *  `MAS MANALT · BOARD`; the three new directors' plates click in past it down the table, smaller and soft (shallow
+ *  focus: their names never read). The art's 2 x 2 grid showed `OMIS · NEW DIRECTOR` and two bare `NEW DIRECTOR`s,
+ *  which read as stand-in labels (P17) and added a name nobody needs (W21) */
+export const plates = (b: Buf, f: number, st: {n: number; click: boolean}) => {
+  // the table close, by morning: dark wood, the window's light along its far edge (art nameplatesECU's ground)
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, y < 58 ? (bayer(x, y) < 0.3 ? PAL.W5 : PAL.W4) : (x * 3 + y * 7) % 61 < 2 ? PAL.D1 : y < 64 ? PAL.D3 : PAL.D2);
+  fill(b, 0, 58, W, 2, PAL.W6);
+  const n = clamp(st.n, 0, 4);
+  // [x, y (the plate's top), w, h, soft]: his close at the left, theirs receding to the right
+  const P: Array<[number, number, number, number, boolean]> = [[30, 96, 236, 46, false], [290, 86, 96, 22, true], [396, 80, 58, 14, true], [460, 77, 40, 10, true]];
+  P.forEach(([x, y, w, h, soft], i) => {
+    // the brass channel and its slot (soft ones a rung down, their edges dithered)
+    const ch = Math.max(3, Math.round(h * 0.2));
+    fill(b, x - 3, y + h, w + 6, ch, soft ? PAL.W2 : PAL.W3); fill(b, x - 3, y + h, w + 6, 1, soft ? PAL.W4 : PAL.W6); fill(b, x - 1, y + h - 2, w + 2, 2, PAL.N1);
+    if (i >= n) return;
+    const up = st.click && i === n - 1 ? 1 : 0;
+    if (!soft) {
+      fill(b, x, y - up, w, h, PAL.P2); fill(b, x, y - up, w, 1, PAL.W9); fill(b, x + w - 2, y - up, 2, h, PAL.P0);
+      const t = 'MAS MANALT · BOARD';
+      bpt(b, t, x + Math.round((w - bpw(t)) / 2), y + Math.round((h - 14) / 2) - up, PAL.N1);
+      return;
+    }
+    // soft: the plate's face a rung down, its edges broken by the dither, the name a soft grey bar (out of focus)
+    for (let j = -1; j <= h; j++) for (let i2 = -1; i2 <= w; i2++) {
+      const edge = j < 0 || j >= h || i2 < 0 || i2 >= w;
+      if (edge && bayer(x + i2, y + j) > 0.5) continue;
+      b.set(x + i2, y + j - up, edge ? PAL.P0 : PAL.P1);
+    }
+    const bh = Math.max(2, Math.round(h * 0.28)), bw = Math.round(w * 0.7);
+    for (let j = 0; j < bh; j++) for (let i2 = 0; i2 < bw; i2++) { const X = x + Math.round((w - bw) / 2) + i2, Y = y + Math.round((h - bh) / 2) + j - up; if (bayer(X, Y) < 0.7) b.set(X, Y, PAL.G4); }
+  });
+  glow(b, 0, 0, 260, 90, 1);
+  void f; void nameplatesECU;
+};
 /** [ECU] his phone face up on the table beside his nameplate (its corner, MAS MANALT, top left), the morning on the wood;
  *  `lit` 0 dark .. 1 the screen up with the invite's toast (the mic icon, a line of its title) */
 export const phoneTable = (b: Buf, f: number, st: {lit: number}) => {

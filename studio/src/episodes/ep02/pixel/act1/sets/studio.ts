@@ -14,7 +14,7 @@ import {PAL, familyOf} from '../../../../../shared/pixel/palette';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasMouth} from '../../../../../shared/pixel/cast/mas';
 import {putBust} from '../../../../../shared/pixel/rooms/bullpen-launch';
-import {drawCollarsPortrait} from '../../../../../shared/pixel/cast/mas-collars';
+import {isSkin} from './common';
 import {faceKey} from '../../../../../shared/pixel/kits/face-light';
 import {xelBust} from '../../art/cast/xel';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
@@ -42,6 +42,42 @@ const curtain = (b: Buf, r: {x: number; y: number; w: number; h: number}, part =
     for (const side of [-1, 1]) for (let y = r.y; y < r.y + r.h - 22; y++) for (let k = 0; k < 10; k++) { const x = cx + side * (gap + k); b.set(x, y, k % 3 === 0 ? PAL.N0 : PAL.N2); }
   }
 };
+/** Mas's three popped polo collars at the portrait's scale (Ep1's stack: coral inside, green, cream outermost; no new
+ *  pop in Ep2). The fixes pass (2026-10-10): Ep1's 4 x 10 points at this scale read as red, green and white tinsel at
+ *  the neckline (the review; Ep1's P7). Here each collar is a band 4 px wide standing up beside the neck, its point
+ *  flaring outward at the top, its lit top edge and a dark edge on its outer side; each one outside the last and two
+ *  pixels lower, so the three read as three stacked collars. The neck is found in the drawn portrait (its skin at the
+ *  throat), so the stack sits on the neck wherever the portrait stands */
+const COLLAR_COLS: Array<[number, number, number]> = [[PAL.R1, PAL.R2, PAL.R3], [PAL.L1, PAL.L2, PAL.L3], [PAL.P0, PAL.P1, PAL.P2]];
+const collarStack = (b: Buf, x: number, y: number) => {
+  // the neck: the skin run nearest the portrait's middle on the throat's row, and the neckline below it
+  const row = y + 86;
+  let nl = -1, nr = -1;
+  for (let xx = x + 40; xx < x + 76; xx++) if (isSkin(b.get(xx, row))) { if (nl < 0) nl = xx; nr = xx; }
+  if (nl < 0) return;
+  const cx = (nl + nr) >> 1;
+  let base = row; while (base < y + 110 && isSkin(b.get(cx, base))) base++;
+  for (const side of [-1, 1]) {
+    const edge = side < 0 ? nl : nr;
+    for (let i = 2; i >= 0; i--) {
+      const col = COLLAR_COLS[i];
+      const top = base - 13 + 2 * i, bot = base + 1 + i;
+      for (let yy = top; yy <= bot; yy++) {
+        const lean = Math.round((bot - yy) * 0.3);
+        const tip = yy - top;
+        const w = tip === 0 ? 2 : tip === 1 ? 3 : 4;
+        const inner = edge + side * (1 + 4 * i + lean);
+        for (let k = 0; k < w; k++) {
+          const X = inner + side * (4 - w + k);
+          const outer = k === w - 1, fold = yy === top + 5 && k > 0;
+          b.set(X, yy, tip === 0 ? col[2] : outer ? col[0] : fold ? col[0] : k === 0 ? col[2] : col[1]);
+        }
+        // the dark edge outside it (so the bands read as layers, never one striped trim)
+        b.set(inner + side * 4, yy, PAL.N0);
+      }
+    }
+  }
+};
 export interface MeterSt {
   mic: 1 | 2 | 3 | 4 | 5;
   ch: number;
@@ -55,6 +91,10 @@ export interface MeterSt {
    *  to him: it rests against his cheek and shoulder) */
   squeeze?: 0 | 1 | 2;
   part?: number;
+  /** the podcast's own cameras (the fixes pass, 2026-10-10: 90 s on one locked two-shot was Act One's slowest stretch):
+   *  'two' the meter frame (every hop happens here, so the mic's growth is read against the same frame), 'mas' / 'xel'
+   *  a single on whoever is talking at the same scale (the other a sliver at the edge, the mic at its size in frame) */
+  cam?: 'two' | 'mas' | 'xel';
 }
 /** where the mic stands (its capsule's centre x): pressed against Mas at squeeze 2 */
 const micX = (st: MeterSt) => CHROME.pic.x + (CHROME.pic.w >> 1) - (st.mic === 5 ? 6 : 0) - ((st.squeeze ?? 0) === 2 ? 84 : 0);
@@ -101,17 +141,18 @@ export const meter = (b: Buf, f: number, st: MeterSt) => {
   const t = new Buf(W, 270, PAL.N0);
   curtain(t, r, st.part ?? 0);
   const sq = st.squeeze ?? 0;
-  const mc = micX(st);
-  const mx = r.x + 6 - [0, 22, 30][sq], my = r.y + 30;
+  const off = st.cam === 'mas' ? 100 : st.cam === 'xel' ? -90 : 0;
+  const mc = micX(st) + off;
+  const mx = r.x + 6 - [0, 22, 30][sq] + off, my = r.y + 30;
   const ms = {...MAS_PORTRAIT_DEFAULT, light: 'warm' as const, mouth: st.mas?.mouth ?? 'rest', look: st.mas?.look ?? 0, head: st.mas?.head ?? '34'};
   putBust(t, masPortrait(ms), mx, my, {flip: true});
-  drawCollarsPortrait(t, mx, my, 3, {head: ms.head ?? '34', light: 'warm'});
+  collarStack(t, mx, my);
   faceKey(t, mx, my, mx + 112, my + 100, 1, 1);
   if (st.xel !== null) {
     const x = st.xel ?? {};
     // leaning toward the mic; at 3 his head is behind its capsule (wherever it stands)
     const ln = x.lean ?? 0;
-    const xx = ln === 3 ? mc - 64 : ln === 2 && sq === 2 ? mc + 64 : r.x + r.w - 124 - [0, 6, 30][ln];
+    const xx = ln === 3 ? mc - 64 : ln === 2 && sq === 2 ? mc + 64 : r.x + r.w - 124 - [0, 6, 30][ln] + off;
     putBust(t, xelSmooth({mouth: x.mouth ?? 'rest', expr: x.expr ?? 'neutral'}), xx, r.y + 26);
   }
   micAt(t, mc, r.y, r.y + r.h, st.mic);
@@ -125,7 +166,7 @@ export const masMCU = (b: Buf, f: number, st: {mouth: MasMouth; look?: -1 | 0 | 
   curtain(b, {x: 0, y: 0, w: W, h: RH});
   const ms = {...MAS_PORTRAIT_DEFAULT, light: 'warm' as const, mouth: st.mouth, look: st.look ?? 0, head: st.head ?? '34'};
   putBust(b, masPortrait(ms), 70, 44, {flip: true});
-  drawCollarsPortrait(b, 70, 44, 3, {head: ms.head ?? '34', light: 'warm'});
+  collarStack(b, 70, 44);
   faceKey(b, 70, 44, 182, 150, 1, 1);
   void f; void ellipse;
 };

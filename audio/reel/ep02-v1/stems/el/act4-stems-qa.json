@@ -150,7 +150,7 @@
   },
   {
    "room": "empty_lot",
-   "recipe": "empty_lot: bed_empty_lot_wind -42",
+   "recipe": "empty_lot: bed_empty_lot_wind -40.5",
    "from": 280.4,
    "to": 319.4,
    "first": "22.01",
@@ -613,26 +613,26 @@
    "22.02",
    "footstep_gravel",
    289.03,
-   -24.0,
-   "ride +4.0 dB (sfx-rides.json)"
+   -22.5,
+   "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "22.02",
    "footstep_gravel_2",
    290.175,
-   -24.0,
+   -22.5,
    "swapped: footstep_gravel_2",
    "lock: footstep_gravel",
-   "ride +4.0 dB (sfx-rides.json)"
+   "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "22.02",
    "footstep_gravel_3",
    291.319,
-   -24.0,
+   -22.5,
    "swapped: footstep_gravel_3",
    "lock: footstep_gravel",
-   "ride +4.0 dB (sfx-rides.json)"
+   "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "22.02",
@@ -689,26 +689,26 @@
    "22.09",
    "footstep_gravel_2",
    314.808,
-   -17.9,
+   -16.4,
    "swapped: footstep_gravel_2",
    "lock: footstep_gravel",
-   "ride +12.1 dB (sfx-rides.json)"
+   "ride +13.6 dB (sfx-rides.json)"
   ],
   [
    "22.09",
    "footstep_gravel_3",
    315.808,
-   -18.9,
+   -17.4,
    "swapped: footstep_gravel_3",
    "lock: footstep_gravel",
-   "ride +12.1 dB (sfx-rides.json)"
+   "ride +13.6 dB (sfx-rides.json)"
   ],
   [
    "22.09",
    "footstep_gravel",
    316.808,
-   -19.9,
-   "ride +12.1 dB (sfx-rides.json)"
+   -18.4,
+   "ride +13.6 dB (sfx-rides.json)"
   ]
  ],
  "sfx_missing": [],
@@ -732,12 +732,12 @@
   "20.02:nole_fanfare_short"
  ],
  "room_stem": {
-  "lufs": -36.29,
+  "lufs": -36.07,
   "peak_dbfs": -19.87,
-  "p10_50ms_dbfs": -40.1
+  "p10_50ms_dbfs": -39.8
  },
  "sfx_stem": {
-  "lufs": -32.81,
+  "lufs": -32.76,
   "peak_dbfs": -14.38,
   "p10_50ms_dbfs": -240.0
  },
@@ -917,7 +917,7 @@
   },
   {
    "room": "empty_lot@act4:22.01",
-   "p5_50ms_dbfs": -48.2,
+   "p5_50ms_dbfs": -47.0,
    "lift_db": 6.0
   },
   {

@@ -6,7 +6,7 @@
 //            Terb's first line
 //   TURN     4A.02 the finding read whole: its first half on MADA (perfectly still), its second on MAS (nothing on his
 //            face: Ep1's approved, unchanging CU); 4A.03 "You can sit down now, Mas." over his shoulder, and he sits
-//   AFTER    4A.04 the four nameplates click in, his first; 4A.05 as he sits he looks to GERG at the back, who lifts his
+//   AFTER    4A.04 the four nameplates click in, his first (his reads; theirs soft); 4A.05 as he sits he looks to GERG at the back, who lifts his
 //            laptop an inch; 4A.06 under the last click his phone lights with an invite (the slot -> the card)
 import {defineScene, layouts, mouth, roomMouth, mk} from '../../kit';
 import {day, mada2S, masStill, terbOTS, plates, phoneTable} from '../sets/board';
@@ -15,7 +15,7 @@ import {stepOf} from '../sets/common';
 const L = layouts();
 
 L.add('4A.01', {
-  st: 'act1/sets/board day (Ep1 rooms/boardroom on the séance\'s camera, a morning grade, the window a pale sky): TERB at the head (seat L, Ep1 cast/terb-sheet, no helmet) with his single sheet, looking up for his first line (room-scale mouth); MADA halfway down (C), perfectly still; OMIS and two new directors (Ep1 civic extras) seated; MAS standing behind his empty chair (B); GERG at the back by the door with his laptop, standing',
+  st: 'act1/sets/board day (Ep1 rooms/boardroom on the séance\'s camera, a morning grade, the window a pale sky): TERB at the head (seat L, Ep1 cast/terb-sheet, no helmet) with his single sheet, looking up for his first line (room-scale mouth); MADA halfway down (C), perfectly still; three new directors (Ep1 civic extras) seated, their tent cards\' names too small to read; MAS standing behind his empty chair (B); GERG at the back by the door with his laptop, standing',
   face: {TERB: 'room'},
   draw: (fb, k, sh, f) => {
     const l = sh.lines[0];
@@ -24,7 +24,7 @@ L.add('4A.01', {
   },
 });
 L.add('4A.02', {
-  st: 'act1/sets/board mada2S ([2S] favouring MADA, Ep1\'s medium rig, the poker face to the lens, arms folded, perfectly still; Mas\'s flank at the frame\'s left edge) for the finding\'s first half → masStill ([MCU] Mas standing: Ep1\'s approved CU drawing, one silent unchanging face) from "but also found"; Terb\'s reading over both (his voice established)',
+  st: 'act1/sets/board mada2S ([2S] favouring MADA, Ep1\'s medium rig, the poker face to the lens, arms folded, perfectly still; Mas\'s flank at the frame\'s left edge) for the finding\'s first half → masStill ([MCU] Mas standing: the episode\'s standard Mas head, Ep1\'s approved conversation portrait, faced to Terb in the morning light, one silent unchanging face) from "but also found"; Terb\'s reading over both (his voice established)',
   marks: {but: ['w', 'e2-a1-0032', 'but', 0]},
   draw: (fb, k, sh, f) => { const but = mk(sh, 'but', 154); if (k < but - 2) mada2S(fb, f); else masStill(fb, f); },
 });
@@ -38,7 +38,7 @@ L.add('4A.03', {
   },
 });
 L.add('4A.04', {
-  st: 'art/props/ui nameplatesECU ([ECU] the table\'s edge in the morning, four brass slots: MAS MANALT · BOARD clicks in first, then OMIS · NEW DIRECTOR, NEW DIRECTOR, NEW DIRECTOR, one click each, the last held to read)',
+  st: 'act1/sets/board plates ([ECU] low along the table\'s edge in the morning: his plate close and sharp, MAS MANALT · BOARD, clicks in first; then the three new directors\' plates click in past it down the table, smaller and soft, their names never read (the fixes pass: no stand-in labels, no name nobody needs), one click each)',
   marks: {c1: ['snd', 'nameplate_click', 1, 0], c2: ['snd', 'nameplate_click', 2, 0], c3: ['snd', 'nameplate_click', 3, 0], c4: ['snd', 'nameplate_click', 4, 0]},
   draw: (fb, k, sh, f) => {
     const cl = [mk(sh, 'c1', 7), mk(sh, 'c2', 24), mk(sh, 'c3', 38), mk(sh, 'c4', 52)];

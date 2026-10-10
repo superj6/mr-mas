@@ -35,11 +35,11 @@
   "duck": {
    "by_mood_db": [
     [
-     "E02-02",
+     "E02-05 out",
      8
     ],
     [
-     "E02-05 A TENANT",
+     "E02-02",
      8
     ],
     [
@@ -47,7 +47,7 @@
      8
     ],
     [
-     "E02-05 out",
+     "E02-05 A TENANT",
      8
     ],
     [
@@ -55,12 +55,12 @@
      9
     ],
     [
-     "none; under the part, his recorded voice",
-     9.0
-    ],
-    [
      "E02-04 LONG-FORM",
      9
+    ],
+    [
+     "none; under the part, his recorded voice",
+     9.0
     ]
    ],
    "cue_sheet_overrides": [
@@ -89,28 +89,28 @@
   "head_fade_why": "its pre-lap (1.000 s) plays under card's tail, continuous with this score's first sample"
  },
  "measured": {
-  "lufs_i": -16.0,
-  "true_peak_dbtp": -1.39,
+  "lufs_i": -15.0,
+  "true_peak_dbtp": -1.37,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 6.2,
-  "gain_db": 1.12,
+  "gain_db": 2.12,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.198,
-  "dialogue_lufs": -15.01,
-  "score_lufs_after_duck": -22.56,
-  "score_rms_under_speech_dbfs": -30.6,
-  "score_rms_between_speech_dbfs": -22.3,
+  "limiter_active_s": 0.416,
+  "dialogue_lufs": -14.01,
+  "score_lufs_after_duck": -21.57,
+  "score_rms_under_speech_dbfs": -29.6,
+  "score_rms_between_speech_dbfs": -21.3,
   "score_runs": {
    "count": 3,
-   "shortest_s": 3.65,
+   "shortest_s": 3.7,
    "runs": [
     [
      0.0,
-     226.4
+     226.45
     ],
     [
      234.25,
-     3.65
+     3.7
     ],
     [
      315.8,
@@ -118,77 +118,21 @@
     ]
    ]
   },
-  "rooms_lufs": -37.21,
-  "sfx_lufs": -31.72,
+  "rooms_lufs": -36.13,
+  "sfx_lufs": -30.72,
   "holes_under_-42dBFS_0.3s": [],
-  "holes_mono_downmix": [
-   {
-    "at": 248.75,
-    "s": 0.3,
-    "what": "UNMARKED (in beat 6.03)"
-   },
-   {
-    "at": 252.6,
-    "s": 0.45,
-    "what": "UNMARKED (in beat 6.03)"
-   },
-   {
-    "at": 255.75,
-    "s": 0.3,
-    "what": "UNMARKED (in beat 6.03)"
-   },
-   {
-    "at": 258.75,
-    "s": 0.75,
-    "what": "UNMARKED (in beat 6.03)"
-   },
-   {
-    "at": 262.55,
-    "s": 0.35,
-    "what": "UNMARKED (in beat 6.04)"
-   },
-   {
-    "at": 274.8,
-    "s": 0.9,
-    "what": "UNMARKED (in beat 6.05)"
-   },
-   {
-    "at": 276.25,
-    "s": 0.95,
-    "what": "UNMARKED (in beat 6.06)"
-   },
-   {
-    "at": 286.3,
-    "s": 0.55,
-    "what": "UNMARKED (in beat 6.07)"
-   },
-   {
-    "at": 291.2,
-    "s": 0.45,
-    "what": "UNMARKED (in beat 6.07)"
-   },
-   {
-    "at": 294.8,
-    "s": 0.4,
-    "what": "UNMARKED (in beat 6.07)"
-   },
-   {
-    "at": 296.75,
-    "s": 0.55,
-    "what": "UNMARKED (in beat 6.07)"
-   }
-  ],
+  "holes_mono_downmix": [],
   "holes_without_score": [],
   "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 84,
-   "rising": 60,
-   "rising_at_a_word": 49,
-   "rising_at_an_sfx": 1,
+   "count": 81,
+   "rising": 56,
+   "rising_at_a_word": 47,
+   "rising_at_an_sfx": 0,
    "rising_other": [
     229.25,
-    234.75,
     251.2,
     256.15,
     258.0,
@@ -198,17 +142,17 @@
     311.35,
     315.8
    ],
-   "falling": 24
+   "falling": 25
   }
  },
  "file": "out/ep02/v1/mix/act1-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.12,
-  "to_gain_db": 1.12,
+  "from_gain_db": 2.12,
+  "to_gain_db": 2.12,
   "ramp_s": 2.0,
   "after": "card"
  },
- "built": "2026-10-10 08:08:29",
+ "built": "2026-10-10 12:59:29",
  "heard": "nothing here has been listened to; every number is measured"
 }

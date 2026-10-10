@@ -89,6 +89,16 @@ ROOM_DIP = {}
 ROOM_DIP_DEFAULT = 2.0
 DUCK_DEFAULT = 9.0
 SCORE_GAIN_DB = {}                      # seg -> dB on the score as delivered (a ruling, with its reason)
+# seg -> dB on the dialogue bus before the master (a ruling, with its reason). The fixes pass (2026-10-10, the review's
+# "dialogue level by chapter"): the tag's one V.O. line sat 1.54 LU over the episode's median dialogue (over the
+# guard): -1.0 dB on its bus lands it about 0.9 LU lower (its score carries most of its loudness)
+DLG_SEG_DB = {'tag': -1.0}
+# seg -> LU over TARGET for the segment's integrated loudness (a ruling, with its reason). The fixes pass (2026-10-10):
+# Act One is wall-to-wall talk, so at -16 LUFS integrated its dialogue sat at -15.0, 1.4 dB under Act Two's (the
+# speech jumped at the Act One -> Two seam). A dialogue bus lift barely moved it (+2 dB on the bus gave +0.14 at the
+# master: its talk IS its loudness), so the act sits 1 LU over the target instead (-15.0 LUFS integrated), which puts
+# its lines at about -14.0, with the other acts (its score, rooms and SFX were the quietest of the acts as well)
+SEG_TRIM_LU = {'act1': 1.0}
 DUCK_BY_MOOD = [                        # the beat's `music (v1): E02-NN ...` cue -> dB under speech (manifest.md §6)
     ('E02-01', 9), ('E02-02', 8), ('E02-03', 9), ('E02-04', 9), ('E02-05', 8), ('E02-06', 7), ('E02-07', 8),
     ('E02-08', 9), ('E02-09', 7), ('E02-10', 9), ('E02-11', 9), ('E02-12', 7), ('E02-13', 8),
@@ -769,6 +779,9 @@ def premix(name, g, variant, use_score=True, keep_buses=False):
         return dict(qa=qa, mix=(body + (mus if mus is not None else 0.0)).astype('float32'), noscore=body, mus=mus,
                     speech=[], spans=[], stats={'dlg': None, 'room': lufs(room), 'sfx': lufs(fx)})
     dlg, speech, dinfo = dialogue(g, variant, qa)
+    if DLG_SEG_DB.get(name):
+        dlg = dlg * np.float32(db(DLG_SEG_DB[name]))
+        dinfo['bus_gain_db'] = DLG_SEG_DB[name]
     qa['dialogue'] = dinfo
     u, spans = duck_env(speech, N)
     dip = ROOM_DIP.get(name, ROOM_DIP_DEFAULT)
@@ -1021,6 +1034,8 @@ def measure(name, g, P, gain, out, lim_s, tp, ceil):
     ns = (P['noscore'] * gl).astype('float32')
     m['holes_without_score'] = [dict(at=a, s=d, what=label_hole(name, g, a, d, extra)) for a, d in holes(ns)]
     m['unmarked_holes'] = sum(1 for h in m['holes_under_-42dBFS_0.3s'] if h['what'].startswith('UNMARKED'))
+    # the mono downmix counted too (the fixes pass, 2026-10-10: the report's "0 holes" had counted the louder channel only)
+    m['unmarked_holes_mono'] = sum(1 for h in m['holes_mono_downmix'] if h['what'].startswith('UNMARKED'))
     m['unmarked_holes_without_score'] = sum(1 for h in m['holes_without_score'] if h['what'].startswith('UNMARKED'))
     sq = os.path.join(ROOT, S.VARIANTS[qa['variant']]['out'], f'{name}-stems-qa.json')
     sfx_on = [r[2] for r in json.load(open(sq)).get('sfx', [])] if os.path.exists(sq) else []
@@ -1124,7 +1139,7 @@ def run(names, variant, use_score=True, report_only=False):
     gains, guard = {}, {}
     for s, P in pre.items():
         if s != 'card':
-            gains[s] = TARGET - P['lufs_pre']
+            gains[s] = TARGET + SEG_TRIM_LU.get(s, 0.0) - P['lufs_pre']
     rep_p = os.path.join(qad, 'loudness-report.json')
     dl = {s: pre[s]['dlg_pre'] + gains[s] for s in gains if pre[s]['dlg_pre'] is not None}
     if len([s for s in SEGS if s in dl]) >= 4:
@@ -1165,7 +1180,7 @@ def run(names, variant, use_score=True, report_only=False):
         else:
             out, lim_s, tp, ceil = master(P['mix'], gains[s], head)
             for _ in range(2):                          # the limiter (and the seam ramp) shave a little: trim, re-master
-                d = TARGET - lufs(out) if s not in guard else 0.0
+                d = TARGET + SEG_TRIM_LU.get(s, 0.0) - lufs(out) if s not in guard else 0.0
                 if abs(d) < 0.05:
                     break
                 gains[s] += d
@@ -1187,7 +1202,8 @@ def run(names, variant, use_score=True, report_only=False):
         print(f"  {s}: {qa['file']}: {m['lufs_i']} LUFS, TP {m['true_peak_dbtp']} dBTP, LRA {m['lra_lu']}, dialogue "
               f"{m.get('dialogue_lufs')}, gain {m['gain_db']:+.2f} dB{' (guard %+.2f)' % guard[s] if s in guard else ''}; score "
               f"{'MISSING' if sc.get('missing') else ('-' if not sc else sc.get('file'))}; holes {len(m['holes_under_-42dBFS_0.3s'])} "
-              f"({m['unmarked_holes']} unmarked; without score {m['unmarked_holes_without_score']} unmarked)")
+              f"({m['unmarked_holes']} unmarked; mono {len(m['holes_mono_downmix'])}, {m['unmarked_holes_mono']} unmarked; without score "
+              f"{m['unmarked_holes_without_score']} unmarked)")
     if 'tag' in results:
         oq = outro_mix(variant, gains['tag'], outd, os.path.join(outd, 'tag-mix.wav'))
         if oq:
@@ -1205,7 +1221,8 @@ def run(names, variant, use_score=True, report_only=False):
                        'guard_db': qa.get('guard_db'),
                        'score': ((f"Act One's pre-lap ({sc['next_prelap']['seconds']} s)" if (sc.get('next_prelap') or {}).get('seconds')
                                   else 'none') + ' (card)') if s == 'card' else ('MISSING' if sc.get('missing') else sc.get('file')),
-                       'unmarked_holes': m['unmarked_holes'], 'unmarked_holes_without_score': m['unmarked_holes_without_score'],
+                       'unmarked_holes': m['unmarked_holes'], 'unmarked_holes_mono': m.get('unmarked_holes_mono'),
+                       'unmarked_holes_without_score': m['unmarked_holes_without_score'],
                        'built': qa['built']}
     for s, why in skipped.items():
         segs_rep[s] = {'skipped': why}
@@ -1229,7 +1246,7 @@ def run(names, variant, use_score=True, report_only=False):
                           'step_db': round(rb - ra, 1), 'sample_jump': round(float(np.abs(xb[0] - xa[-1]).max()), 4)})
     li = [segs_rep[s]['lufs_i'] for s in SEGS if s in segs_rep and 'lufs_i' in segs_rep[s]]
     dd = [segs_rep[s]['dialogue_lufs'] for s in SEGS if s in segs_rep and segs_rep[s].get('dialogue_lufs') is not None]
-    rep = {'variant': variant, 'target_lufs': TARGET, 'true_peak_max_dbtp': TP_MAX,
+    rep = {'variant': variant, 'target_lufs': TARGET, 'seg_trim_lu': SEG_TRIM_LU, 'dialogue_bus_db': DLG_SEG_DB, 'true_peak_max_dbtp': TP_MAX,
            'dialogue_reference_lufs': round(ref, 2) if ref is not None else rep.get('dialogue_reference_lufs'),
            'dialogue_reference_from': ref_src or rep.get('dialogue_reference_from'),
            'guard_lu': GUARD_LU, 'segments': segs_rep, 'episode': whole, 'seams': seams,

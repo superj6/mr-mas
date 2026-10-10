@@ -189,6 +189,7 @@ def pocket_plus(seg, g, B, variant):
             if not l.get('audio') or not os.path.exists(os.path.join(ROOT, l['audio'])):
                 continue
             x, gdb = M.line_audio(l, b.get('room'), variant)
+            gdb += M.DLG_SEG_DB.get(seg, 0.0)                          # the segment's dialogue bus trim (the fixes pass)
             v = signal.sosfilt(sos, x) * 0.7071 * M.db(gdb)
             on = g.starts[i][0] + l['t']
             z = on - l.get('in', 0.0)
@@ -214,7 +215,7 @@ def voices(seg, g, variant, gain):
             if not l.get('audio') or not os.path.exists(os.path.join(ROOT, l['audio'])):
                 continue
             x, gdb = M.line_audio(l, b.get('room'), variant)
-            y = np.stack([x, x], 1) * 0.7071 * M.db(gdb + gain)
+            y = np.stack([x, x], 1) * 0.7071 * M.db(gdb + gain + M.DLG_SEG_DB.get(seg, 0.0))
             rows.append({'line': l['id'], 'who': l.get('who'), 'tag': l.get('tag') or '', 'beat': b['id'],
                          'scene': (b.get('passes') or {}).get('scene'), 'lufs': round(M.lufs(y), 2),
                          'engine': l.get('engine') or 'el'})

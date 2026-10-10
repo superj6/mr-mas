@@ -49,7 +49,11 @@
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep02/v1/mix/act1-mix.wav",
+   "offset_frames": 0,
+   "frames": 8736.0
+  },
   "refs": {}
  },
  "checks": [
@@ -92,6 +96,11 @@
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 8736.00 f vs 0 + 8736"
   }
  ],
  "sequences": [
@@ -4647,7 +4656,7 @@
      "kind": "dialogue",
      "mode": "on-mic",
      "who": "GHOST-NOLE",
-     "text": "Yup.",
+     "text": "Yup",
      "s": 205,
      "e": 226,
      "fs": 195,
@@ -8588,12 +8597,11 @@
    "frame": "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
    "cls": "W",
    "move": "cut",
-   "does": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "does": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
    "chars": [
     "gerg",
     "mada",
     "mas",
-    "omis",
     "terb"
    ],
    "cues": [
@@ -8608,7 +8616,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
    "cast": [
     {
      "id": "terb",
@@ -8628,14 +8636,6 @@
     },
     {
      "id": "mada",
-     "pose": "stand",
-     "face": "calm",
-     "x": null,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "omis",
      "pose": "stand",
      "face": "calm",
      "x": null,
@@ -9368,21 +9368,6 @@
      "text": "MAS MANALT · BOARD",
      "s": 7,
      "e": 81
-    },
-    {
-     "text": "OMIS · NEW DIRECTOR",
-     "s": 24,
-     "e": 81
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "s": 38,
-     "e": 81
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "s": 52,
-     "e": 81
     }
    ],
    "lines": [],
@@ -9398,7 +9383,7 @@
    "frame": "ECU · the nameplates click into their slots, his first",
    "cls": "ECU",
    "move": "cut",
-   "does": "His nameplate clicks into its slot. Then the three new directors', one by one.",
+   "does": "His nameplate clicks into its slot. Then the three new directors', one by one, past his and soft: only his reads.",
    "chars": [],
    "cues": [
     "music (v1): E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
@@ -9438,19 +9423,14 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one.",
+   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one, past his and soft: only his reads.",
    "cast": [],
    "speak": [],
    "beat_starts": {
     "4A.04": 0
    },
-   "picture": "Four plates, four clicks.",
-   "names": [
-    {
-     "id": "omis",
-     "k": 24
-    }
-   ],
+   "picture": "Four plates, four clicks; his in focus, theirs soft (their names never read: the fixes pass, name load, W21).",
+   "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
@@ -9459,27 +9439,6 @@
      "kind": "plate",
      "text": "MAS MANALT · BOARD",
      "s": 7,
-     "e": 81,
-     "must": true
-    },
-    {
-     "kind": "plate",
-     "text": "OMIS · NEW DIRECTOR",
-     "s": 24,
-     "e": 81,
-     "must": true
-    },
-    {
-     "kind": "plate",
-     "text": "NEW DIRECTOR",
-     "s": 38,
-     "e": 81,
-     "must": true
-    },
-    {
-     "kind": "plate",
-     "text": "NEW DIRECTOR",
-     "s": 52,
      "e": 81,
      "must": true
     }
@@ -17687,7 +17646,7 @@
    "kind": "dialogue",
    "mode": "on-mic",
    "who": "GHOST-NOLE",
-   "text": "Yup.",
+   "text": "Yup",
    "tag": "ghost",
    "on_s": 105.1533,
    "end_s": 105.9633,
@@ -24724,7 +24683,7 @@
    "hold_to": 2556,
    "who": "GHOST-NOLE",
    "shown": "HIS OLD EMAILS",
-   "text": "Yup.",
+   "text": "Yup",
    "kind": "dialogue",
    "mode": "on-mic",
    "id": "e2-a1-0018",

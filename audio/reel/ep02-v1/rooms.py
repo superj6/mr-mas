@@ -46,8 +46,10 @@ ROOMS = {
     # the cathedral cut away (SET-06): the racks floor by floor, the basement lower
     'cathedral': [[L('server_hum', -37), L('room_tone', -44)]],
     'basement': [[L('bed_basement', -38)], [L('server_hum', -35, 900)]],
-    # XEL's studio (SET-05): padded, never true silence (the score rests here: the room is the joke)
-    'podcast_studio': [[L('bed_podcast_studio', -42)], [L('room_tone', -42, 1500)]],
+    # XEL's studio (SET-05): padded, never true silence (the score rests here: the room is the joke). The fixes pass
+    # (2026-10-10): -42 -> -40 with the bed made mostly mono-coherent, so the mono downmix clears S3's -42 dBFS between
+    # the lines too (it had 10 unmarked mono holes, down to -45.6)
+    'podcast_studio': [[L('bed_podcast_studio', -40)], [L('room_tone', -42, 1500)]],
     # his dark room (SET-07)
     'darkroom': [DARK],
     'dark': [DARK],
@@ -78,7 +80,8 @@ ROOMS = {
     'campus': [[L('bed_campus_outdoor', -36)], [L('bed_allhands', -40), L('room_tone', -42)]],
     'era_2008': [[L('bed_camcorder_2008', -38)], [L('bed_tpool', -40), L('room_tone', -44, 1800)]],
     'garden': [[L('bed_garden', -40)], [L('room_tone', -42, 3000)]],
-    'empty_lot': [[L('bed_empty_lot_wind', -42)], [L('room_tone', -44, 1500)]],
+    # (the fixes pass, 2026-10-10: -42 -> -40.5 with the wind made mostly mono-coherent: 2 unmarked mono holes in sc 22)
+    'empty_lot': [[L('bed_empty_lot_wind', -40.5)], [L('room_tone', -44, 1500)]],
     # the 2 s filename card: room tone (Ep1's card level), the next chapter's room leads under its end
     'card': [[L('room_tone', -38)]],
     # no bed: a black, the blueprint's card (THE PLAN plays its own score)

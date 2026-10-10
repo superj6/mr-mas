@@ -75,6 +75,10 @@ export const S4 = {
   orb: {x: 240, y: 38},
 };
 export const CANDLES: Array<[number, number]> = [[150, 150], [176, 158], [232, 146], [300, 158], [330, 150], [392, 160]];
+/** a seventh candle at the head of the table beside his laptop (the fixes pass, 2026-10-10: he runs the séance, and in
+ *  every wide he was a dark silhouette in the corner; its light keys his face and hands). It goes out with the others in
+ *  Nole's gust (4.35) */
+export const HEAD_CANDLE: [number, number] = [104, 152];
 /** the candle nearest Nole (it snuffs at 4.27; he relights it and carries it to Mas's face; the last candle) */
 export const NEAR_NOLE = 5;
 /** the planchette's place on the board (board-local) at a letter, or the corner */
@@ -121,6 +125,8 @@ export interface Room4 {
   patch?: boolean;
   /** the whole room shakes (the crash, the slam) */
   shake?: [number, number];
+  /** the head candle (by Mas) out: frames since it went out (its smoke); undefined = lit (out in the dark anyway) */
+  headOut?: number;
 }
 const flameH = (on: boolean, flare: number, f: number, x: number) => (!on ? 0 : (flare === 2 ? 11 : flare === 1 ? 7 : 4) + ((Math.floor(f / 4) + x) % 3 === 0 ? 1 : 0));
 const candle = (b: Buf, x: number, y: number, on: boolean, flare: number, f: number) => {
@@ -209,6 +215,8 @@ export const room = (b: Buf, st: Room4) => {
   // ---- on the table: the board, the candles, Mas's laptop, Gerg at his laptop with a hand on the planchette, the lamp
   drawOuija(b, OUIJA.x + dx, OUIJA.y + dy, {go: false, planchette: st.planchette === undefined ? letterAt('A') : st.planchette});
   CANDLES.forEach(([cx, cy], i) => { if (!(st.lastCandle && i === NEAR_NOLE)) candle(b, cx + dx, cy + dy, !out[i], st.flare ?? 0, st.f); });
+  const headLit = st.headOut === undefined && !st.dark;
+  candle(b, HEAD_CANDLE[0] + dx, HEAD_CANDLE[1] + dy, headLit, st.flare ?? 0, st.f);
   if (st.lastCandle && !st.lastCandle.hand) candle(b, st.lastCandle.x + dx, st.lastCandle.y + dy, true, 0, st.f);
   if (st.gerg !== null) {
     const g = st.gerg ?? {hand: true};
@@ -247,6 +255,7 @@ export const room = (b: Buf, st: Room4) => {
   // ---- the grade: the candles (and the lamp) are the only light
   const flames: Flame[] = CANDLES.map(([x, y], i) => ({x: x + dx, y: y - 9 + dy, r: (st.flare === 2 ? 130 : st.flare === 1 ? 112 : 96), on: !out[i] && !(st.lastCandle && i === NEAR_NOLE)}));
   if (st.lastCandle) flames.push({x: st.lastCandle.x + dx, y: st.lastCandle.y - 9 + dy, r: 110});
+  if (headLit) flames.push({x: HEAD_CANDLE[0] + dx, y: HEAD_CANDLE[1] - 9 + dy, r: st.flare === 2 ? 120 : st.flare === 1 ? 108 : 96});
   if (st.lamp === 'on') flames.push({x: S4.lamp.x + dx, y: S4.lamp.y - 14 + dy, r: 70});
   if (st.match && st.nole) flames.push({x: (st.nole.x ?? S4.nole.x) - 20 + dx, y: (st.nole.y ?? S4.nole.y) - 54 + dy, r: 40});
   candleLight(b, flames, {amb: st.dark ? 0.04 : 0.2});
@@ -280,6 +289,18 @@ export const room = (b: Buf, st: Room4) => {
   if (st.lastCandle) { const {x, y} = st.lastCandle; for (let j = 0; j < 4; j++) b.set(x + dx, y - 7 - j + dy, j < 2 ? PAL.W9 : PAL.W7); }
   CANDLES.forEach(([cx, cy], i) => { if (st.lastCandle && i === NEAR_NOLE) return; const h = flameH(!out[i], st.flare ?? 0, st.f, cx); for (let j = 0; j < h; j++) { const w = (st.flare ?? 0) && j < h * 0.55 ? 1 : 0; for (let q = -w; q <= w; q++) b.set(cx + q + dx, cy - 7 - j + dy, j < 2 ? PAL.W9 : j < h - 1 ? PAL.W7 : PAL.W6); } });
   for (const [i, t] of Object.entries(st.smoke ?? {})) { const [cx, cy] = CANDLES[+i]; smokeWisp(b, cx + dx, cy - 8 + dy, t); }
+  if (headLit) { const h = flameH(true, st.flare ?? 0, st.f, HEAD_CANDLE[0]); for (let j = 0; j < h; j++) { const w = (st.flare ?? 0) && j < h * 0.55 ? 1 : 0; for (let q = -w; q <= w; q++) b.set(HEAD_CANDLE[0] + q + dx, HEAD_CANDLE[1] - 7 - j + dy, j < 2 ? PAL.W9 : j < h - 1 ? PAL.W7 : PAL.W6); } }
+  else if (st.headOut !== undefined) smokeWisp(b, HEAD_CANDLE[0] + dx, HEAD_CANDLE[1] - 8 + dy, st.headOut);
+  // his face and hands in the head candle's light: a warm key on the planes toward it (he is lit by the séance he runs)
+  if (headLit && st.mas !== null) {
+    const mx = S4.mas.x + 2 + dx, top = S4.mas.seat - 60 + dy;
+    const snap = new Int32Array(b.c);
+    for (let y = Math.max(0, top); y < Math.min(RH, top + 70); y++) for (let x = mx - 22; x < mx + 30; x++) {
+      const c = snap[y * W + x]; if (!isSkin(c)) continue;
+      const toward = !isSkin(snap[y * W + x + 1]) || !isSkin(snap[(y - 1) * W + x]);
+      b.set(x, y, stepColor(c, toward ? 2 : 1));
+    }
+  }
   // the ceiling hole over the foot of the table (lit from below), the tiles
   if (st.hole) holeAt(b, S4.hole + dx, st.hole, st.tiles ?? -1, st.f);
   if (st.patch) { const hx = S4.hole + dx, d = st.dark ? 2 : 0; fill(b, hx - 12, 0, 24, 15, stepColor(PAL.W2, -d)); fill(b, hx - 12, 14, 24, 1, stepColor(PAL.W4, -d)); fill(b, hx - 12, 0, 1, 15, stepColor(PAL.W1, -d)); }
@@ -303,7 +324,7 @@ export const ghostNole16 = (b: Buf, rise: number, mouth: 0 | 1 | 2, o: {x?: numb
   if (rise <= 0) return;
   const t = layer(W, 270);
   const fx = o.x ?? 330, fy = o.y ?? 186;
-  drawGhostNole(t, fx, fy, {pose: {arm: 'phone', mouth}, header: o.header === false ? undefined : 'RE: · 2016', quote: o.header === false ? undefined : '"YUP."', headerAt: [fx - 34, 76]});
+  drawGhostNole(t, fx, fy, {pose: {arm: 'phone', mouth}, header: o.header === false ? undefined : 'RE: · 2016', quote: o.header === false ? undefined : '"YUP"', headerAt: [fx - 34, 76]});
   const top = Math.round(RH - (RH - 60) * Math.min(1, rise));
   for (let yy = 0; yy < RH; yy++) for (let xx = 0; xx < W; xx++) { const c = t.c[yy * W + xx]; if (c !== TR && yy >= top) b.set(xx, yy, c); }
 };
@@ -589,7 +610,7 @@ export const noleShoulder = (b: Buf, x: number, y: number) => backHead(b, x, y, 
 export interface OtsSt {
   f: number;
   /** Nole at the foot (his portrait, warmed): mouth 0..4, the phone's jab, a dip of the head; null = not there */
-  nole?: {mouth?: 0 | 1 | 2 | 3 | 4; jab?: 0 | 1 | 2; dip?: number; brow?: 0 | 1; x?: number; brush?: boolean} | null;
+  nole?: {mouth?: 0 | 1 | 2 | 3 | 4; jab?: 0 | 1 | 2; dip?: number; brow?: 0 | 1; x?: number; brush?: boolean; spread?: boolean} | null;
   /** the 2016 ghost behind him and its Yup (ghost-Nole) */
   ghosts16?: boolean;
   /** ghost 3 (Dec 2018, ghost-Nole in a hoodie with the 0% header) drifting into Mas's eyeline: x of his feet */
@@ -615,6 +636,17 @@ export const noleOTS = (b: Buf, st: OtsSt) => {
     blitImg(b, img, nx, ny, {map: warm, clip: (_x, y) => y < FT.farY});
     // brushing a tile off his shoulder: a chip of ceiling tile on his shoulder, then gone
     if (n.brush) { fill(b, nx + 74, ny + 98, 6, 3, PAL.W3); fill(b, nx + 74, ny + 98, 6, 1, PAL.W5); }
+    // 4.11 "There. Even the furniture knows.": his free hand spread open, palm up, out over the board, vindicated (the
+    // phone hand out the other way): the forearm from his elbow behind the table's far edge (the fixes pass, 2026-10-10)
+    if (n.spread) {
+      const t = layer(W, 270);
+      const h = placeHand(POSES.open([0.86, 0.1, 0.5], [0.05, 0.98, -0.2], 'L'), {s: 2.2, at: [nx + 100, 106], anchor: 'wrist', light: 'lobby', key: [-0.5, -0.6, 0.6], cuffRamp: [PAL.N0, PAL.D0, PAL.D1, PAL.D1, PAL.D2, PAL.W2, PAL.W3]});
+      // his sleeve in his top's own warm dark, a candle rim on its upper edge (a dark sleeve on the dark wall read as
+      // no arm at all)
+      sleeve(t, [nx + 80, FT.farY + 4], h.cuffEnd, 7.5, 6, [PAL.N0, PAL.D0, PAL.D1, PAL.D2, PAL.W3], [-0.3, -0.95], {fold: false});
+      drawHand(t, h.hand, h.x, h.y, {map: warm});
+      for (let y = 0; y < FT.farY; y++) for (let x = 0; x < W; x++) { const v = t.c[y * W + x]; if (v !== TR) b.set(x, y, v); }
+    }
   }
   // the candles standing down the table (their flames after the grade)
   for (const [cx, cy, i] of OTS_CANDLES) { if (out[i]) { b.set(cx, cy - 8, PAL.N2); } fill(b, cx - 1, cy - 7, 3, 7, PAL.P1); fill(b, cx - 2, cy, 5, 1, PAL.W4); }
@@ -631,7 +663,7 @@ export const noleOTS = (b: Buf, st: OtsSt) => {
     drawGhost(t, 8, 24 + ([0, 0, -1, -1, 0, 0, 1, 1][Math.floor(st.f / 9) % 8]), {kind: 'thread', header: 'FROM: ALYI · JAN 2016', body: '"…IT WILL MAKE SENSE TO START BEING LESS OPEN."'});
     for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i];
     const g = layer(W, 270);
-    drawGhostNole(g, 410, 196, {pose: {arm: 'phone', mouth: 0}, header: 'RE: · 2016', quote: '"YUP."', headerAt: [392, 74], flip: true});
+    drawGhostNole(g, 410, 196, {pose: {arm: 'phone', mouth: 0}, header: 'RE: · 2016', quote: '"YUP"', headerAt: [392, 74], flip: true});
     for (let i = 0; i < W * RH; i++) if (g.c[i] !== TR) b.c[i] = g.c[i];
   }
   if (st.cow) { const t = layer(W, 270); drawGhost(t, 104, 70, {kind: 'cow', header: '2018'}); for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i]; }
@@ -785,11 +817,11 @@ export const gergStaffer = (b: Buf, st: GSSt) => {
 };
 /** [MCU] GERG typing, his correction: his approved portrait faced screen-right (to the staffer off frame), the laptop's
  *  cool light from below, the candle's warm rim on his back edge; the empty chair soft far left */
-export const gergMCU = (b: Buf, st: {f: number; mouth?: 'rest' | 'open' | 'smile'; lid?: 0 | 1 | 2; look?: -1 | 0 | 1}) => {
+export const gergMCU = (b: Buf, st: {f: number; mouth?: 'rest' | 'open' | 'smile'; lid?: 0 | 1 | 2; look?: -1 | 0 | 1; typing?: boolean}) => {
   b.c.set(gsBg().c.subarray(0, W * RH), 0);
   candleLight(b, [{x: 133, y: 144, r: 230}], {amb: 0.24});
   dimRoom(b, 1);
-  const typ = gergTypeAt(Math.floor(st.f / 2));
+  const typ = st.typing === false ? 0 : gergTypeAt(Math.floor(st.f / 2));
   putBustCut(b, gergPortrait({mouth: st.mouth ?? 'rest', lid: st.lid ?? 1, look: st.look ?? 1}), 176, 40 + (typ === 2 ? 1 : 0), RH, true);
   poly([182, RH + 2, 194, 158, 286, 152, 292, RH + 2], b.ink(PAL.N1)); line(194, 158, 286, 152, b.ink(PAL.C5)); line(194, 159, 286, 153, b.ink(PAL.C2));
   const snap = new Int32Array(b.c);
@@ -800,17 +832,20 @@ export const gergMCU = (b: Buf, st: {f: number; mouth?: 'rest' | 'open' | 'smile
 };
 /** [MCU] the staffer at the board's corner, leaning to Gerg (off frame right) and whispering behind her cupped hand
  *  (her lines are O.S.: her mouth never shows) */
-export const stafferMCU = (b: Buf, st: {f: number; look?: -1 | 0 | 1; expr?: 'worry' | 'neutral' | 'squint'}) => {
+export const stafferMCU = (b: Buf, st: {f: number; look?: -1 | 0 | 1; expr?: 'worry' | 'neutral' | 'squint'; mouth?: BustState['mouth']}) => {
   b.c.set(gsBg().c.subarray(0, W * RH), 0);
   candleLight(b, [{x: 133, y: 144, r: 220}], {amb: 0.2});
   dimRoom(b, 1);
-  const s2 = stafferBust({mouth: 'rest', expr: st.expr ?? 'worry', look: st.look ?? 0});
+  const s2 = stafferBust({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'worry', look: st.look ?? 0});
   const X = 176, Y = 26;
   putBustCut(b, s2, X, Y, RH, true);
-  // her near hand cupped at the side of her mouth (the fingers together, upright, the palm toward Gerg off frame
-  // right; the back of the hand to us), the forearm down out of frame
+  // a face light one step (a candle at the board's corner below her: her face reads, P10)
+  { const snap = new Int32Array(b.c); for (let y = Y + 20; y < Math.min(RH, Y + 100); y++) for (let x = X; x < X + 112; x++) { const c = snap[y * W + x]; if (isSkin(c)) b.set(x, y, stepColor(c, 1)); } }
+  // her near hand cupped BESIDE her mouth, on its far side (the fingers together, upright, the palm toward Gerg off
+  // frame right; the back of the hand to us), so her lips show as she whispers (the fixes pass, 2026-10-10: behind
+  // the hand nobody could see who asked; P9), the forearm down out of frame
   const m = STAFFER_MOUTH;
-  const mx = X + (112 - 1 - m[0]) + 9, my = Y + m[1] - 2;
+  const mx = X + (112 - 1 - m[0]) + 17, my = Y + m[1] - 2;
   sleeve(b, [mx + 6, my + 22], [mx + 14, RH + 20], 8, 11, [PAL.N0, PAL.U0, PAL.U1, PAL.U2, PAL.U3]);
   const HS = [PAL.S2, PAL.S3, PAL.S4, PAL.S5];
   for (let j = -11; j <= 24; j++) for (let i = -5; i <= 5; i++) {
@@ -853,6 +888,29 @@ export const noles2S = (b: Buf, st: Noles2S) => {
     for (let j = 0; j < 13; j++) for (let i = 0; i < w; i++) { const X = 226 - (w >> 1) + i, Y = 18 + j; if (((X + Y) & 1) === 0 || j === 0 || j === 12) b.set(X, Y, j === 0 || j === 12 ? PAL.C7 : PAL.C4); }
     pt(b, s, 226 - (w >> 1) + 5, 21, PAL.C9);
   }
+  noleFore(b, null, st.f);
+};
+
+// ================================================================== 4.09 NOLE beside the 2016 ghost (2S)
+/** [2S] 4.09's last third (the fixes pass, 2026-10-10: the case was one OTS for 15 s): NOLE in the right of the frame
+ *  (his portrait, warmed by the candles), and hanging in the air at his shoulder the 2016 email he is arguing with: the
+ *  ghost thread, FROM: ALYI · JAN 2016 and "…LESS OPEN.", and under it his own RE: "YUP". He says "Open. It was
+ *  supposed to be open." with it beside him; nobody points at it (the script's note) */
+export const noleGhost2S = (b: Buf, st: {f: number; mouth?: 0 | 1 | 2 | 3 | 4; jab?: 0 | 1 | 2; dip?: number; brow?: 0 | 1}) => {
+  const bg = NOLE_BG.get('off') ?? (() => { const x = noleBg(false); NOLE_BG.set('off', x); return x; })();
+  b.c.set(bg.c.subarray(0, W * RH), 0);
+  const bob = [0, 0, -1, -1, 0, 0, 1, 1][Math.floor(st.f / 9) % 8];
+  const t = layer(W, 270);
+  drawGhost(t, 14, 24 + bob, {kind: 'thread', header: 'FROM: ALYI · JAN 2016', body: '"…IT WILL MAKE SENSE TO START BEING LESS OPEN."'});
+  for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i];
+  ghostHeaderAt(b, 22, 112 + bob, 'RE: · 2016', '"YUP"', 120);
+  const X = 296, Y = 44;
+  const img = nolePortraitImg({mouth: st.mouth ?? 0, jab: st.jab ?? 0, blink: 0, brow: st.brow ?? 1, dip: st.dip ?? 0});
+  putBustCut(b, img as Img, X, Y, RH, false);
+  for (let y = 0; y < RH; y++) for (let x = X; x < X + 112; x++) { const c = b.get(x, y); const w2 = warm(c); if (w2 !== c) b.set(x, y, w2); }
+  // the candles' light on his face from frame left, low (a key one step, the rim on that side); the ghost's cool on
+  // his near cheek's edge
+  for (let y = Y + 20; y < Y + 90 && y < RH; y++) for (let x = X + 20; x < X + 90; x++) { const c = b.get(x, y); if (isSkin(c) && !isSkin(b.get(x - 1, y))) b.set(x, y, stepColor(c, 1)); }
   noleFore(b, null, st.f);
 };
 

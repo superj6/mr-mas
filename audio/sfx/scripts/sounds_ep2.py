@@ -43,6 +43,16 @@ def _n(x):
     return x / (np.abs(x).max() + 1e-12)
 
 
+def _narrow(y, rho=0.8):
+    """a decorrelated stereo pair made mostly mono-coherent at the same channel power: L = c a + s b, R = c a - s b
+    (c^2 + s^2 = 1, the channels' correlation c^2 - s^2 = rho). Decorrelated beds cancel in the mono downmix (-3 dB
+    against a channel, and the 50 ms windows dip further): the fixes pass, 2026-10-10, found mono holes under -42 dBFS
+    between lines in XEL's studio and the empty lot (sound-v1.md section 8.4)"""
+    c, s = math.sqrt((1 + rho) / 2), math.sqrt((1 - rho) / 2)
+    a, b = y[:, 0], y[:, 1]
+    return np.stack([c * a + s * b, c * a - s * b], axis=1)
+
+
 def _tone(f, dur, partials=((1, 1.0),), att=0.004, tau=0.25, seed=0):
     n = n_of(dur)
     t = np.arange(n) / SR
@@ -1694,10 +1704,12 @@ def bed_seance_candles():
      use="Ep2 act1 sc 6 (no score here: the padded room tone is the joke).", cat="room", loop=True, mix_db=-32, norm="integrated")
 def bed_podcast_studio():
     n = n_of(LOOP20)
-    y = circular(lambda z: lowpass(z, 700, 2), _hvac(n, 3480, 900))
+    # the HVAC mostly mono-coherent (rho 0.85) and the gear's hum on F a little steadier (0.008 -> 0.012), so the mono
+    # downmix never falls into a hole between lines (the fixes pass, 2026-10-10: "never true silence" in mono too)
+    y = _narrow(circular(lambda z: lowpass(z, 700, 2), _hvac(n, 3480, 900)), 0.85)
     h, _ = loop_tone(n, hz("F2"), LOOP20)
     cr = _pevents(n, 0.18, lambda k: _friction(0.35, 300, 2000, 50, 0.6, 3481 + k, "pink") * _env(n_of(0.35), [(0, 0), (0.05, 1), (0.35, 0)]) * 0.08, 3482, (-16, -10), 0.4)
-    return y + stereo(h * 0.008) + cr
+    return y + stereo(h * 0.012) + cr
 
 
 @sfx("bed_basement", "Room bed, the cathedral's basement: lower and closer, a boiler's rumble, pipes ticking, the racks above heard through the slab. Seamless 20 s loop.",
@@ -1920,7 +1932,9 @@ def bed_zai_warehouse():
      use="Ep2 act4 sc 22 (white, room tone only).", cat="room", loop=True, mix_db=-32, norm="integrated")
 def bed_empty_lot_wind():
     n = n_of(LOOP20)
-    hi = np.stack([loop_noise(n, 1500, 7000, -2, seed=3800), loop_noise(n, 1500, 7000, -2, seed=3801)], axis=1) * _penv(n, 0.2, 3802, 0.3, 1.3)[:, None] * 0.3
-    lo = np.stack([loop_noise(n, 60, 600, -4, seed=3803), loop_noise(n, 60, 600, -4, seed=3804)], axis=1) * 0.2
+    # the wind mostly mono-coherent (the high wind rho 0.75, its low body 0.9) and its gusts' floor 0.3 -> 0.4, so the
+    # mono downmix keeps the lot's air between lines (the fixes pass, 2026-10-10; sound-v1.md section 8.4)
+    hi = _narrow(np.stack([loop_noise(n, 1500, 7000, -2, seed=3800), loop_noise(n, 1500, 7000, -2, seed=3801)], axis=1), 0.75) * _penv(n, 0.2, 3802, 0.4, 1.3)[:, None] * 0.3
+    lo = _narrow(np.stack([loop_noise(n, 60, 600, -4, seed=3803), loop_noise(n, 60, 600, -4, seed=3804)], axis=1), 0.9) * 0.2
     whistle, _ = loop_tone(n, hz("F6"), LOOP20)
     return hi + lo + stereo(whistle * 0.002 * _penv(n, 0.2, 3805, 0, 2))

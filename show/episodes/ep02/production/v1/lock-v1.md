@@ -7,6 +7,7 @@
 > - **The lock QA (§3.5)**: its eleven findings are fixed: the cheer now cuts "And profit—" on the word, with its cause first; seven exchanges the script and the proposal mark quick or normal are pinned (they had stretched to 0.9–1.9 s); THE PLAN's third stamp lands on "free"; V.O. 6 waits out the post's read floor; 4B gets its beat and its aftermath; the cut-offs' subtitles read as the script draws them; the transcript carries every in-world text; the proposal's headings and the script's header match the lock; the plan's picture notes reach the shot pass; the engineer's laugh is a timed request; V.O. 9 was re-read so its count can't parse as "signed the post".
 > - **Against the proposal's runtime table** (23:20 after the script review; its own margin is "±0:40 until the takes"): 26 s shorter, all of it dead air (§1).
 > - **Every lock check the tools have was run (§5): 0 failures.** That includes the checks the lock pass and the lock QA added where the tools had none (§3.2, §3.5). What is left is listed as LOOK, each with its reason.
+> - **The fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md)) rebuilt Act One's lock for text only, no timing:** 4.18's `…Yup` (no period, as the post has it), 4A.04's plates (only `MAS MANALT · BOARD` is a read text; the three new directors' plates are soft), 4A.01's caption and the act's cast without `omis`. The frames, the takes and the score's audio are unchanged; the score's cue sheet was re-laid for the new content hash [M].
 > - **Nothing was watched or heard (R8).** Every number here is measured from the files [M]; every call is marked [J]. The ear list ([takes-qa.md](takes-qa.md) §6) gains one item, V.O. 9's count.
 
 **Contents:** [1. Frames and runtime](#1-frames-and-runtime) · [2. Scenes: arrival and aftermath](#2-scenes-arrival-and-aftermath) · [3. Where the lock differs from the plan, and why](#3-where-the-lock-differs-from-the-plan-and-why) · [4. The plan's marks, measured in the lock](#4-the-plans-marks-measured-in-the-lock) · [5. Every lock check](#5-every-lock-check) · [6. For the next passes](#6-for-the-next-passes) · [7. How to rebuild](#7-how-to-rebuild) · [8. Files](#8-files) · [9. LEARNINGS rules checked](#9-learnings-rules-checked)
@@ -21,7 +22,7 @@
 | Segment | Frames | Runtime | Episode in → out | Shots | Lines (V.O.) | Scenes | Plan | Pixel-lock checks |
 |---|---|---|---|---|---|---|---|---|
 | Cold open | **1,320** | 0:55.00 | 00:00:00 → 00:55:00 | 13 | 6 (0) | 1 | 0:55.00 | 8 ok |
-| Act One · the séance | **8,736** | 6:04.00 | 01:27:00 → 07:31:00 | 62 | 59 (3) | 5 | 6:04.00 | 8 ok |
+| Act One · the séance | **8,736** | 6:04.00 | 01:27:00 → 07:31:00 | 62 | 59 (3) | 5 | 6:04.00 | 9 ok |
 | Act Two · her | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 44 | 41 (3) | 5 | 4:39.00 | 8 ok |
 | Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 28 (4) | 4 | 5:20.00 | 8 ok |
 | Act Four · as a guest | **7,656** | 5:19.00 | 17:30:00 → 22:49:00 | 57 | 38 (3) | 4 | 5:19.00 | 8 ok |

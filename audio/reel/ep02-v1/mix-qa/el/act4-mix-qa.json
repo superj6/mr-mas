@@ -33,11 +33,11 @@
   "duck": {
    "by_mood_db": [
     [
-     "E02-12",
+     "E02-12 ONE DOOR",
      7
     ],
     [
-     "E02-12 ONE DOOR",
+     "E02-12",
      7
     ],
     [
@@ -45,7 +45,15 @@
      9
     ],
     [
+     "room tone only; the pin's soft knock",
+     9.0
+    ],
+    [
      "room tone only (the quartet has ended)",
+     9.0
+    ],
+    [
+     "room tone only",
      9.0
     ],
     [
@@ -53,15 +61,7 @@
      9
     ],
     [
-     "room tone only",
-     9.0
-    ],
-    [
      "the designed stop: room tone only",
-     9.0
-    ],
-    [
-     "room tone only; the pin's soft knock",
      9.0
     ]
    ],
@@ -88,8 +88,8 @@
   "lufs_i": -16.0,
   "true_peak_dbtp": -1.48,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 8.6,
-  "gain_db": 2.22,
+  "lra_lu": 8.5,
+  "gain_db": 2.21,
   "limiter_ceiling_dbfs": -1.5,
   "limiter_active_s": 0.148,
   "dialogue_lufs": -13.94,
@@ -114,23 +114,13 @@
     ]
    ]
   },
-  "rooms_lufs": -34.76,
-  "sfx_lufs": -30.6,
+  "rooms_lufs": -34.5,
+  "sfx_lufs": -30.55,
   "holes_under_-42dBFS_0.3s": [],
-  "holes_mono_downmix": [
-   {
-    "at": 282.5,
-    "s": 0.45,
-    "what": "UNMARKED (in beat 22.01)"
-   },
-   {
-    "at": 312.35,
-    "s": 0.3,
-    "what": "UNMARKED (in beat 22.08)"
-   }
-  ],
+  "holes_mono_downmix": [],
   "holes_without_score": [],
   "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
    "count": 26,
@@ -154,10 +144,10 @@
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.53,
-  "to_gain_db": 2.22,
+  "to_gain_db": 2.21,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-10-10 08:11:29",
+ "built": "2026-10-10 13:01:11",
  "heard": "nothing here has been listened to; every number is measured"
 }

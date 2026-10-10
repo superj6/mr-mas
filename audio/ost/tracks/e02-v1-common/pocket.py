@@ -121,6 +121,7 @@ def segment(seg, variant='el', t_from=0.0, t_to=1e9, mus=None, raw=None):
             if end < t_from or on > t_to:
                 continue
             x, gain = M.line_audio(l, b.get('room'), variant)
+            gain += getattr(M, 'DLG_SEG_DB', {}).get(seg, 0.0)          # the segment's dialogue bus trim (the fixes pass)
             v = signal.sosfilt(sos, x) * 0.7071 * M.db(gain)        # one channel of the dual mono (both the same)
             at = on - l.get('in', 0.0)                                # where the take's sample 0 lands
             k0 = int(round(at / HOP_S))

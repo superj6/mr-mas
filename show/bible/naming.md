@@ -71,7 +71,7 @@
 | [**RIMA TAMURI**](../characters/rima-tamuri.md) | Mira Murati | RECURRING | NopeAI → MACHINES THINKING | 1 | 1–5, 7, 9 | Her 2013–16 spotlight micro moved to Ep7 (critic E41). |
 | [**YNOJ**](../characters/ynoj.md) | Jony Ive | RECURRING | NopeAI (via OI) | 5 | 5–12 | |
 | [**HARAS**](../characters/haras.md) | Sarah Friar | RECURRING | NopeAI | 2 | 2, 6, 8, 9, 10 | "Backstop." Attends Dumfries in Mas's place. |
-| [**OMIS**](../characters/omis.md) | Fidji Simo | RECURRING | NopeAI | 2 | 2, 5, 7, 8, 9 | No health material. |
+| [**OMIS**](../characters/omis.md) | Fidji Simo | RECURRING | NopeAI | 2 | 2, 5, 7, 8, 9 | No health material. Ep2: an unnamed new director at the Mar 8 table (the Ep2 fixes pass dropped her plate: nobody's problem yet), so her name first reads in a later episode. |
 | [**BUKAJ**](../characters/bukaj.md) | Jakub Pachocki | RECURRING (endgame) | NopeAI | 1 | 1, 2, 6, 9, 10–12 | |
 | [**MAON**](../characters/maon.md) | Noam Brown | RECURRING | NopeAI | 3 | 3, 9, 10 (+10 fb micro) | Deals the PACE poker. |
 | [**SELBEEP**](../characters/selbeep.md) | Bill Peebles | CAMEO → RECURRING | NopeAI | 2 | 2, 6, 7, 8, 9 | Flips AROS off. |

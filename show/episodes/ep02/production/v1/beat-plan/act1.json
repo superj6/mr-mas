@@ -104,10 +104,6 @@
   "mada": {
    "role": "DIRECTOR"
   },
-  "omis": {
-   "name": "OMIS",
-   "role": "NEW DIRECTOR"
-  },
   "xel": {
    "name": "XEL",
    "role": "ASKS THE LONG QUESTIONS"
@@ -403,7 +399,7 @@
      "delivery": "the ghost: one syllable, a little bored",
      "take": "new · GHOST-NOLE (Nole's voice + the ghost treatment) · ghost chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0002__ghost-nole-A.wav",
-     "note": "[K · facts §B ghost-NOLE Jan 2016 (the Mar 5, 2024 post); confirm the period]",
+     "note": "[V · facts §B ghost-NOLE Jan 2016 (the Mar 5, 2024 post): \"Yup\", no period (the fixes pass, 2026-10-10)]",
      "after": "start+3.4",
      "gap_s": 0.0,
      "len_s": 0.51,
@@ -1425,7 +1421,7 @@
      "new": true,
      "who": "ghost-nole",
      "tag": "ghost",
-     "text": "…Yup.",
+     "text": "…Yup",
      "delivery": "after a long consideration",
      "take": "new · GHOST-NOLE (Nole's voice + the ghost treatment) · ghost chain · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
@@ -2569,7 +2565,6 @@
     "terb",
     "mas",
     "mada",
-    "omis",
     "gerg"
    ],
    "lines": [
@@ -2589,7 +2584,7 @@
      "t_s": 2.6
     }
    ],
-   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
    "picture": "Mas is already standing on arrival: Ep1's \"we'll stand.\" in picture.",
    "onscreen": {
     "add": [
@@ -2757,41 +2752,17 @@
    "room": "boardroom_day",
    "chars": [],
    "lines": [],
-   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one.",
-   "picture": "Four plates, four clicks.",
+   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one, past his and soft: only his reads.",
+   "picture": "Four plates, four clicks; his in focus, theirs soft (their names never read: the fixes pass, name load, W21).",
    "onscreen": {
     "add": [
-     "MAS MANALT · BOARD (0.3-3.4 s)",
-     "OMIS · NEW DIRECTOR (1-3.4 s)",
-     "NEW DIRECTOR (1.6-3.4 s)",
-     "NEW DIRECTOR (2.2-3.4 s)"
+     "MAS MANALT · BOARD (0.3-3.4 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "MAS MANALT · BOARD",
      "at": 0.3,
-     "until": 3.4,
-     "kind": "plate",
-     "holds": true
-    },
-    {
-     "text": "OMIS · NEW DIRECTOR",
-     "at": 1.0,
-     "until": 3.4,
-     "kind": "plate",
-     "holds": true
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "at": 1.6,
-     "until": 3.4,
-     "kind": "plate",
-     "holds": true
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "at": 2.2,
      "until": 3.4,
      "kind": "plate",
      "holds": true

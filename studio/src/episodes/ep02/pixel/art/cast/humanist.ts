@@ -60,7 +60,7 @@ const drawBoxB = (b: Buf, x: number, y: number) => {
 /** an open palm toward us, fingers up (bust scale, 12 x 20): the palm, four fingers (the middle two longest) with a
  *  shadow between them, the thumb toward the side `out` (-1 left, 1 right: palms toward us, the thumbs point in), the wrist's crease; lit, so it reads as a
  *  hand held open ("people first"), never a paw */
-const openPalm = (c: Int32Array, w: number, x: number, y: number, out: -1 | 1) => {
+export const openPalm = (c: Int32Array, w: number, x: number, y: number, out: -1 | 1) => {
   const S = [PAL.S2, PAL.S3, PAL.S4, PAL.S5, PAL.S6];
   const set = (X: number, Y: number, v: number) => { if (X >= 0 && Y >= 0 && X < w && Y < c.length / w) c[Y * w + X] = v; };
   for (let j = 0; j < 9; j++) for (let i = 0; i < 11; i++) set(x + i, y + 11 + j, j === 8 ? S[1] : i === 0 || i === 10 ? S[2] : j < 2 ? S[4] : S[3]);

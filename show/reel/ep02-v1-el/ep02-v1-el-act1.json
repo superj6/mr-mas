@@ -35,10 +35,6 @@
   "mada": {
    "role": "DIRECTOR"
   },
-  "omis": {
-   "name": "OMIS",
-   "role": "NEW DIRECTOR"
-  },
   "xel": {
    "name": "XEL",
    "role": "ASKS THE LONG QUESTIONS"
@@ -2334,7 +2330,7 @@
     {
      "id": "e2-a1-0018",
      "who": "ghost-nole",
-     "text": "Yup.",
+     "text": "Yup",
      "t": 8.57,
      "dur": 0.81,
      "audio": "audio/ep02/v1-el/ep02-v1/act1/wav/e2-a1-0018__ghost-nole-A.wav",
@@ -4304,10 +4300,9 @@
     "terb",
     "mas",
     "mada",
-    "omis",
     "gerg"
    ],
-   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "caption": "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
    "lines": [
     {
      "id": "e2-a1-0031",
@@ -4741,30 +4736,12 @@
    "side": "",
    "room": "boardroom_day",
    "chars": [],
-   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one.",
+   "caption": "His nameplate clicks into its slot. Then the three new directors', one by one, past his and soft: only his reads.",
    "lines": [],
    "onscreen": [
     {
      "text": "MAS MANALT · BOARD",
      "at": 0.3,
-     "until": 3.4,
-     "kind": "plate"
-    },
-    {
-     "text": "OMIS · NEW DIRECTOR",
-     "at": 1.0,
-     "until": 3.4,
-     "kind": "plate"
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "at": 1.6,
-     "until": 3.4,
-     "kind": "plate"
-    },
-    {
-     "text": "NEW DIRECTOR",
-     "at": 2.2,
      "until": 3.4,
      "kind": "plate"
     }
@@ -4796,18 +4773,12 @@
      "gain": -22
     }
    ],
-   "names": [
-    {
-     "id": "omis",
-     "at": 1.0
-    }
-   ],
    "passes": {
     "scene": "4A",
     "mode": "EXTENDED CONVERSATION (short) + DOCUMENT",
     "pace": "weighted",
     "camera": "ECU · the nameplates click into their slots, his first",
-    "picture": "Four plates, four clicks."
+    "picture": "Four plates, four clicks; his in focus, theirs soft (their names never read: the fixes pass, name load, W21)."
    }
   },
   {

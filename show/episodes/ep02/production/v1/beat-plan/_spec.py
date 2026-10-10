@@ -252,7 +252,7 @@ CAST = {
     "act1": {"mas": {"role": "CEO"}, "gerg": {"role": "CO-FOUNDER"}, "nole": {"name": "NOLE", "role": "FUNDED IT. LEFT IT. SUING IT."},
              "ghost-nole": {"name": "GHOST-NOLE", "role": "HIS OLD EMAILS"}, "staffer": {"name": "STAFFER", "role": "STAFF"},
              "alyi": {"role": "CO-FOUNDER (2018)"}, "terb": {"role": "CHAIR"}, "mada": {"role": "DIRECTOR"},
-             "omis": {"name": "OMIS", "role": "NEW DIRECTOR"}, "xel": {"name": "XEL", "role": "ASKS THE LONG QUESTIONS"},
+             "xel": {"name": "XEL", "role": "ASKS THE LONG QUESTIONS"},
              "tasya": {"role": "THE LANDLORD"}, "humanist": {"name": "THE HUMANIST", "role": "MACROSOFT'S NEW AI CHIEF"},
              "staff": {"name": "STAFF", "role": "STAFF", "known": True}, "orb": {"name": "THE ORB", "role": "ORB"}},
     "act2": {"mas": {"role": "CEO"}, "gerg": {"role": "CO-FOUNDER"}, "rima": {"role": "RUNS THE DEMO"},
@@ -412,7 +412,7 @@ _l("e2-co-0006", "coldopen", "1.08", "gerg", "That's not the mammoth. The mammot
 _l("e2-a1-0001", "act1", "4.03", "mas", "is there anyone here… from 2016.",
    "reading, flat; a host running a procedure", "[INVENTED]")
 _l("e2-a1-0002", "act1", "4.04", "ghost-nole", "Yup",
-   "the ghost: one syllable, a little bored", "[K · facts §B ghost-NOLE Jan 2016 (the Mar 5, 2024 post); confirm the period]", device="ghost", len=0.6)
+   "the ghost: one syllable, a little bored", "[V · facts §B ghost-NOLE Jan 2016 (the Mar 5, 2024 post): \"Yup\", no period (the fixes pass, 2026-10-10)]", device="ghost", len=0.6)
 _l("e2-a1-0003", "act1", "4.05", "gerg", "He signed it. He's just not here.",
    "quiet, to the staffer looking at the empty chair; kind", "[INVENTED]")
 _l("e2-a1-0004", "act1", "4.06", "mas", "one knock if we promised a nonprofit.",
@@ -443,7 +443,7 @@ _l("e2-a1-0016", "act1", "4.18", "gerg", "Same email address, though. I checked.
    "O.S., typing", "[INVENTED]", device="os")
 _l("e2-a1-0017", "act1", "4.18", "nole", "Say something ELSE.",
    "to the ghost; his one caps word", "[INVENTED]")
-_l("e2-a1-0018", "act1", "4.18", "ghost-nole", "…Yup.",
+_l("e2-a1-0018", "act1", "4.18", "ghost-nole", "…Yup",
    "after a long consideration", "[INVENTED · the ghost repeats its word; no quotation marks]", device="ghost", len=0.8)
 _l("e2-a1-0019", "act1", "4.19", "mas", "spirit, why zero?",
    "to the planchette; the question he actually wants answered", "[INVENTED]")
@@ -1172,8 +1172,8 @@ nb("act1", "4.36", "MCU → WIDE · Mas blows out the last candle; darkness",
 # ------------------------------------------------------------------------------------- sc 4A · 0:35
 M4A = "E02-03 PROCEDURE, MARCH · low strings, brushed snare; thins to its pedal under the reading (the record plays dry)"
 nb("act1", "4A.01", "WIDE · the same table by day, from its foot: Terb at the head with one sheet; Mas already standing behind the empty chair; Gerg at the back",
-   "boardroom", "SET-02", "boardroom_day", ["terb", "mas", "mada", "omis", "gerg"],
-   "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; OMIS and two other new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
+   "boardroom", "SET-02", "boardroom_day", ["terb", "mas", "mada", "gerg"],
+   "The boardroom in morning light, the candles gone. TERB at the head with a single sheet. MADA halfway down; three new directors. MAS stands behind an empty chair. GERG at the back with his laptop, standing.",
    "Mas is already standing on arrival: Ep1's \"we'll stand.\" in picture.",
    lines=[line("e2-a1-0031")], head=2.6, tail=0.3, fixed=("head",), onscreen=[O("RAIL: MAR 8", 0.3, 1.9, "rail")],
    music=M4A, arrive={"s": 2.0, "what": "the room in morning light, candles gone, Mas already standing"},
@@ -1191,10 +1191,9 @@ nb("act1", "4A.03", "OTS · over Mas's shoulder onto TERB, who looks up from the
    fix=("P", "R1"), why="\"You can sit down now, Mas.\" pays \"we'll stand.\"")
 nb("act1", "4A.04", "ECU · the nameplates click into their slots, his first",
    "boardroom", "SET-02", "boardroom_day", [],
-   "His nameplate clicks into its slot. Then the three new directors', one by one.",
-   "Four plates, four clicks.",
-   dur=3.4, fixed=("dur",), onscreen=[O("MAS MANALT · BOARD", 0.3, None, "plate"), O("OMIS · NEW DIRECTOR", 1.0, None, "plate"),
-                                      O("NEW DIRECTOR", 1.6, None, "plate"), O("NEW DIRECTOR", 2.2, None, "plate")],
+   "His nameplate clicks into its slot. Then the three new directors', one by one, past his and soft: only his reads.",
+   "Four plates, four clicks; his in focus, theirs soft (their names never read: the fixes pass, name load, W21).",
+   dur=3.4, fixed=("dur",), onscreen=[O("MAS MANALT · BOARD", 0.3, None, "plate")],
    music=M4A, sounds=[S("nameplate_click", 0.3, -20, new=True), S("nameplate_click", 1.0, -22, new=True),
                       S("nameplate_click", 1.6, -22, new=True), S("nameplate_click", 2.2, -22, new=True)],
    fix=("P", "FACT", "R1"), why="He's on the board again; three new directors (facts A13).")

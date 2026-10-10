@@ -41,19 +41,19 @@
   "duck": {
    "by_mood_db": [
     [
-     "E02-06",
-     7
-    ],
-    [
      "E02-06 DARK ROOM, SPRING",
      7
     ],
     [
-     "E02-07",
-     8
+     "E02-06",
+     7
     ],
     [
      "E02-07 ONE WORD",
+     8
+    ],
+    [
+     "E02-07",
      8
     ]
    ],
@@ -197,6 +197,7 @@
    }
   ],
   "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
    "count": 21,
@@ -217,11 +218,11 @@
  "file": "out/ep02/v1/mix/act2-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 1.12,
+  "from_gain_db": 2.12,
   "to_gain_db": 2.11,
   "ramp_s": 2.0,
   "after": "act1"
  },
- "built": "2026-10-10 08:09:04",
+ "built": "2026-10-10 12:59:49",
  "heard": "nothing here has been listened to; every number is measured"
 }

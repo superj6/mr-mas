@@ -60,9 +60,9 @@ L.add('6.02', {
   },
 });
 L.add('6.03', {
-  st: 'act1/sets/studio meter (mic at 2, CH. 2 OF 6): MAS answers in his own words, room-scale mouth; the mic doesn\'t move',
+  st: 'act1/sets/studio meter, the podcast\'s camera on MAS (mic at 2, CH. 2 OF 6: a single at the meter\'s scale, XEL a sliver at the edge, the mic in frame): MAS answers in his own words, lip-synced; the mic doesn\'t move',
   face: {MAS: 'lip'},
-  draw: (fb, k, sh, f) => { meter(fb, f, {mic: 2, ch: 2, rec: true, ...people(sh, k)}); },
+  draw: (fb, k, sh, f) => { meter(fb, f, {mic: 2, ch: 2, rec: true, cam: 'mas', ...people(sh, k)}); },
 });
 L.add('6.04', {
   st: 'act1/sets/studio meter: XEL lets it sit; the mic hops (2 -> 3), the counter ticks CH. 3 OF 6; then he asks about Alyi, room-scale mouth',
@@ -71,12 +71,15 @@ L.add('6.04', {
   draw: (fb, k, sh, f) => { const g = mk(sh, 'grow', 18), t = mk(sh, 'tick', 22); meter(fb, f, {mic: hop(k, g, 2), ch: k >= t ? 3 : 2, rec: true, ...people(sh, k)}); },
 });
 L.add('6.05', {
-  st: 'act1/sets/studio meter (mic at 3, CH. 3 OF 6): the "no." ladder, quick; both room-scale mouths; Mas\'s small laugh under the last one (his smile after)',
+  st: 'act1/sets/studio meter (mic at 3, CH. 3 OF 6): the "no." ladder, quick, cut between the podcast\'s two cameras on each line (a single on whoever speaks, the mic in frame at 3); both lip-synced; Mas\'s small laugh under the last one (his smile after)',
   face: {MAS: 'lip', XEL: 'lip'},
   draw: (fb, k, sh, f) => {
     const last = sh.lines.filter((l) => l.who === 'MAS').pop();
     const smile = !!last && k >= last.e && k < last.e + 14;
-    meter(fb, f, {mic: 3, ch: 3, rec: true, ...people(sh, k, smile ? {mouth: 'smile'} : {})});
+    // the camera on the latest speaker (cut 2 frames before his first sound)
+    const cur = sh.lines.filter((l) => k >= l.s - 2).pop();
+    const cam = cur && cur.who === 'XEL' ? 'xel' as const : 'mas' as const;
+    meter(fb, f, {mic: 3, ch: 3, rec: true, cam, ...people(sh, k, smile ? {mouth: 'smile'} : {})});
   },
 });
 L.add('6.06', {

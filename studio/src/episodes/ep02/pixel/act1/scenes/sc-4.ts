@@ -24,7 +24,7 @@ import type {Buf} from '../../../../../shared/pixel/px';
 import {Buf as BufC} from '../../../../../shared/pixel/px';
 import {
   room, ghost1, ghostNole16, deskPOV, publishECU, masLow, boardHigh, hpos, noleOTS, noleMCU, gergStaffer, gergMCU,
-  stafferMCU, noles2S, glassECU, masReverse, masBlow, letterAt, S4, NEAR_NOLE,
+  stafferMCU, noles2S, glassECU, masReverse, masBlow, letterAt, S4, NEAR_NOLE, noleGhost2S,
 } from '../sets/seance';
 import type {Room4} from '../sets/seance';
 import {office18, arenaInsert, alyiLooksBack, sweepEdge, STAFF_N, move37} from '../sets/f23';
@@ -152,15 +152,21 @@ L.add('4.08', {
 });
 
 // ------------------------------------------------------------------ 4.09 his case
+// (the fixes pass, 2026-10-10: one OTS held 15 s; now three setups cut on his phrases) the OTS through "I paid for the
+// candles."; GERG's reaction on "I paid for the ceiling I just came through." (he stops typing and looks up at the
+// hole, then back to his laptop); NOLE beside the 2016 ghost for "And I asked for one thing… It was supposed to be open."
 L.add('4.09', {
-  st: 'act1/sets/seance noleOTS (the same setup): NOLE makes his case to the whole table, lip-synced, his phone hand jabbing on the table, the candles, the ceiling, the name; behind him, in the same frame, the 2016 ghost\'s "less open" and its Yup hang in the air while he says "open"; nobody points at it',
+  st: 'act1/sets/seance noleOTS (the same setup): NOLE makes his case to the whole table, lip-synced, his phone hand jabbing on "table" and "candles"; behind him the 2016 ghost\'s "less open" and its Yup → gergMCU ([MCU] GERG, his voice established, stops typing on "ceiling" and looks up at the hole, then down: Nole\'s voice over him) → noleGhost2S ([2S] NOLE at the right, the 2016 email hanging at his shoulder: FROM: ALYI · JAN 2016, "…LESS OPEN.", RE: "YUP"; he says "open" twice beside it, the jab and a dip on each; nobody points at it)',
   face: {NOLE: 'lip'},
-  marks: {table: ['w', 'e2-a1-0008', 'table', 0], candles: ['w', 'e2-a1-0008', 'candles', 0], ceiling: ['w', 'e2-a1-0008', 'ceiling', 0], name: ['w', 'e2-a1-0008', 'name', 0], open1: ['w', 'e2-a1-0008', 'Open', 0], open2: ['w', 'e2-a1-0008', 'open', 0]},
+  marks: {table: ['w', 'e2-a1-0008', 'table', 0], candles: ['w', 'e2-a1-0008', 'candles', 0], ceiling: ['w', 'e2-a1-0008', 'ceiling', 0], I3: ['w', 'e2-a1-0008', 'I#3', 0], name: ['w', 'e2-a1-0008', 'name', 0], and: ['w', 'e2-a1-0008', 'And', 0], open1: ['w', 'e2-a1-0008', 'Open', 0], open2: ['w', 'e2-a1-0008', 'open#2', 0]},
   draw: (fb, k, sh, f) => {
     const beats = ['table', 'candles', 'ceiling', 'name', 'open1', 'open2'].map((m) => mk(sh, m, -99));
     const hit = beats.some((b) => k >= b && k < b + 8);
     const dip = beats.slice(4).some((b) => k >= b && k < b + 10) ? 1 : 0;
-    noleOTS(fb, {f, nole: {mouth: noleM(sh, k), brow: 1, jab: hit ? 1 : 0, dip, brush: k < 20 && (k >> 3) % 2 === 1}, ghosts16: true});
+    const cutG = mk(sh, 'I3', 151) - 3, cut2 = mk(sh, 'and', 213) - 3, ceil = mk(sh, 'ceiling', 165);
+    if (k < cutG) { noleOTS(fb, {f, nole: {mouth: noleM(sh, k), brow: 1, jab: hit ? 1 : 0, dip, brush: k < 20 && (k >> 3) % 2 === 1}, ghosts16: true}); return; }
+    if (k < cut2) { const up = k >= ceil + 2 && k < cut2 - 14; gergMCU(fb, {f, mouth: 'rest', lid: up ? 0 : 1, look: up ? 1 : 0, typing: !up}); return; }
+    noleGhost2S(fb, {f, mouth: noleM(sh, k), jab: hit ? 1 : 0, dip, brow: 1});
   },
 });
 
@@ -183,12 +189,13 @@ L.add('4.10', {
 
 // ------------------------------------------------------------------ 4.11 "There. Even the furniture knows." NOPE
 L.add('4.11', {
-  st: 'act1/sets/seance noleOTS (NOLE spreads his hands at the board, vindicated, lip-synced) → boardHigh (the planchette pauses on the N; then it drifts back to the front and carries the N with it in one held glide: O P E N → N O P E)',
+  st: 'act1/sets/seance noleOTS (NOLE spreads his hands at the board, vindicated, lip-synced: the phone hand out one way, his free hand open, palm up, over the board the other) → boardHigh (the planchette pauses on the N; then it drifts back to the front and carries the N with it in one held glide: O P E N → N O P E)',
   face: {NOLE: 'lip'},
   marks: {glide: ['snd', 'planchette_glide', 1, 0]},
   draw: (fb, k, sh, f) => {
     const gl = mk(sh, 'glide', 73);
-    if (k < 61) { noleOTS(fb, {f, nole: {mouth: noleM(sh, k) || (k > 57 ? 4 : 0), brow: 0, jab: k >= 20 && k < 40 ? 2 : 0}, ghosts16: true}); return; }
+    // his free hand spread open over the board from "Even" (the phone hand out the other way), vindicated
+    if (k < 61) { noleOTS(fb, {f, nole: {mouth: noleM(sh, k) || (k > 57 ? 4 : 0), brow: 0, jab: k >= 20 && k < 40 ? 2 : 0, spread: k >= 20}, ghosts16: true}); return; }
     const a = hpos('N'), b = hpos('>>>');
     const u = Math.min(1, Math.max(0, (on2(k) - gl) / 12));
     boardHigh(fb, {f, at: [Math.round(a[0] + (b[0] - a[0]) * u), Math.round(a[1] + (b[1] - a[1]) * u)], word: 'OPEN', nSlide: u});
@@ -197,11 +204,15 @@ L.add('4.11', {
 
 // ------------------------------------------------------------------ 4.12 "No. Not like that." Three hands lift
 L.add('4.12', {
-  st: 'act1/sets/seance noleMCU ([MCU] NOLE, Ep1\'s portrait warmed by the candles, jabbing at the board, lip-synced; then he looks down) → boardHigh (closer over the planchette, mid-frame: three hands resting on it, Mas\'s grey cuff from the left, GHOST-NOLE\'s whole hand from above in the spirit screen, Gerg\'s from the lower right, held 0.7 s; all three lift off at once, a gap of shadow under the fingertips, then gone)',
+  st: 'act1/sets/seance noleMCU ([MCU] NOLE, Ep1\'s portrait warmed by the candles, jabbing at the board, lip-synced: "No. Not like that.") → boardHigh (closer over the planchette, mid-frame, under "The N goes at the end.": three hands resting on it, Mas\'s grey cuff from the left, GHOST-NOLE\'s whole hand from above in the spirit screen, Gerg\'s from the lower right, held 2.4 s; all three lift off at once, a gap of shadow under the fingertips, then gone)',
   face: {NOLE: 'lip'},
+  marks: {the: ['w', 'e2-a1-0011', 'The', 0]},
   draw: (fb, k, sh, f) => {
-    if (k < 71) { const talking = k >= 6 && k < 66; noleMCU(fb, {f, mouth: noleM(sh, k), brow: 1, jab: talking ? ((k >> 2) % 3 === 0 ? 1 : (k >> 2) % 3 === 1 ? 2 : 0) : 0, down: k >= 64}); return; }
-    // closer over the planchette (the camera moved so it sits mid-frame): the three hands rest on it from k71 (0.7 s),
+    // (the fixes pass, 2026-10-10: the board takes the line's second half, "The N goes at the end.", so the hands rest
+    // on the planchette 2.4 s before they lift: Nole's coverage varied with the hands, as the review asked)
+    const half = mk(sh, 'the', 33) - 2;
+    if (k < half) { const talking = k >= 6; noleMCU(fb, {f, mouth: noleM(sh, k), brow: 1, jab: talking ? ((k >> 2) % 3 === 0 ? 1 : (k >> 2) % 3 === 1 ? 2 : 0) : 0}); return; }
+    // closer over the planchette (the camera moved so it sits mid-frame): the three hands rest on it under his voice,
     // all three lift together at k88, gone at k94
     boardHigh(fb, {f, at: '>>>', word: 'NOPE', hands: k < 88 ? 1 : k < 94 ? 2 : 3, cam: [80, 78]});
   },
@@ -307,12 +318,12 @@ L.add('4.19', {
 
 // ------------------------------------------------------------------ 4.20 "That's why." / "What's that?"
 L.add('4.20', {
-  st: 'act1/sets/seance noleMCU (NOLE, quiet for once, lip-synced, looking down at the stone) → stafferMCU (the STAFFER beside Gerg whispering at the stone behind her hand: her line is off-mic)',
-  face: {NOLE: 'lip'},
+  st: 'act1/sets/seance noleMCU (NOLE, quiet for once, lip-synced, looking down at the stone) → stafferMCU (the STAFFER beside Gerg, her face lit, whispering "What\'s that?" at the stone with her hand cupped beside her mouth, toward Gerg: her lips move, lip-synced)',
+  face: {NOLE: 'lip', STAFFER: 'lip'},
   draw: (fb, k, sh, f) => {
     const w = sh.lines.find((l) => l.who === 'STAFFER');
     if (k < (w?.s ?? 37) - 3) { noleMCU(fb, {f, mouth: noleM(sh, k), brow: 0, dip: 1, down: true, x: 214, y: 58}); return; }
-    stafferMCU(fb, {f, look: 0, expr: 'worry'});
+    stafferMCU(fb, {f, look: 0, expr: 'worry', mouth: mouth(sh, k, 'STAFFER')});
   },
 });
 
@@ -325,15 +336,16 @@ L.add('4.21', {
 
 // ------------------------------------------------------------------ 4.22 Gerg's correction; the knob wall
 L.add('4.22', {
-  st: 'act1/sets/seance gergMCU ([MCU] GERG typing, cheerfully literal, his room-scale mouth) → stafferMCU (she whispers to him behind her hand: off-mic) → art/sets/office2018 move37 (from "Nobody wrote it.": behind the board the wall of tiny knobs, a stream of tiny human boards pouring in, each ticking every knob a hair; on "Then it played itself, millions of games." the stream turns to the program\'s own boards (dark, cyan-bordered, two stones on each, no face; the knobs they land on light cyan); the stream runs above the Go board into the wall; the wall freezes; no players, no hands; Gerg\'s voice over it)',
-  face: {GERG: 'room'},
+  st: 'act1/sets/seance gergStaffer ([M] GERG and the STAFFER in one frame, the empty chair beyond: he tells her, typing, cheerfully literal, his room-scale mouth; she answers him, lip-synced, a little lost) → act1/sets/f23 move37 (from "Nobody wrote it.": beside the board the wall of knobs fills the frame\'s right, down to its foot; people\'s games pour in along the top, each a kaya Go board with its player\'s face over it, turn down into the wall and land, each lighting a knob warm, every knob ticking a hair; on "Then it played itself, millions of games." the program\'s own games, a different thing: dark, cyan-bordered boards, a black and a white stone on each, no face, the knobs they land on lighting cyan; the wall freezes on "games"; Gerg\'s voice over it)',
+  face: {GERG: 'room', STAFFER: 'lip'},
   marks: {nobody: ['on', 'e2-a1-0056', 0], then: ['w', 'e2-a1-0056', 'Then', 0], games: ['w', 'e2-a1-0056', 'games', 0]},
   draw: (fb, k, sh, f) => {
     const w = sh.lines.find((l) => l.who === 'STAFFER');
     const nob = mk(sh, 'nobody', 143), then = mk(sh, 'then', 319), games = mk(sh, 'games', 378);
-    if (k < (w?.s ?? 110) - 2) { gergMCU(fb, {f, mouth: roomMouth(sh, k, 'GERG'), lid: 1, look: 1}); return; }
-    if (k < nob) { stafferMCU(fb, {f, look: 1, expr: 'neutral'}); return; }
-    move37(fb, f, {stone: 2, stream: k < then ? 'human' : k < games + 10 ? 'self' : 'frozen', label: true});
+    // (the fixes pass, 2026-10-10: the explanation is addressed to someone we see) GERG and the STAFFER in one frame,
+    // the empty chair beyond: he tells her, typing; she answers him, her lips moving (lip-synced), a little lost
+    if (k < nob) { const hers = !!w && k >= w.s - 2; gergStaffer(fb, {f, gerg: {mouth: roomMouth(sh, k, 'GERG'), lid: hers ? 0 : 1, look: 1}, typing: !hers, staffer: {look: 0, expr: hers ? 'worry' : 'neutral', mouth: mouth(sh, k, 'STAFFER')}}); return; }
+    move37(fb, f, {stone: 2, stream: k < then ? 'human' : k < games + 10 ? 'self' : 'frozen', label: true, t: k - nob, ts: k < then ? undefined : k - then});
   },
 });
 
@@ -472,7 +484,7 @@ L.add('4.35', {
     if (k >= roar) { const u = Math.min(1, (on2(k) - roar) / 6); nx = Math.round(128 + (S4.hole - 128) * u); ny = Math.round(196 - rise - (196 + 40) * u * u); }
     const gone = k >= roar + 7;
     const out = k >= roar ? [true, true, true, true, true, true] : [false, false, false, false, false, true];
-    room(fb, base(f, {out, smoke: k >= roar ? {0: k - roar, 1: k - roar - 1, 2: k - roar, 3: k - roar - 2, 4: k - roar - 1} : {}, planchette: letterAt('M'), hole: k >= tile ? 0 : 2, patch: k >= tile, mas: {head: 'host'},
+    room(fb, base(f, {out, smoke: k >= roar ? {0: k - roar, 1: k - roar - 1, 2: k - roar, 3: k - roar - 2, 4: k - roar - 1} : {}, headOut: k >= roar ? k - roar - 1 : undefined, planchette: letterAt('M'), hole: k >= tile ? 0 : 2, patch: k >= tile, mas: {head: 'host'},
       cable: !gone, cableTo: [nx, ny - 82],
       nole: gone ? null : {x: nx, y: ny, flip: true, pose: {arm: k < 8 ? 'jab' : 'raise', mouth: room3Mouth(sh, k, 'NOLE'), legs: 'stand'}}, lastCandle: set}));
   },
