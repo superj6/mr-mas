@@ -3,7 +3,8 @@
 // what the shots need: the SENTENCE LINE (the verb and its object, `Look at heatsink`, as the classic games build it on
 // the band's top row while the line is live), the typed STRIP LINE (his phone's chosen line, `congratulations.`, typed
 // in his colour as he says it), the hovered verb, the greyed Open, the inventory (his pocket: CTRL · ESC · glass · phone,
-// and the note once it's in there, unlabelled, never in his colour), and `dim` (the band lighting in held steps).
+// and the note once it's in there, unlabelled, never in his colour, greyed once it lands), and `dim` (the band
+// lighting in held steps).
 //   adventureBand(b, st)   rows 203..269 of a `full` frame
 import {Buf} from '../../../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../../../shared/pixel/palette';
@@ -40,7 +41,10 @@ export const adventureBand = (b: Buf, st: BandSt = {}) => {
   inv.forEach((v, i) => {
     const x = 288 + i * 36, flash = v === '·' && st.noteIn !== undefined && st.noteIn >= 0 && st.noteIn < 8;
     fill(t, x, 225, 32, 30, flash ? PAL.N3 : PAL.N2); fill(t, x, 225, 32, 1, flash ? PAL.N6 : PAL.N4);
-    if (v === '·') { fill(t, x + 9, 235, 14, 10, PAL.W6); fill(t, x + 9, 235, 14, 1, PAL.W7); fill(t, x + 22, 236, 1, 9, PAL.W4); for (let r = 0; r < 3; r++) fill(t, x + 11, 238 + r * 2, 8 - r * 2, 1, PAL.D3); }
+    // the slip: yellowed while it lands (the flash's eight frames), then greyed to the inventory's muted tone, like
+    // everything else in his pocket (the review: a bright slip held in the band beside Ekiel's domino and the plate
+    // read as Ep1's compute IOU set against the disbanding)
+    if (v === '·') { const live = st.noteIn !== undefined && st.noteIn >= 0 && st.noteIn < 8; fill(t, x + 9, 235, 14, 10, live ? PAL.W6 : PAL.P0); fill(t, x + 9, 235, 14, 1, live ? PAL.W7 : PAL.P1); fill(t, x + 22, 236, 1, 9, live ? PAL.W4 : PAL.G3); for (let r = 0; r < 3; r++) fill(t, x + 11, 238 + r * 2, 8 - r * 2, 1, live ? PAL.D3 : PAL.G3); }
     else tiny(t, v.toUpperCase(), x + 16 - Math.round(tinyWidth(v.toUpperCase()) / 2), 247, PAL.P1);
   });
   // the top row: the strip's line typed in his colour, or the sentence line in the game's white

@@ -7,16 +7,20 @@
 //                         the polished heatsink he looks into (a sculpture of fins on a plinth by the glass wall), the
 //                         note falling from the frame into his pocket, Bukaj arriving and sitting in the humming chair,
 //                         Ekiel walking out with his box, one domino lying at Mas's shoe; his speech typed over his head
-//   finsMCU(b, f, st)     [MCU] 14.03-14.04: his own face in the polished fins (mirrored, banded, cooled; never Alyi's),
-//                         and low in frame his phone in his hand with its suggestion strip: his thumb taps the greyed
-//                         `come back` (bonk), then `can we talk?`; his reflection mouths it back, no voice
-//   chair2S(b, f, st)     [2S] 14.07-14.08: Mas (his portrait in the floor's daylight, facing right) and BUKAJ seated in
-//                         the humming chair (art/cast/bukaj, his hand flat on its armrest), the floor soft behind them
+//   finsMCU(b, f, st)     [MCU] 14.03-14.04: his own face in the polished fins (a curved sculpture seen at an angle on
+//                         its plinth; his reflection bowed with it, cooled; never Alyi's), and low in frame his phone in
+//                         his hand (common cupThumb) with its suggestion strip, a column of chips: his thumb taps the
+//                         greyed `come back` (bonk; a disabled button that still reads), then `can we talk?`; his
+//                         reflection mouths it back, no voice
+//   chair2S(b, f, st)     [2S] 14.07-14.08: Mas (his portrait in the floor's daylight, facing right) and BUKAJ seated
+//                         lower in the humming chair (its tall back round him, his arm on the chrome armrest, the hand
+//                         flat on it), the floor soft behind them
 //   dominoHigh(b, f, st)  [HIGH] 14.10: the carpet from above; Ekiel's hand sets his thread's first post down as one
 //                         domino in its own UI, his shoes walk off; it tips back and lands face up against Mas's shoe
 //   corridor(b, f, st)    [W] 14.11: down the corridor, Ekiel's empty desk and the safety team's own door, its plate
 //                         SUPERALIGNMENT / SAFETY TEAM; DOT at it from behind with her screwdriver
-//   plateECU / boxECU     [ECU] 14.11: her orange-cuffed hand backs out the four screws (art/cast/dot dotHandsECU); the
+//   plateECU / boxECU     [ECU] 14.11: her orange-cuffed fist round a red screwdriver backs out the four screws, the
+//                         wrist turning a held step at a time (art/cast/dot dotHandsECU's door and plate, restaged); the
 //                         plate dropped face up into the MISC box, MAY 17
 // No image of Alyi in any surface (FC). The note is never defined: no insert, no tag, never his colour.
 import {Buf, rect, line, ellipse, poly, bayer, hash, clamp} from '../../../../../shared/pixel/px';
@@ -31,11 +35,11 @@ import {drawMasStand2} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {bukajBust, drawBukajRoom} from '../../art/cast/bukaj';
 import {drawEkielRoom} from '../../art/cast/ekiel';
-import {dotHandsECU, drawDotBack} from '../../art/cast/dot';
+import {drawDotBack} from '../../art/cast/dot';
 import {drawEp2Post} from '../../art/props/ui';
-import {placeHand, drawHand, sleeve, holdPhone, POSES} from '../../art/cast/hands2';
+import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
-import {RH, W, TR, glow, isSkin, putBustSoft, dimRoom, speech, reframe, mirror} from './common';
+import {RH, W, TR, glow, isSkin, putBustSoft, dimRoom, speech, reframe, mirror, cupThumb} from './common';
 
 const B = BULLPEN;
 /** the back aisle (feet line) where Mas, Bukaj and Ekiel walk; the heatsink; the door (the art's); the note */
@@ -110,28 +114,50 @@ export const sayAt = (text: string, k: number, k0: number, k1: number) => (k >= 
 
 // ================================================================== 14.03-14.04: his face in the fins; the strip
 const finFace = new Map<string, Buf>();
-/** the fins close: polished steel in vertical bands; in them his own face (his approved portrait mirrored, banded by
- *  the fins' gaps, cooled toward the steel); the reflection's mouth from st.mouth (it mouths, it never speaks) */
+/** the sculpture's geometry (the review: evenly spaced straight fins over his face read as bars): seen at an angle, so
+ *  its fins open out toward the near side (frame-left) and crowd toward the far side; each fin bows forward in the middle
+ *  (a curved front); its left edge is the sculpture's silhouette against the floor beyond, and it stands on its plinth */
+const FIN_N = 30, FIN_X0 = 30, FIN_PLINTH = 188;
+const finBow = (y: number) => Math.round(9 * Math.sin((Math.PI * Math.min(y, FIN_PLINTH)) / FIN_PLINTH));
+/** the fin index and the position across it (0 at its lit leading edge .. 1 at the next gap) at column x of row y */
+const finAt = (x: number, y: number): [number, number] => {
+  const u = Math.max(0, x - FIN_X0 - finBow(y)) / (W - FIN_X0);
+  const v = Math.pow(Math.min(1, u), 1 / 0.75) * FIN_N;
+  return [Math.floor(v), v - Math.floor(v)];
+};
+/** the fins close: polished steel plates, curved and in perspective, a diagonal specular sweep across their faces;
+ *  in them his own face (his approved portrait mirrored, bowed with the fins, cooled toward the steel; the fins' joints
+ *  a rung down across it, never the steel's dark: a face in a curved sculpture, not behind bars); the floor beyond the
+ *  sculpture's edge at the left; the plinth's lit top edge at its foot; the reflection's mouth from st.mouth */
 const finsLayer = (mouth: MasPortraitState['mouth']): Buf => {
   const hit = finFace.get(mouth); if (hit) return hit;
   const b = new Buf(W, RH, PAL.G4);
-  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
-    const fin = x % 9;
-    const band = (y + Math.floor(x / 9) * 7) % 40;
-    b.set(x, y, fin === 0 ? PAL.G2 : fin === 1 ? PAL.G3 : fin === 8 ? PAL.G6 : band < 2 ? PAL.G6 : PAL.G5);
+  // beyond the sculpture's left edge: the floor, soft and a rung down
+  const soft = floorSoft();
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(soft.get(Math.min(W - 1, x + 150), y), -1));
+  for (let y = 0; y < FIN_PLINTH; y++) {
+    const edge = FIN_X0 + finBow(y);
+    for (let x = edge; x < W; x++) {
+      const [i, t] = finAt(x, y);
+      const spec = Math.abs((x - edge) * 0.55 - (y - 30) - 40) < 7 + (i % 3) || Math.abs((x - edge) * 0.55 - (y - 30) + 120) < 4;
+      const c = t < 0.08 ? PAL.G2 : t < 0.2 ? PAL.G6 : t > 0.86 ? PAL.G3 : spec ? (t < 0.6 ? PAL.P2 : PAL.G6) : i % 2 ? PAL.G5 : PAL.G4;
+      b.set(x, y, x === edge ? PAL.G6 : x === edge + 1 ? PAL.P1 : c);
+    }
   }
+  // the plinth: its lit top edge, its dark face below (the fins stand on it)
+  fill(b, 0, FIN_PLINTH, W, RH - FIN_PLINTH, PAL.G1); fill(b, 0, FIN_PLINTH, W, 2, PAL.G6); fill(b, 0, FIN_PLINTH + 2, W, 1, PAL.G3);
+  fill(b, 0, FIN_PLINTH, FIN_X0 - 4, RH - FIN_PLINTH, stepColor(PAL.G1, -1));
   const face = masPortrait({...MAS_PORTRAIT_DEFAULT, light: 'warm', mouth, look: 0});
-  const ox = 184, oy = 6;
+  const ox = 180, oy = 6;
   for (let y = 0; y < face.h; y++) for (let x = 0; x < face.w; x++) {
     const v = face.c[y * face.w + (face.w - 1 - x)]; if (v < 0) continue;
-    const X = ox + x, Y = oy + y;
-    if (Y >= RH) continue;
-    const fin = X % 9;
-    if (fin === 0) continue; // the gaps between the fins break him into bands
+    const Y = oy + y; if (Y >= FIN_PLINTH) continue;
+    const X = ox + x + finBow(Y);
+    const [, t] = finAt(X, Y);
     const L = lightness(v);
     // the reflection takes the steel's cool ramp with its own values (a face in metal, not a face on a screen)
     const c = L > 0.62 ? PAL.P2 : L > 0.5 ? PAL.G6 : L > 0.36 ? PAL.G5 : L > 0.24 ? PAL.G4 : L > 0.14 ? PAL.G3 : PAL.G2;
-    b.set(X, Y, fin === 1 || fin === 8 ? stepColor(c, fin === 8 ? 1 : -1) : c);
+    b.set(X, Y, t < 0.08 ? stepColor(c, -1) : c);
   }
   finFace.set(mouth, b);
   return b;
@@ -139,41 +165,35 @@ const finsLayer = (mouth: MasPortraitState['mouth']): Buf => {
 const HOOD_SL = [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.G5];
 const HOOD_CUFF = [PAL.N0, PAL.G1, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.G5];
 export const STRIP = ['> where are you going?', '> can we talk?', '> come back'];
-/** st.tap: the chip his thumb is on (null none), st.down (pressing), st.bonk (the greyed chip shaking: frames since) */
+/** his phone held low in frame (its top part; the frame cuts it), the suggestion strip on its screen as a column of
+ *  chips, his hand round it from below (common cupThumb: the fingers behind, the thumb on the glass) */
+export const FP = {x: 152, y: 116, w: 168, h: 300};
+const chipY = (i: number) => FP.y + 12 + i * 22;
+/** st.tap: the chip his thumb is on (null: resting at the screen's foot), st.down (pressing), st.bonk (the greyed chip
+ *  shaking: frames since), st.lit (the chosen chip lit) */
 export const finsMCU = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; tap?: 0 | 1 | 2 | null; down?: boolean; bonk?: number; lit?: 0 | 1 | 2 | null}) => {
   b.c.set(finsLayer(st.mouth ?? 'rest').c.subarray(0, W * RH));
-  // his phone low in frame (its top third; the frame cuts it), the suggestion strip on its screen, his hand round it
-  const P = {x: 70, y: 150, w: 340, h: 120};
-  const scr = (bb: Buf) => {
-    fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.N0); fill(bb, P.x - 4, P.y - 4, P.w + 8, 1, PAL.G3);
-    fill(bb, P.x, P.y, P.w, P.h, PAL.N1);
-    let x = P.x + 8;
-    STRIP.forEach((c, i) => {
-      const w = pw(c) + 10, grey = i === 2, on = st.lit === i || (st.tap === i && st.down);
-      const shake = grey && st.bonk !== undefined && st.bonk >= 0 && st.bonk < 8 ? ((st.bonk >> 1) % 2 ? 2 : -2) : 0;
-      fill(bb, x + shake, P.y + 14, w, 18, on && !grey ? PAL.C3 : grey ? PAL.N2 : PAL.N3); fill(bb, x + shake, P.y + 14, w, 1, grey ? PAL.N4 : PAL.C5);
-      pt(bb, c, x + 5 + shake, P.y + 19, grey ? PAL.N5 : PAL.P2);
-      if (grey) fill(bb, x + 13 + shake, P.y + 22, pw(c) - 9, 1, PAL.N5);
-      x += w + 6;
-    });
-  };
-  // the thumb on its chip (the cup grip's thumb, the hand behind the phone's lower edge, out of frame)
-  const chipX = (i: number) => { let x = P.x + 8; for (let q = 0; q < i; q++) x += pw(STRIP[q]) + 16; return x + Math.round((pw(STRIP[i]) + 10) / 2); };
-  if (st.tap === null || st.tap === undefined) { scr(b); return; }
-  const tip: [number, number] = [chipX(st.tap), P.y + 22 + (st.down ? 2 : -4)];
-  const h = placeHand(POSES.point([-0.2, -0.95, -0.2], [0.1, 0.2, 0.97], 'R'), {s: 4.2, at: tip, anchor: 'thumb', light: 'lobby', cuffRamp: HOOD_CUFF});
-  scr(b);
-  void h;
-  // (the thumb from below: a rounded tip and its pad over the chip, the hand below the frame)
-  const tx = tip[0], ty = tip[1];
-  for (let y = ty; y < RH; y++) for (let x = tx - 9; x <= tx + 9; x++) {
-    const w = 7 + Math.min(4, (y - ty) * 0.25), d = Math.abs(x - tx - (y - ty) * 0.12);
-    if (d > w) continue;
-    const top = y - ty < 6 && Math.hypot(x - tx, (y - ty - 6) * 1.2) > 7.5;
-    if (top) continue;
-    const nail = y - ty < 9 && Math.abs(x - tx) < 4 && y - ty > 1;
-    b.set(x, y, d > w - 1 ? PAL.S2 : nail ? (y - ty < 3 ? PAL.P1 : PAL.S6) : x < tx - 2 ? PAL.S4 : PAL.S5);
-  }
+  const P = FP, scr = new Buf(P.w, P.h, PAL.N1);
+  // the strip: a column of chips, the greyed one a disabled button that still reads (G4 on N2, 3.9:1; the live chips
+  // P2 on N3, 14:1, with their cyan rule), struck through
+  fill(scr, 0, 0, P.w, P.h, PAL.N1); tiny(scr, '10:14', 6, 3, PAL.N7);
+  STRIP.forEach((c, i) => {
+    const w = P.w - 12, grey = i === 2, on = st.lit === i || (st.tap === i && st.down);
+    const shake = grey && st.bonk !== undefined && st.bonk >= 0 && st.bonk < 8 ? ((st.bonk >> 1) % 2 ? 2 : -2) : 0;
+    const x = 6 + shake, y = chipY(i) - P.y;
+    fill(scr, x, y, w, 18, on && !grey ? PAL.C3 : grey ? PAL.N2 : PAL.N3); fill(scr, x, y, w, 1, grey ? PAL.N4 : PAL.C5);
+    if (grey) { fill(scr, x, y, 1, 18, PAL.N4); fill(scr, x + w - 1, y, 1, 18, PAL.N4); fill(scr, x, y + 17, w, 1, PAL.N4); }
+    pt(scr, c, x + 6, y + 5, grey ? PAL.G4 : PAL.P2);
+    if (grey) fill(scr, x + 14, y + 8, pw(c) - 8, 1, PAL.G4);
+  });
+  // (the chips span the screen, their words at the left: the thumb presses a chip's right end, so the line it presses
+  // stays readable under it)
+  const tip: [number, number] = st.tap === null || st.tap === undefined ? [P.x + P.w - 22, 199] : [P.x + P.w - 26, chipY(st.tap) + 9 + (st.down ? 1 : -2)];
+  glow(b, P.x + P.w / 2, P.y + 20, 120, 40, 1, (x, y) => y < P.y && x > P.x - 30 && x < P.x + P.w + 30);
+  cupThumb(b, P, tip, {cuffRamp: HOOD_CUFF, sleeveRamp: HOOD_SL, sleeveTo: [560, 330], widthCm: 7.4, behindTop: true, drawPhone: (bb) => {
+    fill(bb, P.x - 6, P.y - 6, P.w + 12, P.h + 12, PAL.N0); fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.G1); fill(bb, P.x - 5, P.y - 5, P.w + 10, 1, PAL.G3); fill(bb, P.x - 5, P.y - 5, 1, P.h + 10, PAL.G3);
+    for (let y = 0; y < P.h; y++) for (let x = 0; x < P.w; x++) { const Y = P.y + y; if (Y >= 0 && Y < RH) bb.set(P.x + x, Y, scr.get(x, y)); }
+  }});
   void f;
 };
 
@@ -198,15 +218,34 @@ const masFloor = (s: Partial<MasPortraitState>) => {
 };
 export const chair2S = (b: Buf, f: number, st: {mas?: MasPortraitState['mouth']; bukaj?: Parameters<typeof bukajBust>[0]; hum?: number}) => {
   b.c.set(floorSoft().c.subarray(0, W * RH));
-  // the humming chair's high back behind Bukaj (charcoal mesh, its frame), its hum lines either side
-  const cx = 330;
-  fill(b, cx - 44, 18, 96, 150, PAL.G1); fill(b, cx - 44, 18, 96, 2, PAL.G3); fill(b, cx - 44, 18, 2, 150, PAL.G2); fill(b, cx + 50, 18, 2, 150, PAL.N1);
-  for (let y = 24; y < 168; y += 4) for (let x = cx - 40; x < cx + 48; x += 4) b.set(x + ((y >> 2) & 1) * 2, y, PAL.G2);
+  // BUKAJ SEATED (the review: he read as standing at Mas's eye level, no armrest, no hand, the chair a dark slab):
+  // his bust lower in the frame than Mas's (Mas stands at the left), the humming chair round him: its tall mesh back
+  // (a rounded headrest above his head, its frame's lit edge), the hum lines either side; the chrome armrest across
+  // his lap at the left, his near hand flat on it, his forearm along it
+  const cx = 334, top = 44, bx = 280, by = 50;
+  const back = (x: number, y: number) => y >= top && x >= cx - 50 && x <= cx + 50 && (y > top + 14 || Math.hypot((x - cx) / 50, (y - top - 14) / 14) <= 1);
+  for (let y = top; y < RH; y++) for (let x = cx - 52; x <= cx + 52; x++) {
+    if (!back(x, y)) continue;
+    const rim = !back(x - 2, y) || !back(x, y - 2), shade = !back(x + 2, y);
+    b.set(x, y, rim ? PAL.G4 : shade ? PAL.N1 : (x + y) % 4 === 0 || (x - y) % 4 === 0 ? PAL.G2 : PAL.G1);
+  }
   const hum = st.hum ?? 1, p = Math.floor(f / 3) % 2;
-  for (let k = 0; k < 5; k++) for (const s of [-1, 1]) { const x = s < 0 ? cx - 52 - p - hum * 2 : cx + 58 + p + hum * 2; fill(b, x, 30 + k * 26, 1, 6, PAL.C5); fill(b, x + s * 2, 33 + k * 26, 1, 4, PAL.C4); }
-  // the armrest his hand lies on (chrome, humming), under him
-  fill(b, 268, 166, 70, 7, PAL.G4); fill(b, 268, 166, 70, 1, PAL.G6); fill(b, 268, 172, 70, 1, PAL.G2); fill(b, 330, 173, 6, 30, PAL.G2);
-  putBustSoft(b, bukajBust({arm: 'armrest', expr: 'smile', mouth: 'rest', ...st.bukaj}), 276, 34, RH);
+  for (let k = 0; k < 5; k++) for (const sd of [-1, 1]) { const x = sd < 0 ? cx - 58 - p - hum * 2 : cx + 58 + p + hum * 2; fill(b, x, top + 12 + k * 24, 1, 6, PAL.C5); fill(b, x + sd * 2, top + 15 + k * 24, 1, 4, PAL.C4); }
+  putBustSoft(b, bukajBust({arm: 'none', expr: 'smile', mouth: 'rest', ...st.bukaj}), bx, by, RH);
+  // the armrest at his near side (screen-left): a chrome pad on a post that drops into the seat at its back end, his
+  // arm resting on it: the upper arm down from his shoulder to the elbow on its back end, the forearm along it, the
+  // hand flat on its front end, the fingers toward Mas
+  const ay = 182, ax0 = 258, ax1 = 330;
+  fill(b, ax1 - 14, ay + 6, 8, RH - ay - 6, PAL.G3); fill(b, ax1 - 14, ay + 6, 2, RH - ay - 6, PAL.G5); fill(b, ax1 - 7, ay + 6, 1, RH - ay - 6, PAL.G2);
+  fill(b, ax0, ay, ax1 - ax0, 7, PAL.G4); fill(b, ax0, ay, ax1 - ax0, 2, PAL.G6); fill(b, ax0, ay + 6, ax1 - ax0, 1, PAL.G2);
+  for (let x = ax0 + 4; x < ax1; x++) if ((x - ax0) % 21 < 4) b.set(x, ay + 1, PAL.P2);
+  fill(b, ax0, ay + 1, 2, 5, PAL.G5);
+  const TEALS = [PAL.N0, PAL.C0, PAL.C1, PAL.C2, PAL.C4];
+  const sh: [number, number] = [bx + 30, by + 106], el: [number, number] = [ax1 - 12, ay - 5];
+  const h = placeHand(POSES.open([-1, 0.05, 0], [0, -1, 0.15], 'R'), {s: 1.9, at: [ax0 + 4, ay + 1], anchor: 'middle', light: 'lobby', cuffRamp: [PAL.N0, PAL.C0, PAL.C0, PAL.C1, PAL.C2, PAL.C2, PAL.C4]});
+  sleeve(b, sh, el, 9, 7.5, TEALS);
+  sleeve(b, el, h.cuffEnd, 7, 5.5, TEALS);
+  drawHand(b, h.hand, h.x, h.y, {clip: (x, y) => y <= ay + 2});
   putBustSoft(b, masFloor({mouth: st.mas ?? 'rest', look: 1}), 46, 28, RH, true);
 };
 
@@ -240,18 +279,21 @@ export const dominoHigh = (b: Buf, f: number, st: {set?: number; shoes?: number;
   const fall = st.fall ?? 0, slide = st.slide ?? 0;
   // the domino: a thick cream tile carrying his post in its own UI; standing (its top edge seen from above, its face
   // toward us), then tipping back (its face turning up to the lens), then flat (its edge's thickness at its foot)
-  const x0 = 140, faceH = [150, 154, 158, 160][Math.min(3, Math.round(fall))], faceW = 200;
+  // (the face is drawn at its own height in every pose: the review found the standing pose's squash (150 of 160 rows)
+  // dropping rows out of the post's type, so @NOPEAI read @NUPEHI and Ekiel read Ekle1; the tip back now shows in the
+  // top edge's band and the shadow, never by resampling the type)
+  const x0 = 140, faceH = 150, faceW = 200;
   const yTop = 58 - Math.round(fall * 6) - slide, yFoot = yTop + faceH;
-  const card = new Buf(faceW, 160, TR);
-  fill(card, 0, 0, faceW, 160, PAL.P2);
+  const card = new Buf(faceW, faceH, TR);
+  fill(card, 0, 0, faceW, faceH, PAL.P2);
   drawEp2Post(card, 6, 8, 'ekiel', {size: 'phone', w: faceW - 12});
   // a domino's face: the post in its upper half, the divider, three pips below (it is a domino)
-  fill(card, 6, 110, faceW - 12, 2, PAL.N2);
-  for (const [px, py] of [[40, 124], [100, 134], [160, 144]]) for (let j = -5; j <= 5; j++) for (let i = -5; i <= 5; i++) { const d = Math.hypot(i, j); if (d < 5) card.set(px + i, py + j, d < 2 && i < 0 && j < 0 ? PAL.N4 : PAL.N1); }
+  fill(card, 6, 104, faceW - 12, 2, PAL.N2);
+  for (const [px, py] of [[40, 116], [100, 125], [160, 134]]) for (let j = -5; j <= 5; j++) for (let i = -5; i <= 5; i++) { const d = Math.hypot(i, j); if (d < 5) card.set(px + i, py + j, d < 2 && i < 0 && j < 0 ? PAL.N4 : PAL.N1); }
   // its shadow on the carpet (standing: cast forward; flat: tight under it)
   for (let j = 0; j < 14; j++) for (let i = 0; i < faceW; i++) { const X = x0 + i + 4, Y = yFoot + j - (fall >= 3 ? 10 : 0); if (Y < RH && bayer(X, Y) < (fall >= 3 ? 0.6 : 0.5 - j * 0.03)) b.set(X, Y, stepColor(b.get(X, Y), -1)); }
   if (fall < 3) { fill(b, x0, yTop - 8 + fall * 2, faceW, 8 - fall * 2, PAL.P1); fill(b, x0, yTop - 8 + fall * 2, faceW, 1, PAL.W9); }
-  for (let j = 0; j < faceH; j++) { const sj = Math.min(159, Math.floor((j * 160) / faceH)); for (let i = 0; i < faceW; i++) { const v = card.c[sj * faceW + i]; if (v !== TR && yTop + j >= 0 && yTop + j < RH) b.set(x0 + i, yTop + j, v); } }
+  for (let j = 0; j < faceH; j++) for (let i = 0; i < faceW; i++) { const v = card.c[j * faceW + i]; if (v !== TR && yTop + j >= 0 && yTop + j < RH) b.set(x0 + i, yTop + j, v); }
   fill(b, x0 + faceW - 2, yTop, 2, faceH, PAL.P0);
   if (fall >= 3) { fill(b, x0, yFoot, faceW, 6, PAL.P1); fill(b, x0, yFoot + 5, faceW, 1, PAL.P0); }
   // Ekiel's hand setting it down: his fingers on its right edge from the right (his navy cuff), the domino lowered the
@@ -306,7 +348,64 @@ export const corridor = (b: Buf, f: number, st: {dot?: boolean} = {}) => {
   if (st.dot !== false) drawDotBack(b, vx + 34, vy + 62);
   void f;
 };
-export const plateECU = (b: Buf, k: number, screws: number) => dotHandsECU(b, k, screws);
+/** [ECU] 14.11: the safety team's plate on its door, DOT's orange-cuffed hand backing out the four screws (art/cast/dot
+ *  dotHandsECU's door and plate, restaged: the review found her hand flat, its fingers straight along a thin line).
+ *  The screwdriver lies out from the screw away from the plate's words: its steel shaft, a ferrule, a ridged red
+ *  handle; her fist closed round the handle across her palm (the hand rig's grip, her palm toward us, the
+ *  curled fingers in a row over its front, the handle's butt out past her little finger, the shaft out of the thumb side), the wrist into
+ *  the orange cuff and the navy sleeve out of frame; the wrist turns one held step after another (its back rolling
+ *  about the handle), the left screws with her left hand, the right ones with her right */
+const DOT_SL = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5];
+const DOT_CUFF = [PAL.W2, PAL.W3, PAL.W3, PAL.W4, PAL.W5, PAL.W5, PAL.W6];
+export const plateECU = (b: Buf, k: number, screws: number) => {
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, (x + Math.floor(y / 3)) % 23 === 0 ? PAL.D3 : PAL.D4);
+  const holes: Array<[number, number]> = [[132, 70], [346, 70], [132, 132], [346, 132]];
+  if (screws >= 5) {
+    // the clean patch where the plate was, four holes
+    fill(b, 120, 60, 240, 84, PAL.D4); fill(b, 120, 60, 240, 1, PAL.W3);
+    for (const [hx, hy] of holes) { b.set(hx, hy, PAL.N0); b.set(hx + 1, hy, PAL.N0); }
+    return;
+  }
+  fill(b, 120, 60, 240, 84, PAL.G5); fill(b, 120, 60, 240, 2, PAL.G6); fill(b, 358, 60, 2, 84, PAL.G3); fill(b, 120, 142, 240, 2, PAL.G3);
+  const t1 = 'SUPERALIGNMENT', t2 = 'SAFETY TEAM';
+  bpt(b, t1, 240 - Math.round(bpw(t1) / 2), 82, PAL.N1); bpt(b, t2, 240 - Math.round(bpw(t2) / 2), 108, PAL.N2);
+  holes.forEach(([hx, hy], i) => {
+    if (i < screws) { b.set(hx, hy, PAL.N0); b.set(hx + 1, hy, PAL.N0); return; }
+    ellipse(hx, hy, 4, 4, b.ink(PAL.G6)); line(hx - 3, hy, hx + 3, hy, b.ink(PAL.G3));
+  });
+  if (screws >= 4) return;
+  const [hx, hy] = holes[screws];
+  const sd = hx < 240 ? -1 : 1, ax = sd * 0.85, ay = 0.53;
+  // the shaft (steel, lit along its top), the ferrule, the handle (red resin, ridged along its length: never the cuff's
+  // orange)
+  const SH = 30, HL = 74, HR = 9;
+  for (let t = 0; t <= SH; t++) { const px = Math.round(hx + ax * t), py = Math.round(hy + ay * t); b.set(px, py - 1, PAL.G6); b.set(px, py, PAL.G5); b.set(px, py + 1, PAL.G3); }
+  const h0: [number, number] = [hx + ax * SH, hy + ay * SH], h1: [number, number] = [h0[0] + ax * HL, h0[1] + ay * HL];
+  const turn = Math.floor(k / 4) % 2;
+  for (let y = Math.floor(Math.min(h0[1], h1[1]) - HR - 2); y <= Math.max(h0[1], h1[1]) + HR + 2; y++) for (let x = Math.floor(Math.min(h0[0], h1[0]) - HR - 2); x <= Math.max(h0[0], h1[0]) + HR + 2; x++) {
+    const u = (x - h0[0]) * ax + (y - h0[1]) * ay, v = -(x - h0[0]) * ay + (y - h0[1]) * ax;
+    if (u < 0 || u > HL) continue;
+    const r = u < 6 ? HR - 3 : u > HL - 4 ? HR - 1.5 : HR;
+    if (Math.abs(v) > r) continue;
+    const ridge = (Math.round(v + turn * 3) % 6 + 6) % 6 < 2;
+    b.set(x, y, u < 6 ? (v < -1 ? PAL.G6 : PAL.G4) : Math.abs(v) > r - 1.2 ? PAL.R0 : v < -r * 0.45 ? PAL.R3 : ridge ? PAL.R1 : PAL.R2);
+  }
+  // the fist round the handle's middle: the handle across the palm (the hand's thumb side toward the shaft), rolled
+  // about the handle a held step at a time
+  const s9 = 6, mid: [number, number] = [h0[0] + ax * HL * 0.5, h0[1] + ay * HL * 0.5];
+  const roll = turn ? 14 : -10, rr = (roll * Math.PI) / 180;
+  // (the palm toward us: the fingers come round the front of the handle from its far side, their middle joints in a
+  // row over it, the tips tucked into the palm; the back of the hand faced us at first and read as an open hand)
+  const n: [number, number, number] = [Math.sin(rr) * -ay, Math.sin(rr) * ax, -Math.cos(rr)];
+  // fwd from t (= the thumb side, toward the shaft) and n: R: t = f x n; L: t = n x f
+  const tt: [number, number, number] = [-ax, -ay, 0];
+  const cr = (p: number[], q: number[]): [number, number, number] => [p[1] * q[2] - p[2] * q[1], p[2] * q[0] - p[0] * q[2], p[0] * q[1] - p[1] * q[0]];
+  const fwd = sd > 0 ? cr(n, tt) : cr(tt, n);
+  const wrist: [number, number] = [mid[0] - fwd[0] * 6.4 * s9, mid[1] - fwd[1] * 6.4 * s9];
+  const h = placeHand(POSES.grip(fwd, n, sd < 0 ? 'L' : 'R', 0.72), {s: s9, at: wrist, anchor: 'wrist', light: 'lobby', skinMap: skinDown(1), cuffRamp: DOT_CUFF});
+  sleeve(b, h.cuffEnd, [h.cuffEnd[0] - fwd[0] * 170, h.cuffEnd[1] - fwd[1] * 170], 24, 28, DOT_SL);
+  drawHand(b, h.hand, h.x, h.y);
+};
 /** [ECU] the MISC box (a plain archive box, its lid off) on Ekiel's empty desk, its label MISC · MAY 17 in marker;
  *  the plate dropped in face up (SUPERALIGNMENT / SAFETY TEAM legible), its four screws beside it. st.drop 0..2 (the
  *  plate falling in, then settled) */

@@ -160,7 +160,7 @@ export const putBustSoft = (b: Buf, im: Img, x: number, y: number, cutY: number,
  *  key is beyond the thumb's reach from its base, the whole hand slides under the phone toward it. The thumb is drawn
  *  over the glass from the phone's near edge; the fingers stay behind the phone (the far fingertips, which read as a
  *  shard at its far edge, are not drawn). Returns the rendered hand (`thumb` = the tip in frame px). */
-export const cupThumb = (b: Buf, P: {x: number; y: number; w: number; h: number}, tip: [number, number], o: {cuffRamp: number[]; sleeveRamp: number[]; sleeveTo: [number, number]; widthCm?: number; skinMap?: (c: number) => number; drawPhone: (b: Buf) => void}) => {
+export const cupThumb = (b: Buf, P: {x: number; y: number; w: number; h: number}, tip: [number, number], o: {cuffRamp: number[]; sleeveRamp: number[]; sleeveTo: [number, number]; widthCm?: number; skinMap?: (c: number) => number; drawPhone: (b: Buf) => void; behindTop?: boolean}) => {
   const s = P.w / (o.widthCm ?? 7.2);
   const fwd: V3 = [-0.35, -1, 0], back: V3 = [0, 0, -1];
   const nrm = (a: V3): V3 => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; };
@@ -177,7 +177,8 @@ export const cupThumb = (b: Buf, P: {x: number; y: number; w: number; h: number}
   const hand = renderHand(handRig(pose), {s, w: b.w, h: b.h, ox: 0, oy: 0, light: 'lobby', cuffRamp: o.cuffRamp, skinMap: o.skinMap});
   forearm(b, hand.cuffEnd, o.sleeveTo, 3.2 * s, 4.6 * s, o.sleeveRamp);
   // behind the phone: the hand, but nothing past the phone's far (left) edge or above its foot's quarter
-  drawHand(b, hand, 0, 0, {behind: 0, clip: (x, y) => x >= P.x + P.w * 0.5 || y >= P.y + P.h});
+  // (`behindTop`: a phone held low in frame keeps the fingertips behind it below its top edge too)
+  drawHand(b, hand, 0, 0, {behind: 0, clip: (x, y) => (x >= P.x + P.w * 0.5 || y >= P.y + P.h) && (!o.behindTop || y >= P.y)});
   o.drawPhone(b);
   // the thumb over the glass (its two joints), from the near edge
   drawHand(b, hand, 0, 0, {caps: (id) => id === 'tprox' || id === 'tdist' || id === 'tn'});

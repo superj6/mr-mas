@@ -14,9 +14,10 @@
 //            check-in held up to Mas; Mas raises his glass · 15.09 the racks' lights become token streams (GLYPH, 12
 //            frames, on the room, never in his eyes) · OBSTACLE 15.10-15.11 this office, 2023, night: the post's hard
 //            sentence; "Nobody knows how to do this yet." "Someone should." · TURN (a crosscut, no order claimed)
-//            15.12 his finger over Publish · 15.13 the offsite, the flame in his hand · 15.14 he presses it · 15.15 the
-//            effigy catches · OUT 15.16 the glow shrinks to one point of light
-//   AFTER    15.17 the point is the pin; his thumb covers it; V.O. 8 · 15.18 he goes; the door shuts on the empty room ·
+//            15.12 his finger over Publish · 15.13 the offsite, the flame in his hand, his flame to the effigy · 15.14 he
+//            presses it · 15.15 the effigy catches · OUT 15.16 the glow shrinks to one point of light
+//   AFTER    15.17 the point is the pin; his thumb covers it; V.O. 8 · 15.18 he goes through the open door; it shuts
+//            on the empty room ·
 //            15.19 the stairs; the buzz: a reporter's request for comment, its thumbnail a strip of receipt paper
 // Nothing here is a reason for Alyi's vote or his leaving (W8). No V.O. inside the memory.
 import {defineScene, layouts, mouth, roomMouth, mk} from '../../kit';
@@ -28,7 +29,7 @@ import {orbBob} from '../../../../../shared/pixel/cast/orb-medium';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import type {Mas2Legs} from '../../art/cast/mas2';
 import {officeWide, phoneInHand, threadScreen, tpoolScreen, orbScan, masEvening, stairs, pushECU, typeECU, PH, PIN, ICON_SCROLL, ICON_AT} from '../sets/office';
-import {partyWide, chantMedium, partyTwoShot, checkIn, streamSource, STREAMS_MASK, office2023, publish, offsiteWide, offsiteMedium, toPoint} from '../sets/f22';
+import {partyWide, chantMedium, partyTwoShot, checkIn, streamSource, streamsMaskAt, office2023, publish, offsiteWide, offsiteMedium, toPoint} from '../sets/f22';
 
 const L = layouts();
 const walk = (k: number) => roomWalkAt(k) as Mas2Legs;
@@ -84,17 +85,25 @@ L.add('15.05', {
     phoneInHand(fb, f, (scr) => tpoolScreen(scr, 'map', {k: Math.max(0, kk), f, warm: k >= brk - 20 ? 1 : 0, label: k >= ping && k < brk + 4}), {});
     if (k < 57) for (let y = 0; y < 203; y++) for (let x = PH.x; x < PH.x + PH.w; x++) if (y >= PH.y + 38) fb.set(x, y, stepColor(fb.get(x, y), -(57 - k) > 3 ? -3 : -1));
     if (k >= brk) {
-      // the ripple breaks into string lights: rings of bulbs from the pin outward, the room going dark round them
+      // the ripple breaks into string lights: each ring a string, its wire sagging between the bulbs hung from it (the
+      // party's swags in a ring), spreading from the pin outward, the room going dark round them (the review: loose
+      // bulbs on bare rings read as confetti)
       const j = k - brk, cx = PH.x + PIN.x, cy = PH.y + PIN.y;
       for (let y = 0; y < 203; y++) for (let x = 0; x < 480; x++) fb.set(x, y, stepColor(fb.get(x, y), -Math.min(4, 1 + Math.floor(j / 6))));
       const BUL = [PAL.W7, PAL.R3, PAL.L3, PAL.C7];
+      const at = (t: number, r: number): [number, number] => [cx + Math.cos(t) * r, cy + Math.sin(t) * r * 0.8];
       for (let q = 0; q < 1 + Math.floor(j / 5); q++) {
-        const r = 10 + q * 26 + (j % 5) * 3, n = Math.max(8, Math.round(r / 6));
+        const r = 10 + q * 26 + (j % 5) * 3, n = Math.max(6, Math.round(r / 9));
         for (let a = 0; a < n; a++) {
-          const t = (a / n) * Math.PI * 2 + q * 0.3, x = Math.round(cx + Math.cos(t) * r), y = Math.round(cy + Math.sin(t) * r * 0.8);
+          const t0 = (a / n) * Math.PI * 2 + q * 0.3, t1 = ((a + 1) / n) * Math.PI * 2 + q * 0.3;
+          const [x0, y0] = at(t0, r), [x1, y1] = at(t1, r);
+          // the wire between two bulbs, sagging down a few pixels (gravity, not outward)
+          const sag = 2 + r / 30;
+          const m = Math.ceil(Math.hypot(x1 - x0, y1 - y0) * 1.5) + 2;
+          for (let i = 0; i <= m; i++) { const u = i / m, x = Math.round(x0 + (x1 - x0) * u), y = Math.round(y0 + (y1 - y0) * u + Math.sin(u * Math.PI) * sag); if (y >= 0 && y < 203) fb.set(x, y, PAL.N4); }
+          const x = Math.round(x0), y = Math.round(y0);
           const c = BUL[(a + q + Math.floor(f / 10)) % 4];
-          for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) if (Math.abs(dx) + Math.abs(dy) === 2 && y + dy >= 0 && y + dy < 203) fb.set(x + dx, y + dy, stepColor(c, -3));
-          fb.set(x, y, c); fb.set(x + 1, y, c); fb.set(x, y + 1, stepColor(c, -1)); fb.set(x + 1, y + 1, stepColor(c, -1));
+          if (y - 1 >= 0 && y + 3 < 203) { fb.set(x, y, PAL.N5); fb.set(x, y + 1, c); fb.set(x + 1, y + 1, c); fb.set(x, y + 2, stepColor(c, -1)); fb.set(x + 1, y + 2, stepColor(c, -1)); fb.set(x - 1, y + 1, stepColor(c, -3)); fb.set(x + 2, y + 2, stepColor(c, -3)); fb.set(x, y + 3, stepColor(c, -3)); }
         }
       }
     }
@@ -102,18 +111,20 @@ L.add('15.05', {
 });
 // ------------------------------------------------------------------ F2.2
 L.add('15.06', {
-  st: 'act3/sets/f22 partyWide → chantMedium → partyWide ([W] the holiday party, Dec 2022, in T4 glossy (art/sets/f22 party22: silhouettes under palette-cycled string lights on a slow chase, never a strobe; the racks in the corner; bloom); ALYI lit and laughing in the crowd; [M] closer: Alyi under a low swag of lights (it crops the top of his frame), laughing, his hand up, leading the chant: "FEEL THE AGI!" (lip-synced, warm: his own eyes crinkled); [W] the chant builds to everyone\'s, every hand up; rail DEC 2022)',
+  st: 'act3/sets/f22 partyWide → chantMedium → partyWide ([W] the holiday party, Dec 2022, in T4 glossy (art/sets/f22 party22: silhouettes under palette-cycled string lights on a slow chase, never a strobe; the racks in the corner; bloom); ALYI lit and laughing in the crowd; [M] closer: Alyi under a low swag of lights (it crops the top of his frame), laughing, his hand up (his arm bent at the elbow), leading the chant: "FEEL THE AGI!" (lip-synced, warm: his own eyes crinkled); [W] the chant builds to everyone\'s: the crowd\'s hands go up a few at a time and bob on the beat until every hand is up; rail DEC 2022)',
   face: {ALYI: 'lip'},
   marks: {ch: ['on', 'e2-a3-0009', 0], all: ['on', 'e2-a3-0010', 0]},
   draw: (fb, k, sh, f) => {
     const ch = mk(sh, 'ch', 43), all = mk(sh, 'all', 83);
     if (k < ch - 5) { partyWide(fb, f, {chant: k < 20 ? 0 : 1}); return; }
     if (k < all + 2) { chantMedium(fb, f, {mouth: mouth(sh, k, 'ALYI'), mood: 'laugh', arm: 'raise'}); return; }
-    partyWide(fb, f, {chant: k < all + 10 ? 2 : 3});
+    // the chant goes from his voice to everyone's: the crowd's hands go up a few at a time in held steps (6 frames)
+    // from the crowd's line, bobbing on the beat, until every hand is up
+    partyWide(fb, f, {chant: k < all + 10 ? 2 : 3, hands: Math.min(1, 0.25 + Math.floor((k - all) / 6) * 0.15)});
   },
 });
 L.add('15.07', {
-  st: 'act3/sets/f22 partyTwoShot ([2S] across the crowd: Alyi close at the right under the swag of lights (it crops his frame), his raised hand finding Mas, then talking to him (Ep1\'s Alyi in Ep2\'s warm states: smiling, then laughing; lip-synced); Mas small in the crowd at the left, the only one not chanting, his glass in his hand, his room-scale mouth on "someone has to hold the glass.")',
+  st: 'act3/sets/f22 partyTwoShot ([2S] across the crowd: Alyi close at the right under the swag of lights (it crops his frame), his raised hand finding Mas, then talking to him (Ep1\'s Alyi in Ep2\'s warm states: smiling, then laughing; lip-synced); Mas small in the crowd at the left, every hand up round him, the only one not chanting, his glass in his hand, his room-scale mouth on "someone has to hold the glass.")',
   face: {ALYI: 'lip', MAS: 'room'},
   marks: {last: ['on', 'e2-a3-0013', 0]},
   draw: (fb, k, sh, f) => {
@@ -136,8 +147,9 @@ L.add('15.09', {
   marks: {sh: ['snd', 'glyph_shimmer', 1, 0]},
   draw: (fb, k, sh, f) => {
     const g = mk(sh, 'sh', 19);
-    partyWide(fb, f, {chant: 3});
-    if (k >= g && k < g + 12) return {layers: [glyphLayer(streamSource(fb, k - g), {tint: PAL.C6, tintAmt: 0.5, seed: 1509, bg: PAL.N0, shimmer: 0.3, cell: [2, 3]}, STREAMS_MASK, k)]};
+    partyWide(fb, f, {chant: 3, hands: 1});
+    // (the rows' mask leaves the crowd's raised hands out, so the streams pass behind them)
+    if (k >= g && k < g + 12) return {layers: [glyphLayer(streamSource(fb, k - g), {tint: PAL.C6, tintAmt: 0.5, seed: 1509, bg: PAL.N0, shimmer: 0.3, cell: [2, 3]}, streamsMaskAt(f), k)]};
   },
 });
 L.add('15.10', {
@@ -156,12 +168,15 @@ L.add('15.12', {
   draw: (fb, k, sh, f) => { publish(fb, f, {press: false}); void k; void sh; },
 });
 L.add('15.13', {
-  st: 'act3/sets/f22 offsiteWide → offsiteMedium ([W] a leadership offsite at night (art/sets/f22 offsite): the trees, the staff in silhouette, the wooden effigy, a paperclip robot of our own design stencilled UNALIGNED; ALYI half cut off by the lodge doorway\'s jamb, the long match lit; [M] closer: Alyi in the doorway, the jamb cutting off his near half, the match\'s flame lighting his face, lit and calm (no zealot framing, no religious iconography))',
+  st: 'act3/sets/f22 offsiteWide → offsiteMedium → offsiteWide ([W] a leadership offsite at night (art/sets/f22 offsite, restaged): the trees, the staff in silhouette beyond, the wooden effigy, a paperclip robot of our own design stencilled UNALIGNED, standing just outside the lodge\'s doorway; ALYI in the doorway, half cut off by its jamb, the long match struck; [M] closer: Alyi in the doorway, the jamb cutting off his near half, the match\'s flame lighting his face, lit and calm (no zealot framing, no religious iconography); [W] one held drawing: his own hand puts the match\'s flame to the effigy\'s lower body, the flame\'s light on the wood and on his face)',
   marks: {lit: ['snd', 'torch_light', 1, 0]},
   draw: (fb, k, sh, f) => {
     const lit = mk(sh, 'lit', 25);
     if (k < lit + 26) { offsiteWide(fb, f, {fire: 0, alyi: k < lit ? 'stand' : 'torch'}); return; }
-    offsiteMedium(fb, f);
+    if (k < 90) { offsiteMedium(fb, f); return; }
+    // the touch, held to the cut (and on into 15.15 until the whoomph): the flame at the wood is his act, shown before
+    // the Publish click, so the click never reads as what lit it
+    offsiteWide(fb, f, {fire: 0, alyi: 'touch'});
   },
 });
 L.add('15.14', {
@@ -170,9 +185,9 @@ L.add('15.14', {
   draw: (fb, k, sh, f) => { const cl = mk(sh, 'cl', 9); publish(fb, f, {press: k >= cl - 1}); },
 });
 L.add('15.15', {
-  st: 'act3/sets/f22 offsiteWide ([W] the effigy catches: the fire, palette-cycled (the shape holds, the colours walk; never a strobe), its light on everything; Alyi in the doorway, the match lowered)',
+  st: 'act3/sets/f22 offsiteWide ([W] his match still at the effigy\'s lower body (the held drawing), then it catches: the fire, palette-cycled (the shape holds, the colours walk; never a strobe), its light on everything; Alyi in the doorway, the match lowered)',
   marks: {wh: ['snd', 'flame_whoomph', 1, 0]},
-  draw: (fb, k, sh, f) => { const wh = mk(sh, 'wh', 6); offsiteWide(fb, f, {fire: k < wh ? 0 : k < wh + 8 ? 1 : 2, alyi: 'stand'}); },
+  draw: (fb, k, sh, f) => { const wh = mk(sh, 'wh', 6); offsiteWide(fb, f, {fire: k < wh ? 0 : k < wh + 8 ? 1 : 2, alyi: k < wh + 4 ? 'touch' : 'lowered'}); },
 });
 L.add('15.16', {
   st: 'act3/sets/f22 toPoint ([W → ECU] the fire\'s glow shrinks in held steps to one point of light at the frame\'s centre (where the next shot\'s pin pulses))',
@@ -192,15 +207,21 @@ L.add('15.17', {
   },
 });
 L.add('15.18', {
-  st: 'act3/sets/office officeWide ([W] he pockets the phone, gets up off the desk\'s edge and walks out (his walk), the Orb with him; the door turns on its pin as he goes and turns shut on the empty office; the room holds a second and more: the desk with no chair, the wheel marks)',
+  st: 'act3/sets/office officeWide ([W] he pockets the phone, gets up off the desk\'s edge and walks out (his walk), the Orb with him; his hand pushes the door on its pin as he reaches it; it holds open until he has gone through it, then turns shut on the empty office on its sound; the room holds a second and more: the desk with no chair, the caster dents)',
   marks: {cl: ['snd', 'door_close_soft', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const cl = mk(sh, 'cl', 70), up = 14, out = cl - 8;
-    const door = (k < out - 10 ? 0 : k < out - 6 ? 1 : k < out - 2 ? 2 : k < cl - 4 ? 3 : k < cl - 2 ? 2 : k < cl ? 1 : 0) as 0 | 1 | 2 | 3;
+    // he stands where his feet were (x 280) and walks to the doorway (gone at x 430); the door is edge-on (3) before he
+    // reaches it and stays open until he is through, then turns shut in held steps, landing shut on the sound (the
+    // review: it shut in front of him and he walked through the closed door)
+    const cl = mk(sh, 'cl', 70), up = 6, X0 = 280, V = 3.4;
+    // (his near hand pushes the door on its pin as he reaches it, as in 14.12; it is edge-on as he steps into it)
+    const gone = up + Math.ceil((430 - X0) / V), kOpen = up + Math.ceil((383 - X0) / V);
+    const door = (k < kOpen ? 0 : k < kOpen + 2 ? 1 : k < kOpen + 4 ? 2 : k < Math.max(gone + 2, cl - 6) ? 3 : k < cl - 3 ? 2 : k < cl ? 1 : 0) as 0 | 1 | 2 | 3;
+    const push = k >= kOpen - 3 && k < kOpen + 4;
     if (k < up) { officeWide(fb, f, {door, mas: {seated: true}}); orbAt(fb, f, SEAT_X + 26, 92); return; }
-    const x = Math.round(SEAT_X - 40 + (k - up) * 3.3);
+    const x = Math.round(X0 + (k - up) * V);
     const inRoom = x < 430;
-    officeWide(fb, f, {door, mas: inRoom ? {x, legs: walk(k), arm: 'pocket'} : null});
+    officeWide(fb, f, {door, mas: inRoom ? {x, legs: walk(k), arm: push ? 'reach' : 'pocket'} : null});
     if (inRoom) orbAt(fb, f, x + 22, 92);
   },
 });

@@ -13,11 +13,15 @@
 //   tapeMCU(b, f, st)      [MCU] 13.03: Mas at his pillar, both hands up, taping it back, upside down
 //   flyerPillarECU(b, f)   [ECU] 13.03's beat: his flyer on the pillar, upside down (the art's flyer ECU, nobody in its photo)
 //   presser(b, f, st)      [SCR] 13.04-13.05: the Senate presser (art/props/ui presserFull's pieces, re-staged: the
-//                          lectern carried to the FLOOR door, face on, then sideways, still stuck; the reporter's
-//                          question O.S.; an aide's hand slaps on the tenth FORUM sticker)
+//                          lectern carried along the wall to the open FLOOR door by two aides gripping its side edges,
+//                          the lead aide backing into the doorway ahead of it; its leading edge strikes the jamb face
+//                          on, then sideways (st.hit, then the recoil); the reporter's question O.S.; the lead aide's
+//                          hand slaps on the tenth FORUM sticker, crooked)
 //   tvPush(b, f, st)       [SCR] 13.04's head: the lobby TV framed in the foreground, the presser on it at half size
 //   lobbyWide(b, f, st)    [W] 13.06: the master by day, Mas walking off frame-right past the staffers at their pillar;
 //                          the adventure band lighting as he crosses (sc 14's band, act3/sets/floor adventureBand)
+//   lobbyArrive(b, f, st)  [W] 13.01's arrival (the review pass): the same master by day, the staffers at their pillar
+//                          with their hands at their flyers, Mas on the near floor watching them, the TV murmuring
 // Nothing here gives a reason for Alyi's leaving: the flyers' photos are doorways with nobody in them.
 import {Buf, rect, line, ellipse, poly, bayer, hash, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf} from '../../../../../shared/pixel/palette';
@@ -176,11 +180,14 @@ export const pillarMedium = (b: Buf, f: number, st: PillarSt = {}) => {
     drawHand(b, h.hand, h.x, h.y, {map: (c) => (isSkin(c) ? stepColor(c, -1) : c)});
   } else {
     putBustSoft(b, stafferBust('A', {mouth: st.aMouth ?? 'rest', expr: st.aExpr ?? 'worry', look: st.aLook ?? -1}), ax - 4, ay, RH, false);
-    // the peeled flyer's corner (its curl stays lifted on the pillar); her hand at her chest, a thumb and finger still
-    // pinching air where the corner was (she let it go as she turned)
-    const at: [number, number] = [ax + 54, ay + 150];
-    const h = placeHand(POSES.pinch([0.5, -0.85, 0.1], [0.1, 0.2, 0.97], 'R'), {s: 2.4, at, anchor: 'index', light: 'lobby', skinMap: (c) => stepColor(c, -1), cuffRamp: cuff7(MUSTARD_SLEEVE)});
-    sleeve(b, h.cuffEnd, [ax + 30, ay + 200], 7, 10, MUSTARD_SLEEVE);
+    // turned to Mas, her hand still on the flyer: the arm from her far shoulder (screen-right) down to the elbow and
+    // back up to the pinch at the peeled corner, which she holds lifted off the steel (the review: a lone hand at her
+    // waist pinching nothing read as praying)
+    const sh: [number, number] = [ax + 80, ay + 118], el: [number, number] = [ax + 106, ay + 140];
+    const at: [number, number] = [211 - (st.peel ?? 2) * 2, 88];
+    const h = placeHand(POSES.pinch([0.35, -0.9, 0.2], [0.2, 0.1, 0.97], 'R'), {s: 2.4, at, anchor: 'index', light: 'lobby', skinMap: (c) => stepColor(c, -1), cuffRamp: cuff7(MUSTARD_SLEEVE)});
+    sleeve(b, el, sh, 9, 11, MUSTARD_SLEEVE);
+    sleeve(b, h.cuffEnd, el, 7, 9, MUSTARD_SLEEVE);
     drawHand(b, h.hand, h.x, h.y, {map: (c) => (isSkin(c) ? stepColor(c, -1) : c)});
   }
   // MAS: the back of his head and his hood's shoulder, close in the left foreground, turned a step toward them
@@ -300,13 +307,19 @@ export const tapeMCU = (b: Buf, f: number, st: {press?: number; raise?: number})
   // the tape: a strip pulled along its top edge as his thumb runs it (press 1: half, 2: across)
   if (press >= 1) { const tw = press >= 2 ? 52 : 26; fill(b, fx - 2, fy - 2, tw, 4, PAL.G6); fill(b, fx - 2, fy - 2, tw, 1, PAL.P1); }
   putBustSoft(b, masDayImg({mouth: 'rest', look: 1}), 84, 26, RH, true);
-  // his near arm: from the shoulder down to the elbow (low, by his side), then up to the hand flat on the flyer, its
-  // thumb on the tape (the sleeve at his own scale: a forearm about as wide as his neck)
-  const sh: [number, number] = [176, 146], el: [number, number] = [206, 196];
-  const at: [number, number] = [fx + 14 + press * 14, fy + 6];
-  const h = placeHand(POSES.open([0.97, -0.2, 0.05], [0.05, -0.1, 0.99], 'L'), {s: 3.1, at, anchor: 'middle', light: 'lobby', cuffRamp: cuff7(HOOD_SLEEVE)});
-  sleeve(b, el, sh, 15, 17, HOOD_SLEEVE);
-  sleeve(b, h.cuffEnd, el, 10, 14, HOOD_SLEEVE);
+  // his near arm from the shoulder he shows: the upper arm angles down and out to an elbow inside the frame, the
+  // forearm tapers up to the wrist, and the hand lies on the flyer at an angle (the fingers up and to the right, the
+  // heel of the hand on its left edge), the thumb along the top edge running the tape (the review: the arm rose as one
+  // flat tube from below the frame into a hand laid flat)
+  const sh: [number, number] = [170, 142], el: [number, number] = [206, 174];
+  const at: [number, number] = [fx + 40 + press * 4, fy + 4];
+  const h = placeHand(POSES.open([0.9, -0.43, 0.05], [0.05, -0.05, 1], 'L'), {s: 2.6, at, anchor: 'middle', light: 'lobby', cuffRamp: cuff7(HOOD_SLEEVE)});
+  // the upper arm (a hoodie sleeve, about as wide as his neck) and its elbow, the forearm narrowing to the cuff
+  sleeve(b, sh, el, 15, 13, HOOD_SLEEVE);
+  sleeve(b, el, h.cuffEnd, 12.5, 8.5, HOOD_SLEEVE);
+  // the elbow's fold: a crease on the inside of the bend, its point a rung lit
+  for (let i = -5; i <= 5; i++) b.set(el[0] - 4 + Math.round(i * 0.3), el[1] - 6 + i, HOOD_SLEEVE[1]);
+  b.set(el[0] + 9, el[1] + 4, HOOD_SLEEVE[4]); b.set(el[0] + 10, el[1] + 3, HOOD_SLEEVE[4]);
   drawHand(b, h.hand, h.x, h.y);
 };
 /** [ECU] 13.03's beat: his flyer on the pillar, upside down, close (the steel and its LED rows round it) */
@@ -323,47 +336,90 @@ export const flyerPillarECU = (b: Buf, f: number) => {
  *  FORUM stickers, carried by two aides to the door: st.lx its x, st.turn 0 face on (84 wide, too wide for the door) ·
  *  1 turning · 2 sideways (still too deep), st.tenth the aide's tenth sticker, st.slap 0 none · 1 the hand coming · 2 on
  *  it; the presser's own lower third and REMUHCS's plate */
-export interface PresserSt { lx?: number; turn?: 0 | 1 | 2; tenth?: boolean; slap?: 0 | 1 | 2; bump?: number; plate?: boolean; mouth?: 'rest' | 'open' }
+export interface PresserSt { lx?: number; turn?: 0 | 1 | 2; tenth?: boolean; slap?: 0 | 1 | 2; bump?: number; plate?: boolean; mouth?: 'rest' | 'open'; hit?: number; walk?: number }
+/** the FLOOR door's opening (the lectern's leading edge strikes its left jamb: PRESS.jamb) */
+export const PRESS = {DX: 372, DW: 34, jamb: 367, feet: 162};
+/** an aide's grip on the lectern's side edge (room scale): the fingers wrapped round onto its face, the thumb on the
+ *  edge, the cuff behind it; `side` -1 = the left edge (the hand comes from the left), 1 = the right edge */
+const edgeGrip = (b: Buf, x: number, y: number, side: -1 | 1) => {
+  const SK = [PAL.S1, PAL.S2, PAL.S3, PAL.S4];
+  // `side` points outward (the aide's side); the cuff (dark) out past the edge, the back of the hand on the edge, the
+  // fingers wrapped round onto the face in three short rows
+  for (let j = 0; j < 4; j++) { b.set(x + side * 4, y + j, PAL.N1); b.set(x + side * 3, y + j, PAL.N2); }
+  for (let j = 0; j < 4; j++) { b.set(x + side * 2, y + j, j === 0 ? SK[3] : SK[2]); b.set(x + side, y + j, SK[2]); }
+  for (let q = 0; q < 3; q++) { b.set(x, y + q + 1, SK[3]); b.set(x - side, y + q + 1, SK[2]); b.set(x - side * 2, y + q + 1, q === 2 ? SK[0] : SK[1]); }
+  b.set(x, y, SK[2]);
+};
 export const presser = (b: Buf, f: number, st: PresserSt = {}) => {
   vramp(b, 0, 0, 480, RH, [PAL.F1, PAL.F2, PAL.F2]);
   for (let x = 0; x < 480; x += 12) fill(b, x, 0, 3, 150, PAL.F1);
   fill(b, 0, 150, 480, 53, PAL.D2); fill(b, 0, 150, 480, 1, PAL.D3);
-  // the FLOOR door: tall, wood, the sign over it, its frame a narrow opening (the lectern can't pass)
-  // (a narrow door: 34 px clear, the lectern 84 wide face on and 40 deep sideways)
-  const DX = 404, DW = 34;
-  fill(b, DX - 5, 66, DW + 10, 86, PAL.D1); fill(b, DX, 70, DW, 82, PAL.D3); fill(b, DX, 70, DW, 2, PAL.D4); fill(b, DX + DW - 2, 70, 2, 82, PAL.D2);
-  fill(b, DX + DW - 8, 108, 3, 8, PAL.W5);
-  const sw0 = bpw('FLOOR') + 12, sx0 = DX + (DW >> 1) - (sw0 >> 1);
-  fill(b, sx0, 40, sw0, 22, PAL.D2); fill(b, sx0, 40, sw0, 1, PAL.D4); bpt(b, 'FLOOR', sx0 + 6, 44, PAL.W7);
+  // the FLOOR door, open: tall, its jambs and lintel proud of the wall, a narrow opening (34 px clear; the lectern is 84
+  // wide face on and 40 deep sideways), the corridor's light beyond it, the door leaf swung in against the far jamb
+  const {DX, DW} = PRESS, hit = st.hit ?? 0, jx = hit ? (hit % 2 ? 1 : -1) : 0;
+  fill(b, DX, 70, DW, 82, PAL.D1); vramp(b, DX, 70, DW, 82, [PAL.W3, PAL.W4, PAL.W5]); for (let y = 76; y < 146; y += 9) fill(b, DX + 3, y, 2, 4, PAL.W6); fill(b, DX, 140, DW, 12, PAL.D3); fill(b, DX, 140, DW, 1, PAL.D4);
+  fill(b, DX + DW - 9, 70, 7, 82, PAL.D3); fill(b, DX + DW - 9, 70, 1, 82, PAL.D4);
+  fill(b, DX - 5 + jx, 66, 5, 86, PAL.D1); fill(b, DX - 5 + jx, 66, 1, 86, PAL.D4); fill(b, DX + DW + jx, 66, 5, 86, PAL.D1); fill(b, DX + DW + 4 + jx, 66, 1, 86, PAL.D0);
+  fill(b, DX - 5 + jx, 64, DW + 10, 6, PAL.D1); fill(b, DX - 5 + jx, 64, DW + 10, 1, PAL.D4);
+  const sw0 = bpw('FLOOR') + 12, sx0 = DX + (DW >> 1) - (sw0 >> 1) + jx;
+  fill(b, sx0, 38, sw0, 22, PAL.D2); fill(b, sx0, 38, sw0, 1, PAL.D4); bpt(b, 'FLOOR', sx0 + 6, 42, PAL.W7);
   // the senators: REMUHCS (plated) centre-left, three colleagues, all facing the room
-  drawSenator(b, 60, 168, 1, 'sit'); drawSenator(b, 104, 168, 2, 'sit'); drawSenator(b, 228, 168, 0, 'sit');
-  drawSenator(b, 160, 170, 0, 'up', {mouth: st.mouth ?? 'rest'});
-  // the lectern (a bill-shaped document on legs)
+  drawSenator(b, 60, 168, 1, 'sit'); drawSenator(b, 104, 168, 2, 'sit'); drawSenator(b, 178, 168, 0, 'sit');
+  drawSenator(b, 136, 170, 0, 'up', {mouth: st.mouth ?? 'rest'});
+  // the lectern (a bill-shaped document on legs), carried along the wall's foot to the door by two aides: the rear aide
+  // at its left end, the lead aide at its right end, backing into the doorway ahead of it (beyond it, never between it
+  // and the door), both gripping its side edges; its leading edge strikes the left jamb on each bump (st.hit), then
+  // recoils (st.bump)
   const turn = st.turn ?? 0, bump = st.bump ?? 0;
-  const lw = turn === 2 ? 40 : turn === 1 ? 60 : 84, lx = (st.lx ?? 262) + bump;
-  fill(b, lx + 2, 176, lw, 3, PAL.D1);
-  fill(b, lx, 104, lw, 72, PAL.P2); fill(b, lx, 104, lw, 3, PAL.W9); fill(b, lx + lw - 2, 104, 2, 72, PAL.P0); fill(b, lx, 104, 2, 72, PAL.P1);
-  if (turn === 0) { pt(b, 'ROADMAP', lx + 6, 110, PAL.N1); pt(b, '$32B/YR', lx + 6, 121, PAL.R2); }
+  const lw = turn === 2 ? 40 : turn === 1 ? 60 : 84, lx = (st.lx ?? 230) + bump, fy = PRESS.feet, top = fy - 72;
+  const wk = st.walk ?? 0, step = (n: number) => (Math.floor(wk / 4) + n) % 2;
+  // the lead aide: in front of the wall until he reaches the doorway, then in it (his feet at its threshold)
+  const leadX = lx + lw + 15, inDoor = clamp((leadX - (DX - 6)) / 14, 0, 1), leadY = Math.round(fy + 6 - inDoor * 13);
+  drawSenator(b, leadX, leadY + (st.walk !== undefined ? -step(1) : 0), 2, 'lean', {flip: true});
+  // in the doorway he is behind the jambs' near faces (he reaches out round the left one to the lectern's edge)
+  if (inDoor > 0.5) { fill(b, DX - 5 + jx, 66, 5, 86, PAL.D1); fill(b, DX - 5 + jx, 66, 1, 86, PAL.D4); fill(b, DX + DW + jx, 66, 5, 86, PAL.D1); fill(b, DX + DW + 4 + jx, 66, 1, 86, PAL.D0); }
+  drawSenator(b, lx - 16, fy + 6 + (st.walk !== undefined ? -step(0) : 0), 1, 'lean');
+  fill(b, lx + 2, fy, lw, 3, PAL.D1);
+  fill(b, lx, top, lw, 72, PAL.P2); fill(b, lx, top, lw, 3, PAL.W9); fill(b, lx + lw - 2, top, 2, 72, PAL.P0); fill(b, lx, top, 2, 72, PAL.P1);
+  if (turn === 0) { pt(b, 'ROADMAP', lx + 6, top + 6, PAL.N1); pt(b, '$32B/YR', lx + 6, top + 17, PAL.R2); }
   const n = st.tenth ? 10 : 9, sw = tinyWidth('FORUM') + 3;
   for (let k = 0; k < n; k++) {
     if (turn === 0) {
       const tenth = k === 9;
-      const sx = tenth ? lx + 50 : lx + 4 + (k % 3) * (sw + 2), sy = tenth ? 120 : 134 + Math.floor(k / 3) * 11;
-      fill(b, sx, sy, sw, 9, tenth ? PAL.W7 : PAL.C5); fill(b, sx, sy, sw, 1, tenth ? PAL.W8 : PAL.C6); tiny(b, 'FORUM', sx + 2, sy + 2, PAL.N1);
+      if (tenth) {
+        // the tenth, slapped on crooked (it steps down a pixel at two of the gaps between its letters)
+        const sx = lx + lw - 30, sy = top + 16, t = new Buf(sw, 9, TR);
+        fill(t, 0, 0, sw, 9, PAL.W7); fill(t, 0, 0, sw, 1, PAL.W8); tiny(t, 'FORUM', 2, 2, PAL.N1);
+        for (let j = 0; j < 9; j++) for (let i = 0; i < sw; i++) { const v = t.get(i, j); if (v !== TR) b.set(sx + i, sy + j + (i >= 9 ? 1 : 0) + (i >= 17 ? 1 : 0), v); }
+        continue;
+      }
+      const sx = lx + 4 + (k % 3) * (sw + 2), sy = top + 30 + Math.floor(k / 3) * 11;
+      fill(b, sx, sy, sw, 9, PAL.C5); fill(b, sx, sy, sw, 1, PAL.C6); tiny(b, 'FORUM', sx + 2, sy + 2, PAL.N1);
     } else {
       // edge-on: the stickers' edges a row of coloured slivers down its front
-      fill(b, lx + 2 + (k % 2) * 8, 112 + Math.floor(k / 2) * 11, turn === 1 ? 6 : 4, 7, k === 9 ? PAL.W7 : PAL.C5);
+      fill(b, lx + 2 + (k % 2) * 8, top + 8 + Math.floor(k / 2) * 11, turn === 1 ? 6 : 4, 7, k === 9 ? PAL.W7 : PAL.C5);
     }
   }
-  // the two aides at its ends, leaning in (one each side), facing the door
-  drawSenator(b, lx - 12, 182, 1, 'lean', {flip: true}); drawSenator(b, lx + lw + 12, 182, 2, 'lean');
-  // the aide's hand slapping on the tenth: an open hand from below-left onto the sticker's spot
+  // both aides' hands on its side edges (the reach arm's hand lands at the foot + 17, -44)
+  edgeGrip(b, lx + 2, fy + 6 - 45, -1);
+  edgeGrip(b, lx + lw - 3, leadY - 45, 1);
+  // the strike: the leading edge against the jamb, the jamb and the sign jolting (st.hit's two frames), a burst of
+  // short strokes either side of the contact (80% white at most)
+  if (hit) {
+    // a burst of strokes off the lectern's top corner where it meets the jamb (over the drape, so it reads), the
+    // lectern's top edge a pixel down on the far side (it rocked back off the jamb)
+    const cx = lx + lw, cy = top - 1;
+    for (const [ax, ay, l] of [[-1, -0.35, 8], [-0.7, -1, 8], [0, -1, 9], [0.7, -1, 6]] as Array<[number, number, number]>) for (let i = 3; i < 3 + l; i++) { const x = cx - 2 + Math.round(ax * i), y = cy + Math.round(ay * i); b.set(x, y, PAL.P2); b.set(x, y + 1, PAL.P1); }
+    fill(b, lx, top, lw, 1, PAL.P1);
+  }
+  // the lead aide's near hand slapping on the tenth: from the doorway, round the jamb, onto the lectern's right half
   if (st.slap) {
-    const at: [number, number] = [lx + 56, st.slap === 2 ? 124 : 112];
-    const h = placeHand(POSES.open([0.4, -0.9, 0.05], [0.1, 0.25, 0.96], 'R'), {s: 1.9, at, anchor: 'middle', light: 'lobby', cuffRamp: [PAL.N0, PAL.N1, PAL.N1, PAL.N2, PAL.N3, PAL.N3, PAL.N5]});
-    sleeve(b, h.cuffEnd, [h.cuffEnd[0] - 40, h.cuffEnd[1] + 70], 5, 6, [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5]);
-    drawHand(b, h.hand, h.x, h.y);
-    if (st.slap === 2) for (const [dx, dy] of [[-8, -4], [-10, 2], [26, -4], [28, 2]]) b.set(at[0] + dx, at[1] + dy, PAL.P2);
+    const at: [number, number] = [lx + lw - 20, st.slap === 2 ? top + 20 : top + 12];
+    const sx = leadX - 9, sy = leadY - 50;
+    const n = Math.max(Math.abs(at[0] + 3 - sx), Math.abs(at[1] + 3 - sy));
+    for (let i = 0; i <= n; i++) { const t = i / n, x = Math.round(sx + (at[0] + 3 - sx) * t), y = Math.round(sy + (at[1] + 3 - sy) * t); b.set(x, y - 1, PAL.C3); b.set(x, y, PAL.C2); b.set(x, y + 1, PAL.C1); b.set(x, y + 2, PAL.N0); }
+    fill(b, at[0] - 3, at[1], 7, 5, PAL.S3); fill(b, at[0] - 3, at[1], 7, 1, PAL.S4); for (let q = 0; q < 4; q++) b.set(at[0] - 3 + q * 2, at[1] - 1, PAL.S3);
+    if (st.slap === 2) for (const [dx, dy] of [[-8, -3], [-9, 2], [9, -3], [10, 2]]) b.set(at[0] + dx, at[1] + dy, PAL.P2);
   }
   // the broadcast's lower third: his plate above the headline bar (held while it's on screen)
   if (st.plate !== false) { fill(b, 0, 166, pw('REMUHCS · MAJORITY LEADER') + 18, 14, PAL.P2); fill(b, 0, 166, 4, 14, PAL.R2); pt(b, 'REMUHCS · MAJORITY LEADER', 10, 170, PAL.N1); }
@@ -403,4 +459,22 @@ export const lobbyWide = (b: Buf, f: number, st: {mas?: {x: number; y: number; l
   const n = st.band ?? 0;
   if (n > 0) adventureBand(b, {dim: (3 - Math.min(3, n)) * 2});
 };
-void rect; void line; void ellipse; void poly; void familyOf; void glow; void bpt; void tiny; void mirror; void LOBBY2;
+/** [W] 13.01's arrival (the review: the act opened on the over-the-shoulder close, so the lobby was first seen only at
+ *  13.06's exit): the master by day, a day after the act-out's black: the complaint a side table with its cups, the
+ *  DAYS SINCE boards, the beanbag rows at work, the corner TV on the presser (its picture murmuring: the ticker's dot
+ *  walking, the lectern's sliver shifting); the two staffers at their rack pillar, A's hand up at her flyer's curled
+ *  corner, B's flat on his; Mas on the near floor, still, looking at them (the next shot is over his shoulder) */
+export const lobbyArrive = (b: Buf, f: number, st: {peel?: number} = {}) => {
+  drawLobby2(b, {f, time: 'day', sign1: '176', sign2: '76', flyers: 'curl', upside: false, complaint: 'table', cups: true, tv: 'presser', beanbags: true}, {
+    floor: (bb) => {
+      drawStafferRoom(bb, 'A', 312, 168, {arm: (st.peel ?? 0) > 0 ? 'reach' : 'up'});
+      drawStafferRoom(bb, 'B', 344, 168, {flip: true, arm: 'reach'});
+    },
+    front: (bb) => { drawMasStand2(bb, 232, 197, {legs: 'stand', arm: 'down'}); },
+  });
+  // the TV murmuring: the lower third's ticker dot walking, the jammed lectern's sliver a pixel left and back
+  const T = LOBBY2.TV, tw = T.x1 - T.x0 + 1, ph = Math.floor(f / 5);
+  b.set(T.x0 + 2 + (ph * 3) % (tw - 4), T.y1 - 3, PAL.P2);
+  if (ph % 4 === 1) { b.set(T.x1 - 22, T.y0 + 12, PAL.N4); b.set(T.x1 - 23, T.y0 + 12, PAL.P2); }
+};
+void rect; void line; void ellipse; void poly; void familyOf; void glow; void bpt; void tiny; void mirror;

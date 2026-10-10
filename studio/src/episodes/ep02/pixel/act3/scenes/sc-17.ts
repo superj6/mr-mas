@@ -208,7 +208,11 @@ L.add('17.15', {
     const since = n === 0 ? k - post - 2 : k - h[n - 1];
     const wake = 200;
     const lastHonk = [...h].reverse().find((v) => k >= v) ?? -99;
-    deck(fb, f, {time: 'afternoon', receipt: 'fresh', fore: {x: 386, p: k < wake ? {state: 'asleep'} : k < scr - 14 ? {state: 'stand'} : {state: 'cross', mouth: roomMouth(sh, k, 'FORECASTER')}}, mas: {x: 96, arm: 'phone', bow: k < post + 4}, post: k >= post + 2 && n < 4 ? {id: ids[n], k: since} : k >= post + 2 ? {id: 'apology4', k: since} : null, honk: k - lastHonk});
+    // four trims: the first on the post, the next three on the honks h2-h4; the last honk (h5) finds the last trim
+    // already up, so the card gives a small shake on it instead of popping in again (the review: the re-pop read as a
+    // stutter)
+    const shake = n === 4 && k - h[3] < 6 ? (((k - h[3]) >> 1) % 2 ? 1 : -1) : 0;
+    deck(fb, f, {time: 'afternoon', receipt: 'fresh', fore: {x: 386, p: k < wake ? {state: 'asleep'} : k < scr - 14 ? {state: 'stand'} : {state: 'cross', mouth: roomMouth(sh, k, 'FORECASTER')}}, mas: {x: 96, arm: 'phone', bow: k < post + 4}, post: k >= post + 2 && n < 4 ? {id: ids[n], k: since} : k >= post + 2 ? {id: 'apology4', k: k - h[2], shake} : null, honk: k - lastHonk});
   },
 });
 L.add('17.16', {
@@ -223,7 +227,7 @@ L.add('17.16', {
   },
 });
 L.add('17.17', {
-  st: 'act3/sets/bridge deck ([W] May 20 (rail), a new day on the bridge in rain: traffic moving again, the receipt trodden flat into the lane lines, Mas under a plain umbrella on the near lane; the her blimp drifts in over the bay; a storm cloud with a blank letterhead rolls out of the city and parks over it; thunder, tuned: one pop of the sky, at or under 80% white, never a strobe)',
+  st: 'act3/sets/bridge deck ([W] May 20 (rail), a new day on the bridge in rain: traffic moving again over the receipt, trodden flat along the lane (grey with the wet, its print faint, tyre tracks along it, torn through in places), Mas under a plain umbrella on the near lane; the her blimp drifts in over the bay; a storm cloud with a blank letterhead rolls out of the city and parks over it; thunder, tuned: one pop of the sky, at or under 80% white, never a strobe)',
   marks: {th: ['snd', 'thunder_tuned_F', 1, 0]},
   draw: (fb, k, sh, f) => {
     const th = mk(sh, 'th', 177);
@@ -237,7 +241,8 @@ L.add('17.18', {
   marks: {um: ['snd', 'umbrella_pop', 1, 0]},
   draw: (fb, k, sh, f) => {
     const um = mk(sh, 'um', 121);
-    deck(fb, f, {time: 'rain', receipt: 'run', moving: true, blimp: {size: 3, x: 330, y: 70, lights: 5}, cloud: {x: 262, y: 8}, umbrella: k >= um, mas: {x: 96, arm: 'umbrella'}});
+    // the receipt's ink runs: its print washing out and streaking along the wet paper, a little more as the shot goes
+    deck(fb, f, {time: 'rain', receipt: 'ink', inkRun: 2 + Math.floor(k / 28), moving: true, blimp: {size: 3, x: 330, y: 70, lights: 5}, cloud: {x: 262, y: 8}, umbrella: k >= um, mas: {x: 96, arm: 'umbrella'}});
   },
 });
 L.add('17.19', {

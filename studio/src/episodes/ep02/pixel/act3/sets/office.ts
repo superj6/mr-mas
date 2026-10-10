@@ -3,8 +3,10 @@
 // the wheel marks where it stood, the evening window); TPOOL and the thread are its props (tpoolPhone, threadPhone);
 // this file stages them:
 //   officeWide(b, f, st)   [W] 15.01 / 15.18: the empty office, ALYI'S DOOR from inside (the same door 14.12 pivoted:
-//                          a centre pin, st.door 0 shut .. 3 edge-on), Mas on the desk's edge (Ep1's seated rig) or
-//                          getting up and walking out (st.mas), the room empty after the door shuts
+//                          a centre pin, st.door 0 shut .. 3 edge-on), the desk with no chair (officeDesk: a working
+//                          desk with depth, a monitor and a lamp; five caster dents where the chair stood), Mas on the
+//                          desk's edge (Ep1's seated rig) or getting up and walking out (st.mas), the room empty after
+//                          the door shuts
 //   phoneInHand(b, f, ...) [ECU] 15.02 / 15.04 / 15.05 / 15.17: his phone in his hand in the evening (art/cast/hands2
 //                          wrap grip), its screen any painter: the thread, TPOOL's icon, splash, welcome, typed, map;
 //                          the Orb beside it scanning the 2008 hourglass and its toast `verified: 2008`; his thumb on
@@ -44,8 +46,38 @@ const pivotDoorIn = (b: Buf, step: number) => {
   if (step === 0) { fill(b, D.x0 + 6, 98, 3, 6, PAL.G5); fill(b, D.x0 + 4, D.y0 + 10, D.x1 - D.x0 - 8, 1, PAL.D2); }
   fill(b, cx, 148, 1, 2, PAL.G5);
 };
+/** the desk with no chair (the review: the art's thin top on two legs read as a waiting-room bench, and its wheel marks
+ *  were two-pixel dots): a working desk with depth: its top seen a little from above (the window's light along its back
+ *  edge), the front edge, a drawer pedestal at the left, the recessed modesty panel over the knee-hole where his chair
+ *  went, an end panel at the right; on it a monitor, off (the window's dusk a sliver on its glass), and a desk lamp;
+ *  in the carpet in front of the knee-hole, the five caster dents of the chair that isn't there */
+const officeDesk = (b: Buf) => {
+  const D = OFFICE.desk, t = D.top;
+  // the floor under it (the art's thin legs painted out)
+  for (let y = t; y < 150; y++) for (let x = D.x0; x < D.x1; x++) b.set(x, y, PAL.D2);
+  // the top: its surface receding to the back edge (lit by the window at the left), the front edge's lit lip
+  for (let y = t - 6; y < t; y++) for (let x = D.x0 + 3; x < D.x1 - 3; x++) b.set(x, y, y === t - 6 ? PAL.D2 : x < 220 && bayer(x, y) < 0.35 ? PAL.W3 : PAL.D3);
+  fill(b, D.x0, t, D.x1 - D.x0, 5, PAL.D4); fill(b, D.x0, t, D.x1 - D.x0, 1, PAL.W4); fill(b, D.x0, t + 4, D.x1 - D.x0, 1, PAL.D2);
+  // the pedestal (left: three drawers), the recessed modesty panel (the knee-hole), the end panel (right)
+  fill(b, D.x0 + 2, t + 5, 50, 150 - t - 5, PAL.D3); fill(b, D.x0 + 2, t + 5, 1, 150 - t - 5, PAL.D4);
+  for (let q = 0; q < 3; q++) { const y = t + 5 + q * 6; fill(b, D.x0 + 2, y, 50, 1, PAL.D1); fill(b, D.x0 + 22, y + 3, 10, 1, PAL.G4); }
+  fill(b, D.x0 + 52, t + 5, D.x1 - D.x0 - 64, 10, PAL.D1); fill(b, D.x0 + 52, t + 15, D.x1 - D.x0 - 64, 150 - t - 15, PAL.N1);
+  fill(b, D.x1 - 12, t + 5, 10, 150 - t - 5, PAL.D3); fill(b, D.x1 - 12, t + 5, 1, 150 - t - 5, PAL.D4);
+  // the monitor (off) at the back left, on its stand; the lamp at the back right, its shade over the top
+  fill(b, 170, t - 34, 46, 28, PAL.N0); fill(b, 172, t - 32, 42, 24, PAL.N1); for (let i = 0; i < 10; i++) b.set(176 + i, t - 30 + i, PAL.U2);
+  fill(b, 190, t - 6, 6, 2, PAL.N1); fill(b, 184, t - 4, 18, 2, PAL.N2);
+  fill(b, 312, t - 4, 12, 3, PAL.N2); line(318, t - 4, 310, t - 24, b.ink(PAL.G3)); line(310, t - 24, 300, t - 18, b.ink(PAL.G3));
+  fill(b, 294, t - 20, 10, 5, PAL.D3); fill(b, 294, t - 20, 10, 1, PAL.D4); fill(b, 296, t - 15, 6, 1, PAL.W3);
+  // the caster dents: a five-point star in the carpet (a chair's base), each a dark pit with the crushed pile a rung up
+  // round its far side
+  for (const [mx, my] of [[244, 160], [228, 164], [262, 164], [234, 172], [256, 172]] as Array<[number, number]>) {
+    fill(b, mx - 2, my, 5, 2, PAL.D0); b.set(mx - 3, my + 1, PAL.D0); b.set(mx + 3, my + 1, PAL.D0);
+    fill(b, mx - 2, my - 1, 5, 1, PAL.D3); b.set(mx - 3, my, PAL.D3); b.set(mx + 3, my, PAL.D3);
+  }
+};
 export const officeWide = (b: Buf, f: number, st: {door?: 0 | 1 | 2 | 3; mas?: {seated: true} | {x: number; legs: Mas2Legs; arm?: Mas2Arm; flip?: boolean} | null}) => {
   alyiOffice(b, f, {when: '2024', door: 2});
+  officeDesk(b);
   pivotDoorIn(b, st.door ?? 0);
   const m = st.mas;
   if (m && 'seated' in m) drawMasSeated(b, 262, OFFICE.desk.top, {...MAS_SEATED_DEFAULT, arm: 'phone', head: 'down', light: 'room'});
@@ -161,8 +193,14 @@ export const tpoolScreen = (scr: Buf, screen: 'icon' | 'splash' | 'welcome' | 't
     for (let j = A.y + 30; j < scr.h; j += 28) fill(scr, 0, j, A.w, 4, PAL.P1);
     fill(scr, 0, scr.h - 70, 54, 70, PAL.C5);
     tiny(scr, 'LAST SEEN: 2012', 4, A.y + 26, PAL.N1);
-    const pins: Array<[number, number]> = [[22, 70], [112, 60], [40, 150], [120, 140], [70, 200], [24, 240], [116, 228], [96, 270]];
-    pins.forEach(([px, py]) => { fill(scr, px - 2, py - 7, 5, 6, PAL.G4); scr.set(px, py - 1, PAL.G4); });
+    // every other pin, stale: a dozen grey markers (dark-rimmed, so they hold against the 2008 tiles), each tagged 2012
+    // (the review: only Alyi's pin was drawn, the stale ones lost in the tiles' grey)
+    const pins: Array<[number, number]> = [[14, 64], [58, 62], [116, 56], [132, 84], [26, 88], [110, 106], [16, 124], [56, 118], [134, 124], [36, 176], [94, 180], [128, 170]];
+    pins.forEach(([px, py]) => {
+      fill(scr, px - 3, py - 9, 7, 7, PAL.N1); fill(scr, px - 2, py - 8, 5, 5, PAL.G3); scr.set(px - 1, py - 7, PAL.G5);
+      scr.set(px - 1, py - 2, PAL.N1); scr.set(px, py - 2, PAL.N1); scr.set(px + 1, py - 2, PAL.N1); scr.set(px, py - 1, PAL.N1);
+      const tw = tinyWidth('2012') + 2; fill(scr, px - (tw >> 1), py + 1, tw, 7, PAL.P2); tiny(scr, '2012', px - (tw >> 1) + 1, py + 2, PAL.N1);
+    });
     // the one checked in: its ripple turning warm (o.warm), the pin pulsing
     const r = (k % 30) / 2, warm = o.warm ?? 0;
     for (let a = 0; a < 48; a++) { const t = (a / 48) * Math.PI * 2; scr.set(Math.round(PIN.x + Math.cos(t) * (5 + r)), Math.round(PIN.y + Math.sin(t) * (5 + r) * 0.8), warm > 0.5 ? PAL.W7 : r > 8 ? PAL.W5 : PAL.R2); }

@@ -1,8 +1,9 @@
 // MR. MAS — Ep2 v1 · act3 · scene 13: LEAVE THEM UP (MAY 15, 2024; the NopeAI lobby by day). 6 shots, 744 f on the v1
 // EL lock. The shots pass, 2026-10-09; the record is shots-act3.md. The staging is proposal.md sc 13 (its final check:
 // the sighting has no reflection in it; the counterweight is the other side's, at similar weight) / script-v1:
-//   ARRIVE   13.01 over Mas's shoulder at his pillar onto the two staffers at theirs, February's flyers curling: one
-//            peels a corner, the other smooths her tape back down; 2.4 s before the first line; their exchange (quick)
+//   ARRIVE   13.01 the lobby master by day (2 s: the complaint a side table, the TV on the presser, the staffers at
+//            their pillar, Mas watching them), then over Mas's shoulder onto the two staffers at their pillar, February's
+//            flyers curling: one peels a corner, the other smooths his tape back down; their exchange (quick)
 //   TURN     13.02 the first staffer turns to Mas, the corner still in her fingers: "He posted, though. Do we take these
 //            down now?" · his face: "leave them up." · 13.03 a fallen flyer; he picks it up and tapes it back himself,
 //            upside down; nobody corrects him; his upside-down flyer, a beat
@@ -12,20 +13,21 @@
 //   OUT      13.06 the master: Mas walks off frame-right; the adventure band lights as he crosses (sc 14's band)
 // No reflection, no image of Alyi: every flyer's photo is a doorway with nobody in it.
 import {defineScene, layouts, mouth, mk} from '../../kit';
-import {pillarMedium, masMCU13, floorECU, tapeMCU, flyerPillarECU, presser, tvPush, lobbyWide} from '../sets/lobby';
+import {pillarMedium, masMCU13, floorECU, tapeMCU, flyerPillarECU, presser, tvPush, lobbyWide, lobbyArrive, PRESS} from '../sets/lobby';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import type {Mas2Legs} from '../../art/cast/mas2';
 
 const L = layouts();
 
 L.add('13.01', {
-  st: 'act3/sets/lobby pillarMedium ([OTS-W] over Mas\'s shoulder (the back of his head and hood, act3/sets/backhead) onto the two STAFFERS at their rack pillar, close (two new busts on art/cast/civic2 makeBust3: A a woman with a bun and a mustard cardigan, B a man with curly hair and a dusty blue hoodie); February\'s WHERE IS ALYI? flyers on the pillar, curling (doorway photos, nobody in them); A peels the curled corner of hers (her hand at it, the corner lifting in held steps), B smooths the tape back down on his (his hand flat on it); the lobby soft behind them by day; their exchange lip-synced)',
+  st: 'act3/sets/lobby lobbyArrive → pillarMedium ([W] ARRIVE: the lobby master by day for 2 s (art/sets/lobby2 as 13.06 has it: the complaint a side table with cups, DAYS SINCE 176 and 76, the beanbag rows, the corner TV murmuring on the presser): the two STAFFERS at their rack pillar, A\'s hand at her flyer, B\'s on his; Mas on the near floor, still, looking at them; [OTS-W] over Mas\'s shoulder (the back of his head and hood, act3/sets/backhead) onto the two staffers at their pillar, close (two new busts on art/cast/civic2 makeBust3: A a woman with a bun and a mustard cardigan, B a man with curly hair and a dusty blue hoodie); February\'s WHERE IS ALYI? flyers on the pillar, curling (doorway photos, nobody in them); A peels the curled corner of hers (her arm from the shoulder, the corner lifting in held steps), B smooths the tape back down on his (his hand flat on it); the lobby soft behind them by day; their exchange lip-synced)',
   face: {STAFFER: 'lip', STAFFER2: 'lip'},
-  marks: {b: ['on', 'e2-a3-0002', 0]},
+  marks: {a: ['on', 'e2-a3-0001', 0], b: ['on', 'e2-a3-0002', 0]},
   draw: (fb, k, sh, f) => {
-    const bOn = mk(sh, 'b', 144);
+    const aOn = mk(sh, 'a', 57), bOn = mk(sh, 'b', 144), cut = Math.min(48, aOn - 6);
+    if (k < cut) { lobbyArrive(fb, f, {peel: k >= 24 ? 1 : 0}); return; }
     pillarMedium(fb, f, {
-      peel: k < 20 ? 0 : k < 40 ? 1 : 2, smooth: Math.floor(k / 9) % 2,
+      peel: k < cut + 14 ? 0 : k < cut + 30 ? 1 : 2, smooth: Math.floor(k / 9) % 2,
       aMouth: mouth(sh, k, 'STAFFER'), bMouth: mouth(sh, k, 'STAFFER2'),
       aLook: 0, bLook: k >= bOn - 10 ? -1 : 0, bExpr: k >= bOn - 4 ? 'worry' : 'neutral',
     });
@@ -61,25 +63,32 @@ L.add('13.03', {
   },
 });
 L.add('13.04', {
-  st: 'act3/sets/lobby tvPush → presser ([SCR] the lobby\'s TV framed close in the foreground, the presser on it at half size; pushed in to full frame: the Senate press room (art/props/ui presserFull\'s pieces re-staged): REMUHCS (plated REMUHCS · MAJORITY LEADER) and three bipartisan colleagues (civic-extras senators), the bill-shaped lectern ROADMAP · $32B/YR with nine FORUM stickers carried by two aides to a narrow door marked FLOOR: it bumps the frame face on; they turn it sideways; it bumps again; the presser\'s own lower third BIPARTISAN SENATE AI ROADMAP)',
+  st: 'act3/sets/lobby tvPush → presser ([SCR] the lobby\'s TV framed close in the foreground, the presser on it at half size; pushed in to full frame: the Senate press room (art/props/ui presserFull\'s pieces re-staged): REMUHCS (plated REMUHCS · MAJORITY LEADER) and three bipartisan colleagues (civic-extras senators), the bill-shaped lectern ROADMAP · $32B/YR with nine FORUM stickers carried along the wall by two aides, both gripping its side edges: the lead aide backs into the narrow FLOOR doorway ahead of it; its leading edge strikes the door\'s jamb face on (contact, the jamb jolts, then the recoil); they turn it sideways, push again, and it strikes again; the presser\'s own lower third BIPARTISAN SENATE AI ROADMAP)',
   marks: {b1: ['snd', 'lectern_bump', 1, 0], b2: ['snd', 'lectern_bump', 2, 0]},
   draw: (fb, k, sh, f) => {
-    const b1 = mk(sh, 'b1', 52), b2 = mk(sh, 'b2', 81);
-    const lx = k < b1 ? 262 + Math.floor(Math.min(1, k / b1) * 50) : k < b2 ? 312 + Math.max(0, Math.min(1, (k - b1 - 14) / 12)) * 44 : 356;
-    const turn = (k < b1 + 10 ? 0 : k < b1 + 14 ? 1 : 2) as 0 | 1 | 2;
-    const bump = (k >= b1 && k < b1 + 3) || (k >= b2 && k < b2 + 3) ? -3 : 0;
-    const st = {lx: Math.round(lx), turn, bump};
+    const b1 = mk(sh, 'b1', 52), b2 = mk(sh, 'b2', 81), J = PRESS.jamb;
+    // face on, its right edge carried to the jamb by b1 (held on 2s); recoil 4 px; turned sideways (60, then 40 wide)
+    // with the right edge 4 px off the jamb; pushed in again to the jamb by b2; recoil
+    let lx: number, turn: 0 | 1 | 2 = 0, hit = 0, walk: number | undefined;
+    if (k < b1) { lx = J - 84 - Math.round((1 - Math.floor(k / 2) * 2 / b1) * 70); walk = k; }
+    else if (k < b1 + 2) { lx = J - 84; hit = k - b1 + 1; }
+    else if (k < b1 + 8) lx = J - 84 - 4;
+    else if (k < b2) { turn = k < b1 + 12 ? 1 : 2; const lw = turn === 1 ? 60 : 40; const push = turn === 2 ? Math.max(0, Math.floor((k - b2 + 12) / 3)) : 0; lx = J - lw - 4 + Math.min(4, push); if (push > 0) walk = k; }
+    else if (k < b2 + 2) { turn = 2; lx = J - 40; hit = k - b2 + 1; }
+    else { turn = 2; lx = J - 40 - 4; }
+    const st = {lx, turn, hit, walk};
     if (k < 16) { tvPush(fb, f, st); return; }
     presser(fb, f, st);
   },
 });
 L.add('13.05', {
-  st: 'act3/sets/lobby presser ([SCR] the press room: the reporter\'s question from off camera (the TV\'s audio; no senator speaks); the aides give up and set the lectern face on again by the door; an aide\'s hand slaps a tenth FORUM sticker on it, crooked, on the slap)',
+  st: 'act3/sets/lobby presser ([SCR] the press room: the reporter\'s question from off camera (the TV\'s audio; no senator speaks); the lectern stuck sideways at the doorway; the aides give up and turn it face on again by the door (their hands on its edges); the rear aide\'s hand slaps a tenth FORUM sticker on it, crooked, on the slap)',
   marks: {slap: ['snd', 'sticker_slap_tv', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const s = mk(sh, 'slap', 72);
+    const s = mk(sh, 'slap', 72), J = PRESS.jamb;
     const turn = (k < s - 14 ? 2 : k < s - 10 ? 1 : 0) as 0 | 1 | 2;
-    presser(fb, f, {lx: turn === 2 ? 356 : 312, turn, tenth: k >= s, slap: k >= s - 4 && k < s ? 1 : k >= s && k < s + 8 ? 2 : 0});
+    const lw = turn === 2 ? 40 : turn === 1 ? 60 : 84;
+    presser(fb, f, {lx: J - lw - 4, turn, tenth: k >= s, slap: k >= s - 4 && k < s ? 1 : k >= s && k < s + 8 ? 2 : 0});
   },
 });
 L.add('13.06', {

@@ -61,7 +61,7 @@ L.add('14.02', {
   },
 });
 L.add('14.03', {
-  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: his own face in the polished metal (his approved portrait mirrored, banded by the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone, its suggestion strip: > where are you going? · > can we talk? · > come back (greyed and struck, exactly the 1993 Cancel); his thumb (no cursor) goes to the greyed come back first and presses: bonk, the chip shakes)',
+  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: a curved sculpture on its plinth, his own face in the polished metal (his approved portrait mirrored, bowed with the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone in his hand (common cupThumb), its suggestion strip a column of chips: > where are you going? · > can we talk? · > come back (greyed and struck, a disabled button that still reads: the 1993 Cancel); his thumb (no cursor) goes to the greyed come back first and presses its end: bonk, the chip shakes)',
   marks: {bonk: ['snd', 'alert_bonk', 1, 0]},
   draw: (fb, k, sh, f) => {
     const bonk = mk(sh, 'bonk', 96), cut = 24;
@@ -191,7 +191,7 @@ L.add('14.10', {
   },
 });
 L.add('14.11', {
-  st: 'act3/sets/floor corridor → plateECU → boxECU ([W] down the corridor: Ekiel\'s empty desk (the MISC box on it) and at the end the safety team\'s own door, never Alyi\'s, its plate SUPERALIGNMENT / SAFETY TEAM legible; DOT at it from behind; [ECU] her orange-cuffed hand backs out the four screws, one per beat (art/cast/dot dotHandsECU), the plate comes off; [ECU] the plate dropped face up into the MISC box, MAY 17, its screws beside it)',
+  st: 'act3/sets/floor corridor → plateECU → boxECU ([W] down the corridor: Ekiel\'s empty desk (the MISC box on it) and at the end the safety team\'s own door, never Alyi\'s, its plate SUPERALIGNMENT / SAFETY TEAM legible; DOT at it from behind; [ECU] her orange-cuffed fist closed round a red screwdriver\'s handle backs out the four screws, one per beat, the wrist turning in held steps (art/cast/dot dotHandsECU\'s door and plate, restaged), the plate comes off; [ECU] the plate dropped face up into the MISC box, MAY 17, its screws beside it)',
   marks: {s1: ['snd', 'screw_turn_1', 1, 0], s2: ['snd', 'screw_turn_2', 1, 0], s3: ['snd', 'screw_turn_3', 1, 0], s4: ['snd', 'screw_turn_4', 1, 0], off: ['snd', 'nameplate_off', 1, 0], drop: ['snd', 'plate_drop_box', 1, 0]},
   draw: (fb, k, sh, f) => {
     const s = [mk(sh, 's1', 24), mk(sh, 's2', 39), mk(sh, 's3', 54), mk(sh, 's4', 69)], off = mk(sh, 'off', 81), drop = mk(sh, 'drop', 93);
