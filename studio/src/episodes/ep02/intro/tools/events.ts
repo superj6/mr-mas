@@ -9,6 +9,7 @@
 //   node <scratch>/ev2.cjs <ep1 intro-events.json> out/ep02/v1/intro/intro-ep2-events.json
 import * as fs from 'fs';
 import {EP2_SLOT} from '../slot';
+import {ALYI_FINE_EP2} from '../moments';
 import {EP1_SLOT} from '../../../../intro/slot';
 import {lineKeys} from '../../../../dev/mcoldopen/timeline';
 
@@ -24,7 +25,10 @@ for (const e of d.events) {
     x.what = x.what.replace(`the ${EP1_SLOT.keycap.name} keycap`, `the ${EP2_SLOT.keycap.name} keycap`)
       .replace(`frozen ${EP1_SLOT.keycap.name} keycap`, `frozen ${EP2_SLOT.keycap.name} keycap`)
       .replace(`"${EP1_SLOT.subtitle}"`, `"${EP2_SLOT.subtitle}"`)
-      .replace('"you are here" dot climbs the curve', `"you are here" dot climbs the curve from its rest at ${EP2_SLOT.cold.dot.toFixed(2)}`);
+      .replace('"you are here" dot climbs the curve', `"you are here" dot climbs the curve from its rest at ${EP2_SLOT.cold.dot.toFixed(2)}`)
+      // Ep2's own moments (moments.ts, the cleanup pass 2026-10-11): the pointer hidden while he types, and the card
+      .replace('mouse pointer travels to Post (on 2s)', 'mouse pointer travels to Post (on 2s; Ep2: hidden while he types, it shows when his hand takes the mouse, and rests on Post in the bookend)')
+      .replace('fine print PRODUCTS: 0 · EFFIGIES: 1', `fine print ${ALYI_FINE_EP2}`);
   }
   // the subtitle types at 4 characters a frame: Ep2's 22 end on f645 (Ep1's 31 on f647)
   if (x.type === 'text-type' && x.moment === 'mfinale') {
@@ -41,7 +45,7 @@ if (ownLine && L.indicator) out.push({f: L.indicator[0], end: L.indicator[1], ty
   src: 'studio/src/episodes/ep02/intro/slot.ts EP2_SLOT.cold.line.indicator / src/dev/mcoldopen/screen.ts drawIndicator'});
 out.sort((a, b) => a.f - b.f || (a.end ?? a.f) - (b.end ?? b.f));
 const res = {...d, title: 'MR. MAS — intro-ep2 picture events (as built; Ep1\'s export with the Ep2 slot applied)',
-  version: '2026-10-10', composition: 'intro-ep2', events: out,
+  version: '2026-10-11', composition: 'intro-ep2', events: out,
   slot: {ep: EP2_SLOT.ep, line: L.l2 ? `${L.l1} ${L.l2}` : L.l1, keys: lineKeys(L), indicator: L.indicator, dot: EP2_SLOT.cold.dot,
          keycap: EP2_SLOT.keycap.name, subtitle: EP2_SLOT.subtitle}, derived_from: src};
 fs.writeFileSync(dst, JSON.stringify(res, null, 1) + '\n');

@@ -319,12 +319,13 @@ export const ghost1 = (b: Buf, rise: number, o: {x?: number; y?: number} = {}) =
   const top = Math.round(150 - (150 - (y - 6)) * Math.min(1, rise));
   for (let yy = 0; yy < RH; yy++) for (let xx = 0; xx < W; xx++) { const c = t.c[yy * W + xx]; if (c !== TR && yy >= top) b.set(xx, yy, c); }
 };
-/** the 2016 GHOST-NOLE beneath it (his RE: Yup), translucent; mouth 0..2 */
+/** the 2016 GHOST-NOLE beneath it (his RE: Yup), translucent; mouth 0..2. His tag names him (RE: NOLE · 2016: the
+ *  cleanup pass, 2026-10-11), so a newcomer never reads the first person-ghost as Alyi's before Nole crashes in */
 export const ghostNole16 = (b: Buf, rise: number, mouth: 0 | 1 | 2, o: {x?: number; y?: number; header?: boolean} = {}) => {
   if (rise <= 0) return;
   const t = layer(W, 270);
   const fx = o.x ?? 330, fy = o.y ?? 186;
-  drawGhostNole(t, fx, fy, {pose: {arm: 'phone', mouth}, header: o.header === false ? undefined : 'RE: · 2016', quote: o.header === false ? undefined : '"YUP"', headerAt: [fx - 34, 76]});
+  drawGhostNole(t, fx, fy, {pose: {arm: 'phone', mouth}, header: o.header === false ? undefined : 'RE: NOLE · 2016', quote: o.header === false ? undefined : '"YUP"', headerAt: [fx - 34, 76]});
   const top = Math.round(RH - (RH - 60) * Math.min(1, rise));
   for (let yy = 0; yy < RH; yy++) for (let xx = 0; xx < W; xx++) { const c = t.c[yy * W + xx]; if (c !== TR && yy >= top) b.set(xx, yy, c); }
 };
@@ -663,7 +664,9 @@ export const noleOTS = (b: Buf, st: OtsSt) => {
     drawGhost(t, 8, 24 + ([0, 0, -1, -1, 0, 0, 1, 1][Math.floor(st.f / 9) % 8]), {kind: 'thread', header: 'FROM: ALYI · JAN 2016', body: '"…IT WILL MAKE SENSE TO START BEING LESS OPEN."'});
     for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i];
     const g = layer(W, 270);
-    drawGhostNole(g, 410, 196, {pose: {arm: 'phone', mouth: 0}, header: 'RE: · 2016', quote: '"YUP"', headerAt: [392, 74], flip: true});
+    // (the cleanup pass, 2026-10-11: his name on his reply, RE: NOLE, so the ghost isn't read as Alyi's; the header 8 px
+    // left so the longer tag keeps its margin from the frame's edge)
+    drawGhostNole(g, 410, 196, {pose: {arm: 'phone', mouth: 0}, header: 'RE: NOLE · 2016', quote: '"YUP"', headerAt: [384, 74], flip: true});
     for (let i = 0; i < W * RH; i++) if (g.c[i] !== TR) b.c[i] = g.c[i];
   }
   if (st.cow) { const t = layer(W, 270); drawGhost(t, 104, 70, {kind: 'cow', header: '2018'}); for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i]; }
@@ -903,7 +906,7 @@ export const noleGhost2S = (b: Buf, st: {f: number; mouth?: 0 | 1 | 2 | 3 | 4; j
   const t = layer(W, 270);
   drawGhost(t, 14, 24 + bob, {kind: 'thread', header: 'FROM: ALYI · JAN 2016', body: '"…IT WILL MAKE SENSE TO START BEING LESS OPEN."'});
   for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i];
-  ghostHeaderAt(b, 22, 112 + bob, 'RE: · 2016', '"YUP"', 120);
+  ghostHeaderAt(b, 22, 112 + bob, 'RE: NOLE · 2016', '"YUP"', 120);
   const X = 296, Y = 44;
   const img = nolePortraitImg({mouth: st.mouth ?? 0, jab: st.jab ?? 0, blink: 0, brow: st.brow ?? 1, dip: st.dip ?? 0});
   putBustCut(b, img as Img, X, Y, RH, false);

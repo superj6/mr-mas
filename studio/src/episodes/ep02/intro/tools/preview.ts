@@ -15,10 +15,11 @@ import {EDL, editAt} from '../../../../intro/edl';
 import {scenesFor} from '../../../../intro/scenes';
 import {EP1_SLOT} from '../../../../intro/slot';
 import {EP2_SLOT} from '../slot';
+import {scenesEp2} from '../moments';
 
 const [outDir, scaleS, which, ...ids] = process.argv.slice(2);
 const scale = Number(scaleS) || 4;
-const SC = scenesFor(which === 'ep1' ? EP1_SLOT : EP2_SLOT);
+const SC = which === 'ep1' ? scenesFor(EP1_SLOT) : scenesEp2(EP2_SLOT); // Ep2: its own moments (moments.ts)
 
 const paintLayers = (c, w, h, layers) => {
   for (const l of layers) {

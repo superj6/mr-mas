@@ -8,9 +8,9 @@
 
 | | |
 |---|---|
-| `render/music-el.wav` | **55.000 s, 2,640,000 samples (1,320 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored. md5 `d6a6e6c5…` |
-| Level | −20.04 LUFS-I (the engine's underscore master, −20); true peak −3.15 dBTP; short-term p95 −17.6, max −16.5 |
-| `check.py` (with the score review's new checks, 2026-10-09) | `coldopen 1320 f 55.000 s exact=True lock=True −20.04 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 1) \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 15.8 min 15.3 fail 0 exempt 0 \| PASS`. The review changed nothing in this cue: the stem was re-laid only to write the lock's content hash into `cues-el.json` (`lock_sha1`); its md5 is unchanged |
+| `render/music-el.wav` | **55.000 s, 2,640,000 samples (1,320 frames × 2,000), exact.** 48 kHz / 24-bit stereo, git-ignored. md5 `690ba3af…` (the cleanup pass, 2026-10-11; was `d6a6e6c5…`) |
+| Level | −20.03 LUFS-I (the engine's underscore master, −20); true peak −3.15 dBTP; short-term p95 −17.5, max −16.4 |
+| `check.py` (with the score review's new checks, 2026-10-09) | `coldopen 1320 f 55.000 s exact=True lock=True −20.03 LUFS-I −3.15 dBTP \| silence 0 holes 0 holes-42 0 frag 0 (runs 1) \| 12 dB steps 0 unmarked 0 \| F-major True rule12 True knee 0/0 \| pocket p10 15.8 min 15.3 fail 0 exempt 0 \| PASS`. The review changed nothing in this cue: the stem was re-laid only to write the lock's content hash into `cues-el.json` (`lock_sha1`); its md5 is unchanged |
 | Engine QA | no warnings. F-major (written and spectral) ok; rule 12 ok (no A-natural anywhere); knee whole 0, completions 0; 11 of 11 hit marks have an onset within 10 ms (worst 7.7 ms); sub under the lobby's rack hum −18.5 dB (limit −18) |
 | Music runs | one run, 0 → 55.0 s: no digital silence, no hole under −60 dBFS, no fragment |
 | `cues-el.json` | The cue sheet: every sync mark, the lock's events, the sections (with the pedal's `duck_db`), the measurements and the engine QA. It names the timeline it was laid to |
@@ -36,7 +36,7 @@ EL seconds, on the segment's own clock (0 = the cold open's first frame; 55.0 = 
 | 45.1 → 54.8 | the resolved pedal | A soft arco F2 (its own track, 6 dB under the pedal) swells in after the THUD and lets go on note 4 | The dry piano decays fast. Without a bed the out fell to −40 LUFS-M between notes, then jumped +28 dB on note 3: S3 (a continuous bed) and S9 (soft entries) |
 | 47.29 | note 2 | **F3** (+ the chip's F4, duty 0.5) on a swung and, 0.17 s before the cut to 1.12 (DOT's spare 0, the head shake) | The flat line, each note a register up, the chip's duty narrowing each time ("vary the register and chip duty on every note; never even beeps") |
 | 52.50 | note 3 | **F4** (+ the chip's F5, duty 0.25) on the beat, 0.21 s before the cut to 1.13 (the flyer's doorway; the Orb's iris at 53.1) | The second sign's laugh (50.2) sits in the held F3, with no hit |
-| 54.79 | note 4 | **F5** (+ the chip's F6, duty 0.125: the intro's own cursor glint) on a swung and, **0.21 s before the smash**; cut hard (5 ms) on the last frame | "The fourth on the SMASH TO INTRO", cut on the smash. The intro's first felt F5 ping lands on the next bar line of the same grid, so the line runs F2 · F3 · F4 · F5 \| F5 F5 F5 F5 G A♭ C F: the cold open's flat line climbs into the main title's |
+| 54.79 | note 4 | **F5** (+ the chip's F6, duty 0.125: the intro's own cursor glint), the lightest of the four since the cleanup pass on a swung and, **0.21 s before the smash**; cut hard (5 ms) on the last frame | "The fourth on the SMASH TO INTRO", cut on the smash. The intro's first felt F5 ping lands on the next bar line of the same grid, so the line runs F2 · F3 · F4 · F5 \| F5 F5 F5 F5 G A♭ C F: the cold open's flat line climbs into the main title's |
 
 **Pitch content:** F minor and its colours (D♭ lydian, A♭, the C pedal with G and D♭). **No A-natural anywhere** [M: rule 12 ok, 0 written-third events, 0 grazes]. The knee appears only as its cells: the Build (the flat-line pair and the kink) and the out's flat line, 4 notes [M: knee whole 0, completions 0, any key, any register].
 
@@ -69,8 +69,8 @@ EL seconds, on the segment's own clock (0 = the cold open's first frame; 55.0 = 
 | 6 the out | 45.0 → 55.0 | −21.9 | −4.2 | 91 · 7 · 1 |
 | **whole** | 0 → 55.0 | **−20.04** | **−3.15** | **46 · 35 · 19** (big band 0: the full band never plays) |
 
-- **Momentary peaks (LUFS-M, 0.5 s windows)** [M]: the entry −26 (it swells in); the step-out downbeat −14.1; the re-entry −14.3; the knee's notes −14.3, −17.6, −14.6, −19.2. The pedal rises −29 → −19 from THUD 1 to the THUD. The out's maximum is −14.2, and the outs guide is −14.
-- **Into the intro** [M]: the last 0.5 s peaks at −19.2 LUFS-M. The intro's first 0.5 s (V1's mix at the manifest's −3 dB; read from `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`, whose music the Ep2 variant keeps) peaks at −30.4. That is an 11 LU drop on the smash: the dry F5 is cut, and the intro's quiet felt F5 continues the line. Ep1's cold open handed over 7 LU above the intro. This one is a smash cut by design, so the drop is larger [J; ear check 5].
+- **Momentary peaks (LUFS-M, 0.5 s windows)** [M]: the entry −26 (it swells in); the step-out downbeat −14.1; the re-entry −14.3; the knee's notes −14.3, −17.6, −14.6, −21.6 (note 4 was −19.2 before the cleanup pass). The pedal rises −29 → −19 from THUD 1 to the THUD. The out's maximum is −14.2, and the outs guide is −14.
+- **Into the intro** [M]: the last 0.5 s peaks at −21.6 LUFS-M (−19.2 before the cleanup pass, below). The intro's first 0.5 s (V1's mix at the manifest's −3 dB; read from `audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav`, whose music the Ep2 variant keeps) peaks at −30.4. That is a 9 LU drop on the smash (it was 11): the dry F5 is cut, and the intro's quiet felt F5 continues the line. Ep1's cold open handed over 7 LU above the intro. This one is a smash cut by design, so the drop is larger [J; ear check 5].
 - **Mood shares** (by time) [M/J]: wonder 18% (0–10), comic and giddy swing 27% (10–21.3, 23.5–26.8), the held breath 4%, suspense 33% (the pedal), the quiet question 18% (the out). Suspense stays a minority (S2).
 - **The dialogue pocket** [M]: thinned under every line, plus the engine master's 2.5 kHz pocket (−2 dB). Per line in 1–4 kHz after the mix's duck (`e02-v1-common/pocket.py`): all six lines at least **+15.3 dB** at their onsets (before the duck +8.2 at the 10th percentile). The mixer ducks E02-01 9 dB under speech. `cues-el.json` → `sections` asks for **5 dB under the pedal** (26.8–45.0): it is already the thinned bed, and 9 dB under Selbeep's O.S. line would leave the room alone (`mix_episode.py` reads a section's `duck_db`).
 
@@ -104,7 +104,7 @@ The render takes about 20 s through `heavy.sh`. After any re-lock, re-render: ev
 2. 9.4–19.8 s: the Build compiling as the mammoth steps out. It should be playful and the show's own: never lounge (the felt is sparse and the chip leads, at 36% of the section), never Nintendo.
 3. 21.3–23.5 s: the hold on the freeze card: a held breath, not a joke sting.
 4. 25–26.8 s: the whole A-flat pass cut dead by THUD 1: a cut-off, not a glitch. Then the pedal: does the suspense grow by layers without ever doubling a thud?
-5. 45–55 s: the knee on dry piano, a register up each time, into the intro's own F5. Does it read as one line across the cut, and does the 11 LU drop read as a smash rather than a dropout?
+5. 45–55 s: the knee on dry piano, a register up each time, into the intro's own F5. Does it read as one line across the cut, and does the drop (−11.6 dB over 200 ms in the mix, Ep1's size since the cleanup pass) read as a smash rather than a dropout?
 
 ## Rules checked
 
@@ -121,3 +121,12 @@ The render takes about 20 s through `heavy.sh`. After any re-lock, re-render: ev
 - **Broken on purpose:** the four calls above.
 
 **Resource ask (R16, non-blocking):** one human listen of the five points above, with the SFX laid (the thuds' pitch against the pedal is the main unknown).
+
+## The cleanup pass (2026-10-11)
+
+**The finding:** on the film the cold open → intro seam stepped down −14.8 dB over 200 ms (−16.0 → −30.8 dBFS RMS), against Ep1's aired −11.3 / −11.7: the smash landed about 3 dB harder into the intro's quiet head than Ep1's did. The 200 ms before the cut are the knee's note 4 alone (the score's −18.2 dBFS there, the room −39, no SFX, no line).
+
+**The change** (`track.py`, the out): note 4's dry F5 velocity 0.28 → **0.18** and its chip F6 0.15 → **0.095** (the engine's velocity curve is not linear: 0.20 / 0.107 gave −2.3 dB, so one more step). Nothing else moved; the rest of the stem differs only by the master's renormalisation (+0.01 dB). The intro's master (`audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav`, a byte copy of Ep1's) and `audio/intro/mix` are untouched.
+
+**Measured [M]:** the stem's last 200 ms −21.51 dBFS (was −18.23, −3.28 dB); 54.5–54.79 s and 0–54.7 s +0.01 dB. `check.py` 6/6 PASS (coldopen −20.03 LUFS-I, −3.15 dBTP, pocket p10 15.8, min 15.3). The mix (`mix_episode.py coldopen --variant el`): **−16.0 LUFS, −1.82 dBTP** (was −1.84), LRA 5.5, dialogue −14.18, gain +2.23 dB, 0 holes. **The seam**, measured as `qa.py` does (200 ms RMS either side, both channels) on a test join of the new mix with the intro master at the manifest's −3 dB: **tail −19.20 → head −30.82 dBFS, a −11.62 dB step** (was −14.85; Ep1 aired −11.3 / −11.7); 400 ms −12.0, 1 s −11.1; the sample jump 0.0009 (no de-click). Nothing heard [R8]: an ear should check that the smash still reads as a smash.
+

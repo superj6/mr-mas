@@ -6,6 +6,8 @@
 >
 > **What was looked at [J]:** native stills of every fixed beat between rounds (the step-out's in-betweens, DOT's swap step by step, the counter's payoff frame by frame, the doorway and the kick, the pages, the tip-back and the flyer, the signs, the MCU, the ECU), then 39 frames decoded from the rendered MP4 at 1080p and 20 more from the final render. Nothing was watched in real time or heard with its mix (R8).
 
+> **The cleanup pass (2026-10-11): no picture change.** The cold open's sound only: the knee's note 4 (the smash into the intro) is about 3 dB lighter in the score, so the seam steps down −11.6 dB over 200 ms (was −14.8; Ep1 aired −11.3 / −11.7). The picture, its scene cache and the contact sheet are unchanged; the lock now records its mix (`el_lock.sh coldopen` after the mix, as the other segments' do). The log: [fixes-v1.md](fixes-v1.md), "Cleanup pass, the cold open, the intro and Act One"; the score: `audio/ost/tracks/e02-v1-coldopen/README.md`, "The cleanup pass".
+
 **Contents:** [1. The shots](#1-the-shots) · [2. The 2.A leap: the Runway take](#2-the-2a-leap-the-runway-take) · [3. Fixed after looking](#3-fixed-after-looking) · [4. Where this departs from the plan, and why](#4-where-this-departs-from-the-plan-and-why) · [5. Weak, or for a human to check](#5-weak-or-for-a-human-to-check) · [6. Re-running](#6-re-running) · [7. Rules checked](#7-rules-checked) · [8. Files](#8-files)
 
 ---

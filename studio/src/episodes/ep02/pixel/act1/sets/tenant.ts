@@ -28,7 +28,8 @@ import {SUIT} from '../../../../../shared/pixel/cast/civic-kit';
 import type {HumanistBust} from '../../art/cast/humanist';
 import {seatedStaff, staffChair} from '../../art/cast/civic2';
 import {SECTION_H, FLOORS} from '../../art/sets/cutaway';
-import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
+import {placeHand, drawHand, sleeve, POSES, skinDown} from '../../art/cast/hands2';
+import type {V3} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, dith} from '../../art/kit';
 import {RH, W, isSkin} from './common';
 
@@ -138,6 +139,7 @@ export const basement = (b: Buf, f: number, st: BasementSt = {}) => {
     drawHand(b, h.hand, h.x, h.y);
   }
   drawTasyaMedium(b, 350, 92, {...TASYA_MEDIUM_DEFAULT, arm: 'ring', ...st.tasya}, {flip: true});
+  ringHand(b);
   // (the 'ring' arm's far hand is a stamp whose arm is hidden behind his coat: it floated as a skin dot on the coat;
   // his far hand is in his pocket, the coat over it)
   { const fx = 350 + 84 - 1 - 64, fy = 92 + 100; for (let y = fy - 4; y <= fy + 4; y++) for (let x = fx - 4; x <= fx + 4; x++) { if (isSkin(b.get(x, y))) b.set(x, y, b.get(fx + 6, fy - 8)); } }
@@ -184,7 +186,9 @@ export const tasyaMCU = (b: Buf, f: number, st: {mouth: Viseme; lid?: 0 | 1 | 2}
   }
   // the bulb's cord at the top left (the light's source)
   line(96, 0, 96, 10, b.ink(PAL.N2)); ellipse(96, 13, 2, 3, b.ink(PAL.W8)); b.set(95, 12, PAL.W9);
-  const img = tasyaRoomPortrait({mouth: st.mouth, lid: st.lid ?? 0, brow: 'warm', arms: 'clasp', jangle: 0});
+  // (the cleanup pass, 2026-10-11: the portrait's 'clasp' was a 22 x 10 pale lozenge at his chest, its sleeves lost in
+  // his coat: no forearms, no wrists. The portrait is drawn without arms and his hands are drawn after the key below)
+  const img = tasyaRoomPortrait({mouth: st.mouth, lid: st.lid ?? 0, brow: 'warm', arms: 'none', jangle: 0});
   const X = 200, Y = 40;
   putBustCut(b, img, X, Y, RH, TASYA_FACES_LEFT ? false : true);
   // the key from the bulb (upper left): a step up on the skin toward it, a warm rim on its edge; the doorway's light a
@@ -198,8 +202,52 @@ export const tasyaMCU = (b: Buf, f: number, st: {mouth: Viseme; lid?: 0 | 1 | 2}
     b.set(x, y, !sk(x - 1, y) || !sk(x, y - 1) || !sk(x - 3, y) ? stepColor(c, 2) : stepColor(c, 1));
     if (!sk(x + 1, y) && x > X + 50) b.set(x, y, PAL.W6);
   }
+  claspHands(b);
   void f;
 };
+/** his coat's sleeve ([outline, shadow, mid, lit, rim]: the portrait's blazer ramp) and his grey shirt's cuff (7 tones,
+ *  shadow .. rim, for the insert-hands renderer) */
+const TASYA_SLEEVE = [PAL.N0, PAL.N1, PAL.N3, PAL.N4, PAL.C4];
+const TASYA_CUFF = [PAL.N1, PAL.G2, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6];
+/** a forearm in his coat from the elbow (below the frame, at his side) to the hand's cuff: a dark outline so it reads in
+ *  front of his coat, never merged with it, its plane a rung over the coat's and a teal rim toward the bulb (the
+ *  coat's own rim colour) (the Humanist's armUp, in Tasya's coat) */
+const coatArm = (b: Buf, elbow: [number, number], cuff: [number, number], r0: number, r1: number) => {
+  sleeve(b, elbow, cuff, r0 + 1, r1 + 1, [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], [-0.55, -0.83], {fold: false});
+  sleeve(b, elbow, cuff, r0, r1, TASYA_SLEEVE, [-0.55, -0.83], {fold: false});
+};
+/** 7.03: his hands clasped at his chest, whole hands at his own scale (the insert-hands renderer, as the Humanist's
+ *  "people first" in 7.04): the forearms rise from elbows at his sides below the frame, each hand on its forearm's line
+ *  turned in toward the other, his right hand (screen-left) over his left, the fingers laced, the backs to us, lit from
+ *  the bulb at the upper left; his skin a rung deeper than the renderer's (his face's) and a short grey shirt cuff */
+const claspHands = (b: Buf) => {
+  const S = TASYA_HAND_S, KEY: [number, number, number] = [-0.45, -0.6, 0.66];
+  const o = {s: S, anchor: 'wrist' as const, light: 'lobby' as const, key: KEY, cuffRamp: TASYA_CUFF, skinMap: skinDown(1)};
+  const hand = (fwd: V3, back: V3, side: 'R' | 'L', wrap: number) => ({...POSES.grip(fwd, back, side, wrap), cuff: 1.8, cuffR: 2.6});
+  const hl = placeHand(hand([-0.72, -0.62, 0.3], [-0.2, -0.32, 0.93], 'L', 0.7), {...o, at: CLASP.wl});
+  const hr = placeHand(hand([0.72, -0.62, 0.3], [0.2, -0.32, 0.93], 'R', 0.62), {...o, at: CLASP.wr});
+  coatArm(b, CLASP.el, hl.cuffEnd, 10, 8);
+  drawHand(b, hl.hand, hl.x, hl.y);
+  coatArm(b, CLASP.er, hr.cuffEnd, 10, 8);
+  drawHand(b, hr.hand, hr.x, hr.y);
+};
+/** the elbows (below the frame, at his sides) and the wrists */
+const CLASP = {er: [220, RH + 30] as [number, number], wr: [246, 180] as [number, number], el: [304, RH + 30] as [number, number], wl: [278, 181] as [number, number]};
+/** the basement 2S (7.02, 7.04, 7.06): the medium rig's 'ring' arm folds its forearm back up its upper arm in his navy,
+ *  and its hand stamp is lost under the ring (the ring held up by a stump). The forearm is drawn in front, from the
+ *  elbow at his side up to the wrist under the ring, outlined, its plane a rung up and lit toward the bulb, and a whole
+ *  hand at his medium scale (the insert-hands renderer at half the MCU's) closed round the ring's lower bar, the keys
+ *  hanging past it (the cleanup pass, 2026-10-11) */
+const RING_HAND = {elbow: [417, 172] as [number, number], wrist: [412, 158] as [number, number]};
+const TASYA_SLEEVE_M = [PAL.N0, PAL.N3, PAL.N4, PAL.N5, PAL.N7];
+const ringHand = (b: Buf) => {
+  const h = placeHand({...POSES.grip([-0.08, -0.98, 0.18], [0.35, -0.1, 0.93], 'L', 0.66), cuff: 1.8, cuffR: 2.6}, {s: TASYA_HAND_S / 2, at: RING_HAND.wrist, anchor: 'wrist', light: 'lobby', key: [-0.45, -0.6, 0.66], cuffRamp: TASYA_CUFF, skinMap: skinDown(1)});
+  sleeve(b, RING_HAND.elbow, h.cuffEnd, 5, 4.5, [PAL.N0, PAL.N0, PAL.N0, PAL.N0, PAL.N0], [-0.55, -0.83], {fold: false});
+  sleeve(b, RING_HAND.elbow, h.cuffEnd, 4, 3.5, TASYA_SLEEVE_M, [-0.55, -0.83], {fold: false});
+  drawHand(b, h.hand, h.x, h.y);
+};
+/** px per cm for his hands at the MCU's scale (his face about 66 px chin to crown) */
+const TASYA_HAND_S = 2.5;
 /** which way the approved portrait faces (it is authored facing screen-left, toward Mas in Ep1's lobby) */
 const TASYA_FACES_LEFT = true;
 

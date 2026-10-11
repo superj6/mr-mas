@@ -87,7 +87,7 @@ L.add('4.03', {
 
 // ------------------------------------------------------------------ 4.04 ghost 1 rises; Yup
 L.add('4.04', {
-  st: 'act1/sets/seance room with ghost 1 (art/sets/seance drawGhost: an email thread of translucent reply chevrons in the 2.G spirit-photo screen) rising out of the board, its header FROM: ALYI · JAN 2016 and its words "…IT WILL MAKE SENSE TO START BEING LESS OPEN." held to read; beneath it the 2016 GHOST-NOLE unfurls (drawGhostNole), RE: · 2016 / "YUP.", his room-scale mouth on Yup; Mas looks up at it',
+  st: 'act1/sets/seance room with ghost 1 (art/sets/seance drawGhost: an email thread of translucent reply chevrons in the 2.G spirit-photo screen) rising out of the board, its header FROM: ALYI · JAN 2016 and its words "…IT WILL MAKE SENSE TO START BEING LESS OPEN." held to read; beneath it the 2016 GHOST-NOLE unfurls (drawGhostNole), RE: NOLE · 2016 / "YUP", his room-scale mouth on Yup; Mas looks up at it',
   face: {'GHOST-NOLE': 'room'},
   draw: (fb, k, sh, f) => {
     const rise = Math.min(1, on2(Math.max(0, k - 2)) / 10);

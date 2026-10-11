@@ -404,15 +404,19 @@ def cue_mammoth(tl):
 
     # ================================================================ 6 · THE OUT: the knee's flat line on dry piano
     regs = [['F2'], ['F3'], ['F4'], ['F5']]          # (a dry F1 under it read as an A3 resonance: its 5th partial)
-    vels = [0.4, 0.36, 0.25, 0.28]                   # lighter as they climb: the intro opens on a quiet felt F5
+    # lighter as they climb: the intro opens on a quiet felt F5. The cleanup pass (2026-10-11): note 4 (and its chip)
+    # about 3 dB under the first build's 0.28 / 0.15, so the smash into the intro's quiet head steps down by about Ep1's
+    # amount (the film measured -14.8 dB over 200 ms at the seam; Ep1 aired -11.3 / -11.7)
+    vels = [0.4, 0.36, 0.25, 0.18]
     chip = [None, ('F4', 0.5), ('F5', 0.25), ('F6', 0.125)]
+    chip_vel = (0.2, 0.13, 0.095)
     for i, t in enumerate(knee):
         nxt = knee[i + 1] if i + 1 < 4 else end + 0.6
         for j, p in enumerate(regs[i]):
             c.n('dry', p, t, nxt - t + 0.25, vels[i])
         if chip[i]:
             p, duty = chip[i]
-            c.n('lead2', p, t, 0.16 if duty > 0.2 else 0.12, (0.2, 0.13, 0.15)[i - 1], True, duty=duty, att=0.002,
+            c.n('lead2', p, t, 0.16 if duty > 0.2 else 0.12, chip_vel[i - 1], True, duty=duty, att=0.002,
                 dec=0.08, sus=0.25, rel=0.12)
     c.n('sub', 'F1', thud4, 1.4, 0.3, True, punch=0.5, click=0.0, decay=1.8)
     # the pedal resolves: C -> F, a soft arco F2 that swells in after the THUD's attack and holds to the smash, so

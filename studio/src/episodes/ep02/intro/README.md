@@ -1,6 +1,6 @@
 # Ep2's intro variant (`intro-ep2`)
 
-**Status (2026-10-10, revised the same day): built, rendered, looked at full size, flash-checked.** Nobody has watched or listened to it yet [R8].
+**Status (2026-10-10, revised the same day; the cleanup pass 2026-10-11): built, rendered, looked at full size, flash-checked.** Nobody has watched or listened to it yet [R8].
 
 **The ask:** pipeline.md §8.3 and [show/episodes/ep02/intro-slot.md](../../../../../show/episodes/ep02/intro-slot.md): spoiler-safe changes, nothing from this episode's plot (LEARNINGS W3, M1). **The showrunner's correction (2026-10-10, pipeline.md §8.6):** the typed quote stays "near the singularity; unclear which side." in every episode, so the cold-open line is Ep1's again. The first build's "her" and its typing indicator are gone.
 
@@ -23,6 +23,8 @@
 | 4 | Couch gag | the `CTRL` keycap | **`ESC`**, hand-pixelled on the same 14 × 4 face in CTRL's lettering | `EP2_SLOT.keycap`; `dev/mdinner1/props.ts` |
 | 5 | Roll call | — | unchanged | — |
 | — | The Orb's toast | `verified: human` | unchanged | — |
+| — | The mouse pointer (the cleanup pass) | idles on the chart's curve while he types (f30-105), and on the curve again in the bookend (f705-718) | **hidden while he types** (as a desktop hides it); it shows when his hand takes the mouse (f106) and travels to Post as in Ep1; in the bookend it **rests on Post**, where his click left it (LEARNINGS P6) | `moments.ts` |
+| — | Alyi's card (the cleanup pass) | fine print `PRODUCTS: 0 · EFFIGIES: 1` | **`EFFIGIES: 1`** alone (nothing may hint why Alyi left; `PRODUCTS: 0` pointed at a products reading); the plate fits its longest line, now his tagline | `moments.ts` |
 
 ## How it's built
 
@@ -36,6 +38,7 @@
   - `dev/mfinale`: `title.ts` (`titleAfter(…, sub)`), `bookend.ts` (`BookSlot`; the title thumbnail is cached per subtitle) and `scene.ts` (`makeMfinaleScene`, `localScene(start, slot)`).
 - This folder holds:
   - `slot.ts`: `EP2_SLOT`.
+  - `moments.ts` (the cleanup pass, 2026-10-11): `scenesEp2(slot)`, which is `scenesFor(slot)` with Ep2's own three changes made in Ep2's code, so no shared moment changes: the cold open's pointer hidden while he types (the medium shot's screen pixels under the pointer put back, f30-105), the bookend's pointer on Post (with the fly-up's cover and the dissolve's dither applied as `bookend.ts` applies them), and Alyi's card (a copy of `dev/mdinner1/cards.ts drawAlyiCard` and of mdinner1's UI layer, with the engine card's `fine` override). `IntroEp2.tsx` and `tools/preview.ts` cut from it.
   - `IntroEp2.tsx`, `frames.ts`, `entry.tsx`: the `intro-ep2` composition. It is not a `*.frame.tsx`, so it stays out of `src/Root.tsx`.
   - `tools/master.sh`: Ep1's master settings, with the composition and the output path as arguments. It refuses `out/season/`.
   - `tools/preview.ts`: a Node preview plus native-frame hashes.
@@ -80,6 +83,22 @@ To make another episode's intro, write its `IntroSlot` beside its own compositio
 - The keycap: f250 and f254 (ESC in Mas's hand, legible as E-S-C when cropped); the subtitle: f646 and f660 (centred under the wordmark); the bookend: f700, f710 and f716 (the composer's f0 state with the dot at 0.55, the toast). These are unchanged by the revision.
 - `intro_flashfix.py`'s repo root was one level short; that pass fixed it (7 up, not 6).
 
+## The cleanup pass (2026-10-11)
+
+The episode review's minors on the intro: a free arrow pointer idling on the `you are here` curve while both his hands are on the keyboard (00:55:23-00:58), and `PRODUCTS: 0` on Alyi's card. It also said the variant types this episode's own "her" post: **it does not** (checked: the typed quote is Ep1's, "near the singularity; unclear which side.", unchanged, f18-83 and the Post chips; nothing else types or posts "her"; the film's f1430 shows Ep1's line), so nothing was changed for it. Re-rendered by the method above (`master.sh`, `intro_flashfix.py`, `flash_seg.py`), the events re-exported (two event texts: the pointer, the card's fine print), the review mux re-made [M]:
+- **Native frames against the previous build** (`tools/preview.ts` hashes, all 720): **109 differ, exactly the changed ones**: f30-59, 72-98 and 105 (the idle pointer gone), f303-339 (the card's plate and fine print), f705-718 (the pointer on Post; f719 is black under the dissolve).
+- **The encoded file:** 720 frames, 24 fps, 1920 × 1080, 30.000 s (the length unchanged). Against the previous encode, decoded: pixels off by more than 40 levels only in those 109 frames; elsewhere encoder noise (mean |diff| ≤ 0.044) and the GLYPH scan's browser glyphs (f100-104, as noted above).
+- **Flashes:** 1 a second at most, 0 red: pass (limit 3).
+- **The sound is unchanged:** `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav` sha1 `c7915e1a…`, byte-identical to Ep1's aired master; the review mux carries it at 0 dB as before.
+- **Ep1 untouched:** every file under `out/season/intro/` and `audio/intro/mix/` keeps its sha1; no shared code changed (`src/dev`, `src/intro`, `src/shared` clean).
+- **Looked at full size [J]:** f40, f106, f110 (the pointer appears with his hand on the mouse), f325 (the card), f705, f709, f715 (the bookend, the dissolve) native; f50, f330, f712 from the MP4.
+
+```sh
+(cd studio && node_modules/.bin/esbuild src/episodes/ep02/intro/tools/preview.ts --bundle --platform=node --outfile=$S/ip.js --log-level=error \
+   --loader:.woff2=empty --loader:.woff=empty --loader:.css=empty --loader:.ttf=empty --loader:.png=empty)   # (the font loaders: the bundle needs them)
+node $S/ip.js $S 4 ep2 frame:40 frame:106 frame:325 frame:709 && node $S/ip.js $S 4 ep2 hash:0-719 > $S/hash.json
+```
+
 ## Open, and for a human
 
-- **A watch and a listen.** In particular, whether ESC reads at speed.
+- **A watch and a listen.** In particular, whether ESC reads at speed, and whether the pointer showing at f106 with his hand reads as him taking the mouse.

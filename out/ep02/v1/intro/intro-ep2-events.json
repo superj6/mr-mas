@@ -1,6 +1,6 @@
 {
  "title": "MR. MAS — intro-ep2 picture events (as built; Ep1's export with the Ep2 slot applied)",
- "version": "2026-10-10",
+ "version": "2026-10-11",
  "composition": "intro-ep2",
  "fps": 24,
  "bpm": 96,
@@ -535,7 +535,7 @@
    "end": 111,
    "type": "acting",
    "moment": "mcoldopen",
-   "what": "mouse pointer travels to Post (on 2s)",
+   "what": "mouse pointer travels to Post (on 2s; Ep2: hidden while he types, it shows when his hand takes the mouse, and rests on Post in the bookend)",
    "src": "studio/src/dev/mcoldopen/timeline.ts EV.pointer"
   },
   {
@@ -986,7 +986,7 @@
    "end": 341,
    "type": "card",
    "moment": "mdinner1",
-   "what": "ALYI name card: stained-glass lancet drops in 4 held drawings (300-303, 3-px overshoot), name 303, tagline from 305, fine print PRODUCTS: 0 · EFFIGIES: 1 from 314; token eyes from 315; the world stays frozen through the marshmallow gag; closes in 2 steps on the thaw (340-341, back up)",
+   "what": "ALYI name card: stained-glass lancet drops in 4 held drawings (300-303, 3-px overshoot), name 303, tagline from 305, fine print EFFIGIES: 1 from 314; token eyes from 315; the world stays frozen through the marshmallow gag; closes in 2 steps on the thaw (340-341, back up)",
    "src": "studio/src/dev/mdinner1/timeline.ts FREEZE_A / studio/src/shared/pixel/freeze.ts founderCard (plate k3, rule k4, tagline k5+ at 2 ch/f)",
    "script": "300-341"
   },
