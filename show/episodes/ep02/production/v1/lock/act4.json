@@ -1447,11 +1447,6 @@
      "text": "SAFETY COMMITTEE",
      "s": 6,
      "e": 84
-    },
-    {
-     "text": "212",
-     "s": 42,
-     "e": 84
     }
    ],
    "lines": [],
@@ -1467,7 +1462,7 @@
    "frame": "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "cls": "M",
    "move": "hold",
-   "does": "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel; it's printed on page 212 of a Mario draft. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
+   "does": "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
    "chars": [
     "adelina",
     "ekiel",
@@ -1500,7 +1495,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel; it's printed on page 212 of a Mario draft. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
+   "caption": "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
    "cast": [
     {
      "id": "terb",
@@ -1539,7 +1534,7 @@
    "beat_starts": {
     "18.07": 0
    },
-   "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action.",
+   "picture": "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action. (The cleanup pass, 2026-10-11: the card's 212, a page of a Mario draft that nothing on screen explained, is off it; the card is a plain page.)",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1549,13 +1544,6 @@
      "kind": "sign",
      "text": "SAFETY COMMITTEE",
      "s": 6,
-     "e": 84,
-     "must": true
-    },
-    {
-     "kind": "doc",
-     "text": "212",
-     "s": 42,
      "e": 84,
      "must": true
     }
@@ -2683,7 +2671,13 @@
    ],
    "s": 1535,
    "e": 1736,
-   "onscreen": [],
+   "onscreen": [
+    {
+     "text": "MARIO · EX-NOPEAI",
+     "s": 4,
+     "e": 62
+    }
+   ],
    "lines": [
     {
      "id": "e2-a4-0009",
@@ -3124,12 +3118,25 @@
    "beat_starts": {
     "18.11": 0
    },
-   "picture": "The lighthouse always plays beside Mas's pane.",
-   "names": [],
+   "picture": "The lighthouse always plays beside Mas's pane. His plate on his first close shot, Ep1's own wording (11.03: MARIO · EX-NOPEAI; the cleanup pass, 2026-10-11: Ep2 never named him before \"Come in, Ekiel\").",
+   "names": [
+    {
+     "id": "mario",
+     "k": 4
+    }
+   ],
    "fg": null,
    "marks": {},
    "mark_src": {},
-   "texts": [],
+   "texts": [
+    {
+     "kind": "plate",
+     "text": "MARIO · EX-NOPEAI",
+     "s": 4,
+     "e": 62,
+     "must": true
+    }
+   ],
    "tc_in": "18:33:23",
    "tc_out": "18:42:08",
    "frames": 201
@@ -8308,6 +8315,11 @@
      "text": "UPSIDE",
      "s": 5,
      "e": 36
+    },
+    {
+     "text": "SEP",
+     "s": 84,
+     "e": 117
     }
    ],
    "lines": [
@@ -8388,10 +8400,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
+   "frame": "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas → INSERT · his shoe stops the tape; he writes SEP beside UPSIDE",
    "cls": "W",
    "move": "cut",
-   "does": "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
+   "does": "HARAS passes, her calculator tape trailing, UPSIDE circled on it. As it slides past, Mas stops it under his shoe and writes a date beside her word: SEP. The tape slides on with it.",
    "chars": [
     "haras",
     "mas"
@@ -8408,7 +8420,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
+   "caption": "HARAS passes, her calculator tape trailing, UPSIDE circled on it. As it slides past, Mas stops it under his shoe and writes a date beside her word: SEP. The tape slides on with it.",
    "cast": [
     {
      "id": "haras",
@@ -8431,7 +8443,7 @@
    "beat_starts": {
     "20.07": 0
    },
-   "picture": "The V.O. after the note's insert has cleared, before the docket.",
+   "picture": "The V.O. after the note's insert has cleared, before the docket. (The cleanup pass, 2026-10-11: the V.O.'s move made an action on screen, inside the shot, no sound of its own; the shoe is 17.11's, that stood on the receipt.)",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8442,6 +8454,13 @@
      "text": "UPSIDE",
      "s": 5,
      "e": 36,
+     "must": true
+    },
+    {
+     "kind": "doc",
+     "text": "SEP",
+     "s": 84,
+     "e": 117,
      "must": true
     }
    ],
@@ -14730,7 +14749,7 @@
    "e": 1634,
    "hold_to": 1639,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
    "kind": "dialogue",
    "mode": "on-mic",
@@ -14754,7 +14773,7 @@
    "e": 1729,
    "hold_to": 1741,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "Lightly. Four pages.",
    "kind": "dialogue",
    "mode": "on-mic",
@@ -14766,7 +14785,7 @@
    "e": 1910,
    "hold_to": 1922,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "We agree. I underlined 'inherently.'",
    "kind": "dialogue",
    "mode": "on-mic",
@@ -14778,7 +14797,7 @@
    "e": 1996,
    "hold_to": 2008,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "There's a brief document.",
    "kind": "dialogue",
    "mode": "on-mic",
@@ -14802,7 +14821,7 @@
    "e": 2154,
    "hold_to": 2165,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "That's the brief one. It only has the one concern.",
    "kind": "dialogue",
    "mode": "on-mic",
@@ -14814,7 +14833,7 @@
    "e": 2201,
    "hold_to": 2213,
    "who": "MARIO",
-   "shown": "MISANTHROPIC",
+   "shown": "MARIO",
    "text": "It's that we might win.",
    "kind": "dialogue",
    "mode": "on-mic",

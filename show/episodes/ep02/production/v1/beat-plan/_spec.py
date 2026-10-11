@@ -2290,9 +2290,9 @@ nb("act4", "18.06", "MCU · the TV off on the cut; Mas at the table holds still 
    sounds=[S("tv_click_off", 0.05, -22, new=True)], fix=("P", "GR"), why="A held breath.")
 nb("act4", "18.07", "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "adelina", "ekiel"],
-   "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel; it's printed on page 212 of a Mario draft. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
-   "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action.", dur=3.6,
-   onscreen=[O("SAFETY COMMITTEE", 0.3, None, "sign"), O("212", 1.8, None, "doc")], music=M18,
+   "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
+   "The split (two 238 × 203 panes, a 4 px divider). The rhyme on one action. (The cleanup pass, 2026-10-11: the card's 212, a page of a Mario draft that nothing on screen explained, is off it; the card is a plain page.)", dur=3.6,
+   onscreen=[O("SAFETY COMMITTEE", 0.3, None, "sign")], music=M18,
    sounds=[S("lanyard_drop", 1.8, -24, new=True), S("lanyard_drop", 1.85, -26, new=True)], fix=("P", "R1"),
    why="Mas takes the lanyard himself (A2).")
 nb("act4", "18.08", "LEFT pane (the right pane steps down a rung): Terb on the committee's first task, then the question round the table",
@@ -2315,8 +2315,9 @@ nb("act4", "18.10", "LEFT pane: Terb's next line; the table turns to Mas again; 
 nb("act4", "18.11", "RIGHT pane (the left pane steps down and holds): Mario at his desk by the lamp, writing; Ekiel in his new lanyard",
    "lighthouse", "SET-18", "split_lighthouse", ["mario", "ekiel"],
    "RIGHT: MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.",
-   "The lighthouse always plays beside Mas's pane.",
+   "The lighthouse always plays beside Mas's pane. His plate on his first close shot, Ep1's own wording (11.03: MARIO · EX-NOPEAI; the cleanup pass, 2026-10-11: Ep2 never named him before \"Come in, Ekiel\").",
    lines=[line("e2-a4-0009"), line("e2-a4-0010", 0.25, QUICK), line("e2-a4-0011", 0.2, QUICK)], head=0.5, tail=0.3, music=M18R,
+   onscreen=[O("MARIO · EX-NOPEAI", 0.2, 2.6, "plate")],
    fix=("P", "R2", "PACE"), why="Mario schemes: build the careful one out of the careful people who leave.")
 nb("act4", "18.12", "ECU insert · Mario's page: one line highlighted in yellow, readable at 1080p",
    "lighthouse", "SET-17", "lighthouse", ["mario"],
@@ -2545,11 +2546,11 @@ nb("act4", "20.06", "ECU · his fingers find the yellowed corner of the old note
    "His fingers find something already in there: the yellowed corner of the old note. No words legible.",
    "1 s; away from Alyi and from every compute line (D-62).", dur=1.2, fixed=("dur",), music="E02-11 · the quartet's pedal",
    sounds=[S("cloth_rustle", 0.1, -28)], fix=("P", "FC", "GR"), why="The note's last sight in Ep2 (Ep11 pays it).")
-nb("act4", "20.07", "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas",
+nb("act4", "20.07", "WIDE · Haras passes, her tape trailing, UPSIDE circled on it; Mas → INSERT · his shoe stops the tape; he writes SEP beside UPSIDE",
    "lobby", "SET-01", "lobby_morning", ["haras", "mas"],
-   "HARAS passes, her calculator tape trailing, UPSIDE circled on it.",
-   "The V.O. after the note's insert has cleared, before the docket.", lines=[line("e2-vo-13")], head=1.0, tail=0.4,
-   onscreen=[O("UPSIDE", 0.2, "L:e2-vo-13+0.5", "doc")], music="E02-11 · the quartet's pedal", fix=("P", "VO", "R2", "SR"), why="V.O. 13: the money behind the next model; she has till the raise.")
+   "HARAS passes, her calculator tape trailing, UPSIDE circled on it. As it slides past, Mas stops it under his shoe and writes a date beside her word: SEP. The tape slides on with it.",
+   "The V.O. after the note's insert has cleared, before the docket. (The cleanup pass, 2026-10-11: the V.O.'s move made an action on screen, inside the shot, no sound of its own; the shoe is 17.11's, that stood on the receipt.)", lines=[line("e2-vo-13")], head=1.0, tail=0.4,
+   onscreen=[O("UPSIDE", 0.2, "L:e2-vo-13+0.5", "doc"), O("SEP", "L:e2-vo-13+2.5", None, "doc")], music="E02-11 · the quartet's pedal", fix=("P", "VO", "R2", "SR"), why="V.O. 13: the money behind the next model; she has till the raise.")
 nb("act4", "20.08", "ECU · full frame: the complaint in the middle of the floor, coffee cups on it; its docket tab",
    "lobby", "SET-01", "lobby_morning", [],
    "In the middle of the floor, the complaint has sat since February, coffee cups on it. Its docket tab.",

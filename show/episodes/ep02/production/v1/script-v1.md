@@ -1437,7 +1437,7 @@ First item. `[INVENTED · e2-a4-0003]`
 
 *No V.O. through the podcast, the card or his face.*
 
-`[M]` → SPLIT [18.07] (≈ 3.5 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel; it's printed on page `212` of a Mario draft. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
+`[M]` → SPLIT [18.07] (≈ 3.5 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
 
 LEFT *(the right pane steps down a rung)*. [18.08] (≈ 12.5 s)
 
@@ -1471,7 +1471,7 @@ the next one's already training. `[INVENTED · V.O. 11, plan: the next model; ne
 
 TEMPO · quick (Terb, 0.25 s, his roll call and his next line); "present." after the table's two-beat hold (1.25 s: the HOLD 2 BEATS above, a GUIDE break of Mas's 0.45–0.6 s that the scene designs), "also present." at 0.6 s; the V.O. weighted, after the hold (2.3 s).
 
-RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.3 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
+RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.3 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard. His plate: `MARIO · EX-NOPEAI` (Ep1's own, 11.03).
 
 **MARIO** *(still writing; warm and precise)*\
 Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes. `[INVENTED · e2-a4-0009]`
@@ -1692,7 +1692,7 @@ SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.3 s) Inside the cage, his phone, lit, starts
 
 `[ECU]` [20.06] (≈ 1.2 s) His fingers find something already in there: the yellowed corner of the old note. No words legible.
 
-`[W]` [20.07] (≈ 4.9 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it.
+`[W]` [20.07] (≈ 4.9 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it. `[INSERT]` As it slides past, Mas stops it under his shoe and writes a date beside her word: `SEP`. The tape slides on with it.
 
 **MAS (V.O.)**\
 we raise in the fall. she has till then. `[INVENTED · V.O. 13, plan: the money behind the next model; "she" is Haras, in frame; true (Ep3's facts) · e2-vo-13]`
@@ -1903,7 +1903,7 @@ Every scene change and every inserted scene: cause · sound lead · matched obje
 
 **Rails** (23, every one a date only; the build fails any other word and checks the list against manifest §3): `FEB 15, 2024` · `FEB 29, 2024` · `MAR 5, 2024` · `FEB 20, 2018` · `MAR 8` · `MAR 19` (stamped on the key) · `APR 1, 2024` · `MAY 10` · `MAY 13, 2024` · `SEP 2023` (12.03's memory; the fixes pass) · `MAY 14, 2024` · `DEC 2022` · `2023` · `MAY 17, 2024` · `MAY 18` · `MAY 20` · `MAY 28, 2024` · `JUN 10, 2024` · `JUN 11` · `JUN 19, 2024` · `AUG 5` · `AUG 11` · `AUG 21`. No rail names an event; no rail tells the viewer what to think; none shares the screen with a V.O. line or a toast.
 
-**Cards** (2-TONE FREEZE, name plus one relation word, at least 45 s apart): `SELBEEP / DIRECTOR OF MAMMOTHS.` (1.05) · `XEL / ASKS THE LONG QUESTIONS.` (6.02) · `EKIEL / CO-LED THE SAFETY TEAM.` + `TITLES: 3` (14.09; the fixes pass: was `SQUINT: 100%`) · `THE FORECASTER / EX-NOPEAI.` (17.03). **Plates:** `NOLE · FUNDED IT. LEFT IT. SUING IT.` · `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` · `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` · `HARAS · FIRST CFO` · `REMUHCS · MAJORITY LEADER` · `SIRRAH` (on the rally photo) · the four nameplates (4A). **Toasts:** three verdicts (`verified: …`, `verified: 2008`, `verified: human (all of them)`) and nothing at the door. **No labels:** no `(REPORTED)`, no disclaimer, no hedge anywhere on screen.
+**Cards** (2-TONE FREEZE, name plus one relation word, at least 45 s apart): `SELBEEP / DIRECTOR OF MAMMOTHS.` (1.05) · `XEL / ASKS THE LONG QUESTIONS.` (6.02) · `EKIEL / CO-LED THE SAFETY TEAM.` + `TITLES: 3` (14.09; the fixes pass: was `SQUINT: 100%`) · `THE FORECASTER / EX-NOPEAI.` (17.03). **Plates:** `NOLE · FUNDED IT. LEFT IT. SUING IT.` · `THE HUMANIST · MACROSOFT'S NEW AI CHIEF` · `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` · `HARAS · FIRST CFO` · `MARIO · EX-NOPEAI` (18.11; the cleanup pass) · `REMUHCS · MAJORITY LEADER` · `SIRRAH` (on the rally photo) · the four nameplates (4A). **Toasts:** three verdicts (`verified: …`, `verified: 2008`, `verified: human (all of them)`) and nothing at the door. **No labels:** no `(REPORTED)`, no disclaimer, no hedge anywhere on screen.
 
 **Must-read real text**, held at least 0.25 s + 0.05 s a character (P15): every window is in the beat plan's `onscreen_items`, and the build checks each against its floor. The longest: his May 14 post (172 characters, 12.07), Nole's Jun 10 post (139, 20.02), the Superalignment sentence (133, 15.10), his Jun 10 post (126, 19.07), Ekiel's first post on the domino (92, 14.10). **The script check also holds the rails** (§8): every `RAIL` line here, in order, against the plan's.
 
@@ -2041,4 +2041,14 @@ The finishing round's four last fixes, made on the production team's own judgeme
 | 2 | 19.17, the garden | phrase 2: the flower beds, the raised hands, the text bubbles, IRIS at `99%` (10 s) | **cut**; the garden is the gate, the chatbot let in on its rope (`GUEST`), then Radnus; one phrase of the garden-party quartet | about 49 s with no line after "they let me hold the clicker."; the arrival was legible and slow, its eggs undecodable (the verify round). Act Four 5:19 → 5:09 |
 | 3 | 23.06, the lower third | "…having me speak… It's a little bit dangerous out there." (3.15 s) | **"…having me speak… perfectly on AI… It's a little bit dangerous out there."** (4.15 s; 23.06 +1.0 s, 23.07 −1.0 s) | cropped, "dangerous out there" could read as physical danger in summer 2024 (guardrail X4); the AI clause makes its subject the fakes (facts A69's verbatim fragments) |
 | 4 | 23.07–23.08, the description | "as if someone on the far side of the podium had just taken hold of it" | the balloon lifts the string straight up out of frame; nobody is behind the podium | the final fix round's restaging (X4); description only |
+
+## Cleanup pass (2026-10-11)
+
+Act Four's on-screen texts, changed with no timing change ([fixes-v1.md](fixes-v1.md), "Cleanup pass, Act Three, Act Four and the tag", has the checks):
+
+| # | Where | Was | Now | Why |
+|---|---|---|---|---|
+| 1 | 18.07–18.14, the committee lanyard | Ekiel's card printed on page `212` of a Mario draft (a lock text in 18.07) | a plain ruled page; the text is gone from the lock | nothing on screen said what 212 was, so it read as a number to decode |
+| 2 | 18.11, Mario | no plate in Ep2; nothing named him before "Come in, Ekiel" | **`MARIO · EX-NOPEAI`** for 2.4 s as he first speaks | Ep1's own plate (11.03), name plus one relation (W21) |
+| 3 | 20.07, V.O. 13 | "we raise in the fall. she has till then." over Haras passing; the move never on screen | an insert inside the shot: his shoe stops her tape and he writes **`SEP`** beside her `UPSIDE` | the plan made an action (W1, W5); the line, its timing and the sound are unchanged |
 

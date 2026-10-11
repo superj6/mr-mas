@@ -296,7 +296,7 @@ These faults were seen at full size and fixed. Each one was re-rendered and view
 - **The AROS filler** (§3b) is built in Blender, not with a video model or a browser 3D library. **Ask:** the showrunner approves its look from `out/ep02/v1/art/aros/`, or the 2.A owner drops in other frames (same rect).
 - **The text-fit report's last flags are all deliberate:** a beanbag staffer in front of the complaint's `!!!` (lobby-2), the planchette over the board's `X` (séance 1–2), the three hands resting over the letters (séance 3), the Humanist's head over the boxes' labels (cutaway 3), the fire eating `UNALIGNED` (offsite 2). [M: `stills/textfit.json`]
 - **Ep1's own rigs keep Ep1's faces.** Where Ep2 imports an Ep1 rig unchanged (Mas seated in the studio and the cutaway, Mas standing in the lobby, Tasya, Radnus, the Ep1 busts), their drawings are Ep1's. The Ep2 copies (`mas2.ts`, `alyi2.ts`, `f21/mas08.ts`) carry this pass's fixes.
-- **THE PODIUM's hill (SET-08).** The manifest says "copy the intro's podium hill (P01)". No hill-with-podium drawing exists in code: the intro's podium is the roll-call flash on black (`cast/rollcall.ts`). SET-08 draws a new dusk hill and shows the roll-call podium's gold from behind. **Ask:** confirm the look, or point to the P01 frame.
+- **THE PODIUM's hill (SET-08).** *(Superseded: the tag's final fix round, 2026-10-11, restaged 23.07-23.08 in the broadcast's own studio, guardrail X4; there is no hill in the picture.)* The manifest says "copy the intro's podium hill (P01)". No hill-with-podium drawing exists in code: the intro's podium is the roll-call flash on black (`cast/rollcall.ts`). SET-08 draws a new dusk hill and shows the roll-call podium's gold from behind. **Ask:** confirm the look, or point to the P01 frame.
 - **22.06's flap swing** needs in-between plates (§3). This is a few minutes of Blender work.
 - **SET-23 is still frames per shot.** The leap's motion is the pixel figures over locked plates. A camera move would need per-frame plates; the script supports that, but no frames were rendered.
 - **The typecheck** covered the art folder with a scoped tsconfig. The whole-studio typecheck was not run.
@@ -418,10 +418,10 @@ These faults were seen at full size and fixed. Each one was re-rendered and view
 | `set23-iss-5.png` | [MCU] 22.07 Mas at the shut flap, the face light one step |
 | `set23-iss-6.png` | [M] 22.08 the door and his raised hand (held two beats), then lowered |
 | `set23-iss-7.png` | [W] 22.09 he walks away the way he came: his back, small, crossing the lot; the cube doesn't change |
-| `set08-podium-1.png` | [POV] 23.06: the Aug 21 interview in a plain player: hands and tie only, the lower third "…having me speak… It's a little bit dangerous out there." |
-| `set08-podium-2.png` | [POV] 23.07: THE PODIUM on its hill, still facing away; the same hands pump up the chatbot balloon (dot eyes, no words, no sticker) |
-| `set08-podium-3.png` | [POV] 23.07: they tie it to the podium |
-| `set08-podium-4.png` | [POV] 23.08: the string goes taut, as if someone on the far side of the podium had just taken hold of it |
+| `set08-podium-1.png` | [POV] 23.06: the Aug 21 interview in a plain player: hands and tie only, the lower third "…having me speak… It's a little bit dangerous out there." (in the picture since the last fixes: "…having me speak… perfectly on AI… It's a little bit dangerous out there.") |
+| `set08-podium-2.png` | [POV] 23.07, the art pass's still (superseded in the picture: the tag's final fix round restaged 23.07-23.08, `tag/sets/screen.ts podiumPainter`): THE PODIUM, facing away, now in the broadcast's own studio, the camera where he stands; his hands low on the reading surface pinch a green toy party pump lying flat and the balloon's neck at its nozzle (dot eyes, no words, no sticker); no hill, no raised arm |
+| `set08-podium-3.png` | [POV] 23.07 (superseded as above): they tie its string to the podium's near ledge, his side, and the balloon floats above the far rim |
+| `set08-podium-4.png` | [POV] 23.08 (superseded as above): the balloon lifts; its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium |
 | `set08-podium-5.png` | [POV] 23.03-23.04: RUMPT's post and the rally photo (SIRRAH's plate, SUMMER 2024); the Orb's TERMINAL scan, verified: human (all of them); the egg in a background tab |
 | `set08-podium-6.png` | 23.01 the refiled complaint landed on his desk (the cover legible): FEDERAL COURT, the (FOR NOW) note crossed out |
 | `prop-posts-ui-1.png` | posts: her · Alyi's two crops · Mas's May 14 · Ekiel's · the apology's first trim · NopeAI's pause · his Jun 10 · Nole's · Alyi's Jun 19 + the ISS card |

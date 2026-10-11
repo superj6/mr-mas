@@ -46,7 +46,7 @@ L.add('15.01', {
   },
 });
 L.add('15.02', {
-  st: 'act3/sets/office phoneInHand + threadScreen ([ECU] his phone in his hand in the evening (the wrap grip, his thumb on its edge): the thread, Alyi\'s regret post from last November with three hearts under it, his, and below it Alyi\'s post from three days ago, both collapsed to their dates and first lines (NOV 20, 2023 · ♥ ♥ ♥ · MAY 14, 2024); his thumb scrolls it a step)',
+  st: 'act3/sets/office phoneInHand + threadScreen ([ECU] his phone in his hand in the evening (the wrap grip, his thumb on its edge): the thread, Alyi\'s regret post from last November with three hearts under it, his, and below it Alyi\'s post from three days ago, both collapsed to their dates and first lines (NOV 20, 2023 · ♥ ♥ ♥ · MAY 14, 2024; since the fixes pass only the May 14 post and his collapsed reply: sets/office threadScreen); his thumb scrolls it a step, the post stopping just under the app\'s thread bar (the cleanup pass, 2026-10-11: it ran up over the bar and cut it))',
   marks: {sc: ['snd', 'thumb_scroll', 1, 0]},
   draw: (fb, k, sh, f) => {
     const sc = mk(sh, 'sc', 6);

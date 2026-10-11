@@ -24,8 +24,8 @@ import {Buf, clamp} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {party, tvClose, harasGerg, onStream, gergCall, HARAS_SEAT} from '../sets/lobby';
 import {lawn, masLawn, phonePush, MAS_EDGE} from '../sets/campus';
-import {corner2006, matchClicker} from '../../art/sets/elppa';
-import {stage08, stageToss} from '../sets/f21';
+import {corner2006} from '../../art/sets/elppa';
+import {stage08, stageToss, matchClicker4} from '../sets/f21';
 import {gardenGate, gateReverse, phoneUnfold, outsideTruck, radnusMCU, masGuest} from '../sets/garden';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
@@ -168,8 +168,8 @@ L.add('19.14', {
   },
 });
 L.add('19.15', {
-  st: 'art/sets/elppa matchClicker ([ECU · MATCH] the clicker in his 2008 hand (EARLY-WEB16) becomes his 2024 phone in the same grip, his post from the lawn still on its screen)',
-  draw: (fb, k, sh, f) => { matchClicker(fb, f, {phone: k >= 40}); void sh; },
+  st: 'act4/sets/f21 matchClicker4 ([ECU · MATCH] the clicker in his 2008 hand (EARLY-WEB16) becomes his 2024 phone in the same grip, his post from the lawn still on its screen; the cleanup pass, 2026-10-11: the phone is held from behind, the fingertips past its far edge and the thumb on its near edge, so the post is whole (four fingers had lain across it))',
+  draw: (fb, k, sh, f) => { matchClicker4(fb, f, {phone: k >= 40}); void sh; },
 });
 // ------------------------------------------------------------------ 19.16-19.20 the walled garden
 L.add('19.16', {

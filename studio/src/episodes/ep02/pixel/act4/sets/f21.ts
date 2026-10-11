@@ -16,7 +16,9 @@ import {ERA08} from '../../art/f21/palettes';
 import {PAL} from '../../../../../shared/pixel/palette';
 import {bigText, bigTextWidth} from '../../../../../shared/pixel/font';
 import {draw2008, SCR, WING_X} from '../../art/f21/era2008';
-import {fill, pt, pw} from '../../art/kit';
+import {fill, pt, pw, vramp, RH} from '../../art/kit';
+import {holdPhone, handRig, renderHand, drawHand, sleeve} from '../../art/cast/hands2';
+import type {HandPose} from '../../art/cast/hands2';
 
 /** the GPS pin (2006 web red), its tip at (x, y): the same drawing as the 2006 end card's (art/sets/elppa gpsPin) */
 const gpsPin = (b: Buf, x: number, y: number) => { poly([x - 4, y - 10, x + 4, y - 10, x + 4, y - 6, x, y, x - 4, y - 6], b.ink(PAL.R2)); ellipse(x, y - 8, 4, 4, b.ink(PAL.R3)); fill(b, x - 1, y - 9, 2, 2, PAL.P2); };
@@ -165,4 +167,40 @@ export const stageToss = (b: Buf, k: number, c: number) => {
   if (z === 1) return;
   const cx = 296, cy = 168, sw = b.w / z, sh = 203 / z, ox = Math.round(cx - sw / 2), oy = Math.round(cy - sh / 2);
   for (let y = 0; y < 203; y++) for (let x = 0; x < b.w; x++) b.set(x, y, frame.get(clamp(ox + Math.floor(x / z), 0, b.w - 1), clamp(oy + Math.floor(y / z), 0, b.h - 1)));
+};
+
+// ================================================================== 19.15: the clicker -> the phone (the match)
+/** [ECU · MATCH] 19.15 (the cleanup pass, 2026-10-11; a copy of art/sets/elppa matchClicker, which other acts' stills
+ *  import, so it stays as it was): the 2008 clicker in his hand becomes his 2024 phone in the same grip. The clicker
+ *  is the art's drawing (the wrap: the fingers round its far edge, in front). The review found the phone held the same
+ *  way: four fingers lay across its face and hid his post from the lawn, which the match is for. Now the same hand,
+ *  posed the same, holds the phone from BEHIND: the fingers are drawn under the phone, so only their tips show past its
+ *  far edge, and the thumb rests on its near edge, below the post; the screen is the lawn post's own card (dark navy,
+ *  his avatar, `mas`, three lines), whole */
+const THUMB = ['tmeta', 'tprox', 'tdist', 'tn'];
+export const matchClicker4 = (b: Buf, f: number, st: {phone?: boolean} = {}) => {
+  vramp(b, 0, 0, 480, RH, st.phone ? [PAL.L2, PAL.L1, PAL.L1] : [PAL.N1, PAL.N3, PAL.N3]);
+  const r = st.phone ? {x: 196, y: 30, w: 110, h: 150} : {x: 212, y: 34, w: 84, h: 150};
+  const cuffRamp = [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.C4], sleeveRamp = [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.C4];
+  if (!st.phone) {
+    holdPhone(b, r, {side: 'R', grip: 'wrap', light: 'lobby', widthCm: 5.5, thumbAt: 0.45, sleeveTo: [520, 240], cuffRamp, sleeveRamp,
+      drawPhone: (bb) => { fill(bb, r.x, r.y, r.w, r.h, PAL.G4); fill(bb, r.x, r.y, r.w, 3, PAL.G6); fill(bb, r.x + r.w - 3, r.y, 3, r.h, PAL.G3); ellipse(r.x + 42, r.y + 34, 12, 12, bb.ink(PAL.R3)); fill(bb, r.x + 28, r.y + 64, 28, 10, PAL.G5); fill(bb, r.x + 28, r.y + 82, 28, 10, PAL.G5); }});
+    applyPalette(b, ERA08);
+    return;
+  }
+  // the wrap's own pose (hands2 holdPhone 'wrap', the same numbers), so the silhouette matches the clicker's
+  const s = r.w / 7.2, ta = 1.8;
+  const wx = r.x + r.w + 2.2 * s, wy = r.y + r.h - 3.0 * s;
+  const pose: HandPose = {side: 'R', wrist: [wx / s, wy / s, -1.7], fwd: [-1, -0.25, 0], back: [0, 0, -1], fingers: [0.62, 0.66, 0.7, 0.76], spread: 2, thumb: [6.6 - ta * 3.0, 3.2, -2.4], cuff: 4.5};
+  const hand = renderHand(handRig(pose), {s, w: b.w, h: b.h, ox: 0, oy: 0, light: 'lobby', cuffRamp});
+  sleeve(b, hand.cuffEnd, [520, 240], 3.2 * s, 3.2 * s * 1.15, sleeveRamp);
+  // the whole hand first (the fingers behind the phone: only their tips past its far edge stay in view) ...
+  drawHand(b, hand, 0, 0, {caps: (id) => !THUMB.includes(id)});
+  // ... the phone and its post ...
+  fill(b, r.x, r.y, r.w, r.h, PAL.N0); fill(b, r.x + 4, r.y + 6, r.w - 8, r.h - 12, PAL.N2);
+  fill(b, r.x + 10, r.y + 14, 90, 40, PAL.N3); fill(b, r.x + 10, r.y + 14, 90, 1, PAL.C5); fill(b, r.x + 14, r.y + 18, 10, 10, PAL.C4);
+  pt(b, 'mas', r.x + 28, r.y + 18, PAL.P2); for (let q = 0; q < 3; q++) fill(b, r.x + 14, r.y + 32 + q * 7, 80 - q * 18, 3, PAL.P1);
+  // ... then the thumb, in front only where it lies on the near edge's bezel (below the post)
+  drawHand(b, hand, 0, 0, {caps: (id) => THUMB.includes(id), clip: (x) => x >= r.x + r.w - 5});
+  void f;
 };

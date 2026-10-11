@@ -10,7 +10,8 @@
 //   MORNING  20.05 the divider slides away (the cage's bars -> the lobby's rack pillars): JUN 11, the confetti swept, the
 //            party coming down; Mas, at the back, peels his upside-down flyer off the pillar and folds it into his
 //            jacket; 20.06 his fingers find the old note's yellowed corner (no words, 1 s); 20.07 Haras passes, UPSIDE
-//            circled, V.O. 13 (lips still); 20.08 the docket tab, legible; 20.09 the rope, the cups lifted just in time,
+//            circled, V.O. 13 (lips still), and on "fall" the insert: his shoe stops her tape, he writes SEP beside
+//            UPSIDE (the cleanup pass); 20.08 the docket tab, legible; 20.09 the rope, the cups lifted just in time,
 //            the complaint rising out of frame, the clean rectangle, (FOR NOW) fluttering onto it (no THUD)
 //   JUN 19   20.10 a week later: the phone face down, lit; his hand turns it over: Alyi's post, its link card ISS;
 //            20.11 TPOOL still open behind it: the card lands on the old check-in pin and knocks it loose; 20.12 his
@@ -24,7 +25,7 @@ import {PAL} from '../../../../../shared/pixel/palette';
 import {splitAt} from '../sets/board';
 import {thinning, MAS_EDGE} from '../sets/campus';
 import {zaiPane, noleMCU, cageClose, emptyHands, noleMouth, ZAI} from '../sets/zai';
-import {morning, docket, pocketECU} from '../sets/lobby';
+import {morning, docket, pocketECU, tapeInsert} from '../sets/lobby';
 import {faceDown, phoneRead, masReading, flyerOut, mapECU, faceDownMatch} from '../sets/dark';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
@@ -113,12 +114,21 @@ L.add('20.06', {
   draw: (fb, k, sh, f) => { const r = mk(sh, 'rustle', 2); pocketECU(fb, f, {k: k < r + 4 ? 0 : k < r + 9 ? 1 : k < r + 18 ? 2 : 3}); },
 });
 L.add('20.07', {
-  st: 'act4/sets/lobby morning ([W] HARAS passes (art/cast/haras room, walking), her calculator tape trailing behind her, UPSIDE circled on it (legible); Mas at the back with his glass, the folded flyer in his jacket; V.O. 13 typed by the host, his lips still)',
+  st: 'act4/sets/lobby morning → tapeInsert ([W] HARAS passes (art/cast/haras room, walking), her calculator tape trailing behind her, UPSIDE circled on it (legible); Mas at the back with his glass, the folded flyer in his jacket; V.O. 13 typed by the host, his lips still; [INSERT] from above, on "fall": her tape sliding over the lobby floor, UPSIDE in its red ring; his sneaker (17.11\'s, that stood on the receipt) comes down on it and stops it; his hand comes in with a marker and writes SEP beside her word, underlines it, goes; his shoe lifts and the tape slides on with the date (the cleanup pass, 2026-10-11: the V.O.\'s move made an action on screen; no sound of its own))',
+  marks: {sep: ['txt', 'SEP', 'at', 0]},
   draw: (fb, k, sh, f) => {
     // (the review pass: her trailing tape and its UPSIDE tag struck through the typed V.O.; she passes and stops short
     // of the line's end, her tape behind her to the right, clear of it)
-    morning(fb, f, {mas: {peel: 3, arm: 'glass'}, haras: Math.round(400 - Math.min(k, 100) * 1.95)});
-    void sh;
+    // (the cleanup pass: the insert from "fall" (k 48), the writing on "she has till then.": the shoe down at k 58, the
+    // marker's S, E, P on held steps from the SEP text's window, the line under it; the release at k 104)
+    const cut = 48, sep = mk(sh, 'sep', 84);
+    if (k < cut) { morning(fb, f, {mas: {peel: 3, arm: 'glass'}, haras: Math.round(400 - Math.min(k, 100) * 1.95)}); return; }
+    const stop = 58, rel = 104, s0 = sep - 16;
+    const slide = k < stop ? (stop - k) * 4 : k < rel ? 0 : -(k - rel) * 3;
+    const shoe = (k < stop - 4 ? 0 : k < stop ? 1 : k < rel ? 2 : k < rel + 4 ? 1 : 0) as 0 | 1 | 2;
+    const hand = (k < s0 - 6 ? 0 : k < s0 - 2 ? 1 : k < sep + 12 ? 2 : k < sep + 16 ? 1 : 0) as 0 | 1 | 2;
+    const write = k < s0 ? 0 : k < s0 + 8 ? 1 : k < sep ? 2 : k < sep + 8 ? 3 : 4;
+    tapeInsert(fb, f, {slide, shoe, hand, write});
   },
 });
 L.add('20.08', {

@@ -5,9 +5,11 @@
 // except the insert plate's keyed gap, which is transparent so the layout's pixel room shows through it) and, where the
 // frame has one, the pixel figures' layer drawn by the scene module's own ISS_PLAN (scenes/sc-22.ts) at 4x nearest
 // (a figure's contact shadow is black at 30% alpha). Identical figure layers are written once. Keeping the contrast:
-// nothing is graded, rimmed or down-rezzed on either side.
+// nothing is graded, rimmed or down-rezzed on either side (the one exception, the cleanup pass: the ISS plate's own
+// pixels re-toned for legibility by iss_brass.py, below).
 // Writes (the PNGs git-ignored, the manifests tracked): out/ep02/v1/inserts/iss/rgba/<plate>.png · out/ep02/v1/inserts/iss/<shot>/manifest.json and
 // fig-<hash>.png. Build (light) and run (through ops/heavy.sh), from studio/:
+//   ../audio/.venv-casting/bin/python src/episodes/ep02/pixel/act4/tools/iss_brass.py      # the plate's brass stills first
 //   node src/episodes/ep02/pixel/tools/build.mjs --entry src/episodes/ep02/pixel/act4/tools/iss22-insert.ts $S/iss22.cjs
 //   ../ops/heavy.sh node $S/iss22.cjs
 import * as fs from 'fs';
@@ -42,16 +44,23 @@ const writeRGBA = (file, px, w, h) => {
 // ------------------------------------------------------------------ the plates, RGBA
 const KEYED = (r, g, b) => g > r + 50 && g > b + 50;
 const done = new Map();
+// (the cleanup pass, 2026-10-11: the ISS plate's dark-gold letters on gold barely read at 1080p) the stills the plate
+// is in are taken from act4/tools/iss_brass.py's re-tone, <name>-brass.png beside this pass's plates (the plate's own
+// pixels walked to polished brass and dark engraving; size and perspective the 3D's), their RGBA named -b1
+const BRASS = new Set(['plate', 'wide', 'mcu', 'knock', ...Array.from({length: 14}, (_, i) => `tilt_${String(14 + i).padStart(2, '0')}`)]);
 const plateRGBA = (name) => {
   if (done.has(name)) return done.get(name);
-  const src = SRC.map((d) => path.join(d, `${name}.png`)).find((p) => fs.existsSync(p));
+  const brass = BRASS.has(name) ? path.join(SRC[0], `${name}-brass.png`) : null;
+  if (brass && !fs.existsSync(brass)) throw new Error(`no ${path.relative(root, brass)}: run act4/tools/iss_brass.py first`);
+  const src = brass ?? SRC.map((d) => path.join(d, `${name}.png`)).find((p) => fs.existsSync(p));
   if (!src) throw new Error(`no plate ${name} in ${SRC.join(' or ')}`);
   // (the review pass, P15 FIRM: every pop at 80% white or less) the tilt's plates (the opening white is tilt_00, the
   // first frames after 20.13's dark phone) go through a soft knee: luma above 0.70 eases toward a 0.79 ceiling, the
   // colour kept (the RGB scaled with it); below the knee nothing changes, so tilt_27 still meets the art's wide plate
   // (its brightest pixel 0.773 -> 0.761). A safety level, not a grade match: the leap keeps its contrast.
   const cap = name.startsWith('tilt_');
-  const out = path.join(OUT, 'rgba', cap ? `${name}-c79.png` : `${name}.png`);
+  const tag = brass ? '-b1' : '';
+  const out = path.join(OUT, 'rgba', cap ? `${name}${tag}-c79.png` : `${name}${tag}.png`);
   if (!fs.existsSync(out) || fs.statSync(out).mtimeMs < fs.statSync(src).mtimeMs) {
     const r = readPNG(src);
     const px = new Uint8Array(W * H * 4);

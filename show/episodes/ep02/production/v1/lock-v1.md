@@ -24,7 +24,7 @@
 <!-- BEGIN generated:frames -->
 | Segment | Frames | Runtime | Episode in → out | Shots | Lines (V.O.) | Scenes | Plan | Pixel-lock checks |
 |---|---|---|---|---|---|---|---|---|
-| Cold open | **1,320** | 0:55.00 | 00:00:00 → 00:55:00 | 13 | 6 (0) | 1 | 0:55.00 | 8 ok |
+| Cold open | **1,320** | 0:55.00 | 00:00:00 → 00:55:00 | 13 | 6 (0) | 1 | 0:55.00 | 9 ok |
 | Act One · the séance | **8,736** | 6:04.00 | 01:27:00 → 07:31:00 | 62 | 59 (3) | 5 | 6:04.00 | 9 ok |
 | Act Two · stage right | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 45 | 41 (3) | 5 | 4:39.00 | 9 ok |
 | Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 29 (3) | 4 | 5:20.00 | 9 ok |

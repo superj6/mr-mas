@@ -126,9 +126,11 @@ const statusBar = (scr: Buf, col = PAL.N8) => { tiny(scr, '7:31', 8, 4, col); fo
  *  November as the reason he left. Now nothing older than May 14: Alyi's post, its date and its first words (After almost
  *  a decade…, his own, already read in 12.06), and under it Mas's reply collapsed to grey bars. No hearts. */
 export const threadScreen = (scr: Buf, scroll = 0) => {
-  fill(scr, 0, 0, scr.w, scr.h, PAL.N2); statusBar(scr);
-  fill(scr, 0, 16, scr.w, 20, PAL.N1); fill(scr, 0, 36, scr.w, 1, PAL.N4); pt(scr, 'thread', Math.round(scr.w / 2 - pw('thread') / 2), 22, PAL.P1);
-  const y0 = 46 - scroll;
+  fill(scr, 0, 0, scr.w, scr.h, PAL.N2);
+  // (the cleanup pass, 2026-10-11: the thumb's scroll ran Alyi's card up over the app's `thread` bar and cut it) the
+  // thread starts a step lower and scrolls up to sit just under the bar, never over it; the bar and the status bar are
+  // drawn last, so nothing in the thread can cover them
+  const y0 = 53 - Math.min(15, scroll);
   // Alyi's post: avatar, name, date, the first words (legible), one grey bar for the rest
   fill(scr, 6, y0, scr.w - 12, 66, PAL.N3); fill(scr, 6, y0, scr.w - 12, 1, PAL.N5);
   fill(scr, 12, y0 + 6, 14, 14, PAL.X1); fill(scr, 14, y0 + 8, 10, 10, PAL.S3); fill(scr, 14, y0 + 8, 10, 3, PAL.B1);
@@ -142,6 +144,8 @@ export const threadScreen = (scr: Buf, scroll = 0) => {
   fill(scr, 12, r0 + 6, 14, 14, PAL.G1); fill(scr, 14, r0 + 9, 10, 9, PAL.S3); fill(scr, 14, r0 + 8, 10, 3, PAL.B2);
   pt(scr, 'masa', 30, r0 + 8, PAL.N8);
   for (let r = 0; r < 2; r++) fill(scr, 12, r0 + 26 + r * 7, scr.w - 30 - r * 40, 3, PAL.N6);
+  fill(scr, 0, 0, scr.w, 16, PAL.N2); statusBar(scr);
+  fill(scr, 0, 16, scr.w, 20, PAL.N1); fill(scr, 0, 36, scr.w, 1, PAL.N4); pt(scr, 'thread', Math.round(scr.w / 2 - pw('thread') / 2), 22, PAL.P1);
 };
 /** TPOOL, his first company's app, in its own 2008 colours inside the 2024 phone (the app's rect remapped to
  *  EARLY-WEB16): 'icon' (the home screen: every modern icon, and at the end a tiny old one, TPOOL · 2012) · 'splash'

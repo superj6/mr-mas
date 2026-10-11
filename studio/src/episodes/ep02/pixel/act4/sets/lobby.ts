@@ -465,3 +465,93 @@ export const pocketECU = (b: Buf, f: number, st: {k: 0 | 1 | 2 | 3}) => {
   drawHand(b, h.hand, h.x, h.y);
   void f;
 };
+
+// ================================================================== 20.07: the tape under his shoe (the cleanup pass)
+/** his sneaker from above, the toe toward us (act3/sets/bridge sneaker, 17.11's, copied: the same shoe that stood on the
+ *  receipt), lifted `lift` px off the floor (its shadow drops away with it), the jeans' leg rising out of the top */
+const sneakerTop = (b: Buf, x: number, y: number, lift = 0) => {
+  const H = 104, half = (j: number) => { const t = j / H; return t < 0.12 ? 18 + t * 40 : t < 0.7 ? 23 + Math.sin(((t - 0.12) / 0.58) * Math.PI * 0.5) * 7 : 30 * Math.sqrt(Math.max(0, 1 - Math.pow((t - 0.7) / 0.3, 2))); };
+  const cx = x + 32, sk = -2, yy0 = y - lift;
+  for (let j = 4; j < H + 4; j++) { const w = half(j - 4); for (let i = Math.round(-w); i <= w; i++) { const X = cx + i + 5 + Math.round(lift * 0.4), Y = y + j + 2; if (Y >= 0 && Y < RH) b.set(X, Y, stepColor(b.get(X, Y), lift ? -1 : -2)); } }
+  for (let j = 0; j < H; j++) {
+    const w = half(j), off = Math.round((j / H) * sk);
+    for (let i = Math.round(-w); i <= w; i++) {
+      const X = cx + i + off, Y = yy0 + j; if (Y < 0 || Y >= RH) continue;
+      const e = w - Math.abs(i), t = j / H;
+      let c: number;
+      if (e < 2.5) c = e < 1 ? PAL.G4 : PAL.P2;
+      else if (t > 0.74) c = t > 0.76 && Math.abs(j - 0.76 * H) < 1 ? PAL.P0 : i < -w * 0.3 ? PAL.P2 : PAL.P1;
+      else if (Math.abs(i) < 9 && t > 0.14 && t < 0.72) c = PAL.N5;
+      else c = i < -w * 0.4 ? PAL.N4 : i > w * 0.5 ? PAL.N2 : PAL.N3;
+      b.set(X, Y, c);
+    }
+  }
+  for (let q = 0; q < 5; q++) {
+    const yy = yy0 + 22 + q * 11, off = Math.round(((yy - yy0) / H) * sk);
+    for (let i = -8; i <= 8; i++) { b.set(cx + i + off, yy + Math.round(i * 0.35), PAL.P2); b.set(cx + i + off, yy - Math.round(i * 0.35) + 4, i === 0 ? PAL.P2 : PAL.P1); }
+    for (const sd of [-1, 1]) { b.set(cx + sd * 11 + off, yy + 2, PAL.N0); b.set(cx + sd * 11 + off, yy + 1, PAL.G4); }
+  }
+  for (let yy = 0; yy < yy0 + 4; yy++) { const w = 20 + Math.round((yy0 - yy) / 14), l = cx - w, r = cx + w; fill(b, l, yy, r - l, 1, PAL.F2); fill(b, l, yy, 4, 1, PAL.F3); fill(b, r - 4, yy, 4, 1, PAL.F1); if ((yy * 7) % 23 === 0) b.set(cx - 4 + (yy % 9), yy, PAL.F3); }
+  fill(b, cx - 21, yy0, 42, 4, PAL.F3); for (let i = -19; i < 20; i += 3) b.set(cx + i, yy0 + 1, PAL.F4);
+  fill(b, cx - 16, yy0 + 4, 32, 3, PAL.N1);
+};
+/** where the tape's words sit once his shoe has stopped it (frame px, 480 x 203) */
+export const TAPE = {y: 70, h: 36, upX: 232, shoeX: 136, sepX: 322};
+/**
+ * [INSERT] 20.07 (the cleanup pass, 2026-10-11: V.O. 13, "we raise in the fall. she has till then.", named a move the
+ * picture never showed; the act plays mostly on screens). From above, the lobby's floor: Haras's calculator tape slides
+ * through the frame right to left as she walks on (its printed rows grey marks, never figures), her UPSIDE in its red
+ * ring; his sneaker (17.11's, which stood on the receipt as it ran) comes down on it and stops it; his hand comes in
+ * with a marker and writes SEP beside her word, underlines it, and goes; his shoe lifts and the tape slides on, taking
+ * the date with it. The plan made an action: she has till then. No sound of its own (the shot's sound is unchanged).
+ *   st.slide  px the tape still has to travel to its stop (0 = stopped); after the release, negative: px past it
+ *   st.shoe   0 out of frame · 1 lifted over the tape · 2 down on it
+ *   st.hand   0 out · 1 coming in (the nib above the tape) · 2 writing
+ *   st.write  0..4: S, SE, SEP, SEP underlined (the marker's progress; 0 = nothing yet)
+ */
+export const tapeInsert = (b: Buf, f: number, st: {slide: number; shoe: 0 | 1 | 2; hand: 0 | 1 | 2; write: number}) => {
+  // the floor from above: the lobby's dark carpet tiles, the morning's light from the doors on the right
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
+    const seam = x % 60 === 0 || y % 60 === 22;
+    const lit = x > 300 && bayer(x, y) < (x - 300) / 360;
+    b.set(x, y, seam ? PAL.N2 : lit ? PAL.N2 : PAL.N1);
+  }
+  const dx = st.slide;
+  // the tape: cream, a darker edge on each side, the thermal printer's rows as short grey marks across it
+  const T = TAPE;
+  fill(b, 0, T.y + 3, W, T.h, PAL.D1);
+  fill(b, 0, T.y, W, T.h, PAL.P2); fill(b, 0, T.y, W, 1, PAL.P1); fill(b, 0, T.y + T.h - 1, W, 1, PAL.P0);
+  for (let i = -12; i < 40; i++) {
+    const x = T.upX + dx - 214 + i * 14;
+    if (x > T.upX + dx - 14 && x < T.sepX + dx + 70) continue; // her word and the room he writes in
+    if (x < -6 || x > W) continue;
+    const n = 3 + Math.floor(hash(i, 3, 7) * 3);
+    for (let r = 0; r < n; r++) fill(b, x, T.y + 7 + r * 6, 2 + Math.floor(hash(i, r, 9) * 3), 3, PAL.G5);
+  }
+  // her word, in her hand, and her red ring round it
+  const ux = T.upX + dx, uw = bpw('UPSIDE');
+  bpt(b, 'UPSIDE', ux, T.y + 11, PAL.N2);
+  const ecx = ux + uw / 2, ecy = T.y + 18;
+  for (let a = 0; a < 360; a += 2) { const t = (a * Math.PI) / 180, x = Math.round(ecx + Math.cos(t) * (uw / 2 + 7)), y = Math.round(ecy + Math.sin(t) * 14 + (a > 300 ? 2 : 0)); b.set(x, y, PAL.R2); b.set(x + 1, y, PAL.R2); }
+  // his date beside it, in black marker: S, E, P, then a line under it
+  const sx = T.sepX + dx, sy = T.y + 11;
+  const letters = ['S', 'E', 'P'];
+  let wx = sx;
+  // (his hand, not a font's: the middle letter a pixel off the line)
+  letters.forEach((ch, i) => { if (st.write > i) bpt(b, ch, wx, sy + [0, -1, 0][i], PAL.N0); wx += bpw(ch) + 2 + (i === 1 ? 1 : 0); });
+  const sepW = wx - sx - 2;
+  if (st.write >= 4) { fill(b, sx - 1, sy + 18, sepW + 2, 2, PAL.N0); fill(b, sx + sepW + 1, sy + 17, 2, 2, PAL.N0); }
+  // the nib's place: the end of what is written
+  const nib: [number, number] = st.write <= 0 ? [sx + 2, sy + 2] : st.write >= 4 ? [sx + sepW + 2, sy + 18] : [sx + letters.slice(0, st.write).reduce((a, c) => a + bpw(c) + 2, 0) - 3, sy + 10];
+  // his shoe on the tape, left of her word (the tape between it and her runs taut out of frame left)
+  if (st.shoe) sneakerTop(b, T.shoeX, 18, st.shoe === 1 ? 10 : 0);
+  // his hand from the upper right (he has crouched), the marker in it
+  if (st.hand) {
+    const up = st.hand === 1 ? 10 : 0, n: [number, number] = [nib[0], nib[1] - up];
+    const h = placeHand(POSES.grip([-0.5, 0.62, -0.45], [0.3, 0.42, 0.85], 'R', 0.72), {s: 4.6, at: [n[0] + 20, n[1] - 22], anchor: 'thumb', light: 'lobby', cuffRamp: [PAL.N0, PAL.G0, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.C4]});
+    sleeve(b, h.cuffEnd, [h.cuffEnd[0] + 160, h.cuffEnd[1] - 140], 22, 30, [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.C4]);
+    line(n[0], n[1], n[0] + 22, n[1] - 24, b.ink(PAL.N0)); line(n[0] + 1, n[1], n[0] + 23, n[1] - 24, b.ink(PAL.G2)); b.set(n[0], n[1], PAL.N0);
+    drawHand(b, h.hand, h.x, h.y);
+  }
+  void f;
+};

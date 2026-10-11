@@ -10,8 +10,9 @@
 //   finsMCU(b, f, st)     [MCU] 14.03-14.04: his own face in the polished fins (a curved sculpture seen at an angle on
 //                         its plinth; his reflection bowed with it, cooled; never Alyi's), and low in frame his phone in
 //                         his hand (common cupThumb) with its suggestion strip: one chip, `> lunch?`, greyed (the second
-//                         fixes pass); his thumb taps it (bonk; a disabled button that still reads); the reflection
-//                         holds, silent, and the screen dims a rung
+//                         fixes pass); his thumb taps it (bonk; a disabled button that still reads), crossing the glass
+//                         on a diagonal from the lower right as 15.04's and 17.09's do (the cleanup pass); the
+//                         reflection holds, silent, and the screen dims a rung
 //   chair2S(b, f, st)     [2S] 14.07-14.08: Mas (his portrait in the floor's daylight, facing right) and BUKAJ seated
 //                         lower in the humming chair (its tall back round him, his arm on the chrome armrest, the hand
 //                         flat on it), the floor soft behind them
@@ -302,7 +303,12 @@ export const finsMCU = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth'
   });
   // (the chips span the screen, their words at the left: the thumb presses a chip's right end, so the line it presses
   // stays readable under it)
-  const tip: [number, number] = st.tap === null || st.tap === undefined ? [P.x + P.w - 22, 199] : [P.x + P.w - 26, chipY(st.tap) + 9 + (st.down ? 1 : -2)];
+  // (the cleanup pass, 2026-10-11: the review saw a flesh blob in the frame's corner with no hand; the thumb came
+  // straight up from under the band to the chip's right end, and at rest it was only its tip at the band's edge) the
+  // thumb now crosses the glass on a diagonal from the lower right, as 15.04's and 17.09's do (the same cupThumb hand):
+  // pressing, its tip a little right of the chip's middle, its joints and the ball of the thumb running down to the
+  // lower right; at rest it lies across the screen's lower half
+  const tip: [number, number] = st.tap === null || st.tap === undefined ? [P.x + Math.round(P.w * 0.5), 186] : [P.x + Math.round(P.w * 0.47), chipY(st.tap) + 9 + (st.down ? 1 : -2)];
   glow(b, P.x + P.w / 2, P.y + 20, 120, 40, 1, (x, y) => y < P.y && x > P.x - 30 && x < P.x + P.w + 30);
   cupThumb(b, P, tip, {cuffRamp: HOOD_CUFF, sleeveRamp: HOOD_SL, sleeveTo: [560, 330], widthCm: 7.4, behindTop: true, drawPhone: (bb) => {
     fill(bb, P.x - 6, P.y - 6, P.w + 12, P.h + 12, PAL.N0); fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.G1); fill(bb, P.x - 5, P.y - 5, P.w + 10, 1, PAL.G3); fill(bb, P.x - 5, P.y - 5, 1, P.h + 10, PAL.G3);

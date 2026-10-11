@@ -5,7 +5,7 @@
 //                           drafts with the box he walked out with (st.step on the stair), ADELINA at the top raising a
 //                           lanyard (st.adel), MARIO at his desk; st.sweep: the beacon's beam sweeping the frame (18.02)
 //   stairPane(b, f, st)     the split's right pane (18.07): Adelina dropping her lanyard over Ekiel (st.drop 0..3: in her
-//                           raised hand, falling, round his neck), printed on page 212 of a Mario draft
+//                           raised hand, falling, round his neck), its card a plain draft page (no 212 since the cleanup pass)
 //   mario2S(b, f, st)       [2S] 18.08-18.11 (the right pane): MARIO at his desk by the lamp (his conversation portrait,
 //                           turned to Ekiel), writing; EKIEL in front of him in his new lanyard (art/cast/ekiel bust,
 //                           turned to Mario); both lip-synced
@@ -29,7 +29,7 @@ import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT} from '../../../../../shared/pixel
 import {marioPortraitImg} from '../../../../../shared/pixel/cast/mario';
 import type {MarioPortrait} from '../../../../../shared/pixel/cast/mario';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
-import {lighthouse18, lanyard} from '../../art/sets/committee';
+import {lighthouse18} from '../../art/sets/committee';
 import {drawEkielRoom} from '../../art/cast/ekiel';
 import {makeBust3, plane, bustLanyard} from '../../art/cast/civic2';
 import type {BustState, BustSpec3} from '../../art/cast/civic2';
@@ -51,7 +51,16 @@ export const ADEL_STEP = 14;
 const adelinaAt = (b: Buf, arm: 'reach' | 'down', lan: 'raise' | 'none') => {
   const s = STAIR_STEPS[ADEL_STEP];
   drawAdelinaRoom(b, s[0] - 4, s[1] + 2, {...ADELINA_ROOM_DEFAULT, arm}, {flip: true});
-  if (lan === 'raise') lanyard(b, s[0] - 30, s[1] - 52, {page212: true});
+  if (lan === 'raise') lanyardPage(b, s[0] - 30, s[1] - 52);
+};
+/** the SAFETY COMMITTEE lanyard at room scale with its card (art/sets/committee lanyard's `page212`, copied; the cleanup
+ *  pass, 2026-10-11: the card's `212` read as a number to decode, its meaning, a page of a Mario draft, never on screen,
+ *  so the card is a plain draft page now, its ruled lines where the number was) */
+const lanyardPage = (b: Buf, x: number, y: number) => {
+  line(x, y, x + 6, y + 14, b.ink(PAL.R2)); line(x + 12, y, x + 6, y + 14, b.ink(PAL.R2));
+  const pw0 = tinyWidth('212') + 4;
+  fill(b, x + 7 - (pw0 >> 1), y + 14, pw0, 17, PAL.P2);
+  for (let r = 0; r < 4; r++) fill(b, x + 9 - (pw0 >> 1), y + 17 + r * 3, pw0 - 4 - (r === 3 ? 4 : 0), 1, PAL.G5);
 };
 /** the beacon's beam sweeping the frame: a broad soft wedge from the lamp, its far end at x `bx` (the band walks
  *  across in held steps) */
@@ -88,17 +97,17 @@ export const lightW = (b: Buf, f: number, st: LightSt = {}) => {
   if (st.sweep !== undefined) beamSweep(b, st.sweep);
 };
 /** the right pane at room scale (18.07): Ekiel arrived two steps below Adelina; she drops her lanyard over his head
- *  (drop 0 in her raised hand · 1 falling · 2 round his neck: his own lanyard drawing, the card printed on page 212) */
+ *  (drop 0 in her raised hand · 1 falling · 2 round his neck: his own lanyard drawing, the card a draft page) */
 export const stairPane = (b: Buf, f: number, st: {drop: 0 | 1 | 2}) => {
   lighthouse18(b, f, {ekiel: null, adelina: null, mario: true});
   const s = STAIR_STEPS[ADEL_STEP - 2];
   drawEkielRoom(b, s[0], s[1], {state: 'stand', lanyard: 'none'});
-  // round his neck: the lanyard printed on page 212 of a Mario draft (the art's card, its 212 legible)
-  if (st.drop >= 2) lanyard(b, s[0] - 6, s[1] - 66, {page212: true});
+  // round his neck: the lanyard, its card a plain draft page (the cleanup pass: no 212)
+  if (st.drop >= 2) lanyardPage(b, s[0] - 6, s[1] - 66);
   if (st.drop === 0) adelinaAt(b, 'reach', 'raise');
   else {
     adelinaAt(b, st.drop === 1 ? 'reach' : 'down', 'none');
-    if (st.drop === 1) { const a = STAIR_STEPS[ADEL_STEP]; lanyard(b, Math.round((a[0] - 30 + s[0] - 6) / 2), Math.round((a[1] - 52 + s[1] - 82) / 2), {page212: true}); }
+    if (st.drop === 1) { const a = STAIR_STEPS[ADEL_STEP]; lanyardPage(b, Math.round((a[0] - 30 + s[0] - 6) / 2), Math.round((a[1] - 52 + s[1] - 82) / 2)); }
   }
 };
 
@@ -155,13 +164,14 @@ const marioImg2 = (s: MarioPortrait) => {
   return out;
 };
 /** the committee lanyard on Ekiel's bust (x = his collar's centre, y = where the cord leaves it): two red cord lines
- *  down to the card's clip, the white card with 212 in the badge's red */
+ *  down to the card's clip, the white card with its red band and two ruled lines (the cleanup pass, 2026-10-11: it
+ *  carried 212 in the badge's red, a number nothing on screen explains) */
 export const ekielLanyard = (b: Buf, x: number, y: number) => {
   line(x - 10, y, x - 2, y + 13, b.ink(PAL.R2)); line(x - 9, y, x - 1, y + 13, b.ink(PAL.R1));
   line(x + 10, y, x + 2, y + 13, b.ink(PAL.R2)); line(x + 9, y, x + 1, y + 13, b.ink(PAL.R1));
   fill(b, x - 2, y + 12, 5, 3, PAL.G4);
   fill(b, x - 8, y + 15, 17, 11, PAL.N0); fill(b, x - 7, y + 15, 15, 10, PAL.P2); fill(b, x - 7, y + 15, 15, 2, PAL.R2);
-  tiny(b, '212', x - 5, y + 18, PAL.R2);
+  fill(b, x - 5, y + 19, 11, 1, PAL.G5); fill(b, x - 5, y + 22, 8, 1, PAL.G5);
 };
 // EKIEL in sc 18 with his eyes open (the fixes pass, 2026-10-10): art/cast/ekiel's room head and its committee lanyard,
 // copied (the art file is imported only), as Act Three's ekiel23: the art drew the squint as his resting face for the
@@ -188,7 +198,8 @@ const ekielOpen = (s: {mouth?: Viseme; expr?: 'squint' | 'worry' | 'neutral'}): 
   const img = ekielOpenBust(st);
   const out = {w: img.w, h: img.h, c: new Int32Array(img.c)};
   const t = new Buf(img.w, img.h, 0x1000000);
-  tiny(t, '212', 56, 129, PAL.R2);
+  // (the art writes 212 on the bust's badge; the cleanup pass: two ruled lines instead)
+  fill(t, 56, 130, 11, 1, PAL.G5); fill(t, 56, 133, 8, 1, PAL.G5);
   for (let i = 0; i < t.c.length; i++) if (t.c[i] !== 0x1000000) out.c[i] = t.c[i];
   EKO.set(key, out);
   return out;
@@ -206,7 +217,7 @@ export const mario2S = (b: Buf, f: number, st: Mario2SSt = {}) => {
   putBustSoft(b, ek, 116, 52, RH, false);
   // (the review pass: the bust's own badge sits under the desk's edge here, so the rhyme's other half was missing
   // after the split) the committee lanyard carried onto his chest: the red cord from either side of his collar to the
-  // card, 212 on it, clear of the desk
+  // card on it (no number since the cleanup pass), clear of the desk
   ekielLanyard(b, 179, 141);
   // the desk across the frame's foot on Mario's side, his pages on it, the lamp
   deskTop(b, 168);

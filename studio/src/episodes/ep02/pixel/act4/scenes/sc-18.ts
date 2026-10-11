@@ -3,7 +3,7 @@
 // sc 18 / script-v1 (its script review: Terb reads the membership like a roll call; V.O. 11 after the table's held
 // breath; the board's card keeps its honorific):
 //   ARRIVE   18.01 full frame on the lighthouse, the beacon already turning (2 s before anything moves on): Ekiel
-//            climbs the stair of bound drafts with sc 14's box; Adelina at the top raises a lanyard (page 212)
+//            climbs the stair of bound drafts with sc 14's box; Adelina at the top raises a lanyard (a plain page card)
 //            18.02 the beam sweeps the frame -> across the boardroom's window, the same morning; the TV already playing
 //   TRUTH    18.03 the push onto the TV on its wall (two held steps), then 18.03-18.05 the TV full frame: a podcast
 //            player, its guest line naming her (NELEH · former board member: the fixes pass), her words captioned as she
@@ -18,7 +18,7 @@
 //   OUT      18.15 LEFT: the reminder on his phone, ELPPA · KEYNOTE · JUN 10; the left pane widens to the frame as the
 //            split ends, the phone where the lobby's wall screen will be; he turns it over
 // No V.O. through the podcast, the card or his face (W8). The talking pane at full palette, the waiting one a rung down.
-import {defineScene, layouts, mouth, mk, lineAt, lipTrack} from '../../kit';
+import {defineScene, layouts, mouth, mk, lineAt, lipTrack, drawPlate} from '../../kit';
 import type {PxShot} from '../../kit';
 import {Buf, clamp} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
@@ -48,7 +48,7 @@ const words = (sh: PxShot, id: string) => sh.lines.find((x) => x.id === id)!;
 
 // ------------------------------------------------------------------ 18.01 ARRIVE: the lighthouse
 L.add('18.01', {
-  st: 'act4/sets/light lightW ([W] the lighthouse of stacked essays (rooms/lighthouse + art/sets/committee lighthouse18), the beacon already turning; EKIEL (art/cast/ekiel room, climbing) climbs the stair of bound drafts with sc 14\'s box, a step on each footstep; ADELINA at the top (cast/adelina, flipped) raises her lanyard (art lanyard, printed on page 212); MARIO at his desk)',
+  st: 'act4/sets/light lightW ([W] the lighthouse of stacked essays (rooms/lighthouse + art/sets/committee lighthouse18), the beacon already turning; EKIEL (art/cast/ekiel room, climbing) climbs the stair of bound drafts with sc 14\'s box, a step on each footstep; ADELINA at the top (cast/adelina, flipped) raises her lanyard (its card a plain draft page: the cleanup pass took its 212 off); MARIO at his desk)',
   marks: {s1: ['snd', 'footstep_soft_1', 1, 0], s2: ['snd', 'footstep_soft_2', 1, 0]},
   draw: (fb, k, sh, f) => {
     const s1 = mk(sh, 's1', 57), s2 = mk(sh, 's2', 76);
@@ -100,7 +100,7 @@ L.add('18.06', {
 });
 // ------------------------------------------------------------------ 18.07 the lanyard; the split
 L.add('18.07', {
-  st: 'act4/sets/board lanyardInsert → splitAt(day18 | light stairPane) ([INSERT] Terb\'s hand holding out the lanyard by its strap, its card legible: SAFETY COMMITTEE; then the split, two 238 x 203 panes and a 4 px divider: LEFT the boardroom (Terb\'s arm out across the table\'s corner with it; Mas takes it from his hand and puts it over his head, three held drawings), RIGHT the lighthouse (Adelina drops hers over Ekiel two steps below her, its card printed on page 212), both landing on the same beat)',
+  st: 'act4/sets/board lanyardInsert → splitAt(day18 | light stairPane) ([INSERT] Terb\'s hand holding out the lanyard by its strap, its card legible: SAFETY COMMITTEE; then the split, two 238 x 203 panes and a 4 px divider: LEFT the boardroom (Terb\'s arm out across the table\'s corner with it; Mas takes it from his hand and puts it over his head, three held drawings), RIGHT the lighthouse (Adelina drops hers over Ekiel two steps below her, its card a plain draft page, no 212 since the cleanup pass), both landing on the same beat)',
   marks: {drop: ['snd', 'lanyard_drop', 1, 0]},
   draw: (fb, k, sh, f) => {
     // (the review pass: a handover, not a jump: the insert holds the card for its read (26 f), then the split: Terb up
@@ -169,13 +169,18 @@ const leftWait = (f: number) => {
   const l = frame(); masPane(l, f, st); return l;
 };
 L.add('18.11', {
-  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard (art/cast/ekiel\'s head, his eyes open: sets/light ekielOpen); both lip-synced; LEFT pane a rung down: Mas at the table, still, with a few held changes (the fix round: a blink, his eyes dropping to the committee\'s card on his chest and held there))',
+  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard (art/cast/ekiel\'s head, his eyes open: sets/light ekielOpen); both lip-synced; LEFT pane a rung down: Mas at the table, still, with a few held changes (the fix round: a blink, his eyes dropping to the committee\'s card on his chest and held there); his plate MARIO · EX-NOPEAI typed on at the pane\'s top right as he first speaks (the cleanup pass, 2026-10-11: Ep1\'s wording, 11.03))',
   face: {MARIO: 'lip', EKIEL: 'lip'},
   marks: {ek: ['on', 'e2-a4-0010', 0], ekEnd: ['end', 'e2-a4-0010', 0]},
   draw: (fb, k, sh, f) => {
     const ek0 = mk(sh, 'ek', 104), ek1 = mk(sh, 'ekEnd', 151), right = frame();
     mario2S(right, f, {mario: {mouth: marioMouth(mouth(sh, k, 'MARIO'))}, ekiel: {mouth: mouth(sh, k, 'EKIEL'), expr: k >= ek0 - 4 && k < ek1 + 10 ? 'worry' : 'neutral'}, write: k < ek0 - 6 ? k / 5 : undefined});
     splitAt(fb, leftWait(f), right, {sxL: 0, sxR: SXR, down: 'left'});
+    // (the cleanup pass, 2026-10-11: nothing named him until "Come in, Ekiel"; Ep2 never plated him) his plate on his
+    // first close shot, Ep1's own wording (11.03: MARIO · EX-NOPEAI), in the pane's top right over his side, for its
+    // window in the lock
+    const plate = sh.texts.find((t) => t.kind === 'plate');
+    if (plate && k >= plate.s && k < plate.e) drawPlate(fb, plate, k - plate.s, 404, 8, PAL.C6);
   },
 });
 L.add('18.12', {

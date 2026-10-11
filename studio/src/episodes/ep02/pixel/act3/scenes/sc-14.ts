@@ -61,7 +61,7 @@ L.add('14.02', {
   },
 });
 L.add('14.03', {
-  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: a curved sculpture on its plinth, his own face in the polished metal (his approved portrait mirrored, bowed with the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone in his hand (common cupThumb), its suggestion strip one chip: > lunch? (greyed and struck, a disabled button that still reads: the 1993 Cancel; the second fixes pass, 2026-10-10: the strip had spelled out his subtext, > where are you going? · > can we talk? · > come back); his thumb (no cursor) goes to it and presses its end: bonk, the chip shakes)',
+  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: a curved sculpture on its plinth, his own face in the polished metal (his approved portrait mirrored, bowed with the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone in his hand (common cupThumb), its suggestion strip one chip: > lunch? (greyed and struck, a disabled button that still reads: the 1993 Cancel; the second fixes pass, 2026-10-10: the strip had spelled out his subtext, > where are you going? · > can we talk? · > come back); his thumb (no cursor) goes to it and presses it, crossing the glass on a diagonal from the lower right with its joints and the ball of the thumb in frame (the cleanup pass, 2026-10-11, as 15.04 and 17.09; it had come straight up from under the band, a flesh blob with no hand): bonk, the chip shakes)',
   marks: {bonk: ['snd', 'alert_bonk', 1, 0]},
   draw: (fb, k, sh, f) => {
     const bonk = mk(sh, 'bonk', 96), cut = 24;
@@ -77,7 +77,7 @@ L.add('14.03', {
   },
 });
 L.add('14.04', {
-  st: 'act3/sets/floor finsMCU ([MCU] the second fixes pass, 2026-10-10: nothing else to pick. His thumb stays on the greyed chip a beat, then lowers to the screen\'s foot; his own face in the fins holds, silent (no mouthing: the reflection that mouthed can we talk? back to him named the feeling, W4, W7); near the end the phone\'s screen dims a rung (the Door blooms once, in the score))',
+  st: 'act3/sets/floor finsMCU ([MCU] the second fixes pass, 2026-10-10: nothing else to pick. His thumb stays on the greyed chip a beat, then lowers to lie across the glass\'s lower half (the cleanup pass: at the screen\'s foot it was only a tip at the band\'s edge); his own face in the fins holds, silent (no mouthing: the reflection that mouthed can we talk? back to him named the feeling, W4, W7); near the end the phone\'s screen dims a rung (the Door blooms once, in the score))',
   draw: (fb, k, sh, f) => {
     const n = sh.e - sh.s;
     finsMCU(fb, f, {tap: k < 14 ? 0 : null, dim: k >= Math.round(n * 0.7) ? 1 : 0});
