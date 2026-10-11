@@ -74,18 +74,58 @@ export const drawMasBackSmall = (b: Buf, x: number, footY: number, h: number, st
  *  featureless profile in an orange void): ALYI at work, redrawn for the glimpse. A lamp-lit room seen through the slot
  *  (the gap is the frame's rows 62..164): the far wall warm in the desk lamp's pool and falling off to the right, a
  *  shelf of binders, his chair's back; Alyi seated at the desk, turned three-quarters to camera-left, bent over the
- *  page: his head bowed (the high forehead and the short dark hair at the back, the ear), his face in the lamp's light
- *  looking DOWN at the page (the lid low over the eye, the calm closed mouth), a neck into the sweater's collar; his
+ *  page: his head bowed low over it (the fix round: alyiBowedHead, the crown toward us, the face down at the pen, the
+ *  lids down, a level mouth line), a neck into the hunched back's collar; his
  *  writing arm from the shoulder down to the elbow on the desk and the forearm forward to the hand with the pen (it
  *  moves, on 4s), the far hand flat on the page; the lamp on the desk at the left. He never looks up. */
-/** his room head (art/cast/alyi2 SHEAD: Ep1's alyi-speak stand, the on-model 3/4 head, COPIED), with the eyes cast
- *  down to the page: the lids lowered (a dark line) over the pupils under them, open; the calm closed mouth kept */
-const ALYI_HEAD = [
-  '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh2334444455o...', 'hhh23444bbbb4...', 'hhh2234ee4ee4o..',
-  'hhh22334i44i44o.', '.hh22334444444o5', '.oh2233444444o..', '..o122334mmm4o..', '..o122334444443.', '...o1222333332..', '....o11222......', '.....o1122......',
-];
-/** the lamp's warm light on him: the head's ramp (o outline, 1..5 shadow to highlight), the hair, the eyes */
-const AHP: Record<string, number> = {o: PAL.S1, '1': PAL.S2, '2': PAL.S3, '3': PAL.S4, '4': PAL.S5, '5': PAL.S6, h: PAL.B1, b: PAL.B2, e: PAL.N0, i: PAL.B1, m: PAL.S2};
+/** his head BOWED over the page (the fix round, 2026-10-10, D-37/R2-F1: the upright 3/4 head stood well above his hand
+ *  and faced the slot and the falling flyer, a dark brow bar and a dark mouth bar, a scowl at the episode's peak; it
+ *  read as him seeing the flyer and ignoring it). Near profile, pitched 50 degrees down at the pen, so its silhouette
+ *  says where he looks: the bald dome leading (lit from the lamp at the left), the close-cropped dark fringe round the
+ *  back of the skull above the ear, the ear; the forehead and brow catching the lamp, the lid down under it (a short
+ *  soft line in skin shadow, never a bar), the nose pointing at the page, a small level mouth, the chin tucked toward
+ *  the collar; a short neck in shadow from the back of his head into the hunched back. The head's profile is drawn in
+ *  its own frame (u forward along the face, v up the head) and turned onto the screen. (cx, cy): the skull's centre. */
+const inPoly = (P: Array<[number, number]>, x: number, y: number) => { let k = false; for (let i = 0, j = P.length - 1; i < P.length; j = i++) { const [xi, yi] = P[i], [xj, yj] = P[j]; if ((yi > y) !== (yj > y) && x < ((xj - xi) * (y - yi)) / (yj - yi) + xi) k = !k; } return k; };
+/** the face's profile (u forward, v up): forehead, brow, the eye's socket, the nose, the lips, the chin, the jaw */
+const ALYI_FACE: Array<[number, number]> = [[3.0, 4.8], [5.0, 2.9], [6.0, 1.0], [5.2, -0.3], [5.8, -1.1], [7.7, -3.0], [6.0, -3.6], [5.9, -3.9], [6.1, -4.5], [5.7, -4.9], [5.8, -5.4], [5.2, -6.1], [5.0, -7.0], [3.4, -7.5], [0.6, -5.6], [-0.4, 0.4]];
+export const alyiBowedHead = (b: Buf, cx: number, cy: number, neck: [number, number]) => {
+  const th = (50 * Math.PI) / 180, FW = [-Math.cos(th), Math.sin(th)], UP = [-Math.sin(th), -Math.cos(th)];
+  const loc = (x: number, y: number) => { const dx = x + 0.5 - cx, dy = y + 0.5 - cy; return [dx * FW[0] + dy * FW[1], dx * UP[0] + dy * UP[1]]; };
+  const scr = (u: number, v: number): [number, number] => [Math.floor(cx + u * FW[0] + v * UP[0]), Math.floor(cy + u * FW[1] + v * UP[1])];
+  const SKX = -0.6, SKY = 1.0, SRX = 6.0, SRY = 6.0;
+  const skull = (u: number, v: number) => ((u - SKX) / SRX) ** 2 + ((v - SKY) / SRY) ** 2 < 1;
+  const face = (u: number, v: number) => inPoly(ALYI_FACE, u, v);
+  const head = (x: number, y: number) => { const [u, v] = loc(x, y); return skull(u, v) || face(u, v); };
+  // the fringe: round the back of the skull, from above the ear to the nape (the dome stays bare)
+  const hair = (u: number, v: number) => skull(u, v) && u < -2.4 && v < 2.6 && v > -4.4;
+  // the neck first (behind the head): from under the skull down to the collar of the hunched back, in shadow
+  const nk = scr(-1.6, -4.6);
+  for (let i = 0; i <= 8; i++) { const x = Math.round(nk[0] + ((neck[0] - nk[0]) * i) / 8), y = Math.round(nk[1] + ((neck[1] - nk[1]) * i) / 8); fill(b, x - 2, y - 1, 4, 3, PAL.S2); b.set(x + 1, y + 1, PAL.S1); }
+  // the head, lit from the lamp (the screen's left), in flat zones, not a gradient (a gradient on 12 px muddied the
+  // face): the dome in three tones toward the lamp, the face one tone with its front rim lit (the two pixels inside its
+  // lower-left silhouette), the jaw's underside a rung down, the fringe; outlined in the skin's dark
+  const rim = (x: number, y: number) => !head(x - 1, y) || !head(x, y + 1);
+  for (let y = cy - 11; y <= cy + 11; y++) for (let x = cx - 11; x <= cx + 11; x++) {
+    if (!head(x, y)) continue;
+    const [u, v] = loc(x, y), edge = !head(x - 1, y) || !head(x + 1, y) || !head(x, y - 1) || !head(x, y + 1);
+    let col: number;
+    const fr = face(u, v) && (!skull(u, v) || u > 3);
+    if (edge) col = hair(u, v) ? PAL.B0 : PAL.S1;
+    else if (hair(u, v)) col = PAL.B1;
+    else if (!fr) { const d = (x + 0.5 - cx) * 0.8 + (y + 0.5 - cy) * 0.6; col = d < -2.6 ? PAL.S6 : d < 1.2 ? PAL.S5 : PAL.S4; }
+    else col = v < -5.8 ? PAL.S3 : rim(x - 1, y) || rim(x, y + 1) ? PAL.S5 : PAL.S4;
+    b.set(x, y, col);
+  }
+  // the ear (below the fringe, behind the jaw), its inner shadow
+  const ea = scr(-1.0, -1.6); fill(b, ea[0], ea[1], 2, 2, PAL.S4); b.set(ea[0] + 1, ea[1] + 1, PAL.S3);
+  // the brow catching the lamp; the lid down under it (two pixels of skin shadow along the face)
+  const br = scr(4.8, 1.0); b.set(br[0], br[1], PAL.S6);
+  for (const [u, v] of [[4.0, -0.5], [4.9, -0.4]] as Array<[number, number]>) { const p = scr(u, v); b.set(p[0], p[1], PAL.S3); }
+  // the nose's lit ridge; a small level mouth (a rung of shadow at the lips' parting, no dark bar)
+  const nr = scr(6.2, -2.0); b.set(nr[0], nr[1], PAL.S6);
+  const mo = scr(5.0, -4.8); b.set(mo[0], mo[1], PAL.S3);
+};
 /** his sweater (alyi2's room ramp: the mauve X family), lit from the lamp at the left */
 const SWEAT = [PAL.N0, PAL.X0, PAL.X1, PAL.X2, PAL.X3];
 export const alyiAtWork = (b: Buf, f: number) => {
@@ -102,13 +142,8 @@ export const alyiAtWork = (b: Buf, f: number) => {
   }
   // the collar's rib round his neck
   fill(b, AX - 18, 106, 11, 2, SWEAT[3]); fill(b, AX - 18, 106, 11, 1, SWEAT[4]);
-  // the head (mirrored to face camera-left, the face to the page), tipped forward over it: each row sheared toward
-  // the page, the crown leading; it sits down on the collar (a short neck: he is bent over)
-  const hx = AX - 27, hy = 93;
-  ALYI_HEAD.forEach((row, j) => {
-    const dx = -Math.round((ALYI_HEAD.length - 1 - j) * 0.32);
-    for (let i = 0; i < row.length; i++) { const c = AHP[row[row.length - 1 - i]]; if (c !== undefined) b.set(hx + i + dx, hy + j, c); }
-  });
+  // the head bowed over the page, low and forward of the shoulders, the face to the pen (alyiBowedHead: the fix round)
+  alyiBowedHead(b, AX - 25, 107, [AX - 16, 108]);
   // the desk: its top lit toward the lamp, its front panel (a drawer) under it, cut by the slot's lower edge
   for (let x = 110; x < 360; x++) { const lit = Math.max(0, 1 - Math.abs(x - 200) / 120); b.set(x, DESK, lit > 0.5 ? PAL.D4 : PAL.D3); b.set(x, DESK + 1, lit > 0.3 ? PAL.D3 : PAL.D2); for (let y = DESK + 2; y < DESK + 5; y++) b.set(x, y, PAL.D3); for (let y = DESK + 5; y < RH; y++) b.set(x, y, (x - 110) % 70 === 0 ? PAL.D1 : PAL.D2); }
   fill(b, 220, DESK + 12, 60, 1, PAL.D1); fill(b, 246, DESK + 15, 8, 2, PAL.W5);
@@ -232,6 +267,25 @@ export const drawMasBackKnock = (b: Buf, fx: number, fy: number, raise: number) 
 };
 
 export interface IssSt { t?: number; scan?: boolean; scanK?: number; push?: number; lit?: boolean; raise?: number; drop?: number; unfold?: number; lift?: number }
+/** 22.07: his near hand hanging at his side, at the frame's foot (the fix round): the hoodie's ribbed cuff, then the
+ *  back of the hand turned out toward the overcast (its lit edge at the left, the knuckles' line, the thumb's bump
+ *  forward against the hoodie), cut by the frame's foot; x, y = the cuff's top-left; lit: the face light's step */
+const handAtFoot = (b: Buf, x: number, y: number, lit: number) => {
+  const sk = (c: number) => (lit ? stepColor(c, 1) : c);
+  fill(b, x, y, 10, 3, HOOD[2]); fill(b, x, y, 10, 1, HOOD[4]); for (let i = 1; i < 10; i += 2) b.set(x + i, y + 1, HOOD[1]); b.set(x, y + 1, HOOD[0]); b.set(x + 9, y + 1, HOOD[0]);
+  const H = [
+    '.oo3333o.',
+    'o443333o.',
+    'o4333322o',
+    'o4322222o',
+    'o4332222o',
+    'o4322221o',
+  ];
+  const P: Record<string, number> = {o: PAL.S1, '1': PAL.S2, '2': PAL.S3, '3': PAL.S4, '4': PAL.S5};
+  H.forEach((row, j) => { for (let i = 0; i < row.length; i++) { const c = P[row[i]]; if (c !== undefined && y + 3 + j < RH) b.set(x + i, y + 3 + j, sk(c)); } });
+  // the knuckles' line across the back of the hand, the thumb's crease
+  b.set(x + 3, y + 6, sk(PAL.S3)); b.set(x + 4, y + 6, sk(PAL.S3)); b.set(x + 6, y + 7, sk(PAL.S2));
+};
 export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away', f: number, st: IssSt = {}) => {
   const step = Math.floor(f / 3) % 4;
   if (shot === 'wide') {
@@ -304,20 +358,24 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     // to the flap) from the shoulder's round down past the elbow, a hand's width out from his side, its outer edge dark,
     // its face a rung up toward the overcast, the seam where it meets his body dark, a fold at the elbow; the far arm's
     // edge a sliver at frame right. His shoulders read broader than the column they replace
-    const sh = ybot - 10, el = Math.min(RH - 8, ybot + 34);
-    const near: Array<[number, number]> = [[xmin + 9, sh - 7], [xmin + 2, sh - 4], [xmin - 2, sh + 4], [xmin - 3, el - 4], [xmin - 3, el + 2], [xmin - 1, RH + 1], [xmin + 9, RH + 1], [xmin + 9, el + 2], [xmin + 9, el - 4], [xmin + 10, sh + 8]];
+    // (the fix round, 2026-10-10: still a slab from the shoulders down at 1080p) the arm a rung lighter than the torso
+    // its whole length, tapering to the wrist, and his hand at the frame's foot under a ribbed cuff (handAtFoot)
+    const sh = ybot - 10, el = Math.min(RH - 8, ybot + 34), cuff = RH - 9;
+    const near: Array<[number, number]> = [[xmin + 9, sh - 7], [xmin + 2, sh - 4], [xmin - 2, sh + 4], [xmin - 3, el - 4], [xmin - 3, el + 2], [xmin - 1, cuff], [xmin + 8, cuff], [xmin + 9, el + 2], [xmin + 9, el - 4], [xmin + 10, sh + 8]];
     // the body under the arm set back a rung (the torso's flank in the arm's shadow), then the arm over it
     for (let y = sh + 6; y < RH; y++) for (let x = xmin + 9; x < xmin + 14; x++) { const v = b.get(x, y); if (v !== TRANSPARENT) b.set(x, y, x < xmin + 11 ? HOOD[0] : HOOD[1]); }
     poly(near.flat(), b.ink(HOOD[3]));
     for (let y = sh - 6; y < RH; y++) for (let x = xmin - 6; x < xmin + 11; x++) {
       if (b.get(x, y) !== HOOD[3] || x - 1 < 0) continue;
       const left = b.get(x - 1, y);
-      if (left !== HOOD[3] && left !== HOOD[4] && left !== HOOD[0] && left !== HOOD[2]) b.set(x, y, HOOD[0]);  // its outer edge
-      else if (x <= xmin + 1) b.set(x, y, y < el ? HOOD[4] : HOOD[3]);                                        // its lit face
+      if (left !== HOOD[3] && left !== HOOD[4] && left !== HOOD[5] && left !== HOOD[0] && left !== HOOD[2]) b.set(x, y, HOOD[0]);  // its outer edge
+      else if (x <= xmin + 1) b.set(x, y, y < el ? HOOD[5] : HOOD[4]);                                        // its lit edge
+      else if (inPoly(near, x + 0.5, y + 0.5)) b.set(x, y, HOOD[4]);                                          // its face, a rung over the torso
     }
     // the fold at the elbow: two short creases across the sleeve, a rung down, their lips lit
     for (const dy of [0, 4]) for (let i = 0; i < 6; i++) { b.set(xmin - 1 + i, el + dy + Math.round(i * 0.4), HOOD[1]); b.set(xmin - 1 + i, el + dy + 1 + Math.round(i * 0.4), HOOD[4]); }
     for (let y = sh; y < RH; y++) { const x = xmax + 1 + (y < sh + 6 ? 0 : 1); b.set(x, y, HOOD[2]); b.set(x + 1, y, HOOD[0]); }
+    handAtFoot(b, xmin - 1, cuff, st.lit ? 1 : 0);
   } else if (shot === 'knock') {
     const [x, y] = A('knock', 'doormark', [250, 190]);
     shadowAt(b, Math.round(x), Math.round(y), 13);

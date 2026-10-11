@@ -42,7 +42,7 @@ const SXL_LAWN = 178;
 
 // ------------------------------------------------------------------ 20.01-20.04 the split
 L.add('20.01', {
-  st: 'act4/sets/campus thinning | act4/sets/zai zaiPane (SPLIT, that afternoon: LEFT the crowd thinning on the lawn (art/sets/elppa campus, thin), the giant screen\'s end card; Mas pockets his phone and walks out past it; RIGHT the zAI lobby re-composed for the pane: the sun-faded banner KORG 2 (the fixes pass: no date), the glass doors with the visitor\'s silhouette, the brand-new birdcage (its shipping tag, the open padlock), Nole under his lamp (off), phone up; on the toast his phone lights with Mas\'s post (a small card, its own UI))',
+  st: 'act4/sets/campus thinning | act4/sets/zai zaiPane (SPLIT, that afternoon: LEFT the crowd thinning on the lawn (art/sets/elppa campus, thin), the giant screen\'s end card; Mas pockets his phone and walks out past it; RIGHT the zAI lobby re-composed for the pane: the sun-faded banner KORG 2 (the fixes pass: no date), the glass doors with the visitor\'s silhouette, the brand-new birdcage (its shipping tag, the open padlock on the door\'s hasp in front of the bars: the fix round), Nole under his lamp (off), phone up; on the toast his phone lights with Mas\'s post (a small card, its own UI))',
   marks: {toast: ['snd', 'ui_toast_pop', 1, 0]},
   draw: (fb, k, sh, f) => {
     const toast = mk(sh, 'toast', 69);

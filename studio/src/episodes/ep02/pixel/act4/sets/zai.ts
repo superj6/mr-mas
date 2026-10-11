@@ -57,8 +57,11 @@ export const zaiPane = (b: Buf, f: number, st: ZaiPaneSt = {}) => {
   const D = ZAI.doors;
   fill(b, D - 4, 64, 58, 86, PAL.N3); fill(b, D, 68, 24, 82, PAL.C6); fill(b, D + 28, 68, 24, 82, PAL.C6); fill(b, D + 24, 68, 4, 82, PAL.N2);
   visitor.draw(b, D + 14, 150, {arm: 'down', head: {hair: 'short'}}, {map: () => PAL.N1});
-  // the birdcage at the doors, brand new: its tag, its padlock
-  drawBirdcage(b, ZAI.cage, 160, {tag: true, padlock: st.padlock === 'none' ? undefined : st.padlock ?? 'open', door: st.door ?? 'open', phone: st.cage === 'phone', f});
+  // the birdcage at the doors, brand new: its tag, its padlock (the fix round, 2026-10-10: the art's padlock, a block
+  // with a round grey top inside the cage's footprint, still read as a small orange bird in 20.01-20.02; it is drawn
+  // here as a padlock hanging on the door's hasp, in front of the bars: roomLock)
+  drawBirdcage(b, ZAI.cage, 160, {tag: true, door: st.door ?? 'open', phone: st.cage === 'phone', f});
+  if (st.padlock !== 'none') roomLock(b, ZAI.cage, 130, (st.padlock ?? 'open') === 'open');
   // Nole's post lamp on a tall stand, his standing spot by it
   const LX = ZAI.lamp;
   fill(b, LX, 84, 3, 100, PAL.G3); fill(b, LX - 14, 182, 31, 3, PAL.G3); fill(b, LX - 22, 78, 20, 8, PAL.G4); fill(b, LX - 4, 80, 8, 2, PAL.G4);
@@ -67,6 +70,20 @@ export const zaiPane = (b: Buf, f: number, st: ZaiPaneSt = {}) => {
   if (st.nole !== null) blitImg(b, noleImg({...NOLE_BASE, arm: 'phone', ...st.nole}), ZAI.nole - NOLE_FOOT[0], 186 - NOLE_FOOT[1], {map: lampOn ? warmSkin : undefined});
   // his phone lighting with Mas's post: a small notification card over his raised phone (Mas's post, its own UI)
   if (st.lit !== undefined && st.lit >= 0) drawEp2Post(b, 196, 64, 'jun10', {size: 'notify', w: 152, k: st.lit});
+};
+
+/** the padlock at room scale on the cage door's hasp (its right edge), in front of the bars: the hasp's plate, the
+ *  brass body (lit top, dark keyhole), the steel shackle a thin arch through the hasp (`open`: lifted, its right leg out
+ *  of the body); cx, base = the cage's centre and floor (drawBirdcage's) */
+const roomLock = (b: Buf, cx: number, base: number, open: boolean) => {
+  const lx = cx + 4, ly = base - 9, up = open ? 2 : 0;
+  fill(b, cx + 5, base - 14, 3, 2, PAL.G3);
+  // the shackle: two legs and the arch, steel, a pixel wide
+  fill(b, lx + 1, ly - 3 - up, 1, 3 + up, PAL.G5); fill(b, lx + 3, ly - 3 - up, 1, open ? 2 : 3, PAL.G5);
+  fill(b, lx + 2, ly - 4 - up, 1, 1, PAL.G6); b.set(lx + 1, ly - 4 - up, PAL.G4); b.set(lx + 3, ly - 4 - up, PAL.G4);
+  // the body: brass, its top lit, its right edge and foot a rung down, the keyhole
+  fill(b, lx, ly, 5, 5, PAL.W5); fill(b, lx, ly, 5, 1, PAL.W7); fill(b, lx + 4, ly, 1, 5, PAL.W3); fill(b, lx, ly + 4, 5, 1, PAL.W3);
+  fill(b, lx + 2, ly + 2, 1, 2, PAL.N0);
 };
 
 // ================================================================== Nole, close

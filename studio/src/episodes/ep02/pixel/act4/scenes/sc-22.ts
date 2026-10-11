@@ -127,7 +127,7 @@ L.add('22.04', {
   draw: (fb, k, sh, f) => fallback(fb, '22.04', k, sh, f),
 });
 L.add('22.05', {
-  st: 'act4 2.H plate (art insert: the gap fills the frame, keyed) over act4/sets/iss issRoom (a warm lit room, ALYI (art/cast/alyi2 drawAlyiAtWork, pixel) at a desk, working, absorbed, cropped by the slot\'s edges; he never looks up; the flyer falling just inside, out of frame, unseen)',
+  st: 'act4 2.H plate (art insert: the gap fills the frame, keyed) over act4/sets/iss issRoom (a warm lit room, ALYI (art/cast/alyi2 drawAlyiAtWork, pixel) at a desk, working, absorbed, cropped by the slot\'s edges; he never looks up (the fix round, D-37/R2-F1: his head bowed low over the page, the crown toward us, the face down at the pen, iss.ts alyiBowedHead); the flyer falling just inside, out of frame, unseen)',
   overlay: OVL('22.05'),
   marks: {land: ['snd', 'paper_drop_floor', 1, 0]},
   draw: (fb, k, sh, f) => fallback(fb, '22.05', k, sh, f),
@@ -139,7 +139,7 @@ L.add('22.06', {
   draw: (fb, k, sh, f) => fallback(fb, '22.06', k, sh, f),
 });
 L.add('22.07', {
-  st: 'act4 2.H plate (art mcu: the door face receding on the right, the lot behind him) + issLayer mcu (Mas at medium (Ep1\'s medium rig), facing the shut flap, a face light one step)',
+  st: 'act4 2.H plate (art mcu: the door face receding on the right, the lot behind him) + issLayer mcu (Mas at medium (Ep1\'s medium rig), facing the shut flap, a face light one step; the fix round: his near arm a rung over the torso to a ribbed cuff and his hand at the frame\'s foot)',
   overlay: OVL('22.07'),
   draw: (fb, k, sh, f) => fallback(fb, '22.07', k, sh, f),
 });

@@ -89,7 +89,7 @@ L.add('18.05', {
 });
 // ------------------------------------------------------------------ 18.06 his face; the TV off
 L.add('18.06', {
-  st: 'act4/sets/board masHold → terbRemote(agenda) ([MCU] the TV off on the cut (its click on the cut); Mas at the table, holding still (Ep1\'s approved CU face, the window\'s day keyed one step), 2 s; [OTS] over his shoulder onto TERB at the head (his approved portrait, helmet off), eyes down on his agenda, no remote, no TV light; a beat later "First item." lip-synced, procedure (the fixes pass: the board\'s card is the reply to her; nobody at the table turns her off))',
+  st: 'act4/sets/board masHold → terbRemote(agenda) ([MCU] the TV off on the cut (its click on the cut); Mas at the table, holding still (the fix round: the episode\'s standard Mas head, as 4A.02, the level resting mouth, the window\'s day keyed one step; Ep1\'s CU drawing\'s upturned corner read as a smirk), 2 s; [OTS] over his shoulder onto TERB at the head (his approved portrait, helmet off), eyes down on his agenda, no remote, no TV light; a beat later "First item." lip-synced, procedure (the fixes pass: the board\'s card is the reply to her; nobody at the table turns her off))',
   face: {TERB: 'lip'},
   marks: {off: ['snd', 'tv_click_off', 1, 0], line: ['on', 'e2-a4-0003', 0]},
   draw: (fb, k, sh, f) => {
@@ -156,9 +156,20 @@ L.add('18.10', {
   },
 });
 // ------------------------------------------------------------------ 18.11-18.14 RIGHT: the recruit
-const leftWait = (f: number) => { const l = frame(); masPane(l, f, {}); return l; };
+/** the waiting pane's held changes (the fix round, 2026-10-10: one unchanged drawing for 40 s read as a still, not a
+ *  held man, P4): on the scene's clock, a few held states while Mario's scene plays: his eyes on Terb; a blink; his
+ *  eyes dropping to the committee's card on his chest (the lids lowered, the irises down) and held there through the
+ *  pages; back up to Terb; a blink. Nothing else moves (it stays a rung down) */
+const LEFT_HELD: Array<[number, {lid?: 0 | 1 | 2; look?: -1 | 0 | 1}]> = [
+  [0, {}], [1584, {lid: 2}], [1587, {}], [1648, {lid: 1, look: 0}], [1990, {}], [2052, {lid: 2}], [2055, {}], [2186, {lid: 2}], [2189, {}],
+];
+const leftWait = (f: number) => {
+  let st = LEFT_HELD[0][1];
+  for (const [at, s] of LEFT_HELD) if (f >= at) st = s;
+  const l = frame(); masPane(l, f, st); return l;
+};
 L.add('18.11', {
-  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard (art/cast/ekiel\'s head, his eyes open: sets/light ekielOpen); both lip-synced; LEFT pane a rung down: Mas at the table, still)',
+  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard (art/cast/ekiel\'s head, his eyes open: sets/light ekielOpen); both lip-synced; LEFT pane a rung down: Mas at the table, still, with a few held changes (the fix round: a blink, his eyes dropping to the committee\'s card on his chest and held there))',
   face: {MARIO: 'lip', EKIEL: 'lip'},
   marks: {ek: ['on', 'e2-a4-0010', 0], ekEnd: ['end', 'e2-a4-0010', 0]},
   draw: (fb, k, sh, f) => {

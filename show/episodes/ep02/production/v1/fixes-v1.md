@@ -2,7 +2,7 @@
 
 > **The episode review's findings, segment by segment, and what each fixer did.** Each segment's fixer adds its own section below; a finding that touches another segment says so where it is logged. Severity is the review's (blocker, major, minor). Every claim is [M] measured or [J] judged; nothing here was watched in real time or heard (R8).
 
-**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10)
+**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11)
 
 ---
 
@@ -412,3 +412,46 @@ bash ops/heavy.sh audio/.venv-casting/bin/python show/episodes/ep02/production/v
 - **The Forecaster in rust** at the bridge's dusk, and the plum extra in the lobby: does either now read as anyone else?
 - **The Jun 10 post's `elppa` / `chatgtp`** in his lowercase: still read as the companies at a glance?
 - **The Act Three → Four seam** (17:30:00): its sample jump measures 0.0126 in the mixes (unchanged by this pass); `assemble.py` laid no de-click. One listen.
+
+---
+
+## Act Four (the final fix round, 2026-10-11)
+
+**Scope:** the verify round's Act Four findings (`fix2/act4.json`): **both majors fixed**, and three of its six minors where they were cheap. **Picture only:** Act Four's scene modules and sets (`act4/scenes/sc-18.ts`, `sc-20.ts`, `sc-22.ts`; `act4/sets/board.ts`, `iss.ts`, `zai.ts`) and sc 22's overlay layers. No beat plan, lock, take, score, mix or shared tool was edited (an Act Three fixer owns them in this round). Sc 18, 20 and 22 re-rendered through the per-scene cache; sc 19 stayed cached. Act Four's timing is unchanged (7,656 f).
+
+| # | Sev. | Where | Finding (short) | What was done | Check |
+|---|---|---|---|---|---|
+| 1 | major | 22.05, the slot glimpse (22:33-22:36) | Guardrail D-37/R2-F1: Alyi's head lifted well above his writing hand and turned toward the slot and the falling flyer, a dark brow bar and a dark mouth bar (a scowl). It read as him seeing Mas's flyer and ignoring it | **Head redrawn bowed** (`iss.ts alyiBowedHead`, replacing the upright 3/4 bitmap). It is a near profile pitched 50° down at the pen, low and forward of his shoulders (its centre about 7 px lower and 4 px further forward than the old head's). The bald dome leads, toward the lamp and the slot. The close-cropped fringe runs round the back of the skull, and a short neck in shadow joins the hunched back's collar. The face is foreshortened under the brow: the lids two pixels of skin shadow, the nose pointing at the page, a one-pixel level mouth, the chin tucked. Flat skin zones, because a gradient at 12 px muddied the face. Still small (about 13 x 16 px) | native crops at 12x and 24x while building; from the MP4 at 1080p f7300 (the flyer in the gap) and f7345, plus a 4x crop of the head: no eyes and no gaze toward the slot or the flyer, his face down at the pen [J] |
+| 2 | major | 18.06 (18:00-18:01) | Ep1's off-model CU head; its mouth turned up at the corner, a faint smirk right after her account | `board.ts masHold` now uses **the episode's standard Mas head** (`masDayFace`: Ep1's approved conversation portrait, as 4A.02 and this scene's own panes use). The window's key is kept one step (the face light), he is turned to Terb, and his mouth rests level with no upturn. No lanyard yet (18.07 gives it). The hoodie's near arm and seams are drawn on it, and `masCU` is no longer imported | f730 from the MP4 at 1080p, plus a 3x crop of the mouth: level [J] |
+| 3 | minor | 18.09-18.14, the split's left pane | Mas one unchanged drawing for about 40 s: a still, not a held man (P4) | **Held changes** on the scene's clock (`sc-18.ts LEFT_HELD`): a blink at f1584; his eyes drop to the committee's card on his chest (lids lowered) at f1648 and stay there through the pages to f1990; blinks at f2052 and f2186. The pane stays a rung down. `masPane` takes `lid`/`look`; with neither set the face is as before, so 18.09 and 18.10 are unchanged. Not done: the phone face down beside him, because 18.15 shows it face up | f1585, 1700, 2052, 2190 from the MP4 [J] |
+| 4 | minor | 20.01-20.03, the zAI cage | The open padlock inside the birdcage still read as a small orange bird with a grey head | The art's padlock (a block with a round grey top, inside the cage's footprint) is no longer drawn in the pane. **A room-scale padlock hangs on the door's hasp in front of the bars** (`zai.ts roomLock`): a brass body with a lit top and a dark keyhole, and a thin steel shackle lifted open. 20.03's MCU background already had its own lock (`softLock`), and the ECU and 20.04 are unchanged | f5530, 5700 from the MP4 at 1080p and a 2x crop [J] |
+| 5 | minor (part) | 22.07 (22:38-22:41); 22.02 | 22.07's torso still a slab from the shoulders down; the ISS plate barely reads at 1080p and is turned in 22.07 | **22.07:** the near arm is now a rung lighter than the torso its whole length, tapering to a ribbed cuff, with **his hand at the frame's foot** (`iss.ts handAtFoot`). A bug was fixed on the way: the arm's lit-edge colour wasn't in its colour set, so it alternated with the outline as stripes. The figure layer was re-made (`iss22-insert`: only 22.07's changed). **The ISS plate is left as it is.** It is in the Blender plates (`art/iss/iss_scene.py`'s plate and text), so bigger, higher-contrast lettering and squaring it in 22.07 means re-rendering the art's seven plates and this act's 37 (`iss22.py`) to keep 22.01's tilt and close matching the wides. That is not cheap in this round | f7430 from the MP4 at 1080p [J] |
+
+**Left, with reasons (each needs a timing, lock or voice change, or a 3D re-render):**
+- **V.O. 13's move made visible** (20.07: catch Haras's tape and write a date on it). This needs a new action with a new written text and a pen sound, which means a lock text and a sound mark. For the beat plan's owner.
+- **Mario's plate on his first close shot; 212 paid off or taken off the lanyard.** The plate would be a new lock text. `212` is a lock text too (18.07's `doc`, `must`), so taking it off the lanyard in picture alone would break the lock's on-screen record. For the lock's owner.
+- **The garden's arrival 8-10 s shorter** (19.13-19.18). This is a timing change, touching the lock, the score and the mix. For the lock's owner.
+- **The ISS plate** (row 5).
+
+**Checks [M]:** `check` 57 layouts, 0 stand-ins, 0 problems. A scoped `tsc --noEmit` over `act4/shots.ts`: 0 errors. `scenekeys`: 18, 20 and 22 changed (code; 22 also its overlay), 19 cached. The renders (`X264_THREADS=1`, two workers, through `ops/heavy.sh`) took 18: 87 s, 20: 46 s, 22: 69 s, with the act concatenated without re-encoding. Keys: `sc-18-6a0f80872d90fad4`, `sc-20-56ae1a5d46c026a3`, `sc-22-97d070b9a1668efe`; `sc-19-dbaaac4092368ce9` unchanged. `act4.mp4` md5 `3801371e…`. `scenecheck --every 8`: **1,053 frames, 0 differ**. The flash check (`flash_seg.py`): **0** flashes in any second, 0 red, 39 transitions, the largest step 0.296 at f2917 (as before), pass. The contact sheet `out/ep02/v1/picture/act4-sheet.png` was re-made: 18.06 is now at f730 (the MCU) and 18.11 at f1700 (eyes down), every other frame as before. The review mux `picture-mux/act4.mp4` was re-made (the mix unchanged), and the cache pruned. **The film is not re-assembled here** (other fixers are working on their chapters); `ep02-v1.mp4` is stale for Act Four until the next `assemble.py v1`.
+
+### Re-running
+
+```sh
+cd studio   # S = scratch
+node src/episodes/ep02/pixel/tools/build.mjs --entry src/episodes/ep02/pixel/act4/tools/iss22-insert.ts $S/iss22.cjs && MRMAS_MAX_LOAD=40 ../ops/heavy.sh node $S/iss22.cjs
+node src/episodes/ep02/pixel/tools/build.mjs act4 $S/r-act4.cjs && node $S/r-act4.cjs check
+X264_THREADS=1 MRMAS_MAX_LOAD=40 MRMAS_HEAVY_MEM_MAX=6G ../ops/heavy.sh node $S/r-act4.cjs scenes --jobs 2
+MRMAS_MAX_LOAD=40 ../ops/heavy.sh node $S/r-act4.cjs scenecheck --every 8 && node $S/r-act4.cjs sceneprune
+cd .. && bash ops/heavy.sh audio/.venv-casting/bin/python show/episodes/ep02/production/v1/assembly/tools/flash_seg.py out/ep02/v1/picture/act4.mp4
+bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/episodes/ep02/pixel/tools/sheet.py sheet out/ep02/v1/picture/act4.mp4 out/ep02/v1/picture/act4-sheet.png "<title>" "69|18.01|WIDE" ... "730|18.06|MCU" ... "1700|18.11|RIGHT" ...   # shots-act4.md §6's frames otherwise
+MRMAS_MAX_LOAD=40 ops/rebuild-act.sh --ep 2 act4 --only mux
+```
+
+### For a human
+
+- **22.05 at speed:** does the bowed head read as a man absorbed in his page in the 3.6 s glimpse, and never as a look toward the slot or the flyer? It is 13 px of head at the frame's centre.
+- **18.06:** the standard head's still face after her account. Does it read as holding still, and not as a reply?
+- **18.11-18.14:** do his eyes dropping to the card and the two blinks read as a man waiting, and not as a reaction to Mario's lines?
+- **20.01-20.02's padlock** at its real size: a padlock now?
+- **The ISS plate** in 22.02 and 22.07 is still the art's (row 5): worth a Blender pass before lock?

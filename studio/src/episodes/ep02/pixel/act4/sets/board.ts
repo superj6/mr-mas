@@ -10,7 +10,7 @@
 //   podTV(b, f, st)        [SCR] 18.03-18.05 full frame: the plain player, her words captioned LARGE as she says them
 //                          (word by word, from the take's words), the waveform walking with her voice, the board's
 //                          one-sentence statement card under her last caption (18.05: the two side by side)
-//   masHold(b, f)          [MCU] 18.06: Mas at the table, still (Ep1's approved CU face, a face light one step)
+//   masHold(b, f)          [MCU] 18.06: Mas at the table, still (the episode's standard head, as 4A.02: the fix round)
 //   terbRemote(b, f, st)   [OTS] 18.06: over Mas's shoulder onto TERB (his approved portrait, no helmet), the TV's cool
 //                          light on his near side until he clicks it off with the remote in his hand; lip-synced
 //   lanyardInsert(b, f)    [INSERT] 18.07's head: Terb's hand holding out the SAFETY COMMITTEE lanyard, its card legible
@@ -37,7 +37,6 @@ import {drawMadaMedium, MADA_MEDIUM_DEFAULT} from '../../../../../shared/pixel/c
 import {drawSenator} from '../../../../../shared/pixel/cast/civic-extras';
 import {drawMasSeat4, MAS_SEATED_DEFAULT} from './masseat4';
 import type {MasSeatedArm} from './masseat4';
-import {masCU} from '../../../../../shared/pixel/cast/mas-cu';
 import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cast/mas';
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
@@ -320,21 +319,24 @@ const roomSoft = () => {
   SOFT = b;
   return b;
 };
-/** [MCU] Mas at the table, holding still: Ep1's approved CU face (no mouths, no blink: one silent, unchanging face),
- *  the window's day keyed on it one step (the cool CU's tungsten variant), the room a rung down behind him */
+/** [MCU] Mas at the table, holding still (the fix round, 2026-10-10: Ep1's CU drawing here was the off-model "other
+ *  face" 4A.02 dropped in round 1, and its mouth turned up at the corner: a faint smirk right after her account). The
+ *  episode's standard Mas head, as 4A.02 and this scene's own panes: Ep1's approved conversation portrait in the
+ *  window's day, keyed one step from the window (masDayFace, the face light), turned to Terb at the head; the level
+ *  resting mouth, no upturn; one silent, unchanging face (no mouth, no blink). No lanyard yet (18.07 gives it). The
+ *  room a rung down behind him; the hoodie's structure on the cloth (the near arm down his side, its crease, the far
+ *  seam), as masPane */
 export const masHold = (b: Buf, f: number) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  const cu = masCU('tungsten');
-  blitImg(b, cu, 0, 0, {clip: (_x, y) => y < RH});
-  // (the review pass: the hoodie carried down plain read as a cape) its structure on the cloth: the near shoulder's
-  // raglan seam, the near arm down his side (its lit face a rung up, the crease where it meets his body), the far
-  // shoulder's seam into the hood's shadow
-  const cloth = clothOf(cu, 0, 0);
-  clothArea(b, [[0, 203], [12, 186], [28, 174], [44, 175], [51, 190], [53, 203]], cloth, 1);
-  clothLine(b, [[80, 160], [64, 167], [50, 174], [44, 177]], cloth, -1, -1);
-  clothLine(b, [[44, 177], [49, 189], [52, 203]], cloth, -2);
-  clothLine(b, [[150, 158], [170, 168], [186, 184], [194, 203]], cloth, -2);
+  const X = 150, Y = 36;
+  const face = masDayFace({mouth: 'rest', look: -1});
+  putBustSoft(b, face, X, Y, RH, false);
+  const cloth = clothOf(face, X, Y);
+  clothArea(b, [[X + 4, 203], [X + 8, Y + 130], [X + 18, Y + 112], [X + 27, Y + 120], [X + 33, 203]], cloth, 1);
+  clothLine(b, [[X + 48, Y + 104], [X + 36, Y + 110], [X + 27, Y + 120]], cloth, -1, -1);
+  clothLine(b, [[X + 27, Y + 120], [X + 30, Y + 142], [X + 33, 203]], cloth, -2);
+  clothLine(b, [[X + 90, Y + 110], [X + 96, Y + 132], [X + 100, 203]], cloth, -2);
   void f;
 };
 /** [OTS] over Mas's shoulder onto TERB at the head (his approved portrait, helmet off), the remote in his near hand
@@ -446,10 +448,11 @@ export const terbPane = (b: Buf, f: number, st: {mouth?: Viseme; read?: boolean}
 /** [MCU] Mas at the table in the left pane: his approved portrait in the window's day, keyed one step from the window,
  *  turned to Terb at the head (camera-left: the portrait's own angle), the committee lanyard's card on his chest; the
  *  room soft behind; lip-synced (drawn in a full frame for the pane's 238 px crop from x 0) */
-export const masPane = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']}) => {
+export const masPane = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; lid?: MasPortraitState['lid']; look?: MasPortraitState['look']}) => {
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
-  const face = masDayFace({mouth: st.mouth ?? 'rest', look: -1});
+  // (the fix round: `lid`/`look` for the waiting pane's held changes, 18.11-18.14; unset, the face is as before)
+  const face = masDayFace(st.lid === undefined && st.look === undefined ? {mouth: st.mouth ?? 'rest', look: -1} : {mouth: st.mouth ?? 'rest', look: st.look ?? -1, lid: st.lid ?? 0});
   putBustSoft(b, face, 70, 30, RH, false);
   // (the review pass: the hoodie's structure, not a cape: the near arm down his side, its crease, the far seam)
   const cloth = clothOf(face, 70, 30);
