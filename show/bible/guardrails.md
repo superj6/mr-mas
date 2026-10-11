@@ -1,6 +1,17 @@
 # Guardrails
 
-> The hard rules. When a joke and a guardrail disagree, the guardrail wins and the joke gets rewritten. Everything here applies to scripts, boards, background art, easter eggs, promos and merch.
+> **Two kinds of rule (showrunner, 2026-10-11).** The showrunner asked why these exist ("it seems overly cautious and silly") and agreed to this split:
+> - **FIRM: safety, legal and platform rules.** These protect the show from removal, strikes and lawsuits, and keep the satire on public conduct. They never bend:
+>   - no depicting or referencing real attacks or deaths (X4, X5, X6);
+>   - no cloned voices, photoreal likenesses, or people from a video model (§5);
+>   - no allegations shown as fact (X8, X9, X12);
+>   - nothing sexual involving real people (X7);
+>   - no protected-trait humor (X10's ethnicity, religion, national origin, disability, accents; X2);
+>   - no invented motive at contested moments (§6).
+> - **TASTE: the showrunner's to bend.** Everything else: X1's background framing, X3, X10's body and hairline line, X11, §1b's restagings, the per-character never-do list (§6) beyond the firm items, and the camp matrix. A reviewer may flag these as notes, never as **blockers**.
+> - **Reviewers:** apply the firm rules by what a frame or line actually shows, not by stacking ordinary imagery into a worst-case read.
+>
+> The hard rules. When a joke and a FIRM guardrail disagree, the guardrail wins and the joke gets rewritten. Everything here applies to scripts, boards, background art, easter eggs, promos and merch.
 >
 > Sources: the v1 bible ([plan-v1](../_sources/plan-v1.md) §8, [final](../_sources/design/final.md) §1 and §7), the [grounding and fairness critique](../_sources/design/critic-grounding-fairness.md), the [comedy critique](../_sources/design/critic-comedy.md) §5, the research exclusion lists ([early](../_sources/research/early.md) §E, [recent](../_sources/research/recent.md) §7, [gaps](../_sources/research/gaps.md)), the three worldcast sweeps, and the [worldcast critic](../_sources/research/worldcast-critic.md) §C–D, which overrides everything else.
 
@@ -29,7 +40,7 @@ These never appear: not as a joke, not as a background detail, not as an easter 
 | X1 | **Private and family life**: spouses, partners, children, siblings, parents, dating, weddings, homes | Not public conduct. Invites harassment. Weakens the parody defense. | Characters exist only through public roles. Romance metaphors stay between companies and never involve Mas. |
 | X2 | **Sexuality as a joke** | Punches at identity, not conduct. | The ELPPA–NopeAI deal is a "hardware merger," never a marriage. YNOJ's portrait is a "merger portrait," never an engagement photo. |
 | X3 | **Health**: physical or mental, age, drugs, medical rumors | Not satire of public conduct, and it ages badly. | MARIO's anxiety is his *rhetorical style* (word counts, footnotes, "Addendum:"), never clinical. No flatline or heart-monitor imagery for Mas: the seismograph and the cup that never ripples do the job. |
-| X4 | **Violence against real people**, including the **attack on Altman's home** (Apr 2026) and any assassination-attempt imagery | Real harm to real people. | Not referenced in any form. No fist-pump imagery for RUMPT. Brockman's "I thought he was going to hit me" stays a quoted line only, with no physical staging. |
+| X4 | **Violence against real people**: the **Jul 13, 2024 Butler shooting** and the **attack on Altman's home** (Apr 2026) | Real harm to real people (a man was killed at Butler). FIRM. | Never depicted or referenced: no ear, no blood, no agents shielding anyone, no fall or crouch, no recreation of the raised-fist-and-flag photo. **Ordinary rally gestures are fine** (narrowed 2026-10-11 by the showrunner), RUMPT's raised fist at a rally included, provided nothing around it points to the shooting. Brockman's "I thought he was going to hit me" stays a quoted line only, with no physical staging. |
 | X5 | **Deaths, suicides, and wrongful-death suits**: Suchir Balaji; the Raine and Gavalas suits and similar; Pope Francis's death and funeral; the Charlie Kirk memorial | Grief is not material. | ZOMBIE 4o jokes stay on flattery and the retire/unretire cycle; never a distressed user. The SICNARF → OEL handoff is the name-taking only. RUMPT and NOLE simply "reconciled." |
 | X6 | **War, military operations and casualties**: the 2026 Iran war (Midnight Hammer, "Epic Fury"), Venezuela/Maduro, Gaza, the Minab school strike, Claude's use in operations, the Oct 23, 2025 San Francisco troop "surge" call, war-themed AI images | Real casualties. | The Pentagon arc is **paperwork only**: stamps, receipts, hourglasses, badges. No hardware, maps or weapons. THE PENTAGON is a building-giant holding a rubber stamp. |
 | X7 | **CSAM and sexualized deepfakes of real people**, including the Grok image controversy and "spicy mode" | Never depictable. | Mentioned at most as "a regulatory controversy," never shown. KORG's meltdown is a muzzle and a `16:00:00` timer. |

@@ -4,6 +4,11 @@
 
 ## Current notes, newest first
 
+00000D. **Guardrails are split into FIRM and TASTE (2026-10-11).** The showrunner asked why we have them ("it seems overly cautious and silly") and agreed to the split now at the top of `show/bible/guardrails.md`:
+   - **FIRM, never bent:** real attacks and deaths; cloned voices, likenesses, and people from a video model; allegations shown as fact; anything sexual involving real people; protected-trait humor; invented motive at contested moments.
+   - **TASTE:** everything else is the showrunner's to bend, and reviewers may raise it only as notes, never blockers.
+   - **X4 is narrowed:** never reference the Butler shooting or the attack on Altman's home, but ordinary rally gestures (RUMPT's fist included) are fine.
+   - Reviewers judge what a frame actually shows, not a worst-case stack of ordinary imagery.
 00000C. **The intro's typed quote stays the same in every episode (2026-10-10).** The showrunner: "i did not want the quote near the singularity unclear which side changed per intro".
    - Every episode's intro types "near the singularity; unclear which side.", picture and sound, exactly as Ep1's does.
    - Per-episode intro changes may touch other elements only: the subtitle, the keycap, the `you are here` dot.
