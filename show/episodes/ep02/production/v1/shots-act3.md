@@ -211,6 +211,12 @@ The episode review's Act Three picture and text findings, fixed in the scene mod
 
 **Not changed, with reasons:** the REMUHCS presser stays a cut-in (13.04-13.05; the review's minor (b)): its 3-4 s in the foreground are the political balance's (W25, D-70: the final check's FC-6 major found the counterweight unplated, in the background and at 0 s; GR §2); moving it to sc 19 is Act Four's picture. The staffers' "Did his post say why?" / "No." now sits just before it, so the TV's "when does it get a vote?" follows one unanswered question with another.
 
+### The film's fixes pass (2026-10-10): the Forecaster's colour, the pull pass
+
+- **Sc 17, the Forecaster:** a **rust** hoodie (`art/cast/forecaster.ts` RUST, the tungsten family W1-W5; his back ramp W3), was forest green: green over brown hair is F2.1's young Mas's alone (the episode review). His card's accent follows (`CARD_FORE` W5). 17.17's rail reads `MAY 19` and the pause post's own date `MAY 19` (`art/props/ui.ts`): the pause's own date (facts A33, A64; pull-1010).
+- **Sc 15, 15.10:** the post's byline `EKIEL, ALYI`, its own order (`sets/f22.ts`, `art/sets/alyioffice.ts`; facts A63).
+- Sc 15 and 17 re-rendered (sc 14 re-keyed by `ui.ts`, byte-identical). Looked at 17.01, 17.03, 17.07, 17.12, 17.15, 17.17, 17.20 and 15.10 (native and from the MP4) [J]; `scenecheck --every 16` 585 frames, 0 differ; flash max 1/s, 0 red [M]. Record: [fixes-v1.md](fixes-v1.md), the film's section.
+
 ## 4. Where this departs from the plan, and why
 
 - **13.02 cuts to an MCU on Mas** for "leave them up." (the lock: OTS-W): over his shoulder his mouth isn't visible. [FIRM P9]

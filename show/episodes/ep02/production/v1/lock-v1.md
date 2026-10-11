@@ -9,6 +9,7 @@
 > - **Every lock check the tools have was run (§5): 0 failures.** That includes the checks the lock pass and the lock QA added where the tools had none (§3.2, §3.5). What is left is listed as LOOK, each with its reason.
 > - **The fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md)) rebuilt Act One's lock for text only, no timing:** 4.18's `…Yup` (no period, as the post has it), 4A.04's plates (only `MAS MANALT · BOARD` is a read text; the three new directors' plates are soft), 4A.01's caption and the act's cast without `omis`. The frames, the takes and the score's audio are unchanged; the score's cue sheet was re-laid for the new content hash [M].
 > - **The fixes pass rebuilt Act Two's lock (2026-10-10, [fixes-v1.md](fixes-v1.md), Act Two), its 6,696 frames held:** V.O. 6 moved from 12.07 (cut there; the beat keeps its 10.95 s) to a new shot in the wings, 9.04b; V.O. 5's and the engineer's 11.15 lines re-recorded; 12.03 carries the rail `SEP 2023` and a far clink; 11.01's swing at 0.4 s; sc 8 0:42, sc 9 0:56, sc 11 1:35 (`SCENE_ADJUST_FX`). `lock_report.py`'s V.O.-6 floor mark is now two: "sc 12 plays without V.O. (W8)" and "his post held for its read floor". The chapter is "Act Two · stage right".
+> - **The film's fixes pass (2026-10-10, [fixes-v1.md](fixes-v1.md), the film's section) rebuilt Acts One, Three and Four and the tag for text only; every lock holds its frames:** the rails only at real time jumps (`JUN 11`, `JUN 19, 2024`, `AUG 11`, `AUG 21` gone; F2.1's `2006` and `2008` new; 17.17's `MAY 20` → `MAY 19`, the pause's own date), and the pull pass's three text swaps (4.01's byline `… · ALYI · … · MAS · …`, 15.10's `EKIEL, ALYI`, 19.07's `elppa` / `chatgtp`). **This file's episode clock is now the film's: 23:41.00, 34,104 frames** (no hum hold, the outro's 15.0 s from its timeline.ts; it was 23:36.88 with Ep1's 18-frame hum and the planned 10.125 s outro, which the film never had). `transcript-v1.txt` says it is superseded by the film's `assembly/transcript-film.txt`.
 > - **Nothing was watched or heard (R8).** Every number here is measured from the files [M]; every call is marked [J]. The ear list ([takes-qa.md](takes-qa.md) §6) gains one item, V.O. 9's count.
 
 **Contents:** [1. Frames and runtime](#1-frames-and-runtime) · [2. Scenes: arrival and aftermath](#2-scenes-arrival-and-aftermath) · [3. Where the lock differs from the plan, and why](#3-where-the-lock-differs-from-the-plan-and-why) · [4. The plan's marks, measured in the lock](#4-the-plans-marks-measured-in-the-lock) · [5. Every lock check](#5-every-lock-check) · [6. For the next passes](#6-for-the-next-passes) · [7. How to rebuild](#7-how-to-rebuild) · [8. Files](#8-files) · [9. LEARNINGS rules checked](#9-learnings-rules-checked)
@@ -27,10 +28,10 @@
 | Act Two · stage right | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 45 | 41 (3) | 5 | 4:39.00 | 9 ok |
 | Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 30 (4) | 4 | 5:20.00 | 9 ok |
 | Act Four · as a guest | **7,656** | 5:19.00 | 17:30:00 → 22:49:00 | 57 | 38 (3) | 4 | 5:19.00 | 9 ok |
-| Tag · august | **888** | 0:37.00 | 22:49:00 → 23:26:00 | 9 | 1 (1) | 1 | 0:37.00 | 8 ok |
+| Tag · august | **888** | 0:37.00 | 22:49:00 → 23:26:00 | 9 | 1 (1) | 1 | 0:37.00 | 9 ok |
 | **Story** | **32,976** | **22:54.00** | | 244 | 175 (14) | 20 | | |
 
-The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.wav 01:25:00 · Act One · the séance 01:27:00 · Act Two · stage right 07:31:00 · Act Three · leave them up 12:10:00 · Act Four · as a guest 17:30:00 · Tag · august 22:49:00 · the hum under black 23:26:00 · Outro · credits 23:26:18 · end 23:36:21 (**34,005 frames, 23:36.88**; the intro 720 f, the card 48 f, the hum 18 f, the outro 243 f at its planned length).
+The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.wav 01:25:00 · Act One · the séance 01:27:00 · Act Two · stage right 07:31:00 · Act Three · leave them up 12:10:00 · Act Four · as a guest 17:30:00 · Tag · august 22:49:00 · Outro · credits 23:26:00 · end 23:41:00 (**34,104 frames, 23:41.00**; the intro 720 f, the card 48 f, no hum hold, the outro 360 f: the film's clock, as assemble.py builds it).
 <!-- END generated:frames -->
 
 **Against the plans and the proposal [M]:**
@@ -269,7 +270,7 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 | 15.10 | 9.70 | 6 | 7.00 | 2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; |
 | 19.07 | 9.40 | 5 | 6.60 | WIDE · ELPPA's campus: the crowd's backs and the giant screen; at the crowd's edge Mas fin |
 | 12.01 | 6.09 | 1 | 5.86 | WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark → |
-| 17.17 | 10.00 | 3 | 5.80 | WIDE · May 20, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp d |
+| 17.17 | 10.00 | 3 | 5.80 | WIDE · May 19, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp d |
 | 10.07 | 7.12 | 1 | 5.34 | GFX · the break: an empty speech bubble drifts in from the margin and blots out the tiny s |
 | 14.04 | 5.30 | 0 | 5.30 | MCU · his own reflection mouthing can we talk? back to him |
 | 13.03 | 7.40 | 2 | 5.00 | ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down;  |
@@ -283,7 +284,7 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 | 15.15 | 4.60 | 2 | 4.00 | WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire |
 | 14.10 | 6.00 | 6 | 3.90 | HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topple |
 | 18.05 | 4.20 | 4 | 3.90 | FULL FRAME · under it, the board's same-day reply in its own statement card |
-| 20.10 | 7.00 | 8 | 3.90 | ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it ov |
+| 20.10 | 7.00 | 6 | 3.90 | ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it ov |
 
 73 wordless beats run over 4 s; the 20 with the longest stretch with no sound, text or line event are listed (all of them: assembly/lock-v1-checks.json, `holds`).
 <!-- END generated:holds -->

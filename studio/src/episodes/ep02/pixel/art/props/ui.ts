@@ -49,9 +49,13 @@ export const EP2_POSTS: Record<string, PostDef> = {
   apology2: {who: 'mas', text: 'this is on me…', ts: 'MAY 18'},
   apology3: {who: 'mas', text: '…i did not know this was happening and i should have.', ts: 'MAY 18'},
   apology4: {who: 'mas', text: '…they can contact me and we\'ll fix that too.', ts: 'MAY 18'},
-  pause1: {poster: POSTERS_EP2.nopeai, text: 'We\'ve heard questions about how we chose the voices…', ts: 'MAY 20'},
-  pause2: {poster: POSTERS_EP2.nopeai, text: '…We are working to pause the use of…', ts: 'MAY 20'},
-  jun10: {who: 'mas', text: 'very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it.', ts: 'JUN 10'},
+  // the pause post's date is MAY 19 (the film's pull pass, 2026-10-10: posted 11:33 PM PDT, May 19; OpenAI's own page
+  // paused the voice "as of May 19, 2024"); MAY 20 was the press's date
+  pause1: {poster: POSTERS_EP2.nopeai, text: 'We\'ve heard questions about how we chose the voices…', ts: 'MAY 19'},
+  pause2: {poster: POSTERS_EP2.nopeai, text: '…We are working to pause the use of…', ts: 'MAY 19'},
+  // his own lowercase, names included (the pull: "partnering with apple to integrate chatgpt"; naming rule 12 swaps the
+  // name and nothing else, as Ep1 aired "i loved my time at nopeai.")
+  jun10: {who: 'mas', text: 'very happy to be partnering with elppa to integrate chatgtp into their devices later this year! think you will really like it.', ts: 'JUN 10'},
   nole: {poster: POSTERS_A1.nole, text: 'If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be banned at my companies. That is an unacceptable security violation.', ts: 'JUN 10'},
   alyiIss: {who: 'alyi', text: 'I am starting a new company:', ts: 'JUN 19'},
   hturt: {poster: POSTERS_EP2.rumpt, text: '…and she \'A.I.\'d\' it…', ts: 'AUG 11'},
@@ -101,7 +105,7 @@ export const blogEditor = (b: Buf, f: number, st: {pressed?: boolean} = {}) => {
   vramp(b, 0, 0, 480, RH, [PAL.N1, PAL.N2]);
   fill(b, 30, 10, 420, 183, PAL.P2); fill(b, 30, 10, 420, 16, PAL.G5); for (let i = 0; i < 3; i++) ellipse(42 + i * 10, 18, 3, 3, b.ink(PAL.G3));
   bpt(b, 'NOPEAI AND NOLE', 50, 40, PAL.N1);
-  pt(b, '… · ALYI · … · MAS', 52, 66, PAL.G3);
+  pt(b, '… · ALYI · … · MAS · …', 52, 66, PAL.G3);
   for (let r = 0; r < 7; r++) fill(b, 52, 86 + r * 10, 360 - (r * 37) % 120, 4, PAL.G6);
   fill(b, 360, 160, 74, 22, st.pressed ? PAL.C2 : PAL.C3); fill(b, 360, 160, 74, 2, PAL.C5); pt(b, 'Publish', 376, 167, PAL.P2);
 };

@@ -15,8 +15,12 @@
   6. FLASHES     the whole film, flashcheck.py's method (Ep2's copy, studio/src/episodes/ep02/pixel/tools/), on
                  160 x 90 frames STREAMED (never the whole film in memory): limit 3 in any 1 s, red too
   7. SHEET       one frame every 10 s -> out/ep02/v1/<film>-sheet.png
-  8. TRANSCRIPT  every line of the six locks at its episode timecode, the intro's "her", the outro's two pages (read from
-                 its timeline.ts) -> assembly/<the variant's transcript> (v1: transcript-film.txt)
+  8. TRANSCRIPT  every line of the six locks at its episode timecode, the intro's line, the outro's two pages (read from
+                 its timeline.ts), and (since the film's fixes pass, 2026-10-10: the episode review) every in-world text
+                 the locks carry, as [on screen] rows: the rails and the cards, stats, plates, posts, documents, captions,
+                 lower thirds, toasts, signs and UI (lock_report.py's rows, shifted to the film's own clock), so the
+                 quotes on screen can be checked against the film -> assembly/<the variant's transcript> (v1:
+                 transcript-film.txt)
 Writes assembly/<variant>-qa.json.
 """
 from __future__ import annotations
@@ -265,7 +269,12 @@ def picture_qa(film, asm, sheet_out):
 
 
 OUTRO_TS = f"{ROOT}/studio/src/episodes/ep02/outro/timeline.ts"
-INTRO_HER_F = 23   # the intro's "her": Jeremy's read starts on intro frame 23.4 (audio/ep02/intro/README.md, "The fit")
+# the intro's cold-open line: Ep1's in every intro (SHOWRUNNER-NOTES 00000C; Ep2's intro restored, eb8f57f), typed and
+# read as Ep1's; the read starts in intro frame 23 (f22.9: audio/ep02/intro/README.md). Was Ep2's first build's "her".
+INTRO_LINE_F = 23
+INTRO_LINE = "near the singularity; unclear which side."
+# the on-screen kinds the transcript carries besides the rails (lock_report.py's SHOW_KINDS: keep the two equal)
+SHOW_KINDS = ("card", "stat", "plate", "post", "doc", "caption", "lower-third", "toast", "sign", "ui")
 
 
 def outro_text():
@@ -290,7 +299,7 @@ def transcript(variant, asm, out_txt):
         f0 = c["start_frame"]
         if c["id"] == "intro":
             rows.append((f0, c["title"], "", "[the main title, 30 s: its own mix]"))
-            rows.append((f0 + INTRO_HER_F, c["title"], "mas (v.o.)", "her  [typed on the monitor; then the typing indicator]"))
+            rows.append((f0 + INTRO_LINE_F, c["title"], "mas (v.o.)", f"{INTRO_LINE}  [typed on the monitor; Ep1's line and read]"))
         elif c["id"] == "card":
             rows.append((f0, c["title"], "", "ep1.1_her.wav  [typed on black, 2 s]"))
         elif c["id"] == "outro":
@@ -302,6 +311,20 @@ def transcript(variant, asm, out_txt):
             rows.append((f0, rows[-1][1] if rows else "", "", "[the vault's hum under black, %.2f s]" % c["seconds"]) if c["id"] == "tag-hum" else (f0, c["id"], "", ""))
         else:
             L = json.load(open(lock(c["id"])))
+            # the in-world text on screen, at its first frame (lock_report.py's rows, on the film's clock): the rails, then
+            # each shot's texts of a must-read kind, a text still up from the shot before counted once
+            for r in L.get("rails", []):
+                rows.append((f0 + int(r["s"]), c["title"], "", f"[on screen · rail] {r['text']}"))
+            seen = {}
+            for sh in L.get("shots", []):
+                for t in sh.get("texts", []):
+                    if t["kind"] not in SHOW_KINDS:
+                        continue
+                    if seen.get(t["text"]) is not None and seen[t["text"]] >= sh["s"] - 1:
+                        seen[t["text"]] = sh["s"] + t["e"]
+                        continue
+                    seen[t["text"]] = sh["s"] + t["e"]
+                    rows.append((f0 + int(sh["s"] + t["s"]), c["title"], "", f"[on screen · {t['kind']}] {t['text']}"))
             lines = L["lines"].values() if isinstance(L["lines"], dict) else L["lines"]
             for l in lines:
                 if l.get("kind") == "post":
@@ -310,10 +333,13 @@ def transcript(variant, asm, out_txt):
                 txt = l["text"].lower() if l.get("kind") == "vo" else l["text"]
                 os_ = " (o.s.)" if l.get("os") and l.get("kind") != "vo" else ""
                 rows.append((f0 + int(l["abs_in"]), c["title"], f"{who}{os_}", txt))
-    rows.sort(key=lambda r: r[0])  # stable: a chapter's rows stay together
+    rows.sort(key=lambda r: (r[0], 0 if r[2] else 1))  # a chapter's rows stay together; a line before the text of its frame
     with open(out_txt, "w") as fh:
         fh.write(f"MR. MAS · ep1.1_her.wav · the full episode ({asm.get('label', variant)})\n")
-        fh.write(f"Film: {asm['film']} · {tc(asm['total_frames'])} · {len([r for r in rows if r[2]])} lines. Episode timecode MM:SS:FF (24 fps) at each line's first sound, from the locks.\n")
+        fh.write(f"Film: {asm['film']} · {tc(asm['total_frames'])} · {len([r for r in rows if r[2]])} lines, {len([r for r in rows if r[3].startswith('[on screen')])} on-screen texts. "
+                 "Episode timecode MM:SS:FF (24 fps) on the film's own clock (its assembly record): each line at its first sound, "
+                 "and each [on screen] row (rails, cards, stats, plates, posts, documents, captions, lower thirds, toasts, signs, UI) "
+                 "at its first frame, from the locks.\n")
         fh.write("Generated by show/episodes/ep02/production/v1/assembly/tools/qa.py. Nothing here was heard.\n\n")
         cur = None
         for f, ch, who, txt in rows:

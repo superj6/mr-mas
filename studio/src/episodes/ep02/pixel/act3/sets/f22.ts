@@ -326,7 +326,7 @@ const ekiel23 = makeBust3<BustState>({
 void SKIN; void EK_SANDY;
 /** [2S] 15.10-15.11: this office, 2023, night: his screen close at frame left (in their eyeline), its bezel cropping
  *  Alyi's near shoulder (his frame rule); Alyi at it, Ekiel behind his shoulder squinting at the post; the post in its
- *  own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, its hard sentence; the bare Publish under it; the flashback's bloom */
+ *  own UI, INTRODUCING SUPERALIGNMENT · EKIEL, ALYI (the post's own byline order, the film's pull pass), its hard sentence; the bare Publish under it; the flashback's bloom */
 export const office2023 = (b: Buf, f: number, st: {alyiMouth?: Viseme; ekielMouth?: Viseme; ekielLid?: 0 | 1 | 2; alyiRead?: number; post?: 0 | 1 | 2}) => {
   b.c.set(night2023().c.subarray(0, W * RH));
   // (the fixes pass: Ekiel reads the post with his eyes open; the squint, an appearance gag once its setup was cut, is
@@ -341,13 +341,13 @@ export const office2023 = (b: Buf, f: number, st: {alyiMouth?: Viseme; ekielMout
   // 0 = the empty draft (a greyed title placeholder, the caret), 1 = the title and the byline, 2 = and its sentence
   const ps = st.post ?? 2;
   fill(b, 10, 22, 164, 22, PAL.C1);
-  if (ps >= 1) { pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8); pt(b, 'ALYI, EKIEL', 14, 50, PAL.N7); }
+  if (ps >= 1) { pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8); pt(b, 'EKIEL, ALYI', 14, 50, PAL.N7); }
   else pt(b, 'Title', 14, 28, PAL.C3);
   const s0 = 'Currently, we don\'t have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.';
   if (ps >= 2) pwrap(s0, 156).forEach((l, i) => pt(b, l, 14, 66 + i * 11, PAL.P1));
   fill(b, 14, 176, pw('Publish') + 12, 16, PAL.C3); pt(b, 'Publish', 20, 180, PAL.P2);
   // the caret blinking (the post still a draft): in the empty title, then after the byline
-  if (Math.floor(f / 12) % 2 === 0) { if (ps >= 1) fill(b, 14 + pw('ALYI, EKIEL') + 2, 49, 1, 9, PAL.C6); else fill(b, 13, 26, 1, 10, PAL.C6); }
+  if (Math.floor(f / 12) % 2 === 0) { if (ps >= 1) fill(b, 14 + pw('EKIEL, ALYI') + 2, 49, 1, 9, PAL.C6); else fill(b, 13, 26, 1, 10, PAL.C6); }
   void st.alyiRead;
   glossBloom(b, 0, 0, W, RH, 0.72, 1);
   void f;

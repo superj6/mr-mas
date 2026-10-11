@@ -89,7 +89,7 @@ L.add('20.04', {
 });
 // ------------------------------------------------------------------ 20.05-20.09 the lobby, JUN 11
 L.add('20.05', {
-  st: 'act4/sets/lobby morning ([W] ARRIVE: the divider slides away in held steps (the cage\'s bars -> the lobby\'s rack pillars), the lobby full frame on its morning: JUN 11 (rail), the confetti swept into a pile, two staffers taking the party down at the far pillar; Mas at the back by his pillar with his glass; he sets it on the counter, peels his own upside-down flyer off the pillar (the tape\'s sound), folds it and puts it inside his jacket)',
+  st: 'act4/sets/lobby morning ([W] ARRIVE: the divider slides away in held steps (the cage\'s bars -> the lobby\'s rack pillars), the lobby full frame on its morning: JUN 11 (no rail since the film\'s fixes pass: the signs\' 203 / 103 date it), the confetti swept into a pile, two staffers taking the party down at the far pillar; Mas at the back by his pillar with his glass; he sets it on the counter, peels his own upside-down flyer off the pillar (the tape\'s sound), folds it and puts it inside his jacket)',
   marks: {peel: ['snd', 'tape_peel', 1, 0], fold: ['snd', 'paper_flutter', 1, 0]},
   draw: (fb, k, sh, f) => {
     const peel = mk(sh, 'peel', 62), fold = mk(sh, 'fold', 91);

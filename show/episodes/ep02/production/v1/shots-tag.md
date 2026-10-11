@@ -71,6 +71,11 @@ The review's 13 findings, in its order; each fixed in the scene module or its se
 | 12 | minor (judgement call) | 23.07-23.08, the invented business inside the real broadcast's bezel | **Taken.** After the chrome clears, the dither dissolve now covers the whole frame and pushes past the bezel: THE PODIUM fills the frame as its own space (no bezel, no room, no window, no screen texture) for the rest of 23.07 and all of 23.08, then his face in 23.09. The stage sits where the screen was, so nothing jumps in the dissolve. See §4. |
 | 13 | minor | 23.04, the TERMINAL decal low contrast, its S clipped | **Fixed.** The decal drawn after the remap in TERMINAL's darkest on its lightest, its plate 14 px wider than the words. |
 
+### The film's fixes pass (2026-10-10): the rails
+
+- **No rail on 23.03 or 23.06** (was `AUG 11`, `AUG 21`; the review's W1 note: AUG 5 → AUG 11 → AUG 21 marched a calendar). RUMPT's post now carries its own date on its name row, `AUG 11`, right-aligned as every Ep2 post does (`sets/screen.ts feedPainter`); the interview has none on screen (the tag's `AUG 5` and its chapter carry August).
+- Sc 23 re-rendered. Looked at 23.03 and 23.06 native at 1080p [J]; `scenecheck --every 16` 73 frames, 0 differ; flash 0 [M]. Record: [fixes-v1.md](fixes-v1.md), the film's section.
+
 ## 4. Where this departs from the plan, and why
 
 - **23.01 is WIDE → OTS** (the lock's framing is OTS). The arrival is a wide from behind so the match with 22.09 (his back, the same place in frame) and the room (the GUEST frame, the monitor's glow) both read; the cover is read in an over-the-shoulder close down onto the desk.

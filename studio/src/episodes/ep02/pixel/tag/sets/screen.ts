@@ -129,6 +129,9 @@ export const feedPainter = (st: {post: boolean; egg?: boolean; ticks?: Array<[nu
   // RUMPT's post, whole: a plain red square avatar, his name and handle, his words, the photo
   fill(scr, g.x + 6, g.y + 16, 14, 14, PAL.R1); fill(scr, g.x + 6, g.y + 16, 14, 1, PAL.R2);
   pt(scr, 'RUMPT', g.x + 26, g.y + 15, PAL.P2); pt(scr, '@rumpt', g.x + 32 + pw('RUMPT'), g.y + 15, PAL.N6);
+  // its own date on the name row, right-aligned, as every Ep2 post carries one (the film's fixes pass, 2026-10-10: the
+  // rail AUG 11 is gone, so the post dates itself; facts A49)
+  pt(scr, 'AUG 11', g.x + g.w - 6 - pw('AUG 11'), g.y + 15, PAL.N6);
   pt(scr, POST_TEXT, g.x + 26, g.y + 28, PAL.P1);
   drawCrowd(scr, g.ph);
   for (const [fx, fy, hr] of st.ticks ?? []) { for (let i = 0; i < 3; i++) scr.set(fx - 1 + i, fy - hr - 4 + (i === 1 ? 1 : 0), PAL.C8); scr.set(fx + 2, fy - hr - 5, PAL.C8); }

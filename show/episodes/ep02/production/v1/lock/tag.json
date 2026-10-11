@@ -49,7 +49,11 @@
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep02/v1/mix/tag-mix.wav",
+   "offset_frames": 0,
+   "frames": 888.0
+  },
   "refs": {}
  },
  "checks": [
@@ -92,6 +96,11 @@
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 888.00 f vs 0 + 888"
   }
  ],
  "sequences": [
@@ -384,11 +393,6 @@
    "e": 314,
    "onscreen": [
     {
-     "text": "RAIL: AUG 11",
-     "s": 4,
-     "e": 33
-    },
-    {
      "text": "…and she 'A.I.'d' it…",
      "s": 38,
      "e": 98
@@ -445,7 +449,7 @@
    "beat_starts": {
     "23.03": 0
    },
-   "picture": "His text never types: it arrives as one block.",
+   "picture": "His text never types: it arrives as one block. No rail (the film's fixes pass): the post's own AUG 11 dates it.",
    "names": [
     {
      "id": "sirrah",
@@ -731,11 +735,6 @@
    "e": 660,
    "onscreen": [
     {
-     "text": "RAIL: AUG 21",
-     "s": 4,
-     "e": 33
-    },
-    {
      "text": "…having me speak… It's a little bit dangerous out there.",
      "s": 33,
      "e": 109
@@ -793,7 +792,7 @@
    "beat_starts": {
     "23.06": 0
    },
-   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice.",
+   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1084,20 +1083,6 @@
    "e": 33,
    "shot": "23.01",
    "floor_f": 12
-  },
-  {
-   "text": "AUG 11",
-   "s": 218,
-   "e": 247,
-   "shot": "23.03",
-   "floor_f": 14
-  },
-  {
-   "text": "AUG 21",
-   "s": 553,
-   "e": 582,
-   "shot": "23.06",
-   "floor_f": 14
   }
  ],
  "sound_marks": [],

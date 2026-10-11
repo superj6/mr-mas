@@ -153,7 +153,7 @@ L.add('15.09', {
   },
 });
 L.add('15.10', {
-  st: 'act3/sets/f22 office2023 ([2S] this office, 2023, night (art/sets/alyioffice screen2023, under the flashback\'s glossy bloom): his screen close at frame left, its bezel cropping his near shoulder; the rail 2023 alone over the empty draft for 2.2 s (the fixes pass), then the post fills in, in its own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, and its hard sentence, held to its read time; Ekiel beside him reading it, his eyes open)',
+  st: 'act3/sets/f22 office2023 ([2S] this office, 2023, night (art/sets/alyioffice screen2023, under the flashback\'s glossy bloom): his screen close at frame left, its bezel cropping his near shoulder; the rail 2023 alone over the empty draft for 2.2 s (the fixes pass), then the post fills in, in its own UI, INTRODUCING SUPERALIGNMENT · EKIEL, ALYI (the post\'s own byline order), and its hard sentence, held to its read time; Ekiel beside him reading it, his eyes open)',
   marks: {title: ['txt', 'INTRODUCING', 'at', 0], body: ['txt', 'Currently', 'at', 0]},
   draw: (fb, k, sh, f) => {
     // the fixes pass: the rail alone over the empty draft for 2.2 s; then the title and byline, then the sentence (the

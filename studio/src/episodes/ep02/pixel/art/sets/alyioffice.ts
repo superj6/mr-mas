@@ -7,7 +7,7 @@
 //                             on the empty room)}
 //   screen2023(b, f, st)      [2S] F2.2 15.10-15.11: Alyi at his screen at night, the screen's edge cropping him (his
 //                             frame rule), EKIEL beside him squinting at it; the post on it in its own UI:
-//                             INTRODUCING SUPERALIGNMENT · ALYI, EKIEL and its sentence (st.ekiel, st.alyi moods)
+//                             INTRODUCING SUPERALIGNMENT · EKIEL, ALYI (its byline order) and its sentence (st.ekiel, st.alyi moods)
 //   publishECU(b, f, st)      [ECU] 15.12 / 15.14: his finger over / on the bare Publish button (no cursor, no hover)
 //   stairwell(b, f, st)       [W] -> [ECU] 15.19: a plain stairwell, Mas small on the stairs (the cast), his phone
 //                             buzzing; st.push: the reporter's `request for comment`, its thumbnail a strip of receipt
@@ -75,7 +75,7 @@ export const screen2023 = (b: Buf, f: number, st: {alyiMouth?: 'rest' | 'O' | 'E
   // the screen (close, left), its post in its own UI, the bezel's right edge over his near shoulder
   fill(b, 0, 8, 186, 195, PAL.N0); fill(b, 4, 14, 176, 189, PAL.N2); fill(b, 183, 8, 3, 195, PAL.N3);
   fill(b, 10, 22, 164, 22, PAL.C1); pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8);
-  pt(b, 'ALYI, EKIEL', 14, 50, PAL.N7);
+  pt(b, 'EKIEL, ALYI', 14, 50, PAL.N7);
   const s = 'Currently, we don\'t have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.';
   pwrap(s, 156).forEach((l, i) => pt(b, l, 14, 66 + i * 11, PAL.P1));
   fill(b, 14, 176, pw('Publish') + 12, 16, PAL.C3); pt(b, 'Publish', 20, 180, PAL.P2);

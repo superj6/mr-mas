@@ -196,6 +196,14 @@ Minor
 
 Also (left to this act by Act Two's and Act Three's fixers): **20.01's banner** reads `KORG 2` (sun-faded, a corner peeling; no date: it read `KORG 2: NEXT QUARTER`, a release-timeline claim over invented staging); **Ekiel's squint** is gone from sc 18 (`light.ts ekielOpen`, Act Three's open-eyed head with the committee lanyard: GR X10). Re-making the sc 22 layers also brought 22.01's falling-pin layers up to date with `dark.ts`'s pin (some of its tumble frames were stale since Act Three's pass).
 
+### The film's fixes pass (2026-10-10): F2.1's rails, the extra's colour, the rails at real jumps
+
+- **F2.1 dated:** `RAIL: 2006` on 19.12 (before the end card) and `RAIL: 2008` on 19.13, like every other flashback (the episode review: undated, the green-jacketed kid read as the Forecaster).
+- **One green jacket:** the lobby's third standing look (`sets/lobby.ts STAND[2]`: the cup-lifting staffer at 20.09, the pointer and every third standing cheerer in sc 19) is **plum** (U1-U5), was green.
+- **No rail on 20.05 or 20.10** (was `JUN 11`, `JUN 19, 2024`): the DAYS SINCE signs' 203 / 103 and the docket date the morning after; Alyi's post carries its own `JUN 19`.
+- **19.07:** Mas's post reads `elppa` / `chatgtp` in his lowercase (facts A67, pull-1010).
+- Sc 19 and 20 re-rendered (sc 22 re-keyed by `ui.ts`, byte-identical). Looked at 19.04, 19.07, 19.12, 19.13, 20.05, 20.09, 20.10 (native, and 19.13 and 20.09 from the MP4) [J]; `scenecheck --every 16` 582 frames, 0 differ; flash 0 [M]. Record: [fixes-v1.md](fixes-v1.md), the film's section.
+
 ## 4. Where this departs from the plan, and why
 
 - **22.01's tilt is 28 held plates on 2s**, not a continuous camera move: every frame of sc 22 is a still plate plus pixels (the leap's grammar since the art pass), and the held steps keep it in the show's held-drawing timing.

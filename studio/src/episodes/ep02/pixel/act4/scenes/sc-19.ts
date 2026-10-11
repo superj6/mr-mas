@@ -145,12 +145,12 @@ L.add('19.11', {
   draw: (fb, k, sh, f) => { phonePush(fb, f, {push: Math.min(3, Math.floor(k / 4)), crumb: k - 12}); void sh; },
 });
 L.add('19.12', {
-  st: 'art/sets/elppa corner2006 ([W] EARLY-WEB16: a street corner, 2006, a phone ad: YOUNG MAS (f21/mas08) holds up a flip phone and grins, a GPS pin bobbing over his head; the ad\'s end card slams in: "WHERE YOU AT?", its pin)',
+  st: 'art/sets/elppa corner2006 ([W] EARLY-WEB16: a street corner, 2006, a phone ad: YOUNG MAS (f21/mas08) holds up a flip phone and grins, a GPS pin bobbing over his head; the ad\'s end card slams in: "WHERE YOU AT?", its pin; the rail 2006 first, before the card (the film\'s fixes pass: the memory dated, like every other flashback))',
   marks: {card: ['txt', 'WHERE YOU AT', 'at', 0]},
   draw: (fb, k, sh, f) => { corner2006(fb, f, {card: k >= mk(sh, 'card', 60)}); },
 });
 L.add('19.13', {
-  st: 'act4/sets/f21 stageToss ([W → M] a match on the pin: the end card\'s pin is the pin on the 2008 stage\'s screen (a TPOOL slide); 2008, this company\'s stage, the intro\'s own frame (f21/era2008\'s parts, copied, on this shot\'s clock; its camcorder, EARLY-WEB16): Mas strides out to his mark (in frame from the first frame, there by k24); THE SLEEVE (a sleeve and nothing else) reaches out of a stage-left wing and tosses him the clicker in a high arc (on twos, a short trail), he catches it on the catch; the camcorder pushes in on him in two held steps and both collars pop; the tiled 2008 crowd (the fixes pass, 2026-10-10: the episode review\'s minor, a flat arm, a tiny cropped Mas, a toss and pops that didn\'t read))',
+  st: 'act4/sets/f21 stageToss ([W → M] a match on the pin: the end card\'s pin is the pin on the 2008 stage\'s screen (a TPOOL slide); 2008, this company\'s stage, the intro\'s own frame (f21/era2008\'s parts, copied, on this shot\'s clock; its camcorder, EARLY-WEB16): Mas strides out to his mark (in frame from the first frame, there by k24); THE SLEEVE (a sleeve and nothing else) reaches out of a stage-left wing and tosses him the clicker in a high arc (on twos, a short trail), he catches it on the catch; the camcorder pushes in on him in two held steps and both collars pop; the tiled 2008 crowd; the rail 2008 under it, as 19.12\'s 2006 (the film\'s fixes pass) (the fixes pass, 2026-10-10: the episode review\'s minor, a flat arm, a tiny cropped Mas, a toss and pops that didn\'t read))',
   marks: {catch: ['snd', 'clicker_catch', 1, 0]},
   draw: (fb, k, sh, f) => {
     stageToss(fb, k, mk(sh, 'catch', 54));

@@ -1,5 +1,7 @@
 // MR. MAS — Ep2 v1 art: THE FORECASTER (ex-NopeAI; manifest §2.2; sc 17). characters/the-forecaster.md: a young
-// researcher in a hoodie. Here: a forest-green hoodie, tousled dark hair, a clipboard of dates and a plain wristwatch;
+// researcher in a hoodie. Here: a rust hoodie (forest green until the film's fixes pass, 2026-10-10: the episode review
+// found three people in one green jacket over brown hair: F2.1's young Mas, the Forecaster and a lobby extra; young Mas
+// keeps the intro's green), tousled dark hair, a clipboard of dates and a plain wristwatch;
 // conversational, precise, kind; his refusal is principled (no invented probability anywhere on him). Never a likeness.
 //   forecasterBust(s)                  112 x 136, faces camera-left. s: {mouth, expr, arm: 'none' | 'clipboard' (held up
 //                                      at the chest, its top sheet's date grid) | 'watch' (the wrist turned up)}
@@ -18,7 +20,8 @@ import type {ArtAsset} from '../asset';
 
 export interface ForecasterBust extends BustState { arm: 'none' | 'clipboard' | 'watch' }
 export const FORECASTER_DEFAULT: ForecasterBust = {mouth: 'rest', expr: 'neutral', arm: 'clipboard'};
-const GREEN = [PAL.N0, PAL.L0, PAL.L0, PAL.L1, PAL.L2, PAL.L3];
+/** his hoodie: rust, the tungsten family a rung under the lobby's orange blazer (no green: that is young Mas's) */
+const RUST = [PAL.N0, PAL.W1, PAL.W2, PAL.W3, PAL.W4, PAL.W5];
 // his own head: young (a rounder cranium, a short face, a soft jaw, a small straight nose), big round attentive eyes
 // under straight brows, a thin face that still has its youth in the cheeks, tousled hair falling forward
 const spec: BustSpec3 = {
@@ -46,8 +49,8 @@ const spec: BustSpec3 = {
     }
     return {parts, adjust};
   },
-  ramps: {skin: SKIN.light, hair: HAIR.dark, suit: GREEN, shirt: GREEN, cord: [PAL.N1, PAL.G4, PAL.G5, PAL.P1, PAL.P2, PAL.P2], metal: [PAL.N0, PAL.G3, PAL.G4, PAL.G6, PAL.P2, PAL.W9]},
-  backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.L2},
+  ramps: {skin: SKIN.light, hair: HAIR.dark, suit: RUST, shirt: RUST, cord: [PAL.N1, PAL.G4, PAL.G5, PAL.P1, PAL.P2, PAL.P2], metal: [PAL.N0, PAL.G3, PAL.G4, PAL.G6, PAL.P2, PAL.W9]},
+  backRamp: {skin: PAL.S3, hair: PAL.G3, suit: PAL.W3},
 };
 const bust = makeBust3<ForecasterBust>(spec);
 /** the clipboard (bust scale, 30 x 38): brown board, steel clip, a sheet with a grid of dates, an hour crossed out */
@@ -73,8 +76,8 @@ export const forecasterBust = (s: Partial<ForecasterBust> & {crossed?: number} =
 export interface ForecasterRoomPose { state: 'walk' | 'stand' | 'talk' | 'cross' | 'asleep'; legs?: RoomLegs; mouth?: 'rest' | 'open' | 'smile' }
 const rspec: RoomFigSpec = {
   kind: 'jacket', legMat: 'jeans',
-  ramps: {skin: SKIN.light, hair: HAIR.dark, suit: GREEN, shirt: GREEN, jeans: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N6], board: [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.P1, PAL.P2], pen: [PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.R3, PAL.R3]},
-  backRamp: {skin: PAL.S3, suit: PAL.L2},
+  ramps: {skin: SKIN.light, hair: HAIR.dark, suit: RUST, shirt: RUST, jeans: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N6], board: [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.P1, PAL.P2], pen: [PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.R3, PAL.R3]},
+  backRamp: {skin: PAL.S3, suit: PAL.W3},
   extras: (p, bob) => {
     const st: unknown[] = [];
     if (p.state === 'talk' || p.state === 'cross') st.push({x: 24, y: 22 + bob, rows: ['bbbbbb', 'bppppb', 'bppppb', 'bppppb', 'bbbbbb'], pal: {b: ['board', 2], p: ['board', 5]}});
@@ -104,7 +107,7 @@ const e = (x: Expr, m: Viseme = 'rest', arm: ForecasterBust['arm'] = 'clipboard'
 export const ART: ArtAsset[] = [{
   id: 'char-forecaster', manifest: '§2.2 THE FORECASTER', kind: 'character', name: 'THE FORECASTER (ex-NopeAI)',
   file: 'cast/forecaster.ts', exports: 'forecasterBust, drawForecasterRoom, drawProbUmbrella, FORECASTER_DEFAULT', scenes: '17',
-  note: 'forest-green hoodie, a clipboard of dates, a watch; kind and precise (smile, focus); asleep against the rail; the umbrella egg',
+  note: 'rust hoodie (green until the film\'s fixes pass), a clipboard of dates, a watch; kind and precise (smile, focus); asleep against the rail; the umbrella egg',
   stills: [{label: 'busts: "Here\'s where I am." (focus, talk) · the forecast (smile) · checking his watch · neutral; room: walk, talk, cross out, asleep; the umbrella', draw: (b) => {
     sheetPlate(b, [PAL.U0, PAL.U1, PAL.N3, PAL.N3]);
     sheetBust(b, forecasterBust(e('focus', 'E')), -8, 52, 'here is where I am');

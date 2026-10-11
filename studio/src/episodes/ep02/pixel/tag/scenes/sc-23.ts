@@ -8,12 +8,12 @@
 //            out (rail AUG 5)
 //   ITEM 1   23.02 its pages under his hand: !! · ! · . ; he slides it aside so he can see the monitor
 //   ITEM 2   23.03 RUMPT's post arrives whole in its own UI (his text never types), the rally photo under SIRRAH's plate,
-//            SUMMER 2024 (rail AUG 11) · 23.04 THE ORB floats off his shoulder to the monitor; its TERMINAL view (2.E):
+//            SUMMER 2024 (its own date AUG 11; no rail since the film's fixes pass) · 23.04 THE ORB floats off his shoulder to the monitor; its TERMINAL view (2.E):
 //            the crowd face by face, human · human · human · human, its log counting every face; back in his room its
 //            toast, verified: human (all of them) (toast 3 of 3); it floats back; the egg on a bill in a background tab
 //            · 23.05 the toast cleared, V.O. 14 typed by the host (the back of his head: no mouth)
 //   ITEM 3   23.06 the Aug 21 interview in its own plain player (hands and tie only, the speaker muted), its lower third
-//            whole: his real words (rail AUG 21) · 23.07 the player's chrome clears, and the frame dissolves past the
+//            whole: his real words (no rail since the film's fixes pass: the AUG 5 rail and the chapter carry August) · 23.07 the player's chrome clears, and the frame dissolves past the
 //            monitor's bezel (the review's fixes): outside the broadcast, full frame, on THE PODIUM (still facing away)
 //            the same hands pump up a balloon in CHATGTP's bubble shape and tie it on, and go
 //   HOOK     23.08 (full frame) the string goes taut over the podium's lip, the balloon pulled down behind it, as if
@@ -77,7 +77,7 @@ L.add('23.02', {
   },
 });
 L.add('23.03', {
-  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen feedPainter ([POV] HTURT\'s plain feed (grey rows); on the pop RUMPT\'s post arrives WHOLE in one frame (a plain red square avatar, …and she \'A.I.\'d\' it…), its photo: a rally crowd under SIRRAH\'s plate, a SUMMER 2024 decal on its corner; a background tab: an egg on a bill (Ep3\'s); the rail AUG 11)',
+  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen feedPainter ([POV] HTURT\'s plain feed (grey rows); on the pop RUMPT\'s post arrives WHOLE in one frame (a plain red square avatar, …and she \'A.I.\'d\' it…), its photo: a rally crowd under SIRRAH\'s plate, a SUMMER 2024 decal on its corner; a background tab: an egg on a bill (Ep3\'s); its own date AUG 11 on the name row (no rail since the film\'s fixes pass))',
   marks: {pop: ['snd', 'ui_toast_pop', 1, 0]},
   draw: (fb, k, sh, f) => { drawMonitorPOV(fb, f, feedPainter({post: k >= mk(sh, 'pop', 38), egg: true})); },
 });
@@ -135,7 +135,7 @@ L.add('23.05', {
   },
 });
 L.add('23.06', {
-  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen broadcastPainter ([POV] the Aug 21 interview in its own plain player (no network, no logo, the speaker muted): the suit from the chin down, the over-long red tie, his hands talking (art/cast/hands2, the sleeves foreshortened from below), no face, no voice; its lower third slides in whole: "…having me speak… It\'s a little bit dangerous out there." (his real words, the faithful crop), held for its read; the rail AUG 21)',
+  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen broadcastPainter ([POV] the Aug 21 interview in its own plain player (no network, no logo, the speaker muted): the suit from the chin down, the over-long red tie, his hands talking (art/cast/hands2, the sleeves foreshortened from below), no face, no voice; its lower third slides in whole: "…having me speak… It\'s a little bit dangerous out there." (his real words, the faithful crop), held for its read; no rail since the film\'s fixes pass)',
   marks: {lower: ['txt', '…having me speak', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const l0 = mk(sh, 'lower', 33);

@@ -547,7 +547,7 @@ export const deskPOV = (b: Buf, f: number, st: {pressed?: boolean} = {}) => {
   fill(b, x, y, w, h, PAL.P2);
   fill(b, x, y, w, 9, PAL.G5); for (let i = 0; i < 3; i++) ellipse(x + 8 + i * 8, y + 4, 2, 2, b.ink(PAL.G3));
   bpt(b, 'NOPEAI AND NOLE', x + 12, y + 18, PAL.N1);
-  pt(b, '… · ALYI · … · MAS', x + 13, y + 40, PAL.G2);
+  pt(b, '… · ALYI · … · MAS · …', x + 13, y + 40, PAL.G2);   // the post's five authors, MAS fourth (the film's pull pass)
   for (let r = 0; r < 5; r++) fill(b, x + 13, y + 56 + r * 8, 196 - (r * 37) % 70, 3, PAL.G6);
   fill(b, x + w - 70, y + h - 12, 62, 12, st.pressed ? PAL.C2 : PAL.C3); fill(b, x + w - 70, y + h - 12, 62, 1, PAL.C5); pt(b, 'Publish', x + w - 58, y + h - 9, PAL.P2);
   // the screen's light: the table's near edge to its right, and the planchette's brass catching it
@@ -560,7 +560,7 @@ export const publishECU = (b: Buf, f: number, st: {press?: boolean; flare?: numb
   vramp(b, 0, 0, W, RH, [PAL.N1, PAL.N2, PAL.N2]);
   fill(b, 30, 14, 420, 176, PAL.N3);
   bpt(b, 'NOPEAI AND NOLE', 52, 24, PAL.P2);
-  pt(b, '… · ALYI · … · MAS', 53, 46, PAL.N7);
+  pt(b, '… · ALYI · … · MAS · …', 53, 46, PAL.N7);
   for (let r = 0; r < 3; r++) fill(b, 53, 62 + r * 9, 300 - r * 46, 3, PAL.N5);
   fill(b, 120, 98, 220, 58, st.press ? PAL.C2 : PAL.C3); fill(b, 120, 98, 220, 2, st.press ? PAL.C3 : PAL.C5); fill(b, 120, 154, 220, 2, PAL.C1);
   bpt(b, 'Publish', 230 - Math.round(bpw('Publish') / 2), 119, PAL.P2);

@@ -31,6 +31,8 @@
 
 Every real line and real item in the episode, with its row in [facts.md](../../facts.md) (§A rows `A1`–`A56`, §B quotes, `PP2.1`). Rows **A57–A71 are new**: A57–A69 are the proposal's "Facts to pull before lock", A70–A71 the script review's; facts.md was regenerated from this key at the script review, under these numbers. Tags as the proposal's: [P] primary · [V] verified · [V·press] verified in press reports, primary to pull · [K] known, re-check before lock · [H] headline wording.
 
+> **The film's pull pass (2026-10-10, `pull-1010`, [fixes-v1.md](fixes-v1.md), the film's section):** every "pull", "confirm" and "memory" action in this key was carried out; **[facts.md](../../facts.md) §E is the record, and its tags supersede this key's.** Four on-screen texts changed with it, here and in the plan: the Mar 5 byline row `… · ALYI · … · MAS · …` (A10, A59), `INTRODUCING SUPERALIGNMENT · EKIEL, ALYI` (A63), the pause post's and 17.17's `MAY 19` (A33, A64), and the Jun 10 post's `elppa` / `chatgtp` in his lowercase (A67).
+
 | Id | What | Where | Tag · source · action |
 |---|---|---|---|
 | A6 | AROS's preview (a mammoth in the snow) | sc 1 | [V] |
@@ -205,7 +207,7 @@ AXIS — MAS at the head of the table, screen-left; the foot of the table, where
 
 `[W]` → `[LOW·DESK]` [4.01] (≈ 2.5 s · ARRIVE: the whole shot) The boardroom, lit only by candles, already lit. On the table a Ouija board whose letters are reply chevrons, `>>>`, and a plain brass-rimmed planchette (no pointer glyph: it reads as a planchette, never a cursor). Three STAFFERS hold hands. GERG at the table's corner, one hand on the planchette, typing with the other. THE ORB hangs over it all like a chandelier. An empty chair at the table's end. At the head, MAS has the post open on his laptop:
 
-ON SCREEN (the post, the editor): `NOPEAI AND NOLE` · its byline row `… · ALYI · … · MAS` [P · facts A10; the byline [V · facts A59]; name swaps]
+ON SCREEN (the post, the editor): `NOPEAI AND NOLE` · its byline row `… · ALYI · … · MAS · …` [P✓ · facts A10; the byline [P✓ · facts A59]: the post's five authors in its own order, MAS fourth (the film's pull pass); name swaps]
 
 `[ECU]` → `[MCU]` [4.02] (≈ 9.6 s) His finger on the bare Publish button, no hover. Click. Every candle flares one step; the planchette moves by itself.
 
@@ -1226,7 +1228,7 @@ Its ripple turns warm and breaks into string lights.
 > `[2S]` [15.10] (≈ 9.7 s) This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI. The rail first, on its own over the room and the empty draft; then the title and byline fill in, then the sentence:
 >
 > `RAIL: 2023`
-> ON SCREEN (the post): `INTRODUCING SUPERALIGNMENT · ALYI, EKIEL` · "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue." [V·press · facts A63: a later sentence of the post, verbatim (it opens "We need scientific and technical breakthroughs…"); open the post; its numbers don't print]
+> ON SCREEN (the post): `INTRODUCING SUPERALIGNMENT · EKIEL, ALYI` · "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue." [V·press · facts A63: a later sentence of the post, verbatim (it opens "We need scientific and technical breakthroughs…"); open the post; its numbers don't print]
 >
 > EKIEL beside him, reading it.
 >
@@ -1362,7 +1364,7 @@ He finds a line on the receipt, reads it, and very carefully takes his hand off 
 
 **Phrases 6–7.** `[W]` [17.17] (≈ 10.0 s; one 4-bar phrase) A new day on the bridge: traffic moving again, the receipt trodden flat into the lane lines, Mas under an umbrella on the pedestrian lane. The `her` blimp drifts in over the bay. A storm cloud with a blank letterhead rolls out of the city and parks directly over it. Thunder, tuned (at most 3 flashes in any 24 frames, every pop at or under 80% white).
 
-`RAIL: MAY 20` [V·press · facts A33]
+`RAIL: MAY 19` [P✓ · facts A33, A64: the pause's own date, OpenAI's "as of May 19, 2024"; was `MAY 20` until the film's pull pass]
 
 `[W]` [17.18] (≈ 7.0 s) It rains letterhead. The receipt's ink runs down the lanes in the rain. *Egg: far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.*
 
@@ -1567,7 +1569,7 @@ The lobby laughs. GERG, the only one not cheering, takes out his phone.
 
 `[W]` [19.07] (≈ 9.4 s · ARRIVE: the crowd's backs and the giant screen before Mas) ELPPA's campus (generic: no real building, logo or trade dress). At the edge of the crowd under a giant screen, ELPPA still on its stage, Mas finishes his post at a post's pace and sends it. Three collars at his neck, no pop; no badge.
 
-ON SCREEN (his post, in its own UI): "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it." [V · facts A67 · x.com/sama/status/1800237314360127905; verbatim, his lowercase; name swaps]
+ON SCREEN (his post, in its own UI): "very happy to be partnering with elppa to integrate chatgtp into their devices later this year! think you will really like it." [V · facts A67 · x.com/sama/status/1800237314360127905; verbatim, his lowercase; name swaps]
 
 `[W]` → `[MCU]` [19.08] (≈ 6.9 s) On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.
 
@@ -1615,9 +1617,13 @@ TEMPO · normal; Mas at 0.45 s; Gerg's literal answer quick (0.25 s); his last q
 >
 > `[W]` [19.12] (≈ 4.7 s) A street corner, 2006: a phone ad. YOUNG MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in:
 >
+> `RAIL: 2006` *(the film's fixes pass: the memory dated, like every other flashback)*
+>
 > ON SCREEN (the end card): `"WHERE YOU AT?"` [V · facts A53]
 >
 > `[W]` → `[M]` [19.13] (≈ 5.0 s) A match on the pin: 2008, this company's stage, the intro's own frame. Mas strides out to his mark. THE SLEEVE reaches out of the stage-left wing and tosses him the clicker in a high arc, and he catches it. The camcorder pushes in on him: two polos, both collars pop [V · facts A55]. The tiled 2008 crowd applauds.
+>
+> `RAIL: 2008` *(the intro's 2008)*
 >
 > `[W]` [19.14] (≈ 6.9 s) He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads `LAST UPDATED 2012` [V · the app shut down in 2012; the greying is ours, and no cause is claimed].
 >
@@ -1675,7 +1681,7 @@ SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.3 s) Inside the cage, his phone, lit, starts
 
 `[W]` [20.05] (≈ 4.8 s · ARRIVE: the lobby on its morning bed, the confetti already swept; the cage's bars become the lobby's rack pillars as the divider slides away) The NopeAI lobby, morning. The confetti swept into a pile; the staff taking the party down, and the flyers with it. Mas, at the back with his glass, peels his own upside-down flyer off the pillar, folds it and puts it inside his jacket.
 
-`RAIL: JUN 11`
+*(No rail since the film's fixes pass: the DAYS SINCE signs' 203 / 103 and the docket's `JUN 12` date the morning after.)*
 
 `[ECU]` [20.06] (≈ 1.2 s) His fingers find something already in there: the yellowed corner of the old note. No words legible.
 
@@ -1692,7 +1698,7 @@ ON SCREEN (the docket tab): `HEARING · JUN 12 · MOTION TO DISMISS` [V·press �
 
 `[ECU]` [20.10] (≈ 7.0 s · ARRIVE: the face-down phone; the clean rectangle becomes his phone face down on the desk, the same shape, the same place) A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card.
 
-`RAIL: JUN 19, 2024` [V · facts A46]
+*(No rail since the film's fixes pass: the post's own `JUN 19` dates it.)*
 ON SCREEN (ALYI's post): "I am starting a new company:" · its link card `ISS` [V · facts A68 · x.com/ilyasut/status/1803472978753303014; name swap]
 
 *(The fixes pass, 2026-10-10, Act Three's blocker: the card is cropped to its plate. Its line, "one goal and one product: a safe superintelligence", on screen read as a rebuke of Act Two's product and closed a reason for his leaving that the film must not supply (W8; facts §F).)*
@@ -1764,7 +1770,7 @@ ON SCREEN (the cover): `NOLE v. MANALT ET AL. · FEDERAL COURT` [V · facts A48]
 
 `[POV]` [23.03] (≈ 4.2 s) The candidate's post arrives all at once, in its own UI (his text never types). The photo: a rally crowd under SIRRAH's plate, a `SUMMER 2024` decal on its corner.
 
-`RAIL: AUG 11`
+*(No rail since the film's fixes pass: the post's own `AUG 11` dates it.)*
 ON SCREEN (RUMPT's post): `…and she 'A.I.'d' it…` [V · facts A49; the claim is false]
 
 `[2S]` → [TERMINAL] [23.04] (≈ 6.8 s) THE ORB floats off Mas's shoulder to the monitor and scans the crowd, face by face: `human` · `human` · `human` · `human`. Its verdict:
@@ -1782,7 +1788,7 @@ TEMPO · normal: the run's items each held for their read; the voice after the t
 
 `[POV]` [23.06] (≈ 4.6 s) A TV interview in its own player: hands and tie only, no face, no voice.
 
-`RAIL: AUG 21`
+*(No rail since the film's fixes pass: the tag's `AUG 5` and its chapter carry August.)*
 LOWER THIRD (the broadcast's own): "…having me speak… It's a little bit dangerous out there." [V·press · facts A69: the Fox Business interview that aired Aug 21; about AI fakes of himself; fragments, verbatim]
 
 `[POV]` [23.07] (≈ 5.9 s) The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all: Mas's product's shape, and none of Mas's say. They tie it to the podium. `[INVENTED business, wordless, outside the broadcast]`

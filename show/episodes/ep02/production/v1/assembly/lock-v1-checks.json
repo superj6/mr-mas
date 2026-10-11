@@ -42,17 +42,12 @@
    "frames": 888
   },
   {
-   "id": "tag-hum",
-   "start": 33744,
-   "frames": 18
-  },
-  {
    "id": "outro",
-   "start": 33762,
-   "frames": 243
+   "start": 33744,
+   "frames": 360
   }
  ],
- "total_frames": 34005,
+ "total_frames": 34104,
  "segments": {
   "coldopen": {
    "frames": 1320,
@@ -150,7 +145,7 @@
    "scenes": 1,
    "plan_s": 37,
    "checks_ok": true,
-   "checks": 8,
+   "checks": 9,
    "problems": []
   }
  },
@@ -1842,7 +1837,7 @@
    "seconds": 10.0,
    "events": 3,
    "longest_still_s": 5.8,
-   "frame": "WIDE · May 20, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp d"
+   "frame": "WIDE · May 19, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp d"
   },
   {
    "seg": "act3",
@@ -1920,15 +1915,15 @@
    "seg": "act4",
    "beat": "19.12",
    "seconds": 4.69,
-   "events": 2,
-   "longest_still_s": 2.48,
+   "events": 4,
+   "longest_still_s": 2.07,
    "frame": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; th"
   },
   {
    "seg": "act4",
    "beat": "19.13",
    "seconds": 4.97,
-   "events": 2,
+   "events": 4,
    "longest_still_s": 2.21,
    "frame": "WIDE → MEDIUM · match on the pin: 2008, this company's stage; THE SLEEVE tosses him the cl"
   },
@@ -1976,15 +1971,15 @@
    "seg": "act4",
    "beat": "20.05",
    "seconds": 4.8,
-   "events": 4,
-   "longest_still_s": 1.5,
+   "events": 2,
+   "longest_still_s": 2.6,
    "frame": "WIDE · the NopeAI lobby, full frame, as the divider slides away: Jun 11, morning; Mas peel"
   },
   {
    "seg": "act4",
    "beat": "20.10",
    "seconds": 7.0,
-   "events": 8,
+   "events": 6,
    "longest_still_s": 3.9,
    "frame": "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it ov"
   },
@@ -2040,7 +2035,7 @@
    "seg": "tag",
    "beat": "23.03",
    "seconds": 4.2,
-   "events": 9,
+   "events": 7,
    "longest_still_s": 2.5,
    "frame": "POV · the candidate's post in its own UI; the photo: a rally crowd under SIRRAH's plate, a"
   },
@@ -2056,7 +2051,7 @@
    "seg": "tag",
    "beat": "23.06",
    "seconds": 4.6,
-   "events": 5,
+   "events": 3,
    "longest_still_s": 3.05,
    "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its "
   },
@@ -2363,6 +2358,6 @@
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
   "lines": 176,
-  "rows": 399
+  "rows": 396
  }
 }

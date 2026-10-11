@@ -1,6 +1,6 @@
 # Ep2 v1: the full episode film (`ep1.1_her.wav`, the assembly pass, 2026-10-10)
 
-> **Status: v1 BUILT AND MEASURED (2026-10-10): ONE film, `out/ep02/v1/ep02-v1.mp4`, 23:41.00 (34,104 frames).** It has nine titled chapters. Every QA check passes: 0 decode errors, 0 A/V lag in every chapter, 0 codec bursts, −16.05 LUFS, −1.06 dBTP, at most 1 flash in any second, 0 red flashes.
+> **Status: v1 RE-ASSEMBLED AND MEASURED (2026-10-10, the film's fixes pass, [fixes-v1.md](fixes-v1.md)): ONE film, `out/ep02/v1/ep02-v1.mp4`, 23:41.00 (34,104 frames),** carrying every segment fixer's work (Acts One to Four, the outro), the intro restored to Ep1's line (eb8f57f) and the film pass's own (the rails, the colours, the pull pass's four texts). It has nine titled chapters. Every QA check passes: 0 decode errors, 0 A/V lag in every chapter, 0 codec bursts, **−15.80 LUFS, −1.08 dBTP**, at most 1 flash in any second, 0 red flashes. The first assembly's numbers (e2bce00: −16.05 LUFS, −1.06 dBTP) are kept below where a row says so.
 >
 > **Nothing here was watched in real time or listened to [R8].** Every number is measured from the files [M]. I looked at stills only [J]: the contact sheet, every seam's two frames, the card, the tag's end and the outro (§5). §7 lists what a human must check.
 
@@ -8,7 +8,7 @@
 
 ## 1. The film
 
-- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:41.00** (34,104 frames at 24 fps), 135.7 MB, md5 `39d06afa6c4d…`.
+- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:41.00** (34,104 frames at 24 fps), 137.0 MB, md5 `580764171286…` (re-assembled by the film's fixes pass; the first assembly was 135.7 MB, md5 `39d06afa6c4d…`).
 - **Video:** H.264 High, CRF 18, `-tune animation`, 1920 × 1080, with a keyframe on every chapter's first frame.
 - **Audio:** AAC-LC 256 kb/s, 48 kHz stereo, encoded with **libfdk_aac**.
 - **Chapters:** nine titled chapters, each matching the assembly to the millisecond.
@@ -24,7 +24,7 @@
   - `v1-assembly.json`: every input, its length, its head md5 and the seams;
   - `v1-qa.json`;
   - `seam-frames-v1.json`;
-  - the transcript, [assembly/transcript-film.txt](assembly/transcript-film.txt) (174 lines);
+  - the transcript, [assembly/transcript-film.txt](assembly/transcript-film.txt) (176 lines and, since the film's fixes pass, 216 on-screen texts: every rail, card, post, plate, lower third and in-world text at its first frame, on the film's clock);
   - the contact sheet, `out/ep02/v1/ep02-v1-sheet.png` (143 frames, one every 10 s; committed, as Ep1's are).
 
 ## 2. Chapters
@@ -35,7 +35,7 @@
 | 2 | Intro | 0:55.00 · 30.00 | 720 |
 | 3 | ep1.1_her.wav | 1:25.00 · 2.00 | 48 |
 | 4 | Act One · the séance | 1:27.00 · 6:04.00 | 8,736 |
-| 5 | Act Two · her | 7:31.00 · 4:39.00 | 6,696 |
+| 5 | Act Two · stage right | 7:31.00 · 4:39.00 | 6,696 |
 | 6 | Act Three · leave them up | 12:10.00 · 5:20.00 | 7,680 |
 | 7 | Act Four · as a guest | 17:30.00 · 5:19.00 | 7,656 |
 | 8 | Tag · august | 22:49.00 · 37.00 | 888 |
@@ -47,7 +47,7 @@
 00:00 Cold open
 00:55 Intro
 01:27 Act One · the séance
-07:31 Act Two · her
+07:31 Act Two · stage right
 12:10 Act Three · leave them up
 17:30 Act Four · as a guest
 22:49 Tag · august
@@ -85,18 +85,18 @@ The lock's episode clock counted the 18-frame hold. The film doesn't have it (§
 
 ## 4. QA (measured)
 
-| Check | ep02-v1 |
+| Check | ep02-v1 (re-assembled by the film's fixes pass, 2026-10-10; the first assembly's value in brackets where it differs) |
 |---|---|
 | **Full decode** | **0 error lines**, 34,104 frames |
 | **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0) |
-| **Codec fidelity** (decoded against source, sample for sample) | **0 bursts in every chapter** (a burst is a run more than 0.2 of full scale off the source). Worst difference 0.116, in Act One (Ep1: 0.144) |
-| **Integrated loudness** | **−16.05 LUFS** |
-| **True peak** (4× oversampled) | **−1.06 dBTP** (the tag), sample peak −1.35 dBFS |
-| Chapters (LUFS-I) | cold open −16.02 · intro −16.86 · card −22.18 · Act One −16.01 · Two −16.03 · Three −16.03 · Four −16.02 · tag −16.03 · outro −17.75 |
-| Chapters (true peak, dBTP) | −1.91 · −4.25 · −9.23 · −1.46 · −1.08 · −1.24 · −1.48 · −1.06 · −4.09 |
-| Max short-term | −11.6 LUFS (Act Three) |
+| **Codec fidelity** (decoded against source, sample for sample) | **0 bursts in every chapter** (a burst is a run more than 0.2 of full scale off the source). Worst difference 0.129, in Act One [0.116] (Ep1: 0.144) |
+| **Integrated loudness** | **−15.80 LUFS** [−16.05]: Act One's mix carries the mixer's +1.0 LU trim since Act One's fixes pass (`seg_trim_lu`) |
+| **True peak** (4× oversampled) | **−1.08 dBTP** (Act Three) [−1.06, the tag], sample peak −1.43 dBFS |
+| Chapters (LUFS-I) | cold open −16.02 · intro −17.02 (Ep1's aired master since eb8f57f) · card −21.18 · Act One −15.02 · Two −16.03 · Three −16.03 · Four −16.02 · tag −16.02 · outro −17.75 |
+| Chapters (true peak, dBTP) | −1.91 · −4.25 · −8.25 · −1.46 · −1.46 · −1.08 · −1.48 · −1.38 · −4.09 |
+| Max short-term | −11.5 LUFS (Act Three) |
 | Digital zero over 5 ms / holes (under −60 dBFS for 0.3 s or more) | **none / none** |
-| **Flashes** (the whole film, streamed, 160 × 90) | **max 1 in any second** (the intro at 0:59.92, Act Three at 16:19.04); **red 0**. **Pass** (limit 3) |
+| **Flashes** (the whole film, streamed, 160 × 90) | **max 1 in any second** (the intro at 0:59.92, Act Three at 13:27.54); **red 0**. **Pass** (limit 3) |
 | Largest mean-luminance step | 0.653 at 1:00.00: the intro's own cut at f120, the same value Ep1 aired at its intro's f120 |
 | Chapters / edge frames | nine, matching the assembly / every chapter's first and last frame against its source: at most 0.15 of 255 |
 | Audio against picture length | +13.33 ms (the AAC tail; Ep1: +5.33) |
@@ -106,19 +106,19 @@ The lock's episode clock counted the 18-frame hold. The film doesn't have it (§
 | Join | At | Step (200 ms RMS) | Sample jump | |
 |---|---|---|---|---|
 | cold open → intro | 0:55.00 | **−14.8 dB** | 0.0003 | the knee's fourth note on the smash, into the intro's quiet open (Ep1 aired −11.3); for an ear (§7) |
-| intro → card | 1:25.00 | +0.4 | 0.0 | the card's room led in |
-| card → Act One | 1:27.00 | +0.8 | 0.005 | continuous (the séance's pre-lap under the card) |
-| **Act One → Two** | 7:31.00 | **+12.5** | 0.0016 | the act-out black against the Water Line's act-in hit, already softened 7 dB (sound-v1.md §7) |
-| **Act Two → Three** | 12:10.00 | **+7.4** | 0.0009 | the midpoint's designed stop against THE CLOCK |
-| Act Three → Four | 17:30.00 | −2.5 | 0.0097 | the DREAD ringing into the black, then the quartet's pre-lap and the beacon |
+| intro → card | 1:25.00 | +0.6 [+0.4] | 0.0 | the card's room led in |
+| card → Act One | 1:27.00 | +0.8 | 0.0056 | continuous (the séance's pre-lap under the card) |
+| **Act One → Two** | 7:31.00 | **+12.7** [+12.5] | 0.0013 | the act-out black against the Water Line's act-in hit, already softened 7 dB (sound-v1.md §7) |
+| Act Two → Three | 12:10.00 | −3.0 [+7.4] | 0.0028 | the midpoint's designed stop, then THE CLOCK (re-anchored in Act Three's fixes pass) |
+| Act Three → Four | 17:30.00 | −3.4 [−2.5] | 0.0126 | the DREAD ringing into the black, then the quartet's pre-lap and the beacon |
 | Act Four → tag | 22:49.00 | +0.2 | 0.0038 | continuous |
-| tag → outro | 23:26.00 | +1.2 | 0.0009 | the cut on the downbeat; the tag's room under the outro's first 2 s |
+| tag → outro | 23:26.00 | +1.1 [+1.2] | 0.001 | the cut on the downbeat; the tag's room under the outro's first 2 s |
 
 These match the sound pass's predictions (sound-v1.md §7) to 0.1 dB, so the assembly adds nothing at the seams.
 
-**The decoded encode against the mixes (S8):** every chapter decodes to its source within 0.116 of full scale, with no burst. Loudness holds through the codec: each story chapter is within 0.03 LU of its mix's −16.0. Most true peaks move by under 0.1 dB from the mix QA's. The exception is Act Two, −1.37 → −1.08 dBTP: the codec adds 0.29 dB there, and the film stays under −1.0.
+**The decoded encode against the mixes (S8):** every chapter decodes to its source within 0.129 of full scale (0.116 in the first assembly), with no burst. Loudness holds through the codec: each story chapter is within 0.03 LU of its mix's −16.0. Most true peaks move by under 0.1 dB from the mix QA's. The exception is Act Two, −1.37 → −1.08 dBTP: the codec adds 0.29 dB there, and the film stays under −1.0.
 
-The card measures −22.18 LUFS (Ep1 −36.0) because Act One's séance pre-lap plays under its last 1.0 s, by design.
+The card measures −21.18 LUFS (−22.18 in the first assembly; Ep1 −36.0) because Act One's séance pre-lap plays under its last 1.0 s, by design.
 
 ## 5. Looked at [J]
 
@@ -165,10 +165,7 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
    - Act Two → Three at 12:10:00 (+7.4 dB, THE CLOCK);
    - Act Three → Four at 17:30:00;
    - tag → outro at 23:26:00 (the cut on the downbeat, now with no hold). **Does it land, or does it want air?** If it wants air, the fix is the lock's (a beat of black at the tag's end), not a held frame.
-3. **The intro:**
-   - Does the typing indicator (00:56:14–00:59:15) read as "still typing"?
-   - Does the silence under it feel designed? The music stays ducked from Ep1's stems.
-   - Is the ESC keycap legible at speed (about 01:04:09–01:09:08)?
+3. **The intro** is Ep1's line and Ep1's aired master again since eb8f57f (SHOWRUNNER-NOTES 00000C); the first assembly's typing indicator and "her" are gone. Its own checks are the intro's (`studio/src/episodes/ep02/intro/README.md`): is the ESC keycap legible at speed (about 01:04:09–01:09:08)?
 4. **The outro:**
    - Does the vocal pad's flat line (from 23:28:12) stopping before the leap (23:29:18) read as the paused voice?
    - Is the cast page's 5.5 s (23:33:18 to the cut at 23:40:09) long enough? It's a page to pause on, not to read in order.
@@ -184,7 +181,7 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
 
 1. **For the lock pass:**
    - **The manifests' outro.** `show/reel/ep02-v1[-el]/*.manifest.json` say `dur: 10.125`; the film's outro is 15.000 s.
-   - **The episode clock.** proposal.md's lock clock ends at 23:36.88 with the 18-frame hum hold; the film has no hold and ends at **23:41.00**. The arithmetic: 23:36.88 − 0.75 − 10.125 + 15.0 = 23:41.00, with the rest frame for frame.
+   - ~~**The episode clock.**~~ proposal.md's lock clock ends at 23:36.88 with the 18-frame hum hold; the film has no hold and ends at **23:41.00**. The arithmetic: 23:36.88 − 0.75 − 10.125 + 15.0 = 23:41.00, with the rest frame for frame. *(The film's fixes pass, 2026-10-10: `lock_report.py` runs the film's clock now, no hum and the outro's 15.0 s from its `timeline.ts`; lock-v1.md and transcript-v1.txt read 23:41.00, and transcript-v1.txt says the film's transcript supersedes it. proposal.md's runtime table keeps its planning clock.)*
    - ~~**The transcript.** `lock_report.py`'s outro row still lacks the cast page.~~ Done in the outro's fixes pass (2026-10-10): it reads page 2 from the outro's `timeline.ts`.
    - None of this changes the film, which reads every length from the files.
 2. **For the release pass** (`production/v1/release.md`, LEARNINGS M3–M5):
@@ -201,6 +198,8 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
 4. **Resource asks (R16, non-blocking):**
    - **Human viewers and listeners for §7.** This is the one thing no pass here can supply.
    - A recorded crowd library, if the synthesized crowds read thin (sound-v1.md §13).
+
+5. **The film's fixes pass (2026-10-10) re-assembled the film** ([fixes-v1.md](fixes-v1.md), the film's section): the measurements above are the new film's. The Act Three → Four seam's sample jump is 0.0126 (the mixes', byte-identical since Act Four's fixes pass; `assemble.py` judged it sample-continuous and laid no de-click): for an ear at 17:30:00.
 
 ## 9. How to rebuild
 

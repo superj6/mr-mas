@@ -203,6 +203,10 @@ The episode review's Act One findings (picture and text), fixed in the scene mod
 10. **7.01's motto**: `BELOW · ABOVE · AROUND` lights with floor three's click, when the whole plinth is in frame (2.1 s to the cut), so the pan never brings it in half cut by the frame's foot.
 11. **"Yup"** (4.04 wide, the OTS): the ghost's plate reads `"YUP"`, no period, as the post's email has it; both subtitles read `Yup` (the lock's 4.18 line is `…Yup`).
 
+### The film's fixes pass (2026-10-10): the pull pass's byline
+
+- **4.01-4.02:** the editor's byline row reads `… · ALYI · … · MAS · …` (`sets/seance.ts deskPOV`, `publishECU`; `art/props/ui.ts blogEditor`): the Mar 5 post has five authors, MAS fourth, so the row no longer ends on him (facts A59, pull-1010). Sc 4 re-rendered (4A and 4B re-keyed by `ui.ts`, byte-identical). Looked at 4.01 native at 1080p [J]; `scenecheck --every 16` 660 frames, 0 differ; flash 0 [M]. Record: [fixes-v1.md](fixes-v1.md), the film's section.
+
 ## 4. Where this departs from the plan, and why
 
 - **4.01 is two framings** (1.5 s wide, then 1.0 s at his laptop; the review asked for more on the wide), the lock's "WIDE → LOW·DESK": the arrival keeps the room 2.5 s before the click, and the post is legible 1.0 s on the laptop plus 0.5 s over the Publish button (its byline needs 1.15 s). [GUIDE: P3, P15]

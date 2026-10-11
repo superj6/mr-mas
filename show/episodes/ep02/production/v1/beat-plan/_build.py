@@ -54,9 +54,11 @@ ABOUT = (
 MONTHS = "JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC"
 RAIL_RE = re.compile(rf"^RAIL: (?:(?:{MONTHS})(?: \d{{1,2}}(?:, \d{{4}})?| \d{{4}})?|\d{{4}})$")
 # manifest §3, "Rails", in order
+# (the film's fixes pass, 2026-10-10: F2.1 dated 2006 / 2008; MAY 20 -> MAY 19, the pause's own date; JUN 11, JUN 19,
+# AUG 11 and AUG 21 gone, where the DAYS SINCE sign, a phone or a post carries the date: the episode review's W1 note)
 RAILS_EXPECTED = ["FEB 15, 2024", "FEB 29, 2024", "MAR 5, 2024", "FEB 20, 2018", "MAR 8", "MAR 19", "APR 1, 2024",
-                  "MAY 10", "MAY 13, 2024", "SEP 2023", "MAY 14, 2024", "DEC 2022", "2023", "MAY 17, 2024", "MAY 18", "MAY 20",
-                  "MAY 28, 2024", "JUN 10, 2024", "JUN 11", "JUN 19, 2024", "AUG 5", "AUG 11", "AUG 21"]
+                  "MAY 10", "MAY 13, 2024", "SEP 2023", "MAY 14, 2024", "DEC 2022", "2023", "MAY 17, 2024", "MAY 18", "MAY 19",
+                  "MAY 28, 2024", "JUN 10, 2024", "2006", "2008", "AUG 5"]
 VO_BANNED = ["plan", "planned", "long game", "all along", "step one", "that part i"]
 MUST_READ = {"rail", "card", "stat", "plate", "post", "doc", "caption", "lower-third", "toast"}
 MIN_HEAD, MIN_TAIL, MIN_DUR = 0.15, 0.3, 0.8

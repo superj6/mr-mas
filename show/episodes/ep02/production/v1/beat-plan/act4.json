@@ -1689,12 +1689,12 @@
    "picture": "His real post, verbatim, his lowercase (name swaps). No GUEST badge on him (D-15); three collars, no pop.",
    "onscreen": {
     "add": [
-     "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it. (2.6-9.2 s)"
+     "very happy to be partnering with elppa to integrate chatgtp into their devices later this year! think you will really like it. (2.6-9.2 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it.",
+     "text": "very happy to be partnering with elppa to integrate chatgtp into their devices later this year! think you will really like it.",
      "at": 2.6,
      "until": 9.2,
      "kind": "post"
@@ -2110,13 +2110,20 @@
    ],
    "lines": [],
    "caption": "A 2006 phone ad, in 16 colours with ordered dither: young MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in.",
-   "picture": "",
+   "picture": "The rail dates the memory before the end card (the film's fixes pass: like every other flashback).",
    "onscreen": {
     "add": [
+     "RAIL: 2006 (0.28-2.21 s)",
      "\"WHERE YOU AT?\" (2.48-4.55 s)"
     ]
    },
    "onscreen_items": [
+    {
+     "text": "RAIL: 2006",
+     "at": 0.28,
+     "until": 2.21,
+     "kind": "rail"
+    },
     {
      "text": "\"WHERE YOU AT?\"",
      "at": 2.48,
@@ -2160,7 +2167,20 @@
    ],
    "lines": [],
    "caption": "A match on the pin: 2008, this company's stage, the intro's own frame. Mas strides out to his mark. THE SLEEVE, a sleeve and nothing else, reaches out of the stage-left wing and tosses him the clicker in a high arc, and he catches it. The camcorder pushes in on him: two polos, both collars pop. The tiled 2008 crowd applauds.",
-   "picture": "The episode review: he is in frame at the mark before the toss, the toss has a visible arc, the pops read at the push.",
+   "picture": "The episode review: he is in frame at the mark before the toss, the toss has a visible arc, the pops read at the push. The rail: the intro's 2008 (the film's fixes pass).",
+   "onscreen": {
+    "add": [
+     "RAIL: 2008 (0.28-2.21 s)"
+    ]
+   },
+   "onscreen_items": [
+    {
+     "text": "RAIL: 2008",
+     "at": 0.28,
+     "until": 2.21,
+     "kind": "rail"
+    }
+   ],
    "music": "E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure",
    "sounds": [
     {
@@ -2868,20 +2888,7 @@
    ],
    "lines": [],
    "caption": "The NopeAI lobby, morning. The confetti swept into a pile; the staff taking the party down, and the flyers with it. Mas, at the back with his glass, peels his own upside-down flyer off the pillar, folds it and puts it inside his jacket.",
-   "picture": "The cage's bars (right pane) → the lobby's rack pillars as the divider slides away.",
-   "onscreen": {
-    "add": [
-     "RAIL: JUN 11 (0.3-1.8 s)"
-    ]
-   },
-   "onscreen_items": [
-    {
-     "text": "RAIL: JUN 11",
-     "at": 0.3,
-     "until": 1.8,
-     "kind": "rail"
-    }
-   ],
+   "picture": "The cage's bars (right pane) → the lobby's rack pillars as the divider slides away. No rail (the film's fixes pass, the episode review: rails only at real time jumps): the DAYS SINCE signs' 203 / 103 and the docket's JUN 12 date the morning after.",
    "music": "E02-11 · the lobby's morning under the quartet's pedal",
    "sounds": [
     {
@@ -3154,21 +3161,14 @@
    ],
    "lines": [],
    "caption": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS: a name and a plate, no line about what it's for.",
-   "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place. The card is cropped to its plate (the fixes pass, Act Three's blocker: \"one goal and one product: a safe superintelligence\" on screen read as a rebuke of Act Two's product, the last link of a reason the film must not supply; W8, facts §F).",
+   "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place. The card is cropped to its plate (the fixes pass, Act Three's blocker: \"one goal and one product: a safe superintelligence\" on screen read as a rebuke of Act Two's product, the last link of a reason the film must not supply; W8, facts §F). No rail (the film's fixes pass): the post's own JUN 19 dates it.",
    "onscreen": {
     "add": [
-     "RAIL: JUN 19, 2024 (0.2-1.8 s)",
      "I am starting a new company: (2.6-6.9 s)",
      "ISS (3-6.9 s)"
     ]
    },
    "onscreen_items": [
-    {
-     "text": "RAIL: JUN 19, 2024",
-     "at": 0.2,
-     "until": 1.8,
-     "kind": "rail"
-    },
     {
      "text": "I am starting a new company:",
      "at": 2.6,

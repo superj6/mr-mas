@@ -53,7 +53,9 @@ import {lawn, MAS_EDGE} from './campus';
 const STAND: RoomFigSpec[] = [
   {kind: 'jacket', legMat: 'jeans', ramps: {skin: SKIN.light, hair: HAIR.brown, suit: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5], shirt: [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6], jeans: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N5]}, backRamp: {skin: PAL.S3, suit: PAL.F4}} as RoomFigSpec,
   {kind: 'blazer', legMat: 'trou', ramps: {skin: SKIN.deep, hair: HAIR.dark, suit: [PAL.N0, PAL.W3, PAL.W4, PAL.W5, PAL.W6, PAL.W7], shirt: [PAL.N1, PAL.P0, PAL.P1, PAL.P2, PAL.P2, PAL.W9], trou: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N5]}, backRamp: {skin: PAL.S2, suit: PAL.W5}} as RoomFigSpec,
-  {kind: 'jacket', legMat: 'jeans', ramps: {skin: SKIN.medium, hair: HAIR.dark, suit: [PAL.N0, PAL.L0, PAL.L1, PAL.L2, PAL.L3, PAL.L3], shirt: [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6], jeans: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5]}, backRamp: {skin: PAL.S3, suit: PAL.L2}} as RoomFigSpec,
+  // (the film's fixes pass, 2026-10-10: plum, was green; the episode review read this extra, under the complaint as it is
+  // hauled out on Jun 11, as F2.1's young Mas or the Forecaster: green over brown hair is young Mas's alone)
+  {kind: 'jacket', legMat: 'jeans', ramps: {skin: SKIN.medium, hair: HAIR.dark, suit: [PAL.N0, PAL.U1, PAL.U2, PAL.U3, PAL.U4, PAL.U5], shirt: [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6], jeans: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5]}, backRamp: {skin: PAL.S3, suit: PAL.U3}} as RoomFigSpec,
 ];
 const STANDERS = STAND.map((s) => makeRoom(s));
 /** GERG on his beanbag (gerg-poses sit), his laptop's light the show's monitor cyan (coldopen/sets.ts gergSitting,

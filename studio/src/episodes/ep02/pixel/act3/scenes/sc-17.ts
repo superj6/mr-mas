@@ -64,7 +64,7 @@ L.add('17.02', {
 });
 function held(x: number, k: number) { void k; return Math.round(x); }
 
-const CARD_FORE: GagCard = {x: 14, y: 12, name: 'THE FORECASTER', lines: ['EX-NOPEAI.'], stat: ['AT STAKE: ~$2M'], accent: PAL.L3};
+const CARD_FORE: GagCard = {x: 14, y: 12, name: 'THE FORECASTER', lines: ['EX-NOPEAI.'], stat: ['AT STAKE: ~$2M'], accent: PAL.W5};   // his hoodie's rust (was green: the film's fixes pass)
 const KEEP3 = new Map<number, Uint8Array>();
 L.add('17.03', {
   st: 'act3/sets/bridge deck ([W] across the lanes, the bridge in the evening rush (art/sets/bridge bridgeDeck: five lanes stalled on the receipt, the far pedestrian lane, the cables, the city across the bay): THE FORECASTER walks up the far lane with his clipboard; Mas small in the foreground on the near lane; on the hit the 2-TONE FREEZE with the Forecaster kept in colour and the card THE FORECASTER / EX-NOPEAI. + AT STAKE: ~$2M, the stat in the LEDGER pass for six frames)',
