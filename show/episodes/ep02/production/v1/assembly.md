@@ -1,25 +1,27 @@
 # Ep2 v1: the full episode film (`ep1.1_her.wav`, the assembly pass, 2026-10-10)
 
-> **Status: v1 RE-ASSEMBLED AND MEASURED (2026-10-10, the film's fixes pass, [fixes-v1.md](fixes-v1.md)): ONE film, `out/ep02/v1/ep02-v1.mp4`, 23:41.00 (34,104 frames),** carrying every segment fixer's work (Acts One to Four, the outro), the intro restored to Ep1's line (eb8f57f) and the film pass's own (the rails, the colours, the pull pass's four texts). It has nine titled chapters. Every QA check passes: 0 decode errors, 0 A/V lag in every chapter, 0 codec bursts, **−15.80 LUFS, −1.08 dBTP**, at most 1 flash in any second, 0 red flashes. The first assembly's numbers (e2bce00: −16.05 LUFS, −1.06 dBTP) are kept below where a row says so.
+> **Status: v1 FINAL ASSEMBLY, MEASURED (2026-10-10, the assembly pass after the final review's fixes): ONE film, `out/ep02/v1/ep02-v1.mp4`, 23:41.00 (34,104 frames),** carrying every fixer's work: Act One (afcc7ea), Act Two (1f02458), Act Three (96d795c, e2ec975), Act Four (160de95), the outro (a05d9d2), the film-wide pass (eb6ddbe) and the intro restored to Ep1's line (eb8f57f). It has nine titled chapters. Every QA check passes: 0 decode errors, 0 A/V lag in every chapter, 0 codec bursts, **−15.80 LUFS, −1.08 dBTP**, at most 1 flash in any second, 0 red flashes.
 >
-> **Nothing here was watched in real time or listened to [R8].** Every number is measured from the files [M]. I looked at stills only [J]: the contact sheet, every seam's two frames, the card, the tag's end and the outro (§5). §7 lists what a human must check.
+> **This pass rebuilt the film from its sources and it came out byte-identical** to the one the film's fixes pass assembled (md5 `580764171286…`, 137,044,378 bytes). Every input's head md5 is unchanged, and so is every QA number, the transcript, the contact sheet and the seam frames (§3). The first assembly's numbers (e2bce00: −16.05 LUFS, −1.06 dBTP) are kept below where a row says so.
+>
+> **Nothing here was watched in real time or listened to [R8].** Every number is measured from the files [M]. I looked at stills only [J]: every seam's two frames, the card, the tag's end and both outro pages, decoded from this film (§5). §7 lists what a human must check.
 
 **Contents:** [1. The film](#1-the-film) · [2. Chapters](#2-chapters) · [3. How it was built](#3-how-it-was-built) · [4. QA](#4-qa-measured) · [5. Looked at](#5-looked-at-j) · [6. The other passes' notes](#6-the-other-passes-notes-and-what-the-assembly-did) · [7. For a human](#7-for-a-human) · [8. Open issues and asks](#8-open-issues-and-asks) · [9. How to rebuild](#9-how-to-rebuild) · [10. Files](#10-files) · [11. LEARNINGS rules checked](#11-learnings-rules-checked)
 
 ## 1. The film
 
-- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:41.00** (34,104 frames at 24 fps), 137.0 MB, md5 `580764171286…` (re-assembled by the film's fixes pass; the first assembly was 135.7 MB, md5 `39d06afa6c4d…`).
+- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:41.00** (34,104 frames at 24 fps), 137.0 MB, md5 `580764171286281a9b3f98e068cc21fb` (the film's fixes pass and this pass, identical; the first assembly was 135.7 MB, md5 `39d06afa6c4d…`).
 - **Video:** H.264 High, CRF 18, `-tune animation`, 1920 × 1080, with a keyframe on every chapter's first frame.
 - **Audio:** AAC-LC 256 kb/s, 48 kHz stereo, encoded with **libfdk_aac**.
 - **Chapters:** nine titled chapters, each matching the assembly to the millisecond.
 - **The lock:** the EL-timed v1 lock (`show/reel/ep02-v1-el/`, key `ep02-v1-el-stick`) and its pixel locks (`production/v1/lock/<seg>.json`).
 - **Voices:** the ElevenLabs cast (set A), with MARIO on his Kokoro takes.
 - **The chapters' sources:**
-  - **The picture:** the picture passes' renders, concatenated per scene. Every scene's cache key was re-checked against today's code and lock (`scenes --dry`, §3).
-  - **The sound:** the sound pass's mixes (495db18).
-  - **The intro:** the titles pass's variant (09e604c), at the manifest's −3 dB.
-  - **The card:** rendered here.
-  - **The outro:** the titles pass's 15.0 s outro B with the cast page. It plays the mix's `outro-mix.wav` at −1 dB.
+  - **The picture:** the fixes passes' renders, concatenated per scene (Act One 21:24, Act Two 21:27, Act Three 21:34, Act Four 21:36, the tag 21:37; the cold open and the card unchanged since 2026-10-09 and 08:26). Every scene's cache key was re-checked against today's code and lock (`scenes --dry`, §3).
+  - **The sound:** the mixes from `mix_episode.py --all` (21:07–21:08, byte-identical to the act fixers' runs; Act One carries the mixer's +1.0 LU trim, `seg_trim_lu`).
+  - **The intro:** Ep1's aired master and line again (eb8f57f, SHOWRUNNER-NOTES 00000C) under the Ep2 picture variant, at the manifest's −3 dB.
+  - **The card:** rendered by the first assembly (`ops/rebuild-act.sh --ep 2 card --only picture`).
+  - **The outro:** outro B as the outro's fixes pass left it (a05d9d2): 15.0 s, page 1 the credits and `viewer: human ✓`, page 2 the voice cast alone (no tools on screen). It plays the mix's `outro-mix.wav` at −1 dB.
 - **Records** (in `production/v1/assembly/`):
   - `v1-assembly.json`: every input, its length, its head md5 and the seams;
   - `v1-qa.json`;
@@ -58,19 +60,26 @@ The chapter titles are the proposal's act names, already checked for spoilers ([
 
 ## 3. How it was built
 
-1. **The pictures were checked current [M].** I bundled each segment and ran `render.ts scenes --dry` on it. Every scene of the cold open, Acts One to Four and the tag is **cached** under its current key, so the act pictures are today's code on today's lock. Two scenes, 11 and 15, differ only in the `glyph` part: a dry run has no GLYPH frames to hash, and their committed renders spliced the GLYPH frames.
-2. **The card was rendered:** `ops/rebuild-act.sh --ep 2 card --only picture`, giving `out/ep02/v1/picture/card.mp4` (48 f). It didn't exist yet.
-   - Flash 0.
-   - Looked at frames 5, 16, 20 and 47 [J]: the name types on, the cursor follows it, and frame 47 has the cursor off.
-3. **Each segment's picture was muxed with its mix:** `ops/rebuild-act.sh --ep 2 <seg> --only mux` for the cold open, the card, the four acts and the tag. The muxes are in `out/ep02/v1/picture-mux/<seg>.mp4` (`-c:v copy`, libfdk_aac 256k).
+**The final assembly (this pass, 2026-10-10 22:02–22:16),** after every fixer's commit had landed (the last, eb6ddbe, at 22:01). Every heavy step went through `ops/heavy.sh`, one at a time (MRMAS_MAX_LOAD=40).
+
+1. **The pictures were checked current [M].** I built each segment's renderer and ran `render.ts scenes --dry` on the cold open, the card, Acts One to Four and the tag. Every scene is **cached** under its current key, so each act picture is today's code on today's lock.
+   - Two scenes, 11 and 15, differ only in the `glyph` part. A dry run has no GLYPH frames to hash, and their renders spliced the GLYPH frames in (the film's fixes pass re-made them).
+   - Every picture predates the film and postdates its mix: the acts and the tag were rendered 21:24–21:37, after the mixes (21:07–21:08).
+2. **Each segment's picture was muxed with its mix:** `ops/rebuild-act.sh --ep 2 <seg> --only mux` for the cold open, the card, the four acts and the tag. The muxes are in `out/ep02/v1/picture-mux/<seg>.mp4` (`-c:v copy`, libfdk_aac 256k).
    - [M] Each mux's video and AAC durations are equal: 55.000, 2.000, 364.000, 279.000, 320.000, 319.000 and 37.000 s.
    - These are the review copies. The film itself is built from the silent pictures and the WAVs, encoded once.
-4. **The film:** `assemble.py v1` (`--dry` first). Every chapter's sound is exactly its picture's length; the tool refuses to pad or trim.
+3. **The film:** `assemble.py v1`, `--dry` first. Every chapter's sound is exactly its picture's length; the tool refuses to pad or trim.
    - The picture is decoded and concatenated frame for frame, then encoded once.
    - The sound is built sample-exact in numpy, with the intro at −3 dB and the outro at −1 dB.
    - At intro → card, the card's room is led in under the intro's last 0.3 s.
-   - No seam needed a de-click: every sample jump is ≤ 0.01. The encode took 161 s.
-5. **Measured:** `qa.py v1` (170 s) and `seam_frames.py v1`.
+   - **No seam needed a de-click [M].** The two joins with a separately mastered side (the intro, the outro) jump at most 0.0009, under the tool's 0.01 threshold. The story joins are sample-continuous out of the mixer, which renders each act's head from the act before it. Act Three → Four's 0.0126 is that continuous signal's own sample-to-sample step, measured in the mixes too.
+   - The encode took 413 s (161 s in the first assembly; other projects held the machine). **The output is byte-identical to the film's fixes pass's** (md5 `580764171286…`). Every chapter's video and audio head md5 matches the previous `v1-assembly.json`, and so do the seams.
+4. **Measured:** `qa.py v1` (247 s) and `seam_frames.py v1`.
+   - `v1-qa.json` differs from the previous one only in its timestamp and run times.
+   - `transcript-film.txt`, the contact sheet and `seam-frames-v1.json` are byte-identical to the previous ones.
+5. **Ep1 [M]:** `sha1sum -c ops/reorg/ep01-final.sha1`: 31 OK. This pass changed no code.
+
+**The first assembly (e2bce00)** also rendered the card, which didn't exist yet: `ops/rebuild-act.sh --ep 2 card --only picture` → `out/ep02/v1/picture/card.mp4` (48 f, flash 0).
 
 **One decision, judged [J]: no hum hold at the tag → outro seam.** Ep1's v3.2 seam held the tag's last frame for 18 frames over the vault's hum, because Ep1's tag ended on 1.25 s of black. Ep2's tag doesn't end on black. It ends on Mas's face, and the cut to the outro's black is the downbeat:
 - proposal seam 30: "cut on the downbeat to black";
@@ -79,13 +88,13 @@ The chapter titles are the proposal's act names, already checked for spoilers ([
 
 Ep1's hold would have frozen his face for 0.75 s and put the outro's first hit late. So the film cuts straight from the tag's frame 887 to the outro's frame 0.
 
-The tag's room still carries across: the sound pass's `outro-mix.wav` lays the tag-tail stem under the outro's first 2 s. The seam measures +1.2 dB, with a sample jump of 0.0009.
+The tag's room still carries across: the sound pass's `outro-mix.wav` lays the tag-tail stem under the outro's first 2 s. The seam measures +1.1 dB on the decoded film, with a sample jump of 0.001.
 
 The lock's episode clock counted the 18-frame hold. The film doesn't have it (§8).
 
 ## 4. QA (measured)
 
-| Check | ep02-v1 (re-assembled by the film's fixes pass, 2026-10-10; the first assembly's value in brackets where it differs) |
+| Check | ep02-v1 (the final assembly, 2026-10-10, identical to the film's fixes pass's; the first assembly's value in brackets where it differs) |
 |---|---|
 | **Full decode** | **0 error lines**, 34,104 frames |
 | **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0) |
@@ -114,29 +123,38 @@ The lock's episode clock counted the 18-frame hold. The film doesn't have it (§
 | Act Four → tag | 22:49.00 | +0.2 | 0.0038 | continuous |
 | tag → outro | 23:26.00 | +1.1 [+1.2] | 0.001 | the cut on the downbeat; the tag's room under the outro's first 2 s |
 
-These match the sound pass's predictions (sound-v1.md §7) to 0.1 dB, so the assembly adds nothing at the seams.
+These match the mix's own seam measurements to 0.1 dB, so the assembly adds nothing at the seams. The mix's numbers are in `audio/reel/ep02-v1/mix-qa/el/loudness-report.json`: +12.8, −3.0 and −3.3 at the three act-ins; cold open → intro −14.8 and tag → outro +1.1 in `sound-audit.json`'s episode seams. sound-v1.md §7's table predates the fixes passes (it still reads +7.3 at Act Two → Three; §8).
 
-**The decoded encode against the mixes (S8):** every chapter decodes to its source within 0.129 of full scale (0.116 in the first assembly), with no burst. Loudness holds through the codec: each story chapter is within 0.03 LU of its mix's −16.0. Most true peaks move by under 0.1 dB from the mix QA's. The exception is Act Two, −1.37 → −1.08 dBTP: the codec adds 0.29 dB there, and the film stays under −1.0.
+**The decoded encode against the mixes (S8):** every chapter decodes to its source within 0.129 of full scale (0.116 in the first assembly), with no burst.
+- **Loudness** holds through the codec. Each chapter is within 0.03 LU of its mix (`loudness-report.json`): the story chapters at −16.0, and Act One at −15.0 with its trim.
+- **True peaks** move by 0.09 dB at most from the mix QA's:
+  - Act One −1.37 → −1.46;
+  - Act Three −1.07 → −1.08, the film's highest;
+  - the tag −1.42 → −1.38, the only one the codec raises.
+- The film stays under −1.0 dBTP.
 
 The card measures −21.18 LUFS (−22.18 in the first assembly; Ep1 −36.0) because Act One's séance pre-lap plays under its last 1.0 s, by design.
 
 ## 5. Looked at [J]
 
-At native size or half size, decoded from the film:
+At half size, decoded from this film by the final assembly (2026-10-10):
 
-- **The contact sheet** (all 143 frames): every chapter in order, with nothing black that shouldn't be. The only black frame on the sheet, 7:30, is Act One's act-out.
-- **Every seam's last and first frame:**
+- **Every seam's last and first frame** (film frames 1319/1320, 2039/2040, 2087/2088, 10823/10824, 17519/17520, 25199/25200, 32855/32856, 33743/33744):
   - the cold open's door → the intro's first frame;
   - the intro's `verified: human` toast → the card's cursor;
   - the card's `ep1.1_her.wav` → the séance wide;
   - Act One's black → Mas's back at the monitor;
   - Act Two's Mas at the window → the lobby and `DAYS SINCE … 176`;
   - Act Three's black → the war room;
-  - Act Four's white room → the tag's desk;
+  - Act Four's white room → the tag's desk (`GUEST` on the wall);
   - the tag's last frame (Mas's face at the monitor) → the outro's black with the Orb.
-- **The card:** frames 5, 16, 20 and 47.
-- **The tag's last 48 frames** (840, 870, 885, 887): the narrowed eyes hold to the cut.
-- **The outro:** o0, o3, o9, o60, o186, o250, o344 and o359. Both pages read: the credits, then the cast in two columns and the tools.
+- **The card:** frame 5 (`ep` and the cursor) and frame 47 (the full name, the cursor off), the name at the same left edge in both.
+- **The outro:**
+  - o120: page 1 reads `mr. mas · ep1.1_her.wav`, `art · script · music · voices · edit: opus 5.5`, `prompt: jgon`, `viewer: human ✓`;
+  - o186: page 2's header chip `voices · role: library voice` alone (the scan starts at o190);
+  - o250: the header and the cast in two columns, with no tools and no product names;
+  - o359: black.
+- **Unchanged since the film's fixes pass** (the film is byte-identical): the contact sheet (all 143 frames, every chapter in order, the only black frame 7:30, Act One's act-out) and the tag's last 48 frames (840, 870, 885, 887: the narrowed eyes hold to the cut).
 
 ## 6. The other passes' notes, and what the assembly did
 
@@ -161,21 +179,24 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
 1. **Watch the whole film once at speed.** No measurement covers whether it plays as a story.
 2. **The seams by ear:**
    - cold open → intro at 00:55:00 (−14.8 dB; Ep1 aired −11.3);
-   - Act One → Two at 07:31:00 (+12.5 dB, the Water Line's hit);
-   - Act Two → Three at 12:10:00 (+7.4 dB, THE CLOCK);
-   - Act Three → Four at 17:30:00;
+   - Act One → Two at 07:31:00 (+12.7 dB, the Water Line's hit);
+   - Act Two → Three at 12:10:00 (−3.0 dB: the midpoint's stop, then THE CLOCK, re-anchored in Act Three's fixes pass);
+   - Act Three → Four at 17:30:00 (−3.4 dB; the mixes' 0.0126 sample step, no de-click laid);
    - tag → outro at 23:26:00 (the cut on the downbeat, now with no hold). **Does it land, or does it want air?** If it wants air, the fix is the lock's (a beat of black at the tag's end), not a held frame.
 3. **The intro** is Ep1's line and Ep1's aired master again since eb8f57f (SHOWRUNNER-NOTES 00000C); the first assembly's typing indicator and "her" are gone. Its own checks are the intro's (`studio/src/episodes/ep02/intro/README.md`): is the ESC keycap legible at speed (about 01:04:09–01:09:08)?
 4. **The outro:**
    - Does the vocal pad's flat line (from 23:28:12) stopping before the leap (23:29:18) read as the paused voice?
    - Is the cast page's 5.5 s (23:33:18 to the cut at 23:40:09) long enough? It's a page to pause on, not to read in order.
-5. **The sound pass's ear list** (sound-v1.md §9), at film times:
-   - the synthesized crowds: the demo house's laughs in sc 11 (09:52–11:30), the lobby's cheer and the stream's roar in sc 19 (19:05–21:19), the party chant 14:09–14:11;
-   - the ENGINEER's laugh under "Careful. The new one can hear you laugh." (08:32:22);
-   - Alyi's far "Six years and eleven months." (13:46:21);
-   - Rima's "and that's the demo." (10:55:20);
-   - **the crosscut call (20:00:08–20:15:22).** Does it read as a phone call? Is Gerg's "You ever miss being up there?" (20:14:04) heard over the cheering lobby? If not, dip `bed_lobby_cheer`.
-6. **The true peak** is −1.06 dBTP, inside −1.0 but with 0.06 dB to spare (Ep1: −1.29). A platform's re-encode can add a little. If the release wants more headroom, it comes from the tag's and Act Two's limiters, not from the assembly.
+5. **The sound pass's ear list** (sound-v1.md §9), at the final film's times (from the transcript and the locks):
+   - the synthesized crowds:
+     - the demo house's laughs in sc 11 (09:55–11:30);
+     - the lobby's cheer and the stream's roar in sc 19 (19:06–21:19);
+     - the party chant, 14:09:20–14:12:21, with the motive flashback's room dip and score ride from Act Three's fixes pass under it and the exchange after it;
+   - the ENGINEER's laugh under "Careful. The new one can hear you laugh." (08:30:10);
+   - Alyi's far "Six years and eleven months." (13:45:21);
+   - Rima's "and that's the demo." (10:58:15);
+   - **the crosscut call** (shots 19.09–19.10, 19:59:01–20:20:18; its lines 20:00:23–20:20:02). Does it read as a phone call? Is Gerg's "You ever miss being up there?" (20:14:20) heard over the cheering lobby? Act Four's fixes pass already dips the room under every line of the call (9 dB under Gerg's first line and that question) and rides the score down 4 dB through it (160de95). Whether it now reads is for an ear.
+6. **The true peak** is −1.08 dBTP (Act Three, whose mix measures −1.07). That is inside −1.0, with 0.08 dB to spare (Ep1: −1.29). A platform's re-encode can add a little. If the release wants more headroom, it comes from Act Three's limiter, not from the assembly.
 
 ## 8. Open issues and asks
 
@@ -199,7 +220,9 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
    - **Human viewers and listeners for §7.** This is the one thing no pass here can supply.
    - A recorded crowd library, if the synthesized crowds read thin (sound-v1.md §13).
 
-5. **The film's fixes pass (2026-10-10) re-assembled the film** ([fixes-v1.md](fixes-v1.md), the film's section): the measurements above are the new film's. The Act Three → Four seam's sample jump is 0.0126 (the mixes', byte-identical since Act Four's fixes pass; `assemble.py` judged it sample-continuous and laid no de-click): for an ear at 17:30:00.
+5. **The film's fixes pass (2026-10-10) re-assembled the film** ([fixes-v1.md](fixes-v1.md), the film's section), and the final assembly rebuilt it byte for byte (§3). The Act Three → Four seam's sample jump is 0.0126: it is the mixes' own step, byte-identical since Act Four's fixes pass, and `assemble.py` judged it sample-continuous and laid no de-click. It is for an ear at 17:30:00.
+6. **For the sound pass (a record only; the film is right):** sound-v1.md §7's seam table and its "Reading the seams" paragraph predate the fixes passes. They still read Act One → Two +12.5, Act Two → Three +7.3 and Act Three → Four −2.5. The current mix QA (`mix-qa/el/loudness-report.json`) and this film measure +12.8 / +12.7, −3.0 and −3.3 / −3.4. sound-v1.md is the sound pass's file, so I left it alone.
+7. **Untracked render by-products, not this pass's:** the renderer's `out/ep02/v1/picture/<seg>.mp4.render.json` and `<seg>.srt` and the scene cache `out/ep02/v1/scenes/` show as untracked in git. `.gitignore` ignores only the MP4s. They are the picture passes' outputs, so I left them uncommitted. Whether they belong in `.gitignore` is for the pipeline's owner.
 
 ## 9. How to rebuild
 
@@ -209,30 +232,35 @@ From the repo root. `PY=audio/.venv-casting/bin/python`, `A=show/episodes/ep02/p
 ops/rebuild-act.sh --ep 2 card --only picture                         # the card (only if its timeline changes)
 for s in coldopen card act1 act2 act3 act4 tag; do ops/rebuild-act.sh --ep 2 $s --only mux; done   # review muxes
 ASM_SCRATCH=$S bash ops/heavy.sh $PY $A/tools/assemble.py v1 --dry    # every length, every seam, no encode
-ASM_SCRATCH=$S setsid bash ops/heavy.sh $PY $A/tools/assemble.py v1 < /dev/null   # -> out/ep02/v1/ep02-v1.mp4 (about 3 min)
-ASM_SCRATCH=$S setsid bash ops/heavy.sh $PY $A/tools/qa.py v1 < /dev/null         # -> v1-qa.json, transcript-film.txt, the sheet (about 3 min)
+ASM_SCRATCH=$S setsid bash ops/heavy.sh $PY $A/tools/assemble.py v1 < /dev/null   # -> out/ep02/v1/ep02-v1.mp4 (3-7 min)
+ASM_SCRATCH=$S setsid bash ops/heavy.sh $PY $A/tools/qa.py v1 < /dev/null         # -> v1-qa.json, transcript-film.txt, the sheet (3-4 min)
 bash ops/heavy.sh $PY $A/tools/seam_frames.py v1                                   # -> seam-frames-v1.json
 # or, after a changed act: ops/rebuild-act.sh --ep 2 <act> --only film
 ```
 
 - **Gotcha:** run as a background job, `heavy.sh`'s memory-capped scope stopped at once (exit 147) until it was detached from the terminal (`setsid … < /dev/null`). In the foreground it runs as written.
-- **Tool changes in this pass:**
+- **Stills from the film:** the bundled ffmpeg has no `select` filter and no `rawvideo` muxer. Seek to the frame instead (`-ss <whole second> -frames:v <n>`, `-f image2pipe -c:v rawvideo`), as `seam_frames.py` does.
+- **Tool changes in the first assembly pass:**
   - `assemble.py`: v1's transcript is `transcript-film.txt`, and there is no hum hold (`hum_gap=None`, with the reason in a comment; `hum_gap()` is kept).
-  - `qa.py`: the transcript's intro row adds Mas's "her" (intro f23). The outro gets two rows, read from the outro's `timeline.ts`.
+  - `qa.py`: the outro gets two rows, read from the outro's `timeline.ts`. (Its intro row added Mas's "her" then; since the film's fixes pass it reads Ep1's line, and the transcript carries the [on screen] rows.)
   - `scene_cut.py`: the repo root is 7 folders up.
 
 ## 10. Files
 
-- **New:**
+- **This pass (the final assembly):**
+  - changed: this file, and `assembly/v1-assembly.json` and `assembly/v1-qa.json` (their timestamps and run times only);
+  - re-written byte-identical: `assembly/transcript-film.txt`, `assembly/seam-frames-v1.json`, `out/ep02/v1/ep02-v1-sheet.png`, and the film;
+  - re-made: the seven review muxes in `out/ep02/v1/picture-mux/`.
+- **New in the first assembly pass:**
   - this file;
   - `assembly/transcript-film.txt`, `assembly/v1-assembly.json`, `assembly/v1-qa.json`, `assembly/seam-frames-v1.json`;
   - `out/ep02/v1/ep02-v1-sheet.png`.
 - **Changed:**
   - `assembly/tools/assemble.py`, `qa.py`, `scene_cut.py`;
   - [pipeline.md](pipeline.md) §7.1 (two lines: the film is built, and there is no hum hold).
-- **Generated, git-ignored:**
-  - `out/ep02/v1/ep02-v1.mp4`;
-  - `out/ep02/v1/picture/card.mp4` (and its `.render.json` and `.srt`) and the scene cache `out/ep02/v1/scenes/card/`;
+- **Generated, not committed:**
+  - `out/ep02/v1/ep02-v1.mp4` (git-ignored);
+  - `out/ep02/v1/picture/card.mp4` (git-ignored) and its `.render.json` and `.srt` and the scene cache `out/ep02/v1/scenes/card/` (untracked, not ignored: §8 item 7);
   - `out/ep02/v1/picture-mux/*.mp4`;
   - `out/ep02/v1/review/scenes/tag-sc-23.mp4`.
 - **Untouched:**
@@ -244,7 +272,7 @@ bash ops/heavy.sh $PY $A/tools/seam_frames.py v1                                
 ## 11. LEARNINGS rules checked
 
 - **S8** [M]: measured on the decoded film.
-  - −16.05 LUFS and −1.06 dBTP.
+  - −15.80 LUFS and −1.08 dBTP (the first assembly: −16.05 and −1.06).
   - 0 decode errors and 0 A/V lag.
   - 0 codec bursts with libfdk_aac.
 - **P15** [M]: at most 1 flash in any second over the whole film, 0 red.
@@ -256,7 +284,7 @@ bash ops/heavy.sh $PY $A/tools/seam_frames.py v1                                
 - **P5** [J]: the stills of §5.
 - **M1** [J]: the chapter titles are spoiler-free (§2).
 - **M4** [M]: the chapters are at least 10 s, with the card folded into the intro.
-- **R1** [M]: no Ep1 path or shared file touched; Ep1's final sha1 is unchanged.
+- **R1** [M]: no Ep1 path or shared file touched; Ep1's final sha1 is unchanged (31 OK after the final assembly).
 - **R8**: every claim is tagged, and §7 lists what a human must check.
 - **R10**: every heavy job went through `ops/heavy.sh`, one at a time; the flash check is streamed.
 - **R11**: keyscan before the commit and the push.
