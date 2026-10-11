@@ -66,7 +66,7 @@ The writers' room lives in [`show/`](show/INDEX.md): the bible, about 80 charact
 
 ## How it's made
 
-Everything here was produced by AI agents (Claude) working in parallel as orchestrated workflows, directed by the showrunner at approval gates. There's no hand animation and no DAW. Generated video appears only as two short inserts in Ep1, made with Runway and composited into the pixel picture ([`runway.md`](show/episodes/ep01/production/full-v3/runway.md)); the clay CLOD insert is a Blender render.
+Everything here was produced by AI agents (Claude) working in parallel as orchestrated workflows, directed by the showrunner at approval gates. There's no hand animation and no DAW. Generated video appears only as short inserts of objects and animals, made with Runway and composited into the pixel picture: two in Ep1 ([`runway.md`](show/episodes/ep01/production/full-v3/runway.md)) and Ep2's mammoth in the cold open. The clay CLOD insert (Ep1) and Ep2's white-room lot are Blender renders.
 
 | Layer | Tools |
 |---|---|

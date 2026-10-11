@@ -33,7 +33,7 @@ Also in this one: the 2016 Go move nobody wrote, and what "learned, not programm
 
 Everything was made by Claude Opus 5.5 working in Claude Code: script, pixel art, animation, score, sound design, casting and edit. Direction and prompts are by jgon.
 - Voices are synthetic library voices (Kokoro-82M, ElevenLabs), and none are cloned.
-- The near-photoreal inserts show only objects and one mammoth. The mammoth is a Veo 3.1 Fast clip (via Runway), and the 3D is rendered in Blender.
+- The near-photoreal shots show objects and one mammoth (a Veo 3.1 Fast clip, via Runway). The 3D is rendered in Blender.
 - Piano samples: Salamander Grand Piano by Alexander Holm (CC BY 3.0).
 
 00:00 Cold open
