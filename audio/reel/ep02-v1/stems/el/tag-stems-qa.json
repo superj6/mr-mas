@@ -14,7 +14,7 @@
    "last": "23.09",
    "lead": 0.6,
    "trail": 0.0,
-   "lift_db": 2.1
+   "lift_db": 2.0
   }
  ],
  "sfx": [
@@ -46,8 +46,8 @@
    "23.03",
    "ui_toast_pop",
    10.517,
-   -20.7,
-   "ride +5.3 dB (sfx-rides.json)"
+   -20.3,
+   "ride +5.7 dB (sfx-rides.json)"
   ],
   [
    "23.04",
@@ -65,15 +65,15 @@
    "23.04",
    "orb_chime_F",
    17.283,
-   -21.4,
-   "ride +0.6 dB (sfx-rides.json)"
+   -21.0,
+   "ride +1.0 dB (sfx-rides.json)"
   ],
   [
    "23.04",
    "ui_toast_pop",
    17.283,
-   -27.4,
-   "ride +0.6 dB (sfx-rides.json)"
+   -27.0,
+   "ride +1.0 dB (sfx-rides.json)"
   ],
   [
    "23.06",
@@ -85,25 +85,25 @@
   [
    "23.07",
    "balloon_pump",
-   28.307,
+   29.25,
    -26.0
   ],
   [
    "23.07",
    "balloon_pump",
-   29.384,
+   30.25,
    -25.0
   ],
   [
    "23.07",
    "balloon_pump",
-   30.46,
+   31.25,
    -24.0
   ],
   [
    "23.07",
    "knot_tie",
-   32.075,
+   32.6,
    -26.0
   ],
   [
@@ -118,12 +118,12 @@
  "sfx_cut_at_scene_end": [],
  "score_claims": [],
  "room_stem": {
-  "lufs": -38.13,
-  "peak_dbfs": -24.07,
-  "p10_50ms_dbfs": -39.7
+  "lufs": -38.23,
+  "peak_dbfs": -24.32,
+  "p10_50ms_dbfs": -39.8
  },
  "sfx_stem": {
-  "lufs": -33.87,
+  "lufs": -33.77,
   "peak_dbfs": -14.0,
   "p10_50ms_dbfs": -240.0
  },
@@ -137,7 +137,7 @@
    "boundaries": [],
    "cutoffs": [
     {
-     "at": 32.38,
+     "at": 32.905,
      "ratio": 115.7,
      "from_dbfs": -38.3,
      "to_dbfs": -67.7
@@ -149,8 +149,8 @@
  "room_levels": [
   {
    "room": "darkroom@tag:23.01",
-   "p5_50ms_dbfs": -42.1,
-   "lift_db": 2.1
+   "p5_50ms_dbfs": -42.0,
+   "lift_db": 2.0
   }
  ]
 }

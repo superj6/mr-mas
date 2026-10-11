@@ -13,8 +13,8 @@
   "base_lock": null,
   "generator": "studio/src/episodes/ep02/pixel/tools/lock.py",
   "fps": 24,
-  "ep_in": "22:49:00",
-  "ep_in_frames": 32856,
+  "ep_in": "22:39:00",
+  "ep_in_frames": 32616,
   "rules": [
    "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
    "a continuation beat that follows its own shot directly merges into it",
@@ -31,8 +31,8 @@
   "frames": 888,
   "seconds": 37.0,
   "length": "0:37.00",
-  "episode_in": "22:49:00",
-  "episode_out": "23:26:00",
+  "episode_in": "22:39:00",
+  "episode_out": "23:16:00",
   "verdicts": {
    "-": 9
   },
@@ -126,8 +126,8 @@
    "title": "",
    "cue": "music (v1): E02-13 · THE RUN holds its pedal under the suit's landing · music (v1): E02-13 AUGUST · THE RUN (kit straight or swung, never boom-bap; xylophone and wood, pizzicato, a felt ostinato); a knee stab on each item · music (v1): E02-13 · the Orb's F chime, then its verdict a beat later (F → C on vibes and glass) · music (v1): E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words · music (v1): E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only · music (v1): E02-13 · the Podium thins to one held chord · music (v1): E02-13 out · cut on the downbeat to black",
    "frames": 888,
-   "tc_in": "22:49:00",
-   "tc_out": "23:26:00"
+   "tc_in": "22:39:00",
+   "tc_out": "23:16:00"
   }
  ],
  "scenes": [
@@ -146,8 +146,8 @@
     "23.08",
     "23.09"
    ],
-   "tc_in": "22:49:00",
-   "tc_out": "23:26:00"
+   "tc_in": "22:39:00",
+   "tc_out": "23:16:00"
   }
  ],
  "shots": [
@@ -258,8 +258,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:49:00",
-   "tc_out": "22:53:14",
+   "tc_in": "22:39:00",
+   "tc_out": "22:43:14",
    "frames": 110
   },
   {
@@ -379,8 +379,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:53:14",
-   "tc_out": "22:57:22",
+   "tc_in": "22:43:14",
+   "tc_out": "22:47:22",
    "frames": 104
   },
   {
@@ -482,8 +482,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:57:22",
-   "tc_out": "23:02:02",
+   "tc_in": "22:47:22",
+   "tc_out": "22:52:02",
    "frames": 100
   },
   {
@@ -606,8 +606,8 @@
      "must": true
     }
    ],
-   "tc_in": "23:02:02",
-   "tc_out": "23:08:22",
+   "tc_in": "22:52:02",
+   "tc_out": "22:58:22",
    "frames": 164
   },
   {
@@ -721,8 +721,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "23:08:22",
-   "tc_out": "23:11:21",
+   "tc_in": "22:58:22",
+   "tc_out": "23:01:21",
    "frames": 71
   },
   {
@@ -732,12 +732,12 @@
     "23.06"
    ],
    "s": 549,
-   "e": 660,
+   "e": 684,
    "onscreen": [
     {
-     "text": "…having me speak… It's a little bit dangerous out there.",
+     "text": "…having me speak… perfectly on AI… It's a little bit dangerous out there.",
      "s": 33,
-     "e": 109
+     "e": 133
     }
    ],
    "lines": [],
@@ -792,7 +792,7 @@
    "beat_starts": {
     "23.06": 0
    },
-   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August.",
+   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August. The last fixes (2026-10-11): \"…perfectly on AI…\" restored (facts A69's verbatim fragments; the verify round's X4 blocker, part 1), so the danger reads as AI fakes; 73 characters, read floor 3.9 s: the lower third holds 4.15 s (1.4-5.55 s) and the beat is 1.0 s longer (23.07 gives it).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -800,15 +800,15 @@
    "texts": [
     {
      "kind": "lower-third",
-     "text": "…having me speak… It's a little bit dangerous out there.",
+     "text": "…having me speak… perfectly on AI… It's a little bit dangerous out there.",
      "s": 33,
-     "e": 109,
+     "e": 133,
      "must": true
     }
    ],
-   "tc_in": "23:11:21",
-   "tc_out": "23:16:12",
-   "frames": 111
+   "tc_in": "23:01:21",
+   "tc_out": "23:07:12",
+   "frames": 135
   },
   {
    "id": "23.07",
@@ -816,7 +816,7 @@
    "beats": [
     "23.07"
    ],
-   "s": 660,
+   "s": 684,
    "e": 802,
    "onscreen": [],
    "lines": [],
@@ -840,30 +840,30 @@
     "music (v1): E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only"
    ],
    "sounds": [
-    "balloon_pump @19",
-    "balloon_pump @45",
-    "balloon_pump @71",
-    "knot_tie @109"
+    "balloon_pump @18",
+    "balloon_pump @42",
+    "balloon_pump @66",
+    "knot_tie @98"
    ],
    "spots": [
     {
      "name": "balloon_pump",
-     "k": 19,
+     "k": 18,
      "dur": null
     },
     {
      "name": "balloon_pump",
-     "k": 45,
+     "k": 42,
      "dur": null
     },
     {
      "name": "balloon_pump",
-     "k": 71,
+     "k": 66,
      "dur": null
     },
     {
      "name": "knot_tie",
-     "k": 109,
+     "k": 98,
      "dur": null
     }
    ],
@@ -889,15 +889,15 @@
    "beat_starts": {
     "23.07": 0
    },
-   "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say.",
+   "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say. The last fixes (2026-10-11): pinned at 4.92 s (was 5.92 fitted), the second 23.06's lower third needs for its read; the pumps a beat apart after the dissolve (the hands land at 0.67 s), the knot on the Podium's held E-flat.",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "23:16:12",
-   "tc_out": "23:22:10",
-   "frames": 142
+   "tc_in": "23:07:12",
+   "tc_out": "23:12:10",
+   "frames": 118
   },
   {
    "id": "23.08",
@@ -918,10 +918,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "POV · the hook: the string goes taut",
+   "frame": "POV · the hook: the balloon lifts; the string snaps taut, straight up out of frame",
    "cls": "SC",
    "move": "cut",
-   "does": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "does": "The balloon lifts. Its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium.",
    "chars": [],
    "cues": [
     "music (v1): E02-13 · the Podium thins to one held chord"
@@ -943,20 +943,20 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
+   "caption": "The balloon lifts. Its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium.",
    "cast": [],
    "speak": [],
    "beat_starts": {
     "23.08": 0
    },
-   "picture": "",
+   "picture": "The final fix round's restaging (guardrail X4): the pull is the balloon's own, upward; no one on the far side of the podium (the last fixes brought this description in line, 2026-10-11).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "23:22:10",
-   "tc_out": "23:24:00",
+   "tc_in": "23:12:10",
+   "tc_out": "23:14:00",
    "frames": 38
   },
   {
@@ -1018,8 +1018,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "23:24:00",
-   "tc_out": "23:26:00",
+   "tc_in": "23:14:00",
+   "tc_out": "23:16:00",
    "frames": 48
   }
  ],

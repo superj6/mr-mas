@@ -27,6 +27,7 @@ Fix codes (the "fix" list on each beat):
   SR     the script review's change (script-v1.md, "Review log (script review)")
   LQ     the lock-QA pass's change (lock-v1.md §3.5): a tempo pin, a cut-off or a word-anchored item re-timed
   FX     the fixes pass's change (fixes-v1.md: the episode review's findings, segment by segment)
+  LF     the last fixes (fixes-v1.md, "Last fixes (lock owner)", 2026-10-11)
 Every est_s is a planning length, never a measurement; the lock sets the frames.
 """
 import glob
@@ -215,6 +216,32 @@ for _sc, (_d, _why) in SCENE_ADJUST_FX4.items():
     SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The last fixes (the lock owner, 2026-10-11; fixes-v1.md, "Last fixes (lock owner)"). The verify round's Act Four
+# minor: about 49 s pass with no line from "they let me hold the clicker." to Radnus; F2.1 earns its 15 s, but the
+# garden's arrival (the key-holder, the GUEST walk-in, the flower beds, IRIS at 99%) is legible and slow, and its eggs
+# can't be decoded: "tighten it by about 8-10 s: gate, then the chatbot let in, then Radnus". 19.17 (phrase 2: the
+# flower beds, the raised hands, the text bubbles, IRIS) is cut whole. The garden keeps its arrival (the phone's picture
+# opening out, MIT KOOC carrying the key: about 3 s), the turn (the gate, CHATGTP walked in on its rope: GUEST; then
+# "as a guest.") and its aftermath (Radnus's held smile, the gate shutting him out, the fold back into his pocket).
+# One 4-bar phrase of the garden-party quartet instead of two (the score's garden loop ends where phrase 3 begins).
+# The time comes out after the turn (R4: runtime is an outcome), so Act Four is 5:09 (7,416 f) and the tag's episode
+# clock moves 10 s earlier.
+SCENE_ADJUST_LF = {
+    "19": (-10, "the last fixes: 19.17 (phrase 2: the flower beds, the raised hands, IRIS at 99%) cut; the garden is "
+                "gate, the chatbot let in, then Radnus (the verify round's Act Four minor)"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_LF.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The last fixes (2026-10-11): the tag's lower third restores "…perfectly on AI…" (facts A69; the verify round's X4
+# blocker, part 1: with the AI clause cropped, "dangerous out there" could read as physical danger). 73 characters need
+# 3.9 s (P15: 0.25 s + 0.05 s a character), and the lower third held 3.15 s, so 23.06 grows 1.0 s (4.6 -> 5.6) and
+# holds its words 4.15 s. The second comes out of the balloon business right after it (23.07, pinned at 4.92 s, was
+# 5.92 fitted): the tag holds 0:37 (888 f), so its first 549 frames, its score's grid (a bar line on the tag's last
+# frame) and the outro seam are unchanged; the pumps come a little quicker and the knot lands on the Podium's held
+# E-flat. (Growing the tag instead moved every early event 1 s against that end-anchored grid; the re-laid score failed
+# the F-major spectral check at 8.9 s, a short chip A-flat reading as A over a weak F.)
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
@@ -222,7 +249,9 @@ SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13",
 # 5 s of fitted air (above), so Act Two is 4:40, Act Three 5:21 and the story 23:02; the lock QA gives back 8 s of
 # stretched tempo (SCENE_ADJUST_LQ): cold open 0:55, Act One 6:04, Act Two 4:39, Act Three 5:20, Act Four 5:19, the
 # story 22:54
-SEG_TARGET = {"coldopen": 55, "act1": 364, "act2": 279, "act3": 320, "act4": 319, "tag": 37}
+# the last fixes (2026-10-11): Act Four 5:19 -> 5:09 (SCENE_ADJUST_LF: 19.17 cut); the tag holds 0:37 (23.06 +1.0 s,
+# 23.07 -1.0 s)
+SEG_TARGET = {"coldopen": 55, "act1": 364, "act2": 279, "act3": 320, "act4": 309, "tag": 37}
 EPISODE_EXTRA_S = 30 + 2 + 10.0   # the intro (30 s), the filename card (2 s), the Orb outro (about 10 s)
 
 # the sequence markers (the reel's margin slate), one per scene and one per flashback
@@ -434,9 +463,13 @@ NEW_VO = {
     # moment, on another person's act that hurts him, and could read as the cause of the departure (W8; facts §F): it is
     # cut, and 12.07-12.08 hold in silence. V.O. 6 is now the launch's plan line, in the wings (the review: four
     # minutes of the launch with no inner voice); nothing about the voice, nothing about why he posts
-    "e2-vo-06": ("act2", "9.04b", "everyone gets it free. that's what makes the phone deal stick.", "plan (distribution)",
-                 "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call "
-                 "behind it; 'free' plain, no weight on 'stick'"),
+    # the last fixes (the lock owner, 2026-10-11; fixes-v1.md, "Last fixes"): "that's what makes the phone deal stick."
+    # stated the strategy outright, a thesis (W7, never on the nose). Only the hint stays: the free tier, said as a
+    # settled decision; the phone deal is the call the audience saw at 8.06, and sc 19's "whatever we ship next goes in
+    # their phones too." pays it on a rewatch
+    "e2-vo-06": ("act2", "9.04b", "everyone gets it free.", "plan (distribution)",
+                 "on his face in the wings after Rima's 'Enjoy the view.', after a held look at the stage he gave away; "
+                 "practical, settled, a decision already made; 'free' plain, no weight on 'everyone'"),
     # the fixes pass (2026-10-10; fixes-v1.md, Act Three): "a hundred and seventy-six days." counted Nov 20, 2023 (his
     # regret post, three hearts) to May 14: the firing's clock, echoing the lobby's DAYS SINCE 176, and with it a
     # newcomer reached for the November board fight as the reason he left (W8; facts §F). The count now runs on Alyi's
@@ -1545,10 +1578,10 @@ nb("act2", "9.04", "2S · Mas, screen-left, and RIMA, the wings behind them (no 
    head=0.5, tail=0.6, music=M9, fix=("P", "KEEP", "PACE"), why="Rima owns the demo; Mas watches from the wings.")
 nb("act2", "9.04b", "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
    "stage", "SET-10", "wings", ["mas"],
-   "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. His thought.",
-   "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8).",
-   lines=[line("e2-vo-06")], head=0.6, tail=0.7, music=M9, fix=("P", "VO", "FX"),
-   why="V.O. 6: the launch's plan (distribution): the free tier is what makes the ELPPA deal stick (the fixes pass: four minutes of the launch with no inner voice; W5, W6).")
+   "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. He looks at it a moment. His thought.",
+   "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8). The last fixes: the line is the hint alone (1.8 s), so the shot holds his look before it (head 2.2 s, pinned: \"Enjoy the view.\" lands on his face) and a short settle after (1.4 s, pinned).",
+   lines=[line("e2-vo-06")], head=2.2, tail=1.4, fixed=("head", "tail"), music=M9, fix=("P", "VO", "FX", "LF"),
+   why="V.O. 6: the launch's plan (distribution), the hint only: everyone gets it free (the fixes pass: four minutes of the launch with no inner voice; W5, W6; the last fixes: its second half stated the strategy, W7).")
 nb("act2", "9.05", "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "stage", "SET-10", "wings", ["rima", "engineer"],
    "Mas walks off frame-left, to stage right. RIMA crosses the wings to the monitor; the engineer follows her.",
@@ -2439,19 +2472,23 @@ nb("act4", "19.16", "WIDE · the walled garden (phrase 1): his phone's picture o
    "Company to company only: no rings, no altar, no vows. One 4-bar phrase.", dur=10.0, fixed=("dur",), onscreen=[O("GUEST", 7.4, None, "sign")], music=M19g,
    sounds=[S("lock_big_turn", 3.4, -22, new=True), S("gate_iron_swing", 4.6, -24, new=True), S("velvet_rope", 6.6, -28, new=True)],
    mode="SET-PIECE (the walled garden)", fix=("P", "KEEP"), why="The garden: phrase 1.")
-nb("act4", "19.17", "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-   "void", "SET-21", "garden", ["chatgtp", "iris"],
-   "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
-   "Text only: voice 5 is paused (D-56). One 4-bar phrase.", dur=10.0, fixed=("dur",), onscreen=[O("99%", 6.4, None, "ui")], music=M19g,
-   sounds=[S("flower_nod", 2.0, -30, new=True), S("chip_blip_bubble", 2.8, -26, new=True), S("flower_nod", 4.6, -30, new=True),
-           S("chip_blip_bubble", 5.3, -26, new=True)], mode="SET-PIECE (the walled garden)", fix=("P", "FACT", "R2"),
-   why="Inside the garden the guest asks first (facts A40: the ask-before-sending flow).")
+# 19.17 is CUT at the last fixes (2026-10-11; SCENE_ADJUST_LF): phrase 2 of the garden, the flower beds, the raised
+# hands, the text bubbles and IRIS at 99% (facts A40's ask-before-sending flow); the verify round asked for the garden
+# to be gate, the chatbot let in, then Radnus. Its sounds (flower_nod, chip_blip_bubble) and its 99% go with it. Kept
+# here as it was, commented out:
+# nb("act4", "19.17", "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
+#    "void", "SET-21", "garden", ["chatgtp", "iris"],
+#    "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
+#    "Text only: voice 5 is paused (D-56). One 4-bar phrase.", dur=10.0, fixed=("dur",), onscreen=[O("99%", 6.4, None, "ui")], music=M19g,
+#    sounds=[S("flower_nod", 2.0, -30, new=True), S("chip_blip_bubble", 2.8, -26, new=True), S("flower_nod", 4.6, -30, new=True),
+#            S("chip_blip_bubble", 5.3, -26, new=True)], mode="SET-PIECE (the walled garden)", fix=("P", "FACT", "R2"),
+#    why="Inside the garden the guest asks first (facts A40: the ask-before-sending flow).")
 nb("act4", "19.18", "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
    "void", "SET-21", "garden", ["mas", "radnus"],
-   "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "Outside the hedge, Mas watches the gate the guest went in by. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
    "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture).",
    lines=[line("e2-a4-0030"), line("e2-a4-0031", 0.45, QMAS)], head=1.6, tail=2.2, fixed=("tail",),
-   music=M19g, mode="SET-PIECE (the walled garden)", fix=("P", "KEEP", "FC", "SR"), why="\"as a guest.\": terms he set; Radnus's smile holds too long.")
+   music=M19g, mode="SET-PIECE (the walled garden)", fix=("P", "KEEP", "FC", "SR", "LF"), why="\"as a guest.\": terms he set; Radnus's smile holds too long.")
 nb("act4", "19.19", "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
    "void", "SET-21", "garden", ["mas"],
    "From inside the garden, through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock turns once. Mas is outside it, screen-right.",
@@ -2650,22 +2687,22 @@ nb("tag", "23.05", "OTS · Mas at the monitor, the toast cleared",
 nb("tag", "23.06", "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
    "screen", "SET-08", "darkroom", ["rumpt-hands"],
    "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
-   "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August.", dur=4.6, fixed=("dur",),
-   onscreen=[O("…having me speak… It's a little bit dangerous out there.", 1.4, 4.55, "lower-third")],
+   "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August. The last fixes (2026-10-11): \"…perfectly on AI…\" restored (facts A69's verbatim fragments; the verify round's X4 blocker, part 1), so the danger reads as AI fakes; 73 characters, read floor 3.9 s: the lower third holds 4.15 s (1.4-5.55 s) and the beat is 1.0 s longer (23.07 gives it).", dur=5.6, fixed=("dur",),
+   onscreen=[O("…having me speak… perfectly on AI… It's a little bit dangerous out there.", 1.4, 5.55, "lower-third")],
    music="E02-13 · THE RUN thins to its pedal; the neutral text blip carries his words", sounds=[S("blip_text_neutral", 1.5, -26, new=True)],
-   fix=("P", "FACT", "R2", "FC", "GR", "SR"), why="His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024).")
+   fix=("P", "FACT", "R2", "FC", "GR", "SR", "LF"), why="His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024), with their subject: AI fakes.")
 nb("tag", "23.07", "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "screen", "SET-08", "darkroom", ["rumpt-hands"],
    "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
-   "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say.", dur=4.4,
+   "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say. The last fixes (2026-10-11): pinned at 4.92 s (was 5.92 fitted), the second 23.06's lower third needs for its read; the pumps a beat apart after the dissolve (the hands land at 0.67 s), the knot on the Podium's held E-flat.", dur=4.92, fixed=("dur",),
    music="E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only",
-   sounds=[S("balloon_pump", 0.6, -26, new=True), S("balloon_pump", 1.4, -25, new=True), S("balloon_pump", 2.2, -24, new=True),
-           S("knot_tie", 3.4, -26, new=True)], fix=("P", "R2", "FC", "GR"), why="The candidate has hold of something shaped like Mas's chatbot.")
-nb("tag", "23.08", "POV · the hook: the string goes taut",
+   sounds=[S("balloon_pump", 0.75, -26, new=True), S("balloon_pump", 1.75, -25, new=True), S("balloon_pump", 2.75, -24, new=True),
+           S("knot_tie", 4.1, -26, new=True)], fix=("P", "R2", "FC", "GR", "LF"), why="The candidate has hold of something shaped like Mas's chatbot.")
+nb("tag", "23.08", "POV · the hook: the balloon lifts; the string snaps taut, straight up out of frame",
    "screen", "SET-08", "darkroom", [],
-   "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
-   "", dur=1.6, fixed=("dur",), music="E02-13 · the Podium thins to one held chord", sounds=[S("string_taut", 0.3, -20, new=True)],
-   fix=("P", "R2"), why="The hook (Ep3).")
+   "The balloon lifts. Its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium.",
+   "The final fix round's restaging (guardrail X4): the pull is the balloon's own, upward; no one on the far side of the podium (the last fixes brought this description in line, 2026-10-11).", dur=1.6, fixed=("dur",), music="E02-13 · the Podium thins to one held chord", sounds=[S("string_taut", 0.3, -20, new=True)],
+   fix=("P", "R2", "GR", "LF"), why="The hook (Ep3).")
 nb("tag", "23.09", "MCU · Mas at his monitor, its glow on his still face; cut to black on the downbeat",
    "darkroom", "SET-07", "darkroom", ["mas"],
    "Mas at his monitor, its glow on his still face. Cut to black.",

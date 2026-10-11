@@ -47,15 +47,15 @@
    "seconds": 279.0,
    "lufs_i": -16.01,
    "true_peak_dbtp": -1.45,
-   "lra_lu": 7.1,
-   "dialogue_lufs": -14.32,
-   "gain_db": 2.03,
+   "lra_lu": 7.3,
+   "dialogue_lufs": -14.23,
+   "gain_db": 2.13,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-act2/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 19:50:42"
+   "built": "2026-10-11 01:55:52"
   },
   "act3": {
    "file": "out/ep02/v1/mix/act3-mix.wav",
@@ -70,37 +70,37 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-11 01:05:16"
+   "built": "2026-10-11 01:56:25"
   },
   "act4": {
    "file": "out/ep02/v1/mix/act4-mix.wav",
-   "seconds": 319.0,
+   "seconds": 309.0,
    "lufs_i": -16.0,
    "true_peak_dbtp": -1.47,
-   "lra_lu": 8.5,
-   "dialogue_lufs": -13.99,
-   "gain_db": 2.2,
+   "lra_lu": 8.6,
+   "dialogue_lufs": -14.05,
+   "gain_db": 2.14,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-act4/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-11 01:05:33"
+   "built": "2026-10-11 02:30:55"
   },
   "tag": {
    "file": "out/ep02/v1/mix/tag-mix.wav",
    "seconds": 37.0,
    "lufs_i": -16.0,
-   "true_peak_dbtp": -1.42,
-   "lra_lu": 7.9,
-   "dialogue_lufs": -13.46,
-   "gain_db": 3.74,
+   "true_peak_dbtp": -1.45,
+   "lra_lu": 8.8,
+   "dialogue_lufs": -13.42,
+   "gain_db": 3.79,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 19:51:15"
+   "built": "2026-10-11 02:56:04"
   },
   "card": {
    "file": "out/ep02/v1/mix/card-mix.wav",
@@ -128,7 +128,7 @@
    "act4",
    "tag"
   ],
-  "seconds": 1376.0,
+  "seconds": 1366.0,
   "lufs_i": -15.75,
   "lra_lu": 7.2,
   "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
@@ -150,8 +150,8 @@
   },
   {
    "seam": "act2 -> act3",
-   "last_200ms_dbfs": -26.6,
-   "first_200ms_dbfs": -29.6,
+   "last_200ms_dbfs": -26.5,
+   "first_200ms_dbfs": -29.5,
    "step_db": -3.0,
    "sample_jump": 0.0026
   },
@@ -160,20 +160,20 @@
    "last_200ms_dbfs": -19.7,
    "first_200ms_dbfs": -22.9,
    "step_db": -3.2,
-   "sample_jump": 0.0052
+   "sample_jump": 0.0051
   },
   {
    "seam": "act4 -> tag",
    "last_200ms_dbfs": -19.9,
    "first_200ms_dbfs": -19.7,
    "step_db": 0.2,
-   "sample_jump": 0.0038
+   "sample_jump": 0.0109
   }
  ],
  "spread": {
   "lufs_i_lu": 1.05,
-  "dialogue_lu": 0.86
+  "dialogue_lu": 0.81
  },
- "updated": "2026-10-11 01:06:11",
+ "updated": "2026-10-11 02:57:07",
  "heard": "nothing here has been listened to; every number is measured"
 }

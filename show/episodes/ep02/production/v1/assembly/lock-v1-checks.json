@@ -34,20 +34,20 @@
   {
    "id": "act4",
    "start": 25200,
-   "frames": 7656
+   "frames": 7416
   },
   {
    "id": "tag",
-   "start": 32856,
+   "start": 32616,
    "frames": 888
   },
   {
    "id": "outro",
-   "start": 33744,
+   "start": 33504,
    "frames": 360
   }
  ],
- "total_frames": 34104,
+ "total_frames": 33864,
  "segments": {
   "coldopen": {
    "frames": 1320,
@@ -117,16 +117,16 @@
    ]
   },
   "act4": {
-   "frames": 7656,
-   "seconds": 319.0,
-   "timeline_s": 319.0,
+   "frames": 7416,
+   "seconds": 309.0,
+   "timeline_s": 309.0,
    "ep_in": "17:30:00",
-   "ep_out": "22:49:00",
-   "shots": 57,
+   "ep_out": "22:39:00",
+   "shots": 56,
    "lines": 38,
    "vo": 3,
    "scenes": 4,
-   "plan_s": 319,
+   "plan_s": 309,
    "checks_ok": true,
    "checks": 9,
    "problems": [
@@ -137,8 +137,8 @@
    "frames": 888,
    "seconds": 37.0,
    "timeline_s": 37.0,
-   "ep_in": "22:49:00",
-   "ep_out": "23:26:00",
+   "ep_in": "22:39:00",
+   "ep_out": "23:16:00",
    "shots": 9,
    "lines": 1,
    "vo": 1,
@@ -322,7 +322,7 @@
    "tc_out": "09:09:00",
    "plan_s": 56,
    "proposal_s": 51,
-   "fit_scale": 1.29,
+   "fit_scale": 1.543,
    "shots": 7,
    "lines": 16,
    "arrival_s": 2.38,
@@ -532,14 +532,14 @@
    "seg": "act4",
    "scene": "19",
    "title": "Every phone they sell (with F2.1 and the walled garden)",
-   "frames": 3192,
-   "seconds": 133.0,
+   "frames": 2952,
+   "seconds": 123.0,
    "tc_in": "19:06:00",
-   "tc_out": "21:19:00",
-   "plan_s": 133,
+   "tc_out": "21:09:00",
+   "plan_s": 123,
    "proposal_s": 134,
    "fit_scale": 1.379,
-   "shots": 20,
+   "shots": 19,
    "lines": 19,
    "arrival_s": 11.17,
    "arrival_spoken_s": 11.17,
@@ -559,8 +559,8 @@
    "title": "(FOR NOW)",
    "frames": 1248,
    "seconds": 52.0,
-   "tc_in": "21:19:00",
-   "tc_out": "22:11:00",
+   "tc_in": "21:09:00",
+   "tc_out": "22:01:00",
    "plan_s": 52,
    "proposal_s": 52,
    "fit_scale": 1.03,
@@ -585,8 +585,8 @@
    "title": "One door",
    "frames": 912,
    "seconds": 38.0,
-   "tc_in": "22:11:00",
-   "tc_out": "22:49:00",
+   "tc_in": "22:01:00",
+   "tc_out": "22:39:00",
    "plan_s": 38,
    "proposal_s": 38,
    "fit_scale": 1.431,
@@ -609,8 +609,8 @@
    "title": "The other company",
    "frames": 888,
    "seconds": 37.0,
-   "tc_in": "22:49:00",
-   "tc_out": "23:26:00",
+   "tc_in": "22:39:00",
+   "tc_out": "23:16:00",
    "plan_s": 37,
    "proposal_s": 37,
    "fit_scale": 1.345,
@@ -1945,14 +1945,6 @@
   },
   {
    "seg": "act4",
-   "beat": "19.17",
-   "seconds": 10.0,
-   "events": 6,
-   "longest_still_s": 3.6,
-   "frame": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits"
-  },
-  {
-   "seg": "act4",
    "beat": "19.19",
    "seconds": 4.14,
    "events": 2,
@@ -2050,17 +2042,17 @@
   {
    "seg": "tag",
    "beat": "23.06",
-   "seconds": 4.6,
+   "seconds": 5.6,
    "events": 3,
-   "longest_still_s": 3.05,
+   "longest_still_s": 4.05,
    "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its "
   },
   {
    "seg": "tag",
    "beat": "23.07",
-   "seconds": 5.92,
+   "seconds": 4.92,
    "events": 4,
-   "longest_still_s": 1.62,
+   "longest_still_s": 1.35,
    "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a ch"
   }
  ],
@@ -2070,7 +2062,7 @@
   "sc 6: arrival 1.38 s before the first line (P3 2-4 s; the plan: 6.01: 1.4 s, enter late on the locked two-shot, the sting ending)",
   "sc 7: arrival 1.50 s before the first line (P3 2-4 s; the plan: 7.01: 1.5 s, the split already opening, his voice on the phone leading us down)"
  ],
- "story_frames": 32976,
+ "story_frames": 32736,
  "pace": [
   {
    "after": "e2-co-0005",
@@ -2223,14 +2215,14 @@
    "after": "e2-a2-0005",
    "line": "e2-a2-0006",
    "beats": "9.03 -> 9.04",
-   "lock_s": 1.167,
+   "lock_s": 1.383,
    "not_an_exchange": "a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer"
   },
   {
    "after": "e2-a2-0011",
    "line": "e2-a2-0012",
    "beats": "9.05 -> 9.06",
-   "lock_s": 1.677,
+   "lock_s": 1.968,
    "not_an_exchange": "not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since the fixes pass gave sc 9's air to V.O. 6)"
   },
   {
@@ -2377,12 +2369,12 @@
   {
    "check": "the engineer's laugh stops on \"laugh\"",
    "ok": true,
-   "detail": "engineer_laugh_take 57.917 s + 3.37 s; Gerg's \"laugh\" ends 61.292 s"
+   "detail": "engineer_laugh_take 58.042 s + 3.66 s; Gerg's \"laugh\" ends 61.708 s"
   }
  ],
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
   "lines": 175,
-  "rows": 395
+  "rows": 394
  }
 }

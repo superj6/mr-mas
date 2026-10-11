@@ -6,7 +6,7 @@
 |---|---|
 | **Episode** | 2 of 12 |
 | **Date span** | Feb 15 → Aug 21, 2024. Flashbacks: `FEB 20, 2018` (F2.3, Nole → Mas) · `MAR 2016 · GAME 2 · MOVE 37` (the concept) · `DEC 2022 → 2023` (F2.2, Alyi: the full motive flashback) · Sep 2006 → Jun 9, 2008 (F2.1, Mas) |
-| **Runtime** | **Story 23:20 planned**: the proposal's runtime table after its final check, scene by scene, plus the 4 s the script review gave Move 37 (sc 4; Act One is the setup act, R4); with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 24:02** (§6). **The lock** ([lock-v1.md](lock-v1.md)) runs 22:54.00 of story: the lock pass gave back 18 s of fitted air (sc 11, 13) and the lock QA 8 s of stretched tempo. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock, Mas pulled to W18's 140 wpm), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
+| **Runtime** | **Story 23:20 planned**: the proposal's runtime table after its final check, scene by scene, plus the 4 s the script review gave Move 37 (sc 4; Act One is the setup act, R4); with the 30 s intro, the 2 s filename card and the Orb outro (about 10 s), **about 24:02** (§6). **The lock** ([lock-v1.md](lock-v1.md)) runs 22:54.00 of story (22:44.00 since the last fixes, 2026-10-11: 19.17 cut): the lock pass gave back 18 s of fitted air (sc 11, 13) and the lock QA 8 s of stretched tempo. Every length is planned, never measured: lines at each voice's rate (calibrated on Ep1's shipped ElevenLabs lock, Mas pulled to W18's 140 wpm), gaps at their tempo marks, the air fitted to the scene. One move inside Act Four: sc 20 +4 s, sc 19 −4 s (its read floors; §6 below). The takes and the stick reel replace every number |
 | **Format** | Cold open · intro (30 s) · filename card (2 s) · four acts (`the séance` · `her` · `leave them up` · `as a guest`) · tag (`august`) · the Orb outro |
 | **Written by** | MR. MAS writers' room (the Ep2 v1 script writer) |
 | **Draft** | **Script v1 (Ep2 v1, the one-go build), 2026-10-08, revised after its script review.** The shooting script of [proposal.md](proposal.md) as agreed, with its Decisions (D-01 to D-70) and its three review logs, and [manifest.md](manifest.md); the binding checklist is [LEARNINGS.md](LEARNINGS.md). Every scene, in order; no scene added or cut. The script review's changes (one blocker, thirteen majors and twenty-two minors, every one applied or answered) are in the [Review log (script review)](#review-log-script-review) at the end, and went back into the proposal as D-71 to D-87. The best lines of staff draft 5.4 ([script.md](../../script.md)) are kept wherever the proposal keeps them; two keep-list lines changed or were cut, each with its reason in the review log's ledger. Not locked |
@@ -719,7 +719,7 @@ AXIS — the wings are stage right (screen-left from the house), so Mas keeps th
 **RIMA** *(clicker up; to the wings, composed)*\
 Places, please. Phones on silent in the wings. We're on in five. `[INVENTED · e2-a2-0002]`
 
-`[M]` → `[SCR]` [9.02] (≈ 7.8 s)
+`[M]` → `[SCR]` [9.02] (≈ 7.9 s)
 
 **ENGINEER** *(holding the phone up, rehearsing it to her)*\
 So on stage, I ask it a question, it thinks for a second, and then it answers. `[INVENTED · e2-a2-0003]`
@@ -731,14 +731,14 @@ On the monitor, instantly, with a bright UI chirp: `yes!!`
 
 TEMPO · quick: he starts rehearsing to her 0.3 s after "We're on in five."
 
-`[SCR]` → `[W]` [9.03] (≈ 4.2 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
+`[SCR]` → `[W]` [9.03] (≈ 4.6 s) He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, `[laughter]`, drops off the bottom of the screen. GERG, at his road case in the foreground:
 
 **GERG** *(typing; cheerful)*\
 Careful. The new one can hear you laugh. `[INVENTED · accurate (facts A23) · e2-a2-0005]`
 
 Beyond him, the engineer's laugh stops on "laugh."
 
-`[2S]` [9.04] (≈ 12.9 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
+`[2S]` [9.04] (≈ 13.2 s; no cut-ins) Mas, screen-left, and RIMA, the wings behind them.
 
 **MAS**\
 is it ready? `[INVENTED · Gerg's Ep1 question, his now · e2-a2-0006]`
@@ -754,14 +754,14 @@ It is. Enjoy the view. `[INVENTED · e2-a2-0009]`
 
 TEMPO · normal (0.4–0.5 s): her answers composed, never rushed.
 
-`[MCU]` [9.04b] (≈ 6.7 s) Rima turns back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. A face light, one step.
+`[MCU]` [9.04b] (≈ 5.4 s) Rima turns back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. He looks at it a moment [HOLD 2.2 s]. A face light, one step.
 
 **MAS (V.O.)**\
-everyone gets it free. that's what makes the phone deal stick. `[INVENTED · V.O. 6, plan: distribution (the free tier, facts A23; the phone deal, 8.06); nothing about the voice, nothing about why he posts later · e2-vo-06]`
+everyone gets it free. `[INVENTED · V.O. 6, plan: distribution (the free tier, facts A23; the hint only: the phone deal is the call at 8.06, and 19.08 pays it); nothing about the voice, nothing about why he posts later · e2-vo-06]`
 
-*(Added at the fixes pass, 2026-10-10: the launch ran four minutes with no inner voice. V.O. 6 used to be "i came back." over his farewell post in 12.07, cut there.)*
+*(Added at the fixes pass, 2026-10-10: the launch ran four minutes with no inner voice. V.O. 6 used to be "i came back." over his farewell post in 12.07, cut there. **The last fixes (2026-10-11):** it was "everyone gets it free. that's what makes the phone deal stick."; the second sentence stated his strategy outright (W7), so only the hint stays, and the shot holds his look before it.)*
 
-`[W]` [9.05] (≈ 9.9 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
+`[W]` [9.05] (≈ 10.2 s) Mas walks off frame-left, to stage right. A pan with RIMA as she crosses the wings to the monitor; the ENGINEER follows her.
 
 **ENGINEER** *(a walk-and-talk)*\
 What if it freezes? Live, on the stream? `[INVENTED · e2-a2-0010]`
@@ -771,7 +771,7 @@ Then it freezes live, and I keep talking. It also sings. We'll get to that. `[IN
 
 TEMPO · quick (Rima 0.3 s).
 
-`[SCR]` [9.06] (≈ 6.6 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
+`[SCR]` [9.06] (≈ 6.8 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
 
 **VOICE 1**\
 Hi. `[INVENTED · e2-a2-0012]`
@@ -1636,18 +1636,18 @@ TEMPO · normal; Mas at 0.45 s; Gerg's literal answer quick (0.25 s); his last q
 >
 > `[ECU · MATCH]` [19.15] (≈ 3.6 s) The clicker in his 2008 hand becomes his 2024 phone, in the same grip, his post from the lawn still on its screen.
 
-**THE WALLED GARDEN** *(three phrases; company to company only: no rings, no altar, no vows)*
+**THE WALLED GARDEN** *(two phrases since the last fixes; company to company only: no rings, no altar, no vows)*
 
 `[W]` [19.16] (≈ 10.0 s; phrase 1) His phone's picture opens outward in three held steps until it's the whole frame: a garden behind a tall, perfectly square-cut hedge with exactly one gate. MIT KOOC (unplated) holds one key as tall as he is, and turns it. The gate swings open. CHATGTP, its new face on, is walked through on a velvet rope, a wristband on its tail: `GUEST`.
 
-`[M]` → `[W]` [19.17] (≈ 10.0 s; phrase 2) Inside, beds of phone-shaped flowers. At each one the bubble stops, raises one tiny hand, and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice *(voice 5 is paused)* [V · facts A40: the ask-before-sending flow]. On a bench sits IRIS, a small progress bar with a face, stuck at `99%`.
+*(19.17, the garden's second phrase, is cut at the last fixes, 2026-10-11: the beds of phone-shaped flowers, the raised hands, the text bubbles and IRIS at `99%`. The verify round found the garden's arrival legible and slow, its eggs undecodable, about 49 s with no line; the garden is now the gate, the chatbot let in, then Radnus. Act Four is 10 s shorter.)*
 
-`[2S]` [19.18] (≈ 8.7 s; phrase 3, held) Outside the hedge: Mas, screen-left, phone in hand, watching the raised hands go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
+`[2S]` [19.18] (≈ 8.7 s; the second phrase, held) Outside the hedge: Mas, screen-left, phone in hand, watching the gate the guest went in by. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
 
 **RADNUS** *(to Mas, along the hedge; quick, gracious)*\
 Lovely garden. I see they let your chatbot in. `[INVENTED · e2-a4-0030]`
 
-**MAS** *(not looking away from the row; dry, unbothered: terms he set)*\
+**MAS** *(not looking away from the gate; dry, unbothered: terms he set)*\
 as a guest. `[INVENTED · keep list · e2-a4-0031]`
 
 Radnus's polite smile holds a beat too long, and nobody says anything else.
@@ -1793,14 +1793,18 @@ sixty elections this year. `[INVENTED · V.O. 14, plan: proof of personhood, as 
 
 TEMPO · normal: the run's items each held for their read; the voice after the toast clears.
 
-`[POV]` [23.06] (≈ 4.6 s) A TV interview in its own player: hands and tie only, no face, no voice.
+`[POV]` [23.06] (≈ 5.6 s) A TV interview in its own player: hands and tie only, no face, no voice.
 
 *(No rail since the film's fixes pass: the tag's `AUG 5` and its chapter carry August.)*
-LOWER THIRD (the broadcast's own): "…having me speak… It's a little bit dangerous out there." [V·press · facts A69: the Fox Business interview that aired Aug 21; about AI fakes of himself; fragments, verbatim]
+LOWER THIRD (the broadcast's own): "…having me speak… perfectly on AI… It's a little bit dangerous out there." [V·press · facts A69: the Fox Business interview that aired Aug 21; about AI fakes of himself; fragments, verbatim; held 4.15 s for its 73 characters]
 
-`[POV]` [23.07] (≈ 5.9 s) The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all: Mas's product's shape, and none of Mas's say. They tie it to the podium. `[INVENTED business, wordless, outside the broadcast]`
+*(The last fixes, 2026-10-11: "…perfectly on AI…" is restored, so the danger he means is the AI fakes; cropped, it could read as physical danger at rallies (guardrail X4). The shot is 1.0 s longer for its read; 23.07 gives the second back.)*
 
-`[POV]` [23.08] (≈ 1.6 s) The string goes taut, as if someone on the far side of the podium had just taken hold of it.
+`[POV]` [23.07] (≈ 4.9 s) The player's chrome clears, and the frame leaves the broadcast for THE PODIUM in the studio's own light, seen from where he stands; it still faces away. His hands, low on its surface, pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all (a flat green party pump): Mas's product's shape, and none of Mas's say. They tie it to the near ledge and slide back out of frame. `[INVENTED business, wordless, outside the broadcast]`
+
+`[POV]` [23.08] (≈ 1.6 s) The balloon lifts. Its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium.
+
+*(23.07–23.08 were restaged at the final fix round for guardrail X4: no hill, no raised arm or fist, no red barrel, and no one on the far side of the podium; the pull is the balloon's own. The last fixes brought this description in line, 2026-10-11.)*
 
 `[MCU]` [23.09] (≈ 2.0 s) Mas at his monitor, its glow on his still face. CUT TO BLACK on the downbeat.
 
@@ -1826,7 +1830,7 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 | 3 | e2-vo-03 | 4B.01 | two hours on his show, once. after that, november is a link. | plan |
 | 4 | e2-vo-04 | 8.03 | the next model runs on the landlord's servers. the one after runs on ours. | plan (own compute) |
 | 5 | e2-vo-05 | 8.05 | the press gets one night with ours first. | plan (ship first: a condition) |
-| 6 | e2-vo-06 | 9.04b | everyone gets it free. that's what makes the phone deal stick. | plan (distribution) |
+| 6 | e2-vo-06 | 9.04b | everyone gets it free. | plan (distribution) |
 | 7 | e2-vo-07 | 15.03 | eight years and five months. | count |
 | 8 | e2-vo-08 | 15.17 | i'll ask him in person. | plan |
 | 9 | e2-vo-09 | 17.11 | the post. the post. | the scramble (his rattled tell) |
@@ -1923,6 +1927,7 @@ Planned, not measured. Per scene, the proposal's runtime table (after its final 
 - **The clock** (with the 30 s intro and the 2 s card): cold open 0:00 · intro 0:56 · card 1:26 · Act One 1:28 · Act Two 7:36 · Act Three 12:29 · Act Four 17:55 · tag 23:15 · outro 23:52 · end ≈ 24:02. The midpoint act-out lands at about 52%; the S3 (the bridge) runs 15:44–17:55.
 - **If the reel runs long** (the proposal's D-20, in its order): F2.3 to about 15 s, keeping the room's refusal and the look (−6 s; the sheet is gone); the APR 1 lineup, V.O. 4 moving onto the calendar square (−10 s); the off-record mic gag, if its laugh test fails (−4 s). Never a conversation's middle, an arrival, a keep-list line, or a review fix.
 - **After the lock** (measured on the takes; [lock-v1.md](lock-v1.md) §1 and §3): story **22:54.00**. The lock pass gave back 18 s of air the fit had tripled in two quick scenes (sc 11 1:51 → 1:38, sc 13 0:36 → 0:31; proposal D-88); the lock QA pinned the tempo marks the plan had left unpinned and gave back 8 s (sc 1 0:55, sc 4 3:13, sc 4A 0:33, sc 4B 0:09 with a second from 4A, sc 9 0:51, sc 17 2:10, sc 18 1:35; D-91, D-93). Cold open 0:55 · Act One 6:04 · Act Two 4:39 · Act Three 5:20 · Act Four 5:19 · tag 0:37. D-20's trims are not needed.
+- **The last fixes** (the lock owner, 2026-10-11; [fixes-v1.md](fixes-v1.md), "Last fixes (lock owner)"): story **22:44.00** (32,736 f), episode 23:31.00 on the film's clock. 19.17 is cut (sc 19 2:13 → 2:03), so **Act Four is 5:09** (7,416 f); Act Two holds 4:39 (V.O. 6 is shorter; 9.04b holds his look, sc 9's air takes the rest at x1.54); the tag holds 0:37 (23.06 +1.0 s for the lower third's read, 23.07 −1.0 s).
 
 ## 7. For the next passes
 
@@ -2025,3 +2030,15 @@ Story ≈ 23:20 (+4 s, all in sc 4, the setup act), episode ≈ 24:02, planned. 
 - **New line ids:** `e2-a1-0055` (the staffer's whisper), `e2-a1-0056` (Gerg's second half), `e2-a3-0023` and `-0024` (Mas's strip lines), `e2-a4-0033` to `-0035` (the beanbag exchange). 173 lines in all (159 spoken, 14 V.O.).
 - **On screen, changed:** the cow caption, the news-site headline (8.02), `what's the catch?`, the domino's text, the pause post's two fragments (17.20, 5.4 s), the board card's "Ms.", `RAIL: AUG 21`; the F2.3 insert is the arena match (`arena_blip_soft`, new). `onscreen_items` in the plans is authoritative.
 - **Human checks added** (§7): V.O. 11's reading (priority, never a view of the committee); V.O. 9's speed (rattled, never panicked); "which half?" played dry; whether a newcomer thinks Nole asked anyone to follow him.
+
+## Last fixes (the lock owner, 2026-10-11)
+
+The finishing round's four last fixes, made on the production team's own judgement ([fixes-v1.md](fixes-v1.md), "Last fixes (lock owner)", has the checks):
+
+| # | Where | Was | Now | Why |
+|---|---|---|---|---|
+| 1 | 9.04b, V.O. 6 | "everyone gets it free. that's what makes the phone deal stick." (6.7 s shot) | **"everyone gets it free."** (5.4 s shot: his look at the stage 2.2 s, the thought, 1.4 s after) | the second sentence stated his strategy outright (W7); the hint stays, and sc 19's "whatever we ship next goes in their phones too." pays it |
+| 2 | 19.17, the garden | phrase 2: the flower beds, the raised hands, the text bubbles, IRIS at `99%` (10 s) | **cut**; the garden is the gate, the chatbot let in on its rope (`GUEST`), then Radnus; one phrase of the garden-party quartet | about 49 s with no line after "they let me hold the clicker."; the arrival was legible and slow, its eggs undecodable (the verify round). Act Four 5:19 → 5:09 |
+| 3 | 23.06, the lower third | "…having me speak… It's a little bit dangerous out there." (3.15 s) | **"…having me speak… perfectly on AI… It's a little bit dangerous out there."** (4.15 s; 23.06 +1.0 s, 23.07 −1.0 s) | cropped, "dangerous out there" could read as physical danger in summer 2024 (guardrail X4); the AI clause makes its subject the fakes (facts A69's verbatim fragments) |
+| 4 | 23.07–23.08, the description | "as if someone on the far side of the podium had just taken hold of it" | the balloon lifts the string straight up out of frame; nobody is behind the podium | the final fix round's restaging (X4); description only |
+

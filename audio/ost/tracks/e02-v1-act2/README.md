@@ -66,6 +66,10 @@ The episode review's Act Two fixes changed the lock inside the act (its 6,696 fr
 - **The V.O. windows:** V.O. 5 sits at −27.3 LUFS of score (24.65–27.44 s), V.O. 6 at −24.2 under the walk-on (75.56–80.61 s), V.O. 4 −23.5 as before. The dark room's short-term p95 is −16.06 LUFS (the engine's underscore warning, −17; it was −16.6): its felt statements carry the cue, as before.
 - **The designed stop** is unchanged (12.08 is the same frames): the downbeat 2 s into his face.
 
+## The last fixes (2026-10-11): re-laid on the new lock
+
+V.O. 6 is now "everyone gets it free." (1.76 s; [fixes-v1.md](../../../../show/episodes/ep02/production/v1/fixes-v1.md), "Last fixes (lock owner)"). 9.04b is 5.36 s (his look pinned 2.2 s before the thought, 1.4 s after) and sc 9's other air takes the rest; the act holds 6,696 frames. `track.py --render --el` re-laid itself with no code change: **act2 −20.49 LUFS-I, −3.15 dBTP, 0 holes, 0 fragments, pocket p10 13.5, min 11.3, `check.py` PASS** [M]. V.O. 6 sits at −23.6 LUFS of score (77.78–79.54 s).
+
 ## The tune: ONE WORD (one tune in three rooms)
 
 The manifest asks for the demo's walk-on to be "one tune in three rooms", with the knee's step cell in it. The tune is original, in F dorian (F G A♭ B♭ C D E♭; never an A-natural), and swung, because people play it:

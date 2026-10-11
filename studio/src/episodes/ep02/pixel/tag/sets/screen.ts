@@ -120,7 +120,9 @@ export const feedPainter = (st: {post: boolean; egg?: boolean; ticks?: Array<[nu
 };
 
 // ================================================================== 23.06-23.07: the broadcast (Aug 21)
-const LOWER = '…having me speak… It\'s a little bit dangerous out there.';
+// (the last fixes, 2026-10-11: "…perfectly on AI…" restored, facts A69's verbatim fragments, so the danger reads as AI
+// fakes; the lock's 23.06 text, held 4.15 s for its 73 characters; two lines on the bar)
+const LOWER = '…having me speak… perfectly on AI… It\'s a little bit dangerous out there.';
 const tie = (b: Buf, x: number, y: number, len: number) => { poly([x - 4, y, x + 4, y, x + 3, y + 6, x + 6, y + len, x, y + len + 6, x - 6, y + len, x - 3, y + 6], b.ink(PAL.R2)); line(x + 2, y + 6, x + 4, y + len, b.ink(PAL.R1)); fill(b, x - 4, y, 8, 4, PAL.R1); };
 /** the interview's plain set (no network, no logo): its blue ramp and its soft lights */
 const interviewSet = (scr: Buf) => {

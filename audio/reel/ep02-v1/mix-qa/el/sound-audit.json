@@ -4569,7 +4569,7 @@
   }
  },
  "act2": {
-  "gain_db": 2.03,
+  "gain_db": 2.13,
   "sfx": [
    {
     "beat": "8.01",
@@ -4580,7 +4580,7 @@
     "notes": [
      "ride +13.4 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -30.0,
+    "band_db_in_mix": -29.9,
     "best_band": "250-1000 Hz",
     "best_snr_db": 8.1,
     "best_snr_with_dialogue_db": 8.1,
@@ -4604,7 +4604,7 @@
     "at": 5.683,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -42.3,
+    "band_db_in_mix": -42.2,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 32.0,
     "best_snr_with_dialogue_db": 32.0,
@@ -4628,7 +4628,7 @@
     "at": 6.933,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -55.5,
+    "band_db_in_mix": -55.4,
     "best_band": "8000-16000 Hz",
     "best_snr_db": -0.5,
     "best_snr_with_dialogue_db": -0.5,
@@ -4652,7 +4652,7 @@
     "at": 23.5,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -41.6,
+    "band_db_in_mix": -41.5,
     "best_band": "250-1000 Hz",
     "best_snr_db": -11.4,
     "best_snr_with_dialogue_db": -11.4,
@@ -4678,7 +4678,7 @@
     "notes": [
      "ride +1.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.9,
+    "band_db_in_mix": -36.8,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 2.9,
     "best_snr_with_dialogue_db": 2.9,
@@ -4704,7 +4704,7 @@
     "notes": [
      "ride +3.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -39.9,
+    "band_db_in_mix": -39.8,
     "best_band": "1000-2000 Hz",
     "best_snr_db": -2.4,
     "best_snr_with_dialogue_db": -2.4,
@@ -4730,7 +4730,7 @@
     "notes": [
      "ride +5.5 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.7,
+    "band_db_in_mix": -36.6,
     "best_band": "250-1000 Hz",
     "best_snr_db": 2.5,
     "best_snr_with_dialogue_db": 2.5,
@@ -4754,7 +4754,7 @@
     "at": 39.733,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -56.3,
+    "band_db_in_mix": -56.2,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 30.7,
     "best_snr_with_dialogue_db": 30.7,
@@ -4778,7 +4778,7 @@
     "at": 54.808,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -37.2,
+    "band_db_in_mix": -37.1,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 75.3,
     "best_snr_with_dialogue_db": 33.3,
@@ -4799,25 +4799,25 @@
     "beat": "9.03",
     "name": "engineer_laugh_take",
     "lock_name": "engineer_laugh_take",
-    "at": 57.944,
+    "at": 58.065,
     "peak_dbfs_laid": -22.0,
     "notes": [
-     "ducked -9 dB under e2-a2-0005 (59.43-61.39 s)"
+     "ducked -9 dB under e2-a2-0005 (59.84-61.80 s)"
     ],
-    "band_db_in_mix": -36.4,
+    "band_db_in_mix": -36.3,
     "best_band": "2000-4000 Hz",
-    "best_snr_db": 36.7,
-    "best_snr_with_dialogue_db": 36.7,
+    "best_snr_db": 37.5,
+    "best_snr_with_dialogue_db": 37.5,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": -4.6,
-    "stem_peak_dbfs": -22.0,
-    "stem_under_laid_db": -0.0,
+    "peak_over_local_db": 20.9,
+    "stem_peak_dbfs": -21.7,
+    "stem_under_laid_db": -0.3,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": -4.6,
-    "best_snr_vs_all_db": 36.7,
+    "peak_over_local_with_dialogue_db": 20.9,
+    "best_snr_vs_all_db": 37.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -4825,23 +4825,23 @@
     "beat": "9.03",
     "name": "tag_drop",
     "lock_name": "tag_drop",
-    "at": 58.525,
+    "at": 58.761,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -35.9,
+    "band_db_in_mix": -35.6,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 14.3,
-    "best_snr_with_dialogue_db": 14.3,
+    "best_snr_db": 15.0,
+    "best_snr_with_dialogue_db": 15.0,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 37.6,
-    "stem_peak_dbfs": -22.0,
-    "stem_under_laid_db": -4.0,
+    "peak_over_local_db": 21.6,
+    "stem_peak_dbfs": -21.7,
+    "stem_under_laid_db": -4.3,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 37.6,
-    "best_snr_vs_all_db": 14.3,
+    "peak_over_local_with_dialogue_db": 21.6,
+    "best_snr_vs_all_db": 15.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -4852,7 +4852,7 @@
     "at": 96.587,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -52.8,
+    "band_db_in_mix": -52.7,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 59.6,
     "best_snr_with_dialogue_db": 25.5,
@@ -4878,7 +4878,7 @@
     "notes": [
      "cut at its scene's end (0.81 s early)"
     ],
-    "band_db_in_mix": -41.5,
+    "band_db_in_mix": -41.4,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.2,
     "best_snr_with_dialogue_db": 1.2,
@@ -4902,7 +4902,7 @@
     "at": 98.761,
     "peak_dbfs_laid": -20.0,
     "notes": [],
-    "band_db_in_mix": -36.4,
+    "band_db_in_mix": -36.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.0,
     "best_snr_with_dialogue_db": 1.0,
@@ -4926,7 +4926,7 @@
     "at": 104.97,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -47.3,
+    "band_db_in_mix": -47.2,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 12.0,
     "best_snr_with_dialogue_db": -3.3,
@@ -4950,7 +4950,7 @@
     "at": 111.308,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -56.2,
+    "band_db_in_mix": -56.1,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 2.9,
     "best_snr_with_dialogue_db": -5.6,
@@ -4974,7 +4974,7 @@
     "at": 119.135,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -45.6,
+    "band_db_in_mix": -45.5,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 14.4,
     "best_snr_with_dialogue_db": -3.4,
@@ -4998,7 +4998,7 @@
     "at": 124.287,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -38.4,
+    "band_db_in_mix": -38.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.3,
     "best_snr_with_dialogue_db": 1.3,
@@ -5024,7 +5024,7 @@
     "notes": [
      "ride +1.1 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -37.3,
+    "band_db_in_mix": -37.2,
     "best_band": "60-250 Hz",
     "best_snr_db": 7.9,
     "best_snr_with_dialogue_db": -3.3,
@@ -5050,7 +5050,7 @@
     "notes": [
      "ride +1.1 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -37.3,
+    "band_db_in_mix": -37.2,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.5,
     "best_snr_with_dialogue_db": 2.1,
@@ -5074,7 +5074,7 @@
     "at": 128.372,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -55.4,
+    "band_db_in_mix": -55.3,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 8.5,
     "best_snr_with_dialogue_db": -13.3,
@@ -5098,7 +5098,7 @@
     "at": 142.215,
     "peak_dbfs_laid": -18.0,
     "notes": [],
-    "band_db_in_mix": -41.3,
+    "band_db_in_mix": -41.2,
     "best_band": "8000-16000 Hz",
     "best_snr_db": 10.8,
     "best_snr_with_dialogue_db": 10.8,
@@ -5124,7 +5124,7 @@
     "notes": [
      "ride +12.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -32.3,
+    "band_db_in_mix": -32.2,
     "best_band": "60-250 Hz",
     "best_snr_db": 7.0,
     "best_snr_with_dialogue_db": 7.0,
@@ -5150,7 +5150,7 @@
     "notes": [
      "ride +3.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -31.0,
+    "band_db_in_mix": -30.9,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.7,
     "best_snr_with_dialogue_db": 3.7,
@@ -5176,7 +5176,7 @@
     "notes": [
      "ride +3.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -31.0,
+    "band_db_in_mix": -30.9,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.3,
     "best_snr_with_dialogue_db": 3.3,
@@ -5202,7 +5202,7 @@
     "notes": [
      "ride +3.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -32.1,
+    "band_db_in_mix": -32.0,
     "best_band": "60-250 Hz",
     "best_snr_db": -1.2,
     "best_snr_with_dialogue_db": -1.2,
@@ -5226,7 +5226,7 @@
     "at": 157.508,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -48.4,
+    "band_db_in_mix": -48.3,
     "best_band": "250-1000 Hz",
     "best_snr_db": 4.8,
     "best_snr_with_dialogue_db": 4.8,
@@ -5250,7 +5250,7 @@
     "at": 158.058,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -50.4,
+    "band_db_in_mix": -50.3,
     "best_band": "250-1000 Hz",
     "best_snr_db": 4.8,
     "best_snr_with_dialogue_db": 4.8,
@@ -5274,7 +5274,7 @@
     "at": 158.358,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -45.5,
+    "band_db_in_mix": -45.4,
     "best_band": "250-1000 Hz",
     "best_snr_db": 4.8,
     "best_snr_with_dialogue_db": 4.8,
@@ -5298,7 +5298,7 @@
     "at": 171.045,
     "peak_dbfs_laid": -20.0,
     "notes": [],
-    "band_db_in_mix": -36.4,
+    "band_db_in_mix": -36.3,
     "best_band": "250-1000 Hz",
     "best_snr_db": 6.6,
     "best_snr_with_dialogue_db": 6.6,
@@ -5322,7 +5322,7 @@
     "at": 171.545,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -38.9,
+    "band_db_in_mix": -38.8,
     "best_band": "60-250 Hz",
     "best_snr_db": 0.4,
     "best_snr_with_dialogue_db": 0.4,
@@ -5346,7 +5346,7 @@
     "at": 180.637,
     "peak_dbfs_laid": -18.0,
     "notes": [],
-    "band_db_in_mix": -33.9,
+    "band_db_in_mix": -33.8,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 7.5,
     "best_snr_with_dialogue_db": 7.5,
@@ -5370,7 +5370,7 @@
     "at": 181.437,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -37.4,
+    "band_db_in_mix": -37.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 2.1,
     "best_snr_with_dialogue_db": 2.1,
@@ -5396,7 +5396,7 @@
     "notes": [
      "ride +3.1 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -54.6,
+    "band_db_in_mix": -54.5,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 3.7,
     "best_snr_with_dialogue_db": 3.7,
@@ -5422,7 +5422,7 @@
     "notes": [
      "ride +0.9 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -32.7,
+    "band_db_in_mix": -32.6,
     "best_band": "250-1000 Hz",
     "best_snr_db": 1.1,
     "best_snr_with_dialogue_db": 1.1,
@@ -5448,7 +5448,7 @@
     "notes": [
      "ride +12.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -32.3,
+    "band_db_in_mix": -32.2,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.1,
     "best_snr_with_dialogue_db": 1.1,
@@ -5472,7 +5472,7 @@
     "at": 203.588,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -39.4,
+    "band_db_in_mix": -39.3,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 4.7,
     "best_snr_with_dialogue_db": 4.7,
@@ -5496,7 +5496,7 @@
     "at": 210.783,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -43.2,
+    "band_db_in_mix": -43.1,
     "best_band": "60-250 Hz",
     "best_snr_db": -0.7,
     "best_snr_with_dialogue_db": -0.7,
@@ -5522,7 +5522,7 @@
     "notes": [
      "ride +3.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -44.1,
+    "band_db_in_mix": -44.0,
     "best_band": "60-250 Hz",
     "best_snr_db": -0.7,
     "best_snr_with_dialogue_db": -0.7,
@@ -5549,7 +5549,7 @@
      "swapped: phone_key_tap_1",
      "lock: typing_soft"
     ],
-    "band_db_in_mix": -47.9,
+    "band_db_in_mix": -47.8,
     "best_band": "60-250 Hz",
     "best_snr_db": -11.7,
     "best_snr_with_dialogue_db": -11.7,
@@ -5576,7 +5576,7 @@
      "swapped: phone_key_tap_2",
      "lock: typing_soft"
     ],
-    "band_db_in_mix": -47.1,
+    "band_db_in_mix": -47.0,
     "best_band": "2000-4000 Hz",
     "best_snr_db": -1.8,
     "best_snr_with_dialogue_db": -1.8,
@@ -5603,7 +5603,7 @@
      "swapped: phone_key_tap_3",
      "lock: typing_soft"
     ],
-    "band_db_in_mix": -47.8,
+    "band_db_in_mix": -47.7,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 19.9,
     "best_snr_with_dialogue_db": 19.9,
@@ -5627,7 +5627,7 @@
     "at": 217.383,
     "peak_dbfs_laid": -30.0,
     "notes": [],
-    "band_db_in_mix": -60.3,
+    "band_db_in_mix": -60.2,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 18.2,
     "best_snr_with_dialogue_db": 18.2,
@@ -5653,7 +5653,7 @@
     "notes": [
      "ride +7.4 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.1,
+    "band_db_in_mix": -36.0,
     "best_band": "60-250 Hz",
     "best_snr_db": 10.3,
     "best_snr_with_dialogue_db": 10.3,
@@ -5679,7 +5679,7 @@
     "notes": [
      "ride +7.4 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -35.1,
+    "band_db_in_mix": -35.0,
     "best_band": "60-250 Hz",
     "best_snr_db": 8.2,
     "best_snr_with_dialogue_db": 8.2,
@@ -5705,7 +5705,7 @@
     "notes": [
      "ride +7.4 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -31.9,
+    "band_db_in_mix": -31.8,
     "best_band": "60-250 Hz",
     "best_snr_db": 6.1,
     "best_snr_with_dialogue_db": 6.1,
@@ -5731,7 +5731,7 @@
     "notes": [
      "ride +5.5 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -34.4,
+    "band_db_in_mix": -34.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 2.0,
     "best_snr_with_dialogue_db": 2.0,
@@ -5757,7 +5757,7 @@
     "notes": [
      "ride +7.4 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -33.1,
+    "band_db_in_mix": -33.0,
     "best_band": "60-250 Hz",
     "best_snr_db": 11.6,
     "best_snr_with_dialogue_db": 11.6,
@@ -5781,7 +5781,7 @@
     "at": 232.146,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -57.0,
+    "band_db_in_mix": -56.9,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 12.9,
     "best_snr_with_dialogue_db": 12.9,
@@ -5807,7 +5807,7 @@
     "notes": [
      "ride +5.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.8,
+    "band_db_in_mix": -36.7,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 4.6,
     "best_snr_with_dialogue_db": 4.6,
@@ -5833,7 +5833,7 @@
     "notes": [
      "ride +6.1 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -39.1,
+    "band_db_in_mix": -39.0,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 2.1,
     "best_snr_with_dialogue_db": 2.1,
@@ -5859,7 +5859,7 @@
     "notes": [
      "ride +0.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -44.8,
+    "band_db_in_mix": -44.7,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.6,
     "best_snr_with_dialogue_db": 3.6,
@@ -5883,7 +5883,7 @@
     "at": 248.87,
     "peak_dbfs_laid": -30.0,
     "notes": [],
-    "band_db_in_mix": -51.0,
+    "band_db_in_mix": -50.9,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 16.0,
     "best_snr_with_dialogue_db": 16.0,
@@ -5909,7 +5909,7 @@
     "notes": [
      "ride +2.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -42.0,
+    "band_db_in_mix": -41.9,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 2.9,
     "best_snr_with_dialogue_db": 2.9,
@@ -5935,7 +5935,7 @@
     "notes": [
      "ride +3.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -38.3,
+    "band_db_in_mix": -38.2,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.2,
     "best_snr_with_dialogue_db": 1.2,
@@ -5959,7 +5959,7 @@
     "at": 262.667,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -46.4,
+    "band_db_in_mix": -46.3,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 23.7,
     "best_snr_with_dialogue_db": 23.7,
@@ -5986,7 +5986,7 @@
      "swapped: phone_key_tap_1",
      "lock: key_tap_soft_01"
     ],
-    "band_db_in_mix": -49.9,
+    "band_db_in_mix": -49.8,
     "best_band": "60-250 Hz",
     "best_snr_db": -9.6,
     "best_snr_with_dialogue_db": -9.6,
@@ -6013,7 +6013,7 @@
      "swapped: phone_key_tap_3",
      "lock: key_tap_soft_03"
     ],
-    "band_db_in_mix": -50.5,
+    "band_db_in_mix": -50.4,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 22.7,
     "best_snr_with_dialogue_db": 22.7,
@@ -6040,7 +6040,7 @@
      "swapped: phone_key_tap_5",
      "lock: key_tap_soft_05"
     ],
-    "band_db_in_mix": -54.8,
+    "band_db_in_mix": -54.7,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 22.3,
     "best_snr_with_dialogue_db": 22.3,
@@ -6064,7 +6064,7 @@
     "at": 268.45,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -58.2,
+    "band_db_in_mix": -58.1,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 29.1,
     "best_snr_with_dialogue_db": 29.1,
@@ -6136,64 +6136,64 @@
     "who": "gerg",
     "tag": "",
     "beat": "9.03",
-    "on": 59.43,
-    "onset_margin_vs_all_db": 19.2
+    "on": 59.84,
+    "onset_margin_vs_all_db": 20.4
    },
    {
     "line": "e2-a2-0006",
     "who": "mas",
     "tag": "",
     "beat": "9.04",
-    "on": 62.56,
-    "onset_margin_vs_all_db": 20.5
+    "on": 63.19,
+    "onset_margin_vs_all_db": 20.1
    },
    {
     "line": "e2-a2-0007",
     "who": "rima",
     "tag": "",
     "beat": "9.04",
-    "on": 63.74,
-    "onset_margin_vs_all_db": 11.2
+    "on": 64.37,
+    "onset_margin_vs_all_db": 14.6
    },
    {
     "line": "e2-a2-0008",
     "who": "mas",
     "tag": "",
     "beat": "9.04",
-    "on": 70.47,
-    "onset_margin_vs_all_db": 20.5
+    "on": 71.1,
+    "onset_margin_vs_all_db": 21.6
    },
    {
     "line": "e2-a2-0009",
     "who": "rima",
     "tag": "",
     "beat": "9.04",
-    "on": 71.98,
-    "onset_margin_vs_all_db": 13.8
+    "on": 72.61,
+    "onset_margin_vs_all_db": 13.2
    },
    {
     "line": "e2-vo-06",
     "who": "mas",
     "tag": "V.O.",
     "beat": "9.04b",
-    "on": 75.56,
-    "onset_margin_vs_all_db": 23.1
+    "on": 77.78,
+    "onset_margin_vs_all_db": 22.2
    },
    {
     "line": "e2-a2-0010",
     "who": "engineer",
     "tag": "",
     "beat": "9.05",
-    "on": 82.79,
-    "onset_margin_vs_all_db": 23.0
+    "on": 82.5,
+    "onset_margin_vs_all_db": 23.4
    },
    {
     "line": "e2-a2-0011",
     "who": "rima",
     "tag": "",
     "beat": "9.05",
-    "on": 85.41,
-    "onset_margin_vs_all_db": 17.7
+    "on": 85.12,
+    "onset_margin_vs_all_db": 16.8
    },
    {
     "line": "e2-a2-0012",
@@ -6489,11 +6489,11 @@
     "line": "e2-a2-0005",
     "who": "gerg",
     "beat": "9.03",
-    "on": 59.43,
+    "on": 59.84,
     "frames": 62,
-    "p10_db": 6.8,
-    "median_db": 15.2,
-    "first_db": 3.3,
+    "p10_db": 6.3,
+    "median_db": 16.6,
+    "first_db": 11.0,
     "under_3db_pct": 1.6,
     "ok": true
    },
@@ -6501,35 +6501,35 @@
     "line": "e2-a2-0006",
     "who": "mas",
     "beat": "9.04",
-    "on": 62.56,
+    "on": 63.19,
     "frames": 31,
-    "p10_db": 1.0,
-    "median_db": 18.6,
-    "first_db": 12.4,
-    "under_3db_pct": 16.1,
+    "p10_db": 4.1,
+    "median_db": 16.6,
+    "first_db": 5.2,
+    "under_3db_pct": 6.5,
     "ok": false
    },
    {
     "line": "e2-a2-0007",
     "who": "rima",
     "beat": "9.04",
-    "on": 63.74,
+    "on": 64.37,
     "frames": 213,
-    "p10_db": 7.1,
-    "median_db": 15.4,
-    "first_db": -0.2,
-    "under_3db_pct": 1.4,
+    "p10_db": 7.6,
+    "median_db": 14.3,
+    "first_db": 2.7,
+    "under_3db_pct": 3.3,
     "ok": true
    },
    {
     "line": "e2-a2-0008",
     "who": "mas",
     "beat": "9.04",
-    "on": 70.47,
+    "on": 71.1,
     "frames": 44,
-    "p10_db": 7.1,
-    "median_db": 16.7,
-    "first_db": 7.9,
+    "p10_db": 7.0,
+    "median_db": 16.3,
+    "first_db": 13.8,
     "under_3db_pct": 0.0,
     "ok": true
    },
@@ -6537,22 +6537,22 @@
     "line": "e2-a2-0009",
     "who": "rima",
     "beat": "9.04",
-    "on": 71.98,
+    "on": 72.61,
     "frames": 61,
-    "p10_db": 6.5,
-    "median_db": 13.9,
-    "first_db": 23.9,
-    "under_3db_pct": 1.6,
+    "p10_db": 6.1,
+    "median_db": 13.8,
+    "first_db": 24.1,
+    "under_3db_pct": 0.0,
     "ok": true
    },
    {
     "line": "e2-vo-06",
     "who": "mas",
     "beat": "9.04b",
-    "on": 75.56,
-    "frames": 162,
-    "p10_db": 9.8,
-    "median_db": 17.7,
+    "on": 77.78,
+    "frames": 56,
+    "p10_db": 9.3,
+    "median_db": 17.4,
     "first_db": 7.7,
     "under_3db_pct": 0.0,
     "ok": true
@@ -6561,11 +6561,11 @@
     "line": "e2-a2-0010",
     "who": "engineer",
     "beat": "9.05",
-    "on": 82.79,
+    "on": 82.5,
     "frames": 79,
-    "p10_db": 11.3,
-    "median_db": 22.0,
-    "first_db": 6.4,
+    "p10_db": 10.4,
+    "median_db": 22.8,
+    "first_db": 16.1,
     "under_3db_pct": 0.0,
     "ok": true
    },
@@ -6573,12 +6573,12 @@
     "line": "e2-a2-0011",
     "who": "rima",
     "beat": "9.05",
-    "on": 85.41,
+    "on": 85.12,
     "frames": 198,
-    "p10_db": 4.8,
-    "median_db": 16.2,
-    "first_db": 12.9,
-    "under_3db_pct": 5.6,
+    "p10_db": 5.7,
+    "median_db": 16.8,
+    "first_db": 19.4,
+    "under_3db_pct": 3.5,
     "ok": false
    },
    {
@@ -6913,7 +6913,7 @@
     "tag": "V.O.",
     "beat": "8.03",
     "scene": "8",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6922,7 +6922,7 @@
     "tag": "V.O.",
     "beat": "8.05",
     "scene": "8",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6931,7 +6931,7 @@
     "tag": "call",
     "beat": "8.06",
     "scene": "8",
-    "lufs": -14.15,
+    "lufs": -14.05,
     "engine": "el"
    },
    {
@@ -6940,7 +6940,7 @@
     "tag": "",
     "beat": "9.01",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6949,7 +6949,7 @@
     "tag": "",
     "beat": "9.02",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6958,7 +6958,7 @@
     "tag": "os",
     "beat": "9.02",
     "scene": "9",
-    "lufs": -15.97,
+    "lufs": -15.87,
     "engine": "el"
    },
    {
@@ -6967,7 +6967,7 @@
     "tag": "",
     "beat": "9.03",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6976,7 +6976,7 @@
     "tag": "",
     "beat": "9.04",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6985,7 +6985,7 @@
     "tag": "",
     "beat": "9.04",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -6994,7 +6994,7 @@
     "tag": "",
     "beat": "9.04",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7003,7 +7003,7 @@
     "tag": "",
     "beat": "9.04",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7012,7 +7012,7 @@
     "tag": "V.O.",
     "beat": "9.04b",
     "scene": "9",
-    "lufs": -14.06,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7021,7 +7021,7 @@
     "tag": "",
     "beat": "9.05",
     "scene": "9",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7030,7 +7030,7 @@
     "tag": "",
     "beat": "9.05",
     "scene": "9",
-    "lufs": -14.05,
+    "lufs": -13.95,
     "engine": "el"
    },
    {
@@ -7039,7 +7039,7 @@
     "tag": "",
     "beat": "9.06",
     "scene": "9",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7048,7 +7048,7 @@
     "tag": "",
     "beat": "9.06",
     "scene": "9",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7057,7 +7057,7 @@
     "tag": "",
     "beat": "9.06",
     "scene": "9",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7066,7 +7066,7 @@
     "tag": "",
     "beat": "9.06",
     "scene": "9",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7075,7 +7075,7 @@
     "tag": "",
     "beat": "9.06",
     "scene": "9",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7084,7 +7084,7 @@
     "tag": "os",
     "beat": "10.01",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7093,7 +7093,7 @@
     "tag": "os",
     "beat": "10.02",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7102,7 +7102,7 @@
     "tag": "os",
     "beat": "10.03",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7111,7 +7111,7 @@
     "tag": "os",
     "beat": "10.04",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7120,7 +7120,7 @@
     "tag": "os",
     "beat": "10.05",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7129,7 +7129,7 @@
     "tag": "os",
     "beat": "10.06",
     "scene": "10",
-    "lufs": -13.97,
+    "lufs": -13.87,
     "engine": "el"
    },
    {
@@ -7138,7 +7138,7 @@
     "tag": "",
     "beat": "11.01",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7147,7 +7147,7 @@
     "tag": "",
     "beat": "11.02",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7156,7 +7156,7 @@
     "tag": "",
     "beat": "11.02",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7165,7 +7165,7 @@
     "tag": "",
     "beat": "11.04",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7174,7 +7174,7 @@
     "tag": "",
     "beat": "11.04",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7183,7 +7183,7 @@
     "tag": "",
     "beat": "11.04",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7192,7 +7192,7 @@
     "tag": "",
     "beat": "11.05",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7201,7 +7201,7 @@
     "tag": "sung",
     "beat": "11.05",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7210,7 +7210,7 @@
     "tag": "",
     "beat": "11.06",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7219,7 +7219,7 @@
     "tag": "",
     "beat": "11.07",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7228,7 +7228,7 @@
     "tag": "",
     "beat": "11.07",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7237,7 +7237,7 @@
     "tag": "",
     "beat": "11.07",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7246,7 +7246,7 @@
     "tag": "",
     "beat": "11.08",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7255,7 +7255,7 @@
     "tag": "",
     "beat": "11.09",
     "scene": "11",
-    "lufs": -14.97,
+    "lufs": -14.87,
     "engine": "el"
    },
    {
@@ -7264,7 +7264,7 @@
     "tag": "offmic",
     "beat": "11.15",
     "scene": "11",
-    "lufs": -15.97,
+    "lufs": -15.87,
     "engine": "el"
    },
    {
@@ -7273,49 +7273,28 @@
     "tag": "offmic",
     "beat": "11.15",
     "scene": "11",
-    "lufs": -15.97,
+    "lufs": -15.87,
     "engine": "el"
    }
   ],
   "jumps": [
    {
-    "at": 72.15,
-    "dlg": [
-     -30.8,
-     -10.9
-    ],
-    "room": [
-     -37.8,
-     -38.9
-    ],
-    "sfx": [
-     -238.0,
-     -238.0
-    ],
-    "score": [
-     -32.9,
-     -29.7
-    ],
-    "rose": "dlg",
-    "cause": "named: the first breath or word of e2-a2-0009"
-   },
-   {
     "at": 97.75,
     "dlg": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "room": [
-     -37.6,
-     -38.4
+     -37.5,
+     -38.3
     ],
     "sfx": [
-     -44.5,
-     -44.4
+     -44.4,
+     -44.3
     ],
     "score": [
-     -38.1,
-     -13.1
+     -38.0,
+     -13.0
     ],
     "rose": "score",
     "cause": "marked: a designed hit (DESIGNED HIT: THE PLAN's waltz on its downbeat, 0.25 s before the cut: the walk-on's tune,)"
@@ -7323,20 +7302,20 @@
    {
     "at": 100.85,
     "dlg": [
-     -45.2,
-     -46.9
+     -45.1,
+     -46.8
     ],
     "room": [
-     -54.5,
-     -56.6
+     -54.4,
+     -56.5
     ],
     "sfx": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "score": [
-     -41.3,
-     -25.0
+     -41.2,
+     -24.9
     ],
     "rose": "score",
     "cause": "named: the score's own entry in e02-07b-one-word-blueprint: the word: the head as a music box (F G A-flat C); under \"Omni."
@@ -7344,20 +7323,20 @@
    {
     "at": 104.0,
     "dlg": [
-     -54.2,
-     -63.4
+     -54.1,
+     -63.3
     ],
     "room": [
-     -55.1,
-     -55.3
+     -55.0,
+     -55.2
     ],
     "sfx": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "score": [
-     -35.3,
-     -20.7
+     -35.2,
+     -20.6
     ],
     "rose": "score",
     "cause": "named: the score's own entry in e02-07b-one-word-blueprint: the word: the head as a music box (F G A-flat C); under \"Omni."
@@ -7365,20 +7344,20 @@
    {
     "at": 112.75,
     "dlg": [
-     -66.3,
-     -238.0
+     -66.2,
+     -237.9
     ],
     "room": [
-     -55.4,
-     -54.7
+     -55.3,
+     -54.6
     ],
     "sfx": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "score": [
-     -48.7,
-     -20.0
+     -48.6,
+     -19.9
     ],
     "rose": "score",
     "cause": "named: the score's own entry in e02-07b-one-word-blueprint: the diagram: BEFORE (the relay's pizzicato), the grate, [laugh"
@@ -7386,20 +7365,20 @@
    {
     "at": 143.6,
     "dlg": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "room": [
-     -40.8,
-     -39.9
+     -40.7,
+     -39.8
     ],
     "sfx": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "score": [
-     -61.6,
-     -13.0
+     -61.5,
+     -12.9
     ],
     "rose": "score",
     "cause": "marked: the re-entry after a designed silence (the tear's light, a beat (10.07 -> 11.01): THE PLAN's tape-stop reaches nothing a quarter )"
@@ -7407,20 +7386,20 @@
    {
     "at": 278.6,
     "dlg": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "room": [
-     -35.1,
-     -35.2
+     -35.0,
+     -35.1
     ],
     "sfx": [
-     -238.0,
-     -238.0
+     -237.9,
+     -237.9
     ],
     "score": [
-     -139.6,
-     -18.9
+     -139.5,
+     -18.8
     ],
     "rose": "score",
     "cause": "marked: the re-entry after a designed silence (THE MIDPOINT ACT-OUT (12.08): the cue stops mid-phrase on the downbeat after 2 s on his fa)"
@@ -7446,14 +7425,14 @@
   },
   "loud_moments": [
    {
-    "from": 88.8,
-    "to": 89.1,
+    "from": 88.5,
+    "to": 88.8,
     "max_lufs_m": -9.4,
     "buses_db": {
-     "dlg": -14.1,
-     "room": -39.3,
-     "sfx": -198.0,
-     "score": -29.2
+     "dlg": -14.0,
+     "room": -39.1,
+     "sfx": -197.9,
+     "score": -30.9
     },
     "carried_by": "dlg"
    }
@@ -7461,12 +7440,12 @@
   "mix": {
    "lufs_i": -16.01,
    "true_peak_dbtp": -1.45,
-   "lra_lu": 7.1,
-   "dialogue_lufs": -14.32,
-   "rooms_lufs": -36.02,
-   "sfx_lufs": -31.1,
-   "score_lufs_after_duck": -21.02,
-   "score_rms_under_speech_dbfs": -27.9,
+   "lra_lu": 7.3,
+   "dialogue_lufs": -14.23,
+   "rooms_lufs": -35.89,
+   "sfx_lufs": -30.96,
+   "score_lufs_after_duck": -20.88,
+   "score_rms_under_speech_dbfs": -27.7,
    "score_rms_between_speech_dbfs": -20.8,
    "holes_under_-42dBFS_0.3s": [],
    "unmarked_holes": 0,
@@ -10619,7 +10598,7 @@
   }
  },
  "act4": {
-  "gain_db": 2.2,
+  "gain_db": 2.14,
   "sfx": [
    {
     "beat": "18.01",
@@ -10630,7 +10609,7 @@
     "notes": [
      "J-cut: leads by 1.2 s"
     ],
-    "band_db_in_mix": -29.5,
+    "band_db_in_mix": -29.6,
     "best_band": "60-250 Hz",
     "best_snr_db": 1.0,
     "best_snr_with_dialogue_db": 1.0,
@@ -10642,7 +10621,7 @@
     "stem_peak_dbfs": null,
     "stem_under_laid_db": null,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.8,
+    "peak_over_local_with_dialogue_db": 7.7,
     "best_snr_vs_all_db": 1.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
@@ -10658,7 +10637,7 @@
      "lock: footstep_soft_1",
      "ride +7.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -29.2,
+    "band_db_in_mix": -29.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.6,
     "best_snr_with_dialogue_db": 3.6,
@@ -10686,7 +10665,7 @@
      "lock: footstep_soft_2",
      "ride +16.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -31.9,
+    "band_db_in_mix": -32.0,
     "best_band": "60-250 Hz",
     "best_snr_db": 3.1,
     "best_snr_with_dialogue_db": 3.1,
@@ -10712,7 +10691,7 @@
     "notes": [
      "ride +4.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -41.2,
+    "band_db_in_mix": -41.3,
     "best_band": "60-250 Hz",
     "best_snr_db": 0.3,
     "best_snr_with_dialogue_db": 0.3,
@@ -10736,7 +10715,7 @@
     "at": 35.047,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -50.7,
+    "band_db_in_mix": -50.8,
     "best_band": "1000-2000 Hz",
     "best_snr_db": -0.3,
     "best_snr_with_dialogue_db": -0.3,
@@ -10760,7 +10739,7 @@
     "at": 35.096,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -50.8,
+    "band_db_in_mix": -50.9,
     "best_band": "1000-2000 Hz",
     "best_snr_db": -0.3,
     "best_snr_with_dialogue_db": -0.3,
@@ -10768,11 +10747,11 @@
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 6.7,
+    "peak_over_local_db": 6.6,
     "stem_peak_dbfs": -23.5,
     "stem_under_laid_db": -2.5,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.7,
+    "peak_over_local_with_dialogue_db": 6.6,
     "best_snr_vs_all_db": -0.3,
     "referred_by": null,
     "verdict_vs_all": "ok"
@@ -10880,10 +10859,10 @@
     "at": 81.226,
     "peak_dbfs_laid": -27.0,
     "notes": [],
-    "band_db_in_mix": -51.4,
+    "band_db_in_mix": -51.5,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 18.8,
-    "best_snr_with_dialogue_db": 18.8,
+    "best_snr_with_dialogue_db": 18.7,
     "under_a_line": true,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -10893,7 +10872,7 @@
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 15.3,
-    "best_snr_vs_all_db": 18.8,
+    "best_snr_vs_all_db": 18.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -10904,7 +10883,7 @@
     "at": 83.348,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -43.2,
+    "band_db_in_mix": -43.3,
     "best_band": "8000-16000 Hz",
     "best_snr_db": 22.7,
     "best_snr_with_dialogue_db": 22.6,
@@ -10954,7 +10933,7 @@
     "at": 95.011,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -52.5,
+    "band_db_in_mix": -52.6,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 2.3,
     "best_snr_with_dialogue_db": 2.3,
@@ -11028,7 +11007,7 @@
     "at": 120.625,
     "peak_dbfs_laid": -18.0,
     "notes": [],
-    "band_db_in_mix": -31.6,
+    "band_db_in_mix": -31.7,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 12.6,
     "best_snr_with_dialogue_db": -5.2,
@@ -11052,7 +11031,7 @@
     "at": 122.442,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -34.0,
+    "band_db_in_mix": -34.1,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 7.9,
     "best_snr_with_dialogue_db": 7.9,
@@ -11106,7 +11085,7 @@
      "lock: typing_soft",
      "ride +5.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -48.5,
+    "band_db_in_mix": -48.6,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 8.0,
     "best_snr_with_dialogue_db": 8.0,
@@ -11134,7 +11113,7 @@
      "lock: typing_soft",
      "ride +5.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -48.5,
+    "band_db_in_mix": -48.6,
     "best_band": "4000-8000 Hz",
     "best_snr_db": -2.0,
     "best_snr_with_dialogue_db": -2.0,
@@ -11158,7 +11137,7 @@
     "at": 135.292,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -54.1,
+    "band_db_in_mix": -54.2,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 21.2,
     "best_snr_with_dialogue_db": 21.2,
@@ -11184,7 +11163,7 @@
     "notes": [
      "ride +0.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -42.3,
+    "band_db_in_mix": -42.4,
     "best_band": "2000-4000 Hz",
     "best_snr_db": 2.0,
     "best_snr_with_dialogue_db": 2.0,
@@ -11210,7 +11189,7 @@
     "notes": [
      "ride +1.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -40.7,
+    "band_db_in_mix": -40.8,
     "best_band": "1000-2000 Hz",
     "best_snr_db": -0.6,
     "best_snr_with_dialogue_db": -0.6,
@@ -11258,7 +11237,7 @@
     "at": 150.283,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -42.4,
+    "band_db_in_mix": -42.5,
     "best_band": "1000-2000 Hz",
     "best_snr_db": 2.4,
     "best_snr_with_dialogue_db": 2.4,
@@ -11308,7 +11287,7 @@
     "at": 179.626,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -52.3,
+    "band_db_in_mix": -52.4,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 13.2,
     "best_snr_with_dialogue_db": 13.2,
@@ -11332,7 +11311,7 @@
     "at": 180.178,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -46.5,
+    "band_db_in_mix": -46.6,
     "best_band": "4000-8000 Hz",
     "best_snr_db": 14.0,
     "best_snr_with_dialogue_db": 14.0,
@@ -11358,7 +11337,7 @@
     "notes": [
      "ride +13.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -27.4,
+    "band_db_in_mix": -27.5,
     "best_band": "250-1000 Hz",
     "best_snr_db": 3.3,
     "best_snr_with_dialogue_db": 3.3,
@@ -11386,7 +11365,7 @@
      "lock: pin_grey_tick",
      "ride +13.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -28.7,
+    "band_db_in_mix": -28.8,
     "best_band": "250-1000 Hz",
     "best_snr_db": 3.7,
     "best_snr_with_dialogue_db": 3.7,
@@ -11442,7 +11421,7 @@
      "lock: pin_grey_tick",
      "ride +13.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -30.1,
+    "band_db_in_mix": -30.2,
     "best_band": "250-1000 Hz",
     "best_snr_db": 5.6,
     "best_snr_with_dialogue_db": 5.6,
@@ -11466,10 +11445,10 @@
     "at": 196.275,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -34.4,
+    "band_db_in_mix": -34.5,
     "best_band": "60-250 Hz",
-    "best_snr_db": -0.2,
-    "best_snr_with_dialogue_db": -0.2,
+    "best_snr_db": -0.5,
+    "best_snr_with_dialogue_db": -0.5,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -11479,7 +11458,7 @@
     "stem_under_laid_db": -6.3,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 21.0,
-    "best_snr_vs_all_db": -0.2,
+    "best_snr_vs_all_db": -0.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11492,10 +11471,10 @@
     "notes": [
      "ride +8.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -27.5,
+    "band_db_in_mix": -27.6,
     "best_band": "250-1000 Hz",
-    "best_snr_db": -1.8,
-    "best_snr_with_dialogue_db": -1.8,
+    "best_snr_db": -1.7,
+    "best_snr_with_dialogue_db": -1.7,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 8.3,
@@ -11505,7 +11484,7 @@
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 6.3,
-    "best_snr_vs_all_db": -1.8,
+    "best_snr_vs_all_db": -1.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11516,10 +11495,10 @@
     "at": 199.475,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -53.5,
+    "band_db_in_mix": -53.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 4.6,
-    "best_snr_with_dialogue_db": 4.6,
+    "best_snr_db": 4.4,
+    "best_snr_with_dialogue_db": 4.4,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -11529,107 +11508,7 @@
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 20.0,
-    "best_snr_vs_all_db": 4.6,
-    "referred_by": null,
-    "verdict_vs_all": "ok"
-   },
-   {
-    "beat": "19.17",
-    "name": "flower_nod",
-    "lock_name": "flower_nod",
-    "at": 204.875,
-    "peak_dbfs_laid": -20.5,
-    "notes": [
-     "ride +9.5 dB (sfx-rides.json)"
-    ],
-    "band_db_in_mix": -48.3,
-    "best_band": "8000-16000 Hz",
-    "best_snr_db": 6.3,
-    "best_snr_with_dialogue_db": 6.3,
-    "under_a_line": false,
-    "target_db": 6.0,
-    "ride_now_db": 9.5,
-    "short": false,
-    "peak_over_local_db": 1.6,
-    "stem_peak_dbfs": -20.5,
-    "stem_under_laid_db": -0.0,
-    "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 1.6,
-    "best_snr_vs_all_db": 6.3,
-    "referred_by": null,
-    "verdict_vs_all": "ok"
-   },
-   {
-    "beat": "19.17",
-    "name": "chip_blip_bubble",
-    "lock_name": "chip_blip_bubble",
-    "at": 205.675,
-    "peak_dbfs_laid": -26.0,
-    "notes": [],
-    "band_db_in_mix": -42.6,
-    "best_band": "4000-8000 Hz",
-    "best_snr_db": 2.6,
-    "best_snr_with_dialogue_db": 2.6,
-    "under_a_line": false,
-    "target_db": 6.0,
-    "ride_now_db": 0.0,
-    "short": false,
-    "peak_over_local_db": 11.0,
-    "stem_peak_dbfs": -26.0,
-    "stem_under_laid_db": 0.0,
-    "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 11.0,
-    "best_snr_vs_all_db": 2.6,
-    "referred_by": null,
-    "verdict_vs_all": "ok"
-   },
-   {
-    "beat": "19.17",
-    "name": "flower_nod",
-    "lock_name": "flower_nod",
-    "at": 207.475,
-    "peak_dbfs_laid": -20.5,
-    "notes": [
-     "ride +9.5 dB (sfx-rides.json)"
-    ],
-    "band_db_in_mix": -48.3,
-    "best_band": "8000-16000 Hz",
-    "best_snr_db": 22.2,
-    "best_snr_with_dialogue_db": 22.2,
-    "under_a_line": false,
-    "target_db": 6.0,
-    "ride_now_db": 9.5,
-    "short": false,
-    "peak_over_local_db": 12.6,
-    "stem_peak_dbfs": -20.5,
-    "stem_under_laid_db": -0.0,
-    "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 12.6,
-    "best_snr_vs_all_db": 22.2,
-    "referred_by": null,
-    "verdict_vs_all": "ok"
-   },
-   {
-    "beat": "19.17",
-    "name": "chip_blip_bubble",
-    "lock_name": "chip_blip_bubble",
-    "at": 208.175,
-    "peak_dbfs_laid": -26.0,
-    "notes": [],
-    "band_db_in_mix": -42.6,
-    "best_band": "4000-8000 Hz",
-    "best_snr_db": 5.8,
-    "best_snr_with_dialogue_db": 5.8,
-    "under_a_line": false,
-    "target_db": 6.0,
-    "ride_now_db": 0.0,
-    "short": false,
-    "peak_over_local_db": 7.4,
-    "stem_peak_dbfs": -26.0,
-    "stem_under_laid_db": 0.0,
-    "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.4,
-    "best_snr_vs_all_db": 5.8,
+    "best_snr_vs_all_db": 4.4,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11637,27 +11516,27 @@
     "beat": "19.19",
     "name": "gate_iron_shut",
     "lock_name": "gate_iron_swing",
-    "at": 221.956,
+    "at": 211.956,
     "peak_dbfs_laid": -16.4,
     "notes": [
      "swapped: gate_iron_shut",
      "lock: gate_iron_swing",
      "ride +7.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -38.8,
+    "band_db_in_mix": -38.9,
     "best_band": "250-1000 Hz",
-    "best_snr_db": 7.0,
-    "best_snr_with_dialogue_db": 7.0,
+    "best_snr_db": 6.4,
+    "best_snr_with_dialogue_db": 6.4,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 7.6,
     "short": false,
-    "peak_over_local_db": 10.4,
+    "peak_over_local_db": 10.3,
     "stem_peak_dbfs": -16.4,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 10.4,
-    "best_snr_vs_all_db": 7.0,
+    "peak_over_local_with_dialogue_db": 10.3,
+    "best_snr_vs_all_db": 6.4,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11665,23 +11544,23 @@
     "beat": "19.19",
     "name": "lock_big_turn",
     "lock_name": "lock_big_turn",
-    "at": 223.474,
+    "at": 213.474,
     "peak_dbfs_laid": -22.0,
     "notes": [],
     "band_db_in_mix": -44.0,
     "best_band": "60-250 Hz",
-    "best_snr_db": -3.0,
-    "best_snr_with_dialogue_db": -3.0,
+    "best_snr_db": -2.5,
+    "best_snr_with_dialogue_db": -2.5,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 51.5,
+    "peak_over_local_db": 49.9,
     "stem_peak_dbfs": -22.2,
     "stem_under_laid_db": 0.2,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 51.5,
-    "best_snr_vs_all_db": -3.0,
+    "peak_over_local_with_dialogue_db": 49.9,
+    "best_snr_vs_all_db": -2.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11689,23 +11568,23 @@
     "beat": "19.20",
     "name": "phone_into_pocket",
     "lock_name": "phone_into_pocket",
-    "at": 228.19,
+    "at": 218.19,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -48.0,
+    "band_db_in_mix": -48.1,
     "best_band": "2000-4000 Hz",
-    "best_snr_db": 10.8,
-    "best_snr_with_dialogue_db": 10.8,
+    "best_snr_db": 12.6,
+    "best_snr_with_dialogue_db": 12.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 16.4,
+    "peak_over_local_db": 17.4,
     "stem_peak_dbfs": -28.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 16.4,
-    "best_snr_vs_all_db": 10.8,
+    "peak_over_local_with_dialogue_db": 17.4,
+    "best_snr_vs_all_db": 12.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11713,25 +11592,25 @@
     "beat": "20.01",
     "name": "ui_toast_pop",
     "lock_name": "ui_toast_pop",
-    "at": 231.881,
-    "peak_dbfs_laid": -19.5,
+    "at": 221.881,
+    "peak_dbfs_laid": -18.7,
     "notes": [
-     "ride +6.5 dB (sfx-rides.json)"
+     "ride +7.3 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.7,
+    "band_db_in_mix": -36.0,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 5.1,
-    "best_snr_with_dialogue_db": 5.1,
+    "best_snr_db": 5.7,
+    "best_snr_with_dialogue_db": 5.7,
     "under_a_line": false,
     "target_db": 6.0,
-    "ride_now_db": 6.5,
+    "ride_now_db": 7.3,
     "short": false,
-    "peak_over_local_db": 6.8,
-    "stem_peak_dbfs": -19.5,
-    "stem_under_laid_db": 0.0,
+    "peak_over_local_db": 6.3,
+    "stem_peak_dbfs": -18.7,
+    "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.8,
-    "best_snr_vs_all_db": 5.1,
+    "peak_over_local_with_dialogue_db": 6.3,
+    "best_snr_vs_all_db": 5.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11739,23 +11618,23 @@
     "beat": "20.02",
     "name": "lamp_click",
     "lock_name": "lamp_click",
-    "at": 233.017,
+    "at": 223.017,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -53.5,
+    "band_db_in_mix": -53.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 50.3,
-    "best_snr_with_dialogue_db": 50.3,
+    "best_snr_db": 45.1,
+    "best_snr_with_dialogue_db": 45.1,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 3.3,
+    "peak_over_local_db": 3.2,
     "stem_peak_dbfs": -22.0,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 3.3,
-    "best_snr_vs_all_db": 50.3,
+    "peak_over_local_with_dialogue_db": 3.2,
+    "best_snr_vs_all_db": 45.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11763,23 +11642,23 @@
     "beat": "20.03",
     "name": "cage_door_shut",
     "lock_name": "cage_door_shut",
-    "at": 245.61,
+    "at": 235.61,
     "peak_dbfs_laid": -22.0,
     "notes": [],
-    "band_db_in_mix": -45.3,
+    "band_db_in_mix": -45.4,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 48.3,
-    "best_snr_with_dialogue_db": 48.3,
+    "best_snr_db": 47.9,
+    "best_snr_with_dialogue_db": 47.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 53.2,
+    "peak_over_local_db": 53.3,
     "stem_peak_dbfs": -22.0,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 53.2,
-    "best_snr_vs_all_db": 48.3,
+    "peak_over_local_with_dialogue_db": 53.3,
+    "best_snr_vs_all_db": 47.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11787,25 +11666,25 @@
     "beat": "20.03",
     "name": "padlock_snap",
     "lock_name": "padlock_snap",
-    "at": 246.21,
+    "at": 236.21,
     "peak_dbfs_laid": -19.4,
     "notes": [
      "ride +0.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -46.2,
+    "band_db_in_mix": -46.3,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 31.8,
-    "best_snr_with_dialogue_db": 31.8,
+    "best_snr_db": 30.9,
+    "best_snr_with_dialogue_db": 30.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.6,
     "short": true,
-    "peak_over_local_db": 37.0,
+    "peak_over_local_db": 36.5,
     "stem_peak_dbfs": -19.4,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 37.0,
-    "best_snr_vs_all_db": 31.8,
+    "peak_over_local_with_dialogue_db": 36.5,
+    "best_snr_vs_all_db": 30.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11813,25 +11692,25 @@
     "beat": "20.04",
     "name": "phone_buzz_muffled",
     "lock_name": "phone_buzz_muffled",
-    "at": 246.831,
+    "at": 236.831,
     "peak_dbfs_laid": -15.2,
     "notes": [
      "ride +10.8 dB (sfx-rides.json)"
     ],
     "band_db_in_mix": -28.6,
     "best_band": "60-250 Hz",
-    "best_snr_db": 0.2,
-    "best_snr_with_dialogue_db": 0.2,
+    "best_snr_db": 0.6,
+    "best_snr_with_dialogue_db": 0.6,
     "under_a_line": false,
     "target_db": 2.0,
     "ride_now_db": 10.8,
     "short": false,
-    "peak_over_local_db": 6.3,
+    "peak_over_local_db": 6.9,
     "stem_peak_dbfs": -15.2,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.3,
-    "best_snr_vs_all_db": 0.2,
+    "peak_over_local_with_dialogue_db": 6.9,
+    "best_snr_vs_all_db": 0.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11839,23 +11718,23 @@
     "beat": "20.04",
     "name": "lamp_click",
     "lock_name": "lamp_click",
-    "at": 249.512,
+    "at": 239.512,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -55.5,
+    "band_db_in_mix": -55.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 45.8,
-    "best_snr_with_dialogue_db": 45.8,
+    "best_snr_db": 48.7,
+    "best_snr_with_dialogue_db": 48.7,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 50.8,
+    "peak_over_local_db": 49.2,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 50.8,
-    "best_snr_vs_all_db": 45.8,
+    "peak_over_local_with_dialogue_db": 49.2,
+    "best_snr_vs_all_db": 48.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11863,23 +11742,23 @@
     "beat": "20.05",
     "name": "tape_peel",
     "lock_name": "tape_peel",
-    "at": 252.517,
+    "at": 242.517,
     "peak_dbfs_laid": -24.0,
     "notes": [],
     "band_db_in_mix": -45.4,
     "best_band": "8000-16000 Hz",
-    "best_snr_db": 39.8,
-    "best_snr_with_dialogue_db": 39.8,
+    "best_snr_db": 39.3,
+    "best_snr_with_dialogue_db": 39.3,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 46.1,
+    "peak_over_local_db": 45.6,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 46.1,
-    "best_snr_vs_all_db": 39.8,
+    "peak_over_local_with_dialogue_db": 45.6,
+    "best_snr_vs_all_db": 39.3,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11887,23 +11766,23 @@
     "beat": "20.05",
     "name": "paper_flutter",
     "lock_name": "paper_flutter",
-    "at": 253.717,
+    "at": 243.717,
     "peak_dbfs_laid": -28.0,
     "notes": [],
     "band_db_in_mix": -50.4,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 11.3,
-    "best_snr_with_dialogue_db": 11.3,
+    "best_snr_db": 10.9,
+    "best_snr_with_dialogue_db": 10.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": -7.1,
+    "peak_over_local_db": -7.3,
     "stem_peak_dbfs": -28.0,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": -7.1,
-    "best_snr_vs_all_db": 11.3,
+    "peak_over_local_with_dialogue_db": -7.3,
+    "best_snr_vs_all_db": 10.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11911,13 +11790,13 @@
     "beat": "20.06",
     "name": "cloth_rustle",
     "lock_name": "cloth_rustle",
-    "at": 254.808,
+    "at": 244.808,
     "peak_dbfs_laid": -28.0,
     "notes": [],
     "band_db_in_mix": -46.0,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 8.4,
-    "best_snr_with_dialogue_db": 8.4,
+    "best_snr_db": 8.0,
+    "best_snr_with_dialogue_db": 8.0,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -11927,7 +11806,7 @@
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": -1.5,
-    "best_snr_vs_all_db": 8.4,
+    "best_snr_vs_all_db": 8.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11935,23 +11814,23 @@
     "beat": "20.08",
     "name": "docket_tab_flick",
     "lock_name": "docket_tab_flick",
-    "at": 260.992,
+    "at": 250.992,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -56.9,
+    "band_db_in_mix": -57.0,
     "best_band": "8000-16000 Hz",
-    "best_snr_db": 46.5,
-    "best_snr_with_dialogue_db": 33.2,
+    "best_snr_db": 41.9,
+    "best_snr_with_dialogue_db": 32.8,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 48.5,
+    "peak_over_local_db": 47.0,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 41.8,
-    "best_snr_vs_all_db": 33.2,
+    "peak_over_local_with_dialogue_db": 41.5,
+    "best_snr_vs_all_db": 32.8,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11959,23 +11838,23 @@
     "beat": "20.09",
     "name": "rope_drop",
     "lock_name": "rope_drop",
-    "at": 263.2,
+    "at": 253.2,
     "peak_dbfs_laid": -24.0,
     "notes": [],
     "band_db_in_mix": -50.4,
     "best_band": "2000-4000 Hz",
-    "best_snr_db": 6.4,
-    "best_snr_with_dialogue_db": 6.4,
+    "best_snr_db": 3.1,
+    "best_snr_with_dialogue_db": 3.1,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 10.4,
+    "peak_over_local_db": 10.7,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 10.4,
-    "best_snr_vs_all_db": 6.4,
+    "peak_over_local_with_dialogue_db": 10.7,
+    "best_snr_vs_all_db": 3.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -11983,25 +11862,25 @@
     "beat": "20.09",
     "name": "rope_haul",
     "lock_name": "rope_haul",
-    "at": 264.1,
+    "at": 254.1,
     "peak_dbfs_laid": -15.3,
     "notes": [
      "ride +6.7 dB (sfx-rides.json)"
     ],
     "band_db_in_mix": -34.5,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": -1.2,
-    "best_snr_with_dialogue_db": -1.2,
+    "best_snr_db": -3.0,
+    "best_snr_with_dialogue_db": -3.0,
     "under_a_line": false,
     "target_db": 2.0,
     "ride_now_db": 6.7,
     "short": false,
-    "peak_over_local_db": 6.3,
+    "peak_over_local_db": 7.1,
     "stem_peak_dbfs": -15.3,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.3,
-    "best_snr_vs_all_db": -1.2,
+    "peak_over_local_with_dialogue_db": 7.1,
+    "best_snr_vs_all_db": -3.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12009,23 +11888,23 @@
     "beat": "20.09",
     "name": "sticky_flutter",
     "lock_name": "sticky_flutter",
-    "at": 265.6,
+    "at": 255.6,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -42.3,
+    "band_db_in_mix": -42.4,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 27.6,
-    "best_snr_with_dialogue_db": 27.6,
+    "best_snr_db": 27.4,
+    "best_snr_with_dialogue_db": 27.4,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 24.7,
+    "peak_over_local_db": 24.3,
     "stem_peak_dbfs": -26.2,
     "stem_under_laid_db": -1.8,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 24.7,
-    "best_snr_vs_all_db": 27.6,
+    "peak_over_local_with_dialogue_db": 24.3,
+    "best_snr_vs_all_db": 27.4,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12033,13 +11912,13 @@
     "beat": "20.10",
     "name": "phone_buzz_step_1",
     "lock_name": "phone_buzz_step_1",
-    "at": 268.9,
+    "at": 258.9,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -41.4,
+    "band_db_in_mix": -41.5,
     "best_band": "250-1000 Hz",
-    "best_snr_db": 9.2,
-    "best_snr_with_dialogue_db": 9.2,
+    "best_snr_db": 9.3,
+    "best_snr_with_dialogue_db": 9.3,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -12049,7 +11928,7 @@
     "stem_under_laid_db": -1.9,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 11.1,
-    "best_snr_vs_all_db": 9.2,
+    "best_snr_vs_all_db": 9.3,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12057,23 +11936,23 @@
     "beat": "20.10",
     "name": "phone_turn_over",
     "lock_name": "phone_turn_over",
-    "at": 269.3,
+    "at": 259.3,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -46.8,
+    "band_db_in_mix": -46.9,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 39.0,
-    "best_snr_with_dialogue_db": 39.0,
+    "best_snr_db": 39.1,
+    "best_snr_with_dialogue_db": 39.1,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 33.5,
+    "peak_over_local_db": 33.8,
     "stem_peak_dbfs": -24.1,
     "stem_under_laid_db": 0.1,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 33.5,
-    "best_snr_vs_all_db": 39.0,
+    "peak_over_local_with_dialogue_db": 33.8,
+    "best_snr_vs_all_db": 39.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12081,23 +11960,23 @@
     "beat": "20.11",
     "name": "pin_knock",
     "lock_name": "pin_knock",
-    "at": 274.8,
+    "at": 264.8,
     "peak_dbfs_laid": -24.0,
     "notes": [],
     "band_db_in_mix": -51.6,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 22.6,
-    "best_snr_with_dialogue_db": 22.6,
+    "best_snr_db": 18.5,
+    "best_snr_with_dialogue_db": 18.5,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 24.7,
+    "peak_over_local_db": 25.7,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 24.7,
-    "best_snr_vs_all_db": 22.6,
+    "peak_over_local_with_dialogue_db": 25.7,
+    "best_snr_vs_all_db": 18.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12105,23 +11984,23 @@
     "beat": "20.12",
     "name": "cloth_rustle",
     "lock_name": "cloth_rustle",
-    "at": 277.583,
+    "at": 267.583,
     "peak_dbfs_laid": -26.0,
     "notes": [],
     "band_db_in_mix": -43.9,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 34.8,
-    "best_snr_with_dialogue_db": 34.8,
+    "best_snr_db": 35.9,
+    "best_snr_with_dialogue_db": 35.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 40.4,
+    "peak_over_local_db": 41.1,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 40.4,
-    "best_snr_vs_all_db": 34.8,
+    "peak_over_local_with_dialogue_db": 41.1,
+    "best_snr_vs_all_db": 35.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12129,23 +12008,23 @@
     "beat": "20.12",
     "name": "chair_creak",
     "lock_name": "chair_creak",
-    "at": 278.583,
+    "at": 268.583,
     "peak_dbfs_laid": -26.0,
     "notes": [],
     "band_db_in_mix": -43.5,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 14.0,
-    "best_snr_with_dialogue_db": 14.0,
+    "best_snr_db": 15.7,
+    "best_snr_with_dialogue_db": 15.7,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 29.6,
+    "peak_over_local_db": 30.2,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 29.6,
-    "best_snr_vs_all_db": 14.0,
+    "peak_over_local_with_dialogue_db": 30.2,
+    "best_snr_vs_all_db": 15.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12153,25 +12032,25 @@
     "beat": "20.13",
     "name": "pin_fall",
     "lock_name": "pin_fall",
-    "at": 280.183,
+    "at": 270.183,
     "peak_dbfs_laid": -24.0,
     "notes": [
      "cut at its scene's end (1.55 s early)"
     ],
     "band_db_in_mix": -43.0,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 23.1,
-    "best_snr_with_dialogue_db": 23.1,
+    "best_snr_db": 22.5,
+    "best_snr_with_dialogue_db": 22.5,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 30.3,
+    "peak_over_local_db": 30.6,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 30.3,
-    "best_snr_vs_all_db": 23.1,
+    "peak_over_local_with_dialogue_db": 30.6,
+    "best_snr_vs_all_db": 22.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12179,23 +12058,23 @@
     "beat": "22.01",
     "name": "pin_fall",
     "lock_name": "pin_fall",
-    "at": 281.429,
+    "at": 271.429,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -45.2,
+    "band_db_in_mix": -45.3,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 20.6,
-    "best_snr_with_dialogue_db": 20.6,
+    "best_snr_db": 19.2,
+    "best_snr_with_dialogue_db": 19.2,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 25.1,
+    "peak_over_local_db": 23.5,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 25.1,
-    "best_snr_vs_all_db": 20.6,
+    "peak_over_local_with_dialogue_db": 23.5,
+    "best_snr_vs_all_db": 19.2,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12203,25 +12082,25 @@
     "beat": "22.02",
     "name": "footstep_gravel",
     "lock_name": "footstep_gravel",
-    "at": 289.03,
+    "at": 279.03,
     "peak_dbfs_laid": -22.5,
     "notes": [
      "ride +5.5 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.5,
+    "band_db_in_mix": -36.6,
     "best_band": "60-250 Hz",
-    "best_snr_db": 3.7,
-    "best_snr_with_dialogue_db": 3.7,
+    "best_snr_db": 3.6,
+    "best_snr_with_dialogue_db": 3.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 5.5,
     "short": false,
-    "peak_over_local_db": 8.8,
+    "peak_over_local_db": 8.7,
     "stem_peak_dbfs": -22.5,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 8.8,
-    "best_snr_vs_all_db": 3.7,
+    "peak_over_local_with_dialogue_db": 8.7,
+    "best_snr_vs_all_db": 3.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12229,7 +12108,7 @@
     "beat": "22.02",
     "name": "footstep_gravel_2",
     "lock_name": "footstep_gravel",
-    "at": 290.175,
+    "at": 280.175,
     "peak_dbfs_laid": -22.5,
     "notes": [
      "swapped: footstep_gravel_2",
@@ -12238,18 +12117,18 @@
     ],
     "band_db_in_mix": -36.4,
     "best_band": "60-250 Hz",
-    "best_snr_db": 3.3,
-    "best_snr_with_dialogue_db": 3.3,
+    "best_snr_db": 3.7,
+    "best_snr_with_dialogue_db": 3.7,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 5.5,
     "short": false,
-    "peak_over_local_db": 7.2,
+    "peak_over_local_db": 6.9,
     "stem_peak_dbfs": -22.5,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.2,
-    "best_snr_vs_all_db": 3.3,
+    "peak_over_local_with_dialogue_db": 6.9,
+    "best_snr_vs_all_db": 3.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12257,27 +12136,27 @@
     "beat": "22.02",
     "name": "footstep_gravel_3",
     "lock_name": "footstep_gravel",
-    "at": 291.319,
+    "at": 281.319,
     "peak_dbfs_laid": -22.5,
     "notes": [
      "swapped: footstep_gravel_3",
      "lock: footstep_gravel",
      "ride +5.5 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.2,
+    "band_db_in_mix": -36.3,
     "best_band": "60-250 Hz",
-    "best_snr_db": 1.6,
-    "best_snr_with_dialogue_db": 1.6,
+    "best_snr_db": 3.0,
+    "best_snr_with_dialogue_db": 3.0,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 5.5,
     "short": false,
-    "peak_over_local_db": 7.4,
+    "peak_over_local_db": 7.3,
     "stem_peak_dbfs": -22.5,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.4,
-    "best_snr_vs_all_db": 1.6,
+    "peak_over_local_with_dialogue_db": 7.3,
+    "best_snr_vs_all_db": 3.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12285,23 +12164,23 @@
     "beat": "22.02",
     "name": "orb_scan_sweep",
     "lock_name": "orb_scan_sweep",
-    "at": 292.749,
+    "at": 282.749,
     "peak_dbfs_laid": -28.0,
     "notes": [],
-    "band_db_in_mix": -54.5,
+    "band_db_in_mix": -54.6,
     "best_band": "8000-16000 Hz",
-    "best_snr_db": 23.0,
-    "best_snr_with_dialogue_db": 23.0,
+    "best_snr_db": 25.6,
+    "best_snr_with_dialogue_db": 25.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 25.8,
+    "peak_over_local_db": 27.8,
     "stem_peak_dbfs": -28.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 25.8,
-    "best_snr_vs_all_db": 23.0,
+    "peak_over_local_with_dialogue_db": 27.8,
+    "best_snr_vs_all_db": 25.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12309,25 +12188,25 @@
     "beat": "22.03",
     "name": "ui_band_on",
     "lock_name": "ui_band_on",
-    "at": 295.0,
+    "at": 285.0,
     "peak_dbfs_laid": -25.2,
     "notes": [
      "ride +0.8 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -38.7,
+    "band_db_in_mix": -38.8,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 5.5,
-    "best_snr_with_dialogue_db": 5.5,
+    "best_snr_db": 5.9,
+    "best_snr_with_dialogue_db": 5.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.8,
     "short": false,
-    "peak_over_local_db": 7.9,
+    "peak_over_local_db": 8.4,
     "stem_peak_dbfs": -25.2,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.9,
-    "best_snr_vs_all_db": 5.5,
+    "peak_over_local_with_dialogue_db": 8.4,
+    "best_snr_vs_all_db": 5.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12335,25 +12214,25 @@
     "beat": "22.03",
     "name": "ui_band_off",
     "lock_name": "ui_band_off",
-    "at": 296.45,
+    "at": 286.45,
     "peak_dbfs_laid": -21.1,
     "notes": [
      "ride +4.9 dB (sfx-rides.json)"
     ],
     "band_db_in_mix": -34.9,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 2.6,
-    "best_snr_with_dialogue_db": 2.6,
+    "best_snr_db": 2.7,
+    "best_snr_with_dialogue_db": 2.7,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 4.9,
     "short": false,
-    "peak_over_local_db": 6.3,
+    "peak_over_local_db": 6.4,
     "stem_peak_dbfs": -21.1,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.3,
-    "best_snr_vs_all_db": 2.6,
+    "peak_over_local_with_dialogue_db": 6.4,
+    "best_snr_vs_all_db": 2.7,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12361,23 +12240,23 @@
     "beat": "22.04",
     "name": "flyer_into_slot",
     "lock_name": "flyer_into_slot",
-    "at": 301.004,
+    "at": 291.004,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -48.0,
+    "band_db_in_mix": -48.1,
     "best_band": "8000-16000 Hz",
-    "best_snr_db": 18.8,
-    "best_snr_with_dialogue_db": 18.8,
+    "best_snr_db": 17.2,
+    "best_snr_with_dialogue_db": 17.2,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 10.0,
+    "peak_over_local_db": 9.1,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 10.0,
-    "best_snr_vs_all_db": 18.8,
+    "peak_over_local_with_dialogue_db": 9.1,
+    "best_snr_vs_all_db": 17.2,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12385,23 +12264,23 @@
     "beat": "22.04",
     "name": "mail_flap_lift",
     "lock_name": "mail_flap_lift",
-    "at": 302.149,
+    "at": 292.149,
     "peak_dbfs_laid": -26.0,
     "notes": [],
     "band_db_in_mix": -50.4,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 9.1,
-    "best_snr_with_dialogue_db": 9.1,
+    "best_snr_db": 6.8,
+    "best_snr_with_dialogue_db": 6.8,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 14.7,
+    "peak_over_local_db": 12.5,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 14.7,
-    "best_snr_vs_all_db": 9.1,
+    "peak_over_local_with_dialogue_db": 12.5,
+    "best_snr_vs_all_db": 6.8,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12409,12 +12288,12 @@
     "beat": "22.05",
     "name": "lab_room_tone",
     "lock_name": "lab_room_tone",
-    "at": 303.583,
+    "at": 293.583,
     "peak_dbfs_laid": -20.0,
     "notes": [
      "ride +14.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -35.3,
+    "band_db_in_mix": -35.4,
     "best_band": "60-250 Hz",
     "best_snr_db": -3.9,
     "best_snr_with_dialogue_db": -3.9,
@@ -12422,11 +12301,11 @@
     "target_db": 2.0,
     "ride_now_db": 14.0,
     "short": false,
-    "peak_over_local_db": 2.5,
-    "stem_peak_dbfs": -16.3,
-    "stem_under_laid_db": -3.7,
+    "peak_over_local_db": 2.4,
+    "stem_peak_dbfs": -16.1,
+    "stem_under_laid_db": -3.9,
     "verdict": "marginal",
-    "peak_over_local_with_dialogue_db": 2.5,
+    "peak_over_local_with_dialogue_db": 2.4,
     "best_snr_vs_all_db": -3.9,
     "referred_by": null,
     "verdict_vs_all": "marginal"
@@ -12435,25 +12314,25 @@
     "beat": "22.05",
     "name": "paper_drop_floor",
     "lock_name": "paper_drop_floor",
-    "at": 305.983,
-    "peak_dbfs_laid": -18.6,
+    "at": 295.983,
+    "peak_dbfs_laid": -18.1,
     "notes": [
-     "ride +13.4 dB (sfx-rides.json)"
+     "ride +13.9 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -34.2,
+    "band_db_in_mix": -34.1,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": -1.3,
-    "best_snr_with_dialogue_db": -1.3,
+    "best_snr_db": -1.0,
+    "best_snr_with_dialogue_db": -1.0,
     "under_a_line": false,
     "target_db": 6.0,
-    "ride_now_db": 13.4,
+    "ride_now_db": 13.9,
     "short": false,
-    "peak_over_local_db": 6.0,
-    "stem_peak_dbfs": -16.3,
-    "stem_under_laid_db": -2.3,
+    "peak_over_local_db": 6.3,
+    "stem_peak_dbfs": -16.1,
+    "stem_under_laid_db": -2.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.0,
-    "best_snr_vs_all_db": -1.3,
+    "peak_over_local_with_dialogue_db": 6.3,
+    "best_snr_vs_all_db": -1.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12461,23 +12340,23 @@
     "beat": "22.06",
     "name": "mail_flap_spring_shut",
     "lock_name": "mail_flap_spring_shut",
-    "at": 307.408,
+    "at": 297.408,
     "peak_dbfs_laid": -20.0,
     "notes": [],
     "band_db_in_mix": -48.3,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 15.3,
-    "best_snr_with_dialogue_db": 15.3,
+    "best_snr_db": 11.8,
+    "best_snr_with_dialogue_db": 11.8,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 14.6,
+    "peak_over_local_db": 13.6,
     "stem_peak_dbfs": -20.0,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 14.6,
-    "best_snr_vs_all_db": 15.3,
+    "peak_over_local_with_dialogue_db": 13.6,
+    "best_snr_vs_all_db": 11.8,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12485,7 +12364,7 @@
     "beat": "22.09",
     "name": "footstep_gravel_2",
     "lock_name": "footstep_gravel",
-    "at": 314.808,
+    "at": 304.808,
     "peak_dbfs_laid": -16.4,
     "notes": [
      "swapped: footstep_gravel_2",
@@ -12494,18 +12373,18 @@
     ],
     "band_db_in_mix": -30.3,
     "best_band": "60-250 Hz",
-    "best_snr_db": 13.8,
-    "best_snr_with_dialogue_db": 13.8,
+    "best_snr_db": 13.9,
+    "best_snr_with_dialogue_db": 13.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 13.6,
     "short": false,
-    "peak_over_local_db": 17.3,
+    "peak_over_local_db": 17.5,
     "stem_peak_dbfs": -16.4,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 17.3,
-    "best_snr_vs_all_db": 13.8,
+    "peak_over_local_with_dialogue_db": 17.5,
+    "best_snr_vs_all_db": 13.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12513,17 +12392,17 @@
     "beat": "22.09",
     "name": "footstep_gravel_3",
     "lock_name": "footstep_gravel",
-    "at": 315.808,
+    "at": 305.808,
     "peak_dbfs_laid": -17.4,
     "notes": [
      "swapped: footstep_gravel_3",
      "lock: footstep_gravel",
      "ride +13.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -31.1,
+    "band_db_in_mix": -31.2,
     "best_band": "60-250 Hz",
-    "best_snr_db": 1.6,
-    "best_snr_with_dialogue_db": 1.6,
+    "best_snr_db": 1.8,
+    "best_snr_with_dialogue_db": 1.8,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 13.6,
@@ -12533,7 +12412,7 @@
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 7.4,
-    "best_snr_vs_all_db": 1.6,
+    "best_snr_vs_all_db": 1.8,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -12541,15 +12420,15 @@
     "beat": "22.09",
     "name": "footstep_gravel",
     "lock_name": "footstep_gravel",
-    "at": 316.808,
+    "at": 306.808,
     "peak_dbfs_laid": -18.4,
     "notes": [
      "ride +13.6 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -32.4,
+    "band_db_in_mix": -32.5,
     "best_band": "60-250 Hz",
-    "best_snr_db": 9.7,
-    "best_snr_with_dialogue_db": 9.7,
+    "best_snr_db": 9.6,
+    "best_snr_with_dialogue_db": 9.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 13.6,
@@ -12559,7 +12438,7 @@
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 13.2,
-    "best_snr_vs_all_db": 9.7,
+    "best_snr_vs_all_db": 9.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    }
@@ -12819,7 +12698,7 @@
     "tag": "call",
     "beat": "19.10",
     "on": 162.79,
-    "onset_margin_vs_all_db": 24.0
+    "onset_margin_vs_all_db": 23.9
    },
    {
     "line": "e2-a4-0028",
@@ -12842,31 +12721,31 @@
     "who": "radnus",
     "tag": "",
     "beat": "19.18",
-    "on": 215.09,
-    "onset_margin_vs_all_db": 13.1
+    "on": 205.09,
+    "onset_margin_vs_all_db": 13.4
    },
    {
     "line": "e2-a4-0031",
     "who": "mas",
     "tag": "",
     "beat": "19.18",
-    "on": 218.38,
-    "onset_margin_vs_all_db": 15.6
+    "on": 208.38,
+    "onset_margin_vs_all_db": 15.3
    },
    {
     "line": "e2-a4-0032",
     "who": "nole",
     "tag": "",
     "beat": "20.03",
-    "on": 240.81,
-    "onset_margin_vs_all_db": 21.1
+    "on": 230.81,
+    "onset_margin_vs_all_db": 21.4
    },
    {
     "line": "e2-vo-13",
     "who": "mas",
     "tag": "V.O.",
     "beat": "20.07",
-    "on": 256.95,
+    "on": 246.95,
     "onset_margin_vs_all_db": 18.1
    }
   ],
@@ -12952,7 +12831,7 @@
     "p10_db": 4.6,
     "median_db": 14.4,
     "first_db": -0.9,
-    "under_3db_pct": 5.7,
+    "under_3db_pct": 6.2,
     "ok": false
    },
    {
@@ -13045,7 +12924,7 @@
     "beat": "18.13",
     "on": 85.75,
     "frames": 40,
-    "p10_db": 10.2,
+    "p10_db": 10.1,
     "median_db": 21.0,
     "first_db": 9.7,
     "under_3db_pct": 2.5,
@@ -13059,7 +12938,7 @@
     "frames": 118,
     "p10_db": 7.1,
     "median_db": 17.2,
-    "first_db": 10.8,
+    "first_db": 10.7,
     "under_3db_pct": 1.7,
     "ok": true
    },
@@ -13131,7 +13010,7 @@
     "frames": 24,
     "p10_db": -2.0,
     "median_db": 9.9,
-    "first_db": 13.8,
+    "first_db": 13.7,
     "under_3db_pct": 29.2,
     "ok": false
    },
@@ -13283,35 +13162,35 @@
     "line": "e2-a4-0030",
     "who": "radnus",
     "beat": "19.18",
-    "on": 215.09,
+    "on": 205.09,
     "frames": 92,
-    "p10_db": 3.1,
-    "median_db": 11.4,
-    "first_db": -2.5,
-    "under_3db_pct": 9.8,
+    "p10_db": 0.9,
+    "median_db": 11.8,
+    "first_db": -1.5,
+    "under_3db_pct": 13.0,
     "ok": false
    },
    {
     "line": "e2-a4-0031",
     "who": "mas",
     "beat": "19.18",
-    "on": 218.38,
+    "on": 208.38,
     "frames": 39,
-    "p10_db": 5.7,
-    "median_db": 15.6,
-    "first_db": 14.6,
-    "under_3db_pct": 7.7,
+    "p10_db": 5.0,
+    "median_db": 15.3,
+    "first_db": 16.4,
+    "under_3db_pct": 5.1,
     "ok": false
    },
    {
     "line": "e2-a4-0032",
     "who": "nole",
     "beat": "20.03",
-    "on": 240.81,
+    "on": 230.81,
     "frames": 131,
-    "p10_db": 10.7,
-    "median_db": 18.6,
-    "first_db": 15.8,
+    "p10_db": 10.3,
+    "median_db": 19.2,
+    "first_db": 17.2,
     "under_3db_pct": 0.0,
     "ok": true
    },
@@ -13319,12 +13198,12 @@
     "line": "e2-vo-13",
     "who": "mas",
     "beat": "20.07",
-    "on": 256.95,
+    "on": 246.95,
     "frames": 118,
-    "p10_db": 5.0,
-    "median_db": 12.5,
-    "first_db": 6.9,
-    "under_3db_pct": 1.7,
+    "p10_db": 4.8,
+    "median_db": 11.9,
+    "first_db": 5.9,
+    "under_3db_pct": 0.8,
     "ok": false
    }
   ],
@@ -13335,7 +13214,7 @@
     "tag": "podcast",
     "beat": "18.03",
     "scene": "18",
-    "lufs": -14.8,
+    "lufs": -14.86,
     "engine": "el"
    },
    {
@@ -13344,7 +13223,7 @@
     "tag": "podcast",
     "beat": "18.04",
     "scene": "18",
-    "lufs": -14.8,
+    "lufs": -14.86,
     "engine": "el"
    },
    {
@@ -13353,7 +13232,7 @@
     "tag": "",
     "beat": "18.06",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13362,7 +13241,7 @@
     "tag": "",
     "beat": "18.08",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13371,7 +13250,7 @@
     "tag": "",
     "beat": "18.08",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13380,7 +13259,7 @@
     "tag": "",
     "beat": "18.09",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13389,7 +13268,7 @@
     "tag": "",
     "beat": "18.10",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13398,7 +13277,7 @@
     "tag": "",
     "beat": "18.10",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13407,7 +13286,7 @@
     "tag": "V.O.",
     "beat": "18.10",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13416,7 +13295,7 @@
     "tag": "",
     "beat": "18.11",
     "scene": "18",
-    "lufs": -14.13,
+    "lufs": -14.19,
     "engine": "kokoro"
    },
    {
@@ -13425,7 +13304,7 @@
     "tag": "",
     "beat": "18.11",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13434,7 +13313,7 @@
     "tag": "",
     "beat": "18.11",
     "scene": "18",
-    "lufs": -14.08,
+    "lufs": -14.14,
     "engine": "kokoro"
    },
    {
@@ -13443,7 +13322,7 @@
     "tag": "",
     "beat": "18.12",
     "scene": "18",
-    "lufs": -14.2,
+    "lufs": -14.26,
     "engine": "kokoro"
    },
    {
@@ -13452,7 +13331,7 @@
     "tag": "",
     "beat": "18.13",
     "scene": "18",
-    "lufs": -14.06,
+    "lufs": -14.12,
     "engine": "kokoro"
    },
    {
@@ -13461,7 +13340,7 @@
     "tag": "",
     "beat": "18.13",
     "scene": "18",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13470,7 +13349,7 @@
     "tag": "",
     "beat": "18.13",
     "scene": "18",
-    "lufs": -14.14,
+    "lufs": -14.2,
     "engine": "kokoro"
    },
    {
@@ -13479,7 +13358,7 @@
     "tag": "",
     "beat": "18.14",
     "scene": "18",
-    "lufs": -14.1,
+    "lufs": -14.16,
     "engine": "kokoro"
    },
    {
@@ -13488,7 +13367,7 @@
     "tag": "",
     "beat": "19.04",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13497,7 +13376,7 @@
     "tag": "",
     "beat": "19.04",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13506,7 +13385,7 @@
     "tag": "",
     "beat": "19.04",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13515,7 +13394,7 @@
     "tag": "",
     "beat": "19.04",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13524,7 +13403,7 @@
     "tag": "",
     "beat": "19.04",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13533,7 +13412,7 @@
     "tag": "",
     "beat": "19.05",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13542,7 +13421,7 @@
     "tag": "",
     "beat": "19.06",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13551,7 +13430,7 @@
     "tag": "V.O.",
     "beat": "19.08",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13560,7 +13439,7 @@
     "tag": "call",
     "beat": "19.09",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13569,7 +13448,7 @@
     "tag": "",
     "beat": "19.09",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13578,7 +13457,7 @@
     "tag": "call",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13587,7 +13466,7 @@
     "tag": "",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13596,7 +13475,7 @@
     "tag": "call",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13605,7 +13484,7 @@
     "tag": "",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -14.28,
+    "lufs": -14.34,
     "engine": "el"
    },
    {
@@ -13614,7 +13493,7 @@
     "tag": "call",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13623,7 +13502,7 @@
     "tag": "call",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13632,7 +13511,7 @@
     "tag": "",
     "beat": "19.10",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13641,7 +13520,7 @@
     "tag": "",
     "beat": "19.18",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13650,7 +13529,7 @@
     "tag": "",
     "beat": "19.18",
     "scene": "19",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13659,7 +13538,7 @@
     "tag": "",
     "beat": "20.03",
     "scene": "20",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    },
    {
@@ -13668,7 +13547,7 @@
     "tag": "V.O.",
     "beat": "20.07",
     "scene": "20",
-    "lufs": -13.8,
+    "lufs": -13.86,
     "engine": "el"
    }
   ],
@@ -13676,19 +13555,19 @@
    {
     "at": 5.35,
     "dlg": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "room": [
-     -35.5,
-     -35.4
+     -35.6,
+     -35.5
     ],
     "sfx": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "score": [
-     -35.5,
+     -35.6,
      -11.0
     ],
     "rose": "score",
@@ -13697,19 +13576,19 @@
    {
     "at": 58.7,
     "dlg": [
-     -47.1,
-     -17.0
+     -47.2,
+     -17.1
     ],
     "room": [
-     -37.9,
+     -38.0,
      -38.5
     ],
     "sfx": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "score": [
-     -38.2,
+     -38.3,
      -40.5
     ],
     "rose": "dlg",
@@ -13718,70 +13597,70 @@
    {
     "at": 113.4,
     "dlg": [
-     -45.4,
+     -45.5,
      -14.5
     ],
     "room": [
-     -39.1,
-     -39.5
+     -39.2,
+     -39.6
     ],
     "sfx": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "score": [
      -31.4,
-     -33.6
+     -33.7
     ],
     "rose": "dlg",
     "cause": "named: a word after a pause inside e2-a4-0019"
    },
    {
-    "at": 283.0,
+    "at": 273.0,
     "dlg": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "room": [
-     -37.4,
-     -39.7
+     -37.1,
+     -38.3
     ],
     "sfx": [
      -77.9,
      -78.9
     ],
     "score": [
-     -37.2,
-     -19.0
+     -37.3,
+     -19.1
     ],
     "rose": "score",
     "cause": "marked: the re-entry after a designed silence (the quartet has ended as the complaint left the lobby (the cello's last pizzicato on the ()"
    },
    {
-    "at": 313.0,
+    "at": 303.0,
     "dlg": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "room": [
-     -37.6,
-     -38.1
+     -38.8,
+     -37.9
     ],
     "sfx": [
-     -237.8,
-     -237.8
+     -237.9,
+     -237.9
     ],
     "score": [
      -38.8,
-     -20.0
+     -20.1
     ],
     "rose": "score",
     "cause": "marked: the re-entry after a designed silence (THE DESIGNED STOP (22.06): the flap swings shut on its spring in room tone only; Mas at th)"
    }
   ],
   "lock": {
-   "lock_sounds": 78,
-   "laid": 77,
+   "lock_sounds": 74,
+   "laid": 73,
    "claimed_by_score": 1,
    "missing": [],
    "swapped": 12,
@@ -13789,8 +13668,8 @@
     {
      "beat": "20.13",
      "name": "pin_fall",
-     "at": 280.183,
-     "scene_end": 281.0,
+     "at": 270.183,
+     "scene_end": 271.0,
      "would_have_run_past_s": 1.553
     }
    ],
@@ -13801,24 +13680,24 @@
    {
     "from": 46.0,
     "to": 46.0,
-    "max_lufs_m": -9.9,
+    "max_lufs_m": -10.0,
     "buses_db": {
-     "dlg": -13.7,
+     "dlg": -13.8,
      "room": -37.5,
-     "sfx": -197.8,
-     "score": -28.5
+     "sfx": -197.9,
+     "score": -28.6
     },
     "carried_by": "dlg"
    },
    {
-    "from": 216.6,
-    "to": 216.6,
+    "from": 206.6,
+    "to": 206.6,
     "max_lufs_m": -9.8,
     "buses_db": {
-     "dlg": -12.1,
-     "room": -39.3,
-     "sfx": -197.8,
-     "score": -31.4
+     "dlg": -12.2,
+     "room": -39.5,
+     "sfx": -197.9,
+     "score": -30.4
     },
     "carried_by": "dlg"
    }
@@ -13826,13 +13705,13 @@
   "mix": {
    "lufs_i": -16.0,
    "true_peak_dbtp": -1.47,
-   "lra_lu": 8.5,
-   "dialogue_lufs": -13.99,
-   "rooms_lufs": -34.66,
-   "sfx_lufs": -29.99,
-   "score_lufs_after_duck": -19.52,
-   "score_rms_under_speech_dbfs": -29.4,
-   "score_rms_between_speech_dbfs": -20.2,
+   "lra_lu": 8.6,
+   "dialogue_lufs": -14.05,
+   "rooms_lufs": -34.73,
+   "sfx_lufs": -29.89,
+   "score_lufs_after_duck": -19.67,
+   "score_rms_under_speech_dbfs": -29.5,
+   "score_rms_between_speech_dbfs": -20.3,
    "holes_under_-42dBFS_0.3s": [],
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0
@@ -13939,7 +13818,7 @@
     "room": "garden",
     "recipe": "garden: bed_garden -40",
     "from": 192.275,
-    "to": 229.6,
+    "to": 219.6,
     "lead": 0.6,
     "trail": 0.6,
     "lift_db": 3.1,
@@ -13948,8 +13827,8 @@
    {
     "room": "split_zai",
     "recipe": "split_zai: bed_campus_outdoor -40 + bed_zai_warehouse -41",
-    "from": 228.4,
-    "to": 250.317,
+    "from": 218.4,
+    "to": 240.317,
     "lead": 0.6,
     "trail": 0.4,
     "lift_db": 3.4,
@@ -13958,28 +13837,28 @@
    {
     "room": "lobby_morning",
     "recipe": "lobby_morning: bed_lobby_morning -38",
-    "from": 249.117,
-    "to": 267.4,
+    "from": 239.117,
+    "to": 257.4,
     "lead": 0.8,
     "trail": 0.4,
-    "lift_db": 0.4,
+    "lift_db": 0.2,
     "cross": null
    },
    {
     "room": "darkroom",
     "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
-    "from": 266.0,
-    "to": 281.4,
+    "from": 256.0,
+    "to": 271.4,
     "lead": 1.0,
     "trail": 0.4,
-    "lift_db": 1.7,
+    "lift_db": 1.6,
     "cross": null
    },
    {
     "room": "empty_lot",
     "recipe": "empty_lot: bed_empty_lot_wind -40.5",
-    "from": 280.4,
-    "to": 319.4,
+    "from": 270.4,
+    "to": 309.4,
     "lead": 0.6,
     "trail": 0.4,
     "lift_db": 6.0,
@@ -14031,8 +13910,8 @@
    "room": [],
    "sfx": [
     {
-     "at": 295.009,
-     "boundary": 295.0,
+     "at": 285.009,
+     "boundary": 285.0,
      "ratio": 76.1,
      "kind": "step",
      "before_dbfs": -33.0,
@@ -14042,12 +13921,12 @@
   },
   "jumps_unmarked": 0,
   "laid_level_check": {
-   "sounds": 77,
+   "sounds": 73,
    "more_than_3db_under_their_laid_peak": []
   }
  },
  "tag": {
-  "gain_db": 3.74,
+  "gain_db": 3.79,
   "sfx": [
    {
     "beat": "23.01",
@@ -14064,11 +13943,11 @@
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 19.0,
+    "peak_over_local_db": 18.9,
     "stem_peak_dbfs": -14.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 19.0,
+    "peak_over_local_with_dialogue_db": 18.9,
     "best_snr_vs_all_db": 13.8,
     "referred_by": null,
     "verdict_vs_all": "ok"
@@ -14080,20 +13959,20 @@
     "at": 4.852,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -48.7,
+    "band_db_in_mix": -48.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 0.4,
-    "best_snr_with_dialogue_db": 0.4,
+    "best_snr_db": 0.3,
+    "best_snr_with_dialogue_db": 0.3,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 7.1,
+    "peak_over_local_db": 6.9,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.1,
-    "best_snr_vs_all_db": 0.4,
+    "peak_over_local_with_dialogue_db": 6.9,
+    "best_snr_vs_all_db": 0.3,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14104,20 +13983,20 @@
     "at": 5.792,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -48.7,
+    "band_db_in_mix": -48.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": -0.8,
-    "best_snr_with_dialogue_db": -0.8,
+    "best_snr_db": -0.9,
+    "best_snr_with_dialogue_db": -0.9,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 7.3,
+    "peak_over_local_db": 7.2,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 7.3,
-    "best_snr_vs_all_db": -0.8,
+    "peak_over_local_with_dialogue_db": 7.2,
+    "best_snr_vs_all_db": -0.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14128,20 +14007,20 @@
     "at": 6.733,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -48.7,
+    "band_db_in_mix": -48.6,
     "best_band": "2000-4000 Hz",
-    "best_snr_db": -0.5,
-    "best_snr_with_dialogue_db": -0.5,
+    "best_snr_db": -0.6,
+    "best_snr_with_dialogue_db": -0.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 6.8,
+    "peak_over_local_db": 6.7,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.8,
-    "best_snr_vs_all_db": -0.5,
+    "peak_over_local_with_dialogue_db": 6.7,
+    "best_snr_vs_all_db": -0.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14150,24 +14029,24 @@
     "name": "ui_toast_pop",
     "lock_name": "ui_toast_pop",
     "at": 10.517,
-    "peak_dbfs_laid": -20.7,
+    "peak_dbfs_laid": -20.3,
     "notes": [
-     "ride +5.3 dB (sfx-rides.json)"
+     "ride +5.7 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -36.4,
+    "band_db_in_mix": -36.0,
     "best_band": "1000-2000 Hz",
-    "best_snr_db": 5.3,
-    "best_snr_with_dialogue_db": 5.3,
+    "best_snr_db": 5.9,
+    "best_snr_with_dialogue_db": 5.9,
     "under_a_line": false,
     "target_db": 6.0,
-    "ride_now_db": 5.3,
+    "ride_now_db": 5.7,
     "short": false,
-    "peak_over_local_db": 6.0,
-    "stem_peak_dbfs": -20.7,
-    "stem_under_laid_db": -0.0,
+    "peak_over_local_db": 6.3,
+    "stem_peak_dbfs": -20.3,
+    "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.0,
-    "best_snr_vs_all_db": 5.3,
+    "peak_over_local_with_dialogue_db": 6.3,
+    "best_snr_vs_all_db": 5.9,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14178,20 +14057,20 @@
     "at": 13.383,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -37.8,
+    "band_db_in_mix": -37.7,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 7.7,
-    "best_snr_with_dialogue_db": 7.7,
+    "best_snr_db": 7.6,
+    "best_snr_with_dialogue_db": 7.6,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 10.1,
+    "peak_over_local_db": 9.9,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 10.1,
-    "best_snr_vs_all_db": 7.7,
+    "peak_over_local_with_dialogue_db": 9.9,
+    "best_snr_vs_all_db": 7.6,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14202,20 +14081,20 @@
     "at": 14.483,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -51.0,
+    "band_db_in_mix": -50.9,
     "best_band": "8000-16000 Hz",
-    "best_snr_db": 15.2,
-    "best_snr_with_dialogue_db": 15.2,
+    "best_snr_db": 15.1,
+    "best_snr_with_dialogue_db": 15.1,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 13.5,
+    "peak_over_local_db": 13.3,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 13.5,
-    "best_snr_vs_all_db": 15.2,
+    "peak_over_local_with_dialogue_db": 13.3,
+    "best_snr_vs_all_db": 15.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14224,24 +14103,24 @@
     "name": "orb_chime_F",
     "lock_name": "orb_chime_F",
     "at": 17.283,
-    "peak_dbfs_laid": -21.4,
+    "peak_dbfs_laid": -21.0,
     "notes": [
-     "ride +0.6 dB (sfx-rides.json)"
+     "ride +1.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -34.5,
+    "band_db_in_mix": -34.1,
     "best_band": "250-1000 Hz",
-    "best_snr_db": 0.3,
-    "best_snr_with_dialogue_db": 0.3,
+    "best_snr_db": 0.5,
+    "best_snr_with_dialogue_db": 0.5,
     "under_a_line": false,
     "target_db": 6.0,
-    "ride_now_db": 0.6,
+    "ride_now_db": 1.0,
     "short": false,
-    "peak_over_local_db": 6.0,
-    "stem_peak_dbfs": -18.4,
+    "peak_over_local_db": 6.3,
+    "stem_peak_dbfs": -18.0,
     "stem_under_laid_db": -3.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.0,
-    "best_snr_vs_all_db": 0.3,
+    "peak_over_local_with_dialogue_db": 6.3,
+    "best_snr_vs_all_db": 0.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14250,24 +14129,24 @@
     "name": "ui_toast_pop",
     "lock_name": "ui_toast_pop",
     "at": 17.283,
-    "peak_dbfs_laid": -27.4,
+    "peak_dbfs_laid": -27.0,
     "notes": [
-     "ride +0.6 dB (sfx-rides.json)"
+     "ride +1.0 dB (sfx-rides.json)"
     ],
-    "band_db_in_mix": -29.1,
+    "band_db_in_mix": -28.6,
     "best_band": "250-1000 Hz",
-    "best_snr_db": 0.3,
-    "best_snr_with_dialogue_db": 0.3,
+    "best_snr_db": 0.5,
+    "best_snr_with_dialogue_db": 0.5,
     "under_a_line": false,
     "target_db": 6.0,
-    "ride_now_db": 0.6,
+    "ride_now_db": 1.0,
     "short": false,
-    "peak_over_local_db": 6.0,
-    "stem_peak_dbfs": -18.4,
+    "peak_over_local_db": 6.3,
+    "stem_peak_dbfs": -18.0,
     "stem_under_laid_db": -9.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 6.0,
-    "best_snr_vs_all_db": 0.3,
+    "peak_over_local_with_dialogue_db": 6.3,
+    "best_snr_vs_all_db": 0.5,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14288,11 +14167,11 @@
     "target_db": 6.0,
     "ride_now_db": 0.5,
     "short": false,
-    "peak_over_local_db": 5.5,
+    "peak_over_local_db": 5.4,
     "stem_peak_dbfs": -25.5,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 5.5,
+    "peak_over_local_with_dialogue_db": 5.4,
     "best_snr_vs_all_db": 6.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
@@ -14301,23 +14180,23 @@
     "beat": "23.07",
     "name": "balloon_pump",
     "lock_name": "balloon_pump",
-    "at": 28.307,
+    "at": 29.25,
     "peak_dbfs_laid": -26.0,
     "notes": [],
-    "band_db_in_mix": -44.0,
+    "band_db_in_mix": -43.9,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 15.0,
-    "best_snr_with_dialogue_db": 15.0,
+    "best_snr_db": 15.1,
+    "best_snr_with_dialogue_db": 15.1,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 18.7,
+    "peak_over_local_db": 20.4,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 18.7,
-    "best_snr_vs_all_db": 15.0,
+    "peak_over_local_with_dialogue_db": 20.4,
+    "best_snr_vs_all_db": 15.1,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14325,13 +14204,13 @@
     "beat": "23.07",
     "name": "balloon_pump",
     "lock_name": "balloon_pump",
-    "at": 29.384,
+    "at": 30.25,
     "peak_dbfs_laid": -25.0,
     "notes": [],
-    "band_db_in_mix": -43.0,
+    "band_db_in_mix": -42.9,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 16.9,
-    "best_snr_with_dialogue_db": 16.9,
+    "best_snr_db": 17.0,
+    "best_snr_with_dialogue_db": 17.0,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
@@ -14341,7 +14220,7 @@
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
     "peak_over_local_with_dialogue_db": 23.0,
-    "best_snr_vs_all_db": 16.9,
+    "best_snr_vs_all_db": 17.0,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14349,23 +14228,23 @@
     "beat": "23.07",
     "name": "balloon_pump",
     "lock_name": "balloon_pump",
-    "at": 30.46,
+    "at": 31.25,
     "peak_dbfs_laid": -24.0,
     "notes": [],
-    "band_db_in_mix": -42.0,
+    "band_db_in_mix": -41.9,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 15.7,
-    "best_snr_with_dialogue_db": 15.7,
+    "best_snr_db": 10.2,
+    "best_snr_with_dialogue_db": 10.2,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 21.7,
+    "peak_over_local_db": 17.1,
     "stem_peak_dbfs": -24.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 21.7,
-    "best_snr_vs_all_db": 15.7,
+    "peak_over_local_with_dialogue_db": 17.1,
+    "best_snr_vs_all_db": 10.2,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14373,23 +14252,23 @@
     "beat": "23.07",
     "name": "knot_tie",
     "lock_name": "knot_tie",
-    "at": 32.075,
+    "at": 32.6,
     "peak_dbfs_laid": -26.0,
     "notes": [],
     "band_db_in_mix": -54.1,
     "best_band": "2000-4000 Hz",
-    "best_snr_db": -2.1,
-    "best_snr_with_dialogue_db": -2.1,
+    "best_snr_db": -4.4,
+    "best_snr_with_dialogue_db": -4.4,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 12.8,
+    "peak_over_local_db": 18.9,
     "stem_peak_dbfs": -26.0,
     "stem_under_laid_db": 0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 12.8,
-    "best_snr_vs_all_db": -2.1,
+    "peak_over_local_with_dialogue_db": 18.9,
+    "best_snr_vs_all_db": -4.4,
     "referred_by": null,
     "verdict_vs_all": "ok"
    },
@@ -14402,18 +14281,18 @@
     "notes": [],
     "band_db_in_mix": -46.6,
     "best_band": "4000-8000 Hz",
-    "best_snr_db": 32.6,
-    "best_snr_with_dialogue_db": 32.6,
+    "best_snr_db": 22.3,
+    "best_snr_with_dialogue_db": 22.3,
     "under_a_line": false,
     "target_db": 6.0,
     "ride_now_db": 0.0,
     "short": false,
-    "peak_over_local_db": 40.0,
+    "peak_over_local_db": 28.9,
     "stem_peak_dbfs": -20.0,
     "stem_under_laid_db": -0.0,
     "verdict": "ok",
-    "peak_over_local_with_dialogue_db": 40.0,
-    "best_snr_vs_all_db": 32.6,
+    "peak_over_local_with_dialogue_db": 28.9,
+    "best_snr_vs_all_db": 22.3,
     "referred_by": null,
     "verdict_vs_all": "ok"
    }
@@ -14435,9 +14314,9 @@
     "beat": "23.05",
     "on": 20.46,
     "frames": 75,
-    "p10_db": 3.6,
-    "median_db": 12.2,
-    "first_db": 10.8,
+    "p10_db": 3.4,
+    "median_db": 12.1,
+    "first_db": 10.3,
     "under_3db_pct": 8.0,
     "ok": false
    }
@@ -14449,7 +14328,7 @@
     "tag": "V.O.",
     "beat": "23.05",
     "scene": "23",
-    "lufs": -13.26,
+    "lufs": -13.21,
     "engine": "el"
    }
   ],
@@ -14467,14 +14346,14 @@
   "loud_moments": [],
   "mix": {
    "lufs_i": -16.0,
-   "true_peak_dbtp": -1.42,
-   "lra_lu": 7.9,
-   "dialogue_lufs": -13.46,
-   "rooms_lufs": -34.51,
-   "sfx_lufs": -30.13,
-   "score_lufs_after_duck": -16.21,
-   "score_rms_under_speech_dbfs": -30.3,
-   "score_rms_between_speech_dbfs": -18.7,
+   "true_peak_dbtp": -1.45,
+   "lra_lu": 8.8,
+   "dialogue_lufs": -13.42,
+   "rooms_lufs": -34.57,
+   "sfx_lufs": -29.98,
+   "score_lufs_after_duck": -16.17,
+   "score_rms_under_speech_dbfs": -30.1,
+   "score_rms_between_speech_dbfs": -18.6,
    "holes_under_-42dBFS_0.3s": [],
    "unmarked_holes": 0,
    "unmarked_holes_without_score": 0
@@ -14498,7 +14377,7 @@
     "to": 39.5,
     "lead": 0.6,
     "trail": 0.0,
-    "lift_db": 2.1,
+    "lift_db": 2.0,
     "cross": null
    }
   ],
@@ -14528,9 +14407,9 @@
   },
   "chatgtp": {
    "lines": 7,
-   "median_lufs": -14.97,
-   "min": -14.97,
-   "max": -14.97
+   "median_lufs": -14.87,
+   "min": -14.87,
+   "max": -14.87
   },
   "driver": {
    "lines": 2,
@@ -14540,15 +14419,15 @@
   },
   "ekiel": {
    "lines": 3,
-   "median_lufs": -13.8,
-   "min": -13.8,
+   "median_lufs": -13.86,
+   "min": -13.86,
    "max": -13.42
   },
   "engineer": {
    "lines": 9,
-   "median_lufs": -14.97,
-   "min": -15.97,
-   "max": -13.97
+   "median_lufs": -14.87,
+   "min": -15.87,
+   "max": -13.87
   },
   "forecaster": {
    "lines": 4,
@@ -14558,15 +14437,15 @@
   },
   "gerg": {
    "lines": 15,
-   "median_lufs": -13.8,
+   "median_lufs": -13.86,
    "min": -15.88,
    "max": -13.77
   },
   "haras": {
    "lines": 4,
-   "median_lufs": -13.8,
-   "min": -13.8,
-   "max": -13.8
+   "median_lufs": -13.86,
+   "min": -13.86,
+   "max": -13.86
   },
   "humanist": {
    "lines": 3,
@@ -14576,9 +14455,9 @@
   },
   "mario": {
    "lines": 6,
-   "median_lufs": -14.12,
-   "min": -14.2,
-   "max": -14.06
+   "median_lufs": -14.18,
+   "min": -14.26,
+   "max": -14.12
   },
   "mas": {
    "lines": 28,
@@ -14590,19 +14469,19 @@
    "lines": 15,
    "median_lufs": -13.88,
    "min": -13.88,
-   "max": -13.8
+   "max": -13.86
   },
   "radnus": {
    "lines": 1,
-   "median_lufs": -13.8,
-   "min": -13.8,
-   "max": -13.8
+   "median_lufs": -13.86,
+   "min": -13.86,
+   "max": -13.86
   },
   "rima": {
    "lines": 13,
-   "median_lufs": -13.97,
-   "min": -14.97,
-   "max": -13.97
+   "median_lufs": -13.87,
+   "min": -14.87,
+   "max": -13.87
   },
   "selbeep": {
    "lines": 4,
@@ -14612,7 +14491,7 @@
   },
   "staffer": {
    "lines": 6,
-   "median_lufs": -13.61,
+   "median_lufs": -13.64,
    "min": -15.88,
    "max": -13.42
   },
@@ -14630,33 +14509,33 @@
   },
   "terb": {
    "lines": 7,
-   "median_lufs": -13.8,
+   "median_lufs": -13.86,
    "min": -13.88,
-   "max": -13.8
+   "max": -13.86
   },
   "voice1": {
    "lines": 1,
-   "median_lufs": -14.97,
-   "min": -14.97,
-   "max": -14.97
+   "median_lufs": -14.87,
+   "min": -14.87,
+   "max": -14.87
   },
   "voice2": {
    "lines": 1,
-   "median_lufs": -14.97,
-   "min": -14.97,
-   "max": -14.97
+   "median_lufs": -14.87,
+   "min": -14.87,
+   "max": -14.87
   },
   "voice3": {
    "lines": 1,
-   "median_lufs": -14.97,
-   "min": -14.97,
-   "max": -14.97
+   "median_lufs": -14.87,
+   "min": -14.87,
+   "max": -14.87
   },
   "voice4": {
    "lines": 1,
-   "median_lufs": -14.97,
-   "min": -14.97,
-   "max": -14.97
+   "median_lufs": -14.87,
+   "min": -14.87,
+   "max": -14.87
   },
   "xel": {
    "lines": 7,
@@ -14666,9 +14545,9 @@
   }
  },
  "_mario": {
-  "mario_median_lufs": -14.12,
-  "neighbours_median_lufs": -13.8,
-  "diff_db": -0.31,
+  "mario_median_lufs": -14.18,
+  "neighbours_median_lufs": -13.86,
+  "diff_db": -0.32,
   "rule": "S7: within about 1 dB"
  },
  "_seams": [
@@ -14688,8 +14567,8 @@
   },
   {
    "seam": "act2 -> act3",
-   "last_200ms_dbfs": -26.6,
-   "first_200ms_dbfs": -29.6,
+   "last_200ms_dbfs": -26.5,
+   "first_200ms_dbfs": -29.5,
    "step_db": -3.0,
    "sample_jump": 0.0026
   },
@@ -14698,14 +14577,14 @@
    "last_200ms_dbfs": -19.7,
    "first_200ms_dbfs": -22.9,
    "step_db": -3.2,
-   "sample_jump": 0.0052
+   "sample_jump": 0.0051
   },
   {
    "seam": "act4 -> tag",
    "last_200ms_dbfs": -19.9,
    "first_200ms_dbfs": -19.7,
    "step_db": 0.2,
-   "sample_jump": 0.0038
+   "sample_jump": 0.0109
   }
  ],
  "_segments": {
@@ -14726,8 +14605,8 @@
   "act2": {
    "lufs_i": -16.01,
    "true_peak_dbtp": -1.45,
-   "dialogue_lufs": -14.32,
-   "gain_db": 2.03,
+   "dialogue_lufs": -14.23,
+   "gain_db": 2.13,
    "guard_db": null
   },
   "act3": {
@@ -14740,15 +14619,15 @@
   "act4": {
    "lufs_i": -16.0,
    "true_peak_dbtp": -1.47,
-   "dialogue_lufs": -13.99,
-   "gain_db": 2.2,
+   "dialogue_lufs": -14.05,
+   "gain_db": 2.14,
    "guard_db": null
   },
   "tag": {
    "lufs_i": -16.0,
-   "true_peak_dbtp": -1.42,
-   "dialogue_lufs": -13.46,
-   "gain_db": 3.74,
+   "true_peak_dbtp": -1.45,
+   "dialogue_lufs": -13.42,
+   "gain_db": 3.79,
    "guard_db": null
   },
   "card": {
@@ -14774,9 +14653,9 @@
   },
   {
    "seam": "tag-mix.wav -> outro-mix.wav",
-   "last_200ms_dbfs": -22.4,
+   "last_200ms_dbfs": -21.4,
    "first_200ms_dbfs": -21.3,
-   "step_db": 1.1
+   "step_db": 0.1
   }
  ]
 }

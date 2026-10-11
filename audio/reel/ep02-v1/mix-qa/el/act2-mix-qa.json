@@ -57,11 +57,11 @@
      7
     ],
     [
-     "E02-07",
+     "E02-07 ONE WORD",
      8
     ],
     [
-     "E02-07 ONE WORD",
+     "E02-07",
      8
     ]
    ],
@@ -125,13 +125,13 @@
   "lufs_i": -16.01,
   "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 7.1,
-  "gain_db": 2.03,
+  "lra_lu": 7.3,
+  "gain_db": 2.13,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.254,
-  "dialogue_lufs": -14.32,
-  "score_lufs_after_duck": -21.02,
-  "score_rms_under_speech_dbfs": -27.9,
+  "limiter_active_s": 1.595,
+  "dialogue_lufs": -14.23,
+  "score_lufs_after_duck": -20.88,
+  "score_rms_under_speech_dbfs": -27.7,
   "score_rms_between_speech_dbfs": -20.8,
   "score_runs": {
    "count": 2,
@@ -147,8 +147,8 @@
     ]
    ]
   },
-  "rooms_lufs": -36.02,
-  "sfx_lufs": -31.1,
+  "rooms_lufs": -35.89,
+  "sfx_lufs": -30.96,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [
    {
@@ -218,12 +218,11 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 23,
-   "rising": 20,
+   "count": 22,
+   "rising": 19,
    "rising_at_a_word": 13,
    "rising_at_an_sfx": 0,
    "rising_other": [
-    72.15,
     97.75,
     100.85,
     104.0,
@@ -238,10 +237,10 @@
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.12,
-  "to_gain_db": 2.03,
+  "to_gain_db": 2.13,
   "ramp_s": 2.0,
   "after": "act1"
  },
- "built": "2026-10-10 19:50:42",
+ "built": "2026-10-11 01:55:52",
  "heard": "nothing here has been listened to; every number is measured"
 }

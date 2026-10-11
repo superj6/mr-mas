@@ -4,7 +4,7 @@
  "segment": "tag",
  "file": "audio/ost/tracks/e02-v1-tag/render/music-el.wav",
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-tag.json",
- "lock_sha1": "f6ba1c74baad8ce8407113e61ac79d8b79281dae",
+ "lock_sha1": "23de62e560aa7cd2cbe6dfbd2bd6e647e1bbbf35",
  "length_s": 37.0,
  "frames": 888,
  "samples": 1776000,
@@ -24,8 +24,8 @@
    "laid_at_s": -0.5,
    "level": {
     "lufs_i": -19.95,
-    "st_p95": -17.07,
-    "st_max": -16.54,
+    "st_p95": -16.96,
+    "st_max": -16.43,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -46,7 +46,7 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 8.57,
+      "lra": 9.56,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
       "rms_db": -22.66,
@@ -56,15 +56,17 @@
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.254,
+    "f_major_worst": 0.459,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
      "within_10ms": 6,
      "of": 6,
-     "worst_ms": 5.5
+     "worst_ms": 6.5
     },
-    "warnings": []
+    "warnings": [
+     "underscore short-term p95 -16.97 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+    ]
    },
    "note_qa": {
     "notes": 365,
@@ -93,8 +95,8 @@
     "toast_end": 19.683,
     "b05": 19.917,
     "b06": 22.875,
-    "b07": 27.5,
-    "knot": 32.075,
+    "b07": 28.5,
+    "knot": 32.6,
     "b08": 33.417,
     "taut": 33.717,
     "b09": 35.0,
@@ -104,9 +106,9 @@
      6.7333333333333325
     ],
     "pumps": [
-     28.307,
-     29.384,
-     30.46
+     29.25,
+     30.25,
+     31.25
     ],
     "vo_on": 20.457,
     "vo_end": 22.357,
@@ -120,7 +122,7 @@
     ],
     "lower": [
      24.275,
-     27.425
+     28.425
     ],
     "t_run": 4.5,
     "t_fm": 7.0,
@@ -132,8 +134,8 @@
     "t_v2": 18.562,
     "t_res": 19.5,
     "t_st3": 22.625,
-    "t_fear": 27.625,
-    "t_hold": 32.0,
+    "t_fear": 28.562,
+    "t_hold": 32.625,
     "t_thin": 33.25,
     "t_felt": 34.812,
     "chords": [
@@ -181,23 +183,23 @@
     "fear_line": [
      [
       "Eb3",
-      27.625
+      28.562
      ],
      [
       "F3",
-      28.875
-     ],
-     [
-      "Gb3",
       29.5
      ],
      [
+      "Gb3",
+      30.125
+     ],
+     [
       "Bb3",
-      30.75
+      31.375
      ],
      [
       "Eb4",
-      32.0
+      32.625
      ]
     ]
    },
@@ -251,10 +253,10 @@
      "lead_s": 0.25
     },
     {
-     "t": 27.625,
+     "t": 28.562,
      "chord": "Ebm (FEAR)",
-     "nearest_cut": 27.5,
-     "lead_s": -0.125
+     "nearest_cut": 28.5,
+     "lead_s": -0.062
     },
     {
      "t": 33.25,
@@ -326,17 +328,17 @@
     },
     {
      "t": 22.635,
-     "what": "THE RUN's stop: it thins to its pedal, the open fifth F (the room's own F, no third), under the AUG 21 lower third (24.27-27.43); the neutral text blip (SFX) carries his words",
+     "what": "THE RUN's stop: it thins to its pedal, the open fifth F (the room's own F, no third), under the AUG 21 lower third (24.27-28.43); the neutral text blip (SFX) carries his words",
      "hit": false
     },
     {
-     "t": 27.625,
-     "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on the beat, 0.12 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 27.425; OST §2.10)",
+     "t": 28.562,
+     "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on an eighth, 0.06 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 28.425; OST §2.10)",
      "hit": true
     },
     {
-     "t": 32.0,
-     "what": "the Podium's held E-flat on the knot (knot_tie 32.075): the timpani roll's arrival, one soft chip glint (the gold, muted)",
+     "t": 32.625,
+     "what": "the Podium's held E-flat on the knot (knot_tie 32.600): the timpani roll's arrival, one soft chip glint (the gold, muted)",
      "hit": false
     },
     {
@@ -384,9 +386,9 @@
    "exempt": "a designed attack on a story beat; keep its attack"
   },
   {
-   "t": 27.625,
+   "t": 28.562,
    "cue": "e02-13-august",
-   "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on the beat, 0.12 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 27.425; OST §2.10)",
+   "what": "DESIGNED HIT: RUMPT's Podium, FEAR (cup-muted trombone, E-flat minor, half-time), on an eighth, 0.06 s after the cut to the balloon: the band waited for his words to clear (the lower third ends 28.425; OST §2.10)",
    "exempt": "a designed attack on a story beat; keep its attack"
   }
  ],
@@ -425,11 +427,11 @@
   {
    "section": "e02-13-august: 7 THE RUN's pedal: the AUG 21 lower third (the open fifth F)",
    "start": 22.625,
-   "end": 27.625
+   "end": 28.562
   },
   {
    "section": "e02-13-august: 8 RUMPT's Podium, FEAR: the balloon",
-   "start": 27.625,
+   "start": 28.562,
    "end": 33.25
   },
   {
@@ -452,8 +454,8 @@
   },
   {
    "t0": 24.275,
-   "t1": 27.425,
-   "text": "…having me speak… It's a little bit dangerous ou"
+   "t1": 28.425,
+   "text": "…having me speak… perfectly on AI… It's a little"
   }
  ],
  "prelap": null,
@@ -467,15 +469,15 @@
   "exact": true,
   "whole": {
    "lufs_i": -19.95,
-   "st_p95": -17.07,
-   "st_max": -16.54,
+   "st_p95": -16.96,
+   "st_max": -16.43,
    "true_peak_dbtp": -3.15
   },
   "cues": {
    "e02-13-august": {
     "lufs_i": -19.95,
-    "st_p95": -17.07,
-    "st_max": -16.54,
+    "st_p95": -16.96,
+    "st_max": -16.43,
     "true_peak_dbtp": -3.15
    }
   },
@@ -484,82 +486,82 @@
     "section": "e02-13-august: 1 the pedal under the suit's landing (D-flat fifth; the docket's caption)",
     "start": 0.0,
     "end": 4.5,
-    "lufs_i": -24.78,
-    "st_p95": -25.13,
-    "st_max": -25.07,
-    "true_peak_dbtp": -11.28
+    "lufs_i": -24.66,
+    "st_p95": -25.02,
+    "st_max": -24.96,
+    "true_peak_dbtp": -11.16
    },
    {
     "section": "e02-13-august: 2 THE RUN: the pages (D-flat maj9, F m9)",
     "start": 4.5,
     "end": 8.56,
-    "lufs_i": -17.44,
-    "st_p95": -17.23,
-    "st_max": -17.22,
+    "lufs_i": -17.32,
+    "st_p95": -17.12,
+    "st_max": -17.11,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-13-august: 3 THE RUN: the post (B-flat m9; thinned under the record)",
     "start": 8.56,
     "end": 13.09,
-    "lufs_i": -21.33,
-    "st_p95": -20.11,
-    "st_max": -19.93,
-    "true_peak_dbtp": -7.31
+    "lufs_i": -21.21,
+    "st_p95": -19.99,
+    "st_max": -19.81,
+    "true_peak_dbtp": -7.19
    },
    {
     "section": "e02-13-august: 4 THE RUN: the Orb's scan (C7sus; xylophone and wood)",
     "start": 13.09,
     "end": 17.23,
-    "lufs_i": -16.74,
-    "st_p95": -16.5,
-    "st_max": -16.46,
+    "lufs_i": -16.63,
+    "st_p95": -16.39,
+    "st_max": -16.35,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-13-august: 5 the chime and THE VERDICT (the open fifth F)",
     "start": 17.23,
     "end": 19.5,
-    "lufs_i": -19.32,
+    "lufs_i": -19.2,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -10.57
+    "true_peak_dbtp": -10.46
    },
    {
     "section": "e02-13-august: 6 THE RUN again: Mas at the monitor, the V.O. inside it (F m9)",
     "start": 19.5,
     "end": 22.62,
-    "lufs_i": -21.34,
+    "lufs_i": -21.23,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -6.69
+    "true_peak_dbtp": -6.57
    },
    {
     "section": "e02-13-august: 7 THE RUN's pedal: the AUG 21 lower third (the open fifth F)",
     "start": 22.62,
-    "end": 27.62,
-    "lufs_i": -26.54,
-    "st_p95": -24.3,
-    "st_max": -23.15,
-    "true_peak_dbtp": -3.57
+    "end": 28.56,
+    "lufs_i": -26.71,
+    "st_p95": -24.45,
+    "st_max": -23.03,
+    "true_peak_dbtp": -3.46
    },
    {
     "section": "e02-13-august: 8 RUMPT's Podium, FEAR: the balloon",
-    "start": 27.62,
+    "start": 28.56,
     "end": 33.25,
-    "lufs_i": -20.48,
+    "lufs_i": -20.21,
     "st_p95": -20.21,
     "st_max": -20.09,
-    "true_peak_dbtp": -9.65
+    "true_peak_dbtp": -9.2
    },
    {
     "section": "e02-13-august: 9 one held chord: the taut string, his face; the cut on the downbeat",
     "start": 33.25,
     "end": 37.0,
-    "lufs_i": -22.29,
-    "st_p95": -22.04,
-    "st_max": -22.02,
-    "true_peak_dbtp": -12.92
+    "lufs_i": -22.84,
+    "st_p95": -22.76,
+    "st_max": -22.76,
+    "true_peak_dbtp": -13.29
    }
   ],
   "digital_silence": [],
@@ -574,28 +576,28 @@
   ],
   "fragments_under_2s": [],
   "undesigned_fragments": [],
-  "head_momentary_max": -20.44,
+  "head_momentary_max": -20.32,
   "momentary": {
-   "the pedal": -20.44,
-   "the first stab": -15.21,
-   "the pages": -15.21,
-   "the post (thinned)": -25.2,
-   "the scan": -13.83,
-   "the verdict": -17.68,
-   "with Mas": -15.82,
-   "the pedal (lower third)": -27.22,
-   "FEAR": -18.64,
-   "one held chord": -20.7
+   "the pedal": -20.32,
+   "the first stab": -15.13,
+   "the pages": -15.13,
+   "the post (thinned)": -25.09,
+   "the scan": -13.74,
+   "the verdict": -17.56,
+   "with Mas": -15.7,
+   "the pedal (lower third)": -27.1,
+   "FEAR": -17.36,
+   "one held chord": -21.64
   },
   "vo_windows_lufs": [
    {
     "line": "e2-vo-14",
     "t0": 20.46,
     "t1": 22.36,
-    "lufs": -24.47
+    "lufs": -24.35
    }
   ],
-  "tail_last_10ms_dbfs": -19.4
+  "tail_last_10ms_dbfs": -17.6
  },
  "laid": [
   {

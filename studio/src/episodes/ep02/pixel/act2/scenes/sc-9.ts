@@ -7,7 +7,7 @@
 //   TURN     9.02 the engineer rehearses to her (his bust, lip-synced) -> the monitor answers yes!! before he's asked ·
 //            9.03 the old transcript drops the [laughter] tag off its foot -> Gerg in the foreground, the engineer's
 //            laugh stopping on "laugh." · 9.04 the two-shot, no cut-ins (both lip-synced) · 9.04b (the fixes pass) his
-//            face alone in the wings, V.O. 6 (the launch's plan: the free tier makes the phone deal stick)
+//            face alone in the wings, V.O. 6 (the launch's plan, the hint only since the last fixes: "everyone gets it free.")
 //   AFTER    9.05 Mas walks off frame-left (to stage right); the camera pans with Rima to the monitor, the engineer
 //            following (room mouths) · 9.06 she taps the monitor (no cursor: her fingertip), the VOICE panel, each slot
 //            says hello under her fingertip, the fifth (Hey.) holds; the panel unfolds past the bezel onto the floor and

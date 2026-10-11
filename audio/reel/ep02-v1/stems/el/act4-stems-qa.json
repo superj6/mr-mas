@@ -2,8 +2,8 @@
  "segment": "act4",
  "variant": "el",
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act4.json",
- "seconds": 319.0,
- "frames": 7656,
+ "seconds": 309.0,
+ "frames": 7416,
  "rooms": [
   {
    "room": "lighthouse",
@@ -108,7 +108,7 @@
    "room": "garden",
    "recipe": "garden: bed_garden -40",
    "from": 192.275,
-   "to": 229.6,
+   "to": 219.6,
    "first": "19.16",
    "last": "19.20",
    "lead": 0.6,
@@ -118,8 +118,8 @@
   {
    "room": "split_zai",
    "recipe": "split_zai: bed_campus_outdoor -40 + bed_zai_warehouse -41",
-   "from": 228.4,
-   "to": 250.317,
+   "from": 218.4,
+   "to": 240.317,
    "first": "20.01",
    "last": "20.04",
    "lead": 0.6,
@@ -129,30 +129,30 @@
   {
    "room": "lobby_morning",
    "recipe": "lobby_morning: bed_lobby_morning -38",
-   "from": 249.117,
-   "to": 267.4,
+   "from": 239.117,
+   "to": 257.4,
    "first": "20.05",
    "last": "20.09",
    "lead": 0.8,
    "trail": 0.4,
-   "lift_db": 0.4
+   "lift_db": 0.2
   },
   {
    "room": "darkroom",
    "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
-   "from": 266.0,
-   "to": 281.4,
+   "from": 256.0,
+   "to": 271.4,
    "first": "20.10",
    "last": "20.13",
    "lead": 1.0,
    "trail": 0.4,
-   "lift_db": 1.7
+   "lift_db": 1.6
   },
   {
    "room": "empty_lot",
    "recipe": "empty_lot: bed_empty_lot_wind -40.5",
-   "from": 280.4,
-   "to": 319.4,
+   "from": 270.4,
+   "to": 309.4,
    "first": "22.01",
    "last": "22.09",
    "lead": 0.6,
@@ -441,35 +441,9 @@
    -28.0
   ],
   [
-   "19.17",
-   "flower_nod",
-   204.875,
-   -20.5,
-   "ride +9.5 dB (sfx-rides.json)"
-  ],
-  [
-   "19.17",
-   "chip_blip_bubble",
-   205.675,
-   -26.0
-  ],
-  [
-   "19.17",
-   "flower_nod",
-   207.475,
-   -20.5,
-   "ride +9.5 dB (sfx-rides.json)"
-  ],
-  [
-   "19.17",
-   "chip_blip_bubble",
-   208.175,
-   -26.0
-  ],
-  [
    "19.19",
    "gate_iron_shut",
-   221.956,
+   211.956,
    -16.4,
    "swapped: gate_iron_shut",
    "lock: gate_iron_swing",
@@ -478,151 +452,151 @@
   [
    "19.19",
    "lock_big_turn",
-   223.474,
+   213.474,
    -22.0
   ],
   [
    "19.20",
    "phone_into_pocket",
-   228.19,
+   218.19,
    -28.0
   ],
   [
    "20.01",
    "ui_toast_pop",
-   231.881,
-   -19.5,
-   "ride +6.5 dB (sfx-rides.json)"
+   221.881,
+   -18.7,
+   "ride +7.3 dB (sfx-rides.json)"
   ],
   [
    "20.02",
    "lamp_click",
-   233.017,
+   223.017,
    -22.0
   ],
   [
    "20.03",
    "cage_door_shut",
-   245.61,
+   235.61,
    -22.0
   ],
   [
    "20.03",
    "padlock_snap",
-   246.21,
+   236.21,
    -19.4,
    "ride +0.6 dB (sfx-rides.json)"
   ],
   [
    "20.04",
    "phone_buzz_muffled",
-   246.831,
+   236.831,
    -15.2,
    "ride +10.8 dB (sfx-rides.json)"
   ],
   [
    "20.04",
    "lamp_click",
-   249.512,
+   239.512,
    -24.0
   ],
   [
    "20.05",
    "tape_peel",
-   252.517,
+   242.517,
    -24.0
   ],
   [
    "20.05",
    "paper_flutter",
-   253.717,
+   243.717,
    -28.0
   ],
   [
    "20.06",
    "cloth_rustle",
-   254.808,
+   244.808,
    -28.0
   ],
   [
    "20.08",
    "docket_tab_flick",
-   260.992,
+   250.992,
    -26.0
   ],
   [
    "20.09",
    "rope_drop",
-   263.2,
+   253.2,
    -24.0
   ],
   [
    "20.09",
    "rope_haul",
-   264.1,
+   254.1,
    -15.3,
    "ride +6.7 dB (sfx-rides.json)"
   ],
   [
    "20.09",
    "sticky_flutter",
-   265.6,
+   255.6,
    -28.0
   ],
   [
    "20.10",
    "phone_buzz_step_1",
-   268.9,
+   258.9,
    -26.0
   ],
   [
    "20.10",
    "phone_turn_over",
-   269.3,
+   259.3,
    -24.0
   ],
   [
    "20.11",
    "pin_knock",
-   274.8,
+   264.8,
    -24.0
   ],
   [
    "20.12",
    "cloth_rustle",
-   277.583,
+   267.583,
    -26.0
   ],
   [
    "20.12",
    "chair_creak",
-   278.583,
+   268.583,
    -26.0
   ],
   [
    "20.13",
    "pin_fall",
-   280.183,
+   270.183,
    -24.0,
    "cut at its scene's end (1.55 s early)"
   ],
   [
    "22.01",
    "pin_fall",
-   281.429,
+   271.429,
    -24.0
   ],
   [
    "22.02",
    "footstep_gravel",
-   289.03,
+   279.03,
    -22.5,
    "ride +5.5 dB (sfx-rides.json)"
   ],
   [
    "22.02",
    "footstep_gravel_2",
-   290.175,
+   280.175,
    -22.5,
    "swapped: footstep_gravel_2",
    "lock: footstep_gravel",
@@ -631,7 +605,7 @@
   [
    "22.02",
    "footstep_gravel_3",
-   291.319,
+   281.319,
    -22.5,
    "swapped: footstep_gravel_3",
    "lock: footstep_gravel",
@@ -640,59 +614,59 @@
   [
    "22.02",
    "orb_scan_sweep",
-   292.749,
+   282.749,
    -28.0
   ],
   [
    "22.03",
    "ui_band_on",
-   295.0,
+   285.0,
    -25.2,
    "ride +0.8 dB (sfx-rides.json)"
   ],
   [
    "22.03",
    "ui_band_off",
-   296.45,
+   286.45,
    -21.1,
    "ride +4.9 dB (sfx-rides.json)"
   ],
   [
    "22.04",
    "flyer_into_slot",
-   301.004,
+   291.004,
    -24.0
   ],
   [
    "22.04",
    "mail_flap_lift",
-   302.149,
+   292.149,
    -26.0
   ],
   [
    "22.05",
    "lab_room_tone",
-   303.583,
+   293.583,
    -20.0,
    "ride +14.0 dB (sfx-rides.json)"
   ],
   [
    "22.05",
    "paper_drop_floor",
-   305.983,
-   -18.6,
-   "ride +13.4 dB (sfx-rides.json)"
+   295.983,
+   -18.1,
+   "ride +13.9 dB (sfx-rides.json)"
   ],
   [
    "22.06",
    "mail_flap_spring_shut",
-   307.408,
+   297.408,
    -20.0
   ],
   [
    "22.09",
    "footstep_gravel_2",
-   314.808,
+   304.808,
    -16.4,
    "swapped: footstep_gravel_2",
    "lock: footstep_gravel",
@@ -701,7 +675,7 @@
   [
    "22.09",
    "footstep_gravel_3",
-   315.808,
+   305.808,
    -17.4,
    "swapped: footstep_gravel_3",
    "lock: footstep_gravel",
@@ -710,7 +684,7 @@
   [
    "22.09",
    "footstep_gravel",
-   316.808,
+   306.808,
    -18.4,
    "ride +13.6 dB (sfx-rides.json)"
   ]
@@ -727,8 +701,8 @@
   {
    "beat": "20.13",
    "name": "pin_fall",
-   "at": 280.183,
-   "scene_end": 281.0,
+   "at": 270.183,
+   "scene_end": 271.0,
    "would_have_run_past_s": 1.553
   }
  ],
@@ -736,12 +710,12 @@
   "20.02:nole_fanfare_short"
  ],
  "room_stem": {
-  "lufs": -35.97,
+  "lufs": -35.95,
   "peak_dbfs": -19.71,
   "p10_50ms_dbfs": -39.8
  },
  "sfx_stem": {
-  "lufs": -32.19,
+  "lufs": -32.04,
   "peak_dbfs": -11.59,
   "p10_50ms_dbfs": -240.0
  },
@@ -754,8 +728,8 @@
   "sfx": {
    "boundaries": [
     {
-     "at": 295.009,
-     "boundary": 295.0,
+     "at": 285.009,
+     "boundary": 285.0,
      "ratio": 76.1,
      "kind": "step",
      "before_dbfs": -33.0,
@@ -782,85 +756,13 @@
      "to_dbfs": -61.1
     },
     {
-     "at": 204.89,
-     "ratio": 144.4,
-     "from_dbfs": -40.6,
-     "to_dbfs": -55.3
-    },
-    {
-     "at": 204.9,
-     "ratio": 205.8,
-     "from_dbfs": -39.9,
-     "to_dbfs": -75.4
-    },
-    {
-     "at": 204.92,
-     "ratio": 396.2,
-     "from_dbfs": -38.4,
-     "to_dbfs": -69.5
-    },
-    {
-     "at": 204.93,
-     "ratio": 386.1,
-     "from_dbfs": -30.0,
-     "to_dbfs": -45.9
-    },
-    {
-     "at": 204.935,
-     "ratio": 13.1,
-     "from_dbfs": -45.9,
-     "to_dbfs": -60.2
-    },
-    {
-     "at": 205.025,
-     "ratio": 39.5,
-     "from_dbfs": -45.8,
-     "to_dbfs": -68.5
-    },
-    {
-     "at": 207.49,
-     "ratio": 144.4,
-     "from_dbfs": -40.6,
-     "to_dbfs": -55.3
-    },
-    {
-     "at": 207.5,
-     "ratio": 205.8,
-     "from_dbfs": -39.9,
-     "to_dbfs": -75.4
-    },
-    {
-     "at": 207.52,
-     "ratio": 396.2,
-     "from_dbfs": -38.4,
-     "to_dbfs": -69.5
-    },
-    {
-     "at": 207.53,
-     "ratio": 386.1,
-     "from_dbfs": -30.0,
-     "to_dbfs": -45.9
-    },
-    {
-     "at": 207.535,
-     "ratio": 13.1,
-     "from_dbfs": -45.9,
-     "to_dbfs": -60.2
-    },
-    {
-     "at": 207.625,
-     "ratio": 39.5,
-     "from_dbfs": -45.8,
-     "to_dbfs": -68.5
-    },
-    {
-     "at": 274.895,
+     "at": 264.895,
      "ratio": 20.7,
      "from_dbfs": -48.2,
      "to_dbfs": -67.5
     },
     {
-     "at": 302.45,
+     "at": 292.45,
      "ratio": 57.7,
      "from_dbfs": -42.3,
      "to_dbfs": -60.6
@@ -927,17 +829,17 @@
   },
   {
    "room": "lobby_morning@act4:20.05",
-   "p5_50ms_dbfs": -40.4,
-   "lift_db": 0.4
+   "p5_50ms_dbfs": -40.2,
+   "lift_db": 0.2
   },
   {
    "room": "darkroom@act4:20.10",
-   "p5_50ms_dbfs": -41.7,
-   "lift_db": 1.7
+   "p5_50ms_dbfs": -41.6,
+   "lift_db": 1.6
   },
   {
    "room": "empty_lot@act4:22.01",
-   "p5_50ms_dbfs": -47.0,
+   "p5_50ms_dbfs": -46.9,
    "lift_db": 6.0
   },
   {

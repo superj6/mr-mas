@@ -5,7 +5,7 @@
  "variant": "stick-figure dialogue reel Ep2 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
  "logline": "The Ep2 v1 base lock of act4: the beat plan applied to no source (every beat new).",
  "dateSpan": "May 28 - Jun 19, 2024",
- "runtimeMin": 5.32,
+ "runtimeMin": 5.15,
  "dialogueReel": true,
  "cast": {
   "mas": {
@@ -98,7 +98,7 @@
   "builder": "audio/reel/ep02-v1/build_timeline.py",
   "bed": "audio/reel/ep02-v1/bed.py -> audio/reel/ep02-v1/act4-bed.wav",
   "notes": "show/episodes/ep02/production/v1/pipeline.md",
-  "seconds": 319.0,
+  "seconds": 309.0,
   "kokoro_lock": "show/reel/ep02-v1/ep02-v1-act4.json",
   "el_builder": "audio/ep02/v1-el/tools/el_lock.py",
   "el_notes": "show/episodes/ep02/production/v1/pipeline.md"
@@ -3725,65 +3725,6 @@
    }
   },
   {
-   "id": "19.17",
-   "act": "ACT FOUR",
-   "kind": "scene",
-   "set": "void",
-   "style": "BASE",
-   "shot": "medium",
-   "frame": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-   "side": "",
-   "room": "garden",
-   "chars": [
-    "chatgtp",
-    "iris"
-   ],
-   "caption": "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
-   "lines": [],
-   "onscreen": [
-    {
-     "text": "99%",
-     "at": 6.4,
-     "until": 10.0,
-     "kind": "ui"
-    }
-   ],
-   "reelDur": 10.0,
-   "fx": [],
-   "cues": [
-    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
-   ],
-   "sounds": [
-    {
-     "name": "flower_nod",
-     "at": 2.0,
-     "gain": -30
-    },
-    {
-     "name": "chip_blip_bubble",
-     "at": 2.8,
-     "gain": -26
-    },
-    {
-     "name": "flower_nod",
-     "at": 4.6,
-     "gain": -30
-    },
-    {
-     "name": "chip_blip_bubble",
-     "at": 5.3,
-     "gain": -26
-    }
-   ],
-   "passes": {
-    "scene": "19",
-    "mode": "SET-PIECE (the walled garden)",
-    "pace": "quick",
-    "camera": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-    "picture": "Text only: voice 5 is paused (D-56). One 4-bar phrase."
-   }
-  },
-  {
    "id": "19.18",
    "act": "ACT FOUR",
    "kind": "scene",
@@ -3797,7 +3738,7 @@
     "mas",
     "radnus"
    ],
-   "caption": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "caption": "Outside the hedge, Mas watches the gate the guest went in by. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
    "lines": [
     {
      "id": "e2-a4-0030",
@@ -5174,8 +5115,8 @@
  ],
  "_el_retimed": {
   "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
-  "seconds_kokoro": 319.0,
-  "seconds_el": 319.0,
+  "seconds_kokoro": 309.0,
+  "seconds_el": 309.0,
   "delta_s": 0.0,
   "beats_changed": 0,
   "missing_takes": [],

@@ -26,18 +26,18 @@
   "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
  },
  "summary": {
-  "shots": 57,
-  "beats": 57,
-  "frames": 7656,
-  "seconds": 319.0,
-  "length": "5:19.00",
+  "shots": 56,
+  "beats": 56,
+  "frames": 7416,
+  "seconds": 309.0,
+  "length": "5:09.00",
   "episode_in": "17:30:00",
-  "episode_out": "22:49:00",
+  "episode_out": "22:39:00",
   "verdicts": {
-   "-": 57
+   "-": 56
   },
-  "mean_s": 5.596,
-  "median_s": 4.667,
+  "mean_s": 5.518,
+  "median_s": 4.625,
   "min_s": 1.208,
   "max_s": 14.917,
   "lines": 38,
@@ -52,7 +52,7 @@
   "mix": {
    "path": "out/ep02/v1/mix/act4-mix.wav",
    "offset_frames": 0,
-   "frames": 7656.0
+   "frames": 7416.0
   },
   "refs": {}
  },
@@ -60,17 +60,17 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "4 scenes: 18(2304f) 19(3192f) 20(1248f) 22(912f)"
+   "detail": "4 scenes: 18(2304f) 19(2952f) 20(1248f) 22(912f)"
   },
   {
    "check": "shot frames = their beats' frames",
    "ok": true,
-   "detail": "57 shots from 57 beats"
+   "detail": "56 shots from 56 beats"
   },
   {
    "check": "shots tile the segment with no gap",
    "ok": true,
-   "detail": "0 -> 7656"
+   "detail": "0 -> 7416"
   },
   {
    "check": "the lock vs the stick reel's own line frames",
@@ -100,7 +100,7 @@
   {
    "check": "the mix = its offset + the segment",
    "ok": true,
-   "detail": "mix 7656.00 f vs 0 + 7656"
+   "detail": "mix 7416.00 f vs 0 + 7416"
   }
  ],
  "sequences": [
@@ -110,7 +110,7 @@
    "place": "",
    "time": "",
    "s": 0,
-   "e": 7656,
+   "e": 7416,
    "shots": [
     "18.01",
     "18.02",
@@ -143,7 +143,6 @@
     "19.14",
     "19.15",
     "19.16",
-    "19.17",
     "19.18",
     "19.19",
     "19.20",
@@ -173,9 +172,9 @@
    "chapter": "ACT4",
    "title": "",
    "cue": "music (v1): E02-11 LEVERAGE, QUARTET · a string quartet (pizzicato over a muted 808 locked to the rack LEDs), one performance through sc 18–20 · music (v1): E02-11 · under Neleh's voice and the card the quartet thins to its pedal · music (v1): E02-11 · LEFT: the quartet; the 808 drops out on \"present.\" and the quartet carries on alone · music (v1): E02-11 · RIGHT: Mario's Addendum (B♭ minor; it gains a bar each time) and the Lighthouse cell (marimba and harp) · music (v1): E02-11 · the quartet alone under the keynote's own walk-on bed on the wall screen (an original media bed, diegetic and low) · music (v1): E02-11 · the quartet thins to its pedal under his post · music (v1): E02-11 · F2.1: the ERA tier for 2005–14 (the band through the 16-bit sample-chip, swung, brighter A♭ colours; no cassette piano, no boom-bap) over the quartet's held pedal; each grey pin a step dimmer on the sample-chip's falling figure · music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate · music (v1): E02-11 · the cello's pedal carries · music (v1): E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs · music (v1): E02-11 · the lobby's morning under the quartet's pedal · music (v1): E02-11 · the quartet's pedal · music (v1): E02-11 · the quartet ends as the complaint leaves frame: the cello's last pizzicato on the note's landing · music (v1): room tone only (the quartet has ended) · music (v1): room tone only · music (v1): room tone only; the pin's soft knock · music (v1): E02-12 · room tone only, then the first piano note as the lot appears · music (v1): E02-12 ONE DOOR · DARK ROOM, sparse (one piano note per phrase); the Door with its first note missing, on non-vibrato flute, low-passed (\"through the door\") · music (v1): E02-12 · the GPU choir under the glimpse · music (v1): the designed stop: room tone only · music (v1): E02-12 · the cue returns as his raised hand lowers · music (v1): E02-12 · the Door resolves with no cadence across the walk (it cadences only in Ep11)",
-   "frames": 7656,
+   "frames": 7416,
    "tc_in": "17:30:00",
-   "tc_out": "22:49:00"
+   "tc_out": "22:39:00"
   }
  ],
  "scenes": [
@@ -206,7 +205,7 @@
   {
    "id": "19",
    "s": 2304,
-   "e": 5496,
+   "e": 5256,
    "shots": [
     "19.01",
     "19.02",
@@ -224,18 +223,17 @@
     "19.14",
     "19.15",
     "19.16",
-    "19.17",
     "19.18",
     "19.19",
     "19.20"
    ],
    "tc_in": "19:06:00",
-   "tc_out": "21:19:00"
+   "tc_out": "21:09:00"
   },
   {
    "id": "20",
-   "s": 5496,
-   "e": 6744,
+   "s": 5256,
+   "e": 6504,
    "shots": [
     "20.01",
     "20.02",
@@ -251,13 +249,13 @@
     "20.12",
     "20.13"
    ],
-   "tc_in": "21:19:00",
-   "tc_out": "22:11:00"
+   "tc_in": "21:09:00",
+   "tc_out": "22:01:00"
   },
   {
    "id": "22",
-   "s": 6744,
-   "e": 7656,
+   "s": 6504,
+   "e": 7416,
    "shots": [
     "22.01",
     "22.02",
@@ -269,8 +267,8 @@
     "22.08",
     "22.09"
    ],
-   "tc_in": "22:11:00",
-   "tc_out": "22:49:00"
+   "tc_in": "22:01:00",
+   "tc_out": "22:39:00"
   }
  ],
  "shots": [
@@ -965,14 +963,18 @@
       ],
       [
        4,
-       "M"
-      ],
-      [
-       6,
        "A"
       ],
       [
-       11,
+       6,
+       "M"
+      ],
+      [
+       8,
+       "A"
+      ],
+      [
+       12,
        "E"
       ],
       [
@@ -5243,15 +5245,7 @@
       ],
       [
        10,
-       "M"
-      ],
-      [
-       12,
        "A"
-      ],
-      [
-       17,
-       "E"
       ],
       [
        19,
@@ -7228,125 +7222,13 @@
    "frames": 240
   },
   {
-   "id": "19.17",
-   "setup": "19.17",
-   "beats": [
-    "19.17"
-   ],
-   "s": 4869,
-   "e": 5109,
-   "onscreen": [
-    {
-     "text": "99%",
-     "s": 153,
-     "e": 240
-    }
-   ],
-   "lines": [],
-   "seq": "ACT4",
-   "scene": "19",
-   "scene_s": 2304,
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-   "cls": "M",
-   "move": "hold",
-   "does": "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
-   "chars": [
-    "chatgtp",
-    "iris"
-   ],
-   "cues": [
-    "music (v1): E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate"
-   ],
-   "sounds": [
-    "flower_nod @48",
-    "chip_blip_bubble @67",
-    "flower_nod @110",
-    "chip_blip_bubble @127"
-   ],
-   "spots": [
-    {
-     "name": "flower_nod",
-     "k": 48,
-     "dur": null
-    },
-    {
-     "name": "chip_blip_bubble",
-     "k": 67,
-     "dur": null
-    },
-    {
-     "name": "flower_nod",
-     "k": 110,
-     "dur": null
-    },
-    {
-     "name": "chip_blip_bubble",
-     "k": 127,
-     "dur": null
-    }
-   ],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "void",
-   "room": "garden",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
-   "cast": [
-    {
-     "id": "chatgtp",
-     "pose": "stand",
-     "face": "calm",
-     "x": null,
-     "from": null,
-     "until": null
-    },
-    {
-     "id": "iris",
-     "pose": "stand",
-     "face": "calm",
-     "x": null,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "19.17": 0
-   },
-   "picture": "Text only: voice 5 is paused (D-56). One 4-bar phrase.",
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "ui",
-     "text": "99%",
-     "s": 153,
-     "e": 240,
-     "must": true
-    }
-   ],
-   "tc_in": "20:52:21",
-   "tc_out": "21:02:21",
-   "frames": 240
-  },
-  {
    "id": "19.18",
    "setup": "19.18",
    "beats": [
     "19.18"
    ],
-   "s": 5109,
-   "e": 5317,
+   "s": 4869,
+   "e": 5077,
    "onscreen": [],
    "lines": [
     {
@@ -7560,7 +7442,7 @@
    "frame": "2S · outside the hedge (phrase 3): Mas, screen-left; RADNUS rises into frame along the same hedge, screen-right",
    "cls": "M",
    "move": "hold",
-   "does": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "does": "Outside the hedge, Mas watches the gate the guest went in by. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
    "chars": [
     "mas",
     "radnus"
@@ -7577,7 +7459,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "caption": "Outside the hedge, Mas watches the gate the guest went in by. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
    "cast": [
     {
      "id": "mas",
@@ -7606,8 +7488,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:02:21",
-   "tc_out": "21:11:13",
+   "tc_in": "20:52:21",
+   "tc_out": "21:01:13",
    "frames": 208
   },
   {
@@ -7616,8 +7498,8 @@
    "beats": [
     "19.19"
    ],
-   "s": 5317,
-   "e": 5417,
+   "s": 5077,
+   "e": 5177,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
@@ -7683,8 +7565,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:11:13",
-   "tc_out": "21:15:17",
+   "tc_in": "21:01:13",
+   "tc_out": "21:05:17",
    "frames": 100
   },
   {
@@ -7693,8 +7575,8 @@
    "beats": [
     "19.20"
    ],
-   "s": 5417,
-   "e": 5496,
+   "s": 5177,
+   "e": 5256,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
@@ -7754,8 +7636,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:15:17",
-   "tc_out": "21:19:00",
+   "tc_in": "21:05:17",
+   "tc_out": "21:09:00",
    "frames": 79
   },
   {
@@ -7764,8 +7646,8 @@
    "beats": [
     "20.01"
    ],
-   "s": 5496,
-   "e": 5590,
+   "s": 5256,
+   "e": 5350,
    "onscreen": [
     {
      "text": "KORG 2",
@@ -7776,7 +7658,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7848,8 +7730,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:19:00",
-   "tc_out": "21:22:22",
+   "tc_in": "21:09:00",
+   "tc_out": "21:12:22",
    "frames": 94
   },
   {
@@ -7858,8 +7740,8 @@
    "beats": [
     "20.02"
    ],
-   "s": 5590,
-   "e": 5772,
+   "s": 5350,
+   "e": 5532,
    "onscreen": [
     {
      "text": "If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be banned at my companies. That is an unacceptable security violation.",
@@ -7870,7 +7752,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7939,8 +7821,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:22:22",
-   "tc_out": "21:30:12",
+   "tc_in": "21:12:22",
+   "tc_out": "21:20:12",
    "frames": 182
   },
   {
@@ -7949,8 +7831,8 @@
    "beats": [
     "20.03"
    ],
-   "s": 5772,
-   "e": 5919,
+   "s": 5532,
+   "e": 5679,
    "onscreen": [],
    "lines": [
     {
@@ -8116,7 +7998,7 @@
    ],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8186,8 +8068,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:30:12",
-   "tc_out": "21:36:15",
+   "tc_in": "21:20:12",
+   "tc_out": "21:26:15",
    "frames": 147
   },
   {
@@ -8196,13 +8078,13 @@
    "beats": [
     "20.04"
    ],
-   "s": 5919,
-   "e": 5998,
+   "s": 5679,
+   "e": 5758,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8263,8 +8145,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:36:15",
-   "tc_out": "21:39:22",
+   "tc_in": "21:26:15",
+   "tc_out": "21:29:22",
    "frames": 79
   },
   {
@@ -8273,13 +8155,13 @@
    "beats": [
     "20.05"
    ],
-   "s": 5998,
-   "e": 6113,
+   "s": 5758,
+   "e": 5873,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8349,8 +8231,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:39:22",
-   "tc_out": "21:44:17",
+   "tc_in": "21:29:22",
+   "tc_out": "21:34:17",
    "frames": 115
   },
   {
@@ -8359,13 +8241,13 @@
    "beats": [
     "20.06"
    ],
-   "s": 6113,
-   "e": 6142,
+   "s": 5873,
+   "e": 5902,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8409,8 +8291,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "21:44:17",
-   "tc_out": "21:45:22",
+   "tc_in": "21:34:17",
+   "tc_out": "21:35:22",
    "frames": 29
   },
   {
@@ -8419,8 +8301,8 @@
    "beats": [
     "20.07"
    ],
-   "s": 6142,
-   "e": 6259,
+   "s": 5902,
+   "e": 6019,
    "onscreen": [
     {
      "text": "UPSIDE",
@@ -8499,7 +8381,7 @@
    ],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8563,8 +8445,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:45:22",
-   "tc_out": "21:50:19",
+   "tc_in": "21:35:22",
+   "tc_out": "21:40:19",
    "frames": 117
   },
   {
@@ -8573,8 +8455,8 @@
    "beats": [
     "20.08"
    ],
-   "s": 6259,
-   "e": 6312,
+   "s": 6019,
+   "e": 6072,
    "onscreen": [
     {
      "text": "HEARING · JUN 12 · MOTION TO DISMISS",
@@ -8585,7 +8467,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8637,8 +8519,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:50:19",
-   "tc_out": "21:53:00",
+   "tc_in": "21:40:19",
+   "tc_out": "21:43:00",
    "frames": 53
   },
   {
@@ -8647,8 +8529,8 @@
    "beats": [
     "20.09"
    ],
-   "s": 6312,
-   "e": 6408,
+   "s": 6072,
+   "e": 6168,
    "onscreen": [
     {
      "text": "(FOR NOW)",
@@ -8659,7 +8541,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8734,8 +8616,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:53:00",
-   "tc_out": "21:57:00",
+   "tc_in": "21:43:00",
+   "tc_out": "21:47:00",
    "frames": 96
   },
   {
@@ -8744,8 +8626,8 @@
    "beats": [
     "20.10"
    ],
-   "s": 6408,
-   "e": 6576,
+   "s": 6168,
+   "e": 6336,
    "onscreen": [
     {
      "text": "I am starting a new company:",
@@ -8761,7 +8643,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8837,8 +8719,8 @@
      "must": true
     }
    ],
-   "tc_in": "21:57:00",
-   "tc_out": "22:04:00",
+   "tc_in": "21:47:00",
+   "tc_out": "21:54:00",
    "frames": 168
   },
   {
@@ -8847,13 +8729,13 @@
    "beats": [
     "20.11"
    ],
-   "s": 6576,
-   "e": 6614,
+   "s": 6336,
+   "e": 6374,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8897,8 +8779,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:04:00",
-   "tc_out": "22:05:14",
+   "tc_in": "21:54:00",
+   "tc_out": "21:55:14",
    "frames": 38
   },
   {
@@ -8907,13 +8789,13 @@
    "beats": [
     "20.12"
    ],
-   "s": 6614,
-   "e": 6710,
+   "s": 6374,
+   "e": 6470,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8974,8 +8856,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:05:14",
-   "tc_out": "22:09:14",
+   "tc_in": "21:55:14",
+   "tc_out": "21:59:14",
    "frames": 96
   },
   {
@@ -8984,13 +8866,13 @@
    "beats": [
     "20.13"
    ],
-   "s": 6710,
-   "e": 6744,
+   "s": 6470,
+   "e": 6504,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "20",
-   "scene_s": 5496,
+   "scene_s": 5256,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9034,8 +8916,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:09:14",
-   "tc_out": "22:11:00",
+   "tc_in": "21:59:14",
+   "tc_out": "22:01:00",
    "frames": 34
   },
   {
@@ -9044,8 +8926,8 @@
    "beats": [
     "22.01"
    ],
-   "s": 6744,
-   "e": 6923,
+   "s": 6504,
+   "e": 6683,
    "onscreen": [
     {
      "text": "ISS",
@@ -9056,7 +8938,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9119,8 +9001,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:11:00",
-   "tc_out": "22:18:11",
+   "tc_in": "22:01:00",
+   "tc_out": "22:08:11",
    "frames": 179
   },
   {
@@ -9129,13 +9011,13 @@
    "beats": [
     "22.02"
    ],
-   "s": 6923,
-   "e": 7080,
+   "s": 6683,
+   "e": 6840,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9217,8 +9099,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:18:11",
-   "tc_out": "22:25:00",
+   "tc_in": "22:08:11",
+   "tc_out": "22:15:00",
    "frames": 157
   },
   {
@@ -9227,8 +9109,8 @@
    "beats": [
     "22.03"
    ],
-   "s": 7080,
-   "e": 7176,
+   "s": 6840,
+   "e": 6936,
    "onscreen": [
     {
      "text": "Use flyer on door",
@@ -9239,7 +9121,7 @@
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9308,8 +9190,8 @@
      "must": true
     }
    ],
-   "tc_in": "22:25:00",
-   "tc_out": "22:29:00",
+   "tc_in": "22:15:00",
+   "tc_out": "22:19:00",
    "frames": 96
   },
   {
@@ -9318,13 +9200,13 @@
    "beats": [
     "22.04"
    ],
-   "s": 7176,
-   "e": 7286,
+   "s": 6936,
+   "e": 7046,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9385,8 +9267,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:29:00",
-   "tc_out": "22:33:14",
+   "tc_in": "22:19:00",
+   "tc_out": "22:23:14",
    "frames": 110
   },
   {
@@ -9395,13 +9277,13 @@
    "beats": [
     "22.05"
    ],
-   "s": 7286,
-   "e": 7373,
+   "s": 7046,
+   "e": 7133,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9462,8 +9344,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:33:14",
-   "tc_out": "22:37:05",
+   "tc_in": "22:23:14",
+   "tc_out": "22:27:05",
    "frames": 87
   },
   {
@@ -9472,13 +9354,13 @@
    "beats": [
     "22.06"
    ],
-   "s": 7373,
-   "e": 7402,
+   "s": 7133,
+   "e": 7162,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9522,8 +9404,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:37:05",
-   "tc_out": "22:38:10",
+   "tc_in": "22:27:05",
+   "tc_out": "22:28:10",
    "frames": 29
   },
   {
@@ -9532,13 +9414,13 @@
    "beats": [
     "22.07"
    ],
-   "s": 7402,
-   "e": 7464,
+   "s": 7162,
+   "e": 7224,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9585,8 +9467,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:38:10",
-   "tc_out": "22:41:00",
+   "tc_in": "22:28:10",
+   "tc_out": "22:31:00",
    "frames": 62
   },
   {
@@ -9595,13 +9477,13 @@
    "beats": [
     "22.08"
    ],
-   "s": 7464,
-   "e": 7541,
+   "s": 7224,
+   "e": 7301,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9648,8 +9530,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:41:00",
-   "tc_out": "22:44:05",
+   "tc_in": "22:31:00",
+   "tc_out": "22:34:05",
    "frames": 77
   },
   {
@@ -9658,13 +9540,13 @@
    "beats": [
     "22.09"
    ],
-   "s": 7541,
-   "e": 7656,
+   "s": 7301,
+   "e": 7416,
    "onscreen": [],
    "lines": [],
    "seq": "ACT4",
    "scene": "22",
-   "scene_s": 6744,
+   "scene_s": 6504,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -9731,8 +9613,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "22:44:05",
-   "tc_out": "22:49:00",
+   "tc_in": "22:34:05",
+   "tc_out": "22:39:00",
    "frames": 115
   }
  ],
@@ -10238,14 +10120,18 @@
     ],
     [
      4,
-     "M"
-    ],
-    [
-     6,
      "A"
     ],
     [
-     11,
+     6,
+     "M"
+    ],
+    [
+     8,
+     "A"
+    ],
+    [
+     12,
      "E"
     ],
     [
@@ -13140,15 +13026,7 @@
     ],
     [
      10,
-     "M"
-    ],
-    [
-     12,
      "A"
-    ],
-    [
-     17,
-     "E"
     ],
     [
      19,
@@ -14257,13 +14135,13 @@
    "who": "RADNUS",
    "text": "Lovely garden. I see they let your chatbot in.",
    "tag": "",
-   "on_s": 215.085,
-   "end_s": 217.935,
-   "file_s": 214.665,
-   "abs_in": 5162,
-   "abs_out": 5231,
-   "file_in": 5151,
-   "file_out": 5244,
+   "on_s": 205.085,
+   "end_s": 207.935,
+   "file_s": 204.665,
+   "abs_in": 4922,
+   "abs_out": 4991,
+   "file_in": 4911,
+   "file_out": 5004,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0030__radnus-A.wav",
    "stick_t": 2.21,
    "stick_in": 0.42,
@@ -14401,13 +14279,13 @@
    "who": "MAS",
    "text": "as a guest.",
    "tag": "",
-   "on_s": 218.385,
-   "end_s": 219.335,
-   "file_s": 218.015,
-   "abs_in": 5241,
-   "abs_out": 5265,
-   "file_in": 5232,
-   "file_out": 5275,
+   "on_s": 208.385,
+   "end_s": 209.335,
+   "file_s": 208.015,
+   "abs_in": 5001,
+   "abs_out": 5025,
+   "file_in": 4992,
+   "file_out": 5035,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0031__mas-manalt-C.wav",
    "stick_t": 5.51,
    "stick_in": 0.37,
@@ -14471,13 +14349,13 @@
    "who": "NOLE",
    "text": "If they go through with it, visitors' phones go in here. Like this.",
    "tag": "",
-   "on_s": 240.81,
-   "end_s": 245.01,
-   "file_s": 240.43,
-   "abs_in": 5779,
-   "abs_out": 5881,
-   "file_in": 5770,
-   "file_out": 5890,
+   "on_s": 230.81,
+   "end_s": 235.01,
+   "file_s": 230.43,
+   "abs_in": 5539,
+   "abs_out": 5641,
+   "file_in": 5530,
+   "file_out": 5650,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0032__nole-A.wav",
    "stick_t": 0.31,
    "stick_in": 0.38,
@@ -14639,13 +14517,13 @@
    "who": "MAS",
    "text": "we raise in the fall. she has till then.",
    "tag": "V.O.",
-   "on_s": 256.9467,
-   "end_s": 260.3867,
-   "file_s": 256.4867,
-   "abs_in": 6166,
-   "abs_out": 6250,
-   "file_in": 6155,
-   "file_out": 6265,
+   "on_s": 246.9467,
+   "end_s": 250.3867,
+   "file_s": 246.4867,
+   "abs_in": 5926,
+   "abs_out": 6010,
+   "file_in": 5915,
+   "file_out": 6025,
    "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-vo-13__mas-manalt-C.wav",
    "stick_t": 1.03,
    "stick_in": 0.46,
@@ -15148,9 +15026,9 @@
    "os": false
   },
   {
-   "s": 5162,
-   "e": 5231,
-   "hold_to": 5241,
+   "s": 4922,
+   "e": 4991,
+   "hold_to": 5001,
    "who": "RADNUS",
    "shown": "ELGOOG",
    "text": "Lovely garden. I see they let your chatbot in.",
@@ -15160,9 +15038,9 @@
    "os": false
   },
   {
-   "s": 5241,
-   "e": 5265,
-   "hold_to": 5277,
+   "s": 5001,
+   "e": 5025,
+   "hold_to": 5037,
    "who": "MAS",
    "shown": "CEO",
    "text": "as a guest.",
@@ -15172,9 +15050,9 @@
    "os": false
   },
   {
-   "s": 5779,
-   "e": 5881,
-   "hold_to": 5893,
+   "s": 5539,
+   "e": 5641,
+   "hold_to": 5653,
    "who": "NOLE",
    "shown": "ZAI",
    "text": "If they go through with it, visitors' phones go in here. Like this.",
@@ -15184,9 +15062,9 @@
    "os": false
   },
   {
-   "s": 6166,
-   "e": 6250,
-   "hold_to": 6262,
+   "s": 5926,
+   "e": 6010,
+   "hold_to": 6022,
    "who": "MAS",
    "shown": "CEO",
    "text": "we raise in the fall. she has till then.",

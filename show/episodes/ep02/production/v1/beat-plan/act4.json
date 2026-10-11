@@ -5,8 +5,8 @@
  "source": null,
  "_about": "Ep2 v1 beat plan (script-v1.md, the shooting script of proposal.md as agreed in its Decisions and Review logs), in Ep1 v3.5's beat-plan format (show/episodes/ep01/production/full-v3/beat-plan-v35/<seg>.json). Ep2 has no earlier lock, so source is null and every beat is action \"new\", in playing order, chained by \"after\"; a source-less build reads each beat's set, frame, room, chars, caption and est_s (Ep1's build_new), and its act, seq and the segment's cast (added here because there is no source timeline to inherit them from). est_s is a planning length: each scene is fitted to the proposal's runtime table (lines at their natural length and tempo; air scaled), never a measurement. Lines: new (e2-* ids; takes in audio/ep02/<seg>/; take_file is the slot the voice pass fills), cut_from (a new id cut from another take; Ep1's e1-a1-5-13 is read and copied, never edited), vo (Mas's inner voice). Placement: \"after\" is start+S for a beat's first line, else the line before it, with gap_s (negative with overlap: true = it starts that long before the line before it ends). Sounds: at is seconds from the beat's start, or after:<line>+S / before:<line>-S; gain in dB; new: true = to make (manifest §8). onscreen.add carries each text with its window \"(a-b s)\"; onscreen_items has the same with its kind (rail, card, stat, plate, post, doc, caption, lower-third, toast, ui, sign) and is authoritative: Ep1's strip_note drops trailing parentheses, so a text that itself ends in them (listed in each file's keep_parens) must be read from onscreen_items. Per-beat fields for the art, shot and score passes: scene, mode, pace, tempo (the gap before each line), camera, picture, style, style_leap, flashback, arrive, aftermath, transition (cause, sound, matched object), set_id (manifest §1), music (manifest §6's cue and its state), fix, why. Fix codes are in _spec.py.",
  "story_s": {
-  "target": 319,
-  "estimate": 319.0
+  "target": 309,
+  "estimate": 309.0
  },
  "scenes": [
   {
@@ -25,7 +25,7 @@
   },
   {
    "id": "19",
-   "target_s": 133,
+   "target_s": 123,
    "title": "Every phone they sell (with F2.1 and the walled garden)",
    "date": "JUN 10, 2024",
    "place": "the NopeAI lobby watch party | ELPPA's campus",
@@ -33,8 +33,8 @@
    "mode": "EXTENDED CONVERSATION → HIS POST → a CALL → FLASHBACK → SET-PIECE",
    "pace": "quick",
    "proposal_s": 138,
-   "adjust": "gives sc 20 its 4 s (above); Act Four stays 5:20 | the fixes pass: 1 s to sc 18 (from the scene's air)",
-   "estimate_s": 133.0,
+   "adjust": "gives sc 20 its 4 s (above); Act Four stays 5:20 | the fixes pass: 1 s to sc 18 (from the scene's air) | the last fixes: 19.17 (phrase 2: the flower beds, the raised hands, IRIS at 99%) cut; the garden is gate, the chatbot let in, then Radnus (the verify round's Act Four minor)",
+   "estimate_s": 123.0,
    "fit_scale": 1.379
   },
   {
@@ -2409,82 +2409,9 @@
    "why": "The garden: phrase 1."
   },
   {
-   "id": "19.17",
-   "action": "new",
-   "after": "19.16",
-   "act": "ACT FOUR",
-   "scene": "19",
-   "mode": "SET-PIECE (the walled garden)",
-   "pace": "quick",
-   "est_s": 10.0,
-   "frame": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-   "camera": "MEDIUM → WIDE · (phrase 2) at each phone-shaped flower it stops, raises a tiny hand, waits; the flower nods; then a text bubble",
-   "set": "void",
-   "set_id": "SET-21",
-   "room": "garden",
-   "chars": [
-    "chatgtp",
-    "iris"
-   ],
-   "lines": [],
-   "caption": "Inside, beds of phone-shaped flowers. At each one the bubble stops, raises a tiny hand and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice. On a bench, IRIS, stuck at 99%.",
-   "picture": "Text only: voice 5 is paused (D-56). One 4-bar phrase.",
-   "onscreen": {
-    "add": [
-     "99% (6.4-10 s)"
-    ]
-   },
-   "onscreen_items": [
-    {
-     "text": "99%",
-     "at": 6.4,
-     "until": 10.0,
-     "kind": "ui",
-     "holds": true
-    }
-   ],
-   "music": "E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate",
-   "sounds": [
-    {
-     "name": "flower_nod",
-     "at": 2.0,
-     "at_s": 2.0,
-     "gain": -30,
-     "new": true
-    },
-    {
-     "name": "chip_blip_bubble",
-     "at": 2.8,
-     "at_s": 2.8,
-     "gain": -26,
-     "new": true
-    },
-    {
-     "name": "flower_nod",
-     "at": 4.6,
-     "at_s": 4.6,
-     "gain": -30,
-     "new": true
-    },
-    {
-     "name": "chip_blip_bubble",
-     "at": 5.3,
-     "at_s": 5.3,
-     "gain": -26,
-     "new": true
-    }
-   ],
-   "fix": [
-    "P",
-    "FACT",
-    "R2"
-   ],
-   "why": "Inside the garden the guest asks first (facts A40: the ask-before-sending flow)."
-  },
-  {
    "id": "19.18",
    "action": "new",
-   "after": "19.17",
+   "after": "19.16",
    "act": "ACT FOUR",
    "scene": "19",
    "mode": "SET-PIECE (the walled garden)",
@@ -2531,7 +2458,7 @@
      "t_s": 5.51
     }
    ],
-   "caption": "Outside the hedge, Mas watches the raised hands go down the row. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
+   "caption": "Outside the hedge, Mas watches the gate the guest went in by. A few feet along the same hedge, RADNUS's head rises into frame, politely on the outside too. Radnus's polite smile holds a beat too long.",
    "picture": "Radnus not burning (R1). No V.O.: \"as a guest.\" and the held smile end the exchange (script review: the old V.O. 12 narrated the picture).",
    "music": "E02-11 · the garden: the same quartet as a garden-party arrangement (never a wedding march), thinning to one violin under the V.O.; the cello's pedal on the gate",
    "tempo": {
@@ -2545,7 +2472,8 @@
     "P",
     "KEEP",
     "FC",
-    "SR"
+    "SR",
+    "LF"
    ],
    "why": "\"as a guest.\": terms he set; Radnus's smile holds too long."
   },

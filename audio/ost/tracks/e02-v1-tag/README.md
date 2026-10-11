@@ -110,6 +110,10 @@ Both re-laid every mark to the moved events, and note QA stayed clean (no writte
 
 On the re-timed copies: THE RUN 0.04 s before its cut (a) and on it (b); the verdict 0.57 and 0.53 s after the chime; the held E♭ 0.16 and 0.24 s before the knot; FEAR pre-lapping its cut by 0.27 s where the lower third clears early (a), and waiting 0.27 s where it doesn't (b). On every lock the out is a bar line.
 
+## The last fixes (2026-10-11): the lower third a second longer
+
+23.06's lower third restores "…perfectly on AI…" and holds 4.15 s, so 23.06 is 5.6 s (+1.0) and 23.07 4.92 s (−1.0): the tag holds 37.0 s, and everything before 22.88 s is where it was ([fixes-v1.md](../../../../show/episodes/ep02/production/v1/fixes-v1.md), "Last fixes (lock owner)"). The pedal under the lower third runs to 28.56 s; FEAR enters an eighth after the cut to the balloon (28.56) and its held E-flat lands on the knot (knot_tie 32.60, the beat 32.625); the hook and his face are unchanged. No code change. **tag −19.95 LUFS-I, −3.15 dBTP, 0 holes, 0 fragments, F-major clean, pocket p10 10.8, `check.py` PASS** [M]; the engine's underscore p95 note (−16.96 LUFS against −17; HEAD −17.07) is an advisory. **Tried first and dropped:** the tag grown to 38 s. The grid's bar line is the tag's last frame, so every earlier event moved a second against it, and the re-laid score failed the spectral F-major check at 8.87 s (the chip's short A-flats read as A over a weak F, f-share 0.053). In the mix, three SFX at their +6 dB edge were raised by 0.4 dB (`sfx-rides.json`: 23.03 `ui_toast_pop`, 23.04 `orb_chime_F` and `ui_toast_pop`), because the re-mastered score sits 0.1 dB hotter.
+
 ## Measured
 
 | Section | s | LUFS-I | True peak | LUFS-M max |

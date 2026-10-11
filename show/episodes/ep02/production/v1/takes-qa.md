@@ -3,7 +3,7 @@
 > **Status: every line of the beat plans recorded through the Ep2 route and measured, 2026-10-09, by the dialogue recordist (the takes pass).** Nobody has listened (R8). Every verdict here is a measurement [M] unless it says it is a judgement [J]; the lines a human ear must check are in [§6](#6-for-the-ear).
 >
 > <!-- BEGIN generated:summary -->
-174 of 174 lines have a take (missing: none; unmeasured: none). **58 PASS** every check, **116 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 35 lines were read more than once. The takes pass sent 9,878 characters in 206 calls, **4,358 credits** by the API's own character-cost headers.
+174 of 174 lines have a take (missing: none; unmeasured: none). **59 PASS** every check, **115 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 35 lines were read more than once. The takes pass sent 9,900 characters in 207 calls, **4,368 credits** by the API's own character-cost headers.
 <!-- END generated:summary -->
 
 **Contents:** [1. What was recorded, and how](#1-what-was-recorded-and-how) · [2. The checks and the rule](#2-the-checks-and-the-rule) · [3. Every line](#3-every-line) · [4. Retakes](#4-retakes) · [5. The special lines](#5-the-special-lines) · [6. For the ear](#6-for-the-ear) · [7. Credits](#7-credits) · [8. Files and how to re-run](#8-files-and-how-to-re-run) · [9. Open issues, and the rules checked](#9-open-issues-and-the-rules-checked)
@@ -154,7 +154,7 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a2-0007 | rima | `e2-a2-0007__rima-tamuri-A.wav` | You'll be stage right you can see the whole screen from there and the stream can't see you | 6.23 / 6.65 (0.94) | 173 (143-193) | 173 | -16.0 · -3.0 | -57 · 35 dB |  | **LOOK**: floor 35 dB under the speech (p5; house bed depth 45) |
 | e2-a2-0008 | mas | `e2-a2-0008__mas-manalt-C.wav` | It's all yours. | 1.11 / 1.39 (0.80) | 162 | 130 | -16.0 · -2.7 | -85 · 70 dB |  | **PASS** |
 | e2-a2-0009 | rima | `e2-a2-0009__rima-tamuri-A.wav` | It is. Enjoy the view. | 2.05 / 2.01 (1.02) | 146 (143-193) | 171 | -16.0 · -1.9 | -56 · 35 dB |  | **LOOK**: floor 35 dB under the speech (p5; house bed depth 45) |
-| e2-vo-06 | mas | `e2-vo-06__mas-manalt-C.wav` · line settings: stability 0.65, style 0.0, speed 0.75 | Everyone gets it free. That's what makes the phone deal stick. | 5.05 / 5.38 (0.94) | 131 (110-130) | 119 | -18.1 · -3.9 | -83 · 63 dB |  | **LOOK**: 2 reads; tempo 131 wpm against his V.O. 110-130 |
+| e2-vo-06 | mas | `e2-vo-06__mas-manalt-C.wav` · line settings: stability 0.65, style 0.0, speed 0.75 | Everyone gets it free. | 1.76 / 1.98 (0.89) | 136 | 119 | -18.0 · -1.8 | -83 · 68 dB |  | **PASS**: 3 reads |
 | e2-a2-0010 | engineer | `e2-a2-0010__engineer-A.wav` | What if it freezes, live on the stream? | 2.32 / 2.75 (0.84) | 207 (162-218) | 141 | -16.0 · -3.2 | -56 · 38 dB |  | **LOOK**: length 0.84 of the plan; floor 38 dB under the speech (p5; house bed depth 45) |
 | e2-a2-0011 | rima | `e2-a2-0011__rima-tamuri-A.wav` | Then it freezes live and I keep talking it also sings we'll get to that | 5.62 / 5.70 (0.99) | 160 (143-193) | 167 | -16.1 · -2.2 | -58 · 34 dB |  | **LOOK**: floor 34 dB under the speech (p5; house bed depth 45) |
 | e2-a2-0012 | voice1 | `e2-a2-0012__voice1-A.wav` | Hi | 0.49 / 0.45 (1.09) | 122 | 189 | -16.0 · -2.2 | -83 · 70 dB |  | **PASS** |
@@ -294,7 +294,7 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a2-0033 | chatgtp | 5 | 4 read(s) at an earlier reading or setting: length 2.69 s against the plan's 5.26 (0.51) / length 2.34 s against the plan's 5.26 (0.45) / length 2.53 s against the plan's 5.26 (0.48) / length 2.61 s against the plan's 5.26 (0.50) | the first read: LOOK (length 0.58 of the plan; tempo 236 wpm against chatgtp at the planned 150 wpm +-15 %) |
 | e2-a2-0036 | rima-tamuri | 3 | asr: '(nothing)' heard 'um' (forced margin -6.0); pitch 129 Hz, -4.1 st from the role's 164 / pitch 72 Hz, -14.1 st from the role's 164 | seed +2000: LOOK (length 1.16 of the plan; floor 35 dB under the speech (p5; house bed depth 45)) |
 | e2-a2-0038 | engineer | 4 | 3 read(s) at an earlier reading or setting: asr: 'and' heard 'in' (forced margin -10.7) / asr: 'and' heard 'in' (forced margin -8.9) / passed | the first read: PASS |
-| e2-vo-06 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed | the first read: LOOK (tempo 131 wpm against his V.O. 110-130) |
+| e2-vo-06 | mas-manalt | 3 | 2 read(s) at an earlier reading or setting: passed / passed, tempo 131 wpm against his V.O. 110-130 | the first read: PASS |
 | e2-a3-0007 | bukaj | 2 | a 1.25 s silence inside the read | seed +1000: LOOK (length 0.71 of the plan; tempo 216 wpm against bukaj at the planned 160 wpm +-15 %) |
 | e2-vo-07 | mas-manalt | 3 | 2 read(s) at an earlier reading or setting: passed / passed, length 0.84 of the plan; tempo 146 wpm against his V.O. 110-130 | the first read: LOOK (tempo 134 wpm against his V.O. 110-130) |
 | e2-a3-0012 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.62 of the plan; tempo 216 wpm against Mas unhurried (~140) | the first read: LOOK (length 0.74 of the plan; tempo 181 wpm against Mas unhurried (~140)) |
@@ -381,7 +381,7 @@ The lines the numbers single out (a recogniser or name question, a pitch jump, o
 | e2-a4-0029 | mas-manalt | LOOK | length 0.70 of the plan; tempo 192 wpm against Mas unhurried (~140) |
 | e2-a4-0016 | mario | LOOK | asr: 'win' heard 'wins' (the recogniser's; the text scores -2.5 against what it heard) |
 
-The other 84 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
+The other 83 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
 <!-- END generated:ear -->
 
 ---
@@ -402,7 +402,7 @@ The other 84 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure
 **How it was counted** [M]: credits are the API's own `character-cost` headers, summed from every `manifest.json` under `audio/ep02/v1-el/ep02-v1/` (`el_qa.py report`). The subscription's counter moved **17,722 → 21,721** over the pass, a delta of exactly **3,999**, so no other pass spent credits meanwhile. MARIO (Kokoro), the cuts and the crowd sent nothing. **The lock QA (2026-10-09) added 66 credits**: three reads of V.O. 9 (`variants/variant-e2-vo-09-*.json`; the kept one is `stop1-s120`), which the generated total below now includes.
 
 <!-- BEGIN generated:credits -->
-Summed from every manifest at report time: 206 calls, 9,878 characters, **4,358 credits** (the takes pass).
+Summed from every manifest at report time: 207 calls, 9,900 characters, **4,368 credits** (the takes pass).
 <!-- END generated:credits -->
 
 ---

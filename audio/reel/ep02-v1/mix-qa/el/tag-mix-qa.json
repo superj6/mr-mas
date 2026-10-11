@@ -35,15 +35,15 @@
   "duck": {
    "by_mood_db": [
     [
-     "E02-13 out",
-     8
-    ],
-    [
      "E02-13 AUGUST",
      8
     ],
     [
      "E02-13",
+     8
+    ],
+    [
+     "E02-13 out",
      8
     ]
    ],
@@ -55,16 +55,16 @@
  },
  "measured": {
   "lufs_i": -16.0,
-  "true_peak_dbtp": -1.42,
+  "true_peak_dbtp": -1.45,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 7.9,
-  "gain_db": 3.74,
+  "lra_lu": 8.8,
+  "gain_db": 3.79,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.513,
-  "dialogue_lufs": -13.46,
-  "score_lufs_after_duck": -16.21,
-  "score_rms_under_speech_dbfs": -30.3,
-  "score_rms_between_speech_dbfs": -18.7,
+  "limiter_active_s": 0.581,
+  "dialogue_lufs": -13.42,
+  "score_lufs_after_duck": -16.17,
+  "score_rms_under_speech_dbfs": -30.1,
+  "score_rms_between_speech_dbfs": -18.6,
   "score_runs": {
    "count": 1,
    "shortest_s": 37.0,
@@ -75,8 +75,8 @@
     ]
    ]
   },
-  "rooms_lufs": -34.51,
-  "sfx_lufs": -30.13,
+  "rooms_lufs": -34.57,
+  "sfx_lufs": -29.98,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -95,11 +95,11 @@
  "file": "out/ep02/v1/mix/tag-mix.wav",
  "guard_db": null,
  "seam_head": {
-  "from_gain_db": 2.2,
-  "to_gain_db": 3.74,
+  "from_gain_db": 2.14,
+  "to_gain_db": 3.79,
   "ramp_s": 2.0,
   "after": "act4"
  },
- "built": "2026-10-10 19:51:15",
+ "built": "2026-10-11 02:56:04",
  "heard": "nothing here has been listened to; every number is measured"
 }

@@ -1,5 +1,5 @@
 // MR. MAS — Ep2 v1 · act4 · scene 19: EVERY PHONE THEY SELL (JUN 10, 2024; the NopeAI lobby's watch party | ELPPA's
-// campus; F2.1 in EARLY-WEB16; the walled garden). 20 shots, 3216 f on the v1 EL lock. The shots pass, 2026-10-09; the
+// campus; F2.1 in EARLY-WEB16; the walled garden). 19 shots on the v1 EL lock (20 until the last fixes cut 19.17). The shots pass, 2026-10-09; the
 // record is shots-act4.md. The staging is proposal.md sc 19 / script-v1 (the lock QA: the announcement and the
 // stream's roar come up 0.2 s before "And profit?", the lobby's cheer lands on "profit"):
 //   ARRIVE   19.01 the running keynote on the wall screen, the lobby half-listening (2 s): signs 202 / 102, the flyers
@@ -14,9 +14,9 @@
 //   F2.1     19.11 the push into his phone, the breadcrumb across the stage; 19.12 2006, the ad and its end card; 19.13
 //            the match on the pin: 2008, the sleeve tosses him the clicker; 19.14 he clicks, the map, its pins grey out
 //            to LAST UPDATED 2012 (no cause claimed); 19.15 the clicker becomes his 2024 phone in the same grip
-//   GARDEN   19.16-19.20 the phone's picture opens outward: the gate, the key, CHATGTP on its rope (GUEST); the raised
-//            hands; outside the hedge, Radnus; "as a guest."; the reverse through the closing gate (he loses the left
-//            third); the fold back into the phone, into his pocket
+//   GARDEN   19.16-19.20 the phone's picture opens outward: the gate, the key, CHATGTP on its rope (GUEST); outside
+//            the hedge, Radnus; "as a guest."; the reverse through the closing gate (he loses the left third); the fold
+//            back into the phone, into his pocket (the last fixes, 2026-10-11: 19.17, the flower beds and IRIS, cut)
 // The garden's CHATGTP speaks in text bubbles only (voice 5 is paused). ELPPA's stage and campus are generic.
 import {defineScene, layouts, mouth, roomMouth, mk, drawPlate} from '../../kit';
 import type {PxShot} from '../../kit';
@@ -26,7 +26,7 @@ import {party, tvClose, harasGerg, onStream, gergCall, HARAS_SEAT} from '../sets
 import {lawn, masLawn, phonePush, MAS_EDGE} from '../sets/campus';
 import {corner2006, matchClicker} from '../../art/sets/elppa';
 import {stage08, stageToss} from '../sets/f21';
-import {gardenGate, gardenBeds, gateReverse, phoneUnfold, outsideTruck, radnusMCU, masGuest} from '../sets/garden';
+import {gardenGate, gateReverse, phoneUnfold, outsideTruck, radnusMCU, masGuest} from '../sets/garden';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import {fill, bpt, bpw} from '../../art/kit';
@@ -185,16 +185,9 @@ L.add('19.16', {
     phoneUnfold(fb, scene, step);
   },
 });
-L.add('19.17', {
-  st: 'art/sets/garden gardenBeds ([W] phrase 2: inside, the beds of phone-shaped flowers; at a flower CHATGTP stops, raises one tiny hand and waits; the flower nods; only then a speech bubble pops over it, text only (a soft chip blip, no voice); on to the next flower, the same; IRIS on her bench at 99%)',
-  marks: {n1: ['snd', 'flower_nod', 1, 0], b1: ['snd', 'chip_blip_bubble', 1, 0], n2: ['snd', 'flower_nod', 2, 0], b2: ['snd', 'chip_blip_bubble', 2, 0]},
-  draw: (fb, k, sh, f) => {
-    const n1 = mk(sh, 'n1', 48), b1 = mk(sh, 'b1', 67), n2 = mk(sh, 'n2', 110), b2 = mk(sh, 'b2', 127);
-    const second = k >= b1 + 16;
-    const n = second ? n2 : n1, bb = second ? b2 : b1;
-    gardenBeds(fb, f, {at: second ? 4 : 3, hand: k >= (second ? n2 - 18 : 20) && k < bb + 6, nod: k < n ? 0 : k < n + 4 ? 1 : k < n + 12 ? 2 : k < n + 16 ? 1 : 0, bubble: k >= bb && k < bb + (second ? 120 : 16)});
-  },
-});
+// 19.17 (phrase 2: the beds of phone-shaped flowers, the raised hand, the nod, the text bubble, IRIS at 99%) is CUT at
+// the last fixes (2026-10-11; the beat plan's SCENE_ADJUST_LF): the garden is the gate, the chatbot let in, then Radnus.
+// gardenBeds stays in the set (the art's stills still draw it).
 L.add('19.18', {
   st: 'act4/sets/garden outsideTruck → radnusMCU → masGuest → radnusMCU ([2S] phrase 3, outside the hedge, established on a truck along it: Mas screen-left, phone in hand, watching the row; RADNUS already a few feet along the same hedge, screen-right, politely outside too, not burning; then the exchange in singles: [MCU] Radnus (the roll call\'s bust, turned to Mas): "Lovely garden. I see they let your chatbot in." lip-synced; [MCU] Mas, dry: "as a guest." lip-synced; [MCU] Radnus\'s polite smile holds a beat too long)',
   face: {RADNUS: 'lip', MAS: 'lip'},

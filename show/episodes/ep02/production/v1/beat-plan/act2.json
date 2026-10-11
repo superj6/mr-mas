@@ -35,7 +35,7 @@
    "proposal_s": 52,
    "adjust": "the lock QA: the engineer rehearses to Rima 0.3 s after \"We're on in five.\" (was 0.92 s); x1.679 -> x1.609 | the fixes pass: V.O. 6 in the wings (9.04b), the launch's plan line; at 56 s the scene fits x1.29 (at 53 it would fit x0.83, under its design air)",
    "estimate_s": 56.0,
-   "fit_scale": 1.29
+   "fit_scale": 1.543
   },
   {
    "id": "10",
@@ -718,7 +718,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 7.81,
+   "est_s": 7.88,
    "frame": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
    "camera": "MEDIUM · the ENGINEER rehearsing to her → SCR · the monitor: yes!!",
    "set": "stage",
@@ -765,14 +765,14 @@
    "picture": "The product answers before it's asked (the season's hint).",
    "onscreen": {
     "add": [
-     "yes!! (4.85-7.81 s)"
+     "yes!! (4.85-7.88 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "yes!!",
      "at": 4.85,
-     "until": 7.81,
+     "until": 7.88,
      "kind": "ui",
      "holds": true
     }
@@ -814,7 +814,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 4.16,
+   "est_s": 4.59,
    "frame": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
    "camera": "SCR · the monitor's transcript drops a [laughter] tag → WIDE · Gerg at his road case in the foreground",
    "set": "stage",
@@ -835,24 +835,24 @@
      "take": "new · GERG (Marcus · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0005__gerg-mockbran-A.wav",
      "note": "[INVENTED · accurate: the old voice mode lost laughter; the new model hears it (facts A23)]",
-     "after": "start+1.68",
+     "after": "start+2.01",
      "gap_s": 0.0,
      "len_s": 1.96,
-     "t_s": 1.68
+     "t_s": 2.01
     }
    ],
    "caption": "He laughs, nervously. On the monitor, the old voice mode's transcript never catches the laugh: a tag, [laughter], drops off the bottom of the screen. GERG, at his road case, warns him. Beyond him, the engineer's laugh stops on \"laugh.\"",
    "picture": "The tag is THE PLAN's plant (it lies at the bottom of the grate).",
    "onscreen": {
     "add": [
-     "[laughter] (0.65-4.16 s)"
+     "[laughter] (0.77-4.59 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "[laughter]",
-     "at": 0.65,
-     "until": 4.16,
+     "at": 0.77,
+     "until": 4.59,
      "kind": "ui",
      "holds": true
     }
@@ -861,18 +861,18 @@
    "sounds": [
     {
      "name": "engineer_laugh_take",
-     "at": 0.194,
-     "at_s": 0.19,
+     "at": 0.232,
+     "at_s": 0.23,
      "gain": -22,
      "new": true,
      "note": "the sound pass's request (lock-v1.md §6): a nervous laugh in the ENGINEER's own library voice, never an imitation of anyone (S6), from the beat's first frames, ducked under Gerg's line, stopping on his \"laugh.\" (the word ends 1.88 s into the take); it sets up the [laughter] tag and \"It can even laugh back\"",
-     "dur": 3.37,
-     "until_s": 3.56
+     "dur": 3.66,
+     "until_s": 3.89
     },
     {
      "name": "tag_drop",
-     "at": 0.775,
-     "at_s": 0.78,
+     "at": 0.928,
+     "at_s": 0.93,
      "gain": -26,
      "new": true
     }
@@ -897,7 +897,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 12.88,
+   "est_s": 13.17,
    "frame": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
    "camera": "2S · Mas, screen-left, and RIMA, the wings behind them (no cut-ins)",
    "set": "stage",
@@ -918,10 +918,10 @@
      "take": "new · MAS (Jeremy · EL) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0006__mas-manalt-C.wav",
      "note": "[INVENTED]",
-     "after": "start+0.64",
+     "after": "start+0.77",
      "gap_s": 0.0,
      "len_s": 0.68,
-     "t_s": 0.64
+     "t_s": 0.77
     },
     {
      "id": "e2-a2-0007",
@@ -936,7 +936,7 @@
      "after": "e2-a2-0006",
      "gap_s": 0.5,
      "len_s": 6.23,
-     "t_s": 1.82
+     "t_s": 1.95
     },
     {
      "id": "e2-a2-0008",
@@ -951,7 +951,7 @@
      "after": "e2-a2-0007",
      "gap_s": 0.5,
      "len_s": 1.11,
-     "t_s": 8.55
+     "t_s": 8.68
     },
     {
      "id": "e2-a2-0009",
@@ -966,7 +966,7 @@
      "after": "e2-a2-0008",
      "gap_s": 0.4,
      "len_s": 2.05,
-     "t_s": 10.06
+     "t_s": 10.19
     }
    ],
    "caption": "MAS asks the question Gerg asked him in Ep1. RIMA answers the next question. He grants her a stage that isn't his to grant; she takes it back as a fact.",
@@ -996,7 +996,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.72,
+   "est_s": 5.36,
    "frame": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
    "camera": "MCU · Mas in the wings, alone in the work light, turned toward the stage (V.O. 6)",
    "set": "stage",
@@ -1012,20 +1012,20 @@
      "who": "mas",
      "vo": true,
      "tag": "V.O.",
-     "text": "everyone gets it free. that's what makes the phone deal stick.",
-     "delivery": "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call behind it; 'free' plain, no weight on 'stick'",
+     "text": "everyone gets it free.",
+     "delivery": "on his face in the wings after Rima's 'Enjoy the view.', after a held look at the stage he gave away; practical, settled, a decision already made; 'free' plain, no weight on 'everyone'",
      "kind": "plan (distribution)",
      "take": "new · Jeremy (EL, set A, V.O. settings: stability 0.65, speed 0.85) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-vo-06__mas-manalt-C.wav",
      "note": "[INVENTED · V.O. · script-v1]",
-     "after": "start+0.77",
+     "after": "start+2.2",
      "gap_s": 0.0,
-     "len_s": 5.05,
-     "t_s": 0.77
+     "len_s": 1.76,
+     "t_s": 2.2
     }
    ],
-   "caption": "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. His thought.",
-   "picture": "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8).",
+   "caption": "Rima has turned back to her running order. Mas alone in the frame, in the work light, turned toward the stage he has just given away. He looks at it a moment. His thought.",
+   "picture": "The V.O. types in his cyan; his lips still. A face light one step (P10). Nothing about the voice, nothing about why he posts later (W8). The last fixes: the line is the hint alone (1.8 s), so the shot holds his look before it (head 2.2 s, pinned: \"Enjoy the view.\" lands on his face) and a short settle after (1.4 s, pinned).",
    "music": "E02-07 ONE WORD · the demo's walk-on tune, heard through the wall, ducked (one tune in three rooms)",
    "tempo": {
     "pace": "quick",
@@ -1035,9 +1035,10 @@
    "fix": [
     "P",
     "VO",
-    "FX"
+    "FX",
+    "LF"
    ],
-   "why": "V.O. 6: the launch's plan (distribution): the free tier is what makes the ELPPA deal stick (the fixes pass: four minutes of the launch with no inner voice; W5, W6)."
+   "why": "V.O. 6: the launch's plan (distribution), the hint only: everyone gets it free (the fixes pass: four minutes of the launch with no inner voice; W5, W6; the last fixes: its second half stated the strategy, W7)."
   },
   {
    "id": "9.05",
@@ -1047,7 +1048,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 9.92,
+   "est_s": 10.24,
    "frame": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "camera": "WIDE · Mas walks off frame-left; a pan with RIMA as she crosses to the monitor, the ENGINEER following",
    "set": "stage",
@@ -1068,10 +1069,10 @@
      "take": "new · the DEMO ENGINEER (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0010__engineer-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.29",
+     "after": "start+1.54",
      "gap_s": 0.0,
      "len_s": 2.32,
-     "t_s": 1.29
+     "t_s": 1.54
     },
     {
      "id": "e2-a2-0011",
@@ -1086,7 +1087,7 @@
      "after": "e2-a2-0010",
      "gap_s": 0.3,
      "len_s": 5.62,
-     "t_s": 3.91
+     "t_s": 4.16
     }
    ],
    "caption": "Mas walks off frame-left, to stage right. RIMA crosses the wings to the monitor; the engineer follows her.",
@@ -1114,7 +1115,7 @@
    "scene": "9",
    "mode": "EXTENDED CONVERSATION",
    "pace": "quick",
-   "est_s": 6.57,
+   "est_s": 6.82,
    "frame": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
    "camera": "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
    "set": "stage",
@@ -1135,10 +1136,10 @@
      "take": "new · VOICE 1 (new · audition) · audio/ep02/",
      "take_file": "audio/ep02/v1-el/ep02-v1/act2/wav/e2-a2-0012__voice1-A.wav",
      "note": "[INVENTED]",
-     "after": "start+1.29",
+     "after": "start+1.54",
      "gap_s": 0.0,
      "len_s": 0.49,
-     "t_s": 1.29
+     "t_s": 1.54
     },
     {
      "id": "e2-a2-0013",
@@ -1153,7 +1154,7 @@
      "after": "e2-a2-0012",
      "gap_s": 0.3,
      "len_s": 0.33,
-     "t_s": 2.08
+     "t_s": 2.33
     },
     {
      "id": "e2-a2-0014",
@@ -1168,7 +1169,7 @@
      "after": "e2-a2-0013",
      "gap_s": 0.3,
      "len_s": 0.44,
-     "t_s": 2.71
+     "t_s": 2.96
     },
     {
      "id": "e2-a2-0015",
@@ -1183,7 +1184,7 @@
      "after": "e2-a2-0014",
      "gap_s": 0.3,
      "len_s": 0.7,
-     "t_s": 3.45
+     "t_s": 3.7
     },
     {
      "id": "e2-a2-0016",
@@ -1198,69 +1199,69 @@
      "after": "e2-a2-0015",
      "gap_s": 0.3,
      "len_s": 0.52,
-     "t_s": 4.45
+     "t_s": 4.7
     }
    ],
    "caption": "She taps the monitor and a settings panel opens: VOICE, five labelled slots, VOICE 1 to VOICE 5, under a tag, SINCE SEP 2023. She hovers each, and each says hello in a different tone. The fifth, Hey., holds a beat longer than the others as the panel keeps unfolding past the monitor's bezel, square by square, onto the floor, and the floor is a drafting grid.",
    "picture": "VOICE 5 is CHATGTP's own voice (R1): the voice we'll hear on stage. A [SCR] with its bezel in frame, so the bezel can be broken.",
    "onscreen": {
     "add": [
-     "VOICE (0.39-6.57 s)",
-     "SINCE SEP 2023 (0.52-6.57 s)",
-     "VOICE 1 (0.52-6.57 s)",
-     "VOICE 2 (0.52-6.57 s)",
-     "VOICE 3 (0.52-6.57 s)",
-     "VOICE 4 (0.52-6.57 s)",
-     "VOICE 5 (0.52-6.57 s)"
+     "VOICE (0.46-6.82 s)",
+     "SINCE SEP 2023 (0.62-6.82 s)",
+     "VOICE 1 (0.62-6.82 s)",
+     "VOICE 2 (0.62-6.82 s)",
+     "VOICE 3 (0.62-6.82 s)",
+     "VOICE 4 (0.62-6.82 s)",
+     "VOICE 5 (0.62-6.82 s)"
     ]
    },
    "onscreen_items": [
     {
      "text": "VOICE",
-     "at": 0.39,
-     "until": 6.57,
+     "at": 0.46,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "SINCE SEP 2023",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 1",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 2",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 3",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 4",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     },
     {
      "text": "VOICE 5",
-     "at": 0.52,
-     "until": 6.57,
+     "at": 0.62,
+     "until": 6.82,
      "kind": "ui",
      "holds": true
     }
@@ -1270,14 +1271,14 @@
     {
      "name": "panel_unfold_step",
      "at": "after:e2-a2-0016+0.2",
-     "at_s": 5.17,
+     "at_s": 5.42,
      "gain": -26,
      "new": true
     },
     {
      "name": "drafting_ink_stroke",
      "at": "after:e2-a2-0016+1.0",
-     "at_s": 5.97,
+     "at_s": 6.22,
      "gain": -26
     }
    ],

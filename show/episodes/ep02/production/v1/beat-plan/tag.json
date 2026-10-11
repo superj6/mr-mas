@@ -394,7 +394,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 4.6,
+   "est_s": 5.6,
    "frame": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
    "camera": "POV · Aug 21: a TV interview in its own player (hands and tie only); his own words on its lower third",
    "set": "screen",
@@ -405,17 +405,17 @@
    ],
    "lines": [],
    "caption": "A TV interview in its own player: hands and tie only, no face. The candidate's own words on its lower third.",
-   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August.",
+   "picture": "The faithful crop, about AI fakes of himself (D-51). The neutral text blip carries it; no voice. No rail (the film's fixes pass): the tag's AUG 5 and its chapter carry August. The last fixes (2026-10-11): \"…perfectly on AI…\" restored (facts A69's verbatim fragments; the verify round's X4 blocker, part 1), so the danger reads as AI fakes; 73 characters, read floor 3.9 s: the lower third holds 4.15 s (1.4-5.55 s) and the beat is 1.0 s longer (23.07 gives it).",
    "onscreen": {
     "add": [
-     "…having me speak… It's a little bit dangerous out there. (1.4-4.55 s)"
+     "…having me speak… perfectly on AI… It's a little bit dangerous out there. (1.4-5.55 s)"
     ]
    },
    "onscreen_items": [
     {
-     "text": "…having me speak… It's a little bit dangerous out there.",
+     "text": "…having me speak… perfectly on AI… It's a little bit dangerous out there.",
      "at": 1.4,
-     "until": 4.55,
+     "until": 5.55,
      "kind": "lower-third"
     }
    ],
@@ -435,9 +435,10 @@
     "R2",
     "FC",
     "GR",
-    "SR"
+    "SR",
+    "LF"
    ],
-   "why": "His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024)."
+   "why": "His own words (facts A69: the Fox Business interview that aired Wednesday, Aug 21, 2024), with their subject: AI fakes."
   },
   {
    "id": "23.07",
@@ -447,7 +448,7 @@
    "scene": "23",
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
-   "est_s": 5.92,
+   "est_s": 4.92,
    "frame": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "camera": "POV · the player's chrome clears: on THE PODIUM (facing away), the same hands pump up a chatbot-shaped balloon and tie it on",
    "set": "screen",
@@ -458,34 +459,34 @@
    ],
    "lines": [],
    "caption": "The player's chrome clears. On THE PODIUM, which still faces away, the same hands pump up a balloon shaped like a chatbot's speech bubble, dot eyes and all, and tie it to the podium.",
-   "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say.",
+   "picture": "Wordless invented business outside the broadcast (D-32). Mas's product's shape, none of his say. The last fixes (2026-10-11): pinned at 4.92 s (was 5.92 fitted), the second 23.06's lower third needs for its read; the pumps a beat apart after the dissolve (the hands land at 0.67 s), the knot on the Podium's held E-flat.",
    "music": "E02-13 · RUMPT's Podium in its FEAR colour (cup-muted brass, pp, E♭ minor; tremolo low strings; a timpani roll) under the balloon only",
    "sounds": [
     {
      "name": "balloon_pump",
-     "at": 0.807,
-     "at_s": 0.81,
+     "at": 0.75,
+     "at_s": 0.75,
      "gain": -26,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 1.884,
-     "at_s": 1.88,
+     "at": 1.75,
+     "at_s": 1.75,
      "gain": -25,
      "new": true
     },
     {
      "name": "balloon_pump",
-     "at": 2.96,
-     "at_s": 2.96,
+     "at": 2.75,
+     "at_s": 2.75,
      "gain": -24,
      "new": true
     },
     {
      "name": "knot_tie",
-     "at": 4.575,
-     "at_s": 4.57,
+     "at": 4.1,
+     "at_s": 4.1,
      "gain": -26,
      "new": true
     }
@@ -494,7 +495,8 @@
     "P",
     "R2",
     "FC",
-    "GR"
+    "GR",
+    "LF"
    ],
    "why": "The candidate has hold of something shaped like Mas's chatbot."
   },
@@ -507,15 +509,15 @@
    "mode": "MONTAGE on his monitor",
    "pace": "normal",
    "est_s": 1.6,
-   "frame": "POV · the hook: the string goes taut",
-   "camera": "POV · the hook: the string goes taut",
+   "frame": "POV · the hook: the balloon lifts; the string snaps taut, straight up out of frame",
+   "camera": "POV · the hook: the balloon lifts; the string snaps taut, straight up out of frame",
    "set": "screen",
    "set_id": "SET-08",
    "room": "darkroom",
    "chars": [],
    "lines": [],
-   "caption": "The string goes taut, as if someone on the far side of the podium had just taken hold of it.",
-   "picture": "",
+   "caption": "The balloon lifts. Its string snaps taut, straight up out of the top of the frame, and a beat later one more tug takes it higher. Nobody is behind the podium.",
+   "picture": "The final fix round's restaging (guardrail X4): the pull is the balloon's own, upward; no one on the far side of the podium (the last fixes brought this description in line, 2026-10-11).",
    "music": "E02-13 · the Podium thins to one held chord",
    "sounds": [
     {
@@ -528,7 +530,9 @@
    ],
    "fix": [
     "P",
-    "R2"
+    "R2",
+    "GR",
+    "LF"
    ],
    "why": "The hook (Ep3)."
   },

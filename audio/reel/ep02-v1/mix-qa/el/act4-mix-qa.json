@@ -1,9 +1,9 @@
 {
  "segment": "act4",
  "variant": "el",
- "seconds": 319.0,
- "frames": 7656,
- "samples": 15312000,
+ "seconds": 309.0,
+ "frames": 7416,
+ "samples": 14832000,
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act4.json",
  "dialogue": {
   "lines": 38,
@@ -100,23 +100,27 @@
  "score": {
   "file": "audio/ost/tracks/e02-v1-act4/render/music-el.wav",
   "cues": "audio/ost/tracks/e02-v1-act4/cues-el.json",
-  "length_s": 319.0,
+  "length_s": 309.0,
   "length_vs_segment_s": 0.0,
   "lufs_as_delivered": -20.22,
   "lufs_after_gain": -20.22,
   "duck": {
    "by_mood_db": [
     [
-     "E02-12",
+     "E02-12 ONE DOOR",
      7
     ],
     [
-     "E02-12 ONE DOOR",
+     "E02-12",
      7
     ],
     [
      "E02-11 LEVERAGE, QUARTET",
      9
+    ],
+    [
+     "room tone only",
+     9.0
     ],
     [
      "room tone only (the quartet has ended)",
@@ -127,16 +131,12 @@
      9.0
     ],
     [
-     "E02-11",
-     9
-    ],
-    [
-     "room tone only",
-     9.0
-    ],
-    [
      "room tone only; the pin's soft knock",
      9.0
+    ],
+    [
+     "E02-11",
+     9
     ]
    ],
    "cue_sheet_overrides": [],
@@ -145,13 +145,13 @@
   },
   "designed_silences": [
    [
-    266.35,
-    282.98,
+    256.35,
+    272.98,
     "the quartet has ended as the complaint left the lobby (the cello's last pizzicato on the (FOR NOW) note's landing); room tone only under the dark room's Jun 19 post (Alyi's own act: W8, the plan's \"under the dark room, room tone only\") and the hard cut to white; the re-entry is E02-12's first felt note as the lot appears"
    ],
    [
-    307.388,
-    313.0,
+    297.388,
+    303.0,
     "THE DESIGNED STOP (22.06): the flap swings shut on its spring in room tone only; Mas at the shut flap; the re-entry as his raised hand lowers (22.08)"
    ]
   ],
@@ -199,34 +199,34 @@
   "lufs_i": -16.0,
   "true_peak_dbtp": -1.47,
   "sample_peak_dbfs": -1.5,
-  "lra_lu": 8.5,
-  "gain_db": 2.2,
+  "lra_lu": 8.6,
+  "gain_db": 2.14,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.409,
-  "dialogue_lufs": -13.99,
-  "score_lufs_after_duck": -19.52,
-  "score_rms_under_speech_dbfs": -29.4,
-  "score_rms_between_speech_dbfs": -20.2,
+  "limiter_active_s": 0.389,
+  "dialogue_lufs": -14.05,
+  "score_lufs_after_duck": -19.67,
+  "score_rms_under_speech_dbfs": -29.5,
+  "score_rms_between_speech_dbfs": -20.3,
   "score_runs": {
    "count": 3,
    "shortest_s": 6.05,
    "runs": [
     [
      0.0,
-     267.25
+     257.25
     ],
     [
-     282.95,
+     272.95,
      24.45
     ],
     [
-     312.95,
+     302.95,
      6.05
     ]
    ]
   },
-  "rooms_lufs": -34.66,
-  "sfx_lufs": -29.99,
+  "rooms_lufs": -34.73,
+  "sfx_lufs": -29.89,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -234,7 +234,7 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 31,
+   "count": 30,
    "rising": 24,
    "rising_at_a_word": 19,
    "rising_at_an_sfx": 0,
@@ -242,20 +242,20 @@
     5.35,
     58.7,
     113.4,
-    283.0,
-    313.0
+    273.0,
+    303.0
    ],
-   "falling": 7
+   "falling": 6
   }
  },
  "file": "out/ep02/v1/mix/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.58,
-  "to_gain_db": 2.2,
+  "to_gain_db": 2.14,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-10-11 01:05:33",
+ "built": "2026-10-11 02:30:55",
  "heard": "nothing here has been listened to; every number is measured"
 }

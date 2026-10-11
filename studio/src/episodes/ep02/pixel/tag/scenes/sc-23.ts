@@ -140,7 +140,7 @@ L.add('23.05', {
   },
 });
 L.add('23.06', {
-  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen broadcastPainter ([POV] the Aug 21 interview in its own plain player (no network, no logo, the speaker muted): the suit from the chin down, the over-long red tie, his hands talking (art/cast/hands2, the sleeves foreshortened from below), no face, no voice; its lower third slides in whole: "…having me speak… It\'s a little bit dangerous out there." (his real words, the faithful crop), held for its read; no rail since the film\'s fixes pass)',
+  st: 'Ep1 kits/mas-monitor drawMonitorPOV + tag/sets/screen broadcastPainter ([POV] the Aug 21 interview in its own plain player (no network, no logo, the speaker muted): the suit from the chin down, the over-long red tie, his hands talking (art/cast/hands2, the sleeves foreshortened from below), no face, no voice; its lower third slides in whole: "…having me speak… perfectly on AI… It\'s a little bit dangerous out there." (his real words, the faithful crop, its subject the AI fakes since the last fixes), held for its read; no rail since the film\'s fixes pass)',
   marks: {lower: ['txt', '…having me speak', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const l0 = mk(sh, 'lower', 33);

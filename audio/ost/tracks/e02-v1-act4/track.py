@@ -823,8 +823,9 @@ def cue_leverage(tl):
                      rel=0.15)
     c.mark(G0, 'the garden, phrase 1 (the gate opens; the guest on its velvet rope): the first violin\'s tune, the '
                'viola\'s broken chords, the cello\'s pizzicato; the chip\'s square doubles its top note', hit=False)
-    c.mark(e['g2'], 'phrase 2 (the raised hands, the nods, the text bubbles: the SFX\'s chip blips): the tune asks '
-                    '(the #11 held), then answers', hit=False)
+    if tl.has('19.17'):                       # (the last fixes, 2026-10-11: 19.17 cut; the garden is one phrase)
+        c.mark(e['g2'], 'phrase 2 (the raised hands, the nods, the text bubbles: the SFX\'s chip blips): the tune asks '
+                        '(the #11 held), then answers', hit=False)
     # phrase 3: one violin under the exchange; the falling step in the held smile; the cello's C on the gate
     gate_in = lead_in(c, e['gate'])
     c.rebow('vln1', 'Db5', ph3, (guest['end'] if guest else e['gate'] - 2.0) + 0.35, 0.16, seg=5.0, xf=1.0,
@@ -836,7 +837,8 @@ def cue_leverage(tl):
                 'and "as a guest."', hit=False)
     c.mark(fall_t, 'Radnus\'s smile holds a beat too long: the violin falls a semitone (D-flat to C: the pang begins)',
            hit=False)
-    secs.append(('I1 the garden: phrases 1 and 2 (the garden-party quartet)', G0, ph3))
+    secs.append((('I1 the garden: phrases 1 and 2 (the garden-party quartet)' if tl.has('19.17') else
+                  'I1 the garden: phrase 1 (the garden-party quartet; 19.17 cut at the last fixes)'), G0, ph3))
     secs.append(('I2 phrase 3: one violin under the exchange; the held smile', ph3, gate_in))
     # ================================================================ J: the gate; zAI (the C pedal; the 808; the Launch)
     morn = lead_in(c, e['morning'])
