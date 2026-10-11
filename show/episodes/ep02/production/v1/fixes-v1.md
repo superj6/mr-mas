@@ -2,7 +2,7 @@
 
 > **The episode review's findings, segment by segment, and what each fixer did.** Each segment's fixer adds its own section below; a finding that touches another segment says so where it is logged. Severity is the review's (blocker, major, minor). Every claim is [M] measured or [J] judged; nothing here was watched in real time or heard (R8).
 
-**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10)
+**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10)
 
 ---
 
@@ -316,3 +316,39 @@ MRMAS_MAX_LOAD=40 ops/rebuild-act.sh --ep 2 act4 --only mux     # and act3 (its 
 - **19.13:** the high toss and the push onto the collars at speed: does the beat read in 5 s, and does the drift-free start keep the match on the pin clean?
 - **22.03's dim flick:** enough to answer sc 14's verbs, not a wink?
 - **22.07's arm** on the 3D plate; **20.04's caged phone**; **19.19's garden side**.
+
+---
+
+## Outro (the fixes pass, 2026-10-10)
+
+**Scope:** the major and the minor were both applied, the minor in full except its second option: the voice-cast page is **kept** (the major's own fix says it can stay) and **held for the showrunner's call**, with the question written down (below), since this pass runs without intermediate feedback. **No product is named on screen any more; the verdict is Ep1's.** No timing change: the outro is still 360 f, 15.000 s, and the cut, the scans and the score's bars are where they were, so the lock's clock, the score's notes and the film's chapter times don't move. Picture: the outro re-rendered whole (`tools/render.sh`: one 360-frame composition, no per-scene cache). Sound: two toast ticks gone with the chips; the outro's mix and `outro-mix.wav` (the copy the film plays) rebuilt. Text kept in step: the script, the proposal (D-100), pipeline.md, assembly.md §8, the lock's transcript (`lock_report.py`), the film transcript's reader (`qa.py`), `measure.py`, and OUTRO-PROPOSALS §3's ladder. Record of the outro: `studio/src/episodes/ep02/outro/README.md` ("The fixes pass").
+
+| # | Sev. | Where | Finding (short) | What was done | Check |
+|---|---|---|---|---|---|
+| 1 | major | outro page 2, 23:33:18-23:40:09: the tools chips | Real product names on screen (`claude code` beside its parody MISANTHROPIC/CLOD, `elevenlabs`, `veo 3.1 fast via runway` …): OUTRO-PROPOSALS §1.1, outro B's own spec, says the disclosure "on screen … names no product. That keeps the picture to parody names only", and §10 leaves on-screen tool names open; Ep1's approved outro had only the credit page | **The safe default: both tools chips are cut** (`timeline.ts`: no `TOOLS`; `scene.ts`: no chips on 5.1/5.2, no tools type for the scan to find), and their two toast ticks with them (`audio/mix.py`). **The product-free line was not put in their place:** the agreed outro is the model credit and `prompt: jgon` (SHOWRUNNER-NOTES 3-4), and page 1's `art · script · music · voices · edit: opus 5.5` already says it; adding a disclosure row is itself the showrunner's call. **Mario's row reads `am_liam`** (was `am_liam (kokoro)`: Kokoro-82M is a product too). **The named tools go in the description** (LEARNINGS M4): the release pass's list in assembly.md §8.2 now carries them (Claude Code, Remotion, Blender, FFmpeg, ElevenLabs, Kokoro-82M, Veo 3.1 Fast via Runway). With the chips gone, page 2 is the header chip and the cast alone, so it is **centred on the Orb's eye line** (it hung at the top over the tools), and the second scan's fan is fitted to the cast's own angles (`scene.ts FAN2`: 207° → 147°, was 224° → 143°), still 25 frames, top to bottom. The score is unchanged (bar 5's labels only: the celesta's flat line now plays under the held page) | `preview.ts check` on the encoded frames: **ok**; 31 rows, all clear of the Orb (rightmost x 281), 0 overlaps, every row over its P15 floor; no row names a product [M]. Looked at o170, o196, o208, o260, o330 from the encoded MP4 at 1920×1080 and the keyframes sheet [J] |
+| 2 | minor | 23:26-23:41, both pages | The verdict `viewer: verified: human` (a double colon; Ep1 aired `viewer: human ✓`); the cast page's ~30 names plus vendor names for 5.5 s: unreadable, and an unapproved on-screen tool list | **The verdict is Ep1's `viewer: human ✓`** (`VERDICT`; the shared 7-px face draws the ✓, as Ep1's did). The tool list: row 1. **The cast page is kept and its question goes to the showrunner** (below): it is 26 rows of roles (491 characters, was 597 with the tools) held 5.5 s, a credits page to pause on, not to read in order (31 s at 16 cps). OUTRO-PROPOSALS §3's drift ladder said `viewer: verified: human` for Ep1-5, which is how the titles pass got it: its row now reads `viewer: human ✓` (as aired), so Ep3-5 don't repeat it | page 1 read in order at 16 cps now finishes **1.0 s** before the page turns (was 0.5 s); the verdict legible from o121, 2.46 s [M]; o128, o170 at full size [J] |
+
+### The picture, the sound and the text
+
+- **The picture** (`tools/render.sh`, Remotion `outro-b-ep2`, 360 f): `out/ep02/v1/outro/outro-b-ep2.mp4`, 15.000 s, 1920×1080, H.264 + AAC. The text QA (`sheets.py`, the encoded frames against the exact native frames): **ok**, max error 5 of 255 over 31 rows (was 7 over 33), contrast 5.9:1 to 17.7:1. Flash (`flash_seg.py`): 0 in any second, 0 red [M]. `tsc --noEmit` over the outro's entry: 0 errors [M].
+- **The outro's mix** (`audio/mix.py`): every loudness number as before to the 0.01 dB: page 1 −15.32 LUFS (Ep1 −15.29), page 2 −18.19, the file −16.55 LUFS-I, −3.15 dBTP, momentary max −11.0, short-term p95 −14.6, the bars unchanged; the limiter's most 1.81 dB (was 1.79: the score and the vocal pad don't re-render bit-identically, so the stems' bytes changed) [M]. The score (E02-14): album −16.01 LUFS, one marker warning (2.2, the pad's F, as before; 5.2's went with its mark).
+- **The film's copy** (`mix_episode.py --all`, which builds `out/ep02/v1/mix/outro-mix.wav` from the outro's WAV with the tag's hum under its first 2 s): `outro-mix.wav` rebuilt (new sha1); its seam QA unchanged: the tag's hum 2.0 s under it, the first hit −6 dB at 0.0 s, the seam +0.8 dB (400 ms), +1.1 dB (200 ms). **Every story segment's mix is byte-identical** to the Act Four fixer's (sha1 of all seven), the episode −15.74 LUFS, dialogue spread 0.86 LU; the QA JSONs differed only in their timestamps and set order, so the committed ones were kept [M]. The audit (`sound_audit.py`) covers the story segments only, so it was not re-run.
+- **The text:** `lock_report.py --md` re-run: the transcript's outro rows are page 1 in screen order with `viewer: human ✓`, and **the cast page at 23:34:12** (read from the outro's `timeline.ts`, as `qa.py` reads it for the film transcript; this closes assembly.md §8.1's open row); `lock-v1.md`'s generated blocks unchanged, 21 of 21 marks ok [M]. `qa.py`'s reader copes with no `TOOLS` list (tested: page 1's four rows, page 2's 26 cast rows, no tools) [M].
+- **Ep1** untouched: `sha1sum -c ops/reorg/ep01-final.sha1` 31 OK; no shared code changed [M].
+- **The film is not re-assembled here** (the other fixers' convention): `out/ep02/v1/ep02-v1.mp4` and `assembly/transcript-film.txt` still carry the old outro until `assemble.py v1` and `qa.py v1` run once every segment's fixer is done.
+
+### Re-running
+
+```sh
+S=<scratch>
+bash studio/src/episodes/ep02/outro/tools/render.sh $S/outro          # detached (setsid ... < /dev/null) when backgrounded; about 2 min once it has its slots
+MRMAS_MAX_LOAD=40 audio/.venv-casting/bin/python audio/reel/ep02-v1/mix_episode.py --all   # -> out/ep02/v1/mix/outro-mix.wav (and every segment's mix, unchanged)
+python3 show/episodes/ep02/production/v1/assembly/tools/lock_report.py --md
+```
+
+### For a human
+
+- **The showrunner's call: the voice-cast page.** The agreed outro is the model credit and `prompt: jgon`; the titles pass added a second page with every speaking role by library voice (26 rows; no products now). Keep it (a credits page to pause on, 5.5 s), or move the cast to the description too and end the outro on page 1 (that would bring back Ep1's 10.1 s length: a timing change for the lock and the outro's score).
+- **The tools, if wanted on screen:** they come back as a chip pair on 5.1 and 5.2 (git history of `timeline.ts` and `audio/mix.py`), pending OUTRO-PROPOSALS §10's legal question.
+- **Watch and listen** (R8): the cast page now holds with nothing landing on 5.1; does the celesta's flat line still read as a memory under a still page, or does the page want a small event there?
+

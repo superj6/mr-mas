@@ -48,17 +48,17 @@
    "seconds": 5.46
   },
   {
-   "line": "viewer: verified: human",
+   "line": "viewer: human \u2713",
    "page": 1,
    "frame": 170,
    "box": [
     31,
     147,
-    142,
+    115,
     161
    ],
-   "mean_abs_err": 1.3,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.29,
+   "max_abs_err": 5,
    "encoded_contrast": 8.9,
    "seconds": 2.46
   },
@@ -68,12 +68,12 @@
    "frame": 330,
    "box": [
     31,
-    23,
+    44,
     159,
-    37
+    58
    ],
-   "mean_abs_err": 1.2,
-   "max_abs_err": 3,
+   "mean_abs_err": 1.17,
+   "max_abs_err": 4,
    "encoded_contrast": 12.3,
    "seconds": 6.58
   },
@@ -83,14 +83,14 @@
    "frame": 330,
    "box": [
     36,
-    43,
+    64,
     88,
-    53
+    74
    ],
-   "mean_abs_err": 1.09,
+   "mean_abs_err": 1.05,
    "max_abs_err": 5,
-   "encoded_contrast": 17.7,
-   "seconds": 5.96
+   "encoded_contrast": 17.6,
+   "seconds": 6.08
   },
   {
    "line": "gerg: marcus",
@@ -98,14 +98,14 @@
    "frame": 330,
    "box": [
     36,
-    54,
+    75,
     91,
-    64
+    85
    ],
-   "mean_abs_err": 1.09,
+   "mean_abs_err": 1.08,
    "max_abs_err": 5,
-   "encoded_contrast": 17.6,
-   "seconds": 5.96
+   "encoded_contrast": 17.7,
+   "seconds": 6
   },
   {
    "line": "nole: ryan (confident)",
@@ -113,14 +113,14 @@
    "frame": 330,
    "box": [
     36,
-    65,
+    86,
     129,
-    75
+    96
    ],
-   "mean_abs_err": 1.04,
-   "max_abs_err": 5,
+   "mean_abs_err": 1.0,
+   "max_abs_err": 4,
    "encoded_contrast": 17.7,
-   "seconds": 5.96
+   "seconds": 6
   },
   {
    "line": "rima: mia",
@@ -128,14 +128,14 @@
    "frame": 330,
    "box": [
     36,
-    76,
+    97,
     73,
-    86
+    107
    ],
-   "mean_abs_err": 1.07,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.08,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
-   "seconds": 5.92
+   "seconds": 5.96
   },
   {
    "line": "chatgtp: maya",
@@ -143,14 +143,14 @@
    "frame": 330,
    "box": [
     36,
-    87,
+    108,
     96,
-    97
+    118
    ],
-   "mean_abs_err": 1.08,
-   "max_abs_err": 6,
-   "encoded_contrast": 6.0,
-   "seconds": 5.92
+   "mean_abs_err": 1.07,
+   "max_abs_err": 5,
+   "encoded_contrast": 5.9,
+   "seconds": 6.04
   },
   {
    "line": "alyi: louis",
@@ -158,14 +158,14 @@
    "frame": 330,
    "box": [
     36,
-    98,
+    119,
     78,
-    108
+    129
    ],
-   "mean_abs_err": 1.08,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.06,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.96
+   "seconds": 5.92
   },
   {
    "line": "tasya: tyler kurk",
@@ -173,14 +173,14 @@
    "frame": 330,
    "box": [
     36,
-    109,
+    130,
     111,
-    119
+    140
    ],
-   "mean_abs_err": 1.08,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.06,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.88
+   "seconds": 6
   },
   {
    "line": "terb: ethan",
@@ -188,14 +188,14 @@
    "frame": 330,
    "box": [
     36,
-    120,
+    141,
     85,
-    130
+    151
    ],
-   "mean_abs_err": 1.13,
-   "max_abs_err": 7,
+   "mean_abs_err": 1.08,
+   "max_abs_err": 5,
    "encoded_contrast": 17.6,
-   "seconds": 5.92
+   "seconds": 5.88
   },
   {
    "line": "neleh: alexandra",
@@ -203,14 +203,14 @@
    "frame": 330,
    "box": [
     36,
-    131,
+    152,
     108,
-    141
+    162
    ],
-   "mean_abs_err": 1.14,
-   "max_abs_err": 6,
-   "encoded_contrast": 17.6,
-   "seconds": 5.92
+   "mean_abs_err": 1.05,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.7,
+   "seconds": 5.83
   },
   {
    "line": "radnus: dylan malc",
@@ -218,12 +218,12 @@
    "frame": 330,
    "box": [
     36,
-    142,
+    163,
     117,
-    152
+    173
    ],
-   "mean_abs_err": 1.12,
-   "max_abs_err": 7,
+   "mean_abs_err": 1.05,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
    "seconds": 5.83
   },
@@ -233,26 +233,26 @@
    "frame": 330,
    "box": [
     36,
-    153,
+    174,
     99,
-    163
+    184
    ],
-   "mean_abs_err": 1.15,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.13,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
-   "seconds": 5.88
+   "seconds": 5.79
   },
   {
-   "line": "mario: am_liam (kokoro)",
+   "line": "mario: am_liam",
    "page": 2,
    "frame": 330,
    "box": [
     36,
-    164,
-    137,
-    174
+    185,
+    98,
+    195
    ],
-   "mean_abs_err": 1.01,
+   "mean_abs_err": 1.05,
    "max_abs_err": 5,
    "encoded_contrast": 17.7,
    "seconds": 5.79
@@ -262,43 +262,43 @@
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    43,
-    253,
-    53
+    143,
+    64,
+    245,
+    74
    ],
-   "mean_abs_err": 1.13,
-   "max_abs_err": 7,
-   "encoded_contrast": 17.7,
-   "seconds": 6.04
+   "mean_abs_err": 1.07,
+   "max_abs_err": 5,
+   "encoded_contrast": 17.6,
+   "seconds": 6.08
   },
   {
    "line": "xel: alex wright",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    54,
-    219,
-    64
+    143,
+    75,
+    211,
+    85
    ],
-   "mean_abs_err": 1.07,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.01,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 6
+   "seconds": 6.04
   },
   {
    "line": "the humanist: luis",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    65,
-    228,
-    75
+    143,
+    86,
+    220,
+    96
    ],
-   "mean_abs_err": 1.15,
-   "max_abs_err": 7,
+   "mean_abs_err": 1.1,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
    "seconds": 6
   },
@@ -307,27 +307,27 @@
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    76,
-    289,
-    86
+    143,
+    97,
+    281,
+    107
    ],
-   "mean_abs_err": 1.08,
+   "mean_abs_err": 1.07,
    "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.96
+   "seconds": 6
   },
   {
    "line": "voices 1-2: alexander, brad",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    87,
-    271,
-    97
+    143,
+    108,
+    263,
+    118
    ],
-   "mean_abs_err": 1.09,
+   "mean_abs_err": 1.07,
    "max_abs_err": 5,
    "encoded_contrast": 17.7,
    "seconds": 5.96
@@ -337,13 +337,13 @@
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    98,
-    278,
-    108
+    143,
+    119,
+    270,
+    129
    ],
-   "mean_abs_err": 1.11,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.07,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
    "seconds": 5.92
   },
@@ -352,43 +352,43 @@
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    109,
-    220,
-    119
+    143,
+    130,
+    212,
+    140
    ],
-   "mean_abs_err": 1.18,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.13,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
-   "seconds": 5.96
+   "seconds": 5.88
   },
   {
    "line": "tv reporter: katherine",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    120,
-    248,
-    130
+    143,
+    141,
+    240,
+    151
    ],
-   "mean_abs_err": 1.09,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.08,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
-   "seconds": 5.88
+   "seconds": 5.83
   },
   {
    "line": "bukaj: scypher",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    131,
-    215,
-    141
+    143,
+    152,
+    207,
+    162
    ],
-   "mean_abs_err": 1.12,
-   "max_abs_err": 7,
+   "mean_abs_err": 1.07,
+   "max_abs_err": 5,
    "encoded_contrast": 17.6,
    "seconds": 5.83
   },
@@ -397,105 +397,75 @@
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    142,
-    206,
-    152
+    143,
+    163,
+    198,
+    173
    ],
    "mean_abs_err": 1.09,
-   "max_abs_err": 6,
+   "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.88
+   "seconds": 5.79
   },
   {
    "line": "the forecaster: jack john",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    153,
-    262,
-    163
+    143,
+    174,
+    254,
+    184
    ],
-   "mean_abs_err": 1.14,
-   "max_abs_err": 6,
+   "mean_abs_err": 1.11,
+   "max_abs_err": 5,
    "encoded_contrast": 5.9,
-   "seconds": 5.79
+   "seconds": 5.71
   },
   {
    "line": "the driver: jerry b.",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    164,
-    235,
-    174
+    143,
+    185,
+    227,
+    195
    ],
    "mean_abs_err": 1.08,
    "max_abs_err": 5,
-   "encoded_contrast": 6.0,
-   "seconds": 5.75
+   "encoded_contrast": 5.9,
+   "seconds": 5.71
   },
   {
    "line": "haras: hannah",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    175,
-    212,
-    185
+    143,
+    196,
+    204,
+    206
    ],
-   "mean_abs_err": 1.12,
+   "mean_abs_err": 1.09,
    "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.75
+   "seconds": 5.71
   },
   {
    "line": "the crowd: ten library voices",
    "page": 2,
    "frame": 330,
    "box": [
-    151,
-    186,
-    277,
-    196
+    143,
+    207,
+    269,
+    217
    ],
-   "mean_abs_err": 1.06,
+   "mean_abs_err": 1.03,
    "max_abs_err": 5,
    "encoded_contrast": 17.7,
-   "seconds": 5.67
-  },
-  {
-   "line": "tools: claude code \u00b7 remotion \u00b7 elevenlabs \u00b7 kokoro-82m",
-   "page": 2,
-   "frame": 330,
-   "box": [
-    31,
-    201,
-    292,
-    215
-   ],
-   "mean_abs_err": 1.22,
-   "max_abs_err": 4,
-   "encoded_contrast": 12.3,
-   "seconds": 5.54
-  },
-  {
-   "line": "blender \u00b7 veo 3.1 fast via runway \u00b7 ffmpeg",
-   "page": 2,
-   "frame": 330,
-   "box": [
-    31,
-    216,
-    233,
-    230
-   ],
-   "mean_abs_err": 1.16,
-   "max_abs_err": 4,
-   "encoded_contrast": 12.3,
-   "seconds": 5.63
+   "seconds": 5.5
   }
  ],
  "checks": {
@@ -559,21 +529,21 @@
    },
    {
     "page": 1,
-    "line": "viewer: verified: human",
-    "chars": 23,
-    "px": 98,
+    "line": "viewer: human \u2713",
+    "chars": 15,
+    "px": 71,
     "box": [
      31,
      147,
-     142,
+     115,
      161
     ],
-    "right": 142,
+    "right": 115,
     "clearOfOrb": true,
     "legibleFrom": 121,
     "legibleTo": 179,
     "seconds": 2.46,
-    "needP15": 1.4,
+    "needP15": 1,
     "perLineOk": true
    },
    {
@@ -583,9 +553,9 @@
     "px": 115,
     "box": [
      31,
-     23,
+     44,
      159,
-     37
+     58
     ],
     "right": 159,
     "clearOfOrb": true,
@@ -602,15 +572,15 @@
     "px": 49,
     "box": [
      36,
-     43,
+     64,
      88,
-     53
+     74
     ],
     "right": 88,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 199,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 6.08,
     "needP15": 0.8,
     "perLineOk": true
    },
@@ -621,15 +591,15 @@
     "px": 52,
     "box": [
      36,
-     54,
+     75,
      91,
-     64
+     85
     ],
     "right": 91,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 201,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 6,
     "needP15": 0.85,
     "perLineOk": true
    },
@@ -640,15 +610,15 @@
     "px": 90,
     "box": [
      36,
-     65,
+     86,
      129,
-     75
+     96
     ],
     "right": 129,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 201,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 6,
     "needP15": 1.35,
     "perLineOk": true
    },
@@ -659,15 +629,15 @@
     "px": 34,
     "box": [
      36,
-     76,
+     97,
      73,
-     86
+     107
     ],
     "right": 73,
     "clearOfOrb": true,
-    "legibleFrom": 203,
+    "legibleFrom": 202,
     "legibleTo": 344,
-    "seconds": 5.92,
+    "seconds": 5.96,
     "needP15": 0.7,
     "perLineOk": true
    },
@@ -678,15 +648,15 @@
     "px": 57,
     "box": [
      36,
-     87,
+     108,
      96,
-     97
+     118
     ],
     "right": 96,
     "clearOfOrb": true,
-    "legibleFrom": 203,
+    "legibleFrom": 200,
     "legibleTo": 344,
-    "seconds": 5.92,
+    "seconds": 6.04,
     "needP15": 0.9,
     "perLineOk": true
    },
@@ -697,15 +667,15 @@
     "px": 39,
     "box": [
      36,
-     98,
+     119,
      78,
-     108
+     129
     ],
     "right": 78,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 203,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 5.92,
     "needP15": 0.8,
     "perLineOk": true
    },
@@ -716,15 +686,15 @@
     "px": 72,
     "box": [
      36,
-     109,
+     130,
      111,
-     119
+     140
     ],
     "right": 111,
     "clearOfOrb": true,
-    "legibleFrom": 204,
+    "legibleFrom": 201,
     "legibleTo": 344,
-    "seconds": 5.88,
+    "seconds": 6,
     "needP15": 1.1,
     "perLineOk": true
    },
@@ -735,15 +705,15 @@
     "px": 46,
     "box": [
      36,
-     120,
+     141,
      85,
-     130
+     151
     ],
     "right": 85,
     "clearOfOrb": true,
-    "legibleFrom": 203,
+    "legibleFrom": 204,
     "legibleTo": 344,
-    "seconds": 5.92,
+    "seconds": 5.88,
     "needP15": 0.8,
     "perLineOk": true
    },
@@ -754,15 +724,15 @@
     "px": 69,
     "box": [
      36,
-     131,
+     152,
      108,
-     141
+     162
     ],
     "right": 108,
     "clearOfOrb": true,
-    "legibleFrom": 203,
+    "legibleFrom": 205,
     "legibleTo": 344,
-    "seconds": 5.92,
+    "seconds": 5.83,
     "needP15": 1.05,
     "perLineOk": true
    },
@@ -773,9 +743,9 @@
     "px": 78,
     "box": [
      36,
-     142,
+     163,
      117,
-     152
+     173
     ],
     "right": 117,
     "clearOfOrb": true,
@@ -792,35 +762,35 @@
     "px": 60,
     "box": [
      36,
-     153,
+     174,
      99,
-     163
+     184
     ],
     "right": 99,
     "clearOfOrb": true,
-    "legibleFrom": 204,
+    "legibleFrom": 206,
     "legibleTo": 344,
-    "seconds": 5.88,
+    "seconds": 5.79,
     "needP15": 0.95,
     "perLineOk": true
    },
    {
     "page": 2,
-    "line": "mario: am_liam (kokoro)",
-    "chars": 23,
-    "px": 98,
+    "line": "mario: am_liam",
+    "chars": 14,
+    "px": 59,
     "box": [
      36,
-     164,
-     137,
-     174
+     185,
+     98,
+     195
     ],
-    "right": 137,
+    "right": 98,
     "clearOfOrb": true,
     "legibleFrom": 206,
     "legibleTo": 344,
     "seconds": 5.79,
-    "needP15": 1.4,
+    "needP15": 0.95,
     "perLineOk": true
    },
    {
@@ -829,16 +799,16 @@
     "chars": 22,
     "px": 99,
     "box": [
-     151,
-     43,
-     253,
-     53
+     143,
+     64,
+     245,
+     74
     ],
-    "right": 253,
+    "right": 245,
     "clearOfOrb": true,
-    "legibleFrom": 200,
+    "legibleFrom": 199,
     "legibleTo": 344,
-    "seconds": 6.04,
+    "seconds": 6.08,
     "needP15": 1.35,
     "perLineOk": true
    },
@@ -848,16 +818,16 @@
     "chars": 16,
     "px": 65,
     "box": [
-     151,
-     54,
-     219,
-     64
+     143,
+     75,
+     211,
+     85
     ],
-    "right": 219,
+    "right": 211,
     "clearOfOrb": true,
-    "legibleFrom": 201,
+    "legibleFrom": 200,
     "legibleTo": 344,
-    "seconds": 6,
+    "seconds": 6.04,
     "needP15": 1.05,
     "perLineOk": true
    },
@@ -867,12 +837,12 @@
     "chars": 18,
     "px": 74,
     "box": [
-     151,
-     65,
-     228,
-     75
+     143,
+     86,
+     220,
+     96
     ],
-    "right": 228,
+    "right": 220,
     "clearOfOrb": true,
     "legibleFrom": 201,
     "legibleTo": 344,
@@ -886,16 +856,16 @@
     "chars": 32,
     "px": 135,
     "box": [
-     151,
-     76,
-     289,
-     86
+     143,
+     97,
+     281,
+     107
     ],
-    "right": 289,
+    "right": 281,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 201,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 6,
     "needP15": 1.85,
     "perLineOk": true
    },
@@ -905,12 +875,12 @@
     "chars": 27,
     "px": 117,
     "box": [
-     151,
-     87,
-     271,
-     97
+     143,
+     108,
+     263,
+     118
     ],
-    "right": 271,
+    "right": 263,
     "clearOfOrb": true,
     "legibleFrom": 202,
     "legibleTo": 344,
@@ -924,12 +894,12 @@
     "chars": 28,
     "px": 124,
     "box": [
-     151,
-     98,
-     278,
-     108
+     143,
+     119,
+     270,
+     129
     ],
-    "right": 278,
+    "right": 270,
     "clearOfOrb": true,
     "legibleFrom": 203,
     "legibleTo": 344,
@@ -943,16 +913,16 @@
     "chars": 16,
     "px": 66,
     "box": [
-     151,
-     109,
-     220,
-     119
+     143,
+     130,
+     212,
+     140
     ],
-    "right": 220,
+    "right": 212,
     "clearOfOrb": true,
-    "legibleFrom": 202,
+    "legibleFrom": 204,
     "legibleTo": 344,
-    "seconds": 5.96,
+    "seconds": 5.88,
     "needP15": 1.05,
     "perLineOk": true
    },
@@ -962,16 +932,16 @@
     "chars": 22,
     "px": 94,
     "box": [
-     151,
-     120,
-     248,
-     130
+     143,
+     141,
+     240,
+     151
     ],
-    "right": 248,
+    "right": 240,
     "clearOfOrb": true,
-    "legibleFrom": 204,
+    "legibleFrom": 205,
     "legibleTo": 344,
-    "seconds": 5.88,
+    "seconds": 5.83,
     "needP15": 1.35,
     "perLineOk": true
    },
@@ -981,12 +951,12 @@
     "chars": 14,
     "px": 61,
     "box": [
-     151,
-     131,
-     215,
-     141
+     143,
+     152,
+     207,
+     162
     ],
-    "right": 215,
+    "right": 207,
     "clearOfOrb": true,
     "legibleFrom": 205,
     "legibleTo": 344,
@@ -1000,16 +970,16 @@
     "chars": 13,
     "px": 52,
     "box": [
-     151,
-     142,
-     206,
-     152
+     143,
+     163,
+     198,
+     173
     ],
-    "right": 206,
+    "right": 198,
     "clearOfOrb": true,
-    "legibleFrom": 204,
+    "legibleFrom": 206,
     "legibleTo": 344,
-    "seconds": 5.88,
+    "seconds": 5.79,
     "needP15": 0.9,
     "perLineOk": true
    },
@@ -1019,16 +989,16 @@
     "chars": 25,
     "px": 108,
     "box": [
-     151,
-     153,
-     262,
-     163
+     143,
+     174,
+     254,
+     184
     ],
-    "right": 262,
+    "right": 254,
     "clearOfOrb": true,
-    "legibleFrom": 206,
+    "legibleFrom": 208,
     "legibleTo": 344,
-    "seconds": 5.79,
+    "seconds": 5.71,
     "needP15": 1.5,
     "perLineOk": true
    },
@@ -1038,16 +1008,16 @@
     "chars": 20,
     "px": 81,
     "box": [
-     151,
-     164,
-     235,
-     174
+     143,
+     185,
+     227,
+     195
     ],
-    "right": 235,
+    "right": 227,
     "clearOfOrb": true,
-    "legibleFrom": 207,
+    "legibleFrom": 208,
     "legibleTo": 344,
-    "seconds": 5.75,
+    "seconds": 5.71,
     "needP15": 1.25,
     "perLineOk": true
    },
@@ -1057,16 +1027,16 @@
     "chars": 13,
     "px": 58,
     "box": [
-     151,
-     175,
-     212,
-     185
+     143,
+     196,
+     204,
+     206
     ],
-    "right": 212,
+    "right": 204,
     "clearOfOrb": true,
-    "legibleFrom": 207,
+    "legibleFrom": 208,
     "legibleTo": 344,
-    "seconds": 5.75,
+    "seconds": 5.71,
     "needP15": 0.9,
     "perLineOk": true
    },
@@ -1076,55 +1046,17 @@
     "chars": 29,
     "px": 123,
     "box": [
-     151,
-     186,
-     277,
-     196
+     143,
+     207,
+     269,
+     217
     ],
-    "right": 277,
+    "right": 269,
     "clearOfOrb": true,
-    "legibleFrom": 209,
+    "legibleFrom": 213,
     "legibleTo": 344,
-    "seconds": 5.67,
+    "seconds": 5.5,
     "needP15": 1.7,
-    "perLineOk": true
-   },
-   {
-    "page": 2,
-    "line": "tools: claude code \u00b7 remotion \u00b7 elevenlabs \u00b7 kokoro-82m",
-    "chars": 55,
-    "px": 248,
-    "box": [
-     31,
-     201,
-     292,
-     215
-    ],
-    "right": 292,
-    "clearOfOrb": true,
-    "legibleFrom": 212,
-    "legibleTo": 344,
-    "seconds": 5.54,
-    "needP15": 3,
-    "perLineOk": true
-   },
-   {
-    "page": 2,
-    "line": "blender \u00b7 veo 3.1 fast via runway \u00b7 ffmpeg",
-    "chars": 42,
-    "px": 189,
-    "box": [
-     31,
-     216,
-     233,
-     230
-    ],
-    "right": 233,
-    "clearOfOrb": true,
-    "legibleFrom": 210,
-    "legibleTo": 344,
-    "seconds": 5.63,
-    "needP15": 2.35,
     "perLineOk": true
    }
   ],
@@ -1133,55 +1065,55 @@
    {
     "page": 1,
     "cps": 16,
-    "chars": 104,
-    "lastFinish": 168.5,
+    "chars": 96,
+    "lastFinish": 156.5,
     "pageEnds": 180,
-    "marginFrames": 11.5,
+    "marginFrames": 23.5,
     "ok": true
    },
    {
     "page": 1,
     "cps": 18,
-    "chars": 104,
-    "lastFinish": 155,
+    "chars": 96,
+    "lastFinish": 144.3,
     "pageEnds": 180,
-    "marginFrames": 25,
+    "marginFrames": 35.7,
     "ok": true
    },
    {
     "page": 1,
     "cps": 20,
-    "chars": 104,
-    "lastFinish": 148.6,
+    "chars": 96,
+    "lastFinish": 139,
     "pageEnds": 180,
-    "marginFrames": 31.4,
+    "marginFrames": 41,
     "ok": true
    },
    {
     "page": 2,
     "cps": 16,
-    "chars": 597,
-    "lastFinish": 1082.5,
+    "chars": 491,
+    "lastFinish": 923.5,
     "pageEnds": 345,
-    "marginFrames": -737.5,
+    "marginFrames": -578.5,
     "ok": false
    },
    {
     "page": 2,
     "cps": 18,
-    "chars": 597,
-    "lastFinish": 983,
+    "chars": 491,
+    "lastFinish": 841.7,
     "pageEnds": 345,
-    "marginFrames": -638,
+    "marginFrames": -496.7,
     "ok": false
    },
    {
     "page": 2,
     "cps": 20,
-    "chars": 597,
-    "lastFinish": 903.4,
+    "chars": 491,
+    "lastFinish": 776.2,
     "pageEnds": 345,
-    "marginFrames": -558.4,
+    "marginFrames": -431.2,
     "ok": false
    }
   ],

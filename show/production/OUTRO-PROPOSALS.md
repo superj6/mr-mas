@@ -246,7 +246,7 @@ The showrunner: "some component of the show rendering improve that shows the mod
 
   | Eps | The toast's last line | The score's verdict |
   |---|---|---|
-  | 1–5 | `viewer: verified: human` | F → C |
+  | 1–5 | `viewer: human ✓` (as Ep1 aired it and Ep2 follows; this draft had `viewer: verified: human`) | F → C |
   | 6, 8 | `viewer: human (probably)` | F → C with a D♭ grace note |
   | 7 | No chime and no verdict: the toast stays open, the cursor blinking (THE HUG, after the fact) | none |
   | 9 | `viewer: human (probably)`, and the toast replays its lines unprompted | retrograde, C → F |

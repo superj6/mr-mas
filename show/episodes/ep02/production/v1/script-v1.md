@@ -1798,7 +1798,7 @@ OUT — cut to black. **Cause:** the hook. **Object:** the taut string → Mas's
 
 ## OUTRO
 
-The Orb's verdict (proposal B), as Ep1, about 10 s. Credits: `mr. mas · ep1.1_her.wav` · `art · script · music · voices · edit: opus 5.5` · `prompt: jgon` · `viewer: verified: human`. No disclaimer, terms line or pointer. **Music (E02-14):** the knee whole, in Ep2's colour: the title's wordless vocal pad takes the flat line and stops before the leap (the paused voice), and celesta and chip finish it; swung; ending on the open fifth. No stinger.
+The Orb's verdict (proposal B), as Ep1, then a second page, 15.0 s. Credits: `mr. mas · ep1.1_her.wav` · `art · script · music · voices · edit: opus 5.5` · `prompt: jgon` · `viewer: human ✓` (Ep1's wording). Page 2: the Orb scans again and leaves the voice cast, `voices · role: library voice`, every speaking role by its library voice. **No product or tool is named on screen** (the tools are in the release description; proposal D-100). No disclaimer, terms line or pointer. **Music (E02-14):** the knee whole, in Ep2's colour: the title's wordless vocal pad takes the flat line and stops before the leap (the paused voice), and celesta and chip finish it; swung; ending on the open fifth. No stinger.
 
 ---
 

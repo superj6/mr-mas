@@ -3,9 +3,12 @@
 // leaving the credits behind it as type, the two credit chips on the knee's flat line, the verdict lighting the lens.
 // Ep2 books no stinger (proposal D-17), so bars 1-3 are Ep1's plain week; the brief's credits then add a second page in
 // the same grammar: on 4.1 the toast clears, the Orb scans again, and the scan leaves the voice cast behind it (every
-// speaking role by its library voice) and the tools, whose two chips land on 5.1 and 5.2 the way the credit chips land
-// on 2.1 and 2.2. The cut is on 6.4, as Ep1's was on 4.4: 345 frames, then 15 of black while the fifth releases
-// (15.0 s, the top of the showrunner's 6-15 s, still half the intro).
+// speaking role by its library voice), held for reading while the celesta remembers the flat line (5.1). The cut is on
+// 6.4, as Ep1's was on 4.4: 345 frames, then 15 of black while the fifth releases (15.0 s, the top of the showrunner's
+// 6-15 s, still half the intro).
+// The fixes pass (2026-10-10): no product is named on screen (OUTRO-PROPOSALS §1.1, "On screen it names no product"):
+// the tools chips that landed on 5.1 and 5.2 are gone, and the named tools go in the release description (LEARNINGS M4);
+// the verdict is Ep1's own wording, `viewer: human ✓`.
 //
 // 96 BPM: 15 frames a beat, 60 a bar. Outro frames are o0..; the file starts at o0 (the cut from the tag's hum to black).
 
@@ -37,7 +40,7 @@ export const T = {
   head2: 186, //       the cast page's header chip posts
   cone2: [190, 214] as const, //  4.1+10 - 4.3+4 the second scan, top to bottom across the cast (25 frames, as the first)
   glyph2: [191, 212] as const,
-  tools: [240, 255] as const, //  5.1, 5.2 the two tools chips land around their type
+  //                   5.1 the cast page held for reading (the celesta's flat line, no chip lands: no tools on screen)
   glint3: 315, //      6.2
   out: 344, //         the last frame; the cut on 6.4 (o345)
 };
@@ -49,18 +52,20 @@ export const SHOW = 'mr. mas';
 export const FILE = 'ep1.1_her.wav';
 /** page 1's credit lines, Ep1's exactly: the model made it all ("by Opus 5.5"), the showrunner prompted it */
 export const CREDITS = ['art · script · music · voices · edit: opus 5.5', 'prompt: jgon'];
-/** the verdict on the viewer (proposal: the Orb outro, "viewer: verified: human"; no drift before Ep6) */
-export const VERDICT = 'viewer: verified: human';
+/** the verdict on the viewer: Ep1's aired wording (studio/src/dev/outro/b/timeline.ts EPS[1]); the ladder first drifts
+ *  in Ep6 (`viewer: human (probably)`) */
+export const VERDICT = 'viewer: human ✓';
 export const PAGE1 = [`${SHOW} · ${FILE}`, ...CREDITS];
 
 /** page 2: the voice cast, every speaking role by the library voice that reads it (audio/ep02/cast-el.json, as the
  *  takes record them: audio/ep02/v1-el/ep02-v1/<seg>/lines-A.json). Library names are the voice's own name; two Ryans
- *  carry their library descriptor. Column A: Ep1's cast, carried over; column B: Ep2's new roles. */
+ *  carry their library descriptor. Column A: Ep1's cast, carried over; column B: Ep2's new roles. No product or vendor
+ *  is named here (Mario's am_liam is Kokoro-82M's stock voice: the description says so). */
 export const CAST_HEAD = 'voices · role: library voice';
 export const CAST_A: Array<[string, string]> = [
   ['mas', 'jeremy'], ['gerg', 'marcus'], ['nole', 'ryan (confident)'], ['rima', 'mia'], ['chatgtp', 'maya'],
   ['alyi', 'louis'], ['tasya', 'tyler kurk'], ['terb', 'ethan'], ['neleh', 'alexandra'], ['radnus', 'dylan malc'],
-  ['staffer', 'avery'], ['mario', 'am_liam (kokoro)'],
+  ['staffer', 'avery'], ['mario', 'am_liam'],
 ];
 export const CAST_B: Array<[string, string]> = [
   ['selbeep', 'the pharaoh 3'], ['xel', 'alex wright'], ['the humanist', 'luis'], ['demo engineer', 'ryan (articulate)'],
@@ -68,5 +73,5 @@ export const CAST_B: Array<[string, string]> = [
   ['bukaj', 'scypher'], ['ekiel', 'dexter'], ['the forecaster', 'jack john'], ['the driver', 'jerry b.'],
   ['haras', 'hannah'], ['the crowd', 'ten library voices'],
 ];
-/** the tools, two chips: the harness and the model's hands (picture, voices, the 3D shot, the video insert) */
-export const TOOLS = ['tools: claude code · remotion · elevenlabs · kokoro-82m', 'blender · veo 3.1 fast via runway · ffmpeg'];
+// The tools are not on screen (the fixes pass, 2026-10-10): the release description names them (LEARNINGS M4;
+// production/v1/assembly.md §8.2): Claude Code, Remotion, ElevenLabs, Kokoro-82M, Blender, Veo 3.1 Fast via Runway, FFmpeg.

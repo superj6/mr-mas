@@ -270,9 +270,12 @@ INTRO_HER_F = 23   # the intro's "her": Jeremy's read starts on intro frame 23.4
 
 def outro_text():
     """the outro's words, read from its own timeline.ts (so the transcript can't drift from the picture): page 1's header,
-    credits and verdict; page 2's frame, header, cast and tools"""
+    credits and verdict; page 2's frame, header and cast (and its tools chips, if a TOOLS list is ever on screen again:
+    the fixes pass took them off, 2026-10-10)"""
     src = open(OUTRO_TS, encoding="utf-8").read()
-    const = lambda name: re.search(rf"export const {name}\b[^=]*=\s*(.*?);\n", src, re.S).group(1)  # noqa: E731
+    def const(name):
+        m = re.search(rf"export const {name}\b[^=]*=\s*(.*?);\n", src, re.S)
+        return m.group(1) if m else ""
     strs = lambda name: re.findall(r"'([^']*)'", const(name))  # noqa: E731
     show, file_ = strs("SHOW")[0], strs("FILE")[0]
     pairs = lambda name: [f"{r}: {v}" for r, v in re.findall(r"\['([^']*)',\s*'([^']*)'\]", const(name))]  # noqa: E731
@@ -293,7 +296,8 @@ def transcript(variant, asm, out_txt):
         elif c["id"] == "outro":
             o = outro_text()
             rows.append((f0, c["title"], "", "[the Orb's scan; " + " / ".join(o["page1"]) + "]"))
-            rows.append((f0 + o["head2"], c["title"], "", f"[the cast page; {o['cast_head']}: " + " · ".join(o["cast"]) + " / " + " / ".join(o["tools"]) + "]"))
+            rows.append((f0 + o["head2"], c["title"], "", f"[the cast page; {o['cast_head']}: " + " · ".join(o["cast"])
+                         + "".join(" / " + t for t in o["tools"]) + "]"))
         elif c["id"] not in ("coldopen", "act1", "act2", "act3", "act4", "tag"):
             rows.append((f0, rows[-1][1] if rows else "", "", "[the vault's hum under black, %.2f s]" % c["seconds"]) if c["id"] == "tag-hum" else (f0, c["id"], "", ""))
         else:

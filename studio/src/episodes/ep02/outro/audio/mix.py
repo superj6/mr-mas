@@ -7,7 +7,8 @@ F/C, the toast chime C7), so the outro's Orb sounds exactly like the intro's and
 the scan's sustained sweep under each cone (25 frames), the GLYPH grains inside it, a faint tick per toast chip.
   page 1 (Ep1's plain week): o9 header tick; o15 servo; o30-54 the scan; o60, o75 chip ticks; o120 the chime; o150 the
          servo, softer (the glance back to its toast)
-  page 2 (Ep2): o186 the cast header's tick; o190-214 the second scan (shhk, sweep, grains); o240, o255 the tools ticks
+  page 2 (Ep2): o186 the cast header's tick; o190-214 the second scan (shhk, sweep, grains). No tick on 5.1 or 5.2: the
+         tools chips are gone (the fixes pass, 2026-10-10: no product named on screen), so nothing lands there
 One owner per sound (OST-BIBLE rule 11): the SFX own the servo, the scans, the grains and the chime; the score leaves them
 room (1.3-1.4 and 4.1-4.3 have no score onset, nor 3.1).
 
@@ -157,9 +158,7 @@ ev('orb_servo_C6 (intro-sfx), softer: the glance back to its toast (3.3)', 150)
 tick(186, -37.0)
 ev('toast tick (synth): the cast page\'s header posts', 186)
 scan(190, 'the second scan (the cast)')
-for f in (240, 255):
-    tick(f, -40.0)
-ev('toast ticks (synth): the tools chips (5.1, 5.2)', 240, until=256)
+# (5.1, 5.2: no ticks since the fixes pass: no chip lands there now that the tools are off screen)
 
 # ---------------------------------------------------------------- the music: the score + the vocal pad
 mus = load(os.path.join(SC, 'music', 'e02-14-end-credits-album.wav'))

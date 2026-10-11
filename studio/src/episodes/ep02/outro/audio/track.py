@@ -6,7 +6,7 @@
     not an engine instrument: it is sung by the intro's own singer (vocal.py, Kokoro-82M stock voices re-sung through
     WORLD, the title PAD's recipe), placed on this grid by mix.py. This score leaves the flat line's melody to it;
   * celesta and chip finish the knee (G Ab C F), then the verdict F5 -> C6 over the open fifth, as Ep1's;
-  * the second page (bars 4-6, the voice cast and the tools): the fifth held, NOTHING under the second scan (4.1-4.3,
+  * the second page (bars 4-6, the voice cast): the fifth held, NOTHING under the second scan (4.1-4.3,
     the SFX own it, as in bar 1); on 5.1 the celesta remembers the flat line, pp, without the voice; 6.3 Ep1's button
     (celesta F6 over vibes C6, pp); everything ends on the cut, 6.4, and the fifth releases into the black.
 No third anywhere after the verdict (rule 12); the D-flat only under the leap.
@@ -17,7 +17,7 @@ Timeline (outro frames; the file starts at o0 = the cut from the tag's hum to bl
                     (2.3-2.4&); felt LH Fm9-no-third then Dbmaj7; upright bass; brushes. The credit chips land on 2.1, 2.2
   3.1  (o120)       the Orb's chime (SFX) owns the downbeat; 3.2 (o135) the verdict F5 -> C6, vibes + celesta, felt fifth
   bar 4 (o180-239)  4.1 the page turns: the felt fifth re-struck pp; the second scan (SFX) 4.1-4.3, no score onset
-  bar 5 (o240-299)  5.1, 5.2 the tools chips land: the celesta's flat line, pp, swung, no voice; under the reading a
+  bar 5 (o240-299)  5.1 the cast page held: the celesta's flat line, pp, swung, no voice; under the reading a
                     soft swung bed (the felt fifth on 1 and 3, the bass on F and C, brushes), into bar 6
   bar 6 (o300-344)  6.1 the fifth pp; 6.3 celesta F6 over vibes C6, pp; 6.4 (o345) the cut: the fifth releases
 
@@ -151,8 +151,9 @@ def build():
     a.n('ubass', 'F2', (4, 1), '3b', 0.22, lock=True)
     a.mark('4.1 the page turns; the second scan 4.1+10 - 4.3+4 (SFX only)', (4, 1))
 
-    # ---- bar 5: the tools chips land on 5.1, 5.2: the celesta's flat line, pp, swung, where the voice was
-    a.section('the tools', 5, 6)
+    # ---- bar 5: the cast page held for reading: the celesta's flat line, pp, swung, where the voice was (no chip lands
+    # here since the fixes pass, 2026-10-10: the tools are off screen; the music is as it was)
+    a.section('the cast held', 5, 6)
     a.line('celesta', 'F5/8 F5/8 F5/8 F5/8', (5, 1), vel=0.22, swing=True, lock=True)
     # under the reading, a soft swung bed so the page isn't held in near-silence: the felt fifth on 1 and 3, the bass on
     # the root and the fifth (no third), brushes sweeping with a light tap on 2 and 4
@@ -164,8 +165,7 @@ def build():
         sweep[vel=0.26]: ~~~~~~~~
         tap[vel=0.2]:    ..o...o.
     ''', bars=(5, 7), swing=SWING)
-    a.mark('5.1 tools chip 1; the celesta remembers the flat line, no voice', (5, 1))
-    a.mark('5.2 tools chip 2', (5, 2))
+    a.mark('5.1 the cast page held; the celesta remembers the flat line, no voice', (5, 1))
 
     # ---- bar 6: the fifth pp; 6.3 Ep1's button; the cut on 6.4
     a.section('out', 6, 7)

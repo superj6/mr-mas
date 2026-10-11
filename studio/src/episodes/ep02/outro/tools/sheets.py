@@ -60,7 +60,7 @@ SHEET = [
     (128, '3.1 · the verdict (chime) lights the lens'),
     (183, '4.1 · the page turns: the toast steps down'),
     (200, '4.1+ · the second scan: the voice cast'),
-    (260, '5.2 · the tools chips landed (5.1, 5.2)'),
+    (260, '5.2 · the cast page held (the celesta\'s flat line)'),
     (330, '6.2 · the cast page held; the cut on 6.4'),
 ]
 COLS, TW, TH, PAD, HEAD, CAP = 4, 468, 263, 16, 64, 44
@@ -70,7 +70,7 @@ GRID_H = 110
 H = HEAD + rows_n * (TH + CAP + PAD) + GRID_H + PAD
 sheet = Image.new('RGB', (W, H), BG)
 d = ImageDraw.Draw(sheet)
-d.text((PAD, 14), 'MR. MAS · Ep2 outro · B, "the Orb\'s verdict" in Ep1\'s format, with Ep2\'s cast and tools · v1', font=font(24, True), fill=INK)
+d.text((PAD, 14), 'MR. MAS · Ep2 outro · B, "the Orb\'s verdict" in Ep1\'s format, with Ep2\'s voice cast · v1 (fixes pass)', font=font(24, True), fill=INK)
 d.text((PAD, 42), f'{OUT_F} f / {OUT_F / FPS} s to the cut (6 bars at 96 BPM, cut on 6.4) + 15 f of black while the fifth releases = '
        f'{TOTAL} f / {TOTAL / FPS} s · frames from the encoded mp4 · no terms line, no pointer, no stinger', font=font(14), fill=DIM)
 for k, (o, cap) in enumerate(SHEET):
@@ -85,7 +85,7 @@ gy = HEAD + rows_n * (TH + CAP + PAD) + 8
 px = lambda f: PAD + (W - 2 * PAD) * f / TOTAL  # noqa: E731
 spans = [(0, 60, 'bar 1 · the Orb wakes, the scan'), (60, 120, 'bar 2 · the knee: voice, then celesta + chip'),
          (120, 180, 'bar 3 · the verdict, the lamp'), (180, 240, 'bar 4 · the page turns, the second scan'),
-         (240, 300, 'bar 5 · the tools chips'), (300, 345, 'bar 6 · held; cut 6.4'), (345, 360, 'black')]
+         (240, 300, 'bar 5 · the cast held'), (300, 345, 'bar 6 · held; cut 6.4'), (345, 360, 'black')]
 for i, (a, b, name) in enumerate(spans):
     d.rectangle([px(a), gy, px(b) - 2, gy + 34], fill=[(18, 60, 70), (20, 90, 96), (24, 110, 112), (40, 80, 90), (30, 70, 80), (25, 60, 70), (40, 40, 46)][i])
     d.text((px(a) + 6, gy + 9), name, font=font(12, True), fill=INK)

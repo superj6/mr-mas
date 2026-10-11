@@ -36,7 +36,7 @@ EST = {s: (json.load(open(os.path.join(ROOT, BP.format(s)))).get('story_s') or {
        if os.path.exists(os.path.join(ROOT, BP.format(s)))}
 INTRO_TEXT = [(1.0, 'mas (v.o.): her'), (1.5, '[on screen · intro] a typing indicator pulses (three dots, nothing sent)')]
 OUTRO_TEXT = [(0.375, 'mr. mas · ep1.1_her.wav'), (2.5, 'art · script · music · voices · edit: opus 5.5'),
-              (3.125, 'prompt: jgon'), (5.0, 'viewer: verified: human')]   # outro B's timings (o9, o60, o75, o120)
+              (3.125, 'prompt: jgon'), (5.0, 'viewer: human ✓')]   # outro B's timings (o9, o60, o75, o120)
 
 
 def jl(p):

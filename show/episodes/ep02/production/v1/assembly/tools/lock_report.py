@@ -55,6 +55,21 @@ ROOT = os.environ.get("MRMAS_ROOT") or _repo()
 P = "show/episodes/ep02/production/v1"
 SEGS = ["coldopen", "act1", "act2", "act3", "act4", "tag"]
 FPS = 24
+OUTRO_TS = os.path.join(ROOT, "studio/src/episodes/ep02/outro/timeline.ts")
+
+
+def outro_cast():
+    """the outro's page 2 from its own timeline.ts (qa.py reads it the same way): (its frame, the header, the cast rows)"""
+    if not os.path.exists(OUTRO_TS):
+        return None
+    src = open(OUTRO_TS, encoding="utf-8").read()
+    head, f2 = re.search(r"CAST_HEAD = '([^']*)'", src), re.search(r"head2:\s*(\d+)", src)
+    rows = [f"{r}: {v}" for name in ("CAST_A", "CAST_B")
+            for blk in re.findall(rf"export const {name}\b[^=]*=\s*(.*?);\n", src, re.S)
+            for r, v in re.findall(r"\['([^']*)',\s*'([^']*)'\]", blk)]
+    return (int(f2.group(1)), head.group(1), rows) if head and f2 and rows else None
+
+
 INTRO_F, CARD_F, HUM_F = 720, 48, 18
 TITLES = {"coldopen": "Cold open", "intro": "Intro", "card": "ep1.1_her.wav", "tag-hum": "the hum under black", "act1": "Act One · the séance",
           "act2": "Act Two · stage right", "act3": "Act Three · leave them up", "act4": "Act Four · as a guest",
@@ -426,7 +441,10 @@ def main(argv):
         elif cid == "tag-hum":
             rows.append((f0, TITLES["tag"], "", f"[the tag's hum under black, {c['frames'] / FPS:.2f} s]"))
         elif cid == "outro":
-            rows.append((f0, TITLES[cid], "", "[the Orb's scan; mr. mas · ep1.1_her.wav / viewer: verified: human / art · script · music · voices · edit: opus 5.5 / prompt: jgon]"))
+            rows.append((f0, TITLES[cid], "", "[the Orb's scan; mr. mas · ep1.1_her.wav / art · script · music · voices · edit: opus 5.5 / prompt: jgon / viewer: human ✓]"))
+            cast = outro_cast()   # page 2 (the fixes pass): the voice cast, read from the outro's own timeline.ts
+            if cast:
+                rows.append((f0 + cast[0], TITLES[cid], "", f"[the cast page; {cast[1]}: " + " · ".join(cast[2]) + "]"))
         else:
             L = locks[cid]
             for r in L["rails"]:

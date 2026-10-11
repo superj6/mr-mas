@@ -144,12 +144,12 @@ At native size or half size, decoded from the film:
 |---|---|
 | Mix: `outro-mix.wav` is built from the 15.0 s outro WAV; `assemble.py --dry` stopped while it didn't exist | It exists (the sound pass, 08:11). The film plays it at −1 dB: 360 frames of picture, 720,000 samples |
 | Lock: the manifests still say `dur` 10.125, and the lock clock counts the outro as 243 f | `assemble.py` takes every length from the picture's frame count and refuses a sound that doesn't match it. The manifest's `dur` is a record only, and the film's outro is 15.000 s. The manifests, `build_timeline.py` and `lock_report.py` are the lock pass's files, so I left them alone (§8) |
-| Lock: the transcript's outro row doesn't list the cast and tools page | **The film's transcript does** (`qa.py` now reads the outro's words from `studio/src/episodes/ep02/outro/timeline.ts`): page 1 at 23:26:00, the cast page at 23:33:18. The lock pass's `lock_report.py` row is still open (§8) |
+| Lock: the transcript's outro row doesn't list the cast and tools page | **The film's transcript does** (`qa.py` now reads the outro's words from `studio/src/episodes/ep02/outro/timeline.ts`): page 1 at 23:26:00, the cast page at 23:33:18. The lock pass's `lock_report.py` row is still open (§8). *(Closed in the outro's fixes pass: `lock_report.py` reads page 2 from `timeline.ts` too.)* |
 | The intro master is at `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav` | Used from there, at −3 dB, as the manifest says |
 | `scene_cut.py` goes up 6 folders where 7 are needed | **Fixed** (7). Tested: `scene_cut.py tag 23` writes `out/ep02/v1/review/scenes/tag-sc-23.mp4` (888 f, AAC) |
-| Release: the Salamander Grand Piano (Act Three's score, CC BY 3.0) needs attribution; real tool names on screen are an open question | For the release pass (§8). The cast page shows `tools: claude code · remotion · elevenlabs · kokoro-82m` / `blender · veo 3.1 fast via runway · ffmpeg`; the film carries what the titles pass rendered |
+| Release: the Salamander Grand Piano (Act Three's score, CC BY 3.0) needs attribution; real tool names on screen are an open question | For the release pass (§8). The cast page shows `tools: claude code · remotion · elevenlabs · kokoro-82m` / `blender · veo 3.1 fast via runway · ffmpeg`; the film carries what the titles pass rendered. *(The outro's fixes pass, 2026-10-10: the tools are off screen and go in the description, §8.2.)* |
 | Human checks: the typing indicator, the designed silence, ESC, the vocal pad, the cast page's 5.5 s | Listed in §7 with their film timecodes |
-| The verdict reads `viewer: verified: human` (Ep1 aired `viewer: human ✓`) | Kept as rendered: the proposal's wording. It's one string (`VERDICT`) if the showrunner wants Ep1's |
+| The verdict reads `viewer: verified: human` (Ep1 aired `viewer: human ✓`) | Kept as rendered: the proposal's wording. It's one string (`VERDICT`) if the showrunner wants Ep1's. *(The outro's fixes pass: now Ep1's `viewer: human ✓`.)* |
 | Assembly: the decoded-encode check (S8) and the A/V lag | **Done:** 0 bursts, 0 lag in all nine chapters (§4) |
 | Re-run the mix, `sound_audit.py` and `pocket.py` after any timing or score change | No timing or score changed in this pass; nothing was re-mixed |
 | The ear list (sound-v1.md §9), the act-in seams, the score's act-in hits | Measured in the film (§4: they match the mix's numbers) and listed for an ear (§7) |
@@ -185,16 +185,18 @@ Nobody has watched or listened. In order, with episode timecodes (MM:SS:FF):
 1. **For the lock pass:**
    - **The manifests' outro.** `show/reel/ep02-v1[-el]/*.manifest.json` say `dur: 10.125`; the film's outro is 15.000 s.
    - **The episode clock.** proposal.md's lock clock ends at 23:36.88 with the 18-frame hum hold; the film has no hold and ends at **23:41.00**. The arithmetic: 23:36.88 − 0.75 − 10.125 + 15.0 = 23:41.00, with the rest frame for frame.
-   - **The transcript.** `lock_report.py`'s outro row still lacks the cast page.
+   - ~~**The transcript.** `lock_report.py`'s outro row still lacks the cast page.~~ Done in the outro's fixes pass (2026-10-10): it reads page 2 from the outro's `timeline.ts`.
    - None of this changes the film, which reads every length from the files.
 2. **For the release pass** (`production/v1/release.md`, LEARNINGS M3–M5):
    - **The description** carries:
      - the chapters (§2);
      - the Salamander Grand Piano attribution (CC BY 3.0; Act Three's score);
      - the credit;
-     - "library voices, none cloned".
-   - **On-screen tool names:** whether real names (ElevenLabs, Veo, Runway) belong on the cast page stays open (OUTRO-PROPOSALS §10).
-   - **The verdict's wording:** `viewer: verified: human` against Ep1's `viewer: human ✓`.
+     - "library voices, none cloned";
+     - **the tools, by name** (the outro's fixes pass took them off screen, 2026-10-10; [fixes-v1.md](fixes-v1.md#outro-the-fixes-pass-2026-10-10)): Claude Code (the harness), Remotion (picture), Blender (the white room's 3D), FFmpeg (encode), ElevenLabs and Kokoro-82M (the library voices), and Veo 3.1 Fast via Runway (the cold open's mammoth insert; no person, face or hand). In Ep1's form, for example: "Voices are synthetic library voices (ElevenLabs, Kokoro-82M), and none are cloned." plus one line for the rest.
+   - ~~**On-screen tool names**~~: settled to the safe default (none on screen; OUTRO-PROPOSALS §1.1). The legal question in its §10 stays open for the description's wording only.
+   - ~~**The verdict's wording**~~: now Ep1's `viewer: human ✓` (the outro's fixes pass).
+   - **For the showrunner:** the outro's voice-cast page (26 rows, held 5.5 s) is the titles pass's addition; the agreed outro is the model credit and `prompt: jgon`. Keep it, or move the cast to the description too.
 3. **The cold open → intro step** (−14.8 dB) belongs to the intro master. If the ear wants it closer to Ep1's −11.3, the fix goes in `audio/ep02/intro/` (the master's f0–24) or the cold open's last bar, not in the assembly.
 4. **Resource asks (R16, non-blocking):**
    - **Human viewers and listeners for §7.** This is the one thing no pass here can supply.

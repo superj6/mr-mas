@@ -8,20 +8,22 @@
 //              resolved into plain type behind its axis (legible from about o47)
 //   o60, o75   the two credit chips land around that type on the knee's flat line (2.1, 2.2)
 //   o90-112    the leap: the iris narrows one step per note
-//   o120       the verdict, `viewer: verified: human` (the chime, C7); the lens LIGHTS; o135 the score's F5 -> C6
+//   o120       the verdict, `viewer: human ✓` (Ep1's wording; the chime, C7); the lens LIGHTS; o135 the score's F5 -> C6
 //   o150-154   the lamp goes out as the iris relaxes back to its toast; o165 glint
 //   o180-186   4.1: the toast steps down three held rungs and clears (the page turns)
 //   o186       the cast page's header chip posts: `voices · role: library voice`
-//   o190-214   the second scan, top to bottom: the voice cast (two columns) and the tools resolve behind its axis
-//   o240, o255 5.1, 5.2: the two tools chips land around their type
+//   o190-214   the second scan, top to bottom: the voice cast (two columns) resolves behind its axis
+//   o214-344   the cast page held for reading (5.1: the celesta's flat line; no chip lands, no tools on screen)
 //   o315       a glint; o344 the last frame (the cut on 6.4 takes the Orb and the page together)
+// The fixes pass (2026-10-10): the tools chips are gone (no product named on screen; the description names the tools),
+// so page 2 is the header chip and the cast alone, centred on the Orb's eye line, and its scan spans just the cast.
 import {Buf, W, H, line, TRANSPARENT} from '../../../shared/pixel/px';
 import {PAL, stepColor} from '../../../shared/pixel/palette';
 import {Mask} from '../../../shared/pixel/mask';
 import type {GlyphStyle} from '../../../shared/pixel/glyph';
 import type {PixelSceneProps} from '../../../shared/pixel/compose';
 import {orbBob} from '../../../shared/pixel/cast/orb-medium';
-import {T, PAGE1, VERDICT, CAST_HEAD, CAST_A, CAST_B, TOOLS} from './timeline';
+import {T, PAGE1, VERDICT, CAST_HEAD, CAST_A, CAST_B} from './timeline';
 import {drawChip, chipW, CHIP_H, tx, tw, drawOrbClose, drawLensGlow, drawGlint, ORB, LOOKS, LOOK_IDLE} from './art';
 
 export type SceneDef = Pick<PixelSceneProps, 'draw' | 'after' | 'switch' | 'bg'>;
@@ -31,18 +33,21 @@ export type SceneDef = Pick<PixelSceneProps, 'draw' | 'after' | 'switch' | 'bg'>
 export const TOAST = {x: 32, y: [98, 113, 128], vy: 150};
 export const typeAt = (i: number): [number, number] => [TOAST.x + 6, TOAST.y[i] + 2];
 export const INK_RESOLVED = PAL.C6;
-/** page 2: the header chip, then two columns of `role: voice` rows (type only: a session log the scan prints), then
- *  the two tools chips. Column A's type lines up with the chips' type (x + 6); column B starts 16 px past A's widest. */
+/** page 2: the header chip, then two columns of `role: voice` rows (type only: a session log the scan prints).
+ *  Column A's type lines up with the chip's type (x + 6); column B starts 16 px past A's widest. The block (the chip's
+ *  keyline to the last row's foot) is centred on the Orb's eye line, as page 1's toast is. */
 const ROW = 11;
+const HEAD_GAP = 18; // the header chip's top to the first cast row
 const roleW = (r: [string, string]) => tw(`${r[0]}: `);
 const rowW = (r: [string, string]) => tw(`${r[0]}: ${r[1]}`);
 export const PAGE2 = (() => {
-  const x = TOAST.x, headY = 26, gridY = 44;
+  const x = TOAST.x;
   const ax = x + 6;
   const bx = ax + Math.max(...CAST_A.map(rowW)) + 16;
   const rows = Math.max(CAST_A.length, CAST_B.length);
-  const toolsY = [gridY + rows * ROW + 6, gridY + rows * ROW + 21];
-  return {x, headY, gridY, ax, bx, rows, toolsY};
+  const blockH = 1 + HEAD_GAP + (rows - 1) * ROW + 10;
+  const headY = Math.round(ORB.cy - blockH / 2) + 1;
+  return {x, headY, gridY: headY + HEAD_GAP, ax, bx, rows};
 })();
 /** where each cast row's type sits: [x, y] */
 export const castAt = (col: 0 | 1, i: number): [number, number] => [col ? PAGE2.bx : PAGE2.ax, PAGE2.gridY + i * ROW];
@@ -79,6 +84,12 @@ const apertureAt = (o: number) => {
 };
 
 // ================================================================== the scan fans
+/** a pixel's direction from the eye, in degrees (180 = straight left, > 180 above the eye line) */
+const angleOf = (x: number, y: number, ax: number, ay: number) => {
+  let a = (Math.atan2(y + 0.5 - ay, x + 0.5 - ax) * 180) / Math.PI;
+  if (a < 0) a += 360;
+  return a;
+};
 /** page 1's fan, Ep1's: [direction deg, half-angle deg] per frame (180 = straight left, > 180 above the eye line) */
 export const fanAt = (o: number): [number, number] => {
   const k = o - T.cone[0];
@@ -89,24 +100,36 @@ export const fanAt = (o: number): [number, number] => {
   if (o < s1) return [Math.round((196 - ((o - s0) / (s1 - 1 - s0)) * 26) * 2) / 2, 6];
   return CLOSE[Math.min(CLOSE.length - 1, o - s1)];
 };
-/** page 2's fan: the cast page spans about 222 deg (its top right, above the Orb) to 145 deg (the tools, below the eye
- *  line), so it opens higher and sweeps further, at the same 25 frames */
+/** page 2's fan: it spans the cast's own angles as seen from the eye (every row box's corners, the Orb's bob
+ *  included), a few degrees past each end, so the axis sweeps the page top to bottom in the same 25 frames */
+const FAN2 = (() => {
+  let hi = -Infinity, lo = Infinity;
+  const see = (x: number, y: number) => {
+    for (const b of [-1, 0, 1]) {
+      const a = angleOf(x, y, ORB.cx + 0.5, ORB.cy + b + 0.5);
+      hi = Math.max(hi, a); lo = Math.min(lo, a);
+    }
+  };
+  const corners = (col: 0 | 1, r: [string, string], i: number) => {
+    const [x, y] = castAt(col, i), w = roleW(r) + tw(r[1]);
+    for (const [cx, cy] of [[x - 2, y - 1], [x + w + 1, y - 1], [x - 2, y + 9], [x + w + 1, y + 9]]) see(cx, cy);
+  };
+  CAST_A.forEach((r, i) => corners(0, r, i));
+  CAST_B.forEach((r, i) => corners(1, r, i));
+  return {top: Math.ceil(hi) + 4, end: Math.floor(lo) - 3};
+})();
 export const fan2At = (o: number): [number, number] => {
   const k = o - T.cone2[0];
-  const OPEN: Array<[number, number]> = [[224, 2], [224, 4], [223, 6]];
-  const CLOSE: Array<[number, number]> = [[144, 6], [143, 4], [143, 3], [143, 1]];
+  const {top, end} = FAN2;
+  const OPEN: Array<[number, number]> = [[top + 1, 2], [top + 1, 4], [top, 6]];
+  const CLOSE: Array<[number, number]> = [[end + 1, 6], [end, 4], [end, 3], [end, 1]];
   if (k < OPEN.length) return OPEN[k];
   const s0 = T.cone2[0] + OPEN.length, s1 = T.cone2[1] - CLOSE.length + 1;
-  if (o < s1) return [Math.round((223 - ((o - s0) / (s1 - 1 - s0)) * 79) * 2) / 2, 6];
+  if (o < s1) return [Math.round((top - ((o - s0) / (s1 - 1 - s0)) * (top - end - 1)) * 2) / 2, 6];
   return CLOSE[Math.min(CLOSE.length - 1, o - s1)];
 };
 const fanFor = (o: number) => (scanning2(o) ? fan2At(o) : fanAt(o));
 const CONE_LEN = 440;
-const angleOf = (x: number, y: number, ax: number, ay: number) => {
-  let a = (Math.atan2(y + 0.5 - ay, x + 0.5 - ax) * 180) / Math.PI;
-  if (a < 0) a += 360;
-  return a;
-};
 const coneHalves = (ax: number, ay: number, dir: number, half: number) => {
   const lead = new Mask(), trail = new Mask();
   for (let y = 0; y < H; y++)
@@ -135,7 +158,6 @@ const page2Source = () => {
   const b = new Buf(W, H, PAL.N0);
   CAST_A.forEach((r, i) => { const [x, y] = castAt(0, i); castRow(b, r, x, y); });
   CAST_B.forEach((r, i) => { const [x, y] = castAt(1, i); castRow(b, r, x, y); });
-  TOOLS.forEach((s, i) => tx(b, s, PAGE2.x + 6, PAGE2.toolsY[i] + 2, INK_RESOLVED));
   return b;
 };
 const glyphStyle: GlyphStyle = {
@@ -219,12 +241,8 @@ export const makeScene = (): SceneDef => {
         drawChip(tgt, TOAST.x, TOAST.vy, VERDICT, 'verdict', o - T.verdict);
         if (step) for (let i = 0; i < tgt.c.length; i++) if (tgt.c[i] !== TRANSPARENT) ui.c[i] = stepColor(tgt.c[i], step);
       }
-      // page 2: the header chip posts on o186 (a 2 px drop); the tools chips land around their resolved type on 5.1, 5.2
+      // page 2: the header chip posts on o186 (a 2 px drop); then the cast alone, held (no tools chips: the fixes pass)
       drawChip(ui, PAGE2.x, PAGE2.headY, CAST_HEAD, 'credit', o - T.head2);
-      TOOLS.forEach((s, i) => {
-        const k = o - T.tools[i];
-        drawChip(ui, PAGE2.x, PAGE2.toolsY[i], s, 'credit', k >= 0 ? Math.max(1, k) : k, k === 0);
-      });
       // the catch-light glints
       for (const g of [T.glint1, T.glint2, T.glint3]) {
         if (o === g) drawGlint(ui, cy, 2);
@@ -251,6 +269,5 @@ export const textRows = (): TextRow[] => {
   };
   CAST_A.forEach((r, i) => cast(r, 0, i));
   CAST_B.forEach((r, i) => cast(r, 1, i));
-  TOOLS.forEach((s, i) => chipRow(s, 2, PAGE2.x, PAGE2.toolsY[i]));
   return rows;
 };

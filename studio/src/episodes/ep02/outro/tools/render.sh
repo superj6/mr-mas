@@ -38,7 +38,7 @@ cp "$SC/mix-report.json" "$OUT/qa/mix-report.json"
 echo "== 5/7 mux (video stream copy + AAC 256k)"
 ff -y -i "$SC/outro-b-ep2-silent.mp4" -i "$OUT/outro-b-ep2.wav" -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 256k -ar 48000 \
   -shortest -metadata title="MR. MAS Ep2 outro (B, the Orb's verdict), v1" \
-  -metadata comment="mr. mas · ep1.1_her.wav · art · script · music · voices · edit: opus 5.5 · prompt: jgon · the voice cast and tools on page 2" \
+  -metadata comment="mr. mas · ep1.1_her.wav · art · script · music · voices · edit: opus 5.5 · prompt: jgon · the voice cast on page 2" \
   -movflags +faststart "$OUT/outro-b-ep2.mp4"
 
 echo "== 6/7 decode every frame of the ENCODED mp4; the exact native frames and the text checks"
