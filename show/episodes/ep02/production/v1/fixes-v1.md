@@ -2,7 +2,7 @@
 
 > **The episode review's findings, segment by segment, and what each fixer did.** Each segment's fixer adds its own section below; a finding that touches another segment says so where it is logged. Severity is the review's (blocker, major, minor). Every claim is [M] measured or [J] judged; nothing here was watched in real time or heard (R8).
 
-**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11)
+**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11) · [The tag, the final fix round](#the-tag-the-final-fix-round-2026-10-11)
 
 ---
 
@@ -455,3 +455,42 @@ MRMAS_MAX_LOAD=40 ops/rebuild-act.sh --ep 2 act4 --only mux
 - **18.11-18.14:** do his eyes dropping to the card and the two blinks read as a man waiting, and not as a reaction to Mario's lines?
 - **20.01-20.02's padlock** at its real size: a padlock now?
 - **The ISS plate** in 22.02 and 22.07 is still the art's (row 5): worth a Blender pass before lock?
+
+---
+
+## The tag (the final fix round, 2026-10-11)
+
+**Scope:** the verify round's tag findings (`fix2/tag.json`). **The blocker (guardrail X4) is fixed in picture**, and the minor with it. **Picture only:** `tag/scenes/sc-23.ts` and `tag/sets/screen.ts`. No beat plan, lock, take, score, mix or shared tool was edited. The tag's timing is unchanged (888 f), and every lock spot in the span still lands on a drawn action: the three `balloon_pump` (k19, 45, 71), `knot_tie` (k109) and `string_taut` (23.08 k7). Sc 23 was re-rendered through the per-scene cache. One part of the blocker, the caption's crop, is a lock text, so it is **left for the lock's owner** (below).
+
+| # | Sev. | Where | Finding (short) | What was done | Check |
+|---|---|---|---|---|---|
+| 1 | blocker | 23.06-23.08 (23:12-23:25) | Watched cold, the last 13 s stack into X4. After "dangerous out there" in summer 2024, a raised fist pumps an upright red barrel with a grey T-handle (a cartoon detonator) on a podium alone on an outdoor hill at dusk, and then the balloon is yanked down behind the lectern by someone unseen | **23.07-23.08 restaged** (`screen.ts podiumPainter`, sc-23's 23.07 and 23.08). **(a) The place:** THE PODIUM stands in the broadcast's own studio: the interview set's blue ramp, its soft out-of-focus lights (cool ones only) and an empty cyc. There is no hill, dusk, sky, crowd or flag. **(b) The camera** is where he stands, looking down over the reading surface. The podium still faces away, toward the empty studio. His hands stay low on the surface the whole time: no arm is raised, and there is no fist (they pinch, then let go). **(c) The pump** is a chunky green toy party pump lying flat on the surface. Its plunger is a round cream knob, which the left hand's pinch pushes in sideways on each `balloon_pump`, while the right hand pinches the balloon's neck at the nozzle. There is no upright barrel and no T-handle, and nothing red is drawn in 23.07-23.08. **(d) The hook:** the string is tied to the near ledge (his side) and the balloon floats above the far rim. On `string_taut`, **the balloon itself lifts**: the string snaps straight from the knot up to it at the frame's top edge (a jerk that overshoots, the string quivering), and a beat later one more tug takes it a step higher. Nobody is behind the podium, and nothing is pulled down. **(e) The dissolve** out of the broadcast now runs in two held halves (`broadcastPainter` `empty`). The figure (suit, tie, talking hands) leaves the picture first, then the frame dissolves to the studio. The old dissolve laid his raised talking hands and the red tie over the podium for eight frames. **23.06 itself is unchanged**, pixel for pixel. Its hands were tried lower with the palms turned in, but the hands rendered worse and the old pose is a talking gesture below the shoulders, so it was put back | From the MP4 at 1920x1080: every 6th frame of 23.07-23.08 (f660, 666, … 834), plus f839, the seam frames f657 and f659, and the cut to 23.09 at f840. Each one was checked for raised arms, a fist, a crowd or a crowd's reaction, flags, ears, red accents, a fall or crouch and agents: none [J]. f0-657 and f840-887 decode identical to the previous render. f658-659 differ by encoder noise only (mean 0.004 levels) [M] |
+| 2 | minor | 23.07 (f33587, 23:19) | The arms reached in from the frame's lower corners with no body: robot arms (P5) | **Answered by the new framing.** Only forearms show, entering from the frame's foot about a shoulder-width apart. The cuffs and navy sleeves widen toward the lens and the elbows are out of frame below, so they read as one man standing at his lectern. The bent upper arms inside the frame are gone (`rHandBent` removed). **The review's suggested fix was not used:** it had shoulders rising from behind the podium's top edge, and a body hidden or crouched behind a podium is itself in X4's zone | as row 1 [J] |
+
+**Left for other owners (a text or timing change):**
+- **The caption's crop** (part 1 of the blocker). The lower third still reads "…having me speak… It's a little bit dangerous out there." The review asks to restore "…perfectly on AI…" (A69, verbatim fragments) so that the danger reads as AI fakes. The text is a lock text (23.06 `texts[0]`, `must`), and it also appears in the script, the transcript and the film's [on screen] rows, so it belongs to the lock's owner. Its read floor needs a timing change too. At the floor's rate (73 f for the 56 characters now), "…having me speak… perfectly on AI… It's a little bit dangerous out there." (73 characters) needs about 95 f, and the lower third holds 76 f (23.06 k33-109). Once the lock carries the new text, the picture side is one line (`screen.ts LOWER`; the bar already takes two lines). **The restaged picture stands without it:** nothing after the caption is a picture of physical danger.
+- **The descriptions:** 23.08's "as if someone on the far side of the podium had just taken hold of it" no longer matches the picture. It appears in script-v1 sc 23, the beat plan's `does` and proposal.md's sc 23 hook. Suggested wording: "The balloon lifts; the string snaps taut." It is descriptive only, with no timing change, and it belongs to the script's and beat plan's owner. 23.07's "pump up … and tie it to the podium" still fits. `shots-tag.md`'s rows for 23.07-23.08 describe the old staging; this section supersedes them.
+
+**Checks [M]:** `check`: 9 layouts, 0 stand-ins, 0 problems. A scoped `tsc --noEmit` over `tag/shots.ts`: 0 errors. `scenekeys`: sc 23 changed (code). It rendered in 25.6 s (`X264_THREADS=1`, two workers, through `ops/heavy.sh`) to key `sc-23-29be9d04524ffcc7`, and `tag.mp4` has md5 `a855271b…`. `scenecheck --every 4`: **236 frames, 0 differ**. The flash check (`flash_seg.py`): **0** flashes in any second, 0 red, 5 transitions, the largest step 0.158 at f110 (as before), pass. The contact sheet `out/ep02/v1/picture/tag-sheet.png` was re-made with the same frames (731 and 830 now show the new staging). The review mux `picture-mux/tag.mp4` was re-made (the tag's mix unchanged) and the cache pruned. No Ep1 path was touched. **The film is not re-assembled here** (other fixers are working on their chapters), so `ep02-v1.mp4` is stale for the tag until the next `assemble.py v1`.
+
+### Re-running
+
+```sh
+cd studio   # S = scratch
+node src/episodes/ep02/pixel/tools/build.mjs tag $S/r-tag.cjs && node $S/r-tag.cjs check
+node $S/r-tag.cjs picstills $S/stills 666 672 700 731 769 780 809 812 830    # 1080p stills of the restaged span
+X264_THREADS=1 MRMAS_MAX_LOAD=40 ../ops/heavy.sh node $S/r-tag.cjs scenes ../out/ep02/v1/picture/tag.mp4 --jobs 2
+MRMAS_MAX_LOAD=40 ../ops/heavy.sh node $S/r-tag.cjs scenecheck --every 4 && node $S/r-tag.cjs sceneprune
+cd .. && bash ops/heavy.sh audio/.venv-casting/bin/python show/episodes/ep02/production/v1/assembly/tools/flash_seg.py out/ep02/v1/picture/tag.mp4
+bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/episodes/ep02/pixel/tools/sheet.py sheet out/ep02/v1/picture/tag.mp4 \
+  out/ep02/v1/picture/tag-sheet.png "TITLE" "30|23.01|WIDE → OTS" "140|23.02|ECU" "260|23.03|POV" "395|23.04|2S → TERMINAL" \
+  "530|23.05|OTS" "620|23.06|POV" "731|23.07|FULL FRAME" "830|23.08|FULL FRAME" "870|23.09|MCU"
+MRMAS_MAX_LOAD=40 ops/rebuild-act.sh --ep 2 tag --only mux
+```
+
+### For a human
+
+- **X4, watched cold at speed** (R8): from "dangerous out there" through the hook, does anything still read as rally violence? The span now has a studio, hands low on a lectern, a toy pump, and a balloon pulling upward.
+- **The speaker's-eye framing:** does it read at once as his hands at his own podium? And does the green pump read as a party pump, never as a syringe or a plunger?
+- **The hook without a person:** does the balloon lifting its string still land as the tag's hook (the podium turns in Ep3)?
+- **The caption:** the lock owner's call (above). With "perfectly on AI" restored, the subject is the fakes, but it costs about 0.8 s of hold.

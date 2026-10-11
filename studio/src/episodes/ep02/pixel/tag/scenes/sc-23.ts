@@ -14,21 +14,26 @@
 //            · 23.05 the toast cleared, V.O. 14 typed by the host (the back of his head: no mouth)
 //   ITEM 3   23.06 the Aug 21 interview in its own plain player (hands and tie only, the speaker muted), its lower third
 //            whole: his real words (no rail since the film's fixes pass: the AUG 5 rail and the chapter carry August) · 23.07 the player's chrome clears, and the frame dissolves past the
-//            monitor's bezel (the review's fixes): outside the broadcast, full frame, on THE PODIUM (still facing away)
-//            the same hands pump up a balloon in CHATGTP's bubble shape and tie it on, and go
-//   HOOK     23.08 (full frame) the string goes taut over the podium's lip, the balloon pulled down behind it, as if
-//            someone on the far side had just taken hold of it; a beat later, one more tug
+//            monitor's bezel (the review's fixes): outside the broadcast, full frame, THE PODIUM (still facing away)
+//            in the broadcast's own studio, seen from where he stands; the same hands, low on its surface, pump up a
+//            balloon in CHATGTP's bubble shape on a slim pump lying flat, tie it to the near ledge, and go
+//   HOOK     23.08 (full frame) the balloon lifts: the string snaps straight up out of the top of the frame, the
+//            balloon at its edge; a beat later, one more tug (its own pull; nobody behind the podium)
+// RESTAGED, the final fix round (guardrail X4, the verify round's blocker): 23.07-23.08 had a raised arm pumping an
+// upright red barrel with a grey T-handle (a cartoon plunger) on a podium alone on an outdoor hill at dusk, then the
+// balloon pulled down behind the podium by someone unseen. Now: the broadcast's studio, no arm raised, no fist, no red,
+// a flat pump with a round knob, and the pull visibly the balloon's own, upward.
 //   AFTER    23.09 Mas at his monitor, its glow on his still face, his eyes narrowing one step; the cut to black on
 //            the downbeat (the lock's end)
 // No V.O. on the suit or over the candidate's words (W8); no cursor (P6); nothing about the balloon is said.
 import {defineScene, layouts, mk} from '../../kit';
 import {Buf, bayer, clamp} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
-import {drawMonitorPOV, MON_POV} from '../../../../../shared/pixel/kits/mas-monitor';
+import {drawMonitorPOV} from '../../../../../shared/pixel/kits/mas-monitor';
 import {pt, pw, untracked} from '../../art/kit';
 import {wideBack, coverOTS, pagesECU, otsDark, drawOrbOTS, terminalScan, SCAN_FACES, masMCU} from '../sets/dark';
 import {feedPainter, broadcastPainter, podiumPainter} from '../sets/screen';
-import type {PodiumSt, PodiumView} from '../sets/screen';
+import type {PodiumSt} from '../sets/screen';
 import {glide, held, RH} from '../sets/common';
 import type {PxShot} from '../../types';
 
@@ -144,12 +149,11 @@ L.add('23.06', {
 });
 /** THE PODIUM full frame, past the monitor's bezel (the review: inside the same bezel as the real broadcast, with his
  *  room's window beside it, the invented business could read as more footage on his screen; out of the screen it is
- *  the show's own allegory, its own space). The stage sits where the screen was, so nothing jumps in the dissolve; no
- *  screen texture (it is no longer a screen) */
-const STAGE: PodiumView = {ox: MON_POV.x, oy: MON_POV.y, w: MON_POV.w, h: MON_POV.h};
-const podiumFull = (st: PodiumSt, f: number) => { const t = new Buf(480, RH, PAL.N0); podiumPainter(st, STAGE)(t, f); return t; };
+ *  the show's own allegory, its own space), in the broadcast's own studio (the final fix round, X4); no screen texture
+ *  (it is no longer a screen) */
+const podiumFull = (st: PodiumSt, f: number) => { const t = new Buf(480, RH, PAL.N0); podiumPainter(st)(t, f); return t; };
 L.add('23.07', {
-  st: 'drawMonitorPOV + tag/sets/screen broadcastPainter → podiumPainter FULL FRAME ([POV → its own space] the player\'s chrome clears in held steps (the lower third, the bar, the frame), then the whole frame dissolves (held dither) past the monitor\'s bezel to what is outside the broadcast: THE PODIUM on its dusk hill (the art\'s SET-08) filling the frame, still facing away; the same hands come up from below the frame with a hand pump and a limp balloon, each arm bent at an elbow inside the frame; a stroke on each pump, the balloon in CHATGTP\'s bubble shape (dot eyes, no words, no sticker) growing a size each time; both hands at the podium\'s near corner tie its string on the knot; they let go and sink out of frame; the balloon floats on its slack string, bobbing)',
+  st: 'drawMonitorPOV + tag/sets/screen broadcastPainter → podiumPainter FULL FRAME ([POV → its own space] the player\'s chrome clears in held steps (the lower third, the bar, the frame), then the whole frame dissolves (held dither) past the monitor\'s bezel to what is outside the broadcast: THE PODIUM in the broadcast\'s own studio (its blue cyc, its soft lights; no hill, no crowd, no flags), seen from where he stands, still facing away; the same hands slide a slim pump (lying flat, a round cream knob) and a limp balloon onto its surface from the frame\'s foot, forearms only, the elbows out of frame below; on each pump sound the left hand\'s pinch pushes the knob in sideways, the right hand pinching the balloon\'s neck at the nozzle, the balloon in CHATGTP\'s bubble shape (dot eyes, no words, no sticker) growing a size each time; both hands at the near ledge tie its string on the knot; they let go and slide back out of frame; the balloon floats above the far rim on its slack string, bobbing. No arm raised, no fist, no red (X4))',
   marks: {p1: ['snd', 'balloon_pump', 1, 0], p2: ['snd', 'balloon_pump', 2, 0], p3: ['snd', 'balloon_pump', 3, 0], knot: ['snd', 'knot_tie', 1, 0]},
   draw: (fb, k, sh, f) => {
     const p = [mk(sh, 'p1', 19), mk(sh, 'p2', 45), mk(sh, 'p3', 71)], knot = mk(sh, 'knot', 109);
@@ -163,9 +167,13 @@ L.add('23.07', {
       return {phase: 'tied', knot: true, away: Math.min(3, Math.floor((k - knot - 6) / 3)), f};
     };
     if (k < 6) { drawMonitorPOV(fb, f, broadcastPainter({k: 200 + k, lower: 2, clear: k < 2 ? 1 : k < 4 ? 2 : 3})); return; }
+    // the dissolve in two held halves (the final fix round, X4): first the figure leaves the picture (the plain set
+    // stays, the broadcast's own blue), then the frame dissolves past the bezel to the studio round THE PODIUM; so no
+    // frame lays his talking hands or the red tie over the podium
+    if (k < 10) { drawMonitorPOV(fb, f, broadcastPainter({k: 200 + k, lower: 2, clear: 3, empty: k < 8 ? 0.5 : 1})); return; }
     if (k < 14) {
-      drawMonitorPOV(fb, f, broadcastPainter({k: 200 + k, lower: 2, clear: 3}));
-      const t = podiumFull({phase: 'limp', lift: 2, f}, f), u = (held(k - 6, 2) + 2) / 10;
+      drawMonitorPOV(fb, f, broadcastPainter({k: 200 + k, lower: 2, clear: 3, empty: 1}));
+      const t = podiumFull({phase: 'limp', lift: 2, f}, f), u = k < 12 ? 0.4 : 0.75;
       for (let y = 0; y < RH; y++) for (let x = 0; x < 480; x++) if (bayer(x, y) < u) fb.c[y * 480 + x] = t.c[y * 480 + x];
       return;
     }
@@ -173,7 +181,7 @@ L.add('23.07', {
   },
 });
 L.add('23.08', {
-  st: 'tag/sets/screen podiumPainter FULL FRAME ([its own space] the balloon bobbing on its slack string; on the snap the string goes TAUT from the knot up over the podium\'s lip, cresting it and gone down the far side, and the balloon is pulled down behind the podium (a jerk drawing, then settled): only its top and its dot eyes over the gold, the mics in front of it; a beat later one more tug takes it a step lower, the eyes\' tops just over the lip, as if someone on the far side had taken hold of it)',
+  st: 'tag/sets/screen podiumPainter FULL FRAME ([its own space] the balloon bobbing on its slack string; on the snap the balloon lifts and the string goes TAUT, a straight line from the knot on the near ledge up to it (a jerk drawing, the string quivering, then settled): the balloon at the frame\'s top edge, its dot eyes just under it; a beat later one more tug takes it a step higher. The pull is the balloon\'s own, upward; nobody behind the podium (X4))',
   marks: {taut: ['snd', 'string_taut', 1, 0]},
   draw: (fb, k, sh, f) => {
     const t = mk(sh, 'taut', 7);
