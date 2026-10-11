@@ -1,12 +1,13 @@
 // MR. MAS — Ep2 v1 · act3 · scene 13: LEAVE THEM UP (MAY 15, 2024; the NopeAI lobby by day). 6 shots, 744 f on the v1
-// EL lock. The shots pass, 2026-10-09; the record is shots-act3.md. The staging is proposal.md sc 13 (its final check:
+// EL lock (7 shots, 840 f since the fixes pass, 2026-10-10). The shots pass, 2026-10-09; the record is shots-act3.md. The staging is proposal.md sc 13 (its final check:
 // the sighting has no reflection in it; the counterweight is the other side's, at similar weight) / script-v1:
 //   ARRIVE   13.01 the lobby master by day (2 s: the complaint a side table, the TV on the presser, the staffers at
 //            their pillar, Mas watching them), then over Mas's shoulder onto the two staffers at their pillar, February's
 //            flyers curling: one peels a corner, the other smooths his tape back down; their exchange (quick)
 //   TURN     13.02 the first staffer turns to Mas, the corner still in her fingers: "He posted, though. Do we take these
 //            down now?" · his face: "leave them up." · 13.03 a fallen flyer; he picks it up and tapes it back himself,
-//            upside down; nobody corrects him; his upside-down flyer, a beat
+//            upside down; nobody corrects him; his upside-down flyer, a beat: his hand comes back to turn it, stops,
+//            and lowers (a choice) · 13.03b (the fixes pass) the staffers, low: "Did his post say why?" "No."
 //   COUNTER  13.04 the lobby TV framed in the foreground, pushed in to full frame: the presser, REMUHCS · MAJORITY LEADER,
 //            the lectern ROADMAP · $32B/YR with nine FORUM stickers that won't go through FLOOR, face on or sideways ·
 //            13.05 the reporter's question from the TV (no answer in a real senator's mouth); an aide slaps on a tenth
@@ -58,8 +59,24 @@ L.add('13.03', {
       tapeMCU(fb, f, {raise: Math.floor(raise * 3) / 3, press: k < tp ? 0 : k < tp + 6 ? 1 : 2});
       return;
     }
-    flyerPillarECU(fb, f);
+    // the fixes pass (2026-10-10): the flyer alone a beat; his hand comes back toward its taped top corner in held
+    // steps (to turn it), stops a finger short of it and holds, then lowers out of frame: he leaves it upside down;
+    // the flyer alone again to the cut (the review read the upside-down flyer as a slip, not a choice)
+    const j = k - 118;
+    const reach = j < 12 ? 0 : Math.min(1, Math.floor((j - 12) / 3) * 3 / 12);
+    const lower = j < 42 ? 0 : Math.min(1, Math.floor((j - 42) / 3) * 3 / 12);
+    flyerPillarECU(fb, f, {reach, lower});
     void sh;
+  },
+});
+L.add('13.03b', {
+  st: 'act3/sets/lobby pillarMedium ([OTS-W] the fixes pass, 2026-10-10: over Mas\'s shoulder (the back of his head and hood at his pillar) onto the two staffers at theirs, who have watched him tape it back: B, quietly, to A: "Did his post say why?" (lip); A, turned to Mas, her hand still at her flyer\'s peeled corner, not looking away from him: "No." (lip); low, to each other, never to him)',
+  face: {STAFFER: 'lip', STAFFER2: 'lip'},
+  marks: {q: ['on', 'e2-a3-0025', 0], no: ['on', 'e2-a3-0026', 0]},
+  draw: (fb, k, sh, f) => {
+    const no = mk(sh, 'no', 60);
+    pillarMedium(fb, f, {turnA: true, peel: 2, smooth: 0, aMouth: mouth(sh, k, 'STAFFER'), bMouth: mouth(sh, k, 'STAFFER2'),
+      aExpr: 'neutral', bExpr: k >= no + 6 ? 'worry' : 'neutral', aLook: -1, bLook: -1});
   },
 });
 L.add('13.04', {

@@ -25,7 +25,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:49:09"
+   "built": "2026-10-10 17:40:06"
   },
   "act1": {
    "file": "out/ep02/v1/mix/act1-mix.wav",
@@ -40,7 +40,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:49:29"
+   "built": "2026-10-10 17:40:26"
   },
   "act2": {
    "file": "out/ep02/v1/mix/act2-mix.wav",
@@ -55,22 +55,22 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:49:42"
+   "built": "2026-10-10 17:40:38"
   },
   "act3": {
    "file": "out/ep02/v1/mix/act3-mix.wav",
    "seconds": 320.0,
-   "lufs_i": -16.01,
-   "true_peak_dbtp": -1.2,
+   "lufs_i": -16.02,
+   "true_peak_dbtp": -1.07,
    "lra_lu": 6.9,
-   "dialogue_lufs": -13.65,
-   "gain_db": 2.53,
+   "dialogue_lufs": -13.6,
+   "gain_db": 2.49,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-act3/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:49:57"
+   "built": "2026-10-10 17:40:53"
   },
   "act4": {
    "file": "out/ep02/v1/mix/act4-mix.wav",
@@ -85,7 +85,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:50:13"
+   "built": "2026-10-10 17:41:09"
   },
   "tag": {
    "file": "out/ep02/v1/mix/tag-mix.wav",
@@ -100,7 +100,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:50:15"
+   "built": "2026-10-10 17:41:11"
   },
   "card": {
    "file": "out/ep02/v1/mix/card-mix.wav",
@@ -115,7 +115,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 15:50:15"
+   "built": "2026-10-10 17:41:11"
   }
  },
  "episode": {
@@ -150,10 +150,10 @@
   },
   {
    "seam": "act2 -> act3",
-   "last_200ms_dbfs": -29.1,
-   "first_200ms_dbfs": -21.8,
-   "step_db": 7.3,
-   "sample_jump": 0.0009
+   "last_200ms_dbfs": -26.6,
+   "first_200ms_dbfs": -29.6,
+   "step_db": -3.0,
+   "sample_jump": 0.0026
   },
   {
    "seam": "act3 -> act4",
@@ -171,9 +171,9 @@
   }
  ],
  "spread": {
-  "lufs_i_lu": 1.01,
+  "lufs_i_lu": 1.02,
   "dialogue_lu": 0.86
  },
- "updated": "2026-10-10 15:50:27",
+ "updated": "2026-10-10 17:41:22",
  "heard": "nothing here has been listened to; every number is measured"
 }

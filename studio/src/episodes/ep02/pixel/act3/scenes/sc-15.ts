@@ -29,7 +29,7 @@ import {orbBob} from '../../../../../shared/pixel/cast/orb-medium';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import type {Mas2Legs} from '../../art/cast/mas2';
 import {officeWide, phoneInHand, threadScreen, tpoolScreen, orbScan, masEvening, stairs, pushECU, typeECU, PH, PIN, ICON_SCROLL, ICON_AT} from '../sets/office';
-import {partyWide, chantMedium, partyTwoShot, checkIn, streamSource, streamsMaskAt, office2023, publish, offsiteWide, offsiteMedium, toPoint} from '../sets/f22';
+import {partyWide, chantMedium, partyTwoShot, checkIn, streamSource, streamsMaskAt, office2023, publish, offsiteWide, offsiteMedium, offsiteCatch, toPoint} from '../sets/f22';
 
 const L = layouts();
 const walk = (k: number) => roomWalkAt(k) as Mas2Legs;
@@ -153,8 +153,14 @@ L.add('15.09', {
   },
 });
 L.add('15.10', {
-  st: 'act3/sets/f22 office2023 ([2S] this office, 2023, night (art/sets/alyioffice screen2023, under the flashback\'s glossy bloom): his screen close at frame left, its bezel cropping his near shoulder; the post in its own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, and its hard sentence, held to its read time; Ekiel beside him squinting at it; rail 2023)',
-  draw: (fb, k, sh, f) => { office2023(fb, f, {ekielLid: (k >= 64 && k < 68) || (k >= 158 && k < 162) ? 2 : 0, alyiRead: Math.floor(k / 40) % 2}); void sh; },
+  st: 'act3/sets/f22 office2023 ([2S] this office, 2023, night (art/sets/alyioffice screen2023, under the flashback\'s glossy bloom): his screen close at frame left, its bezel cropping his near shoulder; the rail 2023 alone over the empty draft for 2.2 s (the fixes pass), then the post fills in, in its own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, and its hard sentence, held to its read time; Ekiel beside him reading it, his eyes open)',
+  marks: {title: ['txt', 'INTRODUCING', 'at', 0], body: ['txt', 'Currently', 'at', 0]},
+  draw: (fb, k, sh, f) => {
+    // the fixes pass: the rail alone over the empty draft for 2.2 s; then the title and byline, then the sentence (the
+    // lock's text windows)
+    const t1 = mk(sh, 'title', 57), t2 = mk(sh, 'body', 62);
+    office2023(fb, f, {ekielLid: (k >= 84 && k < 88) || (k >= 178 && k < 182) ? 2 : 0, alyiRead: Math.floor(k / 40) % 2, post: k < t1 ? 0 : k < t2 ? 1 : 2});
+  },
 });
 L.add('15.11', {
   st: 'act3/sets/f22 office2023 ([2S] the same: Ekiel says it plainly, "Nobody knows how to do this yet." (lip-synced); Alyi answers without looking away from the screen, "Someone should." (lip-synced))',
@@ -185,9 +191,15 @@ L.add('15.14', {
   draw: (fb, k, sh, f) => { const cl = mk(sh, 'cl', 9); publish(fb, f, {press: k >= cl - 1}); },
 });
 L.add('15.15', {
-  st: 'act3/sets/f22 offsiteWide ([W] his match still at the effigy\'s lower body (the held drawing), then it catches: the fire, palette-cycled (the shape holds, the colours walk; never a strobe), its light on everything; Alyi in the doorway, the match lowered)',
+  st: 'act3/sets/f22 offsiteWide → offsiteCatch → offsiteWide ([W] his match still at the effigy\'s lower body (the held drawing), then it catches: the fire, palette-cycled (the shape holds, the colours walk; never a strobe); [MCU] the fixes pass: Alyi in the doorway, close, the fire he has lit lighting his face warm from frame right, the match lowered, calm, watching it take, the jamb over his near half; [W] the fire, its light on everything, Alyi in the doorway)',
   marks: {wh: ['snd', 'flame_whoomph', 1, 0]},
-  draw: (fb, k, sh, f) => { const wh = mk(sh, 'wh', 6); offsiteWide(fb, f, {fire: k < wh ? 0 : k < wh + 8 ? 1 : 2, alyi: k < wh + 4 ? 'touch' : 'lowered'}); },
+  draw: (fb, k, sh, f) => {
+    // the fixes pass (2026-10-10): the wide to the catch, then his face lit by the fire he has lit (MCU, 1.7 s), then the
+    // fire wide (the review: the turn rode on the props, his face never readable as he lit it)
+    const wh = mk(sh, 'wh', 6), m0 = wh + 10, m1 = m0 + 40;
+    if (k >= m0 && k < m1) { offsiteCatch(fb, f); return; }
+    offsiteWide(fb, f, {fire: k < wh ? 0 : k < wh + 8 ? 1 : 2, alyi: k < wh + 4 ? 'touch' : 'lowered'});
+  },
 });
 L.add('15.16', {
   st: 'act3/sets/f22 toPoint ([W → ECU] the fire\'s glow shrinks in held steps to one point of light at the frame\'s centre (where the next shot\'s pin pulses))',
@@ -226,13 +238,15 @@ L.add('15.18', {
   },
 });
 L.add('15.19', {
-  st: 'act3/sets/office stairs → pushECU → stairs ([W] the stairwell (art/sets/alyioffice), Mas small on the stairs going down; his phone buzzes; [ECU] the push on his phone in his hand: request for comment, its thumbnail a strip of receipt paper (no outlet named, no headline words); [W] he reads it without stopping and keeps going down)',
+  st: 'act3/sets/office stairs → pushECU → stairs ([W] the stairwell (art/sets/alyioffice), Mas small on the stairs going down; his phone buzzes; [ECU] the push on his phone in his hand: request for comment, re: exit agreements (the fixes pass: its subject line, the receipt\'s cause), its thumbnail a strip of receipt paper (no outlet named, no headline words); [W] he reads it without stopping and keeps going down)',
   marks: {bz: ['snd', 'phone_buzz_step_1', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const bz = mk(sh, 'bz', 28), e1 = 36, e2 = 86;
+    // the fixes pass (2026-10-10): the push holds 2.8 s (k 34-101), its subject line under it (re: exit agreements:
+    // the receipt's cause, before it pours out at the doors); the shot is 5.4 s
+    const bz = mk(sh, 'bz', 28), e1 = 34, e2 = 102;
     if (k < e1) { stairs(fb, f, {x: 150 + Math.round(k * 1.4), step: 0, legs: walk(k), phone: k >= bz + 2}); return; }
-    if (k < e2) { pushECU(fb, f, {k: k - 38}); return; }
-    stairs(fb, f, {x: 200 + Math.round((k - e2) * 1.4), step: 0, legs: walk(k), phone: k < e2 + 20});
+    if (k < e2) { pushECU(fb, f, {k: k - 36}); return; }
+    stairs(fb, f, {x: 200 + Math.round((k - e2) * 1.4), step: 0, legs: walk(k), phone: k < e2 + 16});
   },
 });
 

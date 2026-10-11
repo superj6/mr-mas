@@ -329,6 +329,32 @@ def main(argv):
     mark("sc 12 plays without V.O. (W8)", not vo12, f"V.O. in sc 12: {vo12 or 'none'}")
     mark("his post held for its read floor", post is not None and post[1] - post[0] >= floor - 1.0 / FPS,
          f"the post up {post[0]:.3f}-{post[1]:.3f} s against a floor of {floor:.2f} s" if post else "no post")
+    # Act Three's fixes pass (2026-10-10; fixes-v1.md, the episode review's blocker and its majors): no reason for
+    # Alyi's leaving placed by juxtaposition (W8): the safety team's plate is out of the Alyi run, V.O. 7 counts no firing
+    # clock, the gate's answer is said once in sc 13, and the ISS card carries no line about its product
+    a3_texts = [(sh["id"], t["text"]) for sh in locks["act3"]["shots"] for t in sh["texts"]]
+    a3_snds = {k[1] for k in snd_on if k[0].split(".")[0] in ("13", "14", "15", "17")}
+    sc14 = next(q for q in locks["act3"]["scenes"] if q["id"] == "14")
+    mark("sc 14: Ekiel's domino goes straight to Alyi's door, no team plate (W8)",
+         not any("SUPERALIGNMENT" in t for sid, t in a3_texts if sid.startswith("14.")) and not any(n.startswith("screw_turn") for n in a3_snds)
+         and [sh["id"] for sh in locks["act3"]["shots"] if sh["id"].startswith("14.")][-2:] == ["14.10", "14.12"],
+         f"sc 14's last shots {[sh['id'] for sh in locks['act3']['shots'] if sh['id'].startswith('14.')][-3:]}; scene {sc14['s']}-{sc14['e']} f")
+    vo7 = next((l for l in locks["act3"]["lines"] if l["id"] == "e2-vo-07"), None)
+    mark("V.O. 7 counts on Alyi's own clock, not the firing's",
+         vo7 is not None and "seventy-six" not in vo7["text"] and not any(t.startswith("NOV 20") for sid, t in a3_texts if sid == "15.02"),
+         f"V.O. 7 \"{vo7['text'] if vo7 else None}\"; 15.02's texts {[t for sid, t in a3_texts if sid == '15.02']}")
+    gate = [lid for lid in ("e2-a3-0025", "e2-a3-0026") if lid in on and on[lid][0] == "act3"]
+    mark("sc 13: \"Did his post say why?\" / \"No.\"", len(gate) == 2 and on["e2-a3-0025"][1] < on["e2-a3-0026"][1],
+         f"lines {gate}" + (f", at {on['e2-a3-0025'][1]:.3f} and {on['e2-a3-0026'][1]:.3f} s" if len(gate) == 2 else ""))
+    r23 = next(((r["s"] / FPS, r["e"] / FPS, r["text"]) for r in locks["act3"]["rails"] if r["text"] == "2023"), None)
+    p23 = text_on("act3", "15.10", "INTRODUCING")
+    mark("the 2023 rail held 2 s, clear of the post", r23 is not None and p23 is not None and r23[1] - r23[0] >= 2.0 - 1e-6 and p23[0] >= r23[1] - 1e-6,
+         f"the rail {r23[0]:.3f}-{r23[1]:.3f} s, the post from {p23[0]:.3f} s" if r23 and p23 else "missing")
+    mark("the ISS card carries no line about its product", text_on("act4", "20.10", "one goal") is None and text_on("act4", "20.10", "ISS") is not None,
+         "20.10's texts: " + str([t["text"] for sh in locks["act4"]["shots"] if sh["id"] == "20.10" for t in sh["texts"]]))
+    hk, upd = snd_on.get(("17.15", "car_honk_5")), on.get("e2-a3-0021")
+    mark("the last honk clears \"Updating.\"", hk is not None and upd is not None and upd[1] - hk[1] >= 0.3,
+         f"car_honk_5 at {hk[1]:.3f} s, \"Updating.\" from {upd[1]:.3f} s" if hk and upd else "missing")
     # 4B: a beat after his thought, and P3's 1.5 s after the Accept click
     acc = snd_on.get(("4B.01", "post_click"))
     sc4b = next(q for q in locks["act1"]["scenes"] if q["id"] == "4B")

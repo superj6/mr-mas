@@ -141,7 +141,7 @@ L.add('20.09', {
 });
 // ------------------------------------------------------------------ 20.10-20.13 JUN 19, his dark room
 L.add('20.10', {
-  st: 'act4/sets/dark faceDown → phoneRead ([ECU] ARRIVE: a week later, his dark room: his phone face down on the desk (2 s); it lights at its edges (the buzz); his hand turns it over (the art\'s turn); the phone in his hand: TPOOL still open on its map, and over it Alyi\'s post in its own UI, "I am starting a new company:", its link card ISS · "one goal and one product: a safe superintelligence", legible)',
+  st: 'act4/sets/dark faceDown → phoneRead ([ECU] ARRIVE: a week later, his dark room: his phone face down on the desk (2 s); it lights at its edges (the buzz); his hand turns it over (the art\'s turn); the phone in his hand: TPOOL still open on its map, and over it Alyi\'s post in its own UI, "I am starting a new company:", its link card ISS, cropped to its plate (Act Three\'s fixes pass, 2026-10-10: its line, on screen, read as a rebuke of Act Two\'s product, the review\'s blocker), legible)',
   marks: {buzz: ['snd', 'phone_buzz_step_1', 1, 0], turn: ['snd', 'phone_turn_over', 1, 0], post: ['txt', 'I am starting', 'at', 0], card: ['txt', 'ISS', 'at', 0]},
   draw: (fb, k, sh, f) => {
     const buzz = mk(sh, 'buzz', 45), turn = mk(sh, 'turn', 55), post = mk(sh, 'post', 62), card = mk(sh, 'card', 72);

@@ -13,6 +13,13 @@ sound-audit.json and prints a summary. Nothing here is listened to; every number
             'marginal' 0 to +3). The SFX stem's other sounds in the same window count with it (they play together).
   POCKET+   every line's 1-4 kHz onset margin (its first 0.6 s from the first word) against rooms + SFX + score as laid
             (pocket.py does the score alone, as the score review asked; this adds the rest of the mix).
+  WHOLE     (the fixes pass, Act Three, 2026-10-10) every line's WHOLE length, 20 ms frames in 1-4 kHz, its voiced frames
+            (inside its words, within 25 dB of its loudest frame) against everything else laid there: rooms + SFX +
+            score + the other lines. p10, median, the first word's frame, the share of frames under +3 dB; FLOOR the 10th
+            percentile at +6 dB (the review: an onset can clear while the tail is masked: Mas's "someone has to hold the
+            glass." +12.0 dB at its onset, +1.6 at its 10th percentile).
+  HEARD     (the same pass) every sound's attack and body against everything INCLUDING dialogue (the SFX check above
+            leaves dialogue out); a sound a line refers to (REFERRED) must be heard by that measure too.
   VOICES    every line's level as laid (LUFS, after its match, chain, V.O. lift and the segment's master gain), per
             speaker and per scene; MARIO against the lines around him (LEARNINGS S7: within about 1 dB).
   JUMPS     every 50 ms rise over 15 dB that the mix QA could not put on a word or an SFX onset: which bus rose.
@@ -83,6 +90,17 @@ RIDE_CAP, RIDE_CAP_AMBIENT, PEAK_CAP = 18.0, 14.0, -12.0
 
 SHORT_S = 0.3                               # a sound this short is heard by its peak over the local mix (a click)
 TARGET_PEAK = 6.0
+# (seg, beat, lock name) -> the line that refers to it: these must be heard against everything, dialogue included (the
+# episode review measured 17.15's last honk -8.7 dB in its band once "Updating." was counted, while the no-dialogue
+# measure called it heard). Owners of other segments add theirs.
+REFERRED = {
+    ('act3', '17.15', 'car_honk_2'): 'e2-a3-0022 ("Does honking count as disparagement?": the honks before it)',
+    ('act3', '17.15', 'car_honk_3'): 'e2-a3-0022',
+    ('act3', '17.15', 'car_honk_4'): 'e2-a3-0022',
+    ('act3', '17.15', 'car_honk_5'): 'e2-a3-0022 (the last honk before the line)',
+    ('act3', '17.16', 'car_honk_1'): 'e2-a3-0022 (the car behind him honks: the button)',
+}
+WHOLE_FLOOR = 6.0
 
 
 def sfx_audit(seg, g, B, gain, sq, ride_now):
@@ -126,6 +144,10 @@ def sfx_audit(seg, g, B, gain, sq, ride_now):
         own_pk = [i for i, v in enumerate(P) if v >= max(P) * 0.1] if max(P) > 0 else own
         att = {i: 10 * np.log10(fx2[i][a2:b2].max() / (mk2[i][m0:m1].mean() + 1e-20) + 1e-20) for i in own_pk}
         pk_best = round(float(max(att.values())), 1)
+        # heard against everything: the same attack and body with the dialogue in the masker
+        att_d = {i: 10 * np.log10(fx2[i][a2:b2].max() / (mk2[i][m0:m1].mean() + dl2[i][m0:m1].mean() + 1e-20) + 1e-20) for i in own_pk}
+        pk_best_d = round(float(max(att_d.values())), 1)
+        best_d = round(float(max(snr_d.values())), 1)
         short = dur <= SHORT_S
         # the level actually in the stem where it lands, against the level it was laid at (a fade, a duck or a cut that
         # ate its attack shows here: the check that found the first head fade's bug)
@@ -142,7 +164,12 @@ def sfx_audit(seg, g, B, gain, sq, ride_now):
                                             else None),
                      # heard if its attack pops (+6 over the local mix) or its body sits over the bed (its target)
                      'verdict': ('ok' if (pk_best >= TARGET_PEAK or best >= target) else
-                                 ('masked' if max(pk_best - TARGET_PEAK, best - target) < -6 else 'marginal'))})
+                                 ('masked' if max(pk_best - TARGET_PEAK, best - target) < -6 else 'marginal')),
+                     # the same with the dialogue in the masker (the fixes pass): a sound a line refers to must pass it
+                     'peak_over_local_with_dialogue_db': pk_best_d, 'best_snr_vs_all_db': best_d,
+                     'referred_by': REFERRED.get((seg, beat, lock)),
+                     'verdict_vs_all': ('ok' if (pk_best_d >= TARGET_PEAK or best_d >= target) else
+                                        ('masked' if max(pk_best_d - TARGET_PEAK, best_d - target) < -6 else 'marginal'))})
     return rows
 
 
@@ -205,6 +232,64 @@ def pocket_plus(seg, g, B, variant):
             mg = round(min(60.0, _db(pv) - _db(pm)), 1) if pm > 1e-14 else 60.0
             rows.append({'line': l['id'], 'who': l.get('who'), 'tag': l.get('tag') or '', 'beat': b['id'],
                          'on': round(on, 2), 'onset_margin_vs_all_db': mg})
+    return rows
+
+
+def line_whole(seg, g, B, variant, fr=0.02):
+    """every line's whole length against everything else laid there (rooms + SFX + score + the other lines), 1-4 kHz, in
+    20 ms frames: the line as laid (its match, chain, the segment's bus trim, a designed tail duck) subtracted from the
+    dialogue bus gives the other lines; its voiced frames are inside its words and within 25 dB of its loudest frame"""
+    sos = signal.butter(4, POCKET_BAND, 'bandpass', fs=SR, output='sos')
+    rest = B['room'] + B['sfx'] + (B['score'] if B['score'] is not None else 0.0)
+    rest_m = np.asarray(rest, 'float64').mean(axis=1)
+    dlg_m = np.asarray(B['dlg'], 'float64').mean(axis=1)
+    n = int(fr * SR)
+    rows = []
+    for i, b in enumerate(g.beats):
+        s0 = g.starts[i][0]
+        for l in b.get('lines') or []:
+            if not l.get('audio') or not os.path.exists(os.path.join(ROOT, l['audio'])):
+                continue
+            x, gdb = M.line_audio(l, b.get('room'), variant)
+            on = s0 + l['t']
+            z = on - l.get('in', 0.0)
+            if l['id'] in M.LINE_TAIL_DUCK:                       # as dialogue() lays it
+                oid, ddb, _ = M.LINE_TAIL_DUCK[l['id']]
+                other = next((o for o in b['lines'] if o['id'] == oid), None)
+                if other is not None:
+                    k0 = int((s0 + other['t'] - 0.04 - z) * SR)
+                    if 0 < k0 < len(x):
+                        ramp = np.ones(len(x)); kr = min(len(x) - k0, int(0.03 * SR))
+                        ramp[k0:k0 + kr] = np.linspace(1.0, float(M.db(ddb)), kr); ramp[k0 + kr:] = float(M.db(ddb))
+                        x = x * ramp
+            own = np.asarray(x, 'float64') * 0.7071 * float(M.db(gdb + M.DLG_SEG_DB.get(seg, 0.0)))
+            i0 = int(round(z * SR))
+            a_ = max(0, i0)
+            e_ = min(len(rest_m), i0 + len(own))
+            if e_ <= a_:
+                continue
+            own_s = own[a_ - i0:e_ - i0]
+            others = dlg_m[a_:e_] - own_s
+            mask = rest_m[a_:e_] + others
+            pv = signal.sosfilt(sos, own_s); pm = signal.sosfilt(sos, mask)
+            k = len(pv) // n
+            if k < 2:
+                continue
+            fv = (pv[:k * n] ** 2).reshape(k, n).mean(axis=1); fm = (pm[:k * n] ** 2).reshape(k, n).mean(axis=1)
+            words = l.get('words') or []
+            w0 = (on + max(0.0, words[0][1])) if words else on
+            w1 = (on + words[-1][2]) if words and len(words[-1]) > 2 else on + l['dur']
+            tf = (a_ + (np.arange(k) + 0.5) * n) / SR
+            top = fv.max()
+            sel = (tf >= w0 - 0.01) & (tf <= w1 + 0.01) & (fv >= top * 10 ** (-25 / 10))
+            if sel.sum() < 2:
+                continue
+            mg = 10 * np.log10((fv[sel] + 1e-20) / (fm[sel] + 1e-20))
+            first = float(mg[0])
+            rows.append({'line': l['id'], 'who': l.get('who'), 'beat': b['id'], 'on': round(on, 2), 'frames': int(sel.sum()),
+                         'p10_db': round(float(np.percentile(mg, 10)), 1), 'median_db': round(float(np.median(mg)), 1),
+                         'first_db': round(first, 1), 'under_3db_pct': round(100.0 * float((mg < 3.0).mean()), 1),
+                         'ok': bool(np.percentile(mg, 10) >= WHOLE_FLOOR)})
     return rows
 
 
@@ -385,6 +470,7 @@ def main(argv):
         ride_now, _ = load_rides()
         r['sfx'] = sfx_audit(seg, g, B, gain, sq, ride_now)
         r['pocket_plus'] = pocket_plus(seg, g, B, variant)
+        r['line_whole'] = line_whole(seg, g, B, variant)
         r['voices'] = voices(seg, g, variant, gain)
         r['jumps'] = jumps_by_bus(seg, B, gain, mq)
         _, cp = S.score_files(seg, variant)
@@ -423,6 +509,16 @@ def main(argv):
                       f"(laid at {x['peak_dbfs_laid']} dBFS peak, ride {x['ride_now_db']:+.1f}){' under a line' if x['under_a_line'] else ''}")
         for x in low:
             print(f"   pocket+  {x['beat']:7s} {x['line']:14s} {x['who']:10s} {x['tag']:7s} @{x['on']:8.2f} onset vs all {x['onset_margin_vs_all_db']:+.1f} dB")
+        lw = r['line_whole']
+        weak = [x for x in lw if not x['ok']]
+        print(f"   whole lines: {len(lw)} measured, {len(weak)} under the +{WHOLE_FLOOR:.0f} dB floor at their 10th percentile")
+        for x in weak:
+            print(f"   whole    {x['beat']:7s} {x['line']:14s} {str(x['who']):10s} @{x['on']:8.2f} p10 {x['p10_db']:+.1f} median {x['median_db']:+.1f} "
+                  f"first {x['first_db']:+.1f} under+3 {x['under_3db_pct']:.0f}%")
+        for x in r['sfx']:
+            if x.get('referred_by'):
+                print(f"   heard    {x['beat']:7s} {x['name']:24s} @{x['at']:8.2f} vs all: attack {x['peak_over_local_with_dialogue_db']:+.1f}, body "
+                      f"{x['best_snr_vs_all_db']:+.1f} dB -> {x['verdict_vs_all']} (referred: {x['referred_by'][:40]})")
         for x in r['jumps']:
             print(f"   jump     @{x['at']:8.2f} rose: {x['rose']}: {x['cause']}")
     # the episode's voices: per speaker, and MARIO against his scene

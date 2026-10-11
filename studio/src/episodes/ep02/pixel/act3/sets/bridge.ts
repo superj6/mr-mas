@@ -313,17 +313,21 @@ const driverWin = (b: Buf, f: number, st: {mouth?: BustState['mouth']; expr?: Bu
   putBustCut(b, driverBust({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'neutral'}), 140, 60, RH);
   // the door below the window line (over his chest), the sill's rubber, the handle
   fill(b, 0, 174, 480, 29, PAL.R2); fill(b, 0, 174, 480, 3, PAL.N0); fill(b, 0, 177, 480, 2, PAL.R3); fill(b, 330, 188, 34, 4, PAL.G4);
-  // the arm in his jacket's own tones (no bright rim, no ribbing): the shoulder's cap grows out of the jacket's edge,
-  // the upper arm slopes down to the elbow on the sill, the forearm lies along the rubber (its underside behind the
-  // sill's lip), narrowing to the wrist; a soft crease inside the elbow
-  const sh: [number, number] = [172, 160], el: [number, number] = [142, 170], wr: [number, number] = [104, 171];
-  sleeve(b, sh, el, 10, 8.5, JACKET_SL, [-0.55, -0.83], {fold: false});
-  sleeve(b, el, wr, 8.5, 6, JACKET_SL, [-0.55, -0.83], {fold: false});
-  for (let i = 0; i < 6; i++) b.set(el[0] + 4 + i, el[1] - 5 + Math.floor(i / 2), PAL.R0);
+  // the arm in his jacket's own tones (the fixes pass, 2026-10-10: the review read the forearm as a flat red bar laid
+  // along the window, and the hand over the door bigger than his head): the upper arm from the shoulder's cap out over
+  // the sill to the elbow on its outer edge, bent there, the forearm hanging down outside the door at an angle, a dark
+  // edge round it against the door's red, a crease inside the bend; the hand resting on the door, scaled to his face
+  const sh: [number, number] = [182, 168], el: [number, number] = [136, 173], wr: [number, number] = [126, 184];
+  sleeve(b, sh, el, 10, 9, JACKET_SL, [-0.55, -0.83], {fold: false});
   fill(b, 60, 174, 160, 3, PAL.N0); fill(b, 60, 177, 160, 2, PAL.R3);
-  fill(b, wr[0] - 10, 179, 18, 2, PAL.R1);
-  // (no cuff on the hand: the wrist bends over the edge, so the sleeve ends along the forearm, never up the hand's line)
-  const h = placeHand({...POSES.open([-0.3, 0.94, 0.1], [-0.15, -0.3, 0.94], 'R'), cuff: 0}, {s: 3.4, at: [wr[0] - 1, wr[1] + 3], anchor: 'wrist', light: 'lobby'});
+  // the forearm outside the door: its silhouette a pixel wider in the dark first, so it parts from the door's red
+  sleeve(b, [el[0] - 1, el[1] + 1], [wr[0], wr[1] + 1], 9.5, 7.5, [PAL.N0, PAL.N0, PAL.N0, PAL.N0], [-0.55, -0.83], {fold: false});
+  sleeve(b, el, wr, 8.5, 6.5, JACKET_SL, [-0.55, -0.83], {fold: false});
+  // the elbow over the sill's edge: its point lit, the crease inside the bend
+  b.set(el[0] - 6, el[1] + 1, PAL.R3); b.set(el[0] - 6, el[1] + 2, PAL.R3);
+  for (let i = 0; i < 6; i++) b.set(el[0] + 3 + Math.floor(i / 2), el[1] + 4 + i, PAL.R0);
+  // (no cuff on the hand: the sleeve ends at the wrist, never up the hand's line)
+  const h = placeHand({...POSES.open([-0.25, 0.95, 0.1], [-0.2, -0.25, 0.95], 'R'), cuff: 0}, {s: 2.3, at: [wr[0] - 1, wr[1] + 2], anchor: 'wrist', light: 'lobby'});
   drawHand(b, h.hand, h.x, h.y);
   void f;
 };

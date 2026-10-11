@@ -34,11 +34,13 @@ import {BULLPEN} from '../../../../../shared/pixel/rooms/bullpen';
 import {drawMasStand2} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {bukajBust, drawBukajRoom} from '../../art/cast/bukaj';
-import {drawEkielRoom} from '../../art/cast/ekiel';
+import {makeRoom} from '../../art/cast/civic2';
+import type {RoomFigSpec} from '../../art/cast/civic2';
+import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
 import {drawDotBack} from '../../art/cast/dot';
 import {drawEp2Post} from '../../art/props/ui';
 import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
-import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
+import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp, capsule} from '../../art/kit';
 import {RH, W, TR, glow, isSkin, putBustSoft, dimRoom, speech, reframe, mirror, cupThumb} from './common';
 
 const B = BULLPEN;
@@ -62,6 +64,113 @@ const heatsink = (b: Buf, f: number, face: boolean) => {
   void f;
 };
 
+// ================================================================== EKIEL walking out (the fixes pass)
+// art/cast/ekiel drawEkielRoom's figure, copied (the art file is imported only), with his eyes open: the squint was his
+// resting face for the card's SQUINT: 100%, an appearance gag once its setup was cut (GR X10; the episode review)
+const EK_NAVY = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5, PAL.N7];
+const EK_TEE = [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6];
+const EK_SANDY = [PAL.B1, PAL.B3, PAL.B4, PAL.W4, PAL.W5, PAL.W7];
+const EK_BOX = [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.W4, PAL.W5];
+const ekRoom = makeRoom({
+  kind: 'jacket', legMat: 'jeans',
+  ramps: {skin: SKIN.light, hair: EK_SANDY, suit: EK_NAVY, shirt: EK_TEE, jeans: [PAL.N0, PAL.F1, PAL.F2, PAL.F3, PAL.F4, PAL.F5], box: EK_BOX, red: [PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.R3, PAL.P2]},
+  backRamp: {skin: PAL.S3, suit: PAL.N5},
+  extras: (p: {state?: string}, bob: number) => {
+    const st: unknown[] = [];
+    if (p.state !== 'stand') st.push({x: 18, y: 27 + bob, rows: ['bbbbbbbbbbbbbb', 'BBBBBBBBBBBBBB', 'BBBBBBBBBBBBBB', 'BBBBBBBBBBBBBB', 'BBBBBBBBBBBBBB', 'BBBBBBBBBBBBBB', 'dddddddddddddd'], pal: {b: ['box', 4], B: ['box', 3], d: ['box', 1]}});
+    return {stamps: st as never};
+  },
+} as RoomFigSpec);
+const drawEkielWalk = (b: Buf, footX: number, footY: number, legs: 'w0' | 'w1' | 'w2' | 'w3', o: {flip?: boolean} = {}) => {
+  ekRoom.draw(b, footX, footY, {arm: 'reach', armF: 'clasp', legs, state: 'carry', head: {hair: 'short', mouth: 'rest', squint: false}} as never, o);
+};
+
+// ================================================================== DOT up her ladder at the window (the fixes pass)
+// The episode review (2026-10-10): the art's DOT (art/cast/dot drawDotLadder, 'reach') had both arms straight up at the
+// window's top frame for the whole scene and a grey-on-grey ladder that vanished against the glass, so she read as
+// someone hanging from the ceiling. Here: a straight ladder leaned against the window frame, dark rails with a lit edge
+// and lit rungs (it reads against the pale glass); her shoes on a rung; one hand up at a fitting on the window's top
+// frame, its screwdriver turning in held steps with pauses (an idle loop), the other hand holding the rail; 'point':
+// she turns her shoulders and points the screwdriver across the floor at Alyi's door (14.05). From behind only (GR §6).
+const DOT_NAVY: [number, number, number, number] = [PAL.N0, PAL.N2, PAL.N3, PAL.N5];
+const DOT_ORANGE = [PAL.W3, PAL.W4, PAL.W5, PAL.W6];
+const DOT_HAIR = [PAL.N0, PAL.B0, PAL.B1, PAL.B2];
+const DOT_SK = [PAL.S1, PAL.S2, PAL.S3, PAL.S4, PAL.S5];
+/** the ladder's rails and rungs (foot at y 146, its top against the window frame), DOT's rung */
+export const DOT_L = {xl: 428, xr: 446, top: 40, foot: 146, lean: 4, rung: 90};
+const dotLadder = (b: Buf) => {
+  const L = DOT_L;
+  const railX = (x0: number, y: number) => x0 + Math.round(((L.foot - y) / (L.foot - L.top)) * L.lean);
+  for (let y = L.top; y <= L.foot; y++) for (const x0 of [L.xl, L.xr]) {
+    const x = railX(x0, y);
+    b.set(x - 1, y, PAL.N0); b.set(x, y, PAL.G5); b.set(x + 1, y, PAL.G6); b.set(x + 2, y, PAL.N1);
+  }
+  // the rungs every 8 px: a lit top edge on a dark underside, spanning between the rails
+  for (let y = L.foot - 8; y > L.top + 2; y -= 8) {
+    const x0 = railX(L.xl, y) + 3, x1 = railX(L.xr, y) - 1;
+    for (let x = x0; x < x1; x++) { b.set(x, y, PAL.P1); b.set(x, y + 1, PAL.G4); b.set(x, y + 2, PAL.N1); }
+  }
+  // rubber feet; the rails' tops against the frame
+  fill(b, railX(L.xl, L.foot) - 1, L.foot - 1, 4, 2, PAL.N0); fill(b, railX(L.xr, L.foot) - 1, L.foot - 1, 4, 2, PAL.N0);
+  fill(b, railX(L.xl, L.top) - 1, L.top - 1, 4, 2, PAL.N1); fill(b, railX(L.xr, L.top) - 1, L.top - 1, 4, 2, PAL.N1);
+};
+/** the fitting she works on: a small blind bracket on the window's top frame, its screw */
+const FIT = {x: 448, y: 27};
+const dotFitting = (b: Buf) => {
+  fill(b, FIT.x - 1, FIT.y - 1, 10, 7, PAL.N0); fill(b, FIT.x, FIT.y, 8, 5, PAL.G4); fill(b, FIT.x, FIT.y, 8, 1, PAL.G6);
+  b.set(FIT.x + 4, FIT.y + 2, PAL.N1); b.set(FIT.x + 3, FIT.y + 2, PAL.G2);
+};
+/** DOT from behind on her rung. k: the shot's frame (the idle loop), pose 'work' | 'point' */
+export const dotUp = (b: Buf, k: number, pose: 'work' | 'point' = 'work') => {
+  dotLadder(b);
+  dotFitting(b);
+  const L = DOT_L, cx = Math.round((L.xl + L.xr) / 2) + 2 + Math.round(((L.foot - L.rung) / (L.foot - L.top)) * L.lean);
+  const y0 = L.rung - 52;                                     // her head's top; her shoes on the rung at L.rung
+  const cyc = k % 72, pause = cyc >= 44;                      // the idle loop: turning, then a pause to look
+  const nod = pause && cyc >= 52 && cyc < 66 ? 1 : 0;
+  const x = cx - 13;
+  // the legs (from behind) on the rung, the shoes resting on its lit top edge
+  fill(b, x + 7, y0 + 30, 5, 19, PAL.N1); fill(b, x + 13, y0 + 30, 5, 19, PAL.N1); fill(b, x + 8, y0 + 30, 1, 19, PAL.N2); fill(b, x + 14, y0 + 30, 1, 19, PAL.N2);
+  fill(b, x + 6, y0 + 49, 6, 3, PAL.N0); fill(b, x + 13, y0 + 49, 6, 3, PAL.N0); fill(b, x + 6, y0 + 49, 6, 1, PAL.G2); fill(b, x + 13, y0 + 49, 6, 1, PAL.G2);
+  // the jacket's body, its back seam; the orange lanyard strap at the collar
+  for (let j = 0; j < 22; j++) for (let i = 0; i < 18; i++) { if (j < 3 && (i < 2 || i > 15)) continue; b.set(x + 4 + i, y0 + 10 + j, i < 4 ? DOT_NAVY[2] : i > 13 ? DOT_NAVY[0] : DOT_NAVY[1]); }
+  fill(b, x + 12, y0 + 14, 1, 16, DOT_NAVY[0]);
+  fill(b, x + 8, y0 + 9, 10, 2, DOT_ORANGE[2]); b.set(x + 8, y0 + 11, DOT_ORANGE[1]); b.set(x + 17, y0 + 11, DOT_ORANGE[1]);
+  // the head from behind: dark hair, a low bun at the nape; a pixel's nod when she pauses to look at her work
+  const hy = y0 - 2 + nod;
+  for (let j = 0; j < 11; j++) for (let i = 0; i < 10; i++) { const d = Math.hypot((i - 4.5) / 5, (j - 5) / 5.5); if (d < 1) b.set(x + 8 + i, hy + j, j < 3 ? DOT_HAIR[3] : i < 3 ? DOT_HAIR[2] : DOT_HAIR[1]); }
+  ellipse(x + 13, hy + 10, 3, 2, b.ink(DOT_HAIR[1])); b.set(x + 12, hy + 9, DOT_HAIR[3]);
+  b.set(x + 7, hy + 6, DOT_SK[1]); b.set(x + 18, hy + 6, DOT_SK[1]);
+  const cuff = (hx: number, hy2: number, w = 4) => { fill(b, hx - 2, hy2, w, 2, DOT_ORANGE[2]); fill(b, hx - 2, hy2, w, 1, DOT_ORANGE[3]); };
+  // the near hand on the rail (left of her, at her hip), resting: the fingers round the rail, the thumb over it
+  const railAt = (y: number) => L.xl + Math.round(((L.foot - y) / (L.foot - L.top)) * L.lean);
+  const ry = y0 + 24, rx = railAt(ry);
+  capsule(b, x + 6, y0 + 13, rx + 3, ry - 3, 2.6, DOT_NAVY);
+  cuff(rx + 3, ry - 3);
+  fill(b, rx - 1, ry - 1, 4, 4, DOT_SK[2]); fill(b, rx - 1, ry - 1, 4, 1, DOT_SK[3]); b.set(rx + 2, ry + 2, DOT_SK[1]);
+  if (pose === 'work') {
+    // the working arm up from her far shoulder, the elbow out, the hand at the bracket with the screwdriver's red handle
+    // in her fist and its shaft on the screw; the wrist turns in held steps (two drawings) while she works
+    const turn = pause ? 0 : Math.floor(cyc / 5) % 2;
+    const sh: [number, number] = [x + 20, y0 + 13], el: [number, number] = [x + 26, y0 + 2], wr: [number, number] = [FIT.x + 5 + turn, FIT.y + 10];
+    capsule(b, sh[0], sh[1], el[0], el[1], 2.6, DOT_NAVY);
+    capsule(b, el[0], el[1], wr[0], wr[1], 2.4, DOT_NAVY);
+    cuff(wr[0], wr[1] - 1);
+    // the fist round the handle (the handle red, across her palm), the shaft up to the screw
+    fill(b, wr[0] - 2, wr[1] - 5, 4, 4, DOT_SK[2]); fill(b, wr[0] - 2, wr[1] - 5, 4, 1, DOT_SK[3]); b.set(wr[0] + 1 - turn, wr[1] - 2, DOT_SK[1]);
+    fill(b, wr[0] - 1 + turn, wr[1] - 7, 2, 3, PAL.R2); b.set(wr[0] + turn, wr[1] - 7, PAL.R3);
+    b.set(FIT.x + 4, FIT.y + 3, PAL.G6); b.set(FIT.x + 4, FIT.y + 4, PAL.G5);
+  } else {
+    // turned toward the floor: her far arm across, pointing the screwdriver at Alyi's door (screen-left, down)
+    capsule(b, x + 18, y0 + 13, x + 2, y0 + 18, 2.6, DOT_NAVY);
+    cuff(x + 1, y0 + 17);
+    fill(b, x - 4, y0 + 16, 4, 4, DOT_SK[2]); fill(b, x - 4, y0 + 16, 4, 1, DOT_SK[3]);
+    fill(b, x - 7, y0 + 17, 3, 2, PAL.R2); line(x - 8, y0 + 18, x - 16, y0 + 21, b.ink(PAL.G6));
+    // her head turned a step that way (the ear's edge toward the floor)
+    b.set(x + 7, hy + 6, DOT_SK[2]); b.set(x + 7, hy + 7, DOT_SK[2]); b.set(x + 18, hy + 6, DOT_HAIR[1]);
+  }
+};
+
 // ================================================================== the spread with its cast
 export interface SpreadSt {
   mas?: {x: number; legs?: Mas2Legs; arm?: Mas2Arm; flip?: boolean; mouth?: 'rest' | 'open'} | null;
@@ -78,6 +187,7 @@ export interface SpreadSt {
 }
 export const spread = (b: Buf, f: number, st: SpreadSt) => {
   const back = (bb: Buf) => {
+    dotUp(bb, f, st.dot === 'point' ? 'point' : 'work');
     heatsink(bb, f, !!st.mas && Math.abs(st.mas.x - SP.masAtSink) < 4);
     if (st.bukaj) {
       if (st.bukaj.state === 'seated') drawBukajRoom(bb, st.bukaj.x, SP.chair.y + 16, {state: 'seated', mouth: st.bukaj.mouth ?? 'rest'}, {flip: true});
@@ -85,7 +195,7 @@ export const spread = (b: Buf, f: number, st: SpreadSt) => {
     }
     if (st.domino && st.mas) { const dx = st.mas.x + (st.mas.flip ? 12 : -14); fill(bb, dx - 8, SP.aisle - 2, 16, 3, PAL.P2); fill(bb, dx - 8, SP.aisle - 2, 16, 1, PAL.W9); fill(bb, dx - 7, SP.aisle + 1, 16, 1, PAL.G2); fill(bb, dx - 5, SP.aisle - 1, 8, 1, PAL.N3); }
     if (st.mas) drawMasStand2(bb, st.mas.x, SP.aisle, {legs: st.mas.legs ?? 'stand', arm: st.mas.arm ?? 'down', mouth: st.mas.mouth ?? 'rest'}, {flip: st.mas.flip});
-    if (st.ekiel) drawEkielRoom(bb, st.ekiel.x, SP.ekiel, {state: 'carry', legs: (['w0', 'w1', 'w2', 'w3'] as const)[st.ekiel.legs & 3]}, {flip: true});
+    if (st.ekiel) drawEkielWalk(bb, st.ekiel.x, SP.ekiel, (['w0', 'w1', 'w2', 'w3'] as const)[st.ekiel.legs & 3], {flip: true});
     // the note falling from the frame (a yellowed slip, tumbling in held steps, into his pocket)
     if (st.note && typeof st.note === 'object') {
       const t = clamp(st.note.fall, 0, 1), N = SP.note, mx = st.mas ? st.mas.x + 6 : 266;
@@ -94,7 +204,7 @@ export const spread = (b: Buf, f: number, st: SpreadSt) => {
       for (let j = 0; j < 7; j++) for (let i = 0; i < 11; i++) bb.set(x + i + Math.round((j * tilt) / 3), y + j, j === 0 ? PAL.W9 : (i + j) % 6 === 0 ? PAL.W6 : PAL.W8);
     }
   };
-  openFloor(b, f, {note: st.note === undefined || st.note === 'on' ? 'on' : 'gone', pivot: st.pivot ?? 0, dot: st.dot === 'point' ? 'point' : 'ladder', domino: null, hum: true}, {back});
+  openFloor(b, f, {note: st.note === undefined || st.note === 'on' ? 'on' : 'gone', pivot: st.pivot ?? 0, dot: null, domino: null, hum: true}, {back});
   // the door turning on its pin: the opening behind it is Alyi's office in the evening (its violet wall, the window's
   // dusk glow, the edge of the desk with no chair), drawn over the art's opening so it reads as a room, not a door
   if (st.pivot) {

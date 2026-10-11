@@ -8,8 +8,8 @@
 //                          hand turning it over (the art's turn drawings)
 //   phoneRead(b, f, st)    [ECU] 20.10 / 20.11 / 20.13: the phone in his hand (held from below: the thumb at the
 //                          glass's foot), TPOOL still open on its map (the check-in pin at its old place), Alyi's post
-//                          arriving over it in its own UI ("I am starting a new company:"), its link card ISS · "one goal
-//                          and one product: a safe superintelligence" landing on the old pin and knocking it loose
+//                          arriving over it in its own UI ("I am starting a new company:"), its link card ISS (cropped
+//                          to its plate since Act Three's fixes pass) landing on the old pin and knocking it loose
 //                          (st.card, st.knock), the pin tipping off the map and falling (st.fall)
 //   masReading(b, f, st)   [MCU] 20.12: Mas reading, still (his approved portrait, the morning window behind him keyed
 //                          one step: a face light), the phone's light on his chin
@@ -26,7 +26,7 @@ import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {vignette} from '../../../../../shared/pixel/rooms/kit-b';
 import {applyPalette} from '../../../../../shared/pixel/palettes';
 import {phoneFaceDown} from '../../art/sets/darkroom2';
-import {drawEp2Post, issLinkCard} from '../../art/props/ui';
+import {drawEp2Post} from '../../art/props/ui';
 import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
 import {RH, W, glow, putBustSoft, cupThumb} from './common';
@@ -83,6 +83,14 @@ export interface ReadSt {
   /** the pin: 0 in place, 1 knocked, 2+ falling (px) */
   pin?: number;
 }
+/** the link card cropped to its plate (Act Three's fixes pass, 2026-10-10, the episode review's blocker: the art's
+ *  issLinkCard, copied, without its line "one goal and one product: a safe superintelligence", which on screen read as a
+ *  rebuke of Act Two's product and closed a reason for his leaving the film must not supply; W8, facts §F): the ISS
+ *  plate and the card's body, two grey bars where a link card's address would be, no words */
+const issCardPlate = (b: Buf, x: number, y: number, w = 200) => {
+  fill(b, x - 1, y - 1, w + 2, 46, PAL.N0); fill(b, x, y, w, 44, PAL.N3); fill(b, x, y, 40, 44, PAL.P2); bpt(b, 'ISS', x + 6, y + 15, PAL.N1);
+  fill(b, x + 46, y + 14, Math.min(60, w - 56), 3, PAL.N6); fill(b, x + 46, y + 24, Math.min(36, w - 56), 3, PAL.N5);
+};
 export const phoneScreen = (scr: Buf, f: number, st: ReadSt) => {
   tpoolMap(scr, f, st.pin ?? 0);
   if (st.post !== undefined && st.post >= 0) {
@@ -90,9 +98,9 @@ export const phoneScreen = (scr: Buf, f: number, st: ReadSt) => {
     drawEp2Post(scr, 4, 20, 'alyiIss', {size: 'phone', w: scr.w - 8, k: st.post});
     if (st.post >= 3 && st.card !== undefined) {
       const c = clamp(st.card, 0, 1), y = Math.round(CARD.y0 + (cardRestY - CARD.y0) * c * c);
-      // its link card, dropping out of the post onto the map: ISS, the company's one line
+      // its link card, dropping out of the post onto the map: the ISS plate (cropped: no line, the fixes pass)
       fill(scr, CARD.x + 3, y + 3, CARD.w, CARD.h, PAL.N0);
-      issLinkCard(scr, CARD.x, y, CARD.w);
+      issCardPlate(scr, CARD.x, y, CARD.w);
     }
   }
 };
@@ -273,7 +281,8 @@ export const mapECU = (b: Buf, f: number, st: {card: number; pin: number}) => {
     fill(b, x0, bot - 120, W - x0, 120, PAL.N3); fill(b, x0, bot - 1, W - x0, 1, PAL.N1);
     fill(b, x0, bot - 120, 104, 120, PAL.P2); fill(b, x0, bot - 120, 2, 120, PAL.W9);
     bpt(b, 'ISS', x0 + 30, bot - 66, PAL.N1);
-    pt(b, '"one goal and one', x0 + 118, bot - 74, PAL.P1); pt(b, 'product: a safe', x0 + 118, bot - 60, PAL.P1); pt(b, 'superintelligence"', x0 + 118, bot - 46, PAL.P1);
+    // (cropped to its plate at Act Three's fixes pass: two grey address bars, no line)
+    fill(b, x0 + 118, bot - 72, 120, 4, PAL.N6); fill(b, x0 + 118, bot - 56, 72, 4, PAL.N5);
   }
   // the phone's bezel at the frame's edges (we are in close on its glass), the glass's faint glare
   fill(b, 0, 0, 10, RH, PAL.N0); fill(b, 10, 0, 2, RH, PAL.G2); fill(b, W - 10, 0, 10, RH, PAL.N0); fill(b, W - 12, 0, 2, RH, PAL.G2);

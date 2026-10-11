@@ -26,7 +26,7 @@ import {drawToast} from '../../../../../shared/pixel/kits/orb-toast';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import {alyiOffice, OFFICE, stairwell} from '../../art/sets/alyioffice';
 import {applyPalette} from '../../../../../shared/pixel/palettes';
-import {requestPush} from '../../art/props/ui';
+// (the push is drawn here with its subject line: requestPushRe, a copy of the art's requestPush)
 import {drawMasStand2} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {skinDown} from '../../art/cast/hands2';
@@ -120,23 +120,28 @@ export const phoneInHand = (b: Buf, f: number, paint: (scr: Buf) => void, o: {th
 };
 /** a 2024 phone's status bar (no real platform's marks): the time, three dots */
 const statusBar = (scr: Buf, col = PAL.N8) => { tiny(scr, '7:31', 8, 4, col); for (let q = 0; q < 3; q++) fill(scr, scr.w - 22 + q * 5, 5, 3, 3, col); };
-/** THE THREAD (15.02; art/sets/alyioffice threadPhone at the phone's own proportions): Alyi's regret post from last
- *  November with three hearts under it (his), and below it in the same thread Alyi's May 14 post; both collapsed to their
- *  dates and first lines (grey bars: not must-read text) */
+/** THE THREAD (15.02; art/sets/alyioffice threadPhone at the phone's own proportions). The fixes pass (2026-10-10): it
+ *  showed Alyi's Nov 20, 2023 regret post with Mas's three hearts above his May 14 post, and V.O. 7 counted the days
+ *  between them: the firing's clock (the lobby's DAYS SINCE 176 echoed it), so the episode review's newcomer reached for
+ *  November as the reason he left. Now nothing older than May 14: Alyi's post, its date and its first words (After almost
+ *  a decade…, his own, already read in 12.06), and under it Mas's reply collapsed to grey bars. No hearts. */
 export const threadScreen = (scr: Buf, scroll = 0) => {
   fill(scr, 0, 0, scr.w, scr.h, PAL.N2); statusBar(scr);
   fill(scr, 0, 16, scr.w, 20, PAL.N1); fill(scr, 0, 36, scr.w, 1, PAL.N4); pt(scr, 'thread', Math.round(scr.w / 2 - pw('thread') / 2), 22, PAL.P1);
-  const card = (y: number, date: string, hearts: boolean) => {
-    fill(scr, 6, y, scr.w - 12, 58, PAL.N3); fill(scr, 6, y, scr.w - 12, 1, PAL.N5);
-    fill(scr, 12, y + 6, 14, 14, PAL.X1); fill(scr, 14, y + 8, 10, 10, PAL.S3); fill(scr, 14, y + 8, 10, 3, PAL.B1);
-    pt(scr, 'Alyi', 30, y + 6, PAL.P2); pt(scr, date, 30, y + 16, PAL.N8);
-    for (let r = 0; r < 2; r++) fill(scr, 12, y + 30 + r * 8, scr.w - 30 - r * 34, 3, PAL.N6);
-    if (hearts) for (let h = 0; h < 3; h++) { const hx = 12 + h * 12, hy = y + 46; for (const [dx, dy] of [[1, 0], [3, 0], [0, 1], [1, 1], [2, 1], [3, 1], [4, 1], [0, 2], [1, 2], [2, 2], [3, 2], [4, 2], [1, 3], [2, 3], [3, 3], [2, 4]]) scr.set(hx + dx, hy + dy, PAL.R3); }
-  };
   const y0 = 46 - scroll;
-  card(y0, 'NOV 20, 2023', true);
-  fill(scr, 20, y0 + 60, 2, 30, PAL.N5);
-  card(y0 + 92, 'MAY 14, 2024', false);
+  // Alyi's post: avatar, name, date, the first words (legible), one grey bar for the rest
+  fill(scr, 6, y0, scr.w - 12, 66, PAL.N3); fill(scr, 6, y0, scr.w - 12, 1, PAL.N5);
+  fill(scr, 12, y0 + 6, 14, 14, PAL.X1); fill(scr, 14, y0 + 8, 10, 10, PAL.S3); fill(scr, 14, y0 + 8, 10, 3, PAL.B1);
+  pt(scr, 'Alyi', 30, y0 + 6, PAL.P2); pt(scr, 'MAY 14, 2024', 30, y0 + 16, PAL.N8);
+  pt(scr, 'After almost a', 12, y0 + 30, PAL.P1); pt(scr, 'decade…', 12, y0 + 40, PAL.P1);
+  fill(scr, 12, y0 + 54, scr.w - 44, 3, PAL.N6);
+  // the thread's line down to his reply, collapsed
+  fill(scr, 20, y0 + 68, 2, 18, PAL.N5);
+  const r0 = y0 + 88;
+  fill(scr, 6, r0, scr.w - 12, 42, PAL.N3); fill(scr, 6, r0, scr.w - 12, 1, PAL.N5);
+  fill(scr, 12, r0 + 6, 14, 14, PAL.G1); fill(scr, 14, r0 + 9, 10, 9, PAL.S3); fill(scr, 14, r0 + 8, 10, 3, PAL.B2);
+  pt(scr, 'masa', 30, r0 + 8, PAL.N8);
+  for (let r = 0; r < 2; r++) fill(scr, 12, r0 + 26 + r * 7, scr.w - 30 - r * 40, 3, PAL.N6);
 };
 /** TPOOL, his first company's app, in its own 2008 colours inside the 2024 phone (the app's rect remapped to
  *  EARLY-WEB16): 'icon' (the home screen: every modern icon, and at the end a tiny old one, TPOOL · 2012) · 'splash'
@@ -170,10 +175,10 @@ export const tpoolScreen = (scr: Buf, screen: 'icon' | 'splash' | 'welcome' | 't
   if (screen === 'splash') { bpt(scr, 'WHERE', Math.round(A.w / 2 - bpw('WHERE') / 2), A.y + 92, PAL.I0); bpt(scr, 'U AT?', Math.round(A.w / 2 - bpw('U AT?') / 2), A.y + 112, PAL.I0); }
   if (screen === 'welcome' || screen === 'typed') pt(scr, 'welcome back, mas', 10, A.y + 32, PAL.I0);
   if (screen === 'welcome') {
-    // the 2008 hourglass (black-and-white, sand running, turning on held drawings)
+    // the 2008 hourglass (black-and-white): the sand runs down in held steps, then it flips (the sand back on top), always
+    // upright on screen (the fixes pass: its sideways drawing mid-turn read as an odd 'H' bar)
     const hx = Math.round(A.w / 2) - 7, hy = A.y + 80, ph = Math.floor(f / 6) % 4;
-    if (ph === 3) { fill(scr, hx - 4, hy + 10, 24, 2, PAL.N1); fill(scr, hx - 4, hy + 4, 2, 14, PAL.N1); fill(scr, hx + 18, hy + 4, 2, 14, PAL.N1); }
-    else {
+    {
       fill(scr, hx, hy, 15, 2, PAL.N1); fill(scr, hx, hy + 24, 15, 2, PAL.N1);
       for (let j = 0; j < 11; j++) { const inset = Math.floor(j * 0.6); fill(scr, hx + 1 + inset, hy + 2 + j, 13 - inset * 2, 1, j < 5 - ph ? PAL.W6 : PAL.P2); fill(scr, hx + 1 + Math.floor((10 - j) * 0.6), hy + 13 + j, 13 - Math.floor((10 - j) * 0.6) * 2, 1, j > 8 - ph ? PAL.W6 : PAL.P2); }
       for (let j = 0; j < 11; j++) { scr.set(hx + Math.floor(j * 0.6), hy + 2 + j, PAL.N1); scr.set(hx + 14 - Math.floor(j * 0.6), hy + 2 + j, PAL.N1); scr.set(hx + Math.floor((10 - j) * 0.6), hy + 13 + j, PAL.N1); scr.set(hx + 14 - Math.floor((10 - j) * 0.6), hy + 13 + j, PAL.N1); }
@@ -195,7 +200,9 @@ export const tpoolScreen = (scr: Buf, screen: 'icon' | 'splash' | 'welcome' | 't
     tiny(scr, 'LAST SEEN: 2012', 4, A.y + 26, PAL.N1);
     // every other pin, stale: a dozen grey markers (dark-rimmed, so they hold against the 2008 tiles), each tagged 2012
     // (the review: only Alyi's pin was drawn, the stale ones lost in the tiles' grey)
-    const pins: Array<[number, number]> = [[14, 64], [58, 62], [116, 56], [132, 84], [26, 88], [110, 106], [16, 124], [56, 118], [134, 124], [36, 176], [94, 180], [128, 170]];
+    // (the fixes pass: the grid pulled inside the glass, clear of the bezel, the check-in card's band and his thumb, so no
+    // tag is clipped)
+    const pins: Array<[number, number]> = [[26, 64], [62, 60], [88, 66], [118, 58], [124, 92], [32, 96], [104, 116], [26, 120], [56, 114], [34, 176], [76, 178], [102, 172]];
     pins.forEach(([px, py]) => {
       fill(scr, px - 3, py - 9, 7, 7, PAL.N1); fill(scr, px - 2, py - 8, 5, 5, PAL.G3); scr.set(px - 1, py - 7, PAL.G5);
       scr.set(px - 1, py - 2, PAL.N1); scr.set(px, py - 2, PAL.N1); scr.set(px + 1, py - 2, PAL.N1); scr.set(px, py - 1, PAL.N1);
@@ -206,7 +213,8 @@ export const tpoolScreen = (scr: Buf, screen: 'icon' | 'splash' | 'welcome' | 't
     for (let a = 0; a < 48; a++) { const t = (a / 48) * Math.PI * 2; scr.set(Math.round(PIN.x + Math.cos(t) * (5 + r)), Math.round(PIN.y + Math.sin(t) * (5 + r) * 0.8), warm > 0.5 ? PAL.W7 : r > 8 ? PAL.W5 : PAL.R2); }
     const pulse = Math.floor(k / 6) % 2;
     fill(scr, PIN.x - 3 - pulse, PIN.y - 8 - pulse, 7 + pulse * 2, 7 + pulse * 2, PAL.R2); fill(scr, PIN.x - 1, PIN.y - 6, 3, 3, PAL.P2); scr.set(PIN.x, PIN.y, PAL.R2);
-    if (o.label) { const ly = 128; fill(scr, 4, ly, A.w - 8, 34, PAL.P2); fill(scr, 4, ly, A.w - 8, 1, PAL.W5); pt(scr, 'ALYI CHECKED IN', 8, ly + 3, PAL.N1); pt(scr, 'DEC 2022 · "feel', 8, ly + 13, PAL.N1); pt(scr, 'the agi"', 8, ly + 23, PAL.I0); }
+    // the check-in card: its quote on one line (the fixes pass: it wrapped 'feel / the agi')
+    if (o.label) { const ly = 128; fill(scr, 4, ly, A.w - 8, 34, PAL.P2); fill(scr, 4, ly, A.w - 8, 1, PAL.W5); pt(scr, 'ALYI CHECKED IN', 8, ly + 3, PAL.N1); pt(scr, 'DEC 2022', 8, ly + 13, PAL.N1); pt(scr, '"feel the agi"', 8, ly + 23, PAL.I0); }
   }
   applyPalette(scr, 'EARLYWEB16', {rect: [A.x, A.y, A.w, A.h]});
   if (screen === 'typed') {
@@ -264,6 +272,14 @@ export const stairs = (b: Buf, f: number, st: {x: number; step: number; legs: Ma
     drawMasStand2(bb, st.x, y, {legs: st.legs, arm: st.phone ? 'phone' : 'down', bow: !!st.phone, light: 'room'});
   });
 };
+/** the reporter's push with its subject line (the fixes pass, 2026-10-10: the art's requestPush, copied, plus
+ *  `re: exit agreements`, so the receipt at NopeAI's doors has its cause on screen first; no outlet, no headline words) */
+const requestPushRe = (b: Buf, x: number, y: number, w = 170) => {
+  fill(b, x - 1, y - 1, w + 2, 42, PAL.N0); fill(b, x, y, w, 40, PAL.N3); fill(b, x, y, w, 1, PAL.C5);
+  fill(b, x + 6, y + 5, 10, 30, PAL.P2); for (let j = 0; j < 30; j += 4) fill(b, x + 7, y + 6 + j, 7, 1, PAL.G4);
+  pt(b, 'request for comment', x + 24, y + 8, PAL.P2);
+  pt(b, 're: exit agreements', x + 24, y + 22, PAL.N8);
+};
 /** [ECU] the push on his phone as he walks (the wrap grip), the stair's grey behind */
 export const pushECU = (b: Buf, f: number, st: {k: number}) => {
   phoneInHand(b, f, (scr) => {
@@ -271,7 +287,7 @@ export const pushECU = (b: Buf, f: number, st: {k: number}) => {
     // the lock screen: the time, then the push dropping in (2 held steps)
     pt(scr, '7:42', Math.round(scr.w / 2 - pw('7:42') / 2), 30, PAL.N8);
     const y = st.k < 2 ? 56 : st.k < 4 ? 62 : 66;
-    if (st.k >= 0) requestPush(scr, 4, y, scr.w - 8);
+    if (st.k >= 0) requestPushRe(scr, 4, y, scr.w - 8);
   }, {bg: (bb) => { vramp(bb, 0, 0, W, RH, [PAL.G1, PAL.G2, PAL.G2]); for (let k = 0; k < 10; k++) { fill(bb, k * 54 - 20, 120 + k * 9, 54, 9, PAL.G3); fill(bb, k * 54 - 20, 120 + k * 9, 54, 1, PAL.G5); } }});
 };
 void skinDown; void rect; void line; void ellipse; void hash; void clamp; void lightness; void tiny; void tinyWidth; void TR; void isSkin; void cupThumb; void keyBalloon; void dimRoom; void roomWalkAt;

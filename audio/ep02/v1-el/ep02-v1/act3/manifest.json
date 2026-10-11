@@ -924,17 +924,17 @@
   },
   "e2-vo-07__mas-manalt-C": {
    "take": "e2-vo-07__mas-manalt-C",
-   "key": "8bb5f1c8814a3bb1",
-   "base_key": "8bb5f1c8814a3bb1",
+   "key": "4762a466ca380ba6",
+   "base_key": "4762a466ca380ba6",
    "bump": 0,
    "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -18 LUFS; -1.5 dBTP)",
    "reused_from": null,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
    "file_device": null,
    "device": null,
-   "duration_s": 3.26,
+   "duration_s": 3.12,
    "offset_s": 0.35,
-   "sent": "A hundred and seventy-six days.",
+   "sent": "Eight years and five months.",
    "seed": 1257794257,
    "model": "eleven_multilingual_v2",
    "settings": {
@@ -942,74 +942,76 @@
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.85
+    "speed": 0.75
    },
    "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
    "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
    "cand": "C",
    "role": "mas-manalt",
    "measured": {
-    "audible_in_s": 0.38,
-    "audible_out_s": 2.78,
-    "span_s": 2.4,
+    "audible_in_s": 0.41,
+    "audible_out_s": 2.65,
+    "span_s": 2.24,
     "words": 5,
-    "wpm": 125.0,
-    "syllables": 8,
-    "articulation_sps": 3.33,
-    "pauses_s": [],
-    "longest_internal_gap_s": 0.0,
-    "speech_head_s": 0.38,
-    "speech_tail_s": 0.48,
+    "wpm": 133.9,
+    "syllables": 5,
+    "articulation_sps": 2.23,
+    "pauses_s": [
+     0.06
+    ],
+    "longest_internal_gap_s": 0.06,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.47,
     "tail_to_60_s": 0.005,
-    "median_f0_hz": 117.0,
-    "f0_range_st": 12.0
+    "median_f0_hz": 111.2,
+    "f0_range_st": 13.9
    },
    "words": [
     {
-     "w": "A",
-     "t0": 0.36,
-     "t1": 0.466
+     "w": "Eight",
+     "t0": 0.39,
+     "t1": 0.698
     },
     {
-     "w": "hundred",
-     "t0": 0.605,
-     "t1": 1.012
+     "w": "years",
+     "t0": 0.78,
+     "t1": 1.232
     },
     {
      "w": "and",
-     "t0": 1.058,
-     "t1": 1.174
+     "t0": 1.314,
+     "t1": 1.465
     },
     {
-     "w": "seventy-six",
-     "t0": 1.256,
-     "t1": 2.068
+     "w": "five",
+     "t0": 1.569,
+     "t1": 1.999
     },
     {
-     "w": "days",
-     "t0": 2.15,
-     "t1": 2.649
+     "w": "months",
+     "t0": 2.08,
+     "t1": 2.533
     }
    ],
    "qa": {
-    "asr": "176 days.",
-    "cer": 0.1,
-    "word_recall_nonames": 0.833,
+    "asr": "Eight years and five months.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
     "lufs_i": -18.0,
     "target_lufs": -18.0,
-    "true_peak_dbtp": -3.7,
+    "true_peak_dbtp": -4.49,
     "clipped_samples": 0,
     "digital_black_runs": 0,
-    "median_f0_hz": 117.0,
-    "f0_range_st": 12.0,
-    "speech_head_s": 0.38,
-    "speech_tail_s": 0.48,
+    "median_f0_hz": 111.2,
+    "f0_range_st": 13.9,
+    "speech_head_s": 0.41,
+    "speech_tail_s": 0.47,
     "raw_tail_cut": false,
-    "align_median_s": 0.71
+    "align_median_s": 0.2
    },
    "raw": {
-    "raw_first_sound_s": 0.035,
-    "raw_len_s": 2.786,
+    "raw_first_sound_s": 0.065,
+    "raw_len_s": 2.647,
     "raw_tail_cut": false
    },
    "kokoro": {}
@@ -2792,6 +2794,170 @@
     "raw_tail_cut": false
    },
    "kokoro": {}
+  },
+  "e2-a3-0025__staffer2-A": {
+   "take": "e2-a3-0025__staffer2-A",
+   "key": "11b523436a79472c",
+   "base_key": "11b523436a79472c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 2.465,
+   "offset_s": 0.35,
+   "sent": "Did his post say why?",
+   "seed": 3732963640,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "voice_id": "09AoN6tYyW3VSTQqCo7C",
+   "voice_name": "Jessi - Friendly, Smooth, and Soft",
+   "cand": "A",
+   "role": "staffer2",
+   "measured": {
+    "audible_in_s": 0.44,
+    "audible_out_s": 1.84,
+    "span_s": 1.4,
+    "words": 5,
+    "wpm": 214.3,
+    "syllables": 5,
+    "articulation_sps": 3.57,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.625,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 196.4,
+    "f0_range_st": 7.9
+   },
+   "words": [
+    {
+     "w": "Did",
+     "t0": 0.42,
+     "t1": 0.605
+    },
+    {
+     "w": "his",
+     "t0": 0.652,
+     "t1": 0.768
+    },
+    {
+     "w": "post",
+     "t0": 0.838,
+     "t1": 1.139
+    },
+    {
+     "w": "say",
+     "t0": 1.186,
+     "t1": 1.337
+    },
+    {
+     "w": "why",
+     "t0": 1.395,
+     "t1": 1.72
+    }
+   ],
+   "qa": {
+    "asr": "Did his post say why?",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -1.53,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 196.4,
+    "f0_range_st": 7.9,
+    "speech_head_s": 0.44,
+    "speech_tail_s": 0.625,
+    "raw_tail_cut": false,
+    "align_median_s": 0.092
+   },
+   "raw": {
+    "raw_first_sound_s": 0.095,
+    "raw_len_s": 1.765,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  },
+  "e2-a3-0026__tiled-employee-A": {
+   "take": "e2-a3-0026__tiled-employee-A",
+   "key": "27efce012f65f85c",
+   "base_key": "27efce012f65f85c",
+   "bump": 0,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0026__tiled-employee-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 1.21,
+   "offset_s": 0.35,
+   "sent": "No.",
+   "seed": 1719542966,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "w25dAwxibNES1hcDBvXx",
+   "voice_name": "Avery - Healthcare & Clinical Education",
+   "cand": "A",
+   "role": "tiled-employee",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 0.74,
+    "span_s": 0.39,
+    "words": 1,
+    "wpm": 153.8,
+    "syllables": 1,
+    "articulation_sps": 2.56,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.47,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 167.2,
+    "f0_range_st": 6.0
+   },
+   "words": [
+    {
+     "w": "No",
+     "t0": 0.35,
+     "t1": 0.652
+    }
+   ],
+   "qa": {
+    "asr": "No.",
+    "cer": 0.0,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.2,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 167.2,
+    "f0_range_st": 6.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.47,
+    "raw_tail_cut": false,
+    "align_median_s": 0.35
+   },
+   "raw": {
+    "raw_first_sound_s": 0.005,
+    "raw_len_s": 0.65,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
   }
  },
  "calls": [
@@ -2954,6 +3120,46 @@
    "cost_header": "68",
    "request_id": "iFSx2pXwSqyEyNzgSAcx",
    "at": "05:06:19"
+  },
+  {
+   "take": "e2-a3-0025__staffer2-A",
+   "key": "55329ad08a3370b6",
+   "chars": 21,
+   "cost_header": "9",
+   "request_id": "fIsG8ZO6xN0zZ5ayxS0J",
+   "at": "16:17:17"
+  },
+  {
+   "take": "e2-a3-0026__tiled-employee-A",
+   "key": "27efce012f65f85c",
+   "chars": 3,
+   "cost_header": "1",
+   "request_id": "ezikke4JfYWB0eYtnvWt",
+   "at": "16:17:26"
+  },
+  {
+   "take": "e2-vo-07__mas-manalt-C",
+   "key": "5408a7306e5dbafe",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "1qly8ZQfxXjw74SI0tQ1",
+   "at": "16:17:31"
+  },
+  {
+   "take": "e2-a3-0025__staffer2-A",
+   "key": "11b523436a79472c",
+   "chars": 21,
+   "cost_header": "9",
+   "request_id": "YjfSqaBsdJEBSkBx4pwp",
+   "at": "16:18:48"
+  },
+  {
+   "take": "e2-vo-07__mas-manalt-C",
+   "key": "4762a466ca380ba6",
+   "chars": 28,
+   "cost_header": "12",
+   "request_id": "CtCuibLfAgDUeMaluyxF",
+   "at": "16:18:56"
   }
  ]
 }

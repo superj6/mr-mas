@@ -6,12 +6,15 @@
  "samples": 15360000,
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act3.json",
  "dialogue": {
-  "lines": 28,
+  "lines": 30,
   "device": {
    "tv": 1
   },
-  "el_matched": 28,
+  "el_matched": 30,
   "missing": [],
+  "line_gains": {
+   "e2-a3-0025": 3.0
+  },
   "treat": {
    "far": 1,
    "chant": 1
@@ -19,7 +22,41 @@
  },
  "rooms": {
   "stem": "audio/reel/ep02-v1/stems/el/act3-room.flac",
-  "dip_under_speech_db": 2.0
+  "dip_under_speech_db": 2.0,
+  "line_dips": [
+   {
+    "line": "e2-a3-0009",
+    "db": -6.0,
+    "from_s": 117.725,
+    "to_s": 120.265,
+    "ramp_s": 0.35,
+    "why": "15.06: Alyi's \"FEEL THE AGI!\", the chant's first voice, over the party bed"
+   },
+   {
+    "line": "e2-a3-0011",
+    "db": -6.0,
+    "from_s": 124.088,
+    "to_s": 126.228,
+    "ramp_s": 0.35,
+    "why": "15.07: \"You're not chanting.\" (the motive flashback's exchange, under the chant and the party)"
+   },
+   {
+    "line": "e2-a3-0012",
+    "db": -6.0,
+    "from_s": 125.728,
+    "to_s": 128.668,
+    "ramp_s": 0.35,
+    "why": "15.07: Mas's \"someone has to hold the glass.\" (its tail was masked by the party bed)"
+   },
+   {
+    "line": "e2-a3-0013",
+    "db": -6.0,
+    "from_s": 127.968,
+    "to_s": 130.888,
+    "ramp_s": 0.35,
+    "why": "15.07: \"Then I'll feel it for both of us.\" (the exchange's last line, laughing)"
+   }
+  ]
  },
  "sfx": {
   "stem": "audio/reel/ep02-v1/stems/el/act3-sfx.flac",
@@ -30,8 +67,8 @@
   "cues": "audio/ost/tracks/e02-v1-act3/cues-el.json",
   "length_s": 320.0,
   "length_vs_segment_s": 0.0,
-  "lufs_as_delivered": -19.93,
-  "lufs_after_gain": -19.93,
+  "lufs_as_delivered": -19.92,
+  "lufs_after_gain": -19.92,
   "duck": {
    "by_mood_db": [
     [
@@ -43,7 +80,7 @@
      7
     ],
     [
-     "E02-08 WHERE'S ALYI?",
+     "E02-10 THE BRIDGE",
      9
     ],
     [
@@ -51,15 +88,15 @@
      9
     ],
     [
-     "E02-10 out",
-     9
-    ],
-    [
      "E02-10",
      9
     ],
     [
-     "E02-10 THE BRIDGE",
+     "E02-08 WHERE'S ALYI?",
+     9
+    ],
+    [
+     "E02-10 out",
      9
     ]
    ],
@@ -77,6 +114,34 @@
     "to": 238.0,
     "db": -3.0,
     "why": "S11: \"His phone won't stop\": the buzzes over the scramble (17.07-17.08)"
+   },
+   {
+    "beat": "15.06",
+    "from": 117.97,
+    "to": 119.78,
+    "db": -4.0,
+    "why": "S11: Alyi's \"FEEL THE AGI!\" over the party (the fixes pass)"
+   },
+   {
+    "beat": "15.07",
+    "from": 124.06,
+    "to": 130.92,
+    "db": -5.0,
+    "why": "S11: the exchange under the chant, \"You're not chanting.\" to \"\u2026both of us.\" (the fixes pass)"
+   },
+   {
+    "beat": "13.03b",
+    "from": 20.25,
+    "to": 23.79,
+    "db": -4.0,
+    "why": "S11: the staffers' low exchange, \"Did his post say why?\" / \"No.\" (the fixes pass: the gate's answer must be heard)"
+   },
+   {
+    "beat": "15.15",
+    "from": 166.0,
+    "to": 167.4,
+    "db": -5.0,
+    "why": "S11: the catch: the whoomph and the crackle over the Ache's entry (the fixes pass)"
    }
   ],
   "next_prelap": {
@@ -89,16 +154,16 @@
   }
  },
  "measured": {
-  "lufs_i": -16.01,
-  "true_peak_dbtp": -1.2,
+  "lufs_i": -16.02,
+  "true_peak_dbtp": -1.07,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 6.9,
-  "gain_db": 2.53,
+  "gain_db": 2.49,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.83,
-  "dialogue_lufs": -13.65,
-  "score_lufs_after_duck": -18.21,
-  "score_rms_under_speech_dbfs": -28.3,
+  "limiter_active_s": 1.944,
+  "dialogue_lufs": -13.6,
+  "score_lufs_after_duck": -18.29,
+  "score_rms_under_speech_dbfs": -28.6,
   "score_rms_between_speech_dbfs": -19.6,
   "score_runs": {
    "count": 1,
@@ -110,8 +175,8 @@
     ]
    ]
   },
-  "rooms_lufs": -34.05,
-  "sfx_lufs": -29.68,
+  "rooms_lufs": -34.24,
+  "sfx_lufs": -29.1,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -119,24 +184,24 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 12,
-   "rising": 12,
-   "rising_at_a_word": 11,
+   "count": 24,
+   "rising": 18,
+   "rising_at_a_word": 17,
    "rising_at_an_sfx": 0,
    "rising_other": [
     283.4
    ],
-   "falling": 0
+   "falling": 6
   }
  },
  "file": "out/ep02/v1/mix/act3-mix.wav",
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.03,
-  "to_gain_db": 2.53,
+  "to_gain_db": 2.49,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-10-10 15:49:57",
+ "built": "2026-10-10 17:40:53",
  "heard": "nothing here has been listened to; every number is measured"
 }

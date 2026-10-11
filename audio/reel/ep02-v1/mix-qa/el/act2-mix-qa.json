@@ -57,11 +57,11 @@
      7
     ],
     [
-     "E02-07",
+     "E02-07 ONE WORD",
      8
     ],
     [
-     "E02-07 ONE WORD",
+     "E02-07",
      8
     ]
    ],
@@ -134,12 +134,16 @@
   "score_rms_under_speech_dbfs": -27.9,
   "score_rms_between_speech_dbfs": -20.8,
   "score_runs": {
-   "count": 1,
-   "shortest_s": 279.0,
+   "count": 2,
+   "shortest_s": 0.4,
    "runs": [
     [
      0.0,
-     279.0
+     278.25
+    ],
+    [
+     278.6,
+     0.4
     ]
    ]
   },
@@ -225,7 +229,7 @@
     104.0,
     112.75,
     143.6,
-    278.35
+    278.6
    ],
    "falling": 3
   }
@@ -238,6 +242,6 @@
   "ramp_s": 2.0,
   "after": "act1"
  },
- "built": "2026-10-10 15:49:42",
+ "built": "2026-10-10 17:40:38",
  "heard": "nothing here has been listened to; every number is measured"
 }

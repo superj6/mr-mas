@@ -110,6 +110,8 @@ The largest (all in `sfx-rides.json` with their readings):
 
 ---
 
+**The Act Three fixes pass (2026-10-10), hand-set** (`sfx-rides.json`, each with `ride_db_before_fixes` and `fixes_pass`; never `--rides` on a subset): the new lock and the re-laid score left six of Act Three's sounds a little under their targets, each lifted to it: 13.06 `ui_band_on` 5.2 → 6.0, 14.03 `alert_bonk` 1.4 → 4.0, 14.12 `ui_verb_select` 7.7 → 9.5, 15.19 `footstep_soft_1` 3.4 → 5.0 and `phone_buzz_step_1` 4.5 → 5.0, 15.15 `fire_crackle` 5.2 → 8.0; and 15.15's `flame_whoomph`, at its peak cap, gets room from the score instead (`SCORE_RIDE` act3 15.15, −5 dB for 1.4 s: the catch came 0.25 s nearer the Ache's entry). 14.11's six sounds (the screws, the plate) left with the beat. Act Three: **0 masked, the same 4 marginal as before the pass** (15.18's door, three buzzes on the bridge, each at its ride's cap) [M].
+
 ## 5. Voices
 
 Every take at its line's time, dual mono at −3 dB; the V.O. +2.0 dB (`VO_GAIN_DB`: the V.O. takes are −18 LUFS, the spoken −16); MARIO's Kokoro takes through voices-el §AB3's EQ (+1.5 dB at 350 Hz, −1.5 dB at 2.2 kHz, −0.5 dB). Each treated line is loudness-matched to its dry take, then trimmed by its chain's offset.
@@ -231,7 +233,7 @@ Not yet over the line (each a judgement for an ear, §9; the reason is the measu
 | coldopen | 6 | 6 | 15.8 | 15.3 | 8.2 | 0 |
 | act1 | 59 | 46 | 13.4 | 10.9 | 5.3 | 0 |
 | act2 | 41 | 41 | 14.0 | 11.4 | 6.1 | 0 |
-| act3 | 28 | 28 | 12.0 | 11.2 | 4.6 | 0 |
+| act3 | 30 | 30 | 13.0 (the fixes pass: 14.11 cut, 13.03b's two lines, the clock hushed under them) | 11.1 | — | 0 |
 | act4 | 38 | 38 | 15.1 | 12.4 | 6.1 | 0 |
 | tag | 1 | 1 | 10.9 (was 11.9: the fixes pass's −1 dB on its bus) | 10.9 | 2.9 | 0 |
 
@@ -242,9 +244,13 @@ Not yet over the line (each a judgement for an ear, §9; the reason is the measu
 | coldopen | 6 | +14.6 dB | +21.2 dB | e2-co-0006 (gerg, 1.08: +14.6); e2-co-0001 (selbeep, 1.02: +16.9); e2-co-0002 (gerg, 1.03: +17.1) |
 | act1 | 59 | +13.0 dB | +24.9 dB | e2-a1-0026 (ghost-nole, 4.25: +13.0); e2-a1-0053 (humanist, 7.06: +13.0); e2-a1-0031 (terb, 4A.01: +13.5) |
 | act2 | 41 | +12.3 dB | +20.4 dB | e2-a2-0020 (rima, 10.04: +12.3); e2-a2-0009 (rima, 9.04: +12.4); e2-a2-0018 (rima, 10.02: +12.5) |
-| act3 | 28 | +8.7 dB | +17.7 dB | e2-a3-0009 (alyi, 15.06: +8.7); e2-a3-0010 (crowd, 15.06: +10.5); e2-a3-0008 (alyi, 15.03: +12.3) |
+| act3 | 30 | +11.2 dB | +19.0 dB | e2-a3-0010 (crowd, 15.06: +11.2); e2-a3-0002 (staffer2, 13.01: +12.5); e2-a3-0008 (alyi, 15.03: +12.5). **The fixes pass:** Alyi's chant lead e2-a3-0009 +14.8 (was +8.7: the party bed dipped 6 dB and the score ridden 4 dB under it) |
 | act4 | 38 | +8.6 dB | +18.9 dB | e2-a4-0028 (gerg, 19.10: +8.6); e2-a4-0025 (mas, 19.09: +10.5); e2-a4-0024 (gerg, 19.09: +12.8) |
 | tag | 1 | +11.9 dB | +11.9 dB | e2-vo-14 (mas, 23.05: +11.9; +12.9 before the fixes pass's −1 dB on its bus) |
+
+**The whole line** (`sound_audit.py` WHOLE, new at the Act Three fixes pass, 2026-10-10: every line's whole length in 20 ms frames, 1–4 kHz, its voiced frames, inside its words and within 25 dB of its loudest frame, against rooms + SFX + score + the other lines; floor: the 10th percentile at +6 dB). The episode review found the onset alone could pass while a line's tail was masked (Mas's "someone has to hold the glass." +12.0 at its onset, +1.6 at its 10th percentile, 19 % of its frames under +3 dB). **60 of 175 lines are under the +6 dB floor at their 10th percentile** (coldopen 2 · act1 10 · act2 13 · act3 12 · act4 22 · tag 1; the median 10th percentile per segment +8.6 · +12.4 · +7.5 · +6.5 · +5.2 · +3.6) [M]: the check is new, and only Act Three's F2.2 exchange and its new lines were worked to it here. **F2.2 after the fixes pass** (the party bed dipped a further 6 dB under the chant lead and the exchange, `ROOM_LINE_DIP`, 0.35 s ramps; the score ridden 4 dB under the lead and 5 dB under the exchange, `SCORE_RIDE`): e2-a3-0009 "FEEL THE AGI!" p10 **+6.5** (was +1.5, 16 % of frames under +3 dB; now 5 %); e2-a3-0012 "someone has to hold the glass." **+6.5** (was +1.3, 21 %; now 0 %); e2-a3-0013 **+9.7** (was +3.8); e2-a3-0011 "You're not chanting." **+4.0** (was +0.2, 23 %; now 9 %; the chant under the exchange, `crowd_chant_under`, is now as large a masker as the bed: left for an ear). The staffers' new exchange (13.03b): e2-a3-0025 **+6.4** (its quiet read sat −35.7 dB in the band, 7–8 dB under the scene's other lines: `LINE_GAIN_DB` +3 dB, and the score ridden 4 dB under 13.03b), e2-a3-0026 **+19.2** [M]. The lines under the floor are in `mix-qa/el/sound-audit.json` (`line_whole`), for the sound owner.
+
+**Heard against everything** (HEARD, the same pass): every sound's attack and body with the dialogue counted in the masker (`peak_over_local_with_dialogue_db`, `best_snr_vs_all_db`, `verdict_vs_all`); the sounds a line refers to (`REFERRED`: so far 17.15–17.16's honks, which the driver's "Does honking count as disparagement?" points at) must pass it. 17.15's last honk (`car_honk_5`) is 0.3 s earlier in the lock (10.45 s into the beat), 0.48 s before "Updating.": its attack **+14.5 dB over everything** (the review measured −6.3 with it on the word); all five honks pass [M].
 
 ### 8.3 Voices' levels
 
@@ -335,6 +341,9 @@ Nobody has listened. In the order a listener should take them:
 11. **The tag's V.O.** sits 1.6 LU over the median dialogue (the tag is mostly music, so its −16 LUFS lifts its one line; the guard's edge is 1.5).
 12. **The designed stop** (22.06): the flap's spring in the lot's wind only, then the felt's return.
 13. The beds' realism at their levels: the bridge (synthesized traffic), the séance's candles, the studio's padded silence, the garden.
+14. **F2.2's exchange after the fixes pass** (15.06–15.07; e2-a3-0009, 0011, 0012, 0013): the party bed 6 dB down and the score 4–5 dB down under the chant lead and the three lines, with 0.35 s and 0.6 s ramps. Does the party still read as a party round them (the dip is the measure's, not an ear's), and is "You're not chanting." (+4.0 dB at its 10th percentile, the chant under it) heard whole?
+15. **The staffers' "Did his post say why?" / "No."** (13.03b): the quiet read 3 dB up, THE CLOCK a tiny bed under it. Plain, low, and heard?
+16. **THE CLOCK's new end** (14.10–14.12): the domino's two ticks over the Ache, straight into the creak's stop (the screws' bar is gone with 14.11).
 
 ---
 

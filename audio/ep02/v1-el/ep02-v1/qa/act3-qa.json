@@ -715,6 +715,62 @@
    "take": "e2-vo-07__mas-manalt-C",
    "attempts": [
     {
+     "label": "first",
+     "bump": 0,
+     "seed": 1257794257,
+     "key": "4762a466ca380ba6",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.75
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Eight years and five months.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.24,
+      "plan_len_s": 2.44,
+      "ratio": 0.918,
+      "words": 5,
+      "wpm": 133.9,
+      "longest_gap_s": 0.06,
+      "lufs": -18.0,
+      "true_peak": -4.49,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.2,
+      "f0_range_st": 13.9,
+      "take_floor_dbfs": -62.7,
+      "duration_s": 3.12,
+      "raw_floor_dbfs": -80.8,
+      "raw_speech_to_floor_db": 60.5,
+      "raw_pause_floor_dbfs": -77.9,
+      "raw_pause_sf_db": 57.6,
+      "raw_quiet_frames": 25,
+      "raw_peak_dbfs": -2.65,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 134 wpm against his V.O. 110-130"
+     ],
+     "sent": "Eight years and five months.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "4762a466ca380ba6"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "tempo 134 wpm against his V.O. 110-130"
+   ],
+   "superseded": [
+    {
      "label": "the take",
      "bump": 0,
      "seed": 1257794257,
@@ -758,25 +814,69 @@
      "look": [],
      "sent": "A hundred and seventy-six days.",
      "base_key": "8bb5f1c8814a3bb1"
+    },
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1257794257,
+     "key": "5408a7306e5dbafe",
+     "settings": {
+      "stability": 0.65,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Eight years and five months.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 2.06,
+      "plan_len_s": 2.44,
+      "ratio": 0.844,
+      "words": 5,
+      "wpm": 145.6,
+      "longest_gap_s": 0.0,
+      "lufs": -18.0,
+      "true_peak": -4.22,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 111.4,
+      "f0_range_st": 10.6,
+      "take_floor_dbfs": -62.8,
+      "duration_s": 3.068,
+      "raw_floor_dbfs": -80.4,
+      "raw_speech_to_floor_db": 58.5,
+      "raw_pause_floor_dbfs": -74.8,
+      "raw_pause_sf_db": 52.8,
+      "raw_quiet_frames": 23,
+      "raw_peak_dbfs": -4.87,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.84 of the plan",
+      "tempo 146 wpm against his V.O. 110-130"
+     ],
+     "sent": "Eight years and five months.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "5408a7306e5dbafe"
     }
    ],
-   "picked_bump": 0,
-   "status": "pass",
-   "fail": [],
-   "look": [],
-   "superseded": [],
-   "sent": "A hundred and seventy-six days.",
+   "sent": "Eight years and five months.",
    "settings": {
     "stability": 0.65,
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.85
+    "speed": 0.75
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
-    "8bb5f1c8814a3bb1",
-    3.26
+    "4762a466ca380ba6",
+    3.12
    ]
   },
   "e2-a3-0009": {
@@ -2395,7 +2495,206 @@
     4.456
    ],
    "special": "crowd"
+  },
+  "e2-a3-0025": {
+   "id": "e2-a3-0025",
+   "who": "staffer2",
+   "take": "e2-a3-0025__staffer2-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 3732963640,
+     "key": "11b523436a79472c",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.85
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+     "measures": {
+      "heard": "Did his post say why?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.4,
+      "plan_len_s": 1.72,
+      "ratio": 0.814,
+      "words": 5,
+      "wpm": 214.3,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -1.53,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 196.4,
+      "f0_range_st": 7.9,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.465,
+      "raw_floor_dbfs": -75.1,
+      "raw_speech_to_floor_db": 45.3,
+      "raw_pause_floor_dbfs": -73.2,
+      "raw_pause_sf_db": 43.4,
+      "raw_quiet_frames": 20,
+      "raw_peak_dbfs": -15.02,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.81 of the plan",
+      "tempo 214 wpm against staffer2 at the planned 185 wpm +-15 %"
+     ],
+     "sent": "Did his post say why?",
+     "voice": "Jessi - Friendly, Smooth, and Soft",
+     "base_key": "11b523436a79472c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 0.81 of the plan",
+    "tempo 214 wpm against staffer2 at the planned 185 wpm +-15 %"
+   ],
+   "superseded": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 3732963640,
+     "key": "55329ad08a3370b6",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.0
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+     "measures": {
+      "heard": "Did his post say why?",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 1.17,
+      "plan_len_s": 1.72,
+      "ratio": 0.68,
+      "words": 5,
+      "wpm": 256.4,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -2.35,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 196.9,
+      "f0_range_st": 8.9,
+      "take_floor_dbfs": -63.2,
+      "duration_s": 2.14,
+      "raw_floor_dbfs": -74.8,
+      "raw_speech_to_floor_db": 43.7,
+      "raw_pause_floor_dbfs": -71.9,
+      "raw_pause_sf_db": 40.8,
+      "raw_quiet_frames": 16,
+      "raw_peak_dbfs": -15.85,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 0.68 of the plan",
+      "tempo 256 wpm against staffer2 at the planned 185 wpm +-15 %",
+      "floor 44 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "Did his post say why?",
+     "voice": "Jessi - Friendly, Smooth, and Soft",
+     "base_key": "55329ad08a3370b6"
+    }
+   ],
+   "sent": "Did his post say why?",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+    "11b523436a79472c",
+    2.465
+   ]
+  },
+  "e2-a3-0026": {
+   "id": "e2-a3-0026",
+   "who": "tiled-employee",
+   "take": "e2-a3-0026__tiled-employee-A",
+   "attempts": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1719542966,
+     "key": "27efce012f65f85c",
+     "settings": {
+      "stability": 0.5,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0026__tiled-employee-A.wav",
+     "measures": {
+      "heard": "No.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 0.39,
+      "plan_len_s": 0.5,
+      "ratio": 0.78,
+      "words": 1,
+      "wpm": 153.8,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.2,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 167.2,
+      "f0_range_st": 6.0,
+      "take_floor_dbfs": -63.4,
+      "duration_s": 1.21,
+      "raw_floor_dbfs": -87.9,
+      "raw_speech_to_floor_db": 68.9,
+      "raw_pause_floor_dbfs": -87.0,
+      "raw_pause_sf_db": 68.0,
+      "raw_quiet_frames": 13,
+      "raw_peak_dbfs": -7.37,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [],
+     "sent": "No.",
+     "voice": "Avery - Healthcare & Clinical Education",
+     "base_key": "27efce012f65f85c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "pass",
+   "fail": [],
+   "look": [],
+   "superseded": [],
+   "sent": "No.",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0026__tiled-employee-A.wav",
+    "27efce012f65f85c",
+    1.21
+   ]
   }
  },
- "updated": "2026-10-09 06:28:29"
+ "updated": "2026-10-10 16:20:20"
 }

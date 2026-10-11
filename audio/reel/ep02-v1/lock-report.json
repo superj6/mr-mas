@@ -2299,7 +2299,7 @@
   "safety_net": []
  },
  "act2": {
-  "timeline": "../../../../../tmp/claude-1000/-home-jgon-project-art-mrmas/94315be4-2a32-4292-9b72-b25066268365/scratchpad/fix-act2/tl/ep02-v1-act2.json",
+  "timeline": "show/reel/ep02-v1/ep02-v1-act2.json",
   "source": null,
   "source_story_s": 0.0,
   "estimate_s": 279.0,
@@ -3790,10 +3790,10 @@
   "frames": 7680,
   "source_frames": 0,
   "beats": 58,
-  "lines": 28,
+  "lines": 30,
   "vo": 4,
   "vo_lines": [
-   "e2-vo-07 (15.03): a hundred and seventy-six days.",
+   "e2-vo-07 (15.03): eight years and five months.",
    "e2-vo-08 (15.17): i'll ask him in person.",
    "e2-vo-09 (17.11): everyone who signed. the post. everyone who signed.",
    "e2-vo-10 (17.13): not until legal has every name."
@@ -3809,9 +3809,9 @@
   "median_gap_source": null,
   "median_gap": {
    "inside_beats_s": 0.45,
-   "inside_beats_n": 9,
+   "inside_beats_n": 10,
    "segment_s": 1.2,
-   "segment_n": 27,
+   "segment_n": 29,
    "spoken_only_segment_s": 0.6
   },
   "beat_lengths": [
@@ -3829,8 +3829,8 @@
     "action": "new",
     "scene": "13",
     "src_s": null,
-    "est_s": 4.37,
-    "lock_s": 4.37,
+    "est_s": 4.32,
+    "lock_s": 4.32,
     "diff_s": 0.0
    },
    {
@@ -3838,8 +3838,17 @@
     "action": "new",
     "scene": "13",
     "src_s": null,
-    "est_s": 6.4,
-    "lock_s": 6.4,
+    "est_s": 7.4,
+    "lock_s": 7.4,
+    "diff_s": 0.0
+   },
+   {
+    "beat": "13.03b",
+    "action": "new",
+    "scene": "13",
+    "src_s": null,
+    "est_s": 3.52,
+    "lock_s": 3.52,
     "diff_s": 0.0
    },
    {
@@ -3856,8 +3865,8 @@
     "action": "new",
     "scene": "13",
     "src_s": null,
-    "est_s": 4.02,
-    "lock_s": 4.02,
+    "est_s": 3.97,
+    "lock_s": 3.97,
     "diff_s": 0.0
    },
    {
@@ -3865,8 +3874,8 @@
     "action": "new",
     "scene": "13",
     "src_s": null,
-    "est_s": 3.27,
-    "lock_s": 3.27,
+    "est_s": 2.85,
+    "lock_s": 2.85,
     "diff_s": 0.0
    },
    {
@@ -3901,8 +3910,8 @@
     "action": "new",
     "scene": "14",
     "src_s": null,
-    "est_s": 5.22,
-    "lock_s": 5.22,
+    "est_s": 5.3,
+    "lock_s": 5.3,
     "diff_s": 0.0
    },
    {
@@ -3910,8 +3919,8 @@
     "action": "new",
     "scene": "14",
     "src_s": null,
-    "est_s": 3.59,
-    "lock_s": 3.59,
+    "est_s": 3.64,
+    "lock_s": 3.64,
     "diff_s": 0.0
    },
    {
@@ -3937,8 +3946,8 @@
     "action": "new",
     "scene": "14",
     "src_s": null,
-    "est_s": 9.1,
-    "lock_s": 9.1,
+    "est_s": 9.11,
+    "lock_s": 9.11,
     "diff_s": 0.0
    },
    {
@@ -3960,21 +3969,12 @@
     "diff_s": 0.0
    },
    {
-    "beat": "14.11",
-    "action": "new",
-    "scene": "14",
-    "src_s": null,
-    "est_s": 5.2,
-    "lock_s": 5.2,
-    "diff_s": 0.0
-   },
-   {
     "beat": "14.12",
     "action": "new",
     "scene": "14",
     "src_s": null,
-    "est_s": 4.57,
-    "lock_s": 4.57,
+    "est_s": 4.63,
+    "lock_s": 4.63,
     "diff_s": 0.0
    },
    {
@@ -3991,8 +3991,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 3.76,
-    "lock_s": 3.76,
+    "est_s": 3.77,
+    "lock_s": 3.77,
     "diff_s": 0.0
    },
    {
@@ -4000,8 +4000,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 7.18,
-    "lock_s": 7.18,
+    "est_s": 7.02,
+    "lock_s": 7.02,
     "diff_s": 0.0
    },
    {
@@ -4036,8 +4036,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 7.46,
-    "lock_s": 7.46,
+    "est_s": 7.47,
+    "lock_s": 7.47,
     "diff_s": 0.0
    },
    {
@@ -4045,8 +4045,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 6.44,
-    "lock_s": 6.44,
+    "est_s": 6.47,
+    "lock_s": 6.47,
     "diff_s": 0.0
    },
    {
@@ -4054,8 +4054,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 3.49,
-    "lock_s": 3.49,
+    "est_s": 3.51,
+    "lock_s": 3.51,
     "diff_s": 0.0
    },
    {
@@ -4063,8 +4063,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 8.9,
-    "lock_s": 8.9,
+    "est_s": 9.7,
+    "lock_s": 9.7,
     "diff_s": 0.0
    },
    {
@@ -4072,8 +4072,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 5.41,
-    "lock_s": 5.41,
+    "est_s": 5.42,
+    "lock_s": 5.42,
     "diff_s": 0.0
    },
    {
@@ -4081,8 +4081,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 3.22,
-    "lock_s": 3.22,
+    "est_s": 3.24,
+    "lock_s": 3.24,
     "diff_s": 0.0
    },
    {
@@ -4090,8 +4090,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 4.83,
-    "lock_s": 4.83,
+    "est_s": 4.85,
+    "lock_s": 4.85,
     "diff_s": 0.0
    },
    {
@@ -4099,8 +4099,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 1.88,
-    "lock_s": 1.88,
+    "est_s": 1.89,
+    "lock_s": 1.89,
     "diff_s": 0.0
    },
    {
@@ -4108,8 +4108,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 4.83,
-    "lock_s": 4.83,
+    "est_s": 4.6,
+    "lock_s": 4.6,
     "diff_s": 0.0
    },
    {
@@ -4117,8 +4117,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 4.56,
-    "lock_s": 4.56,
+    "est_s": 4.58,
+    "lock_s": 4.58,
     "diff_s": 0.0
    },
    {
@@ -4126,8 +4126,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 4.82,
-    "lock_s": 4.82,
+    "est_s": 4.84,
+    "lock_s": 4.84,
     "diff_s": 0.0
    },
    {
@@ -4135,8 +4135,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 4.56,
-    "lock_s": 4.56,
+    "est_s": 4.58,
+    "lock_s": 4.58,
     "diff_s": 0.0
    },
    {
@@ -4144,8 +4144,8 @@
     "action": "new",
     "scene": "15",
     "src_s": null,
-    "est_s": 5.0,
-    "lock_s": 5.0,
+    "est_s": 5.4,
+    "lock_s": 5.4,
     "diff_s": 0.0
    },
    {
@@ -4361,6 +4361,13 @@
     "ok": true
    },
    {
+    "beat": "13.03b",
+    "line": "e2-a3-0026",
+    "plan_s": 0.3,
+    "lock_s": 0.3,
+    "ok": true
+   },
+   {
     "beat": "14.08",
     "line": "e2-a3-0024",
     "plan_s": 0.5,
@@ -4474,11 +4481,11 @@
    },
    {
     "beat": "13.02",
-    "what": "the plan's 4.37 s: its tail 0.41 s after the last line"
+    "what": "the plan's 4.32 s: its tail 0.36 s after the last line"
    },
    {
     "beat": "13.03",
-    "what": "new beat (scene): ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down (lobby, lobby_day, mas)"
+    "what": "new beat (scene): ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down; he sees it, and leaves it (lobby, lobby_day, mas)"
    },
    {
     "beat": "13.03",
@@ -4487,6 +4494,22 @@
    {
     "beat": "13.03",
     "what": "sound tape_pull at 2.40 s (the plan's)"
+   },
+   {
+    "beat": "13.03b",
+    "what": "new beat (scene): OTS-WIDE · over Mas's shoulder at his pillar onto the two STAFFERS at theirs, watching him: Staffer 2's question, the first staffer's answer (lobby, lobby_day, staffer2, staffer, mas)"
+   },
+   {
+    "beat": "13.03b",
+    "what": "new line e2-a3-0025 (staffer2, 1.40 s, new take) at start+0.6"
+   },
+   {
+    "beat": "13.03b",
+    "what": "new line e2-a3-0026 (staffer, 0.39 s, new take) after e2-a3-0025 +0.3"
+   },
+   {
+    "beat": "13.03b",
+    "what": "the plan's 3.52 s: its tail 0.83 s after the last line"
    },
    {
     "beat": "13.04",
@@ -4534,15 +4557,15 @@
    },
    {
     "beat": "13.05",
-    "what": "new line e2-a3-0005 (reporter, 2.01 s, new take) at start+0.41"
+    "what": "new line e2-a3-0005 (reporter, 2.01 s, new take) at start+0.36"
    },
    {
     "beat": "13.05",
-    "what": "the plan's 4.02 s: its tail 1.60 s after the last line"
+    "what": "the plan's 3.97 s: its tail 1.60 s after the last line"
    },
    {
     "beat": "13.05",
-    "what": "sound sticker_slap_tv at 3.02 s (the plan's)"
+    "what": "sound sticker_slap_tv at 2.97 s (the plan's)"
    },
    {
     "beat": "13.06",
@@ -4550,7 +4573,7 @@
    },
    {
     "beat": "13.06",
-    "what": "sound ui_band_on at 2.18 s (the plan's)"
+    "what": "sound ui_band_on at 1.90 s (the plan's)"
    },
    {
     "beat": "14.01",
@@ -4710,11 +4733,11 @@
    },
    {
     "beat": "14.08",
-    "what": "the plan's 9.1 s: its tail 0.65 s after the last line"
+    "what": "the plan's 9.11 s: its tail 0.66 s after the last line"
    },
    {
     "beat": "14.09",
-    "what": "new beat (scene): WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card (bullpen, open_floor, ekiel)"
+    "what": "new beat (scene): WIDE · EKIEL walks out with a box past ordinary desks; the card (bullpen, open_floor, ekiel)"
    },
    {
     "beat": "14.09",
@@ -4722,7 +4745,7 @@
    },
    {
     "beat": "14.09",
-    "what": "on-screen add: \"SQUINT: 100%\" (1.0-2.9)"
+    "what": "on-screen add: \"TITLES: 3\" (1.0-2.9)"
    },
    {
     "beat": "14.09",
@@ -4753,56 +4776,12 @@
     "what": "sound domino_topple_run at 4.60 s (the plan's)"
    },
    {
-    "beat": "14.11",
-    "what": "new beat (scene): WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws (bullpen, open_floor, dot)"
-   },
-   {
-    "beat": "14.11",
-    "what": "on-screen add: \"SUPERALIGNMENT\" (0.3-5.2)"
-   },
-   {
-    "beat": "14.11",
-    "what": "on-screen add: \"SAFETY TEAM\" (0.3-5.2)"
-   },
-   {
-    "beat": "14.11",
-    "what": "on-screen add: \"MISC\" (4.0-5.2)"
-   },
-   {
-    "beat": "14.11",
-    "what": "on-screen add: \"MAY 17\" (4.0-5.2)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound screw_turn_1 at 1.00 s (the plan's)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound screw_turn_2 at 1.62 s (the plan's)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound screw_turn_3 at 2.25 s (the plan's)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound screw_turn_4 at 2.88 s (the plan's)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound nameplate_off at 3.40 s (the plan's)"
-   },
-   {
-    "beat": "14.11",
-    "what": "sound plate_drop_box at 3.90 s (the plan's)"
-   },
-   {
     "beat": "14.12",
     "what": "new beat (scene): WIDE · back at Alyi's door: Pivot door; it turns on its centre pin (bullpen, open_floor, mas)"
    },
    {
     "beat": "14.12",
-    "what": "on-screen add: \"Pivot door\" (0.33-1.63)"
+    "what": "on-screen add: \"Pivot door\" (0.33-1.65)"
    },
    {
     "beat": "14.12",
@@ -4810,7 +4789,7 @@
    },
    {
     "beat": "14.12",
-    "what": "sound door_pivot_creak at 1.47 s (the plan's)"
+    "what": "sound door_pivot_creak at 1.49 s (the plan's)"
    },
    {
     "beat": "15.01",
@@ -4818,19 +4797,15 @@
    },
    {
     "beat": "15.02",
-    "what": "new beat (scene): ECU · his phone: the thread, collapsed to dates and first lines (screen, office_evening, no figures)"
+    "what": "new beat (scene): ECU · his phone: Alyi's post from three days ago, collapsed to its date and first words, his own reply under it (screen, office_evening, no figures)"
    },
    {
     "beat": "15.02",
-    "what": "on-screen add: \"NOV 20, 2023\" (0.4-3.76)"
+    "what": "on-screen add: \"MAY 14, 2024\" (0.4-3.77)"
    },
    {
     "beat": "15.02",
-    "what": "on-screen add: \"♥ ♥ ♥\" (0.81-3.76)"
-   },
-   {
-    "beat": "15.02",
-    "what": "on-screen add: \"MAY 14, 2024\" (1.34-3.76)"
+    "what": "on-screen add: \"After almost a decade…\" (0.4-3.77)"
    },
    {
     "beat": "15.02",
@@ -4846,11 +4821,11 @@
    },
    {
     "beat": "15.03",
-    "what": "new line e2-vo-07 (mas, 2.40 s, new take) after e2-a3-0008 +1.2"
+    "what": "new line e2-vo-07 (mas, 2.24 s, new take) after e2-a3-0008 +1.2"
    },
    {
     "beat": "15.03",
-    "what": "the plan's 7.18 s: its tail 0.94 s after the last line"
+    "what": "the plan's 7.02 s: its tail 0.94 s after the last line"
    },
    {
     "beat": "15.04",
@@ -4946,7 +4921,7 @@
    },
    {
     "beat": "15.07",
-    "what": "new line e2-a3-0011 (alyi, 1.19 s, new take) at start+1.07"
+    "what": "new line e2-a3-0011 (alyi, 1.19 s, new take) at start+1.08"
    },
    {
     "beat": "15.07",
@@ -4958,7 +4933,7 @@
    },
    {
     "beat": "15.07",
-    "what": "the plan's 7.46 s: its tail 0.54 s after the last line"
+    "what": "the plan's 7.47 s: its tail 0.54 s after the last line"
    },
    {
     "beat": "15.08",
@@ -4966,15 +4941,15 @@
    },
    {
     "beat": "15.08",
-    "what": "on-screen add: \"CHECK IN\" (0.54-2.15)"
+    "what": "on-screen add: \"CHECK IN\" (0.54-2.16)"
    },
    {
     "beat": "15.08",
-    "what": "on-screen add: \"feel the agi\" (2.15-6.44)"
+    "what": "on-screen add: \"feel the agi\" (2.16-6.47)"
    },
    {
     "beat": "15.08",
-    "what": "sound check_in_blip at 1.88 s (the plan's)"
+    "what": "sound check_in_blip at 1.89 s (the plan's)"
    },
    {
     "beat": "15.09",
@@ -4990,15 +4965,15 @@
    },
    {
     "beat": "15.10",
-    "what": "on-screen add: \"RAIL: 2023\" (0.2-1.4)"
+    "what": "on-screen add: \"RAIL: 2023\" (0.2-2.4)"
    },
    {
     "beat": "15.10",
-    "what": "on-screen add: \"INTRODUCING SUPERALIGNMENT · ALYI, EKIEL\" (1.4-8.9)"
+    "what": "on-screen add: \"INTRODUCING SUPERALIGNMENT · ALYI, EKIEL\" (2.4-9.7)"
    },
    {
     "beat": "15.10",
-    "what": "on-screen add: \"Currently, we don't have a solution for steering or controlling a pote\" (1.6-8.8)"
+    "what": "on-screen add: \"Currently, we don't have a solution for steering or controlling a pote\" (2.6-9.6)"
    },
    {
     "beat": "15.11",
@@ -5014,7 +4989,7 @@
    },
    {
     "beat": "15.11",
-    "what": "the plan's 5.41 s: its tail 1.07 s after the last line"
+    "what": "the plan's 5.42 s: its tail 1.08 s after the last line"
    },
    {
     "beat": "15.12",
@@ -5026,11 +5001,11 @@
    },
    {
     "beat": "15.13",
-    "what": "on-screen add: \"UNALIGNED\" (0.4-4.83)"
+    "what": "on-screen add: \"UNALIGNED\" (0.4-4.85)"
    },
    {
     "beat": "15.13",
-    "what": "sound torch_light at 1.07 s (the plan's)"
+    "what": "sound torch_light at 1.08 s (the plan's)"
    },
    {
     "beat": "15.14",
@@ -5038,19 +5013,19 @@
    },
    {
     "beat": "15.14",
-    "what": "sound post_click at 0.40 s (the plan's)"
+    "what": "sound post_click at 0.41 s (the plan's)"
    },
    {
     "beat": "15.15",
-    "what": "new beat (flashback): WIDE · the effigy catches (void, fire_night, alyi)"
+    "what": "new beat (flashback): WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire (void, fire_night, alyi)"
    },
    {
     "beat": "15.15",
-    "what": "sound flame_whoomph at 0.27 s (the plan's)"
+    "what": "sound flame_whoomph at 0.20 s (the plan's)"
    },
    {
     "beat": "15.15",
-    "what": "sound fire_crackle at 0.81 s (the plan's)"
+    "what": "sound fire_crackle at 0.60 s (the plan's)"
    },
    {
     "beat": "15.16",
@@ -5062,11 +5037,11 @@
    },
    {
     "beat": "15.17",
-    "what": "new line e2-vo-08 (mas, 1.60 s, new take) at start+1.88"
+    "what": "new line e2-vo-08 (mas, 1.60 s, new take) at start+1.89"
    },
    {
     "beat": "15.17",
-    "what": "the plan's 4.82 s: its tail 1.34 s after the last line"
+    "what": "the plan's 4.84 s: its tail 1.35 s after the last line"
    },
    {
     "beat": "15.18",
@@ -5074,7 +5049,7 @@
    },
    {
     "beat": "15.18",
-    "what": "sound door_close_soft at 2.95 s (the plan's)"
+    "what": "sound door_close_soft at 2.96 s (the plan's)"
    },
    {
     "beat": "15.19",
@@ -5082,7 +5057,11 @@
    },
    {
     "beat": "15.19",
-    "what": "on-screen add: \"request for comment\" (1.6-3.6)"
+    "what": "on-screen add: \"request for comment\" (1.4-4.2)"
+   },
+   {
+    "beat": "15.19",
+    "what": "on-screen add: \"re: exit agreements\" (1.4-4.2)"
    },
    {
     "beat": "15.19",
@@ -5366,7 +5345,7 @@
    },
    {
     "beat": "17.15",
-    "what": "sound car_honk_5 at 10.75 s (the plan's)"
+    "what": "sound car_honk_5 at 10.45 s (the plan's)"
    },
    {
     "beat": "17.15",
@@ -6973,10 +6952,6 @@
    {
     "beat": "20.10",
     "what": "on-screen add: \"ISS\" (3.0-6.9)"
-   },
-   {
-    "beat": "20.10",
-    "what": "on-screen add: \"one goal and one product: a safe superintelligence\" (3.0-6.9)"
    },
    {
     "beat": "20.10",

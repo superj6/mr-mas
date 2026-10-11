@@ -12,9 +12,10 @@ laugh at the forecast, pathos (17).  README.md has the cue sheet (seconds, cue, 
 
   s (EL lock)       cue                    what plays
   -0.63 -  91.0     E02-08 THE CLOCK       a pizzicato and woodblock tick on varied pitches, one a beat (the first step:
-                                           quarters), straight, its grid locked to the four screws of sc 14 (one a beat,
-                                           Ep1's rhythm); its first tick one beat into Act Two's black (the prelap file),
-                                           its third on the act's first frame (a designed hit); an F pedal, sul tasto;
+                                           quarters), straight, its grid locked to the pivot's creak (the clock stops
+                                           dead on it; until the fixes pass, 2026-10-10, to the four screws of 14.11, cut
+                                           from the act); its first tick a beat into Act Two's black (the prelap file);
+                                           an F pedal, sul tasto;
                                            the knee's rising F G A-flat C as the clarinet's held dyads, one step a story
                                            beat (the staffers; "leave them up."; the walk-off; C on the threshold, the
                                            band lit); the presser a tiny bed; the chip's irregular seconds.  The open
@@ -22,7 +23,7 @@ laugh at the forecast, pathos (17).  README.md has the cue sheet (seconds, cue, 
                                            missing, blooms once on his own reflection (D-flat under it); the chair's hum
                                            is the GPU choir (D-flat sus2(#11)), diegetic into score (claimed
                                            chair_hum_choir); Ekiel: spiccato (the chill), then the pedal alone under his
-                                           post; the screws ARE the clock's four ticks, over the Ache; the clock stops
+                                           post; the domino at his shoe: the ticks again over the Ache; the clock stops
                                            dead on the pivot's creak; the hum swells, rings 1.0 s over the cut, stops
   91.0  - 189.9     E02-09 FEEL IT         the felt (his interior) on the hum's stop: D-flat, B-flat minor under the
                                            thread, F minor before the count (V.O. 7), A-flat for TPOOL (the chip, his
@@ -55,7 +56,7 @@ record plays dry (OST rule 10): no melody and no change under posts (kind `post`
 Rules (manifest.md §6, LEARNINGS S1-S3, S9; OST-BIBLE §0): the 96 BPM grid; the knee's cells; chip in every cue; no
 A-natural anywhere; the knee never whole; swung for people, straight for THE CLOCK, the machine and the record; no comic
 scoring (the stop and the cut-off are the only tools; no hit on a laugh, a honk or a bonk); no Mickey-Mousing (the
-bonks, the screws, the honks, the blimp's lights are SFX); nothing below C3 in the dark room; continuous per sequence,
+bonks, the honks, the blimp's lights are SFX); nothing below C3 in the dark room; continuous per sequence,
 no designed silence inside the act; designed hits marked.
 
 Run (from the repo root; a render is heavy: OST_WORKERS=2 through ops/heavy.sh):
@@ -395,29 +396,34 @@ def tracks_clock(hum_on, hum_off, hum2_on, swell, hum_stop, choir_on, choir_off,
 def cue_clock(tl):
     B, E = tl.B, tl.E
     stop2 = act2_stop_rel()
-    screw1 = _snd(tl, '14.11', 'screw_turn_1', _B(tl, '14.11', 80.25) + 1.0)
+    # the grid's anchor: the pivot's creak, where THE CLOCK stops dead (the fixes pass, 2026-10-10: it was the first of
+    # 14.11's four screws, and 14.11 is cut from the act: the safety team's plate came between Ekiel's exit and Alyi's
+    # door, the episode review's blocker)
+    creak = _snd(tl, '14.12', 'door_pivot_creak', _B(tl, '14.12', 79.37) + 1.49)
     out_t = E('14.12') if tl.has('14.12') else _B(tl, '15.01', 90.0)
     L = plan_cut('14.12', 'lcut', 'over_s', 1.0)
     hum_stop = round((out_t + L) * 24) / 24.0
-    k = int(math.ceil((screw1 - (stop2 - 0.2)) / BAR - 1e-9))
-    c = V.Cue('e02-08-wheres-alyi', tl, anchor=screw1, anchor_bar=k + 1, bars=int((hum_stop + 2.0 - (screw1 - k * BAR))
-                                                                                  / BAR) + 3, swing=0.0)
+    k = int(math.ceil((creak - (stop2 - 0.2)) / BAR - 1e-9))
+    c = V.Cue('e02-08-wheres-alyi', tl, anchor=creak, anchor_bar=k + 1, bars=int((hum_stop + 2.0 - (creak - k * BAR))
+                                                                                 / BAR) + 3, swing=0.0)
     W = still_windows(tl)
     rec = record_windows(tl)
     talk = talk_windows(tl, 0.1, 0.15)
     first = c.next_beat(stop2 + 0.06)                   # the first tick: the first beat into Act Two's black
-    e = dict(stop2=stop2, first=first, screw1=screw1, out=out_t, hum_stop=hum_stop,
+    e = dict(stop2=stop2, first=first, out=out_t, hum_stop=hum_stop,
              tv=_B(tl, '13.04', 19.29), presser_end=E('13.05') if tl.has('13.05') else 27.75,
              floor=_B(tl, '14.01', 31.0), band_on=_snd(tl, '13.06', 'ui_band_on', _B(tl, '13.06', 27.75) + 2.2),
              door=_B(tl, '14.04', 43.79), dot=_B(tl, '14.05', 49.0), note=_B(tl, '14.06', 52.63),
              bonk=_snd(tl, '14.06', 'alert_bonk', _B(tl, '14.06', 52.63) + 0.6),
              chair=_snd(tl, '14.07', 'chair_hum_choir', _B(tl, '14.07', 56.79)), ekiel=_B(tl, '14.09', 70.83),
              freeze=_snd(tl, '14.09', 'freeze_hit_F', _B(tl, '14.09', 70.83) + 0.6), post=_B(tl, '14.10', 74.25),
-             screws=_B(tl, '14.11', 80.25), pivot=_B(tl, '14.12', 85.42),
-             creak=_snd(tl, '14.12', 'door_pivot_creak', _B(tl, '14.12', 85.42) + 1.47))
-    e['screw_t'] = [_snd(tl, '14.11', f'screw_turn_{i}', screw1 + (i - 1) * Q) for i in (1, 2, 3, 4)]
+             domino=_snd(tl, '14.10', 'domino_topple_run', _B(tl, '14.10', 78.37) + 4.6), pivot=_B(tl, '14.12', 79.37),
+             creak=creak)
+    # the staffers' low exchange (13.03b, the fixes pass: "Did his post say why?" / "No."): the clock a tiny bed under
+    # it, like the presser (said low; at the talk level the ticks held its onset to +7.0 dB over the score, under +10)
+    e['hush'] = (B('13.03b') - 0.1, E('13.03b') - 0.2) if tl.has('13.03b') else (-9.0, -9.0)
     ek_rec = next((a for a, b, _ in rec if a >= e['post'] - 0.2), e['post'] + 0.6)
-    ek_end = max([b for a, b, _ in rec if e['post'] - 0.2 <= a < e['screws']] + [e['screws']])
+    ek_end = max([b for a, b, _ in rec if e['post'] - 0.2 <= a < e['pivot']] + [e['domino']])
     # ---- the plan: (t, step or None, pedal, layers, why); every change pre-laps its cut and avoids the still windows
     hs = []
     hs.append((first, 'F', 'F', 'the black: the first tick one beat into Act Two\'s black (J %.2f s, the first grid beat '
@@ -448,11 +454,13 @@ def cue_clock(tl):
         t_po = lead_in(c, ek_rec, min_lead=0.2, swung=False)
     hs.append((t_po, None, 'F', f'Ekiel\'s post (from {ek_rec:.2f}): THE CLOCK thins to its pedal (no tick, no dyad): '
                                 'the record plays dry'))
-    t_sc = c.next_beat(max(e['screws'], ek_end) + 0.05)
-    hs.append((t_sc, None, 'F', 'the team\'s door: the ticks again; the Ache (G + D-flat over the F pedal) for the '
-                                'screws, which take the clock\'s four ticks themselves'))
-    H = sorted(hs)
     stop = c.next_beat(e['creak'] - 0.05)                               # the clock stops dead on the creak's beat
+    # the domino at his shoe, after the post has played dry: the ticks again over the Ache (G + D-flat over the F
+    # pedal), the chill, to the creak (a beat at least; the screws' four ticks had it until the fixes pass)
+    t_sc = min(c.next_beat(ek_end + 0.05), stop - Q)
+    hs.append((t_sc, None, 'F', 'the domino at his shoe (the post played dry): the ticks again; the Ache (G + D-flat '
+                                'over the F pedal), the chill, to the creak'))
+    H = sorted(hs)
     e['clock_stop'] = stop
 
     def at(t):
@@ -462,7 +470,7 @@ def cue_clock(tl):
                      choir_on=e['chair'] + 0.8, choir_off=t_ek, clk=c.clk)
     rng = np.random.default_rng(1308)
     # ---- the tick: violin pizzicato + woodblock on every beat, varied pitches; softer under talk, tiny under the
-    # presser, out under the record and for the screws' four beats; it stops dead on the creak
+    # presser, out under the record; it stops dead on the creak
     t = first
     j = 0
     prev = None
@@ -474,17 +482,13 @@ def cue_clock(tl):
             t += Q
             j += 1
             continue
-        if any(abs(t - s) < 0.08 for s in e['screw_t']):
-            t += Q
-            j += 1
-            continue
         pool = TICK_POOL['Db' if h[2] == 'Db' else col]
         cand = [p for p in pool if p != prev]
         p = cand[int(rng.integers(0, len(cand)))] if j % 4 else (pool[0] if prev != pool[0] else pool[1])
         prev = p
         v = 0.36 if j % 4 == 0 else 0.3
-        if e['tv'] - 0.1 <= t < e['presser_end'] - 0.2:
-            v *= 0.45                                  # the presser: a tiny bed
+        if e['tv'] - 0.1 <= t < e['presser_end'] - 0.2 or e['hush'][0] <= t < e['hush'][1]:
+            v *= 0.45                                  # the presser, the staffers' low exchange: a tiny bed
         elif inside(t, talk):
             v *= 0.72
         if h[0] == t_door and t < t_dot:
@@ -492,7 +496,7 @@ def cue_clock(tl):
         if t_ch <= t < t_ek:
             v *= 0.62                                  # the chair, Bukaj: softer
         if t >= t_sc:
-            v *= 1.12                                  # the screws' bar and after: the peak
+            v *= 1.12                                  # the domino's beats and after: the peak
         c.n('tick_pz', p, t, 0.25, v, lock=True, art='pizz')
         c.n('woodclick', 60 + (j % 3), t, 0.08, v * 0.7, lock=True)
         ticks.append(round(t, 3))
@@ -515,7 +519,8 @@ def cue_clock(tl):
             pos = sorted(rng.choice(np.arange(16), size=dens, replace=False))
             for q in pos:
                 tt = t + q * S16
-                if tt < stop - 0.1 and not (e['tv'] - 0.1 <= tt < e['presser_end'] - 0.2) and not inside(tt, W):
+                if (tt < stop - 0.1 and not (e['tv'] - 0.1 <= tt < e['presser_end'] - 0.2) and not inside(tt, W)
+                        and not (e['hush'][0] <= tt < e['hush'][1])):
                     c.n('noise', 60, tt, 0.06, 0.3 + 0.05 * (q % 3), lock=True, clock=float(rng.integers(8, 24) * 1000),
                         short=bool(q % 4 == 3), dec=0.03, sus=0.0, rel=0.02, hp=2500)
                     secs.append(round(tt, 3))
@@ -568,19 +573,20 @@ def cue_clock(tl):
     c.mark(e['chair'], 'the chair\'s hum: the GPU choir\'s chord (D-flat sus2(#11), no third) in the room, low-passed '
                        'and narrow; over two bars the score\'s choir opens out of it (diegetic into score; the score '
                        'plays the claimed chair_hum_choir)', hit=False)
-    # ---- the Ache at the screws (glass: G4 + D-flat5 over the F pedal), soft timpani on F
+    # ---- the Ache at the domino (glass: G4 + D-flat5 over the F pedal), soft timpani on F
     ache_end = stop
     c.ch('glasspad', ['G4', 'Db5'], t_sc, ache_end - t_sc + 0.2, 0.3, roll=0.0, lock=True, rel=0.4)
     c.n('timp', 'F3', t_sc, 1.2, 0.24, lock=True)
-    c.mark(e['screw_t'][0], 'the four screws, one a beat: the clock\'s own four ticks (the SFX\'s; the pizzicato and '
-                            'the woodblock leave those beats); the Ache over the F pedal (the chill)', hit=False)
+    c.mark(t_sc, 'the domino at his shoe, the post played dry: the ticks again over the Ache (the chill), to the creak',
+           hit=False)
     c.mark(stop, 'THE CLOCK stops dead on the pivot\'s creak (the reveal: the door he couldn\'t open turns on its pin); '
                  'the hum swells', hit=False)
     c.mark(out_t, f'the cut to the empty office: the hum rings over it (L {L:.1f} s)', hit=False)
     c.mark(hum_stop, 'the hum stops where the chair used to be; the felt (E02-09) takes the downbeat', hit=False)
     # ---- the rides: the presser is a tiny bed; the hum's swell sits under the out's ceiling
     rides = [(e['tv'] - 0.1, e['presser_end'] - 0.25, -5.0),     # the presser: a tiny bed
-             (t_sc - 0.1, stop, 1.5),                               # the screws: THE CLOCK's peak (P04: up to -18)
+             (e['hush'][0], e['hush'][1], -3.0),                    # the staffers' low exchange (the fixes pass)
+             (t_sc - 0.1, stop, 1.5),                               # the domino: THE CLOCK's peak (P04: up to -18)
              (stop, hum_stop + 0.5, 2.5)]                           # the hum's swell over the cut
     macro = ride_macro(rides, c.bar1 - 1.0, hum_stop + 1.5)
     secs_ = [('1 the black, the staffers: F (the first step: a tick a beat; the pedal)', first, t_g),
@@ -592,7 +598,7 @@ def cue_clock(tl):
              ('7 DOT\'s cuff; the note into his pocket (F, C)', t_dot, t_ch),
              ('8 the chair: the hum, the GPU choir (D-flat); Bukaj', t_ch, t_ek),
              ('9 Ekiel: the card (spiccato); his post: the pedal alone', t_ek, t_sc),
-             ('10 the screws: the Ache; the clock\'s peak', t_sc, stop),
+             ('10 the domino at his shoe: the Ache; the clock\'s peak', t_sc, stop),
              ('11 the pivot: the clock stops; the hum swells and rings over the cut', stop, hum_stop)]
     for lab, a0, a1 in secs_:
         c.section(lab, a0, a1)
@@ -601,12 +607,12 @@ def cue_clock(tl):
         'Door and the GPU choir) + P04 THE CLOCK', usage='BI',
         family='P04 THE CLOCK, first step (quarters), straight; the Door and the GPU choir (MM-18)',
         tone='wry; a sad beat, then a dry laugh (the presser, scored as a tiny bed); playful (the open floor), then '
-             'lonely (his own face saying it); a chill at the domino and the screws',
+             'lonely (his own face saying it); a chill at the domino',
         scenes=['Ep2 v1 Act Three sc 13 (13.01-13.06)', 'sc 14 (14.01-14.12)'],
         motifs=['THE CLOCK, first step: a pizzicato and woodblock tick a beat on varied pitches, the chip\'s irregular '
                 'seconds', 'the knee\'s rising F G A-flat C as held dyads (clarinet, violins)',
                 'THE DOOR with its first note missing (flute, through the door)',
-                'the GPU choir as the chair\'s hum (diegetic into score)', 'the Ache at the screws'],
+                'the GPU choir as the chair\'s hum (diegetic into score)', 'the Ache at the domino'],
         motif_ids=[], key='F pedal (the clock), the knee\'s step dyads; D-flat for the Door and the chair (D-flat '
                           'sus2(#11), no third); the Ache (G, D-flat over F); no A-natural',
         composer='Ep2 v1 score pass (act3), 2026-10-09, on the e02-v1-common engine (composer X\'s helpers)',
@@ -617,13 +623,13 @@ def cue_clock(tl):
             (e['bonk'], 'alert_bonk: Open greyed (no hit)'),
             (e['chair'], 'chair_hum_choir: CLAIMED (the score plays the hum)'),
             (e['freeze'], 'freeze_hit_F: Ekiel\'s card (the F pedal under it)'),
-            (e['screw_t'][0], 'screw_turn_1-4: the clock\'s four ticks (the score leaves the beats)'),
+            (e['domino'], 'domino_topple_run: the post plays dry; the Ache comes in after it'),
             (e['creak'], 'door_pivot_creak: the clock stops on its beat'))],
         audition=['0-12 s: the tick is a clock, not a countdown cliché (no tick sample, no heartbeat); the pedal under '
                   'the staffers is a held room', '19-27 s: the presser is a tiny bed, the record dry',
                   '43.8-49 s: the Door through the door: lonely, not a hymn',
                   '56.8-62 s: the hum reads as the chair\'s, then opens into the choir',
-                  '80.6-86.9 s: the screws are the clock\'s ticks; the Ache is a chill, not a horror sting'])
+                  'the domino to the creak: the Ache is a chill, not a horror sting'])
     meta['rides'] = [dict(t0=round(a, 3), t1=round(b, 3), db=d) for a, b, d in rides]
     sc = c.finish(T, meta, length_end=hum_stop + 0.6, tail_s=0.4, macro=macro)
     c.ev = dict({k: (round(v, 3) if isinstance(v, float) else v) for k, v in e.items()},
@@ -703,7 +709,7 @@ def cue_feel(tl, hum_stop, push):
     H = [(hs0, 'Dbmaj9', 'the hum stops where the chair used to be: the felt\'s first chord on the same downbeat '
                          '(his interior); D-flat keeps the choir\'s root')]
     t = place(c, lead_in(c, e['c02'], swung=False, step=Q / 2), W, floor=hs0)
-    H.append((t, 'Bbm9', f'the thread on his phone ({how(c, t, e["c02"])}): his three hearts, the dates (loneliness); '
+    H.append((t, 'Bbm9', f'the thread on his phone ({how(c, t, e["c02"])}): his post, its date, "almost a decade" (loneliness); '
                          'held under the posts and Alyi\'s far line (unscored)'))
     t_fm = c.next_beat((far['end'] if far else e['c03'] + 2.6) + 0.1)
     if vo7 and t_fm > vo7['on'] - 0.25:
@@ -1569,9 +1575,8 @@ def main():
         measured=res, laid=laid, source=os.path.relpath(__file__, V.REPO),
         sfx_requests=['chair_hum_choir (14.07) and dread_sting (17.21): CLAIMED by the score (it plays the chair\'s hum '
                       'as the GPU choir, diegetic into score, and the DREAD out); the SFX board has neither',
-                      'screw_turn_1-4 (14.11): they fall on THE CLOCK\'s grid (the score\'s grid is anchored on the '
-                      'first); the score leaves those four beats empty: keep them dry and on time',
-                      'door_pivot_creak (14.12): THE CLOCK stops on its beat; keep its attack',
+                      'door_pivot_creak (14.12): THE CLOCK\'s grid is anchored on it and stops on its beat; keep its '
+                      'attack (the fixes pass: 14.11\'s four screws, which the grid was anchored on, are cut)',
                       'freeze_hit_F (14.09, 17.03): over the F pedal (14.09) and the C pedal (17.03)',
                       'thunder_tuned_F (17.17): the rain pad carries F4 there; tune it to F, never A',
                       'car_honk_1-5 (17.02, 17.15, 17.16): the score leaves the phrase ends to them; nothing tuned',

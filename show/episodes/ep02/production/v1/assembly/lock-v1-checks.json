@@ -109,15 +109,16 @@
    "ep_in": "12:10:00",
    "ep_out": "17:30:00",
    "shots": 58,
-   "lines": 28,
+   "lines": 30,
    "vo": 4,
    "scenes": 4,
    "plan_s": 320,
    "checks_ok": true,
-   "checks": 8,
+   "checks": 9,
    "problems": [
     "e2-a3-0001: the stick's speaker staffer vs the take's TILED EMPLOYEE",
-    "e2-a3-0003: the stick's speaker staffer vs the take's TILED EMPLOYEE"
+    "e2-a3-0003: the stick's speaker staffer vs the take's TILED EMPLOYEE",
+    "e2-a3-0026: the stick's speaker staffer vs the take's TILED EMPLOYEE"
    ]
   },
   "act4": {
@@ -132,7 +133,7 @@
    "scenes": 4,
    "plan_s": 319,
    "checks_ok": true,
-   "checks": 8,
+   "checks": 9,
    "problems": [
     "e2-a4-0023: the stick's speaker staffer vs the take's TILED EMPLOYEE"
    ]
@@ -417,18 +418,18 @@
    "seg": "act3",
    "scene": "13",
    "title": "Leave them up",
-   "frames": 744,
-   "seconds": 31.0,
+   "frames": 840,
+   "seconds": 35.0,
    "tc_in": "12:10:00",
-   "tc_out": "12:41:00",
-   "plan_s": 31,
+   "tc_out": "12:45:00",
+   "plan_s": 35,
    "proposal_s": 31,
-   "fit_scale": 1.363,
-   "shots": 6,
-   "lines": 5,
+   "fit_scale": 1.19,
+   "shots": 7,
+   "lines": 7,
    "arrival_s": 2.38,
    "arrival_spoken_s": 2.38,
-   "aftermath_s": 4.83,
+   "aftermath_s": 4.46,
    "plan_arrive": [
     "13.01: 2.0 s, the staffers already at the pillar, one peeling, one smoothing, the TV murmuring"
    ],
@@ -439,23 +440,23 @@
    "seg": "act3",
    "scene": "14",
    "title": "The open floor",
-   "frames": 1416,
-   "seconds": 59.0,
-   "tc_in": "12:41:00",
-   "tc_out": "13:40:00",
-   "plan_s": 59,
+   "frames": 1296,
+   "seconds": 54.0,
+   "tc_in": "12:45:00",
+   "tc_out": "13:39:00",
+   "plan_s": 54,
    "proposal_s": 59,
-   "fit_scale": 1.631,
-   "shots": 12,
+   "fit_scale": 1.655,
+   "shots": 11,
    "lines": 4,
-   "arrival_s": 29.29,
-   "arrival_spoken_s": 29.29,
-   "aftermath_s": 19.79,
+   "arrival_s": 29.46,
+   "arrival_spoken_s": 29.46,
+   "aftermath_s": 14.67,
    "plan_arrive": [
     "14.01: 2.5 s, the spread with the band lit and the heatsinks' polish catching the light"
    ],
    "plan_aftermath": [
-    "14.12: the plate in the box; then his hand on Alyi's door as it pivots"
+    "14.12: the domino settled at his shoe; then his hand on Alyi's door as it pivots"
    ],
    "big_turn": null
   },
@@ -463,18 +464,18 @@
    "seg": "act3",
    "scene": "15",
    "title": "Where u at? (with F2.2)",
-   "frames": 2400,
-   "seconds": 100.0,
-   "tc_in": "13:40:00",
+   "frames": 2424,
+   "seconds": 101.0,
+   "tc_in": "13:39:00",
    "tc_out": "15:20:00",
-   "plan_s": 100,
+   "plan_s": 101,
    "proposal_s": 100,
-   "fit_scale": 1.342,
+   "fit_scale": 1.348,
    "shots": 19,
    "lines": 10,
    "arrival_s": 6.88,
    "arrival_spoken_s": 6.88,
-   "aftermath_s": 10.88,
+   "aftermath_s": 11.33,
    "plan_arrive": [
     "15.01: 2.0 s, the empty office as the carried hum stops"
    ],
@@ -1134,6 +1135,16 @@
    "as_planned": true
   },
   {
+   "beat": "13.03b",
+   "line": "e2-a3-0026",
+   "who": "staffer",
+   "pace": "quick",
+   "plan_s": 0.3,
+   "lock_s": 0.3,
+   "in_band": true,
+   "as_planned": true
+  },
+  {
    "beat": "14.08",
    "line": "e2-a3-0024",
    "who": "mas",
@@ -1159,7 +1170,7 @@
    "who": "bukaj",
    "pace": "normal",
    "plan_s": 0.5,
-   "lock_s": 0.538,
+   "lock_s": 0.497,
    "in_band": true,
    "as_planned": true
   },
@@ -1652,10 +1663,10 @@
   {
    "seg": "act3",
    "beat": "13.03",
-   "seconds": 6.4,
+   "seconds": 7.4,
    "events": 2,
-   "longest_still_s": 4.0,
-   "frame": "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down"
+   "longest_still_s": 5.0,
+   "frame": "ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down; "
   },
   {
    "seg": "act3",
@@ -1684,9 +1695,9 @@
   {
    "seg": "act3",
    "beat": "14.04",
-   "seconds": 5.22,
+   "seconds": 5.3,
    "events": 0,
-   "longest_still_s": 5.22,
+   "longest_still_s": 5.3,
    "frame": "MCU · his own reflection mouthing can we talk? back to him"
   },
   {
@@ -1707,18 +1718,10 @@
   },
   {
    "seg": "act3",
-   "beat": "14.11",
-   "seconds": 5.2,
-   "events": 14,
-   "longest_still_s": 1.2,
-   "frame": "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an o"
-  },
-  {
-   "seg": "act3",
    "beat": "14.12",
-   "seconds": 4.57,
+   "seconds": 4.63,
    "events": 4,
-   "longest_still_s": 2.94,
+   "longest_still_s": 2.98,
    "frame": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin"
   },
   {
@@ -1740,57 +1743,57 @@
   {
    "seg": "act3",
    "beat": "15.08",
-   "seconds": 6.44,
+   "seconds": 6.47,
    "events": 5,
-   "longest_still_s": 4.29,
+   "longest_still_s": 4.31,
    "frame": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the "
   },
   {
    "seg": "act3",
    "beat": "15.10",
-   "seconds": 8.9,
+   "seconds": 9.7,
    "events": 6,
-   "longest_still_s": 7.2,
+   "longest_still_s": 7.0,
    "frame": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him;"
   },
   {
    "seg": "act3",
    "beat": "15.13",
-   "seconds": 4.83,
+   "seconds": 4.85,
    "events": 3,
-   "longest_still_s": 3.76,
+   "longest_still_s": 3.77,
    "frame": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut"
   },
   {
    "seg": "act3",
    "beat": "15.15",
-   "seconds": 4.83,
+   "seconds": 4.6,
    "events": 2,
-   "longest_still_s": 4.03,
-   "frame": "WIDE · the effigy catches"
+   "longest_still_s": 4.0,
+   "frame": "WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire"
   },
   {
    "seg": "act3",
    "beat": "15.16",
-   "seconds": 4.56,
+   "seconds": 4.58,
    "events": 0,
-   "longest_still_s": 4.56,
+   "longest_still_s": 4.58,
    "frame": "WIDE → ECU · the fire's glow shrinks to one point of light"
   },
   {
    "seg": "act3",
    "beat": "15.18",
-   "seconds": 4.56,
+   "seconds": 4.58,
    "events": 1,
-   "longest_still_s": 2.95,
+   "longest_still_s": 2.96,
    "frame": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut "
   },
   {
    "seg": "act3",
    "beat": "15.19",
-   "seconds": 5.0,
-   "events": 5,
-   "longest_still_s": 2.0,
+   "seconds": 5.4,
+   "events": 7,
+   "longest_still_s": 2.4,
    "frame": "WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for c"
   },
   {
@@ -1981,7 +1984,7 @@
    "seg": "act4",
    "beat": "20.10",
    "seconds": 7.0,
-   "events": 10,
+   "events": 8,
    "longest_still_s": 3.9,
    "frame": "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it ov"
   },
@@ -2246,7 +2249,7 @@
    "after": "e2-a3-0010",
    "line": "e2-a3-0011",
    "beats": "15.06 -> 15.07",
-   "lock_s": 1.592,
+   "lock_s": 1.643,
    "not_an_exchange": "not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07"
   }
  ],
@@ -2292,6 +2295,36 @@
    "detail": "the post up 265.625-276.167 s against a floor of 8.85 s"
   },
   {
+   "check": "sc 14: Ekiel's domino goes straight to Alyi's door, no team plate (W8)",
+   "ok": true,
+   "detail": "sc 14's last shots ['14.09', '14.10', '14.12']; scene 840-2136 f"
+  },
+  {
+   "check": "V.O. 7 counts on Alyi's own clock, not the firing's",
+   "ok": true,
+   "detail": "V.O. 7 \"eight years and five months.\"; 15.02's texts ['MAY 14, 2024', 'After almost a decade…']"
+  },
+  {
+   "check": "sc 13: \"Did his post say why?\" / \"No.\"",
+   "ok": true,
+   "detail": "lines ['e2-a3-0025', 'e2-a3-0026'], at 20.850 and 22.550 s"
+  },
+  {
+   "check": "the 2023 rail held 2 s, clear of the post",
+   "ok": true,
+   "detail": "the rail 141.083-143.292 s, the post from 143.292 s"
+  },
+  {
+   "check": "the ISS card carries no line about its product",
+   "ok": true,
+   "detail": "20.10's texts: ['I am starting a new company:', 'ISS']"
+  },
+  {
+   "check": "the last honk clears \"Updating.\"",
+   "ok": true,
+   "detail": "car_honk_5 at 281.250 s, \"Updating.\" from 281.733 s"
+  },
+  {
    "check": "4B: the click a beat after his thought, 1.5 s after it",
    "ok": true,
    "detail": "V.O. 3 ends 232.720 s, the click 233.083 s, the scene ends 235.000 s"
@@ -2304,7 +2337,7 @@
  ],
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
-  "lines": 174,
-  "rows": 400
+  "lines": 176,
+  "rows": 398
  }
 }

@@ -24,7 +24,8 @@ THE MIX, per segment:
             line (`cut`) stops at its `dur`. EL: each take is levelled to its Kokoro counterpart's loudness when the
             lock carries one. MARIO (a Kokoro take in the EL film): voices-el.md §AB3's EQ (+1.5 dB at 350 Hz, -1.5 dB at
             2.2 kHz) and -0.5 dB, before any device chain.
-  ROOMS     the room stem, dipping 2 dB under speech.
+  ROOMS     the room stem, dipping 2 dB under speech; ROOM_LINE_DIP's lines a further dip with 0.35 s ramps (the fixes pass:
+            F2.2's party bed under the motive flashback's exchange).
   SFX       the SFX stem as built (not ducked).
   SCORE     music.wav as delivered (underscore level, on the segment's clock), DUCKED under speech: 0.25 s pre, joined
             across gaps under 2.5 s, 0.2 s in, 0.6 s out, by a depth per cue (DUCK_BY_MOOD, keyed by the beat's
@@ -115,6 +116,49 @@ LINE_DEVICE = {'e2-a2-0012': 'monitor', 'e2-a2-0013': 'monitor', 'e2-a2-0014': '
 NO_SPACE = {'black', 'void', 'none', '', 'blueprint'}   # rooms with no acoustic space (an `os` line there stays dry)
 # line id -> (the line that cuts in over its tail, dB, why): the tail of a line ducked from just before the other comes
 # in to its own end (a 30 ms ramp), so a designed cut-in reads over the line it cuts (the fixes pass, 2026-10-10)
+# line id -> (dB, why): the room bus dipped further under a line whose room bed masks it, the dip ramped in and out over
+# ROOM_LINE_DIP_RAMP s so the room still reads round the line; lines in one exchange share one continuous dip (the fixes
+# pass, Act Three, 2026-10-10: the episode review measured F2.2's party bed, bed_party_crowd, as the masker of the motive
+# flashback's key exchange: Alyi's chant lead only +8.6 dB over everything at its onset, Mas's "someone has to hold the
+# glass." +12.0 at its onset but +1.6 dB at its 10th percentile, 19 % of its 20 ms frames under +3 dB). At 5 dB its 10th
+# percentile came to +3.8 dB, the score then the larger masker: 6 dB here, and the score ridden 3 dB under the same lines
+# (SCORE_RIDE act3 15.06 4 dB, 15.07 5 dB: at 3 the two lines' 10th percentiles were +5.9 and +5.5; at 4, +6.5 and +5.96)
+ROOM_LINE_DIP_RAMP = 0.35
+ROOM_LINE_DIP = {
+    'e2-a3-0009': (6.0, "15.06: Alyi's \"FEEL THE AGI!\", the chant's first voice, over the party bed"),
+    'e2-a3-0011': (6.0, "15.07: \"You're not chanting.\" (the motive flashback's exchange, under the chant and the party)"),
+    'e2-a3-0012': (6.0, "15.07: Mas's \"someone has to hold the glass.\" (its tail was masked by the party bed)"),
+    'e2-a3-0013': (6.0, "15.07: \"Then I'll feel it for both of us.\" (the exchange's last line, laughing)"),
+}
+
+
+def room_line_dip(g, N):
+    """the room bus's extra dip in dB per sample (<= 0) under ROOM_LINE_DIP's lines, and the record of each"""
+    env = np.zeros(N, 'float32')
+    rec = []
+    t = np.arange(N, dtype='float64') / SR
+    for i, b in enumerate(g.beats):
+        for l in b.get('lines') or []:
+            if l['id'] not in ROOM_LINE_DIP:
+                continue
+            d, why = ROOM_LINE_DIP[l['id']]
+            on = g.starts[i][0] + l['t']
+            a, e, r = on - 0.1, on + l['dur'] + 0.15, ROOM_LINE_DIP_RAMP
+            i0, i1 = max(0, int((a - r) * SR)), min(N, int((e + r) * SR) + 1)
+            tt = t[i0:i1]
+            v = np.clip(np.minimum((tt - (a - r)) / r, ((e + r) - tt) / r), 0.0, 1.0) * -d
+            env[i0:i1] = np.minimum(env[i0:i1], v.astype('float32'))
+            rec.append(dict(line=l['id'], db=-d, from_s=round(a - r, 3), to_s=round(e + r, 3), ramp_s=r, why=why))
+    return env, rec
+
+
+# line id -> (dB, why): a take laid louder than its loudness match, for a line whose read is soft in the speech band
+# (the fixes pass, Act Three, 2026-10-10: STAFFER 2's "Did his post say why?", read quietly, sat -35.7 dB in 1-4 kHz
+# against the scene's other lines at -27 to -29, its 10th percentile +0.4 dB over everything; it is the newcomer
+# gate's own question and must be heard)
+LINE_GAIN_DB = {
+    'e2-a3-0025': (3.0, "13.03b: STAFFER 2's quiet \"Did his post say why?\" (soft in the speech band)"),
+}
 LINE_TAIL_DUCK = {
     'e2-a2-0027': ('e2-a2-0028', -6.0, "11.04: the ENGINEER's \"Thanks.\" comes in over CHATGTP's \"...favorite things.\" "
                                        "and both play through the house PA; the episode review measured \"Thanks.\" "
@@ -543,6 +587,9 @@ def line_audio(l, room, variant, info=None):
         x[len(x) - f:] *= np.linspace(1, 0, f)
     if l.get('tag') == 'V.O.' and VO_GAIN_DB:
         gain += VO_GAIN_DB
+    if l.get('id') in LINE_GAIN_DB:
+        gain += LINE_GAIN_DB[l['id']][0]
+        info.setdefault('line_gains', {})[l['id']] = LINE_GAIN_DB[l['id']][0]
     return x, gain
 
 
@@ -808,6 +855,10 @@ def premix(name, g, variant, use_score=True, keep_buses=False):
     dip = ROOM_DIP.get(name, ROOM_DIP_DEFAULT)
     room = room * db(-dip * u)[:, None].astype('float32')
     qa['rooms'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-room.{ext}'), ROOT), 'dip_under_speech_db': dip}
+    ldip, lrec = room_line_dip(g, N)
+    if lrec:
+        room = room * db(ldip)[:, None].astype('float32')
+        qa['rooms']['line_dips'] = lrec
     qa['sfx'] = {'stem': os.path.relpath(os.path.join(sd, f'{name}-sfx.{ext}'), ROOT), 'ducked': False}
     mus, sq, _ = score_bus(name, g, variant, u, use_score)
     qa['score'] = sq
@@ -838,7 +889,15 @@ SCORE_RIDE = {                                           # seg -> [(beat, from s
              # S11: the phone moments the picture holds on (ECUs on his thumb): the score makes room for the taps
              ('11.11', 0.8, 2.4, -4.0, 'S11: h · e · r typed in the wings (ECU), the taps over the pad'),
              ('12.07', 0.4, 3.5, -3.0, 'S11: his post typed and posted (ECU), the taps and the click')],
-    'act3': [('17.07', 1.7, 4.66 + 4.8, -3.0, 'S11: "His phone won\'t stop": the buzzes over the scramble (17.07-17.08)')],
+    'act3': [('17.07', 1.7, 4.66 + 4.8, -3.0, 'S11: "His phone won\'t stop": the buzzes over the scramble (17.07-17.08)'),
+             # the fixes pass (2026-10-10): F2.2's chant lead and the exchange under the chant (the episode review: the
+             # motive flashback's key lines masked; with the room dipped 6 dB the score was the larger masker), and the
+             # catch at the offsite (the whoomph and the crackle came 0.25 s nearer the Ache's entry with the new lock and
+             # read under it at their peak cap: the score makes room for them)
+             ('15.06', 1.6, 3.4, -4.0, 'S11: Alyi\'s "FEEL THE AGI!" over the party (the fixes pass)'),
+             ('15.07', 0.6, 'end', -5.0, 'S11: the exchange under the chant, "You\'re not chanting." to "…both of us." (the fixes pass)'),
+             ('13.03b', 0.0, 'end', -4.0, 'S11: the staffers\' low exchange, "Did his post say why?" / "No." (the fixes pass: the gate\'s answer must be heard)'),
+             ('15.15', 0.0, 1.4, -5.0, 'S11: the catch: the whoomph and the crackle over the Ache\'s entry (the fixes pass)')],
 }
 LIFT_LU = 2.5                                             # a set piece's peak over the talk
 LIFT_MAX = {'st': 6.0, 'mom': 9.0}

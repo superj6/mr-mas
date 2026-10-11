@@ -170,6 +170,24 @@ for _sc, (_d, _why) in SCENE_ADJUST_FX.items():
     SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The fixes pass (fixes-v1.md, Act Three, 2026-10-10). The episode review's blocker: the safety team's plate coming off
+# its door (14.11, 5.2 s) sat between Ekiel's exit and Alyi's door, so the dismantled team introduced Alyi's office and
+# F2.2 and a newcomer read it as his reason; 14.11 is cut from the Alyi run (its plate is left for Act Four's owner to
+# place in sc 18's split, as context for the committee, if wanted). Sc 13 gains the gate's plain answer (13.03b, about
+# 2.9 s) and his choice to leave the flyer upside down (13.03 +1.0 s); sc 15 holds the 2023 rail clear of the post's
+# typing (15.10 +0.8 s), gives Alyi's face at the catch (15.15 +1.0 s) and the request its subject (15.19 +0.4 s).
+# Act Three stays 5:20 (7,680 f), so no later act's episode clock moves.
+SCENE_ADJUST_FX3 = {
+    "13": (+4, "the fixes pass: 13.03b, \"Did his post say why?\" / \"No.\" (the newcomer gate's answer, said once), and "
+               "13.03's held choice (his hand comes back to the upside-down flyer and leaves it)"),
+    "14": (-5, "the fixes pass: 14.11 (the safety team's plate, 5.2 s) cut from the Alyi run (the review's blocker)"),
+    "15": (+1, "the fixes pass: 15.10's 2023 rail held 2.2 s clear of the post's typing (+0.8), Alyi's MCU at the catch "
+               "(15.15 +1.0), the request's subject (15.19 +0.4); the rest from the scene's air"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_FX3.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
@@ -391,8 +409,13 @@ NEW_VO = {
     "e2-vo-06": ("act2", "9.04b", "everyone gets it free. that's what makes the phone deal stick.", "plan (distribution)",
                  "on his face in the wings after Rima's 'Enjoy the view.'; practical, a calendar thought, the ELPPA call "
                  "behind it; 'free' plain, no weight on 'stick'"),
-    "e2-vo-07": ("act3", "15.03", "a hundred and seventy-six days.", "count",
-                 "after Alyi's far-off count; flat, exact; the number is the feeling"),
+    # the fixes pass (2026-10-10; fixes-v1.md, Act Three): "a hundred and seventy-six days." counted Nov 20, 2023 (his
+    # regret post, three hearts) to May 14: the firing's clock, echoing the lobby's DAYS SINCE 176, and with it a
+    # newcomer reached for the November board fight as the reason he left (W8; facts §F). The count now runs on Alyi's
+    # own: Ep1's "Six years and eleven months." was the founding (Dec 11, 2015) to the launch; Mas carries it to May 14,
+    # 2024. Nothing about November, nothing about why (facts A25b)
+    "e2-vo-07": ("act3", "15.03", "eight years and five months.", "count",
+                 "after Alyi's far-off count, carrying it on to today; flat, exact; the number is the feeling"),
     "e2-vo-08": ("act3", "15.17", "i'll ask him in person.", "plan",
                  "his thumb on the pin; decided, plain; no weight on 'him'"),
     "e2-vo-09": ("act3", "17.11", "everyone who signed. the post. everyone who signed.", "the scramble (his rattled tell)",
@@ -617,6 +640,12 @@ _l("e2-a3-0002", "act3", "13.01", "staffer2", "In the corridor, last week. For a
 _l("e2-a3-0003", "act3", "13.02", "staffer", "He posted, though. Do we take these down now?",
    "turning to Mas, the peeled corner in her hand", "[INVENTED]")
 _l("e2-a3-0004", "act3", "13.02", "mas", "leave them up.", "plain; already reaching for the fallen one", "[INVENTED]")
+# the fixes pass (2026-10-10; fixes-v1.md, Act Three): the newcomer gate's own answer, said plainly once, by the people
+# under the flyers: his post gave no reason (true: facts A25), and nobody here supplies one (W8)
+_l("e2-a3-0025", "act3", "13.03b", "staffer2", "Did his post say why?",
+   "quietly, to the first staffer, both watching Mas tape his flyer back; a real question", "[INVENTED · about the May 14 post's text (facts A25: it gives no reason)]")
+_l("e2-a3-0026", "act3", "13.03b", "staffer", "No.", "quietly, not looking away from Mas; plain, no shrug in it",
+   "[INVENTED · true of the post (facts A25)]", len=0.5)
 _l("e2-a3-0005", "act3", "13.05", "reporter", "Senator, when does it get a vote?",
    "from the TV; a press-conference question", "[INVENTED · a generic question; no answer in a real senator's mouth (D-50)]", device="tv")
 # ---- sc 14
@@ -637,7 +666,7 @@ _l("e2-a3-0010", "act3", "15.06", "crowd", "FEEL THE AGI! FEEL THE AGI!",
 _l("e2-a3-0011", "act3", "15.07", "alyi", "You're not chanting.", "under the chant, to Mas; delighted to catch him", "[INVENTED · a company party; no reason, no vote]")
 _l("e2-a3-0012", "act3", "15.07", "mas", "someone has to hold the glass.", "dry, fond", "[INVENTED]")
 _l("e2-a3-0013", "act3", "15.07", "alyi", "Then I'll feel it for both of us.", "laughing", "[INVENTED]")
-_l("e2-a3-0014", "act3", "15.11", "ekiel", "Nobody knows how to do this yet.", "squinting at the screen; quiet, dry", "[INVENTED]")
+_l("e2-a3-0014", "act3", "15.11", "ekiel", "Nobody knows how to do this yet.", "eyes on the screen; quiet, dry", "[INVENTED]")
 _l("e2-a3-0015", "act3", "15.11", "alyi", "Someone should.",
    "without looking away from the screen; quiet; a want, not a reason", "[INVENTED · his own Ep1 line (lock 2:17.96); fallback: Ep1's take e1-a1-5-15, reused]")
 # ---- sc 17
@@ -1747,11 +1776,18 @@ nb("act3", "13.02", "OTS-WIDE · the first staffer turns to Mas, the peeled corn
    "The first staffer turns to Mas, the corner she was peeling still in her hand.", "Her question follows from her hands (script review).",
    lines=[line("e2-a3-0003", pace=QUICK), line("e2-a3-0004", 0.45, QMAS)], head=0.3, tail=0.3, music=M13,
    fix=("P", "R2", "PACE"), why="Mas decides: the flyers stay up.")
-nb("act3", "13.03", "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down",
+nb("act3", "13.03", "ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down; he sees it, and leaves it",
    "lobby", "SET-01", "lobby_day", ["mas"],
-   "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. Nobody corrects him. His upside-down flyer, a beat.",
-   "It's still a doorway.", dur=6.4, fixed=("dur",), music=M13, sounds=[S("paper_flutter", 0.4, -26), S("tape_pull", 2.4, -24, new=True)],
-   fix=("P", "R1", "R2"), why="Hope, his own hand (the flyer's arc: 13 → 19 → 20 → 22).")
+   "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. His upside-down flyer, a beat: his hand comes back to its corner to turn it, stops, and lowers. He leaves it as it is. Nobody corrects him.",
+   "It's still a doorway. The stopped hand makes it his choice, not a slip (the fixes pass: the episode review read it as a mistake).",
+   dur=7.4, fixed=("dur",), music=M13, sounds=[S("paper_flutter", 0.4, -26), S("tape_pull", 2.4, -24, new=True)],
+   fix=("P", "R1", "R2", "FX"), why="Hope, his own hand (the flyer's arc: 13 → 19 → 20 → 22); upside down on purpose, the way a flag is flown in distress.")
+nb("act3", "13.03b", "OTS-WIDE · over Mas's shoulder at his pillar onto the two STAFFERS at theirs, watching him: Staffer 2's question, the first staffer's answer",
+   "lobby", "SET-01", "lobby_day", ["staffer2", "staffer", "mas"],
+   "The two staffers at their pillar have watched him tape it back. STAFFER 2, quietly, to the first: did his post say why? The first staffer, not looking away from Mas: no.",
+   "Lip-sync both. Said low, to each other, never to Mas. The only answer the film gives (W8: no reason supplied; facts A25).",
+   lines=[line("e2-a3-0025"), line("e2-a3-0026", 0.3, QUICK)], head=0.5, tail=0.7, music=M13,
+   fix=("P", "FX", "GR"), why="The newcomer gate's question, asked by the people under the flyers and answered plainly: his post didn't say (the fixes pass, the episode review's blocker).")
 nb("act3", "13.04", "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
    "screen", "SET-01", "lobby_day", ["remuhcs"],
    "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
@@ -1832,11 +1868,12 @@ nb("act3", "14.08", "2S · Mas, screen-left; BUKAJ seated, screen-right, one han
    lines=[line("e2-a3-0006", pace=NORMAL), line("e2-a3-0024", 0.5, NORMAL), line("e2-a3-0007", 0.5, NORMAL)], head=0.5, tail=0.4,
    onscreen=[O("need anything?", "L:e2-a3-0024-0.1", "E:e2-a3-0024+0.6", "ui")], music=M14, style=UI14, fix=("P", "SR"),
    why="Room to work; the job, not Alyi. Mas trying hardest, aloud (P9).")
-nb("act3", "14.09", "WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card",
+nb("act3", "14.09", "WIDE · EKIEL walks out with a box past ordinary desks; the card",
    "bullpen", "SET-12", "open_floor", ["ekiel"],
-   "EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks. The card freezes on him.",
-   "No shiny-product pedestals (FC).", dur=3.4, fixed=("dur",), onscreen=[O("EKIEL / CO-LED THE SAFETY TEAM.", 0.6, 2.9, "card"), O("SQUINT: 100%", 1.0, 2.9, "stat")],
-   music=M14, sounds=[S("freeze_hit_F", 0.6, -18)], style="2-TONE FREEZE (the card, 1 bar)", fix=("P", "FC"), why="")
+   "EKIEL crosses the floor carrying a box, past ordinary desks. The card freezes on him.",
+   "No shiny-product pedestals (FC). The stat is a fact about him that the next shot shows (his post names three titles), never his face (the fixes pass: SQUINT: 100% had lost the pedestals that set it up, and on a real person it was an appearance gag, GR X10).",
+   dur=3.4, fixed=("dur",), onscreen=[O("EKIEL / CO-LED THE SAFETY TEAM.", 0.6, 2.9, "card"), O("TITLES: 3", 1.0, 2.9, "stat")],
+   music=M14, sounds=[S("freeze_hit_F", 0.6, -18)], style="2-TONE FREEZE (the card, 1 bar)", fix=("P", "FC", "FX"), why="")
 nb("act3", "14.10", "HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topples to Mas's shoe",
    "bullpen", "SET-12", "open_floor", ["ekiel", "mas"],
    "He sets his resignation thread down as one domino, in its own UI, MAY 17: its first post. He walks out. The domino topples across the floor and stops against the toe of Mas's shoe.",
@@ -1844,23 +1881,21 @@ nb("act3", "14.10", "HIGH · the floor: his resignation thread stands up as one 
    onscreen=[O("MAY 17", 0.6, None, "post"), O("Yesterday was my last day as head of alignment, superalignment lead, and executive @NOPEAI.", 0.7, 5.6, "post")],
    music="E02-08 · thins to its pedal under Ekiel's post", sounds=[S("domino_set", 0.5, -24, new=True), S("domino_topple_run", 4.6, -24, new=True)],
    style=UI14, fix=("P", "FACT", "R2", "FC", "SR"), why="The safety co-lead leaves, in his own words (facts A27: the thread's first post, May 17, 2024).")
-nb("act3", "14.11", "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws",
-   "bullpen", "SET-12", "open_floor", ["dot"],
-   "Down the corridor, beside Ekiel's empty desk, the safety team's own door. An orange-cuffed hand backs four screws out of its plate, one per beat, and drops it in a box marked MISC.",
-   "The team's own door, never Alyi's (R2).", dur=5.2, fixed=("dur",),
-   onscreen=[O("SUPERALIGNMENT", 0.3, None, "sign"), O("SAFETY TEAM", 0.3, None, "sign"), O("MISC", 4.0, None, "sign"), O("MAY 17", 4.0, None, "sign")],
-   music=M14, sounds=[S("screw_turn_1", 1.0, -24), S("screw_turn_2", 1.625, -24), S("screw_turn_3", 2.25, -24), S("screw_turn_4", 2.875, -24),
-                      S("nameplate_off", 3.4, -22), S("plate_drop_box", 3.9, -22, new=True)],
-   style=UI14, fix=("P", "FACT", "R2"), why="The team's plate comes off the team's door (facts A27).")
+# 14.11 (the safety team's plate: DOT's hand backs four screws out of SUPERALIGNMENT / SAFETY TEAM and drops it in a MISC
+# box, MAY 17; 5.2 s) is CUT at the fixes pass (2026-10-10; fixes-v1.md, Act Three): between Ekiel's exit and Alyi's door
+# it introduced his office and F2.2 with "safety team dismantled", and the newcomer read that as the reason he left (the
+# episode review's blocker; W8, facts §F). The disbanding is on the record (facts A27); its place, if any, is Act Four's
+# sc 18 split, as context for the committee (left to that act's owner). Its drawings stay in act3/sets/floor.ts.
 nb("act3", "14.12", "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
    "bullpen", "SET-12", "open_floor", ["mas"],
-   "Back at Alyi's door, Mas tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
-   "", dur=2.8, onscreen=[O("Pivot door", 0.2, 1.0, "ui")], music=M14,
+   "Mas at Alyi's door, the domino at his shoe. He tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
+   "Straight from Ekiel's domino (the fixes pass: the safety team's plate no longer comes between, the review's blocker).",
+   dur=2.8, onscreen=[O("Pivot door", 0.2, 1.0, "ui")], music=M14,
    sounds=[S("ui_verb_select", 0.2, -26, new=True), S("door_pivot_creak", 0.9, -22, new=True)], style=UI14,
    lcut=[{"sound": "the old chair's hum swells and rings over the cut", "over_s": 1.0}],
    transition={"to": "15", "cause": "the door he couldn't open turns on its pin, and evening has come", "sound": "the chair's hum rings over (L)",
                "object": "the pivoting door → the same door from inside the office"},
-   aftermath="the plate in the box; then his hand on Alyi's door as it pivots", fix=("P", "TR"), why="Seam 17.")
+   aftermath="the domino settled at his shoe; then his hand on Alyi's door as it pivots", fix=("P", "TR", "FX"), why="Seam 17.")
 
 # ------------------------------------------------------------------------------------- sc 15 · 1:40 (F2.2 inside)
 M15 = "E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
@@ -1879,16 +1914,17 @@ nb("act3", "15.01", "WIDE · the empty office: a desk with no chair; Mas sits on
    "An empty office in the evening: a desk with no chair. Carried over the cut, the chair's hum sounds in the empty space where it stood, and stops. Mas sits on the edge of the desk.",
    "", dur=2.6, fixed=("dur",), music=M15, arrive={"s": 2.0, "what": "the empty office as the carried hum stops"},
    fix=("P", "FC"), why="The office is evening, not night (FC).")
-nb("act3", "15.02", "ECU · his phone: the thread, collapsed to dates and first lines",
+nb("act3", "15.02", "ECU · his phone: Alyi's post from three days ago, collapsed to its date and first words, his own reply under it",
    "screen", "SET-13", "office_evening", [],
-   "On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both dates in frame.",
-   "Dates and hearts, not must-read text (R2).", dur=2.8, onscreen=[O("NOV 20, 2023", 0.3, None, "post"), O("♥ ♥ ♥", 0.6, None, "post"), O("MAY 14, 2024", 1.0, None, "post")],
-   music=M15, sounds=[S("thumb_scroll", 0.2, -28, new=True)], fix=("P", "R1", "R2", "FACT"), why="The 176 days, on his phone (facts A25; Ep1).")
+   "On his phone, Alyi's post from three days ago, collapsed to its date and its first words, After almost a decade…; under it, Mas's own reply, collapsed to a grey bar. His thumb scrolls it a step.",
+   "Its date and its first words, nothing older (the fixes pass: the Nov 20, 2023 regret post with his three hearts made the count the firing's clock; W8, facts §F).",
+   dur=2.8, onscreen=[O("MAY 14, 2024", 0.3, None, "post"), O("After almost a decade…", 0.3, None, "post")],
+   music=M15, sounds=[S("thumb_scroll", 0.2, -28, new=True)], fix=("P", "R1", "R2", "FACT", "FX"), why="What he counts from: his own words, \"almost a decade\" (facts A25).")
 nb("act3", "15.03", "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "office", "SET-13", "office_evening", ["mas"],
-   "For one second, far off, Alyi's voice from launch night. Now Mas counts.",
+   "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
    "A face light one step.", lines=[line("e2-a3-0008"), line("e2-vo-07", 1.2, WEIGHTED)], head=0.4, tail=0.7,
-   music=M15, pace="weighted", fix=("P", "VO", "R2"), why="V.O. 7: now he's the one counting (W14).")
+   music=M15, pace="weighted", fix=("P", "VO", "R2", "FX"), why="V.O. 7: now he's the one counting, on Alyi's own clock (W14; Ep1's \"you counted.\"); Dec 11, 2015 → May 14, 2024 is 8 years and 5 months (facts A25b).")
 nb("act3", "15.04", "ECU · TPOOL: its splash; welcome back, mas; the Orb scans the hourglass",
    "screen", "SET-13", "office_evening", ["orb"],
    "He scrolls past every modern icon to a tiny old one: TPOOL, his first company's app, LAST UPDATED 2012. Its splash still plays: WHERE U AT? It still knows him: welcome back, mas. A 2008 hourglass spins. The Orb scans it and settles: verified: 2008.",
@@ -1933,11 +1969,11 @@ nb("act3", "15.09", "WIDE · the racks in the corner hum along; at the chant's p
    fix=("P", "GR"), why="")
 nb("act3", "15.10", "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
    "office", "SET-13", "office_2023", ["alyi", "ekiel"],
-   "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
-   "The post's words are the record's; its numbers don't print (R2).", dur=8.9, fixed=("dur",),
-   onscreen=[O("RAIL: 2023", 0.2, 1.4, "rail"), O("INTRODUCING SUPERALIGNMENT · ALYI, EKIEL", 1.4, None, "post"),
-             O("Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.", 1.6, 8.8, "post")],
-   music=M15o, style="T4 glossy memory", flashback=F22, mode="FLASHBACK · obstacle", fix=("P", "FACT", "R2"),
+   "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI: the rail first, over the room and the empty draft, then the title and the byline fill in, then its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, reading it.",
+   "The post's words are the record's; its numbers don't print (R2). The rail holds 2.2 s on its own before the post fills in (the fixes pass: it was up 1.3 s and the post's typing came under it; P15).", dur=9.7, fixed=("dur",),
+   onscreen=[O("RAIL: 2023", 0.2, 2.4, "rail"), O("INTRODUCING SUPERALIGNMENT · ALYI, EKIEL", 2.4, None, "post"),
+             O("Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.", 2.6, 9.6, "post")],
+   music=M15o, style="T4 glossy memory", flashback=F22, mode="FLASHBACK · obstacle", fix=("P", "FACT", "R2", "FX"),
    why="F2.2's obstacle: nobody has a way yet (facts A63).")
 nb("act3", "15.11", "2S · the same: Ekiel; Alyi, without looking away from the screen",
    "office", "SET-13", "office_2023", ["ekiel", "alyi"],
@@ -1959,11 +1995,12 @@ nb("act3", "15.14", "ECU · he presses Publish",
    "office", "SET-13", "office_2023", ["alyi"],
    "He presses it.", "", dur=1.4, music=M15t, sounds=[S("post_click", 0.3, -20)], style="T4 glossy memory", flashback=F22,
    mode="FLASHBACK · turn", fix=("P", "FC"), why="The post went out under both their names.")
-nb("act3", "15.15", "WIDE · the effigy catches",
+nb("act3", "15.15", "WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire",
    "void", "SET-15", "fire_night", ["alyi"],
-   "The effigy catches.", "Palette-cycled fire, never strobing (P15).",
-   dur=3.6, music=M15t, sounds=[S("flame_whoomph", 0.2, -18), S("fire_crackle", 0.6, -24, new=True, dur=3.0)], style="T4 glossy memory",
-   flashback=F22, mode="FLASHBACK · turn", fix=("P", "GR"), why="The crosscut sets the post and the fire side by side without claiming which came first.")
+   "The effigy catches. Closer: Alyi in the doorway, his face lit warm by the fire he has just lit, calm, watching it take. The fire, wide.",
+   "Palette-cycled fire, never strobing (P15). The turn rides on his face, not the props (the fixes pass): warm, never cold, no zealot framing, no iconography (GR §6).",
+   dur=4.6, fixed=("dur",), music=M15t, sounds=[S("flame_whoomph", 0.2, -18), S("fire_crackle", 0.6, -24, new=True, dur=4.0)], style="T4 glossy memory",
+   flashback=F22, mode="FLASHBACK · turn", fix=("P", "GR", "FX"), why="The crosscut sets the post and the fire side by side without claiming which came first.")
 nb("act3", "15.16", "WIDE → ECU · the fire's glow shrinks to one point of light",
    "void", "SET-15", "fire_night", [],
    "The fire's glow shrinks to one point of light.", "", dur=3.4, music=M15t, style="T4 glossy memory", flashback=F22,
@@ -1981,13 +2018,14 @@ nb("act3", "15.18", "WIDE · he pockets the phone, gets up off the desk's edge a
    "", dur=3.4, music=M15x, sounds=[S("door_close_soft", 2.2, -24, new=True)], fix=("P", "FC"), why="The scene ends on him leaving (FC).")
 nb("act3", "15.19", "WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for comment",
    "office", "SET-13", "stairwell", ["mas"],
-   "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
-   "No outlet named, no headline words.", dur=5.0, fixed=("dur",), onscreen=[O("request for comment", 1.6, 3.6, "ui")],
+   "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, re: exit agreements, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
+   "No outlet named, no headline words. Its subject line is the cause the receipt at the doors needs (the fixes pass: the papers arrived with no visible because; W13); nothing about what he knew.",
+   dur=5.4, fixed=("dur",), onscreen=[O("request for comment", 1.4, 4.2, "ui"), O("re: exit agreements", 1.4, 4.2, "ui")],
    music=M15x, sounds=[S("footstep_soft_1", 0.2, -28), S("phone_buzz_step_1", 1.2, -22), S("footstep_soft_2", 3.8, -28)],
    jcut=[{"sound": "the receipt's thermal chatter at NopeAI's doors", "lead_s": 1.0}],
    transition={"to": "17", "cause": "the exit papers are public: the press is asking", "sound": "his phone's buzz; then the receipt's chatter at NopeAI's doors (J 1.0 s)",
                "object": "the push's receipt-strip thumbnail → the receipt pouring out of NopeAI's front doors"},
-   aftermath="the empty room 1 s after the door shuts; then the stairs and the buzz", fix=("P", "FC", "TR", "FACT"),
+   aftermath="the empty room 1 s after the door shuts; then the stairs and the buzz", fix=("P", "FC", "TR", "FACT", "FX"),
    why="Seam 19: the papers never start near Alyi (FC; facts A31).")
 
 # ------------------------------------------------------------------------------------- sc 17 · 2:11 (the S3)
@@ -2087,7 +2125,8 @@ nb("act3", "17.15", "WIDE · the next afternoon: Mas posts; the post pops up ove
    onscreen=[O("RAIL: MAY 18", 0.2, 1.4, "rail"), O("vested equity is vested equity, full stop.", 1.6, 4.1, "post"), O("this is on me…", 4.1, 5.2, "post"),
              O("…i did not know this was happening and i should have.", 5.2, 8.2, "post"), O("…they can contact me and we'll fix that too.", 8.2, 10.8, "post")],
    music=M17p, sounds=[S("post_click", 1.5, -24), S("car_honk_2", 4.1, -22, new=True), S("car_honk_3", 5.2, -22, new=True),
-                       S("car_honk_4", 8.2, -22, new=True), S("car_honk_5", 10.75, -22, new=True), S("pen_scribble_short", "E:e2-a3-0021-0.3", -26)],
+                       S("car_honk_4", 8.2, -22, new=True), S("car_honk_5", 10.45, -22, new=True, note="10.75 s until the fixes pass: it landed on \"Updating.\" (10.9 s) and, heard "
+     "against everything, was -8.7 dB in its band; 0.3 s earlier it clears the line and still shakes the last trim"), S("pen_scribble_short", "E:e2-a3-0021-0.3", -26)],
    fix=("P", "FACT", "R1", "R2"), why="The apology, the next afternoon (facts A31: four trims, four honks).")
 nb("act3", "17.16", "MEDIUM · the honking driver leans out; then the car behind him honks; the Forecaster walks off",
    "skyline", "SET-16", "bridge", ["driver", "forecaster", "mas"],
@@ -2446,15 +2485,14 @@ nb("act4", "20.09", "WIDE · a rope drops from above and hooks it; a staffer lif
    fix=("P", "R2", "KEEP"), why="He dropped the suit the day before it was to be heard, for now.")
 nb("act4", "20.10", "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it over: Alyi's post and its link card",
    "screen", "SET-07", "darkroom", ["mas"],
-   "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS, with its one line about what it's for.",
-   "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place.", dur=7.0, fixed=("dur",),
-   onscreen=[O("RAIL: JUN 19, 2024", 0.2, 1.8, "rail"), O("I am starting a new company:", 2.6, 6.9, "post"), O("ISS", 3.0, 6.9, "post"),
-             O("one goal and one product: a safe superintelligence", 3.0, 6.9, "post")],
+   "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS: a name and a plate, no line about what it's for.",
+   "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place. The card is cropped to its plate (the fixes pass, Act Three's blocker: \"one goal and one product: a safe superintelligence\" on screen read as a rebuke of Act Two's product, the last link of a reason the film must not supply; W8, facts §F).", dur=7.0, fixed=("dur",),
+   onscreen=[O("RAIL: JUN 19, 2024", 0.2, 1.8, "rail"), O("I am starting a new company:", 2.6, 6.9, "post"), O("ISS", 3.0, 6.9, "post")],
    music="room tone only (the quartet has ended)", sounds=[S("phone_buzz_step_1", 1.9, -26), S("phone_turn_over", 2.3, -24, new=True)],
    jcut=[{"sound": "the dark room's drone", "lead_s": 1.0}], arrive={"s": 2.0, "what": "the face-down phone"},
    transition={"from": "20.09", "cause": "a week later", "sound": "the dark room's drone (J 1.0 s)",
                "object": "the clean rectangle on the carpet → his phone face down on the desk, same shape, same place"},
-   fix=("P", "FACT", "R2", "FC", "TR"), why="Seam 27. Alyi says where he is, in his own words (facts A68).")
+   fix=("P", "FACT", "R2", "FC", "TR", "FX"), why="Seam 27. Alyi says where he is, in his own words (facts A68).")
 nb("act4", "20.11", "ECU · behind the post TPOOL is still open on its map; the link card lands on the old check-in pin and knocks it loose",
    "screen", "SET-07", "darkroom", [],
    "Behind the post, TPOOL is still open on its map. The link card lands on the old check-in pin and knocks it loose.",

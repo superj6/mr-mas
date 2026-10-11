@@ -49,7 +49,11 @@
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep02/v1/mix/act4-mix.wav",
+   "offset_frames": 0,
+   "frames": 7656.0
+  },
   "refs": {}
  },
  "checks": [
@@ -92,6 +96,11 @@
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 7656.00 f vs 0 + 7656"
   }
  ],
  "sequences": [
@@ -8737,11 +8746,6 @@
      "text": "ISS",
      "s": 72,
      "e": 165
-    },
-    {
-     "text": "one goal and one product: a safe superintelligence",
-     "s": 72,
-     "e": 165
     }
    ],
    "lines": [],
@@ -8757,7 +8761,7 @@
    "frame": "ECU · Jun 19, his dark room: his phone face down on the desk, lights; his hand turns it over: Alyi's post and its link card",
    "cls": "ECU",
    "move": "cut",
-   "does": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS, with its one line about what it's for.",
+   "does": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS: a name and a plate, no line about what it's for.",
    "chars": [
     "mas"
    ],
@@ -8787,7 +8791,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS, with its one line about what it's for.",
+   "caption": "A week later. His dark room. His phone, face down on the desk, lights. His hand turns it over: Alyi's post, in its own UI, and its link card, ISS: a name and a plate, no line about what it's for.",
    "cast": [
     {
      "id": "mas",
@@ -8802,7 +8806,7 @@
    "beat_starts": {
     "20.10": 0
    },
-   "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place.",
+   "picture": "The clean rectangle on the carpet → his phone face down on the desk, same shape, same place. The card is cropped to its plate (the fixes pass, Act Three's blocker: \"one goal and one product: a safe superintelligence\" on screen read as a rebuke of Act Two's product, the last link of a reason the film must not supply; W8, facts §F).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8818,13 +8822,6 @@
     {
      "kind": "post",
      "text": "ISS",
-     "s": 72,
-     "e": 165,
-     "must": true
-    },
-    {
-     "kind": "post",
-     "text": "one goal and one product: a safe superintelligence",
      "s": 72,
      "e": 165,
      "must": true
@@ -9635,7 +9632,7 @@
    "beat_starts": {
     "22.08": 0
    },
-   "picture": "The raised hand held 2 beats. The cue returns as it lowers.",
+   "picture": "The raised hand held 2 beats. The cue returns as it lowers. Timing (the score's return sits on it, audio/ost/tracks/e02-v1-act4/cues-el.json picture_sync): the hand is up by the shot's first beat (0.625 s), held two beats, and lowers at 2.0 s into the shot (frame 48).",
    "names": [],
    "fg": null,
    "marks": {},

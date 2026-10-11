@@ -171,6 +171,10 @@ Minor
 45. 18.15 / 19.01: the toast on its lines without separators (ELPPA / KEYNOTE / JUN 10); the tusk a curved ivory tusk, lit along its top, pointed, rising behind the back row.
 46. 22.02-22.03: the Orb's scan a fan sweeping down the door's face in held steps, then the aperture closing and an empty dim toast; every contact shadow a soft solid ellipse (no tick pattern).
 
+### Act Three's fixes pass (2026-10-10): the ISS card
+
+**Not Act Four's own pass**: Act Three's fixer, on the episode review's blocker (its feeder at 21:58-22:06: "one goal and one product: a safe superintelligence" on screen read as a rebuke of Act Two's product and closed a reason for Alyi's leaving that the film must not supply; W8, facts §F). The link card is **cropped to its plate** in 20.10 (`sets/dark.ts issCardPlate`, a copy of the art's `issLinkCard` without its line: the cream `ISS` block and two grey address bars) and 20.11 (`mapECU`: the card's body two grey bars). The lock's 20.10 texts are `I am starting a new company:` and `ISS` (the lock rebuilt, text only, no timing; the plan's 22.08 picture note put back). Sc 19, 20 and 22 re-rendered (keys `sc-19-5053ec3e11d2f375`, `sc-20-6b4ca5fd386dbcea`, `sc-22-b6111897e6df6d8f`; sc 19 and 22 re-keyed by Act Two's `@masa` posts-kit change and the lock's 22.08 note, so 19's Jun 10 popup now shows `@masa`). Act Four's owner keeps everything else; [fixes-v1.md](fixes-v1.md), Act Three, says what is left to them (the plate in sc 18's split, if wanted; Ekiel's squint in sc 18).
+
 ## 4. Where this departs from the plan, and why
 
 - **22.01's tilt is 28 held plates on 2s**, not a continuous camera move: every frame of sc 22 is a still plate plus pixels (the leap's grammar since the art pass), and the held steps keep it in the show's held-drawing timing.

@@ -1,5 +1,5 @@
 // MR. MAS — Ep2 v1 · act3 · scene 14: THE OPEN FLOOR (MAY 15-17, 2024; UI LIT, the episode's one adventure-game scene
-// and its one dialogue tree). 12 shots, 1,416 f on the v1 EL lock. The shots pass, 2026-10-09; the record is
+// and its one dialogue tree). 12 shots, 1,416 f on the v1 EL lock (11 shots, 1,296 f since the fixes pass, 2026-10-10). The shots pass, 2026-10-09; the record is
 // shots-act3.md. The staging is proposal.md sc 14 (its final check: no image of Alyi in any surface; the note never
 // defined; Ekiel walks out past ordinary desks) / script-v1. Every frame is `full`: the band is the game's (act3/sets/
 // band: the verbs, Open greyed, the inventory that is his pocket), lit through the whole scene (lock-v1 §3.3).
@@ -11,9 +11,9 @@
 //            frame and it flutters into his pocket (the inventory), at the spread's scale, never held for reading
 //   THE WORLD MOVES ON  14.07 Bukaj sits in the humming chair (plated); "congratulations." typed as he says it · 14.08
 //            the two-shot · 14.09 Ekiel walks out with his box (the card) · 14.10 his thread's first post as one domino;
-//            it tips and lands at Mas's shoe · 14.11 down the corridor, the safety team's own door: four screws, the
-//            plate into the MISC box
-//   OUT      14.12 back at Alyi's door: Pivot door; it turns on its centre pin; the chair's hum swells (into 15.01)
+//            it tips and lands at Mas's shoe (14.11, the safety team's plate, is cut: the fixes pass)
+//   OUT      14.12 at Alyi's door, the domino at his shoe: Pivot door; it turns on its centre pin; the chair's hum
+//            swells (into 15.01)
 import {defineScene, layouts, mouth, mk, drawPlate} from '../../kit';
 import type {PxShot} from '../../kit';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
@@ -21,7 +21,7 @@ import {freeze2, FREEZE_DARK, drawGagCard} from '../../../../ep01/pixel/act2/kit
 import type {GagCard} from '../../../../ep01/pixel/act2/kit2';
 import {Buf} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
-import {spread, sayAt, finsMCU, chair2S, dominoHigh, corridor, plateECU, boxECU, SP} from '../sets/floor';
+import {spread, sayAt, finsMCU, chair2S, dominoHigh, SP} from '../sets/floor';
 import type {SpreadSt} from '../sets/floor';
 import {adventureBand} from '../sets/band';
 import type {BandSt} from '../sets/band';
@@ -149,10 +149,12 @@ L.add('14.08', {
     return {full: true};
   },
 });
-const CARD_EKIEL: GagCard = {x: 14, y: 12, name: 'EKIEL', lines: ['CO-LED THE SAFETY TEAM.'], stat: ['SQUINT: 100%'], accent: PAL.C7};
+// the fixes pass (2026-10-10): the stat was SQUINT: 100% (its setup, the pedestals, was cut, so on a real person it was
+// an appearance gag, GR X10); now a fact about him the next shot shows: his first post names three titles
+const CARD_EKIEL: GagCard = {x: 14, y: 12, name: 'EKIEL', lines: ['CO-LED THE SAFETY TEAM.'], stat: ['TITLES: 3'], accent: PAL.C7};
 const KEEP = new Map<number, Uint8Array>();
 L.add('14.09', {
-  st: 'act3/sets/floor spread ([W] EKIEL (art/cast/ekiel room: sandy hair, navy zip-up, his squint) crosses the back aisle from the right carrying a box, past ordinary desks (no pedestals); on the hit the 2-TONE FREEZE (Ep1 act2/kit2 freeze2, the dark curve) with Ekiel kept in colour and the card EKIEL / CO-LED THE SAFETY TEAM. + SQUINT: 100% (one bar), then he walks on; Mas and Bukaj at the chair)',
+  st: 'act3/sets/floor spread ([W] EKIEL (art/cast/ekiel room: sandy hair, navy zip-up; no squint since the fixes pass) crosses the back aisle from the right carrying a box, past ordinary desks (no pedestals); on the hit the 2-TONE FREEZE (Ep1 act2/kit2 freeze2, the dark curve) with Ekiel kept in colour and the card EKIEL / CO-LED THE SAFETY TEAM. + TITLES: 3 (one bar), then he walks on; Mas and Bukaj at the chair)',
   marks: {hit: ['snd', 'freeze_hit_F', 1, 0]},
   draw: (fb, k, sh, f) => {
     const hit = mk(sh, 'hit', 14), end = hit + 60;
@@ -190,20 +192,12 @@ L.add('14.10', {
     return {full: true};
   },
 });
-L.add('14.11', {
-  st: 'act3/sets/floor corridor → plateECU → boxECU ([W] down the corridor: Ekiel\'s empty desk (the MISC box on it) and at the end the safety team\'s own door, never Alyi\'s, its plate SUPERALIGNMENT / SAFETY TEAM legible; DOT at it from behind; [ECU] her orange-cuffed fist closed round a red screwdriver\'s handle backs out the four screws, one per beat, the wrist turning in held steps (art/cast/dot dotHandsECU\'s door and plate, restaged), the plate comes off; [ECU] the plate dropped face up into the MISC box, MAY 17, its screws beside it)',
-  marks: {s1: ['snd', 'screw_turn_1', 1, 0], s2: ['snd', 'screw_turn_2', 1, 0], s3: ['snd', 'screw_turn_3', 1, 0], s4: ['snd', 'screw_turn_4', 1, 0], off: ['snd', 'nameplate_off', 1, 0], drop: ['snd', 'plate_drop_box', 1, 0]},
-  draw: (fb, k, sh, f) => {
-    const s = [mk(sh, 's1', 24), mk(sh, 's2', 39), mk(sh, 's3', 54), mk(sh, 's4', 69)], off = mk(sh, 'off', 81), drop = mk(sh, 'drop', 93);
-    if (k < 20) corridor(fb, f, {});
-    else if (k < drop - 3) plateECU(fb, k, k >= off ? 5 : s.filter((v) => k >= v + 2).length);
-    else boxECU(fb, f, {drop: k < drop ? 0 : k < drop + 3 ? 1 : 2});
-    adventureBand(fb, {note: true});
-    return {full: true};
-  },
-});
+// 14.11 (the safety team's plate: DOT's hand backing four screws out of SUPERALIGNMENT / SAFETY TEAM, the plate into
+// the MISC box) is cut at the fixes pass (2026-10-10; fixes-v1.md, Act Three: the episode review's blocker; it put
+// "safety team dismantled" between Ekiel's exit and Alyi's door). Its drawings stay in act3/sets/floor.ts (corridor,
+// plateECU, boxECU) for Act Four's owner, if the plate plays in sc 18's split.
 L.add('14.12', {
-  st: 'act3/sets/floor spread ([W] back at Alyi\'s door, the domino lying at his shoe: Pivot door (the sentence line); his hand to the door; it turns on its centre pin in held steps (edge-on, the empty office\'s evening light through the opening); the old chair\'s hum swells (its lines brighter, wider))',
+  st: 'act3/sets/floor spread ([W] at Alyi\'s door, the domino lying at his shoe: Pivot door (the sentence line); his hand to the door; it turns on its centre pin in held steps (edge-on, the empty office\'s evening light through the opening); the old chair\'s hum swells (its lines brighter, wider))',
   marks: {v: ['snd', 'ui_verb_select', 1, 0], piv: ['snd', 'door_pivot_creak', 1, 0]},
   draw: (fb, k, sh, f) => {
     const piv = mk(sh, 'piv', 35);

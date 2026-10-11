@@ -37,26 +37,30 @@
    "-": 58
   },
   "mean_s": 5.517,
-  "median_s": 4.896,
-  "min_s": 1.917,
+  "median_s": 4.854,
+  "min_s": 1.875,
   "max_s": 14.625,
-  "lines": 28,
+  "lines": 30,
   "posts": 0,
   "vo": 4,
-  "lines_with_mouth": 24,
+  "lines_with_mouth": 26,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep02/v1/mix/act3-mix.wav",
+   "offset_frames": 0,
+   "frames": 7680.0
+  },
   "refs": {}
  },
  "checks": [
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "4 scenes: 13(744f) 14(1416f) 15(2400f) 17(3120f)"
+   "detail": "4 scenes: 13(840f) 14(1296f) 15(2424f) 17(3120f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -71,12 +75,12 @@
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 0; 1 f earlier (the onset falls inside the frame): 28; other: 0"
+   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 29; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "28 of 28 placed; no take: []"
+   "detail": "30 of 30 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -86,12 +90,17 @@
   {
    "check": "mouth tracks carried over",
    "ok": true,
-   "detail": "24 lines with a mouth track; lost: []"
+   "detail": "26 lines with a mouth track; lost: []"
   },
   {
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 7680.00 f vs 0 + 7680"
   }
  ],
  "sequences": [
@@ -106,6 +115,7 @@
     "13.01",
     "13.02",
     "13.03",
+    "13.03b",
     "13.04",
     "13.05",
     "13.06",
@@ -119,7 +129,6 @@
     "14.08",
     "14.09",
     "14.10",
-    "14.11",
     "14.12",
     "15.01",
     "15.02",
@@ -174,22 +183,23 @@
   {
    "id": "13",
    "s": 0,
-   "e": 744,
+   "e": 840,
    "shots": [
     "13.01",
     "13.02",
     "13.03",
+    "13.03b",
     "13.04",
     "13.05",
     "13.06"
    ],
    "tc_in": "12:10:00",
-   "tc_out": "12:41:00"
+   "tc_out": "12:45:00"
   },
   {
    "id": "14",
-   "s": 744,
-   "e": 2160,
+   "s": 840,
+   "e": 2136,
    "shots": [
     "14.01",
     "14.02",
@@ -201,15 +211,14 @@
     "14.08",
     "14.09",
     "14.10",
-    "14.11",
     "14.12"
    ],
-   "tc_in": "12:41:00",
-   "tc_out": "13:40:00"
+   "tc_in": "12:45:00",
+   "tc_out": "13:39:00"
   },
   {
    "id": "15",
-   "s": 2160,
+   "s": 2136,
    "e": 4560,
    "shots": [
     "15.01",
@@ -232,7 +241,7 @@
     "15.18",
     "15.19"
    ],
-   "tc_in": "13:40:00",
+   "tc_in": "13:39:00",
    "tc_out": "15:20:00"
   },
   {
@@ -689,7 +698,7 @@
     "13.02"
    ],
    "s": 205,
-   "e": 310,
+   "e": 309,
    "onscreen": [],
    "lines": [
     {
@@ -954,8 +963,8 @@
    "mark_src": {},
    "texts": [],
    "tc_in": "12:18:13",
-   "tc_out": "12:22:22",
-   "frames": 105
+   "tc_out": "12:22:21",
+   "frames": 104
   },
   {
    "id": "13.03",
@@ -963,8 +972,8 @@
    "beats": [
     "13.03"
    ],
-   "s": 310,
-   "e": 463,
+   "s": 309,
+   "e": 486,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -976,10 +985,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "ECU → MCU · a fallen flyer; Mas picks it up and tapes it back himself, upside down",
+   "frame": "ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down; he sees it, and leaves it",
    "cls": "ECU",
    "move": "cut",
-   "does": "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. Nobody corrects him. His upside-down flyer, a beat.",
+   "does": "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. His upside-down flyer, a beat: his hand comes back to its corner to turn it, stops, and lowers. He leaves it as it is. Nobody corrects him.",
    "chars": [
     "mas"
    ],
@@ -1009,7 +1018,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. Nobody corrects him. His upside-down flyer, a beat.",
+   "caption": "One flyer has fallen to the floor. Mas picks it up and tapes it back himself, upside down. His upside-down flyer, a beat: his hand comes back to its corner to turn it, stops, and lowers. He leaves it as it is. Nobody corrects him.",
    "cast": [
     {
      "id": "mas",
@@ -1024,15 +1033,221 @@
    "beat_starts": {
     "13.03": 0
    },
-   "picture": "It's still a doorway.",
+   "picture": "It's still a doorway. The stopped hand makes it his choice, not a slip (the fixes pass: the episode review read it as a mistake).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:22:22",
-   "tc_out": "12:29:07",
-   "frames": 153
+   "tc_in": "12:22:21",
+   "tc_out": "12:30:06",
+   "frames": 177
+  },
+  {
+   "id": "13.03b",
+   "setup": "13.03b",
+   "beats": [
+    "13.03b"
+   ],
+   "s": 486,
+   "e": 571,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e2-a3-0025",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "STAFFER2",
+     "text": "Did his post say why?",
+     "s": 14,
+     "e": 48,
+     "fs": 3,
+     "fe": 62,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       3,
+       "E"
+      ],
+      [
+       9,
+       "M"
+      ],
+      [
+       11,
+       "O"
+      ],
+      [
+       14,
+       "E"
+      ],
+      [
+       18,
+       "A"
+      ],
+      [
+       22,
+       "O"
+      ],
+      [
+       25,
+       "A"
+      ],
+      [
+       30,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Did",
+       -1,
+       4
+      ],
+      [
+       "his",
+       5,
+       8
+      ],
+      [
+       "post",
+       9,
+       17
+      ],
+      [
+       "say",
+       18,
+       21
+      ],
+      [
+       "why",
+       23,
+       31
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e2-a3-0026",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "STAFFER",
+     "text": "No.",
+     "s": 55,
+     "e": 65,
+     "fs": 46,
+     "fe": 75,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       2,
+       "O"
+      ],
+      [
+       7,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "No",
+       0,
+       7
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "ACT3",
+   "scene": "13",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "OTS-WIDE · over Mas's shoulder at his pillar onto the two STAFFERS at theirs, watching him: Staffer 2's question, the first staffer's answer",
+   "cls": "OTS",
+   "move": "hold",
+   "does": "The two staffers at their pillar have watched him tape it back. STAFFER 2, quietly, to the first: did his post say why? The first staffer, not looking away from Mas: no.",
+   "chars": [
+    "mas",
+    "staffer",
+    "staffer2"
+   ],
+   "cues": [
+    "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "lobby",
+   "room": "lobby_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The two staffers at their pillar have watched him tape it back. STAFFER 2, quietly, to the first: did his post say why? The first staffer, not looking away from Mas: no.",
+   "cast": [
+    {
+     "id": "staffer2",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "staffer",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "13.03b": 0
+   },
+   "picture": "Lip-sync both. Said low, to each other, never to Mas. The only answer the film gives (W8: no reason supplied; facts A25).",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "12:30:06",
+   "tc_out": "12:33:19",
+   "frames": 85
   },
   {
    "id": "13.04",
@@ -1040,8 +1255,8 @@
    "beats": [
     "13.04"
    ],
-   "s": 463,
-   "e": 569,
+   "s": 571,
+   "e": 676,
    "onscreen": [
     {
      "text": "REMUHCS · MAJORITY LEADER",
@@ -1180,9 +1395,9 @@
      "must": true
     }
    ],
-   "tc_in": "12:29:07",
-   "tc_out": "12:33:17",
-   "frames": 106
+   "tc_in": "12:33:19",
+   "tc_out": "12:38:04",
+   "frames": 105
   },
   {
    "id": "13.05",
@@ -1190,8 +1405,8 @@
    "beats": [
     "13.05"
    ],
-   "s": 569,
-   "e": 666,
+   "s": 676,
+   "e": 772,
    "onscreen": [],
    "lines": [
     {
@@ -1200,10 +1415,10 @@
      "mode": "tv",
      "who": "REPORTER",
      "text": "Senator, when does it get a vote?",
-     "s": 9,
-     "e": 59,
-     "fs": 1,
-     "fe": 74,
+     "s": 8,
+     "e": 57,
+     "fs": 0,
+     "fe": 73,
      "os": false,
      "via": "tv",
      "face": null,
@@ -1276,7 +1491,7 @@
       ],
       [
        "when",
-       16,
+       15,
        22
       ],
       [
@@ -1302,7 +1517,7 @@
       [
        "vote",
        39,
-       49
+       48
       ]
      ],
      "tag": "tv",
@@ -1329,12 +1544,12 @@
     "music (v1): E02-08 WHERE'S ALYI? · THE CLOCK, first step (a pizzicato and woodblock tick on varied pitches under the knee's rising F G A♭ C), pre-lapped under the black; the presser a tiny ducked bed"
    ],
    "sounds": [
-    "sticker_slap_tv @72"
+    "sticker_slap_tv @71"
    ],
    "spots": [
     {
      "name": "sticker_slap_tv",
-     "k": 72,
+     "k": 71,
      "dur": null
     }
    ],
@@ -1366,9 +1581,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:33:17",
-   "tc_out": "12:37:18",
-   "frames": 97
+   "tc_in": "12:38:04",
+   "tc_out": "12:42:04",
+   "frames": 96
   },
   {
    "id": "13.06",
@@ -1376,8 +1591,8 @@
    "beats": [
     "13.06"
    ],
-   "s": 666,
-   "e": 744,
+   "s": 772,
+   "e": 840,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -1400,12 +1615,12 @@
     "music (v1): E02-08 · THE CLOCK's first step carries"
    ],
    "sounds": [
-    "ui_band_on @52"
+    "ui_band_on @45"
    ],
    "spots": [
     {
      "name": "ui_band_on",
-     "k": 52,
+     "k": 45,
      "dur": null
     }
    ],
@@ -1437,9 +1652,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:37:18",
-   "tc_out": "12:41:00",
-   "frames": 78
+   "tc_in": "12:42:04",
+   "tc_out": "12:45:00",
+   "frames": 68
   },
   {
    "id": "14.01",
@@ -1447,8 +1662,8 @@
    "beats": [
     "14.01"
    ],
-   "s": 744,
-   "e": 811,
+   "s": 840,
+   "e": 907,
    "onscreen": [
     {
      "text": "Look at · Talk to · Pick up · Use · Open · Pivot · Raise",
@@ -1464,7 +1679,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -1544,8 +1759,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:41:00",
-   "tc_out": "12:43:19",
+   "tc_in": "12:45:00",
+   "tc_out": "12:47:19",
    "frames": 67
   },
   {
@@ -1554,8 +1769,8 @@
    "beats": [
     "14.02"
    ],
-   "s": 811,
-   "e": 931,
+   "s": 907,
+   "e": 1027,
    "onscreen": [
     {
      "text": "Look at heatsink",
@@ -1581,7 +1796,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -1671,8 +1886,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:43:19",
-   "tc_out": "12:48:19",
+   "tc_in": "12:47:19",
+   "tc_out": "12:52:19",
    "frames": 120
   },
   {
@@ -1681,8 +1896,8 @@
    "beats": [
     "14.03"
    ],
-   "s": 931,
-   "e": 1051,
+   "s": 1027,
+   "e": 1147,
    "onscreen": [
     {
      "text": "Talk to reflection",
@@ -1708,7 +1923,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -1798,8 +2013,8 @@
      "must": true
     }
    ],
-   "tc_in": "12:48:19",
-   "tc_out": "12:53:19",
+   "tc_in": "12:52:19",
+   "tc_out": "12:57:19",
    "frames": 120
   },
   {
@@ -1808,13 +2023,13 @@
    "beats": [
     "14.04"
    ],
-   "s": 1051,
-   "e": 1176,
+   "s": 1147,
+   "e": 1274,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -1861,9 +2076,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:53:19",
-   "tc_out": "12:59:00",
-   "frames": 125
+   "tc_in": "12:57:19",
+   "tc_out": "13:03:02",
+   "frames": 127
   },
   {
    "id": "14.05",
@@ -1871,13 +2086,13 @@
    "beats": [
     "14.05"
    ],
-   "s": 1176,
-   "e": 1263,
+   "s": 1274,
+   "e": 1362,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -1933,9 +2148,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "12:59:00",
-   "tc_out": "13:02:15",
-   "frames": 87
+   "tc_in": "13:03:02",
+   "tc_out": "13:06:18",
+   "frames": 88
   },
   {
    "id": "14.06",
@@ -1943,8 +2158,8 @@
    "beats": [
     "14.06"
    ],
-   "s": 1263,
-   "e": 1363,
+   "s": 1362,
+   "e": 1463,
    "onscreen": [
     {
      "text": "Open",
@@ -1960,7 +2175,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -2036,9 +2251,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:02:15",
-   "tc_out": "13:06:19",
-   "frames": 100
+   "tc_in": "13:06:18",
+   "tc_out": "13:10:23",
+   "frames": 101
   },
   {
    "id": "14.07",
@@ -2046,8 +2261,8 @@
    "beats": [
     "14.07"
    ],
-   "s": 1363,
-   "e": 1482,
+   "s": 1463,
+   "e": 1581,
    "onscreen": [
     {
      "text": "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.",
@@ -2116,7 +2331,7 @@
    ],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -2200,9 +2415,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:06:19",
-   "tc_out": "13:11:18",
-   "frames": 119
+   "tc_in": "13:10:23",
+   "tc_out": "13:15:21",
+   "frames": 118
   },
   {
    "id": "14.08",
@@ -2210,8 +2425,8 @@
    "beats": [
     "14.08"
    ],
-   "s": 1482,
-   "e": 1700,
+   "s": 1581,
+   "e": 1799,
    "onscreen": [
     {
      "text": "need anything?",
@@ -2606,7 +2821,7 @@
    ],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -2670,8 +2885,8 @@
      "must": true
     }
    ],
-   "tc_in": "13:11:18",
-   "tc_out": "13:20:20",
+   "tc_in": "13:15:21",
+   "tc_out": "13:24:23",
    "frames": 218
   },
   {
@@ -2680,8 +2895,8 @@
    "beats": [
     "14.09"
    ],
-   "s": 1700,
-   "e": 1782,
+   "s": 1799,
+   "e": 1881,
    "onscreen": [
     {
      "text": "EKIEL / CO-LED THE SAFETY TEAM.",
@@ -2689,7 +2904,7 @@
      "e": 69
     },
     {
-     "text": "SQUINT: 100%",
+     "text": "TITLES: 3",
      "s": 24,
      "e": 69
     }
@@ -2697,17 +2912,17 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE · EKIEL walks out with a box past ordinary desks, squinting; the card",
+   "frame": "WIDE · EKIEL walks out with a box past ordinary desks; the card",
    "cls": "W",
    "move": "cut",
-   "does": "EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks. The card freezes on him.",
+   "does": "EKIEL crosses the floor carrying a box, past ordinary desks. The card freezes on him.",
    "chars": [
     "ekiel"
    ],
@@ -2731,7 +2946,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "EKIEL crosses the floor carrying a box, squinting hard, past ordinary desks. The card freezes on him.",
+   "caption": "EKIEL crosses the floor carrying a box, past ordinary desks. The card freezes on him.",
    "cast": [
     {
      "id": "ekiel",
@@ -2746,7 +2961,7 @@
    "beat_starts": {
     "14.09": 0
    },
-   "picture": "No shiny-product pedestals (FC).",
+   "picture": "No shiny-product pedestals (FC). The stat is a fact about him that the next shot shows (his post names three titles), never his face (the fixes pass: SQUINT: 100% had lost the pedestals that set it up, and on a real person it was an appearance gag, GR X10).",
    "names": [
     {
      "id": "ekiel",
@@ -2766,14 +2981,14 @@
     },
     {
      "kind": "stat",
-     "text": "SQUINT: 100%",
+     "text": "TITLES: 3",
      "s": 24,
      "e": 69,
      "must": true
     }
    ],
-   "tc_in": "13:20:20",
-   "tc_out": "13:24:06",
+   "tc_in": "13:24:23",
+   "tc_out": "13:28:09",
    "frames": 82
   },
   {
@@ -2782,8 +2997,8 @@
    "beats": [
     "14.10"
    ],
-   "s": 1782,
-   "e": 1926,
+   "s": 1881,
+   "e": 2025,
    "onscreen": [
     {
      "text": "MAY 17",
@@ -2799,7 +3014,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -2884,160 +3099,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:24:06",
-   "tc_out": "13:30:06",
+   "tc_in": "13:28:09",
+   "tc_out": "13:34:09",
    "frames": 144
-  },
-  {
-   "id": "14.11",
-   "setup": "14.11",
-   "beats": [
-    "14.11"
-   ],
-   "s": 1926,
-   "e": 2050,
-   "onscreen": [
-    {
-     "text": "SUPERALIGNMENT",
-     "s": 7,
-     "e": 124
-    },
-    {
-     "text": "SAFETY TEAM",
-     "s": 7,
-     "e": 124
-    },
-    {
-     "text": "MISC",
-     "s": 96,
-     "e": 124
-    },
-    {
-     "text": "MAY 17",
-     "s": 96,
-     "e": 124
-    }
-   ],
-   "lines": [],
-   "seq": "ACT3",
-   "scene": "14",
-   "scene_s": 744,
-   "verdict": "",
-   "v4": null,
-   "side": "MAS",
-   "side_label": "",
-   "badge": null,
-   "whip": null,
-   "frame": "WIDE → ECU · down the corridor beside Ekiel's empty desk: the safety team's own door; an orange cuff backs out four screws",
-   "cls": "W",
-   "move": "cut",
-   "does": "Down the corridor, beside Ekiel's empty desk, the safety team's own door. An orange-cuffed hand backs four screws out of its plate, one per beat, and drops it in a box marked MISC.",
-   "chars": [
-    "dot"
-   ],
-   "cues": [
-    "music (v1): E02-08 · THE CLOCK continues under the room tone; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score"
-   ],
-   "sounds": [
-    "screw_turn_1 @24",
-    "screw_turn_2 @39",
-    "screw_turn_3 @54",
-    "screw_turn_4 @69",
-    "nameplate_off @81",
-    "plate_drop_box @93"
-   ],
-   "spots": [
-    {
-     "name": "screw_turn_1",
-     "k": 24,
-     "dur": null
-    },
-    {
-     "name": "screw_turn_2",
-     "k": 39,
-     "dur": null
-    },
-    {
-     "name": "screw_turn_3",
-     "k": 54,
-     "dur": null
-    },
-    {
-     "name": "screw_turn_4",
-     "k": 69,
-     "dur": null
-    },
-    {
-     "name": "nameplate_off",
-     "k": 81,
-     "dur": null
-    },
-    {
-     "name": "plate_drop_box",
-     "k": 93,
-     "dur": null
-    }
-   ],
-   "v4_frames": null,
-   "kind": "scene",
-   "set": "bullpen",
-   "room": "open_floor",
-   "style": "BASE",
-   "fx": [],
-   "slate": false,
-   "caption": "Down the corridor, beside Ekiel's empty desk, the safety team's own door. An orange-cuffed hand backs four screws out of its plate, one per beat, and drops it in a box marked MISC.",
-   "cast": [
-    {
-     "id": "dot",
-     "pose": "stand",
-     "face": "calm",
-     "x": null,
-     "from": null,
-     "until": null
-    }
-   ],
-   "speak": [],
-   "beat_starts": {
-    "14.11": 0
-   },
-   "picture": "The team's own door, never Alyi's (R2).",
-   "names": [],
-   "fg": null,
-   "marks": {},
-   "mark_src": {},
-   "texts": [
-    {
-     "kind": "sign",
-     "text": "SUPERALIGNMENT",
-     "s": 7,
-     "e": 124,
-     "must": true
-    },
-    {
-     "kind": "sign",
-     "text": "SAFETY TEAM",
-     "s": 7,
-     "e": 124,
-     "must": true
-    },
-    {
-     "kind": "sign",
-     "text": "MISC",
-     "s": 96,
-     "e": 124,
-     "must": true
-    },
-    {
-     "kind": "sign",
-     "text": "MAY 17",
-     "s": 96,
-     "e": 124,
-     "must": true
-    }
-   ],
-   "tc_in": "13:30:06",
-   "tc_out": "13:35:10",
-   "frames": 124
   },
   {
    "id": "14.12",
@@ -3045,8 +3109,8 @@
    "beats": [
     "14.12"
    ],
-   "s": 2050,
-   "e": 2160,
+   "s": 2025,
+   "e": 2136,
    "onscreen": [
     {
      "text": "Pivot door",
@@ -3057,7 +3121,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "14",
-   "scene_s": 744,
+   "scene_s": 840,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3067,7 +3131,7 @@
    "frame": "WIDE · back at Alyi's door: Pivot door; it turns on its centre pin",
    "cls": "W",
    "move": "cut",
-   "does": "Back at Alyi's door, Mas tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
+   "does": "Mas at Alyi's door, the domino at his shoe. He tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
    "chars": [
     "mas"
    ],
@@ -3097,7 +3161,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Back at Alyi's door, Mas tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
+   "caption": "Mas at Alyi's door, the domino at his shoe. He tries the other verb: Pivot door. It turns on its centre pin. The old chair's hum swells.",
    "cast": [
     {
      "id": "mas",
@@ -3112,7 +3176,7 @@
    "beat_starts": {
     "14.12": 0
    },
-   "picture": "",
+   "picture": "Straight from Ekiel's domino (the fixes pass: the safety team's plate no longer comes between, the review's blocker).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3126,9 +3190,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:35:10",
-   "tc_out": "13:40:00",
-   "frames": 110
+   "tc_in": "13:34:09",
+   "tc_out": "13:39:00",
+   "frames": 111
   },
   {
    "id": "15.01",
@@ -3136,13 +3200,13 @@
    "beats": [
     "15.01"
    ],
-   "s": 2160,
-   "e": 2222,
+   "s": 2136,
+   "e": 2198,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3198,8 +3262,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "13:40:00",
-   "tc_out": "13:42:14",
+   "tc_in": "13:39:00",
+   "tc_out": "13:41:14",
    "frames": 62
   },
   {
@@ -3208,39 +3272,34 @@
    "beats": [
     "15.02"
    ],
-   "s": 2222,
-   "e": 2313,
+   "s": 2198,
+   "e": 2289,
    "onscreen": [
     {
-     "text": "NOV 20, 2023",
+     "text": "MAY 14, 2024",
      "s": 9,
      "e": 90
     },
     {
-     "text": "♥ ♥ ♥",
-     "s": 19,
-     "e": 90
-    },
-    {
-     "text": "MAY 14, 2024",
-     "s": 32,
+     "text": "After almost a decade…",
+     "s": 9,
      "e": 90
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "ECU · his phone: the thread, collapsed to dates and first lines",
+   "frame": "ECU · his phone: Alyi's post from three days ago, collapsed to its date and first words, his own reply under it",
    "cls": "ECU",
    "move": "cut",
-   "does": "On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both dates in frame.",
+   "does": "On his phone, Alyi's post from three days ago, collapsed to its date and its first words, After almost a decade…; under it, Mas's own reply, collapsed to a grey bar. His thumb scrolls it a step.",
    "chars": [],
    "cues": [
     "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
@@ -3262,13 +3321,13 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "On his phone, the thread: Alyi's regret post from last November, three hearts under it, his; below it, Alyi's post from three days ago. Both dates in frame.",
+   "caption": "On his phone, Alyi's post from three days ago, collapsed to its date and its first words, After almost a decade…; under it, Mas's own reply, collapsed to a grey bar. His thumb scrolls it a step.",
    "cast": [],
    "speak": [],
    "beat_starts": {
     "15.02": 0
    },
-   "picture": "Dates and hearts, not must-read text (R2).",
+   "picture": "Its date and its first words, nothing older (the fixes pass: the Nov 20, 2023 regret post with his three hearts made the count the firing's clock; W8, facts §F).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -3276,28 +3335,21 @@
    "texts": [
     {
      "kind": "post",
-     "text": "NOV 20, 2023",
+     "text": "MAY 14, 2024",
      "s": 9,
      "e": 90,
      "must": true
     },
     {
      "kind": "post",
-     "text": "♥ ♥ ♥",
-     "s": 19,
-     "e": 90,
-     "must": true
-    },
-    {
-     "kind": "post",
-     "text": "MAY 14, 2024",
-     "s": 32,
+     "text": "After almost a decade…",
+     "s": 9,
      "e": 90,
      "must": true
     }
    ],
-   "tc_in": "13:42:14",
-   "tc_out": "13:46:09",
+   "tc_in": "13:41:14",
+   "tc_out": "13:45:09",
    "frames": 91
   },
   {
@@ -3306,8 +3358,8 @@
    "beats": [
     "15.03"
    ],
-   "s": 2313,
-   "e": 2485,
+   "s": 2289,
+   "e": 2457,
    "onscreen": [],
    "lines": [
     {
@@ -3415,11 +3467,11 @@
      "kind": "vo",
      "mode": "on-mic",
      "who": "MAS",
-     "text": "a hundred and seventy-six days.",
+     "text": "eight years and five months.",
      "s": 92,
-     "e": 150,
-     "fs": 83,
-     "fe": 161,
+     "e": 146,
+     "fs": 82,
+     "fe": 157,
      "os": false,
      "via": null,
      "face": null,
@@ -3429,29 +3481,29 @@
      "mouth": [],
      "words": [
       [
-       "A",
+       "Eight",
        -1,
-       2
+       7
       ],
       [
-       "hundred",
-       5,
-       15
-      ],
-      [
-       "and",
-       16,
+       "years",
+       9,
        19
       ],
       [
-       "seventy-six",
+       "and",
        21,
-       40
+       25
       ],
       [
-       "days",
-       42,
-       54
+       "five",
+       27,
+       38
+      ],
+      [
+       "months",
+       40,
+       51
       ]
      ],
      "tag": "V.O.",
@@ -3460,7 +3512,7 @@
    ],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3470,7 +3522,7 @@
    "frame": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "cls": "MCU",
    "move": "cut",
-   "does": "For one second, far off, Alyi's voice from launch night. Now Mas counts.",
+   "does": "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
    "chars": [
     "mas"
    ],
@@ -3486,7 +3538,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "For one second, far off, Alyi's voice from launch night. Now Mas counts.",
+   "caption": "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
    "cast": [
     {
      "id": "mas",
@@ -3507,9 +3559,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "13:46:09",
-   "tc_out": "13:53:13",
-   "frames": 172
+   "tc_in": "13:45:09",
+   "tc_out": "13:52:09",
+   "frames": 168
   },
   {
    "id": "15.04",
@@ -3517,8 +3569,8 @@
    "beats": [
     "15.04"
    ],
-   "s": 2485,
-   "e": 2643,
+   "s": 2457,
+   "e": 2616,
    "onscreen": [
     {
      "text": "TPOOL",
@@ -3549,7 +3601,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3658,9 +3710,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:53:13",
-   "tc_out": "14:00:03",
-   "frames": 158
+   "tc_in": "13:52:09",
+   "tc_out": "13:59:00",
+   "frames": 159
   },
   {
    "id": "15.05",
@@ -3668,8 +3720,8 @@
    "beats": [
     "15.05"
    ],
-   "s": 2643,
-   "e": 2821,
+   "s": 2616,
+   "e": 2793,
    "onscreen": [
     {
      "text": "where u at?",
@@ -3690,7 +3742,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -3768,9 +3820,9 @@
      "must": true
     }
    ],
-   "tc_in": "14:00:03",
-   "tc_out": "14:07:13",
-   "frames": 178
+   "tc_in": "13:59:00",
+   "tc_out": "14:06:09",
+   "frames": 177
   },
   {
    "id": "15.06",
@@ -3778,8 +3830,8 @@
    "beats": [
     "15.06"
    ],
-   "s": 2821,
-   "e": 2990,
+   "s": 2793,
+   "e": 2963,
    "onscreen": [
     {
      "text": "RAIL: DEC 2022",
@@ -3966,7 +4018,7 @@
    ],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4040,9 +4092,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:07:13",
-   "tc_out": "14:14:14",
-   "frames": 169
+   "tc_in": "14:06:09",
+   "tc_out": "14:13:11",
+   "frames": 170
   },
   {
    "id": "15.07",
@@ -4050,8 +4102,8 @@
    "beats": [
     "15.07"
    ],
-   "s": 2990,
-   "e": 3169,
+   "s": 2963,
+   "e": 3142,
    "onscreen": [],
    "lines": [
     {
@@ -4108,16 +4160,16 @@
       [
        "You're",
        0,
-       6
+       7
       ],
       [
        "not",
-       7,
+       8,
        11
       ],
       [
        "chanting",
-       12,
+       13,
        28
       ]
      ],
@@ -4131,9 +4183,9 @@
      "who": "MAS",
      "text": "someone has to hold the glass.",
      "s": 65,
-     "e": 113,
-     "fs": 55,
-     "fe": 123,
+     "e": 114,
+     "fs": 56,
+     "fe": 124,
      "os": false,
      "via": null,
      "face": null,
@@ -4143,50 +4195,54 @@
      "mouth": [
       [
        0,
+       "rest"
+      ],
+      [
+       1,
        "A"
       ],
       [
-       2,
+       3,
        "M"
       ],
       [
-       4,
+       5,
        "O"
       ],
       [
-       6,
+       7,
        "A"
       ],
       [
-       9,
+       10,
        "E"
       ],
       [
-       12,
+       13,
        "A"
       ],
       [
-       15,
+       16,
        "E"
       ],
       [
-       20,
+       21,
        "O"
       ],
       [
-       23,
+       24,
        "E"
       ],
       [
-       36,
+       37,
        "A"
       ],
       [
-       42,
+       43,
        "E"
       ],
       [
-       45,
+       46,
        "rest"
       ]
      ],
@@ -4218,7 +4274,7 @@
       ],
       [
        "glass",
-       30,
+       31,
        45
       ]
      ],
@@ -4231,7 +4287,7 @@
      "mode": "on-mic",
      "who": "ALYI",
      "text": "Then I'll feel it for both of us.",
-     "s": 118,
+     "s": 119,
      "e": 167,
      "fs": 108,
      "fe": 183,
@@ -4244,105 +4300,101 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "A"
       ],
       [
-       4,
+       3,
        "E"
       ],
       [
-       6,
+       5,
        "A"
       ],
       [
-       9,
+       8,
        "E"
       ],
       [
-       13,
+       12,
        "A"
       ],
       [
-       16,
+       15,
        "E"
       ],
       [
-       23,
+       22,
        "O"
       ],
       [
-       27,
+       26,
        "M"
       ],
       [
-       29,
+       28,
        "O"
       ],
       [
-       32,
+       31,
        "E"
       ],
       [
-       34,
+       33,
        "A"
       ],
       [
-       36,
+       35,
        "rest"
       ],
       [
-       39,
+       38,
        "A"
       ],
       [
-       44,
+       43,
        "rest"
       ]
      ],
      "words": [
       [
        "Then",
-       0,
+       -1,
        5
       ],
       [
        "I'll",
        6,
-       11
+       10
       ],
       [
        "feel",
        12,
-       18
+       17
       ],
       [
        "it",
-       19,
-       21
+       18,
+       20
       ],
       [
        "for",
        22,
-       26
+       25
       ],
       [
        "both",
-       27,
-       33
+       26,
+       32
       ],
       [
        "of",
-       35,
-       36
+       34,
+       35
       ],
       [
        "us",
-       39,
-       45
+       38,
+       44
       ]
      ],
      "tag": "",
@@ -4351,7 +4403,7 @@
    ],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4407,8 +4459,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:14:14",
-   "tc_out": "14:22:01",
+   "tc_in": "14:13:11",
+   "tc_out": "14:20:22",
    "frames": 179
   },
   {
@@ -4417,8 +4469,8 @@
    "beats": [
     "15.08"
    ],
-   "s": 3169,
-   "e": 3324,
+   "s": 3142,
+   "e": 3297,
    "onscreen": [
     {
      "text": "CHECK IN",
@@ -4428,13 +4480,13 @@
     {
      "text": "feel the agi",
      "s": 51,
-     "e": 154
+     "e": 155
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4509,12 +4561,12 @@
      "kind": "ui",
      "text": "feel the agi",
      "s": 51,
-     "e": 154,
+     "e": 155,
      "must": true
     }
    ],
-   "tc_in": "14:22:01",
-   "tc_out": "14:28:12",
+   "tc_in": "14:20:22",
+   "tc_out": "14:27:09",
    "frames": 155
   },
   {
@@ -4523,13 +4575,13 @@
    "beats": [
     "15.09"
    ],
-   "s": 3324,
-   "e": 3408,
+   "s": 3297,
+   "e": 3382,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4602,9 +4654,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:28:12",
-   "tc_out": "14:32:00",
-   "frames": 84
+   "tc_in": "14:27:09",
+   "tc_out": "14:30:22",
+   "frames": 85
   },
   {
    "id": "15.10",
@@ -4612,29 +4664,29 @@
    "beats": [
     "15.10"
    ],
-   "s": 3408,
-   "e": 3621,
+   "s": 3382,
+   "e": 3614,
    "onscreen": [
     {
      "text": "RAIL: 2023",
      "s": 4,
-     "e": 33
+     "e": 57
     },
     {
      "text": "INTRODUCING SUPERALIGNMENT · ALYI, EKIEL",
-     "s": 33,
-     "e": 213
+     "s": 57,
+     "e": 232
     },
     {
      "text": "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.",
-     "s": 38,
-     "e": 211
+     "s": 62,
+     "e": 230
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4644,7 +4696,7 @@
    "frame": "2S · this office, 2023, night: Alyi at his screen (cropped by its edge), Ekiel beside him; the post's hard sentence",
    "cls": "M",
    "move": "hold",
-   "does": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
+   "does": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI: the rail first, over the room and the empty draft, then the title and the byline fill in, then its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, reading it.",
    "chars": [
     "alyi",
     "ekiel"
@@ -4661,7 +4713,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI, its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, squinting at it.",
+   "caption": "This same office, at night, his chair still here. On his screen, cropping him at the edge of frame, the post he and Ekiel are about to publish, in its own UI: the rail first, over the room and the empty draft, then the title and the byline fill in, then its hard sentence (a later one in the post; it opens on \"We need scientific and technical breakthroughs…\"). EKIEL beside him, reading it.",
    "cast": [
     {
      "id": "alyi",
@@ -4684,7 +4736,7 @@
    "beat_starts": {
     "15.10": 0
    },
-   "picture": "The post's words are the record's; its numbers don't print (R2).",
+   "picture": "The post's words are the record's; its numbers don't print (R2). The rail holds 2.2 s on its own before the post fills in (the fixes pass: it was up 1.3 s and the post's typing came under it; P15).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -4693,21 +4745,21 @@
     {
      "kind": "post",
      "text": "INTRODUCING SUPERALIGNMENT · ALYI, EKIEL",
-     "s": 33,
-     "e": 213,
+     "s": 57,
+     "e": 232,
      "must": true
     },
     {
      "kind": "post",
      "text": "Currently, we don't have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.",
-     "s": 38,
-     "e": 211,
+     "s": 62,
+     "e": 230,
      "must": true
     }
    ],
-   "tc_in": "14:32:00",
-   "tc_out": "14:40:21",
-   "frames": 213
+   "tc_in": "14:30:22",
+   "tc_out": "14:40:14",
+   "frames": 232
   },
   {
    "id": "15.11",
@@ -4715,8 +4767,8 @@
    "beats": [
     "15.11"
    ],
-   "s": 3621,
-   "e": 3751,
+   "s": 3614,
+   "e": 3744,
    "onscreen": [],
    "lines": [
     {
@@ -4897,7 +4949,7 @@
    ],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -4953,8 +5005,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:40:21",
-   "tc_out": "14:46:07",
+   "tc_in": "14:40:14",
+   "tc_out": "14:46:00",
    "frames": 130
   },
   {
@@ -4963,13 +5015,13 @@
    "beats": [
     "15.12"
    ],
-   "s": 3751,
-   "e": 3828,
+   "s": 3744,
+   "e": 3822,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5016,9 +5068,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:46:07",
-   "tc_out": "14:49:12",
-   "frames": 77
+   "tc_in": "14:46:00",
+   "tc_out": "14:49:06",
+   "frames": 78
   },
   {
    "id": "15.13",
@@ -5026,19 +5078,19 @@
    "beats": [
     "15.13"
    ],
-   "s": 3828,
-   "e": 3944,
+   "s": 3822,
+   "e": 3939,
    "onscreen": [
     {
      "text": "UNALIGNED",
      "s": 9,
-     "e": 115
+     "e": 116
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5106,13 +5158,13 @@
      "kind": "sign",
      "text": "UNALIGNED",
      "s": 9,
-     "e": 115,
+     "e": 116,
      "must": true
     }
    ],
-   "tc_in": "14:49:12",
-   "tc_out": "14:54:08",
-   "frames": 116
+   "tc_in": "14:49:06",
+   "tc_out": "14:54:03",
+   "frames": 117
   },
   {
    "id": "15.14",
@@ -5120,13 +5172,13 @@
    "beats": [
     "15.14"
    ],
-   "s": 3944,
-   "e": 3990,
+   "s": 3939,
+   "e": 3984,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5181,9 +5233,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:54:08",
-   "tc_out": "14:56:06",
-   "frames": 46
+   "tc_in": "14:54:03",
+   "tc_out": "14:56:00",
+   "frames": 45
   },
   {
    "id": "15.15",
@@ -5191,23 +5243,23 @@
    "beats": [
     "15.15"
    ],
-   "s": 3990,
-   "e": 4105,
+   "s": 3984,
+   "e": 4094,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE · the effigy catches",
+   "frame": "WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire",
    "cls": "W",
    "move": "cut",
-   "does": "The effigy catches.",
+   "does": "The effigy catches. Closer: Alyi in the doorway, his face lit warm by the fire he has just lit, calm, watching it take. The fire, wide.",
    "chars": [
     "alyi"
    ],
@@ -5215,19 +5267,19 @@
     "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
    ],
    "sounds": [
-    "flame_whoomph @6",
-    "fire_crackle @19"
+    "flame_whoomph @4",
+    "fire_crackle @14"
    ],
    "spots": [
     {
      "name": "flame_whoomph",
-     "k": 6,
+     "k": 4,
      "dur": null
     },
     {
      "name": "fire_crackle",
-     "k": 19,
-     "dur": 3.0
+     "k": 14,
+     "dur": 4.0
     }
    ],
    "v4_frames": null,
@@ -5237,7 +5289,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The effigy catches.",
+   "caption": "The effigy catches. Closer: Alyi in the doorway, his face lit warm by the fire he has just lit, calm, watching it take. The fire, wide.",
    "cast": [
     {
      "id": "alyi",
@@ -5252,15 +5304,15 @@
    "beat_starts": {
     "15.15": 0
    },
-   "picture": "Palette-cycled fire, never strobing (P15).",
+   "picture": "Palette-cycled fire, never strobing (P15). The turn rides on his face, not the props (the fixes pass): warm, never cold, no zealot framing, no iconography (GR §6).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:56:06",
-   "tc_out": "15:01:01",
-   "frames": 115
+   "tc_in": "14:56:00",
+   "tc_out": "15:00:14",
+   "frames": 110
   },
   {
    "id": "15.16",
@@ -5268,13 +5320,13 @@
    "beats": [
     "15.16"
    ],
-   "s": 4105,
-   "e": 4215,
+   "s": 4094,
+   "e": 4204,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5310,8 +5362,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:01:01",
-   "tc_out": "15:05:15",
+   "tc_in": "15:00:14",
+   "tc_out": "15:05:04",
    "frames": 110
   },
   {
@@ -5320,8 +5372,8 @@
    "beats": [
     "15.17"
    ],
-   "s": 4215,
-   "e": 4331,
+   "s": 4204,
+   "e": 4320,
    "onscreen": [],
    "lines": [
     {
@@ -5350,7 +5402,7 @@
       [
        "ask",
        7,
-       12
+       13
       ],
       [
        "him",
@@ -5359,12 +5411,12 @@
       ],
       [
        "in",
-       18,
+       19,
        20
       ],
       [
        "person",
-       22,
+       23,
        37
       ]
      ],
@@ -5374,7 +5426,7 @@
    ],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5421,8 +5473,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:05:15",
-   "tc_out": "15:10:11",
+   "tc_in": "15:05:04",
+   "tc_out": "15:10:00",
    "frames": 116
   },
   {
@@ -5431,13 +5483,13 @@
    "beats": [
     "15.18"
    ],
-   "s": 4331,
-   "e": 4440,
+   "s": 4320,
+   "e": 4430,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5455,12 +5507,12 @@
     "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
    ],
    "sounds": [
-    "door_close_soft @70"
+    "door_close_soft @71"
    ],
    "spots": [
     {
      "name": "door_close_soft",
-     "k": 70,
+     "k": 71,
      "dur": null
     }
    ],
@@ -5492,9 +5544,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:10:11",
-   "tc_out": "15:15:00",
-   "frames": 109
+   "tc_in": "15:10:00",
+   "tc_out": "15:14:14",
+   "frames": 110
   },
   {
    "id": "15.19",
@@ -5502,19 +5554,24 @@
    "beats": [
     "15.19"
    ],
-   "s": 4440,
+   "s": 4430,
    "e": 4560,
    "onscreen": [
     {
      "text": "request for comment",
-     "s": 38,
-     "e": 86
+     "s": 33,
+     "e": 100
+    },
+    {
+     "text": "re: exit agreements",
+     "s": 33,
+     "e": 100
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "15",
-   "scene_s": 2160,
+   "scene_s": 2136,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5524,7 +5581,7 @@
    "frame": "WIDE · the stairwell, Mas small on the stairs → ECU · the push: a reporter's request for comment",
    "cls": "W",
    "move": "cut",
-   "does": "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
+   "does": "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, re: exit agreements, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
    "chars": [
     "mas"
    ],
@@ -5560,7 +5617,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
+   "caption": "On the stairs, his phone buzzes in his pocket: a reporter's request for comment, re: exit agreements, its thumbnail a strip of receipt paper. He reads it without stopping, and keeps going down.",
    "cast": [
     {
      "id": "mas",
@@ -5575,7 +5632,7 @@
    "beat_starts": {
     "15.19": 0
    },
-   "picture": "No outlet named, no headline words.",
+   "picture": "No outlet named, no headline words. Its subject line is the cause the receipt at the doors needs (the fixes pass: the papers arrived with no visible because; W13); nothing about what he knew.",
    "names": [],
    "fg": null,
    "marks": {},
@@ -5584,14 +5641,21 @@
     {
      "kind": "ui",
      "text": "request for comment",
-     "s": 38,
-     "e": 86,
+     "s": 33,
+     "e": 100,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "re: exit agreements",
+     "s": 33,
+     "e": 100,
      "must": true
     }
    ],
-   "tc_in": "15:15:00",
+   "tc_in": "15:14:14",
    "tc_out": "15:20:00",
-   "frames": 120
+   "frames": 130
   },
   {
    "id": "17.01",
@@ -8198,7 +8262,7 @@
     "car_honk_2 @98",
     "car_honk_3 @124",
     "car_honk_4 @196",
-    "car_honk_5 @258",
+    "car_honk_5 @250",
     "pen_scribble_short @274"
    ],
    "spots": [
@@ -8224,7 +8288,7 @@
     },
     {
      "name": "car_honk_5",
-     "k": 258,
+     "k": 250,
      "dur": null
     },
     {
@@ -9527,6 +9591,146 @@
    "pre": false
   },
   {
+   "id": "e2-a3-0025",
+   "shot": "13.03b",
+   "beat": "13.03b",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "STAFFER2",
+   "text": "Did his post say why?",
+   "tag": "",
+   "on_s": 20.85,
+   "end_s": 22.25,
+   "file_s": 20.41,
+   "abs_in": 500,
+   "abs_out": 534,
+   "file_in": 489,
+   "file_out": 548,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+   "stick_t": 0.6,
+   "stick_in": 0.44,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Did",
+     -1,
+     4
+    ],
+    [
+     "his",
+     5,
+     8
+    ],
+    [
+     "post",
+     9,
+     17
+    ],
+    [
+     "say",
+     18,
+     21
+    ],
+    [
+     "why",
+     23,
+     31
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     3,
+     "E"
+    ],
+    [
+     9,
+     "M"
+    ],
+    [
+     11,
+     "O"
+    ],
+    [
+     14,
+     "E"
+    ],
+    [
+     18,
+     "A"
+    ],
+    [
+     22,
+     "O"
+    ],
+    [
+     25,
+     "A"
+    ],
+    [
+     30,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e2-a3-0026",
+   "shot": "13.03b",
+   "beat": "13.03b",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "STAFFER",
+   "text": "No.",
+   "tag": "",
+   "on_s": 22.55,
+   "end_s": 22.94,
+   "file_s": 22.2,
+   "abs_in": 541,
+   "abs_out": 551,
+   "file_in": 532,
+   "file_out": 561,
+   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0026__tiled-employee-A.wav",
+   "stick_t": 2.3,
+   "stick_in": 0.35,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "No",
+     0,
+     7
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     2,
+     "O"
+    ],
+    [
+     7,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
    "id": "e2-a3-0005",
    "shot": "13.05",
    "beat": "13.05",
@@ -9535,15 +9739,15 @@
    "who": "REPORTER",
    "text": "Senator, when does it get a vote?",
    "tag": "tv",
-   "on_s": 24.1183,
-   "end_s": 26.1283,
-   "file_s": 23.7683,
-   "abs_in": 578,
-   "abs_out": 628,
-   "file_in": 570,
-   "file_out": 643,
+   "on_s": 28.5267,
+   "end_s": 30.5367,
+   "file_s": 28.1767,
+   "abs_in": 684,
+   "abs_out": 733,
+   "file_in": 676,
+   "file_out": 749,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0005__reporter-A.wav",
-   "stick_t": 0.41,
+   "stick_t": 0.36,
    "stick_in": 0.35,
    "cut": false,
    "on_camera": "on",
@@ -9558,7 +9762,7 @@
     ],
     [
      "when",
-     16,
+     15,
      22
     ],
     [
@@ -9584,7 +9788,7 @@
     [
      "vote",
      39,
-     49
+     48
     ]
    ],
    "mouth": [
@@ -9657,13 +9861,13 @@
    "who": "MAS",
    "text": "congratulations.",
    "tag": "",
-   "on_s": 60.2917,
-   "end_s": 61.5617,
-   "file_s": 59.8817,
-   "abs_in": 1447,
-   "abs_out": 1478,
-   "file_in": 1437,
-   "file_out": 1489,
+   "on_s": 64.4583,
+   "end_s": 65.7283,
+   "file_s": 64.0483,
+   "abs_in": 1547,
+   "abs_out": 1578,
+   "file_in": 1537,
+   "file_out": 1589,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0023__mas-manalt-C.wav",
    "stick_t": 3.5,
    "stick_in": 0.41,
@@ -9717,13 +9921,13 @@
    "who": "BUKAJ",
    "text": "Thank you. It's still warm.",
    "tag": "",
-   "on_s": 62.1,
-   "end_s": 64.28,
-   "file_s": 61.69,
-   "abs_in": 1490,
-   "abs_out": 1543,
-   "file_in": 1480,
-   "file_out": 1558,
+   "on_s": 66.225,
+   "end_s": 68.405,
+   "file_s": 65.815,
+   "abs_in": 1589,
+   "abs_out": 1642,
+   "file_in": 1579,
+   "file_out": 1657,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0006__bukaj-A.wav",
    "stick_t": 0.35,
    "stick_in": 0.41,
@@ -9813,13 +10017,13 @@
    "who": "MAS",
    "text": "need anything?",
    "tag": "",
-   "on_s": 64.78,
-   "end_s": 65.53,
-   "file_s": 64.41,
-   "abs_in": 1554,
-   "abs_out": 1573,
-   "file_in": 1545,
-   "file_out": 1583,
+   "on_s": 68.905,
+   "end_s": 69.655,
+   "file_s": 68.535,
+   "abs_in": 1653,
+   "abs_out": 1672,
+   "file_in": 1644,
+   "file_out": 1682,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0024__mas-manalt-C.wav",
    "stick_t": 3.03,
    "stick_in": 0.37,
@@ -9878,13 +10082,13 @@
    "who": "BUKAJ",
    "text": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
    "tag": "",
-   "on_s": 66.03,
-   "end_s": 70.2,
-   "file_s": 65.68,
-   "abs_in": 1584,
-   "abs_out": 1685,
-   "file_in": 1576,
-   "file_out": 1699,
+   "on_s": 70.155,
+   "end_s": 74.325,
+   "file_s": 69.805,
+   "abs_in": 1683,
+   "abs_out": 1784,
+   "file_in": 1675,
+   "file_out": 1798,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0007__bukaj-A.wav",
    "stick_t": 4.28,
    "stick_in": 0.35,
@@ -10124,13 +10328,13 @@
    "who": "ALYI",
    "text": "Six years and eleven months.",
    "tag": "far",
-   "on_s": 96.915,
-   "end_s": 99.015,
-   "file_s": 96.565,
-   "abs_in": 2325,
-   "abs_out": 2377,
-   "file_in": 2317,
-   "file_out": 2382,
+   "on_s": 95.915,
+   "end_s": 98.015,
+   "file_s": 95.565,
+   "abs_in": 2301,
+   "abs_out": 2353,
+   "file_in": 2293,
+   "file_out": 2358,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
    "stick_t": 0.54,
    "stick_in": 0.35,
@@ -10230,18 +10434,18 @@
    "kind": "vo",
    "mode": "on-mic",
    "who": "MAS",
-   "text": "a hundred and seventy-six days.",
+   "text": "eight years and five months.",
    "tag": "V.O.",
-   "on_s": 100.215,
-   "end_s": 102.615,
-   "file_s": 99.835,
-   "abs_in": 2405,
-   "abs_out": 2463,
-   "file_in": 2396,
-   "file_out": 2474,
+   "on_s": 99.215,
+   "end_s": 101.455,
+   "file_s": 98.805,
+   "abs_in": 2381,
+   "abs_out": 2435,
+   "file_in": 2371,
+   "file_out": 2446,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
    "stick_t": 3.84,
-   "stick_in": 0.38,
+   "stick_in": 0.41,
    "cut": false,
    "on_camera": "vo",
    "take_lip_sync": false,
@@ -10249,29 +10453,29 @@
    "via": null,
    "words": [
     [
-     "A",
+     "Eight",
      -1,
-     2
+     7
     ],
     [
-     "hundred",
-     5,
-     15
-    ],
-    [
-     "and",
-     16,
+     "years",
+     9,
      19
     ],
     [
-     "seventy-six",
+     "and",
      21,
-     40
+     25
     ],
     [
-     "days",
-     42,
-     54
+     "five",
+     27,
+     38
+    ],
+    [
+     "months",
+     40,
+     51
     ]
    ],
    "mouth": [],
@@ -10287,13 +10491,13 @@
    "who": "ALYI",
    "text": "FEEL THE AGI!",
    "tag": "",
-   "on_s": 119.3417,
-   "end_s": 120.9317,
-   "file_s": 118.9817,
-   "abs_in": 2864,
-   "abs_out": 2903,
-   "file_in": 2855,
-   "file_out": 2918,
+   "on_s": 118.175,
+   "end_s": 119.765,
+   "file_s": 117.815,
+   "abs_in": 2836,
+   "abs_out": 2875,
+   "file_in": 2827,
+   "file_out": 2890,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0009__alyi-A.wav",
    "stick_t": 1.8,
    "stick_in": 0.36,
@@ -10361,13 +10565,13 @@
    "who": "CROWD",
    "text": "FEEL THE AGI! FEEL THE AGI!",
    "tag": "chant",
-   "on_s": 121.0317,
-   "end_s": 124.0617,
-   "file_s": 120.5417,
-   "abs_in": 2904,
-   "abs_out": 2978,
-   "file_in": 2893,
-   "file_out": 3000,
+   "on_s": 119.865,
+   "end_s": 122.895,
+   "file_s": 119.375,
+   "abs_in": 2876,
+   "abs_out": 2950,
+   "file_in": 2865,
+   "file_out": 2972,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0010__crowd-layered.wav",
    "stick_t": 3.49,
    "stick_in": 0.49,
@@ -10478,15 +10682,15 @@
    "who": "ALYI",
    "text": "You're not chanting.",
    "tag": "",
-   "on_s": 125.6533,
-   "end_s": 126.8433,
-   "file_s": 125.2233,
-   "abs_in": 3015,
-   "abs_out": 3045,
-   "file_in": 3005,
-   "file_out": 3063,
+   "on_s": 124.5383,
+   "end_s": 125.7283,
+   "file_s": 124.1083,
+   "abs_in": 2988,
+   "abs_out": 3018,
+   "file_in": 2978,
+   "file_out": 3036,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0011__alyi-A.wav",
-   "stick_t": 1.07,
+   "stick_t": 1.08,
    "stick_in": 0.43,
    "cut": false,
    "on_camera": "on",
@@ -10497,16 +10701,16 @@
     [
      "You're",
      0,
-     6
+     7
     ],
     [
      "not",
-     7,
+     8,
      11
     ],
     [
      "chanting",
-     12,
+     13,
      28
     ]
    ],
@@ -10556,15 +10760,15 @@
    "who": "MAS",
    "text": "someone has to hold the glass.",
    "tag": "",
-   "on_s": 127.2933,
-   "end_s": 129.2833,
-   "file_s": 126.9133,
-   "abs_in": 3055,
-   "abs_out": 3103,
-   "file_in": 3045,
-   "file_out": 3113,
+   "on_s": 126.1783,
+   "end_s": 128.1683,
+   "file_s": 125.7983,
+   "abs_in": 3028,
+   "abs_out": 3077,
+   "file_in": 3019,
+   "file_out": 3087,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0012__mas-manalt-C.wav",
-   "stick_t": 2.71,
+   "stick_t": 2.72,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -10599,57 +10803,61 @@
     ],
     [
      "glass",
-     30,
+     31,
      45
     ]
    ],
    "mouth": [
     [
      0,
+     "rest"
+    ],
+    [
+     1,
      "A"
     ],
     [
-     2,
+     3,
      "M"
     ],
     [
-     4,
+     5,
      "O"
     ],
     [
-     6,
+     7,
      "A"
     ],
     [
-     9,
+     10,
      "E"
     ],
     [
-     12,
+     13,
      "A"
     ],
     [
-     15,
+     16,
      "E"
     ],
     [
-     20,
+     21,
      "O"
     ],
     [
-     23,
+     24,
      "E"
     ],
     [
-     36,
+     37,
      "A"
     ],
     [
-     42,
+     43,
      "E"
     ],
     [
-     45,
+     46,
      "rest"
     ]
    ],
@@ -10665,15 +10873,15 @@
    "who": "ALYI",
    "text": "Then I'll feel it for both of us.",
    "tag": "",
-   "on_s": 129.5333,
-   "end_s": 131.5033,
-   "file_s": 129.1133,
-   "abs_in": 3108,
-   "abs_out": 3157,
-   "file_in": 3098,
-   "file_out": 3173,
+   "on_s": 128.4183,
+   "end_s": 130.3883,
+   "file_s": 127.9983,
+   "abs_in": 3082,
+   "abs_out": 3130,
+   "file_in": 3071,
+   "file_out": 3146,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0013__alyi-A.wav",
-   "stick_t": 4.95,
+   "stick_t": 4.96,
    "stick_in": 0.42,
    "cut": false,
    "on_camera": "on",
@@ -10683,104 +10891,100 @@
    "words": [
     [
      "Then",
-     0,
+     -1,
      5
     ],
     [
      "I'll",
      6,
-     11
+     10
     ],
     [
      "feel",
      12,
-     18
+     17
     ],
     [
      "it",
-     19,
-     21
+     18,
+     20
     ],
     [
      "for",
      22,
-     26
+     25
     ],
     [
      "both",
-     27,
-     33
+     26,
+     32
     ],
     [
      "of",
-     35,
-     36
+     34,
+     35
     ],
     [
      "us",
-     39,
-     45
+     38,
+     44
     ]
    ],
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "A"
     ],
     [
-     4,
+     3,
      "E"
     ],
     [
-     6,
+     5,
      "A"
     ],
     [
-     9,
+     8,
      "E"
     ],
     [
-     13,
+     12,
      "A"
     ],
     [
-     16,
+     15,
      "E"
     ],
     [
-     23,
+     22,
      "O"
     ],
     [
-     27,
+     26,
      "M"
     ],
     [
-     29,
+     28,
      "O"
     ],
     [
-     32,
+     31,
      "E"
     ],
     [
-     34,
+     33,
      "A"
     ],
     [
-     36,
+     35,
      "rest"
     ],
     [
-     39,
+     38,
      "A"
     ],
     [
-     44,
+     43,
      "rest"
     ]
    ],
@@ -10796,13 +11000,13 @@
    "who": "EKIEL",
    "text": "Nobody knows how to do this yet.",
    "tag": "",
-   "on_s": 151.415,
-   "end_s": 153.295,
-   "file_s": 151.025,
-   "abs_in": 3633,
-   "abs_out": 3680,
-   "file_in": 3624,
-   "file_out": 3688,
+   "on_s": 151.1233,
+   "end_s": 153.0033,
+   "file_s": 150.7333,
+   "abs_in": 3626,
+   "abs_out": 3673,
+   "file_in": 3617,
+   "file_out": 3681,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0014__ekiel-A.wav",
    "stick_t": 0.54,
    "stick_in": 0.39,
@@ -10910,13 +11114,13 @@
    "who": "ALYI",
    "text": "Someone should.",
    "tag": "",
-   "on_s": 154.195,
-   "end_s": 155.215,
-   "file_s": 153.845,
-   "abs_in": 3700,
-   "abs_out": 3726,
-   "file_in": 3692,
-   "file_out": 3743,
+   "on_s": 153.9033,
+   "end_s": 154.9233,
+   "file_s": 153.5533,
+   "abs_in": 3693,
+   "abs_out": 3719,
+   "file_in": 3685,
+   "file_out": 3736,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0015__alyi-A.wav",
    "stick_t": 3.32,
    "stick_in": 0.35,
@@ -10987,15 +11191,15 @@
    "who": "MAS",
    "text": "i'll ask him in person.",
    "tag": "V.O.",
-   "on_s": 177.505,
-   "end_s": 179.105,
-   "file_s": 177.085,
-   "abs_in": 4260,
-   "abs_out": 4299,
-   "file_in": 4250,
-   "file_out": 4310,
+   "on_s": 177.0567,
+   "end_s": 178.6567,
+   "file_s": 176.6367,
+   "abs_in": 4249,
+   "abs_out": 4288,
+   "file_in": 4239,
+   "file_out": 4299,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-08__mas-manalt-C.wav",
-   "stick_t": 1.88,
+   "stick_t": 1.89,
    "stick_in": 0.42,
    "cut": false,
    "on_camera": "vo",
@@ -11011,7 +11215,7 @@
     [
      "ask",
      7,
-     12
+     13
     ],
     [
      "him",
@@ -11020,12 +11224,12 @@
     ],
     [
      "in",
-     18,
+     19,
      20
     ],
     [
      "person",
-     22,
+     23,
      37
     ]
    ],
@@ -12634,15 +12838,15 @@
  "rails": [
   {
    "text": "DEC 2022",
-   "s": 2825,
-   "e": 2861,
+   "s": 2797,
+   "e": 2833,
    "shot": "15.06",
    "floor_f": 16
   },
   {
    "text": "2023",
-   "s": 3412,
-   "e": 3441,
+   "s": 3386,
+   "e": 3439,
    "shot": "15.10",
    "floor_f": 11
   },
@@ -12719,9 +12923,33 @@
    "os": false
   },
   {
-   "s": 578,
-   "e": 628,
-   "hold_to": 640,
+   "s": 500,
+   "e": 534,
+   "hold_to": 541,
+   "who": "STAFFER2",
+   "shown": "STAFF",
+   "text": "Did his post say why?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-a3-0025",
+   "os": false
+  },
+  {
+   "s": 541,
+   "e": 551,
+   "hold_to": 563,
+   "who": "STAFFER",
+   "shown": "STAFF",
+   "text": "No.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e2-a3-0026",
+   "os": false
+  },
+  {
+   "s": 684,
+   "e": 733,
+   "hold_to": 745,
    "who": "REPORTER",
    "shown": "ON THE TV",
    "text": "Senator, when does it get a vote?",
@@ -12731,9 +12959,9 @@
    "os": false
   },
   {
-   "s": 1447,
-   "e": 1478,
-   "hold_to": 1490,
+   "s": 1547,
+   "e": 1578,
+   "hold_to": 1589,
    "who": "MAS",
    "shown": "CEO",
    "text": "congratulations.",
@@ -12743,9 +12971,9 @@
    "os": false
   },
   {
-   "s": 1490,
-   "e": 1543,
-   "hold_to": 1554,
+   "s": 1589,
+   "e": 1642,
+   "hold_to": 1653,
    "who": "BUKAJ",
    "shown": "BUKAJ",
    "text": "Thank you. It's still warm.",
@@ -12755,9 +12983,9 @@
    "os": false
   },
   {
-   "s": 1554,
-   "e": 1573,
-   "hold_to": 1584,
+   "s": 1653,
+   "e": 1672,
+   "hold_to": 1683,
    "who": "MAS",
    "shown": "CEO",
    "text": "need anything?",
@@ -12767,9 +12995,9 @@
    "os": false
   },
   {
-   "s": 1584,
-   "e": 1685,
-   "hold_to": 1697,
+   "s": 1683,
+   "e": 1784,
+   "hold_to": 1796,
    "who": "BUKAJ",
    "shown": "BUKAJ",
    "text": "Not yet. I'd like a week in it before anyone asks me for a schedule.",
@@ -12779,9 +13007,9 @@
    "os": false
   },
   {
-   "s": 2325,
-   "e": 2377,
-   "hold_to": 2389,
+   "s": 2301,
+   "e": 2353,
+   "hold_to": 2365,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "Six years and eleven months.",
@@ -12791,21 +13019,21 @@
    "os": false
   },
   {
-   "s": 2405,
-   "e": 2463,
-   "hold_to": 2475,
+   "s": 2381,
+   "e": 2435,
+   "hold_to": 2447,
    "who": "MAS",
    "shown": "CEO",
-   "text": "a hundred and seventy-six days.",
+   "text": "eight years and five months.",
    "kind": "vo",
    "mode": "on-mic",
    "id": "e2-vo-07",
    "os": false
   },
   {
-   "s": 2864,
-   "e": 2903,
-   "hold_to": 2904,
+   "s": 2836,
+   "e": 2875,
+   "hold_to": 2876,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "FEEL THE AGI!",
@@ -12815,9 +13043,9 @@
    "os": false
   },
   {
-   "s": 2904,
-   "e": 2978,
-   "hold_to": 2990,
+   "s": 2876,
+   "e": 2950,
+   "hold_to": 2962,
    "who": "CROWD",
    "shown": "CROWD",
    "text": "FEEL THE AGI! FEEL THE AGI!",
@@ -12827,9 +13055,9 @@
    "os": false
   },
   {
-   "s": 3015,
-   "e": 3045,
-   "hold_to": 3055,
+   "s": 2988,
+   "e": 3018,
+   "hold_to": 3028,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "You're not chanting.",
@@ -12839,9 +13067,9 @@
    "os": false
   },
   {
-   "s": 3055,
-   "e": 3103,
-   "hold_to": 3108,
+   "s": 3028,
+   "e": 3077,
+   "hold_to": 3082,
    "who": "MAS",
    "shown": "CEO",
    "text": "someone has to hold the glass.",
@@ -12851,9 +13079,9 @@
    "os": false
   },
   {
-   "s": 3108,
-   "e": 3157,
-   "hold_to": 3169,
+   "s": 3082,
+   "e": 3130,
+   "hold_to": 3142,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "Then I'll feel it for both of us.",
@@ -12863,9 +13091,9 @@
    "os": false
   },
   {
-   "s": 3633,
-   "e": 3680,
-   "hold_to": 3692,
+   "s": 3626,
+   "e": 3673,
+   "hold_to": 3685,
    "who": "EKIEL",
    "shown": "EKIEL",
    "text": "Nobody knows how to do this yet.",
@@ -12875,9 +13103,9 @@
    "os": false
   },
   {
-   "s": 3700,
-   "e": 3726,
-   "hold_to": 3738,
+   "s": 3693,
+   "e": 3719,
+   "hold_to": 3731,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "Someone should.",
@@ -12887,9 +13115,9 @@
    "os": false
   },
   {
-   "s": 4260,
-   "e": 4299,
-   "hold_to": 4311,
+   "s": 4249,
+   "e": 4288,
+   "hold_to": 4300,
    "who": "MAS",
    "shown": "CEO",
    "text": "i'll ask him in person.",
@@ -13011,11 +13239,12 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "51 beat lengths are not whole frames (13.01, 13.02, 13.03, 13.04, 13.05, 13.06...): beats start on the rounded running total, as the stick reel draws them",
+  "52 beat lengths are not whole frames (13.01, 13.02, 13.03, 13.03b, 13.04, 13.05...): beats start on the rounded running total, as the stick reel draws them",
   "14.01: ui 'Look at · Talk to · Pick up · Us' is up 63 f, under its read floor 74 f (the stick's timing; kept)"
  ],
  "problems": [
   "e2-a3-0001: the stick's speaker staffer vs the take's TILED EMPLOYEE",
-  "e2-a3-0003: the stick's speaker staffer vs the take's TILED EMPLOYEE"
+  "e2-a3-0003: the stick's speaker staffer vs the take's TILED EMPLOYEE",
+  "e2-a3-0026: the stick's speaker staffer vs the take's TILED EMPLOYEE"
  ]
 }

@@ -33,7 +33,6 @@ import {checkInECU, fireToPoint, stringLights} from '../../art/sets/f22';
 import {drawAlyiRoom2, drawTpoolCheckIn} from '../../art/cast/alyi2';
 import {sleeve} from '../../art/cast/hands2';
 import {publishECU} from '../../art/sets/alyioffice';
-import {ekielBust} from '../../art/cast/ekiel';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import type {Img} from '../../../../../shared/pixel/figure';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
@@ -41,7 +40,9 @@ import {alyiWarm} from '../../art/cast/alyi2';
 import type {AlyiWarmState} from '../../art/cast/alyi2';
 import {drawMasStand2} from '../../art/cast/mas2';
 import type {Mas2Arm} from '../../art/cast/mas2';
-import {crowdBacks} from '../../art/cast/civic2';
+import {crowdBacks, makeBust3, plane} from '../../art/cast/civic2';
+import type {BustState, BustSpec3} from '../../art/cast/civic2';
+import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
 import {fill, pt, pw, pwrap, vramp, glossBloom, glossSpec, capsule, dith, tiny, tinyWidth} from '../../art/kit';
 import type {Sleeve} from '../../art/kit';
 import {RH, W, TR, putBustSoft, runOn, isSkin, cupThumb} from './common';
@@ -144,11 +145,35 @@ const openPalm = (b: Buf, x: number, y: number) => {
   for (let j = 0; j < 5; j++) { b.set(x - 1 - Math.floor(j / 2), y + 15 - j, SKA[3]); b.set(x - Math.floor(j / 2), y + 15 - j, SKA[2]); }
   for (let i = 1; i < 9; i++) b.set(x + i, y + 17, SKA[1]);
 };
+// THE FIXES PASS (2026-10-10): the episode review saw glasses on Alyi at 15.07 (and so did 15.06's chant medium and 15.08's
+// two-shot): the art's smiling and laughing eyes (alyi2 happyEyes) fill the eye band with skin but leave the Ep1
+// portrait's socket outline round it, a dark rectangle that reads as rims; bald with glasses is Tasya's design, so a
+// newcomer could take him for Tasya (P8). Here the smiling bust takes its eye band from his own calm head (alyi2
+// openWarmEyes: the 4.32 and 15.10 head, open eyes with whites, no rims) and adds the smile to it: the lower lids pushed
+// up a row by the cheeks, a crease at the outer corner. The warm smile and the laugh stay as drawn.
+const WARM_FIX = new Map<string, Img>();
+export const alyiWarmF = (s: AlyiWarmState): Img => {
+  if (s.mood !== 'smile' && s.mood !== 'laugh') return alyiWarm(s);
+  const key = JSON.stringify(s); const hit = WARM_FIX.get(key); if (hit) return hit;
+  const im = alyiWarm(s), calm = alyiWarm({...s, mood: 'calm', mouth: 'rest'});
+  const c = im.c.slice(), at = (x: number, y: number) => y * im.w + x;
+  for (let y = 40; y <= 52; y++) for (let x = 32; x <= 68; x++) { const i = at(x, y); if (calm.c[i] >= 0 && c[i] >= 0) c[i] = calm.c[i]; }
+  // the smile reaches the eyes: each eye's lowest open row becomes the cheek's lit skin (the lower lid pushed up), the
+  // lid crease under it a rung down; a short crease out from the near eye's outer corner
+  const skin = c[at(56, 54)] >= 0 ? c[at(56, 54)] : PAL.S4, crease = stepColor(skin, -1);
+  for (let x = 51; x <= 57; x++) { c[at(x, 48)] = skin; c[at(x, 49)] = x > 51 && x < 57 ? crease : skin; }
+  for (let x = 38; x <= 42; x++) { c[at(x, 49)] = skin; }
+  for (let x = 39; x <= 41; x++) c[at(x, 50)] = crease;
+  c[at(59, 47)] = crease; c[at(60, 48)] = crease; c[at(59, 49)] = crease;
+  const out = {...im, c};
+  WARM_FIX.set(key, out);
+  return out;
+};
 const CHANT = new Map<string, Img>();
 const PAD = 16;
 export const alyiChant = (s: {mood: AlyiWarmState['mood']; mouth: AlyiWarmState['mouth']}): Img => {
   const key = JSON.stringify(s); const hit = CHANT.get(key); if (hit) return hit;
-  const base = alyiWarm({mood: s.mood, mouth: s.mouth, arm: 'none', light: 'party'});
+  const base = alyiWarmF({mood: s.mood, mouth: s.mouth, arm: 'none', light: 'party'});
   const w = base.w + PAD, h = base.h;
   const t = new Buf(w, h, TR);
   for (let y = 0; y < h; y++) for (let x = 0; x < base.w; x++) { const v = base.c[y * base.w + x]; if (v >= 0) t.set(x + PAD, y, v); }
@@ -181,7 +206,7 @@ export const partyTwoShot = (b: Buf, f: number, st: TwoShotSt) => {
   // the crowd in front of him to his waist (he is IN the crowd), its hands up either side of him
   partyCrowd(b, 40, 170, 200, 1, f, {seed: 11, dim: 1, hands: 0.85, skip: (x) => x > 80 && x < 108});
   // Alyi close at the right, cropped by a swag of lights across the top of his frame
-  putBustSoft(b, runOn(alyiWarm({mood: st.alyi.mood, mouth: st.alyi.mouth, arm: st.alyi.arm ?? 'none', light: 'party'})), 286, 56, RH);
+  putBustSoft(b, runOn(alyiWarmF({mood: st.alyi.mood, mouth: st.alyi.mouth, arm: st.alyi.arm ?? 'none', light: 'party'})), 286, 56, RH);
   swag(b, f, 250, 480, 62, 12);
   glossBloom(b, 0, 0, W, RH, 0.7, 1);
   glossSpec(b, [[100, 168], [356, 88]]);
@@ -277,24 +302,52 @@ const night2023 = (): Buf => {
   NIGHT_BG = b;
   return b;
 };
+// EKIEL at the screen in 2023 (the fixes pass, 2026-10-10): art/cast/ekiel's head, copied (the art file is imported
+// only), with his eyes open: the art drew the squint as his resting face (for the card's SQUINT: 100%, cut as an
+// appearance gag once its setup was gone, GR X10), and at the screen its cyan iris read as a blank grey bar; here the
+// eye is a row taller and its iris dark, so he reads the post with his eyes open
+const EK_SANDY = [PAL.B1, PAL.B3, PAL.B4, PAL.W4, PAL.W5, PAL.W7];
+const EK_NAVY = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5, PAL.N7];
+const EK_TEE = [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6];
+// (the room-light head, as the art's bRoom; screenLit then keys it from the screen, as before)
+const ekiel23 = makeBust3<BustState>({
+  head: {yaw: 22, at: [57, 54], scale: 1.05, cranium: [19, 25, 23], cheekW: 14.5, jawW: 13, jawY: 19, chinY: 35, chinW: 4.5, chinZ: 12.5, chinH: 4, cheekbone: 1.4, full: 0.1, brow: 2.4, socket: 1.2,
+    nose: {tipY: 14, proj: 7, wing: 3.6, bridge: 2}, mouthY: 24, lips: 0.7, muzzle: 13, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'tousled', thick: 3.4, line: -17, side: -1},
+    skin: SKIN.light, hairRamp: EK_SANDY, back: {skin: PAL.S3, hair: PAL.W4}},
+  face: {eye: 'narrow', eyeW: 9, eyeH: 3, brow: 'straight', browCol: PAL.B2, mouthW: 9, age: 1, iris: PAL.B1},
+  torso: {kind: 'jacket'},
+  extras: () => ({parts: [], adjust: [plane('suit', 4, P.line(62, 106, 62, 150))]}),
+  ramps: {skin: SKIN.light, suit: EK_NAVY, shirt: EK_TEE},
+  backRamp: {skin: PAL.S3, suit: PAL.N5},
+  // his eyes open: the narrow eye's 'wide' state (two rows open, the iris with its pupil and glint, the lower lid a row
+  // down), level brows, the mouth at rest
+  expr: {neutral: {eye: 'wide', brow: 'level', mouth: 'rest'}},
+} as BustSpec3);
+void SKIN; void EK_SANDY;
 /** [2S] 15.10-15.11: this office, 2023, night: his screen close at frame left (in their eyeline), its bezel cropping
  *  Alyi's near shoulder (his frame rule); Alyi at it, Ekiel behind his shoulder squinting at the post; the post in its
  *  own UI, INTRODUCING SUPERALIGNMENT · ALYI, EKIEL, its hard sentence; the bare Publish under it; the flashback's bloom */
-export const office2023 = (b: Buf, f: number, st: {alyiMouth?: Viseme; ekielMouth?: Viseme; ekielLid?: 0 | 1 | 2; alyiRead?: number}) => {
+export const office2023 = (b: Buf, f: number, st: {alyiMouth?: Viseme; ekielMouth?: Viseme; ekielLid?: 0 | 1 | 2; alyiRead?: number; post?: 0 | 1 | 2}) => {
   b.c.set(night2023().c.subarray(0, W * RH));
-  putBustSoft(b, screenLit(ekielBust({mouth: st.ekielMouth ?? 'rest', expr: 'squint', lanyard: 'none', lid: st.ekielLid ?? 0})), 300, 48, RH);
+  // (the fixes pass: Ekiel reads the post with his eyes open; the squint, an appearance gag once its setup was cut, is
+  // gone from the act, GR X10)
+  putBustSoft(b, screenLit(ekiel23({mouth: st.ekielMouth ?? 'rest', expr: 'neutral', lid: st.ekielLid ?? 0} as BustState)), 300, 48, RH);
   // the window's city lights twinkle (slowly, a few at a time)
   for (let q = 0; q < 6; q++) { const x = 398 + Math.floor(hash(q, 7, Math.floor(f / 24)) * 80), y = 60 + Math.floor(hash(q, 8, Math.floor(f / 24)) * 60); b.set(x, y, PAL.W6); }
   putBustSoft(b, screenLit(runOn(alyiWarm({mood: 'focus', mouth: st.alyiMouth ?? 'rest', arm: 'none', light: 'party'}))), 168, 58, RH);
   // the screen (close, left), the post in its own UI, the bezel's right edge over his near shoulder
   fill(b, 0, 8, 186, 195, PAL.N0); fill(b, 4, 14, 176, 189, PAL.N2); fill(b, 183, 8, 3, 195, PAL.N3);
-  fill(b, 10, 22, 164, 22, PAL.C1); pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8);
-  pt(b, 'ALYI, EKIEL', 14, 50, PAL.N7);
+  // the draft fills in after the rail (the fixes pass: the 2023 rail holds 2.2 s on its own, clear of the post): st.post
+  // 0 = the empty draft (a greyed title placeholder, the caret), 1 = the title and the byline, 2 = and its sentence
+  const ps = st.post ?? 2;
+  fill(b, 10, 22, 164, 22, PAL.C1);
+  if (ps >= 1) { pt(b, 'INTRODUCING', 14, 24, PAL.P2); pt(b, 'SUPERALIGNMENT', 14, 33, PAL.C8); pt(b, 'ALYI, EKIEL', 14, 50, PAL.N7); }
+  else pt(b, 'Title', 14, 28, PAL.C3);
   const s0 = 'Currently, we don\'t have a solution for steering or controlling a potentially superintelligent AI, and preventing it from going rogue.';
-  pwrap(s0, 156).forEach((l, i) => pt(b, l, 14, 66 + i * 11, PAL.P1));
+  if (ps >= 2) pwrap(s0, 156).forEach((l, i) => pt(b, l, 14, 66 + i * 11, PAL.P1));
   fill(b, 14, 176, pw('Publish') + 12, 16, PAL.C3); pt(b, 'Publish', 20, 180, PAL.P2);
-  // the caret blinking after the byline (the post still a draft)
-  if (Math.floor(f / 12) % 2 === 0) fill(b, 14 + pw('ALYI, EKIEL') + 2, 49, 1, 9, PAL.C6);
+  // the caret blinking (the post still a draft): in the empty title, then after the byline
+  if (Math.floor(f / 12) % 2 === 0) { if (ps >= 1) fill(b, 14 + pw('ALYI, EKIEL') + 2, 49, 1, 9, PAL.C6); else fill(b, 13, 26, 1, 10, PAL.C6); }
   void st.alyiRead;
   glossBloom(b, 0, 0, W, RH, 0.72, 1);
   void f;
@@ -432,3 +485,32 @@ export const offsiteMedium = (b: Buf, f: number) => {
   fill(b, 96, 0, 104, RH, PAL.D2); fill(b, 196, 0, 4, RH, PAL.D4); for (let y = 0; y < RH; y += 9) fill(b, 96, y, 100, 1, PAL.D1);
   glossBloom(b, 0, 0, W, RH, 0.72, 1);
 };
+
+/** [MCU] 15.15's middle (the fixes pass, 2026-10-10: the review found the turn riding on props, Alyi tiny in the doorway
+ *  as the effigy caught): ALYI in the lodge doorway, close, the fire he has just lit at frame right lighting his face
+ *  warm (its light walking on held drawings, never a strobe), the match lowered, calm, watching it take; the jamb over
+ *  his near half (his frame rule); embers rising past the frame's right edge; no zealot framing, no iconography */
+export const offsiteCatch = (b: Buf, f: number) => {
+  vramp(b, 0, 0, W, RH, [PAL.N0, PAL.N1, PAL.U0]);
+  fill(b, 0, 0, 300, RH, PAL.D1); for (let y = 4; y < RH; y += 12) fill(b, 0, y, 300, 1, PAL.D0);
+  fill(b, 110, 10, 170, RH, PAL.W4); for (let y = 10; y < RH; y++) for (let x = 110; x < 280; x++) if (bayer(x, y) < 0.35) b.set(x, y, PAL.W5);
+  // the fire's light from frame right: a warm field that breathes on 4-frame held steps (the palette walks; the shape holds)
+  const ph = Math.floor(f / 4) % 3, reach = [150, 162, 156][ph];
+  for (let y = 0; y < RH; y++) for (let x = 250; x < W; x++) { const d = Math.hypot((x - 500) / reach, (y - 150) / 150); if (d < 1 && bayer(x, y) < (1 - d) * 0.9) b.set(x, y, d < 0.45 ? PAL.W6 : d < 0.7 ? PAL.W4 : PAL.W2); }
+  for (let q = 0; q < 14; q++) { const ex = 420 + Math.floor(hash(q, 7, 1) * 56), ey = RH - ((Math.floor(f / 2) * 3 + Math.floor(hash(q, 8, 1) * 200)) % RH); b.set(ex, ey, q % 3 ? PAL.W7 : PAL.W8); }
+  const im = runOn(alyiWarm({mood: 'calm', mouth: 'rest', arm: 'none', light: 'fire', f}));
+  putBustSoft(b, im, 150, 40, RH, true);
+  // the fire's light on him, from frame right: a warm rim on the edge of his face and shoulder toward it (two pixels,
+  // the outer one brighter) and a warm glow dithered into the skin beside it, breathing with the fire's held steps
+  // (the bust is at x 150-262; its rightmost skin pixel in each row is the edge toward the fire)
+  for (let y = 40; y < RH; y++) {
+    let xr = -1;
+    for (let x = 262; x > 150; x--) if (isSkin(b.get(x, y))) { xr = x; break; }
+    if (xr < 0) continue;
+    b.set(xr, y, ph === 1 ? PAL.W7 : PAL.W6); b.set(xr - 1, y, PAL.W5);
+    for (let x = xr - 2; x > xr - 12; x--) { const c = b.get(x, y); if (isSkin(c) && bayer(x, y) < 0.22 + ph * 0.06) b.set(x, y, PAL.W4); }
+  }
+  fill(b, 96, 0, 104, RH, PAL.D2); fill(b, 196, 0, 4, RH, PAL.D4); for (let y = 0; y < RH; y += 9) fill(b, 96, y, 100, 1, PAL.D1);
+  glossBloom(b, 0, 0, W, RH, 0.72, 1);
+};
+

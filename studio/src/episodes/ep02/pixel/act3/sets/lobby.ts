@@ -322,12 +322,24 @@ export const tapeMCU = (b: Buf, f: number, st: {press?: number; raise?: number})
   b.set(el[0] + 9, el[1] + 4, HOOD_SLEEVE[4]); b.set(el[0] + 10, el[1] + 3, HOOD_SLEEVE[4]);
   drawHand(b, h.hand, h.x, h.y);
 };
-/** [ECU] 13.03's beat: his flyer on the pillar, upside down, close (the steel and its LED rows round it) */
-export const flyerPillarECU = (b: Buf, f: number) => {
+/** [ECU] 13.03's beat: his flyer on the pillar, upside down, close (the steel and its LED rows round it). The fixes
+ *  pass (2026-10-10; the episode review read the upside-down flyer as a mistake): his hand comes back into the frame
+ *  from the right toward its taped top corner to turn it (`reach` 0..1), stops a finger short of the tape, and lowers
+ *  away out of frame (`lower` 0..1): he sees it is upside down and leaves it so, a choice */
+export const flyerPillarECU = (b: Buf, f: number, st: {reach?: number; lower?: number} = {}) => {
   fill(b, 0, 0, W, RH, PAL.N2);
   for (let y = 6; y < RH; y += 12) { fill(b, 0, y, W, 1, PAL.N1); for (let x = 20; x < W; x += 40) { const on = hash(x, y, Math.floor((f + x) / 9)) < 0.6; fill(b, x, y + 4, 3, 3, on ? ((x + y) % 3 ? PAL.C6 : PAL.L3) : PAL.N3); } }
   fill(b, 0, 0, 6, RH, PAL.G2); fill(b, W - 8, 0, 8, RH, PAL.G4);
   laySheet(b, flyerSheet(true), 165, 4, {upside: true, shadow: 3});
+  const r = clamp(st.reach ?? 0, 0, 1), lo = clamp(st.lower ?? 0, 0, 1);
+  if (r <= 0 || lo >= 1) return;
+  // the hand at the flyer's scale (about as big as the flyer's photo is wide: the floor ECU's hand), the fingers
+  // pinched to take the tape's corner, the index tip a finger short of it; the hoodie sleeve out past the frame's edge
+  const tx = 320, ty = 24;
+  const x = Math.round(tx + (1 - r) * 150), y = Math.round(ty + lo * 200);
+  const h = placeHand(POSES.pinch([-0.82, -0.5, 0.2], [0.25, -0.35, 0.9], 'R'), {s: 4.6, at: [x, y], anchor: 'index', light: 'lobby', cuffRamp: cuff7(HOOD_SLEEVE)});
+  sleeve(b, h.cuffEnd, [h.cuffEnd[0] + 170, h.cuffEnd[1] + 110], 13, 17, HOOD_SLEEVE);
+  drawHand(b, h.hand, h.x, h.y);
 };
 
 // ================================================================== 13.04-13.05: the presser

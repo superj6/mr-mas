@@ -3,7 +3,7 @@
 > **Status: every line of the beat plans recorded through the Ep2 route and measured, 2026-10-09, by the dialogue recordist (the takes pass).** Nobody has listened (R8). Every verdict here is a measurement [M] unless it says it is a judgement [J]; the lines a human ear must check are in [§6](#6-for-the-ear).
 >
 > <!-- BEGIN generated:summary -->
-173 of 173 lines have a take (missing: none; unmeasured: none). **59 PASS** every check, **114 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 33 lines were read more than once. The takes pass sent 9,362 characters in 197 calls, **4,133 credits** by the API's own character-cost headers.
+175 of 175 lines have a take (missing: none; unmeasured: none). **59 PASS** every check, **116 LOOK** (they pass, with a number at the edge of its band: for the ear), **0 FLAG** (still failing after three retakes). 35 lines were read more than once. The takes pass sent 9,463 characters in 202 calls, **4,176 credits** by the API's own character-cost headers.
 <!-- END generated:summary -->
 
 **Contents:** [1. What was recorded, and how](#1-what-was-recorded-and-how) · [2. The checks and the rule](#2-the-checks-and-the-rule) · [3. Every line](#3-every-line) · [4. Retakes](#4-retakes) · [5. The special lines](#5-the-special-lines) · [6. For the ear](#6-for-the-ear) · [7. Credits](#7-credits) · [8. Files and how to re-run](#8-files-and-how-to-re-run) · [9. Open issues, and the rules checked](#9-open-issues-and-the-rules-checked)
@@ -193,13 +193,15 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a3-0002 | staffer2 | `e2-a3-0002__staffer2-A.wav` | in the corridor last week for a second. | 2.38 / 2.81 (0.85) | 202 (157-213) | 188 | -16.0 · -1.6 | -74 · 39 dB |  | **LOOK**: length 0.85 of the plan; floor 39 dB under the speech (p5; house bed depth 45) |
 | e2-a3-0003 | staffer | `e2-a3-0003__tiled-employee-A.wav` | He posted though. Do we take these down now? | 2.57 / 3.06 (0.84) | 210 (162-218) | 200 | -16.0 · -2.7 | -88 · 69 dB |  | **LOOK**: length 0.84 of the plan |
 | e2-a3-0004 | mas | `e2-a3-0004__mas-manalt-C.wav` | Leave them up. | 0.79 / 1.39 (0.57) | 228 | 109 | -16.0 · -2.0 | -86 · 67 dB |  | **LOOK**: length -0.60 s off the plan |
+| e2-a3-0025 | staffer2 | `e2-a3-0025__staffer2-A.wav` · line settings: stability 0.5, style 0.0, speed 0.85 | Did his post say why? | 1.40 / 1.72 (0.81) | 214 (157-213) | 196 | -16.0 · -1.5 | -75 · 45 dB |  | **LOOK**: 2 reads; length 0.81 of the plan; tempo 214 wpm against staffer2 at the planned 185 wpm +-15 % |
+| e2-a3-0026 | staffer | `e2-a3-0026__tiled-employee-A.wav` | No. | 0.39 / 0.50 (0.78) | 154 | 167 | -16.0 · -3.2 | -88 · 69 dB |  | **PASS** |
 | e2-a3-0005 | reporter | `e2-a3-0005__reporter-A.wav` | Senator, when does it get a vote? | 2.01 / 2.37 (0.85) | 209 (157-213) | 208 | -16.0 · -3.2 | -63 · 44 dB |  | **LOOK**: length 0.85 of the plan; floor 44 dB under the speech (p5; house bed depth 45) |
 | e2-a3-0023 | mas | `e2-a3-0023__mas-manalt-C.wav` | Congratulations! | 1.27 / 1.00 (1.27) | 47 | 113 | -16.0 · -3.3 | -86 · 62 dB |  | **PASS** |
 | e2-a3-0006 | bukaj | `e2-a3-0006__bukaj-A.wav` | Thank you. It's still warm. | 2.18 / 2.10 (1.04) | 138 (136-184) | 113 | -16.0 · -1.8 | -83 · 66 dB |  | **PASS** |
 | e2-a3-0024 | mas | `e2-a3-0024__mas-manalt-C.wav` | Need anything? | 0.75 / 0.96 (0.78) | 160 | 128 | -16.0 · -2.9 | -83 · 66 dB |  | **PASS** |
 | e2-a3-0007 | bukaj | `e2-a3-0007__bukaj-A.wav` · retake, seed +1000 | Not yet, I'd like a week in it before anyone asks me for a schedule. | 4.17 / 5.84 (0.71) | 216 (136-184) | 107 | -16.0 · -2.4 | -78 · 59 dB |  | **LOOK**: 2 reads; length 0.71 of the plan; tempo 216 wpm against bukaj at the planned 160 wpm +-15 % |
 | e2-a3-0008 | alyi | `e2-a3-0008__alyi-A.wav` · cut from e1-a1-5-13 (Ep1's take) | 6 years and 11 months. | 2.10 / 2.10 (1.00) | 143 (128-172) | 86 | -16.0 · -3.5 | take -62 |  | **PASS** |
-| e2-vo-07 | mas | `e2-vo-07__mas-manalt-C.wav` | 176 days. | 2.40 / 2.44 (0.98) | 125 (110-130) | 117 | -18.0 · -3.7 | -82 · 59 dB |  | **PASS** |
+| e2-vo-07 | mas | `e2-vo-07__mas-manalt-C.wav` · line settings: stability 0.65, style 0.0, speed 0.75 | Eight years and five months. | 2.24 / 2.44 (0.92) | 134 (110-130) | 111 | -18.0 · -4.5 | -81 · 60 dB |  | **LOOK**: 3 reads; tempo 134 wpm against his V.O. 110-130 |
 | e2-a3-0009 | alyi | `e2-a3-0009__alyi-A.wav` | Feel the AGI. | 1.59 / 1.20 (1.32) | 113 | 99 | -16.0 · -2.7 | -68 · 54 dB | AGI +13.1 (AGE +13.4) | **LOOK**: length +0.39 s off the plan |
 | e2-a3-0010 | crowd | `e2-a3-0010__crowd-layered.wav` · 10 layers | Feel the AGI, AGI, Feel the AGI, AGI | 3.03 / 2.60 (1.17) | 119 | 170 | -19.0 · -3.5 | take -63 | AGI +7.8 | **LOOK**: asr: '(nothing)' heard 'agi'; '(nothing)' heard 'agi' (a crowd take: the recogniser is not built for it) |
 | e2-a3-0011 | alyi | `e2-a3-0011__alyi-A.wav` | You're not chanting. | 1.19 / 1.30 (0.92) | 151 | 103 | -16.3 · -2.6 | -64 · 50 dB |  | **PASS** |
@@ -295,12 +297,14 @@ Per line: the take used (its file; a retake's seed; a per-line setting), what th
 | e2-a2-0038 | engineer | 4 | 3 read(s) at an earlier reading or setting: asr: 'and' heard 'in' (forced margin -10.7) / asr: 'and' heard 'in' (forced margin -8.9) / passed | the first read: PASS |
 | e2-vo-06 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed | the first read: LOOK (tempo 131 wpm against his V.O. 110-130) |
 | e2-a3-0007 | bukaj | 2 | a 1.25 s silence inside the read | seed +1000: LOOK (length 0.71 of the plan; tempo 216 wpm against bukaj at the planned 160 wpm +-15 %) |
+| e2-vo-07 | mas-manalt | 3 | 2 read(s) at an earlier reading or setting: passed / passed, length 0.84 of the plan; tempo 146 wpm against his V.O. 110-130 | the first read: LOOK (tempo 134 wpm against his V.O. 110-130) |
 | e2-a3-0012 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.62 of the plan; tempo 216 wpm against Mas unhurried (~140) | the first read: LOOK (length 0.74 of the plan; tempo 181 wpm against Mas unhurried (~140)) |
 | e2-a3-0014 | ekiel | 2 | asked (--force): one more read, the one nearer the plan kept | seed +1000: LOOK (length 0.69 of the plan; tempo 223 wpm against ekiel at the planned 160 wpm +-15 %; floor 38 dB under the speech (p5; house bed depth 45)) |
 | e2-vo-08 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.60 of the plan; tempo 206 wpm against his V.O. 110-130 | the first read: LOOK (length 0.66 of the plan; tempo 188 wpm against his V.O. 110-130) |
 | e2-a3-0016 | forecaster | 2 | a 1.06 s silence inside the read | seed +1000: PASS |
 | e2-vo-09 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed | the first read: LOOK (tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)) |
 | e2-vo-10 | mas-manalt | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.77 of the plan; tempo 160 wpm against his V.O. 110-130 | the first read: LOOK (tempo 143 wpm against his V.O. 110-130) |
+| e2-a3-0025 | staffer2 | 2 | 1 read(s) at an earlier reading or setting: passed, length 0.68 of the plan; tempo 256 wpm against staffer2 at the planned 185 wpm +-15 % | the first read: LOOK (length 0.81 of the plan; tempo 214 wpm against staffer2 at the planned 185 wpm +-15 %) |
 | e2-a4-0001 | neleh | 4 | name Rettiwt: -8.6 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech / name Rettiwt: -3.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 16 dB under the speech / name Rettiwt: -4.5 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech | seed +1000: LOOK (name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; length 1.31 of the plan; tempo 140 wpm against neleh at the planned 190 wpm +-15 %; floor 16 dB under the speech (p5; house bed depth 45)) |
 | e2-a4-0002 | neleh | 4 | noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech / noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 17 dB under the speech / noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 20 dB under the speech | the first read: LOOK (length 1.22 of the plan; tempo 152 wpm against neleh at the planned 190 wpm +-15 %; floor 15 dB under the speech (p5; house bed depth 45)) |
 | e2-a4-0005 | terb | 2 | the raw audio stops while still sounding | seed +1000: LOOK (length 1.31 of the plan; tempo 117 wpm against terb at the planned 165 wpm +-15 %; floor 31 dB under the speech (p5; house bed depth 45)) |
@@ -377,7 +381,7 @@ The lines the numbers single out (a recogniser or name question, a pitch jump, o
 | e2-a4-0029 | mas-manalt | LOOK | length 0.70 of the plan; tempo 192 wpm against Mas unhurried (~140) |
 | e2-a4-0016 | mario | LOOK | asr: 'win' heard 'wins' (the recogniser's; the text scores -2.5 against what it heard) |
 
-The other 82 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
+The other 84 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure), a length 0.70-0.85 or 1.15-1.30 of the plan, or a tempo outside its mark: each is in its line's row in §3.
 <!-- END generated:ear -->
 
 ---
@@ -398,7 +402,7 @@ The other 82 LOOKs are a raw noise floor under the house bed's 45 dB (p5 measure
 **How it was counted** [M]: credits are the API's own `character-cost` headers, summed from every `manifest.json` under `audio/ep02/v1-el/ep02-v1/` (`el_qa.py report`). The subscription's counter moved **17,722 → 21,721** over the pass, a delta of exactly **3,999**, so no other pass spent credits meanwhile. MARIO (Kokoro), the cuts and the crowd sent nothing. **The lock QA (2026-10-09) added 66 credits**: three reads of V.O. 9 (`variants/variant-e2-vo-09-*.json`; the kept one is `stop1-s120`), which the generated total below now includes.
 
 <!-- BEGIN generated:credits -->
-Summed from every manifest at report time: 197 calls, 9,362 characters, **4,133 credits** (the takes pass).
+Summed from every manifest at report time: 202 calls, 9,463 characters, **4,176 credits** (the takes pass).
 <!-- END generated:credits -->
 
 ---

@@ -904,6 +904,296 @@
   "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
  },
  {
+  "id": "e2-a3-0025",
+  "kind": "dialogue",
+  "scene": "13.03b",
+  "speaker": "STAFFER 2",
+  "speaker_slug": "staffer2",
+  "text": "Did his post say why?",
+  "spoken_as": "Did his post say why?",
+  "tag": "",
+  "delivery": "quietly, to the first staffer, both watching Mas tape his flyer back; a real question",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0025__staffer2-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 2.465,
+  "frames_24": 59,
+  "voiced_span_s": 1.4,
+  "pace": {
+   "audible_in_s": 0.44,
+   "audible_out_s": 1.84,
+   "measured": {
+    "span_s": 1.4,
+    "wpm": 214.3,
+    "syllables": 5,
+    "articulation_sps": 3.57,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 5,
+   "wpm": 214.3,
+   "speed": 0.85,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "Did",
+    "t0": 0.42,
+    "t1": 0.605,
+    "ph": "dˈɪd"
+   },
+   {
+    "w": "his",
+    "t0": 0.652,
+    "t1": 0.768,
+    "ph": "hˌɪz"
+   },
+   {
+    "w": "post",
+    "t0": 0.838,
+    "t1": 1.139,
+    "ph": "pˈOst"
+   },
+   {
+    "w": "say",
+    "t0": 1.186,
+    "t1": 1.337,
+    "ph": "sˈA"
+   },
+   {
+    "w": "why",
+    "t0": 1.395,
+    "t1": 1.72,
+    "ph": "wˌI"
+   }
+  ],
+  "qa": {
+   "asr": "Did his post say why?",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -1.53,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 196.4,
+   "f0_range_st": 7.9,
+   "speech_head_s": 0.44,
+   "speech_tail_s": 0.625,
+   "raw_tail_cut": false,
+   "align_median_s": 0.092
+  },
+  "voice": "ElevenLabs library voice 'Jessi - Friendly, Smooth, and Soft' (shared Voice Library (professional voice of its owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.85",
+  "voiceId": "09AoN6tYyW3VSTQqCo7C",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "staffer2",
+   "voice_id": "09AoN6tYyW3VSTQqCo7C",
+   "voice_name": "Jessi - Friendly, Smooth, and Soft",
+   "source": "shared Voice Library (professional voice of its owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.85
+   },
+   "seed": 3732963640,
+   "chars_sent": 21,
+   "request_key": "11b523436a79472c",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "A"
+   },
+   {
+    "t": 0.583,
+    "f": 14,
+    "shape": "E"
+   },
+   {
+    "t": 0.833,
+    "f": 20,
+    "shape": "M"
+   },
+   {
+    "t": 0.917,
+    "f": 22,
+    "shape": "O"
+   },
+   {
+    "t": 1.042,
+    "f": 25,
+    "shape": "E"
+   },
+   {
+    "t": 1.208,
+    "f": 29,
+    "shape": "A"
+   },
+   {
+    "t": 1.375,
+    "f": 33,
+    "shape": "O"
+   },
+   {
+    "t": 1.5,
+    "f": 36,
+    "shape": "A"
+   },
+   {
+    "t": 1.708,
+    "f": 41,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
+  "id": "e2-a3-0026",
+  "kind": "dialogue",
+  "scene": "13.03b",
+  "speaker": "TILED EMPLOYEE",
+  "speaker_slug": "tiled-employee",
+  "text": "No.",
+  "spoken_as": "No.",
+  "tag": "",
+  "delivery": "quietly, not looking away from Mas; plain, no shrug in it",
+  "on_camera": "on",
+  "mode": "on-mic",
+  "device": null,
+  "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0026__tiled-employee-A.wav",
+  "file_device": null,
+  "mp3": null,
+  "duration_s": 1.21,
+  "frames_24": 29,
+  "voiced_span_s": 0.39,
+  "pace": {
+   "audible_in_s": 0.35,
+   "audible_out_s": 0.74,
+   "measured": {
+    "span_s": 0.39,
+    "wpm": 153.8,
+    "syllables": 1,
+    "articulation_sps": 2.56,
+    "pauses_s": []
+   },
+   "longest_internal_gap_s": 0.0,
+   "words": 1,
+   "wpm": 153.8,
+   "speed": 0.95,
+   "tsm": 1.0
+  },
+  "words": [
+   {
+    "w": "No",
+    "t0": 0.35,
+    "t1": 0.652,
+    "ph": "nˈO"
+   }
+  ],
+  "qa": {
+   "asr": "No.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
+   "lufs_i": -16.0,
+   "target_lufs": -16.0,
+   "true_peak_dbtp": -3.2,
+   "clipped_samples": 0,
+   "digital_black_runs": 0,
+   "median_f0_hz": 167.2,
+   "f0_range_st": 6.0,
+   "speech_head_s": 0.35,
+   "speech_tail_s": 0.47,
+   "raw_tail_cut": false,
+   "align_median_s": 0.35
+  },
+  "voice": "ElevenLabs library voice 'Avery - Healthcare & Clinical Education' (shared Voice Library (professional voice clone of the voice owner), used by voice_id) · cand A · eleven_multilingual_v2 · speed 0.95",
+  "voiceId": "w25dAwxibNES1hcDBvXx",
+  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
+  "el": {
+   "cand": "A",
+   "role": "tiled-employee",
+   "voice_id": "w25dAwxibNES1hcDBvXx",
+   "voice_name": "Avery - Healthcare & Clinical Education",
+   "source": "shared Voice Library (professional voice clone of the voice owner), used by voice_id",
+   "model_id": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.5,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "seed": 1719542966,
+   "chars_sent": 3,
+   "request_key": "27efce012f65f85c",
+   "derived_from": null,
+   "reused_from": null
+  },
+  "status": "el",
+  "take": "el-A",
+  "processing": [
+   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
+   "HPF 60 Hz",
+   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+   "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+  ],
+  "kokoro_ref": {
+   "timeline_in": null,
+   "timeline_dur": null
+  },
+  "mouth": [
+   {
+    "t": 0.0,
+    "f": 0,
+    "shape": "rest"
+   },
+   {
+    "t": 0.333,
+    "f": 8,
+    "shape": "E"
+   },
+   {
+    "t": 0.458,
+    "f": 11,
+    "shape": "O"
+   },
+   {
+    "t": 0.667,
+    "f": 16,
+    "shape": "rest"
+   }
+  ],
+  "_assembly": "Ep2 el_takes.py: EL take (file, length, words) + the Kokoro take's camera fields (if any) + a mouth track (ep02 pixel/tools/mouths.py mouth_cues)"
+ },
+ {
   "id": "e2-a3-0005",
   "kind": "dialogue",
   "scene": "13.05",
@@ -2116,79 +2406,81 @@
   "scene": "15.03",
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
-  "text": "a hundred and seventy-six days.",
-  "spoken_as": "A hundred and seventy-six days.",
+  "text": "eight years and five months.",
+  "spoken_as": "Eight years and five months.",
   "tag": "V.O.",
-  "delivery": "after Alyi's far-off count; flat, exact; the number is the feeling",
+  "delivery": "after Alyi's far-off count, carrying it on to today; flat, exact; the number is the feeling",
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 3.26,
-  "frames_24": 78,
-  "voiced_span_s": 2.4,
+  "duration_s": 3.12,
+  "frames_24": 75,
+  "voiced_span_s": 2.24,
   "pace": {
-   "audible_in_s": 0.38,
-   "audible_out_s": 2.78,
+   "audible_in_s": 0.41,
+   "audible_out_s": 2.65,
    "measured": {
-    "span_s": 2.4,
-    "wpm": 125.0,
-    "syllables": 8,
-    "articulation_sps": 3.33,
-    "pauses_s": []
+    "span_s": 2.24,
+    "wpm": 133.9,
+    "syllables": 5,
+    "articulation_sps": 2.23,
+    "pauses_s": [
+     0.06
+    ]
    },
-   "longest_internal_gap_s": 0.0,
+   "longest_internal_gap_s": 0.06,
    "words": 5,
-   "wpm": 125.0,
-   "speed": 0.85,
+   "wpm": 133.9,
+   "speed": 0.75,
    "tsm": 1.0
   },
   "words": [
    {
-    "w": "A",
-    "t0": 0.36,
-    "t1": 0.466
+    "w": "Eight",
+    "t0": 0.39,
+    "t1": 0.698
    },
    {
-    "w": "hundred",
-    "t0": 0.605,
-    "t1": 1.012
+    "w": "years",
+    "t0": 0.78,
+    "t1": 1.232
    },
    {
     "w": "and",
-    "t0": 1.058,
-    "t1": 1.174
+    "t0": 1.314,
+    "t1": 1.465
    },
    {
-    "w": "seventy-six",
-    "t0": 1.256,
-    "t1": 2.068
+    "w": "five",
+    "t0": 1.569,
+    "t1": 1.999
    },
    {
-    "w": "days",
-    "t0": 2.15,
-    "t1": 2.649
+    "w": "months",
+    "t0": 2.08,
+    "t1": 2.533
    }
   ],
   "qa": {
-   "asr": "176 days.",
-   "cer": 0.1,
-   "word_recall_nonames": 0.833,
+   "asr": "Eight years and five months.",
+   "cer": 0.0,
+   "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -3.7,
+   "true_peak_dbtp": -4.49,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 117.0,
-   "f0_range_st": 12.0,
-   "speech_head_s": 0.38,
-   "speech_tail_s": 0.48,
+   "median_f0_hz": 111.2,
+   "f0_range_st": 13.9,
+   "speech_head_s": 0.41,
+   "speech_tail_s": 0.47,
    "raw_tail_cut": false,
-   "align_median_s": 0.71
+   "align_median_s": 0.2
   },
-  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.85",
+  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
   "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
   "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
   "el": {
@@ -2203,11 +2495,11 @@
     "similarity_boost": 0.75,
     "style": 0.0,
     "use_speaker_boost": true,
-    "speed": 0.85
+    "speed": 0.75
    },
    "seed": 1257794257,
-   "chars_sent": 31,
-   "request_key": "8bb5f1c8814a3bb1",
+   "chars_sent": 28,
+   "request_key": "4762a466ca380ba6",
    "derived_from": null,
    "reused_from": null
   },
@@ -3380,7 +3672,7 @@
   "text": "Nobody knows how to do this yet.",
   "spoken_as": "Nobody knows how to do this yet.",
   "tag": "",
-  "delivery": "squinting at the screen; quiet, dry",
+  "delivery": "eyes on the screen; quiet, dry",
   "on_camera": "on",
   "mode": "on-mic",
   "device": null,
