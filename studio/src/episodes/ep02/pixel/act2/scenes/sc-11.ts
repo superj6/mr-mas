@@ -5,7 +5,8 @@
 //   SET-PIECE 11.02 the big screen close (its own pixels doubled): ears, eyes, a mouth in three held steps, the VOICE 5
 //            badge; "Hi! I can see you." · 11.03 for five frames its eyes are tokens pointed into the wings (GLYPH,
 //            drawn by the browser host), then Mas and the Orb in the wings: the Orb scans the screen, its toast
-//            `verified: …` never resolves and gives up · 11.04-11.07 the engineer and the product in the meter frame;
+//            `verified: …` never resolves and gives up · 11.04-11.07 the engineer and the product in the meter frame
+//            (the cleanup pass: 11.04 cuts to the screen's face on the gush and to the engineer's single on "Thanks.");
 //            each laugh slides the spot one step off Rima toward the screen (k262, k181, k218: three steps); the
 //            cut-off "Thanks."; the three mouths; Rima half in the light, sticking to the running order (a click);
 //            the phone turned on the house, a pair of glasses fogging mid-house, the blush, 😊 · 11.08 the chat:
@@ -18,7 +19,7 @@
 //            she doesn't look up · 11.16 every head near the wings turns; the blimp over the emptying house
 // Why he posted it, and whether the voice was meant to sound like anyone: nothing here tells us (W8). No V.O.
 import {defineScene, layouts, mouth, roomMouth, talking, mk} from '../../kit';
-import {stageWide, screenSCR, rimaMCU, glassesECU, eng2S, demoOpen, rimaClicker, STG, scrEyes, CATCH, houseClose} from '../sets/stage';
+import {stageWide, screenSCR, rimaMCU, glassesECU, eng2S, engSingle, demoOpen, rimaClicker, STG, scrEyes, CATCH, houseClose} from '../sets/stage';
 import type {ScreenSt, StageSt} from '../sets/stage';
 import {masOrb2S, masPhoneMedium, thumbECU, masFaceWork, herPOV} from '../sets/wings';
 import {glyphLayer} from '../../../../../shared/pixel/glyph';
@@ -84,11 +85,17 @@ L.add('11.03', {
   },
 });
 L.add('11.04', {
-  st: 'act2/sets/stage stageWide (the meter frame: the engineer at his mark raises the phone and asks for short answers (room mouth); the product answers from the big screen (its mouth on its line); "Thanks." in over "favorite"; the house laughs (the heads bob); on the swing the spot slides its first step off Rima toward the screen, and she is half in the light)',
-  face: {ENGINEER: 'room'},
-  marks: {laugh: ['snd', 'crowd_laugh_m', 1, 0], swing: ['snd', 'spotlight_swing', 1, 0]},
+  st: 'act2/sets/stage stageWide → screenSCR → engSingle → stageWide (the meter frame: the engineer at his mark raises the phone and asks for short answers (room mouth); the cleanup pass: [SCR] the big screen close (11.02\'s and 11.05\'s framing) for the gush, the product\'s mouth on its line; [MCU] the engineer\'s single (his 11.15 bust, mirrored to face the screen, the phone up; lip-synced) for "Thanks.", in over "favorite"; the meter frame again on the laugh: the house laughs (the heads bob); on the swing the spot slides its first step off Rima toward the screen, and she is half in the light)',
+  face: {ENGINEER: 'lip'},
+  marks: {laugh: ['snd', 'crowd_laugh_m', 1, 0], swing: ['snd', 'spotlight_swing', 1, 0], gush: ['on', 'e2-a2-0027', 0], thx: ['on', 'e2-a2-0028', 0]},
   draw: (fb, k, sh, f) => {
     const sw = mk(sh, 'swing', 262), la = mk(sh, 'laugh', 250);
+    // the cuts (the cleanup pass, 2026-10-11): the wide carries the setup line; the screen's face takes the gush from
+    // two frames before it; the engineer's single takes "Thanks." from three frames before it; the wide comes back on
+    // the laugh (the meter's first step is read in the wide)
+    const gush = mk(sh, 'gush', 128), thx = mk(sh, 'thx', 229);
+    if (k >= gush - 2 && k < thx - 3) { screenSCR(fb, f, face(sh, k, {from: 16})); return; }
+    if (k >= thx - 3 && k < la) { engSingle(fb, f, {mouth: mouth(sh, k, 'ENGINEER'), expr: 'smile'}); return; }
     stageWide(fb, f, meter(sh, k, k >= sw ? 1 : 0, face(sh, k), {laugh: k >= la && k < la + 40}));
   },
 });

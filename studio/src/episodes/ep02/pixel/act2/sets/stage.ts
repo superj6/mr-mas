@@ -21,6 +21,7 @@ import {rimaSpeakPortrait} from '../../../../../shared/pixel/cast/rima-speak';
 import type {RimaPortraitState} from '../../../../../shared/pixel/cast/rima-speak';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import type {RimaStandPose} from '../../../../../shared/pixel/cast/rima-stand';
+import type {Img} from '../../../../../shared/pixel/figure';
 import {drawChatFace, voice5Badge} from '../../art/sets/stage';
 import type {ChatFaceSt} from '../../art/sets/stage';
 import {engineerBust, drawEngineerRoom} from '../../art/cast/engineer';
@@ -397,6 +398,55 @@ export const eng2S = (b: Buf, f: number, st: {mouth: Viseme; arm: 'unclip' | 'ph
   putBustSoft(b, bustRunOn(rimaSpeakPortrait({mouth: 'rest', lid: 0, brow: 'level', hand: 'none'}), 135), 64, 30, RH);
   // the engineer beside her, frame right, a step closer, his headset coming off, reading his phone to her (off mic)
   putBustSoft(b, smoothSkin(engineerBust({mouth: st.mouth, expr: 'neutral', arm: st.arm, headset: st.headset})), 252, 36, RH);
+  void f;
+};
+// ================================================================== 11.04: the engineer's single (the cleanup pass)
+/** [MCU] the engineer alone at his mark (the cleanup pass, 2026-10-11: 11.04's "Thanks." had played on a speck in the
+ *  locked wide). His bust from 11.15 (art cast/engineer, the same smoothing), at the same size, mirrored so he faces
+ *  screen-right, toward the big screen he is talking to (the wide's eyeline), the phone held up on that side; his DEMO
+ *  badge re-lettered the right way round after the mirror. Behind him the dark stage, the rig's cans soft, the screen's
+ *  glow at frame right. Lip-synced (st.mouth); st.expr his face under it */
+const ENG_SINGLE = new Map<string, Img>();
+const m0 = (c: Int32Array, w: number, x: number, y: number, v: number) => { if (x >= 0 && x < w && y >= 0 && c[y * w + x] >= 0) c[y * w + x] = v; };
+/** the box round his mouth in the bust's own (unmirrored) coordinates, where the boom-free drawing is used */
+const ENG_MOUTH = {x0: 38, x1: 56, y0: 74, y1: 88};
+export const engSingle = (b: Buf, f: number, st: {mouth: Viseme; expr?: 'smile' | 'laugh' | 'worry' | 'neutral'}) => {
+  stageBehind(b, 0, 1);
+  const key = `${st.mouth}|${st.expr ?? 'smile'}`;
+  let im = ENG_SINGLE.get(key);
+  if (!im) {
+    const src = smoothSkin(engineerBust({mouth: st.mouth, expr: st.expr ?? 'smile', arm: 'phone', headset: 'on'}));
+    // the mic's foam sits on the near corner of his mouth (the art's boom ends at the mouth): at this size the lips
+    // would read only past it. So round his mouth the boom-free drawing (the same bust with the boom swung up, which
+    // differs only in the boom) is taken, and the boom ends a few pixels short, its foam at the mouth's corner
+    const off = smoothSkin(engineerBust({mouth: st.mouth, expr: st.expr ?? 'smile', arm: 'phone', headset: 'off'}));
+    const MB = ENG_MOUTH;
+    const pick = (x: number, y: number) => (x >= MB.x0 && x <= MB.x1 && y >= MB.y0 && y <= MB.y1 ? off : src).c[y * src.w + x];
+    const c = new Int32Array(src.w * src.h);
+    for (let y = 0; y < src.h; y++) for (let x = 0; x < src.w; x++) c[y * src.w + x] = pick(src.w - 1 - x, y);
+    const m = {w: src.w, h: src.h, c};
+    // the badge (art cast/engineer: centred on x 60, rows 126-134), drawn again unmirrored at its mirrored place
+    // the foam at the boom's new end, by the mouth's near corner (mirrored: the box's left edge): the kit's dark, lit on top
+    const fx = src.w - 1 - MB.x1 - 2, fy = 78;
+    for (let j = -2; j <= 2; j++) for (let i = -2; i <= 2; i++) if (Math.hypot(i / 2.4, j / 2) < 1) m0(c, src.w, fx + i, fy + j, j < 0 ? PAL.N4 : PAL.N1);
+    const t = new Buf(src.w, src.h, TR), bw = tinyWidth('DEMO') + 4, bx = (src.w - 1 - 60) - ((bw - 1) >> 1);
+    fill(t, bx, 126, bw, 9, PAL.R2); fill(t, bx, 126, bw, 1, PAL.R3); fill(t, bx, 134, bw, 1, PAL.R1); tiny(t, 'DEMO', bx + 2, 128, PAL.P2);
+    for (let i = 0; i < t.c.length; i++) if (t.c[i] !== TR && m.c[i] >= 0) m.c[i] = t.c[i];
+    im = m;
+    if (ENG_SINGLE.size > 48) ENG_SINGLE.clear();
+    ENG_SINGLE.set(key, im);
+  }
+  // the big screen's light (frame right, where he looks) as a cyan rim down his near edge: the face and the shoulder
+  const t = new Buf(W, RH, TR);
+  putBustSoft(t, im, 150, 36, RH);
+  for (let y = 36; y < RH; y++) {
+    let x1 = -1; for (let x = W - 1; x >= 150; x--) if (t.get(x, y) !== TR) { x1 = x; break; }
+    if (x1 < 0) continue;
+    const c = t.get(x1, y), fm = familyOf(c), skin = !!fm && (fm[0] === 'S' || fm[0] === 'K' || fm[0] === 'X' || fm[0] === 'B' || fm[0] === 'D');
+    t.set(x1, y, y < 150 ? PAL.C5 : PAL.C3);
+    if (skin && y < 150) t.set(x1 - 1, y, PAL.C3);
+  }
+  for (let i = 0; i < W * RH; i++) if (t.c[i] !== TR) b.c[i] = t.c[i];
   void f;
 };
 void rect; void clamp; void pw;

@@ -38,8 +38,8 @@ L.add('8.02', {
   draw: (fb, k, sh, f) => { const s0 = mk(sh, 'scroll', 2); povDark(fb, f, newsPainter(k - s0, k >= 62 ? 1 : 0)); },
 });
 L.add('8.03', {
-  st: 'act2/sets/dark otsDark ([OTS] Mas at the monitor, the lineup on it: the host to the lens, the still playing); V.O. 4 typed by the host (the back of his head: no mouth)',
-  draw: (fb, k, sh, f) => { otsDark(fb, f, newsPainter(124 + k, 1)); void sh; },
+  st: 'act2/sets/dark otsDark ([OTS] Mas at the monitor, the lineup on it: the host to the lens, the still playing); V.O. 4 typed by the host (the back of his head: no mouth); the cleanup pass: the V.O.\'s text band on the shadow of his back (voBand: the shoulder\'s cyan rim dies off above y 182)',
+  draw: (fb, k, sh, f) => { otsDark(fb, f, newsPainter(124 + k, 1), {voBand: true}); void sh; },
 });
 L.add('8.04', {
   st: 'act2/sets/dark calendarPOV ([POV] the art\'s calendar on Ep1\'s monitor: the week of MAY 13, ELGOOG · DEVELOPER KEYNOTE already on TUE 14; his fingertip lands on his own block NOPEAI · SPRING UPDATE (on WED 15) and drags it, held steps, onto MON 13; it snaps in on the drop; the rail MAY 10 in the band)',

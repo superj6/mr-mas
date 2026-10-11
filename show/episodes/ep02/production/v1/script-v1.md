@@ -771,7 +771,7 @@ Then it freezes live, and I keep talking. It also sings. We'll get to that. `[IN
 
 TEMPO · quick (Rima 0.3 s).
 
-`[SCR]` [9.06] (≈ 6.8 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5`, under a tag, `SINCE SEP 2023` [V · facts A22]. She hovers each, and each says hello in a different tone:
+`[SCR]` [9.06] (≈ 6.8 s) She taps the monitor, bezel in frame, and a settings panel opens: `VOICE`, five labelled slots, `VOICE 1` to `VOICE 5` (the cleanup pass, 2026-10-11, cut its `SINCE SEP 2023` tag: with 12.03's `SEP 2023` rail it tied last September's launch to today's voice and the empty seat, a product reason for Alyi's leaving; W8). She hovers each, and each says hello in a different tone:
 
 **VOICE 1**\
 Hi. `[INVENTED · e2-a2-0012]`
@@ -972,7 +972,7 @@ ROOM — the emptying house; then the dark room.
 
 SIGN: `RESERVED: CHIEF SCIENTIST` *(the placard stays as it is)*
 
-`[ECU]` → [MEMORY] → `[ECU]` [12.03] (≈ 3.4 s) Its chrome armrest; on the Door's note a glint runs across it, and on the glint we cut to the party from last September, in its own frame (Ep1's own art, warm): Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Two seconds. Then the armrest again: only the empty seat.
+`[ECU]` → [MEMORY] → `[ECU]` [12.03] (≈ 3.4 s) Its chrome armrest; on the Door's note a glint runs across it, and on the glint we cut to the party from last September, in its own frame (Ep1's own art, warm; since the cleanup pass an Ep2 copy with Alyi's open eyes and the banner's words out of focus, so no product sits beside his leaving): Alyi turns to Mas, smiling, and toasts him; the clink; a shared laugh, Alyi's hand on his shoulder. Two seconds. Then the armrest again: only the empty seat.
 
 `RAIL: SEP 2023`
 

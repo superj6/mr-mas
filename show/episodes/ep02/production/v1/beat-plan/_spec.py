@@ -1589,11 +1589,11 @@ nb("act2", "9.05", "WIDE · Mas walks off frame-left; a pan with RIMA as she cro
    fix=("P", "KEEP", "PACE"), why="\"I keep talking\" plants \"…and that's the demo.\"")
 nb("act2", "9.06", "SCR · the monitor: the VOICE panel, five slots saying hello; the panel unfolds past the bezel onto a drafting grid",
    "stage", "SET-10", "wings", ["rima", "chatgtp"],
-   "She taps the monitor and a settings panel opens: VOICE, five labelled slots, VOICE 1 to VOICE 5, under a tag, SINCE SEP 2023. She hovers each, and each says hello in a different tone. The fifth, Hey., holds a beat longer than the others as the panel keeps unfolding past the monitor's bezel, square by square, onto the floor, and the floor is a drafting grid.",
+   "She taps the monitor and a settings panel opens: VOICE, five labelled slots, VOICE 1 to VOICE 5. She hovers each, and each says hello in a different tone. The fifth, Hey., holds a beat longer than the others as the panel keeps unfolding past the monitor's bezel, square by square, onto the floor, and the floor is a drafting grid.",
    "VOICE 5 is CHATGTP's own voice (R1): the voice we'll hear on stage. A [SCR] with its bezel in frame, so the bezel can be broken.",
    lines=[line("e2-a2-0012"), line("e2-a2-0013", 0.3, QUICK), line("e2-a2-0014", 0.3, QUICK), line("e2-a2-0015", 0.3, QUICK),
           line("e2-a2-0016", 0.3, QUICK)], head=1.0, tail=1.6, fixed=("tail",),
-   onscreen=[O("VOICE", 0.3, None, "ui"), O("SINCE SEP 2023", 0.4, None, "ui"), O("VOICE 1", 0.4, None, "ui"), O("VOICE 2", 0.4, None, "ui"),
+   onscreen=[O("VOICE", 0.3, None, "ui"), O("VOICE 1", 0.4, None, "ui"), O("VOICE 2", 0.4, None, "ui"),
              O("VOICE 3", 0.4, None, "ui"), O("VOICE 4", 0.4, None, "ui"), O("VOICE 5", 0.4, None, "ui")],
    music="E02-07 · the walk-on tune turns into THE PLAN's music-box waltz on the downbeat",
    sounds=[S("panel_unfold_step", "E:e2-a2-0016+0.2", -26, new=True), S("drafting_ink_stroke", "E:e2-a2-0016+1.0", -26)],

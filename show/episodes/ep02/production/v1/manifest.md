@@ -151,7 +151,7 @@ Base plate 480 × 270 native (room area rows 0–202, the band below); 4× to 10
 | ~~The segment's title card `"MAS, TASYA AND RADNUS"`~~ → **SR:** a news site's headline over the segment's video still, `…TAKES AIM AT MAS, TASYA AND RADNUS…` (Business Insider's headline, cropped; [H]: GR §3, shown only as a headline in its own UI) | 8 | new; a generic news-site UI (no real outlet's name, logo or trade dress) | |
 | His calendar (`ELGOOG · DEVELOPER KEYNOTE · TUE 14`; `NOPEAI · SPRING UPDATE` dragged onto `MON 13`; **R1:** the invite `ELPPA · KEYNOTE · JUN 10`) | 8, 18 (the reminder) | new | |
 | **R1:** the call tile `ELPPA` (no face, no name) → `…` → `CONFIRMED` | 8 | `calltile.ts` grammar | |
-| The wings' monitor; `yes!!`; the `[laughter]` tag; the `VOICE` panel (`VOICE 1`–`5`, `SINCE SEP 2023`, five hellos) unfolding onto a drafting grid | 9 | new | |
+| The wings' monitor; `yes!!`; the `[laughter]` tag; the `VOICE` panel (`VOICE 1`–`5`, five hellos; its `SINCE SEP 2023` tag cut by the cleanup pass) unfolding onto a drafting grid | 9 | new | |
 | THE PLAN sheet | 10 | `kits/blueprint.ts` | `232 MS (AVG 320)`; `MON`; `$0`; the empty bubble |
 | The big screen (**R1:** the `VOICE 5` badge; `LIVE` → `ENDED`); CHATGTP's face; the spotlight; his phone typing `h` `e` `r` and the post UI; the wave of phones and the press row swinging to the blimp; **SR:** `what's the catch?` (was `is it safe?`) | 11 | new; `kits/post-any.ts` / `kits/post-card.ts` for the post | the post types at a post's pace, off the beat |
 | The clicker | 11–12 (Rima's, in her hand; she keeps it), 19 (F2.1) | new; the 2008 clicker from `meras/era2008.ts` | **R2:** no road-case beat; nobody hands it to anyone |

@@ -33,7 +33,6 @@ import {engineerBust, drawEngineerRoom} from '../../art/cast/engineer';
 import type {EngineerRoomPose} from '../../art/cast/engineer';
 import {drawMasStand2, MAS2_FOOT, MAS2_W} from '../../art/cast/mas2';
 import type {Mas2Pose} from '../../art/cast/mas2';
-import {voicePanel} from '../../art/sets/stage';
 import {drawEp2Post} from '../../art/props/ui';
 import {gergSpeakPortrait} from '../../../../../shared/pixel/cast/gerg-speak';
 import type {GergSpeakState} from '../../../../../shared/pixel/cast/gerg-speak';
@@ -179,10 +178,26 @@ const bezelSCR = (b: Buf) => {
   fill(b, SCR.x - 1, SCR.y - 1, SCR.w + 2, SCR.h + 2, PAL.N1);
 };
 const scanlines = (b: Buf, r: {x: number; y: number; w: number; h: number}) => { for (let y = r.y; y < r.y + r.h; y += 3) for (let x = r.x; x < r.x + r.w; x++) if (bayer(x, y) < 0.5) b.set(x, y, stepColor(b.get(x, y), -1)); };
+/** the VOICE panel (art/sets/stage voicePanel, copied by the cleanup pass, 2026-10-11, with its corner tag gone: the tag
+ *  SINCE SEP 2023 dated the five voices to the month of 12.03's party memory, so with the party's rail SEP 2023 it tied
+ *  last September's launch to today's voice and to the empty seat: a product reason for Alyi's leaving, which the show
+ *  never supplies (W8). The lock's on-screen record drops it too). The rest as the art draws it */
+const voicePanel = (b: Buf, x: number, y: number, st: {hover?: number; said?: number} = {}) => {
+  const w = 170, h = 120;
+  fill(b, x - 1, y - 1, w + 2, h + 2, PAL.N0); fill(b, x, y, w, h, PAL.N2); fill(b, x, y, w, 12, PAL.N3); pt(b, 'VOICE', x + 6, y + 3, PAL.P2);
+  const hellos = ['Hi.', 'Hi!', 'hi?', 'Hi…', 'Hey.'];
+  for (let i = 0; i < 5; i++) {
+    const sy = y + 18 + i * 20, on = st.hover === i;
+    fill(b, x + 6, sy, w - 12, 16, on ? PAL.C1 : PAL.N1); fill(b, x + 6, sy, 2, 16, on ? PAL.C6 : PAL.N4);
+    pt(b, `VOICE ${i + 1}`, x + 12, sy + 4, on ? PAL.P2 : PAL.P1);
+    for (let k = 0; k < 18; k++) { const hgt = 1 + Math.round(hash(i, k, 3) * (on ? 6 : 3)); fill(b, x + 70 + k * 3, sy + 8 - Math.floor(hgt / 2), 2, hgt, on ? PAL.C6 : PAL.N5); }
+    if ((st.said ?? -1) >= i) pt(b, hellos[i], x + w - 34, sy + 4, i === 4 ? PAL.C8 : PAL.C6);
+  }
+};
 /** st.mode: 'reply' (the plain bubble answers yes!! before it's asked) · 'transcript' (the old voice mode's
- *  transcript; st.drop = frames since the [laughter] tag started to fall) · 'panel' (VOICE · VOICE 1..5 · SINCE SEP
- *  2023; st.hover the slot her fingertip is on, st.said how many have said hello, st.unfold the squares past the
- *  bezel, st.grid 0..1: the floor becoming the drafting grid) */
+ *  transcript; st.drop = frames since the [laughter] tag started to fall) · 'panel' (VOICE · VOICE 1..5; st.hover the
+ *  slot her fingertip is on, st.said how many have said hello, st.unfold the squares past the bezel, st.grid 0..1: the
+ *  floor becoming the drafting grid) */
 export const wingsMonitor = (b: Buf, f: number, st: {mode: 'reply' | 'transcript' | 'panel'; yes?: boolean; drop?: number; hover?: number; said?: number; unfold?: number; grid?: number; tap?: boolean; tapAt?: number}) => {
   bezelSCR(b);
   const S = SCR;
@@ -211,7 +226,7 @@ export const wingsMonitor = (b: Buf, f: number, st: {mode: 'reply' | 'transcript
     // st.unfold: frames since the unfold step (-1 before it); st.grid: frames since the ink stroke (-1 before it)
     const dropK = st.unfold ?? -1, riseK = st.grid ?? -1;
     const px = S.x + 115, py = S.y + 22;
-    voicePanel(b, px, py, {hover: st.hover, said: st.said, unfold: 0});
+    voicePanel(b, px, py, {hover: st.hover, said: st.said});
     // the fifth's Hey. holds a beat longer: its square lit after the others have gone quiet
     if ((st.said ?? -1) >= 4) { fill(b, px + 6, py + 18 + 4 * 20, 2, 16, PAL.C8); }
     if (dropK >= 0) panelDrop(b, px, py, dropK);

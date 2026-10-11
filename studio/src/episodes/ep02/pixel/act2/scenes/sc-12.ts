@@ -8,9 +8,11 @@
 //   INSERT   12.02 the front row from the wings in plain house light: the seat RESERVED: CHIEF SCIENTIST, empty (the
 //            placard never flips) · 12.03 its chrome armrest; on the glint, Ep1's own Sep 25 party in its own frame for
 //            two seconds (the fixes pass: a memory, never a reflection; Alyi turns to Mas smiling and toasts him, the
-//            laugh), then the armrest, only the empty seat · 12.04 a beat of black
-//   DOCUMENT 12.05 his dark room in the afternoon (the window's sky lit), the monitor beside him: the recap, ELGOOG'S
-//            KEYNOTE under NopeAI's OMNI stamp (no blimp); his fingertip on its minimise, and back to work; a beat ·
+//            laugh; the cleanup pass: his open eyes, the banner's words out of focus: no product beside his leaving),
+//            then the armrest, only the empty seat · 12.04 a beat of black
+//   DOCUMENT 12.05 his dark room in the afternoon (the window's sky lit), the monitor beside him: the news, NopeAI's
+//            OMNI still the top story, ELGOOG'S KEYNOTE the second (no blimp); his fingertip on its minimise, and
+//            back to work; a beat ·
 //            12.06 his phone lights: Alyi's post in its own UI, his first sentence; the thumb scrolls once: "…I will
 //            miss everyone dearly." · 12.07 he types his own post at a post's pace, posts it, hard-stopped at the crop
 //            (no capital I as a pronoun on screen), held in silence past both posts' read time (the fixes pass: V.O. 6,
@@ -21,7 +23,8 @@ import {defineScene, layouts, mk} from '../../kit';
 import {houseUp, rimaMCU, stageWide} from '../sets/stage';
 import {rimaWalkAt} from '../../../../../shared/pixel/cast/rima-stand';
 import {recapMCU, phoneECU, masMCU} from '../sets/dark';
-import {frontRow, armrestECU, partyMemory} from '../../art/sets/stage';
+import {frontRow, armrestECU} from '../../art/sets/stage';
+import {partyMemory2} from '../sets/party';
 import {glide} from '../sets/common';
 import {fill} from '../../art/kit';
 import {PAL} from '../../../../../shared/pixel/palette';
@@ -46,7 +49,7 @@ L.add('12.02', {
   draw: (fb, k, sh, f) => { frontRow(fb, f); void k; void sh; },
 });
 L.add('12.03', {
-  st: 'art/sets/stage armrestECU → partyMemory → armrestECU ([ECU] its chrome armrest, close: the post\'s rounded end and the red fabric of the seat beside it (12.02\'s armrest, nearer), only the seat in it; on the Door\'s note a glint runs across the chrome, and as it crosses the post\'s middle we cut to [MEMORY] the party from last September in its own frame (the fixes pass: Ep1\'s own redrawn 2S, act3 partyToast, unaltered and warm, a soft vignette: Alyi turns to Mas smiling as the toast comes, the clink on the clink sound, the shared laugh, Alyi\'s hand on his shoulder; the rail SEP 2023 in the band), two seconds; then back to the armrest: only the empty seat)',
+  st: 'art/sets/stage armrestECU → act2/sets/party partyMemory2 → armrestECU ([ECU] its chrome armrest, close: the post\'s rounded end and the red fabric of the seat beside it (12.02\'s armrest, nearer), only the seat in it; on the Door\'s note a glint runs across the chrome, and as it crosses the post\'s middle we cut to [MEMORY] the party from last September in its own frame (the fixes pass: Ep1\'s own redrawn 2S, warm, a soft vignette; the cleanup pass: an Ep2 copy, act2/sets/party, with Alyi\'s calm eye band (open eyes, no socket rims) and the banner\'s words out of focus: Alyi turns to Mas smiling as the toast comes, the clink on the clink sound, the shared laugh, Alyi\'s hand on his shoulder; the rail SEP 2023 in the band), two seconds; then back to the armrest: only the empty seat)',
   marks: {note: ['snd', 'door_motif_note', 1, 0], clink: ['snd', 'glass_nudge', 1, 0]},
   draw: (fb, k, sh, f) => {
     const n = mk(sh, 'note', 5), clink = mk(sh, 'clink', 15);
@@ -54,7 +57,7 @@ L.add('12.03', {
     if (k < cutIn || k >= cutOut) { armrestECU(fb, f, {k, on: n, off: 9999, noRefl: true}); return; }
     // the party on its own clock: its toast (its frame 20) on the clink; the laugh 14 frames after it
     const ks = 20 + (k - clink);
-    partyMemory(fb, f, {ks, laugh: 34});
+    partyMemory2(fb, f, {ks, laugh: 34});
   },
 });
 L.add('12.04', {
@@ -62,7 +65,7 @@ L.add('12.04', {
   draw: (fb) => { fill(fb, 0, 0, 480, 203, PAL.N0); },
 });
 L.add('12.05', {
-  st: 'act2/sets/dark recapMCU ([MCU] his dark room in the afternoon (Ep1\'s plate, the window\'s sky lit, the room a rung up); his approved portrait at the frame\'s right, the monitor beside him, legible: the recap, ELGOOG\'S KEYNOTE under NopeAI\'s OMNI stamp (no blimp: FC); his fingertip on its minimise on the click; it shrinks to the taskbar; back to work; a beat; the rail MAY 14, 2024)',
+  st: 'act2/sets/dark recapMCU ([MCU] his dark room in the afternoon (Ep1\'s plate, the window\'s sky lit, the room a rung up); his approved portrait at the frame\'s right, the monitor beside him, legible: the news as a list (the cleanup pass): 1 OMNI, NopeAI\'s ring mark, NOPEAI · TRENDING; 2, smaller, ELGOOG\'S KEYNOTE (no blimp: FC); his fingertip on its minimise on the click; it shrinks to the taskbar; back to work; a beat; the rail MAY 14, 2024)',
   marks: {min: ['snd', 'ui_minimise', 1, 0]},
   draw: (fb, k, sh, f) => {
     const m = mk(sh, 'min', 110);
@@ -71,7 +74,7 @@ L.add('12.05', {
   },
 });
 L.add('12.06', {
-  st: 'act2/sets/dark phoneECU ([ECU] his phone in his hand (the art\'s hand rig, the wrap grip) lights on the buzz in held steps: Alyi\'s post in its own UI (the posts kit, verbatim, his name swapped), its first sentence; on the scroll his thumb runs it up once, whole-pixel steps, to the second crop "…I will miss everyone dearly."; no reason given (W8))',
+  st: 'act2/sets/dark phoneECU ([ECU] his phone in his hand (the cleanup pass: the show\'s standard phone hand, common cupThumb, held from below, the thumb on the glass, as 15.04 and 12.07) lights on the buzz in held steps: Alyi\'s post in its own UI (the posts kit, verbatim, his name swapped), its first sentence; on the scroll his thumb pushes it up once, whole-pixel steps, rising with it, to the second crop "…I will miss everyone dearly."; no reason given (W8))',
   marks: {buzz: ['snd', 'phone_buzz_step_1', 1, 0], scroll: ['snd', 'thumb_scroll', 1, 0]},
   draw: (fb, k, sh, f) => {
     const bz = mk(sh, 'buzz', 2), sc = mk(sh, 'scroll', 96);

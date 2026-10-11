@@ -82,7 +82,7 @@ L.add('9.05', {
   },
 });
 L.add('9.06', {
-  st: 'act2/sets/wings wingsMonitor ([SCR] the monitor, bezel in frame: her fingertip taps it (no cursor) and the art\'s VOICE panel opens: VOICE · VOICE 1..5 · SINCE SEP 2023; her fingertip hovers each slot and each says hello (Hi. Hi! hi? Hi… Hey.); the fifth holds its lit square; on the unfold step the panel\'s own rows come away one by one (VOICE 1 first, the fifth last), each folding into a square drafting cell as it falls past the bezel; the fifth, still lit, settles on the screen\'s foot as THE PLAN\'s first cell; on the ink stroke the drafting grid takes the frame from the floor up, a row of cells at a time, round that lit cell: 10.01\'s arrival)',
+  st: 'act2/sets/wings wingsMonitor ([SCR] the monitor, bezel in frame: her fingertip taps it (no cursor) and the art\'s VOICE panel opens: VOICE · VOICE 1..5 (the cleanup pass: its SINCE SEP 2023 tag gone, act2/sets/wings voicePanel); her fingertip hovers each slot and each says hello (Hi. Hi! hi? Hi… Hey.); the fifth holds its lit square; on the unfold step the panel\'s own rows come away one by one (VOICE 1 first, the fifth last), each folding into a square drafting cell as it falls past the bezel; the fifth, still lit, settles on the screen\'s foot as THE PLAN\'s first cell; on the ink stroke the drafting grid takes the frame from the floor up, a row of cells at a time, round that lit cell: 10.01\'s arrival)',
   marks: {unfold: ['snd', 'panel_unfold_step', 1, 0], ink: ['snd', 'drafting_ink_stroke', 1, 0]},
   draw: (fb, k, sh, f) => {
     const un = mk(sh, 'unfold', 131), ink = mk(sh, 'ink', 150);

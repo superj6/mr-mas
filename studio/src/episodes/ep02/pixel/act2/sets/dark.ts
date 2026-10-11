@@ -14,8 +14,8 @@
 //                                    square in his eyes), st.faceLight
 //   callECU(b, f, st)                [ECU] 8.06: the phone face up, the call tile ELPPA (no face, no name), Answer, …,
 //                                    CONFIRMED
-//   recapMCU(b, f, st)               [MCU] 12.05: Mas at his desk in the afternoon, the monitor beside him (the recap,
-//                                    legible), his fingertip on its minimise
+//   recapMCU(b, f, st)               [MCU] 12.05: Mas at his desk in the afternoon, the monitor beside him (the news
+//                                    list, legible: OMNI first, ELGOOG'S KEYNOTE second), his fingertip on its minimise
 //   phoneECU(b, f, st)               [ECU] 12.06 / 12.07: the phone in his hand, a post in its own UI (scroll, compose)
 import {Buf, rect, ellipse, bayer, hash, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, lightness, familyOf} from '../../../../../shared/pixel/palette';
@@ -27,9 +27,9 @@ import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cas
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {vignette} from '../../../../../shared/pixel/rooms/kit-b';
-import {rulebookNotif, newsSitePainter, calendarPainter, newsRecapPainter} from '../../art/sets/darkroom2';
+import {rulebookNotif, newsSitePainter, calendarPainter} from '../../art/sets/darkroom2';
 import {drawEp2Post} from '../../art/props/ui';
-import {placeHand, drawHand, sleeve, holdPhone, POSES} from '../../art/cast/hands2';
+import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
 import {RH, W, glow, isSkin, forearm, cupThumb, putBustSoft, keyBalloon} from './common';
 import {drawBackHead} from './backhead';
@@ -119,7 +119,11 @@ const otsRoom = (): Buf => {
  *  monitor (the cheek's edge and the near ear on the screen side), the monitor's cyan rim on the edges toward it */
 export const OTS_HEAD = {x: -30, y: 30, scale: 1.5};
 const darkHead = (b: Buf) => { drawBackHead(b, OTS_HEAD.x, OTS_HEAD.y, {scale: OTS_HEAD.scale, turn: 1, light: 'monitor', flip: true}); };
-export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number} = {}) => {
+/** st.voBand (8.03, the cleanup pass, 2026-10-11): the V.O. line types at its fixed place (x 12, baseline 198), and
+ *  here it ran across the cyan rim of his near shoulder. pov-and-framing §5.2: frame the shot so the V.O.'s text band
+ *  (y 182-203) sits on N-ramp shadow, never on the cyan key. So the monitor's light dies off down his back: under y 182
+ *  the shoulder's rim and its lit plane go to the hoodie's own shadow, over six rows of dither from y 176 */
+export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number; voBand?: boolean} = {}) => {
   b.c.set(otsRoom().c.subarray(0, 480 * RH));
   const T = MON_OTS;
   rect(T.x - 8, T.y - 8, T.w + 16, T.h + 16, b.ink(PAL.G1)); rect(T.x - 8, T.y - 8, T.w + 16, 1, b.ink(PAL.G3)); rect(T.x - 1, T.y - 1, T.w + 2, T.h + 2, b.ink(PAL.N0));
@@ -133,6 +137,11 @@ export const otsDark = (b: Buf, f: number, paint: Painter, st: {dim?: number} = 
   // his glass in the foreground, right, on the desk's near edge
   otsGlass(b, 402, 160);
   darkHead(b);
+  if (st.voBand) for (let y = 176; y < RH; y++) for (let x = 0; x < 160; x++) {
+    if (y < 182 && bayer(x, y) >= (y - 175) / 7) continue;
+    const fm = familyOf(b.get(x, y));
+    if (fm && fm[0] === 'C') b.set(x, y, fm[1] >= 3 ? PAL.G1 : PAL.G0);
+  }
   if (st.dim) for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -st.dim));
 };
 
@@ -337,9 +346,42 @@ export const callECU = (b: Buf, f: number, st: {state: 'ring' | 'live' | 'dots' 
 };
 
 // ================================================================== 12.05: the afternoon, the recap beside him
-/** [MCU] Mas at his desk, the monitor beside him at the frame's left, face-on enough to read: the recap (ELGOOG'S
- *  KEYNOTE under NopeAI's OMNI stamp; no blimp). st.min 0..1 (minimised to the taskbar), st.tap: his fingertip on
- *  the window's minimise (0 none, 1 over, 2 down) */
+/** the afternoon's news, as a list (the cleanup pass, 2026-10-11; a copy of art/sets/darkroom2 newsRecapPainter, its
+ *  window and its shrink to the taskbar unchanged). The review: `OMNI` over `ELGOOG'S KEYNOTE` read as one story, as if
+ *  Elgoog had launched something called Omni. Now two stories in a news app's list: 1, NopeAI's OMNI (its ring mark,
+ *  the source tag `NOPEAI · TRENDING`), still the top story on the rival's day; 2, smaller under a rule, ELGOOG'S
+ *  KEYNOTE; a third row only grey bars. min 0..1 = minimised (it shrinks to the taskbar) */
+const newsDesktop = (scr: Buf) => { vramp(scr, 0, 0, scr.w, scr.h, [PAL.N2, PAL.N1, PAL.N1]); fill(scr, 0, scr.h - 10, scr.w, 10, PAL.N0); for (let i = 0; i < 6; i++) fill(scr, 8 + i * 14, scr.h - 8, 9, 6, [PAL.C4, PAL.W5, PAL.L2, PAL.R2, PAL.G4, PAL.U3][i]); };
+const newsListPainter = (min = 0): Painter => (scr: Buf) => {
+  newsDesktop(scr);
+  const s = 1 - clamp(min, 0, 1) * 0.85;
+  const w = Math.round((scr.w - 20) * s), h = Math.round((scr.h - 24) * s), x = Math.round((scr.w - w) / 2 * (1 - min) + 6 * min), y = Math.round(8 + (scr.h - 18 - h) * min);
+  fill(scr, x - 1, y - 1, w + 2, h + 2, PAL.N0); fill(scr, x, y, w, h, PAL.F2);
+  if (w <= 120) return;
+  // the app's header strip
+  fill(scr, x, y, w, 10, PAL.F3); fill(scr, x, y + 10, w, 1, PAL.F1); tiny(scr, 'TOP STORIES', x + 6, y + 3, PAL.F6);
+  // 1: the lead, big: its rank, NopeAI's ring mark (Omni's o), OMNI in the display face, the source tag under it
+  const y1 = y + 14;
+  pt(scr, '1', x + 6, y1 + 7, PAL.F6);
+  fill(scr, x + 16, y1, 28, 22, PAL.N1); fill(scr, x + 16, y1, 28, 1, PAL.F4);
+  for (let j = 0; j < 22; j++) for (let i = 0; i < 28; i++) { const d = Math.hypot(i - 13.5, j - 10.5); if (d >= 6.5 && d < 9.5) scr.set(x + 16 + i, y1 + j, d < 7.5 ? PAL.C5 : PAL.C7); }
+  bpt(scr, 'OMNI', x + 52, y1 + 1, PAL.C7);
+  tiny(scr, 'NOPEAI · TRENDING', x + 53, y1 + 17, PAL.C6);
+  // the rule, then 2: the rival's keynote, a line of plain type with a small grey thumbnail
+  fill(scr, x + 6, y1 + 27, w - 12, 1, PAL.F4);
+  const y2 = y1 + 31;
+  pt(scr, '2', x + 6, y2 + 3, PAL.F6);
+  fill(scr, x + 16, y2, 20, 13, PAL.G2); fill(scr, x + 16, y2, 20, 1, PAL.G4); fill(scr, x + 22, y2 + 4, 8, 6, PAL.G4);
+  pt(scr, "ELGOOG'S KEYNOTE", x + 42, y2 + 3, PAL.P1);
+  // 3: grey bars, no words
+  fill(scr, x + 6, y2 + 16, w - 12, 1, PAL.F3);
+  fill(scr, x + 16, y2 + 19, 20, 6, PAL.F3); fill(scr, x + 42, y2 + 20, 70, 3, PAL.F4);
+  // the window's foot: its control bar (the minimise is the caller's, at its right end)
+  fill(scr, x + 10, y + h - 20, w - 20, 12, PAL.N1);
+};
+/** [MCU] Mas at his desk, the monitor beside him at the frame's left, face-on enough to read: the news (NopeAI's
+ *  OMNI the top story, ELGOOG'S KEYNOTE the second; no blimp). st.min 0..1 (minimised to the taskbar), st.tap: his
+ *  fingertip on the window's minimise (0 none, 1 over, 2 down) */
 export const recapMCU = (b: Buf, f: number, st: {min: number; tap?: 0 | 1 | 2; k: number}) => {
   b.c.set(mcuPlate(true).c.subarray(0, 480 * RH));
   // the monitor beside him, turned three-quarters to him: its bezel, the screen, its foot on the desk
@@ -348,10 +390,10 @@ export const recapMCU = (b: Buf, f: number, st: {min: number; tap?: 0 | 1 | 2; k
   fill(b, M.x - 1, M.y - 1, M.w + 2, M.h + 2, PAL.N0);
   fill(b, M.x + M.w / 2 - 14, M.y + M.h + 7, 28, 18, PAL.G0); fill(b, M.x + M.w / 2 - 26, M.y + M.h + 24, 52, 4, PAL.G1);
   const scr = new Buf(M.w, M.h, PAL.N0);
-  newsRecapPainter(st.k, st.min)(scr, f);
+  newsListPainter(st.min)(scr, f);
   // behind the recap: his work (a plain document, grey lines of text), uncovered as it shrinks to the taskbar
   if (st.min > 0) {
-    const doc = new Buf(M.w, M.h, PAL.N0); newsRecapPainter(st.k, 1)(doc, f);
+    const doc = new Buf(M.w, M.h, PAL.N0); newsListPainter(1)(doc, f);
     fill(doc, 10, 8, M.w - 20, M.h - 24, PAL.N2); fill(doc, 10, 8, M.w - 20, 9, PAL.N3);
     for (let r = 0; r < 9; r++) fill(doc, 18, 24 + r * 9, 60 + ((r * 47) % 110), 3, r % 4 === 0 ? PAL.C3 : PAL.N5);
     // the recap's shrinking window over it (its own painter's geometry)
@@ -445,7 +487,15 @@ export const phoneECU = (b: Buf, f: number, st: {mode: 'dark' | 'alyi' | 'compos
     // key's width of it on every press
     const h = cupThumb(b, P, thumb, {cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, skinMap: (c) => stepColor(c, -1), drawPhone});
     if (st.mode === 'compose' && Math.hypot(h.thumb[0] - thumb[0], h.thumb[1] - thumb[1]) > 12) throw new Error(`12.07: the thumb is ${Math.round(Math.hypot(h.thumb[0] - thumb[0], h.thumb[1] - thumb[1]))} px from its key`);
-  } else holdPhone(b, P, {side: 'R', grip: 'wrap', light: 'lobby', cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, thumbAt: 0.25 + (st.scroll ?? 0) * 0.3, skinMap: (c) => stepColor(c, -1), drawPhone});
+  } else {
+    // 12.06 (the cleanup pass, 2026-10-11): the art's 'wrap' grip drew four sausage fingers down one edge and a fist on
+    // the other. Now the show's standard phone hand, as 15.04, 17.09 and 12.07 (common cupThumb: held from below, the
+    // fingers behind it, the thumb on the glass): the thumb rests low on the glass, and on the scroll it pushes the post
+    // up, rising with it in whole pixels; it stays below the post's words in both crops
+    const sc = clamp(st.scroll ?? 0, 0, 1);
+    const tip: [number, number] = [P.x + P.w - 30 - Math.round(sc * 4), 194 - Math.round(sc * 30)];
+    cupThumb(b, P, tip, {cuffRamp: CUFF, sleeveRamp: SLEEVE, sleeveTo: [560, 330], widthCm: 7.4, skinMap: (c) => stepColor(c, -1), drawPhone});
+  }
   // the screen's light on the desk round the phone
   if (st.mode !== 'dark') glow(b, P.x + P.w / 2, 110, 230, 150, 1, (x, y) => x >= P.x - 6 && x < P.x + P.w + 6 && y < P.y + P.h + 6);
 };

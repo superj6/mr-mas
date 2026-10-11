@@ -164,7 +164,9 @@ const sheetAt = (f: number, T: PlanT, st: {look?: boolean}): Buf => {
       L(b, 304, 500, 456, 500, prog(f, d === -999 ? DONE : done, 160, 10));
       for (let q = 0; q < 6; q++) { const lx = 316 + q * 26; if (f > done + 4 + q * 2) { inkPath(b, ellipsePts(lx, 452, 3, 2), 9999, BPX.hot, {tip: false}); L(b, lx, 455, lx - 8 + q * 3, 498, 9999, BPX.faint); } }
       if (f > done + 18) { tinyFigure(b, 380, 500, {arm: 'down', skirt: true, look: st.look}); inkPath(b, ellipsePts(380, 500, 12, 3), 9999, BPX.hot, {tip: false}); }
-      if (f > done + 24) bpDim(b, 300, 460, 530, 'MAY 13', f, d === -999 ? -999 : done + 24);
+      // (the cleanup pass, 2026-10-11: the dimension at y 525, was 530: at the stage pan its label sat half under the
+      // sheet's border; now it is inside it, clear of the box's foot)
+      if (f > done + 24) bpDim(b, 300, 460, 525, 'MAY 13', f, d === -999 ? -999 : done + 24);
     }
   }
   return b;
