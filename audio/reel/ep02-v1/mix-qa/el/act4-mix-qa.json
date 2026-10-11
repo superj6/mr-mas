@@ -17,7 +17,81 @@
  },
  "rooms": {
   "stem": "audio/reel/ep02-v1/stems/el/act4-room.flac",
-  "dip_under_speech_db": 2.0
+  "dip_under_speech_db": 2.0,
+  "line_dips": [
+   {
+    "line": "e2-a4-0024",
+    "db": -9.0,
+    "from_s": 150.652,
+    "to_s": 154.592,
+    "ramp_s": 0.3,
+    "why": "19.09: Gerg's \"There's a screen the size of a building\u2026\" (the call, over his cheering lobby: 9 dB)"
+   },
+   {
+    "line": "e2-a4-0025",
+    "db": -6.0,
+    "from_s": 154.352,
+    "to_s": 156.138,
+    "ramp_s": 0.3,
+    "why": "19.09: Mas's \"the phone's closer.\" (the call, on the lawn)"
+   },
+   {
+    "line": "e2-a4-0026",
+    "db": -6.0,
+    "from_s": 156.063,
+    "to_s": 158.096,
+    "ramp_s": 0.3,
+    "why": "19.10: \"They just said our name up there.\" (the call)"
+   },
+   {
+    "line": "e2-a4-0027",
+    "db": -6.0,
+    "from_s": 158.183,
+    "to_s": 159.413,
+    "ramp_s": 0.3,
+    "why": "19.10: \"i heard.\" (the call)"
+   },
+   {
+    "line": "e2-a4-0033",
+    "db": -6.0,
+    "from_s": 159.313,
+    "to_s": 161.696,
+    "ramp_s": 0.3,
+    "why": "19.10: \"Half the lobby's standing on a beanbag.\" (the call)"
+   },
+   {
+    "line": "e2-a4-0034",
+    "db": -6.0,
+    "from_s": 161.523,
+    "to_s": 162.818,
+    "ramp_s": 0.3,
+    "why": "19.10: \"which half?\" (the call)"
+   },
+   {
+    "line": "e2-a4-0035",
+    "db": -6.0,
+    "from_s": 162.473,
+    "to_s": 164.305,
+    "ramp_s": 0.3,
+    "why": "19.10: \"The half on the beanbags.\" (the call)"
+   },
+   {
+    "line": "e2-a4-0028",
+    "db": -9.0,
+    "from_s": 164.543,
+    "to_s": 166.321,
+    "ramp_s": 0.3,
+    "why": "19.10: Gerg's \"You ever miss being up there?\" (the call's weighted question, over his cheering lobby: 9 dB)"
+   },
+   {
+    "line": "e2-a4-0029",
+    "db": -6.0,
+    "from_s": 166.303,
+    "to_s": 170.335,
+    "ramp_s": 0.3,
+    "why": "19.10: \"i was up there once. they let me hold the clicker.\" (the call's answer)"
+   }
+  ]
  },
  "sfx": {
   "stem": "audio/reel/ep02-v1/stems/el/act4-sfx.flac",
@@ -45,16 +119,16 @@
      9.0
     ],
     [
-     "E02-11 LEVERAGE, QUARTET",
-     9
-    ],
-    [
      "E02-11",
      9
     ],
     [
      "room tone only; the pin's soft knock",
      9.0
+    ],
+    [
+     "E02-11 LEVERAGE, QUARTET",
+     9
     ],
     [
      "the designed stop: room tone only",
@@ -82,20 +156,57 @@
    ]
   ],
   "head_fade_s": 0.0,
-  "head_fade_why": "its pre-lap (1.200 s) plays under act3's tail, continuous with this score's first sample"
+  "head_fade_why": "its pre-lap (1.200 s) plays under act3's tail, continuous with this score's first sample",
+  "rides": [
+   {
+    "beat": "18.01",
+    "from": 2.85,
+    "to": 3.45,
+    "db": -6.0,
+    "why": "S11: Ekiel's second step on the stair of drafts (footstep_drafts_2): with the re-rendered quartet an 808 thud lands on it, and its ride is at the laid-peak cap (the fixes pass)"
+   },
+   {
+    "beat": "18.04",
+    "from": 19.87,
+    "to": 24.87,
+    "db": -3.0,
+    "why": "S11: Neleh's second claim (her own words): the pedal and the harmonic a step under them (the fixes pass)"
+   },
+   {
+    "beat": "18.10",
+    "from": 57.64,
+    "to": 58.99,
+    "db": -5.0,
+    "why": "S11: \"also present.\" (the re-rendered quartet's dyad sat on it: 10th percentile +1.8 dB, was +6.7) (the fixes pass)"
+   },
+   {
+    "beat": "18.10",
+    "from": 60.99,
+    "to": 63.29,
+    "db": -3.0,
+    "why": "S11: V.O. 11, \"the next one's already training.\" (the fixes pass)"
+   },
+   {
+    "beat": "19.09",
+    "from": 150.59,
+    "to": 170.75,
+    "db": -4.0,
+    "why": "S11: the crosscut call over the lobby's cheer, \"There's a screen\u2026\" to \"\u2026hold the clicker.\" (the fixes pass)"
+   }
+  ]
  },
  "measured": {
   "lufs_i": -16.0,
-  "true_peak_dbtp": -1.48,
+  "true_peak_dbtp": -1.47,
   "sample_peak_dbfs": -1.5,
   "lra_lu": 8.5,
-  "gain_db": 2.21,
+  "gain_db": 2.2,
   "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 0.148,
-  "dialogue_lufs": -13.94,
-  "score_lufs_after_duck": -19.69,
-  "score_rms_under_speech_dbfs": -29.1,
-  "score_rms_between_speech_dbfs": -20.1,
+  "limiter_active_s": 0.409,
+  "dialogue_lufs": -13.99,
+  "score_lufs_after_duck": -19.52,
+  "score_rms_under_speech_dbfs": -29.4,
+  "score_rms_between_speech_dbfs": -20.2,
   "score_runs": {
    "count": 3,
    "shortest_s": 6.05,
@@ -114,8 +225,8 @@
     ]
    ]
   },
-  "rooms_lufs": -34.5,
-  "sfx_lufs": -30.55,
+  "rooms_lufs": -34.66,
+  "sfx_lufs": -29.99,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -123,31 +234,28 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 26,
-   "rising": 21,
-   "rising_at_a_word": 13,
+   "count": 31,
+   "rising": 24,
+   "rising_at_a_word": 19,
    "rising_at_an_sfx": 0,
    "rising_other": [
-    0.2,
-    2.7,
-    5.2,
-    21.9,
-    32.7,
-    112.5,
+    5.35,
+    58.7,
+    113.4,
     283.0,
     313.0
    ],
-   "falling": 5
+   "falling": 7
   }
  },
  "file": "out/ep02/v1/mix/act4-mix.wav",
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.49,
-  "to_gain_db": 2.21,
+  "to_gain_db": 2.2,
   "ramp_s": 2.0,
   "after": "act3"
  },
- "built": "2026-10-10 17:41:09",
+ "built": "2026-10-10 19:51:13",
  "heard": "nothing here has been listened to; every number is measured"
 }

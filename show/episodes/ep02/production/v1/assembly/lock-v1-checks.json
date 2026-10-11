@@ -512,18 +512,18 @@
    "seg": "act4",
    "scene": "18",
    "title": "Present",
-   "frames": 2280,
-   "seconds": 95.0,
+   "frames": 2304,
+   "seconds": 96.0,
    "tc_in": "17:30:00",
-   "tc_out": "19:05:00",
-   "plan_s": 95,
+   "tc_out": "19:06:00",
+   "plan_s": 96,
    "proposal_s": 95,
-   "fit_scale": 0.987,
+   "fit_scale": 0.976,
    "shots": 15,
    "lines": 17,
-   "arrival_s": 8.75,
-   "arrival_spoken_s": 8.75,
-   "aftermath_s": 4.33,
+   "arrival_s": 8.67,
+   "arrival_spoken_s": 8.67,
+   "aftermath_s": 4.29,
    "plan_arrive": [
     "18.01: 2.0 s, full frame on the lighthouse with the beacon already turning",
     "18.03: 1.0 s, the boardroom with the TV already playing"
@@ -537,18 +537,18 @@
    "seg": "act4",
    "scene": "19",
    "title": "Every phone they sell (with F2.1 and the walled garden)",
-   "frames": 3216,
-   "seconds": 134.0,
-   "tc_in": "19:05:00",
+   "frames": 3192,
+   "seconds": 133.0,
+   "tc_in": "19:06:00",
    "tc_out": "21:19:00",
-   "plan_s": 134,
+   "plan_s": 133,
    "proposal_s": 134,
-   "fit_scale": 1.409,
+   "fit_scale": 1.379,
    "shots": 20,
    "lines": 19,
-   "arrival_s": 11.25,
-   "arrival_spoken_s": 11.25,
-   "aftermath_s": 9.79,
+   "arrival_s": 11.17,
+   "arrival_spoken_s": 11.17,
+   "aftermath_s": 9.62,
    "plan_arrive": [
     "19.01: 2.0 s, the running keynote with the lobby half-listening",
     "19.07: 1.5 s, the crowd's backs and the giant screen before Mas"
@@ -1340,7 +1340,7 @@
    "who": "mario",
    "pace": "normal",
    "plan_s": 0.5,
-   "lock_s": 0.498,
+   "lock_s": 0.477,
    "in_band": true,
    "as_planned": true
   },
@@ -1460,7 +1460,7 @@
    "who": "gerg",
    "pace": "normal",
    "plan_s": 0.45,
-   "lock_s": 0.442,
+   "lock_s": 0.482,
    "in_band": true,
    "as_planned": true
   },
@@ -1879,9 +1879,9 @@
   {
    "seg": "act4",
    "beat": "18.01",
-   "seconds": 5.74,
+   "seconds": 5.65,
    "events": 5,
-   "longest_still_s": 2.57,
+   "longest_still_s": 2.53,
    "frame": "WIDE · full frame: the lighthouse of stacked essays, the beacon turning; Ekiel climbs the "
   },
   {
@@ -1903,9 +1903,9 @@
   {
    "seg": "act4",
    "beat": "19.03",
-   "seconds": 4.51,
+   "seconds": 4.41,
    "events": 3,
-   "longest_still_s": 3.1,
+   "longest_still_s": 3.03,
    "frame": "WIDE · the doors: the new CFO comes in along the hand truck's old path, a calculator tape "
   },
   {
@@ -1919,25 +1919,25 @@
   {
    "seg": "act4",
    "beat": "19.12",
-   "seconds": 4.79,
+   "seconds": 4.69,
    "events": 2,
-   "longest_still_s": 2.54,
+   "longest_still_s": 2.48,
    "frame": "WIDE · a 2006 street corner: a phone ad; young Mas with a flip phone and a bobbing pin; th"
   },
   {
    "seg": "act4",
    "beat": "19.13",
-   "seconds": 5.07,
+   "seconds": 4.97,
    "events": 2,
-   "longest_still_s": 2.25,
-   "frame": "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE S"
+   "longest_still_s": 2.21,
+   "frame": "WIDE → MEDIUM · match on the pin: 2008, this company's stage; THE SLEEVE tosses him the cl"
   },
   {
    "seg": "act4",
    "beat": "19.14",
-   "seconds": 7.06,
+   "seconds": 6.9,
    "events": 6,
-   "longest_still_s": 2.26,
+   "longest_still_s": 2.21,
    "frame": "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out"
   },
   {
@@ -1959,9 +1959,9 @@
   {
    "seg": "act4",
    "beat": "19.19",
-   "seconds": 4.23,
+   "seconds": 4.14,
    "events": 2,
-   "longest_still_s": 2.26,
+   "longest_still_s": 2.21,
    "frame": "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shu"
   },
   {
@@ -2172,7 +2172,7 @@
    "line": "e2-a4-0006",
    "mark": "quick-mas",
    "source": "script 18.08-18.10: Mas at 0.45-0.6 s",
-   "lock_s": 1.53,
+   "lock_s": 1.54,
    "in_band": false,
    "guide_break": "the script's own HOLD 2 BEATS on \"our chief executive.\": every face at the table turns to Mas before \"present.\""
   },
@@ -2257,12 +2257,12 @@
   {
    "check": "the cheer cuts \"And profit—\"",
    "ok": true,
-   "detail": "crowd_cheer at 119.708 s; her line 119.568-120.338 s, \"profit\" from 119.708 s"
+   "detail": "crowd_cheer at 120.625 s; her line 120.475-121.245 s, \"profit\" from 120.625 s"
   },
   {
    "check": "its cause comes first",
    "ok": true,
-   "detail": "the stream's announcement up at 119.333 s, the cheer at 119.708 s"
+   "detail": "the stream's announcement up at 120.250 s, the cheer at 120.625 s"
   },
   {
    "check": "\"Thanks.\" over \"favorite\"",
@@ -2323,6 +2323,31 @@
    "check": "the last honk clears \"Updating.\"",
    "ok": true,
    "detail": "car_honk_5 at 281.250 s, \"Updating.\" from 281.733 s"
+  },
+  {
+   "check": "18.03: her guest line before her words (P9)",
+   "ok": true,
+   "detail": "the guest line from 8.333 s, her line from 8.667 s"
+  },
+  {
+   "check": "18.06: the TV off on the cut, \"First item.\" a beat later",
+   "ok": true,
+   "detail": "tv_click_off 0.042 s into 18.06; \"First item.\" 2.358 s after it"
+  },
+  {
+   "check": "18.14: no clipping on Mario's desk (W8/W9)",
+   "ok": true,
+   "detail": "18.14's texts: []"
+  },
+  {
+   "check": "22.03: the band a single flick",
+   "ok": true,
+   "detail": "the band's line up 1.208 s, off 1.417 s into 22.03"
+  },
+  {
+   "check": "20.01: KORG 2 with no release date",
+   "ok": true,
+   "detail": "20.01's banner 'KORG 2'"
   },
   {
    "check": "4B: the click a beat after his thought, 1.5 s after it",

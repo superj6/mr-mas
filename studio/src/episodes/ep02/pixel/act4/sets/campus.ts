@@ -22,7 +22,7 @@ import {drawMasStand2, MAS2_FOOT} from '../../art/cast/mas2';
 import type {Mas2Legs, Mas2Arm} from '../../art/cast/mas2';
 import {placeHand, drawHand, sleeve, holdPhone, POSES, skinDown} from '../../art/cast/hands2';
 import {fill, pt, tiny, vramp} from '../../art/kit';
-import {RH, W, glow, putBustSoft, mirror, bentArm} from './common';
+import {RH, W, glow, putBustSoft, mirror} from './common';
 
 // ================================================================== the lawn, wide
 export interface LawnSt {
@@ -111,11 +111,14 @@ export const masLawn = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth'
   // the screen's light on his near side: a pale wash on the front of his face and chest (the noon sun is overhead)
   for (let y = Y + 20; y < RH; y++) for (let x = X + 70; x < X + 112; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && (fm[0] === 'S' || fm[0] === 'G') && bayer(x, y) < (x - X - 70) / 60) b.set(x, y, stepColor(c, 1)); }
   if (st.phone === 'ear') {
-    // the phone pressed to his ear (the mirrored portrait's visible ear at its left), his hand round its back, the arm
-    // bent: the upper arm down from his shoulder to the elbow near the frame's foot, the forearm up to the hand
+    // the phone pressed to his ear (the mirrored portrait's visible ear at its left), his hand round its back
+    // (the fixes pass, 2026-10-10, the episode review's P5 major: the bent arm folded flat on itself, so the forearm
+    // grew out of his shoulder and the upper arm ran down-left to a handless stump: three arms) 17.09's construction,
+    // mirrored: the forearm rises from below the frame's foot, outside his shoulder, to the hand at his ear; the elbow
+    // is below the frame, so there is one arm, whole
     const ex = X + 31, ey = Y + 50;
     const h = placeHand(POSES.grip([-0.1, -1, 0.1], [-0.95, 0, 0.3], 'R', 0.55), {s: 2.6, at: [ex - 4, ey + 6], anchor: 'middle', light: 'lobby', cuffRamp: CUFF});
-    bentArm(b, [X + 18, Y + 114], [X - 12, Y + 162], h.cuffEnd, [11, 9.5, 7], SLV, [0.5, -0.85]);
+    sleeve(b, h.cuffEnd, [ex - 34, RH + 40], 9, 13, SLV);
     fill(b, ex - 6, ey - 18, 10, 40, PAL.N0); fill(b, ex + 1, ey - 17, 2, 38, PAL.G3);
     drawHand(b, h.hand, h.x, h.y);
   } else if (st.phone === 'hand') {

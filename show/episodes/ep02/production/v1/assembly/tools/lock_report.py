@@ -355,6 +355,26 @@ def main(argv):
     hk, upd = snd_on.get(("17.15", "car_honk_5")), on.get("e2-a3-0021")
     mark("the last honk clears \"Updating.\"", hk is not None and upd is not None and upd[1] - hk[1] >= 0.3,
          f"car_honk_5 at {hk[1]:.3f} s, \"Updating.\" from {upd[1]:.3f} s" if hk and upd else "missing")
+    # Act Four's fixes pass (2026-10-10; fixes-v1.md, Act Four): her voice placed before her words (P9), the board's
+    # card is the reply (the TV off on the cut, "First item." a beat later), no clipping on Mario's desk (W8/W9), the
+    # band a single flick at the act's quiet climax, KORG 2 with no release date
+    a4 = {sh["id"]: sh for sh in locks["act4"]["shots"]}
+    guest = text_on("act4", "18.03", "GUEST: NELEH")
+    mark("18.03: her guest line before her words (P9)", guest is not None and guest[0] < on["e2-a4-0001"][1],
+         f"the guest line from {guest[0]:.3f} s, her line from {on['e2-a4-0001'][1]:.3f} s" if guest else "no guest line")
+    tvo, fi = snd_on.get(("18.06", "tv_click_off")), on.get("e2-a4-0003")
+    mark("18.06: the TV off on the cut, \"First item.\" a beat later", tvo is not None and fi is not None
+         and tvo[1] - a4["18.06"]["s"] / FPS <= 0.1 + 1e-6 and fi[1] - tvo[1] >= 2.0,
+         f"tv_click_off {tvo[1] - a4['18.06']['s'] / FPS:.3f} s into 18.06; \"First item.\" {fi[1] - tvo[1]:.3f} s after it" if tvo and fi else "missing")
+    mark("18.14: no clipping on Mario's desk (W8/W9)", not any("QUIET VOTE" in t["text"] for t in a4["18.14"]["texts"]),
+         "18.14's texts: " + str([t["text"] for t in a4["18.14"]["texts"]]))
+    band = text_on("act4", "22.03", "Use flyer on door")
+    boff = snd_on.get(("22.03", "ui_band_off"))
+    mark("22.03: the band a single flick", band is not None and boff is not None and band[1] - band[0] <= 1.5
+         and boff[1] - a4["22.03"]["s"] / FPS <= 1.6,
+         f"the band's line up {band[1] - band[0]:.3f} s, off {boff[1] - a4['22.03']['s'] / FPS:.3f} s into 22.03" if band and boff else "missing")
+    korg = text_on("act4", "20.01", "KORG")
+    mark("20.01: KORG 2 with no release date", korg is not None and korg[2] == "KORG 2", f"20.01's banner {korg[2] if korg else None!r}")
     # 4B: a beat after his thought, and P3's 1.5 s after the Accept click
     acc = snd_on.get(("4B.01", "post_click"))
     sc4b = next(q for q in locks["act1"]["scenes"] if q["id"] == "4B")

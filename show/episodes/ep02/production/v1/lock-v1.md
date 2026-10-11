@@ -75,8 +75,8 @@ The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.
 | 14 The open floor | 1,296 | 54.00 | 12:45:00 → 13:39:00 | 0:54.00 · 0:59.00 | ×1.655 | 29.46 | 14.67 | 14.01: 2.5 s, the spread with the band lit and the heatsinks' polish catching the light; 14.12: the domino settled at his shoe; then his hand on Alyi's door as it pivots |
 | 15 Where u at? (with F2.2) | 2,424 | 101.00 | 13:39:00 → 15:20:00 | 1:41.00 · 1:40.00 | ×1.348 | 6.88 | 11.33 | 15.01: 2.0 s, the empty office as the carried hum stops; 15.19: the empty room 1 s after the door shuts; then the stairs and the buzz |
 | 17 The NDA across the bridge (the S3) | 3,120 | 130.00 | 15:20:00 → 17:30:00 | 2:10.00 · same | ×1.943 | 17.38 | 34.21 (act-out 3) | 17.01: 4.0 s, NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in; 17.21: the grey slot under his wet thumb; the ink running |
-| 18 Present | 2,280 | 95.00 | 17:30:00 → 19:05:00 | 1:35.00 · same | ×0.987 | 8.75 | 4.33 | 18.01: 2.0 s, full frame on the lighthouse with the beacon already turning; 18.03: 1.0 s, the boardroom with the TV already playing; 18.15: the reminder on his phone; he turns it over |
-| 19 Every phone they sell (with F2.1 and the walled garden) | 3,216 | 134.00 | 19:05:00 → 21:19:00 | 2:14.00 · same | ×1.409 | 11.25 | 9.79 | 19.01: 2.0 s, the running keynote with the lobby half-listening; 19.07: 1.5 s, the crowd's backs and the giant screen before Mas; 19.20: the gate's lock; the fold back into his phone |
+| 18 Present | 2,304 | 96.00 | 17:30:00 → 19:06:00 | 1:36.00 · 1:35.00 | ×0.976 | 8.67 | 4.29 | 18.01: 2.0 s, full frame on the lighthouse with the beacon already turning; 18.03: 1.0 s, the boardroom with the TV already playing; 18.15: the reminder on his phone; he turns it over |
+| 19 Every phone they sell (with F2.1 and the walled garden) | 3,192 | 133.00 | 19:06:00 → 21:19:00 | 2:13.00 · 2:14.00 | ×1.379 | 11.17 | 9.62 | 19.01: 2.0 s, the running keynote with the lobby half-listening; 19.07: 1.5 s, the crowd's backs and the giant screen before Mas; 19.20: the gate's lock; the fold back into his phone |
 | 20 (FOR NOW) | 1,248 | 52.00 | 21:19:00 → 22:11:00 | 0:52.00 · same | ×1.03 | 11.79 | 20.58 | 20.01: 1.0 s, the thinning crowd as the quartet's pedal carries over; 20.05: 2.0 s, the lobby on its morning bed, the confetti already swept; 20.10: 2.0 s, the face-down phone; 20.13: his still face, the flyer out, and the pin falling |
 | 22 One door | 912 | 38.00 | 22:11:00 → 22:49:00 | 0:38.00 · same | ×1.431 | — | — | 22.01: 2.0 s, the white and the falling pin; 22.09: 4–5 s of his back crossing the lot, the cube unchanged |
 | 23 The other company | 888 | 37.00 | 22:49:00 → 23:26:00 | 0:37.00 · same | ×1.345 | 20.42 | 14.62 (the hook) | 23.01: 1.5 s, his back as he sits at the desk (sc 22's match), the monitor's glow on; 23.09: the taut string, then his face |
@@ -238,7 +238,7 @@ Every gap the plan marks, measured in the pixel lock on the segment clock (line 
 | e2-a3-0016 | e2-a3-0017 | quick | 0.30 | in the mark | script 17.04-17.06: the driver quick (0.3 s) |
 | e2-a3-0017 | e2-a3-0018 | normal | 0.50 | in the mark | script 17.04-17.06: the answer normal (0.5 s) |
 | e2-a4-0004 | e2-a4-0005 | quick | 0.25 | in the mark | script 18.08-18.10: quick (Terb) |
-| e2-a4-0005 | e2-a4-0006 | quick-mas | 1.53 | GUIDE break: the script's own HOLD 2 BEATS on "our chief executive.": every face at the table turns to Mas before "present." | script 18.08-18.10: Mas at 0.45-0.6 s |
+| e2-a4-0005 | e2-a4-0006 | quick-mas | 1.54 | GUIDE break: the script's own HOLD 2 BEATS on "our chief executive.": every face at the table turns to Mas before "present." | script 18.08-18.10: Mas at 0.45-0.6 s |
 | e2-a4-0006 | e2-a4-0007 | quick | 0.27 | in the mark | script 18.08-18.10: quick (Terb) |
 | e2-a4-0007 | e2-a4-0008 | normal | 0.60 | in the mark | script 18.08-18.10: Mas at 0.45-0.6 s |
 
@@ -297,8 +297,8 @@ Each fix of §3.5 that a rebuild could undo has a check in `lock_report.py` (`MA
 <!-- BEGIN generated:marks -->
 | Check | Result | Measured |
 |---|---|---|
-| the cheer cuts "And profit—" | ok | crowd_cheer at 119.708 s; her line 119.568-120.338 s, "profit" from 119.708 s |
-| its cause comes first | ok | the stream's announcement up at 119.333 s, the cheer at 119.708 s |
+| the cheer cuts "And profit—" | ok | crowd_cheer at 120.625 s; her line 120.475-121.245 s, "profit" from 120.625 s |
+| its cause comes first | ok | the stream's announcement up at 120.250 s, the cheer at 120.625 s |
 | "Thanks." over "favorite" | ok | "Thanks." at 170.195 s; "favorite" 169.917-170.250 s; CHATGTP's line ends 170.745 s |
 | the subtitles of the two cut-offs | ok | e2-a2-0027 ['Great question! Of course! Honestly, short answers are one of my favorite—', '—things.']; e2-a4-0021 ['And profit—'] |
 | stamp 2. on "today" | ok | the stamp at 126.917 s, "today" from 126.917 s |
@@ -311,6 +311,11 @@ Each fix of §3.5 that a rebuild could undo has a check in `lock_report.py` (`MA
 | the 2023 rail held 2 s, clear of the post | ok | the rail 141.083-143.292 s, the post from 143.292 s |
 | the ISS card carries no line about its product | ok | 20.10's texts: ['I am starting a new company:', 'ISS'] |
 | the last honk clears "Updating." | ok | car_honk_5 at 281.250 s, "Updating." from 281.733 s |
+| 18.03: her guest line before her words (P9) | ok | the guest line from 8.333 s, her line from 8.667 s |
+| 18.06: the TV off on the cut, "First item." a beat later | ok | tv_click_off 0.042 s into 18.06; "First item." 2.358 s after it |
+| 18.14: no clipping on Mario's desk (W8/W9) | ok | 18.14's texts: [] |
+| 22.03: the band a single flick | ok | the band's line up 1.208 s, off 1.417 s into 22.03 |
+| 20.01: KORG 2 with no release date | ok | 20.01's banner 'KORG 2' |
 | 4B: the click a beat after his thought, 1.5 s after it | ok | V.O. 3 ends 232.720 s, the click 233.083 s, the scene ends 235.000 s |
 | the engineer's laugh stops on "laugh" | ok | engineer_laugh_take 57.917 s + 3.37 s; Gerg's "laugh" ends 61.292 s |
 <!-- END generated:marks -->

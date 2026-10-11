@@ -1,0 +1,202 @@
+{
+ "takes": {
+  "e2-a4-0001__neleh-A": {
+   "take": "e2-a4-0001__neleh-A",
+   "key": "a3f8dabdaeb66f88",
+   "base_key": "eeab12959af3aa7c",
+   "bump": 1000,
+   "proc": "el-dress 1 (HPF 60; own onset/decay; HEAD 0.15/TAIL 0.10; handles 0.35; tone -62 dBFS; -16 LUFS; -1.5 dBTP)",
+   "reused_from": null,
+   "file": "audio/ep02/v1-el/ep02-v1/variants/rettiwt/wav/e2-a4-0001__neleh-A.wav",
+   "file_device": null,
+   "device": null,
+   "duration_s": 10.36,
+   "offset_s": 0.35,
+   "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett—TWIT.",
+   "seed": 626646045,
+   "model": "eleven_multilingual_v2",
+   "settings": {
+    "stability": 0.55,
+    "similarity_boost": 0.75,
+    "style": 0.0,
+    "use_speaker_boost": true,
+    "speed": 0.95
+   },
+   "voice_id": "3dzJXoCYueSQiptQ6euE",
+   "voice_name": "Alexandra - Confident, Clear and Steady",
+   "cand": "A",
+   "role": "neleh",
+   "measured": {
+    "audible_in_s": 0.35,
+    "audible_out_s": 9.98,
+    "span_s": 9.63,
+    "words": 21,
+    "wpm": 130.8,
+    "syllables": 33,
+    "articulation_sps": 3.43,
+    "pauses_s": [],
+    "longest_internal_gap_s": 0.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.38,
+    "tail_to_60_s": 0.005,
+    "median_f0_hz": 189.2,
+    "f0_range_st": 6.0
+   },
+   "words": [
+    {
+     "w": "When",
+     "t0": 0.35,
+     "t1": 0.559
+    },
+    {
+     "w": "CHATGTP",
+     "t0": 0.617,
+     "t1": 1.685
+    },
+    {
+     "w": "came",
+     "t0": 1.941,
+     "t1": 2.138
+    },
+    {
+     "w": "out",
+     "t0": 2.173,
+     "t1": 2.3
+    },
+    {
+     "w": "November",
+     "t0": 2.359,
+     "t1": 2.765
+    },
+    {
+     "w": "2022",
+     "t0": 2.858,
+     "t1": 3.589
+    },
+    {
+     "w": "the",
+     "t0": 3.694,
+     "t1": 3.798
+    },
+    {
+     "w": "board",
+     "t0": 3.868,
+     "t1": 4.1
+    },
+    {
+     "w": "was",
+     "t0": 4.158,
+     "t1": 4.286
+    },
+    {
+     "w": "not",
+     "t0": 4.379,
+     "t1": 4.622
+    },
+    {
+     "w": "informed",
+     "t0": 4.692,
+     "t1": 5.098
+    },
+    {
+     "w": "in",
+     "t0": 5.145,
+     "t1": 5.215
+    },
+    {
+     "w": "advance",
+     "t0": 5.273,
+     "t1": 5.633
+    },
+    {
+     "w": "about",
+     "t0": 5.656,
+     "t1": 5.876
+    },
+    {
+     "w": "that",
+     "t0": 5.923,
+     "t1": 6.19
+    },
+    {
+     "w": "We",
+     "t0": 6.689,
+     "t1": 6.817
+    },
+    {
+     "w": "learned",
+     "t0": 6.875,
+     "t1": 7.084
+    },
+    {
+     "w": "about",
+     "t0": 7.107,
+     "t1": 7.304
+    },
+    {
+     "w": "CHATGTP",
+     "t0": 7.351,
+     "t1": 8.175
+    },
+    {
+     "w": "on",
+     "t0": 8.396,
+     "t1": 8.523
+    },
+    {
+     "w": "RETTIWT",
+     "t0": 8.651,
+     "t1": 9.592
+    }
+   ],
+   "qa": {
+    "asr": "When chat GTP came out November 2022, the board was not informed in advance about that. We learned about chat GTP on Rhett, Twit.",
+    "cer": 0.043,
+    "word_recall_nonames": 1.0,
+    "lufs_i": -16.0,
+    "target_lufs": -16.0,
+    "true_peak_dbtp": -3.88,
+    "clipped_samples": 0,
+    "digital_black_runs": 0,
+    "median_f0_hz": 189.2,
+    "f0_range_st": 6.0,
+    "speech_head_s": 0.35,
+    "speech_tail_s": 0.38,
+    "raw_tail_cut": false,
+    "align_median_s": 0.119
+   },
+   "raw": {
+    "raw_first_sound_s": 0.0,
+    "raw_len_s": 9.66,
+    "raw_tail_cut": false
+   },
+   "kokoro": {}
+  }
+ },
+ "calls": [
+  {
+   "take": "e2-a4-0001__neleh-A",
+   "key": "c5dd587ec98ea403",
+   "chars": 132,
+   "cost_header": "58",
+   "request_id": "rpvmzTdeo6SXf1oS6Su1",
+   "at": "18:04:03"
+  },
+  {
+   "take": "e2-a4-0001__neleh-A",
+   "key": "eeab12959af3aa7c",
+   "chars": 132,
+   "cost_header": "58",
+   "request_id": "AUmdIClX0gABnkajlnax",
+   "at": "18:05:02"
+  },
+  {
+   "take": "e2-a4-0001__neleh-A",
+   "key": "a3f8dabdaeb66f88",
+   "chars": 132,
+   "cost_header": "58",
+   "request_id": "xfQkaFJGMfDTumw2JG6G",
+   "at": "18:13:19"
+  }
+ ]
+}

@@ -25,7 +25,7 @@ import {PAL} from '../../../../../shared/pixel/palette';
 import {party, tvClose, harasGerg, onStream, gergCall, HARAS_SEAT} from '../sets/lobby';
 import {lawn, masLawn, phonePush, MAS_EDGE} from '../sets/campus';
 import {corner2006, matchClicker} from '../../art/sets/elppa';
-import {stage08} from '../sets/f21';
+import {stage08, stageToss} from '../sets/f21';
 import {gardenGate, gardenBeds, gateReverse, phoneUnfold, outsideTruck, radnusMCU, masGuest} from '../sets/garden';
 import {drawEp2Post} from '../../art/props/ui';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
@@ -150,11 +150,10 @@ L.add('19.12', {
   draw: (fb, k, sh, f) => { corner2006(fb, f, {card: k >= mk(sh, 'card', 60)}); },
 });
 L.add('19.13', {
-  st: 'act4/sets/f21 stage08 ([W] a match on the pin: the end card\'s pin is the pin on the 2008 stage\'s screen (a TPOOL slide); 2008, this company\'s stage, the intro\'s own frame (f21/era2008, its camcorder, EARLY-WEB16): Mas strides out of the wing, THE SLEEVE (a sleeve and nothing else) tosses him the clicker and he catches it, the collars pop; the tiled 2008 crowd)',
+  st: 'act4/sets/f21 stageToss ([W → M] a match on the pin: the end card\'s pin is the pin on the 2008 stage\'s screen (a TPOOL slide); 2008, this company\'s stage, the intro\'s own frame (f21/era2008\'s parts, copied, on this shot\'s clock; its camcorder, EARLY-WEB16): Mas strides out to his mark (in frame from the first frame, there by k24); THE SLEEVE (a sleeve and nothing else) reaches out of a stage-left wing and tosses him the clicker in a high arc (on twos, a short trail), he catches it on the catch; the camcorder pushes in on him in two held steps and both collars pop; the tiled 2008 crowd (the fixes pass, 2026-10-10: the episode review\'s minor, a flat arm, a tiny cropped Mas, a toss and pops that didn\'t read))',
   marks: {catch: ['snd', 'clicker_catch', 1, 0]},
   draw: (fb, k, sh, f) => {
-    const c = mk(sh, 'catch', 54), g = 190 + (k - c);
-    stage08(fb, Math.max(150, g), {splash: true});
+    stageToss(fb, k, mk(sh, 'catch', 54));
     void f;
   },
 });

@@ -13,7 +13,7 @@
 //            the white turns out to be sky over an empty lot (the exposure coming down with the tilt): the white cube,
 //            one sealed door; then close, a brass plate: ISS; a mail slot
 //   WALK     22.02 Mas (pixel) walks up from frame-left, never running; the Orb scans the cube and toasts nothing
-//   ASK      22.03 the band lights for four seconds: Use flyer on door · 22.04 over his shoulder: the flyer, his, upside
+//   ASK      22.03 the band flicks on once, dim, for one read: Use flyer on door (the fixes pass) · 22.04 over his shoulder: the flyer, his, upside
 //            down, the tape on its corners, pushed into the slot; it lifts the flap (the flap's angles in 3D)
 //   GLIMPSE  22.05 the gap fills the frame: a lit room, Alyi at a desk, working, absorbed, cropped by the slot's edges; he
 //            doesn't look up; the flyer drops out of frame onto the floor inside, unseen · 22.06 the flap swings shut
@@ -109,14 +109,14 @@ L.add('22.02', {
   draw: (fb, k, sh, f) => fallback(fb, '22.02', k, sh, f),
 });
 L.add('22.03', {
-  st: 'act4 2.H plate (art wide) + issLayer (Mas at the door, his back to us) + act4/sets/band (the adventure band lighting in held steps for four seconds: Use highlighted, the sentence line Use flyer on door; his pocket: the keycaps, his phone, the flyer; no note)',
+  st: 'act4 2.H plate (art wide) + issLayer (Mas at the door, his back to us) + act4/sets/band (the adventure band flicks on once, dim (two rungs down), for one read: Use highlighted, the sentence line Use flyer on door; his pocket: the keycaps, his phone, the flyer; no note; then off in one step and the wide holds on him at the door (the fixes pass, 2026-10-10: it lit for four seconds in held steps, a wink at the act\'s quiet climax))',
   overlay: OVL('22.03'),
   marks: {on: ['snd', 'ui_band_on', 1, 0], off: ['snd', 'ui_band_off', 1, 0], txt: ['txt', 'Use flyer', 'at', 0]},
   draw: (fb, k, sh, f) => {
     fallback(fb, '22.03', k, sh, f);
-    const on = mk(sh, 'on', 0), off = mk(sh, 'off', 93), t = mk(sh, 'txt', 9);
+    const on = mk(sh, 'on', 0), off = mk(sh, 'off', 35), t = mk(sh, 'txt', 4);
     fill(fb, 0, RH, W, 270 - RH, PAL.N0); fill(fb, 0, RH, W, 1, PAL.N3);
-    if (k >= on && k < off + 6) adventureBand4(fb, {verb: k >= t - 2 ? 'Use' : undefined, sentence: k >= t ? 'Use flyer on door' : undefined, dim: k < on + 6 ? (2 - Math.floor((k - on) / 3)) * 2 : k >= off ? (Math.floor((k - off) / 2) + 1) * 2 : 0, pocket: ['CTRL', 'ESC', 'phone', 'flyer']});
+    if (k >= on && k < off) adventureBand4(fb, {verb: k >= t ? 'Use' : undefined, sentence: k >= t ? 'Use flyer on door' : undefined, dim: 2, pocket: ['CTRL', 'ESC', 'phone', 'flyer']});
     return {full: true};
   },
 });

@@ -5,14 +5,16 @@
 //   ARRIVE   18.01 full frame on the lighthouse, the beacon already turning (2 s before anything moves on): Ekiel
 //            climbs the stair of bound drafts with sc 14's box; Adelina at the top raises a lanyard (page 212)
 //            18.02 the beam sweeps the frame -> across the boardroom's window, the same morning; the TV already playing
-//   TRUTH    18.03-18.05 the TV full frame: a plain podcast player, her words captioned as she says them; the board's
-//            same-day reply under her last caption (the two side by side) · 18.06 Mas holds still; Terb clicks it off
+//   TRUTH    18.03 the push onto the TV on its wall (two held steps), then 18.03-18.05 the TV full frame: a podcast
+//            player, its guest line naming her (NELEH · former board member: the fixes pass), her words captioned as she
+//            says them; the board's same-day reply under her last caption (the two side by side) · 18.06 the TV off on
+//            the cut; Mas holds still; Terb, eyes on his agenda, a beat later: "First item." (the fixes pass)
 //   RHYME    18.07 the lanyard held out (SAFETY COMMITTEE) -> the split: RIGHT Adelina drops hers over Ekiel, LEFT Mas
 //            takes his from Terb's hand and puts it on himself, on the same beat
 //   TURN     18.08-18.10 LEFT: the first task, the roll call; every face to Mas; "present."; "also present."; Mada's two
 //            words; the held breath; V.O. 11 (typed by the host, lips still)
 //   COUNTER  18.11-18.14 RIGHT: Mario's four pages, the highlighted line (an insert), the CLOD glint, the brief
-//            document down the stairwell, "It's that we might win." (the clipping on his desk, an egg)
+//            document down the stairwell, "It's that we might win." (the fixes pass: no clipping on his desk)
 //   OUT      18.15 LEFT: the reminder on his phone, ELPPA · KEYNOTE · JUN 10; the left pane widens to the frame as the
 //            split ends, the phone where the lobby's wall screen will be; he turns it over
 // No V.O. through the podcast, the card or his face (W8). The talking pane at full palette, the waiting one a rung down.
@@ -20,7 +22,7 @@ import {defineScene, layouts, mouth, mk, lineAt, lipTrack} from '../../kit';
 import type {PxShot} from '../../kit';
 import {Buf, clamp} from '../../../../../shared/pixel/px';
 import {PAL} from '../../../../../shared/pixel/palette';
-import {day18, podTV, masHold, terbRemote, lanyardInsert, terbPane, masPane, minutesInsert, phonePane, splitAt, PHONE18, SXL_TABLE} from '../sets/board';
+import {day18, podTV, tvPush, masHold, terbRemote, lanyardInsert, terbPane, masPane, minutesInsert, phonePane, splitAt, PHONE18, SXL_TABLE} from '../sets/board';
 import {lightW, stairPane, mario2S, pagesInsert, clodClose, marioMCU, scrollDrop, ekielSquint, marioMouth, SXR, CLIMB} from '../sets/light';
 
 const L = layouts();
@@ -65,8 +67,9 @@ L.add('18.02', {
 });
 // ------------------------------------------------------------------ 18.03-18.05 the TV full frame
 L.add('18.03', {
-  st: 'act4/sets/board podTV ([SCR] the boardroom TV full frame: a plain podcast player (no title, no logo), the waveform walking with her voice; NELEH\'s words captioned LARGE in the display face as she says them, word by word from the take\'s words; the first sentence holds while the second builds under it)',
+  st: 'act4/sets/board tvPush → podTV ([SCR] the push onto the boardroom TV on its wall in two held steps (the room at 2x, the TV at 4x), then the TV full frame: a podcast player with no show title and no logo, its guest line GUEST: NELEH · FORMER NOPEAI BOARD MEMBER (the fixes pass: the voice placed before her words run, P9), the waveform walking with her voice; NELEH\'s words captioned LARGE in the display face as she says them, word by word from the take\'s words; the first sentence holds while the second builds under it)',
   draw: (fb, k, sh, f) => {
+    if (k < 16) { tvPush(fb, f, k < 8 ? 0 : 1, 0.45); return; }
     const l = words(sh, 'e2-a4-0001');
     const split = l.s + l.words[15][1];
     const cap = k < split ? capAt(sh, k, 'e2-a4-0001', 0) : [capAt(sh, 9999, 'e2-a4-0001', 0).split(' ').slice(0, 15).join(' '), capAt(sh, k, 'e2-a4-0001', 15)];
@@ -86,13 +89,13 @@ L.add('18.05', {
 });
 // ------------------------------------------------------------------ 18.06 his face; the TV off
 L.add('18.06', {
-  st: 'act4/sets/board masHold → terbRemote ([MCU] Mas at the table, holding still (Ep1\'s approved CU face, the window\'s day keyed one step), 2 s; [OTS] over his shoulder onto TERB at the head (his approved portrait, helmet off), the remote in his near hand (art/cast/hands2 grip), the TV\'s cool light on his near cheek until he clicks it off; "First item." lip-synced)',
+  st: 'act4/sets/board masHold → terbRemote(agenda) ([MCU] the TV off on the cut (its click on the cut); Mas at the table, holding still (Ep1\'s approved CU face, the window\'s day keyed one step), 2 s; [OTS] over his shoulder onto TERB at the head (his approved portrait, helmet off), eyes down on his agenda, no remote, no TV light; a beat later "First item." lip-synced, procedure (the fixes pass: the board\'s card is the reply to her; nobody at the table turns her off))',
   face: {TERB: 'lip'},
   marks: {off: ['snd', 'tv_click_off', 1, 0], line: ['on', 'e2-a4-0003', 0]},
   draw: (fb, k, sh, f) => {
-    const off = mk(sh, 'off', 55);
+    void mk(sh, 'off', 1);
     if (k < 46) { masHold(fb, f); return; }
-    terbRemote(fb, f, {mouth: mouth(sh, k, 'TERB'), off: k >= off, aim: k >= off - 4 ? 1 : 0});
+    terbRemote(fb, f, {mouth: mouth(sh, k, 'TERB'), agenda: true});
   },
 });
 // ------------------------------------------------------------------ 18.07 the lanyard; the split
@@ -155,12 +158,12 @@ L.add('18.10', {
 // ------------------------------------------------------------------ 18.11-18.14 RIGHT: the recruit
 const leftWait = (f: number) => { const l = frame(); masPane(l, f, {}); return l; };
 L.add('18.11', {
-  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard, squinting (art/cast/ekiel bust); both lip-synced; LEFT pane a rung down: Mas at the table, still)',
+  st: 'act4/sets/light splitAt(tablePane | mario2S) (RIGHT pane: MARIO at his desk by the lamp (his conversation portrait, turned to Ekiel), writing without looking up from his pages, his pen moving; EKIEL in front of him in his new lanyard (art/cast/ekiel\'s head, his eyes open: sets/light ekielOpen); both lip-synced; LEFT pane a rung down: Mas at the table, still)',
   face: {MARIO: 'lip', EKIEL: 'lip'},
   marks: {ek: ['on', 'e2-a4-0010', 0], ekEnd: ['end', 'e2-a4-0010', 0]},
   draw: (fb, k, sh, f) => {
     const ek0 = mk(sh, 'ek', 104), ek1 = mk(sh, 'ekEnd', 151), right = frame();
-    mario2S(right, f, {mario: {mouth: marioMouth(mouth(sh, k, 'MARIO'))}, ekiel: {mouth: mouth(sh, k, 'EKIEL'), expr: k >= ek0 - 4 && k < ek1 + 10 ? 'worry' : 'squint'}, write: k < ek0 - 6 ? k / 5 : undefined});
+    mario2S(right, f, {mario: {mouth: marioMouth(mouth(sh, k, 'MARIO'))}, ekiel: {mouth: mouth(sh, k, 'EKIEL'), expr: k >= ek0 - 4 && k < ek1 + 10 ? 'worry' : 'neutral'}, write: k < ek0 - 6 ? k / 5 : undefined});
     splitAt(fb, leftWait(f), right, {sxL: 0, sxR: SXR, down: 'left'});
   },
 });
@@ -173,7 +176,7 @@ L.add('18.12', {
   },
 });
 L.add('18.13', {
-  st: 'act4/sets/light splitAt(tablePane | clodClose → marioMCU → scrollDrop → ekielSquint → marioMCU) (RIGHT pane: the glass case of CLOD boxes, the beacon glinting across the bottom row box by box, the last box\'s art a red suspension bridge over a bay (never named); MARIO, finger rising: "There\'s a brief document."; the scroll drops the whole stairwell, the pane panning with it down the spiral past every landing to the bottom, and back up; EKIEL squinting after it: "That\'s the brief one?"; MARIO sets his pen down for the first time: "That\'s the brief one. It only has the one concern."; all lip-synced)',
+  st: 'act4/sets/light splitAt(tablePane | clodClose → marioMCU → scrollDrop → ekielSquint → marioMCU) (RIGHT pane: the glass case of CLOD boxes, the beacon glinting across the bottom row box by box, the last box\'s art a red suspension bridge over a bay (never named); MARIO, finger rising: "There\'s a brief document."; the scroll drops the whole stairwell, the pane panning with it down the spiral past every landing to the bottom, and back up; EKIEL looking after it (his eyes open): "That\'s the brief one?"; MARIO sets his pen down for the first time: "That\'s the brief one. It only has the one concern."; all lip-synced)',
   face: {MARIO: 'lip', EKIEL: 'lip'},
   marks: {g1: ['snd', 'glint_tick', 1, 0], g2: ['snd', 'glint_tick', 2, 0], g3: ['snd', 'glint_tick', 3, 0], drop: ['snd', 'scroll_unroll_fall', 1, 0], m1: ['on', 'e2-a4-0013', 0], ek: ['on', 'e2-a4-0014', 0], m2: ['on', 'e2-a4-0015', 0]},
   draw: (fb, k, sh, f) => {
@@ -186,13 +189,13 @@ L.add('18.13', {
       const down = clamp((edge - 90) / (560 - 203), 0, 1), back = t > 38 ? clamp(Math.floor((t - 38) / 4) * 4 / 14, 0, 1) : 0;
       scrollDrop(right, f, {cam: down * (1 - back), edge});
     }
-    else if (k < m2 - 3) ekielSquint(right, f, {mouth: mouth(sh, k, 'EKIEL'), expr: k >= ek - 2 ? 'worry' : 'squint'});
+    else if (k < m2 - 3) ekielSquint(right, f, {mouth: mouth(sh, k, 'EKIEL'), expr: k >= ek - 2 ? 'worry' : 'neutral'});
     else marioMCU(right, f, {mouth: marioMouth(mouth(sh, k, 'MARIO')), finger: 1, pen: 'down', brow: 1});
     splitAt(fb, leftWait(f), right, {sxL: 0, sxR: SXR, down: 'left'});
   },
 });
 L.add('18.14', {
-  st: 'act4/sets/light splitAt(tablePane | marioMCU) (RIGHT pane, MCU: Mario, finger up: "It\'s that we might win." lip-synced; by the lamp the op-ed clipping, byline NELEH & THE QUIET VOTE (an egg, never read out); LEFT pane holding beside it, a rung down, Mas in it)',
+  st: 'act4/sets/light splitAt(tablePane | marioMCU) (RIGHT pane, MCU: Mario, finger up: "It\'s that we might win." lip-synced; by the lamp a short stack of bound drafts (the fixes pass: the op-ed clipping egg is cut, W8/W9); LEFT pane holding beside it, a rung down, Mas in it)',
   face: {MARIO: 'lip'},
   draw: (fb, k, sh, f) => {
     const right = frame();

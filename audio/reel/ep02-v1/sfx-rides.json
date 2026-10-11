@@ -954,14 +954,16 @@
    "snr_before_db": -11.8,
    "band": "60-250 Hz",
    "target_db": 6.0,
-   "ride_db": 9.0,
+   "ride_db": 16.0,
    "why": "first heard -11.8 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 2.8,
     "attack_over_local_db": -0.2,
     "body_db": -4.2,
     "band": "60-250 Hz"
-   }
+   },
+   "ride_db_before_fixes": 9.0,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB (18.01: at the laid-peak cap, -12 dBFS; the score rides 6 dB under it too, mix_episode.py SCORE_RIDE)"
   },
   {
    "seg": "act4",
@@ -971,14 +973,16 @@
    "snr_before_db": 3.2,
    "band": "1000-2000 Hz",
    "target_db": 6.0,
-   "ride_db": 2.8,
+   "ride_db": 7.0,
    "why": "first heard +3.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 2.8,
     "attack_over_local_db": -0.7,
     "body_db": 6.0,
     "band": "1000-2000 Hz"
-   }
+   },
+   "ride_db_before_fixes": 2.8,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -988,14 +992,16 @@
    "snr_before_db": -5.2,
    "band": "1000-2000 Hz",
    "target_db": 6.0,
-   "ride_db": 1.6,
+   "ride_db": 4.4,
    "why": "first heard -5.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 1.6,
     "attack_over_local_db": 6.0,
     "body_db": -3.6,
     "band": "1000-2000 Hz"
-   }
+   },
+   "ride_db_before_fixes": 1.6,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -1073,14 +1079,16 @@
    "snr_before_db": -10.0,
    "band": "250-1000 Hz",
    "target_db": 6.0,
-   "ride_db": 7.1,
+   "ride_db": 8.3,
    "why": "first heard -10.0 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 7.1,
     "attack_over_local_db": 6.0,
     "body_db": -2.9,
     "band": "250-1000 Hz"
-   }
+   },
+   "ride_db_before_fixes": 7.1,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -1090,14 +1098,16 @@
    "snr_before_db": -2.2,
    "band": "8000-16000 Hz",
    "target_db": 6.0,
-   "ride_db": 8.2,
+   "ride_db": 9.5,
    "why": "first heard -2.2 dB over rooms and score in its own band (8000-16000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 8.2,
     "attack_over_local_db": 0.2,
     "body_db": 6.0,
     "band": "8000-16000 Hz"
-   }
+   },
+   "ride_db_before_fixes": 8.2,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -1158,14 +1168,16 @@
    "snr_before_db": -10.4,
    "band": "60-250 Hz",
    "target_db": 2.0,
-   "ride_db": 9.7,
+   "ride_db": 10.8,
    "why": "first heard -10.4 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
    "measured_with_ride": {
     "ride_db": 9.7,
     "attack_over_local_db": 6.0,
     "body_db": -0.7,
     "band": "60-250 Hz"
-   }
+   },
+   "ride_db_before_fixes": 9.7,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -1175,14 +1187,16 @@
    "snr_before_db": -9.2,
    "band": "1000-2000 Hz",
    "target_db": 2.0,
-   "ride_db": 5.4,
+   "ride_db": 6.7,
    "why": "first heard -9.2 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
    "measured_with_ride": {
     "ride_db": 5.4,
     "attack_over_local_db": 6.0,
     "body_db": -3.8,
     "band": "1000-2000 Hz"
-   }
+   },
+   "ride_db_before_fixes": 5.4,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   },
   {
    "seg": "act4",
@@ -1473,6 +1487,82 @@
    "ride_db": 3.0,
    "why": "the fixes pass (2026-10-10): sc 11 laid 3 s later on the demo cue: attack +3.2 over the local mix (target +6; was ok before); +3 dB",
    "target_db": 6.0
+  },
+  {
+   "seg": "act4",
+   "beat": "18.06",
+   "name": "tv_click_off",
+   "laid_as": "tv_click_off",
+   "snr_before_db": -4.3,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.6,
+   "why": "first heard -4.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain; hand-set (the fixes pass, Act Four): the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 1.7,
+    "body_db": -4.3,
+    "band": "60-250 Hz"
+   },
+   "ride_db_before_fixes": 0.0,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
+  },
+  {
+   "seg": "act4",
+   "beat": "19.03",
+   "name": "calc_tape_spool",
+   "laid_as": "calc_tape_spool",
+   "snr_before_db": -0.3,
+   "band": "2000-4000 Hz",
+   "target_db": 2.0,
+   "ride_db": 2.6,
+   "why": "first heard -0.3 dB over rooms and score in its own band (2000-4000 Hz) at the lock's gain; hand-set (the fixes pass, Act Four): the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 1.1,
+    "body_db": -0.3,
+    "band": "2000-4000 Hz"
+   },
+   "ride_db_before_fixes": 0.0,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
+  },
+  {
+   "seg": "act4",
+   "beat": "19.11",
+   "name": "render_front_sweep",
+   "laid_as": "render_front_sweep",
+   "snr_before_db": 0.4,
+   "band": "1000-2000 Hz",
+   "target_db": 2.0,
+   "ride_db": 1.9,
+   "why": "first heard +0.4 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; hand-set (the fixes pass, Act Four): the smaller lift to an attack of +6 dB over the local mix or a body of +2 dB",
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": -2.3,
+    "body_db": 0.4,
+    "band": "1000-2000 Hz"
+   },
+   "ride_db_before_fixes": 0.0,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
+  },
+  {
+   "seg": "act4",
+   "beat": "22.03",
+   "name": "ui_band_off",
+   "laid_as": "ui_band_off",
+   "snr_before_db": -2.3,
+   "band": "1000-2000 Hz",
+   "target_db": 6.0,
+   "ride_db": 4.9,
+   "why": "first heard -2.3 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; hand-set (the fixes pass, Act Four): the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
+   "measured_with_ride": {
+    "ride_db": 0.0,
+    "attack_over_local_db": 1.4,
+    "body_db": -2.3,
+    "band": "1000-2000 Hz"
+   },
+   "ride_db_before_fixes": 0.0,
+   "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
   }
  ]
 }

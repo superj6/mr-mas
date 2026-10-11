@@ -1,0 +1,64 @@
+{
+ "id": "e2-a4-0001",
+ "label": "capstwit-b1000",
+ "settings": {
+  "stability": 0.55,
+  "similarity_boost": 0.75,
+  "style": 0.0,
+  "use_speaker_boost": true,
+  "speed": 0.95
+ },
+ "bump": 1000,
+ "chars": 132,
+ "key": "a3f8dabdaeb66f88",
+ "measures": {
+  "heard": "When chat GTP came out November 2022, the board was not informed in advance about that. We learned about chat GTP on Rhett, Twit.",
+  "asr_mismatch": [],
+  "asr_margin": null,
+  "names": [
+   {
+    "word": "ChatGTP",
+    "margin": 14.06,
+    "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+    "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+    "real": "ChatGPT",
+    "margin_vs_real": 15.53
+   },
+   {
+    "word": "Rettiwt",
+    "margin": 0.01,
+    "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Rhett twit.",
+    "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+    "real": "Twitter",
+    "margin_vs_real": 0.67
+   }
+  ],
+  "span_s": 9.63,
+  "plan_len_s": 6.85,
+  "ratio": 1.406,
+  "words": 21,
+  "wpm": 130.8,
+  "longest_gap_s": 0.0,
+  "lufs": -16.0,
+  "true_peak": -3.88,
+  "clipped": 0,
+  "raw_tail_cut": false,
+  "f0": 189.2,
+  "f0_range_st": 6.0,
+  "take_floor_dbfs": -61.5,
+  "duration_s": 10.36,
+  "raw_floor_dbfs": -46.6,
+  "raw_speech_to_floor_db": 15.8,
+  "raw_pause_floor_dbfs": -61.0,
+  "raw_pause_sf_db": 30.1,
+  "raw_quiet_frames": 6,
+  "raw_peak_dbfs": -14.51,
+  "raw_clip_runs": 0
+ },
+ "fail": [],
+ "look": [
+  "length 1.41 of the plan",
+  "tempo 131 wpm against neleh at the planned 190 wpm +-15 %",
+  "floor 16 dB under the speech (p5; house bed depth 45)"
+ ]
+}

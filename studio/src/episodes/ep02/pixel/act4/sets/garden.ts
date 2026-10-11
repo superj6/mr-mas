@@ -222,6 +222,14 @@ export const gateReverse = (b: Buf, f: number, st: {gate?: 0 | 1 | 2; lock?: 0 |
   bars(G0, LATCH);
   const shut = st.gate ?? 1, leafW = [G1 - LATCH, Math.round((G1 - LATCH) * 0.55), 10][shut];
   if (leafW > 10) bars(G1 - leafW, G1); else fill(b, G1 - 8, 4, 8, 184, PAL.N0);
+  // (the fixes pass, 2026-10-10, the episode review's minor: plain grass on our side read as Mas caged, not shut out)
+  // our side is the garden's: its gravel path runs from the gate toward us, widening, and its beds of phone-flowers
+  // stand along the frame's foot either side of it (gardenBeds' drawings), so the bars are the garden's gate and he is
+  // outside it
+  poly([G0 + 34, 187, G1 - 34, 187, G1 + 30, RH + 2, G0 - 30, RH + 2], b.ink(PAL.P0));
+  for (let y = 188; y < RH; y++) for (let x = G0 - 30; x < G1 + 30; x++) if (b.get(x, y) === PAL.P0 && hash(x, y, 4) < 0.18) b.set(x, y, PAL.P1);
+  for (const [x0, x1] of [[100, G0 + 2], [G1 + 26, 480]] as Array<[number, number]>) fill(b, x0, 199, x1 - x0, 4, PAL.D2);
+  for (const [x, sd] of [[112, 1], [134, 2], [156, 3], [394, 0], [418, 1], [442, 2], [466, 3]] as Array<[number, number]>) flower(b, x, 200, 0, sd);
   drawChatSmall(b, 62, 160, {band: true});
   // the lock in the foreground: on its hasp at the latch, big (we are close to it), cropped by the frame's foot
   fill(b, LATCH - 34, 128, 68, 8, PAL.G3); fill(b, LATCH - 34, 128, 68, 1, PAL.G5);

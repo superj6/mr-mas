@@ -299,6 +299,25 @@ export const issLayer = (b: Buf, shot: 'wide' | 'ots' | 'mcu' | 'knock' | 'away'
     clothLine(b, [[xmin + 14, ybot - 2], [xmin + 15, ybot + 20], [xmin + 16, RH - 1]], cloth, -2);
     clothLine(b, [[xmax - 7, ybot + 2], [xmax - 8, RH - 1]], cloth, -2);
     clothLine(b, [[xmin + 26, ybot - 16], [xmin + 18, ybot - 10], [xmin + 14, ybot - 3]], cloth, -1);
+    // (the fixes pass, 2026-10-10, the episode review's minor: at 1080p on the plate he still read as an armless cape
+    // blob) his arms drawn as their own shapes outside the torso's line: the near arm (frame-left, nearer us as he turns
+    // to the flap) from the shoulder's round down past the elbow, a hand's width out from his side, its outer edge dark,
+    // its face a rung up toward the overcast, the seam where it meets his body dark, a fold at the elbow; the far arm's
+    // edge a sliver at frame right. His shoulders read broader than the column they replace
+    const sh = ybot - 10, el = Math.min(RH - 8, ybot + 34);
+    const near: Array<[number, number]> = [[xmin + 9, sh - 7], [xmin + 2, sh - 4], [xmin - 2, sh + 4], [xmin - 3, el - 4], [xmin - 3, el + 2], [xmin - 1, RH + 1], [xmin + 9, RH + 1], [xmin + 9, el + 2], [xmin + 9, el - 4], [xmin + 10, sh + 8]];
+    // the body under the arm set back a rung (the torso's flank in the arm's shadow), then the arm over it
+    for (let y = sh + 6; y < RH; y++) for (let x = xmin + 9; x < xmin + 14; x++) { const v = b.get(x, y); if (v !== TRANSPARENT) b.set(x, y, x < xmin + 11 ? HOOD[0] : HOOD[1]); }
+    poly(near.flat(), b.ink(HOOD[3]));
+    for (let y = sh - 6; y < RH; y++) for (let x = xmin - 6; x < xmin + 11; x++) {
+      if (b.get(x, y) !== HOOD[3] || x - 1 < 0) continue;
+      const left = b.get(x - 1, y);
+      if (left !== HOOD[3] && left !== HOOD[4] && left !== HOOD[0] && left !== HOOD[2]) b.set(x, y, HOOD[0]);  // its outer edge
+      else if (x <= xmin + 1) b.set(x, y, y < el ? HOOD[4] : HOOD[3]);                                        // its lit face
+    }
+    // the fold at the elbow: two short creases across the sleeve, a rung down, their lips lit
+    for (const dy of [0, 4]) for (let i = 0; i < 6; i++) { b.set(xmin - 1 + i, el + dy + Math.round(i * 0.4), HOOD[1]); b.set(xmin - 1 + i, el + dy + 1 + Math.round(i * 0.4), HOOD[4]); }
+    for (let y = sh; y < RH; y++) { const x = xmax + 1 + (y < sh + 6 ? 0 : 1); b.set(x, y, HOOD[2]); b.set(x + 1, y, HOOD[0]); }
   } else if (shot === 'knock') {
     const [x, y] = A('knock', 'doormark', [250, 190]);
     shadowAt(b, Math.round(x), Math.round(y), 13);

@@ -258,9 +258,18 @@ export interface PodSt {
   card?: number;
 }
 export const podTV = (b: Buf, f: number, st: PodSt) => {
-  // the TV's bezel at the frame's edge, a plain player (no title, no logo): a blank square where art would be, the
-  // waveform, the scrubber; her words captioned large as she says them
+  // the TV's bezel at the frame's edge, a player with no show title and no logo: a blank square where art would be,
+  // the waveform, the scrubber; her words captioned large as she says them
   fill(b, 0, 0, W, RH, PAL.N0); fill(b, 4, 4, W - 8, RH - 8, PAL.N1);
+  // (the fixes pass, 2026-10-10: an anonymous voice for 18 s, the review's P9 minor) the player's guest line, so the
+  // voice is placed before her words run: GUEST: NELEH · FORMER NOPEAI BOARD MEMBER (facts A38; no show title)
+  {
+    const x0 = 106, y0 = 10;
+    pt(b, 'GUEST:', x0, y0 + 5, PAL.C6);
+    const xn = x0 + pw('GUEST:') + 5;
+    bpt(b, 'NELEH', xn, y0, PAL.P2);
+    pt(b, '· FORMER NOPEAI BOARD MEMBER', xn + bpw('NELEH') + 6, y0 + 5, PAL.G5);
+  }
   fill(b, 20, 14, 70, 70, PAL.N3); fill(b, 20, 14, 70, 1, PAL.N4);
   for (let k = 0; k < 4; k++) ellipse(55, 49, 6 + k * 7, 6 + k * 7, (x, y) => { if (x > 20 && x < 89 && y > 14 && y < 83) b.set(x, y, k % 2 ? PAL.N4 : PAL.N2); });
   fill(b, 52, 46, 7, 7, PAL.N5);
@@ -284,6 +293,17 @@ export const podTV = (b: Buf, f: number, st: PodSt) => {
       pt(b, '— TERB, CHAIR', W - 32 - pw('— TERB, CHAIR') - 8, y + 25, PAL.N3);
     }
   }
+};
+
+/** [SCR] 18.03's head (the fixes pass, 2026-10-10): the push from the boardroom onto the TV on its wall, in held steps:
+ *  `step` 0 the room at 2x round the TV, 1 the TV filling the frame (4x), then the player full frame (podTV). The
+ *  room's TV plays her level; nearest-neighbour, like the phone pushes */
+export const tvPush = (b: Buf, f: number, step: 0 | 1, lvl: number) => {
+  const room = new Buf(W, 270, PAL.N0);
+  day18(room, f, {tv: lvl});
+  const z = step === 0 ? 2 : 4, T = TV18, cx = T.x + T.w / 2, cy = T.y + T.h / 2;
+  const sw = W / z, sh = RH / z, x0 = Math.round(cx - sw / 2), y0 = Math.max(0, Math.round(cy - sh / 2));
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, room.get(Math.min(W - 1, x0 + Math.floor(x / z)), Math.min(RH - 1, y0 + Math.floor(y / z))));
 };
 
 // ================================================================== 18.06: his face; Terb clicks the TV off
@@ -334,7 +354,8 @@ const terbFace = (s: Parameters<typeof terbPortrait>[0]): Img => {
   TERB_F.set(key, out);
   return out;
 };
-export const terbRemote = (b: Buf, f: number, st: {mouth?: Viseme; off?: boolean; aim?: number}) => {
+export const terbRemote = (b: Buf, f: number, st: {mouth?: Viseme; off?: boolean; aim?: number; agenda?: boolean}) => {
+  if (st.agenda) { terbAgenda(b, f, st); return; }
   b.c.set(roomSoft().c.subarray(0, W * RH), 0);
   // (eyes on the TV until he clicks it off; then down to his business: "First item.", not to anyone)
   const img = terbFace({mouth: briskTerb(st.mouth), lid: st.off ? 1 : 0, look: st.off ? 0 : 1, brow: 'level', helmet: false});
@@ -353,6 +374,26 @@ export const terbRemote = (b: Buf, f: number, st: {mouth?: Viseme; off?: boolean
     drawPhone: (bb) => { fill(bb, R.x, R.y, R.w, R.h, PAL.N1); fill(bb, R.x, R.y, R.w, 1, PAL.N4); fill(bb, R.x + 3, R.y + 4, 5, 3, st.off ? PAL.N3 : PAL.R2); for (let q = 0; q < 3; q++) fill(bb, R.x + 3, R.y + 12 + q * 6, 6, 2, PAL.N3); }});
   // Mas's back and shoulder in the right foreground (seated beside the head: the back of his head, the hood)
   drawBackHead(b, 330, 70, {scale: 1.35, turn: 1, light: 'monitor'}, (c) => stepColor(c, 1));
+};
+
+/** [OTS] 18.06 since the fixes pass (2026-10-10; the review's guardrail minor: his click-off and "First item." staged the
+ *  board dismissing her, an invented attitude at a contested beat): the TV went off on the cut; TERB, eyes down on his
+ *  agenda (his single sheet low in his hand at the frame's foot, terbPane's sheet), opens the meeting. No remote, no
+ *  TV light; lip-synced, brisk; Mas's back and shoulder in the right foreground as before */
+const terbAgenda = (b: Buf, f: number, st: {mouth?: Viseme}) => {
+  b.c.set(roomSoft().c.subarray(0, W * RH), 0);
+  const img = terbFace({mouth: briskTerb(st.mouth), lid: 1, look: 0, brow: 'level', helmet: false});
+  putBustCut(b, img, 120, 44, RH, true);
+  for (let y = 128; y < 168; y++) for (let x = 186; x < 236; x++) { const c = b.get(x, y), fm = familyOf(c); if (fm && (fm[0] === 'P' || fm[0] === 'W' || (fm[0] === 'G' && fm[1] >= 6))) b.set(x, y, fm[0] === 'W' ? PAL.G3 : PAL.G5); }
+  // his agenda: one sheet low at the frame's foot, its top edge tilted toward him, three lines of type; his fingers on
+  // its near corner, the white cuff above them
+  poly([150, RH + 2, 158, 178, 226, 172, 232, RH + 2], b.ink(PAL.P2));
+  line(158, 178, 226, 172, b.ink(PAL.P1));
+  for (let r = 0; r < 3; r++) line(166, 184 + r * 5, 220, 179 + r * 5, b.ink(PAL.G5));
+  fill(b, 218, 176, 9, 10, PAL.S4); fill(b, 218, 176, 9, 1, PAL.S5); fill(b, 218, 185, 9, 1, PAL.S2); b.set(226, 179, PAL.S2);
+  fill(b, 220, 186, 12, 17, PAL.G6); fill(b, 220, 186, 12, 1, PAL.P2); fill(b, 231, 186, 1, 17, PAL.G4);
+  drawBackHead(b, 330, 70, {scale: 1.35, turn: 1, light: 'monitor'}, (c) => stepColor(c, 1));
+  void f;
 };
 
 // ================================================================== 18.07: the lanyard held out

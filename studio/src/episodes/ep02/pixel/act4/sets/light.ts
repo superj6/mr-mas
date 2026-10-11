@@ -13,22 +13,28 @@
 //                           running its underline under `inherently` on the word (st.under 0..1)
 //   clodClose(b, f, st)     [M] 18.13's head: the glass case of CLOD boxes, the beacon glinting across them box by box;
 //                           the last box's art the Golden Gate Bridge (never named)
-//   marioMCU(b, f, st)      [MCU] 18.13 / 18.14: Mario, finger rising, his pen (st.pen 'up' | 'down'); by the lamp the
-//                           op-ed clipping, byline NELEH & THE QUIET VOTE (an egg, not held for reading, 18.14)
+//   marioMCU(b, f, st)      [MCU] 18.13 / 18.14: Mario, finger rising, his pen (st.pen 'up' | 'down'); by the lamp a
+//                           short stack of bound drafts (the fixes pass, 2026-10-10: the op-ed clipping egg, NELEH & THE
+//                           QUIET VOTE, is cut: it read as a headline about the board's vote on a rival's desk, W8/W9)
 //   scrollDrop(b, f, st)    18.13: the brief document drops the whole stairwell: the pane pans with it down the spiral
 //                           past every landing to the bottom (st.t 0..1) and back up (st.back 0..1)
-//   ekielSquint(b, f, st)   [MCU] 18.13: Ekiel squinting after it, lip-synced
+//   ekielSquint(b, f, st)   [MCU] 18.13: Ekiel looking after it, lip-synced (the name kept; since the fixes pass his
+//                           eyes are open: ekielOpen, below)
 // Every right-pane drawing is composed round x 240 in a full frame (the split shows x 121..358).
 import {Buf, rect, line, ellipse, poly, bayer, hash, clamp} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf} from '../../../../../shared/pixel/palette';
-import {blitImg} from '../../../../../shared/pixel/figure';
+import {blitImg, P} from '../../../../../shared/pixel/figure';
 import {STAIR_STEPS, LIGHTHOUSE} from '../../../../../shared/pixel/rooms/lighthouse';
 import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT} from '../../../../../shared/pixel/cast/adelina';
 import {marioPortraitImg} from '../../../../../shared/pixel/cast/mario';
 import type {MarioPortrait} from '../../../../../shared/pixel/cast/mario';
 import type {Viseme} from '../../../../../shared/pixel/cast/talk';
 import {lighthouse18, lanyard} from '../../art/sets/committee';
-import {drawEkielRoom, ekielBust} from '../../art/cast/ekiel';
+import {drawEkielRoom} from '../../art/cast/ekiel';
+import {makeBust3, plane, bustLanyard} from '../../art/cast/civic2';
+import type {BustState, BustSpec3} from '../../art/cast/civic2';
+import {SKIN} from '../../../../../shared/pixel/cast/civic-kit';
+import type {Img} from '../../../../../shared/pixel/figure';
 import {placeHand, drawHand, sleeve, POSES} from '../../art/cast/hands2';
 import {fill, pt, pw, pwrap, bpt, bpw, tiny, tinyWidth, vramp} from '../../art/kit';
 import {RH, W, glow, mirror, putBustSoft} from './common';
@@ -157,6 +163,37 @@ export const ekielLanyard = (b: Buf, x: number, y: number) => {
   fill(b, x - 8, y + 15, 17, 11, PAL.N0); fill(b, x - 7, y + 15, 15, 10, PAL.P2); fill(b, x - 7, y + 15, 15, 2, PAL.R2);
   tiny(b, '212', x - 5, y + 18, PAL.R2);
 };
+// EKIEL in sc 18 with his eyes open (the fixes pass, 2026-10-10): art/cast/ekiel's room head and its committee lanyard,
+// copied (the art file is imported only), as Act Three's ekiel23: the art drew the squint as his resting face for the
+// card's SQUINT: 100%, which Act Three cut as an appearance gag on a real person once its setup was gone (GR X10). The
+// narrow eye a row taller, its iris dark; 'squint' (the art's default here) draws as 'neutral', the eyes open
+const EK_SANDY = [PAL.B1, PAL.B3, PAL.B4, PAL.W4, PAL.W5, PAL.W7];
+const EK_NAVY = [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N5, PAL.N7];
+const EK_TEE = [PAL.N1, PAL.G2, PAL.G3, PAL.G4, PAL.G5, PAL.G6];
+const ekielOpenBust = makeBust3<BustState>({
+  head: {yaw: 22, at: [57, 54], scale: 1.05, cranium: [19, 25, 23], cheekW: 14.5, jawW: 13, jawY: 19, chinY: 35, chinW: 4.5, chinZ: 12.5, chinH: 4, cheekbone: 1.4, full: 0.1, brow: 2.4, socket: 1.2,
+    nose: {tipY: 14, proj: 7, wing: 3.6, bridge: 2}, mouthY: 24, lips: 0.7, muzzle: 13, eyeX: 8.5, neck: {r: 8.5, throat: true}, hair: {style: 'tousled', thick: 3.4, line: -17, side: -1},
+    skin: SKIN.light, hairRamp: EK_SANDY, back: {skin: PAL.S3, hair: PAL.W4}},
+  face: {eye: 'narrow', eyeW: 9, eyeH: 3, brow: 'straight', browCol: PAL.B2, mouthW: 9, age: 1, iris: PAL.B1},
+  torso: {kind: 'jacket'},
+  extras: () => { const ly = bustLanyard('cord', 'badge', 104); return {parts: [...ly.parts], adjust: [plane('suit', 4, P.line(62, 106, 62, 150)), ...ly.adjust]}; },
+  ramps: {skin: SKIN.light, suit: EK_NAVY, shirt: EK_TEE, cord: [PAL.N0, PAL.C2, PAL.C4, PAL.C5, PAL.C6, PAL.C7], badge: [PAL.N1, PAL.G3, PAL.G5, PAL.P1, PAL.P2, PAL.P2]},
+  backRamp: {skin: PAL.S3, suit: PAL.N5},
+  expr: {neutral: {eye: 'wide', brow: 'level', mouth: 'rest'}},
+} as BustSpec3);
+const EKO = new Map<string, Img>();
+const ekielOpen = (s: {mouth?: Viseme; expr?: 'squint' | 'worry' | 'neutral'}): Img => {
+  const st = {mouth: s.mouth ?? 'rest', expr: s.expr === 'worry' ? 'worry' : 'neutral'} as BustState;
+  const key = JSON.stringify(st); const hit = EKO.get(key); if (hit) return hit;
+  const img = ekielOpenBust(st);
+  const out = {w: img.w, h: img.h, c: new Int32Array(img.c)};
+  const t = new Buf(img.w, img.h, 0x1000000);
+  tiny(t, '212', 56, 129, PAL.R2);
+  for (let i = 0; i < t.c.length; i++) if (t.c[i] !== 0x1000000) out.c[i] = t.c[i];
+  EKO.set(key, out);
+  return out;
+};
+void EK_TEE;
 /** viseme -> Mario's portrait mouths (0 rest, 1 small, 2 open, 3 round) */
 export const marioMouth = (v: string): 0 | 1 | 2 | 3 => (v === 'A' ? 2 : v === 'O' ? 3 : v === 'E' || v === 'M' ? 1 : 0);
 export interface Mario2SSt { mario?: Partial<MarioPortrait>; ekiel?: {mouth?: Viseme; expr?: 'squint' | 'worry' | 'neutral'}; write?: number; pages?: boolean }
@@ -165,7 +202,7 @@ export const mario2S = (b: Buf, f: number, st: Mario2SSt = {}) => {
   glow(b, 300, 120, 120, 90, 1);
   // EKIEL at the pane's left, standing in front of the desk, turned to Mario (his bust mirrored), the committee
   // lanyard on him
-  const ek = mirror(ekielBust({mouth: st.ekiel?.mouth ?? 'rest', expr: st.ekiel?.expr ?? 'squint', lanyard: 'committee'}));
+  const ek = mirror(ekielOpen({mouth: st.ekiel?.mouth ?? 'rest', expr: st.ekiel?.expr ?? 'neutral'}));
   putBustSoft(b, ek, 116, 52, RH, false);
   // (the review pass: the bust's own badge sits under the desk's edge here, so the rhyme's other half was missing
   // after the split) the committee lanyard carried onto his chest: the red cord from either side of his collar to the
@@ -258,8 +295,8 @@ export const clodClose = (b: Buf, f: number, st: {glint?: number} = {}) => {
   void f;
 };
 /** [MCU] Mario at his desk by the lamp (his portrait mirrored, turned to Ekiel), finger `finger`; his pen in his other
- *  hand on the desk (`pen` 'up' in his fingers, 'down' set on the pages); the op-ed clipping by the lamp: its byline
- *  NELEH & THE QUIET VOTE (an egg) */
+ *  hand on the desk (`pen` 'up' in his fingers, 'down' set on the pages); a short stack of bound drafts on the desk (the
+ *  fixes pass: the op-ed clipping egg is cut, W8/W9) */
 export const marioMCU = (b: Buf, f: number, st: {mouth?: 0 | 1 | 2 | 3; finger?: 0 | 1 | 2; pen?: 'up' | 'down'; brow?: 0 | 1}) => {
   b.c.set(wallSoft().c.subarray(0, W * RH));
   glow(b, 250, 100, 140, 110, 1);
@@ -268,13 +305,16 @@ export const marioMCU = (b: Buf, f: number, st: {mouth?: 0 | 1 | 2 | 3; finger?:
   glow(b, 330, 170, 70, 30, 1);
   const m = marioImg2({mouth: st.mouth ?? 0, blink: 0, brow: st.brow ?? 0, finger: st.finger ?? 1, nod: 0});
   blitImg(b, m, 184, 34, {clip: (_x, y) => y < 166});
-  // the clipping: newsprint, a headline bar, the byline legible, two columns of type, a small photo
-  const cx = 126, cy = 170;
-  fill(b, cx + 2, cy + 2, 118, 32, PAL.D1); fill(b, cx, cy, 118, 32, PAL.P0); fill(b, cx, cy, 118, 1, PAL.P1);
-  fill(b, cx + 4, cy + 3, 80, 3, PAL.N2);
-  tiny(b, 'NELEH & THE QUIET VOTE', cx + 4, cy + 9, PAL.N1);
-  for (let r = 0; r < 3; r++) { fill(b, cx + 4, cy + 18 + r * 4, 46, 1, PAL.G4); fill(b, cx + 54, cy + 18 + r * 4, 30, 1, PAL.G4); }
-  fill(b, cx + 90, cy + 16, 22, 13, PAL.G4); fill(b, cx + 92, cy + 18, 18, 9, PAL.G3);
+  // (the fixes pass, 2026-10-10: the op-ed clipping, its byline legible for 10 s on "It's that we might win.", is cut:
+  // it read as a headline about the board's vote on a rival's desk, W8/W9) a short stack of bound drafts in its place,
+  // the lighthouse's own material: three spines, cream page edges, no words
+  const cx = 150, cy = 172;
+  fill(b, cx + 2, cy + 3, 70, 26, PAL.D1);
+  for (let k = 0; k < 3; k++) {
+    const y = cy + 18 - k * 8, x = cx + (k % 2 ? 3 : 0), w = 66 - (k % 2) * 4;
+    fill(b, x, y, w, 8, k === 1 ? PAL.D3 : PAL.F2); fill(b, x, y, w, 1, k === 1 ? PAL.D4 : PAL.F3);
+    fill(b, x + w - 6, y + 1, 6, 6, PAL.P1); for (let r = 0; r < 3; r++) fill(b, x + w - 6, y + 2 + r * 2, 6, 1, PAL.P0);
+  }
   // the pages and the pen
   fill(b, 252, 172, 60, 24, PAL.P2); fill(b, 252, 172, 60, 1, PAL.W9); for (let r = 0; r < 3; r++) fill(b, 256, 177 + r * 5, 48 - r * 6, 1, PAL.G5);
   if (st.pen === 'down') { line(262, 186, 300, 182, b.ink(PAL.I0)); line(262, 187, 300, 183, b.ink(PAL.N1)); }
@@ -331,10 +371,10 @@ export const scrollDrop = (b: Buf, f: number, st: {cam: number; edge: number}) =
   if (st.edge >= STRIP_H - 44) { const by = STRIP_H - 44 - oy; for (let k = 0; k < 5; k++) { const w = 30 + k * 8; fill(b, 243 - w / 2, by - k * 3, w, 3, k % 2 ? PAL.P1 : PAL.P2); } }
   void f;
 };
-/** [MCU] Ekiel squinting after it (his bust mirrored, turned to Mario's side), lip-synced, the stair soft behind */
+/** [MCU] Ekiel looking after it (his bust mirrored, turned to Mario's side), lip-synced, the stair soft behind */
 export const ekielSquint = (b: Buf, f: number, st: {mouth?: Viseme; expr?: 'squint' | 'worry' | 'neutral'}) => {
   b.c.set(wallSoft().c.subarray(0, W * RH));
-  const ek = mirror(ekielBust({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'squint', lanyard: 'committee'}));
+  const ek = mirror(ekielOpen({mouth: st.mouth ?? 'rest', expr: st.expr ?? 'neutral'}));
   putBustSoft(b, ek, 178, 36, RH, false);
   void f;
 };

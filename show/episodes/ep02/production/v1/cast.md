@@ -429,7 +429,7 @@ Only the text **sent** to a voice changes; the lines keep the script's spelling 
 | MINDDEEP | Nole (4.24) | "Mind Deep" | **new**; check it isn't run together |
 | CHATGTP | Neleh (18.03) | "Chat G-T-P" | Ep1 |
 | AROS | Selbeep (1.02) | "Ah-ross" | **new**; check against "arrows" and "Eros" |
-| RETTIWT | Neleh (18.03) | "Rett-twit" | **new**; the joke is the "twit" |
+| RETTIWT | Neleh (18.03) | "Rett-twit" | **new**; the joke is the "twit". Her line is read `Rett—TWIT.` (`say_lines`, Act Four's fixes pass): the house spelling collapsed to "Reddit" (takes-qa.md §4 item 5) |
 | Ekiel | Mario (18.11; Kokoro: its own IPA, as Ep1's Kokoro respellings) | "Eh-keel" | **new**; check |
 | haras | (nobody says it since the script review: V.O. 13 now says "she", with Haras in frame) | "Hah-rahs", if a later line needs it | on file; **must not be heard as "harass" or "Harris"** (SIRRAH is Harris) |
 | AGI | Alyi and the crowd (15.06) | "A.G.I." (the letters) | **checked for the crowd** (§3.10): sent as "Feel the A.G.I.! Feel the A.G.I.!" (`say_lines.e2-a3-0010`), 11 of 12 voices were heard saying the letters ("AGI"), one "A-G-E"; Alyi's own line (`e2-a3-0009`) is the takes pass's; the screen keeps capitals |

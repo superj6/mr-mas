@@ -10,6 +10,83 @@
      "label": "first",
      "bump": 0,
      "seed": 626645045,
+     "key": "eeab12959af3aa7c",
+     "settings": {
+      "stability": 0.55,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 0.95
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
+     "measures": {
+      "heard": "When chat GTP came out November 2022, the board was not informed in advance about that. We learned about chat GTP on Rhett, Twit.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [
+       {
+        "word": "ChatGTP",
+        "margin": 13.75,
+        "best_intended": "When ChatGTP came out November, 2022, the board was not informed in advance about that. We learned about ChatGTP on RETTIWT.",
+        "best_competitor": "When Chat GPT came out November, 2022, the board was not informed in advance about that. We learned about Chat GPT on RETTIWT.",
+        "real": "ChatGPT",
+        "margin_vs_real": 15.93
+       },
+       {
+        "word": "Rettiwt",
+        "margin": 1.09,
+        "best_intended": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Rhett twit.",
+        "best_competitor": "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.",
+        "real": "Twitter",
+        "margin_vs_real": 2.29
+       }
+      ],
+      "span_s": 10.19,
+      "plan_len_s": 6.85,
+      "ratio": 1.488,
+      "words": 21,
+      "wpm": 123.7,
+      "longest_gap_s": 0.0,
+      "lufs": -16.0,
+      "true_peak": -3.46,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 190.6,
+      "f0_range_st": 7.6,
+      "take_floor_dbfs": -61.6,
+      "duration_s": 10.917,
+      "raw_floor_dbfs": -48.7,
+      "raw_speech_to_floor_db": 18.2,
+      "raw_pause_floor_dbfs": -61.3,
+      "raw_pause_sf_db": 30.7,
+      "raw_quiet_frames": 15,
+      "raw_peak_dbfs": -13.62,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "length 1.49 of the plan",
+      "tempo 124 wpm against neleh at the planned 190 wpm +-15 %",
+      "floor 18 dB under the speech (p5; house bed depth 45)"
+     ],
+     "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett—TWIT.",
+     "voice": "Alexandra - Confident, Clear and Steady",
+     "base_key": "eeab12959af3aa7c"
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "length 1.49 of the plan",
+    "tempo 124 wpm against neleh at the planned 190 wpm +-15 %",
+    "floor 18 dB under the speech (p5; house bed depth 45)"
+   ],
+   "superseded": [
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 626645045,
      "key": "43236768f1d4470c",
      "settings": {
       "stability": 0.55,
@@ -282,17 +359,7 @@
      "why": "name Rettiwt: -4.5 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'; noise: the raw floor (the p5 measure, the FAIL rule since replaced by the pause floor, §2) 15 dB under the speech"
     }
    ],
-   "picked_bump": 1000,
-   "status": "look",
-   "fail": [],
-   "look": [
-    "name Rettiwt: -0.8 against 'When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on Reddit.'",
-    "length 1.31 of the plan",
-    "tempo 140 wpm against neleh at the planned 190 wpm +-15 %",
-    "floor 16 dB under the speech (p5; house bed depth 45)"
-   ],
-   "superseded": [],
-   "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett-twit.",
+   "sent": "When Chat G-T-P came out November, 2022, the board was not informed in advance about that. We learned about Chat G-T-P on Rett—TWIT.",
    "settings": {
     "stability": 0.55,
     "similarity_boost": 0.75,
@@ -302,8 +369,8 @@
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act4/wav/e2-a4-0001__neleh-A.wav",
-    "33c33ef3c2565622",
-    9.709
+    "eeab12959af3aa7c",
+    10.917
    ]
   },
   "e2-a4-0002": {
@@ -3404,5 +3471,5 @@
    "special": "kokoro"
   }
  },
- "updated": "2026-10-09 05:23:26"
+ "updated": "2026-10-10 19:56:20"
 }

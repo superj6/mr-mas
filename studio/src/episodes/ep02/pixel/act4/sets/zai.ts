@@ -37,12 +37,18 @@ const warehouse = (b: Buf) => {
   vramp(b, 0, 150, W, RH - 150, [PAL.G1, PAL.G2]);
 };
 const banner = (b: Buf, cx: number) => {
-  const s = 'KORG 2: NEXT QUARTER', w = bpw(s) + 16, x = Math.round(cx - w / 2);
+  // (the fixes pass, 2026-10-10: it read KORG 2: NEXT QUARTER, a release-timeline claim over invented staging, Act
+  // Two's review minor left to this act) the product's name only, on the same long banner, sun-faded (its navy blotched
+  // a rung lighter, the letters a rung down), its corner peeling: a banner that has been up a while, no date on it
+  const s = 'KORG 2', w = bpw('KORG 2: NEXT QUARTER') + 16, x = Math.round(cx - w / 2);
   for (const tx of [x + 6, x + w - 7]) line(tx, 28, tx, 36, b.ink(PAL.G3));
-  fill(b, x, 36, w, 22, PAL.N3); fill(b, x, 36, w, 1, PAL.N5); bpt(b, s, x + 8, 40, PAL.G5);
+  fill(b, x, 36, w, 22, PAL.N3); fill(b, x, 36, w, 1, PAL.N5);
+  for (let yy = 37; yy < 58; yy++) for (let xx = x; xx < x + w; xx++) if (bayer(xx, yy) < 0.18 + 0.25 * Math.max(0, Math.sin((xx - x) / 23) * Math.cos(yy / 7))) b.set(xx, yy, PAL.N4);
+  bpt(b, s, Math.round(cx - bpw(s) / 2), 40, PAL.G4);
   for (let i = 0; i < 6; i++) b.set(x + w - 1 - i, 57 - i, PAL.N1);
+  for (let i = 0; i < 5; i++) fill(b, x + w - 6 + i, 52 + i, 1, 6 - i, PAL.N5);
 };
-export interface ZaiPaneSt { cage?: 'empty' | 'phone'; door?: 'open' | 'shut'; padlock?: 'open' | 'locked'; lamp?: 'on' | 'off'; nole?: Partial<NolePose> | null; lit?: number }
+export interface ZaiPaneSt { cage?: 'empty' | 'phone'; door?: 'open' | 'shut'; padlock?: 'open' | 'locked' | 'none'; lamp?: 'on' | 'off'; nole?: Partial<NolePose> | null; lit?: number }
 export const ZAI = {lamp: 330, nole: 296, cage: 196, doors: 124};
 export const zaiPane = (b: Buf, f: number, st: ZaiPaneSt = {}) => {
   warehouse(b);
@@ -52,7 +58,7 @@ export const zaiPane = (b: Buf, f: number, st: ZaiPaneSt = {}) => {
   fill(b, D - 4, 64, 58, 86, PAL.N3); fill(b, D, 68, 24, 82, PAL.C6); fill(b, D + 28, 68, 24, 82, PAL.C6); fill(b, D + 24, 68, 4, 82, PAL.N2);
   visitor.draw(b, D + 14, 150, {arm: 'down', head: {hair: 'short'}}, {map: () => PAL.N1});
   // the birdcage at the doors, brand new: its tag, its padlock
-  drawBirdcage(b, ZAI.cage, 160, {tag: true, padlock: st.padlock ?? 'open', door: st.door ?? 'open', phone: st.cage === 'phone', f});
+  drawBirdcage(b, ZAI.cage, 160, {tag: true, padlock: st.padlock === 'none' ? undefined : st.padlock ?? 'open', door: st.door ?? 'open', phone: st.cage === 'phone', f});
   // Nole's post lamp on a tall stand, his standing spot by it
   const LX = ZAI.lamp;
   fill(b, LX, 84, 3, 100, PAL.G3); fill(b, LX - 14, 182, 31, 3, PAL.G3); fill(b, LX - 22, 78, 20, 8, PAL.G4); fill(b, LX - 4, 80, 8, 2, PAL.G4);
@@ -70,9 +76,12 @@ let SOFT: Buf | null = null;
 const zaiSoft = () => {
   if (SOFT) return SOFT;
   const t = new Buf(W, 270, PAL.N0);
-  zaiPane(t, 0, {nole: null});
+  zaiPane(t, 0, {nole: null, padlock: 'none'});
   const b = new Buf(W, RH, PAL.N0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(t.get(clamp(Math.round(110 + x * 0.55), 0, W - 1), clamp(Math.round(64 + y * 0.55), 0, RH - 1)), -1));
+  // (the fixes pass: the art's open padlock, scaled up inside the dome, read as a small orange bird) the open padlock
+  // drawn at this scale on the door's latch, its shackle up and open
+  softLock(b, true);
   SOFT = b;
   return b;
 };
@@ -145,8 +154,49 @@ const noPhoneHand = (im: Img): Img => {
   }
   return {...im, c};
 };
-export const emptyHands = (b: Buf, f: number, st: {lamp: boolean; down: boolean}) => {
-  b.c.set(zaiSoft().c.subarray(0, W * RH));
+/** the soft room behind 20.04's MCU (the fixes pass, 2026-10-10, the episode review's minor: his caged phone read as a
+ *  small orange bird: the soft background still had the empty cage, its door open and its open padlock hanging
+ *  inside the dome): the cage shut and locked, his own phone inside it, lit and buzzing, replies stacking up its screen
+ *  (grey bars, nothing legible), drawn at the MCU's own scale over the soft room; the padlock on the door's latch,
+ *  its shackle closed */
+let SOFT_LOCKED: Buf | null = null;
+const zaiSoftLocked = () => {
+  if (SOFT_LOCKED) return SOFT_LOCKED;
+  const t = new Buf(W, 270, PAL.N0);
+  zaiPane(t, 0, {nole: null, door: 'shut', padlock: 'none'});
+  const b = new Buf(W, RH, PAL.N0);
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(t.get(clamp(Math.round(110 + x * 0.55), 0, W - 1), clamp(Math.round(64 + y * 0.55), 0, RH - 1)), -1));
+  SOFT_LOCKED = b;
+  return b;
+};
+const cagedPhone = (b: Buf, f: number, n: number) => {
+  const X = (px: number) => Math.round((px - 110) / 0.55), Y = (py: number) => Math.round((py - 64) / 0.55);
+  const cx = ZAI.cage, base = 130, hw = 20;
+  const bz = Math.floor(f / 2) % 2;
+  // the phone standing on the cage's floor, leaning on the back bars: bezel, lit screen, the replies stacking up it
+  const x0 = X(cx) - 15 + bz, y0 = Y(base - 3) - 40, pw0 = 22, ph0 = 40;
+  glow(b, x0 + pw0 / 2, y0 + ph0 / 2, 30, 34, 1);
+  fill(b, x0, y0, pw0, ph0, PAL.N0); fill(b, x0 + 1, y0, pw0 - 2, 1, PAL.G4); fill(b, x0, y0 + 1, 1, ph0 - 2, PAL.G3);
+  fill(b, x0 + 2, y0 + 3, pw0 - 4, ph0 - 6, PAL.C5); fill(b, x0 + 8, y0 + 1, 6, 1, PAL.N1);
+  for (let i = 0; i < Math.min(5, n); i++) { const yy = y0 + ph0 - 7 - i * 6; fill(b, x0 + 3, yy, pw0 - 6, 5, PAL.P1); fill(b, x0 + 4, yy + 1, 3, 3, PAL.C3); fill(b, x0 + 8, yy + 1, 9 - (i * 3) % 5, 1, PAL.G4); fill(b, x0 + 8, yy + 3, 6 - (i * 2) % 3, 1, PAL.G5); }
+  // the buzz: two short ticks either side, on 2s
+  if (bz) for (const d of [-1, 1]) for (let q = 0; q < 2; q++) fill(b, d < 0 ? x0 - 4 - q * 3 : x0 + pw0 + 2 + q * 3, y0 + 10 + q * 9, 1, 5, PAL.C6);
+  // the cage's front bars over it (brass, a rung down in the soft light)
+  for (let i = -hw; i <= hw; i += 4) { const xx = X(cx + i); fill(b, xx, Y(base - 22), 2, Y(base - 3) - Y(base - 22), PAL.W4); b.set(xx, Y(base - 22), PAL.W5); }
+  softLock(b, false);
+};
+/** the padlock at the MCU's scale on the cage door's latch (its right edge): `open` the shackle up, one leg out of the
+ *  body; locked, the shackle's arch down into it */
+function softLock(b: Buf, open: boolean) {
+  const X = (px: number) => Math.round((px - 110) / 0.55), Y = (py: number) => Math.round((py - 64) / 0.55);
+  const lx = X(ZAI.cage + 6) - 2, ly = Y(130 - 12), up = open ? 5 : 0;
+  for (let i = 0; i < 12; i++) { const a = Math.PI * (i / 11); fill(b, lx + 5 + Math.round(Math.cos(a) * 4), ly - 1 - up - Math.round(Math.sin(a) * 5), 2, 2, PAL.G5); }
+  if (open) fill(b, lx + 1, ly - up - 1, 2, up + 1, PAL.G5);
+  fill(b, lx, ly, 12, 10, PAL.W5); fill(b, lx, ly, 12, 1, PAL.W7); fill(b, lx + 11, ly, 1, 10, PAL.W3); fill(b, lx + 5, ly + 3, 2, 4, PAL.N1);
+}
+export const emptyHands = (b: Buf, f: number, st: {lamp: boolean; down: boolean; buzz?: number}) => {
+  b.c.set(zaiSoftLocked().c.subarray(0, W * RH));
+  cagedPhone(b, f, st.buzz ?? 5);
   if (!st.lamp) for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(b.get(x, y), -1));
   const im = noPhoneHand(nolePortraitImg({mouth: 0, jab: 0, blink: st.down ? 1 : 0, brow: 1, dip: st.down ? 6 : 0}));
   const lit = st.lamp ? {...im, c: im.c.map((v) => (v < 0 ? v : warmSkin(v)))} : {...im, c: im.c.map((v) => (v < 0 ? v : stepColor(v, -1)))};

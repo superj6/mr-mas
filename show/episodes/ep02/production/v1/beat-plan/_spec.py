@@ -188,6 +188,18 @@ for _sc, (_d, _why) in SCENE_ADJUST_FX3.items():
     SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The fixes pass (fixes-v1.md, Act Four, 2026-10-10). Neleh's first line is re-read so RETTIWT can't be heard as
+# "Reddit" (an em dash between the syllables, the second stressed): the take is 1.2 s longer (10.19 s of speech against
+# 8.97), which squeezed sc 18's air to x0.925. Sc 18 takes 1 s from sc 19 (x1.41, the act's loosest scene, whose 19.06
+# tail ran 3.4 s). Act Four stays 5:19 (7,656 f), so the tag's episode clock doesn't move.
+SCENE_ADJUST_FX4 = {
+    "18": (+1, "the fixes pass: Neleh's first line re-read (RETTIWT, not \"Reddit\"), 1.2 s longer"),
+    "19": (-1, "the fixes pass: 1 s to sc 18 (from the scene's air)"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_FX4.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
 SCENE_ORDER = ["1", "4", "4A", "4B", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "17", "18", "19", "20",
                "22", "23"]
 # the proposal's table per segment (s): cold 0:56 · A1 6:04 · A2 4:53 · A3 5:26 · A4 5:20 · tag 0:37 = 23:16; with the
@@ -689,7 +701,7 @@ _l("e2-a4-0001", "act4", "18.03", "neleh", "When CHATGTP came out November, 2022
    "her own words, through the podcast-player chain; Ep1's voice and settings, unchanged; captions large", "[V · facts A38: her May 28, 2024 podcast interview's transcript; name swaps; ASR-verified against the text]", device="podcast")
 _l("e2-a4-0002", "act4", "18.04", "neleh", "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…",
    "the same chain; cropped before its next clause", "[V · facts A38: the same transcript; name swaps]", device="podcast")
-_l("e2-a4-0003", "act4", "18.06", "terb", "First item.", "clicking the TV off", "[INVENTED]", len=0.8)
+_l("e2-a4-0003", "act4", "18.06", "terb", "First item.", "eyes on his agenda, a beat after the TV goes off; procedure, not a reply to her (the board's card is the reply)", "[INVENTED]", len=0.8)
 _l("e2-a4-0004", "act4", "18.08", "terb", "First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it.",
    "brisk, procedural", "[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36)]")
 _l("e2-a4-0005", "act4", "18.08", "terb", "Members: myself, two directors, and our chief executive.",
@@ -700,12 +712,12 @@ _l("e2-a4-0007", "act4", "18.10", "terb", "And at the end of the ninety days, we
 _l("e2-a4-0008", "act4", "18.10", "mas", "also present.", "level", "[INVENTED · accurate: he is on both (facts A36)]")
 _l("e2-a4-0009", "act4", "18.11", "mario", "Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes.",
    "still writing; warm and precise", "[INVENTED]")
-_l("e2-a4-0010", "act4", "18.11", "ekiel", "You annotated my resignation?", "squinting", "[INVENTED]")
+_l("e2-a4-0010", "act4", "18.11", "ekiel", "You annotated my resignation?", "taken aback", "[INVENTED]")
 _l("e2-a4-0011", "act4", "18.11", "mario", "Lightly. Four pages.", "not looking up", "[INVENTED]")
 _l("e2-a4-0012", "act4", "18.12", "mario", "We agree. I underlined 'inherently.'",
    "pleased with the underline; a small beat before 'inherently.', the word the joke turns on", "[INVENTED]", len=2.6)
 _l("e2-a4-0013", "act4", "18.13", "mario", "There's a brief document.", "finger rising", "[INVENTED]")
-_l("e2-a4-0014", "act4", "18.13", "ekiel", "That's the brief one?", "squinting down the stairwell after it", "[INVENTED]")
+_l("e2-a4-0014", "act4", "18.13", "ekiel", "That's the brief one?", "looking down the stairwell after it", "[INVENTED]")
 _l("e2-a4-0015", "act4", "18.13", "mario", "That's the brief one. It only has the one concern.",
    "setting his pen down for the first time", "[INVENTED]")
 _l("e2-a4-0016", "act4", "18.14", "mario", "It's that we might win.", "finger up; sincere", "[INVENTED · keep list]")
@@ -2189,11 +2201,12 @@ nb("act4", "18.02", "WIDE · the beacon's beam sweeps across the frame… and ac
    "", dur=2.0, fixed=("dur",), music=M18,
    transition={"to": "18.03", "cause": "the same morning", "sound": "the quartet carries", "object": "the beacon's beam → the boardroom TV's glow"},
    fix=("P", "TR"), why="Seam 21.")
-nb("act4", "18.03", "FULL FRAME · the boardroom TV, still on before the meeting: a plain podcast player, her words captioned",
+nb("act4", "18.03", "PUSH → FULL FRAME · the boardroom TV on its wall, still on before the meeting: a podcast player with her guest line, her words captioned",
    "screen", "SET-02", "boardroom_day", ["neleh"],
-   "Full frame on the boardroom TV, still on before the meeting: a plain podcast player, no title, no logo. A former board member's voice, her words captioned large as she says them.",
-   "Captions legible at 1080p. Her words only (W8).", lines=[line("e2-a4-0001", pace=WEIGHTED)], head=1.0, tail=0.6, fixed=("head",),
-   onscreen=[O("When CHATGTP came out November, 2022, the board was not informed in advance about that.", "L:e2-a4-0001+0.0", "E:e2-a4-0001-1.95", "caption"),
+   "The boardroom TV on its wall, still on before the meeting, pushed in to full frame: a podcast player, no show title, no logo, its guest line naming her: NELEH, a former board member. Her voice, her words captioned large as she says them.",
+   "Captions legible at 1080p. Her words only (W8). The episode review: the voice is placed before the transcript runs (the TV in the room, then the player's guest line; facts A38: she left the board in Nov 2023).", lines=[line("e2-a4-0001", pace=WEIGHTED)], head=1.0, tail=0.6, fixed=("head",),
+   onscreen=[O("GUEST: NELEH · FORMER NOPEAI BOARD MEMBER", 0.7, None, "ui"),
+             O("When CHATGTP came out November, 2022, the board was not informed in advance about that.", "L:e2-a4-0001+0.0", "E:e2-a4-0001-1.95", "caption"),
              O("We learned about CHATGTP on RETTIWT.", "E:e2-a4-0001-1.95", "E:e2-a4-0001+0.6", "caption")],
    music=M18p, pace="weighted", arrive={"s": 1.0, "what": "the boardroom with the TV already playing"},
    fix=("P", "FACT", "R1", "GR"), why="The answer Ep1 withheld, in her own voice (facts A38).")
@@ -2208,11 +2221,11 @@ nb("act4", "18.05", "FULL FRAME · under it, the board's same-day reply in its o
    "Her account and the reply side by side (W16). The quote keeps its honorific (naming rule 12: only the name changes).", dur=4.2, fixed=("dur",),
    onscreen=[O("\"We are disappointed that Ms. NELEH continues to revisit these issues.\"", 0.2, 4.1, "doc"), O("— TERB, CHAIR", 0.2, 4.1, "doc")],
    music=M18p, fix=("P", "FACT", "R2", "GR", "SR"), why="The board disputes her account the same day (facts A65).")
-nb("act4", "18.06", "MCU · Mas at the table holds still → Mada doesn't move → Terb clicks the TV off",
+nb("act4", "18.06", "MCU · the TV off on the cut; Mas at the table holds still → OTS Terb, eyes on his agenda: the first item",
    "boardroom", "SET-02", "boardroom_day", ["mas", "mada", "terb"],
-   "Mas, at the table, holds still. Mada doesn't move. TERB clicks the TV off.",
-   "No V.O. (W8). A face light one step.", lines=[line("e2-a4-0003")], head=2.4, tail=0.4, fixed=("head",), music=M18p,
-   sounds=[S("tv_click_off", "L:e2-a4-0003-0.1", -22, new=True)], fix=("P", "GR"), why="A held breath.")
+   "The TV goes off on the cut. Mas, at the table, holds still. Mada doesn't move. After a beat, TERB, eyes on his agenda, opens the meeting.",
+   "No V.O. (W8). A face light one step. The board's card is the reply to her; nobody at the table answers her or turns her off (the episode review: procedure, not a brush-off).", lines=[line("e2-a4-0003")], head=2.4, tail=0.4, fixed=("head",), music=M18p,
+   sounds=[S("tv_click_off", 0.05, -22, new=True)], fix=("P", "GR"), why="A held breath.")
 nb("act4", "18.07", "MEDIUM · Terb holds out a SAFETY COMMITTEE lanyard; the frame splits: RIGHT Adelina drops hers over Ekiel; LEFT Mas takes his from Terb's hand",
    "boardroom", "SET-18", "split_lighthouse", ["terb", "mas", "adelina", "ekiel"],
    "TERB holds out a SAFETY COMMITTEE lanyard, and the frame splits. RIGHT: Adelina drops hers over Ekiel; it's printed on page 212 of a Mario draft. LEFT, on the same beat, Mas takes his from Terb's hand and puts it on himself.",
@@ -2251,7 +2264,7 @@ nb("act4", "18.12", "ECU insert · Mario's page: one line highlighted in yellow,
    music=M18R, fix=("P", "FACT", "FC", "GR"), why="A line about the work, never NopeAI's priorities (facts A27; D-66).")
 nb("act4", "18.13", "RIGHT pane: the beacon glints across the CLOD boxes; the brief document drops the whole stairwell",
    "lighthouse", "SET-18", "split_lighthouse", ["mario", "ekiel"],
-   "The beacon glints across a case of CLOD boxes, each one in turn; the last one's art is the Golden Gate Bridge. MARIO, finger rising. A scroll drops down the stairwell; the pane pans with it down the spiral and back up to EKIEL, squinting after it. MARIO sets his pen down for the first time.",
+   "The beacon glints across a case of CLOD boxes, each one in turn; the last one's art is the Golden Gate Bridge. MARIO, finger rising. A scroll drops down the stairwell; the pane pans with it down the spiral and back up to EKIEL, looking after it. MARIO sets his pen down for the first time.",
    "The name GOLDEN GATE CLOD is never printed or spoken (O2.2: an egg).",
    lines=[line("e2-a4-0013"), line("e2-a4-0014", 2.6, FREE), line("e2-a4-0015", 0.2, QUICK)], head=1.6, tail=0.4, music=M18R,
    sounds=[S("glint_tick", 0.3, -28, new=True), S("glint_tick", 0.8, -28, new=True), S("glint_tick", 1.3, -27, new=True),
@@ -2259,9 +2272,8 @@ nb("act4", "18.13", "RIGHT pane: the beacon glints across the CLOD boxes; the br
 nb("act4", "18.14", "MCU inside the right pane (the left pane holds beside it, stepped down, Mas in it): Mario, finger up",
    "lighthouse", "SET-18", "split_lighthouse", ["mario"],
    "MARIO, finger up: his concern.",
-   "Egg on his desk, by the lamp: an op-ed clipping, byline NELEH & THE QUIET VOTE (facts A37; a byline egg only, no hold, never read out).",
+   "His desk by the lamp: his pages only. (The op-ed clipping egg, facts A37, is cut: the episode review read its byline as a headline about the board's vote on a rival's desk, W8/W9, and it was a [K] item.)",
    lines=[line("e2-a4-0016", pace=NORMAL)], head=0.5, tail=1.0, music=M18R,
-   onscreen=[O("NELEH & THE QUIET VOTE", 0.2, None, "sign")],
    fix=("P", "KEEP"), why="\"It's that we might win.\": a dry chill.")
 nb("act4", "18.15", "LEFT pane: Mas's phone, face up on the table, lights with a reminder; he turns it over",
    "boardroom", "SET-18", "split_lighthouse", ["mas"],
@@ -2371,10 +2383,10 @@ nb("act4", "19.12", "WIDE · a 2006 street corner: a phone ad; young Mas with a 
    "A 2006 phone ad, in 16 colours with ordered dither: young MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in.",
    "", dur=3.4, onscreen=[O("\"WHERE YOU AT?\"", 1.8, 3.3, "doc")], music=M19f, style="EARLY-WEB16", flashback=F21, mode="FLASHBACK · want",
    fix=("P", "FACT"), why="Want: be on every phone (facts A53).")
-nb("act4", "19.13", "WIDE · match on the pin: 2008, this company's stage; two polos, both collars popped; THE SLEEVE tosses him the clicker",
+nb("act4", "19.13", "WIDE → MEDIUM · match on the pin: 2008, this company's stage; THE SLEEVE tosses him the clicker; the camcorder pushes in on the collars",
    "stage", "SET-20", "era_2008", ["young-mas", "sleeve"],
-   "A match on the pin: 2008, this company's stage, the intro's own frame. Two polos, both collars popped. THE SLEEVE, a sleeve and nothing else, tosses him the clicker, and he catches it. The tiled 2008 crowd applauds.",
-   "", dur=3.6, music=M19f, sounds=[S("clicker_catch", 1.6, -24, new=True), S("vhs_applause", 2.0, -28, new=True)],
+   "A match on the pin: 2008, this company's stage, the intro's own frame. Mas strides out to his mark. THE SLEEVE, a sleeve and nothing else, reaches out of the stage-left wing and tosses him the clicker in a high arc, and he catches it. The camcorder pushes in on him: two polos, both collars pop. The tiled 2008 crowd applauds.",
+   "The episode review: he is in frame at the mark before the toss, the toss has a visible arc, the pops read at the push.", dur=3.6, music=M19f, sounds=[S("clicker_catch", 1.6, -24, new=True), S("vhs_applause", 2.0, -28, new=True)],
    style="EARLY-WEB16", flashback=F21, mode="FLASHBACK · want", fix=("P", "FACT", "GR"), why="It was their stage (facts A55).")
 nb("act4", "19.14", "WIDE · he clicks; behind him TPOOL's map, pins everywhere; one by one they grey out",
    "stage", "SET-20", "era_2008", ["young-mas"],
@@ -2412,7 +2424,7 @@ nb("act4", "19.18", "2S · outside the hedge (phrase 3): Mas, screen-left; RADNU
 nb("act4", "19.19", "WIDE · the reverse from inside the gate (the line crossed on purpose): the gate swings shut; the lock turns; Mas on the wrong side of the frame",
    "void", "SET-21", "garden", ["mas"],
    "From inside the garden, through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock turns once. Mas is outside it, screen-right.",
-   "The one shot where he loses the left third, on purpose.", dur=3.0, music=M19g,
+   "The one shot where he loses the left third, on purpose. The near side is the garden's: a bed of its phone-flowers and its path run across the foreground, so he is shut out, not caged (the episode review).", dur=3.0, music=M19g,
    sounds=[S("gate_iron_swing", 0.3, -24, new=True), S("lock_big_turn", 1.4, -22, new=True)], mode="SET-PIECE (the walled garden)",
    fix=("P", "KEEP"), why="A pang at the gate.")
 nb("act4", "19.20", "WIDE · the garden folds back into the phone in three held steps; he puts the phone in his pocket",
@@ -2426,10 +2438,10 @@ nb("act4", "19.20", "WIDE · the garden folds back into the phone in three held 
 
 # ------------------------------------------------------------------------------------- sc 20 · 0:48
 M20 = "E02-11 · the cello pedal; the muted 808 under zAI's drone; Nole's lamp click and his short fanfare the only motifs"
-nb("act4", "20.01", "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, KORG 2: NEXT QUARTER; Nole's phone lights",
+nb("act4", "20.01", "SPLIT · LEFT the thinning crowd, Mas walking out past the end card; RIGHT the zAI lobby: a new birdcage, a sun-faded KORG 2 banner; Nole's phone lights",
    "lobby", "SET-18", "split_zai", ["mas", "nole"],
-   "The split, that afternoon. LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby, a brand-new birdcage at the doors, its shipping tag still on; a banner that's been up a while. NOLE's phone lights with Mas's post.",
-   "", dur=3.8, onscreen=[O("KORG 2: NEXT QUARTER", 0.3, None, "sign")], music=M20, sounds=[S("ui_toast_pop", 2.8, -26)],
+   "The split, that afternoon. LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby, a brand-new birdcage at the doors, its shipping tag still on; a banner that's been up a while (sun-faded, a corner peeling). NOLE's phone lights with Mas's post.",
+   "The banner names the product only, no release date (fixes-v1.md, Act Two row 13: a date over invented staging read as a timeline claim).", dur=3.8, onscreen=[O("KORG 2", 0.3, None, "sign")], music=M20, sounds=[S("ui_toast_pop", 2.8, -26)],
    arrive={"s": 1.0, "what": "the thinning crowd as the quartet's pedal carries over"}, fix=("P", "R2"), why="The split's cause is Mas's post (R2).")
 nb("act4", "20.02", "SPLIT · RIGHT: his lamp clicks on; his post goes up, one crop, with its condition",
    "lobby", "SET-18", "split_zai", ["nole"],
@@ -2529,11 +2541,11 @@ nb("act4", "22.02", "WIDE · Mas (pixel) walks up from frame-left, never running
    "The contrast kept (P12).", dur=4.6, music=M22, sounds=[S("footstep_gravel", 0.4, -28, new=True), S("footstep_gravel", 1.2, -28, new=True),
                                                                   S("footstep_gravel", 2.0, -28, new=True), S("orb_scan_sweep", 3.0, -28)],
    style_leap=LEAP, fix=("P",), why="He goes there in person.")
-nb("act4", "22.03", "WIDE · the band lights for four seconds: Use flyer on door",
+nb("act4", "22.03", "WIDE · the band flicks on, dim, once: Use flyer on door; then off, and the wide holds",
    "void", "SET-23", "empty_lot", ["mas"],
-   "The band lights for four seconds: Use flyer on door.",
-   "", dur=4.0, fixed=("dur",), onscreen=[O("Use flyer on door", 0.4, 3.8, "ui")], music=M22,
-   sounds=[S("ui_band_on", 0.0, -26, new=True), S("ui_band_off", 3.9, -26, new=True)], style="UI LIT (4 s)", fix=("P", "R2"), why="")
+   "The band flicks on, dim, for one read: Use flyer on door. It goes off; the wide holds on him at the door.",
+   "The episode review: no wink at the act's quiet climax. One dim flick (its read floor, 1.1 s), sc 14's verbs answered once; the action shows the rest.", dur=4.0, fixed=("dur",), onscreen=[O("Use flyer on door", 0.15, 1.35, "ui")], music=M22,
+   sounds=[S("ui_band_on", 0.0, -26, new=True), S("ui_band_off", 1.45, -26, new=True)], style="UI LIT (a dim flick, 1.5 s)", fix=("P", "R2"), why="")
 nb("act4", "22.04", "MCU · over his shoulder at the slot: he unfolds the flyer (his, upside down, tape on its corners) and pushes it in; it lifts the flap",
    "void", "SET-23", "empty_lot", ["mas"],
    "He unfolds the flyer, his, upside down, the tape still on its corners, and pushes it into the slot. It lifts the flap.",
@@ -2552,12 +2564,12 @@ nb("act4", "22.06", "ECU · the flap swings shut on its spring (room tone only: 
    sounds=[S("mail_flap_spring_shut", 0.2, -20, new=True)], style_leap=LEAP, fix=("P", "R2"), why="")
 nb("act4", "22.07", "MCU · Mas at the shut flap",
    "void", "SET-23", "empty_lot", ["mas"],
-   "Mas at the shut flap.", "A face light one step. 2–3 s.", dur=2.6, fixed=("dur",), music="room tone only", style_leap=LEAP,
+   "Mas at the shut flap.", "A face light one step. 2–3 s. His near arm and the hoodie's seams drawn (the episode review: not a cape).", dur=2.6, fixed=("dur",), music="room tone only", style_leap=LEAP,
    fix=("P", "R2"), why="")
 nb("act4", "22.08", "MEDIUM · the door and his raised hand in one frame: he raises a hand to knock, and lowers it",
    "void", "SET-23", "empty_lot", ["mas"],
    "He raises a hand to knock, and lowers it.",
-   "The raised hand held 2 beats. The cue returns as it lowers.", dur=3.2, fixed=("dur",),
+   "The raised hand held 2 beats. The cue returns as it lowers. Timing (the score's return sits on it, audio/ost/tracks/e02-v1-act4/cues-el.json picture_sync): the hand is up by the shot's first beat (0.625 s), held two beats, and lowers at 2.0 s into the shot (frame 48).", dur=3.2, fixed=("dur",),
    music="E02-12 · the cue returns as his raised hand lowers", style_leap=LEAP, fix=("P", "KEEP", "FC"),
    why="The only choice in the scene: he lets a man at work be.")
 nb("act4", "22.09", "WIDE · he turns and walks away the way he came: his back, small, crossing the 3D lot; the cube doesn't change",

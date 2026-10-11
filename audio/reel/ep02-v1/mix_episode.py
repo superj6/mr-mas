@@ -129,6 +129,26 @@ ROOM_LINE_DIP = {
     'e2-a3-0011': (6.0, "15.07: \"You're not chanting.\" (the motive flashback's exchange, under the chant and the party)"),
     'e2-a3-0012': (6.0, "15.07: Mas's \"someone has to hold the glass.\" (its tail was masked by the party bed)"),
     'e2-a3-0013': (6.0, "15.07: \"Then I'll feel it for both of us.\" (the exchange's last line, laughing)"),
+    # (the fixes pass, Act Four, 2026-10-10: the episode review measured the call's lines against everything on the
+    # film: Gerg's "You ever miss being up there?" +8.3 dB at its onset, 10th percentile +2.5; his first line's 10th
+    # percentile +2.0, 16 % of its frames under +3 dB; Mas's "the phone's closer." +10.1 at its onset. The masker is the
+    # room bus, the cheering lobby (bed_lobby_cheer) and the campus (bed_campus_outdoor), about -42 dB in the band;
+    # sound-v1.md §9 #6 named this dip and left it for an ear. Every line of the call, 0.3 s ramps (a third field: this
+    # entry's ramp) on the spoken words (a fourth field, 'words': not the takes' handles), so the cheer comes back up
+    # between the lines that have air between them. At 4.5 dB (the review's
+    # 4-5) the onsets cleared +10 dB but Gerg's two lines were +1.8 and +1.7 at their 10th percentiles, the room and the
+    # score each about +5 dB alone: 6 dB here, as Act Three's exchange, and the score ridden 4 dB under the call; at 6 dB
+    # Gerg's first line and his last question were still +6.7 and +5.3 against the room alone (his own lobby's cheer,
+    # bed_lobby_cheer -34, the loudest bed in the act), so those two lines take 9 dB)
+    'e2-a4-0024': (9.0, "19.09: Gerg's \"There's a screen the size of a building…\" (the call, over his cheering lobby: 9 dB)", 0.3, 'words'),
+    'e2-a4-0025': (6.0, "19.09: Mas's \"the phone's closer.\" (the call, on the lawn)", 0.3, 'words'),
+    'e2-a4-0026': (6.0, "19.10: \"They just said our name up there.\" (the call)", 0.3, 'words'),
+    'e2-a4-0027': (6.0, "19.10: \"i heard.\" (the call)", 0.3, 'words'),
+    'e2-a4-0033': (6.0, "19.10: \"Half the lobby's standing on a beanbag.\" (the call)", 0.3, 'words'),
+    'e2-a4-0034': (6.0, "19.10: \"which half?\" (the call)", 0.3, 'words'),
+    'e2-a4-0035': (6.0, "19.10: \"The half on the beanbags.\" (the call)", 0.3, 'words'),
+    'e2-a4-0028': (9.0, "19.10: Gerg's \"You ever miss being up there?\" (the call's weighted question, over his cheering lobby: 9 dB)", 0.3, 'words'),
+    'e2-a4-0029': (6.0, "19.10: \"i was up there once. they let me hold the clicker.\" (the call's answer)", 0.3, 'words'),
 }
 
 
@@ -141,9 +161,15 @@ def room_line_dip(g, N):
         for l in b.get('lines') or []:
             if l['id'] not in ROOM_LINE_DIP:
                 continue
-            d, why = ROOM_LINE_DIP[l['id']]
+            d, why = ROOM_LINE_DIP[l['id']][:2]
+            r = ROOM_LINE_DIP[l['id']][2] if len(ROOM_LINE_DIP[l['id']]) > 2 else ROOM_LINE_DIP_RAMP
             on = g.starts[i][0] + l['t']
-            a, e, r = on - 0.1, on + l['dur'] + 0.15, ROOM_LINE_DIP_RAMP
+            a, e = on - 0.1, on + l['dur'] + 0.15
+            ws = l.get('words') or []
+            if len(ROOM_LINE_DIP[l['id']]) > 3 and ROOM_LINE_DIP[l['id']][3] == 'words' and ws:
+                # on the spoken words, not the take's handles (Act Four's fixes pass: a dip at full depth through a
+                # handle's silence left the room bed alone under -42 dBFS for 0.3 s, a hole without the score, S3)
+                a, e = on + max(0.0, ws[0][1]) - 0.02, on + (ws[-1][2] if len(ws[-1]) > 2 else l['dur']) + 0.05
             i0, i1 = max(0, int((a - r) * SR)), min(N, int((e + r) * SR) + 1)
             tt = t[i0:i1]
             v = np.clip(np.minimum((tt - (a - r)) / r, ((e + r) - tt) / r), 0.0, 1.0) * -d
@@ -801,7 +827,11 @@ def score_bus(name, g, variant, u, use_score=True):
             for bid, d0, d1, gdb_, why_ in SCORE_RIDE.get(name, []):
                 if bid in g.BI:
                     a_ = g.starts[g.BI[bid]][0] + d0
-                    b_ = g.starts[g.BI[bid]][1] if d1 == 'end' else g.starts[g.BI[bid]][0] + d1
+                    if isinstance(d1, tuple):                   # (beat, s | 'end'): a ride that runs on into a later beat
+                        b2, s2 = d1
+                        b_ = g.starts[g.BI[b2]][1] if s2 == 'end' else g.starts[g.BI[b2]][0] + s2
+                    else:
+                        b_ = g.starts[g.BI[bid]][1] if d1 == 'end' else g.starts[g.BI[bid]][0] + d1
                     tt = np.arange(N) / SR
                     mus *= db(np.interp(tt, [a_ - 0.6, a_, b_, b_ + 0.6], [0, gdb_, gdb_, 0])).astype('float32')[:, None]
                     sq.setdefault('rides', []).append({'beat': bid, 'from': round(a_, 2), 'to': round(b_, 2), 'db': gdb_, 'why': why_})
@@ -898,6 +928,16 @@ SCORE_RIDE = {                                           # seg -> [(beat, from s
              ('15.07', 0.6, 'end', -5.0, 'S11: the exchange under the chant, "You\'re not chanting." to "…both of us." (the fixes pass)'),
              ('13.03b', 0.0, 'end', -4.0, 'S11: the staffers\' low exchange, "Did his post say why?" / "No." (the fixes pass: the gate\'s answer must be heard)'),
              ('15.15', 0.0, 1.4, -5.0, 'S11: the catch: the whoomph and the crackle over the Ache\'s entry (the fixes pass)')],
+    # Act Four's fixes pass (2026-10-10): the call (19.09-19.10). With the room dipped under its lines (ROOM_LINE_DIP)
+    # the score was an equal masker of Gerg's first line and his last question (each alone about +5 dB at their 10th
+    # percentiles): it makes room for the whole call, from 0.4 s before Gerg's first line to the end of 19.10
+    'act4': [('18.01', 2.85, 3.45, -6.0, 'S11: Ekiel\'s second step on the stair of drafts (footstep_drafts_2): with the re-rendered quartet an 808 thud lands on it, and its ride is at the laid-peak cap (the fixes pass)'),
+             # the quartet re-rendered on the new lock (Neleh's longer take moved sc 18's beats) put notes under three
+             # lines the audit's WHOLE check had passed or nearly: the score makes room for them (the fixes pass)
+             ('18.04', 0.45, 5.45, -3.0, 'S11: Neleh\'s second claim (her own words): the pedal and the harmonic a step under them (the fixes pass)'),
+             ('18.10', 6.35, 7.7, -5.0, 'S11: "also present." (the re-rendered quartet\'s dyad sat on it: 10th percentile +1.8 dB, was +6.7) (the fixes pass)'),
+             ('18.10', 9.7, 12.0, -3.0, 'S11: V.O. 11, "the next one\'s already training." (the fixes pass)'),
+             ('19.09', 1.55, ('19.10', 'end'), -4.0, 'S11: the crosscut call over the lobby\'s cheer, "There\'s a screen…" to "…hold the clicker." (the fixes pass)')],
 }
 LIFT_LU = 2.5                                             # a set piece's peak over the talk
 LIFT_MAX = {'st': 6.0, 'mom': 9.0}

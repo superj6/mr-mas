@@ -42,7 +42,7 @@ const SXL_LAWN = 178;
 
 // ------------------------------------------------------------------ 20.01-20.04 the split
 L.add('20.01', {
-  st: 'act4/sets/campus thinning | act4/sets/zai zaiPane (SPLIT, that afternoon: LEFT the crowd thinning on the lawn (art/sets/elppa campus, thin), the giant screen\'s end card; Mas pockets his phone and walks out past it; RIGHT the zAI lobby re-composed for the pane: the banner KORG 2: NEXT QUARTER, the glass doors with the visitor\'s silhouette, the brand-new birdcage (its shipping tag, the open padlock), Nole under his lamp (off), phone up; on the toast his phone lights with Mas\'s post (a small card, its own UI))',
+  st: 'act4/sets/campus thinning | act4/sets/zai zaiPane (SPLIT, that afternoon: LEFT the crowd thinning on the lawn (art/sets/elppa campus, thin), the giant screen\'s end card; Mas pockets his phone and walks out past it; RIGHT the zAI lobby re-composed for the pane: the sun-faded banner KORG 2 (the fixes pass: no date), the glass doors with the visitor\'s silhouette, the brand-new birdcage (its shipping tag, the open padlock), Nole under his lamp (off), phone up; on the toast his phone lights with Mas\'s post (a small card, its own UI))',
   marks: {toast: ['snd', 'ui_toast_pop', 1, 0]},
   draw: (fb, k, sh, f) => {
     const toast = mk(sh, 'toast', 69);
@@ -78,12 +78,12 @@ L.add('20.03', {
   },
 });
 L.add('20.04', {
-  st: 'act4/sets/zai cageClose → emptyHands (SPLIT · RIGHT: [ECU] inside the locked cage his phone starts to buzz: replies to his own post stacking up its screen (grey bars, nothing legible) where he can\'t reach them; [MCU] he looks at the padlock, then down at his empty hands (both open at the frame\'s foot); the lamp clicks off)',
+  st: 'act4/sets/zai cageClose → emptyHands (SPLIT · RIGHT: [ECU] inside the locked cage his phone starts to buzz: replies to his own post stacking up its screen (grey bars, nothing legible) where he can\'t reach them; [MCU] he looks at the padlock, then down at his empty hands (both open at the frame\'s foot), the cage beside him shut and locked, his phone in it lit and buzzing, the replies stacking up its screen (the fixes pass: it read as a small orange bird); the lamp clicks off)',
   marks: {buzz: ['snd', 'phone_buzz_muffled', 1, 0], off: ['snd', 'lamp_click', 1, 0]},
   draw: (fb, k, sh, f) => {
     const buzz = mk(sh, 'buzz', 4), off = mk(sh, 'off', 69), right = frame();
     if (k < 36) cageClose(right, f, {door: 'shut', padlock: 'locked', buzz: k >= buzz, k: k >= buzz ? 1 + Math.floor((k - buzz) / 4) : 0});
-    else emptyHands(right, f, {lamp: k < off, down: k >= 48});
+    else emptyHands(right, f, {lamp: k < off, down: k >= 48, buzz: 1 + Math.floor((k - buzz) / 4)});
     splitAt(fb, leftEmpty(f), right, {sxL: SXL_LAWN, sxR: SXR, down: 'left'});
   },
 });

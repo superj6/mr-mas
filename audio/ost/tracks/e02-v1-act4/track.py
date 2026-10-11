@@ -595,7 +595,10 @@ def cue_leverage(tl):
     c.rebow('vla', 'C3', stop_tv, re_in + 0.6, 0.15, seg=5.0, xf=1.0, first_att=0.7, last_rel=0.4, art='sus', lp=1500)
     h_on = stop_tv + 0.3
     t_rise = place(c, c.next_beat(e['card_end'] + 0.05), W, step=Q)        # after the card's read, on his face
-    h_off = e['click_tv'] + 0.12
+    # (Act Four's fixes pass, 2026-10-10: the TV goes off on the cut into 18.06 now, and Terb opens the meeting from his
+    # agenda a beat later, so the harmonic holds over his face past the click and goes as "First item." begins)
+    item = _line(tl, 'e2-a4-0003', 'terb', e['face'] + 2.4)
+    h_off = max(t_rise + 0.8, (item['on'] if item else e['click_tv'] + 2.4) - 0.15)
     c.rebow('vln1', 'C6', h_on, t_rise + 0.25, 0.1, seg=6.0, xf=1.0, first_att=2.2, last_rel=0.25, art='sus', lp=5000)
     c.rebow('vln1', 'Db6', t_rise, h_off, 0.1, seg=6.0, xf=1.0, first_att=0.35, last_rel=0.2, art='sus', lp=5000)
     c.mark(stop_tv, f'the TV: Neleh\'s voice through the podcast player ({how(c, stop_tv, e["tv"])}): the quartet thins '
@@ -603,7 +606,9 @@ def cue_leverage(tl):
                     'enters softly before her first word; her words and the board\'s card play dry', hit=False)
     c.mark(t_rise, 'his face holds still (2 s), after the card\'s read: the harmonic rises a semitone (C6 to D-flat 6: '
                    'Neleh\'s question colour, OST §2.16): the held breath', hit=False)
-    c.mark(e['click_tv'], 'Terb clicks the TV off: the harmonic goes with it; the pedal holds under "First item."',
+    c.mark(e['click_tv'], 'the TV goes off on the cut to his face (its click, no hit): the harmonic holds over him',
+           hit=False)
+    c.mark(h_off, 'Terb opens the meeting from his agenda: the harmonic goes as "First item." begins; the pedal holds',
            hit=False)
     secs.append(('B1 Neleh\'s voice and the board\'s card: the pedal, the harmonic (dry)', stop_tv, t_rise))
     secs.append(('B2 his face (the harmonic a semitone up); "First item."', t_rise, re_in))
@@ -940,7 +945,7 @@ def cue_leverage(tl):
         room_sfx=[dict(t0=c.clk(morn), t1=c.clk(pz + 0.8), sfx='server_hum (the lobby\'s morning bed\'s stand-in)')],
         sfx_slots=[dict(t=round(c.clk(t), 3), sfx=s) for t, s in (
             (e['lanyard'], 'lanyard_drop x2: on an 808 beat (no hit)'),
-            (e['click_tv'], 'tv_click_off: the harmonic goes with the TV'),
+            (e['click_tv'], 'tv_click_off: on the cut; the harmonic holds to "First item."'),
             (e['toast'], 'ui_toast_pop: the reminder (F eighths)'),
             (e['click_post'], 'post_click: THE STOP (the eighths stop on the next eighth)'),
             (e['sweep'], 'render_front_sweep: the T2 band (E02-11c) in on the same chord'),

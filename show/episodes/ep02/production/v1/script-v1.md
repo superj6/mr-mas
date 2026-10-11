@@ -1393,18 +1393,22 @@ AXIS — LEFT, the boardroom: Mas at the table's near end, screen-left; TERB at 
 
 `SCENE:` The answer Ep1 withheld, in a former board member's own voice, with the board's reply beside it; Mas holds still. Then the rhyme on one action: two lanyards over two heads. Mas takes a seat in the room where his company's safety gets decided; across the bay, Mario recruits the careful one who left, by agreeing with him.
 
-`[W]` [18.01] (≈ 6.1 s · ARRIVE: full frame on the lighthouse, the beacon already turning) The lighthouse, built from stacked essays, its spiral stair made of bound drafts. EKIEL climbs it, carrying the box he walked out with. At the top, ADELINA raises a lanyard.
+`[W]` [18.01] (≈ 5.7 s · ARRIVE: full frame on the lighthouse, the beacon already turning) The lighthouse, built from stacked essays, its spiral stair made of bound drafts. EKIEL climbs it, carrying the box he walked out with. At the top, ADELINA raises a lanyard.
 
 `RAIL: MAY 28, 2024` [P · facts A36; facts A35]
 
 `[W]` [18.02] (≈ 2.0 s) The beacon's beam sweeps across the frame, and across the NopeAI boardroom's window, the same morning.
 
-Full frame `[SCR]` [18.03] (≈ 8.5 s · ARRIVE: the boardroom with the TV already playing) The boardroom TV, still on before the meeting: a plain podcast player, no title, no logo. A former board member's voice, her words captioned large as she says them.
+`[SCR]` [18.03] (≈ 11.8 s · ARRIVE: the boardroom with the TV already playing) The boardroom TV on its wall, still on before the meeting; we push in on it, in held steps, to full frame: a podcast player, no show title, no logo, and its guest line naming her before she speaks. Her words captioned large as she says them.
+
+UI (the player's guest line): `GUEST: NELEH · FORMER NOPEAI BOARD MEMBER` [V · facts A38; she left the board in Nov 2023]
+
+*(The fixes pass, 2026-10-10, Act Four: the episode review heard an anonymous accuser for 18 s; the voice is now placed (the TV in its room, then her name) before the transcript runs.)*
 
 **NELEH** *(her own words, through the podcast player)*\
 "When CHATGTP came out November, 2022, the board was not informed in advance about that. We learned about CHATGTP on RETTIWT." `[V · facts A38: the published transcript; name swaps; confirm against the audio · e2-a4-0001]`
 
-`[SCR]` [18.04] (≈ 5.2 s)
+`[SCR]` [18.04] (≈ 5.9 s)
 
 **NELEH**\
 "…MAS didn't inform the board that he owned the NOPEAI Startup Fund…" `[V · facts A38; cropped before its next clause · e2-a4-0002]`
@@ -1415,16 +1419,18 @@ ON SCREEN (the board's card): "We are disappointed that Ms. NELEH continues to r
 
 TEMPO · weighted: her own pace; the card held for its read.
 
-`[MCU]` [18.06] (≈ 3.6 s) Mas, at the table, holds still (2 s). Mada doesn't move. TERB clicks the TV off.
+`[MCU]` → `[OTS]` [18.06] (≈ 3.7 s) The TV goes off on the cut. Mas, at the table, holds still (2 s). Mada doesn't move. After a beat, TERB, eyes on his agenda, opens the meeting.
 
-**TERB**\
+**TERB** *(procedure, not a reply to her)*\
 First item. `[INVENTED · e2-a4-0003]`
+
+*(The fixes pass, 2026-10-10, Act Four: Terb no longer clicks her off before speaking; the board's card is the reply to her account, and nobody at the table stages a dismissal of it.)*
 
 *No V.O. through the podcast, the card or his face.*
 
-`[M]` → SPLIT [18.07] (≈ 3.8 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel; it's printed on page `212` of a Mario draft. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
+`[M]` → SPLIT [18.07] (≈ 3.5 s) Terb holds out a `SAFETY COMMITTEE` lanyard, and the frame splits (two 238 × 203 panes). RIGHT: Adelina drops hers over Ekiel; it's printed on page `212` of a Mario draft. LEFT, on the same beat: Mas takes his from Terb's hand and puts it on himself.
 
-LEFT *(the right pane steps down a rung)*. [18.08] (≈ 11.4 s)
+LEFT *(the right pane steps down a rung)*. [18.08] (≈ 12.5 s)
 
 **TERB** *(brisk, procedural)*\
 First task: this committee goes through our safety processes and safeguards, and it has ninety days to do it. `[INVENTED · paraphrase of the May 28, 2024 post's first task (facts A36) · e2-a4-0004]`
@@ -1432,14 +1438,14 @@ First task: this committee goes through our safety processes and safeguards, and
 **TERB** *(brisk, reading the next line like a roll call; he doesn't look up)*\
 Members: myself, two directors, and our chief executive. `[INVENTED · paraphrase of the post's membership (facts A36: the chair, two directors, the CEO) · e2-a4-0005]`
 
-`[M]` [18.09] (≈ 3.0 s; inside the left pane, at table level) On "our chief executive.", every face at the table turns to Mas [HOLD 2 BEATS: the table's].
+`[M]` [18.09] (≈ 2.0 s; inside the left pane, at table level) On "our chief executive.", every face at the table turns to Mas [HOLD 2 BEATS: the table's].
 
 **MAS**\
 present. `[INVENTED · e2-a4-0006]`
 
 The 808 drops out. Mada writes one word in the minutes.
 
-[18.10] (≈ 14.1 s)
+[18.10] (≈ 12.7 s)
 
 **TERB** *(brisk)*\
 And at the end of the ninety days, we take our recommendations to the full board, which is… `[INVENTED · paraphrase of the post (facts A36) · e2-a4-0007]`
@@ -1456,30 +1462,30 @@ the next one's already training. `[INVENTED · V.O. 11, plan: the next model; ne
 
 TEMPO · quick (Terb, 0.25 s, his roll call and his next line); "present." after the table's two-beat hold (1.25 s: the HOLD 2 BEATS above, a GUIDE break of Mas's 0.45–0.6 s that the scene designs), "also present." at 0.6 s; the V.O. weighted, after the hold (2.3 s).
 
-RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.9 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
+RIGHT *(the left pane steps down and holds: the lighthouse always plays beside Mas's pane)*. [18.11] (≈ 8.3 s) MARIO writes without looking up. EKIEL stands in front of him in his new lanyard.
 
 **MARIO** *(still writing; warm and precise)*\
 Come in, Ekiel, sit down. I read your thread. Twice. I've made some notes. `[INVENTED · e2-a4-0009]`
 
-**EKIEL** *(squinting)*\
+**EKIEL** *(taken aback)*\
 You annotated my resignation? `[INVENTED · e2-a4-0010]`
 
 **MARIO**\
 Lightly. Four pages. `[INVENTED · e2-a4-0011]`
 
-`[ECU]` [18.12] (≈ 7.4 s; an insert, the line readable at 1080p) Four pages; one line highlighted in yellow, Ekiel's own:
+`[ECU]` [18.12] (≈ 7.6 s; an insert, the line readable at 1080p) Four pages; one line highlighted in yellow, Ekiel's own:
 
 ON SCREEN (the highlighted line): "Building smarter-than-human machines is an inherently dangerous endeavor." [V · facts A27: his own post in the May 17 thread]
 
 **MARIO** *(pleased; a small beat before the word the joke turns on)*\
 We agree. I underlined 'inherently.' `[INVENTED · e2-a4-0012]`
 
-[18.13] (≈ 11.0 s; the right pane) The beacon swings past a glass case of CLOD boxes, and each one glints as the light passes; the last box's art is the Golden Gate Bridge *(egg, never named: facts A34)*. MARIO, finger rising:
+[18.13] (≈ 9.9 s; the right pane) The beacon swings past a glass case of CLOD boxes, and each one glints as the light passes; the last box's art is the Golden Gate Bridge *(egg, never named: facts A34)*. MARIO, finger rising:
 
 **MARIO**\
 There's a brief document. `[INVENTED · e2-a4-0013]`
 
-A scroll drops down the stairwell. The pane pans with it, down the spiral, past every landing, to the bottom, and back up to EKIEL, squinting after it.
+A scroll drops down the stairwell. The pane pans with it, down the spiral, past every landing, to the bottom, and back up to EKIEL, looking after it.
 
 **EKIEL**\
 That's the brief one? `[INVENTED · e2-a4-0014]`
@@ -1487,16 +1493,16 @@ That's the brief one? `[INVENTED · e2-a4-0014]`
 **MARIO** *(setting his pen down for the first time)*\
 That's the brief one. It only has the one concern. `[INVENTED · e2-a4-0015]`
 
-`[MCU]` [18.14] (≈ 3.1 s; inside the right pane, the left pane holding beside it with Mas in it) Mario, finger up.
+`[MCU]` [18.14] (≈ 2.8 s; inside the right pane, the left pane holding beside it with Mas in it) Mario, finger up.
 
 **MARIO**\
 It's that we might win. `[INVENTED · keep list · e2-a4-0016]`
 
 TEMPO · quick (Mario and Ekiel, 0.2–0.25 s); "It's that we might win." normal.
 
-*Egg: on the desk, an op-ed clipping, byline `NELEH & THE QUIET VOTE` (facts A37).*
+*(The fixes pass, 2026-10-10, Act Four: the op-ed clipping egg on his desk, `NELEH & THE QUIET VOTE`, is cut. Legible for 10 s on "It's that we might win.", it read as a headline about the board's vote on a rival's desk at a contested moment (W8, W9), and it was a [K] item. Ekiel no longer squints in this scene either: its setup was cut in Act Three, GR X10.)*
 
-[18.15] (≈ 3.6 s; the left pane) In his pane, Mas's phone, face up on the table, lights with a reminder: UI `ELPPA · KEYNOTE · JUN 10` (sc 8's invite). He turns it over.
+[18.15] (≈ 3.3 s; the left pane) In his pane, Mas's phone, face up on the table, lights with a reminder: UI `ELPPA · KEYNOTE · JUN 10` (sc 8's invite). He turns it over.
 
 AFTERMATH — the reminder on his phone; he turns it over.
 OUT — **Cause:** the deal he closed in May comes due: his calendar says Jun 10. **Sound:** the quartet carries; the keynote's walk-on music comes up under it (J 0.8 s). **Object:** the reminder card on his phone → the lobby's wall screen, the same place in frame.
@@ -1516,11 +1522,11 @@ SIGN: `DAYS SINCE SOMEONE TRIED TO FIRE MAS: 202` · `DAYS SINCE SOMEONE SUED MA
 
 `[SCR]` [19.02] (≈ 1.6 s) On the corner TV, muted: the roadmap lectern, still stuck at `FLOOR`, a tally on it now: `0 BILLS` [H · facts A66].
 
-`[W]` [19.03] (≈ 3.8 s) The doors open. HARAS walks in along the path the hand truck took in February, a calculator tape unspooling behind her, and drops onto the beanbag beside Gerg.
+`[W]` [19.03] (≈ 4.4 s) The doors open. HARAS walks in along the path the hand truck took in February, a calculator tape unspooling behind her, and drops onto the beanbag beside Gerg.
 
 PLATE: `HARAS · FIRST CFO` [V · facts A42]
 
-`[2S]` [19.04] (≈ 15.0 s; no cut-ins, the wall screen low behind them)
+`[2S]` [19.04] (≈ 14.9 s; no cut-ins, the wall screen low behind them)
 
 **HARAS** *(pleasant, precise)*\
 I'm new, so I'm starting with the easy ones. What's our biggest cost? `[INVENTED · e2-a4-0017]`
@@ -1543,7 +1549,7 @@ The lobby's cheer lands on "profit" and talks over it.
 
 TEMPO · quick (0.2–0.25 s). The cheer overlaps her last word: the episode's second and last cut-off. Its cause comes first: the announcement and the stream's roar 0.2 s before her line, the lobby's cheer 0.15 s into it, on "profit" (the lock QA: the cheer had come 0.8 s after her line, and the announcement after both).
 
-`[SCR]` → `[W]` [19.05] (≈ 4.8 s)
+`[SCR]` → `[W]` [19.05] (≈ 4.7 s)
 
 ON STREAM, full frame: `…AND LATER THIS YEAR: CHATGTP.` [V · facts A40], the announcement the lobby is already cheering.
 
@@ -1552,7 +1558,7 @@ The cheer carries across the cut; somebody's desk confetti cannon goes off. Nobo
 **HARAS** *(writing on her tape, under the cheer)*\
 Let me reframe that. Upside. `[INVENTED · e2-a4-0022]`
 
-`[SCR]` → `[W]` [19.06] (≈ 6.1 s) The stream cuts away to its outdoor audience. At the edge of it, small, Mas, head down over his phone, typing. *(Our staging: the stream's crowd shot, in our stream's UI.)*
+`[SCR]` → `[W]` [19.06] (≈ 6.6 s) The stream cuts away to its outdoor audience. At the edge of it, small, Mas, head down over his phone, typing. *(Our staging: the stream's crowd shot, in our stream's UI.)*
 
 **STAFFER** *(pointing at the wall screen)*\
 Is that Mas? `[INVENTED · e2-a4-0023]`
@@ -1563,12 +1569,12 @@ The lobby laughs. GERG, the only one not cheering, takes out his phone.
 
 ON SCREEN (his post, in its own UI): "very happy to be partnering with ELPPA to integrate CHATGTP into their devices later this year! think you will really like it." [V · facts A67 · x.com/sama/status/1800237314360127905; verbatim, his lowercase; name swaps]
 
-`[W]` → `[MCU]` [19.08] (≈ 7.1 s) On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.
+`[W]` → `[MCU]` [19.08] (≈ 6.9 s) On the giant screen, the stream's chat lights with his post. Across the lawn, phones buzz.
 
 **MAS (V.O.)**\
 whatever we ship next goes in their phones too. `[INVENTED · V.O. 12, plan: distribution · e2-vo-12]`
 
-`[MCU]` ↔ `[MCU]` [19.09] (≈ 8.7 s; crosscut: Mas on the lawn, phone to his ear, the base; Gerg in the cheering lobby, the cut-ins) Gerg calls.
+`[MCU]` ↔ `[MCU]` [19.09] (≈ 7.0 s; crosscut: Mas on the lawn, phone to his ear, the base; Gerg in the cheering lobby, the cut-ins) Gerg calls.
 
 **GERG** *(on the call; fond)*\
 There's a screen the size of a building in front of you, and you're on your phone. `[INVENTED · e2-a4-0024]`
@@ -1576,7 +1582,7 @@ There's a screen the size of a building in front of you, and you're on your phon
 **MAS** *(eyes still on the stage)*\
 the phone's closer. `[INVENTED · e2-a4-0025]`
 
-[19.10] (≈ 18.4 s; the crosscut)
+[19.10] (≈ 14.7 s; the crosscut)
 
 **GERG**\
 They just said our name up there. `[INVENTED · e2-a4-0026]`
@@ -1607,15 +1613,15 @@ TEMPO · normal; Mas at 0.45 s; Gerg's literal answer quick (0.25 s); his last q
 >
 > *No inner voice in a memory. THE SLEEVE is a sleeve and nothing else: no face, no frailty cues.*
 >
-> `[W]` [19.12] (≈ 4.1 s) A street corner, 2006: a phone ad. YOUNG MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in:
+> `[W]` [19.12] (≈ 4.7 s) A street corner, 2006: a phone ad. YOUNG MAS holds up a flip phone and grins; a GPS pin bobs over his head. The ad's end card slams in:
 >
 > ON SCREEN (the end card): `"WHERE YOU AT?"` [V · facts A53]
 >
-> `[W]` [19.13] (≈ 4.3 s) A match on the pin: 2008, this company's stage, the intro's own frame. Two polos, both collars popped [V · facts A55]. THE SLEEVE tosses him the clicker, and he catches it. The tiled 2008 crowd applauds.
+> `[W]` → `[M]` [19.13] (≈ 5.0 s) A match on the pin: 2008, this company's stage, the intro's own frame. Mas strides out to his mark. THE SLEEVE reaches out of the stage-left wing and tosses him the clicker in a high arc, and he catches it. The camcorder pushes in on him: two polos, both collars pop [V · facts A55]. The tiled 2008 crowd applauds.
 >
-> `[W]` [19.14] (≈ 6.0 s) He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads `LAST UPDATED 2012` [V · the app shut down in 2012; the greying is ours, and no cause is claimed].
+> `[W]` [19.14] (≈ 6.9 s) He clicks, and the big screen behind him shows TPOOL's map in its own colours, pins everywhere. One by one they grey out, until its corner reads `LAST UPDATED 2012` [V · the app shut down in 2012; the greying is ours, and no cause is claimed].
 >
-> `[ECU · MATCH]` [19.15] (≈ 3.1 s) The clicker in his 2008 hand becomes his 2024 phone, in the same grip, his post from the lawn still on its screen.
+> `[ECU · MATCH]` [19.15] (≈ 3.6 s) The clicker in his 2008 hand becomes his 2024 phone, in the same grip, his post from the lawn still on its screen.
 
 **THE WALLED GARDEN** *(three phrases; company to company only: no rings, no altar, no vows)*
 
@@ -1623,7 +1629,7 @@ TEMPO · normal; Mas at 0.45 s; Gerg's literal answer quick (0.25 s); his last q
 
 `[M]` → `[W]` [19.17] (≈ 10.0 s; phrase 2) Inside, beds of phone-shaped flowers. At each one the bubble stops, raises one tiny hand, and waits. The flower nods. Only then does a speech bubble pop up over it, with a soft chip blip and no voice *(voice 5 is paused)* [V · facts A40: the ask-before-sending flow]. On a bench sits IRIS, a small progress bar with a face, stuck at `99%`.
 
-`[2S]` [19.18] (≈ 8.5 s; phrase 3, held) Outside the hedge: Mas, screen-left, phone in hand, watching the raised hands go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
+`[2S]` [19.18] (≈ 8.7 s; phrase 3, held) Outside the hedge: Mas, screen-left, phone in hand, watching the raised hands go down the row. A few feet along the same hedge, screen-right, RADNUS's head rises into frame, politely on the outside too.
 
 **RADNUS** *(to Mas, along the hedge; quick, gracious)*\
 Lovely garden. I see they let your chatbot in. `[INVENTED · e2-a4-0030]`
@@ -1635,9 +1641,9 @@ Radnus's polite smile holds a beat too long, and nobody says anything else.
 
 TEMPO · quick (Mas at 0.45 s); then the held smile (about 2 s).
 
-`[W]` [19.19] (≈ 3.6 s; the reverse, from inside the garden) Through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock, as tall as MIT KOOC, turns once. Mas is on the outside of it, screen-right: the one shot where he loses the left third.
+`[W]` [19.19] (≈ 4.1 s; the reverse, from inside the garden) Through the closing gate: it swings shut behind CHATGTP, and in the foreground the lock, as tall as MIT KOOC, turns once. Mas is on the outside of it, screen-right: the one shot where he loses the left third. On our side of the bars, a bed of the garden's phone-flowers and its path: he is shut out of the garden, not caged.
 
-`[W]` [19.20] (≈ 2.9 s) The garden folds back into the phone in three held steps. He puts it in his pocket.
+`[W]` [19.20] (≈ 3.3 s) The garden folds back into the phone in three held steps. He puts it in his pocket.
 
 AFTERMATH — the gate's lock; the fold back into his phone.
 OUT — **Cause:** his post; the rival who hates the deal answers it that afternoon. **Sound:** the quartet's cello pedal carries; zAI's industrial drone comes up on the right (L 0.6 s). **Object:** his phone going into his pocket → the same post lighting Nole's phone in the right pane.
@@ -1650,13 +1656,13 @@ AXIS — LEFT pane, the campus: Mas screen-left. RIGHT pane, the zAI lobby: the 
 
 `SCENE:` The rival who hates the deal answers Mas's post: a ban if it goes through, and a cage for visitors' phones, his own first. The next morning, a day before a judge would hear the motion to dismiss it, the complaint leaves Mas's lobby on a rope, for now. Mas takes his own flyer down and finds the old note still in his jacket. A week later, Alyi says where he is, in his own words, and Mas stands.
 
-SPLIT [20.01] (≈ 3.5 s · ARRIVE: the thinning crowd as the quartet's pedal carries over) LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby. A brand-new birdcage at the doors, its shipping tag still on; from the rafters, a banner that has clearly been up a while: `KORG 2: NEXT QUARTER`. NOLE's phone lights with Mas's post.
+SPLIT [20.01] (≈ 3.9 s · ARRIVE: the thinning crowd as the quartet's pedal carries over) LEFT: the crowd thins; Mas pockets his phone and walks out past the giant screen's end card. RIGHT: the zAI lobby. A brand-new birdcage at the doors, its shipping tag still on; from the rafters, a banner that has clearly been up a while, sun-faded, a corner peeling: `KORG 2`. *(The fixes pass, 2026-10-10: it read `KORG 2: NEXT QUARTER`, a release-timeline claim over invented staging; the product's name only now.)* NOLE's phone lights with Mas's post.
 
 SPLIT, RIGHT [20.02] (≈ 7.6 s) His lamp clicks on. His own post goes up:
 
 ON SCREEN (NOLE's post, one crop): "If ELPPA integrates NOPEAI at the OS level, then ELPPA devices will be banned at my companies. That is an unacceptable security violation." [V · facts A41 · x.com/elonmusk/status/1800265431078551973; name swaps]
 
-SPLIT, RIGHT `[MCU]` [20.03] (≈ 6.0 s) Nole at the cage, to a VISITOR at the door, a silhouette:
+SPLIT, RIGHT `[MCU]` [20.03] (≈ 6.1 s) Nole at the cage, to a VISITOR at the door, a silhouette:
 
 **NOLE** *(the demonstration)*\
 If they go through with it, visitors' phones go in here. Like this. `[INVENTED · carries his follow-up post (facts A41) · e2-a4-0032]`
@@ -1665,7 +1671,7 @@ He puts his own phone in the cage, shuts its door and snaps the padlock.
 
 TEMPO · quick in the split; the lobby normal; Alyi's post and Mas's face weighted.
 
-SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.0 s) Inside the cage, his phone starts to buzz: replies to his own post, stacking up where he can't reach them (nothing legible). He looks at the padlock, then at his empty hands. The lamp clicks off.
+SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.3 s) Inside the cage, his phone, lit, starts to buzz on the cage's floor: replies to his own post, stacking up on its screen where he can't reach them (nothing legible). He looks at the padlock, then at his empty hands. The lamp clicks off.
 
 `[W]` [20.05] (≈ 4.8 s · ARRIVE: the lobby on its morning bed, the confetti already swept; the cage's bars become the lobby's rack pillars as the divider slides away) The NopeAI lobby, morning. The confetti swept into a pile; the staff taking the party down, and the flyers with it. Mas, at the back with his glass, peels his own upside-down flyer off the pillar, folds it and puts it inside his jacket.
 
@@ -1673,7 +1679,7 @@ SPLIT, RIGHT `[ECU]` [20.04] (≈ 3.0 s) Inside the cage, his phone starts to bu
 
 `[ECU]` [20.06] (≈ 1.2 s) His fingers find something already in there: the yellowed corner of the old note. No words legible.
 
-`[W]` [20.07] (≈ 5.7 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it.
+`[W]` [20.07] (≈ 4.9 s) HARAS passes, her calculator tape trailing, `UPSIDE` circled on it.
 
 **MAS (V.O.)**\
 we raise in the fall. she has till then. `[INVENTED · V.O. 13, plan: the money behind the next model; "she" is Haras, in frame; true (Ep3's facts) · e2-vo-13]`
@@ -1712,9 +1718,11 @@ AXIS — the door faces camera; Mas comes in from frame-left and leaves frame-le
 
 `[W]` [22.02] (≈ 6.6 s) Mas, pixel on the 3D plate, walks up from frame-left. He never runs. THE ORB scans the cube and toasts nothing: it can't verify a door.
 
-`[W]` [22.03] (≈ 4.0 s) The band lights for four seconds:
+`[W]` [22.03] (≈ 4.0 s) The band flicks on, dim, for one read, and goes off; the wide holds on him at the door:
 
 UI: `Use flyer on door`
+
+*(The fixes pass, 2026-10-10, Act Four: it lit for four seconds, a wink at the one moment that plays straight; one dim flick answers sc 14's verbs and the action shows the rest.)*
 
 `[MCU]` [22.04] (≈ 4.6 s; over his shoulder at the slot) He unfolds the flyer, his, upside down, the tape still on its corners, and pushes it into the slot. It lifts the flap.
 
@@ -1722,7 +1730,7 @@ UI: `Use flyer on door`
 
 `[ECU]` [22.06] (≈ 1.2 s) The flap swings shut on its spring. Room tone only.
 
-`[MCU]` [22.07] (≈ 2.6 s) Mas at the shut flap. A face light, one step.
+`[MCU]` [22.07] (≈ 2.6 s) Mas at the shut flap. A face light, one step; his near arm down his side, the hoodie's seams.
 
 `[M]` [22.08] (≈ 3.2 s; the door and his raised hand in one frame) He raises a hand to knock, and lowers it [the raised hand held 2 beats].
 
