@@ -1012,7 +1012,7 @@ OUT — CUT TO BLACK: **the midpoint act-out.** **Sound:** THE CLOCK's first tic
 
 ## ACT THREE · "leave them up"
 
-`Act Three, 5:20 · sc 13 (0:35) · 14 (0:54) · 15 (1:41) · 17 (2:10)` *(the lock's lengths after the fixes pass, 2026-10-10: [fixes-v1.md](fixes-v1.md), Act Three. The safety team's plate (14.11) is cut from the Alyi run; sc 13 gains the staffers' "Did his post say why?" / "No."; the act holds 7,680 f)*
+`Act Three, 5:20 · sc 13 (0:35) · 14 (0:54) · 15 (1:44) · 17 (2:07)` *(the lock's lengths after the fixes passes, 2026-10-10: [fixes-v1.md](fixes-v1.md), Act Three and its round 2. The safety team's plate (14.11) is cut from the Alyi run; sc 13 gains the staffers' "Did his post say why?" / "No."; round 2: Alyi's far count runs on through its base, V.O. 10 is cut, the press asks about VOICE 5 before the pause; the act holds 7,680 f)*
 
 ### 13. INT. NOPEAI LOBBY — DAY · MAY 15, 2024 [BASE] · EXTENDED CONVERSATION (short), the TV in the background · P sc 13
 
@@ -1020,7 +1020,7 @@ MUSIC — **E02-08 Where's Alyi?** THE CLOCK, first step (a pizzicato and woodbl
 ROOM — the lobby by day.
 AXIS — the lobby master by day. Mas at a pillar in the left third; the two staffers at the next pillar; reception and the lobby TV centre-right. He leaves frame-right into the open floor.
 
-`SCENE:` The staff want someone else to decide whether to take the flyers down, now that he's posted. Mas decides: leave them up, and puts one back himself, upside down, and leaves it so. The staffers ask each other the one question the film never answers, and answer it plainly: his post didn't say. Then the TV gets a beat of its own: a roadmap that can't get through its own door.
+`SCENE:` The staff want someone else to decide whether to take the flyers down, now that he's posted. Mas decides: leave them up, and puts one back himself, upside down, and leaves it so. The staffers ask each other the one question the film never answers, and answer it plainly: his post didn't say. Then the TV they stand under gets a beat of its own: a roadmap that can't get through its own door.
 
 `[OTS-W]` [13.01] (≈ 8.5 s · ARRIVE: the staffers already at the next pillar, one peeling, one smoothing, the TV murmuring) The lobby by day. February's `WHERE IS ALYI?` flyers are still on the rack pillars, curling at the corners; every photo is a doorway. In the middle of the floor, February's complaint has become a side table. Over Mas's shoulder at his pillar, onto two STAFFERS at theirs: one peels a curled corner off a flyer; the other smooths the tape back down on hers.
 
@@ -1056,7 +1056,7 @@ TEMPO · quick (0.3 s).
 
 *(The fixes pass, 2026-10-10: the episode review's blocker found the act's juxtapositions supplying a reason for Alyi's leaving; this is the newcomer gate's own answer, said once, plainly, by the people under the flyers. Nothing here or after it supplies a reason (W8).)*
 
-`[SCR]` → full frame [13.04] (≈ 4.4 s) The lobby TV, framed in the foreground and pushed in to full frame: a Senate press conference. REMUHCS and three bipartisan colleagues behind a lectern; aides try to wheel it through a door marked `FLOOR`. It doesn't fit. They turn it sideways. It still doesn't fit.
+`[SCR]` [13.04] (≈ 4.4 s) The lobby TV the staffers stand under, pushed in on in two held steps until its bezel is the frame's edge (as sc 18 pushes in on Neleh's player), the lobby's room tone under it: a Senate press conference. REMUHCS and three bipartisan colleagues behind a lectern; aides try to wheel it through a door marked `FLOOR`. It doesn't fit. They turn it sideways. It still doesn't fit.
 
 PLATE: `REMUHCS · MAJORITY LEADER` [V · facts A62]
 LOWER THIRD (the presser's own): `BIPARTISAN SENATE AI ROADMAP` [H · facts A30]
@@ -1067,7 +1067,9 @@ SIGN (the lectern): `ROADMAP · $32B/YR`, nine `FORUM` stickers on it [V · fact
 **REPORTER** *(from the TV)*\
 Senator, when does it get a vote? `[INVENTED · a generic question; no answer in a real senator's mouth · e2-a3-0005]`
 
-An aide slaps a tenth `FORUM` sticker on the lectern. `[INVENTED business, wordless]`
+An aide slaps a tenth `FORUM` sticker on the lectern. `[INVENTED business, wordless]` The TV's bezel and glass stay in frame.
+
+*(The second fixes pass, 2026-10-10: the presser had cut in at full frame with nothing carrying it there, so a newcomer got an unrelated senator for 6 s. It now plays on the lobby TV, in the foreground at its own weight (W25), and reads as what's on in the room.)*
 
 `[W]` [13.06] (≈ 2.9 s) Mas walks off the lobby floor, frame-right, into the open-plan office. The adventure band lights up as he crosses the threshold.
 
@@ -1076,11 +1078,11 @@ OUT — **Cause:** he goes to reach him. **Sound:** the open floor's band lights
 
 ### 14. INT. NOPEAI HQ — THE OPEN FLOOR — DAY · MAY 15–17, 2024 [BASE · UI LIT] · the episode's one adventure-game scene and its one dialogue tree · P sc 14
 
-MUSIC — **E02-08 · THE CLOCK** continues under the room tone; the Door, first note missing, blooms once, on his own reflection mouthing `can we talk?`; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score. It thins to its pedal under Ekiel's post; out, the hum rings over the cut.
+MUSIC — **E02-08 · THE CLOCK** continues under the room tone; the Door, first note missing, blooms once, on his own reflection; the chair's hum is the GPU choir's chord (D♭ sus2(♯11), no third), diegetic into score. It thins to its pedal under Ekiel's post; out, the hum rings over the cut.
 ROOM — the open floor: keyboards, a chiller drip.
 AXIS — Mas enters frame-left from the lobby and crosses the spread left to right; Bukaj's chair centre-right; Alyi's office door far right; the safety team's door down a corridor.
 
-`SCENE:` Mas tries to reach him, and to get the words right. The game refuses him, his own face rehearses the line back to him, and the door won't open; then the world keeps moving without asking: a new man in the humming chair, the safety co-lead walking out in his own words. *No image of Alyi in any surface.*
+`SCENE:` Mas tries to reach him. The game refuses him, his phone offers him one ordinary line and it's greyed, his own face gives nothing back, and the door won't open; then the world keeps moving without asking: a new man in the humming chair, the safety co-lead walking out in his own words. *No image of Alyi in any surface.*
 
 *(The fixes pass, 2026-10-10: the team's plate coming off the team's own door (14.11) is cut from this scene. Between Ekiel's exit and Alyi's door it introduced his office and F2.2 with "safety team dismantled", and the episode review's newcomer read that as the reason Alyi left (W8; facts §F). The disbanding is on the record (facts A27); if it plays at all, it is Act Four's, in sc 18's split, as context for the committee.)*
 
@@ -1093,13 +1095,15 @@ UI (the band): `Look at · Talk to · Pick up · Use · ~~Open~~ · Pivot · Rai
 UI: `Look at heatsink` → the dialogue box types, in his lowercase: `i can see my face in it.` `[INVENTED]`
 UI: `Pick up reflection` → `i can't pick that up.` `[INVENTED]`
 
-`[W]` → `[MCU]` [14.03] (≈ 5.0 s) UI: `Talk to reflection`. It's Mas's own face in the polished metal. His phone's suggestion strip offers three lines, what he'd say to Alyi *(the machine's read of him, never his mind)*:
+`[W]` → `[MCU]` [14.03] (≈ 5.0 s) UI: `Talk to reflection`. It's Mas's own face in the polished metal. His phone's suggestion strip offers one line, an ordinary one *(the machine's read of him, never his mind)*:
 
-UI: `> where are you going?` · `> can we talk?` · `> ~~come back~~` *(greyed, exactly like the 1993 Cancel)* `[INVENTED]`
+UI: `> ~~lunch?~~` *(greyed, exactly like the 1993 Cancel)* `[INVENTED]`
 
-He taps the greyed `come back` first. *Bonk.*
+He taps it anyway. *Bonk.*
 
-`[MCU]` [14.04] (≈ 5.3 s) Then `can we talk?`, and his own reflection mouths it back to him. No voice.
+`[MCU]` [14.04] (≈ 5.3 s) Nothing else to pick. His thumb stays on the greyed chip, then lowers. His own face in the polish holds, silent. The phone's screen dims.
+
+*(The second fixes pass, 2026-10-10: the strip offered `> where are you going?` · `> can we talk?` · `> come back`, and his reflection mouthed `can we talk?` back to him: the scene's subtext written as text (W7), and a second named moment of being moved on top of V.O. 7 (W4). The feeling is left to V.O. 7.)*
 
 `[W]` [14.05] (≈ 3.6 s) From her ladder, DOT's orange cuff points a screwdriver at Alyi's office door.
 
@@ -1107,7 +1111,7 @@ He taps the greyed `come back` first. *Bonk.*
 
 `[W]` → `[2S]` [14.07] (≈ 4.9 s) Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him.
 
-PLATE: `BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.` [V · facts A26]
+PLATE: `BUKAJ · NEW CHIEF SCIENTIST.` [V · facts A26] *(the second fixes pass: `· INHERITED THE HUM.` rested on a sound gag a plate can't explain; a plate is a name and one relation, W21)*
 
 The strip offers one line, and Mas takes it at once: the box types `congratulations.` as he says it.
 
@@ -1160,12 +1164,14 @@ AXIS — the desk centre, where the chair used to be; the door screen-right. Mas
 
 *(The fixes pass, 2026-10-10: this showed Alyi's Nov 20, 2023 regret post with Mas's three hearts above the May 14 post, and V.O. 7 counted between them: the firing's clock, echoing the lobby's DAYS SINCE 176, so a newcomer reached for November as the reason he left (W8; facts §F). Nothing older than May 14 is on the phone now.)*
 
-`[MCU]` [15.03] (≈ 7.0 s) Mas on the desk's edge. A face light, one step. For one second, far off, Alyi's voice from launch night:
+`[MCU]` [15.03] (≈ 10.2 s) Mas on the desk's edge. A face light, one step. Far off, Alyi's voice from launch night:
 
 **ALYI** *(Ep1's own take, far off)*\
-Six years and eleven months. `[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13 · e2-a3-0008]`
+Six years and eleven months. From the day we started to that click. `[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13 · e2-a3-0008]`
 
-Now Mas counts, on Alyi's own clock: Ep1's line ran from the day they started to that click; his runs on to today.
+Now Mas counts, on Alyi's own clock: Alyi's ran from the day they started to that click; his runs on to today.
+
+*(The second fixes pass, 2026-10-10: cut at "months." the far line left a newcomer two counts with no anchor, and V.O. 7 played as a correction of the post's "almost a decade"; with its base it is one count, carried on.)*
 
 **MAS (V.O.)**\
 eight years and five months. `[INVENTED · V.O. 7, a count: Dec 11, 2015 (the founding, Ep1's own base) → May 14, 2024, checked (facts A25b) · e2-vo-07]`
@@ -1282,7 +1288,7 @@ MUSIC — **E02-10 The Bridge.** SET-PIECE SWING, the full band in 4-bar phrases
 ROOM — the bridge's traffic, right to left, wind off the water (a stalled variant); the night (sparse traffic, a far foghorn); then a moving morning and rain on an umbrella.
 AXIS — Mas mid-span in the left third, facing the city; the traffic runs right to left behind him. THE FORECASTER on the far pedestrian lane from screen-right; he crosses to stand screen-right of Mas, and leaves screen-right.
 
-`SCENE:` The papers go public. A man who left refuses to sign in front of Mas, at a price, without needing a number. Mas scrambles with a still face, says the fix aloud, holds the post until the fix is real, and apologises the next afternoon. Then the voice: letters he can't answer, and his own thumb on Pause. What he knew about the clause, and whether the voice was meant to sound like anyone, are contested: nothing tells us.
+`SCENE:` The papers go public. A man who left refuses to sign in front of Mas, at a price, without needing a number. Mas scrambles with a still face, says the fix aloud, doesn't post that night, and apologises the next afternoon. Then the voice: letters he can't answer, and his own thumb on Pause. What he knew about the clause, and whether the voice was meant to sound like anyone, are contested: nothing tells us.
 
 **Phrase 1.** `[W]` [17.01] (≈ 4.4 s · ARRIVE: NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in) The exit agreement is already pouring out of NopeAI's front doors like a pharmacy receipt. THE FORECASTER walks up from the street with a clipboard of dates, the first person to stop beside it, and looks down at it. *(He comes from the street, not out of the building: he had already left.)*
 
@@ -1306,7 +1312,7 @@ Here's where I am. If I sign, I keep what I've vested, and I never say a bad wor
 **DRIVER**\
 You gonna think it over, or can we move? We're parked on it. `[INVENTED · the receipt has stopped traffic · e2-a3-0017]`
 
-`[W]` [17.06] (≈ 5.9 s; back across the lanes)
+`[W]` [17.06] (≈ 5.8 s; back across the lanes)
 
 **THE FORECASTER** *(letting the pen go)*\
 Already did. It's the one thing I didn't need a number for. `[INVENTED · keep list, word for word; his refusal reads as already made (facts A32) · e2-a3-0018]`
@@ -1315,33 +1321,34 @@ The chain draws the pen back into the paper.
 
 TEMPO · the Forecaster weighted; the driver quick (0.3 s); the answer normal (0.5 s).
 
-`[W]` [17.07] (≈ 4.7 s) Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.
+`[W]` [17.07] (≈ 4.4 s) Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.
 
 **Phrase 3, the scramble.** *(Quick cuts on his hands; one locked MCU of his face, which never moves.)*
 
 `[ECU]` [17.08] (≈ 4.8 s) His phone won't stop: staff screenshots of a clause; a grey tile, `LEGAL · call me` (an icon, never named, never heard); a second `request for comment`.
 
-`[MCU]` [17.09] (≈ 6.5 s; locked on his face) He calls LEGAL. We hear only his side, level, and quicker than he ever talks.
+`[MCU]` [17.09] (≈ 6.4 s; locked on his face) He calls LEGAL. We hear only his side, level, and quicker than he ever talks.
 
 **MAS** *(on the call)*\
 everyone who signed one. find them. all of them. today. `[INVENTED · about the fix he made public (facts A31); nothing about what he knew · e2-a3-0019]`
 
 `[ECU]` [17.10] (≈ 4.6 s) A draft opened, typed, deleted, typed: its words grey bars, no legible word, and no voice over it.
 
-`[MCU]` [17.11] (≈ 4.6 s) His face doesn't move. The receipt is still unrolling under his shoes.
+`[MCU]` [17.11] (≈ 3.0 s) The receipt is still unrolling under his shoes. His face doesn't move.
 
-**MAS (V.O.)** *(faster than he thinks; each item a new call, not louder)*\
-everyone who signed. the post. everyone who signed. `[INVENTED · V.O. 9, his rattled tell (the count repeats) on his still face: the fix's items, nothing about what he knew · e2-vo-09]`
+**MAS (V.O.)** *(faster than he thinks; the second a new call, not louder)*\
+the post. the post. `[INVENTED · V.O. 9, his rattled tell (the count repeats) on his still face: the one item his call didn't say; nothing about what he knew or when he'll post · e2-vo-09]`
 
-**Phrase 4.** `[MCU]` [17.12] (≈ 10.1 s) THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.
+*(The second fixes pass, 2026-10-10: "everyone who signed. the post. everyone who signed." came 9 s after he says it aloud on the call, so it echoed instead of adding a thought.)*
+
+**Phrase 4.** `[MCU]` [17.12] (≈ 9.95 s) THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.
 
 **THE FORECASTER** *(to Mas, pleasantly)*\
 I've got a forecast on you. Median: an apology, within the hour, in lowercase. `[INVENTED · e2-a3-0020]`
 
-`[ECU]` [17.13] (≈ 5.0 s) Mas's thumb hovers over `Post`. He doesn't press.
+`[ECU]` [17.13] (≈ 3.6 s) Mas's thumb hovers over `Post`. He doesn't press. No voice.
 
-**MAS (V.O.)**\
-not until legal has every name. `[INVENTED · V.O. 10, plan: his own condition for the post, a reply to nobody; never what he knew · e2-vo-10]`
+*(The second fixes pass, 2026-10-10: V.O. 10, "not until legal has every name.", is cut. After the forecast it still played as a retort, it told us what the thumb shows, and it timed the public apology at a beat the episode keeps contested (W7, W8). The held thumb is "not yet".)*
 
 `[W]` [17.14] (≈ 2.0 s; one held wide) The night: the bridge's lights cycle once (a palette cycle, no strobe). Mas still on the receipt. The Forecaster asleep against the rail, clipboard on his chest.
 
@@ -1366,9 +1373,9 @@ He finds a line on the receipt, reads it, and very carefully takes his hand off 
 
 `RAIL: MAY 19` [P✓ · facts A33, A64: the pause's own date, OpenAI's "as of May 19, 2024"; was `MAY 20` until the film's pull pass]
 
-`[W]` [17.18] (≈ 7.0 s) It rains letterhead. The receipt's ink runs down the lanes in the rain. *Egg: far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.*
+`[W]` [17.18] (≈ 6.6 s) It rains letterhead. The receipt's ink runs down the lanes in the rain. *Egg: far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.*
 
-`[POV]` [17.19] (≈ 4.4 s) His rain-beaded phone: the voice menu, five live waveforms. His thumb finds `VOICE 5` and taps `Pause`. The slot greys; its `Hey.` greys under it: `VOICE 5 [PAUSED]` [V·press · facts A33].
+`[POV]` [17.19] (≈ 5.4 s) His rain-beaded phone buzzes: a push drops in over the voice menu, `request for comment` · `re: VOICE 5`, its thumbnail a waveform `[INVENTED · no outlet, no person named or drawn]`. It slides away: five live waveforms. His thumb finds `VOICE 5` and taps `Pause`. The slot greys; its `Hey.` greys under it: `VOICE 5 [PAUSED]` [V·press · facts A33].
 
 `[ECU]` [17.20] (≈ 5.4 s) Beside it, his company's post pops up in its own UI:
 
@@ -1808,7 +1815,7 @@ The Orb's verdict (proposal B), as Ep1, then a second page, 15.0 s. Credits: `mr
 
 ---
 
-## 2. The inner voice, in order (14 lines)
+## 2. The inner voice, in order (13 lines)
 
 Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in his cyan as he says it, after any rail or toast has cleared. Tags as the proposal's map.
 
@@ -1822,8 +1829,8 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 | 6 | e2-vo-06 | 9.04b | everyone gets it free. that's what makes the phone deal stick. | plan (distribution) |
 | 7 | e2-vo-07 | 15.03 | eight years and five months. | count |
 | 8 | e2-vo-08 | 15.17 | i'll ask him in person. | plan |
-| 9 | e2-vo-09 | 17.11 | everyone who signed. the post. everyone who signed. | the scramble (his rattled tell) |
-| 10 | e2-vo-10 | 17.13 | not until legal has every name. | plan (the fix: a condition) |
+| 9 | e2-vo-09 | 17.11 | the post. the post. | the scramble (his rattled tell) |
+| ~~10~~ | ~~e2-vo-10~~ | ~~17.13~~ | *cut at Act Three's second fixes pass* | |
 | 11 | e2-vo-11 | 18.10 | the next one's already training. | plan (the next model) |
 | 12 | e2-vo-12 | 19.08 | whatever we ship next goes in their phones too. | plan (distribution) |
 | 13 | e2-vo-13 | 20.07 | we raise in the fall. she has till then. | plan (the money) |
@@ -1835,7 +1842,9 @@ Jeremy at the V.O. settings, close and dry, 110–130 wpm. Each line types in hi
 
 **The fixes pass (2026-10-10; [fixes-v1.md](fixes-v1.md), Act Three):** V.O. 7 was "a hundred and seventy-six days." (Nov 20, 2023, Alyi's regret post with Mas's hearts, to May 14): the firing's clock, echoing the lobby's DAYS SINCE 176, so it pointed a newcomer to November as the reason he left. It now carries Alyi's own count (Ep1: the founding to the launch) on to May 14: "eight years and five months." (Dec 11, 2015 → May 14, 2024).
 
-**Per act:** One 3 · Two 3 · Three 4 · Four 3 · tag 1. Eleven of fourteen are plan; one is his rattled tell (MIV §3); none is a prediction, none narrates the picture, and none states the thesis; 117 words (106 before the fixes pass). **Clusters:** three in the séance's act (4.02, 4.25, 4B.01); two in the S3's scramble (17.11, 17.13), the blindside W4 names. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post (14), inside every flashback, at the refusal, the draft, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), in the garden after "as a guest." (19), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
+**The second fixes pass (2026-10-10; [fixes-v1.md](fixes-v1.md), Act Three, round 2):** V.O. 9 was "everyone who signed. the post. everyone who signed.", an echo of his call to legal 9 s before; it keeps the rattled repeat on the one item the call didn't say. V.O. 10, "not until legal has every name.", is cut: after the Forecaster's forecast it still played as a retort (D-79's reply shape), it told us what 17.13's thumb shows (W7's strip test), and it timed the apology at a contested beat (W8). The id is retired, so the ids keep their numbers.
+
+**Per act:** One 3 · Two 3 · Three 3 · Four 3 · tag 1. Ten of thirteen are plan; one is his rattled tell (MIV §3); none is a prediction, none narrates the picture, and none states the thesis; 107 words (117 before Act Three's second fixes pass). **Clusters:** three in the séance's act (4.02, 4.25, 4B.01); the S3's scramble has one, on his still face (17.11), the blindside W4 names; the held thumb after the forecast is silent. **Silent by design** at the review (4A), "her" (11), Alyi's posts (12, 20), Ekiel's post (14), inside every flashback, at the refusal, the draft, what he knew and the voice (17), at Neleh's account and in Mario's pane (18), in the garden after "as a guest." (19), at Nole's answer and the docket (20), at the white door (22), and at the refiled suit and the candidate's words (23). No line uses a banned word (W7); the build checks it.
 
 ## 3. Tempo
 

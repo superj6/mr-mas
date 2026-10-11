@@ -9,7 +9,7 @@
  },
  "true_peak_max_dbtp": -1.05,
  "dialogue_reference_lufs": -14.0,
- "dialogue_reference_from": "this run",
+ "dialogue_reference_from": "the last full run",
  "guard_lu": 1.5,
  "segments": {
   "coldopen": {
@@ -60,17 +60,17 @@
   "act3": {
    "file": "out/ep02/v1/mix/act3-mix.wav",
    "seconds": 320.0,
-   "lufs_i": -16.02,
-   "true_peak_dbtp": -1.07,
-   "lra_lu": 6.9,
-   "dialogue_lufs": -13.6,
-   "gain_db": 2.49,
+   "lufs_i": -16.05,
+   "true_peak_dbtp": -1.11,
+   "lra_lu": 6.7,
+   "dialogue_lufs": -13.63,
+   "gain_db": 2.58,
    "guard_db": null,
    "score": "audio/ost/tracks/e02-v1-act3/render/music-el.wav",
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 19:50:57"
+   "built": "2026-10-11 01:05:16"
   },
   "act4": {
    "file": "out/ep02/v1/mix/act4-mix.wav",
@@ -85,7 +85,7 @@
    "unmarked_holes": 0,
    "unmarked_holes_mono": 0,
    "unmarked_holes_without_score": 0,
-   "built": "2026-10-10 19:51:13"
+   "built": "2026-10-11 01:05:33"
   },
   "tag": {
    "file": "out/ep02/v1/mix/tag-mix.wav",
@@ -129,8 +129,8 @@
    "tag"
   ],
   "seconds": 1376.0,
-  "lufs_i": -15.74,
-  "lra_lu": 7.1,
+  "lufs_i": -15.75,
+  "lra_lu": 7.2,
   "note": "the story segments (and the card) back to back; the intro and the outro play their own masters between"
  },
  "seams": [
@@ -158,9 +158,9 @@
   {
    "seam": "act3 -> act4",
    "last_200ms_dbfs": -19.7,
-   "first_200ms_dbfs": -23.1,
-   "step_db": -3.3,
-   "sample_jump": 0.0126
+   "first_200ms_dbfs": -22.9,
+   "step_db": -3.2,
+   "sample_jump": 0.0052
   },
   {
    "seam": "act4 -> tag",
@@ -171,9 +171,9 @@
   }
  ],
  "spread": {
-  "lufs_i_lu": 1.02,
+  "lufs_i_lu": 1.05,
   "dialogue_lu": 0.86
  },
- "updated": "2026-10-10 19:51:26",
+ "updated": "2026-10-11 01:06:11",
  "heard": "nothing here has been listened to; every number is measured"
 }

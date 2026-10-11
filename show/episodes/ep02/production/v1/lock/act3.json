@@ -37,12 +37,12 @@
    "-": 58
   },
   "mean_s": 5.517,
-  "median_s": 4.854,
+  "median_s": 4.833,
   "min_s": 1.875,
   "max_s": 14.625,
-  "lines": 30,
+  "lines": 29,
   "posts": 0,
-  "vo": 4,
+  "vo": 3,
   "lines_with_mouth": 26,
   "mouths_from_words": 0,
   "on_camera_mouths": [],
@@ -60,7 +60,7 @@
   {
    "check": "scenes tile the segment",
    "ok": true,
-   "detail": "4 scenes: 13(840f) 14(1296f) 15(2424f) 17(3120f)"
+   "detail": "4 scenes: 13(840f) 14(1296f) 15(2496f) 17(3048f)"
   },
   {
    "check": "shot frames = their beats' frames",
@@ -75,12 +75,12 @@
   {
    "check": "the lock vs the stick reel's own line frames",
    "ok": true,
-   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 29; other: 0"
+   "detail": "same frame: 2; 1 f earlier (the onset falls inside the frame): 27; other: 0"
   },
   {
    "check": "every line has a take",
    "ok": true,
-   "detail": "30 of 30 placed; no take: []"
+   "detail": "29 of 29 placed; no take: []"
   },
   {
    "check": "every line's speech lies inside its take file",
@@ -219,7 +219,7 @@
   {
    "id": "15",
    "s": 2136,
-   "e": 4560,
+   "e": 4632,
    "shots": [
     "15.01",
     "15.02",
@@ -242,11 +242,11 @@
     "15.19"
    ],
    "tc_in": "13:39:00",
-   "tc_out": "15:20:00"
+   "tc_out": "15:23:00"
   },
   {
    "id": "17",
-   "s": 4560,
+   "s": 4632,
    "e": 7680,
    "shots": [
     "17.01",
@@ -271,7 +271,7 @@
     "17.20",
     "17.21"
    ],
-   "tc_in": "15:20:00",
+   "tc_in": "15:23:00",
    "tc_out": "17:30:00"
   }
  ],
@@ -1294,10 +1294,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
+   "frame": "SCR · the lobby TV over the staffers' heads, pushed in until its bezel is the frame's edge: the Senate presser",
    "cls": "SW",
    "move": "cut",
-   "does": "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
+   "does": "The lobby TV the staffers stand under gets its own beat: pushed in on, in held steps, until its bezel is the frame's edge, the lobby's room tone under it. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
    "chars": [
     "remuhcs"
    ],
@@ -1333,7 +1333,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
+   "caption": "The lobby TV the staffers stand under gets its own beat: pushed in on, in held steps, until its bezel is the frame's edge, the lobby's room tone under it. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
    "cast": [
     {
      "id": "remuhcs",
@@ -1348,7 +1348,7 @@
    "beat_starts": {
     "13.04": 0
    },
-   "picture": "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC).",
+   "picture": "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC). It stays on the TV, its bezel and glass in frame (the second fixes pass: a full-frame cut-in read as an unrelated senator; sc 18's push onto Neleh's player is the model), in the foreground at its own weight (W25).",
    "names": [
     {
      "id": "remuhcs",
@@ -1533,10 +1533,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+   "frame": "SCR · the TV (its bezel at the frame's edge): a reporter's question; an aide slaps a tenth sticker on the lectern",
    "cls": "SW",
    "move": "cut",
-   "does": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
+   "does": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern. The TV's bezel and glass stay in frame.",
    "chars": [
     "remuhcs"
    ],
@@ -1560,7 +1560,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
+   "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern. The TV's bezel and glass stay in frame.",
    "cast": [
     {
      "id": "remuhcs",
@@ -1905,17 +1905,7 @@
      "e": 33
     },
     {
-     "text": "> where are you going?",
-     "s": 24,
-     "e": 120
-    },
-    {
-     "text": "> can we talk?",
-     "s": 24,
-     "e": 120
-    },
-    {
-     "text": "> come back",
+     "text": "> lunch?",
      "s": 24,
      "e": 120
     }
@@ -1930,10 +1920,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
+   "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip, one greyed chip",
    "cls": "W",
    "move": "cut",
-   "does": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers three lines, what he'd say to Alyi. He taps the greyed come back first. Bonk.",
+   "does": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers one line, an ordinary one: lunch?, and it's greyed. He taps it anyway. Bonk.",
    "chars": [
     "mas"
    ],
@@ -1963,7 +1953,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers three lines, what he'd say to Alyi. He taps the greyed come back first. Bonk.",
+   "caption": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers one line, an ordinary one: lunch?, and it's greyed. He taps it anyway. Bonk.",
    "cast": [
     {
      "id": "mas",
@@ -1978,7 +1968,7 @@
    "beat_starts": {
     "14.03": 0
    },
-   "picture": "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel.",
+   "picture": "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel. Nothing he would say to Alyi is spelled out (the second fixes pass: the strip offered where are you going? · can we talk? · come back, his subtext as text, W7).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -1993,21 +1983,7 @@
     },
     {
      "kind": "ui",
-     "text": "> where are you going?",
-     "s": 24,
-     "e": 120,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "> can we talk?",
-     "s": 24,
-     "e": 120,
-     "must": true
-    },
-    {
-     "kind": "ui",
-     "text": "> come back",
+     "text": "> lunch?",
      "s": 24,
      "e": 120,
      "must": true
@@ -2036,10 +2012,10 @@
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "MCU · his own reflection mouthing can we talk? back to him",
+   "frame": "MCU · his own reflection in the fins, held; nothing else to pick",
    "cls": "MCU",
-   "move": "cut",
-   "does": "Then can we talk? His own reflection mouths it back to him. No voice.",
+   "move": "hold",
+   "does": "Nothing else to pick. His thumb stays on the greyed chip, then lowers. His face in the polish holds, silent. The phone's screen dims.",
    "chars": [
     "mas"
    ],
@@ -2055,7 +2031,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "Then can we talk? His own reflection mouths it back to him. No voice.",
+   "caption": "Nothing else to pick. His thumb stays on the greyed chip, then lowers. His face in the polish holds, silent. The phone's screen dims.",
    "cast": [
     {
      "id": "mas",
@@ -2070,7 +2046,7 @@
    "beat_starts": {
     "14.04": 0
    },
-   "picture": "The Door blooms once, first note missing.",
+   "picture": "The Door blooms once, first note missing. No mouthing, no voice (the second fixes pass: the reflection mouthing can we talk? back to him was a second named moment of being moved, on top of V.O. 7; W4).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -2265,7 +2241,7 @@
    "e": 1581,
    "onscreen": [
     {
-     "text": "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.",
+     "text": "BUKAJ · NEW CHIEF SCIENTIST.",
      "s": 9,
      "e": 76
     },
@@ -2402,7 +2378,7 @@
    "texts": [
     {
      "kind": "plate",
-     "text": "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.",
+     "text": "BUKAJ · NEW CHIEF SCIENTIST.",
      "s": 9,
      "e": 76,
      "must": true
@@ -3359,7 +3335,7 @@
     "15.03"
    ],
    "s": 2289,
-   "e": 2457,
+   "e": 2533,
    "onscreen": [],
    "lines": [
     {
@@ -3367,11 +3343,11 @@
      "kind": "dialogue",
      "mode": "on-mic",
      "who": "ALYI",
-     "text": "Six years and eleven months.",
+     "text": "Six years and eleven months. From the day we started to that click.",
      "s": 12,
-     "e": 64,
+     "e": 140,
      "fs": 4,
-     "fe": 69,
+     "fe": 148,
      "os": false,
      "via": null,
      "face": null,
@@ -3430,6 +3406,66 @@
       [
        49,
        "rest"
+      ],
+      [
+       75,
+       "E"
+      ],
+      [
+       77,
+       "A"
+      ],
+      [
+       79,
+       "M"
+      ],
+      [
+       82,
+       "E"
+      ],
+      [
+       88,
+       "A"
+      ],
+      [
+       94,
+       "O"
+      ],
+      [
+       96,
+       "E"
+      ],
+      [
+       100,
+       "A"
+      ],
+      [
+       102,
+       "E"
+      ],
+      [
+       109,
+       "O"
+      ],
+      [
+       113,
+       "A"
+      ],
+      [
+       115,
+       "E"
+      ],
+      [
+       122,
+       "A"
+      ],
+      [
+       124,
+       "E"
+      ],
+      [
+       127,
+       "rest"
       ]
      ],
      "words": [
@@ -3457,6 +3493,46 @@
        "months",
        38,
        49
+      ],
+      [
+       "From",
+       75,
+       80
+      ],
+      [
+       "the",
+       82,
+       85
+      ],
+      [
+       "day",
+       87,
+       92
+      ],
+      [
+       "we",
+       94,
+       97
+      ],
+      [
+       "started",
+       98,
+       107
+      ],
+      [
+       "to",
+       108,
+       110
+      ],
+      [
+       "that",
+       112,
+       116
+      ],
+      [
+       "click",
+       118,
+       127
       ]
      ],
      "tag": "far",
@@ -3468,10 +3544,10 @@
      "mode": "on-mic",
      "who": "MAS",
      "text": "eight years and five months.",
-     "s": 92,
-     "e": 146,
-     "fs": 82,
-     "fe": 157,
+     "s": 168,
+     "e": 222,
+     "fs": 158,
+     "fe": 233,
      "os": false,
      "via": null,
      "face": null,
@@ -3483,11 +3559,11 @@
       [
        "Eight",
        -1,
-       7
+       6
       ],
       [
        "years",
-       9,
+       8,
        19
       ],
       [
@@ -3503,7 +3579,7 @@
       [
        "months",
        40,
-       51
+       50
       ]
      ],
      "tag": "V.O.",
@@ -3522,7 +3598,7 @@
    "frame": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "cls": "MCU",
    "move": "cut",
-   "does": "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
+   "does": "Far off, Alyi's voice from launch night: his count, and what it counted, from the day they started to that click. Now Mas carries it on to today.",
    "chars": [
     "mas"
    ],
@@ -3538,7 +3614,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
+   "caption": "Far off, Alyi's voice from launch night: his count, and what it counted, from the day they started to that click. Now Mas carries it on to today.",
    "cast": [
     {
      "id": "mas",
@@ -3553,15 +3629,15 @@
    "beat_starts": {
     "15.03": 0
    },
-   "picture": "A face light one step.",
+   "picture": "A face light one step. The far line runs through its base (the second fixes pass: cut at \"months.\" it left two numbers with no anchor, and V.O. 7 played as a correction of the post's \"almost a decade\").",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
    "tc_in": "13:45:09",
-   "tc_out": "13:52:09",
-   "frames": 168
+   "tc_out": "13:55:13",
+   "frames": 244
   },
   {
    "id": "15.04",
@@ -3569,8 +3645,8 @@
    "beats": [
     "15.04"
    ],
-   "s": 2457,
-   "e": 2616,
+   "s": 2533,
+   "e": 2691,
    "onscreen": [
     {
      "text": "TPOOL",
@@ -3710,9 +3786,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:52:09",
-   "tc_out": "13:59:00",
-   "frames": 159
+   "tc_in": "13:55:13",
+   "tc_out": "14:02:03",
+   "frames": 158
   },
   {
    "id": "15.05",
@@ -3720,8 +3796,8 @@
    "beats": [
     "15.05"
    ],
-   "s": 2616,
-   "e": 2793,
+   "s": 2691,
+   "e": 2869,
    "onscreen": [
     {
      "text": "where u at?",
@@ -3820,9 +3896,9 @@
      "must": true
     }
    ],
-   "tc_in": "13:59:00",
-   "tc_out": "14:06:09",
-   "frames": 177
+   "tc_in": "14:02:03",
+   "tc_out": "14:09:13",
+   "frames": 178
   },
   {
    "id": "15.06",
@@ -3830,8 +3906,8 @@
    "beats": [
     "15.06"
    ],
-   "s": 2793,
-   "e": 2963,
+   "s": 2869,
+   "e": 3038,
    "onscreen": [
     {
      "text": "RAIL: DEC 2022",
@@ -4092,9 +4168,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:06:09",
-   "tc_out": "14:13:11",
-   "frames": 170
+   "tc_in": "14:09:13",
+   "tc_out": "14:16:14",
+   "frames": 169
   },
   {
    "id": "15.07",
@@ -4102,8 +4178,8 @@
    "beats": [
     "15.07"
    ],
-   "s": 2963,
-   "e": 3142,
+   "s": 3038,
+   "e": 3217,
    "onscreen": [],
    "lines": [
     {
@@ -4160,16 +4236,16 @@
       [
        "You're",
        0,
-       7
+       6
       ],
       [
        "not",
-       8,
+       7,
        11
       ],
       [
        "chanting",
-       13,
+       12,
        28
       ]
      ],
@@ -4183,9 +4259,9 @@
      "who": "MAS",
      "text": "someone has to hold the glass.",
      "s": 65,
-     "e": 114,
-     "fs": 56,
-     "fe": 124,
+     "e": 113,
+     "fs": 55,
+     "fe": 123,
      "os": false,
      "via": null,
      "face": null,
@@ -4195,54 +4271,50 @@
      "mouth": [
       [
        0,
-       "rest"
-      ],
-      [
-       1,
        "A"
       ],
       [
-       3,
+       2,
        "M"
       ],
       [
-       5,
+       4,
        "O"
       ],
       [
-       7,
+       6,
        "A"
       ],
       [
-       10,
+       9,
        "E"
       ],
       [
-       13,
+       12,
        "A"
       ],
       [
-       16,
+       15,
        "E"
       ],
       [
-       21,
+       20,
        "O"
       ],
       [
-       24,
+       23,
        "E"
       ],
       [
-       37,
+       36,
        "A"
       ],
       [
-       43,
+       42,
        "E"
       ],
       [
-       46,
+       45,
        "rest"
       ]
      ],
@@ -4274,7 +4346,7 @@
       ],
       [
        "glass",
-       31,
+       30,
        45
       ]
      ],
@@ -4287,7 +4359,7 @@
      "mode": "on-mic",
      "who": "ALYI",
      "text": "Then I'll feel it for both of us.",
-     "s": 119,
+     "s": 118,
      "e": 167,
      "fs": 108,
      "fe": 183,
@@ -4300,101 +4372,105 @@
      "mouth": [
       [
        0,
-       "A"
-      ],
-      [
-       3,
-       "E"
-      ],
-      [
-       5,
-       "A"
-      ],
-      [
-       8,
-       "E"
-      ],
-      [
-       12,
-       "A"
-      ],
-      [
-       15,
-       "E"
-      ],
-      [
-       22,
-       "O"
-      ],
-      [
-       26,
-       "M"
-      ],
-      [
-       28,
-       "O"
-      ],
-      [
-       31,
-       "E"
-      ],
-      [
-       33,
-       "A"
-      ],
-      [
-       35,
        "rest"
       ],
       [
-       38,
+       1,
        "A"
       ],
       [
-       43,
+       4,
+       "E"
+      ],
+      [
+       6,
+       "A"
+      ],
+      [
+       9,
+       "E"
+      ],
+      [
+       13,
+       "A"
+      ],
+      [
+       16,
+       "E"
+      ],
+      [
+       23,
+       "O"
+      ],
+      [
+       27,
+       "M"
+      ],
+      [
+       29,
+       "O"
+      ],
+      [
+       32,
+       "E"
+      ],
+      [
+       34,
+       "A"
+      ],
+      [
+       36,
+       "rest"
+      ],
+      [
+       39,
+       "A"
+      ],
+      [
+       44,
        "rest"
       ]
      ],
      "words": [
       [
        "Then",
-       -1,
+       0,
        5
       ],
       [
        "I'll",
        6,
-       10
+       11
       ],
       [
        "feel",
        12,
-       17
+       18
       ],
       [
        "it",
-       18,
-       20
+       19,
+       21
       ],
       [
        "for",
        22,
-       25
+       26
       ],
       [
        "both",
-       26,
-       32
+       27,
+       33
       ],
       [
        "of",
-       34,
-       35
+       35,
+       36
       ],
       [
        "us",
-       38,
-       44
+       39,
+       45
       ]
      ],
      "tag": "",
@@ -4459,8 +4535,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:13:11",
-   "tc_out": "14:20:22",
+   "tc_in": "14:16:14",
+   "tc_out": "14:24:01",
    "frames": 179
   },
   {
@@ -4469,8 +4545,8 @@
    "beats": [
     "15.08"
    ],
-   "s": 3142,
-   "e": 3297,
+   "s": 3217,
+   "e": 3372,
    "onscreen": [
     {
      "text": "CHECK IN",
@@ -4480,7 +4556,7 @@
     {
      "text": "feel the agi",
      "s": 51,
-     "e": 155
+     "e": 154
     }
    ],
    "lines": [],
@@ -4561,12 +4637,12 @@
      "kind": "ui",
      "text": "feel the agi",
      "s": 51,
-     "e": 155,
+     "e": 154,
      "must": true
     }
    ],
-   "tc_in": "14:20:22",
-   "tc_out": "14:27:09",
+   "tc_in": "14:24:01",
+   "tc_out": "14:30:12",
    "frames": 155
   },
   {
@@ -4575,8 +4651,8 @@
    "beats": [
     "15.09"
    ],
-   "s": 3297,
-   "e": 3382,
+   "s": 3372,
+   "e": 3456,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -4654,9 +4730,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:27:09",
-   "tc_out": "14:30:22",
-   "frames": 85
+   "tc_in": "14:30:12",
+   "tc_out": "14:34:00",
+   "frames": 84
   },
   {
    "id": "15.10",
@@ -4664,8 +4740,8 @@
    "beats": [
     "15.10"
    ],
-   "s": 3382,
-   "e": 3614,
+   "s": 3456,
+   "e": 3689,
    "onscreen": [
     {
      "text": "RAIL: 2023",
@@ -4757,9 +4833,9 @@
      "must": true
     }
    ],
-   "tc_in": "14:30:22",
-   "tc_out": "14:40:14",
-   "frames": 232
+   "tc_in": "14:34:00",
+   "tc_out": "14:43:17",
+   "frames": 233
   },
   {
    "id": "15.11",
@@ -4767,8 +4843,8 @@
    "beats": [
     "15.11"
    ],
-   "s": 3614,
-   "e": 3744,
+   "s": 3689,
+   "e": 3819,
    "onscreen": [],
    "lines": [
     {
@@ -5005,8 +5081,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:40:14",
-   "tc_out": "14:46:00",
+   "tc_in": "14:43:17",
+   "tc_out": "14:49:03",
    "frames": 130
   },
   {
@@ -5015,8 +5091,8 @@
    "beats": [
     "15.12"
    ],
-   "s": 3744,
-   "e": 3822,
+   "s": 3819,
+   "e": 3896,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -5068,9 +5144,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:46:00",
-   "tc_out": "14:49:06",
-   "frames": 78
+   "tc_in": "14:49:03",
+   "tc_out": "14:52:08",
+   "frames": 77
   },
   {
    "id": "15.13",
@@ -5078,13 +5154,13 @@
    "beats": [
     "15.13"
    ],
-   "s": 3822,
-   "e": 3939,
+   "s": 3896,
+   "e": 4012,
    "onscreen": [
     {
      "text": "UNALIGNED",
      "s": 9,
-     "e": 116
+     "e": 115
     }
    ],
    "lines": [],
@@ -5158,13 +5234,13 @@
      "kind": "sign",
      "text": "UNALIGNED",
      "s": 9,
-     "e": 116,
+     "e": 115,
      "must": true
     }
    ],
-   "tc_in": "14:49:06",
-   "tc_out": "14:54:03",
-   "frames": 117
+   "tc_in": "14:52:08",
+   "tc_out": "14:57:04",
+   "frames": 116
   },
   {
    "id": "15.14",
@@ -5172,8 +5248,8 @@
    "beats": [
     "15.14"
    ],
-   "s": 3939,
-   "e": 3984,
+   "s": 4012,
+   "e": 4057,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -5233,8 +5309,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:54:03",
-   "tc_out": "14:56:00",
+   "tc_in": "14:57:04",
+   "tc_out": "14:59:01",
    "frames": 45
   },
   {
@@ -5243,8 +5319,8 @@
    "beats": [
     "15.15"
    ],
-   "s": 3984,
-   "e": 4094,
+   "s": 4057,
+   "e": 4167,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -5310,8 +5386,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "14:56:00",
-   "tc_out": "15:00:14",
+   "tc_in": "14:59:01",
+   "tc_out": "15:03:15",
    "frames": 110
   },
   {
@@ -5320,8 +5396,8 @@
    "beats": [
     "15.16"
    ],
-   "s": 4094,
-   "e": 4204,
+   "s": 4167,
+   "e": 4277,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -5362,8 +5438,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:00:14",
-   "tc_out": "15:05:04",
+   "tc_in": "15:03:15",
+   "tc_out": "15:08:05",
    "frames": 110
   },
   {
@@ -5372,8 +5448,8 @@
    "beats": [
     "15.17"
    ],
-   "s": 4204,
-   "e": 4320,
+   "s": 4277,
+   "e": 4393,
    "onscreen": [],
    "lines": [
     {
@@ -5402,7 +5478,7 @@
       [
        "ask",
        7,
-       13
+       12
       ],
       [
        "him",
@@ -5411,12 +5487,12 @@
       ],
       [
        "in",
-       19,
+       18,
        20
       ],
       [
        "person",
-       23,
+       22,
        37
       ]
      ],
@@ -5473,8 +5549,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:05:04",
-   "tc_out": "15:10:00",
+   "tc_in": "15:08:05",
+   "tc_out": "15:13:01",
    "frames": 116
   },
   {
@@ -5483,8 +5559,8 @@
    "beats": [
     "15.18"
    ],
-   "s": 4320,
-   "e": 4430,
+   "s": 4393,
+   "e": 4502,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
@@ -5507,12 +5583,12 @@
     "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
    ],
    "sounds": [
-    "door_close_soft @71"
+    "door_close_soft @70"
    ],
    "spots": [
     {
      "name": "door_close_soft",
-     "k": 71,
+     "k": 70,
      "dur": null
     }
    ],
@@ -5544,9 +5620,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:10:00",
-   "tc_out": "15:14:14",
-   "frames": 110
+   "tc_in": "15:13:01",
+   "tc_out": "15:17:14",
+   "frames": 109
   },
   {
    "id": "15.19",
@@ -5554,8 +5630,8 @@
    "beats": [
     "15.19"
    ],
-   "s": 4430,
-   "e": 4560,
+   "s": 4502,
+   "e": 4632,
    "onscreen": [
     {
      "text": "request for comment",
@@ -5653,8 +5729,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:14:14",
-   "tc_out": "15:20:00",
+   "tc_in": "15:17:14",
+   "tc_out": "15:23:00",
    "frames": 130
   },
   {
@@ -5663,8 +5739,8 @@
    "beats": [
     "17.01"
    ],
-   "s": 4560,
-   "e": 4666,
+   "s": 4632,
+   "e": 4738,
    "onscreen": [
     {
      "text": "RAIL: MAY 17, 2024",
@@ -5675,7 +5751,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5730,8 +5806,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:20:00",
-   "tc_out": "15:24:10",
+   "tc_in": "15:23:00",
+   "tc_out": "15:27:10",
    "frames": 106
   },
   {
@@ -5740,8 +5816,8 @@
    "beats": [
     "17.02"
    ],
-   "s": 4666,
-   "e": 4824,
+   "s": 4738,
+   "e": 4896,
    "onscreen": [
     {
      "text": "NON-DISPARAGEMENT",
@@ -5767,7 +5843,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5857,8 +5933,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:24:10",
-   "tc_out": "15:31:00",
+   "tc_in": "15:27:10",
+   "tc_out": "15:34:00",
    "frames": 158
   },
   {
@@ -5867,8 +5943,8 @@
    "beats": [
     "17.03"
    ],
-   "s": 4824,
-   "e": 4915,
+   "s": 4896,
+   "e": 4987,
    "onscreen": [
     {
      "text": "THE FORECASTER / EX-NOPEAI.",
@@ -5884,7 +5960,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -5963,8 +6039,8 @@
      "must": true
     }
    ],
-   "tc_in": "15:31:00",
-   "tc_out": "15:34:19",
+   "tc_in": "15:34:00",
+   "tc_out": "15:37:19",
    "frames": 91
   },
   {
@@ -5973,8 +6049,8 @@
    "beats": [
     "17.04"
    ],
-   "s": 4915,
-   "e": 5266,
+   "s": 4987,
+   "e": 5338,
    "onscreen": [],
    "lines": [
     {
@@ -6435,7 +6511,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6499,8 +6575,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:34:19",
-   "tc_out": "15:49:10",
+   "tc_in": "15:37:19",
+   "tc_out": "15:52:10",
    "frames": 351
   },
   {
@@ -6509,8 +6585,8 @@
    "beats": [
     "17.05"
    ],
-   "s": 5266,
-   "e": 5343,
+   "s": 5338,
+   "e": 5415,
    "onscreen": [],
    "lines": [
     {
@@ -6700,7 +6776,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -6755,8 +6831,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:49:10",
-   "tc_out": "15:52:15",
+   "tc_in": "15:52:10",
+   "tc_out": "15:55:15",
    "frames": 77
   },
   {
@@ -6765,8 +6841,8 @@
    "beats": [
     "17.06"
    ],
-   "s": 5343,
-   "e": 5485,
+   "s": 5415,
+   "e": 5554,
    "onscreen": [],
    "lines": [
     {
@@ -6943,7 +7019,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7007,9 +7083,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:52:15",
-   "tc_out": "15:58:13",
-   "frames": 142
+   "tc_in": "15:55:15",
+   "tc_out": "16:01:10",
+   "frames": 139
   },
   {
    "id": "17.07",
@@ -7017,13 +7093,13 @@
    "beats": [
     "17.07"
    ],
-   "s": 5485,
-   "e": 5597,
+   "s": 5554,
+   "e": 5660,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7041,12 +7117,12 @@
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
    ],
    "sounds": [
-    "phone_buzz_step_1 @46"
+    "phone_buzz_step_1 @44"
    ],
    "spots": [
     {
      "name": "phone_buzz_step_1",
-     "k": 46,
+     "k": 44,
      "dur": null
     }
    ],
@@ -7078,9 +7154,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "15:58:13",
-   "tc_out": "16:03:05",
-   "frames": 112
+   "tc_in": "16:01:10",
+   "tc_out": "16:05:20",
+   "frames": 106
   },
   {
    "id": "17.08",
@@ -7088,8 +7164,8 @@
    "beats": [
     "17.08"
    ],
-   "s": 5597,
-   "e": 5712,
+   "s": 5660,
+   "e": 5776,
    "onscreen": [
     {
      "text": "NON-DISPARAGEMENT",
@@ -7110,7 +7186,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7188,9 +7264,9 @@
      "must": true
     }
    ],
-   "tc_in": "16:03:05",
-   "tc_out": "16:08:00",
-   "frames": 115
+   "tc_in": "16:05:20",
+   "tc_out": "16:10:16",
+   "frames": 116
   },
   {
    "id": "17.09",
@@ -7198,8 +7274,8 @@
    "beats": [
     "17.09"
    ],
-   "s": 5712,
-   "e": 5869,
+   "s": 5776,
+   "e": 5929,
    "onscreen": [],
    "lines": [
     {
@@ -7208,10 +7284,10 @@
      "mode": "call",
      "who": "MAS",
      "text": "everyone who signed one. find them. all of them. today.",
-     "s": 55,
-     "e": 139,
-     "fs": 47,
-     "fe": 152,
+     "s": 53,
+     "e": 136,
+     "fs": 44,
+     "fe": 149,
      "os": false,
      "via": "call",
      "face": null,
@@ -7221,106 +7297,102 @@
      "mouth": [
       [
        0,
+       "A"
+      ],
+      [
+       2,
+       "E"
+      ],
+      [
+       5,
+       "O"
+      ],
+      [
+       7,
+       "E"
+      ],
+      [
+       9,
+       "O"
+      ],
+      [
+       13,
+       "A"
+      ],
+      [
+       16,
+       "E"
+      ],
+      [
+       20,
+       "O"
+      ],
+      [
+       22,
+       "A"
+      ],
+      [
+       25,
        "rest"
       ],
       [
-       1,
+       32,
        "A"
       ],
       [
-       3,
+       35,
        "E"
       ],
       [
-       6,
-       "O"
-      ],
-      [
-       8,
-       "E"
-      ],
-      [
-       10,
-       "O"
-      ],
-      [
-       14,
+       39,
        "A"
       ],
       [
-       17,
-       "E"
-      ],
-      [
-       21,
-       "O"
-      ],
-      [
-       23,
-       "A"
-      ],
-      [
-       26,
-       "rest"
-      ],
-      [
-       33,
-       "A"
-      ],
-      [
-       36,
-       "E"
-      ],
-      [
-       40,
-       "A"
-      ],
-      [
-       43,
+       42,
        "M"
       ],
       [
-       45,
+       44,
        "rest"
       ],
       [
-       52,
+       51,
        "O"
       ],
       [
-       55,
+       54,
        "E"
       ],
       [
-       58,
+       57,
        "A"
       ],
       [
-       64,
+       63,
        "M"
       ],
       [
-       66,
+       65,
        "rest"
       ],
       [
-       71,
+       70,
        "E"
       ],
       [
-       77,
+       76,
        "A"
       ],
       [
-       81,
+       80,
        "rest"
       ]
      ],
      "words": [
       [
        "Everyone",
-       0,
-       9
+       -1,
+       8
       ],
       [
        "who",
@@ -7329,13 +7401,13 @@
       ],
       [
        "signed",
-       13,
-       19
+       12,
+       18
       ],
       [
        "one",
-       21,
-       26
+       20,
+       25
       ],
       [
        "find",
@@ -7345,11 +7417,11 @@
       [
        "them",
        38,
-       44
+       43
       ],
       [
        "all",
-       52,
+       51,
        56
       ],
       [
@@ -7359,13 +7431,13 @@
       ],
       [
        "them",
-       60,
-       65
+       59,
+       64
       ],
       [
        "today",
        70,
-       81
+       80
       ]
      ],
      "tag": "call",
@@ -7374,7 +7446,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7393,7 +7465,7 @@
    ],
    "sounds": [
     "call_ring @4",
-    "call_connect @37"
+    "call_connect @35"
    ],
    "spots": [
     {
@@ -7403,7 +7475,7 @@
     },
     {
      "name": "call_connect",
-     "k": 37,
+     "k": 35,
      "dur": null
     }
    ],
@@ -7435,9 +7507,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:08:00",
-   "tc_out": "16:14:13",
-   "frames": 157
+   "tc_in": "16:10:16",
+   "tc_out": "16:17:01",
+   "frames": 153
   },
   {
    "id": "17.10",
@@ -7445,13 +7517,13 @@
    "beats": [
     "17.10"
    ],
-   "s": 5869,
-   "e": 5979,
+   "s": 5929,
+   "e": 6040,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7507,9 +7579,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:14:13",
-   "tc_out": "16:19:03",
-   "frames": 110
+   "tc_in": "16:17:01",
+   "tc_out": "16:21:16",
+   "frames": 111
   },
   {
    "id": "17.11",
@@ -7517,8 +7589,8 @@
    "beats": [
     "17.11"
    ],
-   "s": 5979,
-   "e": 6089,
+   "s": 6040,
+   "e": 6112,
    "onscreen": [],
    "lines": [
     {
@@ -7526,11 +7598,11 @@
      "kind": "vo",
      "mode": "on-mic",
      "who": "MAS",
-     "text": "everyone who signed. the post. everyone who signed.",
-     "s": 7,
-     "e": 91,
-     "fs": -2,
-     "fe": 103,
+     "text": "the post. the post.",
+     "s": 21,
+     "e": 55,
+     "fs": 11,
+     "fe": 66,
      "os": false,
      "via": null,
      "face": null,
@@ -7540,44 +7612,24 @@
      "mouth": [],
      "words": [
       [
-       "Everyone",
-       -1,
-       9
-      ],
-      [
-       "who",
-       10,
-       12
-      ],
-      [
-       "signed",
-       13,
-       23
-      ],
-      [
-       "the",
-       34,
-       37
+       "The",
+       0,
+       1
       ],
       [
        "post",
-       38,
-       49
+       3,
+       12
       ],
       [
-       "everyone",
-       59,
-       69
+       "the",
+       19,
+       21
       ],
       [
-       "who",
-       69,
-       71
-      ],
-      [
-       "signed",
-       73,
-       83
+       "post",
+       22,
+       32
       ]
      ],
      "tag": "V.O.",
@@ -7586,7 +7638,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7596,7 +7648,7 @@
    "frame": "MCU · his still face; the receipt still unrolling under his shoes",
    "cls": "MCU",
    "move": "cut",
-   "does": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "does": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself: the post.",
    "chars": [
     "mas"
    ],
@@ -7620,7 +7672,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself: the post.",
    "cast": [
     {
      "id": "mas",
@@ -7635,15 +7687,15 @@
    "beat_starts": {
     "17.11": 0
    },
-   "picture": "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft.",
+   "picture": "W4's grammar: the face still, the inside fast. The V.O. is the one item his call didn't say, the post he drafted and deleted, repeated: his rattled tell (MIV §3), nothing about what he knew and nothing about when he'll post (W8); it plays on his face (from 0.9 s, after the shoes), never over the draft (the second fixes pass: \"everyone who signed. the post. everyone who signed.\" echoed the call 9 s earlier).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:19:03",
-   "tc_out": "16:23:17",
-   "frames": 110
+   "tc_in": "16:21:16",
+   "tc_out": "16:24:16",
+   "frames": 72
   },
   {
    "id": "17.12",
@@ -7651,8 +7703,8 @@
    "beats": [
     "17.12"
    ],
-   "s": 6089,
-   "e": 6332,
+   "s": 6112,
+   "e": 6351,
    "onscreen": [],
    "lines": [
     {
@@ -7661,10 +7713,10 @@
      "mode": "on-mic",
      "who": "FORECASTER",
      "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
-     "s": 65,
-     "e": 229,
-     "fs": 56,
-     "fe": 241,
+     "s": 61,
+     "e": 226,
+     "fs": 53,
+     "fe": 238,
      "os": false,
      "via": null,
      "face": null,
@@ -7674,183 +7726,187 @@
      "mouth": [
       [
        0,
-       "A"
-      ],
-      [
-       5,
-       "E"
-      ],
-      [
-       8,
-       "A"
-      ],
-      [
-       14,
-       "O"
-      ],
-      [
-       18,
-       "E"
-      ],
-      [
-       21,
-       "A"
-      ],
-      [
-       24,
-       "E"
-      ],
-      [
-       29,
-       "O"
-      ],
-      [
-       31,
-       "E"
-      ],
-      [
-       34,
-       "O"
-      ],
-      [
-       37,
        "rest"
       ],
       [
-       51,
+       1,
+       "A"
+      ],
+      [
+       6,
+       "E"
+      ],
+      [
+       9,
+       "A"
+      ],
+      [
+       15,
+       "O"
+      ],
+      [
+       19,
+       "E"
+      ],
+      [
+       22,
+       "A"
+      ],
+      [
+       25,
+       "E"
+      ],
+      [
+       30,
+       "O"
+      ],
+      [
+       32,
+       "E"
+      ],
+      [
+       35,
+       "O"
+      ],
+      [
+       38,
+       "rest"
+      ],
+      [
+       52,
        "M"
       ],
       [
-       53,
+       54,
        "A"
       ],
       [
-       56,
+       57,
        "E"
       ],
       [
-       65,
+       66,
        "rest"
       ],
       [
-       80,
+       81,
        "A"
       ],
       [
-       82,
+       83,
        "E"
       ],
       [
-       84,
+       85,
        "M"
       ],
       [
-       86,
+       87,
        "A"
       ],
       [
-       88,
+       89,
        "E"
       ],
       [
-       96,
+       97,
        "O"
       ],
       [
-       98,
+       99,
        "E"
       ],
       [
-       100,
+       101,
        "A"
       ],
       [
-       102,
+       103,
        "E"
       ],
       [
-       107,
+       108,
        "A"
       ],
       [
-       111,
+       112,
        "E"
       ],
       [
-       115,
+       116,
        "rest"
       ],
       [
-       132,
+       133,
        "E"
       ],
       [
-       134,
+       135,
        "A"
       ],
       [
-       137,
+       138,
        "E"
       ],
       [
-       141,
+       142,
        "rest"
       ],
       [
-       144,
+       145,
        "E"
       ],
       [
-       146,
+       147,
        "O"
       ],
       [
-       151,
+       152,
        "E"
       ],
       [
-       158,
+       159,
        "A"
       ],
       [
-       162,
+       163,
        "E"
       ],
       [
-       164,
+       165,
        "rest"
       ]
      ],
      "words": [
       [
        "I've",
-       -1,
-       6
+       0,
+       7
       ],
       [
        "got",
        7,
-       10
+       11
       ],
       [
        "a",
-       11,
+       12,
        12
       ],
       [
        "forecast",
-       13,
-       27
+       14,
+       28
       ],
       [
        "on",
        29,
-       31
+       32
       ],
       [
        "you",
        33,
-       37
+       38
       ],
       [
        "Median",
@@ -7865,31 +7921,31 @@
       [
        "apology",
        83,
-       95
+       96
       ],
       [
        "within",
-       96,
-       103
+       97,
+       104
       ],
       [
        "the",
-       104,
+       105,
        106
       ],
       [
        "hour",
        107,
-       115
+       116
       ],
       [
        "in",
-       132,
+       133,
        141
       ],
       [
        "lowercase",
-       144,
+       145,
        164
       ]
      ],
@@ -7899,7 +7955,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -7955,9 +8011,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:23:17",
-   "tc_out": "16:33:20",
-   "frames": 243
+   "tc_in": "16:24:16",
+   "tc_out": "16:34:15",
+   "frames": 239
   },
   {
    "id": "17.13",
@@ -7965,66 +8021,13 @@
    "beats": [
     "17.13"
    ],
-   "s": 6332,
-   "e": 6452,
+   "s": 6351,
+   "e": 6437,
    "onscreen": [],
-   "lines": [
-    {
-     "id": "e2-vo-10",
-     "kind": "vo",
-     "mode": "on-mic",
-     "who": "MAS",
-     "text": "not until legal has every name.",
-     "s": 37,
-     "e": 98,
-     "fs": 27,
-     "fe": 117,
-     "os": false,
-     "via": null,
-     "face": null,
-     "lip": false,
-     "carry": false,
-     "cut": false,
-     "mouth": [],
-     "words": [
-      [
-       "Not",
-       -1,
-       5
-      ],
-      [
-       "until",
-       7,
-       16
-      ],
-      [
-       "legal",
-       18,
-       29
-      ],
-      [
-       "has",
-       31,
-       36
-      ],
-      [
-       "every",
-       38,
-       46
-      ],
-      [
-       "name",
-       48,
-       58
-      ]
-     ],
-     "tag": "V.O.",
-     "pre": false
-    }
-   ],
+   "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8065,15 +8068,15 @@
    "beat_starts": {
     "17.13": 0
    },
-   "picture": "",
+   "picture": "No V.O.: the held thumb is the beat (the second fixes pass cut V.O. 10, \"not until legal has every name.\": after the forecast it played as a retort, it narrated the thumb, and it timed the apology at a contested beat; W7, W8).",
    "names": [],
    "fg": null,
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:33:20",
-   "tc_out": "16:38:20",
-   "frames": 120
+   "tc_in": "16:34:15",
+   "tc_out": "16:38:05",
+   "frames": 86
   },
   {
    "id": "17.14",
@@ -8081,13 +8084,13 @@
    "beats": [
     "17.14"
    ],
-   "s": 6452,
-   "e": 6500,
+   "s": 6437,
+   "e": 6485,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8143,8 +8146,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:38:20",
-   "tc_out": "16:40:20",
+   "tc_in": "16:38:05",
+   "tc_out": "16:40:05",
    "frames": 48
   },
   {
@@ -8153,8 +8156,8 @@
    "beats": [
     "17.15"
    ],
-   "s": 6500,
-   "e": 6785,
+   "s": 6485,
+   "e": 6770,
    "onscreen": [
     {
      "text": "RAIL: MAY 18",
@@ -8238,7 +8241,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8370,8 +8373,8 @@
      "must": true
     }
    ],
-   "tc_in": "16:40:20",
-   "tc_out": "16:52:17",
+   "tc_in": "16:40:05",
+   "tc_out": "16:52:02",
    "frames": 285
   },
   {
@@ -8380,8 +8383,8 @@
    "beats": [
     "17.16"
    ],
-   "s": 6785,
-   "e": 6926,
+   "s": 6770,
+   "e": 6911,
    "onscreen": [],
    "lines": [
     {
@@ -8525,7 +8528,7 @@
    ],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8598,8 +8601,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:52:17",
-   "tc_out": "16:58:14",
+   "tc_in": "16:52:02",
+   "tc_out": "16:57:23",
    "frames": 141
   },
   {
@@ -8608,8 +8611,8 @@
    "beats": [
     "17.17"
    ],
-   "s": 6926,
-   "e": 7166,
+   "s": 6911,
+   "e": 7151,
    "onscreen": [
     {
      "text": "RAIL: MAY 19",
@@ -8620,7 +8623,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8675,8 +8678,8 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "16:58:14",
-   "tc_out": "17:08:14",
+   "tc_in": "16:57:23",
+   "tc_out": "17:07:23",
    "frames": 240
   },
   {
@@ -8685,13 +8688,13 @@
    "beats": [
     "17.18"
    ],
-   "s": 7166,
-   "e": 7334,
+   "s": 7151,
+   "e": 7310,
    "onscreen": [],
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8710,8 +8713,8 @@
    ],
    "sounds": [
     "umbrella_rain @0",
-    "ink_run_drip @18",
-    "umbrella_pop @121"
+    "ink_run_drip @17",
+    "umbrella_pop @115"
    ],
    "spots": [
     {
@@ -8721,12 +8724,12 @@
     },
     {
      "name": "ink_run_drip",
-     "k": 18,
+     "k": 17,
      "dur": null
     },
     {
      "name": "umbrella_pop",
-     "k": 121,
+     "k": 115,
      "dur": null
     }
    ],
@@ -8758,9 +8761,9 @@
    "marks": {},
    "mark_src": {},
    "texts": [],
-   "tc_in": "17:08:14",
-   "tc_out": "17:15:14",
-   "frames": 168
+   "tc_in": "17:07:23",
+   "tc_out": "17:14:14",
+   "frames": 159
   },
   {
    "id": "17.19",
@@ -8768,44 +8771,54 @@
    "beats": [
     "17.19"
    ],
-   "s": 7334,
+   "s": 7310,
    "e": 7440,
    "onscreen": [
     {
+     "text": "request for comment",
+     "s": 7,
+     "e": 48
+    },
+    {
+     "text": "re: VOICE 5",
+     "s": 7,
+     "e": 48
+    },
+    {
      "text": "VOICE 5",
      "s": 9,
-     "e": 105
+     "e": 129
     },
     {
      "text": "Pause",
-     "s": 33,
-     "e": 52
+     "s": 57,
+     "e": 76
     },
     {
      "text": "VOICE 5 [PAUSED]",
-     "s": 52,
-     "e": 105
+     "s": 76,
+     "e": 129
     },
     {
      "text": "Hey.",
-     "s": 52,
-     "e": 105
+     "s": 76,
+     "e": 129
     }
    ],
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
    "side_label": "",
    "badge": null,
    "whip": null,
-   "frame": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+   "frame": "POV · his rain-beaded phone: a press request about VOICE 5 drops in; the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
    "cls": "SC",
    "move": "cut",
-   "does": "On his rain-beaded phone, the voice menu: five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
+   "does": "On his rain-beaded phone, a push drops in over the voice menu: request for comment, re: VOICE 5, its thumbnail a waveform. It slides away. Five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
    "chars": [
     "mas"
    ],
@@ -8813,12 +8826,18 @@
     "music (v1): E02-10 · a pad in the rain"
    ],
    "sounds": [
-    "ui_pause_tap @48"
+    "phone_buzz_step_1 @4",
+    "ui_pause_tap @72"
    ],
    "spots": [
     {
+     "name": "phone_buzz_step_1",
+     "k": 4,
+     "dur": null
+    },
+    {
      "name": "ui_pause_tap",
-     "k": 48,
+     "k": 72,
      "dur": null
     }
    ],
@@ -8829,7 +8848,7 @@
    "style": "BASE",
    "fx": [],
    "slate": false,
-   "caption": "On his rain-beaded phone, the voice menu: five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
+   "caption": "On his rain-beaded phone, a push drops in over the voice menu: request for comment, re: VOICE 5, its thumbnail a waveform. It slides away. Five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
    "cast": [
     {
      "id": "mas",
@@ -8844,7 +8863,7 @@
    "beat_starts": {
     "17.19": 0
    },
-   "picture": "No bonk, no notification here.",
+   "picture": "No bonk. The push is the pause's visible cause (the second fixes pass: the pause landed with no cause on screen, W13, W21): the press is asking about the fifth voice, as on the stairs it asked about the exit papers. No outlet, no person named or drawn, no claim about how the voice was made (GR; facts §F).",
    "names": [],
    "fg": null,
    "marks": {},
@@ -8852,36 +8871,50 @@
    "texts": [
     {
      "kind": "ui",
+     "text": "request for comment",
+     "s": 7,
+     "e": 48,
+     "must": true
+    },
+    {
+     "kind": "ui",
+     "text": "re: VOICE 5",
+     "s": 7,
+     "e": 48,
+     "must": true
+    },
+    {
+     "kind": "ui",
      "text": "VOICE 5",
      "s": 9,
-     "e": 105,
+     "e": 129,
      "must": true
     },
     {
      "kind": "ui",
      "text": "Pause",
-     "s": 33,
-     "e": 52,
+     "s": 57,
+     "e": 76,
      "must": true
     },
     {
      "kind": "ui",
      "text": "VOICE 5 [PAUSED]",
-     "s": 52,
-     "e": 105,
+     "s": 76,
+     "e": 129,
      "must": true
     },
     {
      "kind": "ui",
      "text": "Hey.",
-     "s": 52,
-     "e": 105,
+     "s": 76,
+     "e": 129,
      "must": true
     }
    ],
-   "tc_in": "17:15:14",
+   "tc_in": "17:14:14",
    "tc_out": "17:20:00",
-   "frames": 106
+   "frames": 130
   },
   {
    "id": "17.20",
@@ -8906,7 +8939,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -8981,7 +9014,7 @@
    "lines": [],
    "seq": "ACT3",
    "scene": "17",
-   "scene_s": 4560,
+   "scene_s": 4632,
    "verdict": "",
    "v4": null,
    "side": "MAS",
@@ -10326,15 +10359,15 @@
    "kind": "dialogue",
    "mode": "on-mic",
    "who": "ALYI",
-   "text": "Six years and eleven months.",
+   "text": "Six years and eleven months. From the day we started to that click.",
    "tag": "far",
    "on_s": 95.915,
-   "end_s": 98.015,
+   "end_s": 101.175,
    "file_s": 95.565,
    "abs_in": 2301,
-   "abs_out": 2353,
+   "abs_out": 2429,
    "file_in": 2293,
-   "file_out": 2358,
+   "file_out": 2437,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
    "stick_t": 0.54,
    "stick_in": 0.35,
@@ -10368,6 +10401,46 @@
      "months",
      38,
      49
+    ],
+    [
+     "From",
+     75,
+     80
+    ],
+    [
+     "the",
+     82,
+     85
+    ],
+    [
+     "day",
+     87,
+     92
+    ],
+    [
+     "we",
+     94,
+     97
+    ],
+    [
+     "started",
+     98,
+     107
+    ],
+    [
+     "to",
+     108,
+     110
+    ],
+    [
+     "that",
+     112,
+     116
+    ],
+    [
+     "click",
+     118,
+     127
     ]
    ],
    "mouth": [
@@ -10422,6 +10495,66 @@
     [
      49,
      "rest"
+    ],
+    [
+     75,
+     "E"
+    ],
+    [
+     77,
+     "A"
+    ],
+    [
+     79,
+     "M"
+    ],
+    [
+     82,
+     "E"
+    ],
+    [
+     88,
+     "A"
+    ],
+    [
+     94,
+     "O"
+    ],
+    [
+     96,
+     "E"
+    ],
+    [
+     100,
+     "A"
+    ],
+    [
+     102,
+     "E"
+    ],
+    [
+     109,
+     "O"
+    ],
+    [
+     113,
+     "A"
+    ],
+    [
+     115,
+     "E"
+    ],
+    [
+     122,
+     "A"
+    ],
+    [
+     124,
+     "E"
+    ],
+    [
+     127,
+     "rest"
     ]
    ],
    "mouth_src": "take",
@@ -10436,15 +10569,15 @@
    "who": "MAS",
    "text": "eight years and five months.",
    "tag": "V.O.",
-   "on_s": 99.215,
-   "end_s": 101.455,
-   "file_s": 98.805,
-   "abs_in": 2381,
-   "abs_out": 2435,
-   "file_in": 2371,
-   "file_out": 2446,
+   "on_s": 102.375,
+   "end_s": 104.615,
+   "file_s": 101.965,
+   "abs_in": 2457,
+   "abs_out": 2511,
+   "file_in": 2447,
+   "file_out": 2522,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
-   "stick_t": 3.84,
+   "stick_t": 7.0,
    "stick_in": 0.41,
    "cut": false,
    "on_camera": "vo",
@@ -10455,11 +10588,11 @@
     [
      "Eight",
      -1,
-     7
+     6
     ],
     [
      "years",
-     9,
+     8,
      19
     ],
     [
@@ -10475,7 +10608,7 @@
     [
      "months",
      40,
-     51
+     50
     ]
    ],
    "mouth": [],
@@ -10491,13 +10624,13 @@
    "who": "ALYI",
    "text": "FEEL THE AGI!",
    "tag": "",
-   "on_s": 118.175,
-   "end_s": 119.765,
-   "file_s": 117.815,
-   "abs_in": 2836,
-   "abs_out": 2875,
-   "file_in": 2827,
-   "file_out": 2890,
+   "on_s": 121.3417,
+   "end_s": 122.9317,
+   "file_s": 120.9817,
+   "abs_in": 2912,
+   "abs_out": 2951,
+   "file_in": 2903,
+   "file_out": 2966,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0009__alyi-A.wav",
    "stick_t": 1.8,
    "stick_in": 0.36,
@@ -10565,13 +10698,13 @@
    "who": "CROWD",
    "text": "FEEL THE AGI! FEEL THE AGI!",
    "tag": "chant",
-   "on_s": 119.865,
-   "end_s": 122.895,
-   "file_s": 119.375,
-   "abs_in": 2876,
-   "abs_out": 2950,
-   "file_in": 2865,
-   "file_out": 2972,
+   "on_s": 123.0317,
+   "end_s": 126.0617,
+   "file_s": 122.5417,
+   "abs_in": 2952,
+   "abs_out": 3026,
+   "file_in": 2941,
+   "file_out": 3048,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0010__crowd-layered.wav",
    "stick_t": 3.49,
    "stick_in": 0.49,
@@ -10682,15 +10815,15 @@
    "who": "ALYI",
    "text": "You're not chanting.",
    "tag": "",
-   "on_s": 124.5383,
-   "end_s": 125.7283,
-   "file_s": 124.1083,
-   "abs_in": 2988,
-   "abs_out": 3018,
-   "file_in": 2978,
-   "file_out": 3036,
+   "on_s": 127.6533,
+   "end_s": 128.8433,
+   "file_s": 127.2233,
+   "abs_in": 3063,
+   "abs_out": 3093,
+   "file_in": 3053,
+   "file_out": 3111,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0011__alyi-A.wav",
-   "stick_t": 1.08,
+   "stick_t": 1.07,
    "stick_in": 0.43,
    "cut": false,
    "on_camera": "on",
@@ -10701,16 +10834,16 @@
     [
      "You're",
      0,
-     7
+     6
     ],
     [
      "not",
-     8,
+     7,
      11
     ],
     [
      "chanting",
-     13,
+     12,
      28
     ]
    ],
@@ -10760,15 +10893,15 @@
    "who": "MAS",
    "text": "someone has to hold the glass.",
    "tag": "",
-   "on_s": 126.1783,
-   "end_s": 128.1683,
-   "file_s": 125.7983,
-   "abs_in": 3028,
-   "abs_out": 3077,
-   "file_in": 3019,
-   "file_out": 3087,
+   "on_s": 129.2933,
+   "end_s": 131.2833,
+   "file_s": 128.9133,
+   "abs_in": 3103,
+   "abs_out": 3151,
+   "file_in": 3093,
+   "file_out": 3161,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0012__mas-manalt-C.wav",
-   "stick_t": 2.72,
+   "stick_t": 2.71,
    "stick_in": 0.38,
    "cut": false,
    "on_camera": "on",
@@ -10803,61 +10936,57 @@
     ],
     [
      "glass",
-     31,
+     30,
      45
     ]
    ],
    "mouth": [
     [
      0,
-     "rest"
-    ],
-    [
-     1,
      "A"
     ],
     [
-     3,
+     2,
      "M"
     ],
     [
-     5,
+     4,
      "O"
     ],
     [
-     7,
+     6,
      "A"
     ],
     [
-     10,
+     9,
      "E"
     ],
     [
-     13,
+     12,
      "A"
     ],
     [
-     16,
+     15,
      "E"
     ],
     [
-     21,
+     20,
      "O"
     ],
     [
-     24,
+     23,
      "E"
     ],
     [
-     37,
+     36,
      "A"
     ],
     [
-     43,
+     42,
      "E"
     ],
     [
-     46,
+     45,
      "rest"
     ]
    ],
@@ -10873,15 +11002,15 @@
    "who": "ALYI",
    "text": "Then I'll feel it for both of us.",
    "tag": "",
-   "on_s": 128.4183,
-   "end_s": 130.3883,
-   "file_s": 127.9983,
-   "abs_in": 3082,
-   "abs_out": 3130,
-   "file_in": 3071,
-   "file_out": 3146,
+   "on_s": 131.5333,
+   "end_s": 133.5033,
+   "file_s": 131.1133,
+   "abs_in": 3156,
+   "abs_out": 3205,
+   "file_in": 3146,
+   "file_out": 3221,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0013__alyi-A.wav",
-   "stick_t": 4.96,
+   "stick_t": 4.95,
    "stick_in": 0.42,
    "cut": false,
    "on_camera": "on",
@@ -10891,100 +11020,104 @@
    "words": [
     [
      "Then",
-     -1,
+     0,
      5
     ],
     [
      "I'll",
      6,
-     10
+     11
     ],
     [
      "feel",
      12,
-     17
+     18
     ],
     [
      "it",
-     18,
-     20
+     19,
+     21
     ],
     [
      "for",
      22,
-     25
+     26
     ],
     [
      "both",
-     26,
-     32
+     27,
+     33
     ],
     [
      "of",
-     34,
-     35
+     35,
+     36
     ],
     [
      "us",
-     38,
-     44
+     39,
+     45
     ]
    ],
    "mouth": [
     [
      0,
-     "A"
-    ],
-    [
-     3,
-     "E"
-    ],
-    [
-     5,
-     "A"
-    ],
-    [
-     8,
-     "E"
-    ],
-    [
-     12,
-     "A"
-    ],
-    [
-     15,
-     "E"
-    ],
-    [
-     22,
-     "O"
-    ],
-    [
-     26,
-     "M"
-    ],
-    [
-     28,
-     "O"
-    ],
-    [
-     31,
-     "E"
-    ],
-    [
-     33,
-     "A"
-    ],
-    [
-     35,
      "rest"
     ],
     [
-     38,
+     1,
      "A"
     ],
     [
-     43,
+     4,
+     "E"
+    ],
+    [
+     6,
+     "A"
+    ],
+    [
+     9,
+     "E"
+    ],
+    [
+     13,
+     "A"
+    ],
+    [
+     16,
+     "E"
+    ],
+    [
+     23,
+     "O"
+    ],
+    [
+     27,
+     "M"
+    ],
+    [
+     29,
+     "O"
+    ],
+    [
+     32,
+     "E"
+    ],
+    [
+     34,
+     "A"
+    ],
+    [
+     36,
+     "rest"
+    ],
+    [
+     39,
+     "A"
+    ],
+    [
+     44,
      "rest"
     ]
    ],
@@ -11000,13 +11133,13 @@
    "who": "EKIEL",
    "text": "Nobody knows how to do this yet.",
    "tag": "",
-   "on_s": 151.1233,
-   "end_s": 153.0033,
-   "file_s": 150.7333,
-   "abs_in": 3626,
-   "abs_out": 3673,
-   "file_in": 3617,
-   "file_out": 3681,
+   "on_s": 154.2483,
+   "end_s": 156.1283,
+   "file_s": 153.8583,
+   "abs_in": 3701,
+   "abs_out": 3748,
+   "file_in": 3692,
+   "file_out": 3756,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0014__ekiel-A.wav",
    "stick_t": 0.54,
    "stick_in": 0.39,
@@ -11114,13 +11247,13 @@
    "who": "ALYI",
    "text": "Someone should.",
    "tag": "",
-   "on_s": 153.9033,
-   "end_s": 154.9233,
-   "file_s": 153.5533,
-   "abs_in": 3693,
-   "abs_out": 3719,
-   "file_in": 3685,
-   "file_out": 3736,
+   "on_s": 157.0283,
+   "end_s": 158.0483,
+   "file_s": 156.6783,
+   "abs_in": 3768,
+   "abs_out": 3794,
+   "file_in": 3760,
+   "file_out": 3811,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0015__alyi-A.wav",
    "stick_t": 3.32,
    "stick_in": 0.35,
@@ -11191,15 +11324,15 @@
    "who": "MAS",
    "text": "i'll ask him in person.",
    "tag": "V.O.",
-   "on_s": 177.0567,
-   "end_s": 178.6567,
-   "file_s": 176.6367,
-   "abs_in": 4249,
-   "abs_out": 4288,
-   "file_in": 4239,
-   "file_out": 4299,
+   "on_s": 180.0883,
+   "end_s": 181.6883,
+   "file_s": 179.6683,
+   "abs_in": 4322,
+   "abs_out": 4361,
+   "file_in": 4312,
+   "file_out": 4372,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-08__mas-manalt-C.wav",
-   "stick_t": 1.89,
+   "stick_t": 1.88,
    "stick_in": 0.42,
    "cut": false,
    "on_camera": "vo",
@@ -11215,7 +11348,7 @@
     [
      "ask",
      7,
-     13
+     12
     ],
     [
      "him",
@@ -11224,12 +11357,12 @@
     ],
     [
      "in",
-     19,
+     18,
      20
     ],
     [
      "person",
-     23,
+     22,
      37
     ]
    ],
@@ -11246,13 +11379,13 @@
    "who": "FORECASTER",
    "text": "Here's where I am. If I sign, I keep what I've vested, and I never say a bad word about the place again. It says in perpetuity. I don't forecast that far.",
    "tag": "",
-   "on_s": 207.3917,
-   "end_s": 219.3117,
-   "file_s": 206.9817,
-   "abs_in": 4977,
-   "abs_out": 5264,
-   "file_in": 4967,
-   "file_out": 5274,
+   "on_s": 210.3917,
+   "end_s": 222.3117,
+   "file_s": 209.9817,
+   "abs_in": 5049,
+   "abs_out": 5336,
+   "file_in": 5039,
+   "file_out": 5346,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0016__forecaster-A.wav",
    "stick_t": 2.6,
    "stick_in": 0.41,
@@ -11709,13 +11842,13 @@
    "who": "DRIVER",
    "text": "You gonna think it over, or can we move? We're parked on it.",
    "tag": "",
-   "on_s": 219.6167,
-   "end_s": 222.4767,
-   "file_s": 219.1767,
-   "abs_in": 5270,
-   "abs_out": 5340,
-   "file_in": 5260,
-   "file_out": 5356,
+   "on_s": 222.6167,
+   "end_s": 225.4767,
+   "file_s": 222.1767,
+   "abs_in": 5342,
+   "abs_out": 5412,
+   "file_in": 5332,
+   "file_out": 5428,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0017__driver-A.wav",
    "stick_t": 0.2,
    "stick_in": 0.44,
@@ -11901,13 +12034,13 @@
    "who": "FORECASTER",
    "text": "Already did. It's the one thing I didn't need a number for.",
    "tag": "",
-   "on_s": 222.975,
-   "end_s": 226.195,
-   "file_s": 222.605,
-   "abs_in": 5351,
-   "abs_out": 5429,
-   "file_in": 5342,
-   "file_out": 5440,
+   "on_s": 225.975,
+   "end_s": 229.195,
+   "file_s": 225.605,
+   "abs_in": 5423,
+   "abs_out": 5501,
+   "file_in": 5414,
+   "file_out": 5512,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0018__forecaster-A.wav",
    "stick_t": 0.35,
    "stick_in": 0.37,
@@ -12080,15 +12213,15 @@
    "who": "MAS",
    "text": "everyone who signed one. find them. all of them. today.",
    "tag": "call",
-   "on_s": 240.33,
-   "end_s": 243.77,
-   "file_s": 239.96,
-   "abs_in": 5767,
-   "abs_out": 5851,
-   "file_in": 5759,
-   "file_out": 5864,
+   "on_s": 242.8867,
+   "end_s": 246.3267,
+   "file_s": 242.5167,
+   "abs_in": 5829,
+   "abs_out": 5912,
+   "file_in": 5820,
+   "file_out": 5925,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0019__mas-manalt-C.wav",
-   "stick_t": 2.33,
+   "stick_t": 2.22,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -12098,8 +12231,8 @@
    "words": [
     [
      "Everyone",
-     0,
-     9
+     -1,
+     8
     ],
     [
      "who",
@@ -12108,13 +12241,13 @@
     ],
     [
      "signed",
-     13,
-     19
+     12,
+     18
     ],
     [
      "one",
-     21,
-     26
+     20,
+     25
     ],
     [
      "find",
@@ -12124,11 +12257,11 @@
     [
      "them",
      38,
-     44
+     43
     ],
     [
      "all",
-     52,
+     51,
      56
     ],
     [
@@ -12138,110 +12271,106 @@
     ],
     [
      "them",
-     60,
-     65
+     59,
+     64
     ],
     [
      "today",
      70,
-     81
+     80
     ]
    ],
    "mouth": [
     [
      0,
+     "A"
+    ],
+    [
+     2,
+     "E"
+    ],
+    [
+     5,
+     "O"
+    ],
+    [
+     7,
+     "E"
+    ],
+    [
+     9,
+     "O"
+    ],
+    [
+     13,
+     "A"
+    ],
+    [
+     16,
+     "E"
+    ],
+    [
+     20,
+     "O"
+    ],
+    [
+     22,
+     "A"
+    ],
+    [
+     25,
      "rest"
     ],
     [
-     1,
+     32,
      "A"
     ],
     [
-     3,
+     35,
      "E"
     ],
     [
-     6,
-     "O"
-    ],
-    [
-     8,
-     "E"
-    ],
-    [
-     10,
-     "O"
-    ],
-    [
-     14,
+     39,
      "A"
     ],
     [
-     17,
-     "E"
-    ],
-    [
-     21,
-     "O"
-    ],
-    [
-     23,
-     "A"
-    ],
-    [
-     26,
-     "rest"
-    ],
-    [
-     33,
-     "A"
-    ],
-    [
-     36,
-     "E"
-    ],
-    [
-     40,
-     "A"
-    ],
-    [
-     43,
+     42,
      "M"
     ],
     [
-     45,
+     44,
      "rest"
     ],
     [
-     52,
+     51,
      "O"
     ],
     [
-     55,
+     54,
      "E"
     ],
     [
-     58,
+     57,
      "A"
     ],
     [
-     64,
+     63,
      "M"
     ],
     [
-     66,
+     65,
      "rest"
     ],
     [
-     71,
+     70,
      "E"
     ],
     [
-     77,
+     76,
      "A"
     ],
     [
-     81,
+     80,
      "rest"
     ]
    ],
@@ -12255,18 +12384,18 @@
    "kind": "vo",
    "mode": "on-mic",
    "who": "MAS",
-   "text": "everyone who signed. the post. everyone who signed.",
+   "text": "the post. the post.",
    "tag": "V.O.",
-   "on_s": 249.425,
-   "end_s": 252.905,
-   "file_s": 249.045,
-   "abs_in": 5986,
-   "abs_out": 6070,
-   "file_in": 5977,
-   "file_out": 6082,
+   "on_s": 252.5667,
+   "end_s": 253.9367,
+   "file_s": 252.1467,
+   "abs_in": 6061,
+   "abs_out": 6095,
+   "file_in": 6051,
+   "file_out": 6106,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
-   "stick_t": 0.3,
-   "stick_in": 0.38,
+   "stick_t": 0.9,
+   "stick_in": 0.42,
    "cut": false,
    "on_camera": "vo",
    "take_lip_sync": false,
@@ -12274,44 +12403,24 @@
    "via": null,
    "words": [
     [
-     "Everyone",
-     -1,
-     9
-    ],
-    [
-     "who",
-     10,
-     12
-    ],
-    [
-     "signed",
-     13,
-     23
-    ],
-    [
-     "the",
-     34,
-     37
+     "The",
+     0,
+     1
     ],
     [
      "post",
-     38,
-     49
+     3,
+     12
     ],
     [
-     "everyone",
-     59,
-     69
+     "the",
+     19,
+     21
     ],
     [
-     "who",
-     69,
-     71
-    ],
-    [
-     "signed",
-     73,
-     83
+     "post",
+     22,
+     32
     ]
    ],
    "mouth": [],
@@ -12327,15 +12436,15 @@
    "who": "FORECASTER",
    "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
    "tag": "",
-   "on_s": 256.4283,
-   "end_s": 263.2483,
-   "file_s": 256.0583,
-   "abs_in": 6154,
-   "abs_out": 6318,
-   "file_in": 6145,
-   "file_out": 6330,
+   "on_s": 257.2467,
+   "end_s": 264.0667,
+   "file_s": 256.8767,
+   "abs_in": 6173,
+   "abs_out": 6338,
+   "file_in": 6165,
+   "file_out": 6350,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0020__forecaster-A.wav",
-   "stick_t": 2.72,
+   "stick_t": 2.58,
    "stick_in": 0.37,
    "cut": false,
    "on_camera": "on",
@@ -12345,33 +12454,33 @@
    "words": [
     [
      "I've",
-     -1,
-     6
+     0,
+     7
     ],
     [
      "got",
      7,
-     10
+     11
     ],
     [
      "a",
-     11,
+     12,
      12
     ],
     [
      "forecast",
-     13,
-     27
+     14,
+     28
     ],
     [
      "on",
      29,
-     31
+     32
     ],
     [
      "you",
      33,
-     37
+     38
     ],
     [
      "Median",
@@ -12386,245 +12495,189 @@
     [
      "apology",
      83,
-     95
+     96
     ],
     [
      "within",
-     96,
-     103
+     97,
+     104
     ],
     [
      "the",
-     104,
+     105,
      106
     ],
     [
      "hour",
      107,
-     115
+     116
     ],
     [
      "in",
-     132,
+     133,
      141
     ],
     [
      "lowercase",
-     144,
+     145,
      164
     ]
    ],
    "mouth": [
     [
      0,
-     "A"
-    ],
-    [
-     5,
-     "E"
-    ],
-    [
-     8,
-     "A"
-    ],
-    [
-     14,
-     "O"
-    ],
-    [
-     18,
-     "E"
-    ],
-    [
-     21,
-     "A"
-    ],
-    [
-     24,
-     "E"
-    ],
-    [
-     29,
-     "O"
-    ],
-    [
-     31,
-     "E"
-    ],
-    [
-     34,
-     "O"
-    ],
-    [
-     37,
      "rest"
     ],
     [
-     51,
+     1,
+     "A"
+    ],
+    [
+     6,
+     "E"
+    ],
+    [
+     9,
+     "A"
+    ],
+    [
+     15,
+     "O"
+    ],
+    [
+     19,
+     "E"
+    ],
+    [
+     22,
+     "A"
+    ],
+    [
+     25,
+     "E"
+    ],
+    [
+     30,
+     "O"
+    ],
+    [
+     32,
+     "E"
+    ],
+    [
+     35,
+     "O"
+    ],
+    [
+     38,
+     "rest"
+    ],
+    [
+     52,
      "M"
     ],
     [
-     53,
+     54,
      "A"
     ],
     [
-     56,
+     57,
      "E"
     ],
     [
-     65,
+     66,
      "rest"
     ],
     [
-     80,
+     81,
      "A"
     ],
     [
-     82,
+     83,
      "E"
     ],
     [
-     84,
+     85,
      "M"
     ],
     [
-     86,
+     87,
      "A"
     ],
     [
-     88,
+     89,
      "E"
     ],
     [
-     96,
+     97,
      "O"
     ],
     [
-     98,
+     99,
      "E"
     ],
     [
-     100,
+     101,
      "A"
     ],
     [
-     102,
+     103,
      "E"
     ],
     [
-     107,
+     108,
      "A"
     ],
     [
-     111,
+     112,
      "E"
     ],
     [
-     115,
+     116,
      "rest"
     ],
     [
-     132,
+     133,
      "E"
     ],
     [
-     134,
+     135,
      "A"
     ],
     [
-     137,
+     138,
      "E"
     ],
     [
-     141,
+     142,
      "rest"
     ],
     [
-     144,
+     145,
      "E"
     ],
     [
-     146,
+     147,
      "O"
     ],
     [
-     151,
+     152,
      "E"
     ],
     [
-     158,
+     159,
      "A"
     ],
     [
-     162,
+     163,
      "E"
     ],
     [
-     164,
+     165,
      "rest"
     ]
    ],
    "mouth_src": "take",
-   "pre": false
-  },
-  {
-   "id": "e2-vo-10",
-   "shot": "17.13",
-   "beat": "17.13",
-   "kind": "vo",
-   "mode": "on-mic",
-   "who": "MAS",
-   "text": "not until legal has every name.",
-   "tag": "V.O.",
-   "on_s": 265.3833,
-   "end_s": 267.8933,
-   "file_s": 264.9633,
-   "abs_in": 6369,
-   "abs_out": 6430,
-   "file_in": 6359,
-   "file_out": 6449,
-   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
-   "stick_t": 1.55,
-   "stick_in": 0.42,
-   "cut": false,
-   "on_camera": "vo",
-   "take_lip_sync": false,
-   "os": false,
-   "via": null,
-   "words": [
-    [
-     "Not",
-     -1,
-     5
-    ],
-    [
-     "until",
-     7,
-     16
-    ],
-    [
-     "legal",
-     18,
-     29
-    ],
-    [
-     "has",
-     31,
-     36
-    ],
-    [
-     "every",
-     38,
-     46
-    ],
-    [
-     "name",
-     48,
-     58
-    ]
-   ],
-   "mouth": [],
-   "mouth_src": "none",
    "pre": false
   },
   {
@@ -12636,13 +12689,13 @@
    "who": "FORECASTER",
    "text": "Updating.",
    "tag": "",
-   "on_s": 281.7333,
-   "end_s": 282.5533,
-   "file_s": 281.3533,
-   "abs_in": 6761,
-   "abs_out": 6782,
-   "file_in": 6752,
-   "file_out": 6792,
+   "on_s": 281.1083,
+   "end_s": 281.9283,
+   "file_s": 280.7283,
+   "abs_in": 6746,
+   "abs_out": 6767,
+   "file_in": 6737,
+   "file_out": 6777,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0021__forecaster-A.wav",
    "stick_t": 10.9,
    "stick_in": 0.38,
@@ -12696,13 +12749,13 @@
    "who": "DRIVER",
    "text": "Excuse me. Does honking count as disparagement?",
    "tag": "",
-   "on_s": 283.1583,
-   "end_s": 285.7883,
-   "file_s": 282.7683,
-   "abs_in": 6795,
-   "abs_out": 6859,
-   "file_in": 6786,
-   "file_out": 6870,
+   "on_s": 282.5333,
+   "end_s": 285.1633,
+   "file_s": 282.1433,
+   "abs_in": 6780,
+   "abs_out": 6844,
+   "file_in": 6771,
+   "file_out": 6855,
    "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0022__driver-A.wav",
    "stick_t": 0.45,
    "stick_in": 0.39,
@@ -12838,36 +12891,36 @@
  "rails": [
   {
    "text": "DEC 2022",
-   "s": 2797,
-   "e": 2833,
+   "s": 2873,
+   "e": 2909,
    "shot": "15.06",
    "floor_f": 16
   },
   {
    "text": "2023",
-   "s": 3386,
-   "e": 3439,
+   "s": 3460,
+   "e": 3513,
    "shot": "15.10",
    "floor_f": 11
   },
   {
    "text": "MAY 17, 2024",
-   "s": 4567,
-   "e": 4610,
+   "s": 4639,
+   "e": 4682,
    "shot": "17.01",
    "floor_f": 21
   },
   {
    "text": "MAY 18",
-   "s": 6504,
-   "e": 6533,
+   "s": 6489,
+   "e": 6518,
    "shot": "17.15",
    "floor_f": 14
   },
   {
    "text": "MAY 19",
-   "s": 6930,
-   "e": 6964,
+   "s": 6915,
+   "e": 6949,
    "shot": "17.17",
    "floor_f": 14
   }
@@ -13008,20 +13061,20 @@
   },
   {
    "s": 2301,
-   "e": 2353,
-   "hold_to": 2365,
+   "e": 2429,
+   "hold_to": 2441,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
-   "text": "Six years and eleven months.",
+   "text": "Six years and eleven months. From the day we started to that click.",
    "kind": "dialogue",
    "mode": "on-mic",
    "id": "e2-a3-0008",
    "os": false
   },
   {
-   "s": 2381,
-   "e": 2435,
-   "hold_to": 2447,
+   "s": 2457,
+   "e": 2511,
+   "hold_to": 2523,
    "who": "MAS",
    "shown": "CEO",
    "text": "eight years and five months.",
@@ -13031,9 +13084,9 @@
    "os": false
   },
   {
-   "s": 2836,
-   "e": 2875,
-   "hold_to": 2876,
+   "s": 2912,
+   "e": 2951,
+   "hold_to": 2952,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "FEEL THE AGI!",
@@ -13043,9 +13096,9 @@
    "os": false
   },
   {
-   "s": 2876,
-   "e": 2950,
-   "hold_to": 2962,
+   "s": 2952,
+   "e": 3026,
+   "hold_to": 3038,
    "who": "CROWD",
    "shown": "CROWD",
    "text": "FEEL THE AGI! FEEL THE AGI!",
@@ -13055,9 +13108,9 @@
    "os": false
   },
   {
-   "s": 2988,
-   "e": 3018,
-   "hold_to": 3028,
+   "s": 3063,
+   "e": 3093,
+   "hold_to": 3103,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "You're not chanting.",
@@ -13067,9 +13120,9 @@
    "os": false
   },
   {
-   "s": 3028,
-   "e": 3077,
-   "hold_to": 3082,
+   "s": 3103,
+   "e": 3151,
+   "hold_to": 3156,
    "who": "MAS",
    "shown": "CEO",
    "text": "someone has to hold the glass.",
@@ -13079,9 +13132,9 @@
    "os": false
   },
   {
-   "s": 3082,
-   "e": 3130,
-   "hold_to": 3142,
+   "s": 3156,
+   "e": 3205,
+   "hold_to": 3217,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "Then I'll feel it for both of us.",
@@ -13091,9 +13144,9 @@
    "os": false
   },
   {
-   "s": 3626,
-   "e": 3673,
-   "hold_to": 3685,
+   "s": 3701,
+   "e": 3748,
+   "hold_to": 3760,
    "who": "EKIEL",
    "shown": "EKIEL",
    "text": "Nobody knows how to do this yet.",
@@ -13103,9 +13156,9 @@
    "os": false
   },
   {
-   "s": 3693,
-   "e": 3719,
-   "hold_to": 3731,
+   "s": 3768,
+   "e": 3794,
+   "hold_to": 3806,
    "who": "ALYI",
    "shown": "CO-FOUNDER (a memory)",
    "text": "Someone should.",
@@ -13115,9 +13168,9 @@
    "os": false
   },
   {
-   "s": 4249,
-   "e": 4288,
-   "hold_to": 4300,
+   "s": 4322,
+   "e": 4361,
+   "hold_to": 4373,
    "who": "MAS",
    "shown": "CEO",
    "text": "i'll ask him in person.",
@@ -13127,9 +13180,9 @@
    "os": false
   },
   {
-   "s": 4977,
-   "e": 5264,
-   "hold_to": 5270,
+   "s": 5049,
+   "e": 5336,
+   "hold_to": 5342,
    "who": "FORECASTER",
    "shown": "EX-NOPEAI",
    "text": "Here's where I am. If I sign, I keep what I've vested, and I never say a bad word about the place again. It says in perpetuity. I don't forecast that far.",
@@ -13139,9 +13192,9 @@
    "os": false
   },
   {
-   "s": 5270,
-   "e": 5340,
-   "hold_to": 5351,
+   "s": 5342,
+   "e": 5412,
+   "hold_to": 5423,
    "who": "DRIVER",
    "shown": "DRIVER",
    "text": "You gonna think it over, or can we move? We're parked on it.",
@@ -13151,9 +13204,9 @@
    "os": false
   },
   {
-   "s": 5351,
-   "e": 5429,
-   "hold_to": 5441,
+   "s": 5423,
+   "e": 5501,
+   "hold_to": 5513,
    "who": "FORECASTER",
    "shown": "EX-NOPEAI",
    "text": "Already did. It's the one thing I didn't need a number for.",
@@ -13163,9 +13216,9 @@
    "os": false
   },
   {
-   "s": 5767,
-   "e": 5851,
-   "hold_to": 5863,
+   "s": 5829,
+   "e": 5912,
+   "hold_to": 5924,
    "who": "MAS",
    "shown": "CEO",
    "text": "everyone who signed one. find them. all of them. today.",
@@ -13175,21 +13228,21 @@
    "os": false
   },
   {
-   "s": 5986,
-   "e": 6070,
-   "hold_to": 6082,
+   "s": 6061,
+   "e": 6095,
+   "hold_to": 6107,
    "who": "MAS",
    "shown": "CEO",
-   "text": "everyone who signed. the post. everyone who signed.",
+   "text": "the post. the post.",
    "kind": "vo",
    "mode": "on-mic",
    "id": "e2-vo-09",
    "os": false
   },
   {
-   "s": 6154,
-   "e": 6318,
-   "hold_to": 6330,
+   "s": 6173,
+   "e": 6338,
+   "hold_to": 6350,
    "who": "FORECASTER",
    "shown": "EX-NOPEAI",
    "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
@@ -13199,21 +13252,9 @@
    "os": false
   },
   {
-   "s": 6369,
-   "e": 6430,
-   "hold_to": 6442,
-   "who": "MAS",
-   "shown": "CEO",
-   "text": "not until legal has every name.",
-   "kind": "vo",
-   "mode": "on-mic",
-   "id": "e2-vo-10",
-   "os": false
-  },
-  {
-   "s": 6761,
-   "e": 6782,
-   "hold_to": 6794,
+   "s": 6746,
+   "e": 6767,
+   "hold_to": 6779,
    "who": "FORECASTER",
    "shown": "EX-NOPEAI",
    "text": "Updating.",
@@ -13223,9 +13264,9 @@
    "os": false
   },
   {
-   "s": 6795,
-   "e": 6859,
-   "hold_to": 6871,
+   "s": 6780,
+   "e": 6844,
+   "hold_to": 6856,
    "who": "DRIVER",
    "shown": "DRIVER",
    "text": "Excuse me. Does honking count as disparagement?",
@@ -13239,7 +13280,7 @@
  "v4_ids": {},
  "base_marks_scaled": [],
  "decisions": [
-  "52 beat lengths are not whole frames (13.01, 13.02, 13.03, 13.03b, 13.04, 13.05...): beats start on the rounded running total, as the stick reel draws them",
+  "53 beat lengths are not whole frames (13.01, 13.02, 13.03, 13.03b, 13.04, 13.05...): beats start on the rounded running total, as the stick reel draws them",
   "14.01: ui 'Look at · Talk to · Pick up · Us' is up 63 f, under its read floor 74 f (the stick's timing; kept)"
  ],
  "problems": [

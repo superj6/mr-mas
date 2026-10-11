@@ -453,6 +453,80 @@ export const tvPush = (b: Buf, f: number, st: PresserSt = {}) => {
   for (let i = 0; i < 40; i++) for (let j = 0; j < 3; j++) { const x = X + 140 + i, y = Y + 4 + Math.round(i * 0.5) + j; if (bayer(x, y) < 0.3) b.set(x, y, stepColor(b.get(x, y), 1)); }
 };
 
+// ================================================================== 13.04-13.05 on the lobby TV (the second fixes pass)
+// The episode review, round 2: the presser cut in at full frame between the staffers' "No." and the open floor with
+// nothing carrying it there, so a newcomer got an unrelated senator for 6 s. It now plays on the lobby TV the staffers
+// stand under, pushed in on as sc 18 pushes in on Neleh's player: the TV on its stand with the backs of the two staffers'
+// heads under it (they have turned to it), a second held step closer, then the TV's bezel at the frame's edge with the
+// presser inside it at its own scale, the glass's sheen on it, through 13.05. In the foreground at its own weight (W25).
+/** the backs of the two staffers' heads, close to the lens and soft (a rung down), flanking the TV's foot: A's dark hair
+ *  and bun over the mustard cardigan's collar at the left, B's curls over the dusty blue hood at the right. Drawn at the
+ *  push's first step's coordinates and scaled about the push's centre (z), so the second step carries them off the
+ *  frame's edges */
+const stafferBacks = (b: Buf, z: number, cx: number, cy: number) => {
+  const put = (x: number, y: number, c: number) => {
+    const X = Math.round(cx + (x - cx) * z), Y = Math.round(cy + (y - cy) * z), n = Math.ceil(z);
+    for (let j = 0; j < n; j++) for (let i = 0; i < n; i++) if (X + i >= 0 && X + i < W && Y + j >= 0 && Y + j < RH) b.set(X + i, Y + j, stepColor(c, -1));
+  };
+  // A: the cardigan's collar at the frame's foot, the tee's edge, the nape, the round head from behind, the bun on top
+  for (let y = 196; y < 204; y++) for (let x = 36; x < 116; x++) if (Math.abs(x - 76) / 40 + (204 - y) / 16 < 1) put(x, y, x < 50 ? MUSTARD[3] : x > 102 ? MUSTARD[1] : MUSTARD[2]);
+  for (let y = 192; y < 204; y++) for (let x = 66; x < 87; x++) put(x, y, y < 196 ? SKIN.deep[2] : CREAMT[2]);
+  for (let y = 156; y < 204; y++) for (let x = 52; x < 101; x++) { const d = Math.hypot((x - 76) / 23, (y - 180) / 24); if (d < 1) put(x, y, d > 0.88 ? HAIR.dark[0] : (x * 3 + y * 5) % 11 === 0 ? HAIR.dark[2] : x > 86 ? HAIR.dark[0] : HAIR.dark[1]); }
+  for (let y = 142; y < 160; y++) for (let x = 66; x < 87; x++) { const d = Math.hypot((x - 76.5) / 9.5, (y - 151) / 8.5); if (d < 1) put(x, y, d > 0.78 ? HAIR.dark[0] : HAIR.dark[2]); }
+  // B: the hood's folds at the frame's foot, the curly head from behind, its edge in bumps
+  for (let y = 194; y < 204; y++) for (let x = 350; x < 448; x++) if (Math.abs(x - 399) / 49 + (204 - y) / 18 < 1) put(x, y, x < 364 ? DUSTY[3] : x > 434 ? DUSTY[1] : (y + x) % 7 === 0 ? DUSTY[1] : DUSTY[2]);
+  for (let y = 150; y < 204; y++) for (let x = 368; x < 431; x++) {
+    const a = Math.atan2(y - 178, x - 399), bump = 1 + 0.07 * Math.sin(a * 9), d = Math.hypot((x - 399) / 27, (y - 178) / 27) / bump;
+    if (d < 1) put(x, y, d > 0.88 ? HAIR.brown[0] : (Math.round(x / 3) + Math.round(y / 3)) % 3 === 0 ? HAIR.brown[3] : x > 412 ? HAIR.brown[1] : HAIR.brown[2]);
+  }
+};
+const TVZ = {X: 116, Y: 44, w: 240, h: 102};
+/** [SCR] 13.04's push in two held steps: z 1 the TV on its stand in the lobby, soft, the staffers' heads under it; z 1.5
+ *  the second step closer (the room and the staffers out past the frame's edges). The TV's picture is sampled from the
+ *  full-size presser at the step's own scale (half size, then three quarters), never a resample of the half-size one */
+export const tvPushStep = (b: Buf, f: number, st: PresserSt, z: number) => {
+  const T = TVZ, cx = T.X + T.w / 2, cy = T.Y + T.h / 2 + 10;
+  const room = new Buf(W, 270, PAL.N0);
+  room.c.set(mediumBackdrop().c.subarray(0, W * RH));
+  dimRoom(room, 1);
+  const full = new Buf(480, 270, PAL.N0);
+  presser(full, f, st);
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
+    const wx = cx + (x - cx) / z, wy = cy + (y - cy) / z;
+    let c: number;
+    if (wx >= T.X && wx < T.X + T.w && wy >= T.Y && wy < T.Y + T.h) c = full.get(Math.min(479, Math.floor((wx - T.X) * 2)), Math.min(RH - 1, Math.floor((wy - T.Y) * 2)));
+    else if (wx >= T.X - 10 && wx < T.X + T.w + 10 && wy >= T.Y - 8 && wy < T.Y + T.h + 8) c = wy < T.Y - 7 ? PAL.G2 : wx < T.X - 9 ? PAL.G1 : PAL.N0;
+    else if (wx >= cx - 6 && wx < cx + 6 && wy >= T.Y + T.h + 8 && wy < T.Y + T.h + 38) c = wx < cx - 4 ? PAL.G2 : PAL.G1;
+    else c = room.get(clamp(Math.floor(wx), 0, W - 1), clamp(Math.floor(wy), 0, RH - 1));
+    b.set(x, y, c);
+  }
+  // the glass's sheen across its upper corner (in the TV's own pixels)
+  for (let i = 0; i < 40; i++) for (let j = 0; j < 3; j++) {
+    const x = Math.round(cx + (T.X + 140 + i - cx) * z), y = Math.round(cy + (T.Y + 4 + Math.round(i * 0.5) + j - cy) * z);
+    for (let q = 0; q < Math.ceil(z); q++) if (x + q < W && y >= 0 && y < RH && bayer(x + q, y) < 0.3) b.set(x + q, y, stepColor(b.get(x + q, y), 1));
+  }
+  // the staffers under it, turned to it, close to the lens (they grow with the push and leave the frame's foot)
+  stafferBacks(b, z, cx, cy);
+};
+/** [SCR] 13.04 from its third step and 13.05: the lobby TV's bezel at the frame's edge (sc 18's player), the presser
+ *  inside it at its own scale (its empty drape top cropped, so the plate and lower third stay inside the glass), the
+ *  glass's sheen and the faint upright of the lobby's window reflected in it, the TV's standby dot on the bezel */
+export const tvFull = (b: Buf, f: number, st: PresserSt) => {
+  const full = new Buf(480, 270, PAL.N0);
+  presser(full, f, st);
+  const BZ = 6, SY = 12;
+  for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) {
+    const inner = x >= BZ && x < W - BZ && y >= BZ && y < RH - BZ;
+    if (inner) { b.set(x, y, full.get(x - BZ, y - BZ + SY)); continue; }
+    const edge = x === BZ - 1 || x === W - BZ || y === BZ - 1 || y === RH - BZ;
+    b.set(x, y, edge ? (y === BZ - 1 || x === BZ - 1 ? PAL.N1 : PAL.N0) : y < 2 || x < 2 ? PAL.G1 : PAL.N0);
+  }
+  fill(b, W / 2 - 1, RH - 4, 3, 1, PAL.C4);
+  // the glass: a sheen across the upper right corner, and the lobby's tall window as a faint upright reflection
+  for (let i = 0; i < 64; i++) for (let j = 0; j < 4; j++) { const x = 350 + i, y = BZ + 2 + Math.round(i * 0.5) + j; if (bayer(x, y) < 0.25) b.set(x, y, stepColor(b.get(x, y), 1)); }
+  for (let y = BZ; y < RH - BZ; y++) for (let x = 432; x < 446; x++) if (bayer(x, y) < 0.1) b.set(x, y, stepColor(b.get(x, y), 1));
+};
+
 // ================================================================== 13.06: the master, Mas walking off
 /** the master by day as sc 13 has it (the art's sc-13 state); `mas`: his foot point and walk drawing (null = gone);
  *  the staffers at their pillar (the screen-right one), their heads turning after him; `band` 0..3: the adventure band

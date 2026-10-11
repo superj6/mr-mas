@@ -42,7 +42,7 @@ laugh at the forecast, pathos (17).  README.md has the cue sheet (seconds, cue, 
                                            a C pedal through the card; a two-feel under the Forecaster; the horns'
                                            respect after "Already did."; the scramble: the bass in eighths and the Build,
                                            out under his call and V.O. 9; the swing again under the forecast; a held
-                                           chord under V.O. 10; one held chord through the night (2 s); the bass pedal
+                                           chord under his held thumb (V.O. 10 cut, round 2); one held chord through the night (2 s); the bass pedal
                                            under the posts (the honks take the phrase ends); a pad in the rain, five
                                            voices, the fifth (VOICE 5) stopping on his pause tap; the pedal; the DREAD
                                            sting on the blimp's last light (claimed dread_sting), its air into the black
@@ -1079,7 +1079,7 @@ def cue_bridge(tl):
     fc2 = _line(tl, 'e2-a3-0018', 'forecaster', e['already'] + 0.35)
     callx = _line(tl, 'e2-a3-0019', 'mas', e['call'] + 2.3)
     vo9 = _line(tl, 'e2-vo-09', 'mas', e['vo9b'] + 0.3)
-    vo10 = _line(tl, 'e2-vo-10', 'mas', e['thumb'] + 1.5)
+    vo10 = tl.L.get('e2-vo-10')   # cut at Act Three's second fixes pass (2026-10-10): no fallback to a nearby Mas line
     T = tracks_bridge(c.clk(e['pause']))
     push = doors - Q + SW                                        # the swung push into the doors
     # ---- phrase points
@@ -1291,13 +1291,14 @@ def cue_bridge(tl):
         t += BAR
         k_ += 1
     drums_window(c, 'jazz', 'ride: x.xxx.xx\nhatf: ..x...x.', fcast, hold, 0.36)
-    # V.O. 10: a held chord (strings sul tasto, the bass arco); nothing attacks under it
+    # his held thumb (V.O. 10 cut at the second fixes pass): a held chord (strings sul tasto, the bass arco); nothing
+    # attacks under it
     hv = ['Eb3', 'Ab3', 'Db4', 'F4']
     for inst, p in zip(('vc', 'vla', 'vln2', 'vln1'), hv):
         c.rebow(inst, p, hold, night + 0.3, 0.15, seg=5.0, xf=1.0, first_att=0.7, last_rel=0.3, art='sus', lp=2200)
     c.rebow('cb', 'Eb2', hold, night + 0.3, 0.15, seg=5.0, xf=1.0, first_att=0.6, last_rel=0.3, art='sus', lp=900)
     c.mark(hold, f'his thumb over Post ({how(c, hold, e["thumb"])}): the band thins to a held E-flat 9sus (strings, the '
-                 'arco bass); V.O. 10 inside it', hit=False)
+                 'arco bass); no line over it (V.O. 10 cut)', hit=False)
     # ================================================================ G: the night (one held chord, 2 s)
     hv, hvb = RAIN['Dbmaj9']
     for inst, p in zip(('vc', 'vla', 'vln2', 'vln1'), hv):
@@ -1380,7 +1381,7 @@ def cue_bridge(tl):
             ('C the stall: the C pedal through the card', cutoff, reent),
             ('D the refusal: the two-feel under the Forecaster and the driver; respect; Mas sees it', reent, scr),
             ('E the scramble: the bass in eighths, the Build; his call; the draft; V.O. 9', scr, fcast),
-            ('F the forecast: the swing again (A-flat); V.O. 10 on a held chord', fcast, night),
+            ('F the forecast: the swing again (A-flat); his held thumb on a held chord', fcast, night),
             ('G the night: one held chord (2 s)', night, ped),
             ('H the posts: the bass pedal; the honks; "Updating."; the driver', ped, rain),
             ('I the rain: the pad (five voices; VOICE 5 stops on the pause); NopeAI\'s post', rain, final),

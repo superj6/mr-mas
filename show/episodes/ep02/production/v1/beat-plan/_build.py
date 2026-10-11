@@ -422,7 +422,7 @@ def build():
             fail(f"{lid} is defined in the spec but no beat uses it")
     # the V.O. map
     ids = [v[0] for v in vo_order]
-    if ids != [f"e2-vo-{n:02d}" for n in range(1, 15)]:
+    if ids != [f"e2-vo-{n:02d}" for n in range(1, 15) if n not in getattr(S, "VO_RETIRED", ())]:
         fail(f"the V.O. plays out of the map's order: {ids}")
     for lid in S.NEW_VO:
         t = S.NEW_VO[lid][2]

@@ -188,6 +188,21 @@ for _sc, (_d, _why) in SCENE_ADJUST_FX3.items():
     SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
     SCENES[_sc]["target_s"] += _d
     SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
+# The second fixes pass (fixes-v1.md, Act Three, round 2, 2026-10-10). Alyi's far line runs on through Ep1's base ("From
+# the day we started to that click.": the cut is 3.2 s longer), so V.O. 7's count has its anchor; sc 17 gives back the
+# time: V.O. 10 is cut (17.13 holds his thumb 3.6 s, was 5.0 with the line), V.O. 9 is shorter ("the post. the post."),
+# and 17.19 gains 1.0 s for the press's request about VOICE 5 before he pauses it (the pause's visible cause, W13).
+# Act Three stays 5:20 (7,680 f), so no later act's episode clock moves.
+SCENE_ADJUST_FX3B = {
+    "15": (+3, "the second fixes pass: Alyi's far count runs on through Ep1's base, \"From the day we started to that "
+               "click.\" (+3.2 s of take), so V.O. 7's \"eight years and five months.\" has its anchor"),
+    "17": (-3, "the second fixes pass: V.O. 10 cut (17.13 a held thumb, 3.6 s), V.O. 9 shorter (\"the post. the post.\"), "
+               "17.19 +1.0 s for the press's request about VOICE 5 before the pause"),
+}
+for _sc, (_d, _why) in SCENE_ADJUST_FX3B.items():
+    SCENES[_sc].setdefault("proposal_s", SCENES[_sc]["target_s"])
+    SCENES[_sc]["target_s"] += _d
+    SCENES[_sc]["adjust"] = (SCENES[_sc]["adjust"] + " | " if SCENES[_sc].get("adjust") else "") + _why
 # The fixes pass (fixes-v1.md, Act Four, 2026-10-10). Neleh's first line is re-read so RETTIWT can't be heard as
 # "Reddit" (an em dash between the syllables, the second stressed): the take is 1.2 s longer (10.19 s of speech against
 # 8.97), which squeezed sc 18's air to x0.925. Sc 18 takes 1 s from sc 19 (x1.41, the act's loosest scene, whose 19.06
@@ -345,6 +360,7 @@ RATE = {"mas": 140, "gerg": 205, "nole": 200, "ghost-nole": 150, "selbeep": 185,
         "mario": 190, "haras": 185, "radnus": 190}
 VO_RATE = 128
 VO_RATES = {"e2-vo-09": 165}   # the scramble's V.O. (17.11): faster than he thinks, his rattled tell (MIV §3)
+VO_RETIRED = {10}              # V.O. numbers cut with their ids retired (the second fixes pass: V.O. 10, 17.13)
 MAS_HURRIED = 210   # the call to legal (sc 17): with its three stops the line plans at about 180 wpm, against about
                     # 140 for his ordinary lines: level and quicker than he ever talks, the one time he hurries
 
@@ -430,11 +446,18 @@ NEW_VO = {
                  "after Alyi's far-off count, carrying it on to today; flat, exact; the number is the feeling"),
     "e2-vo-08": ("act3", "15.17", "i'll ask him in person.", "plan",
                  "his thumb on the pin; decided, plain; no weight on 'him'"),
-    "e2-vo-09": ("act3", "17.11", "everyone who signed. the post. everyone who signed.", "the scramble (his rattled tell)",
-                 "faster than he thinks, the one time the voice hurries; each item a new call, not louder (MIV §3's "
-                 "rattled repeat); nothing about what he knew"),
-    "e2-vo-10": ("act3", "17.13", "not until legal has every name.", "plan (the fix: a condition)",
-                 "thumb over Post, not pressing; level again; his own condition, a reply to nobody"),
+    # the second fixes pass (2026-10-10; fixes-v1.md, Act Three, round 2): "everyone who signed. the post. everyone who
+    # signed." came 9 s after he says aloud "everyone who signed one. find them. all of them. today.", so it echoed the
+    # call instead of adding a thought. The rattled repeat stays (MIV §3), on the one item the call didn't say: the post
+    # he has drafted and deleted. Nothing about what he knew, nothing about when he will post (W8)
+    "e2-vo-09": ("act3", "17.11", "the post. the post.", "the scramble (his rattled tell)",
+                 "faster than he thinks, the one time the voice hurries; the second 'the post.' a new call, not louder "
+                 "(MIV §3's rattled repeat); nothing about what he knew"),
+    # e2-vo-10 "not until legal has every name." (17.13) is CUT at the second fixes pass: placed after the Forecaster's
+    # "an apology, within the hour, in lowercase" it still played as a retort (the reply shape D-79 meant to remove),
+    # it narrated 17.13's thumb not pressing Post (W7's strip test), and it framed the public apology as timed at a beat
+    # the episode lists as contested (the exit papers, W8). 17.13's held thumb carries "not yet". The id is retired
+    # (VO_RETIRED); the V.O. is 13 lines
     "e2-vo-11": ("act4", "18.10", "the next one's already training.", "plan (the next model)",
                  "after Mada's second word and a held breath; practical, a calendar thought; no weight on 'already', "
                  "nothing about the committee"),
@@ -669,8 +692,11 @@ _l("e2-a3-0006", "act3", "14.08", "bukaj", "Thank you. It's still warm.", "soft,
 _l("e2-a3-0007", "act3", "14.08", "bukaj", "Not yet. I'd like a week in it before anyone asks me for a schedule.",
    "soft, exact; on the job, not on Alyi", "[INVENTED]")
 # ---- sc 15, F2.2
-_l("e2-a3-0008", "act3", "15.03", "alyi", "Six years and eleven months.",
-   "Ep1's own take, far off, as if down a corridor", "[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13; read, never edited]", device="far", len=2.1)
+# the second fixes pass (2026-10-10; fixes-v1.md, Act Three, round 2): the cut runs on through Ep1's own base, "From the
+# day we started to that click.", so V.O. 7's "eight years and five months." carries a count a newcomer can place (the
+# founding, to the launch; then to today), not a second number against the post's "almost a decade"
+_l("e2-a3-0008", "act3", "15.03", "alyi", "Six years and eleven months. From the day we started to that click.",
+   "Ep1's own take, far off, as if down a corridor", "[Ep1's line (lock 2:10.45), cut from its EL take e1-a1-5-13; read, never edited]", device="far", len=5.3)
 _l("e2-a3-0009", "act3", "15.06", "alyi", "FEEL THE AGI!",
    "lit and laughing; the chant's first voice; warm, never a sermon", "[V · facts A56: The Atlantic, Nov 19, 2023, the 2022 holiday party]", len=1.2)
 _l("e2-a3-0010", "act3", "15.06", "crowd", "FEEL THE AGI! FEEL THE AGI!",
@@ -759,7 +785,7 @@ _l("e2-a4-0032", "act4", "20.03", "nole", "If they go through with it, visitors'
 CUT = {
     "e2-a1-0026": ("e2-a1-0014", "billions", "year", "ghost", None),
     "e2-a1-0047": ("e2-a1-0035", "chaotic", "upsetting", "phone", None),
-    "e2-a3-0008": ("e1-a1-5-13", "Six", "months", "far", "audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav"),
+    "e2-a3-0008": ("e1-a1-5-13", "Six", "click", "far", "audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav"),
 }
 
 
@@ -1800,17 +1826,17 @@ nb("act3", "13.03b", "OTS-WIDE · over Mas's shoulder at his pillar onto the two
    "Lip-sync both. Said low, to each other, never to Mas. The only answer the film gives (W8: no reason supplied; facts A25).",
    lines=[line("e2-a3-0025"), line("e2-a3-0026", 0.3, QUICK)], head=0.5, tail=0.7, music=M13,
    fix=("P", "FX", "GR"), why="The newcomer gate's question, asked by the people under the flyers and answered plainly: his post didn't say (the fixes pass, the episode review's blocker).")
-nb("act3", "13.04", "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
+nb("act3", "13.04", "SCR · the lobby TV over the staffers' heads, pushed in until its bezel is the frame's edge: the Senate presser",
    "screen", "SET-01", "lobby_day", ["remuhcs"],
-   "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
-   "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC).",
+   "The lobby TV the staffers stand under gets its own beat: pushed in on, in held steps, until its bezel is the frame's edge, the lobby's room tone under it. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
+   "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC). It stays on the TV, its bezel and glass in frame (the second fixes pass: a full-frame cut-in read as an unrelated senator; sc 18's push onto Neleh's player is the model), in the foreground at its own weight (W25).",
    dur=4.4, fixed=("dur",), onscreen=[O("REMUHCS · MAJORITY LEADER", 0.3, 2.6, "plate"), O("BIPARTISAN SENATE AI ROADMAP", 0.5, None, "lower-third"),
                                       O("ROADMAP · $32B/YR", 0.6, None, "sign"), O("FORUM ×9", 0.6, None, "sign"), O("FLOOR", 1.6, None, "sign")],
    music=M13, sounds=[S("blip_text_neutral", 0.5, -26, new=True), S("lectern_bump", 2.2, -26, new=True), S("lectern_bump", 3.4, -26, new=True)],
    fix=("P", "FACT", "FC", "GR"), why="The political counterweight, at similar weight (facts A30, A62).")
-nb("act3", "13.05", "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+nb("act3", "13.05", "SCR · the TV (its bezel at the frame's edge): a reporter's question; an aide slaps a tenth sticker on the lectern",
    "screen", "SET-01", "lobby_day", ["remuhcs"],
-   "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
+   "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern. The TV's bezel and glass stay in frame.",
    "No invented words in a real senator's mouth (D-50).",
    lines=[line("e2-a3-0005")], head=0.3, tail=1.6, fixed=("tail",), music=M13,
    sounds=[S("sticker_slap_tv", "E:e2-a3-0005+0.6", -24, new=True)], fix=("P", "R2", "GR"), why="Ten forums, no vote.")
@@ -1841,19 +1867,19 @@ nb("act3", "14.02", "WIDE · the spread: Look at heatsink; Pick up reflection",
                                       O("Pick up reflection", 2.8, 3.5, "ui"), O("i can't pick that up.", 3.5, 4.9, "ui")],
    music=M14, sounds=[S("ui_verb_select", 0.2, -26, new=True), S("ui_verb_select", 2.8, -26, new=True)], style=UI14,
    fix=("P", "FC"), why="")
-nb("act3", "14.03", "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
+nb("act3", "14.03", "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip, one greyed chip",
    "bullpen", "SET-12", "open_floor", ["mas"],
-   "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers three lines, what he'd say to Alyi. He taps the greyed come back first. Bonk.",
-   "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel.",
-   dur=5.0, fixed=("dur",), onscreen=[O("Talk to reflection", 0.2, 0.9, "ui"), O("> where are you going?", 1.0, None, "ui"), O("> can we talk?", 1.0, None, "ui"),
-                                      O("> come back", 1.0, None, "ui")],
+   "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers one line, an ordinary one: lunch?, and it's greyed. He taps it anyway. Bonk.",
+   "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel. Nothing he would say to Alyi is spelled out (the second fixes pass: the strip offered where are you going? · can we talk? · come back, his subtext as text, W7).",
+   dur=5.0, fixed=("dur",), onscreen=[O("Talk to reflection", 0.2, 0.9, "ui"), O("> lunch?", 1.0, None, "ui")],
    music=M14, sounds=[S("ui_verb_select", 0.2, -26, new=True), S("alert_bonk", 4.0, -22)], style=UI14,
-   fix=("P", "R2", "FC"), why="His rehearsal of what he'd say (MIV §4: once an episode, the effort shows).")
-nb("act3", "14.04", "MCU · his own reflection mouthing can we talk? back to him",
+   fix=("P", "R2", "FC", "FX"), why="His effort shows, once (MIV §4), in the game's grammar and nothing more.")
+nb("act3", "14.04", "MCU · his own reflection in the fins, held; nothing else to pick",
    "bullpen", "SET-12", "open_floor", ["mas"],
-   "Then can we talk? His own reflection mouths it back to him. No voice.",
-   "The Door blooms once, first note missing.", dur=3.2, music="E02-08 · the Door (first note missing) blooms once, on his own reflection",
-   style=UI14, fix=("P", "R2"), why="Lonely: his own face saying it.")
+   "Nothing else to pick. His thumb stays on the greyed chip, then lowers. His face in the polish holds, silent. The phone's screen dims.",
+   "The Door blooms once, first note missing. No mouthing, no voice (the second fixes pass: the reflection mouthing can we talk? back to him was a second named moment of being moved, on top of V.O. 7; W4).",
+   dur=3.2, music="E02-08 · the Door (first note missing) blooms once, on his own reflection",
+   style=UI14, fix=("P", "R2", "FX"), why="Lonely: his own face, and nothing to say to it.")
 nb("act3", "14.05", "WIDE · from her ladder, DOT's orange cuff points a screwdriver at Alyi's office door",
    "bullpen", "SET-12", "open_floor", ["dot", "mas"],
    "From her ladder, DOT's orange cuff points a screwdriver at Alyi's office door.",
@@ -1870,7 +1896,7 @@ nb("act3", "14.07", "WIDE → 2S · beside the door, Alyi's old chair, still hum
    "Beside the door, Alyi's old chair, still humming. BUKAJ arrives with a box of printouts and sits down in it. The hum goes on under him. The strip offers one line, and Mas takes it at once: the box types congratulations. as he says it.",
    "The chosen strip line is voiced in his own voice as the box types it (voiced adventure games do this; P9).",
    lines=[line("e2-a3-0023")], head=3.5, tail=0.15, fixed=("head",),
-   onscreen=[O("BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.", 0.4, 3.2, "plate"), O("congratulations.", "L:e2-a3-0023-0.1", None, "ui")],
+   onscreen=[O("BUKAJ · NEW CHIEF SCIENTIST.", 0.4, 3.2, "plate"), O("congratulations.", "L:e2-a3-0023-0.1", None, "ui")],
    music=M14, sounds=[S("chair_hum_choir", 0.0, -30, new=True, note="diegetic: the GPU choir chord", dur=4.8)], style=UI14,
    fix=("P", "FACT", "SR"), why="A new chief scientist in his chair (facts A26); Mas says it aloud.")
 nb("act3", "14.08", "2S · Mas, screen-left; BUKAJ seated, screen-right, one hand flat on the humming armrest",
@@ -1934,8 +1960,8 @@ nb("act3", "15.02", "ECU · his phone: Alyi's post from three days ago, collapse
    music=M15, sounds=[S("thumb_scroll", 0.2, -28, new=True)], fix=("P", "R1", "R2", "FACT", "FX"), why="What he counts from: his own words, \"almost a decade\" (facts A25).")
 nb("act3", "15.03", "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
    "office", "SET-13", "office_evening", ["mas"],
-   "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
-   "A face light one step.", lines=[line("e2-a3-0008"), line("e2-vo-07", 1.2, WEIGHTED)], head=0.4, tail=0.7,
+   "Far off, Alyi's voice from launch night: his count, and what it counted, from the day they started to that click. Now Mas carries it on to today.",
+   "A face light one step. The far line runs through its base (the second fixes pass: cut at \"months.\" it left two numbers with no anchor, and V.O. 7 played as a correction of the post's \"almost a decade\").", lines=[line("e2-a3-0008"), line("e2-vo-07", 1.2, WEIGHTED)], head=0.4, tail=0.7,
    music=M15, pace="weighted", fix=("P", "VO", "R2", "FX"), why="V.O. 7: now he's the one counting, on Alyi's own clock (W14; Ep1's \"you counted.\"); Dec 11, 2015 → May 14, 2024 is 8 years and 5 months (facts A25b).")
 nb("act3", "15.04", "ECU · TPOOL: its splash; welcome back, mas; the Orb scans the hourglass",
    "screen", "SET-13", "office_evening", ["orb"],
@@ -2111,11 +2137,11 @@ nb("act3", "17.10", "ECU · a draft opened, typed, deleted, typed: grey bars",
    mode="QUICK-CUT RUN (the scramble)", fix=("P", "R2", "GR"), why="")
 nb("act3", "17.11", "MCU · his still face; the receipt still unrolling under his shoes",
    "skyline", "SET-16", "bridge", ["mas"],
-   "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
-   "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft.",
-   lines=[line("e2-vo-09")], head=0.3, tail=0.4, fixed=("head",), music=M17s,
+   "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself: the post.",
+   "W4's grammar: the face still, the inside fast. The V.O. is the one item his call didn't say, the post he drafted and deleted, repeated: his rattled tell (MIV §3), nothing about what he knew and nothing about when he'll post (W8); it plays on his face (from 0.9 s, after the shoes), never over the draft (the second fixes pass: \"everyone who signed. the post. everyone who signed.\" echoed the call 9 s earlier).",
+   lines=[line("e2-vo-09")], head=0.9, tail=0.4, fixed=("head",), music=M17s,
    sounds=[S("receipt_unroll_loop", 0.0, -28, new=True, dur=3.6)], mode="QUICK-CUT RUN (the scramble)",
-   fix=("P", "R1", "VO", "GR", "SR"), why="Frantic hands under a still face; V.O. 9, a cluster with V.O. 10 (W6).")
+   fix=("P", "R1", "VO", "GR", "SR", "FX"), why="Frantic hands under a still face; V.O. 9, the scramble's one inner line (V.O. 10 is cut: the second fixes pass).")
 nb("act3", "17.12", "MCU · the Forecaster, having crossed the stalled lanes, stops beside him",
    "skyline", "SET-16", "bridge", ["forecaster", "mas"],
    "THE FORECASTER has crossed the stalled lanes and stops beside him, clipboard up.",
@@ -2123,8 +2149,9 @@ nb("act3", "17.12", "MCU · the Forecaster, having crossed the stalled lanes, st
 nb("act3", "17.13", "ECU · Mas's thumb hovers over Post; he doesn't press",
    "screen", "SET-16", "bridge", ["mas"],
    "Mas's thumb hovers over Post. He doesn't press.",
-   "", lines=[line("e2-vo-10")], head=0.8, tail=0.5, music=M17, pace="weighted", fix=("P", "VO", "R2", "GR", "SR"),
-   why="V.O. 10: his own condition for the post, a reply to nobody; never what he knew.")
+   "No V.O.: the held thumb is the beat (the second fixes pass cut V.O. 10, \"not until legal has every name.\": after the forecast it played as a retort, it narrated the thumb, and it timed the apology at a contested beat; W7, W8).",
+   dur=3.6, fixed=("dur",), music=M17, pace="weighted", fix=("P", "R2", "GR", "SR", "FX"),
+   why="Not yet, in his thumb; never what he knew, never why.")
 nb("act3", "17.14", "WIDE · the night, one held shot: the bridge's lights cycle once; Mas still on the receipt; the Forecaster asleep against the rail",
    "skyline", "SET-16", "bridge_night", ["mas", "forecaster"],
    "The night, one held shot: the bridge's lights cycle once. Mas still on the receipt. The Forecaster asleep against the rail, clipboard on his chest.",
@@ -2158,12 +2185,14 @@ nb("act3", "17.18", "WIDE · it rains letterhead; the receipt's ink runs in the 
    "The letterhead is blank: the actress is never drawn, voiced or named.", dur=3.6, music=M17r,
    sounds=[S("ink_run_drip", 0.4, -26, new=True), S("umbrella_rain", 0.0, -24, new=True, dur=3.6), S("umbrella_pop", 2.6, -32, new=True)],
    fix=("P", "R1", "GR"), why="Pathos in the rain.")
-nb("act3", "17.19", "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+nb("act3", "17.19", "POV · his rain-beaded phone: a press request about VOICE 5 drops in; the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
    "screen", "SET-16", "bridge_rain", ["mas"],
-   "On his rain-beaded phone, the voice menu: five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
-   "No bonk, no notification here.", dur=4.4, fixed=("dur",),
-   onscreen=[O("VOICE 5", 0.4, None, "ui"), O("Pause", 1.4, 2.2, "ui"), O("VOICE 5 [PAUSED]", 2.2, None, "ui"), O("Hey.", 2.2, None, "ui")],
-   music=M17r, sounds=[S("ui_pause_tap", 2.0, -22, new=True)], fix=("P", "R1", "FACT"), why="He pauses the voice himself (facts A33).")
+   "On his rain-beaded phone, a push drops in over the voice menu: request for comment, re: VOICE 5, its thumbnail a waveform. It slides away. Five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
+   "No bonk. The push is the pause's visible cause (the second fixes pass: the pause landed with no cause on screen, W13, W21): the press is asking about the fifth voice, as on the stairs it asked about the exit papers. No outlet, no person named or drawn, no claim about how the voice was made (GR; facts §F).", dur=5.4, fixed=("dur",),
+   onscreen=[O("request for comment", 0.3, 2.0, "ui"), O("re: VOICE 5", 0.3, 2.0, "ui"), O("VOICE 5", 0.4, None, "ui"), O("Pause", 2.4, 3.2, "ui"),
+             O("VOICE 5 [PAUSED]", 3.2, None, "ui"), O("Hey.", 3.2, None, "ui")],
+   music=M17r, sounds=[S("phone_buzz_step_1", 0.2, -26), S("ui_pause_tap", 3.0, -22, new=True)], fix=("P", "R1", "FACT", "FX"),
+   why="The press asks; he pauses the voice himself (facts A33).")
 nb("act3", "17.20", "ECU · beside it, his company's post pops up in its own UI, two fragments",
    "screen", "SET-16", "bridge_rain", [],
    "Beside it, his company's post pops up in its own UI: questions heard; a pause.",

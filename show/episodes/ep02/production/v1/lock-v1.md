@@ -26,10 +26,10 @@
 | Cold open | **1,320** | 0:55.00 | 00:00:00 → 00:55:00 | 13 | 6 (0) | 1 | 0:55.00 | 8 ok |
 | Act One · the séance | **8,736** | 6:04.00 | 01:27:00 → 07:31:00 | 62 | 59 (3) | 5 | 6:04.00 | 9 ok |
 | Act Two · stage right | **6,696** | 4:39.00 | 07:31:00 → 12:10:00 | 45 | 41 (3) | 5 | 4:39.00 | 9 ok |
-| Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 30 (4) | 4 | 5:20.00 | 9 ok |
+| Act Three · leave them up | **7,680** | 5:20.00 | 12:10:00 → 17:30:00 | 58 | 29 (3) | 4 | 5:20.00 | 9 ok |
 | Act Four · as a guest | **7,656** | 5:19.00 | 17:30:00 → 22:49:00 | 57 | 38 (3) | 4 | 5:19.00 | 9 ok |
 | Tag · august | **888** | 0:37.00 | 22:49:00 → 23:26:00 | 9 | 1 (1) | 1 | 0:37.00 | 9 ok |
-| **Story** | **32,976** | **22:54.00** | | 244 | 175 (14) | 20 | | |
+| **Story** | **32,976** | **22:54.00** | | 244 | 174 (13) | 20 | | |
 
 The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.wav 01:25:00 · Act One · the séance 01:27:00 · Act Two · stage right 07:31:00 · Act Three · leave them up 12:10:00 · Act Four · as a guest 17:30:00 · Tag · august 22:49:00 · Outro · credits 23:26:00 · end 23:41:00 (**34,104 frames, 23:41.00**; the intro 720 f, the card 48 f, no hum hold, the outro 360 f: the film's clock, as assemble.py builds it).
 <!-- END generated:frames -->
@@ -74,8 +74,8 @@ The episode clock (MM:SS:FF): Cold open 00:00:00 · Intro 00:55:00 · ep1.1_her.
 | 12 The empty seat | 960 | 40.00 | 11:30:00 → 12:10:00 | 0:40.00 · same | ×1.128 | — | — | 12.01: 2.0 s, the stage as the house lights come up full, the blimp gone, the murmur thinning; 12.05: 1.5 s, the dark room with the monitor's news already playing; 12.08: his face, 2–3 s, then the stop |
 | 13 Leave them up | 840 | 35.00 | 12:10:00 → 12:45:00 | 0:35.00 · 0:31.00 | ×1.19 | 2.38 | 4.46 | 13.01: 2.0 s, the staffers already at the pillar, one peeling, one smoothing, the TV murmuring |
 | 14 The open floor | 1,296 | 54.00 | 12:45:00 → 13:39:00 | 0:54.00 · 0:59.00 | ×1.655 | 29.46 | 14.67 | 14.01: 2.5 s, the spread with the band lit and the heatsinks' polish catching the light; 14.12: the domino settled at his shoe; then his hand on Alyi's door as it pivots |
-| 15 Where u at? (with F2.2) | 2,424 | 101.00 | 13:39:00 → 15:20:00 | 1:41.00 · 1:40.00 | ×1.348 | 6.88 | 11.33 | 15.01: 2.0 s, the empty office as the carried hum stops; 15.19: the empty room 1 s after the door shuts; then the stairs and the buzz |
-| 17 The NDA across the bridge (the S3) | 3,120 | 130.00 | 15:20:00 → 17:30:00 | 2:10.00 · same | ×1.943 | 17.38 | 34.21 (act-out 3) | 17.01: 4.0 s, NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in; 17.21: the grey slot under his wet thumb; the ink running |
+| 15 Where u at? (with F2.2) | 2,496 | 104.00 | 13:39:00 → 15:23:00 | 1:44.00 · 1:40.00 | ×1.343 | 6.88 | 11.29 | 15.01: 2.0 s, the empty office as the carried hum stops; 15.19: the empty room 1 s after the door shuts; then the stairs and the buzz |
+| 17 The NDA across the bridge (the S3) | 3,048 | 127.00 | 15:23:00 → 17:30:00 | 2:07.00 · 2:10.00 | ×1.846 | 17.38 | 34.83 (act-out 3) | 17.01: 4.0 s, NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in; 17.21: the grey slot under his wet thumb; the ink running |
 | 18 Present | 2,304 | 96.00 | 17:30:00 → 19:06:00 | 1:36.00 · 1:35.00 | ×0.976 | 8.67 | 4.29 | 18.01: 2.0 s, full frame on the lighthouse with the beacon already turning; 18.03: 1.0 s, the boardroom with the TV already playing; 18.15: the reminder on his phone; he turns it over |
 | 19 Every phone they sell (with F2.1 and the walled garden) | 3,192 | 133.00 | 19:06:00 → 21:19:00 | 2:13.00 · 2:14.00 | ×1.379 | 11.17 | 9.62 | 19.01: 2.0 s, the running keynote with the lobby half-listening; 19.07: 1.5 s, the crowd's backs and the giant screen before Mas; 19.20: the gate's lock; the fold back into his phone |
 | 20 (FOR NOW) | 1,248 | 52.00 | 21:19:00 → 22:11:00 | 0:52.00 · same | ×1.03 | 11.79 | 20.58 | 20.01: 1.0 s, the thinning crowd as the quartet's pedal carries over; 20.05: 2.0 s, the lobby on its morning bed, the confetti already swept; 20.10: 2.0 s, the face-down phone; 20.13: his still face, the flyer out, and the pin falling |
@@ -243,7 +243,7 @@ Every gap the plan marks, measured in the pixel lock on the segment clock (line 
 | e2-a4-0006 | e2-a4-0007 | quick | 0.27 | in the mark | script 18.08-18.10: quick (Terb) |
 | e2-a4-0007 | e2-a4-0008 | normal | 0.60 | in the mark | script 18.08-18.10: Mas at 0.45-0.6 s |
 
-Other replies across a cut inside a scene under 2 s that neither the list nor the plan marks: 8, each not an exchange: 4.04 -> 4.05 1.80 s (a new exchange: a staffer's eyes go to the empty chair first, and Gerg answers her look); 4.05 -> 4.06 1.17 s (not a reply: Mas puts the séance's next question to the table); 4.18 -> 4.19 1.11 s (not a reply to the ghost: Mas asks the board the question he wants answered (the concept's door)); 4.24 -> 4.25 0.92 s (not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)); 9.03 -> 9.04 1.17 s (a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer); 9.05 -> 9.06 1.68 s (not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since the fixes pass gave sc 9's air to V.O. 6)); 11.06 -> 11.07 1.10 s (the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks); 15.06 -> 15.07 1.64 s (not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07).
+Other replies across a cut inside a scene under 2 s that neither the list nor the plan marks: 8, each not an exchange: 4.04 -> 4.05 1.80 s (a new exchange: a staffer's eyes go to the empty chair first, and Gerg answers her look); 4.05 -> 4.06 1.17 s (not a reply: Mas puts the séance's next question to the table); 4.18 -> 4.19 1.11 s (not a reply to the ghost: Mas asks the board the question he wants answered (the concept's door)); 4.24 -> 4.25 0.92 s (not a reply: ghost 3 drifts into his eyeline and replays its own words (a device)); 9.03 -> 9.04 1.17 s (a new exchange: Mas turns to Rima (9.04's two-shot); Gerg was warning the engineer); 9.05 -> 9.06 1.68 s (not a reply: Rima taps the monitor and VOICE 1 says hello under her fingertip (9.06; under 2 s since the fixes pass gave sc 9's air to V.O. 6)); 11.06 -> 11.07 1.10 s (the demo's next step: Rima cues the house, the engineer turns the phone's camera on it, then speaks); 15.06 -> 15.07 1.59 s (not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07).
 
 Overlaps (a line starting before the one before it ends): e2-a2-0028 over e2-a2-0027 by 0.55 s (act2).
 <!-- END generated:tempo -->
@@ -272,15 +272,15 @@ Every wordless beat over 4 s, and in it the longest stretch with no sound, text 
 | 12.01 | 6.09 | 1 | 5.86 | WIDE · the stage as the house lights come up full, the rig empty, Rima small on her mark → |
 | 17.17 | 10.00 | 3 | 5.80 | WIDE · May 19, a new day on the bridge, traffic moving; Mas under an umbrella; the blimp d |
 | 10.07 | 7.12 | 1 | 5.34 | GFX · the break: an empty speech bubble drifts in from the margin and blots out the tiny s |
-| 14.04 | 5.30 | 0 | 5.30 | MCU · his own reflection mouthing can we talk? back to him |
+| 14.04 | 5.30 | 0 | 5.30 | MCU · his own reflection in the fins, held; nothing else to pick |
 | 13.03 | 7.40 | 2 | 5.00 | ECU → MCU → ECU · a fallen flyer; Mas picks it up and tapes it back himself, upside down;  |
 | 22.01 | 7.44 | 3 | 4.72 | WIDE · white, room tone only; the pin falls into it; the white is sky over an empty lot; t |
 | 4A.05 | 4.71 | 0 | 4.71 | WIDE · as he sits he glances at Gerg at the back; Gerg lifts the laptop an inch |
-| 15.16 | 4.58 | 0 | 4.58 | WIDE → ECU · the fire's glow shrinks to one point of light |
+| 15.16 | 4.57 | 0 | 4.57 | WIDE → ECU · the fire's glow shrinks to one point of light |
 | 4.29 | 4.50 | 0 | 4.50 | WIDE · the slide and the room in one frame: Nole finishes at the slide; nobody applauds |
-| 15.08 | 6.47 | 5 | 4.31 | ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the  |
-| 17.18 | 7.00 | 3 | 4.28 | WIDE · it rains letterhead; the receipt's ink runs in the rain |
+| 15.08 | 6.45 | 5 | 4.30 | ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the  |
 | 4.32 | 4.20 | 0 | 4.20 | 2S · across the room: ALYI foreground, cropped by his monitor's edge, turns and looks back |
+| 17.18 | 6.64 | 3 | 4.06 | WIDE · it rains letterhead; the receipt's ink runs in the rain |
 | 15.15 | 4.60 | 2 | 4.00 | WIDE → MCU → WIDE · the effigy catches; Alyi's face in its light; the fire |
 | 14.10 | 6.00 | 6 | 3.90 | HIGH · the floor: his resignation thread stands up as one domino, in its own UI; it topple |
 | 18.05 | 4.20 | 4 | 3.90 | FULL FRAME · under it, the board's same-day reply in its own statement card |
@@ -309,9 +309,14 @@ Each fix of §3.5 that a rebuild could undo has a check in `lock_report.py` (`MA
 | sc 14: Ekiel's domino goes straight to Alyi's door, no team plate (W8) | ok | sc 14's last shots ['14.09', '14.10', '14.12']; scene 840-2136 f |
 | V.O. 7 counts on Alyi's own clock, not the firing's | ok | V.O. 7 "eight years and five months."; 15.02's texts ['MAY 14, 2024', 'After almost a decade…'] |
 | sc 13: "Did his post say why?" / "No." | ok | lines ['e2-a3-0025', 'e2-a3-0026'], at 20.850 and 22.550 s |
-| the 2023 rail held 2 s, clear of the post | ok | the rail 141.083-143.292 s, the post from 143.292 s |
+| the 2023 rail held 2 s, clear of the post | ok | the rail 144.167-146.375 s, the post from 146.375 s |
 | the ISS card carries no line about its product | ok | 20.10's texts: ['I am starting a new company:', 'ISS'] |
-| the last honk clears "Updating." | ok | car_honk_5 at 281.250 s, "Updating." from 281.733 s |
+| 15.03: Alyi's far count carries its base, then V.O. 7 | ok | "Six years and eleven months. From the day we started to that click." to 101.175 s, V.O. 7 from 102.375 s |
+| 14.03-14.04: the strip spells out nothing he'd say to Alyi (W7) | ok | the strip ['> lunch?'] |
+| 14.07: Bukaj's plate a name and one relation (W21) | ok | the plate ['BUKAJ · NEW CHIEF SCIENTIST.'] |
+| sc 17: no V.O. after the forecast; V.O. 9 no echo of the call (W7, W8) | ok | V.O. after the forecast: none; V.O. 9 "the post. the post." |
+| 17.19: the press's request before the pause (W13) | ok | the request 304.875-306.583 s, the pause tap 307.583 s |
+| the last honk clears "Updating." | ok | car_honk_5 at 280.625 s, "Updating." from 281.108 s |
 | 18.03: her guest line before her words (P9) | ok | the guest line from 8.333 s, her line from 8.667 s |
 | 18.06: the TV off on the cut, "First item." a beat later | ok | tv_click_off 0.042 s into 18.06; "First item." 2.358 s after it |
 | 18.14: no clipping on Mario's desk (W8/W9) | ok | 18.14's texts: [] |

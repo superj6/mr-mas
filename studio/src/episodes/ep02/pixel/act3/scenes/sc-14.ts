@@ -5,8 +5,8 @@
 // band: the verbs, Open greyed, the inventory that is his pocket), lit through the whole scene (lock-v1 §3.3).
 //   ARRIVE   14.01 the spread, the band lit, the polish catching the light; Mas comes in frame-left (13.06's exit)
 //   REACH    14.02 Look at heatsink: "i can see my face in it." · Pick up reflection: "i can't pick that up." · 14.03 Talk
-//            to reflection: his own face in the fins; his phone's strip offers three lines; his thumb tries the greyed
-//            come back first: bonk · 14.04 can we talk?: his reflection mouths it back, no voice · 14.05 DOT's orange
+//            to reflection: his own face in the fins; his phone's strip offers one greyed chip, lunch? (the second
+//            fixes pass): bonk · 14.04 nothing else to pick: his reflection holds, silent · 14.05 DOT's orange
 //            cuff points a screwdriver at Alyi's door · 14.06 Open is greyed: bonk; the knock shakes Ep1's note off the
 //            frame and it flutters into his pocket (the inventory), at the spread's scale, never held for reading
 //   THE WORLD MOVES ON  14.07 Bukaj sits in the humming chair (plated); "congratulations." typed as he says it · 14.08
@@ -61,7 +61,7 @@ L.add('14.02', {
   },
 });
 L.add('14.03', {
-  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: a curved sculpture on its plinth, his own face in the polished metal (his approved portrait mirrored, bowed with the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone in his hand (common cupThumb), its suggestion strip a column of chips: > where are you going? · > can we talk? · > come back (greyed and struck, a disabled button that still reads: the 1993 Cancel); his thumb (no cursor) goes to the greyed come back first and presses its end: bonk, the chip shakes)',
+  st: 'act3/sets/floor spread → finsMCU ([W] Talk to reflection (the sentence line); [MCU] the fins close: a curved sculpture on its plinth, his own face in the polished metal (his approved portrait mirrored, bowed with the fins, cooled to the steel: his, never Alyi\'s); low in frame his phone in his hand (common cupThumb), its suggestion strip one chip: > lunch? (greyed and struck, a disabled button that still reads: the 1993 Cancel; the second fixes pass, 2026-10-10: the strip had spelled out his subtext, > where are you going? · > can we talk? · > come back); his thumb (no cursor) goes to it and presses its end: bonk, the chip shakes)',
   marks: {bonk: ['snd', 'alert_bonk', 1, 0]},
   draw: (fb, k, sh, f) => {
     const bonk = mk(sh, 'bonk', 96), cut = 24;
@@ -70,22 +70,18 @@ L.add('14.03', {
       adventureBand(fb, sentence(sh, k, 'Talk to', 'Talk to reflection'));
       return {full: true};
     }
-    const tap = k < bonk - 30 ? null : 2;
+    const tap = k < bonk - 30 ? null : 0;
     finsMCU(fb, f, {tap, down: k >= bonk - 2 && k < bonk + 4, bonk: k - bonk});
     adventureBand(fb, sentence(sh, k, 'Talk to', 'Talk to reflection'));
     return {full: true};
   },
 });
-/** his reflection mouthing "can we talk?" (no voice): a held viseme track on 3s */
-const MOUTHED: Array<[number, 'rest' | 'A' | 'E' | 'O' | 'M']> = [[0, 'E'], [5, 'A'], [9, 'rest'], [11, 'O'], [15, 'E'], [18, 'rest'], [20, 'A'], [26, 'O'], [30, 'rest']];
-const mouthed = (j: number) => { if (j < 0) return 'rest' as const; let m: 'rest' | 'A' | 'E' | 'O' | 'M' = 'rest'; for (const [t, v] of MOUTHED) if (j >= t) m = v; return m; };
 L.add('14.04', {
-  st: 'act3/sets/floor finsMCU ([MCU] his thumb moves to > can we talk? and presses it (the chip lights); then, in the fins, his own reflection mouths "can we talk?" back to him (a held viseme track, no voice); held on his face in the metal (the Door blooms once))',
+  st: 'act3/sets/floor finsMCU ([MCU] the second fixes pass, 2026-10-10: nothing else to pick. His thumb stays on the greyed chip a beat, then lowers to the screen\'s foot; his own face in the fins holds, silent (no mouthing: the reflection that mouthed can we talk? back to him named the feeling, W4, W7); near the end the phone\'s screen dims a rung (the Door blooms once, in the score))',
   draw: (fb, k, sh, f) => {
-    const press = 8;
-    finsMCU(fb, f, {tap: k < 30 ? 1 : null, down: k >= press && k < press + 6, lit: k >= press ? 1 : null, mouth: mouthed(k - 30)});
+    const n = sh.e - sh.s;
+    finsMCU(fb, f, {tap: k < 14 ? 0 : null, dim: k >= Math.round(n * 0.7) ? 1 : 0});
     adventureBand(fb, {});
-    void sh;
     return {full: true};
   },
 });
@@ -115,7 +111,7 @@ L.add('14.06', {
   },
 });
 L.add('14.07', {
-  st: 'act3/sets/floor spread → chair2S ([W] beside the door the old chair still hums (its tiny lines); BUKAJ (art/cast/bukaj room) comes in from the right with a box of printouts and sits down in it; the hum goes on under him; his plate BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM. typed on; [2S] Mas (his portrait in the floor\'s daylight, facing him) and Bukaj in the chair (art/cast/bukaj bust, his hand flat on the humming armrest); the strip\'s line typed in the band in his colour as he says it: "congratulations." (lip-synced))',
+  st: 'act3/sets/floor spread → chair2S ([W] beside the door the old chair still hums (its tiny lines); BUKAJ (art/cast/bukaj room) comes in from the right with a box of printouts and sits down in it; the hum goes on under him; his plate BUKAJ · NEW CHIEF SCIENTIST. typed on (a name and one relation; the second fixes pass cut · INHERITED THE HUM.); [2S] Mas (his portrait in the floor\'s daylight, facing him) and Bukaj in the chair (art/cast/bukaj bust, his hand flat on the humming armrest); the strip\'s line typed in the band in his colour as he says it: "congratulations." (lip-synced))',
   face: {MAS: 'lip'},
   marks: {con: ['on', 'e2-a3-0023', 0]},
   draw: (fb, k, sh, f) => {

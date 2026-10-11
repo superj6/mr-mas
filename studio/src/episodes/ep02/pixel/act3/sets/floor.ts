@@ -9,9 +9,9 @@
 //                         Ekiel walking out with his box, one domino lying at Mas's shoe; his speech typed over his head
 //   finsMCU(b, f, st)     [MCU] 14.03-14.04: his own face in the polished fins (a curved sculpture seen at an angle on
 //                         its plinth; his reflection bowed with it, cooled; never Alyi's), and low in frame his phone in
-//                         his hand (common cupThumb) with its suggestion strip, a column of chips: his thumb taps the
-//                         greyed `come back` (bonk; a disabled button that still reads), then `can we talk?`; his
-//                         reflection mouths it back, no voice
+//                         his hand (common cupThumb) with its suggestion strip: one chip, `> lunch?`, greyed (the second
+//                         fixes pass); his thumb taps it (bonk; a disabled button that still reads); the reflection
+//                         holds, silent, and the screen dims a rung
 //   chair2S(b, f, st)     [2S] 14.07-14.08: Mas (his portrait in the floor's daylight, facing right) and BUKAJ seated
 //                         lower in the humming chair (its tall back round him, his arm on the chrome armrest, the hand
 //                         flat on it), the floor soft behind them
@@ -243,7 +243,7 @@ const finsLayer = (mouth: MasPortraitState['mouth']): Buf => {
   const hit = finFace.get(mouth); if (hit) return hit;
   const b = new Buf(W, RH, PAL.G4);
   // beyond the sculpture's left edge: the floor, soft and a rung down
-  const soft = floorSoft();
+  const soft = floorSoft(0);
   for (let y = 0; y < RH; y++) for (let x = 0; x < W; x++) b.set(x, y, stepColor(soft.get(Math.min(W - 1, x + 150), y), -1));
   for (let y = 0; y < FIN_PLINTH; y++) {
     const edge = FIN_X0 + finBow(y);
@@ -274,21 +274,25 @@ const finsLayer = (mouth: MasPortraitState['mouth']): Buf => {
 };
 const HOOD_SL = [PAL.N0, PAL.G1, PAL.G2, PAL.G3, PAL.G5];
 const HOOD_CUFF = [PAL.N0, PAL.G1, PAL.G1, PAL.G2, PAL.G3, PAL.G3, PAL.G5];
-export const STRIP = ['> where are you going?', '> can we talk?', '> come back'];
+// the second fixes pass (2026-10-10; the episode review, round 2): the strip offered `> where are you going?` ·
+// `> can we talk?` · `> come back`, and his reflection mouthed `can we talk?` back to him: the scene's subtext written as
+// text (W7), and a second named moment of being moved on top of V.O. 7 (W4). It offers one ordinary thing now, and it is
+// greyed: the 1993 Cancel, kept; nothing he would say to Alyi is spelled out, and the reflection holds silent
+export const STRIP: Array<{t: string; grey: boolean}> = [{t: '> lunch?', grey: true}];
 /** his phone held low in frame (its top part; the frame cuts it), the suggestion strip on its screen as a column of
  *  chips, his hand round it from below (common cupThumb: the fingers behind, the thumb on the glass) */
 export const FP = {x: 152, y: 116, w: 168, h: 300};
 const chipY = (i: number) => FP.y + 12 + i * 22;
 /** st.tap: the chip his thumb is on (null: resting at the screen's foot), st.down (pressing), st.bonk (the greyed chip
  *  shaking: frames since), st.lit (the chosen chip lit) */
-export const finsMCU = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; tap?: 0 | 1 | 2 | null; down?: boolean; bonk?: number; lit?: 0 | 1 | 2 | null}) => {
+export const finsMCU = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth']; tap?: number | null; down?: boolean; bonk?: number; lit?: number | null; dim?: number}) => {
   b.c.set(finsLayer(st.mouth ?? 'rest').c.subarray(0, W * RH));
   const P = FP, scr = new Buf(P.w, P.h, PAL.N1);
   // the strip: a column of chips, the greyed one a disabled button that still reads (G4 on N2, 3.9:1; the live chips
   // P2 on N3, 14:1, with their cyan rule), struck through
   fill(scr, 0, 0, P.w, P.h, PAL.N1); tiny(scr, '10:14', 6, 3, PAL.N7);
-  STRIP.forEach((c, i) => {
-    const w = P.w - 12, grey = i === 2, on = st.lit === i || (st.tap === i && st.down);
+  STRIP.forEach(({t: c, grey}, i) => {
+    const w = P.w - 12, on = st.lit === i || (st.tap === i && st.down);
     const shake = grey && st.bonk !== undefined && st.bonk >= 0 && st.bonk < 8 ? ((st.bonk >> 1) % 2 ? 2 : -2) : 0;
     const x = 6 + shake, y = chipY(i) - P.y;
     fill(scr, x, y, w, 18, on && !grey ? PAL.C3 : grey ? PAL.N2 : PAL.N3); fill(scr, x, y, w, 1, grey ? PAL.N4 : PAL.C5);
@@ -302,21 +306,32 @@ export const finsMCU = (b: Buf, f: number, st: {mouth?: MasPortraitState['mouth'
   glow(b, P.x + P.w / 2, P.y + 20, 120, 40, 1, (x, y) => y < P.y && x > P.x - 30 && x < P.x + P.w + 30);
   cupThumb(b, P, tip, {cuffRamp: HOOD_CUFF, sleeveRamp: HOOD_SL, sleeveTo: [560, 330], widthCm: 7.4, behindTop: true, drawPhone: (bb) => {
     fill(bb, P.x - 6, P.y - 6, P.w + 12, P.h + 12, PAL.N0); fill(bb, P.x - 5, P.y - 5, P.w + 10, P.h + 10, PAL.G1); fill(bb, P.x - 5, P.y - 5, P.w + 10, 1, PAL.G3); fill(bb, P.x - 5, P.y - 5, 1, P.h + 10, PAL.G3);
-    for (let y = 0; y < P.h; y++) for (let x = 0; x < P.w; x++) { const Y = P.y + y; if (Y >= 0 && Y < RH) bb.set(P.x + x, Y, scr.get(x, y)); }
+    for (let y = 0; y < P.h; y++) for (let x = 0; x < P.w; x++) { const Y = P.y + y; if (Y >= 0 && Y < RH) bb.set(P.x + x, Y, st.dim ? stepColor(scr.get(x, y), -st.dim) : scr.get(x, y)); }
   }});
   void f;
 };
 
 // ================================================================== 14.07-14.08: Mas and Bukaj at the chair
-let SOFT2S: Buf | null = null;
-const floorSoft = (): Buf => {
-  if (SOFT2S) return SOFT2S;
+// (the second fixes pass, 2026-10-10: this background still drew the art's DOT, both arms straight up at the window's
+// top and her legs hanging, the "someone hanging from the ceiling" read the first pass fixed only in the wides; it now
+// draws the wides' DOT, dotUp: the near hand on the rail, the far hand at the bracket, her shoes on a rung, working on
+// her loop. The soft room is cached per drawing of her loop: turning (two) or paused with her nod)
+const SOFT2S = new Map<string, Buf>();
+const dotState = (k: number): [number, string] => {
+  const cyc = k % 72;
+  if (cyc >= 44) return cyc >= 52 && cyc < 66 ? [52, 'nod'] : [44, 'pause'];
+  return Math.floor(cyc / 5) % 2 ? [5, 'turn1'] : [0, 'turn0'];
+};
+const floorSoft = (k: number): Buf => {
+  const [kk, key] = dotState(k);
+  const hit = SOFT2S.get(key);
+  if (hit) return hit;
   const t = new Buf(W, 270, PAL.N0);
-  openFloor(t, 0, {note: 'gone', pivot: 0, dot: 'ladder', hum: false});
+  openFloor(t, 0, {note: 'gone', pivot: 0, dot: null, hum: false}, {back: (bb) => dotUp(bb, kk, 'work')});
   // reframed on the door and the chair (the room moved left so the door sits centre-left), soft two rungs
   reframe(t, -40, 10);
   dimRoom(t, 2);
-  SOFT2S = t;
+  SOFT2S.set(key, t);
   return t;
 };
 const masFloorImg = new Map<string, ReturnType<typeof masPortrait>>();
@@ -327,7 +342,7 @@ const masFloor = (s: Partial<MasPortraitState>) => {
   return im;
 };
 export const chair2S = (b: Buf, f: number, st: {mas?: MasPortraitState['mouth']; bukaj?: Parameters<typeof bukajBust>[0]; hum?: number}) => {
-  b.c.set(floorSoft().c.subarray(0, W * RH));
+  b.c.set(floorSoft(f).c.subarray(0, W * RH));
   // BUKAJ SEATED (the review: he read as standing at Mas's eye level, no armrest, no hand, the chair a dark slab):
   // his bust lower in the frame than Mas's (Mas stands at the left), the humming chair round him: its tall mesh back
   // (a rounded headrest above his head, its frame's lit edge), the hum lines either side; the chrome armrest across

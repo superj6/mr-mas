@@ -1916,7 +1916,7 @@
      "label": "first",
      "bump": 0,
      "seed": 1899661321,
-     "key": "31bf661d2f3f4126",
+     "key": "fff208e4416395f9",
      "settings": {
       "stability": 0.6,
       "similarity_boost": 0.75,
@@ -1926,46 +1926,46 @@
      },
      "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
      "measures": {
-      "heard": "Everyone who signed. The post. Everyone who signed.",
+      "heard": "The post, the post.",
       "asr_mismatch": [],
       "asr_margin": null,
       "names": [],
-      "span_s": 3.48,
-      "plan_len_s": 3.25,
-      "ratio": 1.071,
-      "words": 8,
-      "wpm": 137.9,
-      "longest_gap_s": 0.44,
+      "span_s": 1.37,
+      "plan_len_s": 1.67,
+      "ratio": 0.82,
+      "words": 4,
+      "wpm": 175.2,
+      "longest_gap_s": 0.24,
       "lufs": -18.0,
-      "true_peak": -3.49,
+      "true_peak": -2.01,
       "clipped": 0,
       "raw_tail_cut": false,
-      "f0": 101.8,
-      "f0_range_st": 13.3,
-      "take_floor_dbfs": -63.3,
-      "duration_s": 4.365,
-      "raw_floor_dbfs": -85.8,
-      "raw_speech_to_floor_db": 66.3,
-      "raw_pause_floor_dbfs": -76.3,
-      "raw_pause_sf_db": 56.9,
-      "raw_quiet_frames": 63,
-      "raw_peak_dbfs": -1.1,
+      "f0": 113.8,
+      "f0_range_st": 11.2,
+      "take_floor_dbfs": -62.9,
+      "duration_s": 2.275,
+      "raw_floor_dbfs": -90.6,
+      "raw_speech_to_floor_db": 67.7,
+      "raw_pause_floor_dbfs": -75.9,
+      "raw_pause_sf_db": 53.0,
+      "raw_quiet_frames": 30,
+      "raw_peak_dbfs": -1.07,
       "raw_clip_runs": 0
      },
      "fail": [],
      "look": [
-      "tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)"
+      "length 0.82 of the plan"
      ],
-     "sent": "Everyone who signed. The post, everyone who signed.",
+     "sent": "The post. The post.",
      "voice": "Jeremy - Warm, Trustworthy, Sincere",
-     "base_key": "31bf661d2f3f4126"
+     "base_key": "fff208e4416395f9"
     }
    ],
    "picked_bump": 0,
    "status": "look",
    "fail": [],
    "look": [
-    "tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)"
+    "length 0.82 of the plan"
    ],
    "superseded": [
     {
@@ -2012,9 +2012,57 @@
      "look": [],
      "sent": "Everyone who signed, the post, everyone who signed.",
      "base_key": "bc3b37cb4204b1b5"
+    },
+    {
+     "label": "first",
+     "bump": 0,
+     "seed": 1899661321,
+     "key": "31bf661d2f3f4126",
+     "settings": {
+      "stability": 0.6,
+      "similarity_boost": 0.75,
+      "style": 0.0,
+      "use_speaker_boost": true,
+      "speed": 1.2
+     },
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
+     "measures": {
+      "heard": "Everyone who signed. The post. Everyone who signed.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 3.48,
+      "plan_len_s": 3.25,
+      "ratio": 1.071,
+      "words": 8,
+      "wpm": 137.9,
+      "longest_gap_s": 0.44,
+      "lufs": -18.0,
+      "true_peak": -3.49,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 101.8,
+      "f0_range_st": 13.3,
+      "take_floor_dbfs": -63.3,
+      "duration_s": 4.365,
+      "raw_floor_dbfs": -85.8,
+      "raw_speech_to_floor_db": 66.3,
+      "raw_pause_floor_dbfs": -76.3,
+      "raw_pause_sf_db": 56.9,
+      "raw_quiet_frames": 63,
+      "raw_peak_dbfs": -1.1,
+      "raw_clip_runs": 0
+     },
+     "fail": [],
+     "look": [
+      "tempo 138 wpm against V.O. 9, faster than he thinks (~145-165)"
+     ],
+     "sent": "Everyone who signed. The post, everyone who signed.",
+     "voice": "Jeremy - Warm, Trustworthy, Sincere",
+     "base_key": "31bf661d2f3f4126"
     }
    ],
-   "sent": "Everyone who signed. The post, everyone who signed.",
+   "sent": "The post. The post.",
    "settings": {
     "stability": 0.6,
     "similarity_boost": 0.75,
@@ -2024,8 +2072,8 @@
    },
    "sig": [
     "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
-    "31bf661d2f3f4126",
-    4.365
+    "fff208e4416395f9",
+    2.275
    ]
   },
   "e2-a3-0020": {
@@ -2389,6 +2437,54 @@
      "settings": null,
      "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
      "measures": {
+      "heard": "6 years and 11 months. From the day we started to that click.",
+      "asr_mismatch": [],
+      "asr_margin": null,
+      "names": [],
+      "span_s": 5.26,
+      "plan_len_s": 5.3,
+      "ratio": 0.992,
+      "words": 13,
+      "wpm": 148.3,
+      "longest_gap_s": 1.03,
+      "lufs": -16.0,
+      "true_peak": -3.53,
+      "clipped": 0,
+      "raw_tail_cut": false,
+      "f0": 86.1,
+      "f0_range_st": 13.7,
+      "take_floor_dbfs": -62.2,
+      "duration_s": 5.98
+     },
+     "fail": [],
+     "look": [
+      "a 1.03 s silence inside the read (Ep1's own read, copied as aired (e1-a1-5-13, Ep1 v3.5 lock 2:10.45): the beat between his count and its base, \"…months.\" / \"From the day we started…\" (the second fixes pass runs the cut through it))"
+     ],
+     "sent": "Six years and eleven months From the day we started to that click",
+     "base_key": null
+    }
+   ],
+   "picked_bump": 0,
+   "status": "look",
+   "fail": [],
+   "look": [
+    "a 1.03 s silence inside the read (Ep1's own read, copied as aired (e1-a1-5-13, Ep1 v3.5 lock 2:10.45): the beat between his count and its base, \"…months.\" / \"From the day we started…\" (the second fixes pass runs the cut through it))"
+   ],
+   "sig": [
+    "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
+    "ff9a225d05092a58",
+    5.98
+   ],
+   "special": "cut",
+   "superseded": [
+    {
+     "label": "the take",
+     "bump": 0,
+     "seed": null,
+     "key": null,
+     "settings": null,
+     "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
+     "measures": {
       "heard": "6 years and 11 months.",
       "asr_mismatch": [],
       "asr_margin": null,
@@ -2413,17 +2509,7 @@
      "sent": "Six years and eleven months",
      "base_key": null
     }
-   ],
-   "picked_bump": 0,
-   "status": "pass",
-   "fail": [],
-   "look": [],
-   "sig": [
-    "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
-    "ff9a225d05092a58",
-    2.709
-   ],
-   "special": "cut"
+   ]
   },
   "e2-a3-0010": {
    "id": "e2-a3-0010",
@@ -2696,5 +2782,5 @@
    ]
   }
  },
- "updated": "2026-10-10 16:20:20"
+ "updated": "2026-10-10 23:37:21"
 }

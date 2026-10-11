@@ -525,13 +525,13 @@
    "set": "screen",
    "style": "BASE",
    "shot": "insert",
-   "frame": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
+   "frame": "SCR · the lobby TV over the staffers' heads, pushed in until its bezel is the frame's edge: the Senate presser",
    "side": "",
    "room": "lobby_day",
    "chars": [
     "remuhcs"
    ],
-   "caption": "The lobby TV gets its own beat. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
+   "caption": "The lobby TV the staffers stand under gets its own beat: pushed in on, in held steps, until its bezel is the frame's edge, the lobby's room tone under it. A Senate press conference: REMUHCS and three bipartisan colleagues behind a lectern stencilled ROADMAP · $32B/YR, nine FORUM stickers on it. Aides try to wheel it through a door marked FLOOR: his own floor, which he schedules. It doesn't fit. They turn it sideways. It still doesn't fit.",
    "lines": [],
    "onscreen": [
     {
@@ -597,8 +597,8 @@
     "scene": "13",
     "mode": "EXTENDED CONVERSATION (short), the TV in the background",
     "pace": "quick",
-    "camera": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser",
-    "picture": "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC)."
+    "camera": "SCR · the lobby TV over the staffers' heads, pushed in until its bezel is the frame's edge: the Senate presser",
+    "picture": "Legible at 1080p: the plate, the stickers, FLOOR. The lower third carries a neutral text blip (FC). It stays on the TV, its bezel and glass in frame (the second fixes pass: a full-frame cut-in read as an unrelated senator; sc 18's push onto Neleh's player is the model), in the foreground at its own weight (W25)."
    }
   },
   {
@@ -608,13 +608,13 @@
    "set": "screen",
    "style": "BASE",
    "shot": "insert",
-   "frame": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+   "frame": "SCR · the TV (its bezel at the frame's edge): a reporter's question; an aide slaps a tenth sticker on the lectern",
    "side": "",
    "room": "lobby_day",
    "chars": [
     "remuhcs"
    ],
-   "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern.",
+   "caption": "A REPORTER's question from the TV. An aide slaps a tenth FORUM sticker on the lectern. The TV's bezel and glass stay in frame.",
    "lines": [
     {
      "id": "e2-a3-0005",
@@ -687,7 +687,7 @@
      "gaps": {},
      "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
     },
-    "camera": "SCR · the TV: a reporter's question; an aide slaps a tenth sticker on the lectern",
+    "camera": "SCR · the TV (its bezel at the frame's edge): a reporter's question; an aide slaps a tenth sticker on the lectern",
     "picture": "No invented words in a real senator's mouth (D-50)."
    }
   },
@@ -845,13 +845,13 @@
    "set": "bullpen",
    "style": "BASE",
    "shot": "close",
-   "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
+   "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip, one greyed chip",
    "side": "",
    "room": "open_floor",
    "chars": [
     "mas"
    ],
-   "caption": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers three lines, what he'd say to Alyi. He taps the greyed come back first. Bonk.",
+   "caption": "Talk to reflection: it's Mas's own face in the polished metal. His phone's strip offers one line, an ordinary one: lunch?, and it's greyed. He taps it anyway. Bonk.",
    "lines": [],
    "onscreen": [
     {
@@ -861,19 +861,7 @@
      "kind": "ui"
     },
     {
-     "text": "> where are you going?",
-     "at": 1.0,
-     "until": 5.0,
-     "kind": "ui"
-    },
-    {
-     "text": "> can we talk?",
-     "at": 1.0,
-     "until": 5.0,
-     "kind": "ui"
-    },
-    {
-     "text": "> come back",
+     "text": "> lunch?",
      "at": 1.0,
      "until": 5.0,
      "kind": "ui"
@@ -900,8 +888,8 @@
     "scene": "14",
     "mode": "the episode's one adventure-game scene and its one dialogue tree",
     "pace": "normal",
-    "camera": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip",
-    "picture": "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel.",
+    "camera": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggestion strip, one greyed chip",
+    "picture": "The strip is the machine's read of him, never his mind. The greyed option is exactly the 1993 Cancel. Nothing he would say to Alyi is spelled out (the second fixes pass: the strip offered where are you going? · can we talk? · come back, his subtext as text, W7).",
     "style": "UI LIT (the adventure game's band)"
    }
   },
@@ -912,13 +900,13 @@
    "set": "bullpen",
    "style": "BASE",
    "shot": "close",
-   "frame": "MCU · his own reflection mouthing can we talk? back to him",
+   "frame": "MCU · his own reflection in the fins, held; nothing else to pick",
    "side": "",
    "room": "open_floor",
    "chars": [
     "mas"
    ],
-   "caption": "Then can we talk? His own reflection mouths it back to him. No voice.",
+   "caption": "Nothing else to pick. His thumb stays on the greyed chip, then lowers. His face in the polish holds, silent. The phone's screen dims.",
    "lines": [],
    "onscreen": [],
    "reelDur": 5.3,
@@ -930,8 +918,8 @@
     "scene": "14",
     "mode": "the episode's one adventure-game scene and its one dialogue tree",
     "pace": "normal",
-    "camera": "MCU · his own reflection mouthing can we talk? back to him",
-    "picture": "The Door blooms once, first note missing.",
+    "camera": "MCU · his own reflection in the fins, held; nothing else to pick",
+    "picture": "The Door blooms once, first note missing. No mouthing, no voice (the second fixes pass: the reflection mouthing can we talk? back to him was a second named moment of being moved, on top of V.O. 7; W4).",
     "style": "UI LIT (the adventure game's band)"
    }
   },
@@ -1058,7 +1046,7 @@
    ],
    "onscreen": [
     {
-     "text": "BUKAJ · NEW CHIEF SCIENTIST · INHERITED THE HUM.",
+     "text": "BUKAJ · NEW CHIEF SCIENTIST.",
      "at": 0.4,
      "until": 3.2,
      "kind": "plate"
@@ -1513,17 +1501,17 @@
     {
      "text": "MAY 14, 2024",
      "at": 0.4,
-     "until": 3.77,
+     "until": 3.76,
      "kind": "post"
     },
     {
      "text": "After almost a decade…",
      "at": 0.4,
-     "until": 3.77,
+     "until": 3.76,
      "kind": "post"
     }
    ],
-   "reelDur": 3.77,
+   "reelDur": 3.76,
    "fx": [],
    "cues": [
     "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
@@ -1556,14 +1544,14 @@
    "chars": [
     "mas"
    ],
-   "caption": "For one second, far off, Alyi's voice from launch night: his count, the founding to that click. Now Mas carries it on to today.",
+   "caption": "Far off, Alyi's voice from launch night: his count, and what it counted, from the day they started to that click. Now Mas carries it on to today.",
    "lines": [
     {
      "id": "e2-a3-0008",
      "who": "alyi",
-     "text": "Six years and eleven months.",
+     "text": "Six years and eleven months. From the day we started to that click.",
      "t": 0.54,
-     "dur": 2.1,
+     "dur": 5.26,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
      "in": 0.35,
      "words": [
@@ -1591,6 +1579,46 @@
        "months",
        1.579,
        2.009
+      ],
+      [
+       "From",
+       3.1,
+       3.332
+      ],
+      [
+       "the",
+       3.402,
+       3.506
+      ],
+      [
+       "day",
+       3.599,
+       3.831
+      ],
+      [
+       "we",
+       3.901,
+       4.005
+      ],
+      [
+       "started",
+       4.075,
+       4.447
+      ],
+      [
+       "to",
+       4.493,
+       4.574
+      ],
+      [
+       "that",
+       4.644,
+       4.83
+      ],
+      [
+       "click",
+       4.899,
+       5.28
       ]
      ],
      "tag": "far",
@@ -1600,7 +1628,7 @@
      "id": "e2-vo-07",
      "who": "mas",
      "text": "eight years and five months.",
-     "t": 3.84,
+     "t": 7.0,
      "dur": 2.24,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-07__mas-manalt-C.wav",
      "in": 0.41,
@@ -1636,7 +1664,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 7.02,
+   "reelDur": 10.18,
    "fx": [],
    "cues": [
     "music (v1): E02-09 FEEL IT · the chair's hum carries in, then stops; DARK ROOM, one felt piano (his interior); Ep1's line under it unscored"
@@ -1653,7 +1681,7 @@
      "rule": "longer, only on turns"
     },
     "camera": "MCU · Mas on the desk's edge; far off, Alyi's voice from launch night; then his count",
-    "picture": "A face light one step."
+    "picture": "A face light one step. The far line runs through its base (the second fixes pass: cut at \"months.\" it left two numbers with no anchor, and V.O. 7 played as a correction of the post's \"almost a decade\")."
    }
   },
   {
@@ -1950,7 +1978,7 @@
      "id": "e2-a3-0011",
      "who": "alyi",
      "text": "You're not chanting.",
-     "t": 1.08,
+     "t": 1.07,
      "dur": 1.19,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0011__alyi-A.wav",
      "in": 0.43,
@@ -1978,7 +2006,7 @@
      "id": "e2-a3-0012",
      "who": "mas",
      "text": "someone has to hold the glass.",
-     "t": 2.72,
+     "t": 2.71,
      "dur": 1.99,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0012__mas-manalt-C.wav",
      "in": 0.38,
@@ -2021,7 +2049,7 @@
      "id": "e2-a3-0013",
      "who": "alyi",
      "text": "Then I'll feel it for both of us.",
-     "t": 4.96,
+     "t": 4.95,
      "dur": 1.97,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0013__alyi-A.wav",
      "in": 0.42,
@@ -2072,7 +2100,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 7.47,
+   "reelDur": 7.46,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
@@ -2124,17 +2152,17 @@
     {
      "text": "CHECK IN",
      "at": 0.54,
-     "until": 2.16,
+     "until": 2.15,
      "kind": "ui"
     },
     {
      "text": "feel the agi",
-     "at": 2.16,
-     "until": 6.47,
+     "at": 2.15,
+     "until": 6.45,
      "kind": "ui"
     }
    ],
-   "reelDur": 6.47,
+   "reelDur": 6.45,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
@@ -2142,7 +2170,7 @@
    "sounds": [
     {
      "name": "check_in_blip",
-     "at": 1.887,
+     "at": 1.881,
      "gain": -26
     }
    ],
@@ -2182,7 +2210,7 @@
    "caption": "The racks in the corner hum along. At the chant's peak their status lights become token streams that run across the whole room, him included.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 3.51,
+   "reelDur": 3.49,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · F2.2: the GPU choir and glass shimmer, ppp (the Orb-era glossy colour), the Door over it; the chant's giddy lift (warm, never a hymn), thinning under the exchange"
@@ -2190,7 +2218,7 @@
    "sounds": [
     {
      "name": "glyph_shimmer",
-     "at": 0.81,
+     "at": 0.805,
      "gain": -28
     }
    ],
@@ -2362,7 +2390,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.42,
+   "reelDur": 5.41,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the choir thins to its no-third chord under the post and \"Someone should.\""
@@ -2409,7 +2437,7 @@
    "caption": "His finger above the bare Publish button, as Mas's was in sc 4.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 3.24,
+   "reelDur": 3.22,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
@@ -2453,11 +2481,11 @@
     {
      "text": "UNALIGNED",
      "at": 0.4,
-     "until": 4.85,
+     "until": 4.83,
      "kind": "sign"
     }
    ],
-   "reelDur": 4.85,
+   "reelDur": 4.83,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
@@ -2465,7 +2493,7 @@
    "sounds": [
     {
      "name": "torch_light",
-     "at": 1.078,
+     "at": 1.073,
      "gain": -24
     }
    ],
@@ -2504,7 +2532,7 @@
    "caption": "He presses it.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 1.89,
+   "reelDur": 1.88,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
@@ -2512,7 +2540,7 @@
    "sounds": [
     {
      "name": "post_click",
-     "at": 0.405,
+     "at": 0.403,
      "gain": -20
     }
    ],
@@ -2601,7 +2629,7 @@
    "caption": "The fire's glow shrinks to one point of light.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 4.58,
+   "reelDur": 4.57,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the Publish click on the Door's held ♯4 (warm resolve, no cadence); the Ache (D♭ + G over an F pedal) under the fire"
@@ -2643,7 +2671,7 @@
      "id": "e2-vo-08",
      "who": "mas",
      "text": "i'll ask him in person.",
-     "t": 1.89,
+     "t": 1.88,
      "dur": 1.6,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-08__mas-manalt-C.wav",
      "in": 0.42,
@@ -2679,7 +2707,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 4.84,
+   "reelDur": 4.82,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
@@ -2713,7 +2741,7 @@
    "caption": "He pockets the phone, gets up off the desk's edge and leaves. The door swings shut on the empty room; it holds a second.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 4.58,
+   "reelDur": 4.57,
    "fx": [],
    "cues": [
     "music (v1): E02-09 · the felt returns within a bar of the pin; thins to its pedal on the stairs; the buzz is the out"
@@ -2721,7 +2749,7 @@
    "sounds": [
     {
      "name": "door_close_soft",
-     "at": 2.964,
+     "at": 2.957,
      "gain": -24
     }
    ],
@@ -3386,7 +3414,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 5.9,
+   "reelDur": 5.79,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3434,7 +3462,7 @@
    "caption": "Across the lanes, mid-span on the receipt, Mas sees it. His phone is already lit.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 4.66,
+   "reelDur": 4.43,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3442,7 +3470,7 @@
    "sounds": [
     {
      "name": "phone_buzz_step_1",
-     "at": 1.942,
+     "at": 1.846,
      "gain": -24
     }
    ],
@@ -3535,7 +3563,7 @@
      "id": "e2-a3-0019",
      "who": "mas",
      "text": "everyone who signed one. find them. all of them. today.",
-     "t": 2.33,
+     "t": 2.22,
      "dur": 3.44,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0019__mas-manalt-C.wav",
      "in": 0.37,
@@ -3596,7 +3624,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 6.55,
+   "reelDur": 6.4,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
@@ -3604,12 +3632,12 @@
    "sounds": [
     {
      "name": "call_ring",
-     "at": 0.194,
+     "at": 0.185,
      "gain": -26
     },
     {
      "name": "call_connect",
-     "at": 1.553,
+     "at": 1.48,
      "gain": -26
     }
    ],
@@ -3683,56 +3711,36 @@
    "chars": [
     "mas"
    ],
-   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself.",
+   "caption": "His face doesn't move. The receipt is still unrolling under his shoes. Inside, his voice, faster than he thinks, repeats itself: the post.",
    "lines": [
     {
      "id": "e2-vo-09",
      "who": "mas",
-     "text": "everyone who signed. the post. everyone who signed.",
-     "t": 0.3,
-     "dur": 3.48,
+     "text": "the post. the post.",
+     "t": 0.9,
+     "dur": 1.37,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
-     "in": 0.38,
+     "in": 0.42,
      "words": [
       [
-       "Everyone",
+       "The",
        -0.02,
-       0.388
-      ],
-      [
-       "who",
-       0.411,
-       0.504
-      ],
-      [
-       "signed",
-       0.562,
-       0.968
-      ],
-      [
-       "the",
-       1.433,
-       1.537
+       0.058
       ],
       [
        "post",
-       1.595,
-       2.037
+       0.116,
+       0.51
       ],
       [
-       "everyone",
-       2.455,
-       2.872
+       "the",
+       0.778,
+       0.87
       ],
       [
-       "who",
-       2.896,
-       2.989
-      ],
-      [
-       "signed",
-       3.047,
-       3.465
+       "post",
+       0.928,
+       1.312
       ]
      ],
      "tag": "V.O.",
@@ -3740,7 +3748,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 4.56,
+   "reelDur": 3.01,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · the scramble: the band drops to the bass and the Build's chip lead, busier on the same grid; ducks under his call line"
@@ -3763,7 +3771,7 @@
      "rule": "others 0.15-0.35 s, Mas 0.4-0.5 s"
     },
     "camera": "MCU · his still face; the receipt still unrolling under his shoes",
-    "picture": "W4's grammar: the face still, the inside fast. The V.O. is the fix's items, his rattled tell (MIV §3), nothing about what he knew (W8); it plays on his face, never over the draft."
+    "picture": "W4's grammar: the face still, the inside fast. The V.O. is the one item his call didn't say, the post he drafted and deleted, repeated: his rattled tell (MIV §3), nothing about what he knew and nothing about when he'll post (W8); it plays on his face (from 0.9 s, after the shoes), never over the draft (the second fixes pass: \"everyone who signed. the post. everyone who signed.\" echoed the call 9 s earlier)."
    }
   },
   {
@@ -3786,7 +3794,7 @@
      "id": "e2-a3-0020",
      "who": "forecaster",
      "text": "I've got a forecast on you. Median: an apology, within the hour, in lowercase.",
-     "t": 2.72,
+     "t": 2.58,
      "dur": 6.82,
      "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0020__forecaster-A.wav",
      "in": 0.37,
@@ -3867,7 +3875,7 @@
     }
    ],
    "onscreen": [],
-   "reelDur": 10.12,
+   "reelDur": 9.95,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3898,53 +3906,9 @@
     "mas"
    ],
    "caption": "Mas's thumb hovers over Post. He doesn't press.",
-   "lines": [
-    {
-     "id": "e2-vo-10",
-     "who": "mas",
-     "text": "not until legal has every name.",
-     "t": 1.55,
-     "dur": 2.51,
-     "audio": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
-     "in": 0.42,
-     "words": [
-      [
-       "Not",
-       -0.02,
-       0.232
-      ],
-      [
-       "until",
-       0.29,
-       0.661
-      ],
-      [
-       "legal",
-       0.754,
-       1.23
-      ],
-      [
-       "has",
-       1.323,
-       1.521
-      ],
-      [
-       "every",
-       1.613,
-       1.915
-      ],
-      [
-       "name",
-       2.008,
-       2.449
-      ]
-     ],
-     "tag": "V.O.",
-     "cut": false
-    }
-   ],
+   "lines": [],
    "onscreen": [],
-   "reelDur": 5.03,
+   "reelDur": 3.6,
    "fx": [],
    "cues": [
     "music (v1): E02-10 THE BRIDGE · SET-PIECE SWING, the full band in 4-bar phrases (the episode's one full-band stretch, at its peak only); brass hits at phrase ends; ducks under every line"
@@ -3953,12 +3917,8 @@
     "scene": "17",
     "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
     "pace": "weighted",
-    "tempo": {
-     "pace": "weighted",
-     "gaps": {},
-     "rule": "longer, only on turns"
-    },
-    "camera": "ECU · Mas's thumb hovers over Post; he doesn't press"
+    "camera": "ECU · Mas's thumb hovers over Post; he doesn't press",
+    "picture": "No V.O.: the held thumb is the beat (the second fixes pass cut V.O. 10, \"not until legal has every name.\": after the forecast it played as a retort, it narrated the thumb, and it timed the apology at a contested beat; W7, W8)."
    }
   },
   {
@@ -4268,7 +4228,7 @@
    "caption": "It rains letterhead. The receipt's ink runs down the lanes in the rain. Far off, on dry land, the Forecaster opens an umbrella printed with a probability curve.",
    "lines": [],
    "onscreen": [],
-   "reelDur": 7.0,
+   "reelDur": 6.64,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · a pad in the rain"
@@ -4282,12 +4242,12 @@
     },
     {
      "name": "ink_run_drip",
-     "at": 0.778,
+     "at": 0.738,
      "gain": -26
     },
     {
      "name": "umbrella_pop",
-     "at": 5.056,
+     "at": 4.796,
      "gain": -32
     }
    ],
@@ -4306,49 +4266,66 @@
    "set": "screen",
    "style": "BASE",
    "shot": "insert",
-   "frame": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+   "frame": "POV · his rain-beaded phone: a press request about VOICE 5 drops in; the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
    "side": "",
    "room": "bridge_rain",
    "chars": [
     "mas"
    ],
-   "caption": "On his rain-beaded phone, the voice menu: five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
+   "caption": "On his rain-beaded phone, a push drops in over the voice menu: request for comment, re: VOICE 5, its thumbnail a waveform. It slides away. Five live waveforms. His thumb finds VOICE 5 and taps Pause. The slot greys; its Hey. greys under it.",
    "lines": [],
    "onscreen": [
     {
+     "text": "request for comment",
+     "at": 0.3,
+     "until": 2.0,
+     "kind": "ui"
+    },
+    {
+     "text": "re: VOICE 5",
+     "at": 0.3,
+     "until": 2.0,
+     "kind": "ui"
+    },
+    {
      "text": "VOICE 5",
      "at": 0.4,
-     "until": 4.4,
+     "until": 5.4,
      "kind": "ui"
     },
     {
      "text": "Pause",
-     "at": 1.4,
-     "until": 2.2,
+     "at": 2.4,
+     "until": 3.2,
      "kind": "ui"
     },
     {
      "text": "VOICE 5 [PAUSED]",
-     "at": 2.2,
-     "until": 4.4,
+     "at": 3.2,
+     "until": 5.4,
      "kind": "ui"
     },
     {
      "text": "Hey.",
-     "at": 2.2,
-     "until": 4.4,
+     "at": 3.2,
+     "until": 5.4,
      "kind": "ui"
     }
    ],
-   "reelDur": 4.4,
+   "reelDur": 5.4,
    "fx": [],
    "cues": [
     "music (v1): E02-10 · a pad in the rain"
    ],
    "sounds": [
     {
+     "name": "phone_buzz_step_1",
+     "at": 0.2,
+     "gain": -26
+    },
+    {
      "name": "ui_pause_tap",
-     "at": 2.0,
+     "at": 3.0,
      "gain": -22
     }
    ],
@@ -4356,8 +4333,8 @@
     "scene": "17",
     "mode": "SET-PIECE with an EXTENDED CONVERSATION and a QUICK-CUT RUN",
     "pace": "quick",
-    "camera": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
-    "picture": "No bonk, no notification here."
+    "camera": "POV · his rain-beaded phone: a press request about VOICE 5 drops in; the voice menu, five live waveforms; his thumb taps Pause on VOICE 5",
+    "picture": "No bonk. The push is the pause's visible cause (the second fixes pass: the pause landed with no cause on screen, W13, W21): the press is asking about the fifth voice, as on the stairs it asked about the exit papers. No outlet, no person named or drawn, no claim about how the voice was made (GR; facts §F)."
    }
   },
   {

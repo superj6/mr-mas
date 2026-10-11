@@ -25,7 +25,8 @@
 //   shoes(b, f, st)          [ECU] 17.11's head: his sneakers from above (laces, toe caps, midsoles) on the receipt,
 //                            the paper still unrolling under them
 //   fore2S(b, f, st)         [2S] 17.12: Mas (screen-left) and the Forecaster beside him, clipboard up
-//   menu(b, f, st)           [POV] 17.19 / 17.20: the voice menu on his rain-beaded phone (the art's), his thumb on
+//   menu(b, f, st)           [POV] 17.19 / 17.20: the voice menu on his rain-beaded phone (the art's); first the press's
+//                            push about VOICE 5 drops in over it and slides away (the second fixes pass); his thumb on
 //                            Pause; then his company's post beside it, two fragments
 // What Mas knew, and whether the voice was meant to sound like anyone: nothing here tells us (W8).
 import {Buf, rect, line, ellipse, poly, bayer, hash, clamp} from '../../../../../shared/pixel/px';
@@ -509,8 +510,30 @@ export const fore2S = (b: Buf, f: number, st: {mouth: Viseme; expr?: 'neutral' |
 };
 
 // ================================================================== May 20: the voice menu and the company's post
-export const menu = (b: Buf, f: number, st: {paused: boolean; thumb: boolean; post?: {k1: number; k2: number} | null}) => {
+/** the press's push about the fifth voice (the second fixes pass, 2026-10-10: the pause had no cause on screen, W13,
+ *  W21): the stairs' push (office.ts requestPushRe) with its subject `re: VOICE 5` and, for its thumbnail, a small
+ *  waveform in VOICE 5's cyan. No outlet, no person named or drawn, no claim about how the voice was made (GR) */
+const voicePush = (b: Buf, x: number, y: number, w: number) => {
+  fill(b, x - 1, y - 1, w + 2, 42, PAL.N0); fill(b, x, y, w, 40, PAL.N3); fill(b, x, y, w, 1, PAL.C5);
+  fill(b, x + 5, y + 5, 14, 30, PAL.N2);
+  for (let k = 0; k < 5; k++) { const h = [6, 14, 22, 12, 8][k]; fill(b, x + 7 + k * 2, y + 20 - (h >> 1), 1, h, PAL.C6); }
+  pt(b, 'request for comment', x + 26, y + 8, PAL.P2);
+  pt(b, 're: VOICE 5', x + 26, y + 22, PAL.N8);
+};
+/** st.push: frames since the push's text window opened (it drops in over the menu's top in two held steps, sits, and
+ *  slides back up in two held steps from st.push === st.pushOut) */
+export const menu = (b: Buf, f: number, st: {paused: boolean; thumb: boolean; post?: {k1: number; k2: number} | null; push?: number; pushOut?: number}) => {
   voiceMenu(b, f, {paused: st.paused, thumb: st.thumb});
+  if (st.push !== undefined && st.push >= 0) {
+    const out = st.pushOut ?? 1e9, k = st.push;
+    // from behind the screen's top edge (the glass is x 126-353, y 12-202; the bezel above it stays the bezel)
+    const y = k < out ? (k < 2 ? -14 : k < 4 ? 2 : 16) : k < out + 2 ? 2 : k < out + 4 ? -14 : null;
+    if (y !== null) {
+      const t = new Buf(W, RH, TR);
+      voicePush(t, 130, y, 220);
+      for (let yy = 12; yy < 203; yy++) for (let xx = 126; xx < 354; xx++) { const c = t.get(xx, yy); if (c !== TR) b.set(xx, yy, c); }
+    }
+  }
   if (st.post) {
     dimRoom(b, 1);
     // beside it: his company's post in its own UI, two fragments, the second a beat after the first

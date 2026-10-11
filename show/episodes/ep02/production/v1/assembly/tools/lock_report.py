@@ -379,6 +379,30 @@ def main(argv):
          f"the rail {r23[0]:.3f}-{r23[1]:.3f} s, the post from {p23[0]:.3f} s" if r23 and p23 else "missing")
     mark("the ISS card carries no line about its product", text_on("act4", "20.10", "one goal") is None and text_on("act4", "20.10", "ISS") is not None,
          "20.10's texts: " + str([t["text"] for sh in locks["act4"]["shots"] if sh["id"] == "20.10" for t in sh["texts"]]))
+    # Act Three's second fixes pass (2026-10-10; fixes-v1.md, Act Three, round 2): Alyi's far count carries its base,
+    # the strip spells out nothing, Bukaj's plate a name and one relation, no V.O. after the forecast and V.O. 9 not an
+    # echo of the call, the presser on the lobby TV, the pause's cause on screen before it
+    a3_lines = {l["id"]: l for l in locks["act3"]["lines"]}
+    far, v7 = a3_lines.get("e2-a3-0008"), on.get("e2-vo-07")
+    mark("15.03: Alyi's far count carries its base, then V.O. 7",
+         far is not None and v7 is not None and far["text"].endswith("to that click.") and on["e2-a3-0008"][2] <= v7[1],
+         f"\"{far['text'] if far else None}\" to {on['e2-a3-0008'][2]:.3f} s, V.O. 7 from {v7[1]:.3f} s" if far and v7 else "missing")
+    strip = [t for sid, t in a3_texts if sid in ("14.03", "14.04") and t.startswith(">")]
+    mark("14.03-14.04: the strip spells out nothing he'd say to Alyi (W7)",
+         strip == ["> lunch?"] and not any(k in t for t in strip for k in ("talk", "come back", "going")),
+         f"the strip {strip}")
+    plate = [t for sid, t in a3_texts if sid == "14.07" and t.startswith("BUKAJ")]
+    mark("14.07: Bukaj's plate a name and one relation (W21)", plate == ["BUKAJ · NEW CHIEF SCIENTIST."], f"the plate {plate}")
+    fc = on.get("e2-a3-0020")
+    vo_after = [lid for lid, v in on.items() if v[0] == "act3" and v[4] == "vo" and fc is not None and v[1] > fc[1]]
+    v9 = a3_lines.get("e2-vo-09")
+    mark("sc 17: no V.O. after the forecast; V.O. 9 no echo of the call (W7, W8)",
+         fc is not None and not vo_after and v9 is not None and "signed" not in v9["text"],
+         f"V.O. after the forecast: {vo_after or 'none'}; V.O. 9 \"{v9['text'] if v9 else None}\"")
+    push = text_on("act3", "17.19", "re: VOICE 5")
+    tap = snd_on.get(("17.19", "ui_pause_tap"))
+    mark("17.19: the press's request before the pause (W13)", push is not None and tap is not None and push[1] <= tap[1],
+         f"the request {push[0]:.3f}-{push[1]:.3f} s, the pause tap {tap[1]:.3f} s" if push and tap else "missing")
     hk, upd = snd_on.get(("17.15", "car_honk_5")), on.get("e2-a3-0021")
     mark("the last honk clears \"Updating.\"", hk is not None and upd is not None and upd[1] - hk[1] >= 0.3,
          f"car_honk_5 at {hk[1]:.3f} s, \"Updating.\" from {upd[1]:.3f} s" if hk and upd else "missing")

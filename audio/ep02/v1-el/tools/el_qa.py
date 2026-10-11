@@ -84,6 +84,11 @@ CONTROLS = {
                        "two texts, a control read of 'En' gives -4.5 and a control read of 'end' -4.9, and the four reads "
                        "-2.6 to -4.5 (variants/n-controls.json)"),
 }
+# A silence inside a read that is the performance, not a fault: noted (LOOK) with its reason instead of failed
+GAP_OK = {
+    "e2-a3-0008": "Ep1's own read, copied as aired (e1-a1-5-13, Ep1 v3.5 lock 2:10.45): the beat between his count and "
+                  "its base, \"…months.\" / \"From the day we started…\" (the second fixes pass runs the cut through it)",
+}
 NAMES_WILD = {"mas", "gerg", "alyi", "nole", "nopeai", "chatgtp", "rettiwt", "minddeep", "aros", "manalt", "ekiel",
               "agi", "tasya", "rima", "terb"}
 
@@ -370,7 +375,10 @@ def verdict(row, m, role_f0, lane):
             elif abs(d) > 0.35:
                 look.append(f"length {d:+.2f} s off the plan")
         if (m["longest_gap_s"] or 0) > 1.0 and not re.search(r"…|\.\.\.|—|-$", row["text"]):
-            fail.append(f"a {m['longest_gap_s']:.2f} s silence inside the read")
+            if row["id"] in GAP_OK:
+                look.append(f"a {m['longest_gap_s']:.2f} s silence inside the read ({GAP_OK[row['id']]})")
+            else:
+                fail.append(f"a {m['longest_gap_s']:.2f} s silence inside the read")
     tb = tempo_band(row["id"], pl["who"], vo)
     if tb and m["words"] >= 5 and m["wpm"] and special not in ("crowd", "sung"):
         if not (tb[0] <= m["wpm"] <= tb[1]):
@@ -721,9 +729,12 @@ def cmd_report(a):
     missing = [lid for lid in pl if lid not in rows_all]
     unmeasured = [lid for lid in rows_all if lid not in status]
     cnt = {"pass": 0, "look": 0, "flag": 0}
-    for q in status.values():
-        cnt[q["status"]] = cnt.get(q["status"], 0) + 1
-    retaken = {lid: q for lid, q in status.items() if len(q.get("attempts") or []) + len(q.get("superseded") or []) > 1}
+    # (a line cut from the plan keeps its QA record, its takes and credits, but is no longer counted: e2-vo-10, cut at
+    # Act Three's second fixes pass)
+    for lid, q in status.items():
+        if lid in pl:
+            cnt[q["status"]] = cnt.get(q["status"], 0) + 1
+    retaken = {lid: q for lid, q in status.items() if lid in pl and len(q.get("attempts") or []) + len(q.get("superseded") or []) > 1}
     seg_tables = []
     for seg in SEGS:
         t = [f"### {seg}", "",

@@ -11,11 +11,12 @@
 //             did."; the chain draws the pen back · 17.07 mid-span, Mas sees it, his phone already lit
 //   PHRASE 3  17.08 his phone won't stop · 17.09 he calls LEGAL (his face locked; his side, quick) · 17.10 a draft typed,
 //             deleted, typed: grey bars · 17.11 his still face; V.O. 9
-//   PHRASE 4  17.12 the Forecaster beside him: the forecast · 17.13 his thumb over Post; V.O. 10 · 17.14 the night, one
-//             held wide, the lights cycling once
+//   PHRASE 4  17.12 the Forecaster beside him: the forecast · 17.13 his thumb over Post, held (V.O. 10 cut: the second
+//             fixes pass) · 17.14 the night, one held wide, the lights cycling once
 //   PHRASE 5  17.15 the next afternoon: his post over the sky, one trim per honk; "Updating." · 17.16 the honking driver
 //   PHRASE 6-7 17.17 May 20, rain: the blimp drifts in; the cloud with a blank letterhead parks over it; thunder ·
-//             17.18 it rains letterhead; the ink runs; the umbrella egg · 17.19 his thumb on Pause: VOICE 5 [PAUSED] ·
+//             17.18 it rains letterhead; the ink runs; the umbrella egg · 17.19 the press's push re: VOICE 5, then his
+//             thumb on Pause: VOICE 5 [PAUSED] ·
 //             17.20 his company's post, two fragments · 17.21 the blimp sags, its lights click off; black (act-out 2)
 import {defineScene, layouts, mouth, roomMouth, mk} from '../../kit';
 import {Buf} from '../../../../../shared/pixel/px';
@@ -185,7 +186,7 @@ L.add('17.12', {
   },
 });
 L.add('17.13', {
-  st: 'act3/sets/bridge phoneBridge + scrambleScreen draft ([ECU] the draft whole (grey bars), Post lit; his thumb comes up and hovers over Post, its shadow on the glass, and doesn\'t press; V.O. 10 typed by the host)',
+  st: 'act3/sets/bridge phoneBridge + scrambleScreen draft ([ECU] the draft whole (grey bars), Post lit; his thumb comes up and hovers over Post, its shadow on the glass, and doesn\'t press; held, no V.O. (the second fixes pass, 2026-10-10, cut V.O. 10: the held thumb is the beat))',
   draw: (fb, k, sh, f) => {
     const t = Math.min(1, k / 24);
     const tip: [number, number] = [Math.round(PB.x + 70 + t * 34), Math.round(PB.y + 150 - t * 96)];
@@ -246,9 +247,12 @@ L.add('17.18', {
   },
 });
 L.add('17.19', {
-  st: 'act3/sets/bridge menu ([POV] his rain-beaded phone (art/sets/bridge voiceMenu): the voice menu, five live waveforms; his wet thumb finds VOICE 5 and taps Pause; the slot greys, VOICE 5 [PAUSED], its Hey. greyed under it)',
-  marks: {tap: ['snd', 'ui_pause_tap', 1, 0]},
-  draw: (fb, k, sh, f) => { const tap = mk(sh, 'tap', 48); menu(fb, f, {paused: k >= tap + 4, thumb: k >= 20 && k < tap + 30}); },
+  st: 'act3/sets/bridge menu ([POV] his rain-beaded phone (art/sets/bridge voiceMenu): the voice menu, five live waveforms; first the press\'s push drops in over its top on the buzz, request for comment / re: VOICE 5, a small waveform for its thumbnail (the second fixes pass, 2026-10-10: the pause\'s visible cause, W13; no outlet, no person), held to its read, and slides back up; then his wet thumb finds VOICE 5 and taps Pause; the slot greys, VOICE 5 [PAUSED], its Hey. greyed under it)',
+  marks: {tap: ['snd', 'ui_pause_tap', 1, 0], pin: ['txt', 'request for comment', 'at', 0], pout: ['txt', 'request for comment', 'until', 0]},
+  draw: (fb, k, sh, f) => {
+    const tap = mk(sh, 'tap', 72), pin = mk(sh, 'pin', 7), pout = mk(sh, 'pout', 48);
+    menu(fb, f, {paused: k >= tap + 4, thumb: k >= pout + 8 && k < tap + 30, push: k - pin, pushOut: pout - pin});
+  },
 });
 L.add('17.20', {
   st: 'act3/sets/bridge menu ([ECU] beside the greyed slot, his company\'s post pops up in its own UI, two fragments, the second a beat after the first: "We\'ve heard questions about how we chose the voices…" · "…We are working to pause the use of…" (cropped before the voice\'s name; it claims nothing about how the voice was made, and answers no one))',

@@ -574,14 +574,16 @@
    "snr_before_db": -6.1,
    "band": "250-1000 Hz",
    "target_db": 6.0,
-   "ride_db": 10.0,
+   "ride_db": 10.6,
    "why": "first heard -6.1 dB over rooms and score in its own band (250-1000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 14.9,
     "attack_over_local_db": 10.9,
     "body_db": 8.8,
     "band": "250-1000 Hz"
-   }
+   },
+   "ride_db_before_final_round": 10.0,
+   "final_round": "the final fix round (2026-10-11, Act Three, hand-set): sc 15 is 3 s longer, sc 17 3 s shorter and the score re-laid on that lock, so its notes fall in new places against this sound; lifted by its shortfall to an attack of +6 dB over the local mix plus about 0.5 dB"
   },
   {
    "seg": "act3",
@@ -903,14 +905,16 @@
    "snr_before_db": -14.0,
    "band": "1000-2000 Hz",
    "target_db": 6.0,
-   "ride_db": 7.6,
+   "ride_db": 11.7,
    "why": "first heard -14.0 dB over rooms and score in its own band (1000-2000 Hz) at the lock's gain; the ride is the smaller lift to an attack of +6 dB over the local mix or a body of +6 dB",
    "measured_with_ride": {
     "ride_db": 7.6,
     "attack_over_local_db": 6.0,
     "body_db": -6.4,
     "band": "1000-2000 Hz"
-   }
+   },
+   "ride_db_before_final_round": 7.6,
+   "final_round": "the final fix round (2026-10-11, Act Three, hand-set): sc 15 is 3 s longer, sc 17 3 s shorter and the score re-laid on that lock, so its notes fall in new places against this sound; lifted by its shortfall to an attack of +6 dB over the local mix plus about 0.5 dB"
   },
   {
    "seg": "act3",
@@ -1563,6 +1567,18 @@
    },
    "ride_db_before_fixes": 0.0,
    "fixes_pass": "the fixes pass (2026-10-10, Act Four, hand-set): Neleh's new take moved sc 18 and sc 19's beats and the act's quartet was re-rendered on the new lock, so the score's notes fall in new places against these sounds; each lifted by its shortfall to an attack of +6 dB over the local mix (or its body to its target) plus 0.3 dB"
+  },
+  {
+   "seg": "act3",
+   "beat": "17.19",
+   "name": "phone_buzz_step_1",
+   "laid_as": "phone_buzz_step_1",
+   "snr_before_db": -7.3,
+   "band": "60-250 Hz",
+   "target_db": 6.0,
+   "ride_db": 8.5,
+   "why": "new at the final fix round (the press's push about VOICE 5 drops in on it, 17.19): first heard -7.3 dB over rooms and score in its own band (60-250 Hz) at the lock's gain, its attack -1.8 dB over the local mix under the rain's pad; the ride lifts its attack to +6 dB over the local mix plus about 0.5 dB",
+   "final_round": "the final fix round (2026-10-11, Act Three, hand-set): sc 15 is 3 s longer, sc 17 3 s shorter and the score re-laid on that lock, so its notes fall in new places against this sound; lifted by its shortfall to an attack of +6 dB over the local mix plus about 0.5 dB"
   }
  ]
 }

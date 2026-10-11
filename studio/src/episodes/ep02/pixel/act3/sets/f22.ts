@@ -30,7 +30,7 @@ import {ALYI_STAND_W, ALYI_STAND_H, ALYI_STAND_FOOT} from '../../../../../shared
 import {PAL, stepColor, lightness} from '../../../../../shared/pixel/palette';
 import {Mask} from '../../../../../shared/pixel/mask';
 import {checkInECU, fireToPoint, stringLights} from '../../art/sets/f22';
-import {drawAlyiRoom2, drawTpoolCheckIn} from '../../art/cast/alyi2';
+import {drawTpoolCheckIn} from '../../art/cast/alyi2';
 import {sleeve} from '../../art/cast/hands2';
 import {publishECU} from '../../art/sets/alyioffice';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
@@ -109,7 +109,7 @@ export const partyWide = (b: Buf, f: number, st: {chant: 0 | 1 | 2 | 3; hands?: 
   stringLights(b, 0, 10, 480, 14, 10, f); stringLights(b, 60, 30, 470, 22, 14, f + 5); stringLights(b, 0, 52, 300, 44, 8, f + 3);
   // the crowd in silhouette, its hands going up with the chant (none near Alyi, so his own raised hand stays his)
   partyCrowd(b, 60, 480, 150, 4, f, {seed: 9, dim: 2, hands: st.hands ?? 0, skip: (x) => x > 172 && x < 214});
-  drawAlyiRoom2(b, 190, 176, {arm: chant >= 1 ? 'raise' : 'down', light: 'party', smile: true});
+  drawAlyiRoomF(b, 190, 176, {arm: chant >= 1 ? 'raise' : 'down', light: 'party', smile: true});
   stringLights(b, 150, 74, 236, 78, 5, f + 2, 5);
   for (let y = 80; y < RH; y++) for (let x = 120; x < 280; x++) { const d = Math.hypot((x - 192) / 90, (y - 140) / 70); if (d < 1 && bayer(x, y) < (1 - d) * 0.5) b.set(x, y, stepColor(b.get(x, y), 1)); }
   glossBloom(b, 0, 0, 480, RH, 0.7, 1);
@@ -363,30 +363,41 @@ export const publish = (b: Buf, f: number, st: {press: boolean}) => {
 // it). The effigy now stands just outside the doorway; Alyi, still in the doorway with its jamb over his back half,
 // reaches his long match to its lower body (one held drawing, 'touch') before the whoomph; after it, the match lowered.
 // His room figure is the art's (art/cast/alyi2 drawAlyiRoom2) with one more arm, 'reach', copied below.
+//
+// THE SECOND FIXES PASS (2026-10-10; the episode review, round 2): the room-scale head (Ep1's alyi-speak stand, as the
+// art copied it) has a solid dark brow bar straight over two dark-rimmed eyes with glints, so at room scale he read as
+// wearing sunglasses: bald with glasses is Tasya's design (P8). Round 1 fixed only his close heads (alyiWarmF). Here the
+// room head takes the calm head's eye band: two short brows a row higher, in his hair's lighter tone and apart; a row of
+// skin under them; open eyes with whites, the pupils toward where he faces. Smiling, the eyes stay open (as alyiWarmF:
+// the smile is the mouth's); only the mouth rows change. Every room-scale Alyi in the act is drawn here now
+// (drawAlyiRoomF: the party's chant wide, the offsite's torch, touch and lowered match); Act One's 2018 all-hands has its
+// own copy (act1/sets/f23.ts)
 const SHEAD_R = [
-  '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh2334444455o...', 'hhh23444bbbbb...', 'hhh2234eO4Oe4o..',
+  '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh23344hh4hho...', 'hhh234444444o...', 'hhh2234Oe4Oe4o..',
   'hhh22334444444o.', '.hh22334444444o5', '.oh2233444444o..', '..o122334mmm4o..', '..o122334444443.', '...o1222333332..', '....o11222......', '.....o1122......', '.....o1122......', '.....o1122......',
 ];
-interface AlyiRoomR { arm: 'reach' | 'down'; light: 'party' | 'fire' | 'room'; smile?: boolean; f?: number }
+type AlyiArmR = 'reach' | 'down' | 'raise' | 'torch';
+interface AlyiRoomR { arm: AlyiArmR; light: 'party' | 'fire' | 'room'; smile?: boolean; f?: number }
 const rfigR = (p: AlyiRoomR): FigureDef => {
   const leg = (g: string, hip: number, kx: number, ax: number): Part[] => [
     {group: g, mat: 'pants', prims: [seg(hip, 44, 7.2, kx, 58, 5.8), seg(kx, 58, 5.6, ax, 73, 4.6), P.ell(kx, 58, 2.8, 2.6)]},
     {group: g + 's', mat: 'shoe', prims: [P.poly(ax - 2.4, 72, ax + 2.4, 72, ax + 6, 75, ax + 6, 78, ax - 2.8, 78)]},
   ];
   const sl = (g: string, sx: number, sy: number, ex: number, ey: number, hx: number, hy: number): Part => ({group: g, mat: 'sw', prims: [P.ell(sx, sy, 3.6, 3.8), seg(sx, sy, 6.6, ex, ey, 5.8), seg(ex, ey, 5.6, hx, hy, 4.8), P.ell(ex, ey, 2.8, 2.8)]});
-  // 'reach': the near arm out and down from the shoulder, the elbow a little bent, the hand forward at his hip's height
-  const N = p.arm === 'reach' ? [31, 31, 38, 39] : [26, 32, 26.4, 41];
+  // 'reach': the near arm out and down from the shoulder, the elbow a little bent, the hand forward at his hip's height;
+  // 'raise' and 'torch' as the art's (the chant's raised hand; the long match held up)
+  const N = p.arm === 'reach' ? [31, 31, 38, 39] : p.arm === 'raise' ? [31, 15, 33, 3] : p.arm === 'torch' ? [30, 30, 35, 24] : [26, 32, 26.4, 41];
   const parts: Part[] = [
     ...leg('legF', 15.5, 15.4, 15), sl('armF', 14, 21, 14, 32, 14.4, 41), ...leg('legN', 21, 21.4, 21.6),
     {group: 'torso', mat: 'sw', prims: [P.poly(13, 18, 19, 16, 25, 17, 28, 21, 28, 30, 27, 37, 28, 45, 11, 45, 11, 38, 10, 30, 10, 22)]},
     sl('armN', 25, 21, N[0], N[1], N[2], N[3]),
   ];
   const rows = SHEAD_R.slice();
-  if (p.smile) { rows[6] = 'hhh2234bb4bb4o..'; rows[10] = '..o12233m444m4o.'; rows[11] = '..o122334mmm43..'; }
+  if (p.smile) { rows[10] = '..o12233m444m4o.'; rows[11] = '..o122334mmm43..'; }
   const stamps: Stamp[] = [{x: 11, y: 0, rows, pal: {o: ['skin', 0], '1': ['skin', 1], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5], h: ['hair', 1], b: ['hair', 0], e: ['dark', 0], O: ['glint', 0], m: ['skin', 1], M: ['dark', 0]}}];
   const hand = (x: number, y: number) => ({x: Math.round(x) - 1, y: Math.round(y) - 1, rows: ['.34.', '3445', '2344', '.22.'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]} as Stamp['pal']});
   stamps.push(hand(14.4, 41));
-  stamps.push(hand(N[2], N[3]));
+  if (p.arm !== 'raise') stamps.push(hand(N[2], N[3]));
   return {w: ALYI_STAND_W, h: ALYI_STAND_H, parts, adjust: [{prims: [P.rect(0, 60, ALYI_STAND_W, 20)], add: -1, onlyMat: 'pants'}], stamps};
 };
 const RAMP_R = (light: AlyiRoomR['light']): Record<string, number[]> => light === 'fire' ? {
@@ -404,6 +415,24 @@ const rrigR = (light: AlyiRoomR['light']): LightRig => ({
   keyGain: (_x, y) => (y < 44 ? 1 : Math.max(0.25, 1 - (y - 44) / 34)),
 });
 const roomR = memo((p: AlyiRoomR) => renderFigure(rfigR({...p, f: 0}), rrigR(p.light)));
+/** Alyi at room scale with the fixed head (the art's drawAlyiRoom2, copied: its long match for 'torch', its open raised
+ *  hand for 'raise'), footX/footY his foot point, faces screen-right (flip for left) */
+export const drawAlyiRoomF = (b: Buf, footX: number, footY: number, p: AlyiRoomR, o: {flip?: boolean; clip?: (x: number, y: number) => boolean} = {}) => {
+  const fx = o.flip ? ALYI_STAND_W - 1 - ALYI_STAND_FOOT[0] : ALYI_STAND_FOOT[0];
+  const x0 = footX - fx, y0 = footY - ALYI_STAND_FOOT[1];
+  blitImg(b, roomR({...p, f: 0}), x0, y0, {flip: o.flip, clip: o.clip});
+  const X = (lx: number) => (o.flip ? x0 + ALYI_STAND_W - 1 - lx : x0 + lx);
+  if (p.arm === 'torch') { line(X(35), y0 + 24, X(39), y0 + 7, b.ink(p.light === 'fire' ? PAL.W6 : PAL.P1)); b.set(X(39), y0 + 6, PAL.R2); b.set(X(39), y0 + 5, PAL.R1); matchFlameS(b, X(39), y0 + 4, p.f ?? 0); }
+  if (p.arm === 'raise') {
+    const sk = p.light === 'fire' ? [PAL.S2, PAL.S4, PAL.S5, PAL.S6] : [PAL.S1, PAL.S3, PAL.S4, PAL.S5];
+    line(X(33), y0 + 4, X(34), y0 - 3, b.ink(sk[1])); line(X(32), y0 + 4, X(33), y0 - 3, b.ink(sk[2]));
+    const hx = X(34), hy = y0 - 4;
+    fill(b, hx - 2, hy - 3, 5, 4, sk[2]); fill(b, hx - 2, hy - 3, 5, 1, sk[3]);
+    for (const [ffx, fh] of [[-2, 3], [0, 4], [2, 4]] as Array<[number, number]>) for (let j = 1; j <= fh; j++) b.set(hx + ffx, hy - 3 - j, j === fh ? sk[3] : sk[2]);
+    b.set(hx - 3, hy - 2, sk[2]); b.set(hx - 4, hy - 3, sk[3]);
+    b.set(hx + 3, hy - 4, sk[2]); b.set(hx + 4, hy - 6, sk[2]);
+  }
+};
 const FIRE = [PAL.R1, PAL.R2, PAL.W5, PAL.W6, PAL.W7, PAL.W8];
 /** the fire (the art's): a palette-cycled body of flame tongues (held 3 frames a drawing; the colours walk) */
 const fireBody = (b: Buf, cx: number, by: number, w: number, h: number, f: number) => {
@@ -444,7 +473,7 @@ export const offsiteWide = (b: Buf, f: number, st: {fire: 0 | 1 | 2; alyi: 'torc
   effigy(b, EFF.x, EFF.y, fr);
   if (fr >= 1) fireBody(b, EFF.x + 20, EFF.y, fr === 1 ? 8 : 26, fr === 1 ? 16 : 70, f);
   const [fx, fy] = ALYI_FOOT, x0 = fx - ALYI_STAND_FOOT[0], y0 = fy - ALYI_STAND_FOOT[1];
-  if (st.alyi === 'torch' || st.alyi === 'stand') drawAlyiRoom2(b, fx, fy, {arm: st.alyi === 'torch' ? 'torch' : 'down', light: 'fire', f}, {clip: (x) => x >= 60});
+  if (st.alyi === 'torch' || st.alyi === 'stand') drawAlyiRoomF(b, fx, fy, {arm: st.alyi === 'torch' ? 'torch' : 'down', light: 'fire', f}, {clip: (x) => x >= 60});
   if (st.alyi === 'touch' || st.alyi === 'lowered') {
     blitImg(b, roomR({arm: st.alyi === 'touch' ? 'reach' : 'down', light: 'fire', f: 0}), x0, y0, {clip: (x) => x >= 60});
     // the long fireplace match: from his hand, its head on the effigy's lower body and its flame there ('touch'), or

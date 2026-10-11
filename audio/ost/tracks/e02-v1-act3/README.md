@@ -65,6 +65,13 @@ The episode review's Act Three fixes changed the lock inside the act (its 7,680 
 - **The cues:** E02-08 −20.47 LUFS-I (its section 10, the domino, −21.12); E02-09 −20.01; E02-10 −19.53. V.O. 7's window −23.81 LUFS of score (99.22-101.45 s).
 - **For an ear:** the domino's two ticks over the Ache, straight into the creak's stop (a shorter chill than the screws' bar); THE CLOCK's first tick under Act Two's black, 0.24 s later than before.
 
+## The second fixes pass (2026-10-10): re-laid on the relock
+
+The verify round's Act Three fixes ([fixes-v1.md](../../../../show/episodes/ep02/production/v1/fixes-v1.md), Act Three, round 2) moved time inside the act; its 7,680 frames hold. **Sc 15 is 1:44 (+3 s)**: Alyi's far count runs on through Ep1's base ("From the day we started to that click.", 5.26 s of take), so E02-09 from the far line on sits about 3 s later. **Sc 17 is 2:07 (−3 s)**: V.O. 9 is "the post. the post." (1.37 s, was 3.48), **V.O. 10 is cut** (17.13 a held thumb, 3.6 s, was 5.0), and 17.19 is 1.0 s longer (the press's push about VOICE 5 before the pause). The score re-lays itself from the lock (every sync point above is read from it, so the seconds in the tables below are round 1's): the held E♭9sus under 17.13 now carries no line (`track.py`: `vo10` is None, its ride gone); nothing else in the cues changed.
+- **`check.py`, the six segments: all PASS** [M]. `act3 7680 f 320.000 s exact=True lock=True −19.92 LUFS-I −3.15 dBTP | silence 0 holes 0 holes-42 0 frag 0 | 12 dB steps 0 unmarked 0 | pocket p10 13.0 min 11.1 fail 0 | PASS`.
+- **The V.O. windows** [M]: V.O. 7 −23.07 LUFS of score (102.38-104.61 s), V.O. 8 −22.62, V.O. 9 −24.50 (252.57-253.94 s). Momentary: the head −16.7, the full band −13.4, the DREAD −15.4.
+- **For an ear:** V.O. 7 now enters 1.2 s after the far line's "…to that click." (was after "…months."); the held chord under his thumb, 3.6 s with no voice in it.
+
 ## What plays (the cue sheet)
 
 EL seconds, on the segment's own clock (0 = Act Three's first frame). Chord changes that land on cuts pre-lap them by the latest grid point at least 0.15 s before the cut. They measure 0.17–0.46 s [M]; the exceptions are judgement calls 2 and 3. No change lands inside a V.O., a line of his, a real line or the record on screen; each moves before or after it.

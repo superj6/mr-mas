@@ -8,13 +8,14 @@
 //            down now?" · his face: "leave them up." · 13.03 a fallen flyer; he picks it up and tapes it back himself,
 //            upside down; nobody corrects him; his upside-down flyer, a beat: his hand comes back to turn it, stops,
 //            and lowers (a choice) · 13.03b (the fixes pass) the staffers, low: "Did his post say why?" "No."
-//   COUNTER  13.04 the lobby TV framed in the foreground, pushed in to full frame: the presser, REMUHCS · MAJORITY LEADER,
+//   COUNTER  13.04 the lobby TV the staffers stand under, pushed in until its bezel is the frame's edge (the second fixes
+//            pass: it had cut in at full frame): the presser, REMUHCS · MAJORITY LEADER,
 //            the lectern ROADMAP · $32B/YR with nine FORUM stickers that won't go through FLOOR, face on or sideways ·
 //            13.05 the reporter's question from the TV (no answer in a real senator's mouth); an aide slaps on a tenth
 //   OUT      13.06 the master: Mas walks off frame-right; the adventure band lights as he crosses (sc 14's band)
 // No reflection, no image of Alyi: every flyer's photo is a doorway with nobody in it.
 import {defineScene, layouts, mouth, mk} from '../../kit';
-import {pillarMedium, masMCU13, floorECU, tapeMCU, flyerPillarECU, presser, tvPush, lobbyWide, lobbyArrive, PRESS} from '../sets/lobby';
+import {pillarMedium, masMCU13, floorECU, tapeMCU, flyerPillarECU, tvPushStep, tvFull, lobbyWide, lobbyArrive, PRESS} from '../sets/lobby';
 import {roomWalkAt} from '../../../../../shared/pixel/cast/civic-kit';
 import type {Mas2Legs} from '../../art/cast/mas2';
 
@@ -80,7 +81,7 @@ L.add('13.03b', {
   },
 });
 L.add('13.04', {
-  st: 'act3/sets/lobby tvPush → presser ([SCR] the lobby\'s TV framed close in the foreground, the presser on it at half size; pushed in to full frame: the Senate press room (art/props/ui presserFull\'s pieces re-staged): REMUHCS (plated REMUHCS · MAJORITY LEADER) and three bipartisan colleagues (civic-extras senators), the bill-shaped lectern ROADMAP · $32B/YR with nine FORUM stickers carried along the wall by two aides, both gripping its side edges: the lead aide backs into the narrow FLOOR doorway ahead of it; its leading edge strikes the door\'s jamb face on (contact, the jamb jolts, then the recoil); they turn it sideways, push again, and it strikes again; the presser\'s own lower third BIPARTISAN SENATE AI ROADMAP)',
+  st: 'act3/sets/lobby tvPushStep → tvFull ([SCR] the second fixes pass, 2026-10-10: the presser stays on the lobby TV the staffers stand under, pushed in on as sc 18 pushes in on Neleh\'s player: the TV on its stand in the soft lobby, the presser on it at half size, the backs of the two staffers\' heads under it (they have turned to it); a second held step closer (three quarters), the staffers past the frame\'s foot; then the TV\'s bezel at the frame\'s edge, the glass\'s sheen and the lobby window\'s faint upright on it, the presser inside at its own scale: the Senate press room (art/props/ui presserFull\'s pieces re-staged): REMUHCS (plated REMUHCS · MAJORITY LEADER) and three bipartisan colleagues (civic-extras senators), the bill-shaped lectern ROADMAP · $32B/YR with nine FORUM stickers carried along the wall by two aides, both gripping its side edges: the lead aide backs into the narrow FLOOR doorway ahead of it; its leading edge strikes the door\'s jamb face on (contact, the jamb jolts, then the recoil); they turn it sideways, push again, and it strikes again; the presser\'s own lower third BIPARTISAN SENATE AI ROADMAP)',
   marks: {b1: ['snd', 'lectern_bump', 1, 0], b2: ['snd', 'lectern_bump', 2, 0]},
   draw: (fb, k, sh, f) => {
     const b1 = mk(sh, 'b1', 52), b2 = mk(sh, 'b2', 81), J = PRESS.jamb;
@@ -94,18 +95,18 @@ L.add('13.04', {
     else if (k < b2 + 2) { turn = 2; lx = J - 40; hit = k - b2 + 1; }
     else { turn = 2; lx = J - 40 - 4; }
     const st = {lx, turn, hit, walk};
-    if (k < 16) { tvPush(fb, f, st); return; }
-    presser(fb, f, st);
+    if (k < 16) { tvPushStep(fb, f, st, k < 8 ? 1 : 1.5); return; }
+    tvFull(fb, f, st);
   },
 });
 L.add('13.05', {
-  st: 'act3/sets/lobby presser ([SCR] the press room: the reporter\'s question from off camera (the TV\'s audio; no senator speaks); the lectern stuck sideways at the doorway; the aides give up and turn it face on again by the door (their hands on its edges); the rear aide\'s hand slaps a tenth FORUM sticker on it, crooked, on the slap)',
+  st: 'act3/sets/lobby tvFull ([SCR] on the lobby TV, its bezel at the frame\'s edge: the press room: the reporter\'s question from off camera (the TV\'s audio; no senator speaks); the lectern stuck sideways at the doorway; the aides give up and turn it face on again by the door (their hands on its edges); the rear aide\'s hand slaps a tenth FORUM sticker on it, crooked, on the slap)',
   marks: {slap: ['snd', 'sticker_slap_tv', 1, 0]},
   draw: (fb, k, sh, f) => {
     const s = mk(sh, 'slap', 72), J = PRESS.jamb;
     const turn = (k < s - 14 ? 2 : k < s - 10 ? 1 : 0) as 0 | 1 | 2;
     const lw = turn === 2 ? 40 : turn === 1 ? 60 : 84;
-    presser(fb, f, {lx: J - lw - 4, turn, tenth: k >= s, slap: k >= s - 4 && k < s ? 1 : k >= s && k < s + 8 ? 2 : 0});
+    tvFull(fb, f, {lx: J - lw - 4, turn, tenth: k >= s, slap: k >= s - 4 && k < s ? 1 : k >= s && k < s + 8 ? 2 : 0});
   },
 });
 L.add('13.06', {

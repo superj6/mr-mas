@@ -8,8 +8,8 @@
 //                          the cut paper's moving front (a lit edge and its shadow)
 import {Buf, line, ellipse, bayer, hash} from '../../../../../shared/pixel/px';
 import {PAL, stepColor, familyOf} from '../../../../../shared/pixel/palette';
-import {blitImg} from '../../../../../shared/pixel/figure';
-import type {Img} from '../../../../../shared/pixel/figure';
+import {blitImg, renderFigure, P} from '../../../../../shared/pixel/figure';
+import type {Img, FigureDef, LightRig, Part, Stamp} from '../../../../../shared/pixel/figure';
 import {arena} from '../../../../ep01/pixel/act1/art/v35';
 import {drawGergStand} from '../../../../../shared/pixel/cast/gerg-stand';
 import {noleImg, NOLE_BASE, NOLE_FOOT} from '../../../../../shared/pixel/cast/nole';
@@ -22,7 +22,8 @@ import {RH, W} from './common';
 
 export {arenaInsert} from '../../art/sets/office2018';
 import {alyiWarm} from '../../art/cast/alyi2';
-import {drawAlyiRoom2} from '../../art/cast/alyi2';
+import {memo, seg} from '../../../../../shared/pixel/cast/kit';
+import {ALYI_STAND_W, ALYI_STAND_H, ALYI_STAND_FOOT} from '../../../../../shared/pixel/cast/alyi-speak';
 import {putBust} from '../../../../../shared/pixel/rooms/bullpen-launch';
 
 const FLOOR = 150;
@@ -135,9 +136,51 @@ export const office18 = (b: Buf, f: number, st: Office18 = {}) => {
   paperSprite(b, (t) => drawGergStand(t, 334, 176, {legs: 'stand', type: Math.floor(f / 4) % 2 ? 1 : 2, look: 'screen', mouth: 'rest', light: 'room'}));
   // ALYI at his desk at the front right, by the rack: a person in the room, turned to Nole, then back to his monitor
   paper(b, (t) => { fill(t, 398, 160, 46, 3, PAL.D2); fill(t, 400, 163, 2, 26, PAL.N1); fill(t, 440, 163, 2, 26, PAL.N1); fill(t, 418, 138, 22, 16, PAL.N1); fill(t, 420, 140, 18, 12, PAL.C5); fill(t, 426, 154, 6, 6, PAL.N1); });
-  paperSprite(b, (t) => drawAlyiRoom2(t, 410, 192, {arm: 'down', light: 'room'}, {flip: !st.alyiDesk}), {keepSkin: true});
+  paperSprite(b, (t) => drawAlyiRoom18(t, 410, 192, {flip: !st.alyiDesk}), {keepSkin: true});
   paperSprite(b, (t) => { drawMasStand2(t, 30, 190, {arm: st.mas ?? 'glass'}); waterGlass(t, 30, 190); });
   grain(b, 0, 0, 480, RH, (x, y) => x >= 58 && x < 92 && y >= 106 && y < 126);
+};
+// ALYI AT ROOM SCALE (the second fixes pass, 2026-10-10; the episode review, round 2): the art's room figure
+// (art/cast/alyi2 drawAlyiRoom2, Ep1's alyi-speak stand) has a solid dark brow bar straight over two dark-rimmed eyes, so
+// at room scale he read as wearing sunglasses: bald with glasses is Tasya's design (P8). This copy, its one pose here
+// (the arm down, the room's light), has the fixed head Act Three's room figure has (act3/sets/f22.ts SHEAD_R): two short
+// brows a row higher in his hair's lighter tone, a row of skin under them, open eyes with whites, the pupils toward
+// where he faces. The art's file is left as it is (other scenes import it)
+const SHEAD18 = [
+  '....oo4455oo....', '..o344455555o...', '.o33444455554o..', '.o3344444555o5..', 'hh23344hh4hho...', 'hhh234444444o...', 'hhh2234Oe4Oe4o..',
+  'hhh22334444444o.', '.hh22334444444o5', '.oh2233444444o..', '..o122334mmm4o..', '..o122334444443.', '...o1222333332..', '....o11222......', '.....o1122......', '.....o1122......', '.....o1122......',
+];
+const alyiFig18 = (): FigureDef => {
+  const leg = (g: string, hip: number, kx: number, ax: number): Part[] => [
+    {group: g, mat: 'pants', prims: [seg(hip, 44, 7.2, kx, 58, 5.8), seg(kx, 58, 5.6, ax, 73, 4.6), P.ell(kx, 58, 2.8, 2.6)]},
+    {group: g + 's', mat: 'shoe', prims: [P.poly(ax - 2.4, 72, ax + 2.4, 72, ax + 6, 75, ax + 6, 78, ax - 2.8, 78)]},
+  ];
+  const sl = (g: string, sx: number, sy: number, ex: number, ey: number, hx: number, hy: number): Part => ({group: g, mat: 'sw', prims: [P.ell(sx, sy, 3.6, 3.8), seg(sx, sy, 6.6, ex, ey, 5.8), seg(ex, ey, 5.6, hx, hy, 4.8), P.ell(ex, ey, 2.8, 2.8)]});
+  const parts: Part[] = [
+    ...leg('legF', 15.5, 15.4, 15), sl('armF', 14, 21, 14, 32, 14.4, 41), ...leg('legN', 21, 21.4, 21.6),
+    {group: 'torso', mat: 'sw', prims: [P.poly(13, 18, 19, 16, 25, 17, 28, 21, 28, 30, 27, 37, 28, 45, 11, 45, 11, 38, 10, 30, 10, 22)]},
+    sl('armN', 25, 21, 26, 32, 26.4, 41),
+  ];
+  const stamps: Stamp[] = [{x: 11, y: 0, rows: SHEAD18.slice(), pal: {o: ['skin', 0], '1': ['skin', 1], '2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5], h: ['hair', 1], b: ['hair', 0], e: ['dark', 0], O: ['glint', 0], m: ['skin', 1], M: ['dark', 0]}}];
+  const hand = (x: number, y: number) => ({x: Math.round(x) - 1, y: Math.round(y) - 1, rows: ['.34.', '3445', '2344', '.22.'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]} as Stamp['pal']});
+  stamps.push(hand(14.4, 41), hand(26.4, 41));
+  return {w: ALYI_STAND_W, h: ALYI_STAND_H, parts, adjust: [{prims: [P.rect(0, 60, ALYI_STAND_W, 20)], add: -1, onlyMat: 'pants'}], stamps};
+};
+const RIG18: LightRig = {
+  key: [0.55, -0.83], keyBand: 3, shadowBand: 3, rim: true, outline: true,
+  back: [-1, -0.1], backBand: 1, backRamp: {skin: PAL.W6, hair: PAL.W4, sw: PAL.W4, pants: PAL.W3, shoe: PAL.W2},
+  ramps: {
+    skin: [PAL.S0, PAL.S1, PAL.S3, PAL.S4, PAL.S5, PAL.W8], hair: [PAL.N0, PAL.B0, PAL.B1, PAL.B2, PAL.B3, PAL.W4], sw: [PAL.N0, PAL.N1, PAL.X0, PAL.X1, PAL.X2, PAL.W5],
+    pants: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N5], shoe: [PAL.N0, PAL.N0, PAL.D1, PAL.D2, PAL.D3, PAL.W3], glint: Array(6).fill(PAL.W8), dark: Array(6).fill(PAL.N0),
+  },
+  groupBands: {torso: {key: 3, shadow: 3}, armN: {key: 2, shadow: 2}, armF: {key: 1, shadow: 2}, legN: {key: 2, shadow: 2}, legF: {key: 1, shadow: 2}},
+  keyGain: (_x, y) => (y < 44 ? 1 : Math.max(0.25, 1 - (y - 44) / 34)),
+};
+const alyiImg18 = memo((_p: {k: 0}) => renderFigure(alyiFig18(), RIG18));
+/** Alyi at room scale, the arm down, in the room's light; footX/footY his foot point; faces screen-right (flip: left) */
+const drawAlyiRoom18 = (b: Buf, footX: number, footY: number, o: {flip?: boolean} = {}) => {
+  const fx = o.flip ? ALYI_STAND_W - 1 - ALYI_STAND_FOOT[0] : ALYI_STAND_FOOT[0];
+  blitImg(b, alyiImg18({k: 0}), footX - fx, footY - ALYI_STAND_FOOT[1], {flip: o.flip});
 };
 /** his glass is WATER (Nole: "you sat at the back with your glass of water"): the art rig's tumbler carries an amber
  *  drink, so in his hand's box (the sprite's x 24..38, y 6..32 from its top left: below his hair, whose top rung is

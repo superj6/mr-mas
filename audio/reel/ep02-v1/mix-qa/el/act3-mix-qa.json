@@ -6,11 +6,11 @@
  "samples": 15360000,
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act3.json",
  "dialogue": {
-  "lines": 30,
+  "lines": 29,
   "device": {
    "tv": 1
   },
-  "el_matched": 30,
+  "el_matched": 29,
   "missing": [],
   "line_gains": {
    "e2-a3-0025": 3.0
@@ -27,32 +27,32 @@
    {
     "line": "e2-a3-0009",
     "db": -6.0,
-    "from_s": 117.725,
-    "to_s": 120.265,
+    "from_s": 120.892,
+    "to_s": 123.432,
     "ramp_s": 0.35,
     "why": "15.06: Alyi's \"FEEL THE AGI!\", the chant's first voice, over the party bed"
    },
    {
     "line": "e2-a3-0011",
     "db": -6.0,
-    "from_s": 124.088,
-    "to_s": 126.228,
+    "from_s": 127.203,
+    "to_s": 129.343,
     "ramp_s": 0.35,
     "why": "15.07: \"You're not chanting.\" (the motive flashback's exchange, under the chant and the party)"
    },
    {
     "line": "e2-a3-0012",
     "db": -6.0,
-    "from_s": 125.728,
-    "to_s": 128.668,
+    "from_s": 128.843,
+    "to_s": 131.783,
     "ramp_s": 0.35,
     "why": "15.07: Mas's \"someone has to hold the glass.\" (its tail was masked by the party bed)"
    },
    {
     "line": "e2-a3-0013",
     "db": -6.0,
-    "from_s": 127.968,
-    "to_s": 130.888,
+    "from_s": 131.083,
+    "to_s": 134.003,
     "ramp_s": 0.35,
     "why": "15.07: \"Then I'll feel it for both of us.\" (the exchange's last line, laughing)"
    }
@@ -80,7 +80,7 @@
      7
     ],
     [
-     "E02-08 WHERE'S ALYI?",
+     "E02-10 out",
      9
     ],
     [
@@ -96,7 +96,7 @@
      9
     ],
     [
-     "E02-10 out",
+     "E02-08 WHERE'S ALYI?",
      9
     ]
    ],
@@ -110,22 +110,22 @@
   "rides": [
    {
     "beat": "17.07",
-    "from": 230.24,
-    "to": 238.0,
+    "from": 233.12,
+    "to": 240.88,
     "db": -3.0,
     "why": "S11: \"His phone won't stop\": the buzzes over the scramble (17.07-17.08)"
    },
    {
     "beat": "15.06",
-    "from": 117.97,
-    "to": 119.78,
+    "from": 121.14,
+    "to": 122.94,
     "db": -4.0,
     "why": "S11: Alyi's \"FEEL THE AGI!\" over the party (the fixes pass)"
    },
    {
     "beat": "15.07",
-    "from": 124.06,
-    "to": 130.92,
+    "from": 127.18,
+    "to": 134.04,
     "db": -5.0,
     "why": "S11: the exchange under the chant, \"You're not chanting.\" to \"\u2026both of us.\" (the fixes pass)"
    },
@@ -138,10 +138,24 @@
    },
    {
     "beat": "15.15",
-    "from": 166.0,
-    "to": 167.4,
+    "from": 169.04,
+    "to": 170.44,
     "db": -5.0,
     "why": "S11: the catch: the whoomph and the crackle over the Ache's entry (the fixes pass)"
+   },
+   {
+    "beat": "15.03",
+    "from": 95.67,
+    "to": 105.54,
+    "db": -5.0,
+    "why": "S11: Alyi's far count through \"\u2026to that click.\" and V.O. 7, \"eight years and five months.\" (the final fix round)"
+   },
+   {
+    "beat": "15.17",
+    "from": 179.81,
+    "to": 182.01,
+    "db": -4.0,
+    "why": "S11: V.O. 8, \"i'll ask him in person.\" (the final fix round)"
    }
   ],
   "next_prelap": {
@@ -154,16 +168,16 @@
   }
  },
  "measured": {
-  "lufs_i": -16.02,
-  "true_peak_dbtp": -1.07,
-  "sample_peak_dbfs": -1.5,
-  "lra_lu": 6.9,
-  "gain_db": 2.49,
-  "limiter_ceiling_dbfs": -1.5,
-  "limiter_active_s": 1.947,
-  "dialogue_lufs": -13.6,
-  "score_lufs_after_duck": -18.29,
-  "score_rms_under_speech_dbfs": -28.6,
+  "lufs_i": -16.05,
+  "true_peak_dbtp": -1.11,
+  "sample_peak_dbfs": -2.0,
+  "lra_lu": 6.7,
+  "gain_db": 2.58,
+  "limiter_ceiling_dbfs": -2.0,
+  "limiter_active_s": 3.783,
+  "dialogue_lufs": -13.63,
+  "score_lufs_after_duck": -18.19,
+  "score_rms_under_speech_dbfs": -28.7,
   "score_rms_between_speech_dbfs": -19.6,
   "score_runs": {
    "count": 1,
@@ -175,8 +189,8 @@
     ]
    ]
   },
-  "rooms_lufs": -34.24,
-  "sfx_lufs": -29.09,
+  "rooms_lufs": -34.16,
+  "sfx_lufs": -28.97,
   "holes_under_-42dBFS_0.3s": [],
   "holes_mono_downmix": [],
   "holes_without_score": [],
@@ -184,12 +198,12 @@
   "unmarked_holes_mono": 0,
   "unmarked_holes_without_score": 0,
   "jumps_over_15dB": {
-   "count": 24,
-   "rising": 18,
-   "rising_at_a_word": 17,
-   "rising_at_an_sfx": 0,
+   "count": 29,
+   "rising": 23,
+   "rising_at_a_word": 21,
+   "rising_at_an_sfx": 1,
    "rising_other": [
-    283.4
+    281.35
    ],
    "falling": 6
   }
@@ -198,10 +212,10 @@
  "guard_db": null,
  "seam_head": {
   "from_gain_db": 2.03,
-  "to_gain_db": 2.49,
+  "to_gain_db": 2.58,
   "ramp_s": 2.0,
   "after": "act2"
  },
- "built": "2026-10-10 19:50:57",
+ "built": "2026-10-11 01:05:16",
  "heard": "nothing here has been listened to; every number is measured"
 }

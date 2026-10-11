@@ -927,7 +927,13 @@ SCORE_RIDE = {                                           # seg -> [(beat, from s
              ('15.06', 1.6, 3.4, -4.0, 'S11: Alyi\'s "FEEL THE AGI!" over the party (the fixes pass)'),
              ('15.07', 0.6, 'end', -5.0, 'S11: the exchange under the chant, "You\'re not chanting." to "…both of us." (the fixes pass)'),
              ('13.03b', 0.0, 'end', -4.0, 'S11: the staffers\' low exchange, "Did his post say why?" / "No." (the fixes pass: the gate\'s answer must be heard)'),
-             ('15.15', 0.0, 1.4, -5.0, 'S11: the catch: the whoomph and the crackle over the Ache\'s entry (the fixes pass)')],
+             ('15.15', 0.0, 1.4, -5.0, 'S11: the catch: the whoomph and the crackle over the Ache\'s entry (the fixes pass)'),
+             # the final fix round (2026-10-11): Alyi's far count runs on through its base (3.2 s longer) and E02-09 was
+             # re-laid on that lock; the audit's WHOLE check measured the score as the masker of the far line and of V.O. 7
+             # (room and SFX more than 30 dB under it in 1-4 kHz): V.O. 7's 10th percentile +0.5 dB (was +3.2), the far
+             # line's +2.8 (was +5.7), V.O. 8's +2.5 (was +4.6). The score makes room for the count and for the plan
+             ('15.03', 0.3, 'end', -5.0, 'S11: Alyi\'s far count through "…to that click." and V.O. 7, "eight years and five months." (the final fix round)'),
+             ('15.17', 1.6, 3.8, -4.0, 'S11: V.O. 8, "i\'ll ask him in person." (the final fix round)')],
     # Act Four's fixes pass (2026-10-10): the call (19.09-19.10). With the room dipped under its lines (ROOM_LINE_DIP)
     # the score was an equal masker of Gerg's first line and his last question (each alone about +5 dB at their 10th
     # percentiles): it makes room for the whole call, from 0.4 s before Gerg's first line to the end of 19.10

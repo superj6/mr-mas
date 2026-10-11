@@ -1334,8 +1334,8 @@
   "scene": "15.03",
   "speaker": "ALYI",
   "speaker_slug": "alyi",
-  "text": "Six years and eleven months.",
-  "spoken_as": "Six years and eleven months",
+  "text": "Six years and eleven months. From the day we started to that click.",
+  "spoken_as": "Six years and eleven months From the day we started to that click",
   "tag": "far",
   "delivery": "Ep1's own take, far off, as if down a corridor",
   "on_camera": "on",
@@ -1344,22 +1344,25 @@
   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-a3-0008__alyi-A.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 2.709,
-  "frames_24": 65,
-  "voiced_span_s": 2.1,
+  "duration_s": 5.98,
+  "frames_24": 144,
+  "voiced_span_s": 5.26,
   "pace": {
    "audible_in_s": 0.35,
-   "audible_out_s": 2.45,
+   "audible_out_s": 5.61,
    "measured": {
-    "span_s": 2.1,
-    "wpm": 142.9,
-    "syllables": 7,
-    "articulation_sps": 3.33,
-    "pauses_s": []
+    "span_s": 5.26,
+    "wpm": 148.3,
+    "syllables": 16,
+    "articulation_sps": 3.78,
+    "pauses_s": [
+     1.03,
+     0.06
+    ]
    },
-   "longest_internal_gap_s": 0.0,
-   "words": 5,
-   "wpm": 142.9,
+   "longest_internal_gap_s": 1.03,
+   "words": 13,
+   "wpm": 148.3,
    "speed": 0.78,
    "tsm": 1.0
   },
@@ -1388,21 +1391,61 @@
     "w": "months",
     "t0": 1.929,
     "t1": 2.359
+   },
+   {
+    "w": "From",
+    "t0": 3.45,
+    "t1": 3.682
+   },
+   {
+    "w": "the",
+    "t0": 3.752,
+    "t1": 3.856
+   },
+   {
+    "w": "day",
+    "t0": 3.949,
+    "t1": 4.181
+   },
+   {
+    "w": "we",
+    "t0": 4.251,
+    "t1": 4.355
+   },
+   {
+    "w": "started",
+    "t0": 4.425,
+    "t1": 4.797
+   },
+   {
+    "w": "to",
+    "t0": 4.843,
+    "t1": 4.924
+   },
+   {
+    "w": "that",
+    "t0": 4.994,
+    "t1": 5.18
+   },
+   {
+    "w": "click",
+    "t0": 5.249,
+    "t1": 5.63
    }
   ],
   "qa": {
-   "asr": "6 years and 11 months",
+   "asr": "6 years and 11 months. From the day we started to that click.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -16.0,
    "target_lufs": -16.0,
-   "true_peak_dbtp": -3.54,
+   "true_peak_dbtp": -3.53,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 85.9,
-   "f0_range_st": 13.0,
+   "median_f0_hz": 86.1,
+   "f0_range_st": 13.7,
    "speech_head_s": 0.35,
-   "speech_tail_s": 0.259,
+   "speech_tail_s": 0.37,
    "raw_tail_cut": false,
    "align_median_s": 0.111
   },
@@ -1440,7 +1483,7 @@
    "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
   ],
   "special": "cut",
-  "cut_from": "e1-a1-5-13 words 0-4 (audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav, 0.000-2.709 s), 12 ms fades, room-tone handles to 0.35 s (Ep1's take, read and copied; the far treatment is the mix's chain on the tag)"
+  "cut_from": "e1-a1-5-13 words 0-12 (audio/ep01/v3-el/ep01-v35/act1/wav/e1-a1-5-13__alyi-A.wav, 0.000-5.710 s), 12 ms fades, room-tone handles to 0.35 s (Ep1's take, read and copied; the far treatment is the mix's chain on the tag)"
  },
  {
   "id": "e2-vo-07",
@@ -3415,95 +3458,74 @@
   "scene": "17.11",
   "speaker": "MAS MANALT",
   "speaker_slug": "mas-manalt",
-  "text": "everyone who signed. the post. everyone who signed.",
-  "spoken_as": "Everyone who signed. The post, everyone who signed.",
+  "text": "the post. the post.",
+  "spoken_as": "The post. The post.",
   "tag": "V.O.",
-  "delivery": "faster than he thinks, the one time the voice hurries; each item a new call, not louder (MIV §3's rattled repeat); nothing about what he knew",
+  "delivery": "faster than he thinks, the one time the voice hurries; the second 'the post.' a new call, not louder (MIV §3's rattled repeat); nothing about what he knew",
   "on_camera": "vo",
   "mode": "on-mic",
   "device": null,
   "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-09__mas-manalt-C.wav",
   "file_device": null,
   "mp3": null,
-  "duration_s": 4.365,
-  "frames_24": 105,
-  "voiced_span_s": 3.48,
+  "duration_s": 2.275,
+  "frames_24": 55,
+  "voiced_span_s": 1.37,
   "pace": {
-   "audible_in_s": 0.38,
-   "audible_out_s": 3.86,
+   "audible_in_s": 0.42,
+   "audible_out_s": 1.79,
    "measured": {
-    "span_s": 3.48,
-    "wpm": 137.9,
-    "syllables": 12,
-    "articulation_sps": 4.46,
+    "span_s": 1.37,
+    "wpm": 175.2,
+    "syllables": 4,
+    "articulation_sps": 3.54,
     "pauses_s": [
-     0.44,
-     0.35
+     0.24
     ]
    },
-   "longest_internal_gap_s": 0.44,
-   "words": 8,
-   "wpm": 137.9,
+   "longest_internal_gap_s": 0.24,
+   "words": 4,
+   "wpm": 175.2,
    "speed": 1.2,
    "tsm": 1.0
   },
   "words": [
    {
-    "w": "Everyone",
-    "t0": 0.36,
-    "t1": 0.768
-   },
-   {
-    "w": "who",
-    "t0": 0.791,
-    "t1": 0.884
-   },
-   {
-    "w": "signed",
-    "t0": 0.942,
-    "t1": 1.348
-   },
-   {
-    "w": "the",
-    "t0": 1.813,
-    "t1": 1.917
+    "w": "The",
+    "t0": 0.4,
+    "t1": 0.478
    },
    {
     "w": "post",
-    "t0": 1.975,
-    "t1": 2.417
+    "t0": 0.536,
+    "t1": 0.93
    },
    {
-    "w": "everyone",
-    "t0": 2.835,
-    "t1": 3.252
+    "w": "the",
+    "t0": 1.198,
+    "t1": 1.29
    },
    {
-    "w": "who",
-    "t0": 3.276,
-    "t1": 3.369
-   },
-   {
-    "w": "signed",
-    "t0": 3.427,
-    "t1": 3.845
+    "w": "post",
+    "t0": 1.348,
+    "t1": 1.732
    }
   ],
   "qa": {
-   "asr": "Everyone who signed. The post. Everyone who signed.",
+   "asr": "The post, the post.",
    "cer": 0.0,
    "word_recall_nonames": 1.0,
    "lufs_i": -18.0,
    "target_lufs": -18.0,
-   "true_peak_dbtp": -3.49,
+   "true_peak_dbtp": -2.01,
    "clipped_samples": 0,
    "digital_black_runs": 0,
-   "median_f0_hz": 101.8,
-   "f0_range_st": 13.3,
-   "speech_head_s": 0.38,
-   "speech_tail_s": 0.505,
+   "median_f0_hz": 113.8,
+   "f0_range_st": 11.2,
+   "speech_head_s": 0.42,
+   "speech_tail_s": 0.485,
    "raw_tail_cut": false,
-   "align_median_s": 0.091
+   "align_median_s": 0.048
   },
   "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 1.2",
   "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
@@ -3523,8 +3545,8 @@
     "speed": 1.2
    },
    "seed": 1899661321,
-   "chars_sent": 51,
-   "request_key": "31bf661d2f3f4126",
+   "chars_sent": 19,
+   "request_key": "fff208e4416395f9",
    "derived_from": null,
    "reused_from": null
   },
@@ -3698,125 +3720,6 @@
    "HPF 60 Hz",
    "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
    "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
-  ],
-  "kokoro_ref": {
-   "timeline_in": null,
-   "timeline_dur": null
-  }
- },
- {
-  "id": "e2-vo-10",
-  "kind": "vo",
-  "scene": "17.13",
-  "speaker": "MAS MANALT",
-  "speaker_slug": "mas-manalt",
-  "text": "not until legal has every name.",
-  "spoken_as": "Not until legal has every name.",
-  "tag": "V.O.",
-  "delivery": "thumb over Post, not pressing; level again; his own condition, a reply to nobody",
-  "on_camera": "vo",
-  "mode": "on-mic",
-  "device": null,
-  "file": "audio/ep02/v1-el/ep02-v1/act3/wav/e2-vo-10__mas-manalt-C.wav",
-  "file_device": null,
-  "mp3": null,
-  "duration_s": 3.765,
-  "frames_24": 90,
-  "voiced_span_s": 2.51,
-  "pace": {
-   "audible_in_s": 0.42,
-   "audible_out_s": 2.93,
-   "measured": {
-    "span_s": 2.51,
-    "wpm": 143.4,
-    "syllables": 10,
-    "articulation_sps": 3.98,
-    "pauses_s": []
-   },
-   "longest_internal_gap_s": 0.0,
-   "words": 6,
-   "wpm": 143.4,
-   "speed": 0.75,
-   "tsm": 1.0
-  },
-  "words": [
-   {
-    "w": "Not",
-    "t0": 0.4,
-    "t1": 0.652
-   },
-   {
-    "w": "until",
-    "t0": 0.71,
-    "t1": 1.081
-   },
-   {
-    "w": "legal",
-    "t0": 1.174,
-    "t1": 1.65
-   },
-   {
-    "w": "has",
-    "t0": 1.743,
-    "t1": 1.941
-   },
-   {
-    "w": "every",
-    "t0": 2.033,
-    "t1": 2.335
-   },
-   {
-    "w": "name",
-    "t0": 2.428,
-    "t1": 2.869
-   }
-  ],
-  "qa": {
-   "asr": "Not until legal has every name.",
-   "cer": 0.0,
-   "word_recall_nonames": 1.0,
-   "lufs_i": -18.0,
-   "target_lufs": -18.0,
-   "true_peak_dbtp": -4.34,
-   "clipped_samples": 0,
-   "digital_black_runs": 0,
-   "median_f0_hz": 107.8,
-   "f0_range_st": 13.0,
-   "speech_head_s": 0.42,
-   "speech_tail_s": 0.835,
-   "raw_tail_cut": false,
-   "align_median_s": 0.154
-  },
-  "voice": "ElevenLabs library voice 'Jeremy - Warm, Trustworthy, Sincere' (shared Voice Library (high_quality), used by voice_id) · cand C · eleven_multilingual_v2 · speed 0.75",
-  "voiceId": "EwzF7Z2UMSib9JaKx0Kg",
-  "model": "ElevenLabs eleven_multilingual_v2 (REST API, text-to-speech with timestamps)",
-  "el": {
-   "cand": "C",
-   "role": "mas-manalt",
-   "voice_id": "EwzF7Z2UMSib9JaKx0Kg",
-   "voice_name": "Jeremy - Warm, Trustworthy, Sincere",
-   "source": "shared Voice Library (high_quality), used by voice_id",
-   "model_id": "eleven_multilingual_v2",
-   "settings": {
-    "stability": 0.65,
-    "similarity_boost": 0.75,
-    "style": 0.0,
-    "use_speaker_boost": true,
-    "speed": 0.75
-   },
-   "seed": 4164719166,
-   "chars_sent": 31,
-   "request_key": "85629f7b22b0c8a2",
-   "derived_from": null,
-   "reused_from": null
-  },
-  "status": "el",
-  "take": "el-C",
-  "processing": [
-   "ElevenLabs MP3 44.1 kHz 192 kbps -> 48 kHz (resample_poly 160/147)",
-   "HPF 60 Hz",
-   "own onset and decay kept: 0.15 s before the first sound, decay to -60 dB + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
-   "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
   ],
   "kokoro_ref": {
    "timeline_in": null,

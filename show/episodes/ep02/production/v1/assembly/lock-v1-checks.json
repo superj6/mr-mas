@@ -104,8 +104,8 @@
    "ep_in": "12:10:00",
    "ep_out": "17:30:00",
    "shots": 58,
-   "lines": 30,
-   "vo": 4,
+   "lines": 29,
+   "vo": 3,
    "scenes": 4,
    "plan_s": 320,
    "checks_ok": true,
@@ -459,18 +459,18 @@
    "seg": "act3",
    "scene": "15",
    "title": "Where u at? (with F2.2)",
-   "frames": 2424,
-   "seconds": 101.0,
+   "frames": 2496,
+   "seconds": 104.0,
    "tc_in": "13:39:00",
-   "tc_out": "15:20:00",
-   "plan_s": 101,
+   "tc_out": "15:23:00",
+   "plan_s": 104,
    "proposal_s": 100,
-   "fit_scale": 1.348,
+   "fit_scale": 1.343,
    "shots": 19,
    "lines": 10,
    "arrival_s": 6.88,
    "arrival_spoken_s": 6.88,
-   "aftermath_s": 11.33,
+   "aftermath_s": 11.29,
    "plan_arrive": [
     "15.01: 2.0 s, the empty office as the carried hum stops"
    ],
@@ -483,18 +483,18 @@
    "seg": "act3",
    "scene": "17",
    "title": "The NDA across the bridge (the S3)",
-   "frames": 3120,
-   "seconds": 130.0,
-   "tc_in": "15:20:00",
+   "frames": 3048,
+   "seconds": 127.0,
+   "tc_in": "15:23:00",
    "tc_out": "17:30:00",
-   "plan_s": 130,
+   "plan_s": 127,
    "proposal_s": 130,
-   "fit_scale": 1.943,
+   "fit_scale": 1.846,
    "shots": 21,
-   "lines": 9,
+   "lines": 8,
    "arrival_s": 17.38,
    "arrival_spoken_s": 17.38,
-   "aftermath_s": 34.21,
+   "aftermath_s": 34.83,
    "plan_arrive": [
     "17.01: 4.0 s, NopeAI's front doors, the receipt already pouring out, the Forecaster arriving from the street beside it, the band in"
    ],
@@ -1669,7 +1669,7 @@
    "seconds": 4.4,
    "events": 13,
    "longest_still_s": 1.0,
-   "frame": "SCR → FULL FRAME · the lobby TV framed in the foreground, pushed in: the Senate presser"
+   "frame": "SCR · the lobby TV over the staffers' heads, pushed in until its bezel is the frame's edge"
   },
   {
    "seg": "act3",
@@ -1683,7 +1683,7 @@
    "seg": "act3",
    "beat": "14.03",
    "seconds": 5.0,
-   "events": 10,
+   "events": 6,
    "longest_still_s": 2.6,
    "frame": "WIDE → MCU · Talk to reflection: Mas's own face in the polished metal; his phone's suggest"
   },
@@ -1693,7 +1693,7 @@
    "seconds": 5.3,
    "events": 0,
    "longest_still_s": 5.3,
-   "frame": "MCU · his own reflection mouthing can we talk? back to him"
+   "frame": "MCU · his own reflection in the fins, held; nothing else to pick"
   },
   {
    "seg": "act3",
@@ -1738,9 +1738,9 @@
   {
    "seg": "act3",
    "beat": "15.08",
-   "seconds": 6.47,
+   "seconds": 6.45,
    "events": 5,
-   "longest_still_s": 4.31,
+   "longest_still_s": 4.3,
    "frame": "ECU · Alyi holds up his phone, Mas's dead app open: CHECK IN → feel the agi; he turns the "
   },
   {
@@ -1754,9 +1754,9 @@
   {
    "seg": "act3",
    "beat": "15.13",
-   "seconds": 4.85,
+   "seconds": 4.83,
    "events": 3,
-   "longest_still_s": 3.77,
+   "longest_still_s": 3.76,
    "frame": "WIDE · a leadership offsite at night: a wooden effigy stencilled UNALIGNED; Alyi, half cut"
   },
   {
@@ -1770,15 +1770,15 @@
   {
    "seg": "act3",
    "beat": "15.16",
-   "seconds": 4.58,
+   "seconds": 4.57,
    "events": 0,
-   "longest_still_s": 4.58,
+   "longest_still_s": 4.57,
    "frame": "WIDE → ECU · the fire's glow shrinks to one point of light"
   },
   {
    "seg": "act3",
    "beat": "15.18",
-   "seconds": 4.58,
+   "seconds": 4.57,
    "events": 1,
    "longest_still_s": 2.96,
    "frame": "WIDE · he pockets the phone, gets up off the desk's edge and leaves; the door swings shut "
@@ -1810,9 +1810,9 @@
   {
    "seg": "act3",
    "beat": "17.07",
-   "seconds": 4.66,
+   "seconds": 4.43,
    "events": 1,
-   "longest_still_s": 2.72,
+   "longest_still_s": 2.58,
    "frame": "WIDE · mid-span on the receipt: Mas sees it, his phone already lit"
   },
   {
@@ -1842,18 +1842,18 @@
   {
    "seg": "act3",
    "beat": "17.18",
-   "seconds": 7.0,
+   "seconds": 6.64,
    "events": 3,
-   "longest_still_s": 4.28,
+   "longest_still_s": 4.06,
    "frame": "WIDE · it rains letterhead; the receipt's ink runs in the rain"
   },
   {
    "seg": "act3",
    "beat": "17.19",
-   "seconds": 4.4,
-   "events": 9,
+   "seconds": 5.4,
+   "events": 14,
    "longest_still_s": 2.2,
-   "frame": "POV · his rain-beaded phone: the voice menu, five live waveforms; his thumb taps Pause on "
+   "frame": "POV · his rain-beaded phone: a press request about VOICE 5 drops in; the voice menu, five "
   },
   {
    "seg": "act3",
@@ -2244,7 +2244,7 @@
    "after": "e2-a3-0010",
    "line": "e2-a3-0011",
    "beats": "15.06 -> 15.07",
-   "lock_s": 1.643,
+   "lock_s": 1.592,
    "not_an_exchange": "not a reply to the chant: Alyi's raised hand finds Mas in the crowd first; their exchange is quick inside 15.07"
   }
  ],
@@ -2307,7 +2307,7 @@
   {
    "check": "the 2023 rail held 2 s, clear of the post",
    "ok": true,
-   "detail": "the rail 141.083-143.292 s, the post from 143.292 s"
+   "detail": "the rail 144.167-146.375 s, the post from 146.375 s"
   },
   {
    "check": "the ISS card carries no line about its product",
@@ -2315,9 +2315,34 @@
    "detail": "20.10's texts: ['I am starting a new company:', 'ISS']"
   },
   {
+   "check": "15.03: Alyi's far count carries its base, then V.O. 7",
+   "ok": true,
+   "detail": "\"Six years and eleven months. From the day we started to that click.\" to 101.175 s, V.O. 7 from 102.375 s"
+  },
+  {
+   "check": "14.03-14.04: the strip spells out nothing he'd say to Alyi (W7)",
+   "ok": true,
+   "detail": "the strip ['> lunch?']"
+  },
+  {
+   "check": "14.07: Bukaj's plate a name and one relation (W21)",
+   "ok": true,
+   "detail": "the plate ['BUKAJ · NEW CHIEF SCIENTIST.']"
+  },
+  {
+   "check": "sc 17: no V.O. after the forecast; V.O. 9 no echo of the call (W7, W8)",
+   "ok": true,
+   "detail": "V.O. after the forecast: none; V.O. 9 \"the post. the post.\""
+  },
+  {
+   "check": "17.19: the press's request before the pause (W13)",
+   "ok": true,
+   "detail": "the request 304.875-306.583 s, the pause tap 307.583 s"
+  },
+  {
    "check": "the last honk clears \"Updating.\"",
    "ok": true,
-   "detail": "car_honk_5 at 281.250 s, \"Updating.\" from 281.733 s"
+   "detail": "car_honk_5 at 280.625 s, \"Updating.\" from 281.108 s"
   },
   {
    "check": "18.03: her guest line before her words (P9)",
@@ -2357,7 +2382,7 @@
  ],
  "transcript": {
   "file": "show/episodes/ep02/production/v1/transcript-v1.txt",
-  "lines": 176,
-  "rows": 396
+  "lines": 175,
+  "rows": 395
  }
 }

@@ -4,7 +4,7 @@
  "segment": "act3",
  "file": "audio/ost/tracks/e02-v1-act3/render/music-el.wav",
  "timeline": "show/reel/ep02-v1-el/ep02-v1-el-act3.json",
- "lock_sha1": "ba6722a07e2a7fce4a862b02f729f6aa7a2b875b",
+ "lock_sha1": "7a2e17f4bd38b3ba9dfecacedddfd547f49b44f7",
  "length_s": 320.0,
  "frames": 7680,
  "samples": 15360000,
@@ -267,15 +267,15 @@
    "cue": "e02-09-feel-it",
    "key": "feel",
    "start": 89.98,
-   "end": 189.842,
+   "end": 192.842,
    "what": "loneliness; warmth and joy (the chant, the check-in); gravity (the post, \"Someone should.\"); resolve and dread together (the click, the fire); a determined evening",
    "family": "P01 DARK ROOM (one felt piano) -> the Orb-era glossy colour (GPU choir aahs, glass shimmer, ppp) -> felt",
    "render": "audio/ost/tracks/e02-v1-act3/render/_work/el/e02-09-feel-it-underscore.wav",
    "laid_at_s": 87.5,
    "level": {
     "lufs_i": -20.01,
-    "st_p95": -17.21,
-    "st_max": -15.62,
+    "st_p95": -17.28,
+    "st_max": -16.03,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -20.0,
@@ -296,24 +296,24 @@
      },
      "measured": {
       "lufs": -20.0,
-      "lra": 6.81,
+      "lra": 6.04,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -22.45,
-      "crest_db": 19.3,
-      "seconds": 103.492
+      "rms_db": -22.43,
+      "crest_db": 19.28,
+      "seconds": 106.492
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.501,
+    "f_major_worst": 0.302,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": null,
     "warnings": []
    },
    "note_qa": {
-    "notes": 193,
+    "notes": 195,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -332,29 +332,29 @@
     "hs": 90.0,
     "c02": 91.583,
     "c03": 95.375,
-    "c04": 102.375,
-    "c05": 109.0,
-    "ping": 112.0,
-    "party": 116.375,
-    "c07": 123.458,
-    "c08": 130.917,
-    "racks": 137.375,
-    "glyph": 138.185,
-    "off23": 140.917,
-    "turn": 156.0,
-    "fire1": 159.25,
-    "cut14": 164.125,
-    "click": 164.53,
-    "fire2": 166.0,
-    "glow": 170.583,
-    "pin": 175.167,
-    "leave": 180.0,
-    "door_close": 182.964,
-    "stairs": 184.583,
-    "buzz": 185.783,
-    "end": 190.0,
-    "push": 189.792,
-    "chatter": 189.0,
+    "c04": 105.542,
+    "c05": 112.125,
+    "ping": 115.125,
+    "party": 119.542,
+    "c07": 126.583,
+    "c08": 134.042,
+    "racks": 140.5,
+    "glyph": 141.305,
+    "off23": 144.0,
+    "turn": 159.125,
+    "fire1": 162.333,
+    "cut14": 167.167,
+    "click": 167.57,
+    "fire2": 169.042,
+    "glow": 173.625,
+    "pin": 178.208,
+    "leave": 183.042,
+    "door_close": 185.999,
+    "stairs": 187.583,
+    "buzz": 188.783,
+    "end": 193.0,
+    "push": 192.792,
+    "chatter": 192.0,
     "harmony": [
      [
       90.0,
@@ -365,29 +365,29 @@
       "Bbm9"
      ],
      [
-      98.125,
+      101.875,
       "Fm9"
      ],
      [
-      102.188,
+      105.312,
       "Abmaj9"
      ],
      [
-      108.75,
+      111.875,
       "Gbmaj7#11"
      ],
      [
-      112.5,
+      117.5,
       "Dbsus#11"
      ]
     ],
     "tops": [
      [
-      103.542,
+      107.604,
       "Eb5"
      ],
      [
-      111.042,
+      113.542,
       "Db5"
      ]
     ],
@@ -395,53 +395,53 @@
     "grains": 10,
     "door1": [
      [
-      132.5,
+      135.0,
       "Ab4"
      ],
      [
-      133.75,
+      136.25,
       "Db5"
      ],
      [
-      135.0,
+      137.5,
       "C5"
      ],
      [
-      135.625,
+      138.125,
       "G4"
      ]
     ],
     "door2": [
      [
-      160.625,
+      163.75,
       "Ab4"
      ],
      [
-      161.875,
+      165.0,
       "Db5"
      ],
      [
-      163.125,
+      166.25,
       "C5"
      ],
      [
-      163.75,
+      166.875,
       "G4"
      ]
     ],
-    "t_party": 115.625,
-    "t_lift": 120.625,
-    "t_ex": 123.125,
-    "t_racks": 137.188,
-    "t_23": 140.625,
-    "t_turn": 155.625,
-    "g_t": 163.75,
-    "t_ache": 165.625,
-    "t_glow": 170.312,
-    "t_pin": 175.0,
-    "t_felt": 175.625,
-    "t_go": 179.792,
-    "t_st": 184.375
+    "t_party": 119.375,
+    "t_lift": 123.75,
+    "t_ex": 126.25,
+    "t_racks": 140.312,
+    "t_23": 143.75,
+    "t_turn": 158.75,
+    "g_t": 166.875,
+    "t_ache": 168.75,
+    "t_glow": 173.438,
+    "t_pin": 177.812,
+    "t_felt": 178.438,
+    "t_go": 182.5,
+    "t_st": 186.875
    },
    "sync": [
     {
@@ -455,103 +455,103 @@
      "hit": false
     },
     {
-     "t": 98.125,
+     "t": 101.875,
      "what": "Fm9: between Alyi's far line and V.O. 7: F minor, struck before the count; nothing attacks under it",
      "hit": false
     },
     {
-     "t": 102.188,
-     "what": "Abmaj9: TPOOL (on an eighth, 0.19 s before the cut): the early web's brighter A-flat (P10 T2), the chip on its top: his past",
+     "t": 105.312,
+     "what": "Abmaj9: TPOOL (on an eighth, 0.23 s before the cut): the early web's brighter A-flat (P10 T2), the chip on its top: his past",
      "hit": false
     },
     {
-     "t": 103.75,
+     "t": 106.875,
      "what": "TPOOL: the chip's triangle answers the felt (C, E-flat): his 2006 app still knows him",
      "hit": false
     },
     {
-     "t": 108.75,
+     "t": 111.875,
      "what": "Gbmaj7#11: \"where u at?\", every pin LAST SEEN: 2012 (on the beat, 0.25 s before the cut): G-flat lydian, the old map",
      "hit": false
     },
     {
-     "t": 112.5,
+     "t": 117.5,
      "what": "Dbsus#11: the one warm pin: its ripple; the felt on the choir's chord as the choir swells in under it (the sound lead into F2.2)",
      "hit": false
     },
     {
-     "t": 112.5,
+     "t": 117.5,
      "what": "the choir swells in under the pin's ripple (the GPU choir, D-flat sus2(#11), ppp): the sound lead into F2.2",
      "hit": false
     },
     {
-     "t": 115.625,
-     "what": "F2.2 (on the beat, 0.75 s before the cut): the GPU choir and glass shimmer, ppp; the string lights (celesta, harp) cycling; no felt, no chip pulse, no swing (his POV is left)",
+     "t": 119.375,
+     "what": "F2.2 (on the beat, 0.17 s before the cut): the GPU choir and glass shimmer, ppp; the string lights (celesta, harp) cycling; no felt, no chip pulse, no swing (his POV is left)",
      "hit": false
     },
     {
-     "t": 120.625,
+     "t": 123.75,
      "what": "the chant's lift (warm, giddy, never a hymn): the choir adds C and E-flat, the lights climb an octave, the shimmer thickens; no melody on the record (the chant is [V])",
      "hit": false
     },
     {
-     "t": 123.125,
+     "t": 126.25,
      "what": "the exchange (on the beat, 0.33 s before the cut): the lights stop; the choir thins",
      "hit": false
     },
     {
-     "t": 132.5,
+     "t": 135.0,
      "what": "THE DOOR, whole, over the choir (his joke check-in; Mas raises his glass): it never cadences, its G held",
      "hit": false
     },
     {
-     "t": 137.188,
+     "t": 140.312,
      "what": "the racks hum along (on an eighth, 0.19 s before the cut): the choir swells (the racks are the choir); GLYPH's grains on celesta and the 12.5 % chip (the glyph is on the room)",
      "hit": false
     },
     {
-     "t": 140.625,
-     "what": "2023 (on the beat, 0.29 s before the cut): the choir thins to its no-third chord under the post and \"Someone should.\"; the cello's D-flat (gravity)",
+     "t": 143.75,
+     "what": "2023 (on the beat, 0.25 s before the cut): the choir thins to its no-third chord under the post and \"Someone should.\"; the cello's D-flat (gravity)",
      "hit": false
     },
     {
-     "t": 155.625,
+     "t": 158.75,
      "what": "the turn (on the beat, 0.38 s before the cut): the viola and violins join the choir's chord",
      "hit": false
     },
     {
-     "t": 163.75,
-     "what": "the Door's held #4 (G) lands 0.78 s before the Publish click (on the beat, 0.38 s before the cut): warm resolve, no cadence; the click is the SFX's",
+     "t": 166.875,
+     "what": "the Door's held #4 (G) lands 0.69 s before the Publish click (on the beat, 0.29 s before the cut): warm resolve, no cadence; the click is the SFX's",
      "hit": false
     },
     {
-     "t": 165.625,
-     "what": "the fire (on the beat, 0.38 s before the cut): the Ache under the choir (F C | G D-flat): the Door's G is the Ache's G; resolve and dread together",
+     "t": 168.75,
+     "what": "the fire (on the beat, 0.29 s before the cut): the Ache under the choir (F C | G D-flat): the Door's G is the Ache's G; resolve and dread together",
      "hit": false
     },
     {
-     "t": 170.312,
-     "what": "the glow shrinks to one point (on an eighth, 0.27 s before the cut): the bass lets go; the choir thins to ppp and holds its no-third chord to the pin (no dropout: the bed stays over -35 LUFS-M)",
+     "t": 173.438,
+     "what": "the glow shrinks to one point (on an eighth, 0.19 s before the cut): the bass lets go; the choir thins to ppp and holds its no-third chord to the pin (no dropout: the bed stays over -35 LUFS-M)",
      "hit": false
     },
     {
-     "t": 174.1,
-     "what": "the pin (on the beat, 0.17 s before the cut): the sul-tasto F pedal swells in over the choir's hold",
+     "t": 176.912,
+     "what": "the pin (on an eighth, 0.40 s before the cut): the sul-tasto F pedal swells in over the choir's hold",
      "hit": false
     },
     {
-     "t": 175.625,
+     "t": 178.438,
      "what": "the felt returns a beat later, soft (F, the open fifth); V.O. 8 inside it, nothing attacks",
      "hit": false
     },
     {
-     "t": 179.792,
-     "what": "he goes (on a swung and, 0.21 s before the cut): D-flat; the felt's A-flat, then C on the bar (the knee's leap, the chip under its C): the decision, no F after it",
+     "t": 182.5,
+     "what": "he goes (on the beat, 0.54 s before the cut): D-flat; the felt's A-flat, then C on the bar (the knee's leap, the chip under its C): the decision, no F after it",
      "hit": false
     },
     {
-     "t": 184.375,
-     "what": "the stairs (on the beat, 0.21 s before the cut): the felt rests; the pedal (F, C) holds through the buzz (the out); it fades under the receipt's chatter (J 1.0 s, SFX) into the band's push",
+     "t": 186.875,
+     "what": "the stairs (on the beat, 0.71 s before the cut): the felt rests; the pedal (F, C) holds through the buzz (the out); it fades under the receipt's chatter (J 1.0 s, SFX) into the band's push",
      "hit": false
     }
    ]
@@ -559,16 +559,16 @@
   {
    "cue": "e02-10-the-bridge",
    "key": "bridge",
-   "start": 189.78,
+   "start": 192.78,
    "end": 320.0,
    "what": "the big comic set-piece (scored straight, the stop its only joke); respect; frantic hands under a still face, the relief of hearing him act; a laugh at the forecast (no hit); pathos in the rain; the act-out on a DREAD sting",
    "family": "P11 SET-PIECE SWING (the full band at its peak only) -> the scramble -> a held night -> the bass pedal -> a pad in the rain -> P08 DREAD",
    "render": "audio/ost/tracks/e02-v1-act3/render/_work/el/e02-10-the-bridge-underscore.wav",
-   "laid_at_s": 187.5,
+   "laid_at_s": 190.5,
    "level": {
     "lufs_i": -19.53,
-    "st_p95": -16.69,
-    "st_max": -15.3,
+    "st_p95": -16.81,
+    "st_max": -15.4,
     "true_peak_dbtp": -3.15
    },
    "target_lufs": -19.5,
@@ -589,17 +589,17 @@
      },
      "measured": {
       "lufs": -19.51,
-      "lra": 6.95,
+      "lra": 6.78,
       "true_peak_db": -3.15,
       "peak_db": -3.16,
-      "rms_db": -21.22,
+      "rms_db": -21.21,
       "crest_db": 18.06,
-      "seconds": 133.0
+      "seconds": 130.0
      }
     },
     "f_major_ok": true,
     "f_major_ok_written": true,
-    "f_major_worst": 0.189,
+    "f_major_worst": 0.282,
     "knee_whole": 0,
     "knee_completion": 0,
     "hit_check": {
@@ -608,11 +608,11 @@
      "worst_ms": 9.6
     },
     "warnings": [
-     "underscore short-term p95 -16.78 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
+     "underscore short-term p95 -16.93 LUFS > -17 (underscore) (s6.5): the loudest moments sit high above the bed"
     ]
    },
    "note_qa": {
-    "notes": 876,
+    "notes": 863,
     "written_third_ok": true,
     "written_third_events": [],
     "grazes": 0,
@@ -627,183 +627,183 @@
     "the DREAD sting (the Ache on the chip, no third)"
    ],
    "events": {
-    "doors": 190.0,
-    "run": 194.417,
-    "honk1": 200.217,
-    "card": 201.0,
-    "freeze": 202.0,
-    "fc": 204.792,
-    "driver": 219.417,
-    "already": 222.625,
-    "sees": 228.542,
-    "scr": 232.917,
-    "call": 238.0,
-    "draft": 244.542,
-    "vo9b": 249.125,
-    "fcast": 253.542,
-    "thumb": 263.833,
-    "night": 268.542,
-    "posts": 270.833,
-    "honk_btn": 282.708,
-    "rain": 288.125,
-    "ink": 298.583,
-    "menu": 305.583,
+    "doors": 193.0,
+    "run": 197.417,
+    "honk1": 203.217,
+    "card": 204.0,
+    "freeze": 205.0,
+    "fc": 207.792,
+    "driver": 222.417,
+    "already": 225.625,
+    "sees": 231.417,
+    "scr": 235.5,
+    "call": 240.667,
+    "draft": 247.042,
+    "vo9b": 251.667,
+    "fcast": 254.25,
+    "thumb": 264.625,
+    "night": 268.0,
+    "posts": 270.208,
+    "honk_btn": 282.083,
+    "rain": 287.688,
+    "ink": 297.958,
+    "menu": 304.583,
     "pause": 307.583,
     "nopost": 310.0,
     "blimp": 315.417,
     "end": 320.0,
-    "thunder": 295.983,
+    "thunder": 295.358,
     "dread": 318.217,
     "honks": [
-     200.217,
-     274.933,
-     276.033,
-     279.033,
-     281.283,
-     287.388
+     203.217,
+     274.308,
+     275.408,
+     278.408,
+     280.658,
+     286.763
     ],
-    "push": 189.792,
-    "full_in": 194.167,
-    "b_full": 195.0,
-    "peak": 197.5,
-    "cutoff": 200.0,
-    "reent": 204.375,
-    "mediant": 244.375,
-    "hold": 263.542,
-    "ped": 270.625,
-    "rain2": 298.125,
-    "rain3": 305.312,
-    "final": 315.625,
+    "push": 192.792,
+    "full_in": 197.167,
+    "b_full": 198.0,
+    "peak": 200.5,
+    "cutoff": 203.0,
+    "reent": 207.375,
+    "mediant": 246.75,
+    "hold": 264.25,
+    "ped": 269.875,
+    "rain2": 297.688,
+    "rain3": 304.25,
+    "final": 315.5,
     "passes": [
      [
-      233.125,
+      236.125,
       4
      ],
      [
-      234.375,
+      237.375,
       8
      ],
      [
-      236.25,
+      239.25,
       12
      ],
      [
-      238.75,
-      8
+      241.75,
+      4
      ],
      [
-      244.375,
+      246.75,
       16
      ],
      [
-      247.5,
-      8
+      249.875,
+      16
      ]
     ]
    },
    "sync": [
     {
-     "t": 189.792,
+     "t": 192.792,
      "what": "DESIGNED HIT: the swung push into NopeAI's doors (on a swung and, 0.21 s before the cut): the band in; the receipt already pouring (its chatter is the SFX's J)",
      "hit": true
     },
     {
-     "t": 190.625,
+     "t": 193.625,
      "what": "the Build compiles on the chip (pass 1: 4)",
      "hit": false
     },
     {
-     "t": 192.5,
+     "t": 195.5,
      "what": "the Build (pass 2: 8), the violins' pizzicato under it",
      "hit": false
     },
     {
-     "t": 194.167,
+     "t": 197.167,
      "what": "DESIGNED HIT: THE FULL BAND's pickup (on a swung and, 0.25 s before the cut to the run): the receipt down the hill and across five lanes (the episode's one full-band stretch: a pickup and two bars)",
      "hit": true
     },
     {
-     "t": 197.5,
+     "t": 200.5,
      "what": "the peak: C7(#9b13), the Build in octaves with the violins",
      "hit": false
     },
     {
-     "t": 199.792,
+     "t": 202.792,
      "what": "DESIGNED HIT: the phrase's last stab (C7(#9b13), the and-of-4); then THE CUT-OFF on the downbeat (the traffic stops; the honk lands in the gap: the SFX's)",
      "hit": true
     },
     {
-     "t": 200.0,
+     "t": 203.0,
      "what": "the stall: the arco bass holds C (the cello C, the viola G: an open fifth) through the card; the freeze's F is the SFX's, a fourth over it",
      "hit": false
     },
     {
-     "t": 204.375,
+     "t": 207.375,
      "what": "the Forecaster (on the beat, 0.42 s before the cut): the band again, thin: a two-feel, the ride soft, the vibes; no lead under his terms (respect)",
      "hit": false
     },
     {
-     "t": 230.0,
+     "t": 233.0,
      "what": "Mas sees it, his phone lit: the bass walks quarters again, the kick feathers in",
      "hit": false
     },
     {
-     "t": 232.917,
-     "what": "THE SCRAMBLE (on a swung and, 0.29 s before the cut): the band drops to the bass and the Build's chip lead, busier on the same grid (swung eighths in the bass, the Build's straight 16ths)",
+     "t": 235.5,
+     "what": "THE SCRAMBLE (on the beat, 0.33 s before the cut): the band drops to the bass and the Build's chip lead, busier on the same grid (swung eighths in the bass, the Build's straight 16ths)",
      "hit": false
     },
     {
-     "t": 240.33,
+     "t": 242.887,
      "what": "his call (\"everyone who signed one...\"): the Build out, the bass under it (he is heard acting)",
      "hit": false
     },
     {
-     "t": 244.375,
+     "t": 246.75,
      "what": "the draft: the pedal moves a mediant down (F to D-flat), the Build keeps compiling",
      "hit": false
     },
     {
-     "t": 249.425,
+     "t": 252.567,
      "what": "V.O. 9 on his still face: the Build out, the bass softer (the frantic inside, no attack on the words)",
      "hit": false
     },
     {
-     "t": 253.542,
-     "what": "the Forecaster beside him (on a swung and, 0.17 s before the cut): the swing returns (A-flat), thin under his forecast; no hit on the laugh",
+     "t": 254.25,
+     "what": "the Forecaster beside him (on the beat, 0.42 s before the cut): the swing returns (A-flat), thin under his forecast; no hit on the laugh",
      "hit": false
     },
     {
-     "t": 263.542,
-     "what": "his thumb over Post (on a swung and, 0.29 s before the cut): the band thins to a held E-flat 9sus (strings, the arco bass); V.O. 10 inside it",
+     "t": 264.25,
+     "what": "his thumb over Post (on the beat, 0.38 s before the cut): the band thins to a held E-flat 9sus (strings, the arco bass); no line over it (V.O. 10 cut)",
      "hit": false
     },
     {
-     "t": 268.542,
-     "what": "the night (on a swung and, 0.29 s before the cut): one held chord, D-flat maj9 (the strings, the bowed vibes), the bridge's lights cycling once",
+     "t": 268.0,
+     "what": "the night (on the beat, 0.21 s before the cut): one held chord, D-flat maj9 (the strings, the bowed vibes), the bridge's lights cycling once",
      "hit": false
     },
     {
-     "t": 270.625,
-     "what": "the next afternoon (on the beat, 0.21 s before the cut): the bass pedal (F, C) under his posts (the record dry); the honks take the phrase ends; \"Updating.\" and the driver play over it, no hit",
+     "t": 269.875,
+     "what": "the next afternoon (on the beat, 0.33 s before the cut): the bass pedal (F, C) under his posts (the record dry); the honks take the phrase ends; \"Updating.\" and the driver play over it, no hit",
      "hit": false
     },
     {
-     "t": 288.125,
+     "t": 287.688,
      "what": "the pad: Dbmaj9: May 20: the pad in the rain (the thunder is tuned to F: the pad's F4)",
      "hit": false
     },
     {
-     "t": 298.125,
+     "t": 297.688,
      "what": "the pad: Bbm9: the ink runs",
      "hit": false
     },
     {
-     "t": 300.625,
+     "t": 300.5,
      "what": "the chip, once, in the rain: the Build's tag (C F), small and far (\"shipped\", no longer)",
      "hit": false
     },
     {
-     "t": 305.312,
+     "t": 304.25,
      "what": "the pad: Gbmaj7#11: the voice menu: his thumb finds VOICE 5",
      "hit": false
     },
@@ -818,7 +818,7 @@
      "hit": false
     },
     {
-     "t": 315.625,
+     "t": 315.5,
      "what": "the pad: Fped: the blimp sags: the pad thins to its pedal (F, C)",
      "hit": false
     },
@@ -833,19 +833,19 @@
  "silences_designed": [],
  "designed_hit": [
   {
-   "t": 189.792,
+   "t": 192.792,
    "cue": "e02-10-the-bridge",
    "what": "DESIGNED HIT: the swung push into NopeAI's doors (on a swung and, 0.21 s before the cut): the band in; the receipt already pouring (its chatter is the SFX's J)",
    "exempt": "a designed attack or entry on a story beat; keep its attack"
   },
   {
-   "t": 194.167,
+   "t": 197.167,
    "cue": "e02-10-the-bridge",
    "what": "DESIGNED HIT: THE FULL BAND's pickup (on a swung and, 0.25 s before the cut to the run): the receipt down the hill and across five lanes (the episode's one full-band stretch: a pickup and two bars)",
    "exempt": "a designed attack or entry on a story beat; keep its attack"
   },
   {
-   "t": 199.792,
+   "t": 202.792,
    "cue": "e02-10-the-bridge",
    "what": "DESIGNED HIT: the phrase's last stab (C7(#9b13), the and-of-4); then THE CUT-OFF on the downbeat (the traffic stops; the honk lands in the gap: the SFX's)",
    "exempt": "a designed attack or entry on a story beat; keep its attack"
@@ -920,106 +920,106 @@
   {
    "section": "e02-09-feel-it: 1 the empty office: the felt (D-flat), the thread (B-flat minor)",
    "start": 90.0,
-   "end": 98.125
+   "end": 101.875
   },
   {
    "section": "e02-09-feel-it: 2 Alyi far off (unscored); V.O. 7 inside F minor",
-   "start": 98.125,
-   "end": 102.188
+   "start": 101.875,
+   "end": 105.312
   },
   {
    "section": "e02-09-feel-it: 3 TPOOL: A-flat (the chip, his past); the map: G-flat lydian; the ripple: the choir in",
-   "start": 102.188,
-   "end": 115.625
+   "start": 105.312,
+   "end": 119.375
   },
   {
    "section": "e02-09-feel-it: 4 F2.2 the party: the choir, glass, the string lights; the chant's lift",
-   "start": 115.625,
-   "end": 123.125
+   "start": 119.375,
+   "end": 126.25
   },
   {
    "section": "e02-09-feel-it: 5 F2.2 the exchange (thin); the check-in: THE DOOR whole",
-   "start": 123.125,
-   "end": 137.188
+   "start": 126.25,
+   "end": 140.312
   },
   {
    "section": "e02-09-feel-it: 6 F2.2 the racks: the choir swells; GLYPH's grains",
-   "start": 137.188,
-   "end": 140.625
+   "start": 140.312,
+   "end": 143.75
   },
   {
    "section": "e02-09-feel-it: 7 F2.2 2023: the no-third chord under the post and \"Someone should.\"",
-   "start": 140.625,
-   "end": 160.625
+   "start": 143.75,
+   "end": 163.75
   },
   {
    "section": "e02-09-feel-it: 8 F2.2 the turn: THE DOOR, its #4 under the Publish click",
-   "start": 160.625,
-   "end": 165.625
+   "start": 163.75,
+   "end": 168.75
   },
   {
    "section": "e02-09-feel-it: 9 F2.2 the fire: the Ache under the choir; the glow shrinks",
-   "start": 165.625,
-   "end": 175.0
+   "start": 168.75,
+   "end": 177.812
   },
   {
    "section": "e02-09-feel-it: 10 the pin: the felt (F); V.O. 8; D-flat as he goes",
-   "start": 175.0,
-   "end": 184.375
+   "start": 177.812,
+   "end": 186.875
   },
   {
    "section": "e02-09-feel-it: 11 the stairs: the pedal; the buzz; into the band",
-   "start": 184.375,
-   "end": 189.792
+   "start": 186.875,
+   "end": 192.792
   },
   {
    "section": "e02-10-the-bridge: A the doors: the push, the walk, the Build compiling",
-   "start": 189.792,
-   "end": 194.167
+   "start": 192.792,
+   "end": 197.167
   },
   {
    "section": "e02-10-the-bridge: B the run: THE FULL BAND (a pickup and two bars), the peak on C7(#9b13); the cut-off",
-   "start": 194.167,
-   "end": 200.0
+   "start": 197.167,
+   "end": 203.0
   },
   {
    "section": "e02-10-the-bridge: C the stall: the C pedal through the card",
-   "start": 200.0,
-   "end": 204.375
+   "start": 203.0,
+   "end": 207.375
   },
   {
    "section": "e02-10-the-bridge: D the refusal: the two-feel under the Forecaster and the driver; respect; Mas sees it",
-   "start": 204.375,
-   "end": 232.917
+   "start": 207.375,
+   "end": 235.5
   },
   {
    "section": "e02-10-the-bridge: E the scramble: the bass in eighths, the Build; his call; the draft; V.O. 9",
-   "start": 232.917,
-   "end": 253.542
+   "start": 235.5,
+   "end": 254.25
   },
   {
-   "section": "e02-10-the-bridge: F the forecast: the swing again (A-flat); V.O. 10 on a held chord",
-   "start": 253.542,
-   "end": 268.542
+   "section": "e02-10-the-bridge: F the forecast: the swing again (A-flat); his held thumb on a held chord",
+   "start": 254.25,
+   "end": 268.0
   },
   {
    "section": "e02-10-the-bridge: G the night: one held chord (2 s)",
-   "start": 268.542,
-   "end": 270.625
+   "start": 268.0,
+   "end": 269.875
   },
   {
    "section": "e02-10-the-bridge: H the posts: the bass pedal; the honks; \"Updating.\"; the driver",
-   "start": 270.625,
-   "end": 288.125
+   "start": 269.875,
+   "end": 287.688
   },
   {
    "section": "e02-10-the-bridge: I the rain: the pad (five voices; VOICE 5 stops on the pause); NopeAI's post",
-   "start": 288.125,
-   "end": 315.625
+   "start": 287.688,
+   "end": 315.5
   },
   {
    "section": "e02-10-the-bridge: J the pedal; the DREAD sting on the blimp's last light; the black",
-   "start": 315.625,
+   "start": 315.5,
    "end": 320.0
   }
  ],
@@ -1045,42 +1045,42 @@
   },
   {
    "t0": 91.983,
-   "t1": 95.353,
+   "t1": 95.343,
    "text": "After almost a decade…"
   },
   {
    "t0": 91.983,
-   "t1": 95.353,
+   "t1": 95.343,
    "text": "MAY 14, 2024"
   },
   {
-   "t0": 143.317,
-   "t1": 150.617,
+   "t0": 146.4,
+   "t1": 153.7,
    "text": "INTRODUCING SUPERALIGNMENT · EKIEL, ALYI"
   },
   {
-   "t0": 143.517,
-   "t1": 150.517,
+   "t0": 146.6,
+   "t1": 153.6,
    "text": "Currently, we don't have a solution for steering"
   },
   {
-   "t0": 272.433,
-   "t1": 274.933,
+   "t0": 271.808,
+   "t1": 274.308,
    "text": "vested equity is vested equity, full stop."
   },
   {
-   "t0": 274.933,
-   "t1": 276.033,
+   "t0": 274.308,
+   "t1": 275.408,
    "text": "this is on me…"
   },
   {
-   "t0": 276.033,
-   "t1": 279.033,
+   "t0": 275.408,
+   "t1": 278.408,
    "text": "…i did not know this was happening and i should "
   },
   {
-   "t0": 279.033,
-   "t1": 281.633,
+   "t0": 278.408,
+   "t1": 281.008,
    "text": "…they can contact me and we'll fix that too."
   },
   {
@@ -1112,8 +1112,8 @@
   "exact": true,
   "whole": {
    "lufs_i": -19.92,
-   "st_p95": -16.96,
-   "st_max": -15.06,
+   "st_p95": -17.21,
+   "st_max": -15.16,
    "true_peak_dbtp": -3.15
   },
   "cues": {
@@ -1125,14 +1125,14 @@
    },
    "e02-09-feel-it": {
     "lufs_i": -20.01,
-    "st_p95": -17.21,
-    "st_max": -15.62,
+    "st_p95": -17.28,
+    "st_max": -16.03,
     "true_peak_dbtp": -3.15
    },
    "e02-10-the-bridge": {
     "lufs_i": -19.53,
-    "st_p95": -16.69,
-    "st_max": -15.3,
+    "st_p95": -16.81,
+    "st_max": -15.4,
     "true_peak_dbtp": -3.15
    }
   },
@@ -1239,191 +1239,191 @@
    {
     "section": "e02-09-feel-it: 1 the empty office: the felt (D-flat), the thread (B-flat minor)",
     "start": 90.0,
-    "end": 98.12,
-    "lufs_i": -19.97,
-    "st_p95": -18.88,
-    "st_max": -18.26,
+    "end": 101.88,
+    "lufs_i": -20.16,
+    "st_p95": -19.13,
+    "st_max": -18.07,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-09-feel-it: 2 Alyi far off (unscored); V.O. 7 inside F minor",
-    "start": 98.12,
-    "end": 102.19,
-    "lufs_i": -21.98,
-    "st_p95": -20.84,
-    "st_max": -20.56,
-    "true_peak_dbtp": -3.15
+    "start": 101.88,
+    "end": 105.31,
+    "lufs_i": -21.88,
+    "st_p95": null,
+    "st_max": null,
+    "true_peak_dbtp": -4.55
    },
    {
     "section": "e02-09-feel-it: 3 TPOOL: A-flat (the chip, his past); the map: G-flat lydian; the ripple: the choir in",
-    "start": 102.19,
-    "end": 115.62,
-    "lufs_i": -20.22,
-    "st_p95": -19.46,
-    "st_max": -19.27,
-    "true_peak_dbtp": -3.62
+    "start": 105.31,
+    "end": 119.38,
+    "lufs_i": -20.3,
+    "st_p95": -19.44,
+    "st_max": -18.81,
+    "true_peak_dbtp": -3.82
    },
    {
     "section": "e02-09-feel-it: 4 F2.2 the party: the choir, glass, the string lights; the chant's lift",
-    "start": 115.62,
-    "end": 123.12,
-    "lufs_i": -19.78,
-    "st_p95": -19.22,
-    "st_max": -18.99,
-    "true_peak_dbtp": -5.9
+    "start": 119.38,
+    "end": 126.25,
+    "lufs_i": -19.97,
+    "st_p95": -19.49,
+    "st_max": -19.45,
+    "true_peak_dbtp": -6.04
    },
    {
     "section": "e02-09-feel-it: 5 F2.2 the exchange (thin); the check-in: THE DOOR whole",
-    "start": 123.12,
-    "end": 137.19,
-    "lufs_i": -22.54,
-    "st_p95": -18.79,
-    "st_max": -18.38,
-    "true_peak_dbtp": -7.89
+    "start": 126.25,
+    "end": 140.31,
+    "lufs_i": -21.86,
+    "st_p95": -18.42,
+    "st_max": -17.95,
+    "true_peak_dbtp": -8.03
    },
    {
     "section": "e02-09-feel-it: 6 F2.2 the racks: the choir swells; GLYPH's grains",
-    "start": 137.19,
-    "end": 140.62,
-    "lufs_i": -20.5,
+    "start": 140.31,
+    "end": 143.75,
+    "lufs_i": -20.47,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -9.96
+    "true_peak_dbtp": -9.16
    },
    {
     "section": "e02-09-feel-it: 7 F2.2 2023: the no-third chord under the post and \"Someone should.\"",
-    "start": 140.62,
-    "end": 160.62,
-    "lufs_i": -19.66,
-    "st_p95": -16.17,
-    "st_max": -15.66,
-    "true_peak_dbtp": -5.23
+    "start": 143.75,
+    "end": 163.75,
+    "lufs_i": -19.69,
+    "st_p95": -16.6,
+    "st_max": -16.11,
+    "true_peak_dbtp": -5.13
    },
    {
     "section": "e02-09-feel-it: 8 F2.2 the turn: THE DOOR, its #4 under the Publish click",
-    "start": 160.62,
-    "end": 165.62,
-    "lufs_i": -17.75,
-    "st_p95": -17.18,
-    "st_max": -17.17,
-    "true_peak_dbtp": -5.66
+    "start": 163.75,
+    "end": 168.75,
+    "lufs_i": -17.69,
+    "st_p95": -17.24,
+    "st_max": -17.24,
+    "true_peak_dbtp": -6.11
    },
    {
     "section": "e02-09-feel-it: 9 F2.2 the fire: the Ache under the choir; the glow shrinks",
-    "start": 165.62,
-    "end": 175.0,
-    "lufs_i": -18.82,
-    "st_p95": -18.38,
-    "st_max": -17.91,
-    "true_peak_dbtp": -5.35
+    "start": 168.75,
+    "end": 177.81,
+    "lufs_i": -18.87,
+    "st_p95": -18.43,
+    "st_max": -18.05,
+    "true_peak_dbtp": -4.71
    },
    {
     "section": "e02-09-feel-it: 10 the pin: the felt (F); V.O. 8; D-flat as he goes",
-    "start": 175.0,
-    "end": 184.38,
-    "lufs_i": -19.9,
-    "st_p95": -18.46,
-    "st_max": -18.45,
-    "true_peak_dbtp": -3.15
+    "start": 177.81,
+    "end": 186.88,
+    "lufs_i": -19.86,
+    "st_p95": -18.22,
+    "st_max": -17.98,
+    "true_peak_dbtp": -3.25
    },
    {
     "section": "e02-09-feel-it: 11 the stairs: the pedal; the buzz; into the band",
-    "start": 184.38,
-    "end": 189.79,
-    "lufs_i": -21.3,
-    "st_p95": -20.99,
-    "st_max": -20.95,
-    "true_peak_dbtp": -7.07
+    "start": 186.88,
+    "end": 192.79,
+    "lufs_i": -20.96,
+    "st_p95": -20.63,
+    "st_max": -20.59,
+    "true_peak_dbtp": -9.07
    },
    {
     "section": "e02-10-the-bridge: A the doors: the push, the walk, the Build compiling",
-    "start": 189.79,
-    "end": 194.17,
-    "lufs_i": -16.76,
-    "st_p95": -16.67,
-    "st_max": -16.6,
-    "true_peak_dbtp": -3.26
+    "start": 192.79,
+    "end": 197.17,
+    "lufs_i": -16.89,
+    "st_p95": -16.8,
+    "st_max": -16.72,
+    "true_peak_dbtp": -3.38
    },
    {
     "section": "e02-10-the-bridge: B the run: THE FULL BAND (a pickup and two bars), the peak on C7(#9b13); the cut-off",
-    "start": 194.17,
-    "end": 200.0,
-    "lufs_i": -15.75,
-    "st_p95": -15.44,
-    "st_max": -15.36,
+    "start": 197.17,
+    "end": 203.0,
+    "lufs_i": -15.86,
+    "st_p95": -15.55,
+    "st_max": -15.47,
     "true_peak_dbtp": -3.15
    },
    {
     "section": "e02-10-the-bridge: C the stall: the C pedal through the card",
-    "start": 200.0,
-    "end": 204.38,
-    "lufs_i": -25.08,
-    "st_p95": -25.06,
-    "st_max": -25.04,
-    "true_peak_dbtp": -9.44
+    "start": 203.0,
+    "end": 207.38,
+    "lufs_i": -25.2,
+    "st_p95": -25.18,
+    "st_max": -25.16,
+    "true_peak_dbtp": -9.54
    },
    {
     "section": "e02-10-the-bridge: D the refusal: the two-feel under the Forecaster and the driver; respect; Mas sees it",
-    "start": 204.38,
-    "end": 232.92,
-    "lufs_i": -18.65,
-    "st_p95": -17.62,
-    "st_max": -16.92,
-    "true_peak_dbtp": -4.29
+    "start": 207.38,
+    "end": 235.5,
+    "lufs_i": -18.8,
+    "st_p95": -17.88,
+    "st_max": -17.65,
+    "true_peak_dbtp": -4.41
    },
    {
     "section": "e02-10-the-bridge: E the scramble: the bass in eighths, the Build; his call; the draft; V.O. 9",
-    "start": 232.92,
-    "end": 253.54,
-    "lufs_i": -18.54,
-    "st_p95": -16.83,
-    "st_max": -16.69,
-    "true_peak_dbtp": -5.69
+    "start": 235.5,
+    "end": 254.25,
+    "lufs_i": -18.27,
+    "st_p95": -17.08,
+    "st_max": -16.84,
+    "true_peak_dbtp": -4.59
    },
    {
-    "section": "e02-10-the-bridge: F the forecast: the swing again (A-flat); V.O. 10 on a held chord",
-    "start": 253.54,
-    "end": 268.54,
-    "lufs_i": -18.99,
-    "st_p95": -17.27,
-    "st_max": -16.91,
-    "true_peak_dbtp": -4.89
+    "section": "e02-10-the-bridge: F the forecast: the swing again (A-flat); his held thumb on a held chord",
+    "start": 254.25,
+    "end": 268.0,
+    "lufs_i": -18.69,
+    "st_p95": -17.62,
+    "st_max": -17.38,
+    "true_peak_dbtp": -4.29
    },
    {
     "section": "e02-10-the-bridge: G the night: one held chord (2 s)",
-    "start": 268.54,
-    "end": 270.62,
-    "lufs_i": -22.56,
+    "start": 268.0,
+    "end": 269.88,
+    "lufs_i": -22.14,
     "st_p95": null,
     "st_max": null,
-    "true_peak_dbtp": -11.1
+    "true_peak_dbtp": -10.8
    },
    {
     "section": "e02-10-the-bridge: H the posts: the bass pedal; the honks; \"Updating.\"; the driver",
-    "start": 270.62,
-    "end": 288.12,
-    "lufs_i": -22.84,
-    "st_p95": -22.05,
-    "st_max": -21.67,
-    "true_peak_dbtp": -6.26
+    "start": 269.88,
+    "end": 287.69,
+    "lufs_i": -22.69,
+    "st_p95": -21.94,
+    "st_max": -20.57,
+    "true_peak_dbtp": -5.68
    },
    {
     "section": "e02-10-the-bridge: I the rain: the pad (five voices; VOICE 5 stops on the pause); NopeAI's post",
-    "start": 288.12,
-    "end": 315.62,
-    "lufs_i": -22.11,
-    "st_p95": -19.62,
-    "st_max": -19.22,
-    "true_peak_dbtp": -9.05
+    "start": 287.69,
+    "end": 315.5,
+    "lufs_i": -21.96,
+    "st_p95": -20.12,
+    "st_max": -19.86,
+    "true_peak_dbtp": -8.51
    },
    {
     "section": "e02-10-the-bridge: J the pedal; the DREAD sting on the blimp's last light; the black",
-    "start": 315.62,
+    "start": 315.5,
     "end": 320.0,
-    "lufs_i": -22.22,
-    "st_p95": -21.34,
-    "st_max": -21.33,
-    "true_peak_dbtp": -3.19
+    "lufs_i": -22.32,
+    "st_p95": -21.52,
+    "st_max": -21.49,
+    "true_peak_dbtp": -4.09
    }
   ],
   "digital_silence": [],
@@ -1439,32 +1439,26 @@
   "fragments_under_2s": [],
   "undesigned_fragments": [],
   "head_momentary_max": -16.69,
-  "full_band_momentary_max": -13.33,
-  "dread_momentary_max": -15.2,
+  "full_band_momentary_max": -13.4,
+  "dread_momentary_max": -15.37,
   "vo_windows_lufs": [
    {
     "line": "e2-vo-07",
-    "t0": 99.22,
-    "t1": 101.45,
-    "lufs": -23.81
+    "t0": 102.38,
+    "t1": 104.61,
+    "lufs": -23.07
    },
    {
     "line": "e2-vo-08",
-    "t0": 177.06,
-    "t1": 178.66,
-    "lufs": -23.08
+    "t0": 180.09,
+    "t1": 181.69,
+    "lufs": -22.62
    },
    {
     "line": "e2-vo-09",
-    "t0": 249.43,
-    "t1": 252.91,
-    "lufs": -24.86
-   },
-   {
-    "line": "e2-vo-10",
-    "t0": 265.38,
-    "t1": 267.89,
-    "lufs": -23.52
+    "t0": 252.57,
+    "t1": 253.94,
+    "lufs": -24.5
    }
   ]
  },
@@ -1488,7 +1482,7 @@
    "laid_at_s": 87.5,
    "window": [
     89.98,
-    189.842
+    192.842
    ],
    "fade_in_s": 0.015,
    "fade_out_s": 0.9,
@@ -1498,9 +1492,9 @@
   {
    "name": "e02-10-the-bridge",
    "file": "audio/ost/tracks/e02-v1-act3/render/_work/el/e02-10-the-bridge-underscore.wav",
-   "laid_at_s": 187.5,
+   "laid_at_s": 190.5,
    "window": [
-    189.78,
+    192.78,
     320.0
    ],
    "fade_in_s": 0.004,
