@@ -2,7 +2,7 @@
 
 > **The episode review's findings, segment by segment, and what each fixer did.** Each segment's fixer adds its own section below; a finding that touches another segment says so where it is logged. Severity is the review's (blocker, major, minor). Every claim is [M] measured or [J] judged; nothing here was watched in real time or heard (R8).
 
-**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Three, the final fix round](#act-three-the-final-fix-round-2026-10-11) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11) · [The tag, the final fix round](#the-tag-the-final-fix-round-2026-10-11) · [Last fixes (lock owner)](#last-fixes-lock-owner-2026-10-11) · [Cleanup pass, Act Two](#cleanup-pass-act-two-2026-10-11) · [Cleanup pass, the cold open, the intro and Act One](#cleanup-pass-the-cold-open-the-intro-and-act-one-2026-10-11) · [Cleanup pass, Act Three, Act Four and the tag](#cleanup-pass-act-three-act-four-and-the-tag-2026-10-11)
+**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Three, the final fix round](#act-three-the-final-fix-round-2026-10-11) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11) · [The tag, the final fix round](#the-tag-the-final-fix-round-2026-10-11) · [Last fixes (lock owner)](#last-fixes-lock-owner-2026-10-11) · [Cleanup pass, Act Two](#cleanup-pass-act-two-2026-10-11) · [Cleanup pass, the cold open, the intro and Act One](#cleanup-pass-the-cold-open-the-intro-and-act-one-2026-10-11) · [Cleanup pass, Act Three, Act Four and the tag](#cleanup-pass-act-three-act-four-and-the-tag-2026-10-11) · [The final assembly](#the-final-assembly-2026-10-11)
 
 ---
 
@@ -775,4 +775,44 @@ bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/episodes/ep02/pixel/
 - **18.11:** is `MARIO · EX-NOPEAI` read in its 2.4 s over the split, and is it enough with the `SAFETY` lamp to place the lighthouse?
 - **22.01-22.08:** does the re-toned plate sit in the 3D (polished brass beside the slot's duller brass), or does it read as pasted? 22.07's plate still narrows with the wall: worth a Blender pass (a bigger plate, nearer the camera) before lock?
 - **14.03-14.04 and 19.15:** the hands at speed.
+- Nothing here was watched in motion or heard.
+
+---
+
+## The final assembly (2026-10-11)
+
+**Scope:** the film re-assembled once, after every act was final (the last fixer's commit, 4c940d6, at 04:05), then measured and looked at. It carries everything since the last assembly (f89f33e): the final fix round (0294e5c, b54b847, eade31a), the lock owner's last fixes (f1666cf) and the three cleanup passes (09426eb, 01e2fb0, 4c940d6). **Nothing was fixed: no gain change, no de-click, no tool or code change, and no act's picture, lock, takes, score or mix was touched.** The full record, the chapter list and the human checks are in [assembly.md](assembly.md).
+
+### What ran [M]
+
+- `ops/rebuild-act.sh --ep 2 tag --only film --dry-run`: 27 inputs, 0 missing; `assemble.py v1 --dry`: every chapter's sound exactly its picture's length.
+- The pictures current: each segment's renderer built and `scenekeys` run: every scene cached as its index (sc 11 and 15 differ only in the `glyph` part of a key built without GLYPH frames, as in every earlier assembly).
+- `assemble.py v1` (400.4 s), `qa.py v1` (251.7 s), `seam_frames.py v1`, through `ops/heavy.sh`, detached with `setsid -w`.
+- Cross-checks: the bundled ffmpeg's `loudnorm` analysis (a second loudness and true-peak meter), a 10 s-window true peak over the decoded film, and every join's sample step against its own signal.
+
+### The numbers [M]
+
+- **The film:** `out/ep02/v1/ep02-v1.mp4`, **23:31.00** (33,864 frames; the story 22:44.00, 32,736 frames), 136,520,076 bytes, md5 `7b16e457842649420bd81b73b7c79866`. H.264 High CRF 18 1080p24; AAC-LC 256 kb/s 48 kHz stereo, libfdk_aac. Video and audio streams 1411.000 s each; the decoded audio +8.0 ms (the AAC tail).
+- **Chapters** (each on its lock's `ep_in_frames`): Cold open 00:00 · Intro 00:55 (with the card at 01:25) · Act One · the séance 01:27 · Act Two · stage right 07:31 · Act Three · leave them up 12:10 · Act Four · as a guest 17:30 · Tag · august 22:39 · Outro · credits 23:16.
+- **Decode:** 0 error lines, 33,864 frames. **A/V lag:** 0 samples in all nine chapters. **Codec:** 0 bursts (worst 0.129, Act One).
+- **Loudness:** **−15.81 LUFS** (`loudnorm` −15.81). **True peak on the encoded film: −1.11 dBTP** (Act Three; `loudnorm` −1.12); 0 of 142 ten-second windows over −1.0. The codec raised no chapter's true peak against its mix (Act Three −1.11 → −1.11, the tag −1.45 → −1.46), so the feared ~0.3 dB did not occur and no section needed a gain fix.
+- **Flash:** at most 1 in any second (the intro 0:59.92, Act Three 13:27.54), 0 red; pass.
+- **Seams** (200 ms RMS step, sample jump): cold open → intro **−11.6 dB**, 0.0005 (Ep1's size; −14.8 before the cleanup pass) · intro → card +0.6, 0.0 · card → Act One +0.8, 0.0056 · Act One → Two +12.7, 0.0012 · Two → Three −3.0, 0.0028 · Three → Four −3.2, 0.0052 · **Four → tag +0.2, 0.0110** · tag → outro +0.1, 0.0003. Every step matches the mix QA's to 0.1 dB. The Four → tag step is ordinary for its signal (the steps within 10 ms reach 0.0342; its second difference 0.0047 is under the neighbourhood's p99 0.0083): continuous, not a click. Every chapter's edge frames are within 0.15 of 255 of their sources.
+- **The transcript:** `transcript-film.txt` (175 lines, 215 on-screen texts) agrees with the lock's `transcript-v1.txt` row for row (394 rows; every timecode and text the same, the differences only `lock_report.py`'s delivery tags and the intro row's wording): V.O. 6 "everyone gets it free." (08:48:18), `MARIO · EX-NOPEAI` (18:34:03), `SEP` (21:39:10), the tag's "…perfectly on AI…" (23:03:06); no `212`, no `SINCE SEP 2023`.
+- **The contact sheet:** `out/ep02/v1/ep02-v1-sheet.png` (`qa.py`'s method: 142 frames, one every 10 s, each with its episode timecode and chapter).
+- **Ep1:** `sha1sum -c ops/reorg/ep01-final.sha1` 31 OK; `git status` shows no Ep1 path changed.
+
+### Looked at [J]
+
+82 frames at 1080p from the film: at least one per scene (1, 4, 4A, 4B, 6, 7, 8–12, 13–15, 17, 18–20, 22, 23), every changed shot (4.04, 4B.01, 7.03–7.04, 8.03, 9.04b, 9.06, 10.07, 11.04's three cuts, 12.03, 12.05, 12.06, 14.03–14.04, 15.02, 18.11, 19.15, the garden's cut, 20.07, 22.02, 22.07, 23.06–23.08), the intro at its typing (f1360, 1403, 1430: Ep1's "near the singularity;" / "unclear which side." exactly, the pointer hidden while he types, on Post after) and its Alyi card (f1645, 1650: `EFFIGIES: 1`), its bookend, the card, both outro pages and every join's two frames (frame list in assembly.md §5). **No blocker:** nothing broken, black, missing, cut off or against the FIRM guardrails (23.07–23.08: nobody behind the podium, no raised arm or fist; no reason for Alyi's leaving on screen). The story chapters' dark lower band is the house V.O. and rail band, in the sources. No new taste notes.
+
+### Records
+
+assembly.md (rewritten for this assembly: the result, the final chapter list, every QA number, the frames looked at, the human list on the final clock), `assembly/v1-assembly.json`, `v1-qa.json`, `seam-frames-v1.json`, `transcript-film.txt`, the contact sheet, and pipeline.md §7.1 (the film's length; Act Two's title is "stage right"). The film itself is git-ignored, as before.
+
+### For an ear or an eye
+
+- **The Act Four → tag join at 22:39:00** by ear (measured continuous).
+- **The cold open → intro smash at 00:55:00** at its new −11.6 dB: still a cut?
+- The whole film once at speed, and the fixers' checks at the film's times: assembly.md §7.
 - Nothing here was watched in motion or heard.
