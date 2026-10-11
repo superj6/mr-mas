@@ -1,6 +1,6 @@
 # ep02 · release (YouTube)
 
-**The final film:** `out/ep02/v1/ep02-v1.mp4`, 23:31.00, assembled at commit fb0efde. Its md5 and the checks are in [production/v1/DELIVERY.md](production/v1/DELIVERY.md); read that before watching.
+**The final film:** `out/ep02/v1/ep02-v1.mp4`, 23:31.00, assembled at commit 0136292. Its md5 and the checks are in [production/v1/DELIVERY.md](production/v1/DELIVERY.md); read that before watching.
 
 **Published:** not yet. The showrunner publishes (LEARNINGS M5). Add the link here and in [EPISODES.md](../../../EPISODES.md). This file sits beside Ep1's `release.md`; LEARNINGS M5 had named `production/v1/release.md`.
 
