@@ -4,7 +4,7 @@
 
 ## What is delivered
 
-- **The film:** `out/ep02/v1/ep02-v1.mp4` (git-ignored), **23:31.00** (33,864 frames at 24 fps; the story 22:44.00). 1080p24 H.264, AAC 256 kb/s. 136,520,076 bytes, md5 `7b16e457842649420bd81b73b7c79866`. Assembled at commit **fb0efde**, with the record in [assembly.md](assembly.md).
+- **The film:** `out/ep02/v1/ep02-v1.mp4` (git-ignored), **23:31.00** (33,864 frames at 24 fps; the story 22:44.00). 1080p24 H.264, AAC 256 kb/s. 136,523,617 bytes, md5 `2a6affb88c14f25ff3735935639bc15a`. Assembled at commit **fb0efde**, with the record in [assembly.md](assembly.md).
 - **Nine chapters:** Cold open 00:00 · Intro 00:55 · `ep1.1_her.wav` 01:25 · Act One · the séance 01:27 · Act Two · stage right 07:31 · Act Three · leave them up 12:10 · Act Four · as a guest 17:30 · Tag · august 22:39 · Outro · credits 23:16.
 - **The release copy** (title, description with chapters, thumbnail choice, open choices): [show/episodes/ep02/release.md](../../release.md).
 - **Five thumbnails:** `out/ep02/v1/thumbnails/` (1280 × 720; `thumb-5-orb.png` is the primary).

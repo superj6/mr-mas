@@ -2,7 +2,7 @@
 
 > **The episode review's findings, segment by segment, and what each fixer did.** Each segment's fixer adds its own section below; a finding that touches another segment says so where it is logged. Severity is the review's (blocker, major, minor). Every claim is [M] measured or [J] judged; nothing here was watched in real time or heard (R8).
 
-**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Three, the final fix round](#act-three-the-final-fix-round-2026-10-11) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11) · [The tag, the final fix round](#the-tag-the-final-fix-round-2026-10-11) · [Last fixes (lock owner)](#last-fixes-lock-owner-2026-10-11) · [Cleanup pass, Act Two](#cleanup-pass-act-two-2026-10-11) · [Cleanup pass, the cold open, the intro and Act One](#cleanup-pass-the-cold-open-the-intro-and-act-one-2026-10-11) · [Cleanup pass, Act Three, Act Four and the tag](#cleanup-pass-act-three-act-four-and-the-tag-2026-10-11) · [The final assembly](#the-final-assembly-2026-10-11)
+**Contents:** [Act One](#act-one-the-fixes-pass-2026-10-10) · [Act Two](#act-two-the-fixes-pass-2026-10-10) · [Act Three](#act-three-the-fixes-pass-2026-10-10) · [Act Four](#act-four-the-fixes-pass-2026-10-10) · [Outro](#outro-the-fixes-pass-2026-10-10) · [The film](#the-film-the-fixes-pass-2026-10-10) · [Act Three, the final fix round](#act-three-the-final-fix-round-2026-10-11) · [Act Four, the final fix round](#act-four-the-final-fix-round-2026-10-11) · [The tag, the final fix round](#the-tag-the-final-fix-round-2026-10-11) · [Last fixes (lock owner)](#last-fixes-lock-owner-2026-10-11) · [Cleanup pass, Act Two](#cleanup-pass-act-two-2026-10-11) · [Cleanup pass, the cold open, the intro and Act One](#cleanup-pass-the-cold-open-the-intro-and-act-one-2026-10-11) · [Cleanup pass, Act Three, Act Four and the tag](#cleanup-pass-act-three-act-four-and-the-tag-2026-10-11) · [The final assembly](#the-final-assembly-2026-10-11) · [Last picture fix: the Forecaster at the rail](#last-picture-fix-the-forecaster-at-the-rail-2026-10-11)
 
 ---
 
@@ -815,4 +815,51 @@ assembly.md (rewritten for this assembly: the result, the final chapter list, ev
 - **The Act Four → tag join at 22:39:00** by ear (measured continuous).
 - **The cold open → intro smash at 00:55:00** at its new −11.6 dB: still a cut?
 - The whole film once at speed, and the fixers' checks at the film's times: assembly.md §7.
+- Nothing here was watched in motion or heard.
+
+---
+
+## Last picture fix: the Forecaster at the rail (2026-10-11)
+
+**Scope:** one broken pose found by the last review, picture only. Act Three, sc 17: through the night wide (17.14, film 16:38.21-16:40.17) and the next afternoon until he stands (17.15 k0-199, film 16:40.21-16:48.50), **the Forecaster sat in the air** in front of the far walkway's rail. The script has him "asleep against the rail". The art's `asleep` (`art/cast/forecaster drawForecasterRoom`) is the room rig's chair pose (the thighs level at a seat's height, the shins hanging), and nothing was under it. **No timing, line, take, score, mix or sound changed;** the same shots, frames and marks. No shared art file, shared tool or Ep1 path was edited.
+
+| Where | Finding | What was done | Check |
+|---|---|---|---|
+| Act Three 17.14 (act f6437-6484) and 17.15 k0-199 (act f6485-6684); film f23957-24204 | He floats in a seated pose with nothing under him, in front of the bridge's walkway rail, overnight and into the next afternoon | **`act3/sets/bridge.ts foreFloor`** (new; `deck` draws it for `state: 'asleep'`): **he sits on the far walkway at the foot of the rail, on its road side.** His seat and both soles are on the walkway row his feet stand on (y 111), with a one-pixel contact shadow under him. His knees are drawn up, his arms are round his shins with the near hand on the near shin, and his clipboard is held to his chest. **Asleep:** his head is bowed chin to chest and his eyes are shut. The bowed head is a hand-drawn version of his own room head map (crown forward, fringe over the brow, lids shut, nose down, chin tucked back to the collar, no neck), because a plain rotation of the 16-px map scrambled his features. **Woke** (`sc-17.ts`: 17.15 k188-199, the half-second before he stands): his own head, up, eyes open, still sat; then he stands where he sat (k200, as before). He is built from his own rig: the art's room spec is copied as `FORE_RSPEC` (rust hoodie, jeans, board ramps), with the rig's jacket torso, shirt V, arm shapes and hand stamp. New are only the knees-up legs, the arms' pose, the board's place (the art's board stamp, taller, with its clip) and the bowed head; his shoes take the dark tones they have when he stands. He sits low, on the walkway: no part of him is on or over the rail, and the bay is behind the rail, behind him | 1080p from the scene MP4, with 8x-native crops [J]; frame-by-frame against the previous render [M] (below) |
+
+### The picture [M]
+
+- `check`: 58 layouts, 0 stand-ins, 0 problems; a scoped `tsc --noEmit` over `act3/shots.ts` and its imports: 0 errors.
+- `ops/rebuild-act.sh --ep 2 act3 --only picture --scene 17`: sc 17, 3,048 f in 77.5 s, key `sc-17-78cec31a7fddc7f9` (was `2b088029545e32cd`). Then `--only picture`: the GLYPH frames re-made (plain frames equal Node's, 12 spliced, 0 missing); **13, 14 and 15 cached under their keys** (`3acad0894ffe4b3e`, `604eab0a2c04235c`, `a35f760d57d792c7`, as HEAD's index, so their files are HEAD's); the act concatenated without re-encoding, `act3.mp4` md5 `a36ab083…` (was `fedb50c4…`), 7,680 f. Flash (`flash_seg.py`): at most **1** in any second (f6038, as before), 0 red, the largest step 0.321 at f6056 (as before), pass. `scenecheck --every 16`: **585 frames, 0 differ**. `--only mux`: `picture-mux/act3.mp4` re-made.
+- **Sc 17 against its previous render** (both decoded, each frame area-averaged to the native 480 x 270 and compared pixel for pixel): the frames off by more than encoder noise (any channel by more than 24 levels) are **act f6437-6684 exactly (248 frames)**, all inside native (364, 51)-(395, 114), his corner of the far walkway. f6685-6724 move by at most 9 levels (the encoder's references after the changed frames, inside the same GOP). Every other frame of the scene decodes identically.
+- **The contact sheet** `act3-sheet.png` was re-made with the same 60 frames, labels and framings, retitled. Only the 17.14 tile (f6461) changed; 17.15's tile is f6745, after he stands.
+
+**Frames looked at [J]:** at 1080p from the scene MP4, with 8x-native crops, f6437, 6460, 6484 (the night), 6485, 6540, 6620, 6660, 6672 (asleep in the afternoon, beside the post), 6673, 6684 (head up), 6685 and 6700 (standing where he sat). While building, native stills with 10x crops of f6440, 6600, 6672, 6673, 6680 and 6685, over five drafts: the first bowed head (a shear) read as awake with closed eyes; a plain rotation scrambled the face; the first knees were hidden by the arm; the lit shoe tops read as a grey box; the clipboard as lit parts drew a line like a "7" across the sheet. Each was fixed before the render.
+
+### The film [M]
+
+- **Re-assembled once:** `ops/rebuild-act.sh --ep 2 act3 --only film` (its dry run: 27 inputs, 0 missing): `assemble.py v1` (411.3 s), `qa.py v1` (279.5 s), `seam_frames.py v1`, through `ops/heavy.sh` with `MRMAS_HEAVY_MEM_MAX=6G` (free memory 3–4 GB). **`out/ep02/v1/ep02-v1.mp4`: 23:31.00 (33,864 frames) as before, 136,523,617 bytes, md5 `2a6affb88c14f25ff3735935639bc15a`** (was 136,520,076 bytes, `7b16e457842649420bd81b73b7c79866`, fb0efde).
+- **QA, as before:** decode 0 error lines (33,864 frames); 0 A/V lag in all nine chapters; 0 codec bursts; **−15.81 LUFS, −1.11 dBTP** on the encoded film; the nine chapters on their locks' starts; the seams' steps and sample jumps as before (cold open → intro −11.6 dB; Act Four → tag 0.0110); flash at most **1** in any second (the intro 0:59.92, Act Three 13:27.54, as before), **0** red, pass. The flash count's transitions go 96 → 97: the 17.14 → 17.15 cut from night to afternoon (film f24005, 16:40.21) now counts as one brightening transition at `qa.py`'s 160 × 90, because the sitting figure covers fewer of the dark wide's blocks. That is one step, not a flash pair, and Act Three's native flash check counts sc 17's transitions unchanged (8 and 8). **`seam-frames-v1.json` and `transcript-film.txt` byte-identical.**
+- **Against the first build** (kept in scratch): **the sound byte-identical**, all 66,143 AAC packets (bytes and timestamps). **The picture:** decoded and area-averaged to 480 × 270, it differs above encoder noise (more than 24 levels) at **exactly 248 frames, film f23957–24204** (act f6437–6684), all inside native (364, 51)–(395, 114). The 18 frames before and the 40 after move by at most 15 levels (the encoder's references), and **the other 33,558 frames decode identically**. The film's contact sheet changed one tile (16:40:00, the night wide). Stills from the new film at 1080p with 8x-native crops [J]: f23957, 23981, 24004, 24005, 24120, 24193, 24204, 24205.
+- **Records:** assembly.md (the new md5 and size, the re-assembly in §3, §4's transitions, §5's stills, a human check in §7, §10), `assembly/v1-assembly.json`, `v1-qa.json`, the film's sheet; shots-act3.md (17.14 and 17.15's rows, a subsection under §3c, §5's night note); `act3-sheet.png`. Ep1: `sha1sum -c ops/reorg/ep01-final.sha1` 31 OK.
+
+**FIRM guardrails:** he sits low, on the walkway's road side, never on or over the rail or the bridge's edge, and the shot refers to no real event; no person, face or hand from a video model (his own pixel rig). No Ep1 path, shared art module or shared tool was edited.
+
+### Re-running
+
+```sh
+# S = scratch
+SCRATCH=$S/rb ops/rebuild-act.sh --ep 2 act3 --only picture --scene 17
+SCRATCH=$S/rb2 MRMAS_MAX_LOAD=40 ops/rebuild-act.sh --ep 2 act3 --only picture
+cd studio && MRMAS_MAX_LOAD=40 ../ops/heavy.sh node $S/rb2/r-act3.cjs scenecheck --every 16 && cd ..
+SCRATCH=$S/rb3 ops/rebuild-act.sh --ep 2 act3 --only mux
+bash ops/heavy.sh audio/.venv-casting/bin/python studio/src/episodes/ep02/pixel/tools/sheet.py sheet out/ep02/v1/picture/act3.mp4 \
+  out/ep02/v1/picture/act3-sheet.png "TITLE" "20|13.01|OTS-WIDE" ... "6461|17.14|WIDE" "6745|17.15|WIDE" ...   # the 60 tiles as the sheet labels them
+SCRATCH=$S/rb4 ops/rebuild-act.sh --ep 2 act3 --only film
+```
+
+### For an eye
+
+- **17.14 at speed:** in the 2 s night wide, does the bowed head read as asleep, and the knees-up shape as a man sitting on the walkway against the rail?
+- **17.15, k188-200:** the head comes up for half a second before he stands: does it read as waking, or as a hitch?
 - Nothing here was watched in motion or heard.

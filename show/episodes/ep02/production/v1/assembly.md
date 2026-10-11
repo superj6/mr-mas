@@ -2,20 +2,22 @@
 
 > **Status: v1 FINAL ASSEMBLY, MEASURED (2026-10-11, after every act was final): ONE film, `out/ep02/v1/ep02-v1.mp4`, 23:31.00 (33,864 frames; the story 22:44.00, 32,736 frames),** carrying every fix since the last assembly (f89f33e): the final fix round (Act Four 0294e5c, the tag b54b847, Act Three eade31a), the lock owner's last fixes (f1666cf: V.O. 6, the garden's 19.17 cut, the tag's caption) and the three cleanup passes (09426eb Act Two; 01e2fb0 the cold open, the intro and Act One; 4c940d6 Act Three, Act Four and the tag). It has nine titled chapters, each starting on its lock's `ep_in_frames`. Every QA check passes: 0 decode errors, 0 A/V lag in every chapter, 0 codec bursts, **−15.81 LUFS, −1.11 dBTP on the encoded film** (no 10 s window over −1.0), at most 1 flash in any second, 0 red flashes. **Nothing was fixed:** the assembly needed no gain change, no de-click and no tool change.
 >
+> **Re-assembled once more the same day (05:15–05:27), after the last picture fix** (fixes-v1.md, "Last picture fix: the Forecaster at the rail"). In Act Three's sc 17 the Forecaster sat in the air in front of the bridge's rail. He now sits on the walkway at the rail's foot (17.14 and 17.15 until he stands, film 16:38:05–16:48:12). The new film's picture differs from the first build only there; its sound is byte-identical (all 66,143 AAC packets); the duration, chapters, decode, loudness, true peak, seams, edge frames and transcript are the same. **New md5 `2a6affb88c14f25ff3735935639bc15a`** (§1, §3).
+>
 > **Nothing here was watched in real time or listened to [R8].** Every number is measured from the files [M]. I looked at stills only [J]: 82 frames at 1080p decoded from this film, at least one per scene and every changed shot (§5). §7 lists what a human must check.
 
 **Contents:** [1. The film](#1-the-film) · [2. Chapters](#2-chapters) · [3. How it was built](#3-how-it-was-built) · [4. QA](#4-qa-measured) · [5. Looked at](#5-looked-at-j) · [6. The other passes' notes](#6-the-other-passes-notes-and-what-the-assembly-did) · [7. For a human](#7-for-a-human) · [8. Open issues and asks](#8-open-issues-and-asks) · [9. How to rebuild](#9-how-to-rebuild) · [10. Files](#10-files) · [11. LEARNINGS rules checked](#11-learnings-rules-checked)
 
 ## 1. The film
 
-- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:31.00** (33,864 frames at 24 fps), 136,520,076 bytes, md5 `7b16e457842649420bd81b73b7c79866`. (The 2026-10-10 film was 23:41.00, 34,104 frames, md5 `580764171286…`; the first assembly, e2bce00, `39d06afa6c4d…`.)
+- **File:** `out/ep02/v1/ep02-v1.mp4` (git-ignored). **23:31.00** (33,864 frames at 24 fps), 136,523,617 bytes, md5 `2a6affb88c14f25ff3735935639bc15a` (re-assembled after the last picture fix, 2026-10-11 05:15). (This assembly's first build, fb0efde, was 136,520,076 bytes, md5 `7b16e457842649420bd81b73b7c79866`, the same film but for the Forecaster's pose in 17.14–17.15. The 2026-10-10 film was 23:41.00, 34,104 frames, md5 `580764171286…`; the first assembly, e2bce00, `39d06afa6c4d…`.)
 - **Video:** H.264 High, CRF 18, `-tune animation`, 1920 × 1080, 24 fps, with a keyframe on every chapter's first frame.
 - **Audio:** AAC-LC 256 kb/s, 48 kHz stereo, encoded with **libfdk_aac** (`assemble.py`'s `AAC`; the film's metadata is stripped by `-map_metadata -1`, so the file carries no encoder tag).
 - **Chapters:** nine titled chapters, each matching the assembly to the millisecond (§2).
 - **The lock:** the EL-timed v1 lock (`show/reel/ep02-v1-el/`) and its pixel locks (`production/v1/lock/<seg>.json`): every chapter starts on its lock's `meta.ep_in_frames` (0, 2088, 10824, 17520, 25200, 32616) and on lock-v1.md's episode clock.
 - **Voices:** the ElevenLabs cast (set A), with MARIO on his Kokoro takes.
 - **The chapters' sources** (each one's length, head md5 and mtime are in `assembly/v1-assembly.json`):
-  - **The picture:** each segment's per-scene concat, as the fixers left it: the cold open (2026-10-09, cached since), the card (10-10), Act One 03:45, Act Two 03:41, Act Three 03:57, Act Four 03:56, the tag 02:48 (2026-10-11). Every scene is current: `scenekeys` on each segment's renderer, built from today's code, reports every scene cached as the index, except sc 11 and sc 15, which differ only in the `glyph` part (a key built without GLYPH frames; their renders splice them in, as in every earlier assembly).
+  - **The picture:** each segment's per-scene concat, as the fixers left it: the cold open (2026-10-09, cached since), the card (10-10), Act One 03:45, Act Two 03:41, Act Three 05:12 (the last picture fix: sc 17 re-rendered, 13–15 cached), Act Four 03:56, the tag 02:48 (2026-10-11). Every scene is current: `scenekeys` on each segment's renderer, built from today's code, reports every scene cached as the index, except sc 11 and sc 15, which differ only in the `glyph` part (a key built without GLYPH frames; their renders splice them in, as in every earlier assembly).
   - **The sound:** the mixes from `mix_episode.py` (the cold open 03:27 with the cleanup pass's lighter note 4; Act One 10-10 21:07 with its +1.0 LU trim, `seg_trim_lu`; Act Two 01:55, Act Three 01:56, Act Four 02:30, the tag and `outro-mix.wav` 02:56; the card 10-10).
   - **The intro:** the Ep2 picture variant as the cleanup pass re-rendered it (`out/ep02/v1/intro/intro-ep2-V1-1080p.mp4`, 03:38: the idle pointer hidden while he types and resting on Post in the bookend; Alyi's card `EFFIGIES: 1`) under Ep1's aired master and line (`audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav`, a byte copy of Ep1's), at the manifest's −3 dB. **The typed quote is Ep1's exactly** ("near the singularity;" / "unclear which side."), checked on the film's f1403 and f1430 (§5).
   - **The card:** `out/ep02/v1/picture/card.mp4` (48 f).
@@ -71,15 +73,21 @@ The titles are the episode's act subtitles as the film's chapter metadata carrie
 
 **Nothing was fixed.** The encoded film's true peak is under −1.0 dBTP everywhere, every seam is continuous or designed, every still is clean. **No act's picture, lock, takes, score or mix was touched.**
 
+**The re-assembly after the last picture fix (2026-10-11 05:15–05:27) [M].** Act Three's picture was re-made (sc 17 re-rendered; 13, 14 and 15 from the cache under their keys; the act concatenated without re-encoding; fixes-v1.md), then the film once more with `ops/rebuild-act.sh --ep 2 act3 --only film` (its dry run: 27 inputs, 0 missing), through `ops/heavy.sh` with `MRMAS_HEAVY_MEM_MAX=6G` (free memory was 3–4 GB): `assemble.py v1` (411.3 s), `qa.py v1` (279.5 s), `seam_frames.py v1`. Against the first build, kept in scratch:
+- **The sound:** all 66,143 AAC packets byte-identical (bytes and timestamps), so every loudness, true-peak, codec, A/V and seam number is the same. `qa.py` measures them unchanged: −15.81 LUFS, −1.11 dBTP, 0 bursts, 0 lag; the seams' steps and jumps as §4.
+- **The picture:** every frame was decoded from both films, area-averaged to the native 480 × 270 and compared. Above encoder noise (any channel off by more than 24 levels) they differ at **exactly 248 frames, film f23957–24204** (Act Three f6437–6684, 17.14 and 17.15 until he stands), all inside native (364, 51)–(395, 114), the far walkway's right end. The 18 frames before and the 40 after move by encoder noise only (at most 15 levels; the encoder's references). **The other 33,558 frames decode identically.** `seam-frames-v1.json` is byte-identical: every chapter's edge frames as before.
+- **`transcript-film.txt` is byte-identical.** `v1-assembly.json` changes only its build time, encode time, Act Three's head md5 and the byte count; `v1-qa.json` its times, the byte count and bit rates, and the flash count's transitions (§4).
+- **The contact sheet:** one tile changed (16:40:00, the night wide, the Forecaster now sat on the walkway). The tile after it (16:50:00) moved by encoder noise only.
+
 **No hum hold at the tag → outro seam [J]** (the first assembly's decision, kept): Ep2's tag ends on Mas's face, and the cut to the outro's black is the downbeat (proposal seam 30; shots-tag.md 23.09; E02-13's cue sheet: "every voice stops dead … no ring-out"). The tag's room still carries across: `outro-mix.wav` lays the tag-tail stem under the outro's first 2 s. The seam measures +0.1 dB, with a sample jump of 0.0003.
 
 ## 4. QA (measured)
 
-| Check | ep02-v1, the final assembly (2026-10-11) |
+| Check | ep02-v1, the final assembly (2026-10-11; the same after the re-assembly at 05:15 unless noted) |
 |---|---|
 | **Duration** | **23:31.00**: video 33,864 frames = 1411.000 s (expected 23:31.00 ✓); the story 22:44.00 (32,736 f: the cold open, the four acts and the tag; 1,320 + 8,736 + 6,696 + 7,680 + 7,416 + 888) ✓ |
 | **Chapter starts against the locks** | all nine match the assembly (`chapters_match_assembly`); the six story chapters start on their pixel locks' `ep_in_frames` and on lock-v1.md's episode clock (00:00:00, 01:27:00, 07:31:00, 12:10:00, 17:30:00, 22:39:00) |
-| **Full decode** | **0 error lines**, exit 0, 33,864 frames decoded (36.9 s) |
+| **Full decode** | **0 error lines**, exit 0, 33,864 frames decoded (36.9 s; the re-assembly 36.5 s) |
 | **Streams** | video H.264 High 1920 × 1080 24/1, 33,864 packets, 1411.000 s · audio AAC-LC (libfdk_aac) 48 kHz stereo 256 kb/s, 66,143 packets, stream 1411.000 s; decoded 67,728,384 samples = 1411.008 s, **+8.0 ms** against the picture (the AAC tail; 10-10: +13.33, Ep1 +5.33) |
 | **A/V lag per chapter** | **0 samples in all nine** (correlation 0.9997–1.0) |
 | **Codec fidelity** (decoded against source, sample for sample) | **0 bursts in every chapter** (a burst is a run more than 0.2 of full scale off the source). Worst difference 0.129, in Act One (Ep1: 0.144) |
@@ -90,7 +98,7 @@ The titles are the episode's act subtitles as the film's chapter metadata carrie
 | **The codec against the mixes** (true peak, mix QA → encoded) | cold open −1.82 → −1.87 · card −8.23 → −8.25 · Act One −1.37 → −1.46 · Two −1.45 → −1.46 · **Three −1.11 → −1.11** · Four −1.47 → −1.47 · **tag −1.45 → −1.46**. libfdk_aac at 256 kb/s raised no chapter's true peak (the feared ~0.3 dB did not occur), so no gain fix was needed |
 | Max short-term | −11.6 LUFS (Act Three) |
 | Digital zero over 5 ms / holes (under −60 dBFS for 0.3 s or more) | **none / none** |
-| **Flashes** (the whole film, streamed, 160 × 90) | **max 1 in any second** (the intro at 0:59.92, Act Three at 13:27.54), no 1 s window with 2 or more; **red 0**; 96 transitions. **Pass** (limit 3) |
+| **Flashes** (the whole film, streamed, 160 × 90) | **max 1 in any second** (the intro at 0:59.92, Act Three at 13:27.54), no 1 s window with 2 or more; **red 0**; 96 transitions (**97** after the re-assembly: the 17.14 → 17.15 cut from the night to the afternoon, f24005 at 16:40.21, now counts as one brightening transition at 160 × 90, because the sitting Forecaster covers fewer of the dark wide's blocks; a single step, no flash pair; Act Three's own flash check at native scale counts sc 17's transitions unchanged, 8 and 8). **Pass** (limit 3) |
 | Largest mean-luminance step | 0.653 at 1:00.00: the intro's own cut at f120, the value Ep1 aired at its intro's f120 |
 | Edge frames (`seam_frames.py`) | every chapter's first and last frame against its source: at most 0.15 of 255 (the cold open's first) |
 
@@ -128,6 +136,7 @@ The titles are the episode's act subtitles as the film's chapter metadata carrie
 - **The outro:** f33504 (black and the Orb), f33624 (page 1: `mr. mas · ep1.1_her.wav`, `art · script · music · voices · edit: opus 5.5`, `prompt: jgon`, `viewer: human ✓`), f33754 (page 2: `voices · role: library voice` and the cast in two columns, no tools), f33863 (black).
 - **Every join's two frames:** 1319/1320, 2039/2040, 2087/2088, 10823/10824, 17519/17520, 25199/25200, 32615/32616, 33503/33504: the cold open's door → the intro's dark room; the intro's toast → the card; the card → the séance wide; Act One's black → Mas's back at the monitor; Act Two's Mas at the window → the lobby (`176`); Act Three's black → the lighthouse; Act Four's white room → the tag's desk (`GUEST` on the wall); the tag's last frame (Mas's face) → the outro's black.
 - **The contact sheet** (all 142 frames): every chapter in order; the only black tile is 7:30:00, Act One's designed act-out.
+- **The re-assembly (the last picture fix):** film f23957, 23981, 24004 (the night wide), 24005, 24120 (asleep in the afternoon, beside the post), 24193, 24204 (his head up) and 24205 (standing where he sat) at 1080p, with 8x-native crops, and the new sheet's 16:40:00 tile. He sits on the far walkway at the rail's foot, on its road side, knees up, head bowed, nothing of him on or over the rail. No blocker.
 - **The frame:** every story chapter is drawn on the house frame, its lower band the dark V.O. and rail band (the cold open's f660 against its own source: 0.15 of 255), not black left by the assembly.
 - **Taste, not blockers (no action):** none new. The fixers' own human checks stand (§7).
 
@@ -141,6 +150,7 @@ The titles are the episode's act subtitles as the film's chapter metadata carrie
 | The transcript: V.O. 6 now "everyone gets it free."; the tag's caption "…perfectly on AI…"; 20.07's `SEP`; 18.11's plate | **All in `transcript-film.txt`**, which agrees with the lock's `transcript-v1.txt` row for row (394 rows, every timecode and text the same; the only differences are `lock_report.py`'s delivery tags, such as `(call)` and `(ghost)`, and the intro row's wording). Every line once, in time order: 175 lines (the two repeated texts, Nole's "Yup" and Mas's "no.", are distinct script lines, at their own times in both files) |
 | The act contact sheets and the scene caches; 22.07's plate squared in Blender | Not the assembly's (the picture passes'); untouched |
 | The intro master at `audio/intro/ep02/intro-ep2-mix-V1-chipchamber.wav` | Used from there, at −3 dB, as the manifest says |
+| The last picture fix (Act Three sc 17, the Forecaster at the rail): re-assemble once | **Done** (§3): the picture differs only at 17.14–17.15 and the sound is byte-identical; new md5 `2a6affb8…` |
 
 ## 7. For a human
 
@@ -165,6 +175,7 @@ Nobody has watched or listened. In order, with the final film's timecodes (MM:SS
    - 12.03 (11:39:06–11:42:15): Alyi's open eyes warm; the out-of-focus banner a party banner, not censorship. Does anything in sc 12 still offer a reason he left (W8)?
    - 12.05–12.06 (11:43:16–11:56:05): `NOPEAI · TRENDING` read beside `OMNI`; the thumb rising with the post.
    - 14.03–14.04 (12:52:19–13:03:01) and 19.15 (20:39:07–20:42:20): the hands at speed.
+   - **The Forecaster at the rail** (the last picture fix): 17.14's night wide (16:38:05–16:40:04) and 17.15 until he stands (16:40:05–16:48:12). Does he read as a man asleep on the walkway against the rail (knees up, head bowed)? Does his head coming up at 16:48:01, half a second before he stands at 16:48:13, read as waking?
    - 18.11 (18:33:23–18:42:07): `MARIO · EX-NOPEAI` read in its 2.4 s, enough with the `SAFETY` lamp to place the lighthouse?
    - The garden (19.16 → 19.18 at 20:52:21): does "as a guest." (20:58:09) land without the flower beds; arrival, turn and aftermath, not a detour?
    - 20.07 (21:35:22–21:40:18): his shoe stopping Haras's tape and `SEP` (21:39:10, 1.4 s): one plan made an action, not a gag?
@@ -210,6 +221,7 @@ setsid -w bash ops/heavy.sh $PY $A/tools/seam_frames.py v1 < /dev/null          
 - **This pass (the final assembly):**
   - changed: this file; `assembly/v1-assembly.json`, `assembly/v1-qa.json`, `assembly/seam-frames-v1.json`, `assembly/transcript-film.txt`; `out/ep02/v1/ep02-v1-sheet.png`; [pipeline.md](pipeline.md) §7.1 (the film's length and Act Two's title); fixes-v1.md (its final-assembly section);
   - generated, not committed: `out/ep02/v1/ep02-v1.mp4` (git-ignored).
+- **The re-assembly after the last picture fix:** changed this file, `assembly/v1-assembly.json`, `assembly/v1-qa.json` and `out/ep02/v1/ep02-v1-sheet.png`; `seam-frames-v1.json` and `transcript-film.txt` were rewritten byte-identical. The picture change itself is Act Three's (fixes-v1.md).
 - **Untouched:** every Ep1 path (`sha1sum -c ops/reorg/ep01-final.sha1`: 31 OK); all code (the assembly tools included); the locks, manifests, pictures, takes, score and mixes; `out/season/intro/` and `audio/intro/mix/`.
 - **Earlier passes:** the first assembly (e2bce00) wrote this file, the records and the sheet, and changed `assemble.py` (v1's transcript is `transcript-film.txt`; `hum_gap=None`), `qa.py` (the outro's two rows from its `timeline.ts`) and `scene_cut.py` (the repo root 7 folders up); it rendered the card. The 2026-10-10 final assembly (f89f33e) rebuilt that film byte for byte.
 

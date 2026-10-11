@@ -35,9 +35,11 @@ import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../../shared/pixel/cas
 import type {MasPortraitState} from '../../../../../shared/pixel/cast/mas';
 import {faceLightImg} from '../../../../../shared/pixel/kits/face-light-img';
 import {bridgeDoors, bridgeDeck, drawCar, voiceMenu} from '../../art/sets/bridge';
-import {makeBust3} from '../../art/cast/civic2';
-import type {BustState, BustSpec3} from '../../art/cast/civic2';
-import {SKIN, putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
+import {makeBust3, roomFig, roomRig, roomHead, ROOM_HEAD_PAL} from '../../art/cast/civic2';
+import type {BustState, BustSpec3, RoomFigSpec} from '../../art/cast/civic2';
+import {SKIN, HAIR, putBustCut} from '../../../../../shared/pixel/cast/civic-kit';
+import {P as FP, renderFigure, blitImg} from '../../../../../shared/pixel/figure';
+import type {Img, Part, Prim, Stamp} from '../../../../../shared/pixel/figure';
 import type {DeckSt} from '../../art/sets/bridge';
 import {forecasterBust, drawForecasterRoom} from '../../art/cast/forecaster';
 import type {ForecasterRoomPose} from '../../art/cast/forecaster';
@@ -131,7 +133,9 @@ export const run = (b: Buf, f: number, st: {s: number; at: number; carS: number;
 // ================================================================== across the lanes
 export interface Across {
   time: DeckSt['time']; cycle?: number; receipt?: 'fresh' | 'flat' | 'run' | 'ink' | null; inkRun?: number; moving?: boolean; blimp?: DeckSt['blimp']; cloud?: {x: number; y: number} | null; flash?: boolean; umbrella?: boolean;
-  fore?: {x: number; p: Partial<ForecasterRoomPose>; flip?: boolean} | null;
+  /** p.state 'asleep' draws him sat on the far walkway against the rail (foreFloor, below), not the art's chair pose;
+   *  `woke`: still sat there, his head up and his eyes open (17.15, the beat before he stands) */
+  fore?: {x: number; p: Partial<ForecasterRoomPose>; flip?: boolean; woke?: boolean} | null;
   /** the Forecaster crossing the lanes (between the cars), not on the far lane */
   foreLane?: {x: number; y: number; legs: number} | null;
   mas?: {x: number; arm: Mas2Arm; legs?: Mas2Legs; bow?: boolean; lit?: boolean; flip?: boolean} | null;
@@ -139,6 +143,97 @@ export interface Across {
   post?: {id: 'apology1' | 'apology2' | 'apology3' | 'apology4'; k: number; shake?: number} | null;
   honk?: number;
 }
+// ------------------------------------------------------------------ the Forecaster asleep on the far walkway
+// The last picture fix (2026-10-11): the art's 'asleep' (art/cast/forecaster drawForecasterRoom) is the room rig's
+// chair pose (thighs level at a seat's height, shins hanging) with no chair under it, so he floated, sat on nothing, in
+// front of the far rail through the night (17.14) and the next afternoon (17.15). Here he sits on the walkway itself,
+// at the foot of the rail on its road side, low: his seat and both soles on the walkway's surface (the row his feet
+// stand on, y 111), his knees drawn up, his arms round his shins, his clipboard held to his chest; asleep, his head
+// dropped forward chin to chest, his eyes shut; `woke`, his head up and his eyes open. His own room rig, ramps, jacket
+// torso, arm shapes and head map (art/cast/forecaster's room spec, copied: the art file is shared and left as it is);
+// only the legs, the arms' pose and the head's tilt are new. A one-pixel contact shadow under him on the walkway.
+const FORE_RUST = [PAL.N0, PAL.W1, PAL.W2, PAL.W3, PAL.W4, PAL.W5];
+const FORE_RSPEC: RoomFigSpec = {
+  kind: 'jacket', legMat: 'jeans',
+  ramps: {skin: SKIN.light, hair: HAIR.dark, suit: FORE_RUST, shirt: FORE_RUST, jeans: [PAL.N0, PAL.N1, PAL.N2, PAL.N3, PAL.N4, PAL.N6], board: [PAL.D0, PAL.D2, PAL.D3, PAL.D4, PAL.P1, PAL.P2], pen: [PAL.R0, PAL.R1, PAL.R2, PAL.R3, PAL.R3, PAL.R3],
+    // his shoes as dark as they read when he stands (the room rig darkens a standing figure's feet by their height; sat,
+    // they are up in the key)
+    shoe: [PAL.N0, PAL.N0, PAL.N0, PAL.N1, PAL.N1, PAL.N2], metal: [PAL.N0, PAL.G3, PAL.G4, PAL.G6, PAL.P2, PAL.W9]},
+  backRamp: {skin: PAL.S3, suit: PAL.W3},
+};
+/** a limb segment (the room kit's): from (x0, y0) w0 wide to (x1, y1) w1 wide */
+const limb = (x0: number, y0: number, w0: number, x1: number, y1: number, w1: number): Prim => {
+  const dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+  return FP.poly(x0 + (nx * w0) / 2, y0 + (ny * w0) / 2, x1 + (nx * w1) / 2, y1 + (ny * w1) / 2, x1 - (nx * w1) / 2, y1 - (ny * w1) / 2, x0 - (nx * w0) / 2, y0 - (ny * w0) / 2);
+};
+/** his head asleep: his room head map (art/cast/civic2 BASE_HEAD, short hair) drawn bowed forward about 24 degrees, chin
+ *  to chest, by hand (a straight rotation of a 16-px map scrambles the features): the crown forward over the face, the
+ *  fringe falling over the brow, the lids shut (a dark line each under the fringe), the nose pointing down and forward,
+ *  the mouth and the chin tucked back toward the collar; no neck. 24 wide; its col 4 is the upright map's col 0 */
+const HEAD_BOWED = [
+  '...........hhhhhh.......',
+  '.........hhHHHHHHhh.....',
+  '........hHHHHHHHHHHhh...',
+  '........hHHHHHHHHHHHHh..',
+  '........hHHHHHHHHHHHHHh.',
+  '........hHHHHh2233HHHHh.',
+  '........hHHh12233444HHo.',
+  '........hHo1223bb44bbo..',
+  '.........ho122334444o...',
+  '.........o12233444444o..',
+  '.........o122334444445..',
+  '..........o2233444444n..',
+  '..........o2233444mm4o..',
+  '...........o2233443o....',
+  '............oo2223o.....',
+];
+/** the figure's own frame (unflipped, facing screen-right like every room sprite): 48 x 56; its floor row */
+const FLOOR_W = 48, FLOOR_H = 56, FLOOR_Y = 52, FLOOR_HIP = 20;
+const foreFloorImg = (() => {
+  const cache = new Map<string, Img>();
+  return (woke: boolean): Img => {
+    const key = woke ? 'woke' : 'asleep';
+    const hit = cache.get(key); if (hit) return hit;
+    // his upper body from his own rig (the jacket torso and its shirt V), the room rig's legs and arms replaced
+    const base = roomFig(FORE_RSPEC, {arm: 'clasp', armF: 'clasp', seat: true, state: 'talk', head: {hair: 'short', mouth: 'rest'}});
+    const torso = base.parts.filter((q) => !/^leg|^arm/.test(q.group));
+    const shirtV = (base.stamps ?? []).filter((s) => s.rows[0] === 'kkkkk');
+    // the legs, knees up: the hips on the walkway, the thighs rising forward to the knees, the shins down to the soles
+    const leg = (g: string, hx: number, kx: number, ky: number, ax: number, ay: number): Part[] => [
+      {group: g, mat: 'jeans', prims: [limb(hx, 46, 7.6, kx, ky, 6.2), limb(kx, ky, 5.8, ax, ay + 1, 5), FP.ell(kx, ky, 3, 3)]},
+      {group: g + 's', mat: 'shoe', prims: [FP.poly(ax - 2.6, ay, ax + 2.6, ay, ax + 6.4, ay + 3, ax + 6.4, ay + 5, ax - 3, ay + 5)]},
+    ];
+    const seat: Part = {group: 'legF', mat: 'jeans', prims: [FP.ell(18, 48, 7, 3.5)]};
+    // the arms round the shins: from the shoulders down beside the thighs, the forearms forward to the hands on the shins
+    const arm = (g: string, sx: number, ex: number, ey: number, hx: number, hy: number): Part => ({group: g, mat: 'suit', prims: [FP.ell(sx, 23, 4, 4), limb(sx, 23, 7, ex, ey, 6.2), limb(ex, ey, 6, hx, hy, 5.2), FP.ell(ex, ey, 3, 3)]});
+    // the clipboard held to his chest, his near arm down beside it: the board, its sheet, its steel clip (the art's board
+    // stamp, taller; a stamp, so the rig's outline draws no line across the sheet)
+    const board = {x: 19, y: 24, rows: ['..gg..', 'bbggbb', 'bppppb', 'bppppb', 'bppppb', 'bppppb', 'bbbbbb'], pal: {b: ['board', 2], p: ['board', 5], g: ['metal', 3]}} as Stamp;
+    const parts: Part[] = [
+      ...leg('legF', 17, 27, 35, 32, 47), arm('armF', 15, 17, 33, 29, 39), seat,
+      ...torso,
+      ...leg('legN', 23, 32, 34, 37, 47), arm('armN', 28, 26, 33, 35, 39),
+    ];
+    // the near hand on the near shin; the far one behind the near leg
+    const hand = {x: 34, y: 38, rows: ['.34.', '3445', '2344', '.22.'], pal: {'2': ['skin', 2], '3': ['skin', 3], '4': ['skin', 4], '5': ['skin', 5]}} as Stamp;
+    // his head: asleep, bowed chin to chest (HEAD_BOWED); woke, his own room head as he stands
+    const head = (woke ? {x: 12, y: 0, rows: roomHead({hair: 'short', mouth: 'rest'}), pal: ROOM_HEAD_PAL} : {x: 8, y: 4, rows: HEAD_BOWED, pal: ROOM_HEAD_PAL}) as Stamp;
+    const img = renderFigure({w: FLOOR_W, h: FLOOR_H, parts, adjust: [], stamps: [...shirtV, board, hand, head]}, roomRig(FORE_RSPEC));
+    cache.set(key, img);
+    return img;
+  };
+})();
+/** the Forecaster sat on the far walkway at the foot of the rail, facing screen-left (toward Mas): (x, floorY) = his hips
+ *  and the walkway row his seat and soles are on (the row a standing figure's soles are on) */
+export const foreFloor = (b: Buf, x: number, floorY: number, o: {woke?: boolean} = {}) => {
+  const img = foreFloorImg(!!o.woke);
+  const x0 = x - (FLOOR_W - 1 - FLOOR_HIP), y0 = floorY + 1 - FLOOR_Y;
+  // the contact shadow: one row a rung down on the walkway under his seat and his soles (and a pixel past them)
+  let lo = 999, hi = -1;
+  for (let i = 0; i < FLOOR_W; i++) for (let j = FLOOR_Y - 3; j < FLOOR_Y; j++) if (img.c[j * FLOOR_W + i] >= 0) { const X = x0 + (FLOOR_W - 1 - i); lo = Math.min(lo, X); hi = Math.max(hi, X); }
+  for (let X = lo - 1; X <= hi + 1; X++) b.set(X, floorY + 1, stepColor(b.get(X, floorY + 1), -1));
+  blitImg(b, img, x0, y0, {flip: true});
+};
 /** the pen on its bank chain at the far lane, rising out of the receipt beside the Forecaster (room scale) */
 const penSmall = (b: Buf, x: number, rise: number) => {
   const top = Math.round(140 - rise * 46);
@@ -213,7 +308,7 @@ const deckBase = (b: Buf, f: number, st: Omit<DeckSt, 'receipt'> & {receipt?: De
 };
 export const deck = (b: Buf, f: number, st: Across) => {
   deckBase(b, f, {time: st.time, cycle: st.cycle, receipt: st.receipt ?? 'fresh', inkRun: st.inkRun, moving: st.moving, blimp: st.blimp, cloud: false, flash: st.flash, umbrella: st.umbrella}, {
-    far: (bb) => { if (st.fore) drawForecasterRoom(bb, st.fore.x, 112, st.fore.p, {flip: st.fore.flip ?? true}); if (st.pen) penSmall(bb, (st.fore?.x ?? 380) - 20, st.pen.rise); },
+    far: (bb) => { if (st.fore) { if (st.fore.p.state === 'asleep') foreFloor(bb, st.fore.x, 111, {woke: st.fore.woke}); else drawForecasterRoom(bb, st.fore.x, 112, st.fore.p, {flip: st.fore.flip ?? true}); } if (st.pen) penSmall(bb, (st.fore?.x ?? 380) - 20, st.pen.rise); },
     near: (bb) => {
       if (st.foreLane) drawForecasterRoom(bb, st.foreLane.x, st.foreLane.y, {state: 'walk', legs: (['w0', 'w1', 'w2', 'w3'] as const)[st.foreLane.legs & 3]}, {flip: true});
       if (st.mas) {

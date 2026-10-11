@@ -195,11 +195,11 @@ L.add('17.13', {
   },
 });
 L.add('17.14', {
-  st: 'act3/sets/bridge deck ([W] the night, one held wide: the bridge\'s lights cycle once along the cable (a palette cycle, never a strobe); Mas still on the receipt, a silhouette; the Forecaster asleep against the far rail, his clipboard on his chest)',
+  st: 'act3/sets/bridge deck ([W] the night, one held wide: the bridge\'s lights cycle once along the cable (a palette cycle, never a strobe); Mas still on the receipt, a silhouette; the Forecaster asleep against the far rail: sat on the far walkway at the rail\'s foot (sets/bridge foreFloor), knees up, his arms round them, his clipboard on his chest, his head dropped chin to chest, eyes shut)',
   draw: (fb, k, sh, f) => { deck(fb, f, {time: 'night', cycle: Math.min(3, Math.floor(k / 12)), receipt: 'fresh', fore: {x: 386, p: {state: 'asleep'}}, mas: {x: 96, arm: 'down'}}); void sh; },
 });
 L.add('17.15', {
-  st: 'act3/sets/bridge deck ([W] the next afternoon (rail MAY 18): Mas posts; his post pops up over the sky in its own UI, his lowercase, one trim per honk from the car behind him (vested equity is vested equity, full stop. · this is on me… · …i did not know this was happening and i should have. · …they can contact me and we\'ll fix that too.), each held to its read; the Forecaster wakes against the rail, checks his watch, crosses out an hour: "Updating." (room mouth))',
+  st: 'act3/sets/bridge deck ([W] the next afternoon (rail MAY 18): Mas posts; his post pops up over the sky in its own UI, his lowercase, one trim per honk from the car behind him (vested equity is vested equity, full stop. · this is on me… · …i did not know this was happening and i should have. · …they can contact me and we\'ll fix that too.), each held to its read; the Forecaster asleep on the far walkway at the rail\'s foot (as 17.14), lifts his head, stands, checks his watch, crosses out an hour: "Updating." (room mouth))',
   face: {FORECASTER: 'room'},
   marks: {post: ['snd', 'post_click', 1, 0], h2: ['snd', 'car_honk_2', 1, 0], h3: ['snd', 'car_honk_3', 1, 0], h4: ['snd', 'car_honk_4', 1, 0], h5: ['snd', 'car_honk_5', 1, 0], scr: ['snd', 'pen_scribble_short', 1, 0]},
   draw: (fb, k, sh, f) => {
@@ -207,13 +207,15 @@ L.add('17.15', {
     const ids = ['apology1', 'apology2', 'apology3', 'apology4'] as const;
     const n = h.filter((v) => k >= v).length;
     const since = n === 0 ? k - post - 2 : k - h[n - 1];
+    // he sleeps on the walkway at the foot of the rail (sets/bridge foreFloor: the last picture fix); half a second
+    // before he stands his head comes up, eyes open (woke), still sat
     const wake = 200;
     const lastHonk = [...h].reverse().find((v) => k >= v) ?? -99;
     // four trims: the first on the post, the next three on the honks h2-h4; the last honk (h5) finds the last trim
     // already up, so the card gives a small shake on it instead of popping in again (the review: the re-pop read as a
     // stutter)
     const shake = n === 4 && k - h[3] < 6 ? (((k - h[3]) >> 1) % 2 ? 1 : -1) : 0;
-    deck(fb, f, {time: 'afternoon', receipt: 'fresh', fore: {x: 386, p: k < wake ? {state: 'asleep'} : k < scr - 14 ? {state: 'stand'} : {state: 'cross', mouth: roomMouth(sh, k, 'FORECASTER')}}, mas: {x: 96, arm: 'phone', bow: k < post + 4}, post: k >= post + 2 && n < 4 ? {id: ids[n], k: since} : k >= post + 2 ? {id: 'apology4', k: k - h[2], shake} : null, honk: k - lastHonk});
+    deck(fb, f, {time: 'afternoon', receipt: 'fresh', fore: {x: 386, p: k < wake ? {state: 'asleep'} : k < scr - 14 ? {state: 'stand'} : {state: 'cross', mouth: roomMouth(sh, k, 'FORECASTER')}, woke: k >= wake - 12}, mas: {x: 96, arm: 'phone', bow: k < post + 4}, post: k >= post + 2 && n < 4 ? {id: ids[n], k: since} : k >= post + 2 ? {id: 'apology4', k: k - h[2], shake} : null, honk: k - lastHonk});
   },
 });
 L.add('17.16', {
