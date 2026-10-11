@@ -56,12 +56,13 @@ The score is **"The Knee (Main Title)," V1 "Chip Chamber Jazz"**: felt piano, ch
 
 The writers' room lives in [`show/`](show/INDEX.md): the bible, about 80 character files, a verified timeline from 1985 to Sep 2026, and 12 episode folders (outline, beats, flashbacks, facts with sources, gags). Episodes 1–3 have full teleplays.
 
-## Where things stand (2026-10-02)
+## Where things stand (2026-10-11)
 
 - **Episode 1 is finished, published and locked.** `ep1.0_research_preview.md`, 23:31.58 (33,878 frames): cold open, the intro, four acts, the tag and the outro. Watch it from [EPISODES.md](EPISODES.md). The master is `out/ep01/full-v3/ep01-v35.mp4` (ignored by git like every video; its SHA-1 and its chapter inputs' are in `ops/reorg/ep01-final.sha1`). How it was made, round by round: [`show/episodes/ep01/production/full-v3/`](show/episodes/ep01/production/full-v3/) (`PLAN.md`, `pipeline.md`, `version-ledger.md`, `assembly.md`). Release copy: [`show/episodes/ep01/release.md`](show/episodes/ep01/release.md). Nothing in Ep1 changes from here on.
 - **The season is written and planned.** The bible, about 80 characters, a verified timeline from 1985 to Sep 2026, 12 episode folders (outlines, beats, facts with sources, gags), full teleplays for Eps 1–3, and the season's ML-concept plan ([`show/bible/ml-concepts.md`](show/bible/ml-concepts.md): one concept in depth per episode, Ep2–11).
 - **Shared assets are done:** the 30 s opening titles (four score variations, V1 used), the theme, 131 sound effects with dialogue blips, voice casting, the pixel engine, cast, rooms and kits.
-- **Next: Episode 2.** See [Starting the next episode](#starting-the-next-episode).
+- **Episode 2 v1 is finished and awaiting the showrunner's watch-through.** `ep1.1_her.wav`, 23:31.00: cold open, the intro, four acts, the tag and the outro. Nobody has watched it in motion or heard it yet. Read [`DELIVERY.md`](show/episodes/ep02/production/v1/DELIVERY.md) before watching; the release copy (title, description, chapters, thumbnails) is [`release.md`](show/episodes/ep02/release.md). The master is `out/ep02/v1/ep02-v1.mp4` (ignored by git); how it was made: [`show/episodes/ep02/production/v1/`](show/episodes/ep02/production/v1/).
+- **Next: publish Episode 2 after the watch-through, then Episode 3.** See [Starting the next episode](#starting-the-next-episode).
 
 ## How it's made
 
