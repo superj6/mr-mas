@@ -1,0 +1,13 @@
+// MR. MAS — Ep3 v1 · coldopen: the segment's layouts, ONE MODULE PER SCENE (scenes/sc-<scene>.ts, spec.ts defineScene).
+// The import block between the markers is written by tools/scenes.py coldopen (run it after every re-lock: it adds a stub
+// for each new scene); draw in the scene modules, not here, so the per-scene cache re-renders only what changed.
+import {defineSegment, fromScenes} from '../spec';
+import type {SceneSpec} from '../spec';
+import {LOCK} from './data';
+// <scenes> (tools/scenes.py: one import per scene module, in the lock's order)
+import {SCENE as sc_1} from './scenes/sc-1';
+import {SCENE as sc_2} from './scenes/sc-2';
+import {SCENE as sc_3} from './scenes/sc-3';
+const SCENES: SceneSpec[] = [sc_1, sc_2, sc_3];
+// </scenes>
+export const SEGMENT = defineSegment({seg: 'coldopen', lock: LOCK, layouts: fromScenes(...SCENES)});

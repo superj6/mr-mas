@@ -232,6 +232,8 @@
 | [**REZEILE**](../characters/rezeile.md) | Eliezer Yudkowsky | CHORUS | Critics/Academia | 1 | 1, 6, 10–12 | |
 | [**SUCRAM**](../characters/sucram.md) | Gary Marcus | CHORUS | Critics/Academia | 1 | 1, 3, 5, 12 (9 optional) | Stamp: `CALLED IT. (BEFORE LAUNCH.)` |
 | [**THE FORECASTER**](../characters/the-forecaster.md) | Daniel Kokotajlo | RECURRING | Critics/Academia | 2 | 2, 5, 7, 10–12 | Keeps re-pinning his own deadline. The Eps 10–12 plot visibly parallels *AI 2027* and credits it in-world. |
+| **THE CORKBOARD GUY** (display: CORKBOARD GUY) | fictional: generic internet theorist, no real counterpart | CHORUS | Critics/Academia | 3 | 3 | No real handle, avatar or account likeness; not a depiction of any real strawberry-hype account. Owns the corkboard, not the public record. Added for Ep3 v1 one-go attempt, 2026-10-13. |
+| **SECOND TRUTHER** | fictional: the theorist’s skeptical friend, no real counterpart | CHORUS | Critics/Academia | 3 | 3 | Generic invented composite; listens, tests claims and wants lunch. No real account markers. Added for Ep3 v1, 2026-10-13. |
 | **THE LETTER-WRITER** | Max Tegmark (FLI) | CAMEO | Critics/Academia | 1 | 1, 6 | Seeds THE HORSESHOE in Ep6. |
 | **THE BIOGRAPHERS** | Karen Hao, Keach Hagey, Michael Lewis | CAMEO | Culture/Media | 5 | 5, 7 | Book contents stay out. |
 | **THE PROFESSOR** | Andrew Ng | CAMEO | Critics/Academia | 10 (fb) | 10 fb | MARIO's boss at UDIAB. |
@@ -303,6 +305,8 @@ Visual identity, colors and real-counterpart notes live in [world/orgs-and-produ
 | **PEEKDEEP** (mascot THE WHALE) · TOHSNOOM / IMIK · IEWAUH · LARTSIM / LE CHIEN → EBIV · GNUSMAS · KS · **NEWQ** | DeepSeek · Moonshot / Kimi · Huawei · Mistral / Le Chat → Vibe · Samsung · SK · Qwen (Alibaba) | 1 | canonical; NEWQ added by the critic (B16) |
 | **ISS** · MACHINES THINKING / INKBLOT · IMA LABS · EPIMETHEUS · PERPLEXED / TEMOC · POINTER · RIPLIT · CLODBOT → MOLTBOT → CLAWOPEN · DEFLECTION | SSI · Thinking Machines / Inkling · AMI Labs · Project Prometheus · Perplexity / Comet · Cursor · Replit · Clawdbot → Moltbot → OpenClaw · Inflection | 2 | canonical |
 | **THE ORB** (company COINWORLD) | Worldcoin Orb (Worldcoin) | 1 | canonical |
+
+**o1 / o3** and **Strawberry** (codename) are product/version identifiers retained as identifiers in Ep3 v1, following the model-number convention for H20/H200/Blackwell below. They do not introduce real person or company names. Chatbot/company labels remain CHATGTP/NopeAI. Added 2026-10-13 for the one-go attempt.
 
 ### 3b. Chips and compute
 
