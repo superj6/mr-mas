@@ -1,0 +1,435 @@
+{
+  "segment": "tag",
+  "act": "TAG",
+  "title": "say a number",
+  "source": null,
+  "_about": "Episode 3 source-only new beats in Ep2 schema. est_s is natural speech + designed action, not a fitted target. _spec.py is authority; _build.py regenerates JSON and script. Recorded durations replace rate estimates when available.",
+  "story_s": {
+    "target": 33.41,
+    "estimate": 33.41
+  },
+  "scenes": [
+    {
+      "id": "24",
+      "title": "Say a number",
+      "date": "UNDATED ALLEGORY",
+      "place": "same symbolic terrace",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "status": "CHANGED",
+      "target_s": 27.41,
+      "estimate_s": 27.41
+    },
+    {
+      "id": "25",
+      "title": "Under the ice",
+      "date": "UNDATED",
+      "place": "frozen San Francisco Bay",
+      "mode": "HOOK",
+      "pace": "weighted",
+      "status": "CHANGED",
+      "target_s": 6,
+      "estimate_s": 6
+    }
+  ],
+  "cast": {
+    "mas": {
+      "name": "MAS",
+      "role": "CEO"
+    },
+    "orb": {
+      "name": "THE ORB",
+      "role": "WITNESS"
+    },
+    "mit-kooc": {
+      "name": "MIT KOOC",
+      "role": "ELPPA"
+    },
+    "rumpt": {
+      "name": "RUMPT",
+      "role": "PRESIDENT-ELECT"
+    }
+  },
+  "rooms": {
+    "city_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "roof_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "lobby_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "stadium": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "darkroom": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "dinner": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "governor_office": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "boardroom_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "parking_lot": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "writing_room": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "paper": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "terrace": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "ice": "continuous location bed; lead next room by 0.6 s on sound-led seam"
+  },
+  "keep_parens": [],
+  "beats": [
+    {
+      "id": "24.01",
+      "scene": "24",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "frame": "DIEGETIC KIOSK BEZEL, hand visibly belongs to Mas",
+      "camera": "DIEGETIC KIOSK BEZEL, hand visibly belongs to Mas",
+      "set": "terrace",
+      "set_id": "SET-TERRACE",
+      "room": "terrace",
+      "chars": [
+        "mas",
+        "orb"
+      ],
+      "caption": "Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+      "picture": "VISUAL: check-slot. Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+      "music": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+      "style": "BASE",
+      "action": "new",
+      "after": "(start)",
+      "act": "TAG",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5,
+      "onscreen_items": [
+        {
+          "text": "GIVE PERSONAL CHECK",
+          "kind": "ui",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "GIVE PERSONAL CHECK (0.25-1.5 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "kiosk_touch",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "seq": {
+        "id": "24",
+        "place": "same symbolic terrace",
+        "time": "UNDATED ALLEGORY",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "terrace",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "24.02",
+      "scene": "24",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "frame": "MEDIUM check action → WIDE no reaction",
+      "camera": "MEDIUM check action → WIDE no reaction",
+      "set": "terrace",
+      "set_id": "SET-TERRACE",
+      "room": "terrace",
+      "chars": [
+        "mas",
+        "mit-kooc",
+        "orb"
+      ],
+      "caption": "Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+      "picture": "VISUAL: check-slot. Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+      "music": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+      "style": "BASE",
+      "action": "new",
+      "after": "24.01",
+      "act": "TAG",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 6,
+      "sounds": [
+        {
+          "name": "paper_clink",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "24.03",
+      "scene": "24",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "frame": "PANEL then WIDE turn; space between clink and response",
+      "camera": "PANEL then WIDE turn; space between clink and response",
+      "set": "terrace",
+      "set_id": "SET-TERRACE",
+      "room": "terrace",
+      "chars": [
+        "mas",
+        "orb"
+      ],
+      "caption": "In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+      "picture": "VISUAL: reflection. In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+      "music": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+      "style": "BASE",
+      "action": "new",
+      "after": "24.02",
+      "act": "TAG",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5,
+      "onscreen_items": [
+        {
+          "text": "$100B",
+          "kind": "sign",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "$100B (0.25-1.5 s)"
+        ]
+      },
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "24.04",
+      "scene": "24",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "frame": "WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness",
+      "camera": "WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness",
+      "set": "terrace",
+      "set_id": "SET-TERRACE",
+      "room": "terrace",
+      "chars": [
+        "mas",
+        "rumpt",
+        "orb"
+      ],
+      "caption": "Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+      "picture": "VISUAL: reveal-rumpt. Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+      "music": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+      "style": "BASE",
+      "action": "new",
+      "after": "24.03",
+      "act": "TAG",
+      "lines": [
+        {
+          "id": "e3-tag-0001",
+          "who": "rumpt",
+          "text": "Say a number.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+1.25",
+          "len_s": 0.91,
+          "t_s": 1.25,
+          "take": "new",
+          "take_file": "audio/ep03/v1/tag/e3-tag-0001.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.41,
+      "aftermath": {
+        "s": 3.25,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "24.05",
+      "scene": "24",
+      "mode": "ADVENTURE UI / REVEAL",
+      "pace": "weighted",
+      "frame": "MCU Orb → Mas held look, toasts sequential",
+      "camera": "MCU Orb → Mas held look, toasts sequential",
+      "set": "terrace",
+      "set_id": "SET-TERRACE",
+      "room": "terrace",
+      "chars": [
+        "mas",
+        "rumpt",
+        "orb"
+      ],
+      "caption": "Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+      "picture": "VISUAL: reveal-rumpt. Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+      "music": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+      "style": "BASE",
+      "action": "new",
+      "after": "24.04",
+      "act": "TAG",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 6,
+      "onscreen_items": [
+        {
+          "text": "verified: human",
+          "kind": "toast",
+          "at": 0.25,
+          "until": 1.5
+        },
+        {
+          "text": "verified: president-elect",
+          "kind": "toast",
+          "at": 1.6,
+          "until": 3.142
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "verified: human (0.25-1.5 s)",
+          "verified: president-elect (1.6-3.142 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "orb_scan",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "brass tail→ice creak",
+        "matched_object": "brass tail→ice creak"
+      }
+    },
+    {
+      "id": "25.01",
+      "scene": "25",
+      "mode": "HOOK",
+      "pace": "weighted",
+      "frame": "WIDE one image with moving shadow",
+      "camera": "WIDE one image with moving shadow",
+      "set": "bay",
+      "set_id": "SET-BAY",
+      "room": "ice",
+      "chars": [
+        "orb"
+      ],
+      "caption": "Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+      "picture": "VISUAL: frozen-bay. Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+      "music": "E03-19 brass tail, then room ice",
+      "style": "BASE",
+      "action": "new",
+      "after": "24.05",
+      "act": "TAG",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 6,
+      "sounds": [
+        {
+          "name": "ice_creak",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "seq": {
+        "id": "25",
+        "place": "frozen San Francisco Bay",
+        "time": "UNDATED",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "ice",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "weighted",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "ice creak→black→Orb outro",
+        "matched_object": "ice creak→black→Orb outro"
+      }
+    }
+  ]
+}

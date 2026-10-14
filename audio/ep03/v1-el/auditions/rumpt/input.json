@@ -1,0 +1,52 @@
+{
+ "beats": [
+  {
+   "id": "24.04",
+   "lines": [
+    {
+     "id": "e3-tag-0001",
+     "who": "rumpt",
+     "text": "Say a number.",
+     "t": 0.5,
+     "dur": 0.91,
+     "audio": "audio/ep03/v1/tag/wav/e3-tag-0001.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "Say",
+       0.045,
+       0.32
+      ],
+      [
+       "a",
+       0.32,
+       0.42
+      ],
+      [
+       "number",
+       0.42,
+       0.92
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation"
+    }
+   ]
+  },
+  {
+   "id": "audition-context",
+   "lines": [
+    {
+     "id": "e3-aud-rumpt-context",
+     "who": "rumpt",
+     "tag": "",
+     "text": "We're going to put the number at the top of the page. Say a number."
+    }
+   ]
+  }
+ ],
+ "note": "Actual script turns; Rumpt context line is audition-only, never in film."
+}

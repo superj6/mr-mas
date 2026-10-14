@@ -1,0 +1,696 @@
+{
+  "segment": "coldopen",
+  "act": "COLD OPEN",
+  "title": "one fruit",
+  "source": null,
+  "_about": "Episode 3 source-only new beats in Ep2 schema. est_s is natural speech + designed action, not a fitted target. _spec.py is authority; _build.py regenerates JSON and script. Recorded durations replace rate estimates when available.",
+  "story_s": {
+    "target": 55.59,
+    "estimate": 55.59
+  },
+  "scenes": [
+    {
+      "id": "1",
+      "title": "Red yarn",
+      "date": "AUG 7, 2024",
+      "place": "San Francisco skyline",
+      "mode": "SET-PIECE",
+      "pace": "quick",
+      "status": "CHANGED",
+      "target_s": 7,
+      "estimate_s": 7
+    },
+    {
+      "id": "2",
+      "title": "Has a theory",
+      "date": "AUG 7, 2024",
+      "place": "alley behind taco truck",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "status": "CHANGED",
+      "target_s": 34.15,
+      "estimate_s": 34.15
+    },
+    {
+      "id": "3",
+      "title": "One picture",
+      "date": "AUG 7, 2024",
+      "place": "NopeAI roof garden",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "status": "CHANGED",
+      "target_s": 14.44,
+      "estimate_s": 14.44
+    }
+  ],
+  "cast": {
+    "orb": {
+      "name": "THE ORB",
+      "role": "WITNESS"
+    },
+    "corkboard-guy": {
+      "name": "CORKBOARD GUY",
+      "role": "HAS A THEORY"
+    },
+    "second-truther": {
+      "name": "SECOND TRUTHER",
+      "role": "WANTS LUNCH"
+    },
+    "cook": {
+      "name": "COOK",
+      "role": "TACO TRUCK"
+    },
+    "mas": {
+      "name": "MAS",
+      "role": "CEO"
+    }
+  },
+  "rooms": {
+    "city_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "roof_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "lobby_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "stadium": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "darkroom": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "dinner": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "governor_office": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "boardroom_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "parking_lot": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "writing_room": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "paper": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "terrace": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "ice": "continuous location bed; lead next room by 0.6 s on sound-led seam"
+  },
+  "keep_parens": [],
+  "beats": [
+    {
+      "id": "1.01",
+      "scene": "1",
+      "mode": "SET-PIECE",
+      "pace": "quick",
+      "frame": "WIDE; city scale, moving cable car and bird",
+      "camera": "WIDE; city scale, moving cable car and bird",
+      "set": "skyline",
+      "set_id": "SET-SKYLINE",
+      "room": "city_day",
+      "chars": [
+        "orb"
+      ],
+      "caption": "Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+      "picture": "VISUAL: skyline-yarn. Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+      "music": "E03-01 CHIP CAPER; knee cells, dry chip and pizzicato",
+      "style": "BASE",
+      "action": "new",
+      "after": "(start)",
+      "act": "COLD OPEN",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 7,
+      "sounds": [
+        {
+          "name": "yarn_twang",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "seq": {
+        "id": "1",
+        "place": "San Francisco skyline",
+        "time": "AUG 7, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "city_day",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "city twang → alley generator",
+        "matched_object": "city twang → alley generator"
+      }
+    },
+    {
+      "id": "2.01",
+      "scene": "2",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "alley",
+      "set_id": "SET-ALLEY",
+      "room": "alley_day",
+      "chars": [
+        "corkboard-guy",
+        "second-truther"
+      ],
+      "caption": "Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+      "picture": "VISUAL: corkboard. Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+      "music": "E03-01 CHIP CAPER continues",
+      "style": "BASE",
+      "action": "new",
+      "after": "1.01",
+      "act": "COLD OPEN",
+      "lines": [
+        {
+          "id": "e3-coldopen-0001",
+          "who": "corkboard-guy",
+          "text": "Look at it. Really look. Dot. Dot. Dot. It's Morse.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+2.0",
+          "len_s": 2.29,
+          "t_s": 2.0,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0001.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0002",
+          "who": "second-truther",
+          "text": "Morse has dashes.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0001",
+          "len_s": 1.28,
+          "t_s": 4.59,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0002.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0003",
+          "who": "corkboard-guy",
+          "text": "Not yet. This is the preview.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0002",
+          "len_s": 1.36,
+          "t_s": 6.17,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0003.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 9.13,
+      "onscreen_items": [
+        {
+          "text": "CORKBOARD GUY · HAS A THEORY",
+          "kind": "plate",
+          "at": 0.25,
+          "until": 1.958
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "CORKBOARD GUY · HAS A THEORY (0.25-1.958 s)"
+        ]
+      },
+      "seq": {
+        "id": "2",
+        "place": "alley behind taco truck",
+        "time": "AUG 7, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "alley_day",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-coldopen-0002": 0.3,
+          "e3-coldopen-0003": 0.3
+        }
+      }
+    },
+    {
+      "id": "2.02",
+      "scene": "2",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "alley",
+      "set_id": "SET-ALLEY",
+      "room": "alley_day",
+      "chars": [
+        "corkboard-guy",
+        "second-truther"
+      ],
+      "caption": "Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+      "picture": "VISUAL: corkboard. Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+      "music": "E03-01 CHIP CAPER continues",
+      "style": "BASE",
+      "action": "new",
+      "after": "2.01",
+      "act": "COLD OPEN",
+      "lines": [
+        {
+          "id": "e3-coldopen-0004",
+          "who": "second-truther",
+          "text": "I zoomed out a little. Could it be a fruit?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.32,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0004.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0005",
+          "who": "corkboard-guy",
+          "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0004",
+          "len_s": 5.47,
+          "t_s": 3.12,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0005.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0006",
+          "who": "second-truther",
+          "text": "Then can we eat something that isn't evidence?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0005",
+          "len_s": 2.39,
+          "t_s": 8.89,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0006.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 12.88,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-coldopen-0005": 0.3,
+          "e3-coldopen-0006": 0.3
+        }
+      }
+    },
+    {
+      "id": "2.03",
+      "scene": "2",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "alley",
+      "set_id": "SET-ALLEY",
+      "room": "alley_day",
+      "chars": [
+        "cook",
+        "corkboard-guy",
+        "second-truther"
+      ],
+      "caption": "Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+      "picture": "VISUAL: corkboard. Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+      "music": "E03-01 CHIP CAPER continues",
+      "style": "BASE",
+      "action": "new",
+      "after": "2.02",
+      "act": "COLD OPEN",
+      "lines": [
+        {
+          "id": "e3-coldopen-0007",
+          "who": "corkboard-guy",
+          "text": "The truck's in on it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 0.99,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0007.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0008",
+          "who": "cook",
+          "text": "I'm in on carnitas. And you're blocking my window.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0007",
+          "len_s": 2.32,
+          "t_s": 1.79,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0008.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-coldopen-0009",
+          "who": "second-truther",
+          "text": "Two carnitas. No code words.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-coldopen-0008",
+          "len_s": 2.13,
+          "t_s": 4.41,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0009.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 8.14,
+      "sounds": [
+        {
+          "name": "generator_cough",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-coldopen-0008": 0.3,
+          "e3-coldopen-0009": 0.3
+        }
+      }
+    },
+    {
+      "id": "2.04",
+      "scene": "2",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE; action matches flung line to roof",
+      "camera": "WIDE; action matches flung line to roof",
+      "set": "alley",
+      "set_id": "SET-ALLEY",
+      "room": "alley_day",
+      "chars": [
+        "corkboard-guy",
+        "second-truther",
+        "cook"
+      ],
+      "caption": "The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+      "picture": "VISUAL: corkboard. The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+      "music": "E03-01 CHIP CAPER continues",
+      "style": "BASE",
+      "action": "new",
+      "after": "2.03",
+      "act": "COLD OPEN",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 4,
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "yarn flung → roof pot, generator carries",
+        "matched_object": "yarn flung → roof pot, generator carries"
+      }
+    },
+    {
+      "id": "3.01",
+      "scene": "3",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "LOW DESK; pot/can/bow all read, Mas above them",
+      "camera": "LOW DESK; pot/can/bow all read, Mas above them",
+      "set": "roof",
+      "set_id": "SET-ROOF",
+      "room": "roof_day",
+      "chars": [
+        "mas",
+        "orb"
+      ],
+      "caption": "Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+      "picture": "VISUAL: strawberry-post. Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+      "music": "E03-01 one chip voice; settles on F",
+      "style": "BASE",
+      "action": "new",
+      "after": "2.04",
+      "act": "COLD OPEN",
+      "lines": [
+        {
+          "id": "e3-coldopen-0010",
+          "who": "mas",
+          "text": "it's a strawberry.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+2.0",
+          "len_s": 1.12,
+          "t_s": 2.0,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-coldopen-0010.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.32,
+      "seq": {
+        "id": "3",
+        "place": "NopeAI roof garden",
+        "time": "AUG 7, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "roof_day",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 2.2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "3.02",
+      "scene": "3",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "MCU Mas; phone lower in frame, no text rail",
+      "camera": "MCU Mas; phone lower in frame, no text rail",
+      "set": "roof",
+      "set_id": "SET-ROOF",
+      "room": "roof_day",
+      "chars": [
+        "mas"
+      ],
+      "caption": "Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+      "picture": "VISUAL: strawberry-post. Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+      "music": "E03-01 one chip voice; settles on F",
+      "style": "BASE",
+      "action": "new",
+      "after": "3.01",
+      "act": "COLD OPEN",
+      "lines": [
+        {
+          "id": "e3-vo-01",
+          "who": "mas",
+          "text": "one picture. leave the date off.",
+          "vo": true,
+          "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+          "tag": "V.O.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.02,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/coldopen/e3-vo-01.wav",
+          "fact_tag": "[INVENTED · inner voice]",
+          "device": null,
+          "mode": "vo"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 4.12,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "3.03",
+      "scene": "3",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "MEDIUM; phone action then fruit into pocket",
+      "camera": "MEDIUM; phone action then fruit into pocket",
+      "set": "roof",
+      "set_id": "SET-ROOF",
+      "room": "roof_day",
+      "chars": [
+        "mas",
+        "orb"
+      ],
+      "caption": "Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+      "picture": "VISUAL: strawberry-post. Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+      "music": "E03-01 one chip voice; settles on F",
+      "style": "BASE",
+      "action": "new",
+      "after": "3.02",
+      "act": "COLD OPEN",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5,
+      "onscreen_items": [
+        {
+          "text": "POSTED",
+          "kind": "ui",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "POSTED (0.25-1.5 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "phone_click",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "phone click → intro keys",
+        "matched_object": "phone click → intro keys"
+      }
+    }
+  ]
+}

@@ -15,6 +15,8 @@ Operational helpers for running this project on one laptop.
 
 - `rebuild-act.sh --ep 2 <act> [--scene ID[,ID]] [--from STEP] [--only STEP] [--dry-run]` runs `rebuild-act-ep2.sh`, Ep2 v1's copy (2026-10-08): the same steps on Ep2's tools (lock, score, mix, picture, mux, scenecut, film). Its picture step is the per-scene render (only scenes whose content changed are drawn; the act picture is their lossless concat), and `--scene` renders just those scenes and cuts each one with its sound for review. Without `--ep` (or with `--ep 1`) `rebuild-act.sh` runs exactly as before (its six dry runs are identical). Documented in `show/episodes/ep02/production/v1/pipeline.md` §7.
 
+- `rebuild-act.sh --ep 3 <act> [--scene ID[,ID]] [--from STEP] [--only STEP] [--dry-run]` uses the Episode 3 v1 copy, `rebuild-act-ep3.sh`. The existing dispatcher already supports episode numbers. It keeps Ep2's per-scene cache and guarded lock behavior, with Ep3 paths; scratch is a fresh child of `SCRATCH` and dry-run cleanup never deletes the parent. See `show/episodes/ep03/production/v1/pipeline.md`.
+
 - `pressure-governor.sh [minutes] &`: pauses this project's heavy jobs (their `heavy.sh` scopes) while the session's memory pressure is above 20%, and resumes them under 5%. It never touches another project's processes.
 
 ### The reorganization tools (docs/ORGANIZATION-PLAN.md)

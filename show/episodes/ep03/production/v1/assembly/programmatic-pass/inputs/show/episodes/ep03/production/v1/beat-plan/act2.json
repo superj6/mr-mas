@@ -1,0 +1,2743 @@
+{
+  "segment": "act2",
+  "act": "ACT TWO",
+  "title": "people out, money in",
+  "source": null,
+  "_about": "Episode 3 source-only new beats in Ep2 schema. est_s is natural speech + designed action, not a fitted target. _spec.py is authority; _build.py regenerates JSON and script. Recorded durations replace rate estimates when available.",
+  "story_s": {
+    "target": 277.167,
+    "estimate": 277.167
+  },
+  "scenes": [
+    {
+      "id": "11",
+      "title": "Where people leave",
+      "date": "SEP 25, 2024",
+      "place": "NopeAI lobby",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "status": "CHANGED",
+      "target_s": 96.07,
+      "estimate_s": 96.07
+    },
+    {
+      "id": "12",
+      "title": "Who was at the table",
+      "date": "JUL 2015",
+      "place": "Woodrose, Gerg memory",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "status": "CHANGED",
+      "target_s": 50.32,
+      "estimate_s": 50.32
+    },
+    {
+      "id": "13",
+      "title": "One head",
+      "date": "SEP 29, 2024",
+      "place": "governor office through lobby TV",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "status": "CHANGED",
+      "target_s": 36.76,
+      "estimate_s": 36.76
+    },
+    {
+      "id": "14",
+      "title": "The owner line",
+      "date": "OCT 2, 2024",
+      "place": "lobby to boardroom",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "status": "CHANGED",
+      "target_s": 94.017,
+      "estimate_s": 94.017
+    }
+  ],
+  "cast": {
+    "mas": {
+      "name": "MAS",
+      "role": "CEO"
+    },
+    "installer": {
+      "name": "INSTALLER",
+      "role": "DOORS"
+    },
+    "gerg": {
+      "name": "GERG",
+      "role": "CO-FOUNDER"
+    },
+    "rima": {
+      "name": "RIMA",
+      "role": "CTO"
+    },
+    "alyi": {
+      "name": "ALYI",
+      "role": "CO-FOUNDER"
+    },
+    "mario": {
+      "name": "MARIO",
+      "role": "RIVAL"
+    },
+    "nole": {
+      "name": "NOLE",
+      "role": "RIVAL"
+    },
+    "orb": {
+      "name": "THE ORB",
+      "role": "WITNESS"
+    },
+    "moswen": {
+      "name": "MOSWEN",
+      "role": "GOVERNOR"
+    },
+    "reneiw": {
+      "name": "RENEIW",
+      "role": "SENATOR"
+    },
+    "auhsoj": {
+      "name": "AUHSOJ",
+      "role": "LEADS THE ROUND"
+    },
+    "investor": {
+      "name": "INVESTOR",
+      "role": "THE MONEY"
+    }
+  },
+  "rooms": {
+    "city_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "roof_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "lobby_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "stadium": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "alley_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "darkroom": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "dinner": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "governor_office": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "boardroom_day": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "parking_lot": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "beach_night": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "writing_room": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "paper": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "terrace": "continuous location bed; lead next room by 0.6 s on sound-led seam",
+    "ice": "continuous location bed; lead next room by 0.6 s on sound-led seam"
+  },
+  "keep_parens": [],
+  "beats": [
+    {
+      "id": "11.01",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE; old/new doors, window and characters readable",
+      "camera": "WIDE; old/new doors, window and characters readable",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "installer",
+        "gerg"
+      ],
+      "caption": "Old revolving door leans beside crate INDUSTRIAL DOOR. Mas waits with clipboard. Gerg video tile on reception laptop is visibly a call. Installer checks clearance.",
+      "picture": "VISUAL: door-install. Old revolving door leans beside crate INDUSTRIAL DOOR. Mas waits with clipboard. Gerg video tile on reception laptop is visibly a call. Installer checks clearance.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "(start)",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0001",
+          "who": "installer",
+          "text": "One revolving door, industrial, four wings, rated for heavy traffic. Where do you want it?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+2.0",
+          "len_s": 4.15,
+          "t_s": 2.0,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0001.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0002",
+          "who": "mas",
+          "text": "where people leave.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0001",
+          "len_s": 1.13,
+          "t_s": 6.6,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0002.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0003",
+          "who": "installer",
+          "text": "So, where the old one was.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0002",
+          "len_s": 1.35,
+          "t_s": 8.03,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0003.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0004",
+          "who": "mas",
+          "text": "keep the old one. don't cover the window.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0003",
+          "len_s": 2.61,
+          "t_s": 9.83,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0004.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 14.04,
+      "onscreen_items": [
+        {
+          "text": "SEP 25, 2024",
+          "kind": "rail",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "SEP 25, 2024 (0.25-1.5 s)"
+        ]
+      },
+      "seq": {
+        "id": "11",
+        "place": "NopeAI lobby",
+        "time": "SEP 25, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "lobby_day",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0002": 0.45,
+          "e3-act2-0003": 0.3,
+          "e3-act2-0004": 0.45
+        }
+      }
+    },
+    {
+      "id": "11.02",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · HELD held pair through rotating wing; no crop into back of head",
+      "camera": "TWO-SHOT · HELD held pair through rotating wing; no crop into back of head",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "rima"
+      ],
+      "caption": "Rima arrives carrying box, spotlight follows. Two unnamed employees behind. Door takes her round; Mas steps alongside with short form.",
+      "picture": "VISUAL: door-interview. Rima arrives carrying box, spotlight follows. Two unnamed employees behind. Door takes her round; Mas steps alongside with short form.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.01",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0005",
+          "who": "mas",
+          "text": "exit interview. it's a short form.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.44,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0005.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0006",
+          "who": "rima",
+          "text": "Of course. I'm happy to answer anything.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0005",
+          "len_s": 2.04,
+          "t_s": 3.24,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0006.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0007",
+          "who": "mas",
+          "text": "reason for leaving?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0006",
+          "len_s": 1.23,
+          "t_s": 5.73,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0007.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0008",
+          "who": "rima",
+          "text": "Thank you all.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0007",
+          "len_s": 0.78,
+          "t_s": 7.26,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0008.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0009",
+          "who": "mas",
+          "text": "on a scale of one to five, how likely are you to return?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0008",
+          "len_s": 3.76,
+          "t_s": 8.49,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0009.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 13.85,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0006": 0.3,
+          "e3-act2-0007": 0.45,
+          "e3-act2-0008": 0.3,
+          "e3-act2-0009": 0.45
+        }
+      }
+    },
+    {
+      "id": "11.03",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "rima"
+      ],
+      "caption": "Rima takes her time, composed while door rotates. Mas listens, clipboard still. Keep her face through the important clause, then his reaction.",
+      "picture": "VISUAL: door-interview. Rima takes her time, composed while door rotates. Mas listens, clipboard still. Keep her face through the important clause, then his reaction.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.02",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0010",
+          "who": "rima",
+          "text": "The handover doc is in the shared drive. Every system in it has a name next to it now, and none of them are mine. Tuesday's review is still at ten.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 9.17,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0010.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0011",
+          "who": "mas",
+          "text": "leave the review at ten. does the new person have the room?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0010",
+          "len_s": 3.75,
+          "t_s": 10.12,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0011.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0012",
+          "who": "rima",
+          "text": "They have the room. They have the keys. And the class photo can stay up. I like that photo.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0011",
+          "len_s": 4.95,
+          "t_s": 14.17,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0012.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0013",
+          "who": "mas",
+          "text": "that's not a number.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0012",
+          "len_s": 1.22,
+          "t_s": 19.57,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0013.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0014",
+          "who": "rima",
+          "text": "No. It isn't. Thank you all.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0013",
+          "len_s": 1.45,
+          "t_s": 21.09,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0014.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 24.54,
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0011": 0.45,
+          "e3-act2-0012": 0.3,
+          "e3-act2-0013": 0.45,
+          "e3-act2-0014": 0.3
+        }
+      }
+    },
+    {
+      "id": "11.04",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair, then visible laptop speaker tile",
+      "camera": "TWO-SHOT · held pair, then visible laptop speaker tile",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "rima",
+        "gerg"
+      ],
+      "caption": "Door brings Rima back round once more; she and Mas both know she is still inside. His questions end.",
+      "picture": "VISUAL: door-interview. Door brings Rima back round once more; she and Mas both know she is still inside. His questions end.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.03",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0015",
+          "who": "mas",
+          "text": "you're still inside.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.25,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0015.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0016",
+          "who": "rima",
+          "text": "I'm aware.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0015",
+          "len_s": 0.66,
+          "t_s": 2.05,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0016.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0017",
+          "who": "gerg",
+          "text": "Bye, Rima! Bye, other two!",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "O.S.",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0016",
+          "len_s": 1.24,
+          "t_s": 3.01,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0017.wav",
+          "fact_tag": "[INVENTED]",
+          "device": "laptop",
+          "mode": "speaker",
+          "os": true
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.85,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0016": 0.3,
+          "e3-act2-0017": 0.3
+        }
+      }
+    },
+    {
+      "id": "11.05",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE moving action; paper remains unread until funding scene",
+      "camera": "WIDE moving action; paper remains unread until funding scene",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "installer",
+        "rima"
+      ],
+      "caption": "Three departing bodies spin door into turbine. Lanyards/hair/papers stream sideways. Rima hair stays composed. Unread newspaper wraps clipboard; no headline shown here. Old NONPROFIT door visible behind.",
+      "picture": "VISUAL: door-turbine. Three departing bodies spin door into turbine. Lanyards/hair/papers stream sideways. Rima hair stays composed. Unread newspaper wraps clipboard; no headline shown here. Old NONPROFIT door visible behind.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.04",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 10,
+      "sounds": [
+        {
+          "name": "door_gale",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "11.06",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "installer"
+      ],
+      "caption": "Installer clings to reception, horizontal like flag, offers signature. Mas signs steady then removes glass from path of flying paper.",
+      "picture": "VISUAL: door-turbine. Installer clings to reception, horizontal like flag, offers signature. Mas signs steady then removes glass from path of flying paper.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.05",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0018",
+          "who": "installer",
+          "text": "Just need a signature for the door! Right here?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.12,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0018.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0019",
+          "who": "mas",
+          "text": "right there.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0018",
+          "len_s": 0.81,
+          "t_s": 3.07,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0019.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0020",
+          "who": "installer",
+          "text": "Would you like a maintenance plan?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0019",
+          "len_s": 1.51,
+          "t_s": 4.18,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0020.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0021",
+          "who": "mas",
+          "text": "send it to the person beside me in the doc.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0020",
+          "len_s": 2.66,
+          "t_s": 6.14,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0021.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 10.8,
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0019": 0.45,
+          "e3-act2-0020": 0.3,
+          "e3-act2-0021": 0.45
+        }
+      }
+    },
+    {
+      "id": "11.07",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE → listener MCU; no motive narration",
+      "camera": "WIDE → listener MCU; no motive narration",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "rima"
+      ],
+      "caption": "Rima steps into street; spotlight follows and drifts away. Mas waits at desk while the two others go. Room retains louder lights and spinning empty door.",
+      "picture": "VISUAL: door-interview. Rima steps into street; spotlight follows and drifts away. Mas waits at desk while the two others go. Room retains louder lights and spinning empty door.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.06",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5,
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "11.08",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "MCU; names illegible background not exposition",
+      "camera": "MCU; names illegible background not exposition",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas"
+      ],
+      "caption": "Mas puts clipboard down, opens next review and assigns a vacant chair by moving a name strip. Only after exits are over does voice return.",
+      "picture": "VISUAL: class-photo. Mas puts clipboard down, opens next review and assigns a vacant chair by moving a name strip. Only after exits are over does voice return.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.07",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-vo-08",
+          "who": "mas",
+          "text": "keep the review. change the names on it.",
+          "vo": true,
+          "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+          "tag": "V.O.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.4,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-vo-08.wav",
+          "fact_tag": "[INVENTED · inner voice]",
+          "device": null,
+          "mode": "vo"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 4.5,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "11.09",
+      "scene": "11",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "PHOTO in laptop camera, then speaker reverse",
+      "camera": "PHOTO in laptop camera, then speaker reverse",
+      "set": "lobby",
+      "set_id": "SET-LOBBY",
+      "room": "lobby_day",
+      "chars": [
+        "mas",
+        "gerg"
+      ],
+      "caption": "He carries laptop to full-sized photo; Rima-shaped hole, two smaller spaces. Gerg sees it on call.",
+      "picture": "VISUAL: class-photo. He carries laptop to full-sized photo; Rima-shaped hole, two smaller spaces. Gerg sees it on call.",
+      "music": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.08",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0022",
+          "who": "gerg",
+          "text": "We're gonna need a smaller photo.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "O.S.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.39,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0022.wav",
+          "fact_tag": "[INVENTED]",
+          "device": "laptop",
+          "mode": "speaker",
+          "os": true
+        },
+        {
+          "id": "e3-act2-0023",
+          "who": "mas",
+          "text": "not today.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0022",
+          "len_s": 0.88,
+          "t_s": 2.34,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0023.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0024",
+          "who": "gerg",
+          "text": "Remember when everybody fit at one table?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "O.S.",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0023",
+          "len_s": 1.97,
+          "t_s": 3.52,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0024.wav",
+          "fact_tag": "[INVENTED]",
+          "device": "laptop",
+          "mode": "speaker",
+          "os": true
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 7.49,
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0023": 0.45,
+          "e3-act2-0024": 0.3
+        }
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "photo hole on call → keycaps/candle memory",
+        "matched_object": "photo hole on call → keycaps/candle memory"
+      }
+    },
+    {
+      "id": "12.01",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "WIDE establish; warm table, physical chairs",
+      "camera": "WIDE establish; warm table, physical chairs",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "gerg",
+        "mas",
+        "alyi",
+        "mario",
+        "nole"
+      ],
+      "caption": "Beach keycaps rise into candle flames. Green rim closes. 2015 table from Gerg end, known founders and unnamed guests, no new roster plates. Young Gerg laptop bag at chair.",
+      "picture": "VISUAL: woodrose. Beach keycaps rise into candle flames. Green rim closes. 2015 table from Gerg end, known founders and unnamed guests, no new roster plates. Young Gerg laptop bag at chair.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "BASE",
+      "action": "new",
+      "after": "11.09",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5,
+      "onscreen_items": [
+        {
+          "text": "JUL 2015",
+          "kind": "rail",
+          "at": 0.25,
+          "until": 1.5
+        },
+        {
+          "text": "THE WOODROSE",
+          "kind": "doc",
+          "at": 1.6,
+          "until": 2.85
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "JUL 2015 (0.25-1.5 s)",
+          "THE WOODROSE (1.6-2.85 s)"
+        ]
+      },
+      "flashback": "F3.1 Gerg 2015",
+      "seq": {
+        "id": "12",
+        "place": "Woodrose, Gerg memory",
+        "time": "JUL 2015",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "dinner",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "12.02",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "PHONE BEZEL; 8-bit game, no additional RL explanation",
+      "camera": "PHONE BEZEL; 8-bit game, no additional RL explanation",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "mas",
+        "gerg"
+      ],
+      "caption": "A phone on the table plays the Atari-style Breakout agent: ball tunnels above brick row. Mas and Gerg both watch two seconds before conversation continues.",
+      "picture": "VISUAL: breakout. A phone on the table plays the Atari-style Breakout agent: ball tunnels above brick row. Mas and Gerg both watch two seconds before conversation continues.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "8-BIT GAME IN BEZEL",
+      "action": "new",
+      "after": "12.01",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 2.5,
+      "flashback": "F3.1",
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "12.03",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "TWO-SHOT · WARM HELD held pair; close on Gerg turn",
+      "camera": "TWO-SHOT · WARM HELD held pair; close on Gerg turn",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "gerg",
+        "mas"
+      ],
+      "caption": "Gerg lifts phone, then sets it beside untouched dessert. Mas slides a blank napkin into the space; this is an invented memory exchange, not historic quotes.",
+      "picture": "VISUAL: woodrose. Gerg lifts phone, then sets it beside untouched dessert. Mas slides a blank napkin into the space; this is an invented memory exchange, not historic quotes.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "BASE",
+      "action": "new",
+      "after": "12.02",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0025",
+          "who": "gerg",
+          "text": "I can make payments happen faster. I know how to do that. I could spend another year choosing the best place to do it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 5.81,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0025.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0026",
+          "who": "mas",
+          "text": "or?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0025",
+          "len_s": 0.41,
+          "t_s": 6.76,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0026.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0027",
+          "who": "gerg",
+          "text": "Or I can make something run that nobody knows how to make yet.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0026",
+          "len_s": 2.8,
+          "t_s": 7.67,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0027.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0028",
+          "who": "mas",
+          "text": "what do you need for monday?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0027",
+          "len_s": 1.46,
+          "t_s": 10.92,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0028.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0029",
+          "who": "gerg",
+          "text": "A room. A few machines. People who know which questions aren't stupid.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0028",
+          "len_s": 3.26,
+          "t_s": 12.88,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0029.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0030",
+          "who": "mas",
+          "text": "send me the list.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0029",
+          "len_s": 1.06,
+          "t_s": 16.59,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0030.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0031",
+          "who": "gerg",
+          "text": "I don't have the list.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0030",
+          "len_s": 0.88,
+          "t_s": 18.15,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0031.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0032",
+          "who": "mas",
+          "text": "there's a napkin.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0031",
+          "len_s": 1.07,
+          "t_s": 19.48,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0032.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 22.15,
+      "flashback": "F3.1",
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {
+          "e3-act2-0026": 0.45,
+          "e3-act2-0027": 0.5,
+          "e3-act2-0028": 0.45,
+          "e3-act2-0029": 0.5,
+          "e3-act2-0030": 0.45,
+          "e3-act2-0031": 0.5,
+          "e3-act2-0032": 0.45
+        }
+      }
+    },
+    {
+      "id": "12.04",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "TWO-SHOT · held pair with napkin/hands; Gerg chooses",
+      "camera": "TWO-SHOT · held pair with napkin/hands; Gerg chooses",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "gerg",
+        "mas"
+      ],
+      "caption": "Gerg moves dessert aside, writes a first task on napkin, opens laptop and deletes tentative employer meetings. Young Mas holds glass while reading the practical list.",
+      "picture": "VISUAL: woodrose. Gerg moves dessert aside, writes a first task on napkin, opens laptop and deletes tentative employer meetings. Young Mas holds glass while reading the practical list.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "BASE",
+      "action": "new",
+      "after": "12.03",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0033",
+          "who": "gerg",
+          "text": "This isn't a job description.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.31,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0033.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0034",
+          "who": "mas",
+          "text": "good. we can change it when something works.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0033",
+          "len_s": 2.55,
+          "t_s": 2.26,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0034.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0035",
+          "who": "gerg",
+          "text": "Monday, then.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0034",
+          "len_s": 0.73,
+          "t_s": 5.31,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0035.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0036",
+          "who": "mas",
+          "text": "monday.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0035",
+          "len_s": 0.73,
+          "t_s": 6.49,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0036.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 9.22,
+      "flashback": "F3.1",
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {
+          "e3-act2-0034": 0.45,
+          "e3-act2-0035": 0.5,
+          "e3-act2-0036": 0.45
+        }
+      }
+    },
+    {
+      "id": "12.05",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "WIDE tracking cards/faces already established",
+      "camera": "WIDE tracking cards/faces already established",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "gerg",
+        "mas",
+        "nole",
+        "mario",
+        "alyi"
+      ],
+      "caption": "Table chairs dim one by one into two-tone as years pass: Nole, Mario, Alyi without reasons. Gerg chair shows laptop dent. No ghost person transformed into AI.",
+      "picture": "VISUAL: chairs. Table chairs dim one by one into two-tone as years pass: Nole, Mario, Alyi without reasons. Gerg chair shows laptop dent. No ghost person transformed into AI.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "2-TONE",
+      "action": "new",
+      "after": "12.04",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 6,
+      "flashback": "F3.1",
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "12.06",
+      "scene": "12",
+      "mode": "MOTIVE FLASHBACK",
+      "pace": "normal",
+      "frame": "MEDIUM; supported beach chair is answer",
+      "camera": "MEDIUM; supported beach chair is answer",
+      "set": "woodrose",
+      "set_id": "SET-WOODROSE",
+      "room": "dinner",
+      "chars": [
+        "gerg",
+        "mas"
+      ],
+      "caption": "Candle goes out into breeze; returns to beach Gerg seated in chair, call open, napkin memory gone.",
+      "picture": "VISUAL: beach-call. Candle goes out into breeze; returns to beach Gerg seated in chair, call open, napkin memory gone.",
+      "music": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+      "style": "BASE",
+      "action": "new",
+      "after": "12.05",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0037",
+          "who": "mas",
+          "text": "and your chair?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "O.S.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.03,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0037.wav",
+          "fact_tag": "[INVENTED]",
+          "device": "phone",
+          "mode": "call",
+          "os": true
+        },
+        {
+          "id": "e3-act2-0038",
+          "who": "gerg",
+          "text": "Mine's fine. It's on sabbatical.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0037",
+          "len_s": 1.42,
+          "t_s": 2.03,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0038.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.45,
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {
+          "e3-act2-0038": 0.5
+        }
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "candle→keycap, beach chair answer; shutters prelap",
+        "matched_object": "candle→keycap, beach chair answer; shutters prelap"
+      }
+    },
+    {
+      "id": "13.01",
+      "scene": "13",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "LOBBY OTS → TV → WIDE office",
+      "camera": "LOBBY OTS → TV → WIDE office",
+      "set": "governor",
+      "set_id": "SET-GOVERNOR",
+      "room": "governor_office",
+      "chars": [
+        "mas",
+        "orb",
+        "moswen",
+        "reneiw"
+      ],
+      "caption": "Mas at reception working on names. Orb turns to lobby TV; screen steps into governor office. Moswen desk, safety bill, Reneiw holds small one-head hydra leash.",
+      "picture": "VISUAL: veto-hydra. Mas at reception working on names. Orb turns to lobby TV; screen steps into governor office. Moswen desk, safety bill, Reneiw holds small one-head hydra leash.",
+      "music": "E03-09 PROCEDURE; low strings/brushes, dry documents",
+      "style": "BASE",
+      "action": "new",
+      "after": "12.06",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 4,
+      "onscreen_items": [
+        {
+          "text": "MOSWEN · CALIFORNIA'S GOVERNOR",
+          "kind": "plate",
+          "at": 0.25,
+          "until": 2.042
+        },
+        {
+          "text": "SB 1047 · AI SAFETY",
+          "kind": "doc",
+          "at": 2.142,
+          "until": 3.392
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "MOSWEN · CALIFORNIA'S GOVERNOR (0.25-2.042 s)",
+          "SB 1047 · AI SAFETY (2.142-3.392 s)"
+        ]
+      },
+      "seq": {
+        "id": "13",
+        "place": "governor office through lobby TV",
+        "time": "SEP 29, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "governor_office",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "13.02",
+      "scene": "13",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "governor",
+      "set_id": "SET-GOVERNOR",
+      "room": "governor_office",
+      "chars": [
+        "moswen",
+        "reneiw"
+      ],
+      "caption": "Reneiw tries to get governor to look at hatchling, but Moswen keeps reading. Pleasant stonewalling, not a diagnosis of actual intent.",
+      "picture": "VISUAL: veto-hydra. Reneiw tries to get governor to look at hatchling, but Moswen keeps reading. Pleasant stonewalling, not a diagnosis of actual intent.",
+      "music": "E03-09 PROCEDURE; low strings/brushes, dry documents",
+      "style": "BASE",
+      "action": "new",
+      "after": "13.01",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0039",
+          "who": "reneiw",
+          "text": "Governor, before you sign anything, look at him. It's one head. It's barely a hydra. It's practically a pet.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 5.99,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0039.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0040",
+          "who": "moswen",
+          "text": "It's a very nice pet, Senator. Well trained. Good teeth.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0039",
+          "len_s": 2.72,
+          "t_s": 6.99,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0040.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0041",
+          "who": "reneiw",
+          "text": "Then sign it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0040",
+          "len_s": 0.83,
+          "t_s": 10.21,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0041.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0042",
+          "who": "moswen",
+          "text": "I'm signing something.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0041",
+          "len_s": 1.03,
+          "t_s": 11.54,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0042.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 14.17,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {
+          "e3-act2-0040": 0.5,
+          "e3-act2-0041": 0.5,
+          "e3-act2-0042": 0.5
+        }
+      }
+    },
+    {
+      "id": "13.03",
+      "scene": "13",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "DOCUMENT then victim medium",
+      "camera": "DOCUMENT then victim medium",
+      "set": "governor",
+      "set_id": "SET-GOVERNOR",
+      "room": "governor_office",
+      "chars": [
+        "moswen",
+        "reneiw"
+      ],
+      "caption": "Official veto message on page, full clause readable before stamp. Pen signs; VETOED stamp, one head cork-pops and two blank stubs later appear.",
+      "picture": "VISUAL: veto-hydra. Official veto message on page, full clause readable before stamp. Pen signs; VETOED stamp, one head cork-pops and two blank stubs later appear.",
+      "music": "E03-09 PROCEDURE; low strings/brushes, dry documents",
+      "style": "BASE",
+      "action": "new",
+      "after": "13.02",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 8,
+      "onscreen_items": [
+        {
+          "text": "curtailing the very innovation that fuels advancement in favor of the public good.",
+          "kind": "doc",
+          "at": 0.25,
+          "until": 4.667
+        },
+        {
+          "text": "SEP 29, 2024",
+          "kind": "rail",
+          "at": 4.767,
+          "until": 6.017
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "curtailing the very innovation that fuels advancement in favor of the public good. (0.25-4.667 s)",
+          "SEP 29, 2024 (4.767-6.017 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "veto_stamp",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        },
+        {
+          "name": "hydra_pop",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "13.04",
+      "scene": "13",
+      "mode": "CONVERSATION",
+      "pace": "normal",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "governor",
+      "set_id": "SET-GOVERNOR",
+      "room": "governor_office",
+      "chars": [
+        "moswen",
+        "reneiw"
+      ],
+      "caption": "Reneiw picks leash up beside bandaged hydra. Moswen caps pen, turns its property tag only after noticed.",
+      "picture": "VISUAL: veto-hydra. Reneiw picks leash up beside bandaged hydra. Moswen caps pen, turns its property tag only after noticed.",
+      "music": "E03-09 PROCEDURE; low strings/brushes, dry documents",
+      "style": "BASE",
+      "action": "new",
+      "after": "13.03",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0043",
+          "who": "reneiw",
+          "text": "It was a light-touch bill. That was the whole point of it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 2.85,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0043.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0044",
+          "who": "moswen",
+          "text": "And I touched it lightly.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0043",
+          "len_s": 1.06,
+          "t_s": 3.85,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0044.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0045",
+          "who": "reneiw",
+          "text": "That pen has a tag on it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0044",
+          "len_s": 1.35,
+          "t_s": 5.41,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0045.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0046",
+          "who": "moswen",
+          "text": "So it does. I'll return this.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.5,
+          "new": true,
+          "after": "e3-act2-0045",
+          "len_s": 1.33,
+          "t_s": 7.26,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0046.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 10.59,
+      "onscreen_items": [
+        {
+          "text": "PROPERTY OF EOJ NEDIB · PLEASE RETURN",
+          "kind": "doc",
+          "at": 0.25,
+          "until": 2.417
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "PROPERTY OF EOJ NEDIB · PLEASE RETURN (0.25-2.417 s)"
+        ]
+      },
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "normal",
+        "gaps": {
+          "e3-act2-0044": 0.5,
+          "e3-act2-0045": 0.5,
+          "e3-act2-0046": 0.5
+        }
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "capped pen → door whoosh and investor entrance",
+        "matched_object": "capped pen → door whoosh and investor entrance"
+      }
+    },
+    {
+      "id": "14.01",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "LOBBY WIDE then boardroom WIDE",
+      "camera": "LOBBY WIDE then boardroom WIDE",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj",
+        "investor",
+        "orb"
+      ],
+      "caption": "Money enters frame left through door; a returned $7T pallet exits right as small background callback. Ticker $86B, upstairs investors queue. Mas opens meeting rather than waits for news. Earlier restructuring newspaper is unfolded here, separated from departure by the dinner memory and veto scene.",
+      "picture": "VISUAL: odometer. Money enters frame left through door; a returned $7T pallet exits right as small background callback. Ticker $86B, upstairs investors queue. Mas opens meeting rather than waits for news. Earlier restructuring newspaper is unfolded here, separated from departure by the dinner memory and veto scene.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "13.04",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.417,
+      "onscreen_items": [
+        {
+          "text": "OCT 2, 2024",
+          "kind": "rail",
+          "at": 0.25,
+          "until": 1.5
+        },
+        {
+          "text": "NOPEAI · $86B",
+          "kind": "sign",
+          "at": 1.6,
+          "until": 2.85
+        },
+        {
+          "text": "NOPEAI PLANS FOR-PROFIT RESTRUCTURING",
+          "kind": "doc",
+          "at": 2.95,
+          "until": 5.117
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "OCT 2, 2024 (0.25-1.5 s)",
+          "NOPEAI · $86B (1.6-2.85 s)",
+          "NOPEAI PLANS FOR-PROFIT RESTRUCTURING (2.95-5.117 s)"
+        ]
+      },
+      "seq": {
+        "id": "14",
+        "place": "lobby to boardroom",
+        "time": "OCT 2, 2024",
+        "side": ""
+      },
+      "arrive": {
+        "s": 2.0,
+        "what": "room and people established before the exchange"
+      },
+      "jcut": [
+        {
+          "sound": "boardroom_day",
+          "lead_s": 0.6
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "14.02",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · TABLE held pair; fictional practical negotiation, no real terms claim",
+      "camera": "TWO-SHOT · TABLE held pair; fictional practical negotiation, no real terms claim",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj"
+      ],
+      "caption": "Mas sets a working build schedule beside fictional blank term sheet. Auhsoj keeps pen closed until concrete question answered.",
+      "picture": "VISUAL: nonprofit. Mas sets a working build schedule beside fictional blank term sheet. Auhsoj keeps pen closed until concrete question answered.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.01",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0047",
+          "who": "auhsoj",
+          "text": "You want us to put a new number on the building.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.87,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0047.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0048",
+          "who": "mas",
+          "text": "i want the next release to have somewhere to run.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0047",
+          "len_s": 2.76,
+          "t_s": 2.82,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0048.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0049",
+          "who": "auhsoj",
+          "text": "And the one after that?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0048",
+          "len_s": 1.02,
+          "t_s": 5.88,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0049.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0050",
+          "who": "mas",
+          "text": "that's why the sheet is longer than one line.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0049",
+          "len_s": 2.64,
+          "t_s": 7.35,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0050.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0051",
+          "who": "auhsoj",
+          "text": "The sheet in front of me has one line.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0050",
+          "len_s": 1.6,
+          "t_s": 10.29,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0051.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0052",
+          "who": "mas",
+          "text": "turn it over.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0051",
+          "len_s": 0.91,
+          "t_s": 12.34,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0052.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 14.85,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0048": 0.45,
+          "e3-act2-0049": 0.3,
+          "e3-act2-0050": 0.45,
+          "e3-act2-0051": 0.3,
+          "e3-act2-0052": 0.45
+        }
+      }
+    },
+    {
+      "id": "14.03",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "investor",
+        "orb"
+      ],
+      "caption": "Investor steps to velvet cushion with absurd pledge. Long unrolling list generic satire of reported ask; one reported label only if needed in final facts review.",
+      "picture": "VISUAL: investor-pledge. Investor steps to velvet cushion with absurd pledge. Long unrolling list generic satire of reported ask; one reported label only if needed in final facts review.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.02",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0053",
+          "who": "investor",
+          "text": "I, the undersigned, solemnly swear not to fund any competitor of NopeAI, including but not limited to... Which ones, exactly?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 8.59,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0053.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0054",
+          "who": "mas",
+          "text": "there's a list.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0053",
+          "len_s": 0.92,
+          "t_s": 9.54,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0054.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0055",
+          "who": "investor",
+          "text": "Just so I'm clear on the terms. Can I fund a rival a little? One small check. Nothing that could ever compete with you.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0054",
+          "len_s": 6.67,
+          "t_s": 10.76,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0055.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0056",
+          "who": "mas",
+          "text": "which one?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0055",
+          "len_s": 0.84,
+          "t_s": 17.88,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0056.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0057",
+          "who": "investor",
+          "text": "The lemonade stand? On Third?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0056",
+          "len_s": 1.87,
+          "t_s": 19.02,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0057.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0058",
+          "who": "mas",
+          "text": "it's on the list.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0057",
+          "len_s": 1.03,
+          "t_s": 21.34,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0058.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 23.97,
+      "onscreen_items": [
+        {
+          "text": "COMPETITORS",
+          "kind": "doc",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "COMPETITORS (0.25-1.5 s)"
+        ]
+      },
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0054": 0.45,
+          "e3-act2-0055": 0.3,
+          "e3-act2-0056": 0.45,
+          "e3-act2-0057": 0.3,
+          "e3-act2-0058": 0.45
+        }
+      }
+    },
+    {
+      "id": "14.04",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "investor",
+        "mas"
+      ],
+      "caption": "List end finally visible: lemonade stand. Investor signs, defeated on a ridiculous small stake.",
+      "picture": "VISUAL: investor-pledge. List end finally visible: lemonade stand. Investor signs, defeated on a ridiculous small stake.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.03",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0059",
+          "who": "investor",
+          "text": "It's very good lemonade.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.25,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0059.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 3.75,
+      "onscreen_items": [
+        {
+          "text": "…AND THE LEMONADE STAND ON 3RD",
+          "kind": "doc",
+          "at": 0.25,
+          "until": 2.042
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "…AND THE LEMONADE STAND ON 3RD (0.25-2.042 s)"
+        ]
+      },
+      "aftermath": {
+        "s": 2,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "14.05",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "MCU; no rail/toast/real document",
+      "camera": "MCU; no rail/toast/real document",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas"
+      ],
+      "caption": "Mas sets working schedule upright for Auhsoj; thought is practical business, not invented private exclusivity motive.",
+      "picture": "VISUAL: nonprofit. Mas sets working schedule upright for Auhsoj; thought is practical business, not invented private exclusivity motive.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.04",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-vo-09",
+          "who": "mas",
+          "text": "enough to get the next one out. then the next one has to pay.",
+          "vo": true,
+          "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+          "tag": "V.O.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 3.72,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-vo-09.wav",
+          "fact_tag": "[INVENTED · inner voice]",
+          "device": null,
+          "mode": "vo"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.82,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "14.06",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE moving digit machinery then Mas medium",
+      "camera": "WIDE moving digit machinery then Mas medium",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj",
+        "orb"
+      ],
+      "caption": "Door spins digit wheels with physical clunks: $86B→$157B. All shakes around steady glass. Actual round document, then rail; fourth collar pops only after text settles.",
+      "picture": "VISUAL: odometer. Door spins digit wheels with physical clunks: $86B→$157B. All shakes around steady glass. Actual round document, then rail; fourth collar pops only after text settles.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.05",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 10,
+      "onscreen_items": [
+        {
+          "text": "$6.6B RAISED · $157B VALUATION",
+          "kind": "doc",
+          "at": 0.25,
+          "until": 2.042
+        },
+        {
+          "text": "OCT 2, 2024",
+          "kind": "rail",
+          "at": 2.142,
+          "until": 3.392
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "$6.6B RAISED · $157B VALUATION (0.25-2.042 s)",
+          "OCT 2, 2024 (2.142-3.392 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "odometer_clunk",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        },
+        {
+          "name": "collar_snap",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "14.07",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "TWO-SHOT · held pair tightens at question; listener close for turn",
+      "camera": "TWO-SHOT · held pair tightens at question; listener close for turn",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj"
+      ],
+      "caption": "After new number clears, Auhsoj sits opposite Mas and turns an absurd blank-owner line toward him. No claimed reproduction of actual papers.",
+      "picture": "VISUAL: nonprofit. After new number clears, Auhsoj sits opposite Mas and turns an absurd blank-owner line toward him. No claimed reproduction of actual papers.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.06",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-act2-0060",
+          "who": "auhsoj",
+          "text": "Before I sign. Remind me who owns it.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 1.71,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0060.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0061",
+          "who": "mas",
+          "text": "the nonprofit.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0060",
+          "len_s": 1.08,
+          "t_s": 2.66,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0061.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0062",
+          "who": "auhsoj",
+          "text": "A nonprofit. At a hundred and fifty-seven billion.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0061",
+          "len_s": 2.52,
+          "t_s": 4.04,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0062.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0063",
+          "who": "mas",
+          "text": "it's had a good week.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0062",
+          "len_s": 1.29,
+          "t_s": 7.01,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0063.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0064",
+          "who": "auhsoj",
+          "text": "Every sheet I've ever signed has a line for the owner. This one's blank.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0063",
+          "len_s": 3.74,
+          "t_s": 8.6,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0064.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0065",
+          "who": "mas",
+          "text": "it's supposed to be.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0064",
+          "len_s": 1.33,
+          "t_s": 12.79,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0065.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0066",
+          "who": "auhsoj",
+          "text": "And who owns the nonprofit?",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.3,
+          "new": true,
+          "after": "e3-act2-0065",
+          "len_s": 1.19,
+          "t_s": 14.42,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0066.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        },
+        {
+          "id": "e3-act2-0067",
+          "who": "mas",
+          "text": "nobody. that's what makes it one.",
+          "delivery": "conversational; complete thoughts; no imitation",
+          "tag": "",
+          "gap_s": 0.45,
+          "new": true,
+          "after": "e3-act2-0066",
+          "len_s": 2.05,
+          "t_s": 16.06,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-act2-0067.wav",
+          "fact_tag": "[INVENTED]",
+          "device": null,
+          "mode": "on-mic"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 21.11,
+      "aftermath": {
+        "s": 3,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {
+          "e3-act2-0061": 0.45,
+          "e3-act2-0062": 0.3,
+          "e3-act2-0063": 0.45,
+          "e3-act2-0064": 0.3,
+          "e3-act2-0065": 0.45,
+          "e3-act2-0066": 0.3,
+          "e3-act2-0067": 0.45
+        }
+      }
+    },
+    {
+      "id": "14.08",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "MCU Mas; signed sheet facedown, no headline",
+      "camera": "MCU Mas; signed sheet facedown, no headline",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj"
+      ],
+      "caption": "Auhsoj signs anyway. Mas puts build schedule back on top; the future machine room is his working priority.",
+      "picture": "VISUAL: nonprofit. Auhsoj signs anyway. Mas puts build schedule back on top; the future machine room is his working priority.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.07",
+      "act": "ACT TWO",
+      "lines": [
+        {
+          "id": "e3-vo-10",
+          "who": "mas",
+          "text": "keep the machines running while they measure the building.",
+          "vo": true,
+          "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+          "tag": "V.O.",
+          "gap_s": 0,
+          "new": true,
+          "after": "start+0.5",
+          "len_s": 3.0,
+          "t_s": 0.5,
+          "take": "new",
+          "take_file": "audio/ep03/v1/act2/e3-vo-10.wav",
+          "fact_tag": "[INVENTED · inner voice]",
+          "device": null,
+          "mode": "vo"
+        }
+      ],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 5.1,
+      "aftermath": {
+        "s": 1.6,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      }
+    },
+    {
+      "id": "14.09",
+      "scene": "14",
+      "mode": "CONVERSATION",
+      "pace": "quick",
+      "frame": "WIDE with changing faces and extra wheel",
+      "camera": "WIDE with changing faces and extra wheel",
+      "set": "boardroom",
+      "set_id": "SET-BOARDROOM",
+      "room": "boardroom_day",
+      "chars": [
+        "mas",
+        "auhsoj",
+        "investor"
+      ],
+      "caption": "Far below door still turns. Ticker adds one dollar; investors look at it, then each other.",
+      "picture": "VISUAL: odometer. Far below door still turns. Ticker adds one dollar; investors look at it, then each other.",
+      "music": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+      "style": "BASE",
+      "action": "new",
+      "after": "14.08",
+      "act": "ACT TWO",
+      "lines": [],
+      "fix": [
+        "P",
+        "KEEP"
+      ],
+      "est_s": 4,
+      "onscreen_items": [
+        {
+          "text": "$157,000,000,001",
+          "kind": "sign",
+          "at": 0.25,
+          "until": 1.5
+        }
+      ],
+      "onscreen": {
+        "add": [
+          "$157,000,000,001 (0.25-1.5 s)"
+        ]
+      },
+      "sounds": [
+        {
+          "name": "one_dollar_tick",
+          "at": 0.0,
+          "at_s": 0.0,
+          "gain": -20,
+          "new": true
+        }
+      ],
+      "aftermath": {
+        "s": 0,
+        "what": "changing listener/action; no generic frozen hold"
+      },
+      "tempo": {
+        "pace": "quick",
+        "gaps": {}
+      },
+      "transition": {
+        "cause": "previous choice/obstacle carries story",
+        "sound": "extra-dollar tick → old price rewind",
+        "matched_object": "extra-dollar tick → old price rewind"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3647 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep03",
+  "seg": "coldopen",
+  "label": "COLD OPEN",
+  "timeline": "show/reel/ep03-v1-el/ep03-v1-el-coldopen.json",
+  "takes": [
+   "show/episodes/ep03/production/v1/assembly/el-v1/coldopen-takes.json"
+  ],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep03/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "00:00:00",
+  "ep_in_frames": 0,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 8,
+  "beats": 8,
+  "frames": 1334,
+  "seconds": 55.583,
+  "length": "0:55.58",
+  "episode_in": "00:00:00",
+  "episode_out": "00:55:14",
+  "verdicts": {
+   "-": 8
+  },
+  "mean_s": 6.948,
+  "median_s": 6.146,
+  "min_s": 4.0,
+  "max_s": 12.875,
+  "lines": 11,
+  "posts": 0,
+  "vo": 1,
+  "lines_with_mouth": 10,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": null,
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "scenes tile the segment",
+   "ok": true,
+   "detail": "3 scenes: 1(168f) 2(820f) 3(346f)"
+  },
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "8 shots from 8 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 1334"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 4; 1 f earlier (the onset falls inside the frame): 7; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "11 of 11 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "10 lines with a mouth track; lost: []"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "COLDOPEN",
+   "side": "",
+   "place": "",
+   "time": "",
+   "s": 0,
+   "e": 1334,
+   "shots": [
+    "1.01",
+    "2.01",
+    "2.02",
+    "2.03",
+    "2.04",
+    "3.01",
+    "3.02",
+    "3.03"
+   ],
+   "chapter": "COLDOPEN",
+   "title": "",
+   "cue": "music (v1): E03-01 CHIP CAPER; knee cells, dry chip and pizzicato · music (v1): E03-01 CHIP CAPER continues · music (v1): E03-01 one chip voice; settles on F",
+   "frames": 1334,
+   "tc_in": "00:00:00",
+   "tc_out": "00:55:14"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "1",
+   "s": 0,
+   "e": 168,
+   "shots": [
+    "1.01"
+   ],
+   "tc_in": "00:00:00",
+   "tc_out": "00:07:00"
+  },
+  {
+   "id": "2",
+   "s": 168,
+   "e": 988,
+   "shots": [
+    "2.01",
+    "2.02",
+    "2.03",
+    "2.04"
+   ],
+   "tc_in": "00:07:00",
+   "tc_out": "00:41:04"
+  },
+  {
+   "id": "3",
+   "s": 988,
+   "e": 1334,
+   "shots": [
+    "3.01",
+    "3.02",
+    "3.03"
+   ],
+   "tc_in": "00:41:04",
+   "tc_out": "00:55:14"
+  }
+ ],
+ "shots": [
+  {
+   "id": "1.01",
+   "setup": "1.01",
+   "beats": [
+    "1.01"
+   ],
+   "s": 0,
+   "e": 168,
+   "onscreen": [],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "1",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE; city scale, moving cable car and bird",
+   "cls": "W",
+   "move": "cut",
+   "does": "Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+   "chars": [
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER; knee cells, dry chip and pizzicato"
+   ],
+   "sounds": [
+    "yarn_twang @0"
+   ],
+   "spots": [
+    {
+     "name": "yarn_twang",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "skyline",
+   "room": "city_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+   "cast": [
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "1.01": 0
+   },
+   "picture": "VISUAL: skyline-yarn. Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:00:00",
+   "tc_out": "00:07:00",
+   "frames": 168
+  },
+  {
+   "id": "2.01",
+   "setup": "2.01",
+   "beats": [
+    "2.01"
+   ],
+   "s": 168,
+   "e": 387,
+   "onscreen": [
+    {
+     "text": "CORKBOARD GUY · HAS A THEORY",
+     "s": 6,
+     "e": 46
+    }
+   ],
+   "lines": [
+    {
+     "id": "e3-coldopen-0001",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "CORKBOARD-GUY",
+     "text": "Look at it. Really look. Dot. Dot. Dot. It's Morse.",
+     "s": 48,
+     "e": 103,
+     "fs": 36,
+     "fe": 117,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "O"
+      ],
+      [
+       3,
+       "A"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       10,
+       "A"
+      ],
+      [
+       13,
+       "E"
+      ],
+      [
+       16,
+       "O"
+      ],
+      [
+       19,
+       "E"
+      ],
+      [
+       22,
+       "A"
+      ],
+      [
+       25,
+       "E"
+      ],
+      [
+       30,
+       "A"
+      ],
+      [
+       33,
+       "E"
+      ],
+      [
+       36,
+       "A"
+      ],
+      [
+       39,
+       "E"
+      ],
+      [
+       45,
+       "M"
+      ],
+      [
+       46,
+       "O"
+      ],
+      [
+       52,
+       "E"
+      ],
+      [
+       55,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Look",
+       -1,
+       3
+      ],
+      [
+       "at",
+       3,
+       6
+      ],
+      [
+       "it",
+       6,
+       8
+      ],
+      [
+       "Really",
+       9,
+       15
+      ],
+      [
+       "look",
+       15,
+       20
+      ],
+      [
+       "Dot",
+       21,
+       27
+      ],
+      [
+       "Dot",
+       28,
+       33
+      ],
+      [
+       "Dot",
+       35,
+       40
+      ],
+      [
+       "It's",
+       41,
+       45
+      ],
+      [
+       "Morse",
+       45,
+       55
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0002",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SECOND-TRUTHER",
+     "text": "Morse has dashes.",
+     "s": 110,
+     "e": 141,
+     "fs": 97,
+     "fe": 152,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "M"
+      ],
+      [
+       2,
+       "O"
+      ],
+      [
+       5,
+       "E"
+      ],
+      [
+       8,
+       "A"
+      ],
+      [
+       12,
+       "E"
+      ],
+      [
+       15,
+       "A"
+      ],
+      [
+       21,
+       "E"
+      ],
+      [
+       30,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Morse",
+       0,
+       8
+      ],
+      [
+       "has",
+       8,
+       14
+      ],
+      [
+       "dashes",
+       14,
+       31
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0003",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "CORKBOARD-GUY",
+     "text": "Not yet. This is the preview.",
+     "s": 148,
+     "e": 181,
+     "fs": 135,
+     "fe": 193,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       1,
+       "E"
+      ],
+      [
+       3,
+       "A"
+      ],
+      [
+       6,
+       "E"
+      ],
+      [
+       18,
+       "M"
+      ],
+      [
+       20,
+       "E"
+      ],
+      [
+       22,
+       "A"
+      ],
+      [
+       25,
+       "E"
+      ],
+      [
+       29,
+       "O"
+      ],
+      [
+       32,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Not",
+       -1,
+       2
+      ],
+      [
+       "yet",
+       2,
+       8
+      ],
+      [
+       "This",
+       9,
+       13
+      ],
+      [
+       "is",
+       13,
+       16
+      ],
+      [
+       "the",
+       16,
+       19
+      ],
+      [
+       "preview",
+       19,
+       33
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "2",
+   "scene_s": 168,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "cls": "M",
+   "move": "hold",
+   "does": "Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+   "chars": [
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "alley",
+   "room": "alley_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+   "cast": [
+    {
+     "id": "corkboard-guy",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "second-truther",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.01": 0
+   },
+   "picture": "VISUAL: corkboard. Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "plate",
+     "text": "CORKBOARD GUY · HAS A THEORY",
+     "s": 6,
+     "e": 46,
+     "must": true
+    }
+   ],
+   "tc_in": "00:07:00",
+   "tc_out": "00:16:03",
+   "frames": 219
+  },
+  {
+   "id": "2.02",
+   "setup": "2.02",
+   "beats": [
+    "2.02"
+   ],
+   "s": 387,
+   "e": 696,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e3-coldopen-0004",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SECOND-TRUTHER",
+     "text": "I zoomed out a little. Could it be a fruit?",
+     "s": 12,
+     "e": 68,
+     "fs": -1,
+     "fe": 79,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       2,
+       "A"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       10,
+       "M"
+      ],
+      [
+       13,
+       "A"
+      ],
+      [
+       23,
+       "E"
+      ],
+      [
+       28,
+       "rest"
+      ],
+      [
+       32,
+       "O"
+      ],
+      [
+       34,
+       "E"
+      ],
+      [
+       36,
+       "M"
+      ],
+      [
+       38,
+       "E"
+      ],
+      [
+       40,
+       "A"
+      ],
+      [
+       43,
+       "E"
+      ],
+      [
+       48,
+       "O"
+      ],
+      [
+       53,
+       "E"
+      ],
+      [
+       56,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "I",
+       1,
+       5
+      ],
+      [
+       "zoomed",
+       5,
+       13
+      ],
+      [
+       "out",
+       13,
+       17
+      ],
+      [
+       "a",
+       17,
+       19
+      ],
+      [
+       "little",
+       19,
+       28
+      ],
+      [
+       "Could",
+       31,
+       35
+      ],
+      [
+       "it",
+       35,
+       37
+      ],
+      [
+       "be",
+       37,
+       40
+      ],
+      [
+       "a",
+       40,
+       43
+      ],
+      [
+       "fruit",
+       43,
+       56
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0005",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "CORKBOARD-GUY",
+     "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+     "s": 74,
+     "e": 207,
+     "fs": 62,
+     "fe": 221,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       1,
+       "E"
+      ],
+      [
+       3,
+       "O"
+      ],
+      [
+       6,
+       "E"
+      ],
+      [
+       11,
+       "O"
+      ],
+      [
+       13,
+       "E"
+      ],
+      [
+       15,
+       "A"
+      ],
+      [
+       17,
+       "E"
+      ],
+      [
+       21,
+       "A"
+      ],
+      [
+       27,
+       "O"
+      ],
+      [
+       30,
+       "E"
+      ],
+      [
+       33,
+       "O"
+      ],
+      [
+       35,
+       "A"
+      ],
+      [
+       37,
+       "E"
+      ],
+      [
+       40,
+       "O"
+      ],
+      [
+       43,
+       "rest"
+      ],
+      [
+       46,
+       "A"
+      ],
+      [
+       48,
+       "E"
+      ],
+      [
+       50,
+       "O"
+      ],
+      [
+       52,
+       "E"
+      ],
+      [
+       60,
+       "A"
+      ],
+      [
+       63,
+       "E"
+      ],
+      [
+       65,
+       "M"
+      ],
+      [
+       67,
+       "A"
+      ],
+      [
+       69,
+       "E"
+      ],
+      [
+       78,
+       "O"
+      ],
+      [
+       81,
+       "M"
+      ],
+      [
+       83,
+       "A"
+      ],
+      [
+       85,
+       "E"
+      ],
+      [
+       90,
+       "rest"
+      ],
+      [
+       94,
+       "A"
+      ],
+      [
+       96,
+       "E"
+      ],
+      [
+       102,
+       "A"
+      ],
+      [
+       106,
+       "E"
+      ],
+      [
+       111,
+       "A"
+      ],
+      [
+       113,
+       "E"
+      ],
+      [
+       116,
+       "A"
+      ],
+      [
+       122,
+       "E"
+      ],
+      [
+       126,
+       "M"
+      ],
+      [
+       128,
+       "O"
+      ],
+      [
+       130,
+       "E"
+      ],
+      [
+       132,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "A",
+       0,
+       1
+      ],
+      [
+       "fruit",
+       1,
+       7
+      ],
+      [
+       "Fruit",
+       8,
+       15
+      ],
+      [
+       "doesn't",
+       15,
+       21
+      ],
+      [
+       "have",
+       21,
+       25
+      ],
+      [
+       "a",
+       25,
+       26
+      ],
+      [
+       "launch",
+       26,
+       33
+      ],
+      [
+       "window",
+       33,
+       44
+      ],
+      [
+       "They're",
+       46,
+       50
+      ],
+      [
+       "calling",
+       50,
+       57
+      ],
+      [
+       "the",
+       57,
+       59
+      ],
+      [
+       "next",
+       59,
+       66
+      ],
+      [
+       "model",
+       66,
+       74
+      ],
+      [
+       "Strawberry",
+       74,
+       90
+      ],
+      [
+       "Nothing",
+       93,
+       101
+      ],
+      [
+       "red",
+       101,
+       107
+      ],
+      [
+       "is",
+       107,
+       110
+      ],
+      [
+       "just",
+       110,
+       116
+      ],
+      [
+       "red",
+       116,
+       119
+      ],
+      [
+       "anymore",
+       119,
+       132
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0006",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SECOND-TRUTHER",
+     "text": "Then can we eat something that isn't evidence?",
+     "s": 213,
+     "e": 271,
+     "fs": 201,
+     "fe": 284,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       2,
+       "A"
+      ],
+      [
+       5,
+       "E"
+      ],
+      [
+       8,
+       "A"
+      ],
+      [
+       10,
+       "O"
+      ],
+      [
+       12,
+       "E"
+      ],
+      [
+       16,
+       "A"
+      ],
+      [
+       19,
+       "E"
+      ],
+      [
+       22,
+       "A"
+      ],
+      [
+       25,
+       "M"
+      ],
+      [
+       27,
+       "E"
+      ],
+      [
+       33,
+       "A"
+      ],
+      [
+       38,
+       "E"
+      ],
+      [
+       43,
+       "A"
+      ],
+      [
+       46,
+       "E"
+      ],
+      [
+       58,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Then",
+       0,
+       7
+      ],
+      [
+       "can",
+       7,
+       10
+      ],
+      [
+       "we",
+       10,
+       14
+      ],
+      [
+       "eat",
+       14,
+       20
+      ],
+      [
+       "something",
+       20,
+       32
+      ],
+      [
+       "that",
+       32,
+       36
+      ],
+      [
+       "isn't",
+       36,
+       42
+      ],
+      [
+       "evidence",
+       42,
+       58
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "2",
+   "scene_s": 168,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "cls": "M",
+   "move": "hold",
+   "does": "Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+   "chars": [
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "alley",
+   "room": "alley_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+   "cast": [
+    {
+     "id": "corkboard-guy",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "second-truther",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.02": 0
+   },
+   "picture": "VISUAL: corkboard. Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:16:03",
+   "tc_out": "00:29:00",
+   "frames": 309
+  },
+  {
+   "id": "2.03",
+   "setup": "2.03",
+   "beats": [
+    "2.03"
+   ],
+   "s": 696,
+   "e": 892,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e3-coldopen-0007",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "CORKBOARD-GUY",
+     "text": "The truck's in on it.",
+     "s": 12,
+     "e": 36,
+     "fs": 0,
+     "fe": 47,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       3,
+       "A"
+      ],
+      [
+       6,
+       "E"
+      ],
+      [
+       7,
+       "A"
+      ],
+      [
+       12,
+       "O"
+      ],
+      [
+       15,
+       "E"
+      ],
+      [
+       24,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "The",
+       -1,
+       0
+      ],
+      [
+       "truck's",
+       0,
+       8
+      ],
+      [
+       "in",
+       8,
+       12
+      ],
+      [
+       "on",
+       12,
+       16
+      ],
+      [
+       "it",
+       16,
+       24
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0008",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "COOK",
+     "text": "I'm in on carnitas. And you're blocking my window.",
+     "s": 42,
+     "e": 99,
+     "fs": 30,
+     "fe": 113,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "A"
+      ],
+      [
+       6,
+       "O"
+      ],
+      [
+       8,
+       "E"
+      ],
+      [
+       10,
+       "A"
+      ],
+      [
+       13,
+       "E"
+      ],
+      [
+       16,
+       "A"
+      ],
+      [
+       19,
+       "E"
+      ],
+      [
+       29,
+       "O"
+      ],
+      [
+       31,
+       "M"
+      ],
+      [
+       34,
+       "A"
+      ],
+      [
+       37,
+       "E"
+      ],
+      [
+       41,
+       "M"
+      ],
+      [
+       43,
+       "A"
+      ],
+      [
+       45,
+       "O"
+      ],
+      [
+       47,
+       "A"
+      ],
+      [
+       50,
+       "E"
+      ],
+      [
+       52,
+       "O"
+      ],
+      [
+       56,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "I'm",
+       0,
+       3
+      ],
+      [
+       "in",
+       3,
+       6
+      ],
+      [
+       "on",
+       6,
+       9
+      ],
+      [
+       "carnitas",
+       9,
+       24
+      ],
+      [
+       "And",
+       26,
+       29
+      ],
+      [
+       "you're",
+       29,
+       32
+      ],
+      [
+       "blocking",
+       32,
+       42
+      ],
+      [
+       "my",
+       42,
+       45
+      ],
+      [
+       "window",
+       45,
+       57
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    },
+    {
+     "id": "e3-coldopen-0009",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "SECOND-TRUTHER",
+     "text": "Two carnitas. No code words.",
+     "s": 105,
+     "e": 157,
+     "fs": 93,
+     "fe": 168,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       1,
+       "O"
+      ],
+      [
+       4,
+       "E"
+      ],
+      [
+       6,
+       "A"
+      ],
+      [
+       9,
+       "E"
+      ],
+      [
+       13,
+       "A"
+      ],
+      [
+       17,
+       "E"
+      ],
+      [
+       23,
+       "rest"
+      ],
+      [
+       26,
+       "E"
+      ],
+      [
+       28,
+       "O"
+      ],
+      [
+       31,
+       "E"
+      ],
+      [
+       33,
+       "O"
+      ],
+      [
+       38,
+       "E"
+      ],
+      [
+       40,
+       "O"
+      ],
+      [
+       46,
+       "E"
+      ],
+      [
+       51,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Two",
+       0,
+       4
+      ],
+      [
+       "carnitas",
+       4,
+       24
+      ],
+      [
+       "No",
+       26,
+       32
+      ],
+      [
+       "code",
+       32,
+       40
+      ],
+      [
+       "words",
+       40,
+       52
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "2",
+   "scene_s": 168,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "cls": "M",
+   "move": "hold",
+   "does": "Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+   "chars": [
+    "cook",
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "sounds": [
+    "generator_cough @0"
+   ],
+   "spots": [
+    {
+     "name": "generator_cough",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "alley",
+   "room": "alley_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+   "cast": [
+    {
+     "id": "cook",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "corkboard-guy",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "second-truther",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.03": 0
+   },
+   "picture": "VISUAL: corkboard. Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:29:00",
+   "tc_out": "00:37:04",
+   "frames": 196
+  },
+  {
+   "id": "2.04",
+   "setup": "2.04",
+   "beats": [
+    "2.04"
+   ],
+   "s": 892,
+   "e": 988,
+   "onscreen": [],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "2",
+   "scene_s": 168,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE; action matches flung line to roof",
+   "cls": "W",
+   "move": "cut",
+   "does": "The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+   "chars": [
+    "cook",
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "alley",
+   "room": "alley_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+   "cast": [
+    {
+     "id": "corkboard-guy",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "second-truther",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "cook",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "2.04": 0
+   },
+   "picture": "VISUAL: corkboard. The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:37:04",
+   "tc_out": "00:41:04",
+   "frames": 96
+  },
+  {
+   "id": "3.01",
+   "setup": "3.01",
+   "beats": [
+    "3.01"
+   ],
+   "s": 988,
+   "e": 1115,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e3-coldopen-0010",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "it's a strawberry.",
+     "s": 48,
+     "e": 75,
+     "fs": 34,
+     "fe": 92,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "E"
+      ],
+      [
+       4,
+       "A"
+      ],
+      [
+       6,
+       "E"
+      ],
+      [
+       12,
+       "O"
+      ],
+      [
+       16,
+       "M"
+      ],
+      [
+       18,
+       "A"
+      ],
+      [
+       21,
+       "E"
+      ],
+      [
+       27,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "it's",
+       0,
+       3
+      ],
+      [
+       "a",
+       3,
+       6
+      ],
+      [
+       "strawberry",
+       6,
+       27
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "3",
+   "scene_s": 988,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "LOW DESK; pot/can/bow all read, Mas above them",
+   "cls": "ECU",
+   "move": "cut",
+   "does": "Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "roof",
+   "room": "roof_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "3.01": 0
+   },
+   "picture": "VISUAL: strawberry-post. Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:41:04",
+   "tc_out": "00:46:11",
+   "frames": 127
+  },
+  {
+   "id": "3.02",
+   "setup": "3.02",
+   "beats": [
+    "3.02"
+   ],
+   "s": 1115,
+   "e": 1214,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e3-vo-01",
+     "kind": "vo",
+     "mode": "on-mic",
+     "who": "MAS",
+     "text": "one picture. leave the date off.",
+     "s": 12,
+     "e": 61,
+     "fs": -2,
+     "fe": 76,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [],
+     "words": [
+      [
+       "one",
+       0,
+       6
+      ],
+      [
+       "picture",
+       6,
+       19
+      ],
+      [
+       "leave",
+       22,
+       29
+      ],
+      [
+       "the",
+       29,
+       32
+      ],
+      [
+       "date",
+       32,
+       38
+      ],
+      [
+       "off",
+       38,
+       48
+      ]
+     ],
+     "tag": "V.O.",
+     "pre": false
+    }
+   ],
+   "seq": "COLDOPEN",
+   "scene": "3",
+   "scene_s": 988,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MCU Mas; phone lower in frame, no text rail",
+   "cls": "MCU",
+   "move": "cut",
+   "does": "Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+   "chars": [
+    "mas"
+   ],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "roof",
+   "room": "roof_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "3.02": 0
+   },
+   "picture": "VISUAL: strawberry-post. Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "00:46:11",
+   "tc_out": "00:50:14",
+   "frames": 99
+  },
+  {
+   "id": "3.03",
+   "setup": "3.03",
+   "beats": [
+    "3.03"
+   ],
+   "s": 1214,
+   "e": 1334,
+   "onscreen": [
+    {
+     "text": "POSTED",
+     "s": 6,
+     "e": 36
+    }
+   ],
+   "lines": [],
+   "seq": "COLDOPEN",
+   "scene": "3",
+   "scene_s": 988,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM; phone action then fruit into pocket",
+   "cls": "M",
+   "move": "hold",
+   "does": "Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "sounds": [
+    "phone_click @0"
+   ],
+   "spots": [
+    {
+     "name": "phone_click",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "roof",
+   "room": "roof_day",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "3.03": 0
+   },
+   "picture": "VISUAL: strawberry-post. Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "ui",
+     "text": "POSTED",
+     "s": 6,
+     "e": 36,
+     "must": true
+    }
+   ],
+   "tc_in": "00:50:14",
+   "tc_out": "00:55:14",
+   "frames": 120
+  }
+ ],
+ "lines": [
+  {
+   "id": "e3-coldopen-0001",
+   "shot": "2.01",
+   "beat": "2.01",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "CORKBOARD-GUY",
+   "text": "Look at it. Really look. Dot. Dot. Dot. It's Morse.",
+   "tag": "",
+   "on_s": 9.0,
+   "end_s": 11.29,
+   "file_s": 8.5,
+   "abs_in": 216,
+   "abs_out": 271,
+   "file_in": 204,
+   "file_out": 285,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0001.wav",
+   "stick_t": 2.0,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Look",
+     -1,
+     3
+    ],
+    [
+     "at",
+     3,
+     6
+    ],
+    [
+     "it",
+     6,
+     8
+    ],
+    [
+     "Really",
+     9,
+     15
+    ],
+    [
+     "look",
+     15,
+     20
+    ],
+    [
+     "Dot",
+     21,
+     27
+    ],
+    [
+     "Dot",
+     28,
+     33
+    ],
+    [
+     "Dot",
+     35,
+     40
+    ],
+    [
+     "It's",
+     41,
+     45
+    ],
+    [
+     "Morse",
+     45,
+     55
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "O"
+    ],
+    [
+     3,
+     "A"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     10,
+     "A"
+    ],
+    [
+     13,
+     "E"
+    ],
+    [
+     16,
+     "O"
+    ],
+    [
+     19,
+     "E"
+    ],
+    [
+     22,
+     "A"
+    ],
+    [
+     25,
+     "E"
+    ],
+    [
+     30,
+     "A"
+    ],
+    [
+     33,
+     "E"
+    ],
+    [
+     36,
+     "A"
+    ],
+    [
+     39,
+     "E"
+    ],
+    [
+     45,
+     "M"
+    ],
+    [
+     46,
+     "O"
+    ],
+    [
+     52,
+     "E"
+    ],
+    [
+     55,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0002",
+   "shot": "2.01",
+   "beat": "2.01",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SECOND-TRUTHER",
+   "text": "Morse has dashes.",
+   "tag": "",
+   "on_s": 11.59,
+   "end_s": 12.87,
+   "file_s": 11.08,
+   "abs_in": 278,
+   "abs_out": 309,
+   "file_in": 265,
+   "file_out": 320,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0002.wav",
+   "stick_t": 4.59,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Morse",
+     0,
+     8
+    ],
+    [
+     "has",
+     8,
+     14
+    ],
+    [
+     "dashes",
+     14,
+     31
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "M"
+    ],
+    [
+     2,
+     "O"
+    ],
+    [
+     5,
+     "E"
+    ],
+    [
+     8,
+     "A"
+    ],
+    [
+     12,
+     "E"
+    ],
+    [
+     15,
+     "A"
+    ],
+    [
+     21,
+     "E"
+    ],
+    [
+     30,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0003",
+   "shot": "2.01",
+   "beat": "2.01",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "CORKBOARD-GUY",
+   "text": "Not yet. This is the preview.",
+   "tag": "",
+   "on_s": 13.17,
+   "end_s": 14.53,
+   "file_s": 12.66,
+   "abs_in": 316,
+   "abs_out": 349,
+   "file_in": 303,
+   "file_out": 361,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0003.wav",
+   "stick_t": 6.17,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Not",
+     -1,
+     2
+    ],
+    [
+     "yet",
+     2,
+     8
+    ],
+    [
+     "This",
+     9,
+     13
+    ],
+    [
+     "is",
+     13,
+     16
+    ],
+    [
+     "the",
+     16,
+     19
+    ],
+    [
+     "preview",
+     19,
+     33
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     1,
+     "E"
+    ],
+    [
+     3,
+     "A"
+    ],
+    [
+     6,
+     "E"
+    ],
+    [
+     18,
+     "M"
+    ],
+    [
+     20,
+     "E"
+    ],
+    [
+     22,
+     "A"
+    ],
+    [
+     25,
+     "E"
+    ],
+    [
+     29,
+     "O"
+    ],
+    [
+     32,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0004",
+   "shot": "2.02",
+   "beat": "2.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SECOND-TRUTHER",
+   "text": "I zoomed out a little. Could it be a fruit?",
+   "tag": "",
+   "on_s": 16.625,
+   "end_s": 18.945,
+   "file_s": 16.105,
+   "abs_in": 399,
+   "abs_out": 455,
+   "file_in": 386,
+   "file_out": 466,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0004.wav",
+   "stick_t": 0.5,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "I",
+     1,
+     5
+    ],
+    [
+     "zoomed",
+     5,
+     13
+    ],
+    [
+     "out",
+     13,
+     17
+    ],
+    [
+     "a",
+     17,
+     19
+    ],
+    [
+     "little",
+     19,
+     28
+    ],
+    [
+     "Could",
+     31,
+     35
+    ],
+    [
+     "it",
+     35,
+     37
+    ],
+    [
+     "be",
+     37,
+     40
+    ],
+    [
+     "a",
+     40,
+     43
+    ],
+    [
+     "fruit",
+     43,
+     56
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     2,
+     "A"
+    ],
+    [
+     6,
+     "O"
+    ],
+    [
+     10,
+     "M"
+    ],
+    [
+     13,
+     "A"
+    ],
+    [
+     23,
+     "E"
+    ],
+    [
+     28,
+     "rest"
+    ],
+    [
+     32,
+     "O"
+    ],
+    [
+     34,
+     "E"
+    ],
+    [
+     36,
+     "M"
+    ],
+    [
+     38,
+     "E"
+    ],
+    [
+     40,
+     "A"
+    ],
+    [
+     43,
+     "E"
+    ],
+    [
+     48,
+     "O"
+    ],
+    [
+     53,
+     "E"
+    ],
+    [
+     56,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0005",
+   "shot": "2.02",
+   "beat": "2.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "CORKBOARD-GUY",
+   "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+   "tag": "",
+   "on_s": 19.245,
+   "end_s": 24.715,
+   "file_s": 18.745,
+   "abs_in": 461,
+   "abs_out": 594,
+   "file_in": 449,
+   "file_out": 608,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0005.wav",
+   "stick_t": 3.12,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "A",
+     0,
+     1
+    ],
+    [
+     "fruit",
+     1,
+     7
+    ],
+    [
+     "Fruit",
+     8,
+     15
+    ],
+    [
+     "doesn't",
+     15,
+     21
+    ],
+    [
+     "have",
+     21,
+     25
+    ],
+    [
+     "a",
+     25,
+     26
+    ],
+    [
+     "launch",
+     26,
+     33
+    ],
+    [
+     "window",
+     33,
+     44
+    ],
+    [
+     "They're",
+     46,
+     50
+    ],
+    [
+     "calling",
+     50,
+     57
+    ],
+    [
+     "the",
+     57,
+     59
+    ],
+    [
+     "next",
+     59,
+     66
+    ],
+    [
+     "model",
+     66,
+     74
+    ],
+    [
+     "Strawberry",
+     74,
+     90
+    ],
+    [
+     "Nothing",
+     93,
+     101
+    ],
+    [
+     "red",
+     101,
+     107
+    ],
+    [
+     "is",
+     107,
+     110
+    ],
+    [
+     "just",
+     110,
+     116
+    ],
+    [
+     "red",
+     116,
+     119
+    ],
+    [
+     "anymore",
+     119,
+     132
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     1,
+     "E"
+    ],
+    [
+     3,
+     "O"
+    ],
+    [
+     6,
+     "E"
+    ],
+    [
+     11,
+     "O"
+    ],
+    [
+     13,
+     "E"
+    ],
+    [
+     15,
+     "A"
+    ],
+    [
+     17,
+     "E"
+    ],
+    [
+     21,
+     "A"
+    ],
+    [
+     27,
+     "O"
+    ],
+    [
+     30,
+     "E"
+    ],
+    [
+     33,
+     "O"
+    ],
+    [
+     35,
+     "A"
+    ],
+    [
+     37,
+     "E"
+    ],
+    [
+     40,
+     "O"
+    ],
+    [
+     43,
+     "rest"
+    ],
+    [
+     46,
+     "A"
+    ],
+    [
+     48,
+     "E"
+    ],
+    [
+     50,
+     "O"
+    ],
+    [
+     52,
+     "E"
+    ],
+    [
+     60,
+     "A"
+    ],
+    [
+     63,
+     "E"
+    ],
+    [
+     65,
+     "M"
+    ],
+    [
+     67,
+     "A"
+    ],
+    [
+     69,
+     "E"
+    ],
+    [
+     78,
+     "O"
+    ],
+    [
+     81,
+     "M"
+    ],
+    [
+     83,
+     "A"
+    ],
+    [
+     85,
+     "E"
+    ],
+    [
+     90,
+     "rest"
+    ],
+    [
+     94,
+     "A"
+    ],
+    [
+     96,
+     "E"
+    ],
+    [
+     102,
+     "A"
+    ],
+    [
+     106,
+     "E"
+    ],
+    [
+     111,
+     "A"
+    ],
+    [
+     113,
+     "E"
+    ],
+    [
+     116,
+     "A"
+    ],
+    [
+     122,
+     "E"
+    ],
+    [
+     126,
+     "M"
+    ],
+    [
+     128,
+     "O"
+    ],
+    [
+     130,
+     "E"
+    ],
+    [
+     132,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0006",
+   "shot": "2.02",
+   "beat": "2.02",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SECOND-TRUTHER",
+   "text": "Then can we eat something that isn't evidence?",
+   "tag": "",
+   "on_s": 25.015,
+   "end_s": 27.405,
+   "file_s": 24.505,
+   "abs_in": 600,
+   "abs_out": 658,
+   "file_in": 588,
+   "file_out": 671,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0006.wav",
+   "stick_t": 8.89,
+   "stick_in": 0.51,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Then",
+     0,
+     7
+    ],
+    [
+     "can",
+     7,
+     10
+    ],
+    [
+     "we",
+     10,
+     14
+    ],
+    [
+     "eat",
+     14,
+     20
+    ],
+    [
+     "something",
+     20,
+     32
+    ],
+    [
+     "that",
+     32,
+     36
+    ],
+    [
+     "isn't",
+     36,
+     42
+    ],
+    [
+     "evidence",
+     42,
+     58
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     2,
+     "A"
+    ],
+    [
+     5,
+     "E"
+    ],
+    [
+     8,
+     "A"
+    ],
+    [
+     10,
+     "O"
+    ],
+    [
+     12,
+     "E"
+    ],
+    [
+     16,
+     "A"
+    ],
+    [
+     19,
+     "E"
+    ],
+    [
+     22,
+     "A"
+    ],
+    [
+     25,
+     "M"
+    ],
+    [
+     27,
+     "E"
+    ],
+    [
+     33,
+     "A"
+    ],
+    [
+     38,
+     "E"
+    ],
+    [
+     43,
+     "A"
+    ],
+    [
+     46,
+     "E"
+    ],
+    [
+     58,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0007",
+   "shot": "2.03",
+   "beat": "2.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "CORKBOARD-GUY",
+   "text": "The truck's in on it.",
+   "tag": "",
+   "on_s": 29.5,
+   "end_s": 30.49,
+   "file_s": 29.0,
+   "abs_in": 708,
+   "abs_out": 732,
+   "file_in": 696,
+   "file_out": 743,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0007.wav",
+   "stick_t": 0.5,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "The",
+     -1,
+     0
+    ],
+    [
+     "truck's",
+     0,
+     8
+    ],
+    [
+     "in",
+     8,
+     12
+    ],
+    [
+     "on",
+     12,
+     16
+    ],
+    [
+     "it",
+     16,
+     24
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     3,
+     "A"
+    ],
+    [
+     6,
+     "E"
+    ],
+    [
+     7,
+     "A"
+    ],
+    [
+     12,
+     "O"
+    ],
+    [
+     15,
+     "E"
+    ],
+    [
+     24,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0008",
+   "shot": "2.03",
+   "beat": "2.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "COOK",
+   "text": "I'm in on carnitas. And you're blocking my window.",
+   "tag": "",
+   "on_s": 30.79,
+   "end_s": 33.11,
+   "file_s": 30.29,
+   "abs_in": 738,
+   "abs_out": 795,
+   "file_in": 726,
+   "file_out": 809,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0008.wav",
+   "stick_t": 1.79,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "I'm",
+     0,
+     3
+    ],
+    [
+     "in",
+     3,
+     6
+    ],
+    [
+     "on",
+     6,
+     9
+    ],
+    [
+     "carnitas",
+     9,
+     24
+    ],
+    [
+     "And",
+     26,
+     29
+    ],
+    [
+     "you're",
+     29,
+     32
+    ],
+    [
+     "blocking",
+     32,
+     42
+    ],
+    [
+     "my",
+     42,
+     45
+    ],
+    [
+     "window",
+     45,
+     57
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "A"
+    ],
+    [
+     6,
+     "O"
+    ],
+    [
+     8,
+     "E"
+    ],
+    [
+     10,
+     "A"
+    ],
+    [
+     13,
+     "E"
+    ],
+    [
+     16,
+     "A"
+    ],
+    [
+     19,
+     "E"
+    ],
+    [
+     29,
+     "O"
+    ],
+    [
+     31,
+     "M"
+    ],
+    [
+     34,
+     "A"
+    ],
+    [
+     37,
+     "E"
+    ],
+    [
+     41,
+     "M"
+    ],
+    [
+     43,
+     "A"
+    ],
+    [
+     45,
+     "O"
+    ],
+    [
+     47,
+     "A"
+    ],
+    [
+     50,
+     "E"
+    ],
+    [
+     52,
+     "O"
+    ],
+    [
+     56,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0009",
+   "shot": "2.03",
+   "beat": "2.03",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "SECOND-TRUTHER",
+   "text": "Two carnitas. No code words.",
+   "tag": "",
+   "on_s": 33.41,
+   "end_s": 35.54,
+   "file_s": 32.91,
+   "abs_in": 801,
+   "abs_out": 853,
+   "file_in": 789,
+   "file_out": 864,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0009.wav",
+   "stick_t": 4.41,
+   "stick_in": 0.5,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Two",
+     0,
+     4
+    ],
+    [
+     "carnitas",
+     4,
+     24
+    ],
+    [
+     "No",
+     26,
+     32
+    ],
+    [
+     "code",
+     32,
+     40
+    ],
+    [
+     "words",
+     40,
+     52
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     1,
+     "O"
+    ],
+    [
+     4,
+     "E"
+    ],
+    [
+     6,
+     "A"
+    ],
+    [
+     9,
+     "E"
+    ],
+    [
+     13,
+     "A"
+    ],
+    [
+     17,
+     "E"
+    ],
+    [
+     23,
+     "rest"
+    ],
+    [
+     26,
+     "E"
+    ],
+    [
+     28,
+     "O"
+    ],
+    [
+     31,
+     "E"
+    ],
+    [
+     33,
+     "O"
+    ],
+    [
+     38,
+     "E"
+    ],
+    [
+     40,
+     "O"
+    ],
+    [
+     46,
+     "E"
+    ],
+    [
+     51,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-coldopen-0010",
+   "shot": "3.01",
+   "beat": "3.01",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "it's a strawberry.",
+   "tag": "",
+   "on_s": 43.1667,
+   "end_s": 44.2867,
+   "file_s": 42.5867,
+   "abs_in": 1036,
+   "abs_out": 1063,
+   "file_in": 1022,
+   "file_out": 1080,
+   "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0010.wav",
+   "stick_t": 2.0,
+   "stick_in": 0.58,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "it's",
+     0,
+     3
+    ],
+    [
+     "a",
+     3,
+     6
+    ],
+    [
+     "strawberry",
+     6,
+     27
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "E"
+    ],
+    [
+     4,
+     "A"
+    ],
+    [
+     6,
+     "E"
+    ],
+    [
+     12,
+     "O"
+    ],
+    [
+     16,
+     "M"
+    ],
+    [
+     18,
+     "A"
+    ],
+    [
+     21,
+     "E"
+    ],
+    [
+     27,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  },
+  {
+   "id": "e3-vo-01",
+   "shot": "3.02",
+   "beat": "3.02",
+   "kind": "vo",
+   "mode": "on-mic",
+   "who": "MAS",
+   "text": "one picture. leave the date off.",
+   "tag": "V.O.",
+   "on_s": 46.9583,
+   "end_s": 48.9783,
+   "file_s": 46.3783,
+   "abs_in": 1127,
+   "abs_out": 1176,
+   "file_in": 1113,
+   "file_out": 1191,
+   "file": "audio/ep03/v1/coldopen/wav/e3-vo-01.wav",
+   "stick_t": 0.5,
+   "stick_in": 0.58,
+   "cut": false,
+   "on_camera": "vo",
+   "take_lip_sync": false,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "one",
+     0,
+     6
+    ],
+    [
+     "picture",
+     6,
+     19
+    ],
+    [
+     "leave",
+     22,
+     29
+    ],
+    [
+     "the",
+     29,
+     32
+    ],
+    [
+     "date",
+     32,
+     38
+    ],
+    [
+     "off",
+     38,
+     48
+    ]
+   ],
+   "mouth": [],
+   "mouth_src": "none",
+   "pre": false
+  }
+ ],
+ "posts": [],
+ "rails": [],
+ "sound_marks": [],
+ "subs": [
+  {
+   "s": 216,
+   "e": 271,
+   "hold_to": 278,
+   "who": "CORKBOARD-GUY",
+   "shown": "HAS A THEORY",
+   "text": "Look at it. Really look. Dot. Dot. Dot. It's Morse.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0001",
+   "os": false
+  },
+  {
+   "s": 278,
+   "e": 309,
+   "hold_to": 316,
+   "who": "SECOND-TRUTHER",
+   "shown": "WANTS LUNCH",
+   "text": "Morse has dashes.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0002",
+   "os": false
+  },
+  {
+   "s": 316,
+   "e": 349,
+   "hold_to": 361,
+   "who": "CORKBOARD-GUY",
+   "shown": "HAS A THEORY",
+   "text": "Not yet. This is the preview.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0003",
+   "os": false
+  },
+  {
+   "s": 399,
+   "e": 455,
+   "hold_to": 461,
+   "who": "SECOND-TRUTHER",
+   "shown": "WANTS LUNCH",
+   "text": "I zoomed out a little. Could it be a fruit?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0004",
+   "os": false
+  },
+  {
+   "s": 461,
+   "e": 594,
+   "hold_to": 600,
+   "who": "CORKBOARD-GUY",
+   "shown": "HAS A THEORY",
+   "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0005",
+   "os": false
+  },
+  {
+   "s": 600,
+   "e": 658,
+   "hold_to": 670,
+   "who": "SECOND-TRUTHER",
+   "shown": "WANTS LUNCH",
+   "text": "Then can we eat something that isn't evidence?",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0006",
+   "os": false
+  },
+  {
+   "s": 708,
+   "e": 732,
+   "hold_to": 738,
+   "who": "CORKBOARD-GUY",
+   "shown": "HAS A THEORY",
+   "text": "The truck's in on it.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0007",
+   "os": false
+  },
+  {
+   "s": 738,
+   "e": 795,
+   "hold_to": 801,
+   "who": "COOK",
+   "shown": "TACO TRUCK",
+   "text": "I'm in on carnitas. And you're blocking my window.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0008",
+   "os": false
+  },
+  {
+   "s": 801,
+   "e": 853,
+   "hold_to": 865,
+   "who": "SECOND-TRUTHER",
+   "shown": "WANTS LUNCH",
+   "text": "Two carnitas. No code words.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0009",
+   "os": false
+  },
+  {
+   "s": 1036,
+   "e": 1063,
+   "hold_to": 1075,
+   "who": "MAS",
+   "shown": "CEO",
+   "text": "it's a strawberry.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-coldopen-0010",
+   "os": false
+  },
+  {
+   "s": 1127,
+   "e": 1176,
+   "hold_to": 1188,
+   "who": "MAS",
+   "shown": "CEO",
+   "text": "one picture. leave the date off.",
+   "kind": "vo",
+   "mode": "on-mic",
+   "id": "e3-vo-01",
+   "os": false
+  }
+ ],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [
+  "5 beat lengths are not whole frames (2.01, 2.02, 2.03, 3.01, 3.02): beats start on the rounded running total, as the stick reel draws them"
+ ],
+ "problems": []
+}

@@ -69,6 +69,7 @@ audio/ost/tracks/*/render/**/*.mp3
 # Dialogue takes (TTS WAVs; MP3 previews stay tracked) and mixes/premixes under out/
 audio/ep01/**/*.wav
 audio/ep02/**/*.wav
+audio/ep03/**/*.wav
 out/**/*.wav
 # Derived web copies for the review page (sources live elsewhere in out/)
 out/review/*.mp4
@@ -93,3 +94,9 @@ out/ep02/v1/inserts/aros/*/l*.png
 out/ep02/v1/inserts/iss/plates/*.png
 out/ep02/v1/inserts/iss/rgba/
 out/ep02/v1/inserts/iss/*/fig-*.png
+
+# Ep3 paid request cache; rebuild from source only when authorized.
+audio/ep03/v1-el/cache/
+
+# Episode 3 intro audio is a byte-identical derived copy of the aired Ep1 master.
+audio/intro/ep03/*.wav

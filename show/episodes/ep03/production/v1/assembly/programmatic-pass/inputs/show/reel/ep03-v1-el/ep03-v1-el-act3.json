@@ -1,0 +1,4588 @@
+{
+ "episode": 3,
+ "title": "ep1.2_strawberry.jpg",
+ "part": "ACT THREE",
+ "variant": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep3 v1 base lock of act3: the beat plan applied to no source (every beat new).",
+ "dateSpan": "",
+ "runtimeMin": 4.15,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "name": "MAS",
+   "role": "CEO"
+  },
+  "auhsoj": {
+   "name": "AUHSOJ",
+   "role": "LEADS THE ROUND"
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "WITNESS"
+  },
+  "staffer": {
+   "name": "STAFFER",
+   "role": "THE BUILD"
+  },
+  "gerg": {
+   "name": "GERG",
+   "role": "CO-FOUNDER"
+  },
+  "lifeguard": {
+   "name": "LIFEGUARD",
+   "role": "BEACH"
+  },
+  "mario": {
+   "name": "MARIO",
+   "role": "RIVAL"
+  },
+  "adelina": {
+   "name": "ADELINA",
+   "role": "TURNS ESSAYS INTO REVENUE"
+  },
+  "lunchmas": {
+   "name": "LUNCHMAS",
+   "role": "CO-FOUNDER"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep03/production/v1/beat-plan/act3.json",
+  "timeline": null,
+  "takes": "audio/ep03/v1/act3/lines-v1.json",
+  "takes_files": [
+   "audio/ep03/v1-el/ep03-v1/act3/lines-A.json"
+  ],
+  "builder": "audio/reel/ep03-v1/build_timeline.py",
+  "bed": "audio/reel/ep03-v1/bed.py -> audio/reel/ep03-v1/act3-bed.wav",
+  "notes": "show/episodes/ep03/production/v1/pipeline.md",
+  "seconds": 248.91,
+  "kokoro_lock": "show/reel/ep03-v1/ep03-v1-act3.json",
+  "el_builder": "audio/ep03/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep03/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "15.01",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "tpool",
+   "style": "EARLY-WEB16",
+   "shot": "medium",
+   "frame": "EARLY-WEB WIDE, burnt digits foreground",
+   "side": "",
+   "room": "parking_lot",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Present ticker runs backward, name scorches blank before old figure. Early-web palette parking lot: TPOOL sign swapped for TOD NEERG, gift-card confetti. No named backer or family.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "MAR 2012",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "rail"
+    },
+    {
+     "text": "TPOOL SOLD · $43.4M",
+     "at": 1.6,
+     "until": 2.85,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 10,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-11 EARLY WEB CASSETTE; reverse wheels, sad short kazoo"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "MICRO FLASHBACK",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "EARLY-WEB WIDE, burnt digits foreground",
+    "picture": "VISUAL: tpool-sale. Present ticker runs backward, name scorches blank before old figure. Early-web palette parking lot: TPOOL sign swapped for TOD NEERG, gift-card confetti. No named backer or family.",
+    "style": "EARLY-WEB16",
+    "flashback": "F3.2 TPOOL sale"
+   }
+  },
+  {
+   "id": "15.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "tpool",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU Mas → investors listener",
+   "side": "",
+   "room": "parking_lot",
+   "chars": [
+    "mas",
+    "auhsoj"
+   ],
+   "caption": "Return to current boardroom. Mas pockets one old gift card as impossible memory business, then answers the blank faces.",
+   "lines": [
+    {
+     "id": "e3-act3-0001",
+     "who": "mas",
+     "text": "that one had confetti.",
+     "t": 0.5,
+     "dur": 1.37,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0001.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "that",
+       0.03,
+       0.255
+      ],
+      [
+       "one",
+       0.255,
+       0.455
+      ],
+      [
+       "had",
+       0.455,
+       0.655
+      ],
+      [
+       "confetti",
+       0.655,
+       1.39
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0001.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 1.37
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 3.87,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-11 EARLY WEB CASSETTE; reverse wheels, sad short kazoo"
+   ],
+   "passes": {
+    "scene": "15",
+    "mode": "MICRO FLASHBACK",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU Mas → investors listener",
+    "picture": "VISUAL: tpool-sale. Return to current boardroom. Mas pockets one old gift card as impossible memory business, then answers the blank faces.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "16.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS work foreground, news screen background",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Mas at desk working release schedule. Monitor shows official-style notices of physics Oct8 and chemistry Oct9; no fake historical interview or Hinton quote. Small medal lands near protein ribbon, not a contest with the paper.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "OCT 8 · PHYSICS NOBEL",
+     "at": 0.25,
+     "until": 1.625,
+     "kind": "doc"
+    },
+    {
+     "text": "OCT 9 · CHEMISTRY NOBEL",
+     "at": 1.725,
+     "until": 3.183,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 8,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-12 MEDALS; chip/cello build, not comic on sources"
+   ],
+   "sounds": [
+    {
+     "name": "medal_clunk",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "16",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "OTS work foreground, news screen background",
+    "picture": "VISUAL: nobel-monitor. Mas at desk working release schedule. Monitor shows official-style notices of physics Oct8 and chemistry Oct9; no fake historical interview or Hinton quote. Small medal lands near protein ribbon, not a contest with the paper.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "16.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "staffer"
+   ],
+   "caption": "Staffer has been waiting with December sheet, medals on monitor still. Mas turns to the work and leaves screen on rather than performing reaction.",
+   "lines": [
+    {
+     "id": "e3-act3-0002",
+     "who": "staffer",
+     "text": "Do you want to move the meeting? Everybody's watching the prizes.",
+     "t": 0.5,
+     "dur": 3.18,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0002.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Do",
+       -0.03,
+       0.057
+      ],
+      [
+       "you",
+       0.057,
+       0.145
+      ],
+      [
+       "want",
+       0.145,
+       0.307
+      ],
+      [
+       "to",
+       0.307,
+       0.395
+      ],
+      [
+       "move",
+       0.395,
+       0.645
+      ],
+      [
+       "the",
+       0.645,
+       0.745
+      ],
+      [
+       "meeting",
+       0.745,
+       1.27
+      ],
+      [
+       "Everybody's",
+       1.382,
+       2.02
+      ],
+      [
+       "watching",
+       2.02,
+       2.408
+      ],
+      [
+       "the",
+       2.408,
+       2.495
+      ],
+      [
+       "prizes",
+       2.495,
+       3.2
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0002.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 3.18
+     }
+    },
+    {
+     "id": "e3-act3-0003",
+     "who": "mas",
+     "text": "good for them. how many people do you need back?",
+     "t": 4.13,
+     "dur": 2.62,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0003.wav",
+     "in": 0.59,
+     "words": [
+      [
+       "good",
+       0.025,
+       0.262
+      ],
+      [
+       "for",
+       0.262,
+       0.475
+      ],
+      [
+       "them",
+       0.475,
+       0.875
+      ],
+      [
+       "how",
+       0.95,
+       1.088
+      ],
+      [
+       "many",
+       1.088,
+       1.3
+      ],
+      [
+       "people",
+       1.3,
+       1.675
+      ],
+      [
+       "do",
+       1.675,
+       1.8
+      ],
+      [
+       "you",
+       1.8,
+       1.9
+      ],
+      [
+       "need",
+       1.9,
+       2.15
+      ],
+      [
+       "back",
+       2.15,
+       2.64
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0003.wav",
+      "in": 0.59,
+      "t": 4.13,
+      "dur": 2.62
+     }
+    },
+    {
+     "id": "e3-act3-0004",
+     "who": "staffer",
+     "text": "Two.",
+     "t": 7.25,
+     "dur": 0.62,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0004.wav",
+     "in": 0.55,
+     "words": [
+      [
+       "Two",
+       -0.025,
+       0.375
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0004.wav",
+      "in": 0.55,
+      "t": 7.25,
+      "dur": 0.62
+     }
+    },
+    {
+     "id": "e3-act3-0005",
+     "who": "mas",
+     "text": "ask for two. leave the screen on.",
+     "t": 8.32,
+     "dur": 2.3,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0005.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "ask",
+       0.095,
+       0.37
+      ],
+      [
+       "for",
+       0.37,
+       0.532
+      ],
+      [
+       "two",
+       0.532,
+       0.97
+      ],
+      [
+       "leave",
+       1.107,
+       1.408
+      ],
+      [
+       "the",
+       1.408,
+       1.495
+      ],
+      [
+       "screen",
+       1.495,
+       1.92
+      ],
+      [
+       "on",
+       1.92,
+       2.32
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0005.wav",
+      "in": 0.52,
+      "t": 8.32,
+      "dur": 2.3
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 12.22,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-12 MEDALS; chip/cello build, not comic on sources"
+   ],
+   "passes": {
+    "scene": "16",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0003": 0.45,
+      "e3-act3-0004": 0.5,
+      "e3-act3-0005": 0.45
+     }
+    },
+    "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+    "picture": "VISUAL: nobel-monitor. Staffer has been waiting with December sheet, medals on monitor still. Mas turns to the work and leaves screen on rather than performing reaction.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "16.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU work and face, no source overlay",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas looks at old-company gift card on desk, then annotates a concrete next release. Monitor is dimmed before thought.",
+   "lines": [
+    {
+     "id": "e3-vo-11",
+     "who": "mas",
+     "text": "the old price came with an ending. this one needs another release.",
+     "t": 0.5,
+     "dur": 4.19,
+     "audio": "audio/ep03/v1/act3/wav/e3-vo-11.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "the",
+       -0.025,
+       0.1
+      ],
+      [
+       "old",
+       0.1,
+       0.4
+      ],
+      [
+       "price",
+       0.4,
+       0.75
+      ],
+      [
+       "came",
+       0.75,
+       1.075
+      ],
+      [
+       "with",
+       1.075,
+       1.212
+      ],
+      [
+       "an",
+       1.212,
+       1.375
+      ],
+      [
+       "ending",
+       1.375,
+       1.96
+      ],
+      [
+       "this",
+       2.363,
+       2.575
+      ],
+      [
+       "one",
+       2.575,
+       2.8
+      ],
+      [
+       "needs",
+       2.8,
+       3.125
+      ],
+      [
+       "another",
+       3.125,
+       3.55
+      ],
+      [
+       "release",
+       3.55,
+       4.21
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "mode": "vo",
+     "fact_tag": "[INVENTED · inner voice]",
+     "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-vo-11.wav",
+      "in": 0.52,
+      "t": 0.5,
+      "dur": 4.19
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.29,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-12 MEDALS; chip/cello build, not comic on sources"
+   ],
+   "passes": {
+    "scene": "16",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU work and face, no source overlay",
+    "picture": "VISUAL: nobel-monitor. Mas looks at old-company gift card on desk, then annotates a concrete next release. Monitor is dimmed before thought.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU supported seated Mas, key in hand",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Monitor asleep. Mas turns worn blank key under desk light, picks up phone, does not choose a work alert.",
+   "lines": [
+    {
+     "id": "e3-vo-12",
+     "who": "mas",
+     "text": "he said don’t call if it breaks. nothing’s broken.",
+     "t": 2.0,
+     "dur": 3.2,
+     "audio": "audio/ep03/v1/act3/wav/e3-vo-12.wav",
+     "in": 0.57,
+     "words": [
+      [
+       "he",
+       -0.03,
+       0.107
+      ],
+      [
+       "said",
+       0.107,
+       0.37
+      ],
+      [
+       "don’t",
+       0.37,
+       0.633
+      ],
+      [
+       "call",
+       0.633,
+       0.958
+      ],
+      [
+       "if",
+       0.958,
+       1.057
+      ],
+      [
+       "it",
+       1.057,
+       1.17
+      ],
+      [
+       "breaks",
+       1.17,
+       1.76
+      ],
+      [
+       "nothing’s",
+       2.045,
+       2.582
+      ],
+      [
+       "broken",
+       2.582,
+       3.22
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "mode": "vo",
+     "fact_tag": "[INVENTED · inner voice]",
+     "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-vo-12.wav",
+      "in": 0.57,
+      "t": 2.0,
+      "dur": 3.2
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.8,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "sounds": [
+    {
+     "name": "phone_ring",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU supported seated Mas, key in hand",
+    "picture": "VISUAL: keycap. Monitor asleep. Mas turns worn blank key under desk light, picks up phone, does not choose a work alert.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "BEACH WIDE all contact points and second cord visible",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "gerg",
+    "lifeguard"
+   ],
+   "caption": "Gerg types in chair beside sand data center. Lifeguard follows extension cord from tower; phone rings visible in sand.",
+   "lines": [
+    {
+     "id": "e3-act3-0006",
+     "who": "lifeguard",
+     "text": "Sir. This cord goes all the way up to my tower.",
+     "t": 0.5,
+     "dur": 2.77,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0006.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Sir",
+       0.05,
+       0.325
+      ],
+      [
+       "This",
+       0.375,
+       0.575
+      ],
+      [
+       "cord",
+       0.575,
+       0.9
+      ],
+      [
+       "goes",
+       0.9,
+       1.325
+      ],
+      [
+       "all",
+       1.325,
+       1.588
+      ],
+      [
+       "the",
+       1.588,
+       1.675
+      ],
+      [
+       "way",
+       1.675,
+       1.888
+      ],
+      [
+       "up",
+       1.888,
+       2.025
+      ],
+      [
+       "to",
+       2.025,
+       2.112
+      ],
+      [
+       "my",
+       2.112,
+       2.288
+      ],
+      [
+       "tower",
+       2.288,
+       2.79
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0006.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 2.77
+     }
+    },
+    {
+     "id": "e3-act3-0007",
+     "who": "gerg",
+     "text": "It's a sabbatical project. It's very low power, for a data center.",
+     "t": 3.77,
+     "dur": 3.31,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0007.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "It's",
+       -0.04,
+       0.052
+      ],
+      [
+       "a",
+       0.052,
+       0.115
+      ],
+      [
+       "sabbatical",
+       0.115,
+       0.69
+      ],
+      [
+       "project",
+       0.69,
+       1.265
+      ],
+      [
+       "It's",
+       1.302,
+       1.44
+      ],
+      [
+       "very",
+       1.44,
+       1.715
+      ],
+      [
+       "low",
+       1.715,
+       1.94
+      ],
+      [
+       "power",
+       1.94,
+       2.315
+      ],
+      [
+       "for",
+       2.365,
+       2.478
+      ],
+      [
+       "a",
+       2.478,
+       2.54
+      ],
+      [
+       "data",
+       2.54,
+       2.865
+      ],
+      [
+       "center",
+       2.865,
+       3.33
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0007.wav",
+      "in": 0.51,
+      "t": 3.77,
+      "dur": 3.31
+     }
+    },
+    {
+     "id": "e3-act3-0008",
+     "who": "lifeguard",
+     "text": "It's my light.",
+     "t": 7.58,
+     "dur": 0.9,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0008.wav",
+     "in": 0.58,
+     "words": [
+      [
+       "It's",
+       -0.035,
+       0.19
+      ],
+      [
+       "my",
+       0.19,
+       0.402
+      ],
+      [
+       "light",
+       0.402,
+       0.92
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0008.wav",
+      "in": 0.58,
+      "t": 7.58,
+      "dur": 0.9
+     }
+    },
+    {
+     "id": "e3-act3-0009",
+     "who": "gerg",
+     "text": "That's the small one.",
+     "t": 8.98,
+     "dur": 0.85,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0009.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "That's",
+       -0.03,
+       0.162
+      ],
+      [
+       "the",
+       0.162,
+       0.25
+      ],
+      [
+       "small",
+       0.25,
+       0.513
+      ],
+      [
+       "one",
+       0.513,
+       0.87
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0009.wav",
+      "in": 0.5,
+      "t": 8.98,
+      "dur": 0.85
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 11.43,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0007": 0.5,
+      "e3-act3-0008": 0.5,
+      "e3-act3-0009": 0.5
+     }
+    },
+    "camera": "BEACH WIDE all contact points and second cord visible",
+    "picture": "VISUAL: beach-call. Gerg types in chair beside sand data center. Lifeguard follows extension cord from tower; phone rings visible in sand.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE stepped power change no flash",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "gerg"
+   ],
+   "caption": "Lifeguard unplugs; racks go dark in steps. Gerg connects second cord; pier lights go dark in steps instead. He answers ringing phone.",
+   "lines": [
+    {
+     "id": "e3-act3-0010",
+     "who": "gerg",
+     "text": "Nothing's broken. I'd know. I've got an alert on every service and an alert on the alerts.",
+     "t": 0.5,
+     "dur": 4.78,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0010.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Nothing's",
+       -0.015,
+       0.435
+      ],
+      [
+       "broken",
+       0.435,
+       0.86
+      ],
+      [
+       "I'd",
+       0.91,
+       1.135
+      ],
+      [
+       "know",
+       1.135,
+       1.535
+      ],
+      [
+       "I've",
+       1.635,
+       1.81
+      ],
+      [
+       "got",
+       1.81,
+       1.972
+      ],
+      [
+       "an",
+       1.972,
+       2.06
+      ],
+      [
+       "alert",
+       2.06,
+       2.398
+      ],
+      [
+       "on",
+       2.398,
+       2.548
+      ],
+      [
+       "every",
+       2.548,
+       2.898
+      ],
+      [
+       "service",
+       2.898,
+       3.385
+      ],
+      [
+       "and",
+       3.385,
+       3.497
+      ],
+      [
+       "an",
+       3.497,
+       3.585
+      ],
+      [
+       "alert",
+       3.585,
+       3.948
+      ],
+      [
+       "on",
+       3.948,
+       4.072
+      ],
+      [
+       "the",
+       4.072,
+       4.185
+      ],
+      [
+       "alerts",
+       4.185,
+       4.8
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0010.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 4.78
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.28,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "sounds": [
+    {
+     "name": "plug_pull",
+     "at": 0.0,
+     "gain": -20
+    },
+    {
+     "name": "phone_pickup",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "WIDE stepped power change no flash",
+    "picture": "VISUAL: beach-call. Lifeguard unplugs; racks go dark in steps. Gerg connects second cord; pier lights go dark in steps instead. He answers ringing phone.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "HELD MCU Mas; reverse to supported beach chair on real turn",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "caption": "Mas face in dark room, phone at ear. All Gerg voice on established call filter. No floating call tile.",
+   "lines": [
+    {
+     "id": "e3-act3-0011",
+     "who": "mas",
+     "text": "i know. nothing's broken.",
+     "t": 0.5,
+     "dur": 1.88,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0011.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "i",
+       0.09,
+       0.302
+      ],
+      [
+       "know",
+       0.302,
+       0.69
+      ],
+      [
+       "nothing's",
+       0.777,
+       1.278
+      ],
+      [
+       "broken",
+       1.278,
+       1.9
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0011.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 1.88
+     }
+    },
+    {
+     "id": "e3-act3-0012",
+     "who": "gerg",
+     "text": "So you called me. On my sabbatical. Mas, is this a social call?",
+     "t": 2.88,
+     "dur": 3.15,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0012.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "So",
+       -0.03,
+       0.07
+      ],
+      [
+       "you",
+       0.07,
+       0.195
+      ],
+      [
+       "called",
+       0.195,
+       0.458
+      ],
+      [
+       "me",
+       0.458,
+       0.595
+      ],
+      [
+       "On",
+       0.632,
+       0.758
+      ],
+      [
+       "my",
+       0.758,
+       0.895
+      ],
+      [
+       "sabbatical",
+       0.895,
+       1.545
+      ],
+      [
+       "Mas",
+       1.632,
+       2.02
+      ],
+      [
+       "is",
+       2.07,
+       2.182
+      ],
+      [
+       "this",
+       2.182,
+       2.357
+      ],
+      [
+       "a",
+       2.357,
+       2.445
+      ],
+      [
+       "social",
+       2.445,
+       2.82
+      ],
+      [
+       "call",
+       2.82,
+       3.17
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "device": "phone",
+     "mode": "call",
+     "os": true,
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0012.wav",
+      "in": 0.51,
+      "t": 2.88,
+      "dur": 3.15
+     }
+    },
+    {
+     "id": "e3-act3-0013",
+     "who": "mas",
+     "text": "you dropped a key. in the lobby, in august.",
+     "t": 6.48,
+     "dur": 2.76,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0013.wav",
+     "in": 0.57,
+     "words": [
+      [
+       "you",
+       -0.005,
+       0.12
+      ],
+      [
+       "dropped",
+       0.12,
+       0.457
+      ],
+      [
+       "a",
+       0.457,
+       0.558
+      ],
+      [
+       "key",
+       0.558,
+       1.0
+      ],
+      [
+       "in",
+       1.232,
+       1.358
+      ],
+      [
+       "the",
+       1.358,
+       1.482
+      ],
+      [
+       "lobby",
+       1.482,
+       1.92
+      ],
+      [
+       "in",
+       1.958,
+       2.108
+      ],
+      [
+       "august",
+       2.108,
+       2.78
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0013.wav",
+      "in": 0.57,
+      "t": 6.48,
+      "dur": 2.76
+     }
+    },
+    {
+     "id": "e3-act3-0014",
+     "who": "gerg",
+     "text": "I've dropped eleven since August. The sand gets under them and they just pop. Which one?",
+     "t": 9.74,
+     "dur": 4.35,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0014.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "I've",
+       -0.03,
+       0.1
+      ],
+      [
+       "dropped",
+       0.1,
+       0.425
+      ],
+      [
+       "eleven",
+       0.425,
+       0.85
+      ],
+      [
+       "since",
+       0.85,
+       1.088
+      ],
+      [
+       "August",
+       1.088,
+       1.65
+      ],
+      [
+       "The",
+       1.75,
+       1.888
+      ],
+      [
+       "sand",
+       1.888,
+       2.2
+      ],
+      [
+       "gets",
+       2.2,
+       2.412
+      ],
+      [
+       "under",
+       2.412,
+       2.638
+      ],
+      [
+       "them",
+       2.638,
+       2.85
+      ],
+      [
+       "and",
+       2.85,
+       2.963
+      ],
+      [
+       "they",
+       2.963,
+       3.1
+      ],
+      [
+       "just",
+       3.1,
+       3.325
+      ],
+      [
+       "pop",
+       3.325,
+       3.675
+      ],
+      [
+       "Which",
+       3.75,
+       4.0
+      ],
+      [
+       "one",
+       4.0,
+       4.37
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "device": "phone",
+     "mode": "call",
+     "os": true,
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0014.wav",
+      "in": 0.5,
+      "t": 9.74,
+      "dur": 4.35
+     }
+    },
+    {
+     "id": "e3-act3-0015",
+     "who": "mas",
+     "text": "can't tell. it's worn off.",
+     "t": 14.54,
+     "dur": 1.48,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0015.wav",
+     "in": 0.58,
+     "words": [
+      [
+       "can't",
+       -0.015,
+       0.235
+      ],
+      [
+       "tell",
+       0.235,
+       0.51
+      ],
+      [
+       "it's",
+       0.56,
+       0.76
+      ],
+      [
+       "worn",
+       0.76,
+       1.06
+      ],
+      [
+       "off",
+       1.06,
+       1.5
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0015.wav",
+      "in": 0.58,
+      "t": 14.54,
+      "dur": 1.48
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 17.62,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0012": 0.5,
+      "e3-act3-0013": 0.45,
+      "e3-act3-0014": 0.5,
+      "e3-act3-0015": 0.45
+     }
+    },
+    "camera": "HELD MCU Mas; reverse to supported beach chair on real turn",
+    "picture": "VISUAL: beach-call. Mas face in dark room, phone at ear. All Gerg voice on established call filter. No floating call tile.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO HELD CLOSES; keys stop two beats before photo question",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "mas",
+    "gerg"
+   ],
+   "caption": "Gerg types, keys audibly worn. Mas turns key near phone, sitting still rather than withholding extra mystery.",
+   "lines": [
+    {
+     "id": "e3-act3-0016",
+     "who": "gerg",
+     "text": "Then it's enter. It's the one I hit the most. I wear out about one a month.",
+     "t": 0.5,
+     "dur": 3.51,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0016.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Then",
+       -0.03,
+       0.075
+      ],
+      [
+       "it's",
+       0.075,
+       0.275
+      ],
+      [
+       "enter",
+       0.275,
+       0.65
+      ],
+      [
+       "It's",
+       0.7,
+       0.838
+      ],
+      [
+       "the",
+       0.838,
+       0.925
+      ],
+      [
+       "one",
+       0.925,
+       1.062
+      ],
+      [
+       "I",
+       1.062,
+       1.2
+      ],
+      [
+       "hit",
+       1.2,
+       1.412
+      ],
+      [
+       "the",
+       1.412,
+       1.5
+      ],
+      [
+       "most",
+       1.5,
+       1.975
+      ],
+      [
+       "I",
+       2.075,
+       2.225
+      ],
+      [
+       "wear",
+       2.225,
+       2.425
+      ],
+      [
+       "out",
+       2.425,
+       2.612
+      ],
+      [
+       "about",
+       2.612,
+       2.875
+      ],
+      [
+       "one",
+       2.875,
+       3.037
+      ],
+      [
+       "a",
+       3.037,
+       3.1
+      ],
+      [
+       "month",
+       3.1,
+       3.53
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0016.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 3.51
+     }
+    },
+    {
+     "id": "e3-act3-0017",
+     "who": "mas",
+     "text": "i'll hold on to it.",
+     "t": 4.46,
+     "dur": 1.3,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0017.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "i'll",
+       0.07,
+       0.27
+      ],
+      [
+       "hold",
+       0.27,
+       0.57
+      ],
+      [
+       "on",
+       0.57,
+       0.832
+      ],
+      [
+       "to",
+       0.832,
+       1.082
+      ],
+      [
+       "it",
+       1.082,
+       1.32
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "device": "phone",
+     "mode": "call",
+     "os": true,
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0017.wav",
+      "in": 0.52,
+      "t": 4.46,
+      "dur": 1.3
+     }
+    },
+    {
+     "id": "e3-act3-0018",
+     "who": "gerg",
+     "text": "Did you ever get the smaller photo?",
+     "t": 6.26,
+     "dur": 1.53,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0018.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Did",
+       -0.03,
+       0.058
+      ],
+      [
+       "you",
+       0.058,
+       0.17
+      ],
+      [
+       "ever",
+       0.17,
+       0.395
+      ],
+      [
+       "get",
+       0.395,
+       0.532
+      ],
+      [
+       "the",
+       0.532,
+       0.62
+      ],
+      [
+       "smaller",
+       0.62,
+       1.02
+      ],
+      [
+       "photo",
+       1.02,
+       1.55
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0018.wav",
+      "in": 0.5,
+      "t": 6.26,
+      "dur": 1.53
+     }
+    },
+    {
+     "id": "e3-act3-0019",
+     "who": "mas",
+     "text": "not yet.",
+     "t": 8.24,
+     "dur": 0.82,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0019.wav",
+     "in": 0.53,
+     "words": [
+      [
+       "not",
+       0.065,
+       0.328
+      ],
+      [
+       "yet",
+       0.328,
+       0.84
+      ]
+     ],
+     "tag": "O.S.",
+     "cut": false,
+     "device": "phone",
+     "mode": "call",
+     "os": true,
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0019.wav",
+      "in": 0.53,
+      "t": 8.24,
+      "dur": 0.82
+     }
+    },
+    {
+     "id": "e3-act3-0020",
+     "who": "gerg",
+     "text": "Good. Hang on to it. I've got caps lock doing enter for now.",
+     "t": 9.56,
+     "dur": 2.76,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0020.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Good",
+       -0.04,
+       0.09
+      ],
+      [
+       "Hang",
+       0.14,
+       0.328
+      ],
+      [
+       "on",
+       0.328,
+       0.54
+      ],
+      [
+       "to",
+       0.54,
+       0.753
+      ],
+      [
+       "it",
+       0.753,
+       0.89
+      ],
+      [
+       "I've",
+       0.94,
+       1.078
+      ],
+      [
+       "got",
+       1.078,
+       1.24
+      ],
+      [
+       "caps",
+       1.24,
+       1.565
+      ],
+      [
+       "lock",
+       1.565,
+       1.84
+      ],
+      [
+       "doing",
+       1.84,
+       2.065
+      ],
+      [
+       "enter",
+       2.065,
+       2.29
+      ],
+      [
+       "for",
+       2.29,
+       2.415
+      ],
+      [
+       "now",
+       2.415,
+       2.78
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0020.wav",
+      "in": 0.51,
+      "t": 9.56,
+      "dur": 2.76
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 15.32,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "sounds": [
+    {
+     "name": "keys_stop",
+     "at": 0.0,
+     "gain": -20
+    },
+    {
+     "name": "surf",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0017": 0.45,
+      "e3-act3-0018": 0.5,
+      "e3-act3-0019": 0.45,
+      "e3-act3-0020": 0.5
+     }
+    },
+    "camera": "TWO HELD CLOSES; keys stop two beats before photo question",
+    "picture": "VISUAL: beach-call. Gerg types, keys audibly worn. Mas turns key near phone, sitting still rather than withholding extra mystery.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "17A.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "beach",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM room geography, beacon motivates rival exit",
+   "side": "",
+   "room": "beach_night",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Mas pockets key as last phrase ends. Orb turns to window where lighthouse beacon sweeps toward him. No thought restates warmth.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4,
+   "fx": [],
+   "cues": [
+    "music (v1): NONE: keys/surf/server hum only, designed quiet"
+   ],
+   "passes": {
+    "scene": "17A",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MEDIUM room geography, beacon motivates rival exit",
+    "picture": "VISUAL: keycap. Mas pockets key as last phrase ends. Orb turns to window where lighthouse beacon sweeps toward him. No thought restates warmth.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · HELD held pair, warm practical work, no extra names",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "mario",
+    "adelina"
+   ],
+   "caption": "Signposted exit from Mas through beacon. Writing room desks, scroll flows between them. Adelina weighs loose end, shredder beside her.",
+   "lines": [
+    {
+     "id": "e3-act3-0021",
+     "who": "adelina",
+     "text": "It's done, Mario. Fifteen thousand words. Publish it.",
+     "t": 2.0,
+     "dur": 3.25,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0021.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "It's",
+       -0.03,
+       0.175
+      ],
+      [
+       "done",
+       0.175,
+       0.4
+      ],
+      [
+       "Mario",
+       0.438,
+       0.92
+      ],
+      [
+       "Fifteen",
+       1.088,
+       1.525
+      ],
+      [
+       "thousand",
+       1.525,
+       1.95
+      ],
+      [
+       "words",
+       1.95,
+       2.46
+      ],
+      [
+       "Publish",
+       2.6,
+       3.038
+      ],
+      [
+       "it",
+       3.038,
+       3.27
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0021.wav",
+      "in": 0.5,
+      "t": 2.0,
+      "dur": 3.25
+     }
+    },
+    {
+     "id": "e3-act3-0022",
+     "who": "mario",
+     "text": "It's nearly done. There's a caveat on page forty that needs a caveat of its own.",
+     "t": 5.75,
+     "dur": 4.12,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0022.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "It's",
+       -0.03,
+       0.165
+      ],
+      [
+       "nearly",
+       0.165,
+       0.515
+      ],
+      [
+       "done",
+       0.515,
+       0.93
+      ],
+      [
+       "There's",
+       1.065,
+       1.252
+      ],
+      [
+       "a",
+       1.252,
+       1.34
+      ],
+      [
+       "caveat",
+       1.34,
+       1.802
+      ],
+      [
+       "on",
+       1.802,
+       1.915
+      ],
+      [
+       "page",
+       1.915,
+       2.24
+      ],
+      [
+       "forty",
+       2.24,
+       2.615
+      ],
+      [
+       "that",
+       2.615,
+       2.765
+      ],
+      [
+       "needs",
+       2.765,
+       3.003
+      ],
+      [
+       "a",
+       3.003,
+       3.065
+      ],
+      [
+       "caveat",
+       3.065,
+       3.528
+      ],
+      [
+       "of",
+       3.528,
+       3.602
+      ],
+      [
+       "its",
+       3.602,
+       3.765
+      ],
+      [
+       "own",
+       3.765,
+       4.14
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0022.wav",
+      "in": 0.5,
+      "t": 5.75,
+      "dur": 4.12
+     }
+    },
+    {
+     "id": "e3-act3-0023",
+     "who": "adelina",
+     "text": "Manalt's whole essay fit on one phone screen.",
+     "t": 10.37,
+     "dur": 2.37,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0023.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Manalt's",
+       -0.025,
+       0.4
+      ],
+      [
+       "whole",
+       0.4,
+       0.625
+      ],
+      [
+       "essay",
+       0.625,
+       1.037
+      ],
+      [
+       "fit",
+       1.037,
+       1.188
+      ],
+      [
+       "on",
+       1.188,
+       1.3
+      ],
+      [
+       "one",
+       1.3,
+       1.538
+      ],
+      [
+       "phone",
+       1.538,
+       1.875
+      ],
+      [
+       "screen",
+       1.875,
+       2.39
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0023.wav",
+      "in": 0.5,
+      "t": 10.37,
+      "dur": 2.37
+     }
+    },
+    {
+     "id": "e3-act3-0024",
+     "who": "mario",
+     "text": "Then he left things out. I didn't leave anything out.",
+     "t": 13.24,
+     "dur": 2.31,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0024.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Then",
+       -0.03,
+       0.077
+      ],
+      [
+       "he",
+       0.077,
+       0.19
+      ],
+      [
+       "left",
+       0.19,
+       0.44
+      ],
+      [
+       "things",
+       0.44,
+       0.74
+      ],
+      [
+       "out",
+       0.74,
+       1.015
+      ],
+      [
+       "I",
+       1.09,
+       1.202
+      ],
+      [
+       "didn't",
+       1.202,
+       1.415
+      ],
+      [
+       "leave",
+       1.415,
+       1.602
+      ],
+      [
+       "anything",
+       1.602,
+       1.94
+      ],
+      [
+       "out",
+       1.94,
+       2.33
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0024.wav",
+      "in": 0.5,
+      "t": 13.24,
+      "dur": 2.31
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 17.15,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0022": 0.5,
+      "e3-act3-0023": 0.5,
+      "e3-act3-0024": 0.5
+     }
+    },
+    "camera": "TWO-SHOT · HELD held pair, warm practical work, no extra names",
+    "picture": "VISUAL: writing-room. Signposted exit from Mas through beacon. Writing room desks, scroll flows between them. Adelina weighs loose end, shredder beside her.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair → Mario close on actual turn",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "mario",
+    "adelina"
+   ],
+   "caption": "Adelina reads ending twice, lays it next to his hand. Mario stops writing when she notices hope.",
+   "lines": [
+    {
+     "id": "e3-act3-0025",
+     "who": "adelina",
+     "text": "It ends well. It's actually hopeful.",
+     "t": 0.5,
+     "dur": 1.98,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0025.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "It",
+       -0.03,
+       0.075
+      ],
+      [
+       "ends",
+       0.075,
+       0.375
+      ],
+      [
+       "well",
+       0.375,
+       0.75
+      ],
+      [
+       "It's",
+       0.95,
+       1.1
+      ],
+      [
+       "actually",
+       1.1,
+       1.5
+      ],
+      [
+       "hopeful",
+       1.5,
+       2.0
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0025.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 1.98
+     }
+    },
+    {
+     "id": "e3-act3-0026",
+     "who": "mario",
+     "text": "Don't tell anyone.",
+     "t": 2.98,
+     "dur": 1.2,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0026.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Don't",
+       0.02,
+       0.258
+      ],
+      [
+       "tell",
+       0.258,
+       0.52
+      ],
+      [
+       "anyone",
+       0.52,
+       1.22
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0026.wav",
+      "in": 0.5,
+      "t": 2.98,
+      "dur": 1.2
+     }
+    },
+    {
+     "id": "e3-act3-0027",
+     "who": "adelina",
+     "text": "Why on earth not?",
+     "t": 4.68,
+     "dur": 0.87,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0027.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Why",
+       -0.01,
+       0.128
+      ],
+      [
+       "on",
+       0.128,
+       0.265
+      ],
+      [
+       "earth",
+       0.265,
+       0.515
+      ],
+      [
+       "not",
+       0.515,
+       0.89
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0027.wav",
+      "in": 0.5,
+      "t": 4.68,
+      "dur": 0.87
+     }
+    },
+    {
+     "id": "e3-act3-0028",
+     "who": "mario",
+     "text": "Because if it ends well, nobody reads the footnotes. That's where I put the parts that don't.",
+     "t": 6.05,
+     "dur": 4.36,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0028.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Because",
+       -0.03,
+       0.195
+      ],
+      [
+       "if",
+       0.195,
+       0.307
+      ],
+      [
+       "it",
+       0.307,
+       0.395
+      ],
+      [
+       "ends",
+       0.395,
+       0.695
+      ],
+      [
+       "well",
+       0.695,
+       0.995
+      ],
+      [
+       "nobody",
+       1.045,
+       1.408
+      ],
+      [
+       "reads",
+       1.408,
+       1.708
+      ],
+      [
+       "the",
+       1.708,
+       1.808
+      ],
+      [
+       "footnotes",
+       1.808,
+       2.45
+      ],
+      [
+       "That's",
+       2.67,
+       2.982
+      ],
+      [
+       "where",
+       2.982,
+       3.108
+      ],
+      [
+       "I",
+       3.108,
+       3.22
+      ],
+      [
+       "put",
+       3.22,
+       3.358
+      ],
+      [
+       "the",
+       3.358,
+       3.445
+      ],
+      [
+       "parts",
+       3.445,
+       3.77
+      ],
+      [
+       "that",
+       3.77,
+       3.97
+      ],
+      [
+       "don't",
+       3.97,
+       4.38
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0028.wav",
+      "in": 0.5,
+      "t": 6.05,
+      "dur": 4.36
+     }
+    },
+    {
+     "id": "e3-act3-0029",
+     "who": "adelina",
+     "text": "Nobody reads them now.",
+     "t": 10.91,
+     "dur": 1.12,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0029.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Nobody",
+       0.0,
+       0.35
+      ],
+      [
+       "reads",
+       0.35,
+       0.638
+      ],
+      [
+       "them",
+       0.638,
+       0.775
+      ],
+      [
+       "now",
+       0.775,
+       1.14
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0029.wav",
+      "in": 0.5,
+      "t": 10.91,
+      "dur": 1.12
+     }
+    },
+    {
+     "id": "e3-act3-0030",
+     "who": "mario",
+     "text": "I read the footnotes.",
+     "t": 12.53,
+     "dur": 1.32,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0030.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "I",
+       -0.025,
+       0.162
+      ],
+      [
+       "read",
+       0.162,
+       0.412
+      ],
+      [
+       "the",
+       0.412,
+       0.537
+      ],
+      [
+       "footnotes",
+       0.537,
+       1.34
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0030.wav",
+      "in": 0.5,
+      "t": 12.53,
+      "dur": 1.32
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 15.85,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0026": 0.5,
+      "e3-act3-0027": 0.5,
+      "e3-act3-0028": 0.5,
+      "e3-act3-0029": 0.5,
+      "e3-act3-0030": 0.5
+     }
+    },
+    "camera": "TWO-SHOT · held pair → Mario close on actual turn",
+    "picture": "VISUAL: writing-room. Adelina reads ending twice, lays it next to his hand. Mario stops writing when she notices hope.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair; her sales tactic allowed to play",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "mario",
+    "adelina"
+   ],
+   "caption": "She waits a beat, then asks as if publishing is already settled. Mario supplies title with ceremony in spite of himself.",
+   "lines": [
+    {
+     "id": "e3-act3-0031",
+     "who": "adelina",
+     "text": "What are we calling it?",
+     "t": 0.5,
+     "dur": 0.87,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0031.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "What",
+       -0.025,
+       0.088
+      ],
+      [
+       "are",
+       0.088,
+       0.162
+      ],
+      [
+       "we",
+       0.162,
+       0.275
+      ],
+      [
+       "calling",
+       0.275,
+       0.65
+      ],
+      [
+       "it",
+       0.65,
+       0.89
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0031.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 0.87
+     }
+    },
+    {
+     "id": "e3-act3-0032",
+     "who": "mario",
+     "text": "Machines of Loving Grace.",
+     "t": 1.87,
+     "dur": 1.65,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0032.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Machines",
+       -0.01,
+       0.565
+      ],
+      [
+       "of",
+       0.565,
+       0.728
+      ],
+      [
+       "Loving",
+       0.728,
+       1.115
+      ],
+      [
+       "Grace",
+       1.115,
+       1.67
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0032.wav",
+      "in": 0.51,
+      "t": 1.87,
+      "dur": 1.65
+     }
+    },
+    {
+     "id": "e3-act3-0033",
+     "who": "adelina",
+     "text": "Great on a tote bag.",
+     "t": 4.02,
+     "dur": 1.11,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0033.wav",
+     "in": 0.53,
+     "words": [
+      [
+       "Great",
+       -0.01,
+       0.227
+      ],
+      [
+       "on",
+       0.227,
+       0.327
+      ],
+      [
+       "a",
+       0.327,
+       0.39
+      ],
+      [
+       "tote",
+       0.39,
+       0.665
+      ],
+      [
+       "bag",
+       0.665,
+       1.13
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0033.wav",
+      "in": 0.53,
+      "t": 4.02,
+      "dur": 1.11
+     }
+    },
+    {
+     "id": "e3-act3-0034",
+     "who": "mario",
+     "text": "There isn't going to be a tote bag.",
+     "t": 5.63,
+     "dur": 1.76,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0034.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "There",
+       -0.02,
+       0.155
+      ],
+      [
+       "isn't",
+       0.155,
+       0.405
+      ],
+      [
+       "going",
+       0.405,
+       0.618
+      ],
+      [
+       "to",
+       0.618,
+       0.692
+      ],
+      [
+       "be",
+       0.692,
+       0.83
+      ],
+      [
+       "a",
+       0.83,
+       0.942
+      ],
+      [
+       "tote",
+       0.942,
+       1.255
+      ],
+      [
+       "bag",
+       1.255,
+       1.78
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0034.wav",
+      "in": 0.5,
+      "t": 5.63,
+      "dur": 1.76
+     }
+    },
+    {
+     "id": "e3-act3-0035",
+     "who": "adelina",
+     "text": "Then we still have time to change the title.",
+     "t": 7.89,
+     "dur": 1.96,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0035.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Then",
+       -0.03,
+       0.135
+      ],
+      [
+       "we",
+       0.135,
+       0.285
+      ],
+      [
+       "still",
+       0.285,
+       0.51
+      ],
+      [
+       "have",
+       0.51,
+       0.71
+      ],
+      [
+       "time",
+       0.71,
+       0.972
+      ],
+      [
+       "to",
+       0.972,
+       1.06
+      ],
+      [
+       "change",
+       1.06,
+       1.372
+      ],
+      [
+       "the",
+       1.372,
+       1.46
+      ],
+      [
+       "title",
+       1.46,
+       1.98
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0035.wav",
+      "in": 0.5,
+      "t": 7.89,
+      "dur": 1.96
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 11.45,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0032": 0.5,
+      "e3-act3-0033": 0.5,
+      "e3-act3-0034": 0.5,
+      "e3-act3-0035": 0.5
+     }
+    },
+    "camera": "TWO-SHOT · held pair; her sales tactic allowed to play",
+    "picture": "VISUAL: writing-room. She waits a beat, then asks as if publishing is already settled. Mario supplies title with ceremony in spite of himself.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · WIDE newcomer arrival → held pair with Mario",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "mario",
+    "adelina",
+    "lunchmas"
+   ],
+   "caption": "Knock; Lunchmas in real doorway above stairs, box under arm, scroll leading to room. They acknowledge him before he speaks.",
+   "lines": [
+    {
+     "id": "e3-act3-0036",
+     "who": "lunchmas",
+     "text": "Sorry. Hi. Is this the alignment floor? They said to follow the paper.",
+     "t": 0.5,
+     "dur": 3.8,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0036.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Sorry",
+       0.01,
+       0.335
+      ],
+      [
+       "Hi",
+       0.398,
+       0.685
+      ],
+      [
+       "Is",
+       0.723,
+       0.885
+      ],
+      [
+       "this",
+       0.885,
+       1.085
+      ],
+      [
+       "the",
+       1.085,
+       1.235
+      ],
+      [
+       "alignment",
+       1.235,
+       1.785
+      ],
+      [
+       "floor",
+       1.785,
+       2.25
+      ],
+      [
+       "They",
+       2.385,
+       2.56
+      ],
+      [
+       "said",
+       2.56,
+       2.772
+      ],
+      [
+       "to",
+       2.772,
+       2.898
+      ],
+      [
+       "follow",
+       2.898,
+       3.247
+      ],
+      [
+       "the",
+       3.247,
+       3.335
+      ],
+      [
+       "paper",
+       3.335,
+       3.82
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0036.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 3.8
+     }
+    },
+    {
+     "id": "e3-act3-0037",
+     "who": "adelina",
+     "text": "Come in. Mind the conclusion.",
+     "t": 4.8,
+     "dur": 1.79,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0037.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Come",
+       -0.025,
+       0.175
+      ],
+      [
+       "in",
+       0.175,
+       0.52
+      ],
+      [
+       "Mind",
+       0.75,
+       0.962
+      ],
+      [
+       "the",
+       0.962,
+       1.05
+      ],
+      [
+       "conclusion",
+       1.05,
+       1.81
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0037.wav",
+      "in": 0.5,
+      "t": 4.8,
+      "dur": 1.79
+     }
+    },
+    {
+     "id": "e3-act3-0038",
+     "who": "lunchmas",
+     "text": "I walked over in August. On the drafts. I've been looking for this floor ever since.",
+     "t": 7.09,
+     "dur": 4.31,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0038.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "I",
+       -0.03,
+       0.08
+      ],
+      [
+       "walked",
+       0.08,
+       0.367
+      ],
+      [
+       "over",
+       0.367,
+       0.642
+      ],
+      [
+       "in",
+       0.642,
+       0.767
+      ],
+      [
+       "August",
+       0.767,
+       1.28
+      ],
+      [
+       "On",
+       1.355,
+       1.492
+      ],
+      [
+       "the",
+       1.492,
+       1.58
+      ],
+      [
+       "drafts",
+       1.58,
+       2.23
+      ],
+      [
+       "I've",
+       2.305,
+       2.468
+      ],
+      [
+       "been",
+       2.468,
+       2.605
+      ],
+      [
+       "looking",
+       2.605,
+       2.905
+      ],
+      [
+       "for",
+       2.905,
+       3.018
+      ],
+      [
+       "this",
+       3.018,
+       3.242
+      ],
+      [
+       "floor",
+       3.242,
+       3.555
+      ],
+      [
+       "ever",
+       3.555,
+       3.842
+      ],
+      [
+       "since",
+       3.842,
+       4.33
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0038.wav",
+      "in": 0.5,
+      "t": 7.09,
+      "dur": 4.31
+     }
+    },
+    {
+     "id": "e3-act3-0039",
+     "who": "mario",
+     "text": "The footnotes held?",
+     "t": 11.9,
+     "dur": 1.25,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0039.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "The",
+       -0.015,
+       0.097
+      ],
+      [
+       "footnotes",
+       0.097,
+       0.635
+      ],
+      [
+       "held",
+       0.635,
+       1.27
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0039.wav",
+      "in": 0.5,
+      "t": 11.9,
+      "dur": 1.25
+     }
+    },
+    {
+     "id": "e3-act3-0040",
+     "who": "lunchmas",
+     "text": "The footnotes held.",
+     "t": 13.65,
+     "dur": 1.34,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0040.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "The",
+       -0.015,
+       0.11
+      ],
+      [
+       "footnotes",
+       0.11,
+       0.723
+      ],
+      [
+       "held",
+       0.723,
+       1.36
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0040.wav",
+      "in": 0.5,
+      "t": 13.65,
+      "dur": 1.34
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 16.59,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0037": 0.5,
+      "e3-act3-0038": 0.5,
+      "e3-act3-0039": 0.5,
+      "e3-act3-0040": 0.5
+     }
+    },
+    "camera": "TWO-SHOT · WIDE newcomer arrival → held pair with Mario",
+    "picture": "VISUAL: writing-room. Knock; Lunchmas in real doorway above stairs, box under arm, scroll leading to room. They acknowledge him before he speaks.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCROLL insert, reaction, Mario close for cost",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "mario",
+    "adelina",
+    "lunchmas"
+   ],
+   "caption": "Mario holds scroll to light. Lunchmas reads a brief original essay phrase, hope visible in his face; Adelina turns to publishing controls.",
+   "lines": [
+    {
+     "id": "e3-act3-0041",
+     "who": "lunchmas",
+     "text": "Is that us? Are we the geniuses?",
+     "t": 0.5,
+     "dur": 1.98,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0041.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Is",
+       -0.03,
+       0.125
+      ],
+      [
+       "that",
+       0.125,
+       0.375
+      ],
+      [
+       "us",
+       0.375,
+       0.65
+      ],
+      [
+       "Are",
+       0.725,
+       0.9
+      ],
+      [
+       "we",
+       0.9,
+       1.05
+      ],
+      [
+       "the",
+       1.05,
+       1.2
+      ],
+      [
+       "geniuses",
+       1.2,
+       2.0
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0041.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 1.98
+     }
+    },
+    {
+     "id": "e3-act3-0042",
+     "who": "adelina",
+     "text": "That's the pitch deck.",
+     "t": 2.98,
+     "dur": 1.02,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0042.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "That's",
+       -0.025,
+       0.237
+      ],
+      [
+       "the",
+       0.237,
+       0.325
+      ],
+      [
+       "pitch",
+       0.325,
+       0.625
+      ],
+      [
+       "deck",
+       0.625,
+       1.04
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0042.wav",
+      "in": 0.5,
+      "t": 2.98,
+      "dur": 1.02
+     }
+    },
+    {
+     "id": "e3-act3-0043",
+     "who": "mario",
+     "text": "Publish.",
+     "t": 4.5,
+     "dur": 0.69,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0043.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Publish",
+       0.01,
+       0.66
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0043.wav",
+      "in": 0.5,
+      "t": 4.5,
+      "dur": 0.69
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "a country of geniuses in a datacenter",
+     "at": 0.25,
+     "until": 2.417,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 8.19,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0042": 0.5,
+      "e3-act3-0043": 0.5
+     }
+    },
+    "camera": "SCROLL insert, reaction, Mario close for cost",
+    "picture": "VISUAL: writing-room. Mario holds scroll to light. Lunchmas reads a brief original essay phrase, hope visible in his face; Adelina turns to publishing controls.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "18.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "lighthouse",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE moving scroll; bridge establishes before footprints",
+   "side": "",
+   "room": "writing_room",
+   "chars": [
+    "lunchmas"
+   ],
+   "caption": "Scroll unrolls across Bay, gaps in draft bridge close, gulls ride paper. Last paragraph stands up at NopeAI end as NOW HIRING. Lunchmas steps onto first plank; older footprints under his.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "OCT 11, 2024",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "rail"
+    },
+    {
+     "text": "NOW HIRING",
+     "at": 1.6,
+     "until": 2.85,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 12,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-13 MARIO QUARTET; growing phrase, then paper swing"
+   ],
+   "sounds": [
+    {
+     "name": "paper_unfurl",
+     "at": 0.0,
+     "gain": -20
+    },
+    {
+     "name": "gull",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "18",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "WIDE moving scroll; bridge establishes before footprints",
+    "picture": "VISUAL: paper-bridge. Scroll unrolls across Bay, gaps in draft bridge close, gulls ride paper. Last paragraph stands up at NopeAI end as NOW HIRING. Lunchmas steps onto first plank; older footprints under his.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "19.01",
+   "act": "ACT THREE",
+   "kind": "flashback",
+   "set": "paper",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "NATIVE PAPER WIDE; fold tabs, split action, counted seated silhouettes",
+   "side": "",
+   "room": "paper",
+   "chars": [
+    "mario",
+    "adelina"
+   ],
+   "caption": "Bridge plank lifts like a page. Native paper pop-up hills unfold. Generic NOPE AI tour bus splits; front continues, rear eleven seated figures go another way. Rear repainted MISANTHROPIC. No claimed secret reason or escape/war imagery.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "2020–2021",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "rail"
+    },
+    {
+     "text": "ELEVEN LEAVE",
+     "at": 1.6,
+     "until": 2.85,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 15,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-14 PAPER ROAD; knee on acoustic strings, no grade match"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "STYLE LEAP / MICRO",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "NATIVE PAPER WIDE; fold tabs, split action, counted seated silhouettes",
+    "picture": "VISUAL: paper-exodus. Bridge plank lifts like a page. Native paper pop-up hills unfold. Generic NOPE AI tour bus splits; front continues, rear eleven seated figures go another way. Rear repainted MISANTHROPIC. No claimed secret reason or escape/war imagery.",
+    "style": "PAPER POP-UP LEAP",
+    "flashback": "F3.3 exodus",
+    "style_leap": "PAPER POP-UP LEAP"
+   }
+  },
+  {
+   "id": "19.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "paper",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "BRIDGE medium → window low angle; speaker visible",
+   "side": "",
+   "room": "paper",
+   "chars": [
+    "lunchmas",
+    "adelina"
+   ],
+   "caption": "Paper book folds; spine matches bridge plank. Lunchmas looks at older footprints; Adelina at known window above him.",
+   "lines": [
+    {
+     "id": "e3-act3-0044",
+     "who": "lunchmas",
+     "text": "So I wasn't the first one across.",
+     "t": 0.5,
+     "dur": 1.97,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0044.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "So",
+       -0.01,
+       0.102
+      ],
+      [
+       "I",
+       0.102,
+       0.252
+      ],
+      [
+       "wasn't",
+       0.252,
+       0.602
+      ],
+      [
+       "the",
+       0.602,
+       0.74
+      ],
+      [
+       "first",
+       0.74,
+       1.14
+      ],
+      [
+       "one",
+       1.14,
+       1.315
+      ],
+      [
+       "across",
+       1.315,
+       1.99
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0044.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 1.97
+     }
+    },
+    {
+     "id": "e3-act3-0045",
+     "who": "adelina",
+     "text": "You're the first one who read it.",
+     "t": 2.97,
+     "dur": 1.29,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0045.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "You're",
+       -0.03,
+       0.078
+      ],
+      [
+       "the",
+       0.078,
+       0.178
+      ],
+      [
+       "first",
+       0.178,
+       0.477
+      ],
+      [
+       "one",
+       0.477,
+       0.715
+      ],
+      [
+       "who",
+       0.715,
+       0.865
+      ],
+      [
+       "read",
+       0.865,
+       1.09
+      ],
+      [
+       "it",
+       1.09,
+       1.31
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0045.wav",
+      "in": 0.5,
+      "t": 2.97,
+      "dur": 1.29
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 6.26,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-14 PAPER ROAD; knee on acoustic strings, no grade match"
+   ],
+   "passes": {
+    "scene": "19",
+    "mode": "STYLE LEAP / MICRO",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0045": 0.5
+     }
+    },
+    "camera": "BRIDGE medium → window low angle; speaker visible",
+    "picture": "VISUAL: paper-exodus. Paper book folds; spine matches bridge plank. Lunchmas looks at older footprints; Adelina at known window above him.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.01",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "OTS Mas and monitor; no masquerade as actual footage",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "mario",
+    "adelina",
+    "orb"
+   ],
+   "caption": "Beacon crosses Mas glass, back to his room. On monitor Nozama van leaves +$4B box at lighthouse and RENT INVOICE. Mario weighs both; satire on top of verified investment total.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOV 2024 · +$4B · $8B TOTAL",
+     "at": 0.25,
+     "until": 1.917,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 7,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "sounds": [
+    {
+     "name": "box_drop",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "OTS Mas and monitor; no masquerade as actual footage",
+    "picture": "VISUAL: amazon-rent. Beacon crosses Mas glass, back to his room. On monitor Nozama van leaves +$4B box at lighthouse and RENT INVOICE. Mario weighs both; satire on top of verified investment total.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.02",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU; source document cleared before voice",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Mas closes rival funding window, keeps December calendar beside his keyboard. No invented motive for actual Amazon deal.",
+   "lines": [
+    {
+     "id": "e3-vo-13",
+     "who": "mas",
+     "text": "another landlord. another bill. keep december ours.",
+     "t": 0.5,
+     "dur": 3.64,
+     "audio": "audio/ep03/v1/act3/wav/e3-vo-13.wav",
+     "in": 0.53,
+     "words": [
+      [
+       "another",
+       0.065,
+       0.465
+      ],
+      [
+       "landlord",
+       0.465,
+       1.14
+      ],
+      [
+       "another",
+       1.227,
+       1.627
+      ],
+      [
+       "bill",
+       1.627,
+       2.05
+      ],
+      [
+       "keep",
+       2.152,
+       2.42
+      ],
+      [
+       "december",
+       2.44,
+       3.04
+      ],
+      [
+       "ours",
+       3.04,
+       3.66
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "mode": "vo",
+     "fact_tag": "[INVENTED · inner voice]",
+     "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-vo-13.wav",
+      "in": 0.53,
+      "t": 0.5,
+      "dur": 3.64
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.74,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU; source document cleared before voice",
+    "picture": "VISUAL: amazon-rent. Mas closes rival funding window, keeps December calendar beside his keyboard. No invented motive for actual Amazon deal.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.03",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCREEN in bezel, neutral card, dry bed",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Monitor card explicit: election held Nov5; separate winner result headline. No assertion call was Nov5. Mas not scored as cheering/condemning result.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "NOV 2024 · ELECTION RESULT",
+     "at": 0.25,
+     "until": 1.875,
+     "kind": "doc"
+    },
+    {
+     "text": "RUMPT WINS",
+     "at": 1.975,
+     "until": 3.225,
+     "kind": "doc"
+    }
+   ],
+   "reelDur": 6,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "SCREEN in bezel, neutral card, dry bed",
+    "picture": "VISUAL: election. Monitor card explicit: election held Nov5; separate winner result headline. No assertion call was Nov5. Mas not scored as cheering/condemning result.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.04",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "insert",
+   "frame": "SCREEN STUDIO WIDE; caster movement keeps image alive",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Screen shows reverse gold lectern being moved along studio corridor by side aides. Nobody behind it. Plain green chatbot-bubble with dot eyes, string taut straight out top edge, exact Ep2 hook continuity. No SO SCARY lettering or hill.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 7,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "sounds": [
+    {
+     "name": "podium_casters",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "SCREEN STUDIO WIDE; caster movement keeps image alive",
+    "picture": "VISUAL: podium. Screen shows reverse gold lectern being moved along studio corridor by side aides. Nobody behind it. Plain green chatbot-bubble with dot eyes, string taut straight out top edge, exact Ep2 hook continuity. No SO SCARY lettering or hill.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.05",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair at doorway; staffer physically present",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas",
+    "staffer"
+   ],
+   "caption": "Mas lays blank envelope beside personal pen then sends December release calendar to team. Public-room news ends; work is his choice.",
+   "lines": [
+    {
+     "id": "e3-act3-0046",
+     "who": "staffer",
+     "text": "Everyone's asking what changes now.",
+     "t": 0.5,
+     "dur": 2.15,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0046.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Everyone's",
+       -0.025,
+       0.512
+      ],
+      [
+       "asking",
+       0.512,
+       1.0
+      ],
+      [
+       "what",
+       1.0,
+       1.22
+      ],
+      [
+       "changes",
+       1.238,
+       1.725
+      ],
+      [
+       "now",
+       1.725,
+       2.17
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0046.wav",
+      "in": 0.51,
+      "t": 0.5,
+      "dur": 2.15
+     }
+    },
+    {
+     "id": "e3-act3-0047",
+     "who": "mas",
+     "text": "get the releases out before everybody leaves town.",
+     "t": 3.1,
+     "dur": 2.87,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0047.wav",
+     "in": 0.58,
+     "words": [
+      [
+       "get",
+       -0.015,
+       0.135
+      ],
+      [
+       "the",
+       0.135,
+       0.235
+      ],
+      [
+       "releases",
+       0.235,
+       0.785
+      ],
+      [
+       "out",
+       0.785,
+       1.085
+      ],
+      [
+       "before",
+       1.085,
+       1.498
+      ],
+      [
+       "everybody",
+       1.498,
+       1.985
+      ],
+      [
+       "leaves",
+       1.985,
+       2.348
+      ],
+      [
+       "town",
+       2.348,
+       2.89
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0047.wav",
+      "in": 0.58,
+      "t": 3.1,
+      "dur": 2.87
+     }
+    },
+    {
+     "id": "e3-act3-0048",
+     "who": "staffer",
+     "text": "Which releases?",
+     "t": 6.47,
+     "dur": 1.22,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0048.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Which",
+       0.005,
+       0.342
+      ],
+      [
+       "releases",
+       0.342,
+       1.24
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0048.wav",
+      "in": 0.5,
+      "t": 6.47,
+      "dur": 1.22
+     }
+    },
+    {
+     "id": "e3-act3-0049",
+     "who": "mas",
+     "text": "bring me the doors we can open.",
+     "t": 8.14,
+     "dur": 1.83,
+     "audio": "audio/ep03/v1/act3/wav/e3-act3-0049.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "bring",
+       -0.01,
+       0.178
+      ],
+      [
+       "me",
+       0.178,
+       0.34
+      ],
+      [
+       "the",
+       0.34,
+       0.49
+      ],
+      [
+       "doors",
+       0.49,
+       0.99
+      ],
+      [
+       "we",
+       0.99,
+       1.14
+      ],
+      [
+       "can",
+       1.14,
+       1.34
+      ],
+      [
+       "open",
+       1.34,
+       1.85
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-act3-0049.wav",
+      "in": 0.5,
+      "t": 8.14,
+      "dur": 1.83
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 11.57,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {
+      "e3-act3-0047": 0.45,
+      "e3-act3-0048": 0.5,
+      "e3-act3-0049": 0.45
+     }
+    },
+    "camera": "TWO-SHOT · held pair at doorway; staffer physically present",
+    "picture": "VISUAL: darkroom-clock. Mas lays blank envelope beside personal pen then sends December release calendar to team. Public-room news ends; work is his choice.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "20.06",
+   "act": "ACT THREE",
+   "kind": "scene",
+   "set": "darkroom",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU; date text turned away, no verdict over news",
+   "side": "",
+   "room": "darkroom",
+   "chars": [
+    "mas"
+   ],
+   "caption": "His pen clicks, then hand rests on concrete schedule with more than one available slot.",
+   "lines": [
+    {
+     "id": "e3-vo-14",
+     "who": "mas",
+     "text": "a date on every door. enough room to move one.",
+     "t": 0.5,
+     "dur": 3.18,
+     "audio": "audio/ep03/v1/act3/wav/e3-vo-14.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "a",
+       0.07,
+       0.182
+      ],
+      [
+       "date",
+       0.182,
+       0.507
+      ],
+      [
+       "on",
+       0.507,
+       0.708
+      ],
+      [
+       "every",
+       0.708,
+       1.045
+      ],
+      [
+       "door",
+       1.045,
+       1.48
+      ],
+      [
+       "enough",
+       1.758,
+       2.095
+      ],
+      [
+       "room",
+       2.095,
+       2.345
+      ],
+      [
+       "to",
+       2.345,
+       2.47
+      ],
+      [
+       "move",
+       2.47,
+       2.77
+      ],
+      [
+       "one",
+       2.77,
+       3.2
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "mode": "vo",
+     "fact_tag": "[INVENTED · inner voice]",
+     "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/act3/wav/e3-vo-14.wav",
+      "in": 0.52,
+      "t": 0.5,
+      "dur": 3.18
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.28,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-15 THE RUN; chip/boom-bap layers, dry news pedal"
+   ],
+   "sounds": [
+    {
+     "name": "pen_click",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "20",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU; date text turned away, no verdict over news",
+    "picture": "VISUAL: darkroom-clock. His pen clicks, then hand rests on concrete schedule with more than one available slot.",
+    "style": "BASE"
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 248.91,
+  "seconds_el": 248.91,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": [
+   "e3-act3-0001",
+   "e3-act3-0002",
+   "e3-act3-0003",
+   "e3-act3-0004",
+   "e3-act3-0005",
+   "e3-vo-11",
+   "e3-vo-12",
+   "e3-act3-0006",
+   "e3-act3-0007",
+   "e3-act3-0008",
+   "e3-act3-0009",
+   "e3-act3-0010",
+   "e3-act3-0011",
+   "e3-act3-0012",
+   "e3-act3-0013",
+   "e3-act3-0014",
+   "e3-act3-0015",
+   "e3-act3-0016",
+   "e3-act3-0017",
+   "e3-act3-0018",
+   "e3-act3-0019",
+   "e3-act3-0020",
+   "e3-act3-0021",
+   "e3-act3-0022",
+   "e3-act3-0023",
+   "e3-act3-0024",
+   "e3-act3-0025",
+   "e3-act3-0026",
+   "e3-act3-0027",
+   "e3-act3-0028",
+   "e3-act3-0029",
+   "e3-act3-0030",
+   "e3-act3-0031",
+   "e3-act3-0032",
+   "e3-act3-0033",
+   "e3-act3-0034",
+   "e3-act3-0035",
+   "e3-act3-0036",
+   "e3-act3-0037",
+   "e3-act3-0038",
+   "e3-act3-0039",
+   "e3-act3-0040",
+   "e3-act3-0041",
+   "e3-act3-0042",
+   "e3-act3-0043",
+   "e3-act3-0044",
+   "e3-act3-0045",
+   "e3-vo-13",
+   "e3-act3-0046",
+   "e3-act3-0047",
+   "e3-act3-0048",
+   "e3-act3-0049",
+   "e3-vo-14"
+  ]
+ }
+}

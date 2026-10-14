@@ -1,0 +1,199 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-act1-el",
+ "segment": "act1",
+ "file": "audio/ost/tracks/e03-v1-act1/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act1.json",
+ "lock_sha1": "b5ffd2b425cfbab4933c7b3829b3cda747646995",
+ "length_s": 304.4166666666667,
+ "frames": 7306,
+ "samples": 14612000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-act1-continuous",
+   "start": 0,
+   "end": 304.4166666666667,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 529,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "4",
+     "mood": "warm",
+     "text": "E03-02 GERG BUILD; warm chip arpeggio and brushed pulse",
+     "start": 0.0,
+     "end": 62.333333333333336
+    },
+    {
+     "scene": "5",
+     "mood": "warm",
+     "text": "E03-02 light tail; surf leads",
+     "start": 62.333333333333336,
+     "end": 68.04166666666667
+    },
+    {
+     "scene": "6",
+     "mood": "pressure",
+     "text": "E03-03 PREVIEW; muted brass/chip, no-third",
+     "start": 68.04166666666667,
+     "end": 87.29166666666667
+    },
+    {
+     "scene": "7",
+     "mood": "blueprint",
+     "text": "E03-04 ATTENTION; chip music-box, pencil taps, crowd distant",
+     "start": 87.29166666666667,
+     "end": 118.125
+    },
+    {
+     "scene": "8",
+     "mood": "drive",
+     "text": "E03-05 SET-PIECE SWING; chip/knee brass, single performance",
+     "start": 118.125,
+     "end": 260.6666666666667
+    },
+    {
+     "scene": "9",
+     "mood": "dry",
+     "text": "E03-01 CAPER return, generator under",
+     "start": 260.6666666666667,
+     "end": 271.5416666666667
+    },
+    {
+     "scene": "10",
+     "mood": "pressure",
+     "text": "E03-06 THE CLOCK; felt/chip pedal, no generic pad wash",
+     "start": 271.5416666666667,
+     "end": 304.4166666666667
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 304.4167,
+  "samples": 14612000,
+  "frames": 7306,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -21.93,
+   "st_max": -21.46,
+   "true_peak_dbtp": -7.33
+  },
+  "cues": {
+   "e03-v1-act1-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -21.93,
+    "st_max": -21.46,
+    "true_peak_dbtp": -7.33
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 4: warm",
+    "start": 0.0,
+    "end": 62.33,
+    "lufs_i": -25.2,
+    "st_p95": -24.71,
+    "st_max": -24.39,
+    "true_peak_dbtp": -14.19
+   },
+   {
+    "section": "scene 5: warm",
+    "start": 62.33,
+    "end": 68.04,
+    "lufs_i": -24.97,
+    "st_p95": -24.79,
+    "st_max": -24.65,
+    "true_peak_dbtp": -14.12
+   },
+   {
+    "section": "scene 6: pressure",
+    "start": 68.04,
+    "end": 87.29,
+    "lufs_i": -24.71,
+    "st_p95": -23.68,
+    "st_max": -23.09,
+    "true_peak_dbtp": -9.17
+   },
+   {
+    "section": "scene 7: blueprint",
+    "start": 87.29,
+    "end": 118.12,
+    "lufs_i": -26.33,
+    "st_p95": -25.86,
+    "st_max": -25.81,
+    "true_peak_dbtp": -18.22
+   },
+   {
+    "section": "scene 8: drive",
+    "start": 118.12,
+    "end": 260.67,
+    "lufs_i": -23.13,
+    "st_p95": -21.59,
+    "st_max": -21.45,
+    "true_peak_dbtp": -7.33
+   },
+   {
+    "section": "scene 9: dry",
+    "start": 260.67,
+    "end": 271.54,
+    "lufs_i": -24.64,
+    "st_p95": -23.64,
+    "st_max": -23.46,
+    "true_peak_dbtp": -8.68
+   },
+   {
+    "section": "scene 10: pressure",
+    "start": 271.54,
+    "end": 304.42,
+    "lufs_i": -24.08,
+    "st_p95": -22.59,
+    "st_max": -22.33,
+    "true_peak_dbtp": -8.34
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 304.4,
+    "dur": 304.4
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-act1-continuous",
+   "file": "audio/ost/tracks/e03-v1-act1/render/_work/el/e03-v1-act1-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    304.417
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

@@ -1,0 +1,836 @@
+{
+ "meta": {
+  "show": "MR. MAS",
+  "episode": "ep03",
+  "seg": "tag",
+  "label": "TAG",
+  "timeline": "show/reel/ep03-v1-el/ep03-v1-el-tag.json",
+  "takes": [
+   "show/episodes/ep03/production/v1/assembly/el-v1/tag-takes.json"
+  ],
+  "plan": null,
+  "plan_py": null,
+  "base_lock": null,
+  "generator": "studio/src/episodes/ep03/pixel/tools/lock.py",
+  "fps": 24,
+  "ep_in": "19:14:14",
+  "ep_in_frames": 27710,
+  "rules": [
+   "the picture is cut to the stick timeline: its beats are the shots, its lines are the lines, nothing re-timed",
+   "a continuation beat that follows its own shot directly merges into it",
+   "a line starts on the frame in which its first sound falls (beat start + t; t may be negative, a pre-lap), ends after the frame of its last sound",
+   "mouths and words on the same rule; a line appears in every shot it sounds in (carry = runs in from an earlier shot, pre = starts under this one before its own)",
+   "marks come from the stick's own sound spots and text, the takes' words, or a base lock's marks scaled to the new length",
+   "the framing decides who shows a mouth (face), not the take's lip_sync flag"
+  ],
+  "note": "Nothing here was watched or heard. The numbers are measured from the files; whether the picture reads needs a person."
+ },
+ "summary": {
+  "shots": 6,
+  "beats": 6,
+  "frames": 802,
+  "seconds": 33.417,
+  "length": "0:33.42",
+  "episode_in": "19:14:14",
+  "episode_out": "19:48:00",
+  "verdicts": {
+   "-": 6
+  },
+  "mean_s": 5.569,
+  "median_s": 5.708,
+  "min_s": 5.0,
+  "max_s": 6.0,
+  "lines": 1,
+  "posts": 0,
+  "vo": 0,
+  "lines_with_mouth": 1,
+  "mouths_from_words": 0,
+  "on_camera_mouths": [],
+  "lines_crossing_a_cut": [],
+  "prelaps": [],
+  "reviewer_slates": [],
+  "mix": null,
+  "refs": {}
+ },
+ "checks": [
+  {
+   "check": "scenes tile the segment",
+   "ok": true,
+   "detail": "2 scenes: 24(658f) 25(144f)"
+  },
+  {
+   "check": "shot frames = their beats' frames",
+   "ok": true,
+   "detail": "6 shots from 6 beats"
+  },
+  {
+   "check": "shots tile the segment with no gap",
+   "ok": true,
+   "detail": "0 -> 802"
+  },
+  {
+   "check": "the lock vs the stick reel's own line frames",
+   "ok": true,
+   "detail": "same frame: 1; 1 f earlier (the onset falls inside the frame): 0; other: 0"
+  },
+  {
+   "check": "every line has a take",
+   "ok": true,
+   "detail": "1 of 1 placed; no take: []"
+  },
+  {
+   "check": "every line's speech lies inside its take file",
+   "ok": true,
+   "detail": "outside: []"
+  },
+  {
+   "check": "mouth tracks carried over",
+   "ok": true,
+   "detail": "1 lines with a mouth track; lost: []"
+  },
+  {
+   "check": "every on-camera mouth has a track",
+   "ok": true,
+   "detail": "0 faced rows; without a track: []"
+  }
+ ],
+ "sequences": [
+  {
+   "id": "TAG",
+   "side": "",
+   "place": "",
+   "time": "",
+   "s": 0,
+   "e": 802,
+   "shots": [
+    "24.01",
+    "24.02",
+    "24.03",
+    "24.04",
+    "24.05",
+    "25.01"
+   ],
+   "chapter": "TAG",
+   "title": "",
+   "cue": "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third · music (v1): E03-19 brass tail, then room ice",
+   "frames": 802,
+   "tc_in": "19:14:14",
+   "tc_out": "19:48:00"
+  }
+ ],
+ "scenes": [
+  {
+   "id": "24",
+   "s": 0,
+   "e": 658,
+   "shots": [
+    "24.01",
+    "24.02",
+    "24.03",
+    "24.04",
+    "24.05"
+   ],
+   "tc_in": "19:14:14",
+   "tc_out": "19:42:00"
+  },
+  {
+   "id": "25",
+   "s": 658,
+   "e": 802,
+   "shots": [
+    "25.01"
+   ],
+   "tc_in": "19:42:00",
+   "tc_out": "19:48:00"
+  }
+ ],
+ "shots": [
+  {
+   "id": "24.01",
+   "setup": "24.01",
+   "beats": [
+    "24.01"
+   ],
+   "s": 0,
+   "e": 120,
+   "onscreen": [
+    {
+     "text": "GIVE PERSONAL CHECK",
+     "s": 6,
+     "e": 36
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "24",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "DIEGETIC KIOSK BEZEL, hand visibly belongs to Mas",
+   "cls": "M",
+   "move": "hold",
+   "does": "Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    "kiosk_touch @0"
+   ],
+   "spots": [
+    {
+     "name": "kiosk_touch",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "terrace",
+   "room": "terrace",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "24.01": 0
+   },
+   "picture": "VISUAL: check-slot. Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "ui",
+     "text": "GIVE PERSONAL CHECK",
+     "s": 6,
+     "e": 36,
+     "must": true
+    }
+   ],
+   "tc_in": "19:14:14",
+   "tc_out": "19:19:14",
+   "frames": 120
+  },
+  {
+   "id": "24.02",
+   "setup": "24.02",
+   "beats": [
+    "24.02"
+   ],
+   "s": 120,
+   "e": 264,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "24",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MEDIUM check action → WIDE no reaction",
+   "cls": "M",
+   "move": "hold",
+   "does": "Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+   "chars": [
+    "mas",
+    "mit-kooc",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    "paper_clink @0"
+   ],
+   "spots": [
+    {
+     "name": "paper_clink",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "terrace",
+   "room": "terrace",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "mit-kooc",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "24.02": 0
+   },
+   "picture": "VISUAL: check-slot. Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "19:19:14",
+   "tc_out": "19:25:14",
+   "frames": 144
+  },
+  {
+   "id": "24.03",
+   "setup": "24.03",
+   "beats": [
+    "24.03"
+   ],
+   "s": 264,
+   "e": 384,
+   "onscreen": [
+    {
+     "text": "$100B",
+     "s": 6,
+     "e": 36
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "24",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "PANEL then WIDE turn; space between clink and response",
+   "cls": "M",
+   "move": "hold",
+   "does": "In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "terrace",
+   "room": "terrace",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "24.03": 0
+   },
+   "picture": "VISUAL: reflection. In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "sign",
+     "text": "$100B",
+     "s": 6,
+     "e": 36,
+     "must": true
+    }
+   ],
+   "tc_in": "19:25:14",
+   "tc_out": "19:30:14",
+   "frames": 120
+  },
+  {
+   "id": "24.04",
+   "setup": "24.04",
+   "beats": [
+    "24.04"
+   ],
+   "s": 384,
+   "e": 514,
+   "onscreen": [],
+   "lines": [
+    {
+     "id": "e3-tag-0001",
+     "kind": "dialogue",
+     "mode": "on-mic",
+     "who": "RUMPT",
+     "text": "Say a number.",
+     "s": 30,
+     "e": 52,
+     "fs": 17,
+     "fe": 65,
+     "os": false,
+     "via": null,
+     "face": null,
+     "lip": false,
+     "carry": false,
+     "cut": false,
+     "mouth": [
+      [
+       0,
+       "rest"
+      ],
+      [
+       2,
+       "A"
+      ],
+      [
+       14,
+       "M"
+      ],
+      [
+       17,
+       "E"
+      ],
+      [
+       22,
+       "rest"
+      ]
+     ],
+     "words": [
+      [
+       "Say",
+       1,
+       7
+      ],
+      [
+       "a",
+       7,
+       10
+      ],
+      [
+       "number",
+       10,
+       22
+      ]
+     ],
+     "tag": "",
+     "pre": false
+    }
+   ],
+   "seq": "TAG",
+   "scene": "24",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness",
+   "cls": "W",
+   "move": "cut",
+   "does": "Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+   "chars": [
+    "mas",
+    "orb",
+    "rumpt"
+   ],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [],
+   "spots": [],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "terrace",
+   "room": "terrace",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "rumpt",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "24.04": 0
+   },
+   "picture": "VISUAL: reveal-rumpt. Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "19:30:14",
+   "tc_out": "19:36:00",
+   "frames": 130
+  },
+  {
+   "id": "24.05",
+   "setup": "24.05",
+   "beats": [
+    "24.05"
+   ],
+   "s": 514,
+   "e": 658,
+   "onscreen": [
+    {
+     "text": "verified: human",
+     "s": 6,
+     "e": 36
+    },
+    {
+     "text": "verified: president-elect",
+     "s": 38,
+     "e": 75
+    }
+   ],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "24",
+   "scene_s": 0,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "MCU Orb → Mas held look, toasts sequential",
+   "cls": "MCU",
+   "move": "hold",
+   "does": "Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+   "chars": [
+    "mas",
+    "orb",
+    "rumpt"
+   ],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    "orb_scan @0"
+   ],
+   "spots": [
+    {
+     "name": "orb_scan",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "terrace",
+   "room": "terrace",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+   "cast": [
+    {
+     "id": "mas",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "rumpt",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    },
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "24.05": 0
+   },
+   "picture": "VISUAL: reveal-rumpt. Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [
+    {
+     "kind": "toast",
+     "text": "verified: human",
+     "s": 6,
+     "e": 36,
+     "must": true
+    },
+    {
+     "kind": "toast",
+     "text": "verified: president-elect",
+     "s": 38,
+     "e": 75,
+     "must": true
+    }
+   ],
+   "tc_in": "19:36:00",
+   "tc_out": "19:42:00",
+   "frames": 144
+  },
+  {
+   "id": "25.01",
+   "setup": "25.01",
+   "beats": [
+    "25.01"
+   ],
+   "s": 658,
+   "e": 802,
+   "onscreen": [],
+   "lines": [],
+   "seq": "TAG",
+   "scene": "25",
+   "scene_s": 658,
+   "verdict": "",
+   "v4": null,
+   "side": "MAS",
+   "side_label": "",
+   "badge": null,
+   "whip": null,
+   "frame": "WIDE one image with moving shadow",
+   "cls": "W",
+   "move": "cut",
+   "does": "Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+   "chars": [
+    "orb"
+   ],
+   "cues": [
+    "music (v1): E03-19 brass tail, then room ice"
+   ],
+   "sounds": [
+    "ice_creak @0"
+   ],
+   "spots": [
+    {
+     "name": "ice_creak",
+     "k": 0,
+     "dur": null
+    }
+   ],
+   "v4_frames": null,
+   "kind": "scene",
+   "set": "bay",
+   "room": "ice",
+   "style": "BASE",
+   "fx": [],
+   "slate": false,
+   "caption": "Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+   "cast": [
+    {
+     "id": "orb",
+     "pose": "stand",
+     "face": "calm",
+     "x": null,
+     "from": null,
+     "until": null
+    }
+   ],
+   "speak": [],
+   "beat_starts": {
+    "25.01": 0
+   },
+   "picture": "VISUAL: frozen-bay. Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+   "names": [],
+   "fg": null,
+   "marks": {},
+   "mark_src": {},
+   "texts": [],
+   "tc_in": "19:42:00",
+   "tc_out": "19:48:00",
+   "frames": 144
+  }
+ ],
+ "lines": [
+  {
+   "id": "e3-tag-0001",
+   "shot": "24.04",
+   "beat": "24.04",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "who": "RUMPT",
+   "text": "Say a number.",
+   "tag": "",
+   "on_s": 17.25,
+   "end_s": 18.16,
+   "file_s": 16.73,
+   "abs_in": 414,
+   "abs_out": 436,
+   "file_in": 401,
+   "file_out": 449,
+   "file": "audio/ep03/v1/tag/wav/e3-tag-0001.wav",
+   "stick_t": 1.25,
+   "stick_in": 0.52,
+   "cut": false,
+   "on_camera": "on",
+   "take_lip_sync": true,
+   "os": false,
+   "via": null,
+   "words": [
+    [
+     "Say",
+     1,
+     7
+    ],
+    [
+     "a",
+     7,
+     10
+    ],
+    [
+     "number",
+     10,
+     22
+    ]
+   ],
+   "mouth": [
+    [
+     0,
+     "rest"
+    ],
+    [
+     2,
+     "A"
+    ],
+    [
+     14,
+     "M"
+    ],
+    [
+     17,
+     "E"
+    ],
+    [
+     22,
+     "rest"
+    ]
+   ],
+   "mouth_src": "take",
+   "pre": false
+  }
+ ],
+ "posts": [],
+ "rails": [],
+ "sound_marks": [],
+ "subs": [
+  {
+   "s": 414,
+   "e": 436,
+   "hold_to": 448,
+   "who": "RUMPT",
+   "shown": "PRESIDENT-ELECT",
+   "text": "Say a number.",
+   "kind": "dialogue",
+   "mode": "on-mic",
+   "id": "e3-tag-0001",
+   "os": false
+  }
+ ],
+ "refs": {},
+ "v4_ids": {},
+ "base_marks_scaled": [],
+ "decisions": [
+  "1 beat lengths are not whole frames (24.04): beats start on the rounded running total, as the stick reel draws them"
+ ],
+ "problems": []
+}

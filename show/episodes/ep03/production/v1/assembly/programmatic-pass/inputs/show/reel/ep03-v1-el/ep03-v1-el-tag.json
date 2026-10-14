@@ -1,0 +1,364 @@
+{
+ "episode": 3,
+ "title": "ep1.2_strawberry.jpg",
+ "part": "TAG",
+ "variant": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep3 v1 base lock of tag: the beat plan applied to no source (every beat new).",
+ "dateSpan": "",
+ "runtimeMin": 0.56,
+ "dialogueReel": true,
+ "cast": {
+  "mas": {
+   "name": "MAS",
+   "role": "CEO"
+  },
+  "orb": {
+   "name": "THE ORB",
+   "role": "WITNESS"
+  },
+  "mit-kooc": {
+   "name": "MIT KOOC",
+   "role": "ELPPA"
+  },
+  "rumpt": {
+   "name": "RUMPT",
+   "role": "PRESIDENT-ELECT"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep03/production/v1/beat-plan/tag.json",
+  "timeline": null,
+  "takes": "audio/ep03/v1/tag/lines-v1.json",
+  "takes_files": [
+   "audio/ep03/v1-el/ep03-v1/tag/lines-A.json"
+  ],
+  "builder": "audio/reel/ep03-v1/build_timeline.py",
+  "bed": "audio/reel/ep03-v1/bed.py -> audio/reel/ep03-v1/tag-bed.wav",
+  "notes": "show/episodes/ep03/production/v1/pipeline.md",
+  "seconds": 33.41,
+  "kokoro_lock": "show/reel/ep03-v1/ep03-v1-tag.json",
+  "el_builder": "audio/ep03/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep03/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "24.01",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "terrace",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "DIEGETIC KIOSK BEZEL, hand visibly belongs to Mas",
+   "side": "",
+   "room": "terrace",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "GIVE PERSONAL CHECK",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    {
+     "name": "kiosk_touch",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "24",
+    "mode": "ADVENTURE UI / REVEAL",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "DIEGETIC KIOSK BEZEL, hand visibly belongs to Mas",
+    "picture": "VISUAL: check-slot. Small touch display BUILT INTO podium offers Talk, Pitch, Give. Mas own finger taps Give then personal check icon. No free room cursor; inventory includes fruit/note/key history as tiny eggs.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "24.02",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "terrace",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM check action → WIDE no reaction",
+   "side": "",
+   "room": "terrace",
+   "chars": [
+    "mas",
+    "mit-kooc",
+    "orb"
+   ],
+   "caption": "Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    {
+     "name": "paper_clink",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "24",
+    "mode": "ADVENTURE UI / REVEAL",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "MEDIUM check action → WIDE no reaction",
+    "picture": "VISUAL: check-slot. Mas feeds symbolic folded check into slot, reflecting already documented personal contribution. It gets paper coin clink. Nothing moves behind podium. Queue shifts impatiently; Kooc still waits.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "24.03",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "terrace",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "PANEL then WIDE turn; space between clink and response",
+   "side": "",
+   "room": "terrace",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "$100B",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "sign"
+    }
+   ],
+   "reelDur": 5,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "passes": {
+    "scene": "24",
+    "mode": "ADVENTURE UI / REVEAL",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "PANEL then WIDE turn; space between clink and response",
+    "picture": "VISUAL: reflection. In panel Sama Nos raises much bigger investment pledge sign. Only now podium begins turn in three held drawn angles. No causal link from personal check to actual policy.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "24.04",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "terrace",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness",
+   "side": "",
+   "room": "terrace",
+   "chars": [
+    "mas",
+    "rumpt",
+    "orb"
+   ],
+   "caption": "Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+   "lines": [
+    {
+     "id": "e3-tag-0001",
+     "who": "rumpt",
+     "text": "Say a number.",
+     "t": 1.25,
+     "dur": 0.91,
+     "audio": "audio/ep03/v1/tag/wav/e3-tag-0001.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "Say",
+       0.045,
+       0.32
+      ],
+      [
+       "a",
+       0.32,
+       0.42
+      ],
+      [
+       "number",
+       0.42,
+       0.92
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_onyx (Kokoro-82M stock) · b-onyx-big (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/tag/wav/e3-tag-0001.wav",
+      "in": 0.52,
+      "t": 1.25,
+      "dur": 0.91
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.41,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "passes": {
+    "scene": "24",
+    "mode": "ADVENTURE UI / REVEAL",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness",
+    "picture": "VISUAL: reveal-rumpt. Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "24.05",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "terrace",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU Orb → Mas held look, toasts sequential",
+   "side": "",
+   "room": "terrace",
+   "chars": [
+    "mas",
+    "rumpt",
+    "orb"
+   ],
+   "caption": "Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "verified: human",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "toast"
+    },
+    {
+     "text": "verified: president-elect",
+     "at": 1.6,
+     "until": 3.142,
+     "kind": "toast"
+    }
+   ],
+   "reelDur": 6,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 BIGGER NUMBER; muted brass drone→full no-third"
+   ],
+   "sounds": [
+    {
+     "name": "orb_scan",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "24",
+    "mode": "ADVENTURE UI / REVEAL",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "MCU Orb → Mas held look, toasts sequential",
+    "picture": "VISUAL: reveal-rumpt. Orb scans Rumpt, two sequential verdicts. Mas has no inner voice. Queue is still waiting as brass resolves without third.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "25.01",
+   "act": "TAG",
+   "kind": "scene",
+   "set": "bay",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE one image with moving shadow",
+   "side": "",
+   "room": "ice",
+   "chars": [
+    "orb"
+   ],
+   "caption": "Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 6,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-19 brass tail, then room ice"
+   ],
+   "sounds": [
+    {
+     "name": "ice_creak",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "25",
+    "mode": "HOOK",
+    "pace": "weighted",
+    "tempo": {
+     "pace": "weighted",
+     "gaps": {}
+    },
+    "camera": "WIDE one image with moving shadow",
+    "picture": "VISUAL: frozen-bay. Bay frozen, single strawberry with bite lies on ice. Whale-shaped shadow glides under it. No name/date/stats. Ice creaks and camera holds moving shadow to black.",
+    "style": "BASE"
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 33.41,
+  "seconds_el": 33.41,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": [
+   "e3-tag-0001"
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-tag-el",
+ "segment": "tag",
+ "file": "audio/ost/tracks/e03-v1-tag/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-tag.json",
+ "lock_sha1": "139bc8706eca135f443179e6b8367200a0247743",
+ "length_s": 33.416666666666664,
+ "frames": 802,
+ "samples": 1604000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-tag-continuous",
+   "start": 0,
+   "end": 33.416666666666664,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 45,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "24",
+     "mood": "pressure",
+     "text": "E03-19 BIGGER NUMBER; muted brass drone→full no-third",
+     "start": 0.0,
+     "end": 27.416666666666668
+    },
+    {
+     "scene": "25",
+     "mood": "pressure",
+     "text": "E03-19 brass tail, then room ice",
+     "start": 27.416666666666668,
+     "end": 33.416666666666664
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 33.4167,
+  "samples": 1604000,
+  "frames": 802,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -22.82,
+   "st_max": -21.76,
+   "true_peak_dbtp": -8.8
+  },
+  "cues": {
+   "e03-v1-tag-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -22.82,
+    "st_max": -21.76,
+    "true_peak_dbtp": -8.8
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 24: pressure",
+    "start": 0.0,
+    "end": 27.42,
+    "lufs_i": -24.13,
+    "st_p95": -22.85,
+    "st_max": -22.78,
+    "true_peak_dbtp": -8.8
+   },
+   {
+    "section": "scene 25: pressure",
+    "start": 27.42,
+    "end": 33.42,
+    "lufs_i": -23.75,
+    "st_p95": -23.25,
+    "st_max": -23.21,
+    "true_peak_dbtp": -9.34
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 33.4,
+    "dur": 33.4
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-tag-continuous",
+   "file": "audio/ost/tracks/e03-v1-tag/render/_work/el/e03-v1-tag-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    33.417
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.01,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

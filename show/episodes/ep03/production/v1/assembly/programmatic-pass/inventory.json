@@ -1,0 +1,361 @@
+{
+ "pass_name": "programmatic",
+ "engine": "Kokoro offline stock doubles",
+ "heard": false,
+ "files": [
+  {
+   "path": "audio/ep03/cast-kokoro.json",
+   "snapshot": "inputs/audio/ep03/cast-kokoro.json",
+   "sha256": "f3a66f1380247d5445d178c0c06150da79bf814d971d7f59a79175a6a78e63f2"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/act1/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/act1/lines-A.json",
+   "sha256": "b9ee1ffc6dbdd44667a5e5f777feecf9dd065f491e4bb7f1c6963731301c9cb4"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/act2/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/act2/lines-A.json",
+   "sha256": "11ae54d5934befd83b4286a32527aa08aabad3030a98346508bc575e62dc5780"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/act3/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/act3/lines-A.json",
+   "sha256": "9e8471de5f4621507e664703a716a7ad520a8b6b92e08bf7a3ca51e930f8e359"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/act4/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/act4/lines-A.json",
+   "sha256": "1619715d49f6c3ef1a65fd46d0c530e76fa651eb3c84af6ffde8a60736490a14"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/coldopen/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/coldopen/lines-A.json",
+   "sha256": "f7f20c65f6b4a46b65bc145e3d5d989c6f44c73426b1407cd6d6ac409db12b3a"
+  },
+  {
+   "path": "audio/ep03/v1-el/ep03-v1/tag/lines-A.json",
+   "snapshot": "inputs/audio/ep03/v1-el/ep03-v1/tag/lines-A.json",
+   "sha256": "a3a8e8226e2e52ffb025b935e0fe9a40c78d1064adfcc62f0f5324ce11708cb4"
+  },
+  {
+   "path": "audio/ep03/v1/act1/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/act1/lines-v1.json",
+   "sha256": "277c387604970bb3528ec3be0a416b1348bc36f14ac2b52d74f5661542f5afab"
+  },
+  {
+   "path": "audio/ep03/v1/act2/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/act2/lines-v1.json",
+   "sha256": "424a13f9b146116715bf1cd71ed5ff3564e378aa013a919b887315ab6b8d1ec0"
+  },
+  {
+   "path": "audio/ep03/v1/act3/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/act3/lines-v1.json",
+   "sha256": "c44962c4f46148b1115b90cb226660d6888f7a1dedf83a53470300b1b10cec56"
+  },
+  {
+   "path": "audio/ep03/v1/act4/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/act4/lines-v1.json",
+   "sha256": "cdbdcfc9dda827853b13e20b1f54dc4bdd5f6a326c54b5819104d6f6072d1947"
+  },
+  {
+   "path": "audio/ep03/v1/coldopen/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/coldopen/lines-v1.json",
+   "sha256": "82ee5c7c78fe6b238f04419884674cf53baa73edfc607269a07bcf03f7fc89f5"
+  },
+  {
+   "path": "audio/ep03/v1/tag/lines-v1.json",
+   "snapshot": "inputs/audio/ep03/v1/tag/lines-v1.json",
+   "sha256": "59d02d3b6f523266f7d68168e4e549fdd99c069ff7405ca203fe5b81724af017"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-act1/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-act1/render/cues-el.json",
+   "sha256": "9b0f5104883b25477e9e701651493ff34a713784c322f8210420c8e27de0d6bd"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-act2/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-act2/render/cues-el.json",
+   "sha256": "c31ef11bdebceae85a7811a36082802f32626e049b9551c5243398624349e647"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-act3/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-act3/render/cues-el.json",
+   "sha256": "54a6b5051102932aec8ac7f1429b56324b05df8f0e6ce917d183eea72bbba439"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-act4/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-act4/render/cues-el.json",
+   "sha256": "ae1e77a965bbd59806ca40569848e42c219c296fb1b18fb7ee549fe994fd1429"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-coldopen/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-coldopen/render/cues-el.json",
+   "sha256": "0c45a983e8387168745fa2fb4616b12d7140f4c78ac9d13779ccfe0137739e4b"
+  },
+  {
+   "path": "audio/ost/tracks/e03-v1-tag/render/cues-el.json",
+   "snapshot": "inputs/audio/ost/tracks/e03-v1-tag/render/cues-el.json",
+   "sha256": "37906e52d3af39b9ee93bef479ecf6944f9c537822b956a65461528c68f38022"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/act1-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/act1-mix-qa.json",
+   "sha256": "558f56bd93e5af755385ce757c4afeb99a99113bebd188bbe1b135f66550a2d7"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/act2-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/act2-mix-qa.json",
+   "sha256": "9bc4533d2dcc044f73eea3b222da339b32f8c7091c31ed3cb127a3a028d8108b"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/act3-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/act3-mix-qa.json",
+   "sha256": "58b93e6fb0abc764fd8888a10592b2e70efdea5b1a61f6872da649163a278cb9"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/act4-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/act4-mix-qa.json",
+   "sha256": "0d845185717a2db84b563c9e459be0e1ffeceb0d31d35525d8bf711b4d5e0c25"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/card-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/card-mix-qa.json",
+   "sha256": "f6986c004f3a41232035078245c91b59136879a8fd22e8cc5140b08ec0149ecc"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/coldopen-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/coldopen-mix-qa.json",
+   "sha256": "15e8167dd916906ebfedc010cf007403bd58261bf7bec4ba04e4a696053a1fed"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/loudness-report.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/loudness-report.json",
+   "sha256": "83941c077c970cdb30ff381dfd5c66712b0981811847b56d224468de01e09947"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/outro-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/outro-mix-qa.json",
+   "sha256": "fa724190506b3948b222bd4aae5c871bfff11b6bf7da5651908b267b8d132149"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/sound-audit.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/sound-audit.json",
+   "sha256": "5668ac91f27fd9cccaf2b346c627bf4ce9933a116d4d97c3e840bc756f72e52a"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix-qa/el/tag-mix-qa.json",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix-qa/el/tag-mix-qa.json",
+   "sha256": "336056538518afc26421ac97add2bc4e096c7e50501d5e9fa79a6a384f4d6970"
+  },
+  {
+   "path": "audio/reel/ep03-v1/mix_episode.py",
+   "snapshot": "inputs/audio/reel/ep03-v1/mix_episode.py",
+   "sha256": "7d0becaf8008611752818c5de7554dd4103e0a6e52514a96fa201fe048762246"
+  },
+  {
+   "path": "audio/reel/ep03-v1/sound_audit.py",
+   "snapshot": "inputs/audio/reel/ep03-v1/sound_audit.py",
+   "sha256": "f1be2f28bac31ae5ca0077249785e4ca49306905829f5e6494abbb484611bbed"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/act1-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/act1-takes.json",
+   "sha256": "fcd7893931af747e24bac2764cd408a4d65734c314f30861491cc3effad68cc3"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/act2-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/act2-takes.json",
+   "sha256": "3c4f3ec6d7e75c218637590a220ab41446c31f0ceac833b109e4be1503e882b6"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/act3-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/act3-takes.json",
+   "sha256": "bd459b5e2ca7182d8e0b8f66ea1380e24bd083818ea6f5efb2ba629b0d708f13"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/act4-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/act4-takes.json",
+   "sha256": "e9e2c852dbb21e9e3b540a8aeb414a00fff04886a94a69c3ffc86835ce47ec77"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/coldopen-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/coldopen-takes.json",
+   "sha256": "77c8d3cb37709a29dd2e3295fb17dcd7e61a26e7273b0441673512adfd2c7235"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/el-v1/tag-takes.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/el-v1/tag-takes.json",
+   "sha256": "653af550834379da26df2d47b727489de271d15cab96c68ee8eb2311c62e9267"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/assembly/takes-kokoro-qa.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/assembly/takes-kokoro-qa.json",
+   "sha256": "2cf12aebe8ce5c10db4b3388632ab8913773b0bfc58f29e382fb00c10faf4da4"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/_build.py",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/_build.py",
+   "sha256": "3f35cc4496b3c72d52ca3c1ddd4f2ef77d61378d81abc7b1a477d3cb852c12ae"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/_spec.py",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/_spec.py",
+   "sha256": "d76a8aba2bf4cefea145745026536382db2991c397783b42adfc05037660c367"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/act1.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/act1.json",
+   "sha256": "bcd72770a38318073adb5b22bf7f3ac7c9154253ce5f0a5e805ffbd9209bbfb7"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/act2.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/act2.json",
+   "sha256": "c3732942fd25cf12e923431eff317b6250512ed95a5706ab6d4c93aa518bf9b7"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/act3.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/act3.json",
+   "sha256": "ef1f14c34ef24bb0f56b06133281a7ea523ffce51d4db25f5d06e59f691467ec"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/act4.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/act4.json",
+   "sha256": "03cd4ae47e02b5bb3a8be6b5c308e95e7f555bae95ffbbf0eab78475d8195e02"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/coldopen.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/coldopen.json",
+   "sha256": "2cbe634c0339eaf5716ddb3989f9619b9d5deddfe9df4c37d8aef44e62fd5424"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/beat-plan/tag.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/beat-plan/tag.json",
+   "sha256": "1569f0b14a52a227cd7abd396d567951c0bddfcefc70fa84d36322523b170cbb"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/act1.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/act1.json",
+   "sha256": "625b0348dec18202383492a59446a88b0813f9634f30a6f29118ee40e980c0a8"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/act2.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/act2.json",
+   "sha256": "1507793993aa399e5d3693517cc5e3a66aa1fe37485bf483f06b564158259e46"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/act3.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/act3.json",
+   "sha256": "5c803c9b71aff9735e05b794a85b9925663992a30bff6f89031749feaa29d132"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/act4.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/act4.json",
+   "sha256": "8580ef62587b597e60522e4f3de91f1bfe881bbeb933c6427ca55fbe2fef56b6"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/coldopen.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/coldopen.json",
+   "sha256": "50d5e456d6ede360d27c67ae82eba4fd19d95c2637b679ad5e403014b3748f5f"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/lock/tag.json",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/lock/tag.json",
+   "sha256": "77c8524821163085c6a869eaea6b9b98a33f3f3d3e3909287e40f690752d043f"
+  },
+  {
+   "path": "show/episodes/ep03/production/v1/script-v1.md",
+   "snapshot": "inputs/show/episodes/ep03/production/v1/script-v1.md",
+   "sha256": "53617b5a90350a097d6954afc1b52bf36eed04cdc2a7f3699f61aaa771876835"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-act1.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-act1.json",
+   "sha256": "be3954b1f87e301fd9f10ac243f7973d8aa8b49bbc7b4b9711dc479efa12e08a"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-act2.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-act2.json",
+   "sha256": "cd8714d9c479fbd080a611ca598d2e930b7548976f4b247944f5b031a6c840ad"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-act3.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-act3.json",
+   "sha256": "6acea29d09fb5582402b6733a72f90e27c61c52fd6e81f0bbcdd0c71c80284f2"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-act4.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-act4.json",
+   "sha256": "cdc9f9116fc539793bbfbdf74b3d42d9a8122e9f33f392562e3864abcee864fd"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-coldopen.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-coldopen.json",
+   "sha256": "ec752dde9c63969bde80553c14373ddeb7499befb3f2124382d10a00286b5b2a"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el-tag.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el-tag.json",
+   "sha256": "97de39d393a10930d27a94bd37887fb8f7339232bacb21b70bf4d26bd47837ec"
+  },
+  {
+   "path": "show/reel/ep03-v1-el/ep03-v1-el.manifest.json",
+   "snapshot": "inputs/show/reel/ep03-v1-el/ep03-v1-el.manifest.json",
+   "sha256": "1cec113ea69b663a14b8a388fac8046b1f4f45a1c2aac2a6e8d7007947efa32d"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-act1.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-act1.json",
+   "sha256": "aeba8f5ea670a3ede6db001077446a987ec6974b91dd16cdf93279b936de577f"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-act2.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-act2.json",
+   "sha256": "87a767fe8124127c9c573e5f986f4e0bb40124d97cd7a2116b5246cb8563efbc"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-act3.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-act3.json",
+   "sha256": "9f0cfe48b1b13664489fafa873507c1be25a24a92db9597332d66cc83bf570f7"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-act4.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-act4.json",
+   "sha256": "72f6a9429e2c85db04706434ae3adfff07dc7cda0d77868d9ca8526c7376b60f"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-card.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-card.json",
+   "sha256": "ea95da1e4cfc20e638daa1dcf6c7bd4fab8571dead82b08ba6b9c98759c76d07"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-coldopen.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-coldopen.json",
+   "sha256": "f24a5a48274fe67afcad0ead183862d9389788bd4d9fdcf028007042bce06f77"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1-tag.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1-tag.json",
+   "sha256": "203d8c2d965c953d8ae920527636834203f05ede61f5ab9f261452a15ee9dcd6"
+  },
+  {
+   "path": "show/reel/ep03-v1/ep03-v1.manifest.json",
+   "snapshot": "inputs/show/reel/ep03-v1/ep03-v1.manifest.json",
+   "sha256": "b6b8214e8b948a8672da0c1a1f52b738cace0f544ffe9ed4d0755f036cc8a5e3"
+  }
+ ],
+ "stock_audio_qa": {
+  "onset_failures": 0,
+  "tail_review_flags": 92,
+  "masked_sfx": 0,
+  "sfx_occurrences": 50,
+  "unmarked_jumps": 0
+ },
+ "onset_repair": {
+  "line": "e3-act3-0016",
+  "before_margin_db": 5.5,
+  "stock_gain_db": 1.0,
+  "after_margin_db": 6.5,
+  "scope": "Kokoro only; does not apply to final library take"
+ }
+}

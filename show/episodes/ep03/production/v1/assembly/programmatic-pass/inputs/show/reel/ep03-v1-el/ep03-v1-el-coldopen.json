@@ -1,0 +1,1099 @@
+{
+ "episode": 3,
+ "title": "ep1.2_strawberry.jpg",
+ "part": "COLD OPEN",
+ "variant": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) · the v1 takes · temp bed · ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths · Kokoro in the EL cast: mario (the lock's own takes)",
+ "logline": "The Ep3 v1 base lock of coldopen: the beat plan applied to no source (every beat new).",
+ "dateSpan": "",
+ "runtimeMin": 0.93,
+ "dialogueReel": true,
+ "cast": {
+  "orb": {
+   "name": "THE ORB",
+   "role": "WITNESS"
+  },
+  "corkboard-guy": {
+   "name": "CORKBOARD GUY",
+   "role": "HAS A THEORY"
+  },
+  "second-truther": {
+   "name": "SECOND TRUTHER",
+   "role": "WANTS LUNCH"
+  },
+  "cook": {
+   "name": "COOK",
+   "role": "TACO TRUCK"
+  },
+  "mas": {
+   "name": "MAS",
+   "role": "CEO"
+  }
+ },
+ "_source": {
+  "plan": "show/episodes/ep03/production/v1/beat-plan/coldopen.json",
+  "timeline": null,
+  "takes": "audio/ep03/v1/coldopen/lines-v1.json",
+  "takes_files": [
+   "audio/ep03/v1-el/ep03-v1/coldopen/lines-A.json"
+  ],
+  "builder": "audio/reel/ep03-v1/build_timeline.py",
+  "bed": "audio/reel/ep03-v1/bed.py -> audio/reel/ep03-v1/coldopen-bed.wav",
+  "notes": "show/episodes/ep03/production/v1/pipeline.md",
+  "seconds": 55.59,
+  "kokoro_lock": "show/reel/ep03-v1/ep03-v1-coldopen.json",
+  "el_builder": "audio/ep03/v1-el/tools/el_lock.py",
+  "el_notes": "show/episodes/ep03/production/v1/pipeline.md"
+ },
+ "beats": [
+  {
+   "id": "1.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "skyline",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE; city scale, moving cable car and bird",
+   "side": "",
+   "room": "city_day",
+   "chars": [
+    "orb"
+   ],
+   "caption": "Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 7,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER; knee cells, dry chip and pizzicato"
+   ],
+   "sounds": [
+    {
+     "name": "yarn_twang",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "1",
+    "mode": "SET-PIECE",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {}
+    },
+    "camera": "WIDE; city scale, moving cable car and bird",
+    "picture": "VISUAL: skyline-yarn. Daylight skyline threaded with red yarn. A cable car passes below; pigeon lands and the yarn twangs. No podium or hill.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "2.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "alley",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "side": "",
+   "room": "alley_day",
+   "chars": [
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "caption": "Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+   "lines": [
+    {
+     "id": "e3-coldopen-0001",
+     "who": "corkboard-guy",
+     "text": "Look at it. Really look. Dot. Dot. Dot. It's Morse.",
+     "t": 2.0,
+     "dur": 2.29,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0001.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Look",
+       -0.03,
+       0.135
+      ],
+      [
+       "at",
+       0.135,
+       0.26
+      ],
+      [
+       "it",
+       0.26,
+       0.36
+      ],
+      [
+       "Really",
+       0.41,
+       0.66
+      ],
+      [
+       "look",
+       0.66,
+       0.86
+      ],
+      [
+       "Dot",
+       0.91,
+       1.135
+      ],
+      [
+       "Dot",
+       1.185,
+       1.41
+      ],
+      [
+       "Dot",
+       1.46,
+       1.685
+      ],
+      [
+       "It's",
+       1.722,
+       1.885
+      ],
+      [
+       "Morse",
+       1.885,
+       2.31
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.180",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0001.wav",
+      "in": 0.5,
+      "t": 2.0,
+      "dur": 2.29
+     }
+    },
+    {
+     "id": "e3-coldopen-0002",
+     "who": "second-truther",
+     "text": "Morse has dashes.",
+     "t": 4.59,
+     "dur": 1.28,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0002.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Morse",
+       0.02,
+       0.345
+      ],
+      [
+       "has",
+       0.345,
+       0.582
+      ],
+      [
+       "dashes",
+       0.582,
+       1.3
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0002.wav",
+      "in": 0.51,
+      "t": 4.59,
+      "dur": 1.28
+     }
+    },
+    {
+     "id": "e3-coldopen-0003",
+     "who": "corkboard-guy",
+     "text": "Not yet. This is the preview.",
+     "t": 6.17,
+     "dur": 1.36,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0003.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Not",
+       -0.04,
+       0.115
+      ],
+      [
+       "yet",
+       0.115,
+       0.34
+      ],
+      [
+       "This",
+       0.378,
+       0.565
+      ],
+      [
+       "is",
+       0.565,
+       0.702
+      ],
+      [
+       "the",
+       0.702,
+       0.79
+      ],
+      [
+       "preview",
+       0.79,
+       1.38
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.180",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0003.wav",
+      "in": 0.51,
+      "t": 6.17,
+      "dur": 1.36
+     }
+    }
+   ],
+   "onscreen": [
+    {
+     "text": "CORKBOARD GUY · HAS A THEORY",
+     "at": 0.25,
+     "until": 1.958,
+     "kind": "plate"
+    }
+   ],
+   "reelDur": 9.13,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "passes": {
+    "scene": "2",
+    "mode": "CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e3-coldopen-0002": 0.3,
+      "e3-coldopen-0003": 0.3
+     }
+    },
+    "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+    "picture": "VISUAL: corkboard. Board left, laptop middle, taco window right. The theorist drives pins through a magnified red field of yellow dots. His friend holds a paper tray.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "2.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "alley",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "side": "",
+   "room": "alley_day",
+   "chars": [
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "caption": "Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+   "lines": [
+    {
+     "id": "e3-coldopen-0004",
+     "who": "second-truther",
+     "text": "I zoomed out a little. Could it be a fruit?",
+     "t": 0.5,
+     "dur": 2.32,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0004.wav",
+     "in": 0.52,
+     "words": [
+      [
+       "I",
+       0.05,
+       0.225
+      ],
+      [
+       "zoomed",
+       0.225,
+       0.562
+      ],
+      [
+       "out",
+       0.562,
+       0.737
+      ],
+      [
+       "a",
+       0.737,
+       0.8
+      ],
+      [
+       "little",
+       0.8,
+       1.2
+      ],
+      [
+       "Could",
+       1.325,
+       1.463
+      ],
+      [
+       "it",
+       1.463,
+       1.55
+      ],
+      [
+       "be",
+       1.55,
+       1.7
+      ],
+      [
+       "a",
+       1.7,
+       1.825
+      ],
+      [
+       "fruit",
+       1.825,
+       2.34
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0004.wav",
+      "in": 0.52,
+      "t": 0.5,
+      "dur": 2.32
+     }
+    },
+    {
+     "id": "e3-coldopen-0005",
+     "who": "corkboard-guy",
+     "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+     "t": 3.12,
+     "dur": 5.47,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0005.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "A",
+       -0.03,
+       0.038
+      ],
+      [
+       "fruit",
+       0.038,
+       0.275
+      ],
+      [
+       "Fruit",
+       0.337,
+       0.6
+      ],
+      [
+       "doesn't",
+       0.6,
+       0.862
+      ],
+      [
+       "have",
+       0.862,
+       1.012
+      ],
+      [
+       "a",
+       1.012,
+       1.075
+      ],
+      [
+       "launch",
+       1.075,
+       1.375
+      ],
+      [
+       "window",
+       1.375,
+       1.8
+      ],
+      [
+       "They're",
+       1.9,
+       2.05
+      ],
+      [
+       "calling",
+       2.05,
+       2.362
+      ],
+      [
+       "the",
+       2.362,
+       2.45
+      ],
+      [
+       "next",
+       2.45,
+       2.75
+      ],
+      [
+       "model",
+       2.75,
+       3.075
+      ],
+      [
+       "Strawberry",
+       3.075,
+       3.75
+      ],
+      [
+       "Nothing",
+       3.863,
+       4.2
+      ],
+      [
+       "red",
+       4.2,
+       4.45
+      ],
+      [
+       "is",
+       4.45,
+       4.575
+      ],
+      [
+       "just",
+       4.575,
+       4.8
+      ],
+      [
+       "red",
+       4.8,
+       4.962
+      ],
+      [
+       "anymore",
+       4.962,
+       5.49
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.180",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0005.wav",
+      "in": 0.5,
+      "t": 3.12,
+      "dur": 5.47
+     }
+    },
+    {
+     "id": "e3-coldopen-0006",
+     "who": "second-truther",
+     "text": "Then can we eat something that isn't evidence?",
+     "t": 8.89,
+     "dur": 2.39,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0006.wav",
+     "in": 0.51,
+     "words": [
+      [
+       "Then",
+       0.01,
+       0.285
+      ],
+      [
+       "can",
+       0.285,
+       0.422
+      ],
+      [
+       "we",
+       0.422,
+       0.598
+      ],
+      [
+       "eat",
+       0.598,
+       0.848
+      ],
+      [
+       "something",
+       0.848,
+       1.335
+      ],
+      [
+       "that",
+       1.335,
+       1.485
+      ],
+      [
+       "isn't",
+       1.485,
+       1.772
+      ],
+      [
+       "evidence",
+       1.772,
+       2.41
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0006.wav",
+      "in": 0.51,
+      "t": 8.89,
+      "dur": 2.39
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 12.88,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "passes": {
+    "scene": "2",
+    "mode": "CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e3-coldopen-0005": 0.3,
+      "e3-coldopen-0006": 0.3
+     }
+    },
+    "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+    "picture": "VISUAL: corkboard. Friend turns laptop screen toward theorist: freshly drawn strawberry photo, the whole fruit visible. Theorist closes laptop by hinge, ties yarn to it.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "2.03",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "alley",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+   "side": "",
+   "room": "alley_day",
+   "chars": [
+    "cook",
+    "corkboard-guy",
+    "second-truther"
+   ],
+   "caption": "Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+   "lines": [
+    {
+     "id": "e3-coldopen-0007",
+     "who": "corkboard-guy",
+     "text": "The truck's in on it.",
+     "t": 0.5,
+     "dur": 0.99,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0007.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "The",
+       -0.03,
+       0.015
+      ],
+      [
+       "truck's",
+       0.015,
+       0.34
+      ],
+      [
+       "in",
+       0.34,
+       0.502
+      ],
+      [
+       "on",
+       0.502,
+       0.69
+      ],
+      [
+       "it",
+       0.69,
+       1.01
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.180",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0007.wav",
+      "in": 0.5,
+      "t": 0.5,
+      "dur": 0.99
+     }
+    },
+    {
+     "id": "e3-coldopen-0008",
+     "who": "cook",
+     "text": "I'm in on carnitas. And you're blocking my window.",
+     "t": 1.79,
+     "dur": 2.32,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0008.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "I'm",
+       -0.03,
+       0.108
+      ],
+      [
+       "in",
+       0.108,
+       0.232
+      ],
+      [
+       "on",
+       0.232,
+       0.37
+      ],
+      [
+       "carnitas",
+       0.37,
+       0.995
+      ],
+      [
+       "And",
+       1.07,
+       1.207
+      ],
+      [
+       "you're",
+       1.207,
+       1.32
+      ],
+      [
+       "blocking",
+       1.32,
+       1.732
+      ],
+      [
+       "my",
+       1.732,
+       1.87
+      ],
+      [
+       "window",
+       1.87,
+       2.34
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0008.wav",
+      "in": 0.5,
+      "t": 1.79,
+      "dur": 2.32
+     }
+    },
+    {
+     "id": "e3-coldopen-0009",
+     "who": "second-truther",
+     "text": "Two carnitas. No code words.",
+     "t": 4.41,
+     "dur": 2.13,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0009.wav",
+     "in": 0.5,
+     "words": [
+      [
+       "Two",
+       -0.005,
+       0.17
+      ],
+      [
+       "carnitas",
+       0.17,
+       0.97
+      ],
+      [
+       "No",
+       1.082,
+       1.307
+      ],
+      [
+       "code",
+       1.307,
+       1.67
+      ],
+      [
+       "words",
+       1.67,
+       2.15
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-mas-echo (pass-1 pick, dry) · speed 1.000",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0009.wav",
+      "in": 0.5,
+      "t": 4.41,
+      "dur": 2.13
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 8.14,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "sounds": [
+    {
+     "name": "generator_cough",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "2",
+    "mode": "CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {
+      "e3-coldopen-0008": 0.3,
+      "e3-coldopen-0009": 0.3
+     }
+    },
+    "camera": "TWO-SHOT · held pair; hold through the exchange, cut on its turn",
+    "picture": "VISUAL: corkboard. Generator coughs; theorist knots yarn to the taco truck. Cook remains at his serving window with actual customers waiting.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "2.04",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "alley",
+   "style": "BASE",
+   "shot": "wide",
+   "frame": "WIDE; action matches flung line to roof",
+   "side": "",
+   "room": "alley_day",
+   "chars": [
+    "corkboard-guy",
+    "second-truther",
+    "cook"
+   ],
+   "caption": "The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+   "lines": [],
+   "onscreen": [],
+   "reelDur": 4,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 CHIP CAPER continues"
+   ],
+   "passes": {
+    "scene": "2",
+    "mode": "CONVERSATION",
+    "pace": "quick",
+    "tempo": {
+     "pace": "quick",
+     "gaps": {}
+    },
+    "camera": "WIDE; action matches flung line to roof",
+    "picture": "VISUAL: corkboard. The cook passes food; theorist steps aside and flings yarn upward. Friend has finally got lunch.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "3.01",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "roof",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "LOW DESK; pot/can/bow all read, Mas above them",
+   "side": "",
+   "room": "roof_day",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+   "lines": [
+    {
+     "id": "e3-coldopen-0010",
+     "who": "mas",
+     "text": "it's a strawberry.",
+     "t": 2.0,
+     "dur": 1.12,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0010.wav",
+     "in": 0.58,
+     "words": [
+      [
+       "it's",
+       0.01,
+       0.16
+      ],
+      [
+       "a",
+       0.16,
+       0.272
+      ],
+      [
+       "strawberry",
+       0.272,
+       1.14
+      ]
+     ],
+     "tag": "",
+     "cut": false,
+     "mode": "on-mic",
+     "fact_tag": "[INVENTED]",
+     "delivery": "conversational; complete thoughts; no imitation",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-coldopen-0010.wav",
+      "in": 0.58,
+      "t": 2.0,
+      "dur": 1.12
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 5.32,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "passes": {
+    "scene": "3",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "LOW DESK; pot/can/bow all read, Mas above them",
+    "picture": "VISUAL: strawberry-post. Yarn loops round a terracotta strawberry pot. Mas, can in hand, sees the bow and waters the plant. He photographs the fruit with his own phone.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "3.02",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "roof",
+   "style": "BASE",
+   "shot": "close",
+   "frame": "MCU Mas; phone lower in frame, no text rail",
+   "side": "",
+   "room": "roof_day",
+   "chars": [
+    "mas"
+   ],
+   "caption": "Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+   "lines": [
+    {
+     "id": "e3-vo-01",
+     "who": "mas",
+     "text": "one picture. leave the date off.",
+     "t": 0.5,
+     "dur": 2.02,
+     "audio": "audio/ep03/v1/coldopen/wav/e3-vo-01.wav",
+     "in": 0.58,
+     "words": [
+      [
+       "one",
+       0.035,
+       0.26
+      ],
+      [
+       "picture",
+       0.26,
+       0.81
+      ],
+      [
+       "leave",
+       0.922,
+       1.235
+      ],
+      [
+       "the",
+       1.235,
+       1.36
+      ],
+      [
+       "date",
+       1.36,
+       1.61
+      ],
+      [
+       "off",
+       1.61,
+       2.04
+      ]
+     ],
+     "tag": "V.O.",
+     "cut": false,
+     "mode": "vo",
+     "fact_tag": "[INVENTED · inner voice]",
+     "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+     "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+     "engine": "kokoro",
+     "el": null,
+     "kokoro": {
+      "audio": "audio/ep03/v1/coldopen/wav/e3-vo-01.wav",
+      "in": 0.58,
+      "t": 0.5,
+      "dur": 2.02
+     }
+    }
+   ],
+   "onscreen": [],
+   "reelDur": 4.12,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "passes": {
+    "scene": "3",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MCU Mas; phone lower in frame, no text rail",
+    "picture": "VISUAL: strawberry-post. Close on Mas choosing a plain fruit photo; his thumb pauses beside Post. No real garden or historical caption.",
+    "style": "BASE"
+   }
+  },
+  {
+   "id": "3.03",
+   "act": "COLD OPEN",
+   "kind": "scene",
+   "set": "roof",
+   "style": "BASE",
+   "shot": "medium",
+   "frame": "MEDIUM; phone action then fruit into pocket",
+   "side": "",
+   "room": "roof_day",
+   "chars": [
+    "mas",
+    "orb"
+   ],
+   "caption": "Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+   "lines": [],
+   "onscreen": [
+    {
+     "text": "POSTED",
+     "at": 0.25,
+     "until": 1.5,
+     "kind": "ui"
+    }
+   ],
+   "reelDur": 5,
+   "fx": [],
+   "cues": [
+    "music (v1): E03-01 one chip voice; settles on F"
+   ],
+   "sounds": [
+    {
+     "name": "phone_click",
+     "at": 0.0,
+     "gain": -20
+    }
+   ],
+   "passes": {
+    "scene": "3",
+    "mode": "CONVERSATION",
+    "pace": "normal",
+    "tempo": {
+     "pace": "normal",
+     "gaps": {}
+    },
+    "camera": "MEDIUM; phone action then fruit into pocket",
+    "picture": "VISUAL: strawberry-post. Mas taps POST. Small notifications race along the yarn into the city. He picks the fruit and pockets it, with no wink.",
+    "style": "BASE"
+   }
+  }
+ ],
+ "_el_retimed": {
+  "rule": "gaps between lines, before the first and after the last kept; J-cut leads kept; beats change only by the takes' lengths; timed items follow the words",
+  "seconds_kokoro": 55.59,
+  "seconds_el": 55.59,
+  "delta_s": 0.0,
+  "beats_changed": 0,
+  "missing_takes": [],
+  "kokoro_cast": [
+   "e3-coldopen-0001",
+   "e3-coldopen-0002",
+   "e3-coldopen-0003",
+   "e3-coldopen-0004",
+   "e3-coldopen-0005",
+   "e3-coldopen-0006",
+   "e3-coldopen-0007",
+   "e3-coldopen-0008",
+   "e3-coldopen-0009",
+   "e3-coldopen-0010",
+   "e3-vo-01"
+  ]
+ }
+}
