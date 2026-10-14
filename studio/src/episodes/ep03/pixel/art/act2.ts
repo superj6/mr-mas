@@ -151,6 +151,12 @@ function governor(b:Buf,sh:PxShot,k:number,n:number){
 }
 function boardroomPair(b:Buf,sh:PxShot,k:number,n:number){
  const p=phase(sh,k);let value='$86,000,000,000';if(n>=6)value='$157,000,000,000';
+ if(n===5){
+  // A supported native close replaces the room view completely: one Mas, one desk.
+  vramp(b,0,0,480,203,[PAL.N2,PAL.N4,PAL.N3]);for(let x=24;x<480;x+=78){fill(b,x,0,8,145,PAL.N1);fill(b,x+1,0,2,145,PAL.N5);}
+  masClose(b,178,25,sh,k,3,false);fill(b,0,158,480,45,PAL.D2);fill(b,0,156,480,3,PAL.W4);
+  clipboard(b,320,149,4);glass(b,150,161);fill(b,215,169,80,23,PAL.P2);for(let i=0;i<3;i++)fill(b,223,175+i*5,60-i*9,1,PAL.G4);return;
+ }
  A.boardroom(b,k,sh,value);
  if(n<6){
   // Fourth collar belongs only to new round: master starts at four, so restore three.
@@ -181,10 +187,6 @@ function boardroomPair(b:Buf,sh:PxShot,k:number,n:number){
   const count=n===4?14:Math.min(14,4+Math.floor(p*11));for(let i=0;i<count;i++){const x=204+i*16,y=153+i*3;fill(b,x,y,22,9,PAL.P1);fill(b,x+2,y+3,15,1,PAL.G4);}A.tiny(b,'COMPETITORS',207,155,PAL.N1);
   if(n===4){fill(b,158,130,251,58,PAL.P2);A.pt(b,'...AND THE LEMONADE',171,145,PAL.N1);A.pt(b,'STAND ON 3RD',171,160,PAL.N1);}
  }
- if(n===5){
-  // Thought close keeps sheet angled away and leaves the actual objective with Mas.
-  portrait(b,'MAS',175,42,sh,k,3);clipboard(b,336,143,4);
- }
  if(n===6){
   const names=['$86,000,000,000','$96,000,000,000','$126,000,000,000','$157,000,000,000'];
   const val=names[Math.min(3,Math.floor(p*4))];fill(b,142,36,194,31,PAL.N0);A.pt(b,val,154,47,PAL.W6);
@@ -193,7 +195,9 @@ function boardroomPair(b:Buf,sh:PxShot,k:number,n:number){
  }
  if(n===9){
   fill(b,142,36,194,31,PAL.N0);A.pt(b,p>.35?'$157,000,000,001':'$157,000,000,000',150,47,PAL.W6);
-  for(let i=0;i<3;i++)actor(b,'INVESTOR',211+i*51,133,sh,k,i%2===1); // watching signed paper from far end.
+  for(let i=0;i<3;i++)actor(b,'INVESTOR',211+i*51,155,sh,k,i%2===1); // Watching from behind the far table edge.
+  poly([130,119,348,119,458,202,21,202],b.ink(PAL.D2));ln(b,130,119,348,119,PAL.W5);glass(b,153,149);glass(b,320,149);
+  fill(b,189,138,106,40,PAL.P2);for(let i=0;i<4;i++)fill(b,197,146+i*6,89-i*13,1,PAL.G4);
  }
 }
 export function drawAct2(b:Buf,k:number,sh:PxShot,f:number):boolean{

@@ -4,15 +4,15 @@ import {Buf, ellipse, TRANSPARENT} from '../../../../shared/pixel/px';
 import {PAL} from '../../../../shared/pixel/palette';
 import {blitImg} from '../../../../shared/pixel/figure';
 import {drawMasStand2} from '../../../ep02/pixel/art/cast/mas2';
-import {drawMasMedium, MAS_MEDIUM_DEFAULT} from '../../../../shared/pixel/cast/mas-medium';
-import {drawCollarsMedium, drawCollarsStand} from '../../../../shared/pixel/cast/mas-collars';
+import {masPortrait, MAS_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/mas';
+import {drawCollarsPortrait, drawCollarsStand} from '../../../../shared/pixel/cast/mas-collars';
 import {drawGergStand, GERG_STAND_DEFAULT} from '../../../../shared/pixel/cast/gerg-stand';
-import {drawGergPortrait, GERG_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/gerg';
-import {drawMarioPortrait, MARIO_PORTRAIT_REST, marioImg, MARIO_BASE} from '../../../../shared/pixel/cast/mario';
-import {drawNolePortrait, NOLE_PORTRAIT_REST, noleImg, NOLE_BASE} from '../../../../shared/pixel/cast/nole';
-import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT, drawAdelinaPortrait, ADELINA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/adelina';
+import {gergPortrait, GERG_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/gerg';
+import {marioPortraitImg, MARIO_PORTRAIT_REST, marioImg, MARIO_BASE} from '../../../../shared/pixel/cast/mario';
+import {nolePortraitImg, NOLE_PORTRAIT_REST, noleImg, NOLE_BASE} from '../../../../shared/pixel/cast/nole';
+import {drawAdelinaRoom, ADELINA_ROOM_DEFAULT, adelinaPortrait, ADELINA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/adelina';
 import {drawRimaStand, RIMA_STAND_DEFAULT} from '../../../../shared/pixel/cast/rima-stand';
-import {drawRimaSpeakPortrait, RIMA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/rima-speak';
+import {rimaSpeakPortrait, RIMA_PORTRAIT_DEFAULT} from '../../../../shared/pixel/cast/rima-speak';
 import {makeRoom,makeBust3} from '../../../ep02/pixel/art/cast/civic2';
 import type {BustSpec3,BustState} from '../../../ep02/pixel/art/cast/civic2';
 import {SKIN, SUIT, HAIR, SHIRT_WHITE} from '../../../../shared/pixel/cast/civic-kit';
@@ -29,11 +29,11 @@ const busts:Record<string,ReturnType<typeof makeBust3<BustState>>>={};
 const bustFor=(id:string)=>{
  if(busts[id])return busts[id];
  const skin=id==='SECOND TRUTHER'?SKIN.deep:SKIN.medium;
- const suit=id==='MAON'?SUIT.teal:id==='CORKBOARD GUY'?SUIT.plum:SUIT.charcoal;
- const hair=id==='MOSWEN'?HAIR.silver:HAIR.dark;
+ const suit=id==='MAON'?SUIT.teal:id==='CORKBOARD GUY'?SUIT.plum:id==='RUMPT'?SUIT.navy:SUIT.charcoal;
+ const hair=id==='MOSWEN'?HAIR.silver:id==='RUMPT'?[PAL.D1,PAL.W2,PAL.W3,PAL.W4,PAL.W6,PAL.W7]:HAIR.dark;
  const spec:BustSpec3={
   head:{yaw:22,at:[57,57],scale:1,cranium:[20,24,23],cheekW:16,jawW:14.5,jawY:18,chinY:32,chinW:7,chinZ:12,cheekbone:.7,full:.8,brow:1.6,
-    nose:{tipY:13,proj:6,wing:5.4,tip:3.6},mouthY:22,lips:1.4,eyeX:8.5,neck:{r:9.5,throat:true},hair:{style:id==='CORKBOARD GUY'?'curly':id==='MOSWEN'?'swept':'crop',thick:2.6,line:-18},skin,hairRamp:hair,back:{skin:PAL.S2,hair:PAL.B2}},
+    nose:{tipY:13,proj:6,wing:5.4,tip:3.6},mouthY:22,lips:1.4,eyeX:8.5,neck:{r:9.5,throat:true},hair:{style:id==='CORKBOARD GUY'?'curly':['MOSWEN','RUMPT'].includes(id)?'swept':'crop',thick:2.6,line:-18},skin,hairRamp:hair,back:{skin:PAL.S2,hair:PAL.B2}},
   face:{eye:'almond',eyeW:9,eyeH:2,brow:'soft',browCol:PAL.N0,mouthW:10,lip:{line:PAL.S0,lower:PAL.S2}},torso:{kind:'jacket'},
   ramps:{skin,hair,suit,shirt:SHIRT_WHITE},backRamp:{skin:PAL.S2,hair:PAL.B2,suit:PAL.C3}};
  return busts[id]=makeBust3<BustState>(spec);
@@ -62,15 +62,30 @@ export function actor(b:Buf,id:string,x:number,y:number,sh:PxShot,k:number,flip=
 // Frameless singles: established portrait proportions, with room scenery left visible.
 export function portrait(b:Buf,id:string,x:number,y:number,sh:PxShot,k:number,collars=3) {
   const m=vm(sh,k,id),open=m==='rest'?'rest':'open';
-  if(id==='MAS'){drawMasMedium(b,x,y,{...MAS_MEDIUM_DEFAULT,arm:'down',light:'warm',mouth:m as never});drawCollarsMedium(b,x,y,collars);return;}
-  if(id==='GERG'){drawGergPortrait(b,x,y,{...GERG_PORTRAIT_DEFAULT,mouth:open});return;}
-  if(id==='MARIO'){drawMarioPortrait(b,x,y,{...MARIO_PORTRAIT_REST,mouth:m==='rest'?0:m==='O'?3:m==='M'?2:1});return;}
-  if(id==='NOLE'){drawNolePortrait(b,x,y,{...NOLE_PORTRAIT_REST,mouth:m==='rest'?0:m==='O'?3:m==='M'?4:1});return;}
-  if(id==='ADELINA'){drawAdelinaPortrait(b,x,y,{...ADELINA_PORTRAIT_DEFAULT,mouth:m as never});return;}
-  if(id==='RIMA'){drawRimaSpeakPortrait(b,x,y,{...RIMA_PORTRAIT_DEFAULT,mouth:m as never});return;}
+  const put=(img:ReturnType<typeof masPortrait>)=>{
+   // Continue an interior garment row, never the image's bottom rim/outline.
+   // Gerg's last native row is a warm rim across the whole crop; sampling it
+   // would turn his navy shirt into an orange block below the original mesh.
+   const row=Math.max(0,img.h-12);let left=0,right=img.w-1;
+   while(left<img.w&&img.c[row*img.w+left]<0)left++;
+   while(right>=left&&img.c[row*img.w+right]<0)right--;
+   for(let xx=left+2;xx<=right-2;xx++){const c=img.c[row*img.w+xx];if(c<0)continue;for(let y0=y+img.h;y0<203;y0++)b.set(x+xx,y0,c);}
+   blitImg(b,img,x,y);
+  };
+  if(id==='MAS'){put(masPortrait({...MAS_PORTRAIT_DEFAULT,light:'warm',mouth:m as never}));drawCollarsPortrait(b,x,y,collars,{light:'warm'});return;}
+  if(id==='GERG'){put(gergPortrait({...GERG_PORTRAIT_DEFAULT,mouth:open}));return;}
+  if(id==='MARIO'){put(marioPortraitImg({...MARIO_PORTRAIT_REST,mouth:m==='rest'?0:m==='O'?3:m==='M'?2:1}));return;}
+  if(id==='NOLE'){put(nolePortraitImg({...NOLE_PORTRAIT_REST,mouth:m==='rest'?0:m==='O'?3:m==='M'?4:1}));return;}
+  if(id==='ADELINA'){put(adelinaPortrait({...ADELINA_PORTRAIT_DEFAULT,mouth:m as never}));return;}
+  if(id==='RIMA'){put(rimaSpeakPortrait({...RIMA_PORTRAIT_DEFAULT,mouth:m as never}));return;}
   // New roles have their own native portrait mesh, matching the established cast's grid.
-  blitImg(b,bustFor(id)({mouth:m as never,expr:'neutral'}),x,y);
+  put(bustFor(id)({mouth:m as never,expr:'neutral'}));
   if(id==='MAON'){ellipse(x+83,y+96,7,9,b.ink(PAL.W5));fill(b,x+82,y+89,1,7,PAL.N1);}
+  if(id==='RUMPT'){
+    fill(b,x+52,y+88,7,41,PAL.R2);fill(b,x+53,y+89,2,38,PAL.R3);
+    fill(b,x+14,y+110,27,19,PAL.W3);fill(b,x+17,y+112,21,1,PAL.W5);
+    fill(b,x+86,y+103,14,25,PAL.N2);fill(b,x+89,y+99,12,13,PAL.S3);fill(b,x+87,y+92,5,14,PAL.S4);
+  }
 }
 export function keycap(b:Buf,x:number,y:number,s=1,legend=''){
   fill(b,x+2*s,y+3*s,18*s,13*s,PAL.N0);fill(b,x,y,18*s,13*s,PAL.G4);fill(b,x+2*s,y+2*s,14*s,8*s,PAL.G6);fill(b,x+3*s,y+3*s,12*s,1*s,PAL.P1);if(legend)tiny(b,legend,x+3*s,y+5*s,PAL.N1);

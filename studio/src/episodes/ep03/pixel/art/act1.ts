@@ -4,7 +4,9 @@ import {PAL} from '../../../../shared/pixel/palette';
 import type {PxShot} from '../types';
 import * as A from './world';
 import {drawChatBubble} from '../../../../shared/pixel/cast/chatgtp';
+import {pwrap} from '../../../ep02/pixel/art/kit';
 const num=(sh:PxShot)=>Number(sh.id.split('.').pop());
+export const ownsAct1Text=(sh:PxShot)=>sh.scene==='10'&&num(sh)===3;
 function handover(b:Buf,k:number,sh:PxShot,n:number){
  const p=Math.min(1,k/Math.max(1,sh.e-sh.s-1));
  A.lobby(b,k,sh,{valuation:'$86,000,000,000',photoHole:false});
@@ -31,7 +33,8 @@ function handover(b:Buf,k:number,sh:PxShot,n:number){
   if(n===5){
    // The motivated window view stays between the pair, at a readable scale.
    A.fill(b,207,61,70,66,PAL.C6);for(let i=0;i<9;i++){A.fill(b,211+i*7,112-i*3,8,3,PAL.P2);A.fill(b,211+i*7,115-i*3,8,1,PAL.G4);}
-   A.actor(b,'LUNCHMAS',245,104,sh,k,true);A.fill(b,243,81,15,12,PAL.W3);
+   // Native distant drawing fits the window's perspective; no room-size giant.
+   ellipse(246,80,3,4,b.ink(PAL.S3));A.fill(b,242,84,8,10,PAL.N2);A.fill(b,243,94,2,5,PAL.N1);A.fill(b,248,94,2,5,PAL.N1);A.fill(b,250,86,10,8,PAL.W3);line(249,86,253,88,b.ink(PAL.N3));
   }
  }
  A.orb(b,n===3||n===6?153:55,119,k);
@@ -46,6 +49,28 @@ export function drawAct1(b:Buf,k:number,sh:PxShot):boolean{
   return true;
  }
  if(sc==='4'){handover(b,k,sh,n);return true;}
+ if(sc==='5'){
+  A.beach(b,k,sh);const p=Math.min(1,k/Math.max(1,sh.e-sh.s-1)),x=Math.round(260-p*142),y=Math.round(161-p*99);
+  ellipse(x,y,7,3,b.ink(PAL.P1));ellipse(x+6,y-3,3,3,b.ink(PAL.P2));A.fill(b,x+8,y-3,4,1,PAL.W5);
+  line(x-2,y,x-9,y-(Math.floor(k/5)%2?7:2),b.ink(PAL.G5));A.keycap(b,x-6,y+4,.8,'ESC');line(x,y+2,x,y+5,b.ink(PAL.W4));
+  return true;
+ }
+ if(sc==='10'){
+  A.darkroom(b,k,sh,undefined,false);
+  if(n===1){A.portrait(b,'MAS',81,47,sh,k);A.portrait(b,'STAFFER',315,42,sh,k);A.fill(b,66,174,364,9,PAL.N4);A.fill(b,214,153,70,24,PAL.P2);for(let i=0;i<3;i++)A.fill(b,220,158+i*5,45-i*8,1,PAL.G4);}
+  if(n===2){A.portrait(b,'MAS',179,42,sh,k);A.fill(b,290,154,49,27,PAL.P1);for(let i=0;i<3;i++)A.fill(b,296,159+i*6,33,1,PAL.G4);}
+  if(n===3){
+   A.bezel(b,29,9,422,184,{face:PAL.N4,t:5});A.fill(b,36,16,408,170,PAL.P2);A.pt(b,'THE INTELLIGENCE AGE',58,34,PAL.N1);line(58,49,420,49,b.ink(PAL.G4));
+   let yy=73;for(const t of sh.texts.filter(t=>t.kind==='post'&&k>=t.s&&k<t.e)){for(const row of pwrap(t.text,350)){A.pt(b,row,58,yy,PAL.N1);yy+=15;}}
+   A.fill(b,341,155,81,22,PAL.C3);A.pt(b,k>(sh.e-sh.s)*.7?'POSTED':'POST',359,163,PAL.P2);
+   if(k>(sh.e-sh.s)*.6){poly([303,203,316,203,373,178,369,170,312,190],b.ink(PAL.N3));A.fill(b,367,168,9,7,PAL.S4);}
+  }
+  if(n===4){
+   A.actor(b,'MAS',139,201,sh,k);A.bezel(b,245,46,207,77,{face:PAL.N4,t:5});A.fill(b,251,52,195,65,PAL.N0);
+   if(k<40)A.pt(b,'3 DAYS',304,79,PAL.W6);else{A.pt(b,'A FEW THOUSAND',269,70,PAL.W6);A.pt(b,'DAYS (!)',310,92,PAL.C7);}
+  }
+  return true;
+ }
  if(sc==='7'&&n!==2){
   if(n===1){
    A.fill(b,0,0,480,203,PAL.N2);A.fill(b,55,12,370,184,PAL.P2);A.fill(b,55,12,370,3,PAL.W6);
@@ -53,7 +78,7 @@ export function drawAct1(b:Buf,k:number,sh:PxShot):boolean{
    for(let i=0;i<8;i++){A.fill(b,82,103+i*9,309-(i%3)*23,1,PAL.G4);}A.fill(b,235,151,124,28,PAL.P2);
    for(let i=0;i<3;i++){A.fill(b,243+i*35,153,25,7,PAL.C3);line(255+i*35,160,255+i*35,175,b.ink(PAL.C4));}
   }else{
-   A.stadium(b,k,sh,'stadium-box');A.fill(b,209,157,63,26,PAL.P2);A.fill(b,215,163,49,1,PAL.G4);
+   A.stadium(b,k,sh,n===4?'stadium-field':'stadium-box');A.fill(b,209,157,63,26,PAL.P2);A.fill(b,215,163,49,1,PAL.G4);
    if(n===4){A.portrait(b,'MAS',183,40,sh,k);A.fill(b,294,155,45,24,PAL.P1);}
   }
   return true;
@@ -86,8 +111,9 @@ export function drawAct1(b:Buf,k:number,sh:PxShot):boolean{
   for(const [x,y,dx,dy] of [[176,35,20,0],[176,35,0,20],[294,35,-20,0],[294,35,0,20],[176,161,20,0],[294,161,-20,0]])line(x,y,x+dx,y+dy,b.ink(PAL.W6));
  }else if(n===10){A.stadium(b,k,sh,'stadium-kick');}
  else {
-  A.stadium(b,k,sh,'stadium-box');
-  if(n===3||n===4){A.fill(b,178,168,89,20,PAL.P2);A.tiny(b,'PRO PLAN · PRICE TBD',185,174,PAL.N1);}
+  A.stadium(b,k,sh,n===4?'stadium-field':'stadium-box');
+  if(n===4){A.portrait(b,'MAS',183,40,sh,k);A.fill(b,0,180,480,23,PAL.N2);A.glass(b,296,168);}
+  if(n===3||n===4){A.fill(b,178,168,89,20,PAL.P2);A.tiny(b,'PRODUCT · PRICE TBD',185,174,PAL.N1);}
   if(n===11){A.fill(b,200,154,80,29,PAL.W6);A.pt(b,'thought hard.',206,165,PAL.N1);}
  }
  return true;

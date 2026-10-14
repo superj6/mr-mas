@@ -8,10 +8,10 @@ import * as A from './world';
 import type {PxShot} from '../types';
 const no=(sh:PxShot)=>Number(sh.id.split('.').pop());
 const progress=(sh:PxShot,k:number)=>Math.min(1,k/Math.max(1,sh.e-sh.s-1));
-function phone(b:Buf,x:number,y:number){A.fill(b,x,y,10,25,PAL.N0);A.fill(b,x+2,y+2,6,20,PAL.C3);A.fill(b,x-2,y+10,3,6,PAL.S3);}
+function phone(b:Buf,x:number,y:number,shoulder:[number,number]=[x+23,y+36]){const [sx,sy]=shoulder;poly([sx-3,sy,sx+3,sy-3,x+1,y+16,x-4,y+18],b.ink(PAL.N3));A.fill(b,x-4,y+9,5,10,PAL.S3);A.fill(b,x,y,10,25,PAL.N0);A.fill(b,x+2,y+2,6,20,PAL.C3);A.fill(b,x-2,y+10,3,6,PAL.S4);}
 function callClose(b:Buf,k:number,sh:PxShot,gerg:boolean){
- if(gerg){A.beach(b,k,sh,true);A.fill(b,101,103,130,100,PAL.L1);A.fill(b,105,107,122,5,PAL.P1);A.portrait(b,'GERG',111,29,sh,k);A.fill(b,82,165,180,9,PAL.N3);for(let i=0;i<32;i++)A.fill(b,91+(i%16)*10,167+Math.floor(i/16)*4,7,2,PAL.G5);phone(b,215,101);}
- else{A.darkroom(b,k,sh);A.portrait(b,'MAS',167,37,sh,k);phone(b,229,102);A.keycap(b,271,157,2);}
+ if(gerg){A.beach(b,k,sh,true,false);A.fill(b,101,103,130,100,PAL.L1);A.fill(b,105,107,122,5,PAL.P1);A.portrait(b,'GERG',111,29,sh,k);A.fill(b,82,165,180,9,PAL.N3);for(let i=0;i<32;i++)A.fill(b,91+(i%16)*10,167+Math.floor(i/16)*4,7,2,PAL.G5);phone(b,215,101,[201,135]);}
+ else{A.darkroom(b,k,sh,undefined,false);A.portrait(b,'MAS',167,37,sh,k);phone(b,229,102);A.keycap(b,271,157,2);}
 }
 function paperBus(b:Buf,k:number,sh:PxShot){
  const p=progress(sh,k);A.fill(b,0,0,480,203,PAL.P1);A.fill(b,238,0,4,203,PAL.D2);
@@ -31,22 +31,22 @@ function paperBus(b:Buf,k:number,sh:PxShot){
 export function drawAct3(b:Buf,k:number,sh:PxShot):boolean{
  const sc=sh.scene,n=no(sh),p=progress(sh,k);
  if(sc==='15'){
-  if(n===2){A.boardroom(b,k,sh);A.portrait(b,'MAS',175,43,sh,k,4);return true;}
+  if(n===2){A.boardroom(b,k,sh,undefined,false);A.portrait(b,'MAS',175,43,sh,k,4);return true;}
   A.fill(b,0,0,480,203,PAL.C6);A.fill(b,0,139,480,64,PAL.G3);A.fill(b,66,39,348,100,PAL.P1);A.fill(b,120,57,240,23,PAL.N1);A.pt(b,p<.4?'TPOOL':'TOD NEERG',194,65,PAL.C7);A.fill(b,191,104,45,35,PAL.N2);A.actor(b,'MAS',267,186,sh,k);
   for(let i=0;i<33;i++)A.fill(b,20+(i*61)%440,35+(i*29+Math.floor(k/4))%160,3,2,[PAL.W6,PAL.R2,PAL.C3][i%3]);A.fill(b,67,159,126,25,PAL.W4);A.pt(b,'$43.4M',99,168,PAL.N1);applyPalette(b,'EARLYWEB16',{rect:[0,0,480,203]});return true;
  }
  if(sc==='16'&&(n===2||n===3)){
-  A.darkroom(b,k,sh);A.portrait(b,'MAS',80,47,sh,k,4);if(n===2){A.fill(b,320,21,109,182,PAL.N0);A.portrait(b,'STAFFER',319,42,sh,k);}return true;
+  A.darkroom(b,k,sh,undefined,false);A.portrait(b,'MAS',80,47,sh,k,4);if(n===2){A.fill(b,320,21,109,182,PAL.N0);A.portrait(b,'STAFFER',319,42,sh,k);}return true;
  }
  if(sc==='17A'){
-  if(n===1||n===6){A.darkroom(b,k,sh);A.portrait(b,'MAS',174,39,sh,k,4);A.keycap(b,278,153,2);if(n===1)phone(b,236,112);return true;}
+  if(n===1||n===6){A.darkroom(b,k,sh,undefined,false);A.portrait(b,'MAS',174,39,sh,k,4);A.keycap(b,278,153,2);if(n===1)phone(b,236,112);return true;}
   if(n===2||n===3){A.beach(b,k,sh,true);if(n===2){A.actor(b,'LIFEGUARD',296,198,sh,k,true);line(290,169,300,184,b.ink(PAL.W6));}else{const off=p>.18&&p<.46;for(let i=0;i<5;i++){A.fill(b,277+i*13,155-i%2*9,7,1,off?PAL.N2:PAL.C5);}line(232,181,353,134,b.ink(PAL.N0));}return true;}
   // Hold the listener on the other end until a real turn, then reverse once.
   const speaker=sh.lines.find(l=>l.kind==='dialogue'&&k>=l.s&&k<l.e)?.who??'';
   const gerg=n===5?speaker!=='MAS':false;callClose(b,k,sh,gerg);return true;
  }
  if(sc==='18'&&n<=5){
-  A.lighthouse(b,k,sh);A.portrait(b,'MARIO',87,22,sh,k);A.portrait(b,'ADELINA',296,22,sh,k);
+  A.lighthouse(b,k,sh,false);A.portrait(b,'MARIO',87,22,sh,k);A.portrait(b,'ADELINA',296,22,sh,k);
   A.fill(b,64,157,150,9,PAL.D4);A.fill(b,284,157,150,9,PAL.D4);for(let i=0;i<20;i++){const x=181+i*8,y=168+Math.floor(Math.sin(i/3)*9);A.fill(b,x,y,11,3,PAL.P2);if(i%2===0)A.fill(b,x+3,y,4,1,PAL.G4);}
   if(n===4||n===5){A.fill(b,219,38,61,119,PAL.N0);A.fill(b,222,43,55,112,PAL.D0);A.actor(b,'LUNCHMAS',249,155,sh,k);A.fill(b,234,122,32,24,PAL.D3);A.fill(b,234,123,32,2,PAL.W4);}
   A.fill(b,350,145,29,14,PAL.N1);A.fill(b,353,146,23,2,PAL.G4);for(let i=0;i<5;i++)A.fill(b,355+i*4,159,2,14,PAL.P1);
@@ -58,9 +58,9 @@ export function drawAct3(b:Buf,k:number,sh:PxShot):boolean{
   if(count>=38){A.fill(b,338,85,100,22,PAL.N0);A.pt(b,'NOW HIRING',350,92,PAL.W6);}return true;
  }
  if(sc==='19'){
-  if(n===1)paperBus(b,k,sh);else{A.skyline(b,k);for(let i=0;i<43;i++)A.fill(b,60+i*8,162-Math.floor(i*1.4),9,4,PAL.P2);A.actor(b,'LUNCHMAS',143,145,sh,k);A.fill(b,129,116,29,20,PAL.D3);A.portrait(b,'ADELINA',307,31,sh,k);}
+  if(n===1)paperBus(b,k,sh);else{A.skyline(b,k);for(let i=0;i<43;i++)A.fill(b,60+i*8,162-Math.floor(i*1.4),9,4,PAL.P2);A.actor(b,'LUNCHMAS',143,145,sh,k);A.fill(b,129,116,29,20,PAL.D3);A.fill(b,280,0,200,203,PAL.D2);for(let y=0;y<203;y+=12)A.fill(b,280,y,200,1,PAL.D0);A.bezel(b,291,12,153,191,{face:PAL.W3,t:5});A.fill(b,297,18,141,185,PAL.D1);A.portrait(b,'ADELINA',307,31,sh,k);A.fill(b,291,183,153,9,PAL.W4);}
   return true;
  }
- if(sc==='20'&&(n===5||n===6)){A.darkroom(b,k,sh);A.portrait(b,'MAS',91,48,sh,k,4);if(n===5){A.fill(b,321,19,105,184,PAL.N0);A.portrait(b,'STAFFER',317,44,sh,k);}return true;}
+ if(sc==='20'&&(n===5||n===6)){A.darkroom(b,k,sh,undefined,false);A.portrait(b,'MAS',91,48,sh,k,4);if(n===5){A.fill(b,321,19,105,184,PAL.N0);A.portrait(b,'STAFFER',317,44,sh,k);}return true;}
  return false;
 }

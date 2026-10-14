@@ -1576,7 +1576,7 @@ ON SCREEN (sign): `$100B`
 
 **24.04 · WIDE drawn turn → Rumpt medium → Mas listener; no photoreal likeness · 5.4 s planned**
 
-VISUAL: reveal-rumpt. Podium turns to camera: first occupant reveal, Rumpt suit/long red tie/folder/thumbs-up as props. He looks at Mas and points away at pledge panel.
+VISUAL: reveal-rumpt. Podium turns to camera through three held angles before the first occupant reveal. Rumpt suit/long red tie/folder as props; his first sound follows the reveal. He looks at Mas and points away at pledge panel.
 
 **RUMPT** `e3-tag-0001` · [INVENTED]
 Say a number.
@@ -1603,7 +1603,7 @@ SFX: ice_creak.
 
 ## Source checks and handoff
 
-[M, source text] 1983 words, 249 lines, 124 beats; sixteen inner thoughts. [J] Natural-rate/design estimate: 1156.0 s story; 1203.0 s with intro/card/outro. Actual takes and motion may change it. No episode-duration fitting.
+[M, source text] 1983 words, 249 lines, 124 beats; sixteen inner thoughts. [J] Recorded audible spans for 249 lines plus designed action/read windows: 1156.0 s story; 1203.0 s with intro/card/outro. Frame quantization and motion review may change it. No episode-duration fitting.
 
 | Segment | Source estimate | Words | Beats |
 |---|---:|---:|---:|

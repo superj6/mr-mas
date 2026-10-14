@@ -6,7 +6,6 @@ Runtime is natural line durations + marked gaps + designed business; no target f
 silent hold inflation. Recorded take duration, when found, replaces words-at-rate. No API.
 """
 import argparse
-import glob
 import importlib.util
 import json
 import math
@@ -30,9 +29,12 @@ def words(s):
 
 def takes():
     result = {}
-    for p in sorted((ROOT/'audio/ep03').glob('**/lines-*.json')):
-        if any(x in str(p) for x in ('auditions','variants','cache')):
-            continue
+    # Canonical delivered lists include carried stock lines such as Mario.
+    # Never let an older stock list or snapshot win by lexicographic path order.
+    paths=[ROOT/f'audio/ep03/v1-el/ep03-v1/{seg}/lines-A.json' for seg in S.SEGS]
+    paths += [ROOT/f'audio/ep03/v1/{seg}/lines-v1.json' for seg in S.SEGS]
+    for p in paths:
+        if not p.exists():continue
         try:
             data=json.loads(p.read_text())
             rows=data if isinstance(data,list) else data.get('lines',[])

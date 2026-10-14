@@ -10,7 +10,7 @@ import {drawMammoth,drawIris} from '../../../ep02/pixel/art/creatures';
 import {drawChatBubble} from '../../../../shared/pixel/cast/chatgtp';
 import {podiumPainter as ep2Podium} from '../../../ep02/pixel/tag/sets/screen';
 import * as A from './world';
-import {drawAct1} from './act1';
+import {drawAct1,ownsAct1Text} from './act1';
 import {drawAct2,ownsAct2Text} from './act2';
 import {drawAct3} from './act3';
 import {drawAct4} from './act4';
@@ -94,7 +94,7 @@ function launch(b:Buf,k:number,sh:PxShot,v:string){
 }
 
 export function drawStory(b:Buf,k:number,sh:PxShot,f:number):LayoutOut|void {
-  if(drawAct1(b,k,sh)){drawTexts(b,sh.scene==='7'&&sh.id==='7.01'?{...sh,texts:sh.texts.filter(t=>t.kind!=='doc')}:sh,k);return;}
+  if(drawAct1(b,k,sh)){if(!ownsAct1Text(sh))drawTexts(b,sh.scene==='7'&&sh.id==='7.01'?{...sh,texts:sh.texts.filter(t=>t.kind!=='doc')}:sh,k);return;}
   if(drawAct2(b,k,sh,f)){if(!ownsAct2Text(sh,k))drawTexts(b,sh,k);return;}
   if(drawAct3(b,k,sh)){drawTexts(b,sh,k);return;}
   if(drawAct4(b,k,sh)){if(sh.id!=='22.07')drawTexts(b,sh,k);return;}
@@ -102,7 +102,13 @@ export function drawStory(b:Buf,k:number,sh:PxShot,f:number):LayoutOut|void {
   const sc=sh.scene;
   if(sh.id==='16.01'||sh.id==='20.01'||sh.id==='20.03'){newsMonitor(b,k,sh,v);customText=true;}
   else if(v==='attention'||sc==='7')attention(b,k,sh);
-  else if(v==='skyline-yarn'||sc==='1')A.skyline(b,k,false,true);
+  else if(v==='skyline-yarn'||sc==='1'){
+    A.skyline(b,k,false,true);
+    const x=-42+Math.floor(k*3.4);A.fill(b,0,184,480,19,PAL.N3);A.fill(b,x,168,42,22,PAL.W4);A.fill(b,x-3,166,48,4,PAL.D2);
+    for(let i=0;i<4;i++)A.fill(b,x+3+i*10,172,7,9,PAL.C2);for(const xx of [x+7,x+34])ellipse(xx,192,4,4,b.ink(PAL.N0));
+    const p=Math.min(1,k/48),bx=Math.round(424-p*153),by=Math.round(20+p*38);ellipse(bx,by,4,3,b.ink(PAL.G5));A.fill(b,bx+2,by-3,3,3,PAL.G6);A.fill(b,bx+5,by-2,2,1,PAL.W5);
+    if(p<1){line(bx-3,by,bx-9,by-(Math.floor(k/4)%2?4:1),b.ink(PAL.G4));}else{line(bx-2,by+3,bx-2,by+6,b.ink(PAL.W4));}
+  }
   else if(v==='corkboard'||['2','9'].includes(sc))A.alley(b,k,sh,sc==='9');
   else if(v==='strawberry-post'||sc==='3'){
     A.skyline(b,k,false,true);A.fill(b,0,167,480,36,PAL.N3);A.fill(b,0,165,480,3,PAL.N5);A.actor(b,'MAS',285,199,sh,k);A.orb(b,328,119,k);A.fill(b,181,153,33,34,PAL.D3);A.fill(b,178,151,39,5,PAL.D4);line(197,155,197,132,b.ink(PAL.L2));A.strawberry(b,196,131,1);
@@ -146,7 +152,7 @@ export function drawStory(b:Buf,k:number,sh:PxShot,f:number):LayoutOut|void {
       else if(v==='amazon-rent'){A.fill(screen,0,0,480,203,PAL.D2);A.fill(screen,121,64,238,100,PAL.W3);A.center(screen,'+$4B',83,PAL.N1);A.center(screen,'$8B TOTAL',109,PAL.N1);A.center(screen,'RENT INVOICE',135,PAL.N1);}
       else if(v==='nobel-monitor'){A.fill(screen,0,0,480,203,PAL.N1);A.center(screen,'OCT 8 · PHYSICS',40,PAL.W6);A.center(screen,'OCT 9 · CHEMISTRY',122,PAL.W6);for(const y of [78,161]){ellipse(242,y,20,20,screen.ink(PAL.W5));ellipse(242,y,15,15,screen.ink(PAL.W7));}}
       else{A.fill(screen,0,0,480,203,PAL.N1);A.center(screen,'A FEW THOUSAND DAYS (!)',83,PAL.C7);}
-    });
+    },!['MCU','CU'].includes(sh.cls));
   }
   else {
     A.lobby(b,k,sh,{industrial:sc!=='4',valuation:['21','22'].includes(sc)?'$157,000,000,000':'$86,000,000,000',photoHole:sc!=='4',spin:v==='door-turbine',shipmas:sc==='22'});
