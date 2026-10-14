@@ -1,0 +1,561 @@
+{
+ "id": "e3-act2-0053",
+ "scene": "14.03",
+ "speaker": "ADELINA",
+ "speaker_slug": "adelina",
+ "text": "I, the undersigned, solemnly swear not to fund any competitor of NopeAI, including but not limited to... Which ones, exactly?",
+ "spoken_as": "I, the undersigned, solemnly swear not to fund any competitor of NopeAI, including but not limited to... Which ones, exactly?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "14.03",
+ "shot_id": "14.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.273,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0053.wav",
+ "mp3": null,
+ "duration_s": 9.56,
+ "frames_24": 230,
+ "voiced_span_s": 8.59,
+ "pace": {
+  "words": 20,
+  "wpm": 139.7,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    165
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 139.7,
+   "articulation_sps": 4.84,
+   "syllables": 36,
+   "span_s": 8.59,
+   "pauses_s": [
+    0.29,
+    0.07,
+    0.2,
+    0.66
+   ]
+  },
+  "longest_internal_gap_s": 0.66,
+  "audible_in_s": 0.5,
+  "audible_out_s": 9.09
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+ "voiceId": "af_bella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch -1 st",
+  "low shelf +1.5 dB @200 Hz",
+  "peak -1 dB @450 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "high shelf -1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; adelina band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "rest"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "M"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "O"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "A"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "A"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "M"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "A"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "E"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "A"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "E"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "O"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "M"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "A"
+  },
+  {
+   "t": 5.042,
+   "f": 121,
+   "shape": "E"
+  },
+  {
+   "t": 5.167,
+   "f": 124,
+   "shape": "rest"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "E"
+  },
+  {
+   "t": 5.583,
+   "f": 134,
+   "shape": "O"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "E"
+  },
+  {
+   "t": 5.833,
+   "f": 140,
+   "shape": "M"
+  },
+  {
+   "t": 5.917,
+   "f": 142,
+   "shape": "A"
+  },
+  {
+   "t": 6.0,
+   "f": 144,
+   "shape": "E"
+  },
+  {
+   "t": 6.083,
+   "f": 146,
+   "shape": "A"
+  },
+  {
+   "t": 6.208,
+   "f": 149,
+   "shape": "E"
+  },
+  {
+   "t": 6.333,
+   "f": 152,
+   "shape": "A"
+  },
+  {
+   "t": 6.417,
+   "f": 154,
+   "shape": "M"
+  },
+  {
+   "t": 6.5,
+   "f": 156,
+   "shape": "E"
+  },
+  {
+   "t": 6.792,
+   "f": 163,
+   "shape": "O"
+  },
+  {
+   "t": 7.0,
+   "f": 168,
+   "shape": "rest"
+  },
+  {
+   "t": 7.667,
+   "f": 184,
+   "shape": "E"
+  },
+  {
+   "t": 7.875,
+   "f": 189,
+   "shape": "O"
+  },
+  {
+   "t": 7.958,
+   "f": 191,
+   "shape": "A"
+  },
+  {
+   "t": 8.125,
+   "f": 195,
+   "shape": "E"
+  },
+  {
+   "t": 8.625,
+   "f": 207,
+   "shape": "A"
+  },
+  {
+   "t": 8.792,
+   "f": 211,
+   "shape": "E"
+  },
+  {
+   "t": 9.083,
+   "f": 218,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I",
+   "t0": 0.47,
+   "t1": 0.62,
+   "f0": 11,
+   "f1": 15,
+   "ph": "ˌI"
+  },
+  {
+   "w": "the",
+   "t0": 0.658,
+   "t1": 0.77,
+   "f0": 16,
+   "f1": 18,
+   "ph": "ði"
+  },
+  {
+   "w": "undersigned",
+   "t0": 0.77,
+   "t1": 1.52,
+   "f0": 18,
+   "f1": 36,
+   "ph": "ˈʌndəɹsˌInd"
+  },
+  {
+   "w": "solemnly",
+   "t0": 1.795,
+   "t1": 2.37,
+   "f0": 43,
+   "f1": 57,
+   "ph": "sˈɑləmli"
+  },
+  {
+   "w": "swear",
+   "t0": 2.37,
+   "t1": 2.77,
+   "f0": 57,
+   "f1": 66,
+   "ph": "swˈɛɹ"
+  },
+  {
+   "w": "not",
+   "t0": 2.77,
+   "t1": 2.97,
+   "f0": 66,
+   "f1": 71,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "to",
+   "t0": 2.97,
+   "t1": 3.07,
+   "f0": 71,
+   "f1": 74,
+   "ph": "tə"
+  },
+  {
+   "w": "fund",
+   "t0": 3.07,
+   "t1": 3.345,
+   "f0": 74,
+   "f1": 80,
+   "ph": "fˈʌnd"
+  },
+  {
+   "w": "any",
+   "t0": 3.345,
+   "t1": 3.545,
+   "f0": 80,
+   "f1": 85,
+   "ph": "ˈɛni"
+  },
+  {
+   "w": "competitor",
+   "t0": 3.545,
+   "t1": 4.17,
+   "f0": 85,
+   "f1": 100,
+   "ph": "kəmpˈɛTəTəɹ"
+  },
+  {
+   "w": "of",
+   "t0": 4.17,
+   "t1": 4.295,
+   "f0": 100,
+   "f1": 103,
+   "ph": "ʌv"
+  },
+  {
+   "w": "NopeAI",
+   "t0": 4.295,
+   "t1": 5.18,
+   "f0": 103,
+   "f1": 124,
+   "ph": "nˌOpˈAˌI"
+  },
+  {
+   "w": "including",
+   "t0": 5.32,
+   "t1": 5.87,
+   "f0": 128,
+   "f1": 141,
+   "ph": "ɪnklˈudɪŋ"
+  },
+  {
+   "w": "but",
+   "t0": 5.87,
+   "t1": 6.02,
+   "f0": 141,
+   "f1": 144,
+   "ph": "bˌʌt"
+  },
+  {
+   "w": "not",
+   "t0": 6.02,
+   "t1": 6.27,
+   "f0": 144,
+   "f1": 150,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "limited",
+   "t0": 6.27,
+   "t1": 6.682,
+   "f0": 150,
+   "f1": 160,
+   "ph": "lˈɪməTᵻd"
+  },
+  {
+   "w": "to",
+   "t0": 6.682,
+   "t1": 7.02,
+   "f0": 160,
+   "f1": 168,
+   "ph": "tu"
+  },
+  {
+   "w": "Which",
+   "t0": 7.62,
+   "t1": 7.87,
+   "f0": 183,
+   "f1": 189,
+   "ph": "wˌɪʧ"
+  },
+  {
+   "w": "ones",
+   "t0": 7.87,
+   "t1": 8.295,
+   "f0": 189,
+   "f1": 199,
+   "ph": "wˈʌnz"
+  },
+  {
+   "w": "exactly",
+   "t0": 8.37,
+   "t1": 9.11,
+   "f0": 201,
+   "f1": 219,
+   "ph": "ɪɡzˈæktli"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.69,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 191.9,
+  "f0_range_st": 8.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I, the undersigned, solemnly swear not to fund any competitor of no pay I, including but not limited to. Which ones exactly?",
+  "cer": 0.02,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.171,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.375,
+  "rise_ms": 20.0,
+  "decay_ms": 155.0,
+  "decay_to_60_s": 0.1
+ },
+ "speaker_label": "INVESTOR",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "644dbc1b3d082b4f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 21.01,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.88,
+   "rechecked_alone": false
+  }
+ }
+}

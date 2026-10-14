@@ -1,0 +1,18 @@
+{
+ "file": "/home/jgon/project/art/mrmas/out/ep03/v1/mix/outro-mix.wav",
+ "source": "out/ep03/v1/outro/outro-b-ep3.wav",
+ "manifest": "show/reel/ep03-v1-el/ep03-v1-el.manifest.json",
+ "manifest_gain_db": -1.0,
+ "hum_s": 2.0,
+ "first_hit_s": 0.0,
+ "first_hit_db": -6.0,
+ "fade_in_s": 0.15,
+ "seam": {
+  "tag_last_200ms_dbfs": -29.9,
+  "outro_first_200ms_dbfs": -21.5,
+  "step_200ms_db": 8.3,
+  "step_400ms_db": 1.7,
+  "outro_0.4-1.0s_dbfs": -21.5
+ },
+ "for_the_assembler": "play this file in place of out/ep03/v1/outro/outro-b-ep3.wav, at the manifest's -1 dB as before; its first hit is already -6 dB and the tag's hum is in it (no further change)"
+}

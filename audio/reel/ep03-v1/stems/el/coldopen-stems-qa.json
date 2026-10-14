@@ -1,0 +1,114 @@
+{
+ "segment": "coldopen",
+ "variant": "el",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-coldopen.json",
+ "seconds": 55.583,
+ "frames": 1334,
+ "rooms": [
+  {
+   "room": "city_day",
+   "recipe": "city_day: bed_ep3_city_day -37",
+   "from": 0.0,
+   "to": 7.4,
+   "first": "1.01",
+   "last": "1.01",
+   "lead": 0.0,
+   "trail": 0.4,
+   "lift_db": 1.9
+  },
+  {
+   "room": "alley_day",
+   "recipe": "alley_day: bed_ep3_alley_day -39",
+   "from": 6.4,
+   "to": 41.567,
+   "first": "2.01",
+   "last": "2.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.2
+  },
+  {
+   "room": "roof_day",
+   "recipe": "roof_day: bed_ep3_roof_day -39",
+   "from": 40.567,
+   "to": 55.583,
+   "first": "3.01",
+   "last": "3.03",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 4.7
+  }
+ ],
+ "sfx": [
+  [
+   "1.01",
+   "yarn_twang",
+   0.0,
+   -20.0
+  ],
+  [
+   "2.03",
+   "generator_cough",
+   29.0,
+   -20.0
+  ],
+  [
+   "3.03",
+   "phone_click",
+   50.583,
+   -20.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -34.63,
+  "peak_dbfs": -21.71,
+  "p10_50ms_dbfs": -39.7
+ },
+ "sfx_stem": {
+  "lufs": -32.58,
+  "peak_dbfs": -20.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 50.586,
+     "boundary": 50.583,
+     "ratio": 917.5,
+     "kind": "step",
+     "before_dbfs": -36.3,
+     "after_dbfs": -29.0
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "city_day@coldopen:1.01",
+   "p5_50ms_dbfs": -41.9,
+   "lift_db": 1.9
+  },
+  {
+   "room": "alley_day@coldopen:2.01",
+   "p5_50ms_dbfs": -44.2,
+   "lift_db": 4.2
+  },
+  {
+   "room": "roof_day@coldopen:3.01",
+   "p5_50ms_dbfs": -44.7,
+   "lift_db": 4.7
+  }
+ ]
+}

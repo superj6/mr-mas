@@ -1,0 +1,366 @@
+{
+ "id": "e3-act3-0036",
+ "scene": "18.04",
+ "speaker": "TERB",
+ "speaker_slug": "terb",
+ "text": "Sorry. Hi. Is this the alignment floor? They said to follow the paper.",
+ "spoken_as": "Sorry. Hi. Is this the alignment floor? They said to follow the paper.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.04",
+ "shot_id": "18.04",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.727,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0036.wav",
+ "mp3": null,
+ "duration_s": 5.045,
+ "frames_24": 122,
+ "voiced_span_s": 3.8,
+ "pace": {
+  "words": 13,
+  "wpm": 205.3,
+  "speed": 1.02,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.02,
+   "speed_band": [
+    0.98,
+    1.06
+   ],
+   "articulation_guide_sps": [
+    4.4,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 205.3,
+   "articulation_sps": 5.04,
+   "syllables": 18,
+   "span_s": 3.8,
+   "pauses_s": [
+    0.23
+   ]
+  },
+  "longest_internal_gap_s": 0.23,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.3
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_echo (Kokoro-82M stock) · b-echo-brisk · speed 1.020",
+ "voiceId": "am_echo",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @150 Hz Q0.9",
+  "peak -1.5 dB @500 Hz Q1.0",
+  "peak +2 dB @2000 Hz Q0.9",
+  "comp 3.0:1 @-21 dB (3/70 ms)",
+  "Kokoro speed 1.020 (the centre of the band; terb band 0.98-1.06); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "M"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "O"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "rest"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "A"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "O"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "M"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "A"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "M"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Sorry",
+   "t0": 0.51,
+   "t1": 0.835,
+   "f0": 12,
+   "f1": 20,
+   "ph": "sˈɔɹi"
+  },
+  {
+   "w": "Hi",
+   "t0": 0.898,
+   "t1": 1.185,
+   "f0": 22,
+   "f1": 28,
+   "ph": "hˈI"
+  },
+  {
+   "w": "Is",
+   "t0": 1.223,
+   "t1": 1.385,
+   "f0": 29,
+   "f1": 33,
+   "ph": "ˌɪz"
+  },
+  {
+   "w": "this",
+   "t0": 1.385,
+   "t1": 1.585,
+   "f0": 33,
+   "f1": 38,
+   "ph": "ðɪs"
+  },
+  {
+   "w": "the",
+   "t0": 1.585,
+   "t1": 1.735,
+   "f0": 38,
+   "f1": 42,
+   "ph": "ði"
+  },
+  {
+   "w": "alignment",
+   "t0": 1.735,
+   "t1": 2.285,
+   "f0": 42,
+   "f1": 55,
+   "ph": "əlˈInmənt"
+  },
+  {
+   "w": "floor",
+   "t0": 2.285,
+   "t1": 2.75,
+   "f0": 55,
+   "f1": 66,
+   "ph": "flˈɔɹ"
+  },
+  {
+   "w": "They",
+   "t0": 2.885,
+   "t1": 3.06,
+   "f0": 69,
+   "f1": 73,
+   "ph": "ðˌA"
+  },
+  {
+   "w": "said",
+   "t0": 3.06,
+   "t1": 3.272,
+   "f0": 73,
+   "f1": 79,
+   "ph": "sˈɛd"
+  },
+  {
+   "w": "to",
+   "t0": 3.272,
+   "t1": 3.398,
+   "f0": 79,
+   "f1": 82,
+   "ph": "tə"
+  },
+  {
+   "w": "follow",
+   "t0": 3.398,
+   "t1": 3.747,
+   "f0": 82,
+   "f1": 90,
+   "ph": "fˈɑlO"
+  },
+  {
+   "w": "the",
+   "t0": 3.747,
+   "t1": 3.835,
+   "f0": 90,
+   "f1": 92,
+   "ph": "ðə"
+  },
+  {
+   "w": "paper",
+   "t0": 3.835,
+   "t1": 4.32,
+   "f0": 92,
+   "f1": 104,
+   "ph": "pˈApəɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -1.64,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 107.6,
+  "f0_range_st": 12.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Sorry, hi, is this the alignment floor? They said to follow the paper.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.178,
+  "align_median_s": 0.028,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 25.0,
+  "decay_ms": 245.0,
+  "decay_to_60_s": 0.3
+ },
+ "speaker_label": "LUNCHMAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "bd0ecbcf7ece985a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.14,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.78,
+   "rechecked_alone": false
+  }
+ }
+}

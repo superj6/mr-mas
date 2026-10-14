@@ -1,0 +1,59 @@
+{
+ "seg": "card",
+ "frames": 48,
+ "mode": "scenes",
+ "out": "out/ep03/v1/picture/card.mp4",
+ "cache": "out/ep03/v1/scenes/card",
+ "seconds": 2,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "bundle_built": "2026-10-14T02:48:16.354Z",
+ "glyph_dir": null,
+ "glyph_mode": "splice",
+ "standins": [],
+ "layout_problems": [],
+ "rendered": [
+  "card"
+ ],
+ "cached": [],
+ "scenes": [
+  {
+   "id": "card",
+   "s": 0,
+   "e": 48,
+   "frames": 48,
+   "key": "c0bae24367b142e2afe702ff00c0b1c12efe26531c0224d1bd1229f5beea3e3b",
+   "file": "out/ep03/v1/scenes/card/sc-card-c0bae24367b142e2.mp4",
+   "status": "rendered",
+   "changed": [
+    "new scene"
+   ],
+   "ms": 1812,
+   "code": "0 scene module(s) + all of shots.ts (a layout outside a scene module), 46 files",
+   "stats": {
+    "ms": 1375,
+    "spliced": {
+     "pic": 0,
+     "anim": 0
+    },
+    "marked": [],
+    "spliceOff": [],
+    "missing": [],
+    "failed": {},
+    "overlaid": {
+     "pic": 0,
+     "anim": 0
+    },
+    "overlayMissing": [],
+    "overlayRefused": {},
+    "standins": []
+   }
+  }
+ ]
+}

@@ -1,0 +1,345 @@
+{
+ "id": "e3-act4-0011",
+ "scene": "21.05",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "If one isn't ready, we don't invent a thing behind the door.",
+ "spoken_as": "If one isn't ready, we don't invent a thing behind the door.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "21.05",
+ "shot_id": "21.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.789,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0011.wav",
+ "mp3": null,
+ "duration_s": 3.975,
+ "frames_24": 96,
+ "voiced_span_s": 2.77,
+ "pace": {
+  "words": 12,
+  "wpm": 259.9,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 259.9,
+   "articulation_sps": 5.78,
+   "syllables": 16,
+   "span_s": 2.77,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.27
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "O"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "O"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "A"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "A"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "M"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "E"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "If",
+   "t0": 0.47,
+   "t1": 0.582,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌɪf"
+  },
+  {
+   "w": "one",
+   "t0": 0.582,
+   "t1": 0.708,
+   "f0": 14,
+   "f1": 17,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "isn't",
+   "t0": 0.708,
+   "t1": 0.945,
+   "f0": 17,
+   "f1": 23,
+   "ph": "ˈɪzᵊnt"
+  },
+  {
+   "w": "ready",
+   "t0": 0.945,
+   "t1": 1.295,
+   "f0": 23,
+   "f1": 31,
+   "ph": "ɹˈɛdi"
+  },
+  {
+   "w": "we",
+   "t0": 1.37,
+   "t1": 1.52,
+   "f0": 33,
+   "f1": 36,
+   "ph": "wi"
+  },
+  {
+   "w": "don't",
+   "t0": 1.52,
+   "t1": 1.708,
+   "f0": 36,
+   "f1": 41,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "invent",
+   "t0": 1.708,
+   "t1": 2.082,
+   "f0": 41,
+   "f1": 50,
+   "ph": "ɪnvˈɛnt"
+  },
+  {
+   "w": "a",
+   "t0": 2.082,
+   "t1": 2.17,
+   "f0": 50,
+   "f1": 52,
+   "ph": "ɐ"
+  },
+  {
+   "w": "thing",
+   "t0": 2.17,
+   "t1": 2.395,
+   "f0": 52,
+   "f1": 57,
+   "ph": "θˈɪŋ"
+  },
+  {
+   "w": "behind",
+   "t0": 2.395,
+   "t1": 2.758,
+   "f0": 57,
+   "f1": 66,
+   "ph": "bəhˈInd"
+  },
+  {
+   "w": "the",
+   "t0": 2.758,
+   "t1": 2.845,
+   "f0": 66,
+   "f1": 68,
+   "ph": "ðə"
+  },
+  {
+   "w": "door",
+   "t0": 2.845,
+   "t1": 3.29,
+   "f0": 68,
+   "f1": 79,
+   "ph": "dˈɔɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 127.2,
+  "f0_range_st": 11.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "If one isn't ready, we don't invent a thing behind the door.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.238,
+  "align_median_s": 0.029,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 15.0,
+  "decay_ms": 100.0,
+  "decay_to_60_s": 0.26
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "91d4eb48c712640d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.02,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 2.53,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,394 @@
+{
+ "id": "e3-act1-0030",
+ "scene": "8.06",
+ "speaker": "ADELINA",
+ "speaker_slug": "adelina",
+ "text": "It can count to three, Mario. Out loud, in front of forty thousand people.",
+ "spoken_as": "It can count to three, Mario. Out loud, in front of forty thousand people.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.06",
+ "shot_id": "8.06",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.091,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0030.wav",
+ "mp3": null,
+ "duration_s": 5.24,
+ "frames_24": 126,
+ "voiced_span_s": 4.27,
+ "pace": {
+  "words": 14,
+  "wpm": 196.7,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    165
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 196.7,
+   "articulation_sps": 5.03,
+   "syllables": 19,
+   "span_s": 4.27,
+   "pauses_s": [
+    0.49
+   ]
+  },
+  "longest_internal_gap_s": 0.49,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.77
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+ "voiceId": "af_bella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch -1 st",
+  "low shelf +1.5 dB @200 Hz",
+  "peak -1 dB @450 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "high shelf -1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; adelina band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "M"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "O"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "rest"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "A"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "A"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "A"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "O"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "E"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "A"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "M"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "E"
+  },
+  {
+   "t": 4.458,
+   "f": 107,
+   "shape": "A"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "M"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "E"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It",
+   "t0": 0.47,
+   "t1": 0.568,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "can",
+   "t0": 0.568,
+   "t1": 0.73,
+   "f0": 14,
+   "f1": 18,
+   "ph": "kæn"
+  },
+  {
+   "w": "count",
+   "t0": 0.73,
+   "t1": 1.005,
+   "f0": 18,
+   "f1": 24,
+   "ph": "kˈWnt"
+  },
+  {
+   "w": "to",
+   "t0": 1.005,
+   "t1": 1.142,
+   "f0": 24,
+   "f1": 27,
+   "ph": "tə"
+  },
+  {
+   "w": "three",
+   "t0": 1.142,
+   "t1": 1.48,
+   "f0": 27,
+   "f1": 36,
+   "ph": "θɹˈi"
+  },
+  {
+   "w": "Mario",
+   "t0": 1.53,
+   "t1": 2.1,
+   "f0": 37,
+   "f1": 50,
+   "ph": "mˈɑɹiO"
+  },
+  {
+   "w": "Out",
+   "t0": 2.518,
+   "t1": 2.755,
+   "f0": 60,
+   "f1": 66,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "loud",
+   "t0": 2.755,
+   "t1": 3.18,
+   "f0": 66,
+   "f1": 76,
+   "ph": "lˈWd"
+  },
+  {
+   "w": "in",
+   "t0": 3.218,
+   "t1": 3.33,
+   "f0": 77,
+   "f1": 80,
+   "ph": "ɪn"
+  },
+  {
+   "w": "front",
+   "t0": 3.33,
+   "t1": 3.518,
+   "f0": 80,
+   "f1": 84,
+   "ph": "fɹˈʌnt"
+  },
+  {
+   "w": "of",
+   "t0": 3.518,
+   "t1": 3.618,
+   "f0": 84,
+   "f1": 87,
+   "ph": "ʌv"
+  },
+  {
+   "w": "forty",
+   "t0": 3.618,
+   "t1": 3.93,
+   "f0": 87,
+   "f1": 94,
+   "ph": "fˈɔɹTi"
+  },
+  {
+   "w": "thousand",
+   "t0": 3.93,
+   "t1": 4.33,
+   "f0": 94,
+   "f1": 104,
+   "ph": "θˈWzᵊnd"
+  },
+  {
+   "w": "people",
+   "t0": 4.33,
+   "t1": 4.79,
+   "f0": 104,
+   "f1": 115,
+   "ph": "pˈipᵊl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.83,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 188.1,
+  "f0_range_st": 7.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It can count to three, Mario, out loud in front of 40,000 people.",
+  "cer": 0.228,
+  "word_recall_nonames": 0.846,
+  "logprob": -0.241,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 20.0,
+  "decay_ms": 145.0,
+  "decay_to_60_s": 0.03
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "5773fec74c58df2e",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 17.28,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 8.52,
+   "rechecked_alone": true
+  }
+ }
+}

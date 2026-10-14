@@ -1,6 +1,6 @@
 # Episode 3 v1 production pipeline
 
-Status: source pipeline prepared 2026-10-13. This episode is `ep1.2_strawberry.jpg`. The copies retain the completed Ep2 pipeline's protections and per-scene picture cache. Ep2's beat-specific fixes, score, sounds, takes and layouts were not carried into the new story. Ep1 and Ep2 are read-only sources.
+Status: the complete programmatic Episode 3 v1 is built (20:03, 2026-10-13), using 249 offline stock-voice takes. Final ElevenLabs replacements were blocked by automatic review even after explicit user authorization, before the first request; actual paid spend is zero. This episode is `ep1.2_strawberry.jpg`. Its source uses local copies of Ep2's completed pipeline, with new story, score, sound and scene art. Ep1 and Ep2 stay read-only; the final byte-preservation proof is `assembly/preservation-check.txt`.
 
 The canonical chain is beat plans → takes → base timeline → master timeline → takes/mouths → pixel lock → scene modules → score → room/SFX stems → mix → picture → assembly/QA. Never hand-place a line only in a generated lock: its source is the beat plan.
 
@@ -96,7 +96,7 @@ PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/reel/ep03-v1/mix_
 PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/reel/ep03-v1/sound_audit.py       # wraps heavy.sh itself
 ```
 
-The six score entrypoints call `e03-v1-common/episode_score.py`: one continuous performance per act, with lock-driven scene colors (warm, pressure, blueprint, drive, dry), open fifths, partial knee cells, chip and dialogue thinning. Deliberate unscored windows are carried into the cue sheet. Sample calibration writes only the Ep3 common folder's ignored cache. These sources passed synthetic note construction; their actual rendered stems still require the checks above. `audio/ep03/sfx/build.py` authors 14 deterministic local ambience beds and missing requested foley. Existing shared board files are reused read-only. Room/stem lookup checks `audio/ep03/sfx/wav/` first, then the shared board, and the local manifest participates in stem invalidation. A missing sound is surfaced in stem QA. Scene ends truncate SFX unless explicitly allowed to ring through.
+The six score entrypoints call `e03-v1-common/episode_score.py`: one continuous performance per act, with lock-driven scene colors (warm, pressure, blueprint, drive, dry), open fifths, partial knee cells, chip and dialogue thinning. Deliberate unscored windows are carried into the cue sheet. Sample calibration writes only the Ep3 common folder's ignored cache. These sources passed synthetic note construction and all six actual stock stems passed the checks above. Any later library-timed pass needs fresh renders and checks. `audio/ep03/sfx/build.py` authors 14 deterministic local ambience beds and missing requested foley. Existing shared board files are reused read-only. Room/stem lookup checks `audio/ep03/sfx/wav/` first, then the shared board, and the local manifest participates in stem invalidation. A missing sound is surfaced in stem QA. Scene ends truncate SFX unless explicitly allowed to ring through.
 
 ```sh
 ASM_SCRATCH=/tmp/mrmas-ep03-session/pipeline/assembly PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-casting/bin/python show/episodes/ep03/production/v1/assembly/tools/assemble.py v1
@@ -121,11 +121,11 @@ bash studio/src/episodes/ep03/outro/tools/render.sh /tmp/mrmas-ep03-session/pipe
 
 The outro is an Ep3 fork of Orb B. The file name is Ep3's. Cast page must be reconciled with the final voice rows before rendering. The score still has the knee whole only in these credits. This attempt credits Codex for its production work and acknowledges inherited Opus 5.5 assets, preserving the established credit format and `prompt: jgon`. Frozen episode credits stay as published.
 
-## Setup validation and remaining work
+## Setup validation record
 
-[M] All copied Python sources parse without bytecode writes. Bash syntax passes for the new rebuild/title scripts. Pixel esbuild compiles the scaffold and card; card `check` reports 1 layout, 0 stand-ins, 0 problems. A synthetic composer dry run passes written-third, knee-whole and knee-completion checks. `ops/rebuild-act.sh --ep 3 act1 --only picture --dry-run` reports **0 missing** against the scaffold. All six complete act dry runs currently report 3 missing inputs (beat plan, master lock, master manifest), and the card reports the missing manifest. These are expected until production runs; do not add fake inputs to make a dry run pass.
+[M] At setup, all copied Python sources parsed without bytecode writes. Bash syntax passes for the new rebuild/title scripts. Pixel esbuild compiles the scaffold and card; card `check` reports 1 layout, 0 stand-ins, 0 problems. A synthetic composer dry run passes written-third, knee-whole and knee-completion checks. `ops/rebuild-act.sh --ep 3 act1 --only picture --dry-run` reports **0 missing** against the scaffold. At setup, all six complete act dry runs reported 3 missing inputs (beat plan, master lock, master manifest), and the card reports the missing manifest. These are expected until production runs; do not add fake inputs to make a dry run pass.
 
-[J] No new media has been judged by eye or ear at setup. The script, completed takes, real locks, score, new scene art, final title cast page, renders, mixes and assembled film remain production passes. Parent pass owns delivery and the final Ep1 byte-identity proof. Source files are copied into Ep3 paths; no old episode source/output is edited.
+[J] At setup, no new media had been judged by eye or ear. The completed stock pass and measured final preservation proof are recorded below. Native stills and encoded seam frames were inspected; a continuous human watch/listen is still owed. Source files live in Ep3 paths; no old episode source/output was edited.
 
 
 ## Running production record (2026-10-13)
@@ -142,6 +142,58 @@ The outro is an Ep3 fork of Orb B. The file name is Ep3's. Cast page must be rec
 - [M] Stock outro delivered at 360 frames / 15 s, encoded QA passed. Onscreen Codex / prompt:jgon credit passes reading-time/contrast checks; inherited Opus 5.5 assets are acknowledged off-page in README/mux metadata.
 - [M] Tag24.04 dialogue moved from .5 s to 1.25 s after the face reveal, with air reduced by .75 s; beat/segment duration, text and IDs stay unchanged. Base/master/pixel tag locks refreshed before tag score render.
 
-- [M] Stock sound pass completed:50 SFX occurrences, all accounted for,0 masked and4 marginal review flags. All249 speech-onset margins now≥6dB. One measured Gerg onset was5.5dB; a stock-only+1dB line correction produced6.5dB. There are92 low-tail p10 review flags; broad rides were deliberately not applied without listening evidence. MARIO lies0.29–0.31dB below actual scene neighbours.
-- [M] The unscored17A beach-call window had ten >.3s room-floor dips. A local3dB room-bus lift removed them; every chapter now has0 unmarked stereo/mono/no-score holes. Acts target−16LUFS; tag−19.75 follows the dialogue guard. Maximum story true peak is−1.18dBTP.
-- [M] Full assembly dry run passed with all9 exact chapter inputs:28,872frames,1203.000s, source sample peak−1.5dBFS, longest digital-zero run0.25ms. Stable stock metadata/QA is preserved under `assembly/programmatic-pass/`; parent owns the encoded film/decoded QA snapshot.
+- [M] Stock sound pass completed: 50 SFX occurrences, all accounted for, 0 masked and 4 marginal review flags. All 249 speech-onset margins now ≥6 dB. One measured Gerg onset was 5.5 dB; a stock-only +1 dB line correction produced 6.5 dB. There are 92 low-tail p10 review flags; broad rides were deliberately not applied without listening evidence. MARIO lies 0.29–0.31 dB below actual scene neighbours.
+- [M] The unscored 17A beach-call window had ten >.3s room-floor dips. A local 3 dB room-bus lift removed them; every chapter now has 0 unmarked stereo/mono/no-score holes. Acts target −16 LUFS; tag −19.75 LUFS follows the dialogue guard. Maximum story true peak is −1.18 dBTP.
+- [M] Full assembly dry run passed with all 9 exact chapter inputs: 28,872 frames, 1203.000 s, source sample peak −1.5 dBFS, longest digital-zero run 0.25 ms. Stable stock metadata/QA is preserved under `assembly/programmatic-pass/`; parent owns the encoded film/decoded QA snapshot.
+
+## Final-library request block
+
+On 2026-10-13, after the complete 20:03 stock film existed, the first bounded fresh-audition command was rejected by automatic approval review before execution because it would export repository dialogue to ElevenLabs, an untrusted destination under the platform policy. The user then explicitly answered **“Authorize sending Episode 3 dialogue to ElevenLabs”** to the destination-specific question. The same bounded command was retried through normal approval review, citing that authorization. Automatic review rejected it again, stating that explicit user approval does not override its absolute private-workspace-data export restriction. Both rejections prohibited workaround or indirect execution.
+
+**User authorization is complete. There is no pending permission question.** Paid production is blocked by the platform destination-trust restriction; it requires that platform restriction to change, not another user confirmation. No process/API request ran, no key was read by either rejected command, and actual spend remains **0 requests / 0 credits**. No further retry or workaround was attempted. The three audition input files and bounded tools remain local and unexecuted. Provisional library shortlists are not delivered final voices. The complete stock film, canonical stock take rows/mixes and preservation proof remain intact.
+
+Prepared paid sequence after resolution (never run as a workaround for the rejection):
+
+```sh
+HF_HUB_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/ep03/v1-el/tools/audition_ep3.py render
+HF_HUB_OFFLINE=1 PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/ep03/v1-el/tools/audition_ep3.py measure
+python3 audio/ep03/v1-el/tools/takes.py elevenlabs --dry-run
+python3 audio/ep03/v1-el/tools/takes.py elevenlabs --max-chars 6000
+python3 audio/ep03/v1-el/tools/cost_report.py --out show/episodes/ep03/production/v1/assembly/paid-cost-report.json
+```
+
+The shortlist comparison resolves actual main-role IDs before choosing any new featured role, penalizes duplicate main/new-featured voices, and reports any carried minor-role reuse. The bulk driver explicitly reuses the selected actual-script audition excerpts, including selected retakes. Canonical stock lists/mixes must remain frozen until the parent completes its stock QA snapshot. After final delivered rows exist, regenerate source timings with delivered-first `_build.py`, call the base builder with each canonical `--takes` file, then rebuild master/pixel locks, continuous scores, mix/picture and final cast page.
+
+After successful final takes, the remaining local rebuild is:
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh python3 show/episodes/ep03/production/v1/beat-plan/_build.py --write
+ep3_take_args=()
+for seg in coldopen act1 act2 act3 act4 tag; do
+  ep3_take_args+=(--takes "audio/ep03/v1-el/ep03-v1/$seg/lines-A.json")
+done
+PYTHONDONTWRITEBYTECODE=1 python3 audio/reel/ep03-v1/build_timeline.py "${ep3_take_args[@]}"
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-casting/bin/python audio/ep03/v1-el/tools/el_lock.py
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-casting/bin/python show/episodes/ep03/production/v1/assembly/tools/el_takes.py
+EP3_LOCK_WITHOUT_MIX=1 bash show/episodes/ep03/production/v1/assembly/tools/el_lock.sh
+for seg in coldopen act1 act2 act3 act4 tag; do
+  OST_WORKERS=2 PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-theme/bin/python "audio/ost/tracks/e03-v1-$seg/track.py" --render --el
+done
+PYTHONDONTWRITEBYTECODE=1 bash ops/heavy.sh audio/.venv-theme/bin/python audio/ost/tracks/e03-v1-common/check.py
+PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/reel/ep03-v1/mix_episode.py --all
+PYTHONDONTWRITEBYTECODE=1 audio/.venv-casting/bin/python audio/reel/ep03-v1/sound_audit.py
+python3 studio/src/episodes/ep03/outro/tools/cast_page.py --variant el
+bash studio/src/episodes/ep03/outro/tools/render.sh /tmp/mrmas-ep03-session/pipeline/outro-el
+```
+
+After the new mixes exist, rerun `el_lock.sh` with its normal mix-length check. `EP3_LOCK_WITHOUT_MIX=1` is only for the legitimate timing rebuild before those new mixes exist.
+
+The picture owner must refresh its scene import slices from the new pixel locks, run all scene/cache checks, rebuild all six picture concats, then repeat assembly/decoded QA/seam checks. The existing stock score may not be reused merely because the rounded duration happens to match: the new master hash is authoritative. Final take inventory/name pronunciation checks and any bounded retakes precede the timing rebuild. This later phase remains unexecuted.
+
+[M] Final stock-delivery rebuild validation: all seven segment dry runs report 27 assembly inputs, 0 missing. No paid call has been made.
+
+[M] Final preservation proof: all 31 Ep1 SHA1 baselines passed; Ep2 master MD5 remains `2a6affb88c14f25ff3735935639bc15a`; `cmp` verifies the Ep3 intro WAV equals Ep1's aired intro master byte-for-byte. The preserved pre-rail stock encode passed QA at −16.14 LUFS / −1.22 dBTP with 0 decoded-audio errors, 1 flash/s / 0 red, 9 aligned chapters and maximum boundary MAD .09. Continuous human watch/listen remains unclaimed.
+
+The preserved `ep03-v1-programmatic.mp4` is the first complete stock cut, before the date-rail picture bug was repaired. `assembly/programmatic-pass/` keeps its exact input metadata from commit `b13d8ae`, including inherited internal `ElevenLabs` variant labels; all recorded story rows in that historical pass are offline stock. Current canonical top-level labels were corrected after that film copy, with identical beat hashes and no media/timing changes. The history/cache evidence is recorded separately in `assembly/stock-metadata-correction.json`. Final `ep03-v1.mp4` is rebuilt with repaired date rails; its canonical pixel locks/reports differ from the historical snapshot. Audio and timing stay unchanged.
+
+[M] The date-rail-only correction proof passes: `assembly/rail-correction.json` compares the preserved pre-rail locks with current canonical locks. All segment frames/episode offsets, line arrays, sound marks and subtitles are identical; 13 old generic date labels move into rails, matching 13 source items. Fully typed rail holds exceed their read floor by at least 3 frames; no rail overlaps a V.O. including its 15-frame tail. All 9 chapter audio head MD5s match the preserved assembly. This proof changes no timeline or media. Final corrected-film metrics and identity belong to the current DELIVERY/assembly reports, separately from the first cut's historical QA.

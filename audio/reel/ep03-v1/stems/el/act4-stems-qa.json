@@ -1,0 +1,168 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act4.json",
+ "seconds": 236.5,
+ "frames": 5676,
+ "rooms": [
+  {
+   "room": "lobby_day",
+   "recipe": "lobby_day: bed_lobby_day -37",
+   "from": -0.6,
+   "to": 170.567,
+   "first": "21.01",
+   "last": "22.12",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "terrace",
+   "recipe": "terrace: bed_ep3_terrace -39",
+   "from": 169.567,
+   "to": 264.317,
+   "first": "23.01",
+   "last": "24.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.8
+  }
+ ],
+ "sfx": [
+  [
+   "21.01",
+   "sand_pour",
+   0.0,
+   -20.0
+  ],
+  [
+   "21.02",
+   "keycap_snap",
+   4.0,
+   -20.0
+  ],
+  [
+   "21.06",
+   "hat_bell",
+   53.292,
+   -20.0
+  ],
+  [
+   "22.02",
+   "calendar_open",
+   62.292,
+   -20.0
+  ],
+  [
+   "22.05",
+   "mammoth_step",
+   96.625,
+   -20.0
+  ],
+  [
+   "22.05",
+   "sleigh",
+   96.625,
+   -20.0
+  ],
+  [
+   "22.10",
+   "ceiling_break",
+   137.667,
+   -20.0
+  ],
+  [
+   "22.10",
+   "yarn_taut",
+   137.667,
+   -20.0
+  ],
+  [
+   "23.01",
+   "rope_creak",
+   170.167,
+   -20.0
+  ],
+  [
+   "23.01",
+   "palms",
+   170.167,
+   -20.0
+  ],
+  [
+   "23.05",
+   "paper_smooth",
+   207.833,
+   -20.0
+  ],
+  [
+   "23.07",
+   "reflection_tone",
+   223.5,
+   -20.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -36.0,
+  "peak_dbfs": -22.75,
+  "p10_50ms_dbfs": -39.4
+ },
+ "sfx_stem": {
+  "lufs": -30.72,
+  "peak_dbfs": -17.02,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 4.002,
+     "boundary": 4.0,
+     "ratio": 877.0,
+     "kind": "onset",
+     "before_dbfs": -39.3,
+     "after_dbfs": -27.6
+    },
+    {
+     "at": 137.669,
+     "boundary": 137.667,
+     "ratio": 146.4,
+     "kind": "onset",
+     "before_dbfs": -37.3,
+     "after_dbfs": -24.9
+    },
+    {
+     "at": 223.5,
+     "boundary": 223.5,
+     "ratio": 49.7,
+     "kind": "onset",
+     "before_dbfs": -240.0,
+     "after_dbfs": -27.2
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lobby_day@act4:21.01",
+   "p5_50ms_dbfs": -39.6,
+   "lift_db": 0.0
+  },
+  {
+   "room": "terrace@act4:23.01",
+   "p5_50ms_dbfs": -44.8,
+   "lift_db": 4.8
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "id": "e3-act2-0003",
+ "scene": "11.01",
+ "speaker": "PHOTOGRAPHER",
+ "speaker_slug": "photographer",
+ "text": "So, where the old one was.",
+ "spoken_as": "So, where the old one was.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.01",
+ "shot_id": "11.01",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.182,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0003.wav",
+ "mp3": null,
+ "duration_s": 2.49,
+ "frames_24": 60,
+ "voiced_span_s": 1.35,
+ "pace": {
+  "words": 6,
+  "wpm": 266.7,
+  "speed": 1.14,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.14,
+   "speed_band": [
+    1.1,
+    1.18
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    180
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 266.7,
+   "articulation_sps": 4.44,
+   "syllables": 6,
+   "span_s": 1.35,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.85
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+ "voiceId": "af_river",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.140 (the centre of the band; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "O"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "So",
+   "t0": 0.51,
+   "t1": 0.735,
+   "f0": 12,
+   "f1": 18,
+   "ph": "sˌO"
+  },
+  {
+   "w": "where",
+   "t0": 0.773,
+   "t1": 0.898,
+   "f0": 19,
+   "f1": 22,
+   "ph": "wˌɛɹ"
+  },
+  {
+   "w": "the",
+   "t0": 0.898,
+   "t1": 1.035,
+   "f0": 22,
+   "f1": 25,
+   "ph": "ði"
+  },
+  {
+   "w": "old",
+   "t0": 1.035,
+   "t1": 1.272,
+   "f0": 25,
+   "f1": 31,
+   "ph": "ˈOld"
+  },
+  {
+   "w": "one",
+   "t0": 1.272,
+   "t1": 1.41,
+   "f0": 31,
+   "f1": 34,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "was",
+   "t0": 1.41,
+   "t1": 1.87,
+   "f0": 34,
+   "f1": 45,
+   "ph": "wʌz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.5,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 169.5,
+  "f0_range_st": 6.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "So where the old one was?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.193,
+  "align_median_s": 0.019,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 50.0,
+  "decay_ms": 145.0,
+  "decay_to_60_s": 0.205
+ },
+ "speaker_label": "INSTALLER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "136bfe53a65eb73a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.34,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.08,
+   "rechecked_alone": false
+  }
+ }
+}

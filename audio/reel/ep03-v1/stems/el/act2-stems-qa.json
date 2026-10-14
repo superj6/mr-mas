@@ -1,0 +1,164 @@
+{
+ "segment": "act2",
+ "variant": "el",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act2.json",
+ "seconds": 277.167,
+ "frames": 6652,
+ "rooms": [
+  {
+   "room": "lobby_day",
+   "recipe": "lobby_day: bed_lobby_day -37",
+   "from": -0.6,
+   "to": 96.483,
+   "first": "11.01",
+   "last": "11.09",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dinner",
+   "recipe": "dinner: bed_ep3_dinner -39",
+   "from": 95.483,
+   "to": 146.775,
+   "first": "12.01",
+   "last": "12.06",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.3
+  },
+  {
+   "room": "governor_office",
+   "recipe": "governor_office: bed_ep3_governor_office -39",
+   "from": 145.775,
+   "to": 183.567,
+   "first": "13.01",
+   "last": "13.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.6
+  },
+  {
+   "room": "boardroom_day",
+   "recipe": "boardroom_day: bed_boardroom_day -39",
+   "from": 182.567,
+   "to": 277.567,
+   "first": "14.01",
+   "last": "14.09",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 1.3
+  }
+ ],
+ "sfx": [
+  [
+   "11.05",
+   "door_gale",
+   58.292,
+   -20.0
+  ],
+  [
+   "13.03",
+   "veto_stamp",
+   164.542,
+   -20.0
+  ],
+  [
+   "13.03",
+   "hydra_pop",
+   164.542,
+   -20.0
+  ],
+  [
+   "14.06",
+   "odometer_clunk",
+   236.958,
+   -20.0
+  ],
+  [
+   "14.06",
+   "collar_snap",
+   236.958,
+   -20.0
+  ],
+  [
+   "14.09",
+   "one_dollar_tick",
+   273.167,
+   -20.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -36.68,
+  "peak_dbfs": -22.01,
+  "p10_50ms_dbfs": -39.6
+ },
+ "sfx_stem": {
+  "lufs": -31.61,
+  "peak_dbfs": -16.45,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 164.543,
+     "boundary": 164.542,
+     "ratio": 164.9,
+     "kind": "onset",
+     "before_dbfs": -39.5,
+     "after_dbfs": -26.4
+    },
+    {
+     "at": 236.961,
+     "boundary": 236.958,
+     "ratio": 187.2,
+     "kind": "step",
+     "before_dbfs": -32.7,
+     "after_dbfs": -27.3
+    },
+    {
+     "at": 273.17,
+     "boundary": 273.167,
+     "ratio": 737.0,
+     "kind": "step",
+     "before_dbfs": -35.5,
+     "after_dbfs": -30.3
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lobby_day@act2:11.01",
+   "p5_50ms_dbfs": -39.7,
+   "lift_db": 0.0
+  },
+  {
+   "room": "dinner@act2:12.01",
+   "p5_50ms_dbfs": -43.3,
+   "lift_db": 3.3
+  },
+  {
+   "room": "governor_office@act2:13.01",
+   "p5_50ms_dbfs": -43.6,
+   "lift_db": 3.6
+  },
+  {
+   "room": "boardroom_day@act2:14.01",
+   "p5_50ms_dbfs": -41.3,
+   "lift_db": 1.3
+  }
+ ]
+}

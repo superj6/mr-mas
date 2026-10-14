@@ -1,0 +1,407 @@
+{
+ "id": "e3-act3-0016",
+ "scene": "17A.05",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Then it's enter. It's the one I hit the most. I wear out about one a month.",
+ "spoken_as": "Then it's enter. It's the one I hit the most. I wear out about one a month.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "17A.05",
+ "shot_id": "17A.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.368,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0016.wav",
+ "mp3": null,
+ "duration_s": 4.75,
+ "frames_24": 114,
+ "voiced_span_s": 3.51,
+ "pace": {
+  "words": 17,
+  "wpm": 290.6,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 290.6,
+   "articulation_sps": 5.6,
+   "syllables": 19,
+   "span_s": 3.51,
+   "pauses_s": [
+    0.12
+   ]
+  },
+  "longest_internal_gap_s": 0.12,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.01
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "O"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "M"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "O"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "rest"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "A"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "O"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "A"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "M"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "O"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "A"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "M"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "E"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Then",
+   "t0": 0.47,
+   "t1": 0.575,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ðˈɛn"
+  },
+  {
+   "w": "it's",
+   "t0": 0.575,
+   "t1": 0.775,
+   "f0": 14,
+   "f1": 19,
+   "ph": "ɪts"
+  },
+  {
+   "w": "enter",
+   "t0": 0.775,
+   "t1": 1.15,
+   "f0": 19,
+   "f1": 28,
+   "ph": "ˈɛntəɹ"
+  },
+  {
+   "w": "It's",
+   "t0": 1.2,
+   "t1": 1.338,
+   "f0": 29,
+   "f1": 32,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "the",
+   "t0": 1.338,
+   "t1": 1.425,
+   "f0": 32,
+   "f1": 34,
+   "ph": "ðə"
+  },
+  {
+   "w": "one",
+   "t0": 1.425,
+   "t1": 1.562,
+   "f0": 34,
+   "f1": 37,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "I",
+   "t0": 1.562,
+   "t1": 1.7,
+   "f0": 37,
+   "f1": 41,
+   "ph": "ˌI"
+  },
+  {
+   "w": "hit",
+   "t0": 1.7,
+   "t1": 1.912,
+   "f0": 41,
+   "f1": 46,
+   "ph": "hˈɪt"
+  },
+  {
+   "w": "the",
+   "t0": 1.912,
+   "t1": 2.0,
+   "f0": 46,
+   "f1": 48,
+   "ph": "ðə"
+  },
+  {
+   "w": "most",
+   "t0": 2.0,
+   "t1": 2.475,
+   "f0": 48,
+   "f1": 59,
+   "ph": "mˈOst"
+  },
+  {
+   "w": "I",
+   "t0": 2.575,
+   "t1": 2.725,
+   "f0": 62,
+   "f1": 65,
+   "ph": "ˌI"
+  },
+  {
+   "w": "wear",
+   "t0": 2.725,
+   "t1": 2.925,
+   "f0": 65,
+   "f1": 70,
+   "ph": "wˈɛɹ"
+  },
+  {
+   "w": "out",
+   "t0": 2.925,
+   "t1": 3.112,
+   "f0": 70,
+   "f1": 75,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "about",
+   "t0": 3.112,
+   "t1": 3.375,
+   "f0": 75,
+   "f1": 81,
+   "ph": "əbˈWt"
+  },
+  {
+   "w": "one",
+   "t0": 3.375,
+   "t1": 3.537,
+   "f0": 81,
+   "f1": 85,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "a",
+   "t0": 3.537,
+   "t1": 3.6,
+   "f0": 85,
+   "f1": 86,
+   "ph": "ɐ"
+  },
+  {
+   "w": "month",
+   "t0": 3.6,
+   "t1": 4.03,
+   "f0": 86,
+   "f1": 97,
+   "ph": "mˈʌnθ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.62,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 123.0,
+  "f0_range_st": 13.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Then its enter is the one I hit the most. I wear out about one a month.",
+  "cer": 0.019,
+  "word_recall_nonames": 0.882,
+  "logprob": -0.208,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 235.0,
+  "decay_to_60_s": 0.29
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "af29e694073dd708",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 14.11,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 7.41,
+   "rechecked_alone": true
+  }
+ }
+}

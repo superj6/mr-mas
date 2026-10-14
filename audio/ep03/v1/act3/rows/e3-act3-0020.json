@@ -1,0 +1,365 @@
+{
+ "id": "e3-act3-0020",
+ "scene": "17A.05",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Good. Hang on to it. I've got caps lock doing enter for now.",
+ "spoken_as": "Good. Hang on to it. I've got caps lock doing enter for now.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "17A.05",
+ "shot_id": "17A.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.105,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0020.wav",
+ "mp3": null,
+ "duration_s": 3.98,
+ "frames_24": 96,
+ "voiced_span_s": 2.76,
+ "pace": {
+  "words": 13,
+  "wpm": 282.6,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 282.6,
+   "articulation_sps": 5.43,
+   "syllables": 15,
+   "span_s": 2.76,
+   "pauses_s": [
+    0.07
+   ]
+  },
+  "longest_internal_gap_s": 0.07,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.27
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "A"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "M"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "O"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "O"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Good",
+   "t0": 0.47,
+   "t1": 0.6,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ɡˈʊd"
+  },
+  {
+   "w": "Hang",
+   "t0": 0.65,
+   "t1": 0.838,
+   "f0": 16,
+   "f1": 20,
+   "ph": "hˈæŋ"
+  },
+  {
+   "w": "on",
+   "t0": 0.838,
+   "t1": 1.05,
+   "f0": 20,
+   "f1": 25,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "to",
+   "t0": 1.05,
+   "t1": 1.263,
+   "f0": 25,
+   "f1": 30,
+   "ph": "tʊ"
+  },
+  {
+   "w": "it",
+   "t0": 1.263,
+   "t1": 1.4,
+   "f0": 30,
+   "f1": 34,
+   "ph": "ɪt"
+  },
+  {
+   "w": "I've",
+   "t0": 1.45,
+   "t1": 1.588,
+   "f0": 35,
+   "f1": 38,
+   "ph": "ˌIv"
+  },
+  {
+   "w": "got",
+   "t0": 1.588,
+   "t1": 1.75,
+   "f0": 38,
+   "f1": 42,
+   "ph": "ɡɑt"
+  },
+  {
+   "w": "caps",
+   "t0": 1.75,
+   "t1": 2.075,
+   "f0": 42,
+   "f1": 50,
+   "ph": "kˈæps"
+  },
+  {
+   "w": "lock",
+   "t0": 2.075,
+   "t1": 2.35,
+   "f0": 50,
+   "f1": 56,
+   "ph": "lˈɑk"
+  },
+  {
+   "w": "doing",
+   "t0": 2.35,
+   "t1": 2.575,
+   "f0": 56,
+   "f1": 62,
+   "ph": "dˈuɪŋ"
+  },
+  {
+   "w": "enter",
+   "t0": 2.575,
+   "t1": 2.8,
+   "f0": 62,
+   "f1": 67,
+   "ph": "ˈɛntəɹ"
+  },
+  {
+   "w": "for",
+   "t0": 2.8,
+   "t1": 2.925,
+   "f0": 67,
+   "f1": 70,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "now",
+   "t0": 2.925,
+   "t1": 3.29,
+   "f0": 70,
+   "f1": 79,
+   "ph": "nˈW"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.83,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 124.2,
+  "f0_range_st": 10.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Good hang on to it, I've got caps locked doing enter for now.",
+  "cer": 0.045,
+  "word_recall_nonames": 0.923,
+  "logprob": -0.396,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 20.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.26
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "c1cccfdcc4d59b6d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 11.82,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 6.84,
+   "rechecked_alone": true
+  }
+ }
+}

@@ -71,7 +71,7 @@ def main():
         for role in ROLES:
             d=selected(role);save(OUT/role/'input.json',d)
             chars=sum(len(l['text']) for b in d['beats'] for l in b['lines'])*3
-            print(role,'baseline',chars,'script characters for3candidates; cap1500 per candidate including retake')
+            print(role,'baseline',chars,'script characters for 3 candidates; cap 1500 per candidate including retake')
             for letter in ['A','B','C']:print('$ '+' '.join(commands(role,letter,True)))
         return
     if a.mode=='render':
@@ -81,6 +81,17 @@ def main():
                 subprocess.run(commands(role,letter,a.dry_run),check=True,cwd=ROOT,
                                env=dict(__import__('os').environ,HF_HUB_OFFLINE='1',PYTHONDONTWRITEBYTECODE='1'))
         return
+    # Resolve carried speakers exactly as the production recorder does; featured auditions avoid main cast IDs.
+    registry=R.Cast(str(ROOT/'audio/ep03/cast-el.json'))
+    existing={};main_ids={}
+    speakers={l['who'] for seg in SEGS for b in load(ROOT/f'show/reel/ep03-v1/ep03-v1-{seg}.json')['beats'] for l in b.get('lines',[])}
+    for speaker in speakers-set(ROLES):
+        role=registry.role_of(speaker)
+        if registry.engine(role,'v1')=='kokoro':continue
+        letter=cast.get('set_cand',{}).get('A',{}).get(role,'A');candidate,_=registry.voice(role,letter)
+        existing.setdefault(candidate['voice_id'],[]).append(speaker)
+        if speaker in ['mas','gerg','nole','mario','rima','adelina','auhsoj','chatgtp']:
+            main_ids.setdefault(candidate['voice_id'],[]).append(speaker)
     results={};used=set();calls=[]
     for role in ROLES:
         ranked=[]
@@ -100,8 +111,10 @@ def main():
             pace=[(x.get('pace') or {}).get('wpm') for x in long]
             pace=[x for x in pace if x]
             if pace:penalty+=max(0,abs(statistics.median(pace)/target-1)-.15)*10
-            if c['voice_id'] in used:penalty+=20
-            ranked.append(dict(candidate=letter,voice=c['voice_name'],score=round(penalty,3),median_f0_hz=hz,raw_floor=raw,median_wpm=statistics.median(pace) if pace else None,
+            duplicate_main=main_ids.get(c['voice_id'],[])
+            duplicate_existing=existing.get(c['voice_id'],[])
+            if c['voice_id'] in used or duplicate_main:penalty+=20
+            ranked.append(dict(candidate=letter,voice=c['voice_name'],voice_id=c['voice_id'],duplicates_main=duplicate_main,duplicates_existing=duplicate_existing,score=round(penalty,3),median_f0_hz=hz,raw_floor=raw,median_wpm=statistics.median(pace) if pace else None,
                                rows=[dict(id=x['id'],text=x['text'],file=x['file'],qa=x.get('qa'),voice=x.get('voice')) for x in rows]))
             man=load(OUT/role/letter/'manifest.json');calls+=man.get('calls',[])
         ranked.sort(key=lambda x:x['score']);pick=ranked[0];letter=pick['candidate']
@@ -112,7 +125,7 @@ def main():
         print(role,'picked',letter,pick['voice'],'score',pick['score'])
     save(ROOT/'audio/ep03/cast-el.json',cast)
     costs=[float(x['cost_header']) for x in calls if x.get('cost_header') is not None]
-    report=dict(roles=results,requests=len(calls),sent_characters=sum(x.get('chars',0) for x in calls),
+    report=dict(roles=results,existing_library_usage=existing,featured_main_voice_ids=main_ids,requests=len(calls),sent_characters=sum(x.get('chars',0) for x in calls),
                 real_credit_cost=sum(costs) if len(costs)==len(calls) else None,
                 credit_headers_present=len(costs),calls=calls,heard=False)
     save(OUT/'index.json',report)

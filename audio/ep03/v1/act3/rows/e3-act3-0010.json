@@ -1,0 +1,428 @@
+{
+ "id": "e3-act3-0010",
+ "scene": "17A.03",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Nothing's broken. I'd know. I've got an alert on every service and an alert on the alerts.",
+ "spoken_as": "Nothing's broken. I'd know. I've got an alert on every service and an alert on the alerts.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "17A.03",
+ "shot_id": "17A.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.368,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0010.wav",
+ "mp3": null,
+ "duration_s": 6.025,
+ "frames_24": 145,
+ "voiced_span_s": 4.78,
+ "pace": {
+  "words": 17,
+  "wpm": 213.4,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 213.4,
+   "articulation_sps": 5.36,
+   "syllables": 25,
+   "span_s": 4.78,
+   "pauses_s": [
+    0.12,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.12,
+  "audible_in_s": 0.5,
+  "audible_out_s": 5.28
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "O"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "O"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "rest"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "O"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "O"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "O"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "O"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "E"
+  },
+  {
+   "t": 4.458,
+   "f": 107,
+   "shape": "O"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "E"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "O"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "E"
+  },
+  {
+   "t": 5.292,
+   "f": 127,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Nothing's",
+   "t0": 0.485,
+   "t1": 0.935,
+   "f0": 12,
+   "f1": 22,
+   "ph": "nˈʌθɪŋz"
+  },
+  {
+   "w": "broken",
+   "t0": 0.935,
+   "t1": 1.36,
+   "f0": 22,
+   "f1": 33,
+   "ph": "bɹˈOkən"
+  },
+  {
+   "w": "I'd",
+   "t0": 1.41,
+   "t1": 1.635,
+   "f0": 34,
+   "f1": 39,
+   "ph": "ˌId"
+  },
+  {
+   "w": "know",
+   "t0": 1.635,
+   "t1": 2.035,
+   "f0": 39,
+   "f1": 49,
+   "ph": "nˈO"
+  },
+  {
+   "w": "I've",
+   "t0": 2.135,
+   "t1": 2.31,
+   "f0": 51,
+   "f1": 55,
+   "ph": "ˌIv"
+  },
+  {
+   "w": "got",
+   "t0": 2.31,
+   "t1": 2.472,
+   "f0": 55,
+   "f1": 59,
+   "ph": "ɡɑt"
+  },
+  {
+   "w": "an",
+   "t0": 2.472,
+   "t1": 2.56,
+   "f0": 59,
+   "f1": 61,
+   "ph": "ɐn"
+  },
+  {
+   "w": "alert",
+   "t0": 2.56,
+   "t1": 2.898,
+   "f0": 61,
+   "f1": 70,
+   "ph": "əlˈɜɹt"
+  },
+  {
+   "w": "on",
+   "t0": 2.898,
+   "t1": 3.048,
+   "f0": 70,
+   "f1": 73,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "every",
+   "t0": 3.048,
+   "t1": 3.398,
+   "f0": 73,
+   "f1": 82,
+   "ph": "ˈɛvəɹi"
+  },
+  {
+   "w": "service",
+   "t0": 3.398,
+   "t1": 3.885,
+   "f0": 82,
+   "f1": 93,
+   "ph": "sˈɜɹvəs"
+  },
+  {
+   "w": "and",
+   "t0": 3.885,
+   "t1": 3.997,
+   "f0": 93,
+   "f1": 96,
+   "ph": "ænd"
+  },
+  {
+   "w": "an",
+   "t0": 3.997,
+   "t1": 4.085,
+   "f0": 96,
+   "f1": 98,
+   "ph": "ɐn"
+  },
+  {
+   "w": "alert",
+   "t0": 4.085,
+   "t1": 4.448,
+   "f0": 98,
+   "f1": 107,
+   "ph": "əlˈɜɹt"
+  },
+  {
+   "w": "on",
+   "t0": 4.448,
+   "t1": 4.572,
+   "f0": 107,
+   "f1": 110,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "the",
+   "t0": 4.572,
+   "t1": 4.685,
+   "f0": 110,
+   "f1": 112,
+   "ph": "ði"
+  },
+  {
+   "w": "alerts",
+   "t0": 4.685,
+   "t1": 5.3,
+   "f0": 112,
+   "f1": 127,
+   "ph": "əlˈɜɹts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.28,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 120.0,
+  "f0_range_st": 11.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Nothing's broken, I'd know. I've got an alert on every service and an alert on the alerts.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.187,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 25.0,
+  "decay_ms": 30.0,
+  "decay_to_60_s": 0.305
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "4311a53ee0ed3c58",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 13.69,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.47,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "groups": {
+  "auditions": {
+   "requests": 0,
+   "sent_characters": 0,
+   "credit_headers_present": 0,
+   "real_credits": 0
+  },
+  "film": {
+   "requests": 0,
+   "sent_characters": 0,
+   "credit_headers_present": 0,
+   "real_credits": 0
+  }
+ },
+ "total_requests": 0,
+ "sent_characters": 0,
+ "real_credits": 0,
+ "missing_credit_headers": 0,
+ "method": "Provider character-cost headers on recorded successful calls, including retakes; cache reuse spends zero.",
+ "calls": [],
+ "status": {
+  "user_authorization": "Explicit authorization received to send Episode 3 dialogue to ElevenLabs",
+  "approval_rejections": 2,
+  "blocked_by": "Platform absolute private-workspace-data export restriction to untrusted ElevenLabs destination",
+  "pending_user_permission": false,
+  "requests_executed": 0,
+  "next_requirement": "Platform destination-trust restriction must change; do not retry or bypass"
+ }
+}

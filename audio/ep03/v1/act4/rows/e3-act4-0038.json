@@ -1,0 +1,332 @@
+{
+ "id": "e3-act4-0038",
+ "scene": "23.03",
+ "speaker": "NOLE",
+ "speaker_slug": "nole",
+ "text": "Mas! You made it! How long have you been standing there?",
+ "spoken_as": "Mas! You made it! How long have you been standing there?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "23.03",
+ "shot_id": "23.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.882,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0038.wav",
+ "mp3": null,
+ "duration_s": 3.3,
+ "frames_24": 80,
+ "voiced_span_s": 2.32,
+ "pace": {
+  "words": 11,
+  "wpm": 284.5,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 284.5,
+   "articulation_sps": 5.17,
+   "syllables": 12,
+   "span_s": 2.32,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.82
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 1.040",
+ "voiceId": "am_fenrir",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @180 Hz Q0.9",
+  "peak +2 dB @2500 Hz Q1.0",
+  "comp 4.0:1 @-20 dB (3/60 ms)",
+  "tanh saturation drive 2.5 mix 0.25",
+  "Kokoro speed 1.040 (the centre of the band; nole band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "M"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "M"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Mas",
+   "t0": 0.48,
+   "t1": 0.755,
+   "f0": 12,
+   "f1": 18,
+   "ph": "mˈɑz"
+  },
+  {
+   "w": "You",
+   "t0": 0.792,
+   "t1": 0.905,
+   "f0": 19,
+   "f1": 22,
+   "ph": "jˌu"
+  },
+  {
+   "w": "made",
+   "t0": 0.905,
+   "t1": 1.13,
+   "f0": 22,
+   "f1": 27,
+   "ph": "mˌAd"
+  },
+  {
+   "w": "it",
+   "t0": 1.13,
+   "t1": 1.255,
+   "f0": 27,
+   "f1": 30,
+   "ph": "ɪt"
+  },
+  {
+   "w": "How",
+   "t0": 1.305,
+   "t1": 1.505,
+   "f0": 31,
+   "f1": 36,
+   "ph": "hˌW"
+  },
+  {
+   "w": "long",
+   "t0": 1.505,
+   "t1": 1.742,
+   "f0": 36,
+   "f1": 42,
+   "ph": "lˈɔŋ"
+  },
+  {
+   "w": "have",
+   "t0": 1.742,
+   "t1": 1.842,
+   "f0": 42,
+   "f1": 44,
+   "ph": "hæv"
+  },
+  {
+   "w": "you",
+   "t0": 1.842,
+   "t1": 1.917,
+   "f0": 44,
+   "f1": 46,
+   "ph": "ju"
+  },
+  {
+   "w": "been",
+   "t0": 1.917,
+   "t1": 2.055,
+   "f0": 46,
+   "f1": 49,
+   "ph": "bɪn"
+  },
+  {
+   "w": "standing",
+   "t0": 2.055,
+   "t1": 2.505,
+   "f0": 49,
+   "f1": 60,
+   "ph": "stˈændɪŋ"
+  },
+  {
+   "w": "there",
+   "t0": 2.505,
+   "t1": 2.84,
+   "f0": 60,
+   "f1": 68,
+   "ph": "ðˈɛɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.44,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 145.8,
+  "f0_range_st": 14.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Maz, you made it. How long have you been standing there?",
+  "cer": 0.023,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.178,
+  "align_median_s": 0.04,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 130.0,
+  "decay_to_60_s": 0.03
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f188e3366754c22d",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 6.45,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.35,
+   "rechecked_alone": false
+  }
+ }
+}

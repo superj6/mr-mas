@@ -1,0 +1,206 @@
+{
+ "id": "e3-vo-08",
+ "scene": "11.08",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "keep the review. change the names on it.",
+ "spoken_as": "keep the review. change the names on it.",
+ "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "11.08",
+ "shot_id": "11.08",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.0,
+ "file": "audio/ep03/v1/act2/wav/e3-vo-08.wav",
+ "mp3": null,
+ "duration_s": 3.7,
+ "frames_24": 89,
+ "voiced_span_s": 2.4,
+ "pace": {
+  "words": 8,
+  "wpm": 200.0,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "close dry thought, lowercase, unhurried, never a slogan"
+  },
+  "measured": {
+   "wpm": 200.0,
+   "articulation_sps": 4.21,
+   "syllables": 9,
+   "span_s": 2.4,
+   "pauses_s": [
+    0.26
+   ]
+  },
+  "longest_internal_gap_s": 0.26,
+  "audible_in_s": 0.57,
+  "audible_out_s": 2.97
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "keep",
+   "t0": 0.54,
+   "t1": 0.765,
+   "f0": 13,
+   "f1": 18,
+   "ph": "kˈip"
+  },
+  {
+   "w": "the",
+   "t0": 0.765,
+   "t1": 0.865,
+   "f0": 18,
+   "f1": 21,
+   "ph": "ðə"
+  },
+  {
+   "w": "review",
+   "t0": 0.865,
+   "t1": 1.48,
+   "f0": 21,
+   "f1": 36,
+   "ph": "ɹəvjˈu"
+  },
+  {
+   "w": "change",
+   "t0": 1.69,
+   "t1": 2.078,
+   "f0": 41,
+   "f1": 50,
+   "ph": "ʧˈAnʤ"
+  },
+  {
+   "w": "the",
+   "t0": 2.078,
+   "t1": 2.165,
+   "f0": 50,
+   "f1": 52,
+   "ph": "ðə"
+  },
+  {
+   "w": "names",
+   "t0": 2.165,
+   "t1": 2.59,
+   "f0": 52,
+   "f1": 62,
+   "ph": "nˈAmz"
+  },
+  {
+   "w": "on",
+   "t0": 2.59,
+   "t1": 2.84,
+   "f0": 62,
+   "f1": 68,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "it",
+   "t0": 2.84,
+   "t1": 2.99,
+   "f0": 68,
+   "f1": 72,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -1.77,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.57,
+  "median_f0_hz": 118.1,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Keep the review, change the names on it.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.163,
+  "align_median_s": 0.076,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.57,
+  "speech_tail_s": 0.45,
+  "rise_ms": 65.0,
+  "decay_ms": 170.0,
+  "decay_to_60_s": 0.285
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "9f59b94240e757b1",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.62,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 2.66,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "reason": "Remove inherited ElevenLabs-complete labels from all-stock masters",
+ "records": [
+  {
+   "segment": "coldopen",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "3e95e93636375e009f1d59b627d8c1911b67b499",
+   "beats_unchanged": true
+  },
+  {
+   "segment": "act1",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "b5ffd2b425cfbab4933c7b3829b3cda747646995",
+   "beats_unchanged": true
+  },
+  {
+   "segment": "act2",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "89cdc13ca1c481b61811108ac8539d0fe6120ee5",
+   "beats_unchanged": true
+  },
+  {
+   "segment": "act3",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "7b14b9e08279e7a64a7e7ba11868f8a6fb624b61",
+   "beats_unchanged": true
+  },
+  {
+   "segment": "act4",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "20fc770dc6ecc6c29b290a9b5e13af138886a995",
+   "beats_unchanged": true
+  },
+  {
+   "segment": "tag",
+   "field": "variant",
+   "before": "stick-figure dialogue reel Ep3 v1 BASE LOCK (Kokoro timing) \u00b7 the v1 takes \u00b7 temp bed \u00b7 ElevenLabs set A takes (eleven_multilingual_v2, library voices), EL-timed: the lock's gaps kept, beats changed only by the takes' lengths \u00b7 Kokoro in the EL cast: mario (the lock's own takes)",
+   "after": "Episode 3 v1 canonical master: programmatic offline Kokoro stock voices; no paid requests",
+   "beats_sha1": "139bc8706eca135f443179e6b8367200a0247743",
+   "beats_unchanged": true
+  }
+ ],
+ "stems_metadata_fingerprint_before": "c281a65621145a2f06282533f1c6694e9ae21ee0",
+ "stems_metadata_fingerprint_after": "98278e31b8284062ea605f9210fd6e05b6cadc8e",
+ "media_changed": false,
+ "historical_snapshot": {
+  "commit": "b13d8ae",
+  "preserved_film": "out/ep03/v1/ep03-v1-programmatic.mp4",
+  "snapshot_unchanged": true,
+  "note": "Verbatim pre-rail input metadata retained, including inherited internal ElevenLabs variant labels. All story rows/media are stock. Current canonical labels were corrected after the programmatic film copy, with identical beat hashes."
+ }
+}

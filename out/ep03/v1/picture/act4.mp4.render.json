@@ -1,0 +1,88 @@
+{
+ "seg": "act4",
+ "frames": 5676,
+ "mode": "scenes",
+ "out": "out/ep03/v1/picture/act4.mp4",
+ "cache": "out/ep03/v1/scenes/act4",
+ "seconds": 26,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "bundle_built": "2026-10-14T04:03:42.487Z",
+ "glyph_dir": null,
+ "glyph_mode": "splice",
+ "standins": [],
+ "layout_problems": [],
+ "rendered": [
+  "21"
+ ],
+ "cached": [
+  "22",
+  "23"
+ ],
+ "scenes": [
+  {
+   "id": "21",
+   "s": 0,
+   "e": 1375,
+   "frames": 1375,
+   "key": "1aba0d95ff893f6597a7817a45c7e83276b891b20c559e2b5d925fb095c130d6",
+   "file": "out/ep03/v1/scenes/act4/sc-21-1aba0d95ff893f65.mp4",
+   "status": "rendered",
+   "changed": [
+    "slice"
+   ],
+   "ms": 25587,
+   "code": "1 scene module(s), 74 files",
+   "stats": {
+    "ms": 25179,
+    "spliced": {
+     "pic": 0,
+     "anim": 0
+    },
+    "marked": [],
+    "spliceOff": [],
+    "missing": [],
+    "failed": {},
+    "overlaid": {
+     "pic": 0,
+     "anim": 0
+    },
+    "overlayMissing": [],
+    "overlayRefused": {},
+    "standins": []
+   }
+  },
+  {
+   "id": "22",
+   "s": 1375,
+   "e": 4084,
+   "frames": 2709,
+   "key": "f0a096d02bef5273bcc4ff3b23d32d0520f16fab08bc63c0294659eb2995b100",
+   "file": "out/ep03/v1/scenes/act4/sc-22-f0a096d02bef5273.mp4",
+   "status": "cached",
+   "changed": [],
+   "ms": null,
+   "code": "1 scene module(s), 74 files",
+   "stats": null
+  },
+  {
+   "id": "23",
+   "s": 4084,
+   "e": 5676,
+   "frames": 1592,
+   "key": "618dfe3983eedd7acd2cf09fecb425d7d5a746cf1c4766eb4171c73d2dbfe6de",
+   "file": "out/ep03/v1/scenes/act4/sc-23-618dfe3983eedd7a.mp4",
+   "status": "cached",
+   "changed": [],
+   "ms": null,
+   "code": "1 scene module(s), 74 files",
+   "stats": null
+  }
+ ]
+}

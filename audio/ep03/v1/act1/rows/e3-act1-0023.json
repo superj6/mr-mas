@@ -1,0 +1,566 @@
+{
+ "id": "e3-act1-0023",
+ "scene": "8.01",
+ "speaker": "PANEL HOST",
+ "speaker_slug": "panel-host",
+ "text": "Folks, it's fourth and strawberry. Lining up for the count, the reigning champion, who has counted a lot of R's. Not these ones. But a lot.",
+ "spoken_as": "Folks, it's fourth and strawberry. Lining up for the count, the reigning champion, who has counted a lot of R's. Not these ones. But a lot.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.01",
+ "shot_id": "8.01",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 9.455,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0023.wav",
+ "mp3": null,
+ "duration_s": 8.52,
+ "frames_24": 205,
+ "voiced_span_s": 7.52,
+ "pace": {
+  "words": 26,
+  "wpm": 207.4,
+  "speed": 1.01,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.01,
+   "speed_band": [
+    0.97,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 207.4,
+   "articulation_sps": 4.73,
+   "syllables": 33,
+   "span_s": 7.52,
+   "pauses_s": [
+    0.32,
+    0.12,
+    0.11
+   ]
+  },
+  "longest_internal_gap_s": 0.32,
+  "audible_in_s": 0.51,
+  "audible_out_s": 8.03
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_sarah*0.45+am_puck*0.55 (Kokoro-82M stock) · c-sarah-puck-host · speed 1.010",
+ "voiceId": "af_sarah*0.45+am_puck*0.55",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.010 (the centre of the band; panel-host band 0.97-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "M"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "rest"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "M"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "O"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "A"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "A"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "E"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "A"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "M"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "E"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "O"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "A"
+  },
+  {
+   "t": 5.0,
+   "f": 120,
+   "shape": "E"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "A"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "E"
+  },
+  {
+   "t": 5.417,
+   "f": 130,
+   "shape": "A"
+  },
+  {
+   "t": 6.083,
+   "f": 146,
+   "shape": "E"
+  },
+  {
+   "t": 6.542,
+   "f": 157,
+   "shape": "A"
+  },
+  {
+   "t": 6.625,
+   "f": 159,
+   "shape": "E"
+  },
+  {
+   "t": 6.917,
+   "f": 166,
+   "shape": "O"
+  },
+  {
+   "t": 7.0,
+   "f": 168,
+   "shape": "A"
+  },
+  {
+   "t": 7.167,
+   "f": 172,
+   "shape": "E"
+  },
+  {
+   "t": 7.292,
+   "f": 175,
+   "shape": "rest"
+  },
+  {
+   "t": 7.5,
+   "f": 180,
+   "shape": "A"
+  },
+  {
+   "t": 7.583,
+   "f": 182,
+   "shape": "E"
+  },
+  {
+   "t": 7.708,
+   "f": 185,
+   "shape": "A"
+  },
+  {
+   "t": 7.958,
+   "f": 191,
+   "shape": "E"
+  },
+  {
+   "t": 8.042,
+   "f": 193,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Folks",
+   "t0": 0.54,
+   "t1": 0.865,
+   "f0": 13,
+   "f1": 21,
+   "ph": "fˈOks"
+  },
+  {
+   "w": "it's",
+   "t0": 0.915,
+   "t1": 1.128,
+   "f0": 22,
+   "f1": 27,
+   "ph": "ɪts"
+  },
+  {
+   "w": "fourth",
+   "t0": 1.128,
+   "t1": 1.49,
+   "f0": 27,
+   "f1": 36,
+   "ph": "fˈɔɹθ"
+  },
+  {
+   "w": "and",
+   "t0": 1.49,
+   "t1": 1.615,
+   "f0": 36,
+   "f1": 39,
+   "ph": "ænd"
+  },
+  {
+   "w": "strawberry",
+   "t0": 1.615,
+   "t1": 2.34,
+   "f0": 39,
+   "f1": 56,
+   "ph": "stɹˈɔbˌɛɹi"
+  },
+  {
+   "w": "Lining",
+   "t0": 2.602,
+   "t1": 2.953,
+   "f0": 62,
+   "f1": 71,
+   "ph": "lˈInɪŋ"
+  },
+  {
+   "w": "up",
+   "t0": 2.953,
+   "t1": 3.14,
+   "f0": 71,
+   "f1": 75,
+   "ph": "ˌʌp"
+  },
+  {
+   "w": "for",
+   "t0": 3.14,
+   "t1": 3.253,
+   "f0": 75,
+   "f1": 78,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 3.253,
+   "t1": 3.352,
+   "f0": 78,
+   "f1": 80,
+   "ph": "ðə"
+  },
+  {
+   "w": "count",
+   "t0": 3.352,
+   "t1": 3.715,
+   "f0": 80,
+   "f1": 89,
+   "ph": "kˈWnt"
+  },
+  {
+   "w": "the",
+   "t0": 3.765,
+   "t1": 3.865,
+   "f0": 90,
+   "f1": 93,
+   "ph": "ðə"
+  },
+  {
+   "w": "reigning",
+   "t0": 3.865,
+   "t1": 4.252,
+   "f0": 93,
+   "f1": 102,
+   "ph": "ɹˈAnɪŋ"
+  },
+  {
+   "w": "champion",
+   "t0": 4.252,
+   "t1": 4.74,
+   "f0": 102,
+   "f1": 114,
+   "ph": "ʧˈæmpiən"
+  },
+  {
+   "w": "who",
+   "t0": 4.778,
+   "t1": 4.878,
+   "f0": 115,
+   "f1": 117,
+   "ph": "hˌu"
+  },
+  {
+   "w": "has",
+   "t0": 4.878,
+   "t1": 5.04,
+   "f0": 117,
+   "f1": 121,
+   "ph": "hæz"
+  },
+  {
+   "w": "counted",
+   "t0": 5.04,
+   "t1": 5.428,
+   "f0": 121,
+   "f1": 130,
+   "ph": "kˈWntᵻd"
+  },
+  {
+   "w": "a",
+   "t0": 5.428,
+   "t1": 5.49,
+   "f0": 130,
+   "f1": 132,
+   "ph": "ɐ"
+  },
+  {
+   "w": "lot",
+   "t0": 5.49,
+   "t1": 5.678,
+   "f0": 132,
+   "f1": 136,
+   "ph": "lˈɑt"
+  },
+  {
+   "w": "of",
+   "t0": 5.678,
+   "t1": 5.765,
+   "f0": 136,
+   "f1": 138,
+   "ph": "ʌv"
+  },
+  {
+   "w": "R's",
+   "t0": 5.765,
+   "t1": 6.365,
+   "f0": 138,
+   "f1": 153,
+   "ph": "ˈɑɹz"
+  },
+  {
+   "w": "Not",
+   "t0": 6.465,
+   "t1": 6.69,
+   "f0": 155,
+   "f1": 161,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "these",
+   "t0": 6.69,
+   "t1": 6.915,
+   "f0": 161,
+   "f1": 166,
+   "ph": "ðiz"
+  },
+  {
+   "w": "ones",
+   "t0": 6.915,
+   "t1": 7.29,
+   "f0": 166,
+   "f1": 175,
+   "ph": "wˈʌnz"
+  },
+  {
+   "w": "But",
+   "t0": 7.365,
+   "t1": 7.502,
+   "f0": 177,
+   "f1": 180,
+   "ph": "bˌʌt"
+  },
+  {
+   "w": "a",
+   "t0": 7.502,
+   "t1": 7.59,
+   "f0": 180,
+   "f1": 182,
+   "ph": "ɐ"
+  },
+  {
+   "w": "lot",
+   "t0": 7.59,
+   "t1": 8.05,
+   "f0": 182,
+   "f1": 193,
+   "ph": "lˈɑt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.91,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 135.3,
+  "f0_range_st": 13.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Folks, it's fourth in strawberry, lining up for the count the reigning champion who has counted a lot of ours. Not these ones, but a lot.",
+  "cer": 0.038,
+  "word_recall_nonames": 0.923,
+  "logprob": -0.192,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.385,
+  "rise_ms": 115.0,
+  "decay_ms": 50.0,
+  "decay_to_60_s": 0.11
+ },
+ "speaker_label": "ANNOUNCER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "623b89fdacc769f5",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 22.58,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 9.5,
+   "rechecked_alone": true
+  }
+ }
+}

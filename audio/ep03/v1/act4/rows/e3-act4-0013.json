@@ -1,0 +1,242 @@
+{
+ "id": "e3-act4-0013",
+ "scene": "21.05",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "People will notice the shut one.",
+ "spoken_as": "People will notice the shut one.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "21.05",
+ "shot_id": "21.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.895,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0013.wav",
+ "mp3": null,
+ "duration_s": 2.41,
+ "frames_24": 58,
+ "voiced_span_s": 1.27,
+ "pace": {
+  "words": 6,
+  "wpm": 283.5,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 283.5,
+   "articulation_sps": 6.3,
+   "syllables": 8,
+   "span_s": 1.27,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.77
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.417,
+   "f": 10,
+   "shape": "M"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "People",
+   "t0": 0.47,
+   "t1": 0.702,
+   "f0": 11,
+   "f1": 17,
+   "ph": "pˈipᵊl"
+  },
+  {
+   "w": "will",
+   "t0": 0.702,
+   "t1": 0.802,
+   "f0": 17,
+   "f1": 19,
+   "ph": "wɪl"
+  },
+  {
+   "w": "notice",
+   "t0": 0.802,
+   "t1": 1.102,
+   "f0": 19,
+   "f1": 26,
+   "ph": "nˈOTəs"
+  },
+  {
+   "w": "the",
+   "t0": 1.102,
+   "t1": 1.228,
+   "f0": 26,
+   "f1": 29,
+   "ph": "ðə"
+  },
+  {
+   "w": "shut",
+   "t0": 1.228,
+   "t1": 1.453,
+   "f0": 29,
+   "f1": 35,
+   "ph": "ʃˈʌt"
+  },
+  {
+   "w": "one",
+   "t0": 1.453,
+   "t1": 1.79,
+   "f0": 35,
+   "f1": 43,
+   "ph": "wˈʌn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.61,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 144.3,
+  "f0_range_st": 11.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "People will notice the shut one.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.188,
+  "align_median_s": 0.037,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 30.0,
+  "decay_ms": 140.0,
+  "decay_to_60_s": 0.19
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b5c6bd6ab59cc4ac",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.18,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.07,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,117 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e3-act2-0006",
+   "kind": "pace",
+   "note": "articulation 5.73 syll/s against the guide 4.0-4.6"
+  },
+  {
+   "id": "e3-act2-0010",
+   "kind": "asr",
+   "note": "ASR missed a word: 'The handover dock is in the shared drive. Every system in it has a name next to it now, and none of them are mine. Tuesday's review is still at 10.' (recall 0.968)"
+  },
+  {
+   "id": "e3-act2-0017",
+   "kind": "asr",
+   "note": "ASR missed a word: 'by Rima by other two' (recall 0.5)"
+  },
+  {
+   "id": "e3-act2-0021",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Send it to the person beside me in the dock.' (recall 0.9)"
+  },
+  {
+   "id": "e3-act2-0022",
+   "kind": "pace",
+   "note": "articulation 6.47 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act2-0024",
+   "kind": "pace",
+   "note": "articulation 6.6 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act2-0026",
+   "kind": "asr",
+   "note": "ASR missed a word: 'War.' (recall 0.0)"
+  },
+  {
+   "id": "e3-act2-0033",
+   "kind": "pace",
+   "note": "articulation 6.11 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act2-0037",
+   "kind": "pace",
+   "note": "articulation 2.91 syll/s against the guide 3.6-4.2"
+  },
+  {
+   "id": "e3-act2-0038",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Mine's fine, it's un-sabbatical.' (recall 0.6)"
+  },
+  {
+   "id": "e3-act2-0043",
+   "kind": "asr",
+   "note": "ASR missed a word: 'It was a light touch, Bill. That was the whole point of it.' (recall 0.917)"
+  },
+  {
+   "id": "e3-act2-0044",
+   "kind": "asr",
+   "note": "ASR missed a word: 'And I touch it lightly.' (recall 0.8)"
+  },
+  {
+   "id": "e3-act2-0047",
+   "kind": "pace",
+   "note": "articulation 6.95 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act2-0049",
+   "kind": "asr",
+   "note": "ASR missed a word: 'In the one after that.' (recall 0.8)"
+  },
+  {
+   "id": "e3-act2-0059",
+   "kind": "pace",
+   "note": "articulation 5.6 syll/s against the guide 4.2-4.8"
+  },
+  {
+   "id": "e3-act2-0062",
+   "kind": "asr",
+   "note": "ASR missed a word: 'nonprofit at 157 billion.' (recall 0.375)"
+  },
+  {
+   "id": "e3-act2-0066",
+   "kind": "asr",
+   "note": "ASR missed a word: 'And you owns a nonprofit.' (recall 0.6)"
+  }
+ ],
+ "totals": {
+  "lines": 70,
+  "words": 537,
+  "audible_s": 152.2,
+  "wpm_overall": 212.0
+ },
+ "stringouts": [
+  "audio/ep03/v1/act2/reel/sc11.01-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.02-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.03-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.04-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.06-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.08-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc11.09-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc12.03-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc12.04-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc12.06-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc13.02-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc13.04-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.02-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.03-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.04-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.05-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.07-fast-stringout.mp3",
+  "audio/ep03/v1/act2/reel/sc14.08-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

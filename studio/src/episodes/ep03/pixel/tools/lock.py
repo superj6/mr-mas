@@ -479,7 +479,13 @@ def main() -> int:
                 u = s0 + fr(float(o["until"])) if o.get("until") is not None else sh["e"]
                 sh["onscreen"].append(OrderedDict(text=t, s=a - sh["s"], e=u - sh["s"]))
                 pk = o.get("kind")
-                if pk and pk != "rail":
+                if pk == "rail":
+                    # Ep3's plan carries an explicit kind without a textual prefix.
+                    # Keep dates in the host's reserved rail band and transcript.
+                    rt = t[6:] if t.upper().startswith("RAIL: ") else t
+                    RAILS.append(OrderedDict(text=rt, s=a, e=u, shot=sh["id"], floor_f=floor_f(rt)))
+                    continue
+                if pk:
                     # Ep3: the beat plan's own kind (its onscreen_items, carried by the base lock): a post, doc, sign,
                     # plate, card, stat, caption, lower-third, toast or ui item is drawn as what it is, with its words as
                     # written (no "POST:"/"NAME:" prefix to parse; a post is a text of kind "post", never a silent line)

@@ -70,6 +70,8 @@ audio/ost/tracks/*/render/**/*.mp3
 audio/ep01/**/*.wav
 audio/ep02/**/*.wav
 audio/ep03/**/*.wav
+audio/ep03/**/*.mp3
+audio/ep03/**/*.flac
 out/**/*.wav
 # Derived web copies for the review page (sources live elsewhere in out/)
 out/review/*.mp4
@@ -100,3 +102,11 @@ audio/ep03/v1-el/cache/
 
 # Episode 3 intro audio is a byte-identical derived copy of the aired Ep1 master.
 audio/intro/ep03/*.wav
+
+# Ep3 intermediate galleries and content-addressed scene caches are reproducible.
+# Commit the selected encoded-film/rail stills and final contact sheets instead.
+out/ep03/v1/review/source/
+out/ep03/v1/review/local-lock/
+out/ep03/v1/review/local-lock-fixed/
+out/ep03/v1/review/local-lock-final-art/
+out/ep03/v1/scenes/

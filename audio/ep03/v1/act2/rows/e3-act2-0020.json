@@ -1,0 +1,252 @@
+{
+ "id": "e3-act2-0020",
+ "scene": "11.06",
+ "speaker": "PHOTOGRAPHER",
+ "speaker_slug": "photographer",
+ "text": "Would you like a maintenance plan?",
+ "spoken_as": "Would you like a maintenance plan?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.06",
+ "shot_id": "11.06",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.182,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0020.wav",
+ "mp3": null,
+ "duration_s": 2.655,
+ "frames_24": 64,
+ "voiced_span_s": 1.51,
+ "pace": {
+  "words": 6,
+  "wpm": 238.4,
+  "speed": 1.14,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.14,
+   "speed_band": [
+    1.1,
+    1.18
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    180
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 238.4,
+   "articulation_sps": 5.3,
+   "syllables": 8,
+   "span_s": 1.51,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.01
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+ "voiceId": "af_river",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.140 (the centre of the band; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "O"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "M"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "M"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Would",
+   "t0": 0.47,
+   "t1": 0.585,
+   "f0": 11,
+   "f1": 14,
+   "ph": "wˌʊd"
+  },
+  {
+   "w": "you",
+   "t0": 0.585,
+   "t1": 0.735,
+   "f0": 14,
+   "f1": 18,
+   "ph": "ju"
+  },
+  {
+   "w": "like",
+   "t0": 0.735,
+   "t1": 0.948,
+   "f0": 18,
+   "f1": 23,
+   "ph": "lˈIk"
+  },
+  {
+   "w": "a",
+   "t0": 0.948,
+   "t1": 1.035,
+   "f0": 23,
+   "f1": 25,
+   "ph": "ɐ"
+  },
+  {
+   "w": "maintenance",
+   "t0": 1.035,
+   "t1": 1.51,
+   "f0": 25,
+   "f1": 36,
+   "ph": "mˈAntᵊnəns"
+  },
+  {
+   "w": "plan",
+   "t0": 1.51,
+   "t1": 2.03,
+   "f0": 36,
+   "f1": 49,
+   "ph": "plˈæn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.1,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 164.7,
+  "f0_range_st": 6.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Would you like a maintenance plan?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.267,
+  "align_median_s": 0.046,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 15.0,
+  "decay_ms": 70.0,
+  "decay_to_60_s": 0.2
+ },
+ "speaker_label": "INSTALLER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "5b38758c5306144e",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.32,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.2,
+   "rechecked_alone": false
+  }
+ }
+}

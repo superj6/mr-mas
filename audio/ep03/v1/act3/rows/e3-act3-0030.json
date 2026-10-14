@@ -1,0 +1,212 @@
+{
+ "id": "e3-act3-0030",
+ "scene": "18.02",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "I read the footnotes.",
+ "spoken_as": "I read the footnotes.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.02",
+ "shot_id": "18.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.455,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0030.wav",
+ "mp3": null,
+ "duration_s": 2.3,
+ "frames_24": 56,
+ "voiced_span_s": 1.32,
+ "pace": {
+  "words": 4,
+  "wpm": 181.8,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 181.8,
+   "articulation_sps": 3.79,
+   "syllables": 5,
+   "span_s": 1.32,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 1.82
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.040 (the centre of the band; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I",
+   "t0": 0.475,
+   "t1": 0.662,
+   "f0": 11,
+   "f1": 16,
+   "ph": "ˌI"
+  },
+  {
+   "w": "read",
+   "t0": 0.662,
+   "t1": 0.912,
+   "f0": 16,
+   "f1": 22,
+   "ph": "ɹˈɛd"
+  },
+  {
+   "w": "the",
+   "t0": 0.912,
+   "t1": 1.037,
+   "f0": 22,
+   "f1": 25,
+   "ph": "ðə"
+  },
+  {
+   "w": "footnotes",
+   "t0": 1.037,
+   "t1": 1.84,
+   "f0": 25,
+   "f1": 44,
+   "ph": "fˈʊtnˌOts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.07,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 123.0,
+  "f0_range_st": 14.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I read the footnotes.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.43,
+  "align_median_s": 0.037,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 10.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.04
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ee5e9da8d993550a",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.23,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.11,
+   "rechecked_alone": false
+  }
+ }
+}

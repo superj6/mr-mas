@@ -1,5 +1,7 @@
 # MR. MAS: handoff for the next agent
 
+> **Continuation update, 2026-10-13:** Episode 3 now has a complete unpublished Codex first cut, **20:03.00**, at `out/ep03/v1/ep03-v1.mp4`. Read its [DELIVERY.md](../show/episodes/ep03/production/v1/DELIVERY.md), [watchlist](../show/episodes/ep03/production/v1/assembly/watchlist-film.md) and [production README](../show/episodes/ep03/production/v1/README.md) before changing it. New dialogue uses local Kokoro stock voices. The user explicitly authorized sending Ep3 dialogue to ElevenLabs, but automatic approval review still rejected it under the platform's restriction on private text sent to an untrusted destination; **0 requests / 0 credits**. No further user confirmation is pending. Do not retry or route around this restriction; a future paid pass requires the platform's destination-trust restriction to change. Episode 1 remains locked and Episode 2 remains unchanged. Episodes 4–12 are still drafts. The original kickoff and Ep3 findings below describe the starting state and build brief; they do not mean Ep3 is still unbuilt.
+
 > **Written 2026-10-13, after Episode 2 v1 was finished.** This is for an agent (Claude Code, Codex or anything else) picking up the show with no memory of earlier sessions. It covers:
 > - what's done;
 > - what "continue" means;

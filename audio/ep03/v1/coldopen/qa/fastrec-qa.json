@@ -1,0 +1,29 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e3-coldopen-0002",
+   "kind": "pace",
+   "note": "articulation 3.12 syll/s against the guide 4.3-5.3"
+  },
+  {
+   "id": "e3-coldopen-0009",
+   "kind": "pace",
+   "note": "articulation 3.54 syll/s against the guide 4.3-5.3"
+  }
+ ],
+ "totals": {
+  "lines": 11,
+  "words": 85,
+  "audible_s": 23.7,
+  "wpm_overall": 215.0
+ },
+ "stringouts": [
+  "audio/ep03/v1/coldopen/reel/sc2.01-fast-stringout.mp3",
+  "audio/ep03/v1/coldopen/reel/sc2.02-fast-stringout.mp3",
+  "audio/ep03/v1/coldopen/reel/sc2.03-fast-stringout.mp3",
+  "audio/ep03/v1/coldopen/reel/sc3.01-fast-stringout.mp3",
+  "audio/ep03/v1/coldopen/reel/sc3.02-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

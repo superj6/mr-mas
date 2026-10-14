@@ -1,0 +1,278 @@
+{
+ "id": "e3-act4-0043",
+ "scene": "23.04",
+ "speaker": "NOLE",
+ "speaker_slug": "nole",
+ "text": "I'm on the step, Mas. You're in the line.",
+ "spoken_as": "I'm on the step, Mas. You're in the line.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "23.04",
+ "shot_id": "23.04",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.176,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0043.wav",
+ "mp3": null,
+ "duration_s": 2.68,
+ "frames_24": 65,
+ "voiced_span_s": 1.69,
+ "pace": {
+  "words": 9,
+  "wpm": 319.5,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.8,
+    5.6
+   ],
+   "turn_wpm_guide": [
+    165,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 319.5,
+   "articulation_sps": 5.33,
+   "syllables": 9,
+   "span_s": 1.69,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.19
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_fenrir (Kokoro-82M stock) · a-fenrir-burst (pass-1 pick, dry) · speed 1.040",
+ "voiceId": "am_fenrir",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak +1.5 dB @180 Hz Q0.9",
+  "peak +2 dB @2500 Hz Q1.0",
+  "comp 4.0:1 @-20 dB (3/60 ms)",
+  "tanh saturation drive 2.5 mix 0.25",
+  "Kokoro speed 1.040 (the centre of the band; nole band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "O"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "A"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I'm",
+   "t0": 0.47,
+   "t1": 0.587,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "on",
+   "t0": 0.587,
+   "t1": 0.688,
+   "f0": 14,
+   "f1": 16,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "the",
+   "t0": 0.688,
+   "t1": 0.775,
+   "f0": 16,
+   "f1": 19,
+   "ph": "ðə"
+  },
+  {
+   "w": "step",
+   "t0": 0.775,
+   "t1": 1.025,
+   "f0": 19,
+   "f1": 25,
+   "ph": "stˈɛp"
+  },
+  {
+   "w": "Mas",
+   "t0": 1.075,
+   "t1": 1.4,
+   "f0": 26,
+   "f1": 34,
+   "ph": "mˈɑz"
+  },
+  {
+   "w": "You're",
+   "t0": 1.45,
+   "t1": 1.588,
+   "f0": 35,
+   "f1": 38,
+   "ph": "jˌʊɹ"
+  },
+  {
+   "w": "in",
+   "t0": 1.588,
+   "t1": 1.662,
+   "f0": 38,
+   "f1": 40,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 1.662,
+   "t1": 1.75,
+   "f0": 40,
+   "f1": 42,
+   "ph": "ðə"
+  },
+  {
+   "w": "line",
+   "t0": 1.75,
+   "t1": 2.21,
+   "f0": 42,
+   "f1": 53,
+   "ph": "lˈIn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.68,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 129.1,
+  "f0_range_st": 14.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I'm on the step, Moz. You're in the line.",
+  "cer": 0.071,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.217,
+  "align_median_s": 0.06,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 10.0,
+  "decay_ms": 100.0,
+  "decay_to_60_s": 0.035
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "c2aea12203286597",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 4.99,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.13,
+   "rechecked_alone": false
+  }
+ }
+}

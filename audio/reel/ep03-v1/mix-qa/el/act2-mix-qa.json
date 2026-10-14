@@ -1,0 +1,120 @@
+{
+ "segment": "act2",
+ "variant": "el",
+ "seconds": 277.167,
+ "frames": 6652,
+ "samples": 13304000,
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act2.json",
+ "dialogue": {
+  "lines": 70,
+  "device": {
+   "laptop": 3,
+   "phone": 1
+  },
+  "el_matched": 70,
+  "missing": []
+ },
+ "rooms": {
+  "stem": "audio/reel/ep03-v1/stems/el/act2-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep03-v1/stems/el/act2-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e03-v1-act2/render/music-el.wav",
+  "cues": "audio/ost/tracks/e03-v1-act2/render/cues-el.json",
+  "length_s": 277.167,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -24.0,
+  "lufs_after_gain": -24.0,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E03-09 PROCEDURE; low strings/brushes, d",
+     9.0
+    ],
+    [
+     "E03-07 THE DOOR; leverage pizzicato\u2192turb",
+     9.0
+    ],
+    [
+     "E03-10 LEVERAGE; low knee ostinato\u2192odome",
+     9.0
+    ],
+    [
+     "E03-08 FIRST BUILD; warm chamber/knee, s",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [
+    [
+     0.0,
+     277.1666666666667,
+     10.5
+    ]
+   ],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [],
+  "head_fade_s": 1.2
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -1.46,
+  "sample_peak_dbfs": -1.5,
+  "lra_lu": 8.2,
+  "gain_db": 1.34,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.066,
+  "dialogue_lufs": -14.68,
+  "score_lufs_after_duck": -26.97,
+  "score_rms_under_speech_dbfs": -35.1,
+  "score_rms_between_speech_dbfs": -24.3,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 277.05,
+   "runs": [
+    [
+     0.05,
+     277.05
+    ]
+   ]
+  },
+  "rooms_lufs": -36.63,
+  "sfx_lufs": -30.27,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 69,
+   "rising": 55,
+   "rising_at_a_word": 49,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    22.9,
+    25.85,
+    152.45,
+    162.7,
+    209.0,
+    252.65
+   ],
+   "falling": 14
+  }
+ },
+ "file": "out/ep03/v1/mix/act2-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.39,
+  "to_gain_db": 1.34,
+  "ramp_s": 2.0,
+  "after": "act1"
+ },
+ "built": "2026-10-13 20:07:01",
+ "heard": "nothing here has been listened to; every number is measured"
+}

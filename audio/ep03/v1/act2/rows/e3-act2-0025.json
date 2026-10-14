@@ -1,0 +1,554 @@
+{
+ "id": "e3-act2-0025",
+ "scene": "12.03",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "I can make payments happen faster. I know how to do that. I could spend another year choosing the best place to do it.",
+ "spoken_as": "I can make payments happen faster. I know how to do that. I could spend another year choosing the best place to do it.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "12.03",
+ "shot_id": "12.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.579,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0025.wav",
+ "mp3": null,
+ "duration_s": 7.265,
+ "frames_24": 175,
+ "voiced_span_s": 5.81,
+ "pace": {
+  "words": 24,
+  "wpm": 247.8,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 247.8,
+   "articulation_sps": 5.27,
+   "syllables": 30,
+   "span_s": 5.81,
+   "pauses_s": [
+    0.07,
+    0.12
+   ]
+  },
+  "longest_internal_gap_s": 0.12,
+  "audible_in_s": 0.5,
+  "audible_out_s": 6.31
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "M"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "M"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "M"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "M"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "rest"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "O"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "A"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "E"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "rest"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "A"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "O"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "A"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "A"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "E"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "A"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "E"
+  },
+  {
+   "t": 4.833,
+   "f": 116,
+   "shape": "O"
+  },
+  {
+   "t": 4.958,
+   "f": 119,
+   "shape": "E"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "M"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "A"
+  },
+  {
+   "t": 5.417,
+   "f": 130,
+   "shape": "E"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "M"
+  },
+  {
+   "t": 5.583,
+   "f": 134,
+   "shape": "E"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "A"
+  },
+  {
+   "t": 5.833,
+   "f": 140,
+   "shape": "E"
+  },
+  {
+   "t": 6.042,
+   "f": 145,
+   "shape": "O"
+  },
+  {
+   "t": 6.167,
+   "f": 148,
+   "shape": "E"
+  },
+  {
+   "t": 6.333,
+   "f": 152,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "I",
+   "t0": 0.47,
+   "t1": 0.57,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌI"
+  },
+  {
+   "w": "can",
+   "t0": 0.57,
+   "t1": 0.682,
+   "f0": 14,
+   "f1": 16,
+   "ph": "kæn"
+  },
+  {
+   "w": "make",
+   "t0": 0.682,
+   "t1": 0.895,
+   "f0": 16,
+   "f1": 21,
+   "ph": "mˌAk"
+  },
+  {
+   "w": "payments",
+   "t0": 0.895,
+   "t1": 1.295,
+   "f0": 21,
+   "f1": 31,
+   "ph": "pˈAmᵊnts"
+  },
+  {
+   "w": "happen",
+   "t0": 1.295,
+   "t1": 1.658,
+   "f0": 31,
+   "f1": 40,
+   "ph": "hˈæpən"
+  },
+  {
+   "w": "faster",
+   "t0": 1.658,
+   "t1": 2.245,
+   "f0": 40,
+   "f1": 54,
+   "ph": "fˈæstəɹ"
+  },
+  {
+   "w": "I",
+   "t0": 2.345,
+   "t1": 2.495,
+   "f0": 56,
+   "f1": 60,
+   "ph": "ˌI"
+  },
+  {
+   "w": "know",
+   "t0": 2.495,
+   "t1": 2.67,
+   "f0": 60,
+   "f1": 64,
+   "ph": "nˈO"
+  },
+  {
+   "w": "how",
+   "t0": 2.67,
+   "t1": 2.833,
+   "f0": 64,
+   "f1": 68,
+   "ph": "hˌW"
+  },
+  {
+   "w": "to",
+   "t0": 2.833,
+   "t1": 2.92,
+   "f0": 68,
+   "f1": 70,
+   "ph": "tə"
+  },
+  {
+   "w": "do",
+   "t0": 2.92,
+   "t1": 3.095,
+   "f0": 70,
+   "f1": 74,
+   "ph": "dˈu"
+  },
+  {
+   "w": "that",
+   "t0": 3.095,
+   "t1": 3.52,
+   "f0": 74,
+   "f1": 84,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "I",
+   "t0": 3.62,
+   "t1": 3.745,
+   "f0": 87,
+   "f1": 90,
+   "ph": "ˌI"
+  },
+  {
+   "w": "could",
+   "t0": 3.745,
+   "t1": 3.87,
+   "f0": 90,
+   "f1": 93,
+   "ph": "kʊd"
+  },
+  {
+   "w": "spend",
+   "t0": 3.87,
+   "t1": 4.108,
+   "f0": 93,
+   "f1": 99,
+   "ph": "spˈɛnd"
+  },
+  {
+   "w": "another",
+   "t0": 4.108,
+   "t1": 4.52,
+   "f0": 99,
+   "f1": 108,
+   "ph": "ənˈʌðəɹ"
+  },
+  {
+   "w": "year",
+   "t0": 4.52,
+   "t1": 4.782,
+   "f0": 108,
+   "f1": 115,
+   "ph": "jˈɪɹ"
+  },
+  {
+   "w": "choosing",
+   "t0": 4.782,
+   "t1": 5.158,
+   "f0": 115,
+   "f1": 124,
+   "ph": "ʧˈuzɪŋ"
+  },
+  {
+   "w": "the",
+   "t0": 5.158,
+   "t1": 5.245,
+   "f0": 124,
+   "f1": 126,
+   "ph": "ðə"
+  },
+  {
+   "w": "best",
+   "t0": 5.245,
+   "t1": 5.545,
+   "f0": 126,
+   "f1": 133,
+   "ph": "bˈɛst"
+  },
+  {
+   "w": "place",
+   "t0": 5.545,
+   "t1": 5.87,
+   "f0": 133,
+   "f1": 141,
+   "ph": "plˈAs"
+  },
+  {
+   "w": "to",
+   "t0": 5.87,
+   "t1": 5.995,
+   "f0": 141,
+   "f1": 144,
+   "ph": "tə"
+  },
+  {
+   "w": "do",
+   "t0": 5.995,
+   "t1": 6.17,
+   "f0": 144,
+   "f1": 148,
+   "ph": "dˈu"
+  },
+  {
+   "w": "it",
+   "t0": 6.17,
+   "t1": 6.33,
+   "f0": 148,
+   "f1": 152,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.81,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 115.1,
+  "f0_range_st": 11.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "I can make payments happen faster. I know how to do that. I could spend another year choosing the best place to do it.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.163,
+  "align_median_s": 0.025,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 20.0,
+  "decay_ms": 35.0,
+  "decay_to_60_s": 0.505
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f7f0d1e05bbe17a2",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 14.45,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 4.59,
+   "rechecked_alone": false
+  }
+ }
+}

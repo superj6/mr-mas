@@ -1,0 +1,219 @@
+{
+ "id": "e3-act2-0066",
+ "scene": "14.07",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "And who owns the nonprofit?",
+ "spoken_as": "And who owns the nonprofit?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "14.07",
+ "shot_id": "14.07",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.818,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0066.wav",
+ "mp3": null,
+ "duration_s": 2.29,
+ "frames_24": 55,
+ "voiced_span_s": 1.19,
+ "pace": {
+  "words": 5,
+  "wpm": 252.1,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 252.1,
+   "articulation_sps": 5.88,
+   "syllables": 7,
+   "span_s": 1.19,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.7
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "And",
+   "t0": 0.47,
+   "t1": 0.558,
+   "f0": 11,
+   "f1": 13,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "who",
+   "t0": 0.558,
+   "t1": 0.67,
+   "f0": 13,
+   "f1": 16,
+   "ph": "hˌu"
+  },
+  {
+   "w": "owns",
+   "t0": 0.67,
+   "t1": 0.883,
+   "f0": 16,
+   "f1": 21,
+   "ph": "ˈOnz"
+  },
+  {
+   "w": "the",
+   "t0": 0.883,
+   "t1": 0.958,
+   "f0": 21,
+   "f1": 23,
+   "ph": "ðə"
+  },
+  {
+   "w": "nonprofit",
+   "t0": 0.958,
+   "t1": 1.72,
+   "f0": 23,
+   "f1": 41,
+   "ph": "nɑnpɹˈɑfət"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.38,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 144.3,
+  "f0_range_st": 10.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "And you owns a nonprofit.",
+  "cer": 0.273,
+  "word_recall_nonames": 0.6,
+  "logprob": -0.618,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 135.0,
+  "decay_to_60_s": 0.145
+ },
+ "speaker_label": "AUHSOJ",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "a2c24a9a1ae274e2",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 8.11,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.11,
+   "rechecked_alone": false
+  }
+ }
+}

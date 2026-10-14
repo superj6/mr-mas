@@ -1,0 +1,135 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-coldopen-el",
+ "segment": "coldopen",
+ "file": "audio/ost/tracks/e03-v1-coldopen/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-coldopen.json",
+ "lock_sha1": "3e95e93636375e009f1d59b627d8c1911b67b499",
+ "length_s": 55.583333333333336,
+ "frames": 1334,
+ "samples": 2668000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-coldopen-continuous",
+   "start": 0,
+   "end": 55.583333333333336,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 82,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "1",
+     "mood": "dry",
+     "text": "E03-01 CHIP CAPER; knee cells, dry chip and pizzicato",
+     "start": 0.0,
+     "end": 7.0
+    },
+    {
+     "scene": "2",
+     "mood": "dry",
+     "text": "E03-01 CHIP CAPER continues",
+     "start": 7.0,
+     "end": 41.166666666666664
+    },
+    {
+     "scene": "3",
+     "mood": "dry",
+     "text": "E03-01 one chip voice; settles on F",
+     "start": 41.166666666666664,
+     "end": 55.583333333333336
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 55.5833,
+  "samples": 2668000,
+  "frames": 1334,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -21.98,
+   "st_max": -21.65,
+   "true_peak_dbtp": -7.76
+  },
+  "cues": {
+   "e03-v1-coldopen-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -21.98,
+    "st_max": -21.65,
+    "true_peak_dbtp": -7.76
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 1: dry",
+    "start": 0.0,
+    "end": 7.0,
+    "lufs_i": -23.86,
+    "st_p95": -23.11,
+    "st_max": -22.71,
+    "true_peak_dbtp": -9.31
+   },
+   {
+    "section": "scene 2: dry",
+    "start": 7.0,
+    "end": 41.17,
+    "lufs_i": -24.25,
+    "st_p95": -22.01,
+    "st_max": -21.65,
+    "true_peak_dbtp": -7.76
+   },
+   {
+    "section": "scene 3: dry",
+    "start": 41.17,
+    "end": 55.58,
+    "lufs_i": -23.9,
+    "st_p95": -22.05,
+    "st_max": -21.77,
+    "true_peak_dbtp": -7.76
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 55.55,
+    "dur": 55.55
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-coldopen-continuous",
+   "file": "audio/ost/tracks/e03-v1-coldopen/render/_work/el/e03-v1-coldopen-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    55.583
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

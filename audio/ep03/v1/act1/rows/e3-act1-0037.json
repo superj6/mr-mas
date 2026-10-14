@@ -1,0 +1,528 @@
+{
+ "id": "e3-act1-0037",
+ "scene": "8.07",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "You don't put a clock on a kicker, Mas. You put a clock on him, he rushes, and a rushed kick goes through the two.",
+ "spoken_as": "You don't put a clock on a kicker, Mas. You put a clock on him, he rushes, and a rushed kick goes through the two.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.07",
+ "shot_id": "8.07",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 9.375,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0037.wav",
+ "mp3": null,
+ "duration_s": 7.485,
+ "frames_24": 180,
+ "voiced_span_s": 6.49,
+ "pace": {
+  "words": 25,
+  "wpm": 231.1,
+  "speed": 0.885,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.885,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 231.1,
+   "articulation_sps": 4.41,
+   "syllables": 27,
+   "span_s": 6.49,
+   "pauses_s": [
+    0.37,
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.37,
+  "audible_in_s": 0.52,
+  "audible_out_s": 7.01
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.885",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.885 (the centre of the band; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "M"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "O"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "A"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "O"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "M"
+  },
+  {
+   "t": 3.583,
+   "f": 86,
+   "shape": "E"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "A"
+  },
+  {
+   "t": 4.0,
+   "f": 96,
+   "shape": "E"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "A"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.667,
+   "f": 112,
+   "shape": "A"
+  },
+  {
+   "t": 4.833,
+   "f": 116,
+   "shape": "E"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "A"
+  },
+  {
+   "t": 5.167,
+   "f": 124,
+   "shape": "E"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "O"
+  },
+  {
+   "t": 5.5,
+   "f": 132,
+   "shape": "E"
+  },
+  {
+   "t": 5.667,
+   "f": 136,
+   "shape": "O"
+  },
+  {
+   "t": 5.75,
+   "f": 138,
+   "shape": "E"
+  },
+  {
+   "t": 6.208,
+   "f": 149,
+   "shape": "O"
+  },
+  {
+   "t": 6.583,
+   "f": 158,
+   "shape": "rest"
+  },
+  {
+   "t": 6.75,
+   "f": 162,
+   "shape": "O"
+  },
+  {
+   "t": 6.917,
+   "f": 166,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.52,
+   "t1": 0.607,
+   "f0": 12,
+   "f1": 15,
+   "ph": "jˌu"
+  },
+  {
+   "w": "don't",
+   "t0": 0.607,
+   "t1": 0.782,
+   "f0": 15,
+   "f1": 19,
+   "ph": "dˈOnt"
+  },
+  {
+   "w": "put",
+   "t0": 0.782,
+   "t1": 0.908,
+   "f0": 19,
+   "f1": 22,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "a",
+   "t0": 0.908,
+   "t1": 0.97,
+   "f0": 22,
+   "f1": 23,
+   "ph": "ɐ"
+  },
+  {
+   "w": "clock",
+   "t0": 0.97,
+   "t1": 1.232,
+   "f0": 23,
+   "f1": 30,
+   "ph": "klˈɑk"
+  },
+  {
+   "w": "on",
+   "t0": 1.232,
+   "t1": 1.332,
+   "f0": 30,
+   "f1": 32,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "a",
+   "t0": 1.332,
+   "t1": 1.42,
+   "f0": 32,
+   "f1": 34,
+   "ph": "ɐ"
+  },
+  {
+   "w": "kicker",
+   "t0": 1.42,
+   "t1": 1.745,
+   "f0": 34,
+   "f1": 42,
+   "ph": "kˈɪkəɹ"
+  },
+  {
+   "w": "Mas",
+   "t0": 1.795,
+   "t1": 2.37,
+   "f0": 43,
+   "f1": 57,
+   "ph": "mˈɑz"
+  },
+  {
+   "w": "You",
+   "t0": 2.47,
+   "t1": 2.595,
+   "f0": 59,
+   "f1": 62,
+   "ph": "jˌu"
+  },
+  {
+   "w": "put",
+   "t0": 2.595,
+   "t1": 2.732,
+   "f0": 62,
+   "f1": 66,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "a",
+   "t0": 2.732,
+   "t1": 2.795,
+   "f0": 66,
+   "f1": 67,
+   "ph": "ɐ"
+  },
+  {
+   "w": "clock",
+   "t0": 2.795,
+   "t1": 3.133,
+   "f0": 67,
+   "f1": 75,
+   "ph": "klˈɑk"
+  },
+  {
+   "w": "on",
+   "t0": 3.133,
+   "t1": 3.295,
+   "f0": 75,
+   "f1": 79,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "him",
+   "t0": 3.295,
+   "t1": 3.545,
+   "f0": 79,
+   "f1": 85,
+   "ph": "hˌɪm"
+  },
+  {
+   "w": "he",
+   "t0": 3.595,
+   "t1": 3.745,
+   "f0": 86,
+   "f1": 90,
+   "ph": "hi"
+  },
+  {
+   "w": "rushes",
+   "t0": 3.745,
+   "t1": 4.32,
+   "f0": 90,
+   "f1": 104,
+   "ph": "ɹˈʌʃᵻz"
+  },
+  {
+   "w": "and",
+   "t0": 4.395,
+   "t1": 4.508,
+   "f0": 105,
+   "f1": 108,
+   "ph": "ænd"
+  },
+  {
+   "w": "a",
+   "t0": 4.508,
+   "t1": 4.595,
+   "f0": 108,
+   "f1": 110,
+   "ph": "ɐ"
+  },
+  {
+   "w": "rushed",
+   "t0": 4.595,
+   "t1": 4.958,
+   "f0": 110,
+   "f1": 119,
+   "ph": "ɹˈʌʃt"
+  },
+  {
+   "w": "kick",
+   "t0": 4.958,
+   "t1": 5.27,
+   "f0": 119,
+   "f1": 126,
+   "ph": "kˈɪk"
+  },
+  {
+   "w": "goes",
+   "t0": 5.27,
+   "t1": 5.57,
+   "f0": 126,
+   "f1": 134,
+   "ph": "ɡˈOz"
+  },
+  {
+   "w": "through",
+   "t0": 5.57,
+   "t1": 5.77,
+   "f0": 134,
+   "f1": 138,
+   "ph": "θɹu"
+  },
+  {
+   "w": "the",
+   "t0": 5.77,
+   "t1": 5.908,
+   "f0": 138,
+   "f1": 142,
+   "ph": "ðə"
+  },
+  {
+   "w": "two",
+   "t0": 5.908,
+   "t1": 6.92,
+   "f0": 142,
+   "f1": 166,
+   "ph": "tˈu"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.27,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 86.2,
+  "f0_range_st": 11.8,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You don't put a clock on a kick or maws. You put a clock on him, he rushes, and a rushed kick goes through the two.",
+  "cer": 0.024,
+  "word_recall_nonames": 0.958,
+  "logprob": -0.234,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.44,
+  "rise_ms": 20.0,
+  "decay_ms": 730.0,
+  "decay_to_60_s": 0.04
+ },
+ "speaker_label": "MAON",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "3de03bd26772537b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 20.28,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 8.64,
+   "rechecked_alone": true
+  }
+ }
+}

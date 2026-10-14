@@ -1,0 +1,386 @@
+{
+ "id": "e3-act2-0001",
+ "scene": "11.01",
+ "speaker": "PHOTOGRAPHER",
+ "speaker_slug": "photographer",
+ "text": "One revolving door, industrial, four wings, rated for heavy traffic. Where do you want it?",
+ "spoken_as": "One revolving door, industrial, four wings, rated for heavy traffic. Where do you want it?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.01",
+ "shot_id": "11.01",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.455,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0001.wav",
+ "mp3": null,
+ "duration_s": 5.305,
+ "frames_24": 128,
+ "voiced_span_s": 4.15,
+ "pace": {
+  "words": 15,
+  "wpm": 216.9,
+  "speed": 1.14,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.14,
+   "speed_band": [
+    1.1,
+    1.18
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    180
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 216.9,
+   "articulation_sps": 5.88,
+   "syllables": 23,
+   "span_s": 4.15,
+   "pauses_s": [
+    0.24
+   ]
+  },
+  "longest_internal_gap_s": 0.24,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.65
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+ "voiceId": "af_river",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.140 (the centre of the band; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.75,
+   "f": 66,
+   "shape": "A"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "A"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "rest"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "A"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "O"
+  },
+  {
+   "t": 4.375,
+   "f": 105,
+   "shape": "A"
+  },
+  {
+   "t": 4.458,
+   "f": 107,
+   "shape": "E"
+  },
+  {
+   "t": 4.667,
+   "f": 112,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "One",
+   "t0": 0.47,
+   "t1": 0.665,
+   "f0": 11,
+   "f1": 16,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "revolving",
+   "t0": 0.665,
+   "t1": 1.165,
+   "f0": 16,
+   "f1": 28,
+   "ph": "ɹᵻvˈɑlvɪŋ"
+  },
+  {
+   "w": "door",
+   "t0": 1.165,
+   "t1": 1.415,
+   "f0": 28,
+   "f1": 34,
+   "ph": "dˈɔɹ"
+  },
+  {
+   "w": "industrial",
+   "t0": 1.465,
+   "t1": 2.065,
+   "f0": 35,
+   "f1": 50,
+   "ph": "ɪndˈʌstɹiəl"
+  },
+  {
+   "w": "four",
+   "t0": 2.115,
+   "t1": 2.34,
+   "f0": 51,
+   "f1": 56,
+   "ph": "fˈɔɹ"
+  },
+  {
+   "w": "wings",
+   "t0": 2.34,
+   "t1": 2.64,
+   "f0": 56,
+   "f1": 63,
+   "ph": "wˈɪŋz"
+  },
+  {
+   "w": "rated",
+   "t0": 2.69,
+   "t1": 2.978,
+   "f0": 65,
+   "f1": 71,
+   "ph": "ɹˈATᵻd"
+  },
+  {
+   "w": "for",
+   "t0": 2.978,
+   "t1": 3.09,
+   "f0": 71,
+   "f1": 74,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "heavy",
+   "t0": 3.09,
+   "t1": 3.34,
+   "f0": 74,
+   "f1": 80,
+   "ph": "hˈɛvi"
+  },
+  {
+   "w": "traffic",
+   "t0": 3.34,
+   "t1": 3.86,
+   "f0": 80,
+   "f1": 93,
+   "ph": "tɹˈæfɪk"
+  },
+  {
+   "w": "Where",
+   "t0": 4.015,
+   "t1": 4.152,
+   "f0": 96,
+   "f1": 100,
+   "ph": "wˌɛɹ"
+  },
+  {
+   "w": "do",
+   "t0": 4.152,
+   "t1": 4.252,
+   "f0": 100,
+   "f1": 102,
+   "ph": "dˈu"
+  },
+  {
+   "w": "you",
+   "t0": 4.252,
+   "t1": 4.328,
+   "f0": 102,
+   "f1": 104,
+   "ph": "ju"
+  },
+  {
+   "w": "want",
+   "t0": 4.328,
+   "t1": 4.515,
+   "f0": 104,
+   "f1": 108,
+   "ph": "wˈɑnt"
+  },
+  {
+   "w": "it",
+   "t0": 4.515,
+   "t1": 4.67,
+   "f0": 108,
+   "f1": 112,
+   "ph": "ɪt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.06,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 159.8,
+  "f0_range_st": 7.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "One revolving door industrial four wings rated for heavy traffic. Where do you want it?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.193,
+  "align_median_s": 0.033,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.37,
+  "rise_ms": 30.0,
+  "decay_ms": 35.0,
+  "decay_to_60_s": 0.285
+ },
+ "speaker_label": "INSTALLER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "187c09b8307c3fa1",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 10.65,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.91,
+   "rechecked_alone": false
+  }
+ }
+}

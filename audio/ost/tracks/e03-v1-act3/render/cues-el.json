@@ -1,0 +1,206 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-act3-el",
+ "segment": "act3",
+ "file": "audio/ost/tracks/e03-v1-act3/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act3.json",
+ "lock_sha1": "7b14b9e08279e7a64a7e7ba11868f8a6fb624b61",
+ "length_s": 248.91666666666666,
+ "frames": 5974,
+ "samples": 11948000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-act3-continuous",
+   "start": 0,
+   "end": 248.91666666666666,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 291,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "15",
+     "mood": "warm",
+     "text": "E03-11 EARLY WEB CASSETTE; reverse wheels, sad short kazoo",
+     "start": 0.0,
+     "end": 13.875
+    },
+    {
+     "scene": "16",
+     "mood": "pressure",
+     "text": "E03-12 MEDALS; chip/cello build, not comic on sources",
+     "start": 13.875,
+     "end": 40.375
+    },
+    {
+     "scene": "17A",
+     "mood": "silence",
+     "text": "NONE: keys/surf/server hum only, designed quiet",
+     "start": 40.375,
+     "end": 103.83333333333333
+    },
+    {
+     "scene": "18",
+     "mood": "warm",
+     "text": "E03-13 MARIO QUARTET; growing phrase, then paper swing",
+     "start": 103.83333333333333,
+     "end": 185.04166666666666
+    },
+    {
+     "scene": "19",
+     "mood": "drive",
+     "text": "E03-14 PAPER ROAD; knee on acoustic strings, no grade match",
+     "start": 185.04166666666666,
+     "end": 206.33333333333334
+    },
+    {
+     "scene": "20",
+     "mood": "drive",
+     "text": "E03-15 THE RUN; chip/boom-bap layers, dry news pedal",
+     "start": 206.33333333333334,
+     "end": 248.91666666666666
+    }
+   ]
+  }
+ ],
+ "silences_designed": [
+  {
+   "t0": 40.375,
+   "t1": 103.83333333333333,
+   "why": "NONE: keys/surf/server hum only, designed quiet"
+  }
+ ],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 248.9167,
+  "samples": 11948000,
+  "frames": 5974,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -21.84,
+   "st_max": -21.12,
+   "true_peak_dbtp": -7.39
+  },
+  "cues": {
+   "e03-v1-act3-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -21.84,
+    "st_max": -21.12,
+    "true_peak_dbtp": -7.39
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 15: warm",
+    "start": 0.0,
+    "end": 13.88,
+    "lufs_i": -25.18,
+    "st_p95": -24.57,
+    "st_max": -24.48,
+    "true_peak_dbtp": -14.59
+   },
+   {
+    "section": "scene 16: pressure",
+    "start": 13.88,
+    "end": 40.38,
+    "lufs_i": -23.9,
+    "st_p95": -22.66,
+    "st_max": -22.38,
+    "true_peak_dbtp": -8.4
+   },
+   {
+    "section": "scene 17A: silence",
+    "start": 40.38,
+    "end": 103.83,
+    "lufs_i": null,
+    "true_peak_dbtp": null
+   },
+   {
+    "section": "scene 18: warm",
+    "start": 103.83,
+    "end": 185.04,
+    "lufs_i": -25.23,
+    "st_p95": -24.73,
+    "st_max": -24.43,
+    "true_peak_dbtp": -14.53
+   },
+   {
+    "section": "scene 19: drive",
+    "start": 185.04,
+    "end": 206.33,
+    "lufs_i": -22.53,
+    "st_p95": -21.59,
+    "st_max": -21.57,
+    "true_peak_dbtp": -7.39
+   },
+   {
+    "section": "scene 20: drive",
+    "start": 206.33,
+    "end": 248.92,
+    "lufs_i": -22.89,
+    "st_p95": -21.64,
+    "st_max": -21.51,
+    "true_peak_dbtp": -7.41
+   }
+  ],
+  "digital_silence": [
+   {
+    "t0": 40.375,
+    "t1": 103.833,
+    "dur": 63.458,
+    "marked": true,
+    "why": "NONE: keys/surf/server hum only, designed quiet"
+   }
+  ],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [
+   {
+    "t0": 40.4,
+    "t1": 103.8,
+    "inside_marked": true
+   }
+  ],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 40.4,
+    "dur": 40.4
+   },
+   {
+    "t0": 103.8,
+    "t1": 248.9,
+    "dur": 145.1
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-act3-continuous",
+   "file": "audio/ost/tracks/e03-v1-act3/render/_work/el/e03-v1-act3-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    248.917
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

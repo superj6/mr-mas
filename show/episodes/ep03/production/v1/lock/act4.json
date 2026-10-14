@@ -49,7 +49,11 @@
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep03/v1/mix/act4-mix.wav",
+   "offset_frames": 0,
+   "frames": 5676.0
+  },
   "refs": {}
  },
  "checks": [
@@ -92,6 +96,11 @@
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 5676.00 f vs 0 + 5676"
   }
  ],
  "sequences": [
@@ -284,15 +293,7 @@
    "fg": null,
    "marks": {},
    "mark_src": {},
-   "texts": [
-    {
-     "kind": "label",
-     "text": "NOV 2024",
-     "s": 6,
-     "e": 36,
-     "must": true
-    }
-   ],
+   "texts": [],
    "tc_in": "15:18:02",
    "tc_out": "15:22:02",
    "frames": 96
@@ -14649,7 +14650,15 @@
   }
  ],
  "posts": [],
- "rails": [],
+ "rails": [
+  {
+   "text": "NOV 2024",
+   "s": 6,
+   "e": 36,
+   "shot": "21.01",
+   "floor_f": 16
+  }
+ ],
  "sound_marks": [],
  "subs": [
   {

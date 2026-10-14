@@ -1,0 +1,398 @@
+{
+ "id": "e3-act4-0008",
+ "scene": "21.04",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "And somebody says we're out of ideas. That's awkward timing. We're shipping twelve things.",
+ "spoken_as": "And somebody says we're out of ideas. That's awkward timing. We're shipping twelve things.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "21.04",
+ "shot_id": "21.04",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.421,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0008.wav",
+ "mp3": null,
+ "duration_s": 5.6,
+ "frames_24": 135,
+ "voiced_span_s": 4.32,
+ "pace": {
+  "words": 14,
+  "wpm": 194.4,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 194.4,
+   "articulation_sps": 5.01,
+   "syllables": 21,
+   "span_s": 4.32,
+   "pauses_s": [
+    0.13
+   ]
+  },
+  "longest_internal_gap_s": 0.13,
+  "audible_in_s": 0.51,
+  "audible_out_s": 4.83
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "A"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "rest"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "O"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "A"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "M"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "O"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "A"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "M"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "E"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "O"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "A"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "A"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "E"
+  },
+  {
+   "t": 4.833,
+   "f": 116,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "And",
+   "t0": 0.47,
+   "t1": 0.575,
+   "f0": 11,
+   "f1": 14,
+   "ph": "ˌænd"
+  },
+  {
+   "w": "somebody",
+   "t0": 0.575,
+   "t1": 0.962,
+   "f0": 14,
+   "f1": 23,
+   "ph": "sˈʌmbədi"
+  },
+  {
+   "w": "says",
+   "t0": 0.962,
+   "t1": 1.275,
+   "f0": 23,
+   "f1": 31,
+   "ph": "sˈɛz"
+  },
+  {
+   "w": "we're",
+   "t0": 1.275,
+   "t1": 1.4,
+   "f0": 31,
+   "f1": 34,
+   "ph": "wɪɹ"
+  },
+  {
+   "w": "out",
+   "t0": 1.4,
+   "t1": 1.537,
+   "f0": 34,
+   "f1": 37,
+   "ph": "ˈWt"
+  },
+  {
+   "w": "of",
+   "t0": 1.537,
+   "t1": 1.638,
+   "f0": 37,
+   "f1": 39,
+   "ph": "ʌv"
+  },
+  {
+   "w": "ideas",
+   "t0": 1.638,
+   "t1": 2.25,
+   "f0": 39,
+   "f1": 54,
+   "ph": "Idˈiəz"
+  },
+  {
+   "w": "That's",
+   "t0": 2.325,
+   "t1": 2.6,
+   "f0": 56,
+   "f1": 62,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "awkward",
+   "t0": 2.6,
+   "t1": 2.95,
+   "f0": 62,
+   "f1": 71,
+   "ph": "ˈɔkwəɹd"
+  },
+  {
+   "w": "timing",
+   "t0": 2.95,
+   "t1": 3.425,
+   "f0": 71,
+   "f1": 82,
+   "ph": "tˈImɪŋ"
+  },
+  {
+   "w": "We're",
+   "t0": 3.475,
+   "t1": 3.662,
+   "f0": 83,
+   "f1": 88,
+   "ph": "wˌɪɹ"
+  },
+  {
+   "w": "shipping",
+   "t0": 3.662,
+   "t1": 4.025,
+   "f0": 88,
+   "f1": 97,
+   "ph": "ʃˈɪpɪŋ"
+  },
+  {
+   "w": "twelve",
+   "t0": 4.025,
+   "t1": 4.35,
+   "f0": 97,
+   "f1": 104,
+   "ph": "twˈɛlv"
+  },
+  {
+   "w": "things",
+   "t0": 4.35,
+   "t1": 4.85,
+   "f0": 104,
+   "f1": 116,
+   "ph": "θˈɪŋz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.32,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 121.9,
+  "f0_range_st": 13.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "And somebody says we're out of ideas. That's awkward timing. We're shipping twelve things.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.308,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 180.0,
+  "decay_to_60_s": 0.32
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ba688970553c4cb9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 14.76,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.79,
+   "rechecked_alone": false
+  }
+ }
+}

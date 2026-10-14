@@ -265,6 +265,9 @@ def build_seg(seg, cand):
     out["variant"] = (T.get("variant", "") + f" · ElevenLabs set {cand} takes (eleven_multilingual_v2, library voices), "
                       "EL-timed: the lock's gaps kept, beats changed only by the takes' lengths"
                       + (f" · Kokoro in the EL cast: {', '.join(sorted(KOKORO_ROLES))} (the lock's own takes)" if KOKORO_ROLES else ""))
+    delivered = [l for b in out['beats'] for l in b.get('lines',[])]
+    if delivered and all(l.get('engine') == 'kokoro' for l in delivered):
+        out['variant'] = f'Episode 3 {LOCK} canonical master: programmatic offline Kokoro stock voices; no paid requests'
     out["_source"] = dict(T.get("_source") or {}, kokoro_lock=f"{SRC}/{P()[0]}{seg}.json",
                           takes_files=[f"{TAKES}/{seg}/lines-{cand}.json"], el_builder="audio/ep03/v1-el/tools/el_lock.py",
                           el_notes="show/episodes/ep03/production/v1/pipeline.md", seconds=round(t_new, 3))

@@ -1,0 +1,196 @@
+{
+ "id": "e3-vo-03",
+ "scene": "4.06",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "september still needs a door that opens.",
+ "spoken_as": "september still needs a door that opens.",
+ "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "4.06",
+ "shot_id": "4.06",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.5,
+ "file": "audio/ep03/v1/act1/wav/e3-vo-03.wav",
+ "mp3": null,
+ "duration_s": 3.74,
+ "frames_24": 90,
+ "voiced_span_s": 2.55,
+ "pace": {
+  "words": 7,
+  "wpm": 164.7,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "close dry thought, lowercase, unhurried, never a slogan"
+  },
+  "measured": {
+   "wpm": 164.7,
+   "articulation_sps": 3.92,
+   "syllables": 10,
+   "span_s": 2.55,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.06
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "september",
+   "t0": 0.54,
+   "t1": 1.078,
+   "f0": 13,
+   "f1": 26,
+   "ph": "sɛptˈɛmbəɹ"
+  },
+  {
+   "w": "still",
+   "t0": 1.078,
+   "t1": 1.515,
+   "f0": 26,
+   "f1": 36,
+   "ph": "stˈɪl"
+  },
+  {
+   "w": "needs",
+   "t0": 1.515,
+   "t1": 1.752,
+   "f0": 36,
+   "f1": 42,
+   "ph": "nˈidz"
+  },
+  {
+   "w": "a",
+   "t0": 1.752,
+   "t1": 1.852,
+   "f0": 42,
+   "f1": 44,
+   "ph": "ɐ"
+  },
+  {
+   "w": "door",
+   "t0": 1.852,
+   "t1": 2.215,
+   "f0": 44,
+   "f1": 53,
+   "ph": "dˈɔɹ"
+  },
+  {
+   "w": "that",
+   "t0": 2.215,
+   "t1": 2.402,
+   "f0": 53,
+   "f1": 58,
+   "ph": "ðæt"
+  },
+  {
+   "w": "opens",
+   "t0": 2.402,
+   "t1": 3.08,
+   "f0": 58,
+   "f1": 74,
+   "ph": "ˈOpᵊnz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.67,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 114.6,
+  "f0_range_st": 11.5,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "September still needs a door that opens.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.16,
+  "align_median_s": 0.07,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.39,
+  "rise_ms": 40.0,
+  "decay_ms": 45.0,
+  "decay_to_60_s": 0.29
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "21d370694cb0de55",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.08,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.68,
+   "rechecked_alone": false
+  }
+ }
+}

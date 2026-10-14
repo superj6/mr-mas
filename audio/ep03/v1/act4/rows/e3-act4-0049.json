@@ -1,0 +1,291 @@
+{
+ "id": "e3-act4-0049",
+ "scene": "23.06",
+ "speaker": "EGAP",
+ "speaker_slug": "egap",
+ "text": "No, after you. We're not first. We're best.",
+ "spoken_as": "No, after you. We're not first. We're best.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "23.06",
+ "shot_id": "23.06",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.909,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0049.wav",
+ "mp3": null,
+ "duration_s": 3.74,
+ "frames_24": 90,
+ "voiced_span_s": 2.69,
+ "pace": {
+  "words": 8,
+  "wpm": 178.4,
+  "speed": 0.88,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.88,
+   "speed_band": [
+    0.84,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.8,
+    4.4
+   ],
+   "turn_wpm_guide": [
+    130,
+    150
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 178.4,
+   "articulation_sps": 3.61,
+   "syllables": 9,
+   "span_s": 2.69,
+   "pauses_s": [
+    0.2
+   ]
+  },
+  "longest_internal_gap_s": 0.2,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.19
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx*0.60+am_liam*0.40 (Kokoro-82M stock) · b-onyx-liam-dry · speed 0.880",
+ "voiceId": "am_onyx*0.60+am_liam*0.40",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 75 Hz",
+  "pitch +1 st",
+  "low shelf +1 dB @150 Hz",
+  "peak -1 dB @400 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 0.880 (the centre of the band; egap band 0.84-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "O"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "O"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "M"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "A"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "No",
+   "t0": 0.56,
+   "t1": 0.76,
+   "f0": 13,
+   "f1": 18,
+   "ph": "nˈO"
+  },
+  {
+   "w": "after",
+   "t0": 0.81,
+   "t1": 1.11,
+   "f0": 19,
+   "f1": 27,
+   "ph": "ˈæftəɹ"
+  },
+  {
+   "w": "you",
+   "t0": 1.11,
+   "t1": 1.26,
+   "f0": 27,
+   "f1": 30,
+   "ph": "ju"
+  },
+  {
+   "w": "We're",
+   "t0": 1.31,
+   "t1": 1.448,
+   "f0": 31,
+   "f1": 35,
+   "ph": "wˌɪɹ"
+  },
+  {
+   "w": "not",
+   "t0": 1.448,
+   "t1": 1.698,
+   "f0": 35,
+   "f1": 41,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "first",
+   "t0": 1.698,
+   "t1": 2.135,
+   "f0": 41,
+   "f1": 51,
+   "ph": "fˈɜɹst"
+  },
+  {
+   "w": "We're",
+   "t0": 2.185,
+   "t1": 2.36,
+   "f0": 52,
+   "f1": 57,
+   "ph": "wˌɪɹ"
+  },
+  {
+   "w": "best",
+   "t0": 2.36,
+   "t1": 3.21,
+   "f0": 57,
+   "f1": 77,
+   "ph": "bˈɛst"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.05,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 107.1,
+  "f0_range_st": 13.2,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Know after you we're not first, we're best.",
+  "cer": 0.067,
+  "word_recall_nonames": 0.875,
+  "logprob": -0.32,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.43,
+  "rise_ms": 15.0,
+  "decay_ms": 440.0,
+  "decay_to_60_s": 0.125
+ },
+ "speaker_label": "MIT-KOOC",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "5b7a680f0b8cda9f",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 13.73,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 8.33,
+   "rechecked_alone": true
+  }
+ }
+}

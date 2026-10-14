@@ -1,0 +1,279 @@
+{
+ "id": "e3-act1-0032",
+ "scene": "8.06",
+ "speaker": "ADELINA",
+ "speaker_slug": "adelina",
+ "text": "You've put a whole stadium in the acknowledgments.",
+ "spoken_as": "You've put a whole stadium in the acknowledgments.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.06",
+ "shot_id": "8.06",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.909,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0032.wav",
+ "mp3": null,
+ "duration_s": 3.125,
+ "frames_24": 75,
+ "voiced_span_s": 2.04,
+ "pace": {
+  "words": 8,
+  "wpm": 235.3,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    165
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 235.3,
+   "articulation_sps": 6.37,
+   "syllables": 13,
+   "span_s": 2.04,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.54
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+ "voiceId": "af_bella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch -1 st",
+  "low shelf +1.5 dB @200 Hz",
+  "peak -1 dB @450 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "high shelf -1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; adelina band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "O"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "M"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "A"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "M"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "M"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You've",
+   "t0": 0.47,
+   "t1": 0.58,
+   "f0": 11,
+   "f1": 14,
+   "ph": "jˌuv"
+  },
+  {
+   "w": "put",
+   "t0": 0.58,
+   "t1": 0.717,
+   "f0": 14,
+   "f1": 17,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "a",
+   "t0": 0.717,
+   "t1": 0.78,
+   "f0": 17,
+   "f1": 19,
+   "ph": "ɐ"
+  },
+  {
+   "w": "whole",
+   "t0": 0.78,
+   "t1": 1.042,
+   "f0": 19,
+   "f1": 25,
+   "ph": "hˈOl"
+  },
+  {
+   "w": "stadium",
+   "t0": 1.042,
+   "t1": 1.568,
+   "f0": 25,
+   "f1": 38,
+   "ph": "stˈAdiəm"
+  },
+  {
+   "w": "in",
+   "t0": 1.568,
+   "t1": 1.642,
+   "f0": 38,
+   "f1": 39,
+   "ph": "ɪn"
+  },
+  {
+   "w": "the",
+   "t0": 1.642,
+   "t1": 1.73,
+   "f0": 39,
+   "f1": 42,
+   "ph": "ði"
+  },
+  {
+   "w": "acknowledgments",
+   "t0": 1.73,
+   "t1": 2.56,
+   "f0": 42,
+   "f1": 61,
+   "ph": "əknˈɑləʤmᵊnts"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.39,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 188.0,
+  "f0_range_st": 7.3,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You've put a whole stadium in the acknowledgements.",
+  "cer": 0.024,
+  "word_recall_nonames": 0.875,
+  "logprob": -0.313,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.41,
+  "rise_ms": 10.0,
+  "decay_ms": 50.0,
+  "decay_to_60_s": 0.18
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "777f8b89bff85785",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 12.15,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 6.85,
+   "rechecked_alone": true
+  }
+ }
+}

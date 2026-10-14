@@ -1,0 +1,518 @@
+{
+ "id": "e3-coldopen-0005",
+ "scene": "2.02",
+ "speaker": "SUCRAM",
+ "speaker_slug": "sucram",
+ "text": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+ "spoken_as": "A fruit. Fruit doesn't have a launch window. They're calling the next model Strawberry. Nothing red is just red anymore.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "2.02",
+ "shot_id": "2.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 7.273,
+ "file": "audio/ep03/v1/coldopen/wav/e3-coldopen-0005.wav",
+ "mp3": null,
+ "duration_s": 6.6,
+ "frames_24": 159,
+ "voiced_span_s": 5.47,
+ "pace": {
+  "words": 20,
+  "wpm": 219.4,
+  "speed": 1.18,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.18,
+   "speed_band": [
+    1.14,
+    1.22
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    170,
+    190
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 219.4,
+   "articulation_sps": 5.4,
+   "syllables": 29,
+   "span_s": 5.47,
+   "pauses_s": [
+    0.09,
+    0.06,
+    0.1
+   ]
+  },
+  "longest_internal_gap_s": 0.1,
+  "audible_in_s": 0.5,
+  "audible_out_s": 5.97
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam*0.50+am_puck*0.50 (Kokoro-82M stock) · d-liam-puck-thread-0 · speed 1.180",
+ "voiceId": "am_liam*0.50+am_puck*0.50",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1.5 dB @250 Hz Q1.0",
+  "peak +1.5 dB @3500 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (3/70 ms)",
+  "Kokoro speed 1.180 (the centre of the band; sucram band 1.14-1.22); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "A"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "E"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "O"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "O"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "rest"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "A"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "O"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 3.0,
+   "f": 72,
+   "shape": "A"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "M"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "A"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "E"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "O"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "M"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "A"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "rest"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "A"
+  },
+  {
+   "t": 4.5,
+   "f": 108,
+   "shape": "E"
+  },
+  {
+   "t": 4.75,
+   "f": 114,
+   "shape": "A"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "E"
+  },
+  {
+   "t": 5.125,
+   "f": 123,
+   "shape": "A"
+  },
+  {
+   "t": 5.208,
+   "f": 125,
+   "shape": "E"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "A"
+  },
+  {
+   "t": 5.583,
+   "f": 134,
+   "shape": "E"
+  },
+  {
+   "t": 5.75,
+   "f": 138,
+   "shape": "M"
+  },
+  {
+   "t": 5.833,
+   "f": 140,
+   "shape": "O"
+  },
+  {
+   "t": 5.917,
+   "f": 142,
+   "shape": "E"
+  },
+  {
+   "t": 6.0,
+   "f": 144,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "A",
+   "t0": 0.47,
+   "t1": 0.538,
+   "f0": 11,
+   "f1": 13,
+   "ph": "ɐ"
+  },
+  {
+   "w": "fruit",
+   "t0": 0.538,
+   "t1": 0.775,
+   "f0": 13,
+   "f1": 19,
+   "ph": "fɹˈut"
+  },
+  {
+   "w": "Fruit",
+   "t0": 0.837,
+   "t1": 1.1,
+   "f0": 20,
+   "f1": 26,
+   "ph": "fɹˈut"
+  },
+  {
+   "w": "doesn't",
+   "t0": 1.1,
+   "t1": 1.362,
+   "f0": 26,
+   "f1": 33,
+   "ph": "dˈʌzᵊnt"
+  },
+  {
+   "w": "have",
+   "t0": 1.362,
+   "t1": 1.512,
+   "f0": 33,
+   "f1": 36,
+   "ph": "hæv"
+  },
+  {
+   "w": "a",
+   "t0": 1.512,
+   "t1": 1.575,
+   "f0": 36,
+   "f1": 38,
+   "ph": "ɐ"
+  },
+  {
+   "w": "launch",
+   "t0": 1.575,
+   "t1": 1.875,
+   "f0": 38,
+   "f1": 45,
+   "ph": "lˈɔnʧ"
+  },
+  {
+   "w": "window",
+   "t0": 1.875,
+   "t1": 2.3,
+   "f0": 45,
+   "f1": 55,
+   "ph": "wˈɪndO"
+  },
+  {
+   "w": "They're",
+   "t0": 2.4,
+   "t1": 2.55,
+   "f0": 58,
+   "f1": 61,
+   "ph": "ðˌɛɹ"
+  },
+  {
+   "w": "calling",
+   "t0": 2.55,
+   "t1": 2.862,
+   "f0": 61,
+   "f1": 69,
+   "ph": "kˈɔlɪŋ"
+  },
+  {
+   "w": "the",
+   "t0": 2.862,
+   "t1": 2.95,
+   "f0": 69,
+   "f1": 71,
+   "ph": "ðə"
+  },
+  {
+   "w": "next",
+   "t0": 2.95,
+   "t1": 3.25,
+   "f0": 71,
+   "f1": 78,
+   "ph": "nˈɛkst"
+  },
+  {
+   "w": "model",
+   "t0": 3.25,
+   "t1": 3.575,
+   "f0": 78,
+   "f1": 86,
+   "ph": "mˈɑdᵊl"
+  },
+  {
+   "w": "Strawberry",
+   "t0": 3.575,
+   "t1": 4.25,
+   "f0": 86,
+   "f1": 102,
+   "ph": "stɹˈɔbˌɛɹi"
+  },
+  {
+   "w": "Nothing",
+   "t0": 4.363,
+   "t1": 4.7,
+   "f0": 105,
+   "f1": 113,
+   "ph": "nˈʌθɪŋ"
+  },
+  {
+   "w": "red",
+   "t0": 4.7,
+   "t1": 4.95,
+   "f0": 113,
+   "f1": 119,
+   "ph": "ɹˈɛd"
+  },
+  {
+   "w": "is",
+   "t0": 4.95,
+   "t1": 5.075,
+   "f0": 119,
+   "f1": 122,
+   "ph": "ɪz"
+  },
+  {
+   "w": "just",
+   "t0": 5.075,
+   "t1": 5.3,
+   "f0": 122,
+   "f1": 127,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "red",
+   "t0": 5.3,
+   "t1": 5.462,
+   "f0": 127,
+   "f1": 131,
+   "ph": "ɹˈɛd"
+  },
+  {
+   "w": "anymore",
+   "t0": 5.462,
+   "t1": 5.99,
+   "f0": 131,
+   "f1": 144,
+   "ph": "ˌɛnimˈɔɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.57,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 109.7,
+  "f0_range_st": 12.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "A fruit fruit doesn't have a launch window. They're calling the next model strawberry. Nothing red is just red anymore.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.154,
+  "align_median_s": 0.044,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.435,
+  "rise_ms": 5.0,
+  "decay_ms": 95.0,
+  "decay_to_60_s": 0.2
+ },
+ "speaker_label": "CORKBOARD-GUY",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "e30e3fa0d5b4c313",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 11.94,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 2.56,
+   "rechecked_alone": false
+  }
+ }
+}

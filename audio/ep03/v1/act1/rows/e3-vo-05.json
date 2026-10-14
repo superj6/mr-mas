@@ -1,0 +1,214 @@
+{
+ "id": "e3-vo-05",
+ "scene": "8.04",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "let them try it before the invitation gets expensive.",
+ "spoken_as": "let them try it before the invitation gets expensive.",
+ "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "8.04",
+ "shot_id": "8.04",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.5,
+ "file": "audio/ep03/v1/act1/wav/e3-vo-05.wav",
+ "mp3": null,
+ "duration_s": 4.69,
+ "frames_24": 113,
+ "voiced_span_s": 3.36,
+ "pace": {
+  "words": 9,
+  "wpm": 160.7,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "close dry thought, lowercase, unhurried, never a slogan"
+  },
+  "measured": {
+   "wpm": 160.7,
+   "articulation_sps": 4.6,
+   "syllables": 15,
+   "span_s": 3.36,
+   "pauses_s": [
+    0.1
+   ]
+  },
+  "longest_internal_gap_s": 0.1,
+  "audible_in_s": 0.63,
+  "audible_out_s": 3.99
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "let",
+   "t0": 0.645,
+   "t1": 0.845,
+   "f0": 15,
+   "f1": 20,
+   "ph": "lˈɛt"
+  },
+  {
+   "w": "them",
+   "t0": 0.845,
+   "t1": 1.07,
+   "f0": 20,
+   "f1": 26,
+   "ph": "ðˌɛm"
+  },
+  {
+   "w": "try",
+   "t0": 1.07,
+   "t1": 1.47,
+   "f0": 26,
+   "f1": 35,
+   "ph": "tɹˈI"
+  },
+  {
+   "w": "it",
+   "t0": 1.47,
+   "t1": 1.64,
+   "f0": 35,
+   "f1": 39,
+   "ph": "ɪt"
+  },
+  {
+   "w": "before",
+   "t0": 1.645,
+   "t1": 2.008,
+   "f0": 39,
+   "f1": 48,
+   "ph": "bəfˈɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 2.008,
+   "t1": 2.145,
+   "f0": 48,
+   "f1": 51,
+   "ph": "ði"
+  },
+  {
+   "w": "invitation",
+   "t0": 2.145,
+   "t1": 2.895,
+   "f0": 51,
+   "f1": 69,
+   "ph": "ˌɪnvətˈAʃən"
+  },
+  {
+   "w": "gets",
+   "t0": 2.895,
+   "t1": 3.145,
+   "f0": 69,
+   "f1": 75,
+   "ph": "ɡɛts"
+  },
+  {
+   "w": "expensive",
+   "t0": 3.145,
+   "t1": 4.01,
+   "f0": 75,
+   "f1": 96,
+   "ph": "ɪkspˈɛnsɪv"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.58,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.63,
+  "median_f0_hz": 111.3,
+  "f0_range_st": 10.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Let them try it before the invitation gets expensive.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.231,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.63,
+  "speech_tail_s": 0.385,
+  "rise_ms": 25.0,
+  "decay_ms": 210.0,
+  "decay_to_60_s": 0.32
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "afc55b2f9b78c4e6",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 12.16,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.25,
+   "rechecked_alone": false
+  }
+ }
+}

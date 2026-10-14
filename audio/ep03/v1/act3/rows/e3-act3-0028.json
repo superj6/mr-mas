@@ -1,0 +1,448 @@
+{
+ "id": "e3-act3-0028",
+ "scene": "18.02",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "Because if it ends well, nobody reads the footnotes. That's where I put the parts that don't.",
+ "spoken_as": "Because if it ends well, nobody reads the footnotes. That's where I put the parts that don't.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.02",
+ "shot_id": "18.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 6.182,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0028.wav",
+ "mp3": null,
+ "duration_s": 5.38,
+ "frames_24": 130,
+ "voiced_span_s": 4.36,
+ "pace": {
+  "words": 17,
+  "wpm": 233.9,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 233.9,
+   "articulation_sps": 5.19,
+   "syllables": 21,
+   "span_s": 4.36,
+   "pauses_s": [
+    0.31
+   ]
+  },
+  "longest_internal_gap_s": 0.31,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.86
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.040 (the centre of the band; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.417,
+   "f": 10,
+   "shape": "M"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "O"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "O"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "O"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "E"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "O"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "rest"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "A"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "E"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "A"
+  },
+  {
+   "t": 3.667,
+   "f": 88,
+   "shape": "M"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "O"
+  },
+  {
+   "t": 3.833,
+   "f": 92,
+   "shape": "E"
+  },
+  {
+   "t": 3.958,
+   "f": 95,
+   "shape": "M"
+  },
+  {
+   "t": 4.042,
+   "f": 97,
+   "shape": "A"
+  },
+  {
+   "t": 4.125,
+   "f": 99,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "A"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "E"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "O"
+  },
+  {
+   "t": 4.75,
+   "f": 114,
+   "shape": "E"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Because",
+   "t0": 0.47,
+   "t1": 0.695,
+   "f0": 11,
+   "f1": 17,
+   "ph": "bəkˈʌz"
+  },
+  {
+   "w": "if",
+   "t0": 0.695,
+   "t1": 0.807,
+   "f0": 17,
+   "f1": 19,
+   "ph": "ɪf"
+  },
+  {
+   "w": "it",
+   "t0": 0.807,
+   "t1": 0.895,
+   "f0": 19,
+   "f1": 21,
+   "ph": "ɪt"
+  },
+  {
+   "w": "ends",
+   "t0": 0.895,
+   "t1": 1.195,
+   "f0": 21,
+   "f1": 29,
+   "ph": "ˈɛndz"
+  },
+  {
+   "w": "well",
+   "t0": 1.195,
+   "t1": 1.495,
+   "f0": 29,
+   "f1": 36,
+   "ph": "wˈɛl"
+  },
+  {
+   "w": "nobody",
+   "t0": 1.545,
+   "t1": 1.908,
+   "f0": 37,
+   "f1": 46,
+   "ph": "nˈObˌɑdi"
+  },
+  {
+   "w": "reads",
+   "t0": 1.908,
+   "t1": 2.208,
+   "f0": 46,
+   "f1": 53,
+   "ph": "ɹˈidz"
+  },
+  {
+   "w": "the",
+   "t0": 2.208,
+   "t1": 2.308,
+   "f0": 53,
+   "f1": 55,
+   "ph": "ðə"
+  },
+  {
+   "w": "footnotes",
+   "t0": 2.308,
+   "t1": 2.95,
+   "f0": 55,
+   "f1": 71,
+   "ph": "fˈʊtnˌOts"
+  },
+  {
+   "w": "That's",
+   "t0": 3.17,
+   "t1": 3.482,
+   "f0": 76,
+   "f1": 84,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "where",
+   "t0": 3.482,
+   "t1": 3.608,
+   "f0": 84,
+   "f1": 87,
+   "ph": "wˌɛɹ"
+  },
+  {
+   "w": "I",
+   "t0": 3.608,
+   "t1": 3.72,
+   "f0": 87,
+   "f1": 89,
+   "ph": "ˌI"
+  },
+  {
+   "w": "put",
+   "t0": 3.72,
+   "t1": 3.858,
+   "f0": 89,
+   "f1": 93,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "the",
+   "t0": 3.858,
+   "t1": 3.945,
+   "f0": 93,
+   "f1": 95,
+   "ph": "ðə"
+  },
+  {
+   "w": "parts",
+   "t0": 3.945,
+   "t1": 4.27,
+   "f0": 95,
+   "f1": 102,
+   "ph": "pˈɑɹts"
+  },
+  {
+   "w": "that",
+   "t0": 4.27,
+   "t1": 4.47,
+   "f0": 102,
+   "f1": 107,
+   "ph": "ðæt"
+  },
+  {
+   "w": "don't",
+   "t0": 4.47,
+   "t1": 4.88,
+   "f0": 107,
+   "f1": 117,
+   "ph": "dˈOnt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.6,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 122.9,
+  "f0_range_st": 14.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Because if it ends well, nobody reads the footnotes. That's where I put the parts that don't.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.204,
+  "align_median_s": 0.035,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 65.0,
+  "decay_to_60_s": 0.07
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "fed6d15a8226a1e9",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.87,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 2.0,
+   "rechecked_alone": false
+  }
+ }
+}

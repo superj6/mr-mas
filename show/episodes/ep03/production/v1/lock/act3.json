@@ -49,7 +49,11 @@
   "lines_crossing_a_cut": [],
   "prelaps": [],
   "reviewer_slates": [],
-  "mix": null,
+  "mix": {
+   "path": "out/ep03/v1/mix/act3-mix.wav",
+   "offset_frames": 0,
+   "frames": 5974.0
+  },
   "refs": {}
  },
  "checks": [
@@ -92,6 +96,11 @@
    "check": "every on-camera mouth has a track",
    "ok": true,
    "detail": "0 faced rows; without a track: []"
+  },
+  {
+   "check": "the mix = its offset + the segment",
+   "ok": true,
+   "detail": "mix 5974.00 f vs 0 + 5974"
   }
  ],
  "sequences": [
@@ -289,13 +298,6 @@
    "marks": {},
    "mark_src": {},
    "texts": [
-    {
-     "kind": "label",
-     "text": "MAR 2012",
-     "s": 6,
-     "e": 36,
-     "must": true
-    },
     {
      "kind": "doc",
      "text": "TPOOL SOLD · $43.4M",
@@ -6913,13 +6915,6 @@
    "mark_src": {},
    "texts": [
     {
-     "kind": "label",
-     "text": "OCT 11, 2024",
-     "s": 6,
-     "e": 36,
-     "must": true
-    },
-    {
      "kind": "sign",
      "text": "NOW HIRING",
      "s": 38,
@@ -7010,13 +7005,6 @@
    "marks": {},
    "mark_src": {},
    "texts": [
-    {
-     "kind": "label",
-     "text": "2020–2021",
-     "s": 6,
-     "e": 36,
-     "must": true
-    },
     {
      "kind": "doc",
      "text": "ELEVEN LEAVE",
@@ -14841,7 +14829,29 @@
   }
  ],
  "posts": [],
- "rails": [],
+ "rails": [
+  {
+   "text": "MAR 2012",
+   "s": 6,
+   "e": 36,
+   "shot": "15.01",
+   "floor_f": 16
+  },
+  {
+   "text": "OCT 11, 2024",
+   "s": 4159,
+   "e": 4189,
+   "shot": "18.06",
+   "floor_f": 21
+  },
+  {
+   "text": "2020–2021",
+   "s": 4447,
+   "e": 4477,
+   "shot": "19.01",
+   "floor_f": 17
+  }
+ ],
  "sound_marks": [],
  "subs": [
   {

@@ -3,6 +3,7 @@
 The table of contents for the whole room: every file, one line each, plus a reading order and the status of each episode. Read-only research and design history lives in `_sources/` and is not indexed here.
 
 - **As of:** 2026-09-25 (coordinator pass). Eps 1–9 follow real events through Sep 24, 2026; Eps 10–12 are extrapolated past the record (post-Sep 2026), with no on-screen speculation label.
+- **Production update, 2026-10-13:** Episode 1 is published and locked; Episode 2 v1 is complete and unpublished; Episode 3 has a complete unpublished 20:03 Codex stock-voice cut. Start with [Ep3's delivery](episodes/ep03/production/v1/DELIVERY.md). Episodes 4–12 remain drafts; the writing questions below retain their original September context.
 - **Rules of the room:** [README](README.md). Names come only from [bible/naming.md](bible/naming.md); hard exclusions are in [bible/guardrails.md](bible/guardrails.md); flashback placement is in [timeline/flashback-map.md](timeline/flashback-map.md).
 - **Visual style:** **DECIDED 2026-09-25: pixel art primary** (adventure-game staging; glyph for foreshadowing; sparing motivated switches). See [bible/style-status.md](bible/style-status.md). Point of view: limited third person through Mas ([bible/pov-and-framing.md](bible/pov-and-framing.md), [bible/pov-clarification.md](bible/pov-clarification.md)).
 
@@ -33,13 +34,13 @@ A new writer can get oriented in about an hour by reading these in order.
 
 ## Episode status
 
-All twelve episodes are **drafted** (seven files each: outline, beats, flashbacks, facts, gags, intro slot, open questions). None is locked. "Blocking" lists the top items in each `open-questions.md`.
+All twelve episodes have **draft writing folders** (seven files each: outline, beats, flashbacks, facts, gags, intro slot, open questions). The September writing table below predates finished production; current delivery status is linked for Episodes 1–3. "Blocking" otherwise lists the original questions in each `open-questions.md`.
 
 | Ep | File title | Window | Status | Flashbacks | Blocking before lock |
 |---|---|---|---|---|---|
-| [1](episodes/ep01/outline.md) | `ep1.0_research_preview.md` | Nov 30, 2022 → Dec 27, 2023 | Drafted · real events | 10 s (≤20 s cap) | Pilot cold-open line; runtime density (about 59 dated events); re-verify "eye-watering" [K] |
-| [2](episodes/ep02/outline.md) | `ep1.1_her.wav` | Jan → Aug 22, 2024 (overlaps Ep3 by design) | Drafted · real events | ~80 s | Séance email wording [K]; "her" and NDA lines [K]; ROLYAT beat (default: cut) |
-| [3](episodes/ep03/outline.md) | `ep1.2_strawberry.jpg` | Aug 5 → Dec 2024 | Drafted · real events | ~95 s | RUMPT reveal line; "i love summer in the garden" [K]; SIMED Nobel date |
+| [1](episodes/ep01/outline.md) | `ep1.0_research_preview.md` | Nov 30, 2022 → Dec 27, 2023 | Published · locked | 10 s (draft) | [Published episode](../EPISODES.md); production is locked. |
+| [2](episodes/ep02/outline.md) | `ep1.1_her.wav` | Jan → Aug 22, 2024 (overlaps Ep3 by design) | v1 complete · unpublished | ~80 s (draft) | [Delivery / watch-through](episodes/ep02/production/v1/DELIVERY.md) |
+| [3](episodes/ep03/outline.md) | `ep1.2_strawberry.jpg` | Aug 5 → Dec 2024 | Codex v1 complete · unpublished · stock voices | ~95 s (draft) | [Delivery / watchlist](episodes/ep03/production/v1/DELIVERY.md); paid voice pass blocked before requests. |
 | [4](episodes/ep04/outline.md) | `ep1.3_not_for_sale.eml` | Jan → Apr 30, 2025 | Drafted · real events | ~80 s | RUMPT first-card stat row; THE WHALE `$5.6M*` source; Stargate exchange [K]; Mas at the inauguration |
 | [5](episodes/ep05/outline.md) | `ep1.4_missionaries.docx` | May → Aug 2025 | Drafted · real events | ~95 s | The soup story [K] (carries the A-plot); "missionaries" wording [K]; MOSWEN `EDITED` meme [K] (added this pass) |
 | [6](episodes/ep06/outline.md) | `ep1.5_backstop.xlsx` | Sep → Dec 2025 | Drafted · real events | ~83 s | "I'll find you a buyer… Enough." [K]; `BACKSTOP` headline lint fix; the deepfake-shoplifter gag |

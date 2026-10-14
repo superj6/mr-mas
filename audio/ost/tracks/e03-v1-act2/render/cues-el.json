@@ -1,0 +1,151 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-act2-el",
+ "segment": "act2",
+ "file": "audio/ost/tracks/e03-v1-act2/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act2.json",
+ "lock_sha1": "89cdc13ca1c481b61811108ac8539d0fe6120ee5",
+ "length_s": 277.1666666666667,
+ "frames": 6652,
+ "samples": 13304000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-act2-continuous",
+   "start": 0,
+   "end": 277.1666666666667,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 439,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "11",
+     "mood": "drive",
+     "text": "E03-07 THE DOOR; leverage pizzicato→turbine swing",
+     "start": 0.0,
+     "end": 96.08333333333333
+    },
+    {
+     "scene": "12",
+     "mood": "warm",
+     "text": "E03-08 FIRST BUILD; warm chamber/knee, sparse chip",
+     "start": 96.08333333333333,
+     "end": 146.375
+    },
+    {
+     "scene": "13",
+     "mood": "dry",
+     "text": "E03-09 PROCEDURE; low strings/brushes, dry documents",
+     "start": 146.375,
+     "end": 183.16666666666666
+    },
+    {
+     "scene": "14",
+     "mood": "pressure",
+     "text": "E03-10 LEVERAGE; low knee ostinato→odometer brass",
+     "start": 183.16666666666666,
+     "end": 277.1666666666667
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 277.1667,
+  "samples": 13304000,
+  "frames": 6652,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -22.41,
+   "st_max": -21.35,
+   "true_peak_dbtp": -7.22
+  },
+  "cues": {
+   "e03-v1-act2-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -22.41,
+    "st_max": -21.35,
+    "true_peak_dbtp": -7.22
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 11: drive",
+    "start": 0.0,
+    "end": 96.08,
+    "lufs_i": -23.15,
+    "st_p95": -21.85,
+    "st_max": -21.35,
+    "true_peak_dbtp": -7.22
+   },
+   {
+    "section": "scene 12: warm",
+    "start": 96.08,
+    "end": 146.38,
+    "lufs_i": -25.05,
+    "st_p95": -24.41,
+    "st_max": -24.27,
+    "true_peak_dbtp": -14.28
+   },
+   {
+    "section": "scene 13: dry",
+    "start": 146.38,
+    "end": 183.17,
+    "lufs_i": -24.89,
+    "st_p95": -22.93,
+    "st_max": -22.59,
+    "true_peak_dbtp": -8.57
+   },
+   {
+    "section": "scene 14: pressure",
+    "start": 183.17,
+    "end": 277.17,
+    "lufs_i": -24.19,
+    "st_p95": -22.49,
+    "st_max": -22.16,
+    "true_peak_dbtp": -8.24
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 277.15,
+    "dur": 277.15
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-act2-continuous",
+   "file": "audio/ost/tracks/e03-v1-act2/render/_work/el/e03-v1-act2-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    277.167
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

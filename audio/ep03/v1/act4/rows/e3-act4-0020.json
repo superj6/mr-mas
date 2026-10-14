@@ -1,0 +1,319 @@
+{
+ "id": "e3-act4-0020",
+ "scene": "22.03",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "You get a more expensive opportunity to ask it again.",
+ "spoken_as": "You get a more expensive opportunity to ask it again.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "22.03",
+ "shot_id": "22.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.158,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0020.wav",
+ "mp3": null,
+ "duration_s": 3.715,
+ "frames_24": 90,
+ "voiced_span_s": 2.52,
+ "pace": {
+  "words": 10,
+  "wpm": 238.1,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 238.1,
+   "articulation_sps": 6.75,
+   "syllables": 17,
+   "span_s": 2.52,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.03
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.458,
+   "f": 11,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "M"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "M"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "M"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "O"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "A"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "E"
+  },
+  {
+   "t": 2.833,
+   "f": 68,
+   "shape": "A"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "E"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.47,
+   "t1": 0.55,
+   "f0": 11,
+   "f1": 13,
+   "ph": "jˌu"
+  },
+  {
+   "w": "get",
+   "t0": 0.55,
+   "t1": 0.688,
+   "f0": 13,
+   "f1": 16,
+   "ph": "ɡɛt"
+  },
+  {
+   "w": "a",
+   "t0": 0.688,
+   "t1": 0.75,
+   "f0": 16,
+   "f1": 18,
+   "ph": "ɐ"
+  },
+  {
+   "w": "more",
+   "t0": 0.75,
+   "t1": 0.937,
+   "f0": 18,
+   "f1": 22,
+   "ph": "mˈɔɹ"
+  },
+  {
+   "w": "expensive",
+   "t0": 0.937,
+   "t1": 1.5,
+   "f0": 22,
+   "f1": 36,
+   "ph": "ɪkspˈɛnsɪv"
+  },
+  {
+   "w": "opportunity",
+   "t0": 1.5,
+   "t1": 2.15,
+   "f0": 36,
+   "f1": 52,
+   "ph": "ˌɑpəɹtˈunəTi"
+  },
+  {
+   "w": "to",
+   "t0": 2.15,
+   "t1": 2.275,
+   "f0": 52,
+   "f1": 55,
+   "ph": "tʊ"
+  },
+  {
+   "w": "ask",
+   "t0": 2.275,
+   "t1": 2.512,
+   "f0": 55,
+   "f1": 60,
+   "ph": "ˈæsk"
+  },
+  {
+   "w": "it",
+   "t0": 2.512,
+   "t1": 2.6,
+   "f0": 60,
+   "f1": 62,
+   "ph": "ɪt"
+  },
+  {
+   "w": "again",
+   "t0": 2.6,
+   "t1": 3.05,
+   "f0": 62,
+   "f1": 73,
+   "ph": "əɡˈɛn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.21,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 130.9,
+  "f0_range_st": 10.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You get a more expensive opportunity to ask it again.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.216,
+  "align_median_s": 0.036,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.445,
+  "rise_ms": 20.0,
+  "decay_ms": 155.0,
+  "decay_to_60_s": 0.245
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "b840de0c65f6df6b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.09,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.58,
+   "rechecked_alone": false
+  }
+ }
+}

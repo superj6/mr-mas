@@ -1,0 +1,415 @@
+{
+ "id": "e3-act3-0022",
+ "scene": "18.01",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "It's nearly done. There's a caveat on page forty that needs a caveat of its own.",
+ "spoken_as": "It's nearly done. There's a caveat on page forty that needs a caveat of its own.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.01",
+ "shot_id": "18.01",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.818,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0022.wav",
+ "mp3": null,
+ "duration_s": 5.105,
+ "frames_24": 123,
+ "voiced_span_s": 4.12,
+ "pace": {
+  "words": 16,
+  "wpm": 233.0,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 233.0,
+   "articulation_sps": 5.66,
+   "syllables": 22,
+   "span_s": 4.12,
+   "pauses_s": [
+    0.23
+   ]
+  },
+  "longest_internal_gap_s": 0.23,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.62
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.040 (the centre of the band; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "E"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "rest"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "A"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "E"
+  },
+  {
+   "t": 2.167,
+   "f": 52,
+   "shape": "A"
+  },
+  {
+   "t": 2.292,
+   "f": 55,
+   "shape": "O"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "M"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "E"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "O"
+  },
+  {
+   "t": 2.917,
+   "f": 70,
+   "shape": "E"
+  },
+  {
+   "t": 3.167,
+   "f": 76,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "A"
+  },
+  {
+   "t": 3.417,
+   "f": 82,
+   "shape": "E"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "A"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "E"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "O"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "E"
+  },
+  {
+   "t": 4.625,
+   "f": 111,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "It's",
+   "t0": 0.47,
+   "t1": 0.665,
+   "f0": 11,
+   "f1": 16,
+   "ph": "ˌɪts"
+  },
+  {
+   "w": "nearly",
+   "t0": 0.665,
+   "t1": 1.015,
+   "f0": 16,
+   "f1": 24,
+   "ph": "nˈɪɹli"
+  },
+  {
+   "w": "done",
+   "t0": 1.015,
+   "t1": 1.43,
+   "f0": 24,
+   "f1": 34,
+   "ph": "dˈʌn"
+  },
+  {
+   "w": "There's",
+   "t0": 1.565,
+   "t1": 1.752,
+   "f0": 38,
+   "f1": 42,
+   "ph": "ðˌɛɹz"
+  },
+  {
+   "w": "a",
+   "t0": 1.752,
+   "t1": 1.84,
+   "f0": 42,
+   "f1": 44,
+   "ph": "ɐ"
+  },
+  {
+   "w": "caveat",
+   "t0": 1.84,
+   "t1": 2.302,
+   "f0": 44,
+   "f1": 55,
+   "ph": "kˈæviˌæt"
+  },
+  {
+   "w": "on",
+   "t0": 2.302,
+   "t1": 2.415,
+   "f0": 55,
+   "f1": 58,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "page",
+   "t0": 2.415,
+   "t1": 2.74,
+   "f0": 58,
+   "f1": 66,
+   "ph": "pˈAʤ"
+  },
+  {
+   "w": "forty",
+   "t0": 2.74,
+   "t1": 3.115,
+   "f0": 66,
+   "f1": 75,
+   "ph": "fˈɔɹTi"
+  },
+  {
+   "w": "that",
+   "t0": 3.115,
+   "t1": 3.265,
+   "f0": 75,
+   "f1": 78,
+   "ph": "ðæt"
+  },
+  {
+   "w": "needs",
+   "t0": 3.265,
+   "t1": 3.503,
+   "f0": 78,
+   "f1": 84,
+   "ph": "nˈidz"
+  },
+  {
+   "w": "a",
+   "t0": 3.503,
+   "t1": 3.565,
+   "f0": 84,
+   "f1": 86,
+   "ph": "ɐ"
+  },
+  {
+   "w": "caveat",
+   "t0": 3.565,
+   "t1": 4.028,
+   "f0": 86,
+   "f1": 97,
+   "ph": "kˈæviˌæt"
+  },
+  {
+   "w": "of",
+   "t0": 4.028,
+   "t1": 4.102,
+   "f0": 97,
+   "f1": 98,
+   "ph": "ʌv"
+  },
+  {
+   "w": "its",
+   "t0": 4.102,
+   "t1": 4.265,
+   "f0": 98,
+   "f1": 102,
+   "ph": "ɪts"
+  },
+  {
+   "w": "own",
+   "t0": 4.265,
+   "t1": 4.64,
+   "f0": 102,
+   "f1": 111,
+   "ph": "ˈOn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.07,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 119.4,
+  "f0_range_st": 12.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "It's nearly done. There's a caveat on page 40 that needs a caveat of its own.",
+  "cer": 0.082,
+  "word_recall_nonames": 0.938,
+  "logprob": -0.2,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 5.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.045
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "aebec3f0fbae2319",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 14.5,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 7.52,
+   "rechecked_alone": true
+  }
+ }
+}

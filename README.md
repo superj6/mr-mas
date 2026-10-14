@@ -56,17 +56,18 @@ The score is **"The Knee (Main Title)," V1 "Chip Chamber Jazz"**: felt piano, ch
 
 The writers' room lives in [`show/`](show/INDEX.md): the bible, about 80 character files, a verified timeline from 1985 to Sep 2026, and 12 episode folders (outline, beats, flashbacks, facts with sources, gags). Episodes 1–3 have full teleplays.
 
-## Where things stand (2026-10-11)
+## Where things stand (2026-10-13)
 
 - **Episode 1 is finished, published and locked.** `ep1.0_research_preview.md`, 23:31.58 (33,878 frames): cold open, the intro, four acts, the tag and the outro. Watch it from [EPISODES.md](EPISODES.md). The master is `out/ep01/full-v3/ep01-v35.mp4` (ignored by git like every video; its SHA-1 and its chapter inputs' are in `ops/reorg/ep01-final.sha1`). How it was made, round by round: [`show/episodes/ep01/production/full-v3/`](show/episodes/ep01/production/full-v3/) (`PLAN.md`, `pipeline.md`, `version-ledger.md`, `assembly.md`). Release copy: [`show/episodes/ep01/release.md`](show/episodes/ep01/release.md). Nothing in Ep1 changes from here on.
 - **The season is written and planned.** The bible, about 80 characters, a verified timeline from 1985 to Sep 2026, 12 episode folders (outlines, beats, facts with sources, gags), full teleplays for Eps 1–3, and the season's ML-concept plan ([`show/bible/ml-concepts.md`](show/bible/ml-concepts.md): one concept in depth per episode, Ep2–11).
 - **Shared assets are done:** the 30 s opening titles (four score variations, V1 used), the theme, 131 sound effects with dialogue blips, voice casting, the pixel engine, cast, rooms and kits.
 - **Episode 2 v1 is finished and awaiting the showrunner's watch-through.** `ep1.1_her.wav`, 23:31.00: cold open, the intro, four acts, the tag and the outro. Nobody has watched it in motion or heard it yet. Read [`DELIVERY.md`](show/episodes/ep02/production/v1/DELIVERY.md) before watching; the release copy (title, description, chapters, thumbnails) is [`release.md`](show/episodes/ep02/release.md). The master is `out/ep02/v1/ep02-v1.mp4` (ignored by git); how it was made: [`show/episodes/ep02/production/v1/`](show/episodes/ep02/production/v1/).
-- **Next: publish Episode 2 after the watch-through, then Episode 3.** See [Starting the next episode](#starting-the-next-episode).
+- **Episode 3 has a complete unpublished Codex first cut.** `ep1.2_strawberry.jpg`, 20:03.00, at `out/ep03/v1/ep03-v1.mp4`. New dialogue uses Kokoro stock voices; automatic approval review blocked the planned ElevenLabs pass despite explicit user authorization, before any request or credit spend. Read its [delivery note](show/episodes/ep03/production/v1/DELIVERY.md) and [timecoded watchlist](show/episodes/ep03/production/v1/assembly/watchlist-film.md). No continuous human watch or listening pass is recorded. [Release copy and thumbnails](show/episodes/ep03/release.md) are prepared; no upload was made.
+- **Next: watch Episode 2 and Episode 3, then decide what to publish or revise.** Episodes 4–12 remain drafts. See [Starting the next episode](#starting-the-next-episode).
 
 ## How it's made
 
-Everything here was produced by AI agents (Claude) working in parallel as orchestrated workflows, directed by the showrunner at approval gates. There's no hand animation and no DAW. Generated video appears only as short inserts of objects and animals, made with Runway and composited into the pixel picture: two in Ep1 ([`runway.md`](show/episodes/ep01/production/full-v3/runway.md)) and Ep2's mammoth in the cold open. The clay CLOD insert (Ep1) and Ep2's white-room lot are Blender renders.
+Everything here was produced by AI agents working in parallel, directed by the showrunner. Claude Opus 5.5 built the earlier episodes and shared assets; Codex made the Episode 3 attempt in one go, reusing those assets and production tools. There's no hand animation and no DAW. Generated video appears only as short inserts of objects and animals, made with Runway and composited into the pixel picture: two in Ep1 ([`runway.md`](show/episodes/ep01/production/full-v3/runway.md)) and Ep2's mammoth in the cold open. The clay CLOD insert (Ep1) and Ep2's white-room lot are Blender renders. Episode 3 adds only code-native pictures and sounds.
 
 | Layer | Tools |
 |---|---|
@@ -114,9 +115,9 @@ Ep1 is locked, but its pipeline is the model for the next episodes. `ops/rebuild
 
 **Picking the show up cold? Start with [`docs/HANDOFF.md`](docs/HANDOFF.md):** where things stand, what's next, the rules that never bend, how Ep2 was made, and what's specific to Ep3.
 
-1. Read [`show/production/SHOWRUNNER-NOTES.md`](show/production/SHOWRUNNER-NOTES.md) (the showrunner's standing notes), the bible ([`show/bible/`](show/bible/), especially `guardrails.md`, `pov-and-framing.md` and `ml-concepts.md`), and the episode's folder, starting with [`show/episodes/ep02/outline.md`](show/episodes/ep02/outline.md).
+1. Read [`show/production/SHOWRUNNER-NOTES.md`](show/production/SHOWRUNNER-NOTES.md) (the showrunner's standing notes), the bible ([`show/bible/`](show/bible/), especially `guardrails.md`, `pov-and-framing.md` and `ml-concepts.md`), and the requested episode's folder. Existing cuts have their own delivery notes; [Episode 3's](show/episodes/ep03/production/v1/DELIVERY.md) is the latest attempt.
 2. Follow Ep1's production as the template: [`full-v3/PLAN.md`](show/episodes/ep01/production/full-v3/PLAN.md) and [`pipeline.md`](show/episodes/ep01/production/full-v3/pipeline.md), and the lessons in its `version-ledger.md`.
-3. Put the new work where [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 says ("Starting a new episode"): `show/episodes/ep02/production/<cut>/`, `studio/src/episodes/ep02/`, `out/ep02/<cut>/`, `audio/ep02/` and `audio/ost/tracks/e02-<cut>-<seg>/`. Copy Ep1's tools rather than editing them. Ep2's copies are built (2026-10-08): [`show/episodes/ep02/production/v1/pipeline.md`](show/episodes/ep02/production/v1/pipeline.md) has every stage, per act and per scene (`ops/rebuild-act.sh --ep 2 <act> [--scene ID]`).
+3. Put new work where [`docs/ORGANIZATION-PLAN.md`](docs/ORGANIZATION-PLAN.md) §2 says ("Starting a new episode"): `show/episodes/epNN/production/<cut>/`, `studio/src/episodes/epNN/`, `out/epNN/<cut>/`, `audio/epNN/` and `audio/ost/tracks/eNN-<cut>-<seg>/`. Copy frozen episodes' tools into the new episode. [Episode 2's pipeline](show/episodes/ep02/production/v1/pipeline.md) and [Episode 3's pipeline](show/episodes/ep03/production/v1/pipeline.md) document every stage, per act and per scene (`ops/rebuild-act.sh --ep N <act> [--scene ID]`).
 4. Add the episode to [EPISODES.md](EPISODES.md) when it's published.
 
 ## Re-rendering
@@ -150,7 +151,7 @@ Videos (`*.mp4` and similar), dependencies, the third-party sample libraries and
 
 ## Credits and notes
 
-- Created and directed by the showrunner. Built with Claude (Anthropic) agents.
+- Created and directed by the showrunner. Earlier episodes and shared assets built with Claude (Anthropic) agents; the Episode 3 attempt built with Codex (OpenAI).
 - Samples:
   - VS Chamber Orchestra 2 Community Edition by Versilian Studios (CC0).
   - VCSL, the Versilian Community Sample Library (CC0).

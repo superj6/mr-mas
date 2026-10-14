@@ -1,0 +1,217 @@
+{
+ "id": "e3-act1-0012",
+ "scene": "4.05",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Wait. Is that one of ours?",
+ "spoken_as": "Wait. Is that one of ours?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "4.05",
+ "shot_id": "4.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.895,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0012.wav",
+ "mp3": null,
+ "duration_s": 2.265,
+ "frames_24": 55,
+ "voiced_span_s": 1.17,
+ "pace": {
+  "words": 6,
+  "wpm": 307.7,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 307.7,
+   "articulation_sps": 5.98,
+   "syllables": 7,
+   "span_s": 1.17,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 1.68
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Wait",
+   "t0": 0.47,
+   "t1": 0.67,
+   "f0": 11,
+   "f1": 16,
+   "ph": "wˈAt"
+  },
+  {
+   "w": "Is",
+   "t0": 0.708,
+   "t1": 0.832,
+   "f0": 17,
+   "f1": 20,
+   "ph": "ˌɪz"
+  },
+  {
+   "w": "that",
+   "t0": 0.832,
+   "t1": 0.982,
+   "f0": 20,
+   "f1": 24,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "one",
+   "t0": 0.982,
+   "t1": 1.108,
+   "f0": 24,
+   "f1": 27,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "of",
+   "t0": 1.108,
+   "t1": 1.195,
+   "f0": 27,
+   "f1": 29,
+   "ph": "ʌv"
+  },
+  {
+   "w": "ours",
+   "t0": 1.195,
+   "t1": 1.7,
+   "f0": 29,
+   "f1": 41,
+   "ph": "ˈWəɹz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.03,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 138.0,
+  "f0_range_st": 10.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Wait, is that one of ours?",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.163,
+  "align_median_s": 0.026,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 60.0,
+  "decay_to_60_s": 0.14
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "184b3da01664179c",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 4.55,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 1.26,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "seg": "act3",
+ "frames": 5974,
+ "mode": "scenes",
+ "out": "out/ep03/v1/picture/act3.mp4",
+ "cache": "out/ep03/v1/scenes/act3",
+ "seconds": 45,
+ "opts": {
+  "badge": false,
+  "vo": "typed",
+  "voLowercase": true,
+  "subs": "off",
+  "standin": "stick",
+  "standinTag": true
+ },
+ "bundle_built": "2026-10-14T04:02:52.816Z",
+ "glyph_dir": null,
+ "glyph_mode": "splice",
+ "standins": [],
+ "layout_problems": [],
+ "rendered": [
+  "15",
+  "18",
+  "19"
+ ],
+ "cached": [
+  "16",
+  "17A",
+  "20"
+ ],
+ "scenes": [
+  {
+   "id": "15",
+   "s": 0,
+   "e": 333,
+   "frames": 333,
+   "key": "f66c433d13a4969ea646dd4cdfa1889b9d6c113bbf274a7992798d95b23c56ff",
+   "file": "out/ep03/v1/scenes/act3/sc-15-f66c433d13a4969e.mp4",
+   "status": "rendered",
+   "changed": [
+    "slice"
+   ],
+   "ms": 9721,
+   "code": "1 scene module(s), 74 files",
+   "stats": {
+    "ms": 9189,
+    "spliced": {
+     "pic": 0,
+     "anim": 0
+    },
+    "marked": [],
+    "spliceOff": [],
+    "missing": [],
+    "failed": {},
+    "overlaid": {
+     "pic": 0,
+     "anim": 0
+    },
+    "overlayMissing": [],
+    "overlayRefused": {},
+    "standins": []
+   }
+  },
+  {
+   "id": "16",
+   "s": 333,
+   "e": 969,
+   "frames": 636,
+   "key": "c62f7624d8b89391452bc64c71101e21e6d4ca37deae199a39c19150647c5cd2",
+   "file": "out/ep03/v1/scenes/act3/sc-16-c62f7624d8b89391.mp4",
+   "status": "cached",
+   "changed": [],
+   "ms": null,
+   "code": "1 scene module(s), 74 files",
+   "stats": null
+  },
+  {
+   "id": "17A",
+   "s": 969,
+   "e": 2492,
+   "frames": 1523,
+   "key": "923b27ab8e1eee59ca9168f92caa496c11319492739386791de88d89461a4709",
+   "file": "out/ep03/v1/scenes/act3/sc-17a-923b27ab8e1eee59.mp4",
+   "status": "cached",
+   "changed": [],
+   "ms": null,
+   "code": "1 scene module(s), 74 files",
+   "stats": null
+  },
+  {
+   "id": "18",
+   "s": 2492,
+   "e": 4441,
+   "frames": 1949,
+   "key": "acc8184ed0ff8d391636ae707961bdb3c9380fbbc178941462d707c617d6cf44",
+   "file": "out/ep03/v1/scenes/act3/sc-18-acc8184ed0ff8d39.mp4",
+   "status": "rendered",
+   "changed": [
+    "slice"
+   ],
+   "ms": 44628,
+   "code": "1 scene module(s), 74 files",
+   "stats": {
+    "ms": 44226,
+    "spliced": {
+     "pic": 0,
+     "anim": 0
+    },
+    "marked": [],
+    "spliceOff": [],
+    "missing": [],
+    "failed": {},
+    "overlaid": {
+     "pic": 0,
+     "anim": 0
+    },
+    "overlayMissing": [],
+    "overlayRefused": {},
+    "standins": []
+   }
+  },
+  {
+   "id": "19",
+   "s": 4441,
+   "e": 4952,
+   "frames": 511,
+   "key": "fc79bee21dec95ca5e588e63c307f92a8655558c61d22ce3326801ee616a5025",
+   "file": "out/ep03/v1/scenes/act3/sc-19-fc79bee21dec95ca.mp4",
+   "status": "rendered",
+   "changed": [
+    "slice"
+   ],
+   "ms": 15099,
+   "code": "1 scene module(s), 74 files",
+   "stats": {
+    "ms": 14582,
+    "spliced": {
+     "pic": 0,
+     "anim": 0
+    },
+    "marked": [],
+    "spliceOff": [],
+    "missing": [],
+    "failed": {},
+    "overlaid": {
+     "pic": 0,
+     "anim": 0
+    },
+    "overlayMissing": [],
+    "overlayRefused": {},
+    "standins": []
+   }
+  },
+  {
+   "id": "20",
+   "s": 4952,
+   "e": 5974,
+   "frames": 1022,
+   "key": "e9e1db584b57c615f1570db72bbcf1b3b454dfd8b4f99a197b5ee149e92e82c3",
+   "file": "out/ep03/v1/scenes/act3/sc-20-e9e1db584b57c615.mp4",
+   "status": "cached",
+   "changed": [],
+   "ms": null,
+   "code": "1 scene module(s), 74 files",
+   "stats": null
+  }
+ ]
+}

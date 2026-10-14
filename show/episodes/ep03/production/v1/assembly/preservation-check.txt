@@ -1,0 +1,39 @@
+[heavy] waiting for a slot (max 2)...
+[heavy] got slot 2
+[heavy] running: bash -c set -e; sha1sum -c ops/reorg/ep01-final.sha1; printf "%s\n" "2a6affb88c14f25ff3735935639bc15a  out/ep02/v1/ep02-v1.mp4" | md5sum -c -
+out/ep01/full-v3/assembly-v35/outro.wav: OK
+out/ep01/full-v3/assembly-v35/tag-hum.wav: OK
+out/ep01/full-v3/assembly-v35/tag-last.png: OK
+out/ep01/full-v3/ep01-v35.mp4: OK
+out/ep01/full-v3/mix-v35-el/act1-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/act2-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/act3-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/act4-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/card-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/coldopen-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/outro-mix.wav: OK
+out/ep01/full-v3/mix-v35-el/tag-mix.wav: OK
+out/ep01/full-v3/picture-el/act1.mp4: OK
+out/ep01/full-v3/picture-el/act1.mp4.render.json: OK
+out/ep01/full-v3/picture-el/act1.srt: OK
+out/ep01/full-v3/picture-el/act2.mp4: OK
+out/ep01/full-v3/picture-el/act2.mp4.render.json: OK
+out/ep01/full-v3/picture-el/act2.srt: OK
+out/ep01/full-v3/picture-el/act3.mp4: OK
+out/ep01/full-v3/picture-el/act3.mp4.render.json: OK
+out/ep01/full-v3/picture-el/act3.srt: OK
+out/ep01/full-v3/picture-el/act4.mp4: OK
+out/ep01/full-v3/picture-el/act4.mp4.render.json: OK
+out/ep01/full-v3/picture-el/act4.srt: OK
+out/ep01/full-v3/picture-el/coldopen.mp4: OK
+out/ep01/full-v3/picture-el/coldopen.mp4.render.json: OK
+out/ep01/full-v3/picture-el/coldopen.srt: OK
+out/ep01/full-v3/picture-el/tag.mp4: OK
+out/ep01/full-v3/picture-el/tag.mp4.render.json: OK
+out/ep01/full-v3/picture-el/tag.srt: OK
+out/ep01/full-v3/picture-el/v35b-new-shots-sheet.png: OK
+out/ep02/v1/ep02-v1.mp4: OK
+[heavy] waiting for a slot (max 2)...
+[heavy] got slot 1
+[heavy] running: bash -c set -e; cmp audio/intro/ep03/intro-ep3-mix-V1-chipchamber.wav audio/intro/mix/intro-ep1-mix-V1-chipchamber-el.wav; printf "%s\n" "INTRO BYTE IDENTITY: OK (cmp exit0; Ep3 local WAV equals aired Ep1 master)"
+INTRO BYTE IDENTITY: OK (cmp exit0; Ep3 local WAV equals aired Ep1 master)

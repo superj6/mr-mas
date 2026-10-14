@@ -1,0 +1,282 @@
+{
+ "id": "e3-act2-0006",
+ "scene": "11.02",
+ "speaker": "RIMA TAMURI",
+ "speaker_slug": "rima-tamuri",
+ "text": "Of course. I'm happy to answer anything.",
+ "spoken_as": "Of course. I'm happy to answer anything.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.02",
+ "shot_id": "11.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 2.545,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0006.wav",
+ "mp3": null,
+ "duration_s": 3.1,
+ "frames_24": 75,
+ "voiced_span_s": 2.04,
+ "pace": {
+  "words": 7,
+  "wpm": 205.9,
+  "speed": 0.94,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.94,
+   "speed_band": [
+    0.9,
+    0.98
+   ],
+   "articulation_guide_sps": [
+    4.0,
+    4.6
+   ],
+   "turn_wpm_guide": [
+    140,
+    160
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 205.9,
+   "articulation_sps": 5.73,
+   "syllables": 11,
+   "span_s": 2.04,
+   "pauses_s": [
+    0.12
+   ]
+  },
+  "longest_internal_gap_s": 0.12,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.54
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_heart (Kokoro-82M stock) · a-heart-composed · speed 0.940",
+ "voiceId": "af_heart",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch 0",
+  "peak -1 dB @300 Hz Q1.0",
+  "peak +1 dB @5000 Hz Q0.8",
+  "comp 2.0:1 @-22 dB (8/120 ms)",
+  "Kokoro speed 0.940 (the centre of the band; rima-tamuri band 0.90-0.98); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "O"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "rest"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "M"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "M"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "O"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Of",
+   "t0": 0.47,
+   "t1": 0.635,
+   "f0": 11,
+   "f1": 15,
+   "ph": "ˌʌv"
+  },
+  {
+   "w": "course",
+   "t0": 0.635,
+   "t1": 1.135,
+   "f0": 15,
+   "f1": 27,
+   "ph": "kˈɔɹs"
+  },
+  {
+   "w": "I'm",
+   "t0": 1.21,
+   "t1": 1.36,
+   "f0": 29,
+   "f1": 33,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "happy",
+   "t0": 1.36,
+   "t1": 1.622,
+   "f0": 33,
+   "f1": 39,
+   "ph": "hˈæpi"
+  },
+  {
+   "w": "to",
+   "t0": 1.622,
+   "t1": 1.735,
+   "f0": 39,
+   "f1": 42,
+   "ph": "tʊ"
+  },
+  {
+   "w": "answer",
+   "t0": 1.735,
+   "t1": 2.01,
+   "f0": 42,
+   "f1": 48,
+   "ph": "ˈænsəɹ"
+  },
+  {
+   "w": "anything",
+   "t0": 2.01,
+   "t1": 2.56,
+   "f0": 48,
+   "f1": 61,
+   "ph": "ˈɛniθˌɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -2.52,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 208.6,
+  "f0_range_st": 13.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Of course, I'm happy to answer anything.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.193,
+  "align_median_s": 0.055,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 5.0,
+  "decay_ms": 90.0,
+  "decay_to_60_s": 0.105
+ },
+ "speaker_label": "RIMA",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "6c15b81b681ce5e1",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 5.68,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.26,
+   "rechecked_alone": false
+  }
+ }
+}

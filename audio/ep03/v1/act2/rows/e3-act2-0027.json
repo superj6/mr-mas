@@ -1,0 +1,363 @@
+{
+ "id": "e3-act2-0027",
+ "scene": "12.03",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "Or I can make something run that nobody knows how to make yet.",
+ "spoken_as": "Or I can make something run that nobody knows how to make yet.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "12.03",
+ "shot_id": "12.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.105,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0027.wav",
+ "mp3": null,
+ "duration_s": 4.11,
+ "frames_24": 99,
+ "voiced_span_s": 2.8,
+ "pace": {
+  "words": 13,
+  "wpm": 278.6,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 278.6,
+   "articulation_sps": 5.71,
+   "syllables": 16,
+   "span_s": 2.8,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 3.31
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "M"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "M"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "A"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "O"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "O"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "A"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "M"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "A"
+  },
+  {
+   "t": 3.042,
+   "f": 73,
+   "shape": "E"
+  },
+  {
+   "t": 3.125,
+   "f": 75,
+   "shape": "A"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Or",
+   "t0": 0.47,
+   "t1": 0.62,
+   "f0": 11,
+   "f1": 15,
+   "ph": "ˌɔɹ"
+  },
+  {
+   "w": "I",
+   "t0": 0.62,
+   "t1": 0.77,
+   "f0": 15,
+   "f1": 18,
+   "ph": "ˌI"
+  },
+  {
+   "w": "can",
+   "t0": 0.77,
+   "t1": 0.883,
+   "f0": 18,
+   "f1": 21,
+   "ph": "kæn"
+  },
+  {
+   "w": "make",
+   "t0": 0.883,
+   "t1": 1.095,
+   "f0": 21,
+   "f1": 26,
+   "ph": "mˌAk"
+  },
+  {
+   "w": "something",
+   "t0": 1.095,
+   "t1": 1.445,
+   "f0": 26,
+   "f1": 35,
+   "ph": "sˈʌmθˌɪŋ"
+  },
+  {
+   "w": "run",
+   "t0": 1.445,
+   "t1": 1.77,
+   "f0": 35,
+   "f1": 42,
+   "ph": "ɹˈʌn"
+  },
+  {
+   "w": "that",
+   "t0": 1.77,
+   "t1": 1.97,
+   "f0": 42,
+   "f1": 47,
+   "ph": "ðæt"
+  },
+  {
+   "w": "nobody",
+   "t0": 1.97,
+   "t1": 2.32,
+   "f0": 47,
+   "f1": 56,
+   "ph": "nˈObˌɑdi"
+  },
+  {
+   "w": "knows",
+   "t0": 2.32,
+   "t1": 2.62,
+   "f0": 56,
+   "f1": 63,
+   "ph": "nˈOz"
+  },
+  {
+   "w": "how",
+   "t0": 2.62,
+   "t1": 2.782,
+   "f0": 63,
+   "f1": 67,
+   "ph": "hˌW"
+  },
+  {
+   "w": "to",
+   "t0": 2.782,
+   "t1": 2.858,
+   "f0": 67,
+   "f1": 69,
+   "ph": "tə"
+  },
+  {
+   "w": "make",
+   "t0": 2.858,
+   "t1": 3.07,
+   "f0": 69,
+   "f1": 74,
+   "ph": "mˌAk"
+  },
+  {
+   "w": "yet",
+   "t0": 3.07,
+   "t1": 3.33,
+   "f0": 74,
+   "f1": 80,
+   "ph": "jˈɛt"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.73,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 121.2,
+  "f0_range_st": 10.9,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Or I can make something run that nobody knows how to make yet.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.252,
+  "align_median_s": 0.027,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 10.0,
+  "decay_ms": 35.0,
+  "decay_to_60_s": 0.355
+ },
+ "speaker_label": "GERG",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "3559ee8dbd489bed",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.84,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 2.88,
+   "rechecked_alone": false
+  }
+ }
+}

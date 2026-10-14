@@ -1,0 +1,23 @@
+[heavy] waiting for a slot (max 2)...
+[heavy] got slot 1
+[heavy] running: npx tsc --noEmit --pretty false
+src/dev/genvideo/runway/pxframes.ts(14,21): error TS2307: Cannot find module 'fs' or its corresponding type declarations.
+src/dev/genvideo/runway/pxframes.ts(15,23): error TS2307: Cannot find module 'path' or its corresponding type declarations.
+src/dev/genvideo/runway/pxframes.ts(48,62): error TS2322: Type 'number' is not assignable to type '0 | 1 | -1 | undefined'.
+src/dev/genvideo/runway/pxframes.ts(61,51): error TS2339: Property 'argv' does not exist on type 'Process'.
+src/dev/genvideo/runway/pxframes.ts(63,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/genvideo/runway/streamframes.ts(15,21): error TS2307: Cannot find module 'fs' or its corresponding type declarations.
+src/dev/genvideo/runway/streamframes.ts(16,23): error TS2307: Cannot find module 'path' or its corresponding type declarations.
+src/dev/genvideo/runway/streamframes.ts(73,51): error TS2339: Property 'argv' does not exist on type 'Process'.
+src/dev/genvideo/runway/streamframes.ts(75,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(33,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(35,14): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(35,29): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(35,57): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(36,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(38,10): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(41,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(44,5): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(46,16): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(54,15): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+src/dev/realism/bake/bake.ts(55,5): error TS2591: Cannot find name 'Buffer'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.

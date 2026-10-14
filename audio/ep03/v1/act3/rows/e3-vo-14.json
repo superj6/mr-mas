@@ -1,0 +1,222 @@
+{
+ "id": "e3-vo-14",
+ "scene": "20.06",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "a date on every door. enough room to move one.",
+ "spoken_as": "a date on every door. enough room to move one.",
+ "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "20.06",
+ "shot_id": "20.06",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 5.0,
+ "file": "audio/ep03/v1/act3/wav/e3-vo-14.wav",
+ "mp3": null,
+ "duration_s": 4.36,
+ "frames_24": 105,
+ "voiced_span_s": 3.18,
+ "pace": {
+  "words": 10,
+  "wpm": 188.7,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "close dry thought, lowercase, unhurried, never a slogan"
+  },
+  "measured": {
+   "wpm": 188.7,
+   "articulation_sps": 4.47,
+   "syllables": 13,
+   "span_s": 3.18,
+   "pauses_s": [
+    0.27
+   ]
+  },
+  "longest_internal_gap_s": 0.27,
+  "audible_in_s": 0.52,
+  "audible_out_s": 3.7
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "a",
+   "t0": 0.59,
+   "t1": 0.702,
+   "f0": 14,
+   "f1": 17,
+   "ph": "ɐ"
+  },
+  {
+   "w": "date",
+   "t0": 0.702,
+   "t1": 1.027,
+   "f0": 17,
+   "f1": 25,
+   "ph": "dˈAt"
+  },
+  {
+   "w": "on",
+   "t0": 1.027,
+   "t1": 1.228,
+   "f0": 25,
+   "f1": 29,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "every",
+   "t0": 1.228,
+   "t1": 1.565,
+   "f0": 29,
+   "f1": 38,
+   "ph": "ˈɛvəɹi"
+  },
+  {
+   "w": "door",
+   "t0": 1.565,
+   "t1": 2.0,
+   "f0": 38,
+   "f1": 48,
+   "ph": "dˈɔɹ"
+  },
+  {
+   "w": "enough",
+   "t0": 2.278,
+   "t1": 2.615,
+   "f0": 55,
+   "f1": 63,
+   "ph": "ɪnˈʌf"
+  },
+  {
+   "w": "room",
+   "t0": 2.615,
+   "t1": 2.865,
+   "f0": 63,
+   "f1": 69,
+   "ph": "ɹˈum"
+  },
+  {
+   "w": "to",
+   "t0": 2.865,
+   "t1": 2.99,
+   "f0": 69,
+   "f1": 72,
+   "ph": "tə"
+  },
+  {
+   "w": "move",
+   "t0": 2.99,
+   "t1": 3.29,
+   "f0": 72,
+   "f1": 79,
+   "ph": "mˈuv"
+  },
+  {
+   "w": "one",
+   "t0": 3.29,
+   "t1": 3.72,
+   "f0": 79,
+   "f1": 89,
+   "ph": "wˈʌn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.7,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 112.8,
+  "f0_range_st": 10.1,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "A date on every door, enough room to move one.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.224,
+  "align_median_s": 0.066,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.395,
+  "rise_ms": 80.0,
+  "decay_ms": 190.0,
+  "decay_to_60_s": 0.26
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "cb3a02fb9a0b9dda",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 7.41,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 1.91,
+   "rechecked_alone": false
+  }
+ }
+}

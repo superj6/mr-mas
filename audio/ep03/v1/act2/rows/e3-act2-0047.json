@@ -1,0 +1,322 @@
+{
+ "id": "e3-act2-0047",
+ "scene": "14.02",
+ "speaker": "GERG MOCKBRAN",
+ "speaker_slug": "gerg-mockbran",
+ "text": "You want us to put a new number on the building.",
+ "spoken_as": "You want us to put a new number on the building.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "14.02",
+ "shot_id": "14.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 4.0,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0047.wav",
+ "mp3": null,
+ "duration_s": 3.085,
+ "frames_24": 75,
+ "voiced_span_s": 1.87,
+ "pace": {
+  "words": 11,
+  "wpm": 352.9,
+  "speed": 1.06,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.06,
+   "speed_band": [
+    1.02,
+    1.1
+   ],
+   "articulation_guide_sps": [
+    5.0,
+    5.8
+   ],
+   "turn_wpm_guide": [
+    175,
+    200
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 352.9,
+   "articulation_sps": 6.95,
+   "syllables": 13,
+   "span_s": 1.87,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.51,
+  "audible_out_s": 2.38
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_puck (Kokoro-82M stock) · a-puck-quick · speed 1.060",
+ "voiceId": "am_puck",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch +1.5 st",
+  "peak -2 dB @250 Hz Q1.0",
+  "peak +2 dB @4000 Hz Q0.9",
+  "comp 3.0:1 @-22 dB (4/80 ms)",
+  "Kokoro speed 1.060 (the centre of the band; gerg-mockbran band 1.02-1.10); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "A"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "M"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "O"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "O"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "A"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "M"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "O"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "E"
+  },
+  {
+   "t": 1.917,
+   "f": 46,
+   "shape": "M"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.083,
+   "f": 50,
+   "shape": "E"
+  },
+  {
+   "t": 2.417,
+   "f": 58,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "You",
+   "t0": 0.47,
+   "t1": 0.55,
+   "f0": 11,
+   "f1": 13,
+   "ph": "jˌu"
+  },
+  {
+   "w": "want",
+   "t0": 0.55,
+   "t1": 0.737,
+   "f0": 13,
+   "f1": 18,
+   "ph": "wˈɑnt"
+  },
+  {
+   "w": "us",
+   "t0": 0.737,
+   "t1": 0.875,
+   "f0": 18,
+   "f1": 21,
+   "ph": "ˌʌs"
+  },
+  {
+   "w": "to",
+   "t0": 0.875,
+   "t1": 0.975,
+   "f0": 21,
+   "f1": 23,
+   "ph": "tə"
+  },
+  {
+   "w": "put",
+   "t0": 0.975,
+   "t1": 1.112,
+   "f0": 23,
+   "f1": 27,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "a",
+   "t0": 1.112,
+   "t1": 1.2,
+   "f0": 27,
+   "f1": 29,
+   "ph": "ɐ"
+  },
+  {
+   "w": "new",
+   "t0": 1.2,
+   "t1": 1.4,
+   "f0": 29,
+   "f1": 34,
+   "ph": "nˈu"
+  },
+  {
+   "w": "number",
+   "t0": 1.4,
+   "t1": 1.713,
+   "f0": 34,
+   "f1": 41,
+   "ph": "nˈʌmbəɹ"
+  },
+  {
+   "w": "on",
+   "t0": 1.713,
+   "t1": 1.812,
+   "f0": 41,
+   "f1": 43,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "the",
+   "t0": 1.812,
+   "t1": 1.9,
+   "f0": 43,
+   "f1": 46,
+   "ph": "ðə"
+  },
+  {
+   "w": "building",
+   "t0": 1.9,
+   "t1": 2.4,
+   "f0": 46,
+   "f1": 58,
+   "ph": "bˈɪldɪŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.09,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 130.4,
+  "f0_range_st": 9.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "You want us to put a new number on the building.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.277,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.45,
+  "rise_ms": 15.0,
+  "decay_ms": 160.0,
+  "decay_to_60_s": 0.26
+ },
+ "speaker_label": "AUHSOJ",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "96f28c07acf996a4",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 9.65,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 5.4,
+   "rechecked_alone": false
+  }
+ }
+}

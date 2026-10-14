@@ -1,0 +1,260 @@
+{
+ "segment": "act1",
+ "variant": "el",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act1.json",
+ "seconds": 304.417,
+ "frames": 7306,
+ "rooms": [
+  {
+   "room": "lobby_day",
+   "recipe": "lobby_day: bed_lobby_day -37",
+   "from": -0.6,
+   "to": 62.733,
+   "first": "4.01",
+   "last": "4.07",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 0.0
+  },
+  {
+   "room": "beach_day",
+   "recipe": "beach_day: bed_ep3_beach_day -39",
+   "from": 61.733,
+   "to": 68.442,
+   "first": "5.01",
+   "last": "5.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 6.0
+  },
+  {
+   "room": "stadium",
+   "recipe": "stadium: bed_ep3_stadium -37",
+   "from": 67.442,
+   "to": 261.067,
+   "first": "6.01",
+   "last": "8.12",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 3.5
+  },
+  {
+   "room": "alley_night",
+   "recipe": "alley_night: bed_ep3_alley_night -39",
+   "from": 260.067,
+   "to": 271.942,
+   "first": "9.01",
+   "last": "9.01",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.1
+  },
+  {
+   "room": "darkroom",
+   "recipe": "darkroom: server_hum -42 + room_tone -46 + room_drone -50",
+   "from": 270.942,
+   "to": 304.817,
+   "first": "10.01",
+   "last": "10.04",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 2.0
+  }
+ ],
+ "sfx": [
+  [
+   "4.04",
+   "keycap_bounce",
+   34.5,
+   -20.0
+  ],
+  [
+   "4.07",
+   "door_whoosh",
+   58.042,
+   -20.0
+  ],
+  [
+   "5.01",
+   "gull",
+   62.333,
+   -20.0
+  ],
+  [
+   "5.01",
+   "surf",
+   62.333,
+   -20.0
+  ],
+  [
+   "8.02",
+   "kick",
+   132.5,
+   -20.0
+  ],
+  [
+   "8.02",
+   "crowd_boo",
+   132.5,
+   -20.0
+  ],
+  [
+   "8.05",
+   "band_march",
+   169.167,
+   -20.0
+  ],
+  [
+   "8.06",
+   "shredder_purr",
+   179.167,
+   -20.0
+  ],
+  [
+   "8.08",
+   "shutter_clang",
+   219.833,
+   -20.0
+  ],
+  [
+   "8.10",
+   "kick",
+   234.833,
+   -20.0
+  ],
+  [
+   "8.10",
+   "crowd_cheer",
+   234.833,
+   -20.0
+  ],
+  [
+   "9.01",
+   "pin_tock",
+   260.667,
+   -20.0
+  ],
+  [
+   "10.03",
+   "phone_click",
+   290.208,
+   -20.0
+  ],
+  [
+   "10.04",
+   "clock_clack",
+   299.208,
+   -20.0
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -34.41,
+  "peak_dbfs": -20.86,
+  "p10_50ms_dbfs": -39.6
+ },
+ "sfx_stem": {
+  "lufs": -31.14,
+  "peak_dbfs": -16.51,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 34.504,
+     "boundary": 34.5,
+     "ratio": 770.2,
+     "kind": "step",
+     "before_dbfs": -33.8,
+     "after_dbfs": -29.7
+    },
+    {
+     "at": 132.502,
+     "boundary": 132.5,
+     "ratio": 231.8,
+     "kind": "step",
+     "before_dbfs": -32.6,
+     "after_dbfs": -25.7
+    },
+    {
+     "at": 169.173,
+     "boundary": 169.167,
+     "ratio": 36.1,
+     "kind": "step",
+     "before_dbfs": -33.9,
+     "after_dbfs": -32.3
+    },
+    {
+     "at": 219.836,
+     "boundary": 219.833,
+     "ratio": 50.2,
+     "kind": "step",
+     "before_dbfs": -36.0,
+     "after_dbfs": -27.1
+    },
+    {
+     "at": 260.669,
+     "boundary": 260.667,
+     "ratio": 733.0,
+     "kind": "step",
+     "before_dbfs": -37.0,
+     "after_dbfs": -28.1
+    },
+    {
+     "at": 290.211,
+     "boundary": 290.208,
+     "ratio": 917.5,
+     "kind": "step",
+     "before_dbfs": -36.3,
+     "after_dbfs": -29.0
+    },
+    {
+     "at": 299.212,
+     "boundary": 299.208,
+     "ratio": 766.8,
+     "kind": "step",
+     "before_dbfs": -34.8,
+     "after_dbfs": -28.1
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "lobby_day@act1:4.01",
+   "p5_50ms_dbfs": -39.7,
+   "lift_db": 0.0
+  },
+  {
+   "room": "beach_day@act1:5.01",
+   "p5_50ms_dbfs": -50.6,
+   "lift_db": 6.0
+  },
+  {
+   "room": "stadium@act1:6.01",
+   "p5_50ms_dbfs": -43.5,
+   "lift_db": 3.5
+  },
+  {
+   "room": "alley_night@act1:9.01",
+   "p5_50ms_dbfs": -44.1,
+   "lift_db": 4.1
+  },
+  {
+   "room": "darkroom@act1:10.01",
+   "p5_50ms_dbfs": -42.0,
+   "lift_db": 2.0
+  }
+ ]
+}

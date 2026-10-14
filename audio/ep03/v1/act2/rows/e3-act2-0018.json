@@ -1,0 +1,291 @@
+{
+ "id": "e3-act2-0018",
+ "scene": "11.06",
+ "speaker": "PHOTOGRAPHER",
+ "speaker_slug": "photographer",
+ "text": "Just need a signature for the door! Right here?",
+ "spoken_as": "Just need a signature for the door! Right here?",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "11.06",
+ "shot_id": "11.06",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.273,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0018.wav",
+ "mp3": null,
+ "duration_s": 3.305,
+ "frames_24": 80,
+ "voiced_span_s": 2.12,
+ "pace": {
+  "words": 9,
+  "wpm": 254.7,
+  "speed": 1.14,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.14,
+   "speed_band": [
+    1.1,
+    1.18
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    180
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 254.7,
+   "articulation_sps": 5.19,
+   "syllables": 11,
+   "span_s": 2.12,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.62
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_river (Kokoro-82M stock) · d-river-brisk-low · speed 1.140",
+ "voiceId": "af_river",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 90 Hz",
+  "pitch -2 st",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-22 dB (5/90 ms)",
+  "Kokoro speed 1.140 (the centre of the band; photographer band 1.10-1.18); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "O"
+  },
+  {
+   "t": 1.542,
+   "f": 37,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "O"
+  },
+  {
+   "t": 1.875,
+   "f": 45,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "E"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Just",
+   "t0": 0.48,
+   "t1": 0.692,
+   "f0": 12,
+   "f1": 17,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "need",
+   "t0": 0.692,
+   "t1": 0.868,
+   "f0": 17,
+   "f1": 21,
+   "ph": "nˈid"
+  },
+  {
+   "w": "a",
+   "t0": 0.868,
+   "t1": 0.967,
+   "f0": 21,
+   "f1": 23,
+   "ph": "ɐ"
+  },
+  {
+   "w": "signature",
+   "t0": 0.967,
+   "t1": 1.43,
+   "f0": 23,
+   "f1": 34,
+   "ph": "sˈɪɡnəʧəɹ"
+  },
+  {
+   "w": "for",
+   "t0": 1.43,
+   "t1": 1.542,
+   "f0": 34,
+   "f1": 37,
+   "ph": "fɔɹ"
+  },
+  {
+   "w": "the",
+   "t0": 1.542,
+   "t1": 1.63,
+   "f0": 37,
+   "f1": 39,
+   "ph": "ðə"
+  },
+  {
+   "w": "door",
+   "t0": 1.63,
+   "t1": 1.98,
+   "f0": 39,
+   "f1": 48,
+   "ph": "dˈɔɹ"
+  },
+  {
+   "w": "Right",
+   "t0": 2.055,
+   "t1": 2.28,
+   "f0": 49,
+   "f1": 55,
+   "ph": "ɹˈIt"
+  },
+  {
+   "w": "here",
+   "t0": 2.28,
+   "t1": 2.64,
+   "f0": 55,
+   "f1": 63,
+   "ph": "hˈɪɹ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.24,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 159.8,
+  "f0_range_st": 7.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Just need a signature for the door right here.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.24,
+  "align_median_s": 0.037,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.415,
+  "rise_ms": 20.0,
+  "decay_ms": 90.0,
+  "decay_to_60_s": 0.27
+ },
+ "speaker_label": "INSTALLER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "1f7f0ac009e606fc",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 7.3,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 2.32,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,318 @@
+{
+ "id": "e3-act1-0026",
+ "scene": "8.03",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "They can check the answer. They can't read the notebook.",
+ "spoken_as": "They can check the answer. They can't read the notebook.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.03",
+ "shot_id": "8.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.75,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0026.wav",
+ "mp3": null,
+ "duration_s": 4.47,
+ "frames_24": 108,
+ "voiced_span_s": 3.48,
+ "pace": {
+  "words": 10,
+  "wpm": 172.4,
+  "speed": 0.885,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.885,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 172.4,
+   "articulation_sps": 3.67,
+   "syllables": 12,
+   "span_s": 3.48,
+   "pauses_s": [
+    0.06,
+    0.21
+   ]
+  },
+  "longest_internal_gap_s": 0.21,
+  "audible_in_s": 0.5,
+  "audible_out_s": 3.98
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.885",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.885 (the centre of the band; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.542,
+   "f": 13,
+   "shape": "A"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "E"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "A"
+  },
+  {
+   "t": 1.083,
+   "f": 26,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "A"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "A"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "A"
+  },
+  {
+   "t": 2.583,
+   "f": 62,
+   "shape": "E"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "O"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.333,
+   "f": 80,
+   "shape": "M"
+  },
+  {
+   "t": 3.458,
+   "f": 83,
+   "shape": "O"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 3.875,
+   "f": 93,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "They",
+   "t0": 0.52,
+   "t1": 0.67,
+   "f0": 12,
+   "f1": 16,
+   "ph": "ðˌA"
+  },
+  {
+   "w": "can",
+   "t0": 0.67,
+   "t1": 0.882,
+   "f0": 16,
+   "f1": 21,
+   "ph": "kæn"
+  },
+  {
+   "w": "check",
+   "t0": 0.882,
+   "t1": 1.145,
+   "f0": 21,
+   "f1": 27,
+   "ph": "ʧˈɛk"
+  },
+  {
+   "w": "the",
+   "t0": 1.145,
+   "t1": 1.295,
+   "f0": 27,
+   "f1": 31,
+   "ph": "ði"
+  },
+  {
+   "w": "answer",
+   "t0": 1.295,
+   "t1": 1.795,
+   "f0": 31,
+   "f1": 43,
+   "ph": "ˈænsəɹ"
+  },
+  {
+   "w": "They",
+   "t0": 1.87,
+   "t1": 2.058,
+   "f0": 45,
+   "f1": 49,
+   "ph": "ðˌA"
+  },
+  {
+   "w": "can't",
+   "t0": 2.058,
+   "t1": 2.395,
+   "f0": 49,
+   "f1": 57,
+   "ph": "kˈænt"
+  },
+  {
+   "w": "read",
+   "t0": 2.395,
+   "t1": 2.633,
+   "f0": 57,
+   "f1": 63,
+   "ph": "ɹˈid"
+  },
+  {
+   "w": "the",
+   "t0": 2.633,
+   "t1": 2.72,
+   "f0": 63,
+   "f1": 65,
+   "ph": "ðə"
+  },
+  {
+   "w": "notebook",
+   "t0": 2.72,
+   "t1": 3.895,
+   "f0": 65,
+   "f1": 93,
+   "ph": "nˈOtbˌʊk"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.12,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 86.6,
+  "f0_range_st": 11.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "They can check the answer. They can't read the notebook.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.2,
+  "align_median_s": 0.039,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.445,
+  "rise_ms": 45.0,
+  "decay_ms": 755.0,
+  "decay_to_60_s": 0.045
+ },
+ "speaker_label": "MAON",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "eaaa7551180fbc17",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 8.05,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.72,
+   "rechecked_alone": false
+  }
+ }
+}

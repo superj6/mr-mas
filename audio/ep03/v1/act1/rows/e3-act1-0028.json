@@ -1,0 +1,612 @@
+{
+ "id": "e3-act1-0028",
+ "scene": "8.03",
+ "speaker": "ALYI",
+ "speaker_slug": "alyi",
+ "text": "For a preview. It will get things wrong. It will tell you it can do things it can't. We need that beside the button, not under a stage.",
+ "spoken_as": "For a preview. It will get things wrong. It will tell you it can do things it can't. We need that beside the button, not under a stage.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "8.03",
+ "shot_id": "8.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 10.5,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0028.wav",
+ "mp3": null,
+ "duration_s": 8.55,
+ "frames_24": 206,
+ "voiced_span_s": 7.47,
+ "pace": {
+  "words": 28,
+  "wpm": 224.9,
+  "speed": 0.885,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.885,
+   "speed_band": [
+    0.85,
+    0.92
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    115,
+    140
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 224.9,
+   "articulation_sps": 4.35,
+   "syllables": 31,
+   "span_s": 7.47,
+   "pauses_s": [
+    0.08,
+    0.35
+   ]
+  },
+  "longest_internal_gap_s": 0.35,
+  "audible_in_s": 0.52,
+  "audible_out_s": 7.99
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_onyx (Kokoro-82M stock) · a-onyx-cathedral · speed 0.885",
+ "voiceId": "am_onyx",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 50 Hz",
+  "pitch 0",
+  "low shelf +1.5 dB @140 Hz",
+  "peak -1.5 dB @400 Hz Q1.0",
+  "peak +1.5 dB @2800 Hz Q0.9",
+  "comp 2.5:1 @-24 dB (8/150 ms)",
+  "Kokoro speed 0.885 (the centre of the band; alyi band 0.85-0.92); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "A"
+  },
+  {
+   "t": 0.917,
+   "f": 22,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "O"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "O"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "E"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "A"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "E"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "A"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "E"
+  },
+  {
+   "t": 2.542,
+   "f": 61,
+   "shape": "O"
+  },
+  {
+   "t": 2.625,
+   "f": 63,
+   "shape": "E"
+  },
+  {
+   "t": 2.708,
+   "f": 65,
+   "shape": "A"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 2.958,
+   "f": 71,
+   "shape": "O"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.208,
+   "f": 77,
+   "shape": "A"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "E"
+  },
+  {
+   "t": 3.375,
+   "f": 81,
+   "shape": "O"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "E"
+  },
+  {
+   "t": 3.625,
+   "f": 87,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "E"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "A"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "E"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "rest"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "O"
+  },
+  {
+   "t": 4.792,
+   "f": 115,
+   "shape": "E"
+  },
+  {
+   "t": 4.917,
+   "f": 118,
+   "shape": "A"
+  },
+  {
+   "t": 5.0,
+   "f": 120,
+   "shape": "E"
+  },
+  {
+   "t": 5.083,
+   "f": 122,
+   "shape": "A"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "M"
+  },
+  {
+   "t": 5.333,
+   "f": 128,
+   "shape": "E"
+  },
+  {
+   "t": 5.458,
+   "f": 131,
+   "shape": "A"
+  },
+  {
+   "t": 5.625,
+   "f": 135,
+   "shape": "E"
+  },
+  {
+   "t": 5.792,
+   "f": 139,
+   "shape": "M"
+  },
+  {
+   "t": 5.875,
+   "f": 141,
+   "shape": "A"
+  },
+  {
+   "t": 6.083,
+   "f": 146,
+   "shape": "E"
+  },
+  {
+   "t": 6.375,
+   "f": 153,
+   "shape": "A"
+  },
+  {
+   "t": 6.625,
+   "f": 159,
+   "shape": "E"
+  },
+  {
+   "t": 6.75,
+   "f": 162,
+   "shape": "A"
+  },
+  {
+   "t": 6.833,
+   "f": 164,
+   "shape": "E"
+  },
+  {
+   "t": 7.208,
+   "f": 173,
+   "shape": "A"
+  },
+  {
+   "t": 7.667,
+   "f": 184,
+   "shape": "rest"
+  },
+  {
+   "t": 7.833,
+   "f": 188,
+   "shape": "E"
+  },
+  {
+   "t": 8.0,
+   "f": 192,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "For",
+   "t0": 0.52,
+   "t1": 0.633,
+   "f0": 12,
+   "f1": 15,
+   "ph": "fˌɔɹ"
+  },
+  {
+   "w": "a",
+   "t0": 0.633,
+   "t1": 0.695,
+   "f0": 15,
+   "f1": 17,
+   "ph": "ɐ"
+  },
+  {
+   "w": "preview",
+   "t0": 0.695,
+   "t1": 1.17,
+   "f0": 17,
+   "f1": 28,
+   "ph": "pɹˈivjˌu"
+  },
+  {
+   "w": "It",
+   "t0": 1.208,
+   "t1": 1.307,
+   "f0": 29,
+   "f1": 31,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "will",
+   "t0": 1.307,
+   "t1": 1.42,
+   "f0": 31,
+   "f1": 34,
+   "ph": "wɪl"
+  },
+  {
+   "w": "get",
+   "t0": 1.42,
+   "t1": 1.62,
+   "f0": 34,
+   "f1": 39,
+   "ph": "ɡɛt"
+  },
+  {
+   "w": "things",
+   "t0": 1.62,
+   "t1": 1.945,
+   "f0": 39,
+   "f1": 47,
+   "ph": "θˈɪŋz"
+  },
+  {
+   "w": "wrong",
+   "t0": 1.945,
+   "t1": 2.345,
+   "f0": 47,
+   "f1": 56,
+   "ph": "ɹˈɔŋ"
+  },
+  {
+   "w": "It",
+   "t0": 2.42,
+   "t1": 2.533,
+   "f0": 58,
+   "f1": 61,
+   "ph": "ˌɪt"
+  },
+  {
+   "w": "will",
+   "t0": 2.533,
+   "t1": 2.67,
+   "f0": 61,
+   "f1": 64,
+   "ph": "wɪl"
+  },
+  {
+   "w": "tell",
+   "t0": 2.67,
+   "t1": 2.92,
+   "f0": 64,
+   "f1": 70,
+   "ph": "tˈɛl"
+  },
+  {
+   "w": "you",
+   "t0": 2.92,
+   "t1": 3.07,
+   "f0": 70,
+   "f1": 74,
+   "ph": "ju"
+  },
+  {
+   "w": "it",
+   "t0": 3.07,
+   "t1": 3.195,
+   "f0": 74,
+   "f1": 77,
+   "ph": "ɪt"
+  },
+  {
+   "w": "can",
+   "t0": 3.195,
+   "t1": 3.345,
+   "f0": 77,
+   "f1": 80,
+   "ph": "kæn"
+  },
+  {
+   "w": "do",
+   "t0": 3.345,
+   "t1": 3.52,
+   "f0": 80,
+   "f1": 84,
+   "ph": "dˈu"
+  },
+  {
+   "w": "things",
+   "t0": 3.52,
+   "t1": 3.795,
+   "f0": 84,
+   "f1": 91,
+   "ph": "θˈɪŋz"
+  },
+  {
+   "w": "it",
+   "t0": 3.795,
+   "t1": 3.958,
+   "f0": 91,
+   "f1": 95,
+   "ph": "ɪt"
+  },
+  {
+   "w": "can't",
+   "t0": 3.958,
+   "t1": 4.58,
+   "f0": 95,
+   "f1": 110,
+   "ph": "kˈænt"
+  },
+  {
+   "w": "We",
+   "t0": 4.72,
+   "t1": 4.845,
+   "f0": 113,
+   "f1": 116,
+   "ph": "wˌi"
+  },
+  {
+   "w": "need",
+   "t0": 4.845,
+   "t1": 5.045,
+   "f0": 116,
+   "f1": 121,
+   "ph": "nˈid"
+  },
+  {
+   "w": "that",
+   "t0": 5.045,
+   "t1": 5.245,
+   "f0": 121,
+   "f1": 126,
+   "ph": "ðˈæt"
+  },
+  {
+   "w": "beside",
+   "t0": 5.245,
+   "t1": 5.682,
+   "f0": 126,
+   "f1": 136,
+   "ph": "bəsˈId"
+  },
+  {
+   "w": "the",
+   "t0": 5.682,
+   "t1": 5.808,
+   "f0": 136,
+   "f1": 139,
+   "ph": "ðə"
+  },
+  {
+   "w": "button",
+   "t0": 5.808,
+   "t1": 6.245,
+   "f0": 139,
+   "f1": 150,
+   "ph": "bˈʌtn"
+  },
+  {
+   "w": "not",
+   "t0": 6.32,
+   "t1": 6.545,
+   "f0": 152,
+   "f1": 157,
+   "ph": "nˌɑt"
+  },
+  {
+   "w": "under",
+   "t0": 6.545,
+   "t1": 6.758,
+   "f0": 157,
+   "f1": 162,
+   "ph": "ˈʌndəɹ"
+  },
+  {
+   "w": "a",
+   "t0": 6.758,
+   "t1": 6.82,
+   "f0": 162,
+   "f1": 164,
+   "ph": "ɐ"
+  },
+  {
+   "w": "stage",
+   "t0": 6.82,
+   "t1": 7.995,
+   "f0": 164,
+   "f1": 192,
+   "ph": "stˈAʤ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.16,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.52,
+  "median_f0_hz": 86.4,
+  "f0_range_st": 9.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "For a preview, it will get things wrong. It will tell you it can do things it can't. We need that beside the button, not under stage.",
+  "cer": 0.01,
+  "word_recall_nonames": 0.964,
+  "logprob": -0.211,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.52,
+  "speech_tail_s": 0.445,
+  "rise_ms": 80.0,
+  "decay_ms": 785.0,
+  "decay_to_60_s": 0.12
+ },
+ "speaker_label": "MAON",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "ce1d84a7860be152",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 24.53,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 10.43,
+   "rechecked_alone": true
+  }
+ }
+}

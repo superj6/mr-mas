@@ -1,0 +1,200 @@
+{
+ "id": "e3-vo-13",
+ "scene": "20.02",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "another landlord. another bill. keep december ours.",
+ "spoken_as": "another landlord. another bill. keep december ours.",
+ "delivery": "close dry thought, lowercase, unhurried, never a slogan",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "vo",
+ "kind": "vo",
+ "side": "none",
+ "pov": null,
+ "shot": "20.02",
+ "shot_id": "20.02",
+ "cue": null,
+ "lip_sync": false,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.5,
+ "file": "audio/ep03/v1/act3/wav/e3-vo-13.wav",
+ "mp3": null,
+ "duration_s": 4.845,
+ "frames_24": 117,
+ "voiced_span_s": 3.64,
+ "pace": {
+  "words": 7,
+  "wpm": 115.4,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.4,
+    4.0
+   ],
+   "turn_wpm_guide": [
+    120,
+    140
+   ],
+   "intent": "close dry thought, lowercase, unhurried, never a slogan"
+  },
+  "measured": {
+   "wpm": 115.4,
+   "articulation_sps": 4.35,
+   "syllables": 15,
+   "span_s": 3.64,
+   "pauses_s": [
+    0.07,
+    0.09,
+    0.19
+   ]
+  },
+  "longest_internal_gap_s": 0.19,
+  "audible_in_s": 0.53,
+  "audible_out_s": 4.17
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · V.O. (vo-close) · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 60 Hz",
+  "pitch 0",
+  "low shelf +2.5 dB @150 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak -1 dB @3200 Hz Q0.8",
+  "high shelf -2.5 dB @7500 Hz",
+  "comp 2.5:1 @-26 dB (15/160 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt-vo band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -18 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [],
+ "words": [
+  {
+   "w": "another",
+   "t0": 0.595,
+   "t1": 0.995,
+   "f0": 14,
+   "f1": 24,
+   "ph": "ənˈʌðəɹ"
+  },
+  {
+   "w": "landlord",
+   "t0": 0.995,
+   "t1": 1.67,
+   "f0": 24,
+   "f1": 40,
+   "ph": "lˈændlˌɔɹd"
+  },
+  {
+   "w": "another",
+   "t0": 1.757,
+   "t1": 2.157,
+   "f0": 42,
+   "f1": 52,
+   "ph": "ənˈʌðəɹ"
+  },
+  {
+   "w": "bill",
+   "t0": 2.157,
+   "t1": 2.58,
+   "f0": 52,
+   "f1": 62,
+   "ph": "bˈɪl"
+  },
+  {
+   "w": "keep",
+   "t0": 2.682,
+   "t1": 2.95,
+   "f0": 64,
+   "f1": 71,
+   "ph": "kˈip"
+  },
+  {
+   "w": "december",
+   "t0": 2.97,
+   "t1": 3.57,
+   "f0": 71,
+   "f1": 86,
+   "ph": "disˈɛmbəɹ"
+  },
+  {
+   "w": "ours",
+   "t0": 3.57,
+   "t1": 4.19,
+   "f0": 86,
+   "f1": 101,
+   "ph": "ˈWəɹz"
+  }
+ ],
+ "qa": {
+  "lufs_i": -18.0,
+  "target_lufs": -18.0,
+  "true_peak_dbtp": -4.91,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.53,
+  "median_f0_hz": 113.7,
+  "f0_range_st": 10.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Another landlord, another bill, keep December hours.",
+  "cer": 0.024,
+  "word_recall_nonames": 0.857,
+  "logprob": -0.458,
+  "align_median_s": null,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.53,
+  "speech_tail_s": 0.44,
+  "rise_ms": 80.0,
+  "decay_ms": 35.0,
+  "decay_to_60_s": 0.235
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "5859ddc2d19ea6c4",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 13.36,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 0,
+   "share_s": 7.5,
+   "rechecked_alone": true
+  }
+ }
+}

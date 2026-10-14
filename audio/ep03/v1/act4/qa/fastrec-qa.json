@@ -1,0 +1,89 @@
+{
+ "problems": [],
+ "flags": [
+  {
+   "id": "e3-act4-0003",
+   "kind": "asr",
+   "note": "ASR missed a word: 'You capped it.' (recall 0.667)"
+  },
+  {
+   "id": "e3-act4-0005",
+   "kind": "asr",
+   "note": "ASR missed a word: 'There it is, caps lock and go back to shouting.' (recall 0.9)"
+  },
+  {
+   "id": "e3-act4-0006",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Is that a new caller? You had three when I left.' (recall 0.909)"
+  },
+  {
+   "id": "e3-act4-0013",
+   "kind": "pace",
+   "note": "articulation 6.3 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act4-0020",
+   "kind": "pace",
+   "note": "articulation 6.75 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act4-0022",
+   "kind": "pace",
+   "note": "articulation 6.72 syll/s against the guide 5.0-5.8"
+  },
+  {
+   "id": "e3-act4-0028",
+   "kind": "asr",
+   "note": "ASR missed a word: 'What a brilliant progress bar, 99% you're nearly there.' (recall 0.8)"
+  },
+  {
+   "id": "e3-act4-0035",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Ma's its mound, the new one just took the test, it thought for a while.' (recall 0.857)"
+  },
+  {
+   "id": "e3-act4-0039",
+   "kind": "asr",
+   "note": "ASR missed a word: 'A wild you.' (recall 0.667)"
+  },
+  {
+   "id": "e3-act4-0039",
+   "kind": "pace",
+   "note": "articulation 2.97 syll/s against the guide 3.6-4.2"
+  },
+  {
+   "id": "e3-act4-0047",
+   "kind": "pace",
+   "note": "articulation 2.61 syll/s against the guide 3.8-4.4"
+  },
+  {
+   "id": "e3-act4-0049",
+   "kind": "asr",
+   "note": "ASR missed a word: 'Know after you we're not first, we're best.' (recall 0.875)"
+  }
+ ],
+ "totals": {
+  "lines": 52,
+  "words": 365,
+  "audible_s": 104.5,
+  "wpm_overall": 210.0
+ },
+ "stringouts": [
+  "audio/ep03/v1/act4/reel/sc21.02-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc21.03-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc21.04-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc21.05-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.03-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.04-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.05-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.06-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.08-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.09-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.11-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc22.12-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc23.03-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc23.04-fast-stringout.mp3",
+  "audio/ep03/v1/act4/reel/sc23.06-fast-stringout.mp3"
+ ],
+ "method": "fastrec qa_generic: qa_v5.py's hard checks and ear flags, without its Act Four conversation table"
+}

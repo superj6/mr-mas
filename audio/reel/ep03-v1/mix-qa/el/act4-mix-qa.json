@@ -1,0 +1,112 @@
+{
+ "segment": "act4",
+ "variant": "el",
+ "seconds": 236.5,
+ "frames": 5676,
+ "samples": 11352000,
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act4.json",
+ "dialogue": {
+  "lines": 52,
+  "device": {
+   "monitor": 2
+  },
+  "el_matched": 52,
+  "missing": [],
+  "kokoro_cast": 1
+ },
+ "rooms": {
+  "stem": "audio/reel/ep03-v1/stems/el/act4-room.flac",
+  "dip_under_speech_db": 2.0
+ },
+ "sfx": {
+  "stem": "audio/reel/ep03-v1/stems/el/act4-sfx.flac",
+  "ducked": false
+ },
+ "score": {
+  "file": "audio/ost/tracks/e03-v1-act4/render/music-el.wav",
+  "cues": "audio/ost/tracks/e03-v1-act4/render/cues-el.json",
+  "length_s": 236.5,
+  "length_vs_segment_s": 0.0,
+  "lufs_as_delivered": -24.0,
+  "lufs_after_gain": -24.0,
+  "duck": {
+   "by_mood_db": [
+    [
+     "E03-16 GERG RETURN; warm chip\u2192build puls",
+     9.0
+    ],
+    [
+     "E03-18 THE LINE; oversized muted brass/n",
+     9.0
+    ],
+    [
+     "E03-17 SHIPMAS; full knee/chip sleigh sw",
+     9.0
+    ]
+   ],
+   "cue_sheet_overrides": [
+    [
+     0.0,
+     236.5,
+     10.5
+    ]
+   ],
+   "posts_dip_db": -3.0,
+   "envelope": "pre 0.25 s, joined across gaps < 2.5 s, 0.2 s in, 0.6 s out; depth smoothed 1.5 s"
+  },
+  "designed_silences": [],
+  "head_fade_s": 1.2
+ },
+ "measured": {
+  "lufs_i": -16.0,
+  "true_peak_dbtp": -2.03,
+  "sample_peak_dbfs": -2.03,
+  "lra_lu": 7.6,
+  "gain_db": 2.08,
+  "limiter_ceiling_dbfs": -1.5,
+  "limiter_active_s": 0.0,
+  "dialogue_lufs": -13.97,
+  "score_lufs_after_duck": -24.07,
+  "score_rms_under_speech_dbfs": -35.0,
+  "score_rms_between_speech_dbfs": -23.3,
+  "score_runs": {
+   "count": 1,
+   "shortest_s": 236.3,
+   "runs": [
+    [
+     0.15,
+     236.3
+    ]
+   ]
+  },
+  "rooms_lufs": -34.94,
+  "sfx_lufs": -28.64,
+  "holes_under_-42dBFS_0.3s": [],
+  "holes_mono_downmix": [],
+  "holes_without_score": [],
+  "unmarked_holes": 0,
+  "unmarked_holes_mono": 0,
+  "unmarked_holes_without_score": 0,
+  "jumps_over_15dB": {
+   "count": 47,
+   "rising": 40,
+   "rising_at_a_word": 38,
+   "rising_at_an_sfx": 0,
+   "rising_other": [
+    80.0,
+    83.25
+   ],
+   "falling": 7
+  }
+ },
+ "file": "out/ep03/v1/mix/act4-mix.wav",
+ "guard_db": null,
+ "seam_head": {
+  "from_gain_db": 1.7,
+  "to_gain_db": 2.08,
+  "ramp_s": 2.0,
+  "after": "act3"
+ },
+ "built": "2026-10-13 20:07:35",
+ "heard": "nothing here has been listened to; every number is measured"
+}

@@ -1,0 +1,250 @@
+{
+ "id": "e3-act3-0046",
+ "scene": "20.05",
+ "speaker": "TILED EMPLOYEE",
+ "speaker_slug": "tiled-employee",
+ "text": "Everyone's asking what changes now.",
+ "spoken_as": "Everyone's asking what changes now.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "20.05",
+ "shot_id": "20.05",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.818,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0046.wav",
+ "mp3": null,
+ "duration_s": 3.47,
+ "frames_24": 84,
+ "voiced_span_s": 2.15,
+ "pace": {
+  "words": 5,
+  "wpm": 139.5,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    5.0
+   ],
+   "turn_wpm_guide": [
+    150,
+    170
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 139.5,
+   "articulation_sps": 4.19,
+   "syllables": 9,
+   "span_s": 2.15,
+   "pauses_s": [
+    0.06
+   ]
+  },
+  "longest_internal_gap_s": 0.06,
+  "audible_in_s": 0.51,
+  "audible_out_s": 2.66
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_nova (Kokoro-82M stock) · a-nova-plain · speed 1.000",
+ "voiceId": "af_nova",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 100 Hz",
+  "pitch -1.5 st",
+  "peak +1 dB @3000 Hz Q0.9",
+  "comp 2.0:1 @-22 dB (8/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; tiled-employee band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.792,
+   "f": 19,
+   "shape": "O"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "O"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.667,
+   "f": 40,
+   "shape": "E"
+  },
+  {
+   "t": 1.792,
+   "f": 43,
+   "shape": "A"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "E"
+  },
+  {
+   "t": 2.375,
+   "f": 57,
+   "shape": "A"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Everyone's",
+   "t0": 0.485,
+   "t1": 1.022,
+   "f0": 12,
+   "f1": 25,
+   "ph": "ˈɛvɹiwənz"
+  },
+  {
+   "w": "asking",
+   "t0": 1.022,
+   "t1": 1.51,
+   "f0": 25,
+   "f1": 36,
+   "ph": "ˈæskɪŋ"
+  },
+  {
+   "w": "what",
+   "t0": 1.51,
+   "t1": 1.73,
+   "f0": 36,
+   "f1": 42,
+   "ph": "wˌʌt"
+  },
+  {
+   "w": "changes",
+   "t0": 1.748,
+   "t1": 2.235,
+   "f0": 42,
+   "f1": 54,
+   "ph": "ʧˈAnʤᵻz"
+  },
+  {
+   "w": "now",
+   "t0": 2.235,
+   "t1": 2.68,
+   "f0": 54,
+   "f1": 64,
+   "ph": "nˈW"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.21,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.51,
+  "median_f0_hz": 152.3,
+  "f0_range_st": 11.6,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Everyone's asking what changes now.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.196,
+  "align_median_s": 0.11,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.51,
+  "speech_tail_s": 0.37,
+  "rise_ms": 10.0,
+  "decay_ms": 175.0,
+  "decay_to_60_s": 0.44
+ },
+ "speaker_label": "STAFFER",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "c3dd8c25a468d171",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 6.9,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 2,
+   "share_s": 1.98,
+   "rechecked_alone": false
+  }
+ }
+}

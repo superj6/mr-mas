@@ -1,0 +1,100 @@
+{
+ "segment": "tag",
+ "variant": "el",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-tag.json",
+ "seconds": 33.417,
+ "frames": 802,
+ "rooms": [
+  {
+   "room": "terrace",
+   "recipe": "terrace: bed_ep3_terrace -39",
+   "from": -66.933,
+   "to": 27.817,
+   "first": "23.01",
+   "last": "24.05",
+   "lead": 0.6,
+   "trail": 0.4,
+   "lift_db": 4.8
+  },
+  {
+   "room": "ice",
+   "recipe": "ice: bed_ep3_ice -39",
+   "from": 26.817,
+   "to": 35.917,
+   "first": "25.01",
+   "last": "25.01",
+   "lead": 0.6,
+   "trail": 0.0,
+   "lift_db": 3.7
+  }
+ ],
+ "sfx": [
+  [
+   "24.01",
+   "kiosk_touch",
+   0.0,
+   -20.0
+  ],
+  [
+   "24.02",
+   "paper_clink",
+   5.0,
+   -20.0
+  ],
+  [
+   "24.05",
+   "orb_scan",
+   21.417,
+   -20.0
+  ],
+  [
+   "25.01",
+   "ice_creak",
+   26.817,
+   -20.0,
+   "J-cut: leads by 0.6 s"
+  ]
+ ],
+ "sfx_missing": [],
+ "sfx_dropped": [],
+ "sfx_cut_at_scene_end": [],
+ "score_claims": [],
+ "room_stem": {
+  "lufs": -34.34,
+  "peak_dbfs": -22.99,
+  "p10_50ms_dbfs": -39.7
+ },
+ "sfx_stem": {
+  "lufs": -31.35,
+  "peak_dbfs": -20.0,
+  "p10_50ms_dbfs": -240.0
+ },
+ "room_under_-55dBFS_0.3s": [],
+ "click_scan": {
+  "room": {
+   "boundaries": [],
+   "cutoffs": []
+  },
+  "sfx": {
+   "boundaries": [
+    {
+     "at": 21.418,
+     "boundary": 21.417,
+     "ratio": 759.4,
+     "kind": "onset",
+     "before_dbfs": -40.9,
+     "after_dbfs": -28.2
+    }
+   ],
+   "cutoffs": []
+  },
+  "rule": "second difference > 10.0x the local 99th percentile"
+ },
+ "room_levels": [
+  {
+   "room": "ice@tag:25.01",
+   "p5_50ms_dbfs": -43.7,
+   "lift_db": 3.7
+  }
+ ]
+}

@@ -1,0 +1,547 @@
+{
+ "id": "e3-act2-0055",
+ "scene": "14.03",
+ "speaker": "ADELINA",
+ "speaker_slug": "adelina",
+ "text": "Just so I'm clear on the terms. Can I fund a rival a little? One small check. Nothing that could ever compete with you.",
+ "spoken_as": "Just so I'm clear on the terms. Can I fund a rival a little? One small check. Nothing that could ever compete with you.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "14.03",
+ "shot_id": "14.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 8.727,
+ "file": "audio/ep03/v1/act2/wav/e3-act2-0055.wav",
+ "mp3": null,
+ "duration_s": 7.645,
+ "frames_24": 184,
+ "voiced_span_s": 6.67,
+ "pace": {
+  "words": 24,
+  "wpm": 215.9,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    165
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 215.9,
+   "articulation_sps": 5.22,
+   "syllables": 29,
+   "span_s": 6.67,
+   "pauses_s": [
+    0.4,
+    0.35,
+    0.36
+   ]
+  },
+  "longest_internal_gap_s": 0.4,
+  "audible_in_s": 0.5,
+  "audible_out_s": 7.17
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+ "voiceId": "af_bella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch -1 st",
+  "low shelf +1.5 dB @200 Hz",
+  "peak -1 dB @450 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "high shelf -1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; adelina band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.667,
+   "f": 16,
+   "shape": "O"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 0.958,
+   "f": 23,
+   "shape": "M"
+  },
+  {
+   "t": 1.042,
+   "f": 25,
+   "shape": "E"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "A"
+  },
+  {
+   "t": 1.292,
+   "f": 31,
+   "shape": "E"
+  },
+  {
+   "t": 1.375,
+   "f": 33,
+   "shape": "O"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "O"
+  },
+  {
+   "t": 1.833,
+   "f": 44,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "M"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.125,
+   "f": 51,
+   "shape": "rest"
+  },
+  {
+   "t": 2.458,
+   "f": 59,
+   "shape": "A"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "E"
+  },
+  {
+   "t": 3.292,
+   "f": 79,
+   "shape": "A"
+  },
+  {
+   "t": 3.542,
+   "f": 85,
+   "shape": "E"
+  },
+  {
+   "t": 3.75,
+   "f": 90,
+   "shape": "rest"
+  },
+  {
+   "t": 4.083,
+   "f": 98,
+   "shape": "O"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "A"
+  },
+  {
+   "t": 4.292,
+   "f": 103,
+   "shape": "E"
+  },
+  {
+   "t": 4.417,
+   "f": 106,
+   "shape": "M"
+  },
+  {
+   "t": 4.542,
+   "f": 109,
+   "shape": "O"
+  },
+  {
+   "t": 4.708,
+   "f": 113,
+   "shape": "E"
+  },
+  {
+   "t": 4.875,
+   "f": 117,
+   "shape": "A"
+  },
+  {
+   "t": 5.125,
+   "f": 123,
+   "shape": "E"
+  },
+  {
+   "t": 5.25,
+   "f": 126,
+   "shape": "rest"
+  },
+  {
+   "t": 5.583,
+   "f": 134,
+   "shape": "A"
+  },
+  {
+   "t": 5.708,
+   "f": 137,
+   "shape": "E"
+  },
+  {
+   "t": 5.917,
+   "f": 142,
+   "shape": "A"
+  },
+  {
+   "t": 6.0,
+   "f": 144,
+   "shape": "E"
+  },
+  {
+   "t": 6.167,
+   "f": 148,
+   "shape": "A"
+  },
+  {
+   "t": 6.25,
+   "f": 150,
+   "shape": "E"
+  },
+  {
+   "t": 6.5,
+   "f": 156,
+   "shape": "M"
+  },
+  {
+   "t": 6.625,
+   "f": 159,
+   "shape": "A"
+  },
+  {
+   "t": 6.708,
+   "f": 161,
+   "shape": "O"
+  },
+  {
+   "t": 6.792,
+   "f": 163,
+   "shape": "E"
+  },
+  {
+   "t": 7.0,
+   "f": 168,
+   "shape": "O"
+  },
+  {
+   "t": 7.208,
+   "f": 173,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Just",
+   "t0": 0.49,
+   "t1": 0.64,
+   "f0": 12,
+   "f1": 15,
+   "ph": "ʤˈʌst"
+  },
+  {
+   "w": "so",
+   "t0": 0.64,
+   "t1": 0.815,
+   "f0": 15,
+   "f1": 20,
+   "ph": "sˌO"
+  },
+  {
+   "w": "I'm",
+   "t0": 0.815,
+   "t1": 1.027,
+   "f0": 20,
+   "f1": 25,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "clear",
+   "t0": 1.027,
+   "t1": 1.378,
+   "f0": 25,
+   "f1": 33,
+   "ph": "klˈɪɹ"
+  },
+  {
+   "w": "on",
+   "t0": 1.378,
+   "t1": 1.477,
+   "f0": 33,
+   "f1": 35,
+   "ph": "ˌɔn"
+  },
+  {
+   "w": "the",
+   "t0": 1.477,
+   "t1": 1.565,
+   "f0": 35,
+   "f1": 38,
+   "ph": "ðə"
+  },
+  {
+   "w": "terms",
+   "t0": 1.565,
+   "t1": 2.12,
+   "f0": 38,
+   "f1": 51,
+   "ph": "tˈɜɹmz"
+  },
+  {
+   "w": "Can",
+   "t0": 2.44,
+   "t1": 2.577,
+   "f0": 59,
+   "f1": 62,
+   "ph": "kˌæn"
+  },
+  {
+   "w": "I",
+   "t0": 2.577,
+   "t1": 2.665,
+   "f0": 62,
+   "f1": 64,
+   "ph": "ˌI"
+  },
+  {
+   "w": "fund",
+   "t0": 2.665,
+   "t1": 2.852,
+   "f0": 64,
+   "f1": 68,
+   "ph": "fˈʌnd"
+  },
+  {
+   "w": "a",
+   "t0": 2.852,
+   "t1": 2.915,
+   "f0": 68,
+   "f1": 70,
+   "ph": "ɐ"
+  },
+  {
+   "w": "rival",
+   "t0": 2.915,
+   "t1": 3.29,
+   "f0": 70,
+   "f1": 79,
+   "ph": "ɹˈIvᵊl"
+  },
+  {
+   "w": "a",
+   "t0": 3.29,
+   "t1": 3.365,
+   "f0": 79,
+   "f1": 81,
+   "ph": "ɐ"
+  },
+  {
+   "w": "little",
+   "t0": 3.365,
+   "t1": 3.77,
+   "f0": 81,
+   "f1": 90,
+   "ph": "lˈɪTᵊl"
+  },
+  {
+   "w": "One",
+   "t0": 4.052,
+   "t1": 4.365,
+   "f0": 97,
+   "f1": 105,
+   "ph": "wˈʌn"
+  },
+  {
+   "w": "small",
+   "t0": 4.365,
+   "t1": 4.79,
+   "f0": 105,
+   "f1": 115,
+   "ph": "smˈɔl"
+  },
+  {
+   "w": "check",
+   "t0": 4.79,
+   "t1": 5.23,
+   "f0": 115,
+   "f1": 126,
+   "ph": "ʧˈɛk"
+  },
+  {
+   "w": "Nothing",
+   "t0": 5.54,
+   "t1": 5.928,
+   "f0": 133,
+   "f1": 142,
+   "ph": "nˈʌθɪŋ"
+  },
+  {
+   "w": "that",
+   "t0": 5.928,
+   "t1": 6.04,
+   "f0": 142,
+   "f1": 145,
+   "ph": "ðæt"
+  },
+  {
+   "w": "could",
+   "t0": 6.04,
+   "t1": 6.165,
+   "f0": 145,
+   "f1": 148,
+   "ph": "kʊd"
+  },
+  {
+   "w": "ever",
+   "t0": 6.165,
+   "t1": 6.365,
+   "f0": 148,
+   "f1": 153,
+   "ph": "ˈɛvəɹ"
+  },
+  {
+   "w": "compete",
+   "t0": 6.365,
+   "t1": 6.728,
+   "f0": 153,
+   "f1": 161,
+   "ph": "kəmpˈit"
+  },
+  {
+   "w": "with",
+   "t0": 6.728,
+   "t1": 6.89,
+   "f0": 161,
+   "f1": 165,
+   "ph": "wɪð"
+  },
+  {
+   "w": "you",
+   "t0": 6.89,
+   "t1": 7.19,
+   "f0": 165,
+   "f1": 173,
+   "ph": "ju"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.19,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 196.1,
+  "f0_range_st": 8.7,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Just so I'm clear on the terms, can I fund a rival a little? One small check. Nothing that could ever compete with you.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.151,
+  "align_median_s": 0.045,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.44,
+  "rise_ms": 20.0,
+  "decay_ms": 170.0,
+  "decay_to_60_s": 0.035
+ },
+ "speaker_label": "INVESTOR",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "f577333dbcb03a59",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 13.64,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 3,
+   "share_s": 2.77,
+   "rechecked_alone": false
+  }
+ }
+}

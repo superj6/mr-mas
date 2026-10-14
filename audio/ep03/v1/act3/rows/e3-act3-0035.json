@@ -1,0 +1,282 @@
+{
+ "id": "e3-act3-0035",
+ "scene": "18.03",
+ "speaker": "ADELINA",
+ "speaker_slug": "adelina",
+ "text": "Then we still have time to change the title.",
+ "spoken_as": "Then we still have time to change the title.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "18.03",
+ "shot_id": "18.03",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 3.273,
+ "file": "audio/ep03/v1/act3/wav/e3-act3-0035.wav",
+ "mp3": null,
+ "duration_s": 3.045,
+ "frames_24": 74,
+ "voiced_span_s": 1.96,
+ "pace": {
+  "words": 9,
+  "wpm": 275.5,
+  "speed": 1.0,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.0,
+   "speed_band": [
+    0.95,
+    1.05
+   ],
+   "articulation_guide_sps": [
+    4.2,
+    4.8
+   ],
+   "turn_wpm_guide": [
+    150,
+    165
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 275.5,
+   "articulation_sps": 5.1,
+   "syllables": 10,
+   "span_s": 1.96,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.46
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "af_bella (Kokoro-82M stock) · a-bella-warm · speed 1.000",
+ "voiceId": "af_bella",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch -1 st",
+  "low shelf +1.5 dB @200 Hz",
+  "peak -1 dB @450 Hz Q1.0",
+  "peak +1 dB @2500 Hz Q0.9",
+  "high shelf -1 dB @8000 Hz",
+  "comp 2.5:1 @-22 dB (6/110 ms)",
+  "Kokoro speed 1.000 (the centre of the band; adelina band 0.95-1.05); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "A"
+  },
+  {
+   "t": 0.625,
+   "f": 15,
+   "shape": "O"
+  },
+  {
+   "t": 0.708,
+   "f": 17,
+   "shape": "E"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "A"
+  },
+  {
+   "t": 1.167,
+   "f": 28,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "M"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "E"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "A"
+  },
+  {
+   "t": 1.75,
+   "f": 42,
+   "shape": "E"
+  },
+  {
+   "t": 2.0,
+   "f": 48,
+   "shape": "A"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.5,
+   "f": 60,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Then",
+   "t0": 0.47,
+   "t1": 0.635,
+   "f0": 11,
+   "f1": 15,
+   "ph": "ðˈɛn"
+  },
+  {
+   "w": "we",
+   "t0": 0.635,
+   "t1": 0.785,
+   "f0": 15,
+   "f1": 19,
+   "ph": "wi"
+  },
+  {
+   "w": "still",
+   "t0": 0.785,
+   "t1": 1.01,
+   "f0": 19,
+   "f1": 24,
+   "ph": "stˈɪl"
+  },
+  {
+   "w": "have",
+   "t0": 1.01,
+   "t1": 1.21,
+   "f0": 24,
+   "f1": 29,
+   "ph": "hæv"
+  },
+  {
+   "w": "time",
+   "t0": 1.21,
+   "t1": 1.472,
+   "f0": 29,
+   "f1": 35,
+   "ph": "tˈIm"
+  },
+  {
+   "w": "to",
+   "t0": 1.472,
+   "t1": 1.56,
+   "f0": 35,
+   "f1": 37,
+   "ph": "tə"
+  },
+  {
+   "w": "change",
+   "t0": 1.56,
+   "t1": 1.872,
+   "f0": 37,
+   "f1": 45,
+   "ph": "ʧˈAnʤ"
+  },
+  {
+   "w": "the",
+   "t0": 1.872,
+   "t1": 1.96,
+   "f0": 45,
+   "f1": 47,
+   "ph": "ðə"
+  },
+  {
+   "w": "title",
+   "t0": 1.96,
+   "t1": 2.48,
+   "f0": 47,
+   "f1": 60,
+   "ph": "tˈITᵊl"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.16,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 186.1,
+  "f0_range_st": 7.4,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Then we still have time to change the title.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.178,
+  "align_median_s": 0.025,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.415,
+  "rise_ms": 15.0,
+  "decay_ms": 135.0,
+  "decay_to_60_s": 0.17
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "75d7dad509748109",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 1,
+  "wall_s": 5.67,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 1.21,
+   "rechecked_alone": false
+  }
+ }
+}

@@ -1,0 +1,403 @@
+{
+ "id": "e3-act1-0006",
+ "scene": "4.02",
+ "speaker": "MAS MANALT",
+ "speaker_slug": "mas-manalt",
+ "text": "put the build lead next to me. somebody has to tell me when i'm wrong.",
+ "spoken_as": "put the build lead next to me. somebody has to tell me when i'm wrong.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "4.02",
+ "shot_id": "4.02",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 6.429,
+ "file": "audio/ep03/v1/act1/wav/e3-act1-0006.wav",
+ "mp3": null,
+ "duration_s": 5.265,
+ "frames_24": 127,
+ "voiced_span_s": 4.21,
+ "pace": {
+  "words": 15,
+  "wpm": 213.8,
+  "speed": 0.915,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 0.915,
+   "speed_band": [
+    0.88,
+    0.95
+   ],
+   "articulation_guide_sps": [
+    3.6,
+    4.2
+   ],
+   "turn_wpm_guide": [
+    135,
+    155
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 213.8,
+   "articulation_sps": 4.31,
+   "syllables": 17,
+   "span_s": 4.21,
+   "pauses_s": [
+    0.27
+   ]
+  },
+  "longest_internal_gap_s": 0.27,
+  "audible_in_s": 0.5,
+  "audible_out_s": 4.71
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_michael (Kokoro-82M stock) · a-michael-close · speed 0.915",
+ "voiceId": "am_michael",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 70 Hz",
+  "pitch 0",
+  "low shelf +2 dB @160 Hz",
+  "peak -2 dB @320 Hz Q1.0",
+  "peak +1 dB @3200 Hz Q0.8",
+  "high shelf -1.5 dB @8000 Hz",
+  "comp 2.0:1 @-24 dB (10/120 ms)",
+  "Kokoro speed 0.915 (the centre of the band; mas-manalt band 0.88-0.95); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.417,
+   "f": 10,
+   "shape": "M"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "O"
+  },
+  {
+   "t": 0.583,
+   "f": 14,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "M"
+  },
+  {
+   "t": 0.833,
+   "f": 20,
+   "shape": "A"
+  },
+  {
+   "t": 1.0,
+   "f": 24,
+   "shape": "E"
+  },
+  {
+   "t": 1.25,
+   "f": 30,
+   "shape": "A"
+  },
+  {
+   "t": 1.458,
+   "f": 35,
+   "shape": "E"
+  },
+  {
+   "t": 1.583,
+   "f": 38,
+   "shape": "A"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 1.958,
+   "f": 47,
+   "shape": "M"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "E"
+  },
+  {
+   "t": 2.25,
+   "f": 54,
+   "shape": "rest"
+  },
+  {
+   "t": 2.667,
+   "f": 64,
+   "shape": "A"
+  },
+  {
+   "t": 2.792,
+   "f": 67,
+   "shape": "M"
+  },
+  {
+   "t": 2.875,
+   "f": 69,
+   "shape": "E"
+  },
+  {
+   "t": 3.083,
+   "f": 74,
+   "shape": "A"
+  },
+  {
+   "t": 3.25,
+   "f": 78,
+   "shape": "E"
+  },
+  {
+   "t": 3.5,
+   "f": 84,
+   "shape": "A"
+  },
+  {
+   "t": 3.708,
+   "f": 89,
+   "shape": "M"
+  },
+  {
+   "t": 3.792,
+   "f": 91,
+   "shape": "E"
+  },
+  {
+   "t": 3.917,
+   "f": 94,
+   "shape": "A"
+  },
+  {
+   "t": 4.167,
+   "f": 100,
+   "shape": "M"
+  },
+  {
+   "t": 4.25,
+   "f": 102,
+   "shape": "E"
+  },
+  {
+   "t": 4.333,
+   "f": 104,
+   "shape": "O"
+  },
+  {
+   "t": 4.583,
+   "f": 110,
+   "shape": "E"
+  },
+  {
+   "t": 4.75,
+   "f": 114,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "put",
+   "t0": 0.47,
+   "t1": 0.625,
+   "f0": 11,
+   "f1": 15,
+   "ph": "pˌʊt"
+  },
+  {
+   "w": "the",
+   "t0": 0.625,
+   "t1": 0.762,
+   "f0": 15,
+   "f1": 18,
+   "ph": "ðə"
+  },
+  {
+   "w": "build",
+   "t0": 0.762,
+   "t1": 1.138,
+   "f0": 18,
+   "f1": 27,
+   "ph": "bˈɪld"
+  },
+  {
+   "w": "lead",
+   "t0": 1.138,
+   "t1": 1.525,
+   "f0": 27,
+   "f1": 37,
+   "ph": "lˈid"
+  },
+  {
+   "w": "next",
+   "t0": 1.525,
+   "t1": 1.825,
+   "f0": 37,
+   "f1": 44,
+   "ph": "nˈɛkst"
+  },
+  {
+   "w": "to",
+   "t0": 1.825,
+   "t1": 1.95,
+   "f0": 44,
+   "f1": 47,
+   "ph": "tə"
+  },
+  {
+   "w": "me",
+   "t0": 1.95,
+   "t1": 2.23,
+   "f0": 47,
+   "f1": 54,
+   "ph": "mˌi"
+  },
+  {
+   "w": "somebody",
+   "t0": 2.65,
+   "t1": 3.075,
+   "f0": 64,
+   "f1": 74,
+   "ph": "sˈʌmbədi"
+  },
+  {
+   "w": "has",
+   "t0": 3.075,
+   "t1": 3.325,
+   "f0": 74,
+   "f1": 80,
+   "ph": "hæz"
+  },
+  {
+   "w": "to",
+   "t0": 3.325,
+   "t1": 3.463,
+   "f0": 80,
+   "f1": 83,
+   "ph": "tə"
+  },
+  {
+   "w": "tell",
+   "t0": 3.463,
+   "t1": 3.725,
+   "f0": 83,
+   "f1": 89,
+   "ph": "tˈɛl"
+  },
+  {
+   "w": "me",
+   "t0": 3.725,
+   "t1": 3.9,
+   "f0": 89,
+   "f1": 94,
+   "ph": "mˌi"
+  },
+  {
+   "w": "when",
+   "t0": 3.9,
+   "t1": 4.037,
+   "f0": 94,
+   "f1": 97,
+   "ph": "wˌɛn"
+  },
+  {
+   "w": "i'm",
+   "t0": 4.037,
+   "t1": 4.225,
+   "f0": 97,
+   "f1": 101,
+   "ph": "ˌIm"
+  },
+  {
+   "w": "wrong",
+   "t0": 4.225,
+   "t1": 4.73,
+   "f0": 101,
+   "f1": 114,
+   "ph": "ɹˈɔŋ"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -3.74,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 107.9,
+  "f0_range_st": 12.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Put the build lead next to me. Somebody has to tell me when I'm wrong.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.175,
+  "align_median_s": 0.052,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.37,
+  "rise_ms": 0.0,
+  "decay_ms": 185.0,
+  "decay_to_60_s": 0.19
+ },
+ "speaker_label": "MAS",
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "8a660e77e95d4f4b",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 10.81,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 4,
+   "share_s": 2.11,
+   "rechecked_alone": false
+  }
+ }
+}

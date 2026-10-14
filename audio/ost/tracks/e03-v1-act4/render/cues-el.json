@@ -1,0 +1,135 @@
+{
+ "schema": "mrmas-reel-music/1",
+ "id": "e03-v1-act4-el",
+ "segment": "act4",
+ "file": "audio/ost/tracks/e03-v1-act4/render/music-el.wav",
+ "timeline": "show/reel/ep03-v1-el/ep03-v1-el-act4.json",
+ "lock_sha1": "20fc770dc6ecc6c29b290a9b5e13af138886a995",
+ "length_s": 236.5,
+ "frames": 5676,
+ "samples": 11352000,
+ "sample_rate": 48000,
+ "channels": 2,
+ "clock": "segment clock, frame 0",
+ "cues": [
+  {
+   "cue": "e03-v1-act4-continuous",
+   "start": 0,
+   "end": 236.5,
+   "laid_at_s": 0,
+   "duck_db": 10.5,
+   "note_qa": {
+    "notes": 397,
+    "written_third_ok": true,
+    "written_third_events": [],
+    "grazes": 0,
+    "knee_completion": 0,
+    "knee_whole": 0
+   },
+   "scenes": [
+    {
+     "scene": "21",
+     "mood": "warm",
+     "text": "E03-16 GERG RETURN; warm chip→build pulse",
+     "start": 0.0,
+     "end": 57.291666666666664
+    },
+    {
+     "scene": "22",
+     "mood": "drive",
+     "text": "E03-17 SHIPMAS; full knee/chip sleigh swing, one performance",
+     "start": 57.291666666666664,
+     "end": 170.16666666666666
+    },
+    {
+     "scene": "23",
+     "mood": "pressure",
+     "text": "E03-18 THE LINE; oversized muted brass/no third, palms under",
+     "start": 170.16666666666666,
+     "end": 236.5
+    }
+   ]
+  }
+ ],
+ "silences_designed": [],
+ "designed_hit": [],
+ "claims_sfx": [],
+ "measured": {
+  "length_s": 236.5,
+  "samples": 11352000,
+  "frames": 5676,
+  "exact": true,
+  "whole": {
+   "lufs_i": -24.0,
+   "st_p95": -22.11,
+   "st_max": -21.84,
+   "true_peak_dbtp": -7.73
+  },
+  "cues": {
+   "e03-v1-act4-continuous": {
+    "lufs_i": -24.0,
+    "st_p95": -22.11,
+    "st_max": -21.84,
+    "true_peak_dbtp": -7.73
+   }
+  },
+  "rows": [
+   {
+    "section": "scene 21: warm",
+    "start": 0.0,
+    "end": 57.29,
+    "lufs_i": -25.59,
+    "st_p95": -25.02,
+    "st_max": -24.91,
+    "true_peak_dbtp": -14.75
+   },
+   {
+    "section": "scene 22: drive",
+    "start": 57.29,
+    "end": 170.17,
+    "lufs_i": -23.27,
+    "st_p95": -21.94,
+    "st_max": -21.85,
+    "true_peak_dbtp": -7.73
+   },
+   {
+    "section": "scene 23: pressure",
+    "start": 170.17,
+    "end": 236.5,
+    "lufs_i": -24.3,
+    "st_p95": -22.94,
+    "st_max": -22.66,
+    "true_peak_dbtp": -8.74
+   }
+  ],
+  "digital_silence": [],
+  "unmarked_digital_silence": [],
+  "holes_below_-60": [],
+  "music_runs": [
+   {
+    "t0": 0.0,
+    "t1": 236.45,
+    "dur": 236.45
+   }
+  ],
+  "fragments_under_2s": [],
+  "undesigned_fragments": []
+ },
+ "laid": [
+  {
+   "name": "e03-v1-act4-continuous",
+   "file": "audio/ost/tracks/e03-v1-act4/render/_work/el/e03-v1-act4-continuous-underscore.wav",
+   "laid_at_s": 0,
+   "window": [
+    0,
+    236.5
+   ],
+   "fade_in_s": 0.08,
+   "fade_out_s": 0.16,
+   "gain_db": 0.0,
+   "post": null
+  }
+ ],
+ "source": "audio/ost/tracks/e03-v1-common/episode_score.py",
+ "heard": "No human listening claim; measured programmatic first pass."
+}

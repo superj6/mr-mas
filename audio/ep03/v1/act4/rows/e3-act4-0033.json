@@ -1,0 +1,242 @@
+{
+ "id": "e3-act4-0033",
+ "scene": "22.11",
+ "speaker": "MARIO",
+ "speaker_slug": "mario",
+ "text": "Adelina, that's a sub-concern.",
+ "spoken_as": "Adelina, that's a sub-concern.",
+ "delivery": "conversational; complete thoughts; no imitation",
+ "tag": "",
+ "mode": "on-mic",
+ "voiced_in_cut": true,
+ "on_camera": "on",
+ "kind": "dialogue",
+ "side": "none",
+ "pov": null,
+ "shot": "22.11",
+ "shot_id": "22.11",
+ "cue": null,
+ "lip_sync": true,
+ "status": "fast",
+ "device": null,
+ "room": null,
+ "est_s": 1.818,
+ "file": "audio/ep03/v1/act4/wav/e3-act4-0033.wav",
+ "mp3": null,
+ "duration_s": 2.84,
+ "frames_24": 69,
+ "voiced_span_s": 1.84,
+ "pace": {
+  "words": 4,
+  "wpm": 130.4,
+  "speed": 1.04,
+  "tsm": 1.0,
+  "intended": {
+   "speed": 1.04,
+   "speed_band": [
+    1.0,
+    1.08
+   ],
+   "articulation_guide_sps": [
+    4.6,
+    5.4
+   ],
+   "turn_wpm_guide": [
+    160,
+    185
+   ],
+   "intent": "conversational; complete thoughts; no imitation"
+  },
+  "measured": {
+   "wpm": 130.4,
+   "articulation_sps": 4.89,
+   "syllables": 9,
+   "span_s": 1.84,
+   "pauses_s": []
+  },
+  "longest_internal_gap_s": 0.0,
+  "audible_in_s": 0.5,
+  "audible_out_s": 2.34
+ },
+ "placement": {
+  "gap_before_s": null,
+  "follows": "picture"
+ },
+ "take": "s1",
+ "takes_tried": 1,
+ "pick_reason": "fast: one take (seed 1, plan speed)",
+ "voice": "am_liam (Kokoro-82M stock) · a-liam-earnest · speed 1.040",
+ "voiceId": "am_liam",
+ "model": "Kokoro-82M v1.0 (hexgrad/Kokoro-82M; misaki G2P; lang 'a' American English)",
+ "processing": [
+  "HPF 80 Hz",
+  "pitch 0",
+  "peak -1 dB @250 Hz Q1.0",
+  "low shelf +1 dB @200 Hz",
+  "peak +1.5 dB @3000 Hz Q0.9",
+  "high shelf -1 dB @7000 Hz",
+  "comp 2.5:1 @-22 dB (6/100 ms)",
+  "Kokoro speed 1.040 (the centre of the band; mario band 1.00-1.08); one whole read; no time-stretch, no carrier, no splice",
+  "own onset and decay kept: >= 0.15 s before the first sound, decay to -60 dB re peak + 0.10 s; 0.35 s room-tone handles each side; room-tone bed -62 dBFS under the whole file",
+  "no inhale (fastrec default; --breaths adds them)",
+  "48 kHz / 24-bit mono; -16 LUFS integrated; true-peak ceiling -1.5 dBTP; DRY (rooms are mix sends)"
+ ],
+ "mouth": [
+  {
+   "t": 0.0,
+   "f": 0,
+   "shape": "rest"
+  },
+  {
+   "t": 0.5,
+   "f": 12,
+   "shape": "E"
+  },
+  {
+   "t": 0.75,
+   "f": 18,
+   "shape": "A"
+  },
+  {
+   "t": 0.875,
+   "f": 21,
+   "shape": "E"
+  },
+  {
+   "t": 1.125,
+   "f": 27,
+   "shape": "A"
+  },
+  {
+   "t": 1.208,
+   "f": 29,
+   "shape": "E"
+  },
+  {
+   "t": 1.333,
+   "f": 32,
+   "shape": "A"
+  },
+  {
+   "t": 1.417,
+   "f": 34,
+   "shape": "E"
+  },
+  {
+   "t": 1.5,
+   "f": 36,
+   "shape": "A"
+  },
+  {
+   "t": 1.625,
+   "f": 39,
+   "shape": "M"
+  },
+  {
+   "t": 1.708,
+   "f": 41,
+   "shape": "E"
+  },
+  {
+   "t": 2.042,
+   "f": 49,
+   "shape": "O"
+  },
+  {
+   "t": 2.208,
+   "f": 53,
+   "shape": "E"
+  },
+  {
+   "t": 2.333,
+   "f": 56,
+   "shape": "rest"
+  }
+ ],
+ "words": [
+  {
+   "w": "Adelina",
+   "t0": 0.485,
+   "t1": 1.01,
+   "f0": 12,
+   "f1": 24,
+   "ph": "ədɪlˈinə"
+  },
+  {
+   "w": "that's",
+   "t0": 1.06,
+   "t1": 1.322,
+   "f0": 25,
+   "f1": 32,
+   "ph": "ðˈæts"
+  },
+  {
+   "w": "a",
+   "t0": 1.322,
+   "t1": 1.422,
+   "f0": 32,
+   "f1": 34,
+   "ph": "ɐ"
+  },
+  {
+   "w": "sub-concern",
+   "t0": 1.422,
+   "t1": 2.36,
+   "f0": 34,
+   "f1": 57,
+   "ph": "sˌʌbkənsˈɜɹn"
+  }
+ ],
+ "qa": {
+  "lufs_i": -16.0,
+  "target_lufs": -16.0,
+  "true_peak_dbtp": -4.31,
+  "clipped_samples": 0,
+  "digital_black_runs": 0,
+  "first_sound_s": 0.5,
+  "median_f0_hz": 125.1,
+  "f0_range_st": 13.0,
+  "f0_method": "YIN (fast)",
+  "final_move_st": null,
+  "asr": "Adelina, that's a sub-concern.",
+  "cer": 0.0,
+  "word_recall_nonames": 1.0,
+  "logprob": -0.366,
+  "align_median_s": 0.047,
+  "utmos_dry": null,
+  "utmos_plain_read": null,
+  "utmos_vs_plain": null,
+  "utmos_v4_same_words": null,
+  "utmos_delivered_as_is": null,
+  "speech_head_s": 0.5,
+  "speech_tail_s": 0.45,
+  "rise_ms": 5.0,
+  "decay_ms": 105.0,
+  "decay_to_60_s": 0.07
+ },
+ "breaths": [],
+ "opened_pauses": [],
+ "alt_takes": [],
+ "fast": {
+  "key": "793fa960247961c2",
+  "tool": "fastrec 1.2 (2026-09-26)",
+  "shard": 0,
+  "wall_s": 5.13,
+  "takes": 1,
+  "settings": {
+   "asr": true,
+   "asr_beam": 1,
+   "asr_batch_s": 24.0,
+   "asr_align": false,
+   "utmos": false,
+   "prosody": false,
+   "breaths": false,
+   "threads": 3
+  },
+  "asr": {
+   "packed_with": 5,
+   "share_s": 1.26,
+   "rechecked_alone": false
+  }
+ }
+}
